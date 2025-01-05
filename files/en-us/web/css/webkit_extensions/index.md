@@ -12,7 +12,8 @@ User agents based on WebKit or Blink, such as Safari and Chrome, support several
 
 ## -webkit-prefixed properties without standard equivalents
 
-> **Note:** Avoid using on websites. These properties will only work in WebKit- or Blink-based browsers except where specified.
+> [!NOTE]
+> Avoid using on websites. These properties will only work in WebKit- or Blink-based browsers except where specified.
 
 ### A-C
 
@@ -93,7 +94,7 @@ User agents based on WebKit or Blink, such as Safari and Chrome, support several
 
 ## -webkit-prefixed properties with standard equivalents
 
-Several old `-webkit-`prefixed properties have standard equivalents. Even if the name and syntax may be different, they shouldn't be used anymore at all.
+Several old `-webkit-` prefixed properties have standard equivalents. Even if the name and syntax may be different, they shouldn't be used anymore at all.
 
 For each of them, use the standard equivalent provided.
 
@@ -156,6 +157,8 @@ For each of them, use the standard equivalent provided.
   - : Use the [CSS multicolumn layout](/en-US/docs/Web/CSS/CSS_multicol_layout) with the standard {{cssxref("break-before")}} property instead.
 - `-webkit-column-break-inside`
   - : Use the [CSS multicolumn layout](/en-US/docs/Web/CSS/CSS_multicol_layout) with the standard {{cssxref("break-inside")}} property instead.
+- `-webkit-font-feature-settings`
+  - : Use the [`font-feature-settings`](/en-US/docs/Web/CSS/font-feature-settings) property instead.
 - `-webkit-hyphenate-character`
   - : Use the standard {{cssxref("hyphenate-character")}} property instead.
 - `-webkit-initial-letter`
@@ -163,12 +166,10 @@ For each of them, use the standard equivalent provided.
 
 ### J-Z
 
-- `webkit-margin-end`
+- `-webkit-margin-end`
   - : Use the standard {{CSSxRef("margin-block-end")}} property instead.
 - `-webkit-margin-start`
-
   - : Use the standard {{CSSxRef("margin-block-start")}} property instead.
-
 - `-webkit-padding-after`
   - : Use the standard {{CSSxRef("padding-block-end")}} property instead.
 - `-webkit-padding-before`
@@ -177,6 +178,11 @@ For each of them, use the standard equivalent provided.
   - : Use the standard {{CSSxRef("padding-inline-end")}} property instead.
 - `-webkit-padding-start`
   - : Use the standard {{CSSxRef("padding-inline-start")}} property instead.
+
+## -webkit-prefixed property values
+
+- `-webkit-fill-available`
+  - : Used with sizing properties like {{CSSxRef("width")}} and {{CSSxRef("height")}}, to allow elements to take up all the available space within their parent container. The flexbox `stretch` value (see for example {{CSSxRef("align-items")}} and {{CSSxRef("justify-items")}}) provides a standard replacement.
 
 ## Pseudo-classes
 
@@ -194,7 +200,8 @@ For each of them, use the standard equivalent provided.
 
 \* Now standard.
 
-> **Note:** If there is an invalid pseudo-class within in a chain or group of selectors, the whole selector list is invalid.
+> [!NOTE]
+> If there is an invalid pseudo-class within in a chain or group of selectors, the whole selector list is invalid.
 
 ## Pseudo-elements
 
@@ -218,7 +225,8 @@ For web-compatibility reasons, Blink, WebKit, and Gecko browsers treat all pseud
 
 \* Now standard.
 
-> **Note:** Generally, if there is an invalid pseudo-element or pseudo-class within in a chain or group of selectors, the whole selector list is invalid. If a pseudo-element (but not pseudo-class) has a -webkit- prefix, As of Firefox 63, Blink, WebKit and Gecko browsers assume it is valid, not invalidating the selector list.
+> [!NOTE]
+> Generally, if there is an invalid pseudo-element or pseudo-class within in a chain or group of selectors, the whole selector list is invalid. If a pseudo-element (but not pseudo-class) has a -webkit- prefix, As of Firefox 63, Blink, WebKit and Gecko browsers assume it is valid, not invalidating the selector list.
 
 ## Media features
 

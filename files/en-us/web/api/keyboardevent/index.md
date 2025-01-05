@@ -115,7 +115,8 @@ _This interface also inherits properties of its parents, {{domxref("UIEvent")}} 
 
   - : Returns a string with the code value of the physical key represented by the event.
 
-    > **Warning:** This ignores the user's keyboard layout, so that if the user presses the key at the "Y" position in a QWERTY keyboard layout (near the middle of the row above the home row), this will always return "KeyY", even if the user has a QWERTZ keyboard (which would mean the user expects a "Z" and all the other properties would indicate a "Z") or a Dvorak keyboard layout (where the user would expect an "F"). If you want to display the correct keystrokes to the user, you can use {{domxref("Keyboard.getLayoutMap()")}}.
+    > [!WARNING]
+    > This ignores the user's keyboard layout, so that if the user presses the key at the "Y" position in a QWERTY keyboard layout (near the middle of the row above the home row), this will always return "KeyY", even if the user has a QWERTZ keyboard (which would mean the user expects a "Z" and all the other properties would indicate a "Z") or a Dvorak keyboard layout (where the user would expect an "F"). If you want to display the correct keystrokes to the user, you can use {{domxref("Keyboard.getLayoutMap()")}}.
 
 - {{domxref("KeyboardEvent.ctrlKey")}} {{ReadOnlyInline}}
 
@@ -191,7 +192,8 @@ There are three types of keyboard events: {{domxref("Element/keydown_event", "ke
 
 Some keys toggle the state of an indicator light; these include keys such as Caps Lock, Num Lock, and Scroll Lock. On Windows and Linux, these keys dispatch only the `keydown` and `keyup` events.
 
-> **Note:** On Linux, Firefox 12 and earlier also dispatched the `keypress` event for these keys.
+> [!NOTE]
+> On Linux, Firefox 12 and earlier also dispatched the `keypress` event for these keys.
 
 However, a limitation of the macOS event model causes Caps Lock to dispatch only the `keydown` event. Num Lock was supported on some older laptop models (2007 models and older), but since then, macOS hasn't supported Num Lock even on external keyboards. On older MacBooks with a Num Lock key, that key doesn't generate any key events. Gecko does support the Scroll Lock key if an external keyboard which has an F14 key is connected. In certain older versions of Firefox, this key generated a `keypress` event; this inconsistent behavior was [Firefox bug 602812](https://bugzil.la/602812).
 
@@ -274,27 +276,7 @@ The `KeyboardEvent` interface specification went through numerous draft versions
 
 ### Compatibility notes
 
-- As of Firefox 65, the `keypress` event is no longer fired for [non-printable keys](/en-US/docs/Web/API/KeyboardEvent/keyCode#non-printable_keys_function_keys) ([Firefox bug 968056](https://bugzil.la/968056)), except for the
-
-  <kbd>Enter</kbd>
-
-  key, and the
-
-  <kbd>Shift</kbd>
-
-  \+
-
-  <kbd>Enter</kbd>
-
-  and
-
-  <kbd>Ctrl</kbd>
-
-  \+
-
-  <kbd>Enter</kbd>
-
-  key combinations (these were kept for cross-browser compatibility purposes).
+- As of Firefox 65, the `keypress` event is no longer fired for [non-printable keys](/en-US/docs/Web/API/KeyboardEvent/keyCode#non-printable_keys_function_keys) ([Firefox bug 968056](https://bugzil.la/968056)), except for the <kbd>Enter</kbd> key, and the <kbd>Shift</kbd> + <kbd>Enter</kbd> and <kbd>Ctrl</kbd> + <kbd>Enter</kbd> key combinations (these were kept for cross-browser compatibility purposes).
 
 ## See also
 

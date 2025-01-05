@@ -13,7 +13,8 @@ The **`:out-of-range`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/We
 
 This pseudo-class is useful for giving the user a visual indication that a field's current value is outside the permitted limits.
 
-> **Note:** This pseudo-class only applies to elements that have (and can take) a range limitation. In the absence of such a limitation, the element can neither be "in-range" nor "out-of-range."
+> [!NOTE]
+> This pseudo-class only applies to elements that have (and can take) a range limitation. In the absence of such a limitation, the element can neither be "in-range" nor "out-of-range."
 
 ## Syntax
 
@@ -91,4 +92,4 @@ input:out-of-range + label::after {
 ## See also
 
 - {{cssxref(":in-range")}}
-- [Form data validation](/en-US/docs/Learn/Forms/Form_validation)
+- [Form data validation](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation)

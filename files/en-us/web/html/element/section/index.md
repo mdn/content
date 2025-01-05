@@ -30,7 +30,7 @@ To reiterate, each `<section>` should be identified, typically by including a he
 
 ## Examples
 
-### Simple usage example
+### Basic usage example
 
 #### Before
 
@@ -140,7 +140,7 @@ Depending on the content, including a heading could also be good for SEO, so it 
         >
         if the element has an
         <a
-          href="https://developer.paciellogroup.com/blog/2017/04/what-is-an-accessible-name/"
+          href="/en-US/docs/Glossary/Accessible_name"
           >accessible name</a
         >, otherwise
         <code

@@ -5,9 +5,9 @@ page-type: web-api-interface
 browser-compat: api.WebGLContextEvent
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
-The **WebContextEvent** interface is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and is an interface for an event that is generated in response to a status change to the WebGL rendering context.
+The **WebGLContextEvent** interface is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and is an interface for an event that is generated in response to a status change to the WebGL rendering context.
 
 {{InheritanceDiagram}}
 

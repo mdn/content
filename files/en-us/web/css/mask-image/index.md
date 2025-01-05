@@ -38,11 +38,26 @@ mask-image: unset;
 ### Values
 
 - `none`
-  - : This keyword is interpreted as an opaque white image layer.
+
+  - : This keyword is interpreted as a transparent black image layer.
+
 - `<mask-source>`
-  - : A {{cssxref("url","url()")}} reference to a {{SVGElement("mask")}} or to a CSS image.
+
+  - : A {{cssxref("url_value", "&lt;url&gt;")}} reference to a {{SVGElement("mask")}} or to a CSS image.
+
+    > [!NOTE]
+    > Only the image sources served over HTTP and HTTPS protocols are accepted due to the [CORS](/en-US/docs/Glossary/CORS) policy. Images served locally, including relative or absolute `file://` protocols, are not accepted. To test URL image sources locally, [set up a local server](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Secure_connection#localhost).
+
 - {{cssxref("&lt;image&gt;")}}
-  - : An image value used as mask image layer.
+  - : An image value used as a mask image layer.
+
+In the following cases, the mask is counted as a transparent black image layer:
+
+- the mask image is empty (zero width or zero height)
+- the mask image fails to download
+- the mask image format is not supported by the browser
+- the mask image doesn't exist
+- the mask value doesn't point to a mask image
 
 ## Formal definition
 
@@ -54,9 +69,26 @@ mask-image: unset;
 
 ## Examples
 
-### Setting a mask image with a URL
+### Setting a mask image with a URL and a gradient
 
-{{EmbedGHLiveSample("css-examples/masking/mask-image.html", '100%', 560)}}
+```html live-sample___mask-image-example
+<div class="masked"></div>
+```
+
+```css live-sample___mask-image-example
+.masked {
+  width: 200px;
+  height: 200px;
+  mask-repeat: no-repeat;
+  mask-size: 100%;
+
+  background: red;
+  mask-image: url(https://mdn.github.io/shared-assets/images/examples/mask-star.svg),
+    radial-gradient(transparent 50%, black);
+}
+```
+
+{{EmbedLiveSample("mask-image-example", "100%", 250)}}
 
 ## Specifications
 
@@ -69,4 +101,4 @@ mask-image: unset;
 ## See also
 
 - [Clipping and Masking in CSS](https://css-tricks.com/clipping-masking-css/)
-- [Apply effects to images with CSS's mask-image property](https://web.dev/articles/css-masking)
+- [Apply effects to images with CSS's `mask-image` property](https://web.dev/articles/css-masking)

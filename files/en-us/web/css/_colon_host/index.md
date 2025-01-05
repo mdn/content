@@ -9,7 +9,8 @@ browser-compat: css.selectors.host
 
 The **`:host`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) selects the shadow host of the [shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM) containing the CSS it is used inside — in other words, this allows you to select a custom element from inside its shadow DOM.
 
-> **Note:** This has no effect when used outside a shadow DOM.
+> [!NOTE]
+> This has no effect when used outside a shadow DOM.
 
 {{EmbedInteractiveExample("pages/tabbed/pseudo-class-host.html", "tabbed-shorter")}}
 
@@ -34,7 +35,7 @@ The **`:host`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Ps
 
 The following snippets are taken from our [host-selectors example](https://github.com/mdn/web-components-examples/tree/main/host-selectors) ([see it live also](https://mdn.github.io/web-components-examples/host-selectors/)).
 
-In this example we have a simple custom element — `<context-span>` — that you can wrap around text:
+In this example we have a basic custom element — `<context-span>` — that you can wrap around text:
 
 ```html
 <h1>

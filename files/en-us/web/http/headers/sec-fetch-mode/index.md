@@ -7,9 +7,10 @@ browser-compat: http.headers.Sec-Fetch-Mode
 
 {{HTTPSidebar}}
 
-The **`Sec-Fetch-Mode`** {{Glossary("Fetch metadata request header", "fetch metadata request header")}} indicates the [mode](/en-US/docs/Web/API/Request/mode) of the request.
+The HTTP **`Sec-Fetch-Mode`** {{Glossary("fetch metadata request header")}} indicates the [mode](/en-US/docs/Web/API/Request/mode) of the request.
 
-Broadly speaking, this allows a server to distinguish between: requests originating from a user navigating between HTML pages, and requests to load images and other resources. For example, this header would contain `navigate` for top level navigation requests, while `no-cors` is used for loading an image.
+Broadly speaking, this allows a server to distinguish between requests originating from a user navigating between HTML pages, and requests to load images and other resources.
+For example, this header would contain `navigate` for top level navigation requests, while `no-cors` is used for loading an image.
 
 <table class="properties">
   <tbody>
@@ -19,13 +20,13 @@ Broadly speaking, this allows a server to distinguish between: requests originat
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>yes (prefix <code>Sec-</code>)</td>
+      <td>Yes (<code>Sec-</code> prefix)</td>
     </tr>
     <tr>
       <th scope="row">
         {{Glossary("CORS-safelisted request header")}}
       </th>
-      <td>no</td>
+      <td>No</td>
     </tr>
   </tbody>
 </table>
@@ -44,7 +45,8 @@ Servers should ignore this header if it contains any other value.
 
 ## Directives
 
-> **Note:** These directives correspond to the values in [`Request.mode`](/en-US/docs/Web/API/Request/mode#value).
+> [!NOTE]
+> These directives correspond to the values in [`Request.mode`](/en-US/docs/Web/API/Request/mode#value).
 
 - `cors`
   - : The request is a [CORS protocol](/en-US/docs/Web/HTTP/CORS) request.
@@ -58,6 +60,8 @@ Servers should ignore this header if it contains any other value.
   - : The request is being made to establish a [WebSocket](/en-US/docs/Web/API/WebSockets_API) connection.
 
 ## Examples
+
+### Using Sec-Fetch-Mode
 
 If a user clicks on a page link to another page on the same origin, the resulting request would have the following headers (note that the mode is `navigate`):
 
@@ -86,11 +90,6 @@ Sec-Fetch-Site: cross-site
 
 ## See also
 
-- Related headers
-
-  - {{HTTPHeader("Sec-Fetch-Dest")}}
-  - {{HTTPHeader("Sec-Fetch-Site")}}
-  - {{HTTPHeader("Sec-Fetch-User")}}
-
+- {{HTTPHeader("Sec-Fetch-Dest")}}, {{HTTPHeader("Sec-Fetch-Site")}}, {{HTTPHeader("Sec-Fetch-User")}} fetch metadata request headers
 - [Protect your resources from web attacks with Fetch Metadata](https://web.dev/articles/fetch-metadata) (web.dev)
 - [Fetch Metadata Request Headers playground](https://secmetadata.appspot.com/) (secmetadata.appspot.com)

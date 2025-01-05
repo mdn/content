@@ -11,7 +11,8 @@ browser-compat: api.RTCDataChannelEvent.RTCDataChannelEvent
 The **`RTCDataChannelEvent()`** constructor
 creates a new {{domxref("RTCDataChannelEvent")}} object.
 
-> **Note:** You will rarely if ever construct an `RTCDataChannelEvent` by hand; these
+> [!NOTE]
+> You will rarely if ever construct an `RTCDataChannelEvent` by hand; these
 > events are normally created and sent by the WebRTC layer itself.
 
 ## Syntax

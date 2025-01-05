@@ -24,7 +24,8 @@ In JavaScript, instructions are called {{Glossary("Statement", "statements")}} a
 
 A semicolon is not necessary after a statement if it is written on its own line. But if more than one statement on a line is desired, then they _must_ be separated by semicolons.
 
-> **Note:** ECMAScript also has rules for automatic insertion of semicolons ([ASI](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion)) to end statements. (For more information, see the detailed reference about JavaScript's [lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar).)
+> [!NOTE]
+> ECMAScript also has rules for automatic insertion of semicolons ([ASI](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion)) to end statements. (For more information, see the detailed reference about JavaScript's [lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar).)
 
 It is considered best practice, however, to always write a semicolon after a statement, even when it is not strictly needed. This practice reduces the chances of bugs getting into the code.
 
@@ -56,7 +57,8 @@ In this case, you need to break up the `*/` pattern. For example, by inserting a
 
 Comments behave like whitespace, and are discarded during script execution.
 
-> **Note:** You might also see a third type of comment syntax at the start of some JavaScript files, which looks something like this: `#!/usr/bin/env node`.
+> [!NOTE]
+> You might also see a third type of comment syntax at the start of some JavaScript files, which looks something like this: `#!/usr/bin/env node`.
 >
 > This is called **hashbang comment** syntax, and is a special comment used to specify the path to a particular JavaScript engine that should execute the script. See [Hashbang comments](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#hashbang_comments) for more details.
 
@@ -296,7 +298,8 @@ In the case that a value representing a number is in memory as a string, there a
 
 `parseInt` only returns whole numbers, so its use is diminished for decimals.
 
-> **Note:** Additionally, a best practice for `parseInt` is to always include the _radix_ parameter. The radix parameter is used to specify which numerical system is to be used.
+> [!NOTE]
+> Additionally, a best practice for `parseInt` is to always include the _radix_ parameter. The radix parameter is used to specify which numerical system is to be used.
 
 ```js
 parseInt("101", 2); // 5
@@ -333,7 +336,8 @@ const coffees = ["French Roast", "Colombian", "Kona"];
 
 An array literal creates a new array object every time the literal is evaluated. For example, an array defined with a literal in the global scope is created once when the script loads. However, if the array literal is inside a function, a new array is instantiated every time that function is called.
 
-> **Note:** Array literals create `Array` objects. See {{jsxref("Array")}} and [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) for details on `Array` objects.
+> [!NOTE]
+> Array literals create `Array` objects. See {{jsxref("Array")}} and [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) for details on `Array` objects.
 
 #### Extra commas in array literals
 
@@ -394,7 +398,8 @@ const myList = ["home", /* empty */, "school", /* empty */, ];
 
 The Boolean type has two literal values: `true` and `false`.
 
-> **Note:** Do not confuse the primitive Boolean values `true` and `false` with the true and false values of the {{jsxref("Boolean")}} object.
+> [!NOTE]
+> Do not confuse the primitive Boolean values `true` and `false` with the true and false values of the {{jsxref("Boolean")}} object.
 >
 > The Boolean object is a wrapper around the primitive Boolean data type. See {{jsxref("Boolean")}} for more information.
 
@@ -455,7 +460,8 @@ For example:
 
 An object literal is a list of zero or more pairs of property names and associated values of an object, enclosed in curly braces (`{}`).
 
-> **Warning:** Do not use an object literal at the beginning of a statement! This will lead to an error (or not behave as you expect), because the `{` will be interpreted as the beginning of a block.
+> [!WARNING]
+> Do not use an object literal at the beginning of a statement! This will lead to an error (or not behave as you expect), because the `{` will be interpreted as the beginning of a block.
 
 The following is an example of an object literal. The first element of the `car` object defines a property, `myCar`, and assigns to it a new string, `"Saturn"`; the second element, the `getCar` property, is immediately assigned the result of invoking the function `(carTypes("Honda"))`; the third element, the `special` property, uses an existing variable (`sales`).
 
@@ -660,7 +666,7 @@ The following table lists the special characters that you can use in JavaScript 
 | `\XXX`      | The character with the Latin-1 encoding specified by up to three octal digits `XXX` between `0` and `377`. For example, `\251` is the octal sequence for the copyright symbol.                                                                       |
 | `\xXX`      | The character with the Latin-1 encoding specified by the two hexadecimal digits `XX` between `00` and `FF`. For example, `\xA9` is the hexadecimal sequence for the copyright symbol.                                                                |
 | `\uXXXX`    | The Unicode character specified by the four hexadecimal digits `XXXX`. For example, `\u00A9` is the Unicode sequence for the copyright symbol. See [Unicode escape sequences](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#string_literals). |
-| `\u{XXXXX}` | Unicode code point escapes. For example, `\u{2F804}` is the same as the simple Unicode escapes `\uD87E\uDC04`.                                                                                                                                       |
+| `\u{XXXXX}` | Unicode code point escapes. For example, `\u{2F804}` is the same as the Unicode escapes `\uD87E\uDC04`.                                                                                                                                              |
 
 #### Escaping characters
 

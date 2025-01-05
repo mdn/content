@@ -49,7 +49,7 @@ new Intl.Locale(tag, options)
 
 ### Basic usage
 
-At its very simplest, the {{jsxref("Intl/Locale/Locale", "Intl.Locale()")}} constructor takes
+At its very simplest, the `Intl.Locale()` constructor takes
 a locale identifier string as its argument:
 
 ```js
@@ -79,6 +79,5 @@ console.log(locale.hourCycle); // "h12"
 
 ## See also
 
-- [Polyfill of `Intl.Locale` in FormatJS](https://formatjs.io/docs/polyfills/intl-locale/)
 - {{jsxref("Intl.Collator")}}
 - [Canonical Unicode Locale Identifiers](https://www.unicode.org/reports/tr35/#Canonical_Unicode_Locale_Identifiers) in the Unicode locale data markup language spec

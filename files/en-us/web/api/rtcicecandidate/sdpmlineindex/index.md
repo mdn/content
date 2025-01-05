@@ -19,7 +19,8 @@ If you call the constructor with an m-line string instead of the options object,
 A number containing a 0-based index into the set of m-lines providing media descriptions,
 indicating which media source is associated with the candidate, or `null` if no such association is available.
 
-> **Note:** Attempting to add a candidate (using
+> [!NOTE]
+> Attempting to add a candidate (using
 > {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}}) that has a
 > value of `null` for either `sdpMid` or
 > `sdpMLineIndex` will throw a {{jsxref("TypeError")}} exception.

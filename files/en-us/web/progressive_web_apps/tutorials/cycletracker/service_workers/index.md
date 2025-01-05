@@ -11,7 +11,7 @@ page-type: tutorial-chapter
 
 Thus far, we've written the HTML, CSS, and JavaScript for CycleTracker. We added a manifest file defining colors, icons, URL, and other app features. We have a working PWA! But it doesn't yet work offline. In this section, we will write the JavaScript required to convert our fully functional web application into a PWA that can be distributed as a standalone app and works seamlessly offline.
 
-If you haven't already done so, copy the [HTML](https://github.com/mdn/pwa-examples/tree/main/cycletracker/manifest_file/index.html), [CSS](https://github.com/mdn/pwa-examples/tree/main/cycletracker/manifest_file/style.css), [JavaScript](https://github.com/mdn/pwa-examples/tree/main/cycletracker/manifest_file/app.js), and [manifest](https://github.com/mdn/pwa-examples/tree/main/cycletracker/manifest_file/cycletracker.json) JSON file. Save them to files called `index.html`, `style.css`, `app.js`, and `cycletracker.json`, respectively.
+If you haven't already done so, copy the [HTML](https://github.com/mdn/pwa-examples/blob/main/cycletracker/manifest_file/index.html), [CSS](https://github.com/mdn/pwa-examples/blob/main/cycletracker/manifest_file/style.css), [JavaScript](https://github.com/mdn/pwa-examples/blob/main/cycletracker/manifest_file/app.js), and [manifest](https://github.com/mdn/pwa-examples/blob/main/cycletracker/manifest_file/cycletracker.json) JSON file. Save them to files called `index.html`, `style.css`, `app.js`, and `cycletracker.json`, respectively.
 
 In this section, we are creating `sw.js`, the service worker script, that will convert our Web App into a PWA. We already have one JavaScript file; the last line in the HTML file calls the `app.js`. This JavaScript provides all the functionality for the standard web application features. Instead of calling the `sw.js` file like we did the `app.js` file with the `src` attribute of {{HTMLElement("script")}}, we will create a relationship between the web app and its service worker by registering the service worker.
 
@@ -300,13 +300,14 @@ self.addEventListener("fetch", (event) => {
 
 When updating a service worker, the VERSION constant doesn't need to be updated, as any change in the content of the service worker script itself will trigger the browser to install the new service worker. However, it is a good practice to update the version number as it makes it easier for devs, including yourself, to see which version of the service worker is currently running in the browser, by [checking the name of the Cache in the Application tool](#with_developer_tools) (or Sources tool).
 
-**Note:** Updating VERSION is important when making changes to any application resource, including the CSS, HTML, and JS code, and image assets. The version number, or any change to the service worker file, is the only way to force an update of the app for your users.
+> [!NOTE]
+> Updating VERSION is important when making changes to any application resource, including the CSS, HTML, and JS code, and image assets. The version number, or any change to the service worker file, is the only way to force an update of the app for your users.
 
 ## Register the service worker
 
 Now that our service worker script is complete, we need to register the service worker.
 
-We start by checking that the browser supports the [Service Worker API](/en-US/docs/Web/API/Service_Worker_API) by using [feature detection](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection#the_concept_of_feature_detection) for the presence of the [`serviceWorker`](/en-US/docs/Web/API/ServiceWorker) property on the global [`navigator`](/en-US/docs/Web/API/Navigator) object:
+We start by checking that the browser supports the [Service Worker API](/en-US/docs/Web/API/Service_Worker_API) by using [feature detection](/en-US/docs/Learn_web_development/Extensions/Testing/Feature_detection#the_concept_of_feature_detection) for the presence of the [`serviceWorker`](/en-US/docs/Web/API/ServiceWorker) property on the global [`navigator`](/en-US/docs/Web/API/Navigator) object:
 
 ```html
 <script>
@@ -359,7 +360,7 @@ Open `index.html` and add the following {{HTMLElement("script")}} after the scri
 </script>
 ```
 
-You can try the fully functioning [CycleTracker period tracking web app](https://mdn.github.io/pwa-examples/cycletracker/service_workers) and view the [web app source code](https://github.com/mdn/pwa-examples/tree/main/cycletracker/service_workers) on GitHub. Yes, it works, and it is now, officially, a PWA!
+You can try the fully functioning [CycleTracker period tracking web app](https://mdn.github.io/pwa-examples/cycletracker/service_workers/) and view the [web app source code](https://github.com/mdn/pwa-examples/tree/main/cycletracker/service_workers) on GitHub. Yes, it works, and it is now, officially, a PWA!
 
 ## Debugging service workers
 
@@ -370,15 +371,15 @@ Because of the way we have set up the service worker, once it is registered, eve
 To get a new cache, you can change the [version number](#version_number) and then do a hard browser refresh. The way you do a hard refresh depends on the browser and operating system:
 
 - On Windows: Ctrl+F5, Shift+F5, or Ctrl+Shift+R.
-- On MacOS: Shift+Command+R.
-- Safari on MacOS: Option+Command+E to empty the cache, then Option+Command+R.
+- On macOS: Shift+Command+R.
+- Safari on macOS: Option+Command+E to empty the cache, then Option+Command+R.
 - On Mobile: Go to the browser (Android) or operating system (Samsung, iOS) settings, under advanced setting find the browser (iOS) or website data (Android, Samsung) site settings, and delete the data for CycleTracker, before reloading the page.
 
 ### With developer tools
 
 You likely don't want to update the version number with every save. Until you are ready to launch a new version of your PWA to production and give everyone a new version of your PWA, instead of changing the version number on save, you can unregister the service worker.
 
-You can unregister a service worker by clicking on the `unregister` button in the [browser developer tools](/en-US/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools). Hard refreshing the page will re-register the service worker and create a new cache.
+You can unregister a service worker by clicking on the `unregister` button in the [browser developer tools](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools). Hard refreshing the page will re-register the service worker and create a new cache.
 
 ![Firefox developer tools application panel with a stopped service worker and an unregister button](firefox_sw.jpg)
 

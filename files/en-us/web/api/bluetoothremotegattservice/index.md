@@ -44,5 +44,3 @@ and a list of the characteristics of this service.
 ## Browser compatibility
 
 {{Compat}}
-
-{{APIRef("Web Bluetooth")}}

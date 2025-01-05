@@ -6,7 +6,7 @@ page-type: firefox-release-notes
 
 {{FirefoxSidebar}}
 
-[To test the latest developer features of Firefox, install Firefox Developer Edition](https://www.mozilla.org/firefox/developer/).
+[To test the latest developer features of Firefox, install Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/).
 Firefox 50 was released on November 15, 2016. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 
 ## Changes for Web developers
@@ -19,7 +19,7 @@ Firefox 50 was released on November 15, 2016. This article lists key changes tha
 
 ### CSS
 
-- Border-radiused corners with dashed and dotted styles are now rendered with the specified style instead of a solid style ([Firefox bug 382721](https://bugzil.la/382721)).
+- Corners with border-radius and with dashed and dotted styles are now rendered with the specified style instead of a solid style ([Firefox bug 382721](https://bugzil.la/382721)).
 - The non-standard `:-moz-full-screen-ancestor` pseudo-class selector has been removed ([Firefox bug 1199529](https://bugzil.la/1199529)).
 - The {{cssxref("box-sizing")}}`: padding-box` has been removed, since it's no longer a part of the spec and Firefox was the only major browser implementing it ([Firefox bug 1166728](https://bugzil.la/1166728)).
 - The three values `isolate`, `isolate-override`, and `plaintext` of the {{cssxref("unicode-bidi")}} property have been unprefixed ([Firefox bug 1141895](https://bugzil.la/1141895)).
@@ -113,7 +113,7 @@ Firefox 50 was released on November 15, 2016. This article lists key changes tha
 
 - The {{domxref("PannerNode")}} interface now supports the 3D Cartesian space properties for the position ({{domxref("PannerNode.positionX")}}, {{domxref("PannerNode.positionY")}}, and {{domxref("PannerNode.positionZ")}}) and directionality ({{domxref("PannerNode.orientationX")}}, {{domxref("PannerNode.orientationY")}}, {{domxref("PannerNode.orientationZ")}}) of an audio source.
 - The interface {{domxref("IIRFilterNode")}}, which implements a general [infinite impulse response](https://en.wikipedia.org/wiki/Infinite_impulse_response) (IIR) filter, has been implemented.
-- Throttling in background tabs of timers created by {{domxref("setInterval()")}} and {{domxref("setTimeout()")}} no longer occurs if a [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) {{domxref("AudioContext")}} is actively playing sound. This should help prevent issues with timing-sensitive audio playback (such as music players generating individual notes using timers) in the background ([Firefox bug 1181073](https://bugzil.la/1181073)).
+- Throttling in background tabs of timers created by {{domxref("Window.setInterval()")}}, {{domxref("WorkerGlobalScope.setInterval()")}}, {{domxref("Window.setTimeout", "setTimeout()")}} and {{domxref("WorkerGlobalScope.setTimeout", "setTimeout()")}} no longer occurs if a [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) {{domxref("AudioContext")}} is actively playing sound. This should help prevent issues with timing-sensitive audio playback (such as music players generating individual notes using timers) in the background ([Firefox bug 1181073](https://bugzil.la/1181073)).
 
 ### Audio/Video
 
@@ -140,7 +140,7 @@ Firefox 50 was released on November 15, 2016. This article lists key changes tha
 
   - {{domxref("HTMLInputElement.webkitdirectory")}} as well as the [`webkitdirectory`](/en-US/docs/Web/HTML/Element/input#webkitdirectory) attribute of the {{HTMLElement("input")}} element have been implemented; this lets you configure a file input to accept directories instead of files ([Firefox bug 1258489](https://bugzil.la/1258489)).
   - {{domxref("HTMLInputElement.webkitEntries")}} has been implemented; this returns an array of {{domxref("FileSystemEntry")}}-based objects representing the selected items.
-  - {{domxref("File.webkitRelativePath")}} has been implemented; this contains the path of the file relative to the root of the containing {{domxref("FileSystemDirectoryEntry")}} that was among the items in the list returned by {{domxref("HTMLInputElement.webkitGetEntries()")}}.
+  - {{domxref("File.webkitRelativePath")}} has been implemented; this contains the path of the file relative to the root of the containing {{domxref("FileSystemDirectoryEntry")}} that was among the items in the list returned by {{domxref("HTMLInputElement.webkitEntries")}}.
   - See [File and Directory Entries API support in Firefox](/en-US/docs/Web/API/File_and_Directory_Entries_API/Firefox_support) for details about what we do and do not support in this API.
   - These APIs are now enabled by default; some were previously available but only behind a preference ([Firefox bug 1288683](https://bugzil.la/1288683)).
 

@@ -20,7 +20,7 @@ A {{domxref("WritableStream")}}.
 
 ## Examples
 
-The following example shows how {{domxref("RTCRtpScriptTransformer.readable")}} is piped through a {{domxref("TransformStream")}} to {{domxref("RTCRtpScriptTransformer.writable")}}.
+The following example shows how {{domxref("RTCRtpScriptTransformer.readable")}} is piped through a {{domxref("TransformStream")}} to `RTCRtpScriptTransformer.writable`.
 
 ```js
 addEventListener("rtctransform", (event) => {
@@ -45,7 +45,7 @@ The code implements a handler for the {{domxref("DedicatedWorkerGlobalScope.rtct
 An different {{domxref("TransformStream")}} is created to process outgoing and incoming frames, using `createSenderTransform()` or `createReceiverTransform()`, respectively (implementations not shown).
 The event handler chooses the correct transform stream to use based on options passed through from the [`RTCRtpScriptTransform` constructor](/en-US/docs/Web/API/RTCRtpScriptTransform/RTCRtpScriptTransform) and assigns it to `transform`.
 
-The code calls {{domxref("ReadableStream.pipeThrough()")}} on the `readable` to pipe encoded frames through the selected `TransformStream`, and then {{domxref("ReadableStream.pipeTo()")}} to pipe them to the {{domxref("RTCRtpScriptTransformer.writable")}}.
+The code calls {{domxref("ReadableStream.pipeThrough()")}} on the `readable` to pipe encoded frames through the selected `TransformStream`, and then {{domxref("ReadableStream.pipeTo()")}} to pipe them to the `RTCRtpScriptTransformer.writable`.
 
 ## Specifications
 

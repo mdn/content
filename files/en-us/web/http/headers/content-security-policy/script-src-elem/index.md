@@ -35,12 +35,18 @@ It does not apply to other JavaScript sources that can trigger script execution,
 
 ## Syntax
 
-One or more sources can be allowed for the `script-src-elem` policy:
-
 ```http
-Content-Security-Policy: script-src-elem <source>;
-Content-Security-Policy: script-src-elem <source> <source>;
+Content-Security-Policy: script-src-elem 'none';
+Content-Security-Policy: script-src-elem <source-expression-list>;
 ```
+
+This directive may have one of the following values:
+
+- `'none'`
+  - : No resources of this type may be loaded. The single quotes are mandatory.
+- `<source-expression-list>`
+
+  - : A space-separated list of _source expression_ values. Resources of this type may be loaded if they match any of the given source expressions. For this directive, any of the source expression values listed in [Fetch directive syntax](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#fetch_directive_syntax) are applicable, with the exception of [`'unsafe-hashes'`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#unsafe-hashes).
 
 `script-src-elem` can be used in conjunction with {{CSP("script-src")}}:
 
@@ -48,12 +54,6 @@ Content-Security-Policy: script-src-elem <source> <source>;
 Content-Security-Policy: script-src <source>;
 Content-Security-Policy: script-src-elem <source>;
 ```
-
-### Sources
-
-`<source>` can be any one of the values listed in [CSP Source Values](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#sources).
-
-Note that this same set of values can be used in all {{Glossary("fetch directive", "fetch directives")}} (and a [number of other directives](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#relevant_directives)).
 
 ## Examples
 

@@ -11,7 +11,8 @@ The **`:host()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/
 
 The most obvious use of this is to put a class name only on certain custom element instances, and then include the relevant class selector as the function argument. You can't use this with a descendant selector expression to select only instances of the custom element that are inside a particular ancestor. That's the job of {{CSSxRef(":host-context", ":host-context()")}}.
 
-> **Note:** While other functional pseudo-classes such as {{CSSxRef(":is", ":is()")}} and {{CSSxRef(":not", ":not()")}} accept a list of selectors as their parameters, `:host()` takes a single compound selector as its parameter. In addition, while `:is()` and `:not()` only take into account the specificity of their argument, the specificity of `:host()` is both the specificity of the pseudo-class **and** the specificity of its argument.
+> [!NOTE]
+> While other functional pseudo-classes such as {{CSSxRef(":is", ":is()")}} and {{CSSxRef(":not", ":not()")}} accept a list of selectors as their parameters, `:host()` takes a single compound selector as its parameter. In addition, while `:is()` and `:not()` only take into account the specificity of their argument, the specificity of `:host()` is both the specificity of the pseudo-class **and** the specificity of its argument.
 
 {{EmbedInteractiveExample("pages/tabbed/pseudo-class-host_function.html", "tabbed-shorter")}}
 
@@ -37,7 +38,7 @@ The most obvious use of this is to put a class name only on certain custom eleme
 
 The following snippets are taken from our [host-selectors example](https://github.com/mdn/web-components-examples/tree/main/host-selectors) ([see it live also](https://mdn.github.io/web-components-examples/host-selectors/)).
 
-In this example we have a simple custom element — `<context-span>` — that you can wrap around text:
+In this example we have a custom element — `<context-span>` — that you can wrap around text:
 
 ```html
 <h1>

@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPUComputePipeline.getBindGroupLayout
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`getBindGroupLayout()`** method of the
 {{domxref("GPUComputePipeline")}} interface returns the pipeline's {{domxref("GPUBindGroupLayout")}} object with the given index (i.e. included in the originating {{domxref("GPUDevice.createComputePipeline()")}} or {{domxref("GPUDevice.createComputePipelineAsync()")}} call's pipeline layout).
@@ -39,7 +39,8 @@ The following criteria must be met when calling **`getBindGroupLayout()`**, othe
 
 ## Examples
 
-> **Note:** You can see complete working examples with `getBindGroupLayout()` in action in the [WebGPU samples](https://webgpu.github.io/webgpu-samples/).
+> [!NOTE]
+> You can see complete working examples with `getBindGroupLayout()` in action in the [WebGPU samples](https://webgpu.github.io/webgpu-samples/).
 
 ```js
 // ...

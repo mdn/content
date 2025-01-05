@@ -49,7 +49,8 @@ pausing.then(onPaused, onError);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/downloads/#method-pause) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads#method-pause) API.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

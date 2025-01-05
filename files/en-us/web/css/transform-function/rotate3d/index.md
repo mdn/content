@@ -18,7 +18,8 @@ property). If, as specified, the vector is not _normalized_ (i.e., if the sum of
 coordinates is not 1), the {{glossary("user agent")}} will normalize it internally. A non-normalizable vector, such as
 the null vector, \[0, 0, 0], will cause the rotation to be ignored, but without invalidating the whole CSS property.
 
-> **Note:** Unlike rotations in the 2D plane, the composition of 3D rotations is usually
+> [!NOTE]
+> Unlike rotations in the 2D plane, the composition of 3D rotations is usually
 > not commutative. In other words, the order in which the rotations are applied impacts the result.
 
 ## Syntax
@@ -76,6 +77,10 @@ rotate3d(x, y, z, a)
     </tr>
   </tbody>
 </table>
+
+## Formal syntax
+
+{{CSSSyntax}}
 
 ## Examples
 

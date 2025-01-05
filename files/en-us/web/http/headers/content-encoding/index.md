@@ -7,13 +7,16 @@ browser-compat: http.headers.Content-Encoding
 
 {{HTTPSidebar}}
 
-The **`Content-Encoding`** {{Glossary("representation header")}} lists any encodings that have been applied to the representation (message payload), and in what order.
-This lets the recipient know how to decode the representation in order to obtain the original payload format.
-Content encoding is mainly used to compress the message data without losing information about the origin media type.
+The HTTP **`Content-Encoding`** {{Glossary("representation header")}} lists the encodings and the order in which they have been applied to a resource.
+This lets the recipient know how to decode the data in order to obtain the original content format described in the {{HTTPHeader("Content-Type")}} header.
+Content encoding is mainly used to compress content without losing information about the original media type.
 
-Note that the original media/content type is specified in the {{HTTPHeader("Content-Type")}} header, and that the `Content-Encoding` applies to the representation, or "coded form", of the data. If the original media is encoded in some way (e.g. a zip file) then this information would not be included in the `Content-Encoding` header.
+Servers should compress data as much as possible, and should use content encoding where appropriate.
+Compressing already compressed media types, such as .zip or .jpeg, is usually not appropriate because it can increase the file size.
+If the original media is already encoded (e.g., as a .zip file), this information is not included in the `Content-Encoding` header.
 
-Servers are encouraged to compress data as much as possible, and should use content encoding where appropriate. Compressing a compressed media type such as a zip or jpeg may not be appropriate, as this can make the payload larger.
+When the `Content-Encoding` header is present, other metadata (e.g., {{HTTPHeader("Content-Length")}}) refer to the encoded form of the data, not the original resource, unless explicitly stated.
+Content encoding differs to {{HTTPHeader("Transfer-Encoding")}} in that `Transfer-Encoding` handles how HTTP messages themselves are delivered across the network on a [hop-by-hop basis](/en-US/docs/Web/HTTP/Headers#hop-by-hop_headers).
 
 <table class="properties">
   <tbody>
@@ -23,7 +26,7 @@ Servers are encouraged to compress data as much as possible, and should use cont
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>no</td>
+      <td>No</td>
     </tr>
   </tbody>
 </table>
@@ -62,23 +65,19 @@ Content-Encoding: deflate, gzip
 
 ### Compressing with gzip
 
-On the client side, you can advertise a list of compression schemes that will be sent
-along in an HTTP request. The {{HTTPHeader("Accept-Encoding")}} header is used for
-negotiating content encoding.
+On the client side, you can advertise a list of compression schemes that will be sent along in an HTTP request. The {{HTTPHeader("Accept-Encoding")}} header is used for negotiating content encoding.
 
 ```http
 Accept-Encoding: gzip, deflate
 ```
 
-The server responds with the scheme used, indicated by the
-`Content-Encoding` response header.
+The server responds with the scheme used, indicated by the `Content-Encoding` response header.
 
 ```http
 Content-Encoding: gzip
 ```
 
-Note that the server is not obligated to use any compression method. Compression highly
-depends on server settings and used server modules.
+Whether a server uses compression methods requested by the client depends on server configuration and capabilities.
 
 ## Specifications
 

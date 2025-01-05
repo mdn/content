@@ -16,7 +16,8 @@ Two newer models were created in HTTP/1.1. The persistent-connection model keeps
 
 ![Compares the performance of the three HTTP/1.x connection models: short-lived connections, persistent connections, and HTTP pipelining.](http1_x_connections.png)
 
-> **Note:** HTTP/2 adds additional models for connection management.
+> [!NOTE]
+> HTTP/2 adds additional models for connection management.
 
 It's important to note that connection management in HTTP applies to the connection between two consecutive nodes, which is [hop-by-hop](/en-US/docs/Web/HTTP/Headers#hop-by-hop_headers) and not [end-to-end](/en-US/docs/Web/HTTP/Headers#end-to-end_headers). The model used in connections between a client and its first proxy may differ from the model between a proxy and the destination server (or any intermediate proxies). The HTTP headers involved in defining the connection model, like {{HTTPHeader("Connection")}} and {{HTTPHeader("Keep-Alive")}}, are [hop-by-hop](/en-US/docs/Web/HTTP/Headers#hop-by-hop_headers) headers with their values able to be changed by intermediary nodes.
 
@@ -30,7 +31,8 @@ The TCP handshake itself is time-consuming, but a TCP connection adapts to its l
 
 This model is the default model used in HTTP/1.0 (if there is no {{HTTPHeader("Connection")}} header, or if its value is set to `close`). In HTTP/1.1, this model is only used when the {{HTTPHeader("Connection")}} header is sent with a value of `close`.
 
-> **Note:** Unless dealing with a very old system, which doesn't support a persistent connection, there is no compelling reason to use this model.
+> [!NOTE]
+> Unless dealing with a very old system, which doesn't support a persistent connection, there is no compelling reason to use this model.
 
 ## Persistent connections
 
@@ -38,7 +40,7 @@ Short-lived connections have two major hitches: the time taken to establish a ne
 
 A persistent connection is one which remains open for a period of time, and can be reused for several requests, saving the need for a new TCP handshake, and utilizing TCP's performance enhancing capabilities. This connection will not stay open forever: idle connections are closed after some time (a server may use the {{HTTPHeader("Keep-Alive")}} header to specify a minimum time the connection should be kept open).
 
-Persistent connections also have drawbacks; even when idling they consume server resources, and under heavy load, {{glossary("DoS attack", "DoS attacks")}} can be conducted. In such cases, using non-persistent connections, which are closed as soon as they are idle, can provide better performance.
+Persistent connections also have drawbacks; even when idling they consume server resources, and under heavy load, {{Glossary("Denial of Service", "DoS attacks")}} can be conducted. In such cases, using non-persistent connections, which are closed as soon as they are idle, can provide better performance.
 
 HTTP/1.0 connections are not persistent by default. Setting {{HTTPHeader("Connection")}} to anything other than `close`, usually `retry-after`, will make them persistent.
 
@@ -46,11 +48,12 @@ In HTTP/1.1, persistence is the default, and the header is no longer needed (but
 
 ## HTTP pipelining
 
-> **Note:** HTTP pipelining is not activated by default in modern browsers:
+> [!NOTE]
+> HTTP pipelining is not activated by default in modern browsers:
 >
 > - Buggy [proxies](https://en.wikipedia.org/wiki/Proxy_server) are still common and these lead to strange and erratic behaviors that Web developers cannot foresee and diagnose easily.
 > - Pipelining is complex to implement correctly: the size of the resource being transferred, the effective [RTT](https://en.wikipedia.org/wiki/Round-trip_delay_time) that will be used, as well as the effective bandwidth, have a direct incidence on the improvement provided by the pipeline. Without knowing these, important messages may be delayed behind unimportant ones. The notion of important even evolves during page layout! HTTP pipelining therefore brings a marginal improvement in most cases only.
-> - Pipelining is subject to the [HOL](https://en.wikipedia.org/wiki/Head-of-line_blocking) problem.
+> - Pipelining is subject to the {{glossary("head of line blocking", "head-of-line blocking")}}.
 >
 > For these reasons, pipelining has been superseded by a better algorithm, _multiplexing_, that is used by HTTP/2.
 
@@ -58,15 +61,16 @@ By default, [HTTP](/en-US/docs/Web/HTTP) requests are issued sequentially. The n
 
 Pipelining is the process to send successive requests, over the same persistent connection, without waiting for the answer. This avoids latency of the connection. Theoretically, performance could also be improved if two HTTP requests were to be packed into the same TCP message. The typical [MSS](https://en.wikipedia.org/wiki/Maximum_segment_size) (Maximum Segment Size), is big enough to contain several simple requests, although the demand in size of HTTP requests continues to grow.
 
-Not all types of HTTP requests can be pipelined: only {{glossary("idempotent")}} methods, that is {{HTTPMethod("GET")}}, {{HTTPMethod("HEAD")}}, {{HTTPMethod("PUT")}} and {{HTTPMethod("DELETE")}}, can be replayed safely. Should a failure happen, the pipeline content can be repeated.
+Not all types of HTTP requests can be pipelined: only {{Glossary("idempotent")}} methods, that is {{HTTPMethod("GET")}}, {{HTTPMethod("HEAD")}}, {{HTTPMethod("PUT")}} and {{HTTPMethod("DELETE")}}, can be replayed safely. Should a failure happen, the pipeline content can be repeated.
 
 Today, every HTTP/1.1-compliant proxy and server should support pipelining, though many have limitations in practice: a significant reason no modern browser activates this feature by default.
 
 ## Domain sharding
 
-> **Note:** Unless you have a very specific immediate need, don't use this deprecated technique; switch to HTTP/2 instead. In HTTP/2, domain sharding is no longer useful: the HTTP/2 connection is able to handle parallel unprioritized requests very well. Domain sharding is even detrimental to performance. Most HTTP/2 implementations use a technique called [connection coalescing](https://daniel.haxx.se/blog/2016/08/18/http2-connection-coalescing/) to revert eventual domain sharding.
+> [!NOTE]
+> Unless you have a very specific immediate need, don't use this deprecated technique; switch to HTTP/2 instead. In HTTP/2, domain sharding is no longer useful: the HTTP/2 connection is able to handle parallel unprioritized requests very well. Domain sharding is even detrimental to performance. Most HTTP/2 implementations use a technique called [connection coalescing](https://daniel.haxx.se/blog/2016/08/18/http2-connection-coalescing/) to revert eventual domain sharding.
 
-As an HTTP/1.x connection is serializing requests, even without any ordering, it can't be optimal without large enough available bandwidth. As a solution, browsers open several connections to each domain, sending parallel requests. Default was once 2 to 3 connections, but this has now increased to a more common use of 6 parallel connections. There is a risk of triggering [DoS](/en-US/docs/Glossary/DOS_attack) protection on the server side if attempting more than this number.
+As an HTTP/1.x connection is serializing requests, even without any ordering, it can't be optimal without large enough available bandwidth. As a solution, browsers open several connections to each domain, sending parallel requests. Default was once 2 to 3 connections, but this has now increased to a more common use of 6 parallel connections. There is a risk of triggering {{Glossary("Denial of Service", "DoS")}} protection on the server side if attempting more than this number.
 
 If the server wishes a faster website or application response, it is possible for the server to force the opening of more connections. For example, instead of having all resources on the same domain, say `www.example.com`, it could split over several domains, `www1.example.com`, `www2.example.com`, `www3.example.com`. Each of these domains resolves to the _same_ server, and the Web browser will open 6 connections to each (in our example, boosting the connections to 18). This technique is called _domain sharding_.
 
@@ -75,3 +79,15 @@ If the server wishes a faster website or application response, it is possible fo
 ## Conclusion
 
 Improved connection management allows considerable boosting of performance in HTTP. With HTTP/1.1 or HTTP/1.0, using a persistent connection – at least until it becomes idle – leads to the best performance. However, the failure of pipelining has lead to designing superior connection management models, which have been incorporated into HTTP/2.
+
+## See also
+
+- [Evolution of HTTP](/en-US/docs/Web/HTTP/Evolution_of_HTTP)
+- Glossary terms:
+  - {{glossary('HTTP')}}
+  - {{glossary('HTTP_2', 'HTTP/2')}}
+  - {{glossary('QUIC')}}
+  - {{glossary('Round Trip Time', 'Round Trip Time (RTT)')}}
+  - {{glossary('TCP slow start')}}
+  - {{glossary('TLS')}}
+  - {{glossary('TCP', 'Transmission Control Protocol (TCP)')}}

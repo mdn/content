@@ -14,7 +14,7 @@ However, the umbrella term "JavaScript" as understood in a web browser context c
 
 The core language of JavaScript is standardized by the ECMA TC39 committee as a language named ECMAScript. "ECMAScript" is the term for the language standard, but "ECMAScript" and "JavaScript" can be used interchangeably.
 
-This core language is also used in non-browser environments, for example in [Node.js](https://nodejs.org).
+This core language is also used in non-browser environments, for example in [Node.js](https://nodejs.org/).
 
 ### What falls under the ECMAScript scope?
 
@@ -67,7 +67,7 @@ The [WebIDL specification](https://webidl.spec.whatwg.org/) provides the glue be
 
 The Document Object Model (DOM) is a cross-platform, **language-independent convention** for representing and interacting with objects in HTML, XHTML and XML documents. Objects in the **DOM tree** may be addressed and manipulated by using methods on the objects. The [W3C](/en-US/docs/Glossary/W3C) standardizes the Core Document Object Model, which defines language-agnostic interfaces that abstract HTML and XML documents as objects, and also defines mechanisms to manipulate this abstraction. Among the things defined by the DOM, we can find:
 
-- The document structure, a tree model, and the DOM Event architecture in [DOM core](https://dom.spec.whatwg.org/): [`Node`](/en-US/docs/Web/API/Node), [`Element`](/en-US/docs/Web/API/Element), [`DocumentFragment`](/en-US/docs/Web/API/DocumentFragment), [`Document`](/en-US/docs/Web/API/Document), [`DOMImplementation`](/en-US/docs/Web/API/DOMImplementation), [`Event`](/en-US/docs/Web/API/Event), [`EventTarget`](/en-US/docs/Web/API/EventTarget), …
+- The document structure, a tree model, and the DOM Event architecture in [DOM core](https://dom.spec.whatwg.org/): {{domxref("Node")}}, {{domxref("Element")}}, {{domxref("DocumentFragment")}}, {{domxref("Document")}}, {{domxref("DOMImplementation")}}, {{domxref("Event")}}, {{domxref("EventTarget")}}, …
 - A less rigorous definition of the DOM Event Architecture, as well as specific events in [DOM events](https://w3c.github.io/uievents/).
 - Other things such as [DOM Traversal](https://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html) and [DOM Range](https://dom.spec.whatwg.org/#ranges).
 
@@ -75,36 +75,36 @@ From the ECMAScript point of view, objects defined in the DOM specification are 
 
 ### HTML DOM
 
-[HTML](https://html.spec.whatwg.org/multipage/), the Web's markup language, is specified in terms of the DOM. Layered above the abstract concepts defined in DOM Core, HTML also defines the _meaning_ of elements. The HTML DOM includes such things as the `className` property on HTML elements, or APIs such as [`document.body`](/en-US/docs/Web/API/Document/body).
+[HTML](https://html.spec.whatwg.org/multipage/), the Web's markup language, is specified in terms of the DOM. Layered above the abstract concepts defined in DOM Core, HTML also defines the _meaning_ of elements. The HTML DOM includes such things as the `className` property on HTML elements, or APIs such as {{domxref("Document.body")}}.
 
-The HTML specification also defines restrictions on documents; for example, it requires all children of a [`<ul>`](/en-US/docs/Web/HTML/Element/ul) element, which represents an unordered list, to be [`<li>`](/en-US/docs/Web/HTML/Element/li) elements, as those represent list items. In general, it also forbids using elements and attributes that aren't defined in a standard.
+The HTML specification also defines restrictions on documents; for example, it requires all children of a {{htmlelement("ul")}} element, which represents an unordered list, to be {{htmlelement("li")}} elements, as those represent list items. In general, it also forbids using elements and attributes that aren't defined in a standard.
 
-Looking for the [`Document`](/en-US/docs/Web/API/Document) object, [`Window`](/en-US/docs/Web/API/Window) object, and the other DOM elements? Read the [DOM documentation](/en-US/docs/Web/API/Document_Object_Model).
+Looking for the {{domxref("Document")}} object, {{domxref("Window")}} object, and the other DOM elements? Read the [DOM documentation](/en-US/docs/Web/API/Document_Object_Model).
 
 ## Other notable APIs
 
-- The [`setTimeout`](/en-US/docs/Web/API/setTimeout) and [`setInterval`](/en-US/docs/Web/API/setInterval) functions were first specified on the [`Window`](/en-US/docs/Web/API/Window) interface in HTML Standard.
+- The {{domxref("Window.setTimeout", "setTimeout()")}} and {{domxref("Window.setInterval", "setInterval()")}} functions were first specified on the {{domxref("Window")}} interface in HTML Standard.
 - [XMLHttpRequest](https://xhr.spec.whatwg.org/) makes it possible to send asynchronous HTTP requests.
 - The [Fetch API](https://fetch.spec.whatwg.org/) provides a more ergonomic abstraction for network requests.
 - The [CSS Object Model](https://drafts.csswg.org/cssom/) abstract CSS rules as objects.
 - [WebWorkers](https://html.spec.whatwg.org/multipage/workers.html) allows parallel computation.
 - [WebSockets](https://html.spec.whatwg.org/multipage/#network) allows low-level bidirectional communication.
 - [Canvas 2D Context](https://html.spec.whatwg.org/multipage//#2dcontext) is a drawing API for [`<canvas>`](/en-US/docs/Web/HTML/Element/canvas).
-- The [WebAssembly interface](https://webassembly.github.io/spec/js-api) provides utilities for communication between JavaScript code and [WebAssembly](/en-US/docs/WebAssembly) modules.
+- The [WebAssembly interface](https://webassembly.github.io/spec/js-api/) provides utilities for communication between JavaScript code and [WebAssembly](/en-US/docs/WebAssembly) modules.
 
-Non-browser environments (like Node.js) often do not have DOM APIs — because they don't interact with a document — but they still usually implement many web APIs, such as [`fetch()`](/en-US/docs/Web/API/Window/fetch) and [`setTimeout()`](/en-US/docs/Web/API/setTimeout).
+Non-browser environments (like Node.js) often do not have DOM APIs — because they don't interact with a document — but they still usually implement many web APIs, such as {{domxref("Window.fetch", "fetch()")}} and {{domxref("Window.setTimeout", "setTimeout()")}}.
 
 ## JavaScript implementations
 
 There are three main JavaScript implementations used in browser environments and beyond:
 
 - Mozilla's [SpiderMonkey](https://spidermonkey.dev/), used in Firefox. This was the first _ever_ JavaScript engine, created by Brendan Eich at Netscape.
-- Google's [V8](https://v8.dev/), used in Google Chrome, Opera, Edge, [Node.js](https://nodejs.org), [Deno](https://deno.land/), [Electron](https://www.electronjs.org/), and more.
+- Google's [V8](https://v8.dev/), used in Google Chrome, Opera, Edge, [Node.js](https://nodejs.org/), [Deno](https://deno.com/), [Electron](https://www.electronjs.org/), and more.
 - Apple's [JavaScriptCore](https://trac.webkit.org/wiki/JavaScriptCore) (also known as SquirrelFish/Nitro), used in WebKit browsers such as Apple Safari, and [Bun](https://bun.sh/).
 
 Besides the above implementations, there are other popular JavaScript engines such as:
 
-- [Carakan](https://dev.opera.com/blog/carakan-faq/), used in earlier versions of Opera.
+- [Carakan](<https://en.wikipedia.org/wiki/Presto_(browser_engine)#ECMAScript_engines>), used in earlier versions of Opera.
 - Microsoft's [Chakra](<https://en.wikipedia.org/wiki/Chakra_(JScript_engine)>) engine, used in Internet Explorer (although the language it implements is formally called "JScript" to avoid trademark issues). Earlier versions of Edge used a new JavaScript engine, confusingly also called [Chakra](<https://en.wikipedia.org/wiki/Chakra_(JavaScript_engine)>).
 - [LibJS](https://serenityos.github.io/libjs-website/), used in the browser implementation of [SerenityOS](https://serenityos.org/).
 - Mozilla's [Rhino](<https://en.wikipedia.org/wiki/Rhino_(JavaScript_engine)>) engine, a JavaScript implementation written in Java, created primarily by Norris Boyd (also at Netscape).
@@ -114,12 +114,12 @@ There are some engines specifically tailored for non-browser purposes:
 - [Engine262](https://engine262.js.org/), a JavaScript engine written in JavaScript. It is created for JavaScript developers to explore new language features and find bugs in the specification.
 - [Moddable XS](https://www.moddable.com/), used in embedded systems such as IoT.
 - [QuickJS](https://bellard.org/quickjs/), a small and embeddable JavaScript engine.
-- Meta's [Hermes](https://hermesengine.dev/) engine, an engine optimized for [React Native](https://reactnative.dev/docs/hermes).
+- Meta's [Hermes](https://github.com/facebook/hermes) engine, an engine optimized for [React Native](https://reactnative.dev/docs/hermes).
 - Oracle's [GraalJS](https://www.graalvm.org/), a high performance implementation built on the GraalVM by Oracle Labs.
 
 JavaScript engines expose a public API which application developers can use to integrate JavaScript into their software. By far, the most common host environment for JavaScript is web browsers. Web browsers typically use the public API to create **host objects** responsible for reflecting the [DOM](https://dom.spec.whatwg.org/) into JavaScript.
 
-Another common application for JavaScript is as a (Web) server-side scripting language. A JavaScript web server exposes host objects representing a HTTP request and response objects, which can then be manipulated by a JavaScript program to dynamically generate web pages. [Node.js](https://nodejs.org) is a popular example of this.
+Another common application for JavaScript is as a (Web) server-side scripting language. A JavaScript web server exposes host objects representing a HTTP request and response objects, which can then be manipulated by a JavaScript program to dynamically generate web pages. [Node.js](https://nodejs.org/) is a popular example of this.
 
 ## Shells
 
@@ -138,7 +138,7 @@ The following JavaScript shells run code through the browser's JavaScript engine
 
 - Firefox has a [built-in JavaScript console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/the_command_line_interpreter/index.html), which support multi-line editing.
 - [Babel REPL](https://babeljs.io/repl) - A browser-based [REPL](https://en.wikipedia.org/wiki/REPL) for experimenting with future JavaScript.
-- [TypeScript playground](https://www.typescriptlang.org/play) — A browser-based playground for experimenting both new JavaScript features (via the tsc compiler) and TypeScript syntax.
+- [TypeScript playground](https://www.typescriptlang.org/play/) — A browser-based playground for experimenting both new JavaScript features (via the tsc compiler) and TypeScript syntax.
 
 ## Tools & resources
 
@@ -156,10 +156,10 @@ Helpful tools for writing and debugging your JavaScript code.
   - : Edit JavaScript, CSS, and HTML and get live results. Use external resources and collaborate with your team online.
 - [Plunker](https://plnkr.co/)
   - : Plunker is an online community for creating, collaborating on, and sharing your web development ideas. Edit your JavaScript, CSS, and HTML files and get live results and file structure.
-- [JSBin](https://jsbin.com/)
+- [JS Bin](https://jsbin.com/)
   - : JS Bin is an open-source collaborative web development debugging tool.
-- [Codepen](https://codepen.io/)
-  - : Codepen is another collaborative web development tool used as a live result playground.
+- [CodePen](https://codepen.io/)
+  - : CodePen is another collaborative web development tool used as a live result playground.
 - [StackBlitz](https://stackblitz.com/)
   - : StackBlitz is another online playground/debugging tool, which can host and deploy full-stack applications using React, Angular, etc.
 - [RunJS](https://runjs.app/)

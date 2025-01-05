@@ -21,7 +21,8 @@ Checking the value of this property lets you determine if the user agent allows 
 This property is present in the dictionary if the user agent supports the `frameRate` constraint.
 If the property isn't present, the user agent doesn't allow specifying limits on the frame rate for video tracks.
 
-> **Note:** If this property is present, its value is always `true`.
+> [!NOTE]
+> If this property is present, its value is always `true`.
 
 ## Examples
 

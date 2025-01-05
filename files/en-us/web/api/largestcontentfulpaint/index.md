@@ -23,8 +23,8 @@ To measure render times of other elements, use the {{domxref("PerformanceElement
 
 Additional key paint moments are provided by the {{domxref("PerformancePaintTiming")}} API:
 
-- {{Glossary("First paint")}} (FP): Time when anything is rendered. Note that the marking of the first paint is optional, not all user agents report it.
-- {{Glossary("First contentful paint")}} (FCP): Time when the first bit of DOM text or image content is rendered.
+- {{Glossary("First Paint")}} (FP): Time when anything is rendered. Note that the marking of the first paint is optional, not all user agents report it.
+- {{Glossary("First Contentful Paint")}} (FCP): Time when the first bit of DOM text or image content is rendered.
 
 `LargestContentfulPaint` inherits from {{domxref("PerformanceEntry")}}.
 
@@ -35,7 +35,7 @@ Additional key paint moments are provided by the {{domxref("PerformancePaintTimi
 This interface extends the following {{domxref("PerformanceEntry")}} properties by qualifying and constraining the properties as follows:
 
 - {{domxref("PerformanceEntry.entryType")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Returns "`largest-contentful-paint`".
+  - : Returns `"largest-contentful-paint"`.
 - {{domxref("PerformanceEntry.name")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Always returns an empty string.
 - {{domxref("PerformanceEntry.startTime")}} {{ReadOnlyInline}} {{Experimental_Inline}}
@@ -112,5 +112,5 @@ const isAccurateLCP = entry.renderTime ? true : false;
 ## See also
 
 - {{Glossary("Largest Contentful Paint")}}
-- {{Glossary("First contentful paint")}}
-- {{Glossary("First paint")}}
+- {{Glossary("First Contentful Paint")}}
+- {{Glossary("First Paint")}}

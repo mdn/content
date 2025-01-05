@@ -11,9 +11,11 @@ browser-compat: css.properties.position-try-fallbacks
 
 The **`position-try-fallbacks`** [CSS](/en-US/docs/Web/CSS) property enables you to specify a list of one or more alternative **position try fallback options** for anchor-positioned elements to be placed relative to their associated anchor elements. When the element would otherwise overflow its inset-modified containing block, the browser will try placing the positioned element in these different fallback positions, in the order provided, until it finds a value that stops it from overflowing its container or the viewport.
 
-> **Note:** The {{cssxref("position-try")}} shorthand property can be used to specify {{cssxref("position-try-order")}} and `position-try-fallbacks` values in a single declaration.
+> [!NOTE]
+> The {{cssxref("position-try")}} shorthand property can be used to specify {{cssxref("position-try-order")}} and `position-try-fallbacks` values in a single declaration.
 
-> **Note:** This property was originally named and supported in Chromium browsers as `position-try-options`, with the same property values. Until `position-try-fallbacks` is supported, use the {{cssxref("position-try")}} shorthand instead.
+> [!NOTE]
+> This property was originally named and supported in Chromium browsers as `position-try-options`, with the same property values. Until `position-try-fallbacks` is supported, use the {{cssxref("position-try")}} shorthand instead.
 
 ## Syntax
 
@@ -51,7 +53,7 @@ position-try-fallbacks: revert-layer;
 position-try-fallbacks: unset;
 ```
 
-The `position-try-fallbacks` property may be specified as either the keyword value `none` or as a comma-separated list of one or more space-separated custom position option names or `<try-tactic>`s or an `inset-area` value.
+The `position-try-fallbacks` property may be specified as either the keyword value `none` or as a comma-separated list of one or more space-separated custom position option names or `<try-tactic>`s or a `position-area` value.
 
 ### Values
 
@@ -65,12 +67,13 @@ The `position-try-fallbacks` property may be specified as either the keyword val
       - : Flips the element's position along the inline axis.
     - `flip-start`
       - : Flips both the inline and block axis values, swapping the `start` properties with each other, and the `end` properties with each other.
-- [`inset-area`](/en-US/docs/Web/CSS/inset-area) value
-  - : Positions the element relative to the edges of its associated anchor element by placing the positioned element on one or more tiles of an implicit 3x3 [inset area grid](/en-US/docs/Web/CSS/inset-area#description) based on the specified {{cssxref("inset-area_value","&lt;inset-area>")}} value; the effect is the same as a custom {{cssxref("@position-try")}} option containing only an {{cssxref("inset-area")}} descriptor.
+- [`position-area`](/en-US/docs/Web/CSS/position-area) value
+  - : Positions the element relative to the edges of its associated anchor element by placing the positioned element on one or more tiles of an implicit 3x3 [position area grid](/en-US/docs/Web/CSS/position-area#description) based on the specified {{cssxref("position-area_value","&lt;position-area>")}} value; the effect is the same as a custom {{cssxref("@position-try")}} fallback option containing only a {{cssxref("position-area")}} descriptor.
 - {{cssxref("dashed-ident")}}
   - : Adds a custom {{cssxref("@position-try")}} option to the fallback options list, the identifying name of which matches the specified `dashed-ident`. If no custom position option exists with that name, the option is ignored.
 
-> **Note:** Multiple options can be specified, separated by commas.
+> [!NOTE]
+> Multiple options can be specified, separated by commas.
 
 ## Description
 
@@ -80,7 +83,8 @@ This is achieved by providing one or more position-try fallback options in the `
 
 If no option can be found that will place the positioned element completely on-screen, the browser will revert to displaying the positioned element at its default position before any try fallback options were applied.
 
-> **Note:** In some situations you might want to just hide overflowing positioned elements, which can be achieved using the {{cssxref("position-visibility")}} property. In most cases however it is better to keep them on-screen and usable.
+> [!NOTE]
+> In some situations you might want to just hide overflowing positioned elements, which can be achieved using the {{cssxref("position-visibility")}} property. In most cases however it is better to keep them on-screen and usable.
 
 For detailed information on anchor features and position try fallback usage, see the [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module landing page and the [Handling overflow: try fallbacks and conditional hiding](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding) guide.
 
@@ -100,9 +104,9 @@ Referred to as a `<try-tactic>` in the specification, the predefined values move
 A single position-try fallback option can include more than one `<try-tactic>` or `dashed-ident` options, or a combination of both by declaring them as a single space-separated option:
 
 - In the case of multiple predefined `<try-tactic>` options, their transformations are composed together.
-- In the case of declaring a predefined `<try-tactic>` and a `<dashed-ident>` named `@postion-try` option, the custom position option is applied first, then the `<try-tactic>` transformation is applied.
+- In the case of declaring a predefined `<try-tactic>` and a `<dashed-ident>` named `@position-try` option, the custom position option is applied first, then the `<try-tactic>` transformation is applied.
 
-`inset-area` values cannot be combined like this.
+`position-area` values cannot be combined like this.
 
 ## Formal definition
 
@@ -161,7 +165,7 @@ body {
 }
 ```
 
-The infobox is given fixed positioning, a {{cssxref("position-anchor")}} property that references the anchor's `anchor-name`, to associate the two together, and it is tethered to the anchor's top-left corner using an `inset-area`.
+The infobox is given fixed positioning, a {{cssxref("position-anchor")}} property that references the anchor's `anchor-name`, to associate the two together, and it is tethered to the anchor's top-left corner using a `position-area`.
 
 We include a `position-try-fallbacks` list (and re-declare it with the `position-try` shorthand incase the longhand property name is not yet supported), providing two predefined position-try fallback options to prevent it from overflowing when the anchor gets near the edge of the viewport, by flipping it along the inline or block axis of the anchor.
 
@@ -180,7 +184,7 @@ We include a `position-try-fallbacks` list (and re-declare it with the `position
 .infobox {
   position: fixed;
   position-anchor: --myAnchor;
-  inset-area: top left;
+  position-area: top left;
 
   position-try-fallbacks: flip-block, flip-inline;
   position-try: flip-block, flip-inline;
@@ -254,7 +258,7 @@ body {
 .infobox {
   position: fixed;
   position-anchor: --myAnchor;
-  inset-area: top left;
+  position-area: top left;
 
   position-try:
     flip-block,
@@ -273,13 +277,13 @@ body {
 
 The third position-try fallback option means that the browser will try `flip-block` then `flip-inline` to avoid overflow, and if those fallbacks fail, it will combine the two, flipping the element's position in the block and inline directions at the same time. Now when you scroll the anchor towards the top _and_ left edges of the viewport, the positioned element will flip over to the bottom-right.
 
-### `inset-area` try options
+### `position-area` try fallback options
 
-This example shows some `inset-area` position-try fallback options in action.
+This example shows some `position-area` position-try fallback options in action.
 
 #### HTML and CSS
 
-All of the HTML and CSS in this demo is the same, except for the positioned element code. In this case, our position try fallback options are all `inset-area` values — `top`, `top right`, `right`, `bottom right`, `bottom`, `bottom left`, and `left`.
+All of the HTML and CSS in this demo is the same, except for the positioned element code. In this case, our position try fallback options are all `position-area` values — `top`, `top right`, `right`, `bottom right`, `bottom`, `bottom left`, and `left`.
 
 This means that the positioned element will find a reasonable position to display in, whatever viewport edges the anchor is near. This approach is a bit more longwinded than the predefined values approach, but it is also more granular and flexible.
 
@@ -327,7 +331,7 @@ body {
 .infobox {
   position: fixed;
   position-anchor: --myAnchor;
-  inset-area: top left;
+  position-area: top left;
 
   position-try:
     top, top right, right,
@@ -343,7 +347,7 @@ body {
 
 #### Result
 
-{{ EmbedLiveSample("`inset-area` try options", "100%", "250") }}
+{{ EmbedLiveSample("`position-area` try fallback options", "100%", "250") }}
 
 Scroll the page and check out the effect of these position-try fallback options as the anchor nears the edge of the viewport.
 
@@ -364,8 +368,8 @@ See the {{cssxref("@position-try")}} reference page.
 - {{cssxref("position-try")}}
 - {{cssxref("position-try-order")}}
 - {{cssxref("@position-try")}} at-rule
-- {{cssxref("inset-area")}}
-- [`<inset-area>`](/en-US/docs/Web/CSS/inset-area_value) value
+- {{cssxref("position-area")}}
+- [`<position-area>`](/en-US/docs/Web/CSS/position-area_value) value
 - [Handling overflow: try fallbacks and conditional hiding](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding) guide
 - [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using) guide
 - [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module

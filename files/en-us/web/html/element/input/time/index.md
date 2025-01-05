@@ -9,7 +9,7 @@ browser-compat: html.elements.input.type_time
 
 {{htmlelement("input")}} elements of type **`time`** create input fields designed to let the user easily enter a time (hours and minutes, and optionally seconds).
 
-While the control's user interface appearance is based on the browser and operating system, the features are the same. The value is always a 24-hour `hh:mm` or `hh:mm:ss` formatted time, with leading zeros, regardless of the UI's input format.
+While the control's user interface appearance is based on the browser and operating system, the features are the same. The value is always a 24-hour `HH:mm` or `HH:mm:ss` formatted time, with leading zeros, regardless of the UI's input format.
 
 {{EmbedInteractiveExample("pages/tabbed/input-time.html", "tabbed-standard")}}
 
@@ -18,8 +18,12 @@ While the control's user interface appearance is based on the browser and operat
 You can set a default value for the input by including a valid time in the [`value`](/en-US/docs/Web/HTML/Element/input#value) attribute when creating the `<input>` element, like so:
 
 ```html
-<label for="appt-time">Choose an appointment time: </label>
-<input id="appt-time" type="time" name="appt-time" value="13:30" />
+<label for="appointment-time">Choose an appointment time: </label>
+<input
+  id="appointment-time"
+  type="time"
+  name="appointment-time"
+  value="13:30" />
 ```
 
 {{ EmbedLiveSample('Setting_the_value_attribute', 600, 60) }}
@@ -35,11 +39,11 @@ timeControl.value = "15:30";
 
 ### Time value format
 
-The `value` of the `time` input is always in 24-hour format that includes leading zeros: `hh:mm`, regardless of the input format, which is likely to be selected based on the user's locale (or by the user agent). If the time includes seconds (see [Using the step attribute](#using_the_step_attribute)), the format is always `hh:mm:ss`. You can learn more about the format of the time value used by this input type in [Time strings](/en-US/docs/Web/HTML/Date_and_time_formats#time_strings).
+The `value` of the `time` input is always in 24-hour format that includes leading zeros: `HH:mm`, regardless of the input format, which is likely to be selected based on the user's locale (or by the user agent). If the time includes seconds (see [Using the step attribute](#using_the_step_attribute)), the format is always `HH:mm:ss`. You can learn more about the format of the time value used by this input type in [Time strings](/en-US/docs/Web/HTML/Date_and_time_formats#time_strings).
 
 In this example, you can see the time input's value by entering a time and seeing how it changes afterward.
 
-First, a look at the HTML. This is simple enough, with the label and input as we've seen before, but with the addition of a {{HTMLElement("p")}} element with a {{HTMLElement("span")}} to display the value of the `time` input:
+First, a look at the HTML. We include a label and input, and add a {{HTMLElement("p")}} element with a {{HTMLElement("span")}} to display the value of the `time` input:
 
 ```html
 <form>
@@ -47,7 +51,7 @@ First, a look at the HTML. This is simple enough, with the label and input as we
   <input type="time" id="startTime" />
   <p>
     Value of the <code>time</code> input:
-    <code> "<span id="value">n/a</span>"</code>.
+    <code>"<span id="value">n/a</span>"</code>.
   </p>
 </form>
 ```
@@ -69,13 +73,14 @@ startTime.addEventListener(
 
 {{EmbedLiveSample("Time_value_format", 600, 80)}}
 
-When a form including a `time` input is submitted, the value is encoded before being included in the form's data. The form's data entry for a time input will always be in the form `name=hh%3Amm`, or `name=hh%3Amm%3Ass` if seconds are included (see [Using the step attribute](#using_the_step_attribute)).
+When a form including a `time` input is submitted, the value is encoded before being included in the form's data. The form's data entry for a time input will always be in the form `name=HH%3Amm`, or `name=HH%3Amm%3Ass` if seconds are included (see [Using the step attribute](#using_the_step_attribute)).
 
 ## Additional attributes
 
 In addition to the attributes common to all {{HTMLElement("input")}} elements, `time` inputs offer the following attributes.
 
-> **Note:** Unlike many data types, time values have a **periodic domain**, meaning that the values reach the highest possible value, then wrap back around to the beginning again. For example, specifying a `min` of `14:00` and a `max` of `2:00` means that the permitted time values start at 2:00 PM, run through midnight to the next day, ending at 2:00 AM. See more in the [making min and max cross midnight](#making_min_and_max_cross_midnight) section of this article.
+> [!NOTE]
+> Unlike many data types, time values have a **periodic domain**, meaning that the values reach the highest possible value, then wrap back around to the beginning again. For example, specifying a `min` of `14:00` and a `max` of `2:00` means that the permitted time values start at 2:00 PM, run through midnight to the next day, ending at 2:00 AM. See more in the [making min and max cross midnight](#making_min_and_max_cross_midnight) section of this article.
 
 ### list
 
@@ -93,7 +98,8 @@ A string specifying the earliest time to accept, given in the [time value format
 
 A Boolean attribute which, if present, means this field cannot be edited by the user. Its `value` can, however, still be changed by JavaScript code directly setting the {{domxref("HTMLInputElement")}} `value` property.
 
-> **Note:** Because a read-only field cannot have a value, `required` does not have any effect on inputs with the `readonly` attribute also specified.
+> [!NOTE]
+> Because a read-only field cannot have a value, `required` does not have any effect on inputs with the `readonly` attribute also specified.
 
 ### step
 
@@ -101,7 +107,8 @@ The `step` attribute is a number that specifies the granularity that the value m
 
 A string value of `any` means that no stepping is implied, and any value is allowed (barring other constraints, such as [`min`](#min) and [`max`](#max)).
 
-> **Note:** When the data entered by the user doesn't adhere to the stepping configuration, the {{Glossary("user agent")}} may round to the nearest valid value, preferring numbers in the positive direction when there are two equally close options.
+> [!NOTE]
+> When the data entered by the user doesn't adhere to the stepping configuration, the {{Glossary("user agent")}} may round to the nearest valid value, preferring numbers in the positive direction when there are two equally close options.
 
 For `time` inputs, the value of `step` is given in seconds, with a scaling factor of 1000 (since the underlying numeric value is in milliseconds). The default value of `step` is 60, indicating 60 seconds (or 1 minute, or 60,000 milliseconds).
 
@@ -111,12 +118,12 @@ When `any` is set as the value for `step`, the default 60 seconds is used, and t
 
 ### Basic uses of time
 
-The simplest use of `<input type="time">` involves a basic `<input>` and {{htmlelement("label")}} element combination, as seen below:
+The most basic use of `<input type="time">` involves a basic `<input>` and {{htmlelement("label")}} element combination, as seen below:
 
 ```html
 <form>
-  <label for="appt-time">Choose an appointment time: </label>
-  <input id="appt-time" type="time" name="appt-time" />
+  <label for="appointment-time">Choose an appointment time: </label>
+  <input id="appointment-time" type="time" name="appointment-time" />
 </form>
 ```
 
@@ -134,8 +141,8 @@ It takes an integer value defining the number of seconds you want to increment b
 
 ```html
 <form>
-  <label for="appt-time">Choose an appointment time: </label>
-  <input id="appt-time" type="time" name="appt-time" step="2" />
+  <label for="appointment-time">Choose an appointment time: </label>
+  <input id="appointment-time" type="time" name="appointment-time" step="2" />
 </form>
 ```
 
@@ -153,10 +160,15 @@ You can use the [`min`](/en-US/docs/Web/HTML/Element/input#min) and [`max`](/en-
 
 ```html
 <form>
-  <label for="appt-time">
+  <label for="appointment-time">
     Choose an appointment time (opening hours 12:00 to 18:00):
   </label>
-  <input id="appt-time" type="time" name="appt-time" min="12:00" max="18:00" />
+  <input
+    id="appointment-time"
+    type="time"
+    name="appointment-time"
+    min="12:00"
+    max="18:00" />
   <span class="validity"></span>
 </form>
 ```
@@ -223,13 +235,13 @@ Let's look at an example; here we've set minimum and maximum times, and also mad
 ```html
 <form>
   <div>
-    <label for="appt-time">
+    <label for="appointment-time">
       Choose an appointment time (opening hours 12:00 to 18:00):
     </label>
     <input
-      id="appt-time"
+      id="appointment-time"
       type="time"
-      name="appt-time"
+      name="appointment-time"
       min="12:00"
       max="18:00"
       required />
@@ -245,7 +257,8 @@ If you try to submit the form with an incomplete time (or with a time outside th
 
 {{ EmbedLiveSample('Making_times_required', 600, 120) }}
 
-> **Warning:** HTML form validation is _not_ a substitute for scripts that ensure that the entered data is in the proper format. It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely. It's also possible for someone to bypass your HTML entirely and submit the data directly to your server. If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data is submitted (or data which is too large, of the wrong type, and so forth).
+> [!WARNING]
+> HTML form validation is _not_ a substitute for scripts that ensure that the entered data is in the proper format. It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely. It's also possible for someone to bypass your HTML entirely and submit the data directly to your server. If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data is submitted (or data which is too large, of the wrong type, and so forth).
 
 ## Examples
 
@@ -255,13 +268,13 @@ In this example, we create an interface element for choosing time using the nati
 
 ```html
 <form>
-  <label for="appt-time">
+  <label for="appointment-time">
     Choose an appointment time (opening hours 12:00 to 18:00):
   </label>
   <input
-    id="appt-time"
+    id="appointment-time"
     type="time"
-    name="appt-time"
+    name="appointment-time"
     min="12:00"
     max="18:00"
     required />
@@ -344,7 +357,7 @@ input:valid + span::after {
     </tr>
      <tr>
       <td><strong>Implicit ARIA Role</strong></td>
-      <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"><code>no corresponding role</code></a></td>
+      <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">no corresponding role</a></td>
     </tr>
   </tbody>
 </table>
@@ -365,5 +378,4 @@ input:valid + span::after {
 - [`<input type="month">`](/en-US/docs/Web/HTML/Element/input/month)
 - The generic {{HTMLElement("input")}} element and the interface used to manipulate it, {{domxref("HTMLInputElement")}}
 - [Date and time formats used in HTML](/en-US/docs/Web/HTML/Date_and_time_formats)
-- [Date and Time picker tutorial](/en-US/docs/Learn/Forms/HTML5_input_types#date_and_time_pickers)
-- [Compatibility of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [Date and Time picker tutorial](/en-US/docs/Learn_web_development/Extensions/Forms/HTML5_input_types#date_and_time_pickers)

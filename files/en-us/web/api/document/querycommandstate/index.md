@@ -21,7 +21,8 @@ queryCommandState(command)
 
 ### Parameters
 
-`command` is a command from {{domxref("Document.execCommand()")}}
+- `command`
+  - : A command from {{domxref("Document.execCommand()")}}
 
 ### Return value
 

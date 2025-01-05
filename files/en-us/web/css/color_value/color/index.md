@@ -33,7 +33,7 @@ Below are descriptions of the allowed values for both absolute and [relative col
 
 #### Absolute value syntax
 
-```text
+```plain
 color(colorspace c1 c2 c3[ / A])
 ```
 
@@ -51,11 +51,12 @@ The parameters are as follows:
 
   - : An {{CSSXref("&lt;alpha-value&gt;")}} representing the alpha channel value of the color, where the number `0` corresponds to `0%` (fully transparent) and `1` corresponds to `100%` (fully opaque). Additionally, the keyword `none` can be used to explicitly specify no alpha channel. If the `A` channel value is not explicitly specified, it defaults to 100%. If included, the value is preceded by a slash (`/`).
 
-> **Note:** See [Missing color components](/en-US/docs/Web/CSS/color_value#missing_color_components) for more information on the effect of `none`.
+> [!NOTE]
+> See [Missing color components](/en-US/docs/Web/CSS/color_value#missing_color_components) for more information on the effect of `none`.
 
 #### Relative value syntax
 
-```text
+```plain
 color(from <color> colorspace c1 c2 c3[ / A])
 ```
 
@@ -79,9 +80,11 @@ When using relative color syntax inside a `color()` function, the browser conver
   - `r`, `g`, and `b`: Color channel values for the RGB-based color spaces `srgb`, `srgb-linear`, `display-p3`, `a98-rgb`, `prophoto-rgb`, and `rec2020`.
   - `x`, `y`, and `z`: Color channel values for the CIE XYZ-based color spaces `xyz`, `xyz-d50`, and `xyz-d65`.
 
-    > **Note:** Each of these values is usually between `0` and `1` but, as explained above, they may be outside these bounds.
+    > [!NOTE]
+    > Each of these values is usually between `0` and `1` but, as explained above, they may be outside these bounds.
 
-    > **Note:** Referencing `r`, `g`, and `b` values inside a `color()` function with a XYZ-based colorspace, `x`, `y`, and `z` values inside a `color()` function with an RGB-based colorspace, or any other characters, is invalid. The origin color channel values available inside the function must match the specified type of colorspace.
+    > [!NOTE]
+    > Referencing `r`, `g`, and `b` values inside a `color()` function with a XYZ-based colorspace, `x`, `y`, and `z` values inside a `color()` function with an RGB-based colorspace, or any other characters, is invalid. The origin color channel values available inside the function must match the specified type of colorspace.
 
 - `alpha`: The color's transparency value, resolved to a `<number>` between `0` and `1`, inclusive.
 
@@ -118,7 +121,8 @@ color(from hsl(0 100% 50%) xyz x y 0.5)
 /* Computed output color: color(xyz-d65 0.412426 0.212648 0.5) */
 ```
 
-> **Note:** As mentioned above, if the output color is using a different color model to the origin color, the origin color is converted to the same model as the output color in the background so that it can be represented in a way that is compatible (i.e. using the same channels). For example, the {{cssxref("color_value/hsl", "hsl()")}} color `hsl(0 100% 50%)` is converted to `color(srgb 1 0 0)` in the first case above and `color(xyz 0.412426 0.212648 0.5)` in the second case.
+> [!NOTE]
+> As mentioned above, if the output color is using a different color model to the origin color, the origin color is converted to the same model as the output color in the background so that it can be represented in a way that is compatible (i.e. using the same channels). For example, the {{cssxref("color_value/hsl", "hsl()")}} color `hsl(0 100% 50%)` is converted to `color(srgb 1 0 0)` in the first case above and `color(xyz 0.412426 0.212648 0.5)` in the second case.
 
 In the examples we've seen so far in this section, the alpha channels have not been explicitly specified for either the origin or output colors. When the output color alpha channel is not specified, it defaults to the same value as the origin color alpha channel. When the origin color alpha channel is not specified (and it is not a relative color), it defaults to `1`. Therefore, the origin and output alpha channel values are `1` for the above examples.
 
@@ -142,11 +146,12 @@ color(from hsl(0 100% 50%) xyz calc(x - 0.3) calc(y + 0.3) calc(z + 0.3) / calc(
 /* Computed output color: color(xyz-d65 0.112426 0.512648 0.319317 / 0.9) */
 ```
 
-> **Note:** Because the origin color channel values are resolved to `<number>` values, you have to add numbers to them when using them in calculations, even in cases where a channel would normally accept `<percentage>`, `<angle>`, or other value types. Adding a `<percentage>` to a `<number>`, for example, doesn't work.
+> [!NOTE]
+> Because the origin color channel values are resolved to `<number>` values, you have to add numbers to them when using them in calculations, even in cases where a channel would normally accept `<percentage>`, `<angle>`, or other value types. Adding a `<percentage>` to a `<number>`, for example, doesn't work.
 
-### Formal syntax
+## Formal syntax
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Examples
 

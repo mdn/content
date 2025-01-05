@@ -25,7 +25,7 @@ The following attributes are deprecated and should not be used. They are documen
 
 - `bgcolor` {{deprecated_inline}}
 
-  - : Defines the background color of each body cell. The value is an HTML color; either a [6-digit hexadecimal RGB code](/en-US/docs/Web/CSS/hex-color), prefixed by a '`#`', or a [color keyword](/en-US/docs/Web/CSS/named-color). Other CSS {{cssxref("color_value", "&lt;color&gt")}} values are not supported. Use the {{cssxref("background-color")}} CSS property instead, as this attribute is deprecated.
+  - : Defines the background color of each body cell. The value is an HTML color; either a [6-digit hexadecimal RGB code](/en-US/docs/Web/CSS/hex-color), prefixed by a `#`, or a [color keyword](/en-US/docs/Web/CSS/named-color). Other CSS {{cssxref("color_value", "&lt;color&gt")}} values are not supported. Use the {{cssxref("background-color")}} CSS property instead, as this attribute is deprecated.
 
 - `char` {{deprecated_inline}}
 
@@ -333,15 +333,15 @@ tbody > tr > td:last-of-type {
     <tr>
       <th scope="row">Tag omission</th>
       <td>
-        A {{HTMLElement("tbody")}} element's start tag can be omitted if the first thing inside the {{HTMLElement("tbody")}} element is a {{HTMLElement("tr")}} element, and if the element is not immediately preceded by a {{HTMLElement("tbody")}}, {{HTMLElement("thead")}}, or {{HTMLElement("tfoot")}} element whose end tag has been omitted. (It can't be omitted if the element is empty.)
-        A {{HTMLElement("tbody")}} element's end tag can be omitted if the {{HTMLElement("tbody")}} element is immediately followed by a {{HTMLElement("tbody")}} or {{HTMLElement("tfoot")}} element, or if there is no more content in the parent element.
+        A <code>&lt;tbody&gt;</code> element's start tag can be omitted if the first thing inside the <code>&lt;tbody&gt;</code> element is a {{HTMLElement("tr")}} element, and if the element is not immediately preceded by a <code>&lt;tbody&gt;</code>, {{HTMLElement("thead")}}, or {{HTMLElement("tfoot")}} element whose end tag has been omitted. (It can't be omitted if the element is empty.)
+        A <code>&lt;tbody&gt;</code> element's end tag can be omitted if the <code>&lt;tbody&gt;</code> element is immediately followed by a <code>&lt;tbody&gt;</code> or {{HTMLElement("tfoot")}} element, or if there is no more content in the parent element.
       </td>
     </tr>
     <tr>
       <th scope="row">Permitted parents</th>
       <td>
         Within the required parent {{ HTMLElement("table") }} element,
-        the {{HTMLElement("tbody")}} element can be added after any
+        the <code>&lt;tbody&gt;</code> element can be added after any
         {{ HTMLElement("caption") }}, {{HTMLElement("colgroup") }},
         and {{ HTMLElement("thead") }} elements.
       </td>
@@ -377,7 +377,7 @@ tbody > tr > td:last-of-type {
 
 ## See also
 
-- [Learn: HTML tables](/en-US/docs/Learn/HTML/Tables)
+- [Learn: HTML table basics](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics)
 - {{HTMLElement("caption")}}, {{HTMLElement("col")}}, {{HTMLElement("colgroup")}}, {{HTMLElement("table")}}, {{HTMLElement("td")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("th")}}, {{HTMLElement("thead")}}, {{HTMLElement("tr")}}: Other table-related elements
 - {{cssxref("background-color")}}: CSS property to set the background color of each body cell
 - {{cssxref("border")}}: CSS property to control borders of body cells

@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Request.clone
 ---
 
-{{APIRef("Fetch API")}}
+{{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
 The **`clone()`** method of the {{domxref("Request")}} interface creates a copy of the current `Request` object.
 
@@ -54,6 +54,6 @@ const newRequest = myRequest.clone(); // a copy of the request is now stored in 
 
 ## See also
 
-- [ServiceWorker API](/en-US/docs/Web/API/Service_Worker_API)
+- [Service Worker API](/en-US/docs/Web/API/Service_Worker_API)
 - [HTTP access control (CORS)](/en-US/docs/Web/HTTP/CORS)
 - [HTTP](/en-US/docs/Web/HTTP)

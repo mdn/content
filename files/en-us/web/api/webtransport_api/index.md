@@ -15,7 +15,7 @@ The **WebTransport API** provides a modern update to {{domxref("WebSockets API",
 
 These include:
 
-- **Head-of-line blocking**
+- **{{glossary("head of line blocking", "Head-of-line blocking")}}**
   - : HTTP/2 allows multiplexing, so a single connection can stream multiple resources simultaneously. However, if a single resource fails, all other resources on that connection are held up until any missing packets are retransmitted. With QUIC, only the failing resource is affected.
 - **Faster performance**
   - : QUIC is more performant than TCP in many ways. QUIC can handle security features by itself, rather than handing responsibility off to other protocols like TLS — meaning fewer round trips. And streams provide better transport efficiency than the older packet mechanism. That can make a significant difference, especially on high-latency networks.
@@ -98,7 +98,7 @@ When using reliable transmission via streams you can also set the relative prior
 
 ### Unidirectional transmission
 
-To open a unidirectional stream from a user agent, you use the {{domxref("WebTransport.createUnidirectionalStream()")}} method to get a reference to a {{domxref("WritableStream")}}. From this you can {{domxref("WritableStream.getWriter", "get a writer")}} to allow data to be written to the stream and sent to the server.
+To open a unidirectional stream from a user agent, you use the {{domxref("WebTransport.createUnidirectionalStream()")}} method to get a reference to a {{domxref("WritableStream")}}. From this you can [get a writer](/en-US/docs/Web/API/WritableStream/getWriter) to allow data to be written to the stream and sent to the server.
 
 ```js
 async function writeData() {

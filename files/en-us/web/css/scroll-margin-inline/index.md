@@ -40,7 +40,7 @@ scroll-margin-inline: unset;
 
 ## Description
 
-The scroll-margin values represent outsets defining the scroll snap area that is used for snapping this box to the snapport. The scroll snap area is determined by taking the transformed border box, finding its rectangular bounding box (axis-aligned in the scroll container's coordinate space), then adding the specified outsets.
+The scroll-margin values represent outsets defining the scroll snap area that is used for snapping this box to the [snapport](/en-US/docs/Glossary/Scroll_snap#snapport). The scroll snap area is determined by taking the transformed border box, finding its rectangular bounding box (axis-aligned in the scroll container's coordinate space), then adding the specified outsets.
 
 ## Formal definition
 
@@ -52,7 +52,7 @@ The scroll-margin values represent outsets defining the scroll snap area that is
 
 ## Examples
 
-### Simple demonstration
+### Basic demonstration
 
 This example implements something very similar to the interactive example above, except that here we'll explain to you how it's implemented.
 
@@ -60,7 +60,7 @@ The aim here is to create four horizontally-scrolling blocks, the second and thi
 
 #### HTML
 
-The HTML that represents the blocks is very simple:
+The HTML includes a scroller with four children:
 
 ```html
 <div class="scroller">
@@ -127,13 +127,14 @@ Last of all we specify the scroll margin values, a different one for the second 
 
 This means that when scrolling past the middle child elements, the scrolling will snap to `1rem` outside the inline end edge of the second `<div>`, and `2rems` outside the inline end edge of the third `<div>`.
 
-> **Note:** Here we are setting `scroll-margin` on the start _and_ end of the inline axis (x in our case), but only the end edge is really relevant. It would work just as well here to only set a scroll margin on that one edge, for example with `scroll-margin-inline: 0 1rem`, or `scroll-margin-inline-end: 1rem`.
+> [!NOTE]
+> Here we are setting `scroll-margin` on the start _and_ end of the inline axis (x in our case), but only the end edge is really relevant. It would work just as well here to only set a scroll margin on that one edge, for example with `scroll-margin-inline: 0 1rem`, or `scroll-margin-inline-end: 1rem`.
 
 #### Result
 
 Try it for yourself:
 
-{{EmbedLiveSample('Simple_demonstration', '100%', 300)}}
+{{EmbedLiveSample('Basic_demonstration', '100%', 300)}}
 
 ## Specifications
 

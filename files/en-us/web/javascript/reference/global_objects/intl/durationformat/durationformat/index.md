@@ -2,12 +2,10 @@
 title: Intl.DurationFormat() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DurationFormat/DurationFormat
 page-type: javascript-constructor
-status:
-  - experimental
 browser-compat: javascript.builtins.Intl.DurationFormat.DurationFormat
 ---
 
-{{JSRef}} {{SeeCompatTable}}
+{{JSRef}}
 
 The **`Intl.DurationFormat()`** constructor creates {{jsxref("Intl.DurationFormat")}} objects.
 

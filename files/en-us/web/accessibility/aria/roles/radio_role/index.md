@@ -47,7 +47,8 @@ A radio button is a checkable input that when associated with other radio button
 
 The `role` attribute only adds semantics; all of the functionality that comes natively with the [HTML radio](/en-US/docs/Web/HTML/Element/input/radio) needs to be added with JavaScript and the HTML [`tabindex`](/en-US/docs/Web/HTML/Global_attributes/tabindex) attribute.
 
-> **Note:** The first rule of ARIA is if a native HTML element or attribute has the semantics and behavior you require, use it instead of re-purposing an element and adding ARIA. Instead use the native [HTML `<input type="radio">`](/en-US/docs/Web/HTML/Element/input/radio) (with an associated {{HTMLElement('label')}}), which natively provides all the functionality required:
+> [!NOTE]
+> The first rule of ARIA is if a native HTML element or attribute has the semantics and behavior you require, use it instead of re-purposing an element and adding ARIA. Instead use the native [HTML `<input type="radio">`](/en-US/docs/Web/HTML/Element/input/radio) (with an associated {{HTMLElement('label')}}), which natively provides all the functionality required:
 
 ```html
 <fieldset>
@@ -116,7 +117,8 @@ From the assistive technology user's perspective, the heading does not exist sin
     - `false`
       - : The radio is not checked.
 
-> **Note:** use the [`tabindex` attribute](/en-US/docs/Web/HTML/Global_attributes/tabindex) if the `role="radio"` is used on an element that does not natively accept keyboard focus. E.g., a `<div>` or `<span>`.
+> [!NOTE]
+> Use the [`tabindex` attribute](/en-US/docs/Web/HTML/Global_attributes/tabindex) if the `role="radio"` is used on an element that does not natively accept keyboard focus. E.g., a `<div>` or `<span>`.
 
 ## Keyboard interactions
 
@@ -206,9 +208,9 @@ A lot of JavaScript is required to make radio buttons out of non-semantic HTML.
 
 const radioGroups = document.querySelectorAll('[role="radiogroup"]');
 
-for (let i = 0, groups = radioGroups.length; i < groups; i++) {
+for (let i = 0; i < radioGroups.length; i++) {
   const radios = radioGroups[i].querySelectorAll("[role=radio]");
-  for (let j = 0, radiobuttons = radios.length; j < radios; j++) {
+  for (let j = 0; j < radios.length; j++) {
     radios[j].addEventListener("keydown", function () {
       handleKeydown();
     });

@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.PerformanceEntry.name
 ---
 
-{{APIRef("Performance API")}} {{AvailableInWorkers}}
+{{APIRef("Performance API")}}{{AvailableInWorkers}}
 
 The read-only **`name`** property of the {{domxref("PerformanceEntry")}} interface is a string representing the name for a performance entry. It acts as an identifier, but it does not have to be unique. The value depends on the subclass.
 
@@ -75,7 +75,10 @@ A string. The value depends on the subclass of the `PerformanceEntry` object as 
     </tr>
     <tr>
       <td>{{domxref('PerformanceNavigationTiming')}}</td>
-      <td>The resolved URL of the requested resource. This value doesn't change even if the request is redirected.</td>
+      <td>The resolved URL of the requested resource.
+      Note that this omits any <a href="/en-US/docs/Web/URI/Fragment/Text_fragments">text fragments</a> or other fragment directives.
+      The value doesn't change even if the request is redirected.
+      </td>
     </tr>
     <tr>
       <td>{{domxref('PerformancePaintTiming')}}</td>

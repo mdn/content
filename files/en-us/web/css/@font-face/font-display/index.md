@@ -33,7 +33,8 @@ font-display: optional;
 - `optional`
   - : Gives the font face an extremely small block period and no swap period.
 
-> **Note:** In Firefox, the preferences `gfx.downloadable_fonts.fallback_delay`
+> [!NOTE]
+> In Firefox, the preferences `gfx.downloadable_fonts.fallback_delay`
 > and `gfx.downloadable_fonts.fallback_delay_short` provide the duration
 > of the "short" and "extremely small" periods, respectively.
 
@@ -61,8 +62,8 @@ The font display timeline is based on a timer that begins the moment the user ag
 @font-face {
   font-family: ExampleFont;
   src:
-    url(/path/to/fonts/examplefont.woff) format("woff"),
-    url(/path/to/fonts/examplefont.eot) format("eot");
+    url(/path/to/fonts/example-font.woff) format("woff"),
+    url(/path/to/fonts/example-font.eot) format("eot");
   font-weight: 400;
   font-style: normal;
   font-display: fallback;

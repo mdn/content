@@ -6,35 +6,33 @@ page-type: web-api-instance-property
 browser-compat: api.HTMLImageElement.fetchPriority
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
-The **`fetchPriority`** property of the
-{{domxref("HTMLImageElement")}} interface represents a hint given to the browser on how
-it should prioritize the fetch of the image relative to other images.
+The **`fetchPriority`** property of the {{domxref("HTMLImageElement")}} interface represents a hint to the browser indicating how it should prioritize fetching a particular image relative to other images.
+It reflects the [`fetchpriority`](/en-US/docs/Web/HTML/Element/img#fetchpriority) attribute of the corresponding {{htmlelement("img")}} element.
+
+The property allows a developer to signal that fetching a particular image early in the loading process has more or less impact on user experience than a browser can reasonably infer when assigning an internal priority.
+This in turn allows the browser to increase or decrease the priority, and potentially load the image earlier or later than it would otherwise.
+The property should be used sparingly, as excessive or incorrect prioritization can degrade performance.
+
+The fetch priority can be used to complement [preloading](/en-US/docs/Web/HTML/Attributes/rel/preload), allowing a developer to boost the priority ahead of less-impactful resources that have a higher default priority.
+For example, if a developer knows that a particular image significantly contributes to the website's {{glossary("Largest Contentful Paint")}} (LCP) they could add [`<link rel="preload">`](/en-US/docs/Web/HTML/Attributes/rel/preload) for the image and then further boost the priority using the `fetchpriority` property.
+
+Note that both the internal priority of any fetch operation, and the impact of `fetchPriority` on the priority, are entirely browser dependent.
 
 ## Value
 
-A string representing the priority hint. Possible values are:
+A string representing the priority hint.
+Possible values are:
 
 - `high`
-  - : Fetch the image at a high priority relative to other images.
+  - : Fetch the image at a high priority relative to other images with the same internal prioritization.
 - `low`
-  - : Fetch the image at a low priority relative to other images.
+  - : Fetch the image at a low priority relative to other images with the same internal prioritization.
 - `auto`
-  - : Default mode, which indicates no preference for the fetch priority.
-    The browser decides what is best for the user.
-
-The `fetchPriority` property allows you to signal high or low priority image
-fetches. This can be useful when applied to {{HTMLElement("img")}} elements
-to signal images that are "important" to the user experience early in the
-loading process.
-
-The effects of the hint on resource loading is browser-specific so make sure to
-test on multiple browser engines.
-
-Use it sparingly for exceptional cases where the browser may not be able to
-infer the best way to load the image automatically. Over use can result in
-degrading performance.
+  - : Don't set a user preference for the fetch priority.
+    This is the default.
+    It is used if no value is set or if an invalid value is set.
 
 ## Examples
 
@@ -56,3 +54,5 @@ img.src = "img/logo.png";
 
 - {{domxref("HTMLLinkElement.fetchPriority")}}
 - {{domxref("HTMLScriptElement.fetchPriority")}}
+- HTTP {{httpheader("Link")}} header
+- [Optimize resource loading with the Fetch Priority API](https://web.dev/articles/fetch-priority?hl=en#browser_priority_and_fetchpriority) for information about how this API affects priorities on Chrome.

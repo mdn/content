@@ -11,7 +11,8 @@ spec-urls: https://w3c.github.io/aria/#directory
 
 The `directory` role was for a list of references to members of a group, such as a static table of contents.
 
-> **Warning:** The `directory` role was deprecated in ARIA 1.2
+> [!WARNING]
+> The `directory` role was deprecated in ARIA 1.2
 
 ## Description
 

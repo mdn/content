@@ -14,7 +14,7 @@ Our simple example for this guide provides a play/pause button that starts and p
 
 ![A demo featuring a play button, and toggle to turn a filter on and off, and a line graph showing the filter frequencies returned after the filter has been applied.](iir-filter-demo.png)
 
-You can check out the [full demo here on Codepen](https://codepen.io/Rumyra/pen/oPxvYB/). Also see the [source code on GitHub](https://github.com/mdn/webaudio-examples/tree/main/iirfilter-node). It includes some different coefficient values for different lowpass frequencies — you can change the value of the `filterNumber` constant to a value between 0 and 3 to check out the different available effects.
+You can check out the [full demo here on CodePen](https://codepen.io/Rumyra/pen/oPxvYB/). Also see the [source code on GitHub](https://github.com/mdn/webaudio-examples/tree/main/iirfilter-node). It includes some different coefficient values for different lowpass frequencies — you can change the value of the `filterNumber` constant to a value between 0 and 3 to check out the different available effects.
 
 ## Browser support
 
@@ -30,7 +30,7 @@ A [biquad filter](https://www.mathworks.com/help/dsphdl/ref/biquadfilter.html) i
 
 When you are using an {{domxref("IIRFilterNode")}} instead of a {{domxref("BiquadFilterNode")}} you are creating the filter yourself, rather than just choosing a pre-programmed type. So you can create a highpass filter, or a lowpass filter, or a more bespoke one. And this is where the IIR filter node is useful — you can create your own if none of the already available settings is right for what you want. As well as this, if your audio graph needed a highpass and a bandpass filter within it, you could just use one IIR filter node in place of the two biquad filter nodes you would otherwise need for this.
 
-With the IIRFIlter node it's up to you to set what `feedforward` and `feedback` values the filter needs — this determines the characteristics of the filter. The downside is that this involves some complex maths.
+With the IIR filter node it's up to you to set what `feedforward` and `feedback` values the filter needs — this determines the characteristics of the filter. The downside is that this involves some complex maths.
 
 If you are looking to learn more there's some [information about the maths behind IIR filters here](https://ece.uccs.edu/~mwickert/ece2610/lecture_notes/ece2610_chap8.pdf). This enters the realms of signal processing theory — don't worry if you look at it and feel like it's not for you.
 
@@ -54,7 +54,8 @@ Our `feedback` values cannot start with zero, otherwise on the first pass nothin
 const feedBackward = [1.0126964558, -1.9991880801, 0.9873035442];
 ```
 
-> **Note:** These values are calculated based on the lowpass filter specified in the [filter characteristics of the Web Audio API specification](https://webaudio.github.io/web-audio-api/#filters-characteristics). As this filter node gains more popularity we should be able to collate more coefficient values.
+> [!NOTE]
+> These values are calculated based on the lowpass filter specified in the [filter characteristics of the Web Audio API specification](https://webaudio.github.io/web-audio-api/#filters-characteristics). As this filter node gains more popularity we should be able to collate more coefficient values.
 
 ## Using an IIRFilter in an audio graph
 
@@ -125,7 +126,7 @@ filterButton.addEventListener(
   () => {
     if (filterButton.dataset.filteron === "false") {
       srcNode.disconnect(audioCtx.destination);
-      srcNode.connect(iirfilter).connect(audioCtx.destination);
+      srcNode.connect(iirFilter).connect(audioCtx.destination);
       // …
     }
   },

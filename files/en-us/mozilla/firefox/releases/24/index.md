@@ -39,8 +39,8 @@ page-type: firefox-release-notes
 ### Developer Tools
 
 - The Network inspector now lets you filter by content type (CSS/image/font etc.) and see the relevant size and load times.
-- The Devtools options panel to the left lets you disable/enable JavaScript temporarily.
-- Extension developers may use the new [Browser Console](https://mihai.sucan.ro/mihai/blog/the-browser-console-is-replacing-the-error-console) for Chrome-level scripts (Replaces Error Console).
+- The DevTools options panel to the left lets you disable/enable JavaScript temporarily.
+- Extension developers may use the new [Browser Console](https://mihai.sucan.ro/mihai/blog/the-browser-console-is-replacing-the-error-console/) for Chrome-level scripts (Replaces Error Console).
 - The source map syntax has been changed to use `//#` instead of `//@` ([Firefox bug 870361](https://bugzil.la/870361)).
 
 ### MathML

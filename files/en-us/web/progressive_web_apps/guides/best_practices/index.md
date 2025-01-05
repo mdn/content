@@ -12,9 +12,9 @@ This article provides a list of best practices to help you make sure your PWA is
 
 ## Adapt to all browsers
 
-Your PWA is based on Web technologies. This means that, on top of being installable on devices, PWAs can run in web browsers too. To ensure compatibility, it's essential to [test your app](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing) across various browsers and operating systems.
+Your PWA is based on Web technologies. This means that, on top of being installable on devices, PWAs can run in web browsers too. To ensure compatibility, it's essential to [test your app](/en-US/docs/Learn_web_development/Extensions/Testing) across various browsers and operating systems.
 
-Consider the diverse range of browsers your users may use and cater to a wide spectrum of potential users. Using [feature detection](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection) allows you to deliver a usable experience to the broadest audience.
+Consider the diverse range of browsers your users may use and cater to a wide spectrum of potential users. Using [feature detection](/en-US/docs/Learn_web_development/Extensions/Testing/Feature_detection) allows you to deliver a usable experience to the broadest audience.
 
 Feature detection also helps with {{Glossary("Progressive Enhancement")}}, a design philosophy that makes it possible to deliver a great experience to as many users as possible.
 
@@ -26,7 +26,7 @@ For example, handling form submissions with the HTML {{htmlelement("form")}} ele
 
 Similar to how testing your app across various browsers is important, testing across devices ensures your app is accessible to the broadest audience.
 
-[Responsive design](/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design) is crucial for PWAs to ensure the content is accessible on any screen size. Users should be able to access all features and content regardless of their device's screen size. By rearranging content at different viewport sizes, you can prioritize important data and actions.
+[Responsive design](/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design) is crucial for PWAs to ensure the content is accessible on any screen size. Users should be able to access all features and content regardless of their device's screen size. By rearranging content at different viewport sizes, you can prioritize important data and actions.
 
 Ensure users can interact with your application no matter how they access your content. Support keyboard and mouse, as well as touch or stylus input methods. Make sure all your application features can be accessed through any input method.
 
@@ -101,4 +101,4 @@ Make sure your PWA provides an app-like experience by considering the following 
 ## See also
 
 - [What makes a good Progressive Web App](https://web.dev/articles/pwa-checklist) on web.dev (2022).
-- [Best practices for PWAs](https://learn.microsoft.com/microsoft-edge/progressive-web-apps-chromium/how-to/best-practices) on learn.microsoft.com (2023).
+- [Best practices for PWAs](https://learn.microsoft.com/en-us/microsoft-edge/progressive-web-apps-chromium/how-to/best-practices) on learn.microsoft.com (2023).

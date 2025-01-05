@@ -69,11 +69,9 @@ transform: translateY(50%);
   </tbody>
 </table>
 
-### Formal syntax
+## Formal syntax
 
-```plain
-translateY({{cssxref("&lt;length-percentage&gt;")}})
-```
+{{CSSSyntax}}
 
 ## Examples
 

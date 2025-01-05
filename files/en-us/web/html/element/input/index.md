@@ -1,5 +1,5 @@
 ---
-title: "<input>: The Input (Form Input) element"
+title: "<input>: The HTML Input element"
 slug: Web/HTML/Element/input
 page-type: html-element
 browser-compat: html.elements.input
@@ -382,13 +382,15 @@ A few additional non-standard attributes are listed following the descriptions o
 
   - : A Boolean attribute which, if present, indicates that the input should automatically have focus when the page has finished loading (or when the {{HTMLElement("dialog")}} containing the element has been displayed).
 
-    > **Note:** An element with the `autofocus` attribute may gain focus before the {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}} event is fired.
+    > [!NOTE]
+    > An element with the `autofocus` attribute may gain focus before the {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}} event is fired.
 
     No more than one element in the document may have the `autofocus` attribute. If put on more than one element, the first one with the attribute receives focus.
 
     The `autofocus` attribute cannot be used on inputs of type `hidden`, since hidden inputs cannot be focused.
 
-    > **Warning:** Automatically focusing a form control can confuse visually-impaired people using screen-reading technology and people with cognitive impairments. When `autofocus` is assigned, screen-readers "teleport" their user to the form control without warning them beforehand.
+    > [!WARNING]
+    > Automatically focusing a form control can confuse visually-impaired people using screen-reading technology and people with cognitive impairments. When `autofocus` is assigned, screen-readers "teleport" their user to the form control without warning them beforehand.
 
     Use careful consideration for accessibility when applying the `autofocus` attribute. Automatically focusing on a control can cause the page to scroll on load. The focus can also cause dynamic keyboards to display on some touch devices. While a screen reader will announce the label of the form control receiving focus, the screen reader will not announce anything before the label, and the sighted user on a small device will equally miss the context created by the preceding content.
 
@@ -398,7 +400,8 @@ A few additional non-standard attributes are listed following the descriptions o
 
   - : Valid for both `radio` and `checkbox` types, `checked` is a Boolean attribute. If present on a `radio` type, it indicates that the radio button is the currently selected one in the group of same-named radio buttons. If present on a `checkbox` type, it indicates that the checkbox is checked by default (when the page loads). It does _not_ indicate whether this checkbox is currently checked: if the checkbox's state is changed, this content attribute does not reflect the change. (Only the [`HTMLInputElement`'s `checked` IDL attribute](/en-US/docs/Web/API/HTMLInputElement) is updated.)
 
-    > **Note:** Unlike other input controls, a checkboxes and radio buttons value are only included in the submitted data if they are currently `checked`. If they are, the name and the value(s) of the checked controls are submitted.
+    > [!NOTE]
+    > Unlike other input controls, a checkboxes and radio buttons value are only included in the submitted data if they are currently `checked`. If they are, the name and the value(s) of the checked controls are submitted.
     >
     > For example, if a checkbox whose `name` is `fruit` has a `value` of `cherry`, and the checkbox is checked, the form data submitted will include `fruit=cherry`. If the checkbox isn't active, it isn't listed in the form data at all. The default `value` for checkboxes and radio buttons is `on`.
 
@@ -426,7 +429,8 @@ A few additional non-standard attributes are listed following the descriptions o
 
     Specifically, disabled inputs do not receive the {{domxref("Element/click_event", "click")}} event, and disabled inputs are not submitted with the form.
 
-    > **Note:** Although not required by the specification, Firefox will by default [persist the dynamic disabled state](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of an `<input>` across page loads. Use the [`autocomplete`](#autocomplete) attribute to control this feature.
+    > [!NOTE]
+    > Although not required by the specification, Firefox will by default [persist the dynamic disabled state](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of an `<input>` across page loads. Use the [`autocomplete`](#autocomplete) attribute to control this feature.
 
 - `form`
 
@@ -434,7 +438,8 @@ A few additional non-standard attributes are listed following the descriptions o
 
     The `form` attribute lets you place an input anywhere in the document but have it included with a form elsewhere in the document.
 
-    > **Note:** An input can only be associated with one form.
+    > [!NOTE]
+    > An input can only be associated with one form.
 
 - `formaction`
   - : Valid for the `image` and `submit` input types only. See the {{HTMLElement("input/submit", "submit")}} input type for more information.
@@ -524,15 +529,20 @@ A few additional non-standard attributes are listed following the descriptions o
 
     When this code has run, `guestName` will be the {{domxref("HTMLInputElement")}} for the `guest` field, and `hatSize` the object for the `hat-size` field.
 
-    > **Warning:** Avoid giving form elements a `name` that corresponds to a built-in property of the form, since you would then override the predefined property or method with this reference to the corresponding input.
+    > [!WARNING]
+    > Avoid giving form elements a `name` that corresponds to a built-in property of the form, since you would then override the predefined property or method with this reference to the corresponding input.
 
 - [`pattern`](/en-US/docs/Web/HTML/Attributes/pattern)
 
-  - : Valid for `text`, `search`, `url`, `tel`, `email`, and `password`, the `pattern` attribute defines a regular expression that the input's [`value`](#value) must match in order for the value to pass [constraint validation](/en-US/docs/Web/HTML/Constraint_validation). It must be a valid JavaScript regular expression, as used by the {{jsxref("RegExp")}} type, and as documented in our [guide on regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions); the `'u'` flag is specified when compiling the regular expression, so that the pattern is treated as a sequence of Unicode code points, instead of as {{Glossary("ASCII")}}. No forward slashes should be specified around the pattern text.
+  - : Valid for `text`, `search`, `url`, `tel`, `email`, and `password`, the `pattern` attribute is used to compile a regular expression that the input's [`value`](#value) must match in order for the value to pass [constraint validation](/en-US/docs/Web/HTML/Constraint_validation). It must be a valid JavaScript regular expression, as used by the {{jsxref("RegExp")}} type, and as documented in our [guide on regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions). No forward slashes should be specified around the pattern text. When compiling the regular expression:
 
-    If the `pattern` attribute is present but is not specified or is invalid, no regular expression is applied and this attribute is ignored completely. If the pattern attribute is valid and a non-empty value does not match the pattern, constraint validation will prevent form submission.
+    1. the pattern will be implicitly wrapped with `^(?:` and `)$`, such that the match is required against the _entire_ input value, i.e., `^(?:<pattern>)$`.
+    2. the `'v'` flag is specified so that the pattern is treated as a sequence of Unicode code points, instead of as {{Glossary("ASCII")}}.
 
-    > **Note:** If using the `pattern` attribute, inform the user about the expected format by including explanatory text nearby. You can also include a [`title`](#title) attribute to explain what the requirements are to match the pattern; most browsers will display this title as a tooltip. The visible explanation is required for accessibility. The tooltip is an enhancement.
+    If the `pattern` attribute is present but is not specified or is invalid, no regular expression is applied and this attribute is ignored completely. If the pattern attribute is valid and a non-empty value does not match the pattern, constraint validation will prevent form submission. If the [`multiple`](/en-US/docs/Web/HTML/Attributes/multiple) is present, the compiled regular expression is matched against each comma separated value.
+
+    > [!NOTE]
+    > If using the `pattern` attribute, inform the user about the expected format by including explanatory text nearby. You can also include a [`title`](#title) attribute to explain what the requirements are to match the pattern; most browsers will display this title as a tooltip. The visible explanation is required for accessibility. The tooltip is an enhancement.
 
     See [Client-side validation](#client-side_validation) for more information.
 
@@ -540,7 +550,8 @@ A few additional non-standard attributes are listed following the descriptions o
 
   - : Valid for `text`, `search`, `url`, `tel`, `email`, `password`, and `number`, the `placeholder` attribute provides a brief hint to the user as to what kind of information is expected in the field. It should be a word or short phrase that provides a hint as to the expected type of data, rather than an explanation or prompt. The text _must not_ include carriage returns or line feeds. So for example if a field is expected to capture a user's first name, and its label is "First Name", a suitable placeholder might be "e.g. Mustafa".
 
-    > **Note:** The `placeholder` attribute is not as semantically useful as other ways to explain your form, and can cause unexpected technical issues with your content. See [Labels](#labels) for more information.
+    > [!NOTE]
+    > The `placeholder` attribute is not as semantically useful as other ways to explain your form, and can cause unexpected technical issues with your content. See [Labels](#labels) for more information.
 
 - `popovertarget`
 
@@ -571,7 +582,7 @@ A few additional non-standard attributes are listed following the descriptions o
 
 - [`size`](/en-US/docs/Web/HTML/Attributes/size)
 
-  - : Valid for `email`, `password`, `tel`, `url`, and `text`, the `size` attribute specifies how much of the input is shown. Basically creates same result as setting CSS [`width`](/en-US/docs/Web/CSS/width) property with a few specialities. The actual unit of the value depends on the input type. For `password` and `text`, it is a number of characters (or `em` units) with a default value of `20`, and for others, it is pixels (or `px` units). CSS `width` takes precedence over the `size` attribute.
+  - : Valid for `email`, `password`, `tel`, `url`, and `text`, the `size` attribute specifies how much of the input is shown. Basically creates same result as setting CSS [`width`](/en-US/docs/Web/CSS/width) property with a few specialties. The actual unit of the value depends on the input type. For `password` and `text`, it is a number of characters (or `em` units) with a default value of `20`, and for others, it is pixels (or `px` units). CSS `width` takes precedence over the `size` attribute.
 
 - `src`
 
@@ -592,7 +603,8 @@ A few additional non-standard attributes are listed following the descriptions o
 
     For example, if you have `<input type="number" min="10" step="2">`, then any even integer, `10` or greater, is valid. If omitted, `<input type="number">`, any integer is valid, but floats (like `4.2`) are not valid, because `step` defaults to `1`. For `4.2` to be valid, `step` would have had to be set to `any`, 0.1, 0.2, or any the `min` value would have had to be a number ending in `.2`, such as `<input type="number" min="-5.2">`
 
-    > **Note:** When the data entered by the user doesn't adhere to the stepping configuration, the value is considered invalid in constraint validation and will match the `:invalid` pseudoclass.
+    > [!NOTE]
+    > When the data entered by the user doesn't adhere to the stepping configuration, the value is considered invalid in constraint validation and will match the `:invalid` pseudoclass.
 
     See [Client-side validation](#client-side_validation) for more information.
 
@@ -631,16 +643,9 @@ The following non-standard attributes are also available on some browsers. As a 
   </thead>
   <tbody>
     <tr>
-      <td><a href="#autocorrect"><code>autocorrect</code></a></td>
-      <td>
-        A string indicating whether autocorrect is <code>on</code> or <code>off</code>. <strong>Safari only.</strong>
-      </td>
-    </tr>
-    <tr>
       <td><a href="#incremental"><code>incremental</code></a></td>
       <td>
-        Whether or not to send repeated {{domxref("HTMLInputElement/search_event", "search")}}
-        events to allow updating live search results while the user is still editing the value of the field.
+        Whether or not to send repeated {{domxref("HTMLInputElement/search_event", "search")}} events to allow updating live search results while the user is still editing the value of the field.
         <strong>WebKit and Blink only (Safari, Chrome, Opera, etc.).</strong>
       </td>
     </tr>
@@ -676,15 +681,6 @@ The following non-standard attributes are also available on some browsers. As a 
   </tbody>
 </table>
 
-- `autocorrect` {{non-standard_inline}}
-
-  - : (Safari only). A string which indicates whether to activate automatic correction while the user is editing this field. Permitted values are:
-
-    - `on`
-      - : Enable automatic correction of typos, as well as processing of text substitutions if any are configured.
-    - `off`
-      - : Disable automatic correction and text substitutions.
-
 - `incremental` {{non-standard_inline}}
 
   - : The Boolean attribute `incremental` is a WebKit and Blink extension (so supported by Safari, Opera, Chrome, etc.) which, if present, tells the {{Glossary("user agent")}} to process the input as a live search. As the user edits the value of the field, the user agent sends {{domxref("HTMLInputElement/search_event", "search")}} events to the {{domxref("HTMLInputElement")}} object representing the search box. This allows your code to update the search results in real time as the user edits the search.
@@ -699,7 +695,7 @@ The following non-standard attributes are also available on some browsers. As a 
 
 - `results` {{non-standard_inline}}
 
-  - : The `results` attribute—supported only by Safari—is a numeric value that lets you override the maximum number of entries to be displayed in the {{HTMLElement("input")}} element's natively-provided drop-down menu of previous search queries.
+  - : The `results` attribute—supported only by Safari—is a numeric value that lets you override the maximum number of entries to be displayed in the `<input>` element's natively-provided drop-down menu of previous search queries.
 
     The value must be a non-negative decimal number. If not provided, or an invalid value is given, the browser's default maximum number of entries is used.
 
@@ -898,7 +894,7 @@ input:checked + label {
 
 ### Attribute selectors
 
-It is possible to target different types of form controls based on their [`type`](#type) using [attribute selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors). CSS attribute selectors match elements based on either just the presence of an attribute or the value of a given attribute.
+It is possible to target different types of form controls based on their [`type`](#type) using [attribute selectors](/en-US/docs/Learn_web_development/Core/Styling_basics/Attribute_selectors). CSS attribute selectors match elements based on either just the presence of an attribute or the value of a given attribute.
 
 ```css
 /* matches a password input */
@@ -979,9 +975,8 @@ For more information about adding color to elements in HTML, see:
 
 Also see:
 
-- [Styling HTML forms](/en-US/docs/Learn/Forms/Styling_web_forms)
-- [Advanced styling for HTML forms](/en-US/docs/Learn/Forms/Advanced_form_styling) and
-- the [compatibility table of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls).
+- [Styling HTML forms](/en-US/docs/Learn_web_development/Extensions/Forms/Styling_web_forms)
+- [Advanced styling for HTML forms](/en-US/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling) and
 
 ## Additional features
 
@@ -1023,11 +1018,13 @@ The [`placeholder`](#placeholder) attribute lets you specify text that appears w
 
 Not only is the placeholder not accessible to screen readers, but once the user enters any text into the form control, or if the form control already has a value, the placeholder disappears. Browsers with automatic page translation features may skip over attributes when translating, meaning the `placeholder` may not get translated.
 
-> **Note:** Don't use the [`placeholder`](#placeholder) attribute if you can avoid it. If you need to label an `<input>` element, use the {{HTMLElement("label")}} element.
+> [!NOTE]
+> Don't use the [`placeholder`](#placeholder) attribute if you can avoid it. If you need to label an `<input>` element, use the {{HTMLElement("label")}} element.
 
 ### Client-side validation
 
-> **Warning:** Client-side validation is useful, but it does _not_ guarantee that the server will receive valid data. If the data must be in a specific format, _always_ verify it also on the server-side, and return a [`400` HTTP response](/en-US/docs/Web/HTTP/Status/400) if the format is invalid.
+> [!WARNING]
+> Client-side validation is useful, but it does _not_ guarantee that the server will receive valid data. If the data must be in a specific format, _always_ verify it also on the server-side, and return a [`400` HTTP response](/en-US/docs/Web/HTTP/Status/400) if the format is invalid.
 
 In addition to using CSS to style inputs based on the {{cssxref(":valid")}} or {{cssxref(":invalid")}} UI states based on the current state of each input, as noted in the [UI pseudo-classes](#ui_pseudo-classes) section above, the browser provides for client-side validation on (attempted) form submission. On form submission, if there is a form control that fails constraint validation, supporting browsers will display an error message on the first invalid form control; displaying a default message based on the error type, or a message set by you.
 
@@ -1043,7 +1040,7 @@ Specific attributes and their values can lead to a specific error {{domxref('Val
 
 <table class="no-markdown">
   <caption>
-    Validity object errors depend on the {{htmlelement('input')}}
+    Validity object errors depend on the <code>&lt;input&gt;</code>
     attributes and their values:
   </caption>
   <thead>
@@ -1101,7 +1098,7 @@ Specific attributes and their values can lead to a specific error {{domxref('Val
       <td><a href="#step"><code>step</code></a></td>
       <td>{{domxref('validityState.stepMismatch')}}</td>
       <td>
-        The value doesn't match the step increment. Increment default is <code>1</code>, so only integers are valid on<code> type="number"</code>
+        The value doesn't match the step increment. Increment default is <code>1</code>, so only integers are valid on <code>type="number"</code>
         is step is not included. <code>step="any"</code> will never throw this error.
       </td>
     </tr>
@@ -1156,7 +1153,7 @@ The last line, setting the custom validity message to the empty string is vital.
 
 #### Custom validation error example
 
-If you want to present a custom error message when a field fails to validate, you need to use the [Constraint Validation API](/en-US/docs/Learn/Forms/Form_validation#validating_forms_using_javascript) available on `<input>` (and related) elements. Take the following form:
+If you want to present a custom error message when a field fails to validate, you need to use the [Constraint Validation API](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation#validating_forms_using_javascript) available on `<input>` (and related) elements. Take the following form:
 
 ```html
 <form>
@@ -1200,9 +1197,11 @@ In brief:
 - As a result, if the input value is invalid when the submit button is pressed, one of the custom error messages will be shown.
 - If it is valid, it will submit as you'd expect. For this to happen, the custom validity has to be cancelled, by invoking `setCustomValidity()` with an empty string value. We therefore do this every time the `input` event is raised. If you don't do this, and a custom validity was previously set, the input will register as invalid, even if it currently contains a valid value on submission.
 
-> **Note:** Always validate input constraints both client side and server side. Constraint validation doesn't remove the need for validation on the _server side_. Invalid values can still be sent by older browsers or by bad actors.
+> [!NOTE]
+> Always validate input constraints both client side and server side. Constraint validation doesn't remove the need for validation on the _server side_. Invalid values can still be sent by older browsers or by bad actors.
 
-> **Note:** Firefox supported a proprietary error attribute — `x-moz-errormessage` — for many versions, which allowed you set custom error messages in a similar way. This has been removed as of version 66 (see [Firefox bug 1513890](https://bugzil.la/1513890)).
+> [!NOTE]
+> Firefox supported a proprietary error attribute — `x-moz-errormessage` — for many versions, which allowed you set custom error messages in a similar way. This has been removed as of version 66 (see [Firefox bug 1513890](https://bugzil.la/1513890)).
 
 ### Localization
 
@@ -1213,6 +1212,27 @@ Firefox uses the following heuristics to determine the locale to validate the us
 - Try the language specified by a `lang`/`xml:lang` attribute on the element or any of its parents.
 - Try the language specified by any `Content-Language` HTTP header. Or,
 - If none specified, use the browser's locale.
+
+## Accessibility
+
+### Labels
+
+When including inputs, it is an accessibility requirement to add labels alongside. This is needed so those who use assistive technologies can tell what the input is for. Also, clicking or touching a label gives focus to the label's associated form control. This improves the accessibility and usability for sighted users, increases the area a user can click or touch to activate the form control. This is especially useful (and even needed) for radio buttons and checkboxes, which are tiny. For more information about labels in general see [Labels](#labels).
+
+The following is an example of how to associate the `<label>` with an `<input>` element in the above style. You need to give the `<input>` an `id` attribute. The `<label>` then needs a `for` attribute whose value is the same as the input's `id`.
+
+```html
+<label for="peas">Do you like peas?</label>
+<input type="checkbox" name="peas" id="peas" />
+```
+
+### Size
+
+Interactive elements such as form input should provide an area large enough that it is easy to activate them. This helps a variety of people, including people with motor control issues and people using non-precise forms of input such as a stylus or fingers. A minimum interactive size of 44×44 [CSS pixels](https://www.w3.org/TR/WCAG21/#dfn-css-pixels) is recommended.
+
+- [Understanding Success Criterion 2.5.5: Target Size | W3C Understanding WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/target-size.html)
+- [Target Size and 2.5.5 | Adrian Roselli](https://adrianroselli.com/2019/06/target-size-and-2-5-5.html)
+- [Quick test: Large touch targets - The A11Y Project](https://www.a11yproject.com/posts/large-touch-targets/)
 
 ## Technical summary
 
@@ -1291,7 +1311,7 @@ Firefox uses the following heuristics to determine the locale to validate the us
                 with no <code>list</code> attribute: <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/searchbox_role"><code>searchbox</code></a>
               </li>
               <li>
-                with <code>list</code> attribute:<a href="/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role"><code>combobox</code></a>
+                with <code>list</code> attribute: <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role"><code>combobox</code></a>
               </li>
             </ul>
           </li>
@@ -1395,27 +1415,6 @@ Firefox uses the following heuristics to determine the locale to validate the us
   </tbody>
 </table>
 
-## Accessibility concerns
-
-### Labels
-
-When including inputs, it is an accessibility requirement to add labels alongside. This is needed so those who use assistive technologies can tell what the input is for. Also, clicking or touching a label gives focus to the label's associated form control. This improves the accessibility and usability for sighted users, increases the area a user can click or touch to activate the form control. This is especially useful (and even needed) for radio buttons and checkboxes, which are tiny. For more information about labels in general see [Labels](#labels) .
-
-The following is an example of how to associate the `<label>` with an `<input>` element in the above style. You need to give the `<input>` an `id` attribute. The `<label>` then needs a `for` attribute whose value is the same as the input's `id`.
-
-```html
-<label for="peas">Do you like peas?</label>
-<input type="checkbox" name="peas" id="peas" />
-```
-
-### Size
-
-Interactive elements such as form input should provide an area large enough that it is easy to activate them. This helps a variety of people, including people with motor control issues and people using non-precise forms of input such as a stylus or fingers. A minimum interactive size of 44×44 [CSS pixels](https://www.w3.org/TR/WCAG21/#dfn-css-pixels) is recommended.
-
-- [Understanding Success Criterion 2.5.5: Target Size | W3C Understanding WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/target-size.html)
-- [Target Size and 2.5.5 | Adrian Roselli](https://adrianroselli.com/2019/06/target-size-and-2-5-5.html)
-- [Quick test: Large touch targets - The A11Y Project](https://www.a11yproject.com/posts/large-touch-targets/)
-
 ## Specifications
 
 {{Specifications}}
@@ -1427,14 +1426,13 @@ Interactive elements such as form input should provide an area large enough that
 ## See also
 
 - [Form constraint validation](/en-US/docs/Web/HTML/Constraint_validation)
-- [Your first HTML form](/en-US/docs/Learn/Forms/Your_first_form)
-- [How to structure an HTML form](/en-US/docs/Learn/Forms/How_to_structure_a_web_form)
-- [The native form widgets](/en-US/docs/Learn/Forms/Basic_native_form_controls)
-- [Sending form data](/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data)
-- [Form data validation](/en-US/docs/Learn/Forms/Form_validation)
-- [How to build custom form widgets](/en-US/docs/Learn/Forms/How_to_build_custom_form_controls)
-- [HTML forms in legacy browsers](/en-US/docs/Learn/Forms/HTML_forms_in_legacy_browsers)
-- [Styling HTML forms](/en-US/docs/Learn/Forms/Styling_web_forms)
-- [Advanced styling for HTML forms](/en-US/docs/Learn/Forms/Advanced_form_styling)
-- [CSS property compatibility table](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [Your first HTML form](/en-US/docs/Learn_web_development/Extensions/Forms/Your_first_form)
+- [How to structure an HTML form](/en-US/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form)
+- [The native form widgets](/en-US/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls)
+- [Sending form data](/en-US/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data)
+- [Form data validation](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation)
+- [How to build custom form widgets](/en-US/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls)
+- [HTML forms in legacy browsers](/en-US/docs/Learn_web_development/Extensions/Forms/HTML_forms_in_legacy_browsers)
+- [Styling HTML forms](/en-US/docs/Learn_web_development/Extensions/Forms/Styling_web_forms)
+- [Advanced styling for HTML forms](/en-US/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling)
 - [Creating vertical form controls](/en-US/docs/Web/CSS/CSS_writing_modes/Vertical_controls)

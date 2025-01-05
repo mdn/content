@@ -25,7 +25,7 @@ To include the (appropriate) feature status key — [**experimental**](/en-US/do
 
 ### Specifications
 
-In the value of the `spec_urls` front matter metadata key, update the URLs to point to the fragment IDs for the correct sections from the following specifications:
+In the value of the `spec-urls` front matter metadata key, update the URLs to point to the fragment IDs for the correct sections from the following specifications:
 
 - [ARIA](https://w3c.github.io/aria/)
 - [ARIA Authoring Practices](https://www.w3.org/WAI/ARIA/apg/)
@@ -65,7 +65,8 @@ Include a complete description of the attribute or role.
 - Changing attribute values
   - : explanation of each
 
-> **Note:** Include a note about semantic alternatives to using this role or attribute. The first rule of ARIA use is that you can use a native feature with the semantics and behavior you require already built in, instead of re-purposing an element and **adding** an ARIA role, state, or property to make it accessible, then do so. Then post full details in best practices section below.
+> [!NOTE]
+> Include a note about semantic alternatives to using this role or attribute. The first rule of ARIA use is that you can use a native feature with the semantics and behavior you require already built in, instead of re-purposing an element and **adding** an ARIA role, state, or property to make it accessible, then do so. Then post full details in best practices section below.
 
 ## Examples
 
@@ -77,7 +78,8 @@ Each example must have an H3 heading (`###`) naming the example. The heading sho
 
 See our guide on how to add [code examples](/en-US/docs/MDN/Writing_guidelines/Page_structures/Code_examples) for more information.
 
-> **Note:** Sometimes you will want to link to examples given on another page.
+> [!NOTE]
+> Sometimes you will want to link to examples given on another page.
 >
 > **Scenario 1:** If you have some examples on this page and some more examples on another page:
 >
@@ -102,7 +104,7 @@ See our guide on how to add [code examples](/en-US/docs/MDN/Writing_guidelines/P
 > ```md
 > ## Examples
 >
-> For examples of this API, see [the page on fetch()](https://example.org).
+> For examples of this API, see [the page on fetch()](https://example.org/).
 > ```
 
 ## Accessibility concerns

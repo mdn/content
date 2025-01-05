@@ -6,8 +6,7 @@ page-type: guide
 
 {{XsltSidebar}}
 
-This document describes the interface for using [XPath](/en-US/docs/Web/XPath) in JavaScript. Mozilla implements a fair amount of the [DOM 3 XPath](https://www.w3.org/TR/2004/NOTE-DOM-Level-3-XPath-20040226/), which means that XPath expressions can be run against both HTML and XML documents.
-
+This document describes the interface for using [XPath](/en-US/docs/Web/XPath) in JavaScript.
 The main interface to using XPath is the [evaluate](/en-US/docs/Web/API/Document/evaluate) function of the [document](/en-US/docs/Web/API/Document) object.
 
 ## document.evaluate()
@@ -56,7 +55,7 @@ const nsResolver =
 
 And then pass `document.evaluate`, the `nsResolver` variable as the `namespaceResolver` parameter.
 
-Note: XPath defines QNames without a prefix to match only elements in the null namespace. There is no way in XPath to pick up the default namespace as applied to a regular element reference (e.g., `p[@id='_myid']` for `xmlns='http://www.w3.org/1999/xhtml'`). To match default elements in a non-null namespace, you either have to refer to a particular element using a form such as `['namespace-uri()='http://www.w3.org/1999/xhtml' and name()='p' and @id='_myid']` ([this approach](#using_xpath_functions_to_reference_elements_with_a_default_namespace) works well for dynamic XPath's where the namespaces might not be known) or use prefixed name tests, and create a namespace resolver mapping the prefix to the namespace. Read more on [how to create a user-defined namespace resolver](#implementing_a_user_defined_namespace_resolver), if you wish to take the latter approach.
+Note: XPath defines QNames without a prefix to match only elements in the null namespace. There is no way in XPath to pick up the default namespace as applied to a regular element reference (e.g., `p[@id='_my-id']` for `xmlns='http://www.w3.org/1999/xhtml'`). To match default elements in a non-null namespace, you either have to refer to a particular element using a form such as `['namespace-uri()='http://www.w3.org/1999/xhtml' and name()='p' and @id='_my-id']` ([this approach](#using_xpath_functions_to_reference_elements_with_a_default_namespace) works well for dynamic XPath's where the namespaces might not be known) or use prefixed name tests, and create a namespace resolver mapping the prefix to the namespace. Read more on [how to create a user-defined namespace resolver](#implementing_a_user_defined_namespace_resolver), if you wish to take the latter approach.
 
 ## Description
 
@@ -222,7 +221,7 @@ To determine that type after evaluation, we use the `resultType` property of the
 
 The following code is intended to be placed in any JavaScript fragment within or linked to the HTML document against which the XPath expression is to be evaluated.
 
-To extract all the `<h2>` heading elements in an HTML document using XPath, the `xpathExpression` is '`//h2`'. Where, `//` is the Recursive Descent Operator that matches elements with the nodeName `h2` anywhere in the document tree. The full code for this is: link to introductory xpath doc
+To extract all the `<h2>` heading elements in an HTML document using XPath, the `xpathExpression` is `"//h2"`. Where, `//` is the Recursive Descent Operator that matches elements with the nodeName `h2` anywhere in the document tree. The full code for this is: link to introductory xpath doc
 
 ```js
 const headings = document.evaluate(
@@ -265,7 +264,7 @@ This is an example for illustration only. This function will need to take namesp
 
 will select all [MathML](/en-US/docs/Web/MathML) expressions that are the children of (X)HTML table data cell elements.
 
-In order to associate the '`mathml:`' prefix with the namespace URI '`http://www.w3.org/1998/Math/MathML`' and '`xhtml:`' with the URI '`http://www.w3.org/1999/xhtml`' we provide a function:
+In order to associate the `mathml:` prefix with the namespace URI `http://www.w3.org/1998/Math/MathML` and `xhtml:` with the URI `http://www.w3.org/1999/xhtml` we provide a function:
 
 ```js
 function nsResolver(prefix) {
@@ -319,7 +318,7 @@ An approach which might work better (and allow namespaces not to be known ahead 
 
 ### Using XPath functions to reference elements with a default namespace
 
-Another approach to match default elements in a non-null namespace (and one which works well for dynamic XPath expressions where the namespaces might not be known), involves referring to a particular element using a form such as `[namespace-uri()='http://www.w3.org/1999/xhtml' and name()='p' and @id='_myid']`. This circumvents the problem of an XPath query not being able to detect the default namespace on a regularly labeled element.
+Another approach to match default elements in a non-null namespace (and one which works well for dynamic XPath expressions where the namespaces might not be known), involves referring to a particular element using a form such as `[namespace-uri()='http://www.w3.org/1999/xhtml' and name()='p' and @id='_my-id']`. This circumvents the problem of an XPath query not being able to detect the default namespace on a regularly labeled element.
 
 ### Getting specifically namespaced elements and attributes regardless of prefix
 
@@ -327,17 +326,17 @@ If one wishes to provide flexibility in namespaces (as they are intended) by not
 
 While one can adapt the approach in the above section to test for namespaced elements regardless of the prefix chosen (using [`local-name()`](/en-US/docs/Web/XPath/Functions/local-name) in combination with [`namespace-uri()`](/en-US/docs/Web/XPath/Functions/namespace-uri) instead of [`name()`](/en-US/docs/Web/XPath/Functions/name)), a more challenging situation occurs, however, if one wishes to grab an element with a particular namespaced attribute in a predicate (given the absence of implementation-independent variables in XPath 1.0).
 
-For example, one might try (incorrectly) to grab an element with a namespaced attribute as follows: `const xpathlink = someElements[local-name(@*)="href" and namespace-uri(@*)='http://www.w3.org/1999/xlink'];`
+For example, one might try (incorrectly) to grab an element with a namespaced attribute as follows: `const xpathLink = someElements[local-name(@*)="href" and namespace-uri(@*)='http://www.w3.org/1999/xlink'];`
 
-This could inadvertently grab some elements if one of its attributes existed that had a local name of "`href`", but it was a different attribute which had the targeted (XLink) namespace (instead of [`@href`](/en-US/docs/Web/XPath/Axes#attribute)).
+This could inadvertently grab some elements if one of its attributes existed that had a local name of `href`, but it was a different attribute which had the targeted (XLink) namespace (instead of [`@href`](/en-US/docs/Web/XPath/Axes#attribute)).
 
 In order to accurately grab elements with the XLink `@href` attribute (without also being confined to predefined prefixes in a namespace resolver), one could obtain them as follows:
 
 ```js
 const xpathEls =
   'someElements[@*[local-name() = "href" and namespace-uri() = "http://www.w3.org/1999/xlink"]]'; // Grabs elements with any single attribute that has both the local name 'href' and the XLink namespace
-const thislevel = xml.evaluate(xpathEls, xml, null, XPathResult.ANY_TYPE, null);
-let thisitemEl = thislevel.iterateNext();
+const thisLevel = xml.evaluate(xpathEls, xml, null, XPathResult.ANY_TYPE, null);
+let thisItemEl = thisLevel.iterateNext();
 ```
 
 #### XPathResult Defined Constants

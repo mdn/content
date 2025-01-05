@@ -14,7 +14,7 @@ A [**CORS-safelisted request header**](https://fetch.spec.whatwg.org/#cors-safel
 - {{HTTPHeader("Content-Type")}}
 - {{HTTPHeader("Range")}}
 
-When containing only these headers (and values that meet the additional requirements laid out below), a request doesn't need to send a {{glossary("preflight request")}} in the context of [CORS](/en-US/docs/Glossary/CORS).
+When containing only these headers (and values that meet the additional requirements laid out below), a request doesn't need to send a {{glossary("preflight request")}} in the context of {{Glossary("CORS")}}.
 
 You can safelist more headers using the {{HTTPHeader("Access-Control-Allow-Headers")}} header and also list the above headers there to circumvent the following additional restrictions.
 

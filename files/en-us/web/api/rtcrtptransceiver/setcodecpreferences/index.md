@@ -40,7 +40,8 @@ setCodecPreferences(codecs)
   - : An array of objects, each providing the parameters for one of the transceiver's supported [media codecs](/en-US/docs/Web/Media/Formats/WebRTC_codecs), ordered by preference.
     If `codecs` is empty, the codec configurations are all returned to the user agent's defaults.
 
-    > **Note:** Any codecs not included in `codecs` will not be considered during the process of negotiating a connection.
+    > [!NOTE]
+    > Any codecs not included in `codecs` will not be considered during the process of negotiating a connection.
     > This lets you prevent the use of codecs you don't wish to use.
 
     Each codec object in the array has the following properties:
@@ -96,7 +97,7 @@ You can get the codecs supported for decoding data using the {{domxref("RTCRtpRe
 const availReceiveCodecs = transceiver.receiver.getCapabilities("video").codecs;
 ```
 
-To reorder the codecs array to our preferred order, we can use the sorting fuction below to sort on MIME type (this comes from [setCodecPreferences is now in all browsers!](https://blog.mozilla.org/webrtc/cross-browser-support-for-choosing-webrtc-codecs/) on blog.mozilla.org (2024)).
+To reorder the codecs array to our preferred order, we can use the sorting function below to sort on MIME type (this comes from [setCodecPreferences is now in all browsers!](https://blog.mozilla.org/webrtc/cross-browser-support-for-choosing-webrtc-codecs/) on blog.mozilla.org (2024)).
 
 ```js
 function sortByMimeTypes(codecs, preferredOrder) {

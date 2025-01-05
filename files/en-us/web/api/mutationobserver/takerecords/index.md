@@ -33,7 +33,8 @@ None.
 An array of {{domxref("MutationRecord")}} objects, each describing one change applied to
 the observed portion of the document's DOM tree.
 
-> **Note:** The queue of mutations which have occurred, but not been
+> [!NOTE]
+> The queue of mutations which have occurred, but not been
 > delivered to the observer's callback is left empty after calling
 > `takeRecords()`.
 

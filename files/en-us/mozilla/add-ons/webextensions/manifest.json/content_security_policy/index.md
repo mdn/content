@@ -62,10 +62,10 @@ In Manifest V2, a source for a script directive is considered secure if it meets
 
 - Wildcard hosts are not permitted, such as `"script-src 'self' *"`.
 - Remote sources must use `https:` schemes.
-- Remote sources must not use wildcards for any domains in the [public suffix list](https://publicsuffix.org/list/) (so "\*.co.uk" and "\*.blogspot.com" are not allowed, although "\*.foo.blogspot.com" is permitted).
+- Remote sources must not use wildcards for any domains in the [public suffix list](https://publicsuffix.org/list/) (so `*.co.uk` and `*.blogspot.com` are not allowed, although `*.foo.blogspot.com` is permitted).
 - All sources must specify a host.
 - The only permitted schemes for sources are `blob:`, `filesystem:`, `moz-extension:`, `https:`, and `wss:`.
-- The only permitted [keywords](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/default-src#sources) are: `'none'`, `'self'`, `'unsafe-eval'`, and `'wasm-unsafe-eval'`.
+- The only permitted [keywords](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#fetch_directive_syntax) are: `'none'`, `'self'`, `'unsafe-eval'`, and `'wasm-unsafe-eval'`.
 
 ## object-src directive
 
@@ -124,10 +124,12 @@ In Manifest V3, the `content_security_policy` key is an object that may have any
 
 ### Valid examples
 
-> **Note:** Valid examples demonstrate the correct use of keys in CSP.
+> [!NOTE]
+> Valid examples demonstrate the correct use of keys in CSP.
 > However, extensions with 'unsafe-eval', remote script, blob, or remote sources in their CSP are not allowed for Firefox extensions per the [add-on policies](https://extensionworkshop.com/documentation/publish/add-on-policies/) and due to significant security issues.
 
-> **Note:** Some examples include the `{{CSP("object-src")}}` directive, which provides backward compatibility for older browser versions. See [object-src directive](#object-src_directive) for more details.
+> [!NOTE]
+> Some examples include the `{{CSP("object-src")}}` directive, which provides backward compatibility for older browser versions. See [object-src directive](#object-src_directive) for more details.
 
 Require that all types of content should be packaged with the extension:
 

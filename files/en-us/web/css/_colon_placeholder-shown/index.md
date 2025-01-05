@@ -96,7 +96,7 @@ The following example highlights the Student ID field with a custom style.
       pattern="[0-9]{8}"
       title="8 digit ID"
       id="sid"
-      class="studentid"
+      class="student-id"
       placeholder="8 digit id" />
   </p>
   <input type="submit" />
@@ -111,7 +111,7 @@ input {
   color: black;
 }
 
-input.studentid:placeholder-shown {
+input.student-id:placeholder-shown {
   background-color: yellow;
   color: red;
   font-style: italic;
@@ -134,4 +134,4 @@ input.studentid:placeholder-shown {
 
 - The {{CSSxRef("::placeholder")}} pseudo-element styles the placeholder _itself_.
 - Related HTML elements: {{HTMLElement("input")}}, {{HTMLElement("textarea")}}
-- [HTML forms](/en-US/docs/Learn/Forms)
+- [HTML forms](/en-US/docs/Learn_web_development/Extensions/Forms)

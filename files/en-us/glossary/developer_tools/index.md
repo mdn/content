@@ -17,4 +17,4 @@ Current browsers provide integrated developer tools, which allow to inspect a we
 - [Firebug](https://getfirebug.com/) (former developer tool for Firefox)
 - [Chrome DevTools](https://developer.chrome.com/docs/devtools/) on chrome.com
 - [Safari Developer Tools](https://support.apple.com/en-gb/guide/safari-developer/dev073038698/mac) on apple.com
-- [Edge Dev Tools](https://docs.microsoft.com/archive/microsoft-edge/legacy/developer/) on microsoft.com
+- [Edge Dev Tools](https://learn.microsoft.com/en-us/archive/microsoft-edge/legacy/developer/) on microsoft.com

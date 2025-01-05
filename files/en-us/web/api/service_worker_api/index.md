@@ -19,11 +19,14 @@ Service workers can't import JavaScript modules dynamically, and [`import()`](/e
 
 Service workers only run over HTTPS, for security reasons. Most significantly, HTTP connections are susceptible to malicious code injection by {{Glossary("MitM", "man in the middle")}} attacks, and such attacks could be worse if allowed access to these powerful APIs. In Firefox, service worker APIs are also hidden and cannot be used when the user is in [private browsing mode](https://support.mozilla.org/en-US/kb/private-browsing-use-firefox-without-history).
 
-> **Note:** On Firefox, for testing you can run service workers over HTTP (insecurely); simply check the **Enable Service Workers over HTTP (when toolbox is open)** option in the Firefox Devtools options/gear menu.
+> [!NOTE]
+> On Firefox, for testing you can run service workers over HTTP (insecurely); simply check the **Enable Service Workers over HTTP (when toolbox is open)** option in the Firefox DevTools options/gear menu.
 
-> **Note:** Unlike previous attempts in this area such as [AppCache](https://alistapart.com/article/application-cache-is-a-douchebag/), service workers don't make assumptions about what you are trying to do, but then break when those assumptions are not exactly right. Instead, service workers give you much more granular control.
+> [!NOTE]
+> Unlike previous attempts in this area such as [AppCache](https://alistapart.com/article/application-cache-is-a-douchebag/), service workers don't make assumptions about what you are trying to do, but then break when those assumptions are not exactly right. Instead, service workers give you much more granular control.
 
-> **Note:** Service workers make heavy use of [promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise), as generally they will wait for responses to come through, after which they will respond with a success or failure action. The promises architecture is ideal for this.
+> [!NOTE]
+> Service workers make heavy use of [promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise), as generally they will wait for responses to come through, after which they will respond with a success or failure action. The promises architecture is ideal for this.
 
 ### Registration
 
@@ -56,7 +59,8 @@ There is also an {{domxref("ServiceWorkerGlobalScope/activate_event", "activate"
 
 Your service worker can respond to requests using the {{DOMxRef("FetchEvent")}} event. You can modify the response to these requests in any way you want, using the {{DOMxRef("FetchEvent.respondWith()")}} method.
 
-> **Note:** Because `install`/`activate` events could take a while to complete, the service worker spec provides a {{domxref("ExtendableEvent.waitUntil", "waitUntil()")}} method. Once it is called on `install` or `activate` events with a promise, functional events such as `fetch` and `push` will wait until the promise is successfully resolved.
+> [!NOTE]
+> Because `install`/`activate` events could take a while to complete, the service worker spec provides a {{domxref("ExtendableEvent.waitUntil", "waitUntil()")}} method. Once it is called on `install` or `activate` events with a promise, functional events such as `fetch` and `push` will wait until the promise is successfully resolved.
 
 For a complete tutorial to show how to build up your first basic example, read [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers).
 

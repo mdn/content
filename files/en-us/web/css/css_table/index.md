@@ -25,19 +25,15 @@ The properties introduced in this module aren't limited to the `<table>` element
 
 ## Guides
 
-- [Learn: CSS table layout](/en-US/docs/Learn/CSS/CSS_layout/Introduction#table_layout)
-
-  - : An overview of CSS layouts, including how to set table-related `display` values to enable using CSS table properties on any element.
-
-- [Learn: Styling tables](/en-US/docs/Learn/CSS/Building_blocks/Styling_tables)
+- [Learn: Styling tables](/en-US/docs/Learn_web_development/Core/Styling_basics/Tables)
 
   - : A guide to improving the appearance of HTML tables, covering table styling techniques.
 
-- [Learn: HTML table basics](/en-US/docs/Learn/HTML/Tables/Basics)
+- [Learn: HTML table basics](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics)
 
-  - : An introduction to HTML tables, including the HTML for creating rows and cells, headings, making cells span multiple columns and rows, and grouping cells in a column for styling purposes.
+  - : An introduction to HTML tables, including the HTML for creating rows and cells, headings, and making cells span multiple columns and rows.
 
-- [Learn: HTML table advanced features and accessibility](/en-US/docs/Learn/HTML/Tables/Advanced)
+- [Learn: HTML table accessibility](/en-US/docs/Learn_web_development/Core/Structuring_content/Table_accessibility)
 
   - : A look at advanced HTML table features, including captions and grouping table rows into table head, body and footer sections — as well as looking at the accessibility of tables for visually impaired users.
 
@@ -81,7 +77,8 @@ The properties introduced in this module aren't limited to the `<table>` element
 
 {{Specifications}}
 
-> **Note:** The CSS 2.2 specification defines stable standards for web styling, including detailed specifications for table formatting. The [CSS Table Module Level 3](https://drafts.csswg.org/css-tables-3/) specification seeks to expand these capabilities with advanced features for table layout and rendering. However, the table module specification is still being developed and is not yet ready for implementation.
+> [!NOTE]
+> The CSS 2.2 specification defines stable standards for web styling, including detailed specifications for table formatting. The [CSS Table Module Level 3](https://drafts.csswg.org/css-tables-3/) specification seeks to expand these capabilities with advanced features for table layout and rendering. However, the table module specification is still being developed and is not yet ready for implementation.
 
 ## See also
 

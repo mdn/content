@@ -35,7 +35,7 @@ Lastly, a cue may have a label, which can be used to select it for CSS styling.
 
 A text track and cues can be defined in a file using the [WebVTT File Format](/en-US/docs/Web/API/WebVTT_API/Web_Video_Text_Tracks_Format), and then associated with a particular {{HTMLElement("video")}} element using the {{HTMLElement("track")}} element.
 
-Alternatively you can add a {{domxref("TextTrack")}} to a media element in JavaScript using [`HTMLMediaElement.addTextTrack()`](/en-US/docs/Web/API/HTMLMediaElement#htmlmediaelement.addtexttrack), and then add individual {{domxref("VTTCue")}} objects to the track with {{domxref("TextTrack.addCue()")}}.
+Alternatively you can add a {{domxref("TextTrack")}} to a media element in JavaScript using [`HTMLMediaElement.addTextTrack()`](/en-US/docs/Web/API/HTMLMediaElement/addTextTrack), and then add individual {{domxref("VTTCue")}} objects to the track with {{domxref("TextTrack.addCue()")}}.
 
 The {{cssxref("::cue")}} [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) can be used both in HTML and in a WebVTT file to style the cues for a particular element, for a particular tag within a cue, for a VTT class, or for a cue with a particular label.
 The `::cue-region` pseudo-element is intended for styling cues in a particular region, but is not supported in any browser.
@@ -70,7 +70,8 @@ These [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-ele
 - {{CSSxRef("::cue")}}
   - : Matches cues within a selected element in media with VTT tracks.
 
-> **Note:** The specification defines another pseudo-element, `::cue-region`, but this is not supported by any browsers.
+> [!NOTE]
+> The specification defines another pseudo-element, `::cue-region`, but this is not supported by any browsers.
 
 ## Examples
 
@@ -165,7 +166,8 @@ The `default` attribute may be added to just one `<track>`: this is the one that
 You can style WebVTT cues by matching elements using the {{cssxref("::cue")}} pseudo-element.
 This allows you to modify the appearance of all cue text, or just specific elements. In this example, we'll add some styling to the [first example above](#using_the_webvtt_api_to_add_captions).
 
-> **Note:** It is also possible to define styles in the [WebVTT File Format](/en-US/docs/Web/API/WebVTT_API/Web_Video_Text_Tracks_Format).
+> [!NOTE]
+> It is also possible to define styles in the [WebVTT File Format](/en-US/docs/Web/API/WebVTT_API/Web_Video_Text_Tracks_Format).
 
 #### HTML
 
@@ -280,7 +282,7 @@ video::cue {
 }
 ```
 
-Then we style each of the tags above with a different colour.
+Then we style each of the tags above with a different color.
 
 ```css
 video::cue(u) {
@@ -296,7 +298,7 @@ video::cue(i) {
 }
 
 video::cue(c) {
-  color: lightpurple;
+  color: lavender;
 }
 ```
 

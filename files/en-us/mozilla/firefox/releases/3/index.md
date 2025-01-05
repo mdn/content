@@ -16,7 +16,7 @@ If you're a developer trying to get a handle on all the new features in Firefox 
   - : Provides information about changes you may need to make to your website or web application to take advantage of new features in Firefox 3.
 - [Online and offline events](/en-US/docs/Web/API/Navigator/onLine)
   - : Firefox 3 supports WHATWG online and offline events, which let applications and extensions detect whether or not there's an active Internet connection, as well as to detect when the connection goes up and down.
-- [Web-based protocol handlers](/en-US/docs/Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers)
+- [Web-based protocol handlers](/en-US/docs/Web/API/Navigator/registerProtocolHandler)
   - : You can now register web applications as protocol handlers using the `navigator.registerProtocolHandler()` method.
 - [Drawing text using a canvas](/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_text)
   - : You can now draw text in a canvas using a non-standardized API supported by Firefox 3.
@@ -127,7 +127,7 @@ If you're a developer trying to get a handle on all the new features in Firefox 
 - **Bookmarks and History Organizer.** The new unified bookmarks and history organizer lets you easily search your history and bookmarks with multiple views and smart folders for saving your frequent searches.
 - **Web-based protocol handlers.** Web applications, such as your favorite web mail provider, can now be used instead of desktop applications for handling `mailto:` links from other sites. Similar support is provided for other protocols as well. (Note that web applications do have to register themselves with Firefox before this will work.)
 - **Easy to use Download Actions.** A new Applications preferences pane provides an improved user interface for configuring handlers for various file types and protocol schemes.
-- **Improved look and feel.** Graphics and font handling have been improved to make websites look better on your screen, including sharper text rendering and better support for fonts with ligatures and complex scripts. In addition, Mac and Linux (Gnome) users will find that Firefox feels more like a native application for their platform than ever, with a new, native, look and feel.
+- **Improved look and feel.** Graphics and font handling have been improved to make websites look better on your screen, including sharper text rendering and better support for fonts with ligatures and complex scripts. In addition, Mac and Linux (GNOME) users will find that Firefox feels more like a native application for their platform than ever, with a new, native, look and feel.
 - **Color management support.** By setting the `gfx.color_management.enabled` preference in `about:config`, you can ask Firefox to use the color profiles embedded in images to adjust the colors to match your computer's display.
 - **Offline support.** Web applications can take advantage of new features to support being used even when you don't have an Internet connection.
 

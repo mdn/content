@@ -17,17 +17,18 @@ The code below is an example of a basic audio implementation using HTML5:
 
 ```html
 <audio controls>
-  <source src="audiofile.mp3" type="audio/mpeg" />
-  <source src="audiofile.ogg" type="audio/ogg" />
+  <source src="audio-file.mp3" type="audio/mpeg" />
+  <source src="audio-file.ogg" type="audio/ogg" />
   <!-- fallback for non-supporting browsers goes here -->
   <p>
     Your browser does not support HTML audio, but you can still
-    <a href="audiofile.mp3">download the music</a>.
+    <a href="audio-file.mp3">download the music</a>.
   </p>
 </audio>
 ```
 
-> **Note:** You can also use an MP4 file instead of MP3. MP4 files typically contain [AAC](https://en.wikipedia.org/wiki/Advanced_Audio_Coding) encoded audio. You can use `type="audio/mp4"`. (Currently, browsers that support mp3 also support mp4 audio).
+> [!NOTE]
+> You can also use an MP4 file instead of MP3. MP4 files typically contain [AAC](https://en.wikipedia.org/wiki/Advanced_Audio_Coding) encoded audio. You can use `type="audio/mp4"`. (Currently, browsers that support mp3 also support mp4 audio).
 
 - Here we define an {{ htmlelement("audio") }} element with multiple sources — we do this as not all browsers support the same audio formats. To ensure reasonable coverage, we should specify at least two different formats. The two formats that will give maximum coverage are mp3 and ogg vorbis.
 - We do this using the {{ htmlelement("source") }} element, which takes the attributes `src` and `type`.
@@ -54,7 +55,8 @@ Specifying `autoplay` will cause the audio to start playing as soon as possible 
 <audio autoplay>…</audio>
 ```
 
-> **Note:** This value is often ignored on mobile platforms, and its use is not recommended unless really necessary. Autoplaying audio (and video) is usually really annoying. Plus browsers have policies that will block autoplay entirely in many situations. See the [Autoplay guide for media and Web Audio APIs](/en-US/docs/Web/Media/Autoplay_guide) for details.
+> [!NOTE]
+> This value is often ignored on mobile platforms, and its use is not recommended unless really necessary. Autoplaying audio (and video) is usually really annoying. Plus browsers have policies that will block autoplay entirely in many situations. See the [Autoplay guide for media and Web Audio APIs](/en-US/docs/Web/Media/Autoplay_guide) for details.
 
 #### loop
 
@@ -72,7 +74,8 @@ If you want the audio to start muted (no volume), add the `muted` attribute.
 <audio muted>…</audio>
 ```
 
-> **Note:** This value is often ignored on mobile platforms.
+> [!NOTE]
+> This value is often ignored on mobile platforms.
 
 #### preload
 
@@ -84,7 +87,8 @@ The `preload` attribute allows you to specify a preference for how the browser p
 2. `metadata`: Download the audio metadata; this is usually the best option, as it allows you to access and display information such as audio length, and allow the browser to work out which audio file it should use.
 3. `auto`: Download the whole audio file as soon as possible. This is generally not a good option unless you can guarantee your users will have a fast network connection.
 
-> **Note:** This value is often ignored on mobile platforms.
+> [!NOTE]
+> This value is often ignored on mobile platforms.
 
 ```html
 <audio preload="auto">…</audio>
@@ -103,7 +107,7 @@ We specify the `controls` attribute when we require the browser to provide us wi
 As mentioned above, you can use the {{ htmlelement("source") }} element to specify one or more source audio files. Alternatively, you can include the `src` attribute directly on the {{ htmlelement("audio") }} element to specify a single source file.
 
 ```html
-<audio src="audiofile.mp3">…</audio>
+<audio src="audio-file.mp3">…</audio>
 ```
 
 #### type
@@ -111,7 +115,7 @@ As mentioned above, you can use the {{ htmlelement("source") }} element to speci
 As mentioned above, to be sure that the browser knows what type of file is being specified, it's good practice to specify a `type` attribute alongside the `src` attribute. The `type` attribute specifies the MIME type or Internet Media Type of the file.
 
 ```html
-<audio src="audiofile.mp3" type="audio/mpeg">…</audio>
+<audio src="audio-file.mp3" type="audio/mpeg">…</audio>
 ```
 
 ### Manipulating the Audio Element with JavaScript
@@ -121,7 +125,7 @@ In addition to being able to specify various attributes in HTML, the {{ htmlelem
 Given the following HTML:
 
 ```html
-<audio id="my-audio" src="audiofile.mp3">…</audio>
+<audio id="my-audio" src="audio-file.mp3">…</audio>
 ```
 
 You can grab the {{htmlelement("audio") }} element like this:
@@ -136,11 +140,11 @@ Alternatively, you can create a new element. Here's an example of creating an {{
 const audio = document.createElement("audio");
 
 if (audio.canPlayType("audio/mpeg")) {
-  audio.setAttribute("src", "audiofile.mp3");
+  audio.setAttribute("src", "audio-file.mp3");
 }
 
 if (audio.canPlayType("audio/ogg")) {
-  audio.setAttribute("src", "audiofile.ogg");
+  audio.setAttribute("src", "audio-file.ogg");
 }
 
 alert("play");
@@ -175,7 +179,8 @@ The `pause()` method is used to tell the audio to pause. It takes no parameters.
 audio.pause();
 ```
 
-> **Note:** There is no stop method — to implement a stop function, you'd have to pause the media then set the [`currentTime`](#currenttime) property value to 0.
+> [!NOTE]
+> There is no stop method — to implement a stop function, you'd have to pause the media then set the [`currentTime`](#currenttime) property value to 0.
 
 #### canPlayType
 
@@ -196,7 +201,8 @@ if (audio.canPlayType("audio/mpeg")) {
 
 In practice, we usually check if the result is true or false. Non-empty strings are true.
 
-> **Note:** A very early spec specified that the browser should return `no` instead of an empty string, but thankfully the number of people using older browsers that implement this version of the spec are few and far between.
+> [!NOTE]
+> A very early spec specified that the browser should return `no` instead of an empty string, but thankfully the number of people using older browsers that implement this version of the spec are few and far between.
 
 #### currentTime
 
@@ -225,10 +231,10 @@ The JavaScript media API allows you to create your own custom player. Let's take
 
 ```html
 <audio id="my-audio">
-  <source src="audiofile.mp3" type="audio/mpeg" />
-  <source src="audiofile.ogg" type="audio/ogg" />
+  <source src="audio-file.mp3" type="audio/mpeg" />
+  <source src="audio-file.ogg" type="audio/ogg" />
   <!-- place fallback here as <audio> supporting browsers will ignore it -->
-  <p>Download<a href="audiofile.mp3">audiofile.mp3</a></p>
+  <p>Download<a href="audio-file.mp3">audio-file.mp3</a></p>
 </audio>
 
 <!-- custom play and pause buttons -->
@@ -412,7 +418,7 @@ Consider this snippet of HTML:
     src="http://jPlayer.org/audio/ogg/Miaow-07-Bubble.ogg"
     type="audio/ogg" />
   <!-- place fallback here as <audio> supporting browsers will ignore it -->
-  <a href="audiofile.mp3">audiofile.mp3</a>
+  <a href="audio-file.mp3">audio-file.mp3</a>
 </audio>
 
 <div id="controls">
@@ -556,13 +562,14 @@ There are also a couple of events related to buffering:
 - `seeked`
   - : `seeked` occurs when the `seeking` attribute changes to `false`.
 
-> **Note:** You can read more on [Buffering, Seeking and Time Ranges](/en-US/docs/Web/Media/Audio_and_video_delivery/buffering_seeking_time_ranges) elsewhere.
+> [!NOTE]
+> You can read more on [Buffering, Seeking and Time Ranges](/en-US/docs/Web/Media/Audio_and_video_delivery/buffering_seeking_time_ranges) elsewhere.
 
 ## See also
 
 - [Buffering, Seeking and Time Ranges](/en-US/docs/Web/Media/Audio_and_video_delivery/buffering_seeking_time_ranges)
 - [HTMLMediaElement events](/en-US/docs/Web/API/HTMLMediaElement#events)
 - [Event reference > Media](/en-US/docs/Web/Events#media)
-- [Using HTML audio and video](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
+- [HTML video and audio](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
 - [Creating a cross-browser video player](/en-US/docs/Web/Media/Audio_and_video_delivery/cross_browser_video_player)
-- [jPlayer](https://jplayer.org): An open source audio and video library for jQuery and Zepto.
+- [jPlayer](https://jplayer.org/): An open source audio and video library for jQuery and Zepto.

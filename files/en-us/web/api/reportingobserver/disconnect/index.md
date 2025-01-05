@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.ReportingObserver.disconnect
 ---
 
-{{APIRef("Reporting API")}}
+{{APIRef("Reporting API")}}{{AvailableInWorkers}}
 
 The **`disconnect()`** method of the
 {{domxref("ReportingObserver")}} interface stops a reporting observer that had

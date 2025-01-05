@@ -41,7 +41,8 @@ This avoids crosstalk among multiple ongoing ICE sessions, but, more importantly
 secure ICE transactions (and all of WebRTC by extension) against attacks that might try
 to inject themselves into an ICE exchange.
 
-> **Note:** There is no API to obtain the ICE password, for what should be fairly obvious security reasons.
+> [!NOTE]
+> There is no API to obtain the ICE password, for what should be fairly obvious security reasons.
 
 The `usernameFragment` and password both change every time an [ICE restart](/en-US/docs/Web/API/WebRTC_API/Session_lifetime#ice_restart) occurs.
 
@@ -81,7 +82,7 @@ const ssNewCandidate = (signalMsg) => {
     }
   }
 
-  pc.addIceCandidate(candidate).catch(reportError);
+  pc.addIceCandidate(candidate).catch(window.reportError);
 };
 ```
 

@@ -91,7 +91,7 @@ The bound function also inherits the [prototype chain](/en-US/docs/Web/JavaScrip
 
 ### Creating a bound function
 
-The simplest use of `bind()` is to make a function that, no matter how it is called, is called with a particular `this` value.
+The most common use of `bind()` is to make a function that, no matter how it is called, is called with a particular `this` value.
 
 A common mistake for new JavaScript programmers is to extract a method from an object, then to later call that function and expect it to use the original object as its `this` (e.g., by using the method in callback-based code).
 
@@ -119,7 +119,8 @@ const boundGetX = retrieveX.bind(module);
 console.log(boundGetX()); // 81
 ```
 
-> **Note:** If you run this example in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode), the `this` parameter of `retrieveX` will be bound to `undefined` instead of `globalThis`, causing the `retrieveX()` call to fail.
+> [!NOTE]
+> If you run this example in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode), the `this` parameter of `retrieveX` will be bound to `undefined` instead of `globalThis`, causing the `retrieveX()` call to fail.
 >
 > If you run this example in an ECMAScript module, top-level `this` will be bound to `undefined` instead of `globalThis`, causing the `this.x = 9` assignment to fail.
 >
@@ -129,7 +130,7 @@ In fact, some built-in "methods" are also getters that return bound functions â€
 
 ### Partially applied functions
 
-The next simplest use of `bind()` is to make a function with pre-specified initial arguments.
+Another use of `bind()` is to make a function with pre-specified initial arguments.
 
 These arguments (if any) follow the provided `this` value and are then inserted at the start of the arguments passed to the target function, followed by whatever arguments are passed to the bound function at the time it is called.
 
@@ -161,7 +162,7 @@ console.log(addThirtySeven(5, 10)); // 42
 
 ### With setTimeout()
 
-By default, within {{domxref("setTimeout()")}}, the `this` keyword will be set to [`globalThis`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/globalThis), which is {{domxref("window")}} in browsers. When working with class methods that require `this` to refer to class instances, you may explicitly bind `this` to the callback function, in order to maintain the instance.
+By default, within {{domxref("Window.setTimeout", "setTimeout()")}}, the `this` keyword will be set to [`globalThis`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/globalThis), which is {{domxref("window")}} in browsers. When working with class methods that require `this` to refer to class instances, you may explicitly bind `this` to the callback function, in order to maintain the instance.
 
 ```js
 class LateBloomer {

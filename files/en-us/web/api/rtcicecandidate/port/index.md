@@ -21,7 +21,8 @@ A 16-bit number indicating the port number on the device at the address indicate
 `port` is initialized to `null` if it is not specified in the
 `candidate`, or if the `candidate` string can't be parsed properly.
 
-> **Note:** If `port` is `null`, passing the candidate to {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}}
+> [!NOTE]
+> If `port` is `null`, passing the candidate to {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}}
 > will fail, throwing an `OperationError` exception.
 > This applies only if the candidate implements `port`.
 

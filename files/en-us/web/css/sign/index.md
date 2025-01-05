@@ -9,7 +9,8 @@ browser-compat: css.types.sign
 
 The **`sign()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) contains one calculation, and returns `-1` if the numeric value of the argument is negative, `+1` if the numeric value of the argument is positive, `0⁺` if the numeric value of the argument is 0⁺, and `0⁻` if the numeric value of the argument is 0⁻.
 
-> **Note:** While `{{CSSxRef("abs")}}` returns the absolute value of the argument, `sign()` returns the sign of the argument.
+> [!NOTE]
+> While {{CSSxRef("abs")}} returns the absolute value of the argument, `sign()` returns the sign of the argument.
 
 ## Syntax
 
@@ -35,7 +36,7 @@ A number representing the sign of `A`:
 - If `x` is negative zero, returns `-0`.
 - Otherwise, returns `NaN`.
 
-### Formal syntax
+## Formal syntax
 
 {{CSSSyntax}}
 

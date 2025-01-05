@@ -26,7 +26,7 @@ The markup for the custom controls now looks as follows:
 
 ```html
 <div id="video-controls" class="controls" data-state="hidden">
-  <button id="playpause" type="button" data-state="play">Play/Pause</button>
+  <button id="play-pause" type="button" data-state="play">Play/Pause</button>
   <button id="stop" type="button" data-state="stop">Stop</button>
   <div class="progress">
     <progress id="progress" value="0" min="0">
@@ -34,8 +34,8 @@ The markup for the custom controls now looks as follows:
     </progress>
   </div>
   <button id="mute" type="button" data-state="mute">Mute/Unmute</button>
-  <button id="volinc" type="button" data-state="volup">Vol+</button>
-  <button id="voldec" type="button" data-state="voldown">Vol-</button>
+  <button id="vol-inc" type="button" data-state="vol-up">Vol+</button>
+  <button id="vol-dec" type="button" data-state="vol-down">Vol-</button>
   <button id="fs" type="button" data-state="go-fullscreen">Fullscreen</button>
 </div>
 ```
@@ -54,7 +54,8 @@ As mentioned above, a `data-state` attribute is used in various places for styli
 
 The resultant video player style used here is rather basic — this is intentional, as the purpose is to show how such a video player could be styled and be made responsive.
 
-> **Note:** in some cases some basic CSS is omitted from the code examples here as its use is either obvious or not specifically relevant to styling the video player.
+> [!NOTE]
+> In some cases some basic CSS is omitted from the code examples here as its use is either obvious or not specifically relevant to styling the video player.
 
 ### Basic styling
 
@@ -251,12 +252,12 @@ Now that the buttons actually look like buttons and have images that indicate wh
 
 ```js
 function changeButtonState(type) {
-  if (type === "playpause") {
+  if (type === "play-pause") {
     // Play/Pause button
     if (video.paused || video.ended) {
-      playpause.setAttribute("data-state", "play");
+      playPause.setAttribute("data-state", "play");
     } else {
-      playpause.setAttribute("data-state", "pause");
+      playPause.setAttribute("data-state", "pause");
     }
   } else if (type === "mute") {
     // Mute button
@@ -271,7 +272,7 @@ This function is then called by the relevant event handlers:
 video.addEventListener(
   "play",
   () => {
-    changeButtonState("playpause");
+    changeButtonState("play-pause");
   },
   false,
 );
@@ -279,7 +280,7 @@ video.addEventListener(
 video.addEventListener(
   "pause",
   () => {
-    changeButtonState("playpause");
+    changeButtonState("play-pause");
   },
   false,
 );
@@ -290,7 +291,7 @@ stop.addEventListener("click", (e) => {
   progress.value = 0;
 
   // Update the play/pause button's 'data-state' which allows the correct button image to be set via CSS
-  changeButtonState("playpause");
+  changeButtonState("play-pause");
 });
 
 mute.addEventListener("click", (e) => {
@@ -302,7 +303,7 @@ mute.addEventListener("click", (e) => {
 You might have noticed that there are new handlers where the `play` and `pause` events are reacted to on the video. There is a reason for this! Even though the browser's default video control set has been turned off, many browsers make them accessible by right-clicking on the HTML video. This means that a user could play/pause the video from these controls, which would then leave the custom control set's buttons out of sync. If a user uses the default controls, the defined Media API events — such as `play` and `pause` — are raised so this can be taken advantage of to ensure that the custom control buttons are kept in sync. To ensure this, a new click handler needs to be defined for the play/pause button so that it too raises the `play` and `pause` events:
 
 ```js
-playpause.addEventListener("click", (e) => {
+playPause.addEventListener("click", (e) => {
   if (video.paused || video.ended) {
     video.play();
   } else {

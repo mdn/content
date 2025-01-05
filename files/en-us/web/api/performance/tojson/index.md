@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Performance.toJSON
 ---
 
-{{APIRef("Performance API")}}
+{{APIRef("Performance API")}}{{AvailableInWorkers}}
 
 The **`toJSON()`** method of the {{domxref("Performance")}} interface is a {{Glossary("Serialization","serializer")}}; it returns a JSON representation of the {{domxref("Performance")}} object.
 
@@ -26,7 +26,8 @@ A {{jsxref("JSON")}} object that is the serialization of the {{domxref("Performa
 
 The returned JSON doesn't contain the {{domxref("Performance.eventCounts", "eventCounts")}} property because it is of type {{domxref("EventCounts")}}, which doesn't provide a `toJSON()` operation.
 
-> **Note:** The JSON object contains the serialization of the deprecated {{domxref("performance.timing")}} and {{domxref("performance.navigation")}} properties. To get a JSON representation of the newer {{domxref("PerformanceNavigationTiming")}} interface, call {{domxref("PerformanceNavigationTiming.toJSON()")}} instead.
+> [!NOTE]
+> The JSON object contains the serialization of the deprecated {{domxref("performance.timing")}} and {{domxref("performance.navigation")}} properties. To get a JSON representation of the newer {{domxref("PerformanceNavigationTiming")}} interface, call {{domxref("PerformanceNavigationTiming.toJSON()")}} instead.
 
 ## Examples
 

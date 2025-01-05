@@ -13,7 +13,8 @@ attribute node, and returns it. The object created is a node implementing the
 {{domxref("Attr")}} interface. The DOM does not enforce what sort of attributes can be
 added to a particular element in this manner.
 
-> **Note:** The string given in parameter is converted to lowercase.
+> [!NOTE]
+> The string given in parameter is converted to lowercase.
 
 ## Syntax
 

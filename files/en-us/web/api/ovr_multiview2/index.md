@@ -12,18 +12,19 @@ The `OVR_multiview2` extension is part of the [WebGL API](/en-US/docs/Web/API/We
 
 For more information, see also:
 
-- [Multiview on WebXR](https://blog.mozvr.com/multiview-on-webxr/)
-- [Multiview in babylon.js](https://doc.babylonjs.com/divingDeeper/cameras/multiViewsPart1)
+- [Multiview on WebXR](https://error.ghost.org/)
+- [Multiview in babylon.js](https://doc.babylonjs.com/features/featuresDeepDive/cameras/multiViewsPart1)
 - [Optimizing Virtual Reality: Understanding Multiview](https://community.arm.com/arm-community-blogs/b/graphics-gaming-and-vr-blog/posts/optimizing-virtual-reality-understanding-multiview)
-- [Multiview WebGL Rendering for Oculus Browser 6.0+](https://developer.oculus.com/documentation/oculus-browser/latest/concepts/browser-multiview/)
+- [Multiview WebGL Rendering for Meta Quest](https://developers.meta.com/horizon/documentation/web/web-multiview/)
 
 WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method. For more information, see also [Using Extensions](/en-US/docs/Web/API/WebGL_API/Using_Extensions) in the [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial).
 
-> **Note:** Support depends on the system's graphics driver (Windows+ANGLE and Android are supported; Windows+GL, Mac, Linux are not supported).
+> [!NOTE]
+> Support depends on the system's graphics driver (Windows+ANGLE and Android are supported; Windows+GL, Mac, Linux are not supported).
 >
 > This extension is only available to {{domxref("WebGL2RenderingContext", "WebGL 2", "", 1)}} contexts as it needs GLSL 3.00 and texture arrays.
 >
-> Currently, there is no way to use multiview to render to a multisampled backbuffer, so you should create contexts with `antialias: false`. However, the Oculus browser (6+) also supports multisampling using the [`OCULUS_multiview`](https://developer.oculus.com/documentation/oculus-browser/latest/concepts/browser-multiview/#using-multiview-in-webgl-20) extension. See also [this WebGL issue](https://github.com/KhronosGroup/WebGL/issues/2912).
+> Currently, there is no way to use multiview to render to a multisampled backbuffer, so you should create contexts with `antialias: false`. However, the Oculus browser (6+) also supports multisampling using the [`OCULUS_multiview`](https://developers.meta.com/horizon/documentation/web/web-multiview/#using-oculus_multiview-in-webgl-20) extension. See also [this WebGL issue](https://github.com/KhronosGroup/WebGL/issues/2912).
 
 ## Constants
 
@@ -45,7 +46,7 @@ This extension exposes 4 constants that can be used in [`getParameter()`](/en-US
 
 ## Examples
 
-This example is taken from the [specification](https://www.khronos.org/registry/webgl/extensions/OVR_multiview2/).
+This example is taken from the [specification](https://registry.khronos.org/webgl/extensions/OVR_multiview2/).
 
 ```js
 const gl = document

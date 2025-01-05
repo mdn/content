@@ -14,18 +14,18 @@ A block formatting context is created by at least one of the following:
 - The root element of the document (`<html>`).
 - Floats (elements where {{ cssxref("float") }} isn't `none`).
 - Absolutely positioned elements (elements where {{ cssxref("position") }} is `absolute` or `fixed`).
-- Inline-blocks (elements with {{ cssxref("display") }}`: inline-block`).
-- Table cells (elements with {{ cssxref("display") }}`: table-cell`, which is the default for HTML table cells).
-- Table captions (elements with {{ cssxref("display") }}`: table-caption`, which is the default for HTML table captions).
-- Anonymous table cells implicitly created by the elements with {{ cssxref("display") }}`: table`, `table-row`, `table-row-group`, `table-header-group`, `table-footer-group` (which is the default for HTML tables, table rows, table bodies, table headers, and table footers, respectively), or `inline-table`.
+- Inline-blocks (elements with {{cssxref("display", "display: inline-block")}}).
+- Table cells (elements with {{cssxref("display", "display: table-cell")}}, which is the default for HTML table cells).
+- Table captions (elements with {{cssxref("display", "display: table-caption")}}, which is the default for HTML table captions).
+- Anonymous table cells implicitly created by the elements with {{cssxref("display", "display: table")}}, `table-row`, `table-row-group`, `table-header-group`, `table-footer-group` (which is the default for HTML tables, table rows, table bodies, table headers, and table footers, respectively), or `inline-table`.
 - Block elements where {{ cssxref("overflow") }} has a value other than `visible` and `clip`.
-- Elements with {{ cssxref("display") }}`: flow-root`.
+- Elements with {{cssxref("display", "display: flow-root")}}.
 - {{htmlelement("button")}} elements and button {{htmlelement("input")}} types defaulting to `display: flow-root`.
-- Elements with {{ cssxref("contain") }}`: layout`, `content`, or `paint`.
-- Flex items (direct children of the element with {{ cssxref("display") }}`: flex` or `inline-flex`) if they are neither [flex](/en-US/docs/Glossary/Flex_Container) nor [grid](/en-US/docs/Glossary/Grid_Container) nor [table](/en-US/docs/Web/CSS/CSS_table) containers themselves.
-- Grid items (direct children of the element with {{ cssxref("display") }}`: grid` or `inline-grid`) if they are neither [flex](/en-US/docs/Glossary/Flex_Container) nor [grid](/en-US/docs/Glossary/Grid_Container) nor [table](/en-US/docs/Web/CSS/CSS_table) containers themselves.
+- Elements with {{cssxref("contain", "contain: layout")}}, `content`, or `paint`.
+- Flex items (direct children of the element with {{cssxref("display", "display: flex")}} or `inline-flex`) if they are neither [flex](/en-US/docs/Glossary/Flex_Container) nor [grid](/en-US/docs/Glossary/Grid_Container) nor [table](/en-US/docs/Web/CSS/CSS_table) containers themselves.
+- Grid items (direct children of the element with {{cssxref("display", "display: grid")}} or `inline-grid`) if they are neither [flex](/en-US/docs/Glossary/Flex_Container) nor [grid](/en-US/docs/Glossary/Grid_Container) nor [table](/en-US/docs/Web/CSS/CSS_table) containers themselves.
 - Multicol containers (elements where {{ cssxref("column-count") }} or {{ cssxref("column-width") }} isn't `auto`, including elements with `column-count: 1`).
-- {{ cssxref("column-span") }}`: all`, even when the `column-span: all` element isn't contained by a multicol container.
+- {{cssxref("column-span", "column-span: all")}}, even when the `column-span: all` element isn't contained by a multicol container.
 
 Formatting contexts affect layout because an element that establishes a new block formatting context will:
 
@@ -51,7 +51,7 @@ The problem with using `overflow` to create a new BFC is that the `overflow` pro
 
 **using `display: flow-root`**
 
-The `display: flow-root` value lets us create a new BFC without any other potentially problematic side-effects. Using `display: flow-root` on the containing block creates a new BFC .
+The `display: flow-root` value lets us create a new BFC without any other potentially problematic side-effects. Using `display: flow-root` on the containing block creates a new BFC.
 
 With `display: flow-root;` on the `<div>`, everything inside that container participates in the block formatting context of that container, and floats will not poke out of the bottom of the element.
 

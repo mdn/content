@@ -20,7 +20,7 @@ One of the more familiar ways to approach learning the Web Animations API is to 
 
 ### The CSS version
 
-Here's a tumbling animation written in CSS showing Alice falling down the rabbit hole that leads to Wonderland (see the full [code on Codepen](https://codepen.io/rachelnabors/pen/QyOqqW)):
+Here's a tumbling animation written in CSS showing Alice falling down the rabbit hole that leads to Wonderland (see the full [code on CodePen](https://codepen.io/rachelnabors/pen/QyOqqW)):
 
 [![Alice Tumbling down the rabbit's hole.](tumbling-alice_optimized.gif)](https://codepen.io/rachelnabors/pen/rxpmJL)
 
@@ -46,7 +46,7 @@ Notice that the background moves, Alice spins, and her color changes at an offse
 }
 ```
 
-This changes Alice's color and her transform's rotation over 3 seconds at a constant (linear) rate and loops infinitely. In the [@keyframes](/en-US/docs/Web/CSS/@keyframes) block we can see that 30% of the way through each loop (about .9 seconds in), Alice's color changes from black to a deep burgundy then back again by the end of the loop.
+This changes Alice's color and her transform's rotation over 3 seconds at a constant (linear) rate and loops infinitely. In the {{cssxref("@keyframes")}} block we can see that 30% of the way through each loop (about .9 seconds in), Alice's color changes from black to a deep burgundy then back again by the end of the loop.
 
 ### Moving it to JavaScript
 
@@ -54,7 +54,7 @@ Now let's try creating the same animation with the Web Animations API.
 
 #### Representing keyframes
 
-The first thing we need is to create a [Keyframe Object](/en-US/docs/Web/API/Web_Animations_API/Keyframe_Formats) corresponding to our CSS [@keyframes](/en-US/docs/Web/CSS/@keyframes) block:
+The first thing we need is to create a [Keyframe Object](/en-US/docs/Web/API/Web_Animations_API/Keyframe_Formats) corresponding to our CSS {{cssxref("@keyframes")}} block:
 
 ```js
 const aliceTumbling = [
@@ -85,10 +85,11 @@ const aliceTiming = {
 
 You'll notice a few differences here from how equivalent values are represented in CSS:
 
-- For one, the duration is in milliseconds as opposed to seconds — 3000 not 3s. Like {{domxref("setTimeout()")}} and {{domxref("Window.requestAnimationFrame()")}}, the Web Animations API only takes milliseconds.
+- For one, the duration is in milliseconds as opposed to seconds — 3000 not 3s. Like {{domxref("Window.setTimeout", "setTimeout()")}} and {{domxref("Window.requestAnimationFrame()")}}, the Web Animations API only takes milliseconds.
 - The other thing you'll notice is that it's `iterations`, not `iteration-count`.
 
-> **Note:** There are a number of small differences between the terminology used in CSS Animations and the terminology used in Web Animations. For instance, Web Animations doesn't use the string `"infinite"`, but instead uses the JavaScript keyword `Infinity`. And instead of `timing-function` we use `easing`. We aren't listing an `easing` value here because, unlike CSS Animations where the default [animation-timing-function](/en-US/docs/Web/CSS/animation-timing-function) is `ease`, in the Web Animations API the default easing is `linear` — which is what we want here.
+> [!NOTE]
+> There are a number of small differences between the terminology used in CSS Animations and the terminology used in Web Animations. For instance, Web Animations doesn't use the string `"infinite"`, but instead uses the JavaScript keyword `Infinity`. And instead of `timing-function` we use `easing`. We aren't listing an `easing` value here because, unlike CSS Animations where the default {{cssxref("animation-timing-function")}} is `ease`, in the Web Animations API the default easing is `linear` — which is what we want here.
 
 #### Bring the pieces together
 
@@ -98,7 +99,7 @@ Now it's time to bring them both together with the {{domxref("Element.animate()"
 document.getElementById("alice").animate(aliceTumbling, aliceTiming);
 ```
 
-And boom: the animation starts playing (see the finished [version on Codepen](https://codepen.io/rachelnabors/pen/rxpmJL)).
+And boom: the animation starts playing (see the finished [version on CodePen](https://codepen.io/rachelnabors/pen/rxpmJL)).
 
 The `animate()` method can be called on any DOM element that could be animated with CSS. And it can be written in several ways. Instead of making objects for keyframes and timing properties, we could just pass their values in directly, like so:
 
@@ -131,7 +132,7 @@ document.getElementById("alice").animate(
 
 ## Controlling playback with play(), pause(), reverse(), and updatePlaybackRate()
 
-While we can write CSS Animations with the Web Animations API, where the API really comes in handy is manipulating the animation's playback. The Web Animations API provides several useful methods for controlling playback. Let's take a look at pausing and playing animations in the Growing/Shrinking Alice game (check out the [full code on Codepen](https://codepen.io/rachelnabors/pen/PNYGZQ)):
+While we can write CSS Animations with the Web Animations API, where the API really comes in handy is manipulating the animation's playback. The Web Animations API provides several useful methods for controlling playback. Let's take a look at pausing and playing animations in the Growing/Shrinking Alice game (check out the [full code on CodePen](https://codepen.io/rachelnabors/pen/PNYGZQ)):
 
 [![Playing the growing and shrinking game with Alice.](growing-shrinking_article_optimized.gif)](https://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010)
 
@@ -205,7 +206,7 @@ bottle.addEventListener("mousedown", shrinkAlice, false);
 bottle.addEventListener("touchstart", shrinkAlice, false);
 ```
 
-In [Through the Looking-Glass](https://en.wikipedia.org/wiki/Through_the_Looking-Glass), Alice travels to a world where she must run to stay in place — and run twice as fast to move forward! In the Red Queen's Race example, Alice and the Red Queen are running to stay in place (check out the [full code on Codepen](https://codepen.io/rachelnabors/pen/PNGGaV)):
+In [Through the Looking-Glass](https://en.wikipedia.org/wiki/Through_the_Looking-Glass), Alice travels to a world where she must run to stay in place — and run twice as fast to move forward! In the Red Queen's Race example, Alice and the Red Queen are running to stay in place (check out the [full code on CodePen](https://codepen.io/rachelnabors/pen/PNGGaV)):
 
 [![Alice and the Red Queen race to get to the next square in this game.](red-queen-race_optimized.gif)](https://codepen.io/rachelnabors/pen/PNGGaV)
 
@@ -240,7 +241,7 @@ When animating elements, a common use case is to persist the final state of the 
 - The browser has to maintain the state of the animation while it is still active, so the animation continues to consume resources even though it is no longer animating. Note that this is somewhat alleviated by the browser [automatically removing filling animations](#automatically_removing_filling_animations).
 - Styles applied by animations have a [higher precedence in the cascade](/en-US/docs/Web/CSS/Cascade#cascading_order) than specified styles, so it can be difficult to override them when needed.
 
-A better approach is to use the {{domxref("Animation.commitStyles()")}} method. This writes the computed values of the animation's current styles into its target element's [`style`](/en-US/docs/Web/HTML/Global_attributes#style) attribute, after which the element can be restyled normally.
+A better approach is to use the {{domxref("Animation.commitStyles()")}} method. This writes the computed values of the animation's current styles into its target element's [`style`](/en-US/docs/Web/HTML/Global_attributes/style) attribute, after which the element can be restyled normally.
 
 ## Automatically removing filling animations
 
@@ -256,11 +257,11 @@ Animations are removed when all of the following are true:
 
 The first four conditions ensure that, without intervention by JavaScript code, the animation's effect will never change or end. The last condition ensures that the animation will never actually affect the style of any element: it has been entirely replaced.
 
-When the animation is automatically removed, the animation's {{domxref("animation/remove_event", "remove")}} event fires.
+When the animation is automatically removed, the animation's {{domxref("Animation/remove_event", "remove")}} event fires.
 
 To prevent the browser from automatically removing animations, call the animation's {{domxref("Animation.persist", "persist()")}} method.
 
-The animation's {{domxref("animation.replaceState")}} property will be `removed` if the animation has been removed, `persisted` if you have called {{domxref("Animation.persist", "persist()")}} on the animation, or `active` otherwise.
+The animation's {{domxref("Animation.replaceState", "replaceState")}} property will be `removed` if the animation has been removed, `persisted` if you have called {{domxref("Animation.persist", "persist()")}} on the animation, or `active` otherwise.
 
 ## Getting information out of animations
 
@@ -318,7 +319,7 @@ But while working on this animation, we might change Alice's duration a lot. Wou
 aliceChange.currentTime = aliceChange.effect.getComputedTiming().duration / 2;
 ```
 
-`effect` lets us access the animation's keyframes and timing properties — `aliceChange.effect.getComputedTiming()` points to Alice's timing object — this contains her [`duration`](/en-US/docs/Web/API/KeyframeEffect/KeyframeEffect). We can divide her duration in half to get the midpoint for her animation's timeline, setting her to be normal height. Now we can reverse and play her animation in either direction to make her grow smaller or larger!
+`effect` lets us access the animation's keyframes and timing properties — `aliceChange.effect.getComputedTiming()` points to Alice's timing object — this contains her {{domxref("KeyframeEffect.KeyframeEffect", "duration")}}. We can divide her duration in half to get the midpoint for her animation's timeline, setting her to be normal height. Now we can reverse and play her animation in either direction to make her grow smaller or larger!
 
 And we can do the same thing when setting the cake and bottle durations:
 
@@ -334,7 +335,7 @@ drinking.pause();
 
 Now all three animations are linked to just one duration, which we can change easily from one place.
 
-We can also use the Web Animations API to figure out the animation's current time. The game ends when you run out of cake to eat or empty the bottle. Which vignette players are presented with depends on how far along Alice was in her animation, whether she grew too big and can't get in the tiny door anymore or too small and cannot reach the key to open the door. We can figure out whether she's on the large end or small end of her animation by getting her animation's [`currentTime`](/en-US/docs/Web/API/Animation/currentTime) and dividing it by her `activeDuration`:
+We can also use the Web Animations API to figure out the animation's current time. The game ends when you run out of cake to eat or empty the bottle. Which vignette players are presented with depends on how far along Alice was in her animation, whether she grew too big and can't get in the tiny door anymore or too small and cannot reach the key to open the door. We can figure out whether she's on the large end or small end of her animation by getting her animation's {{domxref("Animation.currentTime", "currentTime")}} and dividing it by her `activeDuration`:
 
 ```js
 const endGame = () => {
@@ -361,14 +362,12 @@ const endGame = () => {
 };
 ```
 
-> **Note:** `getAnimations()` and `effect` are not shipping in all browsers as of this writing, but the polyfill does support them today.
-
 ## Callbacks and promises
 
 CSS Animations and Transitions have their own event listeners, and these are also possible with the Web Animations API:
 
-- [`onfinish`](/en-US/docs/Web/API/Animation/finish_event) is the event handler for the `finish` event and can be triggered manually with [`finish()`](/en-US/docs/Web/API/Animation/finish).
-- [`oncancel`](/en-US/docs/Web/API/Animation/cancel_event) is the event handler for the `cancel` event and can be triggers with [`cancel()`](/en-US/docs/Web/API/Animation/cancel).
+- {{domxref("Animation/finish_event", "onfinish")}} is the event handler for the `finish` event and can be triggered manually with {{domxref("Animation/finish", "finish()")}}.
+- {{domxref("Animation/cancel_event", "oncancel")}} is the event handler for the `cancel` event and can be triggers with {{domxref("Animation.cancel", "cancel()")}}.
 
 Here we set the callbacks for the cake, bottle, and Alice to fire the `endGame` function:
 
@@ -381,7 +380,7 @@ drinking.onfinish = endGame;
 aliceChange.onfinish = endGame;
 ```
 
-Better still, the Web Animations API also provides a [`finished`](/en-US/docs/Web/API/Animation/finished) promise that will resolve when the animation finishes, or reject if it is canceled.
+Better still, the Web Animations API also provides a {{domxref("Animation.finished", "finished")}} promise that will resolve when the animation finishes, or reject if it is canceled.
 
 ## Conclusion
 

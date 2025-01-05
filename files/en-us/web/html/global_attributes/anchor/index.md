@@ -12,7 +12,8 @@ browser-compat: html.global_attributes.anchor
 
 The **`anchor`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) is used to associate a positioned element with an anchor element. The attribute's value is the [`id`](/en-US/docs/Web/HTML/Global_attributes/id) value of the element you want to anchor the positioned element to. The element can then be positioned using [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using).
 
-> **Note:** Alternatively, you can associate a positioned element with an anchor element via CSS, using the {{cssxref("anchor-name")}} and {{cssxref("position-anchor")}} properties. If both anchoring techniques are used on the same element, the CSS technique takes precedence over the HTML technique.
+> [!NOTE]
+> Alternatively, you can associate a positioned element with an anchor element via CSS, using the {{cssxref("anchor-name")}} and {{cssxref("position-anchor")}} properties. If both anchoring techniques are used on the same element, the CSS technique takes precedence over the HTML technique.
 
 ## Examples
 

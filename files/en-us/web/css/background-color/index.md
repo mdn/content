@@ -53,7 +53,7 @@ The `background-color` property is specified as a single `<color>` value.
 - {{cssxref("&lt;color&gt;")}}
   - : The uniform color of the background. It is rendered behind any {{cssxref("background-image")}} that is specified, although the color will still be visible through any transparency in the image.
 
-## Accessibility concerns
+## Accessibility
 
 It is important to ensure that the contrast ratio between the background color and the color of the text placed over it is high enough that people experiencing low vision conditions will be able to read the content of the page.
 
@@ -80,26 +80,26 @@ This example demonstrates the applying `background-color` to HTML {{HTMLelement(
 #### HTML
 
 ```html
-<div class="exampleone">Lorem ipsum dolor sit amet, consectetuer</div>
+<div class="example-one">Lorem ipsum dolor sit amet, consectetuer</div>
 
-<div class="exampletwo">Lorem ipsum dolor sit amet, consectetuer</div>
+<div class="example-two">Lorem ipsum dolor sit amet, consectetuer</div>
 
-<div class="examplethree">Lorem ipsum dolor sit amet, consectetuer</div>
+<div class="example-three">Lorem ipsum dolor sit amet, consectetuer</div>
 ```
 
 #### CSS
 
 ```css
-.exampleone {
+.example-one {
   background-color: transparent;
 }
 
-.exampletwo {
+.example-two {
   background-color: rgb(153 102 153);
   color: rgb(255 255 204);
 }
 
-.examplethree {
+.example-three {
   background-color: #777799;
   color: #ffffff;
 }

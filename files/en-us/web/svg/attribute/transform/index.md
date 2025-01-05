@@ -12,7 +12,8 @@ spec-urls:
 
 The **`transform`** attribute defines a list of transform definitions that are applied to an element and the element's children.
 
-> **Note:** As of SVG2, `transform` is a presentation attribute, meaning it can be used as a CSS property. However, be aware that there are some differences in syntax between the CSS property and the attribute. See the documentation for the CSS property {{cssxref('transform')}} for the specific syntax to use in that case.
+> [!NOTE]
+> As of SVG2, `transform` is a presentation attribute, meaning it can be used as a CSS property. However, be aware that there are some differences in syntax between the CSS property and the attribute. See the documentation for the CSS property {{cssxref('transform')}} for the specific syntax to use in that case.
 
 You can use this attribute with any SVG element.
 
@@ -79,7 +80,8 @@ Also, as a legacy from SVG 1.1, {{SVGElement('linearGradient')}} and {{SVGElemen
 
 The following transform functions can be used by the `transform` attribute `<transform-list>`
 
-> **Warning:** As per the spec, you should be able to also use CSS [transform functions](/en-US/docs/Web/CSS/transform-function). However, the compatibility isn't guaranteed.
+> [!WARNING]
+> As per the spec, you should be able to also use CSS [transform functions](/en-US/docs/Web/CSS/transform-function). However, the compatibility isn't guaranteed.
 
 ### Matrix
 
@@ -156,8 +158,8 @@ The `translate(<x> [<y>])` transform function moves the object by `x` and `y`. I
 In other words:
 
 ```plain
-xnew = xold + <x>
-ynew = yold + <y>
+xNew = xOld + <x>
+yNew = yOld + <y>
 ```
 
 #### Example

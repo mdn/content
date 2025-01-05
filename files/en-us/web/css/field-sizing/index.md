@@ -2,6 +2,8 @@
 title: field-sizing
 slug: Web/CSS/field-sizing
 page-type: css-property
+status:
+  - experimental
 browser-compat: css.properties.field-sizing
 ---
 
@@ -45,7 +47,7 @@ Specifically, `field-sizing` to `content` affects the following elements:
   - If no minimum width is set on the control, it will only be as wide as the text cursor.
   - Controls with [`placeholder`](/en-US/docs/Web/HTML/Element/input#placeholder) attributes will be rendered large enough to display the placeholder text.
   - The [`size`](/en-US/docs/Web/HTML/Element/input#size) attribute modifies the default preferred size of such `<input>` elements. As a result, `size` has no effect on `<input>` elements with `field-sizing: content` set.
-- [`file`](/en-US/docs/Web/HTML/Element/input/file) inputs. Direct text input is not possible; however, the displayed filename changes as the user selects a new file to upload. When `field-sizing: content` is set, the control will change size to shrinkwap the filename.
+- [`file`](/en-US/docs/Web/HTML/Element/input/file) inputs. Direct text input is not possible; however, the displayed filename changes as the user selects a new file to upload. When `field-sizing: content` is set, the control will change size to shrinkwrap the filename.
 - {{htmlelement("textarea")}} controls. It is worth noting that `<textarea>` elements with `field-sizing: content` set behave much like single-line text controls, with the following additions:
   - If `<textarea>` elements are unable to grow due to a width constraint, they will start to grow in height to display additional rows of content. When a height constraint is then reached, they will then start to show a scrollbar to allow all the content to be viewed.
   - [`rows`](/en-US/docs/Web/HTML/Element/textarea#cols) and [`cols`](/en-US/docs/Web/HTML/Element/textarea#cols) attributes modify the default preferred size of a `<textarea>`. As a result, `rows`/`cols` have no effect on `<textarea>` elements with `field-sizing: content` set.
@@ -183,7 +185,8 @@ The HTML contains two sets of `<select>` elements: one with `field-sizing: conte
 </div>
 ```
 
-> **Note:** Best practice is to include a {{htmlelement("label")}} element for each form control, to associate a meaningful text description with each field for accessibility purposes (see [Meaningful text labels](/en-US/docs/Learn/Accessibility/HTML#meaningful_text_labels) for more information). We haven't done so in this example, as it focuses purely on aspects of the form controls' visual rendering, but you should make sure you include form labels in production code.
+> [!NOTE]
+> Best practice is to include a {{htmlelement("label")}} element for each form control, to associate a meaningful text description with each field for accessibility purposes (see [Meaningful text labels](/en-US/docs/Learn_web_development/Core/Accessibility/HTML#meaningful_text_labels) for more information). We haven't done so in this example, as it focuses purely on aspects of the form controls' visual rendering, but you should make sure you include form labels in production code.
 
 #### CSS
 

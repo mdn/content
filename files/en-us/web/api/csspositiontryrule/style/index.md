@@ -33,7 +33,7 @@ const myRules = document.styleSheets[0].cssRules;
 const tryOption = myRules[0]; // a CSSPositionTryRule
 console.log(tryOption.style.top); // "anchor(bottom)"
 console.log(tryOption.style["min-width"]); // "100px"
-console.log(tryOption.style.insetArea); // ""; no inset-area specified
+console.log(tryOption.style.positionArea); // ""; no position-area specified
 ```
 
 ## Specifications

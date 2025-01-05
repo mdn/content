@@ -21,7 +21,6 @@ text-align: left;
 text-align: right;
 text-align: center;
 text-align: justify;
-text-align: justify-all;
 text-align: match-parent;
 
 /* Block alignment values (Non-standard syntax) */
@@ -52,12 +51,10 @@ The `text-align` property is specified as a single keyword from the list below.
   - : The inline contents are centered within the line box.
 - `justify`
   - : The inline contents are justified. Spaces out the content to line up its left and right edges to the left and right edges of the line box, except for the last line.
-- `justify-all`
-  - : Same as `justify`, but also forces the last line to be justified.
 - `match-parent`
   - : Similar to `inherit`, but the values `start` and `end` are calculated according to the parent's {{cssxref("direction")}} and are replaced by the appropriate `left` or `right` value.
 
-## Accessibility concerns
+## Accessibility
 
 The inconsistent spacing between words created by justified text can be problematic for people with cognitive concerns such as Dyslexia.
 
@@ -151,27 +148,44 @@ The inconsistent spacing between words created by justified text can be problema
 
 ### Table alignment
 
-This example demonstrates how the use of `text-align` on {{htmlelement("table")}} elements, including {{htmlelement("tr")}} rows and {{htmlelement("td")}} cells.
+This example demonstrates the use of `text-align` on {{htmlelement("table")}} elements:
+
+- The {{htmlelement("caption")}} is set to right-aligned.
+- The first two {{htmlelement("th")}} elements inherit the left alignment from the `text-align: left` set on the {{htmlelement("thead")}}, while the third is set to right-aligned.
+- Inside the {{htmlelement("tbody")}} element, the first row is set to right-aligned, the second is set to center-aligned, and the third uses the default (left) alignment.
+- Within each row, some cells (c12, c31) are set to override the alignment of the row.
 
 #### HTML
 
 ```html
 <table>
-  <tr id="r1">
-    <td id="c11">11</td>
-    <td id="c12">12</td>
-    <td id="c13">13</td>
-  </tr>
-  <tr id="r2">
-    <td id="c21">21</td>
-    <td id="c22">22</td>
-    <td id="c23">23</td>
-  </tr>
-  <tr id="r3">
-    <td id="c31">31</td>
-    <td id="c32">32</td>
-    <td id="c33">33</td>
-  </tr>
+  <caption>
+    Example table
+  </caption>
+  <thead>
+    <tr>
+      <th>Col 1</th>
+      <th>Col 2</th>
+      <th class="right">Col 3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="right">
+      <td>11</td>
+      <td class="center">12</td>
+      <td>13</td>
+    </tr>
+    <tr class="center">
+      <td>21</td>
+      <td>22</td>
+      <td>23</td>
+    </tr>
+    <tr id="r3">
+      <td class="right">31</td>
+      <td>32</td>
+      <td>33</td>
+    </tr>
+  </tbody>
 </table>
 ```
 
@@ -184,26 +198,29 @@ table {
   width: 250px;
   height: 150px;
 }
-td {
+
+thead {
+  text-align: left;
+}
+
+td,
+th {
   border: solid 1px black;
 }
-#r1 {
-  text-align: right;
-}
-#c12 {
+
+.center {
   text-align: center;
 }
-#r2 {
-  text-align: center;
-}
-#c31 {
+
+.right,
+caption {
   text-align: right;
 }
 ```
 
 #### Result
 
-{{EmbedLiveSample('Table alignment', "100%", "100%")}}
+{{EmbedLiveSample('Table alignment', "100%", "200")}}
 
 ## Specifications
 

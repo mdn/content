@@ -100,7 +100,8 @@ The HTML is similar to the previous case, but the SVG definition does not includ
 First we create the new SVG style node.
 This is done by first creating a style element in the SVG namespace using [`Document.createElementNS()`](/en-US/docs/Web/API/Document/createElementNS), creating and appending a text node with the style definition, and then appending the node to the SVG defined above.
 
-> **Note:** You must use [`Document.createElementNS()`](/en-US/docs/Web/API/Document/createElementNS) and not [`Document.createElement()`](/en-US/docs/Web/API/Document/createElement) to create the style, or by default you'll create the equivalent HTML style element.
+> [!NOTE]
+> You must use [`Document.createElementNS()`](/en-US/docs/Web/API/Document/createElementNS) and not [`Document.createElement()`](/en-US/docs/Web/API/Document/createElement) to create the style, or by default you'll create the equivalent HTML style element.
 
 ```js
 const svg = document.querySelector("svg");

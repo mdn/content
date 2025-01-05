@@ -10,7 +10,8 @@ The introduction of the browser extensions API created a uniform landscape for t
 
 Maximizing the reach of your browser extension means developing it for at least two browsers, possibly more. This article looks at the main challenges faced when creating a cross-browser extension and suggests how to address these challenges.
 
-> **Note:** The main browsers have adopted Manifest V3. This manifest version provides better compatibility between the browser extension environments, such as promises for handling asynchronous events. In addition to the information in this guide, refer to the Manifest V3 migration guides for [Firefox](https://extensionworkshop.com/documentation/develop/manifest-v3-migration-guide/) and [Chrome](https://developer.chrome.com/docs/extensions/migrating/).
+> [!NOTE]
+> The main browsers have adopted Manifest V3. This manifest version provides better compatibility between the browser extension environments, such as promises for handling asynchronous events. In addition to the information in this guide, refer to the Manifest V3 migration guides for [Firefox](https://extensionworkshop.com/documentation/develop/manifest-v3-migration-guide/) and [Chrome](https://developer.chrome.com/docs/extensions/develop/migrate).
 
 ## Cross-platform extension coding hurdles
 
@@ -46,7 +47,8 @@ Some handlers of extension API events are expected to respond asynchronously thr
 
 Firefox also supports callbacks for the APIs that support the `chrome.*` namespace. However, using promises is recommended. Promises greatly simplifies asynchronous event handling, particularly where you need to chain events together. This means using a polyfill or similar so your extension uses the `browser.*` namespace in Firefox and Safari and `chrome.*` in Chrome, Opera, and Edge.
 
-> **Note:** If you're unfamiliar with the differences between these two methods, look at [Getting to know asynchronous JavaScript: Callbacks, Promises and Async/Await](https://medium.com/codebuddies/getting-to-know-asynchronous-javascript-callbacks-promises-and-async-await-17e0673281ee) or the MDN [Using promises](/en-US/docs/Web/JavaScript/Guide/Using_promises) page.
+> [!NOTE]
+> If you're unfamiliar with the differences between these two methods, look at [Getting to know asynchronous JavaScript: Callbacks, Promises and Async/Await](https://medium.com/codebuddies/getting-to-know-asynchronous-javascript-callbacks-promises-and-async-await-17e0673281ee) or the MDN [Using promises](/en-US/docs/Web/JavaScript/Guide/Using_promises) page.
 
 #### The WebExtension browser API Polyfill
 
@@ -75,7 +77,8 @@ So, for example, this `manifest.json` code makes the polyfill available to backg
 
 Your goal is to ensure that the polyfill executes in your extension before any other scripts that expect the `browser.*` API namespace execute.
 
-> **Note:** For more details and information on using the polyfill with a module bundler, see the [project's readme on GitHub.](https://github.com/mozilla/webextension-polyfill/blob/master/README.md)
+> [!NOTE]
+> For more details and information on using the polyfill with a module bundler, see the [project's readme on GitHub.](https://github.com/mozilla/webextension-polyfill/blob/master/README.md)
 
 There are other polyfill options. However, at the time of writing, none of the other options provide the coverage of the WebExtension browser API Polyfill. So, where you haven't targeted Firefox as your first choice, your options are to accept the limitations of alternative polyfills, port to Firefox and add cross-browser support, or develop your own polyfill.
 
@@ -122,7 +125,7 @@ There are also differences between the [Content Security Policy (CSP) for conten
 
 As part of its implementation of Manifest V3, Chrome replaced background pages with extension service workers. Firefox retains the use of background pages, while Safari supports background pages and service workers.
 
-For more information, see the [browser support](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background#browser_support) section on the `"background"` manifest key page. This includes a simple example of how to implement a cross-browser script.
+For more information, see the [browser support](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background#browser_support) section on the `"background"` manifest key page. This includes an example of how to implement a cross-browser script.
 
 ### Manifest keys
 

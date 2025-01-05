@@ -33,11 +33,11 @@ CSS Transition events are supported. Examples include:
 
 ### Safari 10.1 and above (Desktop)
 
-Do not enable Auto-Play (does not work for gifs)
+Do not enable Auto-Play (does not work for GIFs)
 
 #### iOS Safari 10.3 and above (Mobile and Tablet)
 
-Select the "Reduce motion option" in OS Accessibility settings for Apple (image source: developers.google.com from Thomas Steiner's article "Move Ya! Or maybe, don't, if the user prefers-reduced-motion!"). This will not work on animated gifs; the source of the animation is self-contained within a gif and is not affected by these settings.![Screen shot showing how to reduce motion on a MAC OS](macos-reduce-motion.png)
+Select the "Reduce motion option" in OS Accessibility settings for Apple (image source: developers.google.com from Thomas Steiner's article "Move Ya! Or maybe, don't, if the user prefers-reduced-motion!"). This will not work on animated GIFs; the source of the animation is self-contained within a gif and is not affected by these settings.![Screen shot showing how to reduce motion on a MAC OS](macos-reduce-motion.png)
 
 #### Use Reader Mode on browsers
 
@@ -54,8 +54,8 @@ Browsers offer much power to their users; it's just a matter of knowing where to
 
 #### Use browser extensions
 
-- [Gif Blocker](https://chrome.google.com/webstore/detail/gif-blocker/ahkidgegbmbnggcnmejhobepkaphkfhl?hl=en) For Chrome, GIF Blocker is an extension available at the web store.
-- [Gif Scrubber](https://chrome.google.com/webstore/detail/gif-scrubber/gbdacbnhlfdlllckelpdkgeklfjfgcmp?hl=en) Gif Scrubber is a chrome extension that allows you to control gifs like a video player. There is a GitHub repository for it at **<https://github.com/0ui/gif-scrubber>**
+- [Gif Blocker](https://chromewebstore.google.com/detail/gif-blocker/ahkidgegbmbnggcnmejhobepkaphkfhl?hl=en) For Chrome, GIF Blocker is an extension available at the web store.
+- [Gif Scrubber](https://chromewebstore.google.com/detail/gif-scrubber/gbdacbnhlfdlllckelpdkgeklfjfgcmp?hl=en) Gif Scrubber is a chrome extension that allows you to control GIFs like a video player. There is a GitHub repository for it at **<https://github.com/0ui/gif-scrubber>**
 - [Beeline Reader](https://www.beelinereader.com/) Beeline Reader has a browser extension that allows you to set up for grayscale and Dyslexi font, among other things
 
 ![Screenshot showing modes of Beeline Reader a user can adjust in browser](beelinereader.png)
@@ -66,7 +66,7 @@ Most operating systems such as Windows 10, have accessibility options that are s
 
 #### Turn off animations in the operating system
 
-In the Windows 10 operating system, the user has an ability to turn off animations. This will not work on animated gifs; the source of the animation is self-contained within a gif and is not affected by these settings.
+In the Windows 10 operating system, the user has an ability to turn off animations. This will not work on animated GIFs; the source of the animation is self-contained within a gif and is not affected by these settings.
 
 ![Screen shot showing how to turn off animations in Windows10](turnoffanimationsinwindows.png)
 
@@ -81,7 +81,7 @@ Most Operating Systems have a way to let the user make an adjustment on the work
 ## See also
 
 - [Accessibility](/en-US/docs/Web/Accessibility)
-- [Accessibility learning path](/en-US/docs/Learn/Accessibility)
+- [Accessibility learning path](/en-US/docs/Learn_web_development/Core/Accessibility)
 - [Web accessibility for seizures and physical reactions](/en-US/docs/Web/Accessibility/Seizure_disorders)
 - [Color vision simulation](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/simulation/index.html)
 - Discussion: "[What is the "grayscale" setting for in accessibility options?](https://ask.metafilter.com/312049/What-is-the-grayscale-setting-for-in-accessibility-options)"

@@ -26,7 +26,8 @@ When it comes to important declarations, the [cascade origin and layer orders](/
 
 When a declaration is important, the order of precedence is reversed. Declarations marked as important in the user-agent style sheets override all important declarations in the user style sheets. Similarly, all important declarations in the user style sheets override all important declarations in the author's style sheets. Finally, all important declarations take precedence over all animations.
 
-> **Note:** All important declarations take precedence over all animations. `!important` is not valid within [@keyframes animation](/en-US/docs/Web/CSS/@keyframes) declarations.
+> [!NOTE]
+> All important declarations take precedence over all animations. `!important` is not valid within [@keyframes animation](/en-US/docs/Web/CSS/@keyframes) declarations.
 
 Reversing the precedence order for important declarations ensures users with special needs, such as personalized color schemes or large fonts, can override author styles when needed by marking some declarations in their user's style sheet as important. It also guarantees malicious extensions can't override important user-agent styles, which might break functionality or negatively impact security.
 

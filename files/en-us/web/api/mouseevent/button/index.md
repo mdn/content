@@ -15,7 +15,8 @@ As such, it is not reliable for events such as {{domxref("Element/mouseenter_eve
 
 Users may change the configuration of buttons on their pointing device so that if an event's button property is zero, it may not have been caused by the button that is physically left–most on the pointing device; however, it should behave as if the left button was clicked in the standard button layout.
 
-> **Note:** Do not confuse this property with the {{domxref("MouseEvent.buttons")}} property, which indicates which buttons are pressed for all mouse events types.
+> [!NOTE]
+> Do not confuse this property with the {{domxref("MouseEvent.buttons")}} property, which indicates which buttons are pressed for all mouse events types.
 
 ## Value
 

@@ -50,20 +50,23 @@ evaluate(xpathExpression, contextNode, namespaceResolver, resultType, result)
       - : A result set containing all the nodes matching the expression. The nodes
         in the result set are not necessarily in the same order they appear in
         the document.
-        > **Note:** Results of this type contain references to nodes in the document.
+        > [!NOTE]
+        > Results of this type contain references to nodes in the document.
         > Modifying a node will invalidate the iterator.
         > After modifying a node, attempting to iterate through the results will result in an error.
     - `ORDERED_NODE_ITERATOR_TYPE` (`5`)
       - : A result set containing all the nodes matching the expression. The nodes
         in the result set are in the same order they appear in the document.
-        > **Note:** Results of this type contain references to nodes in the document.
+        > [!NOTE]
+        > Results of this type contain references to nodes in the document.
         > Modifying a node will invalidate the iterator.
         > After modifying a node, attempting to iterate through the results will result in an error.
     - `UNORDERED_NODE_SNAPSHOT_TYPE` (`6`)
       - : A result set containing snapshots of all the nodes matching the
         expression. The nodes in the result set are not necessarily in the same
         order they appear in the document.
-        > **Note:** Results of this type are snapshots, which are essentially lists of matched nodes.
+        > [!NOTE]
+        > Results of this type are snapshots, which are essentially lists of matched nodes.
         > You can make changes to the document by altering snapshot nodes.
         > Modifying the document doesn't invalidate the snapshot;
         > however, if the document is changed, the snapshot may not correspond to the current state of the document,
@@ -72,7 +75,8 @@ evaluate(xpathExpression, contextNode, namespaceResolver, resultType, result)
       - : A result set containing snapshots of all the nodes matching the
         expression. The nodes in the result set are in the same order they
         appear in the document.
-        > **Note:** Results of this type are snapshots, which are essentially lists of matched nodes.
+        > [!NOTE]
+        > Results of this type are snapshots, which are essentially lists of matched nodes.
         > You can make changes to the document by altering snapshot nodes.
         > Modifying the document doesn't invalidate the snapshot;
         > however, if the document is changed, the snapshot may not correspond to the current state of the document,
@@ -145,10 +149,10 @@ See [Introduction to using XPath in JavaScript](/en-US/docs/Web/XPath/Introducti
 This function is a replacement for {{domxref("Document.getElementById()")}} for when you need to search by `xml:id` instead.
 
 ```js
-function getElementByIdWrapper(xmldoc, id) {
-  return xmldoc.evaluate(
+function getElementByIdWrapper(xmlDoc, id) {
+  return xmlDoc.evaluate(
     `//*[@xml:id="${id}"]`,
-    xmldoc,
+    xmlDoc,
     () => "http://www.w3.org/XML/1998/namespace",
     XPathResult.FIRST_ORDERED_NODE_TYPE,
     null,

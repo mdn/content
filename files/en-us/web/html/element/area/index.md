@@ -37,7 +37,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
     The values are numbers of CSS pixels.
 
 - `download`
-  - : This attribute, if present, indicates that the author intends the hyperlink to be used for downloading a resource.
+  - : This attribute, if present, indicates that the linked resource is intended to be downloaded rather than displayed in the browser.
     See {{HTMLElement("a")}} for a full description of the [`download`](/en-US/docs/Web/HTML/Element/a#download) attribute.
 - `href`
   - : The hyperlink target for the area.
@@ -52,7 +52,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
     - `no-referrer`: The {{HTTPHeader("Referer")}} header will not be sent.
     - `no-referrer-when-downgrade`: The {{HTTPHeader("Referer")}} header will not be sent to {{Glossary("origin")}}s without {{Glossary("TLS")}} ({{Glossary("HTTPS")}}).
-    - `origin`: The sent referrer will be limited to the origin of the referring page: its [scheme](/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL), {{Glossary("host")}}, and {{Glossary("port")}}.
+    - `origin`: The sent referrer will be limited to the origin of the referring page: its [scheme](/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL), {{Glossary("host")}}, and {{Glossary("port")}}.
     - `origin-when-cross-origin`: The referrer sent to other origins will be limited to the scheme, the host, and the port. Navigations on the same origin will still include the path.
     - `same-origin`: A referrer will be sent for {{Glossary("Same-origin policy", "same origin")}}, but cross-origin requests will contain no referrer information.
     - `strict-origin`: Only send the origin of the document as the referrer when the protocol security level stays the same (HTTPS→HTTPS), but don't send it to a less secure destination (HTTPS→HTTP).
@@ -81,7 +81,8 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
     Use this attribute only if the [`href`](#href) attribute is present.
 
-    > **Note:** Setting `target="_blank"` on `<area>` elements implicitly provides the same `rel` behavior as setting [`rel="noopener"`](/en-US/docs/Web/HTML/Attributes/rel/noopener) which does not set `window.opener`. See [browser compatibility](#browser_compatibility) for support status.
+    > [!NOTE]
+    > Setting `target="_blank"` on `<area>` elements implicitly provides the same `rel` behavior as setting [`rel="noopener"`](/en-US/docs/Web/HTML/Attributes/rel/noopener) which does not set `window.opener`. See [browser compatibility](#browser_compatibility) for support status.
 
 ## Examples
 

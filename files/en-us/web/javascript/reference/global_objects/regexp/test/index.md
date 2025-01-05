@@ -53,7 +53,7 @@ previous match.
 
 ### Using test()
 
-Simple example that tests if `"hello"` is contained at the very beginning of
+This example tests if `"hello"` is contained at the very beginning of
 a string, returning a boolean result.
 
 ```js
@@ -67,8 +67,8 @@ The following example logs a message which depends on the success of the test:
 
 ```js
 function testInput(re, str) {
-  const midstring = re.test(str) ? "contains" : "does not contain";
-  console.log(`${str} ${midstring} ${re.source}`);
+  const midString = re.test(str) ? "contains" : "does not contain";
+  console.log(`${str} ${midString} ${re.source}`);
 }
 ```
 
@@ -83,7 +83,8 @@ Further calls to `test(str)` will resume searching
 `lastIndex` property will continue to increase each time `test()`
 returns `true`.
 
-> **Note:** As long as `test()` returns `true`,
+> [!NOTE]
+> As long as `test()` returns `true`,
 > `lastIndex` will _not_ reset—even when testing a different string!
 
 When `test()` returns `false`, the calling regex's

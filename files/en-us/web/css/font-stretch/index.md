@@ -7,6 +7,10 @@ browser-compat: css.properties.font-stretch
 
 {{CSSRef}}
 
+> [!NOTE]
+> The `font-stretch` property [has now been renamed to `font-width`](https://drafts.csswg.org/css-fonts/#font-stretch-desc) in the specifications. The name `font-stretch` has been kept as an alias for the `font-width` property.
+> The new name `font-width` is not yet supported by any browsers.
+
 The **`font-stretch`** [CSS](/en-US/docs/Web/CSS) property selects a normal, condensed, or expanded face from a font.
 
 {{EmbedInteractiveExample("pages/css/font-stretch.html")}}
@@ -202,19 +206,50 @@ td {
 
 ## Formal syntax
 
-{{csssyntax}}
+{{csssyntax("font-width")}}
 
 ## Examples
 
 ### Setting font stretch percentages
 
-{{EmbedGHLiveSample("css-examples/variable-fonts/font-stretch.html", '100%', 950)}}
+```html
+<p class="condensed">an elephantine lizard</p>
+<p class="normal">an elephantine lizard</p>
+<p class="expanded">an elephantine lizard</p>
+```
+
+```css
+@font-face {
+  src: url("https://mdn.github.io/shared-assets/fonts/LeagueMono-VF.ttf");
+  font-family: "LeagueMonoVariable";
+  font-style: normal;
+  font-stretch: 1% 500%; /* Required by Chrome */
+}
+
+p {
+  font:
+    1.5rem "LeagueMonoVariable",
+    sans-serif;
+}
+
+.condensed {
+  font-stretch: 50%;
+}
+
+.normal {
+  font-stretch: 100%;
+}
+
+.expanded {
+  font-stretch: 200%;
+}
+```
+
+{{EmbedLiveSample("Setting font stretch percentages", "100%", 200)}}
 
 ## Specifications
 
 {{Specifications}}
-
-> **Note:** The `font-stretch` property was initially defined in CSS 2, but dropped in CSS 2.1 due to the lack of browser implementation. It was brought back in CSS 3.
 
 ## Browser compatibility
 
@@ -224,5 +259,5 @@ td {
 
 - {{cssxref("font-style")}}
 - {{cssxref("font-weight")}}
-- [Fundamental text and font styling](/en-US/docs/Learn/CSS/Styling_text/Fundamentals)
+- [Learn: Fundamental text and font styling](/en-US/docs/Learn_web_development/Core/Text_styling/Fundamentals)
 - [CSS fonts](/en-US/docs/Web/CSS/CSS_fonts) module

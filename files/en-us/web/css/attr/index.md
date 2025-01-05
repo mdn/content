@@ -7,7 +7,8 @@ browser-compat: css.types.attr
 
 {{CSSRef}}
 
-> **Note:** The `attr()` function can be used with any CSS property, but support for properties other than {{CSSxRef("content")}} is experimental, and support for the type-or-unit parameter is sparse.
+> [!NOTE]
+> The `attr()` function can be used with any CSS property, but support for properties other than {{CSSxRef("content")}} is experimental, and support for the type-or-unit parameter is sparse.
 
 The **`attr()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) is used to retrieve the value of an attribute of the selected element and use it in the stylesheet. It can also be used on [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements), in which case the value of the attribute on the pseudo-element's originating element is returned.
 
@@ -16,7 +17,7 @@ The **`attr()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_F
 ## Syntax
 
 ```css
-/* Simple usage */
+/* Basic usage */
 attr(data-count);
 attr(title);
 
@@ -142,7 +143,7 @@ attr(data-something, "default");
 - `<fallback>`
   - : The value to be used if the associated attribute is missing or contains an invalid value. If not set, CSS will use the default value defined for each `<type-or-unit>`.
 
-### Formal syntax
+## Formal syntax
 
 {{CSSSyntax}}
 

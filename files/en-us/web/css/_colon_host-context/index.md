@@ -7,13 +7,20 @@ browser-compat: css.selectors.host-context
 
 {{CSSRef}}
 
-The **`:host-context()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) function selects the shadow host of the [shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM) containing the CSS it is used inside (so you can select a custom element from inside its shadow DOM) — but only if the selector given as the function's parameter matches the shadow host's ancestor(s) in the place it sits inside the DOM hierarchy.
+The **`:host-context()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) allows you to style elements within a [shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM) differently based on the selector of the shadow host (the element that has the shadow root) and its DOM ancestors.
 
-In other words, this allows a custom element, or anything within that custom element's shadow DOM, to apply different styles based on its position within the outer DOM or classes/attributes applied to ancestor elements.
+Normally, elements within a shadow DOM are isolated from the DOM outside of it. The `:host-context()` allows you to "peek outside" of this Shadow DOM and check if any of the element's ancestor elements match a certain CSS selector. For example, applying a different text color to elements within a shadow root when a `.dark-theme` class is applied to `<body>`.
 
-One typical use of this is with a descendant selector expression — for example `h1` — to select only instances of the custom element that are inside an `<h1>`. Another typical use would be to allow inner elements to react to classes or attributes on any ancestor elements - for example, applying a different text color when a `.dark-theme` class is applied to `<body>`.
+Think of it like this: Imagine you have a `<greenhouse>` custom element, that has a `<chameleon>` living inside. Here, the `<greenhouse>` is the Shadow DOM host and the `<chameleon>` element is within the Shadow DOM. The `:host-context()` lets the `<chameleon>` change its appearance based on the `<greenhouse>`'s environment. If the `<greenhouse>` is in a sunny location (has a "sunny-theme" class), the `<chameleon>` turns yellow. If the `<greenhouse>` is in a shady spot (a "shady-theme" class applied instead), the `<chameleon>` turns blue.
 
-> **Note:** This has no effect when used outside a shadow DOM.
+This selector pierces through all shadow boundaries. It will look for the sunny or shady theme applied directly to the `<greenhouse>` or on any of the host's ancestors and ancestor DOMs all the way up until it reaches the document root.
+
+To limit the selector to only the `<greenhouse>` host directly or limit the selection to host's DOM, use the {{cssxref(":host")}} or {{cssxref(":host_function", ":host()")}} pseudo-class instead.
+
+> [!NOTE]
+> This has no effect when used outside a shadow DOM.
+
+The [specificity](/en-US/docs/Web/CSS/Specificity) of `:host-context()` is that of a [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes), plus the specificity of the selector passed as the function's argument.
 
 {{EmbedInteractiveExample("pages/tabbed/pseudo-class-host-context.html", "tabbed-shorter")}}
 
@@ -49,7 +56,7 @@ p {
 
 The following snippets are taken from our [host-selectors example](https://github.com/mdn/web-components-examples/tree/main/host-selectors) ([see it live also](https://mdn.github.io/web-components-examples/host-selectors/)).
 
-In this example we have a simple custom element — `<context-span>` — that you can wrap around text:
+In this example we have a basic custom element — `<context-span>` — that you can wrap around text:
 
 ```html
 <h1>

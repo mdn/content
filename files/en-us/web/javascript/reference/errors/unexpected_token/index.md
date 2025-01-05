@@ -63,7 +63,7 @@ Sometimes, you leave out parentheses around `if` statements:
 
 ```js-nolint example-bad
 function round(n, upperBound, lowerBound) {
-  if (n > upperBound) || (n < lowerBound) { // Not enough parenthese here!
+if (n > upperBound) || (n < lowerBound) { // Missing parentheses here!
     throw new Error(`Number ${n} is more than ${upperBound} or less than ${lowerBound}`);
   } else if (n < (upperBound + lowerBound) / 2) {
     return lowerBound;
@@ -86,6 +86,28 @@ function round(n, upperBound, lowerBound) {
     return lowerBound;
   } else {
     return upperBound;
+  }
+}
+```
+
+### A structure error further up confused the meaning
+
+Sometimes, the error is caused by some structure issues not directly next to the error location, so you need to look around for potential errors. For example, you intended to declare a method of an object, but you declared it as a property instead:
+
+```js-nolint example-bad
+const MyComponent = {
+  mounted: {
+    document.getElementById("app").classList.add("loaded");
+  }
+}
+```
+
+The `.` after `document` is unexpected, because JavaScript is parsing the `{}` as an object literal instead of a function body, so it expects a `:`. The problem is solved by declaring `mounted` as function.
+
+```js-nolint example-good
+const MyComponent = {
+  mounted() {
+    document.getElementById("app").classList.add("loaded");
   }
 }
 ```

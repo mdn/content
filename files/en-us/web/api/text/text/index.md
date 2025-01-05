@@ -21,6 +21,7 @@ new Text(string)
 ### Parameters
 
 - `string` {{optional_inline}}
+  - : A string representing the textual content of the text node.
 
 ### Return value
 

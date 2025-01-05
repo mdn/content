@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.Element.ariaRowCount
 ---
 
-{{DefaultAPISidebar("DOM")}}
+{{APIRef("DOM")}}
 
 The **`ariaRowCount`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-rowcount`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowcount) attribute, which defines the total number of rows in a table, grid, or treegrid.
 
@@ -71,5 +71,7 @@ console.log(el.ariaRowCount); // 101
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
 
 - [ARIA: table role](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role)

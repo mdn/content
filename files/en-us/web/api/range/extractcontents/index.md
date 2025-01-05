@@ -86,7 +86,7 @@ const list2 = document.getElementById("list2");
 const button = document.getElementById("swap");
 
 button.addEventListener("click", (e) => {
-  selection = window.getSelection();
+  const selection = window.getSelection();
 
   for (let i = 0; i < selection.rangeCount; i++) {
     const range = selection.getRangeAt(i);

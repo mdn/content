@@ -17,7 +17,8 @@ To elaborate over these steps, we're going to start by creating a half-highlight
 
 ![Text reading 'My Cool Header' with a solid yellow background image block on the bottom left two thirds of the header](mycoolheader.png)
 
-> **Note:** The complete source for all the examples in this article can be found at [https://github.com/mdn/dom-examples/tree/main/css-painting](https://github.com/mdn/dom-examples/tree/main/css-painting), and the examples are running live at [https://mdn.github.io/dom-examples/css-painting/](https://mdn.github.io/dom-examples/css-painting/).
+> [!NOTE]
+> The complete source for all the examples in this article can be found at [https://github.com/mdn/dom-examples/tree/main/css-painting](https://github.com/mdn/dom-examples/tree/main/css-painting), and the examples are running live at [https://mdn.github.io/dom-examples/css-painting/](https://mdn.github.io/dom-examples/css-painting/).
 
 ## CSS paint worklet
 
@@ -28,7 +29,7 @@ registerPaint(
   "headerHighlight",
   class {
     /*
-       define if alphatransparency is allowed alpha
+       define if alpha transparency is allowed alpha
        is set to true by default. If set to false, all
        colors used on the canvas will be fully opaque
     */
@@ -48,7 +49,7 @@ registerPaint(
 );
 ```
 
-In this class example we have defined a single context option with the `contextOptions()` function: we returned a simple object stating alpha transparency is allowed.
+In this class example we have defined a single context option with the `contextOptions()` function: we returned an object stating alpha transparency is allowed.
 
 We have then used the `paint()` function to paint to our canvas.
 
@@ -318,7 +319,7 @@ While you can't play with the worklet's script, you can alter the custom propert
 
 ## Adding complexity
 
-The above examples might not seem very exciting, as you could recreate them in a few different ways with existing CSS properties, e.g. by positioning some decorative [generated content](/en-US/docs/Learn/CSS/Howto/Generated_content) with `::before,` or including `background: linear-gradient(yellow, yellow) 0 15px / 200px 20px no-repeat;` What makes the CSS Painting API so interesting and powerful is that you can create complex images, passing variables, that automatically resize.
+The above examples might not seem very exciting, as you could recreate them in a few different ways with existing CSS properties, e.g. by positioning some decorative [generated content](/en-US/docs/Learn_web_development/Howto/Solve_CSS_problems/Generated_content) with `::before`, or including `background: linear-gradient(yellow, yellow) 0 15px / 200px 20px no-repeat;` What makes the CSS Painting API so interesting and powerful is that you can create complex images, passing variables, that automatically resize.
 
 Let's take a look at a more complex paint example.
 
@@ -419,7 +420,8 @@ You could try making the background images above without the CSS Paint API. It i
 
 ## Passing parameters
 
-> **Note:** The following example requires the Experimental Web Platform features flag to be enabled in Chrome or Edge by visiting `about://flags`.
+> [!NOTE]
+> The following example requires the Experimental Web Platform features flag to be enabled in Chrome or Edge by visiting `about://flags`.
 
 With the CSS Paint API, we not only have access to custom properties and regular properties, but we can pass custom arguments to the `paint()` function as well.
 

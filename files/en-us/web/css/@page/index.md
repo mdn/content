@@ -133,7 +133,8 @@ The specification mentions following CSS properties to be applicable to page box
 
 The @page rule defines properties of the page box. The `@page` at-rule can be accessed via the CSS object model interface {{domxref("CSSPageRule")}}.
 
-> **Note:** The W3C is discussing how to handle viewport-related {{cssxref("&lt;length&gt;")}} units, `vh`, `vw`, `vmin`, and `vmax`. Meanwhile do not use them within a `@page` at-rule.
+> [!NOTE]
+> The W3C is discussing how to handle viewport-related {{cssxref("&lt;length&gt;")}} units, `vh`, `vw`, `vmin`, and `vmax`. Meanwhile do not use them within a `@page` at-rule.
 
 ### Related properties
 
@@ -153,14 +154,12 @@ Where the `<page-body>` includes:
 
 and `<pseudo-page>` represents these pseudo-classes:
 
-- [`:blank`](https://drafts.csswg.org/css-page/#blank-pseudo)
+- {{Cssxref(":blank")}}
 - {{Cssxref(":first")}}
 - {{Cssxref(":left")}}
 - {{Cssxref(":right")}}
 
 ## Margin at-rules
-
-> **Warning:** The margin at-rules have not been implemented by any user agent (updated: August 2023).
 
 The margin at-rules are used inside of the `@page` at-rule. They each target a different section of the document printed page, styling the area of the printed page based on the property values set in the style block:
 
@@ -383,13 +382,14 @@ button.addEventListener("click", () => {
 #### Result
 
 Clicking the print button will launch a print dialog with the html sections split into individual pages.
-{{ EmbedLiveSample('Using the size property to change the page orientation', '100%', 520) }}
+
+{{EmbedLiveSample('Using the size property to change the page orientation', '100%', 520)}}
 
 ### @page pseudo-class examples
 
 Please refer to the various [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes) of `@page` for examples.
 
-- [`:blank`](https://drafts.csswg.org/css-page/#blank-pseudo)
+- {{Cssxref(":blank")}}
 - {{Cssxref(":first")}}
 - {{Cssxref(":left")}}
 - {{Cssxref(":right")}}
@@ -406,6 +406,6 @@ Please refer to the various [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes)
 
 - The `@page` [`size`](/en-US/docs/Web/CSS/@page/size) descriptor
 - The {{Cssxref("page")}} property
-- See the [\[META\] CSS Paged Media Module Level 3](https://bugzilla.mozilla.org/show_bug.cgi?id=286443) ticket in Bugzilla for tracking progress on the subject (page-based counters, etc.)
+- See the [\[META\] CSS Paged Media Module Level 3](https://bugzil.la/286443) ticket in Bugzilla for tracking progress on the subject (page-based counters, etc.)
 - [CSS paged media](/en-US/docs/Web/CSS/CSS_paged_media) module
-- [Paged.js: W3C paged media polyfill](https://pagedjs.org/documentation/1-the-big-picture)
+- [Paged.js: W3C paged media polyfill](https://pagedjs.org/documentation/1-the-big-picture/)

@@ -13,7 +13,7 @@ You can use this attribute with the following SVG elements:
 
 - {{SVGElement('pattern')}}
 
-## Example
+## Examples
 
 ```css hidden
 html,
@@ -55,9 +55,13 @@ svg {
 </svg>
 ```
 
-{{EmbedLiveSample("Example", '100%', 200)}}
+{{EmbedLiveSample("Examples", '100%', 200)}}
 
-## pattern
+## Elements
+
+You can use this attribute with the SVG elements described in the sections below.
+
+### `<pattern>`
 
 For {{SVGElement('pattern')}}, `patternUnits` defines the coordinate system in use for the geometry properties ({{ SVGAttr("x") }}, {{ SVGAttr("y") }}, {{ SVGAttr("width") }} and {{ SVGAttr("height") }}) of the element.
 
@@ -81,7 +85,7 @@ For {{SVGElement('pattern')}}, `patternUnits` defines the coordinate system in u
 - `userSpaceOnUse`
   - : This value indicates that all coordinates for the geometry properties refer to the user coordinate system as defined when the pattern was applied.
 - `objectBoundingBox`
-  - : This value indicates that all coordinates for the geometry properties represent fractions or percentages of the bounding box of the element to which the pattern is applied. A bounding box could be considered the same as if the content of the {{ SVGElement("pattern") }} were bound to a "`0 0 1 1`" {{ SVGAttr("viewBox") }}.
+  - : This value indicates that all coordinates for the geometry properties represent fractions or percentages of the bounding box of the element to which the pattern is applied. A bounding box could be considered the same as if the content of the {{ SVGElement("pattern") }} were bound to a `"0 0 1 1"` {{ SVGAttr("viewBox") }}.
 
 ## Specifications
 

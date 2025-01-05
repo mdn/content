@@ -20,7 +20,8 @@ The `submit` event fires when:
 
 However, the event is _not_ sent to the form when a script calls the {{domxref("HTMLFormElement.submit()", "form.submit()")}} method directly.
 
-> **Note:** Trying to submit a form that does not pass [validation](/en-US/docs/Learn/Forms/Form_validation) triggers an {{domxref("HTMLInputElement/invalid_event", "invalid")}} event. In this case, the validation prevents form submission, and thus there is no `submit` event.
+> [!NOTE]
+> Trying to submit a form that does not pass [validation](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation) triggers an {{domxref("HTMLInputElement/invalid_event", "invalid")}} event. In this case, the validation prevents form submission, and thus there is no `submit` event.
 
 ## Syntax
 

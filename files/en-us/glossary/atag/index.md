@@ -10,8 +10,8 @@ page-type: glossary-definition
 
 Authoring tools are software applications that people use to create web content. ATAG explains how to:
 
-- Make the authoring tools themselves accessible, so that people with disabilities can create web content
-- Help authors create more accessible web content by enabling, supporting, and promoting the production of content that conforms to {{glossary("WCAG", "Web Content Accessibility Guidelines")}} (WCAG).
+- make the authoring tools themselves **accessible**, so that people with disabilities can create web content
+- help authors create more accessible web content — specifically: enable, support, and promote the production of content that conforms to {{glossary("WCAG", "Web Content Accessibility Guidelines")}} (WCAG).
 
 ## See also
 
@@ -20,4 +20,6 @@ Authoring tools are software applications that people use to create web content.
 - [Authoring Tool Accessibility Guidelines (ATAG) Recommendation 2.0](https://www.w3.org/TR/ATAG20/)
 - Related glossary terms:
   - {{Glossary("Accessibility")}}
+  - {{Glossary("WAI")}}
   - {{Glossary("WCAG")}}
+  - {{Glossary("UAAG")}}

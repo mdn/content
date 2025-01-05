@@ -45,7 +45,8 @@ Firefox will clear the [following data](https://searchfox.org/mozilla-central/re
 - HTTP Authentication Tokens
 - HTTP Authentication Cache
 
-> **Note:** Even though we're clearing all of this data, we currently only flag origins for clearing when they use cookies or other site storage.
+> [!NOTE]
+> Even though we're clearing all of this data, we currently only flag origins for clearing when they use cookies or other site storage.
 
 Storage clearing ignores origin attributes. This means that storage will be cleared across [containers](https://wiki.mozilla.org/Security/Contextual_Identity_Project/Containers) and isolated storage (i.e. from [First-Party Isolation](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#first-party_isolation)).
 

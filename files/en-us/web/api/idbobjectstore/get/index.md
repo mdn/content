@@ -17,7 +17,8 @@ If a value is successfully found, then a structured clone of it is created and s
 the [`result`](/en-US/docs/Web/API/IDBRequest/result) of the
 request object.
 
-> **Note:** This method produces the same result for: a) a record that doesn't exist in the database and b) a record that has an undefined value.
+> [!NOTE]
+> This method produces the same result for: a) a record that doesn't exist in the database and b) a record that has an undefined value.
 > To tell these situations apart, call the `openCursor()` method with the same key. That method provides a cursor if the record exists, and no cursor if it does not.
 
 ## Syntax

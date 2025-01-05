@@ -13,7 +13,7 @@ The **`<basic-shape>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/C
 
 ## Syntax
 
-The `<basic-shape>` data type is used to create basic shapes including rectangles by [container inset](#syntax_for_rectangles_by_container_insets), by [coordinate distance](#syntax_for_rectangles_by_distance), or by [set dimensions](#syntax_for_rectangles_with_dimensions), [circles](#syntax_for_circles), [ellipses](#syntax_for_ellipses), [polygons](#syntax_for_polygons), [paths](#syntax_for_paths), and [author created shapes](#syntax_for_shapes_experimental). These basic shapes are defined using one `<basic_shape>` CSS functions, with each value requiring a parameter that follows the shape's function-specific syntax.
+The `<basic-shape>` data type is used to create basic shapes including rectangles by [container inset](#syntax_for_rectangles_by_container_insets), by [coordinate distance](#syntax_for_rectangles_by_distance), or by [set dimensions](#syntax_for_rectangles_with_dimensions), [circles](#syntax_for_circles), [ellipses](#syntax_for_ellipses), [polygons](#syntax_for_polygons), [paths](#syntax_for_paths), and [author created shapes](#syntax_for_shapes). These basic shapes are defined using one `<basic_shape>` CSS functions, with each value requiring a parameter that follows the shape's function-specific syntax.
 
 ### Common parameters
 
@@ -35,7 +35,7 @@ The parameters common across the syntax of some basic shape functions include:
 
 - `<fill-rule>`
 
-  - : Sets the {{SVGAttr("fill-rule")}} that is used to determine how the interior of the shape defined by the basic shapes [polygon](#syntax_for_polygons), [path](#syntax_for_paths), and [shape](#syntax_for_shapes_experimental) is to be filled. Possible values are `nonzero` (the default) and `evenodd`.
+  - : Sets the {{SVGAttr("fill-rule")}} that is used to determine how the interior of the shape defined by the basic shapes [polygon](#syntax_for_polygons), [path](#syntax_for_paths), and [shape](#syntax_for_shapes) is to be filled. Possible values are `nonzero` (the default) and `evenodd`.
 
     > **Note:** `<fill-rule>` is not supported in {{cssxref("offset-path")}} and using it invalidates the property.
 
@@ -44,7 +44,7 @@ The parameters common across the syntax of some basic shape functions include:
 The {{cssxref("basic-shape/inset","inset()")}} function creates an inset rectangle, with its size defined by the offset distance of each of the four sides of its container and, optionally, rounded corners.
 
 ```plain
-inset( <length-percentage>{1,4} [ round <`border-radius`> ]? )
+inset( <length-percentage>{1,4} [ round <'border-radius'> ]? )
 ```
 
 When all of the first four arguments are supplied, they represent the top, right, bottom, and left offsets from the reference box inward that define the position of the edges of the inset rectangle. These arguments follow the syntax of the {{cssxref("margin")}} shorthand, which lets you set all four insets with one, two, three, or four values.
@@ -56,7 +56,7 @@ If a pair of insets for a dimension adds up to more than 100% of that dimension,
 The {{cssxref("basic-shape/rect","rect()")}} function defines a rectangle using the specified distances from the top and left edges of the reference box, with optional rounded corners.
 
 ```plain
-rect( [ <length-percentage> | auto ]{4} [ round <`border-radius`> ]? )
+rect( [ <length-percentage> | auto ]{4} [ round <'border-radius'> ]? )
 ```
 
 When using the `rect()` function, you do not define the width and height of the rectangle. Instead, you specify four values to create the rectangle, with its dimensions determined by the size of the reference box and the four offset values. Each value can be either a {{cssxref("length")}}, a {{cssxref("percentage")}}, or the keyword `auto`. The `auto` keyword is interpreted as `0%` for the top and left values and as `100%` for the bottom and right values.
@@ -66,7 +66,7 @@ When using the `rect()` function, you do not define the width and height of the 
 The {{cssxref("basic-shape/xywh","xywh()")}} function defines a rectangle located at the specified distances from the left (`x`) and top (`y`) edges of the reference box and sized by the specified width (`w`) and height (`h`) of the rectangle, in that order, with optional rounded corners.
 
 ```plain
-xywh( <length-percentage>{2} <length-percentage [0,∞]>{2} [ round <`border-radius`> ]? )
+xywh( <length-percentage>{2} <length-percentage [0,∞]>{2} [ round <'border-radius'> ]? )
 ```
 
 ### Syntax for circles
@@ -94,7 +94,7 @@ The `<shape-radius>` arguments represent _rx_ and _ry_, the x-axis and y-axis ra
 The {{cssxref("basic-shape/polygon","polygon()")}} function defines a polygon using an SVG {{SVGAttr("fill-rule")}} and a set of coordinates.
 
 ```plain
-polygon( <`fill-rule`>?, [ <length-percentage> <length-percentage> ]# )
+polygon( <'fill-rule'>? , [ <length-percentage> <length-percentage> ]# )
 ```
 
 The function takes a list of comma-separated coordinate pairs, each consisting of two space-separated `<length-percentage>` values as the _xi_ and _yi_ pair. These values represent the x and y axis coordinates of the polygon at position _i_ (the vertex point where two lines meet).
@@ -104,17 +104,17 @@ The function takes a list of comma-separated coordinate pairs, each consisting o
 The {{cssxref("basic-shape/path","path()")}} function defines a shape using an SVG {{SVGAttr("fill-rule")}} and an SVG [path definition](/en-US/docs/Web/SVG/Attribute/d).
 
 ```plain
-path( <`fill-rule`>?, ]? <string> )
+path( <'fill-rule'>? , <string> )
 ```
 
 The required `<string>` is an [SVG path](/en-US/docs/Web/SVG/Attribute/d) as a quoted string. The `path()` function is not a valid {{cssxref("shape-outside")}} property value.
 
-### Syntax for shapes {{Experimental_Inline}}
+### Syntax for shapes
 
 The {{cssxref("basic-shape/shape","shape()")}} function defines a shape using an initial starting point and a series of shape commands.
 
 ```plain
-shape( <fill-rule>? from <coordinate-pair>, <shape-command># )
+shape( <'fill-rule'>? from <coordinate-pair> , <shape-command># )
 ```
 
 The `from <coordinate-pair>` parameter represents the starting point for the first shape command, and `<shape-command>` defines one or more shape commands, which are similar to the [SVG path commands](/en-US/docs/Web/SVG/Attribute/d#path_commands). The `shape()` function is not a valid {{cssxref("shape-outside")}} property value.

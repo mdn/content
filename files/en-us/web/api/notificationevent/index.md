@@ -11,7 +11,8 @@ The **`NotificationEvent`** interface of the {{domxref("Notifications API", "", 
 
 This interface inherits from the {{domxref("ExtendableEvent")}} interface.
 
-> **Note:** Only persistent notification events, fired at the {{domxref("ServiceWorkerGlobalScope")}} object, implement the `NotificationEvent` interface. Non-persistent notification events, fired at the {{domxref("Notification")}} object, implement the `Event` interface.
+> [!NOTE]
+> Only persistent notification events, fired at the {{domxref("ServiceWorkerGlobalScope")}} object, implement the `NotificationEvent` interface. Non-persistent notification events, fired at the {{domxref("Notification")}} object, implement the `Event` interface.
 
 {{InheritanceDiagram}}
 
@@ -61,7 +62,8 @@ self.addEventListener("notificationclick", (event) => {
 
 {{Specifications}}
 
-> **Note:** This interface is specified in the [Notifications API](/en-US/docs/Web/API/Notifications_API), but accessed through {{domxref("ServiceWorkerGlobalScope")}}.
+> [!NOTE]
+> This interface is specified in the [Notifications API](/en-US/docs/Web/API/Notifications_API), but accessed through {{domxref("ServiceWorkerGlobalScope")}}.
 
 ## Browser compatibility
 

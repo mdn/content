@@ -25,7 +25,7 @@ All CSS properties accept the keywords `inherit`, `initial`, and `unset`. They a
 
 ### Literals
 
-In CSS, a few characters can appear on their own, like the slash ('`/`') or the comma ('`,`'), and are used in a property definition to separate its parts. The comma is often used to separate values in enumerations, or parameters in mathematical-like functions; the slash often separates parts of the value that are semantically different, but have a common syntax. Typically, the slash is used in shorthand properties; to separate components of the same type, but belong to different properties.
+In CSS, a few characters can appear on their own, like the slash (`/`) or the comma (`,`), and are used in a property definition to separate its parts. The comma is often used to separate values in enumerations, or parameters in mathematical-like functions; the slash often separates parts of the value that are semantically different, but have a common syntax. Typically, the slash is used in shorthand properties; to separate components of the same type, but belong to different properties.
 
 Both symbols appear literally in a value definition.
 
@@ -33,11 +33,11 @@ Both symbols appear literally in a value definition.
 
 #### Basic data types
 
-Some data types are used throughout CSS and are defined once for all values in the specification. Called _basic data types_, they are represented with their name surrounded by the symbol '`<`' and '`>`': {{CSSxRef("&lt;angle&gt;")}}, {{CSSxRef("&lt;string&gt;")}}, …
+Some data types are used throughout CSS and are defined once for all values in the specification. Called _basic data types_, they are represented with their name surrounded by the symbols `<` and `>`: {{CSSxRef("&lt;angle&gt;")}}, {{CSSxRef("&lt;string&gt;")}}, …
 
 #### Non-terminal data types
 
-Less common data types, called _non-terminal data types_, are also surrounded by '`<`' and '`>`'.
+Less common data types, called _non-terminal data types_, are also surrounded by `<` and `>`.
 
 Non-terminal data types are of two kinds:
 
@@ -105,7 +105,8 @@ But not:
 - `bold`, as both components must appear in the value.
 - `bold 1em bold`, as both components must appear only once.
 
-> **Note:** juxtaposition has precedence over the double ampersand, meaning that `bold thin && <length>` is equivalent to `[ bold thin ] && <length>`. It describes `bold thin <length>` or `<length> bold thin` but not `bold <length> thin`.
+> [!NOTE]
+> Juxtaposition has precedence over the double ampersand, meaning that `bold thin && <length>` is equivalent to `[ bold thin ] && <length>`. It describes `bold thin <length>` or `<length> bold thin` but not `bold <length> thin`.
 
 ### Double bar
 
@@ -126,7 +127,8 @@ But not:
 - `blue yellow`, as a component must appear once at most.
 - `bold`, as it isn't a keyword allowed as a value of any of the entities.
 
-> **Note:** The double ampersand has precedence over the double bar, meaning that `bold || thin && <length>` is equivalent to `bold || [ thin && <length> ]`. It describes `bold`, `thin <length>`, `bold thin <length>`, or `thin <length> bold` but not `<length> bold thin` as bold, if not omitted, must be placed before or after the whole `thin && <length>` component.
+> [!NOTE]
+> The double ampersand has precedence over the double bar, meaning that `bold || thin && <length>` is equivalent to `bold || [ thin && <length> ]`. It describes `bold`, `thin <length>`, `bold thin <length>`, or `thin <length> bold` but not `<length> bold thin` as bold, if not omitted, must be placed before or after the whole `thin && <length>` component.
 
 ### Single bar
 
@@ -152,7 +154,8 @@ But not:
 - `center 3%`, as only one of the components must be present.
 - `3em 4.5em`, as a component must be present at most one time.
 
-> **Note:** The double bar has precedence over the single bar, meaning that `bold | thin || <length>` is equivalent to `bold | [ thin || <length> ]`. It describes `bold`, `thin`, `<length>`, `<length> thin`, or `thin <length>` but not `bold <length>` as only one entity from each side of the `|` combinator can be present.
+> [!NOTE]
+> The double bar has precedence over the single bar, meaning that `bold | thin || <length>` is equivalent to `bold | [ thin || <length> ]`. It describes `bold`, `thin`, `<length>`, `<length> thin`, or `thin <length>` but not `bold <length>` as only one entity from each side of the `|` combinator can be present.
 
 ## Component value multipliers
 
@@ -411,7 +414,7 @@ Here are some more examples:
       <td>Hash mark</td>
       <td>
         1 or more times, with each occurrence separated by a comma
-        ('<code>,</code>')
+        (<code>,</code>)
       </td>
       <td><code>bold smaller#</code></td>
     </tr>

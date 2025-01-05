@@ -42,7 +42,8 @@ Events have three functions:
     - `changeInfo`
       - : [`object`](#changeinfo). Object containing two properties: `title`, a string containing the item's title, and `url`, a string containing the item's URL. If the item is a folder, `url` is omitted.
 
-> **Note:** Multiple events may occur when a bookmark changes, and that changeInfo object may contain only the data that has changed, rather than all the data for the bookmark. In other words, if the `url` for a bookmark changes, the changeInfo may only contain the new `url` information.
+> [!NOTE]
+> Multiple events may occur when a bookmark changes, and that changeInfo object may contain only the data that has changed, rather than all the data for the bookmark. In other words, if the `url` for a bookmark changes, the changeInfo may only contain the new `url` information.
 
 ## Examples
 
@@ -50,7 +51,7 @@ Events have three functions:
 function handleChanged(id, changeInfo) {
   console.log(`Item: ${id} changed`);
   console.log(`Title: ${changeInfo.title}`);
-  console.log(`Url: ${changeInfo.url}`);
+  console.log(`URL: ${changeInfo.url}`);
 }
 
 function handleClick() {
@@ -66,7 +67,8 @@ browser.browserAction.onClicked.addListener(handleClick);
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/bookmarks/#event-onChanged) API. This documentation is derived from [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/api/bookmarks#event-onChanged) API. This documentation is derived from [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

@@ -43,9 +43,10 @@ setValidity(flags, message, anchor)
     - `badInput`
       - : A boolean value that is `true` if the user has provided input that the browser is unable to convert.
     - `customError`
-      - : A boolean value indicating whether the element's custom validity message has been set to a non-empty string by calling the element's {{domxref('HTMLObjectElement.setCustomValidity', 'setCustomValidity()')}} method.
+      - : A boolean value indicating whether the element's custom validity message has been set to a non-empty string by calling the element's {{domxref('HTMLInputElement.setCustomValidity', 'setCustomValidity()')}} method.
 
-    > **Note:** To set all flags to `false`, indicating that this element passes all constraints validation, pass in an empty object `{}`. In this case, you do not need to also pass a `message`.
+    > [!NOTE]
+    > To set all flags to `false`, indicating that this element passes all constraints validation, pass in an empty object `{}`. In this case, you do not need to also pass a `message`.
 
 - `message` {{Optional_Inline}}
   - : A string containing a message, which will be set if any `flags` are `true`. This parameter is only optional if all `flags` are `false`.

@@ -19,7 +19,8 @@ Channel messaging is mainly useful in cases where you've got a social site that 
 
 Message channels on the other hand can provide a secure channel that allows you to pass data between different browsing contexts.
 
-> **Note:** For more information and ideas, the [Ports as the basis of an object-capability model on the Web](https://html.spec.whatwg.org/multipage/comms.html#ports-as-the-basis-of-an-object-capability-model-on-the-web) section of the spec is a useful read.
+> [!NOTE]
+> For more information and ideas, the [Ports as the basis of an object-capability model on the Web](https://html.spec.whatwg.org/multipage/comms.html#ports-as-the-basis-of-an-object-capability-model-on-the-web) section of the spec is a useful read.
 
 ## Simple examples
 

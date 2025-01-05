@@ -31,7 +31,7 @@ _No specific methods; inherits methods from its ancestors {{domxref("CSSConditio
 
 ### Unnamed container rule
 
-The example below defines an unnamed {{cssxref("@container")}} rule, and displays the properties of the associated {{domxref("CSSContainerRule")}}.
+The example below defines an unnamed {{cssxref("@container")}} rule, and displays the properties of the associated `CSSContainerRule`.
 The CSS is the same as in the `@container` example [Setting styles based on a container's size](/en-US/docs/Web/CSS/@container#setting_styles_based_on_a_containers_size).
 
 The first part of the code simply creates a list for logging the container rule properties, along with a JavaScript `log()` method to simplify adding the properties.
@@ -71,7 +71,7 @@ As described in the corresponding {{cssxref("@container")}} example, the CSS for
 The {{cssxref("@container")}} then applies a new width, font-size and background color to the card if the width is less than 650px.
 
 ```html
-<style id="examplestyles">
+<style id="example-styles">
   /* A container context based on inline size */
   .post {
     container-type: inline-size;
@@ -94,7 +94,7 @@ Since we added the `@container` as the second rule above, we can access the asso
 Last of all, we log the `containerName`, `containerQuery` and `conditionText` (inherited) properties.
 
 ```js
-const exampleStylesheet = document.getElementById("examplestyles").sheet;
+const exampleStylesheet = document.getElementById("example-styles").sheet;
 const exampleRules = exampleStylesheet.cssRules;
 const containerRule = exampleRules[1]; // a CSSContainerRule representing the container rule.
 log(`CSSContainerRule.containerName: "${containerRule.containerName}"`);
@@ -102,7 +102,8 @@ log(`CSSContainerRule.containerQuery: "${containerRule.containerQuery}"`);
 log(`CSSContainerRule.conditionText: "${containerRule.conditionText}"`);
 ```
 
-> **Note:** The styles for this example are defined in an inline HTML `style` element with an id in order to make it easy for the code to find the correct sheet.
+> [!NOTE]
+> The styles for this example are defined in an inline HTML `style` element with an id in order to make it easy for the code to find the correct sheet.
 > You might also locate the correct sheets for each example from the document by indexing against the length (e.g. `document.styleSheets[document.styleSheets.length-1]` but that makes working out correct sheet for each example more complicated).
 
 The example output is shown below.
@@ -114,7 +115,7 @@ The card should change background and as the width of the page transitions throu
 
 ### Named container rule
 
-The example below defines a named {{cssxref("@container")}} rule, and displays the properties of the associated {{domxref("CSSContainerRule")}}.
+The example below defines a named {{cssxref("@container")}} rule, and displays the properties of the associated `CSSContainerRule`.
 The CSS is very similar to that in the `@container` example [Creating named container contexts](/en-US/docs/Web/CSS/@container#creating_named_container_contexts).
 
 ```html hidden
@@ -151,7 +152,7 @@ As described in {{cssxref("@container")}}, the CSS for the container element spe
 The card has a default font size, which is overridden for the `@container` named `sidebar` if the minimum width is greater than 700px.
 
 ```html
-<style id="examplestyles">
+<style id="example-styles">
   .post {
     container-type: inline-size;
     container-name: sidebar;
@@ -174,7 +175,7 @@ The code for getting the sheet and rules is almost identical to the previous exa
 The only difference is that in this example we have three CSS rules, so to get the associated `CSSContainerRule` we get the third entry in the `cssRules`.
 
 ```js
-const exampleStylesheet = document.getElementById("examplestyles").sheet;
+const exampleStylesheet = document.getElementById("example-styles").sheet;
 const exampleRules = exampleStylesheet.cssRules;
 const containerRule = exampleRules[2]; // a CSSContainerRule representing the container rule.
 log(`CSSContainerRule.containerName: "${containerRule.containerName}"`);

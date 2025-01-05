@@ -7,7 +7,7 @@ browser-compat: svg.elements.a
 
 {{SVGRef}}
 
-The **\<a>** SVG element creates a hyperlink to other web pages, files, locations in the same page, email addresses, or any other URL. It is very similar to HTML's {{htmlelement("a")}} element.
+The **`<a>`** [SVG](/en-US/docs/Web/SVG) element creates a hyperlink to other web pages, files, locations in the same page, email addresses, or any other URL. It is very similar to HTML's {{htmlelement("a")}} element.
 
 SVG's `<a>` element is a container, which means you can create a link around text (like in HTML) but also around any shape.
 
@@ -63,7 +63,8 @@ svg|a:active {
 
 {{EmbedLiveSample('Example', 100, 100)}}
 
-> **Warning:** Since this element shares its tag name with [HTML's `<a>` element](/en-US/docs/Web/HTML/Element/a), selecting `a` with CSS or {{domxref("Document.querySelector", "querySelector")}} may apply to the wrong kind of element. Try [the `@namespace` rule](/en-US/docs/Web/CSS/@namespace) to distinguish the two.
+> [!WARNING]
+> Since this element shares its tag name with [HTML's `<a>` element](/en-US/docs/Web/HTML/Element/a), selecting `a` with CSS or {{domxref("Document.querySelector", "querySelector")}} may apply to the wrong kind of element. Try [the `@namespace` rule](/en-US/docs/Web/CSS/@namespace) to distinguish the two.
 
 ## Attributes
 
@@ -75,7 +76,7 @@ svg|a:active {
     _Value type_: **[\<URL>](/en-US/docs/Web/SVG/Content_type#url)** ; _Default value_: _none_; _Animatable_: **yes**
 - [`hreflang`](/en-US/docs/Web/HTML/Element/a#hreflang)
   - : The human language of the URL or URL fragment that the hyperlink points to.
-    _Value type_: **\<string>** ; _Default value_: _none_; _Animatable_: **yes**
+    _Value type_: **\<string>** ; _Default value_: _none_; _Animatable_: **no**
 - [`ping`](/en-US/docs/Web/HTML/Element/a#ping) {{experimental_inline}}
   - : A space-separated list of URLs to which, when the hyperlink is followed, {{HTTPMethod("POST")}} requests with the body `PING` will be sent by the browser (in the background). Typically used for tracking. For a more widely-supported feature addressing the same use cases, see {{domxref("Navigator.sendBeacon()")}}.
     _Value type_: **[\<list-of-URLs>](/en-US/docs/Web/SVG/Content_type#list-of-ts)** ; _Default value_: _none_; _Animatable_: **no**
@@ -84,13 +85,13 @@ svg|a:active {
     _Value type_: `no-referrer`|`no-referrer-when-downgrade`|`same-origin`|`origin`|`strict-origin`|`origin-when-cross-origin`|`strict-origin-when-cross-origin`|`unsafe-url` ; _Default value_: _none_; _Animatable_: **no**
 - [`rel`](/en-US/docs/Web/HTML/Element/a#rel)
   - : The relationship of the target object to the link object.
-    _Value type_: **[\<list-of-Link-Types>](/en-US/docs/Web/HTML/Attributes/rel)** ; _Default value_: _none_; _Animatable_: **yes**
+    _Value type_: **[\<list-of-Link-Types>](/en-US/docs/Web/HTML/Attributes/rel)** ; _Default value_: _none_; _Animatable_: **no**
 - {{SVGAttr("target")}}
   - : Where to display the linked {{Glossary("URL")}}.
-    _Value type_: `_self`|`_parent`|`_top`|`_blank`|**\<name>** ; _Default value_: `_self`; _Animatable_: **yes**
+    _Value type_: `_self`|`_parent`|`_top`|`_blank`|**\<XML-Name>** ; _Default value_: `_self`; _Animatable_: **yes**
 - [`type`](/en-US/docs/Web/HTML/Element/a#type)
   - : A {{Glossary("MIME type")}} for the linked URL.
-    _Value type_: **\<string>** ; _Default value_: _none_; _Animatable_: **yes**
+    _Value type_: **\<string>** ; _Default value_: _none_; _Animatable_: **no**
 - {{SVGAttr("xlink:href")}} {{deprecated_inline}}
   - : The URL or URL fragment that the hyperlink points to. May be required for backwards compatibility for older browsers.
     _Value type_: **[\<URL>](/en-US/docs/Web/SVG/Content_type#url)** ; _Default value_: _none_; _Animatable_: **yes**

@@ -59,14 +59,14 @@ Each `<url>` may be optionally followed by a pair of space-separated numbers, wh
 
 - `<url>` {{optional_inline}}
   - : A `url()` or a comma separated list `url(), url(), …`, pointing to an image file.
-    More than one {{cssxref("url", "url()")}} may be provided as fallbacks, in case some cursor image types are not supported.
+    More than one {{cssxref("url_value", "&lt;url&gt;")}} may be provided as fallbacks, in case some cursor image types are not supported.
     A non-URL fallback (one or more of the keyword values) _must_ be at the end of the fallback list.
 - `<x>`, `<y>` {{optional_inline}}
 
   - : Optional x- and y-coordinates indicating the cursor hotspot; the precise position within the cursor that is being pointed to.
 
     The numbers are in units of image pixels.
-    They are relative to the top left corner of the image, which corresponds to "`0 0`", and are clamped within the boundaries of the cursor image.
+    They are relative to the top left corner of the image, which corresponds to `0 0`, and are clamped within the boundaries of the cursor image.
     If these values are not specified, they may be read from the file itself, and will otherwise default to the top-left corner of the image.
 
 - `keyword`
@@ -182,7 +182,7 @@ Each `<url>` may be optionally followed by a pair of space-separated numbers, wh
             <img src="no-drop.gif" alt="pointer icon and a not allowed icon" />
           </td>
           <td>
-            An item may not be dropped at the current location.<br />[Firefox bug 275173](https://bugzil.la/275173):
+            An item may not be dropped at the current location.<br /><a href="https://bugzil.la/275173">Firefox bug 275173</a>:
             On Windows and macOS, <code>no-drop</code> is the same as <code>not-allowed</code>.
           </td>
         </tr>
@@ -208,7 +208,7 @@ Each `<url>` may be optionally followed by a pair of space-separated numbers, wh
           <td><code>all-scroll</code></td>
           <td><img alt="icon of a medium size dot with four triangles around it." src="all-scroll.gif" /></td>
           <td>
-            Something can be scrolled in any direction (panned).<br />[Firefox bug 275174](https://bugzil.la/275174):
+            Something can be scrolled in any direction (panned).<br /><a href="https://bugzil.la/275174">Firefox bug 275174</a>:
             On Windows, <code>all-scroll</code> is the same as <code>move</code>.
           </td>
         </tr>
@@ -399,4 +399,4 @@ Cursor changes that intersect toolbar areas are commonly blocked to avoid spoofi
 ## See also
 
 - {{cssxref("pointer-events")}}
-- {{cssxref("url", "url()")}} function
+- {{cssxref("url_value", "&lt;url&gt;")}} type

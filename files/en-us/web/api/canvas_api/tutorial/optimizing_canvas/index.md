@@ -130,7 +130,7 @@ canvas.style.height = `${rect.height}px`;
 - Avoid the {{domxref("CanvasRenderingContext2D.shadowBlur", "shadowBlur")}} property whenever possible.
 - Avoid [text rendering](/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_text) whenever possible.
 - Try different ways to clear the canvas ({{domxref("CanvasRenderingContext2D.clearRect", "clearRect()")}} vs. {{domxref("CanvasRenderingContext2D.fillRect", "fillRect()")}} vs. resizing the canvas).
-- With animations, use {{domxref("window.requestAnimationFrame()")}} instead of {{domxref("setInterval()")}} .
+- With animations, use {{domxref("Window.requestAnimationFrame()")}} instead of {{domxref("Window.setInterval", "setInterval()")}}.
 - Be careful with heavy physics libraries.
 
 ## See also

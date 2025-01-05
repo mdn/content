@@ -10,7 +10,8 @@ You'll approach the coding of an extension for Thunderbird in the same way as yo
 
 ## API differences
 
-> **Note:** See [ReadTheDocs](https://webextension-api.thunderbird.net/en/latest/) for Thunderbird specific WebExtension API documentation.
+> [!NOTE]
+> See [ReadTheDocs](https://webextension-api.thunderbird.net/en/latest/) for Thunderbird specific WebExtension API documentation.
 
 Being both Gecko based, Thunderbird supports many of the APIs Firefox supports, with some differences, see [browser compatibility for manifest.json](/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json) and [browser support for JavaScript APIs](/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs) for details.
 

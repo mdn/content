@@ -1,5 +1,6 @@
 ---
 title: "HTML attribute: minlength"
+short-title: minlength
 slug: Web/HTML/Attributes/minlength
 page-type: html-attribute
 browser-compat:
@@ -58,5 +59,5 @@ input:invalid:focus {
 - [`size`](/en-US/docs/Web/HTML/Attributes/size)
 - [`pattern`](/en-US/docs/Web/HTML/Attributes/pattern)
 - [Constraint validation](/en-US/docs/Web/HTML/Constraint_validation)
-- [Form validation](/en-US/docs/Learn/Forms/Form_validation)
+- [Form validation](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation)
 - {{htmlelement('input')}}

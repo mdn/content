@@ -13,10 +13,10 @@ The **`console.debug()`** static method outputs a message to the console at the 
 ## Syntax
 
 ```js-nolint
-debug(val1)
-debug(val1, /* …, */ valN)
-debug(msg)
-debug(msg, subst1, /* …, */ substN)
+console.debug(val1)
+console.debug(val1, /* …, */ valN)
+console.debug(msg)
+console.debug(msg, subst1, /* …, */ substN)
 ```
 
 ### Parameters
@@ -45,5 +45,5 @@ None ({{jsxref("undefined")}}).
 ## See also
 
 - [Microsoft Edge's documentation for `console.debug()`](https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/console/api#debug)
-- [Node.JS documentation for `console.debug()`](https://nodejs.org/docs/latest/api/console.html#consoledebugdata-args)
+- [Node.js documentation for `console.debug()`](https://nodejs.org/docs/latest/api/console.html#consoledebugdata-args)
 - [Google Chrome's documentation for `console.debug()`](https://developer.chrome.com/docs/devtools/console/api/#debug)

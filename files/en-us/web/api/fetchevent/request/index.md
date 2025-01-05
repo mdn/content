@@ -29,7 +29,7 @@ This promise resolves to the first matching URL request in the {{domxref("Cache"
 object. If no match is found, the code fetches a response from the network.
 
 The code also handles exceptions thrown from the
-{{domxref("fetch()")}} operation. Note that an HTTP error
+{{domxref("Window/fetch", "fetch()")}} operation. Note that an HTTP error
 response (e.g., 404) will not trigger an exception. It will return a normal response
 object that has the appropriate error code set.
 

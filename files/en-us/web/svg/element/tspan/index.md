@@ -7,9 +7,10 @@ browser-compat: svg.elements.tspan
 
 {{SVGRef}}
 
-The SVG **`<tspan>`** element defines a subtext within a {{SVGElement('text')}} element or another `<tspan>` element. It allows for adjustment of the style and/or position of that subtext as needed.
+The **`<tspan>`** [SVG](/en-US/docs/Web/SVG) element defines a subtext within a {{SVGElement('text')}} element or another `<tspan>` element. It allows for adjustment of the style and/or position of that subtext as needed.
 
-> **Note:** the `<tspan>` element does not wrap by default, to make this happen it needs to be styled with the {{CSSXRef("white-space")}} CSS property.
+> [!NOTE]
+> The `<tspan>` element does not wrap by default, to make this happen it needs to be styled with the {{CSSXRef("white-space")}} CSS property.
 
 ## Example
 

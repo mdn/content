@@ -27,18 +27,19 @@ Let's consider a few use cases for the Page Visibility API.
 
 Developers have historically used imperfect proxies to detect this. For example, watching for {{domxref("Window/blur_event", "blur")}} and {{domxref("Window/focus_event", "focus")}} events on the window helps you know when your page is not the active page, but it does not tell you that your page is actually hidden to the user. The Page Visibility API addresses this.
 
-> **Note:** While {{domxref("Window.blur_event", "onblur")}} and {{domxref("Window.focus_event", "onfocus")}} will tell you if the user switches windows, it doesn't necessarily mean it's hidden. Pages only become hidden when the user switches tabs or minimizes the browser window containing the tab.
+> [!NOTE]
+> While {{domxref("Window.blur_event", "onblur")}} and {{domxref("Window.focus_event", "onfocus")}} will tell you if the user switches windows, it doesn't necessarily mean it's hidden. Pages only become hidden when the user switches tabs or minimizes the browser window containing the tab.
 
 ### Policies in place to aid background page performance
 
 Separately from the Page Visibility API, user agents typically have a number of policies in place to mitigate the performance impact of background or hidden tabs. These may include:
 
 - Most browsers stop sending {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}} callbacks to background tabs or hidden {{ HTMLElement("iframe") }}s in order to improve performance and battery life.
-- Timers such as {{domxref("setTimeout()")}} are throttled in background/inactive tabs to help improve performance. See [Reasons for delays longer than specified](/en-US/docs/Web/API/setTimeout#reasons_for_delays_longer_than_specified) for more details.
+- Timers such as {{domxref("Window.setTimeout", "setTimeout()")}} are throttled in background/inactive tabs to help improve performance. See [Reasons for delays longer than specified](/en-US/docs/Web/API/Window/setTimeout#reasons_for_delays_longer_than_specified) for more details.
 - Browsers implement budget-based background timeout throttling. This operates in a similar way across modern browsers, with the details being as follows:
 
   - In Firefox, windows in background tabs each have their own time budget in milliseconds — a max and a min value of +50 ms and -150 ms, respectively. Chrome is very similar except that the budget is specified in seconds.
-  - Windows are subjected to throttling after 30 seconds, with the same throttling delay rules as specified for window timers (again, see [Reasons for delays longer than specified](/en-US/docs/Web/API/setTimeout#reasons_for_delays_longer_than_specified)). In Chrome, this value is 10 seconds.
+  - Windows are subjected to throttling after 30 seconds, with the same throttling delay rules as specified for window timers (again, see [Reasons for delays longer than specified](/en-US/docs/Web/API/Window/setTimeout#reasons_for_delays_longer_than_specified)). In Chrome, this value is 10 seconds.
   - Timer tasks are only permitted when the budget is non-negative.
   - Once a timer's code has finished running, the duration of time it took to execute is subtracted from its window's timeout budget.
   - The budget regenerates at a rate of 10 ms per second, in both Firefox and Chrome.
@@ -131,5 +132,4 @@ document.addEventListener("visibilitychange", () => {
 
 - {{domxref("Document.visibilityState")}}
 - {{domxref("Document.hidden")}}
-- [PerformanceEventTiming: Reporting the First Input Delay (FID)](/en-US/docs/Web/API/PerformanceEventTiming#reporting_the_first_input_delay_fid)
 - [Timing element visibility with the Intersection Observer API](/en-US/docs/Web/API/Intersection_Observer_API/Timing_element_visibility)

@@ -58,7 +58,7 @@ _Also inherits properties from its parent interface, {{domxref("EventTarget")}}_
 - {{domxref("Notification.requireInteraction")}} {{ReadOnlyInline}}
   - : A boolean value indicating that a notification should remain active until the user clicks or dismisses it, rather than closing automatically.
 - {{domxref("Notification.silent")}} {{ReadOnlyInline}}
-  - : Specifies whether the notification should be silent — i.e., no sounds or vibrations should be issued, regardless of the device settings.
+  - : Specifies whether the notification should be silent — i.e., no sounds or vibrations should be issued regardless of the device settings.
 - {{domxref("Notification.tag")}} {{ReadOnlyInline}}
   - : The ID of the notification (if any) as specified in the constructor's `options` parameter.
 - {{domxref("Notification.timestamp")}} {{ReadOnlyInline}} {{Experimental_Inline}}
@@ -133,7 +133,8 @@ function notifyMe() {
 
 We no longer show a live sample on this page, as Chrome and Firefox no longer allow notification permissions to be requested from cross-origin {{htmlelement("iframe")}}s, with other browsers to follow. To see an example in action, check out our [To-do list example](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) (also see [the app running live](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
-> **Note:** In the above example we spawn notifications in response to a user gesture (clicking a button). This is not only best practice — you should not be spamming users with notifications they didn't agree to — but going forward browsers will explicitly disallow notifications not triggered in response to a user gesture. Firefox is already doing this from version 72, for example.
+> [!NOTE]
+> In the above example we spawn notifications in response to a user gesture (clicking a button). This is not only best practice — you should not be spamming users with notifications they didn't agree to — but going forward browsers will explicitly disallow notifications not triggered in response to a user gesture. Firefox is already doing this from version 72, for example.
 
 ## Specifications
 

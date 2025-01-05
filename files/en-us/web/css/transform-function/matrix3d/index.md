@@ -54,6 +54,10 @@ matrix3d(a1, b1, c1, d1, a2, b2, c2, d2, a3, b3, c3, d3, a4, b4, c4, d4)
   </tbody>
 </table>
 
+## Formal syntax
+
+{{CSSSyntax}}
+
 ## Examples
 
 ### Cube squashing example
@@ -237,4 +241,3 @@ body {
   - {{cssxref("scale")}}
   - {{cssxref("rotate")}}
 - {{cssxref("&lt;transform-function&gt;")}}
-- [Understanding the CSS Transforms Matrix](https://dev.opera.com/articles/understanding-the-css-transforms-matrix/) (2012)

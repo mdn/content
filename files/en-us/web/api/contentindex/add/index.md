@@ -36,7 +36,7 @@ add(contentDescription)
     - `url`
       - : A {{jsxref('String')}} containing the URL of the corresponding
         HTML document. Needs to be under the scope of the current
-        {{domxref('ServiceWorker','service worker')}}.
+        [service worker](/en-US/docs/Web/API/ServiceWorker).
     - `category` {{Optional_Inline}}
 
       - : A {{jsxref('String')}} defining the
@@ -154,5 +154,4 @@ self.registration.index.add(item);
 ## See also
 
 - [An introductory article on the Content Index API](https://developer.chrome.com/docs/capabilities/web-apis/content-indexing-api)
-- [An app which uses the Content Index API to list and remove 'save for later' content](https://contentindex.dev/)
 - [Service Worker API, along with information about Cache and CacheStorage](/en-US/docs/Web/API/Service_Worker_API)

@@ -18,9 +18,10 @@ There are two key visibility state change times that this API reports on:
 - `visible`: The time when the page becomes visible (i.e. when its tab moves into the foreground).
 - `hidden`: The time when the pages become hidden (i.e. when its tab moves into the background).
 
-The performance timeline will always have a "`visibility-state`" entry with a `startTime` of `0` and a `name` representing the initial page visibility state.
+The performance timeline will always have a `"visibility-state"` entry with a `startTime` of `0` and a `name` representing the initial page visibility state.
 
-> **Note:** Like other Performance APIs, this API extends {{domxref("PerformanceEntry")}}.
+> [!NOTE]
+> Like other Performance APIs, this API extends {{domxref("PerformanceEntry")}}.
 
 {{InheritanceDiagram}}
 
@@ -29,7 +30,7 @@ The performance timeline will always have a "`visibility-state`" entry with a `s
 This interface has no properties but it extends the properties of {{domxref("PerformanceEntry")}} by qualifying and constraining them as follows:
 
 - {{domxref("PerformanceEntry.entryType")}} {{experimental_inline}}
-  - : Returns "`visibility-state`".
+  - : Returns `"visibility-state"`.
 - {{domxref("PerformanceEntry.name")}} {{experimental_inline}}
   - : Returns either `"visible"` or `"hidden"`.
 - {{domxref("PerformanceEntry.startTime")}} {{experimental_inline}}
@@ -45,7 +46,7 @@ This interface has no methods.
 
 ### Basic usage
 
-The following function could be used to log a table of all "`visibility-state`" performance entries to the console:
+The following function could be used to log a table of all `"visibility-state"` performance entries to the console:
 
 ```js
 function getVisibilityStateEntries() {
@@ -57,7 +58,7 @@ function getVisibilityStateEntries() {
 
 ### Correlating visibility state changes with paint timing
 
-The below function gets a reference to all "`visibility-state`" entries and the "`first-contentful-paint`" entry, then uses {{jsxref("Array.some()")}} to test whether any of the "`hidden`" visibility entries occurred before the first contentful paint:
+The below function gets a reference to all `"visibility-state"` entries and the `"first-contentful-paint"` entry, then uses {{jsxref("Array.some()")}} to test whether any of the `"hidden"` visibility entries occurred before the first contentful paint:
 
 ```js
 function wasHiddenBeforeFirstContentfulPaint() {

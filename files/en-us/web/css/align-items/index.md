@@ -86,7 +86,7 @@ align-items: unset;
 
   - : If the items are smaller than the alignment container, auto-sized items will be equally enlarged to fill the container, respecting the items' width and height limits.
 
-- `anchor-center` {{experimental_inline}}
+- `anchor-center`
 
   - : In the case of [anchor-positioned](/en-US/docs/Web/CSS/CSS_anchor_positioning) elements, aligns the items to the center of the associated anchor element in the block direction. See [Centering on the anchor using `anchor-center`](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#centering_on_the_anchor_using_anchor-center).
 
@@ -98,7 +98,7 @@ align-items: unset;
 
   - : Used alongside an alignment keyword. Regardless of the relative sizes of the item and alignment container and whether overflow which causes data loss might happen, the given alignment value is honored.
 
-There are also two values that were defined for flexbox, as they are base on [flex model axes](/en-US/docs/Learn/CSS/CSS_layout/Flexbox#the_flex_model) concepts, that work in grid layouts as well:
+There are also two values that were defined for flexbox, as they are base on [flex model axes](/en-US/docs/Learn_web_development/Core/CSS_layout/Flexbox#the_flex_model) concepts, that work in grid layouts as well:
 
 - `flex-start`
 

@@ -6,7 +6,7 @@ page-type: firefox-release-notes
 
 {{FirefoxSidebar}}
 
-[To test the latest developer features of Firefox, install Firefox Developer Edition](https://www.mozilla.org/firefox/developer/) Firefox 40 was released on August 11, 2015. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
+[To test the latest developer features of Firefox, install Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/) Firefox 40 was released on August 11, 2015. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 
 ## Changes for Web developers
 
@@ -62,7 +62,7 @@ _No change._
 - [`\u{xxxxxx}`](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#unicode_code_point_escapes) Unicode code point escapes have been added ([Firefox bug 320500](https://bugzil.la/320500)).
 - {{jsxref("String.prototype.includes", "String.prototype.contains", "#String.prototype.contains")}} has been replaced with {{jsxref("String.prototype.includes")}}, `String.prototype.contains` is kept as an alias ([Firefox bug 1102219](https://bugzil.la/1102219)).
 - If the {{jsxref("DataView")}} constructor is called as a function without the {{ jsxref("Operators/new", "new") }} operator, a {{jsxref("TypeError")}} is now thrown as per the ES2015 specification.
-- An issue regressed in Firefox 21, where proxyfied arrays without the `get` trap were not working properly, has been fixed. If the `get` trap in a {{jsxref("Proxy")}} was not defined, {{jsxref("Array.length")}} returned `0` and the `set` trap didn't get called. A workaround was to add the `get` trap even if was not necessary in your code. This issue has been fixed now ([Firefox bug 895223](https://bugzil.la/895223)).
+- An issue regressed in Firefox 21, where proxified arrays without the `get` trap were not working properly, has been fixed. If the `get` trap in a {{jsxref("Proxy")}} was not defined, {{jsxref("Array.length")}} returned `0` and the `set` trap didn't get called. A workaround was to add the `get` trap even if was not necessary in your code. This issue has been fixed now ([Firefox bug 895223](https://bugzil.la/895223)).
 - `WeakMap.prototype` and `WeakSet.prototype` have been updated to be just ordinary objects, per ES2015 specification ([Firefox bug 1055473](https://bugzil.la/1055473)).
 
 ### Interfaces/APIs/DOM
@@ -107,7 +107,7 @@ New extensions to the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API):
 
 - Slight improvement in our [Service Worker API](/en-US/docs/Web/API/Service_Worker_API): the {{domxref("ServiceWorkerRegistration.update()", "update()")}} method has been moved from {{domxref("ServiceWorkerGlobalScope")}} to {{domxref("ServiceWorkerRegistration")}} ([Firefox bug 1131350](https://bugzil.la/1131350)).
 - {{domxref("ServiceWorkerRegistration")}} is now available in Web workers ([Firefox bug 1131327](https://bugzil.la/1131327)).
-- {{domxref("DataStore")}} is now available in Web workers ([Firefox bug 916196](https://bugzil.la/916196)).
+- `DataStore` is now available in Web workers ([Firefox bug 916196](https://bugzil.la/916196)).
 
 #### IndexedDB
 

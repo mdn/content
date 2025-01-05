@@ -49,7 +49,8 @@ What happens behind the scenes to register sources and retrieve and store the so
 
      - `"source_event_id"`: A string representing an ID for the attribution source, which can be used to map it to other information when the attribution source is interacted with, or aggregate information at the reporting endpoint (see [Generating reports > Basic process](/en-US/docs/Web/API/Attribution_Reporting_API/Generating_reports#basic_process) for endpoint information).
      - `"trigger_data"`: An array of 32-bit unsigned integers representing data that describes the different trigger events that could match this source. For example, "user added item to shopping cart" or "user signed up to mailing list" could be actions happening at the trigger site that could match this source and indicate a conversion of some kind that the advertiser is trying to measure. These must be matched against `"trigger_data"` specified in [triggers](/en-US/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Trigger#trigger_data) for event-level attribution to take place.
-       > **Note:** The values used to represent each event, and the number of elements in the array, are completely arbitrary and defined by you as the developer. The array may contain values that are not used, but values must be present in the array to be attributed to the source by the browser when a trigger is registered.
+       > [!NOTE]
+       > The values used to represent each event, and the number of elements in the array, are completely arbitrary and defined by you as the developer. The array may contain values that are not used, but values must be present in the array to be attributed to the source by the browser when a trigger is registered.
      - `"trigger_data_matching"`: A string that specifies how the `"trigger_data"` from the trigger is matched against the source's `"trigger_data"`. `"exact"` is the value you'll nearly always use, which matches exact values.
      - `"expiry"`: A string representing an expiry time in seconds for the attribution source, after which it will no longer be active (i.e. subsequent triggers won't be attributable to this source).
      - `"priority"`: A string representing a priority value for the attribution source. See [Report priorities and limits](/en-US/docs/Web/API/Attribution_Reporting_API/Generating_reports#report_priorities_and_limits) for more information.
@@ -132,9 +133,11 @@ elem.addEventListener("click", () => {
 
 In this case, the interaction occurs and the browser stores the source data when `Window.open()` is invoked, and the browser receives the response.
 
-> **Note:** When setting up a [`click`](/en-US/docs/Web/API/Element/click_event) event like in the above example, it is advisable to set it on a control where a click is expected, such as a {{htmlelement("button")}} or {{htmlelement("a")}} element. This makes more sense semantically, and is more accessible to both screenreader and keyboard users.
+> [!NOTE]
+> When setting up a [`click`](/en-US/docs/Web/API/Element/click_event) event like in the above example, it is advisable to set it on a control where a click is expected, such as a {{htmlelement("button")}} or {{htmlelement("a")}} element. This makes more sense semantically, and is more accessible to both screen reader and keyboard users.
 
-> **Note:** To register an attribution source via `open()`, it must be called with [transient activation](/en-US/docs/Glossary/Transient_activation) (i.e. inside a user interaction event handler such as `click`) within five seconds of user interaction.
+> [!NOTE]
+> To register an attribution source via `open()`, it must be called with [transient activation](/en-US/docs/Glossary/Transient_activation) (i.e. inside a user interaction event handler such as `click`) within five seconds of user interaction.
 
 ## Event-based attribution sources
 
@@ -164,7 +167,7 @@ The browser stores the attribution source data when the browser receives the res
 A {{htmlelement("script")}} example might look like so:
 
 ```html
-<script src="advertising-script.js" attributionsrc />
+<script src="advertising-script.js" attributionsrc></script>
 ```
 
 Or via the {{domxref("HTMLScriptElement.attributionSrc")}} property:
@@ -182,7 +185,7 @@ Script-based attribution sources are more versatile than HTML-based attribution 
 
 To set up a script-based attribution source, you can either:
 
-- Send a {{domxref("fetch()")}} request containing the `attributionReporting` option:
+- Send a {{domxref("Window/fetch", "fetch()")}} request containing the `attributionReporting` option:
 
   ```js
   const attributionReporting = {
@@ -233,7 +236,8 @@ To set up a script-based attribution source, you can either:
 
 In this case, the interaction occurs and the browser stores the source data when the browser receives the response from the fetch request.
 
-> **Note:** The request can be for any resource. It doesn't need to have anything directly to do with the Attribution Reporting API, and can be a request for JSON, plain text, an image blob, or whatever else makes sense for your app.
+> [!NOTE]
+> The request can be for any resource. It doesn't need to have anything directly to do with the Attribution Reporting API, and can be a request for JSON, plain text, an image blob, or whatever else makes sense for your app.
 
 ## Specifying URLs inside attributionsrc
 
@@ -280,7 +284,8 @@ elem.addEventListener("click", () => {
 });
 ```
 
-> **Note:** Specifying multiple URLs means that multiple attribution sources can be registered on the same feature. You might for example have different campaigns that you are trying to measure the success of, which involve generating different reports on different data.
+> [!NOTE]
+> Specifying multiple URLs means that multiple attribution sources can be registered on the same feature. You might for example have different campaigns that you are trying to measure the success of, which involve generating different reports on different data.
 
 ## See also
 

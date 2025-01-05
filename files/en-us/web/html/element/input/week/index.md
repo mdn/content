@@ -57,7 +57,8 @@ This value must be less than or equal to the value of the `max` attribute.
 
 A Boolean attribute which, if present, means this field cannot be edited by the user. Its `value` can, however, still be changed by JavaScript code directly setting the {{domxref("HTMLInputElement")}} `value` property.
 
-> **Note:** Because a read-only field cannot have a value, `required` does not have any effect on inputs with the `readonly` attribute also specified.
+> [!NOTE]
+> Because a read-only field cannot have a value, `required` does not have any effect on inputs with the `readonly` attribute also specified.
 
 ### step
 
@@ -65,7 +66,8 @@ The `step` attribute is a number that specifies the granularity that the value m
 
 A string value of `any` means that no stepping is implied, and any value is allowed (barring other constraints, such as [`min`](#min) and [`max`](#max)).
 
-> **Note:** When the data entered by the user doesn't adhere to the stepping configuration, the {{Glossary("user agent")}} may round to the nearest valid value, preferring numbers in the positive direction when there are two equally close options.
+> [!NOTE]
+> When the data entered by the user doesn't adhere to the stepping configuration, the {{Glossary("user agent")}} may round to the nearest valid value, preferring numbers in the positive direction when there are two equally close options.
 
 For `week` inputs, the value of `step` is given in weeks, with a scaling factor of 604,800,000 (since the underlying numeric value is in milliseconds). The default value of `step` is 1, indicating 1week. The default stepping base is -259,200,000, which is the beginning of the first week of 1970 (`"1970-W01"`).
 
@@ -79,7 +81,7 @@ We'll look at basic and more complex uses of `<input type="week">`, then offer a
 
 ### Basic uses of week
 
-The simplest use of `<input type="week">` involves a basic `<input>` and {{htmlelement("label")}} element combination, as seen below:
+The most basic use of `<input type="week">` involves a basic `<input>` and {{htmlelement("label")}} element combination, as seen below:
 
 ```html
 <form>
@@ -180,7 +182,8 @@ Here is a screenshot for those of you who aren't using a supporting browser:
 
 ![The week form control has two dashes where the week number should be. A popup with a yellow warning symbol and a 'Please fill out this field' is emanating from the two dashes, which are highlighted in blue, the same blue as the input's focus ring.](week-validation-chrome.png)
 
-> **Warning:** HTML form validation is _not_ a substitute for scripts that ensure that the entered data is in the proper format. It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely. It's also possible for someone to bypass your HTML entirely and submit the data directly to your server. If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data is submitted (or data which is too large, of the wrong type, and so forth).
+> [!WARNING]
+> HTML form validation is _not_ a substitute for scripts that ensure that the entered data is in the proper format. It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely. It's also possible for someone to bypass your HTML entirely and submit the data directly to your server. If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data is submitted (or data which is too large, of the wrong type, and so forth).
 
 ## Handling browser support
 
@@ -315,7 +318,8 @@ function populateWeeks() {
 }
 ```
 
-> **Note:** Remember that some years have 53 weeks in them (see [Weeks per year](https://en.wikipedia.org/wiki/ISO_week_date#Weeks_per_year))! You'll need to take this into consideration when developing production apps.
+> [!NOTE]
+> Remember that some years have 53 weeks in them (see [Weeks per year](https://en.wikipedia.org/wiki/ISO_week_date#Weeks_per_year))! You'll need to take this into consideration when developing production apps.
 
 ## Technical summary
 
@@ -367,7 +371,7 @@ function populateWeeks() {
     </tr>
     <tr>
       <td><strong>Implicit ARIA Role</strong></td>
-      <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"><code>no corresponding role</code></a></td>
+      <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">no corresponding role</a></td>
     </tr>
   </tbody>
 </table>
@@ -385,4 +389,3 @@ function populateWeeks() {
 - The generic {{HTMLElement("input")}} element and the interface used to manipulate it, {{domxref("HTMLInputElement")}}
 - [Date and time formats used in HTML](/en-US/docs/Web/HTML/Date_and_time_formats)
 - [`<input type="datetime-local">`](/en-US/docs/Web/HTML/Element/input/datetime-local), [`<input type="date">`](/en-US/docs/Web/HTML/Element/input/date), [`<input type="time">`](/en-US/docs/Web/HTML/Element/input/time), and [`<input type="month">`](/en-US/docs/Web/HTML/Element/input/month)
-- [Compatibility of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

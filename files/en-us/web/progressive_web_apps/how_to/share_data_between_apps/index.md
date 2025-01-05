@@ -149,7 +149,7 @@ For more information, see the [sharing files example](/en-US/docs/Web/API/Naviga
 
 ## Handling shared data from other apps
 
-To register your PWA as a target of other apps' shared data, use the [Web Share Target API](https://developer.chrome.com/en/articles/web-share-target/) and, in particular, the [`share_target`](/en-US/docs/Web/Manifest/share_target) web app manifest member.
+To register your PWA as a target of other apps' shared data, use the [Web Share Target API](https://developer.chrome.com/docs/capabilities/web-apis/web-share-target) and, in particular, the [`share_target`](/en-US/docs/Web/Manifest/share_target) web app manifest member.
 
 The `share_target` manifest member allows an installed PWA to be registered, at the operating system level, as a potential target for content shared by other apps. This means that when a user shares some data that's compatible with your PWA, from another app, the operating system will list your PWA alongside other typical share targets like email or messaging apps. Note that the PWA must be installed to be displayed as a potential target for receiving shared data.
 
@@ -240,7 +240,7 @@ The following code snippet shows how a PWA can be configured to accept different
 }
 ```
 
-As this example shows, each file object in the `files` property must have a `name` property and an `accept` property. The `accept` property must specify the accepted [MIME types](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) or file extensions.
+As this example shows, each file object in the `files` property must have a `name` property and an `accept` property. The `accept` property must specify the accepted [MIME types](/en-US/docs/Web/HTTP/MIME_types) or file extensions.
 
 When the app is selected by the user to handle a shared file (or files), the app is launched with a `POST` request at the `/share-file-handler` URL, with encoded form data.
 
@@ -289,4 +289,4 @@ For more information, see the [receiving shared files](/en-US/docs/Web/Manifest/
 - [`share_target` manifest member](/en-US/docs/Web/Manifest/share_target)
 - [Integrate with the OS sharing UI with the Web Share API](https://web.dev/articles/web-share) on web.dev
 - [Receiving shared data with the Web Share Target API](https://developer.chrome.com/docs/capabilities/web-apis/web-share-target) on developer.chrome.com
-- [Share content with other apps](https://learn.microsoft.com/microsoft-edge/progressive-web-apps-chromium/how-to/share) on microsoft.com
+- [Share content with other apps](https://learn.microsoft.com/en-us/microsoft-edge/progressive-web-apps-chromium/how-to/share) on microsoft.com

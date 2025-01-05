@@ -80,6 +80,6 @@ p {
 ## See also
 
 - {{cssxref("outline")}}
-- {{cssxref("outline-color")}}
-- {{cssxref("outline-style")}}
 - {{cssxref("outline-width")}}
+- {{cssxref("outline-style")}}
+- {{cssxref("outline-color")}}

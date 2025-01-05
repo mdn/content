@@ -39,7 +39,7 @@ Defined in the [CSS display](/en-US/docs/Web/CSS/CSS_display) module, this prope
 - {{cssxref("&lt;integer&gt;")}}
   - : Represents the ordinal group to be used by the item.
 
-## Accessibility concerns
+## Accessibility
 
 Using the `order` property will create a disconnect between the visual presentation of content and DOM order. This will adversely affect low vision users navigating with the aid of assistive technology such as a screen reader. If the visual order differs from the DOM order, your users will have different experiences depending on how they access your content.
 

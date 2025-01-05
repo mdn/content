@@ -17,7 +17,7 @@ No notable changes.
 ### CSS
 
 - The {{cssxref("align-content")}} property has been updated to work with `display: block;` layouts. This brings all the layout positions from `flex` and `grid` to `block`, enabling developers to align block-level elements without converting their container to a `flex` or `grid` container. ([Firefox bug 1882853](https://bugzil.la/1882853)).
-- The CSS property [`transform-box`](/en-US/docs/Web/CSS/transform-box) now supports the values `content-box` and `stroke-box`. For the reference box, the `content-box` value uses the [content box](/en-US/docs/Learn/CSS/Building_blocks/The_box_model#parts_of_a_box) and the `stroke-box` value uses the stroke bounding box that contains an SVG's shape ([Firefox bug 1868374](https://bugzil.la/1868374)).
+- The CSS property [`transform-box`](/en-US/docs/Web/CSS/transform-box) now supports the values `content-box` and `stroke-box`. For the reference box, the `content-box` value uses the [content box](/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model#parts_of_a_box) and the `stroke-box` value uses the stroke bounding box that contains an SVG's shape ([Firefox bug 1868374](https://bugzil.la/1868374)).
 - The [`content-visibility`](/en-US/docs/Web/CSS/content-visibility) CSS property value `auto` is now enabled by default. This allows content to skip rendering if it is not [relevant to the user](/en-US/docs/Web/CSS/CSS_containment#relevant_to_the_user). ([Firefox bug 1874874](https://bugzil.la/1874874)).
 
 ### JavaScript
@@ -59,7 +59,7 @@ No notable changes.
   Here are some additional details on the events for lost and restored canvas contexts:
 
   - Applications can monitor for [`contextlost`](/en-US/docs/Web/API/HTMLCanvasElement/contextlost_event) and [`contextrestored`](/en-US/docs/Web/API/HTMLCanvasElement/contextrestored_event) events, which are fired on at [`HTMLCanvasElement`](/en-US/docs/Web/API/HTMLCanvasElement) when the context is lost and recovered, respectively, and can also check the context using [`CanvasRenderingContext2D.isContextLost()`](/en-US/docs/Web/API/CanvasRenderingContext2D/isContextLost).
-  - After emitting `contentlost`, a browser will try and restart the lost context, by default, but code can prevent this by cancelling the event.
+  - After emitting `contextlost`, a browser will try and restart the lost context, by default, but code can prevent this by cancelling the event.
   - Offscreen canvases can be monitored in the same way, but using [`OffScreenCanvas`](/en-US/docs/Web/API/OffscreenCanvas) events [`contextlost`](/en-US/docs/Web/API/OffscreenCanvas/contextlost_event) and [`contextrestored`](/en-US/docs/Web/API/OffscreenCanvas/contextrestored_event), along with [`OffscreenCanvasRenderingContext2D.isContextLost()`](/en-US/docs/Web/API/OffscreenCanvasRenderingContext2D#context).
 
 - Added support for the [`shadowrootclonable`](/en-US/docs/Web/HTML/Element/template#shadowrootclonable) attribute of the `<template>` element, and the [`shadowRootClonable`](/en-US/docs/Web/API/HTMLTemplateElement/shadowRootClonable) property of the `HTMLTemplateElement` interface that reflects it.
@@ -119,7 +119,8 @@ These features are shipping in Firefox 125 but only in developer releases or beh
 
   The `<h1>` heading doesn't decrease in font size now when nested within [sectioning elements](/en-US/docs/Web/HTML/Content_categories#sectioning_content) `<article>`, `<aside>`, `<nav>`, and `<section>`. The UA styles for `<h1>` nested within sectioning elements are no longer relevant since the outline algorithm [has been removed](https://github.com/whatwg/html/pull/7829) from the HTML specification. ([Firefox bug 1883896](https://bugzil.la/1883896)).
 
-  > **Note:** The preference for this feature works in reverse: it's set to `false` in the Nightly build, which removes the UA styling for headings nested in sectioning elements. It's set to `true` in all other channels, which retains the existing UA styling for the nested headings.
+  > [!NOTE]
+  > The preference for this feature works in reverse: it's set to `false` in the Nightly build, which removes the UA styling for headings nested in sectioning elements. It's set to `true` in all other channels, which retains the existing UA styling for the nested headings.
 
 ## Older versions
 

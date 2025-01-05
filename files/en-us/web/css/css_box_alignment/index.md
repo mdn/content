@@ -8,7 +8,8 @@ page-type: css-module
 
 The **CSS box alignment** module specifies CSS features that relate to the alignment of boxes in the various CSS box layout models: block layout, table layout, flex layout, and grid layout. The module aims to create a consistent method of alignment across all of CSS. This document details the general concepts found in the specification.
 
-> **Note:** The documentation for each layout method will detail how Box Alignment is applied there.
+> [!NOTE]
+> The documentation for each layout method will detail how Box Alignment is applied there.
 
 ## Older alignment methods
 
@@ -24,13 +25,91 @@ The following examples demonstrate how some of the Box Alignment Properties are 
 
 In this example using grid layout, there is extra space in the grid container after laying out the fixed width tracks on the inline (main) axis. This space is distributed using {{cssxref("justify-content")}}. On the block (cross) axis the alignment of the items inside their grid areas is controlled with {{cssxref("align-items")}}. The first item overrides the `align-items` value set on the group by setting {{cssxref("align-self")}} to `center`.
 
-{{EmbedGHLiveSample("css-examples/box-alignment/overview/grid-align-items.html", '100%', 700)}}
+```html live-sample___grid-align-items
+<div class="box">
+  <div>One</div>
+  <div>Two</div>
+  <div>Three <br />has <br />extra <br />text</div>
+  <div>Four</div>
+  <div>Five</div>
+  <div>Six</div>
+</div>
+```
+
+```css hidden live-sample___grid-align-items
+body {
+  font: 1.2em sans-serif;
+}
+
+.box {
+  border: 2px dotted rgb(96 139 168);
+}
+
+.box > * {
+  padding: 20px;
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+}
+```
+
+```css live-sample___grid-align-items
+.box {
+  display: grid;
+  grid-template-columns: 120px 120px 120px;
+  align-items: start;
+  justify-content: space-between;
+}
+
+.box :first-child {
+  align-self: center;
+}
+```
+
+{{EmbedLiveSample("grid-align-items", "", "200px")}}
 
 ### Flexbox Alignment Example
 
 In this example, three flex items are aligned on the main axis using `justify-content` and on the Cross Axis using `align-items`. The first item overrides the `align-items` set on the group by setting `align-self` to `center`.
 
-{{EmbedGHLiveSample("css-examples/box-alignment/overview/flex-align-items.html", '100%', 700)}}
+```html live-sample___flex-align-items
+<div class="box">
+  <div>One</div>
+  <div>Two</div>
+  <div>Three <br />has <br />extra <br />text</div>
+</div>
+```
+
+```css hidden live-sample___flex-align-items
+body {
+  font: 1.2em sans-serif;
+}
+
+.box {
+  border: 2px dotted rgb(96 139 168);
+}
+
+.box > * {
+  padding: 20px;
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+}
+```
+
+```css live-sample___flex-align-items
+.box {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.box :first-child {
+  align-self: center;
+}
+```
+
+{{EmbedLiveSample("flex-align-items")}}
 
 ## Key concepts and terminology
 
@@ -155,9 +234,50 @@ The `gap` property is a shorthand for `row-gap` and `column-gap`, which allows u
 
 In the below example, a grid layout uses the `gap` shorthand to set a `10px` gap between row tracks, and a `2em` gap between column tracks.
 
-{{EmbedGHLiveSample("css-examples/box-alignment/overview/grid-gap.html", '100%', 700)}}
+```html live-sample___grid-gap
+<div class="box">
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+  <div>Five</div>
+  <div>Six</div>
+</div>
+```
 
-> **Note:** The early grid implementation included `-gap` properties prefixed with `grid-`. All browsers now support the unprefixed properties, though you may see the following legacy properties in examples and tutorials: {{cssxref("row-gap", "grid-row-gap")}}, {{cssxref("column-gap", "grid-column-gap")}}, and {{cssxref("gap", "grid-gap")}}. The prefixed versions will be maintained as an alias of the unprefixed ones.
+```css hidden live-sample___grid-gap
+body {
+  font: 1.2em sans-serif;
+}
+
+.box {
+  border: 2px dotted rgb(96 139 168);
+}
+
+.box > * {
+  padding: 20px;
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+}
+```
+
+```css live-sample___grid-gap
+.box {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px 2em;
+}
+
+.box :first-child {
+  align-self: center;
+}
+```
+
+{{EmbedLiveSample("grid-gap")}}
+
+> [!NOTE]
+> The early grid implementation included `-gap` properties prefixed with `grid-`. All browsers now support the unprefixed properties, though you may see the following legacy properties in examples and tutorials: {{cssxref("row-gap", "grid-row-gap")}}, {{cssxref("column-gap", "grid-column-gap")}}, and {{cssxref("gap", "grid-gap")}}. The prefixed versions will be maintained as an alias of the unprefixed ones.
 
 Be aware that other things may increase the visual gap displayed, for example using the space distribution keywords or adding margins to items.
 

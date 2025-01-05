@@ -35,7 +35,8 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
       This is useful in cases where the requested resource is not on a server you control, or you just want to handle registering the attribution source on a different server. In this case, you can specify one or more URLs as the value of `attributionsrc`. When the resource request occurs, the {{httpheader("Attribution-Reporting-Eligible")}} header will be sent to the URL(s) specified in `attributionsrc` in addition to the resource origin. These URLs can then respond with the {{httpheader("Attribution-Reporting-Register-Source")}} to complete registration.
 
-      > **Note:** Specifying multiple URLs means that multiple attribution sources can be registered on the same feature. You might for example have different campaigns that you are trying to measure the success of, which involve generating different reports on different data.
+      > [!NOTE]
+      > Specifying multiple URLs means that multiple attribution sources can be registered on the same feature. You might for example have different campaigns that you are trying to measure the success of, which involve generating different reports on different data.
 
     `<a>` elements cannot be used as attribution triggers, only sources.
 
@@ -47,11 +48,11 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
       - The {{HTTPHeader("Content-Disposition")}} HTTP header
       - The final segment in the URL [path](/en-US/docs/Web/API/URL/pathname)
-      - The {{Glossary("MIME_type", "media type")}} (from the {{HTTPHeader("Content-Type")}} header, the start of a [`data:` URL](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs), or {{domxref("Blob.type")}} for a [`blob:` URL](/en-US/docs/Web/API/URL/createObjectURL_static))
+      - The {{Glossary("MIME_type", "media type")}} (from the {{HTTPHeader("Content-Type")}} header, the start of a [`data:` URL](/en-US/docs/Web/URI/Schemes/data), or {{domxref("Blob.type")}} for a [`blob:` URL](/en-US/docs/Web/API/URL/createObjectURL_static))
 
     - `filename`: defining a value suggests it as the filename. `/` and `\` characters are converted to underscores (`_`). Filesystems may forbid other characters in filenames, so browsers will adjust the suggested name if necessary.
 
-    > **Note:**
+    > [!NOTE]
     >
     > - `download` only works for [same-origin URLs](/en-US/docs/Web/Security/Same-origin_policy), or the `blob:` and `data:` schemes.
     > - How browsers treat downloads varies by browser, user settings, and other factors. The user may be prompted before a download starts, or the file may be saved automatically, or it may open automatically, either in an external application or in the browser itself.
@@ -64,13 +65,17 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
   - : The URL that the hyperlink points to. Links are not restricted to HTTP-based URLs — they can use any URL scheme supported by browsers:
 
-    - Sections of a page with document fragments
-    - Specific text portions with [text fragments](/en-US/docs/Web/Text_fragments)
-    - Pieces of media files with media fragments
     - Telephone numbers with `tel:` URLs
     - Email addresses with `mailto:` URLs
     - SMS text messages with `sms:` URLs
+    - Executable code with [`javascript:` URLs](/en-US/docs/Web/URI/Schemes/javascript)
     - While web browsers may not support other URL schemes, websites can with [`registerProtocolHandler()`](/en-US/docs/Web/API/Navigator/registerProtocolHandler)
+
+    Moreover other URL features can locate specific parts of the resource, including:
+
+    - Sections of a page with document fragments
+    - Specific text portions with [text fragments](/en-US/docs/Web/URI/Fragment/Text_fragments)
+    - Pieces of media files with media fragments
 
 - `hreflang`
   - : Hints at the human language of the linked URL. No built-in functionality. Allowed values are the same as [the global `lang` attribute](/en-US/docs/Web/HTML/Global_attributes/lang).
@@ -82,7 +87,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
     - `no-referrer`: The {{HTTPHeader("Referer")}} header will not be sent.
     - `no-referrer-when-downgrade`: The {{HTTPHeader("Referer")}} header will not be sent to {{Glossary("origin")}}s without {{Glossary("TLS")}} ({{Glossary("HTTPS")}}).
-    - `origin`: The sent referrer will be limited to the origin of the referring page: its [scheme](/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL), {{Glossary("host")}}, and {{Glossary("port")}}.
+    - `origin`: The sent referrer will be limited to the origin of the referring page: its [scheme](/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL), {{Glossary("host")}}, and {{Glossary("port")}}.
     - `origin-when-cross-origin`: The referrer sent to other origins will be limited to the scheme, the host, and the port. Navigations on the same origin will still include the path.
     - `same-origin`: A referrer will be sent for {{Glossary("Same-origin policy", "same origin")}}, but cross-origin requests will contain no referrer information.
     - `strict-origin`: Only send the origin of the document as the referrer when the protocol security level stays the same (HTTPS→HTTPS), but don't send it to a less secure destination (HTTPS→HTTP).
@@ -101,7 +106,8 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
     - `_top`: The topmost browsing context. To be specific, this means the "highest" context that's an ancestor of the current one. If no ancestors, behaves as `_self`.
     - `_unfencedTop`: Allows embedded [fenced frames](/en-US/docs/Web/API/Fenced_frame_API) to navigate the top-level frame (i.e. traversing beyond the root of the fenced frame, unlike other reserved destinations). Note that the navigation will still succeed if this is used outside of a fenced frame context, but it will not act like a reserved keyword.
 
-    > **Note:** Setting `target="_blank"` on `<a>` elements implicitly provides the same `rel` behavior as setting [`rel="noopener"`](/en-US/docs/Web/HTML/Attributes/rel/noopener) which does not set `window.opener`.
+    > [!NOTE]
+    > Setting `target="_blank"` on `<a>` elements implicitly provides the same `rel` behavior as setting [`rel="noopener"`](/en-US/docs/Web/HTML/Attributes/rel/noopener) which does not set `window.opener`.
 
 - `type`
   - : Hints at the linked URL's format with a {{Glossary("MIME type")}}. No built-in functionality.
@@ -112,7 +118,8 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
   - : Hinted at the {{Glossary("character encoding")}} of the linked URL.
 
-    > **Note:** This attribute is deprecated and **should not be used by authors**. Use the HTTP {{HTTPHeader("Content-Type")}} header on the linked URL.
+    > [!NOTE]
+    > This attribute is deprecated and **should not be used by authors**. Use the HTTP {{HTTPHeader("Content-Type")}} header on the linked URL.
 
 - `coords` {{Deprecated_Inline}}
   - : Used with [the `shape` attribute](#shape). A comma-separated list of coordinates.
@@ -120,7 +127,8 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
   - : Was required to define a possible target location in a page. In HTML 4.01, `id` and `name` could both be used on `<a>`, as long as they had identical values.
 
-    > **Note:** Use the global attribute [`id`](/en-US/docs/Web/HTML/Global_attributes#id) instead.
+    > [!NOTE]
+    > Use the global attribute [`id`](/en-US/docs/Web/HTML/Global_attributes/id) instead.
 
 - `rev` {{Deprecated_Inline}}
   - : Specified a reverse link; the opposite of [the `rel` attribute](#rel). Deprecated for being very confusing.
@@ -128,7 +136,8 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
   - : The shape of the hyperlink's region in an image map.
 
-    > **Note:** Use the {{HTMLElement("area")}} element for image maps instead.
+    > [!NOTE]
+    > Use the {{HTMLElement("area")}} element for image maps instead.
 
 ## Accessibility
 
@@ -164,7 +173,7 @@ Assistive software has shortcuts to list all links on a page. However, strong li
 
 ### onclick events
 
-Anchor elements are often abused as fake buttons by setting their `href` to `#` or `javascript:void(0)` to prevent the page from refreshing, then listening for their `click` events .
+Anchor elements are often abused as fake buttons by setting their `href` to `#` or [`javascript:void(0)`](/en-US/docs/Web/URI/Schemes/javascript) to prevent the page from refreshing, then listening for their `click` events.
 
 These bogus `href` values cause unexpected behavior when copying/dragging links, opening links in a new tab/window, bookmarking, or when JavaScript is loading, errors, or is disabled. They also convey incorrect semantics to assistive technologies, like screen readers.
 
@@ -190,22 +199,31 @@ People experiencing low vision conditions, navigating with the aid of screen rea
 
 #### Link to a non-HTML resource
 
-```html
-<a href="2017-annual-report.ppt">2017 Annual Report (PowerPoint)</a>
-```
-
-If an icon is used to signify link behavior, make sure it has an [_alt text_](/en-US/docs/Web/HTML/Element/img#alt):
+If an icon is used to signify link behavior, make sure it has an [`alt` attribute](/en-US/docs/Web/HTML/Element/img#alt) to describe its purpose. In case the icon is missing, the `alt` attribute's content will still convey the link's behavior.
 
 ```html
-<a target="_blank" href="https://www.wikipedia.org">
-  Wikipedia
-  <img alt="(opens in new tab)" src="newtab.svg" />
-</a>
-
-<a href="2017-annual-report.ppt">
-  2017 Annual Report
-  <img alt="(PowerPoint file)" src="ppt-icon.svg" />
-</a>
+<p>
+  <a href="https://www.wikipedia.org/" target="_blank">
+    Wikipedia
+    <img src="new-tab.svg" width="14" alt="(Opens in new tab)" />
+  </a>
+  <br />
+  <a href="2017-annual-report.ppt">
+    2017 annual report
+    <img src="powerpoint.svg" width="14" alt="(PowerPoint file)" />
+  </a>
+</p>
+<p>
+  <a href="https://www.wikipedia.org/" target="_blank">
+    Wikipedia
+    <img src="missing-icon.svg" width="14" alt="(Opens in new tab)" />
+  </a>
+  <br />
+  <a href="2017-annual-report.ppt">
+    2017 annual report
+    <img src="missing-icon.svg" width="14" alt="(PowerPoint file)" />
+  </a>
+</p>
 ```
 
 ##### Result
@@ -327,7 +345,8 @@ a {
 
 {{EmbedLiveSample('Linking to an element on the same page')}}
 
-> **Note:** You can use `href="#top"` or the empty fragment (`href="#"`) to link to the top of the current page, [as defined in the HTML specification](https://html.spec.whatwg.org/multipage/browsing-the-web.html#scroll-to-the-fragment-identifier).
+> [!NOTE]
+> You can use `href="#top"` or the empty fragment (`href="#"`) to link to the top of the current page, [as defined in the HTML specification](https://html.spec.whatwg.org/multipage/browsing-the-web.html#scroll-to-the-fragment-identifier).
 
 ### Linking to an email address
 
@@ -341,7 +360,7 @@ To create links that open in the user's email program to let them send a new mes
 
 {{EmbedLiveSample('Linking to an email address')}}
 
-For details about `mailto:` URLs, such as including a subject or body, see [Email links](/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#email_links) or {{RFC(6068)}}.
+For details about `mailto:` URLs, such as including a subject or body, see [Email links](/en-US/docs/Learn_web_development/Core/Structuring_content/Creating_links#email_links) or {{RFC(6068)}}.
 
 ### Linking to telephone numbers
 
@@ -544,4 +563,4 @@ Using `target="_blank"` without [`rel="noreferrer"`](/en-US/docs/Web/HTML/Attrib
 - {{CSSxRef(":link")}} is a CSS pseudo-class that will match `<a>` elements with URL in `href` attribute that was not yet visited by the user.
 - {{CSSxRef(":visited")}} is a CSS pseudo-class that will match `<a>` elements with URL in `href` attribute that was visited by the user in the past.
 - {{CSSxRef(":any-link")}} is a CSS pseudo-class that will match `<a>` elements with `href` attribute.
-- [Text fragments](/en-US/docs/Web/Text_fragments) are user-agent instructions added to URLs that allow content authors to link to specific text on a page, without IDs being required.
+- [Text fragments](/en-US/docs/Web/URI/Fragment/Text_fragments) are user-agent instructions added to URLs that allow content authors to link to specific text on a page, without IDs being required.

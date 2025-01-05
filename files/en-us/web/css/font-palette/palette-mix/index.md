@@ -35,7 +35,7 @@ font-palette: palette-mix(in hsl shorter hue, --blues, --yellows)
 
 Functional notation:
 
-```text
+```plain
 palette-mix(method, palette1 [p1], palette2 [p2])
 ```
 
@@ -52,6 +52,10 @@ palette-mix(method, palette1 [p1], palette2 [p2])
     - If `p2` is omitted, then `p2 = 100% - p1`.
     - If `p1 = p2 = 0%`, the function is invalid.
     - If `p1 + p2 ≠ 100%`, then `p1' = p1 / (p1 + p2)` and `p2' = p2 / (p1 + p2)`, where `p1'` and `p2'` are the normalization results.
+
+## Formal syntax
+
+{{CSSSyntax}}
 
 ## Examples
 

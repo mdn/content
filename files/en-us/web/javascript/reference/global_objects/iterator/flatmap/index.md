@@ -2,14 +2,12 @@
 title: Iterator.prototype.flatMap()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/flatMap
 page-type: javascript-instance-method
-status:
-  - experimental
 browser-compat: javascript.builtins.Iterator.flatMap
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{JSRef}}
 
-The **`flatMap()`** method of {{jsxref("Iterator")}} instances returns a new [iterator helper](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator#iterator_helpers) that takes each element in the original iterator, runs it through a mapping function, and yields elements returned by the mapping function (which are contained in another iterator or iterable).
+The **`flatMap()`** method of {{jsxref("Iterator")}} instances returns a new [iterator helper object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator#iterator_helper_objects) that takes each element in the original iterator, runs it through a mapping function, and yields elements returned by the mapping function (which are contained in another iterator or iterable).
 
 ## Syntax
 
@@ -28,7 +26,7 @@ flatMap(callbackFn)
 
 ### Return value
 
-A new [iterator helper](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator#iterator_helpers). The first time the iterator helper's `next()` method is called, it calls `callbackFn` on the first element produced by the underlying iterator, and the return value, which should be an iterator or iterable, is yielded one-by-one by the iterator helper (like {{jsxref("Operators/yield*", "yield*")}}). The next element is fetched from the underlying iterator when the previous one returned by `callbackFn` is completed. When the underlying iterator is completed, the iterator helper is also completed (the `next()` method produces `{ value: undefined, done: true }`).
+A new [iterator helper object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator#iterator_helper_objects). The first time the iterator helper's `next()` method is called, it calls `callbackFn` on the first element produced by the underlying iterator, and the return value, which should be an iterator or iterable, is yielded one-by-one by the iterator helper (like {{jsxref("Operators/yield*", "yield*")}}). The next element is fetched from the underlying iterator when the previous one returned by `callbackFn` is completed. When the underlying iterator is completed, the iterator helper is also completed (the `next()` method produces `{ value: undefined, done: true }`).
 
 ### Exceptions
 

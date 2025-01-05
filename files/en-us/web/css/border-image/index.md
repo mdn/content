@@ -11,7 +11,8 @@ The **`border-image`** [CSS](/en-US/docs/Web/CSS) property draws an image around
 
 {{EmbedInteractiveExample("pages/css/border-image.html")}}
 
-> **Note:** You should specify a separate {{cssxref("border-style")}} in case the border image fails to load. Although the specification doesn't strictly require it, some browsers don't render the border image if {{cssxref("border-style")}} is `none` or {{cssxref("border-width")}} is `0`.
+> [!NOTE]
+> You should specify a separate {{cssxref("border-style")}} in case the border image fails to load. Although the specification doesn't strictly require it, some browsers don't render the border image if {{cssxref("border-style")}} is `none` or {{cssxref("border-width")}} is `0`.
 
 ## Constituent properties
 
@@ -48,7 +49,8 @@ border-image: unset;
 
 The `border-image` property may be specified with anywhere from one to five of the values listed below.
 
-> **Note:** If the [computed value](/en-US/docs/Web/CSS/computed_value) of {{cssxref("border-image-source")}} is `none`, or if the image cannot be displayed, the {{cssxref("border-style")}} will be displayed instead.
+> [!NOTE]
+> If the [computed value](/en-US/docs/Web/CSS/computed_value) of {{cssxref("border-image-source")}} is `none`, or if the image cannot be displayed, the {{cssxref("border-style")}} will be displayed instead.
 
 ### Values
 
@@ -63,7 +65,7 @@ The `border-image` property may be specified with anywhere from one to five of t
 - `<'border-image-repeat'>`
   - : Defines how the edge regions of the source image are adjusted to fit the dimensions of the border image. Up to two values may be specified. See {{cssxref("border-image-repeat")}}.
 
-## Accessibility concerns
+## Accessibility
 
 Assistive technology cannot parse border images. If the image contains information critical to understanding the page's overall purpose, it is better to describe it semantically in the document.
 
@@ -84,7 +86,7 @@ Assistive technology cannot parse border images. If the image contains informati
 
 In this example, we will apply a diamond pattern to an element's borders. The source for the border image is a ".png" file of 81 by 81 pixels, with three diamonds going vertically and horizontally:
 
-![an example borderimage](border.png)
+![Eight diamonds: four red diamonds, one in each corner, and four orange diamonds, one on each side. The middle is empty.](border.png)
 
 #### HTML
 
@@ -172,7 +174,8 @@ To match the size of a single diamond, we will use a value of 81 divided by 3, o
 
 {{EmbedLiveSample('rounded_borders')}}
 
-> **Note:** There is a new `{{cssxref("background-clip")}}: border-area` value [being proposed](https://github.com/w3c/csswg-drafts/issues/9456) to address this use case.
+> [!NOTE]
+> There is a new `{{cssxref("background-clip")}}: border-area` value [being proposed](https://github.com/w3c/csswg-drafts/issues/9456) to address this use case.
 
 ## Specifications
 
@@ -188,6 +191,6 @@ To match the size of a single diamond, we will use a value of 81 divided by 3, o
 - {{cssxref("outline")}}
 - {{cssxref("box-shadow")}}
 - {{cssxref("background-image")}}
-- {{cssxref("url", "url()")}} function
+- {{cssxref("url_value", "&lt;url&gt;")}} type
 - Gradient functions: {{CSSxRef("gradient/conic-gradient", "conic-gradient()")}}, {{CSSxRef("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}, {{CSSxRef("gradient/linear-gradient", "linear-gradient()")}}, {{CSSxRef("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}, {{CSSxRef("gradient/radial-gradient", "radial-gradient()")}}, {{CSSxRef("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}
 - [Border images in CSS: A key focus area for Interop 2023](/en-US/blog/border-images-interop-2023/) on MDN blog (2023)

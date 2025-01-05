@@ -24,7 +24,8 @@ The challenge and response flow works like this:
 The general message flow above is the same for most (if not all) [authentication schemes](#authentication_schemes).
 The actual information in the headers and the way it is encoded does change!
 
-> **Warning:** The "Basic" authentication scheme used in the diagram above sends the credentials encoded but not encrypted.
+> [!WARNING]
+> The "Basic" authentication scheme used in the diagram above sends the credentials encoded but not encrypted.
 > This would be completely insecure unless the exchange was over a secure connection (HTTPS/TLS).
 
 ### Proxy authentication

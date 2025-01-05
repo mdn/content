@@ -6,7 +6,7 @@ page-type: guide
 
 {{QuickLinksWithSubPages("/en-US/docs/Web/Media")}}
 
-In other articles we looked at how to [build a cross browser video player](/en-US/docs/Web/Media/Audio_and_video_delivery/cross_browser_video_player) using the {{ domxref("HTMLMediaElement") }} and {{ domxref("Window.fullScreen") }} APIs, and also at how to [style the player](/en-US/docs/Web/Media/Audio_and_video_delivery/Video_player_styling_basics). This article will take the same player and show how to add captions and subtitles to it, using {{ domxref("WebVTT_API","the WebVTT format") }} and the {{ htmlelement("track") }} element.
+In other articles we looked at how to [build a cross browser video player](/en-US/docs/Web/Media/Audio_and_video_delivery/cross_browser_video_player) using the {{ domxref("HTMLMediaElement") }} and {{ domxref("Window.fullScreen") }} APIs, and also at how to [style the player](/en-US/docs/Web/Media/Audio_and_video_delivery/Video_player_styling_basics). This article will take the same player and show how to add captions and subtitles to it, using [the WebVTT format](/en-US/docs/Web/API/WebVTT_API/Web_Video_Text_Tracks_Format) and the {{ htmlelement("track") }} element.
 
 ## Captioned video example
 
@@ -14,7 +14,8 @@ In this article, we will refer to the Video player with captions example. This e
 
 ![Video player with stand controls such as play, stop, volume, and captions on and off. The video playing shows a scene of a man holding a spear-like weapon, and a caption reads "Esta hoja tiene pasado oscuro."](video-player-with-captions.png)
 
-> **Note:** You can find the [source on GitHub](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions), and also [view the example live](https://iandevlin.github.io/mdn/video-player-with-captions/).
+> [!NOTE]
+> You can find the [source on GitHub](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions), and also [view the example live](https://iandevlin.github.io/mdn/video-player-with-captions/).
 
 ## HTML and Video Captions
 
@@ -81,7 +82,7 @@ In addition to adding the `<track>` elements, we have also added a new button to
 
 ```html
 <div id="video-controls" class="controls" data-state="hidden">
-  <button id="playpause" type="button" data-state="play">Play/Pause</button>
+  <button id="play-pause" type="button" data-state="play">Play/Pause</button>
   <button id="stop" type="button" data-state="stop">Stop</button>
   <div class="progress">
     <progress id="progress" value="0" min="0">
@@ -89,8 +90,8 @@ In addition to adding the `<track>` elements, we have also added a new button to
     </progress>
   </div>
   <button id="mute" type="button" data-state="mute">Mute/Unmute</button>
-  <button id="volinc" type="button" data-state="volup">Vol+</button>
-  <button id="voldec" type="button" data-state="voldown">Vol-</button>
+  <button id="vol-inc" type="button" data-state="vol-up">Vol+</button>
+  <button id="vol-dec" type="button" data-state="vol-down">Vol-</button>
   <button id="fs" type="button" data-state="go-fullscreen">Fullscreen</button>
   <button id="subtitles" type="button" data-state="subtitles">CC</button>
 </div>
@@ -155,7 +156,7 @@ All we need to do is to go through the video's `textTracks`, reading their prope
 let subtitlesMenu;
 if (video.textTracks) {
   const df = document.createDocumentFragment();
-  const subtitlesMenu = df.appendChild(document.createElement("ul"));
+  subtitlesMenu = df.appendChild(document.createElement("ul"));
   subtitlesMenu.className = "subtitles-menu";
   subtitlesMenu.appendChild(createMenuItem("subtitles-off", "", "Off"));
   for (let i = 0; i < video.textTracks.length; i++) {
@@ -299,7 +300,8 @@ Then this specific 'voice' will be stylable like so:
 }
 ```
 
-> **Note:** Some of the styling of cues with ::cue currently works on Chrome, Opera, and Safari, but not yet on Firefox.
+> [!NOTE]
+> Some of the styling of cues with ::cue currently works on Chrome, Opera, and Safari, but not yet on Firefox.
 
 ## Browser compatibility
 

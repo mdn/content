@@ -36,6 +36,10 @@ s.y = 10;
 s.x = 10;
 ```
 
+## Specifications
+
+{{Specifications}}
+
 ## Browser compatibility
 
 {{Compat}}

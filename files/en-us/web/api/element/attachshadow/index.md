@@ -115,10 +115,10 @@ Returns a {{domxref("ShadowRoot")}} object.
 
 - `NotSupportedError` {{domxref("DOMException")}}
 
-  - : This may can be thrown when you try to attach a shadow root to an element:
+  - : This error may be thrown when you try to attach a shadow root to an element:
 
     - outside the HTML namespace or that can't have a shadow attached to it.
-    - where the element definition static property `disabledFeatures` has been given a value of `"shadow"` .
+    - where the element definition static property `disabledFeatures` has been given a value of `"shadow"`.
     - that already has a shadow root that was not created declaratively.
     - that has a [declarative shadow root](/en-US/docs/Web/HTML/Element/template#declarative_shadow_dom) but the specified `mode` does not match the existing mode.
 
@@ -160,10 +160,9 @@ class WordCount extends HTMLParagraphElement {
     shadow.appendChild(text);
 
     // Update count when element content changes
-    setInterval(() => {
-      const count = `Words: ${countWords(wcParent)}`;
-      text.textContent = count;
-    }, 200);
+    this.parentNode.addEventListener("input", () => {
+      text.textContent = `Words: ${countWords(wcParent)}`;
+    });
   }
 }
 
@@ -211,4 +210,4 @@ customElements.define("my-custom-element", MyCustomElement);
 - {{domxref("ShadowRoot.delegatesFocus")}}
 - {{domxref("ShadowRoot.slotAssignment")}}
 - Declaratively attach a shadow root with the [`shadowrootmode`](/en-US/docs/Web/HTML/Element/template#shadowrootmode) attribute of the [`<template>` element](/en-US/docs/Web/HTML/Element/template)
-- [Declarative shadow DOM](https://developer.chrome.com/docs/css-ui/declarative-shadow-dom) on developer.chrome.com (2023)
+- [Declarative shadow DOM](https://web.dev/articles/declarative-shadow-dom) on web.dev (2023)

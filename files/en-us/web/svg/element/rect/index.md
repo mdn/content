@@ -7,7 +7,7 @@ browser-compat: svg.elements.rect
 
 {{SVGRef}}
 
-The **`<rect>`** element is a [basic SVG shape](/en-US/docs/Web/SVG/Tutorial/Basic_Shapes) that draws rectangles, defined by their position, width, and height. The rectangles may have their corners rounded.
+The **`<rect>`** [SVG](/en-US/docs/Web/SVG) element is a [basic SVG shape](/en-US/docs/Web/SVG/Tutorial/Basic_Shapes) that draws rectangles, defined by their position, width, and height. The rectangles may have their corners rounded.
 
 ## Example
 
@@ -21,7 +21,7 @@ svg {
 
 ```html
 <svg viewBox="0 0 220 100" xmlns="http://www.w3.org/2000/svg">
-  <!-- Simple rectangle -->
+  <!-- Regular rectangle -->
   <rect width="100" height="100" />
 
   <!-- Rounded corner rectangle -->
@@ -55,7 +55,8 @@ svg {
   - : The total length of the rectangle's perimeter, in user units.
     _Value type_: [**\<number>**](/en-US/docs/Web/SVG/Content_type#number) ; _Default value_: _none_; _Animatable_: **yes**
 
-> **Note:** Starting with SVG2, `x`, `y`, `width`, `height`, `rx` and `ry` are _Geometry Properties_, meaning those attributes can also be used as CSS properties for that element.
+> [!NOTE]
+> Starting with SVG2, `x`, `y`, `width`, `height`, `rx` and `ry` are _Geometry Properties_, meaning those attributes can also be used as CSS properties for that element.
 
 ## Usage context
 

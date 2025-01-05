@@ -31,18 +31,27 @@ The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`style-src`** directi
 
 ## Syntax
 
-One or more sources can be allowed for the `style-src` policy:
-
 ```http
-Content-Security-Policy: style-src <source>;
-Content-Security-Policy: style-src <source> <source>;
+Content-Security-Policy: style-src 'none';
+Content-Security-Policy: style-src <source-expression-list>;
 ```
 
-### Sources
+This directive may have one of the following values:
 
-`<source>` can be any one of the values listed in [CSP Source Values](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#sources).
+- `'none'`
+  - : No resources of this type may be loaded. The single quotes are mandatory.
+- `<source-expression-list>`
 
-Note that this same set of values can be used in all {{Glossary("fetch directive", "fetch directives")}} (and a [number of other directives](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#relevant_directives)).
+  - : A space-separated list of _source expression_ values. Resources of this type may be loaded if they match any of the given source expressions. For this directive, the following source expression values are applicable:
+
+    - [`<host-source>`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#host-source)
+    - [`<scheme-source>`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#scheme-source)
+    - [`'self'`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#self)
+    - [`'unsafe-inline'`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#unsafe-inline)
+    - [`'unsafe-hashes'`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#unsafe-hashes)
+    - [`'nonce-<nonce_value>'`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#nonce-nonce_value)
+    - [`'<hash_algorithm>-<hash_value>'`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#hash_algorithm-hash_value)
+    - [`'report-sample'`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#report-sample)
 
 ## Examples
 
@@ -99,7 +108,8 @@ These types of manipulations can be prevented by disallowing JavaScript via the 
 
 ### Unsafe inline styles
 
-> **Note:** Disallowing inline styles and inline scripts is one of the biggest security wins CSP provides. However, if you absolutely have to use it, there are a few mechanisms that will allow them.
+> [!NOTE]
+> Disallowing inline styles and inline scripts is one of the biggest security wins CSP provides. However, if you absolutely have to use it, there are a few mechanisms that will allow them.
 
 To allow inline styles, `'unsafe-inline'`, a nonce-source or a hash-source that matches the inline block can be specified.
 The following Content Security Policy will allow inline styles like the {{HTMLElement("style")}} element, and the `style` attribute on any element:

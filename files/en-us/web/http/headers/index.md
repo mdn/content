@@ -1,15 +1,19 @@
 ---
 title: HTTP headers
+short-title: Headers
 slug: Web/HTTP/Headers
 page-type: landing-page
 ---
 
 {{HTTPSidebar}}
 
-**HTTP headers** let the client and the server pass additional information with an HTTP request or response. An HTTP header consists of its case-insensitive name followed by a colon (`:`), then by its value. {{Glossary("Whitespace")}} before the value is ignored.
+**HTTP headers** let the client and the server pass additional information with a message in a request or response.
+In HTTP/1.X, a header is a case-insensitive name followed by a colon, then optional whitespace which will be ignored, and finally by its value (for example: `Allow: POST`).
+In HTTP/2 and above, headers are displayed in lowercase when viewed in developer tools (`accept: */*`), and prefixed with a colon for a special group of [pseudo-headers](/en-US/docs/Web/HTTP/Messages#pseudo-headers) (`:status: 200`).
+You can find more information on the syntax in each protocol version in the [HTTP messages](/en-US/docs/Web/HTTP/Messages) page.
 
-Custom proprietary headers have historically been used with an `X-` prefix, but this convention was deprecated in June 2012 because of the inconveniences it caused when nonstandard fields became standard in [RFC 6648](https://datatracker.ietf.org/doc/html/rfc6648); others are listed in the [IANA HTTP Field Name Registry](https://www.iana.org/assignments/http-fields/http-fields.xhtml), whose original content was defined in [RFC 4229](https://datatracker.ietf.org/doc/html/rfc4229).
-The IANA registry lists headers, including [information about their status](https://github.com/protocol-registries/http-fields?tab=readme-ov-file#choosing-the-right-status), which may be "permanent" (standards-defined), "provisional" (new), "deprecated" (use not recommended), or "obsolete" (no longer in use).
+Custom proprietary headers have historically been used with an `X-` prefix, but this convention was deprecated in 2012 because of the inconveniences it caused when nonstandard fields became standard in [RFC 6648](https://datatracker.ietf.org/doc/html/rfc6648); others are listed in the [IANA HTTP Field Name Registry](https://www.iana.org/assignments/http-fields/http-fields.xhtml), whose original content was defined in [RFC 4229](https://datatracker.ietf.org/doc/html/rfc4229).
+The IANA registry lists headers, including [information about their status](https://github.com/protocol-registries/http-fields?tab=readme-ov-file#choosing-the-right-status).
 
 Headers can be grouped according to their contexts:
 
@@ -18,7 +22,7 @@ Headers can be grouped according to their contexts:
 - {{Glossary("Response header", "Response headers")}}
   - : Hold additional information about the response, like its location or about the server providing it.
 - {{Glossary("Representation header", "Representation headers")}}
-  - : Contain information about the body of the resource, like its [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types), or encoding/compression applied.
+  - : Contain information about the body of the resource, like its [MIME type](/en-US/docs/Web/HTTP/MIME_types), or encoding/compression applied.
 - {{Glossary("Payload header","Payload headers")}}
   - : Contain representation-independent information about payload data, including content length and the encoding used for transport.
 
@@ -87,6 +91,10 @@ For more details, refer to the [Content negotiation article](/en-US/docs/Web/HTT
   - : The encoding algorithm, usually a [compression algorithm](/en-US/docs/Web/HTTP/Compression), that can be used on the resource sent back.
 - {{HTTPHeader("Accept-Language")}}
   - : Informs the server about the human language the server is expected to send back. This is a hint and is not necessarily under the full control of the user: the server should always pay attention not to override an explicit user choice (like selecting a language from a dropdown).
+- {{HTTPHeader("Accept-Patch")}}
+  - : A _request content negotiation_ response header that advertises which [media type](/en-US/docs/Web/HTTP/MIME_types) the server is able to understand in a {{HTTPMethod("PATCH")}} request.
+- {{HTTPHeader("Accept-Post")}}
+  - : A _request content negotiation_ response header that advertises which [media type](/en-US/docs/Web/HTTP/MIME_types) the server is able to understand in a {{HTTPMethod("POST")}} request.
 
 ## Controls
 
@@ -132,6 +140,20 @@ For more information, refer to the [CORS documentation](/en-US/docs/Web/HTTP/COR
 - {{HTTPHeader("Content-Disposition")}}
   - : Indicates if the resource transmitted should be displayed inline (default behavior without the header), or if it should be handled like a download and the browser should present a "Save As" dialog.
 
+## Integrity digests
+
+- {{HTTPHeader("Content-Digest")}} {{experimental_inline}}
+  - : Provides a {{Glossary("digest")}} of the stream of octets framed in an HTTP message (the message content) dependent on {{HTTPHeader("Content-Encoding")}} and {{HTTPHeader("Content-Range")}}.
+- {{HTTPHeader("Repr-Digest")}} {{experimental_inline}}
+  - : Provides a {{Glossary("digest")}} of the selected representation of the target resource before transmission.
+    Unlike the {{HTTPHeader("Content-Digest")}}, the digest does not consider {{HTTPHeader("Content-Encoding")}} or {{HTTPHeader("Content-Range")}}.
+- {{HTTPHeader("Want-Content-Digest")}} {{experimental_inline}}
+  - : States the wish for a {{HTTPHeader("Content-Digest")}} header.
+    It is the `Content-` analogue of {{HTTPHeader("Want-Repr-Digest")}}.
+- {{HTTPHeader("Want-Repr-Digest")}} {{experimental_inline}}
+  - : States the wish for a {{HTTPHeader("Repr-Digest")}} header.
+    It is the `Repr-` analogue of {{HTTPHeader("Want-Content-Digest")}}.
+
 ## Message body information
 
 - {{HTTPHeader("Content-Length")}}
@@ -151,6 +173,20 @@ For more information, refer to the [CORS documentation](/en-US/docs/Web/HTTP/COR
   - : Contains information from the client-facing side of proxy servers that is altered or lost when a proxy is involved in the path of the request.
 - {{HTTPHeader("Via")}}
   - : Added by proxies, both forward and reverse proxies, and can appear in the request headers and the response headers.
+
+## Range requests
+
+HTTP [range requests](/en-US/docs/Web/HTTP/Range_requests) allow the client to request a portion of a resource from the server.
+Range requests are useful for applications like media players that support random access, data tools that know they need only part of a large file, and download managers that let the user pause and resume a download.
+
+- {{HTTPHeader("Accept-Ranges")}}
+  - : Indicates if the server supports range requests, and if so in which unit the range can be expressed.
+- {{HTTPHeader("Range")}}
+  - : Indicates the part of a document that the server should return.
+- {{HTTPHeader("If-Range")}}
+  - : Creates a conditional range request that is only fulfilled if the given etag or date matches the remote resource. Used to prevent downloading two ranges from incompatible version of the resource.
+- {{HTTPHeader("Content-Range")}}
+  - : Indicates where in a full body message a partial message belongs.
 
 ## Redirects
 
@@ -179,17 +215,6 @@ For more information, refer to the [CORS documentation](/en-US/docs/Web/HTTP/COR
 - {{HTTPHeader("Server")}}
   - : Contains information about the software used by the origin server to handle the request.
 
-## Range requests
-
-- {{HTTPHeader("Accept-Ranges")}}
-  - : Indicates if the server supports range requests, and if so in which unit the range can be expressed.
-- {{HTTPHeader("Range")}}
-  - : Indicates the part of a document that the server should return.
-- {{HTTPHeader("If-Range")}}
-  - : Creates a conditional range request that is only fulfilled if the given etag or date matches the remote resource. Used to prevent downloading two ranges from incompatible version of the resource.
-- {{HTTPHeader("Content-Range")}}
-  - : Indicates where in a full body message a partial message belongs.
-
 ## Security
 
 - {{HTTPHeader("Cross-Origin-Embedder-Policy")}} (COEP)
@@ -202,8 +227,12 @@ For more information, refer to the [CORS documentation](/en-US/docs/Web/HTTP/COR
   - : Controls resources the user agent is allowed to load for a given page.
 - {{HTTPHeader("Content-Security-Policy-Report-Only")}}
   - : Allows web developers to experiment with policies by monitoring, but not enforcing, their effects. These violation reports consist of {{Glossary("JSON")}} documents sent via an HTTP `POST` request to the specified URI.
+- {{HTTPHeader("Expect-CT")}} {{deprecated_inline}}
+  - : Lets sites opt in to reporting and enforcement of [Certificate Transparency](/en-US/docs/Web/Security/Certificate_Transparency) to detect use of misissued certificates for that site.
 - {{HTTPHeader("Permissions-Policy")}}
   - : Provides a mechanism to allow and deny the use of browser features in a website's own frame, and in {{htmlelement("iframe")}}s that it embeds.
+- {{HTTPHeader("Reporting-Endpoints")}} {{experimental_inline}}
+  - : Response header that allows website owners to specify one or more endpoints used to receive errors such as CSP violation reports, {{HTTPHeader("Cross-Origin-Opener-Policy")}} reports, or other generic violations.
 - {{HTTPHeader("Strict-Transport-Security")}} ({{Glossary("HSTS")}})
   - : Force communication using HTTPS instead of HTTP.
 - {{HTTPHeader("Upgrade-Insecure-Requests")}}
@@ -213,7 +242,8 @@ For more information, refer to the [CORS documentation](/en-US/docs/Web/HTTP/COR
 - {{HTTPHeader("X-Frame-Options")}} (XFO)
   - : Indicates whether a browser should be allowed to render a page in a {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("embed")}} or {{HTMLElement("object")}}.
 - {{HTTPHeader("X-Permitted-Cross-Domain-Policies")}}
-  - : Specifies if a cross-domain policy file (`crossdomain.xml`) is allowed. The file may define a policy to grant clients, such as Adobe's Flash Player (now obsolete), Adobe Acrobat, Microsoft Silverlight (now obsolete), or Apache Flex, permission to handle data across domains that would otherwise be restricted due to the [Same-Origin Policy](/en-US/docs/Web/Security/Same-origin_policy). See the [Cross-domain Policy File Specification](https://www.adobe.com/devnet-docs/acrobatetk/tools/AppSec/CrossDomain_PolicyFile_Specification.pdf) for more information.
+  - : A cross-domain policy file may grant clients, such as Adobe Acrobat or Apache Flex (among others), permission to handle data across domains that would otherwise be restricted due to the [Same-Origin Policy](/en-US/docs/Web/Security/Same-origin_policy).
+    The `X-Permitted-Cross-Domain-Policies` header overrides such policy files so that clients still block unwanted requests.
 - {{HTTPHeader("X-Powered-By")}}
   - : May be set by hosting environments or other frameworks and contains information about them while not providing any usefulness to the application or its visitors. Unset this header to avoid exposing potential vulnerabilities.
 - {{HTTPHeader("X-XSS-Protection")}}
@@ -237,12 +267,14 @@ The following request headers are not _strictly_ "fetch metadata request headers
 - {{HTTPHeader("Sec-Purpose")}}
   - : Indicates the purpose of the request, when the purpose is something other than immediate use by the user-agent. The header currently has one possible value, `prefetch`, which indicates that the resource is being fetched preemptively for a possible future navigation.
 - {{HTTPHeader("Service-Worker-Navigation-Preload")}}
-  - : A request header sent in preemptive request to {{domxref("fetch()")}} a resource during service worker boot. The value, which is set with {{domxref("NavigationPreloadManager.setHeaderValue()")}}, can be used to inform a server that a different resource should be returned than in a normal `fetch()` operation.
+  - : A request header sent in preemptive request to {{domxref("Window/fetch", "fetch()")}} a resource during service worker boot. The value, which is set with {{domxref("NavigationPreloadManager.setHeaderValue()")}}, can be used to inform a server that a different resource should be returned than in a normal `fetch()` operation.
 
 ## Server-sent events
 
-- {{HTTPHeader("Report-To")}}
-  - : Used to specify a server endpoint for the browser to send warning and error reports to.
+- {{HTTPHeader("Reporting-Endpoints")}}
+  - : Response header used to specify server endpoints where the browser should send warning and error reports when using the [Reporting API](/en-US/docs/Web/API/Reporting_API).
+- {{HTTPHeader("Report-To")}} {{deprecated_inline}} {{non-standard_inline}}
+  - : Response header used to specify server endpoints where the browser should send warning and error reports when using the [Reporting API](/en-US/docs/Web/API/Reporting_API).
 
 ## Transfer coding
 
@@ -252,6 +284,24 @@ The following request headers are not _strictly_ "fetch metadata request headers
   - : Specifies the transfer encodings the user agent is willing to accept.
 - {{HTTPHeader("Trailer")}}
   - : Allows the sender to include additional fields at the end of chunked message.
+
+## WebSockets
+
+Headers used by the [WebSockets API](/en-US/docs/Web/API/WebSockets_API) in the [WebSocket handshake](/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_servers#the_websocket_handshake):
+
+- {{HTTPHeader("Sec-WebSocket-Accept")}}
+  - : Response header that indicates that the server is willing to upgrade to a WebSocket connection.
+- {{HTTPHeader("Sec-WebSocket-Extensions")}}
+  - : In requests, this header indicates the WebSocket extensions supported by the client in preferred order.
+    In responses, it indicates the extension selected by the server from the client's preferences.
+- {{HTTPHeader("Sec-WebSocket-Key")}}
+  - : Request header containing a key that verifies that the client explicitly intends to open a `WebSocket`.
+- {{HTTPHeader("Sec-WebSocket-Protocol")}}
+  - : In requests, this header indicates the sub-protocols supported by the client in preferred order.
+    In responses, it indicates the the sub-protocol selected by the server from the client's preferences.
+- {{HTTPHeader("Sec-WebSocket-Version")}}
+  - : In requests, this header indicates the version of the WebSocket protocol used by the client.
+    In responses, it is sent only if the requested protocol version is not supported by the server, and lists the versions that the server supports.
 
 ## Other
 
@@ -267,10 +317,13 @@ The following request headers are not _strictly_ "fetch metadata request headers
   - : Indicates how long the user agent should wait before making a follow-up request.
 - {{HTTPHeader("Server-Timing")}}
   - : Communicates one or more metrics and descriptions for the given request-response cycle.
-- `Service-Worker-Allowed`
+- {{HTTPHeader("Service-Worker")}}
+  - : Included in fetches for a service worker's script resource.
+    This header helps administrators log service worker script requests for monitoring purposes.
+- {{HTTPHeader("Service-Worker-Allowed")}}
   - : Used to remove the [path restriction](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers#why_is_my_service_worker_failing_to_register) by including this header [in the response of the Service Worker script](https://w3c.github.io/ServiceWorker/#service-worker-script-response).
 - {{HTTPHeader("SourceMap")}}
-  - : Links generated code to a [source map](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/use_a_source_map/index.html).
+  - : Links to a {{Glossary("source map")}} so that debuggers can step through original source code instead of generated or transformed code.
 - {{HTTPHeader("Upgrade")}}
   - : This HTTP/1.1 (only) header can be used to upgrade an already established client/server connection to a different protocol (over the same transport protocol). For example, it can be used by a client to upgrade a connection from HTTP 1.1 to HTTP 2.0, or an HTTP or HTTPS connection into a WebSocket.
 - {{HTTPHeader("Priority")}}
@@ -296,7 +349,7 @@ HTTP [Client hints](/en-US/docs/Web/HTTP/Client_hints) are a set of request head
 
 Servers proactively requests the client hint headers they are interested in from the client using {{HTTPHeader("Accept-CH")}}. The client may then choose to include the requested headers in subsequent requests.
 
-- {{HTTPHeader("Accept-CH")}} {{experimental_inline}}
+- {{HTTPHeader("Accept-CH")}}
   - : Servers can advertise support for Client Hints using the `Accept-CH` header field or an equivalent HTML `<meta>` element with [`http-equiv`](/en-US/docs/Web/HTML/Element/meta#http-equiv) attribute.
 - {{HTTPHeader("Critical-CH")}} {{experimental_inline}}
   - : Servers use `Critical-CH` along with {{HttpHeader("Accept-CH")}} to specify that accepted client hints are also [critical client hints](/en-US/docs/Web/HTTP/Client_hints#critical_client_hints).
@@ -333,13 +386,24 @@ The [UA client hints](/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints)
   - : User's preference of dark or light color scheme.
 - {{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}} {{experimental_inline}}
   - : User's preference to see fewer animations and content layout shifts.
+- {{HTTPHeader("Sec-CH-Prefers-Reduced-Transparency")}} {{experimental_inline}}
+  - : Request header indicates the user agent's preference for reduced transparency.
 
-> **Note:** User-agent client hints are not available inside [fenced frames](/en-US/docs/Web/API/Fenced_frame_API) because they rely on [permissions policy](/en-US/docs/Web/HTTP/Permissions_Policy) delegation, which could be used to leak data.
+> [!NOTE]
+> User-agent client hints are not available inside [fenced frames](/en-US/docs/Web/API/Fenced_frame_API) because they rely on [permissions policy](/en-US/docs/Web/HTTP/Permissions_Policy) delegation, which could be used to leak data.
 
 #### Device client hints
 
-- {{HTTPHeader("Device-Memory")}} {{experimental_inline}}
+- {{HTTPHeader("Content-DPR")}} {{deprecated_inline}} {{non-standard_inline}}
+  - : Response header used to confirm the image device to pixel ratio (DPR) in requests where the screen {{HTTPHeader("DPR")}} client hint was used to select an image resource.
+- {{HTTPHeader("Device-Memory")}}
   - : Approximate amount of available client RAM memory. This is part of the [Device Memory API](/en-US/docs/Web/API/Device_Memory_API).
+- {{HTTPHeader("DPR")}} {{deprecated_inline}} {{non-standard_inline}}
+  - : Request header that provides the client device pixel ratio (the number of physical device pixels for each {{Glossary("CSS pixel")}}).
+- {{HTTPHeader("Viewport-Width")}} {{deprecated_inline}} {{non-standard_inline}}
+  - : Request header provides the client's layout viewport width in {{Glossary("CSS pixel","CSS pixels")}}.
+- {{HTTPHeader("Width")}} {{deprecated_inline}} {{non-standard_inline}}
+  - : Request header indicates the desired resource width in physical pixels (the intrinsic size of an image).
 
 #### Network client hints
 
@@ -356,29 +420,44 @@ Network client hints allow a server to choose what information is sent based on 
 
 ### Privacy
 
-- {{HTTPHeader("Sec-GPC")}} {{non-standard_inline}}{{experimental_inline}}
+- {{HTTPHeader("DNT")}} {{deprecated_inline}} {{non-standard_inline}}
+  - : Request header that indicates the user's tracking preference (Do Not Track).
+    Deprecated in favor of Global Privacy Control (GPC), which is communicated to servers using the {{HTTPHeader("Sec-GPC")}} header, and accessible to clients via {{domxref("navigator.globalPrivacyControl")}}.
+- {{HTTPHeader("Tk")}} {{deprecated_inline}} {{non-standard_inline}}
+  - : Response header that indicates the tracking status that applied to the corresponding request. Used in conjunction with DNT.
+- {{HTTPHeader("Sec-GPC")}} {{non-standard_inline}} {{experimental_inline}}
   - : Indicates whether the user consents to a website or service selling or sharing their personal information with third parties.
 
 ### Security
 
-- {{HTTPHeader("Origin-Isolation")}} {{experimental_inline}}
-  - : Provides a mechanism to allow web applications to isolate their origins.
+- {{HTTPHeader("Origin-Agent-Cluster")}} {{experimental_inline}}
+  - : Response header used to indicate that the associated {{domxref("Document")}} should be placed in an _origin-keyed [agent cluster](https://tc39.es/ecma262/#sec-agent-clusters)_.
+    This isolation allows user agents to allocate implementation-specific resources for agent clusters, such as processes or threads, more efficiently.
 
 ### Server-sent events
 
 - {{HTTPHeader("NEL")}} {{experimental_inline}}
   - : Defines a mechanism that enables developers to declare a network error reporting policy.
 
+### Topics API
+
+The Topics API provides a mechanism for developers to implement use cases such as interest-based advertising (IBA).
+See the [Topics API](/en-US/docs/Web/API/Topics_API) documentation for more information.
+
+- {{HTTPHeader("Observe-Browsing-Topics")}} {{experimental_inline}} {{non-standard_inline}}
+  - : Response header used to mark topics of interest inferred from a calling site's URL as observed in the response to a request generated by a [feature that enables the Topics API](/en-US/docs/Web/API/Topics_API/Using#what_api_features_enable_the_topics_api).
+- {{HTTPHeader("Sec-Browsing-Topics")}} {{experimental_inline}} {{non-standard_inline}}
+  - : Request header that sends the selected topics for the current user along with the associated request, which are used by an ad tech platform to choose a personalized ad to display.
+
 ### Other
 
-- {{HTTPHeader("Accept-Push-Policy")}} {{experimental_inline}}
-  - : A client can express the desired push policy for a request by sending an [`Accept-Push-Policy`](https://datatracker.ietf.org/doc/html/draft-ruellan-http-accept-push-policy-00#section-3.1) header field in the request.
 - {{HTTPHeader("Accept-Signature")}} {{experimental_inline}}
   - : A client can send the [`Accept-Signature`](https://wicg.github.io/webpackage/draft-yasskin-http-origin-signed-responses.html#name-the-accept-signature-header) header field to indicate intention to take advantage of any available signatures and to indicate what kinds of signatures it supports.
 - {{HTTPHeader("Early-Data")}} {{experimental_inline}}
   - : Indicates that the request has been conveyed in TLS early data.
-- {{HTTPHeader("Push-Policy")}} {{experimental_inline}}
-  - : A [`Push-Policy`](https://datatracker.ietf.org/doc/html/draft-ruellan-http-accept-push-policy-00#section-3.2) defines the server behavior regarding push when processing a request.
+- {{HTTPHeader("Set-Login")}} {{experimental_inline}}
+  - : Response header sent by a federated identity provider (IdP) to set its login status, meaning whether any users are logged into the IdP on the current browser or not.
+    This is stored by the browser and used by the [FedCM API](/en-US/docs/Web/API/FedCM_API).
 - {{HTTPHeader("Signature")}} {{experimental_inline}}
   - : The [`Signature`](https://wicg.github.io/webpackage/draft-yasskin-http-origin-signed-responses.html#name-the-signature-header) header field conveys a list of signatures for an exchange, each one accompanied by information about how to determine the authority of and refresh that signature.
 - {{HTTPHeader("Signed-Headers")}} {{experimental_inline}}
@@ -399,7 +478,7 @@ Network client hints allow a server to choose what information is sent based on 
 - {{HTTPHeader("X-DNS-Prefetch-Control")}} {{non-standard_inline}}
   - : Controls DNS prefetching, a feature by which browsers proactively perform domain name resolution on both links that the user may choose to follow as well as URLs for items referenced by the document, including images, CSS, JavaScript, and so forth.
 - {{HTTPHeader("X-Robots-Tag")}} {{non-standard_inline}}
-  - : The [`X-Robots-Tag`](https://developers.google.com/search/docs/advanced/robots/robots_meta_tag) HTTP header is used to indicate how a web page is to be indexed within public search engine results. The header is effectively equivalent to `<meta name="robots" content="…">`.
+  - : The [`X-Robots-Tag`](https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag) HTTP header is used to indicate how a web page is to be indexed within public search engine results. The header is effectively equivalent to `<meta name="robots" content="…">`.
 
 ## Deprecated headers
 

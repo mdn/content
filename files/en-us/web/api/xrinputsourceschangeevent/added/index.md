@@ -9,7 +9,7 @@ browser-compat: api.XRInputSourcesChangeEvent.added
 {{APIRef("WebXR Device API")}}{{SecureContext_Header}}
 
 The read-only {{domxref("XRInputSourcesChangeEvent")}}
-property {{domxref("XRInputSourcesChangeEvent.added", "added")}} is a list of zero or
+property `added` is a list of zero or
 more input sources, each identified using an {{domxref("XRInputSource")}} object,
 which have been newly made available for use.
 

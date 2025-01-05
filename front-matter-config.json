@@ -72,7 +72,32 @@
       },
       {
         "if": {
-          "properties": { "slug": { "type": "string", "pattern": "^Learn/" } }
+          "properties": {
+            "slug": { "type": "string", "pattern": "^Learn_web_development/" }
+          }
+        },
+        "then": {
+          "properties": {
+            "page-type": {
+              "enum": [
+                "guide",
+                "landing-page",
+                "learn-topic",
+                "learn-module",
+                "learn-module-chapter",
+                "learn-module-assessment",
+                "learn-faq"
+              ]
+            }
+          }
+        },
+        "else": false
+      },
+      {
+        "if": {
+          "properties": {
+            "slug": { "type": "string", "pattern": "^Learn_web_development/" }
+          }
         },
         "then": {
           "properties": {
@@ -195,13 +220,10 @@
                 "guide",
                 "landing-page",
                 "web-api-overview",
-                "web-api-global-function",
-                "web-api-global-property",
                 "web-api-interface",
                 "web-api-constructor",
                 "web-api-instance-method",
                 "web-api-instance-property",
-                "web-api-instance-event",
                 "web-api-static-method",
                 "web-api-static-property",
                 "web-api-event",

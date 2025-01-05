@@ -7,7 +7,7 @@ status:
 browser-compat: api.GPUCommandEncoder
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`GPUCommandEncoder`** interface of the {{domxref("WebGPU API", "WebGPU API", "", "nocode")}} represents a command encoder, used to encode commands to be issued to the GPU.
 
@@ -50,12 +50,12 @@ A `GPUCommandEncoder` object instance is created via the {{domxref("GPUDevice.cr
 
 - {{domxref("GPUCommandEncoder.resolveQuerySet", "resolveQuerySet()")}} {{Experimental_Inline}}
   - : Encodes a command that resolves a {{domxref("GPUQuerySet")}}, copying the results into a specified {{domxref("GPUBuffer")}}.
-- {{domxref("GPUCommandEncoder.writeTimestamp", "writeTimestamp()")}} {{deprecated_inline}}
+- {{domxref("GPUCommandEncoder.writeTimestamp", "writeTimestamp()")}} {{non-standard_inline}} {{deprecated_inline}}
   - : Encodes a command that writes a timestamp into a {{domxref("GPUQuerySet")}} once the previous commands recorded into the same queued {{domxref("GPUCommandBuffer")}} have been executed by the GPU.
 
 ## Examples
 
-In our [basic render demo](https://mdn.github.io/dom-examples/webgpu-render-demo/), several commands are recorded via a {{domxref("GPUCommandEncoder")}}:
+In our [basic render demo](https://mdn.github.io/dom-examples/webgpu-render-demo/), several commands are recorded via a `GPUCommandEncoder`:
 
 ```js
 // ...
@@ -91,13 +91,14 @@ passEncoder.end();
 // ...
 ```
 
-The commands encoded by the {{domxref("GPUCommandEncoder")}} are recoded into a {{domxref("GPUCommandBuffer")}} using the {{domxref("GPUCommandEncoder.finish()")}} method. The command buffer is then passed into the queue via a {{domxref("GPUQueue.submit", "submit()")}} call, ready to be processed by the GPU.
+The commands encoded by the `GPUCommandEncoder` are recoded into a {{domxref("GPUCommandBuffer")}} using the {{domxref("GPUCommandEncoder.finish()")}} method. The command buffer is then passed into the queue via a {{domxref("GPUQueue.submit", "submit()")}} call, ready to be processed by the GPU.
 
 ```js
 device.queue.submit([commandEncoder.finish()]);
 ```
 
-> **Note:** Study the [WebGPU samples](https://webgpu.github.io/webgpu-samples/) to find more command encoding examples.
+> [!NOTE]
+> Study the [WebGPU samples](https://webgpu.github.io/webgpu-samples/) to find more command encoding examples.
 
 ## Specifications
 

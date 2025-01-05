@@ -55,6 +55,10 @@ The `SVGAnimatedPreserveAspectRatio` interface is used for attributes of type {{
 
 The `SVGAnimatedPreserveAspectRatio` interface do not provide any specific methods.
 
+## Specifications
+
+{{Specifications}}
+
 ## Browser compatibility
 
 {{Compat}}

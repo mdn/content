@@ -8,9 +8,11 @@ status:
 
 {{DefaultAPISidebar("Topics API")}}
 
-> **Warning:** This feature is currently opposed by two browser vendors. See the [Standards positions](/en-US/docs/Web/API/Topics_API#standards_positions) section below for details of opposition.
+> [!WARNING]
+> This feature is currently opposed by two browser vendors. See the [Standards positions](/en-US/docs/Web/API/Topics_API#standards_positions) section below for details of opposition.
 
-> **Note:** An [Enrollment process](/en-US/docs/Web/Privacy/Privacy_sandbox/Enrollment) is required to use the Topics API in your applications. See the [Enrollment](/en-US/docs/Web/API/Topics_API#enrollment) section for details of what sub-features are gated by enrollment.
+> [!NOTE]
+> An [Enrollment process](/en-US/docs/Web/Privacy/Privacy_sandbox/Enrollment) is required to use the Topics API in your applications. See the [Enrollment](/en-US/docs/Web/API/Topics_API#enrollment) section for details of what sub-features are gated by enrollment.
 
 This page explains how the Topics API works and how it can be used to create an **interest-based advertising (IBA)** solution.
 
@@ -33,7 +35,8 @@ If the `<iframe>` content from `ad-tech1.example` implements a [feature that ena
 
 ### Selecting topics of interest to influence ad choice
 
-> **Note:** Different browser implementations may select topics in different ways. The below text is based on how Chrome currently selects topics, for demonstration purposes.
+> [!NOTE]
+> Different browser implementations may select topics in different ways. The below text is based on how Chrome currently selects topics, for demonstration purposes.
 
 On an ongoing basis, the browser will:
 
@@ -49,7 +52,8 @@ On an ongoing basis, the browser will:
 
 3. The top topics are returned to `ad-tech1.example`, only if `ad-tech1.example` appears in the list of caller domains for each topic, as stored in the topic's history entry.
 
-   > **Note:** Initially, no topics are returned, so the `<iframe>` will likely display a default non-targeted ad. However, once the end of the first epoch is reached, the API will start to return topics and `ad-tech1.example` can start to show more relevant ads based on the observed topics for the current user.
+   > [!NOTE]
+   > Initially, no topics are returned, so the `<iframe>` will likely display a default non-targeted ad. However, once the end of the first epoch is reached, the API will start to return topics and `ad-tech1.example` can start to show more relevant ads based on the observed topics for the current user.
 
 `ad-tech1.example` then selects a relevant ad to serve to the user, based on the returned topics.
 
@@ -57,8 +61,8 @@ On an ongoing basis, the browser will:
 
 The following features all serve a dual purpose — they return the user's top topics to the caller and they trigger the browser to record the current page visit as observed by the caller, so the page's hostname can later be used in topics calculation. To do so, they need to be included in a calling ad tech's `<iframe>`; the `<iframe>` then has to be embedded on the pages where you want topics observed.
 
-- You can specify a `browsingTopics: true` option in the options object of a {{domxref("fetch()")}} call to the ad tech platform.
-- You could also pass `browsingTopics: true` into the options object of a {{domxref("Request.Request", "Request()")}} constructor call, and pass the resulting {{domxref("Request")}} object into the {{domxref("fetch()")}} call.
+- You can specify a `browsingTopics: true` option in the options object of a {{domxref("Window/fetch", "fetch()")}} call to the ad tech platform.
+- You could also pass `browsingTopics: true` into the options object of a {{domxref("Request.Request", "Request()")}} constructor call, and pass the resulting {{domxref("Request")}} object into the {{domxref("Window/fetch", "fetch()")}} call.
 - You can set a `browsingtopics` attribute on the `<iframe>`, at the same time or before setting the `src` attribute to load the source. This could be done:
 
   - Declaratively on the HTML:
@@ -80,13 +84,15 @@ When the request associated with one of the above features is sent:
 2. The ad tech server selects a relevant ad to display in the `<iframe>`, based on these topics, and sends the required data to display it in the response.
 3. An {{httpheader("Observe-Browsing-Topics")}} header should be set on the response to the request — this has the effect of causing the browser to record the current page visit as observed by the calling ad tech provider, so the associated topic(s) will be recorded in a topics history entry, and subsequently be used in [topic selection](#selecting_topics_of_interest_to_influence_ad_choice).
 
-   > **Note:** It is important to clarify that this doesn't record the top topics sent in the `Sec-Browsing-Topics` header as observed. It records the topics inferred from the calling site's URL (i.e. the site where the ad tech `<iframe>` is embedded) as observed.
+   > [!NOTE]
+   > It is important to clarify that this doesn't record the top topics sent in the `Sec-Browsing-Topics` header as observed. It records the topics inferred from the calling site's URL (i.e. the site where the ad tech `<iframe>` is embedded) as observed.
 
 ### The `browsingTopics()` method
 
 Alternatively, the embedded `<iframe>` can call {{domxref("Document.browsingTopics()")}} to return a user's current top topic(s), which can then be returned to the ad tech platform in a subsequent fetch request. This does not rely on the HTTP headers, but is somewhat less performant. You are advised to use one of the HTTP header methods listed above, falling back to `browsingTopics()` only in situations where the headers cannot be modified.
 
-> **Note:** Because the `browsingTopics()` method does not rely on the HTTP headers, the {{httpheader("Observe-Browsing-Topics")}} header is not used for setting the topics as observed and recording/updating topics history entries; the browser does this automatically when the method is called.
+> [!NOTE]
+> Because the `browsingTopics()` method does not rely on the HTTP headers, the {{httpheader("Observe-Browsing-Topics")}} header is not used for setting the topics as observed and recording/updating topics history entries; the browser does this automatically when the method is called.
 
 ## Private topic sets
 
@@ -165,4 +171,4 @@ You can also test your Topics API code locally without [enrollment](/en-US/docs/
 
 ## See also
 
-- [Topics API](https://developer.chrome.com/docs/privacy-sandbox/topics/overview/) on developer.chrome.com (2023)
+- [Topics API](https://developers.google.com/privacy-sandbox/private-advertising/topics) on developers.google.com (2023)

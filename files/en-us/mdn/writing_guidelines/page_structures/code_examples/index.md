@@ -8,7 +8,8 @@ page-type: mdn-writing-guide
 
 On MDN, you'll see numerous code examples inserted throughout the pages to demonstrate usage of web platform features. This article discusses the different mechanisms available for adding code examples to pages, along with which ones you should use and when.
 
-> **Note:** If you want advice on the styling and linting of code as it appears on an MDN article, rather than the different ways of including code, see our [Code style guide](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide).
+> [!NOTE]
+> If you want advice on the styling and linting of code as it appears on an MDN article, rather than the different ways of including code, see our [Code style guide](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide).
 
 ## What types of code example are available?
 
@@ -101,5 +102,5 @@ This looks like so when rendered:
 
 ### Tips for using GitHub live samples
 
-- You obviously need to get a suitable code sample onto the [MDN GitHub organization](https://github.com/mdn/) first. This needs to be done using Git. If you are not familiar with Git, check out our [How do I use GitHub Pages?](/en-US/docs/Learn/Common_questions/Tools_and_setup/Using_GitHub_pages) article, and [Preparing to add the data](/en-US/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables) for more advanced uses.
+- You obviously need to get a suitable code sample onto the [MDN GitHub organization](https://github.com/mdn/) first. This needs to be done using Git. If you are not familiar with Git, check out our [How do I use GitHub Pages?](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/Using_GitHub_pages) article, and [Preparing to add the data](/en-US/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables) for more advanced uses.
 - Your code sample needs to be suitable to show what you are trying to demonstrate — it should contain one simple example that does one thing well, should have no offensive content in it, and should follow the MDN [Code sample guidelines](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide).

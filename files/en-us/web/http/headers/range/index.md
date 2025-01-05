@@ -7,13 +7,13 @@ browser-compat: http.headers.Range
 
 {{HTTPSidebar}}
 
-The **`Range`** HTTP request header indicates the parts of a resource that the server should return.
+The HTTP **`Range`** {{Glossary("request header")}} indicates the part of a resource that the server should return.
 Several parts can be requested at the same time in one `Range` header, and the server may send back these ranges in a multipart document.
 If the server sends back ranges, it uses the {{HTTPStatus("206", "206 Partial Content")}} status code for the response.
 If the ranges are invalid, the server returns the {{HTTPStatus("416", "416 Range Not Satisfiable")}} error.
 
 A server that doesn't support range requests may ignore the `Range` header and return the whole resource with a {{HTTPStatus("200")}} status code.
-Ignoring the `Range` header is equivalent to `Accept-Ranges: none`, so the {{HTTPHeader("Accept-Ranges")}} response header is rarely used for this purpose.
+Older browsers used a response header of {{HTTPHeader("Accept-Ranges", "Accept-Ranges: none")}} to disable features like 'pause' or 'resume' in download managers, but since a server ignoring the `Range` header has the same meaning as responding with `Accept-Ranges: none`, the header is rarely used in this way.
 
 Currently only [`bytes` units are registered](https://www.iana.org/assignments/http-parameters/http-parameters.xhtml#range-units) which are _offsets_ (zero-indexed & inclusive).
 If the requested data has a [content coding](/en-US/docs/Web/HTTP/Headers/Content-Encoding) applied, each byte range represents the encoded sequence of bytes, not the bytes that would be obtained after decoding.
@@ -28,7 +28,7 @@ The header is a [CORS-safelisted request header](/en-US/docs/Glossary/CORS-safel
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>no</td>
+      <td>No</td>
     </tr>
   </tbody>
 </table>
@@ -38,21 +38,21 @@ The header is a [CORS-safelisted request header](/en-US/docs/Glossary/CORS-safel
 ```http
 Range: <unit>=<range-start>-
 Range: <unit>=<range-start>-<range-end>
-Range: <unit>=<range-start>-<range-end>, <range-start>-<range-end>
-Range: <unit>=<range-start>-<range-end>, <range-start>-<range-end>, <range-start>-<range-end>
+Range: <unit>=<range-start>-<range-end>, …, <range-startN>-<range-endN>
 Range: <unit>=-<suffix-length>
 ```
 
 ## Directives
 
-- \<unit>
-  - : The unit in which ranges are specified.
-- \<range-start>
+- `<unit>`
+  - : The unit in which ranges are defined.
+    Currently only `bytes` are a registered unit.
+- `<range-start>`
   - : An integer in the given unit indicating the start position of the request range.
-- \<range-end>
+- `<range-end>`
   - : An integer in the given unit indicating the end position of the requested range.
     This value is optional and, if omitted, the end of the resource is used as the end of the range.
-- \<suffix-length>
+- `<suffix-length>`
   - : An integer indicating the number of units at the end of the resource to return.
 
 ## Examples
@@ -105,6 +105,36 @@ The request may be rejected by the server if these ranges overlap (if the reques
 Range: bytes=0-499, -499
 ```
 
+### Checking if a server supports range requests
+
+The following curl command makes a {{HTTPMethod("HEAD")}} request for an image:
+
+```bash
+curl -v --http1.1 -I https://i.imgur.com/z4d4kWk.jpg
+# or using the OPTIONS method:
+# curl -v --http1.1 -X OPTIONS https://i.imgur.com/z4d4kWk.jpg
+```
+
+This results in the following HTTP request:
+
+```http
+HEAD /z4d4kWk.jpg HTTP/1.1
+Host: i.imgur.com
+User-Agent: curl/8.7.1
+Accept: */*
+```
+
+The server responds with a `200` response, and the `Accept-Ranges: bytes` header is present (some headers are omitted for brevity):
+
+```http
+HTTP/1.1 200 OK
+Connection: keep-alive
+Content-Length: 146515
+Content-Type: image/jpeg
+…
+Accept-Ranges: bytes
+```
+
 ## Specifications
 
 {{Specifications}}
@@ -115,8 +145,8 @@ Range: bytes=0-499, -499
 
 ## See also
 
-- {{HTTPHeader("If-Range")}}
-- {{HTTPHeader("Content-Range")}}
+- {{HTTPHeader("If-Range")}} conditional request header
+- {{HTTPHeader("Content-Range")}} response header
 - {{HTTPHeader("Content-Type")}}
 - {{HTTPHeader("Accept-Ranges")}}
 - {{HTTPStatus("206", "206 Partial Content")}}

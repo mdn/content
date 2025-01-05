@@ -21,7 +21,8 @@ This value _does not_ add or remove display sources in the browser's user interf
 
 See [how constraints are defined](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints#how_constraints_are_defined).
 
-> **Note:** You cannot set [`monitorTypeSurfaces: "exclude"`](/en-US/docs/Web/API/MediaDevices/getDisplayMedia#monitortypesurfaces) at the same time as `displaySurface: "monitor"` as the two settings are contradictory. Trying to do so will result in the associated `getDisplayMedia()` call failing with a `TypeError`.
+> [!NOTE]
+> You cannot set [`monitorTypeSurfaces: "exclude"`](/en-US/docs/Web/API/MediaDevices/getDisplayMedia#monitortypesurfaces) at the same time as `displaySurface: "monitor"` as the two settings are contradictory. Trying to do so will result in the associated `getDisplayMedia()` call failing with a `TypeError`.
 
 ## Usage notes
 

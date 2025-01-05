@@ -7,7 +7,7 @@ spec-urls: https://drafts.csswg.org/css-conditional/
 
 {{CSSRef}}
 
-**At-rules** are [CSS statements](/en-US/docs/Web/CSS/Syntax#css_statements) that instruct CSS how to behave. They begin with an at sign, '`@`' (`U+0040 COMMERCIAL AT`), followed by an identifier, and include everything up to the next semicolon, '`;`' (`U+003B SEMICOLON`), or the next [CSS block](/en-US/docs/Web/CSS/Syntax#css_declaration_blocks), whichever comes first.
+**At-rules** are [CSS statements](/en-US/docs/Web/CSS/Syntax#css_statements) that instruct CSS how to behave. They begin with an at sign, `@` (U+0040 COMMERCIAL AT), followed by an identifier, and include everything up to the next semicolon, `;` (U+003B SEMICOLON), or the next [CSS block](/en-US/docs/Web/CSS/Syntax#css_declaration_blocks), whichever comes first.
 
 ## Syntax
 
@@ -68,7 +68,7 @@ Block at-rules end in a `{}`-block that contain nested rules, other at-rules, or
 - {{cssxref("@supports")}}
   - : A conditional group rule applies its content if the browser supports the CSS features of the given condition ([CSS conditional rules](/en-US/docs/Web/CSS/CSS_conditional_rules)).
 - {{cssxref("@view-transition")}}
-  - : Opts the current document into a [view transition](/en-US/docs/Web/API/View_Transitions_API), and the destination document as well in the case of cross-document navigation transitions.
+  - : Opts the current document into a [view transition](/en-US/docs/Web/API/View_Transition_API), and the destination document as well in the case of cross-document navigation transitions.
 
 ## Index
 

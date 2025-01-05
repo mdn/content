@@ -14,7 +14,8 @@ representing the keys of the {{domxref("Cache")}}.
 
 The requests are returned in the same order that they were inserted.
 
-> **Note:** Requests with duplicate URLs but different headers can be
+> [!NOTE]
+> Requests with duplicate URLs but different headers can be
 > returned if their responses have the `VARY` header set on them.
 
 ## Syntax
@@ -48,7 +49,7 @@ keys(request, options)
         and `HEAD` are allowed.) It defaults to `false`.
     - `ignoreVary`
       - : A boolean value that, when set to
-        `true,` tells the matching operation not to perform `VARY`
+        `true`, tells the matching operation not to perform `VARY`
         header matching. In other words, if the URL matches you will get a match
         regardless of whether the {{domxref("Response")}} object has a `VARY`
         header. It defaults to `false`.

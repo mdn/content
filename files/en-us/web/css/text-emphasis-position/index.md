@@ -7,7 +7,7 @@ browser-compat: css.properties.text-emphasis-position
 
 {{CSSRef}}
 
-The **`text-emphasis-position`** [CSS](/en-US/docs/Web/CSS) property sets where emphasis marks are drawn. Like ruby text, if there isn't enough room for emphasis marks, the line height is increased.
+The **`text-emphasis-position`** [CSS](/en-US/docs/Web/CSS) property sets where emphasis marks are drawn. Similar to the text rendered by the [`<ruby>`](/en-US/docs/Web/HTML/Element/ruby) HTML element, if there isn't enough room for emphasis marks, the line height is increased.
 
 {{EmbedInteractiveExample("pages/css/text-emphasis-position.html")}}
 
@@ -15,14 +15,19 @@ The **`text-emphasis-position`** [CSS](/en-US/docs/Web/CSS) property sets where 
 
 ```css
 /* Initial value */
-text-emphasis-position: over right;
+text-emphasis-position: auto;
 
-/* Keywords value */
+/* Keyword values */
+text-emphasis-position: over;
+text-emphasis-position: under;
+
+text-emphasis-position: over right;
 text-emphasis-position: over left;
 text-emphasis-position: under right;
 text-emphasis-position: under left;
 
 text-emphasis-position: left over;
+text-emphasis-position: right over;
 text-emphasis-position: right under;
 text-emphasis-position: left under;
 
@@ -36,6 +41,15 @@ text-emphasis-position: unset;
 
 ### Values
 
+The property accepts one or two values:
+
+- If only one value is provided, it can be `auto`, `over`, or `under`. When only `over` or `under` is used, `right` is assumed as the default position.
+- If two values are provided, they must include one of `over` or `under`and one of `right` or `left`. Their order does not matter.
+
+The values include:
+
+- `auto`
+  - : Draws marks over the text in horizontal writing mode and to the right of the text in vertical writing mode.
 - `over`
   - : Draws marks over the text in horizontal writing mode.
 - `under`
@@ -105,7 +119,8 @@ The preferred position of emphasis marks depends on the language. In Japanese fo
   </tbody>
 </table>
 
-> **Note:** The `text-emphasis-position` cannot be set, and therefore are not reset either, using the {{cssxref("text-emphasis")}} shorthand property.
+> [!NOTE]
+> The `text-emphasis-position` cannot be set, and therefore are not reset either, using the {{cssxref("text-emphasis")}} shorthand property.
 
 ## Formal definition
 
@@ -116,6 +131,96 @@ The preferred position of emphasis marks depends on the language. In Japanese fo
 {{csssyntax}}
 
 ## Examples
+
+### Adding emphasis mark positions
+
+Use the drop down menu to change the position of the emphasis marks. This will change the class on the `<section>` element, which in turn, will update the position of the emphasis marks on the text.
+
+#### HTML
+
+```html hidden
+<p class="unsupported">The <code>auto</code> value is not supported in your browser.</p>
+<label for="position">Emphasis position:</position>
+<select id="position">
+  <option value="auto">auto</option>
+  <option value="over-right">over right</option>
+  <option value="over-left">over left</option>
+  <option value="under-right">under right</option>
+  <option value="under-left">under left</option>
+  <option value="preferred">preferred</option>
+</select>
+```
+
+```html
+<section id="setting" class="auto">
+  <p class="horizontal" lang="zh">你好世界</p>
+  <!-- Hello World in Chinese -->
+  <p class="vertical" lang="ja">世界、こんにちは。</p>
+  <!-- Hello World in Japanese -->
+</section>
+```
+
+#### CSS
+
+```css hidden
+.unsupported {
+  color: red;
+}
+@supports (text-emphasis-position: auto) {
+  .unsupported {
+    display: none;
+  }
+}
+.horizontal {
+  writing-mode: horizontal-tb;
+}
+.vertical {
+  writing-mode: vertical-rl;
+}
+section {
+  display: flex;
+  justify-content: space-around;
+}
+```
+
+```css
+section p {
+  text-emphasis: filled circle tomato;
+  text-emphasis-position: auto;
+}
+.over-right p,
+.preferred p [lang="ja"] {
+  text-emphasis-position: over right;
+}
+.over-left p {
+  text-emphasis-position: over left;
+}
+.under-right p,
+.preferred p [lang="zh"] {
+  text-emphasis-position: under right;
+}
+.under-left p {
+  text-emphasis-position: under left;
+}
+.preferred p [lang="ja"] {
+}
+```
+
+```js hidden
+const position = document.querySelector("#position");
+const setting = document.querySelector("#setting");
+const updateClass = () => {
+  const currentClass = setting.classList;
+  setting.classList.replace(currentClass, position.value);
+};
+position.addEventListener("change", updateClass);
+```
+
+#### Result
+
+Use the "Emphasis position" drop down to choose the location of the emphasis marks. The `preferred` option in the drop down uses the preferred positions, as explained in the [Description](#description) section.
+
+{{EmbedLiveSample("Emphasis_mark_positions", 450, 250)}}
 
 ### Preferring ruby over emphasis marks
 
@@ -151,4 +256,8 @@ em rt {
 
 ## See also
 
-- The longhand properties {{cssxref("text-emphasis-style")}}, {{cssxref("text-emphasis-color")}}, and the corresponding shorthand property {{cssxref("text-emphasis")}}.
+- {{cssxref("text-underline-position")}}
+- {{cssxref("text-emphasis-style")}}
+- {{cssxref("text-emphasis-color")}}
+- {{cssxref("text-emphasis")}} shorthand property
+- {{cssxref("writing-mode")}}

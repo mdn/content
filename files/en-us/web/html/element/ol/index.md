@@ -31,7 +31,8 @@ This element also accepts the [global attributes](/en-US/docs/Web/HTML/Global_at
 
     The specified type is used for the entire list unless a different [`type`](/en-US/docs/Web/HTML/Element/li#type) attribute is used on an enclosed {{HTMLElement("li")}} element.
 
-    > **Note:** Unless the type of the list number matters (like legal or technical documents where items are referenced by their number/letter), use the CSS {{CSSxRef("list-style-type")}} property instead.
+    > [!NOTE]
+    > Unless the type of the list number matters (like legal or technical documents where items are referenced by their number/letter), use the CSS {{CSSxRef("list-style-type")}} property instead.
 
 ## Usage notes
 
@@ -49,7 +50,7 @@ To determine which list to use, try changing the order of the list items; if the
 
 ## Examples
 
-### Simple example
+### Basic example
 
 ```html
 <ol>
@@ -62,7 +63,7 @@ To determine which list to use, try changing the order of the list items; if the
 
 #### Result
 
-{{EmbedLiveSample("Simple_example", 400, 100)}}
+{{EmbedLiveSample("Basic_example", 400, 100)}}
 
 ### Using Roman Numeral type
 

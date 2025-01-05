@@ -59,7 +59,7 @@ _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventT
   - : Returns the {{DOMxRef("FontFaceSet")}} interface of the current document.
 - {{DOMxRef("Document.forms")}} {{ReadOnlyInline}}
   - : Returns an {{DOMxRef("HTMLCollection")}} of the {{HTMLElement("form")}} elements in the document.
-- {{DOMxRef("Document.fragmentDirective")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{DOMxRef("Document.fragmentDirective")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("FragmentDirective")}} for the current document.
 - {{DOMxRef("Document.fullscreenElement")}} {{ReadOnlyInline}}
   - : The element that's currently in full screen mode for this document.
@@ -196,7 +196,7 @@ _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventT
   - : Creates a new element with the given tag name.
 - {{DOMxRef("Document.createElementNS()")}}
   - : Creates a new element with the given tag name and namespace URI.
-- {{DOMxRef("Document.createEvent()")}}
+- {{DOMxRef("Document.createEvent()")}} {{deprecated_inline}}
   - : Creates an event object.
 - {{DOMxRef("Document.createNodeIterator()")}}
   - : Creates a {{DOMxRef("NodeIterator")}} object.
@@ -263,7 +263,7 @@ _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventT
 - {{DOMxRef("Document.requestStorageAccessFor()")}} {{experimental_inline}}
   - : Allows top-level sites to request third-party cookie access on behalf of embedded content originating from another site in the same [related website set](/en-US/docs/Web/API/Storage_Access_API/Related_website_sets).
 - {{domxref("Document.startViewTransition()")}}
-  - : Starts a new {{domxref("View Transitions API", "view transition", "", "nocode")}} and returns a {{domxref("ViewTransition")}} object to represent it.
+  - : Starts a new {{domxref("View Transition API", "view transition", "", "nocode")}} and returns a {{domxref("ViewTransition")}} object to represent it.
 
 The `Document` interface is extended with the {{DOMxRef("XPathEvaluator")}} interface:
 
@@ -300,7 +300,7 @@ The `Document` interface for HTML documents inherit from the {{DOMxRef("HTMLDocu
   - : Returns true if the formatting command is supported on the current range.
 - {{DOMxRef("Document.queryCommandValue()")}} {{Deprecated_Inline}}
   - : Returns the current value of the current range for a formatting command.
-- {{DOMxRef("Document.write()")}}
+- {{DOMxRef("Document.write()")}} {{deprecated_inline}}
   - : Writes text in a document.
 - {{DOMxRef("Document.writeln()")}}
   - : Writes a line of text in a document.
@@ -364,6 +364,10 @@ Listen to these events using `addEventListener()` or by assigning an event liste
   - : Fired when the document view or an element has been scrolled.
 - {{DOMxRef("Document/scrollend_event", "scrollend")}}
   - : Fired when the document view or an element has completed scrolling.
+- {{domxref("Document/scrollsnapchange_event", "scrollsnapchange")}} {{experimental_inline}}
+  - : Fired on the scroll container at the end of a scrolling operation when a new scroll snap target has been selected.
+- {{domxref("Document/scrollsnapchanging_event", "scrollsnapchanging")}} {{experimental_inline}}
+  - : Fired on the scroll container when the browser determines a new scroll snap target is pending, i.e. it will be selected when the current scroll gesture ends.
 
 ### Selection events
 

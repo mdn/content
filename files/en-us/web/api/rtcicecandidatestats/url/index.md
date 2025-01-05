@@ -20,7 +20,8 @@ candidate described by the `RTCIceCandidateStats` was obtained. This is the
 same URL that would be received in the {{domxref("RTCPeerConnection.icecandidate_event", "icecandidate")}} event's
 {{domxref("RTCPeerConnectionIceEvent.url", "url")}} property.
 
-> **Note:** This property does not exist for remote candidates.
+> [!NOTE]
+> This property does not exist for remote candidates.
 
 ## Specifications
 

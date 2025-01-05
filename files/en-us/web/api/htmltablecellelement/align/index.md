@@ -12,7 +12,8 @@ browser-compat: api.HTMLTableCellElement.align
 
 The **`align`** property of the {{domxref("HTMLTableCellElement")}} interface is a string indicating how to horizontally align text in the {{htmlelement("th")}} or {{htmlelement("td")}} table cell.
 
-> **Note:** This property is deprecated, and CSS should be used to align text horizontally in a cell. Use the CSS {{cssxref("text-align")}} property, which takes precedence, to horizontally align text in a cell instead.
+> [!NOTE]
+> This property is deprecated, and CSS should be used to align text horizontally in a cell. Use the CSS {{cssxref("text-align")}} property, which takes precedence, to horizontally align text in a cell instead.
 
 ## Value
 
@@ -40,4 +41,4 @@ Use CSS `text-align` instead. An [example](/en-US/docs/Web/CSS/text-align#table_
 ## See also
 
 - {{cssxref("text-align")}}
-- [Styling tables](/en-US/docs/Learn/CSS/Building_blocks/Styling_tables)
+- [Learn: Styling tables](/en-US/docs/Learn_web_development/Core/Styling_basics/Tables)

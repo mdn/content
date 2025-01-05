@@ -23,7 +23,8 @@ Typical use cases for `<mark>` include:
 - Otherwise, `<mark>` indicates a portion of the document's content which is likely to be relevant to the user's current activity. This might be used, for example, to indicate the words that matched a search operation.
 - Don't use `<mark>` for syntax highlighting purposes; instead, use the {{HTMLElement("span")}} element with appropriate CSS applied to it.
 
-> **Note:** Don't confuse `<mark>` with the {{HTMLElement("strong")}} element; `<mark>` is used to denote content which has a degree of _relevance_, while `<strong>` indicates spans of text of _importance_.
+> [!NOTE]
+> Don't confuse `<mark>` with the {{HTMLElement("strong")}} element; `<mark>` is used to denote content which has a degree of _relevance_, while `<strong>` indicates spans of text of _importance_.
 
 ## Accessibility
 

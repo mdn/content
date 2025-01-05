@@ -9,7 +9,8 @@ browser-compat: svg.global_attributes.vector-effect
 
 The **`vector-effect`** property specifies the vector effect to use when drawing an object. Vector effects are applied before any of the other compositing operations, i.e. filters, masks and clips.
 
-> **Note:** As a presentation attribute, `vector-effect` can be used as a CSS property.
+> [!NOTE]
+> As a presentation attribute, `vector-effect` can be used as a CSS property.
 
 ## Elements
 
@@ -106,3 +107,7 @@ You can use this attribute with the following SVG elements:
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- CSS {{cssxref("vector-effect")}} property

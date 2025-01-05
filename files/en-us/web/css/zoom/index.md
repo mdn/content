@@ -20,10 +20,6 @@ Additionally, elements adjusted using `scale()` transform from the `center` by d
 ## Syntax
 
 ```css
-/* Keyword values */
-zoom: normal;
-zoom: reset;
-
 /* <percentage> values */
 zoom: 50%;
 zoom: 200%;
@@ -31,6 +27,10 @@ zoom: 200%;
 /* <number> values */
 zoom: 1.1;
 zoom: 0.7;
+
+/* Non-standard keyword values */
+zoom: normal;
+zoom: reset;
 
 /* Global values */
 zoom: inherit;
@@ -42,14 +42,17 @@ zoom: unset;
 
 ### Values
 
-- `normal`
-  - : Render this element at its normal size.
-- `reset`
-  - : Do not (de)magnify this element if the user applies non-pinch-based zooming (e.g. by pressing <kbd>Ctrl</kbd> \- <kbd>-</kbd> or <kbd>Ctrl</kbd> \+ <kbd>+</kbd> keyboard shortcuts) to the document. **Do not use** this value, _use the standard `unset` value instead_.
 - {{cssxref("&lt;percentage&gt;")}}
   - : Zoom factor. `100%` is equivalent to `normal`. Values larger than `100%` zoom in. Values smaller than `100%` zoom out.
 - {{cssxref("&lt;number&gt;")}}
   - : Zoom factor. Equivalent to the corresponding percentage (`1.0` = `100%` = `normal`). Values larger than `1.0` zoom in. Values smaller than `1.0` zoom out.
+
+Two non-standard keyword values are not recommended. Check [browser compatibility](#browser_compatibility) data:
+
+- `normal`
+  - : Render the element at its normal size; equal to `zoom: 1`. Use the global {{cssxref("unset")}} keyword value instead.
+- `reset`
+  - : Resets the value to `zoom: 1` and prevents the element from being (de)magnified if the user applies non-pinch-based zooming (e.g. by pressing <kbd>Ctrl</kbd> \- <kbd>-</kbd> or <kbd>Ctrl</kbd> \+ <kbd>+</kbd> keyboard shortcuts) to the document.
 
 ## Formal definition
 
@@ -57,10 +60,7 @@ zoom: unset;
 
 ## Formal syntax
 
-```plain
-zoom =
-  normal | reset | <number> | <percentage>
-```
+{{csssyntax}}
 
 ## Examples
 
@@ -148,7 +148,7 @@ div#c {
 
 ### Creating a zoom control
 
-In this example a `select` field is used to change the zoom level of the .
+In this example a `select` field is used to change the zoom level of the element.
 
 #### HTML
 
@@ -221,7 +221,7 @@ html {
 }
 ```
 
-In this final CSS block we are checking to see if the browser supports `zoom` and if so setting the **not supported** message to `diplay: none;`.
+In this final CSS block we are checking to see if the browser supports `zoom` and if so setting the **not supported** message to `display: none;`.
 
 ```css
 @supports (zoom: 1) {
@@ -259,3 +259,7 @@ zoomControl.addEventListener("change", updateZoom);
 ## See also
 
 - [`zoom` entry in CSS-Tricks' CSS Almanac](https://css-tricks.com/almanac/properties/z/zoom/)
+- {{cssxref("transform")}}
+- {{cssxref("scale")}}
+- {{cssxref("unset")}} keyword
+- [Legacy `zoom` property](https://css-tricks.com/almanac/properties/z/zoom/) via CSS-Tricks (2013)

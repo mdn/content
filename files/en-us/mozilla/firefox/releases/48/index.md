@@ -6,7 +6,7 @@ page-type: firefox-release-notes
 
 {{FirefoxSidebar}}
 
-[To test the latest developer features of Firefox, install Firefox Developer Edition](https://www.mozilla.org/firefox/developer/) Firefox 48 was released on August 2, 2016. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
+[To test the latest developer features of Firefox, install Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/) Firefox 48 was released on August 2, 2016. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 
 ## Changes for Web developers
 
@@ -26,7 +26,7 @@ page-type: firefox-release-notes
 - The {{HTMLElement("details")}} and {{HTMLElement("summary")}} elements have been activated by default on Nightly and Aurora (DevTools), but not on Beta or Release:
 
   - The default style for these elements has been adapted to match the spec ([Firefox bug 1258657](https://bugzil.la/1258657)).
-  - The {{domxref("HTMLDetailsElement/toggle_event", "toggle")}} event is now sent to the {{HTMLElement("details")}} element when this one is opened or closed ([Firefox bug 1225412](https://bugzil.la/1225412)).
+  - The `toggle` event is now sent to the {{HTMLElement("details")}} element when this one is opened or closed ([Firefox bug 1225412](https://bugzil.la/1225412)).
 
 - The [`meta`](/en-US/docs/Web/HTML/Element/meta) attributes now also supports the `no-referrer-when-downgrade` and `origin-when-cross-origin` values ([Firefox bug 1178337](https://bugzil.la/1178337)).
 
@@ -60,17 +60,17 @@ page-type: firefox-release-notes
 
 - The `text` value of {{cssxref("background-clip")}} is now available in all type of Firefox (and not only non-release builds) ([Firefox bug 1263516](https://bugzil.la/1263516)).
 - The `absolute` value of {{cssxref("position")}} properties on the top layer element ([Firefox bug 1236828](https://bugzil.la/1236828)).
-- Added an internal-only syntax for {{domxref("@supports")}} to detect pref ([Firefox bug 1259889](https://bugzil.la/1259889)).
+- Added an internal-only syntax for {{cssxref("@supports")}} to detect pref ([Firefox bug 1259889](https://bugzil.la/1259889)).
 
 ### JavaScript
 
 #### New APIs
 
 - The {{jsxref("String.prototype.padStart()")}} and {{jsxref("String.prototype.padEnd()")}} methods have been implemented ([Firefox bug 1260509](https://bugzil.la/1260509)).
-- The ES2015 {{jsxref("Symbol.unscopables")}} and {{jsxref("Array.@@unscopables", "Array.prototype[@@unscopables]")}} properties have been implemented ([Firefox bug 1054759](https://bugzil.la/1054759) and [Firefox bug 1258163](https://bugzil.la/1258163)).
+- The ES2015 {{jsxref("Symbol.unscopables")}} and [`Array.prototype[Symbol.unscopables]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.unscopables) properties have been implemented ([Firefox bug 1054759](https://bugzil.la/1054759) and [Firefox bug 1258163](https://bugzil.la/1258163)).
 - The ES2015 {{jsxref("Symbol.isConcatSpreadable")}} symbol has been implemented ([Firefox bug 1041586](https://bugzil.la/1041586)).
-- The ES2015 {{jsxref("Array.@@species", "Array[@@species]")}} getter has been implemented ([Firefox bug 1165052](https://bugzil.la/1165052)).
-- The ES2015 {{jsxref("ArrayBuffer.@@species", "ArrayBuffer[@@species]")}} getter and {{jsxref("TypedArray.@@species", "%TypedArray%[@@species]")}} getter have been implemented ([Firefox bug 1165053](https://bugzil.la/1165053)).
+- The ES2015 [`Array[Symbol.species]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.species) getter has been implemented ([Firefox bug 1165052](https://bugzil.la/1165052)).
+- The ES2015 [`ArrayBuffer[Symbol.species]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/Symbol.species) getter and [`TypedArray[Symbol.species]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/Symbol.species) getter have been implemented ([Firefox bug 1165053](https://bugzil.la/1165053)).
 - The {{jsxref("Intl.getCanonicalLocales()")}} method of the ECMAScript Internationalization API draft has been implemented ([Firefox bug 1263040](https://bugzil.la/1263040)).
 
 #### Deprecations and removals
@@ -115,7 +115,7 @@ page-type: firefox-release-notes
 - The [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API) is now available in [Web workers](/en-US/docs/Web/API/Web_Workers_API) ([Firefox bug 842818](https://bugzil.la/842818)).
 - The {{domxref("CustomEvent")}} interface is now available in [Web Workers](/en-US/docs/Web/API/Web_Workers_API) ([Firefox bug 1003432](https://bugzil.la/1003432)).
 - The `DOMApplicationsManager.getNotInstalled()` method has been removed ([Firefox bug 1255036](https://bugzil.la/1255036)).
-- Several Firefox OS APIs that were erroneously exposed to the Web have now been hidden as they should have been — {{domxref("mozContact")}}, {{domxref("MozContactChangeEvent")}}, {{domxref("navigator.mozContacts")}}, {{domxref("MozPowerManager")}}, {{domxref("MozSettingsEvent")}} (see [Firefox bug 1043562](https://bugzil.la/1043562), [Firefox bug 1256414](https://bugzil.la/1256414), and [Firefox bug 1256046](https://bugzil.la/1256046)).
+- Several Firefox OS APIs that were erroneously exposed to the Web have now been hidden as they should have been — `mozContact`, `MozContactChangeEvent`, `navigator.mozContacts`, `MozPowerManager`, `MozSettingsEvent` (see [Firefox bug 1043562](https://bugzil.la/1043562), [Firefox bug 1256414](https://bugzil.la/1256414), and [Firefox bug 1256046](https://bugzil.la/1256046)).
 - Support for UTF-16 has been removed from {{domxref("TextEncoder")}} ([Firefox bug 1257877](https://bugzil.la/1257877)).
 - {{domxref("RTCStatsReport")}} is now a true `maplike` interface: in addition to {{domxref("RTCStatsReport.forEach()", "forEach()")}}, {{domxref("RTCStatsReport.get()", "get()")}}, and {{domxref("RTCStatsReport.has()", "has()")}}, the methods {{domxref("RTCStatsReport.entries", "entries()")}}, {{domxref("RTCStatsReport.values", "values()")}}, {{domxref("RTCStatsReport.keys()", "keys()")}}, as well as the {{domxref("RTCStatsReport.size", "size")}} getter have been implemented ([Firefox bug 906986](https://bugzil.la/906986)).
 - The {{domxref("Request.cache")}} property has been added allowing to control the cache behavior ([Firefox bug 1120715](https://bugzil.la/1120715)).

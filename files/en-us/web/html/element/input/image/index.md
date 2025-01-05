@@ -25,7 +25,8 @@ The `alt` attribute provides an alternate string to use as the button's label if
 
 For example, if you have a graphical button that shows an image with an icon and/or image text "Login Now", you should also set the `alt` attribute to something like `Login Now`.
 
-> **Note:** While the `alt` attribute is technically optional, you should always include one to maximize the usability of your content.
+> [!NOTE]
+> While the `alt` attribute is technically optional, you should always include one to maximize the usability of your content.
 
 Functionally, the `alt` attribute of the `<input type="image">` element works just like the [`alt`](/en-US/docs/Web/HTML/Element/img#alt) attribute on {{HTMLElement("img")}} elements.
 
@@ -160,7 +161,7 @@ Let's look at a basic example that includes all the essential features you'd nee
 
   - : A name or keyword indicating where to display the response that is received after submitting the form. This is a name of, or keyword for, a _browsing context_ (for example, tab, window, or inline frame). If this attribute is specified, it overrides the [`target`](/en-US/docs/Web/HTML/Element/form#target) attribute of the element's form owner. The following keywords have special meanings:
 
-    - \_`self`: Load the response into the same browsing context as the current one. This value is the default if the attribute is not specified.
+    - `_self`: Load the response into the same browsing context as the current one. This value is the default if the attribute is not specified.
     - `_blank`: Load the response into a new unnamed browsing context.
     - `_parent`: Load the response into the parent browsing context of the current one. If there is no parent, this option behaves the same way as `_self`.
     - `_top`: Load the response into the top-level browsing context (that is, the browsing context that is an ancestor of the current one, and has no parent). If there is no parent, this option behaves the same as `_self`.
@@ -213,7 +214,7 @@ The following example shows the same button as before, but included in the conte
 
 #### CSS
 
-And now some simple CSS to make the basic elements sit more neatly:
+And now some CSS to make the basic elements sit more neatly:
 
 ```css
 div {
@@ -340,4 +341,3 @@ Here, `object-position` is configured to draw the image in the top-right corner 
 - {{HTMLElement("input")}} and the {{domxref("HTMLInputElement")}} interface which implements it.
 - The HTML {{HTMLElement("img")}} element
 - Positioning and sizing the image within the `<input>` element's frame: {{cssxref("object-position")}} and {{cssxref("object-fit")}}
-- [Compatibility of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

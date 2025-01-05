@@ -18,16 +18,16 @@ Given an element that you'd like to present in fullscreen mode (such as a {{HTML
 Let's consider this {{HTMLElement("video")}} element:
 
 ```html
-<video controls id="myvideo">
-  <source src="somevideo.webm"></source>
-  <source src="somevideo.mp4"></source>
+<video controls id="my-video">
+  <source src="somevideo.webm" />
+  <source src="somevideo.mp4" />
 </video>
 ```
 
 We can put that video into fullscreen mode as follows:
 
 ```js
-const elem = document.getElementById("myvideo");
+const elem = document.getElementById("my-video");
 if (elem.requestFullscreen) {
   elem.requestFullscreen();
 }
@@ -41,9 +41,10 @@ When fullscreen mode is successfully engaged, the document which contains the el
 
 ### When a fullscreen request fails
 
-It's not guaranteed that you'll be able to switch into fullscreen mode. For example, {{HTMLElement("iframe")}} elements have the [`allowfullscreen`](/en-US/docs/Web/HTML/Element/iframe#allowfullscreen) attribute in order to opt-in to allowing their content to be displayed in fullscreen mode. In addition, certain kinds of content, such as windowed plug-ins, cannot be presented in fullscreen mode. Attempting to put an element which can't be displayed in fullscreen mode (or the parent or descendant of such an element) won't work. Instead, the element which requested fullscreen will receive a `mozfullscreenerror` event. When a fullscreen request fails, Firefox will log an error message to the Web Console explaining why the request failed. In Chrome and newer versions of Opera however, no such warning is generated.
+It's not guaranteed that you'll be able to switch into fullscreen mode. For example, {{HTMLElement("iframe")}} elements have the [`allowfullscreen`](/en-US/docs/Web/HTML/Element/iframe#allowfullscreen) attribute in order to opt-in to allowing their content to be displayed in fullscreen mode. In addition, certain kinds of content, such as windowed plug-ins, cannot be presented in fullscreen mode. Attempting to put an element which can't be displayed in fullscreen mode (or the parent or descendant of such an element) won't work. Instead, the element which requested fullscreen will receive a `fullscreenerror` event. When a fullscreen request fails, Firefox will log an error message to the Web Console explaining why the request failed. In Chrome and newer versions of Opera however, no such warning is generated.
 
-> **Note:** Fullscreen requests need to be called from within an event handler or otherwise they will be denied.
+> [!NOTE]
+> Fullscreen requests need to be called from within an event handler or otherwise they will be denied.
 
 ## Getting out of full screen mode
 
@@ -104,7 +105,7 @@ function toggleFullScreen() {
 }
 ```
 
-This starts by looking at the value of the `fullscreenElement` attribute on the {{DOMxRef("document")}}. If it's `null`, the document is currently in windowed mode, so we need to switch to fullscreen mode. Switching to fullscreen mode is done by calling {{DOMxRef("element.requestFullscreen()")}}.
+This starts by looking at the value of the `fullscreenElement` attribute on the {{DOMxRef("document")}}. If it's `null`, the document is currently in windowed mode, so we need to switch to fullscreen mode. Switching to fullscreen mode is done by calling {{DOMxRef("Element.requestFullscreen()")}}.
 
 If fullscreen mode is already active (`fullscreenElement` is non-`null`), we call {{DOMxRef("document.exitFullscreen()")}}.
 

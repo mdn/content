@@ -28,11 +28,12 @@ Change it to indicate compatibility with Firefox 3:
 
 Then reinstall your extension.
 
-Note that Firefox 3 does away with the extra ".0" in the version number, so instead of using "3.0.0.\*, you only need to use "3.0.\*".
+Note that Firefox 3 does away with the extra ".0" in the version number, so instead of using `3.0.0.*`, you only need to use `3.0.*`.
 
 There have been (and will continue to be) a number of API changes that will likely break some extensions. We're still working on compiling a complete list of these changes.
 
-> **Note:** If your extension still uses an [`Install.js`](/en-US/docs/Install.js) script instead of an [install manifest](/en-US/docs/Install_Manifests), you need to make the transition to an install manifest now. Firefox 3 no longer supports `install.js` scripts in XPI files.
+> [!NOTE]
+> If your extension still uses an [`Install.js`](/en-US/docs/Install.js) script instead of an [install manifest](/en-US/docs/Install_Manifests), you need to make the transition to an install manifest now. Firefox 3 no longer supports `install.js` scripts in XPI files.
 
 ### Add localizations to the install manifest
 
@@ -161,5 +162,5 @@ _Add simple changes you had to make while updating your extension to work with F
 - `window.addEventListener("load", myFunc, true)` is not fired when loading web content (browser page loads). This is due to [Firefox bug 296639](https://bugzil.la/296639) which changes the way inner and outer windows communicate. The simple fix here is to use `gBrowser.addEventListener("load", myFunc, true)` as described [here](/en-US/docs/Code_snippets/Tabbed_browser#detecting_page_load) and works in Firefox 2 as well.
 - `content.window.getSelection()` gives an object (which can be converted to a string by `toString()`), unlike the now deprecated `content.document.getSelection()` which returns a string
 - `event.preventBubble()` was deprecated in Firefox 2 and has been removed in Firefox 3. Use [`event.stopPropagation()`](/en-US/docs/Web/API/Event/stopPropagation), which works in Firefox 2 as well.
-- Timers that are initiated using `setTimeout()` are now blocked by modal windows due to the fix made for [Firefox bug 52209](https://bugzil.la/52209). You may use `nsITimer` instead.
+- Timers that are initiated using {{domxref("Window.setTimeout", "setTimeout()")}} and {{domxref("WorkerGlobalScope.setTimeout", "setTimeout()")}} are now blocked by modal windows due to the fix made for [Firefox bug 52209](https://bugzil.la/52209). You may use `nsITimer` instead.
 - If your extension needs to allow an untrusted source (e.g., a website) to access the extension's chrome, then you must use the new [`contentaccessible` flag](/en-US/docs/Chrome_Registration#contentaccessible).

@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPUBindGroup.label
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`label`** property of the
 {{domxref("GPUBindGroup")}} interface provides a label that can be used to identify the object, for example in {{domxref("GPUError")}} messages or console warnings.
@@ -38,9 +38,9 @@ const bindGroup = device.createBindGroup({
   ],
 });
 
-bindGroup.label = "mybindgroup";
+bindGroup.label = "my_bind_group";
 
-console.log(bindGroup.label); // "mybindgroup";
+console.log(bindGroup.label); // "my_bind_group"
 ```
 
 Setting a label via the originating {{domxref("GPUDevice.createBindGroup()")}} call, and then getting it via `GPUBindGroup.label`:
@@ -58,10 +58,10 @@ const bindGroup = device.createBindGroup({
       },
     },
   ],
-  label: "mybindgroup",
+  label: "my_bind_group",
 });
 
-console.log(bindGroup.label); // "mybindgroup";
+console.log(bindGroup.label); // "my_bind_group"
 ```
 
 ## Specifications

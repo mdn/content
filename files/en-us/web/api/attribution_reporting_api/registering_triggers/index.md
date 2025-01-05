@@ -48,9 +48,10 @@ However, what happens behind the scenes to register triggers, look for matches, 
 
    - `"event_trigger_data"`: An object representing data about the trigger. This includes:
      - `"trigger_data"`: The data associated with the trigger, which is typically used to indicate events such as "user added item to shopping cart" or "user signed up to mailing list". This value will be included in the generated report, if any, although it will be subject to modification based on the attributed source's [`"trigger_data_matching"`](/en-US/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#trigger_data_matching) field.
-       > **Note:** The values used to represent each event, and the number of elements in the array, are completely arbitrary and defined by you as the developer. The array may contain values that are not used, but values must be present in the array to be attributed to the source by the browser when a trigger is registered.
+       > [!NOTE]
+       > The values used to represent each event, and the number of elements in the array, are completely arbitrary and defined by you as the developer. The array may contain values that are not used, but values must be present in the array to be attributed to the source by the browser when a trigger is registered.
      - `"priority"`: A string representing a priority value for the attribution trigger. See [Report priorities and limits](/en-US/docs/Web/API/Attribution_Reporting_API/Generating_reports#report_priorities_and_limits) for more information.
-     - `"deduplication_key"`: A string representing a unique key that can be used to prevent attributions from being duplicated — for example if a user were to add the same item to a shopping cart multiple times. See [Prevent duplication in reports](https://developer.chrome.com/docs/privacy-sandbox/attribution-reporting/prevent-duplication/) for more information.
+     - `"deduplication_key"`: A string representing a unique key that can be used to prevent attributions from being duplicated — for example if a user were to add the same item to a shopping cart multiple times. See [Prevent duplication in reports](https://developers.google.com/privacy-sandbox/private-advertising/attribution-reporting/prevent-duplication) for more information.
    - `"debug_key"`: A number representing a debug key. Set this if you want to generate a [debug report](/en-US/docs/Web/API/Attribution_Reporting_API/Generating_reports#debug_reports) alongside the associated attribution report.
 
    See {{httpheader("Attribution-Reporting-Register-Trigger")}} for a detailed description of all the available fields.
@@ -92,7 +93,8 @@ However, what happens behind the scenes to register triggers, look for matches, 
    - match the site of at least one of the `destination`s specified in the source's associated data.
    - be same-origin with the request that specified the source registration.
 
-   > **Note:** These requirements provide privacy protection, but also flexibility — the source _and_ trigger can potentially be embedded in an {{htmlelement("iframe")}} or situated in the top-level site.
+   > [!NOTE]
+   > These requirements provide privacy protection, but also flexibility — the source _and_ trigger can potentially be embedded in an {{htmlelement("iframe")}} or situated in the top-level site.
 
    There are many other factors that will prevent a successful match outcome; for example:
 
@@ -103,7 +105,8 @@ However, what happens behind the scenes to register triggers, look for matches, 
 
 4. If a successful match is found, the browser [generates a report](/en-US/docs/Web/API/Attribution_Reporting_API/Generating_reports) based on the source and trigger data, and sends it to a reporting endpoint.
 
-> **Note:** Attribution triggers cannot be registered on {{htmlelement("a")}} elements or {{domxref("Window.open()")}} calls like attribution sources can.
+> [!NOTE]
+> Attribution triggers cannot be registered on {{htmlelement("a")}} elements or {{domxref("Window.open()")}} calls like attribution sources can.
 
 ## HTML-based attribution triggers
 
@@ -135,7 +138,7 @@ In this case, the browser will attempt to match the trigger with a stored attrib
 A {{htmlelement("script")}} example might look like so:
 
 ```html
-<script src="advertising-script.js" attributionsrc />
+<script src="advertising-script.js" attributionsrc></script>
 ```
 
 ```js
@@ -151,7 +154,7 @@ JavaScript-based attribution triggers are more versatile than HTML-based attribu
 
 To register a script-based attribution trigger, you can either:
 
-- Send a {{domxref("fetch()")}} request containing the `attributionReporting` option:
+- Send a {{domxref("Window/fetch", "fetch()")}} request containing the `attributionReporting` option:
 
   ```js
   const attributionReporting = {
@@ -200,7 +203,8 @@ To register a script-based attribution trigger, you can either:
 
 In this case, the browser will attempt to match the trigger with a stored attribution source when the browser receives the response from the fetch request.
 
-> **Note:** The request can be for any resource. It doesn't need to have anything directly to do with the Attribution Reporting API, and can be a request for JSON, plain text, an image blob, or whatever else makes sense for your app.
+> [!NOTE]
+> The request can be for any resource. It doesn't need to have anything directly to do with the Attribution Reporting API, and can be a request for JSON, plain text, an image blob, or whatever else makes sense for your app.
 
 ## Specifying a URL inside attributionsrc
 

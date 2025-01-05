@@ -7,7 +7,8 @@ browser-compat: javascript.builtins.eval
 
 {{jsSidebar("Objects")}}
 
-> **Warning:** Executing JavaScript from a string is an enormous security risk. It is far too easy for a bad actor to run arbitrary code when you use `eval()`. See [Never use direct eval()!](#never_use_direct_eval!), below.
+> [!WARNING]
+> Executing JavaScript from a string is an enormous security risk. It is far too easy for a bad actor to run arbitrary code when you use `eval()`. See [Never use direct eval()!](#never_use_direct_eval!), below.
 
 The **`eval()`** function evaluates JavaScript code represented as a string and returns its completion value. The source is parsed as a script.
 
@@ -75,8 +76,8 @@ eval("x + y");
 eval?.("x + y");
 
 // Indirect call using a variable to store and return eval
-const geval = eval;
-geval("x + y");
+const myEval = eval;
+myEval("x + y");
 
 // Indirect call through member access
 const obj = { eval };
@@ -311,7 +312,7 @@ const propPath = getPropPath(); // suppose it returns "a.b.c"
 const result = setDescendantProp(obj, propPath, 1); // obj.a.b.c is now 1
 ```
 
-However, beware that using bracket accessors with unconstrained input is not safe either — it may lead to [object injection attacks](https://github.com/nodesecurity/eslint-plugin-security/blob/main/docs/the-dangers-of-square-bracket-notation.md).
+However, beware that using bracket accessors with unconstrained input is not safe either — it may lead to [object injection attacks](https://github.com/eslint-community/eslint-plugin-security/blob/main/docs/the-dangers-of-square-bracket-notation.md).
 
 #### Using callbacks
 

@@ -109,6 +109,7 @@ Which you choose of the two preceding examples is not important, but it can matt
 - [`setWindowRect`](/en-US/docs/Web/WebDriver/Capabilities/setWindowRect)
 - [`timeouts`](/en-US/docs/Web/WebDriver/Capabilities/timeouts)
 - [`unhandledPromptBehavior`](/en-US/docs/Web/WebDriver/Capabilities/unhandledPromptBehavior)
+- [`webSocketUrl`](/en-US/docs/Web/WebDriver/Capabilities/webSocketUrl)
 
 ## Vendor-specific capabilities
 

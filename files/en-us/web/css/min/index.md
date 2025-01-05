@@ -29,11 +29,11 @@ You can use different units for each value in your expression, if you wish. You 
 - You can (and often need to) combine `min()` and `max()` values, or use `min()` within a `clamp()` or `calc()` function.
 - You can provide more than two arguments, if you have multiple constraints to apply.
 
-### Formal syntax
+## Formal syntax
 
 {{CSSSyntax}}
 
-## Accessibility concerns
+## Accessibility
 
 When using `min()` to set a maximum font size, ensure that the font can still be scaled at least 200% for readability (without assistive technology like a zoom function).
 
@@ -89,4 +89,4 @@ Here, the form itself, along with the margin, border, and padding, will be 100% 
 - {{CSSxRef("calc", "calc()")}}
 - {{CSSxRef("clamp", "clamp()")}}
 - {{CSSxRef("max", "max()")}}
-- [CSS Values](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)
+- [Learn: Values and units](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units)

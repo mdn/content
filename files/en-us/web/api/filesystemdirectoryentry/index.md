@@ -56,9 +56,11 @@ _This interface inherits methods from its parent interface, {{domxref("FileSyste
 - {{domxref("FileSystemDirectoryEntry.createReader", "createReader()")}}
   - : Creates a {{domxref("FileSystemDirectoryReader")}} object which can be used to read the entries in this directory.
 - {{domxref("FileSystemDirectoryEntry.getDirectory", "getDirectory()")}}
-  - : Returns a {{domxref("FileSystemDirectoryEntry")}} object representing a directory located at a given path, relative to the directory on which the method is called.
+  - : Returns a `FileSystemDirectoryEntry` object representing a directory located at a given path, relative to the directory on which the method is called.
 - {{domxref("FileSystemDirectoryEntry.getFile", "getFile()")}}
   - : Returns a {{domxref("FileSystemFileEntry")}} object representing a file located within the directory's hierarchy, given a path relative to the directory on which the method is called.
+- {{domxref("FileSystemDirectoryEntry.removeRecursively", "removeRecursively()")}} {{Deprecated_inline}} {{Non-standard_inline}}
+  - : Removes the directory as well as all of its content, hierarchically iterating over its entire subtree of descendant files and directories.
 
 ## Specifications
 

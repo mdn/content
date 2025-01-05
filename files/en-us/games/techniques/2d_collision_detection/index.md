@@ -137,7 +137,7 @@ Implementing SAT is out of scope for this page so see the recommended tutorials 
 
 1. [Separating Axis Theorem (SAT) explanation](https://www.sevenson.com.au/programming/sat/)
 2. [Collision detection and response](https://www.metanetsoftware.com/technique/tutorialA.html)
-3. [Collision detection Using the Separating Axis Theorem](https://gamedevelopment.tutsplus.com/tutorials/collision-detection-using-the-separating-axis-theorem--gamedev-169)
+3. [Collision detection Using the Separating Axis Theorem](https://code.tutsplus.com/collision-detection-using-the-separating-axis-theorem--gamedev-169t)
 4. [SAT (Separating Axis Theorem)](https://dyn4j.org/2010/01/sat/)
 5. [Separating Axis Theorem](https://programmerart.weebly.com/separating-axis-theorem.html)
 
@@ -147,7 +147,7 @@ While some of these algorithms for collision detection are simple enough to calc
 
 ### Broad Phase
 
-Broad phase should give you a list of entities that _could_ be colliding. This can be implemented with a spacial data structure that will give you a rough idea of where the entity exists and what exist around it. Some examples of spacial data structures are Quad Trees, R-Trees or a Spacial Hashmap.
+Broad phase should give you a list of entities that _could_ be colliding. This can be implemented with a spatial data structure that will give you a rough idea of where the entity exists and what exist around it. Some examples of spatial data structures are Quad Trees, R-Trees or a Spatial Hashmap.
 
 ### Narrow Phase
 

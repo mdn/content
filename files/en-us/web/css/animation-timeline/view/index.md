@@ -13,9 +13,11 @@ The **`view()`** [CSS function](/en-US/docs/Web/CSS/CSS_Functions) can be used w
 
 The function parameters can specify the scrollbar axis along which timeline progress will be tracked and an inset that adjusts the position of the box in which the subject is deemed to be visible.
 
-> **Note:** If the indicated axis does not contain a scrollbar, then the animation timeline will be inactive (have zero progress).
+> [!NOTE]
+> If the indicated axis does not contain a scrollbar, then the animation timeline will be inactive (have zero progress).
 
-> **Note:** Each use of `view()` corresponds to its own unique instance of {{domxref("ViewTimeline")}} in the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API).
+> [!NOTE]
+> Each use of `view()` corresponds to its own unique instance of {{domxref("ViewTimeline")}} in the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API).
 
 ## Syntax
 
@@ -70,9 +72,10 @@ animation-timeline: view(x 200px auto);
     - end
       - : Inward offset from end of the scrollport.
 
-> **Note:** The scroller and inset values can be specified in any order.
+> [!NOTE]
+> The scroller and inset values can be specified in any order.
 
-### Formal syntax
+## Formal syntax
 
 {{CSSSyntax}}
 

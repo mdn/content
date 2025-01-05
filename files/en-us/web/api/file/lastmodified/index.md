@@ -24,7 +24,7 @@ The example below will loop through the files you choose, and print whether each
 ### HTML
 
 ```html
-<input type="file" id="filepicker" name="fileList" multiple />
+<input type="file" id="file-picker" name="fileList" multiple />
 <output id="output"></output>
 ```
 
@@ -39,9 +39,9 @@ output {
 
 ```js
 const output = document.getElementById("output");
-const filepicker = document.getElementById("filepicker");
+const filePicker = document.getElementById("file-picker");
 
-filepicker.addEventListener("change", (event) => {
+filePicker.addEventListener("change", (event) => {
   const files = event.target.files;
   const now = new Date();
   output.textContent = "";
@@ -64,7 +64,7 @@ filepicker.addEventListener("change", (event) => {
 ### Dynamically created files
 
 If a File is created dynamically, the last modified time can be supplied in the
-{{domxref("File.File()", "new File()")}} constructor function. If it is missing,
+{{domxref("File.File()", "File()")}} constructor function. If it is missing,
 `lastModified` inherits the current time from {{jsxref("Date.now()")}} at the
 moment the `File` object gets created.
 

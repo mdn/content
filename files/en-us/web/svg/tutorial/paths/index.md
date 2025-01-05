@@ -107,11 +107,11 @@ The relative forms of these commands can also be used to draw the same picture. 
 
 The path will move to point (`10`, `10`) and then move horizontally 80 points to the right, then 80 points down, then 80 points to the left, and then back to the start.
 
-In these examples, it would probably be simpler to use the {{SVGElement("polygon")}} or {{SVGElement("polyline")}} elements. However, paths are used so often in drawing SVG that developers may be more comfortable using them instead. There is no real performance penalty or bonus for using one or the other.
+In these examples, it would probably be more intuitive to use the {{SVGElement("polygon")}} or {{SVGElement("polyline")}} elements. However, paths are used so often in drawing SVG that developers may be more comfortable using them instead. There is no real performance penalty or bonus for using one or the other.
 
 ## Curve commands
 
-There are three different commands that can be used to create smooth curves. Two of those curves are [Bézier curves](/en-US/docs/Glossary/Bezier_curve), and the third is an "arc" or part of a circle. You might have already gained practical experience with Bézier curves using path tools in Inkscape, Illustrator or Photoshop. There are an infinite number of Bézier curves, but only two simple ones are available in `<path>` elements: a cubic one, called with `C`, and a quadratic one, called with `Q`.
+There are three different commands that can be used to create smooth curves. Two of those curves are [Bézier curves](/en-US/docs/Glossary/Bezier_curve), and the third is an "arc" or part of a circle. You might have already gained practical experience with Bézier curves using path tools in Inkscape, Illustrator or Photoshop. There are an infinite number of Bézier curves, but only two are available in `<path>` elements: a cubic one, called with `C`, and a quadratic one, called with `Q`.
 
 ### Bézier Curves
 
@@ -167,7 +167,8 @@ An example of this syntax is shown below, and in the figure to the left the spec
 
 The other type of Bézier curve, the quadratic curve called with `Q`, is actually a simpler curve than the cubic one. It requires one control point which determines the slope of the curve at both the start point and the end point. It takes two parameters: the control point and the end point of the curve.
 
-> **Note:** The co-ordinate deltas for `q` are both relative to the previous point (that is, `dx` and `dy` are not relative to `dx1` and `dy1`).
+> [!NOTE]
+> The co-ordinate deltas for `q` are both relative to the previous point (that is, `dx` and `dy` are not relative to `dx1` and `dy1`).
 
 ```plain
 Q x1 y1, x y

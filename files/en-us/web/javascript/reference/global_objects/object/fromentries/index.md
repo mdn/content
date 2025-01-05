@@ -40,7 +40,8 @@ The `Object.fromEntries()` method takes a list of key-value pairs and returns a 
 
 `Object.fromEntries()` performs the reverse of {{jsxref("Object.entries()")}}, except that `Object.entries()` only returns string-keyed properties, while `Object.fromEntries()` can also create symbol-keyed properties.
 
-> **Note:** Unlike {{jsxref("Array.from()")}}, `Object.fromEntries()` does not use the value of `this`, so calling it on another constructor does not create objects of that type.
+> [!NOTE]
+> Unlike {{jsxref("Array.from()")}}, `Object.fromEntries()` does not use the value of `this`, so calling it on another constructor does not create objects of that type.
 
 ## Examples
 

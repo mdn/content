@@ -52,7 +52,7 @@ This property can take one of two forms:
 
   - : This keyword forces the use of a 0 with a slash; this is useful when a clear distinction between O and 0 is needed. It corresponds to the OpenType values `zero`.
 
-- _`<numeric-figure-values`>_
+- _`<numeric-figure-values>`_
 
   - : These values control the figures used for numbers. Two values are possible:
 
@@ -85,7 +85,29 @@ This property can take one of two forms:
 
 ### Setting ordinal numeric forms
 
-{{EmbedGHLiveSample("css-examples/font-features/font-variant-numeric-example.html", '100%', 600)}}
+Click "Play" in the code blocks below to edit the example in the MDN Playground:
+
+```html live-sample___font-variant-numeric-example
+<p class="ordinal">1st, 2nd, 3rd, 4th, 5th</p>
+```
+
+```css live-sample___font-variant-numeric-example
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url("https://mdn.github.io/shared-assets/fonts/SourceSansPro-Regular.otf")
+    format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+.ordinal {
+  font-family: "Source Sans Pro";
+  font-size: 2rem;
+  font-variant-numeric: ordinal;
+}
+```
+
+{{EmbedLiveSample("font-variant-numeric-example")}}
 
 ## Specifications
 

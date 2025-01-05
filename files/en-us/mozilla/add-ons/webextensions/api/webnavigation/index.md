@@ -25,8 +25,8 @@ Each event corresponds to a particular stage in the navigation. The sequence of 
 - Additionally:
 
   - `{{WebExtAPIRef("webNavigation.onCreatedNavigationTarget", "onCreatedNavigationTarget")}}` is fired before `onBeforeNavigate` if the browser needed to create a new tab or window for the navigation (for example, because the user opened a link in a new tab).
-  - {{WebExtAPIRef("webNavigation.onHistoryStateUpdated", "onHistoryStateUpdated")}} is fired if a page uses the [history API (2011)](http://diveintohtml5.info/history.html) to update the URL displayed in the browser's location bar.
-  - {{WebExtAPIRef("webNavigation.onReferenceFragmentUpdated", "onReferenceFragmentUpdated")}} is fired if the [fragment identifier](https://en.wikipedia.org/wiki/Fragment_identifier) for a page is changed.
+  - {{WebExtAPIRef("webNavigation.onHistoryStateUpdated", "onHistoryStateUpdated")}} is fired if a page uses the [history API](/en-US/docs/Web/API/History_API) to update the URL displayed in the browser's location bar.
+  - {{WebExtAPIRef("webNavigation.onReferenceFragmentUpdated", "onReferenceFragmentUpdated")}} is fired if the [fragment identifier](/en-US/docs/Web/URI/Fragment) for a page is changed.
   - {{WebExtAPIRef("webNavigation.onErrorOccurred", "onErrorOccurred")}} can be fired at any point.
 
 Each navigation is a URL transition in a particular browser frame. The browser frame is identified by a tab ID and a frame ID. The frame may be the top-level browsing context in the tab, or may be a nested browsing context implemented as an [iframe](/en-US/docs/Web/HTML/Element/iframe).
@@ -70,7 +70,7 @@ To use this API you need to have the "webNavigation" [permission](/en-US/docs/Mo
 - {{WebExtAPIRef("webNavigation.onTabReplaced")}}
   - : Fired when the contents of the tab is replaced by a different (usually previously pre-rendered) tab.
 - {{WebExtAPIRef("webNavigation.onHistoryStateUpdated")}}
-  - : Fired when the page used the [history API (2011)](http://diveintohtml5.info/history.html) to update the URL displayed in the browser's location bar.
+  - : Fired when the page used the [history API (2011)](/en-US/docs/Web/API/History_API) to update the URL displayed in the browser's location bar.
 
 ## Browser compatibility
 
@@ -78,7 +78,8 @@ To use this API you need to have the "webNavigation" [permission](/en-US/docs/Mo
 
 {{WebExtExamples("h2")}}
 
-> **Note:** This API is based on Chromium's [`chrome.webNavigation`](https://developer.chrome.com/docs/extensions/reference/webNavigation/) API. This documentation is derived from [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.webNavigation`](https://developer.chrome.com/docs/extensions/reference/api/webNavigation) API. This documentation is derived from [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

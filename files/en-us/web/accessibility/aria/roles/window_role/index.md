@@ -9,7 +9,8 @@ spec-urls: https://w3c.github.io/aria/#window
 
 The `window` role defines a browser or app window.
 
-> **Note:** The `window` role is an abstract role. It is included here for completeness of documentation. It should not be used by web authors.
+> [!NOTE]
+> The `window` role is an abstract role. It is included here for completeness of documentation. It should not be used by web authors.
 
 ## Description
 

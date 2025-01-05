@@ -9,7 +9,8 @@ browser-compat: css.properties.overflow-block
 
 The **`overflow-block`** [CSS](/en-US/docs/Web/CSS) property sets what shows when content overflows the block start and block end edges of a box. This may be nothing, a scroll bar, or the overflow content.
 
-> **Note:** The `overflow-block` property maps to {{Cssxref("overflow-y")}} or {{Cssxref("overflow-x")}} depending on the writing mode of the document.
+> [!NOTE]
+> The `overflow-block` property maps to {{Cssxref("overflow-y")}} or {{Cssxref("overflow-x")}} depending on the writing mode of the document.
 
 ## Syntax
 
@@ -164,4 +165,4 @@ div {
 - [CSS overflow](/en-US/docs/Web/CSS/CSS_overflow) module
 - [CSS scrollbars style](/en-US/docs/Web/CSS/CSS_scrollbars_styling) module
 - [CSS writing modes](/en-US/docs/Web/CSS/CSS_writing_modes)
-- [CSS building blocks: Overflowing content](/en-US/docs/Learn/CSS/Building_blocks/Overflowing_content)
+- [Learn: Overflowing content](/en-US/docs/Learn_web_development/Core/Styling_basics/Overflow)

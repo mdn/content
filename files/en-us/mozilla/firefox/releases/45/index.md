@@ -50,7 +50,7 @@ Highlights:
 ### JavaScript
 
 - ES2015 [Classes](/en-US/docs/Web/JavaScript/Reference/Classes) are now enabled by default ([Firefox bug 1197932](https://bugzil.la/1197932)).
-- {{jsxref("Operators/Expression_closures", "Expression closures", "", 1)}} are deprecated and will now present a warning in the console ([Firefox bug 995610](https://bugzil.la/995610)).
+- [Expression closures](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#statements_2) are deprecated and will now present a warning in the console ([Firefox bug 995610](https://bugzil.la/995610)).
 - {{jsxref("String.prototype.replace")}} does not restore {{jsxref("Global_Objects/RegExp/n", "RegExp static properties", "", 1)}} after executing function parameter anymore ([Firefox bug 1226936](https://bugzil.la/1226936)).
 - {{jsxref("Math.random()")}} has been updated to the better XorShift128+ algorithm ([Firefox bug 322529](https://bugzil.la/322529)).
 
@@ -93,7 +93,7 @@ _No change._
 
 - [Web Speech Synthesis API](/en-US/docs/Web/API/Web_Speech_API) has been implemented on Firefox Desktop ([Firefox bug 1003439](https://bugzil.la/1003439)).
 - The {{domxref("Window/storage_event", "storage")}} event has been added.
-- The interface {{domxref("ComputedTiming")}} have been added to our experimental implementation of [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) ([Firefox bug 1108055](https://bugzil.la/1108055)).
+- The interface `ComputedTiming` have been added to our experimental implementation of [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) ([Firefox bug 1108055](https://bugzil.la/1108055)).
 - The {{domxref("Document.selectionchange_event", "Document.onselectionchange")}} event handler property has been added ([Firefox bug 1231193](https://bugzil.la/1231193)).
 - After removing a video track from a media stream by calling {{domxref("MediaStream.removeTrack()")}} you can now add another video track later using {{domxref("MediaStream.addTrack()")}} and have it played ([Firefox bug 1223696](https://bugzil.la/1223696)).
 
@@ -128,7 +128,7 @@ _No change._
 
 ### XUL
 
-- Tab Groups [have been removed](https://support.mozilla.org/kb/tab-groups-removal).
+- Tab Groups [have been removed](https://support.mozilla.org/en-US/kb/tab-groups-removal).
 
 ### JavaScript code modules
 

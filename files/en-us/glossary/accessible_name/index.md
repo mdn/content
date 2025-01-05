@@ -18,7 +18,7 @@ Other elements get their accessible name from the content of associated elements
 
 For some elements, the accessible name comes from the element's attributes; for example, the `alt` attribute in the case of {{HTMLElement("img")}}. Given `<img src="grape.jpg" alt="banana"/>`, the image's accessible name is "banana."
 
-To create an association between visible content and an element or multiple text nodes and an element, the [`aria-labeledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) attribute can be used. If there is no visible text to associate with a UI element needing an accessible name, the [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) attribute can be used. Names should not be added to elements marking up inline text, like {{HTMLElement("code")}}, {{HTMLElement("del")}}, and {{HTMLElement("mark")}}.
+To create an association between visible content and an element or multiple text nodes and an element, the [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) attribute can be used. If there is no visible text to associate with a UI element needing an accessible name, the [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) attribute can be used. Names should not be added to elements marking up inline text, like {{HTMLElement("code")}}, {{HTMLElement("del")}}, and {{HTMLElement("mark")}}.
 
 Many elements, such as sections of textual content, don't need an accessible name. All controls should have an accessible name. All images that convey information and aren't purely presentational do too.
 
@@ -30,7 +30,7 @@ Assistive technologies provide users with the accessibility name property, which
 - [ARIA attribute](/en-US/docs/Web/Accessibility/ARIA/Attributes)
 - [Accessible Name and Description Computation 1.2 (accname)](https://w3c.github.io/accname/#mapping_additional_nd_description)
 - [Accessibility](/en-US/docs/Web/Accessibility)
-- [Learn accessibility](/en-US/docs/Learn/Accessibility)
+- [Learn accessibility](/en-US/docs/Learn_web_development/Core/Accessibility)
 - [Web accessibility](https://en.wikipedia.org/wiki/Web_accessibility) on Wikipedia
 - [Web Accessibility In Mind](https://webaim.org/)
 - [ARIA](/en-US/docs/Web/Accessibility/ARIA)

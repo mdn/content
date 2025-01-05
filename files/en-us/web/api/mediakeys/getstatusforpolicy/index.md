@@ -35,7 +35,8 @@ getStatusForPolicy(policy)
 
       - : A string indicating the semantic version of the minimum HDCP version to check for usability, such as `1.0`, `1.4`, `2.2`, `2.3`.
 
-> **Note:** At least one policy restriction must be specified, so `minHdcpVersion` is only "technically" optional.
+> [!NOTE]
+> At least one policy restriction must be specified, so `minHdcpVersion` is only "technically" optional.
 
 ### Return value
 
@@ -84,7 +85,8 @@ The string can have one of the following values:
 
 This example checks if keys are usable for decrypting a particular video format when using a minimum HDCP version of `2.2`.
 
-> **Note:** A status of `output-restricted` when you're using an external display can be caused by hardware HDCP incompatibility issues.
+> [!NOTE]
+> A status of `output-restricted` when you're using an external display can be caused by hardware HDCP incompatibility issues.
 > If using a laptop, you may be able to "fix" this by disconnecting the external display.
 
 #### HTML
@@ -140,7 +142,7 @@ async function getMediaStatus(config) {
     log(mediaStatus);
 
     // Get the content or fallback to an alternative if the
-    // keys are not usuable
+    // keys are not usable
     if (mediaStatus === "usable") {
       console.log("HDCP 2.2 can be enforced.");
       // Fetch the high resolution protected content

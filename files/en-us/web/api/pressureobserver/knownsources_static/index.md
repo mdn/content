@@ -8,11 +8,12 @@ status:
 browser-compat: api.PressureObserver.knownSources_static
 ---
 
-{{APIRef("Compute Pressure API")}}{{SeeCompatTable}}{{securecontext_header}}
+{{APIRef("Compute Pressure API")}}{{SeeCompatTable}}{{AvailableInWorkers("window_and_worker_except_service")}}{{securecontext_header}}
 
 The static **`knownSources`** read-only property of the {{domxref("PressureObserver")}} interface returns an array of the {{domxref("PressureRecord.source","source")}} values supported by the user agent in alphabetical order.
 
-> **Note:** The list of supported sources varies per browser, operating system, and hardware, and is evolving. This property is merely a hint about source types the user agents supports. Call {{domxref("PressureObserver.observe()", "observe()")}} and check for a `NotSupportedError` to see if pressure observation is possible.
+> [!NOTE]
+> The list of supported sources varies per browser, operating system, and hardware, and is evolving. This property is merely a hint about source types the user agents supports. Call {{domxref("PressureObserver.observe()", "observe()")}} and check for a `NotSupportedError` to see if pressure observation is possible.
 
 ## Value
 

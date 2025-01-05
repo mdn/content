@@ -2,7 +2,7 @@
 title: repeating-radial-gradient()
 slug: Web/CSS/gradient/repeating-radial-gradient
 page-type: css-function
-browser-compat: css.types.image.gradient.repeating-radial-gradient
+browser-compat: css.types.gradient.repeating-radial-gradient
 ---
 
 {{CSSRef}}
@@ -49,14 +49,15 @@ repeating-radial-gradient(farthest-corner at 20% 20%, red 0, green, red 20%)
     | `farthest-side`   | Similar to `closest-side`, except the ending shape is sized to meet the side of the box farthest from its center (or vertical and horizontal sides).                            |
     | `farthest-corner` | The gradient's ending shape is sized so that it exactly meets the farthest corner of the box from its center.                                                                   |
 
-    > **Note:** Early implementations of this function included other keywords (`cover` and `contain`) as synonyms of the standard `farthest-corner` and `closest-side`, respectively. Use the standard keywords only, as some implementations have already dropped those older variants.
+    > [!NOTE]
+    > Early implementations of this function included other keywords (`cover` and `contain`) as synonyms of the standard `farthest-corner` and `closest-side`, respectively. Use the standard keywords only, as some implementations have already dropped those older variants.
 
 - `<color-stop>`
   - : A color-stop's {{cssxref("&lt;color&gt;")}} value, followed by an optional stop position (either a {{cssxref("&lt;percentage&gt;")}} or a {{cssxref("&lt;length&gt;")}} along the gradient's axis). A percentage of `0%`, or a length of `0`, represents the center of the gradient; the value `100%` represents the intersection of the ending shape with the virtual gradient ray. Percentage values in between are linearly positioned on the virtual gradient ray.
 
-### Formal syntax
+## Formal syntax
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Examples
 
@@ -172,7 +173,8 @@ The box on the left uses [shorter interpolation](/en-US/docs/Web/CSS/hue-interpo
 
 {{EmbedLiveSample("Interpolating with hue", 240, 200)}}
 
-> **Note:** Please see [Using CSS gradients](/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradients) for more examples.
+> [!NOTE]
+> Please see [Using CSS gradients](/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradients) for more examples.
 
 ## Specifications
 

@@ -6,7 +6,9 @@ page-type: glossary-definition
 
 {{GlossarySidebar}}
 
-In {{Glossary("HTML")}}, the **doctype** is the required "`<!DOCTYPE html>`" preamble found at the top of all documents. Its sole purpose is to prevent a {{Glossary("browser")}} from switching into so-called ["quirks mode"](/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode) when rendering a document; that is, the "`<!DOCTYPE html>`" doctype ensures that the browser makes a best-effort attempt at following the relevant specifications, rather than using a different rendering mode that is incompatible with some specifications.
+In {{Glossary("HTML")}}, the **doctype** is the required `<!doctype html>` preamble found at the top of all documents. Its sole purpose is to prevent a {{Glossary("browser")}} from switching into so-called ["quirks mode"](/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode) when rendering a document; that is, the `<!doctype html>` doctype ensures that the browser makes a best-effort attempt at following the relevant specifications, rather than using a different rendering mode that is incompatible with some specifications.
+
+The doctype is case-insensitive. The convention of MDN code examples is to use lowercase, but it's also common to write it as `<!DOCTYPE html>`.
 
 ## See also
 

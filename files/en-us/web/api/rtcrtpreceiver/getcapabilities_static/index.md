@@ -6,7 +6,7 @@ page-type: web-api-static-method
 browser-compat: api.RTCRtpReceiver.getCapabilities_static
 ---
 
-{{DefaultAPISidebar("WebRTC")}}
+{{APIRef("WebRTC")}}
 
 The _static method_ **`RTCRtpReceiver.getCapabilities()`** returns an object describing the codec and header extension capabilities supported by {{domxref("RTCRtpReceiver")}} objects on the current device.
 
@@ -35,7 +35,8 @@ The returned object has the following properties:
 
   - : An array of objects, each describing the basic capabilities of a single [media codec](/en-US/docs/Web/Media/Formats/WebRTC_codecs) supported by the {{domxref("RTCRtpReceiver")}}.
 
-    > **Note:** The array contains special entries that represent the underlying components of the transport — these may be ignored if you're only interested in the actual codecs used for the media itself.
+    > [!NOTE]
+    > The array contains special entries that represent the underlying components of the transport — these may be ignored if you're only interested in the actual codecs used for the media itself.
     > These are described below in the section [The codecs array](#the_codecs_array).
 
     Each codec object has the following properties:
@@ -129,7 +130,8 @@ log.textContent = `RTCRtpReceiver.getCapabilities() supported: ${Object.hasOwn(
 
 The function below returns a Boolean indicating whether or not the device supports receiving H.264 video on a WebRTC connection.
 
-> **Note:** Since `RTCRtpReceiver.getCapabilities()` actually only indicates > _probable_ support, attempting to receive H.264 video might still fail even after getting a positive response from this function.
+> [!NOTE]
+> Since `RTCRtpReceiver.getCapabilities()` actually only indicates > _probable_ support, attempting to receive H.264 video might still fail even after getting a positive response from this function.
 
 ```js
 function canReceiveH264() {

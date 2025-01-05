@@ -12,7 +12,7 @@ This article introduces concepts behind making web content accessible for those 
 
 ### Seizures
 
-Seizures caused by light are known as photosensitive epilepsy. Content that flickers, flashes, or blinks can trigger photosensitive epilepsy. Web technologies that use video, animated gifs, animated pngs, animated SVGs, Canvas, and CSS or JavaScript animations are all capable of content that can induce seizures or other incapacitating physical reactions. Certain visual patterns, especially stripes, can also cause physical reactions even though they are not animated. Photosensitive epilepsy is actually a kind of "reflex epilepsy"—seizures occurring in response to a trigger. In the case of photosensitive epilepsy, seizures are triggered specifically by flashing lights, but other types of reflex epilepsies may be triggered by the act of reading, or by noises. Patterns and images can also trigger epilepsy.
+Seizures caused by light are known as photosensitive epilepsy. Content that flickers, flashes, or blinks can trigger photosensitive epilepsy. Web technologies that use video, animated GIFs, animated PNGs, animated SVGs, {{Glossary("Canvas")}}, and CSS or JavaScript animations can all produce content that may induce seizures or other incapacitating physical reactions. Certain visual patterns, especially stripes, can also cause physical reactions even though they are not animated. Photosensitive epilepsy is actually a kind of "reflex epilepsy"—seizures occurring in response to a trigger. In the case of photosensitive epilepsy, seizures are triggered specifically by flashing lights, but other types of reflex epilepsies may be triggered by the act of reading or by noises. Patterns and images can also trigger epilepsy.
 
 The fact that static images may cause seizures and other disorders is documented in articles such as ["Gamma Oscillations and photosensitive epilepsy"](https://linkinghub.elsevier.com/retrieve/pii/S0960982217304062), where it is noted "_Certain visual images, even in the absence of motion or flicker, can trigger seizures in patients with photosensitive epilepsy_". The Epilepsy Foundation, in its article, ["Shedding Light on Photosensitivity, One of Epilepsy's Most Complex Conditions"](https://www.epilepsy.com/stories/shedding-light-photosensitivity-one-epilepsys-most-complex-conditions-0) talks about static images and patterns: "_Static or moving patterns of discernible light and dark stripes have the same effect as flashing lights because of the alternation of dark and bright areas."_ The Epilepsy Foundation of America Working Group is able to "quantify" the problem a little: _"A pattern with the potential for provoking seizures contains clearly discernible stripes, numbering more than five light-dark pairs of stripes in any orientation_". In addition to stripes, checkered patterns have also been known to cause photosensitive seizures, according to [Cedars-Sinai](https://www.cedars-sinai.org/health-library/diseases-and-conditions/p/photosensitive-seizures.html).
 
@@ -105,7 +105,7 @@ How the color relates to its background—usually framed in terms of contrast—
 
 It has been demonstrated that [some colors are more likely to cause epileptic fits than others](https://www.sciencedaily.com/releases/2009/09/090925092858.htm). Human physiology and psychology are affected by the color red in general. Its power to influence behavior has even been noted in animals.
 
-- **Red Desaturation tests:** The human eye is so sensitively tuned to red that ophthalmologists set up a test using it. The Red desaturation test assesses the integrity of the optic nerve. For more information as to how an ophthalmologist uses this test, see [Red Desaturation](https://www.smart-optometry.com/red-desaturation/).
+- **Red Desaturation tests:** The human eye is so sensitively tuned to red that ophthalmologists set up a test using it. The Red desaturation test assesses the integrity of the optic nerve. For more information as to how an ophthalmologist uses this test, see [Red Desaturation](https://www.smartoptometry.app/red-desaturation/).
 - **Red Environment:** Studies have shown that for those who suffer Traumatic Brain Injury, [cognitive function is reduced in a red environment](https://pubmed.ncbi.nlm.nih.gov/20649469/).
 
 [Saturated Red](/en-US/docs/Web/Accessibility/Understanding_Colors_and_Luminance) is a special, dangerous case, and there are special tests for it. In addition to a red environment affecting the cognitive function of those with Traumatic Brain Injury, color in the red spectrum wavelength seems to require special concern and special tests. Dr. Gregg Vanderheiden, when testing the Photosensitive Epilepsy Analysis Tool, noted that the seizure rates were much higher than expected. They found that we are much more sensitive to saturated red flashing. (See the video, [The Photosensitive Epilepsy Analysis Tool](https://www.pbs.org/video/university-place-the-photosensitive-epilepsy-analysis-tool-ep-429/).)
@@ -152,7 +152,7 @@ To get a free copy of the University of Maryland's Photosensitive Epilepsy Analy
 
 ### The Harding Test
 
-As use of the PEAT tool is prohibited for commercial use, television programmers can use the Harding Test at [HardingTest.com](https://www.hardingtest.com/). The Harding Test is another gold standard. Television programmers in various countries must pass this test before being able to broadcast, so the group at [HardingTest.com](https://www.hardingtest.com/) provides both analysis and certification of video content.
+As use of the PEAT tool is prohibited for commercial use, television programmers can use the Harding Test at [HardingTest.com](https://hardingtest.com/). The Harding Test is another gold standard. Television programmers in various countries must pass this test before being able to broadcast, so the group at [HardingTest.com](https://hardingtest.com/) provides both analysis and certification of video content.
 
 ![Harding Flash and Pattern Analyzer.](screen_shot_2019-06-20_at_11.16.17_am.png)
 
@@ -195,7 +195,7 @@ By not indexing the page, the likelihood that users will stumble upon it via sea
 
 ### Animated GIFs
 
-All image types are potentially dangerous, however, animated gifs deserve special mention because of their ubiquity, and the fact that the animation speed is actually controlled within the GIF file itself.
+All image types are potentially dangerous, however, animated GIFs deserve special mention because of their ubiquity, and the fact that the animation speed is actually controlled within the GIF file itself.
 
 #### Detect if a GIF is animated
 
@@ -207,7 +207,7 @@ With animated GIFs, ensure animation is inactive until the user chooses to activ
 **Resources for detecting and controlling animated GIFs include:**
 
 - [RunKit Animated GIF Detector](https://npm.runkit.com/animated-gif-detector)
-- [github.com/rubentd/gifplayer](https://github.com/rubentd/gifplayer), a jQuery plugin that will help you play and stop animated gifs on your website
+- [gifplayer](https://github.com/rubentd/gifplayer), a jQuery plugin that will help you play and stop animated GIFs on your website
 
 ### Videos
 
@@ -221,7 +221,7 @@ div {
 }
 ```
 
-[`CSS Transitions`](https://www.w3.org/TR/css-transitions-1/) can be used to set the duration to zero for the initial stage of animation.
+[CSS transitions](/en-US/docs/Web/CSS/CSS_transitions) can be used to set the duration to zero for the initial stage of animation.
 
 ```css
 div {
@@ -297,7 +297,7 @@ The methods for sniffing them out is not a casual exercise. You may be intereste
 
 - **Bitmap**: Animation
 - **Canvas**: MDN's tutorial on Canvas has a great section on [basic animations](/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations). `setInterval()` is a mainstay in Canvas animation, but it is also interesting to see how it interacts with screen refresh. See the article, ["Controlling fps with requestAnimationFrame?"](https://stackoverflow.com/questions/19764018/controlling-fps-with-requestanimationframe) in which they discuss the nuts and bolts of implementing `requestAnimationFrame` against the backdrop of screen refresh.
-- **GIFs (Raster)**: Tough to crack because control for their animation resides within the gif files themselves. For information about controlling the speed of gifs see W3C's ["G152: Setting animated gif images to stop blinking after n cycles (within 5 seconds)"](https://www.w3.org/TR/WCAG20-TECHS/G152.html). A great Stack Overflow article on the subject is, ["Can you control GIF animation with JavaScript?"](https://stackoverflow.com/questions/2385203/can-you-control-gif-animation-with-javascript)
+- **GIFs (Raster)**: Tough to crack because control for their animation resides within the gif files themselves. For information about controlling the speed of GIFs see W3C's ["G152: Setting animated gif images to stop blinking after n cycles (within 5 seconds)"](https://www.w3.org/TR/WCAG20-TECHS/G152.html). A great Stack Overflow article on the subject is, ["Can you control GIF animation with JavaScript?"](https://stackoverflow.com/questions/2385203/can-you-control-gif-animation-with-javascript)
 - **GIFV (Raster)**: Considered a variant, video version of GIF. The format is not standardized, and must reference a "real" video file (e.g. a .webm file) which must exist elsewhere.
 - **JPG (Raster)**
 - **MNG (Raster)**: Multiple-image Network Graphics is a graphics file format for animated images. Also considered by some to be a video format.
@@ -321,7 +321,7 @@ The animation property is already powerful on its own, but combined with other p
 
 ### JavaScript animation
 
-JavaScript is often used to control {{HTMLElement('canvas')}} elements and SVGs. Most JavaScript code that applies to HTML video also applies to audio. `HTMLMediaElement.playbackRate` is used to implement user controls for the playback rate for both video and audio. A value of 1.0 is default and considered normal speed; a value of 0.5 is half the speed, a value of 2.0 is twice the speed. A negative number plays the video or audio backwards. Set the playback rate property: `HTMLMediaElement.playbackRate = playbackspeed`.
+JavaScript is often used to control {{HTMLElement('canvas')}} elements and SVGs. Most JavaScript code that applies to HTML video also applies to audio. `HTMLMediaElement.playbackRate` is used to implement user controls for the playback rate for both video and audio. A value of 1.0 is default and considered normal speed; a value of 0.5 is half the speed, a value of 2.0 is twice the speed. A negative number plays the video or audio backwards. Set the playback rate property: `HTMLMediaElement.playbackRate = playbackSpeed`.
 
 [document.getAnimations()](/en-US/docs/Web/API/Document/getAnimations) is an experimental technology, and includes [CSS Animations](/en-US/docs/Web/CSS/CSS_animations), [CSS Transitions](/en-US/docs/Web/CSS/CSS_transitions), and [Web Animations](/en-US/docs/Web/API/Web_Animations_API). The MDN page on [Document.getAnimations()](/en-US/docs/Web/API/Document/getAnimations) provides the following code sample of how to slow down all animations on a page to half speed:
 
@@ -364,7 +364,7 @@ The contrast ratio is defined in [WCAG 2.1](https://www.w3.org/TR/WCAG21/) as fo
     - L1 is the [relative luminance](https://www.w3.org/TR/WCAG21/#dfn-relative-luminance) of the lighter of the colors, and
     - L2 is the [relative luminance](https://www.w3.org/TR/WCAG21/#dfn-relative-luminance) of the darker of the colors.
 
-It's best if you can adjust the contrast before it is uploaded or published to the web. For videos and animated GIFS, the Adobe Suite of products is a phenomenal resource for traditional images. Also for images, an online tool available is pinetools.com's [Brightness and contrast online](https://pinetools.com/brightness-contrast-image). If you intend to make animated gifs, for example, start with one that has a lower contrast ratio.
+It's best if you can adjust the contrast before it is uploaded or published to the web. For videos and animated GIFs, the Adobe Suite of products is a phenomenal resource for traditional images. Also for images, an online tool available is pinetools.com's [Brightness and contrast online](https://pinetools.com/brightness-contrast-image). If you intend to make animated GIFs, for example, start with one that has a lower contrast ratio.
 
 JavaScript is also an option for reducing contrast dynamically. Here's a code example from the section titled, ["Example: Setting the background color of a paragraph"](/en-US/docs/Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces#setting_the_background_color_of_a_paragraph) from the MDN document, [Traversing an HTML table with JavaScript and DOM Interfaces](/en-US/docs/Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces). Notice that the color in the example is described in the **RGB** color space.
 
@@ -543,12 +543,12 @@ EnvironmentMQ (Planned in Media Queries Level 5)
 
 - `inverted-colors`
   - : According to the section, [User Preference Media Features](https://drafts.csswg.org/mediaqueries-5/#mf-user-preferences), "The [`inverted-colors`](https://drafts.csswg.org/mediaqueries-5/#descdef-media-inverted-colors) media feature indicates whether the content is displayed normally, or whether colors have been inverted."
-- [`forced-colors`](https://drafts4.csswg.org/mediaqueries-5/#forced-colors)
+- [`forced-colors`](/en-US/docs/Web/CSS/@media/forced-colors)
   - : In [`forced-colors-mode`](https://drafts.csswg.org/css-color-adjust-1/#forced-colors-mode), the user agent enforces the user's preferred color palette on the page, overriding the author's chosen colors. From W3C's Draft document, Media Queries Level 5 section on forced-colors: _"The forced-colors media feature is used to detect if the user agent has enabled a [forced colors mode](https://drafts.csswg.org/css-color-adjust-1/#forced-colors-mode) where it enforces a user-chosen limited color palette on the page"._ The user will need to be made aware of this ability, and it will need to play nice with the appropriate value for the prefers-color-scheme media query.
 - `light-level`
   - : From W3C's Draft document, Media Queries Level 5 section on light-level: _"The [`light-level`](https://drafts.csswg.org/mediaqueries-5/#descdef-media-light-level) media feature is used to query about the ambient light-level in which the device is used, to allow the author to adjust style of the document in response."_ This will be a godsend to those who have motor-skills problems, or for some with cognitive difficulties, who cannot find the right "button" to change their screen settings.
 - prefers-contrast
-  - : From W3C's Draft document, Media Queries Level 5 section on [`prefers-contrast`](https://drafts4.csswg.org/mediaqueries-5/#prefers-contrast): _"The `prefers-contrast` media feature is used to detect if the user has requested the system increase or decrease the amount of contrast between adjacent colors. For example, many users have difficulty reading text that has a small difference in contrast to the text background and would prefer a larger contrast."_ Sometimes there can be such a thing as too much contrast; a halo effect around text can occur in such situations and actually reduce legibility. Putting the amount of contrast in the user's control is a definite gift for accessibility.
+  - : From W3C's Draft document, Media Queries Level 5 section on [`prefers-contrast`](/en-US/docs/Web/CSS/@media/prefers-contrast): _"The `prefers-contrast` media feature is used to detect if the user has requested the system increase or decrease the amount of contrast between adjacent colors. For example, many users have difficulty reading text that has a small difference in contrast to the text background and would prefer a larger contrast."_ Sometimes there can be such a thing as too much contrast; a halo effect around text can occur in such situations and actually reduce legibility. Putting the amount of contrast in the user's control is a definite gift for accessibility.
 
 #### `MediaQueryList` Interface
 
@@ -609,7 +609,7 @@ The Web Animations model is intended to provide the features necessary for expre
 
 Along with the PEAT tool, is generally recognized to be one of the two "gold standards" for analyzing flashes.
 
-- [Harding Flash and Pattern Analyzer](https://www.hardingfpa.com)
+- [Harding Flash and Pattern Analyzer](https://www.hardingfpa.com/)
 
 ### ISO
 
@@ -637,6 +637,6 @@ Along with the Harding tool, is generally recognized to be one of the two "gold 
 
 ## Contributors
 
-Heartfelt thanks to Teal; Wayne Dick of the [Low Vision Task Force of the W3C](https://www.w3.org/WAI/GL/task-forces/low-vision-a11y-tf/); Tom Jewett and Eric Eggert from [Knowbility](https://knowbility.org/); Jim Allan of the [Diagram Center](https://diagramcenter.org/); and Dr. Selim R. Benbadis, Director, [Comprehensive Epilepsy Program and Clinical Neurophysiology Laboratory at USF and TGH in Tampa, Florida](https://health.usf.edu/medicine/neurology/epilepsy) for their great, great assistance and discussions on this topic.
+Heartfelt thanks to Teal; Wayne Dick of the [Low Vision Task Force of the W3C](https://www.w3.org/WAI/GL/task-forces/low-vision-a11y-tf/); Tom Jewett and Eric Eggert from [Knowbility](https://knowbility.org/); Jim Allan of the [Diagram Center](http://diagramcenter.org/); and Dr. Selim R. Benbadis, Director, [Comprehensive Epilepsy Program and Clinical Neurophysiology Laboratory at USF and TGH in Tampa, Florida](https://health.usf.edu/medicine/neurology/epilepsy) for their great, great assistance and discussions on this topic.
 
 We are _all_ in tremendous gratitude to the Trace Research & Development Center for making their amazing tool, the [Photosensitive Epilepsy Analysis Tool (PEAT)](https://trace.umd.edu/peat/) for free.

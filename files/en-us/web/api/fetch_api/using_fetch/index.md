@@ -10,7 +10,7 @@ The [Fetch API](/en-US/docs/Web/API/Fetch_API) provides a JavaScript interface f
 
 Fetch is the modern replacement for {{domxref("XMLHttpRequest")}}: unlike `XMLHttpRequest`, which uses callbacks, Fetch is promise-based and is integrated with features of the modern web such as [service workers](/en-US/docs/Web/API/Service_Worker_API) and [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/CORS).
 
-With the Fetch API, you make a request by calling {{domxref("fetch()")}}, which is available as a global function in both {{domxref("Window", "window", "", "", "nocode")}} and {{domxref("WorkerGlobalScope", "worker", "", "", "nocode")}} contexts. You pass it a {{domxref("Request")}} object or a string containing the URL to fetch, along with an optional argument to configure the request.
+With the Fetch API, you make a request by calling {{domxref("Window/fetch", "fetch()")}}, which is available as a global function in both {{domxref("Window", "window")}} and {{domxref("WorkerGlobalScope", "worker")}} contexts. You pass it a {{domxref("Request")}} object or a string containing the URL to fetch, along with an optional argument to configure the request.
 
 The `fetch()` function returns a {{jsxref("Promise")}} which is fulfilled with a {{domxref("Response")}} object representing the server's response. You can then check the request status and extract the body of the response in various formats, including text and JSON, by calling the appropriate method on the response.
 
@@ -89,6 +89,7 @@ You can supply the body as an instance of any of the following types:
 - {{domxref("File")}}
 - {{domxref("URLSearchParams")}}
 - {{domxref("FormData")}}
+- {{domxref("ReadableStream")}}
 
 Note that just like response bodies, request bodies are streams, and making the request reads the stream, so if a request contains a body, you can't make it twice:
 
@@ -127,7 +128,7 @@ See [Locked and disturbed streams](#locked_and_disturbed_streams) for more infor
 
 ### Setting headers
 
-Request headers give the server information about the request: for example, the {{httpheader("Content-Type")}} header tells the server the format of the request's body. Many headers are set automatically by the browser and can't be set by a script: these are called {{glossary("Forbidden header name", "Forbidden header names")}}.
+Request headers give the server information about the request: for example, the {{httpheader("Content-Type")}} header tells the server the format of the request's body.
 
 To set request headers, assign them to the `headers` option.
 
@@ -138,7 +139,7 @@ const response = await fetch("https://example.org/post", {
   headers: {
     "Content-Type": "application/json",
   },
-  // .,.
+  // ...
 });
 ```
 
@@ -150,11 +151,11 @@ myHeaders.append("Content-Type", "application/json");
 
 const response = await fetch("https://example.org/post", {
   headers: myHeaders,
-  // .,.
+  // ...
 });
 ```
 
-If the `mode` option is set to `no-cors`, you can only set {{glossary("CORS-safelisted request header", "CORS-safelisted request headers")}}.
+Many headers are set automatically by the browser and can't be set by a script: these are called {{glossary("Forbidden header name", "Forbidden header names")}}. If the {{domxref("Request.mode", "mode")}} option is set to `no-cors`, then the set of permitted headers is further restricted.
 
 ### Making POST requests
 
@@ -173,16 +174,18 @@ const response = await fetch("https://example.org/post", {
 
 ### Making cross-origin requests
 
-Whether a request can be made cross-origin or not is determined by the value of the `mode` option. This may take one of three values: `cors`, `no-cors`, or `same-origin`.
+Whether a request can be made cross-origin or not is determined by the value of the {{domxref("RequestInit", "", "mode")}} option. This may take one of three values: `cors`, `same-origin`, or `no-cors`.
 
-- By default, `mode` is set to `cors`, meaning that if the request is cross-origin then it will use the [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/CORS) mechanism. This means that:
+- For fetch requests the default value of `mode` is `cors`, meaning that if the request is cross-origin then it will use the [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/CORS) mechanism. This means that:
 
   - if the request is a [simple request](/en-US/docs/Web/HTTP/CORS#simple_requests), then the request will always be sent, but the server must respond with the correct {{httpheader("Access-Control-Allow-Origin")}} header or the browser will not share the response with the caller.
   - if the request is not a simple request, then the browser will send a [preflighted request](/en-US/docs/Web/HTTP/CORS#preflighted_requests) to check that the server understands CORS and allows the request, and the real request will not be sent unless the server responds to the preflighted request with the appropriate CORS headers.
 
 - Setting `mode` to `same-origin` disallows cross-origin requests completely.
 
-- Setting `mode` to `no-cors` means the request must be a simple request, which restricts the headers that may be set, and restricts methods to `GET`, `HEAD`, and `POST`.
+- Setting `mode` to `no-cors` disables CORS for cross-origin requests. This restricts the headers that may be set, and restricts methods to GET, HEAD, and POST. The response is _opaque_, meaning that its headers and body are not available to JavaScript. Most of the time a website should not use `no-cors`: the main application of it is for certain service worker use cases.
+
+See the reference documentation for {{domxref("RequestInit", "", "mode")}} for more details.
 
 ### Including credentials
 
@@ -480,7 +483,6 @@ async function* makeTextFileLineIterator(fileURL) {
 
   const newline = /\r?\n/gm;
   let startIndex = 0;
-  let result;
 
   while (true) {
     const result = newline.exec(chunk);

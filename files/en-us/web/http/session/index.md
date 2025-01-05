@@ -18,9 +18,10 @@ As of HTTP/1.1, the connection is no longer closed after completing the third ph
 
 In client-server protocols, it is the client which establishes the connection. Opening a connection in HTTP means initiating a connection in the underlying transport layer, usually this is TCP.
 
-With TCP the default port, for an HTTP server on a computer, is port 80. Other ports can also be used, like 8000 or 8080. The URL of a page to fetch contains both the domain name, and the port number, though the latter can be omitted if it is 80. See [Identifying resources on the Web](/en-US/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web) for more details.
+With TCP the default port, for an HTTP server on a computer, is port 80. Other ports can also be used, like 8000 or 8080. The URL of a page to fetch contains both the domain name, and the port number, though the latter can be omitted if it is 80. See [the URL reference](/en-US/docs/Web/URI) for more details.
 
-> **Note:** The client-server model does not allow the server to send data to the client without an explicit request for it. However, various Web APIs enable this use case, including the [Push API](/en-US/docs/Web/API/Push_API), [Server-sent events](/en-US/docs/Web/API/Server-sent_events), and the [WebSockets API](/en-US/docs/Web/API/WebSockets_API).
+> [!NOTE]
+> The client-server model does not allow the server to send data to the client without an explicit request for it. However, various Web APIs enable this use case, including the [Push API](/en-US/docs/Web/API/Push_API), [Server-sent events](/en-US/docs/Web/API/Server-sent_events), and the [WebSockets API](/en-US/docs/Web/API/WebSockets_API).
 
 ## Sending a client request
 
@@ -62,7 +63,7 @@ name=Joe%20User&request=Send%20me%20one%20of%20your%20catalogue
 HTTP defines a set of [request methods](/en-US/docs/Web/HTTP/Methods) indicating the desired action to be performed upon a resource. Although they can also be nouns, these requests methods are sometimes referred as HTTP verbs. The most common requests are `GET` and `POST`:
 
 - The {{HTTPMethod("GET")}} method requests a data representation of the specified resource. Requests using `GET` should only retrieve data.
-- The {{HTTPMethod("POST")}} method sends data to a server so it may change its state. This is the method often used for [HTML Forms](/en-US/docs/Learn/Forms).
+- The {{HTTPMethod("POST")}} method sends data to a server so it may change its state. This is the method often used for [HTML Forms](/en-US/docs/Learn_web_development/Extensions/Forms).
 
 ## Structure of a server response
 
@@ -93,7 +94,7 @@ X-XSS-Protection: 1; mode=block
 Vary: Accept-Encoding,Cookie
 Age: 7
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -120,7 +121,7 @@ Via: Moz-Cache-zlb05
 Connection: Keep-Alive
 Content-Length: 325 (the content contains a default page to display if the user-agent is not able to follow the link)
 
-<!DOCTYPE html>… (contains a site-customized page helping the user to find the missing resource)
+<!doctype html>… (contains a site-customized page helping the user to find the missing resource)
 ```
 
 Notification that the requested resource doesn't exist:
@@ -142,7 +143,7 @@ X-XSS-Protection: 1; mode=block
 Vary: Accept-Encoding,Cookie
 X-Cache: Error from cloudfront
 
-<!DOCTYPE html>… (contains a site-customized page helping the user to find the missing resource)
+<!doctype html>… (contains a site-customized page helping the user to find the missing resource)
 ```
 
 ### Response status codes
@@ -155,7 +156,7 @@ X-Cache: Error from cloudfront
 
 ## See also
 
-- [Identifying resources on the Web](/en-US/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web)
+- [URLs](/en-US/docs/Web/URI)
 - [HTTP headers](/en-US/docs/Web/HTTP/Headers)
 - [HTTP request methods](/en-US/docs/Web/HTTP/Methods)
 - [HTTP response status codes](/en-US/docs/Web/HTTP/Status)

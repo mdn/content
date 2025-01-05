@@ -13,7 +13,8 @@ The **`padding-left`** [CSS](/en-US/docs/Web/CSS) property sets the width of the
 
 An element's padding area is the space between its content and its border.
 
-> **Note:** The {{cssxref("padding")}} property can be used to set paddings on all four sides of an element with a single declaration.
+> [!NOTE]
+> The {{cssxref("padding")}} property can be used to set paddings on all four sides of an element with a single declaration.
 
 ## Syntax
 
@@ -59,7 +60,7 @@ The `padding-left` property is specified as a single value chosen from the list 
 .content {
   padding-left: 5%;
 }
-.sidebox {
+.side-box {
   padding-left: 10px;
 }
 ```
@@ -74,6 +75,9 @@ The `padding-left` property is specified as a single value chosen from the list 
 
 ## See also
 
+- {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, and {{cssxref("padding-bottom")}}
+- {{cssxref("padding")}} shorthand
+- {{cssxref("padding-block-start")}}, {{cssxref("padding-block-end")}}, {{cssxref("padding-inline-start")}}, and {{cssxref("padding-inline-end")}}
+- {{cssxref("padding-block")}} and {{cssxref("padding-inline")}} shorthands
 - [Introduction to the CSS basic box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
-- {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}} and the {{cssxref("padding")}} shorthand
-- The mapped logical properties: {{cssxref("padding-block-start")}}, {{cssxref("padding-block-end")}}, {{cssxref("padding-inline-start")}}, and {{cssxref("padding-inline-end")}} and the shorthands {{cssxref("padding-block")}} and {{cssxref("padding-inline")}}
+- [CSS box model](/en-US/docs/Web/CSS/CSS_box_model) module

@@ -59,7 +59,7 @@ This element supports all [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 ## Usage notes
 
-The `<source>` element is a **{{glossary("void element")}}**, which means that it not only has no content but also has no closing tag. That is, you _never_ use "`</source>`" in your HTML.
+The `<source>` element is a **{{glossary("void element")}}**, which means that it not only has no content but also has no closing tag. That is, you _never_ use `</source>` in your HTML.
 
 The browser goes through a list of `<source>` elements to find a format it supports. It uses the first one it can display. For each `<source>` element:
 
@@ -100,7 +100,7 @@ This example demonstrates how to offer an alternate source file for viewports ab
 </video>
 ```
 
-For more examples, the [Video and audio content](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content) article in the Learn area is a great resource.
+For more examples, the [HTML video and audio](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio) article in the Learn area is a great resource.
 
 ### Using the `media` attribute with `<picture>`
 
@@ -217,4 +217,4 @@ A [media query](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) allow
 - {{HTMLElement("video")}} element
 - [Image file type and format guide](/en-US/docs/Web/Media/Formats/Image_types)
 - [Media type and format guide](/en-US/docs/Web/Media/Formats)
-- [Web performance](/en-US/docs/Learn/Performance)
+- [Web performance](/en-US/docs/Learn_web_development/Extensions/Performance)

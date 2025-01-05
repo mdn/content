@@ -6,7 +6,7 @@ page-type: mdn-community-guide
 
 {{MDNSidebar}}
 
-Our [Learn web development](/en-US/docs/Learn) pages get over a million views per month, and has an [active forum](https://discourse.mozilla.org/c/mdn/learn/250) where people go to ask for assistance.
+Our [Learn web development](/en-US/docs/Learn_web_development) pages get over a million views per month, and has an [active forum](https://discourse.mozilla.org/c/mdn/learn/250) where people go to ask for assistance.
 We'd love some help with answering posts, and growing our learning community.
 
 ## What we need help with
@@ -27,11 +27,12 @@ We receive a high volume of questions asking for help based on topics that appea
 ## How to help
 
 1. Sign up for [Mozilla Discourse](https://discourse.mozilla.org/), if you haven't already.
-2. Have a look at [Learn web development](/en-US/docs/Learn) section and gain a basic level of familiarity with what's there.
+2. Have a look at [Learn web development](/en-US/docs/Learn_web_development) section and gain a basic level of familiarity with what's there.
 
 After you are set up, have a look at the [learning forum](https://discourse.mozilla.org/c/mdn/learn/250) and see if there are any posts that have no replies — this is the best place to start.
 If the post you are replying to is a general ask for help, reply to them, and give them as much help as you've got time for.
 
 If you need assistance with anything, ask for help in one of our [Communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
-> **Note:** Important: Above all, be patient, be friendly, be kind. Remember — most of these folks are beginners.
+> [!NOTE]
+> Important: Above all, be patient, be friendly, be kind. Remember — most of these folks are beginners.

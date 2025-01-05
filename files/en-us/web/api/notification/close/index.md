@@ -11,7 +11,8 @@ browser-compat: api.Notification.close
 The **`close()`** method of the {{domxref("Notification")}} interface is used to
 close/remove a previously displayed notification.
 
-> **Note:** This API shouldn't be used just to have the notification
+> [!NOTE]
+> This API shouldn't be used just to have the notification
 > removed from the screen after a fixed delay since this method will also remove the
 > notification from any notification tray, preventing users from interacting with it
 > after it was initially shown. A valid use for this API would be to remove a
@@ -35,7 +36,7 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
-In the following snippet, we have a simple function that when called creates an
+In the following snippet, we have a function that when called creates an
 `options` object and then a new notification. At the end of the function, it
 also calls `close()` inside a
 {{domxref("EventTarget.addEventListener","addEventListener()")}} function to remove the

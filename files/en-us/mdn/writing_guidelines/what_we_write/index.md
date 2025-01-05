@@ -55,9 +55,10 @@ Our primary focus is to write about the following front-end web technologies:
 - [Web APIs](/en-US/docs/Web/API)
 - [HTTP](/en-US/docs/Web/HTTP)
 
-We also document some broader topics, such as [SVG](/en-US/docs/Web/SVG), [XML](/en-US/docs/Web/XML), [WebAssembly](/en-US/docs/WebAssembly), and [Accessibility](/en-US/docs/Learn/Accessibility). In addition, we provide extensive [learning guides](/en-US/docs/Learn) for these technologies and also a [glossary](/en-US/docs/Glossary).
+We also document some broader topics, such as [SVG](/en-US/docs/Web/SVG), [XML](/en-US/docs/Web/XML), [WebAssembly](/en-US/docs/WebAssembly), and [Accessibility](/en-US/docs/Learn_web_development/Core/Accessibility). In addition, we provide extensive [learning guides](/en-US/docs/Learn_web_development) for these technologies and also a [glossary](/en-US/docs/Glossary).
 
-> **Note:** Backend technologies usually have their own documentation elsewhere that MDN Web Docs does not attempt to supersede, although we [do have some exceptions](/en-US/docs/Learn/Server-side).
+> [!NOTE]
+> Backend technologies usually have their own documentation elsewhere that MDN Web Docs does not attempt to supersede, although we [do have some exceptions](/en-US/docs/Learn_web_development/Extensions/Server-side).
 
 All content on MDN Web Docs must be relevant to the technology section in which it appears. Contributors are expected to follow these [MDN writing guidelines](/en-US/docs/MDN/Writing_guidelines) for writing style, code samples, and other topics.
 
@@ -90,7 +91,7 @@ Examples of inappropriate topics for MDN Web Docs include:
 
 - Technology that is not exposed to the web and is specific to a browser.
 - Technology that is not related to the web.
-- Documentation for end-users. For Mozilla products, for example, such documentation belongs on the [Mozilla support site](https://support.mozilla.org).
+- Documentation for end-users. For Mozilla products, for example, such documentation belongs on the [Mozilla support site](https://support.mozilla.org/).
 - Self-linking or self-promoting external links. Check out these guidelines in our [writing style guide](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide#external_links) before adding an external link.
 
 ### When we remove documentation

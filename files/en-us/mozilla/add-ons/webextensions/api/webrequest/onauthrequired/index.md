@@ -35,7 +35,8 @@ The listener can respond in one of four ways:
     - If `"blocking"` is provided, the extension can return a `webRequest.BlockingResponse` object or a Promise that resolves to a `webRequest.BlockingResponse` object
     - If `"asyncBlocking"` is provided, the event listener function receives a `asyncCallback` function as its second parameter. `asyncCallback`can be called asynchronously and takes a`webRequest.BlockingResponse` object as its only parameter
 
-      > **Note:** Chrome does not support a Promise as a return value ([Chromium issue 1510405](https://crbug.com/1510405)). For alternatives, see [the return value of the `listener`](#listener).
+      > [!NOTE]
+      > Chrome does not support a Promise as a return value ([Chromium issue 1510405](https://crbug.com/1510405)). For alternatives, see [the return value of the `listener`](#listener).
 
 See [Examples](#examples).
 
@@ -197,9 +198,12 @@ Events have three functions:
       - `fingerprinting_content` indicates the domain is in the fingerprinting category but not the tracking category. Examples of this type of domain include payment providers who use fingerprinting techniques to identify the visiting user for anti-fraud purposes.
     - `cryptomining` and `cryptomining_content`: similar to the fingerprinting category but for cryptomining resources.
     - `tracking`, `tracking_ad`, `tracking_analytics`, `tracking_social`, and `tracking_content`: indicates the request is involved in tracking. `tracking` is any generic tracking request. The `ad`, `analytics`, `social`, and `content` suffixes identify the type of tracker.
+    - `emailtracking` and `emailtracking_content`: indicates the request is involved in tracking emails.
     - `any_basic_tracking`: a meta flag that combines tracking and fingerprinting flags, excluding `tracking_content` and `fingerprinting_content`.
     - `any_strict_tracking`: a meta flag that combines all tracking and fingerprinting flags.
     - `any_social_tracking`: a meta flag that combines all social tracking flags.
+
+    You can find more information on tracker types on the [disconnect.me](https://disconnect.me/trackerprotection#categories_of_trackers) website. The `content` suffix indicates trackers that track and serve content. Blocking them protects users but can lead to sites breaking or elements not being displayed.
 
 ## Examples
 
@@ -326,7 +330,8 @@ browser.webRequest.onErrorOccurred.addListener(completed, { urls: [target] });
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/webRequest/#event-onAuthRequired) API. This documentation is derived from [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/api/webRequest#event-onAuthRequired) API. This documentation is derived from [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

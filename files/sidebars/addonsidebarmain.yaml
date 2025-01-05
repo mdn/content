@@ -1,0 +1,86 @@
+# Do not add comments to this file. They will be lost.
+
+sidebar:
+  - type: section
+    link: /Mozilla/Add-ons/WebExtensions
+  - type: section
+    link: https://extensionworkshop.com/documentation/themes/
+    title: Themes
+  - type: section
+    link: https://discourse.mozilla.org/c/add-ons
+    title: Community_and_Support
+  - title: Channels
+    details: closed
+    children:
+      - link: https://blog.mozilla.org/addons
+        title: Blog
+      - link: https://discourse.mozilla.org/c/add-ons
+        title: Forums
+      - link: https://stackoverflow.com/questions/tagged/firefox-addon
+        title: Stack_Overflow
+      - link: /Mozilla/Add-ons
+        hash: "#contact_us"
+        title: Contact_us
+l10n:
+  de:
+    Themes: Themen
+    Community_and_Support: Community und Support
+    Channels: Kanäle
+    Blog: Add-ons Blog
+    Forums: Add-ons Foren
+    Stack_Overflow: Stack Overflow
+    Contact_us: Kontakt
+    "#contact_us": Kontakt
+  en-US:
+    Themes: Themes
+    Community_and_Support: Community and Support
+    Channels: Channels
+    Blog: Add-ons blog
+    Forums: Add-on forums
+    Stack_Overflow: Stack Overflow
+    Contact_us: Contact us
+    "#contact_us": contact_us
+  fr:
+    Themes: Thèmes
+    Community_and_Support: Communauté et Support
+    Channels: Canaux de discussions
+    Blog: Blog extensions
+    Forums: Forum extensions
+    Stack_Overflow: Stack Overflow
+    Contact_us: Nous contacter
+    "#contact_us": nous_contacter
+  ja:
+    Themes: テーマ
+    Community_and_Support: コミュニティとサポート
+    Channels: チャンネル
+    Blog: ブログ
+    Forums: フォーラム
+    Stack_Overflow: Stack Overflow
+    Contact_us: コンタクト
+    "#contact_us": 連絡先
+  ko:
+    Themes: 테마
+    Community_and_Support: 커뮤니티와 지원
+    Channels: 채널
+    Blog: 부가 기능 블로그
+    Forums: 부가 기능 포럼
+    Stack_Overflow: Stack Overflow
+    Contact_us: 연락하기
+    "#contact_us": 연락하기
+  zh-CN:
+    Themes: 主题
+    Community_and_Support: 社区和支持
+    Channels: 渠道
+    Blog: 附加组件博客
+    Forums: 附加组件论坛
+    Stack_Overflow: Stack Overflow
+    Contact_us: 联系我们
+  es:
+    Themes: Temas
+    Community_and_Support: Comunidad y soporte
+    Channels: Canales de discusión
+    Blog: Blog de complementos
+    Forums: Foro de complementos
+    Stack_Overflow: Stack Overflow
+    Contact_us: Contáctenos
+    "#contact_us": Contáctenos

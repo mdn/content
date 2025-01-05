@@ -37,12 +37,14 @@ In the code above, `newCookie` is a string of form `key=value`, specifying the c
     If a domain is specified, subdomains are always included.
     Contrary to earlier specifications, leading dots in domain names are ignored, but browsers may decline to set the cookie containing such dots.
 
-    > **Note:** The domain _must_ match the domain of the JavaScript origin.
+    > [!NOTE]
+    > The domain _must_ match the domain of the JavaScript origin.
     > Setting cookies to foreign domains will be silently ignored.
 
   - `;expires=date-in-UTCString-format`: The expiry date of the cookie. If neither `expires` nor `max-age` is specified, it will expire at the end of session.
 
-    > **Warning:** When user privacy is a concern, it's important that any web app implementation invalidate cookie data after a certain timeout instead of relying on the browser to do it.
+    > [!WARNING]
+    > When user privacy is a concern, it's important that any web app implementation invalidate cookie data after a certain timeout instead of relying on the browser to do it.
     > Many browsers let users specify that cookies should never expire, which is not necessarily safe.
 
     See {{jsxref("Date.toUTCString()")}} for help formatting this value.
@@ -73,11 +75,14 @@ In the code above, `newCookie` is a string of form `key=value`, specifying the c
     It also signals that the domain attribute must not be present, which prevents the cookie from being sent to other domains.
     For Chrome the path attribute must always be the origin.
 
-  > **Note:** The dash is considered part of the prefix.
+  > [!NOTE]
+  > The dash is considered part of the prefix.
 
-  > **Note:** These flags are only settable with the `secure` attribute.
+  > [!NOTE]
+  > These flags are only settable with the `secure` attribute.
 
-> **Note:** As you can see from the code above, `document.cookie` is an [accessor property](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty#description) with native _setter_ and _getter_ functions, and consequently is _not_ a [data property](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty#description) with a value: what you write is not the same as what you read, everything is always mediated by the JavaScript interpreter.
+> [!NOTE]
+> As you can see from the code above, `document.cookie` is an [accessor property](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty#description) with native _setter_ and _getter_ functions, and consequently is _not_ a [data property](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty#description) with a value: what you write is not the same as what you read, everything is always mediated by the JavaScript interpreter.
 
 ## Examples
 
@@ -88,7 +93,7 @@ In the code above, `newCookie` is a string of form `key=value`, specifying the c
 // needs to work cross-origin.
 // It is more common not to set the `SameSite` attribute, which results in the default,
 // and more secure, value of `SameSite=Lax;`
-document.cookie = "name=oeschger; SameSite=None; Secure";
+document.cookie = "name=Oeschger; SameSite=None; Secure";
 document.cookie = "favorite_food=tripe; SameSite=None; Secure";
 
 function showCookies() {

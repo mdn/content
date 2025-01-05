@@ -63,7 +63,8 @@ The syntax for removing all the `localStorage` items is as follows:
 localStorage.clear();
 ```
 
-> **Note:** Please refer to the [Using the Web Storage API](/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API) article for a full example.
+> [!NOTE]
+> Please refer to the [Using the Web Storage API](/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API) article for a full example.
 
 ## Specifications
 

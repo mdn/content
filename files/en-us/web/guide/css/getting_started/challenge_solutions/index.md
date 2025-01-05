@@ -4,33 +4,11 @@ slug: Web/Guide/CSS/Getting_started/Challenge_solutions
 page-type: guide
 ---
 
-This page provides solutions to the challenges posed in the [CSS Getting Started](/en-US/docs/Learn/CSS/First_steps) tutorial. These are not the only possible solutions. The sections below correspond to the titles of the tutorial sections.
-
-## Why use CSS
-
-The challenges on page [Why use CSS](/en-US/docs/Learn/CSS/First_steps/How_CSS_works) are:
-
-### Colors
-
-- Challenge
-  - : Without looking up a reference, find five more color names that work in your stylesheet.
-- Solution
-  - : CSS supports common color names like `orange`, `yellow`, `blue`, `green`, or `black`. It also supports some more exotic color names like `chartreuse`, `fuschia`, or `burlywood`. See [CSS Color value](/en-US/docs/Web/CSS/color_value) for a complete list as well as other ways of specifying colors.
-
-## How CSS works
-
-The challenges on page [How CSS works](/en-US/docs/Learn/CSS/First_steps/How_CSS_works) are:
-
-### DOM inspector
-
-- Challenge
-  - : In DOMi, click on a STRONG node. Use DOMi's right-hand pane to find out where the node's color is set to red, and where its appearance is made bolder than normal text.
-- Solution
-  - : In the menu above the right-hand pane, choose **CSS Rules**. You see two items listed, one that references an internal resource and one that references your stylesheet file. The internal resource defines the **font-weight** property as `bolder`; your stylesheet defines the **color** property as `red`.
+This page provides solutions to the challenges posed in the [CSS Styling basics](/en-US/docs/Learn_web_development/Core/Styling_basics) module. These are not the only possible solutions. The sections below correspond to the titles of the tutorial sections.
 
 ## Cascading and inheritance
 
-The challenges on page [Cascading and inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance) are:
+The challenges on page [Handling conflicts](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts) are:
 
 ### Inherited styles
 
@@ -54,7 +32,7 @@ Later sections of this tutorial describe style rules and declarations in greater
 
 ## Selectors
 
-The challenges on page [Selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors) are:
+The challenges on page [Basic selectors](/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors) are:
 
 ### Second paragraph blue
 
@@ -172,7 +150,7 @@ The challenges on page are:
 
 ## Lists
 
-The challenges on page [Lists](/en-US/docs/Learn/CSS/Styling_text/Styling_lists) are:
+The challenges on page [Styling lists](/en-US/docs/Learn_web_development/Core/Text_styling/Styling_lists) are:
 
 ### Lower Roman numerals
 
@@ -199,17 +177,17 @@ The challenges on page [Lists](/en-US/docs/Learn/CSS/Styling_text/Styling_lists)
     ```css
     /* numbered headings */
     body {
-      counter-reset: headnum;
+      counter-reset: head-num;
     }
     h3::before {
-      content: "(" counter(headnum, upper-latin) ") ";
-      counter-increment: headnum;
+      content: "(" counter(head-num, upper-latin) ") ";
+      counter-increment: head-num;
     }
     ```
 
 ## Boxes
 
-The challenges on page [Boxes](/en-US/docs/Learn/CSS/Building_blocks) are:
+The challenges on page [Boxes](/en-US/docs/Learn_web_development/Core/CSS_layout) are:
 
 ### Ocean border
 
@@ -228,7 +206,7 @@ The challenges on page [Boxes](/en-US/docs/Learn/CSS/Building_blocks) are:
 
 ## Layout
 
-The challenges on page [Layout](/en-US/docs/Learn/CSS/CSS_layout) are:
+The challenges on page [Layout](/en-US/docs/Learn_web_development/Core/CSS_layout) are:
 
 ### Default image position
 
@@ -255,7 +233,7 @@ The challenges on page [Layout](/en-US/docs/Learn/CSS/CSS_layout) are:
 
 ## Tables
 
-The challenges on page [Tables](/en-US/docs/Learn/CSS/Building_blocks/Styling_tables) are:
+The challenges on page [Tables](/en-US/docs/Learn_web_development/Core/Styling_basics/Tables) are:
 
 ### Borders on data cells only
 

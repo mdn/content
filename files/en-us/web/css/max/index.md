@@ -28,9 +28,24 @@ You can use different units for each value in your expression. You may also use 
 - The expression can be values combining the addition ( + ), subtraction ( - ), multiplication ( \* ) and division ( / ) operators, using standard operator precedence rules. Make sure to put a space on each side of the + and - operands. The operands in the expression may be any \<length> syntax value.
 - You can (and often need to) combine `min()` and `max()` values, or use `max()` within a `clamp()` or `calc()` function.
 
-### Formal syntax
+## Formal syntax
 
 {{CSSSyntax}}
+
+## Accessibility
+
+When `max()` is used for controlling text size, make sure the text is always large enough to read. A suggestion is to use the {{CSSxRef("min", "min()")}} function nested within a `max()` that has as its second value a [relative length unit](/en-US/docs/Web/CSS/length#relative_length_units) that is always large enough to read. For example:
+
+```css
+small {
+  font-size: max(min(0.5vw, 0.5em), 1rem);
+}
+```
+
+This ensures a minimum size of _1rem_, with a text size that scales if the page is zoomed.
+
+- [MDN Understanding WCAG, Guideline 1.4 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [Understanding Success Criterion 1.4.4 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
 
 ## Examples
 
@@ -62,21 +77,6 @@ The font-size will at minimum be 2rems, or twice the default size of font for th
 
 Think of the `max()` function as finding the minimum value allowed for a property.
 
-## Accessibility concerns
-
-When `max()` is used for controlling text size, make sure the text is always large enough to read. A suggestion is to use the {{CSSxRef("min", "min()")}} function nested within a `max()` that has as its second value a [relative length unit](/en-US/docs/Web/CSS/length#relative_length_units) that is always large enough to read. For example:
-
-```css
-small {
-  font-size: max(min(0.5vw, 0.5em), 1rem);
-}
-```
-
-This ensures a minimum size of _1rem_, with a text size that scales if the page is zoomed.
-
-- [MDN Understanding WCAG, Guideline 1.4 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
-- [Understanding Success Criterion 1.4.4 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
-
 ## Specifications
 
 {{Specifications}}
@@ -90,4 +90,4 @@ This ensures a minimum size of _1rem_, with a text size that scales if the page 
 - {{CSSxRef("calc", "calc()")}}
 - {{CSSxRef("clamp", "clamp()")}}
 - {{CSSxRef("min", "min()")}}
-- [CSS Values](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)
+- [Learn: Values and units](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units)

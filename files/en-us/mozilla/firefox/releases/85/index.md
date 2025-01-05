@@ -8,7 +8,8 @@ page-type: firefox-release-notes
 
 This article provides information about the changes in Firefox 85 that will affect developers. Firefox 85 was released on January 26, 2021.
 
-> **Note:** See also [January brings us Firefox 85](https://hacks.mozilla.org/2021/01/january-brings-us-firefox-85/) on Mozilla Hacks.
+> [!NOTE]
+> See also [January brings us Firefox 85](https://hacks.mozilla.org/2021/01/january-brings-us-firefox-85/) on Mozilla Hacks.
 
 ## Changes for web developers
 
@@ -22,7 +23,7 @@ This article provides information about the changes in Firefox 85 that will affe
 
 #### Removals
 
-- The {{HTMLElement("menuitem")}} HTML element is no longer available — it has been hidden behind the `dom.menuitem.enabled flag`. ([Firefox bug 1680596](https://bugzil.la/1680596)).
+- The `<menuitem>` HTML element is no longer available — it has been hidden behind the `dom.menuitem.enabled flag`. ([Firefox bug 1680596](https://bugzil.la/1680596)).
 
 ### CSS
 

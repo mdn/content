@@ -131,7 +131,7 @@ Starting with geckodriver 0.26.0 additional capabilities exist if Firefox or an 
 #### `androidPackage` (string, required)
 
 The package name of Firefox, e.g. `org.mozilla.firefox`,
-`org.mozilla.firefox_beta,` or `org.mozilla.fennec` depending on the release
+`org.mozilla.firefox_beta`, or `org.mozilla.fennec` depending on the release
 channel, or the package name of the application embedding GeckoView, e.g. `org.mozilla.geckoview_example`.
 
 #### `androidActivity` (string, optional)
@@ -146,8 +146,8 @@ attached, an error will be returned.
 
 #### `androidIntentArguments` (array of strings, optional)
 
-Arguments to launch the intent with. Under the hood, geckodriver uses [Android am](https://developer.android.com/studio/command-line/adb#am) to start the Android application
-under test. The given intent arguments are appended to the `am start` command. See Android's [specification for intent arguments](https://developer.android.com/studio/command-line/adb#IntentSpec) for
+Arguments to launch the intent with. Under the hood, geckodriver uses [Android am](https://developer.android.com/tools/adb#am) to start the Android application
+under test. The given intent arguments are appended to the `am start` command. See Android's [specification for intent arguments](https://developer.android.com/tools/adb#IntentSpec) for
 details. This allows to control how the application is launched and to include optional extras for enabling and
 disabling features. For example, to launch with the view action and a specified URL before navigating as part of a
 test, include:
@@ -282,7 +282,7 @@ This runs the GeckoView example application as installed on the first Android em
 ## See also
 
 - [geckodriver's documentation on supported Firefox capabilities](https://firefox-source-docs.mozilla.org/testing/geckodriver/Capabilities.html)
-- [Chrome-specific WebDriver capabilities](https://chromedriver.chromium.org/capabilities)
+- [Chrome-specific WebDriver capabilities](https://developer.chrome.com/docs/chromedriver/capabilities)
   (`goog:chromeOptions)`
 - [List of WebDriver capabilities](/en-US/docs/Web/WebDriver/Capabilities)
 - [New Session](/en-US/docs/Web/WebDriver/Commands/NewSession) command

@@ -67,7 +67,8 @@ input:invalid {
 
 Note, in this case, we get a `patternMismatch` not a {{domxref('validityState.tooLong')}} or {{domxref('validityState.tooShort')}} if the values are too long or too short because it is the pattern that is dictating the length of the value. Had we used [`minlength`](/en-US/docs/Web/HTML/Attributes/minlength) and [`maxlength`](/en-US/docs/Web/HTML/Attributes/maxlength) attributes instead, we may have seen {{domxref('validityState.tooLong')}} or {{domxref('validityState.tooShort')}} being true.
 
-> **Note:** The `{{HTMLElement("input/email", "email")}}` input type requires, at minimum, a match of `x@y` and the `{{HTMLElement("input/url", "url")}}` type requires, at minimum, a match to x:, with no pattern attribute present. When invalid, the {{domxref('validityState.typeMismatch')}} will be true, if there is no pattern attribute (or if the pattern attribute is not valid for that input type).
+> [!NOTE]
+> The `{{HTMLElement("input/email", "email")}}` input type requires, at minimum, a match of `x@y` and the `{{HTMLElement("input/url", "url")}}` type requires, at minimum, a match to x:, with no pattern attribute present. When invalid, the {{domxref('validityState.typeMismatch')}} will be true, if there is no pattern attribute (or if the pattern attribute is not valid for that input type).
 
 ## Specifications
 
@@ -80,5 +81,5 @@ Note, in this case, we get a `patternMismatch` not a {{domxref('validityState.to
 ## See also
 
 - [Constraint validation](/en-US/docs/Web/HTML/Constraint_validation)
-- [Forms: Data form validation](/en-US/docs/Learn/Forms/Form_validation)
+- [Forms: Data form validation](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation)
 - [Regular Expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions)

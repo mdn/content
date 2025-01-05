@@ -134,7 +134,8 @@ console.log(typeof strPrim3); // "string"
 console.log(typeof strObj); // "object"
 ```
 
-> **Warning:** You should rarely find yourself using `String` as a constructor.
+> [!WARNING]
+> You should rarely find yourself using `String` as a constructor.
 
 String primitives and `String` objects also give different results when
 using {{jsxref("Global_Objects/eval", "eval()")}}. Primitives passed to
@@ -262,12 +263,12 @@ These properties are own properties of each `String` instance.
 - {{jsxref("String.prototype.includes()")}}
   - : Determines whether the calling string contains `searchString`.
 - {{jsxref("String.prototype.indexOf()")}}
-  - : Returns the index within the calling {{jsxref("String")}} object of the first
+  - : Returns the index within this string of the first
     occurrence of `searchValue`, or `-1` if not found.
 - {{jsxref("String.prototype.isWellFormed()")}}
   - : Returns a boolean indicating whether this string contains any [lone surrogates](#utf-16_characters_unicode_code_points_and_grapheme_clusters).
 - {{jsxref("String.prototype.lastIndexOf()")}}
-  - : Returns the index within the calling {{jsxref("String")}} object of the last
+  - : Returns the index within this string of the last
     occurrence of `searchValue`, or `-1` if not found.
 - {{jsxref("String.prototype.localeCompare()")}}
   - : Returns a number indicating whether the reference string
@@ -354,9 +355,10 @@ These properties are own properties of each `String` instance.
 
 ### HTML wrapper methods
 
-> **Warning:** Deprecated. Avoid these methods.
+> [!WARNING]
+> Deprecated. Avoid these methods.
 >
-> They are of limited use, as they are based on a very old HTML standard and provide only a subset of the currently available HTML tags and attributes. Many of them create deprecated or non-standard markup today. In addition, they do simple string concatenation without any validation or sanitation, which makes them a potential security threat when directly inserted using [`innerHTML`](/en-US/docs/Web/API/Element/innerHTML). Use [DOM APIs](/en-US/docs/Web/API/Document_Object_Model) such as [`document.createElement()`](/en-US/docs/Web/API/Document/createElement) instead.
+> They are of limited use, as they are based on a very old HTML standard and provide only a subset of the currently available HTML tags and attributes. Many of them create deprecated or non-standard markup today. In addition, they do string concatenation without any validation or sanitation, which makes them a potential security threat when directly inserted using [`innerHTML`](/en-US/docs/Web/API/Element/innerHTML). Use [DOM APIs](/en-US/docs/Web/API/Document_Object_Model) such as [`document.createElement()`](/en-US/docs/Web/API/Document/createElement) instead.
 
 - {{jsxref("String.prototype.anchor()")}} {{deprecated_inline}}
   - : [`<a name="name">`](/en-US/docs/Web/HTML/Element/a#name) (hypertext target)

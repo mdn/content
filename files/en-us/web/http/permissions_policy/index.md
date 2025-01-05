@@ -2,10 +2,12 @@
 title: Permissions Policy
 slug: Web/HTTP/Permissions_Policy
 page-type: guide
+status:
+  - experimental
 browser-compat: http.headers.Permissions-Policy
 ---
 
-{{HTTPSidebar}}
+{{HTTPSidebar}}{{SeeCompatTable}}
 
 **Permissions Policy** provides mechanisms for web developers to explicitly declare what functionality can and cannot be used on a website. You define a set of "policies" that restrict what APIs the site's code can access or modify the browser's default behavior for certain features. This allows you to enforce best practices, even as the codebase evolves — as well as more safely compose third-party content.
 
@@ -18,7 +20,8 @@ Examples of what you can do with Permissions Policy:
 - Allow iframes to use the [Fullscreen API](/en-US/docs/Web/API/Fullscreen_API).
 - Stop items from being scripted if they are not visible in the viewport, to improve performance.
 
-> **Note:** Permissions Policy used to be called Feature Policy. The name has changed, and so has the HTTP header syntax, so bear this in mind if you have used Feature Policy in the past, and check the browser support tables. The `<iframe allow=" ... ">` syntax has stayed the same.
+> [!NOTE]
+> Permissions Policy used to be called Feature Policy. The name has changed, and so has the HTTP header syntax, so bear this in mind if you have used Feature Policy in the past, and check the browser support tables. The `<iframe allow=" ... ">` syntax has stayed the same.
 
 ## Concepts and usage
 
@@ -31,7 +34,8 @@ Some approaches include:
 - APIs are not even exposed, as though they don't exist.
 - Options that control the feature behavior have different default values.
 
-> **Note:** Newly-introduced features may have an explicit API to signal the state. Existing features that later integrate with Permissions Policy will typically use existing mechanisms.
+> [!NOTE]
+> Newly-introduced features may have an explicit API to signal the state. Existing features that later integrate with Permissions Policy will typically use existing mechanisms.
 
 Permissions Policy allows you to control which origins can use which features, both on the top-level page and in embedded {{htmlelement("iframe")}}s. The aim is to enforce best practices for good user experiences and provide granular control over _sensitive_ or _powerful_ features (meaning features that a user is required to give express permission for usage of, before related code can be executed).
 
@@ -42,7 +46,8 @@ Permissions Policy provides two ways to specify policies:
 
 These are separate but related — see [Inheritance of policies for embedded content](#inheritance_of_policies_for_embedded_content) for details.
 
-> **Note:** Scripts can programmatically query information about the permission policy via the {{DOMxRef("FeaturePolicy")}} object located at either {{DOMxRef("Document.featurePolicy")}} or {{DOMxRef("HTMLIFrameElement.featurePolicy")}}.
+> [!NOTE]
+> Scripts can programmatically query information about the permission policy via the {{DOMxRef("FeaturePolicy")}} object located at either {{DOMxRef("Document.featurePolicy")}} or {{DOMxRef("HTMLIFrameElement.featurePolicy")}}.
 
 To control each feature, you write a policy that consists of:
 
@@ -76,7 +81,8 @@ An allowlist is a list of origins that takes one or more of the following values
 
 The values `*` and `()` may only be used on their own, while `self` and `src` may be used in combination with one or more origins.
 
-> **Note:** Directives have a default allowlist, which is always one of `*`, `self`, or `none` for the `Permissions-Policy` HTTP header, and governs the default behavior if they are not explicitly listed in a policy. These are specified on the individual [directive reference pages](/en-US/docs/Web/HTTP/Headers/Permissions-Policy#directives). For `<iframe>` `allow` attributes , the default behavior is always `src`.
+> [!NOTE]
+> Directives have a default allowlist, which is always one of `*`, `self`, or `none` for the `Permissions-Policy` HTTP header, and governs the default behavior if they are not explicitly listed in a policy. These are specified on the individual [directive reference pages](/en-US/docs/Web/HTTP/Headers/Permissions-Policy#directives). For `<iframe>` `allow` attributes, the default behavior is always `src`.
 
 Where supported, you can include wildcards in Permissions Policy origins. This means that instead of having to explicitly specify several different subdomains in an allowlist, you can specify them all in a single origin with a wildcard.
 
@@ -180,11 +186,12 @@ It is worth giving the `src` value a special mention. We mentioned above that us
 ></iframe>
 ```
 
-> **Note:** As you'll have noticed, the syntax for `<iframe>` policies is a bit different to the syntax for `Permissions-Policy` headers. The former still uses the same syntax as the older Feature Policy specification, which was superseded by Permissions Policy.
+> [!NOTE]
+> As you'll have noticed, the syntax for `<iframe>` policies is a bit different to the syntax for `Permissions-Policy` headers. The former still uses the same syntax as the older Feature Policy specification, which was superseded by Permissions Policy.
 
 ### Fenced frames and permissions policy
 
-{{htmlelement("fencedframe")}}s interact with permissions policies in the same way as `<iframe>`s, but in a much more restricted capacity. Only specific features designed to be used in `<fencedframes>`s can be enabled via permissions policies set on them; other policy-controlled features are not available in this context.
+{{htmlelement("fencedframe")}}s interact with permissions policies in the same way as `<iframe>`s, but in a much more restricted capacity. Only specific features designed to be used in `<fencedframe>`s can be enabled via permissions policies set on them; other policy-controlled features are not available in this context.
 
 See [Permissions policies available to fenced frames](/en-US/docs/Web/HTML/Element/fencedframe#permissions_policies_available_to_fenced_frames) for more details.
 
@@ -230,6 +237,6 @@ If a different origin ended up getting loaded into `<iframe>`, it would not have
 
 - {{HTTPHeader("Permissions-Policy")}} HTTP header
 - {{HTMLElement("iframe", "allow", "#Attributes")}} attribute on iframes
-- [Controlling browser features with Permissions Policy](https://developer.chrome.com/en/docs/privacy-sandbox/permissions-policy/): use guide that also contains several demo links.
+- [Controlling browser features with Permissions Policy](https://developer.chrome.com/docs/privacy-security/permissions-policy): use guide that also contains several demo links.
 - [Permissions/Feature policies on chromestatus.com](https://chromestatus.com/features#component%3A%20Blink%3EFeaturePolicy)
 - [Privacy, permissions, and information security](/en-US/docs/Web/Privacy)

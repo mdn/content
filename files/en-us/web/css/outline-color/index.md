@@ -42,7 +42,7 @@ An outline is a line that is drawn around an element, outside the {{cssxref("bor
 
 It is often more convenient to use the shorthand property {{cssxref("outline")}} when defining the appearance of an outline.
 
-## Accessibility concerns
+## Accessibility
 
 Custom [focus styles](/en-US/docs/Web/CSS/:focus) commonly involve making adjustments to the {{cssxref("outline")}} property. If the color of the outline is adjusted, it is important to ensure that the contrast ratio between it and the background the outline is placed over is high enough that people experiencing low vision conditions will be able to perceive it.
 
@@ -95,8 +95,7 @@ p {
 ## See also
 
 - {{cssxref("outline")}}
-- {{cssxref("outline-color")}}
-- {{cssxref("outline-style")}}
 - {{cssxref("outline-width")}}
+- {{cssxref("outline-style")}}
 - The {{cssxref("&lt;color&gt;")}} data type
 - Other color-related properties: {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, and {{cssxref("column-rule-color")}}

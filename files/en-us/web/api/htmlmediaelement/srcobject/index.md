@@ -10,18 +10,19 @@ browser-compat: api.HTMLMediaElement.srcObject
 
 The **`srcObject`** property of the
 {{domxref("HTMLMediaElement")}} interface sets or returns the object which serves as
-the source of the media associated with the {{domxref("HTMLMediaElement")}}.
+the source of the media associated with the {{domxref("HTMLMediaElement")}}, or `null` if not assigned.
 
 The object can be a {{domxref("MediaStream")}}, a {{domxref("MediaSource")}}, a
 {{domxref("Blob")}}, or a {{domxref("File")}} (which inherits from `Blob`).
 
-> **Note:** As of March 2020, only Safari has full support for `srcObject`, i.e. using `MediaSource`, `MediaStream`, `Blob`, and `File` objects as values. Other browsers support `MediaStream` objects; until they catch up, consider falling back to creating a URL with {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}} and assigning it to {{domxref("HTMLMediaElement.src")}} (see below for an example). In addition, as of version 108 Chromium supports attaching a dedicated worker `MediaSource` object by assigning that object's {{domxref("MediaSourceHandle")}} instance (transferred from the worker) to `srcObject`.
+> [!NOTE]
+> As of March 2020, only Safari has full support for `srcObject`, i.e. using `MediaSource`, `MediaStream`, `Blob`, and `File` objects as values. Other browsers support `MediaStream` objects; until they catch up, consider falling back to creating a URL with {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}} and assigning it to {{domxref("HTMLMediaElement.src")}} (see below for an example). In addition, as of version 108 Chromium supports attaching a dedicated worker `MediaSource` object by assigning that object's {{domxref("MediaSourceHandle")}} instance (transferred from the worker) to `srcObject`.
 
 ## Value
 
 A {{domxref('MediaStream')}}, {{domxref('MediaSource')}}, {{domxref('Blob')}}, or
 {{domxref('File')}} object (though see the compatibility table for what is actually
-supported).
+supported), or `null` if not assigned.
 
 ## Usage notes
 
@@ -113,7 +114,7 @@ mediaSource.addEventListener("sourceopen", () => {
 });
 ```
 
-Over in the main thread, we receive the handle via a {{domxref("Worker.message_event", "message")}} event handler, attach it to a {{htmlelement("video")}} via its {{domxref("HTMLMediaElement.srcObject")}} property, and {{domxref("HTMLMediaElement.play()", "play")}} the video:
+Over in the main thread, we receive the handle via a {{domxref("Worker.message_event", "message")}} event handler, attach it to a {{htmlelement("video")}} via its `HTMLMediaElement.srcObject` property, and {{domxref("HTMLMediaElement.play()", "play")}} the video:
 
 ```js
 worker.addEventListener("message", (msg) => {

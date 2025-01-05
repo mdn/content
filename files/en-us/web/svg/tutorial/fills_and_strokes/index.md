@@ -63,7 +63,7 @@ There are three possible values for `stroke-linecap`:
 
 Use `stroke-linejoin` to control how the joint between two line segments is drawn.
 
-![The stroke-linejoin attribute changes the look at the point where two lines join, with miter created an angled join, round rounding the corner, and bevel creating a beveled edge, flattening the corner .](svg_stroke_linejoin_example.png)
+![The stroke-linejoin attribute changes the look at the point where two lines join, with miter created an angled join, round rounding the corner, and bevel creating a beveled edge, flattening the corner.](svg_stroke_linejoin_example.png)
 
 ```xml
 <?xml version="1.0" standalone="no"?>
@@ -99,7 +99,7 @@ The `stroke-dasharray` attribute can take a series of comma and/or whitespace se
 
 The first number specifies a distance for the filled area, and the second a distance for the unfilled area. So in the above example, the second path fills 5 pixel units, with 5 blank units until the next dash of 5 units. You can specify more numbers if you would like a more complicated dash pattern. The first example specifies three numbers, in which case the renderer loops the numbers twice to create an even pattern. So the first path renders 5 filled, 10 empty, 5 filled, and then loops back to create 5 empty, 10 filled, 5 empty. The pattern then repeats.
 
-There are additional `stroke` and `fill` properties available, including `fill-rule,` which specifies how to color in shapes that overlap themselves; [`stroke-miterlimit`](/en-US/docs/Web/SVG/Attribute/stroke-miterlimit), which determines if a stroke should draw miters; and [stroke-dashoffset](/en-US/docs/Web/SVG/Attribute/stroke-dashoffset), which specifies where to start a dasharray on a line.
+There are additional `stroke` and `fill` properties available, including `fill-rule`, which specifies how to color in shapes that overlap themselves; [`stroke-miterlimit`](/en-US/docs/Web/SVG/Attribute/stroke-miterlimit), which determines if a stroke should draw miters; and [stroke-dashoffset](/en-US/docs/Web/SVG/Attribute/stroke-dashoffset), which specifies where to start a dasharray on a line.
 
 ### Paint order
 
@@ -133,7 +133,8 @@ In case of second shape, stroke has been rendered before fill.
 
 In addition to setting attributes on objects, you can also use CSS to style fills and strokes. Not all attributes can be set via CSS. Attributes that deal with painting and filling are usually available, so `fill`, `stroke`, `stroke-dasharray`, etc. can all be set this way, in addition to the gradient and pattern versions of those shown below. Attributes like `width`, `height`, or {{SVGElement("path")}} commands cannot be set through CSS. It's easiest just to test and find out what is available and what isn't.
 
-> **Note:** The [SVG specification](https://www.w3.org/TR/SVG/propidx.html) decides strictly between attributes that are _properties_ and other attributes. The former can be modified with CSS, the latter not.
+> [!NOTE]
+> The [SVG specification](https://www.w3.org/TR/SVG/propidx.html) decides strictly between attributes that are _properties_ and other attributes. The former can be modified with CSS, the latter not.
 
 CSS can be inserted inline with the element via the `style` attribute:
 

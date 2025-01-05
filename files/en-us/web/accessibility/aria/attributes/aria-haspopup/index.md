@@ -17,15 +17,18 @@ The presence of the `aria-haspopup`, with one of six enumerated values - `menu`,
 
 A [`tooltip`](/en-US/docs/Web/Accessibility/ARIA/Roles/tooltip_role) is not considered to be a popup in this context, as it is not interactive.
 
-> **Note:** Make sure the role of the element that serves as the container for the popup content is a [`menu`](/en-US/docs/Web/Accessibility/ARIA/Roles/menu_role), [`listbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role), [`tree`](/en-US/docs/Web/Accessibility/ARIA/Roles/tree_role), [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role) or [`dialog`](/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role) and that the value of `aria-haspopup` matches the role of the popup container.
+> [!NOTE]
+> Make sure the role of the element that serves as the container for the popup content is a [`menu`](/en-US/docs/Web/Accessibility/ARIA/Roles/menu_role), [`listbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role), [`tree`](/en-US/docs/Web/Accessibility/ARIA/Roles/tree_role), [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role) or [`dialog`](/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role) and that the value of `aria-haspopup` matches the role of the popup container.
 
 The `aria-haspopup` state informs assistive technology users that there is a popup and the type of popup it is, but provides no interactivity. For the popup to be keyboard accessible, make sure the element with `aria-haspopup` is focusable and can trigger the popup, that there is a keyboard mechanism for opening the popup, and that the popup element manages focus of all its descendants.
 
-> **Note:** ARIA does not enable accessible functionality. ARIA only conveys the intended behavior of your functionality.
+> [!NOTE]
+> ARIA does not enable accessible functionality. ARIA only conveys the intended behavior of your functionality.
 
 When creating a [`menubar`](/en-US/docs/Web/Accessibility/ARIA/Roles/menubar_role), a parent [`menuitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role) should have `aria-haspopup="menu"` (or `true`) set. Any button that open a menu should have a role of [`button`](/en-US/docs/Web/Accessibility/ARIA/Roles/button_role) or, preferably, be a {{HTMLElement('button')}}, and also have `aria-haspopup="menu"` (or `true`) set. [`Tab`](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role) elements with popup menus should also have `aria-haspopup="menu"` set. Note that `menubar`s should not be used to create website navigation.
 
-> **Note:** Elements with role [`combobox`](/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role) have an implicit `aria-haspopup` value of `listbox`.
+> [!NOTE]
+> Elements with role [`combobox`](/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role) have an implicit `aria-haspopup` value of `listbox`.
 
 ## Values
 

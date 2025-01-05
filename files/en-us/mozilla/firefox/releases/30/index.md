@@ -47,7 +47,7 @@ _No change._
 - [WebIDL constructors](https://searchfox.org/mozilla-central/source/dom/webidl/) cannot be called as functions anymore. They need to be preceded by the keyword `new`. ([Firefox bug 916644](https://bugzil.la/916644))
 - Added support for a new value (`alpha`) for the second, optional, parameter of the {{domxref("HTMLCanvasElement.getContext()")}} method allowing to define if alpha blending must be stored or not for this context. When not, the per-pixel alpha value in this store is always `1.0`. This allows the back-end to implement a fast-track. ([Firefox bug 982480](https://bugzil.la/982480))
 - `WorkerGlobalScope.console` now returns for the regular {{domxref("console")}}; `WorkerConsole` has been removed ([Firefox bug 965860](https://bugzil.la/965860)).
-- The {{domxref("WebGL_debug_shaders")}} WebGL extension has been implemented ([Firefox bug 968374](https://bugzil.la/968374)).
+- The {{domxref("WEBGL_debug_shaders")}} WebGL extension has been implemented ([Firefox bug 968374](https://bugzil.la/968374)).
 
 ### MathML
 
@@ -59,7 +59,7 @@ _No change._
 
 ### Audio/Video
 
-- On Linux, Gstreamer 1.0 is now supported (instead of 0.10) ([Firefox bug 806917](https://bugzil.la/806917)).
+- On Linux, GStreamer 1.0 is now supported (instead of 0.10) ([Firefox bug 806917](https://bugzil.la/806917)).
 
 ## Security
 

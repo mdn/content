@@ -117,7 +117,8 @@ addEventListener("install", (event) => {
 });
 ```
 
-> **Note:** If the cache does not exist, the browser defaults to using the network so that the requested resources can still be obtained provided the network is available.
+> [!NOTE]
+> If the cache does not exist, the browser defaults to using the network so that the requested resources can still be obtained provided the network is available.
 
 You can't combine `or` with another condition — this results in a `TypeError`. If for example you wanted to match files with extensions of `.png` or `.jpg` but only when the `requestMethod` is `get`, you'd need to specify two separate conditions:
 

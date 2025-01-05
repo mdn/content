@@ -23,7 +23,8 @@ When `aria-grabbed` is set to `true`, the [`aria-dropeffect`](/en-US/docs/Web/Ac
 
 The `aria-grabbed` property is expected to be replaced by a new feature in a future version of WAI-ARIA and is considered deprecated.
 
-> **Note:** ARIA does not enable accessible functionality. ARIA only conveys the intended behavior of your functionality.
+> [!NOTE]
+> ARIA does not enable accessible functionality. ARIA only conveys the intended behavior of your functionality.
 
 ## Values
 
@@ -50,4 +51,3 @@ Used in **ALL** [roles](/en-US/docs/Web/Accessibility/ARIA/Roles)
 - {{domxref('dataTransfer')}}
 - {{domxref('DataTransfer.dropEffect')}}
 - {{domxref("HTMLElement/dragstart_event", "dragstart")}}
-- [Accessible Drag and Drop](https://dev.opera.com/articles/accessible-drag-and-drop/) by Gez Lemon

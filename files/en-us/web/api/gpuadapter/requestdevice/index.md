@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPUAdapter.requestDevice
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`requestDevice()`** method of the
 {{domxref("GPUAdapter")}} interface returns a {{jsxref("Promise")}} that fulfills with a {{domxref("GPUDevice")}} object, which is the primary interface for communicating with the GPU.
@@ -33,7 +33,8 @@ requestDevice(descriptor)
     - `requiredLimits` {{optional_inline}}
       - : An object containing properties representing the limits that you want supported by the returned {{domxref("GPUDevice")}}. The `requestDevice()` call will fail if the `GPUAdapter` cannot provide these limits. Each key must be the name of a member of {{domxref("GPUSupportedLimits")}}. This defaults to an empty object if no value is provided.
 
-> **Note:** Not all features and limits will be available to WebGPU in all browsers that support it, even if they are supported by the underlying hardware. See the {{domxref("GPUAdapter.features", "features")}} and {{domxref("GPUAdapter.limits", "limits")}} pages for more information.
+> [!NOTE]
+> Not all features and limits will be available to WebGPU in all browsers that support it, even if they are supported by the underlying hardware. See the {{domxref("GPUAdapter.features", "features")}} and {{domxref("GPUAdapter.limits", "limits")}} pages for more information.
 
 ### Return value
 
@@ -103,7 +104,7 @@ async function init() {
 
   const device = await adapter.requestDevice({
     defaultQueue: {
-      label: "myqueue",
+      label: "my_queue",
     },
     requiredFeatures,
     requiredLimits,

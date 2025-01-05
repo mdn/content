@@ -23,7 +23,8 @@ Like all other HTML elements, this element supports the [global attributes](/en-
 
   - : A Boolean attribute; if specified, the video automatically begins to play back as soon as it can without stopping to finish loading the data.
 
-    > **Note:** Modern browsers block audio (or videos with an unmuted audio track) from autoplaying, as sites that automatically play audio can be an unpleasant experience for users. See our [autoplay guide](/en-US/docs/Web/Media/Autoplay_guide) for additional information about how to properly use autoplay.
+    > [!NOTE]
+    > Modern browsers block audio (or videos with an unmuted audio track) from autoplaying, as sites that automatically play audio can be an unpleasant experience for users. See our [autoplay guide](/en-US/docs/Web/Media/Autoplay_guide) for additional information about how to properly use autoplay.
 
     To disable video autoplay, `autoplay="false"` will not work; the video will autoplay if the attribute is there in the `<video>` tag at all. To remove autoplay, the attribute needs to be removed altogether.
 
@@ -77,7 +78,7 @@ Like all other HTML elements, this element supports the [global attributes](/en-
 
     The default value is different for each browser. The spec advises it to be set to `metadata`.
 
-    > **Note:**
+    > [!NOTE]
     >
     > - The `autoplay` attribute has precedence over `preload`. If `autoplay` is specified, the browser would obviously need to start downloading the video for playback.
     > - The specification does not force the browser to follow the value of this attribute; it is a mere hint.
@@ -200,7 +201,7 @@ Like all other HTML elements, this element supports the [global attributes](/en-
     </tr>
     <tr>
       <td>
-        {{domxref("HTMLMediaElement.playing_event", 'playing ')}}
+        {{domxref("HTMLMediaElement.playing_event", 'playing')}}
       </td>
       <td>
         Playback is ready to start after having been paused or delayed due to
@@ -296,7 +297,7 @@ Other usage notes:
 - You can play audio files using a `<video>` element. This can be useful if, for example, you need to perform audio with a [WebVTT](/en-US/docs/Web/API/WebVTT_API) transcript, since the {{HTMLElement("audio")}} element doesn't allow captions using WebVTT.
 - To test the fallback content on browsers that support the element, you can replace `<video>` with a non-existing element like `<notavideo>`.
 
-A good general source of information on using HTML `<video>` is the [Video and audio content](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content) beginner's tutorial.
+A good general source of information on using HTML `<video>` is the [HTML video and audio](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio) beginner's tutorial.
 
 ### Styling with CSS
 
@@ -368,7 +369,7 @@ Your web host may provide an easy interface to MIME type configuration changes f
 
 Videos should provide both captions and transcripts that accurately describe their content (see [Adding captions and subtitles to HTML video](/en-US/docs/Web/Media/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video) for more information on how to implement these). Captions allow people who are experiencing hearing loss to understand a video's audio content as the video is being played, while transcripts allow people who need additional time to be able to review audio content at a pace and format that is comfortable for them.
 
-It's worth noting that while you can caption audio-only media, you can only do so when playing audio in a {{HTMLElement("video")}} element since the video region of the element is used to present the captions. This is one of the special scenarios in which it's useful to play audio in a video element.
+It's worth noting that while you can caption audio-only media, you can only do so when playing audio in a `<video>` element since the video region of the element is used to present the captions. This is one of the special scenarios in which it's useful to play audio in a video element.
 
 If automatic captioning services are used, it is important to review the generated content to ensure it accurately represents the source video.
 
@@ -409,7 +410,7 @@ This example plays a video when activated, providing the user with the browser's
 #### HTML
 
 ```html
-<!-- Simple video example -->
+<!-- Basic video example -->
 <!-- 'Big Buck Bunny' licensed under CC 3.0 by the Blender foundation. Hosted by archive.org -->
 <!-- Poster from peach.blender.org -->
 <video
@@ -485,10 +486,10 @@ Some media file types let you provide more specific information using the [`code
       <td>
         <p>
           If the element has a <a href="#src"><code>src</code></a>
-          attribute: zero or more {{HTMLElement("track")}} elements, followed by transparent content that contains no media elements–that is no {{HTMLElement("audio")}} or {{HTMLElement("video")}}.
+          attribute: zero or more {{HTMLElement("track")}} elements, followed by transparent content that contains no media elements–that is no {{HTMLElement("audio")}} or <code>&lt;video&gt;</code>.
         </p>
         <p>
-          Else: zero or more {{HTMLElement("source")}} elements, followed by zero or more {{HTMLElement("track")}} elements, followed by transparent content that contains no media elements–that is no {{HTMLElement("audio")}} or {{HTMLElement("video")}}.
+          Else: zero or more {{HTMLElement("source")}} elements, followed by zero or more {{HTMLElement("track")}} elements, followed by transparent content that contains no media elements–that is no {{HTMLElement("audio")}} or <code>&lt;video&gt;</code>.
         </p>
       </td>
     </tr>
@@ -537,6 +538,6 @@ Some media file types let you provide more specific information using the [`code
 
 - Positioning and sizing the picture within its frame: {{cssxref("object-position")}} and {{cssxref("object-fit")}}
 - {{htmlelement("audio")}}
-- [Using HTML audio and video](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
+- [HTML video and audio](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
 - [Manipulating video using canvas](/en-US/docs/Web/API/Canvas_API/Manipulating_video_using_canvas)
-- [Configuring servers for Ogg media](/en-US/docs/Web/HTTP/Configuring_servers_for_Ogg_media)
+- [Configuring servers for Ogg media](/en-US/docs/Web/Media/Formats/Configuring_servers_for_Ogg_media)

@@ -141,7 +141,8 @@ Curious how things will work if a third-party domain on your site were classifie
 4. If the preference does not exist, click "String" and then "+" to create a new preference.
 5. For the preference value enter comma separated origins that you'd like to have classified as trackers. E.g. "example.net,example.org".
 
-> **Warning:** Be sure to remove these entries after you have finished testing.
+> [!WARNING]
+> Be sure to remove these entries after you have finished testing.
 
 ## FAQ
 

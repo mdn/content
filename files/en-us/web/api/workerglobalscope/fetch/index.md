@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.fetch
 ---
 
-{{APIRef("Fetch API")}}
+{{APIRef("Fetch API")}}{{AvailableInWorkers("worker")}}
 
 The **`fetch()`** method of the {{domxref("WorkerGlobalScope")}} interface starts the process of fetching a resource from the network, returning a promise that is fulfilled once the response is available.
 
@@ -18,7 +18,8 @@ Instead, a `then()` handler must check the {{domxref("Response.ok")}} and/or {{d
 
 The `fetch()` method is controlled by the `connect-src` directive of [Content Security Policy](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) rather than the directive of the resources it's retrieving.
 
-> **Note:** The `fetch()` method's parameters are identical to those of the {{domxref("Request.Request","Request()")}} constructor.
+> [!NOTE]
+> The `fetch()` method's parameters are identical to those of the {{domxref("Request.Request","Request()")}} constructor.
 
 ## Syntax
 

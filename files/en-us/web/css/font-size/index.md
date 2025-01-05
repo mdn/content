@@ -50,11 +50,11 @@ font-size: unset;
 
 - `xx-small`, `x-small`, `small`, `medium`, `large`, `x-large`, `xx-large`, `xxx-large`
 
-  - : Absolute-size keywords, based on the user's default font size (which is `medium`).
+  - : [Absolute-size](/en-US/docs/Web/CSS/absolute-size) keywords, based on the user's default font size (which is `medium`).
 
 - `larger`, `smaller`
 
-  - : Relative-size keywords. The font will be larger or smaller relative to the parent element's font size, roughly by the ratio used to separate the absolute-size keywords above.
+  - : [Relative-size](/en-US/docs/Web/CSS/relative-size) keywords. The font will be larger or smaller relative to the parent element's font size, roughly by the ratio used to separate the absolute-size keywords above.
 
 - {{cssxref("&lt;length&gt;")}}
 
@@ -65,7 +65,8 @@ font-size: unset;
 - {{cssxref("&lt;percentage&gt;")}}
 
   - : A positive {{cssxref("&lt;percentage&gt;")}} value, relative to the parent element's font size.
-    > **Note:** To maximize accessibility, it is generally best to use values that are relative to the user's default font size.
+    > [!NOTE]
+    > To maximize accessibility, it is generally best to use values that are relative to the user's default font size.
 
 - `math`
   - : [Scaling rules](https://w3c.github.io/mathml-core/#the-math-script-level-property) are applied when determining the computed value of the `font-size` property for math elements relative to the `font-size` of the containing parent.
@@ -85,7 +86,8 @@ Setting the font size in pixel values (`px`) is a good choice when you need pixe
 
 Font sizing settings can also be used in combination. For example, if a parent element is set to `16px` and its child element is set to `larger`, the child element displays larger than the parent element on the page.
 
-> **Note:** Defining font sizes in `px` is _[not accessible](https://en.wikipedia.org/wiki/Web_accessibility)_, because the user cannot change the font size in some browsers. For example, users with limited vision may wish to set the font size much larger than the size chosen by a web designer. Avoid using them for font sizes if you wish to create an inclusive design.
+> [!NOTE]
+> Defining font sizes in `px` is _[not accessible](https://en.wikipedia.org/wiki/Web_accessibility)_, because the user cannot change the font size in some browsers. For example, users with limited vision may wish to set the font size much larger than the size chosen by a web designer. Avoid using them for font sizes if you wish to create an inclusive design.
 
 ### Ems
 
@@ -222,4 +224,4 @@ See the W3C Editor's Draft for a more detailed description of [font-relative len
 - {{cssxref("font-weight")}}
 - {{cssxref("math-depth")}}
 - {{cssxref("math-style")}}
-- [Fundamental text and font styling](/en-US/docs/Learn/CSS/Styling_text/Fundamentals)
+- [Learn: Fundamental text and font styling](/en-US/docs/Learn_web_development/Core/Text_styling/Fundamentals)

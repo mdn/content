@@ -21,7 +21,7 @@ WebGL and the [GLSL](<https://www.khronos.org/opengl/wiki/Core_Language_(GLSL)>)
 
 However, WebGL has some fundamental issues that needed addressing:
 
-- Since WebGL's release, a new generation of native GPU APIs have appeared — the most popular being [Microsoft's Direct3D 12](https://docs.microsoft.com/en-us/windows/win32/direct3d12/direct3d-12-graphics), [Apple's Metal](https://developer.apple.com/metal/), and [The Khronos Group's Vulkan](https://www.vulkan.org/) — which provide a multitude of new features. There are no more updates planned to OpenGL (and therefore WebGL), so it won't get any of these new features. WebGPU on the other hand will have new features added to it going forwards.
+- Since WebGL's release, a new generation of native GPU APIs have appeared — the most popular being [Microsoft's Direct3D 12](https://learn.microsoft.com/en-us/windows/win32/direct3d12/direct3d-12-graphics), [Apple's Metal](https://developer.apple.com/metal/), and [The Khronos Group's Vulkan](https://www.vulkan.org/) — which provide a multitude of new features. There are no more updates planned to OpenGL (and therefore WebGL), so it won't get any of these new features. WebGPU on the other hand will have new features added to it going forwards.
 - WebGL is based wholly around the use case of drawing graphics and rendering them to a canvas. It does not handle general-purpose GPU (GPGPU) computations very well. GPGPU computations are becoming more and more important for many different use cases, for example those based on machine learning models.
 - 3D graphics apps are becoming increasingly demanding, both in terms of the number of objects to be rendered simultaneously, and usage of new rendering features.
 
@@ -39,7 +39,8 @@ There are several layers of abstraction between a device GPU and a web browser r
   - Discrete GPUs, which live on their own board, separate from the CPU.
   - Software "GPUs", implemented on the CPU.
 
-  > **Note:** The above diagram assumes a device with only one GPU.
+  > [!NOTE]
+  > The above diagram assumes a device with only one GPU.
 
 - A native GPU API, which is part of the OS (e.g. Metal on macOS), is a programming interface allowing native applications to use the capabilities of the GPU. API instructions are sent to the GPU (and responses received) via a driver. It is possible for a system to have multiple native OS APIs and drivers available to communicate with the GPU, although the above diagram assumes a device with only one native API/driver.
 - A browser's WebGPU implementation handles communicating with the GPU via a native GPU API driver. A WebGPU adapter effectively represents a physical GPU and driver available on the underlying system, in your code.
@@ -134,7 +135,8 @@ fn fragment_main(fragData: VertexOut) -> @location(0) vec4f
 `;
 ```
 
-> **Note:** In our demos we are storing our shader code inside a template literal, but you can store it anywhere from which it can easily be retrieved as text to be fed into your WebGPU program. For example, another common practice is to store shaders inside a {{htmlelement("script")}} element and retrieve the contents using {{domxref("Node.textContent")}}. The correct mime type to use for WGSL is `text/wgsl`.
+> [!NOTE]
+> In our demos we are storing our shader code inside a template literal, but you can store it anywhere from which it can easily be retrieved as text to be fed into your WebGPU program. For example, another common practice is to store shaders inside a {{htmlelement("script")}} element and retrieve the contents using {{domxref("Node.textContent")}}. The correct mime type to use for WGSL is `text/wgsl`.
 
 To make your shader code available to WebGPU, you have to put it inside a {{domxref("GPUShaderModule")}} via a {{domxref("GPUDevice.createShaderModule()")}} call, passing your shader code as a property inside a descriptor object. For example:
 
@@ -161,7 +163,8 @@ context.configure({
 });
 ```
 
-> **Note:** The best practice for determining the texture format is to use the {{domxref("GPU.getPreferredCanvasFormat()")}} method; this selects the most efficient format (either `bgra8unorm` or `rgba8unorm`) for the user's device.
+> [!NOTE]
+> The best practice for determining the texture format is to use the {{domxref("GPU.getPreferredCanvasFormat()")}} method; this selects the most efficient format (either `bgra8unorm` or `rgba8unorm`) for the user's device.
 
 ### Create a buffer and write our triangle data into it
 
@@ -318,7 +321,8 @@ The app follows a similar structure to the basic rendering demo. We create a {{d
 
 ```js
 // Define global buffer size
-const BUFFER_SIZE = 1000;
+const NUM_ELEMENTS = 1000;
+const BUFFER_SIZE = NUM_ELEMENTS * 4; // Buffer size, in bytes
 
 const shader = `
 @group(0) @binding(0)
@@ -333,7 +337,7 @@ fn main(
   local_id : vec3u,
 ) {
   // Avoid accessing the buffer out of bounds
-  if (global_id.x >= ${BUFFER_SIZE}) {
+  if (global_id.x >= ${NUM_ELEMENTS}) {
     return;
   }
 
@@ -396,7 +400,8 @@ const bindGroup = device.createBindGroup({
 });
 ```
 
-> **Note:** You could retrieve an implicit layout to use when creating a bind group by calling the {{domxref("GPUComputePipeline.getBindGroupLayout()")}} method. There is also a version available for render pipelines: see {{domxref("GPURenderPipeline.getBindGroupLayout()")}}.
+> [!NOTE]
+> You could retrieve an implicit layout to use when creating a bind group by calling the {{domxref("GPUComputePipeline.getBindGroupLayout()")}} method. There is also a version available for render pipelines: see {{domxref("GPURenderPipeline.getBindGroupLayout()")}}.
 
 ### Create a compute pipeline
 
@@ -427,7 +432,7 @@ We then signal the end of the render pass command list using {{domxref("GPURende
 ```js
 passEncoder.setPipeline(computePipeline);
 passEncoder.setBindGroup(0, bindGroup);
-passEncoder.dispatchWorkgroups(Math.ceil(BUFFER_SIZE / 64));
+passEncoder.dispatchWorkgroups(Math.ceil(NUM_ELEMENTS / 64));
 
 passEncoder.end();
 ```
@@ -443,7 +448,7 @@ commandEncoder.copyBufferToBuffer(
   0, // Source offset
   stagingBuffer,
   0, // Destination offset
-  BUFFER_SIZE,
+  BUFFER_SIZE, // Length, in bytes
 );
 
 // End frame by passing array of command buffers to command queue for execution
@@ -457,7 +462,7 @@ Once the output data is available in the `stagingBuffer`, we use the {{domxref("
 await stagingBuffer.mapAsync(
   GPUMapMode.READ,
   0, // Offset
-  BUFFER_SIZE, // Length
+  BUFFER_SIZE, // Length, in bytes
 );
 
 const copyArrayBuffer = stagingBuffer.getMappedRange(0, BUFFER_SIZE);
@@ -481,7 +486,8 @@ We have attempted to provide useful information to help you understand why error
 
 You can find more information about WebGPU error handling in the explainer — see [Object validity and destroyed-ness](https://gpuweb.github.io/gpuweb/explainer/#invalid-and-destroyed) and [Errors](https://gpuweb.github.io/gpuweb/explainer/#errors). [WebGPU Error Handling best practices](https://toji.dev/webgpu-best-practices/error-handling) provides useful real-world examples and advice.
 
-> **Note:** The historic way of handling errors in WebGL is to provide a {{domxref("WebGLRenderingContext.getError", "getError()")}} method to return error information. This is problematic in that it returns errors synchronously, which is bad for performance — each call requires a round-trip to the GPU and requires all previously issued operations to be finished. Its state model is also flat, meaning that errors can leak between unrelated code. The creators of WebGPU were determined to improve on this.
+> [!NOTE]
+> The historic way of handling errors in WebGL is to provide a {{domxref("WebGLRenderingContext.getError", "getError()")}} method to return error information. This is problematic in that it returns errors synchronously, which is bad for performance — each call requires a round-trip to the GPU and requires all previously issued operations to be finished. Its state model is also flat, meaning that errors can leak between unrelated code. The creators of WebGPU were determined to improve on this.
 
 ## Interfaces
 
@@ -604,5 +610,5 @@ The whole API is available only in a [secure context](/en-US/docs/Web/Security/S
 ## See also
 
 - [WebGPU best practices](https://toji.dev/webgpu-best-practices/)
-- [WebGPU explainer](https://gpuweb.github.io/gpuweb/explainer)
+- [WebGPU explainer](https://gpuweb.github.io/gpuweb/explainer/)
 - [WebGPU — All of the cores, none of the canvas](https://surma.dev/things/webgpu/)

@@ -14,7 +14,8 @@ The mid-element of the array is applied to any signal value of `0`, the first on
 
 If necessary, intermediate values of the distortion curve are linearly interpolated.
 
-> **Note:** The array can be a `null` value: in that case, no distortion is applied to the input signal.
+> [!NOTE]
+> The array can be a `null` value: in that case, no distortion is applied to the input signal.
 
 ## Value
 

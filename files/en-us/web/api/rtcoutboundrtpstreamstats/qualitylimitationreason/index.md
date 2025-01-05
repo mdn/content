@@ -3,10 +3,12 @@ title: "RTCOutboundRtpStreamStats: qualityLimitationReason property"
 short-title: qualityLimitationReason
 slug: Web/API/RTCOutboundRtpStreamStats/qualityLimitationReason
 page-type: web-api-instance-property
-browser-compat: api.RTCOutboundRtpStreamStats.qualityLimitationReason
+status:
+  - experimental
+browser-compat: api.RTCStatsReport.type_outbound-rtp.qualityLimitationReason
 ---
 
-{{APIRef("WebRTC")}}
+{{APIRef("WebRTC")}}{{SeeCompatTable}}
 
 The **`qualityLimitationReason`**
 property of the {{domxref("RTCOutboundRtpStreamStats")}} dictionary is a string

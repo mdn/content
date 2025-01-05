@@ -9,7 +9,7 @@ browser-compat: api.DataTransfer.setData
 {{APIRef("HTML Drag and Drop API")}}
 
 The **`DataTransfer.setData()`** method sets the drag
-operation's {{domxref("DataTransfer","drag data")}} to the specified data and type. If
+operation's [drag data](/en-US/docs/Web/API/DataTransfer) to the specified data and type. If
 data for the given type does not exist, it is added at the end of the drag data store,
 such that the last item in the {{domxref("DataTransfer.types","types")}} list will be
 the new type. If data for the given type already exists, the existing data is replaced
@@ -28,11 +28,9 @@ setData(format, data)
 ### Parameters
 
 - `format`
-  - : A string representing the type of the drag data to add to the
-    {{domxref("DataTransfer","drag object")}}.
+  - : A string representing the type of the drag data to add to the {{domxref("DataTransfer")}}.
 - `data`
-  - : A string representing the data to add to the
-    {{domxref("DataTransfer","drag object")}}.
+  - : A string representing the data to add to the {{domxref("DataTransfer")}}.
 
 ### Return value
 
@@ -44,7 +42,7 @@ None ({{jsxref("undefined")}}).
 
 In this example we can drag a {{HTMLElement("p")}} element into a target {{HTMLElement("div")}} element.
 
-- In the `dragstart` handler, we use {{domxref("DataTransfer.setData","setData()")}} to add the `id` of the `<p>` element to the {{domxref("DataTransfer")}} object.
+- In the `dragstart` handler, we use `setData()` to add the `id` of the `<p>` element to the {{domxref("DataTransfer")}} object.
 
 - In the `drop` handler we retrieve the `id` and use it to move the `<p>` element into the target.
 

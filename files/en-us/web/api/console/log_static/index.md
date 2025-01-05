@@ -13,10 +13,10 @@ The **`console.log()`** static method outputs a message to the console.
 ## Syntax
 
 ```js-nolint
-log(val1)
-log(val1, /* …, */ valN)
-log(msg)
-log(msg, subst1, /* …, */ substN)
+console.log(val1)
+console.log(val1, /* …, */ valN)
+console.log(msg)
+console.log(msg, subst1, /* …, */ substN)
 ```
 
 ### Parameters
@@ -45,5 +45,5 @@ None ({{jsxref("undefined")}}).
 ## See also
 
 - [Microsoft Edge's documentation for `console.log()`](https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/console/api#log)
-- [Node.JS documentation for `console.log()`](https://nodejs.org/docs/latest/api/console.html#consolelogdata-args)
+- [Node.js documentation for `console.log()`](https://nodejs.org/docs/latest/api/console.html#consolelogdata-args)
 - [Google Chrome's documentation for `console.log()`](https://developer.chrome.com/docs/devtools/console/api/#log)

@@ -35,5 +35,3 @@ The method will reject the returned {{jsxref("Promise")}} if, for example, the r
 ## Browser compatibility
 
 {{Compat}}
-
-## See also

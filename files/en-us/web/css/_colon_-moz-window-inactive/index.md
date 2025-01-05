@@ -13,7 +13,8 @@ The **`:-moz-window-inactive`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US
 
 `:-moz-window-inactive` works in content HTML documents, too.
 
-> **Note:** Prior to the addition of this pseudo-class, giving different styles to background windows was achieved by setting an attribute (`active="true"`) on the top-level XUL chrome window. This attribute is no longer used.
+> [!NOTE]
+> Prior to the addition of this pseudo-class, giving different styles to background windows was achieved by setting an attribute (`active="true"`) on the top-level XUL chrome window. This attribute is no longer used.
 
 ## Syntax
 
@@ -30,7 +31,7 @@ This example alters the appearance of a box's background depending on whether it
 ### HTML
 
 ```html
-<div id="mybox">
+<div id="my-box">
   <p>This is a box!</p>
 </div>
 ```
@@ -38,13 +39,13 @@ This example alters the appearance of a box's background depending on whether it
 ### CSS
 
 ```css
-#mybox {
+#my-box {
   background: linear-gradient(to bottom, yellow, cyan);
   width: 200px;
   height: 200px;
 }
 
-#mybox:-moz-window-inactive {
+#my-box:-moz-window-inactive {
   background: cyan;
 }
 ```

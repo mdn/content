@@ -6,13 +6,14 @@ page-type: web-api-instance-method
 browser-compat: api.WebSocket.close
 ---
 
-{{APIRef("WebSockets API")}}
+{{APIRef("WebSockets API")}}{{AvailableInWorkers}}
 
 The **`WebSocket.close()`** method closes the
 {{domxref("WebSocket")}} connection or connection attempt, if any. If the connection is
 already `CLOSED`, this method does nothing.
 
-> **Note:** The process of closing the connection begins with a [closing handshake](https://www.rfc-editor.org/rfc/rfc6455.html#section-1.4), and the `close()` method does not discard previously-sent messages before starting that closing handshake; even if the user agent is still busy sending those messages, the handshake will only start after the messages are sent.
+> [!NOTE]
+> The process of closing the connection begins with a [closing handshake](https://www.rfc-editor.org/rfc/rfc6455.html#section-1.4), and the `close()` method does not discard previously-sent messages before starting that closing handshake; even if the user agent is still busy sending those messages, the handshake will only start after the messages are sent.
 
 ## Syntax
 
@@ -35,7 +36,8 @@ close(code, reason)
 
   - : A string providing a custom [WebSocket connection close reason](https://www.rfc-editor.org/rfc/rfc6455.html#section-7.1.6) (a concise human-readable prose explanation for the closure). The value must be no longer than 123 bytes (encoded in UTF-8).
 
-    > **Note:** Because [UTF-8 uses two to four bytes](/en-US/docs/Glossary/UTF-8) to encode any non-[ASCII](/en-US/docs/Glossary/ASCII) characters, a 123-character `reason` value containing non-ASCII characters would exceed the 123-byte limit.
+    > [!NOTE]
+    > Because [UTF-8 uses two to four bytes](/en-US/docs/Glossary/UTF-8) to encode any non-[ASCII](/en-US/docs/Glossary/ASCII) characters, a 123-character `reason` value containing non-ASCII characters would exceed the 123-byte limit.
 
     If you specify a `reason` value, you should also specify a [`code`](#code) value.
 

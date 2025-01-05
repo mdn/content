@@ -9,7 +9,8 @@ browser-compat: javascript.builtins.Intl.Locale.getTimeZones
 
 The **`getTimeZones()`** method of {{jsxref("Intl.Locale")}} instances returns a list of supported time zones for this locale.
 
-> **Note:** In some versions of some browsers, this method was implemented as an accessor property called `timeZones`. However, because it returns a new array on each access, it is now implemented as a method to prevent the situation of `locale.timeZones === locale.timeZones` returning `false`. Check the [browser compatibility table](#browser_compatibility) for details.
+> [!NOTE]
+> In some versions of some browsers, this method was implemented as an accessor property called `timeZones`. However, because it returns a new array on each access, it is now implemented as a method to prevent the situation of `locale.timeZones === locale.timeZones` returning `false`. Check the [browser compatibility table](#browser_compatibility) for details.
 
 ## Syntax
 
@@ -27,7 +28,7 @@ An array of strings representing supported time zones for the associated `Locale
 
 Note that while the IANA database changes from time to time, [the Unicode CLDR database (which browsers use) keeps old time zone names for stability purposes](https://unicode.org/reports/tr35/#Time_Zone_Identifiers). For example, here are a few notable name changes:
 
-| Current IANA name                | CDLR database          |
+| Current IANA name                | CLDR database          |
 | -------------------------------- | ---------------------- |
 | `America/Argentina/Buenos_Aires` | `America/Buenos_Aires` |
 | `Asia/Kolkata`                   | `Asia/Calcutta`        |

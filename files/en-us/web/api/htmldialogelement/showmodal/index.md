@@ -37,7 +37,7 @@ None ({{jsxref("undefined")}}).
 
 ### Opening a modal dialog
 
-The following example shows a button that, when clicked, opens a modal {{htmlelement("dialog")}} containing a form via the {{domxref("HTMLDialogElement.showModal()")}} function. While open, everything other than the modal dialog's contents is inert. From there you can click the _Cancel_ button to close the dialog (via the {{domxref("HTMLDialogElement.close()")}} function), or submit the form via the submit button. Selecting the cancel button closes the dialog, creating a {{domxref("HTMLDialogElement/close_event", "close")}} event, not a {{domxref("HTMLElement/cancel_event", "cancel")}} event.
+The following example shows a button that, when clicked, opens a modal {{htmlelement("dialog")}} containing a form via the `HTMLDialogElement.showModal()` function. While open, everything other than the modal dialog's contents is inert. From there you can click the _Cancel_ button to close the dialog (via the {{domxref("HTMLDialogElement.close()")}} function), or submit the form via the submit button. Selecting the cancel button closes the dialog, creating a {{domxref("HTMLDialogElement/close_event", "close")}} event, not a {{domxref("HTMLDialogElement/cancel_event", "cancel")}} event.
 
 #### HTML
 

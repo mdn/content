@@ -67,7 +67,7 @@ Set the parameter 'columns' to the number 2:
 <?xslt-param name="columns" select="2"?>
 ```
 
-Set the parameter 'books' to a nodeset containing all `<book>` elements in the null namespace:
+Set the parameter 'books' to a node set containing all `<book>` elements in the null namespace:
 
 ```xml
 <?xslt-param name="books" select="//book"?>
@@ -111,7 +111,7 @@ If **namespace** is missing, the PI is ignored. If **namespace** is empty, the p
 
 ##### Examples
 
-Set the parameter 'books' to a nodeset containing all `<book>` elements in the 'http\://www\.example.org/myNamespace' namespace:
+Set the parameter 'books' to a node set containing all `<book>` elements in the `http://www.example.org/myNamespace` namespace:
 
 ```xml
 <?xslt-param-namespace prefix="my" namespace="http://www.example.org/myNamespace"?>

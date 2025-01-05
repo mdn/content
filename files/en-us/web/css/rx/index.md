@@ -199,5 +199,5 @@ When using percentage values for `rx`, the values are relative to the width of t
 - {{cssxref("stroke")}}
 - {{cssxref("paint-order")}}
 - {{cssxref("border-radius")}} shorthand property
-- {{cssxref("radial-gradient")}}
+- {{cssxref("gradient/radial-gradient", "radial-gradient")}}
 - {{cssxref("basic-shape")}} data type

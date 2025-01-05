@@ -10,10 +10,11 @@ page-type: glossary-definition
 This allows an application to load only the code it actually needs at a given point in time, and load other bundles on demand.
 This approach is used to improve application performance, especially on initial load.
 
-Code splitting is a feature supported by bundlers like [Webpack](https://webpack.js.org/) and [Browserify](https://browserify.org/) which can create multiple bundles that can be dynamically loaded at runtime.
+Code splitting is a feature supported by bundlers like [webpack](https://webpack.js.org/) and [Browserify](https://browserify.org/) which can create multiple bundles that can be dynamically loaded at runtime.
 
 ## See also
 
 - [Lazy loading](/en-US/docs/Web/Performance/Lazy_loading)
-- [HTTP/2](/en-US/docs/Glossary/HTTP_2)
-- [Tree shaking](/en-US/docs/Glossary/Tree_shaking)
+- Related glossary terms:
+  - {{Glossary("HTTP 2", "HTTP/2")}}
+  - {{Glossary("Tree shaking")}}

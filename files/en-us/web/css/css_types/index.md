@@ -21,7 +21,7 @@ selector {
 }
 ```
 
-In formal CSS syntax, data types are denoted by a keyword placed between the inequality signs "`<`" and "`>`".
+In formal CSS syntax, data types are denoted by a keyword placed between the angle brackets `<` and `>`.
 
 ## Textual data types
 
@@ -45,7 +45,7 @@ These types include keywords and identifiers as well as strings, and URLs.
   - : A `<custom-ident>` with the additional restriction that it must start with two dashes, for example, with [CSS Custom Properties](/en-US/docs/Web/CSS/Using_CSS_custom_properties).
 - {{cssxref("&lt;string&gt;")}}
   - : A quoted string, such as used for a value of the {{cssxref("content")}} property.
-- {{cssxref("&lt;url&gt;", "url()")}}
+- {{cssxref("url_value", "&lt;url&gt;")}}
   - : A pointer to a resource, for example as the value of {{cssxref("background-image")}}.
 
 ## Numeric data types
@@ -148,5 +148,5 @@ These data types are used in [CSS math function](/en-US/docs/Web/CSS/CSS_Functio
 ## See also
 
 - [CSS Units and Values](/en-US/docs/Web/CSS/CSS_Values_and_Units)
-- [Introduction to CSS: Values and Units](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)
+- [Learn: Values and units](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
 - [CSS Functional Notation](/en-US/docs/Web/CSS/CSS_Functions)

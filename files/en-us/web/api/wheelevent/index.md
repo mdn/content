@@ -9,7 +9,8 @@ browser-compat: api.WheelEvent
 
 The **`WheelEvent`** interface represents events that occur due to the user moving a mouse wheel or similar input device.
 
-> **Note:** This is the standard wheel event interface to use. Old versions of browsers implemented the non-standard and non-cross-browser-compatible `MouseWheelEvent` and {{DOMxRef("MouseScrollEvent")}} interfaces. Use this interface and avoid the non-standard ones.
+> [!NOTE]
+> This is the standard wheel event interface to use. Old versions of browsers implemented the non-standard and non-cross-browser-compatible `MouseWheelEvent` and {{DOMxRef("MouseScrollEvent")}} interfaces. Use this interface and avoid the non-standard ones.
 
 Don't confuse the `wheel` event with the {{domxref("Element/scroll_event", "scroll")}} event:
 

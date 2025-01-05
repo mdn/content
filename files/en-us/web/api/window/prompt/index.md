@@ -54,7 +54,7 @@ clicks the Cancel button, this function returns `null`.
 
 The above prompt appears as follows (in Chrome on macOS):
 
-[![prompt() dialog in Chrome on macOS](prompt.png)](prompt.png)
+![prompt() dialog in Chrome on macOS](prompt.png)
 
 ## Notes
 

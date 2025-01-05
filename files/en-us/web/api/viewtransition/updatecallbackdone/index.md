@@ -6,14 +6,15 @@ page-type: web-api-instance-property
 browser-compat: api.ViewTransition.updateCallbackDone
 ---
 
-{{APIRef("View Transitions API")}}
+{{APIRef("View Transition API")}}
 
 The **`updateCallbackDone`** read-only property of the
 {{domxref("ViewTransition")}} interface is a {{jsxref("Promise")}} that fulfills when the promise returned by the {{domxref("Document.startViewTransition()", "document.startViewTransition()")}} method's callback fulfills, or rejects when it rejects.
 
 `updateCallbackDone` is useful when you don't care about the success/failure of a same-document (SPA) view transition animation, and just want to know if and when the DOM is updated.
 
-> **Note:** In the case of a cross-document (MPA) view transition, the `updateCallbackDone` promise of the associated `ViewTransition` is automatically fulfilled.
+> [!NOTE]
+> In the case of a cross-document (MPA) view transition, the `updateCallbackDone` promise of the associated `ViewTransition` is automatically fulfilled.
 
 ## Value
 
@@ -42,4 +43,4 @@ See [Transitions as an enhancement](https://developer.chrome.com/docs/web-platfo
 
 ## See also
 
-- [Smooth and simple transitions with the View Transitions API](https://developer.chrome.com/docs/web-platform/view-transitions/)
+- [Smooth transitions with the View Transition API](https://developer.chrome.com/docs/web-platform/view-transitions/)

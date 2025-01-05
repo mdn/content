@@ -12,7 +12,8 @@ browser-compat: api.HTMLTableCellElement.vAlign
 
 The **`vAlign`** property of the {{domxref("HTMLTableCellElement")}} interface is a string indicating how to vertically align text in a {{htmlelement("th")}} or {{htmlelement("td")}} table cell.
 
-> **Note:** This property is deprecated. Use the CSS {{cssxref("vertical-align")}} property to horizontally align text in a cell instead.
+> [!NOTE]
+> This property is deprecated. Use the CSS {{cssxref("vertical-align")}} property to horizontally align text in a cell instead.
 
 ## Value
 
@@ -44,4 +45,4 @@ Use CSS {{cssxref("vertical-align")}} instead, which takes precedence, as demons
 ## See also
 
 - {{cssxref("vertical-align")}}
-- [Styling tables](/en-US/docs/Learn/CSS/Building_blocks/Styling_tables)
+- [Learn: Styling tables](/en-US/docs/Learn_web_development/Core/Styling_basics/Tables)

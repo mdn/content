@@ -118,15 +118,17 @@ You may come across legacy CSS that looks like the following:
 }
 ```
 
-In this example, the last declaration in each block is valid in all browsers — `display: flex;` and `border-radius: 50%;`. Because of the [cascade](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#source_order) [order of appearance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_layers) rule, browsers will apply any prefixed declarations they understand, and then override those values with the standard unprefixed version.
+In this example, the last declaration in each block is valid in all browsers — `display: flex;` and `border-radius: 50%;`. Because of the [cascade](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts#source_order) [order of appearance](/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers) rule, browsers will apply any prefixed declarations they understand, and then override those values with the standard unprefixed version.
 
-> **Note:** Avoid including prefixed properties or property values where possible. If you must use them, declare the prefixed versions before the non-prefixed version as shown above.
+> [!NOTE]
+> Avoid including prefixed properties or property values where possible. If you must use them, declare the prefixed versions before the non-prefixed version as shown above.
 
 ### Errors with auto-closed endings
 
 If a stylesheet ends while a rule, declaration, function, string, or comment is still open, the parser will automatically close everything that was left unclosed.
 
-> **Note:** This is true of external style sheets, selector blocks within an HTML {{HTMLElement("style")}} element, and inline rules within a [`style`](/en-US/docs/Web/HTML/Global_attributes/style) attribute.
+> [!NOTE]
+> This is true of external style sheets, selector blocks within an HTML {{HTMLElement("style")}} element, and inline rules within a [`style`](/en-US/docs/Web/HTML/Global_attributes/style) attribute.
 
 If the content between the last semi-colon and the end of the stylesheet is valid, even if incomplete, the CSS will be parsed normally. For example, if you fail to close out a `@keyframe` declaration before closing your {{htmlelement("style")}}, the animation is still valid.
 
@@ -134,7 +136,7 @@ If the content between the last semi-colon and the end of the stylesheet is vali
 <style>
 @keyframes move {
   100% {
-    transform: translatex(100vw)
+    transform: translateX(100vw)
 </style>
 ```
 
@@ -148,8 +150,8 @@ Unclosed comments are logic errors, not syntax errors. If a comment starts with 
 <style>
   /* this comment is not closed
   @keyframes move {
-    0% {transform: translatex(0);}
-    100% {transform: translatex(100vw);}
+    0% {transform: translateX(0);}
+    100% {transform: translateX(100vw);}
   }
 </style>
 <p style="/* another unclosed comment">Parsed as HTML.</p>

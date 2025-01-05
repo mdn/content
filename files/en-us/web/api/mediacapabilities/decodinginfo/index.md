@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.MediaCapabilities.decodingInfo
 ---
 
-{{APIRef("Media Capabilities API")}}
+{{APIRef("Media Capabilities API")}}{{AvailableInWorkers}}
 
 The **`decodingInfo()`** method of the {{domxref("MediaCapabilities")}} interface returns a promise that fulfils with information about how well the user agent can decode/display media with a given configuration.
 
@@ -15,7 +15,8 @@ The resolved object contains three boolean properties `supported`, `smooth`, and
 The method can also be used to test the user agent capabilities for decoding media encoded with a key system, but only when called in the main thread and in a secure context.
 If the configuration passed in the `configuration.keySystemConfiguration` property is supported for decoding the data, the resolved promise also includes a {{domxref("MediaKeySystemAccess")}} object that can be used to create a {{domxref("MediaKeys")}} object to setup encrypted playback.
 
-> **Note:** Calling `decodingInfo()` with this property may result in user-visible effects, such as asking for permission to access one or more system resources.
+> [!NOTE]
+> Calling `decodingInfo()` with this property may result in user-visible effects, such as asking for permission to access one or more system resources.
 > As such, this function should only be called when the application is ready to create and use a `MediaKeys` object with the provided configuration.
 
 ## Syntax
@@ -105,7 +106,7 @@ decodingInfo(configuration)
 
         - `persistentState` {{optional_inline}}
 
-          - : A string indicating whether whether the returned object must be able to persist session data or any other type of state.
+          - : A string indicating whether the returned object must be able to persist session data or any other type of state.
             The allowed values are:
 
             - `required`
@@ -185,7 +186,7 @@ All supported audio codecs report `powerEfficient` as true.
 
 ## Usage notes
 
-### Comparision with Navigator.requestMediaKeySystemAccess()
+### Comparison with Navigator.requestMediaKeySystemAccess()
 
 `decodingInfo()` and the {{domxref("Navigator.requestMediaKeySystemAccess()")}} method of the [Encrypted Media Extensions API](/en-US/docs/Web/API/Encrypted_Media_Extensions_API) reflect fundamentally different approaches for selecting a configuration for decoding encrypted media.
 
@@ -261,7 +262,7 @@ const videoConfig = {
 };
 
 // check support and performance
-navigator.mediaCapabilities.decodingInfo(audioConfig).then((result) => {
+navigator.mediaCapabilities.decodingInfo(videoConfig).then((result) => {
   if (result.supported) {
     log(
       `The video configuration is supported${result.smooth ? ", smooth" : ", not smooth"}${result.powerEfficient ? ", power efficient" : ", not power efficient"}.`,
@@ -327,7 +328,7 @@ const encryptedMediaConfig = {
 ```
 
 In the previous example we used [promise chaining](/en-US/docs/Web/JavaScript/Guide/Using_promises#chaining), to wait on the result.
-Here we've chosen to use [`async` and `await`](/en-US/docs/Learn/JavaScript/Asynchronous/Promises#async_and_await) to wait on the result, and then log it.
+Here we've chosen to use [`async` and `await`](/en-US/docs/Learn_web_development/Extensions/Async_JS/Promises#async_and_await) to wait on the result, and then log it.
 
 ```js
 getDecodingInfo(encryptedMediaConfig);

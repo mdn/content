@@ -73,6 +73,10 @@ scaleY(s)
   </tbody>
 </table>
 
+## Formal syntax
+
+{{CSSSyntax}}
+
 ## Examples
 
 ### HTML

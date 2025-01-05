@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.PerformanceEntry.entryType
 ---
 
-{{APIRef("Performance API")}} {{AvailableInWorkers}}
+{{APIRef("Performance API")}}{{AvailableInWorkers}}
 
 The read-only **`entryType`** property returns a string representing the type of performance metric that this entry represents.
 
@@ -30,7 +30,7 @@ A string. The return value depends on the subtype of the `PerformanceEntry` obje
 
 - `first-input`
 
-  - : Reports the {{Glossary("first input delay")}} (FID).
+  - : Reports the {{Glossary("First Input Delay")}} (FID).
 
     The entry instance will be a {{domxref("PerformanceEventTiming")}} object.
 

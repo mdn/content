@@ -30,15 +30,15 @@ This property is a shorthand for the following CSS properties:
 ```css
 /* @keyframes duration | easing-function | delay |
 iteration-count | direction | fill-mode | play-state | name */
-animation: 3s ease-in 1s 2 reverse both paused slidein;
+animation: 3s ease-in 1s 2 reverse both paused slide-in;
 
 /* @keyframes duration | easing-function | delay | name */
-animation: 3s linear 1s slidein;
+animation: 3s linear 1s slide-in;
 
 /* two animations */
 animation:
-  3s linear slidein,
-  3s ease-out 5s slideout;
+  3s linear slide-in,
+  3s ease-out 5s slide-out;
 ```
 
 The `animation` property is specified as one or more single animations, separated by commas.
@@ -49,11 +49,11 @@ Each individual animation is specified as:
 
 - zero or one occurrences of the following values:
 
-  - {{cssxref("animation", "&lt;single-easing-function&gt;", "#single-easing-function")}}
-  - {{cssxref("animation", "&lt;single-animation-iteration-count&gt;", "#single-animation-iteration-count")}}
-  - {{cssxref("animation", "&lt;single-animation-direction&gt;", "#single-animation-direction")}}
-  - {{cssxref("animation", "&lt;single-animation-fill-mode&gt;", "#single-animation-fill-mode")}}
-  - {{cssxref("animation", "&lt;single-animation-play-state&gt;", "#single-animation-play-state")}}
+  - [`<single-easing-function>`](#single-easing-function)
+  - [`<single-animation-iteration-count>`](#single-animation-iteration-count)
+  - [`<single-animation-direction>`](#single-animation-direction)
+  - [`<single-animation-fill-mode>`](#single-animation-fill-mode)
+  - [`<single-animation-play-state>`](#single-animation-play-state)
 
 - an optional name for the animation, which may be `none`, a {{cssxref("&lt;custom-ident&gt;")}}, or a {{cssxref("&lt;string&gt;")}}
 
@@ -82,7 +82,9 @@ While an animation name must be set for an animation to be applied, all values o
 
 When the `animation-duration` value is omitted from the `animation` shorthand property, the value for this property defaults to `0s`. In this case, the animation will still occur (the [`animationStart`](/en-US/docs/Web/API/Element/animationstart_event) and [`animationEnd`](/en-US/docs/Web/API/Element/animationend_event) events will be fired) but no animation will be visible.
 
-## Accessibility concerns
+In the case of the `animation-fill-mode` [forwards](/en-US/docs/Web/CSS/animation-fill-mode#forwards) value, animated properties behave as if included in a set [`will-change`](/en-US/docs/Web/CSS/will-change) property value. If a new stacking context is created during the animation, the target element retains the stacking context after the animation has finished.
+
+## Accessibility
 
 Blinking and flashing animation can be problematic for people with cognitive concerns such as Attention Deficit Hyperactivity Disorder (ADHD). Additionally, certain kinds of motion can be a trigger for Vestibular disorders, epilepsy, and migraine and Scotopic sensitivity.
 
@@ -104,7 +106,8 @@ Consider providing a mechanism for pausing or disabling animation as well as usi
 
 ## Examples
 
-> **Note:** Animating [CSS Box Model](/en-US/docs/Web/CSS/CSS_box_model) properties is discouraged. Animating any box model property is inherently CPU intensive; consider animating the [transform](/en-US/docs/Web/CSS/transform) property instead.
+> [!NOTE]
+> Animating [CSS Box Model](/en-US/docs/Web/CSS/CSS_box_model) properties is discouraged. Animating any box model property is inherently CPU intensive; consider animating the [transform](/en-US/docs/Web/CSS/transform) property instead.
 
 ### Sun Rise
 

@@ -31,7 +31,8 @@ The result of calling the function with the specified `this` value and arguments
 
 ## Description
 
-> **Note:** This function is almost identical to {{jsxref("Function/call", "call()")}}, except that the function arguments are passed to `call()` individually as a list, while for `apply()` they are combined in one object, typically an array — for example, `func.call(this, "eat", "bananas")` vs. `func.apply(this, ["eat", "bananas"])`.
+> [!NOTE]
+> This function is almost identical to {{jsxref("Function/call", "call()")}}, except that the function arguments are passed to `call()` individually as a list, while for `apply()` they are combined in one object, typically an array — for example, `func.call(this, "eat", "bananas")` vs. `func.apply(this, ["eat", "bananas"])`.
 
 Normally, when calling a function, the value of [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this) inside the function is the object that the function was accessed on. With `apply()`, you can assign an arbitrary value as `this` when calling an existing function, without first attaching the function to the object as a property. This allows you to use methods of one object as generic utility functions.
 
@@ -53,7 +54,8 @@ function wrapper(...args) {
 
 In general, `fn.apply(null, args)` is equivalent to `fn(...args)` with the parameter spread syntax, except `args` is expected to be an array-like object in the former case with `apply()`, and an [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol) object in the latter case with spread syntax.
 
-> **Warning:** Do not use `apply()` to chain constructors (for example, to implement inheritance). This invokes the constructor function as a plain function, which means [`new.target`](/en-US/docs/Web/JavaScript/Reference/Operators/new.target) is `undefined`, and classes throw an error because they can't be called without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Use {{jsxref("Reflect.construct()")}} or [`extends`](/en-US/docs/Web/JavaScript/Reference/Classes/extends) instead.
+> [!WARNING]
+> Do not use `apply()` to chain constructors (for example, to implement inheritance). This invokes the constructor function as a plain function, which means [`new.target`](/en-US/docs/Web/JavaScript/Reference/Operators/new.target) is `undefined`, and classes throw an error because they can't be called without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Use {{jsxref("Reflect.construct()")}} or [`extends`](/en-US/docs/Web/JavaScript/Reference/Classes/extends) instead.
 
 ## Examples
 
@@ -96,7 +98,7 @@ let max = Math.max.apply(null, numbers);
 
 let min = Math.min.apply(null, numbers);
 
-// vs. simple loop based algorithm
+// vs. loop based algorithm
 max = -Infinity;
 min = +Infinity;
 
@@ -122,11 +124,11 @@ function minOfArray(arr) {
   const QUANTUM = 32768;
 
   for (let i = 0; i < arr.length; i += QUANTUM) {
-    const submin = Math.min.apply(
+    const subMin = Math.min.apply(
       null,
       arr.slice(i, Math.min(i + QUANTUM, arr.length)),
     );
-    min = Math.min(submin, min);
+    min = Math.min(subMin, min);
   }
 
   return min;

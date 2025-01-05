@@ -48,7 +48,7 @@ TCP's three-way handshaking technique is often referred to as "SYN-SYN-ACK" — 
 
 For secure connections established over HTTPS, another "handshake" is required. This handshake, or rather the {{glossary('TLS')}} negotiation, determines which cipher will be used to encrypt the communication, verifies the server, and establishes that a secure connection is in place before beginning the actual transfer of data. This requires five more round trips to the server before the request for content is actually sent.
 
-![The DNS lookup, the TCP handshake, and 5 steps of the TLS handshake including clienthello, serverhello and certificate, clientkey and finished for both server and client.](ssl.jpg)
+![The DNS lookup, the TCP handshake, and 5 steps of the TLS handshake including client hello, server hello and certificate, client key and finished for both server and client.](ssl.jpg)
 
 While making the connection secure adds time to the page load, a secure connection is worth the latency expense, as the data transmitted between the browser and the web server cannot be decrypted by a third party.
 
@@ -71,9 +71,9 @@ Once we have an established connection to a web server, the browser sends an ini
     <h1 class="heading">My Page</h1>
     <p>A paragraph with a <a href="https://example.com/about">link</a></p>
     <div>
-      <img src="myimage.jpg" alt="image description" />
+      <img src="my-image.jpg" alt="image description" />
     </div>
-    <script src="anotherscript.js"></script>
+    <script src="another-script.js"></script>
   </body>
 </html>
 ```
@@ -122,9 +122,9 @@ While the browser builds the DOM tree, this process occupies the main thread. As
 
 ```html
 <link rel="stylesheet" href="styles.css" />
-<script src="myscript.js" async></script>
-<img src="myimage.jpg" alt="image description" />
-<script src="anotherscript.js" async></script>
+<script src="my-script.js" async></script>
+<img src="my-image.jpg" alt="image description" />
+<script src="another-script.js" async></script>
 ```
 
 In this example, while the main thread is parsing the HTML and CSS, the preload scanner will find the scripts and image, and start downloading them as well. To ensure the script doesn't block the process, add the `async` attribute, or the `defer` attribute if JavaScript parsing and execution order is important.
@@ -139,7 +139,8 @@ As with HTML, the browser needs to convert the received CSS rules into something
 
 The CSSOM tree includes styles from the user agent style sheet. The browser begins with the most general rule applicable to a node and recursively refines the computed styles by applying more specific rules. In other words, it cascades the property values.
 
-Building the CSSOM is very, very fast and is not displayed in a unique color in current developer tools. Rather, the "Recalculate Style" in developer tools shows the total time it takes to parse CSS, construct the CSSOM tree, and recursively calculate computed styles. In terms of web performance optimization, there are lower hanging fruit, as the total time to create the CSSOM is generally less than the time it takes for one DNS lookup.
+Building the CSSOM is very, very fast, and this build time information is not displayed in the developer tools.
+Rather, the "Recalculate Style" in developer tools shows the total time it takes to parse CSS, construct the CSSOM tree, and recursively calculate computed styles. In terms of web performance, there are many better ways to invest optimization effort, as the total time to create the CSSOM is generally less than the time it takes for one DNS lookup.
 
 ### Other processes
 
@@ -149,7 +150,7 @@ While the CSS is being parsed and the CSSOM created, other assets, including Jav
 
 #### Building the accessibility tree
 
-The browser also builds an [accessibility](/en-US/docs/Learn/Accessibility) tree that assistive devices use to parse and interpret content. The accessibility object model (AOM) is like a semantic version of the DOM. The browser updates the accessibility tree when the DOM is updated. The accessibility tree is not modifiable by assistive technologies themselves.
+The browser also builds an [accessibility](/en-US/docs/Learn_web_development/Core/Accessibility) tree that assistive devices use to parse and interpret content. The accessibility object model (AOM) is like a semantic version of the DOM. The browser updates the accessibility tree when the DOM is updated. The accessibility tree is not modifiable by assistive technologies themselves.
 
 Until the AOM is built, the content is not accessible to [screen readers](/en-US/docs/Web/Accessibility/ARIA/ARIA_Screen_Reader_Implementors_Guide).
 
@@ -177,7 +178,7 @@ The first time the size and position of each node is determined is called _layou
 
 ### Paint
 
-The last step in the critical rendering path is painting the individual nodes to the screen, the first occurrence of which is called the [first meaningful paint](/en-US/docs/Glossary/First_meaningful_paint). In the painting or rasterization phase, the browser converts each box calculated in the layout phase to actual pixels on the screen. Painting involves drawing every visual part of an element to the screen, including text, colors, borders, shadows, and replaced elements like buttons and images. The browser needs to do this super quickly.
+The last step in the critical rendering path is painting the individual nodes to the screen, the first occurrence of which is called the [first Meaningful Paint](/en-US/docs/Glossary/First_meaningful_paint). In the painting or rasterization phase, the browser converts each box calculated in the layout phase to actual pixels on the screen. Painting involves drawing every visual part of an element to the screen, including text, colors, borders, shadows, and replaced elements like buttons and images. The browser needs to do this super quickly.
 
 To ensure smooth scrolling and animation, everything occupying the main thread, including calculating styles, along with reflow and paint, must take the browser less than 16.67ms to accomplish. At 2048 x 1536, the iPad has over 3,145,000 pixels to be painted to the screen. That is a lot of pixels that have to be painted very quickly. To ensure repainting can be done even faster than the initial paint, the drawing to the screen is generally broken down into several layers. If this occurs, then compositing is necessary.
 
@@ -197,7 +198,7 @@ Once the main thread is done painting the page, you would think we would be "all
 
 {{glossary('Time to Interactive')}} (TTI) is the measurement of how long it took from that first request which led to the DNS lookup and TCP connection to when the page is interactive — interactive being the point in time after the {{glossary('First Contentful Paint')}} when the page responds to user interactions within 50ms. If the main thread is occupied parsing, compiling, and executing JavaScript, it is not available and therefore not able to respond to user interactions in a timely (less than 50ms) fashion.
 
-In our example, maybe the image loaded quickly, but perhaps the `anotherscript.js` file was 2MB and our user's network connection was slow. In this case, the user would see the page super quickly, but wouldn't be able to scroll without jank until the script was downloaded, parsed, and executed. That is not a good user experience. Avoid occupying the main thread, as demonstrated in this WebPageTest example:
+In our example, maybe the image loaded quickly, but perhaps the `another-script.js` file was 2MB and our user's network connection was slow. In this case, the user would see the page super quickly, but wouldn't be able to scroll without jank until the script was downloaded, parsed, and executed. That is not a good user experience. Avoid occupying the main thread, as demonstrated in this WebPageTest example:
 
 ![The main thread is occupied by the downloading, parsing and execution of a JavaScript file - over a fast connection](visa_network.png)
 

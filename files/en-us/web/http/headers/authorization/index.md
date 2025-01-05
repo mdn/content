@@ -7,16 +7,17 @@ browser-compat: http.headers.Authorization
 
 {{HTTPSidebar}}
 
-The HTTP **`Authorization`** request header can be used to provide credentials that authenticate a user agent with a server, allowing access to a protected resource.
+The HTTP **`Authorization`** {{Glossary("request header")}} can be used to provide credentials that authenticate a user agent with a server, allowing access to protected resources.
 
-The **`Authorization`** header is usually, but not always, sent after the user agent first attempts to request a protected resource without credentials.
-The server responds with a {{HTTPStatus("401")}} `Unauthorized` message that includes at least one {{HTTPHeader("WWW-Authenticate")}} header.
-This header indicates what authentication schemes can be used to access the resource (and any additional information needed by the client to use them).
-The user-agent should select the most secure authentication scheme that it supports from those offered, prompt the user for their credentials, and then re-request the resource (including the encoded credentials in the **`Authorization`** header).
+The `Authorization` header is usually, but not always, sent after the user agent first attempts to request a protected resource without credentials.
+The server responds with a {{HTTPStatus("401", "401 Unauthorized")}} message that includes at least one {{HTTPHeader("WWW-Authenticate")}} header.
+This header indicates the authentication schemes that can be used to access the resource and any additional information needed by the client to use them.
+The user-agent should select the most secure authentication scheme that it supports from those offered, prompt the user for their credentials, and then re-request the resource with the encoded credentials in the `Authorization` header.
 
 This header is stripped from cross-origin redirects.
 
-> **Note:** This header is part of the [General HTTP authentication framework](/en-US/docs/Web/HTTP/Authentication#the_general_http_authentication_framework).
+> [!NOTE]
+> This header is part of the [General HTTP authentication framework](/en-US/docs/Web/HTTP/Authentication#the_general_http_authentication_framework).
 > It can be used with a number of [authentication schemes](/en-US/docs/Web/HTTP/Authentication#authentication_schemes).
 
 <table class="properties">
@@ -27,7 +28,7 @@ This header is stripped from cross-origin redirects.
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>no</td>
+      <td>No</td>
     </tr>
   </tbody>
 </table>
@@ -36,17 +37,11 @@ This header is stripped from cross-origin redirects.
 
 ```http
 Authorization: <auth-scheme> <authorization-parameters>
-```
 
-Basic authentication
-
-```http
+// Basic authentication
 Authorization: Basic <credentials>
-```
 
-Digest authentication
-
-```http
+// Digest authentication
 Authorization: Digest username=<username>,
     realm="<realm>",
     uri="<url>",
@@ -66,22 +61,24 @@ Authorization: Digest username=<username>,
   - : The [Authentication scheme](/en-US/docs/Web/HTTP/Authentication#authentication_schemes) that defines how the credentials are encoded.
     Some of the more common types are (case-insensitive): [`Basic`](/en-US/docs/Web/HTTP/Authentication#basic_authentication_scheme), `Digest`, `Negotiate` and `AWS4-HMAC-SHA256`.
 
-    > **Note:** For more information/options see [HTTP Authentication > Authentication schemes](/en-US/docs/Web/HTTP/Authentication#authentication_schemes)
+    > [!NOTE]
+    > For more information/options see [HTTP Authentication > Authentication schemes](/en-US/docs/Web/HTTP/Authentication#authentication_schemes)
 
-Other than `<auth-scheme>` the remaining directives are specific to each [authentication scheme](/en-US/docs/Web/HTTP/Authentication#authentication_schemes).
-Generally you will need to check the relevant specifications for these (keys for a small subset of schemes are listed below).
+Other than `<auth-scheme>`, the remaining directives are specific to each [authentication scheme](/en-US/docs/Web/HTTP/Authentication#authentication_schemes).
+Generally, you will need to check the relevant specifications for these (keys for a small subset of schemes are listed below).
 
-### Basic
+### Basic authentication
 
-- \<credentials>
+- `<credentials>`
 
   - : The credentials, encoded according to the specified scheme.
 
-    > **Note:** For information about the encoding algorithm, see the examples: below, in {{HTTPHeader("WWW-Authenticate")}}, in [HTTP Authentication](/en-US/docs/Web/HTTP/Authentication), and in the relevant specifications.
+    > [!NOTE]
+    > For information about the encoding algorithm, see the examples: below, in {{HTTPHeader("WWW-Authenticate")}}, in [HTTP Authentication](/en-US/docs/Web/HTTP/Authentication), and in the relevant specifications.
 
-### Digest
+### Digest authentication
 
-- \<response>
+- `<response>`
   - : A string of the hex digits that proves that the user knows a password.
     The algorithm encodes the username and password, realm, cnonce, qop, nc, and so on.
     It is described in detail in the specification.
@@ -119,13 +116,13 @@ Generally you will need to check the relevant specifications for these (keys for
 
 ### Basic authentication
 
-For `"Basic"` authentication the credentials are constructed by first combining the username and the password with a colon (`aladdin:opensesame`), and then by encoding the resulting string in [`base64`](/en-US/docs/Glossary/Base64) (`YWxhZGRpbjpvcGVuc2VzYW1l`).
+For `Basic` authentication, the credentials are constructed by first combining the username and the password with a colon (e.g., `aladdin:opensesame`), and then by encoding the resulting string in [`base64`](/en-US/docs/Glossary/Base64) (e.g., `YWxhZGRpbjpvcGVuc2VzYW1l`).
 
 ```http
 Authorization: Basic YWxhZGRpbjpvcGVuc2VzYW1l
 ```
 
-> **Warning:** {{Glossary("Base64")}}-encoding can easily be reversed to obtain the original name and password, so Basic authentication is completely insecure.
+> **Warning:** {{Glossary("Base64")}}-encoding can easily be reversed to obtain the original name and password, so `Basic` authentication offers no cryptographic security.
 > {{Glossary("HTTPS")}} is always recommended when using authentication, but is even more so when using `Basic` authentication.
 
 See also [HTTP authentication](/en-US/docs/Web/HTTP/Authentication) for examples on how to configure Apache or Nginx servers to password protect your site with HTTP basic authentication.

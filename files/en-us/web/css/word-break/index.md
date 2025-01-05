@@ -44,7 +44,8 @@ The `word-break` property is specified as a single keyword chosen from the list 
 - `break-word`
   - : Has the same effect as `overflow-wrap: anywhere` combined with `word-break: normal`, regardless of the actual value of the {{cssxref("overflow-wrap")}} property.
 
-> **Note:** In contrast to `word-break: break-word` and `overflow-wrap: break-word` (see {{cssxref("overflow-wrap")}}), `word-break: break-all` will create a break at the exact place where text would otherwise overflow its container (even if putting an entire word on its own line would negate the need for a break).
+> [!NOTE]
+> In contrast to `word-break: break-word` and `overflow-wrap: break-word` (see {{cssxref("overflow-wrap")}}), `word-break: break-all` will create a break at the exact place where text would otherwise overflow its container (even if putting an entire word on its own line would negate the need for a break).
 
 The specification also lists an additional value, `manual`, which is not currently supported in any browsers. When implemented, `manual` will have the same effect as `word-break: normal` except that breaks won't be automatically inserted in Southeast Asian languages. This is needed because, in such languages, user agents frequently place breaks in suboptimal positions. `manual` will allow you to insert line breaks in optimal positions manually.
 

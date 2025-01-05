@@ -7,11 +7,12 @@ browser-compat: svg.elements.title
 
 {{SVGRef}}
 
-The **`<title>`** element provides an accessible, short-text description of any SVG [container element](/en-US/docs/Web/SVG/Element#container_elements) or [graphics element](/en-US/docs/Web/SVG/Element#graphics_elements).
+The **`<title>`** [SVG](/en-US/docs/Web/SVG) element provides an accessible, short-text description of any SVG [container element](/en-US/docs/Web/SVG/Element#container_elements) or [graphics element](/en-US/docs/Web/SVG/Element#graphics_elements).
 
 Text in a `<title>` element is not rendered as part of the graphic, but browsers usually display it as a tooltip. If an element can be described by visible text, it is recommended to reference that text with an [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) attribute rather than using the `<title>` element.
 
-> **Note:** For backward compatibility with SVG 1.1, `<title>` elements should be the first child element of their parent.
+> [!NOTE]
+> For backward compatibility with SVG 1.1, `<title>` elements should be the first child element of their parent.
 
 ## Example
 

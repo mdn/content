@@ -8,7 +8,8 @@ page-type: guide
 
 To enable WebAssembly to be read and edited by humans, there is a textual representation of the Wasm binary format. This is an intermediate form designed to be exposed in text editors, browser developer tools, etc. This article explains how that text format works, in terms of the raw syntax, and how it is related to the underlying bytecode it represents — and the wrapper objects representing Wasm in JavaScript.
 
-> **Note:** This is potentially overkill if you are a web developer who just wants to load a Wasm module into a page and use it in your code (see [Using the WebAssembly JavaScript API](/en-US/docs/WebAssembly/Using_the_JavaScript_API)), but it is more useful if for example, you want to write Wasm modules to optimize the performance of your JavaScript library, or build your own WebAssembly compiler.
+> [!NOTE]
+> This is potentially overkill if you are a web developer who just wants to load a Wasm module into a page and use it in your code (see [Using the WebAssembly JavaScript API](/en-US/docs/WebAssembly/Using_the_JavaScript_API)), but it is more useful if for example, you want to write Wasm modules to optimize the performance of your JavaScript library, or build your own WebAssembly compiler.
 
 ## S-expressions
 
@@ -179,7 +180,8 @@ WebAssembly.instantiateStreaming(fetch("add.wasm")).then((obj) => {
 });
 ```
 
-> **Note:** You can find this example in GitHub as [add.html](https://github.com/mdn/webassembly-examples/blob/main/understanding-text-format/add.html) ([see it live also](https://mdn.github.io/webassembly-examples/understanding-text-format/add.html)). Also see [`WebAssembly.instantiateStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiateStreaming_static) for more details about the instantiate function.
+> [!NOTE]
+> You can find this example in GitHub as [add.html](https://github.com/mdn/webassembly-examples/blob/main/understanding-text-format/add.html) ([see it live also](https://mdn.github.io/webassembly-examples/understanding-text-format/add.html)). Also see [`WebAssembly.instantiateStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiateStreaming_static) for more details about the instantiate function.
 
 ## Exploring fundamentals
 
@@ -255,7 +257,8 @@ WebAssembly.instantiateStreaming(fetch("logger.wasm"), importObject).then(
 );
 ```
 
-> **Note:** You can find this example on GitHub as [logger.html](https://github.com/mdn/webassembly-examples/blob/main/understanding-text-format/logger.html) ([see it live also](https://mdn.github.io/webassembly-examples/understanding-text-format/logger.html)).
+> [!NOTE]
+> You can find this example on GitHub as [logger.html](https://github.com/mdn/webassembly-examples/blob/main/understanding-text-format/logger.html) ([see it live also](https://mdn.github.io/webassembly-examples/understanding-text-format/logger.html)).
 
 ### Declaring globals in WebAssembly
 
@@ -300,7 +303,8 @@ Note that when you create the memory you need to define the initial size, and yo
 WebAssembly will attempt to reserve the maximum size (if specified), and if it is able to do so, it can grow the buffer more efficiently in future. Even if it can't allocate the maximum size now, it may still be able to grow later.
 The method will only fail if it cannot allocate the _initial_ size.
 
-> **Note:** Originally WebAssembly only allowed one memory per module instance.
+> [!NOTE]
+> Originally WebAssembly only allowed one memory per module instance.
 > You can now have [multiple_memories](#multiple_memories) when supported by the browser.
 > Code that doesn't use multiple memories does not need to change!
 
@@ -339,7 +343,8 @@ Within our WebAssembly file we import this memory. Using the WebAssembly text fo
 The memory must be imported using the same two-level key specified in the `importObject` (`js.mem`).
 The `1` indicates that the imported memory must have at least 1 page of memory (WebAssembly currently defines a page to be 64KB).
 
-> **Note:** As this is the first memory imported into the WebAssembly module it has a memory index of "0".
+> [!NOTE]
+> As this is the first memory imported into the WebAssembly module it has a memory index of "0".
 > You could reference this particular memory using the index in [memory instructions](/en-US/docs/WebAssembly/Reference/Memory), but since 0 is the default index, in single-memory applications you don't need to.
 
 Now that we have a shared memory instance, the next step is to write a string of data into it.
@@ -359,7 +364,8 @@ Here we're writing the data to the default memory (which we do not need to speci
 )
 ```
 
-> **Note:** The double semicolon syntax (`;;`) above is used to indicate comments in WebAssembly files.
+> [!NOTE]
+> The double semicolon syntax (`;;`) above is used to indicate comments in WebAssembly files.
 > In this case we're just using them to indicate placeholders for other code.
 
 To share this data with JavaScript we'll define two functions.
@@ -419,7 +425,8 @@ The string is then logged to console with `console.log()`.
 The final step is to call the exported `writeHi()` function, which is done after the object is instantiated.
 When you run the code, the console will show the text "Hi".
 
-> **Note:** You can find the full source on GitHub as [logger2.html](https://github.com/mdn/webassembly-examples/blob/main/understanding-text-format/logger2.html) ([also see it live](https://mdn.github.io/webassembly-examples/understanding-text-format/logger2.html)).
+> [!NOTE]
+> You can find the full source on GitHub as [logger2.html](https://github.com/mdn/webassembly-examples/blob/main/understanding-text-format/logger2.html) ([also see it live](https://mdn.github.io/webassembly-examples/understanding-text-format/logger2.html)).
 
 #### Multiple memories
 
@@ -572,7 +579,8 @@ Memory 2 data
 
 You can find the full source on GitHub as [multi-memory.html](https://github.com/mdn/webassembly-examples/blob/main/understanding-text-format/multi-memory.html) ([also see it live](https://mdn.github.io/webassembly-examples/understanding-text-format/multi-memory.html))
 
-> **Note:** See [`webassembly.multimemory` in the home page](/en-US/docs/WebAssembly#webassembly.multimemory) for browser compatibility information for this feature.
+> [!NOTE]
+> See [`webassembly.multiMemory` in the home page](/en-US/docs/WebAssembly#webassembly.multimemory) for browser compatibility information for this feature.
 
 ### WebAssembly tables
 
@@ -611,7 +619,8 @@ So how do we place Wasm functions in our table? Just like `data` sections can be
 - The `elem` section can list any subset of the functions in a module, in any order, allowing duplicates. This is a list of the functions that are to be referenced by the table, in the order they are to be referenced.
 - The `(i32.const 0)` value inside the `elem` section is an offset — this needs to be declared at the start of the section, and specifies at what index in the table function references start to be populated. Here we've specified 0, and a size of 2 (see above), so we can fill in two references at indexes 0 and 1. If we wanted to start writing our references at offset 1, we'd have to write `(i32.const 1)`, and the table size would have to be 3.
 
-> **Note:** Uninitialized elements are given a default throw-on-call value.
+> [!NOTE]
+> Uninitialized elements are given a default throw-on-call value.
 
 In JavaScript, the equivalent calls to create such a table instance would look something like this:
 
@@ -689,9 +698,11 @@ WebAssembly.instantiateStreaming(fetch("wasm-table.wasm")).then((obj) => {
 });
 ```
 
-> **Note:** You can find this example on GitHub as [wasm-table.html](https://github.com/mdn/webassembly-examples/blob/main/understanding-text-format/wasm-table.html) ([see it live also](https://mdn.github.io/webassembly-examples/understanding-text-format/wasm-table.html)).
+> [!NOTE]
+> You can find this example on GitHub as [wasm-table.html](https://github.com/mdn/webassembly-examples/blob/main/understanding-text-format/wasm-table.html) ([see it live also](https://mdn.github.io/webassembly-examples/understanding-text-format/wasm-table.html)).
 
-> **Note:** Just like Memory, Tables can also be created from JavaScript (see [`WebAssembly.Table()`](/en-US/docs/WebAssembly/JavaScript_interface/Table)) as well as imported to/from another Wasm module.
+> [!NOTE]
+> Just like Memory, Tables can also be created from JavaScript (see [`WebAssembly.Table()`](/en-US/docs/WebAssembly/JavaScript_interface/Table)) as well as imported to/from another Wasm module.
 
 ### Mutating tables and dynamic linking
 
@@ -740,7 +751,8 @@ These work as follows:
 4. In the last part of the function, we create a constant with value `0`, then call the function at this index 0 of the table, which is `shared0func`, stored there earlier by the `elem` block in `shared0.wat`.
 5. When called, `shared0func` loads the `42` we stored in memory using the `i32.store` command in `shared1.wat`.
 
-> **Note:** The above expressions again pop values from the stack implicitly, but you could declare these explicitly inside the command calls instead, for example:
+> [!NOTE]
+> The above expressions again pop values from the stack implicitly, but you could declare these explicitly inside the command calls instead, for example:
 >
 > ```wasm
 > (i32.store (i32.const 0) (i32.const 42))
@@ -767,13 +779,15 @@ Promise.all([
 
 Each of the modules that is being compiled can import the same memory and table objects and thus share the same linear memory and table "address space".
 
-> **Note:** You can find this example on GitHub as [shared-address-space.html](https://github.com/mdn/webassembly-examples/blob/main/understanding-text-format/shared-address-space.html) ([see it live also](https://mdn.github.io/webassembly-examples/understanding-text-format/shared-address-space.html)).
+> [!NOTE]
+> You can find this example on GitHub as [shared-address-space.html](https://github.com/mdn/webassembly-examples/blob/main/understanding-text-format/shared-address-space.html) ([see it live also](https://mdn.github.io/webassembly-examples/understanding-text-format/shared-address-space.html)).
 
 ## Bulk memory operations
 
 Bulk memory operations are a newer addition to the language — seven new built-in operations are provided for bulk memory operations such as copying and initializing, to allow WebAssembly to model native functions such as `memcpy` and `memmove` in a more efficient, performant way.
 
-> **Note:** See [`webassembly.bulk-memory-operations` in the home page](/en-US/docs/WebAssembly#webassembly.bulk-memory-operations) for browser compatibility information.
+> [!NOTE]
+> See [`webassembly.bulk-memory-operations` in the home page](/en-US/docs/WebAssembly#webassembly.bulk-memory-operations) for browser compatibility information.
 
 The new operations are:
 
@@ -785,7 +799,8 @@ The new operations are:
 - `table.copy`: Copy from one region of a table to another.
 - `table.init`: Copy a region from an element segment.
 
-> **Note:** You can find more information in the [Bulk Memory Operations and Conditional Segment Initialization](https://github.com/WebAssembly/bulk-memory-operations/blob/master/proposals/bulk-memory-operations/Overview.md) proposal.
+> [!NOTE]
+> You can find more information in the [Bulk Memory Operations and Conditional Segment Initialization](https://github.com/WebAssembly/bulk-memory-operations/blob/master/proposals/bulk-memory-operations/Overview.md) proposal.
 
 ## Types
 
@@ -809,15 +824,18 @@ The [reference types proposal](https://github.com/WebAssembly/reference-types/bl
 - A new type, `externref`, which can hold _any_ JavaScript value, for example strings, DOM references, objects, etc. `externref` is opaque from the point of view of WebAssembly — a Wasm module can't access and manipulate these values and instead can only receive them and pass them back out. But this is very useful for allowing Wasm modules to call JavaScript functions, DOM APIs, etc., and generally to pave the way for easier interoperability with the host environment. `externref` can be used for value types and table elements.
 - A number of new instructions that allow Wasm modules to directly manipulate [WebAssembly tables](#webassembly_tables), rather than having to do it via the JavaScript API.
 
-> **Note:** The [wasm-bindgen](https://rustwasm.github.io/docs/wasm-bindgen/) documentation contains some useful information on how to take advantage of `externref` from Rust.
+> [!NOTE]
+> The [wasm-bindgen](https://rustwasm.github.io/docs/wasm-bindgen/) documentation contains some useful information on how to take advantage of `externref` from Rust.
 
-> **Note:** See [`webassembly.reference-types` in the home page](/en-US/docs/WebAssembly#webassembly.reference-types) for browser compatibility information.
+> [!NOTE]
+> See [`webassembly.reference-types` in the home page](/en-US/docs/WebAssembly#webassembly.reference-types) for browser compatibility information.
 
 ## Multi-value WebAssembly
 
 Another more recent addition to the language is WebAssembly multi-value, meaning that WebAssembly functions can now return multiple values, and instruction sequences can consume and produce multiple stack values.
 
-> **Note:** See [`webassembly.multi-value` in the home page](/en-US/docs/WebAssembly#webassembly.multi-value) for browser compatibility information.
+> [!NOTE]
+> See [`webassembly.multi-value` in the home page](/en-US/docs/WebAssembly#webassembly.multi-value) for browser compatibility information.
 
 At the time of writing (June 2020) this is at an early stage, and the only multi-value instructions available are calls to functions that themselves return multiple values. For example:
 
@@ -842,7 +860,8 @@ WebAssembly Threads allow WebAssembly Memory objects to be shared across multipl
 
 The threads proposal has two parts, shared memories and atomic memory accesses.
 
-> **Note:** See [`webassembly.threads-and-atomics` in the home page](/en-US/docs/WebAssembly#webassembly.threads-and-atomics) for browser compatibility information.
+> [!NOTE]
+> See [`webassembly.threads-and-atomics` in the home page](/en-US/docs/WebAssembly#webassembly.threads-and-atomics) for browser compatibility information.
 
 ### Shared memories
 
@@ -872,13 +891,15 @@ Over in the text format, you can create a shared memory using the `shared` keywo
 
 Unlike unshared memories, shared memories must specify a "maximum" size, in both the JavaScript API constructor and Wasm text format.
 
-> **Note:** You can find a lot more details in the [Threading proposal for WebAssembly](https://github.com/WebAssembly/threads/blob/master/proposals/threads/Overview.md).
+> [!NOTE]
+> You can find a lot more details in the [Threading proposal for WebAssembly](https://github.com/WebAssembly/threads/blob/master/proposals/threads/Overview.md).
 
 ### Atomic memory accesses
 
 A number of new Wasm instructions have been added that can be used to implement higher level features like mutexes, condition variables, etc. You can [find them listed here](https://github.com/WebAssembly/threads/blob/master/proposals/threads/Overview.md#atomic-memory-accesses).
 
-> **Note:** The [Emscripten Pthreads support page](https://emscripten.org/docs/porting/pthreads.html) shows how to take advantage of this new functionality from Emscripten.
+> [!NOTE]
+> The [Emscripten Pthreads support page](https://emscripten.org/docs/porting/pthreads.html) shows how to take advantage of this new functionality from Emscripten.
 
 ## Summary
 

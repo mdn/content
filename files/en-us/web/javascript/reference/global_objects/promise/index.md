@@ -42,7 +42,8 @@ new Promise((resolveOuter) => {
 
 This promise is already _resolved_ at the time when it's created (because the `resolveOuter` is called synchronously), but it is resolved with another promise, and therefore won't be _fulfilled_ until 1 second later, when the inner promise fulfills. In practice, the "resolution" is often done behind the scenes and not observable, and only its fulfillment or rejection are.
 
-> **Note:** Several other languages have mechanisms for lazy evaluation and deferring a computation, which they also call "promises", e.g. Scheme. Promises in JavaScript represent processes that are already happening, which can be chained with callback functions. If you are looking to lazily evaluate an expression, consider using a function with no arguments e.g. `f = () => expression` to create the lazily-evaluated expression, and `f()` to evaluate the expression immediately.
+> [!NOTE]
+> Several other languages have mechanisms for lazy evaluation and deferring a computation, which they also call "promises", e.g. Scheme. Promises in JavaScript represent processes that are already happening, which can be chained with callback functions. If you are looking to lazily evaluate an expression, consider using a function with no arguments e.g. `f = () => expression` to create the lazily-evaluated expression, and `f()` to evaluate the expression immediately.
 
 `Promise` itself has no first-class protocol for cancellation, but you may be able to directly cancel the underlying asynchronous operation, typically using [`AbortController`](/en-US/docs/Web/API/AbortController).
 
@@ -70,14 +71,14 @@ The settled state of the initial promise determines which handler to execute.
 - If the initial promise is fulfilled, the fulfillment handler is called with the fulfillment value.
 - If the initial promise is rejected, the rejection handler is called with the rejection reason.
 
-The completion of the handler function determines the settled state of the new promise.
+The completion of the handler determines the settled state of the new promise.
 
-- If the handler function returns a [thenable](#thenables) value, the new promise settles in the same state as the returned promise.
-- If the handler function returns a non-thenable value, the new promise is fulfilled with the returned value.
-- If the handler function throws an error, the new promise is rejected with the thrown error.
+- If the handler returns a [thenable](#thenables) value, the new promise settles in the same state as the returned value.
+- If the handler returns a non-thenable value, the new promise is fulfilled with the returned value.
+- If the handler throws an error, the new promise is rejected with the thrown error.
 - If the initial promise has no corresponding handler attached, the new promise will settle to the same state as the initial promise — that is, without a rejection handler, a rejected promise stays rejected with the same reason.
 
-For example, in the code above, if `myPromise` rejects, `handleRejectedA` will be called, and if `handleRejectedA` completes normally (without throwing or returning a rejected promise), the promise returned by the first `then` will be fulfilled instead of staying rejected. Therefore, if an error must be handled immediately, but we want to maintain the error state down the chain, we must throw an error of some type in the rejection handler. On the other hand, in the absence of an immediate need, it is simpler to leave out error handling until the final `catch()` handler.
+For example, in the code above, if `myPromise` rejects, `handleRejectedA` will be called, and if `handleRejectedA` completes normally (without throwing or returning a rejected promise), the promise returned by the first `then` will be fulfilled instead of staying rejected. Therefore, if an error must be handled immediately, but we want to maintain the error state down the chain, we must throw an error of some type in the rejection handler. On the other hand, in the absence of an immediate need, we can leave out error handling until the final `catch()` handler.
 
 ```js
 myPromise
@@ -103,7 +104,8 @@ myPromise
   });
 ```
 
-> **Note:** For faster execution, all synchronous actions should preferably be done within one handler, otherwise it would take several ticks to execute all handlers in sequence.
+> [!NOTE]
+> For faster execution, all synchronous actions should preferably be done within one handler, otherwise it would take several ticks to execute all handlers in sequence.
 
 JavaScript maintains a [job queue](/en-US/docs/Web/JavaScript/Event_loop). Each time, JavaScript picks a job from the queue and executes it to completion. The jobs are defined by the executor of the `Promise()` constructor, the handlers passed to `then`, or any platform API that returns a promise. The promises in a chain represent the dependency relationship between these jobs. When a promise settles, the respective handlers associated with it are added to the back of the job queue.
 
@@ -219,11 +221,13 @@ These properties are defined on `Promise.prototype` and shared by all `Promise` 
 
 ### Basic Example
 
+In this example, we use `setTimeout(...)` to simulate async code.
+In reality, you will probably be using something like XHR or an HTML API.
+
 ```js
 const myFirstPromise = new Promise((resolve, reject) => {
-  // We call resolve(...) when what we were doing asynchronously was successful, and reject(...) when it failed.
-  // In this example, we use setTimeout(...) to simulate async code.
-  // In reality, you will probably be using something like XHR or an HTML API.
+  // We call resolve(...) when what we were doing asynchronously
+  // was successful, and reject(...) when it failed.
   setTimeout(() => {
     resolve("Success!"); // Yay! Everything went well!
   }, 250);
@@ -304,7 +308,7 @@ new Promise(tetheredGetNumber)
 
 ### Advanced Example
 
-This small example shows the mechanism of a `Promise`. The `testPromise()` method is called each time the {{HTMLElement("button")}} is clicked. It creates a promise that will be fulfilled, using {{domxref("setTimeout()")}}, to the promise count (number starting from 1) every 1-3 seconds, at random. The `Promise()` constructor is used to create the promise.
+This small example shows the mechanism of a `Promise`. The `testPromise()` method is called each time the {{HTMLElement("button")}} is clicked. It creates a promise that will be fulfilled, using {{domxref("Window.setTimeout", "setTimeout()")}}, to the promise count (number starting from 1) every 1-3 seconds, at random. The `Promise()` constructor is used to create the promise.
 
 The fulfillment of the promise is logged, via a fulfill callback set using {{jsxref("Promise/then", "p1.then()")}}. A few logs show how the synchronous part of the method is decoupled from the asynchronous completion of the promise.
 
@@ -371,7 +375,68 @@ btn.addEventListener("click", testPromise);
 
 ### Loading an image with XHR
 
-Another simple example using `Promise` and {{domxref("XMLHttpRequest")}} to load an image is available at the MDN GitHub [js-examples](https://github.com/mdn/js-examples/tree/main/promises-test) repository. You can also [see it in action](https://mdn.github.io/js-examples/promises-test/). Each step is commented on and allows you to follow the Promise and XHR architecture closely.
+Another example using `Promise` and {{domxref("XMLHttpRequest")}} to load an image is shown below.
+Each step is commented on and allows you to follow the Promise and XHR architecture closely.
+
+```html hidden live-sample___promises
+<h1>Promise example</h1>
+```
+
+```js live-sample___promises
+function imgLoad(url) {
+  // Create new promise with the Promise() constructor;
+  // This has as its argument a function with two parameters, resolve and reject
+  return new Promise((resolve, reject) => {
+    // XHR to load an image
+    const request = new XMLHttpRequest();
+    request.open("GET", url);
+    request.responseType = "blob";
+    // When the request loads, check whether it was successful
+    request.onload = () => {
+      if (request.status === 200) {
+        // If successful, resolve the promise by passing back the request response
+        resolve(request.response);
+      } else {
+        // If it fails, reject the promise with an error message
+        reject(
+          Error(
+            `Image didn't load successfully; error code: + ${request.statusText}`,
+          ),
+        );
+      }
+    };
+    // Handle network errors
+    request.onerror = () => reject(new Error("There was a network error."));
+    // Send the request
+    request.send();
+  });
+}
+
+// Get a reference to the body element, and create a new image object
+const body = document.querySelector("body");
+const myImage = new Image();
+const imgUrl =
+  "https://mdn.github.io/shared-assets/images/examples/round-balloon.png";
+
+// Call the function with the URL we want to load, then chain the
+// promise then() method with two callbacks
+imgLoad(imgUrl).then(
+  (response) => {
+    // The first runs when the promise resolves, with the request.response
+    // specified within the resolve() method.
+    const imageURL = URL.createObjectURL(response);
+    myImage.src = imageURL;
+    body.appendChild(myImage);
+  },
+  (error) => {
+    // The second runs when the promise
+    // is rejected, and logs the Error specified with the reject() method.
+    console.log(error);
+  },
+);
+```
+
+{{embedlivesample("promises", "", "240px")}}
 
 ### Incumbent settings object tracking
 
@@ -441,7 +506,8 @@ If we change this so that the `<iframe>` in the document is listening to post me
 
 In the above example, the inner text of the `<iframe>` will be updated only if the incumbent settings object is tracked. This is because without tracking the incumbent, we may end up using the wrong environment to send the message.
 
-> **Note:** Currently, incumbent realm tracking is fully implemented in Firefox, and has partial implementations in Chrome and Safari.
+> [!NOTE]
+> Currently, incumbent realm tracking is fully implemented in Firefox, and has partial implementations in Chrome and Safari.
 
 ## Specifications
 
@@ -457,4 +523,4 @@ In the above example, the inner text of the `<iframe>` will be updated only if t
 - [Using promises](/en-US/docs/Web/JavaScript/Guide/Using_promises) guide
 - [Promises/A+ specification](https://promisesaplus.com/)
 - [JavaScript Promises: an introduction](https://web.dev/articles/promises) on web.dev (2013)
-- [Callbacks, Promises, and Coroutines: Asynchronous Programming Patterns in JavaScript](https://www.slideshare.net/domenicdenicola/callbacks-promises-and-coroutines-oh-my-the-evolution-of-asynchronicity-in-javascript) slide show by Domenic Denicola (2011)
+- [Callbacks, Promises, and Coroutines: Asynchronous Programming Patterns in JavaScript](https://www.slideshare.net/slideshow/callbacks-promises-and-coroutines-oh-my-the-evolution-of-asynchronicity-in-javascript/9953720) slide show by Domenic Denicola (2011)

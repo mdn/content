@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPUCommandBuffer.label
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`label`** read-only property of the
 {{domxref("GPUCommandBuffer")}} interface is a string providing a label that can be used to identify the object, for example in {{domxref("GPUError")}} messages or console warnings.
@@ -25,18 +25,18 @@ Setting and getting a label via `GPUCommandBuffer.label`:
 
 ```js
 const commandBuffer = commandEncoder.finish();
-commandBuffer.label = "mycommandbuffer";
-console.log(commandBuffer.label); // "mycommandbuffer";
+commandBuffer.label = "my_command_buffer";
+console.log(commandBuffer.label); // "my_command_buffer"
 ```
 
 Setting a label via the originating {{domxref("GPUCommandEncoder.finish()")}} call, and then getting it via `GPUCommandBuffer.label`:
 
 ```js
 const commandBuffer = commandEncoder.finish({
-  label: "mycommandbuffer",
+  label: "my_command_buffer",
 });
 
-console.log(commandBuffer.label); // "mycommandbuffer";
+console.log(commandBuffer.label); // "my_command_buffer"
 ```
 
 ## Specifications

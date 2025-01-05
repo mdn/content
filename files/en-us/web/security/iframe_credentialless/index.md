@@ -50,7 +50,8 @@ iframeElem.src =
   "https://en.wikipedia.org/wiki/Spectre_(security_vulnerability)";
 ```
 
-> **Note:** The {{domxref("window.credentialless")}} property can be queried by a document embedded in an `<iframe>` to test whether it is being run in a credentialless context. A value of `true` means the embedding `<iframe>` is credentialless.
+> [!NOTE]
+> The {{domxref("window.credentialless")}} property can be queried by a document embedded in an `<iframe>` to test whether it is being run in a credentialless context. A value of `true` means the embedding `<iframe>` is credentialless.
 
 This results in the documents inside the credentialless `<iframe>` being loaded using new, ephemeral contexts — those contexts don't have access to the data associated with their origins; for example [cookies](/en-US/docs/Web/HTTP/Cookies) and [localStorage](/en-US/docs/Web/API/Window/localStorage). The credentialless storage is partitioned out separately with storage keys modified by a nonce ("number used once") value, set once per top-level document. So a cookie set in one credentialless `<iframe>` will be accessible only from other same-origin credentialless `<iframe>`s embedded below the same top-level document.
 
@@ -59,13 +60,13 @@ The nonce is shared for every credentialless iframe that is a descendant of the 
 In addition:
 
 - Pop-ups opened by credentialless iframes are opened with [`rel="noopener"`](/en-US/docs/Web/HTML/Attributes/rel/noopener) set. This prevents OAuth pop-up flows from being used in credentialless iframes.
-- Browser autofill or password manager functionality is unavailable in credentialless `<iframes>`.
+- Browser autofill or password manager functionality is unavailable in credentialless `<iframe>`s.
 
-The result of this is that documents loaded into credentialless `<iframes>` are effectively vanilla or "public" versions, not customized with any user's sensitive information. Since there is no sensitive information available to leak from these documents, they are of no use to would-be attackers, and so the Cross-Origin Embedder Policy requirement is dropped for those IFrames.
+The result of this is that documents loaded into credentialless `<iframe>`s are effectively vanilla or "public" versions, not customized with any user's sensitive information. Since there is no sensitive information available to leak from these documents, they are of no use to would-be attackers, and so the Cross-Origin Embedder Policy requirement is dropped for those IFrames.
 
 ## Recursive credentialless inside child IFrames
 
-If `credentialless` is set on an `<iframe>` that has child `<iframes>` embedded in the document loaded inside it, those child `<iframe>`s inherit the credentialless setting.
+If `credentialless` is set on an `<iframe>` that has child `<iframe>`s embedded in the document loaded inside it, those child `<iframe>`s inherit the credentialless setting.
 
 ## Live demo
 
@@ -85,5 +86,5 @@ Use the [https://anonymous-iframe.glitch.me/](https://anonymous-iframe.glitch.me
 - {{httpheader("Cross-Origin-Embedder-Policy")}}
 - {{httpheader("Cross-Origin-Resource-Policy")}}
 - [Cross-Origin Resource Sharing](/en-US/docs/Web/HTTP/CORS)
-- The `<iframe`> [`credentialless`](/en-US/docs/Web/HTML/Element/iframe#credentialless) attribute
+- The `<iframe>` [`credentialless`](/en-US/docs/Web/HTML/Element/iframe#credentialless) attribute
 - {{domxref("HTMLIFrameElement.credentialless")}}

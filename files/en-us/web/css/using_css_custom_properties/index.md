@@ -13,7 +13,8 @@ Complex websites have very large amounts of CSS, and this often results in a lot
 Custom properties defined [using two dashes (`--`)](/en-US/docs/Web/CSS/--*) are subject to the [cascade](/en-US/docs/Web/CSS/Cascade) and inherit their value from their parent.
 The {{cssxref("@property")}} at-rule allows more control over the custom property and lets you specify whether it inherits its value from a parent, what the initial value is, and the type constraints that should apply.
 
-> **Note:** Variables do not work inside media queries and container queries.
+> [!NOTE]
+> Variables do not work inside media queries and container queries.
 > You can use the {{cssxref("var", "var()")}} function in any part of a value in any property on an element.
 > You cannot use {{cssxref("var", "var()")}} for property names, selectors, or anything aside from property values, which means you can't use it in a media query or container query.
 
@@ -24,7 +25,7 @@ The following sections describe how to use these two methods.
 
 ### Using a prefix of two dashes (`--`)
 
-A custom property prefixed with two dashes begins with `--`, followed by the property name (e.g.,`--my-property`), and a property value that can be any [valid CSS value](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units).
+A custom property prefixed with two dashes begins with `--`, followed by the property name (e.g., `--my-property`), and a property value that can be any [valid CSS value](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units).
 Like any other property, this is written inside a ruleset.
 The following example shows how to create a custom property `--main-bg-color` and uses a [`<named-color>`](/en-US/docs/Web/CSS/named-color) value of `brown`:
 
@@ -45,7 +46,8 @@ For this reason, a common practice is to define custom properties on the {{cssxr
 
 This doesn't always have to be the case: you maybe have a good reason for limiting the scope of your custom properties.
 
-> **Note:** Custom property names are case sensitive — `--my-color` will be treated as a separate custom property to `--My-color`.
+> [!NOTE]
+> Custom property names are case sensitive — `--my-color` will be treated as a separate custom property to `--My-color`.
 
 ### Using the `@property` at-rule
 
@@ -61,7 +63,7 @@ The following example creates a custom property called `--logo-color` which expe
 ```
 
 If you want to define or work with custom properties in JavaScript instead of directly in CSS, there is a corresponding API for this purpose.
-You can read about how this work in the [CSS Properties and Values API](/en-US/docs/Web/API/CSS_Properties_and_Values_API) page.
+You can read about how this works in the [CSS Properties and Values API](/en-US/docs/Web/API/CSS_Properties_and_Values_API) page.
 
 ### Referencing custom properties with `var()`
 
@@ -281,7 +283,7 @@ The property is only set for the matching selector and its descendants.
 
 The `@property` at-rule lets you explicitly state whether the property inherits or not.
 The following example creates a custom property using the `@property` at-rule.
-Inheritance is disabled, there's a [`<color>`](/en-US/docs/Web/CSS/color_value) data type defined, and an intital value of `cornflowerblue`.
+Inheritance is disabled, there's a [`<color>`](/en-US/docs/Web/CSS/color_value) data type defined, and an initial value of `cornflowerblue`.
 
 The parent element sets `--box-color` to a value of `green` and uses `--box-color` as a value for its background color.
 The child element also uses `background-color: var(--box-color)`, and we would expect it to have the color `green` if inheritance was enabled (or if it was defined using the double dash syntax).
@@ -335,7 +337,8 @@ Because `inherits: false;` is set in the at-rule, and a value for the `--box-col
 
 You can define fallback values for custom properties using the `var()` function, and the `initial-value` of the `@property` at-rule.
 
-> **Note:** Fallback values aren't used to fix compatibility issues for when CSS custom properties are not supported, as the fallback value won't help in this case.
+> [!NOTE]
+> Fallback values aren't used to fix compatibility issues for when CSS custom properties are not supported, as the fallback value won't help in this case.
 > Fallbacks cover the case where the browser supports CSS custom properties and is able to use a different value if the desired variable isn't defined yet or has an invalid value.
 
 ### Defining fallbacks in the `var()` function
@@ -365,12 +368,15 @@ The function accepts two parameters, assigning everything following the first co
 Including a custom property as a fallback, as seen in the second example above (`var(--my-var, var(--my-background, pink))`), is the correct way to provide more than one fallback with `var()`.
 You should be aware of the performance impact of this method, however, as it takes more time to parse through the nested variables.
 
-> **Note:** The syntax of the fallback, like that of [custom properties](https://www.w3.org/TR/css-variables/#custom-property), allows commas. For example, `var(--foo, red, blue)` defines a fallback of `red, blue` — anything between the first comma and the end of the function is considered a fallback value.
+> [!NOTE]
+> The syntax of the fallback, like that of [custom properties](https://www.w3.org/TR/css-variables/#custom-property), allows commas. For example, `var(--foo, red, blue)` defines a fallback of `red, blue` — anything between the first comma and the end of the function is considered a fallback value.
 
 ### Fallbacks using the `@property` initial value
 
 Aside from using `var()`, the `initial-value` defined in the `@property` at-rule can be used as a fallback mechanism.
 In fact, we've already seen this in the [`@property` inheritance](#using_property_to_control_inheritance) section.
+
+<!-- cSpell:ignore aqumarine -->
 
 The following example sets an initial value of `--box-color` to `cornflowerblue` using the `@property` at-rule.
 In the ruleset following the at-rule, we want to set `--box-color` to `aquamarine`, but there's a typo in the value name.
@@ -432,7 +438,7 @@ div {
 
 ## Invalid custom properties
 
-Each CSS property can be assigned a defined [set of values](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units).
+Each CSS property can be assigned a defined [set of values](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units).
 If you try to assign a value to a property that is outside its set of valid values, it's considered _invalid_.
 
 When the browser encounters an invalid value for a regular CSS property (for example, a value of `16px` for the {{cssxref("color")}} property), it discards the declaration, and elements are assigned the values that they would have had if the declaration did not exist.

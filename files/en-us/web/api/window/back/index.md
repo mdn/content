@@ -14,7 +14,8 @@ The obsolete and non-standard method `back()` on the {{domxref("window")}}
 interface returns the window to the previous item in the history. This was a
 Firefox-specific method and was removed in Firefox 31.
 
-> **Note:** Use the standard {{domxref("history.back")}} method instead.
+> [!NOTE]
+> Use the standard {{domxref("history.back")}} method instead.
 
 ## Syntax
 

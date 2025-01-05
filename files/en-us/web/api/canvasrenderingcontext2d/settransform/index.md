@@ -10,7 +10,8 @@ browser-compat: api.CanvasRenderingContext2D.setTransform
 
 The **`CanvasRenderingContext2D.setTransform()`** method of the Canvas 2D API resets (overrides) the current transformation to the identity matrix, and then invokes a transformation described by the arguments of this method. This lets you scale, rotate, translate (move), and skew the context.
 
-> **Note:** See also the {{domxref("CanvasRenderingContext2D.transform()", "transform()")}} method; instead of overriding the current transform matrix, it
+> [!NOTE]
+> See also the {{domxref("CanvasRenderingContext2D.transform()", "transform()")}} method; instead of overriding the current transform matrix, it
 > multiplies it with a given one.
 
 ## Syntax

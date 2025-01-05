@@ -11,9 +11,11 @@ browser-compat: css.properties.animation-timeline.scroll
 
 The **`scroll()`** [CSS function](/en-US/docs/Web/CSS/CSS_Functions) can be used with {{cssxref("animation-timeline")}} to indicate a scrollable element (_scroller_) and scrollbar axis that will provide an anonymous scroll progress timeline for animating the current element. The scroll progress timeline is progressed through by scrolling the scroller between top and bottom (or left and right). The position in the scroll range is converted into a percentage of progress — 0% at the start and 100% at the end.
 
-> **Note:** If the indicated axis does not contain a scrollbar, then the animation timeline will be inactive (have zero progress).
+> [!NOTE]
+> If the indicated axis does not contain a scrollbar, then the animation timeline will be inactive (have zero progress).
 
-> **Note:** Each use of `scroll()` corresponds to its own unique instance of {{domxref("ScrollTimeline")}} in the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API).
+> [!NOTE]
+> Each use of `scroll()` corresponds to its own unique instance of {{domxref("ScrollTimeline")}} in the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API).
 
 ## Syntax
 
@@ -64,9 +66,10 @@ animation-timeline: scroll(x self);
     - `x`
       - : The scrollbar on the horizontal axis of the scroll container.
 
-> **Note:** The scroller and axis values can be specified in any order.
+> [!NOTE]
+> The scroller and axis values can be specified in any order.
 
-### Formal syntax
+## Formal syntax
 
 {{CSSSyntax}}
 

@@ -12,7 +12,7 @@ The **`keyup`** event is fired when a key is released.
 
 The [`keydown`](/en-US/docs/Web/API/Element/keydown_event) and `keyup` events provide a code indicating which key is pressed, while `keypress` indicates which character was entered. For example, a lowercase "a" will be reported as 65 by `keydown` and `keyup`, but as 97 by `keypress`. An uppercase "A" is reported as 65 by all events.
 
-The event target of a key event is the currently focused element which is processing the keyboard activity. This includes: {{HTMLElement("input")}}, {{HTMLElement("textarea")}}, anything that is [`contentEditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable), and anything else that can be interacted with the keyboard, such as {{HTMLElement("a")}}, {{HTMLElement("button")}}, and {{HTMLElement("summary")}}. If no suitable element is in focus, the event target will be the {{HTMLElement("body")}} or the root. If not caught, the event [bubbles](/en-US/docs/Learn/JavaScript/Building_blocks/Event_bubbling) up the [DOM tree](/en-US/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model#what_is_a_dom_tree) until reaching {{domxref("Document")}}.
+The event target of a key event is the currently focused element which is processing the keyboard activity. This includes: {{HTMLElement("input")}}, {{HTMLElement("textarea")}}, anything that is [`contentEditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable), and anything else that can be interacted with the keyboard, such as {{HTMLElement("a")}}, {{HTMLElement("button")}}, and {{HTMLElement("summary")}}. If no suitable element is in focus, the event target will be the {{HTMLElement("body")}} or the root. If not caught, the event [bubbles](/en-US/docs/Learn_web_development/Core/Scripting/Event_bubbling) up the [DOM tree](/en-US/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model#what_is_a_dom_tree) until reaching {{domxref("Document")}}.
 
 The event target might change between different key events. For example, the `keydown` target for pressing the <kbd>Tab</kbd> key would be different from the `keyup` target, because the focus has changed.
 
@@ -44,7 +44,8 @@ _This interface also inherits properties of its parents, {{domxref("UIEvent")}} 
 
   - : Returns a string with the code value of the physical key represented by the event.
 
-    > **Warning:** This ignores the user's keyboard layout, so that if the user presses the key at the "Y" position in a QWERTY keyboard layout (near the middle of the row above the home row), this will always return "KeyY", even if the user has a QWERTZ keyboard (which would mean the user expects a "Z" and all the other properties would indicate a "Z") or a Dvorak keyboard layout (where the user would expect an "F"). If you want to display the correct keystrokes to the user, you can use {{domxref("Keyboard.getLayoutMap()")}}.
+    > [!WARNING]
+    > This ignores the user's keyboard layout, so that if the user presses the key at the "Y" position in a QWERTY keyboard layout (near the middle of the row above the home row), this will always return "KeyY", even if the user has a QWERTZ keyboard (which would mean the user expects a "Z" and all the other properties would indicate a "Z") or a Dvorak keyboard layout (where the user would expect an "F"). If you want to display the correct keystrokes to the user, you can use {{domxref("Keyboard.getLayoutMap()")}}.
 
 - {{domxref("KeyboardEvent.ctrlKey")}} {{ReadOnlyInline}}
 
@@ -92,7 +93,7 @@ function logKey(e) {
 
 ### keyup events with IME
 
-Since Firefox 65, the [`keydown`](/en-US/docs/Web/API/Element/keydown_event) and `keyup` events are now fired during {{glossary("IME")}} composition, to improve cross-browser compatibility for CJKT users ([Firefox bug 354358](https://bugzil.la/354358)). To ignore all `keyup` events that are part of composition, do something like this:
+Since Firefox 65, the [`keydown`](/en-US/docs/Web/API/Element/keydown_event) and `keyup` events are now fired during {{glossary("Input method editor")}} composition, to improve cross-browser compatibility for CJKT users ([Firefox bug 354358](https://bugzil.la/354358)). To ignore all `keyup` events that are part of composition, do something like this:
 
 ```js
 eventTarget.addEventListener("keyup", (event) => {
@@ -103,7 +104,8 @@ eventTarget.addEventListener("keyup", (event) => {
 });
 ```
 
-> **Note:** Unlike `keydown`, `keyup` events do not have special {{domxref("KeyboardEvent/keyCode", "keyCode")}} values for IME events. However, like `keydown`, `compositionstart` may fire _after_ `keyup` when typing the first character that opens up the IME, and `compositionend` may fire _before_ `keyup` when typing the last character that closes the IME. In these cases, `isComposing` is false even when the event is part of composition.
+> [!NOTE]
+> Unlike `keydown`, `keyup` events do not have special {{domxref("KeyboardEvent/keyCode", "keyCode")}} values for IME events. However, like `keydown`, `compositionstart` may fire _after_ `keyup` when typing the first character that opens up the IME, and `compositionend` may fire _before_ `keyup` when typing the last character that closes the IME. In these cases, `isComposing` is false even when the event is part of composition.
 
 ## Specifications
 

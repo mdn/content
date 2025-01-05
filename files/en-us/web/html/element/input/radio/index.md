@@ -66,7 +66,8 @@ When the above form is submitted with a radio button selected, the form's data i
 
 If you omit the `value` attribute in the HTML, the submitted form data assigns the value `on` to the group. In this scenario, if the user clicked on the "Phone" option and submitted the form, the resulting form data would be `contact=on`, which isn't helpful. So don't forget to set your `value` attributes!
 
-> **Note:** If no radio button is selected when the form is submitted, the radio group is not included in the submitted form data at all, since there is no value to report.
+> [!NOTE]
+> If no radio button is selected when the form is submitted, the radio group is not included in the submitted form data at all, since there is no value to report.
 
 It's fairly uncommon to actually want to allow the form to be submitted without any of the radio buttons in a group selected, so it is usually wise to have one default to the `checked` state. See [Selecting a radio button by default](#selecting_a_radio_button_by_default) below.
 
@@ -172,7 +173,8 @@ To make a radio button selected by default, you include `checked` attribute, as 
 
 In this case, the first radio button is now selected by default.
 
-> **Note:** If you put the `checked` attribute on more than one radio button, later instances will override earlier ones; that is, the last `checked` radio button will be the one that is selected. This is because only one radio button in a group can ever be selected at once, and the user agent automatically deselects others each time a new one is marked as checked.
+> [!NOTE]
+> If you put the `checked` attribute on more than one radio button, later instances will override earlier ones; that is, the last `checked` radio button will be the one that is selected. This is because only one radio button in a group can ever be selected at once, and the user agent automatically deselects others each time a new one is marked as checked.
 
 ### Providing a bigger hit area for your radio buttons
 
@@ -275,7 +277,8 @@ button:active {
 
 Most notable here is the use of the {{cssxref("appearance")}} property (with prefixes needed to support some browsers). By default, radio buttons (and [checkboxes](/en-US/docs/Web/HTML/Element/input/checkbox)) are styled with the operating system's native styles for those controls. By specifying `appearance: none`, you can remove the native styling altogether, and create your own styles for them. Here we've used a {{cssxref("border")}} along with {{cssxref("border-radius")}} and a {{cssxref("transition")}} to create a nice animating radio selection. Notice also how the {{cssxref(":checked")}} pseudo-class is used to specify the styles for the radio button's appearance when selected.
 
-> **Note:** If you wish to use the {{cssxref("appearance")}} property, you should test it very carefully. Although it is supported in most modern browsers, its implementation varies widely. In older browsers, even the keyword `none` does not have the same effect across different browsers, and some do not support it at all. The differences are smaller in the newest browsers.
+> [!NOTE]
+> If you wish to use the {{cssxref("appearance")}} property, you should test it very carefully. Although it is supported in most modern browsers, its implementation varies widely. In older browsers, even the keyword `none` does not have the same effect across different browsers, and some do not support it at all. The differences are smaller in the newest browsers.
 
 {{EmbedLiveSample('Styling_radio_inputs', 600, 120)}}
 
@@ -341,4 +344,3 @@ Notice that when clicking on a radio button, there's a nice, smooth fade out/in 
 
 - {{HTMLElement("input")}} and the {{domxref("HTMLInputElement")}} interface that implements it.
 - {{domxref("RadioNodeList")}}: the interface that describes a list of radio buttons
-- [Compatibility of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

@@ -23,7 +23,8 @@ The `article` role indicates a section of a page that could easily stand on its 
 
 This example shows two articles side by side on one page that could be structured similarly and are related.
 
-> **Note:** Instead of a `<div>` with an `article` role, use the {{HTMLElement('article')}} element. **Always use native element if available**
+> [!NOTE]
+> Instead of a `<div>` with an `article` role, use the {{HTMLElement('article')}} element. **Always use native element if available**
 
 Don't use `role="article"`. Instead use the `<article>` element.
 

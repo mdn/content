@@ -13,7 +13,7 @@ The `listbox` role is used for lists from which a user may select one or more it
 
 ## Description
 
-The `listbox` role is used to identify an element that creates a list from which a user may select one or more static items, similar to the HTML {{HTMLElement('select')}} element. Unlike {{HTMLElement('select')}}, a listbox can contain images. Each child of a listbox should have a role of [option](https://www.w3.org/TR/2010/WD-wai-aria-20100916/roles#option).
+The `listbox` role is used to identify an element that creates a list from which a user may select one or more static items, similar to the HTML {{HTMLElement('select')}} element. Unlike {{HTMLElement('select')}}, a listbox can contain images. Listboxes contain children whose role is [`option`](/en-US/docs/Web/Accessibility/ARIA/Roles/option_role) or elements whose role is [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role) which in turn contain children whose role is `option`.
 
 It is highly recommended using the HTML select element, or a group of radio buttons if only one item can be selected, or a group of checkboxes if multiple items can be selected, because there is a lot of keyboard interactivity to manage focus for all the descendants, and native HTML elements provide this functionality for you for free.
 
@@ -96,45 +96,17 @@ When the listbox role is added to an element, or such an element becomes visible
   - Type a character: focus moves to the next item with a name that starts with the typed character.
   - Type multiple characters in rapid succession: focus moves to the next item with a name that starts with the string of characters typed.
 
-- **Multiple Selection**: Authors may implement either of two interaction models to support multiple selection: a recommended model that does not require the user to hold a modifier key, such as
-
-  <kbd>Shift</kbd>
-
-  or
-
-  <kbd>Control</kbd>
-
-  , while navigating the list or an alternative model that does require modifier keys to be held while navigating in order to avoid losing selection states.
+- **Multiple Selection**: Authors may implement either of two interaction models to support multiple selection: a recommended model that does not require the user to hold a modifier key, such as <kbd>Shift</kbd> or <kbd>Control</kbd>, while navigating the list or an alternative model that does require modifier keys to be held while navigating in order to avoid losing selection states.
 
   - Recommended selection model — holding modifier keys is not necessary:
 
-    - <kbd>Space</kbd>
-
-      : changes the selection state of the focused option .
-
-    - <kbd>Shift + Down Arrow</kbd>
-
-      (Optional): Moves focus to and toggles the selected state of the next option.
-
-    - <kbd>Shift + Up Arrow</kbd>
-
-      (Optional): Moves focus to and toggles the selected state of the previous option.
-
-    - <kbd>Shift + Space</kbd>
-
-      (Optional): Selects contiguous items from the most recently selected item to the focused item.
-
-    - <kbd>Control + Shift + Home</kbd>
-
-      (Optional): Selects the focused option and all options up to the first option. Optionally, moves focus to the first option.
-
-    - <kbd>Control + Shift + End</kbd>
-
-      (Optional): Selects the focused option and all options down to the last option. Optionally, moves focus to the last option.
-
-    - <kbd>Control + A</kbd>
-
-      (Optional): Selects all options in the list. Optionally, if all options are selected, it may also unselect all options.
+    - <kbd>Space</kbd>: changes the selection state of the focused option.
+    - <kbd>Shift + Down Arrow</kbd> (Optional): Moves focus to and toggles the selected state of the next option.
+    - <kbd>Shift + Up Arrow</kbd> (Optional): Moves focus to and toggles the selected state of the previous option.
+    - <kbd>Shift + Space</kbd> (Optional): Selects contiguous items from the most recently selected item to the focused item.
+    - <kbd>Control + Shift + Home</kbd> (Optional): Selects the focused option and all options up to the first option. Optionally, moves focus to the first option.
+    - <kbd>Control + Shift + End</kbd> (Optional): Selects the focused option and all options down to the last option. Optionally, moves focus to the last option.
+    - <kbd>Control + A</kbd> (Optional): Selects all options in the list. Optionally, if all options are selected, it may also unselect all options.
 
 ### Required JavaScript features
 
@@ -155,7 +127,8 @@ When the user clicks on an option, hits <kbd>Space</kbd> when focused on an opti
 2. Change the appearance of the option to reflect its selected state
 3. Update the [`aria-activedescendant`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-activedescendant) value on the listbox to the ID of the option the user just interacted with, even if they toggled the option to be unselected.
 
-> **Note:** The first rule of ARIA use is you can use a native feature with the semantics and behavior you require already built in, instead of re-purposing an element and **adding** an ARIA role, state or property to make it accessible, then do so. The {{HTMLElement('select')}} element with descendant {{HTMLElement('option')}} elements handles all the needed interactions natively.
+> [!NOTE]
+> The first rule of ARIA use is you can use a native feature with the semantics and behavior you require already built in, instead of re-purposing an element and **adding** an ARIA role, state or property to make it accessible, then do so. The {{HTMLElement('select')}} element with descendant {{HTMLElement('option')}} elements handles all the needed interactions natively.
 
 ## Examples
 

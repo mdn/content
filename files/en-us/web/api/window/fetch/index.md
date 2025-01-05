@@ -18,7 +18,8 @@ Instead, a `then()` handler must check the {{domxref("Response.ok")}} and/or {{d
 
 The `fetch()` method is controlled by the `connect-src` directive of [Content Security Policy](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) rather than the directive of the resources it's retrieving.
 
-> **Note:** The `fetch()` method's parameters are identical to those of the {{domxref("Request.Request","Request()")}} constructor.
+> [!NOTE]
+> The `fetch()` method's parameters are identical to those of the {{domxref("Request.Request","Request()")}} constructor.
 
 ## Syntax
 
@@ -69,6 +70,7 @@ A {{jsxref("Promise")}} that resolves to a {{domxref("Response")}} object.
     <tr>
       <td>Invalid header name.</td>
       <td>
+        <!-- cSpell:ignore ontent -->
         <pre>
 // space in "C ontent-Type"
 const headers = {
@@ -211,7 +213,7 @@ window
   });
 ```
 
-In our [Fetch Request with init example](https://github.com/mdn/dom-examples/tree/main/fetch/fetch-request-with-init) (see [Fetch Request init live](https://mdn.github.io/dom-examples/fetch/fetch-request-with-init)) we do the same thing except that we pass in an _options_ object when we invoke `fetch()`.
+In our [Fetch Request with init example](https://github.com/mdn/dom-examples/tree/main/fetch/fetch-request-with-init) (see [Fetch Request init live](https://mdn.github.io/dom-examples/fetch/fetch-request-with-init/)) we do the same thing except that we pass in an _options_ object when we invoke `fetch()`.
 In this case, we can set a {{HTTPHeader("Cache-Control")}} value to indicate what kind of cached responses we're okay with:
 
 ```js

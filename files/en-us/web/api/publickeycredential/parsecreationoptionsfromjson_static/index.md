@@ -3,12 +3,10 @@ title: "PublicKeyCredential: parseCreationOptionsFromJSON() static method"
 short-title: parseCreationOptionsFromJSON()
 slug: Web/API/PublicKeyCredential/parseCreationOptionsFromJSON_static
 page-type: web-api-static-method
-status:
-  - experimental
 browser-compat: api.PublicKeyCredential.parseCreationOptionsFromJSON_static
 ---
 
-{{APIRef("Web Authentication API")}} {{SeeCompatTable}}{{securecontext_header}}
+{{APIRef("Web Authentication API")}}{{securecontext_header}}
 
 The **`parseCreationOptionsFromJSON()`** static method of the {{domxref("PublicKeyCredential")}} interface creates a {{domxref("PublicKeyCredentialCreationOptions")}} object from a JSON representation of its properties.
 
@@ -88,7 +86,7 @@ const createCredentialOptions =
   );
 
 navigator.credentials
-  .create({ createCredentialOptions })
+  .create({ publicKey: createCredentialOptions })
   .then((newCredentialInfo) => {
     // Handle the new credential information here.
   })

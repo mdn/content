@@ -90,3 +90,4 @@ closeButton.addEventListener("click", () => {
 ## See also
 
 - HTML [`<dialog>`](/en-US/docs/Web/HTML/Element/dialog) element
+- The [`Event`](/en-US/docs/Web/API/Event) interface

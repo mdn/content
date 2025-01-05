@@ -60,7 +60,8 @@ before, after or is equivalent to the `compareString`.
   `compareString`
 - Returns `0` if they are equivalent
 
-> **Warning:** Do not rely on exact return values of `-1` or `1`!
+> [!WARNING]
+> Do not rely on exact return values of `-1` or `1`!
 >
 > Negative and positive integer results vary between browsers (as well as between
 > browser versions) because the ECMAScript specification only mandates negative and positive

@@ -7,11 +7,11 @@ status:
 browser-compat: api.GPUAdapterInfo
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`GPUAdapterInfo`** interface of the {{domxref("WebGPU API", "WebGPU API", "", "nocode")}} contains identifying information about a {{domxref("GPUAdapter")}}.
 
-A `GPUAdapterInfo` object instance is requested using the {{domxref("GPUAdapter.requestAdapterInfo()")}} method.
+A `GPUAdapterInfo` object instance is retrieved using the {{domxref("GPUAdapter.info")}} property.
 
 {{InheritanceDiagram}}
 
@@ -29,22 +29,14 @@ A `GPUAdapterInfo` object instance is requested using the {{domxref("GPUAdapter.
 ## Examples
 
 ```js
-async function init() {
-  if (!navigator.gpu) {
-    throw Error("WebGPU not supported.");
-  }
-
-  const adapter = await navigator.gpu.requestAdapter();
-  if (!adapter) {
-    throw Error("Couldn't request WebGPU adapter.");
-  }
-
-  const adapterInfo = await adapter.requestAdapterInfo();
-  console.log(adapterInfo.architecture);
-  console.log(adapterInfo.vendor);
-
-  // ...
+const adapter = await navigator.gpu.requestAdapter();
+if (!adapter) {
+  throw Error("Couldn't request WebGPU adapter.");
 }
+
+const adapterInfo = adapter.info;
+console.log(adapterInfo.vendor);
+console.log(adapterInfo.architecture);
 ```
 
 ## Specifications
@@ -57,4 +49,5 @@ async function init() {
 
 ## See also
 
+- {{domxref("GPUAdapter.info")}}
 - The [WebGPU API](/en-US/docs/Web/API/WebGPU_API)

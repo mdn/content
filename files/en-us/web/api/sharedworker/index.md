@@ -9,7 +9,8 @@ browser-compat: api.SharedWorker
 
 The **`SharedWorker`** interface represents a specific kind of worker that can be _accessed_ from several browsing contexts, such as several windows, iframes or even workers. They implement an interface different than dedicated workers and have a different global scope, {{domxref("SharedWorkerGlobalScope")}}.
 
-> **Note:** If SharedWorker can be accessed from several browsing contexts, all those browsing contexts must share the exact same origin (same protocol, host and port).
+> [!NOTE]
+> If SharedWorker can be accessed from several browsing contexts, all those browsing contexts must share the exact same origin (same protocol, host and port).
 
 {{InheritanceDiagram}}
 
@@ -44,7 +45,8 @@ The following code snippet shows creation of a `SharedWorker` object using the {
 const myWorker = new SharedWorker("worker.js");
 ```
 
-> **Note:** Once a shared worker is created, any script running in the same origin can obtain a reference to that worker and communicate with it. The shared worker will be alive as long as its global scope's owner set (a set of `Document` and `WorkerGlobalScope` objects) is not empty (for example, if there is any live page holding a reference to it, maybe through `new SharedWorker()`). To read more about shared worker lifetime, see [The worker's lifetime](https://html.spec.whatwg.org/multipage/workers.html#the-worker's-lifetime) section of the HTML specification.
+> [!NOTE]
+> Once a shared worker is created, any script running in the same origin can obtain a reference to that worker and communicate with it. The shared worker will be alive as long as its global scope's owner set (a set of `Document` and `WorkerGlobalScope` objects) is not empty (for example, if there is any live page holding a reference to it, maybe through `new SharedWorker()`). To read more about shared worker lifetime, see [The worker's lifetime](https://html.spec.whatwg.org/multipage/workers.html#the-worker's-lifetime) section of the HTML specification.
 
 Both scripts then access the worker through a {{domxref("MessagePort")}} object created using the {{domxref("SharedWorker.port")}} property. If the onmessage event is attached using addEventListener, the port is manually started using its `start()` method:
 
@@ -54,18 +56,16 @@ myWorker.port.start();
 
 When the port is started, both scripts post messages to the worker and handle messages sent from it using `port.postMessage()` and `port.onmessage`, respectively:
 
-> **Note:** You can use browser devtools to debug your SharedWorker, by entering a URL in your browser address bar to access the devtools workers inspector; for example, in Chrome, the URL `chrome://inspect/#workers`, and in FireFox, the URL `about:debugging#workers`.
+> [!NOTE]
+> You can use browser devtools to debug your SharedWorker, by entering a URL in your browser address bar to access the devtools workers inspector; for example, in Chrome, the URL `chrome://inspect/#workers`, and in Firefox, the URL `about:debugging#workers`.
 
 ```js
-first.onchange = () => {
-  myWorker.port.postMessage([first.value, second.value]);
-  console.log("Message posted to worker");
-};
-
-second.onchange = () => {
-  myWorker.port.postMessage([first.value, second.value]);
-  console.log("Message posted to worker");
-};
+[first, second].forEach((input) => {
+  input.onchange = () => {
+    myWorker.port.postMessage([first.value, second.value]);
+    console.log("Message posted to worker");
+  };
+});
 
 myWorker.port.onmessage = (e) => {
   result1.textContent = e.data;

@@ -37,11 +37,7 @@ The **`@font-face`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At
 - {{cssxref("@font-face/font-style", "font-style")}}
   - : A {{cssxref("font-style")}} value. Accepts two values to specify a range that is supported by a font-face, for example `font-style: oblique 20deg 50deg;`
 - {{cssxref("@font-face/font-weight", "font-weight")}}
-
   - : A {{cssxref("font-weight")}} value. Accepts two values to specify a range that is supported by a font-face, for example `font-weight: 100 400;`
-
-    > **Note:** The font-variant descriptor was removed from the specification in 2018. The {{cssxref("font-variant")}} value property is supported, but there is no descriptor equivalent.
-
 - {{cssxref("@font-face/font-feature-settings", "font-feature-settings")}}
   - : Allows control over advanced typographic features in OpenType fonts.
 - {{cssxref("@font-face/font-variation-settings", "font-variation-settings")}}
@@ -66,7 +62,8 @@ If a more specific fonts with `format()` or `tech()` values are desired, these s
 
 By allowing authors to provide their own fonts, `@font-face` makes it possible to design content without being limited to the so-called "web-safe" fonts (that is, the fonts which are so common that they're considered to be universally available). The ability to specify the name of a locally-installed font to look for and use makes it possible to customize the font beyond the basics while making it possible to do so without relying on an internet connection.
 
-> **Note:** Fallback strategies for loading fonts on older browsers are described in the [`src` descriptor page](/en-US/docs/Web/CSS/@font-face/src#specifying_fallbacks_for_older_browsers).
+> [!NOTE]
+> Fallback strategies for loading fonts on older browsers are described in the [`src` descriptor page](/en-US/docs/Web/CSS/@font-face/src#specifying_fallbacks_for_older_browsers).
 
 The `@font-face` at-rule may be used not only at the top level of a CSS, but also inside any [CSS conditional-group at-rule](/en-US/docs/Web/CSS/CSS_conditional_rules#at-rules).
 
@@ -105,33 +102,24 @@ The `@font-face` at-rule may be used not only at the top level of a CSS, but als
 
 This example specifies a downloadable font to use, applying it to the entire body of the document:
 
-```html
-<!doctype html>
-<html lang="en-US">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Web Font Sample</title>
-    <style media="screen, print">
-      @font-face {
-        font-family: "Bitstream Vera Serif Bold";
-        src: url("https://mdn.github.io/css-examples/web-fonts/VeraSeBd.ttf");
-      }
-
-      body {
-        font-family: "Bitstream Vera Serif Bold", serif;
-      }
-    </style>
-  </head>
-  <body>
-    This is Bitstream Vera Serif Bold.
-  </body>
-</html>
+```html live-sample___web-font-example
+<body>
+  This is Bitstream Vera Serif Bold.
+</body>
 ```
 
-The output of this example code looks like so:
+```css live-sample___web-font-example
+@font-face {
+  font-family: "Bitstream Vera Serif Bold";
+  src: url("https://mdn.github.io/shared-assets/fonts/VeraSeBd.ttf");
+}
 
-{{EmbedGHLiveSample("css-examples/web-fonts/basic-web-font.html", '100%', '100')}}
+body {
+  font-family: "Bitstream Vera Serif Bold", serif;
+}
+```
+
+{{EmbedLiveSample("web-font-example", "", "100px")}}
 
 ### Specifying local font alternatives
 

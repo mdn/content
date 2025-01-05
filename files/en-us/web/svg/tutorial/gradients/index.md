@@ -82,7 +82,8 @@ The `<linearGradient>` element also takes several other attributes, which specif
 <linearGradient id="Gradient2" x1="0" x2="0" y1="0" y2="1"></linearGradient>
 ```
 
-> **Note:** You can also use the `href` attribute on gradients too. When it is used, attributes and stops from one gradient can be included on another. In the above example, you wouldn't have to recreate all the stops in Gradient2.
+> [!NOTE]
+> You can also use the `href` attribute on gradients too. When it is used, attributes and stops from one gradient can be included on another. In the above example, you wouldn't have to recreate all the stops in Gradient2.
 >
 > ```html
 > <linearGradient id="Gradient1">
@@ -100,7 +101,7 @@ The `<linearGradient>` element also takes several other attributes, which specif
 >   href="#Gradient1" />
 > ```
 >
-> I've included the xlink namespace here directly on the node, although usually you would define it at the top of your document. More on that when we [talk about images](/en-US/docs/Web/SVG/Tutorial/Other_content_in_SVG).
+> We've included the xlink namespace here directly on the node, although usually you would define it at the top of your document. More on that when we [talk about images](/en-US/docs/Web/SVG/Tutorial/Other_content_in_SVG).
 
 ## Radial Gradient
 
@@ -289,7 +290,7 @@ Both gradients also have an attribute named `gradientUnits`, which describes the
   gradientUnits="userSpaceOnUse"></radialGradient>
 ```
 
-You can also then apply another transformation to the gradient by using the `gradientTransform` attribute, but since we haven't [introduced transforms](/en-US/docs/Web/SVG/Tutorial/Basic_Transformations) yet, I'll leave that for later.
+You can also then apply another transformation to the gradient by using the `gradientTransform` attribute, but since we haven't [introduced transforms](/en-US/docs/Web/SVG/Tutorial/Basic_Transformations) yet, we'll leave that for later.
 
 There are some other caveats for dealing with `gradientUnits="objectBoundingBox"` when the object bounding box isn't square, but they're fairly complex and will have to wait for someone more in-the-know to explain them.
 

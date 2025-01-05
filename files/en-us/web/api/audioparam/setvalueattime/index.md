@@ -43,7 +43,6 @@ to set the gain value equal to `currGain`, one second from now
 
 ```js
 // create audio context
-const AudioContext = window.AudioContext || window.webkitAudioContext;
 const audioCtx = new AudioContext();
 
 // set basic variables for example

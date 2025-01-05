@@ -15,7 +15,8 @@ When the inline-progression-direction is vertical and the `glyph-orientation-ver
 
 This attribute is applied only to text written in a vertical {{SVGAttr("writing-mode")}}.
 
-> **Note:** As a presentation attribute, `glyph-orientation-vertical` can be used as a CSS property.
+> [!NOTE]
+> As a presentation attribute, `glyph-orientation-vertical` can be used as a CSS property.
 
 You can use this attribute with the following SVG elements:
 
@@ -56,7 +57,8 @@ You can use this attribute with the following SVG elements:
 
     This reorientation rule applies only to the first-level non-ideographic text. All further embedding of writing modes or bidirectional processing will be based on the first-level rotation.
 
-    > **Note:** Text set in this "rotated" manner may contain ligatures or other glyph combining and reordering common to the language and script. (This presentation form does not disable auto-ligature formation or similar context-driven variations.)
+    > [!NOTE]
+    > Text set in this "rotated" manner may contain ligatures or other glyph combining and reordering common to the language and script. (This presentation form does not disable auto-ligature formation or similar context-driven variations.)
 
     The determination of which characters should be auto-rotated may vary across user agents. The determination is based on a complex interaction between country, language, script, character properties, font, and character context.
 

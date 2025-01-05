@@ -38,20 +38,20 @@ This section lists page types that are specific to a single area of MDN.
 
 ### Learning Area page types
 
-This section lists `page-type` values for pages under [Learn](/en-US/docs/Learn). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the generic page type values.
+This section lists `page-type` values for pages under [Learn](/en-US/docs/Learn_web_development). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the generic page type values.
 
-- `learn-topic`: an overview of a topic, that is, a collection of modules like [_CSS_](/en-US/docs/Learn/CSS).
-- `learn-module` an overview of a module, that is, an ordered collection of guides, like [_Introduction to HTML_](/en-US/docs/Learn/HTML/Introduction_to_HTML).
-- `learn-module-chapter` a guide that is part of a module, like [_Mobile accessibility_](/en-US/docs/Learn/Accessibility/Mobile).
-- `learn-module-assessment` a special guide with an activity allowing to assess the comprehension of a module or a part of it, like [_Test your skills: basic controls_](/en-US/docs/Learn/Forms/Test_your_skills:_Basic_controls).
-- `learn-faq`: the answer to a specific question about web development, like [_What is a domain name?_](/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name).
+- `learn-topic`: an overview of a topic, that is, a collection of modules like [_CSS_](/en-US/docs/Learn_web_development/Core/Styling_basics).
+- `learn-module` an overview of a module, that is, an ordered collection of guides, like [_Structuring content with HTML_](/en-US/docs/Learn_web_development/Core/Structuring_content).
+- `learn-module-chapter` a guide that is part of a module, like [_Mobile accessibility_](/en-US/docs/Learn_web_development/Core/Accessibility/Mobile).
+- `learn-module-assessment` a special guide with an activity allowing to assess the comprehension of a module or a part of it, like [_Test your skills: basic controls_](/en-US/docs/Learn_web_development/Extensions/Forms/Test_your_skills:_Basic_controls).
+- `learn-faq`: the answer to a specific question about web development, like [_What is a domain name?_](/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name).
 
 ### Accessibility page types
 
 This section lists `page-type` values for pages under [Web/Accessibility](/en-US/docs/Web/Accessibility). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the [generic page type](#generic_page_types) values.
 
 - `aria-role`: an ARIA [role](/en-US/docs/Web/Accessibility/ARIA/Roles), like [`section`](/en-US/docs/Web/Accessibility/ARIA/Roles/section_role).
-- `aria-attribute`: an ARIA [attribute](eb/Accessibility/ARIA/Attributes), like [`aria-sort`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-sort).
+- `aria-attribute`: an ARIA [attribute](/en-US/docs/Web/Accessibility/ARIA/Attributes), like [`aria-sort`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-sort).
 
 ### CSS page types
 
@@ -136,8 +136,6 @@ This section lists `page-type` values for pages under [Web/SVG](/en-US/docs/Web/
 This section lists `page-type` values for pages under [Web/API](/en-US/docs/Web/API). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the [generic page type](#generic_page_types) values.
 
 - `web-api-overview`: gives an overview of a Web API, like the [Fetch API](/en-US/docs/Web/API/Fetch_API).
-- `web-api-global-function`: a global function, like [`fetch()`](/en-US/docs/Web/API/Window/fetch).
-- `web-api-global-property`: a global property.
 - `web-api-interface`: a Web API interface, like [`Request`](/en-US/docs/Web/API/Request).
 - `web-api-constructor`: a constructor, like [`Request()`](/en-US/docs/Web/API/Request/Request).
 - `web-api-instance-method`: an instance method, like [`cache.add()`](/en-US/docs/Web/API/Cache/add).
@@ -152,13 +150,13 @@ This section lists `page-type` values for pages under [Web/API](/en-US/docs/Web/
 
 This section lists `page-type` values for pages under [WebAssembly/](/en-US/docs/WebAssembly). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the generic page type values.
 
-- `webassembly-function`: a global function, that is a method directly under the `WebAssembly` object that acts as a namespace, like [`WebAssembly.instantiate()`](WebAssembly/JavaScript_interface/instantiate).
-- `webassembly-constructor`: a constructor, like [`WebAssembly.Exception()`](WebAssembly/JavaScript_interface/Exception/Exception).
-- `webassembly-interface`: a WebAssembly interface, like [`WebAssembly.LinkError`](WebAssembly/JavaScript_interface/LinkError).
-- `webassembly-instance-property`: an instance property, like [`WebAssembly.Instance.exports`](WebAssembly/JavaScript_interface/Instance/exports).
-- `webassembly-instance-method`: an instance method, like [`WebAssembly.Exception.getArg()`](WebAssembly/JavaScript_interface/Exception/getArg).
-- `webassembly-static-method`: a static method, like [`WebAssembly.Module.exports()`](WebAssembly/JavaScript_interface/Module/exports_static).
-- `webassembly-instruction`: an instruction, or a set of instructions, like [`Wrap`](WebAssembly/Reference/Numeric/Wrap).
+- `webassembly-function`: a global function, that is a method directly under the `WebAssembly` object that acts as a namespace, like [`WebAssembly.instantiate()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiate_static).
+- `webassembly-constructor`: a constructor, like [`WebAssembly.Exception()`](/en-US/docs/WebAssembly/JavaScript_interface/Exception/Exception).
+- `webassembly-interface`: a WebAssembly interface, like [`WebAssembly.LinkError`](/en-US/docs/WebAssembly/JavaScript_interface/LinkError).
+- `webassembly-instance-property`: an instance property, like [`WebAssembly.Instance.exports`](/en-US/docs/WebAssembly/JavaScript_interface/Instance/exports).
+- `webassembly-instance-method`: an instance method, like [`WebAssembly.Exception.getArg()`](/en-US/docs/WebAssembly/JavaScript_interface/Exception/getArg).
+- `webassembly-static-method`: a static method, like [`WebAssembly.Module.exports()`](/en-US/docs/WebAssembly/JavaScript_interface/Module/exports_static).
+- `webassembly-instruction`: an instruction, or a set of instructions, like [`Wrap`](/en-US/docs/WebAssembly/Reference/Numeric/Wrap).
 
 ### WebDriver page types
 
@@ -196,7 +194,6 @@ This section lists `page-type` values for pages under [Web/XPath](/en-US/docs/We
 This section lists `page-type` values for pages under [Web/XSLT](/en-US/docs/Web/XSLT). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the [generic page type](#generic_page_types) values.
 
 - `xslt-element`: an element of XSLT, like [`<xsl:message>`](/en-US/docs/Web/XSLT/Element/message).
-- `xslt-axis`: an axis of XSLT, like [`ancestor`](/en-US/docs/Web/XSLT/Transforming_XML_with_XSLT/The_Netscape_XSLT_XPath_Reference/Axes/ancestor).
 
 ### EXSLT page types
 

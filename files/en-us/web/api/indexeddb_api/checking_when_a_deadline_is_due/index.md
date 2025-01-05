@@ -79,7 +79,8 @@ In this segment, we check to see if the form fields have all been filled in. If 
 
 In this section we create an object called `newItem` that stores the data in the format required to insert it into the database. The next few lines open the database transaction and provide messages to notify the user if this was successful or failed. Then an `objectStore` is created into which the new item is added. The `notified` property of the data object indicates that the to-do list item's deadline has not yet come up and been notified - more on this later!
 
-> **Note:** The `db` variable stores a reference to the IndexedDB database instance; we can then use various properties of this variable to manipulate the data.
+> [!NOTE]
+> The `db` variable stores a reference to the IndexedDB database instance; we can then use various properties of this variable to manipulate the data.
 
 ```js
     request.onsuccess = (event) => {

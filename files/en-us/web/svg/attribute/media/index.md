@@ -51,7 +51,7 @@ svg {
       <th scope="row">Value</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/CSS/@media#media-query-list"
+          ><a href="/en-US/docs/Web/CSS/@media#syntax"
             >&#x3C;media-query-list></a
           ></code
         >
@@ -63,7 +63,7 @@ svg {
     </tr>
     <tr>
       <th scope="row">Animatable</th>
-      <td>Yes</td>
+      <td>No</td>
     </tr>
   </tbody>
 </table>

@@ -13,7 +13,8 @@ puts the {{domxref("Attr")}} identified by its name in the map.
 If there was already an {{domxref("Attr")}} with the same name in the map,
 it is _replaced_.
 
-> **Note:** This method is an alias of `setNamedItem()` you can use them
+> [!NOTE]
+> This method is an alias of `setNamedItem()` you can use them
 > interchangeably.
 
 ## Syntax

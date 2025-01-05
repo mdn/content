@@ -75,10 +75,10 @@ Highlights:
 
 ### Interfaces/APIs/DOM
 
-- The Fetch API {{domxref("fetch()")}} method has been implemented ([Firefox bug 1039846](https://bugzil.la/1039846)).
+- The Fetch API {{domxref("Window/fetch", "fetch()")}} method has been implemented ([Firefox bug 1039846](https://bugzil.la/1039846)).
 - {{domxref("BroadcastChannel")}} API has been implemented and is available in [Web Workers](/en-US/docs/Web/API/Web_Workers_API) ([Firefox bug 966439](https://bugzil.la/966439) and [Firefox bug 1121420](https://bugzil.la/1121420)).
 - The Console API is now available in [Web Workers](/en-US/docs/Web/API/Web_Workers_API).
-- {{domxref("CanvasRenderingContext2D.clearHitRegions()")}} has been implemented ([Firefox bug 1119527](https://bugzil.la/1119527)).
+- `CanvasRenderingContext2D.clearHitRegions()` has been implemented ([Firefox bug 1119527](https://bugzil.la/1119527)).
 - Constants of {{domxref("KeyboardEvent.location")}}, `DOM_KEY_LOCATION_MOBILE` and DOM_KEY_LOCATION_JOYSTICK, have been removed, since they were removed from the DOM Level 3 Spec ([Firefox bug 936313](https://bugzil.la/936313).
 - {{domxref("KeyboardEvent.code")}} is now available; previously it was only available in prerelease builds. ([Firefox bug 1126673](https://bugzil.la/1126673))
 - {{domxref("KeyboardEvent.code")}} now supports special keys on Sun keyboards on Linux, Android, and Firefox OS. ([Firefox bug 1020139](https://bugzil.la/1020139))

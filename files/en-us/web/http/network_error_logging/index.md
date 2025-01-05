@@ -50,7 +50,7 @@ Report-To: { "group": "nel",
 
 ## Error reports
 
-In these examples, the entire reporting API payload is shown. The top-level **`"body"`** key contains the network error report.
+In these examples, the reporting API response content is shown. The top-level **`"body"`** key contains the network error report.
 
 ### HTTP 400 (Bad Request) response
 
@@ -142,3 +142,7 @@ The type of the network error may be one of the following pre-defined values fro
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [Reporting API](/en-US/docs/Web/API/Reporting_API)

@@ -6,7 +6,7 @@ page-type: firefox-release-notes
 
 {{FirefoxSidebar}}
 
-[To test the latest developer features of Firefox, install Firefox Developer Edition](https://www.mozilla.org/firefox/developer/) Firefox 42 was released on November 3, 2015. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
+[To test the latest developer features of Firefox, install Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/) Firefox 42 was released on November 3, 2015. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 
 ## Changes for Web developers
 
@@ -46,10 +46,10 @@ Highlights:
 - {{domxref('MouseEvent.offsetX')}} and {{domxref('MouseEvent.offsetY')}} have been added ([Firefox bug 69787](https://bugzil.la/69787)).
 - The {{domxref("HTMLInputElement")}} interface has been experimentally extended to handle the upload of directories ([Firefox bug 1164310](https://bugzil.la/1164310)). These four members can be exposed by setting the `dom.input.dirpicker` preference to `true`:
 
-  - {{domxref("HTMLInputElement.directory")}}
-  - {{domxref("HTMLInputElement.isFilesAndDirectoriesSupported")}}
-  - {{domxref("HTMLInputElement.getFilesAndDirectories()")}}
-  - {{domxref("HTMLInputElement.chooseDirectory()")}}
+  - `HTMLInputElement.directory`
+  - `HTMLInputElement.isFilesAndDirectoriesSupported`
+  - `HTMLInputElement.getFilesAndDirectories()`
+  - `HTMLInputElement.chooseDirectory()`
 
 - The {{domxref("Directory")}} interface has been experimentally extended ([Firefox bug 1177688](https://bugzil.la/1177688)). The two members {{domxref("Directory.path")}} and {{domxref("Directory.getContents")}} can be exposed by setting the `dom.input.dirpicker` preference to `true`.
 - The `HTMLMediaElement.mozSrcObject` has been renamed in {{domxref('HTMLMediaElement.srcObject')}} ([Firefox bug 1175523](https://bugzil.la/1175523)).
@@ -91,7 +91,7 @@ Our experimental implementation of the [Shadow DOM](/en-US/docs/Web/API/Web_comp
 
 #### New APIs
 
-- The {{domxref("ImageBitmap")}} interface and the {{domxref("createImageBitmap()")}} method have been implemented. They are available on regular window scripts and in Web workers and allow efficient posting of images between window and worker contexts ([Firefox bug 1044102](https://bugzil.la/1044102)).
+- The {{domxref("ImageBitmap")}} interface, the {{domxref("Window.createImageBitmap()")}} and {{domxref("WorkerGlobalScope.createImageBitmap()")}} method have been implemented. They are available on regular window scripts and in Web workers and allow efficient posting of images between window and worker contexts ([Firefox bug 1044102](https://bugzil.la/1044102)).
 
 #### Miscellaneous
 

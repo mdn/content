@@ -9,11 +9,11 @@ browser-compat: http.headers.Access-Control-Allow-Origin
 
 **Cross-Origin Resource Sharing** ({{Glossary("CORS")}}) is an {{Glossary("HTTP")}}-header based mechanism that allows a server to indicate any {{glossary("origin", "origins")}} (domain, scheme, or port) other than its own from which a browser should permit loading resources. CORS also relies on a mechanism by which browsers make a "preflight" request to the server hosting the cross-origin resource, in order to check that the server will permit the actual request. In that preflight, the browser sends headers that indicate the HTTP method and headers that will be used in the actual request.
 
-An example of a cross-origin request: the front-end JavaScript code served from `https://domain-a.com` uses {{domxref("fetch()")}} to make a request for `https://domain-b.com/data.json`.
+An example of a cross-origin request: the front-end JavaScript code served from `https://domain-a.com` uses {{domxref("Window/fetch", "fetch()")}} to make a request for `https://domain-b.com/data.json`.
 
 For security reasons, browsers restrict cross-origin HTTP requests initiated from scripts. For example, `fetch()` and {{domxref("XMLHttpRequest")}} follow the [same-origin policy](/en-US/docs/Web/Security/Same-origin_policy). This means that a web application using those APIs can only request resources from the same origin the application was loaded from unless the response from other origins includes the right CORS headers.
 
-![Diagrammatic representation of CORS mechanism](cors_principle.png)
+![Diagrammatic representation of CORS mechanism](https://mdn.github.io/shared-assets/images/diagrams/http/cors/fetching-page-cors.svg)
 
 The CORS mechanism supports secure cross-origin requests and data transfers between browsers and servers. Browsers use CORS in APIs such as `fetch()` or `XMLHttpRequest` to mitigate the risks of cross-origin HTTP requests.
 
@@ -31,7 +31,7 @@ This is a general article about Cross-Origin Resource Sharing and includes a dis
 
 ## Functional overview
 
-The Cross-Origin Resource Sharing standard works by adding new [HTTP headers](/en-US/docs/Web/HTTP/Headers) that let servers describe which origins are permitted to read that information from a web browser. Additionally, for HTTP request methods that can cause side-effects on server data (in particular, HTTP methods other than {{HTTPMethod("GET")}}, or {{HTTPMethod("POST")}} with certain [MIME types](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types)), the specification mandates that browsers "preflight" the request, soliciting supported methods from the server with the HTTP {{HTTPMethod("OPTIONS")}} request method, and then, upon "approval" from the server, sending the actual request. Servers can also inform clients whether "credentials" (such as [Cookies](/en-US/docs/Web/HTTP/Cookies) and [HTTP Authentication](/en-US/docs/Web/HTTP/Authentication)) should be sent with requests.
+The Cross-Origin Resource Sharing standard works by adding new [HTTP headers](/en-US/docs/Web/HTTP/Headers) that let servers describe which origins are permitted to read that information from a web browser. Additionally, for HTTP request methods that can cause side-effects on server data (in particular, HTTP methods other than {{HTTPMethod("GET")}}, or {{HTTPMethod("POST")}} with certain [MIME types](/en-US/docs/Web/HTTP/MIME_types)), the specification mandates that browsers "preflight" the request, soliciting supported methods from the server with the HTTP {{HTTPMethod("OPTIONS")}} request method, and then, upon "approval" from the server, sending the actual request. Servers can also inform clients whether "credentials" (such as [Cookies](/en-US/docs/Web/HTTP/Cookies) and [HTTP Authentication](/en-US/docs/Web/HTTP/Authentication)) should be sent with requests.
 
 CORS failures result in errors but for security reasons, specifics about the error _are not available to JavaScript_. All the code knows is that an error occurred. The only way to determine what specifically went wrong is to look at the browser's console for details.
 
@@ -39,13 +39,13 @@ Subsequent sections discuss scenarios, as well as provide a breakdown of the HTT
 
 ## Examples of access control scenarios
 
-We present three scenarios that demonstrate how Cross-Origin Resource Sharing works. All these examples use {{domxref("fetch()")}}, which can make cross-origin requests in any supporting browser.
+We present three scenarios that demonstrate how Cross-Origin Resource Sharing works. All these examples use {{domxref("Window/fetch", "fetch()")}}, which can make cross-origin requests in any supporting browser.
 
 ### Simple requests
 
 Some requests don't trigger a {{Glossary("Preflight_request","CORS preflight")}}. Those are called _simple requests_ from the obsolete [CORS spec](https://www.w3.org/TR/2014/REC-cors-20140116/#terminology), though the [Fetch spec](https://fetch.spec.whatwg.org/) (which now defines CORS) doesn't use that term.
 
-The motivation is that the {{HTMLElement("form")}} element from HTML 4.0 (which predates cross-site {{domxref("fetch()")}} and {{domxref("XMLHttpRequest")}}) can submit simple requests to any origin, so anyone writing a server must already be protecting against {{Glossary("CSRF", "cross-site request forgery")}} (CSRF). Under this assumption, the server doesn't have to opt-in (by responding to a preflight request) to receive any request that looks like a form submission, since the threat of CSRF is no worse than that of form submission. However, the server still must opt-in using {{HTTPHeader("Access-Control-Allow-Origin")}} to _share_ the response with the script.
+The motivation is that the {{HTMLElement("form")}} element from HTML 4.0 (which predates cross-site {{domxref("Window/fetch", "fetch()")}} and {{domxref("XMLHttpRequest")}}) can submit simple requests to any origin, so anyone writing a server must already be protecting against {{Glossary("CSRF", "cross-site request forgery")}} (CSRF). Under this assumption, the server doesn't have to opt-in (by responding to a preflight request) to receive any request that looks like a form submission, since the threat of CSRF is no worse than that of form submission. However, the server still must opt-in using {{HTTPHeader("Access-Control-Allow-Origin")}} to _share_ the response with the script.
 
 A _simple request_ is one that **meets all the following conditions**:
 
@@ -72,7 +72,8 @@ A _simple request_ is one that **meets all the following conditions**:
 - If the request is made using an {{domxref("XMLHttpRequest")}} object, no event listeners are registered on the object returned by the {{domxref("XMLHttpRequest.upload")}} property used in the request; that is, given an {{domxref("XMLHttpRequest")}} instance `xhr`, no code has called `xhr.upload.addEventListener()` to add an event listener to monitor the upload.
 - No {{domxref("ReadableStream")}} object is used in the request.
 
-> **Note:** WebKit Nightly and Safari Technology Preview place additional restrictions on the values allowed in the {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Language")}}, and {{HTTPHeader("Content-Language")}} headers. If any of those headers have "nonstandard" values, WebKit/Safari does not consider the request to be a "simple request". What values WebKit/Safari consider "nonstandard" is not documented, except in the following WebKit bugs:
+> [!NOTE]
+> WebKit Nightly and Safari Technology Preview place additional restrictions on the values allowed in the {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Language")}}, and {{HTTPHeader("Content-Language")}} headers. If any of those headers have "nonstandard" values, WebKit/Safari does not consider the request to be a "simple request". What values WebKit/Safari consider "nonstandard" is not documented, except in the following WebKit bugs:
 >
 > - [Require preflight for non-standard CORS-safelisted request headers Accept, Accept-Language, and Content-Language](https://webkit.org/b/165178)
 > - [Allow commas in Accept, Accept-Language, and Content-Language request headers for simple CORS](https://webkit.org/b/165566)
@@ -138,7 +139,8 @@ This pattern of the {{HTTPHeader("Origin")}} and {{HTTPHeader("Access-Control-Al
 Access-Control-Allow-Origin: https://foo.example
 ```
 
-> **Note:** When responding to a [credentialed requests](#requests_with_credentials) request, the server **must** specify an origin in the value of the `Access-Control-Allow-Origin` header, instead of specifying the "`*`" wildcard.
+> [!NOTE]
+> When responding to a [credentialed requests](#requests_with_credentials) request, the server **must** specify an origin in the value of the `Access-Control-Allow-Origin` header, instead of specifying the `*` wildcard.
 
 ### Preflighted requests
 
@@ -166,7 +168,8 @@ The example above creates an XML body to send with the `POST` request. Also, a n
 
 ![Diagram of a request that is preflighted](https://mdn.github.io/shared-assets/images/diagrams/http/cors/preflight-correct.svg)
 
-> **Note:** As described below, the actual `POST` request does not include the `Access-Control-Request-*` headers; they are needed only for the `OPTIONS` request.
+> [!NOTE]
+> As described below, the actual `POST` request does not include the `Access-Control-Request-*` headers; they are needed only for the `OPTIONS` request.
 
 Let's look at the full exchange between client and server. The first exchange is the _preflight request/response_:
 
@@ -214,7 +217,7 @@ Access-Control-Max-Age: 86400
 
 The server responds with `Access-Control-Allow-Origin: https://foo.example`, restricting access to the requesting origin domain only. It also responds with `Access-Control-Allow-Methods`, which says that `POST` and `GET` are valid methods to query the resource in question (this header is similar to the {{HTTPHeader("Allow")}} response header, but used strictly within the context of access control).
 
-The server also sends `Access-Control-Allow-Headers` with a value of "`X-PINGOTHER, Content-Type`", confirming that these are permitted headers to be used with the actual request. Like `Access-Control-Allow-Methods`, `Access-Control-Allow-Headers` is a comma-separated list of acceptable headers.
+The server also sends `Access-Control-Allow-Headers` with a value of `X-PINGOTHER, Content-Type`, confirming that these are permitted headers to be used with the actual request. Like `Access-Control-Allow-Methods`, `Access-Control-Allow-Headers` is a comma-separated list of acceptable headers.
 
 Finally, {{HTTPHeader("Access-Control-Max-Age")}} gives the value in seconds for how long the response to the preflight request can be cached without sending another preflight request. The default value is 5 seconds. In the present case, the max age is 86400 seconds (= 24 hours). Note that each browser has a [maximum internal value](/en-US/docs/Web/HTTP/Headers/Access-Control-Max-Age) that takes precedence when the `Access-Control-Max-Age` exceeds it.
 
@@ -249,7 +252,7 @@ Keep-Alive: timeout=2, max=99
 Connection: Keep-Alive
 Content-Type: text/plain
 
-[Some XML payload]
+[Some XML content]
 ```
 
 #### Preflighted requests and redirects
@@ -275,9 +278,10 @@ However, if the request is one that triggers a preflight due to the presence of 
 
 ### Requests with credentials
 
-> **Note:** When making credentialed requests to a different domain, third-party cookie policies will still apply. The policy is always enforced regardless of any setup on the server and the client as described in this chapter.
+> [!NOTE]
+> When making credentialed requests to a different domain, third-party cookie policies will still apply. The policy is always enforced regardless of any setup on the server and the client as described in this chapter.
 
-The most interesting capability exposed by both {{domxref("fetch()")}} or {{domxref("XMLHttpRequest")}} and CORS is the ability to make "credentialed" requests that are aware of [HTTP cookies](/en-US/docs/Web/HTTP/Cookies) and HTTP Authentication information. By default, in cross-origin `fetch()` or `XMLHttpRequest` calls, browsers will _not_ send credentials.
+The most interesting capability exposed by both {{domxref("Window/fetch", "fetch()")}} or {{domxref("XMLHttpRequest")}} and CORS is the ability to make "credentialed" requests that are aware of [HTTP cookies](/en-US/docs/Web/HTTP/Cookies) and HTTP Authentication information. By default, in cross-origin `fetch()` or `XMLHttpRequest` calls, browsers will _not_ send credentials.
 
 To ask for a `fetch()` request to include credentials, set the [`credentials`](/en-US/docs/Web/API/RequestInit#credentials) option to `"include"`.
 
@@ -327,7 +331,7 @@ Keep-Alive: timeout=2, max=100
 Connection: Keep-Alive
 Content-Type: text/plain
 
-[text/plain payload]
+[text/plain content]
 ```
 
 Although the request's `Cookie` header contains the cookie destined for the content on `https://bar.other`, if bar.other did not respond with an {{HTTPHeader("Access-Control-Allow-Credentials")}} with value `true`, as demonstrated in this example, the response would be ignored and not made available to the web content.
@@ -336,7 +340,8 @@ Although the request's `Cookie` header contains the cookie destined for the cont
 
 CORS-preflight requests must never include credentials. The _response_ to a preflight request must specify `Access-Control-Allow-Credentials: true` to indicate that the actual request can be made with credentials.
 
-> **Note:** Some enterprise authentication services require that TLS client certificates be sent in preflight requests, in contravention of the [Fetch](https://fetch.spec.whatwg.org/#cors-protocol-and-credentials) specification.
+> [!NOTE]
+> Some enterprise authentication services require that TLS client certificates be sent in preflight requests, in contravention of the [Fetch](https://fetch.spec.whatwg.org/#cors-protocol-and-credentials) specification.
 >
 > Firefox 87 allows this non-compliant behavior to be enabled by setting the preference: `network.cors_preflight.allow_client_cert` to `true` ([Firefox bug 1511151](https://bugzil.la/1511151)). Chromium-based browsers currently always send TLS client certificates in CORS preflight requests ([Chrome bug 775438](https://crbug.com/775438)).
 
@@ -344,19 +349,16 @@ CORS-preflight requests must never include credentials. The _response_ to a pref
 
 When responding to a credentialed request:
 
-- The server **must not** specify the "`*`" wildcard for the `Access-Control-Allow-Origin` response-header value, but must instead specify an explicit origin; for example: `Access-Control-Allow-Origin: https://example.com`
-
-- The server **must not** specify the "`*`" wildcard for the `Access-Control-Allow-Headers` response-header value, but must instead specify an explicit list of header names; for example, `Access-Control-Allow-Headers: X-PINGOTHER, Content-Type`
-
-- The server **must not** specify the "`*`" wildcard for the `Access-Control-Allow-Methods` response-header value, but must instead specify an explicit list of method names; for example, `Access-Control-Allow-Methods: POST, GET`
-
-- The server **must not** specify the "`*`" wildcard for the `Access-Control-Expose-Headers` response-header value, but must instead specify an explicit list of header names; for example, `Access-Control-Expose-Headers: Content-Encoding, Kuma-Revision`
+- The server **must not** specify the `*` wildcard for the `Access-Control-Allow-Origin` response-header value, but must instead specify an explicit origin; for example: `Access-Control-Allow-Origin: https://example.com`
+- The server **must not** specify the `*` wildcard for the `Access-Control-Allow-Headers` response-header value, but must instead specify an explicit list of header names; for example, `Access-Control-Allow-Headers: X-PINGOTHER, Content-Type`
+- The server **must not** specify the `*` wildcard for the `Access-Control-Allow-Methods` response-header value, but must instead specify an explicit list of method names; for example, `Access-Control-Allow-Methods: POST, GET`
+- The server **must not** specify the `*` wildcard for the `Access-Control-Expose-Headers` response-header value, but must instead specify an explicit list of header names; for example, `Access-Control-Expose-Headers: Content-Encoding, Kuma-Revision`
 
 If a request includes a credential (most commonly a `Cookie` header) and the response includes an `Access-Control-Allow-Origin: *` header (that is, with the wildcard), the browser will block access to the response, and report a CORS error in the devtools console.
 
 But if a request does include a credential (like the `Cookie` header) and the response includes an actual origin rather than the wildcard (like, for example, `Access-Control-Allow-Origin: https://example.com`), then the browser will allow access to the response from the specified origin.
 
-Also note that any `Set-Cookie` response header in a response would not set a cookie if the `Access-Control-Allow-Origin` value in that response is the "`*`" wildcard rather an actual origin.
+Also note that any `Set-Cookie` response header in a response would not set a cookie if the `Access-Control-Allow-Origin` value in that response is the `*` wildcard rather an actual origin.
 
 #### Third-party cookies
 
@@ -378,7 +380,7 @@ A returned resource may have one {{HTTPHeader("Access-Control-Allow-Origin")}} h
 Access-Control-Allow-Origin: <origin> | *
 ```
 
-`Access-Control-Allow-Origin` specifies either a single origin which tells browsers to allow that origin to access the resource; or else — for requests **without** credentials — the "`*`" wildcard tells browsers to allow any origin to access the resource.
+`Access-Control-Allow-Origin` specifies either a single origin which tells browsers to allow that origin to access the resource; or else — for requests **without** credentials — the `*` wildcard tells browsers to allow any origin to access the resource.
 
 For example, to allow code from the origin `https://mozilla.org` to access the resource, you can specify:
 
@@ -387,7 +389,7 @@ Access-Control-Allow-Origin: https://mozilla.org
 Vary: Origin
 ```
 
-If the server specifies a single origin (that may dynamically change based on the requesting origin as part of an allowlist) rather than the "`*`" wildcard, then the server should also include `Origin` in the {{HTTPHeader("Vary")}} response header to indicate to clients that server responses will differ based on the value of the {{HTTPHeader("Origin")}} request header.
+If the server specifies a single origin (that may dynamically change based on the requesting origin as part of an allowlist) rather than the `*` wildcard, then the server should also include `Origin` in the {{HTTPHeader("Vary")}} response header to indicate to clients that server responses will differ based on the value of the {{HTTPHeader("Origin")}} request header.
 
 ### Access-Control-Expose-Headers
 
@@ -457,7 +459,8 @@ Origin: <origin>
 
 The origin is a URL indicating the server from which the request is initiated. It does not include any path information, only the server name.
 
-> **Note:** The `origin` value can be `null`.
+> [!NOTE]
+> The `origin` value can be `null`.
 
 Note that in any access control request, the {{HTTPHeader("Origin")}} header is **always** sent.
 

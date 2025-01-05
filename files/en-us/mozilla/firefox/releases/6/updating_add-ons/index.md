@@ -14,7 +14,8 @@ If your add-on is distributed on [addons.mozilla.org](https://addons.mozilla.org
 
 So you should start by visiting AMO and looking to see if your add-on needs any work done at all.
 
-> **Note:** You should still test your add-on on Firefox 6, even if it's been automatically upgraded. There are edge cases that may not be automatically detected.
+> [!NOTE]
+> You should still test your add-on on Firefox 6, even if it's been automatically upgraded. There are edge cases that may not be automatically detected.
 
 Once you've confirmed that you need to make changes, come on back to this page and read on.
 

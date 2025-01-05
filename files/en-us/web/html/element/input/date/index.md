@@ -25,7 +25,8 @@ You can set a default value for the input with a date inside the [`value`](/en-U
 
 {{EmbedLiveSample('Value', 600, 40)}}
 
-> **Note:** The displayed date format will differ from the actual `value` — the displayed date is formatted _based on the locale of the user's browser_, but the parsed `value` is always formatted `yyyy-mm-dd`.
+> [!NOTE]
+> The displayed date format will differ from the actual `value` — the displayed date is formatted _based on the locale of the user's browser_, but the parsed `value` is always formatted `yyyy-mm-dd`.
 
 You can get and set the date value in JavaScript with the {{domxref("HTMLInputElement")}} `value` and `valueAsNumber` properties. For example:
 
@@ -60,11 +61,13 @@ The `step` attribute is a number that specifies the granularity that the value m
 
 A string value of `any` means that no stepping is implied, and any value is allowed (barring other constraints, such as [`min`](#min) and [`max`](#max)).
 
-> **Note:** When the data entered by the user doesn't adhere to the stepping configuration, the {{Glossary("user agent")}} may round to the nearest valid value, preferring numbers in the positive direction when there are two equally close options.
+> [!NOTE]
+> When the data entered by the user doesn't adhere to the stepping configuration, the {{Glossary("user agent")}} may round to the nearest valid value, preferring numbers in the positive direction when there are two equally close options.
 
 For `date` inputs, the value of `step` is given in days; and is treated as a number of milliseconds equal to 86,400,000 times the `step` value (the underlying numeric value is in milliseconds). The default value of `step` is 1, indicating 1 day.
 
-> **Note:** Specifying `any` as the value for `step` has the same effect as `1` for `date` inputs.
+> [!NOTE]
+> Specifying `any` as the value for `step` has the same effect as `1` for `date` inputs.
 
 ## Using date inputs
 
@@ -74,7 +77,7 @@ In this section, we'll look at basic and then more complex uses of `<input type=
 
 ### Basic uses of date
 
-The simplest use of `<input type="date">` involves one `<input>` combined with its {{htmlelement("label")}}, as seen below:
+The most basic use of `<input type="date">` involves one `<input>` combined with its {{htmlelement("label")}}, as seen below:
 
 ```html
 <form action="https://example.com">
@@ -168,7 +171,8 @@ input:valid + span::after {
 }
 ```
 
-> **Warning:** Client-side form validation _is not a substitute_ for validating on the server. It's easy for someone to modify the HTML, or bypass your HTML entirely and submit the data directly to your server. If your server fails to validate the received data, disaster could strike with data that is badly-formatted, too large, of the wrong type, etc.
+> [!WARNING]
+> Client-side form validation _is not a substitute_ for validating on the server. It's easy for someone to modify the HTML, or bypass your HTML entirely and submit the data directly to your server. If your server fails to validate the received data, disaster could strike with data that is badly-formatted, too large, of the wrong type, etc.
 
 ## Examples
 
@@ -255,7 +259,7 @@ input:valid + span::after {
     </tr>
     <tr>
       <td><strong>Implicit ARIA Role</strong></td>
-      <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"><code>no corresponding role</code></a></td>
+      <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">no corresponding role</a></td>
     </tr>
   </tbody>
 </table>
@@ -271,6 +275,5 @@ input:valid + span::after {
 ## See also
 
 - The generic {{HTMLElement("input")}} element and the interface used to manipulate it, {{domxref("HTMLInputElement")}}
-- [Date and Time picker tutorial](/en-US/docs/Learn/Forms/HTML5_input_types#date_and_time_pickers)
+- [Date and Time picker tutorial](/en-US/docs/Learn_web_development/Extensions/Forms/HTML5_input_types#date_and_time_pickers)
 - [Date and time formats used in HTML](/en-US/docs/Web/HTML/Date_and_time_formats)
-- [Compatibility of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

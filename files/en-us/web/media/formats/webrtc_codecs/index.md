@@ -22,7 +22,7 @@ Before looking at codec-specific capabilities and requirements, there are a few 
 
 Unless the {{Glossary("SDP")}} specifically signals otherwise, the web browser receiving a WebRTC video stream must be able to handle video at 20 FPS at a minimum resolution of 320 pixels wide by 240 pixels tall. It's encouraged that video be encoded at a frame rate and size no lower than that, since that's essentially the lower bound of what WebRTC generally is expected to handle.
 
-SDP supports a codec-independent way to specify preferred video resolutions ({{RFC(6236)}}. This is done by sending an `a=imageattr` SDP attribute to indicate the maximum resolution that is acceptable. The sender is not required to support this mechanism, however, so you have to be prepared to receive media at a different resolution than you requested. Beyond this simple maximum resolution request, specific codecs may offer further ways to ask for specific media configurations.
+SDP supports a codec-independent way to specify preferred video resolutions ({{RFC(6236)}}. This is done by sending an `a=image-attr` SDP attribute to indicate the maximum resolution that is acceptable. The sender is not required to support this mechanism, however, so you have to be prepared to receive media at a different resolution than you requested. Beyond this simple maximum resolution request, specific codecs may offer further ways to ask for specific media configurations.
 
 ## Supported video codecs
 
@@ -72,7 +72,8 @@ For details on WebRTC-related considerations for each codec, see the sub-section
 
 Complete details of what video codecs and configurations WebRTC is required to support can be found in {{RFC(7742, "WebRTC Video Processing and Codec Requirements")}}. It's worth noting that the RFC covers a variety of video-related requirements, including color spaces (sRGB is the preferred, but not required, default color space), recommendations for webcam processing features (automatic focus, automatic white balance, automatic light level), and so on.
 
-> **Note:** These requirements are for web browsers and other fully-WebRTC compliant products. Non-WebRTC products that are able to communicate with WebRTC to some extent may or may not support these codecs, although they're encouraged to by the specification documents.
+> [!NOTE]
+> These requirements are for web browsers and other fully-WebRTC compliant products. Non-WebRTC products that are able to communicate with WebRTC to some extent may or may not support these codecs, although they're encouraged to by the specification documents.
 
 In addition to the mandatory codecs, some browsers support additional codecs as well. Those are listed in the following table.
 
@@ -205,7 +206,8 @@ See below for more details about any WebRTC-specific considerations that exist f
 
 It's useful to note that {{RFC(7874)}} defines more than a list of audio codecs that a WebRTC-compliant browser must support; it also provides recommendations and requirements for special audio features such as echo cancellation, noise reduction, and audio leveling.
 
-> **Note:** The list above indicates the minimum required set of codecs that all WebRTC-compatible endpoints are required to implement. A given browser may also support other codecs; however, cross-platform and cross-device compatibility may be at risk if you use other codecs without carefully ensuring that support exists in all browsers your users might choose.
+> [!NOTE]
+> The list above indicates the minimum required set of codecs that all WebRTC-compatible endpoints are required to implement. A given browser may also support other codecs; however, cross-platform and cross-device compatibility may be at risk if you use other codecs without carefully ensuring that support exists in all browsers your users might choose.
 
 In addition to the mandatory audio codecs, some browsers support additional codecs as well. Those are listed in the following table.
 
@@ -320,9 +322,10 @@ We then call that sender's {{domxref("RTCRtpSender.getParameters", "getParameter
 
 If no video track is found, we set `codecList` to `null`.
 
-On return, then, `codecList` is either `null` to indicate that no video tracks were found or it's an array of {{domxref("RTCRtpCodecParameters")}} objects, each describing one permitted codec configuration. Of special importance in these objects: the {{domxref("RTCRtpCodecParameters.payloadType", "payloadType")}} property, which is a one-byte value which uniquely identifies the described configuration.
+On return, then, `codecList` is either `null` to indicate that no video tracks were found or it's an array of {{domxref("RTCCodecStats")}} objects, each describing one permitted codec configuration. Of special importance in these objects: the {{domxref("RTCCodecStats.payloadType", "payloadType")}} property, which is a one-byte value which uniquely identifies the described configuration.
 
-> **Note:** The two methods for obtaining lists of codecs shown here use different output types in their codec lists. Be aware of this when using the results.
+> [!NOTE]
+> The two methods for obtaining lists of codecs shown here use different output types in their codec lists. Be aware of this when using the results.
 
 ### Customizing the codec list
 
@@ -442,7 +445,8 @@ There are a number of factors that come into play when deciding upon a video cod
 
 Before choosing a video codec, make sure you're aware of any licensing requirements around the codec you select; you can find information about possible licensing concerns in our main [guide to video codecs used on the web](/en-US/docs/Web/Media/Formats/Video_codecs). Of the two mandatory codecs for video—VP8 and AVC/H.264—only VP8 is completely free of licensing requirements. If you select AVC, make sure you're; aware of any potential fees you may need to pay; that said, the patent holders have generally said that most typical website developers shouldn't need to worry about paying the license fees, which are typically focused more on the developers of the encoding and decoding software.
 
-> **Warning:** The information here does _not_ constitute legal advice! Be sure to confirm your exposure to liability before making any final decisions where potential exists for licensing issues.
+> [!WARNING]
+> The information here does _not_ constitute legal advice! Be sure to confirm your exposure to liability before making any final decisions where potential exists for licensing issues.
 
 #### Power needs and battery life
 

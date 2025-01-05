@@ -17,15 +17,15 @@ Valid `<display-box>` values:
 
   - : These elements don't produce a specific box by themselves. They are replaced by their pseudo-box and their child boxes. Please note that the CSS Display Level 3 spec defines how the `contents` value should affect "unusual elements" — elements that aren't rendered purely by CSS box concepts such as replaced elements. See [Appendix B: Effects of display: contents on Unusual Elements](https://drafts.csswg.org/css-display/#unbox) for more details.
 
-    _Due to a bug in browsers this will currently remove the element from the accessibility tree — screen readers will not look at what's inside. See the [Accessibility concerns](#accessibility_concerns) section below for more details._
+    _Due to a bug in browsers this will currently remove the element from the accessibility tree — screen readers will not look at what's inside. See the [Accessibility](#accessibility) section below for more details._
 
 - `none`
   - : Turns off the display of an element so that it has no effect on layout (the document is rendered as though the element did not exist). All descendant elements also have their display turned off.
     To have an element take up the space that it would normally take, but without actually rendering anything, use the {{CSSxRef("visibility")}} property instead.
 
-## Accessibility concerns
+## Accessibility
 
-Current implementations in most browsers will remove from the [accessibility tree](/en-US/docs/Learn/Accessibility/What_is_accessibility#accessibility_apis) any element with a `display` value of `contents`. This will cause the element — and in some browser versions, its descendant elements — to no longer be announced by screen reading technology. This is incorrect behavior according to the [CSSWG specification](https://drafts.csswg.org/css-display/#the-display-properties).
+Current implementations in most browsers will remove from the [accessibility tree](/en-US/docs/Learn_web_development/Core/Accessibility/What_is_accessibility#accessibility_apis) any element with a `display` value of `contents`. This will cause the element — and in some browser versions, its descendant elements — to no longer be announced by screen reading technology. This is incorrect behavior according to the [CSSWG specification](https://drafts.csswg.org/css-display/#the-display-properties).
 
 - [More accessible markup with display: contents | Hidde de Vries](https://hidde.blog/more-accessible-markup-with-display-contents/)
 - [Display: Contents Is Not a CSS Reset | Adrian Roselli](https://adrianroselli.com/2018/05/display-contents-is-not-a-css-reset.html)
@@ -108,4 +108,4 @@ In this example the outer {{htmlelement("div")}} has a 2-pixel red border and a 
   - {{CSSxRef("&lt;display-legacy&gt;")}}
 
 - [Display: Contents Is Not a CSS Reset | Adrian Roselli](https://adrianroselli.com/2018/05/display-contents-is-not-a-css-reset.html)
-- [More accessible markup with display: contents — hiddedevries.nl](https://hidde.blog/more-accessible-markup-with-display-contents/)
+- [More accessible markup with display: contents](https://hidde.blog/more-accessible-markup-with-display-contents/) by Hidde de Vries (2018)

@@ -5,11 +5,11 @@ page-type: web-api-interface
 browser-compat: api.Response
 ---
 
-{{APIRef("Fetch API")}}
+{{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
 The **`Response`** interface of the [Fetch API](/en-US/docs/Web/API/Fetch_API) represents the response to a request.
 
-You can create a new `Response` object using the {{domxref("Response.Response", "Response()")}} constructor, but you are more likely to encounter a `Response` object being returned as the result of another API operation—for example, a service worker {{domxref("FetchEvent.respondWith")}}, or a simple {{domxref("fetch()")}}.
+You can create a new `Response` object using the {{domxref("Response.Response", "Response()")}} constructor, but you are more likely to encounter a `Response` object being returned as the result of another API operation—for example, a service worker {{domxref("FetchEvent.respondWith")}}, or a simple {{domxref("Window/fetch", "fetch()")}}.
 
 ## Constructor
 

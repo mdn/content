@@ -60,7 +60,7 @@ console.log("Failed to open the specified link");
 - {{domxref("console/timeLog_static", "console.timeLog()")}}
   - : Logs the value of the specified [timer](#timers) to the console.
 - {{domxref("console/timeStamp_static", "console.timeStamp()")}} {{Non-standard_inline}}
-  - : Adds a marker to the browser performance tool's timeline ([Chrome](https://developer.chrome.com/docs/devtools/evaluate-performance/reference/) or [Firefox](https://profiler.firefox.com/docs/#/./guide-ui-tour-timeline)).
+  - : Adds a marker to the browser performance tool's timeline ([Chrome](https://developer.chrome.com/docs/devtools/performance/reference) or [Firefox](https://profiler.firefox.com/docs/#/./guide-ui-tour-timeline)).
 - {{domxref("console/trace_static", "console.trace()")}}
   - : Outputs a [stack trace](#stack_traces).
 - {{domxref("console/warn_static", "console.warn()")}}
@@ -112,7 +112,7 @@ If you are going to mutate your object and you want to prevent the logged inform
 console.log(JSON.parse(JSON.stringify(obj)));
 ```
 
-There are other alternatives that work in browsers, such as [`structuredClone()`](/en-US/docs/Web/API/structuredClone), which are more effective at cloning different types of objects.
+There are other alternatives that work in browsers, such as {{DOMxRef("Window.structuredClone", "structuredClone()")}}, which are more effective at cloning different types of objects.
 
 #### Outputting multiple objects
 
@@ -147,7 +147,7 @@ The first parameter to the logging methods can be a string containing zero or mo
 - `%c`
   - : Applies CSS style rules to all following text. See [Styling console output](#styling_console_output).
 
-Some browsers may implement additional format specifiers. For example, Safari and Firefox support the C-style precision formating `%.<precision>f`. For example `console.log("Foo %.2f", 1.1)` will output the number to 2 decimal places: `Foo 1.10`, while `console.log("Foo %.2d", 1.1)` will output the number as two significant figures with a leading 0: `Foo 01`.
+Some browsers may implement additional format specifiers. For example, Safari and Firefox support the C-style precision formatting `%.<precision>f`. For example `console.log("Foo %.2f", 1.1)` will output the number to 2 decimal places: `Foo 1.10`, while `console.log("Foo %.2d", 1.1)` will output the number as two significant figures with a leading 0: `Foo 01`.
 
 Each of these pulls the next argument after the format string off the parameter list. For example:
 
@@ -184,6 +184,8 @@ The text before the directive will not be affected, but the text after the direc
 
 You may use `%c` multiple times:
 
+<!-- cSpell:ignore corange cred -->
+
 ```js
 console.log(
   "Multiple styles: %cred %corange",
@@ -214,9 +216,11 @@ The properties usable along with the `%c` syntax are as follows (at least, in Fi
 - {{cssxref("word-spacing")}} and {{cssxref("word-break")}}
 - {{cssxref("writing-mode")}}
 
-> **Note:** Each console message behaves like an inline element by default. If you want properties such as `padding`, `margin`, and so on to have any effect, you can set the `display` property to `display: inline-block`.
+> [!NOTE]
+> Each console message behaves like an inline element by default. If you want properties such as `padding`, `margin`, and so on to have any effect, you can set the `display` property to `display: inline-block`.
 
-> **Note:** In order to support both light and dark color schemes, {{cssxref("color_value/light-dark")}} can be used when specifying colors; for example: `color: light-dark(#D00000, #FF4040);`
+> [!NOTE]
+> In order to support both light and dark color schemes, {{cssxref("color_value/light-dark")}} can be used when specifying colors; for example: `color: light-dark(#D00000, #FF4040);`
 
 ### Using groups in the console
 
@@ -294,5 +298,5 @@ The output in the console looks something like this:
 - [Web console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) — how the Web console in Firefox handles console API calls
 - [about:debugging](https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/index.html) — how to see console output when the debugging target is a mobile device
 - [Google Chrome DevTools](https://developer.chrome.com/docs/devtools/console/api/)
-- [Microsoft Edge DevTools](https://docs.microsoft.com/archive/microsoft-edge/legacy/developer/)
+- [Microsoft Edge DevTools](https://learn.microsoft.com/en-us/archive/microsoft-edge/legacy/developer/)
 - [Safari Web Inspector](https://developer.apple.com/library/archive/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Console/Console.html)

@@ -6,13 +6,14 @@ page-type: web-api-instance-property
 browser-compat: api.Performance.timeOrigin
 ---
 
-{{APIRef("Performance API")}}
+{{APIRef("Performance API")}}{{AvailableInWorkers}}
 
 The **`timeOrigin`** read-only property of the {{domxref("Performance")}} interface returns the high resolution timestamp that is used as the baseline for performance-related timestamps.
 
 In Window contexts, this value represents the time when navigation has started. In {{domxref("Worker")}} and {{domxref("ServiceWorker")}} contexts, this value represents the time when the worker is run. You can use this property to synchronize the time origins between the contexts (see example below).
 
-> **Note:** The value of `performance.timeOrigin` may differ from the value returned by {{jsxref("Date.now()")}} executed at the time origin, because `Date.now()` may have been impacted by system and user clock adjustments, clock skew, etc. The `timeOrigin` property is a [monotonic clock](https://w3c.github.io/hr-time/#dfn-monotonic-clock) which current time never decreases and which isn't subject to these adjustments.
+> [!NOTE]
+> The value of `performance.timeOrigin` may differ from the value returned by {{jsxref("Date.now()")}} executed at the time origin, because `Date.now()` may have been impacted by system and user clock adjustments, clock skew, etc. The `timeOrigin` property is a [monotonic clock](https://w3c.github.io/hr-time/#dfn-monotonic-clock) which current time never decreases and which isn't subject to these adjustments.
 
 ## Value
 

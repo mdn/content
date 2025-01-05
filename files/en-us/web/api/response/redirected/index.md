@@ -6,12 +6,13 @@ page-type: web-api-instance-property
 browser-compat: api.Response.redirected
 ---
 
-{{APIRef("Fetch API")}}
+{{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
-The read-only **`redirected`** property of the {{domxref("Response")}} interface indicates whether or not the response is the result of a request you made which was redirected.
+The **`redirected`** read-only property of the {{domxref("Response")}} interface indicates whether or not the response is the result of a request you made which was redirected.
 
-> **Note:** Relying on redirected to filter out redirects makes it easy for a forged redirect to prevent your content from working as expected.
-> Instead, you should do the filtering when you call {{domxref("fetch()")}}.
+> [!NOTE]
+> Relying on redirected to filter out redirects makes it easy for a forged redirect to prevent your content from working as expected.
+> Instead, you should do the filtering when you call {{domxref("Window/fetch", "fetch()")}}.
 > See the example [Disallowing redirects](#disallowing_redirects), which shows this being done.
 
 ## Value
@@ -45,7 +46,7 @@ fetch("awesome-picture.jpg")
 
 ### Disallowing redirects
 
-Because using redirected to manually filter out redirects can allow forgery of redirects, you should instead set the redirect mode to `"error"` in the `init` parameter when calling {{domxref("fetch()")}}, like this:
+Because using redirected to manually filter out redirects can allow forgery of redirects, you should instead set the redirect mode to `"error"` in the `init` parameter when calling {{domxref("Window/fetch", "fetch()")}}, like this:
 
 ```js
 fetch("awesome-picture.jpg", { redirect: "error" })

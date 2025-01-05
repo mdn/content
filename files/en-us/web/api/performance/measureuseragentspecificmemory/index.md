@@ -8,17 +8,9 @@ status:
 browser-compat: api.Performance.measureUserAgentSpecificMemory
 ---
 
-{{APIRef("Performance API")}} {{SeeCompatTable}}
+{{APIRef("Performance API")}}{{AvailableInWorkers}}{{SeeCompatTable}}
 
 The **`measureUserAgentSpecificMemory()`** method is used to estimate the memory usage of a web application including all its iframes and workers.
-
-## Description
-
-The browser automatically allocates memory when objects are created and frees it when they are not reachable anymore (garbage collection). This garbage collection (GC) is an approximation since the general problem of determining whether or not a specific piece of memory is still needed is impossible (see also [JavaScript Memory Management](/en-US/docs/Web/JavaScript/Memory_management)). Developers need to make sure that objects are garbage collected, memory isn't leaked, and memory usage doesn't grow unnecessarily over time leading to slow and unresponsive web applications. Memory leaks are typically introduced by forgetting to unregister an event listener, not closing a worker, accumulating objects in arrays, and more.
-
-The `measureUserAgentSpecificMemory()` API aggregates memory usage data to help you find memory leaks. It can be used for memory regression detection or for A/B testing features to evaluate their memory impact. Rather than make single calls to this method, it's better to make periodic calls to track how memory usage changes over the duration of a session.
-
-The `byte` values this API returns aren't comparable across browsers or between different versions of the same browser as these are highly implementation dependent. Also, how `breakdown` and `attribution` arrays are provided is up to the browser as well. It is best to not hardcode any assumptions about this data. This API is rather meant to be called periodically (with a randomized interval) to aggregate data and analyze the difference between the samples.
 
 ## Syntax
 
@@ -97,23 +89,21 @@ An example return value looks like this:
 ### Exceptions
 
 - `SecurityError` {{domxref("DOMException")}}
-  - : Thrown if the security requirements for preventing cross-origin information leaks aren't fulfilled.
+  - : Thrown if the [security requirements](#security_requirements) for preventing cross-origin information leaks aren't fulfilled.
+
+## Description
+
+The browser automatically allocates memory when objects are created and frees it when they are not reachable anymore (garbage collection). This garbage collection (GC) is an approximation since the general problem of determining whether or not a specific piece of memory is still needed is impossible (see also [JavaScript Memory Management](/en-US/docs/Web/JavaScript/Memory_management)). Developers need to make sure that objects are garbage collected, memory isn't leaked, and memory usage doesn't grow unnecessarily over time leading to slow and unresponsive web applications. Memory leaks are typically introduced by forgetting to unregister an event listener, not closing a worker, accumulating objects in arrays, and more.
+
+The `measureUserAgentSpecificMemory()` API aggregates memory usage data to help you find memory leaks. It can be used for memory regression detection or for A/B testing features to evaluate their memory impact. Rather than make single calls to this method, it's better to make periodic calls to track how memory usage changes over the duration of a session.
+
+The `byte` values this API returns aren't comparable across browsers or between different versions of the same browser as these are highly implementation dependent. Also, how `breakdown` and `attribution` arrays are provided is up to the browser as well. It is best to not hardcode any assumptions about this data. This API is rather meant to be called periodically (with a randomized interval) to aggregate data and analyze the difference between the samples.
 
 ## Security requirements
 
-Your site needs to be in a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
+To use this method your document must be in a [secure context](/en-US/docs/Web/Security/Secure_Contexts) and {{domxref("Window.crossOriginIsolated","cross-origin isolated","","nocode")}}.
 
-Two headers need to be set to cross-origin isolate your site:
-
-- [`Cross-Origin-Opener-Policy`](/en-US/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy) with `same-origin` as value (protects your origin from attackers)
-- [`Cross-Origin-Embedder-Policy`](/en-US/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy) with `require-corp` or `credentialless` as value (protects victims from your origin)
-
-```http
-Cross-Origin-Opener-Policy: same-origin
-Cross-Origin-Embedder-Policy: require-corp
-```
-
-To check if cross origin isolation has been successful, you can test against the {{domxref("Window.crossOriginIsolated")}} property or the {{domxref("WorkerGlobalScope.crossOriginIsolated")}} property available to window and worker contexts:
+You can use the {{domxref("Window.crossOriginIsolated")}} and {{domxref("WorkerGlobalScope.crossOriginIsolated")}} properties to check if the document is cross-origin isolated:
 
 ```js
 if (crossOriginIsolated) {
@@ -155,5 +145,5 @@ if (crossOriginIsolated) {
 
 ## See also
 
-- {{domxref("setTimeout()")}}
+- {{domxref("Window.setTimeout", "setTimeout()")}}
 - [Monitor your web page's total memory usage with measureUserAgentSpecificMemory() - web.dev](https://web.dev/articles/monitor-total-page-memory-usage)

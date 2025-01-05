@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPUDevice.createBindGroup
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`createBindGroup()`** method of the
 {{domxref("GPUDevice")}} interface creates a {{domxref("GPUBindGroup")}} based on a {{domxref("GPUBindGroupLayout")}} that defines a set of resources to be bound together in a group and how those resources are used in shader stages.
@@ -85,7 +85,8 @@ The following criteria must be met when calling **`createBindGroup()`**, otherwi
 
 ## Examples
 
-> **Note:** The [WebGPU samples](https://webgpu.github.io/webgpu-samples/) feature many more examples.
+> [!NOTE]
+> The [WebGPU samples](https://webgpu.github.io/webgpu-samples/) feature many more examples.
 
 ### Basic example
 

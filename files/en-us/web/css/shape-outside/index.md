@@ -7,7 +7,7 @@ browser-compat: css.properties.shape-outside
 
 {{CSSRef}}
 
-The **`shape-outside`** [CSS](/en-US/docs/Web/CSS) property defines a shape—which may be non-rectangular—around which adjacent inline content should wrap. By default, inline content wraps around its margin box; `shape-outside` provides a way to customize this wrapping, making it possible to wrap text around complex objects rather than simple boxes.
+The **`shape-outside`** [CSS](/en-US/docs/Web/CSS) property defines a shape—which may be non-rectangular—around which adjacent inline content should wrap. By default, inline content wraps around its margin box; `shape-outside` provides a way to customize this wrapping, making it possible to wrap text around complex objects rather than rectangular boxes.
 
 {{EmbedInteractiveExample("pages/css/shape-outside.html")}}
 
@@ -26,7 +26,10 @@ shape-outside: circle();
 shape-outside: ellipse();
 shape-outside: inset(10px 10px 10px 10px);
 shape-outside: polygon(10px 10px, 20px 20px, 30px 30px);
-shape-outside: path("M100,0 A100,100 0 1,1 100,200 A100,100 0 1,1 100,0");
+
+/* Shape box with basic shape */
+shape-outside: circle() border-box;
+shape-outside: margin-box ellipse();
 
 /* <url> value */
 shape-outside: url(image.png);
@@ -62,11 +65,12 @@ The `shape-outside` property is specified using the values from the list below, 
       - : Defines the shape enclosed by the outside content edge. Each corner radius of this box is the larger of `0` or `border-radius - border-width - padding`.
 
 - {{cssxref("&lt;basic-shape&gt;")}}
-  - : The float area is computed based on the shape created by of one of {{cssxref("basic-shape/inset","inset()")}}, {{cssxref("basic-shape/circle","circle()")}}, {{cssxref("basic-shape/ellipse","ellipse()")}}, {{cssxref("basic-shape/polygon","polygon()")}} or, as added in the level 2 specification, `path()`. If a `<shape-box>` is also supplied, it defines the reference box for the `<basic-shape>` function. Otherwise, the reference box defaults to `margin-box`.
+  - : The float area is computed based on the shape created by an {{cssxref("basic-shape/inset","inset()")}}, {{cssxref("basic-shape/circle","circle()")}}, {{cssxref("basic-shape/ellipse","ellipse()")}}, or {{cssxref("basic-shape/polygon","polygon()")}} function; other `<basic-shape>` functions are invalid. If a `<shape-box>` is also supplied, it defines the reference box for the `<basic-shape>` function. Otherwise, the reference box defaults to `margin-box`.
 - {{cssxref("&lt;image&gt;")}}
   - : The float area is extracted and computed based on the alpha channel of the specified {{cssxref("&lt;image&gt;")}} as defined by {{cssxref("shape-image-threshold")}}.
 
-> **Note:** If the image is invalid, the effect is as if the keyword `none` had been specified. Additionally, the image must be served with {{Glossary("CORS")}} headers allowing its use.
+> [!NOTE]
+> If the image is invalid, the effect is as if the keyword `none` had been specified. Additionally, the image must be served with {{Glossary("CORS")}} headers allowing its use.
 
 ## Formal definition
 

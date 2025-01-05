@@ -18,7 +18,8 @@ Originally you could only perform memory operations on a single memory in the Wa
 More recent implementations allow WebAssembly [memory instructions](/en-US/docs/WebAssembly/Reference/Memory) to operate on a specified memory.
 For more information see [Multiple memories](/en-US/docs/WebAssembly/Understanding_the_text_format#multiple_memories) in _Understanding WebAssembly text format_.
 
-> **Note:** WebAssembly memory is always in little-endian format, regardless of the platform it's run on. Therefore, for portability, you should read and write multi-byte values in JavaScript using {{jsxref("DataView")}}.
+> [!NOTE]
+> WebAssembly memory is always in little-endian format, regardless of the platform it's run on. Therefore, for portability, you should read and write multi-byte values in JavaScript using {{jsxref("DataView")}}.
 
 ## Constructor
 

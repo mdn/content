@@ -111,7 +111,8 @@ This is a pretty simple example showing how to manipulate video frames using a c
 
 You can achieve the same result by applying the {{cssxref("filter-function/grayscale", "grayscale()")}} CSS function to the source `<video>` element.
 
-> **Note:** Due to potential security issues if your video is on a different domain than your code, you'll need to enable [CORS (Cross Origin Resource Sharing)](/en-US/docs/Web/HTTP/CORS) on your video server.
+> [!NOTE]
+> Due to potential security issues if your video is on a different domain than your code, you'll need to enable [CORS (Cross Origin Resource Sharing)](/en-US/docs/Web/HTTP/CORS) on your video server.
 
 ### Video and WebGL
 
@@ -119,7 +120,8 @@ You can achieve the same result by applying the {{cssxref("filter-function/grays
 
 {{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample8/index.html', 670, 510) }}
 
-> **Note:** You can find the [source code of this demo on GitHub](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample8) ([see it live](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample8/) also).
+> [!NOTE]
+> You can find the [source code of this demo on GitHub](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample8) ([see it live](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample8/) also).
 
 ### Playback rate
 
@@ -189,7 +191,8 @@ window.addEventListener("load", setPlaybackRate);
 
 {{ EmbedLiveSample('Editable_example', 700, 450) }}
 
-> **Note:** Try the [playbackRate example](https://jsbin.com/qomuvefu/2/edit) live.
+> [!NOTE]
+> Try the [playbackRate example](https://jsbin.com/qomuvefu/2/edit) live.
 
 ## Audio manipulation
 
@@ -213,7 +216,7 @@ The Web Audio API has a lot of different filter/effects that can be applied to a
 #### HTML
 
 ```html
-<video id="my-video" controls src="myvideo.mp4" type="video/mp4"></video>
+<video id="my-video" controls src="my-video.mp4" type="video/mp4"></video>
 ```
 
 #### JavaScript
@@ -288,7 +291,8 @@ window.addEventListener("load", setFilter);
 
 {{ EmbedLiveSample('Editable_example_2', 700, 450) }}
 
-> **Note:** unless you have [CORS](/en-US/docs/Web/HTTP/CORS) enabled, to avoid security issues your video should be on the same domain as your code.
+> [!NOTE]
+> Unless you have [CORS](/en-US/docs/Web/HTTP/CORS) enabled, to avoid security issues your video should be on the same domain as your code.
 
 #### Common audio filters
 
@@ -303,7 +307,8 @@ These are some common types of audio filter you can apply:
 - Notch: Allows all frequencies through, except for a set of frequencies.
 - All Pass: Allows all frequencies through, but changes the phase relationship between the various frequencies.
 
-> **Note:** See {{domxref("BiquadFilterNode")}} for more information.
+> [!NOTE]
+> See {{domxref("BiquadFilterNode")}} for more information.
 
 ### Convolutions and impulses
 
@@ -319,7 +324,7 @@ source.connect(convolver);
 convolver.connect(context.destination);
 ```
 
-See this [Codepen](https://codepen.io/a2sheppy/pen/JjPgVYL) for an applied (but very, very silly; like, little kids will giggle kind of silly) example.
+See this [CodePen](https://codepen.io/a2sheppy/pen/JjPgVYL) for an applied (but very, very silly; like, little kids will giggle kind of silly) example.
 
 ### Spatial audio
 
@@ -341,7 +346,8 @@ source.start(0);
 context.listener.setPosition(0, 0, 0);
 ```
 
-> **Note:** You can find an [example on our GitHub repository](https://github.com/mdn/webaudio-examples/tree/main/panner-node) ([see it live](https://mdn.github.io/webaudio-examples/panner-node/) also).
+> [!NOTE]
+> You can find an [example on our GitHub repository](https://github.com/mdn/webaudio-examples/tree/main/panner-node) ([see it live](https://mdn.github.io/webaudio-examples/panner-node/) also).
 
 ### JavaScript codecs
 
@@ -356,7 +362,8 @@ Libraries currently exist for the following formats:
 - Opus: [Opus.js](https://github.com/audiocogs/opus.js)
 - Vorbis: [vorbis.js](https://github.com/audiocogs/vorbis.js)
 
-> **Note:** At Audiocogs, you can [Try out a few demos](http://audiocogs.org/codecs/); Audiocogs also provides a framework, [Aurora.js](http://audiocogs.org/codecs/), which is intended to help you author your own codecs in JavaScript.
+> [!NOTE]
+> At Audiocogs, you can [Try out a few demos](http://audiocogs.org/codecs/); Audiocogs also provides a framework, [Aurora.js](http://audiocogs.org/codecs/), which is intended to help you author your own codecs in JavaScript.
 
 ## Examples
 
@@ -372,7 +379,7 @@ Libraries currently exist for the following formats:
 - [HTML playbackRate explained](/en-US/docs/Web/Media/Audio_and_video_delivery/WebAudio_playbackRate_explained)
 - [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
 - [Web audio spatialization basics](/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
-- [Using Video frames as a WebGL Texture](/en-US/docs/Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL#using_the_video_frames_as_a_texture) (You can also the [THREE.js](https://threejs.org) WebGL library (and others) to [achieve this effect](https://stemkoski.github.io/Three.js/Video.html))
+- [Using Video frames as a WebGL Texture](/en-US/docs/Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL#using_the_video_frames_as_a_texture) (You can also the [THREE.js](https://threejs.org/) WebGL library (and others) to [achieve this effect](https://stemkoski.github.io/Three.js/Video.html))
 - [Animating Textures in WebGL](/en-US/docs/Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL)
 - [Developing Game Audio with the Web Audio API (Room effects and filters) (2012)](https://web.dev/articles/webaudio-games#room_effects_and_filters)
 

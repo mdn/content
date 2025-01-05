@@ -188,9 +188,9 @@ A few predefined types are supported by Mozilla (Firefox) with a `-moz-` prefix.
 
 See the [compatibility table](#browser_compatibility) to check which browsers support which extension.
 
-## Accessibility concerns
+## Accessibility
 
-Safari will not recognize an ordered or unordered list as a list in the accessibility tree if it has a `list-style-type` value of `none`. This can be resolved by adding `role="list"` to the list's opening tag. To learn more about this and potential workarounds, see [`list-style`](/en-US/docs/Web/CSS/list-style#accessibility_concerns).
+Safari will not recognize an ordered or unordered list as a list in the accessibility tree if it has a `list-style-type` value of `none`. This can be resolved by adding `role="list"` to the list's opening tag. To learn more about this and potential workarounds, see [`list-style`](/en-US/docs/Web/CSS/list-style#accessibility).
 
 ## Formal definition
 
@@ -690,8 +690,9 @@ input {
 
 ```js
 const container = document.querySelector(".container");
+const list = document.querySelector("ol");
+
 container.addEventListener("change", (event) => {
-  const list = document.querySelector("ol");
   list.setAttribute("style", `list-style-type: ${event.target.value}`);
 });
 ```

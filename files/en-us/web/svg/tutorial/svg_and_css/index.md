@@ -10,9 +10,10 @@ page-type: guide
 
 This page illustrates the application of CSS to the specialized language for creating graphics: [SVG](/en-US/docs/Web/SVG).
 
-Below you'll create a simple demonstration that runs in your SVG-enabled browser.
+Below you'll create a demonstration that runs in a browser.
 
-> **Note:** Elements referenced by {{SVGElement("use")}} elements inherit the styles from that element. So to apply different styles to them you should use [CSS custom properties](/en-US/docs/Web/CSS/CSS_cascading_variables).
+> [!NOTE]
+> Elements referenced by {{SVGElement("use")}} elements inherit the styles from that element. So to apply different styles to them you should use [CSS custom properties](/en-US/docs/Web/CSS/CSS_cascading_variables).
 
 ## Example
 

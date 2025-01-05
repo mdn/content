@@ -54,11 +54,13 @@ Date.parse("2019-01-01T00:00:00");
 
 ### Non-standard date strings
 
-> **Note:** This section contains implementation-specific behavior that can be inconsistent across implementations.
+> [!NOTE]
+> This section contains implementation-specific behavior that can be inconsistent across implementations.
 
 Implementations usually default to the local time zone when the date string is non-standard. For consistency, we will assume that the code uses the UTC timezone.
 
-> **Note:** The local time zone offset comes from the system setting of the device and is then applied to the date being parsed. [Daylight Saving Time (DST), of the local time zone, can also have an effect on this too](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getTimezoneOffset#varied_results_in_daylight_saving_time_dst_regions).
+> [!NOTE]
+> The local time zone offset comes from the system setting of the device and is then applied to the date being parsed. [Daylight Saving Time (DST), of the local time zone, can also have an effect on this too](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getTimezoneOffset#varied_results_in_daylight_saving_time_dst_regions).
 
 ```js
 Date.parse("Jan 1, 1970"); // 0 in all implementations

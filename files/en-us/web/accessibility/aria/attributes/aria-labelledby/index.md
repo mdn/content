@@ -23,7 +23,8 @@ The purpose of `aria-labelledby` is the same as that of `aria-label`. It provide
 
 The `aria-labelledby` and [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) attributes both reference other elements to calculate text alternatives. `aria-labelledby` should reference brief text that provides the element with an accessible name. `aria-describedby` is used to reference longer content that provides a description. If there is no element in the DOM that provides a brief label appropriate for an accessible name for an interactive element, use `aria-label` to define the accessible name for an interactive element.
 
-> **Note:** While in U.S. English the attribute would be assumed to be spelled "labeledby", the "labelledby" spelling has been established and is the spelling used in accessibility APIs.
+> [!NOTE]
+> While in American English, "labeled" is spelled with one "l", the "labelledby" spelling has been established and is the spelling used in accessibility APIs.
 
 The following example uses `aria-labelledby` to provide an accessible name for a checkbox input by using the text content of a sibling element:
 
@@ -59,7 +60,7 @@ Fortunately, the HTML {{HTMLElement('input')}} with `type="checkbox"` works with
 
    In this example, that accessible name is "Yellow".
 
-2. The `aria-labelledby` property takes as value a space-separated id reference list, which means you can combine more than one element into a single accessible name. You can include the [`id`](/en-US/docs/Web/HTML/Global_attributes#id) of the element itself to reference its own content.
+2. The `aria-labelledby` property takes as value a space-separated id reference list, which means you can combine more than one element into a single accessible name. You can include the [`id`](/en-US/docs/Web/HTML/Global_attributes/id) of the element itself to reference its own content.
 
    ```html
    <h2 id="attr" class="article-title">13 ARIA attributes you need to know</h2>
@@ -75,13 +76,14 @@ Fortunately, the HTML {{HTMLElement('input')}} with `type="checkbox"` works with
 
 4. The `aria-labelledby` property ignores repeated `id`s in its value. If an element is referenced more than one time, only the first reference is processed. `aria-labelledby="attr attr rm13 rm13">` is treated as `aria-labelledby="attr rm13">`
 
-5. The `aria-labelledby` property value can include content from elements that aren't even visible. While you should provide assistive technology users with the same content as all other users, you can include content from elements with the HTML [`hidden`](/en-US/docs/Web/HTML/Global_attributes#hidden) attribute, CSS [`display: none`](/en-US/docs/Web/CSS/display), and CSS [`visibility: hidden`](/en-US/docs/Web/CSS/visibility) in the calculated name string.
+5. The `aria-labelledby` property value can include content from elements that aren't even visible. While you should provide assistive technology users with the same content as all other users, you can include content from elements with the HTML [`hidden`](/en-US/docs/Web/HTML/Global_attributes/hidden) attribute, CSS [`display: none`](/en-US/docs/Web/CSS/display), and CSS [`visibility: hidden`](/en-US/docs/Web/CSS/visibility) in the calculated name string.
 
 6. The `aria-labelledby` property incorporates the value of input elements. If the value references an `<input>`, the current value of the form control is included in the calculated name string, changing if the value is updated.
 
 7. The `aria-labelledby` property cannot be chained. If an element with `aria-labelledby` references another element that also has `aria-labelledby`, the `aria-labelledby` attribute on the referenced element is ignored.
 
-> **Warning:** Because calculating the name of an element with `aria-labelledby` can be complex and reference hidden content, testing with assistive technologies to ensure the expected name is presented to users is very important.
+> [!WARNING]
+> Because calculating the name of an element with `aria-labelledby` can be complex and reference hidden content, testing with assistive technologies to ensure the expected name is presented to users is very important.
 
 ## Values
 

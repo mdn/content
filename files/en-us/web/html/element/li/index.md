@@ -16,8 +16,8 @@ The **`<li>`** [HTML](/en-US/docs/Web/HTML) element is used to represent an item
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
 - `value`
-  - : This integer attribute indicates the current ordinal value of the list item as defined by the {{HTMLElement("ol")}} element. The only allowed value for this attribute is a number, even if the list is displayed with Roman numerals or letters. List items that follow this one continue numbering from the value set. The **value** attribute has no meaning for unordered lists ({{HTMLElement("ul")}}) or for menus ({{HTMLElement("menu")}}).
-- `type` {{Deprecated_inline}} {{Non-standard_Inline}}
+  - : This integer attribute indicates the current ordinal value of the list item as defined by the {{HTMLElement("ol")}} element. The only allowed value for this attribute is a number, even if the list is displayed with Roman numerals or letters. List items that follow this one continue numbering from the value set. This attribute has no meaning for unordered lists ({{HTMLElement("ul")}}) or for menus ({{HTMLElement("menu")}}).
+- `type` {{Deprecated_inline}}
 
   - : This character attribute indicates the numbering type:
 
@@ -29,7 +29,8 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
     This type overrides the one used by its parent {{HTMLElement("ol")}} element, if any.
 
-    > **Note:** This attribute has been deprecated; use the CSS {{cssxref("list-style-type")}} property instead.
+    > [!NOTE]
+    > This attribute has been deprecated; use the CSS {{cssxref("list-style-type")}} property instead.
 
 ## Examples
 
@@ -101,7 +102,7 @@ For more detailed examples, see the {{htmlelement("ol")}} and {{htmlelement("ul"
       <th scope="row">Tag omission</th>
       <td>
         The end tag can be omitted if the list item is immediately followed by
-        another {{HTMLElement("li")}} element, or if there is no more
+        another <code>&lt;li&gt;</code> element, or if there is no more
         content in its parent element.
       </td>
     </tr>

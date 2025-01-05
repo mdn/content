@@ -6,13 +6,13 @@ page-type: firefox-release-notes
 
 {{FirefoxSidebar}}
 
-This article provides information about the changes in Firefox 127 that affect developers. Firefox 127 was released on on [June 11, 2024](https://whattrainisitnow.com/release/?version=127).
+This article provides information about the changes in Firefox 127 that affect developers. Firefox 127 was released on [June 11, 2024](https://whattrainisitnow.com/release/?version=127).
 
 ## Changes for web developers
 
 ### HTML
 
-- `data:` and `javascript:` URLs are now forbidden in the [`href`](/en-US/docs/Web/HTML/Element/base#href) attribute of the `<base>` element ([Firefox bug 1850967](https://bugzil.la/1850967)).
+- [`data:`](/en-US/docs/Web/URI/Schemes/data) and [`javascript:`](/en-US/docs/Web/URI/Schemes/javascript) URLs are now forbidden in the [`href`](/en-US/docs/Web/HTML/Element/base#href) attribute of the `<base>` element ([Firefox bug 1850967](https://bugzil.la/1850967)).
 
 ### CSS
 
@@ -32,7 +32,7 @@ This article provides information about the changes in Firefox 127 that affect d
 
 ### SVG
 
-- The [`lh` and `rlh`](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#line_height_units) line height units, first supported in CSS [in Firefox 120](/en-US/docs/Mozilla/Firefox/Releases/120#css), are now supported in SVG as well. They can be used both in CSS property values `stroke-width: 0.5lh` and SVG attributes values `stroke-width="0.5lh"`. ([Firefox bug 1892089](https://bugzil.la/1892089)).
+- The [`lh` and `rlh`](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units#line_height_units) line height units, first supported in CSS [in Firefox 120](/en-US/docs/Mozilla/Firefox/Releases/120#css), are now supported in SVG as well. They can be used both in CSS property values `stroke-width: 0.5lh` and SVG attributes values `stroke-width="0.5lh"`. ([Firefox bug 1892089](https://bugzil.la/1892089)).
 
 ### Security
 
@@ -43,9 +43,8 @@ This article provides information about the changes in Firefox 127 that affect d
 
 ### APIs
 
-- The async {{domxref('Clipboard API')}} is now fully supported. The {{domxref('ClipboardItem')}} interface, along with the [`read()`](/en-US/docs/Web/API/Clipboard/read) and [`write()`](/en-US/docs/Web/API/Clipboard/write) methods of the {{domxref('Clipboard')}} interface, have been enabled. ([Firefox bug 1887845](https://bugzil.la/1887845), [Firefox bug 1858788](https://bugzil.la/1858788)).
+- The async [Clipboard API](/en-US/docs/Web/API/Clipboard_API) is now fully supported. The {{domxref('ClipboardItem')}} interface, along with the [`read()`](/en-US/docs/Web/API/Clipboard/read) and [`write()`](/en-US/docs/Web/API/Clipboard/write) methods of the {{domxref('Clipboard')}} interface, have been enabled. ([Firefox bug 1887845](https://bugzil.la/1887845), [Firefox bug 1858788](https://bugzil.la/1858788)).
 - All {{glossary("character reference","HTML character references")}} are now supported in [Web Video Text Tracks Format (WebVTT)](/en-US/docs/Web/API/WebVTT_API) cues, title text, comments, annotations, and so on. ([Firefox bug 1395924](https://bugzil.la/1395924)).
-- {{domxref('WebGLRenderingContext.drawingBufferColorSpace')}} and [`WebGL2RenderingContext.drawingBufferColorSpace`](/en-US/docs/Web/API/WebGL2RenderingContext) are now supported. ([Firefox bug 1885491](https://bugzil.la/1885491)).
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
@@ -74,6 +73,7 @@ This article provides information about the changes in Firefox 127 that affect d
 - [`host_permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/host_permissions) for Manifest V3 extensions are now displayed to users during installation ([Firefox bug 1889402](https://bugzil.la/1889402)). However, if an extension update requests new host permissions, these are not shown to the user. See ([Firefox bug 1893232](https://bugzil.la/1893232)).
 - Addition of the {{WebExtAPIRef("runtime.getContexts")}} function that returns information about the contexts associated with the extension ([Firefox bug 1875480](https://bugzil.la/1875480)).
 - For Manifest V3 extensions, adds fall back to the user-defined shortcuts for the special [`_execute_browser_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands#special_shortcuts) command if there are no user-defined shortcuts for `_execute_action`. This enables extensions migrating from Manifest V2 to V3 to preserve any user-defined shortcuts for the browser action ([Firefox bug 1797811](https://bugzil.la/1797811)).
+- Extensions with an embedded [options page](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages) now support automatic switching to the dark theme based on user preferences ([Firefox bug 1888866](https://bugzil.la/1888866)).
 
 ## Experimental web features
 

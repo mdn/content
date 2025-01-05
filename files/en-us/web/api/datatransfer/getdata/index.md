@@ -44,7 +44,7 @@ A string representing the drag data for the specified `format`. If the drag oper
 ## Examples
 
 This example shows the use of the {{domxref("DataTransfer")}} object's
-{{domxref("DataTransfer.getData()","getData()")}} and
+`getData()` and
 {{domxref("DataTransfer.setData()","setData()")}} methods.
 
 ### HTML
@@ -73,20 +73,20 @@ This example shows the use of the {{domxref("DataTransfer")}} object's
 ### JavaScript
 
 ```js
-function allowDrop(allowdropevent) {
-  allowdropevent.target.style.color = "blue";
-  allowdropevent.preventDefault();
+function allowDrop(allowDropEvent) {
+  allowDropEvent.target.style.color = "blue";
+  allowDropEvent.preventDefault();
 }
 
-function drag(dragevent) {
-  dragevent.dataTransfer.setData("text", dragevent.target.id);
-  dragevent.target.style.color = "green";
+function drag(dragEvent) {
+  dragEvent.dataTransfer.setData("text", dragEvent.target.id);
+  dragEvent.target.style.color = "green";
 }
 
-function drop(dropevent) {
-  dropevent.preventDefault();
-  const data = dropevent.dataTransfer.getData("text");
-  dropevent.target.appendChild(document.getElementById(data));
+function drop(dropEvent) {
+  dropEvent.preventDefault();
+  const data = dropEvent.dataTransfer.getData("text");
+  dropEvent.target.appendChild(document.getElementById(data));
   document.getElementById("drag").style.color = "black";
 }
 ```

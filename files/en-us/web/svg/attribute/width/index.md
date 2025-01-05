@@ -646,7 +646,8 @@ For {{SVGElement('foreignObject')}}, `width` defines the horizontal length for t
   </tbody>
 </table>
 
-> **Note:** Starting with SVG2, `width` is a _Geometry Property_ meaning this attribute can also be used as a CSS property for `<foreignObject>`.
+> [!NOTE]
+> Starting with SVG2, `width` is a _Geometry Property_ meaning this attribute can also be used as a CSS property for `<foreignObject>`.
 
 ### `<image>`
 
@@ -682,7 +683,8 @@ For {{SVGElement('image')}}, `width` defines the horizontal length for the image
   </tbody>
 </table>
 
-> **Note:** Starting with SVG2, `width` is a _Geometry Property_ meaning this attribute can also be used as a CSS property for images.
+> [!NOTE]
+> Starting with SVG2, `width` is a _Geometry Property_ meaning this attribute can also be used as a CSS property for images.
 
 ### `<mask>`
 
@@ -778,13 +780,15 @@ For {{SVGElement('rect')}}, `width` defines the horizontal length for the rectan
   </tbody>
 </table>
 
-> **Note:** Starting with SVG2, `width` is a _Geometry Property_ meaning this attribute can also be used as a CSS property for rectangles.
+> [!NOTE]
+> Starting with SVG2, `width` is a _Geometry Property_ meaning this attribute can also be used as a CSS property for rectangles.
 
 ### `<svg>`
 
 For {{SVGElement('svg')}}, `width` defines the horizontal length for the rendering area of the SVG viewport.
 
-> **Note:** In an HTML document if both the {{SVGAttr('viewBox')}} and `width` attributes are omitted, [the svg element will be rendered with a width of `300px`](https://svgwg.org/specs/integration/#svg-css-sizing)
+> [!NOTE]
+> In an HTML document if both the {{SVGAttr('viewBox')}} and `width` attributes are omitted, [the svg element will be rendered with a width of `300px`](https://svgwg.org/specs/integration/#svg-css-sizing)
 
 <table class="properties">
   <tbody>
@@ -816,7 +820,8 @@ For {{SVGElement('svg')}}, `width` defines the horizontal length for the renderi
   </tbody>
 </table>
 
-> **Note:** Starting with SVG2, `width` is a _Geometry Property_ meaning this attribute can also be used as a CSS property for `<svg>`.
+> [!NOTE]
+> Starting with SVG2, `width` is a _Geometry Property_ meaning this attribute can also be used as a CSS property for `<svg>`.
 
 ### `<use>`
 
@@ -854,7 +859,8 @@ For {{SVGElement('use')}}, `width` defines the horizontal length for the referen
 
 > **Note:** `width` has no effect on `use` elements, unless the element referenced has a [viewBox](/en-US/docs/Web/SVG/Attribute/viewBox) - i.e. they only have an effect when `use` refers to a `svg` or `symbol` element.
 
-> **Note:** Starting with SVG2, `width` is a _Geometry Property_ meaning this attribute can also be used as a CSS property for used elements.
+> [!NOTE]
+> Starting with SVG2, `width` is a _Geometry Property_ meaning this attribute can also be used as a CSS property for used elements.
 
 ## Examples
 

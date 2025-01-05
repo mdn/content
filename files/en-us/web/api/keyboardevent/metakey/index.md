@@ -13,9 +13,11 @@ boolean value that indicates if the <kbd>Meta</kbd> key was pressed
 (`true`) or not (`false`) when the event occurred. Some operating
 systems may intercept the key so it is never detected.
 
-> **Note:** On Macintosh keyboards, this is the <kbd>⌘ Command</kbd> key.
+> [!NOTE]
+> On Macintosh keyboards, this is the <kbd>⌘ Command</kbd> key.
 
-> **Note:** Before Firefox 118, the <kbd>⊞ Windows</kbd> key was handled
+> [!NOTE]
+> Before Firefox 118, the <kbd>⊞ Windows</kbd> key was handled
 > as an "OS" key rather than the "Meta" key. `KeyboardEvent.metaKey` was
 > `false` when the <kbd>⊞ Windows</kbd> key was pressed.
 

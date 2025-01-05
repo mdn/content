@@ -34,7 +34,7 @@ Elements in HTML have **attributes**; these are additional values that configure
         <code><a href="/en-US/docs/Web/HTML/Element/form#accept-charset">accept-charset</a></code>
       </td>
       <td>{{ HTMLElement("form") }}</td>
-      <td>List of supported charsets.</td>
+      <td>The character set, which if provided must be <code>"UTF-8"</code>.</td>
     </tr>
     <tr>
       <td>
@@ -146,7 +146,7 @@ Elements in HTML have **attributes**; these are additional values that configure
       </td>
       <td>
         Specifies the URL of an image file.
-        <div class="note">
+        <div class="note notecard">
           <p>
             <strong>Note:</strong> Although browsers and email clients may still
             support this attribute, it is obsolete. Use CSS
@@ -168,7 +168,7 @@ Elements in HTML have **attributes**; these are additional values that configure
       </td>
       <td>
         <p>Background color of the element.</p>
-        <div class="note">
+        <div class="note notecard">
           <p>
             <strong>Note:</strong> This is a legacy attribute. Please use the
             CSS {{ Cssxref("background-color") }} property instead.
@@ -184,7 +184,7 @@ Elements in HTML have **attributes**; these are additional values that configure
       </td>
       <td>
         <p>The border width.</p>
-        <div class="note">
+        <div class="note notecard">
           <p>
             <strong>Note:</strong> This is a legacy attribute. Please use the
             CSS {{ Cssxref("border") }} property instead.
@@ -250,7 +250,7 @@ Elements in HTML have **attributes**; these are additional values that configure
           This attribute sets the text color using either a named color or a
           color specified in the hexadecimal #RRGGBB format.
         </p>
-        <div class="note">
+        <div class="note notecard">
           <p>
             <strong>Note:</strong> This is a legacy attribute. Please use the
             CSS {{ Cssxref("color") }} property instead.
@@ -458,8 +458,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Attributes/enterkeyhint">enterkeyhint</a></code>
-        {{experimental_inline}}
+        <code><a href="/en-US/docs/Web/HTML/Global_attributes/enterkeyhint">enterkeyhint</a></code>
       </td>
       <td>
         {{ HTMLElement("textarea") }},
@@ -606,7 +605,7 @@ Elements in HTML have **attributes**; these are additional values that configure
           Specifies the height of elements listed here. For all other elements,
           use the CSS {{cssxref("height")}} property.
         </p>
-        <div class="note">
+        <div class="note notecard">
           <p>
             <strong>Note:</strong> In some instances, such as
             {{ HTMLElement("div") }}, this is a legacy attribute, in
@@ -767,7 +766,7 @@ Elements in HTML have **attributes**; these are additional values that configure
       <td>Defines the script language used in the element.</td>
     </tr>
     <tr>
-      <td><code>loading</code> {{experimental_inline}}</td>
+      <td><code>loading</code></td>
       <td>
         {{ HTMLElement("img") }}, {{ HTMLElement("iframe") }}
       </td>
@@ -1360,7 +1359,7 @@ Elements in HTML have **attributes**; these are additional values that configure
         <p>
           For the elements listed here, this establishes the element's width.
         </p>
-        <div class="note">
+        <div class="note notecard">
           <p>
             <strong>Note:</strong> For all other instances, such as
             {{ HTMLElement("div") }}, this is a legacy attribute, in
@@ -1409,11 +1408,12 @@ HTML defines restrictions on the allowed values of boolean attributes: If the at
 </div>
 ```
 
-To be clear, the values "`true`" and "`false`" are not allowed on boolean attributes. To represent a false value, the attribute has to be omitted altogether. This restriction clears up some common misunderstandings: With `checked="false"` for example, the element's `checked` attribute would be interpreted as **true** because the attribute is present.
+To be clear, the values `"true"` and `"false"` are not allowed on boolean attributes. To represent a false value, the attribute has to be omitted altogether. This restriction clears up some common misunderstandings: With `checked="false"` for example, the element's `checked` attribute would be interpreted as **true** because the attribute is present.
 
 ## Event handler attributes
 
-> **Warning:** The use of event handler content attributes is discouraged. The mix of HTML and JavaScript often produces unmaintainable code, and the execution of event handler attributes may also be blocked by content security policies.
+> [!WARNING]
+> The use of event handler content attributes is discouraged. The mix of HTML and JavaScript often produces unmaintainable code, and the execution of event handler attributes may also be blocked by content security policies.
 
 In addition to the attributes listed in the table above, global [event handlers](/en-US/docs/Web/Events/Event_handlers#using_onevent_properties) — such as [`onclick`](/en-US/docs/Web/API/Element/click_event) — can also be specified as [content attributes](#content_versus_idl_attributes) on all elements.
 

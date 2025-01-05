@@ -16,7 +16,7 @@ Scripts are particularly dangerous because they can modify any aspect of the pag
 For example, images can be modified to give the user false or misleading information, or to change the apparent function of a button.
 
 "Mixed downloads" refer to resource downloads initiated from a secure context, but fetched over an insecure connection.
-These are share the same risks as mixed content: downloads appears to come from a secure origin, but could have been modified or viewed en-route.
+These share the same risks as mixed content: downloads appear to come from a secure origin, but could have been modified or viewed en-route.
 
 You should avoid using mixed content and mixed downloads in your websites!
 Browsers mitigate the risks of mixed content by auto-upgrading image, video, and audio mixed content requests from HTTP to HTTPS, and block insecure requests for all other resource types.
@@ -29,7 +29,8 @@ Browsers should automatically upgrade requests for upgradable content from HTTP 
 
 This approach ensures that all content in a secure context is either loaded via a secure channel or blocked, which is safer for users than displaying a mix of secure and insecure content, and less disruptive than breaking web pages by blocking absolutely all insecure content.
 
-> **Note:** Earlier versions of the specification divided mixed content into "blockable" and "optionally blockable" categories:
+> [!NOTE]
+> Earlier versions of the specification divided mixed content into "blockable" and "optionally blockable" categories:
 >
 > - Blockable content types, also referred to as "active mixed content", were those that could modify other parts of the web page, such as scripts and stylesheets.
 >   The potential risk if these files are modified is very high, and browsers were required to block them.
@@ -64,9 +65,9 @@ This includes HTTP requests resulting from the following elements (this list is 
 - {{HTMLElement("script")}} where origin is set via `src` attribute
 - {{HTMLElement("link")}} where the origin is set in the `href` attribute, and includes stylesheets
 - {{HTMLElement("iframe")}} where origin is set via `src` attribute
-- {{domxref("fetch()")}} requests
+- {{domxref("Window/fetch", "fetch()")}} requests
 - {{domxref("XMLHttpRequest")}} requests
-- All cases in CSS where a {{cssxref("url", "url()")}} value is used ({{cssxref("@font-face")}}, {{cssxref("cursor")}}, {{cssxref("background-image")}}, and so forth).
+- All cases in CSS where a {{CSSXref("url_value", "&lt;url&gt;")}} value is used ({{cssxref("@font-face")}}, {{cssxref("cursor")}}, {{cssxref("background-image")}}, and so forth).
 - {{HTMLElement("object")}} (`data` attribute)
 - {{domxref("Navigator.sendBeacon")}} (`url` attribute)
 - {{HTMLElement("img")}} where origin is set via `srcset` or `<picture>`.
@@ -82,7 +83,7 @@ Mixed content requests are insecure requests for resources from a [secure contex
 The following examples demonstrate secure, insecure, and mixed content requests:
 
 - `http://insecure.com` loads `http://also.insecure.com` — is not a mixed content request because both origins are insecure.
-- `https://secure.com` loads `http://insecure.com` — is a mixed content request because the insecure resource`http://insecure.com` is loaded into the secure context `https://secure.com`.
+- `https://secure.com` loads `http://insecure.com` — is a mixed content request because the insecure resource `http://insecure.com` is loaded into the secure context `https://secure.com`.
 - `http://insecure.com` loads `https://secure.com` in an `<iframe>`, which in turn loads `http://also.insecure.com` — loading `https://secure.com` into `http://insecure.com` is not a mixed content request (there is no restriction on loading a secure context into an insecure context).
   However loading `http://also.insecure.com` into the secure frame `https://secure.com` is a mixed content request.
 - `https://secure.com` frames a `data:` URL, which loads `http://insecure.com` — this is a mixed content request, because `https://secure.com` (and hence `data:`) were securely loaded and `http://insecure.com` is insecure.
@@ -115,7 +116,8 @@ If this code is in a page that is served over HTTPS, saving the link results in 
 
 Browsers are expected to block mixed downloads, and secure sites should not include them.
 
-> **Note:** Browsers commonly block mixed downloads by default, but inform users of the risk and allow them to keep or discard the download.
+> [!NOTE]
+> Browsers commonly block mixed downloads by default, but inform users of the risk and allow them to keep or discard the download.
 
 ## Developer console
 
@@ -140,7 +142,7 @@ The best strategy to avoid issues with mixed content is to serve all the content
 - If using resource on other sites use HTTPS versions, if available.
 
   Most sites provide HTTPS versions of shared resources.
-  Often the easiest approach is to replace all `http://` links with `https://` and then use tools such as [linkchecker](https://linkchecker.github.io/linkchecker/) to verify that the links all work.
+  Often the easiest approach is to replace all `http://` links with `https://` and then use tools such as [LinkChecker](https://linkchecker.github.io/linkchecker/) to verify that the links all work.
 
 There are a number of ways to verify that your site is free of mixed content including:
 

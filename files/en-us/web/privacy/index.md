@@ -50,7 +50,7 @@ Following on from the above section, **personally identifiable information** (PI
 
 - Looking at multiple [third-party cookies](/en-US/docs/Web/Privacy/Third-party_cookies) set across different sites where third-party content is embedded to find out various information points about the user.
 - Looking at the {{httpheader("Referer")}} header to see where a user has navigated from.
-- Including parameters on the URLs of inbound links (for example in embedded ads linking to product pages, or marketing emails) that can reveal to the linked site where the link originated from, what marketing campaign it is part of, the email address or other identifier of the user that clicked on it, etc. This process is referred to as **link decorating**, and results in link URLs that look like this: https://example.com/article/?id=62yhgt1a&campaign=902.
+- Including parameters on the URLs of inbound links (for example in embedded ads linking to product pages, or marketing emails) that can reveal to the linked site where the link originated from, what marketing campaign it is part of, the email address or other identifier of the user that clicked on it, etc. This process is referred to as **link decorating**, and results in link URLs that look like this: `https://example.com/article/?id=62yhgt1a&campaign=902`.
 - Redirect tracking, which involves trackers momentarily (and imperceptibly) redirecting a user to their website to use first-party storage to track that user across websites. This allows trackers to get around third-party cookies being blocked. For example, if you have read a product review and want to click through to buy it, you might unwittingly navigate to the redirect tracker first, _then_ to the retailer. This means the tracker is loaded as a first party, and can associate tracking data with the identifiers they have stored in their first-party cookies before forwarding you to the retailer.
 
 Tracking data can be used to build a profile of a user and their interests and preferences, which is usually bad and can be annoying to various degrees. For example:
@@ -67,7 +67,8 @@ Modern browsers take steps to help prevent fingerprinting-based attacks by eithe
 
 For example, if a website queries a user's browser for the elapsed time, a comparison of that time to the time reported by the server might be useful as a factor in fingerprinting. Because of this, browsers typically introduce a small amount of variability to timers to make them less useful for identifying the user's system.
 
-> **Note:** See [Fingerprinting](https://web.dev/learn/privacy/fingerprinting/) on web.dev for additional useful information.
+> [!NOTE]
+> See [Fingerprinting](https://web.dev/learn/privacy/fingerprinting/) on web.dev for additional useful information.
 
 ## Privacy features provided by browsers
 
@@ -124,7 +125,8 @@ The ethics of data collection can be broken down into three simple principles:
 - Communicate clearly how you are going to use the data you collect
 - Delete the data once you have finished with it
 
-> **Note:** The tips provided below make for a better, more privacy-aware user experience, but many of them are required by law to comply with regulations, for example the [GDPR](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32016R0679&from=EN) in the EU. You should make sure to find out what regulations apply to you in your locale, and what you need to do to comply with them.
+> [!NOTE]
+> The tips provided below make for a better, more privacy-aware user experience, but many of them are required by law to comply with regulations, for example the [GDPR](https://gdpr.eu/) in the EU. You should make sure to find out what regulations apply to you in your locale, and what you need to do to comply with them.
 
 ### Don't collect more data than you need
 
@@ -154,7 +156,8 @@ Earlier on, we mentioned giving users a way to see what data of theirs you have 
 
 Allowing the user to choose when significant portions of data get deleted is very empowering, and builds trust, but there may be some bits of data that you will want to handle deletion of yourself. For example, some data might only be used for a few hours or minutes and then deleted, like data that is used during the administration of a user's session while they are logged in.
 
-> **Note:** The {{httpheader("Clear-Site-Data")}} HTTP response header is very useful for clearing short-lived user data — it instructs the browser to clear out its cache and/or cookies and/or storage (e.g. [Web Storage](/en-US/docs/Web/API/Web_Storage_API) or [IndexedDB](/en-US/docs/Web/API/IndexedDB_API) data). For example, you might get your server to send it along with a "logged out confirmation" page so that once the user is logged out, their data is safely removed.
+> [!NOTE]
+> The {{httpheader("Clear-Site-Data")}} HTTP response header is very useful for clearing short-lived user data — it instructs the browser to clear out its cache and/or cookies and/or storage (e.g. [Web Storage](/en-US/docs/Web/API/Web_Storage_API) or [IndexedDB](/en-US/docs/Web/API/IndexedDB_API) data). For example, you might get your server to send it along with a "logged out confirmation" page so that once the user is logged out, their data is safely removed.
 
 ## Cut down on tracking
 
@@ -173,7 +176,8 @@ Third-party resources are an essential part of modern web development, they prov
 
 It is important to audit all of the third-party resources you use on your site. Make sure you know what data they collect, what requests they make and to whom, and what their privacy policies are. Your carefully designed privacy policy is useless if you use a third-party script that violates it.
 
-> **Note:** There are various tools out there that can help you build up a picture of what requests a site is making, for example the [Request Map Generator](https://requestmap.webperf.tools/).
+> [!NOTE]
+> There are various tools out there that can help you build up a picture of what requests a site is making, for example the [Request Map Generator](https://requestmap.webperf.tools/).
 
 Once you have audited your third-party resources and understand what they are doing, you should then consider their negatives as a trade-off for the value they bring. If a third-party script is free and really useful but collects quite a lot of user data, you could:
 
@@ -186,15 +190,18 @@ The following list provides some tips on how to mitigate privacy risks inherent 
 - When embedding third-party resources, consider if there is a way to achieve the same or a similar effect with less privacy impact. For example, it might be fun to have a social media post viewer embedded on your site, but is it really necessary? Wouldn't a link to your social media page be sufficient? Also, some third-party services have privacy-enhancing options. See, for example, YouTube's [Embed videos & playlists > Turn on privacy-enhanced mode](https://support.google.com/youtube/answer/171780).
 - Where possible, you should block third parties from receiving a {{httpheader("Referer")}} header when you make requests to them. This can be done in a pretty granular way, for example by including [rel="noreferrer"](/en-US/docs/Web/HTML/Attributes/rel/noreferrer) on external links. Or, you could set this more globally for the page or site, for example by using the {{httpheader("Referrer-Policy")}} header.
 
-  > **Note:** See also [Referer header: privacy and security concerns](/en-US/docs/Web/Security/Referer_header:_privacy_and_security_concerns).
+  > [!NOTE]
+  > See also [Referer header: privacy and security concerns](/en-US/docs/Web/Security/Referer_header:_privacy_and_security_concerns).
 
 - Use the {{httpheader("Permissions-Policy")}} HTTP header to control access to API "powerful features" (such as notifications, geolocation data, accessing media streams from webcams, etc.). This can be useful for privacy because it stops third-party sites from doing unexpected things with these features, and users don't want to be unnecessarily bombarded by permission prompts that they may not understand. You can also control usage of "powerful features" inside third-party sites embedded inside {{htmlelement("iframe")}} elements by specifying permissions policies inside an `allow` attribute on the `<iframe>` itself.
 
-  > **Note:** See also our [Permissions-Policy guide](/en-US/docs/Web/HTTP/Permissions_Policy) for more information and examples, and [permissionspolicy.com](https://www.permissionspolicy.com/) for useful tools including a policy generator.
+  > [!NOTE]
+  > See also our [Permissions-Policy guide](/en-US/docs/Web/HTTP/Permissions_Policy) for more information and examples, and [permissionspolicy.com](https://www.permissionspolicy.com/) for useful tools including a policy generator.
 
 - Use the {{htmlelement("iframe")}} `sandbox` attribute to allow or disallow usage of certain features inside the content embedded in the `<iframe>` — this includes things like downloads, form submissions, modals, and scripting.
 
-> **Note:** See [Third parties](https://web.dev/learn/privacy/third-parties/) over on web.dev for additional useful information on auditing and more.
+> [!NOTE]
+> See [Third parties](https://web.dev/learn/privacy/third-parties/) over on web.dev for additional useful information on auditing and more.
 
 ## Protect user data
 
@@ -212,7 +219,7 @@ The below tips offer some guidance on protecting your user's data:
 
 - [Web security](/en-US/docs/Web/Security)
 - [Learn Privacy](https://web.dev/learn/privacy/) on web.dev
-- [The Privacy Sandbox](https://developer.chrome.com/docs/privacy-sandbox/) on developer.chrome.com
+- [The Privacy Sandbox](https://developers.google.com/privacy-sandbox) on developers.google.com
 - [Lean Data Practices](https://www.mozilla.org/en-US/about/policy/lean-data/) on mozilla.org
 
 <section id="Quick_links">

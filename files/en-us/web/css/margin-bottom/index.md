@@ -22,6 +22,8 @@ This property has no effect on _non-[replaced](/en-US/docs/Web/CSS/Replaced_elem
 margin-bottom: 10px; /* An absolute length */
 margin-bottom: 1em; /* relative to the text size */
 margin-bottom: 5%; /* relative to the nearest block container's width */
+margin-bottom: anchor-size(width);
+margin-bottom: calc(anchor-size(--myAnchor self-block, 20px) / 3);
 
 /* Keyword values */
 margin-bottom: auto;
@@ -39,7 +41,11 @@ The `margin-bottom` property is specified as the keyword `auto`, or a `<length>`
 ### Values
 
 - {{cssxref("&lt;length&gt;")}}
+
   - : The size of the margin as a fixed value.
+
+    - For _anchor-positioned elements_, the {{cssxref("anchor-size()")}} function resolves to a {{cssxref("&lt;length&gt;")}} value relative to the associated _anchor element_'s width or height (see [Setting element margin based on anchor size](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#setting_element_margin_based_on_anchor_size)).
+
 - {{cssxref("&lt;percentage&gt;")}}
   - : The size of the margin as a percentage, relative to the inline size (_width_ in a horizontal language, defined by {{cssxref("writing-mode")}}) of the [containing block](/en-US/docs/Web/CSS/Containing_block).
 - `auto`
@@ -115,5 +121,8 @@ div {
 
 ## See also
 
-- {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, and {{cssxref("margin-left")}} and the {{cssxref("margin")}} shorthand
-- The mapped logical properties: {{cssxref("margin-block-start")}}, {{cssxref("margin-block-end")}}, {{cssxref("margin-inline-start")}}, and {{cssxref("margin-inline-end")}} and the shorthands {{cssxref("margin-block")}} and {{cssxref("margin-inline")}}
+- {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, and {{cssxref("margin-left")}}
+- {{cssxref("margin")}} shorthand
+- {{cssxref("margin-block-start")}}, {{cssxref("margin-block-end")}}, {{cssxref("margin-inline-start")}}, and {{cssxref("margin-inline-end")}}
+- {{cssxref("margin-block")}} and {{cssxref("margin-inline")}} shorthands
+- [CSS box model](/en-US/docs/Web/CSS/CSS_box_model) module

@@ -7,9 +7,10 @@ browser-compat: svg.elements.feDropShadow
 
 {{SVGRef}}
 
-The SVG **`<feDropShadow>`** filter primitive creates a drop shadow of the input image. It can only be used inside a {{SVGElement('filter')}} element.
+The **`<feDropShadow>`** [SVG](/en-US/docs/Web/SVG) filter primitive creates a drop shadow of the input image. It can only be used inside a {{SVGElement('filter')}} element.
 
-> **Note:** The drop shadow color and opacity can be changed by using the {{SVGAttr('flood-color')}} and {{SVGAttr('flood-opacity')}} presentation attributes.
+> [!NOTE]
+> The drop shadow color and opacity can be changed by using the {{SVGAttr('flood-color')}} and {{SVGAttr('flood-opacity')}} presentation attributes.
 
 ## Example
 

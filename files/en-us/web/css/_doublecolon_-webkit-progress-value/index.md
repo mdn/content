@@ -11,7 +11,8 @@ browser-compat: css.selectors.-webkit-progress-value
 
 The **`::-webkit-progress-value`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents the filled-in portion of the bar of a {{HTMLElement("progress")}} element. It is a child of the {{cssxref("::-webkit-progress-bar")}} pseudo-element.
 
-> **Note:** In order to let `::-webkit-progress-value` take effect, {{cssxref("appearance")}} needs to be set to `none` on the `<progress>` element.
+> [!NOTE]
+> In order to let `::-webkit-progress-value` take effect, {{cssxref("appearance")}} needs to be set to `none` on the `<progress>` element.
 
 ## Syntax
 

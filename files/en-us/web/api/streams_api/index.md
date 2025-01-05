@@ -29,7 +29,8 @@ More complicated uses involve creating your own stream using the {{domxref("Read
 
 You can also write data to streams using {{domxref("WritableStream")}}.
 
-> **Note:** You can find a lot more details about the theory and practice of streams in our articles — [Streams API concepts](/en-US/docs/Web/API/Streams_API/Concepts), [Using readable streams](/en-US/docs/Web/API/Streams_API/Using_readable_streams), [Using readable byte streams](/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams), and [Using writable streams](/en-US/docs/Web/API/Streams_API/Using_writable_streams).
+> [!NOTE]
+> You can find a lot more details about the theory and practice of streams in our articles — [Streams API concepts](/en-US/docs/Web/API/Streams_API/Concepts), [Using readable streams](/en-US/docs/Web/API/Streams_API/Using_readable_streams), [Using readable byte streams](/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams), and [Using writable streams](/en-US/docs/Web/API/Streams_API/Using_writable_streams).
 
 ## Stream interfaces
 
@@ -68,7 +69,7 @@ You can also write data to streams using {{domxref("WritableStream")}}.
 ### Extensions to other APIs
 
 - {{domxref("Request")}}
-  - : When a new `Request` object is constructed, you can pass it a {{domxref("ReadableStream")}} in the `body` property of its `RequestInit` dictionary. This `Request` could then be passed to a {{domxref("fetch()")}} to commence fetching the stream.
+  - : When a new `Request` object is constructed, you can pass it a {{domxref("ReadableStream")}} in the `body` property of its `RequestInit` dictionary. This `Request` could then be passed to a {{domxref("Window/fetch", "fetch()")}} to commence fetching the stream.
 - {{domxref("Response.body")}}
   - : The response body returned by a successful [fetch request](/en-US/docs/Web/API/Window/fetch) is exposed by default as a {{domxref("ReadableStream")}}, and can have a reader attached to it, etc.
 

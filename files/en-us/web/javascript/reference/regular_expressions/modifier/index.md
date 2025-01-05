@@ -16,7 +16,8 @@ A **modifier** overrides [flag](/en-US/docs/Web/JavaScript/Reference/Regular_exp
 (?flags1-flags2:pattern)
 ```
 
-> **Note:** JavaScript only has the "bounded" modifier form, where the pattern is placed inside the modifier group. Most other languages that support modifiers have an "unbounded" form, where the modifier is applied until the end of the closest containing group.
+> [!NOTE]
+> JavaScript only has the "bounded" modifier form, where the pattern is placed inside the modifier group. Most other languages that support modifiers have an "unbounded" form, where the modifier is applied until the end of the closest containing group.
 
 ### Parameters
 
@@ -84,7 +85,7 @@ pattern.test(input2); // false
 Imagine you are finding all variable declarations called `foo` or `bar` (because they are bad names). The word may appear in any case, but you know the keyword is always lowercase, so you can do this:
 
 ```js
-const pattern = /(?:var|let|const) (?i:foo|bar)\b/i;
+const pattern = /(?:var|let|const) (?i:foo|bar)\b/;
 
 pattern.test("let foo;"); // true
 pattern.test("const BAR = 1;"); // true

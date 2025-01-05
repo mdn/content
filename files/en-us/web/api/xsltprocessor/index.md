@@ -67,7 +67,7 @@ async function init() {
 
 ### Creating an XML document based on part of a document's DOM
 
-For the actual transformation, `XSLTProcessor` requires an XML document, which is used in conjunction with the imported XSL file to produce the final result. The XML document can be a separate XML file loaded using {{domxref("fetch()")}}, or it can be part of the existing page.
+For the actual transformation, `XSLTProcessor` requires an XML document, which is used in conjunction with the imported XSL file to produce the final result. The XML document can be a separate XML file loaded using {{domxref("Window/fetch", "fetch()")}}, or it can be part of the existing page.
 
 To process part of a page's DOM, it is necessary to first create an XML document in memory. Assuming that the DOM to be processed is contained by an element with the id `example`, that DOM can be "cloned" using the in-memory XML document's {{domxref('Document.importNode()')}} method. {{domxref('Document.importNode()')}} allows transferring a DOM fragment between documents, in this case from an HTML document to an XML document. The first parameter references the DOM node to clone. By making the second parameter "true", it will clone all descendants as well (a deep clone). The cloned DOM can then be inserted into the XML document using {{domxref('Node.appendChild()')}}, as shown below.
 
@@ -220,7 +220,7 @@ init();
 
 ### Advanced example
 
-This advanced example sorts several divs based on their content. The example allows sorting the content multiple times, alternating between ascending and descending order. The JavaScript loads the .xsl file only on the first sort and sets the `xslloaded` variable to true once it has finished loading the file. Using the {{domxref("XSLTProcessor.getParameter()")}} method, the code can figure whether to sort in ascending or descending order. It defaults to ascending if the parameter is empty (the first time the sorting happens, as there is no value for it in the XSLT file). The sorting value is set using {{domxref("XSLTProcessor.setParameter()")}}.
+This advanced example sorts several divs based on their content. The example allows sorting the content multiple times, alternating between ascending and descending order. The JavaScript loads the .xsl file only on the first sort and sets the `xslLoaded` variable to true once it has finished loading the file. Using the {{domxref("XSLTProcessor.getParameter()")}} method, the code can figure whether to sort in ascending or descending order. It defaults to ascending if the parameter is empty (the first time the sorting happens, as there is no value for it in the XSLT file). The sorting value is set using {{domxref("XSLTProcessor.setParameter()")}}.
 
 The XSLT file has a parameter called `myOrder` that JavaScript sets to change the sorting method. The `xsl:sort` element's order attribute can access the value of the parameter using `$myOrder`. However, the value needs to be an XPATH expression and not a string, so `{$myOrder}` is used. Using {} evaluates the content as an XPath expression.
 
@@ -247,7 +247,7 @@ Once the transformation is complete, the result is appended to the document, as 
 
 ```js
 let xslRef;
-let xslloaded = false;
+let xslLoaded = false;
 const parser = new DOMParser();
 const xsltProcessor = new XSLTProcessor();
 let myDOM;
@@ -255,12 +255,12 @@ let myDOM;
 let xmlRef = document.implementation.createDocument("", "", null);
 
 async function sort() {
-  if (!xslloaded) {
+  if (!xslLoaded) {
     const response = await fetch("example2.xsl");
     const xslText = await response.text();
     xslRef = parser.parseFromString(xslText, "application/xml");
     xsltProcessor.importStylesheet(xslRef);
-    xslloaded = true;
+    xslLoaded = true;
   }
 
   // Create a new XML document in memory
@@ -330,5 +330,5 @@ async function sort() {
 
 - [XSLT](/en-US/docs/Web/XSLT)
 - [What kind of language is XSLT?](https://developer.ibm.com/technologies/web-development/) at [IBM developer](https://developer.ibm.com/)
-- [XSLT Tutorial](https://www.zvon.org/xxl/XSLTutorial/Books/Book1/index.html) at [zvon.org](https://www.zvon.org/)
-- [XPath Tutorial](https://www.zvon.org/xxl/XPathTutorial/General/examples.html) at [zvon.org](https://www.zvon.org/)
+- [XSLT Tutorial](https://zvon.org/xxl/XSLTutorial/Books/Book1/index.html) at [zvon.org](https://zvon.org/)
+- [XPath Tutorial](https://zvon.org/xxl/XPathTutorial/General/examples.html) at [zvon.org](https://zvon.org/)

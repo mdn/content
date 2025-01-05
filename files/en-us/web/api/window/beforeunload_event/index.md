@@ -48,7 +48,8 @@ The `beforeunload` event suffers from some problems:
   2. The user then switches to a different app.
   3. Later, the user closes the browser from the app manager.
 
-  > **Note:** It is recommended to use the {{domxref("Document.visibilitychange_event", "visibilitychange")}} event as a more reliable signal for automatic app state saving that gets around problems like the above. See [Don't lose user and app state, use Page Visibility](https://www.igvita.com/2015/11/20/dont-lose-user-and-app-state-use-page-visibility/) for more details.
+  > [!NOTE]
+  > It is recommended to use the {{domxref("Document.visibilitychange_event", "visibilitychange")}} event as a more reliable signal for automatic app state saving that gets around problems like the above. See [Don't lose user and app state, use Page Visibility](https://www.igvita.com/2015/11/20/dont-lose-user-and-app-state-use-page-visibility/) for more details.
 
 - In Firefox, `beforeunload` is not compatible with the [back/forward cache](https://web.dev/articles/bfcache) (bfcache): that is, Firefox will not place pages in the bfcache if they have `beforeunload` listeners, and this is bad for performance.
 
@@ -72,7 +73,7 @@ In the following example we have an HTML text {{htmlelement("input")}} to repres
 </form>
 ```
 
-Our JavaScript attaches an {{domxref("Element/input_event", "input")}} event listener to the `<input>` element that listens for changes in the inputted value. When the value is updated to a non-empty value, a {{domxref("Window.beforeunload_event", "beforeunload")}} event listener is attached to the {{domxref("Window")}} object.
+Our JavaScript attaches an {{domxref("Element/input_event", "input")}} event listener to the `<input>` element that listens for changes in the inputted value. When the value is updated to a non-empty value, a `beforeunload` event listener is attached to the {{domxref("Window")}} object.
 
 If the value becomes an empty string again (i.e. the value is deleted), the `beforeunload` event listener is removed again — as mentioned above in the [Usage notes](#usage_notes), the listener should be removed when there is no unsaved data to warn about.
 
@@ -118,4 +119,4 @@ When the `<input>` value is non-empty, if you try to close, navigate, or reload 
   - {{domxref("Document/readystatechange_event", "readystatechange")}}
   - {{domxref("Window/load_event", "load")}}
   - {{domxref("Window/unload_event", "unload")}}
-- [Page Lifecycle API](https://developer.chrome.com/blog/page-lifecycle-api/#developer-recommendations-for-each-state) provides more useful guidance on handling page lifecycle behavior in your web apps.
+- [Page Lifecycle API](https://developer.chrome.com/docs/web-platform/page-lifecycle-api#developer-recommendations-for-each-state) provides more useful guidance on handling page lifecycle behavior in your web apps.

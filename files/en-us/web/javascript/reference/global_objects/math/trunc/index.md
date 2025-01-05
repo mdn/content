@@ -28,7 +28,7 @@ The integer part of `x`.
 
 ## Description
 
-Unlike the other three `Math` methods: {{jsxref("Math.floor()")}}, {{jsxref("Math.ceil()")}} and {{jsxref("Math.round()")}}, the way `Math.trunc()` works is very simple. It _truncates_ (cuts off) the dot and the digits to the right of it, no matter whether the argument is a positive or negative number.
+The way `Math.trunc()` works is more straightforward than the other three `Math` methods: {{jsxref("Math.floor()")}}, {{jsxref("Math.ceil()")}} and {{jsxref("Math.round()")}}; it _truncates_ (cuts off) the dot and the digits to the right of it, no matter whether the argument is a positive or negative number.
 
 Because `trunc()` is a static method of `Math`, you always use it as `Math.trunc()`, rather than as a method of a `Math` object you created (`Math` is not a constructor).
 
@@ -50,7 +50,8 @@ Math.trunc(Infinity); // Infinity
 
 ### Using bitwise no-ops to truncate numbers
 
-> **Warning:** This is not a polyfill for `Math.trunc()` because of non-negligible edge cases.
+> [!WARNING]
+> This is not a polyfill for `Math.trunc()` because of non-negligible edge cases.
 
 Bitwise operations convert their operands to 32-bit integers, which people have historically taken advantage of to truncate float-point numbers. Common techniques include:
 

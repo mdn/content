@@ -111,7 +111,6 @@ h2 {
 
 - {{cssxref("@font-face/font-family", "font-family")}}
 - {{cssxref("@font-palette-values/", "@font-palette-values")}}
-- {{cssxref("@font-palette-values/font-family", "font-family")}} descriptor
 - {{cssxref("@font-palette-values/override-colors", "override-colors")}} descriptor
 - {{cssxref("font-palette/", "font-palette")}} property
 - {{domxref("CSSFontPaletteValuesRule.fontFamily")}}

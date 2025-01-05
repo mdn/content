@@ -19,7 +19,7 @@ let results = browser.storage.<storageType>.get(
 )
 ```
 
-`<storageType>` will be one of the writable storage types — {{WebExtAPIRef("storage.sync", "sync")}}, {{WebExtAPIRef("storage.local", "local")}}, or {{WebExtAPIRef("storage.managed", "managed")}}.
+Where `<storageType>` is one of the storage types — {{WebExtAPIRef("storage.sync", "sync")}}, {{WebExtAPIRef("storage.local", "local")}}, {{WebExtAPIRef("storage.session", "session")}}, or {{WebExtAPIRef("storage.managed", "managed")}}.
 
 ### Parameters
 
@@ -28,21 +28,14 @@ let results = browser.storage.<storageType>.get(
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that resolves to a `results` object, containing every object in `keys` that was found in the storage area. If `keys` is an object, keys that are not found in the storage area will have their values given by the `keys` object.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that resolves to a `results` object, containing a key-value pair for every key in `keys` found in the storage area. When `keys` is an object, any key that isn't found in storage takes the default value from the `keys` object.
 
-If the operation failed, the promise is rejected with an error message.
+If the operation fails, the promise is rejected with an error message.
 
-If managed storage is not set, `undefined` will be returned.
+If managed storage is not set, `undefined` is returned.
 
-> **Warning:** When used within a content script in Firefox versions prior to 52, the Promise returned by `browser.storage.local.get()` is fulfilled with an Array containing one Object. The Object in the Array contains the `keys` found in the storage area, as described above.
->
-> The Promise is correctly fulfilled with an Object when used in the background context (background scripts, popups, options pages, etc.).
->
-> When this API is used as `chrome.storage.local.get()`, it correctly passes an Object to the callback function.
-
-## Browser compatibility
-
-{{Compat}}
+> [!WARNING]
+> In Firefox, if an extension's managed storage has not been configured with a [native manifest](/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_manifests#managed_storage_manifests) or using the [`3rdparty` enterprise policy](https://mozilla.github.io/policy-templates/#3rdparty), an exception is thrown when using this function to access managed storage (see [Firefox bug 1868153](https://bugzil.la/1868153)). This issue can be avoided by catching the error. This issue is related to the lack of support for the [`storage.managed_schema`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/storage) manifest key (see [Firefox bug 1771731](https://bugzil.la/1771731)).
 
 ## Examples
 
@@ -135,14 +128,6 @@ chrome.storage.local.get("kitten", (items) => {
 });
 ```
 
-Or with an arrow function
-
-```js
-chrome.storage.local.get("kitten", (items) => {
-  console.log(items.kitten); // -> {name:"Mog", eats:"mice"}
-});
-```
-
 Or using a Promise
 
 ```js
@@ -152,4 +137,9 @@ let gettingItem = new Promise((resolve) =>
 gettingItem.then(onGot); // -> Object { kitten: Object }
 ```
 
-> **Note:** This API is based on Chromium's [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/storage/) API. This documentation is derived from [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) in the Chromium code.
+## Browser compatibility
+
+{{Compat}}
+
+> [!NOTE]
+> This API is based on Chromium's [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/api/storage) API. This documentation is derived from [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) in the Chromium code.

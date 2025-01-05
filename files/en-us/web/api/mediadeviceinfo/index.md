@@ -22,7 +22,8 @@ The list of devices obtained by calling {{domxref("MediaDevices.enumerateDevices
 - {{domxref("MediaDeviceInfo.label")}} {{ReadOnlyInline}}
   - : Returns a string describing this device (for example "External USB Webcam").
 
-> **Note:** For security reasons, the `label` field is always blank unless an active media stream exists _or_ the user has granted persistent permission for media device access. The set of device labels could otherwise be used as part of a [fingerprinting](/en-US/docs/Glossary/Fingerprinting) mechanism to identify a user.
+> [!NOTE]
+> For security reasons, the `label` field is always blank unless an active media stream exists _or_ the user has granted persistent permission for media device access. The set of device labels could otherwise be used as part of a [fingerprinting](/en-US/docs/Glossary/Fingerprinting) mechanism to identify a user.
 
 ## Instance methods
 

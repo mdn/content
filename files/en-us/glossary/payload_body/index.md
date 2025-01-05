@@ -6,7 +6,7 @@ page-type: glossary-definition
 
 {{GlossarySidebar}}
 
-The HTTP message **payload body** is the _information_ ("payload") part of the data that is sent in the HTTP Message Body (if any), prior to {{HTTPHeader("Transfer-Encoding","transfer encoding")}} being applied. If transfer encoding is not used, the _payload body_ and _message body_ are the same!
+The HTTP message **payload body** is the _information_ ("payload") part of the data that is sent in the HTTP Message Body (if any), prior to [transfer encoding](/en-US/docs/Web/HTTP/Headers/Transfer-Encoding) being applied. If transfer encoding is not used, the _payload body_ and _message body_ are the same!
 
 For example, in this response the message body contains only the payload body: "Mozilla Developer Network":
 

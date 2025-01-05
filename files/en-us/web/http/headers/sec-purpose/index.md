@@ -7,7 +7,7 @@ browser-compat: http.headers.Sec-Purpose
 
 {{HTTPSidebar}}
 
-The **`Sec-Purpose`** {{Glossary("Fetch metadata request header", "fetch metadata request header")}} indicates the purpose for which the requested resource will be used, when that purpose is something other than immediate use by the user-agent.
+The HTTP **`Sec-Purpose`** {{Glossary("fetch metadata request header")}} indicates the purpose for which the requested resource will be used, when that purpose is something other than immediate use by the user-agent.
 
 The only purpose that is currently defined is `prefetch`, which indicates that the resource is being requested in anticipation that it will be needed by a page that is likely to be navigated to in the near future, such as a page linked in search results or a link that a user has hovered over.
 The server can use this knowledge to: adjust the caching expiry for the request, disallow the request, or perhaps to treat it differently when counting page visits.
@@ -23,13 +23,13 @@ Note that if this header is set then a {{HTTPHeader("Sec-Fetch-Dest")}} header i
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>yes (prefix <code>Sec-</code>)</td>
+      <td>Yes (<code>Sec-</code> prefix)</td>
     </tr>
     <tr>
       <th scope="row">
         {{Glossary("CORS-safelisted request header")}}
       </th>
-      <td>no</td>
+      <td>No</td>
     </tr>
   </tbody>
 </table>
@@ -72,7 +72,8 @@ Pragma: no-cache
 Cache-Control: no-cache
 ```
 
-> **Note:** At time of writing FireFox incorrectly sets the `Accept` header as `Accept: */*` for prefetches.
+> [!NOTE]
+> At time of writing Firefox incorrectly sets the `Accept` header as `Accept: */*` for prefetches.
 > The example has been modified to show what the `Accept` value should be.
 > This issue can be tracked in [Firefox bug 1836334](https://bugzil.la/1836334).
 
@@ -86,5 +87,6 @@ Cache-Control: no-cache
 
 ## See also
 
+- {{HTTPHeader("Sec-Fetch-Dest")}}, {{HTTPHeader("Sec-Fetch-Mode")}}, {{HTTPHeader("Sec-Fetch-Site")}}, {{HTTPHeader("Sec-Fetch-User")}} fetch metadata request headers
 - {{Glossary("Prefetch")}} (Glossary)
 - [`<link>`](/en-US/docs/Web/HTML/Element/link) element with attribute [`rel="prefetch"`](/en-US/docs/Web/HTML/Attributes/rel/prefetch)

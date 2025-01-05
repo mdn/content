@@ -19,15 +19,16 @@ In terms of performance, there is no difference between implementing an animatio
 
 ## requestAnimationFrame
 
-The {{domxref("Window.requestAnimationFrame","requestAnimationFrame()")}} API provides an efficient way to make animations in JavaScript. The callback function of the method is called by the browser before the next repaint on each frame. Compared to {{domxref("setTimeout()")}}/{{domxref("setInterval()")}}, which need a specific delay parameter, `requestAnimationFrame()` is much more efficient. Developers can create an animation by changing an element's style each time the loop is called (or updating the Canvas draw, or whatever.)
+The {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}} API provides an efficient way to make animations in JavaScript. The callback function of the method is called by the browser before the next repaint on each frame. Compared to {{domxref("Window.setTimeout", "setTimeout()")}}/{{domxref("Window.setInterval", "setInterval()")}}, which need a specific delay parameter, `requestAnimationFrame()` is much more efficient. Developers can create an animation by changing an element's style each time the loop is called (or updating the Canvas draw, or whatever.)
 
-> **Note:** Like CSS transitions and animations, `requestAnimationFrame()` pauses when the current tab is pushed into the background.
+> [!NOTE]
+> Like CSS transitions and animations, `requestAnimationFrame()` pauses when the current tab is pushed into the background.
 
 For more details read [animating with JavaScript from setInterval to requestAnimationFrame](https://hacks.mozilla.org/2011/08/animating-with-javascript-from-setinterval-to-requestanimationframe/).
 
 ## Performance comparison:<br>transitions vs. requestAnimationFrame
 
-The fact is that, in most cases, the performance of CSS-based animations is almost the same as JavaScripted animations — in Firefox at least. Some JavaScript-based animation libraries, like [GSAP](https://greensock.com/gsap/) and [Velocity.JS](http://velocityjs.org/), even claim that they are able to achieve better performance than [native CSS transitions/animations](https://css-tricks.com/myth-busting-css-animations-vs-javascript/). This can occur because CSS transitions/animations are resampling element styles in the main UI thread before each repaint event happens, which is almost the same as resampling element styles via a `requestAnimationFrame()` callback, also triggered before the next repaint. If both animations are made in the main UI thread, there is no difference performance-wise.
+The fact is that, in most cases, the performance of CSS-based animations is almost the same as JavaScripted animations — in Firefox at least. Some JavaScript-based animation libraries, like [GSAP](https://gsap.com/) and [Velocity.JS](http://velocityjs.org/), even claim that they are able to achieve better performance than [native CSS transitions/animations](https://css-tricks.com/myth-busting-css-animations-vs-javascript/). This can occur because CSS transitions/animations are resampling element styles in the main UI thread before each repaint event happens, which is almost the same as resampling element styles via a `requestAnimationFrame()` callback, also triggered before the next repaint. If both animations are made in the main UI thread, there is no difference performance-wise.
 
 In this section we'll walk you through a performance test, using Firefox, to see what animation method seems better overall.
 
@@ -176,7 +177,8 @@ To enable the OMTA (Off Main Thread Animation) in Firefox, you can go to _about:
 
 After enabling OMTA, try running the above test again. You should see that the FPS of the CSS animations will now be significantly higher.
 
-> **Note:** In Nightly/Developer Edition, you should see that OMTA is enabled by default, so you might have to do the tests the other way around (test with it enabled first, then disable to test without OMTA.)
+> [!NOTE]
+> In Nightly/Developer Edition, you should see that OMTA is enabled by default, so you might have to do the tests the other way around (test with it enabled first, then disable to test without OMTA.)
 
 ## Summary
 

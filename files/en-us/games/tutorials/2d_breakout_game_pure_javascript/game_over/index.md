@@ -191,7 +191,8 @@ document.getElementById("runButton").addEventListener("click", function () {
 
 {{embedlivesample("compare_your_code", 600, 360)}}
 
-> **Note:** Try making the ball move faster when it hits the paddle.
+> [!NOTE]
+> Try making the ball move faster when it hits the paddle.
 
 ## Next steps
 

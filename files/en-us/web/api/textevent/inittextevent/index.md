@@ -3,16 +3,19 @@ title: "TextEvent: initTextEvent() method"
 short-title: initTextEvent()
 slug: Web/API/TextEvent/initTextEvent
 page-type: web-api-instance-method
+status:
+  - deprecated
 browser-compat: api.TextEvent.initTextEvent
 ---
 
-{{APIRef("UI Events")}}
+{{APIRef("UI Events")}}{{deprecated_header}}
 
 The **`initTextEventEvent()`** method of the {{domxref("TextEvent")}} interface initializes the value of a `TextEvent` after it has been created.
 
 This method must be called to set the event before it is dispatched, using {{ domxref("EventTarget.dispatchEvent()") }}.
 
-> **Note:** In general, you won't create these events yourself; they are created by the browser.
+> [!NOTE]
+> In general, you won't create these events yourself; they are created by the browser.
 
 ## Syntax
 

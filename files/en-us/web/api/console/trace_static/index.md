@@ -10,15 +10,16 @@ browser-compat: api.console.trace_static
 
 The **`console.trace()`** static method outputs a stack trace to the console.
 
-> **Note:** In some browsers, `console.trace()` may also output the sequence of calls and asynchronous events leading to the current `console.trace()` which are not on the call stack — to help identify the origin of the current event evaluation loop.
+> [!NOTE]
+> In some browsers, `console.trace()` may also output the sequence of calls and asynchronous events leading to the current `console.trace()` which are not on the call stack — to help identify the origin of the current event evaluation loop.
 
 See [Stack traces](/en-US/docs/Web/API/console#stack_traces) in the {{domxref("console")}} documentation for details and examples.
 
 ## Syntax
 
 ```js-nolint
-trace()
-trace(object1, /* …, */ objectN)
+console.trace()
+console.trace(object1, /* …, */ objectN)
 ```
 
 ### Parameters
@@ -62,5 +63,5 @@ foo
 ## See also
 
 - [Microsoft Edge's documentation for `console.trace()`](https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/console/api#trace)
-- [Node.JS documentation for `console.trace()`](https://nodejs.org/docs/latest/api/console.html#consoletracemessage-args)
+- [Node.js documentation for `console.trace()`](https://nodejs.org/docs/latest/api/console.html#consoletracemessage-args)
 - [Google Chrome's documentation for `console.trace()`](https://developer.chrome.com/docs/devtools/console/api/#trace)

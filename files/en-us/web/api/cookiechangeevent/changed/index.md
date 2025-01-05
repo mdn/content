@@ -10,6 +10,8 @@ browser-compat: api.CookieChangeEvent.changed
 
 The **`changed`** read-only property of the {{domxref("CookieChangeEvent")}} interface returns an array of the cookies that have been changed.
 
+Note that this will exclude cookies which were created with an expiry date in the past, as these cookies are immediately deleted.
+
 ## Value
 
 An array of objects containing the changed cookie(s). Each object contains the following properties:

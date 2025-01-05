@@ -16,8 +16,7 @@ An instance of this object can be retrieved using the {{domxref('HTMLMediaElemen
 For a given {{domxref('HTMLMediaElement')}} object _media_, the individual tracks can be accessed using:
 
 - `media.TextTracks[n]`, to get the n-th text track from the object's list of text tracks
-
-- the `media.textTracks`.[`getTrackById()`](/en-US/docs/Web/API/TextTrackList/getTrackById) method
+- the [`media.textTracks.getTrackById()`](/en-US/docs/Web/API/TextTrackList/getTrackById) method
 
 {{InheritanceDiagram}}
 
@@ -43,7 +42,7 @@ _This interface also inherits methods from its parent interface, {{domxref("Even
 - [`change`](/en-US/docs/Web/API/TextTrackList/change_event)
   - : Fired when a text track has been made active or inactive.
     Also available via the `onchange` property.
-- [`removetrack`](/en-US/docs/Web/API/TextTrackList/removeTrack_event)
+- [`removetrack`](/en-US/docs/Web/API/TextTrackList/removetrack_event)
   - : Fired when a new text track has been removed from the media element.
     Also available via the `onremovetrack` property.
 

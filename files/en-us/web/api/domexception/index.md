@@ -5,13 +5,13 @@ page-type: web-api-interface
 browser-compat: api.DOMException
 ---
 
-{{ APIRef("DOM") }}
+{{APIRef("DOM")}}{{AvailableInWorkers}}
 
 The **`DOMException`** interface represents an abnormal event (called an **exception**) that occurs as a result of calling a method or accessing a property of a web API. This is how error conditions are described in web APIs.
 
 Each exception has a **name**, which is a short "PascalCase"-style string identifying the error or abnormal condition.
 
-`DOMException` is a {{Glossary("Serializable object")}}, so it can be cloned with {{domxref("structuredClone()")}} or copied between [Workers](/en-US/docs/Web/API/Worker) using {{domxref("Worker.postMessage()", "postMessage()")}}.
+`DOMException` is a {{Glossary("Serializable object")}}, so it can be cloned with {{DOMxRef("Window.structuredClone", "structuredClone()")}} or copied between [Workers](/en-US/docs/Web/API/Worker) using {{domxref("Worker.postMessage()", "postMessage()")}}.
 
 ## Constructor
 
@@ -37,7 +37,8 @@ Note that the following deprecated historical errors don't have an error name bu
 - Legacy code value: `6`, legacy constant name: `NO_DATA_ALLOWED_ERR`
 - Legacy code value: `16`, legacy constant name: `VALIDATION_ERR`
 
-> **Note:** Because historically the errors were identified by a numeric value that corresponded with a named variable defined to have that value, some of the entries below indicate the legacy code value and constant name that were used in the past.
+> [!NOTE]
+> Because historically the errors were identified by a numeric value that corresponded with a named variable defined to have that value, some of the entries below indicate the legacy code value and constant name that were used in the past.
 
 - `IndexSizeError`
   - : The index is not in the allowed range. For example, this can be thrown by the {{ domxref("Range") }} object. (Legacy code value: `1` and legacy constant name: `INDEX_SIZE_ERR`)

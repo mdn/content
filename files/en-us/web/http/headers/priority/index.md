@@ -7,18 +7,19 @@ browser-compat: http.headers.Priority
 
 {{HTTPSidebar}}
 
-The **`Priority`** HTTP header is sent in requests to indicate a client's preference for the priority order at which the response containing the requested resource should be sent, relative to other resource requests on the same connection. If the header is not specified in the request, a default priority is assumed.
+The HTTP **`Priority`** header indicates a client's preference for the priority order at which the response containing the requested resource should be sent, relative to other resource requests on the same connection.
+If the header is not specified in the request, a default priority is assumed.
+The server may also include this header in responses in order to indicate it has an interest in changing the prioritization preferences the client advertized.
+In responses, this information can be used as an input to the prioritization process for caching servers and other servers that are forwarding the response.
 
-The server is not bound by client prioritization and might only use client requests as hints for its own prioritization process.
+The server is not bound by client prioritization and might only use client priorities as hints for its own prioritization process.
 For example, a server may know that a specific image is vital for user experience and should be sent at the highest priority.
 Server prioritization might also be affected by factors such as network congestion.
 
 This request may be cached, and the server is expected to control the cacheability or the applicability of the cached response using the header fields that control the caching behavior, such as {{HTTPHeader("Cache-Control")}} and {{HTTPHeader("Vary")}}.
 
-The server may also include this header in responses in order to indicate it has an interest in changing the prioritization.
-This information can then be used as an input to the prioritization process for caching servers and other servers that are forwarding the response.
-
-> **Note:** This header is one part of the "Extensible Prioritization Scheme for HTTP" defined in {{rfc("9218")}}.
+> [!NOTE]
+> This header is one part of the "Extensible Prioritization Scheme for HTTP" defined in {{rfc("9218")}}.
 > There are also HTTP/2 and HTTP/3 `PRIORITY_UPDATE` frames that can be used to re-prioritize a resource request after it has been sent.
 > The request can be sent in any HTTP version.
 
@@ -33,7 +34,7 @@ This information can then be used as an input to the prioritization process for 
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>no</td>
+      <td>No</td>
     </tr>
   </tbody>
 </table>
@@ -75,7 +76,8 @@ Priority: u=<priority>, i
     If the browser does not set this directive then it is indicating that it will not process the resource incrementally.
     Servers should in this case send responses with the same urgency one by one, in the order in which their associated requests were generated.
 
-> **Note:** Servers are expected to ignore directives on this header that they do not understand.
+> [!NOTE]
+> Servers are expected to ignore directives on this header that they do not understand.
 > New directives that are added in future are expected to be compatible with these existing directives so that they can be safely ignored.
 
 ## Examples
@@ -104,7 +106,8 @@ The urgency is set to 2, indicating that the browser considers it to be quite hi
 priority = u=2
 ```
 
-> **Note:** The requests above use the human-readable format from the HTTP/2 or HTTP/3 specifications.
+> [!NOTE]
+> The requests above use the human-readable format from the HTTP/2 or HTTP/3 specifications.
 > The HTTP/1.1 format used in most of this documentation would be something like:
 >
 > ```http
@@ -154,3 +157,8 @@ priority = u=1, i
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{HTTPHeader("Cache-Control")}}
+- {{HTTPHeader("Vary")}}

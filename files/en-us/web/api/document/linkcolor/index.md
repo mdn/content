@@ -32,9 +32,7 @@ document.linkColor = "blue";
 
 ## Specifications
 
-HTML5
-
-`Document.linkColor` is [deprecated in DOM Level 2 HTML](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-26809268).
+{{Specifications}}
 
 ## Browser compatibility
 

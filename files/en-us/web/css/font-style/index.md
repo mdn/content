@@ -51,11 +51,34 @@ Variable fonts can offer a fine control over the degree to which an oblique face
 
 For TrueType or OpenType variable fonts, the `"slnt"` variation is used to implement varying slant angles for oblique, and the `"ital"` variation with a value of 1 is used to implement italic values. See {{cssxref("font-variation-settings")}}.
 
-> **Note:** For the example below to work, you'll need a browser that supports the CSS Fonts Level 4 syntax in which `font-style: oblique` can accept an `<angle>`. The demo loads with `font-style: oblique 23deg;`. Change the value to see the slant of the text change.
+Click "Play" in the code blocks below to edit the example in the MDN Playground. Change the angle value to see the slant of the text change.
 
-{{EmbedGHLiveSample("css-examples/variable-fonts/oblique.html", '100%', 860)}}
+```html live-sample___oblique-example
+<p class="sample">
+  ...it would not be wonderful to meet a Megalosaurus, forty feet long or so,
+  waddling like an elephantine lizard up Holborn Hill.
+</p>
+```
 
-## Accessibility concerns
+```css live-sample___oblique-example
+@font-face {
+  src: url("https://mdn.github.io/shared-assets/fonts/variable-fonts/AmstelvarAlpha-VF.ttf");
+  font-family: "AmstelvarAlpha";
+  font-style: normal;
+}
+
+.sample {
+  font:
+    2rem "AmstelvarAlpha",
+    sans-serif;
+  /*font-variation-settings: "slnt" 12;*/
+  font-style: oblique 23deg;
+}
+```
+
+{{EmbedLiveSample("oblique-example", "", "200px")}}
+
+## Accessibility
 
 Large sections of text set with a `font-style` value of `italic` may be difficult for people with cognitive concerns such as Dyslexia to read.
 
@@ -108,4 +131,4 @@ Large sections of text set with a `font-style` value of `italic` may be difficul
 
 - {{cssxref("font-family")}}
 - {{cssxref("font-weight")}}
-- [Fundamental text and font styling](/en-US/docs/Learn/CSS/Styling_text/Fundamentals)
+- [Learn: Fundamental text and font styling](/en-US/docs/Learn_web_development/Core/Text_styling/Fundamentals)

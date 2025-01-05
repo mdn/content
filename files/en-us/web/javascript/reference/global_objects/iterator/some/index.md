@@ -2,12 +2,10 @@
 title: Iterator.prototype.some()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/some
 page-type: javascript-instance-method
-status:
-  - experimental
 browser-compat: javascript.builtins.Iterator.some
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{JSRef}}
 
 The **`some()`** method of {{jsxref("Iterator")}} instances is similar to {{jsxref("Array.prototype.some()")}}: it tests whether at least one element produced by the iterator passes the test implemented by the provided function. It returns a boolean value.
 
@@ -34,7 +32,7 @@ some(callbackFn)
 
 `some()` iterates the iterator and invokes the `callbackFn` function once for each element. It returns `true` immediately if the callback function returns a truthy value. Otherwise, it iterates until the end of the iterator and returns `false`. If `some()` returns `true`, the underlying iterator is closed by calling its `return()` method.
 
-The main advantage of iterator helpers over array methods is their ability to work with infinite iterators. With infinite iterators, `some()` returns `true` as soon as the first truthy value is found. If the `callbackFn` always returns a falsy value, the method never returns.
+The main advantage of iterator helpers over array methods is that they are lazy, meaning that they only produce the next value when requested. This avoids unnecessary computation and also allows them to be used with infinite iterators. With infinite iterators, `some()` returns `true` as soon as the first truthy value is found. If the `callbackFn` always returns a falsy value, the method never returns.
 
 ## Examples
 
@@ -54,8 +52,7 @@ const isEven = (x) => x % 2 === 0;
 console.log(fibonacci().some(isEven)); // true
 
 const isNegative = (x) => x < 0;
-const isPositive = (x) => x > 0;
-console.log(fibonacci().take(10).some(isPositive)); // false
+console.log(fibonacci().take(10).some(isNegative)); // false
 console.log(fibonacci().some(isNegative)); // Never completes
 ```
 

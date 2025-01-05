@@ -134,7 +134,7 @@ Within the manifest JSON object, the `icons` member specifies an array of one or
 
 All icons should have the same look and feel to ensure users recognize your PWA, but the larger the icon, the greater the detail it can contain. While all icon files are squares, some operating systems render different shapes, cutting sections off, or "masking" the icon, to meet the UI, or shrinking and centering the icon with a background if the icon is not maskable. The [safe zone](/en-US/docs/Web/Progressive_web_apps/How_to/Define_app_icons#support_masking), the area that will render okay if the icon is masked as a circle, is the inner 80% of the image file. Icons are labeled as safe to be masked by the `purpose` member which, when set to `maskable`, defines the [icon as adaptive](https://web.dev/articles/maskable-icon).
 
-In Safari, and therefor for iOS and iPadOS, if you include the [non-standard `apple-touch-icon`](/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#adding_custom_icons_to_your_site) in the {{HTMLElement("head")}} of the HTML document via {{HTMLElement("link")}}, they will take precedence over manifest-declared icons.
+In Safari, and therefor for iOS and iPadOS, if you include the [non-standard `apple-touch-icon`](/en-US/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#adding_custom_icons_to_your_site) in the {{HTMLElement("head")}} of the HTML document via {{HTMLElement("link")}}, they will take precedence over manifest-declared icons.
 
 ### Task
 
@@ -236,7 +236,7 @@ The {{HTMLelement("head")}} of `index.html` may now look similar to:
 </head>
 ```
 
-View the [`cycletracker.json` file](https://mdn.github.io/pwa-examples/cycletracker/manifest_file/cycletracker.json) and view the [project source code](https://github.com/mdn/pwa-examples/blob/main/cycletracker/manifest_file/) on GitHub.
+View the [`cycletracker.json` file](https://mdn.github.io/pwa-examples/cycletracker/manifest_file/cycletracker.json) and view the [project source code](https://github.com/mdn/pwa-examples/tree/main/cycletracker/manifest_file) on GitHub.
 
 With a manifest file and when loaded from an `https://` URL (or `localhost`), [most browsers](/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable#browser_support) will recognize your site as a PWA and some will prompt to install it. To make our PWA work offline, we'll still need to add a service worker.
 

@@ -17,7 +17,7 @@ See the {{domxref("IDBObjectStore.add")}} method for an _insert only_ method.
 
 Bear in mind that if you have a {{domxref("IDBCursor","IDBCursor")}} to the record you
 want to update, updating it with {{domxref("IDBCursor.update()")}} is preferable to
-using {{domxref("IDBObjectStore.put()")}}. Doing so makes it clear that an existing
+using `IDBObjectStore.put()`. Doing so makes it clear that an existing
 record will be updated, instead of a new record being inserted.
 
 ## Syntax

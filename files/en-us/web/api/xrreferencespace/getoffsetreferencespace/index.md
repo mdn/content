@@ -92,7 +92,7 @@ mouse to change the viewing angle.
 
 First, we add an event handler for {{domxref("Element.mousemove_event", "mousemove")}}
 events, which calls our code to perform the rotation if the right mouse button is down.
-Note also that we set {{domxref("Element.oncontextmenu", "oncontextmenu")}} up to be
+Note also that we set {{domxref("Element.contextmenu_event", "oncontextmenu")}} up to be
 ignored by calling {{domxref("Event.preventDefault", "preventDefault()")}} on those
 events. This prevents the right-clicks from causing the context menu from appearing in
 the browser.
@@ -161,7 +161,7 @@ function applyMouseMovement(refSpace) {
 
 This function creates an inverse orientation matrix—used to orient the viewer—from the
 current pitch and yaw values, then uses that matrix as the source of the orientation
-when calling {{domxref("XRRigidTransform.XRRigidTransform", "new XRRigidTransform()")}}.
+when calling {{domxref("XRRigidTransform.XRRigidTransform", "XRRigidTransform()")}}.
 The new {{domxref("XRRigidTransform")}}'s reference space is then fetched and returned
 to the caller.
 

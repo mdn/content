@@ -57,7 +57,7 @@ if ("virtualKeyboard" in navigator) {
 
 ### Detect the virtual keyboard geometry using CSS environment variables
 
-The VirtualKeyboard API also exposes the following {{cssxref("env", "CSS environment variables", "", "nocode")}}: `keyboard-inset-top`, `keyboard-inset-right`, `keyboard-inset-bottom`, `keyboard-inset-left`, `keyboard-inset-width`, and `keyboard-inset-height`.
+The VirtualKeyboard API also exposes the following [CSS environment variables](/en-US/docs/Web/CSS/env): `keyboard-inset-top`, `keyboard-inset-right`, `keyboard-inset-bottom`, `keyboard-inset-left`, `keyboard-inset-width`, and `keyboard-inset-height`.
 
 The `keyboard-inset-*` CSS environment variables are useful to adapt your layout to the virtual keyboard appearance using CSS. They define a rectangle by its top, right, bottom, and left insets from the edge of the viewport. The `width` and `height` variables are also available if needed.
 

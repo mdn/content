@@ -31,7 +31,7 @@ Intl.DateTimeFormat(locales, options)
 
   - : A string with a BCP 47 language tag or an {{jsxref("Intl.Locale")}} instance, or an array of such locale identifiers. The runtime's default locale is used when `undefined` is passed or when none of the specified locale identifiers is supported. For the general form and interpretation of the `locales` argument, see [the parameter description on the `Intl` main page](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_argument).
 
-    The following Unicode extension key is allowed:
+    The following Unicode extension keys are allowed:
 
     - `nu`
       - : See [`numberingSystem`](#numberingsystem).
@@ -100,7 +100,8 @@ Intl.DateTimeFormat(locales, options)
   - : The formatting style used for day periods like "in the morning", "am", "noon", "n" etc. Possible values are
     `"narrow"`, `"short"`, and `"long"`.
 
-    > **Note:** This option only has an effect if a 12-hour clock (`hourCycle: "h12"` or `hourCycle: "h11"`) is used. Many locales use the same string irrespective of the width specified.
+    > [!NOTE]
+    > This option only has an effect if a 12-hour clock (`hourCycle: "h12"` or `hourCycle: "h11"`) is used. Many locales use the same string irrespective of the width specified.
 
 - `hour`
   - : The representation of the hour. Possible values are `"numeric"` and `"2-digit"`.
@@ -127,7 +128,8 @@ Intl.DateTimeFormat(locales, options)
     - `"longGeneric"`
       - : Long generic non-location format (e.g.: `Pacific Time`, `Nordamerikanische Westküstenzeit`)
 
-    > **Note:** Timezone display may fall back to another format if a required string is unavailable. For example, the non-location formats should display the timezone without a specific country/city location like "Pacific Time", but may fall back to a timezone like "Los Angeles Time".
+    > [!NOTE]
+    > Timezone display may fall back to another format if a required string is unavailable. For example, the non-location formats should display the timezone without a specific country/city location like "Pacific Time", but may fall back to a timezone like "Los Angeles Time".
 
 The default value for each date-time component option is {{jsxref("undefined")}}, but if all component properties are {{jsxref("undefined")}}, then `year`, `month`, and `day` default to `"numeric"`. If any of the date-time component options is specified, then `dateStyle` and `timeStyle` must be `undefined`.
 
@@ -158,7 +160,8 @@ The default value for each date-time component option is {{jsxref("undefined")}}
 
 A new `Intl.DateTimeFormat` object.
 
-> **Note:** The text below describes behavior that is marked by the specification as "optional". It may not work in all environments. Check the [browser compatibility table](#browser_compatibility).
+> [!NOTE]
+> The text below describes behavior that is marked by the specification as "optional". It may not work in all environments. Check the [browser compatibility table](#browser_compatibility).
 
 Normally, `Intl.DateTimeFormat()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new), and a new `Intl.DateTimeFormat` instance is returned in both cases. However, if the [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this) value is an object that is [`instanceof`](/en-US/docs/Web/JavaScript/Reference/Operators/instanceof) `Intl.DateTimeFormat` (doesn't necessarily mean it's created via `new Intl.DateTimeFormat`; just that it has `Intl.DateTimeFormat.prototype` in its prototype chain), then the value of `this` is returned instead, with the newly created `Intl.DateTimeFormat` object hidden in a `[Symbol(IntlLegacyConstructedSymbol)]` property (a unique symbol that's reused between instances).
 

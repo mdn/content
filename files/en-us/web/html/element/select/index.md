@@ -13,7 +13,7 @@ The **`<select>`** [HTML](/en-US/docs/Web/HTML) element represents a control tha
 
 The above example shows typical `<select>` usage. It is given an `id` attribute to enable it to be associated with a {{htmlelement("label")}} for accessibility purposes, as well as a `name` attribute to represent the name of the associated data point submitted to the server. Each menu option is defined by an {{htmlelement("option")}} element nested inside the `<select>`.
 
-Each `<option>` element should have a [`value`](/en-US/docs/Web/HTML/Element/option#value) attribute containing the data value to submit to the server when that option is selected. If no `value` attribute is included, the value defaults to the text contained inside the element. You can include a [`selected`](/en-US/docs/Web/HTML/Element/option#selected) attribute on an `<option>` element to make it selected by default when the page first loads.
+Each `<option>` element should have a [`value`](/en-US/docs/Web/HTML/Element/option#value) attribute containing the data value to submit to the server when that option is selected. If no `value` attribute is included, the value defaults to the text contained inside the element. You can include a [`selected`](/en-US/docs/Web/HTML/Element/option#selected) attribute on an `<option>` element to make it selected by default when the page first loads. If no `selected` attribute is specified, the first `<option>` element will be selected by default.
 
 A `<select>` element is represented in JavaScript by an {{domxref("HTMLSelectElement")}} object, and this object has a {{domxref("HTMLSelectElement.value", "value")}} property which contains the value of the selected `<option>`.
 
@@ -21,7 +21,7 @@ The `<select>` element has some unique attributes you can use to control it, suc
 
 You can further nest {{HTMLElement("option")}} elements inside {{HTMLElement("optgroup")}} elements to create separate groups of options inside the dropdown. You can also include {{HTMLElement("hr")}} elements to create separators that add visual breaks between options.
 
-For further examples, see [The native form widgets: Drop-down content](/en-US/docs/Learn/Forms/Other_form_controls#drop-down_controls).
+For further examples, see [The native form widgets: Drop-down content](/en-US/docs/Learn_web_development/Extensions/Forms/Other_form_controls#drop-down_controls).
 
 ## Attributes
 
@@ -35,7 +35,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
   - : This Boolean attribute indicates that the user cannot interact with the control. If this attribute is not specified, the control inherits its setting from the containing element, for example {{htmlelement("fieldset")}}; if there is no containing element with the `disabled` attribute set, then the control is enabled.
 - `form`
 
-  - : The {{HTMLElement("form")}} element to associate the `<select>` with (its _form owner_). The value of this attribute must be the [`id`](/en-US/docs/Web/HTML/Global_attributes#id) of a `<form>` in the same document. (If this attribute is not set, the `<select>` is associated with its ancestor `<form>` element, if any.)
+  - : The {{HTMLElement("form")}} element to associate the `<select>` with (its _form owner_). The value of this attribute must be the [`id`](/en-US/docs/Web/HTML/Global_attributes/id) of a `<form>` in the same document. (If this attribute is not set, the `<select>` is associated with its ancestor `<form>` element, if any.)
 
     This attribute lets you associate `<select>` elements to `<form>`s anywhere in the document, not just inside a `<form>`. It can also override an ancestor `<form>` element.
 
@@ -49,7 +49,8 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
   - : If the control is presented as a scrolling list box (e.g. when `multiple` is specified), this attribute represents the number of rows in the list that should be visible at one time. Browsers are not required to present a select element as a scrolled list box. The default value is `0`.
 
-    > **Note:** According to the HTML specification, the default value for size should be `1`; however, in practice, this has been found to break some websites, and no other browser currently does that, so Mozilla has opted to continue to return `0` for the time being with Firefox.
+    > [!NOTE]
+    > According to the HTML specification, the default value for size should be `1`; however, in practice, this has been found to break some websites, and no other browser currently does that, so Mozilla has opted to continue to return `0` for the time being with Firefox.
 
 ## Usage notes
 
@@ -59,80 +60,33 @@ On a desktop computer, there are a number of ways to select multiple options in 
 
 Mouse users can hold the <kbd>Ctrl</kbd>, <kbd>Command</kbd>, or <kbd>Shift</kbd> keys (depending on what makes sense for your operating system) and then click multiple options to select/deselect them.
 
-> **Warning:** The mechanism for selecting multiple non-contiguous items via the keyboard described below currently only seems to work in Firefox.
+> [!WARNING]
+> The mechanism for selecting multiple non-contiguous items via the keyboard described below currently only seems to work in Firefox.
 >
 > On macOS, the <kbd>Ctrl</kbd> + <kbd>Up</kbd> and <kbd>Ctrl</kbd> + <kbd>Down</kbd> shortcuts conflict with the OS default shortcuts for _Mission Control_ and _Application windows_, so you'll have to turn these off before it will work.
 
 Keyboard users can select multiple contiguous items by:
 
-- Focusing on the `<select>` element (e.g. using
-
-  <kbd>Tab</kbd>
-
-  ).
-
-- Selecting an item at the top or bottom of the range they want to select using the
-
-  <kbd>Up</kbd>
-
-  and
-
-  <kbd>Down</kbd>
-
-  cursor keys to go up and down the options.
-
-- Holding down the
-
-  <kbd>Shift</kbd>
-
-  key and then using the
-
-  <kbd>Up</kbd>
-
-  and
-
-  <kbd>Down</kbd>
-
-  cursor keys to increase or decrease the range of items selected.
+- Focusing on the `<select>` element (e.g. using <kbd>Tab</kbd>).
+- Selecting an item at the top or bottom of the range they want to select using the <kbd>Up</kbd> and <kbd>Down</kbd> cursor keys to go up and down the options.
+- Holding down the <kbd>Shift</kbd> key and then using the <kbd>Up</kbd> and <kbd>Down</kbd> cursor keys to increase or decrease the range of items selected.
 
 Keyboard users can select multiple non-contiguous items by:
 
-- Focusing on the `<select>` element (e.g. using
-
-  <kbd>Tab</kbd>
-
-  ).
-
-- Holding down the
-
-  <kbd>Ctrl</kbd>
-
-  key then using the
-
-  <kbd>Up</kbd>
-
-  and
-
-  <kbd>Down</kbd>
-
-  cursor keys to change the "focused" select option, i.e. the one that will be selected if you choose to do so. The "focused" select option is highlighted with a dotted outline, in the same way as a keyboard-focused link.
-
-- Pressing
-
-  <kbd>Space</kbd>
-
-  to select/deselect "focused" select options.
+- Focusing on the `<select>` element (e.g. using <kbd>Tab</kbd>).
+- Holding down the <kbd>Ctrl</kbd> key then using the <kbd>Up</kbd> and <kbd>Down</kbd> cursor keys to change the "focused" select option, i.e. the one that will be selected if you choose to do so. The "focused" select option is highlighted with a dotted outline, in the same way as a keyboard-focused link.
+- Pressing <kbd>Space</kbd> to select/deselect "focused" select options.
 
 ## Styling with CSS
 
-The `<select>` element is notoriously difficult to style productively with CSS. You can affect certain aspects like any element — for example, manipulating the [box model](/en-US/docs/Learn/CSS/Building_blocks/The_box_model), the [displayed font](/en-US/docs/Web/CSS/CSS_fonts), etc., and you can use the {{cssxref("appearance")}} property to remove the default system `appearance`.
+The `<select>` element is notoriously difficult to style productively with CSS. You can affect certain aspects like any element — for example, manipulating the [box model](/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model), the [displayed font](/en-US/docs/Web/CSS/CSS_fonts), etc., and you can use the {{cssxref("appearance")}} property to remove the default system `appearance`.
 
-However, these properties don't produce a consistent result across browsers, and it is hard to do things like line different types of form element up with one another in a column. The `<select>` element's internal structure is complex, and hard to control. If you want to get full control, you should consider using a library with good facilities for styling form widgets, or try rolling your own dropdown menu using non-semantic elements, JavaScript, and [WAI-ARIA](/en-US/docs/Learn/Accessibility/WAI-ARIA_basics) to provide semantics.
+However, these properties don't produce a consistent result across browsers, and it is hard to do things like line different types of form element up with one another in a column. The `<select>` element's internal structure is complex, and hard to control. If you want to get full control, you should consider using a library with good facilities for styling form widgets, or try rolling your own dropdown menu using non-semantic elements, JavaScript, and [WAI-ARIA](/en-US/docs/Learn_web_development/Core/Accessibility/WAI-ARIA_basics) to provide semantics.
 
 For more useful information on styling `<select>`, see:
 
-- [Styling HTML forms](/en-US/docs/Learn/Forms/Styling_web_forms)
-- [Advanced styling for HTML forms](/en-US/docs/Learn/Forms/Advanced_form_styling)
+- [Styling HTML forms](/en-US/docs/Learn_web_development/Extensions/Forms/Styling_web_forms)
+- [Advanced styling for HTML forms](/en-US/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling)
 - The {{cssxref("field-sizing")}} property, which controls how `<select>` elements are sized in relation to their contained options.
 
 ## Accessibility
@@ -143,7 +97,7 @@ The `<hr>` within a `<select>` should be considered purely decorative, as they a
 
 ### Basic select
 
-The following example creates a very simple dropdown menu, the second option of which is selected by default.
+The following example creates a three-value dropdown menu, the second option of which is selected by default.
 
 ```html
 <!-- The second value will be selected initially -->

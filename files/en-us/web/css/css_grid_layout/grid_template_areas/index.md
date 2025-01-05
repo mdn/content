@@ -99,7 +99,7 @@ Using this method we do not need to specify anything at all on the individual gr
 
 ## Leaving a grid cell empty
 
-We have completely filled our grid with areas in this example, leaving no white space. However you can leave grid cells empty with this method of layout. To leave a cell empty use the full stop character, '`.`'. If I want to only display the footer directly under the main content I would need to leave the three cells underneath the sidebar empty.
+We have completely filled our grid with areas in this example, leaving no white space. However you can leave grid cells empty with this method of layout. To leave a cell empty use the full stop character, `.`. If I want to only display the footer directly under the main content I would need to leave the three cells underneath the sidebar empty.
 
 ```css
 .header {
@@ -481,6 +481,6 @@ You can use this syntax in the exact same way as the {{cssxref("grid-template")}
 }
 ```
 
-We will revisit the other functionality offered by this shorthand later in these guides when we take a look at auto placement and the grid-auto-flow property.
+We will revisit the other functionality offered by this shorthand later in these guides when we take a look at auto placement and the `grid-auto-flow` property.
 
 If you have worked through these initial guides you now should be in a position to create grid layouts using line-based placement or named areas. Take some time to build some common layout patterns using grid, while there are lots of new terms to learn, the syntax is relatively straightforward. As you develop examples, you are likely to come up with some questions and use cases for things we haven't covered yet. In the rest of these guides we will be looking at some more of the detail included in the specification – in order that you can begin to create advanced layouts with it.

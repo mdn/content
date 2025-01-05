@@ -11,7 +11,8 @@ The **`<optgroup>`** [HTML](/en-US/docs/Web/HTML) element creates a grouping of 
 
 {{EmbedInteractiveExample("pages/tabbed/optgroup.html", "tabbed-standard")}}
 
-> **Note:** Optgroup elements may not be nested.
+> [!NOTE]
+> Optgroup elements may not be nested.
 
 ## Attributes
 

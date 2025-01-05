@@ -7,7 +7,7 @@ browser-compat: api.StorageManager
 
 {{securecontext_header}}{{DefaultAPISidebar("Storage")}} {{AvailableInWorkers}}
 
-The [Storage Standard](https://storage.spec.whatwg.org) defines a shared storage system designed to be used by all APIs and technologies that websites can use to store data in a user's browser.
+The [Storage Standard](https://storage.spec.whatwg.org/) defines a shared storage system designed to be used by all APIs and technologies that websites can use to store data in a user's browser.
 
 The data stored for a website which is managed by the Storage Standard usually includes [IndexedDB databases](/en-US/docs/Web/API/IndexedDB_API) and [Cache API data](/en-US/docs/Web/API/Cache), but may include other kind of site-accessible data such as [Web Storage API data](/en-US/docs/Web/API/Web_Storage_API).
 

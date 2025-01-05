@@ -240,7 +240,7 @@ svg:not(:root) {
 }
 ```
 
-The code snippet below includes three {{SVGElement("svg")}}s with different `viewbox` attribute values and identical {{SVGElement("rect")}} and {{SVGElement("circle")}} descendants creating very different results. The size of `<rect>` is defined using relative units, so the visual size of the square produced looks unchanged regardless of the `viewBox` value. The radius length {{SVGAttr("r")}} attribute of the `<circle>` is the same in each case, but this user unit value is resolved against the size defined in the `viewBox`, producing different results in each case.
+The code snippet below includes three {{SVGElement("svg")}}s with different `viewBox` attribute values and identical {{SVGElement("rect")}} and {{SVGElement("circle")}} descendants creating very different results. The size of `<rect>` is defined using relative units, so the visual size of the square produced looks unchanged regardless of the `viewBox` value. The radius length {{SVGAttr("r")}} attribute of the `<circle>` is the same in each case, but this user unit value is resolved against the size defined in the `viewBox`, producing different results in each case.
 
 ```html
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
@@ -261,9 +261,10 @@ The code snippet below includes three {{SVGElement("svg")}}s with different `vie
 
 {{EmbedLiveSample("Examples", '100%', 200)}}
 
-The user units of `r="4"` are resolved against the `viewBox` sizes, creating dramatically different circle sizes. The exact effect of the `viewbox` attribute is influenced by the {{ SVGAttr("preserveAspectRatio") }} attribute.
+The user units of `r="4"` are resolved against the `viewBox` sizes, creating dramatically different circle sizes. The exact effect of the `viewBox` attribute is influenced by the {{ SVGAttr("preserveAspectRatio") }} attribute.
 
-> **Note:** Values for `width` or `height` lower or equal to `0` disable rendering of the element.
+> [!NOTE]
+> Values for `width` or `height` lower or equal to `0` disable rendering of the element.
 
 ## Specifications
 

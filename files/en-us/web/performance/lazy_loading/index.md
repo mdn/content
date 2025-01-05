@@ -48,13 +48,13 @@ By default, CSS is treated as a [render blocking](/en-US/docs/Web/Performance/Cr
 <link href="print.css" rel="stylesheet" media="print" />
 ```
 
-It is possible to perform some [CSS optimizations](/en-US/docs/Learn/Performance/CSS) to achieve that.
+It is possible to perform some [CSS optimizations](/en-US/docs/Learn_web_development/Extensions/Performance/CSS) to achieve that.
 
 ### Fonts
 
 By default, font requests are delayed until the render tree is constructed, which can result in delayed text rendering.
 
-It is possible to override the default behavior and preload web font resources using `<link rel="preload">`, the [CSS font-display property](/en-US/docs/Web/CSS/@font-face/font-display), and the [Font Loading API](/en-US/docs/Web/API/CSS_Font_Loading_API).
+It is possible to override the default behavior and preload web font resources using `<link rel="preload">`, the [CSS `font-display` descriptor](/en-US/docs/Web/CSS/@font-face/font-display), and the [Font Loading API](/en-US/docs/Web/API/CSS_Font_Loading_API).
 
 See also: [Element Link](/en-US/docs/Web/HTML/Element/link).
 
@@ -94,4 +94,4 @@ When browser compatibility is crucial, there are a few options:
 ## See also
 
 - [Render blocking CSS](https://web.dev/articles/critical-rendering-path/render-blocking-css)
-- [Use lazy loading to improve loading speed](https://web.dev/articles/lazy-loading)
+- [Browser-level image lazy loading for the web](https://web.dev/articles/browser-level-image-lazy-loading)

@@ -11,7 +11,8 @@ browser-compat: api.Node.removeChild
 The **`removeChild()`** method of the {{domxref("Node")}} interface
 removes a child node from the DOM and returns the removed node.
 
-> **Note:** As long as a reference is kept on the removed child,
+> [!NOTE]
+> As long as a reference is kept on the removed child,
 > it still exists in memory, but is no longer part of the DOM.
 > It can still be reused later in the code.
 >

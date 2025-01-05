@@ -141,7 +141,8 @@ The rotation center point is always the canvas origin. To change the center poin
 
 In this example, we'll use the `rotate()` method to first rotate a rectangle from the canvas origin and then from the center of the rectangle itself with the help of `translate()`.
 
-> **Note:** Angles are in radians, not degrees. To convert, we are using: `radians = (Math.PI/180)*degrees`.
+> [!NOTE]
+> Angles are in radians, not degrees. To convert, we are using: `radians = (Math.PI/180)*degrees`.
 
 ```js
 function draw() {
@@ -248,17 +249,17 @@ Finally, the following transformation methods allow modifications directly to th
 
 The parameters of this function are:
 
-- `a (m11)`
+- `a` (`m11`)
   - : Horizontal scaling.
-- `b (m12)`
+- `b` (`m12`)
   - : Horizontal skewing.
-- `c (m21)`
+- `c` (`m21`)
   - : Vertical skewing.
-- `d (m22)`
+- `d` (`m22`)
   - : Vertical scaling.
-- `e (dx)`
+- `e` (`dx`)
   - : Horizontal moving.
-- `f (dy)`
+- `f` (`dy`)
   - : Vertical moving.
 - {{domxref("CanvasRenderingContext2D.setTransform", "setTransform(a, b, c, d, e, f)")}}
   - : Resets the current transform to the identity matrix, and then invokes the `transform()` method with the same arguments. This basically undoes the current transformation, then sets the specified transform, all in one step.

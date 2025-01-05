@@ -1,11 +1,12 @@
 ---
-title: Comments
+title: HTML Comments (<!-- … -->)
+short-title: Comments
 slug: Web/HTML/Comments
 page-type: guide
 spec-urls: https://html.spec.whatwg.org/multipage/syntax.html#comments
 ---
 
-{{CSSRef}}
+{{HTMLSidebar}}
 
 An HTML **comment** is used to add explanatory notes to the markup or to prevent the browser from interpreting specific parts of the document.
 
@@ -21,7 +22,8 @@ Comments can be used on a single line, or span multiple lines. They can be used 
 - Before and after the {{HTMLElement("html")}} element
 - As the content of most elements except: {{HTMLElement("script")}}, {{HTMLElement("style")}}, {{HTMLElement("title")}}, {{HTMLElement("textarea")}}, because these elements interpret their content as raw text
 
-> **Note:** While `<script>` elements should not have HTML comments and should use [JavaScript comments](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#comments) instead, there was a legacy practice to enclose the whole script content in an HTML comment so ancient browsers that don't support JavaScript don't render it as text. This is now a [legacy feature of JavaScript itself](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#html_comments) and you should not rely on it.
+> [!NOTE]
+> While `<script>` elements should not have HTML comments and should use [JavaScript comments](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#comments) instead, there was a legacy practice to enclose the whole script content in an HTML comment so ancient browsers that don't support JavaScript don't render it as text. This is now a [legacy feature of JavaScript itself](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#html_comments) and you should not rely on it.
 
 ## Syntax
 

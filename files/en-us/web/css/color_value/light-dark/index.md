@@ -46,9 +46,9 @@ Functional notation: `light-dark(light-color, dark-color)`
 - `dark-color`
   - : {{CSSXref("&lt;color&gt;")}} value to be set for dark {{CSSXref("color-scheme")}}.
 
-### Formal syntax
+## Formal syntax
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Example
 
@@ -106,7 +106,8 @@ code {
 
 In addition to enabling the `light-dark()` function, the `color-scheme` property enables overriding a user's color scheme for document sections. Forcing a page section to only use a light or dark color scheme can be done by setting the `color-scheme` property to `light` or `dark`.
 
-> **Note:** Generally this should not be done, we are using it here for demonstration purposes. If the user has made a preference, you generally should not override their preferences.
+> [!NOTE]
+> Generally this should not be done, we are using it here for demonstration purposes. If the user has made a preference, you generally should not override their preferences.
 
 ```css
 .light {
@@ -145,4 +146,4 @@ section {
 - [`prefers-contrast`](/en-US/docs/Web/CSS/@media/prefers-contrast) {{cssxref("@media")}} feature
 - [`contrast()`](/en-US/docs/Web/CSS/filter-function/contrast)
 - [WCAG: color contrast](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast)
-- {{cssxref('--*', 'CSS custom properties')}} and {{cssxref("var")}}
+- [CSS custom properties](/en-US/docs/Web/CSS/--*) and {{cssxref("var")}}

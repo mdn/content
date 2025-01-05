@@ -7,7 +7,7 @@ browser-compat: api.HTMLInputElement
 
 {{APIRef("HTML DOM")}}
 
-The **`HTMLInputElement`** interface provides special properties and methods for manipulating the options, layout, and presentation of {{HtmlElement("input")}} elements.
+The **`HTMLInputElement`** interface provides special properties and methods for manipulating the options, layout, and presentation of {{HTMLElement("input")}} elements.
 
 {{InheritanceDiagram}}
 
@@ -51,11 +51,11 @@ Some properties only apply to input element types that support the corresponding
 
 - {{domxref("HTMLInputElement.popoverTargetAction", "popoverTargetAction")}}
 
-  - : Gets and sets the action to be performed (`"hide"`, `"show"`, or `"toggle"`) on a popover element being controlled by an {{htmlelement("input")}} element of `type="button"`. It reflects the value of the [`popovertargetaction`](/en-US/docs/Web/HTML/Element/input#popovertargetaction) HTML attribute.
+  - : Gets and sets the action to be performed (`"hide"`, `"show"`, or `"toggle"`) on a popover element being controlled by an {{HTMLElement("input")}} element of `type="button"`. It reflects the value of the [`popovertargetaction`](/en-US/docs/Web/HTML/Element/input#popovertargetaction) HTML attribute.
 
 - {{domxref("HTMLInputElement.popoverTargetElement", "popoverTargetElement")}}
 
-  - : Gets and sets the popover element to control via an {{htmlelement("input")}} element of `type="button"`. The JavaScript equivalent of the [`popovertarget`](/en-US/docs/Web/HTML/Element/input#popovertarget) HTML attribute.
+  - : Gets and sets the popover element to control via an {{HTMLElement("input")}} element of `type="button"`. The JavaScript equivalent of the [`popovertarget`](/en-US/docs/Web/HTML/Element/input#popovertarget) HTML attribute.
 
 - {{domxref("HTMLInputElement.step", "step")}}
 
@@ -84,7 +84,7 @@ Some properties only apply to input element types that support the corresponding
 
 - {{domxref("HTMLInputElement.form", "form")}} {{ReadOnlyInline}}
 
-  - : Returns a reference to the parent {{HtmlElement("form")}} element.
+  - : Returns a reference to the parent {{HTMLElement("form")}} element.
 
 - {{domxref("HTMLInputElement.formAction", "formAction")}}
 
@@ -117,7 +117,7 @@ Some properties only apply to input element types that support the corresponding
 
 - {{domxref("HTMLInputElement.validationMessage", "validationMessage")}} {{ReadOnlyInline}}
 
-  - : Returns a localized message that describes the validation constraints that the control does not satisfy (if any). This is the empty string if the control is not a candidate for constraint validation ([`willValidate`](/en-US/docs/Web/API/HTMLObjectElement/willValidate) is `false`), or it satisfies its constraints. This value can be set by the {{domxref("HTMLInputElement.setCustomValidity()", "setCustomValidity()")}} method.
+  - : Returns a localized message that describes the validation constraints that the control does not satisfy (if any). This is the empty string if the control is not a candidate for constraint validation ({{domxref("HTMLInputElement.willValidate", "willValidate")}} is `false`), or it satisfies its constraints. This value can be set by the {{domxref("HTMLInputElement.setCustomValidity()", "setCustomValidity()")}} method.
 
 - {{domxref("HTMLInputElement.validity", "validity")}} {{ReadOnlyInline}}
 
@@ -162,6 +162,10 @@ Some properties only apply to input element types that support the corresponding
 
   - : A string that represents the element's [`accept`](/en-US/docs/Web/HTML/Element/input#accept) attribute, containing comma-separated list of file types that can be selected.
 
+- {{domxref("HTMLInputElement.capture", "capture")}}
+
+  - : A string that represents the element's [`capture`](/en-US/docs/Web/HTML/Element/input#capture) attribute, indicating the media capture input method in file upload controls.
+
 - {{domxref("HTMLInputElement.files", "files")}}
 
   - : A {{domxref("FileList")}} that represents the files selected for upload.
@@ -178,10 +182,6 @@ Some properties only apply to input element types that support the corresponding
 - {{domxref("HTMLInputElement.autocomplete", "autocomplete")}}
 
   - : A string that represents the element's [`autocomplete`](/en-US/docs/Web/HTML/Element/input#autocomplete) attribute, indicating whether the value of the control can be automatically completed by the browser.
-
-- {{domxref("HTMLInputElement.capture", "capture")}}
-
-  - : A string that represents the element's [`capture`](/en-US/docs/Web/HTML/Element/input#capture) attribute, indicating the media capture input method in file upload controls.
 
 - {{domxref("HTMLInputElement.max", "max")}}
 
@@ -271,6 +271,8 @@ _Also inherits events from its parent interface, {{domxref("HTMLElement")}}._
 
 Listen to these events using {{domxref("EventTarget.addEventListener", "addEventListener()")}} or by assigning an event listener to the `oneventname` property of this interface:
 
+- {{domxref("HTMLInputElement/cancel_event", "cancel")}} event
+  - : Fired when the user cancels the file picker dialog via the <kbd>Esc</kbd> key or the cancel button and when the user re-selects the same files that were previously selected.
 - {{domxref("HTMLInputElement/invalid_event", "invalid")}} event
   - : Fired when an element does not satisfy its constraints during constraint validation.
 - {{domxref("HTMLInputElement/search_event", "search")}} event {{Non-standard_Inline}}
@@ -290,4 +292,4 @@ Listen to these events using {{domxref("EventTarget.addEventListener", "addEvent
 
 ## See also
 
-- HTML element implementing this interface: {{ HTMLElement("input") }}
+- HTML element implementing this interface: {{HTMLElement("input")}}

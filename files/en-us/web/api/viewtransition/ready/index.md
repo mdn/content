@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.ViewTransition.ready
 ---
 
-{{APIRef("View Transitions API")}}
+{{APIRef("View Transition API")}}
 
 The **`ready`** read-only property of the
 {{domxref("ViewTransition")}} interface is a {{jsxref("Promise")}} that fulfills once the pseudo-element tree is created and the transition animation is about to start.
@@ -27,7 +27,7 @@ let lastClick;
 addEventListener("click", (event) => (lastClick = event));
 
 function spaNavigate(data) {
-  // Fallback for browsers that don’t support this API:
+  // Fallback for browsers that don't support this API:
   if (!document.startViewTransition) {
     updateTheDOMSomehow(data);
     return;
@@ -49,7 +49,7 @@ function spaNavigate(data) {
 
   // Wait for the pseudo-elements to be created:
   transition.ready.then(() => {
-    // Animate the root’s new view
+    // Animate the root's new view
     document.documentElement.animate(
       {
         clipPath: [
@@ -93,4 +93,4 @@ This animation also requires the following CSS, to turn off the default CSS anim
 
 ## See also
 
-- [Smooth and simple transitions with the View Transitions API](https://developer.chrome.com/docs/web-platform/view-transitions/)
+- [Smooth transitions with the View Transition API](https://developer.chrome.com/docs/web-platform/view-transitions/)

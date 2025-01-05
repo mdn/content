@@ -17,7 +17,8 @@ A media element whose source is a {{domxref("MediaStream")}} and whose
 `autoplay` property is `true` will begin playback when it becomes
 active (that is, when {{domxref("MediaStream.active")}} becomes `true`).
 
-> **Note:** Sites which automatically play audio (or videos with an audio
+> [!NOTE]
+> Sites which automatically play audio (or videos with an audio
 > track) can be an unpleasant experience for users, so it should be avoided when
 > possible. If you must offer autoplay functionality, you should make it opt-in
 > (requiring a user to specifically enable it). However, autoplay can be useful when
@@ -32,7 +33,8 @@ A boolean value which is `true` if the media element will
 begin playback as soon as enough content has loaded to allow it to do so without
 interruption.
 
-> **Note:** Some browsers offer users the ability to override
+> [!NOTE]
+> Some browsers offer users the ability to override
 > `autoplay` in order to prevent disruptive audio or video from playing
 > without permission or in the background. Do not rely on `autoplay` actually
 > starting playback and instead use {{domxref("HTMLMediaElement.play_event", 'play')}}

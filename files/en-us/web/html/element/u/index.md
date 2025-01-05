@@ -7,9 +7,10 @@ browser-compat: html.elements.u
 
 {{HTMLSidebar}}
 
-The **`<u>`** [HTML](/en-US/docs/Web/HTML) element represents a span of inline text which should be rendered in a way that indicates that it has a non-textual annotation. This is rendered by default as a simple solid underline, but may be altered using CSS.
+The **`<u>`** [HTML](/en-US/docs/Web/HTML) element represents a span of inline text which should be rendered in a way that indicates that it has a non-textual annotation. This is rendered by default as a single solid underline, but may be altered using CSS.
 
-> **Warning:** This element used to be called the "Underline" element in older versions of HTML, and is still sometimes misused in this way. To underline text, you should instead apply a style that includes the CSS {{cssxref("text-decoration")}} property set to `underline`.
+> [!WARNING]
+> This element used to be called the "Underline" element in older versions of HTML, and is still sometimes misused in this way. To underline text, you should instead apply a style that includes the CSS {{cssxref("text-decoration")}} property set to `underline`.
 
 {{EmbedInteractiveExample("pages/tabbed/u.html", "tabbed-shorter")}}
 
@@ -23,7 +24,8 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 
 Along with other pure styling elements, the original HTML Underline (`<u>`) element was deprecated in HTML 4; however, `<u>` was restored in HTML 5 with a new, semantic, meaning: to mark text as having some form of non-textual annotation applied.
 
-> **Note:** Avoid using the `<u>` element with its default styling (of underlined text) in such a way as to be confused with a hyperlink, which is also underlined by default.
+> [!NOTE]
+> Avoid using the `<u>` element with its default styling (of underlined text) in such a way as to be confused with a hyperlink, which is also underlined by default.
 
 ### Use cases
 
@@ -53,6 +55,8 @@ To apply an underlined appearance without any semantic meaning, use the {{cssxre
 This example uses the `<u>` element and some CSS to display a paragraph which includes a misspelled error, with the error indicated in the red wavy underline style which is fairly commonly used for this purpose.
 
 #### HTML
+
+<!-- cSpell:ignore wrnogly -->
 
 ```html
 <p>This paragraph includes a <u class="spelling">wrnogly</u> spelled word.</p>
@@ -111,7 +115,7 @@ Book titles should be presented using the {{HTMLElement("cite")}} element instea
 ##### Using the cite element
 
 ```html
-<p>The class read <cite>Moby Dick</cite> in the first term.</p>
+<p>The class read <cite>Moby-Dick</cite> in the first term.</p>
 ```
 
 {{EmbedLiveSample("Using_the_cite_element", 650, 80)}}
@@ -121,7 +125,7 @@ Book titles should be presented using the {{HTMLElement("cite")}} element instea
 The default styling for the `<cite>` element renders the text in italics. You can override that using CSS:
 
 ```html
-<p>The class read <cite>Moby Dick</cite> in the first term.</p>
+<p>The class read <cite>Moby-Dick</cite> in the first term.</p>
 ```
 
 ```css

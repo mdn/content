@@ -14,7 +14,7 @@ Firefox 53 was released on April 19, 2017. This article lists key changes that a
 
 - Avoid scrolling latency on highlighters given by APZ ([Firefox bug 1312103](https://bugzil.la/1312103)).
 - Added option to [copy the full CSS path](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_html/index.html#copy-css-path) of an element ([Firefox bug 1323700](https://bugzil.la/1323700)).
-- Devtools support for css-color-4 ([Firefox bug 1310681](https://bugzil.la/1310681)).
+- DevTools support for css-color-4 ([Firefox bug 1310681](https://bugzil.la/1310681)).
 - Markup view: add a visual hint between opening and closing tags of a collapsed node ([Firefox bug 1323193](https://bugzil.la/1323193)).
 
 ### CSS
@@ -164,7 +164,7 @@ Enhanced APIs:
 
 ### JavaScript code modules
 
-- The asynchronous [AddonManager APIs]((/en-US/docs/Mozilla/Add-ons/Add-on_Manager/AddonManager) now support {{jsxref("Promise", "Promises")}} as well as callbacks ([Firefox bug 987512](https://bugzil.la/987512).
+- The asynchronous [AddonManager APIs](/en-US/docs/Mozilla/Add-ons/Add-on_Manager/AddonManager) now support {{jsxref("Promise", "Promises")}} as well as callbacks ([Firefox bug 987512](https://bugzil.la/987512).
 
 ## Older versions
 

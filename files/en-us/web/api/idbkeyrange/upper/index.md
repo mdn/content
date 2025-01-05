@@ -28,7 +28,8 @@ its optional key range value.
 After declaring the key range, we log its `upper` property value to the
 console, which should appear as "W".
 
-> **Note:** For a more complete example allowing you to experiment with
+> [!NOTE]
+> For a more complete example allowing you to experiment with
 > key range, have a look at our [IDBKeyRange-example](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbkeyrange) repo
 > ([view the example live too](https://mdn.github.io/dom-examples/indexeddb-examples/idbkeyrange/).)
 

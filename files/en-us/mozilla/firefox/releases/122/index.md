@@ -90,7 +90,7 @@ These features are newly shipped in Firefox 122 but are disabled by default. To 
 
 - **Clipboard read and write:** `dom.events.asyncClipboard.clipboardItem`, `dom.events.asyncClipboard.readText` and `dom.events.asyncClipboard.writeText`.
 
-  The async {{domxref('Clipboard API')}} is now fully supported, including [`read()`](/en-US/docs/Web/API/Clipboard/read), [`readText()`](/en-US/docs/Web/API/Clipboard/readText), and [`write()`](/en-US/docs/Web/API/Clipboard/write) methods and the {{domxref('ClipboardItem')}} interface. A paste context menu will appear for the user to confirm when reading clipboard data not provided by the same-origin page. ([Firefox bug 1809106](https://bugzil.la/1809106))
+  The async [Clipboard API](/en-US/docs/Web/API/Clipboard_API) is now fully supported, including [`read()`](/en-US/docs/Web/API/Clipboard/read), [`readText()`](/en-US/docs/Web/API/Clipboard/readText), and [`write()`](/en-US/docs/Web/API/Clipboard/write) methods and the {{domxref('ClipboardItem')}} interface. A paste context menu will appear for the user to confirm when reading clipboard data not provided by the same-origin page. ([Firefox bug 1809106](https://bugzil.la/1809106))
 
 - **`Intl.Segmenter`:** enabled by default only in Firefox Nightly.
 

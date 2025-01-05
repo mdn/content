@@ -64,9 +64,9 @@ content: unset;
 
 The value can be:
 
-- One of two keywords — `none` or `normal`
+- One of two keywords — `none` or `normal`.
 - `<content-replacement>` when replacing a DOM node. `<content-replacement>` is always an `<image>`.
-- A `<content-list>` when replacing pseudo-elements and margin boxes. A content-list is a list of one or more anonymous inline boxes appearing in the order specified. Each `<content-list>` item is either `contents` or of type [`<string>`](#string), [`<image>`](#image), [`<counter>`](#counter), [`<quote>`](#quote), [`<target>`](#target), or [`<leader()>`](#leader).
+- A `<content-list>` when replacing pseudo-elements and margin boxes. A `<content-list>` is a list of one or more anonymous inline boxes appearing in the order specified. Each `<content-list>` item is of type [`<string>`](#string), [`<image>`](#image), [`<counter>`](#counter), [`<quote>`](#quote), [`<target>`](#target), or [`<leader()>`](#leader).
 - An optional alternative text value of a `<string>` or `<counter>`, preceded by a slash (`/`).
 
 The keywords and data types mentioned above are described in more detail below:
@@ -78,11 +78,7 @@ The keywords and data types mentioned above are described in more detail below:
 
 - `normal`
 
-  - : The default value. Computes to `none` for the {{cssxref("::before")}} and {{cssxref("::after")}} pseudo-elements. For other pseudo-elements, the content will be the initial (or normal) content expected for that {{cssxref("::marker")}}, {{cssxref("::placeholder")}}, or {{cssxref("::file-selector-button")}}. For regular elements or page margin boxes, this computes to `contents`.
-
-- `contents`
-
-  - : Adds the contents of the element itself to the generated content value.
+  - : The default value. Computes to `none` for the {{cssxref("::before")}} and {{cssxref("::after")}} pseudo-elements. For other pseudo-elements, the content will be the initial (or normal) content expected for that {{cssxref("::marker")}}, {{cssxref("::placeholder")}}, or {{cssxref("::file-selector-button")}}. For regular elements or page margin boxes, this computes to the element's descendants.
 
 - {{cssxref("&lt;string&gt;")}}
 
@@ -90,7 +86,7 @@ The keywords and data types mentioned above are described in more detail below:
 
 - {{cssxref("&lt;image&gt;")}}
 
-  - : An {{cssxref("&lt;image&gt;")}}, representing an image to display. This can be equal to a {{cssxref("url", "url()")}}, {{cssxref("image/image-set", "image-set()")}}, or {{cssxref("&lt;gradient&gt;")}} data type, or a part of the webpage itself, defined by the {{cssxref("element", "element()")}} function.
+  - : An {{cssxref("&lt;image&gt;")}}, representing an image to display. This can be equal to a {{cssxref("url_value", "&lt;url&gt;")}}, {{cssxref("image/image-set", "image-set()")}}, or {{cssxref("&lt;gradient&gt;")}} data type, or a part of the webpage itself, defined by the {{cssxref("element", "element()")}} function.
 
 - `<counter>`
 
@@ -114,7 +110,7 @@ The keywords and data types mentioned above are described in more detail below:
 
 - `<leader()>`
 
-  - : The `<leader()>` data type inclues a leader function: `leader( <leader-type> )`. This function accepts the keyword values `dotted`, `solid`, or `space` (equal to `leader(".")`, `leader("_")`, and `leader(" ")`, respectively), or a `<string>` as a parameter. When supported and used as a value for `content`, the leader-type provided will be inserted as a repeating pattern, visually connecting content across a horizontal line.
+  - : The `<leader()>` data type includes a leader function: `leader( <leader-type> )`. This function accepts the keyword values `dotted`, `solid`, or `space` (equal to `leader(".")`, `leader("_")`, and `leader(" ")`, respectively), or a `<string>` as a parameter. When supported and used as a value for `content`, the leader-type provided will be inserted as a repeating pattern, visually connecting content across a horizontal line.
 
 - `attr(x)`
 
@@ -130,6 +126,17 @@ The keywords and data types mentioned above are described in more detail below:
 ## Formal syntax
 
 {{csssyntax}}
+
+## Accessibility
+
+CSS-generated content is not included in the [DOM](/en-US/docs/Web/API/Document_Object_Model/Introduction). Because of this, it will not be represented in the [accessibility tree](/en-US/docs/Learn_web_development/Core/Accessibility/What_is_accessibility#accessibility_apis) and certain assistive technology/browser combinations will not announce it. If the content conveys information that is critical to understanding the page's purpose, it is better to include it in the main document.
+
+If inserted content is not decorative, check that the information is provided to assistive technologies and is also available when CSS is turned off.
+
+- [Accessibility support for CSS generated content – Tink](https://tink.uk/accessibility-support-for-css-generated-content/) (2015)
+- [WCAG, Guideline 1.3: Create content that can be presented in different ways](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.3_—_create_content_that_can_be_presented_in_different_ways)
+- [Understanding Success Criterion 1.3.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html)
+- [Failure of Success Criterion 1.3.1: inserting non-decorative generated content](https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/F87) Techniques for WCAG 2.0
 
 ## Examples
 
@@ -325,15 +332,16 @@ a::before {
 
 {{EmbedLiveSample('Adding_an_image_with_alternative_text', '100%', 60)}}
 
-> **Note:** If the alternative text syntax is supported, the value will be exposed in the browser's accessibility tree. Refer to the [See also](#see_also) section for browser-specific accessibility panels.
+> [!NOTE]
+> If the alternative text syntax is supported, the value will be exposed in the browser's accessibility tree. Refer to the [See also](#see_also) section for browser-specific accessibility panels.
 
 If using a screen reader, it should speak the word "MOZILLA" when it reaches the image. If supported (if the "alt text is not supported" is not showing), you can select the `::before` pseudo-element with your developer tools selection tool, and view the {{glossary("accessible name")}} in the accessibility panel.
 
 In browsers that don't support the alternative text syntax the whole declaration containing the alt text is invalid. In this case, the previous `content` value will be used, showing the image and "alt text is not supported" text.
 
-### Element replacement with `url()`
+### Element replacement with URL
 
-This example replaces a regular element! The element's contents are replaced with an SVG using the {{cssxref("url", "url()")}} image function.
+This example replaces a regular element! The element's contents are replaced with an SVG using the {{cssxref("url_value", "&lt;url&gt;")}} type.
 
 Pseudo-elements aren't rendered on replaced elements. As this element is replaced, any matching `::after` or `::before` are not generated or applied. To demonstrate this, we include an `::after` declaration block, attempting to add the `id` as generated content. This pseudo-element will not be generated as the element is replaced.
 
@@ -364,7 +372,7 @@ When generating content on regular elements (rather than just on pseudo-elements
 
 ### Element replacement with `<gradient>`
 
-This example demonstrates how an element's contents can be replaced by any type of `<image>`, in this case, a CSS gradient. The element's contents are replaced with a {{cssxref("gradient/linear-gradient" ,"linear-gradient()")}}. With {{cssxref("@supports")}}, we provide alt text support and a {{cssxref("gradient/repeating-linear-gradient" ,"repeating-linear-gradient()")}} for browsers that support alt text with element content replacement.
+This example demonstrates how an element's contents can be replaced by any type of `<image>`, in this case, a CSS gradient. The element's contents are replaced with a {{cssxref("gradient/linear-gradient", "linear-gradient()")}}. With {{cssxref("@supports")}}, we provide alt text support and a {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}} for browsers that support alt text with element content replacement.
 
 #### HTML
 
@@ -402,7 +410,7 @@ Check the [browser compatibility chart](#browser_compatibility). All browsers su
 
 ### Element replacement with `image-set()`
 
-This example replaces an element's content with a {{cssxref("image/image-set" ,"image-set()")}}. If the users display has normal resolution the `1x.png` will be displayed screens with a higher resolution will display the `2x.png` image.
+This example replaces an element's content with a {{cssxref("image/image-set", "image-set()")}}. If the users display has normal resolution the `1x.png` will be displayed screens with a higher resolution will display the `2x.png` image.
 
 #### HTML
 
@@ -432,17 +440,6 @@ div {
 
 {{EmbedLiveSample('Element_replacement_with_image-set', '100%', 110)}}
 
-## Accessibility concerns
-
-CSS-generated content is not included in the [DOM](/en-US/docs/Web/API/Document_Object_Model/Introduction). Because of this, it will not be represented in the [accessibility tree](/en-US/docs/Learn/Accessibility/What_is_accessibility#accessibility_apis) and certain assistive technology/browser combinations will not announce it. If the content conveys information that is critical to understanding the page's purpose, it is better to include it in the main document.
-
-If inserted content is not decorative, check that the information is provided to assistive technologies and is also available when CSS is turned off.
-
-- [Accessibility support for CSS generated content – Tink](https://tink.uk/accessibility-support-for-css-generated-content/) (2015)
-- [WCAG, Guideline 1.3: Create content that can be presented in different ways](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.3_—_create_content_that_can_be_presented_in_different_ways)
-- [Understanding Success Criterion 1.3.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html)
-- [Failure of Success Criterion 1.3.1: inserting non-decorative generated content](https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/F87) Techniques for WCAG 2.0
-
 ## Specifications
 
 {{Specifications}}
@@ -460,7 +457,7 @@ If inserted content is not decorative, check that the information is provided to
 - {{Cssxref("quotes")}}
 - {{cssxref("gradient", "&lt;gradient&gt;")}}
 - {{cssxref("image/image-set", "image-set()")}}
-- {{cssxref("url", "url()")}}
+- {{cssxref("url_value", "&lt;url&gt;")}}
 - [Replaced elements](/en-US/docs/Web/CSS/Replaced_element)
 - [CSS generated content](/en-US/docs/Web/CSS/CSS_generated_content) module
 - [CSS lists and counters](/en-US/docs/Web/CSS/CSS_lists) module

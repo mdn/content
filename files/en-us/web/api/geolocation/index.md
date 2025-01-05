@@ -11,7 +11,8 @@ The **`Geolocation`** interface represents an object able to obtain the position
 
 An object with this interface is obtained using the {{domxref("navigator.geolocation")}} property implemented by the {{domxref("Navigator")}} object.
 
-> **Note:** For security reasons, when a web page tries to access location information, the user is notified and asked to grant permission. Be aware that each browser has its own policies and methods for requesting this permission.
+> [!NOTE]
+> For security reasons, when a web page tries to access location information, the user is notified and asked to grant permission. Be aware that each browser has its own policies and methods for requesting this permission.
 
 ## Instance properties
 

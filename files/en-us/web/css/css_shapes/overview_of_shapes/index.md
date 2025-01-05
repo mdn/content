@@ -26,7 +26,37 @@ The `shape-outside` property allows us to define a shape. It takes a variety of 
 
 In the following example, an image is floated to the left. We apply the `shape-outside` property with a `circle(50%)` value. The result is that the content now curves around the circular shape rather than following the rectangle created by the box of the image.
 
-{{EmbedGHLiveSample("css-examples/shapes/overview/circle.html", '100%', 720)}}
+```html live-sample___circle
+<div class="box">
+  <img
+    alt="An orange hot air balloon as seen from below"
+    src="https://mdn.github.io/shared-assets/images/examples/round-balloon.png" />
+  <p>
+    One November night in the year 1782, so the story runs, two brothers sat
+    over their winter fire in the little French town of Annonay, watching the
+    grey smoke-wreaths from the hearth curl up the wide chimney. Their names
+    were Stephen and Joseph Montgolfier, they were papermakers by trade, and
+    were noted as possessing thoughtful minds and a deep interest in all
+    scientific knowledge and new discovery. Before that night—a memorable night,
+    as it was to prove—hundreds of millions of people had watched the rising
+    smoke-wreaths of their fires without drawing any special inspiration from
+    the fact.
+  </p>
+</div>
+```
+
+```css live-sample___circle
+body {
+  font: 1.2em / 1.4 sans-serif;
+}
+
+img {
+  float: left;
+  shape-outside: circle(50%);
+}
+```
+
+{{EmbedLiveSample("circle", "", "280px")}}
 
 Here we used the {{cssxref("basic-shape/circle", "circle()")}} function, which is supported across all modern browsers. If we used a newer shape type that doesn't have full support, users of non-supporting browsers would see the content flowing around the sides of a rectangular, due to the image being floated. Shapes are a visual progressive enhancement.
 
@@ -60,7 +90,41 @@ Shapes can also be created around the box value. Therefore, you could create you
 
 In the example below, you can change the value `border-box` to any of the other allowed values to see how the shape moves closer or further away from the box.
 
-{{EmbedGHLiveSample("css-examples/shapes/overview/box.html", '100%', 810)}}
+```html live-sample___box
+<div class="box">
+  <div class="shape"></div>
+  <p>
+    One November night in the year 1782, so the story runs, two brothers sat
+    over their winter fire in the little French town of Annonay, watching the
+    grey smoke-wreaths from the hearth curl up the wide chimney. Their names
+    were Stephen and Joseph Montgolfier, they were papermakers by trade, and
+    were noted as possessing thoughtful minds and a deep interest in all
+    scientific knowledge and new discovery. Before that night—a memorable night,
+    as it was to prove—hundreds of millions of people had watched the rising
+    smoke-wreaths of their fires without drawing any special inspiration from
+    the fact.
+  </p>
+</div>
+```
+
+```css live-sample___box
+body {
+  font: 1.2em / 1.4 sans-serif;
+}
+
+.shape {
+  background-color: rebeccapurple;
+  height: 150px;
+  width: 150px;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 50%;
+  float: left;
+  shape-outside: border-box;
+}
+```
+
+{{EmbedLiveSample("box", "", "320px")}}
 
 To explore the box values in more detail, see our guide covering [Shapes from box values](/en-US/docs/Web/CSS/CSS_shapes/From_box_values).
 
@@ -72,7 +136,37 @@ Note that images used in this way must be [CORS compatible](/en-US/docs/Web/HTTP
 
 In this next example, we have an image with a fully transparent area, and we are using an image as the URL value for `shape-outside`. The shape is created around the opaque area — the image of the balloon.
 
-{{EmbedGHLiveSample("css-examples/shapes/overview/image.html", '100%', 800)}}
+```html live-sample___image
+<div class="box">
+  <img
+    alt="An orange hot air balloon as seen from below"
+    src="https://mdn.github.io/shared-assets/images/examples/round-balloon.png" />
+  <p>
+    One November night in the year 1782, so the story runs, two brothers sat
+    over their winter fire in the little French town of Annonay, watching the
+    grey smoke-wreaths from the hearth curl up the wide chimney. Their names
+    were Stephen and Joseph Montgolfier, they were papermakers by trade, and
+    were noted as possessing thoughtful minds and a deep interest in all
+    scientific knowledge and new discovery. Before that night—a memorable night,
+    as it was to prove—hundreds of millions of people had watched the rising
+    smoke-wreaths of their fires without drawing any special inspiration from
+    the fact.
+  </p>
+</div>
+```
+
+```css live-sample___image
+body {
+  font: 1.2em / 1.4 sans-serif;
+}
+
+img {
+  float: left;
+  shape-outside: url(https://mdn.github.io/shared-assets/images/examples/round-balloon.png);
+}
+```
+
+{{EmbedLiveSample("image", "", "280px")}}
 
 #### `shape-image-threshold`
 
@@ -80,7 +174,49 @@ The `shape-image-threshold` property is used to set the threshold of image trans
 
 You can see the threshold in action if we use a gradient as the image on which to define our shape. In the example below, if you change the threshold the path that the shape takes changes based on the level of opacity you have selected.
 
-{{EmbedGHLiveSample("css-examples/shapes/overview/threshold.html", '100%', 820)}}
+```html live-sample___threshold
+<div class="box">
+  <div class="shape"></div>
+  <p>
+    One November night in the year 1782, so the story runs, two brothers sat
+    over their winter fire in the little French town of Annonay, watching the
+    grey smoke-wreaths from the hearth curl up the wide chimney. Their names
+    were Stephen and Joseph Montgolfier, they were papermakers by trade, and
+    were noted as possessing thoughtful minds and a deep interest in all
+    scientific knowledge and new discovery. Before that night—a memorable night,
+    as it was to prove—hundreds of millions of people had watched the rising
+    smoke-wreaths of their fires without drawing any special inspiration from
+    the fact.
+  </p>
+</div>
+```
+
+```css live-sample___threshold
+body {
+  font: 1.2em / 1.4 sans-serif;
+}
+
+.shape {
+  float: left;
+  width: 200px;
+  height: 200px;
+  background-image: linear-gradient(
+    45deg,
+    rebeccapurple,
+    transparent 80%,
+    transparent
+  );
+  shape-outside: linear-gradient(
+    45deg,
+    rebeccapurple,
+    transparent 80%,
+    transparent
+  );
+  shape-image-threshold: 0.4;
+}
+```
+
+{{EmbedLiveSample("threshold", "", "280px")}}
 
 To learn more about creating shapes from images, see the [Shapes from images](/en-US/docs/Web/CSS/CSS_shapes/Shapes_from_images) guide.
 
@@ -90,15 +226,79 @@ The {{cssxref("shape-margin")}} property adds a margin to `shape-outside`. This 
 
 In the example below we have added a `shape-margin` to a basic shape. Change the margin to push the text further away from the path the shape would take by default.
 
-{{EmbedGHLiveSample("css-examples/shapes/overview/shape-margin.html", '100%', 800)}}
+```html live-sample___shape-margin
+<div class="box">
+  <img
+    alt="An orange hot air balloon as seen from below"
+    src="https://mdn.github.io/shared-assets/images/examples/round-balloon.png" />
+  <p>
+    One November night in the year 1782, so the story runs, two brothers sat
+    over their winter fire in the little French town of Annonay, watching the
+    grey smoke-wreaths from the hearth curl up the wide chimney. Their names
+    were Stephen and Joseph Montgolfier, they were papermakers by trade, and
+    were noted as possessing thoughtful minds and a deep interest in all
+    scientific knowledge and new discovery. Before that night—a memorable night,
+    as it was to prove—hundreds of millions of people had watched the rising
+    smoke-wreaths of their fires without drawing any special inspiration from
+    the fact.
+  </p>
+</div>
+```
+
+```css live-sample___shape-margin
+body {
+  font: 1.2em / 1.4 sans-serif;
+}
+img {
+  float: left;
+  shape-outside: circle(50%);
+  shape-margin: 5px;
+}
+```
+
+{{EmbedLiveSample("shape-margin", "", "280px")}}
 
 ## Using Generated Content as the floated item
 
-In the examples above, we have used images or a visible element to define the shape, meaning that you can see the shape on the page. Instead, you might want to flow some text along a non-rectangular invisible line. We could, for example, add an empty floated {{htmlelement("div")}} or {{htmlelement("span")}} element to our DOM and make it invisible. However, we can create a shape with only CSS using [generated content](/en-US/docs/Learn/CSS/Howto/Generated_content) and keep all our styling functionality inside the CSS.
+In the examples above, we have used images or a visible element to define the shape, meaning that you can see the shape on the page. Instead, you might want to flow some text along a non-rectangular invisible line. We could, for example, add an empty floated {{htmlelement("div")}} or {{htmlelement("span")}} element to our DOM and make it invisible. However, we can create a shape with only CSS using [generated content](/en-US/docs/Learn_web_development/Howto/Solve_CSS_problems/Generated_content) and keep all our styling functionality inside the CSS.
 
-In this example, we use generated content to insert an element with a height and width of 150px. We can then use basic Sshapes, box values, or even the alpha channel of an image to create a shape for the text to wrap around.
+In this example, we use generated content to insert an element with a height and width of 150px. We can then use basic shapes, box values, or even the alpha channel of an image to create a shape for the text to wrap around.
 
-{{EmbedGHLiveSample("css-examples/shapes/overview/generated-content.html", '100%', 850)}}
+```html live-sample___generated-content
+<div class="box">
+  <p>
+    One November night in the year 1782, so the story runs, two brothers sat
+    over their winter fire in the little French town of Annonay, watching the
+    grey smoke-wreaths from the hearth curl up the wide chimney. Their names
+    were Stephen and Joseph Montgolfier, they were papermakers by trade, and
+    were noted as possessing thoughtful minds and a deep interest in all
+    scientific knowledge and new discovery. Before that night—a memorable night,
+    as it was to prove—hundreds of millions of people had watched the rising
+    smoke-wreaths of their fires without drawing any special inspiration from
+    the fact.
+  </p>
+</div>
+```
+
+```css live-sample___generated-content
+body {
+  font: 1.2em sans-serif;
+}
+
+.box::before {
+  content: "";
+  display: block;
+  height: 150px;
+  width: 150px;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 50%;
+  float: left;
+  shape-outside: border-box;
+}
+```
+
+{{EmbedLiveSample("generated-content", "", "260px")}}
 
 ## Relationship to `clip-path`
 
@@ -106,7 +306,38 @@ The basic shapes and box values used to create shapes are the same as those used
 
 The image below is a square image with a blue background. We have defined a shape using `shape-outside: ellipse(40% 50%);` and also used `clip-path: ellipse(40% 50%);` to clip away the same area that we used to define the shape.
 
-{{EmbedGHLiveSample("css-examples/shapes/overview/clip-path.html", '100%', 800)}}
+```html live-sample___clip-path
+<div class="box">
+  <img
+    alt="An orange hot air balloon as seen from below"
+    src="https://mdn.github.io/shared-assets/images/examples/balloon-small.jpg" />
+  <p>
+    One November night in the year 1782, so the story runs, two brothers sat
+    over their winter fire in the little French town of Annonay, watching the
+    grey smoke-wreaths from the hearth curl up the wide chimney. Their names
+    were Stephen and Joseph Montgolfier, they were papermakers by trade, and
+    were noted as possessing thoughtful minds and a deep interest in all
+    scientific knowledge and new discovery. Before that night—a memorable night,
+    as it was to prove—hundreds of millions of people had watched the rising
+    smoke-wreaths of their fires without drawing any special inspiration from
+    the fact.
+  </p>
+</div>
+```
+
+```css live-sample___clip-path
+body {
+  font: 1.2em / 1.4 sans-serif;
+}
+
+img {
+  float: left;
+  shape-outside: ellipse(40% 50%);
+  clip-path: ellipse(40% 50%);
+}
+```
+
+{{EmbedLiveSample("clip-path", "", "280px")}}
 
 ## Developer Tools for Shapes
 
