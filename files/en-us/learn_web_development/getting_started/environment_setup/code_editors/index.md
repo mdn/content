@@ -59,7 +59,7 @@ In this section, we'll look at some of the most significant functionality that y
 
 ### Opening and editing files
 
-This may seem like an obvious point, but installing a code editor is useful because it will give you a single app that will open all code files you may want to use through your development work. There is nothing more annoying than double-clicking a file on your computer and having it open in a weird random app, or having your operating system tell you it doesn't recognize that file.
+This may seem like an obvious point, but installing a code editor is useful because it will give you a single app that will open all code files you may want to use through your development work. There is nothing more annoying than double-clicking a file on your computer and having it open in a random, unrelated app, or having your operating system tell you it doesn't recognize that file.
 
 This should all happen automatically when installing VS Code, but if you still have problems with certain file types, you can manually set them to open via that app. This can vary depending on your operating system, so to find out, go to your favorite search engine and search for "choose what application opens a file type &lt;OS-name-and-number>" — for example, "choose what application opens a file type windows 11" if you are on Windows 11.
 
