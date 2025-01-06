@@ -131,6 +131,6 @@ value2
 
 ## See also
 
-- [HTML Forms](/en-US/docs/Learn/Forms)
+- [HTML Forms](/en-US/docs/Learn_web_development/Extensions/Forms)
 - The {{HTTPHeader("Content-Type")}} defining the boundary of the multipart body.
 - The {{domxref("FormData")}} interface used to prepare form data for use in the {{domxref("Window/fetch", "fetch()")}} or {{domxref("XMLHttpRequest")}} APIs.

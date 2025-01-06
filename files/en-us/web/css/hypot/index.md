@@ -36,7 +36,7 @@ Returns a {{CSSxRef("&lt;number&gt;")}}, {{CSSxRef("&lt;dimension&gt;")}}, or {{
 - If any of the inputs is `infinite`, the result is `+∞`.
 - If a single parameter is provided, the result is the absolute value of its input. `hypot(2em)` and `hypot(-2em)` both resolve to `2em`.
 
-### Formal syntax
+## Formal syntax
 
 {{CSSSyntax}}
 
