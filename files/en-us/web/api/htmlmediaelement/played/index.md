@@ -12,7 +12,7 @@ The **`played`** read-only property of the {{domxref("HTMLMediaElement")}} inter
 
 ## Value
 
-A {{domxref("TimeRanges")}} object, which includes the number of ranges as a `length`, with the `start` and `end` time for each range.
+A {{domxref("TimeRanges")}} object; representing the time ranges that have been played.
 
 ## Examples
 
