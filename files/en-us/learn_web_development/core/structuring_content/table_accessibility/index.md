@@ -25,8 +25,8 @@ In the previous article, we looked at one of the most important features for mak
       <th scope="row">Learning outcomes:</th>
       <td>
         <ul>
-          <li>An understanding of the accessibility issues associated with tables.<li>
-          <li>Adding captions to tables.<li>
+          <li>An understanding of the accessibility issues associated with tables.</li>
+          <li>Adding captions to tables.</li>
           <li>Better table structuring with head, body, and footer.</li>
           <li>Creating further association between headers and cells with the <code>scope</code>, <code>id</code>, and <code>headers</code> attributes.</li>
         </ul>
