@@ -14,13 +14,7 @@ Following on from the previous article, sometimes making complex UI controls tha
   <tbody>
     <tr>
       <th scope="row">Prerequisites:</th>
-      <td>
-        A basic understanding of HTML, CSS, and
-        JavaScript. An understanding of the
-        <a href="/en-US/docs/Learn_web_development/Core/Accessibility"
-          >previous articles in the course</a
-        >.
-      </td>
+      <td>Familiarity with <a href="/en-US/docs/Learn_web_development/Core/Structuring_content">HTML</a>, <a href="/en-US/docs/Learn_web_development/Core/Styling_basics">CSS</a>, and accessibility best practices as taught in previous lessons in the module.</a>.</td>
     </tr>
     <tr>
       <th scope="row">Learning outcomes:</th>
