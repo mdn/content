@@ -8,7 +8,7 @@ browser-compat: api.HTMLMediaElement.seeking
 
 {{APIRef("HTML DOM")}}
 
-The readonly **`seeking`** property of the {{domxref("HTMLMediaElement")}} interface is a boolean indicating whether the media, the {{htmlelement("audio")}} or {{htmlelement("audio")}}, is in the process of seeking to a new position.
+The **`seeking`** read-only property of the {{domxref("HTMLMediaElement")}} interface is a Boolean indicating whether the resource, the {{htmlelement("audio")}} or {{htmlelement("audio")}}, is in the process of seeking to a new position.
 
 ## Value
 
