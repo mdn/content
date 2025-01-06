@@ -54,7 +54,10 @@ Most modern operating systems have a `Users` folder, which contains a folder for
 
 The currently-logged-in user will by default only be able to access their own _Home_ folder.
 
-As a developer, you should create project files relating to your work somewhere inside in your _Home_ folder, perhaps inside _Documents_. This makes sense, as web page files are often referred to as _documents_.
+You should create project files relating to your work somewhere inside in your _Home_ folder, perhaps inside _Documents_. This makes sense, as web page files are often referred to as _documents_.
+
+> [!WARNING]
+> If you start creating and editing files in other places on your system (for example, areas that control the operating system or important applications), you might break something. For the moment, stick to creating and editing files inside your _Home_ folder.
 
 ### Creating a folder
 
@@ -90,6 +93,9 @@ Let's open our `web-projects` folder in VS Code now:
 You should see your `web-projects` folder open in the VS Code _EXPLORER_ pane, as shown below:
 
 ![The VS Code Explorer panel, showing an empty folder called web-projects](vs-code-explorer.png)
+
+> [!WARNING]
+> Again, make sure you stick to editing your own files inside your _Home_ folder for now, to avoid causing any problems with your system.
 
 #### An aside on keyboard navigation in VS Code
 
@@ -147,7 +153,11 @@ Let's add some more features inside `test-site` to demonstrate a typical website
 3. **`styles` folder**: This folder will contain the CSS code used to style your content (for example, setting text and background colors).
 4. **`scripts` folder**: This folder will contain all the JavaScript code used to add interactive functionality to your site (for example, defining what happens when buttons are clicked).
 
-You've already got an `index.html` file inside `test-site`. Create the `images`, `styles`, and `scripts` folders inside it now.
+> [!CALLOUT]
+>
+> **Try it out**
+>
+> You should already have an `index.html` file inside `test-site`. Create the `images`, `styles`, and `scripts` folders inside it now.
 
 ## File names
 
@@ -156,7 +166,7 @@ There are generally two parts to a file name — the **name** and the **extensio
 - The name in this case is `index`. File names can generally contain whatever characters you like, although different computer systems will have various restrictions on the characters that can be used. It is better to stick to numbers and letters, at least to begin with. In addition, systems may give special meaning to certain names or parts of names — as we've already said, `index` files tend to be recognized as the main homepage file of a website.
 - The file extension identifies the type of file we are dealing with, and is used by computer systems to identify what kind of content it can expect in the file, which program it should use to open the file, etc. in this case, the extension is `.html`, which means the file should contain plain text, and more specifically, HTML code. Because of the extension, your computer knows that when you try to open the file it should open it using your default text editor, which should be VS Code if you followed all our instructions up to now.
 
-It is not true in all cases, but most files need a file name to be handled properly. Removing or changing the file extension is likely to cause errors, so you shouldn't alter it unless you really know what you are doing.
+It is not true in all cases, but most files need an extension to be handled properly. Removing or changing the file extension is likely to cause errors, so you shouldn't alter it unless you really know what you are doing.
 
 > [!NOTE]
 > It is possible to put more than one dot in a file name, for example `my.cats.html`. In such cases, the last dot is assumed to be the start of the file extension.
@@ -174,7 +184,7 @@ As you follow this course, you'll notice that we always ask you to name folders 
 
 Instead of spaces, many developers use a separator character such as a hyphen (`-`) rather than a space — for example `my-file.html` rather than `my file.html`. This is a good practice.
 
-It is best to get into the habit of writing your folder and file names in lowercase with no spaces and with words separated by hyphens, at least until you know what you're doing. That way, you'll encounter fewer problems down the road.
+It is best to get into the habit of writing your folder and file names in lowercase with no spaces and with words separated by hyphens, at least until you know what you're doing. That way, you'll encounter fewer problems further down the road.
 
 > [!NOTE]
 > You can find more best practices for file names and URLs in [URL structure best practices for Google](https://developers.google.com/search/docs/crawling-indexing/url-structure).
