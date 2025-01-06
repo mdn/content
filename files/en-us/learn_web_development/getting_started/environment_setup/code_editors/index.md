@@ -33,7 +33,7 @@ Previously, we told you to install a code editor, as you'll need one to work thr
 
 ## What code editors are available?
 
-Before starting to code, you've probably already had some experience of working on text documents, probably in a program like Microsoft Word. You are probably also wondering whether you can work with code documents in these same programs? Unfortunately, the answer is "no":
+Before starting to code, you may have had some experience working on text documents in a program like Microsoft Word. You might also be wondering whether you can work with code in these same programs. Unfortunately, the answer is "not really":
 
 - Programs like Micosoft Word are **Binary file** editors; their files contain a non-text format that can only be understood by those programs. Website source code, on the other hand, is stored as plain text.
 - Word _can_ open and edit plain text files, but it doesn't handle them very well. It doesn't have a featureset designed for working with code — it is for writing documents such as letters and reports. You need a program that is designed to cleanly handle and output plain text, and work with code.
