@@ -23,9 +23,7 @@ A boolean value.
 ```js
 window.addEventListener("popstate", (event) => {
   // Fetch the new content
-  const newContent = await fetchNewContent(event.destination.url, {
-    signal: event.signal,
-  });
+  const newContent = await fetchNewContent(location.href);
 
   // The UA does not support View Transitions, or the UA
   // already provided a Visual Transition by itself (e.g. swipe back).
