@@ -136,7 +136,7 @@ Let's move on to a brief discussion of website structure.
 
 ## What structure should a website have?
 
-When you are working on websites locally on your computer, you should keep all the related files for each site in a single folder. In turn, you should keep all your website folders in one central folder, so they are all easy to find.
+When you are working on websites locally (on your computer), you should keep all the related files for each site in a single folder. In turn, you should keep all your website folders in one central folder, so they are all easy to find.
 
 Earlier in the article, we instructed you to create a central folder called `web-projects` to store all your website projects. We also got you to create a subfolder called `test-site` with an empty `index.html` file inside it.
 
