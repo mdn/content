@@ -8,7 +8,7 @@ browser-compat: api.SVGTextPathElement.href
 
 {{APIRef("SVG")}}
 
-The **`href`** read-only property of the {{domxref("SVGTextPathElement")}} interface reflects the {{SVGAttr("href")}} or {{SVGAttr("xlink:href")}} {{deprecated_inline}} attribute of the given element.
+The **`href`** read-only property of the {{domxref("SVGTextPathElement")}} interface reflects the {{SVGAttr("href")}} attribute (or the deprecated {{SVGAttr("xlink:href")}} attribute) of the given {{SVGElement("textPath")}} element.
 
 ## Value
 
