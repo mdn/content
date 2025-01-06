@@ -35,7 +35,7 @@ In this article, we discuss what software you need to do simple web development 
 
 A decent code editor is one of the most important things for any developer to have available on their machine. As well as being the place where you write your code, code editors have a whole host of other functionality available. We have dedicated an entire article to code editors later on in the series.
 
-For now, we would recommend that you install [Visual Studio Code](https://code.visualstudio.com/), as it is available across different platforms, has a great feature set and support, and is the editor we mostly use. Do this now.
+For now, we would recommend that you install [Visual Studio Code](https://code.visualstudio.com/), as it is available across different platforms, has a great feature set and support, and is the editor we mostly use. You should install this now to follow along with the rest of this article.
 
 ## Modern web browsers
 
