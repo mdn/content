@@ -51,13 +51,12 @@ body {
 <details>
 <summary>Click here to show the solution</summary>
 
-You will need to increase the height and width of the second block, to add the size of the padding and border:
+You will need to increase the width of the second block, to add the size of the padding and border:
 
 ```css
 .alternate {
   box-sizing: border-box;
   width: 390px;
-  height: 240px;
 }
 ```
 
