@@ -35,9 +35,9 @@ Functional notation: `device-cmyk(C M Y K[ / A][, color])`
 
   - : An optional fallback {{CSSXref("&lt;color&gt;")}} to use if the user agent does not know how to translate the CMYK color to RGB.
 
-### Formal syntax
+## Formal syntax
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Specifications
 

@@ -28,7 +28,7 @@ JavaScript allows trailing commas wherever a comma-separated list of values is a
 
 In all these cases, the trailing comma is entirely optional and doesn't change the program's semantics in any way.
 
-It is particular useful when adding, removing, or reordering items in a list that spans multiple lines, because it reduces the number of lines that need to be changed, which helps with both editing and reviewing the diff.
+It is particularly useful when adding, removing, or reordering items in a list that spans multiple lines, because it reduces the number of lines that need to be changed, which helps with both editing and reviewing the diff.
 
 ```diff
   [
@@ -45,7 +45,7 @@ It is particular useful when adding, removing, or reordering items in a list tha
 
 #### Arrays
 
-JavaScript ignores trailing commas in arrays literals:
+JavaScript ignores trailing commas in array literals:
 
 ```js-nolint
 const arr = [

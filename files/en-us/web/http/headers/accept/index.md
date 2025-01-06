@@ -7,8 +7,10 @@ browser-compat: http.headers.Accept
 
 {{HTTPSidebar}}
 
-The HTTP **`Accept`** {{Glossary("request header")}} indicates which content types, expressed as [MIME types](/en-US/docs/Web/HTTP/MIME_types), the client is able to understand.
-The server uses [content negotiation](/en-US/docs/Web/HTTP/Content_negotiation) to select one of the proposals and informs the client of the choice with the {{HTTPHeader("Content-Type")}} response header.
+The HTTP **`Accept`** {{Glossary("request header", "request")}} and {{Glossary("response header")}} indicates which content types, expressed as [MIME types](/en-US/docs/Web/HTTP/MIME_types), the sender is able to understand.
+In requests, the server uses [content negotiation](/en-US/docs/Web/HTTP/Content_negotiation) to select one of the proposals and informs the client of the choice with the {{HTTPHeader("Content-Type")}} response header.
+In responses, it provides information about which content types the server can understand in messages to the requested resource, so that the content type can be used in subsequent requests to the resource.
+
 Browsers set required values for this header based on the context of the request.
 For example, a browser uses different values in a request when fetching a CSS stylesheet, image, video, or a script.
 
@@ -16,7 +18,8 @@ For example, a browser uses different values in a request when fetching a CSS st
   <tbody>
     <tr>
       <th scope="row">Header type</th>
-      <td>{{Glossary("Request header")}}</td>
+      <td>{{Glossary("Request header")}},
+      {{Glossary("Response header")}}</td>
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>

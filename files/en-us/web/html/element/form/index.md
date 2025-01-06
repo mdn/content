@@ -25,8 +25,8 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - `accept-charset`
 
-  - : Space-separated {{Glossary("character encoding", "character encodings")}} the server accepts. The browser uses them in the order in which they are listed. The default value means [the same encoding as the page](/en-US/docs/Web/HTTP/Headers/Content-Encoding).
-    (In previous versions of HTML, character encodings could also be delimited by commas.)
+  - : The {{Glossary("character encoding")}} accepted by the server.
+    The specification allows a single case-insensitive value of `"UTF-8"`, reflecting the ubiquity of this encoding (historically multiple character encodings could be specified as a comma-separated or space-separated list).
 
 - `autocapitalize`
 
@@ -183,7 +183,7 @@ The following attributes control behavior during form submission.
 
 ## See also
 
-- [HTML forms guide](/en-US/docs/Learn/Forms)
+- [HTML forms guide](/en-US/docs/Learn_web_development/Extensions/Forms)
 - Other elements that are used when creating forms: {{HTMLElement("button")}}, {{HTMLElement("datalist")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("input")}}, {{HTMLElement("label")}}, {{HTMLElement("legend")}}, {{HTMLElement("meter")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("option")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}}.
 - Getting a list of the elements in the form: {{domxref("HTMLFormElement.elements")}}
 - [ARIA: Form role](/en-US/docs/Web/Accessibility/ARIA/Roles/form_role)

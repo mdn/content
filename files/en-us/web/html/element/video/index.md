@@ -297,7 +297,7 @@ Other usage notes:
 - You can play audio files using a `<video>` element. This can be useful if, for example, you need to perform audio with a [WebVTT](/en-US/docs/Web/API/WebVTT_API) transcript, since the {{HTMLElement("audio")}} element doesn't allow captions using WebVTT.
 - To test the fallback content on browsers that support the element, you can replace `<video>` with a non-existing element like `<notavideo>`.
 
-A good general source of information on using HTML `<video>` is the [Video and audio content](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content) beginner's tutorial.
+A good general source of information on using HTML `<video>` is the [HTML video and audio](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio) beginner's tutorial.
 
 ### Styling with CSS
 
@@ -410,7 +410,7 @@ This example plays a video when activated, providing the user with the browser's
 #### HTML
 
 ```html
-<!-- Simple video example -->
+<!-- Basic video example -->
 <!-- 'Big Buck Bunny' licensed under CC 3.0 by the Blender foundation. Hosted by archive.org -->
 <!-- Poster from peach.blender.org -->
 <video
@@ -538,6 +538,6 @@ Some media file types let you provide more specific information using the [`code
 
 - Positioning and sizing the picture within its frame: {{cssxref("object-position")}} and {{cssxref("object-fit")}}
 - {{htmlelement("audio")}}
-- [Using HTML audio and video](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
+- [HTML video and audio](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
 - [Manipulating video using canvas](/en-US/docs/Web/API/Canvas_API/Manipulating_video_using_canvas)
-- [Configuring servers for Ogg media](/en-US/docs/Web/HTTP/Configuring_servers_for_Ogg_media)
+- [Configuring servers for Ogg media](/en-US/docs/Web/Media/Formats/Configuring_servers_for_Ogg_media)

@@ -69,7 +69,7 @@ btn.addEventListener("click", () => {
 });
 
 function changeText() {
-  const textarea = document.getElementById("text-box");
+  const textarea = document.getElementById("ta");
   textarea.focus();
   textarea.setRangeText("ALREADY", 14, 17, "select");
 }

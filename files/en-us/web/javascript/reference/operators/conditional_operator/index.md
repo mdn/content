@@ -35,7 +35,7 @@ If `condition` is any of these, the result of the conditional expression will be
 
 ## Examples
 
-### A simple example
+### A basic example
 
 ```js
 const age = 26;
@@ -99,5 +99,5 @@ function example() {
 - [`if...else`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else)
 - [Nullish coalescing operator (`??`)](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)
 - [Optional chaining (`?.`)](/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
-- [Making decisions in your code — conditionals](/en-US/docs/Learn/JavaScript/Building_blocks/conditionals)
+- [Learn: Making decisions in your code — conditionals](/en-US/docs/Learn_web_development/Core/Scripting/Conditionals)
 - [Expressions and operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators) guide

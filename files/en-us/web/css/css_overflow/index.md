@@ -17,11 +17,200 @@ Painting effects that overflow the content but do not participate in the CSS box
 
 ## Overflow in action
 
-Use the following interactive example to see the effects of various `overflow` property values on the content overflow and scrollbars in the adjacent fixed-size box.
+Try the following example to see the effects of various `overflow` property values on the content overflow and scrollbars in the adjacent fixed-size box.
 
-The example also includes options to change the values for the `overflow-clip-margin` and `width` properties, as well as to programmatically scroll the content if the overflow property creates a {{Glossary("scroll container")}}. Select `overflow: clip` and see the effect of different `overflow-clip-margin` values. Select `overflow: hidden` or `overflow: scroll` to check out the various `ScrollLeft` and `ScrollTop` slider settings.
+The example includes options to change the values for the `overflow-clip-margin` and `width` properties, as well as to programmatically scroll the content if the overflow property creates a {{Glossary("scroll container")}}. Select `overflow: clip` and see the effect of different `overflow-clip-margin` values. Select `overflow: hidden` or `overflow: scroll` to check out the various `ScrollLeft` and `ScrollTop` slider settings.
 
-{{EmbedGHLiveSample("css-examples/modules/overflow.html", '100%', 320)}}
+```html hidden live-sample___overflow
+<article>
+  <fieldset>
+    <legend>Select options:</legend>
+    <label
+      ><code>overflow</code>:
+      <select id="overflowValue">
+        <option>hidden</option>
+        <option>clip</option>
+        <option>scroll</option>
+        <option>auto</option>
+        <option selected>visible</option>
+        <option>overlay</option>
+      </select>
+    </label>
+    <label>
+      <code>overflow-clip-margin</code>:
+      <input type="number" id="ocm" value="1" min="0" max="10" size="2" />
+      <code>em</code>
+    </label>
+    <label
+      ><input type="checkbox" id="wide" /> <code>width</code>:
+      <code>20em</code> or <code>40em</code></label
+    >
+    <fieldset>
+      <legend>Scroll programmatically:</legend>
+      <label
+        >ScrollLeft:
+        <input type="range" min="0" max="100" value="0" id="scrollL"
+      /></label>
+      <label
+        >ScrollTop:
+        <input type="range" min="0" max="100" value="0" id="scrollT"
+      /></label>
+    </fieldset>
+  </fieldset>
+  <pre class="visible">&nbsp;
+    Oh, Rubber Duckie, you're the one
+    You make bath time lots of fun
+    Rubber Duckie, I'm awfully fond of you
+
+    Rubber Duckie, joy of joys
+    When I squeeze you, you make noise
+    Rubber Duckie, you're my very best friend, it's true
+
+    Oh, every day when I make my way to the tubby
+    I find a little fella who's cute and yellow and chubby
+    Rub-a-dub-dubby
+
+    <a href="#">Rubber Duckie</a>, you're so fine
+    And I'm lucky that you're mine
+    Rubber Duckie, I'm awfully fond of you
+      </pre>
+</article>
+
+<script>
+  const pre = document.querySelector("pre");
+  const val = document.getElementById("overflowValue");
+  const check = document.getElementById("wide");
+  const ocm = document.getElementById("ocm");
+  const scrollL = document.getElementById("scrollL");
+  const scrollT = document.getElementById("scrollT");
+
+  val.addEventListener("change", () => {
+    if (pre.classList.contains("wide")) {
+      pre.className = `wide ${val.value}`;
+    } else {
+      pre.className = `${val.value}`;
+    }
+    scrollExample();
+    clipMargin();
+  });
+
+  wide.addEventListener("change", () => {
+    pre.classList.toggle("wide");
+    scrollExample();
+  });
+
+  ocm.addEventListener("change", () => {
+    clipMargin();
+  });
+
+  scrollL.addEventListener("change", () => {
+    scrollExample();
+  });
+  scrollT.addEventListener("change", () => {
+    scrollExample();
+  });
+
+  function scrollExample() {
+    pre.scrollTo({
+      top: scrollT.value,
+      left: scrollL.value * 2,
+      behavior: "smooth",
+    });
+  }
+
+  function clipMargin() {
+    pre.style.overflowClipMargin = `${ocm.value}em`;
+  }
+</script>
+```
+
+```css hidden live-sample___overflow
+article {
+  display: flex;
+  gap: 1em;
+}
+
+label {
+  display: block;
+  white-space: nowrap;
+}
+
+pre {
+  border: 2px dashed crimson;
+  height: 150px;
+  width: 20em;
+  margin-bottom: 3em;
+  overflow-clip-margin: 1em;
+  text-align: center;
+}
+
+.wide {
+  width: 40em;
+}
+
+::before {
+  font-weight: bold;
+  color: white;
+  background: crimson;
+  display: inline-block;
+  min-width: 50%;
+  padding: 3px 5px;
+  box-sizing: border-box;
+}
+
+.hidden {
+  overflow: hidden hidden;
+}
+.hidden::before {
+  content: "hidden: ";
+}
+
+.clip {
+  overflow: clip clip;
+}
+.clip::before {
+  content: "clip: ";
+}
+
+.scroll {
+  overflow: scroll scroll;
+}
+.scroll::before {
+  content: "scroll: ";
+}
+
+.auto {
+  overflow: auto auto;
+}
+.auto::before {
+  content: "auto: ";
+}
+
+.overlay {
+  overflow: clip clip;
+  overflow: overlay overlay;
+}
+.overlay::before {
+  content: "overlay (or clip if not supported): ";
+}
+
+.visible {
+  overflow: visible visible;
+}
+.visible::before {
+  content: "visible: ";
+}
+
+article:not(:has(pre.clip)) > fieldset > label:nth-of-type(2),
+article:not(:has(pre.hidden, pre.scroll, pre.auto, pre.overlay))
+  fieldset
+  fieldset {
+  opacity: 20%;
+  pointer-events: none;
+}
+```
+
+{{EmbedLiveSample("overflow", "", "400px")}}
 
 A link is included in the content box above to demonstrate the effects of keyboard focus on overflow and scroll behaviors. Try tabbing to the link or programmatically scrolling the content: the content will scroll only if the enumerated `<overflow>` value creates a scroll container.
 
@@ -49,8 +238,8 @@ A link is included in the content box above to demonstrate the effects of keyboa
 
 ## Guides
 
-- [Overflowing content](/en-US/docs/Learn/CSS/Building_blocks/Overflowing_content)
-  - : CSS building block: learn what overflow is and how to manage it.
+- [Learn: Overflowing content](/en-US/docs/Learn_web_development/Core/Styling_basics/Overflow)
+  - : Learn what overflow is and how to manage it.
 - [Creating a named scroll progress timeline animation](/en-US/docs/Web/CSS/scroll-timeline-name#creating_a_named_scroll_progress_timeline_animation)
   - : The CSS scroll timeline {{cssxref('scroll-timeline-name')}} and {{cssxref('scroll-timeline-axis')}} properties, along with the {{cssxref('scroll-timeline')}} shorthand, create animations tied to the scroll offset of a scroll container.
 

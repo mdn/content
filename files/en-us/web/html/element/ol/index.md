@@ -50,7 +50,7 @@ To determine which list to use, try changing the order of the list items; if the
 
 ## Examples
 
-### Simple example
+### Basic example
 
 ```html
 <ol>
@@ -63,7 +63,7 @@ To determine which list to use, try changing the order of the list items; if the
 
 #### Result
 
-{{EmbedLiveSample("Simple_example", 400, 100)}}
+{{EmbedLiveSample("Basic_example", 400, 100)}}
 
 ### Using Roman Numeral type
 

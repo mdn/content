@@ -2,7 +2,7 @@
 title: <frequency-percentage>
 slug: Web/CSS/frequency-percentage
 page-type: css-type
-browser-compat: css.types.frequency-percentage
+spec-urls: https://drafts.csswg.org/css-values/#typedef-frequency-percentage
 ---
 
 {{CSSRef}}
@@ -63,7 +63,7 @@ Where a `<frequency-percentage>` is specified as an allowable type, this means t
 
 ## Browser compatibility
 
-{{Compat}}
+No browser currently supports this feature.
 
 ## See also
 

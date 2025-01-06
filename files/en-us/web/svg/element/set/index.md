@@ -7,7 +7,7 @@ browser-compat: svg.elements.set
 
 {{SVGRef}}
 
-The SVG **`<set>`** element provides a simple means of just setting the value of an attribute for a specified duration.
+The **`<set>`** [SVG](/en-US/docs/Web/SVG) element provides a method of setting the value of an attribute for a specified duration.
 
 It supports all attribute types, including those that cannot reasonably be interpolated, such as string and boolean values. For attributes that can be reasonably be interpolated, the {{SVGElement('animate')}} is usually preferred.
 

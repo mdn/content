@@ -38,9 +38,9 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 ## Examples
 
-### A simple stylesheet
+### A basic stylesheet
 
-In the following example, we apply a very simple stylesheet to a document:
+In the following example, we apply a short stylesheet to a document:
 
 ```html
 <!doctype html>
@@ -62,7 +62,7 @@ In the following example, we apply a very simple stylesheet to a document:
 
 #### Result
 
-{{EmbedLiveSample('A_simple_stylesheet', '100%', '100')}}
+{{EmbedLiveSample('A_basic_stylesheet', '100%', '100')}}
 
 ### Multiple style elements
 

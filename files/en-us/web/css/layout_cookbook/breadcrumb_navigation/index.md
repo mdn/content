@@ -16,11 +16,46 @@ Display the hierarchy of the site by displaying inline links, with a separator b
 
 ## Recipe
 
-{{EmbedGHLiveSample("css-examples/css-cookbook/breadcrumb-navigation.html", '100%', 530)}}
+Click "Play" in the code blocks below to edit the example in the MDN Playground:
 
-> [!CALLOUT]
->
-> [Download this example](https://github.com/mdn/css-examples/blob/main/css-cookbook/breadcrumb-navigation--download.html)
+```html live-sample___breadcrumb-example
+<nav aria-label="Breadcrumb" class="breadcrumb">
+  <ol>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Category</a></li>
+    <li><a href="#">Sub Category</a></li>
+    <li><a href="#">Type</a></li>
+    <li><span aria-current="page">Product</span></li>
+  </ol>
+</nav>
+```
+
+```css live-sample___breadcrumb-example
+body {
+  font: 1.2em sans-serif;
+}
+
+.breadcrumb {
+  padding: 0 0.5rem;
+}
+
+.breadcrumb ol {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: end;
+}
+
+.breadcrumb li:not(:last-child)::after {
+  display: inline-block;
+  margin: 0 0.25rem;
+  content: "→";
+}
+```
+
+{{EmbedLiveSample("breadcrumb-example", "", "100px")}}
 
 > [!NOTE]
 > The example above uses a complex selector to insert content before every `li` except the last one. This could also be achieved using a complex selector targeting all `li` elements except the first:
@@ -35,7 +70,7 @@ Display the hierarchy of the site by displaying inline links, with a separator b
 
 ## Choices made
 
-To display list items inline, we use [flexbox layout](/en-US/docs/Learn/CSS/CSS_layout/Flexbox), thus demonstrating how a line of CSS can give us our navigation. The separators are added using [CSS generated content](/en-US/docs/Web/CSS/CSS_generated_content). You could change these to any separator that you like.
+To display list items inline, we use [flexbox layout](/en-US/docs/Learn_web_development/Core/CSS_layout/Flexbox), thus demonstrating how a line of CSS can give us our navigation. The separators are added using [CSS generated content](/en-US/docs/Web/CSS/CSS_generated_content). You could change these to any separator that you like.
 
 ## Accessibility concerns
 

@@ -9,9 +9,11 @@ browser-compat: http.headers.Expect-CT
 
 {{HTTPSidebar}}{{Deprecated_Header}}
 
-The `Expect-CT` header lets sites opt in to reporting and/or enforcement of [Certificate Transparency](/en-US/docs/Web/Security/Certificate_Transparency) requirements. Certificate Transparency (CT) aims to prevent the use of misissued certificates for that site from going unnoticed.
+The `Expect-CT` {{Glossary("response header")}} lets sites opt in to reporting and/or enforcement of [Certificate Transparency](/en-US/docs/Web/Security/Certificate_Transparency) requirements.
+Certificate Transparency (CT) aims to prevent the use of misissued certificates for that site from going unnoticed.
 
-Only Google Chrome and other Chromium-based browsers implemented `Expect-CT`, and Chromium has deprecated the header from version 107, because Chromium now enforces CT by default. See the [Chrome Platform Status](https://chromestatus.com/feature/6244547273687040) update.
+Only Google Chrome and other Chromium-based browsers implemented `Expect-CT`, and Chromium has deprecated the header from version 107, because Chromium now enforces CT by default.
+See the [Chrome Platform Status](https://chromestatus.com/feature/6244547273687040) update.
 
 CT requirements can be satisfied via any one of the following mechanisms:
 
@@ -26,7 +28,10 @@ CT requirements can be satisfied via any one of the following mechanisms:
 > Browsers **ignore** the `Expect-CT` header over HTTP; the header only has effect on HTTPS connections.
 
 > [!NOTE]
-> The `Expect-CT` is mostly obsolete since June 2021. Since May 2018, all new TLS certificates are expected to support SCTs by default. Certificates issued before March 2018 were allowed to have a lifetime of 39 months, so they had expired in June 2021. Chromium plans to deprecate `Expect-CT` header and to eventually remove it.
+> The `Expect-CT` is mostly obsolete since June 2021.
+> Since May 2018, all new TLS certificates are expected to support SCTs by default.
+> Certificates issued before March 2018 were allowed to have a lifetime of 39 months, so they had expired in June 2021.
+> Chromium plans to deprecate `Expect-CT` header and to eventually remove it.
 
 <table class="properties">
   <tbody>
@@ -36,7 +41,7 @@ CT requirements can be satisfied via any one of the following mechanisms:
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>yes</td>
+      <td>Yes</td>
     </tr>
   </tbody>
 </table>
@@ -92,3 +97,11 @@ Builds of Chrome are designed to stop enforcing the `Expect-CT` policy 10 weeks 
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [Secure Contexts](/en-US/docs/Web/Security/Secure_Contexts)
+- Glossary terms:
+  - {{glossary('TLS', 'Transport Layer Security (TLS)')}}
+  - {{glossary('SSL', 'Secure Sockets Layer (SSL)')}}
+  - {{glossary('HTTPS')}}

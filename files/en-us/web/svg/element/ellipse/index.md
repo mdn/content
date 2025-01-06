@@ -7,7 +7,7 @@ browser-compat: svg.elements.ellipse
 
 {{SVGRef}}
 
-The **`<ellipse>`** element is an SVG basic shape, used to create ellipses based on a center coordinate, and both their x and y radius.
+The **`<ellipse>`** [SVG](/en-US/docs/Web/SVG) element is an SVG basic shape, used to create ellipses based on a center coordinate, and both their x and y radius.
 
 > [!NOTE]
 > Ellipses are unable to specify the exact orientation of the ellipse (if, for example, you wanted to draw an ellipse tilted at a 45 degree angle), but it can be rotated by using the {{SVGAttr("transform")}} attribute.

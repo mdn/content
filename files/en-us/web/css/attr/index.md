@@ -17,7 +17,7 @@ The **`attr()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_F
 ## Syntax
 
 ```css
-/* Simple usage */
+/* Basic usage */
 attr(data-count);
 attr(title);
 
@@ -143,7 +143,7 @@ attr(data-something, "default");
 - `<fallback>`
   - : The value to be used if the associated attribute is missing or contains an invalid value. If not set, CSS will use the default value defined for each `<type-or-unit>`.
 
-### Formal syntax
+## Formal syntax
 
 {{CSSSyntax}}
 

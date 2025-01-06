@@ -86,11 +86,11 @@ The `number` input type should only be used for incremental numbers, especially 
 > Logically, you should not be able to enter characters inside a number input other than numbers. Some browsers allow invalid characters, others do not; see [Firefox bug 1398528](https://bugzil.la/1398528).
 
 > [!NOTE]
-> A user can tinker with your HTML behind the scenes, so your site _must not_ use simple client-side validation for any security purposes. You _must_ verify on the server side any transaction in which the provided value may have security implications of any kind.
+> A user can tinker with your HTML behind the scenes, so your site _must not_ use client-side validation for security purposes. You _must_ verify on the server side any transaction in which the provided value may have security implications of any kind.
 
 Mobile browsers further help with the user experience by showing a special keyboard more suited for entering numbers when the user tries to enter a value.
 
-### A simple number input
+### A basic number input
 
 In its most basic form, a number input can be implemented like this:
 
@@ -99,7 +99,7 @@ In its most basic form, a number input can be implemented like this:
 <input id="ticketNum" type="number" name="ticketNum" value="0" />
 ```
 
-{{EmbedLiveSample('A_simple_number_input', 600, 40)}}
+{{EmbedLiveSample('A_basic_number_input', 600, 40)}}
 
 A number input is considered valid when empty and when a single number is entered, but is otherwise invalid. If the [`required`](/en-US/docs/Web/HTML/Element/input#required) attribute is used, the input is no longer considered valid when empty.
 
@@ -144,7 +144,7 @@ In this updated version, you should find that the up and down step buttons will 
 
 ### Allowing decimal values
 
-One issue with number inputs is that their step size is 1 by default. If you try to enter a number with a decimal (such as "1.0"), it will be considered invalid. If you want to enter a value that requires decimals, you'll need to reflect this in the `step` value (e.g. `step="0.01"` to allow decimals to two decimal places). Here's a simple example:
+One issue with number inputs is that their step size is 1 by default. If you try to enter a number with a decimal (such as "1.0"), it will be considered invalid. If you want to enter a value that requires decimals, you'll need to reflect this in the `step` value (e.g. `step="0.01"` to allow decimals to two decimal places). Here's a basic example:
 
 ```html
 <input type="number" placeholder="1.0" step="0.01" min="0" max="10" />
@@ -397,7 +397,7 @@ switchBtn.addEventListener("click", () => {
 });
 ```
 
-After declaring a few variables, an event listener is added to the `button` to control the switching mechanism. This is pretty simple, mostly involving changing over the button's `class` and {{HTMLElement("label")}}, and updating the display values of the two sets of inputs when the button is pressed.
+After declaring a few variables, an event listener is added to the `button` to control the switching mechanism. This involves changing over the button's `class` and {{HTMLElement("label")}}, and updating the display values of the two sets of inputs when the button is pressed.
 
 (Note that we're not converting back and forth between meters and feet/inches here, which a real-life web application would probably do.)
 
@@ -469,8 +469,7 @@ After declaring a few variables, an event listener is added to the `button` to c
 
 ## See also
 
-- [HTML forms guide](/en-US/docs/Learn/Forms)
+- [HTML forms guide](/en-US/docs/Learn_web_development/Extensions/Forms)
 - {{HTMLElement("input")}}
 - [`<input type="tel">`](/en-US/docs/Web/HTML/Element/input/tel)
-- [Compatibility of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
 - [Article: Why Gov.UK changed the input type for numbers](https://technology.blog.gov.uk/2020/02/24/why-the-gov-uk-design-system-team-changed-the-input-type-for-numbers/)

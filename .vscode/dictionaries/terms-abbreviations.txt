@@ -21,6 +21,7 @@ ANMF
 anonymization
 antialiasing
 antitracking
+apideck
 APNG
 appcontent
 arcosh
@@ -83,6 +84,7 @@ BMFF
 bootup
 botmaster
 BPTC
+Brotli
 browserless
 BSAC
 bytestream
@@ -93,7 +95,6 @@ catchable
 CAVLC
 CCPA
 CCPL
-CDLR
 CELP
 CGATS
 cheatsheet
@@ -283,6 +284,7 @@ iconset
 idents
 IERS
 IMSC
+inferencing
 infobar
 infobox
 infoboxes
@@ -527,6 +529,7 @@ quickmenu
 qvalues
 QWERTZ
 randomizer
+rari
 rasterizes
 RDBMS
 RDBMSes
@@ -560,6 +563,8 @@ retarget
 retargeted
 retargeting
 retargetings
+reviewdog
+RFCOMM
 RGTC
 roadmaps
 Rockhopper
@@ -876,9 +881,11 @@ xrayed
 Xrays
 XRCPU
 XSSI
+yari
 yearless
 Zalgo
 zoomable
 ZQSD
+Zstandard
 ZWNBSP
 ZWSP

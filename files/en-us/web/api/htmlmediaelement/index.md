@@ -155,7 +155,7 @@ Listen to these events using {{domxref("EventTarget.addEventListener", "addEvent
 - {{domxref("HTMLMediaElement.emptied_event", 'emptied')}}
   - : Fired when the media has become empty; for example, when the media has already been loaded (or partially loaded), and the {{domxref("HTMLMediaElement.load()")}} method is called to reload it.
 - {{domxref("HTMLMediaElement.encrypted_event", 'encrypted')}}
-  - : Fired when initialization data is found in the media, indicating that it is encrypted.
+  - : Fired when initialization data is found in the media that indicates the media is encrypted.
 - {{domxref("HTMLMediaElement.ended_event", 'ended')}}
   - : Fired when playback stops when end of the media (\<audio> or \<video>) is reached or because no further data is available.
 - {{domxref("HTMLMediaElement.error_event", 'error')}}
@@ -190,6 +190,8 @@ Listen to these events using {{domxref("EventTarget.addEventListener", "addEvent
   - : Fired when the volume has changed.
 - {{domxref("HTMLMediaElement.waiting_event", 'waiting')}}
   - : Fired when playback has stopped because of a temporary lack of data.
+- {{domxref("HTMLMediaElement.waitingforkey_event", 'waitingforkey')}}
+  - : Fired when playback is first blocked while waiting for a key.
 
 ## Specifications
 
@@ -209,6 +211,6 @@ Listen to these events using {{domxref("EventTarget.addEventListener", "addEvent
 ### Guides
 
 - [Web media technologies](/en-US/docs/Web/Media)
-- Learning area: [Video and audio content](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
+- Learning area: [HTML video and audio](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
 - [Media type and format guide](/en-US/docs/Web/Media/Formats)
 - [Handling media support issues in web content](/en-US/docs/Web/Media/Formats/Support_issues)

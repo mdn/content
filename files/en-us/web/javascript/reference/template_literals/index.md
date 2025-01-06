@@ -84,7 +84,7 @@ string text line 2`);
 
 ### String interpolation
 
-Without template literals, when you want to combine output from expressions with strings, you'd [concatenate them](/en-US/docs/Learn/JavaScript/First_steps/Strings#concatenation_using) using the [addition operator](/en-US/docs/Web/JavaScript/Reference/Operators/Addition) `+`:
+Without template literals, when you want to combine output from expressions with strings, you'd [concatenate them](/en-US/docs/Learn_web_development/Core/Scripting/Strings#concatenation_using) using the [addition operator](/en-US/docs/Web/JavaScript/Reference/Operators/Addition) `+`:
 
 ```js
 const a = 5;
@@ -326,7 +326,7 @@ In normal template literals, [the escape sequences in string literals](/en-US/do
 
 However, this is problematic for tagged templates, which, in addition to the "cooked" literal, also have access to the raw literals (escape sequences are preserved as-is).
 
-Tagged templates enable the embedding of arbitrary string content, where escape sequences may follow a different syntax. Consider for a simple example where we embed [LaTeX](https://en.wikipedia.org/wiki/LaTeX) source text in JavaScript via `String.raw`. We want to still be able to use LaTeX macros that start with `u` or `x` without following JavaScript syntax restrictions. Therefore, the syntax restriction of well-formed escape sequences is removed from tagged templates. The example below uses [MathJax](https://www.mathjax.org/) to render LaTeX in one element:
+Tagged templates enable the embedding of arbitrary string content, where escape sequences may follow a different syntax. Consider for an example where we embed [LaTeX](https://en.wikipedia.org/wiki/LaTeX) source text in JavaScript via `String.raw`. We want to still be able to use LaTeX macros that start with `u` or `x` without following JavaScript syntax restrictions. Therefore, the syntax restriction of well-formed escape sequences is removed from tagged templates. The example below uses [MathJax](https://www.mathjax.org/) to render LaTeX in one element:
 
 ```js
 const node = document.getElementById("formula");

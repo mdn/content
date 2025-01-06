@@ -2252,6 +2252,10 @@
       "inh": "",
       "impl": []
     },
+    "MLTensor": {
+      "inh": "",
+      "impl": []
+    },
     "Module": {
       "inh": "",
       "impl": []
@@ -2317,6 +2321,10 @@
       "impl": []
     },
     "Navigator": {
+      "inh": "",
+      "impl": []
+    },
+    "NavigatorLogin": {
       "inh": "",
       "impl": []
     },
@@ -3070,6 +3078,10 @@
     },
     "SharedStorageWorkletGlobalScope": {
       "inh": "WorkletGlobalScope",
+      "impl": []
+    },
+    "SharedStorageWorkletNavigator": {
+      "inh": "",
       "impl": []
     },
     "SharedWorker": {

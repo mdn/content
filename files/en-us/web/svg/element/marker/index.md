@@ -7,7 +7,7 @@ browser-compat: svg.elements.marker
 
 {{SVGRef}}
 
-The **`<marker>`** element defines a graphic used for drawing arrowheads or polymarkers on a given {{SVGElement("path")}}, {{SVGElement("line")}}, {{SVGElement("polyline")}} or {{SVGElement("polygon")}} element.
+The **`<marker>`** [SVG](/en-US/docs/Web/SVG) element defines a graphic used for drawing arrowheads or polymarkers on a given {{SVGElement("path")}}, {{SVGElement("line")}}, {{SVGElement("polyline")}} or {{SVGElement("polygon")}} element.
 
 Markers can be attached to shapes using the {{SVGAttr("marker-start")}}, {{SVGAttr("marker-mid")}}, and {{SVGAttr("marker-end")}} properties.
 

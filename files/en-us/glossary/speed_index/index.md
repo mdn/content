@@ -17,4 +17,4 @@ _Diagram showing how above the fold content can load before the page load event 
 
 ## See also
 
-- [Learn web performance](/en-US/docs/Learn/Performance)
+- [Learn: Web performance](/en-US/docs/Learn_web_development/Extensions/Performance)
