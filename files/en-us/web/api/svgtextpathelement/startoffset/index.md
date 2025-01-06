@@ -45,3 +45,7 @@ console.log(textPath.startOffset.baseVal.valueAsString); // Output: "25%"
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- SVG {{SVGAttr("startOffset")}} attribute
