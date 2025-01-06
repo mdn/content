@@ -117,7 +117,7 @@ Some properties only apply to input element types that support the corresponding
 
 - {{domxref("HTMLInputElement.validationMessage", "validationMessage")}} {{ReadOnlyInline}}
 
-  - : Returns a localized message that describes the validation constraints that the control does not satisfy (if any). This is the empty string if the control is not a candidate for constraint validation ([`willValidate`](/en-US/docs/Web/API/HTMLObjectElement/willValidate) is `false`), or it satisfies its constraints. This value can be set by the {{domxref("HTMLInputElement.setCustomValidity()", "setCustomValidity()")}} method.
+  - : Returns a localized message that describes the validation constraints that the control does not satisfy (if any). This is the empty string if the control is not a candidate for constraint validation ({{domxref("HTMLInputElement.willValidate", "willValidate")}} is `false`), or it satisfies its constraints. This value can be set by the {{domxref("HTMLInputElement.setCustomValidity()", "setCustomValidity()")}} method.
 
 - {{domxref("HTMLInputElement.validity", "validity")}} {{ReadOnlyInline}}
 

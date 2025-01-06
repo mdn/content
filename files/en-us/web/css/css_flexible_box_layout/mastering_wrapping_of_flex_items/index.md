@@ -261,16 +261,24 @@ The flexbox specification details what should happen if a flex item is collapsed
 
 This behavior is useful if you want to target flex items using JavaScript to show and hide content for example. The example in the specification demonstrates one such pattern.
 
-In the following live example, I have a non-wrapped flex container. The third item has more content than the others yet is set to `visibility: collapse`; therefore, the flex container is retaining a _strut_ of the height required to display this item. If you remove `visibility: collapse` from the CSS or change the value to `visible`, you will see the item appear, and the space is redistributed between non-collapsed items; the height of the flex container should not change.
+In the following live example, the non-wrapping flex container contains a row with three flex items that are set to flex to equal sizes. The third item has multiple lines of content, growing the container. The default for `align-items` is `normal`; for flex items, `normal` behaves as `stretch`, so all the items stretch by default, filling the container's cross-size height.
+
+The item creating the cross-size is set to `visibility: collapse`, which collapses or hides the flex item, depending on the browser. In either case, the flex container retains a _strut_ of the cross-size even though it is not visible. This way, if the item is made visible, the cross-size of the single-line flex container will not change. If you remove `visibility: collapse` from the CSS or change the value to `visible`, you will see the item appear, and the main-size space is redistributed between non-collapsed items, while the cross-size remains unchanged.
 
 > [!NOTE]
-> Use Firefox for the below two examples as Chrome and Safari treat collapse as hidden.
+> Use Firefox for the example below as other common browsers treat `collapse` as `hidden`.
+
+```html hidden live-sample___visibility-collapse
+<p>
+  <label><input type="checkbox" /> Toggle <code>visibility</code> value</label>
+</p>
+```
 
 ```html live-sample___visibility-collapse
 <div class="box">
   <div>One</div>
   <div>Two</div>
-  <div class="hide">Three <br />has <br />extra <br />text</div>
+  <div class="collapse">Three <br />has <br />extra <br />text</div>
 </div>
 ```
 
@@ -286,31 +294,45 @@ In the following live example, I have a non-wrapped flex container. The third it
   border-radius: 5px;
   background-color: rgb(96 139 168 / 0.2);
 }
-.hide {
+.collapse {
   visibility: collapse;
+}
+```
+
+```css hidden live-sample___visibility-collapse
+p:has(:checked) + div .collapse {
+  visibility: visible;
 }
 ```
 
 {{EmbedLiveSample("visibility-collapse")}}
 
-When dealing with multiple-line flex containers however you need to understand that the wrapping is re-done _after_ collapsing. So the browser needs to re-do the wrapping behavior to account for the new space that the collapsed item has left in the inline direction.
+The above was a single-line, non-wrapping flex container with a set size of `600px` so whether the item is visible or collapsed, the width is the same. It is important to understand that while the container retains a strut of the collapsed item's cross-size, the main size is not preserved. Multi-line flex containers rewrap their items after removing collapsed items from rendering. The new space that a collapsed item leaves in the main direction may cause non-collapsed items to be placed in a different line than if the item were not collapsed. Because each line is laid out like an independent single-line flex container and its composition may change after collapsing, its cross-axis size may change too.
 
-This means that items might end up on a different line to the one they started on. In the case of an item being shown and hidden it could well cause the items to end up in a different row.
+The following example shows this behavior. The third flex item is collapsed, so it occupies zero space along the main axis (the inline-size is `0`). When collapsed, its strut is on the first row after the fourth item, with the first row being tall enough to fit the three lines of text that the third item would have had. Then, if you uncollapse the item (e.g. by removing the `collapse` class), there is no longer enough horizontal space for the fifth item on the first row, and it moves to the second. This causes the second row to grow to fit the two lines of text of its new member, and the last flex item is pushed onto a new row. With a taller second line and a new third line, the flex container is much taller than it was before.
 
-I have created this behavior in the next live example. You can see how the stretching changes row based on the location of the collapsed item. If you add more content to the second item, it changes row once it gets long enough. That top row then only becomes as tall as a single line of text.
+> [!NOTE]
+> Use Firefox for the example below as other common browsers treat `collapse` as `hidden`.
+
+```html hidden live-sample___wrapped-visibility-collapse
+<p>
+  <label><input type="checkbox" /> Toggle <code>visibility</code> value</label>
+</p>
+```
 
 ```html live-sample___wrapped-visibility-collapse
 <div class="box">
   <div>One</div>
-  <div>Add more text to this box to make it grow</div>
-  <div class="hide">Three <br />has <br />extra <br />text</div>
+  <div>Two is the width of this sentence.</div>
+  <div class="collapse">Three <br />is <br />five <br />lines <br />tall.</div>
   <div>Four</div>
-  <div>Five</div>
+  <div>Five<br />Five</div>
   <div>Six</div>
   <div>Seven</div>
   <div>Eight</div>
   <div>Nine</div>
   <div>Ten</div>
+  <div>Eleven is longer</div>
 </div>
 ```
 
@@ -327,17 +349,24 @@ I have created this behavior in the next live example. You can see how the stret
   border-radius: 5px;
   background-color: rgb(96 139 168 / 0.2);
   flex: 1 1 auto;
+  min-width: 50px;
 }
-.hide {
+.collapse {
   visibility: collapse;
 }
 ```
 
-{{EmbedLiveSample("wrapped-visibility-collapse")}}
+```css hidden live-sample___wrapped-visibility-collapse
+p:has(:checked) + div .collapse {
+  visibility: visible;
+}
+```
 
-If this causes a problem for your layout it may require a rethinking of the structure, for example putting each row into a separate flex container in order that they can't shift rows.
+{{EmbedLiveSample("wrapped-visibility-collapse", "", "300")}}
+
+If this causes a problem for your layout, it may require a rethinking of the structure, for example, putting each row into a separate flex container so that they can't shift rows.
 
 ### Using `visibility: hidden` and `display: none`
 
-In previous live example, try using `visibility: hidden` or `display: none` instead of `visibility: collapse`. Using `visibility: hidden`, the item is made invisible but the box is kept in the formatting structure, so it still behaves as if it were part of the layout.
+In the previous live examples, try using `visibility: hidden` or `display: none` instead of `visibility: collapse`. Using `visibility: hidden`, the item is made invisible, but the box is kept in the formatting structure, so it still behaves as if it were part of the layout.
 When you use `display: none`, the item is completely removed from the formatting structure. Not only is it invisible but the structure is removed as well. This means counters ignore it and things like transitions do not run.

@@ -24,14 +24,13 @@ The property specifies two things:
 ```css
 /* Single keyword values */
 white-space: normal;
-white-space: nowrap;
 white-space: pre;
 white-space: pre-wrap;
 white-space: pre-line;
-white-space: break-spaces;
 
-/* white-space-collapse and text-wrap shorthand values */
-white-space: collapse balance;
+/* white-space-collapse and text-wrap-mode shorthand values */
+white-space: wrap;
+white-space: collapse;
 white-space: preserve nowrap;
 
 /* Global values */
@@ -44,25 +43,16 @@ white-space: unset;
 
 ### Values
 
-`white-space` property values can be specified as a single keyword chosen from the list of values below, or two values representing shorthand for the {{CSSxRef("white-space-collapse")}} and {{cssxref("text-wrap")}} properties.
+The `white-space` property values can be specified as a single keyword chosen from the list of values below, or two values representing shorthand for the {{CSSxRef("white-space-collapse")}} and {{cssxref("text-wrap-mode")}} properties.
 
 - `normal`
   - : Sequences of white space are [collapsed](#collapsing_of_white_space). Newline characters in the source are handled the same as other white spaces. Lines are broken as necessary to fill line boxes.
-- `nowrap`
-  - : [Collapses](#collapsing_of_white_space) white space as the `normal` value does, but suppresses line breaks (text wrapping) within the source.
 - `pre`
   - : Sequences of white space are preserved. Lines are only broken at newline characters in the source and at {{HTMLElement("br")}} elements.
 - `pre-wrap`
   - : Sequences of white space are preserved. Lines are broken at newline characters, at {{HTMLElement("br")}}, and as necessary to fill line boxes.
 - `pre-line`
   - : Sequences of white space are [collapsed](#collapsing_of_white_space). Lines are broken at newline characters, at {{HTMLElement("br")}}, and as necessary to fill line boxes.
-- `break-spaces`
-
-  - : The behavior is identical to that of `pre-wrap`, except that:
-
-    - Any sequence of preserved white space always takes up space, including at the end of the line.
-    - A line-breaking opportunity exists after every preserved white space character, including between white space characters.
-    - Such preserved spaces take up space and do not hang, thus affecting the box's intrinsic sizes ({{cssxref("min-content")}} size and {{cssxref("max-content")}} size).
 
 The following table summarizes the behavior of the various `white-space` keyword values:
 
@@ -83,14 +73,6 @@ The following table summarizes the behavior of the various `white-space` keyword
       <td>Collapse</td>
       <td>Collapse</td>
       <td>Wrap</td>
-      <td>Remove</td>
-      <td>Hang</td>
-    </tr>
-    <tr>
-      <th><code>nowrap</code></th>
-      <td>Collapse</td>
-      <td>Collapse</td>
-      <td>No wrap</td>
       <td>Remove</td>
       <td>Hang</td>
     </tr>
@@ -117,14 +99,6 @@ The following table summarizes the behavior of the various `white-space` keyword
       <td>Wrap</td>
       <td>Remove</td>
       <td>Hang</td>
-    </tr>
-    <tr>
-      <th><code>break-spaces</code></th>
-      <td>Preserve</td>
-      <td>Preserve</td>
-      <td>Wrap</td>
-      <td>Wrap</td>
-      <td>Wrap</td>
     </tr>
   </tbody>
 </table>
