@@ -21,16 +21,16 @@ Use the `aria-owns` property on the elements that own expandable grouping contai
 
 ### Buttons
 
-A button that opens a widget should have `aria-controls` set to the [`id`](/en-US/docs/Web/HTML/Global_attributes/id) of the expandable widget and `aria-expanded` set to the current state of the widget.
+A button that toggles a widget should have `aria-controls` set to the [`id`](/en-US/docs/Web/HTML/Global_attributes/id) of the toggled widget and `aria-expanded` set to the current state of the widget.
 
 ```html
-<button aria-expanded="false" aria-controls="widget1">Show widget</button>
+<button aria-expanded="false" aria-controls="widget1">Toggle widget</button>
 ```
 
 When the widget is visible, the controlling object relays that information via having `aria-expanded="true"` set on it. The accessible name of the controlling object should reflect this change.
 
 ```html
-<button aria-expanded="true" aria-controls="widget1">Hide widget</button>
+<button aria-expanded="true" aria-controls="widget1">Toggle widget</button>
 ```
 
 ### Menu
