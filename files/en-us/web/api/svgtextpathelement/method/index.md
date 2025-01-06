@@ -45,3 +45,8 @@ console.log(textPath.method.baseVal); // Output: 1 (TEXTPATH_METHODTYPE_ALIGN)
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("SVGTextPathElement.spacing")}}
+- [`SVGTextPathElement` method types](/en-US/docs/Web/API/SVGTextPathElement#method_types)
