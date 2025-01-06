@@ -49,6 +49,29 @@ const dt4 = Temporal.ZonedDateTime.from(
 console.log(dt1.equals(dt4)); // false
 ```
 
+### Testing if two time zone identifiers are equivalent
+
+```js
+function sameTimeZone(timeZone1, timeZone2) {
+  const dt1 = Temporal.ZonedDateTime.from({
+    year: 2021,
+    month: 7,
+    day: 1,
+    timeZone: timeZone1,
+  });
+  const dt2 = Temporal.ZonedDateTime.from({
+    year: 2021,
+    month: 7,
+    day: 1,
+    timeZone: timeZone2,
+  });
+  return dt1.equals(dt2);
+}
+
+console.log(sameTimeZone("Asia/Kolkata", "Asia/Calcutta")); // true
+console.log(sameTimeZone("Asia/Shanghai", "Asia/Taipei")); // false
+```
+
 ## Specifications
 
 {{Specifications}}
