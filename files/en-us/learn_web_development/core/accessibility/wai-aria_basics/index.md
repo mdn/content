@@ -14,18 +14,19 @@ Following on from the previous article, sometimes making complex UI controls tha
   <tbody>
     <tr>
       <th scope="row">Prerequisites:</th>
-      <td>Familiarity with <a href="/en-US/docs/Learn_web_development/Core/Structuring_content">HTML</a>, <a href="/en-US/docs/Learn_web_development/Core/Styling_basics">CSS</a>, and accessibility best practices as taught in previous lessons in the module.</a>.</td>
+      <td>
+        A basic understanding of HTML, CSS, and
+        JavaScript. An understanding of the
+        <a href="/en-US/docs/Learn/Accessibility"
+          >previous articles in the course</a
+        >.
+      </td>
     </tr>
     <tr>
-      <th scope="row">Learning outcomes:</th>
+      <th scope="row">Objective:</th>
       <td>
-        <ul>
-          <li>the purpose of WAI-ARIA — to provide semantics to otherwise non-semantic HTML, so that AT users can make sense of the interfaces being presented to them.</li>
-          <li>The basic syntax — roles, properties, and states.</li>
-          <li>Landmarks and signposting.</li>
-          <li>Enhancing keyboard accessibility.</li>
-          <li>Announcing dynamic content updates with live regions.</li>
-        </ul>
+        To gain familiarity with WAI-ARIA, and how it can be used to provide
+        useful additional semantics to enhance accessibility where required.
       </td>
     </tr>
   </tbody>
@@ -66,7 +67,7 @@ The problem here is that visually they work, but screen readers can't make any s
 - [Roles](/en-US/docs/Web/Accessibility/ARIA/Roles)
   - : These define what an element is or does. Many of these are so-called landmark roles, which largely duplicate the semantic value of structural elements, such as `role="navigation"` ({{htmlelement("nav")}}) or `role="complementary"` ({{htmlelement("aside")}}). Some other roles describe different page structures, such as `role="banner"`, `role="search"`, `role="tablist"`, and `role="tabpanel"`, which are commonly found in UIs.
 - Properties
-  - : These define properties of elements, which can be used to give them extra meaning or semantics. As an example, `aria-required="true"` specifies that a form input needs to be filled in order to be valid, whereas `aria-labelledby="label"` allows you to put an ID on an element, then reference it as being the label for anything else on the page, including multiple elements, which is not possible using `<label for="input">`. As an example, you could use `aria-labelledby` to specify that a key description contained in a {{htmlelement("div")}} is the label for multiple table cells, or you could use it as an alternative to image alt text — specify existing information on the page as an image's alt text, rather than having to repeat it inside the `alt` attribute. You can see an example of this at [Text alternatives](/en-US/docs/Learn_web_development/Core/Accessibility/HTML#text_alternatives).
+  - : These define properties of elements, which can be used to give them extra meaning or semantics. As an example, `aria-required="true"` specifies that a form input needs to be filled in order to be valid, whereas `aria-labelledby="label"` allows you to put an ID on an element, then reference it as being the label for anything else on the page, including multiple elements, which is not possible using `<label for="input">`. As an example, you could use `aria-labelledby` to specify that a key description contained in a {{htmlelement("div")}} is the label for multiple table cells, or you could use it as an alternative to image alt text — specify existing information on the page as an image's alt text, rather than having to repeat it inside the `alt` attribute. You can see an example of this at [Text alternatives](/en-US/docs/Learn/Accessibility/HTML#text_alternatives).
 - States
   - : Special properties that define the current conditions of elements, such as `aria-disabled="true"`, which specifies to a screen reader that a form input is currently disabled. States differ from properties in that properties don't change throughout the lifecycle of an app, whereas states can change, generally programmatically via JavaScript.
 
@@ -103,13 +104,13 @@ We talked about some of the problems that prompted WAI-ARIA to be created earlie
 - Signposts/Landmarks
   - : ARIA's [`role`](/en-US/docs/Web/Accessibility/ARIA/Roles) attribute values can act as landmarks that either replicate the semantics of HTML elements (e.g., {{htmlelement("nav")}}), or go beyond HTML semantics to provide signposts to different functional areas, for example, `search`, `tablist`, `tab`, `listbox`, etc.
 - Dynamic content updates
-  - : Screen readers tend to have difficulty with reporting constantly changing content; with ARIA we can use `aria-live` to inform screen reader users when an area of content is updated dynamically: for example, by JavaScript in the page [fetching new content from the server and updating the DOM](/en-US/docs/Learn_web_development/Core/Scripting/Network_requests).
+  - : Screen readers tend to have difficulty with reporting constantly changing content; with ARIA we can use `aria-live` to inform screen reader users when an area of content is updated dynamically: for example, by JavaScript in the page [fetching new content from the server and updating the DOM](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data).
 - Enhancing keyboard accessibility
   - : There are built-in HTML elements that have native keyboard accessibility; when other elements are used along with JavaScript to simulate similar interactions, keyboard accessibility and screen reader reporting suffers as a result. Where this is unavoidable, WAI-ARIA provides a means to allow other elements to receive focus (using `tabindex`).
 - Accessibility of non-semantic controls
   - : When a series of nested `<div>`s along with CSS/JavaScript is used to create a complex UI-feature, or a native control is greatly enhanced/changed via JavaScript, accessibility can suffer — screen reader users will find it difficult to work out what the feature does if there are no semantics or other clues. In these situations, ARIA can help to provide what's missing with a combination of roles like `button`, `listbox`, or `tablist`, and properties like `aria-required` or `aria-posinset` to provide further clues as to functionality.
 
-One thing to remember though — **you should only use WAI-ARIA when you need to!** Ideally, you should _always_ use [native HTML features](/en-US/docs/Learn_web_development/Core/Accessibility/HTML) to provide the semantics required by screen readers to tell their users what is going on. Sometimes this isn't possible, either because you have limited control over the code, or because you are creating something complex that doesn't have an easy HTML element to implement it. In such cases, WAI-ARIA can be a valuable accessibility enhancing tool.
+One thing to remember though — **you should only use WAI-ARIA when you need to!** Ideally, you should _always_ use [native HTML features](/en-US/docs/Learn/Accessibility/HTML) to provide the semantics required by screen readers to tell their users what is going on. Sometimes this isn't possible, either because you have limited control over the code, or because you are creating something complex that doesn't have an easy HTML element to implement it. In such cases, WAI-ARIA can be a valuable accessibility enhancing tool.
 
 But again, only use it when necessary!
 
@@ -120,32 +121,236 @@ But again, only use it when necessary!
 
 In the next section, we'll look at the four areas in more detail, along with practical examples. Before you continue, you should get a screen reader testing setup put in place, so you can test some of the examples as you go through.
 
-See our section on [testing screen readers](/en-US/docs/Learn_web_development/Core/Accessibility/Tooling#screen_readers) for more information.
+See our section on [testing screen readers](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#screen_readers) for more information.
 
 ### Signposts/Landmarks
 
-WAI-ARIA adds the [`role` attribute](https://www.w3.org/TR/wai-aria-1.1/#role_definitions) to browsers, which allows you to add extra semantic value to elements on your site wherever they are needed. The first major area in which this is useful is providing information for screen readers so that their users can find common page elements. Let's look at an example — our [website-no-roles](https://github.com/mdn/learning-area/tree/main/accessibility/aria/website-no-roles) example ([see it live](https://mdn.github.io/learning-area/accessibility/aria/website-no-roles/)) has the following structure:
+WAI-ARIA adds the [`role` attribute](https://www.w3.org/TR/wai-aria-1.1/#role_definitions) to browsers, which allows you to add extra semantic value to elements on your site wherever they are needed. The first major area in which this is useful is providing information for screen readers so that their users can find common page elements. This example has the following structure:
 
-```html
+```html live-sample___aria-website-no-roles
 <header>
-  <h1>…</h1>
+  <h1>Header</h1>
+
+  <!-- Even is it's not mandatory, it's common practice to put the main navigation menu within the main header -->
+
   <nav>
     <ul>
-      …
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Team</a></li>
+      <li><a href="#">Projects</a></li>
+      <li><a href="#">Contact</a></li>
     </ul>
+
+    <!-- A Search form is another common non-linear way to navigate through a website. -->
+
     <form>
-      <!-- search form -->
+      <input type="search" name="q" placeholder="Search query" />
+      <input type="submit" value="Go!" />
     </form>
   </nav>
 </header>
 
+<!-- Here is our page's main content -->
 <main>
-  <article>…</article>
-  <aside>…</aside>
+  <!-- It contains an article -->
+  <article>
+    <h2>Article heading</h2>
+
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Donec a diam
+      lectus. Set sit amet ipsum mauris. Maecenas congue ligula as quam viverra
+      nec consectetur ant hendrerit. Donec et mollis dolor. Praesent et diam
+      eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue
+      enim, ut porta lorem lacinia consectetur.
+    </p>
+
+    <h3>subsection</h3>
+
+    <p>
+      Donec ut librero sed accu vehicula ultricies a non tortor. Lorem ipsum
+      dolor sit amet, consectetur adipisicing elit. Aenean ut gravida lorem. Ut
+      turpis felis, pulvinar a semper sed, adipiscing id dolor.
+    </p>
+  </article>
+
+  <!-- the aside content can also be nested within the main content -->
+  <aside>
+    <h2>Related</h2>
+
+    <ul>
+      <li><a href="#">Oh I do like to be beside the seaside</a></li>
+      <li><a href="#">Oh I do like to be beside the sea</a></li>
+      <li><a href="#">Although in the North of England</a></li>
+      <li><a href="#">It never stops raining</a></li>
+      <li><a href="#">Oh well...</a></li>
+    </ul>
+  </aside>
 </main>
 
-<footer>…</footer>
+<!-- And here is our main footer that is used across all the pages of our website -->
+
+<footer>
+  <p>©Copyright 2050 by nobody. All rights reversed.</p>
+</footer>
 ```
+
+```css hidden live-sample___aria-website-no-roles
+/* || General setup */
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 10px;
+  background-color: #a9a9a9;
+}
+
+body {
+  width: max(70vw, 90%);
+  margin: 0 auto;
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* || typography */
+
+h1,
+h2,
+h3 {
+  font-family: "Sonsie One", cursive;
+  color: #2a2a2a;
+}
+
+p,
+input,
+li {
+  font-family: "Open Sans Condensed", sans-serif;
+  color: #2a2a2a;
+}
+
+h1 {
+  font-size: 4rem;
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 10px black;
+}
+
+h2 {
+  font-size: 3rem;
+  text-align: center;
+}
+
+h3 {
+  font-size: 2.2rem;
+}
+
+p,
+li {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+/* || header layout */
+
+header {
+  margin-bottom: 10px;
+}
+
+nav,
+article,
+aside,
+footer {
+  background-color: white;
+  padding: 1%;
+}
+
+nav {
+  background-color: ff80ff;
+  display: flex;
+  gap: 2vw;
+  @media (width <= 650px) {
+    flex-direction: column;
+  }
+}
+
+nav ul {
+  padding: 0;
+  list-style-type: none;
+  flex: 2;
+  display: flex;
+  gap: 2vw;
+}
+
+nav li {
+  display: inline;
+  text-align: center;
+}
+
+nav a {
+  display: inline-block;
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;
+}
+
+nav form {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+input {
+  font-size: 1.6rem;
+  height: 32px;
+}
+
+input[type="search"] {
+  flex: 3;
+}
+
+input[type="submit"] {
+  flex: 1;
+  margin-left: 1rem;
+  background: #333;
+  border: 0;
+  color: white;
+}
+
+/* || main layout */
+
+main {
+  display: flex;
+  gap: 2vw;
+  @media (width <= 650px) {
+    flex-direction: column;
+  }
+}
+
+article {
+  flex: 4;
+}
+
+aside {
+  flex: 1;
+  background-color: #ff80ff;
+}
+
+aside li {
+  padding-bottom: 10px;
+}
+
+footer {
+  margin-top: 10px;
+}
+```
+
+{{EmbedLiveSample("aria-website-no-roles", "100", "850")}}
 
 If you try testing the example with a screen reader in a modern browser, you'll already get some useful information. For example, VoiceOver gives you the following:
 
@@ -162,7 +367,243 @@ If you go to VoiceOver's landmarks menu (accessed using VoiceOver key + U and th
 
 However, we could do better here. The search form is a really important landmark that people will want to find, but it is not listed in the landmarks menu or treated like a notable landmark beyond the actual input being called out as a search input (`<input type="search">`).
 
-Let's improve it by the use of some ARIA features. First, we'll add some [`role`](/en-US/docs/Web/Accessibility/ARIA/Roles) attributes to our HTML structure. You can try taking a copy of our original files (see [`index.html`](https://github.com/mdn/learning-area/blob/main/accessibility/aria/website-no-roles/index.html) and [`style.css`](https://github.com/mdn/learning-area/blob/main/accessibility/aria/website-no-roles/style.css)), or navigating to our [website-aria-roles](https://github.com/mdn/learning-area/tree/main/accessibility/aria/website-aria-roles) example ([see it live](https://mdn.github.io/learning-area/accessibility/aria/website-aria-roles/)), which has a structure like this:
+Let's improve it by the use of some ARIA features.
+
+```html live-sample___aria-website-roles
+<header>
+  <h1>Header</h1>
+
+  <!-- Even is it's not mandatory, it's common practice to put the main navigation menu within the main header -->
+
+  <nav role="navigation">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Our team</a></li>
+      <li><a href="#">Projects</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+
+    <!-- A Search form is another common non-linear way to navigate through a website. -->
+
+    <form role="search">
+      <input
+        type="search"
+        name="q"
+        placeholder="Search query"
+        aria-label="Search through site content" />
+      <input type="submit" value="Go!" />
+    </form>
+  </nav>
+</header>
+
+<!-- Here is our page's main content -->
+<main>
+  <!-- It contains an article -->
+  <article role="article">
+    <h2>Article heading</h2>
+
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Donec a diam
+      lectus. Set sit amet ipsum mauris. Maecenas congue ligula as quam viverra
+      nec consectetur ant hendrerit. Donec et mollis dolor. Praesent et diam
+      eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue
+      enim, ut porta lorem lacinia consectetur.
+    </p>
+
+    <h3>subsection</h3>
+
+    <p>
+      Donec ut librero sed accu vehicula ultricies a non tortor. Lorem ipsum
+      dolor sit amet, consectetur adipisicing elit. Aenean ut gravida lorem. Ut
+      turpis felis, pulvinar a semper sed, adipiscing id dolor.
+    </p>
+
+    <p>
+      Pelientesque auctor nisi id magna consequat sagittis. Curabitur dapibus,
+      enim sit amet elit pharetra tincidunt feugiat nist imperdiet. Ut convallis
+      libero in urna ultrices accumsan. Donec sed odio eros.
+    </p>
+  </article>
+
+  <!-- the aside content can also be nested within the main content -->
+  <aside role="complementary">
+    <h2>Related</h2>
+    <ul>
+      <li><a href="#">Oh I do like to be beside the seaside</a></li>
+      <li><a href="#">Oh I do like to be beside the sea</a></li>
+      <li><a href="#">Although in the North of England</a></li>
+      <li><a href="#">It never stops raining</a></li>
+      <li><a href="#">Oh well...</a></li>
+    </ul>
+  </aside>
+</main>
+
+<!-- And here is our main footer that is used across all the pages of our website -->
+
+<footer>
+  <p>©Copyright 2050 by nobody. All rights reversed.</p>
+</footer>
+```
+
+```css hidden live-sample___aria-website-roles
+/* || General setup */
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 10px;
+  background-color: #a9a9a9;
+}
+
+body {
+  width: max(70vw, 90%);
+  margin: 0 auto;
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* || typography */
+
+h1,
+h2,
+h3 {
+  font-family: "Sonsie One", cursive;
+  color: #2a2a2a;
+}
+
+p,
+input,
+li {
+  font-family: "Open Sans Condensed", sans-serif;
+  color: #2a2a2a;
+}
+
+h1 {
+  font-size: 4rem;
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 10px black;
+}
+
+h2 {
+  font-size: 3rem;
+  text-align: center;
+}
+
+h3 {
+  font-size: 2.2rem;
+}
+
+p,
+li {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+/* || header layout */
+
+header {
+  margin-bottom: 10px;
+}
+
+nav,
+article,
+aside,
+footer {
+  background-color: white;
+  padding: 1%;
+}
+
+nav {
+  background-color: ff80ff;
+  display: flex;
+  gap: 2vw;
+  @media (width <= 650px) {
+    flex-direction: column;
+  }
+}
+
+nav ul {
+  padding: 0;
+  list-style-type: none;
+  flex: 2;
+  display: flex;
+  gap: 2vw;
+}
+
+nav li {
+  display: inline;
+  text-align: center;
+}
+
+nav a {
+  display: inline-block;
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;
+}
+
+nav form {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+input {
+  font-size: 1.6rem;
+  height: 32px;
+}
+
+input[type="search"] {
+  flex: 3;
+}
+
+input[type="submit"] {
+  flex: 1;
+  margin-left: 1rem;
+  background: #333;
+  border: 0;
+  color: white;
+}
+
+/* || main layout */
+
+main {
+  display: flex;
+  gap: 2vw;
+  @media (width <= 650px) {
+    flex-direction: column;
+  }
+}
+
+article {
+  flex: 4;
+}
+
+aside {
+  flex: 1;
+  background-color: #ff80ff;
+}
+
+aside li {
+  padding-bottom: 10px;
+}
+
+footer {
+  margin-top: 10px;
+}
+```
+
+{{EmbedLiveSample("aria-website-roles", "100", "850")}}
+
+Firstly, we added some [`role`](/en-US/docs/Web/Accessibility/ARIA/Roles) attributes to our HTML structure, which has a structure like this:
 
 ```html
 <header>
@@ -208,11 +649,9 @@ The improved semantics of the search form have shown what is made possible when 
 
 Content loaded into the DOM can be easily accessed using a screen reader, from textual content to alternative text attached to images. Traditional static websites with largely text content are therefore easy to make accessible for people with visual impairments.
 
-The problem is that modern web apps are often not just static text — they often update parts of the page by fetching new content from the server and updating the DOM. These are sometimes referred to as **live regions**.
+The problem is that modern web apps are often not just static text — they often update parts of the page by fetching new content from the server (in this example we are using a static array of quotes) and updating the DOM. These are sometimes referred to as **live regions**.
 
-Let's look at a quick example — see [`aria-no-live.html`](https://github.com/mdn/learning-area/blob/main/accessibility/aria/aria-no-live.html) (also [see it running live](https://mdn.github.io/learning-area/accessibility/aria/aria-no-live.html)). In this example, we have a simple random quote box:
-
-```html
+```html live-sample___aria-no-live
 <section>
   <h1>Random quote</h1>
   <blockquote>
@@ -221,11 +660,61 @@ Let's look at a quick example — see [`aria-no-live.html`](https://github.com/m
 </section>
 ```
 
-Our JavaScript uses the {{domxref("Window.fetch", "fetch()")}} API to load a JSON file via containing a series of random quotes and their authors. Once that is done, we start up a {{domxref("Window.setInterval", "setInterval()")}} loop that loads a new random quote into the quote box every 10 seconds:
+```css live-sample___aria-no-live
+html {
+  font-family: sans-serif;
+}
 
-```js
-const intervalID = setInterval(showQuote, 10000);
+h1 {
+  letter-spacing: 2px;
+}
+
+p {
+  line-height: 1.6;
+}
+
+section {
+  padding: 10px;
+  width: calc(100% - 20px);
+  background: #666;
+  text-shadow: 1px 1px 1px black;
+  color: white;
+  min-height: 160px;
+}
 ```
+
+```js live-sample___aria-no-live
+let quotes = [
+  {
+    quote:
+      "Every child is an artist. The problem is how to remain an artist once he grows up.",
+    author: "Pablo Picasso",
+  },
+  {
+    quote:
+      "You can never cross the ocean until you have the courage to lose sight of the shore.",
+    author: "Christopher Columbus",
+  },
+  {
+    quote:
+      "I love deadlines. I love the whooshing noise they make as they go by.",
+    author: "Douglas Adams",
+  },
+];
+```
+
+```js live-sample___aria-no-live
+const quotePara = document.querySelector("section p");
+
+window.setInterval(showQuote, 10000);
+
+function showQuote() {
+  let random = Math.floor(Math.random() * quotes.length);
+  quotePara.textContent = `${quotes[random].quote} -- ${quotes[random].author}`;
+}
+```
+
+{{EmbedLiveSample("aria-no-live", "100", "180")}}
 
 This works OK, but it is not good for accessibility — the content update is not detected by screen readers, so their users would not know what is going on. This is a fairly trivial example, but just imagine if you were creating a complex UI with lots of constantly updating content, like a chat room, or a strategy game UI, or a live updating shopping cart display — it would be impossible to use the app in any effective way without some kind of way of alerting the user to the updates.
 
@@ -238,16 +727,13 @@ WAI-ARIA, fortunately, provides a useful mechanism to provide these alerts — t
 - `assertive`
   - : Updates should be announced to the user as soon as possible.
 
-We'd like you to take a copy of [`aria-no-live.html`](https://github.com/mdn/learning-area/blob/main/accessibility/aria/aria-no-live.html) and [`quotes.json`](https://github.com/mdn/learning-area/blob/main/accessibility/aria/quotes.json), and update your `<section>` opening tag as follows:
+Here we update the `<section>` opening tag as follows:
 
 ```html
 <section aria-live="assertive">…</section>
 ```
 
 This will cause a screen reader to read out the content as it is updated.
-
-> [!NOTE]
-> Most browsers will throw a security exception if you try to make an HTTP request from a `file://` URL, e.g. if you just load the file by loading it directly into the browser (via double clicking, etc.). See [how to set up a local testing server](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server).
 
 There is an additional consideration here — only the bit of text that updates is read out. It might be nice if we always read out the heading too, so the user can remember what is being read out. To do this, we can add the [`aria-atomic`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-atomic) property to the section. Update your `<section>` opening tag again, like so:
 
@@ -257,8 +743,70 @@ There is an additional consideration here — only the bit of text that updates 
 
 The `aria-atomic="true"` attribute tells screen readers to read out the entire element contents as one atomic unit, not just the bits that were updated.
 
-> [!NOTE]
-> You can see the finished example at [`aria-live.html`](https://github.com/mdn/learning-area/blob/main/accessibility/aria/aria-live.html) ([see it running live](https://mdn.github.io/learning-area/accessibility/aria/aria-live.html)).
+```html live-sample___aria-live
+<section aria-live="assertive" aria-atomic="true">
+  <h1>Random quote</h1>
+  <blockquote>
+    <p></p>
+  </blockquote>
+</section>
+```
+
+```css live-sample___aria-live
+html {
+  font-family: sans-serif;
+}
+
+h1 {
+  letter-spacing: 2px;
+}
+
+p {
+  line-height: 1.6;
+}
+
+section {
+  padding: 10px;
+  width: calc(100% - 20px);
+  background: #666;
+  text-shadow: 1px 1px 1px black;
+  color: white;
+  min-height: 160px;
+}
+```
+
+```js live-sample___aria-live
+let quotes = [
+  {
+    quote:
+      "Every child is an artist. The problem is how to remain an artist once he grows up.",
+    author: "Pablo Picasso",
+  },
+  {
+    quote:
+      "You can never cross the ocean until you have the courage to lose sight of the shore.",
+    author: "Christopher Columbus",
+  },
+  {
+    quote:
+      "I love deadlines. I love the whooshing noise they make as they go by.",
+    author: "Douglas Adams",
+  },
+];
+```
+
+```js live-sample___aria-live
+const quotePara = document.querySelector("section p");
+
+window.setInterval(showQuote, 10000);
+
+function showQuote() {
+  let random = Math.floor(Math.random() * quotes.length);
+  quotePara.textContent = `${quotes[random].quote} -- ${quotes[random].author}`;
+}
+```
+
+{{EmbedLiveSample("aria-live", "100", "180")}}
 
 > [!NOTE]
 > The [`aria-relevant`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-relevant) property is also quite useful for controlling what gets read out when a live region is updated. You can for example only get content additions or removals read out.
@@ -274,7 +822,7 @@ In terms of making non-focusable code focusable, WAI-ARIA extends the `tabindex`
 - `tabindex="0"` — as indicated above, this value allows elements that are not normally tabbable to become tabbable. This is the most useful value of `tabindex`.
 - `tabindex="-1"` — this allows not normally tabbable elements to receive focus programmatically, e.g. via JavaScript, or as the target of links.
 
-We discussed this in more detail and showed a typical implementation back in our HTML accessibility article — see [Building keyboard accessibility back in](/en-US/docs/Learn_web_development/Core/Accessibility/HTML#building_keyboard_accessibility_back_in).
+We discussed this in more detail and showed a typical implementation back in our HTML accessibility article — see [Building keyboard accessibility back in](/en-US/docs/Learn/Accessibility/HTML#building_keyboard_accessibility_back_in).
 
 ### Accessibility of non-semantic controls
 
@@ -282,7 +830,7 @@ This follows on from the previous section — when a series of nested `<div>`s a
 
 #### Form validation and error alerts
 
-First of all, let's revisit the form example we first looked at in our CSS and JavaScript accessibility article (read [Keeping it unobtrusive](/en-US/docs/Learn_web_development/Core/Accessibility/CSS_and_JavaScript#keeping_it_unobtrusive) for a full recap). At the end of this section, we showed that we have included some ARIA attributes on the error message box that displays any validation errors when you try to submit the form:
+First of all, let's revisit the form example we first looked at in our CSS and JavaScript accessibility article (read [Keeping it unobtrusive](/en-US/docs/Learn/Accessibility/CSS_and_JavaScript#keeping_it_unobtrusive) for a full recap). At the end of this section, we showed that we have included some ARIA attributes on the error message box that displays any validation errors when you try to submit the form:
 
 ```html
 <div class="errors" role="alert" aria-relevant="all">
@@ -363,7 +911,7 @@ function toggleMusician(bool) {
 
 #### Describing non-semantic buttons as buttons
 
-A few times in this course already, we've mentioned the native accessibility of (and the accessibility issues behind using other elements to fake) buttons, links, or form elements (see [UI controls](/en-US/docs/Learn_web_development/Core/Accessibility/HTML#ui_controls) in the HTML accessibility article, and [Enhancing keyboard accessibility](#enhancing_keyboard_accessibility), above). Basically, you can add keyboard accessibility back in without too much trouble in many cases, using `tabindex` and a bit of JavaScript.
+A few times in this course already, we've mentioned the native accessibility of (and the accessibility issues behind using other elements to fake) buttons, links, or form elements (see [UI controls](/en-US/docs/Learn/Accessibility/HTML#ui_controls) in the HTML accessibility article, and [Enhancing keyboard accessibility](#enhancing_keyboard_accessibility), above). Basically, you can add keyboard accessibility back in without too much trouble in many cases, using `tabindex` and a bit of JavaScript.
 
 But what about screen readers? They still won't see the elements as buttons. If we test our [`fake-div-buttons.html`](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html) example in a screen reader, our fake buttons will be reported using phrases like "Click me!, group", which is obviously confusing.
 
@@ -384,11 +932,197 @@ Now when you try this using a screen reader, you'll have buttons be reported usi
 
 There are a whole host of other [roles](/en-US/docs/Web/Accessibility/ARIA/Roles) that can identify non-semantic element structures as common UI features that go beyond what's available in standard HTML, for example [`combobox`](/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role), [`slider`](/en-US/docs/Web/Accessibility/ARIA/Roles/slider_role), [`tabpanel`](/en-US/docs/Web/Accessibility/ARIA/Roles/tabpanel_role), [`tree`](/en-US/docs/Web/Accessibility/ARIA/Roles/tree_role). You can see several useful examples in the [Deque university code library](https://dequeuniversity.com/library/) to give you an idea of how such controls can be made accessible.
 
-Let's go through an example of our own. We'll return to our simple absolutely-positioned tabbed interface (see [Hiding things](/en-US/docs/Learn_web_development/Core/Accessibility/CSS_and_JavaScript#hiding_things) in our CSS and JavaScript accessibility article), which you can find at [Tabbed info box example](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/tabbed-info-box.html) (see [source code](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/tabbed-info-box.html)).
+Let's go through an example of our own. We'll return to our simple absolutely-positioned tabbed interface (see [Hiding things](/en-US/docs/Learn/Accessibility/CSS_and_JavaScript#hiding_things) in our CSS and JavaScript accessibility article), which you can find at [Tabbed info box example](/en-US/docs/Learn/CSS/CSS_layout/Practical_positioning_examples#a_fixed_position_tabbed_info-box).
 
 This example as-is works fine in terms of keyboard accessibility — you can happily tab between the different tabs and select them to show the tab contents. It is also fairly accessible too — you can scroll through the content and use the headings to navigate, even if you can't see what is happening on screen. It is however not that obvious what the content is — a screen reader currently reports the content as a list of links, and some content with three headings. It doesn't give you any idea of what the relationship is between the content. Giving the user more clues as to the structure of the content is always good.
 
-To improve things, we've created a new version of the example called [`aria-tabbed-info-box.html`](https://github.com/mdn/learning-area/blob/main/accessibility/aria/aria-tabbed-info-box.html) ([see it running live](https://mdn.github.io/learning-area/accessibility/aria/aria-tabbed-info-box.html)). We've updated the structure of the tabbed interface like so:
+To improve things, we've created a new version of the example.
+
+```html live-sample___aria-tabbed-info-box
+<section class="info-box">
+  <ul role="tablist">
+    <li
+      class="active"
+      role="tab"
+      aria-selected="true"
+      aria-setsize="3"
+      aria-posinset="1"
+      tabindex="0">
+      Tab 1
+    </li>
+    <li
+      role="tab"
+      aria-selected="false"
+      aria-setsize="3"
+      aria-posinset="2"
+      tabindex="0">
+      Tab 2
+    </li>
+    <li
+      role="tab"
+      aria-selected="false"
+      aria-setsize="3"
+      aria-posinset="3"
+      tabindex="0">
+      Tab 3
+    </li>
+  </ul>
+  <div class="panels">
+    <article class="active-panel" role="tabpanel" aria-hidden="false">
+      <h2>The first tab</h2>
+
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
+        turpis nibh, porttitor nec venenatis eu, pulvinar in augue. Vestibulum
+        et orci scelerisque, vulputate tellus quis, lobortis dui. Vivamus varius
+        libero at ipsum mattis efficitur ut nec nisl. Nullam eget tincidunt
+        metus. Donec ultrices, urna maximus consequat aliquet, dui neque
+        eleifend lorem, a auctor libero turpis at sem. Aliquam ut porttitor
+        urna. Nulla facilisi.
+      </p>
+    </article>
+    <article role="tabpanel" aria-hidden="true">
+      <h2>The second tab</h2>
+
+      <p>
+        This tab hasn't got any Lorem Ipsum in it. But the content isn't very
+        exciting all the same.
+      </p>
+    </article>
+    <article role="tabpanel" aria-hidden="true">
+      <h2>The third tab</h2>
+
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
+        turpis nibh, porttitor nec venenatis eu, pulvinar in augue. And now an
+        ordered list: how exciting!
+      </p>
+
+      <ol>
+        <li>dui neque eleifend lorem, a auctor libero turpis at sem.</li>
+        <li>Aliquam ut porttitor urna.</li>
+        <li>Nulla facilisi</li>
+      </ol>
+    </article>
+  </div>
+</section>
+```
+
+```css hidden live-sample___aria-tabbed-info-box
+/* General setup */
+body {
+  font-family: sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+/* info-box setup */
+
+.info-box {
+  width: calc(100% - 20px);
+  height: 400px;
+  margin: 0 auto;
+}
+
+/* styling info-box tabs */
+
+ul[role="tablist"] {
+  padding-left: 0;
+  margin-top: 0;
+}
+
+li[role="tab"] {
+  float: left;
+  list-style-type: none;
+  width: calc(100% / 3);
+  display: inline-block;
+  line-height: 3;
+  background-color: red;
+  color: black;
+  text-align: center;
+}
+
+li[role="tab"]:focus,
+li[role="tab"]:hover {
+  background-color: #a60000;
+  color: white;
+}
+
+li[role="tab"].active {
+  background-color: #a60000;
+  color: white;
+}
+
+/* styling info-box panels */
+
+.info-box .panels {
+  clear: both;
+  position: relative;
+  height: 352px;
+}
+
+.info-box article {
+  background-color: #a60000;
+  color: white;
+  position: absolute;
+  padding: 10px;
+  height: 352px;
+  top: 0;
+  left: 0;
+}
+
+.info-box .active-panel {
+  z-index: 1;
+}
+```
+
+```js live-sample___aria-tabbed-info-box
+let tabs = document.querySelectorAll(".info-box li");
+let panels = document.querySelectorAll(".info-box article");
+
+for (let i = 0; i < tabs.length; i++) {
+  let tab = tabs[i];
+  setTabHandler(tab);
+}
+
+function setTab(e) {
+  if (e.type === "keypress" && e.keyCode !== 13) {
+    return;
+  }
+
+  let tabPos = Number(this.getAttribute("aria-posinset")) - 1;
+  for (let i = 0; i < tabs.length; i++) {
+    if (tabs[i].getAttribute("class")) {
+      tabs[i].removeAttribute("class");
+    }
+
+    tabs[i].setAttribute("aria-selected", "false");
+  }
+
+  this.setAttribute("class", "active");
+  this.setAttribute("aria-selected", "true");
+
+  for (let i = 0; i < panels.length; i++) {
+    if (panels[i].getAttribute("class")) {
+      panels[i].removeAttribute("class");
+    }
+
+    panels[i].setAttribute("aria-hidden", "true");
+  }
+
+  panels[tabPos].setAttribute("class", "active-panel");
+  panels[tabPos].setAttribute("aria-hidden", "false");
+}
+
+function setTabHandler(tab) {
+  tab.addEventListener("click", setTab);
+  tab.addEventListener("keypress", setTab);
+}
+```
+
+{{EmbedLiveSample("aria-tabbed-info-box", "100", "420")}}
+
+We've updated the structure of the tabbed interface like so:
 
 ```html
 <ul role="tablist">
@@ -426,7 +1160,7 @@ To improve things, we've created a new version of the example called [`aria-tabb
 ```
 
 > [!NOTE]
-> The most striking change here is that we've removed the links that were originally present in the example, and just used the list items as the tabs — this was done because it makes things less confusing for screen reader users (the links don't really take you anywhere; they just change the view), and it allows the setsize/position in set features to work better — when these were put on the links, the browser kept reporting "1 of 1" all the time, not "1 of 3", "2 of 3", etc.
+> The most striking change here is that we've removed the links that were originally present in the [example](/en-US/docs/Learn/CSS/CSS_layout/Practical_positioning_examples#a_fixed_position_tabbed_info-box), and just used the list items as the tabs — this was done because it makes things less confusing for screen reader users (the links don't really take you anywhere; they just change the view), and it allows the setsize/position in set features to work better — when these were put on the links, the browser kept reporting "1 of 1" all the time, not "1 of 3", "2 of 3", etc.
 
 ARIA features used include:
 
@@ -450,7 +1184,7 @@ In our tests, this new structure did serve to improve things overall. The tabs a
 
 ## Test your skills!
 
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: WAI-ARIA](/en-US/docs/Learn_web_development/Core/Accessibility/WAI-ARIA_basics/Test_your_skills:_WAI-ARIA).
+You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: WAI-ARIA](/en-US/docs/Learn/Accessibility/WAI-ARIA_basics/Test_your_skills:_WAI-ARIA).
 
 ## Summary
 
@@ -464,4 +1198,4 @@ This article has by no means covered all that's available in WAI-ARIA, but it sh
 - [Deque university code library](https://dequeuniversity.com/library/): A library of really useful and practical examples showing complex UI controls made accessible using WAI-ARIA features
 - [WAI-ARIA authoring practices](https://www.w3.org/WAI/ARIA/apg/) on W3C: A very detailed design pattern from the W3C, explaining how to implement different types of complex UI control whilst making them accessible using WAI-ARIA features
 
-{{PreviousMenuNext("Learn_web_development/Core/Accessibility/CSS_and_JavaScript","Learn_web_development/Core/Accessibility/Multimedia", "Learn_web_development/Core/Accessibility")}}
+{{PreviousMenuNext("Learn/Accessibility/CSS_and_JavaScript","Learn/Accessibility/Multimedia", "Learn/Accessibility")}}
