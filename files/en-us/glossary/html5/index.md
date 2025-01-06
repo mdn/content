@@ -18,5 +18,5 @@ Any modern site should use the [HTML doctype](/en-US/docs/MDN/Writing_guidelines
 ## See also
 
 - [our HTML documentation](/en-US/docs/Web/HTML)
-- [HTML beginner's learning guides](/en-US/docs/Learn/HTML)
+- [HTML beginner's learning guides](/en-US/docs/Learn_web_development/Core/Structuring_content)
 - [Web APIs](/en-US/docs/Web/API)

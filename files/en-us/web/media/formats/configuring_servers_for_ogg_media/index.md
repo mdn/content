@@ -97,5 +97,5 @@ It's important to note that it appears that `oggz-info` makes a read pass of the
 
 ## See also
 
-- [Video and audio content](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
-- [Codecs in common media types](/en-US/docs/Web/Media/Formats/codecs_parameter)
+- [Guide to media types and formats on the web](/en-US/docs/Web/Media/Formats)
+- [HTML video and audio](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)

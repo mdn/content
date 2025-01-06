@@ -38,7 +38,7 @@ _No changes._
 ### JavaScript
 
 - Added support for [RegExp match indices](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) ([Firefox bug 1519483](https://bugzil.la/1519483)).
-- [`Intl.DisplayNames()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/DisplayNames) and [`Intl.ListFormat()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/ListFormat) now have stricter checking that `options` passed to the constructor are [objects](/en-US/docs/Learn/JavaScript/Objects), and will throw an exception if a string or other primitive is used instead ([Firefox bug 1696881](https://bugzil.la/1696881)).
+- [`Intl.DisplayNames()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/DisplayNames) and [`Intl.ListFormat()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/ListFormat) now have stricter checking that `options` passed to the constructor are [objects](/en-US/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects), and will throw an exception if a string or other primitive is used instead ([Firefox bug 1696881](https://bugzil.la/1696881)).
 
 ### HTTP
 

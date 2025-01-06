@@ -328,7 +328,7 @@ const encryptedMediaConfig = {
 ```
 
 In the previous example we used [promise chaining](/en-US/docs/Web/JavaScript/Guide/Using_promises#chaining), to wait on the result.
-Here we've chosen to use [`async` and `await`](/en-US/docs/Learn/JavaScript/Asynchronous/Promises#async_and_await) to wait on the result, and then log it.
+Here we've chosen to use [`async` and `await`](/en-US/docs/Learn_web_development/Extensions/Async_JS/Promises#async_and_await) to wait on the result, and then log it.
 
 ```js
 getDecodingInfo(encryptedMediaConfig);

@@ -7,7 +7,7 @@ spec-urls: https://drafts.csswg.org/css-backgrounds/
 
 {{CSSRef}}
 
-The **CSS backgrounds and borders** module provides properties for adding borders, rounded corners, and box shadows to elements.
+The **CSS backgrounds and borders** module provides properties for adding backgrounds, borders, rounded corners, and box shadows to elements.
 
 You can add different types of border styles, including borders made of images of any image type, from raster images to CSS gradients. Borders can be square or rounded, and a different radius can be set for each corner. Elements can be rounded whether or not they have a visible border.
 
@@ -139,13 +139,13 @@ Click "Play" in the example above to see or edit the code for the animation in t
 
 ## Guides
 
-- [Learn CSS: background and borders](/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
+- [Learn CSS: background and borders](/en-US/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)
   - : Explains how to implement decorative images using CSS background images.
 - [Using multiple backgrounds](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
   - : Explains how to set one or more backgrounds on an element.
 - [Resizing background images](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images)
   - : Describes how to change the size and repeating behavior of background images.
-- [Learn CSS: the box model](/en-US/docs/Learn/CSS/Building_blocks/The_box_model)
+- [Learn CSS: the box model](/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model)
   - : Explains how borders, along with other box model properties, impact the CSS box model.
 - [Using CSS gradients](/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradients)
   - : Explains how to create CSS gradient background images.
