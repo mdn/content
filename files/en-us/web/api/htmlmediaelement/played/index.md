@@ -8,7 +8,7 @@ browser-compat: api.HTMLMediaElement.played
 
 {{APIRef("HTML DOM")}}
 
-The readonly **`played`** property of the {{domxref("HTMLMediaElement")}} interface indicates the time ranges the media, an {{htmlelement("audio")}} or {{htmlelement("audio")}} media file, has played. It returns a new {{domxref("TimeRanges")}} object that contains the ranges of the media source that the browser has played, if any, at the time the attribute is evaluated.
+The **`played`** read-only property of the {{domxref("HTMLMediaElement")}} interface indicates the time ranges the resource, an {{htmlelement("audio")}} or {{htmlelement("audio")}} media file, has played. It returns a new {{domxref("TimeRanges")}} object that contains the ranges of the media source that the browser has played, if any, at the time the attribute is evaluated.
 
 ## Value
 
