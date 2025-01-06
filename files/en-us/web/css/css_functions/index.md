@@ -98,7 +98,7 @@ Each of the pages below contains detailed information about a math function's sy
 - {{CSSxRef("calc", "calc()")}}
   - : Performs basic arithmetic calculations on numerical values.
 - {{CSSxRef("calc-size", "calc-size()")}}
-  - : Perform calculations on intrinsic size values such as `auto`, `fit-content`, and `max-content` which not supported by the regular `calc()` function.
+  - : Perform calculations on intrinsic size values such as `auto`, `fit-content`, and `max-content`, which are not supported by the `calc()` function.
 
 ### Comparison functions
 
