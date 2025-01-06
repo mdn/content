@@ -23,7 +23,7 @@ Following on from the previous article, sometimes making complex UI controls tha
       </td>
     </tr>
     <tr>
-      <th scope="row">Objective:</th>
+      <th scope="row">Learning outcomes:</th>
       <td>
         To gain familiarity with WAI-ARIA, and how it can be used to provide
         useful additional semantics to enhance accessibility where required.
