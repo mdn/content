@@ -4,7 +4,7 @@ slug: Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server
 page-type: learn-faq
 ---
 
-{{QuicklinksWithSubPages("Learn/Common_questions")}}
+{{QuicklinksWithSubPages("/en-US/docs/Learn_web_development/Howto")}}
 
 This article explains how to set up a simple local testing server on your machine, and the basics of how to use it.
 
@@ -52,9 +52,10 @@ To get around the problem of async requests, we need to test such examples by ru
 
 If you only need HTML, CSS and JavaScript, and no server-side language, the easiest way may be to check for extensions in your code editor. As well as automating installation and set-up for your local HTTP server, they also integrate nicely with your code editors. Testing local files in an HTTP server may be one click away.
 
-For VS Code, you can check the following free extension:
+For VS Code, try out the following free extensions:
 
-- `vscode-preview-server`. You can check it on its [home page](https://marketplace.visualstudio.com/items?itemName=yuichinukiyama.vscode-preview-server).
+- [Live Preview](https://marketplace.visualstudio.com/items?itemName=ms-vscode.live-server)
+- [Preview on Web Server](https://marketplace.visualstudio.com/items?itemName=yuichinukiyama.vscode-preview-server)
 
 ### Using Node.js
 
