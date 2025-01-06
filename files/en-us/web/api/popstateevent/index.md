@@ -29,7 +29,7 @@ _This interface also inherits the properties of its parent, {{domxref("Event")}}
 - {{domxref("PopStateEvent.state")}} {{ReadOnlyInline}}
   - : Returns a copy of the information that was provided to `pushState()` or `replaceState()`.
 - {{domxref("PopStateEvent.hasUAVisualTransition", "hasUAVisualTransition")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Returns `true` if the navigation has been performed a visual transition before dispatching this event by the user agent, or `false` otherwise.
+  - : Returns `true` if the user agent performed a visual transition for this navigation before dispatching this event, or `false` otherwise.
 
 ## Instance methods
 
