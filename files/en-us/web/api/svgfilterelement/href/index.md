@@ -49,3 +49,7 @@ console.log(filterElement.href.baseVal); // Output: "#myFilter"
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- SVG {{SVGAttr("href")}} attribute

@@ -55,3 +55,7 @@ console.log(filterElement.primitiveUnits.baseVal); // Output: 1 (SVG_UNIT_TYPE_U
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("SVGFilterElement.filterUnits")}}

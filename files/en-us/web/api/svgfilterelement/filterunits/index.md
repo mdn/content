@@ -55,3 +55,9 @@ console.log(filterElement.filterUnits.baseVal); // Output: 1 (SVG_UNIT_TYPE_USER
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("SVGFilterElement.primitiveUnits")}}
+- {{domxref("SVGUnitTypes")}}
+- [SVG filter primitive attributes](/en-US/docs/Web/SVG/Attribute#filters_attributes)
