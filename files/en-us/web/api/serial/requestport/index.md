@@ -95,7 +95,7 @@ connectBtn.addEventListener("click", () => {
 
 ### Allow the user to select custom RFCOMM-based services
 
-Although most devices expose SPP-based communication through the standardized Bluetooth Classic Serial Port Profile, some use custom RFCOMM-based services. These devices have a Service Class ID that is not in the standard Bluetooth UUID range.
+Although most devices expose SPP-based communication through the standardized Bluetooth Classic Serial Port Profile, some use custom radio frequency communication (RFCOMM) based services. These devices have a Service Class ID that is not in the standard Bluetooth UUID range.
 
 You need to pass the `allowedBluetoothServiceClassIds` list to `requestPort()` to access these custom RFCOMM-based services:
 

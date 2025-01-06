@@ -576,4 +576,4 @@ The code renders as follows:
 - {{domxref("HTMLDialogElement/open", "open")}} property of the `HTMLDialogElement` interface
 - [`inert`](/en-US/docs/Web/HTML/Global_attributes/inert) global attribute for HTML elements
 - {{CSSXref("::backdrop")}} CSS pseudo-element
-- [Web forms](/en-US/docs/Learn/Forms) in the Learn area
+- [Web forms](/en-US/docs/Learn_web_development/Extensions/Forms) in the Learn area

@@ -2,7 +2,7 @@
 title: image()
 slug: Web/CSS/image/image
 page-type: css-function
-browser-compat: css.types.image.image
+spec-urls: https://drafts.csswg.org/css-images-4/#funcdef-image
 ---
 
 {{CSSRef}}
@@ -14,9 +14,26 @@ The **`image()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_
 
 ## Syntax
 
-{{CSSSyntax}}
+```css-nolint
+/* Basic usage */
+image("image1.jpg");
+image(url("image2.jpg"));
 
-where:
+/* Bidi-sensitive Images */
+image(ltr "image1.jpg");
+image(rtl "image1.jpg");
+
+/* Image Fallbacks */
+image("image1.jpg", black);
+
+/* Image Fragments */
+image("image1.jpg#xywh=40,0,20,20");
+
+/* Solid-color Images */
+image(rgba(0,0,255,.5)), url("bg-image.png");
+```
+
+### Values
 
 - `image-tags` {{optional_inline}}
   - : The directionality of the image, either `ltr` for left-to-right or `rtl` for right-to-left.
@@ -58,6 +75,10 @@ If a color is specified in `image()` along with your image sources, it acts as a
 Omitting image sources while including a color is valid and creates a color swatch. Unlike declaring a {{CSSxRef("background-color")}}, which is placed under or behind all the background images, this can be used to put (generally semi-transparent) colors over other images.
 
 The size of the color swatch can be set with the {{CSSxRef("background-size")}} property. This is different from the `background-color`, which sets a color to cover the entire element. Both `image(color)` and `background-color` placements are impacted by the {{CSSxRef("background-clip")}} and {{CSSxRef("background-origin")}} properties.
+
+## Formal syntax
+
+{{CSSSyntax}}
 
 ## Accessibility
 
@@ -139,7 +160,7 @@ The above will put a semi-transparent black mask over the Firefox logo backgroun
 
 ## Browser compatibility
 
-{{Compat}}
+There is no browser implementing this feature.
 
 ## See also
 
