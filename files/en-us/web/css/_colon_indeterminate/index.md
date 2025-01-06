@@ -129,8 +129,8 @@ progress:indeterminate {
 
 ## See also
 
-- [Web forms — Working with user data](/en-US/docs/Learn/Forms)
-- [Styling web forms](/en-US/docs/Learn/Forms/Styling_web_forms)
+- [Web forms — Working with user data](/en-US/docs/Learn_web_development/Extensions/Forms)
+- [Styling web forms](/en-US/docs/Learn_web_development/Extensions/Forms/Styling_web_forms)
 - The [`<input type="checkbox">`](/en-US/docs/Web/HTML/Element/input/checkbox) element's [`indeterminate`](/en-US/docs/Web/API/HTMLInputElement/indeterminate) property
 - {{HTMLElement("input")}} and the {{domxref("HTMLInputElement")}} interface which implements it.
 - The {{cssxref(":checked")}} CSS selector lets you style checkboxes based on whether they're checked or not

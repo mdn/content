@@ -28,4 +28,4 @@ An {{domxref("HTMLFormElement")}} or `null`.
 - {{domxref("HTMLFormElement")}}
 - {{HTMLElement("input")}}
 - HTML [`form`](/en-US/docs/Web/HTML/Element/input#form) attribute
-- [HTML forms guide](/en-US/docs/Learn/Forms)
+- [HTML forms guide](/en-US/docs/Learn_web_development/Extensions/Forms)

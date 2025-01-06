@@ -38,4 +38,4 @@ For this reason, it's recommended that developers choose values for class attrib
 - All [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 - {{domxref('element.className')}}
 - {{domxref('element.classList')}}
-- [Introduction to CSS](/en-US/docs/Learn/CSS)
+- [Introduction to CSS](/en-US/docs/Learn_web_development/Core/Styling_basics)
