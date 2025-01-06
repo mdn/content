@@ -45,3 +45,7 @@ console.log(textPath.href.baseVal); // Output: "#myPath"
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- SVG {{SVGAttr("href")}} attribute
