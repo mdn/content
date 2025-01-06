@@ -8,7 +8,7 @@ browser-compat: api.SVGTextPathElement.spacing
 
 {{APIRef("SVG")}}
 
-The **`spacing`** read-only property of the {{domxref("SVGTextPathElement")}} interface reflects the {{SVGAttr("spacing")}} attribute of the given element. It takes one of the `TEXTPATH_SPACINGTYPE_*` constants defined on this interface.
+The **`spacing`** read-only property of the {{domxref("SVGTextPathElement")}} interface reflects the {{SVGAttr("spacing")}} attribute of the given {{SVGElement("textPath")}} element. It takes one of the [`TEXTPATH_SPACINGTYPE_*` constants](/en-US/docs/Web/API/SVGTextPathElement#spacing_types) defined on this interface.
 
 ## Value
 
