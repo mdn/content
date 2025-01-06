@@ -78,6 +78,10 @@ rotate3d(x, y, z, a)
   </tbody>
 </table>
 
+## Formal syntax
+
+{{CSSSyntax}}
+
 ## Examples
 
 ### Rotating on the y-axis
