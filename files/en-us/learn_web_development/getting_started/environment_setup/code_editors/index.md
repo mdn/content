@@ -42,7 +42,7 @@ You probably already have a plain text editor on your computer. By default, Wind
 
 You are better off with a fully-fledged code editor like [Visual Studio Code](https://code.visualstudio.com/) (multiplatform, free), [Sublime Text](https://www.sublimetext.com/) (multiplatform, not free), or [Notepad++](https://notepad-plus-plus.org/) (Windows, free).
 
-We would recommend Visual Studio Code (VS Code), as it is the editor we mostly use. If you do not already have VS Code (or another code editor) installed, [install it now](https://code.visualstudio.com/).
+We would recommend Visual Studio Code (VS Code), as it is the editor we mostly use. If you do not already have VS Code (or another code editor) installed, you should [install it before proceeding](https://code.visualstudio.com/).
 
 > [!NOTE]
 > Integrated Development Environments (IDEs) such as [NetBeans](https://netbeans.apache.org/front/main/index.html) (multiplatform, free), and [WebStorm](https://www.jetbrains.com/webstorm/) (multiplatform, not free) tend to have more features than simple code editors but tend to be more complex than what you need at this stage in your learning journey.
