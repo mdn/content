@@ -270,6 +270,8 @@ The {{CSSxRef("&lt;basic-shape&gt;")}} CSS [data type](/en-US/docs/Web/CSS/CSS_T
   - : Accepts an SVG path string to enable a shape to be drawn.
 - {{CSSxRef("basic-shape/shape", "shape()")}}
   - : Accepts a comma-separated list of commands defining the shape to be drawn.
+- {{CSSxRef("ray", "ray()")}}
+  - : Defines the `offset-path` line segment that an animated element can follow.
 
 ## Reference functions
 
@@ -340,13 +342,6 @@ The anchor positioning functions are used when positioning and sizing anchor-pos
   - : Returns a length relative to the position of the edges of an anchor-positioned element's associated anchor element.
 - {{cssxref("anchor-size", "anchor-size()")}}
   - : Returns a length relative to the size of the associated anchor element.
-
-## Motion path functions
-
-The following functions are used as a value of different {{CSSxRef("offset-path")}} properties:
-
-- {{cssxref("ray", "ray()")}}
-  - : Defines the `offset-path` line segment that an animated element can follow.
 
 ## See also
 
