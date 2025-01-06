@@ -4,7 +4,7 @@ slug: Web/API/WebGL_API/By_example/Simple_color_animation
 page-type: guide
 ---
 
-{{DefaultAPISidebar("WebGL")}}{{PreviousNext("Learn/WebGL/By_example/Clearing_by_clicking","Learn/WebGL/By_example/Color_masking")}}
+{{DefaultAPISidebar("WebGL")}}{{PreviousNext("Web/API/WebGL_API/By_example/Clearing_by_clicking","Web/API/WebGL_API/By_example/Color_masking")}}
 
 A very basic color animation created using {{Glossary("WebGL")}}, performed by clearing the drawing buffer with a different random color every second.
 
@@ -121,4 +121,4 @@ window.addEventListener(
 
 The source code of this example is also available on [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/simple-color-animation).
 
-{{PreviousNext("Learn/WebGL/By_example/Clearing_by_clicking","Learn/WebGL/By_example/Color_masking")}}
+{{PreviousNext("Web/API/WebGL_API/By_example/Clearing_by_clicking","Web/API/WebGL_API/By_example/Color_masking")}}

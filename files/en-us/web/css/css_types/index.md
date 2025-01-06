@@ -37,6 +37,8 @@ These types include keywords and identifiers as well as strings, and URLs.
       - : The computed value of the property on the element's parent.
     - {{CSSXref("revert")}}
       - : Rolls back the cascade to the value of the earlier origin.
+    - {{CSSXref("revert-layer")}}
+      - : Rolls back the cascade to the value of the earlier [cascade layer](/en-US/docs/Web/CSS/@layer).
     - {{CSSXref("unset")}}
       - : Acts as `inherit` or `initial` depending on whether the property is inherited or not.
 - {{cssxref("&lt;custom-ident&gt;")}}

@@ -2,7 +2,7 @@
 title: <gradient>
 slug: Web/CSS/gradient
 page-type: css-type
-browser-compat: css.types.image.gradient
+browser-compat: css.types.gradient
 ---
 
 {{CSSRef}}
