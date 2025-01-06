@@ -26,7 +26,7 @@ Temporal.ZonedDateTime.from(info, options)
       - `timeZone`
         - : Either a string or a {{jsxref("Temporal.ZonedDateTime")}} instance representing the time zone to use. If a `Temporal.ZonedDateTime` instance, its time zone is used. If a string, it can be a named time zone identifier, an offset time zone identifier, or a date-time string containing a time zone identifier or an offset (see [time zones and offsets](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#time_zones_and_offsets) for more information). The time properties are interpreted in this time zone.
       - `offset` {{optional_inline}}
-        - : A offset string, in the same format as the [RFC 9557](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#rfc_9557_format) offset, representing the offset from UTC. If omitted, it will be calculated from the time zone and the date-time. `"Z"` is not allowed.
+        - : A offset string, in the same format as the [RFC 9557](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#rfc_9557_format) offset (`±HH:mm:ss.sssssssss`), representing the offset from UTC. If omitted, it will be calculated from the time zone and the date-time. `"Z"` is not allowed.
 - `options` {{optional_inline}}
   - : An object containing some or all of the following properties (in the order they are retrieved and validated):
     - `disambiguation` {{optional_inline}}
@@ -88,6 +88,19 @@ const zdt2 = Temporal.ZonedDateTime.from(
   "2021-07-01T12:34:56Z[America/New_York]",
 );
 console.log(zdt2.toString()); // "2021-07-01T08:34:56-04:00[America/New_York]"
+```
+
+### Creating a ZonedDateTime from an ISO 8601 / RFC 3339 string
+
+Note that `Temporal.ZonedDateTime.from()` rejects ISO 8601 strings, which do not include a time zone identifier. This is to ensure that the time zone is always known and can be used to derive different offsets as the local time changes.
+
+If you want to parse an ISO 8601 string, first construct a {{jsxref("Temporal.Instant")}} object and then convert it to a `Temporal.ZonedDateTime` object. You can provide any time zone, even if it doesn't match the offset originally given in the string, and the local time will be adjusted accordingly.
+
+```js
+const isoString = "2021-07-01T12:34:56+02:00";
+const instant = Temporal.Instant.from(isoString);
+const zdt = instant.toZonedDateTime("America/New_York");
+console.log(zdt.toString()); // "2021-07-01T06:34:56-04:00[America/New_York]"
 ```
 
 ### Local time disambiguation
