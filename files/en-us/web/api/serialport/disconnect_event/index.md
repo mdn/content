@@ -20,7 +20,7 @@ More specifically, the `disconnect` event fires when a port that was previously 
 
 This event bubbles to the instance of {{domxref("Serial")}} that returned this interface. The `event.target` property refers to the {{domxref('SerialPort')}} object that bubbles up.
 
-For more information, see [Event bubbling](/en-US/docs/Learn/JavaScript/Building_blocks/Event_bubbling).
+For more information, see [Event bubbling](/en-US/docs/Learn_web_development/Core/Scripting/Event_bubbling).
 
 ## Syntax
 

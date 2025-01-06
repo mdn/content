@@ -90,4 +90,4 @@ Think of the `max()` function as finding the minimum value allowed for a propert
 - {{CSSxRef("calc", "calc()")}}
 - {{CSSxRef("clamp", "clamp()")}}
 - {{CSSxRef("min", "min()")}}
-- [CSS Values](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)
+- [Learn: Values and units](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units)

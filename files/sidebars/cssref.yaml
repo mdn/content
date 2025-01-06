@@ -5,77 +5,54 @@ sidebar:
     link: /Web/CSS
     title: CSS
   - type: section
-    link: /Learn/CSS
-    title: Tutorials
-  - /Learn/Getting_started_with_the_web/CSS_basics
-  - title: CSS_first_steps
+    link: /Learn_web_development/Core/Styling_basics
+    title: Beginners
+  - link: /Learn_web_development/Getting_started/Your_first_website/Styling_the_content
+    title: Styling_the_content
+  - link: /Learn_web_development/Core/Styling_basics
+    title: CSS_styling_basics
     details: closed
     children:
-      - link: /Learn/CSS/First_steps
-        title: CSS first steps overview
-      - /Learn/CSS/First_steps/What_is_CSS
-      - /Learn/CSS/First_steps/Getting_started
-      - /Learn/CSS/First_steps/How_CSS_is_structured
-      - /Learn/CSS/First_steps/How_CSS_works
-      - link: /Learn/CSS/First_steps/styling_a_biography_page
-        title: Assessment_Styling_a_biography_page
-  - title: CSS_building_blocks
+      - /Learn_web_development/Core/Styling_basics/What_is_CSS
+      - /Learn_web_development/Core/Styling_basics/Getting_started
+      - /Learn_web_development/Core/Styling_basics/Styling_a_bio_page
+      - /Learn_web_development/Core/Styling_basics/Basic_selectors
+      - /Learn_web_development/Core/Styling_basics/Attribute_selectors
+      - /Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements
+      - /Learn_web_development/Core/Styling_basics/Combinators
+      - /Learn_web_development/Core/Styling_basics/Box_model
+      - /Learn_web_development/Core/Styling_basics/Handling_conflicts
+      - /Learn_web_development/Core/Styling_basics/Values_and_units
+      - /Learn_web_development/Core/Styling_basics/Sizing
+      - /Learn_web_development/Core/Styling_basics/Backgrounds_and_borders
+      - /Learn_web_development/Core/Styling_basics/Overflow
+      - /Learn_web_development/Core/Styling_basics/Images_media_forms
+      - /Learn_web_development/Core/Styling_basics/Tables
+      - /Learn_web_development/Core/Styling_basics/Debugging_CSS
+      - /Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension
+      - /Learn_web_development/Core/Styling_basics/Fancy_letterheaded_paper
+      - /Learn_web_development/Core/Styling_basics/Cool-looking_box
+  - link: /Learn_web_development/Core/Text_styling
+    title: CSS_text_styling
     details: closed
     children:
-      - link: /Learn/CSS/Building_blocks
-        title: CSS building blocks overview
-      - /Learn/CSS/Building_blocks/Selectors
-      - /Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors
-      - /Learn/CSS/Building_blocks/Selectors/Attribute_selectors
-      - /Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements
-      - /Learn/CSS/Building_blocks/Selectors/Combinators
-      - /Learn/CSS/Building_blocks/Cascade_and_inheritance
-      - /Learn/CSS/Building_blocks/Cascade_layers
-      - /Learn/CSS/Building_blocks/The_box_model
-      - /Learn/CSS/Building_blocks/Backgrounds_and_borders
-      - /Learn/CSS/Building_blocks/Handling_different_text_directions
-      - /Learn/CSS/Building_blocks/Overflowing_content
-      - /Learn/CSS/Building_blocks/Values_and_units
-      - /Learn/CSS/Building_blocks/Sizing_items_in_CSS
-      - /Learn/CSS/Building_blocks/Images_media_form_elements
-      - /Learn/CSS/Building_blocks/Styling_tables
-      - /Learn/CSS/Building_blocks/Debugging_CSS
-      - /Learn/CSS/Building_blocks/Organizing
-      - link: /Learn/CSS/Building_blocks/Fundamental_CSS_comprehension
-        title: Assessment_Fundamental_CSS_comprehension
-      - link: /Learn/CSS/Building_blocks/Creating_fancy_letterheaded_paper
-        title: Assessment_Creating_fancy_letterheaded_paper
-      - link: /Learn/CSS/Building_blocks/A_cool_looking_box
-        title: Assessment_A_cool_looking_box
-  - title: Styling_text
+      - /Learn_web_development/Core/Text_styling/Fundamentals
+      - /Learn_web_development/Core/Text_styling/Styling_lists
+      - /Learn_web_development/Core/Text_styling/Styling_links
+      - /Learn_web_development/Core/Text_styling/Web_fonts
+      - /Learn_web_development/Core/Text_styling/Typesetting_a_homepage
+  - link: /Learn_web_development/Core/CSS_layout
+    title: CSS_layout
     details: closed
     children:
-      - link: /Learn/CSS/Styling_text
-        title: Styling_text_overview
-      - /Learn/CSS/Styling_text/Fundamentals
-      - /Learn/CSS/Styling_text/Styling_lists
-      - /Learn/CSS/Styling_text/Styling_links
-      - /Learn/CSS/Styling_text/Web_fonts
-      - link: /Learn/CSS/Styling_text/Typesetting_a_homepage
-        title: Assessment_Typesetting_a_community_school_homepage
-  - title: CSS_layout
-    details: closed
-    children:
-      - link: /Learn/CSS/CSS_layout
-        title: CSS_layout_overview
-      - /Learn/CSS/CSS_layout/Introduction
-      - /Learn/CSS/CSS_layout/Normal_Flow
-      - /Learn/CSS/CSS_layout/Flexbox
-      - /Learn/CSS/CSS_layout/Grids
-      - /Learn/CSS/CSS_layout/Floats
-      - /Learn/CSS/CSS_layout/Positioning
-      - /Learn/CSS/CSS_layout/Multiple-column_Layout
-      - /Learn/CSS/CSS_layout/Responsive_Design
-      - /Learn/CSS/CSS_layout/Media_queries
-      - /Learn/CSS/CSS_layout/Legacy_Layout_Methods
-      - /Learn/CSS/CSS_layout/Supporting_Older_Browsers
-      - link: /Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension
-        title: Assessment_Fundamental_Layout_Comprehension
+      - /Learn_web_development/Core/CSS_layout/Introduction
+      - /Learn_web_development/Core/CSS_layout/Floats
+      - /Learn_web_development/Core/CSS_layout/Positioning
+      - /Learn_web_development/Core/CSS_layout/Flexbox
+      - /Learn_web_development/Core/CSS_layout/Grids
+      - /Learn_web_development/Core/CSS_layout/Responsive_Design
+      - /Learn_web_development/Core/CSS_layout/Media_queries
+      - /Learn_web_development/Core/CSS_layout/Fundamental_Layout_Comprehension
   - type: section
     link: /Web/CSS/Reference
   - type: listSubPages
@@ -305,19 +282,7 @@ sidebar:
       - /Web/CSS/CSS_Backgrounds_and_Borders/Border-radius_generator
 l10n:
   de:
-    Tutorials: Tutorials
-    CSS_first_steps: CSS erste Schritte
-    Assessment_Styling_a_biography_page: "Aufgabe: Gestaltung einer Biografie-Seite"
-    CSS_building_blocks: CSS Bausteine
-    Assessment_Fundamental_CSS_comprehension: "Aufgabe: Grundlegendes CSS-Verständnis"
-    Assessment_Creating_fancy_letterheaded_paper: "Aufgabe: Erstellung von schickem Briefpapier"
-    Assessment_A_cool_looking_box: "Aufgabe: Eine cool aussehende Box"
-    Styling_text: Textgestaltung
-    Styling_text_overview: Textgestaltung (Übersicht)
-    Assessment_Typesetting_a_community_school_homepage: "Aufgabe: Satz einer Community-Schulhomepage"
     CSS_layout: CSS-Layout
-    CSS_layout_overview: CSS-Layout (Übersicht)
-    Assessment_Fundamental_Layout_Comprehension: "Aufgabe: Grundlegendes Layout-Verständnis"
     Combinators: Kombinatoren
     Guides: Leitfäden
     Animations: Animationen
@@ -349,20 +314,11 @@ l10n:
     Transitions: Übergänge
     Tools: Werkzeuge
   en-US:
-    Tutorials: Tutorials
-    CSS_first_steps: CSS first steps
-    Assessment_Styling_a_biography_page: "Assessment: Styling a biography page"
-    CSS_building_blocks: CSS building blocks
-    Assessment_Fundamental_CSS_comprehension: "Assessment: Fundamental CSS comprehension"
-    Assessment_Creating_fancy_letterheaded_paper: "Assessment: Creating fancy letterheaded paper"
-    Assessment_A_cool_looking_box: "Assessment: A cool-looking box"
-    Styling_text: Styling text
-    Styling_text_overview: Styling text overview
-    Assessment_Typesetting_a_community_school_homepage: "Assessment: Typesetting a community school homepage"
+    Beginners: Beginner's tutorials
+    Styling_the_content: "Your first website: Styling the content"
+    CSS_styling_basics: CSS styling basics
+    CSS_text_styling: CSS text styling
     CSS_layout: CSS layout
-    CSS_layout_overview: CSS layout overview
-    Assessment_Fundamental_Layout_Comprehension: "Assessment: Fundamental layout comprehension"
-    Combinators: Combinators
     Guides: Guides
     Animations: Animations
     Backgrounds_and_Borders: Backgrounds and Borders
@@ -393,12 +349,7 @@ l10n:
     Transitions: Transitions
     Tools: Tools
   fr:
-    CSS_first_steps: Premiers pas en CSS
-    CSS_building_blocks: Les briques composant CSS
-    Styling_text: Mettre en forme du texte
-    Styling_text_overview: Aperçu de la mise en forme du texte
     CSS_layout: Dispositions CSS
-    CSS_layout_overview: Aperçu des dispositions CSS
     Guides: Guides
     Animations: Animations
     Backgrounds_and_Borders: Arrière-plans et bordures
@@ -424,35 +375,11 @@ l10n:
     Transitions: Transitions
     Tools: Outils
   ja:
-    Tutorials: チュートリアル
-    CSS_first_steps: CSS の第一歩
-    Assessment_Styling_a_biography_page: "評価課題: 経歴ページのスタイル設定"
-    CSS_building_blocks: CSS の構成要素
-    Assessment_Fundamental_CSS_comprehension: "評価課題: CSS の基本的な理解度"
-    Assessment_Creating_fancy_letterheaded_paper: "評価課題: 素敵なレターヘッドの便箋の作成"
-    Assessment_A_cool_looking_box: "評価課題: かっこいいボックス"
-    Styling_text: テキストの装飾
-    Styling_text_overview: テキストの装飾の概要
-    Assessment_Typesetting_a_community_school_homepage: "評価課題: コミュニティスクールのホームページの組版"
     CSS_layout: CSS レイアウト
-    CSS_layout_overview: CSS レイアウトの概要
-    Assessment_Fundamental_Layout_Comprehension: "評価課題: 基礎的なレイアウトの理解"
     Flexbox: フレックスボックス
     Positioning: 位置指定
   ko:
-    Tutorials: 자습서
-    CSS_first_steps: CSS 첫 번째 단계
-    Assessment_Styling_a_biography_page: "과제: 프로필 페이지 만들기"
-    CSS_building_blocks: CSS 구성요소
-    Assessment_Fundamental_CSS_comprehension: "과제: 기본적인 CSS 이해"
-    Assessment_Creating_fancy_letterheaded_paper: "과제: 이쁜 레터 모양 종이 만들기"
-    Assessment_A_cool_looking_box: "과제: 멋진 박스 만들기 "
-    Styling_text: 텍스트 꾸미기
-    Styling_text_overview: 텍스트 꾸미기
-    Assessment_Typesetting_a_community_school_homepage: "과제: 학교 홈페이지 만들기"
     CSS_layout: CSS 레이아웃
-    CSS_layout_overview: CSS 레이아웃
-    Assessment_Fundamental_Layout_Comprehension: 과제 기본적인 레이아웃 사용하기
     Guides: 안내서
     Animations: 애니메이션
     Backgrounds_and_Borders: 배경과 보더
@@ -478,35 +405,11 @@ l10n:
     Transitions: 트랜지션
     Tools: 도구
   pt-BR:
-    Tutorials: Tutoriais
-    CSS_first_steps: CSS - primeiros passos
-    Assessment_Styling_a_biography_page: "Avaliação: Estilizando uma página biográfica"
-    CSS_building_blocks: CSS building blocks
-    Assessment_Fundamental_CSS_comprehension: "Assessment: Fundamental CSS comprehension"
-    Assessment_Creating_fancy_letterheaded_paper: "Assessment: Creating fancy letterheaded paper"
-    Assessment_A_cool_looking_box: "Assessment: A cool-looking box"
-    Styling_text: Estilização de textos
-    Styling_text_overview: Visão geral da Estilização de textos
-    Assessment_Typesetting_a_community_school_homepage: "Avaliação: Tipografia para a página inicial da escola pública local"
     CSS_layout: Esquemas CSS
-    CSS_layout_overview: Visão geral de esquemas CSS
-    Assessment_Fundamental_Layout_Comprehension: "Assessment: Fundamental Layout Comprehension"
     Flexbox: Flexbox
     Positioning: Posicionamento
   ru:
-    Tutorials: Уроки
-    CSS_first_steps: Введение в CSS
-    Assessment_Styling_a_biography_page: "Assessment: Styling a biography page"
-    CSS_building_blocks: Устройство CSS
-    Assessment_Fundamental_CSS_comprehension: "Assessment: Fundamental CSS comprehension"
-    Assessment_Creating_fancy_letterheaded_paper: "Assessment: Creating fancy letterheaded paper"
-    Assessment_A_cool_looking_box: "Assessment: A cool-looking box"
-    Styling_text: Стилизация текста
-    Styling_text_overview: Стилизация текста
-    Assessment_Typesetting_a_community_school_homepage: "Задание: Стилизирование школьного сайта"
     CSS_layout: CSS макет
-    CSS_layout_overview: CSS макет
-    Assessment_Fundamental_Layout_Comprehension: "Задание: Фундаментальное понимание раскладки"
     Guides: Руководства
     Animations: Анимации
     Backgrounds_and_Borders: Фоны и границы
@@ -532,19 +435,7 @@ l10n:
     Transitions: Переходы
     Tools: Инструменты
   zh-CN:
-    Tutorials: 教程
-    CSS_first_steps: CSS 第一步
-    Assessment_Styling_a_biography_page: 测验：为传记页面添加样式
-    CSS_building_blocks: CSS 构建
-    Assessment_Fundamental_CSS_comprehension: 测验：基本的 CSS 理解
-    Assessment_Creating_fancy_letterheaded_paper: 测验：创建精美的信纸
-    Assessment_A_cool_looking_box: 测验：一个漂亮的盒子
-    Styling_text: 样式化文本
-    Styling_text_overview: 样式化文本概述
-    Assessment_Typesetting_a_community_school_homepage: 测验：排版社区大学首页
     CSS_layout: CSS 布局概述
-    CSS_layout_overview: CSS 布局概述
-    Assessment_Fundamental_Layout_Comprehension: 测验：对布局基础知识的理解
     Combinators: 关系选择器
     Guides: 指南
     Animations: 动画
@@ -575,18 +466,6 @@ l10n:
     Transitions: 过渡
     Tools: 工具
   zh-TW:
-    Tutorials: 教程
-    CSS_first_steps: CSS first steps
-    Assessment_Styling_a_biography_page: "Assessment: Styling a biography page"
-    CSS_building_blocks: CSS building blocks
-    Assessment_Fundamental_CSS_comprehension: "Assessment: Fundamental CSS comprehension"
-    Assessment_Creating_fancy_letterheaded_paper: "Assessment: Creating fancy letterheaded paper"
-    Assessment_A_cool_looking_box: "Assessment: A cool-looking box"
-    Styling_text: 樣式化文字
-    Styling_text_overview: 樣式化文字概述
-    Assessment_Typesetting_a_community_school_homepage: 練習：設定社區大學首頁的版面
     CSS_layout: CSS 版面配置
-    CSS_layout_overview: CSS 版面配置概述
-    Assessment_Fundamental_Layout_Comprehension: "Assessment: Fundamental Layout Comprehension"
     Flexbox: 彈性區塊
     Positioning: 定位

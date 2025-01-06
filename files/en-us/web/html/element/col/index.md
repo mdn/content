@@ -224,7 +224,6 @@ table {
 
 ## See also
 
-- [Learn: HTML tables](/en-US/docs/Learn/HTML/Tables)
 - {{HTMLElement("caption")}}, {{HTMLElement("colgroup")}}, {{HTMLElement("table")}}, {{HTMLElement("tbody")}}, {{HTMLElement("td")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("th")}}, {{HTMLElement("thead")}}, {{HTMLElement("tr")}}: Other table-related elements
 - {{cssxref("background-color")}}: CSS property to set the background color of each column cell
 - {{cssxref("border")}}: CSS property to control borders of column cells

@@ -46,7 +46,7 @@ fit-content(40%)
 
 ## Formal syntax
 
-{{CSSSyntax}}
+{{CSSSyntax("fit-content")}}
 
 ## Examples
 
