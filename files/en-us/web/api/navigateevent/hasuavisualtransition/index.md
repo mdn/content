@@ -12,7 +12,7 @@ browser-compat: api.NavigateEvent.hasUAVisualTransition
 
 The **`hasUAVisualTransition`** read-only property of the {{domxref("NavigateEvent")}} interface returns `true` if the user agent performed a visual transition for this navigation before dispatching this event, or `false` otherwise.
 
-Some user agents may provide its builtin visual transition when executing site navigations. If the site author also add a visual transition, these transitions may conflict and cause confusion for the user. The property is intended to avoid the site author and the user agent both add visual transitions, and ensure only one visual transition is executed at a time to make sure good user experience.
+User agents may provide a built-in visual transition when executing site navigations. If the site author also adds a visual transition, user agent and author transitions may conflict and confuse a visitor. The property lets you detect whether a UA transition was provided so that you can skip author transitions for a better user experience.
 
 ## Value
 
