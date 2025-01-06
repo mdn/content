@@ -101,6 +101,12 @@ jobs:
           echo "FM_LINT_FAILED=${FM_LINT_FAILED}" >> $GITHUB_ENV
 
           echo "Running Prettier"
+          PRETTIER_FAILED=false
+          PRETTIER_LOG=$(yarn prettier --check ${files_to_lint} 2>&1) || PRETTIER_FAILED=true
+          echo "PRETTIER_LOG<<${EOF}" >> $GITHUB_ENV
+          echo "${PRETTIER_LOG}" >> $GITHUB_ENV
+          echo "${EOF}" >> $GITHUB_ENV
+          echo "PRETTIER_FAILED=${PRETTIER_FAILED}" >> $GITHUB_ENV
           yarn prettier -w ${files_to_lint}
 
           if [[ -n $(git diff) ]]; then
@@ -110,16 +116,17 @@ jobs:
           # info for troubleshooting
           echo MD_LINT_FAILED=${MD_LINT_FAILED}
           echo FM_LINT_FAILED=${FM_LINT_FAILED}
+          echo PRETTIER_FAILED=${PRETTIER_FAILED}
           git diff
 
       - name: Setup reviewdog
-        if: env.FILES_MODIFIED == 'true' || env.MD_LINT_FAILED == 'true'
+        if: ${{ env.FILES_MODIFIED == 'true' || env.MD_LINT_FAILED == 'true' }}
         uses: reviewdog/action-setup@v1
         with:
           reviewdog_version: latest
 
       - name: Suggest changes using diff
-        if: env.FILES_MODIFIED == 'true'
+        if: ${{ env.FILES_MODIFIED == 'true' }}
         env:
           REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -134,7 +141,7 @@ jobs:
             -reporter=github-pr-review < "${TMPFILE}"
 
       - name: Add reviews for markdownlint errors
-        if: env.MD_LINT_FAILED == 'true'
+        if: ${{ env.MD_LINT_FAILED == 'true' }}
         env:
           REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -147,11 +154,31 @@ jobs:
             -reporter="github-pr-review"
 
       - name: Fail if any issues pending
-        if: env.FILES_MODIFIED == 'true' || env.MD_LINT_FAILED == 'true' || env.FM_LINT_FAILED == 'true'
+        if: ${{ env.FILES_MODIFIED == 'true' || env.MD_LINT_FAILED == 'true' || env.FM_LINT_FAILED == 'true' }}
+        env:
+          MD_LINT_FAILED: ${{ env.MD_LINT_FAILED }}
+          FM_LINT_FAILED: ${{ env.FM_LINT_FAILED }}
+          PRETTIER_FAILED: ${{ env.PRETTIER_FAILED }}
+          MD_LINT_LOG: ${{ env.MD_LINT_LOG }}
+          FM_LINT_LOG: ${{ env.FM_LINT_LOG }}
+          PRETTIER_LOG: ${{ env.PRETTIER_LOG }}
         run: |
-          echo -e "\nLogs from markdownlint:"
-          echo "${MD_LINT_LOG}"
-          echo -e "\nLogs from front-matter linter:"
-          echo "${FM_LINT_LOG}"
-          echo -e "\nPlease fix all the linting issues mentioned in above logs and in the review comments."
+          echo -e "\nPlease fix all the linting issues mentioned in the following logs and in the PR review comments."
+
+          if [[ ${MD_LINT_FAILED} == 'true' ]]; then
+            echo -e "\n\n🪵 Logs from markdownlint:"
+            echo "${MD_LINT_LOG}"
+          fi
+
+          if [[ ${FM_LINT_FAILED} == 'true' ]]; then
+            echo -e "\n\n🪵 Logs from front-matter linter:"
+            echo "${FM_LINT_LOG}"
+          fi
+
+          if [[ ${PRETTIER_FAILED} == 'true' ]]; then
+            echo -e "\n\n🪵 Logs from Prettier formatter:"
+            echo "${PRETTIER_LOG}"
+            echo -e "\nYou can use Prettier playground to format the files online (configuration pre-filled): https://prettier.io/playground/#N4Igxg9gdgLgprEAuEBiABABwIYGd7owAWc6CMAlgE6kBmFANqSTSADQgSaXS7KjYqVCAHcACoIR8U2BiOwBPPhwBGVbGADWcGAGVsAWzgAZClDjIYVAK5xV6rTt04wZgOaWbdkLjgGKnrYccAAemHBUFEawsgAqEVCCFHDStLK+HLjuTACK1hDwyGkMGSAAVrghutlweQUWSMWlAI758GLCmNIgeAC05nAAJkPsIFbYjO4AwhAGBtjIPQwMo1lQbkwAgjBWFCrW7RGm5kXp3kQwBgwA6kQU8LgucLpS9xQAbvcKi2C4yiDvWwASSgw1gujAkW4m1BuhgCiYpxK3kwwl813UmEWqJSEXeFg4Zl8VBgHWwbnmSNKOCoxMW8yomkGoigo1RZhg1wog2IyAAHAAGDg0VrUOBkikLRpnDgwbAqLk8ojIABMHGsvli8tSMpAfhUQ2Gg2M2HW1nJcAAYhAqPMdu5FtgDhAQABfV1AA \n"
+          fi
+
           exit 1

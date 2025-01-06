@@ -2,7 +2,7 @@
 title: <gradient>
 slug: Web/CSS/gradient
 page-type: css-type
-browser-compat: css.types.image.gradient
+browser-compat: css.types.gradient
 ---
 
 {{CSSRef}}
@@ -190,4 +190,4 @@ span {
 - Gradient functions: {{cssxref("gradient/linear-gradient", "linear-gradient()")}}, {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("gradient/radial-gradient", "radial-gradient()")}}, {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}, {{cssxref("gradient/conic-gradient", "conic-gradient()")}}, {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}
 - [CSS Basic Data Types](/en-US/docs/Web/CSS/CSS_Types)
 - [CSS Units and Values](/en-US/docs/Web/CSS/CSS_Values_and_Units)
-- [Introduction to CSS: Values and Units](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)
+- [Learn: Values and Units](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units)

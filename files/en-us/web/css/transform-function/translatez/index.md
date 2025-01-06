@@ -60,6 +60,10 @@ translateZ(tz)
   </tbody>
 </table>
 
+## Formal syntax
+
+{{CSSSyntax}}
+
 ## Examples
 
 In this example, two boxes are created. One is positioned normally on the page, without being translated at all. The
