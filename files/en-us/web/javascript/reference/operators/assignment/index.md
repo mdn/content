@@ -112,7 +112,7 @@ Note that the implication of the above is that, contrary to popular misinformati
 
 ### Assignment with destructuring
 
-The left-hand side of can also be an assignment pattern. This allows assigning to multiple variables at once.
+The left-hand side can also be an assignment pattern. This allows assigning to multiple variables at once.
 
 ```js
 const result = /(a+)(b+)(c+)/.exec("aaabcc");

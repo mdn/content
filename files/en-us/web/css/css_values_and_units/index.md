@@ -327,5 +327,5 @@ Some legacy functional notations, such as legacy syntax for `rgb()`, `rgba()`, `
 ## See also
 
 - [CSS Basic Data Types](/en-US/docs/Web/CSS/CSS_Types)
-- [Introduction to CSS: Values and Units](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)
+- [Learn: Values and units](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
 - [Trigonometric functions in CSS](https://web.dev/articles/css-trig-functions)

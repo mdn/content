@@ -18,5 +18,5 @@ For example:
 
 ## See also
 
-- [Introduction to servers](/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server)
+- [Introduction to servers](/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server)
 - [Server (computing)](<https://en.wikipedia.org/wiki/Server_(computing)>) on Wikipedia

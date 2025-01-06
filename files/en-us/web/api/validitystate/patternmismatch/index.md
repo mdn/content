@@ -81,5 +81,5 @@ Note, in this case, we get a `patternMismatch` not a {{domxref('validityState.to
 ## See also
 
 - [Constraint validation](/en-US/docs/Web/HTML/Constraint_validation)
-- [Forms: Data form validation](/en-US/docs/Learn/Forms/Form_validation)
+- [Forms: Data form validation](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation)
 - [Regular Expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions)

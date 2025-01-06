@@ -40,12 +40,12 @@ The response includes the `301` status along with the {{HTTPHeader("Location")}}
 ```http
 HTTP/2 301
 cache-control: max-age=2592000,public
-location: /en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data
+location: /en-US/docs/Learn_web_development/Core/Scripting/Network_requests
 content-type: text/plain; charset=utf-8
 date: Fri, 19 Jul 2024 12:57:17 GMT
 content-length: 97
 
-Moved Permanently. Redirecting to /en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data
+Moved Permanently. Redirecting to /en-US/docs/Learn_web_development/Core/Scripting/Network_requests
 ```
 
 ## Specifications

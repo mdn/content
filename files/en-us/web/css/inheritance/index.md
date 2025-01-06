@@ -98,8 +98,8 @@ We can see here another border around the word "emphasized text".
 - CSS values for controlling inheritance: [`inherit`](/en-US/docs/Web/CSS/inherit), [`initial`](/en-US/docs/Web/CSS/initial), [`revert`](/en-US/docs/Web/CSS/revert), [`revert-layer`](/en-US/docs/Web/CSS/revert-layer), and [`unset`](/en-US/docs/Web/CSS/unset)
 - [CSS error handling](/en-US/docs/Web/CSS/CSS_syntax/Error_handling)
 - [Introducing the CSS cascade](/en-US/docs/Web/CSS/Cascade)
-- [Building blocks: the CSS cascade](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-- [Building blocks: cascade layers](/en-US/docs/Learn/CSS/Building_blocks/Cascade_layers)
+- [Learn: Handling conflicts](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
+- [Learn: cascade layers](/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)
 - [CSS cascade and inheritance](/en-US/docs/Web/CSS/CSS_cascade) module
 - [CSS syntax](/en-US/docs/Web/CSS/Syntax) guide
 - [CSS syntax](/en-US/docs/Web/CSS/CSS_syntax) module
