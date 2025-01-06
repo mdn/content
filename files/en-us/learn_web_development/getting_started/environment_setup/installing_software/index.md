@@ -61,7 +61,7 @@ For now, you should install a couple of desktop and mobile/alternative device br
 
 Normally, when you type in a web address in a browser to load a website, the files that are combined to render that site by your browser are fetched from a remote web server hosted on a server computer somewhere else in the world. You'll learn more about how this works in the next article in the series.
 
-When creating a website locally, you can often load up the main HTML index file directly in a browser to test it. However, some examples will need to be run through a locally-installed web server to work successfully.
+When creating a website locally (on your own machine), you can often load up the main HTML index file directly in a browser to test it. However, some examples will need to be run through a locally-installed web server to work successfully.
 
 One of the easiest options we've found to make a local server available is to use a code editor extension — this way, it is available right inside your code editor. Do the following inside Visual Studio Code:
 
