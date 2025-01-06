@@ -67,73 +67,74 @@ sidebar:
     code: true
   - /Web/HTTP/Resources_and_specifications
 l10n:
+  de:
+    Guides: Anleitungen
+    Security: HTTP-Sicherheit
+    Reference: Referenzen
+    Headers: HTTP-Header
+    Methods: HTTP-Anfragemethoden
+    Status: HTTP-Antwortstatuscodes
+    CSPDirectives: CSP-Direktiven
+    CORS_errors: CORS-Fehler
+    PermissionsPolicyDirectives: Permissions-Policy Direktiven
   en-US:
-    CORS_errors: CORS errors
-    CSPDirectives: CSP directives
     Guides: Guides
+    Security: Security and privacy
+    Reference: References
     Headers: HTTP headers
     Methods: HTTP request methods
-    PermissionsPolicyDirectives: Permissions-Policy directives
-    Reference: References
-    Security: HTTP security
     Status: HTTP response status codes
-  es:
-    CORS_errors: Errores de CORS
-    CSPDirectives: Directivas CSP
-    Guides: Guías
-    Headers: Cabeceras HTTP
-    Methods: Métodos de petición HTTP
-    PermissionsPolicyDirectives: Directivas Permissions-Policy
-    Reference: Referencias
-    Security: Seguridad en HTTP
-    Status: Códigos de estado de HTTP
+    CSPDirectives: CSP directives
+    CORS_errors: CORS errors
+    PermissionsPolicyDirectives: Permissions-Policy directives
   fr:
-    CORS_errors: Erreurs CORS
-    CSPDirectives: Directives CSP
     Guides: Guides
+    Security: Sécurité HTTP
+    Reference: Références
     Headers: En-têtes HTTP
     Methods: Méthodes de requête HTTP
-    PermissionsPolicyDirectives: Directives Permissions-Policy
-    Reference: Références
-    Security: Sécurité HTTP
     Status: Codes de statut de réponse HTTP
+    CSPDirectives: Directives CSP
+    CORS_errors: Erreurs CORS
+    PermissionsPolicyDirectives: Directives Permissions-Policy
   ja:
-    CORS_errors: CORS エラー
-    CSPDirectives: CSP ディレクティブ
     Guides: ガイド
+    Security: HTTP セキュリティ
+    Reference: リファレンス
     Headers: HTTP ヘッダー
     Methods: HTTP リクエストメソッド
-    PermissionsPolicyDirectives: 機能ポリシーディレクティブ
-    Reference: リファレンス
-    Security: HTTP セキュリティ
     Status: HTTP レスポンスステータスコード
+    CSPDirectives: CSP ディレクティブ
+    CORS_errors: CORS エラー
+    PermissionsPolicyDirectives: 機能ポリシーディレクティブ
   ko:
-    CORS_errors: CORS 에러
-    CSPDirectives: CSP 지시문
     Guides: 가이드
+    Security: HTTP 보안
+    Reference: 레퍼런스
     Headers: HTTP 헤더
     Methods: HTTP 요청 메소드
-    PermissionsPolicyDirectives: Permissions-Policy 지시문
-    Reference: 레퍼런스
-    Security: HTTP 보안
     Status: HTTP 응답 상태 코드
+    CSPDirectives: CSP 지시문
+    CORS_errors: CORS 에러
+    PermissionsPolicyDirectives: Permissions-Policy 지시문
+  pt-BR: {}
   ru:
-    CORS_errors: Ошибки CORS
-    CSPDirectives: Директивы CSP
     Guides: Учебники
+    Security: Безопасность в HTTP
+    Reference: Справочники
     Headers: Заголовки HTTP
     Methods: Методы HTTP запроса
-    PermissionsPolicyDirectives: Директивы Permissions-Policy
-    Reference: Справочники
-    Security: Безопасность в HTTP
     Status: Коды ответа HTTP
+    CSPDirectives: Директивы CSP
+    CORS_errors: Ошибки CORS
+    PermissionsPolicyDirectives: Директивы Permissions-Policy
   zh-CN:
-    CORS_errors: CORS 错误
-    CSPDirectives: CSP 指令
     Guides: 指南：
+    Security: HTTP 安全
+    Reference: 参考：
     Headers: HTTP 标头
     Methods: HTTP 请求方法
-    PermissionsPolicyDirectives: 权限策略指令
-    Reference: 参考：
-    Security: HTTP 安全
     Status: HTTP 响应状态码
+    CSPDirectives: CSP 指令
+    CORS_errors: CORS 错误
+    PermissionsPolicyDirectives: 权限策略指令

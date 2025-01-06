@@ -73,4 +73,4 @@ item2.textContent = `A second CSSLayerBlockRule defines a layer with the followi
 ## See also
 
 - The statement declaration of an {{cssxref("@layer")}} is represented by a {{domxref("CSSLayerStatementRule")}}.
-- How to [create named cascade layers](/en-US/docs/Learn/CSS/Building_blocks/Cascade_layers#creating_cascade_layers) in CSS.
+- How to [create named cascade layers](/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers#creating_cascade_layers) in CSS.

@@ -32,11 +32,11 @@ let uninstalling = browser.management.uninstall(
 <!---->
 
 - If `id` is the calling add-on's ID, `showConfirmDialog` defaults to `false`.
-- If `id` is a the ID of a different add-on, the `showConfirmDialog` option is ignored and the confirmation dialog is always shown.
+- If `id` is the ID of a different add-on, the `showConfirmDialog` option is ignored and the confirmation dialog is always shown.
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be rejected with an error message if the user canceled uninstall.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be rejected with an error message if the user canceled the uninstallation.
 
 ## Browser compatibility
 
@@ -44,19 +44,21 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 
 ## Examples
 
-Uninstall the add-on whose ID is "my-addon-id", asking the user to confirm. In the callback, check whether the user canceled uninstallation.
-
-Note that we haven't passed a fulfillment handler because if uninstallation succeeds, the add-on is no longer around to handle it.
+Uninstall the add-on whose ID is "addon-id" and ask the user to confirm. In the callback, we check whether the user canceled the uninstallation or if the operation succeeded.
 
 ```js
-let id = "my-addon-id";
+let id = "addon-id";
 
 function onCanceled(error) {
-  console.log(`Uninstall canceled: ${error}`);
+  console.log(`Canceled: ${error}`);
+}
+
+function onUninstalled() {
+  console.log("Uninstalled");
 }
 
 let uninstalling = browser.management.uninstall(id);
-uninstalling.then(null, onCanceled);
+uninstalling.then(onUninstalled, onCanceled);
 ```
 
 {{WebExtExamples}}

@@ -1,14 +1,14 @@
 ---
-title: Distributed Denial of Service
+title: Distributed Denial of Service (DDoS)
 slug: Glossary/Distributed_Denial_of_Service
 page-type: glossary-definition
 ---
 
 {{GlossarySidebar}}
 
-A **Distributed Denial-of-Service** (DDoS) is an attack in which many compromised systems are made to attack a single target, in order to swamp server resources and block legitimate users.
+**Distributed Denial-of-Service** (DDoS) is a type of {{Glossary("Denial of Service", "DoS")}} attack in which many compromised systems are made to attack a single target, in order to swamp server resources and block legitimate users.
 
-Normally many persons, using many bots, attack high-profile Web {{glossary("server","servers")}} like banks or credit-card payment gateways. DDoS concerns computer networks and CPU resource management.
+Normally many persons, using many bots, attack high-profile Web {{Glossary("server", "servers")}} like banks or credit-card payment gateways. DDoS concerns computer networks and CPU resource management.
 
 In a typical DDoS attack, the assailant begins by exploiting a vulnerability in one computer system and making it the DDoS master. The attack master, also known as the botmaster, identifies and infects other vulnerable systems with malware. Eventually, the assailant instructs the controlled machines to launch an attack against a specified target.
 
@@ -27,4 +27,4 @@ The United States Computer Emergency Readiness Team (US-CERT) defines symptoms o
 
 ## See also
 
-- [Denial-of-service attack](https://en.wikipedia.org/wiki/Denial-of-service_attack) on Wikipedia
+- [Distributed DoS attack](https://en.wikipedia.org/wiki/Denial-of-service_attack#Distributed_DoS) on Wikipedia

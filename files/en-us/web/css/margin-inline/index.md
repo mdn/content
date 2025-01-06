@@ -26,6 +26,8 @@ margin-inline: 10px 20px; /* An absolute length */
 margin-inline: 1em 2em; /* relative to the text size */
 margin-inline: 5% 2%; /* relative to the nearest block container's width */
 margin-inline: 10px; /* sets both start and end values */
+margin-inline: anchor-size(width);
+margin-inline: calc(anchor-size(self-block) / 5) auto;
 
 /* Keyword values */
 margin-inline: auto;

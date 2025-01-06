@@ -46,7 +46,7 @@ A CSS ruleset (or rule) is visualized in the diagram below.
 
 ![css syntax - ruleset.png](ruleset.png)
 
-As an element of the page may be matched by several selectors, and therefore by several rules potentially containing a given property several times, with different values, the CSS standard defines which one has precedence over the other and must be applied: this is called the [cascade](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance) algorithm.
+As an element of the page may be matched by several selectors, and therefore by several rules potentially containing a given property several times, with different values, the CSS standard defines which one has precedence over the other and must be applied: this is called the cascade algorithm (see [Handling conflicts](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)).
 
 > [!NOTE]
 > It is important to note that even if a ruleset characterized by a group of selectors is a kind of shorthand replacing rulesets with a single selector each, this doesn't apply to the validity of the ruleset itself.
