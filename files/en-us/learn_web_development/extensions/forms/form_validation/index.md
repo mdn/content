@@ -714,9 +714,9 @@ The HTML is almost the same; we just removed the HTML validation features.
   <p>
     <label for="mail">
       <span>Please enter an email address:</span>
-      <input type="text" id="mail" name="mail" />
-      <span class="error" aria-live="polite"></span>
     </label>
+    <input type="text" id="mail" name="mail" />
+    <span id="error" aria-live="polite"></span>
   </p>
   <button>Submit</button>
 </form>
@@ -740,7 +740,7 @@ p * {
   display: block;
 }
 
-input#mail {
+input {
   appearance: none;
   width: 100%;
   border: 1px solid #333;
@@ -753,20 +753,20 @@ input#mail {
 }
 
 /* invalid fields */
-input#mail.invalid {
-  border-color: #900;
+input.invalid {
+  border: 2px solid #900;
   background-color: #fdd;
 }
 
 input:focus.invalid {
   outline: none;
+  /* make sure keyboard-only users see a change when focusing */
+  border-style: dashed;
 }
 
 /* error messages */
-.error {
+#error {
   width: 100%;
-  padding: 0;
-
   font-size: 80%;
   color: white;
   background-color: #900;
@@ -774,8 +774,8 @@ input:focus.invalid {
   box-sizing: border-box;
 }
 
-.error.active {
-  padding: 0.3em;
+.active {
+  padding: 0.3rem;
 }
 ```
 
@@ -784,54 +784,69 @@ The big changes are in the JavaScript code, which needs to do much more heavy li
 ```js
 const form = document.querySelector("form");
 const email = document.getElementById("mail");
-const error = email.nextElementSibling;
+const error = document.getElementById("error");
 
-// As per the HTML Specification
+// Regular expression for email validation as per HTML specification
 const emailRegExp =
   /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+// Check if the email is valid
+const isValidEmail = () => {
+  const validity = email.value.length !== 0 && emailRegExp.test(email.value);
+  return validity;
+};
+
+// Update email input class based on validity
+const setEmailClass = (isValid) => {
+  email.className = isValid ? "valid" : "invalid";
+};
+
+// Update error message and visibility
+const updateError = (isValidInput) => {
+  if (isValidInput) {
+    error.textContent = "";
+    error.removeAttribute("class");
+  } else {
+    error.textContent = "I expect an email, darling!";
+    error.setAttribute("class", "active");
+  }
+};
+
+// Initialize email validity on page load
+const initializeValidation = () => {
+  const emailInput = isValidEmail();
+  setEmailClass(emailInput);
+};
+
+// Handle input event to update email validity
+const handleInput = () => {
+  const emailInput = isValidEmail();
+  setEmailClass(emailInput);
+  updateError(emailInput);
+};
+
+// Handle form submission to show error if email is invalid
+const handleSubmit = (event) => {
+  event.preventDefault();
+
+  const emailInput = isValidEmail();
+  setEmailClass(emailInput);
+  updateError(emailInput);
+};
 
 // Now we can rebuild our validation constraint
 // Because we do not rely on CSS pseudo-class, we have to
 // explicitly set the valid/invalid class on our email field
-window.addEventListener("load", () => {
-  // Here, we test if the field is empty (remember, the field is not required)
-  // If it is not, we check if its content is a well-formed email address.
-  const isValid = email.value.length === 0 || emailRegExp.test(email.value);
-  email.className = isValid ? "valid" : "invalid";
-});
-
+window.addEventListener("load", initializeValidation);
 // This defines what happens when the user types in the field
-email.addEventListener("input", () => {
-  const isValid = email.value.length === 0 || emailRegExp.test(email.value);
-  if (isValid) {
-    email.className = "valid";
-    error.textContent = "";
-    error.className = "error";
-  } else {
-    email.className = "invalid";
-  }
-});
-
+email.addEventListener("input", handleInput);
 // This defines what happens when the user tries to submit the data
-form.addEventListener("submit", (event) => {
-  event.preventDefault();
-
-  const isValid = email.value.length === 0 || emailRegExp.test(email.value);
-  if (!isValid) {
-    email.className = "invalid";
-    error.textContent = "I expect an email, darling!";
-    error.className = "error active";
-  } else {
-    email.className = "valid";
-    error.textContent = "";
-    error.className = "error";
-  }
-});
+form.addEventListener("submit", handleSubmit);
 ```
 
 The result looks like this:
 
-{{EmbedLiveSample("An_example_that_doesnt_use_the_constraint_validation_API", "100%", 130)}}
+{{EmbedLiveSample("An_example_that_doesnt_use_the_constraint_validation_API", "100%", 150)}}
 
 As you can see, it's not that hard to build a validation system on your own. The difficult part is to make it generic enough to use both cross-platform and on any form you might create. There are many libraries available to perform form validation, such as [Validate.js](https://rickharrison.github.io/validate.js/).
 
