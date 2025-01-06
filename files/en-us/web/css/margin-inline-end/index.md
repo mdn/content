@@ -18,6 +18,8 @@ The **`margin-inline-end`** [CSS](/en-US/docs/Web/CSS) property defines the logi
 margin-inline-end: 10px; /* An absolute length */
 margin-inline-end: 1em; /* relative to the text size */
 margin-inline-end: 5%; /* relative to the nearest block container's width */
+margin-inline-end: anchor-size(height);
+margin-inline-end: calc(anchor-size(--myAnchor self-inline, 25px) / 5);
 
 /* Keyword values */
 margin-inline-end: auto;

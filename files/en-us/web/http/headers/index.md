@@ -430,8 +430,9 @@ Network client hints allow a server to choose what information is sent based on 
 
 ### Security
 
-- {{HTTPHeader("Origin-Isolation")}} {{experimental_inline}}
-  - : Provides a mechanism to allow web applications to isolate their origins.
+- {{HTTPHeader("Origin-Agent-Cluster")}} {{experimental_inline}}
+  - : Response header used to indicate that the associated {{domxref("Document")}} should be placed in an _origin-keyed [agent cluster](https://tc39.es/ecma262/#sec-agent-clusters)_.
+    This isolation allows user agents to allocate implementation-specific resources for agent clusters, such as processes or threads, more efficiently.
 
 ### Server-sent events
 
@@ -454,9 +455,6 @@ See the [Topics API](/en-US/docs/Web/API/Topics_API) documentation for more info
   - : A client can send the [`Accept-Signature`](https://wicg.github.io/webpackage/draft-yasskin-http-origin-signed-responses.html#name-the-accept-signature-header) header field to indicate intention to take advantage of any available signatures and to indicate what kinds of signatures it supports.
 - {{HTTPHeader("Early-Data")}} {{experimental_inline}}
   - : Indicates that the request has been conveyed in TLS early data.
-- {{HTTPHeader("Origin-Agent-Cluster")}} {{experimental_inline}}
-  - : Response header used to indicate that the associated {{domxref("Document")}} should be placed in an _origin-keyed [agent cluster](https://tc39.es/ecma262/#sec-agent-clusters)_.
-    This isolation allows user agents to allocate implementation-specific resources for agent clusters, such as processes or threads, more efficiently.
 - {{HTTPHeader("Set-Login")}} {{experimental_inline}}
   - : Response header sent by a federated identity provider (IdP) to set its login status, meaning whether any users are logged into the IdP on the current browser or not.
     This is stored by the browser and used by the [FedCM API](/en-US/docs/Web/API/FedCM_API).
