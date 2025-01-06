@@ -8,12 +8,12 @@ page-type: tutorial-chapter
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Environment_setup/Installing_software", "Learn_web_development/Getting_started/Environment_setup/Code_editors", "Learn_web_development/Getting_started/Environment_setup")}}
 
-By this point in the module, you should have at some modern web browsers installed on your computer and other available devices. This article goes a little deeper into using browsers, looking at how a web browser works, the difference between some of the common items you'll interact with, and how to search for information.
+By this point in the module, you should have multiple modern web browsers installed on your computer or other available devices. This article goes deeper into using browsers, looking at how a web browser works, the difference between some of the everyday things you'll interact with, and how to search for information.
 
 > [!NOTE]
-> If you don't have any browsers installed beyond the default ones that came with your devices, get some more installed. See [Modern web browsers](/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software#modern_web_browsers).
+> If you don't have any browsers installed beyond the default ones that came with your devices, install some others. See [Modern web browsers](/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software#modern_web_browsers) for more information.
 
-As with any area of knowledge, the web comes with a lot of jargon. Don't worry. We won't overwhelm you with all of it (we have a [glossary](/en-US/docs/Glossary) if you're curious). However, there are some basic terms you need to understand at the outset since you'll hear these expressions all the time as you read on. We introduce some important terms below.
+As with any area of knowledge, the web comes with a lot of jargon and technical terminology. Don't worry: We won't overwhelm you with all of it upfront (you can check the [glossary](/en-US/docs/Glossary) if you're curious). However, there are some basic terms you need to understand from the beginning since you'll hear these expressions all the time. We introduce some important terms below.
 
 <table>
   <tbody>
@@ -41,9 +41,9 @@ As with any area of knowledge, the web comes with a lot of jargon. Don't worry. 
 We will start by describing various web-related concepts: web pages, websites, web servers, and search engines. These terms are often confused by newcomers to the web or are incorrectly used. Let's make sure you know what they each mean! Let's start with some definitions:
 
 - **Web page**
-  - : A document that can be displayed in a web {{Glossary("browser")}}. These are also often called just "pages." Such documents are written in the {{Glossary("HTML")}} language (which we look at in more detail later on).
+  - : A document that can be displayed in a web {{Glossary("browser")}}. These are also often called just "pages". Such documents are written in the {{Glossary("HTML")}} language (which we look at in more detail later on).
 - **Website**
-  - : A collection of web pages grouped together into a single resourse, with links connecting them together. Often called a "site."
+  - : A collection of web pages grouped together into a single resourse, with links connecting them together. Often called a "site".
 - **Web server**
   - : A computer that hosts a website on the Internet.
 - **Search engine**
@@ -108,7 +108,7 @@ There are plenty out there: [Google](https://www.google.com/), [Bing](https://ww
 
 Many beginners on the web confuse search engines and browsers. Let's make it clear: A _browser_ is a piece of software that retrieves and displays web pages; a _search engine_ is a website that helps people find web pages from other websites. The confusion arises because, the first time someone launches a browser, the browser often displays a search engine's homepage or a search box allowing them to search for a term using that search engine. Most browsers also allow their users to use a search engine by typing search terms directly into the browser address bar.
 
-This all makes sense because the first thing people tend to want to do with a browser is find a web page to display. Don't confuse the infrastructure (the browser) with the service (the search engine).
+This all makes sense because the first thing people tend to want to do with a browser is find a web page to display. Don't confuse the software (the browser) with the service (the search engine).
 
 Here is an instance of Firefox showing a Google search box as its default startup page:
 
@@ -118,7 +118,6 @@ Try it out now — do a search in a search engine by:
 
 - Going to a search engine homepage and entering a search term.
 - Entering a search term into the browser address bar.
-- Entering a search term somewhere else in the browser.
 
 ## How the web works: the basics
 
@@ -135,8 +134,6 @@ When you access the web, quite a lot happens between your first interaction (for
 
 This description of how the web works is heavily simplified, but it is all you really need to know at this point. You will find a more detailed account of how web pages and requested and rendered by a web browser in our [Web standards](/en-US/docs/Learn_web_development/Getting_started/Web_standards) module, slightly later on.
 
-### Try it out
-
 For now, try opening a web browser and loading up a couple of your favourite sites, thinking about the above steps as you do so.
 
 ## Searching for information
@@ -147,7 +144,13 @@ If you are looking for general information about a specific web technology featu
 
 If you are looking for a solution to a specific problem, such as `how to print out the fibonacci sequence with JavaScript` or `how to calculate whether a number is a prime number with JavaScript`, it is a good idea to search on a website such as [StackOverflow](https://stackoverflow.com), which is a community dedicated to answering programming problems. Again, try using a general search engine if a specific site doesn't give you a helpful answer.
 
-Try some searches, as indicated above.
+> **Try it out**
+>
+> Try some searches, as indicated above:
+>
+> - Begin by searching for the exact terms we've included above.
+> - Next, move on to searching for some topics of your own that you'd like to learn about. Try using more and less specific searches and different related terms to see what works best.
+> - See our [Search tips](#search_tips) for more things to try.
 
 ### Using AI
 
@@ -160,15 +163,20 @@ When learning to code, AI chat prompts can be useful in a variety of ways:
 - Generating an optimized version of a specific block of code. This can be useful when you've written a block of code that works, but you want to find out how it could be done more efficiently, or in a more robust way that solves more use cases.
 - Providing advice on how to do something. For example, if you don't just want to know where the bug is in a block of code, but instead you want advice on what strategy to use to debug it.
 
-Try using a couple of AI tools to do some searches.
+> **Try it out**
+>
+> Try using a couple of AI tools to do some searches.
 
 ### A cautionary tale
 
 In truth, AI can do so much that you may start to wonder why you need to learn to code.
 
-But wait! The following is important: **You still need to understand what you are trying to do at a high level, what the code is doing, and where each piece of code needs to be used**. If you don't, you won't be very useful when trying to figure out what to do to solve real-world problems. This means that you still need to learn to code. AI can be a really useful tool to help you find answers more quickly, but if you just type every question you are asked into an AI prompt, you won't understand how anything works.
+But wait! The following is important: **You still need to understand what you are trying to do at a high level, what the code is doing, and where each piece of code needs to be used**. If you don't, you won't be very useful when trying to solve real-world problems. This means that you still need to learn to code. AI can be a really useful tool to help you find answers more quickly, but if you just type every question you are asked into an AI prompt, you won't understand how anything works.
 
-In addition, AI tools present their answers in a confident, authoritative voice, but they can often be misleading or just plain wrong. Some of the errors they make can be very subtle. They don't have any innate intelligence of their own — they are basically advanced pattern matching tools. AI tools compile their answers from other sources out there, so will hoover up wrong information as well as correct information. Even two correct sources can be combined to create an answer that is incorrect.
+In addition:
+
+- AI tools present their answers in a confident, authoritative voice, but they can often be misleading or just plain wrong. Some of the errors they make can be very subtle. They don't have any innate intelligence of their own — they are basically advanced pattern matching tools. AI tools compile their answers from other sources out there, so will hoover up wrong information as well as correct information. Even two correct sources can be combined to create an answer that is incorrect.
+- Newer information may not be available, or answers may be skewed to older and more prevalent documentation, so "how to do X in JS" might give you outdated guidance.
 
 As a result, you need to be careful to check the answers they give you, and not just trust everything without question.
 
@@ -180,13 +188,14 @@ As a result, you need to be careful to check the answers they give you, and not 
 - When you find a useful answer, bookmark or make a copy of it somewhere so you can find it again later. You'll be amazed how many times you run into the same problem.
 - If your code is returning a specific error message, try entering the error into a search engine or AI prompt. Other people will probably have already tackled the same error in the past and recorded solutions publicly somewhere.
 - If possible, stick with recommended sites like MDN and [StackOverflow](https://stackoverflow.com).
-- There are many advanced search techniques you can use in search engines that will give you better results than just typing a plain search term. Typing in a plain search term such as `ant fish cheese` will return results that contain any combination of those words. However:
+- There are many advanced search techniques you can use in search engines that will give you better results than just typing a plain search term. Typing in a plain search term such as `ant fish cheese` will return results that contain any combination of those words. However, most search engines support variations of the following formats:
 
   - Typing in `"ant fish cheese"` (with the quotes) will only return results that contain that exact phrase.
   - `"ant cheese" -fish` will return results that contain `ant` and/or `cheese` but not `fish`.
   - `and OR cheese` will only return results with one term or the other, not both. From our testing, this one only seemed to work effectively in Google.
   - `intitle:cheese` will only return results that have "cheese" in the main title of the page.
 
-  There are many other techniques you can use in various different search engines. Try seeing what others you can find!
+  > [!NOTE]
+  > There are many other techniques you can use in various different search engines. Try seeing what others you can find — some useful resources are [Refine Google Searches](https://support.google.com/websearch/answer/2466433?hl=en), [How to use advanced syntax on DuckDuckGo Search](https://duckduckgo.com/duckduckgo-help-pages/results/syntax/), and [Microsoft: Advanced search options](https://support.microsoft.com/en-us/topic/advanced-search-options-b92e25f1-0085-4271-bdf9-14aaea720930).
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Environment_setup/Installing_software", "Learn_web_development/Getting_started/Environment_setup/Code_editors", "Learn_web_development/Getting_started/Environment_setup")}}

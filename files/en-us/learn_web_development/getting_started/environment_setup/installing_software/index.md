@@ -66,7 +66,7 @@ When creating a website locally (on your own machine), you can often load up the
 One of the easiest options we've found to make a local server available is to use a code editor extension — this way, it is available right inside your code editor. Do the following inside Visual Studio Code:
 
 1. Open the _Extensions_ pane using the _View_ > _Extensions_ menu option.
-2. In the "Search..." box at the top of this pane, type in "live preview". The top search result should be the _Live Preview_ extension, created by Microsoft.
+2. In the "Search..." box at the top of this pane, type in "live preview". The top search result should be the [_Live Preview_](https://marketplace.visualstudio.com/items?itemName=ms-vscode.live-server) extension, created by Microsoft.
 3. Click on that option to open up a page of information about it, which includes how to use it.
 4. Press the _Install_ button to install the extension.
 5. Now, when you are working on an HTML file in the editor, you should be able to click the "Show Preview" button to open the live example up in a separate tab.
