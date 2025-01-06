@@ -208,7 +208,3 @@ The final result looks like this:
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- [Compatibility of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

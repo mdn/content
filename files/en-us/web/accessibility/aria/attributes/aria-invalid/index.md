@@ -149,4 +149,4 @@ Inherited into role:
 - [`aria-errormessage`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-errormessage)
 - CSS {{CSSXRef(':valid')}} pseudoclass
 - CSS {{CSSXRef(':invalid')}} pseudoclass
-- [Form Validation](/en-US/docs/Learn/Forms/Form_validation) tutorial
+- [Form Validation](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation) tutorial

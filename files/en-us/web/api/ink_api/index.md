@@ -96,7 +96,7 @@ canvas.addEventListener("pointermove", async (evt) => {
       `rgb(${r} ${g} ${b} / 60%)`;
   }
   move_cnt += 1;
-  await presenter.updateInkTrailStartPoint(evt, style);
+  (await presenter).updateInkTrailStartPoint(evt, style);
 });
 
 window.addEventListener("pointerdown", () => {
