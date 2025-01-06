@@ -121,7 +121,7 @@ But again, only use it when necessary!
 
 In the next section, we'll look at the four areas in more detail, along with practical examples. Before you continue, you should get a screen reader testing setup put in place, so you can test some of the examples as you go through.
 
-See our section on [testing screen readers](/en-US/docs/en-US/docs/Learn_web_development/Core/Accessibility/Tooling#screen_readers) for more information.
+See our section on [testing screen readers](/en-US/docs/Learn_web_development/Core/Accessibility/Tooling#screen_readers) for more information.
 
 ### Signposts/Landmarks
 
@@ -830,7 +830,7 @@ This follows on from the previous section — when a series of nested `<div>`s a
 
 #### Form validation and error alerts
 
-First of all, let's revisit the form example we first looked at in our CSS and JavaScript accessibility article (read [Keeping it unobtrusive](/en-US/docs/en-US/docs/Learn_web_development/Core/Accessibility/CSS_and_JavaScript#keeping_it_unobtrusive) for a full recap). At the end of this section, we showed that we have included some ARIA attributes on the error message box that displays any validation errors when you try to submit the form:
+First of all, let's revisit the form example we first looked at in our CSS and JavaScript accessibility article (read [Keeping it unobtrusive](/en-US/docs/Learn_web_development/Core/Accessibility/CSS_and_JavaScript#keeping_it_unobtrusive) for a full recap). At the end of this section, we showed that we have included some ARIA attributes on the error message box that displays any validation errors when you try to submit the form:
 
 ```html
 <div class="errors" role="alert" aria-relevant="all">
@@ -932,7 +932,7 @@ Now when you try this using a screen reader, you'll have buttons be reported usi
 
 There are a whole host of other [roles](/en-US/docs/Web/Accessibility/ARIA/Roles) that can identify non-semantic element structures as common UI features that go beyond what's available in standard HTML, for example [`combobox`](/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role), [`slider`](/en-US/docs/Web/Accessibility/ARIA/Roles/slider_role), [`tabpanel`](/en-US/docs/Web/Accessibility/ARIA/Roles/tabpanel_role), [`tree`](/en-US/docs/Web/Accessibility/ARIA/Roles/tree_role). You can see several useful examples in the [Deque university code library](https://dequeuniversity.com/library/) to give you an idea of how such controls can be made accessible.
 
-Let's go through an example of our own. We'll return to our simple absolutely-positioned tabbed interface (see [Hiding things](/en-US/docs/Learn_web_development/Core/Accessibility/CSS_and_JavaScript#hiding_things) in our CSS and JavaScript accessibility article), which you can find at [Tabbed info box example](/en-US/docs/en-US/docs/Learn_web_development/Core/CSS_layout/Practical_positioning_examples#a_fixed_position_tabbed_info-box).
+Let's go through an example of our own. We'll return to our simple absolutely-positioned tabbed interface (see [Hiding things](/en-US/docs/Learn_web_development/Core/Accessibility/CSS_and_JavaScript#hiding_things) in our CSS and JavaScript accessibility article), which you can find at [Tabbed info box example](/en-US/docs/Learn_web_development/Core/CSS_layout/Practical_positioning_examples#a_fixed_position_tabbed_info-box).
 
 This example as-is works fine in terms of keyboard accessibility — you can happily tab between the different tabs and select them to show the tab contents. It is also fairly accessible too — you can scroll through the content and use the headings to navigate, even if you can't see what is happening on screen. It is however not that obvious what the content is — a screen reader currently reports the content as a list of links, and some content with three headings. It doesn't give you any idea of what the relationship is between the content. Giving the user more clues as to the structure of the content is always good.
 
