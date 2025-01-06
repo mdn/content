@@ -45,3 +45,8 @@ console.log(textPath.spacing.baseVal); // Output: 1 (auto)
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("SVGTextPathElement.method")}}
+- [`SVGTextPathElement` spacing types](/en-US/docs/Web/API/SVGTextPathElement#spacing_types)
