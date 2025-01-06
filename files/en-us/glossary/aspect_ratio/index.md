@@ -6,7 +6,7 @@ page-type: glossary-definition
 
 {{GlossarySidebar}}
 
-An **aspect ratio** is the proportional relationship between an element or {{glossary("viewport")}}'s width and height, and is represented as a ratio or two numbers.
+An **aspect ratio** is of type {{cssxref("ratio")}}. It is the proportional relationship between an element or {{glossary("viewport")}}'s width and height, and is represented as a ratio or two numbers.
 
 Having an aspect ratio, whether it's an inherent aspect ratio like with images and videos or if it's extrinsically set, maintains the intended proportions of an element. You can also query an element or viewport's aspect, which is useful in developing flexible components and layouts.
 
@@ -38,6 +38,10 @@ const constraints = {
 
 myTrack.applyConstraints(constraints);
 ```
+
+## Comparing aspect ratios
+
+To compare two aspect `<ratios>`, divide the first number by the second and then compare the results. For example, 16/16 is less than 16/9 because it resolves to 1 while the second resolves to 1.7. This means a tall screen's aspect ratio is smaller than a wide screen's, and portrait images have smaller aspect ratios than landscape images.
 
 ## See also
 

@@ -11,7 +11,7 @@ The **`aspect-ratio`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/We
 
 ## Syntax
 
-The `aspect-ratio` feature is specified as a {{cssxref("&lt;ratio&gt;")}} value representing the width-to-height aspect ratio of the viewport. It is a range feature, meaning you can also use the prefixed **`min-aspect-ratio`** and **`max-aspect-ratio`** variants to query minimum and maximum values, respectively.
+The `aspect-ratio` feature is specified as a {{cssxref("&lt;ratio&gt;")}} value representing the width-to-height aspect ratio of the viewport. It is a range feature, meaning you can also use the prefixed **`min-aspect-ratio`** and **`max-aspect-ratio`** variants to query minimum and maximum values, respectively. The aspect ratio is [compared using the quotient's numeric value](/en-US/docs/Glossary/Aspect_ratio#comparing_aspect_ratios).
 
 ## Examples
 
