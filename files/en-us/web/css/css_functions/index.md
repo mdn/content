@@ -271,7 +271,7 @@ The {{CSSxRef("&lt;basic-shape&gt;")}} CSS [data type](/en-US/docs/Web/CSS/CSS_T
 - {{CSSxRef("basic-shape/shape", "shape()")}}
   - : Accepts a comma-separated list of commands defining the shape to be drawn.
 - {{CSSxRef("ray", "ray()")}}
-  - : Defines the `offset-path` line segment that an animated element can follow.
+  - : Valid with `offset-path` only, it defines the line segment an animated element can follow.
 
 ## Reference functions
 
