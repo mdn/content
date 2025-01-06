@@ -14,7 +14,7 @@ page-type: firefox-release-notes
 
 #### HTML 5 support
 
-- [Using audio and video](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
+- [HTML video and audio](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
   - : Firefox 3.5 adds support for the HTML 5 [`audio`](/en-US/docs/Web/HTML/Element/audio) and [`video`](/en-US/docs/Web/HTML/Element/video) elements.
 - Offline resources in Firefox
   - : Firefox 3.5 now fully supports the HTML 5 offline resource specification.

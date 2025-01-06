@@ -92,4 +92,4 @@ input:out-of-range + label::after {
 ## See also
 
 - {{cssxref(":in-range")}}
-- [Form data validation](/en-US/docs/Learn/Forms/Form_validation)
+- [Form data validation](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation)

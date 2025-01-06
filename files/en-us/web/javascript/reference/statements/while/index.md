@@ -91,7 +91,7 @@ The _effect_ of that line is fine — in that, each time a comment node is found
 
 The problem with this line is: conditions typically use [comparison operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#comparison_operators) such as `===`, but the `=` in that line isn't a comparison operator — instead, it's an [assignment operator](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#assignment_operators). So that `=` _looks like_ it's a typo for `===` — even though it's _not_ actually a typo.
 
-Therefore, in cases like that one, some [code-linting tools](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Introducing_complete_toolchain#code_linting_tools) such as ESLint's [`no-cond-assign`](https://eslint.org/docs/latest/rules/no-cond-assign) rule — in order to help you catch a possible typo so that you can fix it — will report a warning such as the following:
+Therefore, in cases like that one, some [code-linting tools](/en-US/docs/Learn_web_development/Extensions/Client-side_tools/Introducing_complete_toolchain#code_linting_tools) such as ESLint's [`no-cond-assign`](https://eslint.org/docs/latest/rules/no-cond-assign) rule — in order to help you catch a possible typo so that you can fix it — will report a warning such as the following:
 
 > Expected a conditional expression and instead saw an assignment.
 

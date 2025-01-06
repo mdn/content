@@ -17,7 +17,7 @@ The specification, for example, allows you to add the attribute `role="alert"` t
 - [Accessible Rich Internet Applications (WAI-ARIA)](https://w3c.github.io/aria/)
 - [ARIA Authoring Practices Guide (APG)](https://www.w3.org/WAI/ARIA/apg/)
 - [Accessibility](/en-US/docs/Web/Accessibility)
-- [Learn accessibility](/en-US/docs/Learn/Accessibility)
+- [Learn: Accessibility](/en-US/docs/Learn_web_development/Core/Accessibility)
 - Related glossary terms
   - {{Glossary("Accessibility")}}
   - {{Glossary("WAI")}}

@@ -147,7 +147,7 @@ While some of these algorithms for collision detection are simple enough to calc
 
 ### Broad Phase
 
-Broad phase should give you a list of entities that _could_ be colliding. This can be implemented with a spacial data structure that will give you a rough idea of where the entity exists and what exist around it. Some examples of spacial data structures are Quad Trees, R-Trees or a Spacial Hashmap.
+Broad phase should give you a list of entities that _could_ be colliding. This can be implemented with a spatial data structure that will give you a rough idea of where the entity exists and what exist around it. Some examples of spatial data structures are Quad Trees, R-Trees or a Spatial Hashmap.
 
 ### Narrow Phase
 
