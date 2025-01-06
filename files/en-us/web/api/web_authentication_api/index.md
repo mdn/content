@@ -71,7 +71,7 @@ To illustrate how the credential creation process works, let's describe the typi
 
    1. Verifying that the challenge is the same as the challenge that was sent.
    2. Ensuring that the origin was the origin expected.
-   3. Validating that the signature and attestation are using the correct certificate chain for the specific model of the authenticator used to generated the key par in the first place.
+   3. Validating that the signature and attestation are using the correct certificate chain for the specific model of the authenticator used to generate the key pair in the first place.
 
 > [!WARNING]
 > Attestation provides a way for a relying party to determine the provenance of an authenticator. Relying parties should not attempt to maintain allowlists of authenticators.
