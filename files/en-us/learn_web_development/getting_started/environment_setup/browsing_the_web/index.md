@@ -79,7 +79,11 @@ All web pages can each be found at a unique location (web address, also called a
 
 ![Example of a web page address in the browser address bar](web-page.jpg)
 
-Try loading one of your favorite websites in a browser now.
+> [!CALLOUT]
+>
+> **Try it out**
+>
+> Try loading one of your favorite websites in a browser now.
 
 ### Website
 
@@ -89,7 +93,11 @@ When you load your favourite website in a browser, it tends to first display the
 
 ![Example of a website domain name in the browser address bar](web-site.jpg)
 
-Try clicking some menu items or links to look at some different pages on your favourite website.
+> [!CALLOUT]
+>
+> **Try it out**
+>
+> Try clicking some menu items or links to look at some different pages on your favourite website.
 
 > [!NOTE]
 > It is also possible to have a [_single-page app_](/en-US/docs/Glossary/SPA): a website that consists of a single web page that is dynamically updated with new content when needed.
@@ -114,10 +122,14 @@ Here is an instance of Firefox showing a Google search box as its default startu
 
 ![Example of Firefox nightly displaying a custom Google page as default](search-engine.jpg)
 
-Try it out now — do a search in a search engine by:
-
-- Going to a search engine homepage and entering a search term.
-- Entering a search term into the browser address bar.
+> [!CALLOUT]
+>
+> **Try it out**
+>
+> Do a search in a search engine by:
+>
+> - Going to a search engine homepage and entering a search term.
+> - Entering a search term into the browser address bar.
 
 ## How the web works: the basics
 
@@ -144,6 +156,8 @@ If you are looking for general information about a specific web technology featu
 
 If you are looking for a solution to a specific problem, such as `how to print out the fibonacci sequence with JavaScript` or `how to calculate whether a number is a prime number with JavaScript`, it is a good idea to search on a website such as [StackOverflow](https://stackoverflow.com), which is a community dedicated to answering programming problems. Again, try using a general search engine if a specific site doesn't give you a helpful answer.
 
+> [!CALLOUT]
+>
 > **Try it out**
 >
 > Try some searches, as indicated above:
@@ -163,6 +177,8 @@ When learning to code, AI chat prompts can be useful in a variety of ways:
 - Generating an optimized version of a specific block of code. This can be useful when you've written a block of code that works, but you want to find out how it could be done more efficiently, or in a more robust way that solves more use cases.
 - Providing advice on how to do something. For example, if you don't just want to know where the bug is in a block of code, but instead you want advice on what strategy to use to debug it.
 
+> [!CALLOUT]
+>
 > **Try it out**
 >
 > Try using a couple of AI tools to do some searches.
