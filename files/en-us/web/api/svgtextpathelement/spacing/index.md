@@ -35,7 +35,7 @@ An {{domxref("SVGAnimatedEnumeration")}} object.
 const textPath = document.getElementById("myTextPath");
 
 // Access the spacing property
-console.log(textPath.spacing.baseVal); // Output: 1 (auto)
+console.log(textPath.spacing.baseVal); // Output: 1 (TEXTPATH_SPACINGTYPE_AUTO)
 ```
 
 ## Specifications
