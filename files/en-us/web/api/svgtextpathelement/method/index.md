@@ -35,7 +35,7 @@ An {{domxref("SVGAnimatedEnumeration")}} object.
 const textPath = document.getElementById("myTextPath");
 
 // Access the method property
-console.log(textPath.method.baseVal); // Output: 1 (align)
+console.log(textPath.method.baseVal); // Output: 1 (TEXTPATH_METHODTYPE_ALIGN)
 ```
 
 ## Specifications
