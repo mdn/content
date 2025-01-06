@@ -52,7 +52,7 @@ We would recommend Visual Studio Code (VS Code), as it is the editor we mostly u
 In this section, we'll look at some of the most significant functionality that you will find in code editors, describing how they can help you with your coding work.
 
 > [!NOTE]
-> The sections below barely scratch the surface of what a code editor can do. For a more complete feature list, see the [Visual Studio Code documentation](https://code.visualstudio.com/docs) (or search the web for your chosen code editor's docs if you are using something different).
+> The sections below only scratch the surface of what a code editor can do. For a more complete feature list, see the [Visual Studio Code documentation](https://code.visualstudio.com/docs) (or search the web for your chosen code editor's documentation if you are using something different).
 
 > [!NOTE]
 > If you are a keyboard-only user, be aware that VS Code has a powerful set of keyboard shortcuts. See the VS Code [Keyboard Shortcuts Reference](https://code.visualstudio.com/docs/getstarted/keybindings#_keyboard-shortcuts-reference).
