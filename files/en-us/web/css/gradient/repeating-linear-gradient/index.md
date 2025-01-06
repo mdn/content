@@ -2,7 +2,7 @@
 title: repeating-linear-gradient()
 slug: Web/CSS/gradient/repeating-linear-gradient
 page-type: css-function
-browser-compat: css.types.image.gradient.repeating-linear-gradient
+browser-compat: css.types.gradient.repeating-linear-gradient
 ---
 
 {{CSSRef}}
@@ -67,9 +67,9 @@ repeating-linear-gradient(in hsl longer hue, blue, red 50px)
 > [!NOTE]
 > Rendering of color stops in repeating linear gradients follows the same rules as [color stops in linear gradients](/en-US/docs/Web/CSS/gradient/linear-gradient#composition_of_a_linear_gradient).
 
-### Formal syntax
+## Formal syntax
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Examples
 

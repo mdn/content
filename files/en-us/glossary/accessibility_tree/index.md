@@ -28,7 +28,7 @@ While still in draft form within the Web Incubator Community Group as of April 2
 ## See also
 
 - [Accessibility](/en-US/docs/Web/Accessibility)
-- [Learn accessibility](/en-US/docs/Learn/Accessibility)
+- [Learn accessibility](/en-US/docs/Learn_web_development/Core/Accessibility)
 - [Web accessibility](https://en.wikipedia.org/wiki/Web_accessibility) on Wikipedia
 - [Web Accessibility In Mind](https://webaim.org/)
 - [ARIA](/en-US/docs/Web/Accessibility/ARIA)

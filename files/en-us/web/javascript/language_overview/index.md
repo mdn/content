@@ -785,7 +785,7 @@ If you have an async value, it's not possible to get its value synchronously. Fo
 
 In fact, the single-threaded model has made Node.js a popular choice for server-side programming due to its non-blocking IO, making handling a large number of database or file-system requests very performant. However, CPU-bound (computationally intensive) tasks that are pure JavaScript will still block the main thread. To achieve real paralleling, you may need to use [workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers).
 
-To learn more about asynchronous programming, you can read about [using promises](/en-US/docs/Web/JavaScript/Guide/Using_promises) or follow the [asynchronous JavaScript](/en-US/docs/Learn/JavaScript/Asynchronous) tutorial.
+To learn more about asynchronous programming, you can read about [using promises](/en-US/docs/Web/JavaScript/Guide/Using_promises) or follow the [asynchronous JavaScript](/en-US/docs/Learn_web_development/Extensions/Async_JS) tutorial.
 
 ## Modules
 
