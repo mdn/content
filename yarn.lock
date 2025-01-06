@@ -5841,15 +5841,15 @@ markdownlint-cli2-formatter-default@0.0.5:
   resolved "https://registry.yarnpkg.com/markdownlint-cli2-formatter-default/-/markdownlint-cli2-formatter-default-0.0.5.tgz#b8fde4e127f9a9c0596e6d45eed352dd0aa0ff98"
   integrity sha512-4XKTwQ5m1+Txo2kuQ3Jgpo/KmnG+X90dWt4acufg6HVGadTUG5hzHF/wssp9b5MBYOMCnZ9RMPaU//uHsszF8Q==
 
-markdownlint-cli2@0.17.0:
-  version "0.17.0"
-  resolved "https://registry.yarnpkg.com/markdownlint-cli2/-/markdownlint-cli2-0.17.0.tgz#1a93fa0c1708981a8f12b175e53d899fe7b448d1"
-  integrity sha512-8Xz7wkkkV4wJTf+pvryU3J/fT3BZWD3ZykcjYBR0GuH0GHvrCbswaCdurbuUuAPDGFZy4cxBGYCJSAOW8jM4aQ==
+markdownlint-cli2@0.17.1:
+  version "0.17.1"
+  resolved "https://registry.yarnpkg.com/markdownlint-cli2/-/markdownlint-cli2-0.17.1.tgz#4455105fe5d75821597779f7a442ce5c5ce0fede"
+  integrity sha512-n1Im9lhKJJE12/u2N0GWBwPqeb0HGdylN8XpSFg9hbj35+QalY9Vi6mxwUQdG6wlSrrIq9ZDQ0Q85AQG9V2WOg==
   dependencies:
     globby "14.0.2"
     js-yaml "4.1.0"
     jsonc-parser "3.3.1"
-    markdownlint "0.37.2"
+    markdownlint "0.37.3"
     markdownlint-cli2-formatter-default "0.0.5"
     micromatch "4.0.8"
 
@@ -5872,13 +5872,14 @@ markdownlint-rule-search-replace@1.2.0:
   dependencies:
     markdownlint-rule-helpers "0.21.0"
 
-markdownlint@0.37.2:
-  version "0.37.2"
-  resolved "https://registry.yarnpkg.com/markdownlint/-/markdownlint-0.37.2.tgz#72461a7abfef2e01ae7f3b596cdc083a25856571"
-  integrity sha512-m8QhYnRA1ptbhIjhVVBUkKQcUelVxuyO/yXyLewnc1+xs4eXhST/+hIy29goO+EYVLmWtknH4SmYQ4s0caoKqw==
+markdownlint@0.37.3:
+  version "0.37.3"
+  resolved "https://registry.yarnpkg.com/markdownlint/-/markdownlint-0.37.3.tgz#061ac5462e97fedc7a96aaac5c132885e4161bfd"
+  integrity sha512-eoQqH0291YCCjd+Pe1PUQ9AmWthlVmS0XWgcionkZ8q34ceZyRI+pYvsWksXJJL8OBkWCPwp1h/pnXxrPFC4oA==
   dependencies:
     markdown-it "14.1.0"
     micromark "4.0.1"
+    micromark-core-commonmark "2.0.2"
     micromark-extension-directive "3.0.2"
     micromark-extension-gfm-autolink-literal "2.1.0"
     micromark-extension-gfm-footnote "2.1.0"
@@ -6114,6 +6115,28 @@ methods@~1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/methods/-/methods-1.1.2.tgz#5529a4d67654134edcc5266656835b0f851afcee"
   integrity sha512-iclAHeNqNm68zFtnZ0e+1L2yUIdvzNoauKU4WBA3VvH/vPFieF7qfRlwUZU+DA9P9bPXIS90ulxoUoCH23sV2w==
+
+micromark-core-commonmark@2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/micromark-core-commonmark/-/micromark-core-commonmark-2.0.2.tgz#6a45bbb139e126b3f8b361a10711ccc7c6e15e93"
+  integrity sha512-FKjQKbxd1cibWMM1P9N+H8TwlgGgSkWZMmfuVucLCHaYqeSvJ0hFeHsIa65pA2nYbes0f8LDHPMrd9X7Ujxg9w==
+  dependencies:
+    decode-named-character-reference "^1.0.0"
+    devlop "^1.0.0"
+    micromark-factory-destination "^2.0.0"
+    micromark-factory-label "^2.0.0"
+    micromark-factory-space "^2.0.0"
+    micromark-factory-title "^2.0.0"
+    micromark-factory-whitespace "^2.0.0"
+    micromark-util-character "^2.0.0"
+    micromark-util-chunked "^2.0.0"
+    micromark-util-classify-character "^2.0.0"
+    micromark-util-html-tag-name "^2.0.0"
+    micromark-util-normalize-identifier "^2.0.0"
+    micromark-util-resolve-all "^2.0.0"
+    micromark-util-subtokenize "^2.0.0"
+    micromark-util-symbol "^2.0.0"
+    micromark-util-types "^2.0.0"
 
 micromark-core-commonmark@^2.0.0:
   version "2.0.1"
