@@ -32,7 +32,7 @@ In this assessment, you'll get some more practice in creating cool-looking boxes
 
 To get this assessment started, you should:
 
-- Copy the HTML and CSS — save them as `index.html` and `style.css` in a new directory.
+- Save the HTML and CSS shown below as two separate files — `index.html` and `style.css` — in a new directory.
 
 ### HTML
 
