@@ -66,7 +66,7 @@ The value of `valueToRound`, rounded to the nearest lower or higher integer mult
 - The argument calculations can resolve to {{CSSxREF("&lt;number&gt;")}}, {{CSSxREF("&lt;dimension&gt;")}}, or {{CSSxREF("&lt;percentage&gt;")}}, but must have the same type, or else the function is invalid; the result will have the same type as the arguments.
 - If `valueToRound` is exactly equal to an integer multiple of `roundingInterval`, `round()` resolves to `valueToRound` exactly (preserving whether `valueToRound` is `0⁻` or `0⁺`, if relevant). Otherwise, there are two integer multiples of `roundingInterval` that are potentially "closest" to `valueToRound`, lower `roundingInterval` which is closer to `−∞` and upper `roundingInterval` which is closer to `+∞`.
 
-### Formal syntax
+## Formal syntax
 
 {{CSSSyntax}}
 
@@ -113,7 +113,6 @@ div.box {
   width: 100px;
   height: 100px;
   background: lightblue;
-  padding: 5px;
   --rounding-interval: 25px;
 }
 ```
