@@ -39,7 +39,7 @@ For now, we would recommend that you install [Visual Studio Code](https://code.v
 
 ## Modern web browsers
 
-Having modern web browsers available is essential for web development, so you can test your websites/apps on the browsers you audience will use to access them. You also need to keep your web browsers up-to-date so that they support the latest web technologies and have the latest security fixes applied.
+Having modern web browsers available to you is essential for web development so that you can test your websites or apps on the browsers your visitors use to access them. You also need to keep your web browsers up-to-date so that they support the latest web technologies and have the latest security fixes applied.
 
 > [!NOTE]
 > Most browswers tend to install updates automatically, applying the changes when they are restarted. You can usually check for updates on the browser "About" page, for example available in the menu at _Firefox_ > _About Firefox_ or _Chrome_ > _About Google Chrome_ on Firefox/Chrome for macOS, or the menu icon > _Help_ > _About Firefox_ or menu icon > _Help_ > _About Google Chrome_ on Firefox/Chrome for Windows.
