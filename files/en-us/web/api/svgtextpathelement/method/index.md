@@ -8,7 +8,7 @@ browser-compat: api.SVGTextPathElement.method
 
 {{APIRef("SVG")}}
 
-The **`method`** read-only property of the {{domxref("SVGTextPathElement")}} interface reflects the {{SVGAttr("method")}} attribute of the given element. It takes one of the `TEXTPATH_METHODTYPE_*` constants defined on this interface.
+The **`method`** read-only property of the {{domxref("SVGTextPathElement")}} interface reflects the {{SVGAttr("method")}} attribute of the given {{SVGElement("textPath")}} element. It takes one of the [`TEXTPATH_METHODTYPE_*` constants](/en-US/docs/Web/API/SVGTextPathElement#method_types) defined on this interface.
 
 ## Value
 
