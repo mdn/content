@@ -140,7 +140,7 @@ This is the standard pattern you'll see when using stream readers:
 1. You write a function that starts off by reading the stream.
 2. If there is no more stream to read, you return out of the function.
 3. If there is more stream to read, you process the current chunk then run the function again.
-4. You keep chaining the `pipe` function until there is no more stream to read, in which case step 2 is followed.
+4. You keep chaining the `pump()` function until there is no more stream to read, in which case step 2 is followed.
 
 Removing all the code to actually perform a "pump", the code might be generalized to something like this:
 
