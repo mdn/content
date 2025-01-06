@@ -33,6 +33,5 @@ console.log(el.seeking); // true or false
 
 - {{domxref("HTMLMediaElement.seeking_event", "seeking")}} event
 - {{domxref("HTMLMediaElement.seeked_event", "seeked")}} event
-- {{domxref("HTMLMediaElement")}}
 - {{domxref("HTMLVideoElement")}}
 - {{domxref("HTMLAudioElement")}}
