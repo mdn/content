@@ -41,6 +41,5 @@ console.log(`The media played for a total of ${timePlayed} seconds.`);
 - {{domxref("HTMLMediaElement.progress_event", "progress")}} event
 - {{domxref("HTMLMediaElement.seekable")}}
 - {{domxref("HTMLMediaElement.buffered")}}
-- {{domxref("HTMLMediaElement")}}
 - {{domxref("HTMLVideoElement")}}
 - {{domxref("HTMLAudioElement")}}
