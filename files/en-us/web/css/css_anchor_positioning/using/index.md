@@ -54,7 +54,7 @@ To declare an element as an anchor with CSS, you need to set an anchor name on i
 }
 ```
 
-Converting an element to an anchor-positioned element requires two steps: It needs to be absolutely or fixed [positioned](/en-US/docs/Learn/CSS/CSS_layout/Positioning) using the {{cssxref("position")}} property. The positioned element then has its {{cssxref("position-anchor")}} property set to the value of the anchor element's `anchor-name` property to associate the two together:
+Converting an element to an anchor-positioned element requires two steps: It needs to be absolutely or fixed [positioned](/en-US/docs/Learn_web_development/Core/CSS_layout/Positioning) using the {{cssxref("position")}} property. The positioned element then has its {{cssxref("position-anchor")}} property set to the value of the anchor element's `anchor-name` property to associate the two together:
 
 ```css hidden
 .infobox {
@@ -692,10 +692,144 @@ Hover over or tab to the anchor element — the positioned element grows as the 
 
 {{ EmbedLiveSample("Sizing elements based on anchor size", "100%", "250") }}
 
+## Other uses of `anchor-size()`
+
+You can also use `anchor-size()` in physical and logical inset and margin properties. The sections below explore these uses in more detail, before providing a usage example.
+
+### Setting element position based on anchor size
+
+You can use the [`anchor-size()`](/en-US/docs/Web/CSS/anchor-size) function within an [inset property](/en-US/docs/Glossary/Inset_properties) value to position elements based on their anchor element's size, for example:
+
+```css
+left: anchor-size(width);
+inset-inline-end: anchor-size(--myAnchor height, 100px);
+```
+
+This doesn't position an element relative to the position of its anchor like the [`anchor()`](/en-US/docs/Web/CSS/anchor) function or {{cssxref("position-area")}} property do (see [Positioning elements relative to their anchor](#positioning_elements_relative_to_their_anchor), above); the element won't change its position when its anchor does. Instead, the element will be positioned according to the normal rules of [`absolute`](/en-US/docs/Web/CSS/position#absolute) or [`fixed`](/en-US/docs/Web/CSS/position#fixed) positioning.
+
+This can be useful in some situations. For example, if your anchor element can only move vertically, and always remains next to the edge of its closest positioned ancestor horizontally, you could use `left: anchor-size(width)` to cause the anchor-positioned element to always be positioned to the right of its anchor, even if the anchor width changes.
+
+### Setting element margin based on anchor size
+
+You can use the [`anchor-size()`](/en-US/docs/Web/CSS/anchor-size) function within a `margin-*` property value to set element margins based on their anchor element's size, for example:
+
+```css
+margin-left: calc(anchor-size(width) / 4);
+margin-block-start: anchor-size(--myAnchor self-block, 20px);
+```
+
+This can be useful in cases where you want to set an anchor-positioned element's margin to be always equal to the same percentage of the anchor element's width, even when the width changes.
+
+### `anchor-size()` position and margin example
+
+Let's look at an example where we set an anchor-positioned element's margin and position relative to the anchor element's width.
+
+In the HTML, we specify two {{htmlelement("div")}} elements, one `anchor` element and one `infobox` element that we'll position relative to the anchor. We give the anchor element a [`tabindex`](/en-US/docs/Web/HTML/Global_attributes/tabindex) attribute so that it can be focused via the keyboard. We also include filler text to make the {{htmlelement("body")}} tall enough to require scrolling, but this has been hidden for the sake of brevity.
+
+```html hidden
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+<p>
+  Nisi quis eleifend quam adipiscing vitae proin sagittis nisl rhoncus. In arcu
+  cursus euismod quis viverra nibh cras pulvinar.
+</p>
+```
+
+```html
+<div class="anchor" tabindex="0">⚓︎</div>
+
+<div class="infobox">
+  <p>Infobox.</p>
+</div>
+```
+
+```html hidden
+<p>Vulputate ut pharetra sit amet aliquam.</p>
+
+<p>
+  Malesuada nunc vel risus commodo viverra maecenas accumsan lacus. Vel elit
+  scelerisque mauris pellentesque pulvinar pellentesque habitant morbi
+  tristique. Porta lorem mollis aliquam ut porttitor. Turpis cursus in hac
+  habitasse platea dictumst quisque. Dolor sit amet consectetur adipiscing elit.
+  Ornare lectus sit amet est placerat. Nulla aliquet porttitor lacus luctus
+  accumsan.
+</p>
+```
+
+In the CSS, we first declare the `anchor` `<div>` as an anchor element by giving it an {{cssxref("anchor-name")}}. The positioned element has its {{cssxref("position")}} property set to `absolute`, and is associated with the anchor element via its {{cssxref("position-anchor")}} property. We also set absolute {{cssxref("height")}} and {{cssxref("width")}} dimensions on the anchor and infobox, and include a {{cssxref("transition")}} on the anchor so that width changes are smoothly animated when its state changes:
+
+```css hidden
+.anchor {
+  font-size: 2rem;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+  background-color: hsl(240 100% 75%);
+  text-align: center;
+  align-content: center;
+  outline: 1px solid black;
+}
+
+body {
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.infobox {
+  align-content: center;
+  color: darkblue;
+  background-color: azure;
+  outline: 1px solid #ddd;
+  font-size: 1rem;
+  text-align: center;
+}
+```
+
+```css
+.anchor {
+  anchor-name: --myAnchor;
+  width: 100px;
+  height: 100px;
+  transition: 1s all;
+}
+
+.infobox {
+  position-anchor: --myAnchor;
+  position: absolute;
+  height: 100px;
+  width: 100px;
+}
+```
+
+Now onto the most interesting part. Here we set the anchor's `width` to `300px` when it is hovered or focused. We then set the infobox's:
+
+- `top` value to `anchor(top)`. This causes the top of the infobox to always stay in line with the top of the anchor.
+- `left` value to `anchor-size(width)`. This causes the left of the infobox to be positioned the specified distance away from the left edge of its nearest positioned ancestor. In this case, the specified distance is equal to the anchor element's width and the nearest positioned ancestor is the `<body>` element, so the infobox appears to the right of the anchor.
+- `margin-left` value to `calc(anchor-size(width)/4)`. This cases the infobox to always have a left margin separating it and the anchor, equal to a quarter of the anchor's width.
+
+```css
+.anchor:hover,
+.anchor:focus {
+  width: 300px;
+}
+
+.infobox {
+  top: anchor(top);
+  left: anchor-size(width);
+  margin-left: calc(anchor-size(width) / 4);
+}
+```
+
+The rendered result is as follows:
+
+{{EmbedLiveSample("Basic `anchor-size()` usage", "100%", "240")}}
+
+Try tabbing to the anchor or hovering over it with the mouse pointer, and note how the infobox's position and left margin grow in proportion to the anchor element's width.
+
 ## See also
 
 - [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module
 - [Handling overflow: try fallbacks and conditional hiding](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding)
-- [Positioning](/en-US/docs/Learn/CSS/CSS_layout/Positioning)
+- [Learn: Positioning](/en-US/docs/Learn_web_development/Core/CSS_layout/Positioning)
 - [CSS logical properties and values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values) module
-- [Sizing items in CSS](/en-US/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
+- [Learn: Sizing items in CSS](/en-US/docs/Learn_web_development/Core/Styling_basics/Sizing)

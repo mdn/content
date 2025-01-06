@@ -112,4 +112,4 @@ The following guides help you to understand key concepts of the Performance API 
 ## See also
 
 - [Web performance](/en-US/docs/Web/Performance)
-- [Learn: Web performance](/en-US/docs/Learn/Performance)
+- [Learn: Web performance](/en-US/docs/Learn_web_development/Extensions/Performance)

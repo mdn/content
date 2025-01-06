@@ -25,7 +25,7 @@ The created image data will have a resolution of 96dpi for file formats that sup
 ```js-nolint
 toDataURL()
 toDataURL(type)
-toDataURL(type, encoderOptions)
+toDataURL(type, quality)
 ```
 
 ### Parameters
@@ -33,7 +33,7 @@ toDataURL(type, encoderOptions)
 - `type` {{optional_inline}}
   - : A string indicating the image format.
     The default type is `image/png`; this image format will be also used if the specified type is not supported.
-- `encoderOptions` {{optional_inline}}
+- `quality` {{optional_inline}}
   - : A {{jsxref("Number")}} between `0` and `1` indicating the image quality to be used when creating images using file formats that support lossy compression (such as `image/jpeg` or `image/webp`).
     A user agent will use its default quality value if this option is not specified, or if the number is outside the allowed range.
 

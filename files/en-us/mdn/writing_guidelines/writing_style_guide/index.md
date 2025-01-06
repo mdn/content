@@ -83,7 +83,7 @@ In a guide or tutorial, the introductory paragraph(s) should inform the reader a
   > The {{domxref("CanvasRenderingContext2D")}} method **`strokeText()`**, part of the [Canvas 2D API](/en-US/docs/Web/API/Canvas_API), strokes (draws the outlines of) the characters of a specified string, anchored at the position indicated by the given X and Y coordinates.
   > The text is drawn using the context's current {{domxref("CanvasRenderingContext2D.font", "font")}}, and is justified and aligned according to the {{domxref("CanvasRenderingContext2D.textAlign", "textAlign")}}, {{domxref("CanvasRenderingContext2D.textBaseline", "textBaseline")}}, and {{domxref("CanvasRenderingContext2D.direction", "direction")}} properties.
   >
-  > For more details and examples, see the [Text](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics#text) section on the Drawing graphics page as well as our main article on the subject, [Drawing text](/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_text).
+  > For more details and examples, see the [Text](/en-US/docs/Learn_web_development/Extensions/Client-side_APIs/Drawing_graphics#text) section on the Drawing graphics page as well as our main article on the subject, [Drawing text](/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_text).
 
 ### Use inclusive language
 
@@ -577,7 +577,7 @@ However, depending on the type of list you are creating, you will want to adjust
 
 Most of the guides, reference pages, and even glossary pages on MDN Web Docs contain a _See also_ section at the end of the article. This section contains [cross-references](#cross-references_linking) to related topics within MDN and sometimes links to related external articles. For example, this is the [See also section](/en-US/docs/Web/CSS/@layer#see_also) for the `@layer` page.
 
-In general, present the links in a See also section in a [bulleted list](#lists) format with each item in the list as a phrase. In the [Learn web development](/en-US/docs/Learn) area on MDN, however, the See also section follows the [definition list](/en-US/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN#definition_lists) format.
+In general, present the links in a See also section in a [bulleted list](#lists) format with each item in the list as a phrase. In the [Learn web development](/en-US/docs/Learn_web_development) section on MDN, however, the See also section follows the [definition list](/en-US/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN#definition_lists) format.
 
 To maintain consistency across MDN Web Docs, keep the following guidelines in mind while adding or updating a See also section.
 
@@ -632,8 +632,8 @@ Try to avoid putting your article at the top of the hierarchy, which slows the s
 The page title, which is displayed at the top of the page, can be different from the page "slug", which is the portion of the page's URL following `<locale>/docs/`. Keep the following guidelines in mind when defining a slug:
 
 - Slugs should be kept short. When creating a new level of hierarchy, the new level's component in the slug should just be a word or two.
-- Slugs should use an underscore for a multi-word component, such as `Getting_started` in `/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started`.
-- Follow sentence casing in slugs as well for each component, such as `Getting_started` in the previous example.
+- Slugs should use an underscore for a multi-word component, such as `Basic_HTML_syntax` in `/en-US/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax`.
+- Follow sentence casing in slugs as well for each component, such as `Basic_HTML_syntax` in the previous example.
 
 ### Titles
 

@@ -98,7 +98,7 @@ On MDN, writers will use code fences for example code blocks. They must specify 
   - `django` - Django templates
   - `svelte` - Svelte templates
   - `handlebars` - Handlebars templates
-  - `pug` - [Pug templates](https://pugjs.org/api/getting-started.html) (which may be used by [Express](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Template_primer))
+  - `pug` - [Pug templates](https://pugjs.org/api/getting-started.html) (which may be used by [Express](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Template_primer))
 - Other
   - `plain` - Plain text
   - `diff` - Diff file

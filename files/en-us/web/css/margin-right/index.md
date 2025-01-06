@@ -20,6 +20,8 @@ The vertical margins of two adjacent boxes may fuse. This is called [_margin col
 margin-right: 20px; /* An absolute length */
 margin-right: 1em; /* relative to the text size */
 margin-right: 5%; /* relative to the nearest block container's width */
+margin-right: anchor-size(self-block);
+margin-right: calc(anchor-size(--myAnchor height, 20px) / 4);
 
 /* Keyword values */
 margin-right: auto;
@@ -37,7 +39,11 @@ The `margin-right` property is specified as the keyword `auto`, or a `<length>`,
 ### Values
 
 - {{cssxref("&lt;length&gt;")}}
+
   - : The size of the margin as a fixed value.
+
+    - For _anchor-positioned elements_, the {{cssxref("anchor-size()")}} function resolves to a {{cssxref("&lt;length&gt;")}} value relative to the associated _anchor element_'s width or height (see [Setting element margin based on anchor size](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#setting_element_margin_based_on_anchor_size)).
+
 - {{cssxref("&lt;percentage&gt;")}}
   - : The size of the margin as a percentage, relative to the inline size (_width_ in a horizontal language, defined by {{cssxref("writing-mode")}}) of the [containing block](/en-US/docs/Web/CSS/Containing_block).
 - `auto`
