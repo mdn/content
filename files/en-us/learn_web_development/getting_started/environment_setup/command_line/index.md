@@ -87,7 +87,7 @@ The terminal is available on macOS at `Applications/Utilities/Terminal`.
 
 As with some other programming tools, using the terminal (or command line) on Windows has traditionally not been as simple or easy as on other operating systems. But things are getting better.
 
-Windows has traditionally had its own terminal-like program called `cmd` ("the command prompt") for a long time, but this definitely doesn't have parity with Unix commands, and is equivalent to the old-style Windows DOS prompt.
+Windows has traditionally had its own terminal-like program called `cmd` ("the command prompt") for a long time, but this doesn't have parity with Unix commands, and is equivalent to the old-style Windows DOS prompt.
 
 Better programs exist for providing a terminal experience on Windows, such as PowerShell ([see here to find installers](https://github.com/PowerShell/PowerShell)), and Gitbash (which comes as part of the [git for Windows](https://gitforwindows.org/) toolset).
 
@@ -113,7 +113,7 @@ Enough talk — let's start looking at some terminal commands! Out of the box, h
 
 - Navigate your computer's file system along with base-level tasks such as create, copy, rename, and delete:
 
-  - Move around your directory structure: `cd`
+  - Move around your directory (folder) structure: `cd`
   - Create directories: `mkdir`
   - Create files (and modify their metadata): `touch`
   - Copy files or directories: `cp`
@@ -132,7 +132,10 @@ Let's move forward and look at using a few of these tools on the command line. B
 
 ### Navigation on the command line
 
-When you visit the command line you will inevitably need to navigate to a particular directory to "do something". All the operating systems (assuming a default setup) will launch their terminal program in your "home" directory, and from there you're likely to want to move to a different place.
+When you visit the command line you will inevitably need to navigate to a particular directory to "do something". All the operating systems (assuming a default setup) will launch their terminal program in your _Home_ directory, and from there you're likely to want to move to a different place.
+
+> [!NOTE]
+> "Directory" is the technical term for what we called "folder" in the previous article. When looking at the file structure inside a user interface (UI), the term "folder" makes more sense, as the icons used look like old-school physical storage folders. However, you tend to hear the term "directory" used frequently as well, especially when talking about manipulating files using the command line. There are nuances, but the two terms basically mean the same thing.
 
 The `cd` command lets you Change Directory. Technically, cd isn't a program but a built-in. This means your operating system provides it out of the box, and also that you can't accidentally delete it — thank goodness! You don't need to worry too much about whether a command is built-in or not, but bear in mind that built-ins appear on all unix-based systems.
 
@@ -157,7 +160,7 @@ cd ..
 
 If the directory you want to go to is nested deep, you need to know the path to get to it. This usually becomes easier as you get more familiar with the structure of your file system, but if you are not sure of the path you can usually figure it out with a combination of the `ls` command (see below), and by clicking around in your Explorer/Finder window to see where a directory is, relative to where you currently are.
 
-For example, if you wanted to go to a directory called `src`, located inside a directory called `project`, located on the `Desktop`, you could type these three commands to get there from your home folder:
+For example, if you wanted to go to a directory called `src`, located inside a directory called `project`, located on the _Desktop_, you could type these three commands to get there from your _Home_ directory:
 
 ```bash
 cd Desktop
@@ -298,7 +301,7 @@ curl https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/
 Your output should look something like this (`curl` will first output some download counters and suchlike):
 
 ```bash
-location: /en-US/docs/Web/API/fetch
+location: /en-US/docs/Web/API/Window/fetch
 ```
 
 Although contrived, we could take this result a little further and transform the `location:` line contents, adding the base origin to the start of each one so that we get complete URLs printed out.
@@ -313,7 +316,7 @@ curl https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/
 Your final output should look something like this:
 
 ```bash
-https://developer.mozilla.org/en-US/docs/Web/API/fetch
+https://developer.mozilla.org/en-US/docs/Web/API/Window/fetch
 ```
 
 By combining these commands we've customized the output to show the full URLs that the Mozilla server is redirecting through when we request the `/docs/Web/API/WindowOrWorkerGlobalScope/fetch` URL.
@@ -332,10 +335,10 @@ Install npm on your system now, by going to the URL above and downloading and ru
 
 ![the Node.js installer on windows, showing the option to include npm](npm-install-option.png)
 
-Although we'll look at a number of different tools in the next article onwards, we'll cut our teeth on [Prettier](https://prettier.io/).
-Prettier is an opinionated code formatter that only has a "few options".
-Fewer options tends to mean simpler.
-Given how tooling can sometimes get out of hand in terms of complexity, "few options" can be very appealing.
+We'll again use [Prettier](https://prettier.io/) as an example here. We showed how to install it as a VS Code extension in our [Code editors](/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Code_editors#enhancing_your_code_editor_with_extensions) article. Here we'll show you how to install it as a command line tool.
+
+> [!NOTE]
+> Prettier is an opinionated code formatter that only has a "few options". Fewer options tends to mean simpler. Given how tooling can sometimes get out of hand in terms of complexity, "few options" can be very appealing.
 
 ### Where to install our CLI tools?
 
