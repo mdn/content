@@ -16,7 +16,7 @@ An {{domxref("SVGPreserveAspectRatio")}} object.
 
 ## Examples
 
-Given the following SVG:
+Consider the following SVG:
 
 ```html
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
@@ -37,22 +37,27 @@ Given the following SVG:
 </svg>
 ```
 
-This example defines an `<image>` element which animates its `preserveAspectRatio` attribute. The animation runs once and sets the `fill` attribute to "freeze", so the effect of the animation is persisted after the animation finishes.
+This example defines an `<image>` element which animates its `preserveAspectRatio` attribute. The animation runs once and sets the `fill` attribute to `"freeze"`, so the effect of the animation is persisted after the animation finishes.
 
 We run the following code immediately when page loads:
 
 ```js
 const image = document.querySelector("#myImage");
 const baseVal = image.preserveAspectRatio.baseVal;
+const animVal = image.preserveAspectRatio.animVal;
 
 console.log(baseVal.meetOrSlice); // Output: 1 (SVG_MEETORSLICE_MEET)
+console.log(animVal.meetOrSlice); // Output: 1 (SVG_MEETORSLICE_MEET)
 ```
 
-If we log the values of `baseVal.meetOrSlice` again after the animation has finished, we will see the following:
+If we log the values of `animVal.meetOrSlice` again after the animation has finished, we will see the following:
 
 ```js
 console.log(baseVal.meetOrSlice); // Output: 1 (SVG_MEETORSLICE_MEET)
+console.log(animVal.meetOrSlice); // Output: 2 (SVG_MEETORSLICE_SLICE)
 ```
+
+Note that if we set `fill` to `"remove"` (or remove `fill` entirely, since `"remove"` is the default) then the animation effects will be removed when the animation is complete, and `animVal.meetOrSlice` will then revert to `1`.
 
 ## Specifications
 

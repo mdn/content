@@ -16,7 +16,7 @@ An {{domxref("SVGPreserveAspectRatio")}} object.
 
 ## Examples
 
-Given the following SVG:
+Consider the following SVG:
 
 ```html
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
@@ -43,14 +43,17 @@ We run the following code immediately when page loads:
 
 ```js
 const image = document.querySelector("#myImage");
+const baseVal = image.preserveAspectRatio.baseVal;
 const animVal = image.preserveAspectRatio.animVal;
 
+console.log(baseVal.meetOrSlice); // Output: 1 (SVG_MEETORSLICE_MEET)
 console.log(animVal.meetOrSlice); // Output: 1 (SVG_MEETORSLICE_MEET)
 ```
 
 If we log the values of `animVal.meetOrSlice` again after the animation has finished, we will see the following:
 
 ```js
+console.log(baseVal.meetOrSlice); // Output: 1 (SVG_MEETORSLICE_MEET)
 console.log(animVal.meetOrSlice); // Output: 2 (SVG_MEETORSLICE_SLICE)
 ```
 
