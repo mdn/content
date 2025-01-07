@@ -8,7 +8,7 @@ browser-compat: api.SVGAngle.valueInSpecifiedUnits
 
 {{APIRef("SVG")}}
 
-The `valueInSpecifiedUnits` property of the {{domxref("SVGAngle")}} interface represents the floating point value, in the units expressed by {{domxref("SVGAngle.unitType", "unitType")}}.
+The `valueInSpecifiedUnits` property of the {{domxref("SVGAngle")}} interface represents the value of this angle as a number, in the units expressed by the angle's {{domxref("SVGAngle.unitType", "unitType")}}.
 
 Setting this attribute will cause {{domxref("SVGAngle.value", "value")}} and {{domxref("SVGAngle.valueAsString", "valueAsString")}} to be updated automatically to reflect this setting.
 
