@@ -54,7 +54,7 @@ The client may choose to provide the hint, and add the `Sec-CH-UA-Platform-Versi
 For example, the following request headers might be sent from a browser running on Windows 10.
 
 ```http
-GET /GET /my/page HTTP/1.1
+GET /my/page HTTP/1.1
 Host: example.site
 
 Sec-CH-UA: " Not A;Brand";v="99", "Chromium";v="96", "Google Chrome";v="96"
