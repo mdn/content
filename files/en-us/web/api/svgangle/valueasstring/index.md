@@ -14,7 +14,7 @@ Setting this attribute will cause {{domxref("SVGAngle.value", "value")}}, {{domx
 
 ## Value
 
-A `string`; the value of the angle.
+A string; the value of the angle.
 
 ## Examples
 
