@@ -8,7 +8,7 @@ browser-compat: api.SVGAngle.valueAsString
 
 {{APIRef("SVG")}}
 
-The `valueAsString` property of the {{domxref("SVGAngle")}} interface represents the angle's value as a **string**, in the units expressed by {{domxref("SVGAngle.unitType", "unitType")}}.
+The `valueAsString` property of the {{domxref("SVGAngle")}} interface represents the angle's value as a string, in the units expressed by {{domxref("SVGAngle.unitType", "unitType")}}.
 
 Setting this attribute will cause {{domxref("SVGAngle.value", "value")}}, {{domxref("SVGAngle.valueInSpecifiedUnits", "valueInSpecifiedUnits")}}, and {{domxref("SVGAngle.unitType", "unitType")}} to be updated automatically to reflect this setting.
 
