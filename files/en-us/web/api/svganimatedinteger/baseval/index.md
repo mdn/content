@@ -10,7 +10,7 @@ browser-compat: api.SVGAnimatedInteger.baseVal
 
 The **`baseVal`** property of the {{domxref("SVGAnimatedInteger")}} interface represents the base (non-animated) value of an animatable [`<integer>`](/en-US/docs/Web/SVG/Content_type#integer).
 
-Some attributes, like the {{SVGAttr("numOctaves")}} attribute of the {{SVGElement("feTurbulence")}} element or the {{SVGAttr("order")}} attribute of the {{SVGElement("feConvolveMatrix")}} accept a `long` integer as a value. This property provides access to the static non-animated state of the attribute as a live {{domxref("SVGAnimatedInteger")}} object.
+Some attributes, like the {{SVGAttr("numOctaves")}} attribute of the {{SVGElement("feTurbulence")}} element or the {{SVGAttr("order")}} attribute of the {{SVGElement("feConvolveMatrix")}} accept a `long` integer as a value. This property provides access to the static non-animated state of the attribute as a number.
 
 ## Value
 
