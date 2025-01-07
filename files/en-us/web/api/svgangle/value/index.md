@@ -14,7 +14,7 @@ Setting this attribute will cause {{domxref("SVGAngle.valueInSpecifiedUnits", "v
 
 ## Value
 
-An `integer`; the angle value in degrees as a float.
+A number; the angle value in degrees.
 
 ## Examples
 
