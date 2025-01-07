@@ -12,7 +12,7 @@ The **`unitType`** property of the {{domxref("SVGAngle")}} interface is one of t
 
 ## Value
 
-An `integer`; the angle type as an unsigned short.
+A number representing the numeric value of the constant.
 
 ## Examples
 
