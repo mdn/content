@@ -7,10 +7,13 @@ page-type: landing-page
 
 {{HTTPSidebar}}
 
-**HTTP headers** let the client and the server pass additional information with an HTTP request or response. An HTTP header consists of its case-insensitive name followed by a colon (`:`), then by its value. {{Glossary("Whitespace")}} before the value is ignored.
+**HTTP headers** let the client and the server pass additional information with a message in a request or response.
+In HTTP/1.X, a header is a case-insensitive name followed by a colon, then optional whitespace which will be ignored, and finally by its value (for example: `Allow: POST`).
+In HTTP/2 and above, headers are displayed in lowercase when viewed in developer tools (`accept: */*`), and prefixed with a colon for a special group of [pseudo-headers](/en-US/docs/Web/HTTP/Messages#pseudo-headers) (`:status: 200`).
+You can find more information on the syntax in each protocol version in the [HTTP messages](/en-US/docs/Web/HTTP/Messages) page.
 
-Custom proprietary headers have historically been used with an `X-` prefix, but this convention was deprecated in June 2012 because of the inconveniences it caused when nonstandard fields became standard in [RFC 6648](https://datatracker.ietf.org/doc/html/rfc6648); others are listed in the [IANA HTTP Field Name Registry](https://www.iana.org/assignments/http-fields/http-fields.xhtml), whose original content was defined in [RFC 4229](https://datatracker.ietf.org/doc/html/rfc4229).
-The IANA registry lists headers, including [information about their status](https://github.com/protocol-registries/http-fields?tab=readme-ov-file#choosing-the-right-status), which may be "permanent" (standards-defined), "provisional" (new), "deprecated" (use not recommended), or "obsolete" (no longer in use).
+Custom proprietary headers have historically been used with an `X-` prefix, but this convention was deprecated in 2012 because of the inconveniences it caused when nonstandard fields became standard in [RFC 6648](https://datatracker.ietf.org/doc/html/rfc6648); others are listed in the [IANA HTTP Field Name Registry](https://www.iana.org/assignments/http-fields/http-fields.xhtml), whose original content was defined in [RFC 4229](https://datatracker.ietf.org/doc/html/rfc4229).
+The IANA registry lists headers, including [information about their status](https://github.com/protocol-registries/http-fields?tab=readme-ov-file#choosing-the-right-status).
 
 Headers can be grouped according to their contexts:
 
@@ -84,9 +87,6 @@ For more details, refer to the [Content negotiation article](/en-US/docs/Web/HTT
 
 - {{HTTPHeader("Accept")}}
   - : Informs the server about the {{Glossary("MIME_type", "types")}} of data that can be sent back.
-- {{HTTPHeader("Accept-Charset")}} {{deprecated_inline}}
-  - : Advertises a client's supported {{glossary("character encoding", "character encodings")}}.
-    It is deprecated because {{Glossary("UTF-8")}} has become ubiquitous and use of the header makes client fingerprinting easier.
 - {{HTTPHeader("Accept-Encoding")}}
   - : The encoding algorithm, usually a [compression algorithm](/en-US/docs/Web/HTTP/Compression), that can be used on the resource sent back.
 - {{HTTPHeader("Accept-Language")}}
@@ -144,18 +144,12 @@ For more information, refer to the [CORS documentation](/en-US/docs/Web/HTTP/COR
 
 - {{HTTPHeader("Content-Digest")}} {{experimental_inline}}
   - : Provides a {{Glossary("digest")}} of the stream of octets framed in an HTTP message (the message content) dependent on {{HTTPHeader("Content-Encoding")}} and {{HTTPHeader("Content-Range")}}.
-- {{HTTPHeader("Digest")}} {{deprecated_inline}} {{non-standard_inline}}
-  - : Provides a {{Glossary("digest")}} of the a resource.
-    See {{HTTPHeader("Content-Digest")}} and {{HTTPHeader("Repr-Digest")}}.
 - {{HTTPHeader("Repr-Digest")}} {{experimental_inline}}
   - : Provides a {{Glossary("digest")}} of the selected representation of the target resource before transmission.
     Unlike the {{HTTPHeader("Content-Digest")}}, the digest does not consider {{HTTPHeader("Content-Encoding")}} or {{HTTPHeader("Content-Range")}}.
 - {{HTTPHeader("Want-Content-Digest")}} {{experimental_inline}}
   - : States the wish for a {{HTTPHeader("Content-Digest")}} header.
     It is the `Content-` analogue of {{HTTPHeader("Want-Repr-Digest")}}.
-- {{HTTPHeader("Want-Digest")}} {{deprecated_inline}} {{non-standard_inline}}
-  - : States the wish for a {{HTTPHeader("Digest")}} header.
-    See {{HTTPHeader("Want-Content-Digest")}} and {{HTTPHeader("Want-Repr-Digest")}} instead.
 - {{HTTPHeader("Want-Repr-Digest")}} {{experimental_inline}}
   - : States the wish for a {{HTTPHeader("Repr-Digest")}} header.
     It is the `Repr-` analogue of {{HTTPHeader("Want-Content-Digest")}}.
@@ -248,7 +242,8 @@ Range requests are useful for applications like media players that support rando
 - {{HTTPHeader("X-Frame-Options")}} (XFO)
   - : Indicates whether a browser should be allowed to render a page in a {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("embed")}} or {{HTMLElement("object")}}.
 - {{HTTPHeader("X-Permitted-Cross-Domain-Policies")}}
-  - : Specifies if a cross-domain policy file (`crossdomain.xml`) is allowed. The file may define a policy to grant clients, such as Adobe's Flash Player (now obsolete), Adobe Acrobat, Microsoft Silverlight (now obsolete), or Apache Flex, permission to handle data across domains that would otherwise be restricted due to the [Same-Origin Policy](/en-US/docs/Web/Security/Same-origin_policy). See the [Cross-domain Policy File Specification](https://www.adobe.com/devnet-docs/acrobatetk/tools/AppSec/CrossDomain_PolicyFile_Specification.pdf) for more information.
+  - : A cross-domain policy file may grant clients, such as Adobe Acrobat or Apache Flex (among others), permission to handle data across domains that would otherwise be restricted due to the [Same-Origin Policy](/en-US/docs/Web/Security/Same-origin_policy).
+    The `X-Permitted-Cross-Domain-Policies` header overrides such policy files so that clients still block unwanted requests.
 - {{HTTPHeader("X-Powered-By")}}
   - : May be set by hosting environments or other frameworks and contains information about them while not providing any usefulness to the application or its visitors. Unset this header to avoid exposing potential vulnerabilities.
 - {{HTTPHeader("X-XSS-Protection")}}
@@ -322,10 +317,13 @@ Headers used by the [WebSockets API](/en-US/docs/Web/API/WebSockets_API) in the 
   - : Indicates how long the user agent should wait before making a follow-up request.
 - {{HTTPHeader("Server-Timing")}}
   - : Communicates one or more metrics and descriptions for the given request-response cycle.
-- `Service-Worker-Allowed`
+- {{HTTPHeader("Service-Worker")}}
+  - : Included in fetches for a service worker's script resource.
+    This header helps administrators log service worker script requests for monitoring purposes.
+- {{HTTPHeader("Service-Worker-Allowed")}}
   - : Used to remove the [path restriction](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers#why_is_my_service_worker_failing_to_register) by including this header [in the response of the Service Worker script](https://w3c.github.io/ServiceWorker/#service-worker-script-response).
 - {{HTTPHeader("SourceMap")}}
-  - : Links generated code to a [source map](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/use_a_source_map/index.html).
+  - : Links to a {{Glossary("source map")}} so that debuggers can step through original source code instead of generated or transformed code.
 - {{HTTPHeader("Upgrade")}}
   - : This HTTP/1.1 (only) header can be used to upgrade an already established client/server connection to a different protocol (over the same transport protocol). For example, it can be used by a client to upgrade a connection from HTTP 1.1 to HTTP 2.0, or an HTTP or HTTPS connection into a WebSocket.
 - {{HTTPHeader("Priority")}}
@@ -432,8 +430,9 @@ Network client hints allow a server to choose what information is sent based on 
 
 ### Security
 
-- {{HTTPHeader("Origin-Isolation")}} {{experimental_inline}}
-  - : Provides a mechanism to allow web applications to isolate their origins.
+- {{HTTPHeader("Origin-Agent-Cluster")}} {{experimental_inline}}
+  - : Response header used to indicate that the associated {{domxref("Document")}} should be placed in an _origin-keyed [agent cluster](https://tc39.es/ecma262/#sec-agent-clusters)_.
+    This isolation allows user agents to allocate implementation-specific resources for agent clusters, such as processes or threads, more efficiently.
 
 ### Server-sent events
 
@@ -456,9 +455,6 @@ See the [Topics API](/en-US/docs/Web/API/Topics_API) documentation for more info
   - : A client can send the [`Accept-Signature`](https://wicg.github.io/webpackage/draft-yasskin-http-origin-signed-responses.html#name-the-accept-signature-header) header field to indicate intention to take advantage of any available signatures and to indicate what kinds of signatures it supports.
 - {{HTTPHeader("Early-Data")}} {{experimental_inline}}
   - : Indicates that the request has been conveyed in TLS early data.
-- {{HTTPHeader("Origin-Agent-Cluster")}} {{experimental_inline}}
-  - : Response header used to indicate that the associated {{domxref("Document")}} should be placed in an _origin-keyed [agent cluster](https://tc39.es/ecma262/#sec-agent-clusters)_.
-    This isolation allows user agents to allocate implementation-specific resources for agent clusters, such as processes or threads, more efficiently.
 - {{HTTPHeader("Set-Login")}} {{experimental_inline}}
   - : Response header sent by a federated identity provider (IdP) to set its login status, meaning whether any users are logged into the IdP on the current browser or not.
     This is stored by the browser and used by the [FedCM API](/en-US/docs/Web/API/FedCM_API).

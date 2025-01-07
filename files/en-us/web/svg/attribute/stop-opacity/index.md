@@ -2,7 +2,7 @@
 title: stop-opacity
 slug: Web/SVG/Attribute/stop-opacity
 page-type: svg-attribute
-browser-compat: svg.elements.stop.stop-opacity
+browser-compat: svg.global_attributes.stop-opacity
 ---
 
 {{SVGRef}}
@@ -56,6 +56,7 @@ You can use this attribute with the following SVG elements:
 
 ## See also
 
+- CSS {{cssxref("stop-opacity")}} property
 - {{SVGAttr("stop-color")}}
 - {{SVGAttr("opacity")}}
 - {{SVGAttr("fill-opacity")}}

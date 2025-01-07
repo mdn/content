@@ -292,6 +292,8 @@ blockquote p::after {
 
 - [Basic concepts of multi-column layout](/en-US/docs/Web/CSS/CSS_multicol_layout/Basic_concepts)
   - : An overview of the Multiple-column Layout specification
+- [Using multi-column layouts](/en-US/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts)
+  - : Guide to using multi-column properties to layout out text.
 - [Styling columns](/en-US/docs/Web/CSS/CSS_multicol_layout/Styling_columns)
   - : How to use column rules and manage the spacing between columns.
 - [Spanning and balancing](/en-US/docs/Web/CSS/CSS_multicol_layout/Spanning_balancing_columns)
@@ -318,7 +320,7 @@ blockquote p::after {
 
 ## See also
 
-- [Learn: multiple-column layout](/en-US/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
+- [Learn: multiple-column layout](/en-US/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout)
 - [CSS fragmentation](/en-US/docs/Web/CSS/CSS_fragmentation) module
 - [CSS flexible box layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout) module
 - [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) module

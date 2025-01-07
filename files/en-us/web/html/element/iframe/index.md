@@ -84,7 +84,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     - `no-referrer-when-downgrade`
       - : The {{HTTPHeader("Referer")}} header will not be sent to {{Glossary("origin")}}s without {{Glossary("TLS")}} ({{Glossary("HTTPS")}}).
     - `origin`
-      - : The sent referrer will be limited to the origin of the referring page: its [scheme](/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL), {{Glossary("host")}}, and {{Glossary("port")}}.
+      - : The sent referrer will be limited to the origin of the referring page: its [scheme](/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL), {{Glossary("host")}}, and {{Glossary("port")}}.
     - `origin-when-cross-origin`
       - : The referrer sent to other origins will be limited to the scheme, the host, and the port. Navigations on the same origin will still include the path.
     - `same-origin`
@@ -214,7 +214,7 @@ Without this title, they have to navigate into the `<iframe>` to determine what 
 
 ## Examples
 
-### A simple \<iframe>
+### A basic \<iframe>
 
 This example embeds the page at <https://example.org> in an iframe. This is a common use case of iframes: to embed content from another site. For example, the live sample itself, and the [try it](#try_it) example at the top, are both `<iframe>` embeds of content from another MDN site.
 
@@ -231,7 +231,7 @@ This example embeds the page at <https://example.org> in an iframe. This is a co
 
 #### Result
 
-{{ EmbedLiveSample('A_simple_iframe', 640,400)}}
+{{ EmbedLiveSample('A_basic_iframe', 640,400)}}
 
 ### Embedding source code in an \<iframe>
 

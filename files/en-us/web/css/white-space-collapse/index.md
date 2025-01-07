@@ -10,7 +10,7 @@ browser-compat: css.properties.white-space-collapse
 The **`white-space-collapse`** [CSS](/en-US/docs/Web/CSS) property controls how {{Glossary("whitespace", "white space")}} inside an element is collapsed.
 
 > [!NOTE]
-> The `white-space-collapse` and {{CSSxRef("text-wrap")}} properties can be declared together using the {{CSSxRef("white-space")}} shorthand property.
+> The `white-space-collapse` and {{CSSxRef("text-wrap-mode")}} properties can be declared together using the {{CSSxRef("white-space")}} shorthand property.
 
 ## Syntax
 
@@ -50,6 +50,9 @@ The `white-space-collapse` property is specified as a single keyword chosen from
 
 > **Note:** _Segment break characters_ are characters such as line feeds that cause text to break onto new lines.
 
+> [!NOTE]
+> The [CSS text](/en-US/docs/Web/CSS/CSS_text) module defines a `discard` value for the `white-space-collapse` property to discard all white space in the element, however, this is not supported in any browsers.
+
 ## Collapsing of white space
 
 User agents handle white space collapsing as follows:
@@ -88,6 +91,10 @@ User agents handle white space collapsing as follows:
 <h2 class="preserve-breaks">In this case only
   the   line breaks  are  preserved
   in    the          heading       .</h2>
+
+<h2 class="preserve-spaces">In this case only
+  the   spaces       are  preserved
+  in    the          heading       .</h2>
 ```
 <!-- prettier-ignore-end -->
 
@@ -106,9 +113,14 @@ User agents handle white space collapsing as follows:
   white-space-collapse: preserve-breaks;
 }
 
+.preserve-spaces {
+  white-space-collapse: preserve-spaces;
+}
+
 h2 {
   font-size: 1.6rem;
   font-family: monospace;
+  border-bottom: 1px dotted #ccc;
 }
 ```
 
@@ -126,5 +138,5 @@ h2 {
 
 ## See also
 
-- Shorthand for `white-space-collapse` and {{CSSxRef("text-wrap")}}: The {{CSSxRef("white-space")}} property.
+- Shorthand for `white-space-collapse` and {{CSSxRef("text-wrap-mode")}}: The {{CSSxRef("white-space")}} property.
 - [CSS text module](/en-US/docs/Web/CSS/CSS_text)

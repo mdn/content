@@ -35,7 +35,7 @@ You can also change the style to `display: block` to remove the disclosure trian
 
 See the [Browser compatibility](#browser_compatibility) section for details, as not all browsers support full functionality of this element yet.
 
-For Webkit-based browsers, such as Safari, it is possible to control the icon display through the non-standard CSS pseudo-element `::-webkit-details-marker`. To remove the disclosure triangle, use `summary::-webkit-details-marker { display: none }`.
+For WebKit-based browsers, such as Safari, it is possible to control the icon display through the non-standard CSS pseudo-element `::-webkit-details-marker`. To remove the disclosure triangle, use `summary::-webkit-details-marker { display: none }`.
 
 ## Examples
 
@@ -43,7 +43,7 @@ Below are some examples showing `<summary>` in use. You can find more examples i
 
 ### Basic example
 
-A simple example showing the use of `<summary>` in a {{HTMLElement("details")}} element:
+A basic example showing the use of `<summary>` in a {{HTMLElement("details")}} element:
 
 ```html
 <details open>
@@ -77,7 +77,7 @@ You can use heading elements in `<summary>`, like this:
 
 #### Result
 
-{{EmbedLiveSample("Summaries_as_headings", 650, 120)}}
+{{EmbedLiveSample("Summaries_as_headings", 650, 200)}}
 
 This currently has some spacing issues that could be addressed using CSS.
 
@@ -101,7 +101,7 @@ This example adds some semantics to the `<summary>` element to indicate the labe
 
 #### Result
 
-{{EmbedLiveSample("HTML_in_summaries", 650, 120)}}
+{{EmbedLiveSample("HTML_in_summaries", 650, 150)}}
 
 ### Changing the summary's icon
 
@@ -156,26 +156,33 @@ The CSS includes the `[open]` [attribute selector](/en-US/docs/Web/CSS/Attribute
 
 #### HTML
 
-```html
+```html-nolint
 <details>
-<h1>Quotes from Helen Keller</h2>
+  <h1>Quotes from Helen Keller</h1>
   <summary>On women's rights</summary>
   <p>
-    <q>We have prayed, we have coaxed, we have begged, for the vote, with the hope that men, out of chivalry, would bestow equal rights upon women and take them into partnership in the affairs of the state. We hoped that their common sense would triumph over prejudices and stupidity. We thought their boasted sense of justice would overcome the errors that so often fetter the human spirit; but we have always gone away empty-handed. We shall beg no more.</q>
+    <q>We have prayed, we have coaxed, we have begged, for the vote, with the
+      hope that men, out of chivalry, would bestow equal rights upon women and
+      take them into partnership in the affairs of the state. We hoped that
+      their common sense would triumph over prejudices and stupidity. We thought
+      their boasted sense of justice would overcome the errors that so often
+      fetter the human spirit; but we have always gone away empty-handed. We
+      shall beg no more.</q>
   </p>
 </details>
 
 <details>
   <summary>On optimism</summary>
   <p>
-    <q>Optimism is the faith that leads to achievement; nothing can be done without hope.</q>
+    <q>Optimism is the faith that leads to achievement; nothing can be done
+      without hope.</q>
   </p>
 </details>
 ```
 
 #### Result
 
-{{EmbedLiveSample("Changing the summary's icon", 650, 150)}}
+{{EmbedLiveSample("Changing the summary's icon", 650, 400)}}
 
 ## Technical summary
 

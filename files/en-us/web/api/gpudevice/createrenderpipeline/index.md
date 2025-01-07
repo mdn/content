@@ -52,7 +52,7 @@ The `depthStencil` object can contain the following properties:
   - : A number representing the maximum depth bias of a fragment. If omitted, `depthBiasClamp` defaults to 0.
 - `depthBiasSlopeScale` {{optional_inline}}
   - : A number representing a depth bias that scales with the fragment's slope. If omitted, `depthBiasSlopeScale` defaults to 0.
-- `depthCompare`
+- `depthCompare` {{optional_inline}}
 
   - : An enumerated value specifying the comparison operation used to test fragment depths against `depthStencilAttachment` depth values. Possible values are:
 
@@ -65,8 +65,14 @@ The `depthStencil` object can contain the following properties:
     - `"greater-equal"`: A provided value passes the comparison test if it is greater than or equal to the sampled value.
     - `"always"`: Comparison tests always pass.
 
-- `depthWriteEnabled`
+    `depthCompare` is not required if the specified `format` does not have a depth component, or if the comparison operation is not used.
+
+- `depthWriteEnabled` {{optional_inline}}
+
   - : A boolean. A value of `true` specifies that the {{domxref("GPURenderPipeline")}} can modify `depthStencilAttachment` depth values after creation. Setting it to `false` means it cannot.
+
+    `depthWriteEnabled` is not required if the specified `format` does not have a depth component.
+
 - `format`
   - : An enumerated value specifying the `depthStencilAttachment` format that the {{domxref("GPURenderPipeline")}} will be compatible with. See the specification's [Texture Formats](https://gpuweb.github.io/gpuweb/#enumdef-gputextureformat) section for all the available `format` values.
 - `stencilBack` {{optional_inline}}
@@ -379,7 +385,7 @@ The following criteria must be met when calling **`createRenderPipeline()`**, ot
 
 ### Basic example
 
-Our [basic render demo](https://mdn.github.io/dom-examples/webgpu-render-demo/) provides a simple example of the construction of a valid render pipeline descriptor object, which is then used to create a {{domxref("GPURenderPipeline")}} via a `createRenderPipeline()` call.
+Our [basic render demo](https://mdn.github.io/dom-examples/webgpu-render-demo/) provides an example of the construction of a valid render pipeline descriptor object, which is then used to create a {{domxref("GPURenderPipeline")}} via a `createRenderPipeline()` call.
 
 ```js
 // ...

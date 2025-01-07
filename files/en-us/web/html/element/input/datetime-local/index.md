@@ -11,7 +11,7 @@ browser-compat: html.elements.input.type_datetime-local
 
 {{EmbedInteractiveExample("pages/tabbed/input-datetime-local.html", "tabbed-shorter")}}
 
-The control's UI varies in general from browser to browser. In browsers with no support, these degrade gracefully to simple [`<input type="text">`](/en-US/docs/Web/HTML/Element/input/text) controls.
+The control's UI varies in general from browser to browser. In browsers with no support, these degrade gracefully as if [`<input type="text">`](/en-US/docs/Web/HTML/Element/input/text) were set.
 
 The control is intended to represent _a local date and time_, not necessarily _the user's local date and time_. In other words, the input allows any valid combination of year, month, day, hour, and minute—even if such a combination is invalid in the user's local time zone (such as the one hour within a daylight saving time spring-forward transition gap).
 
@@ -174,7 +174,7 @@ input:valid + span::after {
 
 ### Basic uses of datetime-local
 
-The simplest use of `<input type="datetime-local">` involves a basic `<input>` and {{htmlelement("label")}} element combination, as seen below:
+The most basic use of `<input type="datetime-local">` involves a basic `<input>` and {{htmlelement("label")}} element combination, as seen below:
 
 ```html
 <form>
@@ -280,5 +280,4 @@ The valid range included all times between the `min` and `max` values; the time 
 - The generic {{HTMLElement("input")}} element and the interface used to manipulate it, {{domxref("HTMLInputElement")}}
 - [`<input type="date">`](/en-US/docs/Web/HTML/Element/input/date) and [`<input type="time">`](/en-US/docs/Web/HTML/Element/input/time)
 - [Date and time formats used in HTML](/en-US/docs/Web/HTML/Date_and_time_formats)
-- [Date and Time picker tutorial](/en-US/docs/Learn/Forms/HTML5_input_types#date_and_time_pickers)
-- [Compatibility of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [Date and Time picker tutorial](/en-US/docs/Learn_web_development/Extensions/Forms/HTML5_input_types#date_and_time_pickers)

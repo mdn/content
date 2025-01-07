@@ -1,24 +1,31 @@
+# Do not add comments to this file. They will be lost.
+
 sidebar:
-  - details: closed
-    title: Firefox_releases
+  - title: Firefox_releases
+    details: closed
     children:
       - link: /Mozilla/Firefox/Releases
         title: Firefox_release_notes_developer
       - link: /Mozilla/Firefox/Experimental_features
         title: Experimental_features_firefox
-
-  - details: closed
-    title: Add-ons
+  - title: Add-ons
+    details: closed
     children:
       - link: /Mozilla/Add-ons/WebExtensions
         title: Browser_extensions
       - link: https://extensionworkshop.com/documentation/themes
         title: Themes
-
   - link: https://firefox-source-docs.mozilla.org/
     title: Firefox_documentation
-
 l10n:
+  de:
+    Firefox_releases: Firefox-Veröffentlichungen
+    Firefox_release_notes_developer: Firefox-Hinweise für Entwickler
+    Experimental_features_firefox: Experimentelle Funktionen in Firefox
+    Add-ons: Add-ons
+    Browser_extensions: Browser-Erweiterungen
+    Themes: Themen
+    Firefox_documentation: Firefox-Dokumentation
   en-US:
     Firefox_releases: Firefox releases
     Firefox_release_notes_developer: Firefox release notes for developers
@@ -29,7 +36,7 @@ l10n:
     Firefox_documentation: Firefox documentation
   es:
     Firefox_releases: Lanzamientos de Firefox
-    Firefox_release_notes_developer: "Notas de lanzamiento de Firefox, para desarrolladores"
+    Firefox_release_notes_developer: Notas de lanzamiento de Firefox, para desarrolladores
     Experimental_features_firefox: Caracteristicas experimentales en Firefox
     Add-ons: Complementos
     Browser_extensions: Extensiones del navegador

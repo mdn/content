@@ -45,7 +45,7 @@ env(safe-area-inset-left, 1.4rem);
 > [!NOTE]
 > Unlike other CSS properties, user agent-defined property names are case-sensitive.
 
-### Formal syntax
+## Formal syntax
 
 {{CSSSyntax}}
 

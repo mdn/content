@@ -128,7 +128,7 @@ There is no object in the core JavaScript language that is async iterable. Some 
 
 [Generator functions](/en-US/docs/Web/JavaScript/Reference/Statements/function*) return [generator objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator), which are iterable iterators. [Async generator functions](/en-US/docs/Web/JavaScript/Reference/Statements/async_function*) return [async generator objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncGenerator), which are async iterable iterators.
 
-The iterators returned from built-in iterables actually all inherit from a common class {{jsxref("Iterator")}}, which implements the aforementioned `[Symbol.iterator]() { return this; }` method, making them all iterable iterators. The `Iterator` class also provides additional [helper methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator#iterator_helpers) in addition to the `next()` method required by the iterator protocol. You can inspect an iterator's prototype chain by logging it in a graphical console.
+The iterators returned from built-in iterables actually all inherit from a common class {{jsxref("Iterator")}}, which implements the aforementioned `[Symbol.iterator]() { return this; }` method, making them all iterable iterators. The `Iterator` class also provides additional [helper methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator#iterator_helper_methods) in addition to the `next()` method required by the iterator protocol. You can inspect an iterator's prototype chain by logging it in a graphical console.
 
 ```plain
 console.log([][Symbol.iterator]());
@@ -225,6 +225,7 @@ const [b, c, d] = obj;
 // Returning 3
 // Already reached the end (the last call returned `done: true`),
 // so `return` is not called
+console.log([b, c, d]); // [1, 2, undefined]; the value associated with `done: true` is not reachable
 
 for (const b of obj) {
   break;
@@ -303,7 +304,7 @@ The lack of `catch` here causes errors thrown by `doSomething()` or `doSomething
 
 ### Forwarding errors
 
-Some built-in syntaxes wrap an iterator into another iterator. They include the iterator produced by {{jsxref("Iterator.from()")}}, [iterator helpers](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator#iterator_helpers) (`map()`, `filter()`, `take()`, `drop()`, and `flatMap()`), [`yield*`](/en-US/docs/Web/JavaScript/Reference/Operators/yield*), and a hidden wrapper when you use async iteration (`for await...of`, `Array.fromAsync`) on sync iterators. The wrapped iterator is then responsible for forwarding errors between the inner iterator and the caller.
+Some built-in syntaxes wrap an iterator into another iterator. They include the iterator produced by {{jsxref("Iterator.from()")}}, [iterator helper methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator#iterator_helper_methods) (`map()`, `filter()`, `take()`, `drop()`, and `flatMap()`), [`yield*`](/en-US/docs/Web/JavaScript/Reference/Operators/yield*), and a hidden wrapper when you use async iteration (`for await...of`, `Array.fromAsync`) on sync iterators. The wrapped iterator is then responsible for forwarding errors between the inner iterator and the caller.
 
 - All wrapper iterators directly forward the `next()` method of the inner iterator, including its return value and thrown errors.
 - Wrapper iterators generally directly forward the `return()` method of the inner iterator. If the `return()` method doesn't exist on the inner iterator, it returns `{ done: true, value: undefined }` instead. In the case of iterator helpers: if the iterator helper's `next()` method has not been called, after trying to call `return()` on the inner iterator, the current iterator always returns `{ done: true, value: undefined }`. This is consistent with generator functions where execution hasn't entered the `yield*` expression yet.

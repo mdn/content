@@ -362,7 +362,7 @@ When the PWA no longer needs periodic background updates, (for example, because 
 ```js
 // main.js
 
-async function registerPeriodicSync() {
+async function unregisterPeriodicSync() {
   const swRegistration = await navigator.serviceWorker.ready;
   swRegistration.periodicSync.unregister("update-news");
 }

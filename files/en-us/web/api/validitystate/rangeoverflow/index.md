@@ -80,6 +80,6 @@ userInput.addEventListener("input", () => {
 
 - {{domxref("ValidityState.rangeUnderflow")}}
 - [Constraint validation](/en-US/docs/Web/HTML/Constraint_validation)
-- [Forms: Data form validation](/en-US/docs/Learn/Forms/Form_validation)
+- [Forms: Data form validation](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation)
 - [`step` attribute](/en-US/docs/Web/HTML/Attributes/step)
 - [`min` attribute](/en-US/docs/Web/HTML/Attributes/min)

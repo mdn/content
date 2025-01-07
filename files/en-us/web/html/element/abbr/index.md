@@ -77,7 +77,7 @@ To mark up an abbreviation without providing an expansion or description, use `<
 
 ### Styling abbreviations
 
-You can use CSS to set a custom style to be used for abbreviations, as seen in this simple example.
+You can use CSS to set a custom style to be used for abbreviations, as seen in this basic example.
 
 #### HTML
 
@@ -203,4 +203,4 @@ You can use `<abbr>` in tandem with {{HTMLElement("dfn")}} to more formally defi
 
 ## See also
 
-- [Using the `<abbr>` element](/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#abbreviations)
+- [Using the `<abbr>` element](/en-US/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features#abbreviations)
