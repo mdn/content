@@ -20,21 +20,23 @@ Every `SVGAngle` object operates in one of two modes:
 
 ## Constants
 
-- `SVG_ANGLETYPE_UNKNOWN` = `0`
-  - : Some unknown type of value.
-- `SVG_ANGLETYPE_UNSPECIFIED` = `1`
-  - : A unitless {{cssxref("&lt;number&gt;")}} interpreted as a value in degrees.
-- `SVG_ANGLETYPE_DEG` = `2`
-  - : An {{cssxref("&lt;angle&gt;")}} with a `deg` unit.
-- `SVG_ANGLETYPE_RAD` = `3`
-  - : An {{cssxref("&lt;angle&gt;")}} with a `rad` unit.
-- `SVG_ANGLETYPE_GRAD` = `4`
-  - : An {{cssxref("&lt;angle&gt;")}} with a `grad` unit.
+- `SVG_ANGLETYPE_UNKNOWN`
+  - : Some unknown type of value. Represented as the numeric value `0`.
+- `SVG_ANGLETYPE_UNSPECIFIED`
+  - : A unitless {{cssxref("&lt;number&gt;")}} interpreted as a value in degrees. Represented as the numeric value `1`.
+- `SVG_ANGLETYPE_DEG`
+  - : An {{cssxref("&lt;angle&gt;")}} with a `deg` unit. Represented as the numeric value `2`.
+- `SVG_ANGLETYPE_RAD`
+  - : An {{cssxref("&lt;angle&gt;")}} with a `rad` unit. Represented as the numeric value `3`.
+- `SVG_ANGLETYPE_GRAD`
+  - : An {{cssxref("&lt;angle&gt;")}} with a `grad` unit. Represented as the numeric value `4`.
 
 ## Instance properties
 
 - `unitType`
+
   - : The type of the value as specified by one of the `SVG_ANGLETYPE_*` constants defined on this interface.
+
 - `value`
 
   - : The value as a floating point value, in user units. Setting this attribute will cause `valueInSpecifiedUnits` and `valueAsString` to be updated automatically to reflect this setting.
