@@ -2,7 +2,7 @@
 title: CSS box alignment
 slug: Web/CSS/CSS_box_alignment
 page-type: css-module
-spec-urls: https://drafts.csswg.org/css-align
+spec-urls: https://drafts.csswg.org/css-align/
 ---
 
 {{CSSRef}}
@@ -325,3 +325,9 @@ As the CSS box alignment properties are implemented differently depending on the
 ## Specifications
 
 {{Specifications}}
+
+## See also
+
+- [CSS display](/en-US/docs/Web/CSS/CSS_display) module
+- [CSS flex layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout) module
+- [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) module
