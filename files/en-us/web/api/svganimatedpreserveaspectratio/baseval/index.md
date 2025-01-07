@@ -21,21 +21,37 @@ Given the following SVG:
 ```html
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
   <image
-    href="image.jpg"
+    id="myImage"
+    href="crows.jpg"
     width="50"
     height="50"
-    preserveAspectRatio="xMinYMin meet" />
+    preserveAspectRatio="xMinYMin meet">
+    <animate
+      attributeName="preserveAspectRatio"
+      from="xMinYMin meet"
+      to="xMaxYMax slice"
+      dur="5s"
+      fill="freeze"
+      repeatCount="1" />
+  </image>
 </svg>
 ```
 
-You can access the `baseVal` of the `preserveAspectRatio` attribute like this:
+This example defines an `<image>` element which animates its `preserveAspectRatio` attribute. The animation runs once and sets the `fill` attribute to "freeze", so the effect of the animation is persisted after the animation finishes.
+
+We run the following code immediately when page loads:
 
 ```js
-const image = document.querySelector("image");
-const preserveAspectRatio = image.preserveAspectRatio.baseVal;
+const image = document.querySelector("#myImage");
+const baseVal = image.preserveAspectRatio.baseVal;
 
-console.log(preserveAspectRatio.align); // output: "xMinYMin"
-console.log(preserveAspectRatio.meetOrSlice); // output: "meet"
+console.log(baseVal.meetOrSlice); // Output: 1 (SVG_MEETORSLICE_MEET)
+```
+
+If we log the values of `baseVal.meetOrSlice` again after the animation has finished, we will see the following:
+
+```js
+console.log(baseVal.meetOrSlice); // Output: 1 (SVG_MEETORSLICE_MEET)
 ```
 
 ## Specifications
