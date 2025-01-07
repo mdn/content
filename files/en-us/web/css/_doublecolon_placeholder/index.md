@@ -106,6 +106,7 @@ Some browsers make placeholder text less opaque. If you want fully opaque text, 
 ```html
 <input placeholder="Color set by browser" />
 <input placeholder="Same color as input" class="explicit-color" />
+<input placeholder="Semi-opaque text color" class="opacity-change" />
 ```
 
 #### CSS
@@ -119,9 +120,11 @@ input {
 .explicit-color::placeholder {
   /* use the same color as input element to avoid the browser set default color */
   color: currentColor;
+}
 
+.opacity-change::placeholder {
   /* less opaque text */
-  /* color: color-mix(in srgb, currentColor 70%, transparent); */
+  color: color-mix(in srgb, currentColor 70%, transparent);
 }
 ```
 
@@ -130,7 +133,7 @@ input {
 {{EmbedLiveSample("default_color", 200, 60)}}
 
 > [!NOTE]
-> Note that browsers use different default colors for placeholder text. For example, Firefox uses the input element's color with 54% opacity, and Chrome uses `darkgray` color. If you want consistent placeholder text color across the browsers, then set the color explicitly.
+> Note that browsers use different default colors for placeholder text. For example, Firefox uses the input element's color with 54% opacity, and Chrome uses `darkgray` color. If you want consistent placeholder text color across the browsers, then set the `color` explicitly.
 
 ## Specifications
 
