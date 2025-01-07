@@ -18,12 +18,11 @@ A string.
 
 ## Examples
 
-```html
-<a id="myAnchor" href="/en-US/docs/Location.href#examples">Examples</a>
-<script>
-  const anchor = document.getElementById("myAnchor");
-  console.log(anchor.hash); // '#examples'
-</script>
+Assuming the user has navigated to `https://example.org#examples`, the following code will log `#examples`:
+
+```js
+const result = location.hash;
+console.log(result);
 ```
 
 ## Specifications
