@@ -1331,7 +1331,7 @@
         "xLinkAttributes",
         "'type'",
         "'href'",
-        "'crossorigin'",
+        "'crossorigin'"
       ],
       "interfaces": ["SVGScriptElement"]
     },
