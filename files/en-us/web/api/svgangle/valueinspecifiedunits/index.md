@@ -14,7 +14,7 @@ Setting this attribute will cause {{domxref("SVGAngle.value", "value")}} and {{d
 
 ## Value
 
-An `integer`; the numeric factor of the angle as a float.
+A number; the numeric factor of the angle.
 
 ## Examples
 
