@@ -8,7 +8,7 @@ browser-compat: api.SVGAngle.newValueSpecifiedUnits
 
 {{APIRef("SVG")}}
 
-The `newValueSpecifiedUnits()` method of the {{domxref("SVGAngle")}} interface resets the value as a number with an associated {{domxref("SVGAngle.unitType", "unitType")}}, thereby replacing the values for all of the attributes on the object.
+The `newValueSpecifiedUnits()` method of the {{domxref("SVGAngle")}} interface sets the value to a number with an associated {{domxref("SVGAngle.unitType", "unitType")}}, thereby replacing the values for all of the attributes on the object.
 
 ## Syntax
 
