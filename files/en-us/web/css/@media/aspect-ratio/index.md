@@ -63,6 +63,7 @@ Note that, when none of the media query conditions are true, the background will
 <input id="w" name="w" type="range" min="100" max="250" step="5" value="165" />
 <label id="hf" for="w">height:165</label>
 <input id="h" name="h" type="range" min="100" max="250" step="5" value="165" />
+<label id="ratio">aspect-ratio: 165/165 = 1</label>
 
 <iframe
   id="outer"
@@ -80,13 +81,20 @@ iframe {
 ```js hidden
 outer.style.width = outer.style.height = "165px";
 
+const updateRatio = () => {
+  ratio.textContent = `aspect-ratio: ${w.value}/${h.value} = ${(w.value / h.value).toFixed(2)}`;
+};
+
 w.onchange = w.oninput = () => {
   outer.style.width = `${w.value}px`;
   wf.textContent = `width: ${w.value}`;
+  updateRatio();
 };
+
 h.onchange = h.oninput = () => {
   outer.style.height = `${h.value}px`;
   hf.textContent = `height: ${h.value}`;
+  updateRatio();
 };
 ```
 
