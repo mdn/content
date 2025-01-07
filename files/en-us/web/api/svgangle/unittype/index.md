@@ -21,8 +21,6 @@ Here's an example of how to access the `unitType` property:
 ```js
 // Get an SVGAngle object
 const svg = document.querySelector("svg");
-
-// Assume `angle` is an instance of SVGAngle
 const angle = svg.createSVGAngle();
 
 // Set the angle value
