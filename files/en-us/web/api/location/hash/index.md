@@ -19,6 +19,7 @@ A string.
 ## Examples
 
 Assuming the user has navigated to "https://example.org#examples", the following code will log `#examples`:
+
 ```js
 const result = location.hash;
 console.log(result);
