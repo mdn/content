@@ -10,11 +10,11 @@ spec-urls: https://drafts.csswg.org/css-values-4/#ratio-value
 
 The **`<ratio>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) describes the proportional relationship between two values. It mostly represents the aspect ratio, which relates width to height. For example, the `<ratio>` is used as a value for the `aspect-ratio` media feature in {{cssxref("@media")}} media queries, the `aspect-ratio` size feature in {{cssxref("@container")}} container queries, and as a value for the CSS {{cssxref("aspect-ratio")}} property.
 
-To compare two ratios, use the quotients' numeric values. For example, 3/2 is less than 2/1 because it resolves to 1.5 while the second resolves to 2.
-
 ## Syntax
 
 The `<ratio>` data type is a {{cssxref("&lt;number&gt;")}} followed by a forward slash ('/', Unicode `U+002F SOLIDUS`) and a second {{cssxref("&lt;number&gt;")}}. Both numbers must be positive. Spaces before and after the slash are optional. The first number represents the width, while the second represents the height. In addition a single {{cssxref("&lt;number&gt;")}} as a value is allowable.
+
+Two ratios are compared using the quotients' numeric values. For example, 3/2 is less than 2/1 because it resolves to 1.5 while the second resolves to 2.
 
 ### Common aspect ratios
 
@@ -74,6 +74,7 @@ The `<ratio>` data type is a {{cssxref("&lt;number&gt;")}} followed by a forward
 
 - [`aspect-ratio`](/en-US/docs/Web/CSS/@media/aspect-ratio) media descriptor
 - [Understanding aspect ratios](/en-US/docs/Web/CSS/CSS_box_sizing/Understanding_aspect-ratio)
+- [Comparing aspect ratios](/en-US/docs/Glossary/Aspect_ratio#comparing_aspect_ratios).
 - [CSS container queries](/en-US/docs/Web/CSS/CSS_containment/Container_queries) guide
 - [Using container size and style queries](/en-US/docs/Web/CSS/CSS_containment/Container_size_and_style_queries) guide
 - [CSS media queries](/en-US/docs/Web/CSS/CSS_media_queries) module

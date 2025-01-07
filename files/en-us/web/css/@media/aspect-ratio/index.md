@@ -11,43 +11,47 @@ The **`aspect-ratio`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/We
 
 ## Syntax
 
-The `aspect-ratio` feature is specified as a {{cssxref("&lt;ratio&gt;")}} value representing the width-to-height aspect ratio of the viewport. It is a range feature, meaning you can also use the prefixed **`min-aspect-ratio`** and **`max-aspect-ratio`** variants to query minimum and maximum values, respectively. The aspect ratio is [compared using the quotient's numeric value](/en-US/docs/Glossary/Aspect_ratio#comparing_aspect_ratios).
+The `aspect-ratio` feature is specified as a {{cssxref("&lt;ratio&gt;")}} value representing the width-to-height aspect ratio of the viewport. It is a range feature, meaning you can also use the prefixed **`min-aspect-ratio`** and **`max-aspect-ratio`** variants to query minimum and maximum values, respectively.
 
 ## Examples
 
-The example below is contained in an {{htmlElement("iframe")}}, which creates its own viewport. Resize the `<iframe>` to see `aspect-ratio` in action.
+In the example below, a {{HTMLElement("div")}} element is contained in an {{HTMLElement("iframe")}}. The iframe creates its own viewport. Resize the `<iframe>` to see `aspect-ratio` in action.
 
 Note that, when none of the media query conditions are true, the background will turn white because none of the below rules will be applied to the `<div>` inside the `<iframe>`. See if you can find which width and height values trigger this!
 
 ### HTML
 
 ```html
-<div id="inner">
-  Watch this element as you resize your viewport's width and height.
-</div>
+<iframe id="outer">
+  <div id="inner">
+    Watch this element as you resize your viewport's width and height.
+  </div>
+</iframe>
 ```
 
 ### CSS
 
 ```css
-/* Minimum aspect ratio */
+/* Minimum allowed aspect ratio */
+/* Select aspect ratios 8/5 = 1.6 and above */
 @media (min-aspect-ratio: 8/5) {
   div {
-    background: #9af; /* blue */
+    background: #99f; /* blue */
   }
 }
 
-/* Maximum aspect ratio */
+/* Maximum allowed aspect ratio */
+/* Select aspect ratios 3/2 = 1.5 and below */
 @media (max-aspect-ratio: 3/2) {
   div {
-    background: #9ff; /* cyan */
+    background: #9f9; /* green */
   }
 }
 
-/* Exact aspect ratio, put it at the bottom to avoid override*/
+/* Exact aspect ratio, put it at the bottom to avoid override */
 @media (aspect-ratio: 1/1) {
   div {
-    background: #f9a; /* red */
+    background: #f99; /* red */
   }
 }
 ```
@@ -62,13 +66,14 @@ Note that, when none of the media query conditions are true, the background will
 
 <iframe
   id="outer"
-  srcdoc="<style> @media (min-aspect-ratio: 8/5) { div { background: #9af; } } @media (max-aspect-ratio: 3/2) { div { background: #9ff; } } @media (aspect-ratio: 1/1) { div { background: #f9a; } }</style><div id='inner'> Watch this element as you resize your viewport's width and height.</div>">
+  srcdoc="<style> @media (min-aspect-ratio: 8/5) { div { background: #99f; } } @media (max-aspect-ratio: 3/2) { div { background: #9f9; } } @media (aspect-ratio: 1/1) { div { background: #f99; } }</style><div id='inner'> Watch this element as you resize your viewport's width and height.</div>">
 </iframe>
 ```
 
 ```css hidden
 iframe {
   display: block;
+  border: 1px dashed black;
 }
 ```
 
@@ -87,6 +92,10 @@ h.onchange = h.oninput = () => {
 
 {{ EmbedLiveSample('Result', '300px', '350px') }}
 
+Note the `min-aspect-ratio: 8/5` sets the _lower_ bound to 1.6, so this media query selects elements with aspect ratios 1.6 and above. The `max-aspect-ratio: 3/2` sets the _upper_ bound, so this media query selects elements with aspect ratios 1.5 and below. The `aspect-ratio: 1/1` overrides the max aspect ratio rule because it has been declared after and selects elements with aspect ratios exactly `1`.
+
+From the initial state, as you reduce height, the aspect ratio starts increasing from one. So the div's background color goes from red(1) < green(1.5) < white < blue(1.6).
+
 ## Specifications
 
 {{Specifications}}
@@ -97,6 +106,7 @@ h.onchange = h.oninput = () => {
 
 ## See also
 
+- [Understanding `aspect-ratio`](/en-US/docs/Web/CSS/CSS_box_sizing/Understanding_aspect-ratio)
+- [Comparing aspect ratios](/en-US/docs/Glossary/Aspect_ratio#comparing_aspect_ratios).
 - [Using Media Queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
 - [@media](/en-US/docs/Web/CSS/@media)
-- [Understanding `aspect-ratio`](/en-US/docs/Web/CSS/CSS_box_sizing/Understanding_aspect-ratio)
