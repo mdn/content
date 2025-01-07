@@ -329,7 +329,7 @@ Digging further into message frames, stream IDs and how the connection is manage
 
 This guide provides a general overview of the anatomy of HTTP messages, using the HTTP/1.1 format for illustration.
 We also explored HTTP/2 message framing, which introduces a layer between the HTTP/1.x syntax and the underlying transport protocol without fundamentally modifying HTTP's semantics.
-HTTP/2 was introduced to solve the head-of-line blocking issues present in HTTP/1.x by enabling multiplexing of requests.
+HTTP/2 was introduced to solve the {{glossary("head of line blocking", "head-of-line blocking")}} issues present in HTTP/1.x by enabling multiplexing of requests.
 
 One issue that remained in HTTP/2 is that even though head-of-line blocking was fixed in the protocol level, there is still a performance bottleneck due to head-of-line blocking within TCP (at the transport level).
 HTTP/3 addresses this limitation by using QUIC, a protocol built on UDP, instead of TCP.

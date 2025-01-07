@@ -32,7 +32,7 @@ _This interface also inherits properties from {{domxref("TextTrackCue")}}._
 - {{domxref("VTTCue.line")}}
   - : Represents the line positioning of the cue. This can be the string `auto` or a number whose interpretation depends on the value of {{domxref("VTTCue.snapToLines")}}.
 - {{domxref("VTTCue.lineAlign")}}
-  - : An enum representing the alignment of the {{domxref("VTTCue.line")}}.
+  - : An enum representing the alignment of the VTT cue.
 - {{domxref("VTTCue.position")}}
   - : Represents the indentation of the cue within the line.
     This can be the string `auto`, a number representing the percentage of the {{domxref("VTTCue.region")}}, or the video size if {{domxref("VTTCue.region")}} is `null`.
