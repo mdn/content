@@ -24,7 +24,7 @@ Note that, when none of the media query conditions are true, the background will
 ```html
 <iframe id="outer">
   <div id="inner">
-    Watch this element as you resize your viewport's width and height.
+    Watch this element as you resize iframe viewport's width and height.
   </div>
 </iframe>
 ```
@@ -67,7 +67,7 @@ Note that, when none of the media query conditions are true, the background will
 
 <iframe
   id="outer"
-  srcdoc="<style> @media (min-aspect-ratio: 8/5) { div { background: #99f; } } @media (max-aspect-ratio: 3/2) { div { background: #9f9; } } @media (aspect-ratio: 1/1) { div { background: #f99; } }</style><div id='inner'> Watch this element as you resize your viewport's width and height.</div>">
+  srcdoc="<style> @media (min-aspect-ratio: 8/5) { div { background: #99f; } } @media (max-aspect-ratio: 3/2) { div { background: #9f9; } } @media (aspect-ratio: 1/1) { div { background: #f99; } }</style><div id='inner'> Watch this element as you resize iframe viewport's width and height.</div>">
 </iframe>
 ```
 
