@@ -50,7 +50,7 @@ console.log(baseVal.meetOrSlice); // Output: 1 (SVG_MEETORSLICE_MEET)
 console.log(animVal.meetOrSlice); // Output: 1 (SVG_MEETORSLICE_MEET)
 ```
 
-If we log the values of `animVal.meetOrSlice` again after the animation has finished, we will see the following:
+If we log the values of `animVal.meetOrSlice` and `baseVal.meetOrSlice` again after the animation has finished, we will see the following:
 
 ```js
 console.log(baseVal.meetOrSlice); // Output: 1 (SVG_MEETORSLICE_MEET)
