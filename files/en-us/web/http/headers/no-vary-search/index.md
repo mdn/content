@@ -16,10 +16,10 @@ This allows the browser to reuse existing resources despite mismatching URL para
 
 ## Relationship with the Speculation Rules API
 
-The `No-Vary-Search` was originally created for the [Speculation Rules API](/en-US/docs/Web/API/Speculation_Rules_API). It supports using this header for reusing an existing speculated prefetched or prerendered page for different URL parameters — if they are included in `No-Vary-Search` header.
+The [Speculation Rules API](/en-US/docs/Web/API/Speculation_Rules_API) supports using the `No-Vary-Search` header to reuse an existing prefetched or prerendered page for different URL parameters — if they are included in `No-Vary-Search` header.
 
 > [!WARNING]
-> When using `No-Vary-Search` with prerender the page may be initially prendered with different query parameters. This will then be updated with the final query parameters when the link is clicked. Any JavaScript that depends on search parameters included in `No-Vary-Search` directives should only be executed after the page is activated.
+> Additional care must be take when using prerender with `No-Vary-Search` since the page may initially be prerendered with different URL parameters. `No-Vary-Search` is used for URL parameters that deliver the same resource from the server, but are used by the client for various reasons (client-side rendering, UTM parameters for analytics measurement etc.). As the initial prerender may be for different URL parameters, any code depending on them should only run after prerender activation.
 
 The Speculation Rules API can also include an `expects_no_vary_search` field, which indicates to the browser what the expected `No-Vary-Search` value will be (if any) for documents that it is receiving prefetch/prerender requests for via the speculation rules. The browser can use this to determine ahead of time whether it is more useful to wait for an existing prefetch/prerender to finish, or start a new fetch request when the speculation rule is matched. See the ["expects_no_vary_search" example](/en-US/docs/Web/HTML/Element/script/type/speculationrules#expects_no_vary_search_example) for more explanation of how this can be used.
 
