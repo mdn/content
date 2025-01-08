@@ -1329,9 +1329,9 @@
       "attributes": [
         "coreAttributes",
         "xLinkAttributes",
-        "'externalResourcesRequired'",
         "'type'",
-        "'xlink:href'"
+        "'href'",
+        "'crossorigin'"
       ],
       "interfaces": ["SVGScriptElement"]
     },
