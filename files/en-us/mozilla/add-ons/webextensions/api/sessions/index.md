@@ -7,13 +7,13 @@ browser-compat: webextensions.api.sessions
 
 {{AddonSidebar}}
 
-Use the sessions API to list, and restore, tabs and windows that have been closed while the browser has been running.
+Use the sessions API to list and restore tabs and windows that have been closed while the browser has been running.
 
 The {{WebExtAPIRef("sessions.getRecentlyClosed()")}} function returns an array of {{WebExtAPIRef("tabs.Tab")}} and {{WebExtAPIRef("windows.Window")}} objects, representing tabs and windows that have been closed since the browser was running, up to the maximum defined in {{WebExtAPIRef("sessions.MAX_SESSION_RESULTS")}}.
 
 You can then restore a window or tab using the {{WebExtAPIRef("sessions.restore()")}} function. Restoring doesn't just reopen the tab: it also restores the tab's navigation history so the back/forward buttons will work.
 
-This API also provides a group of functions that enable an extension to store additional state associated with a tab or a window. Then, if the tab or window is closed and subsequently restored, the extension can retrieve the state. For example, a tab grouping extension might use this to remember which group a tab is in, so as to restore it into the right group if the user restores the tab.
+This API also provides a group of functions that enable an extension to store additional state associated with a tab or a window. Then, if the tab or window is closed and subsequently restored, the extension can retrieve the state. For example, a tab grouping extension might use this to remember which group a tab is in so as to restore it into the right group if the user restores the tab.
 
 To use the sessions API you must have the "sessions" [API permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions).
 
