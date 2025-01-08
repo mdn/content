@@ -19,8 +19,13 @@ Following on from the previous article, sometimes making complex UI controls tha
     <tr>
       <th scope="row">Learning outcomes:</th>
       <td>
-        To gain familiarity with WAI-ARIA, and how it can be used to provide
-        useful additional semantics to enhance accessibility where required.
+        <ul>
+          <li>The purpose of WAI-ARIA — to provide semantics to otherwise non-semantic HTML, so that AT users can make sense of the interfaces being presented to them.</li>
+          <li>The basic syntax — roles, properties, and states.</li>
+          <li>Landmarks and signposting.</li>
+          <li>Enhancing keyboard accessibility.</li>
+          <li>Announcing dynamic content updates with live regions.</li>
+        </ul>
       </td>
     </tr>
   </tbody>
