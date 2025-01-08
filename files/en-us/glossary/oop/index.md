@@ -13,5 +13,5 @@ page-type: glossary-definition
 ## See also
 
 - [Object-oriented programming](https://en.wikipedia.org/wiki/Object-oriented_programming) on Wikipedia
-- [Introduction to object-oriented JavaScript](/en-US/docs/Learn/JavaScript/Objects)
+- [Introduction to object-oriented JavaScript](/en-US/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects)
 - [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)

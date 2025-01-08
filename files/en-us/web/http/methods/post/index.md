@@ -12,7 +12,7 @@ The **`POST`** HTTP method sends data to the server. The type of the body of the
 The difference between {{HTTPMethod("PUT")}} and `POST` is that `PUT` is {{Glossary("idempotent")}}: calling it once is no different from calling it several times successively (there are no _side_ effects).
 Successive identical `POST` requests may have additional effects, such as creating the same order several times.
 
-[HTML forms](/en-US/docs/Learn/Forms) typically send data using `POST` and this usually results in a change on the server.
+[HTML forms](/en-US/docs/Learn_web_development/Extensions/Forms) typically send data using `POST` and this usually results in a change on the server.
 For HTML forms the format/encoding of the body content is determined by the [`enctype`](/en-US/docs/Web/HTML/Element/form#enctype) attribute of the {{HTMLElement("form")}} element or the [`formenctype`](/en-US/docs/Web/HTML/Element/input#formenctype) attribute of the {{HTMLElement("input") }} or {{HTMLElement("button")}} elements.
 The encoding may be one of the following:
 
@@ -55,7 +55,7 @@ As described in the HTTP 1.1 specification, `POST` is designed to allow a unifor
     </tr>
     <tr>
       <th scope="row">
-        Allowed in <a href="/en-US/docs/Learn/Forms">HTML forms</a>
+        Allowed in <a href="/en-US/docs/Learn_web_development/Extensions/Forms">HTML forms</a>
       </th>
       <td>Yes</td>
     </tr>

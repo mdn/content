@@ -28,4 +28,4 @@ An {{domxref("HTMLFormElement")}} or `null`.
 - {{domxref("HTMLSelectElement.form")}}
 - {{domxref("HTMLFormElement")}}
 - {{HTMLElement("option")}}
-- [HTML forms guide](/en-US/docs/Learn/Forms)
+- [HTML forms guide](/en-US/docs/Learn_web_development/Extensions/Forms)

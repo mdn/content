@@ -7,7 +7,7 @@ browser-compat: http.headers.Server
 
 {{HTTPSidebar}}
 
-The **`Server`** header describes the software used by the origin server that handled the request and generated a response.
+The HTTP **`Server`** {{Glossary("response header")}} describes the software used by the origin server that handled the request and generated a response.
 
 The benefits of advertising the server type and version via this header are that it helps with analytics and identifying how widespread specific interoperability issues are.
 Historically, clients have used the server version information to avoid known limitations, such as inconsistent support for [range requests](/en-US/docs/Web/HTTP/Range_requests) in specific software versions.
@@ -27,7 +27,7 @@ In general, a more robust approach to server security is to ensure software is r
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>no</td>
+      <td>No</td>
     </tr>
   </tbody>
 </table>

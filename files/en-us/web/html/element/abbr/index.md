@@ -203,4 +203,4 @@ You can use `<abbr>` in tandem with {{HTMLElement("dfn")}} to more formally defi
 
 ## See also
 
-- [Using the `<abbr>` element](/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#abbreviations)
+- [Using the `<abbr>` element](/en-US/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features#abbreviations)
