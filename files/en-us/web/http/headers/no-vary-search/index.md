@@ -116,7 +116,7 @@ No-Vary-Search: params=("id" "order" "lang")
 ```
 
 > [!NOTE]
-> As a Structured Header the
+> As a [structured field](https://www.rfc-editor.org/rfc/rfc8941) the array of parameters should be space separate quoted strings like above, and not comma-seperated as some developers may be more used to.
 
 If you wanted the browser to ignore all of them _and_ any others that might be present when cache matching, you could use the boolean form of `params`:
 
