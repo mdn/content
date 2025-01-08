@@ -5,7 +5,6 @@ page-type: http-header
 status:
   - experimental
 browser-compat: http.headers.No-Vary-Search
-spec-urls: https://wicg.github.io/nav-speculation/no-vary-search.html
 ---
 
 {{HTTPSidebar}}{{SeeCompatTable}}
@@ -13,9 +12,16 @@ spec-urls: https://wicg.github.io/nav-speculation/no-vary-search.html
 The HTTP **`No-Vary-Search`** {{Glossary("response header")}} specifies a set of rules that define how a URL's query parameters will affect cache matching.
 These rules dictate whether the same URL with different URL parameters should be saved as separate browser cache entries.
 
-> [!NOTE]
-> The [Speculation Rules API](/en-US/docs/Web/API/Speculation_Rules_API) can include an `expects_no_vary_search` field, which indicates to the browser what the expected `No-Vary-Search` value will be (if any) for documents that it is receiving prefetch/prerender requests for via the speculation rules.
-> The browser can use this to determine ahead of time whether it is more useful to wait for an existing prefetch/prerender to finish, or start a new fetch request when the speculation rule is matched.
+This allows the browser to reuse existing resources despite mismatching URL parameters to avoid the expense of fetching the resource again, when the same content will be returned.
+
+## Relationship with the Speculation Rules API
+
+The `No-Vary-Search` was originally created for the [Speculation Rules API](/en-US/docs/Web/API/Speculation_Rules_API). It supports using this header for reusing an existing speculated prefetched or prerendered page for different URL parameters — if they are included in `No-Vary-Search` header.
+
+> [!WARNING]
+> When using `No-Vary-Search` with prerender the page may be initially prendered with different query parameters. This will then be updated with the final query parameters when the link is clicked. Any JavaScript that depends on search parameters included in `No-Vary-Search` directives should only be executed after the page is activated.
+
+The Speculation Rules API can also include an `expects_no_vary_search` field, which indicates to the browser what the expected `No-Vary-Search` value will be (if any) for documents that it is receiving prefetch/prerender requests for via the speculation rules. The browser can use this to determine ahead of time whether it is more useful to wait for an existing prefetch/prerender to finish, or start a new fetch request when the speculation rule is matched. See the ["expects_no_vary_search" example](/en-US/docs/Web/HTML/Element/script/type/speculationrules#expects_no_vary_search_example) for more explanation of how this can be used.
 
 <table class="properties">
   <tbody>
@@ -108,6 +114,9 @@ You could get the browser to ignore all of these when considering cache matching
 ```http
 No-Vary-Search: params=("id" "order" "lang")
 ```
+
+> [!NOTE]
+> As a Structured Header the
 
 If you wanted the browser to ignore all of them _and_ any others that might be present when cache matching, you could use the boolean form of `params`:
 
