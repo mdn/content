@@ -36,7 +36,7 @@ get(options)
 
       - : A string indicating whether the user will be required to login for every visit to a client app. The value can be one of the following:
 
-        - `"conditional"`: Discovered credentials are presented to the user in a non-modal dialog box along with an indication of the origin requesting credentials. In practice, this means autofilling available credentials; see [Sign in with a passkey through form autofill](https://web.dev/articles/passkey-form-autofill) for more details of how this is used; {{domxref("PublicKeyCredential.isConditionalMediationAvailable_static", "PublicKeyCredential.isConditionalMediationAvailable()")}} also provides some useful information.
+        - `"conditional"`: Discoverable credentials are presented to the user in a non-modal dialog box along with an indication of the origin requesting credentials. In practice, this means autofilling available credentials; see [Discoverable credentials and conditional mediation](/en-US/docs/Web/API/Web_Authentication_API#discoverable_credentials_and_conditional_mediation) for more details.
 
         - `"optional"`: If credentials can be handed over for a given operation without user mediation, they will be, enabling automatic reauthentication without user mediation. If user mediation is required, then the user agent will ask the user to authenticate. This value is intended for situations where you have reasonable confidence that a user won't be surprised or confused at seeing a login dialog box — for example on a site that doesn't automatically log users in, when a user has just clicked a "Login/Signup" button.
 
@@ -93,6 +93,11 @@ A {{jsxref("Promise")}} that resolves with one of the following subclasses of {{
 - {{domxref("FederatedCredential")}}
 - {{domxref("OTPCredential")}}
 - {{domxref("PublicKeyCredential")}}
+
+If [conditional mediation](#mediation) was specified in the `get()` call, the browser UI dialog is not shown and the promise remains pending until the user picks an account to sign-in with from available autofill suggestions:
+
+- If the user then makes a gesture outside of the browser UI dialog, it closes without resolving or rejecting the promise and without causing a user-visible error condition.
+- If the user selects a credential, the relevant {{domxref("PublicKeyCredential")}} is returned to the caller.
 
 If a single credential cannot be unambiguously obtained, the promise resolves with `null`.
 

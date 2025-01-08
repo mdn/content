@@ -7,7 +7,7 @@ spec-urls: https://w3c.github.io/webauthn/#dictdef-publickeycredentialrequestopt
 
 {{APIRef("Web Authentication API")}}{{securecontext_header}}
 
-The **`PublicKeyCredentialRequestOptions`** dictionary represents the object passed to {{domxref("CredentialsContainer.get()")}} as the value of the `publicKey` option:.
+The **`PublicKeyCredentialRequestOptions`** dictionary represents the object passed to {{domxref("CredentialsContainer.get()")}} as the value of the `publicKey` option.
 
 It is used to request a {{domxref("PublicKeyCredential")}} provided by an {{glossary("authenticator")}} that supports the [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API).
 

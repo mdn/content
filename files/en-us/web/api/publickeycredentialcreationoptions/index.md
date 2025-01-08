@@ -63,7 +63,7 @@ The **`PublicKeyCredentialCreationOptions`** dictionary represents the object pa
 
     - `residentKey` {{optional_inline}}
 
-      - : A string that specifies the extent to which the relying party desires to create a **client-side discoverable credential** (i.e., one that is usable in authentication requests where the relying party does not provide credential IDs — {{domxref("CredentialsContainer.get()", "navigator.credentials.get()")}} is called with an empty `allowCredentials` value). The alternative is a **server-side credential**, where the relying party must provide credential IDs in the `get()` `allowCredentials` value.
+      - : A string that specifies the extent to which the relying party desires to create a client-side [discoverable credential](/en-US/docs/Web/API/Web_Authentication_API#discoverable_credentials_and_conditional_mediation) (that is, one that is usable in authentication requests where the relying party does not provide credential IDs — {{domxref("CredentialsContainer.get()", "navigator.credentials.get()")}} is called with an empty `allowCredentials` value). The alternative is a **server-side credential**, where the relying party must provide credential IDs in the `get()` `allowCredentials` value.
         Possible values are:
 
         - `"discouraged"`
