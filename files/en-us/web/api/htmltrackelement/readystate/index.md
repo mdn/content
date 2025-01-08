@@ -8,7 +8,7 @@ browser-compat: api.HTMLTrackElement.readyState
 
 {{APIRef("HTML DOM")}}
 
-The readonly **`readyState`** property of the {{domxref("HTMLTrackElement")}} interface returns a number representing the {{HTMLElement("track")}} element's text track readiness state:
+The **`readyState`** read-only property of the {{domxref("HTMLTrackElement")}} interface returns a number representing the {{HTMLElement("track")}} element's text track readiness state:
 
 0. NONE: The text track not loaded state.
 1. LOADING: The text track loading state.
