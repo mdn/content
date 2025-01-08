@@ -225,7 +225,7 @@
     "status": "WD"
   },
   "CSS3 Cascade": {
-    "name": "CSS cascading and inheritance Level 3",
+    "name": "CSS Cascading and Inheritance Level 3",
     "url": "https://drafts.csswg.org/css-cascade-3/",
     "status": "REC"
   },
@@ -425,7 +425,7 @@
     "status": "ED"
   },
   "CSS4 Cascade": {
-    "name": "CSS cascading and inheritance Level 4",
+    "name": "CSS Cascading and Inheritance Level 4",
     "url": "https://drafts.csswg.org/css-cascade/",
     "status": "CR"
   },
@@ -500,7 +500,7 @@
     "status": "CR"
   },
   "CSS5 Cascade": {
-    "name": "CSS cascading and inheritance Level 5",
+    "name": "CSS Cascading and Inheritance Level 5",
     "url": "https://drafts.csswg.org/css-cascade-5/",
     "status": "WD"
   },
