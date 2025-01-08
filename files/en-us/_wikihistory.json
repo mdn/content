@@ -102176,7 +102176,7 @@
       "douglasnaphas"
     ]
   },
-  "Web/JavaScript/Guide/Numbers_and_dates": {
+  "Web/JavaScript/Guide/Numbers_and_strings": {
     "modified": "2020-11-14T07:27:01.088Z",
     "contributors": [
       "mfuji09",
@@ -102420,31 +102420,6 @@
       "chrisdavidmills",
       "pkay",
       "jpmedley"
-    ]
-  },
-  "Web/JavaScript/Guide/Text_formatting": {
-    "modified": "2020-05-25T10:48:56.137Z",
-    "contributors": [
-      "fscholz",
-      "wbamberg",
-      "bma",
-      "alattalatta",
-      "vriojtg",
-      "sbfraser01",
-      "chrisdavidmills",
-      "JigneshMistry",
-      "stephaniehobson",
-      "SphinxKnight",
-      "amir77ameri",
-      "ThomasEugeneBishop",
-      "nmve",
-      "kdex",
-      "Jeremie",
-      "danielinux7",
-      "gportioli",
-      "xfq",
-      "mahzaib",
-      "kscarfone"
     ]
   },
   "Web/JavaScript/Guide/Typed_arrays": {
