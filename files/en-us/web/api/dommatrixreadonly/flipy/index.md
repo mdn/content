@@ -48,7 +48,7 @@ flipped.setAttribute("transform", flippedMatrix.toString());
 
 #### Result
 
-{{EmbedLiveSample('Inverting a triangle')}}
+{{EmbedLiveSample('Inverting a triangle', '', '300')}}
 
 ## Specifications
 
