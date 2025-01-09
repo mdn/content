@@ -18,7 +18,7 @@ getStartTime()
 
 ### Parameters
 
-None.
+None ({{jsxref('undefined')}}).
 
 ### Return value
 

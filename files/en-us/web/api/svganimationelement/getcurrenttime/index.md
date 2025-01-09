@@ -18,7 +18,7 @@ getCurrentTime()
 
 ### Parameters
 
-None.
+None ({{jsxref('undefined')}}).
 
 ### Return value
 
