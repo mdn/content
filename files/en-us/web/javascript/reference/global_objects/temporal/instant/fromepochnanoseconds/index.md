@@ -29,7 +29,7 @@ A new `Temporal.Instant` object representing the instant in time specified by `e
 ### Exceptions
 
 - {{jsxref("RangeError")}}
-  - : Thrown if `epochNanoseconds` is outside the range of a representable instant, which is ±10<sup>8</sup> days (±8.64e21 nanoseconds).
+  - : Thrown if `epochNanoseconds` is outside the range of a representable instant, which is ±10<sup>8</sup> days (±8.64e21 nanoseconds, or about ±273,972.6 years).
 
 ## Examples
 

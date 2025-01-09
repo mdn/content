@@ -29,7 +29,7 @@ A new `Temporal.Instant` object representing the instant in time specified by `e
 ### Exceptions
 
 - {{jsxref("RangeError")}}
-  - : Thrown if `epochMilliseconds` is outside the range of a representable instant, which is ±10<sup>8</sup> days (±8.64e15 milliseconds), or if it cannot be converted to a BigInt (e.g., not an integer).
+  - : Thrown if `epochMilliseconds` is outside the range of a representable instant, which is ±10<sup>8</sup> days (±8.64e15 milliseconds, or about ±273,972.6 years), or if it cannot be converted to a BigInt (e.g., not an integer).
 
 ## Examples
 

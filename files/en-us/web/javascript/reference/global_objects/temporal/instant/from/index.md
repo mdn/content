@@ -31,7 +31,7 @@ A new `Temporal.Instant` object representing the instant in time specified by `i
 - {{jsxref("TypeError")}}
   - : Thrown if `info` is not a `Temporal.Instant` instance or a string.
 - {{jsxref("RangeError")}}
-  - : Thrown if the string is not a valid RFC 9557 string, or if the date and time are outside the range of representable instants (±10<sup>8</sup> days).
+  - : Thrown if the string is not a valid RFC 9557 string, or if the date and time are outside the range of representable instants (±10<sup>8</sup> days, or about ±273,972.6 years).
 
 ## Examples
 

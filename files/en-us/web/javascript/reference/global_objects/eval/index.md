@@ -192,7 +192,7 @@ Consider this code:
 function looseJsonParse(obj) {
   return eval(`(${obj})`);
 }
-console.log(looseJsonParse("{ a: 4 - 1, b: function () {}, c: new Date() }"));
+console.log(looseJsonParse("{ a: 4 - 1, b: function () {}, c: new Map() }"));
 ```
 
 Simply using indirect eval and forcing strict mode can make the code much better:
