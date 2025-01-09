@@ -76,6 +76,7 @@ As the CSS box alignment properties are implemented differently depending on the
 ## Related concepts
 
 - {{cssxref("alignment-baseline")}}
+- {{cssxref("dominant-baseline")}}
 - {{cssxref("grid-column-gap")}}
 - {{cssxref("grid-gap")}}
 - {{cssxref("grid-row-gap")}}
