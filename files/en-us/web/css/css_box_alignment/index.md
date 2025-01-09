@@ -35,11 +35,10 @@ The alignment of text and inline-level content is defined in [CSS text module](/
 ### Data types
 
 - {{cssxref("baseline-position")}}
-- {{cssxref("content-distribution")}} - space-between | space-around | space-evenly | stretch
-- {{cssxref("content-position")}} center | start | end | flex-start | flex-end
-- {{cssxref("overflow-position")}} unsafe | safe
-- {{cssxref("self-position")}} center | start | end | self-start | self-end |
-  flex-start | flex-end
+- {{cssxref("content-distribution")}}
+- {{cssxref("content-position")}}
+- {{cssxref("overflow-position")}}
+- {{cssxref("self-position")}}
 
 ### Terms and definitions
 
@@ -76,14 +75,14 @@ As the CSS box alignment properties are implemented differently depending on the
 
 ## Related concepts
 
+- {{cssxref("alignment-baseline")}}
+- {{cssxref("grid-column-gap")}}
+- {{cssxref("grid-gap")}}
+- {{cssxref("grid-row-gap")}}
+- {{cssxref("scroll-snap-align")}}
+- SVG {{SVGAttr("dominant-baseline")}} attribute
 - {{Glossary("Cross axis")}}
 - {{Glossary("Main axis")}}
-
-- [Basic concepts of flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
-
-- [Aligning items in a flex container](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
-
-- [Box alignment in CSS grid layouts](/en-US/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
 
 ## Specifications
 
@@ -91,6 +90,9 @@ As the CSS box alignment properties are implemented differently depending on the
 
 ## See also
 
+- [Basic concepts of flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
+- [Aligning items in a flex container](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
+- [Box alignment in CSS grid layouts](/en-US/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
 - [CSS display](/en-US/docs/Web/CSS/CSS_display) module
 - [CSS flex layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout) module
 - [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) module
