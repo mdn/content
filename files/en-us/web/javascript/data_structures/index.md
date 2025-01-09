@@ -197,7 +197,7 @@ Objects are ad-hoc key-value pairs, so they are often used as maps. However, the
 
 ### Dates
 
-When representing dates, JavaScript provides two sets of APIs: the legacy {{jsxref("Date")}} object and the modern {{jsxref("Temporal")}} object. The former has many undesirable design choices and should be avoided in new code if possible. Read the {{jsxref("Temporal")}} reference page for more information.
+JavaScript provides two sets of APIs for representing dates: the legacy {{jsxref("Date")}} object and the modern {{jsxref("Temporal")}} object. `Date` has many undesirable design choices and should be avoided in new code if possible.
 
 ### Indexed collections: Arrays and typed Arrays
 

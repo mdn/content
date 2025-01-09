@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.Date.toTemporalInstant
 
 The **`toTemporalInstant()`** method of {{jsxref("Date")}} instances returns a new {{jsxref("Temporal.Instant")}} object with the same {{jsxref("Temporal/Instant/epochMilliseconds", "epochMilliseconds")}} value as this date's [timestamp](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date).
 
-Use this method to convert legacy `Date` code to the `Temporal` API, then further convert it to other {{jsxref("Temporal")}} classes as necessary.
+Use this method to convert legacy `Date` values to the `Temporal` API, then further convert it to other {{jsxref("Temporal")}} classes as necessary.
 
 ## Syntax
 
@@ -23,7 +23,7 @@ None.
 
 ### Return value
 
-A new {{jsxref("Temporal.Instant")}} object with the same {{jsxref("Temporal/Instant/epochMilliseconds", "epochMilliseconds")}} value as this date's timestamp. Its {{jsxref("Temporal/Instant/microsecond", "microsecond")}} and {{jsxref("Temporal/Instant/nanosecond", "nanosecond")}} fields are always `0`.
+A new {{jsxref("Temporal.Instant")}} object with the same {{jsxref("Temporal/Instant/epochMilliseconds", "epochMilliseconds")}} value as this date's timestamp. Its microsecond and nanosecond components are always `0`.
 
 ## Examples
 

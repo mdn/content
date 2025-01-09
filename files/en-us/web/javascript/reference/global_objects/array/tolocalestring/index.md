@@ -47,7 +47,7 @@ The `toLocaleString()` method is [generic](/en-US/docs/Web/JavaScript/Reference/
 
 ### Using locales and options
 
-The elements of the array are converted to strings using their `toLocaleString` methods. For example, this example implicitly calls the {{jsxref("Number.prototype.toLocaleString()")}} method to always display the currency for the strings and numbers in the `prices` array:
+The elements of the array are converted to strings using their `toLocaleString` methods. For example, this snippet implicitly calls the {{jsxref("Number.prototype.toLocaleString()")}} method to display the currency for the strings and numbers in the `prices` array:
 
 ```js
 const prices = ["￥7", 500, 8123, 12];
