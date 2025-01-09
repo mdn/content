@@ -9,6 +9,12 @@ browser-compat: javascript.builtins.Array
 
 The **`Array`** object, as with arrays in other programming languages, enables [storing a collection of multiple items under a single variable name](/en-US/docs/Learn_web_development/Core/Scripting/Arrays), and has members for [performing common array operations](#examples).
 
+## Some test for our new ci
+
+- [A redirected link](/en-US/docs/Learn)
+- [An external link](https://mozilla.org)
+- {{cssxref("hidden")}}
+
 ## Description
 
 In JavaScript, arrays aren't [primitives](/en-US/docs/Glossary/Primitive) but are instead `Array` objects with the following core characteristics:
