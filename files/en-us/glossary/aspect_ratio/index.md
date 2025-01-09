@@ -39,10 +39,6 @@ const constraints = {
 myTrack.applyConstraints(constraints);
 ```
 
-## Comparing aspect ratios
-
-To compare two aspect `<ratios>`, divide the first number by the second and then compare the results. For example, 16/16 is less than 16/9 because it resolves to 1 while the second resolves to 1.7. This means a tall screen's aspect ratio is smaller than a wide screen's, and portrait images have smaller aspect ratios than landscape images.
-
 ## See also
 
 - CSS {{cssxref("aspect-ratio")}} property
