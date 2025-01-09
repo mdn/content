@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Temporal.PlainDateTime.toJSON
 
 {{JSRef}}
 
-The **`toJSON()`** method of {{jsxref("Temporal.PlainDateTime")}} instances returns a string representing this date-time in the same [RFC 9557 format](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainDateTime#rfc_9557_format) as calling {{jsxref("Temporal/PlainDateTime/toString", "toString()")}}.
+The **`toJSON()`** method of {{jsxref("Temporal.PlainDateTime")}} instances returns a string representing this date-time in the same [RFC 9557 format](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainDateTime#rfc_9557_format) as calling {{jsxref("Temporal/PlainDateTime/toString", "toString()")}}. It is intended to be implicitly called by {{jsxref("JSON.stringify()")}}.
 
 ## Syntax
 

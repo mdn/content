@@ -332,7 +332,7 @@ This is very similar to the [date time string format](/en-US/docs/Web/JavaScript
 - {{jsxref("Temporal.Now")}}
   - : Provides methods for getting the current time in various formats.
 - {{jsxref("Temporal.PlainDate")}}
-  - : Represents a date without a time or time zone (a calendar date); for example, an event on a calendar which happens during the whole day no matter which time zone it's happening in. It is fundamentally represented as an ISO 8601 calendar date, with year, month, and day fields, and an associated calendar system.
+  - : Represents a calendar date (a date without a time or time zone); for example, an event on a calendar which happens during the whole day no matter which time zone it's happening in. It is fundamentally represented as an ISO 8601 calendar date, with year, month, and day fields, and an associated calendar system.
 - {{jsxref("Temporal.PlainDateTime")}}
   - : Represents a date (calendar date) and time (wall-clock time) without a time zone. It is fundamentally represented as a combination of a [date](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainDate) (with an associated calendar system) and a [time](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainTime).
 - {{jsxref("Temporal.PlainMonthDay")}}

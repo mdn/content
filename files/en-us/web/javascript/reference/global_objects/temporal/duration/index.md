@@ -138,9 +138,9 @@ These properties are defined on `Temporal.Duration.prototype` and shared by all 
 - {{jsxref("Temporal/Duration/subtract", "Temporal.Duration.prototype.subtract()")}}
   - : Returns a new `Temporal.Duration` object with the difference between this duration and a given duration (in a form convertible by {{jsxref("Temporal/Duration/from", "Temporal.Duration.from()")}}). Equivalent to [adding](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Duration/add) the [negated](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Duration/negated) value of the other duration.
 - {{jsxref("Temporal/Duration/toJSON", "Temporal.Duration.prototype.toJSON()")}}
-  - : Returns a string representing this duration in the same [ISO 8601 format](#iso_8601_duration_format) as calling {{jsxref("Temporal/Duration/toString", "toString()")}}.
+  - : Returns a string representing this duration in the same [ISO 8601 format](#iso_8601_duration_format) as calling {{jsxref("Temporal/Duration/toString", "toString()")}}. Intended to be implicitly called by {{jsxref("JSON.stringify()")}}.
 - {{jsxref("Temporal/Duration/toLocaleString", "Temporal.Duration.prototype.toLocaleString()")}}
-  - : Returns a string with a language-sensitive representation of this duration. In implementations with [`Intl.DurationFormat` API](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DurationFormat) support, this method simply calls `Intl.DurationFormat`.
+  - : Returns a string with a language-sensitive representation of this duration. In implementations with [`Intl.DurationFormat` API](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DurationFormat) support, this method delegates to `Intl.DurationFormat`.
 - {{jsxref("Temporal/Duration/toString", "Temporal.Duration.prototype.toString()")}}
   - : Returns a string representing this duration in the [ISO 8601 format](#iso_8601_duration_format).
 - {{jsxref("Temporal/Duration/total", "Temporal.Duration.prototype.total()")}}

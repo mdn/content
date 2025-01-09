@@ -78,7 +78,7 @@ These properties are defined on `Temporal.PlainTime.prototype` and shared by all
 - {{jsxref("Temporal/PlainTime/subtract", "Temporal.PlainTime.prototype.subtract()")}}
   - : Returns a new `Temporal.PlainTime` object representing this time moved backward by a given duration (in a form convertible by {{jsxref("Temporal/Duration/from", "Temporal.Duration.from()")}}), wrapping around the clock if necessary.
 - {{jsxref("Temporal/PlainTime/toJSON", "Temporal.PlainTime.prototype.toJSON()")}}
-  - : Returns a string representing this time in the same [RFC 9557 format](#rfc_9557_format) as calling {{jsxref("Temporal/PlainTime/toString", "toString()")}}.
+  - : Returns a string representing this time in the same [RFC 9557 format](#rfc_9557_format) as calling {{jsxref("Temporal/PlainTime/toString", "toString()")}}. Intended to be implicitly called by {{jsxref("JSON.stringify()")}}.
 - {{jsxref("Temporal/PlainTime/toLocaleString", "Temporal.PlainTime.prototype.toLocaleString()")}}
   - : Returns a string with a language-sensitive representation of this time.
 - {{jsxref("Temporal/PlainTime/toString", "Temporal.PlainTime.prototype.toString()")}}

@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Temporal.PlainYearMonth.inLeapYear
 
 {{JSRef}}
 
-The **`inLeapYear`** accessor property of {{jsxref("Temporal.PlainYearMonth")}} instances returns a boolean indicating whether this year-month is in a leap year. A leap year is a year that has more days (a leap day or leap month) than a common year. It is [calendar](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal#calendars)-dependent.
+The **`inLeapYear`** accessor property of {{jsxref("Temporal.PlainYearMonth")}} instances returns a boolean indicating whether this year-month is in a leap year. A leap year is a year that has more days (due to a leap day or leap month) than a common year. It is [calendar](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal#calendars)-dependent.
 
 The set accessor of `inLeapYear` is `undefined`. You cannot change this property directly.
 

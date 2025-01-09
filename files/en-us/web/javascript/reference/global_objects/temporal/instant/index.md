@@ -86,9 +86,9 @@ These properties are defined on `Temporal.Instant.prototype` and shared by all `
 - {{jsxref("Temporal/Instant/subtract", "Temporal.Instant.prototype.subtract()")}}
   - : Returns a new `Temporal.Instant` object representing this instant moved backward by a given duration (in a form convertible by {{jsxref("Temporal/Duration/from", "Temporal.Duration.from()")}}).
 - {{jsxref("Temporal/Instant/toJSON", "Temporal.Instant.prototype.toJSON()")}}
-  - : Returns a string representing this instant in the same [RFC 9557 format](#rfc_9557_format) as calling {{jsxref("Temporal/Instant/toString", "toString()")}}.
+  - : Returns a string representing this instant in the same [RFC 9557 format](#rfc_9557_format) as calling {{jsxref("Temporal/Instant/toString", "toString()")}}. Intended to be implicitly called by {{jsxref("JSON.stringify()")}}.
 - {{jsxref("Temporal/Instant/toLocaleString", "Temporal.Instant.prototype.toLocaleString()")}}
-  - : Returns a string with a language-sensitive representation of this instant. In implementations with [`Intl.DateTimeFormat` API](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) support, this method simply calls `Intl.DateTimeFormat`.
+  - : Returns a string with a language-sensitive representation of this instant. In implementations with [`Intl.DateTimeFormat` API](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) support, this method delegates to `Intl.DateTimeFormat`.
 - {{jsxref("Temporal/Instant/toString", "Temporal.Instant.prototype.toString()")}}
   - : Returns a string representing this instant in the [RFC 9557 format](#rfc_9557_format) using the specified time zone.
 - {{jsxref("Temporal/Instant/toZonedDateTimeISO", "Temporal.Instant.prototype.toZonedDateTimeISO()")}}

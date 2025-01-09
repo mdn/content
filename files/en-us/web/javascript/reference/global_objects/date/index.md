@@ -275,7 +275,7 @@ These properties are defined on `Date.prototype` and shared by all `Date` instan
 - {{jsxref("Date.prototype.toISOString()")}}
   - : Converts a date to a string following the ISO 8601 Extended Format.
 - {{jsxref("Date.prototype.toJSON()")}}
-  - : Returns a string representing the `Date` using {{jsxref("Date/toISOString", "toISOString()")}}. Intended for use by {{jsxref("JSON.stringify()")}}.
+  - : Returns a string representing the `Date` using {{jsxref("Date/toISOString", "toISOString()")}}. Intended to be implicitly called by {{jsxref("JSON.stringify()")}}.
 - {{jsxref("Date.prototype.toLocaleDateString()")}}
   - : Returns a string with a locality sensitive representation of the date portion of this date based on system settings.
 - {{jsxref("Date.prototype.toLocaleString()")}}
