@@ -22,6 +22,7 @@ These headers may be present in both HTTP request and response messages and incl
 - {{HTTPHeader("Content-Length")}}
 - {{HTTPHeader("Content-Range")}}
 - {{HTTPHeader("Content-Type")}}
+- {{Glossary("Representation header")}}
 - {{HTTPHeader("Trailer")}}
 - {{HTTPHeader("Transfer-Encoding")}}
 

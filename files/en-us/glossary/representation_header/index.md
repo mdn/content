@@ -38,6 +38,7 @@ Representation headers are not mutually exclusive with {{Glossary("Content heade
 
 - Related glossary terms:
   - {{Glossary("Content header")}}
+  - {{Glossary("General header")}}
 - [RFC 9110, section 3.2: Representations](https://httpwg.org/specs/rfc9110.html#representations)
 - [List of all HTTP headers](/en-US/docs/Web/HTTP/Headers)
 - {{HTTPHeader("Repr-Digest")}}, {{HTTPHeader("Want-Repr-Digest")}}

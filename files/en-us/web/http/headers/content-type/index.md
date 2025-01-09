@@ -196,3 +196,4 @@ Content-Type: application/json
 - {{HTTPHeader("Content-Disposition")}}
 - {{HTTPStatus("206", "206 Partial Content")}}
 - {{HTTPHeader("X-Content-Type-Options")}}
+- {{Glossary("General header")}}
