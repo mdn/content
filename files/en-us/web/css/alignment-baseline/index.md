@@ -55,7 +55,7 @@ alignment-baseline: unset;
 
 - `alphabetic`
 
-  - : Used in writing Latin, Cyrillic, Greek, and many other scripts, matches the box's alphabetic baseline to that of its parent, corresponding to the bottom of most, but not all characters.
+  - : Used in writing Latin, Cyrillic, Greek, and many other scripts; matches the box's alphabetic baseline to that of its parent, corresponding to the bottom of most, but not all characters.
 
 - `central`
 
@@ -63,7 +63,7 @@ alignment-baseline: unset;
 
 - `ideographic`
 
-  - : Matches the box's ideographic character face under-side baseline to that of its parent, with the derived baseline-table is constructed using the ideographic baseline-table in the font.
+  - : Matches the box's ideographic character face under-side baseline to that of its parent, with the derived baseline-table constructed using the ideographic baseline-table in the font.
 
 - `mathematical`
 
@@ -71,17 +71,17 @@ alignment-baseline: unset;
 
 - `middle`
 
-  - : Aligns the vertical midpoint of the box with the baseline of the parent box plus half the x-height of the parent. Uses the x-middle baselines; except under [`text-orientation: upright;`](/en-US/docs/Web/CSS/text-orientation) (where the alphabetic and x-height baselines are essentially meaningless) in which case it uses the `central` baseline instead.
+  - : Aligns the vertical midpoint of the box with the baseline of the parent box plus half the x-height of the parent. Uses the x-middle baselines; except under [`text-orientation: upright;`](/en-US/docs/Web/CSS/text-orientation) (where the alphabetic and x-height baselines are essentially meaningless), in which case it uses the `central` baseline instead.
 
 - `text-bottom`
 
-  - : Matches the bottom of the box to the top of the parent's content area; using the line-under edge of an inline's content box.
+  - : Matches the bottom of the box to the top of the parent's content area, using the line-under edge of an inline's content box.
 
 - `text-top`
   - : Matches the top of the box to the top of the parent's content area; the line-over edge of an inline's content box.
 
 > [!NOTE]
-> In SVG2, the `auto`, `before-edge`, and `after-edge` were deprecated and `text-before-edge` is an alias for `text-top` and `text-after-edge` is an alias for `text-bottom`. These keywords should not be used as part of the {{cssxref("vertical-align")}} shorthand property. Browsers support `auto` as a synonym for `baseline` and `hanging`, wherein the alignment-point of the object being aligned is aligned with the "hanging" baseline of the parent text content element, but neither is part of the specification.
+> In SVG2, the `auto`, `before-edge`, and `after-edge` were deprecated and `text-before-edge` is an alias for `text-top`, and `text-after-edge` is an alias for `text-bottom`. These keywords should not be used as part of the {{cssxref("vertical-align")}} shorthand property. Browsers support `auto` as a synonym for `baseline` and `hanging`, wherein the alignment-point of the object being aligned is aligned with the "hanging" baseline of the parent text content element, but neither is part of the specification.
 
 ## Formal definition
 
