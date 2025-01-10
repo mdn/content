@@ -8,9 +8,7 @@ browser-compat: api.HTMLModElement.dateTime
 
 {{ APIRef("HTML DOM") }}
 
-The
-**`dateTime`** property of the {{domxref("HTMLModElement")}} interface is a string containing a machine-readable date with an optional
-time value. It reflects the [`datetime`](/en-US/docs/Web/HTML/Element/time#datetime) HTML attribute of the {{HTMLElement("del")}} and {{HTMLElement("ins")}} elements.
+The **`dateTime`** property of the {{domxref("HTMLModElement")}} interface is a string containing a machine-readable date with an optional time value. It reflects the [`datetime`](/en-US/docs/Web/HTML/Element/time#datetime) HTML attribute of the {{HTMLElement("del")}} and {{HTMLElement("ins")}} elements.
 
 ## Value
 
@@ -24,21 +22,30 @@ Given the following HTML:
 <p>The paragraph <del datetime="2021-11-01">has been</del> changed</p>
 ```
 
-We can get the value of the `dateTime` attribute:
+We can get the value of the `dateTime` attribute of the `<del>` element:
 
 ```js
-const deletion = document.querySelector("del");
-console.log(deletion.dateTime); // "2021-11-01"
+const deletedText = document.querySelector("del");
+console.log(deletedText.dateTime); // "2021-11-01"
 ```
 
-We can also set the `dateTime` property. Here, we create an element, set the `dateTime` to the current date, add content, then insert it after the deleted text:
+We can also set the `dateTime` property. Here, we create an `<ins>` element, then set the `dateTime` property of the `<ins>` element to the current date in `YYYY-MM-DD` format then insert it after the deleted text:
 
 ```js
-const  = document.createElement("ins");
+const insertedText = document.createElement("ins");
 const now = new Date();
-el2.dateTime = `${now.getFullYear()}-${now.getMonth() + 1}-${now.getDate()}`;
-el2.innerHTML = " was"
-el1.insertAdjacentElement("afterend", el2);
+insertedText.dateTime = `${now.getFullYear()}-${now.getMonth() + 1}-${now.getDate()}`;
+insertedText.appendChild(document.createTextNode("was"));
+deletedText.insertAdjacentElement("afterend", insertedText);
+```
+
+If our script ran on January 9, 2025, our HTML would be as follows:
+
+```html
+<p>
+  The paragraph <del datetime="2021-11-01">has been</del
+  ><ins datetime="2025-1-9">was</ins> changed
+</p>
 ```
 
 ## Specifications
