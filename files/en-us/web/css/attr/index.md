@@ -217,7 +217,7 @@ Values that use get marked as _"`attr()`-tained"_. Using an `attr()`-tainted val
 
 ### Backwards compatibility
 
-Generally speaking `attr()` is pretty much backwards compatible because the old way of using it–the one without specifying an `<attr-type>`–behaves the same as before. Having `attr(data-attr)` in your code is the same as writing `attr(data-attr type(<string>))` or the simpler `attr(data-attr string))`.
+Generally speaking, the modern `attr()` syntax is backwards-compatible because the old way of using it — without specifying an `<attr-type>` — behaves the same as before. Having `attr(data-attr)` in your code is the same as writing `attr(data-attr type(<string>))` or the simpler `attr(data-attr string))`.
 
 However, there are two edge cases where the modern `attr()` syntax behaves differently from the old syntax.
 
