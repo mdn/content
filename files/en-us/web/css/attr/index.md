@@ -25,6 +25,7 @@ attr(href);
 attr(id type(<custom-ident>));
 attr(data-count type(<number>));
 attr(data-width px);
+attr(data-size rem);
 attr(data-name string);
 
 /* With fallback */
