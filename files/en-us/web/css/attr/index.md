@@ -153,7 +153,7 @@ p::after {
 
 {{EmbedLiveSample("using_fallback", "100%", 90)}}
 
-### `<custom-ident>`
+### Parsing `attr()` values as `<custom-ident>`s
 
 In this example, the values for the {{cssxref("view-transition-name")}} property are derived from the `id` attribute of the element. The attribute gets parsed into a {{CSSxRef("&lt;custom-ident&gt;")}}, which is what {{cssxref("view-transition-name")}} needs.
 
