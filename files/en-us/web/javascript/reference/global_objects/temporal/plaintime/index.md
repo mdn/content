@@ -15,7 +15,7 @@ A `PlainTime` is essentially the time part of a {{jsxref("Temporal.PlainDateTime
 
 ### RFC 9557 format
 
-`PlainTime` objects can be serialized and parsed using the [RFC 9557](https://datatracker.ietf.org/doc/html/rfc9557) format, an extension to the [ISO 8601 / RFC 3339](https://datatracker.ietf.org/doc/html/rfc3339) format. The string has the following form (spaces are only for readability and should not be present in the actual string):
+`PlainTime` objects can be serialized and parsed using the [RFC 9557](https://datatracker.ietf.org/doc/html/rfc9557) format, an extension to the [ISO 8601 / RFC 3339](https://datatracker.ietf.org/doc/html/rfc3339) format. The string has the following form:
 
 ```plain
 HH:mm:ss.sssssssss
