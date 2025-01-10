@@ -236,7 +236,7 @@ div::before {
 }
 ```
 
-In browsers with advanced `attr()` support the output will be … nothing. Those browsers will successfully parse the second declaration but because it is gibberish content for the `content` property, the declaration becomes ["invalid at computed value time" or IACVT for short](https://brm.us/iacvt).
+In browsers with support for the modern syntax, the output will be … nothing. Those browsers will successfully parse the second declaration but, because it is invalid content for the `content` property, the declaration becomes ["invalid at computed value time" or IACVT for short](https://brm.us/iacvt).
 
 To prevent this sort of situation, we suggest to use [feature detection](#feature_detection).
 
