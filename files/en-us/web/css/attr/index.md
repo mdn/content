@@ -221,7 +221,7 @@ Generally speaking `attr()` is pretty much backwards compatible because the old 
 
 However, there are two edge cases where the modern `attr()` syntax behaves differently from the old syntax.
 
-In the following snippet, browsers with no advanced `attr()` support will discard the second declaration because it cannot parse it. Therefore the result in those browsers is `"Hello World"`.
+In the following snippet, browsers that don't support the modern `attr()` syntax will discard the second declaration because they cannot parse it. The result in those browsers is `"Hello World"`.
 
 ```html
 <div text="Hello"></div>
