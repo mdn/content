@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Temporal.ZonedDateTime.compare
 
 {{JSRef}}
 
-The **`Temporal.ZonedDateTime.compare()`** static method returns a number (-1, 0, 1) indicating whether the first date-time comes before, is the same as, or comes after the second date-time. Equivalent to comparing the {{jsxref("Temporal/ZonedDateTime/epochNanoseconds", "epochNanoseconds")}} of the two datetimes.
+The **`Temporal.ZonedDateTime.compare()`** static method returns a number (-1, 0, or 1) indicating whether the first date-time comes before, is the same as, or comes after the second date-time. It is equivalent to comparing the {{jsxref("Temporal/ZonedDateTime/epochNanoseconds", "epochNanoseconds")}} of the two datetimes.
 
 ## Syntax
 
@@ -20,7 +20,7 @@ Temporal.ZonedDateTime.compare(dateTime1, dateTime2)
 - `dateTime1`
   - : A string, an object, or a {{jsxref("Temporal.ZonedDateTime")}} instance representing the first date-time to compare. It is converted to a `Temporal.ZonedDateTime` object using the same algorithm as {{jsxref("Temporal/ZonedDateTime/from", "Temporal.ZonedDateTime.from()")}}.
 - `dateTime2`
-  - : Same as `dateTime1`.
+  - : The second date-time to compare, converted to a `Temporal.ZonedDateTime` object using the same algorithm as `dateTime1`.
 
 ### Return value
 

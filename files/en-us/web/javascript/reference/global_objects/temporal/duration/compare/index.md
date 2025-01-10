@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Temporal.Duration.compare
 
 {{JSRef}}
 
-The **`Temporal.Duration.compare()`** static method returns a number (-1, 0, 1) indicating whether the first duration is shorter, equal to, or longer than the second duration.
+The **`Temporal.Duration.compare()`** static method returns a number (-1, 0, or 1) indicating whether the first duration is shorter, equal to, or longer than the second duration.
 
 ## Syntax
 
@@ -21,7 +21,7 @@ Temporal.Duration.compare(duration1, duration2, options)
 - `duration1`
   - : A string, an object, or a {{jsxref("Temporal.Duration")}} instance representing the first duration to compare. It is converted to a `Temporal.Duration` object using the same algorithm as {{jsxref("Temporal/Duration/from", "Temporal.Duration.from()")}}.
 - `duration2`
-  - : Same as `duration1`.
+  - : The second duration to compare, converted to a `Temporal.Duration` object using the same algorithm as `duration1`.
 - `options` {{optional_inline}}
   - : An object containing the following property:
     - `relativeTo` {{optional_inline}}

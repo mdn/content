@@ -51,9 +51,9 @@ The {{jsxref("Temporal/PlainDate/from", "Temporal.PlainDate.from()")}}, {{jsxref
 ## Static methods
 
 - {{jsxref("Temporal/PlainDate/compare", "Temporal.PlainDate.compare()")}}
-  - : Returns a number (-1, 0, 1) indicating whether the first date comes before, is the same as, or comes after the second date. Equivalent to comparing the year, month, and day fields of the underlying ISO 8601 dates.
+  - : Returns a number (-1, 0, or 1) indicating whether the first date comes before, is the same as, or comes after the second date. Equivalent to comparing the year, month, and day fields of the underlying ISO 8601 dates.
 - {{jsxref("Temporal/PlainDate/from", "Temporal.PlainDate.from()")}}
-  - : Creates a new `Temporal.PlainDate` object from another `Temporal.PlainDate` object, an object with date properties, or an RFC 9557 string.
+  - : Creates a new `Temporal.PlainDate` object from another `Temporal.PlainDate` object, an object with date properties, or an [RFC 9557](#rfc_9557_format) string.
 
 ## Instance properties
 

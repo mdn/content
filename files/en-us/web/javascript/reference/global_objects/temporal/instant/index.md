@@ -52,9 +52,9 @@ When serializing, you can configure the fractional second digits and offset.
 ## Static methods
 
 - {{jsxref("Temporal/Instant/compare", "Temporal.Instant.compare()")}}
-  - : Returns a number (-1, 0, 1) indicating whether the first instant comes before, is the same as, or comes after the second instant. Equivalent to comparing the {{jsxref("Temporal/Instant/epochNanoseconds", "epochNanoseconds")}} of the two instants.
+  - : Returns a number (-1, 0, or 1) indicating whether the first instant comes before, is the same as, or comes after the second instant. Equivalent to comparing the {{jsxref("Temporal/Instant/epochNanoseconds", "epochNanoseconds")}} of the two instants.
 - {{jsxref("Temporal/Instant/from", "Temporal.Instant.from()")}}
-  - : Creates a new `Temporal.Instant` object from another `Temporal.Instant` object, or an RFC 9557 string.
+  - : Creates a new `Temporal.Instant` object from another `Temporal.Instant` object, or an [RFC 9557](#rfc_9557_format) string.
 - {{jsxref("Temporal/Instant/fromEpochMilliseconds", "Temporal.Instant.fromEpochMilliseconds()")}}
   - : Creates a new `Temporal.Instant` object from the number of milliseconds since the Unix epoch (midnight at the beginning of January 1, 1970, UTC).
 - {{jsxref("Temporal/Instant/fromEpochNanoseconds", "Temporal.Instant.fromEpochNanoseconds()")}}

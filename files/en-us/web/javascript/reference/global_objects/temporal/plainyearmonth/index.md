@@ -42,9 +42,9 @@ When serializing, you can configure whether to display the calendar ID, and whet
 ## Static methods
 
 - {{jsxref("Temporal/PlainYearMonth/compare", "Temporal.PlainYearMonth.compare()")}}
-  - : Returns a number (-1, 0, 1) indicating whether the first year-month comes before, is the same as, or comes after the second year-month. Equivalent to comparing their underlying ISO 8601 dates. Two year-months from different calendars may be considered equal if they start on the same ISO date.
+  - : Returns a number (-1, 0, or 1) indicating whether the first year-month comes before, is the same as, or comes after the second year-month. Equivalent to comparing their underlying ISO 8601 dates. Two year-months from different calendars may be considered equal if they start on the same ISO date.
 - {{jsxref("Temporal/PlainYearMonth/from", "Temporal.PlainYearMonth.from()")}}
-  - : Creates a new `Temporal.PlainYearMonth` object from another `Temporal.PlainYearMonth` object, an object with year and month properties, or an RFC 9557 string.
+  - : Creates a new `Temporal.PlainYearMonth` object from another `Temporal.PlainYearMonth` object, an object with year and month properties, or an [RFC 9557](#rfc_9557_format) string.
 
 ## Instance properties
 

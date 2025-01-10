@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Temporal.Instant.compare
 
 {{JSRef}}
 
-The **`Temporal.Instant.compare()`** static method returns a number (-1, 0, 1) indicating whether the first instant comes before, is the same as, or comes after the second instant. Equivalent to comparing the {{jsxref("Temporal/Instant/epochNanoseconds", "epochNanoseconds")}} of the two instants.
+The **`Temporal.Instant.compare()`** static method returns a number (-1, 0, or 1) indicating whether the first instant comes before, is the same as, or comes after the second instant. It is equivalent to comparing the {{jsxref("Temporal/Instant/epochNanoseconds", "epochNanoseconds")}} of the two instants.
 
 ## Syntax
 
@@ -20,7 +20,7 @@ Temporal.Instant.compare(instant1, instant2)
 - `instant1`
   - : A string or a {{jsxref("Temporal.Instant")}} instance representing the first instant to compare. It is converted to a `Temporal.Instant` object using the same algorithm as {{jsxref("Temporal/Instant/from", "Temporal.Instant.from()")}}.
 - `instant2`
-  - : Same as `instant1`.
+  - : The second instant to compare, converted to a `Temporal.Instant` object using the same algorithm as `instant1`.
 
 ### Return value
 

@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Temporal.PlainTime.compare
 
 {{JSRef}}
 
-The **`Temporal.PlainTime.compare()`** static method returns a number (-1, 0, 1) indicating whether the first time comes before, is the same as, or comes after the second time. Equivalent to comparing the hour, minute, second, millisecond, microsecond, and nanosecond fields one by one.
+The **`Temporal.PlainTime.compare()`** static method returns a number (-1, 0, or 1) indicating whether the first time comes before, is the same as, or comes after the second time. It is equivalent to comparing the hour, minute, second, millisecond, microsecond, and nanosecond fields one by one.
 
 ## Syntax
 
@@ -20,7 +20,7 @@ Temporal.PlainTime.compare(time1, time2)
 - `time1`
   - : A string, an object, or a {{jsxref("Temporal.PlainTime")}} instance representing the first time to compare. It is converted to a `Temporal.PlainTime` object using the same algorithm as {{jsxref("Temporal/PlainTime/from", "Temporal.PlainTime.from()")}}.
 - `time2`
-  - : Same as `time1`.
+  - : The second time to compare, converted to a `Temporal.PlainTime` object using the same algorithm as `time1`.
 
 ### Return value
 

@@ -88,7 +88,7 @@ Because a duration is a difference between two time points, it can be positive, 
 ## Static methods
 
 - {{jsxref("Temporal/Duration/compare", "Temporal.Duration.compare()")}}
-  - : Returns a number (-1, 0, 1) indicating whether the first duration is shorter, equal to, or longer than the second duration.
+  - : Returns a number (-1, 0, or 1) indicating whether the first duration is shorter, equal to, or longer than the second duration.
 - {{jsxref("Temporal/Duration/from", "Temporal.Duration.from()")}}
   - : Creates a new `Temporal.Duration` object from another `Temporal.Duration` object, an object with duration properties, or an ISO 8601 string.
 

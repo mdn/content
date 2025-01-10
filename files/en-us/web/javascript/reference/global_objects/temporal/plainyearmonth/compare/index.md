@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Temporal.PlainYearMonth.compare
 
 {{JSRef}}
 
-The **`Temporal.PlainYearMonth.compare()`** static method returns a number (-1, 0, 1) indicating whether the first year-month comes before, is the same as, or comes after the second year-month. Equivalent to comparing their underlying ISO 8601 dates. Two year-months from different calendars may be considered equal if they start on the same ISO date.
+The **`Temporal.PlainYearMonth.compare()`** static method returns a number (-1, 0, or 1) indicating whether the first year-month comes before, is the same as, or comes after the second year-month. It is equivalent to comparing their underlying ISO 8601 dates. Two year-months from different calendars may be considered equal if they start on the same ISO date.
 
 > **Note:** `PlainYearMonth` objects keep track of a reference ISO day, which is also used in the comparison. This day is automatically set when using the {{jsxref("Temporal/PlainYearMonth/from", "Temporal.PlainYearMonth.from()")}} method, but can be set manually using the {{jsxref("Temporal/PlainYearMonth/PlainYearMonth", "Temporal.PlainYearMonth()")}} constructor, causing two equivalent year-months to be considered different if they have different reference days. For this reason, you should avoid using the constructor directly and prefer the `from()` method.
 
@@ -22,7 +22,7 @@ Temporal.PlainYearMonth.compare(yearMonth1, yearMonth2)
 - `yearMonth1`
   - : A string, an object, or a {{jsxref("Temporal.PlainYearMonth")}} instance representing the first year-month to compare. It is converted to a `Temporal.PlainYearMonth` object using the same algorithm as {{jsxref("Temporal/PlainYearMonth/from", "Temporal.PlainYearMonth.from()")}}.
 - `yearMonth2`
-  - : Same as `yearMonth1`.
+  - : The second year-month to compare, converted to a `Temporal.PlainYearMonth` object using the same algorithm as `yearMonth1`.
 
 ### Return value
 

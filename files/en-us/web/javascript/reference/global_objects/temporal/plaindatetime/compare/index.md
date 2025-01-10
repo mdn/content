@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Temporal.PlainDateTime.compare
 
 {{JSRef}}
 
-The **`Temporal.PlainDateTime.compare()`** static method returns a number (-1, 0, 1) indicating whether the first date-time comes before, is the same as, or comes after the second date-time. Equivalent to first comparing their dates, then their times in case of a tie.
+The **`Temporal.PlainDateTime.compare()`** static method returns a number (-1, 0, or 1) indicating whether the first date-time comes before, is the same as, or comes after the second date-time. Equivalent to first comparing their dates, then comparing their times if the dates are the same.
 
 ## Syntax
 
@@ -20,7 +20,7 @@ Temporal.PlainDateTime.compare(dateTime1, dateTime2)
 - `dateTime1`
   - : A string, an object, or a {{jsxref("Temporal.PlainDateTime")}} instance representing the first date-time to compare. It is converted to a `Temporal.PlainDateTime` object using the same algorithm as {{jsxref("Temporal/PlainDateTime/from", "Temporal.PlainDateTime.from()")}}.
 - `dateTime2`
-  - : Same as `dateTime1`.
+  - : The second date-time to compare, converted to a `Temporal.PlainDateTime` object using the same algorithm as `dateTime1`.
 
 ### Return value
 

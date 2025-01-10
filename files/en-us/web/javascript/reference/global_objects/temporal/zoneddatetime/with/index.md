@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.Temporal.ZonedDateTime.with
 
 The **`with()`** method of {{jsxref("Temporal.ZonedDateTime")}} instances returns a new `Temporal.ZonedDateTime` object representing this date-time with some fields replaced by new values. Because all `Temporal` objects are designed to be immutable, this method essentially functions as the setter for the date-time's fields.
 
-To replace the {{jsxref("Temporal/ZonedDateTime/calendarId", "calendarId")}} property, use the {{jsxref("Temporal/ZonedDateTime/withCalendar", "withCalendar()")}} method. To replace the {{jsxref("Temporal/ZonedDateTime/timeZone", "timeZone")}} property, use the {{jsxref("Temporal/ZonedDateTime/withTimeZone", "withTimeZone()")}} method.
+To replace the {{jsxref("Temporal/ZonedDateTime/calendarId", "calendarId")}} property, use the {{jsxref("Temporal/ZonedDateTime/withCalendar", "withCalendar()")}} method. To replace the {{jsxref("Temporal/ZonedDateTime/timeZoneId", "timeZoneId")}} property, use the {{jsxref("Temporal/ZonedDateTime/withTimeZone", "withTimeZone()")}} method.
 
 ## Syntax
 

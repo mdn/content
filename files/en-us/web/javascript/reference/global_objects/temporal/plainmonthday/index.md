@@ -42,7 +42,7 @@ When serializing, you can configure whether to display the calendar ID, and whet
 ## Static methods
 
 - {{jsxref("Temporal/PlainMonthDay/from", "Temporal.PlainMonthDay.from()")}}
-  - : Creates a new `Temporal.PlainMonthDay` object from another `Temporal.PlainMonthDay` object, an object with month and day properties, or an RFC 9557 string.
+  - : Creates a new `Temporal.PlainMonthDay` object from another `Temporal.PlainMonthDay` object, an object with month and day properties, or an [RFC 9557](#rfc_9557_format) string.
 
 ## Instance properties
 

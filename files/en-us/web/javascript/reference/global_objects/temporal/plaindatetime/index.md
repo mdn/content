@@ -52,9 +52,9 @@ When serializing, you can configure the fractional second digits, whether to dis
 ## Static methods
 
 - {{jsxref("Temporal/PlainDateTime/compare", "Temporal.PlainDateTime.compare()")}}
-  - : Returns a number (-1, 0, 1) indicating whether the first date-time comes before, is the same as, or comes after the second date-time. Equivalent to first comparing their dates, then their times in case of a tie.
+  - : Returns a number (-1, 0, or 1) indicating whether the first date-time comes before, is the same as, or comes after the second date-time. Equivalent to first comparing their dates, then comparing their times if the dates are the same.
 - {{jsxref("Temporal/PlainDateTime/from", "Temporal.PlainDateTime.from()")}}
-  - : Creates a new `Temporal.PlainDateTime` object from another `Temporal.PlainDateTime` object, an object with date and time properties, or an RFC 9557 string.
+  - : Creates a new `Temporal.PlainDateTime` object from another `Temporal.PlainDateTime` object, an object with date and time properties, or an [RFC 9557](#rfc_9557_format) string.
 
 ## Instance properties
 
@@ -142,7 +142,7 @@ These properties are defined on `Temporal.PlainDateTime.prototype` and shared by
 - {{jsxref("Temporal/PlainDateTime/withCalendar", "Temporal.PlainDateTime.prototype.withCalendar()")}}
   - : Returns a new `Temporal.PlainDateTime` object representing this date-time interpreted in the new calendar system.
 - {{jsxref("Temporal/PlainDateTime/withPlainTime", "Temporal.PlainDateTime.prototype.withPlainTime()")}}
-  - : Returns a new `Temporal.PlainDateTime` object representing this date-time with the time part entirely replaced by the new time (in a form convertible by {{jsxref("Temporal/PlainTime/from", "Temporal.PlainTime.from()")}})
+  - : Returns a new `Temporal.PlainDateTime` object representing this date-time with the time part entirely replaced by the new time (in a form convertible by {{jsxref("Temporal/PlainTime/from", "Temporal.PlainTime.from()")}}).
 
 ## Specifications
 

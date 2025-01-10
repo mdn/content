@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Temporal.Duration.blank
 
 {{JSRef}}
 
-The **`blank`** accessor property of {{jsxref("Temporal.Duration")}} instances returns a boolean that is `true` if this duration represents a zero duration, and `false` otherwise. Equivalent to `duration.sign === 0`.
+The **`blank`** accessor property of {{jsxref("Temporal.Duration")}} instances returns a boolean that is `true` if this duration represents a zero duration, and `false` otherwise. It is equivalent to `duration.sign === 0`.
 
 ## Examples
 

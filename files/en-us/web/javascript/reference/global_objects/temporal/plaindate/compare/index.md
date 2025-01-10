@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Temporal.PlainDate.compare
 
 {{JSRef}}
 
-The **`Temporal.PlainDate.compare()`** static method returns a number (-1, 0, 1) indicating whether the first date comes before, is the same as, or comes after the second date. Equivalent to comparing the year, month, and day fields of the underlying ISO 8601 dates.
+The **`Temporal.PlainDate.compare()`** static method returns a number (-1, 0, or 1) indicating whether the first date comes before, is the same as, or comes after the second date. Equivalent to comparing the year, month, and day fields of the underlying ISO 8601 dates.
 
 ## Syntax
 
@@ -20,7 +20,7 @@ Temporal.PlainDate.compare(date1, date2)
 - `date1`
   - : A string, an object, or a {{jsxref("Temporal.PlainDate")}} instance representing the first date to compare. It is converted to a `Temporal.PlainDate` object using the same algorithm as {{jsxref("Temporal/PlainDate/from", "Temporal.PlainDate.from()")}}.
 - `date2`
-  - : Same as `date1`.
+  - : The second date to compare, converted to a `Temporal.PlainDate` object using the same algorithm as `date1`.
 
 ### Return value
 
