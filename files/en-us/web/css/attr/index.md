@@ -55,7 +55,7 @@ The parameters are:
 
 ### Return value
 
-By default attributes will be parsed into a CSS string but you can change that with the optional `<attr-type>`. You can set `<attr-type>` to one of these three:
+By default attributes will be parsed into a CSS string but you can change that with the optional `<attr-type>`. You can set `<attr-type>` to one of the following:
 
 - The `string` keyword which parses the value into a CSS string. This has the same outcome as omitting the `<attr-type>`.
 - The `type()` function which needs a `<syntax>` to know what [data type](/en-US/docs/Web/CSS/CSS_Types) to parse the value into. Possible `<syntax>`es include {{CSSxRef("&lt;angle&gt;")}}, {{CSSxRef("&lt;color&gt;")}}, {{CSSxRef("&lt;custom-ident&gt;")}}, {{CSSxRef("&lt;image&gt;")}}, {{CSSxRef("&lt;integer&gt;")}}, {{CSSxRef("&lt;length&gt;")}}, {{CSSxRef("&lt;length-percentage&gt;")}}, {{CSSxRef("&lt;number&gt;")}}, {{CSSxRef("&lt;percentage&gt;")}}, {{CSSxRef("&lt;resolution&gt;")}}, {{CSSxRef("&lt;string&gt;")}}, {{CSSxRef("&lt;time&gt;")}}, and {{CSSxRef("&lt;transform-function&gt;")}}–or a combination thereof. Excluded from this list is {{CSSxRef("&lt;url&gt;")}} for [security reasons](#limitations_and_security)
