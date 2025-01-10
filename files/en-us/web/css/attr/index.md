@@ -281,7 +281,7 @@ We can perform the same check in JavaScript with [`CSS.supports()`](/en-US/docs/
 
 ```js
 if (CSS.supports("x: attr(x type(*))")) {
-  /* Browser has advanced attr() support */
+  /* Browser has modern attr() support */
 }
 
 if (!CSS.supports("x: attr(x type(*))")) {
