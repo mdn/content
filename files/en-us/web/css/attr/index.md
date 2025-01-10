@@ -255,7 +255,7 @@ A second edge case is the following:
 }
 ```
 
-In browsers with no advanced `attr()` support the text `"foo"` gets displayed. In browsers with `attr()` support there is no output.
+In browsers without support for the modern syntax, the text `"foo"` gets displayed. In browsers with modern `attr()` support there is no output.
 
 That is because `attr()`–similar to custom properties that use the `var()` function–get substituted at [computed value time](https://brm.us/iacvt/#custom-properties). With the new behavior, `--x` first tries to read the `data-attr` attribute from the `#parent` element, which results in an empty string because there is no such attribute on `#parent`. That empty string then gets inherited onto the `#child` element, resulting in a `content: ;` declaration being set.
 
