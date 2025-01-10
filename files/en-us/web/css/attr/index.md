@@ -59,6 +59,98 @@ By default attributes will be parsed into a CSS string but you can change that w
 - The `type()` function, which takes a `<syntax>` as its argument that specifies what [data type](/en-US/docs/Web/CSS/CSS_Types) to parse the value into. The `<syntax>` can be {{CSSxRef("&lt;angle&gt;")}}, {{CSSxRef("&lt;color&gt;")}}, {{CSSxRef("&lt;custom-ident&gt;")}}, {{CSSxRef("&lt;image&gt;")}}, {{CSSxRef("&lt;integer&gt;")}}, {{CSSxRef("&lt;length&gt;")}}, {{CSSxRef("&lt;length-percentage&gt;")}}, {{CSSxRef("&lt;number&gt;")}}, {{CSSxRef("&lt;percentage&gt;")}}, {{CSSxRef("&lt;resolution&gt;")}}, {{CSSxRef("&lt;string&gt;")}}, {{CSSxRef("&lt;time&gt;")}}, and {{CSSxRef("&lt;transform-function&gt;")}}, or a combination thereof. Excluded from this list is {{CSSxRef("&lt;url&gt;")}} for [security reasons](#limitations_and_security)
 - An `<attr-unit>`, which is an identifier that matches a [CSS distance unit](/docs/Web/CSS/CSS_Values_and_Units#distance_units) such as `px` or `rem`, or the `%` character.
 
+## Description
+
+### Limitations and security
+
+The `attr()` function can reference attributes that were never intended by the page author to be used for styling, and might contain sensitive information (for example, a security token used by scripts on the page). In general, this is fine, but it can become a security threat when used in URLs. You therefore can't use `attr()` to dynamically construct URLs.
+
+```html
+<!-- This won't work! -->
+<span data-icon="https://example.org/icons/question-mark.svg">help</span>
+<style>
+  span[data-icon] {
+    background-image: url(attr(data-icon));
+  }
+</style>
+```
+
+Values that use get marked as _"`attr()`-tained"_. Using an `attr()`-tainted value as or in a `<url>` makes a declaration become ["invalid at computed value time" or IACVT for short](https://brm.us/iacvt)
+
+### Backwards compatibility
+
+Generally speaking, the modern `attr()` syntax is backwards-compatible because the old way of using it — without specifying an `<attr-type>` — behaves the same as before. Having `attr(data-attr)` in your code is the same as writing `attr(data-attr type(<string>))` or the simpler `attr(data-attr string))`.
+
+However, there are two edge cases where the modern `attr()` syntax behaves differently from the old syntax.
+
+In the following snippet, browsers that don't support the modern `attr()` syntax will discard the second declaration because they cannot parse it. The result in those browsers is `"Hello World"`.
+
+```html
+<div text="Hello"></div>
+```
+
+```css
+div::before {
+  content: attr(text) " World";
+}
+div::before {
+  content: attr(text) 1px;
+}
+```
+
+In browsers with support for the modern syntax, the output will be … nothing. Those browsers will successfully parse the second declaration but, because it is invalid content for the `content` property, the declaration becomes ["invalid at computed value time" or IACVT for short](https://brm.us/iacvt).
+
+To prevent this sort of situation, we suggest to use [feature detection](#feature_detection).
+
+A second edge case is the following:
+
+```html
+<div id="parent"><div id="child" data-attr="foo"></div></div>
+```
+
+```css
+#parent {
+  --x: attr(data-attr);
+}
+#child::before {
+  content: var(--x);
+}
+```
+
+In browsers without support for the modern syntax, the text `"foo"` gets displayed. In browsers with modern `attr()` support there is no output.
+
+This is because `attr()` — similar to custom properties that use the `var()` function — get substituted at [computed value time](https://brm.us/iacvt/#custom-properties). With the modern behavior, `--x` first tries to read the `data-attr` attribute from the `#parent` element, which results in an empty string because there is no such attribute on `#parent`. That empty string then gets inherited by the `#child` element, resulting in a `content: ;` declaration being set.
+
+To prevent this sort of situation, make sure you don't pass inherited `attr()` values onto children, unless you explicitly want to.
+
+### Feature detection
+
+You can feature detect support for modern `attr()` syntax using the {{CSSxRef("@supports")}} at-rule. In the test, try to assign advanced `attr()` to a (non-custom) CSS property.
+
+For example:
+
+```css
+@supports (x: attr(x type(*))) {
+  /* Browser has modern attr() support */
+}
+
+@supports not (x: attr(x type(*))) {
+  /* Browser does not have modern attr() support */
+}
+```
+
+We can perform the same check in JavaScript with [`CSS.supports()`](/en-US/docs/Web/API/CSS/supports_static):
+
+```js
+if (CSS.supports("x: attr(x type(*))")) {
+  /* Browser has modern attr() support */
+}
+
+if (!CSS.supports("x: attr(x type(*))")) {
+  /* Browser does not have modern attr() support */
+}
+```
+
 ## Formal syntax
 
 {{CSSSyntax}}
@@ -192,98 +284,6 @@ In this example the `data-size` attribute gets parsed into a pixel value.
 ```css
 div {
   font-size: attr(data-size px);
-}
-```
-
-## TODO: Title for this section
-
-### Limitations and security
-
-The `attr()` function can reference attributes that were never intended by the page author to be used for styling, and might contain sensitive information (for example, a security token used by scripts on the page). In general, this is fine, but it can become a security threat when used in URLs. You therefore can't use `attr()` to dynamically construct URLs.
-
-```html
-<!-- This won't work! -->
-<span data-icon="https://example.org/icons/question-mark.svg">help</span>
-<style>
-  span[data-icon] {
-    background-image: url(attr(data-icon));
-  }
-</style>
-```
-
-Values that use get marked as _"`attr()`-tained"_. Using an `attr()`-tainted value as or in a `<url>` makes a declaration become ["invalid at computed value time" or IACVT for short](https://brm.us/iacvt)
-
-### Backwards compatibility
-
-Generally speaking, the modern `attr()` syntax is backwards-compatible because the old way of using it — without specifying an `<attr-type>` — behaves the same as before. Having `attr(data-attr)` in your code is the same as writing `attr(data-attr type(<string>))` or the simpler `attr(data-attr string))`.
-
-However, there are two edge cases where the modern `attr()` syntax behaves differently from the old syntax.
-
-In the following snippet, browsers that don't support the modern `attr()` syntax will discard the second declaration because they cannot parse it. The result in those browsers is `"Hello World"`.
-
-```html
-<div text="Hello"></div>
-```
-
-```css
-div::before {
-  content: attr(text) " World";
-}
-div::before {
-  content: attr(text) 1px;
-}
-```
-
-In browsers with support for the modern syntax, the output will be … nothing. Those browsers will successfully parse the second declaration but, because it is invalid content for the `content` property, the declaration becomes ["invalid at computed value time" or IACVT for short](https://brm.us/iacvt).
-
-To prevent this sort of situation, we suggest to use [feature detection](#feature_detection).
-
-A second edge case is the following:
-
-```html
-<div id="parent"><div id="child" data-attr="foo"></div></div>
-```
-
-```css
-#parent {
-  --x: attr(data-attr);
-}
-#child::before {
-  content: var(--x);
-}
-```
-
-In browsers without support for the modern syntax, the text `"foo"` gets displayed. In browsers with modern `attr()` support there is no output.
-
-This is because `attr()` — similar to custom properties that use the `var()` function — get substituted at [computed value time](https://brm.us/iacvt/#custom-properties). With the modern behavior, `--x` first tries to read the `data-attr` attribute from the `#parent` element, which results in an empty string because there is no such attribute on `#parent`. That empty string then gets inherited by the `#child` element, resulting in a `content: ;` declaration being set.
-
-To prevent this sort of situation, make sure you don't pass inherited `attr()` values onto children, unless you explicitly want to.
-
-### Feature detection
-
-You can feature detect support for modern `attr()` syntax using the {{CSSxRef("@supports")}} at-rule. In the test, try to assign advanced `attr()` to a (non-custom) CSS property.
-
-For example:
-
-```css
-@supports (x: attr(x type(*))) {
-  /* Browser has modern attr() support */
-}
-
-@supports not (x: attr(x type(*))) {
-  /* Browser does not have modern attr() support */
-}
-```
-
-We can perform the same check in JavaScript with [`CSS.supports()`](/en-US/docs/Web/API/CSS/supports_static):
-
-```js
-if (CSS.supports("x: attr(x type(*))")) {
-  /* Browser has modern attr() support */
-}
-
-if (!CSS.supports("x: attr(x type(*))")) {
-  /* Browser does not have modern attr() support */
 }
 ```
 
