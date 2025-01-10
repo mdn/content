@@ -18,20 +18,20 @@ The **`attr()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_F
 
 ```css
 /* Basic usage */
-attr(data-count);
-attr(href);
+attr(data-count)
+attr(href)
 
 /* With type */
-attr(id type(<custom-ident>));
-attr(data-count type(<number>));
-attr(data-width px);
-attr(data-size rem);
-attr(data-name string);
+attr(id type(<custom-ident>))
+attr(data-count type(<number>))
+attr(data-width px)
+attr(data-size rem)
+attr(data-name string)
 
 /* With fallback */
-attr(data-count type(<number>), 0);
-attr(data-width px, inherit);
-attr(data-something, "default");
+attr(data-count type(<number>), 0)
+attr(data-width px, inherit)
+attr(data-something, "default")
 ```
 
 ### Parameters
