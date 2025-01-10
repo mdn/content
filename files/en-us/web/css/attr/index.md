@@ -59,7 +59,7 @@ By default attributes will be parsed into a CSS string but you can change that w
 
 - The `string` keyword which parses the value into a CSS string. This has the same outcome as omitting the `<attr-type>`.
 - The `type()` function, which takes a `<syntax>` as its argument that specifies what [data type](/en-US/docs/Web/CSS/CSS_Types) to parse the value into. The `<syntax>` can be {{CSSxRef("&lt;angle&gt;")}}, {{CSSxRef("&lt;color&gt;")}}, {{CSSxRef("&lt;custom-ident&gt;")}}, {{CSSxRef("&lt;image&gt;")}}, {{CSSxRef("&lt;integer&gt;")}}, {{CSSxRef("&lt;length&gt;")}}, {{CSSxRef("&lt;length-percentage&gt;")}}, {{CSSxRef("&lt;number&gt;")}}, {{CSSxRef("&lt;percentage&gt;")}}, {{CSSxRef("&lt;resolution&gt;")}}, {{CSSxRef("&lt;string&gt;")}}, {{CSSxRef("&lt;time&gt;")}}, and {{CSSxRef("&lt;transform-function&gt;")}}, or a combination thereof. Excluded from this list is {{CSSxRef("&lt;url&gt;")}} for [security reasons](#limitations_and_security)
-- A `<attr-unit>` which is any identifier that matches a [CSS distance unit](/docs/Web/CSS/CSS_Values_and_Units#distance_units), such as `px`, or the `%` character.
+- An `<attr-unit>`, which is an identifier that matches a [CSS distance unit](/docs/Web/CSS/CSS_Values_and_Units#distance_units) such as `px` or `rem`, or the `%` character.
 
 ## Formal syntax
 
