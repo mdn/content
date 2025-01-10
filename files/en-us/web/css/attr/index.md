@@ -47,7 +47,7 @@ The parameters are:
 - `<attr-name>`
   - : The attribute name whose value should be retrieved from the selected HTML element(s).
 - `<attr-type>`
-  - : Specifies how the attribute value is parsed into a CSS value.
+  - : Specifies how the attribute value is parsed into a CSS value. This can be a `type()` function, CSS dimension unit, or the keyword `string`.
 - `<fallback-value>`
   - : The value to be used if the specified attribute is missing or contains an invalid value. If not set, CSS will default to an empty string when no `<attr-type>` is set or the guaranteed-invalid value.
 
