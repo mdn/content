@@ -199,7 +199,7 @@ div {
 
 ## TODO: Title for this section
 
-### Limitations and Security
+### Limitations and security
 
 The `attr()` function can reference attributes that were never intended by the page author to be used for styling, and might contain sensitive information (for example, a security token used by scripts on the page). In general, this is fine, but it can become a security threat when used in URLs. You therefore can't use `attr()` to dynamically construct URLs.
 
