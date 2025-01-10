@@ -155,7 +155,7 @@ p::after {
 
 ### `<custom-ident>`
 
-In this example the values for the {{cssxref("view-transition-name")}} property are dereived from the `id` attribute of the element. The attribute gets parsed into a {{CSSxRef("&lt;custom-ident&gt;")}} which is what {{cssxref("view-transition-name")}} needs.
+In this example, the values for the {{cssxref("view-transition-name")}} property are derived from the `id` attribute of the element. The attribute gets parsed into a {{CSSxRef("&lt;custom-ident&gt;")}}, which is what {{cssxref("view-transition-name")}} needs.
 
 The resulting values for {{cssxref("view-transition-name")}} are `card-1`, `card-2`, `card-3`, etc.
 
