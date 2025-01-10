@@ -261,7 +261,7 @@ This is because `attr()` — similar to custom properties that use the `var()` f
 
 To prevent this sort of situation, make sure you don't pass inherited `attr()` values onto children, unless you explicitly want to.
 
-### Feature Detection
+### Feature detection
 
 You can feature detect support for modern `attr()` syntax using the {{CSSxRef("@supports")}} at-rule. In the test, try to assign advanced `attr()` to a (non-custom) CSS property.
 
