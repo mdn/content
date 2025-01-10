@@ -25,7 +25,7 @@ Temporal.Now.plainTimeISO(timeZone)
 
 ### Return value
 
-The current time in the specified time zone, as a {{jsxref("Temporal.PlainTime")}} object.
+The current time in the specified time zone, as a {{jsxref("Temporal.PlainTime")}} object. Has the same precision as {{jsxref("Temporal/Now/instant", "Temporal.Now.instant()")}}.
 
 ### Exceptions
 
@@ -39,11 +39,11 @@ The current time in the specified time zone, as a {{jsxref("Temporal.PlainTime")
 ```js
 // The current time in the system's time zone
 const time = Temporal.Now.plainTimeISO();
-console.log(time); // e.g.: 06:00:00
+console.log(time); // e.g.: 06:12:34.567890123
 
 // The current time in the "America/New_York" time zone
 const timeInNewYork = Temporal.Now.plainTimeISO("America/New_York");
-console.log(timeInNewYork); // e.g.: 23:00:00
+console.log(timeInNewYork); // e.g.: 23:12:34.567890123
 ```
 
 ## Specifications

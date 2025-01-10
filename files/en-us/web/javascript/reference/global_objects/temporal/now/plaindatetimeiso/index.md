@@ -23,7 +23,7 @@ Temporal.Now.plainDateTimeISO(timeZone)
 
 ### Return value
 
-The current date and time in the specified time zone, as a {{jsxref("Temporal.PlainDateTime")}} object using the ISO 8601 calendar.
+The current date and time in the specified time zone, as a {{jsxref("Temporal.PlainDateTime")}} object using the ISO 8601 calendar. Has the same precision as {{jsxref("Temporal/Now/instant", "Temporal.Now.instant()")}}.
 
 ### Exceptions
 
@@ -37,11 +37,11 @@ The current date and time in the specified time zone, as a {{jsxref("Temporal.Pl
 ```js
 // The current date and time in the system's time zone
 const dateTime = Temporal.Now.plainDateTimeISO();
-console.log(dateTime); // e.g.: 2021-10-01T6:00:00
+console.log(dateTime); // e.g.: 2021-10-01T06:12:34.567890123
 
 // The current date and time in the "America/New_York" time zone
 const dateTimeInNewYork = Temporal.Now.plainDateTimeISO("America/New_York");
-console.log(dateTimeInNewYork); // e.g.: 2021-09-30T23:00:00
+console.log(dateTimeInNewYork); // e.g.: 2021-09-30T23:12:34.567890123
 ```
 
 ## Specifications
