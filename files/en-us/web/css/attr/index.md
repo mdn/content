@@ -53,7 +53,7 @@ The parameters are:
 - `<declaration-value>`
   - : The value to be used if the associated attribute is missing or contains an invalid value. If not set, CSS will default to an empty string when no `<attr-type>` is set or the guaranteed-invalid value.
 
-### Return Value
+### Return value
 
 By default attributes will be parsed into a CSS string but you can change that with the optional `<attr-type>`. You can set `<attr-type>` to one of these three:
 
