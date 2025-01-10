@@ -37,6 +37,7 @@ When designing reusable HTML components, you may also use [container queries](/e
 - {{cssxref("@media/color-index", "color-index")}}
 - {{cssxref("@media/device-aspect-ratio", "device-aspect-ratio")}}
 - {{cssxref("@media/device-height", "device-height")}}
+- {{cssxref("@media/device-posture", "device-posture")}}
 - {{cssxref("@media/device-width", "device-width")}}
 - {{cssxref("@media/display-mode", "display-mode")}}
 - {{cssxref("@media/dynamic-range", "dynamic-range")}}
