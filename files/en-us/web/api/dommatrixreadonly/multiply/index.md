@@ -8,9 +8,9 @@ browser-compat: api.DOMMatrixReadOnly.multiply
 
 {{APIRef("Geometry Interfaces")}}{{AvailableInWorkers}}
 
-The **`multiply()`** method of the {{domxref("DOMMatrixReadOnly")}} interface creates a new matrix being the result of the multiplication of the original matrix. The method returns a new {{domxref("DOMMatrix")}} created by computing the dot product of the source matrix and the specified matrix: `A⋅B`. If no matrix is specified as the multiplier, the matrix is multiplied by a matrix in which every element is `0` _except_ the bottom-right corner and the element immediately above and to its left: `m33` and `m34`. These have the default value of `1`. The original matrix is not modified.
+The **`multiply()`** method of the {{domxref("DOMMatrixReadOnly")}} interface creates and returns a new matrix which is the dot product of the matrix and the `otherMatrix` parameter. If `otherMatrix` is omitted, the matrix is multiplied by a matrix in which every element is `0` _except_ the bottom-right corner and the element immediately above and to its left: `m33` and `m34`. These have the default value of `1`. The original matrix is not modified.
 
-To mutate the matrix as you multiply it, see {{domxref("DOMMatrix.multiplySelf()")}}
+To mutate the matrix as you multiply it, see {{domxref("DOMMatrix.multiplySelf()")}}.
 
 ## Syntax
 
