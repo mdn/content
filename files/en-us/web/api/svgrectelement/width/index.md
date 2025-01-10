@@ -21,7 +21,7 @@ An {{domxref("SVGAnimatedLength")}}.
 ```js
 const rectangle = document.querySelector("rect");
 const rectWidth = rectangle.width;
-console.dir(rectWidth.baseVal.value); // the `width` value
+console.log(rectWidth.baseVal.value); // the `width` value
 ```
 
 ## Specifications

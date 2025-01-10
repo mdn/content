@@ -21,7 +21,7 @@ An {{domxref("SVGAnimatedLength")}}.
 ```js
 const rectangle = document.querySelector("rect");
 const topPosition = rectangle.y;
-console.dir(topPosition.baseVal.value); // the `y` value
+console.log(topPosition.baseVal.value); // the `y` value
 ```
 
 ## Specifications

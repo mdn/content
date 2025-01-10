@@ -33,8 +33,8 @@ We can access the computed values of the `ry` attributes:
 const rectangles = document.querySelectorAll("rect");
 const rySize0 = rectangle[0].ry;
 const rySize1 = rectangle[1].ry;
-console.dir(rySize0.baseVal.value); // output: 15 (the value of `ry`)
-console.dir(rySize1.baseVal.value); // output: 30 (15% of 200)
+console.log(rySize0.baseVal.value); // output: 15 (the value of `ry`)
+console.log(rySize1.baseVal.value); // output: 30 (15% of 200)
 ```
 
 ## Specifications

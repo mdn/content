@@ -33,8 +33,8 @@ We can access the computed values of the `rx` attributes:
 const rectangles = document.querySelectorAll("rect");
 const rxSize0 = rectangle[0].rx;
 const rxSize1 = rectangle[1].rx;
-console.dir(rxSize0.baseVal.value); // output: 15 (the value of `rx`)
-console.dir(rxSize1.baseVal.value); // output: 45 (15% of 300)
+console.log(rxSize0.baseVal.value); // output: 15 (the value of `rx`)
+console.log(rxSize1.baseVal.value); // output: 45 (15% of 300)
 ```
 
 ## Specifications
