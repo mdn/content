@@ -8,7 +8,7 @@ browser-compat: api.DOMMatrix.multiplySelf
 
 {{APIRef("Geometry Interfaces")}}{{AvailableInWorkers}}
 
-The **`multiplySelf()`** method of the {{domxref("DOMMatrix")}} interface multiplies a matrix by the`otherMatrix` parameter, computing the dot product of the original matrix and the specified matrix: `A⋅B`. If no matrix is specified as the multiplier, the matrix is multiplied by a matrix in which every element is `0` _except_ the bottom-right corner and the element immediately above and to its left: `m33` and `m34`. These have the default value of `1`.
+The **`multiplySelf()`** method of the {{domxref("DOMMatrix")}} interface multiplies a matrix by the `otherMatrix` parameter, computing the dot product of the original matrix and the specified matrix: `A⋅B`. If no matrix is specified as the multiplier, the matrix is multiplied by a matrix in which every element is `0` _except_ the bottom-right corner and the element immediately above and to its left: `m33` and `m34`. These have the default value of `1`.
 
 To multiply a matrix without mutating it, see {{domxref("DOMMatrixReadOnly.multiply()")}}.
 
