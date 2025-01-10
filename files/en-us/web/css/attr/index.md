@@ -22,11 +22,12 @@ attr(data-count)
 attr(href)
 
 /* With type */
-attr(id type(<custom-ident>))
-attr(data-count type(<number>))
 attr(data-width px)
 attr(data-size rem)
 attr(data-name string)
+attr(id type(<custom-ident>))
+attr(data-count type(<number>))
+attr(data-size type(<length> | <percentage>))
 
 /* With fallback */
 attr(data-count type(<number>), 0)
@@ -47,19 +48,40 @@ The parameters are:
 - `<attr-name>`
   - : The attribute name whose value should be retrieved from the selected HTML element(s).
 - `<attr-type>`
-  - : Specifies how the attribute value is parsed into a CSS value. This can be a `type()` function, CSS dimension unit, or the keyword `string`.
+
+  - : Specifies how the attribute value is parsed into a CSS value. This can be the `string` keyword, a `type()` function, a CSS dimension unit. When omitted, it defaults to `string`.
+
+    - The `string` keyword, which parses the value into a CSS string.
+
+      ```css
+      attr(data-name string, "stranger")
+      ```
+
+    - The `type()` function, which takes a `<syntax>` as its argument that specifies what [data type](/en-US/docs/Web/CSS/CSS_Types) to parse the value into. The `<syntax>` can be {{CSSxRef("&lt;angle&gt;")}}, {{CSSxRef("&lt;color&gt;")}}, {{CSSxRef("&lt;custom-ident&gt;")}}, {{CSSxRef("&lt;image&gt;")}}, {{CSSxRef("&lt;integer&gt;")}}, {{CSSxRef("&lt;length&gt;")}}, {{CSSxRef("&lt;length-percentage&gt;")}}, {{CSSxRef("&lt;number&gt;")}}, {{CSSxRef("&lt;percentage&gt;")}}, {{CSSxRef("&lt;resolution&gt;")}}, {{CSSxRef("&lt;string&gt;")}}, {{CSSxRef("&lt;time&gt;")}}, and {{CSSxRef("&lt;transform-function&gt;")}}, or a combination thereof.
+
+      ```css
+      attr(id type(<custom-ident>), none)
+      attr(data-count type(<number>), 0)
+      attr(data-size type(<length> | <percentage>), 0px)
+      ```
+
+      Excluded from this list is {{CSSxRef("&lt;url&gt;")}} for [security reasons](#limitations_and_security).
+
+    - An `<attr-unit>`, which is an identifier that matches a [CSS distance unit](/docs/Web/CSS/CSS_Values_and_Units#distance_units) such as `px` or `rem`, or the `%` character.
+
+      ```css
+      attr(data-size rem)
+      attr(data-width px, inherit)
+      ```
+
 - `<fallback-value>`
   - : The value to be used if the specified attribute is missing or contains an invalid value.
 
 ### Return value
 
-By default attributes will be parsed into a CSS string but you can change that with the optional `<attr-type>`. You can set `<attr-type>` to one of the following:
+When an `<attr-type>` is set, `attr()` will try to parse the attribute into that specified `<attr-type>` and return it. If the attribute cannot be parsed into the given `<attr-type>`, the `<fallback-value>` will be returned instead. When no `<attr-type>` is set, the attribute will be parsed into a CSS string.
 
-- The `string` keyword, which parses the value into a CSS string. This has the same outcome as omitting the `<attr-type>`.
-- The `type()` function, which takes a `<syntax>` as its argument that specifies what [data type](/en-US/docs/Web/CSS/CSS_Types) to parse the value into. The `<syntax>` can be {{CSSxRef("&lt;angle&gt;")}}, {{CSSxRef("&lt;color&gt;")}}, {{CSSxRef("&lt;custom-ident&gt;")}}, {{CSSxRef("&lt;image&gt;")}}, {{CSSxRef("&lt;integer&gt;")}}, {{CSSxRef("&lt;length&gt;")}}, {{CSSxRef("&lt;length-percentage&gt;")}}, {{CSSxRef("&lt;number&gt;")}}, {{CSSxRef("&lt;percentage&gt;")}}, {{CSSxRef("&lt;resolution&gt;")}}, {{CSSxRef("&lt;string&gt;")}}, {{CSSxRef("&lt;time&gt;")}}, and {{CSSxRef("&lt;transform-function&gt;")}}, or a combination thereof. Excluded from this list is {{CSSxRef("&lt;url&gt;")}} for [security reasons](#limitations_and_security).
-- An `<attr-unit>`, which is an identifier that matches a [CSS distance unit](/docs/Web/CSS/CSS_Values_and_Units#distance_units) such as `px` or `rem`, or the `%` character.
-
-If the attribute cannot be parsed into the given `<attr-type>`, the `<fallback-value>` will be used. If no `<fallback-value>` is set, CSS will default to an empty string when no `<attr-type>` is set or the [guaranteed-invalid value](/en-US/docs/Glossary/guaranteed_invalid_value) when an `<attr-type>` is set.
+If no `<fallback-value>` is set, CSS will default to an empty string when no `<attr-type>` is set or the [guaranteed-invalid value](/en-US/docs/Glossary/guaranteed_invalid_value) when an `<attr-type>` is set.
 
 ## Description
 
