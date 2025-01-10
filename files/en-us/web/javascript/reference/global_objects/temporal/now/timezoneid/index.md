@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Temporal.Now.timeZoneId
 
 {{JSRef}}
 
-The **`Temporal.Now.timeZoneId()`** static method returns a [time zone identifier](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#time_zones_and_offsets) representing the system's current time zone. Most systems will return a primary time zone identifier such as `"America/New_York"`, though offset time zone identifier such as `"-04:00"` is possible too. This is the default time zone used by the other `Temporal.Now` methods.
+The **`Temporal.Now.timeZoneId()`** static method returns a [time zone identifier](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#time_zones_and_offsets) representing the system's current time zone. Most systems will return a primary time zone identifier such as `"America/New_York"`, though offset time zone identifier such as `"-04:00"` is possible too. The time zone identifier returned is the default time zone used by the other `Temporal.Now` methods.
 
 ## Syntax
 
