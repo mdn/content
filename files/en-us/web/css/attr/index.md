@@ -67,11 +67,12 @@ The parameters are:
 
       Excluded from this list is {{CSSxRef("&lt;url&gt;")}} for [security reasons](#limitations_and_security).
 
-    - An `<attr-unit>`, which is an identifier that matches a [CSS distance unit](/docs/Web/CSS/CSS_Values_and_Units#distance_units) such as `px` or `rem`, or the `%` character.
+    - An `<attr-unit>`, which is an identifier that matches the `%` character or a [CSS distance unit](/docs/Web/CSS/CSS_Values_and_Units#distance_units) such as `px`, `rem`, `deg`, `s`, …
 
       ```css
       attr(data-size rem)
       attr(data-width px, inherit)
+      attr(data-rotation deg)
       ```
 
 - `<fallback-value>`
