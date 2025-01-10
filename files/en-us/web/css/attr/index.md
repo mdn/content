@@ -47,7 +47,7 @@ attr(<attr-name> <attr-type>? , <declaration-value>?)
 The parameters are:
 
 - `<attr-name>`
-  - : The name of an attribute on the HTML element referenced in the CSS.
+  - : The attribute name whose value should be retrieved from the selected HTML element(s).
 - `<attr-type>`
   - : Specifies how the attribute value is parsed into a CSS value.
 - `<declaration-value>`
