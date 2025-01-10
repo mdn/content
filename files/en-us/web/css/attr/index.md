@@ -39,10 +39,7 @@ attr(data-something, "default");
 The `attr()` function's syntax is as follows:
 
 ```plain
-attr(<attr-name> <attr-type>? , <declaration-value>?)
-
-<attr-name> = [ <ident-token>? '|' ]? <ident-token>
-<attr-type> = type( <syntax> ) | string | <attr-unit>
+attr(<attr-name> <attr-type>? , <fallback-value>?)
 ```
 
 The parameters are:
@@ -51,7 +48,7 @@ The parameters are:
   - : The attribute name whose value should be retrieved from the selected HTML element(s).
 - `<attr-type>`
   - : Specifies how the attribute value is parsed into a CSS value.
-- `<declaration-value>`
+- `<fallback-value>`
   - : The value to be used if the specified attribute is missing or contains an invalid value. If not set, CSS will default to an empty string when no `<attr-type>` is set or the guaranteed-invalid value.
 
 ### Return value
