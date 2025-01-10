@@ -49,15 +49,17 @@ The parameters are:
 - `<attr-type>`
   - : Specifies how the attribute value is parsed into a CSS value. This can be a `type()` function, CSS dimension unit, or the keyword `string`.
 - `<fallback-value>`
-  - : The value to be used if the specified attribute is missing or contains an invalid value. If not set, CSS will default to an empty string when no `<attr-type>` is set or the guaranteed-invalid value.
+  - : The value to be used if the specified attribute is missing or contains an invalid value.
 
 ### Return value
 
 By default attributes will be parsed into a CSS string but you can change that with the optional `<attr-type>`. You can set `<attr-type>` to one of the following:
 
 - The `string` keyword, which parses the value into a CSS string. This has the same outcome as omitting the `<attr-type>`.
-- The `type()` function, which takes a `<syntax>` as its argument that specifies what [data type](/en-US/docs/Web/CSS/CSS_Types) to parse the value into. The `<syntax>` can be {{CSSxRef("&lt;angle&gt;")}}, {{CSSxRef("&lt;color&gt;")}}, {{CSSxRef("&lt;custom-ident&gt;")}}, {{CSSxRef("&lt;image&gt;")}}, {{CSSxRef("&lt;integer&gt;")}}, {{CSSxRef("&lt;length&gt;")}}, {{CSSxRef("&lt;length-percentage&gt;")}}, {{CSSxRef("&lt;number&gt;")}}, {{CSSxRef("&lt;percentage&gt;")}}, {{CSSxRef("&lt;resolution&gt;")}}, {{CSSxRef("&lt;string&gt;")}}, {{CSSxRef("&lt;time&gt;")}}, and {{CSSxRef("&lt;transform-function&gt;")}}, or a combination thereof. Excluded from this list is {{CSSxRef("&lt;url&gt;")}} for [security reasons](#limitations_and_security)
+- The `type()` function, which takes a `<syntax>` as its argument that specifies what [data type](/en-US/docs/Web/CSS/CSS_Types) to parse the value into. The `<syntax>` can be {{CSSxRef("&lt;angle&gt;")}}, {{CSSxRef("&lt;color&gt;")}}, {{CSSxRef("&lt;custom-ident&gt;")}}, {{CSSxRef("&lt;image&gt;")}}, {{CSSxRef("&lt;integer&gt;")}}, {{CSSxRef("&lt;length&gt;")}}, {{CSSxRef("&lt;length-percentage&gt;")}}, {{CSSxRef("&lt;number&gt;")}}, {{CSSxRef("&lt;percentage&gt;")}}, {{CSSxRef("&lt;resolution&gt;")}}, {{CSSxRef("&lt;string&gt;")}}, {{CSSxRef("&lt;time&gt;")}}, and {{CSSxRef("&lt;transform-function&gt;")}}, or a combination thereof. Excluded from this list is {{CSSxRef("&lt;url&gt;")}} for [security reasons](#limitations_and_security).
 - An `<attr-unit>`, which is an identifier that matches a [CSS distance unit](/docs/Web/CSS/CSS_Values_and_Units#distance_units) such as `px` or `rem`, or the `%` character.
+
+If the attribute cannot be parsed into the given `<attr-type>`, the `<fallback-value>` will be used. If no `<fallback-value>` is set, CSS will default to an empty string when no `<attr-type>` is set or the guaranteed-invalid value when an `<attr-type>` is set.
 
 ## Description
 
