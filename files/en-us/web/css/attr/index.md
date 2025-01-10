@@ -19,7 +19,7 @@ The **`attr()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_F
 ```css
 /* Basic usage */
 attr(data-count);
-attr(title);
+attr(href);
 
 /* With type */
 attr(id type(<custom-ident>));
