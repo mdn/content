@@ -11,6 +11,10 @@ The **`<progress>`** [HTML](/en-US/docs/Web/HTML) element displays an indicator 
 
 {{EmbedInteractiveExample("pages/tabbed/progress.html", "tabbed-standard")}}
 
+## No real change
+
+Nothing to see here.
+
 ## Attributes
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
