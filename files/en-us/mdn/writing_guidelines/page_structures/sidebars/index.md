@@ -95,7 +95,7 @@ If you want to use custom link text, you need to include two keys inside the lis
 
 ```yaml
 sidebar:
-  - title: Our changlog
+  - title: Our changelog
     link: /MDN/Changelog
 ```
 
@@ -177,7 +177,7 @@ sidebar:
 
 This renders a sidebar with a section title that links back to the Glossary landing page, and a top-level list of links to all the glossary child pages.
 
-If you wanted to render this as a parent list item with the subpages appearing as an expanding/collapsing child list, you would need to additionally include a `title` key specifying the text to display for the parent item litem, and a `details` key specifying the open/close behavior of the `<details>`/`<summary>` structure.
+If you wanted to render this as a parent list item with the subpages appearing as an expanding/collapsing child list, you would need to additionally include a `title` key specifying the text to display for the parent item, and a `details` key specifying the open/close behavior of the `<details>`/`<summary>` structure.
 
 ```yaml
 sidebar:
@@ -326,7 +326,7 @@ When the sidebar is rendered, the system replaces the `Input_types` text with it
 - https://developer.mozilla.org/fr/docs/Web/HTML
 - https://developer.mozilla.org/ja/docs/Web/HTML
 
-If an MDN locale is accessed that does not have a value defined for a particular placeholder, it defaults to the `en-US` version. If an `en-US` version is not defined, the literal placegolder text is displayed (which would be `Input_types`, in the above case).
+If an MDN locale is accessed that does not have a value defined for a particular placeholder, it defaults to the `en-US` version. If an `en-US` version is not defined, the literal placeholder text is displayed (which would be `Input_types`, in the above case).
 
 ## Non-standard sidebars
 

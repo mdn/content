@@ -3597,6 +3597,7 @@
 /en-US/docs/Glossary/SSL_Glossary	/en-US/docs/Glossary/SSL
 /en-US/docs/Glossary/Scrollport	/en-US/docs/Glossary/Scroll_container
 /en-US/docs/Glossary/Second-level_Domain	/en-US/docs/Glossary/SLD
+/en-US/docs/Glossary/Self-Executing_Anonymous_Function	/en-US/docs/Glossary/IIFE
 /en-US/docs/Glossary/Serialize	/en-US/docs/Glossary/Serialization
 /en-US/docs/Glossary/Simple_header	/en-US/docs/Glossary/CORS-safelisted_request_header
 /en-US/docs/Glossary/Simple_response_header	/en-US/docs/Glossary/CORS-safelisted_response_header
@@ -11765,7 +11766,6 @@
 /en-US/docs/Web/CSS/::cue-region	/en-US/docs/Web/API/WebVTT_API
 /en-US/docs/Web/CSS/:@-moz-document	/en-US/docs/Web/CSS/@document
 /en-US/docs/Web/CSS/:any	/en-US/docs/Web/CSS/:is
-/en-US/docs/Web/CSS/:closed	/en-US/docs/Web/CSS/:popover-open
 /en-US/docs/Web/CSS/:dir()	/en-US/docs/Web/CSS/:dir
 /en-US/docs/Web/CSS/:host()	/en-US/docs/Web/CSS/:host_function
 /en-US/docs/Web/CSS/:lang()	/en-US/docs/Web/CSS/:lang
@@ -11778,7 +11778,6 @@
 /en-US/docs/Web/CSS/:nth-last-col	/en-US/docs/Web/CSS/:nth-last-of-type
 /en-US/docs/Web/CSS/:nth-last-of-type()	/en-US/docs/Web/CSS/:nth-last-of-type
 /en-US/docs/Web/CSS/:nth-of-type()	/en-US/docs/Web/CSS/:nth-of-type
-/en-US/docs/Web/CSS/:open	/en-US/docs/Web/CSS/:popover-open
 /en-US/docs/Web/CSS/@-moz-document	/en-US/docs/Web/CSS/@document
 /en-US/docs/Web/CSS/@font-face/font-variant	/en-US/docs/Web/CSS/@font-face
 /en-US/docs/Web/CSS/@media/update-frequency	/en-US/docs/Web/CSS/@media/update

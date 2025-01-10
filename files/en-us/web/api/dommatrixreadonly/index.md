@@ -68,9 +68,9 @@ _This interface doesn't inherit any methods. None of the following methods alter
 - {{domxref("DOMMatrixReadOnly.skewY()")}}
   - : Returns a new {{domxref("DOMMatrix")}} created by applying the specified skew transformation to the source matrix along its Y-axis. The original matrix is not modified.
 - {{domxref("DOMMatrixReadOnly.toFloat32Array()")}}
-  - : Returns a new {{jsxref("Float32Array")}} containing all 16 elements (`m11`, `m12`, `m13`, `m14`, `m21`, `m22`, `m23`, `m24`, `m31`, `m32`, `m33`, `m34`, `m41`, `m42`, `m43`, `m44`) which comprise the matrix. The elements are stored into the array as single-precision floating-point numbers in column-major (colexographical access, or "colex") order. (In other words, down the first column from top to bottom, then the second column, and so forth.)
+  - : Returns a new {{jsxref("Float32Array")}} of single-precision floating-point numbers, containing all 16 elements which comprise the matrix.
 - {{domxref("DOMMatrixReadOnly.toFloat64Array()")}}
-  - : Returns a new {{jsxref("Float64Array")}} containing all 16 elements (`m11`, `m12`, `m13`, `m14`, `m21`, `m22`, `m23`, `m24`, `m31`, `m32`, `m33`, `m34`, `m41`, `m42`, `m43`, `m44`) which comprise the matrix. The elements are stored into the array as double-precision floating-point numbers in column-major (colexographical access, or "colex") order. (In other words, down the first column from top to bottom, then the second column, and so forth.)
+  - : Returns a new {{jsxref("Float64Array")}} of double-precision floating-point numbers, containing all 16 elements which comprise the matrix.
 - {{domxref("DOMMatrixReadOnly.toJSON()")}}
   - : Returns a JSON representation of the `DOMMatrixReadOnly` object.
 - {{domxref("DOMMatrixReadOnly.toString()")}}
