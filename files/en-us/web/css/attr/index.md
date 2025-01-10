@@ -179,7 +179,7 @@ The resulting values for {{cssxref("view-transition-name")}} are `card-1`, `card
 }
 ```
 
-### dimension unit
+### Using dimension units
 
 In this example the `data-size` attribute gets parsed into a pixel value.
 
