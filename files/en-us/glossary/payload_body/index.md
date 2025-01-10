@@ -6,7 +6,7 @@ page-type: glossary-definition
 
 {{GlossarySidebar}}
 
-Prior to June 2022, the **payload body** or **payload** was the resource representation being transferred in an HTTP Message Body, stripped of any [transfer encoding](/en-US/docs/Web/HTTP/Headers/Transfer-Encoding).  With no transfer encoding, the _payload body_ and _message body_ are the same thing.  Representation data could also be transferred in the HTTP Header, but such data would not be regarded as "payload".
+Prior to June 2022, the **payload body** or **payload** was the resource representation being transferred in an HTTP Message Body, stripped of any [transfer encoding](/en-US/docs/Web/HTTP/Headers/Transfer-Encoding). With no transfer encoding, the _payload body_ and _message body_ are the same thing. Representation data could also be transferred in the HTTP Header, but such data would not be regarded as "payload".
 
 With the release of RFC 9110, the word **content** replaces the word **payload**.  See [**HTTP content**](https://developer.mozilla.org/en-US/docs/Glossary/HTTP_Content).
 
