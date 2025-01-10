@@ -13,13 +13,13 @@ The **`preMultiplySelf()`** method of the {{domxref("DOMMatrix")}} interface mod
 ## Syntax
 
 ```js-nolint
-  DOMMatrix.preMultiplySelf( )
-  DOMMatrix.preMultiplySelf( otherMatrix )
+  DOMMatrix.preMultiplySelf()
+  DOMMatrix.preMultiplySelf(otherMatrix)
 ```
 
 ### Parameters
 
-- `otherMatrix`
+- `otherMatrix` {{optional_inline}}
   - : The [`DOMMatrix`](/en-US/docs/Web/API/DOMMatrix) multiplier.
 
 ### Return value

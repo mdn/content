@@ -15,13 +15,13 @@ To multiply a matrix without mutating it, see {{domxref("DOMMatrixReadOnly.multi
 ## Syntax
 
 ```js-nolint
-  DOMMatrix.multiplySelf( )
-  DOMMatrix.multiplySelf( otherMatrix )
+  DOMMatrix.multiplySelf()
+  DOMMatrix.multiplySelf(otherMatrix)
 ```
 
 ### Parameters
 
-- `otherMatrix`
+- `otherMatrix` {{optional_inline}}
   - : The [`DOMMatrix`](/en-US/docs/Web/API/DOMMatrix) multiplier.
 
 ### Return value
