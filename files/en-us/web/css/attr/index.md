@@ -285,7 +285,7 @@ if (CSS.supports("x: attr(x type(*))")) {
 }
 
 if (!CSS.supports("x: attr(x type(*))")) {
-  /* Browser has no advanced attr() support */
+  /* Browser does not have modern attr() support */
 }
 ```
 
