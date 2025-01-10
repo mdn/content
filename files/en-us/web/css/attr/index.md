@@ -273,7 +273,7 @@ For example:
 }
 
 @supports not (x: attr(x type(*))) {
-  /* Browser has no advanced attr() support */
+  /* Browser does not have modern attr() support */
 }
 ```
 
