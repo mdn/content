@@ -296,19 +296,20 @@ The resulting values for {{cssxref("view-transition-name")}} are `card-1`, `card
 
 ### Using dimension units
 
-In this example the `data-size` attribute gets parsed into a pixel value.
+In this example the `data-rotation` attribute gets parsed into a `deg` unit, determining the rotation of the element.
 
 #### HTML
 
 ```html
-<div data-size="10">test</div>
+<div data-rotation="-3">I am rotated</div>
 ```
 
 #### CSS
 
 ```css
 div {
-  font-size: attr(data-size px);
+  width: fit-content;
+  rotate: attr(data-rotation deg);
 }
 ```
 
