@@ -269,7 +269,7 @@ For example:
 
 ```css
 @supports (x: attr(x type(*))) {
-  /* Browser has advanced attr() support */
+  /* Browser has modern attr() support */
 }
 
 @supports not (x: attr(x type(*))) {
