@@ -4,7 +4,7 @@
 # This way, if the tests passed, you'll be able to review the built
 # pages on a public URL.
 
-name: PR Test
+name: PR Test - new CI
 
 on:
   pull_request:
@@ -13,7 +13,7 @@ on:
 
 jobs:
   tests:
-    if: github.repository == 'mdn/content' && !startsWith(github.event.pull_request.title, '[new-ci]')
+    if: github.repository == 'mdn/content' && startsWith(github.event.pull_request.title, '[new-ci]')
     runs-on: ubuntu-latest
     # Set the permissions to `read-all`, preventing the workflow from
     # any accidental write access to the repository.
@@ -92,12 +92,19 @@ jobs:
           # Playground
           REACT_APP_PLAYGROUND_BASE_HOST: mdnyalp.dev
 
+          # rari
+          LIVE_SAMPLES_BASE_URL: https://live.mdnyalp.dev
+          INTERACTIVE_EXAMPLES_BASE_URL: https://interactive-examples.mdn.allizom.net
+
         run: |
           # The reason this script isn't in `package.json` is because
           # you don't need that script as a writer. It's only used in CI
           # and it can't use the default CONTENT_ROOT that gets set in
           # package.json.
-          yarn build $GIT_DIFF_CONTENT
+          echo Y|yarn rari update
+          ARGS=$(echo $GIT_DIFF_CONTENT | sed -E -e "s#(^| )files#\1-f $PWD/files#g")
+          yarn rari build --no-basic --json-issues $ARGS
+          yarn yari-render-html
 
           echo "Disk usage size of the build"
           du -sh $BUILD_OUT_ROOT
