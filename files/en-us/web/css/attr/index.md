@@ -219,7 +219,7 @@ Values that use get marked as _"`attr()`-tained"_. Using an `attr()`-tainted val
 
 Generally speaking `attr()` is pretty much backwards compatible because the old way of using it–the one without specifying an `<attr-type>`–behaves the same as before. Having `attr(data-attr)` in your code is the same as writing `attr(data-attr type(<string>))` or the simpler `attr(data-attr string))`.
 
-However, there are two edge cases where advanced `attr()` behaves differently from the old one.
+However, there are two edge cases where the modern `attr()` syntax behaves differently from the old syntax.
 
 In the following snippet, browsers with no advanced `attr()` support will discard the second declaration because it cannot parse it. Therefore the result in those browsers is `"Hello World"`.
 
