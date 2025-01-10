@@ -263,7 +263,7 @@ To prevent this sort of situation, make sure you don't pass inherited `attr()` v
 
 ### Feature Detection
 
-We can feature detect support for advanced `attr()` using the {{CSSxRef("@supports")}} at-rule by trying it to assign advanced `attr()` to a (non-custom) CSS property.
+You can feature detect support for modern `attr()` syntax using the {{CSSxRef("@supports")}} at-rule. In the test, try to assign advanced `attr()` to a (non-custom) CSS property.
 
 For example:
 
