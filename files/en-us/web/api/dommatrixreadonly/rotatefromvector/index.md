@@ -37,12 +37,16 @@ A [`DOMMatrix`](/en-US/docs/Web/API/DOMMatrix).
 const matrix = new DOMMatrix(); // create a matrix
 console.log(matrix.toString()); // original value
 // output: "matrix(1, 0, 0, 1, 0, 0)"
-console.log(matrix.rotateFromVector().toString()); // no rotation applied
+
+console.log(matrix.rotateFromVector().toString()); // defaults to `0`
 // output: matrix(1, 0, 0, 1, 0, 0)
+
 console.log(matrix.rotateFromVector(10, 20).toString());
 // matrix(0.447, 0.894, -0.894, 0.447, 0, 0)
+
 console.log(matrix.rotateFromVector(-5, 5).toString());
 // matrix(-0.707, 0.707, -0.707, -0.707, 0, 0)
+
 console.log(matrix.toString()); // matrix remains unchanged
 // output: "matrix(1, 0, 0, 1, 0, 0)"
 ```
