@@ -43,7 +43,7 @@ We will start by describing various web-related concepts: web pages, websites, w
 - **Web page**
   - : A document that can be displayed in a web {{Glossary("browser")}}. These are also often called just "pages". Such documents are written in the {{Glossary("HTML")}} language (which we look at in more detail later on).
 - **Website**
-  - : A collection of web pages grouped together into a single resourse, with links connecting them together. Often called a "site".
+  - : A collection of web pages grouped together into a single resource, with links connecting them together. Often called a "site".
 - **Web server**
   - : A computer that hosts a website on the Internet.
 - **Search engine**
