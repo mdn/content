@@ -8,9 +8,9 @@ browser-compat: api.DOMMatrix.rotateFromVectorSelf
 
 {{APIRef("Geometry Interfaces")}}{{AvailableInWorkers}}
 
-The `rotateFromVectorSelf()` method of the {{domxref("DOMMatrix")}} interface is a mutable transformation method that modifies a matrix. It modifies the matrix by rotating the matrix by the angle between the specified vector and `(1, 0)`. The rotation angle is determined by the angle between the vector `(1,0)T` and `(x,y)T` in the clockwise direction, or `(+/-)arctan(y/x)`. If `x` and `y` are both `0`, the angle is specified as `0`, returning the altered {{domxref("DOMMatrix")}}.
+The `rotateFromVectorSelf()` method of the {{domxref("DOMMatrix")}} interface is a mutable transformation method that modifies a matrix by rotating the matrix by the angle between the specified vector and `(1, 0)`. The rotation angle is determined by the angle between the vector `(1,0)T` and `(x,y)T` in the clockwise direction, or `(+/-)arctan(y/x)`. If `x` and `y` are both `0`, the angle is specified as `0`, and the matrix is not altered.
 
-To rotate a matrix from a vector without mutating it, see {{domxref("DOMMatrixReadOnly.rotateFromVector()")}}
+To rotate a matrix from a vector without mutating it, see {{domxref("DOMMatrixReadOnly.rotateFromVector()")}}, which creates a new rotated matrix while leaving the original unchanged.
 
 ## Syntax
 
@@ -35,9 +35,12 @@ Returns itself; the updated [`DOMMatrix`](/en-US/docs/Web/API/DOMMatrix).
 
 ```js
 const matrix = new DOMMatrix(); // create a matrix
-console.log(matrix.rotateFromVectorSelf().toString()); // output: matrix(1, 0, 0, 1, 0, 0) (no rotation applied)
-console.log(matrix.rotateFromVectorSelf(10, 20).toString()); // matrix(0.447, 0.894, -0.894, 0.447, 0, 0)
-console.log(matrix.toString()); // output: matrix(0.447, 0.894, -0.894, 0.447, 0, 0) (same as above)
+console.log(matrix.rotateFromVectorSelf().toString());
+// output: matrix(1, 0, 0, 1, 0, 0) (no rotation applied)
+console.log(matrix.rotateFromVectorSelf(10, 20).toString());
+// output: matrix(0.447, 0.894, -0.894, 0.447, 0, 0)
+console.log(matrix.toString());
+// output: matrix(0.447, 0.894, -0.894, 0.447, 0, 0) (same as above)
 ```
 
 ## Specifications
@@ -53,18 +56,8 @@ console.log(matrix.toString()); // output: matrix(0.447, 0.894, -0.894, 0.447, 0
 - {{domxref("DOMMatrixReadOnly.rotateFromVector()")}}
 - {{domxref("DOMMatrixRead.rotateSelf()")}}
 - {{domxref("DOMMatrixRead.rotateAxisAngleSelf()")}}
-- CSS {{cssxref("transform")}} property
+- CSS {{cssxref("transform")}} property and {{cssxref("transform-function/rotate3d", "rotate3d()")}} function
 - CSS {{cssxref("rotate")}} property
-- CSS {{cssxref("transform-function")}} functions
-  - {{cssxref("transform-function/rotate", "rotate()")}}
-  - {{cssxref("transform-function/rotate3d", "rotate3d()")}}
-  - {{cssxref("transform-function/rotateX", "rotateX()")}}
-  - {{cssxref("transform-function/rotateY", "rotateY()")}}
-  - {{cssxref("transform-function/rotateZ", "rotateZ()")}}
 - [CSS transforms](/en-US/docs/Web/CSS/CSS_transforms) module
 - SVG [`transform`](/en-US/docs/Web/SVG/Attribute/transform) attribute
-- {{domxref("CanvasRenderingContext2D")}} interface methods
-  - {{domxref("CanvasRenderingContext2D.rotate()")}}
-  - {{domxref("CanvasRenderingContext2D.transform()")}}
-  - {{domxref("CanvasRenderingContext2D.setTransform()")}}
-  - {{domxref("CanvasRenderingContext2D.resetTransform()")}}
+- {{domxref("CanvasRenderingContext2D")}} interface and {{domxref("CanvasRenderingContext2D.rotate()", "rotate()")}} method
