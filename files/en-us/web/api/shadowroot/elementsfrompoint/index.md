@@ -9,9 +9,9 @@ browser-compat: api.ShadowRoot.elementsFromPoint
 {{APIRef("DOM")}}{{Non-standard_Header}}
 
 The **`elementsFromPoint()`** method of the {{domxref("ShadowRoot")}} interface returns an array of all the shadow root elements
-at the specified coordinates (relative to the viewport). The elements are ordered from the topmost descendant to the bottommost element.
+at the specified coordinates (relative to the viewport). The elements are ordered from the element in the top most layer, to the bottommost element.
 
-It operates in a similar way to the {{domxref("ShadowRoot.elementFromPoint", "elementFromPoint()")}} method. Some browsers return only the shadow root elements present at that location. Other browsers include elements outside of the {{glossary("shadow DOM")}}, from the topmost shadow DOM element to the document root node, such as the {{htmlelement("html")}} or {{SVGElement("svg")}} root element. In these browsers, it operates similar to the {{domxref("Document.elementsFromPoint", "elementFromPoint()")}} method, but with the ability to cross the [shadow boundary](/en-US/docs/Glossary/Shadow_tree).
+It operates in a similar way to the {{domxref("ShadowRoot.elementFromPoint")}} method. Some browsers return only the shadow root elements present at that location. Other browsers include elements outside of the {{glossary("shadow DOM")}}, from the shadow DOM element in the topmost layer to the document root node, such as the {{htmlelement("html")}} or {{SVGElement("svg")}} root element. In these browsers, it operates similar to the {{domxref("Document.elementsFromPoint")}} method, but with the ability to cross the [shadow boundary](/en-US/docs/Glossary/Shadow_tree).
 
 ## Syntax
 
@@ -54,7 +54,7 @@ If `<my-custom-element>` is near the top left corner of the viewport, and contai
 
 ```plain
 div
-div > my-custom-element > body > html
+div < my-custom-element < body < html
 ```
 
 ## Specifications

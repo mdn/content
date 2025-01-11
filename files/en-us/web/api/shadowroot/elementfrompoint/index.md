@@ -8,9 +8,9 @@ browser-compat: api.ShadowRoot.elementFromPoint
 
 {{APIRef("DOM")}}{{Non-standard_Header}}
 
-The **`elementFromPoint()`** method, available on the {{domxref("ShadowRoot")}} object, returns the topmost shadowroot element at the specified coordinates relative to the viewport that does not have {{cssxref("pointer-events")}} set to `none`.
+The **`elementFromPoint()`** method, available on the {{domxref("ShadowRoot")}} object, returns the element at the topmost shadow root layer at the specified coordinates relative to the viewport. Shadow root elements that have {{cssxref("pointer-events")}} set to `none` are ignored.
 
-If the specified point is outside the bounds of the shadowRoot, the result is `undefined`.
+If the specified point is outside the bounds of the shadow root, the result is `undefined`.
 
 ## Syntax
 
@@ -21,19 +21,17 @@ elementFromPoint(x, y)
 ### Parameters
 
 - `x`
-  - : The horizontal coordinate of a point, relative to the left edge of the current
-    {{Glossary("viewport")}}.
+  - : The horizontal coordinate of a point, relative to the left edge of the current {{Glossary("viewport")}}.
 - `y`
-  - : The vertical coordinate of a point, relative to the top edge of the current
-    viewport.
+  - : The vertical coordinate of a point, relative to the top edge of the current viewport.
 
 ### Return value
 
-An {{domxref("Element")}}; the topmost shadowRoot object located at the specified coordinates, if any.
+An {{domxref("Element")}}; the topmost shadow root element located at the specified coordinates, if any.
 
 ## Examples
 
-In this example, assuming the existence of a {{htmlelement("template")}} in the HTML, we define a `<my-custom-element>` and, if the custom element abuts the top-left corner of the viewport, the topmost element in the top-left corner of that custom element is set to have a thin, dashed red border.
+In this example, assuming the existence of a {{htmlelement("template")}} in the HTML, we define a `<my-custom-element>`. If the appended custom element abuts the top-left corner of the viewport, or any portion of it overlaps that corner, the element that is the topmost layer at that point in the custom element will have a thin, dashed red border.
 
 ```js
 customElements.define(
@@ -41,11 +39,15 @@ customElements.define(
   class extends HTMLElement {
     constructor() {
       super();
-      let template = document.getElementById("my-custom-element-template");
-      let templateContent = template.content;
+      const templateContent = document.getElementById(
+        "my-custom-element-template",
+      ).content;
       const sRoot = this.attachShadow({ mode: "open" });
       sRoot.appendChild(templateContent.cloneNode(true));
-      let srElement = this.shadowRoot.elementFromPoint(0, 0);
+
+      // get the top most Element in the top left corner of the viewport
+      const srElement = this.shadowRoot.elementFromPoint(0, 0);
+      // apply a border to that element
       srElement.style.border = "1px dashed red";
     }
   },
