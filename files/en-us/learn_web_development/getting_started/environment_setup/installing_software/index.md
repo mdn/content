@@ -71,11 +71,11 @@ One of the easiest options we've found to make a local server available is to us
 4. Press the _Install_ button to install the extension.
 5. Now, when you are working on an HTML file in the editor, you should be able to click the "Show Preview" button to open the live example up in a separate tab.
 
-The above option is simple, but not that flexible. In future, you may want to made a more flexible local server option available that can be used to load examples in any browser you have available. For other options (and more background information around why local servers are neccessary), see [How do you set up a local testing server?](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server).
+The above option is simple, but not that flexible. In future, you may want to make a more flexible local server option available that can be used to load examples in any browser you have available. For other options (and more background information around why local servers are neccessary), see [How do you set up a local testing server?](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server).
 
 ## Graphics editors
 
-Web developers are often required to manipulate image files for use on the websites they create. This can often mean designing/creating graphic assets, but equally, the graphics are often provided by a graphic designer (this could be a team mate or a third-party), in which case the web developer may be called upon to crop or resize the files they receive.
+Web developers are often required to manipulate image files for use on the websites they create. This can often mean designing/creating graphic assets, but equally, the graphics are often provided by a graphic designer (this could be a teammate or a third-party), in which case the web developer may be called upon to crop or resize the files they receive.
 
 None of the learning articles on MDN require you to create your own graphics, although a few of them may require you to manipulate the files that we provide.
 
