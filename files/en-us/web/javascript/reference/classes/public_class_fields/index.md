@@ -7,7 +7,7 @@ browser-compat: javascript.classes.public_class_fields
 
 {{jsSidebar("Classes")}}
 
-**Public fields** are writable, enumerable, and configurable properties.
+**Public fields** are writable, enumerable, and configurable properties defined on each class instance or class constructor.
 
 ## Syntax
 
