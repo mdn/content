@@ -50,7 +50,7 @@ _This interface doesn't inherit any methods. None of the following methods alter
 - {{domxref("DOMMatrixReadOnly.inverse()")}}
   - : Returns a new {{domxref("DOMMatrix")}} created by inverting the source matrix. The original matrix is not altered.
 - {{domxref("DOMMatrixReadOnly.multiply()")}}
-  - : Returns a new {{domxref("DOMMatrix")}} created by computing the dot product of the source matrix and the specified matrix: `A⋅B`. If no matrix is specified as the multiplier, the matrix is multiplied by a matrix in which every element is `0` _except_ the bottom-right corner and the element immediately above and to its left: `m33` and `m34`. These have the default value of `1`. The original matrix is not modified.
+  - : Returns a new {{domxref("DOMMatrix")}} created by computing the dot product of the source matrix and the specified matrix. The original matrix is not
 - {{domxref("DOMMatrixReadOnly.rotateAxisAngle()")}}
   - : Returns a new {{domxref("DOMMatrix")}} created by rotating the source matrix by the given angle around the specified vector. The original matrix is not modified.
 - {{domxref("DOMMatrixReadOnly.rotate()")}}
