@@ -8,9 +8,9 @@ browser-compat: api.DOMMatrix.rotateAxisAngleSelf
 
 {{APIRef("Geometry Interfaces")}}{{AvailableInWorkers}}
 
-The `rotateAxisAngleSelf()` method of the {{domxref("DOMMatrix")}} interface is a transformation method that returns a new {{domxref("DOMMatrix")}} created by rotating the source matrix by the given vector and angle. The original matrix is not altered.
+The `rotateAxisAngleSelf()` method of the {{domxref("DOMMatrix")}} interface is a transformation method that rotates the source matrix by the given vector and angle, returning the altered matrix.
 
-To rotate a matrix without mutating it, see {{domxref("DOMMatrix.rotateAxisAngleSelf()")}}
+To rotate a matrix without mutating it, see {{domxref("DOMMatrixReadOnly.rotateAxisAngle()")}}, which creates a new rotated matrix while leaving the original unchanged.
 
 ## Syntax
 
@@ -25,13 +25,15 @@ DOMMatrix.rotateAxisAngleSelf(rotX, rotY, rotZ, angle)
 ### Parameters
 
 - `rotX`
-  - : A number; the x-coordinate of the vector denoting the axis of rotation
+  - : A number; the x-coordinate of the vector denoting the axis of rotation. If non-zero, {{domxref("DOMMatrix.is2d", "is2D")}} is false.
 - `rotY` {{optional_inline}}
-  - : A number; the y-coordinate of the vector denoting the axis of rotation. If undefined, the `rotX` value is used. If non-zero, [`is2D`](/en-US/docs/Web/API/DOMMatrix#is2d) is false.
+  - : A number; the y-coordinate of the vector denoting the axis of rotation. If undefined, the `rotX` value is used. If non-zero, {{domxref("DOMMatrix.is2d", "is2D")}} is false.
 - `rotZ` {{optional_inline}}
-  - : A number; the z-coordinate of the vector denoting the axis of rotation. If undefined, the `rotX` value is used. If non-zero, [`is2D`](/en-US/docs/Web/API/DOMMatrix#is2d) is false.
+  - : A number; the z-coordinate of the vector denoting the axis of rotation. If undefined, the `rotX` value is used.
 - `angle` {{optional_inline}}
   - : A number; the angle of the rotation around the axis vector, in degrees.
+
+If `rotY` and `rotZ` are both missing, `rotZ` is set to the value of `rotX`, and both `rotX` and `rotY` are `0`.
 
 ### Return value
 
@@ -60,18 +62,8 @@ console.log(matrix.toString());
 - {{domxref("DOMMatrixReadOnly.rotateAxisAngle()")}}
 - {{domxref("DOMMatrix.rotateSelf()")}}
 - {{domxref("DOMMatrix.rotateFromVectorSelf()")}}
-- CSS {{cssxref("transform")}} property
+- CSS {{cssxref("transform")}} property and {{cssxref("transform-function/rotate3d", "rotate3d()")}} function
 - CSS {{cssxref("rotate")}} property
-- CSS {{cssxref("transform-function")}} functions
-  - {{cssxref("transform-function/rotate", "rotate()")}}
-  - {{cssxref("transform-function/rotate3d", "rotate3d()")}}
-  - {{cssxref("transform-function/rotateX", "rotateX()")}}
-  - {{cssxref("transform-function/rotateY", "rotateY()")}}
-  - {{cssxref("transform-function/rotateZ", "rotateZ()")}}
 - [CSS transforms](/en-US/docs/Web/CSS/CSS_transforms) module
 - SVG [`transform`](/en-US/docs/Web/SVG/Attribute/transform) attribute
-- {{domxref("CanvasRenderingContext2D")}} interface methods
-  - {{domxref("CanvasRenderingContext2D.rotate()")}}
-  - {{domxref("CanvasRenderingContext2D.transform()")}}
-  - {{domxref("CanvasRenderingContext2D.setTransform()")}}
-  - {{domxref("CanvasRenderingContext2D.resetTransform()")}}
+- {{domxref("CanvasRenderingContext2D")}} interface and {{domxref("CanvasRenderingContext2D.rotate()", "rotate()")}} method
