@@ -31,7 +31,7 @@ A float.
 ### Exceptions
 
 - `NotSupportedError` {{domxref("DOMException")}}
-  - : Thrown if the `SVGAnimationElement`'s simple duration is undefined (e.g., the end time is indefinite).
+  - : Thrown if the `SVGAnimationElement`'s simple duration is undefined (e.g., the end time is indefinite). This happens when the {{SVGAttr("dur")}} attribute is set to `indefinite` or is undefined, as then the simple duration is considered undefined.
 
 ## Examples
 
@@ -54,15 +54,8 @@ This example demonstrates how the `dur="3s"` attribute defines a simple duration
 ```js
 const animationElement = document.querySelector("animate");
 
-try {
-  // Retrieve and log the simple duration of the animation
-  const simpleDuration = animationElement.getSimpleDuration();
-  console.log(`The simple duration is: ${simpleDuration} seconds`);
-} catch (e) {
-  if (e.name === "NotSupportedError") {
-    console.error("The simple duration is undefined for this animation.");
-  }
-}
+const simpleDuration = animationElement.getSimpleDuration();
+console.log(`The simple duration is: ${simpleDuration} seconds`); // Output: 3
 ```
 
 Since `repeatCount="indefinite"` specifies continuous looping, the effective duration is infinite, but the simple duration remains 3 seconds per iteration.
