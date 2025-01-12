@@ -34,7 +34,6 @@ This example demonstrates how the `getCurrentTime()` method retrieves the time e
 
 ```html
 <svg width="200" height="200" viewBox="0 0 200 200">
-  <!-- A simple circle animation -->
   <circle cx="50" cy="50" r="20" fill="rebeccapurple">
     <animate
       attributeName="cx"

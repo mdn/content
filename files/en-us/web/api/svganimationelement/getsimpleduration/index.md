@@ -12,7 +12,7 @@ The {{domxref("SVGAnimationElement")}} method `getSimpleDuration()` returns a fl
 
 Simple duration refers to the length of time an animation is supposed to run for a single iteration, without considering repeats, restarts, or extensions.
 
-This property reflects the {{SVGAttr("dur")}} attribute of the {{SVGElement("animate")}} or {{SVGElement("animateMotion")}} element.
+This property reflects the {{SVGAttr("dur")}} attribute of the {{SVGElement("animate")}}, {{SVGElement("animateMotion")}} or {{SVGElement("animateTransform")}} element.
 
 ## Syntax
 
@@ -39,7 +39,6 @@ This example demonstrates how the `dur="3s"` attribute defines a simple duration
 
 ```html
 <svg width="200" height="200" viewBox="0 0 200 200">
-  <!-- A simple circle animation -->
   <circle cx="50" cy="50" r="20" fill="rebeccapurple">
     <animate
       attributeName="cx"
