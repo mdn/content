@@ -8,7 +8,7 @@ browser-compat: api.SVGAnimationElement.getStartTime
 
 {{APIRef("SVG")}}
 
-The {{domxref("SVGAnimationElement")}} method `getStartTime()` returns a float representing the begin time, in seconds, for this animation element's current interval, if it exists, regardless of whether the interval has begun yet.
+The {{domxref("SVGAnimationElement")}} method `getStartTime()` returns a float representing the start time, in seconds, for this animation element's current interval, if it exists, regardless of whether the interval has begun yet.
 
 ## Syntax
 

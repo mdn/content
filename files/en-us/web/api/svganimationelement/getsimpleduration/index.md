@@ -10,7 +10,9 @@ browser-compat: api.SVGAnimationElement.getSimpleDuration
 
 The {{domxref("SVGAnimationElement")}} method `getSimpleDuration()` returns a float representing the number of seconds for the simple duration for this animation.
 
-This property reflects the {{SVGAttr("dur")}} attribute of the {{SVGElement("animate")}} element.
+Simple duration refers to the length of time an animation is supposed to run for a single iteration, without considering repeats, restarts, or extensions.
+
+This property reflects the {{SVGAttr("dur")}} attribute of the {{SVGElement("animate")}} or {{SVGElement("animateMotion")}} element.
 
 ## Syntax
 
@@ -33,13 +35,37 @@ A float.
 
 ## Examples
 
-This example demonstrates how to use `getSimpleDuration()` to retrieve the simple duration of an animation element:
+This example demonstrates how the `dur="3s"` attribute defines a simple duration of 3 seconds.
+
+```html
+<svg width="200" height="200" viewBox="0 0 200 200">
+  <!-- A simple circle animation -->
+  <circle cx="50" cy="50" r="20" fill="rebeccapurple">
+    <animate
+      attributeName="cx"
+      from="50"
+      to="150"
+      dur="3s"
+      repeatCount="indefinite" />
+  </circle>
+</svg>
+```
 
 ```js
 const animationElement = document.querySelector("animate");
-const duration = animationElement.getSimpleDuration();
-console.log(`The simple duration is: ${duration} seconds`);
+
+try {
+  // Retrieve and log the simple duration of the animation
+  const simpleDuration = animationElement.getSimpleDuration();
+  console.log(`The simple duration is: ${simpleDuration} seconds`);
+} catch (e) {
+  if (e.name === "NotSupportedError") {
+    console.error("The simple duration is undefined for this animation.");
+  }
+}
 ```
+
+Since `repeatCount="indefinite"` specifies continuous looping, the effective duration is infinite, but the simple duration remains 3 seconds per iteration.
 
 ## Specifications
 

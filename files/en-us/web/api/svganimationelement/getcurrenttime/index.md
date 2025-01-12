@@ -57,7 +57,7 @@ setInterval(() => {
 }, 1000);
 ```
 
-The animation starts at `time zero = 0` and runs indefinitely and the `getCurrentTime()` value increments continuously within the context of the time container.
+The animation starts at `time zero = 0` and runs indefinitely, and the `getCurrentTime()` value increments continuously within the context of the time container.
 
 ## Specifications
 
