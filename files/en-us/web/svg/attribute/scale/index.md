@@ -43,7 +43,11 @@ svg {
   </filter>
 
   <circle cx="100" cy="100" r="80" style="filter: url(#displacementFilter);" />
-  <circle cx="100" cy="100" r="80" style="filter: url(#displacementFilter2);
+  <circle
+    cx="100"
+    cy="100"
+    r="80"
+    style="filter: url(#displacementFilter2);
   transform: translateX(240px);" />
 </svg>
 ```
