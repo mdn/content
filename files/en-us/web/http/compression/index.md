@@ -11,7 +11,7 @@ page-type: guide
 In practice, web developers don't need to implement compression mechanisms, both browsers and servers have it implemented already, but they have to be sure that the server is configured adequately. Compression happens at three different levels:
 
 - first some file formats are compressed with specific optimized methods,
-- then general encryption can happen at the HTTP level (the resource is transmitted compressed from end to end),
+- then general compression can happen at the HTTP level (the resource is transmitted compressed from end to end),
 - and finally compression can be defined at the connection level, between two nodes of an HTTP connection.
 
 ## File format compression
@@ -136,3 +136,12 @@ sequenceDiagram
 In practice, hop-by-hop compression is transparent for the server and the client, and is rarely used. {{HTTPHeader("TE")}} and {{HTTPHeader("Transfer-Encoding")}} are mostly used to send a response by chunks, allowing to start transmitting a resource without knowing its length.
 
 Note that using {{HTTPHeader("Transfer-Encoding")}} and compression at the hop level is so rare that most servers, like Apache, Nginx, or IIS, have no easy way to configure it. Such configuration usually happens at the proxy level.
+
+## See also
+
+- Glossary terms:
+  - {{glossary("Brotli compression")}}
+  - {{Glossary("Gzip compression")}}
+  - {{glossary("Lossless compression")}}
+  - {{glossary("Lossy compression")}}
+  - {{Glossary("Zstandard compression")}}

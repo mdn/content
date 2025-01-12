@@ -307,5 +307,5 @@ document.addEventListener("fullscreenchange", (e) => {
 ## See also
 
 - {{ htmlelement("video") }} for reference material
-- [Using HTML audio and video](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content) for more techniques
+- [HTML video and audio](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio) for more techniques
 - [Media formats supported by the HTML audio and video elements](/en-US/docs/Web/Media/Formats)

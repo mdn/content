@@ -30,7 +30,7 @@ The absolute value of `x`.
 - if `x`'s numeric value is positive or `0⁺`, return `x`.
 - Otherwise, returns `-1 * x`.
 
-### Formal syntax
+## Formal syntax
 
 {{CSSSyntax}}
 

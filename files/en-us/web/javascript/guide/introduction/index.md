@@ -20,11 +20,9 @@ This guide assumes you have the following basic background:
 
 The JavaScript documentation on MDN includes the following:
 
-- [Learn Web Development](/en-US/docs/Learn) provides information for beginners and introduces basic concepts of programming and the Internet.
+- [Dynamic scripting with JavaScript](/en-US/docs/Learn_web_development/Core/Scripting) provides structured JavaScript guides for beginners and introduces basic concepts of programming and the Internet.
 - [JavaScript Guide](/en-US/docs/Web/JavaScript/Guide) (this guide) provides an overview about the JavaScript language and its objects.
 - [JavaScript Reference](/en-US/docs/Web/JavaScript/Reference) provides detailed reference material for JavaScript.
-
-If you are new to JavaScript, start with the articles in the [learning area](/en-US/docs/Learn) and the [JavaScript Guide](/en-US/docs/Web/JavaScript/Guide). Once you have a firm grasp of the fundamentals, you can use the [JavaScript Reference](/en-US/docs/Web/JavaScript/Reference) to get more details on individual objects and statements.
 
 ## What is JavaScript?
 

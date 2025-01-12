@@ -115,6 +115,59 @@ sidebar:
       - link: /Games/Publishing_games/Game_monetization
         title: Game_monetization
 l10n:
+  de:
+    Introduction: Einführung
+    Anatomy: Anatomie
+    APIs_for_game_development: APIs für die Spieleentwicklung
+    Canvas: Canvas
+    CSS: CSS
+    Full_Screen: Vollbild
+    Gamepad: Gamepad
+    IndexedDB: IndexedDB
+    JavaScript: JavaScript
+    Pointer_Lock: Pointer Lock
+    SVG: SVG
+    Typed_Arrays: Typisierte Arrays
+    Web_Audio: Web Audio
+    WebGL: WebGL
+    WebRTC: WebRTC
+    Web_Sockets: WebSockets
+    WebVR: WebVR
+    Web_Workers: Web Workers
+    XMLHttpRequest: XMLHttpRequest
+    Techniques: Techniken
+    Using_async_scripts_for_asm.js: Verwendung asynchroner Skripte für asm.js
+    Optimizing_startup_performance: Optimierung der Startleistung
+    Using_WebRTC_peer-to-peer_data_channels: Verwendung von WebRTC Peer-to-Peer-Datenkanälen
+    Audio_for_Web_Games: Audio für Webspiele
+    2D_collision_detection: 2D-Kollisionserkennung
+    Tiles_and_tilemaps_overview: Überblick über Kacheln und Kachelkarten
+    3D_games_on_the_Web: 3D-Spiele im Web
+    3D_games_on_the_Web_overview: Überblick über 3D-Spiele im Web
+    Explaining_basic_3D_theory: Erklärung der grundlegenden 3D-Theorie
+    Building_up_a_basic_demo_with_A-Frame: Aufbau einer einfachen Demo mit A-Frame
+    Building_up_a_basic_demo_with_Babylon.js: Aufbau einer einfachen Demo mit Babylon.js
+    Building_up_a_basic_demo_with_PlayCanvas: Aufbau einer einfachen Demo mit PlayCanvas
+    Building_up_a_basic_demo_with_Three.js: Aufbau einer einfachen Demo mit Three.js
+    WebXR_guide: WebXR-Anleitung
+    3D_collision_detection: 3D-Kollisionserkennung
+    Bounding_volume_collision_detection_with_THREE.js: Erkennung von Kollisionen mit Begrenzungsvolumen mit THREE.js
+    Implementing_game_control_mechanisms: Implementierung von Spielsteuerungsmechanismen
+    Control_mechanisms: Steuermechanismen
+    Mobile_touch: Mobile Berührung
+    Desktop_with_mouse_and_keyboard: Desktop mit Maus und Tastatur
+    Desktop_with_gamepad: Desktop mit Gamepad
+    Other: Andere
+    Tutorials: Anleitungen
+    2D_breakout_game_using_pure_JavaScript: 2D-Breakout-Spiel mit purem JavaScript
+    2D_breakout_game_using_Phaser: 2D-Breakout-Spiel mit Phaser
+    2D_maze_game_with_device_orientation: 2D-Labyrinth-Spiel mit Geräteorientierung
+    2D_platform_game_using_Phaser: 2D-Plattformspiel mit Phaser
+    Publishing_games: Veröffentlichung von Spielen
+    Publishing_games_overview: Überblick über die Veröffentlichung von Spielen
+    Game_distribution: Spielverteilung
+    Game_promotion: Spielwerbung
+    Game_monetization: Spielmonetarisierung
   en-US:
     Introduction: Introduction
     Anatomy: Anatomy
@@ -139,61 +192,6 @@ l10n:
     Using_async_scripts_for_asm.js: Using async scripts for asm.js
     Optimizing_startup_performance: Optimizing startup performance
     Using_WebRTC_peer-to-peer_data_channels: Using WebRTC peer-to-peer data channels
-    Efficient_animation_for_web_games: Efficient animation for web games
-    Audio_for_Web_Games: Audio for Web Games
-    2D_collision_detection: 2D collision detection
-    Tiles_and_tilemaps_overview: Tiles and tilemaps overview
-    3D_games_on_the_Web: 3D games on the Web
-    3D_games_on_the_Web_overview: 3D games on the Web overview
-    Explaining_basic_3D_theory: Explaining basic 3D theory
-    Building_up_a_basic_demo_with_A-Frame: Building up a basic demo with A-Frame
-    Building_up_a_basic_demo_with_Babylon.js: Building up a basic demo with Babylon.js
-    Building_up_a_basic_demo_with_PlayCanvas: Building up a basic demo with PlayCanvas
-    Building_up_a_basic_demo_with_Three.js: Building up a basic demo with Three.js
-    WebXR_guide: WebXR
-    3D_collision_detection: 3D collision detection
-    Bounding_volume_collision_detection_with_THREE.js: Bounding volume collision detection with THREE.js
-    Implementing_game_control_mechanisms: Implementing game control mechanisms
-    Control_mechanisms: Control mechanisms
-    Mobile_touch: Mobile touch
-    Desktop_with_mouse_and_keyboard: Desktop with mouse and keyboard
-    Desktop_with_gamepad: Desktop with gamepad
-    Other: Other
-    Tutorials: Tutorials
-    2D_breakout_game_using_pure_JavaScript: 2D breakout game using pure JavaScript
-    2D_breakout_game_using_Phaser: 2D breakout game using Phaser
-    2D_maze_game_with_device_orientation: 2D maze_game with device orientation
-    2D_platform_game_using_Phaser: 2D platform game using Phaser
-    Publishing_games: Publishing games
-    Publishing_games_overview: Publishing games overview
-    Game_distribution: Game distribution
-    Game_promotion: Game promotion
-    Game_monetization: Game monetization
-  es:
-    Introduction: Introducción para desarrollo de juegos para la Web
-    Anatomy: Anatomía de un videojuego
-    APIs_for_game_development: APIs for game development
-    Canvas: Canvas
-    CSS: CSS
-    Full_Screen: Full screen
-    Gamepad: Gamepad
-    IndexedDB: IndexedDB
-    JavaScript: JavaScript
-    Pointer_Lock: Pointer Lock
-    SVG: SVG
-    Typed_Arrays: Typed Arrays
-    Web_Audio: Web Audio
-    WebGL: WebGL
-    WebRTC: WebRTC
-    Web_Sockets: WebSockets
-    WebVR: WebVR
-    Web_Workers: Web Workers
-    XMLHttpRequest: XMLHttpRequest
-    Techniques: Técnicas
-    Using_async_scripts_for_asm.js: asm.js
-    Optimizing_startup_performance: Optimizar rendimiento de inicio
-    Using_WebRTC_peer-to-peer_data_channels: persona-a-persona
-    Efficient_animation_for_web_games: Animaciones eficientes
     Audio_for_Web_Games: Audio for Web Games
     2D_collision_detection: 2D collision detection
     Tiles_and_tilemaps_overview: Tiles and tilemaps overview
@@ -247,7 +245,6 @@ l10n:
     Using_async_scripts_for_asm.js: Utiliser des scripts asynchrones pour asm.js
     Optimizing_startup_performance: Optimiser les performances de démarrage
     Using_WebRTC_peer-to-peer_data_channels: Utiliser WebRTC - canaux de données pair-à-pair
-    Efficient_animation_for_web_games: Animation efficace pour un jeu internet
     Audio_for_Web_Games: Audio pour les jeux web
     2D_collision_detection: Détection de collision 2D
     Tiles_and_tilemaps_overview: Carreaux et carrelages
@@ -301,7 +298,6 @@ l10n:
     Using_async_scripts_for_asm.js: asm.js の同期スクリプトを利用する
     Optimizing_startup_performance: 起動パフォーマンスを最適化する
     Using_WebRTC_peer-to-peer_data_channels: ピア通信チャンネルとして WebRTC を利用する
-    Efficient_animation_for_web_games: Web ゲームの効率的なアニメーション
     Audio_for_Web_Games: Web ゲーム向けの音
     2D_collision_detection: 2D 衝突検出
     Tiles_and_tilemaps_overview: タイルとタイルマップの概要
@@ -355,7 +351,6 @@ l10n:
     Using_async_scripts_for_asm.js: asm.js를 위해 async 스크립트 사용하기
     Optimizing_startup_performance: 시작 단계 성능 최적화 하기
     Using_WebRTC_peer-to-peer_data_channels: 피어-투-피어 데이터 채널을 위해 WebRTC 사용하기
-    Efficient_animation_for_web_games: 웹 게임을 위한 효율적인 애니메이션
     Audio_for_Web_Games: 웹 게임을 위한 오디오
     2D_collision_detection: 2D 충돌 감지
     Tiles_and_tilemaps_overview: 타일과 타일맵 개요
@@ -409,7 +404,6 @@ l10n:
     Using_async_scripts_for_asm.js: Usando async scripts para&nbsp;asm.js
     Optimizing_startup_performance: Otimizando a performance de startup
     Using_WebRTC_peer-to-peer_data_channels: Usando canais de dados WebRTC peer-to-peer
-    Efficient_animation_for_web_games: Animação eficiente para jogos web
     Audio_for_Web_Games: Audio para Jogos Web
     2D_collision_detection: Detecção de colisão 2D
     Tiles_and_tilemaps_overview: Visão geral de Tiles e tilemaps
@@ -463,7 +457,6 @@ l10n:
     Using_async_scripts_for_asm.js: Асинхронные скрипты для asm.js
     Optimizing_startup_performance: Оптимизация запуска
     Using_WebRTC_peer-to-peer_data_channels: Использование WebRTC для передачи данных
-    Efficient_animation_for_web_games: Эффективная анимация для веб-игр
     Audio_for_Web_Games: Аудио для веб-игр
     2D_collision_detection: Обнаружение столкновений в 2D
     Tiles_and_tilemaps_overview: Обзор тайлов и тайловых карт

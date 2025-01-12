@@ -75,7 +75,7 @@ animation-timeline: view(x 200px auto);
 > [!NOTE]
 > The scroller and inset values can be specified in any order.
 
-### Formal syntax
+## Formal syntax
 
 {{CSSSyntax}}
 

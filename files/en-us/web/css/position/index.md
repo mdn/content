@@ -31,7 +31,7 @@ position: unset;
 ### Values
 
 - `static`
-  - : The element is positioned according to the [Normal Flow](/en-US/docs/Learn/CSS/CSS_layout/Normal_Flow) of the document. The {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, {{cssxref("left")}}, and {{cssxref("z-index")}} properties have _no effect_. This is the default value.
+  - : The element is positioned according to the [Normal Flow](/en-US/docs/Learn_web_development/Core/CSS_layout/Introduction#normal_layout_flow) of the document. The {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, {{cssxref("left")}}, and {{cssxref("z-index")}} properties have _no effect_. This is the default value.
 - `relative`
 
   - : The element is positioned according to the normal flow of the document, and then offset _relative to itself_ based on the values of `top`, `right`, `bottom`, and `left`. The offset does not affect the position of any other elements; thus, the space given for the element in the page layout is the same as if position were `static`.
@@ -451,4 +451,4 @@ When you put both bulbs in their proper place, you'll notice that they are relat
 
 ## See also
 
-- [Learn CSS: Positioning](/en-US/docs/Learn/CSS/CSS_layout/Positioning)
+- [Learn CSS: Positioning](/en-US/docs/Learn_web_development/Core/CSS_layout/Positioning)

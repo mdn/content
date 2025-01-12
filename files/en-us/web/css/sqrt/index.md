@@ -35,7 +35,7 @@ Returns a {{cssxref("&lt;number&gt;")}} which is the square root of `x`.
 - If `x` is `0⁻`, the result is `0⁻`.
 - If `x` is less than `0`, the result is `NaN`.
 
-### Formal syntax
+## Formal syntax
 
 {{CSSSyntax}}
 

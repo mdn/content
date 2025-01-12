@@ -134,6 +134,6 @@ You can [try out or remix this example in real time on Glitch](https://media-pla
 ## See also
 
 - [Web media technologies](/en-US/docs/Web/Media)
-- Learning: [Video and audio content](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
+- Learning: [HTML video and audio](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
 - [Autoplay guide for media and Web Audio APIs](/en-US/docs/Web/Media/Autoplay_guide)
 - [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

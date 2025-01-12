@@ -370,7 +370,9 @@ function log(text) {
 
 First, we create a {{domxref("DocumentFragment")}} object named `logFragment` if one doesn't currently exist. This element is a pseudo-DOM into which we can insert elements without immediately changing the main DOM itself.
 
-We then create a new {{HTMLElement("div")}} element and set its contents to match the input `text`. Then we append the new element to the end of the pseudo-DOM in `logFragment`. `logFragment` will accumulate log entries until the next time `updateDisplay()` is called because the DOM for the changes.
+We then create a new {{HTMLElement("div")}} element and set its contents to match the input `text`.
+Then we append the new element to the end of the pseudo-DOM in `logFragment`.
+`logFragment` will accumulate log entries until the next time `updateDisplay()` is called, once the DOM is ready for the changes.
 
 ### Running tasks
 

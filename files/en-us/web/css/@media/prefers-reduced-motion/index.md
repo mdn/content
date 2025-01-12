@@ -46,7 +46,7 @@ For Firefox, the `reduce` request is honoured if:
 
 ## Examples
 
-This example uses a scaling animation for the purpose of demonstrating `prefers-reduced-motion`. If you enable the setting for reducing motion in the accessibility preferences on your device, the `prefers-reduced-motion` media query will detect your preference and the CSS within the reduced motion rules, with the same [specificity](/en-US/docs/Web/CSS/Specificity) but coming later in the [CSS source order](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#source_order), will take precedence. As a result, the [animation](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations) on the box will tone down to the `dissolve` animation, which is a more muted animation that is not a vestibular motion trigger.
+This example uses a scaling animation for the purpose of demonstrating `prefers-reduced-motion`. If you enable the setting for reducing motion in the accessibility preferences on your device, the `prefers-reduced-motion` media query will detect your preference and the CSS within the reduced motion rules, with the same [specificity](/en-US/docs/Web/CSS/Specificity) but coming later in the [CSS source order](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts#source_order), will take precedence. As a result, the [animation](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations) on the box will tone down to the `dissolve` animation, which is a more muted animation that is not a vestibular motion trigger.
 
 ### Toning down the animation scaling
 

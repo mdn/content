@@ -89,6 +89,7 @@ input::placeholder {
   color: red;
   font-size: 1.2em;
   font-style: italic;
+  opacity: 0.5;
 }
 ```
 
@@ -98,30 +99,41 @@ input::placeholder {
 
 ### Opaque text
 
-Some browsers (such as Firefox) set the default {{cssxref("opacity")}} of placeholders to something less than 100%. If you want fully opaque placeholder text, set `opacity` to `1`.
+Some browsers make placeholder text less opaque. If you want fully opaque text, then set the {{CSSXref("color")}} property value explicitly. The [`currentColor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword) value can be used to have the same color as the corresponding input element.
 
 #### HTML
 
 ```html
-<input placeholder="Default opacity" />
-<input placeholder="Full opacity" class="force-opaque" />
+<input placeholder="Color set by browser" />
+<input placeholder="Same color as input" class="explicit-color" />
+<input placeholder="Semi-opaque text color" class="opacity-change" />
 ```
 
 #### CSS
 
 ```css
-::placeholder {
+input {
+  font-weight: bold;
   color: green;
 }
 
-.force-opaque::placeholder {
-  opacity: 1;
+.explicit-color::placeholder {
+  /* use the same color as input element to avoid the browser set default color */
+  color: currentColor;
+}
+
+.opacity-change::placeholder {
+  /* less opaque text */
+  color: color-mix(in srgb, currentColor 70%, transparent);
 }
 ```
 
 #### Result
 
-{{EmbedLiveSample("Opaque_text", 200, 60)}}
+{{EmbedLiveSample("default_color", 200, 60)}}
+
+> [!NOTE]
+> Note that browsers use different default colors for placeholder text. For example, Firefox uses the input element's color with 54% opacity, and Chrome uses `darkgray` color. If you want consistent placeholder text color across the browsers, then set the `color` explicitly.
 
 ## Specifications
 
@@ -135,4 +147,4 @@ Some browsers (such as Firefox) set the default {{cssxref("opacity")}} of placeh
 
 - The {{cssxref(":placeholder-shown")}} pseudo-class styles an element that _has_ an active placeholder.
 - Related HTML elements: {{HTMLElement("input")}}, {{HTMLElement("textarea")}}
-- [HTML forms](/en-US/docs/Learn/Forms)
+- [HTML forms](/en-US/docs/Learn_web_development/Extensions/Forms)

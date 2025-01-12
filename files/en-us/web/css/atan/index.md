@@ -44,7 +44,7 @@ That is:
 - `atan(1)` representing `45deg`
 - `atan(infinity)` representing `90deg`.
 
-### Formal syntax
+## Formal syntax
 
 {{CSSSyntax}}
 

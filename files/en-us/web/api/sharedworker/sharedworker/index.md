@@ -82,15 +82,12 @@ const myWorker = new SharedWorker("worker.js");
 
 myWorker.port.start();
 
-first.onchange = () => {
-  myWorker.port.postMessage([first.value, second.value]);
-  console.log("Message posted to worker");
-};
-
-second.onchange = () => {
-  myWorker.port.postMessage([first.value, second.value]);
-  console.log("Message posted to worker");
-};
+[first, second].forEach((input) => {
+  input.onchange = () => {
+    myWorker.port.postMessage([first.value, second.value]);
+    console.log("Message posted to worker");
+  };
+});
 
 myWorker.port.onmessage = (e) => {
   result1.textContent = e.data;

@@ -12,5 +12,5 @@ External stylesheets are generally preferred because they allow you to control t
 
 ## See also
 
-- [CSS first steps](/en-US/docs/Learn/CSS/First_steps)
+- [CSS Styling basics](/en-US/docs/Learn_web_development/Core/Styling_basics)
 - Stylesheets on [Wikipedia](<https://en.wikipedia.org/wiki/Style_sheet_(web_development)>)

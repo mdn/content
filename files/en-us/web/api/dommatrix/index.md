@@ -1,5 +1,5 @@
 ---
-title: DOMMatrix (WebKitCSSMatrix)
+title: DOMMatrix
 slug: Web/API/DOMMatrix
 page-type: web-api-interface
 browser-compat: api.DOMMatrix
@@ -8,10 +8,9 @@ browser-compat: api.DOMMatrix
 {{APIRef("Geometry Interfaces")}}{{AvailableInWorkers}}
 
 The **`DOMMatrix`** interface represents 4×4 matrices, suitable for 2D and 3D operations including rotation and translation. It is a mutable version of the {{domxref("DOMMatrixReadOnly")}} interface.
+The interface is available inside [web workers](/en-US/docs/Web/API/Web_Workers_API).
 
 **`WebKitCSSMatrix`** and **`SVGMatrix`** are aliases to **`DOMMatrix`**.
-
-This interface should be available inside [web workers](/en-US/docs/Web/API/Web_Workers_API), though some implementations don't allow it yet.
 
 {{InheritanceDiagram}}
 
@@ -52,7 +51,7 @@ _This interface includes the following methods, as well as the methods it inheri
 - {{domxref("DOMMatrix.multiplySelf()")}}
   - : Modifies the matrix by post-multiplying it with the specified `DOMMatrix`. This is equivalent to the dot product `A⋅B`, where matrix `A` is the source matrix and `B` is the matrix given as an input to the method. Returns itself.
 - {{domxref("DOMMatrix.preMultiplySelf()")}}
-  - : Modifies the matrix by pre-multiplying it with the specified `DOMMatrix`. This is equivalent to the dot product `B⋅A`, where matrix `A` is the source matrix and `B` is the matrix given as an input to the method. Returns itself.
+  - : Modifies the matrix by pre-multiplying it with the specified `DOMMatrix`. Returns itself.
 - {{domxref("DOMMatrix.translateSelf()")}}
   - : Modifies the matrix by applying the specified vector. The default vector is `[0, 0, 0]`. Returns itself.
 - {{domxref("DOMMatrix.scaleSelf()")}}

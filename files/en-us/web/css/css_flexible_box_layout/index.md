@@ -83,7 +83,7 @@ body {
   - : How to create flex containers with multiple lines and control the display of the items in those lines.
 - [Typical use cases of flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox)
   - : Common design patterns that are typical Flexbox use cases.
-- [CSS layout: flexbox](/en-US/docs/Learn/CSS/CSS_layout/Flexbox)
+- [CSS layout: flexbox](/en-US/docs/Learn_web_development/Core/CSS_layout/Flexbox)
   - : Learn how to use flexbox layout to create web layouts.
 - [Box alignment in flexbox](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox)
   - : Details features of [CSS box alignment](/en-US/docs/Web/CSS/CSS_box_alignment) which are specific to flexbox.

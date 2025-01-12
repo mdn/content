@@ -50,5 +50,5 @@ _This interface also inherits methods of its parent, {{domxref("Event")}}._
 
 ## See also
 
-- [Introduction to events](/en-US/docs/Learn/JavaScript/Building_blocks/Events)
+- [Introduction to events](/en-US/docs/Learn_web_development/Core/Scripting/Events)
 - {{domxref("Event")}}

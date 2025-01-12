@@ -17,7 +17,7 @@ Effective placeholder text includes a word or short phrase that hints at the exp
 The `placeholder` attribute is supported by the following input types: `{{HTMLElement("input/text", "text")}}`, `{{HTMLElement("input/search", "search")}}`, `{{HTMLElement("input/url", "url")}}`, `{{HTMLElement("input/tel", "tel")}}`, `{{HTMLElement("input/email", "email")}}`, and `{{HTMLElement("input/password", "password")}}`. It is also supported by the `{{HTMLElement("textarea")}}` element. The [example](#example) below shows the `placeholder` attribute in use to explain the expected format of an input field.
 
 > [!NOTE]
-> The `placeholder` attribute can't include any line feeds (LF) or carriage returns (CR). If either is included in the value, the placeholder text will be clipped.
+> Except in `{{HTMLElement("textarea")}}` elements, the `placeholder` attribute can't include any line feeds (LF) or carriage returns (CR). If either is included in the value, the placeholder text will be clipped.
 
 ## Accessibility concerns
 

@@ -98,7 +98,7 @@ align-items: unset;
 
   - : Used alongside an alignment keyword. Regardless of the relative sizes of the item and alignment container and whether overflow which causes data loss might happen, the given alignment value is honored.
 
-There are also two values that were defined for flexbox, as they are base on [flex model axes](/en-US/docs/Learn/CSS/CSS_layout/Flexbox#the_flex_model) concepts, that work in grid layouts as well:
+There are also two values that were defined for flexbox, as they are base on [flex model axes](/en-US/docs/Learn_web_development/Core/CSS_layout/Flexbox#the_flex_model) concepts, that work in grid layouts as well:
 
 - `flex-start`
 

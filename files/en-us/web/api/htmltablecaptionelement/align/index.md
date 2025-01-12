@@ -42,4 +42,4 @@ Use CSS `text-align` instead. An [example](/en-US/docs/Web/CSS/text-align#table_
 
 - {{cssxref("text-align")}}
 - {{cssxref("caption-side")}}
-- [Styling tables](/en-US/docs/Learn/CSS/Building_blocks/Styling_tables)
+- [Learn: Styling tables](/en-US/docs/Learn_web_development/Core/Styling_basics/Tables)

@@ -100,3 +100,7 @@ HTTP allows another negotiation type: _agent-driven negotiation_ or _reactive ne
 ![A client requesting a URL with headers denoting a preference for content types. The server has multiple resources represented by the URL and sends back multiple responses so the client may choose a body with a preferred compression algorithms applied.](httpnego3.png)
 
 Unfortunately, the HTTP standard doesn't specify the format of the page for choosing between the available resources, which prevents the process from being automated. Besides falling back to the _server-driven negotiation_, this method is almost always used with scripting, especially with JavaScript redirection: after having checked for the negotiation criteria, the script performs the redirection. A second problem is that one more request is needed to fetch the real resource, slowing the availability of the resource to the user.
+
+## See also
+
+- [Caching](/en-US/docs/Web/HTTP/Caching)
