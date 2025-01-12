@@ -120,19 +120,15 @@ The example below shows a three-column track grid with new rows created at a min
 - {{CSSxRef("&lt;flex&gt;")}} (`fr` unit)
 
 ```html
-<auto-repeat>
-  <auto-track-list>
-    <line-name-list>
-      <line-names>
-        <track-list>
-          <track-repeat>
-            <track-size> auto-fill auto-fit</track-size></track-repeat
-          ></track-list
-        ></line-names
-      ></line-name-list
-    ></auto-track-list
-  ></auto-repeat
->
+<!-- these pages are a work in progress -->
+<auto-repeat />
+<auto-track-list />
+<line-name-list />
+<line-names />
+<track-list />
+<track-repeat />
+<track-size />
+auto-fill auto-fit
 ```
 
 ### Terms and glossary definitions
@@ -152,51 +148,51 @@ The example below shows a three-column track grid with new rows created at a min
 
 - [Basic concepts of grid layout](/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
 
-  - :
+  - : x
 
 - [Relationship of grid layout with other layout methods](/en-US/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)
 
-  - :
+  - : x
 
 - [Grid template areas](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)
 
-  - :
+  - : x
 
 - [Grid layout using line-based placement](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
 
-  - :
+  - : x
 
 - [Grid layout using named grid lines](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines)
 
-  - :
+  - : x
 
 - [Auto-placement in grid layout](/en-US/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout)
 
-  - :
+  - : x
 
 - [Box alignment in grid layout](/en-US/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
 
-  - :
+  - : x
 
 - [Grids, logical values, and writing modes](/en-US/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)
 
-  - :
+  - : x
 
 - [Grid layout and accessibility](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility)
 
-  - :
+  - : x
 
 - [Realizing common layouts using grids](/en-US/docs/Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids)
 
-  - :
+  - : x
 
 - [Subgrid](/en-US/docs/Web/CSS/CSS_grid_layout/Subgrid)
 
-  - :
+  - : x
 
 - [Masonry layout](/en-US/docs/Web/CSS/CSS_grid_layout/Masonry_layout)
 
-  - :
+  - : x
 
 - [Box alignment in CSS grid layout](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_grid_layout)
 
