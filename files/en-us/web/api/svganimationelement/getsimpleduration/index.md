@@ -10,6 +10,8 @@ browser-compat: api.SVGAnimationElement.getSimpleDuration
 
 The {{domxref("SVGAnimationElement")}} method `getSimpleDuration()` returns a float representing the number of seconds for the simple duration for this animation.
 
+This property reflects the {{SVGAttr("dur")}} attribute of the {{SVGElement("animate")}} element.
+
 ## Syntax
 
 ```js-nolint

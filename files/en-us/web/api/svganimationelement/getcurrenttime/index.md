@@ -10,7 +10,9 @@ browser-compat: api.SVGAnimationElement.getCurrentTime
 
 The {{domxref("SVGAnimationElement")}} method `getCurrentTime()` returns a float representing the current time in seconds relative to time zero for the given time container.
 
-It reflects the {{SVGAttr("dur")}} attribute of the {{SVGElement("animate")}} element.
+Time zero refers to the moment when the time container begins its timeline. It acts as the starting reference point for all animations within that container.
+
+A time container is an element or context that defines a local timeline for one or more animations. Animations inside the time container are measured relative to its timeline. If a time container is delayed, paused, or manipulated, all animations within it adjust accordingly.
 
 ## Syntax
 
@@ -28,13 +30,34 @@ A float.
 
 ## Examples
 
-This example demonstrates how to use `getCurrentTime()` to retrieve the current time of an animation element:
+This example demonstrates how the `getCurrentTime()` method retrieves the time elapsed since the time container's time zero.
+
+```html
+<svg width="200" height="200" viewBox="0 0 200 200">
+  <!-- A simple circle animation -->
+  <circle cx="50" cy="50" r="20" fill="rebeccapurple">
+    <animate
+      attributeName="cx"
+      from="50"
+      to="150"
+      dur="4s"
+      repeatCount="indefinite" />
+  </circle>
+</svg>
+```
 
 ```js
 const animationElement = document.querySelector("animate");
-const currentTime = animationElement.getCurrentTime();
-console.log(`The current time is: ${currentTime} seconds`);
+
+setInterval(() => {
+  const currentTime = animationElement.getCurrentTime();
+  console.log(
+    `Current time relative to the time container: ${currentTime} seconds`,
+  );
+}, 1000);
 ```
+
+The animation starts at `time zero = 0` and runs indefinitely and the `getCurrentTime()` value increments continuously within the context of the time container.
 
 ## Specifications
 
