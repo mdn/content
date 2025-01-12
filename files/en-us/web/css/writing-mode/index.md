@@ -291,7 +291,7 @@ span {
 
 ## See also
 
-- SVG [`writing-mode`](/en-US/docs/Web/SVG/Attribute/writing-mode) attribute
+- SVG {{SVGAttr("writing-mode")}} attribute
 - {{Cssxref("direction")}}
 - {{Cssxref("unicode-bidi")}}
 - {{Cssxref("text-orientation")}}

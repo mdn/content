@@ -76,4 +76,4 @@ For a description of the values see the CSS {{cssxref("filter")}} property.
 ## See also
 
 - {{SVGElement("filter")}}
-- {{cssxref("filter")}}
+- CSS {{cssxref("filter")}} property

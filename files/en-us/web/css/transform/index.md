@@ -193,6 +193,7 @@ Please see [Using CSS transforms](/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_t
 
 ## See also
 
+- SVG {{SVGAttr("transform")}} attribute
 - [Using CSS transforms](/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
 - {{cssxref("&lt;transform-function&gt;")}} data type with all the transform functions explained.
 - Individual CSS properties: {{cssxref('translate')}}, {{cssxref('rotate')}}, and {{cssxref('scale')}} (there is no `skew` property).

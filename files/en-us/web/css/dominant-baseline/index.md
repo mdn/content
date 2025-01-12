@@ -155,4 +155,4 @@ text:nth-of-type(8) {
 - {{cssxref('alignment-baseline')}}
 - {{cssxref('text-anchor')}}
 - {{cssxref('vertical-align')}}
-- {{SVGAttr('dominant-baseline')}} SVG attribute
+- SVG {{SVGAttr('dominant-baseline')}} attribute

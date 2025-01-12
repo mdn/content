@@ -466,6 +466,7 @@ You can find more examples in the pages for each separate display type under [Gr
 
 ## See also
 
+- SVG {{SVGAttr("display")}} attribute
 - [Block and inline layout in normal flow](/en-US/docs/Web/CSS/CSS_flow_layout/Block_and_inline_layout_in_normal_flow)
 - [Introduction to formatting contexts](/en-US/docs/Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts)
 - {{CSSxRef("visibility")}}, {{CSSxRef("float")}}, {{CSSxRef("position")}}

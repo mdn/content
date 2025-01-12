@@ -72,4 +72,4 @@ For a description of the values, please refer to the [CSS `font-size`](/en-US/do
 
 ## See also
 
-- {{cssxref("font-size")}}
+- CSS {{cssxref("font-size")}} property

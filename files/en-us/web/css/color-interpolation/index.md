@@ -127,5 +127,5 @@ svg {
 ## See also
 
 - {{SVGElement("linearGradient")}}
-- {{SVGElement("radialGradient")}}
-- {{SVGAttr("color-interpolation")}}
+- {{SVGElement("radialGradient")}
+- SVG {{SVGAttr("color-interpolation")}} attribute

@@ -120,6 +120,7 @@ p.small {
 
 ## See also
 
-- [`text-transform`](/en-US/docs/Web/CSS/text-transform)
-- [`text-combine-upright`](/en-US/docs/Web/CSS/text-combine-upright)
-- [`text-orientation`](/en-US/docs/Web/CSS/text-orientation)
+- SVG {{SVGAttr("font-variant")}} attribute
+- {{cssxref("text-transform")}}
+- {{cssxref("text-combine-upright")}}
+- {{cssxref("text-orientation")}}

@@ -91,6 +91,7 @@ blockquote {
 
 ## See also
 
+- SVG {{SVGAttr("direction")}} attribute
 - {{Cssxref("unicode-bidi")}}
 - {{Cssxref("writing-mode")}}
 - The HTML [`dir`](/en-US/docs/Web/HTML/Global_attributes/dir) global attribute

@@ -140,6 +140,7 @@ div {
 
 ## See also
 
+- SVG {{SVGAttr("height")}} attribute
 - {{cssxref("width")}}
 - {{cssxref("box-sizing")}}
 - {{cssxref("min-height")}}, {{cssxref("max-height")}}

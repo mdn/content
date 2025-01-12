@@ -257,6 +257,7 @@ p {
 
 ## See also
 
+- SVG {{SVGAttr("font-stretch")}} attribute
 - {{cssxref("font-style")}}
 - {{cssxref("font-weight")}}
 - [Learn: Fundamental text and font styling](/en-US/docs/Learn_web_development/Core/Text_styling/Fundamentals)
