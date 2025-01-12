@@ -87,25 +87,27 @@ The example below shows a three-column track grid with new rows created at a min
 
 ### Properties
 
-- {{CSSxRef("display")}}
-- {{CSSxRef("grid-template-columns")}}
-- {{CSSxRef("grid-template-rows")}}
-- {{CSSxRef("grid-template-areas")}}
-- {{CSSxRef("grid-template")}}
-- {{CSSxRef("grid-auto-columns")}}
-- {{CSSxRef("grid-auto-rows")}}
-- {{CSSxRef("grid-auto-flow")}}
-- {{CSSxRef("grid")}}
-- {{CSSxRef("grid-row-start")}}
-- {{CSSxRef("grid-column-start")}}
-- {{CSSxRef("grid-row-end")}}
-- {{CSSxRef("grid-column-end")}}
-- {{CSSxRef("grid-row")}}
-- {{CSSxRef("grid-column")}}
-- {{CSSxRef("grid-area")}}
-- {{CSSxRef("row-gap")}}
-- {{CSSxRef("column-gap")}}
-- {{CSSxRef("gap")}}
+- Implicit grid properties:
+
+  - {{CSSxRef("grid-auto-columns")}}
+  - {{CSSxRef("grid-auto-flow")}}
+  - {{CSSxRef("grid-auto-rows")}}
+
+- Explicit grid properties:
+  - {{CSSxRef("grid-template-columns")}}
+  - {{CSSxRef("grid-template-rows")}}
+  - {{CSSxRef("grid-template-areas")}}
+    - {{CSSxRef("grid-template")}} shorthand
+- {{CSSxRef("grid")}} shorthand
+
+- Grid placement properties:
+  - {{CSSxRef("grid-column-start")}}
+  - {{CSSxRef("grid-column-end")}}
+    - {{CSSxRef("grid-column")}} shorthand
+  - {{CSSxRef("grid-row-start")}}
+  - {{CSSxRef("grid-row-end")}}
+    - {{CSSxRef("grid-row")}} shorthand
+      - {{CSSxRef("grid-area")}} shorthand
 
 ### Functions
 
@@ -113,24 +115,130 @@ The example below shows a three-column track grid with new rows created at a min
 - {{CSSxRef("minmax", "minmax()")}}
 - {{CSSxRef("fit-content_function", "fit-content()")}}
 
-### Data types
+### Data types and values
 
-- {{CSSxRef("&lt;flex&gt;")}}
+- {{CSSxRef("&lt;flex&gt;")}} (`fr` unit)
+
+```html
+<auto-repeat>
+  <auto-track-list>
+    <line-name-list>
+      <line-names>
+        <track-list>
+          <track-repeat>
+            <track-size> auto-fill auto-fit</track-size></track-repeat
+          ></track-list
+        ></line-names
+      ></line-name-list
+    ></auto-track-list
+  ></auto-repeat
+>
+```
+
+### Terms and glossary definitions
+
+- {{glossary("Grid")}}
+- {{glossary("Grid areas")}}
+- {{glossary("Grid axis")}}
+- {{glossary("Grid cell")}}
+- {{glossary("Grid column")}}
+- {{glossary("Grid container")}}
+- {{glossary("Grid lines")}}
+- {{glossary("Grid row")}}
+- {{glossary("Grid tracks")}}
+- {{glossary("Gutters")}}
 
 ## Guides
 
 - [Basic concepts of grid layout](/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
+
+  - :
+
 - [Relationship of grid layout with other layout methods](/en-US/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)
+
+  - :
+
 - [Grid template areas](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)
+
+  - :
+
 - [Grid layout using line-based placement](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
+
+  - :
+
 - [Grid layout using named grid lines](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines)
+
+  - :
+
 - [Auto-placement in grid layout](/en-US/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout)
+
+  - :
+
 - [Box alignment in grid layout](/en-US/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
+
+  - :
+
 - [Grids, logical values, and writing modes](/en-US/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)
+
+  - :
+
 - [Grid layout and accessibility](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility)
+
+  - :
+
 - [Realizing common layouts using grids](/en-US/docs/Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids)
+
+  - :
+
 - [Subgrid](/en-US/docs/Web/CSS/CSS_grid_layout/Subgrid)
+
+  - :
+
 - [Masonry layout](/en-US/docs/Web/CSS/CSS_grid_layout/Masonry_layout)
+
+  - :
+
+- [Box alignment in CSS grid layout](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_grid_layout)
+
+  - : How box alignment works in the context of grid layout.
+
+## Related features
+
+[CSS display](/en-US/docs/Web/CSS/CSS_display) module
+
+- {{CSSxRef("display")}}
+- {{CSSxRef("order")}}
+
+[CSS box alignment](/en-US/docs/Web/CSS/CSS_box_alignment) module
+
+- {{cssxref("align-content")}}
+- {{cssxref("align-items")}}
+- {{cssxref("align-self")}}
+- {{cssxref("column-gap")}}
+- {{cssxref("gap")}}
+- {{cssxref("justify-content")}}
+- {{cssxref("justify-items")}}
+- {{cssxref("justify-self")}}
+- {{cssxref("place-content")}}
+- {{cssxref("place-items")}}
+- {{cssxref("place-self")}}
+- {{cssxref("row-gap")}}
+
+[CSS box sizing](/en-US/docs/Web/CSS/CSS_box_sizing) module
+
+- {{cssxref("aspect-ratio")}}
+- {{cssxref("box-sizing")}}
+- {{cssxref("height")}}
+- {{cssxref("max-height")}}
+- {{cssxref("max-width")}}
+- {{cssxref("min-height")}}
+- {{cssxref("min-width")}}
+- {{cssxref("width")}}
+- {{cssxref("ratio")}} data type
+- {{cssxref("min-content")}} value
+- {{cssxref("max-content")}} value
+- {{cssxref("fit-content")}} value
+- {{cssxref("fit-content_function", "fit-content()")}} function
 
 ## Specifications
 
@@ -138,16 +246,6 @@ The example below shows a three-column track grid with new rows created at a min
 
 ## See also
 
-- Glossary:
-  - [Grid](/en-US/docs/Glossary/Grid)
-  - [Grid lines](/en-US/docs/Glossary/Grid_Lines)
-  - [Grid tracks](/en-US/docs/Glossary/Grid_Tracks)
-  - [Grid cell](/en-US/docs/Glossary/Grid_Cell)
-  - [Grid area](/en-US/docs/Glossary/Grid_Areas)
-  - [Gutters](/en-US/docs/Glossary/Gutters)
-  - [Grid axis](/en-US/docs/Glossary/Grid_Axis)
-  - [Grid row](/en-US/docs/Glossary/Grid_Row)
-  - [Grid column](/en-US/docs/Glossary/Grid_Column)
 - [CSS flexible box layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout) module
 - [CSS display](/en-US/docs/Web/CSS/CSS_display) module
 - [Grid by example](https://gridbyexample.com/)
