@@ -10,6 +10,8 @@ browser-compat: api.SVGAnimationElement.getCurrentTime
 
 The {{domxref("SVGAnimationElement")}} method `getCurrentTime()` returns a float representing the current time in seconds relative to time zero for the given time container.
 
+It reflects the {{SVGAttr("dur")}} attribute of the {{SVGElement("animate")}} element.
+
 ## Syntax
 
 ```js-nolint
