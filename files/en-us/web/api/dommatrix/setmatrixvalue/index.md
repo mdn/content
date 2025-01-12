@@ -61,6 +61,6 @@ console.log(matrix.is2D); // false
 ## See also
 
 - {{domxref("DOMMatrix.translateSelf()")}}
-- {{domxref("DOMMatrixReadOnly.is2D")}}
+- [`DOMMatrixReadOnly.is2D`](/en-US/docs/Web/API/DOMMatrixReadOnly#is2d)
 - CSS {{CSSxRef("transform-function/matrix", "matrix()")}} function
 - CSS {{CSSxRef("transform-function/matrix3d", "matrix3d()")}} function
