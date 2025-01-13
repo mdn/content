@@ -24,7 +24,7 @@ The `"declarativeNetRequestFeedback"` permission is required to use {{WebExtAPIR
 The declarative rules are defined by four fields:
 
 - `id` – An ID that uniquely identifies a rule within a ruleset. Mandatory and should be >= 1.
-- `priority` – The rule priority. When specified, it should be >= 1. Defaults to 1. See [Matching precedents](#matching_precedents) for details on how priority affects which rules are applied.
+- `priority` – The rule priority. When specified, it should be >= 1. Defaults to 1. See [Matching precedence](#matching_precedence) for details on how priority affects which rules are applied.
 - `condition` – The {{WebExtAPIRef("declarativeNetRequest.RuleCondition","condition")}} under which this rule is triggered.
 - `action` – The {{WebExtAPIRef("declarativeNetRequest.RuleAction","action")}} to take when the rule is matched. Rules can do one of these things:
   - block a network request.
@@ -115,7 +115,7 @@ The number of dynamic and session-scoped rules an extension can add is limited t
 - In Safari and up to Chrome 119 and Firefox 127, the value of {{WebExtAPIRef("declarativeNetRequest.MAX_NUMBER_OF_DYNAMIC_AND_SESSION_RULES","MAX_NUMBER_OF_DYNAMIC_AND_SESSION_RULES")}}.
 - From Chrome 120 and Firefox 128, the values of {{WebExtAPIRef("declarativeNetRequest.MAX_NUMBER_OF_DYNAMIC_RULES","MAX_NUMBER_OF_DYNAMIC_RULES")}} and {{WebExtAPIRef("declarativeNetRequest.MAX_NUMBER_OF_SESSION_RULES","MAX_NUMBER_OF_SESSION_RULES")}}
 
-## Matching precedents
+## Matching precedence
 
 When the browser evaluates how to handle requests, it checks each extension's rules that have a condition that matches the request and chooses the one to consider applying as follows:
 

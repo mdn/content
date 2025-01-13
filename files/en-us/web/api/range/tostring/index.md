@@ -11,10 +11,6 @@ browser-compat: api.Range.toString
 The **`Range.toString()`** method is a {{Glossary("stringifier")}} returning
 the text of the {{domxref("Range")}}.
 
-Alerting the contents of a {{domxref("Range")}} makes an implicit
-`toString()` call, so comparing range and text through an alert dialog is
-ineffective.
-
 ## Syntax
 
 ```js-nolint
