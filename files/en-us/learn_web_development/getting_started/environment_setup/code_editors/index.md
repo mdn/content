@@ -35,7 +35,7 @@ Previously, we told you to install a code editor, as you'll need one to work thr
 
 Before starting to code, you may have had some experience working on text documents in a program like Microsoft Word. You might also be wondering whether you can work with code in these same programs. Unfortunately, the answer is "not really":
 
-- Programs like Micosoft Word are **Binary file** editors; their files contain a non-text format that can only be understood by those programs. Website source code, on the other hand, is stored as plain text.
+- Programs like Microsoft Word are **Binary file** editors; their files contain a non-text format that can only be understood by those programs. Website source code, on the other hand, is stored as plain text.
 - Word _can_ open and edit plain text files, but it doesn't handle them very well. It doesn't have a featureset designed for working with code — it is for writing documents such as letters and reports. You need a program that is designed to cleanly handle and output plain text, and work with code.
 
 You probably already have a plain text editor on your computer. By default, Windows includes [Notepad](https://en.wikipedia.org/wiki/Microsoft_Notepad) and macOS comes with [TextEdit](https://en.wikipedia.org/wiki/TextEdit). Linux distros vary; the Ubuntu 22.04 LTS release comes with [GNOME Text Editor](https://en.wikipedia.org/wiki/GNOME_Text_Editor) by default. Default OS plain text editors can be OK, but they also have a limited feature set.
@@ -87,8 +87,8 @@ Let's try an exercise in VS Code:
 
 VS Code provides other syntax features too. For example:
 
-- You'll see a thin vertical line travelling down from the `function` keyword to the closing curly brace (`}`) — these lines are used to mark different [indentation](https://en.wikipedia.org/wiki/Indentation_style) levels in code, making it easier to identify where blocks begin and end.
-- Also try moving the flashing text cursor over the opening or closing curly brace (`{` or `}`) — you'll see both of them highlighted. This also helps identify the start and end of blocks, and is useful when are trying to find where you are missing a character when you have a more complicated structure with lots of nested blocks. This highlighting also works with other delimeters such as parentheses (`(` and `)`) and square brackets (`[` and `]`).
+- You'll see a thin vertical line traveling down from the `function` keyword to the closing curly brace (`}`) — these lines are used to mark different [indentation](https://en.wikipedia.org/wiki/Indentation_style) levels in code, making it easier to identify where blocks begin and end.
+- Also try moving the flashing text cursor over the opening or closing curly brace (`{` or `}`) — you'll see both of them highlighted. This also helps identify the start and end of blocks, and is useful when are trying to find where you are missing a character when you have a more complicated structure with lots of nested blocks. This highlighting also works with other delimiters such as parentheses (`(` and `)`) and square brackets (`[` and `]`).
 
 ### Code completion/suggestion
 

@@ -132,7 +132,7 @@ async function* g3() {
   yield* g2();
 }
 
-const gen = g4();
+const gen = g3();
 
 console.log(await gen.next()); // {value: "foo", done: false}
 console.log(await gen.next()); // {value: "bar", done: false}
