@@ -239,7 +239,6 @@ In this example, we set the CSS value of {{CSSXRef("background-color")}} to the 
 
 #### Result
 
-// TODO: This live Example needs to be adjusted
 {{EmbedLiveSample("color_value", "100%", 50)}}
 
 ### Using a fallback value
