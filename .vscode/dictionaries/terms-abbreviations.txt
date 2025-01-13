@@ -714,6 +714,7 @@ sundried
 sunsetting
 supercookie
 superdomain
+superpowered
 superscaling
 supersets
 SVCB
