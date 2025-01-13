@@ -277,14 +277,93 @@ The resulting values for {{cssxref("view-transition-name")}} are `card-1`, `card
 
 ```html
 <div class="cards">
-  <div class="card" id="card-1"></div>
-  <div class="card" id="card-2"></div>
-  <div class="card" id="card-3"></div>
-  <div class="card" id="card-4"></div>
+  <div class="card" id="card-1">1</div>
+  <div class="card" id="card-2">2</div>
+  <div class="card" id="card-3">3</div>
+  <div class="card" id="card-4">4</div>
+</div>
+```
+
+```html hidden
+<button>Shuffle cards</button>
+
+<div class="warning">
+  <p>
+    You browser does not support advanced <code>attr()</code>. As a result, this
+    demo won’t do anything.
+  </p>
 </div>
 ```
 
 #### CSS
+
+```css hidden
+:root {
+  view-transition-name: none;
+}
+::view-transition {
+  pointer-events: none;
+}
+
+@supports (x: attr(x type(*))) {
+  .warning {
+    display: none;
+  }
+}
+
+@layer layout {
+  .cards {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    padding: 1em;
+  }
+
+  .card {
+    border-radius: 0.25em;
+    width: 20vw;
+    max-width: 5em;
+    aspect-ratio: 1 / 1.6;
+    background: lightgrey;
+
+    display: grid;
+    place-content: center;
+    font-size: 2em;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    min-height: 100svh;
+    display: grid;
+    place-content: center;
+  }
+
+  button {
+    justify-self: center;
+  }
+}
+
+@layer warning {
+  .warning {
+    padding: 1em;
+    border: 1px solid #ccc;
+    background: rgba(255 255 205 / 0.8);
+    text-align: center;
+    order: -1;
+    margin: 1em;
+  }
+
+  .warning > :first-child {
+    margin-top: 0;
+  }
+  .warning > :last-child {
+    margin-bottom: 0;
+  }
+}
+```
 
 ```css
 .card[id] {
@@ -292,6 +371,28 @@ The resulting values for {{cssxref("view-transition-name")}} are `card-1`, `card
   view-transition-class: card;
 }
 ```
+
+#### Result
+
+```js hidden
+const shuffle = (array) => {
+  for (let i = array.length - 1; i >= 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+};
+document.querySelector("button").addEventListener("click", (e) => {
+  const $cards = Array.from(document.querySelectorAll(".card"));
+  shuffle($cards);
+  document.startViewTransition(() => {
+    $cards.forEach(($card, i) => {
+      $card.style.setProperty("order", i);
+    });
+  });
+});
+```
+
+{{EmbedLiveSample("parsing_attr_values_as_custom-idents", "100%", 400)}}
 
 ### Using dimension units
 
