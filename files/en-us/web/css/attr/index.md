@@ -49,15 +49,15 @@ The parameters are:
   - : The attribute name whose value should be retrieved from the selected HTML element(s).
 - `<attr-type>`
 
-  - : Specifies how the attribute value is parsed into a CSS value. This can be the `string` keyword, a `type()` function, a CSS dimension unit. When omitted, it defaults to `string`.
+  - : Specifies how the attribute value is parsed into a CSS value. This can be the `string` keyword, a `type()` function, or a CSS dimension unit. When omitted, it defaults to `string`.
 
-    - The `string` keyword, which parses the value into a CSS string.
+    - The `string` keyword parses the value into a CSS string.
 
       ```css
       attr(data-name string, "stranger")
       ```
 
-    - The `type()` function, which takes a `<syntax>` as its argument that specifies what [data type](/en-US/docs/Web/CSS/CSS_Types) to parse the value into. The `<syntax>` can be {{CSSxRef("&lt;angle&gt;")}}, {{CSSxRef("&lt;color&gt;")}}, {{CSSxRef("&lt;custom-ident&gt;")}}, {{CSSxRef("&lt;image&gt;")}}, {{CSSxRef("&lt;integer&gt;")}}, {{CSSxRef("&lt;length&gt;")}}, {{CSSxRef("&lt;length-percentage&gt;")}}, {{CSSxRef("&lt;number&gt;")}}, {{CSSxRef("&lt;percentage&gt;")}}, {{CSSxRef("&lt;resolution&gt;")}}, {{CSSxRef("&lt;string&gt;")}}, {{CSSxRef("&lt;time&gt;")}}, and {{CSSxRef("&lt;transform-function&gt;")}}, or a combination thereof.
+    - The `type()` function takes a `<syntax>` as its argument that specifies what [data type](/en-US/docs/Web/CSS/CSS_Types) to parse the value into. The `<syntax>` can be {{CSSxRef("&lt;angle&gt;")}}, {{CSSxRef("&lt;color&gt;")}}, {{CSSxRef("&lt;custom-ident&gt;")}}, {{CSSxRef("&lt;image&gt;")}}, {{CSSxRef("&lt;integer&gt;")}}, {{CSSxRef("&lt;length&gt;")}}, {{CSSxRef("&lt;length-percentage&gt;")}}, {{CSSxRef("&lt;number&gt;")}}, {{CSSxRef("&lt;percentage&gt;")}}, {{CSSxRef("&lt;resolution&gt;")}}, {{CSSxRef("&lt;string&gt;")}}, {{CSSxRef("&lt;time&gt;")}}, {{CSSxRef("&lt;transform-function&gt;")}}, or a combination thereof.
 
       ```css
       attr(id type(<custom-ident>), none)
@@ -67,7 +67,7 @@ The parameters are:
 
       Excluded from this list is {{CSSxRef("&lt;url&gt;")}} for [security reasons](#limitations_and_security).
 
-    - An `<attr-unit>`, which is an identifier that matches the `%` character or a [CSS distance unit](/docs/Web/CSS/CSS_Values_and_Units#distance_units) such as `px`, `rem`, `deg`, `s`, …
+    - The `<attr-unit>` identifier specifies the unit a numeric value should have (if any). It can be the `%` character (percentage) or a [CSS distance unit](/docs/Web/CSS/CSS_Values_and_Units#distance_units) such as `px`, `rem`, `deg`, `s`, etc.
 
       ```css
       attr(data-size rem)
