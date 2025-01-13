@@ -40,6 +40,10 @@ A new `Temporal.Instant` object representing the instant in time specified by `e
 ```js
 const instant = new Temporal.Instant(0n);
 console.log(instant.toString()); // 1970-01-01T00:00:00Z
+const vostok1Liftoff = new Temporal.Instant(-275248380000000000n);
+console.log(vostok1Liftoff.toString()); // 1961-04-12T06:07:00Z
+const sts1Liftoff = new Temporal.Instant(355924804000000000n);
+console.log(sts1Liftoff.toString()); // 1981-04-12T12:00:04Z
 ```
 
 ## Specifications

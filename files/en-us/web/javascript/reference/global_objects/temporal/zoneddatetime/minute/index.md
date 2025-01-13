@@ -33,7 +33,7 @@ Typically, `minute` always goes from 0 to 59 and then back to 0, even when passi
 ```js
 const dt = Temporal.ZonedDateTime.from(
   "2021-10-03T01:59:00+10:30[Australia/Lord_Howe]",
-).add({ minutes: 1 });
+);
 console.log(dt.minute); // 59
 const dt2 = dt.add({ minutes: 1 });
 console.log(dt2.minute); // 30

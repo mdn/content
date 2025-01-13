@@ -38,6 +38,11 @@ A new `Temporal.Instant` object representing the instant in time specified by `e
 ```js
 const instant = Temporal.Instant.fromEpochNanoseconds(0n);
 console.log(instant.toString()); // 1970-01-01T00:00:00Z
+const vostok1Liftoff =
+  Temporal.Instant.fromEpochNanoseconds(-275248380000000000n);
+console.log(vostok1Liftoff.toString()); // 1961-04-12T06:07:00Z
+const sts1Liftoff = Temporal.Instant.fromEpochNanoseconds(355924804000000000n);
+console.log(sts1Liftoff.toString()); // 1981-04-12T12:00:04Z
 ```
 
 ## Specifications
