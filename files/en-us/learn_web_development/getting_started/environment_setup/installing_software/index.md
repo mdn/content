@@ -42,7 +42,7 @@ For now, we would recommend that you install [Visual Studio Code](https://code.v
 Having modern web browsers available to you is essential for web development so that you can test your websites or apps on the browsers your visitors use to access them. You also need to keep your web browsers up-to-date so that they support the latest web technologies and have the latest security fixes applied.
 
 > [!NOTE]
-> Most browswers tend to install updates automatically, applying the changes when they are restarted. You can usually check for updates on the browser "About" page, for example available in the menu at _Firefox_ > _About Firefox_ or _Chrome_ > _About Google Chrome_ on Firefox/Chrome for macOS, or the menu icon > _Help_ > _About Firefox_ or menu icon > _Help_ > _About Google Chrome_ on Firefox/Chrome for Windows.
+> Most browsers tend to install updates automatically, applying the changes when they are restarted. You can usually check for updates on the browser "About" page, for example available in the menu at _Firefox_ > _About Firefox_ or _Chrome_ > _About Google Chrome_ on Firefox/Chrome for macOS, or the menu icon > _Help_ > _About Firefox_ or menu icon > _Help_ > _About Google Chrome_ on Firefox/Chrome for Windows.
 
 For now, you should install a couple of desktop and mobile/alternative device browsers to test your code in. You'll most commonly come across web browsers on desktop, laptop, and mobile devices, but you will also come across web browsers on other devices such as tablets, watches, and TVs. If possible, make sure you have one browser from each line installed and available to test on (so you don't just test in multiple browsers based on the same rendering engine):
 
@@ -71,7 +71,7 @@ One of the easiest options we've found to make a local server available is to us
 4. Press the _Install_ button to install the extension.
 5. Now, when you are working on an HTML file in the editor, you should be able to click the "Show Preview" button to open the live example up in a separate tab.
 
-The above option is simple, but not that flexible. In future, you may want to made a more flexible local server option available that can be used to load examples in any browser you have available. For other options (and more background information around why local servers are neccessary), see [How do you set up a local testing server?](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server).
+The above option is simple, but not that flexible. In future, you may want to made a more flexible local server option available that can be used to load examples in any browser you have available. For other options (and more background information around why local servers are necessary), see [How do you set up a local testing server?](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server).
 
 ## Graphics editors
 
