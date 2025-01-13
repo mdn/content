@@ -93,7 +93,6 @@ data-ffo-opensanslight
 davidwalsh.name
 dbbd
 Decem
-delimeters
 demozilla
 Devel
 devstart
@@ -132,7 +131,6 @@ favourite-colour
 FEFD
 fgrt46jfgd
 filteron
-firefox
 flabada
 flexy
 foobarbaz
@@ -276,7 +274,6 @@ someelement
 Spartaaaaaaa
 spero
 srcs
-superpowered
 takimata
 tatsoi
 testuser
@@ -313,6 +310,7 @@ webglsamples
 webvr
 weta
 Whereami
+Whereshire
 wisen
 wisi
 Wookie
