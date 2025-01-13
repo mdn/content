@@ -93,6 +93,7 @@ data-ffo-opensanslight
 davidwalsh.name
 dbbd
 Decem
+delimeters
 demozilla
 Devel
 devstart
@@ -112,9 +113,11 @@ dubby
 Duden
 dXNlcm5hbWU6cGFzc3dvcmQ
 EACC
+efregre
 eirmod
 elitr
 ERHGDFy
+ertgrth
 esset
 essum
 Ethere
@@ -129,6 +132,7 @@ favourite-colour
 FEFD
 fgrt46jfgd
 filteron
+firefox
 flabada
 flexy
 foobarbaz
@@ -173,6 +177,7 @@ isnt
 isoff
 javascripts
 jdoe
+Jgfbgfdgt
 jngl
 jnglstore
 js13kgames
@@ -253,6 +258,7 @@ rebum
 regelialia
 rheeeeet
 ricebean
+rtgtfghhyj
 s3pPLMBiTxaQ9kYGzzhZRbK
 sadipscing
 sagnarelli
@@ -270,6 +276,7 @@ someelement
 Spartaaaaaaa
 spero
 srcs
+superpowered
 takimata
 tatsoi
 testuser

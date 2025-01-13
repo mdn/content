@@ -76,6 +76,7 @@ Béziers
 caitmuenster
 Camino
 Camtasia
+Canva
 Carakan
 Cardano
 carinaanand
@@ -567,6 +568,7 @@ Theora
 Thierry
 Tidwell
 Tink
+tinypng
 Titilayo
 Tokopedia
 Tomayac
@@ -606,6 +608,7 @@ Webopedia
 webref
 Weinstein
 Weyl
+Whereshire
 Whitlock
 Widevine
 Wikibooks
