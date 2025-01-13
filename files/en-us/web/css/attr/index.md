@@ -401,17 +401,39 @@ In this example the `data-rotation` attribute gets parsed into a `deg` unit, det
 #### HTML
 
 ```html
-<div data-rotation="-3">I am rotated</div>
+<div data-rotation="-3">I am rotated by -3 degrees</div>
+<div data-rotation="2">And I by 2 degrees</div>
+<div>And so am I, using the fallback value of 1.5deg</div>
 ```
 
 #### CSS
 
+```css hidden
+body {
+  min-height: 100svh;
+  display: grid;
+  place-content: center;
+  gap: 1em;
+}
+div {
+  margin: 0 auto;
+  border: 1px solid;
+  border-radius: 0.25em;
+  padding: 0.5em;
+}
+```
+
 ```css
 div {
   width: fit-content;
-  rotate: attr(data-rotation deg);
+  transform-origin: 50% 50%;
+  rotate: attr(data-rotation deg, 1.5deg);
 }
 ```
+
+#### Result
+
+{{EmbedLiveSample("using_dimension_units", "100%", 300)}}
 
 ## Specifications
 
