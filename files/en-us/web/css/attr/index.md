@@ -62,10 +62,15 @@ The parameters are:
       ```css
       attr(id type(<custom-ident>), none)
       attr(data-count type(<number>), 0)
+      ```
+
+      To accept multiple types, list all allowed `<syntax>`es in the `type()` function, separated by a `|`.
+
+      ```css
       attr(data-size type(<length> | <percentage>), 0px)
       ```
 
-      Excluded from this list is {{CSSxRef("&lt;url&gt;")}} for [security reasons](#limitations_and_security).
+      For [security reasons](#limitations_and_security) {{CSSxRef("&lt;url&gt;")}} is not allowed as a `<syntax>`.
 
     - The `<attr-unit>` identifier specifies the unit a numeric value should have (if any). It can be the `%` character (percentage) or a [CSS distance unit](/docs/Web/CSS/CSS_Values_and_Units#distance_units) such as `px`, `rem`, `deg`, `s`, etc.
 
