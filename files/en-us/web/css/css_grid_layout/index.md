@@ -148,27 +148,27 @@ auto-fill auto-fit
 
 - [Basic concepts of grid layout](/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
 
-  - : x
+  - : An overview of the various features provided in the CSS grid layout module.
 
 - [Relationship of grid layout with other layout methods](/en-US/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)
 
-  - : x
-
-- [Grid template areas](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)
-
-  - : x
+  - : How grid layout fits together with other CSS features including flexbox, absolutely positioned elements, and `display: contents`.
 
 - [Grid layout using line-based placement](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
 
-  - : x
+  - : Grid lines and how to position items against those lines, including the `grid-area` properties, negative line numbers, spanning multiple cells, and creating grid gutters.
+
+- [Grid template areas](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)
+
+  - : Placing grid items using named template areas.
 
 - [Grid layout using named grid lines](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines)
 
-  - : x
+  - : Combining names and track sizes; placing grid items by defining named grid lined and template areas.
 
 - [Auto-placement in grid layout](/en-US/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout)
 
-  - : x
+  - : How grid positions items that don't have any placement properties declared.
 
 - [Box alignment in grid layout](/en-US/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
 
