@@ -61,9 +61,9 @@ As you can see with the above example, if you create a grid without placing any 
 
 ### Sizing rows in the implicit grid
 
-The default for automatically created rows in the implicit grid is for them to be auto-sized. This means that they will contain the content added to them without causing an overflow.
+The default for automatically created rows in the implicit grid is for them to be _auto-sized_. This means that they will contain the content added to them without causing an overflow.
 
-You can however control the size of these rows with the property `grid-auto-rows`. To cause all created rows to be 100 pixels tall for example you would use:
+You can control the size of these rows with the property {{cssxref("`grid-auto-rows")}} property. For example, to cause all created rows to be 100 pixels tall, you could use:
 
 ```css hidden
 body {
@@ -111,7 +111,7 @@ body {
 
 ### Sizing rows using minmax()
 
-You can use {{cssxref("minmax","minmax()")}} in your value for {{cssxref("grid-auto-rows")}} enabling the creation of rows that are a minimum size but then grow to fit content if it is taller.
+You can use {{cssxref("minmax","minmax()")}} in your value for {{cssxref("grid-auto-rows")}} enabling the creation of rows that are a minimum size, growing to fit content if needed.
 
 ```css hidden
 body {
@@ -162,7 +162,7 @@ body {
 
 ### Sizing rows using a track listing
 
-You can also pass in a track listing, this will repeat. The following track listing will create an initial implicit row track as 100 pixels and a second as `200px`. This will continue for as long as content is added to the implicit grid.
+You can also pass in a track listing. This will repeat. The following track listing will create an initial implicit row track as 100 pixels and a second as `200px`. This will continue for as long as content is added to the implicit grid.
 
 ```css hidden
 body {
@@ -213,9 +213,9 @@ body {
 
 ### Auto-placement by column
 
-You can also ask grid to auto-place items by column. Using the property {{cssxref("grid-auto-flow")}} with a value of `column`. In this case grid will add items in rows that you have defined using {{cssxref("grid-template-rows")}}. When it fills up a column it will move onto the next explicit column, or create a new column track in the implicit grid. As with implicit row tracks, these column tracks will be auto sized. You can control the size of implicit column tracks with {{cssxref("grid-auto-columns")}}, this works in the same way as {{cssxref("grid-auto-rows")}}.
+You can also ask grid to auto-place items by column. Using the property {{cssxref("grid-auto-flow")}} with a value of `column`. In this case grid will add items in rows that you have defined using {{cssxref("grid-template-rows")}}. When it fills up a column it will move onto the next explicit column, or create a new column track in the implicit grid. As with implicit row tracks, these column tracks will be auto sized. You can control the size of implicit column tracks with {{cssxref("grid-auto-columns")}}. This works in the same way as {{cssxref("grid-auto-rows")}}.
 
-In this next example I have created a grid with three row tracks of 200 pixels height. I am auto-placing by column and the columns created will be a column width of 300 pixels, then a column width of 100 pixels until there are enough column tracks to hold all of the items.
+In this example, we have a grid with three 200px high row tracks. We declare `grid-auto-flow: column;` to auto-place by column. With `grid-auto-columns: 300px 100px;`, the columns created will alternate between being `300px` wide and `100px` wide until there are enough column tracks to hold all of the items.
 
 ```css
 .wrapper {
@@ -267,7 +267,7 @@ body {
 
 ## The order of auto placed items
 
-A grid can contain a mixture of items. Some of the items may have a position on the grid, but others may be auto-placed. This can be helpful, if you have a document order that reflects the order in which items sit on the grid you may not need to write CSS rules to place absolutely everything. The specification contains a long section detailing the [Grid item placement algorithm](https://drafts.csswg.org/css-grid/#auto-placement-algo), however for most of us we just need to remember a few simple rules for our items.
+A grid can contain a mixture of item placements. Some of the items may have a specifically defined position on the grid while others may be auto-placed. If you have a document order that reflects the order in which items sit on the grid you may not need to write CSS rules to place absolutely everything. The specification contains a long section detailing the [Grid item placement algorithm](https://drafts.csswg.org/css-grid/#auto-placement-algo), however for most of us we just need to remember a few simple rules for our items.
 
 ### Order modified document order
 
