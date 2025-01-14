@@ -6,13 +6,13 @@ page-type: guide
 
 {{CSSRef}}
 
-The [CSS box alignment module](/en-US/docs/Web/CSS/CSS_box_alignment) details how alignment works in various layout methods. On this page we explore how box alignment works in the context of [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout).
+The [CSS box alignment](/en-US/docs/Web/CSS/CSS_box_alignment) module details how alignment works in various layout methods. On this page, we explore how box alignment works in the context of [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout).
 
-As this guide aims to detail things which are specific to CSS grid layout and Box Alignment, it should be read in conjunction with the [box alignment overview](/en-US/docs/Web/CSS/CSS_box_alignment/box_alignment) guide which details the common features of box alignment across layout methods.
+As this guide aims to detail things which are specific to CSS grid layout and Box Alignment, it should be read in conjunction with the [box alignment overview](/en-US/docs/Web/CSS/CSS_box_alignment/box_alignment) guide, which details the common features of box alignment across layout methods.
 
 ## Basic example
 
-In this example using [grid layout](/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout), there is extra space in the {{glossary("grid container")}} after laying out the fixed width tracks on the inline {{glossary("main axis")}}. This space is distributed using {{cssxref("justify-content")}}. On the block {{glossary("cross axis")}} the alignment of the items inside their grid areas is controlled with {{cssxref("align-items")}}. The first item overrides the `align-items` value set on the group by setting {{cssxref("align-self")}} to `center`.
+In this example using [grid layout](/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout), there is extra space in the {{glossary("grid container")}} after laying out the fixed-width tracks on the inline {{glossary("main axis")}}. This space is distributed using {{cssxref("justify-content")}}. On the block {{glossary("cross axis")}} the alignment of the items inside their grid areas is controlled with {{cssxref("align-items")}}. The first item overrides the `align-items` value set on the group by setting {{cssxref("align-self")}} to `center`.
 
 {{EmbedGHLiveSample("css-examples/box-alignment/overview/grid-align-items.html", '100%', 500)}}
 
@@ -43,7 +43,7 @@ These properties deal with aligning the item inside the grid area it is placed i
 - {{cssxref("align-items")}}
 - {{cssxref("place-items")}}
 
-The "items" properties, `align-items` and `justify-items`, are applied to the grid container and set the "self" properties, `align-self` and `justify-self`, as a group. This means that you can set alignment for all of your grid items at once, then override any items that need a different alignment by applying the `align-self` or `justify-self` property to the rules for the individual grid items.
+The `*-items` properties, `align-items` and `justify-items`, are applied to the grid container and set the "self" properties, `align-self` and `justify-self`, on all grid items as a group. This means that you can set alignment for all of your grid items at once, then override any items that need a different alignment by applying the `align-self` or `justify-self` property to the rules for the individual grid items.
 
 The initial value for `align-items` and `justify-items` is `stretch`, and the initial value for `align-self` and `justify-self` is `auto`, so the item will stretch over the entire grid area. The exception to this rule is where the item has an intrinsic {{glossary("aspect ratio")}}, for example an image. In this case the item will be aligned to `start` in both dimensions in order that the image is not distorted.
 

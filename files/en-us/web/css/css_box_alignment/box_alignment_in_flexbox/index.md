@@ -6,7 +6,7 @@ page-type: guide
 
 {{CSSRef}}
 
-The [box alignment](/en-US/docs/Web/CSS/CSS_box_alignment) module details how alignment works in various layout methods. In this guide, we explore how box alignment works in the context of flexbox. As this guide aims to detail things which are specific to flexbox and box alignment, it should be read in conjunction with the [box alignment overview](/en-US/docs/Web/CSS/CSS_box_alignment/box_alignment) guide which details the common features of box alignment across layout methods.
+The [box alignment](/en-US/docs/Web/CSS/CSS_box_alignment) module details how alignment works in various layout methods. In this guide, we explore how box alignment works in the context of flexbox. As this guide aims to detail things which are specific to flexbox and box alignment, it should be read in conjunction with the [box alignment overview](/en-US/docs/Web/CSS/CSS_box_alignment/box_alignment) guide, which details the common features of box alignment across layout methods.
 
 ## Basic example
 
@@ -65,7 +65,7 @@ However, in flexbox you can change the main axis by setting `flex-direction` to 
 
 ### There is no justify-self in flexbox
 
-On the main axis, Flexbox deals with the flex items, our content, as a group. The amount of space required to lay out the items is calculated, and the leftover space is then available for distribution. The `justify-content` property controls how that leftover space is used. Set `justify-content: flex-end` and the extra space is placed before the items, `justify-content: space-around` and it is placed either side of the item in that dimension, etc.
+On the main axis, Flexbox deals with the flex items as a group. The amount of space required to lay out the items is calculated, and the leftover space is then available for distribution. The `justify-content` property controls how that leftover space is used. Set `justify-content: flex-end` and the extra space is placed before the items, `justify-content: space-around` and it is placed either side of the item in that dimension, etc.
 
 This means that a `justify-self` property does not make sense in flexbox as we are always dealing with moving the entire group of items around.
 
