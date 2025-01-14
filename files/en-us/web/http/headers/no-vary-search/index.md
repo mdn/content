@@ -16,12 +16,12 @@ This allows the browser to reuse existing resources despite mismatching URL para
 
 ## Relationship with the Speculation Rules API
 
-The [Speculation Rules API](/en-US/docs/Web/API/Speculation_Rules_API) supports using the `No-Vary-Search` header to reuse an existing prefetched or prerendered page for different URL parameters — if they are included in `No-Vary-Search` header.
+The [Speculation Rules API](/en-US/docs/Web/API/Speculation_Rules_API) supports using the `No-Vary-Search` header to reuse an existing prefetched or prerendered page for different URL parameters — if they are included in the `No-Vary-Search` header.
 
 > [!WARNING]
-> Additional care must be take when using prerender with `No-Vary-Search` since the page may initially be prerendered with different URL parameters. `No-Vary-Search` is used for URL parameters that deliver the same resource from the server, but are used by the client for various reasons (client-side rendering, UTM parameters for analytics measurement etc.). As the initial prerender may be for different URL parameters, any code depending on them should only run after prerender activation.
+> Additional care must be taken when using prerender with `No-Vary-Search` since the page may initially be prerendered with different URL parameters. `No-Vary-Search` is used for URL parameters that deliver the same resource from the server, but are used by the client for various reasons (client-side rendering, UTM parameters for analytics measurement, etc.). As the initial prerender may be for different URL parameters, any code depending on them should only run after prerender activation.
 
-The Speculation Rules API can also include an `expects_no_vary_search` field, which indicates to the browser what the expected `No-Vary-Search` value will be (if any) for documents that it is receiving prefetch/prerender requests for via the speculation rules. The browser can use this to determine ahead of time whether it is more useful to wait for an existing prefetch/prerender to finish, or start a new fetch request when the speculation rule is matched. See the ["expects_no_vary_search" example](/en-US/docs/Web/HTML/Element/script/type/speculationrules#expects_no_vary_search_example) for more explanation of how this can be used.
+The Speculation Rules API can also include an `expects_no_vary_search` field, which indicates to the browser what the expected `No-Vary-Search` value will be (if any) for documents that it is receiving prefetch/prerender requests for via the speculation rules. The browser can use this to determine ahead of time whether it is more useful to wait for an existing prefetch/prerender to finish, or start a new fetch request when the speculation rule is matched. See the ["expects_no_vary_search" example](/en-US/docs/Web/HTML/Element/script/type/speculationrules#expects_no_vary_search_example) for an explanation of how this can be used.
 
 <table class="properties">
   <tbody>
@@ -116,7 +116,7 @@ No-Vary-Search: params=("id" "order" "lang")
 ```
 
 > [!NOTE]
-> As a [structured field](https://www.rfc-editor.org/rfc/rfc8941) the array of parameters should be space separate quoted strings like above, and not comma-seperated as some developers may be more used to.
+> As a [structured field](https://www.rfc-editor.org/rfc/rfc8941) the array of parameters should be space-separated quoted strings as shown above, and not comma-separated, which developers may be more used to.
 
 If you wanted the browser to ignore all of them _and_ any others that might be present when cache matching, you could use the boolean form of `params`:
 
