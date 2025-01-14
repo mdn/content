@@ -39,7 +39,7 @@ new Temporal.PlainMonthDay(month, day, calendar, referenceYear)
 
 A new `Temporal.PlainMonthDay` object, representing the month-day of the date specified by `referenceYear`, `month`, `day` (in the ISO calendar), interpreted in the calendar system specified by `calendar`.
 
-The same ISO month-day can represent different dates in different years with non-ISO calendars. Therefore, you virtually always want to specify a `referenceYear` when using a non-ISO calendar.
+The same ISO month-day can represent different dates in different years with non-ISO calendars. For example, the days 2021-07-01 and 2022-07-01 may fall on different month-days in a non-Gregorian calendar, and just specifying "07-01" is insufficient to unambiguously determine a month-day in the target calendar. Therefore, you virtually always want to specify a `referenceYear` when using a non-ISO calendar.
 
 ### Exceptions
 
