@@ -13,7 +13,7 @@ The request or response header to modify for a request, declared in the `rule.ac
 
 Each object describes one header modification. To modify multiple headers, multiple objects can be specified in these arrays, or across multiple rules.
 
-Matching `modifyHeaders` rules are applied in the order described at [Matching precedents](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest#matching_precedents).
+Matching `modifyHeaders` rules are applied in the order described at [Matching precedence](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest#matching_precedence).
 Within each extension, all `modifyHeaders` rules with a priority lower than or equal to matching `allow` or `allowAllRequests` rules are ignored.
 
 If multiple `modifyHeaders` rules specify the same header, the resulting modification for the header is determined based on the priority of each rule and the operations specified:
