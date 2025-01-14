@@ -11,7 +11,7 @@ The **CSS box alignment** module specifies CSS features relating to the alignmen
 
 The module details alignment terminology, enabling alignment properties to be used in multiple layout modules, rather than limited to a particular layout method.
 
-Alignment is linked to writing modes in that when we align an item we do not consider whether we are aligning it to the physical dimensions of top, right, bottom and left. Instead we describe alignment in terms of the start and end of the particular dimension we are working with. This ensures that alignment works in the same way whichever writing mode the document has.
+Alignment is linked to writing modes in that when we align an item we do not consider whether we are aligning it to the physical dimensions of top, right, bottom, and left. Instead, we describe alignment in terms of the start and end of the particular dimension we are working with. This ensures that alignment works in the same way whichever writing mode the document has.
 
 The alignment of text and inline-level content is defined in [CSS text module](/en-US/docs/Web/CSS/CSS_text) and [CSS inline module](/en-US/docs/Web/CSS/CSS_inline_layout), respectively.
 
