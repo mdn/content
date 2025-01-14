@@ -33,13 +33,11 @@ new Temporal.PlainMonthDay(month, day, calendar, referenceYear)
 - `calendar` {{optional_inline}}
   - : A string representing the [calendar](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal#calendars) to use. Note that irrespective of the `calendar`, the `referenceYear`, `month`, and `day` must be in the ISO 8601 calendar system. Defaults to `"iso8601"`.
 - `referenceYear` {{optional_inline}}
-  - : A number, truncated to an integer, representing the year in the ISO calendar system. Defaults to `1972`.
+  - : A number, truncated to an integer, representing the year in the ISO calendar system. Defaults to `1972`. The same ISO month-day can represent different dates in different years with non-ISO calendars. For example, the days 2021-07-01 and 1972-07-01 may fall on different month-days in a non-Gregorian calendar, and just specifying "07-01" is insufficient to unambiguously determine a month-day in the target calendar. Therefore, you virtually always want to specify a `referenceYear` when using a non-ISO calendar.
 
 ### Return value
 
 A new `Temporal.PlainMonthDay` object, representing the month-day of the date specified by `referenceYear`, `month`, `day` (in the ISO calendar), interpreted in the calendar system specified by `calendar`.
-
-The same ISO month-day can represent different dates in different years with non-ISO calendars. For example, the days 2021-07-01 and 2022-07-01 may fall on different month-days in a non-Gregorian calendar, and just specifying "07-01" is insufficient to unambiguously determine a month-day in the target calendar. Therefore, you virtually always want to specify a `referenceYear` when using a non-ISO calendar.
 
 ### Exceptions
 
