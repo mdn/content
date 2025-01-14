@@ -89,7 +89,7 @@ The return value of `attr()` is the value of the HTML attribute whose name is `<
 
 When an `<attr-type>` is set, `attr()` will try to parse the attribute into that specified `<attr-type>` and return it. If the attribute cannot be parsed into the given `<attr-type>`, the `<fallback-value>` will be returned instead. When no `<attr-type>` is set, the attribute will be parsed into a CSS string.
 
-If no `<fallback-value>` is set, CSS will default to an empty string when no `<attr-type>` is set or the [guaranteed-invalid value](/en-US/docs/Glossary/guaranteed_invalid_value) when an `<attr-type>` is set.
+If no `<fallback-value>` is set, the return value will default to an empty string when no `<attr-type>` is set or the [guaranteed-invalid value](/en-US/docs/Glossary/guaranteed_invalid_value) when an `<attr-type>` is set.
 
 ## Description
 
