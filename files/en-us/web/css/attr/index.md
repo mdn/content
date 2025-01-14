@@ -284,6 +284,8 @@ The resulting values for {{cssxref("view-transition-name")}} are `card-1`, `card
 
 #### HTML
 
+In this example there are four cards each with their own `id` attribute set. There's also a "Shuffle cards" button which shuffles the cards.
+
 ```html
 <div class="cards">
   <div class="card" id="card-1">1</div>
@@ -291,11 +293,10 @@ The resulting values for {{cssxref("view-transition-name")}} are `card-1`, `card
   <div class="card" id="card-3">3</div>
   <div class="card" id="card-4">4</div>
 </div>
+<button>Shuffle cards</button>
 ```
 
 ```html hidden
-<button>Shuffle cards</button>
-
 <div class="warning">
   <p>
     You browser does not support advanced <code>attr()</code>. As a result, this
@@ -305,6 +306,17 @@ The resulting values for {{cssxref("view-transition-name")}} are `card-1`, `card
 ```
 
 #### CSS
+
+The cards are laid out in a flex container.
+
+```css
+.cards {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  padding: 1em;
+}
+```
 
 ```css hidden
 :root {
@@ -321,13 +333,6 @@ The resulting values for {{cssxref("view-transition-name")}} are `card-1`, `card
 }
 
 @layer layout {
-  .cards {
-    display: flex;
-    flex-direction: row;
-    gap: 1em;
-    padding: 1em;
-  }
-
   .card {
     border-radius: 0.25em;
     width: 20vw;
@@ -374,14 +379,20 @@ The resulting values for {{cssxref("view-transition-name")}} are `card-1`, `card
 }
 ```
 
+To give each card a name, the `attr()` function gets the `id` attribute from each card and parses it into a {{CSSxRef("&lt;custom-ident&gt;")}} which is used as the value for the {{cssxref("view-transition-name")}} property. When there is no `id` set on an element, the fallback value `none` is used instead.
+
 ```css
-.card[id] {
+.card {
   view-transition-name: attr(id type(<custom-ident>), none);
   view-transition-class: card;
 }
 ```
 
-#### Result
+#### JavaScript
+
+When pressing the button the cards get shuffled. This is done by shuffling the array with all cards and then updating the {{CSSxRef("order")}} property of each card to its new position.
+
+To animate each card to its new position, [View Transitions](/en-US/docs/Web/API/View_Transition_API/Using) are used. This is done by wrapping the update in a call to [`document.startViewTransition`](/en-US/docs/Web/API/Document/startViewTransition).
 
 ```js hidden
 const shuffle = (array) => {
@@ -390,6 +401,9 @@ const shuffle = (array) => {
     [array[i], array[j]] = [array[j], array[i]];
   }
 };
+```
+
+```js
 document.querySelector("button").addEventListener("click", (e) => {
   const $cards = Array.from(document.querySelectorAll(".card"));
   shuffle($cards);
@@ -400,6 +414,8 @@ document.querySelector("button").addEventListener("click", (e) => {
   });
 });
 ```
+
+#### Result
 
 {{EmbedLiveSample("parsing_attr_values_as_custom-idents", "100%", 400)}}
 
