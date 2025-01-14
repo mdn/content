@@ -68,7 +68,9 @@ Then you need to remember there are special keyword values for all properties. I
 
 ## Task 2
 
-In this task, we want you to make your changes by leveraging the [order of cascade layers](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts#order_of_cascade_layers) section. Edit an existing declaration, without touching the lightgreen declaration, using the cascade layer order to make the links rebeccapurple.
+In this task, we want you to manipulate the cascade layer order to color the links `rebeccapurple`. No editing the `lightgreen` declaration!
+
+This task is a stretch goal — it requires knowledge of cascade layers, which we didn't cover in the [Handling conflicts](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts) article. You can find the information you need to attempt this task at [Cascade layers > Determining the precedence based on the order of layers](/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers#determining_the_precedence_based_on_the_order_of_layers).
 
 Your final result should look like the image below:
 

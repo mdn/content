@@ -28,7 +28,7 @@ An array of strings representing supported time zones for the associated `Locale
 
 Note that while the IANA database changes from time to time, [the Unicode CLDR database (which browsers use) keeps old time zone names for stability purposes](https://unicode.org/reports/tr35/#Time_Zone_Identifiers). For example, here are a few notable name changes:
 
-| Current IANA name                | CDLR database          |
+| Current IANA name                | CLDR database          |
 | -------------------------------- | ---------------------- |
 | `America/Argentina/Buenos_Aires` | `America/Buenos_Aires` |
 | `Asia/Kolkata`                   | `Asia/Calcutta`        |

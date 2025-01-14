@@ -28,7 +28,7 @@ You can open the index file in your favorite browser to launch the game and try 
 
 - `img`: All the images that we will use in the game.
 - `src`: The JavaScript files with all the source code of the game defined inside.
-- `audio:` The sound files used in the game.
+- `audio`: The sound files used in the game.
 
 ## Setting up the Canvas
 

@@ -359,4 +359,4 @@ You may try to use flexbox on the container and restrict the cards with percenta
 
 ## See also
 
-- [CSS stlying basics](/en-US/docs/Learn_web_development/Core/Styling_basics)
+- [CSS styling basics](/en-US/docs/Learn_web_development/Core/Styling_basics)

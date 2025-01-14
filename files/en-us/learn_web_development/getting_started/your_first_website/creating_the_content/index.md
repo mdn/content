@@ -156,7 +156,7 @@ The keywords for alt text are "descriptive text". The alt text you write should 
 Let's get your image displaying now.
 
 1. Inside the `first-website` folder, Create a new folder called `images`, and put the image you chose in the previous example inside this folder.
-2. Inside the `<img>` tag's `alt` attribute value, enter the path to your image. It is inside a folder called `images`, which is inside the same directory as your `index.html` file, therefore the path will be `images/` plus the name of your image. For example, if your image was called `firefox-icon.png`, your `src` attribute would look like this: `src="images/firefox-icon.png"`.
+2. Inside the `<img>` tag's `src` attribute value, enter the path to your image. It is inside a folder called `images`, which is inside the same directory as your `index.html` file, therefore the path will be `images/` plus the name of your image. For example, if your image was called `firefox-icon.png`, your `src` attribute would look like this: `src="images/firefox-icon.png"`.
 3. replace the `alt` attribute value — `My test image` — with some text that better describes your image.
 4. Open your `index.html` file inside a web browser. You should see your image displayed. If not, check your `<img>` element against our code above; make sure it is not missing any of the syntax, such as the quote marks. Make sure the image filename is correct.
 
