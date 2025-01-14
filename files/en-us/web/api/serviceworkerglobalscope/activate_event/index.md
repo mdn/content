@@ -41,10 +41,14 @@ self.addEventListener("activate", (event) => {
   const cacheAllowlist = ["v2"];
 
   event.waitUntil(
-    caches.forEach((cache, cacheName) => {
-      if (!cacheAllowlist.includes(cacheName)) {
-        return caches.delete(cacheName);
-      }
+    caches.keys().then((cacheNames) => {
+      return Promise.all(
+        cacheNames.map((cacheName) => {
+          if (!cacheAllowlist.includes(cacheName)) {
+            return caches.delete(cacheName);
+          }
+        }),
+      );
     }),
   );
 });
