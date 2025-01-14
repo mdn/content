@@ -132,7 +132,7 @@ div::before {
 
 In browsers with support for the modern syntax, the output will be … nothing. Those browsers will successfully parse the second declaration but, because it is invalid content for the `content` property, the declaration becomes ["invalid at computed value time" or IACVT for short](https://brm.us/iacvt).
 
-To prevent this sort of situation, we suggest to use [feature detection](#feature_detection).
+To prevent this kind of situation, [feature detection](#feature_detection) is recommended.
 
 A second edge case is the following:
 
@@ -149,11 +149,11 @@ A second edge case is the following:
 }
 ```
 
-In browsers without support for the modern syntax, the text `"foo"` gets displayed. In browsers with modern `attr()` support there is no output.
+Browsers without support for modern syntax display the text `"foo"`. In browsers with modern `attr()` support there is no output.
 
 This is because `attr()` — similar to custom properties that use the `var()` function — get substituted at [computed value time](https://brm.us/iacvt/#custom-properties). With the modern behavior, `--x` first tries to read the `data-attr` attribute from the `#parent` element, which results in an empty string because there is no such attribute on `#parent`. That empty string then gets inherited by the `#child` element, resulting in a `content: ;` declaration being set.
 
-To prevent this sort of situation, make sure you don't pass inherited `attr()` values onto children, unless you explicitly want to.
+To prevent this sort of situation, don't pass inherited `attr()` values onto children unless you explicitly want to.
 
 ### Feature detection
 
@@ -278,7 +278,7 @@ In this example, we set the CSS value of {{CSSXRef("background-color")}} to the 
 
 {{SeeCompatTable}}
 
-In this example the `data-rotation` attribute gets parsed into a `deg` unit, determining the rotation of the element.
+In this example the `data-rotation` attribute is parsed into a `deg` unit, which specifies the element's rotation.
 
 #### HTML
 
@@ -327,7 +327,7 @@ The resulting values for {{cssxref("view-transition-name")}} are `card-1`, `card
 
 #### HTML
 
-In this example there are four cards each with their own `id` attribute set. There's also a "Shuffle cards" button which shuffles the cards.
+The HTML contains four cards with different `id` attributes and a "Shuffle cards" `<button>`, which shuffles the cards.
 
 ```html
 <div class="cards">
@@ -350,7 +350,7 @@ In this example there are four cards each with their own `id` attribute set. The
 
 #### CSS
 
-The cards are laid out in a flex container.
+The cards are laid out in a flex container:
 
 ```css
 .cards {
@@ -422,7 +422,7 @@ The cards are laid out in a flex container.
 }
 ```
 
-To give each card a name, the `attr()` function gets the `id` attribute from each card and parses it into a {{CSSxRef("&lt;custom-ident&gt;")}} which is used as the value for the {{cssxref("view-transition-name")}} property. When there is no `id` set on an element, the fallback value `none` is used instead.
+On each card, the `attr()` function gets the `id` attribute and parses it into a {{CSSxRef("&lt;custom-ident&gt;")}}, which is used as the value for the {{cssxref("view-transition-name")}} property. When there is no `id` set on a card, the fallback value `none` is used instead.
 
 ```css
 .card {
@@ -433,20 +433,18 @@ To give each card a name, the `attr()` function gets the `id` attribute from eac
 
 #### JavaScript
 
-When pressing the button the cards get shuffled. This is done by shuffling the array with all cards and then updating the {{CSSxRef("order")}} property of each card to its new position.
+When the `<button>` is pressed the cards are shuffled. This is done by randomizing the order of an array containing references to all the cards and then updating the {{CSSxRef("order")}} property of each card to its new array index position.
 
-To animate each card to its new position, [View Transitions](/en-US/docs/Web/API/View_Transition_API/Using) are used. This is done by wrapping the update in a call to [`document.startViewTransition`](/en-US/docs/Web/API/Document/startViewTransition).
+To animate each card to its new position, [View Transitions](/en-US/docs/Web/API/View_Transition_API/Using) are used. This is done by wrapping the `order` update in a call to [`document.startViewTransition`](/en-US/docs/Web/API/Document/startViewTransition).
 
-```js hidden
+```js
 const shuffle = (array) => {
   for (let i = array.length - 1; i >= 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [array[i], array[j]] = [array[j], array[i]];
   }
 };
-```
 
-```js
 document.querySelector("button").addEventListener("click", (e) => {
   const $cards = Array.from(document.querySelectorAll(".card"));
   shuffle($cards);
