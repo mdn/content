@@ -274,6 +274,49 @@ In this example, we set the CSS value of {{CSSXRef("background-color")}} to the 
 
 {{EmbedLiveSample("color_value", "100%", 50)}}
 
+### Using dimension units
+
+{{SeeCompatTable}}
+
+In this example the `data-rotation` attribute gets parsed into a `deg` unit, determining the rotation of the element.
+
+#### HTML
+
+```html
+<div data-rotation="-3">I am rotated by -3 degrees</div>
+<div data-rotation="2">And I by 2 degrees</div>
+<div>And so am I, using the fallback value of 1.5deg</div>
+```
+
+#### CSS
+
+```css hidden
+body {
+  min-height: 100svh;
+  display: grid;
+  place-content: center;
+  gap: 1em;
+}
+div {
+  margin: 0 auto;
+  border: 1px solid;
+  border-radius: 0.25em;
+  padding: 0.5em;
+}
+```
+
+```css
+div {
+  width: fit-content;
+  transform-origin: 50% 50%;
+  rotate: attr(data-rotation deg, 1.5deg);
+}
+```
+
+#### Result
+
+{{EmbedLiveSample("using_dimension_units", "100%", 300)}}
+
 ### Parsing `attr()` values as `<custom-ident>`s
 
 {{SeeCompatTable}}
@@ -418,49 +461,6 @@ document.querySelector("button").addEventListener("click", (e) => {
 #### Result
 
 {{EmbedLiveSample("parsing_attr_values_as_custom-idents", "100%", 400)}}
-
-### Using dimension units
-
-{{SeeCompatTable}}
-
-In this example the `data-rotation` attribute gets parsed into a `deg` unit, determining the rotation of the element.
-
-#### HTML
-
-```html
-<div data-rotation="-3">I am rotated by -3 degrees</div>
-<div data-rotation="2">And I by 2 degrees</div>
-<div>And so am I, using the fallback value of 1.5deg</div>
-```
-
-#### CSS
-
-```css hidden
-body {
-  min-height: 100svh;
-  display: grid;
-  place-content: center;
-  gap: 1em;
-}
-div {
-  margin: 0 auto;
-  border: 1px solid;
-  border-radius: 0.25em;
-  padding: 0.5em;
-}
-```
-
-```css
-div {
-  width: fit-content;
-  transform-origin: 50% 50%;
-  rotate: attr(data-rotation deg, 1.5deg);
-}
-```
-
-#### Result
-
-{{EmbedLiveSample("using_dimension_units", "100%", 300)}}
 
 ## Specifications
 
