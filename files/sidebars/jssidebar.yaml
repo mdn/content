@@ -344,8 +344,8 @@ l10n:
     Guide_Loops: 循环与迭代
     Guide_Functions: 函数
     Guide_Expressions: 表达式与运算符
-    Guide_Numbers: Numbers and strings
-    Guide_Dates: Representing dates & times
+    Guide_Numbers: 数字与字符串
+    Guide_Dates: 表达日期与时间
     Guide_RegExp: 正则表达式
     Guide_Indexed_collections: 索引集合类
     Guide_keyed_collections: 带键的集合
@@ -354,7 +354,7 @@ l10n:
     Guide_Promises: 使用 Promise
     Guide_Typed_arrays: JavaScript 类型化数组
     Guide_Iterators_generators: 迭代器和生成器
-    Guide_Internationalization: Internationalization
+    Guide_Internationalization: 国际化
     Guide_Meta: 元编程
     Guide_Modules: JavaScript 模块
     Intermediate: 中级
