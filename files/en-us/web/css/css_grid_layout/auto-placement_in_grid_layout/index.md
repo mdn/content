@@ -6,7 +6,7 @@ page-type: guide
 
 {{CSSRef}}
 
-In addition to the ability to place items accurately onto a created grid, the CSS grid layout specification contains rules that control what happens when you create a grid and do not place some or all of the child items. You can see auto-placement in action in the simplest of ways by creating a grid on a set of items.
+[CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout/) contains rules that control what happens when you create a grid and do not place some or all of the child items. When you don't need explicit control over content placement, this "auto-placement" is the simplest way of creating a grid for a set of items.
 
 ## Default placement
 
@@ -57,7 +57,7 @@ body {
 
 ## Default rules for auto-placement
 
-As you can see with the above example, if you create a grid all child items will lay themselves out one into each grid cell. The default flow is to arrange items by row. Grid will lay an item out into each cell of row 1. If you have created additional rows using the `grid-template-rows` property then grid will continue placing items in these rows. If the grid does not have enough rows in the explicit grid to place all of the items new _implicit_ rows will be created.
+As you can see with the above example, if you create a grid without placing any items, the child items will lay themselves out, with one grid item in each grid cell in source-code order. The default flow is to arrange items by row. Grid will lay an item out into each cell of the first row. If you have created additional rows using the {{cssxref("grid-template-rows")}} property, then grid will continue placing items in these rows. If the grid does not have enough rows in the [explicit grid](/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#implicit_and_explicit_grids) to place all of the items new _implicit_ rows will be created.
 
 ### Sizing rows in the implicit grid
 
