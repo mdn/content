@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.Temporal.PlainYearMonth.with
 
 The **`with()`** method of {{jsxref("Temporal.PlainYearMonth")}} instances returns a new `Temporal.PlainYearMonth` object representing this year-month with some fields replaced by new values. Because all `Temporal` objects are designed to be immutable, this method essentially functions as the setter for the year-month's fields.
 
-There's no obvious way to create a new `Temporal.PlainYearMonth` object with a different calendar that represents the same year-month, so to replace its `calendarId` property, you need to convert it to a {{jsxref("Temporal.PlainDate")}} object first using {{jsxref("Temporal/PlainYearMonth/toPlainDate", "toPlainDate()")}}, change the calendar, and then convert it back.
+There's no obvious way to create a new `Temporal.PlainYearMonth` object that represents the same year-month in a different calendar, so to replace its `calendarId` property, you need to convert it to a {{jsxref("Temporal.PlainDate")}} object first using {{jsxref("Temporal/PlainYearMonth/toPlainDate", "toPlainDate()")}}, change the calendar, and then convert it back.
 
 ## Syntax
 

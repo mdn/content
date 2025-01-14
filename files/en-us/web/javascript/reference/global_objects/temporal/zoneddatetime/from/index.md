@@ -22,7 +22,7 @@ Temporal.ZonedDateTime.from(info, options)
   - : One of the following:
     - A {{jsxref("Temporal.ZonedDateTime")}} instance, which creates a copy of the instance.
     - An [RFC 9557 format](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#rfc_9557_format) string containing a date, optionally a time, optionally an offset, a time zone annotation, and optionally a calendar.
-    - An object containing properties that are accepted by either {{jsxref("Temporal/PlainDate/from", "Temporal.PlainDate.from()")}} (`calendar`, `era`, `eraYear`, `year`, `month`, `monthCode`, `day`) or {{jsxref("Temporal/PlainTime/from", "Temporal.PlainTime.from()")}} (`hour`, `minute`, `second`, `millisecond`, `microsecond`, `nanosecond`). The info should explicitly specify a year (as `year` or `era` and `eraYear`), a month (as `month` or `monthCode`), and a day; others are optional and will be set to their default values. The following properties should be provided too:
+    - An object containing properties that are accepted by either {{jsxref("Temporal/PlainDate/from", "Temporal.PlainDate.from()")}} (`calendar`, `era`, `eraYear`, `year`, `month`, `monthCode`, `day`) or {{jsxref("Temporal/PlainTime/from", "Temporal.PlainTime.from()")}} (`hour`, `minute`, `second`, `millisecond`, `microsecond`, `nanosecond`). The info should explicitly specify a year (as `year` or as `era` and `eraYear`), a month (as `month` or `monthCode`), and a day; others are optional and will be set to their default values. The following properties should be provided too:
       - `timeZone`
         - : Either a string or a {{jsxref("Temporal.ZonedDateTime")}} instance representing the time zone to use. If a `Temporal.ZonedDateTime` instance, its time zone is used. If a string, it can be a named time zone identifier, an offset time zone identifier, or a date-time string containing a time zone identifier or an offset (see [time zones and offsets](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#time_zones_and_offsets) for more information). The time properties are interpreted in this time zone.
       - `offset` {{optional_inline}}
@@ -72,7 +72,7 @@ const zdt = Temporal.ZonedDateTime.from({
   minute: 34,
   second: 56,
 });
-console.log(dt.toString()); // "2021-07-01T12:34:56-04:00[America/New_York]"
+console.log(zdt.toString()); // "2021-07-01T12:34:56-04:00[America/New_York]"
 ```
 
 ### Creating a ZonedDateTime from a string
@@ -99,7 +99,7 @@ If you want to parse an ISO 8601 string, first construct a {{jsxref("Temporal.In
 ```js
 const isoString = "2021-07-01T12:34:56+02:00";
 const instant = Temporal.Instant.from(isoString);
-const zdt = instant.toZonedDateTime("America/New_York");
+const zdt = instant.toZonedDateTimeISO("America/New_York");
 console.log(zdt.toString()); // "2021-07-01T06:34:56-04:00[America/New_York]"
 ```
 
@@ -136,9 +136,12 @@ See [offset ambiguity](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Tempo
 ```js
 const offsetAmbiguous = "2019-12-23T12:00:00-02:00[America/Sao_Paulo]";
 
-Temporal.ZonedDateTime.from(offsetAmbiguous); // RangeError: date-time can't be represented in the given time zone
-Temporal.ZonedDateTime.from(offsetAmbiguous, { offset: "use" }); // "2019-12-23T11:00:00-03:00[America/Sao_Paulo]"
-Temporal.ZonedDateTime.from(offsetAmbiguous, { offset: "ignore" }); // "2019-12-23T12:00:00-03:00[America/Sao_Paulo]"
+Temporal.ZonedDateTime.from(offsetAmbiguous);
+// RangeError: date-time can't be represented in the given time zone
+Temporal.ZonedDateTime.from(offsetAmbiguous, { offset: "use" }).toString();
+// "2019-12-23T11:00:00-03:00[America/Sao_Paulo]"
+Temporal.ZonedDateTime.from(offsetAmbiguous, { offset: "ignore" }).toString();
+// "2019-12-23T12:00:00-03:00[America/Sao_Paulo]"
 ```
 
 For more examples, especially regarding different calendars and overflow settings, see {{jsxref("Temporal/PlainDate/from", "Temporal.PlainDate.from()")}} and {{jsxref("Temporal/PlainTime/from", "Temporal.PlainTime.from()")}}.

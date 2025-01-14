@@ -59,8 +59,8 @@ A new `Temporal.ZonedDateTime` object, where the fields specified in `info` that
 const zdt = Temporal.ZonedDateTime.from(
   "2021-07-01T12:34:56[America/New_York]",
 );
-const newZDT = dt.with({ hour: 13 });
-console.log(newDT.toString()); // "2021-07-01T13:34:56-04:00[America/New_York]"
+const newZDT = zdt.with({ hour: 13 });
+console.log(newZDT.toString()); // "2021-07-01T13:34:56-04:00[America/New_York]"
 ```
 
 For more examples, see the documentation for the individual properties that can be set using `with()`.
@@ -111,8 +111,10 @@ You can also set `offset: "reject"` to throw an error if the original offset is 
 const zdt = Temporal.ZonedDateTime.from(
   "2021-07-01T12:00:00-04:00[America/New_York]",
 );
-zdt.with({ month: 12 }, { offset: "reject" }); // RangeError: date-time can't be represented in the given time zone
-zdt.with({ month: 12, offset: "-05:00" }, { offset: "reject" }); // OK
+zdt.with({ month: 12 }, { offset: "reject" });
+// RangeError: date-time can't be represented in the given time zone
+zdt.with({ month: 12, offset: "-05:00" }, { offset: "reject" }).toString();
+// "2021-12-01T12:00:00-05:00[America/New_York]"
 ```
 
 ## Specifications

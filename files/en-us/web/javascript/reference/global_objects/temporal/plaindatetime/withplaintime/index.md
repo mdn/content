@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.Temporal.PlainDateTime.withPlainTime
 
 The **`withPlainTime()`** method of {{jsxref("Temporal.PlainDateTime")}} instances returns a new `Temporal.PlainDateTime` object representing this date-time with the time part entirely replaced by the new time (in a form convertible by {{jsxref("Temporal/PlainTime/from", "Temporal.PlainTime.from()")}})
 
-This method will replace all time properties, defaulting to `0` if unspecified. If you only want to replace some of the time properties, use the {{jsxref("Temporal/PlainDateTime/with", "with()")}} method instead.
+This method will replace all time properties, defaulting to `0` where properties are unspecified. If you only want to replace some of the time properties, use the {{jsxref("Temporal/PlainDateTime/with", "with()")}} method instead.
 
 ## Syntax
 

@@ -38,9 +38,11 @@ A new `Temporal.ZonedDateTime` object, representing the date-time specified by t
 ### Using withCalendar()
 
 ```js
-const dt = Temporal.ZonedDateTime.from("2021-07-01T12:34:56[America/New_York]");
-const newDT = dt.withCalendar("islamic");
-console.log(newDT.toLocaleString("en-US", { calendar: "islamic" }));
+const zdt = Temporal.ZonedDateTime.from(
+  "2021-07-01T12:34:56[America/New_York]",
+);
+const newZDT = zdt.withCalendar("islamic");
+console.log(newZDT.toLocaleString("en-US", { calendar: "islamic" }));
 // 11/21/1442 AH, 12:34:56 PM EDT
 ```
 

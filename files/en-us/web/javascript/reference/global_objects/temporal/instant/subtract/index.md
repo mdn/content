@@ -43,7 +43,7 @@ Subtracting a duration is equivalent to [adding](Web/JavaScript/Reference/Global
 
 ```js
 const instant = Temporal.Instant.fromEpochMilliseconds(1000);
-const duration = Temporal.Duration.from("PT1S");
+const duration = Temporal.Duration.from("PT1S"); // One-second duration
 const newInstant = instant.subtract(duration);
 console.log(newInstant.epochMilliseconds); // 0
 ```

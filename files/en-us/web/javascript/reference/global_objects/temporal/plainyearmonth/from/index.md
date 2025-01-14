@@ -49,7 +49,7 @@ Temporal.PlainYearMonth.from(info, options)
 
 A new `Temporal.PlainYearMonth` object, representing the year and month specified by `info` in the specified `calendar`.
 
-Each `PlainYearMonth` stores a whole ISO 8601 date internally, which has the same year-month in the target calendar as what's exposed. The reference day is visible when stringifying with {{jsxref("Temporal/PlainYearMonth/toString", "toString()")}}, which outputs an ISO date. The reference day is chosen arbitrarily but consistently (that is, every `(year, month)` pair always maps to the same ISO reference day). It does not use the day provided in the input. Instead, the reference day is always chosen to be the first valid day of the month.
+Each `PlainYearMonth` stores a whole ISO 8601 date internally, which has the same year-month in the target calendar as what's exposed. The reference day is visible when stringifying with {{jsxref("Temporal/PlainYearMonth/toString", "toString()")}}, which outputs an ISO date. The reference day is chosen arbitrarily but consistently; that is, every `(year, month)` pair always maps to the same ISO reference day. It does not use the day provided in the input. Instead, the reference day is always chosen to be the first valid day of the month.
 
 This reference day canonicalization ensures that {{jsxref("Temporal/PlainYearMonth/equals", "equals()")}} can directly compare the underlying ISO dates without extra computation.
 

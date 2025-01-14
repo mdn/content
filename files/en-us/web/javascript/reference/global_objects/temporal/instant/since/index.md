@@ -40,20 +40,25 @@ A new {{jsxref("Temporal.Duration")}} object representing the duration _since_ `
 
 ```js
 const lastUpdated = Temporal.Instant.fromEpochMilliseconds(1735235418000);
-const now = Temporal.now.instant();
+const now = Temporal.Now.instant();
 const duration = now.since(lastUpdated, { smallestUnit: "minute" });
 console.log(`Last updated ${duration.toLocaleString("en-US")} ago`);
 ```
 
 ### Balancing the resulting duration
 
-Because an instant does not carry calendar information, the resulting duration avoids [calendar durations](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Duration#calendar_durations), which are ambiguous without a calendar and time reference. Therefore, the result is [unbalanced](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Duration#duration_balancing) because `hours` may be greater than `24`. To balance the duration, [round](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Duration/round) the resulting duration again with the desired `largestUnit`.
+Because an instant does not carry calendar information, the resulting duration avoids [calendar durations](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Duration#calendar_durations), which are ambiguous without a calendar and time reference. Therefore, the result is [unbalanced](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Duration#duration_balancing) because `hours` may be greater than `24`. To balance the duration, [round](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Duration/round) the resulting duration again with the desired `largestUnit`, passing a `relativeTo` that carries the calendar information.
 
 ```js
 const lastUpdated = Temporal.Instant.fromEpochMilliseconds(1735235418000);
-const now = Temporal.now.instant();
+const now = Temporal.Now.instant();
 const duration = now.since(lastUpdated, { smallestUnit: "minute" });
-const roundedDuration = duration.round({ largestUnit: "year" });
+const roundedDuration = duration.round({
+  largestUnit: "year",
+  // Use the ISO calendar; you can convert to another calendar using
+  // withCalendar()
+  relativeTo: now.toZonedDateTimeISO("UTC"),
+});
 console.log(`Last updated ${roundedDuration.toLocaleString("en-US")} ago`);
 ```
 

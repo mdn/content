@@ -48,16 +48,16 @@ If `smallestUnit` is `"day"`, the returned date-time will be the [start of day](
 const zdt = Temporal.ZonedDateTime.from(
   "2021-07-01T12:34:56.123456789[America/New_York]",
 );
-const nearestMillisecond = dt.round("millisecond");
+const nearestMillisecond = zdt.round("millisecond");
 console.log(nearestMillisecond.toString()); // 2021-07-01T12:34:56.123-04:00[America/New_York]
 
-const nearestHalfHour = dt.round({
+const nearestHalfHour = zdt.round({
   smallestUnit: "minute",
   roundingIncrement: 30,
 });
 console.log(nearestHalfHour.toString()); // 2021-07-01T12:30:00-04:00[America/New_York]
 
-const nextDay = dt.round({ smallestUnit: "day", roundingMode: "ceil" });
+const nextDay = zdt.round({ smallestUnit: "day", roundingMode: "ceil" });
 console.log(nextDay.toString()); // 2021-07-02T00:00:00-04:00[America/New_York]
 ```
 
