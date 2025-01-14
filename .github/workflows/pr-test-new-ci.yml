@@ -103,7 +103,7 @@ jobs:
           # package.json.
           echo Y|yarn rari update
           ARGS=$(echo $GIT_DIFF_CONTENT | sed -E -e "s#(^| )files#\1-f $PWD/files#g")
-          yarn rari build --no-basic --json-issues $ARGS
+          yarn rari build --no-basic --json-issues --data-issues $ARGS
           yarn yari-render-html
 
           echo "Disk usage size of the build"
