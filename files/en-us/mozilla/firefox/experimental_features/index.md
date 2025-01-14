@@ -156,7 +156,7 @@ The `plaintext-only` value of the [`contenteditable`](/en-US/docs/Web/HTML/Globa
     <tr>
       <th>Nightly</th>
       <td>133</td>
-      <td>yes</td>
+      <td>Yes</td>
     </tr>
     <tr>
       <th>Developer Edition</th>
