@@ -71,7 +71,7 @@ const subscriptionObject = {
 // Stringify the object an post to the app server
 fetch(`https://example.com/push/`, {
   method: "post",
-  body: JSON.stringify(pushSubscription);
+  body: JSON.stringify(subscriptionObject);
 });
 ```
 
