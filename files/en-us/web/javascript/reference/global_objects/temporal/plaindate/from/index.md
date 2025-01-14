@@ -62,11 +62,11 @@ A new `Temporal.PlainDate` object, representing the date specified by `info` in 
   - : Thrown in one of the following cases:
     - `info` is not an object or a string.
     - `options` is not an object or `undefined`.
-    - The provided properties are insufficient to unambiguously determine a date. You usually need to provide a `year` (or `era` and `eraYear`), and a `month` (or `monthCode`), and a `day`.
+    - The provided properties are insufficient to unambiguously determine a date. You usually need to provide a `year` (or `era` and `eraYear`), a `month` (or `monthCode`), and a `day`.
 - {{jsxref("RangeError")}}
   - : Thrown in one of the following cases:
     - The provided properties that specify the same component are inconsistent.
-    - The provided non-numerical properties are not valid, for example, if `monthCode` is never a valid month code in this calendar.
+    - The provided non-numerical properties are not valid; for example, if `monthCode` is never a valid month code in this calendar.
     - The provided numerical properties are out of range, and `options.overflow` is set to `"reject"`.
 
 ## Examples
@@ -89,6 +89,10 @@ const d3 = Temporal.PlainDate.from({
   day: 1,
   calendar: "chinese",
 });
+// Note: when you construct a date with an object, the date components
+// are in *that* calendar, not the ISO calendar. However, toString() always
+// outputs the date in the ISO calendar. For example, the year "2021" in
+// the Chinese calendar is actually 616 BC in the ISO calendar.
 console.log(d3.toString()); // "-000616-08-12[u-ca=chinese]"
 
 // Era, eraYear, month, and day

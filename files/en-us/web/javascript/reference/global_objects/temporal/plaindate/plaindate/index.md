@@ -54,11 +54,13 @@ console.log(plainDate.toString()); // 2021-07-01
 
 // Note that the date is stored internally as ISO 8601, even when it's
 // interpreted in a different calendar system. For example, even though
-// 2021-07-01 is 2021-05-22 in the Chinese calendar, you still pass the
+// 2021-07-01 is 4658-05-22 in the Chinese calendar, you still pass the
 // ISO date to the constructor.
 const plainDate2 = new Temporal.PlainDate(2021, 7, 1, "chinese");
 console.log(plainDate2.toString()); // 2021-07-01[u-ca=chinese]
+console.log(plainDate2.year); // 4658
 console.log(plainDate2.month); // 5
+console.log(plainDate2.day); // 22
 ```
 
 ## Specifications

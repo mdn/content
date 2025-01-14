@@ -44,7 +44,7 @@ A new `Temporal.PlainDate` object, where the fields specified in `info` that are
 - {{jsxref("RangeError")}}
   - : Thrown in one of the following cases:
     - The provided properties that specify the same component are inconsistent.
-    - The provided non-numerical properties are not valid, for example, if `monthCode` is never a valid month code in this calendar.
+    - The provided non-numerical properties are not valid; for example, if `monthCode` is never a valid month code in this calendar.
     - The provided numerical properties are out of range, and `options.overflow` is set to `"reject"`.
 
 ## Examples
@@ -55,6 +55,8 @@ A new `Temporal.PlainDate` object, where the fields specified in `info` that are
 const date = Temporal.PlainDate.from("2021-07-06");
 const newDate = date.with({ day: date.daysInMonth });
 console.log(newDate.toString()); // 2021-07-31
+const nextDecade = date.with({ year: date.year + 10 });
+console.log(nextDecade.toString()); // 2031-07-06
 ```
 
 For more examples, see the documentation for the individual properties that can be set using `with()`.

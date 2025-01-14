@@ -70,7 +70,7 @@ This reference year canonicalization ensures that {{jsxref("Temporal/PlainMonthD
 - {{jsxref("RangeError")}}
   - : Thrown in one of the following cases:
     - The provided properties that specify the same component are inconsistent.
-    - The provided non-numerical properties are not valid, for example, if `monthCode` is never a valid month code in this calendar.
+    - The provided non-numerical properties are not valid; for example, if `monthCode` is never a valid month code in this calendar.
     - The provided numerical properties are out of range, and `options.overflow` is set to `"reject"`.
 
 ## Examples
