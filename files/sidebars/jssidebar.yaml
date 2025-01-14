@@ -30,10 +30,10 @@ sidebar:
         title: Guide_Functions
       - link: /Web/JavaScript/Guide/Expressions_and_operators
         title: Guide_Expressions
-      - link: /Web/JavaScript/Guide/Numbers_and_dates
+      - link: /Web/JavaScript/Guide/Numbers_and_strings
         title: Guide_Numbers
-      - link: /Web/JavaScript/Guide/Text_formatting
-        title: Guide_Text
+      - link: /Web/JavaScript/Guide/Representing_dates_times
+        title: Guide_Dates
       - link: /Web/JavaScript/Guide/Regular_expressions
         title: Guide_RegExp
       - link: /Web/JavaScript/Guide/Indexed_collections
@@ -50,6 +50,8 @@ sidebar:
         title: Guide_Typed_arrays
       - link: /Web/JavaScript/Guide/Iterators_and_generators
         title: Guide_Iterators_generators
+      - link: /Web/JavaScript/Guide/Internationalization
+        title: Guide_Internationalization
       - link: /Web/JavaScript/Guide/Meta_programming
         title: Guide_Meta
       - link: /Web/JavaScript/Guide/Modules
@@ -148,8 +150,8 @@ l10n:
     Guide_Loops: Schleifen und Iteration
     Guide_Functions: Funktionen
     Guide_Expressions: Ausdrücke und Operatoren
-    Guide_Numbers: Zahlen und Daten
-    Guide_Text: Textformatierung
+    Guide_Numbers: Numbers and strings
+    Guide_Dates: Representing dates & times
     Guide_RegExp: Reguläre Ausdrücke
     Guide_Indexed_collections: Indexierte Sammlungen
     Guide_keyed_collections: Gekennzeichnete Sammlungen
@@ -158,6 +160,7 @@ l10n:
     Guide_Promises: Verwendung von Promises
     Guide_Typed_arrays: Typisierte Arrays in JavaScript
     Guide_Iterators_generators: Iteratoren und Generatoren
+    Guide_Internationalization: Internationalization
     Guide_Meta: Metaprogrammierung
     Guide_Modules: JavaScript-Module
     Intermediate: Mittelstufe
@@ -194,8 +197,8 @@ l10n:
     Guide_Loops: Loops and iteration
     Guide_Functions: Functions
     Guide_Expressions: Expressions and operators
-    Guide_Numbers: Numbers and dates
-    Guide_Text: Text formatting
+    Guide_Numbers: Numbers and strings
+    Guide_Dates: Representing dates & times
     Guide_RegExp: Regular expressions
     Guide_Indexed_collections: Indexed collections
     Guide_keyed_collections: Keyed collections
@@ -204,6 +207,7 @@ l10n:
     Guide_Promises: Using promises
     Guide_Typed_arrays: JavaScript typed arrays
     Guide_Iterators_generators: Iterators and generators
+    Guide_Internationalization: Internationalization
     Guide_Meta: Meta programming
     Guide_Modules: JavaScript modules
     Beginners: Beginner's tutorials
@@ -246,8 +250,8 @@ l10n:
     Guide_Loops: Циклы и итерации
     Guide_Functions: Функции
     Guide_Expressions: Выражения и операторы
-    Guide_Numbers: Числа и даты
-    Guide_Text: Форматирование текста
+    Guide_Numbers: Numbers and strings
+    Guide_Dates: Representing dates & times
     Guide_RegExp: Регулярные выражения
     Guide_Indexed_collections: Упорядоченные наборы данных
     Guide_keyed_collections: Коллекции
@@ -256,6 +260,7 @@ l10n:
     Guide_Promises: Использование промисов
     Guide_Typed_arrays: Типизированные массивы JavaScript
     Guide_Iterators_generators: Итераторы и генераторы
+    Guide_Internationalization: Internationalization
     Guide_Meta: Метапрограммирование
     Guide_Modules: Модули JavaScript
     Intermediate: Средние
@@ -292,8 +297,8 @@ l10n:
     Guide_Loops: Boucles et itération
     Guide_Functions: Fonctions
     Guide_Expressions: Expressions et opérateurs
-    Guide_Numbers: Nombres et dates
-    Guide_Text: Formatage du texte
+    Guide_Numbers: Numbers and strings
+    Guide_Dates: Representing dates & times
     Guide_RegExp: Expressions rationnelles
     Guide_Indexed_collections: Collections indexées
     Guide_keyed_collections: Collections avec clés
@@ -302,6 +307,7 @@ l10n:
     Guide_Promises: Utiliser les promesses
     Guide_Typed_arrays: Tableaux typés en JavaScript
     Guide_Iterators_generators: Itérateurs et générateurs
+    Guide_Internationalization: Internationalization
     Guide_Meta: Métaprogrammation
     Guide_Modules: Modules JavaScript
     Intermediate: Intermédiaire
@@ -338,8 +344,8 @@ l10n:
     Guide_Loops: 循环与迭代
     Guide_Functions: 函数
     Guide_Expressions: 表达式与运算符
-    Guide_Numbers: 数字和日期
-    Guide_Text: 文本格式化
+    Guide_Numbers: 数字与字符串
+    Guide_Dates: 表达日期与时间
     Guide_RegExp: 正则表达式
     Guide_Indexed_collections: 索引集合类
     Guide_keyed_collections: 带键的集合
@@ -348,6 +354,7 @@ l10n:
     Guide_Promises: 使用 Promise
     Guide_Typed_arrays: JavaScript 类型化数组
     Guide_Iterators_generators: 迭代器和生成器
+    Guide_Internationalization: 国际化
     Guide_Meta: 元编程
     Guide_Modules: JavaScript 模块
     Intermediate: 中级
@@ -384,8 +391,8 @@ l10n:
     Guide_Loops: ループとイテレーター
     Guide_Functions: 関数
     Guide_Expressions: 式と演算子
-    Guide_Numbers: 数と日付
-    Guide_Text: テキスト処理
+    Guide_Numbers: Numbers and strings
+    Guide_Dates: Representing dates & times
     Guide_RegExp: 正規表現
     Guide_Indexed_collections: インデックス付きコレクション
     Guide_keyed_collections: キー付きコレクション
@@ -394,6 +401,7 @@ l10n:
     Guide_Promises: プロミスの使用
     Guide_Typed_arrays: JavaScript 型付き配列
     Guide_Iterators_generators: イテレーターとジェネレーター
+    Guide_Internationalization: Internationalization
     Guide_Meta: メタプログラミング
     Guide_Modules: JavaScript モジュール
     Intermediate: 中級編
@@ -430,8 +438,8 @@ l10n:
     Guide_Loops: 루프와 반복
     Guide_Functions: 함수
     Guide_Expressions: 표현식과 연산자
-    Guide_Numbers: 숫자와 날짜
-    Guide_Text: 텍스트 서식
+    Guide_Numbers: Numbers and strings
+    Guide_Dates: Representing dates & times
     Guide_RegExp: 정규 표현식
     Guide_Indexed_collections: index 기반의 컬렉션
     Guide_keyed_collections: key 기반의 컬렉션
@@ -440,6 +448,7 @@ l10n:
     Guide_Promises: promise 사용하기
     Guide_Typed_arrays: JavaScript 형식화 배열
     Guide_Iterators_generators: 반복기와 생성기
+    Guide_Internationalization: Internationalization
     Guide_Meta: 메타 프로그래밍
     Guide_Modules: JavaScript 모듈
     Intermediate: 중급서
@@ -476,8 +485,8 @@ l10n:
     Guide_Loops: Repetição e iteração
     Guide_Functions: Funções
     Guide_Expressions: Expressões e operadores
-    Guide_Numbers: Números e datas
-    Guide_Text: Formatação de texto
+    Guide_Numbers: Numbers and strings
+    Guide_Dates: Representing dates & times
     Guide_RegExp: Expressões Regulares
     Guide_Indexed_collections: Coleções indexadas
     Guide_keyed_collections: Coleções com chave (chave-valor)
@@ -486,6 +495,7 @@ l10n:
     Guide_Promises: Usando "promises"
     Guide_Typed_arrays: Arranjos tipados em JavaScript
     Guide_Iterators_generators: Iteradores e geradores
+    Guide_Internationalization: Internationalization
     Guide_Meta: Metaprogramação
     Guide_Modules: JavaScript modules
     Intermediate: Intermediário
