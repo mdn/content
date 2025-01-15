@@ -64,7 +64,7 @@ drawScore();
 
 ## Displaying a winning message when all bricks have been destroyed
 
-Collecting the points works well, but you won't be adding them forever — what about when all the bricks have been destroyed? It's the main purpose of the game after all, so you should display a winning message if all available points have been collected. Add the following highlighted section into your `collisionDetection()` function:
+Collecting the points works well, but you won't be adding them forever — what about when all the bricks have been destroyed? It's the main purpose of the game after all, so you should show a winning message if all available points have been collected. Add the following highlighted section into your `collisionDetection()` function:
 
 ```js
 function collisionDetection() {
@@ -82,7 +82,7 @@ function collisionDetection() {
           b.status = 0;
           score++;
           if (score === brickRowCount * brickColumnCount) {
-            alert("YOU WIN, CONGRATULATIONS!");
+            console.log("YOU WIN, CONGRATULATIONS!");
             document.location.reload();
             clearInterval(interval); // Needed for Chrome to end game
           }
@@ -93,7 +93,7 @@ function collisionDetection() {
 }
 ```
 
-Thanks to this, your users can actually win the game when they destroy all the bricks, which is quite important when it comes to games. The `document.location.reload()` function reloads the page and starts the game again once the alert button is clicked.
+Thanks to this, your users can actually win the game when they destroy all the bricks, which is quite important when it comes to games. The `document.location.reload()` function reloads the page and starts the game again once the console message displayed.
 
 ## Compare your code
 
@@ -177,7 +177,7 @@ function collisionDetection() {
           b.status = 0;
           score++;
           if (score == brickRowCount * brickColumnCount) {
-            alert("YOU WIN, CONGRATS!");
+            console.log("YOU WIN, CONGRATS!");
             document.location.reload();
             clearInterval(interval); // Needed for Chrome to end game
           }
@@ -241,7 +241,7 @@ function draw() {
     if (x > paddleX && x < paddleX + paddleWidth) {
       dy = -dy;
     } else {
-      alert("GAME OVER");
+      console.log("GAME OVER");
       document.location.reload();
       clearInterval(interval); // Needed for Chrome to end game
     }
@@ -269,7 +269,7 @@ document.getElementById("runButton").addEventListener("click", function () {
 {{embedlivesample("compare_your_code", 600, 360)}}
 
 > [!NOTE]
-> Try adding more points per brick hit, print out the number of collected points in the end game alert box.
+> Try adding more points per brick hit, print out the number of collected points in the end game console.
 
 ## Next steps
 
