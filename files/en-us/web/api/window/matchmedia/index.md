@@ -24,6 +24,9 @@ matchMedia(mediaQueryString)
 
 - `mediaQueryString`
   - : A string specifying the media query to parse into a {{domxref("MediaQueryList")}}.
+ 
+> [!NOTE]
+> Each `mediaQueryString` condition must be wrapped in parentheses, for example: `matchMedia('(min-width: 600px)')` will work, whereas `matchMedia('min-width: 600px')` will not!
 
 ### Return value
 
