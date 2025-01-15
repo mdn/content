@@ -33,7 +33,7 @@ function drawLives() {
 Instead of ending the game immediately, we will decrease the number of lives until they are no longer available. We can also reset the ball and the paddle positions when the player begins with their next life. So, in the `draw()` function replace the following three lines:
 
 ```js
-alert("GAME OVER");
+console.log("GAME OVER");
 document.location.reload();
 clearInterval(interval); // Needed for Chrome to end game
 ```
@@ -43,7 +43,7 @@ With this, we can add slightly more complex logic to it as given below:
 ```js
 lives--;
 if (!lives) {
-  alert("GAME OVER");
+  console.log("GAME OVER");
   document.location.reload();
   clearInterval(interval); // Needed for Chrome to end game
 } else {
@@ -189,7 +189,7 @@ function collisionDetection() {
           b.status = 0;
           score++;
           if (score == brickRowCount * brickColumnCount) {
-            alert("YOU WIN, CONGRATS!");
+            console.log("YOU WIN, CONGRATS!");
             document.location.reload();
           }
         }
@@ -260,7 +260,7 @@ function draw() {
     } else {
       lives--;
       if (!lives) {
-        alert("GAME OVER");
+        console.log("GAME OVER");
         document.location.reload();
       } else {
         x = canvas.width / 2;
