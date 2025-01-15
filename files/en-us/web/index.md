@@ -10,6 +10,11 @@ page-type: landing-page
 
 The open Web presents incredible opportunities for developers. To take full advantage of these technologies, you need to know how to use them. Below you'll find links to our Web technology documentation.
 
+## Some test for our new ci
+
+- [A redirected link](/en-US/docs/Learn)
+- [An external link](https://mozilla.org)
+
 ## Documentation for Web developers
 
 - [Web Developer Guide](/en-US/docs/Web/Guide)
