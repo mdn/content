@@ -6,9 +6,9 @@ page-type: guide
 
 {{CSSRef}}
 
-The [CSS box alignment](/en-US/docs/Web/CSS/CSS_box_alignment) module specifies CSS features that relate to the alignment of boxes in the various CSS box layout models. The module aims to create a consistent method of alignment across all of CSS. The CSS box alignment properties provide full horizontal and vertical alignment capabilities. This guide details the general concepts found in this module.
+The [CSS box alignment](/en-US/docs/Web/CSS/CSS_box_alignment) module specifies CSS features that relate to the alignment of boxes in the various CSS box layout models. The module aims to create a consistent method of alignment across all of CSS. The CSS box alignment properties provide full horizontal and vertical alignment capabilities.
 
-This guide provides an overview. Additional guides provide more information on box alignment in [flexbox](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox), [grid layout](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_grid_layout), [multiple-column layout](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_multi-column_layout), and [block, absolutely positioned and table layout](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_block_abspos_tables). Alignment of text is covered by the [CSS text](/en-US/docs/Web/CSS/CSS_text) and [CSS inline layout](/en-US/docs/Web/CSS/CSS_inline_layout) modules.
+This guide details the general concepts found in this module. Additional guides provide more information on box alignment in [flexbox](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox), [grid layout](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_grid_layout), [multiple-column layout](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_multi-column_layout), and [block, absolutely positioned and table layout](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_block_abspos_tables). Alignment of text is covered by the [CSS text](/en-US/docs/Web/CSS/CSS_text) and [CSS inline layout](/en-US/docs/Web/CSS/CSS_inline_layout) modules.
 
 ## Key concepts and terminology
 
@@ -50,10 +50,6 @@ The below image shows an alignment container with two alignment subjects inside.
 
 ![A box containing two rectangles of the same width but different heights. The two rectangles are top aligned, meaning they both have their top lines about 10px inside the top of the box in which they are contained.](align-container-subjects.png)
 
-### Fallback alignment
-
-If you set an alignment that cannot be fulfilled, then the **{{Glossary("fallback alignment")}}** will come into play and deal with the available space. This fallback alignment is specified individually for each layout method and detailed on the page for that method.
-
 ## Types of alignment
 
 There are three different types of alignment that the specification details; these use keyword values.
@@ -64,7 +60,7 @@ There are three different types of alignment that the specification details; the
 
 ### Positional alignment
 
-**Positional alignment** is the position of an alignment subject with relation to its alignment container. The positional aligment keyword values are defined for positional alignment, and can be used as values for content alignment with `justify-content` and `align-content` and also for self alignment with `justify-self` and `align-self`.
+**Positional alignment** is the position of an alignment subject with relation to its alignment container. The positional alignment keyword values are defined for positional alignment, and can be used as values for content alignment with `justify-content` and `align-content` and also for self alignment with `justify-self` and `align-self`.
 
 - `center`
 - `start`
@@ -76,17 +72,17 @@ There are three different types of alignment that the specification details; the
 - `left`
 - `right`
 
-Other than the physical values of `left` and `right`, which relate to physical attributes of the screen, all of the other values are logical values and relate to the writing mode of the content.
+Other than the physical values of `left` and `right`, which relate to physical attributes of the screen, all of the other values, the {{cssxref("self-position")}} and {{cssxref("content-position")}} values, are logical values and relate to the writing mode of the content.
 
 For example, when working in CSS grid layout, if you are working in English and set `justify-content` to `start` this will move the items in the inline dimension to the start, which will be the left as sentences in English start on the left-hand side of the page. If you were using Arabic, a right-to-left language, then the same value of `start` would result in the items moving to the right, as sentences in Arabic start on the right-hand side of the page.
 
-Both of these examples have `justify-content: start`, however the location of start changes according to the writing mode.
-
 ![There are two boxes, each with 3 children of differing heights but similar widths. The first box has three children with the letters A, B, and C. These three boxes are all aligned to the left. The second box has three children with arabic letters in them. Those three boxes are all aligned to the right.](writing-mode-start.png)
+
+Both have `justify-content: start`, but the location of the two starts is different because of the writing mode.
 
 ### Baseline alignment
 
-**Baseline alignment** is the relationship among the baselines of multiple alignment subjects within an alignment context. The Baseline alignment keywords are used to align the baselines of boxes across a group of alignment subjects. They can be used as values for content alignment with `justify-content` and `align-content` and self-alignment with `justify-self` and `align-self`.
+**Baseline alignment** is the relationship among the baselines of multiple alignment subjects within an alignment context. The Baseline alignment {{cssxref("baseline-position")}} keywords are used to align the baselines of boxes across a group of alignment subjects. They can be used as values for content alignment with `justify-content` and `align-content` and self-alignment with `justify-self` and `align-self`.
 
 - `baseline`
 - `first baseline`
@@ -98,7 +94,7 @@ Baseline self-alignment shifts the boxes to align by baseline by adding a margin
 
 ### Distributed alignment
 
-**Distributed alignment** defines alignment as a distribution of space among alignment subjects. The distributed alignment keywords are used with the `align-content` and `justify-content` properties. These keywords define what happens to any additional space after alignment subjects have been displayed. The values are as follows:
+**Distributed alignment** defines alignment as a distribution of space among alignment subjects. The distributed alignment {{cssxref("content-distribution")}} keywords are used with the `align-content` and `justify-content` properties. These keywords define what happens to any additional space after alignment subjects have been displayed. The values are as follows:
 
 - `stretch`
 - `space-between`
@@ -211,7 +207,7 @@ body {
 
 ## Overflow alignment
 
-The `safe` and `unsafe` keywords help define behavior when an alignment subject is larger than the alignment container. The `safe` keyword will align to `start` in the case of a specified alignment causing an overflow, the aim being to avoid "data loss" where part of the item is outside the boundaries of the alignment container and can't be scrolled to.
+The {{cssxref("overflow-position")}} keywords `safe` and `unsafe` help define behavior when an alignment subject is larger than the alignment container. The `safe` keyword will align to `start` in the case of a specified alignment causing an overflow, the aim being to avoid "data loss" where part of the item is outside the boundaries of the alignment container and can't be scrolled to.
 
 If you specify `unsafe` then the alignment will be honoured even if it would cause such data loss.
 
