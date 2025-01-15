@@ -32,3 +32,5 @@ If you discover an add-on security vulnerability, even if the add-on is not host
 #### Bugs on addons.mozilla.org (AMO)
 
 If you find a problem with the site, we'd love to fix it. Please [file a bug report](https://github.com/mozilla/addons/issues/new) and include as much detail as possible.
+To search for existing issues, use the page-specific search box on the [https://github.com/mozilla/addons/issues](Issues) page.
+The <kbd>Command</kbd>+<kbd>/</kbd> (Mac) or </br> <kbd>Ctrl</kbd>+<kbd>/</kbd> (Windows/Linux) focuses the correct box.
