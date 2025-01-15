@@ -24,8 +24,7 @@ browser-compat: webextensions.manifest.background
     <tr>
       <th scope="row">Example</th>
       <td>
-        <pre class="brush: json">
-"background": {
+        <pre class="brush: json">"background": {
   "scripts": ["background.js"]
 }</pre
         >

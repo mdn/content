@@ -24,8 +24,7 @@ browser-compat: webextensions.manifest.description
     <tr>
       <th scope="row">Example</th>
       <td>
-        <pre class="brush: json">
-"description": "Replaces pictures with pictures of cats."</pre
+        <pre class="brush: json">"description": "Replaces pictures with pictures of cats."</pre
         >
       </td>
     </tr>

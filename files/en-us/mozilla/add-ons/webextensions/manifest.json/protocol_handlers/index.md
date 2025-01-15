@@ -24,8 +24,7 @@ browser-compat: webextensions.manifest.protocol_handlers
     <tr>
       <th scope="row">Example</th>
       <td>
-        <pre class="brush: json">
-"protocol_handlers": [
+        <pre class="brush: json">"protocol_handlers": [
   {
     "protocol": "ircs",
     "name": "IRC Mozilla Extension",

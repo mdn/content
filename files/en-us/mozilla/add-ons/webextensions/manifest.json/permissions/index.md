@@ -24,8 +24,7 @@ browser-compat: webextensions.manifest.permissions
     <tr>
       <th scope="row">Example</th>
       <td>
-        <pre class="brush: json;">
-"permissions": [
+        <pre class="brush: json;">"permissions": [
   "webRequest"
 ]</pre
         >

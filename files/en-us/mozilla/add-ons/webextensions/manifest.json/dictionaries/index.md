@@ -24,8 +24,7 @@ browser-compat: webextensions.manifest.dictionaries
     <tr>
       <th scope="row">Example</th>
       <td>
-        <pre class="brush: json">
-"dictionaries": {
+        <pre class="brush: json">"dictionaries": {
   "en-US": "dictionaries/en-US.dic"
 }</pre
         >

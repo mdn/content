@@ -213,8 +213,7 @@ When we are running true/false tests (for example inside conditionals — see [b
       <td><code>===</code></td>
       <td>Strict equality (is it exactly the same?)</td>
       <td>
-        <pre class="brush: js">
-5 === 2 + 4 // false
+        <pre class="brush: js">5 === 2 + 4 // false
 'Chris' === 'Bob' // false
 5 === 2 + 3 // true
 2 === '2' // false; number versus string
@@ -226,8 +225,7 @@ When we are running true/false tests (for example inside conditionals — see [b
       <td><code>!==</code></td>
       <td>Non-equality (is it not the same?)</td>
       <td>
-        <pre class="brush: js">
-5 !== 2 + 4 // true
+        <pre class="brush: js">5 !== 2 + 4 // true
 'Chris' !== 'Bob' // true
 5 !== 2 + 3 // false
 2 !== '2' // true; number versus string
@@ -239,8 +237,7 @@ When we are running true/false tests (for example inside conditionals — see [b
       <td><code>&#x3C;</code></td>
       <td>Less than</td>
       <td>
-        <pre class="brush: js">
-6 &#x3C; 10 // true
+        <pre class="brush: js">6 &#x3C; 10 // true
 20 &#x3C; 10 // false</pre
         >
       </td>
@@ -249,8 +246,7 @@ When we are running true/false tests (for example inside conditionals — see [b
       <td><code>></code></td>
       <td>Greater than</td>
       <td>
-        <pre class="brush: js">
-6 > 10 // false
+        <pre class="brush: js">6 > 10 // false
 20 > 10 // true</pre
         >
       </td>

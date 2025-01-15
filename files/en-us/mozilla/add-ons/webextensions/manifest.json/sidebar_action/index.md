@@ -24,8 +24,7 @@ browser-compat: webextensions.manifest.sidebar_action
     <tr>
       <th scope="row">Example</th>
       <td>
-        <pre class="brush: json">
-"sidebar_action": {
+        <pre class="brush: json">"sidebar_action": {
   "default_icon": {
     "16": "button/geo-16.png",
     "32": "button/geo-32.png"
@@ -112,8 +111,7 @@ The `sidebar_action` key is an object that may have any of the properties listed
           The name of each property is the icon's height in pixels, and must be
           convertible to an integer. The value is the URL. For example:
         </p>
-        <pre class="brush: json">
-    "default_icon": {
+        <pre class="brush: json">    "default_icon": {
       "16": "path/to/geo-16.png",
       "32": "path/to/geo-32.png"
     }</pre

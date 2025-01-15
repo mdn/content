@@ -25,11 +25,9 @@ browser-compat: webextensions.manifest.content_security_policy
       <th scope="row">Example</th>
       <td>
         Manifest V2:
-        <pre class="brush: json">
-"content_security_policy": "default-src 'self'"</pre>
+        <pre class="brush: json">"content_security_policy": "default-src 'self'"</pre>
         Manifest V3:
-        <pre class="brush: json">
-"content_security_policy": {
+        <pre class="brush: json">"content_security_policy": {
   "extension_pages": "default-src 'self'"
 }</pre>
       </td>
