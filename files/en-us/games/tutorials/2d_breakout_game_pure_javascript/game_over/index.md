@@ -26,7 +26,7 @@ if (y + dy > canvas.height - ballRadius || y + dy < ballRadius) {
 }
 ```
 
-Instead of allowing the ball to bounce off all four walls, let's only allow three now — left, top and right. Hitting the bottom wall will end the game. We'll edit the second if block so it's an if else block that will trigger our "game over" state upon the ball colliding with the bottom edge of the canvas. For now we'll show an alert message and restarting the game by reloading the page.
+Instead of allowing the ball to bounce off all four walls, let's only allow three now — left, top and right. Hitting the bottom wall will end the game. We'll edit the second if block so it's an if else block that will trigger our "game over" state upon the ball colliding with the bottom edge of the canvas. For now we'll show a message and restart the game by reloading the page.
 
 First, add a declaration for the `interval` variable at the top level, before any functions:
 
@@ -52,7 +52,7 @@ Then replace the second if statement with the following:
 if (y + dy < ballRadius) {
   dy = -dy;
 } else if (y + dy > canvas.height - ballRadius) {
-  alert("GAME OVER");
+  console.log("GAME OVER");
   document.location.reload();
   clearInterval(interval); // Needed for Chrome to end game
 }
@@ -69,7 +69,7 @@ if (y + dy < ballRadius) {
   if (x > paddleX && x < paddleX + paddleWidth) {
     dy = -dy;
   } else {
-    alert("GAME OVER");
+    console.log("GAME OVER");
     document.location.reload();
     clearInterval(interval);
   }
@@ -163,7 +163,7 @@ function draw() {
     if (x > paddleX && x < paddleX + paddleWidth) {
       dy = -dy;
     } else {
-      alert("GAME OVER");
+      console.log("GAME OVER");
       document.location.reload();
       clearInterval(interval); // Needed for Chrome to end game
     }
