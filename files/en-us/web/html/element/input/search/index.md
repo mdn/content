@@ -261,8 +261,8 @@ You can use the [`required`](/en-US/docs/Web/HTML/Element/input#required) attrib
       name="q"
       placeholder="Search the site…"
       required />
-    <button>Search</button>
     <span class="validity"></span>
+    <button>Search</button>
   </div>
 </form>
 ```
@@ -304,18 +304,19 @@ The example below requires that the entered value be 4–8 characters in length.
 ```html
 <form>
   <div>
-    <label for="mySearch">Search for user</label>
-    <input
-      type="search"
-      id="mySearch"
-      name="q"
-      placeholder="User IDs are 4–8 characters in length"
-      required
-      size="30"
-      minlength="4"
-      maxlength="8" />
+    <label>
+      Search for user
+      <input
+        type="search"
+        name="q"
+        placeholder="User IDs are 4–8 characters in length"
+        required
+        size="30"
+        minlength="4"
+        maxlength="8" />
+      <span class="validity"></span>
+    </label>
     <button>Search</button>
-    <span class="validity"></span>
   </div>
 </form>
 ```
@@ -336,6 +337,10 @@ input:valid ~ span::after {
   padding-left: 5px;
   position: absolute;
 }
+
+button {
+  margin-left: 5em;
+}
 ```
 
 This renders like so:
@@ -353,17 +358,18 @@ Let's look at an example. Say we wanted to provide a product ID search form, and
 ```html
 <form>
   <div>
-    <label for="mySearch">Search for product by ID:</label>
-    <input
-      type="search"
-      id="mySearch"
-      name="q"
-      placeholder="two letters followed by four numbers"
-      required
-      size="30"
-      pattern="[A-z]{2}[0-9]{4}" />
+    <label>
+      Search for product by ID:
+      <input
+        type="search"
+        name="q"
+        placeholder="two letters followed by four numbers"
+        required
+        size="30"
+        pattern="[A-z]{2}[0-9]{4}" />
+      <span class="validity"></span>
+    </label>
     <button>Search</button>
-    <span class="validity"></span>
   </div>
 </form>
 ```

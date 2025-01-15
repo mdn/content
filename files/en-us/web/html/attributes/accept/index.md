@@ -45,16 +45,22 @@ When set on a file input type, the native file picker that opens up should only 
 
 ```html
 <p>
-  <label for="soundFile">Select an audio file:</label>
-  <input type="file" id="soundFile" accept="audio/*" />
+  <label>
+    Select an audio file:
+    <input type="file" accept="audio/*" />
+  </label>
 </p>
 <p>
-  <label for="videoFile">Select a video file:</label>
-  <input type="file" id="videoFile" accept="video/*" />
+  <label>
+    Select a video file:
+    <input type="file" accept="video/*" />
+  </label>
 </p>
 <p>
-  <label for="imageFile">Select some images:</label>
-  <input type="file" id="imageFile" accept="image/*" multiple />
+  <label>
+    Select some images:
+    <input type="file" accept="image/*" multiple />
+  </label>
 </p>
 ```
 
@@ -85,8 +91,10 @@ The `accept` attribute takes as its value a string containing one or more of the
 ```html
 <form method="post" enctype="multipart/form-data">
   <div>
-    <label for="file">Choose file to upload</label>
-    <input type="file" id="file" name="file" multiple />
+    <label>
+      Choose file to upload
+      <input type="file" name="file" multiple />
+    </label>
   </div>
   <div>
     <button>Submit</button>
@@ -127,12 +135,10 @@ Let's look at a more complete example:
 ```html
 <form method="post" enctype="multipart/form-data">
   <div>
-    <label for="profile_pic">Choose file to upload</label>
-    <input
-      type="file"
-      id="profile_pic"
-      name="profile_pic"
-      accept=".jpg, .jpeg, .png" />
+    <label>
+      Choose file to upload
+      <input type="file" name="profile_pic" accept=".jpg, .jpeg, .png" />
+    </label>
   </div>
   <div>
     <button>Submit</button>

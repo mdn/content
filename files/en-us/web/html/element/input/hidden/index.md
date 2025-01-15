@@ -65,8 +65,10 @@ The edit form's HTML might look a bit like this:
 ```html
 <form>
   <div>
-    <label for="title">Post title:</label>
-    <input type="text" id="title" name="title" value="My excellent blog post" />
+    <label>
+      Post title:
+      <input type="text" name="title" value="My excellent blog post" />
+    </label>
   </div>
   <div>
     <label for="content">Post content:</label>

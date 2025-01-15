@@ -143,7 +143,7 @@ input.addEventListener("input", (event) => {
 
 {{EmbedLiveSample("Setting_step_to_any", 600, 75)}}
 
-This example lets the user select any value between 0 and π without any restriction on the fractional part of the value selected. JavaScript is used to show how the value changes as the user interacts with the range.
+This example lets the user select any value between 0 and π without any restriction on the fractional part of the value selected. JavaScript is used to show how the value changes as the user interacts with the range. (If you want to round it off to a fixed number of decimal places, use .toFixed() on event.target.value .)
 
 ### Adding tick marks
 
@@ -152,8 +152,10 @@ To add tick marks to a range control, include the `list` attribute, giving it th
 #### HTML
 
 ```html
-<label for="temp">Choose a comfortable temperature:</label><br />
-<input type="range" id="temp" name="temp" list="markers" />
+<label
+  >Choose a comfortable temperature:<br />
+  <input type="range" id="temp" name="temp" list="markers" />
+</label>
 
 <datalist id="markers">
   <option value="0"></option>
@@ -179,17 +181,23 @@ To help you from repeating code you can reuse that same {{HTMLElement("datalist"
 
 ```html
 <p>
-  <label for="temp1">Temperature for room 1:</label>
-  <input type="range" id="temp1" name="temp1" list="values" />
+  <label>
+    Temperature for room 1:
+    <input type="range" name="temp1" list="values" />
+  </label>
 </p>
 <p>
-  <label for="temp2">Temperature for room 2:</label>
-  <input type="range" id="temp2" name="temp2" list="values" />
+  <label>
+    Temperature for room 2:
+    <input type="range" name="temp2" list="values" />
+  </label>
 </p>
 
 <p>
-  <label for="temp3">Temperature for room 3:</label>
-  <input type="range" id="temp3" name="temp3" list="values" />
+  <label>
+    Temperature for room 3:
+    <input type="range" name="temp3" list="values" />
+  </label>
 </p>
 
 <datalist id="values">
@@ -212,9 +220,11 @@ You can label tick marks by giving the `<option>` elements `label` attributes. H
 #### HTML
 
 ```html
-<label for="tempB">Choose a comfortable temperature:</label><br />
-<input type="range" id="tempB" name="temp" list="values" />
-
+<label>
+  Choose a comfortable temperature:
+  <br />
+  <input type="range" name="temp" list="values" />
+</label>
 <datalist id="values">
   <option value="0" label="very cold!"></option>
   <option value="25" label="cool"></option>

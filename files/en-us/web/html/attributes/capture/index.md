@@ -30,16 +30,22 @@ When set on a file input type, operating systems with microphones and cameras wi
 
 ```html
 <p>
-  <label for="soundFile">What does your voice sound like?:</label>
-  <input type="file" id="soundFile" capture="user" accept="audio/*" />
+  <label>
+    What does your voice sound like?:
+    <input type="file" capture="user" accept="audio/*" />
+  </label>
 </p>
 <p>
-  <label for="videoFile">Upload a video:</label>
-  <input type="file" id="videoFile" capture="environment" accept="video/*" />
+  <label>
+    Upload a video:
+    <input type="file" capture="environment" accept="video/*" />
+  </label>
 </p>
 <p>
-  <label for="imageFile">Upload a photo of yourself:</label>
-  <input type="file" id="imageFile" capture="user" accept="image/*" />
+  <label>
+    Upload a photo of yourself:
+    <input type="file" capture="user" accept="image/*" />
+  </label>
 </p>
 ```
 

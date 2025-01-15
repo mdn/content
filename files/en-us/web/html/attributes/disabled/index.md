@@ -87,8 +87,8 @@ When form controls are disabled, many browsers will display them in a lighter, g
 </fieldset>
 
 <p>
-  <label
-    >Select an option:
+  <label>
+    Select an option:
     <select>
       <optgroup label="Group 1">
         <option>Option 1.1</option>
@@ -120,7 +120,7 @@ When form controls are disabled, many browsers will display them in a lighter, g
 </fieldset>
 ```
 
-{{EmbedLiveSample('Examples', 500, 450)}}
+{{EmbedLiveSample('Examples', 500, 560)}}
 
 ## Specifications
 

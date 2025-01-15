@@ -9,6 +9,8 @@ browser-compat: html.elements.input.type_file
 
 {{HTMLElement("input")}} elements with **`type="file"`** let the user choose one or more files from their device storage. Once chosen, the files can be uploaded to a server using [form submission](/en-US/docs/Learn_web_development/Extensions/Forms), or manipulated using JavaScript code and [the File API](/en-US/docs/Web/API/File_API/Using_files_from_web_applications).
 
+The user can click the button to bring up a file selection dialog, or they can just drag the file into the button.
+
 {{EmbedInteractiveExample("pages/tabbed/input-file.html", "tabbed-shorter")}}
 
 ## Value
@@ -78,8 +80,10 @@ The `accept` attribute takes a string containing one or more of these unique fil
 ```html
 <form method="post" enctype="multipart/form-data">
   <div>
-    <label for="file">Choose file to upload</label>
-    <input type="file" id="file" name="file" multiple />
+    <label>
+      Choose file to upload
+      <input type="file" name="file" multiple />
+    </label>
   </div>
   <div>
     <button>Submit</button>
@@ -139,12 +143,10 @@ Let's look at a more complete example:
 ```html
 <form method="post" enctype="multipart/form-data">
   <div>
-    <label for="profile_pic">Choose file to upload</label>
-    <input
-      type="file"
-      id="profile_pic"
-      name="profile_pic"
-      accept=".jpg, .jpeg, .png" />
+    <label>
+      Choose file to upload
+      <input type="file" name="profile_pic" accept=".jpg, .jpeg, .png" />
+    </label>
   </div>
   <div>
     <button>Submit</button>
@@ -214,13 +216,14 @@ First of all, let's look at the HTML:
 ```html
 <form method="post" enctype="multipart/form-data">
   <div>
-    <label for="image_uploads">Choose images to upload (PNG, JPG)</label>
-    <input
-      type="file"
-      id="image_uploads"
-      name="image_uploads"
-      accept=".jpg, .jpeg, .png"
-      multiple />
+    <label>
+      Choose images to upload (PNG, JPG)
+      <input
+        type="file"
+        name="image_uploads"
+        accept=".jpg, .jpeg, .png"
+        multiple />
+    </label>
   </div>
   <div class="preview">
     <p>No files currently selected for upload</p>

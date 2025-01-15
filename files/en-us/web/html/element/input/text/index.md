@@ -98,8 +98,10 @@ The value returned by reading `spellcheck` may not reflect the actual state of s
 ```html
 <form>
   <div>
-    <label for="uname">Choose a username: </label>
-    <input type="text" id="uname" name="name" />
+    <label>
+      Choose a username:
+      <input type="text" name="name" />
+    </label>
   </div>
   <div>
     <button>Submit</button>
@@ -120,12 +122,10 @@ You can provide a useful placeholder inside your text input that can provide a h
 ```html
 <form>
   <div>
-    <label for="uname">Choose a username: </label>
-    <input
-      type="text"
-      id="uname"
-      name="name"
-      placeholder="Lower case, all one word" />
+    <label>
+      Choose a username:
+      <input type="text" name="name" placeholder="Lower case, all one word" />
+    </label>
   </div>
   <div>
     <button>Submit</button>
@@ -146,13 +146,14 @@ The physical size of the input box can be controlled using the [`size`](/en-US/d
 ```html
 <form>
   <div>
-    <label for="uname">Choose a username: </label>
-    <input
-      type="text"
-      id="uname"
-      name="name"
-      placeholder="Lower case, all one word"
-      size="30" />
+    <label>
+      Choose a username:
+      <input
+        type="text"
+        name="name"
+        placeholder="Lower case, all one word"
+        size="30" />
+    </label>
   </div>
   <div>
     <button>Submit</button>
@@ -205,9 +206,11 @@ You can use the [`required`](/en-US/docs/Web/HTML/Element/input#required) attrib
 ```html
 <form>
   <div>
-    <label for="uname">Choose a username: </label>
-    <input type="text" id="uname" name="name" required />
-    <span class="validity"></span>
+    <label>
+      Choose a username:
+      <input type="text" name="name" required />
+      <span class="validity"></span>
+    </label>
   </div>
   <div>
     <button>Submit</button>
@@ -250,17 +253,18 @@ The example below requires that the entered value be 4–8 characters in length.
 ```html
 <form>
   <div>
-    <label for="uname">Choose a username: </label>
-    <input
-      type="text"
-      id="uname"
-      name="name"
-      required
-      size="10"
-      placeholder="Username"
-      minlength="4"
-      maxlength="8" />
-    <span class="validity"></span>
+    <label>
+      Choose a username:
+      <input
+        type="text"
+        name="name"
+        required
+        size="10"
+        placeholder="Username"
+        minlength="4"
+        maxlength="8" />
+      <span class="validity"></span>
+    </label>
   </div>
   <div>
     <button>Submit</button>
@@ -306,15 +310,11 @@ The example below restricts the value to 4-8 characters and requires that it con
 ```html
 <form>
   <div>
-    <label for="uname">Choose a username: </label>
-    <input
-      type="text"
-      id="uname"
-      name="name"
-      required
-      size="45"
-      pattern="[a-z]{4,8}" />
-    <span class="validity"></span>
+    <label>
+      Choose a username:
+      <input type="text" name="name" required size="45" pattern="[a-z]{4,8}" />
+      <span class="validity"></span>
+    </label>
     <p>Usernames must be lowercase and 4-8 characters in length.</p>
   </div>
   <div>

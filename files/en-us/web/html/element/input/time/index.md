@@ -18,12 +18,14 @@ While the control's user interface appearance is based on the browser and operat
 You can set a default value for the input by including a valid time in the [`value`](/en-US/docs/Web/HTML/Element/input#value) attribute when creating the `<input>` element, like so:
 
 ```html
-<label for="appointment-time">Choose an appointment time: </label>
-<input
-  id="appointment-time"
-  type="time"
-  name="appointment-time"
-  value="13:30" />
+<label>
+  Choose an appointment time:
+  <input
+    id="appointment-time"
+    type="time"
+    name="appointment-time"
+    value="13:30" />
+</label>
 ```
 
 {{ EmbedLiveSample('Setting_the_value_attribute', 600, 60) }}
@@ -47,8 +49,10 @@ First, a look at the HTML. We include a label and input, and add a {{HTMLElement
 
 ```html
 <form>
-  <label for="startTime">Start time: </label>
-  <input type="time" id="startTime" />
+  <label>
+    Start time:
+    <input type="time" id="startTime" />
+  </label>
   <p>
     Value of the <code>time</code> input:
     <code>"<span id="value">n/a</span>"</code>.
@@ -122,8 +126,10 @@ The most basic use of `<input type="time">` involves a basic `<input>` and {{htm
 
 ```html
 <form>
-  <label for="appointment-time">Choose an appointment time: </label>
-  <input id="appointment-time" type="time" name="appointment-time" />
+  <label
+    >Choose an appointment time:
+    <input id="appointment-time" type="time" name="appointment-time" />
+  </label>
 </form>
 ```
 
@@ -141,8 +147,10 @@ It takes an integer value defining the number of seconds you want to increment b
 
 ```html
 <form>
-  <label for="appointment-time">Choose an appointment time: </label>
-  <input id="appointment-time" type="time" name="appointment-time" step="2" />
+  <label
+    >Choose an appointment time:
+    <input id="appointment-time" type="time" name="appointment-time" step="2" />
+  </label>
 </form>
 ```
 
@@ -162,14 +170,14 @@ You can use the [`min`](/en-US/docs/Web/HTML/Element/input#min) and [`max`](/en-
 <form>
   <label for="appointment-time">
     Choose an appointment time (opening hours 12:00 to 18:00):
+    <input
+      id="appointment-time"
+      type="time"
+      name="appointment-time"
+      min="12:00"
+      max="18:00" />
+    <span class="validity"></span>
   </label>
-  <input
-    id="appointment-time"
-    type="time"
-    name="appointment-time"
-    min="12:00"
-    max="18:00" />
-  <span class="validity"></span>
 </form>
 ```
 

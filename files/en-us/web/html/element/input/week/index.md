@@ -22,8 +22,10 @@ A string representing the value of the week/year entered into the input. The for
 You can set a default value for the input by including a value inside the [`value`](/en-US/docs/Web/HTML/Element/input#value) attribute, like so:
 
 ```html
-<label for="week">What week would you like to start?</label>
-<input id="week" type="week" name="week" value="2017-W01" />
+<label>
+  What week would you like to start?
+  <input type="week" name="week" value="2017-W01" />
+</label>
 ```
 
 {{EmbedLiveSample('Value', 600, 60)}}
@@ -85,8 +87,10 @@ The most basic use of `<input type="week">` involves a basic `<input>` and {{htm
 
 ```html
 <form>
-  <label for="week">What week would you like to start?</label>
-  <input id="week" type="week" name="week" />
+  <label>
+    What week would you like to start?
+    <input type="week" name="week" />
+  </label>
 </form>
 ```
 
@@ -110,9 +114,11 @@ You can use the [`min`](/en-US/docs/Web/HTML/Element/input#min) and [`max`](/en-
 
 ```html
 <form>
-  <label for="week">What week would you like to start?</label>
-  <input id="week" type="week" name="week" min="2017-W01" max="2017-W52" />
-  <span class="validity"></span>
+  <label>
+    What week would you like to start?
+    <input type="week" name="week" min="2017-W01" max="2017-W52" />
+    <span class="validity"></span>
+  </label>
 </form>
 ```
 
@@ -147,7 +153,7 @@ input:valid + span::after {
 }
 ```
 
-The result here is that only weeks between W01 and W52 in 2017 will be seen as valid and be selectable in supporting browsers.
+The result here is that only weeks between W01 and W52 in 2017 will be seen as valid and be selectable in supporting browsers. Some browsers that have implemented `type=week` actually prohibit you from making it invalid, so you can't demo that validity checkbox. Too bad. Try a different browser, or different machine.
 
 ### Making week values required
 
@@ -158,15 +164,11 @@ Let's look at an example; here we've set minimum and maximum weeks, and also mad
 ```html
 <form>
   <div>
-    <label for="week">What week would you like to start?</label>
-    <input
-      id="week"
-      type="week"
-      name="week"
-      min="2017-W01"
-      max="2017-W52"
-      required />
-    <span class="validity"></span>
+    <label>
+      What week would you like to start?
+      <input type="week" name="week" min="2017-W01" max="2017-W52" required />
+      <span class="validity"></span>
+    </label>
   </div>
   <div>
     <input type="submit" value="Submit form" />
@@ -215,29 +217,29 @@ The HTML looks like so:
 ```html
 <form>
   <div class="nativeWeekPicker">
-    <label for="week">What week would you like to start?</label>
-    <input
-      id="week"
-      type="week"
-      name="week"
-      min="2017-W01"
-      max="2018-W52"
-      required />
-    <span class="validity"></span>
+    <label>
+      What week would you like to start?
+      <input type="week" name="week" min="2017-W01" max="2018-W52" required />
+      <span class="validity"></span>
+    </label>
   </div>
   <p class="fallbackLabel">What week would you like to start?</p>
   <div class="fallbackWeekPicker">
     <div>
       <span>
-        <label for="week">Week:</label>
-        <select id="fallbackWeek" name="week"></select>
+        <label
+          >Week:
+          <select id="fallbackWeek" name="week"></select>
+        </label>
       </span>
       <span>
-        <label for="year">Year:</label>
-        <select id="year" name="year">
-          <option value="2017" selected>2017</option>
-          <option value="2018">2018</option>
-        </select>
+        <label
+          >Year:
+          <select id="year" name="year">
+            <option value="2017" selected>2017</option>
+            <option value="2018">2018</option>
+          </select>
+        </label>
       </span>
     </div>
   </div>

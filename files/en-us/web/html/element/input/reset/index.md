@@ -47,8 +47,10 @@ We'll begin by creating a basic reset button:
 ```html
 <form>
   <div>
-    <label for="example">Type in some sample text</label>
-    <input id="example" type="text" />
+    <label>
+      Type in some sample text
+      <input type="text" />
+    </label>
   </div>
   <div>
     <input type="reset" value="Reset the form" />
@@ -71,8 +73,10 @@ In this example, <kbd>r</kbd> is specified as the access key (you'll need to pre
 ```html
 <form>
   <div>
-    <label for="example">Type in some sample text</label>
-    <input id="example" type="text" />
+    <label>
+      Type in some sample text
+      <input type="text" />
+    </label>
   </div>
   <div>
     <input type="reset" value="Reset the form" accesskey="r" />

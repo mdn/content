@@ -937,8 +937,10 @@ A property specific to text entry-related elements is the CSS {{cssxref("caret-c
 #### HTML
 
 ```html
-<label for="textInput">Note the red caret:</label>
-<input id="textInput" class="custom" size="32" />
+<label>
+  Note the red caret:
+  <input class="custom" size="32" />
+</label>
 ```
 
 #### CSS
@@ -1001,8 +1003,10 @@ It does not suffice to have plain text adjacent to the `<input>` element. Rather
 
 <!-- explicit label -->
 <p>
-  <label for="name">Enter your name: </label>
-  <input id="name" type="text" size="30" />
+  <label>
+    Enter your name:
+    <input type="text" size="30" />
+  </label>
 </p>
 ```
 
@@ -1157,8 +1161,10 @@ If you want to present a custom error message when a field fails to validate, yo
 
 ```html
 <form>
-  <label for="name">Enter username (upper and lowercase letters): </label>
-  <input type="text" name="name" id="name" required pattern="[A-Za-z]+" />
+  <label>
+    Enter username (upper and lowercase letters):
+    <input type="text" name="name" required pattern="[A-Za-z]+" />
+  </label>
   <button>Submit</button>
 </form>
 ```
@@ -1219,11 +1225,15 @@ Firefox uses the following heuristics to determine the locale to validate the us
 
 When including inputs, it is an accessibility requirement to add labels alongside. This is needed so those who use assistive technologies can tell what the input is for. Also, clicking or touching a label gives focus to the label's associated form control. This improves the accessibility and usability for sighted users, increases the area a user can click or touch to activate the form control. This is especially useful (and even needed) for radio buttons and checkboxes, which are tiny. For more information about labels in general see [Labels](#labels).
 
-The following is an example of how to associate the `<label>` with an `<input>` element in the above style. You need to give the `<input>` an `id` attribute. The `<label>` then needs a `for` attribute whose value is the same as the input's `id`.
+The following are two examples of how to associate the `<label>` with an `<input>` element in the above style. For one, you need to give the `<input>` an `id` attribute. The `<label>` then needs a `for` attribute whose value is the same as the input's `id`. For the other, just enclose the input in the label.
 
 ```html
 <label for="peas">Do you like peas?</label>
 <input type="checkbox" name="peas" id="peas" />
+<label for="carrotsCheck">
+  Do you like carrots?
+  <input type="checkbox" id="carrotsCheck" name="carrots" />
+</label>
 ```
 
 ### Size
