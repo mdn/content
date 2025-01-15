@@ -9,8 +9,6 @@ browser-compat: api.PublicKeyCredential
 
 The Web Authentication API (WebAuthn) is an extension of the [Credential Management API](/en-US/docs/Web/API/Credential_Management_API) that enables strong authentication with public key cryptography, enabling passwordless authentication and secure multi-factor authentication (MFA) without SMS texts.
 
-> **Note:** [Passkeys](https://passkeys.dev/) are a significant use case for web authentication; see [Create a passkey for passwordless logins](https://web.dev/articles/passkey-registration) and [Sign in with a passkey through form autofill](https://web.dev/articles/passkey-form-autofill) for implementation details. See also [Google Identity > Passwordless login with passkeys](https://developers.google.com/identity/passkeys).
-
 ## WebAuthn concepts and usage
 
 WebAuthn uses [asymmetric (public-key) cryptography](https://en.wikipedia.org/wiki/Public-key_cryptography) instead of passwords or SMS texts for registering, authenticating, and [multi-factor authentication](https://en.wikipedia.org/wiki/Multi-factor_authentication) with websites. This has some benefits:
@@ -116,6 +114,23 @@ A typical authentication flow is as follows:
    3. Checking that the Relying Party ID is the one expected for this service.
 
 5. Once verified by the server, the authentication flow is considered successful.
+
+### Discoverable credentials and conditional mediation
+
+A **discoverable credential** is one where the relying party server does not provide credential IDs. Instead, the credential IDs are stored in and provided by a client-side authenticator of some kind such as a browser password manager, authenticator app, or hardware solution such as a YubiKey.
+
+A discoverable credential is created via a [`create()`](/en-US/docs/Web/API/CredentialsContainer/create) call with a specified [`residentKey`](/en-US/docs/Web/API/PublicKeyCredentialCreationOptions#residentkey), and then subsequently used for authentication via a [`get()`](/en-US/docs/Web/API/CredentialsContainer/get) call with **conditional mediation** specified, that is, [`mediation`](/en-US/docs/Web/API/CredentialsContainer/get#mediation) set to `conditional`.
+
+You can check whether conditional mediation is available on a specific user agent by calling the {{domxref("PublicKeyCredential.isConditionalMediationAvailable()")}} method.
+
+Conditional mediation results in discoverable credentials being presented to the user in a non-modal dialog box along with an indication of the origin requesting credentials. In practice, this means autofilling available credentials in your login forms. To display discoverable credentials in your login forms, you also need to include [`autocomplete="webauthn"`](/en-US/docs/Web/HTML/Attributes/autocomplete#webauthn) on your form fields.
+
+[Passkeys](https://passkeys.dev/) are a significant use case for discoverable credentials; see [Create a passkey for passwordless logins](https://web.dev/articles/passkey-registration) and [Sign in with a passkey through form autofill](https://web.dev/articles/passkey-form-autofill) for implementation details. See also [Discoverable credentials deep dive](https://web.dev/articles/webauthn-discoverable-credentials) for more general information on discoverable credentials.
+
+When conditional mediation is used for authentication, the prevent silent access flag (see {{domxref("CredentialsContainer.preventSilentAccess()")}}) is treated as being `true` regardless of its actual value: the conditional behavior always involves user mediation of some sort if applicable credentials are discovered.
+
+> [!NOTE]
+> If no credentials are discovered, the non-modal dialog will not be visible, and the user agent can prompt the user to take action in a way that depends on the type of credential (for example, to insert a device containing credentials).
 
 ## Controlling access to the API
 
