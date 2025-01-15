@@ -372,7 +372,7 @@ The following methods are available on {{jsxref("String")}} values:
 - Decomposition: break a string into smaller strings. Methods include {{jsxref("String/split", "split()")}}, {{jsxref("String/slice", "slice()")}}, {{jsxref("String/substring", "substring()")}}, {{jsxref("String/substr", "substr()")}}, {{jsxref("String/trim", "trim()")}}, {{jsxref("String/trimStart", "trimStart()")}}, and {{jsxref("String/trimEnd", "trimEnd()")}}.
 - Transformation: return a new string based on the current string's content. Methods include {{jsxref("String/toLowerCase", "toLowerCase()")}}, {{jsxref("String/toUpperCase", "toUpperCase()")}}, {{jsxref("String/toLocaleLowerCase", "toLocaleLowerCase()")}}, {{jsxref("String/toLocaleUpperCase", "toLocaleUpperCase()")}}, {{jsxref("String/normalize", "normalize()")}}, and {{jsxref("String/toWellFormed", "toWellFormed()")}}.
 
-When working with strings, there are two other objects that provide important functionality for string manipulation: {{jsxref("RegExp")}} and {{jsxref("Intl")}}. They are introduced in [regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) and [internationalization](/en-US/docs/Web/JavaScript/Guide/Internationalization) respectively.
+When working with strings, there are two other objects that provide important functionality for string manipulation: {{jsxref("RegExp")}} and {{jsxref("Intl")}}. They are introduced in [regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions) and [internationalization](/en-US/docs/Web/JavaScript/Guide/Internationalization) respectively.
 
 ## Template literals
 
