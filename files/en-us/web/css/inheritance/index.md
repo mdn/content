@@ -100,7 +100,7 @@ We can see here another border around the word "emphasized text".
 - [Introducing the CSS cascade](/en-US/docs/Web/CSS/Cascade)
 - [Learn: Handling conflicts](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
 - [Learn: cascade layers](/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)
-- [CSS cascade and inheritance](/en-US/docs/Web/CSS/CSS_cascade) module
+- [CSS cascading and inheritance](/en-US/docs/Web/CSS/CSS_cascade) module
 - [CSS syntax](/en-US/docs/Web/CSS/Syntax) guide
 - [CSS syntax](/en-US/docs/Web/CSS/CSS_syntax) module
 - [At-rules](/en-US/docs/Web/CSS/At-rule)

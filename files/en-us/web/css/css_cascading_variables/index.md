@@ -128,7 +128,7 @@ As the slider's value changes from 0 up to 360, the value of the `--hue` [custom
 
 ## See also
 
-- [CSS cascade and inheritance](/en-US/docs/Web/CSS/CSS_cascade) module
+- [CSS cascading and inheritance](/en-US/docs/Web/CSS/CSS_cascade) module
 - [CSS `env()`](/en-US/docs/Web/CSS/env) function
 - [CSS `calc()`](/en-US/docs/Web/CSS/calc) function
 - [`getPropertyValue()`](/en-US/docs/Web/API/CSSStyleDeclaration/getPropertyValue) method

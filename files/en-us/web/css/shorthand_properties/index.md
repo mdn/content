@@ -252,7 +252,7 @@ See [Handling conflicts](/en-US/docs/Learn_web_development/Core/Styling_basics/H
 - [Introducing the CSS Cascade](/en-US/docs/Web/CSS/Cascade)
 - [Learn: Handling conflicts](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
 - [Learn: Cascade layers](/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)
-- [CSS cascade and inheritance](/en-US/docs/Web/CSS/CSS_cascade) module
+- [CSS cascading and inheritance](/en-US/docs/Web/CSS/CSS_cascade) module
 - [Visual formatting models](/en-US/docs/Web/CSS/Visual_formatting_model)
 - [Initial](/en-US/docs/Web/CSS/initial_value), [computed](/en-US/docs/Web/CSS/computed_value), [used](/en-US/docs/Web/CSS/used_value), and [actual](/en-US/docs/Web/CSS/actual_value) values
 - [Value definition syntax](/en-US/docs/Web/CSS/Value_definition_syntax)
