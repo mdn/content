@@ -374,14 +374,14 @@ Below is a list of all of the attributes available in SVG along with links to re
 
 - {{SVGAttr("alignment-baseline")}}
 - {{SVGAttr("baseline-shift")}}
-- {{SVGAttr("clip")}}
 - {{SVGAttr("clip-path")}}
 - {{SVGAttr("clip-rule")}}
 - {{SVGAttr("color")}}
 - {{SVGAttr("color-interpolation")}}
 - {{SVGAttr("color-interpolation-filters")}}
-- {{SVGAttr("color-rendering")}}
 - {{SVGAttr("cursor")}}
+- {{SVGAttr("cx")}}
+- {{SVGAttr("cy")}}
 - {{SVGAttr("d")}}
 - {{SVGAttr("direction")}}
 - {{SVGAttr("display")}}
@@ -401,6 +401,7 @@ Below is a list of all of the attributes available in SVG along with links to re
 - {{SVGAttr("font-weight")}}
 - {{SVGAttr("glyph-orientation-horizontal")}}
 - {{SVGAttr("glyph-orientation-vertical")}}
+- {{SVGAttr("height")}}
 - {{SVGAttr("image-rendering")}}
 - {{SVGAttr("letter-spacing")}}
 - {{SVGAttr("lighting-color")}}
@@ -408,9 +409,13 @@ Below is a list of all of the attributes available in SVG along with links to re
 - {{SVGAttr("marker-mid")}}
 - {{SVGAttr("marker-start")}}
 - {{SVGAttr("mask")}}
+- `mask-type`
 - {{SVGAttr("opacity")}}
 - {{SVGAttr("overflow")}}
 - {{SVGAttr("pointer-events")}}
+- {{SVGAttr("r")}}
+- {{SVGAttr("rx")}}
+- {{SVGAttr("ry")}}
 - {{SVGAttr("shape-rendering")}}
 - {{SVGAttr("stop-color")}}
 - {{SVGAttr("stop-opacity")}}
@@ -424,14 +429,19 @@ Below is a list of all of the attributes available in SVG along with links to re
 - {{SVGAttr("stroke-width")}}
 - {{SVGAttr("text-anchor")}}
 - {{SVGAttr("text-decoration")}}
+- `text-overflow`
 - {{SVGAttr("text-rendering")}}
 - {{SVGAttr("transform")}}
 - {{SVGAttr("transform-origin")}}
 - {{SVGAttr("unicode-bidi")}}
 - {{SVGAttr("vector-effect")}}
 - {{SVGAttr("visibility")}}
+- `white-space`
+- {{SVGAttr("width")}}
 - {{SVGAttr("word-spacing")}}
 - {{SVGAttr("writing-mode")}}
+- {{SVGAttr("x")}}
+- {{SVGAttr("y")}}
 
 ### Filters attributes
 
