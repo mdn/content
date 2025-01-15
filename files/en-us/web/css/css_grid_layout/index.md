@@ -246,6 +246,6 @@ auto-fill auto-fit
 - [CSS display](/en-US/docs/Web/CSS/CSS_display) module
 - [Grid by example](https://gridbyexample.com/)
 - [CSS grid reference](https://tympanus.net/codrops/css_reference/grid/) via Codrops
-- [CSS grid inspector - Firefox DevTools](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html)
+- [Firefox DevTools: grid inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html)
 - [CSS grid playground](https://mozilladevelopers.github.io/playground/css-grid/)
 - [CSS grid garden](https://cssgridgarden.com/) - A game for learning CSS grid
