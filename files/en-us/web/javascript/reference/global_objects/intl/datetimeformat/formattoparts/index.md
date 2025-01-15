@@ -167,21 +167,21 @@ These years are disambiguated by relationship to
 corresponding years on the Gregorian calendar. When this is the case, the result of
 `formatToParts()` will contain an entry for `relatedYear` when a
 year would normally be present, containing the 4-digit Gregorian year, instead of an
-entry for `year`. Setting an entry in the bag for `year` (with any
-value) will yield both the and the `yearName` Gregorian
+entry for `year`. Setting an entry in the bag for `month` (with a value of `long`) will yield both the and the `yearName` Gregorian
 `relatedYear`:
 
 ```js
-const opts = { year: "numeric", month: "numeric", day: "numeric" };
+const opts = { year: "numeric", month: "long", day: "numeric" };
 const df = new Intl.DateTimeFormat("zh-u-ca-chinese", opts);
 df.formatToParts(Date.UTC(2012, 11, 17, 3, 0, 42));
 
 // return value
 [
   { type: "relatedYear", value: "2012" },
+  { type: "yearName", value: "壬辰" },
   { type: "literal", value: "年" },
   { type: "month", value: "十一月" },
-  { type: "day", value: "4" },
+  { type: "day", value: "5" },
 ];
 ```
 
