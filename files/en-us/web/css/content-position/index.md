@@ -46,4 +46,4 @@ The `<content-position>` enumerated value type is specified using one of the fol
 - Properties that use this data type: {{cssxref("align-content")}}, {{cssxref("justify-content")}}, {{cssxref("place-content")}}
 - Other box alignment data types: {{cssxref("baseline-position")}}, {{cssxref("content-distribution")}}, {{cssxref("content-position")}}, {{cssxref("overflow-position")}}, and {{cssxref("self-position")}}
 - [CSS box alignment](/en-US/docs/Web/CSS/CSS_box_alignment) module
-- [CSS flexible layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout) module
+- [CSS flexible box layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout) module
