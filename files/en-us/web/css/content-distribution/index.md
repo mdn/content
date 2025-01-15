@@ -27,19 +27,19 @@ The following keyword values are represented by the `<content-distribution>` gra
 
 - `space-around`
 
-  - : The items are evenly distributed in the container, with a half-size space on either end. The items subjects are distributed so that the spacing between any two adjacent items is the same, and the spacing before the first and after the last items is half the size of the other spacing.
+  - : The items are evenly distributed in the container, with a half-size space on either end. The spacing between any two adjacent items is the same, and the spacing before the first and after the last items is half the size of the other spacing.
 
   The default fallback alignment for `space-around` is `safe center`. If the container has only one child, the item will be centered.
 
 - `space-evenly`
 
-  - : The items are evenly distributed in the container, with a full-size space on either end, so that the spacing between any two adjacent items, before the first item, and after the last item are all the same.
+  - : The items are evenly distributed in the container, with a full-size space on either end. The spacing between any two adjacent items, before the first item, and after the last item, are all the same.
 
   The default fallback alignment for `space-evenly` is `safe center`. If the container has only one child, the item will be centered.
 
 - `stretch`
 
-  - : If the combined size of the items is less than the size of the container, any items that can grow with have their size increased equally (not proportionally), while still respecting the constraints imposed by {{cssxref("max-height")}}, {{cssxref("max-width")}}, or equivalent functionality, so that the combined size of the items exactly fills the container.
+  - : If the combined size of the items is less than the size of the container, any items that can grow will have their size increased equally (not proportionally), while still respecting the constraints imposed by {{cssxref("max-height")}}, {{cssxref("max-width")}}, or equivalent functionality, so that the combined size of the items exactly fills the container.
 
   The default fallback alignment for `stretch` is `flex-start` in flexbox, and `start` in other layout modes. If there is only one item, and that item can grow, it will grow to fill the container.
 

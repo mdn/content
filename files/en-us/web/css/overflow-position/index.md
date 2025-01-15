@@ -7,7 +7,7 @@ browser-compat: css.types.overflow-position
 
 {{CSSRef}}
 
-The **`<overflow-position>`** {{glossary("enumerated")}} value type defines how an alignment subject is larger than its alignment container will overflow that container. For example, if centered items are wider than their container, the overflow may be displayed beyond the viewport's start edge, which can't be scrolled to. The `<overflow-position>` value defines whether the alignment mode should be overridden to ensure the content is visible (`safe`) or if the alignment mode must be adhered to (`unsafe`).
+The **`<overflow-position>`** {{glossary("enumerated")}} value type defines how an alignment subject that is larger than its alignment container will overflow that container. For example, if centered items are wider than their container, the overflow may be displayed beyond the viewport's start edge, which can't be scrolled to. The `<overflow-position>` value defines whether the alignment mode should be overridden to ensure the content is visible (`safe`) or if the alignment mode must be adhered to (`unsafe`).
 
 This data type is valid for the {{cssxref("align-content")}}, {{cssxref("align-items")}}, {{cssxref("align-self")}}, {{cssxref("justify-items")}} and {{cssxref("justify-self")}} properties as well as the {{cssxref("place-content")}}, {{cssxref("place-items")}}, and {{cssxref("place-self")}} shorthand properties.
 If omitted, the default overflow alignment is a blend of `safe` and `unsafe`.

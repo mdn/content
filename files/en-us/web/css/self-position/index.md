@@ -7,7 +7,7 @@ browser-compat: css.types.self-position
 
 {{CSSRef}}
 
-The **`<self-position>`** {{glossary("enumerated")}} value data type is used by {{cssxref("justify-self")}} and {{cssxref("align-self")}} properties, and the {{cssxref("place-self")}} shorthand, to align the box within its alignment container, and also by {{cssxref("justify-items")}} and {{cssxref("align-items")}} properties, and the {{cssxref("place-items")}} shorthand, to specify default values for `justify-self` and `align-self`.
+The **`<self-position>`** {{glossary("enumerated")}} value data type is used by the {{cssxref("justify-self")}} and {{cssxref("align-self")}} properties, and the {{cssxref("place-self")}} shorthand, to align the box within its alignment container. It is also used by the {{cssxref("justify-items")}} and {{cssxref("align-items")}} properties, and the {{cssxref("place-items")}} shorthand, to specify default values for `justify-self` and `align-self`.
 
 ## Syntax
 
@@ -48,6 +48,6 @@ The following keyword values are represented by the `<self-position>` grammar te
 ## See also
 
 - Properties that use this data type: {{cssxref("align-self")}}, {{cssxref("justify-self")}}, {{cssxref("place-self")}}, {{cssxref("align-items")}}, {{cssxref("justify-items")}}, {{cssxref("place-items")}}
-- Other box alignment data types: {{cssxref("baseline-position")}}, {{cssxref("self-distribution")}}, {{cssxref("overflow-position")}}, and {{cssxref("content-position")}}
+- Other box alignment data types: {{cssxref("baseline-position")}}, {{cssxref("content-distribution")}}, {{cssxref("overflow-position")}}, and {{cssxref("content-position")}}
 - [CSS box alignment](/en-US/docs/Web/CSS/CSS_box_alignment) module
 - [CSS flexible layout](/en-US/docs/Web/CSS/CSS_flexible_layout) module

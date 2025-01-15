@@ -23,14 +23,14 @@ The `<baseline-position>` enumerated value type is specified using an optional `
 
 - `baseline`
 
-  - : Computes to `first baseline` defined below.
+  - : Computes to `first baseline`, as defined below.
 
 - `first baseline`
 
-  - : Align the alignment baseline of the box's first baseline set with the corresponding baseline of its baseline-sharing group. The fallback alignment is `safe self-start` for self-alignment or `safe start` for content-distribution.
+  - : Aligns the alignment baseline of the box's first baseline set with the corresponding baseline of its baseline-sharing group. The fallback alignment is `safe self-start` for self-alignment or `safe start` for content distribution.
 
 - `last baseline`
-  - : Aligns the alignment baseline of the box's last baseline set with the corresponding baseline of its baseline-sharing group. The fallback alignment is `safe self-end` for self-alignment or `safe end` for content-distribution.
+  - : Aligns the alignment baseline of the box's last baseline set with the corresponding baseline of its baseline-sharing group. The fallback alignment is `safe self-end` for self-alignment or `safe end` for content distribution.
 
 ## Specifications
 
