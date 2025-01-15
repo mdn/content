@@ -32,7 +32,7 @@ Intl.supportedValuesOf(key)
 A sorted array of unique string values indicating the values supported by the implementation for the given key.
 
 > [!NOTE]
-> While the IANA database changes from time to time, the Unicode CLDR database (which browsers use) keeps old time zone names for stability purposes. Some browsers may use the legacy name, while others override it with the new name. See {{jsxref("Intl/Locale/getTimeZones", "Intl.Locale.prototype.getTimeZones")}} for more information.
+> The standardization of `Temporal` requires browsers to always return the primary identifier in the IANA database, which may change over time. See [time zones and offsets](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#time_zones_and_offsets) for more information.
 
 ### Exceptions
 

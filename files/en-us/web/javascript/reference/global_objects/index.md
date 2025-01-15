@@ -74,6 +74,7 @@ These are the base objects representing numbers, dates, and mathematical calcula
 - {{jsxref("BigInt")}}
 - {{jsxref("Math")}}
 - {{jsxref("Date")}}
+- {{jsxref("Temporal")}}
 
 ### Text processing
 

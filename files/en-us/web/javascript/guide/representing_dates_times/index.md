@@ -6,6 +6,9 @@ page-type: guide
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Numbers_and_strings", "Web/JavaScript/Guide/Regular_expressions")}}
 
+> [!NOTE]
+> The `Date` object is now considered legacy and should be avoided in new code. We will update this page with modern alternatives soon.
+
 ## Date object
 
 JavaScript does not have a date data type. However, you can use the {{jsxref("Date")}} object and its methods to work with dates and times in your applications. The `Date` object has a large number of methods for setting, getting, and manipulating dates. It does not have any properties.

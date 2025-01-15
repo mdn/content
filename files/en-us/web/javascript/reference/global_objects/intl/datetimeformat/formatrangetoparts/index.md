@@ -18,12 +18,22 @@ range produced by this `Intl.DateTimeFormat` object.
 formatRangeToParts(startDate, endDate)
 ```
 
+### Parameters
+
+- `startDate`
+  - : The start of the date range. Can be a {{jsxref("Date")}} or {{jsxref("Temporal.PlainDateTime")}} object. Additionally can be a {{jsxref("Temporal.PlainTime")}}, {{jsxref("Temporal.PlainDate")}}, {{jsxref("Temporal.PlainYearMonth")}}, or {{jsxref("Temporal.PlainMonthDay")}} object if the `DateTimeFormat` object was configured to print at least one relevant part of the date.
+    > [!NOTE]
+    > A {{jsxref("Temporal.ZonedDateTime")}} object will always throw a `TypeError`; use {{jsxref("Temporal/ZonedDateTime/toLocaleString", "Temporal.ZonedDateTime.prototype.toLocaleString()")}} or convert it to a {{jsxref("Temporal.PlainDateTime")}} object instead.
+- `endDate`
+  - : The end of the date range. Must have the same type as `startDate`.
+
+### Return value
+
+An {{jsxref("Array")}} of objects containing the _locale-specific_ tokens representing each part of the formatted date range, according to the locale and formatting options of this {{jsxref("Intl.DateTimeFormat")}} object.
+
 ## Examples
 
 ### Basic formatRangeToParts usage
-
-This method receives two {{jsxref("Date")}}s and returns an {{jsxref("Array")}} of
-objects containing the _locale-specific_ tokens representing each part of the formatted date range.
 
 > [!NOTE]
 > The return values shown in your locale may differ from those listed below.
