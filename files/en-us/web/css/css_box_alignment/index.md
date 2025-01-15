@@ -51,9 +51,7 @@ The alignment of text and inline-level content is defined in [CSS text module](/
 
 ## Guides
 
-As the CSS box alignment properties are implemented differently depending on the specification they interact with, refer to the following pages for each layout type for details of how to use the alignment properties with it:
-
-- [Box alignment](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment)
+- [Box alignment overview](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment)
 
   - : Overview of the general concepts found in the CSS box alignment module.
 
@@ -95,5 +93,5 @@ As the CSS box alignment properties are implemented differently depending on the
 - [Aligning items in a flex container](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
 - [Box alignment in CSS grid layouts](/en-US/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
 - [CSS display](/en-US/docs/Web/CSS/CSS_display) module
-- [CSS flex layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout) module
+- [CSS flexible box layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout) module
 - [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) module
