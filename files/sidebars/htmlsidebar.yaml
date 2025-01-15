@@ -131,12 +131,24 @@ l10n:
     Allowing_cross-origin_images_and_canvas: Autoriser les images et canevas provenant d'autres origines
   ja:
     Beginners: チュートリアル
+    Creating_the_content: "初めてのウェブサイト: コンテンツの作成"
+    Structuring_content_with_HTML: HTML によるコンテンツの構造化
     Reference: リファレンス
     HTML_Elements: HTML 要素
     Global_attributes: グローバル属性
+    Attributes: 属性
     Input_types: <code>&lt;input&gt;</code> 型
+    Guides: ガイド
     Content_categories: コンテンツカテゴリー
+    Block-level_elements: ブロックレベル要素
+    Inline_elements: インライン要素
+    Quirks_Mode_and_Standards_Mode: 互換モードと標準モード
+    Date_and_time_formats: HTML で使用される日付と時刻の形式
     Constraint_validation: 制約検証
+    Microdata: Microdata
+    Microformats: Microformats
+    Viewport_meta_tag: ビューポートメタタグ
+    Allowing_cross-origin_images_and_canvas: 別オリジンの画像とキャンバスを利用可能にする
   ko:
     Beginners: "자습서:"
     Reference: "참고서:"
