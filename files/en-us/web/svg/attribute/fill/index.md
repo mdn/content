@@ -513,3 +513,7 @@ For {{SVGElement('tspan')}}, `fill` is a presentation attribute that defines the
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- CSS {{cssxref("fill")}} property

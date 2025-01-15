@@ -127,3 +127,7 @@ The gradient will be drawn such that the **100%** gradient stop is mapped to the
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- CSS {{cssxref("r")}} property

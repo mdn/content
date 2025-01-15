@@ -49,3 +49,7 @@ For a description of the values, please refer to the CSS {{cssxref("unicode-bidi
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- CSS {{cssxref("unicode-bidi")}} property

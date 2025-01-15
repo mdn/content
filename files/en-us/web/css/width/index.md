@@ -182,6 +182,7 @@ p.min-blue {
 
 ## See also
 
+- SVG {{SVGAttr("width")}} attribute
 - {{cssxref("height")}}
 - {{cssxref("box-sizing")}}
 - {{cssxref("min-width")}}, {{cssxref("max-width")}}

@@ -160,6 +160,6 @@ text:nth-of-type(8) {
 ## See also
 
 - {{cssxref("dominant-baseline")}}
-- {{SVGAttr("alignment-baseline")}} SVG attribute
+- SVG {{SVGAttr("alignment-baseline")}} attribute
 - [CSS inline layout](/en-US/docs/Web/CSS/CSS_inline_layout) module
 - [CSS box alignment](/en-US/docs/Web/CSS/CSS_box_alignment) module

@@ -265,6 +265,7 @@ span {
 
 ## See also
 
+- SVG {{SVGAttr("font-weight")}} attribute
 - {{cssxref("font-family")}}
 - {{cssxref("font-style")}}
 - [Learn: Fundamental text and font styling](/en-US/docs/Learn_web_development/Core/Text_styling/Fundamentals)

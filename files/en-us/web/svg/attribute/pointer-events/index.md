@@ -117,3 +117,7 @@ _For a detailed explanation of each possible value, have a look at the CSS {{css
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- CSS {{cssxref("pointer-events")}} property

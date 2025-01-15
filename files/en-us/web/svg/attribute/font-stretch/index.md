@@ -48,4 +48,4 @@ You can use this attribute with the following SVG elements:
 
 ## See also
 
-- {{cssxref("font-stretch")}}
+- CSS {{cssxref("font-stretch")}} property

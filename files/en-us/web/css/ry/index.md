@@ -201,3 +201,4 @@ When using percentage values for `ry`, the values are relative to the height of 
 - {{cssxref("border-radius")}} shorthand property
 - {{cssxref("gradient/radial-gradient", "radial-gradient")}}
 - {{cssxref("basic-shape")}} data type
+- SVG {{SVGAttr("ry")}} attribute

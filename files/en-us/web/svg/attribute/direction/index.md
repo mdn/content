@@ -74,4 +74,4 @@ svg {
 
 ## See also
 
-- {{cssxref("direction")}}
+- CSS {{cssxref("direction")}} property

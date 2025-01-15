@@ -233,6 +233,7 @@ The filters are applied in order. This is why the drop shadows are not the same 
 
 ## See also
 
+- SVG {{SVGAttr("filter")}} attribute
 - CSS {{cssxref("backdrop-filter")}} property
 - CSS [compositing and blending](/en-US/docs/Web/CSS/CSS_compositing_and_blending) module, including the CSS {{cssxref("background-blend-mode")}} and {{cssxref("mix-blend-mode")}} properties.
 - The CSS {{cssxref("mask")}} property

@@ -91,4 +91,4 @@ For a description of the values, please refer to the [CSS `text-decoration`](/en
 
 ## See also
 
-- {{cssxref("text-decoration")}}
+- CSS {{cssxref("text-decoration")}} property

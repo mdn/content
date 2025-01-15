@@ -137,8 +137,8 @@ a[href="http://example.com"]
 
 ## See also
 
-- The SVG attribute {{SVGAttr("pointer-events")}}
-- The SVG attribute {{SVGAttr("visibility")}}
-- The {{domxref("PointerEvent")}} API
+- SVG {{SVGAttr("pointer-events")}} attribute
+- SVG {{SVGAttr("visibility")}} attribute
+- {{domxref("PointerEvent")}}
 - [WebKit Specs PointerEventsProperty](https://webkit.org/specs/PointerEventsProperty.html) extended for use in (X)HTML content
 - {{cssxref("user-select")}} - controls whether the user can select text

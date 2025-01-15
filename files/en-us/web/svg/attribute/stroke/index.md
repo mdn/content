@@ -126,3 +126,7 @@ The output is as follows:
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- CSS {{cssxref("stroke")}} property

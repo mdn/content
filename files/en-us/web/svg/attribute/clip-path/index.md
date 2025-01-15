@@ -132,4 +132,4 @@ svg {
 
 ## See also
 
-- The CSS {{cssxref("clip-path")}} property
+- CSS {{cssxref("clip-path")}} property

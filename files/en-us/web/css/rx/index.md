@@ -201,3 +201,4 @@ When using percentage values for `rx`, the values are relative to the width of t
 - {{cssxref("border-radius")}} shorthand property
 - {{cssxref("gradient/radial-gradient", "radial-gradient")}}
 - {{cssxref("basic-shape")}} data type
+- SVG {{SVGAttr("rx")}} attribute

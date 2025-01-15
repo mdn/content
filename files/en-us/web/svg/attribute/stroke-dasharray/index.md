@@ -97,3 +97,7 @@ svg {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- CSS {{cssxref("stroke-dasharray")}} property

@@ -58,4 +58,4 @@ You can use this attribute with the following SVG elements:
 
 ## See also
 
-- {{cssxref("writing-mode")}}
+- CSS {{cssxref("writing-mode")}} property

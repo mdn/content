@@ -93,4 +93,4 @@ For a description of the values, please refer to the [CSS `font-variant`](/en-US
 
 ## See also
 
-- {{cssxref("font-variant")}}
+- CSS {{cssxref("font-variant")}} property

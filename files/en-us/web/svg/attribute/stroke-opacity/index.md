@@ -92,16 +92,4 @@ It's important to know that the stroke partially covers the fill of a shape, so 
 
 ## See also
 
-CSS properties:
-
-- {{cssxref('stroke-opacity')}}
-- {{cssxref('stroke')}}
-- {{cssxref('opacity')}}
-- {{cssxref('fill-opacity')}}
-
-SVG Attributes:
-
-- {{SVGAttr("stroke")}}
-- {{SVGAttr("opacity")}}
-- {{SVGAttr("fill-opacity")}}
-- {{SVGAttr("stop-opacity")}}
+- CSS {{cssxref("stroke-opacity")}} property

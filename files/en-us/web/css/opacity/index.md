@@ -208,5 +208,6 @@ To style elements based on user's operating systems transparency preferences, us
 
 ## See also
 
+- SVG {{SVGAttr("opacity")}} attribute
 - [`prefers-reduced-transparency`](/en-US/docs/Web/CSS/@media/prefers-reduced-transparency) media query
 - [CSS color](/en-US/docs/Web/CSS/CSS_colors) module

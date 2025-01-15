@@ -64,4 +64,4 @@ The following elements can use the `cursor` attribute
 
 ## See also
 
-- {{cssxref("cursor")}}
+- CSS {{cssxref("cursor")}} property

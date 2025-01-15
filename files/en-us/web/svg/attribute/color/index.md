@@ -70,3 +70,7 @@ svg {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- CSS {{cssxref("color")}} property

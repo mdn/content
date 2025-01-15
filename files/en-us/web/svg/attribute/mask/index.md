@@ -92,3 +92,7 @@ Since SVG2, the {{cssxref('mask')}} attribute is defined as a CSS property and i
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- CSS {{cssxref("mask")}} property

@@ -83,4 +83,5 @@ svg {
 
 ## See also
 
+- CSS {{cssxref("lighting-color")}} property
 - [Description of Phong reflection model on Wikipedia](https://en.wikipedia.org/wiki/Phong_reflection_model)

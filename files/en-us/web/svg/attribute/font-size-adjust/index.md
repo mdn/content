@@ -94,4 +94,4 @@ svg {
 
 ## See also
 
-- {{cssxref("font-size-adjust")}}
+- CSS {{cssxref("font-size-adjust")}} property

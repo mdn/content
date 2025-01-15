@@ -76,4 +76,4 @@ svg {
 
 ## See also
 
-- {{cssxref("text-rendering")}}
+- CSS {{cssxref("text-rendering")}} property

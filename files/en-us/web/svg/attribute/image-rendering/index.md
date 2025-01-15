@@ -57,4 +57,4 @@ You can use this attribute with the following SVG elements:
 
 ## See also
 
-- {{cssxref("image-rendering")}}
+- CSS {{cssxref("image-rendering")}} property
