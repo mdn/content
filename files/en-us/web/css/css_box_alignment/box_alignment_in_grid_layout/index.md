@@ -43,7 +43,7 @@ These properties deal with aligning the item inside the grid area it is placed i
 - {{cssxref("align-items")}}
 - {{cssxref("place-items")}}
 
-The `*-items` properties, `align-items` and `justify-items`, are applied to the grid container and set the "self" properties, `align-self` and `justify-self`, on all grid items as a group. This means that you can set alignment for all of your grid items at once, then override any items that need a different alignment by applying the `align-self` or `justify-self` property to the rules for the individual grid items.
+The `*-items` properties, `align-items` and `justify-items`, are applied to the grid container and set alignment for all grid items as a group. The `*-self` properties, `align-self` and `justify-self`, are instead set on grid items. This means that you can set alignment on all grid items, and then override any items that need a different alignment by applying the `align-self` or `justify-self` property to the rules for the individual grid items.
 
 The initial value for `align-items` and `justify-items` is `stretch`, and the initial value for `align-self` and `justify-self` is `auto`, so the item will stretch over the entire grid area. The exception to this rule is where the item has an intrinsic {{glossary("aspect ratio")}}, for example an image. In this case the item will be aligned to `start` in both dimensions in order that the image is not distorted.
 
