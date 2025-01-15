@@ -382,6 +382,14 @@
         "Window: devicemotion"
       ]
     },
+    "Device Posture API": {
+      "overview": ["Device Posture API"],
+      "guides": [],
+      "interfaces": ["DevicePosture"],
+      "methods": ["Navigator.devicePosture"],
+      "properties": [],
+      "events": []
+    },
     "Document Picture-in-Picture API": {
       "overview": ["Document Picture-in-Picture API"],
       "guides": ["/docs/Web/API/Document_Picture-in-Picture_API/Using"],
