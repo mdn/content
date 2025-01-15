@@ -231,7 +231,7 @@ An `SVGPreserveAspectRatio` object can be designated as read only, which means t
   </thead>
   <tbody>
     <tr>
-      <td><code>align</code></td>
+      <td><code>{{domxref("SVGPreserveAspectRatio.align", "align")}}</code></td>
       <td>unsigned short</td>
       <td>
         The type of the alignment value as specified by one of the
@@ -239,7 +239,7 @@ An `SVGPreserveAspectRatio` object can be designated as read only, which means t
       </td>
     </tr>
     <tr>
-      <td><code>meetOrSlice</code></td>
+      <td><code>{{domxref("SVGPreserveAspectRatio.meetOrSlice", "meetOrSlice")}}</code></td>
       <td>unsigned short</td>
       <td>
         The type of the meet-or-slice value as specified by one of the
