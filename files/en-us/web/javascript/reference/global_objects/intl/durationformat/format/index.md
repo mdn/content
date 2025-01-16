@@ -128,6 +128,4 @@ new Intl.DurationFormat("en", { style: "digital", fractionalDigits: 3 }).format(
 ## See also
 
 - {{jsxref("Intl.DurationFormat")}}
-- {{jsxref("Intl.supportedValuesOf()")}}
-- {{jsxref("Intl")}}
 - {{jsxref("Temporal.Duration")}}
