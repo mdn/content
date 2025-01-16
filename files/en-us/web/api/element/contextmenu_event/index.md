@@ -34,7 +34,7 @@ A {{domxref("PointerEvent")}}. Inherits from {{domxref("MouseEvent")}}.
 {{InheritanceDiagram("PointerEvent")}}
 
 > [!NOTE]
-> In earlier versions of the specification the event type for this event was a {{domxref("MouseEvent")}}, and this is still the type passed in Firefox and Safari.
+> In earlier versions of the specification, the event type for this event was a {{domxref("MouseEvent")}}, check [browser compatibility](#browser_compatibility) for more information.
 
 ## Event properties
 
@@ -72,7 +72,7 @@ _This interface inherits properties from {{domxref("MouseEvent")}} and {{domxref
 In this example, the default action of the `contextmenu` event is canceled using `preventDefault()` when the `contextmenu` event is fired at the first paragraph. As a result, the first paragraph will do nothing when right-clicked, while the second paragraph will show the standard context menu offered by your browser.
 
 > [!NOTE]
-> In Firefox, if you hold down the <kbd>Shift</kbd> key while right-clicking, then the context menu is shown without the `contextmenu` event being fired. Therefore, canceling the event does not stop the context menu from being shown.
+> In earlier versions of the specification, the event type for this event was a {{domxref("MouseEvent")}}, check [browser compatibility](#browser_compatibility) for more information.
 
 #### HTML
 
