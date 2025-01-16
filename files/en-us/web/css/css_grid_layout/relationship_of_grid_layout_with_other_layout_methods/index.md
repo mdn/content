@@ -6,7 +6,7 @@ page-type: guide
 
 {{CSSRef}}
 
-[CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) has been designed to work alongside other parts of CSS, as part of a complete system for doing the layout. This guide explains grid layout fits together with other techniques.
+[CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) is designed to work alongside other parts of CSS, as part of a complete system for doing the layout. This guide explains grid layout fits together with other techniques.
 
 ## Grid and flexbox
 
