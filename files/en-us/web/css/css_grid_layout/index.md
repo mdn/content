@@ -170,13 +170,13 @@ auto-fill auto-fit
 
   - : How grid positions items that don't have any placement properties declared.
 
-- [Box alignment in grid layout](/en-US/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
+- [Aligning items in CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
 
-  - : x
+  - : Aligning, justifying, and centering grid items along the two axes of a grid layout.
 
 - [Grids, logical values, and writing modes](/en-US/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)
 
-  - : x
+  - : A look at the interaction between CSS grid layout, box alignment and writing modes
 
 - [Grid layout and accessibility](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility)
 
