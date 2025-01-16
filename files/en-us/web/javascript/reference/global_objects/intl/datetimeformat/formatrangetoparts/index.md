@@ -7,8 +7,7 @@ browser-compat: javascript.builtins.Intl.DateTimeFormat.formatRangeToParts
 
 {{JSRef}}
 
-The **`formatRangeToParts()`** method of {{jsxref("Intl.DateTimeFormat")}} instances returns an array of locale-specific tokens representing each part of the formatted date
-range produced by this `Intl.DateTimeFormat` object.
+The **`formatRangeToParts()`** method of {{jsxref("Intl.DateTimeFormat")}} instances returns an array of objects representing each part of the formatted string that would be returned by {{jsxref("Intl/DatetimeFormat/formatRange", "formatRange()")}}. It is useful for building custom strings from the locale-specific tokens.
 
 {{EmbedInteractiveExample("pages/js/intl-datetimeformat-prototype-formatrangetoparts.html", "taller")}}
 
@@ -18,15 +17,31 @@ range produced by this `Intl.DateTimeFormat` object.
 formatRangeToParts(startDate, endDate)
 ```
 
+### Parameters
+
+- `startDate`
+  - : A {{jsxref("Date")}} object representing the start of the date range.
+- `endDate`
+  - : A {{jsxref("Date")}} object representing the end of the date range.
+
+### Return value
+
+An {{jsxref("Array")}} of objects containing the formatted date range in parts. Each object has three properties, `type`, `value`, and `source`, each containing a string. The string concatenation of `value`, in the order provided, will result in the same string as {{jsxref("Intl/DateTimeFormat/formatRange", "formatRange()")}}. The `type` may have the same values as {{jsxref("Intl/DateTimeFormat/formatToParts", "formatToParts()")}}. The `source` can be one of the following:
+
+- `startRange`
+  - : The token is a part of the start date.
+- `endRange`
+  - : The token is a part of the end date.
+- `shared`
+  - : The token is shared between the start and end; for example, if the start and end dates share the same day period, that token may get reused. All literals that are part of the range pattern itself, such as the `" – "` separator, are also marked as `shared`.
+
+If the start and end dates are equivalent at the precision of the output, then the output has the same list of tokens as calling {{jsxref("Intl/DateTimeFormat/formatToParts", "formatToParts()")}} on the start date, with all tokens marked as `source: "shared"`.
+
 ## Examples
 
-### Basic formatRangeToParts usage
+### Using formatRangeToParts()
 
-This method receives two {{jsxref("Date")}}s and returns an {{jsxref("Array")}} of
-objects containing the _locale-specific_ tokens representing each part of the formatted date range.
-
-> [!NOTE]
-> The return values shown in your locale may differ from those listed below.
+The `formatRange()` method outputs localized, opaque strings that cannot be manipulated directly:
 
 ```js
 const date1 = new Date(Date.UTC(1906, 0, 10, 10, 0, 0)); // Wed, 10 Jan 1906 10:00:00 GMT
@@ -38,19 +53,25 @@ const fmt = new Intl.DateTimeFormat("en", {
 });
 
 console.log(fmt.formatRange(date1, date2)); // '10:00 – 11:00 AM'
+```
 
-fmt.formatRangeToParts(date1, date2);
-// [
-//   { type: 'hour',      value: '10',  source: "startRange" },
-//   { type: 'literal',   value: ':',   source: "startRange" },
-//   { type: 'minute',    value: '00',  source: "startRange" },
-//   { type: 'literal',   value: ' – ', source: "shared"     },
-//   { type: 'hour',      value: '11',  source: "endRange"   },
-//   { type: 'literal',   value: ':',   source: "endRange"   },
-//   { type: 'minute',    value: '00',  source: "endRange"   },
-//   { type: 'literal',   value: ' ',   source: "shared"     },
-//   { type: 'dayPeriod', value: 'AM',  source: "shared"     }
-// ]
+However, in many user interfaces you may want to customize the formatting of this string, or interleave it with other texts. The `formatRangeToParts()` method produces the same information in parts:
+
+```js
+console.log(fmt.formatRangeToParts(date1, date2));
+
+// return value:
+[
+  { type: "hour", value: "10", source: "startRange" },
+  { type: "literal", value: ":", source: "startRange" },
+  { type: "minute", value: "00", source: "startRange" },
+  { type: "literal", value: " – ", source: "shared" },
+  { type: "hour", value: "11", source: "endRange" },
+  { type: "literal", value: ":", source: "endRange" },
+  { type: "minute", value: "00", source: "endRange" },
+  { type: "literal", value: " ", source: "shared" },
+  { type: "dayPeriod", value: "AM", source: "shared" },
+];
 ```
 
 ## Specifications
@@ -63,5 +84,5 @@ fmt.formatRangeToParts(date1, date2);
 
 ## See also
 
-- {{jsxref("Intl/DateTimeFormat/formatRange", "Intl.DateTimeFormat.prototype.formatRange()")}}
 - {{jsxref("Intl.DateTimeFormat")}}
+- {{jsxref("Intl/DateTimeFormat/formatRange", "Intl.DateTimeFormat.prototype.formatRange()")}}
