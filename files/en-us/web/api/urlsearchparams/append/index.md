@@ -52,7 +52,7 @@ params.append("foo", 4);
 
 const params = new URLSearchParams();
 
-params.append('needsEncoding$%&$#@++++++','needsEncoding$#&*@#()+++++' )
+params.append("needsEncoding$%&$#@++++++", "needsEncoding$#&*@#()+++++");
 params.toString();
 //"needsEncoding%24%25%26%24%23%40%2B%2B%2B%2B%2B%2B=needsEncoding%24%23%26*%40%23%28%29%2B%2B%2B%2B%2B" 
 
