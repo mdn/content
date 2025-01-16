@@ -41,7 +41,7 @@ const zonedDateTime = instant.toZonedDateTimeISO("America/New_York");
 console.log(zonedDateTime.toString()); // 2021-08-01T08:34:56.123456789-04:00[America/New_York]
 
 const localDateTime = instant.toZonedDateTimeISO(Temporal.Now.timeZoneId());
-console.log(zonedDateTime.toString()); // This instant in your timezone
+console.log(localDateTime.toString()); // This instant in your timezone
 ```
 
 ## Specifications

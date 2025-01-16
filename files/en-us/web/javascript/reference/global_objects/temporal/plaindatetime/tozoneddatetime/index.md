@@ -52,11 +52,11 @@ console.log(zdt2.toString()); // '2021-01-01T12:34:56-05:00[America/New_York]'
 
 ### Handling ambiguous times
 
+Below, we have two wall-clock times that we want to interpret in the `America/New_York` time zone. The first one, `dtNotExist`, never existed because of a forward daylight saving time shift, so we need to choose from the times `01:05:00-05:00` or `03:05:00-04:00`. The second one, `dtAmbiguous`, appeared twice because of a backward daylight saving time shift, so we need to choose from the times `01:05:00-04:00` or `01:05:00-05:00`. For a more detailed explanation of this situation, see [ambiguity and gaps from local time to UTC time](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#ambiguity_and_gaps_from_local_time_to_utc_time).
+
 ```js
 const dtNotExist = Temporal.PlainDateTime.from("2024-03-10T02:05:00");
-// This wall-clock time never existed. So we need to choose from 01:05:00-05:00 or 03:05:00-04:00.
 const dtAmbiguous = Temporal.PlainDateTime.from("2024-11-03T01:05:00");
-// This wall-clock time appeared twice. So we need to choose from 01:05:00-04:00 or 01:05:00-05:00.
 
 // Default: compatible
 console.log(dtNotExist.toZonedDateTime("America/New_York").toString());
@@ -96,8 +96,6 @@ console.log(
 dtNotExist.toZonedDateTime("America/New_York", { disambiguation: "reject" });
 // RangeError: instant is ambiguous
 ```
-
-For more information about how disambiguation works, see [ambiguity and gaps from local time to UTC time](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#ambiguity_and_gaps_from_local_time_to_utc_time).
 
 ## Specifications
 

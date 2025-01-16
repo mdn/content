@@ -10,7 +10,7 @@ browser-compat: javascript.builtins.Temporal.ZonedDateTime.toPlainDateTime
 The **`toPlainDateTime()`** method of {{jsxref("Temporal.ZonedDateTime")}} instances returns a new {{jsxref("Temporal.PlainDateTime")}} object representing the date and time portions of this date-time. Only the time zone information is removed.
 
 > [!WARNING]
-> After a `Temporal.ZonedDateTime` is converted to `Temporal.PlainDateTime`, it will no longer be aware of its time zone. This means that subsequent operations like arithmetic or with will not adjust for DST and may not yield the same results as equivalent operations with `Temporal.ZonedDateTime`. However, unless you perform those operations across a time zone offset transition, it's impossible to notice the difference. Therefore, be very careful when performing this conversion because subsequent results may look correct most of the time while failing around time zone transitions like when DST starts or ends.
+> After a `Temporal.ZonedDateTime` is converted to `Temporal.PlainDateTime`, it's no longer time-zone-aware. Subsequent operations like arithmetic or `with()` operations will not adjust for DST and may not yield the same results as equivalent operations with the original `Temporal.ZonedDateTime`. However, unless you perform those operations across a time zone offset transition, it's impossible to notice the difference. Therefore, be very careful when performing this conversion because subsequent results may be correct most of the time, but only turn out incorrect when moving across offset transitions like when DST starts or ends.
 
 ## Syntax
 
