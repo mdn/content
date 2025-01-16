@@ -29,7 +29,7 @@ A {{domxref("PointerEvent")}}. Inherits from {{domxref("MouseEvent")}}.
 {{InheritanceDiagram("PointerEvent")}}
 
 > [!NOTE]
-> In earlier versions of the specification, the event type for this event was a {{domxref("MouseEvent")}}, check [browser compatibility](#browser_compatibility) for more information.
+> In earlier versions of the specification, the event type for this event was a {{domxref("MouseEvent")}}. Check [browser compatibility](#browser_compatibility) for more information.
 
 ## Event properties
 
