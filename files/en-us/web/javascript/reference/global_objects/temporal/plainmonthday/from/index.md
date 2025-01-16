@@ -39,8 +39,6 @@ Temporal.PlainMonthDay.from(info, options)
       - `year`
         - : An integer used to disambiguate `month` if provided, because for some calendars, the same `month` can mean different `monthCode` in different years. See {{jsxref("Temporal/PlainDate/year", "year")}} of `PlainDate`. If a year is provided, then the `overflow` option validates the month-day in the given year, not just any year. If `month` is specified, at least one of `era`+`eraYear` or `year` must be provided. If all of `era`, `eraYear`, and `year` are provided, they must be consistent.
 
-      Other `Temporal` objects, such as {{jsxref("Temporal.PlainDate")}}, {{jsxref("Temporal.PlainDateTime")}} and {{jsxref("Temporal.ZonedDateTime")}}, conform to this shape and can be used as well.
-
 - `options` {{optional_inline}}
   - : An object containing the following property:
     - `overflow` {{optional_inline}}

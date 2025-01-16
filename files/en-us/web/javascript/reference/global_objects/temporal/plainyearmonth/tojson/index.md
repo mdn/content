@@ -33,7 +33,7 @@ The `toJSON()` method is automatically called by {{jsxref("JSON.stringify()")}} 
 
 ```js
 const ym = Temporal.PlainYearMonth.from({ year: 2021, month: 8 });
-const ymStr = date.toJSON(); // '2021-08'
+const ymStr = ym.toJSON(); // '2021-08'
 const ym2 = Temporal.PlainYearMonth.from(ymStr);
 ```
 

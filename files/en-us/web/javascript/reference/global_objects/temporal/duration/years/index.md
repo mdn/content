@@ -25,8 +25,8 @@ const d4 = Temporal.Duration.from({ months: 12 });
 
 console.log(d1.years); // 1
 console.log(d2.years); // -1
-console.log(d3.years); // 0
-console.log(d4.years); // 12
+console.log(d3.years); // 1
+console.log(d4.years); // 0
 
 // Balance d4
 const d4Balanced = d4.round({
@@ -34,6 +34,7 @@ const d4Balanced = d4.round({
   relativeTo: Temporal.PlainDate.from("2021-01-01"), // ISO 8601 calendar
 });
 console.log(d4Balanced.years); // 1
+console.log(d4Balanced.months); // 0
 ```
 
 ## Specifications

@@ -31,6 +31,7 @@ console.log(d4.nanoseconds); // 1000
 // Balance d4
 const d4Balanced = d4.round({ largestUnit: "microsecond" });
 console.log(d4Balanced.nanoseconds); // 0
+console.log(d4Balanced.microseconds); // 1
 ```
 
 ## Specifications

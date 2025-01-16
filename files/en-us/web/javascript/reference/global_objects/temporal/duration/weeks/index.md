@@ -34,6 +34,7 @@ const d4Balanced = d4.round({
   relativeTo: Temporal.PlainDate.from("2021-01-01"), // ISO 8601 calendar
 });
 console.log(d4Balanced.weeks); // 1
+console.log(d4Balanced.days); // 0
 ```
 
 ## Specifications

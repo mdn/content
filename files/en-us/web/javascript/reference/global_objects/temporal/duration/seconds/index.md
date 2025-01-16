@@ -31,6 +31,7 @@ console.log(d4.seconds); // 60
 // Balance d4
 const d4Balanced = d4.round({ largestUnit: "minute" });
 console.log(d4Balanced.seconds); // 0
+console.log(d4Balanced.minutes); // 1
 ```
 
 ## Specifications
