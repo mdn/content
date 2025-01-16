@@ -17,7 +17,6 @@ appear in the parameter string multiple times for each value.
 As shown in the second example below, both `name` and `value` will be automatically
 encoded to be URL safe.
 
-
 ## Syntax
 
 ```js-nolint
