@@ -11,7 +11,7 @@ browser-compat: api.Clipboard.read
 The **`read()`** method of the {{domxref("Clipboard")}} interface requests a copy of the clipboard's contents, fulfilling the returned {{jsxref("Promise")}} with the data.
 
 The method can in theory return arbitrary data (unlike {{domxref("Clipboard.readText", "readText()")}}, which can only return text).
-Browsers commonly support reading text, HTML, and PNG image data — see [browser compatibility](#browser_compatibility) for more information.
+Browsers commonly support reading text, HTML, and PNG image data.
 
 ## Syntax
 
@@ -136,7 +136,7 @@ The example will fetch the image data from the clipboard and display the image i
 
 This example uses the `read()` method to read data from the clipboard and log whatever data is stored in the clipboard.
 
-This differs from the previous version in that it will display text, HTML, and image {{domxref("ClipboardItem")}} objects (rather than just images).
+This differs from the previous version in that it will display text, image, and other {{domxref("Blob")}}-type {{domxref("ClipboardItem")}} objects (rather than just images).
 
 #### HTML
 

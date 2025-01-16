@@ -8,11 +8,11 @@ browser-compat: api.Clipboard.write
 
 {{APIRef("Clipboard API")}} {{securecontext_header}}
 
-The **`write()`** method of the {{domxref("Clipboard")}} interface writes arbitrary data to the clipboard, such as images, fulfilling the returned {{jsxref("Promise")}} on completion.
+The **`write()`** method of the {{domxref("Clipboard")}} interface writes arbitrary {{domxref("Blob")}}-type data (such as images) and text to the clipboard, fulfilling the returned {{jsxref("Promise")}} on completion.
 This can be used to implement cut and copy functionality.
 
 The method can in theory write arbitrary data (unlike {{domxref("Clipboard.writeText", "writeText()")}}, which can only write text).
-Browsers commonly support writing text, HTML, and PNG image data — see [browser compatibility](#browser_compatibility) for more information.
+Browsers commonly support writing text, HTML, and PNG image data.
 
 ## Syntax
 
@@ -55,21 +55,17 @@ button.addEventListener("click", () => setClipboard("<empty clipboard>"));
 
 async function setClipboard(text) {
   const type = "text/plain";
-  const blob = new Blob([text], { type });
-  const data = [new ClipboardItem({ [type]: blob })];
-  await navigator.clipboard.write(data);
+  const clipboardItemData = {
+    [type]: text,
+  };
+  const clipboardItem = new ClipboardItem(clipboardItemData);
+  await navigator.clipboard.write([clipboardItem]);
 }
 ```
 
-The `setClipboard()` method begins by creating a new a {{domxref("Blob")}} object.
-This object is required to construct a {{domxref("ClipboardItem")}} object which is sent to the clipboard.
-The {{domxref("Blob")}} constructor takes in the content we want to copy and its type.
-This {{domxref("Blob")}} object can be derived from many sources; for example, a [canvas](/en-US/docs/Web/API/HTMLCanvasElement).
+The `setClipboard()` function specifies a text MIME type in the `type` constant, then specifies a `clipboardItemData` object with a single property — its key is the MIME type, and its value is the passed in text that we want to write to the clipboard. We then construct a new {{domxref("ClipboardItem")}} object into which the `clipboardItemData` object is passed.
 
-Next, we create a new {{domxref("ClipboardItem")}} object into which the blob will be placed for sending to the clipboard.
-The key of the object passed to the {{domxref("ClipboardItem")}} constructor indicates the content type, the value indicates the content.
-Then `write()` is called with `await`.
-A `try..catch` block could be used to catch any errors writing the data.
+Finally, `write()` is called with `await` to write the bdata to the clipboard.
 
 ### Write canvas contents to the clipboard
 
