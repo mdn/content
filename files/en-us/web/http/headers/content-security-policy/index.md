@@ -1,5 +1,6 @@
 ---
-title: Content-Security-Policy
+title: Content-Security-Policy (CSP)
+short-title: Content-Security-Policy
 slug: Web/HTTP/Headers/Content-Security-Policy
 page-type: http-header
 browser-compat: http.headers.Content-Security-Policy
@@ -10,7 +11,7 @@ browser-compat: http.headers.Content-Security-Policy
 The HTTP **`Content-Security-Policy`** response header allows website administrators to control resources the user agent is allowed to load for a given page. With a few exceptions, policies mostly involve specifying server origins and script endpoints.
 This helps guard against {{Glossary("cross-site scripting")}} attacks.
 
-For more information, see the introductory article on [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP).
+See the [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP) guide for details about how a CSP is delivered to the browser, what it looks like, along with use cases and deployment strategies.
 
 <table class="properties">
   <tbody>

@@ -20,7 +20,7 @@ format(date)
 ### Parameters
 
 - `date`
-  - : The date to format.
+  - : The date to format. Omitting it results in formatting the current date (as returned by {{jsxref("Date.now()")}}), which could be slightly confusing, so it is advisable to always explicitly pass a date.
 
 ### Return value
 
