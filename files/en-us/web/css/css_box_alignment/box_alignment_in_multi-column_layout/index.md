@@ -6,7 +6,7 @@ page-type: guide
 
 {{CSSRef}}
 
-The [CSS box alignment](/en-US/docs/Web/CSS/CSS_box_alignment) module details how alignment works in various layout methods; in this guide, we explore how box alignment works in the context of [multi-column layout](/en-US/docs/Web/CSS/CSS_multicol_layout). As this guide aims to detail things that are specific to both modules, it should be read in conjunction with the [box alignment overview](/en-US/docs/Web/CSS/CSS_box_alignment/box_alignment) guide, which details the common features of box alignment across layout methods.
+The [CSS box alignment](/en-US/docs/Web/CSS/CSS_box_alignment) module details how alignment works in various layout methods; in this guide, we explore how box alignment works in the context of [multi-column layout](/en-US/docs/Web/CSS/CSS_multicol_layout). As this guide aims to detail things that are specific to both modules, it should be read in conjunction with the [box alignment overview](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment) guide, which details the common features of box alignment across layout methods.
 
 In [multi-column layout](/en-US/docs/Web/CSS/CSS_multicol_layout/Basic_concepts), the {{glossary("alignment container")}} is the content box of the multicol container. The {{glossary("alignment subject")}} is the column box. The properties which apply to multi-column layouts are detailed below.
 
@@ -22,7 +22,7 @@ The {{cssxref("column-gap")}} property was originally specified in the multiple-
 
 ## See also
 
-- [Box alignment overview](/en-US/docs/Web/CSS/CSS_box_alignment/box_alignment)
+- [Box alignment overview](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment)
 - [Box alignment in flexbox](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox)
 - [Box alignment in CSS grid layout](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_grid_layout)
 - [Box alignment for block, absolutely positioned and table layout](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_block_abspos_tables)
