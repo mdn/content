@@ -6,21 +6,17 @@ page-type: firefox-release-notes
 
 {{FirefoxSidebar}}
 
-This article provides information about the changes in Firefox 134 that affect developers. Firefox 134 is the current [Beta version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#beta) and ships on [January 7, 2025](https://whattrainisitnow.com/release/?version=134).
+This article provides information about the changes in Firefox 134 that affect developers. Firefox 134 was released on [January 7, 2025](https://whattrainisitnow.com/release/?version=134).
 
 ## Changes for web developers
 
-### Developer Tools
-
 ### HTML
 
-#### Removals
+No notable changes
 
 ### CSS
 
 - The {{CSSXRef("align-self")}} and {{CSSXRef("justify-self")}} CSS properties and {{CSSXRef("place-self")}} CSS shorthand property are now supported for [absolutely positioned](/en-US/docs/Learn_web_development/Core/CSS_layout/Positioning#absolute_positioning) elements. ([Firefox bug 1920160](https://bugzil.la/1920160)).
-
-#### Removals
 
 ### JavaScript
 
@@ -28,20 +24,6 @@ This article provides information about the changes in Firefox 134 that affect d
 - The {{jsxref("Promise.try()")}} convenience method is now supported.
   The method takes a callback of any kind (a function that returns or throws, synchronously or asynchronously) and wraps its result in a {{jsxref("Promise")}}.
   This allows you to use promise semantics ({{jsxref("Promise.then", ".then()")}}, {{jsxref("Promise.catch", ".catch()")}}) to handle the result from any kind of method. ([Firefox bug 1917879](https://bugzil.la/1917879) and [Firefox bug 1905364](https://bugzil.la/1905364)).
-
-#### Removals
-
-### SVG
-
-#### Removals
-
-### HTTP
-
-#### Removals
-
-### Security
-
-#### Removals
 
 ### APIs
 
@@ -54,12 +36,6 @@ This article provides information about the changes in Firefox 134 that affect d
 #### Media, WebRTC, and Web Audio
 
 - WebRTC simulcast of screen-shared video with the [VP8 codec](/en-US/docs/Web/Media/Formats/Video_codecs#vp8) is now supported (simulcast from other video sources has been enabled for a long time). More precisely, {{domxref("MediaStreamTrack")}} objects for screen and window capture (for example, from {{domxref("MediaDevices.getDisplayMedia()")}}), can now be encoded as multiple simulcast layers when using VP8. ([Firefox bug 1692873](https://bugzil.la/1692873)).
-
-#### Removals
-
-### WebAssembly
-
-#### Removals
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
@@ -76,12 +52,6 @@ This article provides information about the changes in Firefox 134 that affect d
 
 - The `Addon:Install` and `Addon:Uninstall` commands are now available for GeckoView (Firefox for Android) ([Firefox bug 1806135](https://bugzilla.mozilla.org/show_bug.cgi?id=1806135)).
 - The `Addon:Install` command can now be used to install extensions enabled in Private Browsing mode ([Firefox bug 1810718](https://bugzilla.mozilla.org/show_bug.cgi?id=1810718))
-
-## Changes for add-on developers
-
-### Removals
-
-### Other
 
 ## Experimental web features
 

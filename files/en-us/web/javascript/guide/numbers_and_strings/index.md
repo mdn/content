@@ -1,12 +1,12 @@
 ---
-title: Numbers and dates
-slug: Web/JavaScript/Guide/Numbers_and_dates
+title: Numbers and strings
+slug: Web/JavaScript/Guide/Numbers_and_strings
 page-type: guide
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Expressions_and_operators", "Web/JavaScript/Guide/Text_formatting")}}
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Expressions_and_operators", "Web/JavaScript/Guide/Representing_dates_times")}}
 
-This chapter introduces the concepts, objects and functions used to work with and perform calculations using numbers and dates in JavaScript. This includes using numbers written in various bases including decimal, binary, and hexadecimal, as well as the use of the global {{jsxref("Math")}} object to perform a wide variety of mathematical operations on numbers.
+This chapter introduces the two most fundamental data types in JavaScript: numbers and strings. We will introduce their underlying representations, and functions used to work with and perform calculations on them.
 
 ## Numbers
 
@@ -310,106 +310,120 @@ Choosing between BigInt and number depends on your use-case and your input's ran
 
 Read more about what you can do with BigInt values in the [Expressions and Operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#bigint_operators) section, or the [BigInt reference](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt).
 
-## Date object
+## Strings
 
-JavaScript does not have a date data type. However, you can use the {{jsxref("Date")}} object and its methods to work with dates and times in your applications. The `Date` object has a large number of methods for setting, getting, and manipulating dates. It does not have any properties.
+JavaScript's [String](/en-US/docs/Glossary/String) type is used to represent textual data. It is a set of "elements" of 16-bit unsigned integer values (UTF-16 code units). Each element in the String occupies a position in the String. The first element is at index 0, the next at index 1, and so on. The length of a String is the number of elements in it. You can create strings using string literals or string objects.
 
-JavaScript handles dates similarly to Java. The two languages have many of the same date methods, and both languages store dates as the number of milliseconds since midnight at the beginning of January 1, 1970, UTC, with a Unix Timestamp being the number of seconds since the same instant. The instant at the midnight at the beginning of January 1, 1970, UTC is called the [epoch](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date).
+### String literals
 
-The `Date` object range is -100,000,000 days to 100,000,000 days relative to the epoch.
+You can declare strings in source code using either single or double quotes:
 
-To create a `Date` object:
-
-```js
-const dateObjectName = new Date([parameters]);
+```js-nolint
+'foo'
+"bar"
 ```
 
-where `dateObjectName` is the name of the `Date` object being created; it can be a new object or a property of an existing object.
+Within a string literal, most characters can be entered literally. The only exceptions are the backslash (`\`, which starts an escape sequence), the quote character being used to enclose the string, which terminates the string, and the newline character, which is a syntax error if not preceded by a backslash.
 
-Calling `Date` without the `new` keyword returns a string representing the current date and time.
+More advanced strings can be created using escape sequences:
 
-The `parameters` in the preceding syntax can be any of the following:
+#### Hexadecimal escape sequences
 
-- Nothing: creates today's date and time. For example, `today = new Date();`.
-- A string representing a date, in many different forms. The exact forms supported differ among engines, but the following form is always supported: `YYYY-MM-DDTHH:mm:ss.sssZ`. For example, `xmas95 = new Date("1995-12-25")`. If you omit hours, minutes, or seconds, the value will be set to zero.
-- A set of integer values for year, month, and day. For example, `xmas95 = new Date(1995, 11, 25)`.
-- A set of integer values for year, month, day, hour, minute, and seconds. For example, `xmas95 = new Date(1995, 11, 25, 9, 30, 0);`.
+The number after \x is interpreted as a [hexadecimal](https://en.wikipedia.org/wiki/Hexadecimal) number.
 
-### Methods of the Date object
-
-The `Date` object methods for handling dates and times fall into these broad categories:
-
-- "set" methods, for setting date and time values in `Date` objects.
-- "get" methods, for getting date and time values from `Date` objects.
-- "to" methods, for returning string values from `Date` objects.
-- parse and UTC methods, for parsing `Date` strings.
-
-With the "get" and "set" methods you can get and set seconds, minutes, hours, day of the month, day of the week, months, and years separately. There is a `getDay` method that returns the day of the week, but no corresponding `setDay` method, because the day of the week is set automatically. These methods use integers to represent these values as follows:
-
-- Seconds and minutes: 0 to 59
-- Hours: 0 to 23
-- Day: 0 (Sunday) to 6 (Saturday)
-- Date: 1 to 31 (day of the month)
-- Months: 0 (January) to 11 (December)
-- Year: years since 1900
-
-For example, suppose you define the following date:
-
-```js
-const xmas95 = new Date("1995-12-25");
+```js-nolint
+"\xA9" // "©"
 ```
 
-Then `xmas95.getMonth()` returns 11, and `xmas95.getFullYear()` returns 1995.
+#### Unicode escape sequences
 
-The `getTime` and `setTime` methods are useful for comparing dates. The `getTime` method returns the number of milliseconds since the epoch for a `Date` object.
+The Unicode escape sequences require at least four hexadecimal digits following `\u`.
 
-For example, the following code displays the number of days left in the current year:
-
-```js
-const today = new Date();
-const endYear = new Date(1995, 11, 31, 23, 59, 59, 999); // Set day and month
-endYear.setFullYear(today.getFullYear()); // Set year to this year
-const msPerDay = 24 * 60 * 60 * 1000; // Number of milliseconds per day
-let daysLeft = (endYear.getTime() - today.getTime()) / msPerDay;
-daysLeft = Math.round(daysLeft); // Returns days left in the year
+```js-nolint
+"\u00A9" // "©"
 ```
 
-This example creates a `Date` object named `today` that contains today's date. It then creates a `Date` object named `endYear` and sets the year to the current year. Then, using the number of milliseconds per day, it computes the number of days between `today` and `endYear`, using `getTime` and rounding to a whole number of days.
+#### Unicode code point escapes
 
-The `parse` method is useful for assigning values from date strings to existing `Date` objects. For example, the following code uses `parse` and `setTime` to assign a date value to the `ipoDate` object:
+With Unicode code point escapes, any character can be escaped using hexadecimal numbers so that it is possible to use Unicode code points up to `0x10FFFF`. With the four-digit Unicode escapes it is often necessary to write the surrogate halves separately to achieve the same result.
 
-```js
-const ipoDate = new Date();
-ipoDate.setTime(Date.parse("Aug 9, 1995"));
+See also {{jsxref("String.fromCodePoint()")}} or {{jsxref("String.prototype.codePointAt()")}}.
+
+```js-nolint
+"\u{2F804}"
+
+// the same with simple Unicode escapes
+"\uD87E\uDC04"
 ```
 
-### Example
+## String object
 
-In the following example, the function `JSClock()` returns the time in the format of a digital clock.
+You can call methods directly on a string value:
 
 ```js
-function JSClock() {
-  const time = new Date();
-  const hour = time.getHours();
-  const minute = time.getMinutes();
-  const second = time.getSeconds();
-  let temp = String(hour % 12);
-  if (temp === "0") {
-    temp = "12";
-  }
-  temp += (minute < 10 ? ":0" : ":") + minute;
-  temp += (second < 10 ? ":0" : ":") + second;
-  temp += hour >= 12 ? " P.M." : " A.M.";
-  return temp;
-}
+console.log("hello".toUpperCase()); // HELLO
 ```
 
-The `JSClock` function first creates a new `Date` object called `time`; since no arguments are given, time is created with the current date and time. Then calls to the `getHours`, `getMinutes`, and `getSeconds` methods assign the value of the current hour, minute, and second to `hour`, `minute`, and `second`.
+The following methods are available on {{jsxref("String")}} values:
 
-The following statements build a string value based on the time. The first statement creates a variable `temp`. Its value is `hour % 12`, which is `hour` in the 12-hour system. Then, if the hour is `0`, it gets re-assigned to `12`, so that midnights and noons are displayed as `12:00` instead of `0:00`.
+- Query: get the character or character code at a particular string index. Methods include {{jsxref("String/at", "at()")}}, {{jsxref("String/charAt", "charAt()")}}, {{jsxref("String/charCodeAt", "charCodeAt()")}}, and {{jsxref("String/codePointAt", "codePointAt()")}}.
+- Search: get information about a substring that conforms to a pattern, or test if a particular substring exists. Methods include {{jsxref("String/indexOf", "indexOf()")}}, {{jsxref("String/lastIndexOf", "lastIndexOf()")}}, {{jsxref("String/startsWith", "startsWith()")}}, {{jsxref("String/endsWith", "endsWith()")}}, {{jsxref("String/includes", "includes()")}}, {{jsxref("String/match", "match()")}}, {{jsxref("String/matchAll", "matchAll()")}}, and {{jsxref("String/search", "search()")}}
+- Composition: combine strings into a longer string. Methods include {{jsxref("String/padStart", "padStart()")}}, {{jsxref("String/padEnd", "padEnd()")}}, {{jsxref("String/concat", "concat()")}}, and {{jsxref("String/repeat", "repeat()")}}.
+- Decomposition: break a string into smaller strings. Methods include {{jsxref("String/split", "split()")}}, {{jsxref("String/slice", "slice()")}}, {{jsxref("String/substring", "substring()")}}, {{jsxref("String/substr", "substr()")}}, {{jsxref("String/trim", "trim()")}}, {{jsxref("String/trimStart", "trimStart()")}}, and {{jsxref("String/trimEnd", "trimEnd()")}}.
+- Transformation: return a new string based on the current string's content. Methods include {{jsxref("String/toLowerCase", "toLowerCase()")}}, {{jsxref("String/toUpperCase", "toUpperCase()")}}, {{jsxref("String/toLocaleLowerCase", "toLocaleLowerCase()")}}, {{jsxref("String/toLocaleUpperCase", "toLocaleUpperCase()")}}, {{jsxref("String/normalize", "normalize()")}}, and {{jsxref("String/toWellFormed", "toWellFormed()")}}.
 
-The next statement appends a `minute` value to `temp`. If the value of `minute` is less than 10, the conditional expression adds a string with a preceding zero; otherwise it adds a string with a demarcating colon. Then a statement appends a seconds value to `temp` in the same way.
+When working with strings, there are two other objects that provide important functionality for string manipulation: {{jsxref("RegExp")}} and {{jsxref("Intl")}}. They are introduced in [regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions) and [internationalization](/en-US/docs/Web/JavaScript/Guide/Internationalization) respectively.
 
-Finally, a conditional expression appends "P.M." to `temp` if `hour` is 12 or greater; otherwise, it appends "A.M." to `temp`.
+## Template literals
 
-{{PreviousNext("Web/JavaScript/Guide/Expressions_and_operators", "Web/JavaScript/Guide/Text_formatting")}}
+[Template literals](/en-US/docs/Web/JavaScript/Reference/Template_literals) are string literals allowing embedded expressions. You can use multi-line strings and string interpolation features with them.
+
+Template literals are enclosed by backtick ([grave accent](https://en.wikipedia.org/wiki/Grave_accent)) characters (`` ` ``) instead of double or single quotes. Template literals can contain placeholders. These are indicated by the dollar sign and curly braces (`${expression}`).
+
+### Multi-lines
+
+Any new line characters inserted in the source are part of the template literal. Using normal strings, you would have to use the following syntax in order to get multi-line strings:
+
+```js
+console.log(
+  "string text line 1\n\
+string text line 2",
+);
+// "string text line 1
+// string text line 2"
+```
+
+To get the same effect with multi-line strings, you can now write:
+
+```js
+console.log(`string text line 1
+string text line 2`);
+// "string text line 1
+// string text line 2"
+```
+
+### Embedded expressions
+
+In order to embed expressions within normal strings, you would use the following syntax:
+
+```js
+const five = 5;
+const ten = 10;
+console.log(
+  "Fifteen is " + (five + ten) + " and not " + (2 * five + ten) + ".",
+);
+// "Fifteen is 15 and not 20."
+```
+
+Now, with template literals, you are able to make use of the syntactic sugar making substitutions like this more readable:
+
+```js
+const five = 5;
+const ten = 10;
+console.log(`Fifteen is ${five + ten} and not ${2 * five + ten}.`);
+// "Fifteen is 15 and not 20."
+```
+
+For more information, read about [Template literals](/en-US/docs/Web/JavaScript/Reference/Template_literals) in the [JavaScript reference](/en-US/docs/Web/JavaScript/Reference).
+
+{{PreviousNext("Web/JavaScript/Guide/Expressions_and_operators", "Web/JavaScript/Guide/Representing_dates_times")}}

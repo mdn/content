@@ -50,10 +50,7 @@ parent child {
 
 ### Examples
 
-In these examples, one without and one with the `&` nesting selector, the `<input>` inside the `<label>` is being styled differently to the `<input>` that is a sibling of a `<label>`. This demonstrates the impact of omitting the `&` nesting selector.
-
-> [!NOTE]
-> This example demonstrates different outputs in browsers implementing the original specification versus the current nesting spec. The original, pre-August 2023 nesting spec that was implemented in Chrome or Safari, requires the `&` nesting combinator. If your browser supports the current spec, the output of both examples matches that of the second example.
+In these examples, one without and one with the `&` nesting selector, the `<input>` inside the `<label>` is being styled differently to the `<input>` that is a sibling of a `<label>`.
 
 #### Without nesting selector
 
@@ -89,6 +86,7 @@ label {
   /* styles for label */
   font-family: system-ui;
   font-size: 1.25rem;
+
   input {
     /* styles for input in a label  */
     border: blue 2px dashed;
@@ -102,9 +100,7 @@ label {
 
 #### With nesting selector
 
-##### HTML
-
-```html-nolint
+```html-nolint hidden
 <form>
   <label for="name">Name:
     <input type="text" id="name" />
@@ -134,6 +130,7 @@ label {
   /* styles for label */
   font-family: system-ui;
   font-size: 1.25rem;
+
   & input {
     /* styles for input in a label  */
     border: blue 2px dashed;
