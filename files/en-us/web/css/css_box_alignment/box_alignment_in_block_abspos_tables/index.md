@@ -77,7 +77,7 @@ For many use cases, turning the block container into a flex item will give you t
 
 ## See also
 
-- [Box alignment overview](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment)
+- [Box alignment overview](/en-US/docs/Web/CSS/CSS_box_alignment/box_alignment)
 - [Box alignment in flexbox](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox)
 - [Box alignment in CSS grid layout](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_grid_layout)
 - [Box alignment in multiple-column layout](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_multi-column_layout)
