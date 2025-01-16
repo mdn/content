@@ -60,18 +60,15 @@ alert(typeof 1.toString())
 
 Correct ways to call methods on numbers:
 
-```js example-good
+```js-nolint example-good
 // Wrap the number in parentheses
 alert(typeof (1).toString());
 
 // Use a floating-point number by adding an extra dot
 alert(typeof 2..toString());
 
-// Use a floating-point number by adding an extra dot
-alert(typeof 3..toString());
-
 // Use square brackets
-alert(typeof 4['toString']())
+alert(typeof 3['toString']())
 ```
 
 ## See also
