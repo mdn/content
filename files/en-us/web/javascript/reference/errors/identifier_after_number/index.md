@@ -42,9 +42,6 @@ const 1life = "foo";
 
 const foo = 1life;
 // SyntaxError: identifier starts immediately after numeric literal
-
-alert(1.foo);
-// SyntaxError: identifier starts immediately after numeric literal
 ```
 
 You will need to rename your variable to avoid the leading number.
@@ -52,6 +49,29 @@ You will need to rename your variable to avoid the leading number.
 ```js example-good
 const life1 = "foo";
 const foo = life1;
+```
+
+In JavaScript, there is a syntactic peculiarity when calling properties or methods on numbers. If you want to call a method on an integer, you cannot immediately use a dot after the number because the dot is interpreted as the start of a decimal fraction. This will result in an error. To avoid this, you need to either wrap the number in parentheses or use a double dot for a floating-point number.
+
+```js-nolint example-bad
+alert(typeof 1.toString())
+// SyntaxError: identifier starts immediately after numeric literal
+```
+
+Correct ways to call methods on numbers:
+
+```js example-good
+// Wrap the number in parentheses
+alert(typeof (1).toString());
+
+// Use a floating-point number by adding an extra dot
+alert(typeof 2..toString());
+
+// Use a floating-point number by adding an extra dot
+alert(typeof 3..toString());
+
+// Use square brackets
+alert(typeof 4['toString']())
 ```
 
 ## See also
