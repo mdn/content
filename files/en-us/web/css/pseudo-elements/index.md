@@ -31,7 +31,7 @@ p::first-line {
 }
 ```
 
-Double colons (`::`) are used for pseudo-elements. This distinguishes pseudo-elements from [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes) that use a single colon (`:`) in their notation.
+Double colons (`::`) are used for pseudo-elements. This distinguishes pseudo-elements from [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes) that use a single colon (`:`) in their notation. Note, browsers support the single colon syntax only for the original four pseudo-elements: `::before`, `::after`, `::first-line`, and `::first-letter`.
 
 Pseudo-elements do not exist independently. The element of which a pseudo-element is a part is called its _originating element_. A pseudo-element must appear after all the other components in the [complex](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#complex_selector) or [compound](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#compound_selector) selector. The last element in the selector is the originating element of the pseudo-element. For example, you can select a paragraph's first line using `p::first-line` but not the first-line's children. So `p::first-line > *` is invalid.
 
@@ -40,7 +40,74 @@ A pseudo-element can be selected based on the current state of the originating e
 > [!NOTE]
 > When a [selector list](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#selector_list) contains an invalid selector, the entire style block is ignored.
 
-## List of pseudo-elements
+## Typographic Pseudo-elements
+
+These text pseudo-elements are selected using their location in the originating element:
+
+- {{CSSxRef("::first-line")}}
+  - : Represents the contents of the first line-box of the originating element.
+- {{CSSxRef("::first-letter")}}
+  - : Represents the first letter, number, or symbol character on the first line of its originating element.
+- {{CSSxRef("::slotted", "::slotted()")}}
+  - : Represents any element placed into a slot inside an HTML template.
+
+## Highlight Pseudo-elements
+
+These pseudo-elements are portions of a document that are styled differently to indicate certain status to the user:
+
+- {{CSSxRef("::selection")}}
+
+  - : Represents the portion of a document that has been selected.
+
+- {{CSSxRef("::target-text")}}
+
+  - : Represents the document's target element. The target element is identified using the URL's fragment identifier.
+
+- {{CSSxRef("::spelling-error")}}
+
+  - : Represents a portion of text that the browser thinks is misspelled.
+
+- {{CSSxRef("::grammar-error")}}
+
+  - : Represents a portion of text that the browser thinks is grammatically incorrect.
+
+- {{CSSxRef("::highlight()")}}
+  - : Represents elements in the [highlight registry](/en-US/docs/Web/API/CSS/highlights_static). It is used to create custom highlights.
+- {{CSSxRef("::cue")}}
+  - : Matches [WebVTT](/en-US/docs/Web/API/WebVTT_API) cues within a selected element.
+    This can be used to [style captions and other cues](/en-US/docs/Web/API/WebVTT_API#styling_webvtt_in_html_or_a_stylesheet) in media with VTT tracks.
+
+## Tree-Abiding Pseudo-elements
+
+These pseudo-elements behave like regular elements, fitting seamlessly within the box model. They act as a child element that can be styled directly within the originating element hierarchy.
+
+- {{CSSxRef("::before")}}
+  - : Creates a pseudo-element that is the first child of the selected element.
+- {{CSSxRef("::after")}}
+  - : Creates a pseudo-element that is the last child of the selected element.
+- {{CSSxRef("::marker")}}
+  - : Represents the automatically generated marker box of a list item.
+- {{CSSxRef("::placeholder")}}
+  - : Represents placeholder text in an input field.
+- {{CSSxRef("::backdrop")}}
+  - : Represents the backdrop of the originating element rendered in the [top layer](/en-US/docs/Glossary/Top_layer).
+
+## Element-backed Pseudo-Elements
+
+These pseudo-elements are real elements that are not otherwise selectable.
+
+- {{CSSxRef("::details-content")}}
+
+  - : Represents the expandable/collapsible contents of a {{HTMLElement("details")}} element.
+
+- {{CSSxRef("::file-selector-button")}}
+
+  - : Represents the button of an {{HTMLElement("input") }} of [`type="file"`](/en-US/docs/Web/HTML/Element/input/file).
+
+- {{CSSxRef("::part", "::part()")}}
+  - : Represents any element within a [shadow tree](/en-US/docs/Web/API/Web_components/Using_shadow_DOM) that has a matching [`part`](/en-US/docs/Web/HTML/Global_attributes/part) attribute.
+
+## Alphabetical index
 
 Pseudo-elements defined by a set of CSS specifications include the following:
 
@@ -56,6 +123,10 @@ B
 C
 
 - {{CSSxRef("::cue")}} (and {{CSSxRef("::cue", "::cue()")}})
+
+D
+
+- {{CSSxRef("::details-content")}}
 
 F
 
@@ -88,7 +159,7 @@ S
 
 T
 
-- {{CSSxRef("::target-text")}} {{Experimental_Inline}}
+- {{CSSxRef("::target-text")}}
 
 V
 
@@ -97,9 +168,6 @@ V
 - {{cssxref("::view-transition-group()")}}
 - {{cssxref("::view-transition-new()")}}
 - {{cssxref("::view-transition-old()")}}
-
-> [!NOTE]
-> Browsers support the single colon syntax only for the original four pseudo-elements: `::before`, `::after`, `::first-line`, and `::first-letter`.
 
 ## Specifications
 
