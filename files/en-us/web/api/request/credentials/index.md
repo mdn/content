@@ -30,8 +30,8 @@ A string with one of the following values:
 In the following snippet, we create a new request using the {{domxref("Request.Request", "Request()")}} constructor (for an image file in the same directory as the script), then save the request credentials in a variable:
 
 ```js
-const request = new Request("flowers.jpg");
-const request = request.request; // returns "same-origin" by default
+const request = new Request("flower.jpg");
+const credentials = request.credentials; // returns "same-origin" by default
 ```
 
 ## Specifications
