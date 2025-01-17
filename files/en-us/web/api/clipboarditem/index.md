@@ -40,7 +40,7 @@ The benefit of having the **`ClipboardItem`** interface to represent data items 
 
 ### Writing text to the clipboard
 
-In this example we first define two constants, which respectively contain references to a {{htmlelement("p")}} element containing some text, and a {{htmlelement("button")}}.
+In this example we first define two constants containing references to a {{htmlelement("p")}} element containing some text and a {{htmlelement("button")}} element.
 
 Next, we define a function called `copyToClipboard()`. This starts off by storing a `"text/plain"` MIME type in a constant, then creating an object called `clipboardItemData` that contains one property with a key equal to the MIME type and a value of the text we want to copy to the clipboard (the content of the `<p>` element, in this case). Because we are working with text, we can pass it in directly rather than having to create a {{domxref("Blob")}}.
 
