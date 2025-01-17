@@ -356,7 +356,7 @@ function greeting() {
 }
 ```
 
-Both functions you want to call are called `greeting()`, but you can only ever access the `first.js` file's `greeting()` function (the second one is ignored). In addition, an error results when attempting (in the `second.js` file) to assign a new value to the `name` variable — because it was already declared with `const`, and so can't be reassigned.
+Both functions you want to call are named `greeting()`, but you can only ever access the `greeting()` function from `first.js`. This happens because the repeated declaration of the constant name in `second.js` causes an error, which stops the execution of `second.js` and prevents its `greeting()` function from being executed or overwriting the one from `first.js`. However, if there were no errors, the code in files declared later would overwrite the code from files declared earlier.
 
 > [!NOTE]
 > You can see this example [running live on GitHub](https://mdn.github.io/learning-area/javascript/building-blocks/functions/conflict.html) (see also the [source code](https://github.com/mdn/learning-area/tree/main/javascript/building-blocks/functions)).
