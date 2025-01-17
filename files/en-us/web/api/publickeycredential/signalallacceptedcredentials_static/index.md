@@ -21,6 +21,14 @@ To avoid this issue, `signalAllAcceptedCredentials()` should be called on the re
 > [!WARNING]
 > Exercise caution when invoking `signalAllAcceptedCredentials()` — any valid credentials not included in the list are intended to be removed from the authenticator, which will prevent the user from signing in with them. Passing an empty list may remove all of the user's credentials. Some authenticators may support restoring credentials via a subsequent call to `signalAllAcceptedCredentials()` with the previously removed credential IDs included in the list.
 
+### `signalAllAcceptedCredentials()` versus `signalUnknownCredential()`
+
+It may seem like `signalAllAcceptedCredentials()` and {{domxref("PublicKeyCredential.signalUnknownCredential_static", "PublicKeyCredential.signalUnknownCredential()")}} have similar purposes, so which one should be used when?
+
+To be clear, `signalAllAcceptedCredentials()` should only be used in cases where authentication is _successful_ and you want to update the state of a user's credentials. Don't use it in cases where authentication failed, for example because the user deleted a credential from the relying party but later tried to sign in with it because it was still showing in the authenticator. Using `signalAllAcceptedCredentials()` for this purpose would share the entire list of `credentialId`s for a given user with an unauthenticated party, which may not be desirable.
+
+In cases where authentication _failed_, you should instead use `signalUnknownCredential()`. It only passes a single `credentialId` to the authenticator, minimizing the data shared with an unauthenticated party.
+
 ## Syntax
 
 ```js-nolint

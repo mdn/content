@@ -17,7 +17,7 @@ WebAuthn uses [asymmetric (public-key) cryptography](https://en.wikipedia.org/wi
 - **Reduced impact of data breaches:** Developers don't need to hash the public key, and if an attacker gets access to the public key used to verify the authentication, it can't authenticate because it needs the private key.
 - **Invulnerable to password attacks:** Some users might reuse passwords, and an attacker may obtain the user's password for another website (e.g. via a data breach). Also, text passwords are much easier to brute-force than a digital signature.
 
-Many websites already have pages that allow users to register new accounts or sign into an existing account, and WebAuthn acts as a replacement or enhancement for the authentication part of the system. It extends the [Credential Management API](/en-US/docs/Web/API/Credential_Management_API), abstracting communication between the user agent and an authenticator and providing the following new functionality:
+Many websites already have pages that allow users to register new accounts or log into an existing account, and WebAuthn acts as a replacement or enhancement for the authentication part of the system. It extends the [Credential Management API](/en-US/docs/Web/API/Credential_Management_API), abstracting communication between the user agent and an authenticator and providing the following new functionality:
 
 - When {{domxref("CredentialsContainer.create()", "navigator.credentials.create()")}} is used with the `publicKey` option, the user agent creates new credentials via an authenticator — either for registering a new account or for associating a new asymmetric key pair with an existing account.
   - When registering a new account, these credentials are stored on a server (also referred to as a service or a [relying party](https://en.wikipedia.org/wiki/Relying_party)) and can be subsequently used to log a user in.
@@ -117,13 +117,13 @@ A typical authentication flow is as follows:
 
 ### Discoverable credentials and conditional mediation
 
-A **discoverable credential** is one where the relying party server does not provide credential IDs. Instead, the credential IDs are stored in and provided by a client-side authenticator of some kind such as a browser password manager, authenticator app, or hardware solution such as a YubiKey.
+A **discoverable credential** is one that stores credential IDs and associated metadata such as user names and display names in a client-side authenticator of some kind — such as a browser password manager, authenticator app, or hardware solution such as a YubiKey. Having this information available in the authenticator means that the relying party does not have to provide a `credentialId` when asserting it, although it can do if desired in the same way as you would for a non-discoverable credential.
 
 A discoverable credential is created via a [`create()`](/en-US/docs/Web/API/CredentialsContainer/create) call with a specified [`residentKey`](/en-US/docs/Web/API/PublicKeyCredentialCreationOptions#residentkey), and then subsequently used for authentication via a [`get()`](/en-US/docs/Web/API/CredentialsContainer/get) call with **conditional mediation** specified, that is, [`mediation`](/en-US/docs/Web/API/CredentialsContainer/get#mediation) set to `conditional`.
 
 You can check whether conditional mediation is available on a specific user agent by calling the {{domxref("PublicKeyCredential.isConditionalMediationAvailable()")}} method.
 
-Conditional mediation results in discoverable credentials being presented to the user in a non-modal dialog box along with an indication of the origin requesting credentials. In practice, this means autofilling available credentials in your login forms. To display discoverable credentials in your login forms, you also need to include [`autocomplete="webauthn"`](/en-US/docs/Web/HTML/Attributes/autocomplete#webauthn) on your form fields.
+Conditional mediation results in discoverable credentials being presented to the user in a non-modal dialog box along with an indication of the origin requesting credentials. In practice, this means autofilling available credentials in your login forms. The metadata stored in discoverable credentials can be displayed to help users choose a credential when logging in. To display discoverable credentials in your login forms, you also need to include [`autocomplete="webauthn"`](/en-US/docs/Web/HTML/Attributes/autocomplete#webauthn) on your form fields.
 
 [Passkeys](https://passkeys.dev/) are a significant use case for discoverable credentials; see [Create a passkey for passwordless logins](https://web.dev/articles/passkey-registration) and [Sign in with a passkey through form autofill](https://web.dev/articles/passkey-form-autofill) for implementation details. See also [Discoverable credentials deep dive](https://web.dev/articles/webauthn-discoverable-credentials) for more general information on discoverable credentials.
 
@@ -205,7 +205,7 @@ If you wish to authenticate with `get()` or `create()` in an `<iframe>`, there a
 - {{domxref("AuthenticatorResponse")}}
   - : The base interface for {{domxref("AuthenticatorAttestationResponse")}} and {{domxref("AuthenticatorAssertionResponse")}}.
 - {{domxref("PublicKeyCredential")}}
-  - : Provides information about a public key / private key pair, which is a credential for logging in to a service using an un-phishable and data-breach resistant asymmetric key pair instead of a password. Obtained when the {{jsxref("Promise")}} returned via a {{domxref("CredentialsContainer.create", "create()")}} or {{domxref("CredentialsContainer.get", "get()")}} call fulfills.
+  - : Provides information about a public key / private key pair, which is a credential for logging into a service using an un-phishable and data-breach resistant asymmetric key pair instead of a password. Obtained when the {{jsxref("Promise")}} returned via a {{domxref("CredentialsContainer.create", "create()")}} or {{domxref("CredentialsContainer.get", "get()")}} call fulfills.
 
 ## Extensions to other interfaces
 

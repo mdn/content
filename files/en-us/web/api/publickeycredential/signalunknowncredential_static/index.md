@@ -16,7 +16,15 @@ It is possible for the information stored in a user's authenticator about a [dis
 
 The next time they try to sign in with a discoverable credential, the deleted credential will still be presented in the relevant UI, but the attempt to sign in will fail because the server won't recognize it. This results in a confusing user experience.
 
-`signalUnknownCredential()` can then be called on the relying party site to tell the authenticator that the credential ID was not recognized. It is up to the authenticator how to handle this information, but the expectation is that it will delete the relevant credential so that the same confusion does not occur again.
+After this happens, `signalUnknownCredential()` can be called on the relying party site to tell the authenticator that the credential ID was not recognized. It is up to the authenticator how to handle this information, but the expectation is that it will delete the relevant credential so that the same confusion does not occur again.
+
+### `signalUnknownCredential()` versus `signalAllAcceptedCredentials()`
+
+It may seem like `signalUnknownCredential()` and {{domxref("PublicKeyCredential.signalAllAcceptedCredentials_static", "PublicKeyCredential.signalAllAcceptedCredentials()")}} have similar purposes, so which one should be used when?
+
+To be clear, `signalUnknownCredential()` should be used to update the authenticator when authentication _failed_. It only passes a single `credentialId` to the authenticator, minimizing the data shared with an unauthenticated party. Using `signalAllAcceptedCredentials()` for this purpose would share the entire list of `credentialId`s for a given user with an unauthenticated party, which may not be desirable.
+
+`signalAllAcceptedCredentials()` should be used in cases where authentication is _successful_ and you want to update the state of a user's credentials.
 
 ## Syntax
 
