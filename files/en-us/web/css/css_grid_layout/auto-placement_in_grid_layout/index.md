@@ -10,7 +10,7 @@ page-type: guide
 
 ## Default placement
 
-If you give the items no placement information they will position themselves on the grid, one in each grid cell.
+If you don't give the items placement information, they automatically position themselves on the grid, placing one grid item in each grid cell.
 
 ```css hidden
 body {
@@ -61,9 +61,9 @@ As you can see with the above example, if you create a grid without placing any 
 
 ### Sizing rows in the implicit grid
 
-The default for automatically created rows in the implicit grid is for them to be _auto-sized_. This means that they will contain the content added to them without causing an overflow.
+The default for automatically created rows in the implicit grid is for them to be _auto-sized_. This means that they will size themselves to contain the content added to them without causing an overflow.
 
-You can control the size of these rows with the property {{cssxref("`grid-auto-rows")}} property. For example, to cause all created rows to be 100 pixels tall, you could use:
+The size of these rows can be controlled using the property {{cssxref("grid-auto-rows")}} property. For example, to make all rows 100px tall, you can use `grid-auto-rows: 100px;`:
 
 ```css hidden
 body {
@@ -111,7 +111,7 @@ body {
 
 ### Sizing rows using minmax()
 
-You can use {{cssxref("minmax","minmax()")}} in your value for {{cssxref("grid-auto-rows")}} enabling the creation of rows that are a minimum size, growing to fit content if needed.
+The {{cssxref("minmax")}} function enables creating rows that have a minimum size, and can grow to fit content as needed when set as the `grid-auto-rows` value. By setting `grid-auto-rows: minmax(100px, auto);` we set each row to be at least 100px tall, while allowing each row to be as tall as needed:
 
 ```css hidden
 body {

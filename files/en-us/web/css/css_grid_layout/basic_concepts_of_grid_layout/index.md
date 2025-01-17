@@ -186,7 +186,7 @@ Tracks can be defined using any length unit. Grid also introduces an additional 
 
 ### Unequal sizes
 
-In this next example, we create a definition with a `2fr` track then two `1fr` tracks. The available space is split into four. Two parts are given to the first track and one part each to the next two tracks.
+In this example, we create a definition with a `2fr` track then two `1fr` tracks. The available space is split into four. Two parts are given to the first track and one part each to the next two tracks.
 
 ```html
 <div class="wrapper">
@@ -229,7 +229,7 @@ In this next example, we create a definition with a `2fr` track then two `1fr` t
 
 ### Mixing flexible and absolute sizes
 
-In this final example, we mix absolute sized tracks with `fr` units. The first track is 500 pixels, so the fixed width is taken away from the available space. The remaining space is divided into three and assigned in proportion to the two flexible tracks.
+In this final example, we mix absolute sized tracks with `fr` units. The first track is `500px`, so the fixed width is taken away from the available space. The remaining space is divided into three and assigned in proportion to the two flexible tracks.
 
 ```html
 <div class="wrapper">
@@ -272,7 +272,7 @@ In this final example, we mix absolute sized tracks with `fr` units. The first t
 
 ### Track listings with repeat() notation
 
-Large grids with many tracks can use the [`repeat()`](/en-US/docs/Web/CSS/repeat) notation, to repeat all or a section of the track listing. For example the grid definition:
+Large grids with many tracks can use the [`repeat()`](/en-US/docs/Web/CSS/repeat) notation, to repeat all or a section of the list of grid tracks. For example the grid definition:
 
 ```css
 .wrapper {
@@ -290,7 +290,7 @@ Can also be written as:
 }
 ```
 
-Repeat notation can be used for a part of the track listing. In this next example, we create a grid with an initial 20-pixel track, then a repeating section of 6 `1fr` tracks then a final 20-pixel track.
+Repeat notation can be used for a part of the list of tracks. In this example, we create an 8-column grid; the initial track is `20px`, then a repeating section of 6 `1fr` tracks, and a final `20px` track.
 
 ```css
 .wrapper {
@@ -299,7 +299,7 @@ Repeat notation can be used for a part of the track listing. In this next exampl
 }
 ```
 
-Repeat notation takes the track listing, and uses it to create a repeating pattern of tracks. In this next example, our grid will consist of 10 tracks, a `1fr` track, and then followed by a `2fr` track. This pattern will be repeated five times.
+Repeat notation (`repeat()`) uses the track listing to create a repeating pattern of tracks. In this example, the grid will have 10 tracks; a `1fr` track is followed by a `2fr` track, with this pattern being repeated five times.
 
 ```css
 .wrapper {
@@ -310,14 +310,16 @@ Repeat notation takes the track listing, and uses it to create a repeating patte
 
 ### Implicit and explicit grids
 
-When creating our example grid, we specifically defined our column tracks with the {{cssxref("grid-template-columns")}} property, but the grid also created rows on its own. These rows are part of the implicit grid. The _explicit grid_ consists of rows and columns defined with {{cssxref("grid-template-columns")}} or {{cssxref("grid-template-rows")}}. The
+When creating our example grid, we specifically defined our column tracks with the {{cssxref("grid-template-columns")}} property, with the grid creating rows as needed to fit the content. The columns define the explicit grid while the rows are part of the implicit grid.
+
+The _explicit grid_ consists of rows and columns defined with {{cssxref("grid-template-columns")}} or {{cssxref("grid-template-rows")}}. The
 _implicit grid_ extends the defined explicit grid when content is placed outside of that grid, such as into the rows by drawing additional grid lines.
 
 If you place something outside of the defined grid—or due to the amount of content, more grid tracks are needed—then the grid creates rows and columns in the _implicit grid_. These tracks will be auto-sized by default, resulting in their size being based on the content that is inside them.
 
 You can also define a set size for tracks created in the implicit grid with the {{cssxref("grid-auto-rows")}} and {{cssxref("grid-auto-columns")}} properties.
 
-In the below example, we use `grid-auto-rows` to ensure that tracks created in the implicit grid are 200 pixels tall.
+In this example, we set `grid-auto-rows: 200px`, ensuring the tracks created in this implicit grid are `200px` tall.
 
 ```html
 <div class="wrapper">
@@ -361,9 +363,9 @@ In the below example, we use `grid-auto-rows` to ensure that tracks created in t
 
 ### Track sizing and minmax
 
-When setting up an explicit grid or defining the sizing for automatically created rows or columns we may want to give tracks a minimum size, but also ensure they expand to fit any content that is added. For example, we may want our rows to never collapse smaller than 100 pixels, but if our content stretches to 300 pixels in height, then we would like the row to stretch to that height.
+When setting up an explicit grid or defining the sizing for automatically created rows or columns we may want to give tracks a minimum size, but also ensure they expand to fit any content that is added. For example, we may want our rows to never collapse smaller than 100 pixels, but if our content stretches to 300 pixels in height, then we would like the row to stretch to that height. This is solved by the {{cssxref("minmax", "minmax()")}} function.
 
-Grid has a solution for this with the {{cssxref("minmax", "minmax()")}} function. In this next example we are using `minmax()` in the value of {{cssxref("grid-auto-rows")}}. This means automatically created rows will be a minimum of 100 pixels tall, and a maximum of `auto`. Using `auto` means that the size will look at the content size and will stretch to give space for the tallest item in a cell, in this row.
+In this example, we use `minmax()` within the `grid-auto-rows` property value. By setting `grid-auto-rows: minmax(100px, auto);`, automatically created rows will be a minimum of `100px` tall, and have a maximum of `auto`. Setting `auto` as the maximum value means the size will stretch to fit the content, sizing the row based on the cell with the tallest content.
 
 ```css
 .wrapper {
@@ -393,7 +395,7 @@ Grid has a solution for this with the {{cssxref("minmax", "minmax()")}} function
 }
 ```
 
-```html
+```html hidden
 <div class="wrapper">
   <div>One</div>
   <div>
@@ -415,11 +417,11 @@ It should be noted that when we define a grid we define the grid tracks, not the
 
 ![Diagram showing numbered grid lines.](1_diagram_numbered_grid_lines.png)
 
-Lines are numbered according to the writing mode of the document. In a left-to-right language, line 1 is on the left-hand side of the grid. In a right-to-left language, it is on the right-hand side of the grid. Lines can also be named, and we will look at how to do this in the [grid layout using named grid lines](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines) guide.
+Lines are numbered according to the writing mode of the document. In a left-to-right language, line 1 is on the left-hand side of the grid. In a right-to-left language, it is on the right-hand side of the grid. Lines can also be named, which is discussed in the [grid layout using named grid lines](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines) guide.
 
 ### Positioning items against lines
 
-The following example demonstrates doing a basic example of line based placement; this is. when placing an item, we target the line rather than the track. We will be exploring in greater detail in the [grid layout using line-based placement](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement) guide.
+The following example demonstrates basic line-based placement; when placing an item, we target the line rather than the track. We explore this in greater detail in the [grid layout using line-based placement](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement) guide.
 
 In this example, the first two items on our three column track grid are placed using the {{cssxref("grid-column-start")}}, {{cssxref("grid-column-end")}}, {{cssxref("grid-row-start")}} and {{cssxref("grid-row-end")}} properties. Working from left to right, the first item is placed against column line 1, and spans to column line 4, which in our case is the far-right line on the grid. It begins at row line 1 and ends at row line 3, therefore spanning two row tracks.
 

@@ -6,11 +6,11 @@ page-type: guide
 
 {{CSSRef}}
 
-In these guides, I have already touched on an important feature of grid layout: the support for different writing modes that is built into the specification. For this guide, we will look at this feature of grid and other modern layout methods, learning a little about writing modes and logical vs. physical properties as we do so.
+One of the important features of grid layout is the support for different writing modes that is built into the specification. In this guide, we look at this feature of grid and other modern layout methods, learning a little about writing modes and logical vs. physical properties as we do so.
 
 ## Logical and physical properties and values
 
-CSS is full of **physical** positioning keywords – left and right, top and bottom. If we position an item using absolute positioning, we use these physical keywords as offset values to push the item around. In the code snippet below, the item is placed 20 pixels from the top, and 30 pixels from the left of the container:
+CSS is full of **physical** positioning keywords – `left` and `right`, `top` and `bottom`. In the code snippet below, we position an item using absolute positioning and use these physical keywords as offset values to push the item around, so the item is placed 20 pixels from the top, and 30 pixels from the left of the container:
 
 ```css
 .container {
@@ -29,13 +29,15 @@ CSS is full of **physical** positioning keywords – left and right, top and bot
 </div>
 ```
 
-Another place you might see physical keywords in use, is when using `text-align: right` to align text to the right. There are also physical **properties** in CSS. We add margins, padding, and borders using these physical properties of {{cssxref("margin-left")}}, {{cssxref("padding-left")}}, and so on.
+Another place you might see physical keywords in use, is when using `text-align: right` to align text to the right. There are also **{{glossary("physical properties")}}** in CSS. We add margins, padding, and borders using these physical properties of {{cssxref("margin-left")}}, {{cssxref("padding-left")}}, and so on.
 
 We call these keywords and properties _physical_ because they relate to the screen you are looking at. Left is always left, no matter what direction your text is running.
 
 ### Issues with physical properties
 
-This can become an issue when developing a site that has to work in multiple languages, including languages that have text starting on the right, rather than the left. Browsers are pretty good at dealing with text direction, and you don't even need to be working in a {{glossary("rtl")}} language to take a look. In the example below, I have two paragraphs. The first paragraph has {{cssxref("text-align")}} set to `left`, the second has no `text-align` property set. I have added `dir="rtl"` to the `html` element, which switches the writing mode from the default for an English language document of `ltr`. You can see that the first paragraph remains left to right, due to the `text-align` value being `left`. The second however, switches direction and the text runs from right to left.
+Physical properties can be an issue when developing a site that has to work in multiple languages, including languages that have text starting on the right, rather than the left.
+
+In this example, the {{cssxref("direction")}} has been set to {{glossary("rtl")}}, which switches the writing mode from the default for an English language document of `ltr`. We have two paragraphs. By default, these should be going from right-to-left. The first paragraph has {{cssxref("text-align")}} set to `left`, so the first paragraph remains left to right, due to the `text-align` value being `left`. The second goes from right to left, because the direction is set to `rtl`.
 
 ```html hidden
 <p class="left">
@@ -46,12 +48,15 @@ This can become an issue when developing a site that has to work in multiple lan
 <p>I have no alignment set and use the direction set in the document.</p>
 ```
 
-```css hidden
+````css
 body {
   direction: rtl;
 }
+.left {
+  text-align: left;
+}
 
-p {
+```css hidden p {
   border: 2px solid #ffa94d;
   border-radius: 5px;
   background-color: #ffd8a8;
@@ -59,11 +64,7 @@ p {
   margin: 1em;
   color: #d9480f;
 }
-
-.left {
-  text-align: left;
-}
-```
+````
 
 {{EmbedLiveSample("Issues with physical properties","",200)}}
 
