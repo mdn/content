@@ -3,10 +3,12 @@ title: "PublicKeyCredential: signalCurrentUserDetails() static method"
 short-title: signalCurrentUserDetails()
 slug: Web/API/PublicKeyCredential/signalCurrentUserDetails_static
 page-type: web-api-static-method
+status:
+  - experimental
 browser-compat: api.PublicKeyCredential.signalCurrentUserDetails_static
 ---
 
-{{APIRef("Web Authentication API")}}{{securecontext_header}}
+{{APIRef("Web Authentication API")}}{{securecontext_header}}{{seecompattable}}
 
 The **`signalCurrentUserDetails()`** static method of the {{domxref("PublicKeyCredential")}} interface signals to the authenticator that a particular user has updated their user name and/or display name.
 
