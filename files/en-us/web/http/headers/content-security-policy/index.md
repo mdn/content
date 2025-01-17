@@ -207,7 +207,8 @@ If a directive contains a nonce and `unsafe-inline`, then the browser ignores `u
 
 See [Nonces](/en-US/docs/Web/HTTP/CSP#nonces) in the CSP guide for more usage information.
 
-> [!NOTE] Nonce source expressions are only applicable to {{htmlelement("script")}} and {{htmlelement("style")}} elements.
+> [!NOTE]
+> Nonce source expressions are only applicable to {{htmlelement("script")}} and {{htmlelement("style")}} elements.
 
 ### '\<hash_algorithm>-<hash_value>'
 
@@ -230,7 +231,8 @@ If a directive contains a hash and `unsafe-inline`, then the browser ignores `un
 
 See [Hashes](/en-US/docs/Web/HTTP/CSP#hashes) in the CSP guide for more usage information.
 
-> [!NOTE] Hash source expressions are only applicable to {{htmlelement("script")}} and {{htmlelement("style")}} elements.
+> [!NOTE]
+> Hash source expressions are only applicable to {{htmlelement("script")}} and {{htmlelement("style")}} elements.
 
 ### \<host-source>
 
@@ -281,7 +283,8 @@ By default, if a CSP contains a `default-src` or a `script-src` directive, then 
 
 The `unsafe-eval` keyword can be used to undo this protection, allowing dynamic evaluation of strings as JavaScript.
 
-> [!WARNING] Developers should avoid `'unsafe-eval'`, because it defeats much of the purpose of having a CSP.
+> [!WARNING]
+> Developers should avoid `'unsafe-eval'`, because it defeats much of the purpose of having a CSP.
 
 See [`eval()` and similar APIs](/en-US/docs/Web/HTTP/CSP#eval_and_similar_apis) in the CSP guide for more usage information.
 
@@ -306,7 +309,8 @@ Similarly, if a CSP contains `default-src` or a `style-src` directive, then inli
 
 The `unsafe-inline` keyword can be used to undo this protection, allowing all these forms to be loaded.
 
-> [!WARNING] Developers should avoid `'unsafe-inline'`, because it defeats much of the purpose of having a CSP.
+> [!WARNING]
+> Developers should avoid `'unsafe-inline'`, because it defeats much of the purpose of having a CSP.
 
 See [Inline JavaScript](/en-US/docs/Web/HTTP/CSP#inline_javascript) in the CSP guide for more usage information.
 
@@ -322,7 +326,8 @@ script-src 'unsafe-hashes' 'sha256-cd9827ad...'
 
 If the hash value matches the hash of an inline event handler attribute value or of a `style` attribute value, then the code will be allowed to execute.
 
-> [!WARNING] The `'unsafe-hashes'` value is unsafe.
+> [!WARNING]
+> The `'unsafe-hashes'` value is unsafe.
 >
 > In particular, it enables an attack in which the content of the inline event handler attribute is injected into the document as an inline `<script>` element. Suppose the inline event handler is:
 >
