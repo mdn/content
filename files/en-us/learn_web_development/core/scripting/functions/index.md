@@ -356,7 +356,9 @@ function greeting() {
 }
 ```
 
-Both functions you want to call are named `greeting()`, but you can only ever access the `greeting()` function from `first.js`. This happens because the repeated declaration of the constant name in `second.js` causes an error, which stops the execution of `second.js` and prevents its `greeting()` function from being executed or overwriting the one from `first.js`. However, if there were no errors, the code in files declared later would overwrite the code from files declared earlier.
+You will see that the second script does not load and run at all, and an error is printed in the console: `Uncaught SyntaxError: Identifier 'name' has already been declared`. This is because the `name` constant is already declared in `first.js`, and you can't declare the same constant twice in the same scope. Because the second script did not load, the `greeting()` function from `second.js` is not available to be called. Therefore, you will see an alert box displaying `Hello Chris: welcome to our company.`.
+
+Try removing the second `const name = "Zaptec";` line from `second.js` and reloading the page. Now both scripts execute, and the alert box says `Our company is called Chris.`. Functions are allowed to be redeclared, and the last declaration gets used. The previous declarations are effectively overwritten.
 
 > [!NOTE]
 > You can see this example [running live on GitHub](https://mdn.github.io/learning-area/javascript/building-blocks/functions/conflict.html) (see also the [source code](https://github.com/mdn/learning-area/tree/main/javascript/building-blocks/functions)).
