@@ -63,7 +63,7 @@ async function setClipboard(text) {
 }
 ```
 
-The `setClipboard()` function specifies a text MIME type in the `type` constant, then specifies a `clipboardItemData` object with a single property — its key is the MIME type, and its value is the passed in text that we want to write to the clipboard. We then construct a new {{domxref("ClipboardItem")}} object into which the `clipboardItemData` object is passed.
+The `setClipboard()` function specifies a `"text/plain"` MIME type in the `type` constant, then specifies a `clipboardItemData` object with a single property — its key is the MIME type, and its value is the passed in text that we want to write to the clipboard. We then construct a new {{domxref("ClipboardItem")}} object into which the `clipboardItemData` object is passed.
 
 Finally, `write()` is called with `await` to write the bdata to the clipboard.
 
