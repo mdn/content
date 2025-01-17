@@ -16,7 +16,7 @@ It is possible for the information stored in a user's authenticator about a [dis
 
 The next time they try to sign in with a discoverable credential, the deleted credential will still be presented in the relevant UI, but the attempt to sign in will fail because the server won't recognize it. This results in a confusing user experience.
 
-After this happens, `signalUnknownCredential()` can be called on the relying party site to tell the authenticator that the credential ID was not recognized. It is up to the authenticator how to handle this information, but the expectation is that it will delete the relevant credential so that the same confusion does not occur again.
+To avoid this issue, `signalUnknownCredential()` should be called on the relying party site each time a discoverable credential-based sign-in fails, or when a discoverable credential is created but fails to be stored on the server for some reason. This tells the authenticator that the credential ID was not recognized. It is up to the authenticator how to handle this information, but the expectation is that it will delete the relevant credential so that the same confusion does not occur again.
 
 ### `signalUnknownCredential()` versus `signalAllAcceptedCredentials()`
 
