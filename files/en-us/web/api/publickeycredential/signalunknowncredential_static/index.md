@@ -22,11 +22,11 @@ To avoid this issue, `signalUnknownCredential()` should be called on the relying
 
 ### `signalUnknownCredential()` versus `signalAllAcceptedCredentials()`
 
-It may seem like `signalUnknownCredential()` and {{domxref("PublicKeyCredential.signalAllAcceptedCredentials_static", "PublicKeyCredential.signalAllAcceptedCredentials()")}} have similar purposes, so which one should be used when?
+It may seem like `signalUnknownCredential()` and {{domxref("PublicKeyCredential.signalAllAcceptedCredentials_static", "signalAllAcceptedCredentials()")}} have similar purposes, so what situation should each one be used in?
 
-To be clear, `signalUnknownCredential()` should be used to update the authenticator when authentication _failed_. It only passes a single `credentialId` to the authenticator, minimizing the data shared with an unauthenticated party. Using `signalAllAcceptedCredentials()` for this purpose would share the entire list of `credentialId`s for a given user with an unauthenticated party, which may not be desirable.
+To be clear, `signalUnknownCredential()` should be used to update the authenticator when the user is not authenticated. It only passes a single `credentialId` to the authenticator — the same one the client just tried to authenticate with. Using `signalAllAcceptedCredentials()` for this purpose would share the entire list of `credentialId`s for a given user with an unauthenticated party, which may not be desirable.
 
-`signalAllAcceptedCredentials()` should be used in cases where authentication is _successful_ and you want to update the state of a user's credentials.
+`signalAllAcceptedCredentials()` should be used in cases where the user is authenticated and you want to update the state of a user's credentials.
 
 ## Syntax
 

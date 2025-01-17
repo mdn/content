@@ -25,11 +25,11 @@ To avoid this issue, `signalAllAcceptedCredentials()` should be called on the re
 
 ### `signalAllAcceptedCredentials()` versus `signalUnknownCredential()`
 
-It may seem like `signalAllAcceptedCredentials()` and {{domxref("PublicKeyCredential.signalUnknownCredential_static", "PublicKeyCredential.signalUnknownCredential()")}} have similar purposes, so which one should be used when?
+It may seem like `signalAllAcceptedCredentials()` and {{domxref("PublicKeyCredential.signalUnknownCredential_static", "signalUnknownCredential()")}} have similar purposes, so what situation should each one be used in?
 
-To be clear, `signalAllAcceptedCredentials()` should only be used in cases where authentication is _successful_ and you want to update the state of a user's credentials. Don't use it in cases where authentication failed, for example because the user deleted a credential from the relying party but later tried to sign in with it because it was still showing in the authenticator. Using `signalAllAcceptedCredentials()` for this purpose would share the entire list of `credentialId`s for a given user with an unauthenticated party, which may not be desirable.
+To be clear, `signalAllAcceptedCredentials()` should only be used in cases where the user is authenticated and you want to update the state of a user's credentials. Don't use it in cases where the user is not authenticated — for example if authentication failed because the user deleted a credential from the relying party but later tried to sign in with it because it was still showing in the authenticator. Using `signalAllAcceptedCredentials()` for this purpose would share the entire list of `credentialId`s for a given user with an unauthenticated party, which may not be desirable.
 
-In cases where authentication _failed_, you should instead use `signalUnknownCredential()`. It only passes a single `credentialId` to the authenticator, minimizing the data shared with an unauthenticated party.
+In cases where the user is not authenticated, you should instead use `signalUnknownCredential()`. It doesn't reveal the user's `credentialId` list to the authenticator, minimizing the data shared with an unauthenticated party.
 
 ## Syntax
 
