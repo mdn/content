@@ -32,9 +32,8 @@ speak-as: no-punctuation;
 - `no-punctuation`
   - : The content is pronounced normally without any punctuation. For example, instead of "Hello, world!" it would be pronounced as "Hello world".
 
-
->[!NOTE]
- >The support of `speak-as` property is very limited or inconsistently implemented across different assistive technologies (such as screen readers or speech synthesizers). It's often recommended not to fully rely on it solely to deliver your critical information, to ensure it remains user friendly and accessible to a wide audience.
+> [!NOTE]
+> The support of `speak-as` property is very limited or inconsistently implemented across different assistive technologies (such as screen readers or speech synthesizers). It's often recommended not to fully rely on it solely to deliver your critical information, to ensure it remains user friendly and accessible to a wide audience.
 
 ## Example
 ### HTML
