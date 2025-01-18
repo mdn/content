@@ -73,7 +73,7 @@ speak-as: no-punctuation;
 
 ## See also
 
-- How to use [speak-as descriptor](https://developer.mozilla.org/en-US/docs/Web/CSS/@counter-style/speak-as) as  descriptor for {{cssxref("@counter-style")}} which is part of the `@counter-style` at-rule.
+- How to use [speak-as descriptor](/en-US/docs/Web/CSS/@counter-style/speak-as) as descriptor for {{cssxref("@counter-style")}} which is part of the `@counter-style` at-rule.
 - More information on {{cssxref("@counter-style")}}.
 - [CSS counter styles](/en-US/docs/Web/CSS/CSS_counter_styles)
 - [CSS lists and counters](/en-US/docs/Web/CSS/CSS_lists)
