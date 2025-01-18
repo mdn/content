@@ -73,9 +73,6 @@ speak-as: no-punctuation;
 
 ## Browser compatibility
 
-
-
-
 ## See also
 
 - How to use [speak-as descriptor](/en-US/docs/Web/CSS/@counter-style/speak-as) as descriptor for {{cssxref("@counter-style")}} which is part of the `@counter-style` at-rule.
