@@ -69,6 +69,7 @@ speak-as: no-punctuation;
 ```
 
 ## Browser compatibility
+
 {{Compat}}
 
 ## See also
