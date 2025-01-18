@@ -38,6 +38,7 @@ speak-as: no-punctuation;
 ## Example
 
 ### HTML
+
 ```HTML
   <p class="normal">Hello, world!</p>
   <p class="spell-out">Hello, world!</p>
