@@ -184,7 +184,7 @@ auto-fill auto-fit
 
 - [Realizing common layouts using grids](/en-US/docs/Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids)
 
-  - : A few different layouts demonstrating different techniques you can use when designing with CSS grid layouts.
+  - : A few different layouts demonstrating different techniques you can use when designing with CSS grid layouts, including using {{cssxref("grid-template-areas")}}, a 12-column flexible grid system, and a product listing using auto-placement.
 
 - [Subgrid](/en-US/docs/Web/CSS/CSS_grid_layout/Subgrid)
 
