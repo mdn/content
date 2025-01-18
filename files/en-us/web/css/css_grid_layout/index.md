@@ -180,11 +180,11 @@ auto-fill auto-fit
 
 - [Grid layout and accessibility](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility)
 
-  - : x
+  - : A look at how CSS grid layout can both help and harm accessibility.
 
 - [Realizing common layouts using grids](/en-US/docs/Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids)
 
-  - : x
+  - : A few different layouts demonstrating different techniques you can use when designing with CSS grid layouts.
 
 - [Subgrid](/en-US/docs/Web/CSS/CSS_grid_layout/Subgrid)
 
