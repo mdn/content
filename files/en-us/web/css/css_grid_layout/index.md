@@ -176,7 +176,7 @@ auto-fill auto-fit
 
 - [Grids, logical values, and writing modes](/en-US/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)
 
-  - : A look at the interaction between CSS grid layout, box alignment and writing modes
+  - : A look at the interaction between CSS grid layout, box alignment and writing modes, along with CSS logical and physical properties and values.
 
 - [Grid layout and accessibility](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility)
 
