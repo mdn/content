@@ -58,7 +58,7 @@ This article provides information about the changes in Firefox 135 that affect d
 
 ## Changes for add-on developers
 
-- {{WebExtAPIRef("commands.update")}} can now assign keyboard shortcuts for commands to the F13 to F19 keys. However, extensions can't assign these keys from the [`commands` manifest.json key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands). Users can also assign features to these keys using [Manage Extension Shortcuts](https://support.mozilla.org/en-US/kb/manage-extension-shortcuts-firefox).
+- {{WebExtAPIRef("commands.update")}} can now assign keyboard shortcuts for commands to the F13 to F19 keys. However, extensions can't assign these keys from the [`commands` manifest.json key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands). Users can also assign features to these keys using [Manage Extension Shortcuts](https://support.mozilla.org/en-US/kb/manage-extension-shortcuts-firefox) ([Firefox bug 1924542](https://bugzil.la/1924542))
 
 ### Removals
 
