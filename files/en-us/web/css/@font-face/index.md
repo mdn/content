@@ -31,7 +31,7 @@ The **`@font-face`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At
 - {{cssxref("@font-face/font-display", "font-display")}}
   - : Determines how a font face is displayed based on whether and when it is downloaded and ready to use.
 - {{cssxref("@font-face/font-family", "font-family")}}
-  - : Specifies a name that will be used as the font face value for font properties.
+  - : Specifies a name that will be used as the font face value for font properties. It is required for the @font-face rule to be valid.
 - {{cssxref("@font-face/font-stretch", "font-stretch")}}
   - : A {{cssxref("font-stretch")}} value. Accepts two values to specify a range that is supported by a font-face, for example `font-stretch: 50% 200%;`
 - {{cssxref("@font-face/font-style", "font-style")}}
