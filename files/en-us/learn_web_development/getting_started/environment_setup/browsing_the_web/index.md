@@ -208,7 +208,7 @@ As a result, you need to be careful to check the answers they give you, and not 
 
   - Typing in `"ant fish cheese"` (with the quotes) will only return results that contain that exact phrase.
   - `"ant cheese" -fish` will return results that contain `ant` and/or `cheese` but not `fish`.
-  - `and OR cheese` will only return results with one term or the other, not both. From our testing, this one only seemed to work effectively in Google.
+  - `ant OR cheese` will only return results with one term or the other, not both. From our testing, this one only seemed to work effectively in Google.
   - `intitle:cheese` will only return results that have "cheese" in the main title of the page.
 
   > [!NOTE]
