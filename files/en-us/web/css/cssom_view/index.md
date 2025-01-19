@@ -13,14 +13,14 @@ The **CSSOM view** module lets you manipulate the visual view of a document, inc
 
 ### Events
 
-- {{domxref("Window")}}: {{domxref("Window/resize_event")}} event
-- {{domxref("VisualViewport")}}: {{domxref("VisualViewport/resize_event")}} event
-- {{domxref("Document")}}: {{domxref("Document/scroll_event")}} event
-- {{domxref("Element")}}: {{domxref("Element/scroll_event")}} event
-- {{domxref("VisualViewport")}}: {{domxref("VisualViewport/scroll_event")}} event
-- {{domxref("Document")}}: {{domxref("Document/scrollend_event")}} event
-- {{domxref("Element")}}: {{domxref("Element/scrollend_event")}} event
-- {{domxref("VisualViewport")}}: {{domxref("VisualViewport/scrollend_event")}} event
+- {{domxref("Window")}}: {{domxref("Window/resize_event", "resize")}} event
+- {{domxref("VisualViewport")}}: {{domxref("VisualViewport/resize_event", "resize")}} event
+- {{domxref("Document")}}: {{domxref("Document/scroll_event", "scroll")}} event
+- {{domxref("Element")}}: {{domxref("Element/scroll_event", "scroll")}} event
+- {{domxref("VisualViewport")}}: {{domxref("VisualViewport/scroll_event", "scroll")}} event
+- {{domxref("Document")}}: {{domxref("Document/scrollend_event", "scrollend")}} event
+- {{domxref("Element")}}: {{domxref("Element/scrollend_event", "scrollend")}} event
+- {{domxref("VisualViewport")}}: {{domxref("VisualViewport/scrollend_event", "scrollend")}} event
 
 ### Interfaces
 
