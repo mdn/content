@@ -162,6 +162,7 @@ console.log("123".match("1\\.3")); // null
 
 ## See also
 
+- [Regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions) guide
 - [Polyfill of `String.prototype.match` in `core-js` with fixes and implementation of modern behavior like `Symbol.match` support](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("String.prototype.matchAll()")}}
 - {{jsxref("RegExp")}}
