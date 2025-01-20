@@ -58,6 +58,8 @@ This article provides information about the changes in Firefox 136 that affect d
 
 ## Changes for add-on developers
 
+- {{WebExtAPIRef("menus.update")}} and {{WebExtAPIRef("menus.remove")}} and the aliases {{WebExtAPIRef("contextMenus.update")}} and {{WebExtAPIRef("contextMenus.remove")}} now reject with an error when the menu item doesn't exist, rather than returning `undefined` ([Firefox bug 1688743](https://bugzil.la/1688743)).
+
 ### Removals
 
 ### Other
