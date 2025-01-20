@@ -25,6 +25,11 @@ None.
 
 A new {{jsxref("Temporal.Instant")}} object with the same {{jsxref("Temporal/Instant/epochMilliseconds", "epochMilliseconds")}} value as this date's timestamp. Its microsecond and nanosecond components are always `0`.
 
+### Exceptions
+
+- {{jsxref("RangeError")}}
+  - : Thrown if the date is [invalid](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date) (it has a timestamp of `NaN`).
+
 ## Examples
 
 ### Using toTemporalInstant()
