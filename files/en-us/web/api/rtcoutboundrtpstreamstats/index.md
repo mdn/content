@@ -11,6 +11,78 @@ The **`RTCOutboundRtpStreamStats`** dictionary of the [WebRTC API](/en-US/docs/W
 
 The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} returned by {{domxref("RTCPeerConnection.getStats()")}} or {{domxref("RTCRtpSender.getStats()")}} until you find a report with the [`type`](#type) of `outbound-rtp`.
 
+<!--- This is from the spec - supported thingies -->
+
+dictionary RTCOutboundRtpStreamStats : RTCSentRtpStreamStats {
+DOMString mid;
+DOMString mediaSourceId;
+DOMString remoteId;
+DOMString rid;
+unsigned long long headerBytesSent;
+unsigned long long retransmittedPacketsSent;
+unsigned long long retransmittedBytesSent;
+unsigned long rtxSsrc;
+double targetBitrate;
+unsigned long long totalEncodedBytesTarget;
+unsigned long frameWidth;
+unsigned long frameHeight;
+double framesPerSecond;
+unsigned long framesSent;
+unsigned long hugeFramesSent;
+unsigned long framesEncoded;
+unsigned long keyFramesEncoded;
+unsigned long long qpSum;
+double totalEncodeTime;
+double totalPacketSendDelay;
+RTCQualityLimitationReason qualityLimitationReason;
+record<DOMString, double> qualityLimitationDurations;
+unsigned long qualityLimitationResolutionChanges;
+unsigned long nackCount;
+unsigned long firCount;
+unsigned long pliCount;
+DOMString encoderImplementation;
+boolean powerEfficientEncoder;
+boolean active;
+DOMString scalabilityMode;
+};
+
+From the BCD
+
+active B
+bytesSent B
+codecId B
+frameHeight B
+frameWidth B
+framesEncoded B
+framesPerSecond B
+framesSent B
+headerBytesSent B
+id B
+keyFramesEncoded B
+kind B
+mediaSourceId B
+mid B
+nackCount B
+packetsSent B
+qpSum B
+qualityLimitationDurations B
+qualityLimitationReason B
+remoteId B
+retransmittedBytesSent B
+retransmittedPacketsSent B
+rid B
+scalabilityMode B
+ssrc B
+targetBitrate B
+timestamp B
+totalEncodeTime B
+totalEncodedBytesTarget B
+totalPacketSendDelay B
+transportId B
+type B
+
+<!-- End spec -->
+
 ## Instance properties
 
 - {{domxref("RTCOutboundRtpStreamStats.averageRtcpInterval", "averageRtcpInterval")}}
