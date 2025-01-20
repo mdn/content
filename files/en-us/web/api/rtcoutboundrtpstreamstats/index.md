@@ -13,7 +13,7 @@ The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} re
 
 <!--- This is from the spec - supported thingies -->
 
-dictionary RTCOutboundRtpStreamStats : RTCSentRtpStreamStats {
+dictionary RTCOutboundRtpStreamStats
 DOMString mid;
 DOMString mediaSourceId;
 DOMString remoteId;
@@ -42,55 +42,81 @@ unsigned long firCount;
 unsigned long pliCount;
 DOMString encoderImplementation;
 boolean powerEfficientEncoder;
-boolean active;
 DOMString scalabilityMode;
 };
 
 From the BCD
 
-active B
-bytesSent B
-codecId B
-frameHeight B
-frameWidth B
-framesEncoded B
-framesPerSecond B
-framesSent B
-headerBytesSent B
-id B
-keyFramesEncoded B
-kind B
-mediaSourceId B
-mid B
-nackCount B
-packetsSent B
-qpSum B
-qualityLimitationDurations B
-qualityLimitationReason B
-remoteId B
-retransmittedBytesSent B
-retransmittedPacketsSent B
-rid B
-scalabilityMode B
-ssrc B
-targetBitrate B
-timestamp B
-totalEncodeTime B
-totalEncodedBytesTarget B
-totalPacketSendDelay B
-transportId B
-type B
+X active B
+X bytesSent B
+X codecId B
+X frameHeight B
+X frameWidth B
+X framesEncoded B
+X framesPerSecond B
+X framesSent B
+X headerBytesSent B
+X id B
+X keyFramesEncoded B
+X kind B
+X mediaSourceId B
+X mid B
+X nackCount B
+X packetsSent B
+X qpSum B
+X qualityLimitationDurations B
+X qualityLimitationReason B
+X remoteId B
+X retransmittedBytesSent B
+X retransmittedPacketsSent B
+X rid B
+X scalabilityMode B
+X ssrc B
+X targetBitrate B
+X timestamp B
+X totalEncodeTime B
+X totalEncodedBytesTarget B
+X totalPacketSendDelay B
+X transportId B
+X type B
 
 <!-- End spec -->
 
 ## Instance properties
 
-- {{domxref("RTCOutboundRtpStreamStats.averageRtcpInterval", "averageRtcpInterval")}}
-  - : A floating-point value indicating the average {{Glossary("RTCP")}} interval between two consecutive compound RTCP packets.
+- {{domxref("RTCOutboundRtpStreamStats.active", "active")}}
+  - : Xxxxx
+- {{domxref("RTCOutboundRtpStreamStats.frameHeight", "frameHeight")}}
+  - : Xxxxx
+- {{domxref("RTCOutboundRtpStreamStats.frameWidth", "frameWidth")}}
+  - : Xxxxx
 - {{domxref("RTCOutboundRtpStreamStats.framesEncoded", "framesEncoded")}}
   - : The number of frames that have been successfully encoded so far for sending on this RTP stream. _Only valid for video streams._
-- {{domxref("RTCOutboundRtpStreamStats.perDscpPacketsSent", "perDscpPacketsSent")}}
-  - : A record of key-value pairs with strings as the keys mapped to 32-bit integer values, each indicating the total number of packets this `RTCRtpSender` has transmitted for this source for each Differentiated Services Code Point (DSCP).
+- {{domxref("RTCOutboundRtpStreamStats.framesPerSecond", "framesPerSecond")}}
+  - : Xxxxx
+- {{domxref("RTCOutboundRtpStreamStats.framesSent", "framesSent")}}
+  - : Xxxxx
+- {{domxref("RTCOutboundRtpStreamStats.headerBytesSent", "headerBytesSent")}}
+  - : Xxxxx
+- {{domxref("RTCOutboundRtpStreamStats.keyFramesEncoded", "keyFramesEncoded")}}
+  - : Xxxxx
+- {{domxref("RTCOutboundRtpStreamStats.mediaSourceId", "mediaSourceId")}}
+  - : Xxxxx
+- {{domxref("RTCOutboundRtpStreamStats.mid", "mid")}}
+  - : Xxxxx
+- {{domxref("RTCOutboundRtpStreamStats.nackCount", "nackCount")}}
+  - : An integer value indicating the total number of Negative ACKnowledgement (NACK) packets this `RTCRtpSender` has received from the remote {{domxref("RTCRtpReceiver")}}.
+    <!--
+    These properties are computed locally, and are only available to the device receiving the media stream.
+    Their primary purpose is to examine the error resiliency of the connection, as they provide information about lost packets, lost frames, and how heavily compressed the data is.
+    -->
+- {{domxref("RTCOutboundRtpStreamStats.qpSum", "qpSum")}}
+  - : A 64-bit value containing the sum of the QP values for every frame encoded by this {{domxref("RTCRtpSender")}}.
+    _Valid only for video streams._
+    <!--
+    These properties are computed locally, and are only available to the device receiving the media stream.
+    Their primary purpose is to examine the error resiliency of the connection, as they provide information about lost packets, lost frames, and how heavily compressed the data is.
+    -->
 - {{domxref("RTCOutboundRtpStreamStats.qualityLimitationDurations", "qualityLimitationDurations")}} {{experimental_inline}}
   - : A record mapping each of the quality limitation reasons in the {{domxref("RTCRemoteInboundRtpStreamStats")}} enumeration to a floating-point value indicating the number of seconds the stream has spent with its quality limited for that reason.
 - {{domxref("RTCOutboundRtpStreamStats.qualityLimitationReason", "qualityLimitationReason")}} {{experimental_inline}}
@@ -101,29 +127,44 @@ type B
   - : The total number of bytes that have been retransmitted for this source as of the time the statistics were sampled. These retransmitted bytes comprise the packets included in the value returned by {{domxref("RTCInboundRtpStreamStats.retransmittedPacketsSent", "retransmittedPacketsSent")}}.
 - {{domxref("RTCOutboundRtpStreamStats.retransmittedPacketsSent", "retransmittedPacketsSent")}}
   - : The total number of packets that have needed to be retransmitted for this source as of the time the statistics were sampled. These retransmitted packets are included in the value returned by {{domxref("RTCInboundRtpStreamStats.packetsSent", "packetsSent")}}.
+- {{domxref("RTCOutboundRtpStreamStats.rid", "rid")}}
+  - : Xxxxx
+- {{domxref("RTCOutboundRtpStreamStats.scalabilityMode", "scalabilityMode")}}
+  - : Xxxxx
+- {{domxref("RTCOutboundRtpStreamStats.targetBitrate", "targetBitrate")}}
+  - : A value indicating the bit rate the `RTCRtpSender`'s codec is configured to attempt to achieve in its output media.
+- {{domxref("RTCOutboundRtpStreamStats.totalEncodeTime", "totalEncodeTime")}}
+  - : A floating-point value indicating the total number of seconds that have been spent encoding the frames encoded so far by this {{domxref("RTCRtpSender")}}.
+- {{domxref("RTCOutboundRtpStreamStats.totalEncodedBytesTarget", "totalEncodedBytesTarget")}} {{experimental_inline}}
+  - : A cumulative sum of the _target_ frame sizes (the targeted maximum size of the frame in bytes when the codec is asked to compress it) for all of the frames encoded so far. This will likely differ from the total of the _actual_ frame sizes.
+- {{domxref("RTCOutboundRtpStreamStats.totalPacketSendDelay", "totalPacketSendDelay")}}
+  - : Xxxxx
+
+---
+
+- {{domxref("RTCOutboundRtpStreamStats.perDscpPacketsSent", "perDscpPacketsSent")}}
+
+  - : A record of key-value pairs with strings as the keys mapped to 32-bit integer values, each indicating the total number of packets this `RTCRtpSender` has transmitted for this source for each Differentiated Services Code Point (DSCP).
+
 - {{domxref("RTCOutboundRtpStreamStats.senderId", "senderId")}}
   - : The {{domxref("RTCOutboundRtpStreamStats.id", "id")}} of the {{domxref("RTCAudioSenderStats")}} or {{domxref("RTCVideoSenderStats")}} object containing statistics about this stream's {{domxref("RTCRtpSender")}}.
 - {{domxref("RTCOutboundRtpStreamStats.sliCount", "sliCount")}}
+
   - : An integer indicating the number of times this sender received a Slice Loss Indication (SLI) frame from the remote peer, indicating that one or more consecutive video macroblocks have been lost or corrupted. Available only for video streams.
-- {{domxref("RTCOutboundRtpStreamStats.targetBitrate", "targetBitrate")}}
-  - : A value indicating the bit rate the `RTCRtpSender`'s codec is configured to attempt to achieve in its output media.
-- {{domxref("RTCOutboundRtpStreamStats.totalEncodedBytesTarget", "totalEncodedBytesTarget")}} {{experimental_inline}}
-  - : A cumulative sum of the _target_ frame sizes (the targeted maximum size of the frame in bytes when the codec is asked to compress it) for all of the frames encoded so far. This will likely differ from the total of the _actual_ frame sizes.
-- {{domxref("RTCOutboundRtpStreamStats.totalEncodeTime", "totalEncodeTime")}}
-  - : A floating-point value indicating the total number of seconds that have been spent encoding the frames encoded so far by this {{domxref("RTCRtpSender")}}.
+
 - {{domxref("RTCOutboundRtpStreamStats.trackId", "trackId")}}
   - : The {{domxref("RTCOutboundRtpStreamStats.id", "id")}} of the {{domxref("RTCSenderAudioTrackAttachmentStats")}} or {{domxref("RTCSenderVideoTrackAttachmentStats")}} object containing the current track attachment to the {{domxref("RTCRtpSender")}} responsible for this stream.
 
-### Local-only measurements
+---
 
-These properties are computed locally, and are only available to the device receiving the media stream.
-Their primary purpose is to examine the error resiliency of the connection, as they provide information about lost packets, lost frames, and how heavily compressed the data is.
+### Sent RTP stream statistics
 
-- {{domxref("RTCOutboundRtpStreamStats.nackCount", "nackCount")}}
-  - : An integer value indicating the total number of Negative ACKnowledgement (NACK) packets this `RTCRtpSender` has received from the remote {{domxref("RTCRtpReceiver")}}.
-- {{domxref("RTCOutboundRtpStreamStats.qpSum", "qpSum")}}
-  - : A 64-bit value containing the sum of the QP values for every frame encoded by this {{domxref("RTCRtpSender")}}.
-    _Valid only for video streams._
+<!-- RTCSentRtpStreamStats -->
+
+- `bytesSent` {{optional_inline}}
+  - : A positive integer indicating the total number of bytes sent for this SSRC, including retransmissions. <!-- [RFC3550] section 6.4.1 -->
+- `packetsSent` {{optional_inline}}
+  - : A positive integer indicating the total number of RTP packets sent for this SSRC, including retransmissions. <!-- [RFC3550] section 6.4.1 -->
 
 ### Common RTP stream statistics
 

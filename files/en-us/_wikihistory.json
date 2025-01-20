@@ -53782,10 +53782,6 @@
     "modified": "2020-10-15T22:17:14.809Z",
     "contributors": ["Sheppy"]
   },
-  "Web/API/RTCOutboundRtpStreamStats/perDscpPacketsSent": {
-    "modified": "2020-10-15T22:17:15.897Z",
-    "contributors": ["Sheppy"]
-  },
   "Web/API/RTCOutboundRtpStreamStats/qpSum": {
     "modified": "2020-10-15T22:17:16.058Z",
     "contributors": ["Sheppy"]
