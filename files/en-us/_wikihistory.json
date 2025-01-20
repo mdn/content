@@ -53794,10 +53794,6 @@
     "modified": "2020-10-15T22:17:16.621Z",
     "contributors": ["Sheppy"]
   },
-  "Web/API/RTCOutboundRtpStreamStats/sliCount": {
-    "modified": "2020-10-15T22:17:16.518Z",
-    "contributors": ["Sheppy"]
-  },
   "Web/API/RTCOutboundRtpStreamStats/trackId": {
     "modified": "2020-10-15T22:17:16.946Z",
     "contributors": ["Sheppy"]

@@ -142,16 +142,8 @@ X type B
 
 ---
 
-- {{domxref("RTCOutboundRtpStreamStats.perDscpPacketsSent", "perDscpPacketsSent")}}
-
-  - : A record of key-value pairs with strings as the keys mapped to 32-bit integer values, each indicating the total number of packets this `RTCRtpSender` has transmitted for this source for each Differentiated Services Code Point (DSCP).
-
-- {{domxref("RTCOutboundRtpStreamStats.senderId", "senderId")}}
-  - : The {{domxref("RTCOutboundRtpStreamStats.id", "id")}} of the {{domxref("RTCAudioSenderStats")}} or {{domxref("RTCVideoSenderStats")}} object containing statistics about this stream's {{domxref("RTCRtpSender")}}.
 - {{domxref("RTCOutboundRtpStreamStats.sliCount", "sliCount")}}
-
   - : An integer indicating the number of times this sender received a Slice Loss Indication (SLI) frame from the remote peer, indicating that one or more consecutive video macroblocks have been lost or corrupted. Available only for video streams.
-
 - {{domxref("RTCOutboundRtpStreamStats.trackId", "trackId")}}
   - : The {{domxref("RTCOutboundRtpStreamStats.id", "id")}} of the {{domxref("RTCSenderAudioTrackAttachmentStats")}} or {{domxref("RTCSenderVideoTrackAttachmentStats")}} object containing the current track attachment to the {{domxref("RTCRtpSender")}} responsible for this stream.
 

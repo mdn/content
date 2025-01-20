@@ -9899,6 +9899,7 @@
 /en-US/docs/Web/API/RTCOutboundRtpStreamStats/perDscpPacketsReceived	/en-US/docs/Web/API/RTCOutboundRtpStreamStats
 /en-US/docs/Web/API/RTCOutboundRtpStreamStats/perDscpPacketsSent	/en-US/docs/Web/API/RTCOutboundRtpStreamStats
 /en-US/docs/Web/API/RTCOutboundRtpStreamStats/pliCount	/en-US/docs/Web/API/RTCOutboundRtpStreamStats
+/en-US/docs/Web/API/RTCOutboundRtpStreamStats/sliCount	/en-US/docs/Web/API/RTCOutboundRtpStreamStats
 /en-US/docs/Web/API/RTCPeerConnection.addStream	/en-US/docs/Web/API/RTCPeerConnection/addStream
 /en-US/docs/Web/API/RTCPeerConnection.close	/en-US/docs/Web/API/RTCPeerConnection/close
 /en-US/docs/Web/API/RTCPeerConnection.getIdentityAssertion	/en-US/docs/Web/API/RTCPeerConnection/getIdentityAssertion
