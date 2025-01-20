@@ -16,7 +16,10 @@ If set, this value will be present regardless of whether the RID RTP header exte
 ## Value
 
 The value of the [`encodings.rid`](/en-US/docs/Web/API/RTCRtpSender/setParameters#rid) argument passed to {{domxref("RTCRtpSender.setParameters()")}}, if any, when the corresponding transceiver is created.
-If the stream ID was not set, or for non-audio streams, this property does not exist.
+If the stream ID was not set this property does not exist.
+
+> [!NOTE]
+> This property only exists for audio streams.
 
 ## Specifications
 
