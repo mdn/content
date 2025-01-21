@@ -140,5 +140,6 @@ For a complete interactive `text-box-edge` example, see the [`text-box-trim` pag
 ## See also
 
 - {{cssxref("text-box")}}, {{cssxref("text-box-trim")}}
+- {{cssxref("&lt;text-edge&gt;")}} data type
 - [CSS inline layout](/en-US/docs/Web/CSS/CSS_inline_layout) module
 - [CSS text-box-edge](https://developer.chrome.com/blog/css-text-box-edge) on developer.chrome.com (2025)
