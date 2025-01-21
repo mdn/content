@@ -133,7 +133,7 @@ function updateProgress() {
 
 The output looks like this. Try pressing the button to see the animation and associated progress indicator run.
 
-{{ EmbedLiveSample("Basic `overallProgress` usage", "100%", 250) }}
+{{ EmbedLiveSample("Displaying a percentage progress", "100%", 250) }}
 
 ## Specifications
 
