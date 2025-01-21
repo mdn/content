@@ -97,7 +97,7 @@ const timingProps = {
 
 Next we add a `"click"` event listener to the `<button>` via [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) so that, when pressed, it:
 
-1. Starts the animation running using {{domxref("Element.animate()")}}, passing it the keyframes and options defined earlier and storing the returned {{domxref("Animation")}} instance in the `animation` variable.
+1. Starts the animation running using {{domxref("Element.animate()")}}, passing it the keyframes and options defined earlier and assigning the returned {{domxref("Animation")}} instance to the `animation` variable.
 2. Runs a function called `updateProgress()` via the {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}} method, which handles updating the percentage process display.
 
 ```js
