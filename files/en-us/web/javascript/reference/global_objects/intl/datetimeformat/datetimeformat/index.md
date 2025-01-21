@@ -131,30 +131,47 @@ Intl.DateTimeFormat(locales, options)
     > [!NOTE]
     > Timezone display may fall back to another format if a required string is unavailable. For example, the non-location formats should display the timezone without a specific country/city location like "Pacific Time", but may fall back to a timezone like "Los Angeles Time".
 
-The default value for each date-time component option is {{jsxref("undefined")}}, but if all component properties are {{jsxref("undefined")}}, then `year`, `month`, and `day` default to `"numeric"`. If any of the date-time component options is specified, then `dateStyle` and `timeStyle` must be `undefined`.
+##### Date-time component default values
+
+If any of the date-time component options are specified, then `dateStyle` and `timeStyle` must be `undefined`. If all date-time component options and `dateStyle`/`timeStyle` are `undefined`, some default options for date-time components are set, which depend on the object that the formatting method was called with:
+
+- When formatting {{jsxref("Temporal.PlainDate")}} and {{jsxref("Date")}}, `year`, `month`, and `day` default to `"numeric"`.
+- When formatting {{jsxref("Temporal.PlainTime")}}, `hour`, `minute`, and `second` default to `"numeric"`.
+- When formatting {{jsxref("Temporal.PlainYearMonth")}}, `year` and `month` default to `"numeric"`.
+- When formatting {{jsxref("Temporal.PlainMonthDay")}}, `month` and `day` default to `"numeric"`.
+- When formatting {{jsxref("Temporal.PlainDateTime")}} and {{jsxref("Temporal.Instant")}}, `year`, `month`, `day`, `hour`, `minute`, and `second` default to `"numeric"`.
+
+##### Format matching
+
+Implementations are required to support displaying at least the following subsets of date-time components:
+
+- `weekday`, `year`, `month`, `day`, `hour`, `minute`, `second`
+- `weekday`, `year`, `month`, `day`
+- `year`, `month`, `day`
+- `year`, `month`
+- `month`, `day`
+- `hour`, `minute`, `second`
+- `hour`, `minute`
+
+The date-time component styles requested might not directly correspond to a valid format supported by the locale, so the format matcher allows you to specify how to match the requested styles to the closest supported format.
 
 - `formatMatcher`
-
-  - : The format matching algorithm to use. Possible values are `"basic"` and `"best fit"`; the default is `"best fit"`. Implementations are required to support displaying at least the following subsets of date-time components:
-
-    - `weekday`, `year`, `month`, `day`, `hour`, `minute`, `second`
-    - `weekday`, `year`, `month`, `day`
-    - `year`, `month`, `day`
-    - `year`, `month`
-    - `month`, `day`
-    - `hour`, `minute`, `second`
-    - `hour`, `minute`
-
-    Implementations may support other subsets, and requests will be negotiated against all available subset-representation combinations to find the best match. The algorithm for `"best fit"` is implementation-defined, and `"basic"` is [defined by the spec](https://tc39.es/ecma402/#sec-basicformatmatcher). This option is only used when both `dateStyle` and `timeStyle` are `undefined` (so that each date-time component's format is individually customizable).
+  - : The format matching algorithm to use. Possible values are `"basic"` and `"best fit"`; the default is `"best fit"`. The algorithm for `"best fit"` is implementation-defined, and `"basic"` is [defined by the spec](https://tc39.es/ecma402/#sec-basicformatmatcher). This option is only used when both `dateStyle` and `timeStyle` are `undefined` (so that each date-time component's format is individually customizable).
 
 #### Style shortcuts
 
 - `dateStyle`
-  - : The [date formatting style](https://cldr.unicode.org/translation/date-time/date-time-patterns#h.aa5zjyepm6vh) to use. Possible values are `"full"`, `"long"`, `"medium"`, and `"short"`. It expands to styles for `weekday`, `day`, `month`, `year`, and `era`, with the exact combination of values depending on the locale.
+  - : The [date formatting style](https://cldr.unicode.org/translation/date-time/date-time-patterns#h.aa5zjyepm6vh) to use. Possible values are `"full"`, `"long"`, `"medium"`, and `"short"`. It expands to styles for `weekday`, `day`, `month`, `year`, and `era`, with the exact combination of values depending on the locale. When formatting objects such as {{jsxref("Temporal.PlainDate")}}, {{jsxref("Temporal.PlainYearMonth")}}, and {{jsxref("Temporal.PlainMonthDay")}}, `dateStyle` will resolve to only those fields relevant to the object.
 - `timeStyle`
   - : The [time formatting style](https://cldr.unicode.org/translation/date-time/date-time-patterns#h.588vo3awdscu) to use. Possible values are `"full"`, `"long"`, `"medium"`, and `"short"`. It expands to styles for `hour`, `minute`, `second`, and `timeZoneName`, with the exact combination of values depending on the locale.
 
 > **Note:** `dateStyle` and `timeStyle` can be used with each other, but not with other date-time component options (e.g. `weekday`, `hour`, `month`, etc.).
+
+You can format different object types depending on which of the style shortcut options you include:
+
+- If the `dateStyle` is specified, then you can format {{jsxref("Temporal.PlainDate")}}, {{jsxref("Temporal.PlainYearMonth")}}, and {{jsxref("Temporal.PlainMonthDay")}} objects.
+- If the `timeStyle` is specified, then you can format {{jsxref("Temporal.PlainTime")}} objects.
+- If either `dateStyle` or `timeStyle` is specified, then you can format {{jsxref("Temporal.PlainDateTime")}} and {{jsxref("Date")}} objects.
 
 ### Return value
 
