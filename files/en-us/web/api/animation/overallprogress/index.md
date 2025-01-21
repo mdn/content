@@ -24,7 +24,7 @@ If the animation's [`duration`](/en-US/docs/Web/API/KeyframeEffect/KeyframeEffec
 
 ## Examples
 
-### Basic `overallProgress` usage
+### Displaying a percentage progress
 
 This demo uses `overallProgress` to create a "percentage progress" readout, which is displayed to the screen while an animation runs.
 
