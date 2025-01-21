@@ -33,6 +33,8 @@ The **`PublicKeyCredential`** interface provides information about a public key 
 
 ## Static methods
 
+- {{domxref("PublicKeyCredential.getClientCapabilities_static", "PublicKeyCredential.getClientCapabilities()")}}
+  - : Returns a {{jsxref("Promise")}} that resolves with a {{jsxref("Map")}} that can be used to check whether or not particular client capabilities are supported.
 - {{domxref("PublicKeyCredential.isConditionalMediationAvailable_static", "PublicKeyCredential.isConditionalMediationAvailable()")}}
   - : Returns a {{jsxref("Promise")}} which resolves to `true` if conditional mediation is available.
 - {{domxref("PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable_static", "PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable()")}}
