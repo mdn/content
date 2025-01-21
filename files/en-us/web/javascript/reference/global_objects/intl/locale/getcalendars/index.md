@@ -65,7 +65,7 @@ Below is a list of the supported calendar era types.
 - `persian`
   - : Persian calendar
 - `roc`
-  - : Civil (algorithmic) Arabic calendar
+  - : Republic of China (Minguo) calendar
 - `islamicc`
   - : Civil (algorithmic) Arabic calendar
     > [!WARNING]
