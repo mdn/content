@@ -48,7 +48,7 @@ Intl.NumberFormat(locales, options)
   - : The locale matching algorithm to use. Possible values are `"lookup"` and `"best fit"`; the default is `"best fit"`.
     For information about this option, see [Locale identification and negotiation](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation).
 - `numberingSystem`
-  - : The numbering system to use for number formatting, such as `"arab"`, `"hans"`, `"mathsans"`, and so on. For a list of supported numbering system types, see [`Intl.Locale.prototype.getNumberingSystems()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/getNumberingSystems#supported_numbering_system_types). This option can also be set through the `nu` Unicode extension key; if both are provided, this `options` property takes precedence.
+  - : The numbering system to use for number formatting, such as `"arab"`, `"hans"`, `"mathsans"`, and so on. For a list of supported numbering system types, see [`Intl.supportedValuesOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#supported_numbering_system_types). This option can also be set through the `nu` Unicode extension key; if both are provided, this `options` property takes precedence.
 
 #### Style options
 
@@ -65,7 +65,7 @@ Depending on the `style` used, some of them may be ignored, and others may be re
     - `"unit"`
       - : For unit formatting.
 - `currency`
-  - : The currency to use in currency formatting. Possible values are the ISO 4217 currency codes, such as `"USD"` for the US dollar, `"EUR"` for the euro, or `"CNY"` for the Chinese RMB — see the [Current currency & funds code list](https://en.wikipedia.org/wiki/ISO_4217#List_of_ISO_4217_currency_codes). There is no default value; if the `style` is `"currency"`, the `currency` property must be provided. It is normalized to uppercase.
+  - : The currency to use in currency formatting. Possible values are the ISO 4217 currency codes, such as `"USD"` for the US dollar, `"EUR"` for the euro, or `"CNY"` for the Chinese RMB — see [`Intl.supportedValuesOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#supported_currency_identifiers). There is no default value; if the `style` is `"currency"`, the `currency` property must be provided. It is normalized to uppercase.
 - `currencyDisplay`
   - : How to display the currency in currency formatting.
     - `"code"`
@@ -79,7 +79,7 @@ Depending on the `style` used, some of them may be ignored, and others may be re
 - `currencySign`
   - : In many locales, accounting format means to wrap the number with parentheses instead of appending a minus sign. Possible values are `"standard"` and `"accounting"`; the default is `"standard"`.
 - `unit`
-  - : The unit to use in `unit` formatting, Possible values are core unit identifiers, defined in [UTS #35, Part 2, Section 6](https://unicode.org/reports/tr35/tr35-general.html#Unit_Elements). A [subset](https://tc39.es/ecma402/#table-sanctioned-single-unit-identifiers) of units from the [full list](https://github.com/unicode-org/cldr/blob/main/common/validity/unit.xml) was selected for use in ECMAScript. Pairs of simple units can be concatenated with "-per-" to make a compound unit. There is no default value; if the `style` is `"unit"`, the `unit` property must be provided.
+  - : The unit to use in `unit` formatting, Possible values are listed in [`Intl.supportedValuesOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#supported_unit_identifiers). Pairs of simple units can be concatenated with "-per-" to make a compound unit. There is no default value; if the `style` is `"unit"`, the `unit` property must be provided.
 - `unitDisplay`
   - : The unit formatting style to use in `unit` formatting. Possible values are:
     - `"short"` (default)
