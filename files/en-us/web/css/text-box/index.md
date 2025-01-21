@@ -124,4 +124,4 @@ The output is as follows. Note how we've included a top and bottom border on eac
 - {{cssxref("text-box-edge")}}, {{cssxref("text-box-trim")}}
 - {{cssxref("&lt;text-edge&gt;")}} data type
 - [CSS inline layout](/en-US/docs/Web/CSS/CSS_inline_layout) module
-- [CSS text-box-edge](https://developer.chrome.com/blog/css-text-box-edge) on developer.chrome.com (2025)
+- [CSS text-box-edge](https://developer.chrome.com/blog/css-text-box-trim) on developer.chrome.com (2025)
