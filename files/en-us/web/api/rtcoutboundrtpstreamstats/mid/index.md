@@ -8,7 +8,8 @@ browser-compat: api.RTCStatsReport.type_outbound-rtp.mid
 
 {{APIRef("WebRTC")}}
 
-The **`mid`** property of the {{domxref("RTCOutboundRtpStreamStats")}} dictionary is a string that uniquely identifies pairing of source and destination of the transceiver's stream.
+The **`mid`** property of the {{domxref("RTCOutboundRtpStreamStats")}} dictionary is a string that contains the media id negotiated between the local and remote peers.
+This uniquely identifies the pairing of source and destination for the transceiver's stream.
 
 ## Value
 
