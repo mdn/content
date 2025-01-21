@@ -141,7 +141,7 @@ There are a number of technologies to learn if you want to be a front-end web de
 
 - HTML is for structure and semantics (meaning).
 - CSS is for styling and layout.
-- JavaScript (and APIs) is for controlling dynamic behavior.
+- JavaScript and APIs are for controlling dynamic behavior.
 
 #### HTML
 
