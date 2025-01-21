@@ -72,7 +72,13 @@ body {
 
 ### JavaScript
 
-In the JavaScript, we start off by grabbing references to the {{htmlelement("button")}}, {{htmlelement("p")}}, and {{htmlelement("div")}} elements. We then create an `animation` variable to store the animation in once started, a [keyframes](/en-US/docs/Web/API/Web_Animations_API/Keyframe_Formats) array, and an options object containing timing properties:
+In the JavaScript, we start off by grabbing references to the {{htmlelement("button")}}, {{htmlelement("p")}}, and {{htmlelement("div")}} elements.
+
+We then create:
+
+- an `animation` variable which will reference the animation, once we've created it
+- a [keyframes](/en-US/docs/Web/API/Web_Animations_API/Keyframe_Formats) array
+- an options object containing timing properties.
 
 ```js
 const btn = document.querySelector("button");
