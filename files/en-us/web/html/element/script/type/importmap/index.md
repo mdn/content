@@ -28,17 +28,12 @@ For more information, see the [Importing modules using import maps](/en-US/docs/
 
 The `src`, `async`, `nomodule`, `defer`, `crossorigin`, `integrity`, and `referrerpolicy` attributes must not be specified.
 
-Only the first import map in the document with an inline definition is processed; any additional import maps and external import maps are ignored.
-
 ### Exceptions
 
 - `TypeError`
   - : The import map definition is not a JSON object, the `importmap` key is defined but its value is not a JSON object, or the `scopes` key is defined but its value is not a JSON object.
 
 Browsers generate console warnings for other cases where the import map JSON does not conform to the [import map](#import_map_json_representation) schema.
-
-An [`error` event](/en-US/docs/Web/API/HTMLElement/error_event) is fired at script elements with `type="importmap"` that are not processed.
-This might occur, for example, if module loading has already started when an import map is processed, or if multiple import maps are defined in the page.
 
 ## Description
 
@@ -212,6 +207,18 @@ The import map must be a valid JSON object that can define any of the optional k
     The fallback module specifier map in `imports` is used if there are no matching module specifier keys in any of the matching scoped module specifier maps.
 
     Note that the scope does not change how an address is resolved; relative addresses are always resolved to the import map base URL.
+
+## Merging multiple import maps
+
+<aside>This is supported is the latest versions of some browsers. In non-supporting browsers, a [polyfill](https://github.com/guybedford/es-module-shims) can be used to avoid issues related to module resolution.</aside>
+
+Internally, browsers maintain a single global import map representation.
+
+When an import map is registered, its contents are merged into the global import map.
+
+Module specifiers in the registered map that were already resolved before are dropped. Future resolution of these specifiers will provide the same results as their previous resolution.
+
+Module specifiers in the registered map that were already mapped to URLs in the global map are similarly dropped and their previous mapping prevails.
 
 ## Specifications
 
