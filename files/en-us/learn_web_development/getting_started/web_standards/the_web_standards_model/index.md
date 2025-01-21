@@ -34,16 +34,16 @@ This article provides some useful background on the web and web standards — ho
 
 ## Brief history of the web
 
-In the late 1960s, the US military developed a communication network called [ARPANET](/en-US/docs/Glossary/Arpanet). This can be considered a forerunner of the internet, as it worked on [packet switching](https://en.wikipedia.org/wiki/Packet_switching), and featured the first implementation of the [TCP/IP](https://en.wikipedia.org/wiki/Internet_protocol_suite) protocol suite. These two technologies form the basis of the infrastructure that the internet is built on.
-
-> [!NOTE]
-> It is worth mentioning that at a basic level, "the web" and "the internet" are basically the same thing, and people sometimes use them interchangeably. However, more accurately, the internet is the infrastructure that enables information to be transported around the world between different servers and clients, whereas the web is the information (content and code) being transported and the communications protocols used to manage that transport.
+In the late 1960s, the US military developed a communication network called [ARPANET](/en-US/docs/Glossary/Arpanet). This can be considered a forerunner of the **internet**, as it worked on [packet switching](https://en.wikipedia.org/wiki/Packet_switching), and featured the first implementation of the [TCP/IP](https://en.wikipedia.org/wiki/Internet_protocol_suite) protocol suite. These two technologies form the basis of the infrastructure that the internet is built on.
 
 In 1980, [Tim Berners-Lee](https://en.wikipedia.org/wiki/Tim_Berners-Lee) (often referred to as TimBL) wrote a notebook program called ENQUIRE, which featured the concept of links between different nodes. Sound familiar?
 
 Fast forward to 1989, and TimBL wrote [Information Management: A Proposal](https://www.w3.org/History/1989/proposal.html) and HyperText at CERN; these two publications together provided the background for how the web would work. They received a fair amount of interest, enough to convince TimBL's bosses to allow him to go ahead and create a global hypertext system.
 
-By 1990-91, TimBL had created all the things needed to run the first version of the web — [HTTP](/en-US/docs/Web/HTTP), [HTML](/en-US/docs/Web/HTML), the first web browser, which was called [WorldWideWeb](https://en.wikipedia.org/wiki/WorldWideWeb), a web server, and some web pages to look at.
+By 1990-91, TimBL had created all the things needed to run the first version of the **World Wide Web** (generally referred to as the **web**) — [HTTP](/en-US/docs/Web/HTTP), [HTML](/en-US/docs/Web/HTML), the first web browser, which was called [WorldWideWeb](https://en.wikipedia.org/wiki/WorldWideWeb), a web server, and some web pages to look at.
+
+> [!NOTE]
+> People sometimes use "the web" and "the internet" interchangeably, but they are different things. The internet is the infrastructure that enables information to be transported around the world between different servers and clients, whereas the web is a system built on top of the internet. The web defines types of information (content and code) that are transported via the internet and communications protocols to manage that transport.
 
 In 1994, TimBL founded the [World Wide Web Consortium](https://en.wikipedia.org/wiki/World_Wide_Web_Consortium) (W3C), an organization that brings together representatives from many different companies to work together on the creation of web technologies. The W3C worked on standardizing and improving existing web technologies such as HTML and HTTP, and creating new technologies such as [CSS](/en-US/docs/Web/CSS) and [JavaScript](/en-US/docs/Web/JavaScript). CSS and JavaScript in particular were vital for giving the web styling and interactivity, making it look more like the web we know today.
 
@@ -111,25 +111,21 @@ Open standards enable the web to remain a freely-available public resource, wher
 
 ### Accessible and interoperable
 
-The web and web browsers are fundamentally designed so that web content is accessible to people with disabilities. It was originally envisaged as a great leveller, enabling people to access information regardless of circumstance. This means that, for example:
+The web and web browsers are fundamentally designed so that web content is **accessible** to people with disabilities. It was originally envisaged as a great leveller, enabling people to access information regardless of circumstance. This means that, for example:
 
-- People who are unable to use a mouse or pointing device cna use the keyboard to navigate the web.
+- People who are unable to use a mouse or pointing device can use the keyboard to navigate the web.
 - People who are visually impaired can magnify content, or use a program called a **screenreader** to read content out to them and describe controls in a way that makes sense.
 
 > [!NOTE]
-> You'll later more about [Accessibility](/en-US/docs/Learn_web_development/Core/Accessibility) later on in the learning pathway.
+> You'll learn more about [Accessibility](/en-US/docs/Learn_web_development/Core/Accessibility) later on in the learning pathway.
 
-In addition, new web technologies are created so that they use standard patterns, messaging protocols, and data formats, meaning that they will compatible with other technologies in the overall ecosystem. For example, any client-side technology that makes requests to a server should use the [HTTP](/en-US/docs/Web/HTTP) standard to transmit those requests. It is no good creating a shiny new technology that can't talk to anything else.
+In addition, web technologies are intended to be **interoperable**. Because web technologies are implemented according to published standards, browsers should provide the same rendered output for a given input (for example, HTML, CSS, or JS code) — in other words, a website should work consistently across multiple browsers.
 
 ### Don't break the web
 
-Another phrase you'll hear around open web standards is "don't break the web". The idea behind this is that any new web technology should be backwards compatible with what went before it (so old websites will still continue to work), and forwards compatible (future technologies in turn will be compatible with what we currently have).
+Another phrase you'll hear around open web standards is "don't break the web". The idea behind this is that any new web technology should be backwards compatible with what went before it, so existing websites will continue to work in the same way as they did before.
 
-This means designing technologies so that new features:
-
-- Don't change the way that existing features work, meaning that old websites will continue to work.
-- Use the same general code patterns as existing features, and don't just decide to start doing things in a different way.
-- Can be worked around in older browsers. For example, in CSS properties that browsers don't understand are just ignored rather than generating an error, and you can detect support for a particular property and run appropriate code depending on whether it is or isn't supported.
+Web browser vendors should be able to implement new web technologies without causing a difference in rendering or functionality that would cause their users to think a website is broken and try another browser as a result.
 
 ## Overview of modern web technologies
 
@@ -221,7 +217,7 @@ When doing web development, the main cause of uncertainty comes from the fact th
 
 - User 1 might be looking at it on an iPhone, with a small, narrow screen.
 - User 2 might be looking at it on a Windows laptop with a widescreen monitor attached to it.
-- User 3 might be visually impaired, and using a screen reader to read and interact with the web page.
+- User 3 might be visually impaired, and using a screenreader to read and interact with the web page.
 - User 4 might be using a really old desktop machine that can't run modern browsers.
 
 Because you don't know exactly what your users will use, you need to design defensively — make your website as flexible as possible, so that all of the above users can make use of it, even if they might not all get the same experience.
