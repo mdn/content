@@ -43,44 +43,27 @@ A sorted array of unique string values indicating the values supported by the im
 
 Below are all values that are commonly supported by browsers for the `calendar` key. These values can be used for the `calendar` option or the `ca` [Unicode extension key](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_argument) when creating objects such as {{jsxref("Intl.DateTimeFormat")}}, as well as for creating {{jsxref("Temporal")}} date objects.
 
-- `buddhist`
-  - : Thai Buddhist calendar
-- `chinese`
-  - : Traditional Chinese calendar
-- `coptic`
-  - : Coptic calendar
-- `dangi`
-  - : Traditional Korean calendar
-- `ethioaa`
-  - : Ethiopic calendar, Amete Alem (epoch approx. 5493 B.C.E). Also recognized as `ethiopic-amete-alem`.
-- `ethiopic`
-  - : Ethiopic calendar, Amete Mihret (epoch approx, 8 C.E.)
-- `gregory`
-  - : Gregorian calendar. Also recognized as `gregorian`.
-- `hebrew`
-  - : Traditional Hebrew calendar
-- `indian`
-  - : Indian calendar
-- `islamic`
-  - : Hijri calendar
-- `islamic-umalqura`
-  - : Hijri calendar, Umm al-Qura
-- `islamic-tbla`
-  - : Hijri calendar, tabular (intercalary years [2,5,7,10,13,16,18,21,24,26,29] - astronomical epoch)
-- `islamic-civil`
-  - : Hijri calendar, tabular (intercalary years [2,5,7,10,13,16,18,21,24,26,29] - civil epoch)
-- `islamic-rgsa`
-  - : Hijri calendar, Saudi Arabia sighting
-- `iso8601`
-  - : ISO calendar (Gregorian calendar using the ISO 8601 calendar week rules). This value is always present.
-- `japanese`
-  - : Japanese Imperial calendar
-- `persian`
-  - : Persian calendar
-- `roc`
-  - : Republic of China calendar
-- `islamicc` {{deprecated_inline}}
-  - : Civil (algorithmic) Arabic calendar. When specifying calendars, use `islamic-civil` instead. This value always coexists with `islamic-civil` (i.e., either both are returned or neither is returned).
+| Value                            | Description                                                                                      |
+| -------------------------------- | ------------------------------------------------------------------------------------------------ |
+| `buddhist`                       | Thai Buddhist calendar                                                                           |
+| `chinese`                        | Traditional Chinese calendar                                                                     |
+| `coptic`                         | Coptic calendar                                                                                  |
+| `dangi`                          | Traditional Korean calendar                                                                      |
+| `ethioaa`                        | Ethiopic calendar, Amete Alem (epoch approx. 5493 B.C.E)                                         |
+| `ethiopic`                       | Ethiopic calendar, Amete Mihret (epoch approx, 8 C.E.)                                           |
+| `gregory`                        | Gregorian calendar                                                                               |
+| `hebrew`                         | Traditional Hebrew calendar                                                                      |
+| `indian`                         | Indian calendar                                                                                  |
+| `islamic`                        | Hijri calendar                                                                                   |
+| `islamic-umalqura`               | Hijri calendar, Umm al-Qura                                                                      |
+| `islamic-tbla`                   | Hijri calendar, tabular (intercalary years [2,5,7,10,13,16,18,21,24,26,29] - astronomical epoch) |
+| `islamic-civil`                  | Hijri calendar, tabular (intercalary years [2,5,7,10,13,16,18,21,24,26,29] - civil epoch)        |
+| `islamic-rgsa`                   | Hijri calendar, Saudi Arabia sighting                                                            |
+| `iso8601`                        | ISO calendar (Gregorian calendar using the ISO 8601 calendar week rules)                         |
+| `japanese`                       | Japanese Imperial calendar                                                                       |
+| `persian`                        | Persian calendar                                                                                 |
+| `roc`                            | Republic of China calendar                                                                       |
+| `islamicc` {{deprecated_inline}} | Civil (algorithmic) Arabic calendar. When specifying calendars, use `islamic-civil` instead.     |
 
 References:
 
@@ -91,55 +74,32 @@ References:
 
 Below are all values that are commonly supported by browsers for the `collation` key. These values can be used for the `collation` option or the `co` [Unicode extension key](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_argument) when creating objects such as {{jsxref("Intl.Collator")}}.
 
-- `compat`
-  - : A previous version of the ordering, for compatibility (for Arabic)
-- `dict`
-  - : Dictionary style ordering (such as in Sinhala). Also recognized as `dictionary`.
-- `emoji`
-  - : Recommended ordering for emoji characters
-- `eor`
-  - : European ordering rules
-- `phonebk`
-  - : Phonebook style ordering (such as in German). Also recognized as `phonebook`.
-- `phonetic`
-  - : Phonetic ordering (sorting based on pronunciation; for Lingala)
-- `pinyin`
-  - : Pinyin ordering for Latin and for CJK characters (used in Chinese)
-- `searchjl`
-  - : Special collation type for Korean initial consonant search
-    > [!WARNING]
-    > This collation is not for sorting, even though it is possible to be used with [`Intl.Collator`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator) of `usage: "sort"` as opposed to `usage: "search"`.
-- `stroke`
-  - : Pinyin ordering for Latin, stroke order for CJK characters (used in Chinese)
-- `trad`
-  - : Traditional style ordering (such as in Spanish). Also recognized as `traditional`.
-- `unihan`
-  - : Pinyin ordering for Latin, Unihan radical-stroke ordering for CJK characters (used in Chinese)
-- `zhuyin`
-  - : Pinyin ordering for Latin, zhuyin order for Bopomofo and CJK characters (used in Chinese)
+| Value      | Description                                                                                                                                                                                      |
+| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `compat`   | A previous version of the ordering, for compatibility (for Arabic)                                                                                                                               |
+| `dict`     | Dictionary style ordering (such as in Sinhala). Also recognized as `dictionary`.                                                                                                                 |
+| `emoji`    | Recommended ordering for emoji characters                                                                                                                                                        |
+| `eor`      | European ordering rules                                                                                                                                                                          |
+| `phonebk`  | Phonebook style ordering (such as in German). Also recognized as `phonebook`.                                                                                                                    |
+| `phonetic` | Phonetic ordering (sorting based on pronunciation; for Lingala)                                                                                                                                  |
+| `pinyin`   | Pinyin ordering for Latin and for CJK characters (used in Chinese)                                                                                                                               |
+| `searchjl` | Special collation type for Korean initial consonant search. **Warning:** This collation is not for sorting, even though you can only use it with {{jsxref("Intl.Collator")}} of `usage: "sort"`. |
+| `stroke`   | Pinyin ordering for Latin, stroke order for CJK characters (used in Chinese)                                                                                                                     |
+| `trad`     | Traditional style ordering (such as in Spanish). Also recognized as `traditional`.                                                                                                               |
+| `unihan`   | Pinyin ordering for Latin, Unihan radical-stroke ordering for CJK characters (used in Chinese)                                                                                                   |
+| `zhuyin`   | Pinyin ordering for Latin, zhuyin order for Bopomofo and CJK characters (used in Chinese)                                                                                                        |
 
 The types below are specified in CLDR data, but are deprecated, are discouraged from explicit usage, and/or may not be indicated by browsers as supported for various reasons. Avoid using them:
 
-- `big5han` {{deprecated_inline}}
-  - : Pinyin ordering for Latin, big5 charset ordering for CJK characters (used in Chinese).
-- `direct` {{deprecated_inline}}
-  - : Binary code point order (used in Hindi)
-- `ducet`
-  - : The default Unicode collation element table order
-    > [!WARNING]
-    > The `ducet` collation type is not available to the Web. Use the `und` locale without a collation type specifier instead. `und` is the collation that is the closest to `ducet`.
-- `gb2312` {{deprecated_inline}}
-  - : Pinyin ordering for Latin, gb2312han charset ordering for CJK characters (for Chinese). Also recognized as `gb2312han`.
-- `reformed` {{deprecated_inline}}
-  - : Reformed ordering (such as Swedish). This is the old name for the default ordering for Swedish [whose collation naming used to differ from other languages](https://unicode-org.atlassian.net/browse/CLDR-15603). Since this was the default, request `sv` instead of requesting `sv-u-co-reformed`.
-- `search`
-  - : Special collation type for string search
-    > [!WARNING]
-    > Do not use as a collation type, since in [`Intl.Collator`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator), this collation is activated via the `"search"` value for the `usage` option. There is currently no API for substring search, so this is currently only good for filtering a list of strings by trying a full-string match of the key against each list item.
-- `standard`
-  - : Default ordering for each language, except Chinese (and, previously, Swedish)
-    > [!WARNING]
-    > Do not use explicitly. In general, it's unnecessary to specify this explicitly and specifying this for Swedish is problematic due to the different meaning for Swedish in the past.
+| Value                            | Description                                                                                                             | Notes                                                                                                                                                                                                                                                                                                               |
+| -------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `big5han` {{deprecated_inline}}  | Pinyin ordering for Latin, big5 charset ordering for CJK characters (used in Chinese)                                   | Deprecated.                                                                                                                                                                                                                                                                                                         |
+| `direct` {{deprecated_inline}}   | Binary code point order (used in Hindi)                                                                                 | Deprecated.                                                                                                                                                                                                                                                                                                         |
+| `ducet`                          | The default Unicode collation element table order                                                                       | The `ducet` collation type is not available to the Web.                                                                                                                                                                                                                                                             |
+| `gb2312` {{deprecated_inline}}   | Pinyin ordering for Latin, gb2312han charset ordering for CJK characters (for Chinese). Also recognized as `gb2312han`. | Deprecated.                                                                                                                                                                                                                                                                                                         |
+| `reformed` {{deprecated_inline}} | Reformed ordering (such as Swedish)                                                                                     | Deprecated. This is the old name for the default ordering for Swedish [whose collation naming used to differ from other languages](https://unicode-org.atlassian.net/browse/CLDR-15603). Since this was the default, request `sv` instead of requesting `sv-u-co-reformed`.                                         |
+| `search`                         | Special collation type for string search                                                                                | Do not use as a collation type, since in {{jsxref("Intl.Collator")}}, this collation is activated via the `usage: "search"` option. There is currently no API for substring search, so this is currently only good for filtering a list of strings by trying a full-string match of the key against each list item. |
+| `standard`                       | Default ordering for each language, except Chinese (and, previously, Swedish)                                           | Do not use explicitly. In general, it's unnecessary to specify this explicitly and specifying this for Swedish is problematic due to the different meaning for Swedish in the past.                                                                                                                                 |
 
 References:
 
