@@ -284,7 +284,7 @@ In this example, we create an interface element for choosing time using the nati
 ### CSS
 
 ```css
-input[type="number"] {
+input[type="time"] {
   width: 100px;
 }
 
