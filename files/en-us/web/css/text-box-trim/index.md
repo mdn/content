@@ -1,0 +1,303 @@
+---
+title: text-box-trim
+slug: Web/CSS/text-box-trim
+page-type: css-property
+status:
+  - experimental
+browser-compat: css.properties.text-box-trim
+---
+
+{{CSSRef}}{{seecompattable}}
+
+The **`text-box-trim`** [CSS](/en-US/docs/Web/CSS) property specifies which of the over and under [leading](/en-US/docs/Glossary/Leading) to trim from text content.
+
+Leading differs across fonts, making consistent typesetting historically challenging on the web. `text-box-trim` — along with its counterpart property {{cssxref("text-box-edge")}}, which specifies the amount of leading to trim — makes consistent typesetting easier to achieve.
+
+> [!NOTE]
+> There is also a shorthand property — {{cssxref("text-box")}}, which can be used to specify the `text-box-trim` and `text-box-edge` values in a single declaration.
+
+## Syntax
+
+```css
+/* Keywords */
+text-box-trim: none;
+text-box-trim: trim-both;
+text-box-trim: trim-start;
+text-box-trim: trim-end;
+
+/* Global values */
+text-box-trim: inherit;
+text-box-trim: initial;
+text-box-trim: revert;
+text-box-trim: revert-layer;
+text-box-trim: unset;
+```
+
+### Value
+
+The `text-box-trim` property value may be specified as one of the following keywords:
+
+- `none`
+  - : The default value. No leading is trimmed from the text.
+- `trim-both`
+  - : The start (over) and end (under) leading is trimmed from the text.
+- `trim-start`
+  - : The start (over) leading is trimmed from the text.
+- `trim-end`
+  - : The end (under) leading is trimmed from the text.
+
+## Description
+
+Font files specify an amount of space — termed leading — to be included above and below text, to contain capital letters, ascenders, descenders, etc., and provide spacing between lines. The amount of leading included varies between fonts, making it difficult to consistently set block-level text spacing.
+
+The `text-box-trim` property allows you to trim the over and under leading, making it much easier to control text spacing in the block direction.
+
+The actual amount of leading trimmed is specified using the {{cssxref("text-box-edge")}} property. For example, you can choose to trim the over leading in line with a font's capital letters or lower-case letters, and the under leading flush with the font's baseline.
+
+## Formal definition
+
+{{cssinfo}}
+
+## Formal syntax
+
+{{csssyntax}}
+
+## Examples
+
+### Basic `text-box-trim` usage
+
+In the following example we set `text-box-edge: cap alphabetic` on two paragraphs, which trims the over leading to the top of the capital letters and the under leading flush with the text baseline.
+
+We then set `text-box-trim` values of `trim-end` on the first one, and `trim-both` on the second one. This results in the first paragraph only having its under leading trimmed, whereas the second one has both the over _and_ under leading trimmed.
+
+```html hidden
+<p class="one">This is .one</p>
+
+<p class="two">This is .two</p>
+```
+
+```css hidden
+html {
+  font-family: sans-serif;
+  height: 100%;
+}
+
+body {
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 100px;
+}
+
+p {
+  margin: 0;
+  font-size: 6rem;
+  font-weight: bold;
+  border-top: 5px solid magenta;
+  border-bottom: 5px solid magenta;
+}
+```
+
+```css
+p {
+  text-box-edge: cap alphabetic;
+}
+
+.one {
+  text-box-trim: trim-end;
+}
+
+.two {
+  text-box-trim: trim-both;
+}
+```
+
+#### Result
+
+The output is as follows. Note how we've included a top and bottom border on each paragraph, so that you can see how the leading has been trimmed in each case.
+
+{{EmbedLiveSample("Basic `text-box-edge` usage","100%","360")}}
+
+### Interactive `text-box-trim` and `text-box-edge` value comparison
+
+In this example we provide a user interface that allows you to choose the `text-box-trim` and `text-box-edge` values applied to a paragraph of text.
+
+#### HTML
+
+In our HTML, we include three main items:
+
+- Three {{htmlelement("select")}} elements allowing you to set which edges of the text the leading should be trimmed from (the `text-box-trim` value) and how much leading to trim from the block start and end of the text (the {{cssxref("text-box-edge")}} value).
+- A {{htmlelement("p")}} element containing the text that the `text-box-*` values are applied to. This paragraph has [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) set on it so you can edit the text.
+- Another `<p>` element that we write the `text-box-*` declarations applied to the first paragraph into, so you can see what code is being applied after each change to the `<select>` element values.
+
+We also import a font from the Google Fonts service to apply to our demo's text.
+
+We have hidden the exact HTML code for brevity.
+
+```html hidden
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>text-box demo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet" />
+  </head>
+  <body>
+    <section>
+      <div>
+        <label for="box-trim">Select edge(s) to trim:</label>
+        <select id="box-trim">
+          <option>none</option>
+          <option>trim-start</option>
+          <option>trim-end</option>
+          <option selected>trim-both</option>
+        </select>
+      </div>
+      <div>
+        <label for="trim-over">Select trim over (start) value:</label>
+        <select id="trim-over">
+          <option>text</option>
+          <option selected>cap</option>
+          <option>ex</option>
+        </select>
+      </div>
+    </section>
+    <p class="display" contenteditable="">Holly Golightly</p>
+    <section>
+      <div>
+        <label for="trim-under">Select trim under (end) value:</label>
+        <select id="trim-under">
+          <option>text</option>
+          <option selected>alphabetic</option>
+        </select>
+      </div>
+    </section>
+    <p class="code"></p>
+  </body>
+</html>
+```
+
+#### CSS
+
+In our CSS, we apply the imported font to the {{htmlelement("html")}} element and lay out the UI using some rudimentary [flexbox](/en-US/docs/Learn_web_development/Core/CSS_layout/Flexbox). We have hidden most of the CSS code for brevity, but below we show the rules styling the paragraph the `text-box-*` effects are applied to (`.display`), and the paragraph that shows the `text-box-*` rules being applied (`.code`):
+
+```css hidden
+html {
+  font-family: "Roboto", sans-serif;
+  height: 100%;
+}
+
+body {
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+}
+
+section {
+  display: flex;
+  justify-content: space-between;
+}
+
+section:nth-of-type(2) {
+  justify-content: flex-end;
+  padding-bottom: 30px;
+}
+
+select {
+  width: 6rem;
+}
+```
+
+```css
+.display {
+  margin: 0;
+  font-size: 6rem;
+  font-weight: bold;
+  border-top: 5px solid magenta;
+  border-bottom: 5px solid magenta;
+}
+
+.code {
+  border: 2px solid gray;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 0;
+  width: fit-content;
+}
+```
+
+Again, note how we've included a top and bottom border on the `.display` paragaph, so that you can see how the space being trimmed changes when different `text-box-*` values are selected.
+
+#### JavaScript
+
+In the JavaScript, we start by grabbing references to the three `<select>` elements and two `<p>` elements:
+
+```js
+const boxTrimSelect = document.getElementById("box-trim");
+const trimOverSelect = document.getElementById("trim-over");
+const trimUnderSelect = document.getElementById("trim-under");
+
+const displayElem = document.querySelector(".display");
+const codeElem = document.querySelector(".code");
+```
+
+Next, we define a function called `setEdgeTrim()`. This applies a {{cssxref("text-box")}} value to the first paragraph based on the values of the `<select>` elements, and also prints the applied declarations to the second paragraph (both the longhand and shorthand equivalents):
+
+```js
+function setEdgeTrim() {
+  const textBoxTrimValue = boxTrimSelect.value;
+  const textBoxEdgeValue = `${trimOverSelect.value} ${trimUnderSelect.value}`;
+  displayElem.style.textBox = `${textBoxTrimValue} ${textBoxEdgeValue}`;
+
+  codeElem.innerHTML = `
+    <span><code>text-box-trim: ${textBoxTrimValue}</code></span>
+    <br>
+    <span><code>text-box-edge: ${textBoxEdgeValue}</code></span>
+    <br><br>
+    <span>Shorthand equivalent:</span>
+    <br><br>
+    <span><code>text-box: ${textBoxTrimValue} ${textBoxEdgeValue}</code></span>
+  `;
+}
+```
+
+In the last part of the code we run the `setEdgeTrim()` function once to set an initial state for the UI. We then then apply [`change`](/en-US/docs/Web/API/HTMLElement/change_event) event listeners to all of the `<select>` elements (via [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener)) so that `setEdgeTrim()` is run whenever one of the `<select>` values changes to update the UI accordingly:
+
+```js
+setEdgeTrim();
+
+boxTrimSelect.addEventListener("change", setEdgeTrim);
+trimOverSelect.addEventListener("change", setEdgeTrim);
+trimUnderSelect.addEventListener("change", setEdgeTrim);
+```
+
+#### Result
+
+The output is as follows:
+
+{{EmbedLiveSample("`text-box-trim` value comparison","100%","520")}}
+
+`text-box-trim` is initially set to `trim-both`, meaning that over _and_ under leading is trimmed from the text. `text-box-edge` is initially set to `cap alphabetic`, meaning that leading is trimmed flush with the top of capital letters at the start edge of the text, and flush with the baseline at the end edge of the text.
+
+Try changing the `<select>` values to see the effect they have on the display text.
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
+
+## See also
+
+- {{cssxref("text-box")}}, {{cssxref("text-box-edge")}}
+- [CSS inline layout](/en-US/docs/Web/CSS/CSS_inline_layout) module
+- [CSS text-box-trim](https://developer.chrome.com/blog/css-text-box-trim) on developer.chrome.com (2025)
