@@ -101,7 +101,8 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
     > [!WARNING]
     > Many web browsers have a _session restore_ feature that will save all tabs and restore them the next time the browser is used. Session cookies will also be restored, as if the browser was never closed.
 
-    When an `Expires` date is set, the deadline is relative to the _client_ the cookie is being set on, not the server.
+    When an `Expires` date is set, the deadline is relative to the _client_ the cookie is being set on, not the server. However, the server's `Date` header will be used to compute the clock skew between the
+    client and the server, and the `Expires` date will be adjusted accordingly.
 
 - `HttpOnly` {{optional_inline}}
 
