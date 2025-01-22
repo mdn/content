@@ -40,44 +40,32 @@ A pseudo-element can be selected based on the current state of the originating e
 > [!NOTE]
 > When a [selector list](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#selector_list) contains an invalid selector, the entire style block is ignored.
 
-## Typographic Pseudo-elements
-
-These text pseudo-elements are selected using their location in the originating element:
+## Typographic pseudo-elements
 
 - {{CSSxRef("::first-line")}}
-  - : Represents the contents of the first line-box of the originating element.
+  - : The first line-box of the originating element.
 - {{CSSxRef("::first-letter")}}
-  - : Represents the first letter, number, or symbol character on the first line of its originating element.
-- {{CSSxRef("::slotted", "::slotted()")}}
-  - : Represents any element placed into a slot inside an HTML template.
-
-## Highlight Pseudo-elements
-
-These pseudo-elements are portions of a document that are styled differently to indicate certain status to the user:
-
-- {{CSSxRef("::selection")}}
-
-  - : Represents the portion of a document that has been selected.
-
-- {{CSSxRef("::target-text")}}
-
-  - : Represents the document's target element. The target element is identified using the URL's fragment identifier.
-
-- {{CSSxRef("::spelling-error")}}
-
-  - : Represents a portion of text that the browser thinks is misspelled.
-
-- {{CSSxRef("::grammar-error")}}
-
-  - : Represents a portion of text that the browser thinks is grammatically incorrect.
-
-- {{CSSxRef("::highlight()")}}
-  - : Represents elements in the [highlight registry](/en-US/docs/Web/API/CSS/highlights_static). It is used to create custom highlights.
+  - : The first letter, number, or symbol character on the first line of its originating element.
 - {{CSSxRef("::cue")}}
-  - : Matches [WebVTT](/en-US/docs/Web/API/WebVTT_API) cues within a selected element.
+  - : The [WebVTT](/en-US/docs/Web/API/WebVTT_API) cues within a selected element.
     This can be used to [style captions and other cues](/en-US/docs/Web/API/WebVTT_API#styling_webvtt_in_html_or_a_stylesheet) in media with VTT tracks.
 
-## Tree-Abiding Pseudo-elements
+## Highlight pseudo-elements
+
+Selects document sections based on content and document status, enabling those areas to be styled differently to indicate that status to the user.
+
+- {{CSSxRef("::selection")}}
+  - : The portion of a document that has been selected.
+- {{CSSxRef("::target-text")}}
+  - : The document's target element. The target element is identified using the URL's fragment identifier.
+- {{CSSxRef("::spelling-error")}}
+  - : A portion of text that the browser thinks is misspelled.
+- {{CSSxRef("::grammar-error")}}
+  - : A portion of text that the browser thinks is grammatically incorrect.
+- {{CSSxRef("::highlight()")}}
+  - : The elements in the [highlight registry](/en-US/docs/Web/API/CSS/highlights_static). It is used to create custom highlights.
+
+## Tree-Abiding pseudo-elements
 
 These pseudo-elements behave like regular elements, fitting seamlessly within the box model. They act as a child element that can be styled directly within the originating element hierarchy.
 
@@ -86,26 +74,24 @@ These pseudo-elements behave like regular elements, fitting seamlessly within th
 - {{CSSxRef("::after")}}
   - : Creates a pseudo-element that is the last child of the selected element.
 - {{CSSxRef("::marker")}}
-  - : Represents the automatically generated marker box of a list item.
+  - : The automatically generated marker box of a list item.
 - {{CSSxRef("::placeholder")}}
-  - : Represents placeholder text in an input field.
+  - : The placeholder text in an input field.
 - {{CSSxRef("::backdrop")}}
-  - : Represents the backdrop of the originating element rendered in the [top layer](/en-US/docs/Glossary/Top_layer).
+  - : The backdrop of the originating element rendered in the [top layer](/en-US/docs/Glossary/Top_layer).
 
-## Element-backed Pseudo-Elements
+## Element-backed pseudo-elements
 
 These pseudo-elements are real elements that are not otherwise selectable.
 
 - {{CSSxRef("::details-content")}}
-
-  - : Represents the expandable/collapsible contents of a {{HTMLElement("details")}} element.
-
+  - : The expandable/collapsible contents of a {{HTMLElement("details")}} element.
 - {{CSSxRef("::file-selector-button")}}
-
-  - : Represents the button of an {{HTMLElement("input") }} of [`type="file"`](/en-US/docs/Web/HTML/Element/input/file).
-
+  - : The button of an {{HTMLElement("input") }} of [`type="file"`](/en-US/docs/Web/HTML/Element/input/file).
 - {{CSSxRef("::part", "::part()")}}
-  - : Represents any element within a [shadow tree](/en-US/docs/Web/API/Web_components/Using_shadow_DOM) that has a matching [`part`](/en-US/docs/Web/HTML/Global_attributes/part) attribute.
+  - : Any element within a [shadow tree](/en-US/docs/Web/API/Web_components/Using_shadow_DOM) that has a matching [`part`](/en-US/docs/Web/HTML/Global_attributes/part) attribute.
+- {{CSSxRef("::slotted", "::slotted()")}}
+  - : Any element placed into a slot inside an HTML template.
 
 ## Alphabetical index
 
