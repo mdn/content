@@ -36,5 +36,5 @@ console.log(filterName.baseVa); // the filter's assigned name
 
 ## See also
 
-- {{domxref("SVGFEMergeElement.in1")}}
+- {{domxref("SVGFEMergeNodeElement.in1")}}
 - {{cssxref("custom-ident")}} data type
