@@ -85,11 +85,11 @@ observer.observe({ type: "largest-contentful-paint", buffered: true });
 
 ### Cross-origin image render time
 
-For security reasons, the value of the {{domxref("LargestContentfulPaint.renderTime", "renderTime")}} property was originally `0` if the resource is a cross-origin request. Instead the {{domxref("LargestContentfulPaint.loadTime", "loadTime")}} should be used as a fallback.
+For security reasons, the value of the {{domxref("LargestContentfulPaint.renderTime", "renderTime")}} property was originally `0` if the resource is a cross-origin request. Instead the {{domxref("LargestContentfulPaint.loadTime", "loadTime")}} property should be used as a fallback.
 
-Browsers [may now expose a slightly coarsened render time](https://github.com/w3c/paint-timing/issues/104) in threse situations. Check for [browser support](#browser_compatibility).
+Browsers [may now expose a slightly coarsened render time](https://github.com/w3c/paint-timing/issues/104) in these situations. Check for [browser support](#browser_compatibility).
 
-To expose more accurate cross-origin render time information, the {{HTTPHeader("Timing-Allow-Origin")}} HTTP response header needs to be set.
+To expose more accurate cross-origin render-time information, the {{HTTPHeader("Timing-Allow-Origin")}} HTTP response header needs to be set.
 
 For example, to allow `https://developer.mozilla.org` to see an accurate `renderTime`, the cross-origin resource should send:
 
