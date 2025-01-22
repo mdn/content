@@ -46,9 +46,9 @@ The `SVGAnimatedPreserveAspectRatio` interface is used for attributes of type {{
 
 ## Instance properties
 
-- {{domxref("SVGAnimatedPreserveAspectRatio.baseVal")}} {{ReadOnlyInline}}
+- {{domxref("SVGAnimatedPreserveAspectRatio.baseVal", "baseVal")}} {{ReadOnlyInline}}
   - : A {{domxref("SVGPreserveAspectRatio")}} that represents the base value of the given attribute before applying any animations.
-- {{domxref("SVGAnimatedPreserveAspectRatio.animVal")}} {{ReadOnlyInline}}
+- {{domxref("SVGAnimatedPreserveAspectRatio.animVal", "animVal")}} {{ReadOnlyInline}}
   - : A {{domxref("SVGPreserveAspectRatio")}} that represents the current animated value of the given attribute. If the given attribute is not currently being animated, then the {{ domxref("SVGPreserveAspectRatio") }} will have the same contents as `baseVal`. The object referenced by `animVal` is always distinct from the one referenced by `baseVal`, even when the attribute is not animated.
 
 ## Instance methods
