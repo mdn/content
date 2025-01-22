@@ -1,0 +1,36 @@
+name: "CodeQL checks"
+
+on:
+  schedule:
+    - cron: "0 10 * * MON"
+  workflow_dispatch:
+
+jobs:
+  analyze:
+    if: github.repository == 'mdn/content'
+    name: Analyze (${{ matrix.language }})
+    runs-on: ubuntu-latest
+    permissions:
+      security-events: write
+
+    strategy:
+      # Don't cancel in-progress jobs if a matrix job fails
+      # We only have one matrix item (actions) for now
+      # fail-fast: false
+      matrix:
+        # Currently, we're only scanning GHA
+        language: ["actions"]
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v3
+        with:
+          languages: ${{ matrix.language }}
+
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@v3
+        with:
+          category: "/language:${{matrix.language}}"
