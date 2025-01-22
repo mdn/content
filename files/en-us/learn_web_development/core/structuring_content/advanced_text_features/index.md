@@ -544,8 +544,8 @@ Why is this useful? Well, there are many different ways that humans write down d
 - 20/01/16
 - 01/20/16
 - The 20th of next month
-- <span lang="fr">20e Janvier 2016</span>
-- <span lang="ja">2016 年 1 月 20 日</span>
+- 20e Janvier 2016
+- 2016 年 1 月 20 日
 - And so on
 
 <!-- markdownlint-enable MD033 -->
