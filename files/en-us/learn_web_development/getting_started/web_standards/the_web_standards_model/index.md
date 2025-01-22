@@ -217,7 +217,7 @@ When doing web development, the main cause of uncertainty comes from the fact th
 
 - User 1 might be looking at it on an iPhone, with a small, narrow screen.
 - User 2 might be looking at it on a Windows laptop with a widescreen monitor attached to it.
-- User 3 might be visually impaired, and using a screenreader to read and interact with the web page.
+- User 3 might be visually impaired, and using a screen reader to read and interact with the web page.
 - User 4 might be using a really old desktop machine that can't run modern browsers.
 
 Because you don't know exactly what your users will use, you need to design defensively — make your website as flexible as possible, so that all of the above users can make use of it, even if they might not all get the same experience.
