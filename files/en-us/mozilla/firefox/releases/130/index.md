@@ -13,7 +13,7 @@ This article provides information about the changes in Firefox 130 that affect d
 ### HTML
 
 - The [`name`](/en-US/docs/Web/HTML/Element/details#name) attribute of the `<details>` element now allows the grouping of `<details>` elements, where only one element within a group can be open at a time. This allows you to create an exclusive accordion without using JavaScript ([Firefox bug 1856460](https://bugzil.la/1856460) and [Firefox bug 1909613](https://bugzil.la/1909613)).
-- The [`dir`](/en-US/docs/Web/HTML/Global_attributes/dir) and [`lang`](/en-US/docs/Web/HTML/Global_attributes/lang) [global attributes](/en-US/docs/Web/HTML/Global_attributes) now have improved inheritance, including how they work with [shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM#attribute_inheritance) ([Firefox bug 1876163](https://bugzil.la/1876163).
+- The [`dir`](/en-US/docs/Web/HTML/Global_attributes/dir) and [`lang`](/en-US/docs/Web/HTML/Global_attributes/lang) [global attributes](/en-US/docs/Web/HTML/Global_attributes) now have improved inheritance, including how they work with [shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM#attribute_inheritance) ([Firefox bug 1876163](https://bugzil.la/1876163)).
 
 ### CSS
 
