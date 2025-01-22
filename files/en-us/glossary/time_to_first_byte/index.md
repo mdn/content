@@ -15,7 +15,7 @@ const ttfb = performance.getEntriesByType("navigation")[0].responseStart;
 ```
 
 > [!NOTE]
-> For sites using {{HTTPStatus("103", "103 Early Hints")}} TTFB is typically the _first bytes_ (after any redirects) and so the 103 interim response. Site owners wishing to measure the time until the final response should use `{{domxref("PerformanceResourceTiming.finalResponseHeadersStart", "finalResponseHeadersStart")}}` where supported.
+> For sites using {{HTTPStatus("103", "103 Early Hints")}}, TTFB is typically the _first bytes_ (after any redirects) — and so, the 103 interim response. Site owners wishing to measure the time until the final response should use `{{domxref("PerformanceResourceTiming.finalResponseHeadersStart", "finalResponseHeadersStart")}}`, where supported.
 
 ## See also
 

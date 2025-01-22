@@ -12,7 +12,7 @@ browser-compat: api.PerformanceResourceTiming.finalResponseHeadersStart
 
 The **`finalResponseHeadersStart`** read-only property returns a {{domxref("DOMHighResTimeStamp","timestamp")}} immediately after the browser receives the first byte of the final document response (for example, 200 OK) from the server.
 
-This differs from **`{{domxref("PerformanceResourceTiming.requestStart", "requestStart")}}`** (which may also be represented as **`{{domxref("PerformanceResourceTiming.firstInterimResponseStart", "firstInterimResponseStart")}}`**) as this starts from the first bytes of any response including interim responses (for example, 103 Early Hints) with the final response coming potentially much later.
+This differs from **`{{domxref("PerformanceResourceTiming.requestStart", "requestStart")}}`** (which may also be represented as **`{{domxref("PerformanceResourceTiming.firstInterimResponseStart", "firstInterimResponseStart")}}`**), as this starts from the first bytes of any response including interim responses (for example, 103 Early Hints) with the final response coming potentially much later.
 
 When there are no interim responses, `requestStart` is the same as `finalResponseHeadersStart` and `firstInterimResponseStart` is 0.
 
@@ -29,7 +29,7 @@ The `finalResponseHeadersStart` property can have the following values:
 
 ### Measuring request time
 
-The `finalResponseHeadersStart` and {{domxref("PerformanceResourceTiming.requestStart", "requestStart")}} properties can be used to measure how long it takes to the browser to start receive the final response after the sending the request.
+The `finalResponseHeadersStart` and {{domxref("PerformanceResourceTiming.requestStart", "requestStart")}} properties can be used to measure how long it takes for the browser to start receive the final response after the sending the request.
 
 ```js
 const request = entry.finalResponseHeadersStart - entry.requestStart;
@@ -62,7 +62,7 @@ resources.forEach((entry) => {
 });
 ```
 
-The following example shnows how to measure the time between the first and final response headers.
+The following example shows how to measure the time between the first and final response headers.
 
 ```js
 const observer = new PerformanceObserver((list) => {
