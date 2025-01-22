@@ -24,6 +24,7 @@ matchMedia(mediaQueryString)
 
 - `mediaQueryString`
   - : A string specifying the media query to parse into a {{domxref("MediaQueryList")}}.
+
 > [!NOTE]
 > Just like in CSS, any [media feature](/en-US/docs/Web/CSS/@media#media_features) must be wrapped in parentheses inside the expression. For example: `matchMedia('(max-width: 600px)')` will work, whereas `matchMedia('max-width: 600px')` will not. Keywords for media types (`all`, `print`, `screen`) and logical operators (`and`, `or`, `not`, `only`) do not need to be wrapped in parentheses.
 
