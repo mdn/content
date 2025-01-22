@@ -164,6 +164,17 @@ For example, the map below defines integrity metadata for the `square.js` module
 </script>
 ```
 
+### Merging multiple import maps
+
+Internally, browsers maintain a single global import map representation, and merge the contents of registered import maps into it.
+
+Module specifiers in each registered map that were already resolved before it was registered are dropped. Future resolution of these specifiers will provide the same results as their previous resolution.
+
+Similarly, module specifiers in a registered map that were already mapped to URLs in the global map are dropped and their previous mapping prevails.
+
+[!NOTE]
+In non-supporting browsers (check the [compatibility data](#browser_compatibility)), a [polyfill](https://github.com/guybedford/es-module-shims) can be used to avoid issues related to module resolution.
+
 ## Import map JSON representation
 
 The following is a "formal" definition of the import map JSON representation.
@@ -207,18 +218,6 @@ The import map must be a valid JSON object that can define any of the optional k
     The fallback module specifier map in `imports` is used if there are no matching module specifier keys in any of the matching scoped module specifier maps.
 
     Note that the scope does not change how an address is resolved; relative addresses are always resolved to the import map base URL.
-
-## Merging multiple import maps
-
-<aside>This is supported is the latest versions of some browsers. In non-supporting browsers, a [polyfill](https://github.com/guybedford/es-module-shims) can be used to avoid issues related to module resolution.</aside>
-
-Internally, browsers maintain a single global import map representation.
-
-When an import map is registered, its contents are merged into the global import map.
-
-Module specifiers in the registered map that were already resolved before are dropped. Future resolution of these specifiers will provide the same results as their previous resolution.
-
-Module specifiers in the registered map that were already mapped to URLs in the global map are similarly dropped and their previous mapping prevails.
 
 ## Specifications
 
