@@ -114,7 +114,7 @@ Open standards enable the web to remain a freely-available public resource, wher
 The web and web browsers are fundamentally designed so that web content is **accessible** to people with disabilities. It was originally envisaged as a great leveller, enabling people to access information regardless of circumstance. This means that, for example:
 
 - People who are unable to use a mouse or pointing device can use the keyboard to navigate the web.
-- People who are visually impaired can magnify content, or use a program called a **screenreader** to read content out to them and describe controls in a way that makes sense.
+- People who are visually impaired can magnify content, or use a program called a **screen reader** to read content out to them and describe controls in a way that makes sense.
 
 > [!NOTE]
 > You'll learn more about [Accessibility](/en-US/docs/Learn_web_development/Core/Accessibility) later on in the learning pathway.
