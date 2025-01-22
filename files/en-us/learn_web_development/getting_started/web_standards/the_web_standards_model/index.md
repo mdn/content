@@ -187,7 +187,7 @@ In the house analogy, JavaScript is like the cooker, TV, Microwave, or hairdryer
 There are other technologies used on the web, for example:
 
 - [HTTP](/en-US/docs/Web/HTTP) for communicating between clients and servers, as mentioned earlier.
-- [SVG](/en-US/docs/Web/SVG) for creating and manipularing vector graphics.
+- [SVG](/en-US/docs/Web/SVG) for creating and manipulating vector graphics.
 - [MathML](/en-US/docs/Web/MathML) for describing mathematical formulae.
 
 However, HTML, CSS, and JavaScript by far the most important technologies to learn, so we will focus mainly on those in our learning pathway.
