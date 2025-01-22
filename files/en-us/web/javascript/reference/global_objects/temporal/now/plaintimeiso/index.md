@@ -2,10 +2,12 @@
 title: Temporal.Now.plainTimeISO()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/Now/plainTimeISO
 page-type: javascript-static-method
+status:
+  - experimental
 browser-compat: javascript.builtins.Temporal.Now.plainTimeISO
 ---
 
-{{JSRef}}
+{{JSRef}}{{SeeCompatTable}}
 
 The **`Temporal.Now.plainTimeISO()`** static method returns the current time as a {{jsxref("Temporal.PlainTime")}} object, in the specified time zone.
 

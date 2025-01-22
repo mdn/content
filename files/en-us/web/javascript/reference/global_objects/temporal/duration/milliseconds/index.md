@@ -2,10 +2,12 @@
 title: Temporal.Duration.prototype.milliseconds
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/Duration/milliseconds
 page-type: javascript-instance-accessor-property
+status:
+  - experimental
 browser-compat: javascript.builtins.Temporal.Duration.milliseconds
 ---
 
-{{JSRef}}
+{{JSRef}}{{SeeCompatTable}}
 
 The **`milliseconds`** accessor property of {{jsxref("Temporal.Duration")}} instances returns an integer representing the number of milliseconds in the duration.
 

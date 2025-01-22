@@ -2,10 +2,12 @@
 title: Temporal.Instant.from()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/Instant/from
 page-type: javascript-static-method
+status:
+  - experimental
 browser-compat: javascript.builtins.Temporal.Instant.from
 ---
 
-{{JSRef}}
+{{JSRef}}{{SeeCompatTable}}
 
 The **`Temporal.Instant.from()`** static method creates a new `Temporal.Instant` object from another `Temporal.Instant` object, or an [RFC 9557](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Instant#rfc_9557_format) string.
 

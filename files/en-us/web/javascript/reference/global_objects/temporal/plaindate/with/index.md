@@ -2,10 +2,12 @@
 title: Temporal.PlainDate.prototype.with()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainDate/with
 page-type: javascript-instance-method
+status:
+  - experimental
 browser-compat: javascript.builtins.Temporal.PlainDate.with
 ---
 
-{{JSRef}}
+{{JSRef}}{{SeeCompatTable}}
 
 The **`with()`** method of {{jsxref("Temporal.PlainDate")}} instances returns a new `Temporal.PlainDate` object representing this date with some fields replaced by new values. Because all `Temporal` objects are designed to be immutable, this method essentially functions as the setter for the date's fields.
 

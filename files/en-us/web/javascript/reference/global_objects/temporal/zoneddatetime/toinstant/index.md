@@ -2,10 +2,12 @@
 title: Temporal.ZonedDateTime.prototype.toInstant()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime/toInstant
 page-type: javascript-instance-method
+status:
+  - experimental
 browser-compat: javascript.builtins.Temporal.ZonedDateTime.toInstant
 ---
 
-{{JSRef}}
+{{JSRef}}{{SeeCompatTable}}
 
 The **`toInstant()`** method of {{jsxref("Temporal.ZonedDateTime")}} instances returns a new {{jsxref("Temporal.Instant")}} object representing the instant of this date-time.
 

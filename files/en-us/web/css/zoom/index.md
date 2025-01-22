@@ -51,7 +51,7 @@ Two non-standard keyword values are not recommended. Check [browser compatibilit
 
 - `normal` {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : Render the element at its normal size; equal to `zoom: 1`. Use the global {{cssxref("unset")}} keyword value instead.
-- `reset` {{Non-standard_Inline}} {{Deprecated_Inline}}
+- `reset`
   - : Resets the value to `zoom: 1` and prevents the element from being (de)magnified if the user applies non-pinch-based zooming (e.g. by pressing <kbd>Ctrl</kbd> \- <kbd>-</kbd> or <kbd>Ctrl</kbd> \+ <kbd>+</kbd> keyboard shortcuts) to the document.
 
 ## Formal definition

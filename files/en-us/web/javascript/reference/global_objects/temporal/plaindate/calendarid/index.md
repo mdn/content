@@ -2,10 +2,12 @@
 title: Temporal.PlainDate.prototype.calendarId
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainDate/calendarId
 page-type: javascript-instance-accessor-property
+status:
+  - experimental
 browser-compat: javascript.builtins.Temporal.PlainDate.calendarId
 ---
 
-{{JSRef}}
+{{JSRef}}{{SeeCompatTable}}
 
 The **`calendarId`** accessor property of {{jsxref("Temporal.PlainDate")}} instances returns a string representing the [calendar](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal#calendars) used to interpret the internal ISO 8601 date.
 

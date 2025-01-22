@@ -2,10 +2,12 @@
 title: Temporal.Duration.prototype.minutes
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/Duration/minutes
 page-type: javascript-instance-accessor-property
+status:
+  - experimental
 browser-compat: javascript.builtins.Temporal.Duration.minutes
 ---
 
-{{JSRef}}
+{{JSRef}}{{SeeCompatTable}}
 
 The **`minutes`** accessor property of {{jsxref("Temporal.Duration")}} instances returns an integer representing the number of minutes in the duration.
 

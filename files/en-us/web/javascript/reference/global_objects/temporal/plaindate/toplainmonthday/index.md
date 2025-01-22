@@ -2,10 +2,12 @@
 title: Temporal.PlainDate.prototype.toPlainMonthDay()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainDate/toPlainMonthDay
 page-type: javascript-instance-method
+status:
+  - experimental
 browser-compat: javascript.builtins.Temporal.PlainDate.toPlainMonthDay
 ---
 
-{{JSRef}}
+{{JSRef}}{{SeeCompatTable}}
 
 The **`toPlainMonthDay()`** method of {{jsxref("Temporal.PlainDate")}} instances returns a new {{jsxref("Temporal.PlainMonthDay")}} object representing the {{jsxref("Temporal/PlainDate/monthCode", "monthCode")}} and {{jsxref("Temporal/PlainDate/day", "day")}} of this date in the same calendar system.
 

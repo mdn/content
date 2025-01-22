@@ -2,10 +2,12 @@
 title: Temporal.Duration.prototype.add()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/Duration/add
 page-type: javascript-instance-method
+status:
+  - experimental
 browser-compat: javascript.builtins.Temporal.Duration.add
 ---
 
-{{JSRef}}
+{{JSRef}}{{SeeCompatTable}}
 
 The **`add()`** method of {{jsxref("Temporal.Duration")}} instances returns a new `Temporal.Duration` object with the sum of this duration and a given duration. The result is [balanced](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Duration#duration_balancing).
 
