@@ -8,7 +8,7 @@ browser-compat: api.ShadowRoot.elementFromPoint
 
 {{APIRef("DOM")}}{{Non-standard_Header}}
 
-The **`elementFromPoint()`** method, available on the {{domxref("ShadowRoot")}} object, returns the element at the topmost shadow root layer at the specified coordinates relative to the viewport. Shadow root elements that have {{cssxref("pointer-events")}} set to `none` are ignored.
+The **`elementFromPoint()`** method, available on the {{domxref("ShadowRoot")}} object, returns the element at the topmost shadow root layer at the specified coordinates relative to the viewport (the shadow root highest in the display z-order, that is able to receive pointer events). Shadow root elements that have {{cssxref("pointer-events")}} set to `none` are ignored.
 
 If the specified point is outside the bounds of the shadow root, the result is `undefined`.
 
