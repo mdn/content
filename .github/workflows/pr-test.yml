@@ -120,7 +120,7 @@ jobs:
           du -sh $BUILD_OUT_ROOT
 
       - uses: actions/upload-artifact@v4
-        if: env.GIT_DIFF_CONTENT
+        if: env.GIT_DIFF_CONTENT && vars.TEST_UPLOAD_LEGACY == 'true'
         with:
           name: build
           path: ${{ env.BUILD_OUT_ROOT }}
@@ -248,7 +248,7 @@ jobs:
           du -sh $BUILD_OUT_ROOT
 
       - uses: actions/upload-artifact@v4
-        if: env.GIT_DIFF_CONTENT
+        if: env.GIT_DIFF_CONTENT && (vars.TEST_LEGACY != 'true' || vars.TEST_UPLOAD_LEGACY != 'true')
         with:
           name: build
           path: ${{ env.BUILD_OUT_ROOT }}
