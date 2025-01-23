@@ -166,14 +166,121 @@ For example, the map below defines integrity metadata for the `square.js` module
 
 ### Merging multiple import maps
 
-Internally, browsers maintain a single global import map representation, and merge the contents of registered import maps into it.
+Internally, browsers maintain a single global import map representation. When multiple import maps are included in the Document, their contents are merged into the global import map when they are registered.
+
+
+For example, the following two import maps:
+
+```html
+<script type="importmap">
+{
+   "imports": {
+    "/app/": "./original-app/",
+  }
+}
+</script>
+```
+
+```html
+<script type="importmap">
+{
+  "imports": {
+    "/app/helper": "./helper/index.mjs"
+  },
+  "scopes": {
+    "/js": {
+      "/app/": "./js-app/"
+    }
+  }
+}
+</script>
+```
+
+Would be equivalent to the following single import map:
+
+```html
+<script type="importmap">
+{
+  "imports": {
+    "/app/": "./original-app/",
+    "/app/helper": "./helper/index.mjs"
+  },
+  "scopes": {
+    "/js": {
+      "/app/": "./js-app/"
+    }
+  }
+}
+</script>
+```
 
 Module specifiers in each registered map that were already resolved before it was registered are dropped. Future resolution of these specifiers will provide the same results as their previous resolution.
 
+
+For example, if the module specifier "/app/helper.js" was already resolved, the following new import map:
+
+```html
+<script type="importmap">
+{
+   "imports": {
+    "/app/helper.js": "./helper/index.mjs",
+    "lodash": "/node_modules/lodash-es/lodash.js"
+  }
+}
+</script>
+```
+Would be equivalent to the following one:
+
+```html
+<script type="importmap">
+{
+  "imports": {
+    "lodash": "/node_modules/lodash-es/lodash.js"
+  }
+}
+</script>
+```
+
 Similarly, module specifiers in a registered map that were already mapped to URLs in the global map are dropped and their previous mapping prevails.
 
-[!NOTE]
-In non-supporting browsers (check the [compatibility data](#browser_compatibility)), a [polyfill](https://github.com/guybedford/es-module-shims) can be used to avoid issues related to module resolution.
+For example, the following two import maps:
+
+```html
+<script type="importmap">
+{
+   "imports": {
+    "/app/helper": "./helper/index.mjs",
+    "lodash": "/node_modules/lodash-es/lodash.js"
+  }
+}
+</script>
+```
+```html
+<script type="importmap">
+{
+  "imports": {
+    "/app/helper": "./main/helper/index.mjs"
+  }
+}
+</script>
+```
+Would be equivalent to the following single import map:
+
+```html
+<script type="importmap">
+{
+  "imports": {
+    "/app/helper": "./helper/index.mjs",
+    "lodash": "/node_modules/lodash-es/lodash.js",
+  }
+}
+</script>
+```
+
+You can notice that the `/app/helper/` rule was dropped from the second map.
+
+> [!NOTE]
+> In non-supporting browsers (check the [compatibility data](#browser_compatibility)), a [polyfill](https://github.com/guybedford/es-module-shims) can be used to avoid issues related to module resolution.
 
 ## Import map JSON representation
 
