@@ -23,7 +23,7 @@ An {{domxref("SVGAnimatedString")}}.
 ```js
 const feMorphologyElement = document.querySelector("feMorphology");
 const filterName = feMorphologyElement.result;
-console.log(filterName.baseVa); // the filter's assigned name
+console.log(filterName.baseVal); // the filter's assigned name
 ```
 
 ## Specifications
