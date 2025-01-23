@@ -43,7 +43,7 @@ The syntax of the fallback, like that of custom properties, allows commas. For e
 
     > **Note:** `var(--a,)` is valid, specifying that if the `--a` custom property is not defined or equals a [CSS-wide keyword](/en-US/docs/Web/CSS/CSS_Values_and_Units#css-wide_values), the `var()` should be replaced with nothing.
 
-### Formal syntax
+## Formal syntax
 
 {{CSSSyntax}}
 

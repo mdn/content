@@ -40,7 +40,7 @@ The sine of an `angle` will always return a number between `−1` and `1`.
 - If `angle` is `infinity`, `-infinity`, or `NaN`, the result is `NaN`.
 - If `angle` is `0⁻`, the result is `0⁻`.
 
-### Formal syntax
+## Formal syntax
 
 {{CSSSyntax}}
 

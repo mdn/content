@@ -74,12 +74,8 @@ When the value to be announced, either the actual value or the value as a percen
 The first rule of ARIA use is "if you can use a native feature with the semantics and behavior you require already built in, instead of repurposing an element and **adding** an ARIA role, state or property to make it accessible, then do so."
 
 ```html
-<label for="temperature">
-  Oven Temperature
-</p>
-<input type="range" id="temperature"
-  value="205" min="70" max="250" step="5"/>
-</meter>
+<label for="temperature">Oven Temperature</label>
+<input type="range" id="temperature" value="205" min="70" max="250" step="5" />
 ```
 
 If we employ native HTML semantics with {{HTMLElement('input')}} we get styles and semantics for free.

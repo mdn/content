@@ -62,18 +62,15 @@ This to-do application has two components — a component as a foundation for yo
 Each component is made up of a TypeScript class, HTML, and CSS.
 TypeScript transpiles, or converts, into JavaScript, which means that your application ultimately ends up in plain JavaScript but you have the convenience of using TypeScript's extended features and streamlined syntax.
 
-### Dynamically change the UI with \*ngIf and \*ngFor
+### Control flow with @if and @for blocks
 
-This tutorial also covers two important Angular directives for dynamically altering the structure of the DOM.
-A directive is like a command that you can use in your HTML to affect change in your application.
+This tutorial covers two important Angular [control flow blocks](https://angular.dev/guide/templates/control-flow) which tell the framework when and how your templates should be rendered.
+The first block that this tutorial covers is the [`@for`](https://angular.dev/api/core/@for) block which loops through a collection and repeatedly renders the content of a block.
 
-The first directive that this tutorial covers is Angular's iterator, `*ngFor`.
-`*ngFor` can dynamically create DOM elements based on items in an array.
-
-The second directive that you learn in this tutorial is `*ngIf`.
-You can use `*ngIf` to add or remove elements from the DOM based on a condition.
-For example, if users want to edit an item in the to-do list, you can provide them with the means to edit the item.
-If they do not want to edit an item, you can remove the interface for editing.
+The second block that you learn in this tutorial is [`@if`](https://angular.dev/api/core/@if).
+You can use `@if` to display content based on a condition.
+For example, if a user clicks an "edit" button, you can show elements used to edit an item.
+If a user clicks "cancel", you can remove the elements used for editing.
 
 ### Share data between components
 
@@ -111,7 +108,7 @@ import { CommonModule } from "@angular/common";
   standalone: true,
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+  styleUrl: './app.component.css',
   imports: [CommonModule],
 })
 export class AppComponent {
@@ -141,15 +138,15 @@ The first two lines are JavaScript imports. In this case they are importing Angu
 The `@Component()` decorator specifies metadata about the `AppComponent`.
 Here's some more information about the metadata we're using:
 
-- [`standalone`](https://angular.io/api/core/Component#standalone): Describe whether the component requires a [NgModule](https://angular.io/guide/ngmodules#the-basic-ngmodule) or not.
+- [`standalone`](https://angular.dev/api/core/Component#standalone): Describe whether the component requires a [NgModule](https://angular.dev/guide/ngmodules#the-basic-ngmodule) or not.
   Your app will directly manage template dependencies (components, directives, etc.) using imports when it's a standalone.
-- [`selector`](https://angular.io/api/core/Directive#selector): Tells you the CSS selector that you use in a template to place this component. Here it is `'app-root'`.
+- [`selector`](https://angular.dev/api/core/Directive#selector): Tells you the CSS selector that you use in a template to place this component. Here it is `'app-root'`.
   In the `index.html`, within the `body` tag, the Angular CLI added `<app-root></app-root>` when generating your application.
   You use all component selectors in the same way by adding them to other component HTML templates.
-- [`templateUrl`](https://angular.io/api/core/Component#templateurl): Specifies the HTML file to associate with this component.
+- [`templateUrl`](https://angular.dev/api/core/Component#templateUrl): Specifies the HTML file to associate with this component.
   Here it is, `'./app.component.html'`,
-- [`styleUrls`](https://angular.io/api/core/Component#styleurls): Provides the location and name of the file for your styles that apply specifically to this component. Here it is `'./app.component.css'`.
-- [`imports`](https://angular.io/api/core/Component#imports): Allows you to specify the component's dependencies that can be used within its template.
+- [`styleUrl`](https://angular.dev/api/core/Component#styleUrl): Provides the location and name of the file for your styles that apply specifically to this component. Here it is `'./app.component.css'`.
+- [`imports`](https://angular.dev/api/core/Component#imports): Allows you to specify the component's dependencies that can be used within its template.
 
 The `filter` property is of type `union`, which means `filter` could have the value of `all`, `active`, or `done`.
 With the `union` type, if you make a typo in the value you assign to the `filter` property, TypeScript lets you know so that you can catch the bug early.
@@ -171,14 +168,19 @@ To see the list of items in the browser, replace the contents of `app.component.
   <h2>What would you like to do today?</h2>
 
   <ul>
-    <li *ngFor="let item of items">\{{item.description}}</li>
+    @for(item of items; track item.description){
+    <li>\{{item.description}}</li>
+    }
   </ul>
 </div>
 ```
 
-The `<li>` contains an `*ngFor`, a built-in Angular directive that iterates over the items in the `items` array.
-For each item, `*ngFor` creates a new `<li>`.
+The `<li>` is inside a `@for` block that iterates over the items in the `items` array.
+For each item, a new `<li>` is created.
 The double curly braces that contain `item.description` instructs Angular to populate each `<li>` with the text of each item's description.
+
+The `track` keyword in Angular's `@for` block helps Angular identify which items in an array have changed, been added, or removed.
+This makes it easier and faster for Angular to update the DOM when the array is modified.
 
 In the browser, you should see the list of items as follows:
 

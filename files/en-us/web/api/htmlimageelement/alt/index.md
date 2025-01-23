@@ -128,17 +128,17 @@ In other words, it should be the same text you would use in a textual button to 
 For example, in the snippet of HTML below, a toolbar which uses icon images as link labels provides `alt` attributes for each giving a textual label to use instead of the icon when the icons cannot be or are intentionally not used.
 
 ```html
-<li class="toolbar" aria-role="toolbar">
-  <a href="songs.html" aria-role="button">
+<li class="toolbar" role="toolbar">
+  <a href="songs.html" role="button">
     <img src="songicon.svg" alt="Songs" />
   </a>
-  <a href="albums.html" aria-role="button">
+  <a href="albums.html" role="button">
     <img src="albumicon.svg" alt="Albums"
   /></a>
-  <a href="artists.html" aria-role="button">
+  <a href="artists.html" role="button">
     <img src="artisticon.svg" alt="Artists" />
   </a>
-  <a href="playlists.html" aria-role="button">
+  <a href="playlists.html" role="button">
     <img src="playlisticon.svg" alt="Playlists" />
   </a>
 </li>

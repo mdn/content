@@ -67,6 +67,10 @@ scale3d(sx, sy, sz)
   </tbody>
 </table>
 
+## Formal syntax
+
+{{CSSSyntax}}
+
 ## Examples
 
 ### Without changing the origin

@@ -4,7 +4,7 @@ slug: Learn_web_development/Howto/Design_and_accessibility/Common_web_layouts
 page-type: learn-faq
 ---
 
-{{QuicklinksWithSubPages("Learn/Common_questions")}}
+{{QuicklinksWithSubPages("/en-US/docs/Learn_web_development/Howto")}}
 
 When designing pages for your website, it's good to have an idea of the most common layouts.
 

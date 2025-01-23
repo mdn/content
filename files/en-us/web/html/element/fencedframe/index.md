@@ -69,7 +69,7 @@ The size of the embedded content may be set by internal `contentWidth` and `cont
 
 ## Accessibility
 
-People navigating with assistive technology such as a screen reader can use the [`title` attribute](/en-US/docs/Web/HTML/Global_attributes/title) on an `<fencedframe>` to label its content. The title's value should concisely describe the embedded content:
+People navigating with assistive technology, such as a screen reader, can use the [`title` attribute](/en-US/docs/Web/HTML/Global_attributes/title) on a `<fencedframe>` to label its content. The title's value should concisely describe the embedded content:
 
 ```html
 <fencedframe
@@ -78,7 +78,7 @@ People navigating with assistive technology such as a screen reader can use the 
   height="320"></fencedframe>
 ```
 
-Without this title, they have to navigate into the `<iframe>` to determine what its embedded content is. This context shift can be confusing and time-consuming, especially for pages with multiple `<iframe>`s and/or if embeds contain interactive content like video or audio.
+Without this title, they have to navigate into the `<fencedframe>` to determine what its embedded content is. This context shift can be confusing and time-consuming, especially for pages with multiple `<fencedframe>`s and/or if embeds contain interactive content like video or audio.
 
 ## Examples
 

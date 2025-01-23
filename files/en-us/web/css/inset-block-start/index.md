@@ -20,7 +20,7 @@ This {{glossary("inset properties", "inset property")}} has no effect on non-pos
 inset-block-start: 3px;
 inset-block-start: 2.4em;
 inset-block-start: anchor(end);
-inset-block-start: calc(anchor(--myAnchor 50%) + 5px);
+inset-block-start: calc(anchor-size(--myAnchor height, 70px) * 2);
 
 /* <percentage>s of the width or height of the containing block */
 inset-block-start: 10%;

@@ -45,7 +45,7 @@ The remaining space, or positive free space, is the size of the flex container m
 
 If the `flex-grow` values differ, the positive free space is distributed according to the ratio defined by the different flex grow factors. The `flex-grow` factor values of all the sibling flex items are added together. The flex container's positive free space, if any, is then divided by that total. The main size of each flex item with a `flex-grow` value greater than `0` will grow by this quotient multiplied by its own growth factor.
 
-For example, if four `100px` flex items are in a `700px` container and the flex items have `flex-grow` factors of `0`, `1`, `2`, and `3`, respectively, the total main size of the three items is `400px`, meaning there is `300px` of positive free space to be distributed. There are a total of 6 grow factors (`3 + 2 + 1`), therefore each grow factor is equal to `50px` (`(300px / 6 )`. Each flex item is given an amount of positive free space equal to this amount multiplied by its `flex-grow` value — so `0`, `50px`, `100px`, and `150px` respectively. The total flex item sizes are therefore `100px`, `150px`, `200px`, and `250px` respectively.
+For example, if four `100px` flex items are in a `700px` container and the flex items have `flex-grow` factors of `0`, `1`, `2`, and `3`, respectively, the total main size of the four items is `400px`, meaning there is `300px` of positive free space to be distributed. The sum of the four grow factors (`0 + 1 + 2 + 3 = 6`) is equal to six. Therefore, each grow factor is equal to `50px` (`(300px / 6 )`. Each flex item is given 50px of free space multiplied by its `flex-grow` factor — so `0`, `50px`, `100px`, and `150px` respectively. The total flex item sizes become `100px`, `150px`, `200px`, and `250px`, respectively.
 
 `flex-grow` is generally used alongside the other {{cssxref("flex")}} shorthand properties, {{cssxref("flex-shrink")}} and {{cssxref("flex-basis")}}. Using the `flex` shorthand property is recommended to ensure all values are set.
 
@@ -61,7 +61,7 @@ For example, if four `100px` flex items are in a `700px` container and the flex 
 
 ### Setting flex item grow factor
 
-In this example, there is a total of eight growth factors distributed among the six flex items, meaning each growth factor is `12.5%` of the remaining space.
+In this example, the sum of six flex-grow factors is equal to eight, meaning each growth-factor value is `12.5%` of the remaining space.
 
 #### HTML
 
