@@ -220,13 +220,14 @@ For example, if the module specifier "/app/helper.js" was already resolved, the 
 ```html
 <script type="importmap">
   {
-     "imports": {
+    "imports": {
       "/app/helper.js": "./helper/index.mjs",
       "lodash": "/node_modules/lodash-es/lodash.js"
     }
   }
 </script>
 ```
+
 Would be equivalent to the following one:
 
 ```html
@@ -248,13 +249,14 @@ For example, the following two import maps:
 ```html
 <script type="importmap">
   {
-     "imports": {
+    "imports": {
       "/app/helper": "./helper/index.mjs",
       "lodash": "/node_modules/lodash-es/lodash.js"
     }
   }
 </script>
 ```
+
 ```html
 <script type="importmap">
   {
@@ -272,7 +274,7 @@ Would be equivalent to the following single import map:
   {
     "imports": {
       "/app/helper": "./helper/index.mjs",
-      "lodash": "/node_modules/lodash-es/lodash.js",
+      "lodash": "/node_modules/lodash-es/lodash.js"
     }
   }
 </script>
