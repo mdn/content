@@ -1,5 +1,5 @@
 ---
-title: Contributing to MDN
+title: MDN Web Docs
 slug: MDN
 page-type: landing-page
 ---

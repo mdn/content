@@ -3,8 +3,8 @@
 sidebar:
   - type: section
     link: /MDN
-  - title: community_guidelines
-    details: open
+  - title: community_resources
+    details: closed
     children:
       - /MDN/Community
       - /MDN/Community/Getting_started
@@ -58,43 +58,43 @@ l10n:
   de:
     history: Geschichte
     advisory_board: Product Advisory Board
-    community_guidelines: Gemeinschaftsrichtlinien
+    community_resources: Gemeinschaftsrichtlinien
     contributing_to_mdn_web_docs: Beiträge zu MDN Web Docs
     writing_guide: Schreibanleitung
     how_to_guides: Anleitungen
     page_structures: Seitenstrukturen
   en-US:
-    community_guidelines: Community resources
+    community_resources: Community resources
     contributing_to_mdn_web_docs: Contributing to MDN Web Docs
     writing_guide: Writing guidelines
     how_to_guides: How-to guides
     page_structures: Page structures
   es:
-    community_guidelines: Community resources
+    community_resources: Community resources
     contributing_to_mdn_web_docs: Contributing to MDN Web Docs
     writing_guide: Writing guidelines
     how_to_guides: How-to guides
     page_structures: Page structures
   fr:
-    community_guidelines: Règles de la communauté
+    community_resources: Règles de la communauté
     contributing_to_mdn_web_docs: Contributing to MDN Web Docs
     writing_guide: Writing guidelines
     how_to_guides: How-to guides
     page_structures: Page structures
   ja:
-    community_guidelines: Community resources
+    community_resources: Community resources
     contributing_to_mdn_web_docs: Contributing to MDN Web Docs
     writing_guide: Writing guidelines
     how_to_guides: How-to guides
     page_structures: Page structures
   ko:
-    community_guidelines: 커뮤니티 지침
+    community_resources: 커뮤니티 지침
     contributing_to_mdn_web_docs: MDN에 기여하기
     writing_guide: Writing guidelines
     how_to_guides: How-to guides
     page_structures: Page structures
   pt-BR:
-    community_guidelines: Community resources
+    community_resources: Community resources
     contributing_to_mdn_web_docs: Contributing to MDN Web Docs
     writing_guide: Writing guidelines
     how_to_guides: How-to guides
@@ -102,19 +102,19 @@ l10n:
   ru:
     history: History
     advisory_board: Advisory Board
-    community_guidelines: Community resources
+    community_resources: Community resources
     contributing_to_mdn_web_docs: Contributing to MDN Web Docs
     writing_guide: Writing guidelines
     how_to_guides: How-to guides
     page_structures: Page structures
   zh-CN:
-    community_guidelines: 社区指南
+    community_resources: 社区指南
     contributing_to_mdn_web_docs: 为 MDN 做贡献
     writing_guide: 撰写指南
     how_to_guides: MDN 写作指南
     page_structures: 页面结构
   zh-TW:
-    community_guidelines: Community resources
+    community_resources: Community resources
     contributing_to_mdn_web_docs: Contributing to MDN Web Docs
     writing_guide: Writing guidelines
     how_to_guides: How-to guides

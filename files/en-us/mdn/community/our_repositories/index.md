@@ -8,17 +8,17 @@ page-type: mdn-community-guide
 {{MDNSidebar}}
 
 MDN Web Docs is a complex project with lots of moving parts.
-It's a good idea to get familiar with the projects different repositories.
+It's a good idea to get familiar with the different code repositories.
 This document describes the repositories (repos) you may need when contributing to MDN Web Docs.
 
 ## Main repositories
 
-Code in these repositories is core to the MDN Web Docs project:
-
 - [content](https://github.com/mdn/content)
   - : This is where all the English content of the site is maintained, and where you'll make all changes to page content, prose, and in-page code examples.
+- [rari](https://github.com/mdn/rari)
+  - : This is the backend part of the MDN Web Docs platform, where you'll go if you want to make changes to page structures and rendering machinery.
 - [yari](https://github.com/mdn/yari)
-  - : This is the MDN Web Docs platform, where you'll go if you want to make changes to page structures, styles, or rendering machinery.
+  - : This is the frontend part of the MDN Web Docs platform, where you'll find styles, design, and layout functionality.
 - [browser-compat-data](https://github.com/mdn/browser-compat-data)
   - : Data used to generate the browser compatibility tables found on our reference pages.
     If you have information about browser compatibility of Web features — or are willing and able to do some research and/or experimentation — you can help update MDN's [Browser Compatibility Data](https://github.com/mdn/browser-compat-data/blob/main/docs/contributing.md)
