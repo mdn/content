@@ -1268,7 +1268,7 @@ This adds the promise-based methods {{domxref("SourceBuffer.appendBufferAsync", 
 
 #### AVIF compliance strictness
 
-The `image.avif.compliance_strictness` preference can be used to control the _strictness_ applied when processing [AVIF](/en-US/docs/Web/Media/Formats/Image_types#avif_image) images.
+The `image.avif.compliance_strictness` preference can be used to control the _strictness_ applied when processing [AVIF](/en-US/docs/Web/Media/Guides/Formats/Image_types#avif_image) images.
 This allows Firefox users to display images that render on some other browsers, even if they are not strictly compliant.
 
 Permitted values are:

@@ -43,7 +43,7 @@ No notable changes.
 
 #### Canvas
 
-- Image encoder support has been added for the [WebP](/en-US/docs/Web/Media/Formats/Image_types#webp_image) image format.
+- Image encoder support has been added for the [WebP](/en-US/docs/Web/Media/Guides/Formats/Image_types#webp_image) image format.
   This allows canvas elements to export their content as webp data when using the methods: {{domxref("HTMLCanvasElement.toDataURL()")}}, {{domxref("HTMLCanvasElement.toBlob()")}}, and {{domxref("OffscreenCanvas.convertToBlob", "OffscreenCanvas.toBlob")}}.
   ([Firefox bug 1511670](https://bugzil.la/1511670)).
 

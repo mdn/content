@@ -121975,7 +121975,7 @@
       "Bean2223"
     ]
   },
-  "Web/Media/Audio_and_video_delivery": {
+  "Web/Media/Guides/Audio_and_video_delivery": {
     "modified": "2020-12-11T05:27:12.652Z",
     "contributors": [
       "bershanskiy",
@@ -121989,7 +121989,7 @@
       "FredB"
     ]
   },
-  "Web/Media/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video": {
+  "Web/Media/Guides/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video": {
     "modified": "2019-03-18T20:51:47.296Z",
     "contributors": [
       "chrisdavidmills",
@@ -122006,7 +122006,7 @@
       "MartinRinehart"
     ]
   },
-  "Web/Media/Audio_and_video_delivery/Cross-browser_audio_basics": {
+  "Web/Media/Guides/Audio_and_video_delivery/Cross-browser_audio_basics": {
     "modified": "2020-11-16T08:10:17.867Z",
     "contributors": [
       "chrisdavidmills",
@@ -122022,7 +122022,7 @@
       "maboa"
     ]
   },
-  "Web/Media/Audio_and_video_delivery/Live_streaming_web_audio_and_video": {
+  "Web/Media/Guides/Audio_and_video_delivery/Live_streaming_web_audio_and_video": {
     "modified": "2019-04-02T11:11:28.390Z",
     "contributors": [
       "kenrick95",
@@ -122038,15 +122038,15 @@
       "maboa"
     ]
   },
-  "Web/Media/Audio_and_video_delivery/Setting_up_adaptive_streaming_media_sources": {
+  "Web/Media/Guides/Audio_and_video_delivery/Setting_up_adaptive_streaming_media_sources": {
     "modified": "2019-03-18T20:51:46.989Z",
     "contributors": ["chrisdavidmills", "mfuji09", "obax", "rybi", "maboa"]
   },
-  "Web/Media/Audio_and_video_delivery/Video_player_styling_basics": {
+  "Web/Media/Guides/Audio_and_video_delivery/Video_player_styling_basics": {
     "modified": "2019-09-06T13:44:57.765Z",
     "contributors": ["agdillon", "DeltaTV", "chrisdavidmills"]
   },
-  "Web/Media/Audio_and_video_delivery/WebAudio_playbackRate_explained": {
+  "Web/Media/Guides/Audio_and_video_delivery/WebAudio_playbackRate_explained": {
     "modified": "2019-03-18T20:51:48.122Z",
     "contributors": [
       "chrisdavidmills",
@@ -122055,7 +122055,7 @@
       "teoli"
     ]
   },
-  "Web/Media/Audio_and_video_delivery/buffering_seeking_time_ranges": {
+  "Web/Media/Guides/Audio_and_video_delivery/buffering_seeking_time_ranges": {
     "modified": "2019-04-12T10:12:05.792Z",
     "contributors": [
       "industral",
@@ -122065,7 +122065,7 @@
       "maboa"
     ]
   },
-  "Web/Media/Audio_and_video_delivery/cross_browser_video_player": {
+  "Web/Media/Guides/Audio_and_video_delivery/cross_browser_video_player": {
     "modified": "2020-05-27T13:29:20.861Z",
     "contributors": [
       "rafaqf",
@@ -122081,7 +122081,7 @@
       "Ian-Devlin"
     ]
   },
-  "Web/Media/Audio_and_video_manipulation": {
+  "Web/Media/Guides/Audio_and_video_manipulation": {
     "modified": "2020-09-02T12:20:43.182Z",
     "contributors": [
       "mfuji09",
@@ -122092,11 +122092,11 @@
       "a-mt"
     ]
   },
-  "Web/Media/Autoplay_guide": {
+  "Web/Media/Guides/Autoplay": {
     "modified": "2020-10-11T23:21:36.266Z",
     "contributors": ["Malvoz", "scunliffe", "MrAlexWeber", "Sheppy"]
   },
-  "Web/Media/DASH_Adaptive_Streaming_for_HTML_5_Video": {
+  "Web/Media/Guides/DASH_Adaptive_Streaming_for_HTML_5_Video": {
     "modified": "2020-11-09T07:34:43.578Z",
     "contributors": [
       "mfuji09",
@@ -122118,11 +122118,11 @@
       "joshmoz"
     ]
   },
-  "Web/Media/Formats": {
+  "Web/Media/Guides/Formats": {
     "modified": "2019-11-15T11:45:09.792Z",
     "contributors": ["Sheppy", "jswisher", "Havi Hoffman"]
   },
-  "Web/Media/Formats/Audio_codecs": {
+  "Web/Media/Guides/Formats/Audio_codecs": {
     "modified": "2019-12-06T17:58:10.741Z",
     "contributors": [
       "slokhorst",
@@ -122132,11 +122132,11 @@
       "GiacomoSorbi"
     ]
   },
-  "Web/Media/Formats/Audio_concepts": {
+  "Web/Media/Guides/Formats/Audio_concepts": {
     "modified": "2020-06-01T18:13:20.323Z",
     "contributors": ["atd30", "Sheppy"]
   },
-  "Web/Media/Formats/Configuring_servers_for_Ogg_media": {
+  "Web/Media/Guides/Formats/Configuring_servers_for_Ogg_media": {
     "modified": "2019-09-10T19:10:12.290Z",
     "contributors": [
       "Sheppy",
@@ -122154,11 +122154,11 @@
       "sorinelpusti"
     ]
   },
-  "Web/Media/Formats/Containers": {
+  "Web/Media/Guides/Formats/Containers": {
     "modified": "2020-04-18T23:02:19.945Z",
     "contributors": ["sideshowbarker", "FFV47", "Sheppy", "mukhtar-github"]
   },
-  "Web/Media/Formats/Image_types": {
+  "Web/Media/Guides/Formats/Image_types": {
     "modified": "2020-11-08T19:25:21.989Z",
     "contributors": [
       "hamishwillee",
@@ -122172,11 +122172,11 @@
       "matthendrix"
     ]
   },
-  "Web/Media/Formats/Support_issues": {
+  "Web/Media/Guides/Formats/Support_issues": {
     "modified": "2019-08-13T12:38:59.984Z",
     "contributors": ["Sheppy"]
   },
-  "Web/Media/Formats/Video_codecs": {
+  "Web/Media/Guides/Formats/Video_codecs": {
     "modified": "2020-11-12T07:24:28.263Z",
     "contributors": [
       "chrisdavidmills",
@@ -122188,29 +122188,25 @@
       "KarlPiper"
     ]
   },
-  "Web/Media/Formats/Video_concepts": {
+  "Web/Media/Guides/Formats/Video_concepts": {
     "modified": "2020-05-08T05:39:14.735Z",
     "contributors": ["Tolokoban2", "Sheppy"]
   },
-  "Web/Media/Formats/WebRTC_codecs": {
+  "Web/Media/Guides/Formats/WebRTC_codecs": {
     "modified": "2020-08-20T11:05:40.490Z",
     "contributors": ["Sheppy", "bfamchon", "TheSpecialist4"]
   },
-  "Web/Media/Formats/codecs_parameter": {
+  "Web/Media/Guides/Formats/codecs_parameter": {
     "modified": "2020-11-09T17:29:24.908Z",
     "contributors": ["lucaswerkmeister", "leela52452", "Sheppy", "pehrsons"]
   },
-  "Web/Media/HTML_media": {
-    "modified": "2020-01-27T09:41:23.530Z",
-    "contributors": ["germain", "rachelandrew", "Sheppy"]
-  },
-  "Web/Media/Streaming": {
-    "modified": "2020-10-12T00:53:55.010Z",
-    "contributors": ["krankj", "catecate", "Sheppy"]
-  },
-  "Web/Media/images": {
+  "Web/Media/Guides/Images": {
     "modified": "2020-07-28T00:42:48.458Z",
     "contributors": ["lbd1607", "Sheppy", "rachelandrew"]
+  },
+  "Web/Media/Guides/Streaming": {
+    "modified": "2020-10-12T00:53:55.010Z",
+    "contributors": ["krankj", "catecate", "Sheppy"]
   },
   "Web/OpenSearch": {
     "modified": "2019-10-30T22:44:38.715Z",
