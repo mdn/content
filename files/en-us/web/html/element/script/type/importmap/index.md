@@ -168,31 +168,30 @@ For example, the map below defines integrity metadata for the `square.js` module
 
 Internally, browsers maintain a single global import map representation. When multiple import maps are included in the Document, their contents are merged into the global import map when they are registered.
 
-
 For example, the following two import maps:
 
 ```html
 <script type="importmap">
-{
-   "imports": {
-    "/app/": "./original-app/",
+  {
+     "imports": {
+      "/app/": "./original-app/"
+    }
   }
-}
 </script>
 ```
 
 ```html
 <script type="importmap">
-{
-  "imports": {
-    "/app/helper": "./helper/index.mjs"
-  },
-  "scopes": {
-    "/js": {
-      "/app/": "./js-app/"
+  {
+    "imports": {
+      "/app/helper": "./helper/index.mjs"
+    },
+    "scopes": {
+      "/js": {
+        "/app/": "./js-app/"
+      }
     }
   }
-}
 </script>
 ```
 
@@ -200,17 +199,17 @@ Would be equivalent to the following single import map:
 
 ```html
 <script type="importmap">
-{
-  "imports": {
-    "/app/": "./original-app/",
-    "/app/helper": "./helper/index.mjs"
-  },
-  "scopes": {
-    "/js": {
-      "/app/": "./js-app/"
+  {
+    "imports": {
+      "/app/": "./original-app/",
+      "/app/helper": "./helper/index.mjs"
+    },
+    "scopes": {
+      "/js": {
+        "/app/": "./js-app/"
+      }
     }
   }
-}
 </script>
 ```
 
@@ -221,25 +220,27 @@ For example, if the module specifier "/app/helper.js" was already resolved, the 
 
 ```html
 <script type="importmap">
-{
-   "imports": {
-    "/app/helper.js": "./helper/index.mjs",
-    "lodash": "/node_modules/lodash-es/lodash.js"
+  {
+     "imports": {
+      "/app/helper.js": "./helper/index.mjs",
+      "lodash": "/node_modules/lodash-es/lodash.js"
+    }
   }
-}
 </script>
 ```
 Would be equivalent to the following one:
 
 ```html
 <script type="importmap">
-{
-  "imports": {
-    "lodash": "/node_modules/lodash-es/lodash.js"
+  {
+    "imports": {
+      "lodash": "/node_modules/lodash-es/lodash.js"
+    }
   }
-}
 </script>
 ```
+
+You may notice that the `/app/helper.js` rule was ignored and not incorporated into the map.
 
 Similarly, module specifiers in a registered map that were already mapped to URLs in the global map are dropped and their previous mapping prevails.
 
@@ -247,33 +248,33 @@ For example, the following two import maps:
 
 ```html
 <script type="importmap">
-{
-   "imports": {
-    "/app/helper": "./helper/index.mjs",
-    "lodash": "/node_modules/lodash-es/lodash.js"
+  {
+     "imports": {
+      "/app/helper": "./helper/index.mjs",
+      "lodash": "/node_modules/lodash-es/lodash.js"
+    }
   }
-}
 </script>
 ```
 ```html
 <script type="importmap">
-{
-  "imports": {
-    "/app/helper": "./main/helper/index.mjs"
+  {
+    "imports": {
+      "/app/helper": "./main/helper/index.mjs"
+    }
   }
-}
 </script>
 ```
 Would be equivalent to the following single import map:
 
 ```html
 <script type="importmap">
-{
-  "imports": {
-    "/app/helper": "./helper/index.mjs",
-    "lodash": "/node_modules/lodash-es/lodash.js",
+  {
+    "imports": {
+      "/app/helper": "./helper/index.mjs",
+      "lodash": "/node_modules/lodash-es/lodash.js",
+    }
   }
-}
 </script>
 ```
 
