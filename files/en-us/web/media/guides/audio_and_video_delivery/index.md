@@ -467,7 +467,7 @@ lastSource.addEventListener(
 );
 ```
 
-## Audio/Video JavaScript Libraries
+## Audio/Video JavaScript libraries
 
 A number of audio and video JavaScript libraries exist. The most popular libraries allow you to choose a consistent player design over all browsers and provide a fallback for browsers that don't support audio and video natively. Fallbacks have historically used now-obsolete plugins such as Adobe Flash or Microsoft Silverlight plugins to provide a media player in non-supporting browsers, although these are no longer supported on modern computers. Other functionality such as the [`<track>`](/en-US/docs/Web/HTML/Element/track) element for subtitles can also be provided through media libraries.
 
@@ -493,7 +493,7 @@ A number of audio and video JavaScript libraries exist. The most popular librari
 
 - [AudioContext monkeypatch](https://github.com/cwilso/AudioContext-MonkeyPatch): A polyfill for older versions of the Web Audio API; Open Source (Apache 2 Licensed.)
 
-## Basic tutorials
+## Guides
 
 - [Creating a cross-browser video player](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery/cross_browser_video_player)
   - : A guide to creating a basic cross browser video player using the {{ htmlelement("video") }} element.
@@ -508,7 +508,7 @@ A number of audio and video JavaScript libraries exist. The most popular librari
 - [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
   - : Explains the basics of using the Web Audio API to grab, manipulate and play back an audio source.
 
-## Streaming media tutorials
+### Streaming media
 
 - [Live streaming web audio and video](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery/Live_streaming_web_audio_and_video)
   - : Live streaming technology is often employed to relay live events such as sports, concerts and more generally TV and Radio programmes that are output live. Often shortened to just streaming, live streaming is the process of transmitting media 'live' to computers and devices. This is a fairly complex and nascent subject with a lot of variables, so in this article we'll introduce you to the subject and let you know how you can get started.
@@ -517,7 +517,7 @@ A number of audio and video JavaScript libraries exist. The most popular librari
 - [DASH Adaptive Streaming for HTML 5 Video](/en-US/docs/Web/Media/Guides/DASH_Adaptive_Streaming_for_HTML_5_Video)
   - : Details how to set up adaptive streaming using DASH and WebM.
 
-## Advanced tutorials
+### Advanced topics
 
 - [Adding captions and subtitles to HTML video](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)
   - : This article explains how to add captions and subtitles to HTML {{ htmlelement("video") }}, using [Web_Video_Text_Tracks_Format](/en-US/docs/Web/API/WebVTT_API) and the {{ htmlelement("track") }} element.
@@ -526,10 +526,7 @@ A number of audio and video JavaScript libraries exist. The most popular librari
 - [Easy audio capture with the MediaRecorder API](https://hacks.mozilla.org/2014/06/easy-audio-capture-with-the-mediarecorder-api/)
   - : Explains the basics of using the MediaStream Recording API to directly record a media stream.
 
-> [!NOTE]
-> Firefox OS versions 1.3 and above support the [RTSP](https://en.wikipedia.org/wiki/Real_Time_Streaming_Protocol) protocol for streaming video delivery. A fallback solution for older versions would be to use `<video>` along with a suitable format for Gecko (such as WebM) to serve fallback content. More information will be published on this in good time.
-
-## References
+## Reference
 
 - [The video element](/en-US/docs/Web/HTML/Element/video)
 - [HTMLVideoElement API](/en-US/docs/Web/API/HTMLVideoElement)
@@ -537,4 +534,4 @@ A number of audio and video JavaScript libraries exist. The most popular librari
 - [Web Audio API](/en-US/docs/Web/API/Web_Audio_API)
 - [MediaStream Recording API](/en-US/docs/Web/API/MediaStream_Recording_API)
 - [getUserMedia](/en-US/docs/Web/API/MediaDevices/getUserMedia)
-- [Event reference > Media](/en-US/docs/Web/Events#media)
+- [Event reference: Media](/en-US/docs/Web/Events#media)

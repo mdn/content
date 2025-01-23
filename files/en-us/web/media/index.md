@@ -11,6 +11,23 @@ Over the years, the web's ability to present, create, and manage audio, video, a
 There are now a large number of APIs available, as well as HTML elements, DOM interfaces, and other features that make it possible to work with media in exciting and immersive ways.
 This article lists the various APIs with links to documentation you may find helpful in mastering them.
 
+## Guides
+
+- [Audio and Video Delivery](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery)
+  - : We can deliver audio and video on the web in a number of ways, ranging from 'static' media files to adaptive live streams. This article is intended as a starting point for exploring the various delivery mechanisms of web-based media and compatibility with popular browsers.
+- [Audio and Video manipulation](/en-US/docs/Web/Media/Guides/Audio_and_video_manipulation)
+  - : Having native audio and video in the browser means we can use these data streams with technologies such as {{htmlelement("canvas")}}, [WebGL](/en-US/docs/Web/API/WebGL_API) or [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) to modify audio and video directly, for example adding reverb/compression effects to audio, or grayscale/sepia filters to video.
+- [Autoplay guide for media and Web Audio APIs](/en-US/docs/Web/Media/Guides/Autoplay)
+  - : Unexpected automatic playback of media or audio can be an unwelcome surprise to users. While autoplay serves a purpose, it should be used carefully. To give users control over this, many browsers now provide forms of autoplay blocking. This article is a guide to autoplay, with tips on when and how to use it and how to work with browsers to handle autoplay blocking gracefully.
+- [DASH Adaptive Streaming for HTML 5 Video](Web/Media/Guides/DASH_Adaptive_Streaming_for_HTML_5_Video)
+  - : Dynamic Adaptive Streaming over HTTP (DASH) is an adaptive streaming protocol. This means that it allows for a video stream to switch between bit rates on the basis of network performance, in order to keep a video playing.
+- [Streaming audio and video](/en-US/docs/Web/Media/Guides/Streaming)
+  - : A guide which covers how to stream audio and video, as well as techniques and technologies you can take advantage of to ensure the best possible quality and/or performance of your streams.
+- [Media types and formats on the web](/en-US/docs/Web/Media/Guides/Formats)
+  - : A guide to the file types and codecs available for images, audio, and video media on the web. This includes recommendations for what formats to use for what kinds of content, best practices including how to provide fallbacks and how to prioritize media types, and also includes general browser support information for each media container and codec.
+- [Using images in HTML](/en-US/docs/Web/Media/Guides/Images)
+  - : A guide to adding images to websites that are responsive, accessible, and performant.
+
 ## References
 
 ### HTML
@@ -40,23 +57,6 @@ These articles describe the HTML elements used for including media:
   - : The Web Audio API lets you generate, filter, and manipulate sound data both in real-time and on pre-recorded material, then send that audio to a destination such as an `<audio>` element, a media stream, or to disk.
 - [WebRTC](/en-US/docs/Web/API/WebRTC_API)
   - : WebRTC (Web Real-Time Communication) makes it possible to stream live audio and video, as well as transfer arbitrary data, between two peers over the Internet, without requiring an intermediary.
-
-## Guides
-
-- [Audio and Video Delivery](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery)
-  - : We can deliver audio and video on the web in a number of ways, ranging from 'static' media files to adaptive live streams. This article is intended as a starting point for exploring the various delivery mechanisms of web-based media and compatibility with popular browsers.
-- [Audio and Video manipulation](/en-US/docs/Web/Media/Guides/Audio_and_video_manipulation)
-  - : Having native audio and video in the browser means we can use these data streams with technologies such as {{htmlelement("canvas")}}, [WebGL](/en-US/docs/Web/API/WebGL_API) or [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) to modify audio and video directly, for example adding reverb/compression effects to audio, or grayscale/sepia filters to video.
-- [Autoplay guide for media and Web Audio APIs](/en-US/docs/Web/Media/Guides/Autoplay)
-  - : Unexpected automatic playback of media or audio can be an unwelcome surprise to users. While autoplay serves a purpose, it should be used carefully. To give users control over this, many browsers now provide forms of autoplay blocking. This article is a guide to autoplay, with tips on when and how to use it and how to work with browsers to handle autoplay blocking gracefully.
-- [DASH Adaptive Streaming for HTML 5 Video](Web/Media/Guides/DASH_Adaptive_Streaming_for_HTML_5_Video)
-  - : Dynamic Adaptive Streaming over HTTP (DASH) is an adaptive streaming protocol. This means that it allows for a video stream to switch between bit rates on the basis of network performance, in order to keep a video playing.
-- [Streaming audio and video](/en-US/docs/Web/Media/Guides/Streaming)
-  - : A guide which covers how to stream audio and video, as well as techniques and technologies you can take advantage of to ensure the best possible quality and/or performance of your streams.
-- [Media types and formats on the web](/en-US/docs/Web/Media/Guides/Formats)
-  - : A guide to the file types and codecs available for images, audio, and video media on the web. This includes recommendations for what formats to use for what kinds of content, best practices including how to provide fallbacks and how to prioritize media types, and also includes general browser support information for each media container and codec.
-- [Using images in HTML](/en-US/docs/Web/Media/Guides/Images)
-  - : A guide to adding images to websites that are responsive, accessible, and performant.
 
 ## Related topics
 

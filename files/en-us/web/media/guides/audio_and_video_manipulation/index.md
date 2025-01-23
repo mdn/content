@@ -373,7 +373,7 @@ Libraries currently exist for the following formats:
 
 ## See also
 
-### Tutorials
+### Guides
 
 - [Manipulating Video Using Canvas](/en-US/docs/Web/API/Canvas_API/Manipulating_video_using_canvas)
 - [HTML playbackRate explained](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery/WebAudio_playbackRate_explained)

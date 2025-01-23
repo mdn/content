@@ -14,12 +14,10 @@ This guide provides an overview of the media file types, {{Glossary("codec", "co
 
 {{SubPagesWithSummaries}}
 
-## Tutorials and how-tos
-
 - [Learn: HTML video and audio](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
   - : This tutorial introduces and details the use of media on the web.
 
-## Other topics
+## Related topics
 
 - [Media Capabilities API](/en-US/docs/Web/API/Media_Capabilities_API)
   - : The Media Capabilities API lets you discover the encoding and decoding capabilities of the device your app or site is running on. This lets you make real-time decisions about what formats to use and when.

@@ -542,6 +542,21 @@
       {
         "if": {
           "properties": {
+            "slug": { "type": "string", "pattern": "^Web/Media" }
+          }
+        },
+        "then": {
+          "properties": {
+            "page-type": {
+              "enum": ["guide", "landing-page", "listing-page"]
+            }
+          }
+        },
+        "else": false
+      },
+      {
+        "if": {
+          "properties": {
             "slug": { "type": "string", "pattern": "^Web/XSLT" }
           }
         },
