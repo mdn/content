@@ -63,7 +63,7 @@ jobs:
 
       - name: Build changed content
         id: build-content
-        if: ${{ env.GIT_DIFF_CONTENT }}
+        if: env.GIT_DIFF_CONTENT
         env:
           CONTENT_ROOT: ${{ github.workspace }}/files
 
@@ -119,7 +119,7 @@ jobs:
           wget https://github.com/${{ github.repository }}/compare/${BASE_SHA}...${HEAD_SHA}.diff -O ${BUILD_OUT_ROOT}/DIFF
 
       - name: Merge static assets with built documents
-        if: ${{ env.GIT_DIFF_CONTENT }}
+        if: env.GIT_DIFF_CONTENT
         run: |
           # Exclude the .map files, as they're used for debugging JS and CSS.
           rsync -a --exclude "*.map" node_modules/@mdn/yari/client/build/ $BUILD_OUT_ROOT
@@ -127,13 +127,13 @@ jobs:
           du -sh $BUILD_OUT_ROOT
 
       - uses: actions/upload-artifact@v4
-        if: ${{ env.GIT_DIFF_CONTENT }}
+        if: env.GIT_DIFF_CONTENT
         with:
           name: build
           path: ${{ env.BUILD_OUT_ROOT }}
 
       - name: Check changed files
-        if: ${{ env.GIT_DIFF_FILES }}
+        if: env.GIT_DIFF_FILES
         run: |
           echo $GIT_DIFF_FILES
 
