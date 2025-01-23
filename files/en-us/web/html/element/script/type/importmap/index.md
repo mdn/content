@@ -28,17 +28,12 @@ For more information, see the [Importing modules using import maps](/en-US/docs/
 
 The `src`, `async`, `nomodule`, `defer`, `crossorigin`, `integrity`, and `referrerpolicy` attributes must not be specified.
 
-Only the first import map in the document with an inline definition is processed; any additional import maps and external import maps are ignored.
-
 ### Exceptions
 
 - `TypeError`
   - : The import map definition is not a JSON object, the `importmap` key is defined but its value is not a JSON object, or the `scopes` key is defined but its value is not a JSON object.
 
 Browsers generate console warnings for other cases where the import map JSON does not conform to the [import map](#import_map_json_representation) schema.
-
-An [`error` event](/en-US/docs/Web/API/HTMLElement/error_event) is fired at script elements with `type="importmap"` that are not processed.
-This might occur, for example, if module loading has already started when an import map is processed, or if multiple import maps are defined in the page.
 
 ## Description
 
@@ -168,6 +163,17 @@ For example, the map below defines integrity metadata for the `square.js` module
   }
 </script>
 ```
+
+### Merging multiple import maps
+
+Internally, browsers maintain a single global import map representation, and merge the contents of registered import maps into it.
+
+Module specifiers in each registered map that were already resolved before it was registered are dropped. Future resolution of these specifiers will provide the same results as their previous resolution.
+
+Similarly, module specifiers in a registered map that were already mapped to URLs in the global map are dropped and their previous mapping prevails.
+
+[!NOTE]
+In non-supporting browsers (check the [compatibility data](#browser_compatibility)), a [polyfill](https://github.com/guybedford/es-module-shims) can be used to avoid issues related to module resolution.
 
 ## Import map JSON representation
 
