@@ -20,9 +20,6 @@ Container queries are similar to dimension [media queries](/en-US/docs/Web/CSS/C
 ### Properties
 
 - {{cssxref("contain")}}
-- {{cssxref("container")}} shorthand
-  - {{cssxref("container-name")}}
-  - {{cssxref("container-type")}}
 - {{cssxref("content-visibility")}}
 
 ### At-rules and descriptors
@@ -87,7 +84,7 @@ Container queries are similar to dimension [media queries](/en-US/docs/Web/CSS/C
   - {{cssxref("@starting-style")}} at-rule
   - {{cssxref("transition-behavior")}} property
 
-- CSS box sizing module
+- [CSS box sizing](/en-US/docs/Web/CSS/CSS_box_sizing) module
 
   - {{CSSxRef("aspect-ratio")}} property
   - {{cssxref("contain-intrinsic-size")}} shorthand property
