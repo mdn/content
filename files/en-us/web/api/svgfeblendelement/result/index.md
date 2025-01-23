@@ -26,7 +26,7 @@ An {{domxref("SVGAnimatedString")}}.
 ```js
 const feBlendElement = document.querySelector("feBlend");
 const filterName = feBlendElement.result;
-console.log(filterName.baseVa); // the filter's assigned name
+console.log(filterName.baseVal); // the filter's assigned name
 ```
 
 ## Specifications
