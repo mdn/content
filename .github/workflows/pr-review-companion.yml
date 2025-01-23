@@ -7,7 +7,7 @@ name: PR review companion
 
 on:
   workflow_run:
-    workflows: ["PR Test", "PR Test - new CI"]
+    workflows: ["PR Test"]
     types:
       - completed
 
