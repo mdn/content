@@ -2,10 +2,12 @@
 title: Temporal.Duration.from()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/Duration/from
 page-type: javascript-static-method
+status:
+  - experimental
 browser-compat: javascript.builtins.Temporal.Duration.from
 ---
 
-{{JSRef}}
+{{JSRef}}{{SeeCompatTable}}
 
 The **`Temporal.Duration.from()`** static method creates a new `Temporal.Duration` object from another `Temporal.Duration` object, an object with duration properties, or an ISO 8601 string.
 

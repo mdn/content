@@ -2,10 +2,12 @@
 title: Temporal.PlainYearMonth.prototype.monthsInYear
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainYearMonth/monthsInYear
 page-type: javascript-instance-accessor-property
+status:
+  - experimental
 browser-compat: javascript.builtins.Temporal.PlainYearMonth.monthsInYear
 ---
 
-{{JSRef}}
+{{JSRef}}{{SeeCompatTable}}
 
 The **`monthsInYear`** accessor property of {{jsxref("Temporal.PlainYearMonth")}} instances returns a positive integer representing the number of months in the year of this date. It is [calendar](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal#calendars)-dependent.
 

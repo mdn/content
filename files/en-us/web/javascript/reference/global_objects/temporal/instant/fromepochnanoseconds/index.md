@@ -2,10 +2,12 @@
 title: Temporal.Instant.fromEpochNanoseconds()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/Instant/fromEpochNanoseconds
 page-type: javascript-static-method
+status:
+  - experimental
 browser-compat: javascript.builtins.Temporal.Instant.fromEpochNanoseconds
 ---
 
-{{JSRef}}
+{{JSRef}}{{SeeCompatTable}}
 
 The **`Temporal.Instant.fromEpochNanoseconds()`** static method creates a new `Temporal.Instant` object from the number of nanoseconds since the Unix epoch (midnight at the beginning of January 1, 1970, UTC).
 
