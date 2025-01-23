@@ -23,7 +23,7 @@ An {{domxref("SVGAnimatedString")}}.
 ```js
 const feGaussianBlurElement = document.querySelector("feGaussianBlur");
 const filterName = feGaussianBlurElement.result;
-console.log(filterName.baseVa); // the filter's assigned name
+console.log(filterName.baseVal); // the filter's assigned name
 ```
 
 ## Specifications
