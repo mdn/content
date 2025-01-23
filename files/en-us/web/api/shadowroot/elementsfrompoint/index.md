@@ -21,9 +21,9 @@ elementsFromPoint(x, y)
 ### Parameters
 
 - `x`
-  - : The horizontal coordinate of a point.
+  - : The horizontal coordinate of a point, relative to the left edge of the current {{Glossary("viewport")}}.
 - `y`
-  - : The vertical coordinate of a point.
+  - : The vertical coordinate of a point, relative to the top edge of the current viewport.
 
 ### Return value
 
