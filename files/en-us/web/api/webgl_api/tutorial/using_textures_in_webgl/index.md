@@ -221,7 +221,7 @@ const vsSource = `
   `;
 ```
 
-The key change here is that instead of fetching the vertex color, we're fetching the texture coordinates and passing them to the vertex shader; this will indicate the location within the texture corresponding to the vertex.
+The key change here is that instead of fetching the vertex color, we're fetching the texture coordinates and passing them to the fragment shader; this will indicate the location within the texture corresponding to the vertex.
 
 ### The fragment shader
 

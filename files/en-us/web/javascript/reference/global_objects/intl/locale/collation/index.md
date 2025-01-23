@@ -13,7 +13,7 @@ The **`collation`** accessor property of {{jsxref("Intl.Locale")}} instances ret
 
 Collation is the process of ordering strings of characters. It is used whenever strings must be sorted and placed into a certain order, from search query results to ordering records in a database. While the idea of placing strings in order might seem trivial, the idea of order can vary from region to region and language to language. The `collation` property's value is set at construction time, either through the `co` key of the locale identifier or through the `collation` option of the {{jsxref("Intl/Locale/Locale", "Intl.Locale()")}} constructor. The latter takes priority if they are both present; and if neither is present, the property has value `undefined`.
 
-For a list of supported collation types, see [`Intl.Locale.prototype.getCollations()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/getCollations#supported_collation_types).
+For a list of supported collation types, see [`Intl.supportedValuesOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#supported_collation_types).
 
 The set accessor of `collation` is `undefined`. You cannot change this property directly.
 

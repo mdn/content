@@ -89,7 +89,7 @@ All web pages can each be found at a unique location (web address, also called a
 
 A _website_ is a collection of linked web pages (plus their associated resources) that share a unique [domain name](/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name). Each web page of a given website provides explicit links—most of the time in the form of clickable portions of text—that allow the user to move from one page of the website to another.
 
-When you load your favourite website in a browser, it tends to first display the website's main web page, or _homepage_ (casually referred to as "home"):
+When you load your favorite website in a browser, it tends to first display the website's main web page, or _homepage_ (casually referred to as "home"):
 
 ![Example of a website domain name in the browser address bar](web-site.jpg)
 
@@ -97,7 +97,7 @@ When you load your favourite website in a browser, it tends to first display the
 >
 > **Try it out**
 >
-> Try clicking some menu items or links to look at some different pages on your favourite website.
+> Try clicking some menu items or links to look at some different pages on your favorite website.
 
 > [!NOTE]
 > It is also possible to have a [_single-page app_](/en-US/docs/Glossary/SPA): a website that consists of a single web page that is dynamically updated with new content when needed.
@@ -144,13 +144,13 @@ When you access the web, quite a lot happens between your first interaction (for
    2. When that file is received by the browser, it will start to parse it, and will probably find instructions to make more requests. As discussed above, these might be for files to embed such as images, style information, scripts, and so on.
 4. When all of the resources have been requested, the web browser parses and renders them as required, before displaying the result to the user.
 
-This description of how the web works is heavily simplified, but it is all you really need to know at this point. You will find a more detailed account of how web pages and requested and rendered by a web browser in our [Web standards](/en-US/docs/Learn_web_development/Getting_started/Web_standards) module, slightly later on.
+This description of how the web works is heavily simplified, but it is all you really need to know at this point. You will find a more detailed account of how web pages are requested and rendered by a web browser in our [Web standards](/en-US/docs/Learn_web_development/Getting_started/Web_standards) module, slightly later on.
 
-For now, try opening a web browser and loading up a couple of your favourite sites, thinking about the above steps as you do so.
+For now, try opening a web browser and loading up a couple of your favorite sites, thinking about the above steps as you do so.
 
 ## Searching for information
 
-As a web developer, you will spend a lot of time searching for information, from syntax you can't remember to solutions to specific problems. It is therefore a good idea to learn how to effecively search the web.
+As a web developer, you will spend a lot of time searching for information, from syntax you can't remember to solutions to specific problems. It is therefore a good idea to learn how to effectively search the web.
 
 If you are looking for general information about a specific web technology feature, you should type the name of the feature into the MDN search box. For example, try typing `box model`, `fetch()` or `video element` into the the search box and see what comes up. If you don't find the information you need, try expanding your search — try your search term in a search engine.
 
@@ -208,7 +208,7 @@ As a result, you need to be careful to check the answers they give you, and not 
 
   - Typing in `"ant fish cheese"` (with the quotes) will only return results that contain that exact phrase.
   - `"ant cheese" -fish` will return results that contain `ant` and/or `cheese` but not `fish`.
-  - `and OR cheese` will only return results with one term or the other, not both. From our testing, this one only seemed to work effectively in Google.
+  - `ant OR cheese` will only return results with one term or the other, not both. From our testing, this one only seemed to work effectively in Google.
   - `intitle:cheese` will only return results that have "cheese" in the main title of the page.
 
   > [!NOTE]
