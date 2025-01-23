@@ -34,14 +34,8 @@ An array of {{domxref('Element')}} objects.
 ```js
 let customElem = document.querySelector("my-custom-element");
 let shadow = customElem.shadowRoot;
-let msg = "";
-let elements = shadow.elementsFromPoint(20, 20);
-elements.forEach((el, i) => {
-  msg += el.localName;
-  if (i < elements.length - 1) {
-    msg += " < ";
-  }
-});
+const elements = shadow.elementsFromPoint(20, 20);
+const msg = elements.map(el => el.localName).join(" < ");
 if (msg) {
   console.log(msg);
 } else {
