@@ -8,9 +8,9 @@ browser-compat: css.types.attr
 {{CSSRef}}
 
 > [!NOTE]
-> The `attr()` function can be used with any CSS property, but support for properties other than {{CSSxRef("content")}} is experimental, and support for the type-or-unit parameter is sparse.
+> The `attr()` function can be used with any CSS property, but support for properties other than {{CSSxRef("content")}} is experimental.
 
-The **`attr()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) is used to retrieve the value of an attribute of the selected element and use it in the stylesheet. It can also be used on [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements), in which case the value of the attribute on the pseudo-element's originating element is returned.
+The **`attr()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) is used to retrieve the value of an attribute of the selected element and use it in a property value, similar to how the {{cssxref("var", "var()")}} function substitutes a custom property value. It can also be used with [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements), in which case the attribute's value on the pseudo-element's originating element is returned.
 
 {{EmbedInteractiveExample("pages/tabbed/function-attr.html", "tabbed-shorter")}}
 
@@ -18,130 +18,170 @@ The **`attr()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_F
 
 ```css
 /* Basic usage */
-attr(data-count);
-attr(title);
+attr(data-count)
+attr(href)
 
 /* With type */
-attr(src url);
-attr(data-count number);
-attr(data-width px);
+attr(data-width px)
+attr(data-size rem)
+attr(data-name string)
+attr(id type(<custom-ident>))
+attr(data-count type(<number>))
+attr(data-size type(<length> | <percentage>))
 
 /* With fallback */
-attr(data-count number, 0);
-attr(src url, "");
-attr(data-width px, inherit);
-attr(data-something, "default");
+attr(data-count type(<number>), 0)
+attr(data-width px, inherit)
+attr(data-something, "default")
 ```
 
-### Values
+### Parameters
 
-- `attribute-name`
-  - : The name of an attribute on the HTML element referenced in the CSS.
-- `<type-or-unit>`
+The `attr()` function's syntax is as follows:
 
-  - : A keyword representing either the type of the attribute's value, or its unit, as in HTML some attributes have implicit units. If the use of `<type-or-unit>` as a value for the given attribute is invalid, the `attr()` expression will be invalid too. If omitted, it defaults to `string`. The list of valid values are:
+```plain
+attr(<attr-name> <attr-type>? , <fallback-value>?)
+```
 
-    - `string`
+The parameters are:
 
-      - : The attribute value is treated as a CSS {{CSSxRef("&lt;string&gt;")}}. It is NOT reparsed, and in particular the characters are used as-is instead of CSS escapes being turned into different characters.
+- `<attr-name>`
+  - : The attribute name whose value should be retrieved from the selected HTML element(s).
+- `<attr-type>`
 
-        Default value: an empty string.
+  - : Specifies how the attribute value is parsed into a CSS value. This can be the `string` keyword, a `type()` function, or a CSS dimension unit. When omitted, it defaults to `string`.
 
-    - `color`
+    - The `string` keyword parses the value into a CSS string.
 
-      - : The attribute value is parsed as a hash (3- or 6-value hash) or a keyword. It must be a valid CSS {{CSSxRef("&lt;string&gt;")}} value. Leading and trailing spaces are stripped.
+      ```css
+      attr(data-name string, "stranger")
+      ```
 
-        Default value: `currentcolor`.
+    - The `type()` function takes a `<syntax>` as its argument that specifies what [data type](/en-US/docs/Web/CSS/CSS_Types) to parse the value into. The `<syntax>` can be {{CSSxRef("&lt;angle&gt;")}}, {{CSSxRef("&lt;color&gt;")}}, {{CSSxRef("&lt;custom-ident&gt;")}}, {{CSSxRef("&lt;image&gt;")}}, {{CSSxRef("&lt;integer&gt;")}}, {{CSSxRef("&lt;length&gt;")}}, {{CSSxRef("&lt;length-percentage&gt;")}}, {{CSSxRef("&lt;number&gt;")}}, {{CSSxRef("&lt;percentage&gt;")}}, {{CSSxRef("&lt;resolution&gt;")}}, {{CSSxRef("&lt;string&gt;")}}, {{CSSxRef("&lt;time&gt;")}}, {{CSSxRef("&lt;transform-function&gt;")}}, or a combination thereof.
 
-    - `url`
+      ```css
+      attr(id type(<custom-ident>), none)
+      attr(data-count type(<number>), 0)
+      ```
 
-      - : The attribute value is parsed as a string that is used inside a CSS `url()` function.
-        Relative URL are resolved relatively to the original document, not relatively to the style sheet.
-        Leading and trailing spaces are stripped.
+      To accept multiple types, list all allowed `<syntax>`es in the `type()` function, separated by a `|`.
 
-        Default value: the URL `about:invalid` that points to a non-existent document with a generic error condition.
+      ```css
+      attr(data-size type(<length> | <percentage>), 0px)
+      ```
 
-    - `integer`
+      For [security reasons](#limitations_and_security) {{CSSxRef("&lt;url&gt;")}} is not allowed as a `<syntax>`.
 
-      - : The attribute value is parsed as a CSS {{CSSxRef("&lt;integer&gt;")}}. If it is not valid, that is not an integer or out of the range accepted by the CSS property, the default value is used.
-        Leading and trailing spaces are stripped.
+    - The `<attr-unit>` identifier specifies the unit a numeric value should have (if any). It can be the `%` character (percentage) or a [CSS distance unit](/en-US/docs/Web/CSS/CSS_Values_and_Units#distance_units) such as `px`, `rem`, `deg`, `s`, etc.
 
-        Default value: `0`, or, if `0` is not a valid value for the property, the property's minimum value.
+      ```css
+      attr(data-size rem)
+      attr(data-width px, inherit)
+      attr(data-rotation deg)
+      ```
 
-    - `number`
+- `<fallback-value>`
+  - : The value to be used if the specified attribute is missing or contains an invalid value.
 
-      - : The attribute value is parsed as a CSS {{CSSxRef("&lt;number&gt;")}}. If it is not valid, that is not a number or out of the range accepted by the CSS property, the default value is used.
-        Leading and trailing spaces are stripped.
+### Return value
 
-        Default value: `0`, or, if `0` is not a valid value for the property, the property's minimum value.
+The return value of `attr()` is the value of the HTML attribute whose name is `<attr-name>` parsed as the given `<attr-type>` or parsed as a CSS string.
 
-    - `length`
+When an `<attr-type>` is set, `attr()` will try to parse the attribute into that specified `<attr-type>` and return it. If the attribute cannot be parsed into the given `<attr-type>`, the `<fallback-value>` will be returned instead. When no `<attr-type>` is set, the attribute will be parsed into a CSS string.
 
-      - : The attribute value is parsed as a CSS {{CSSxRef("&lt;length&gt;")}} dimension, that is including the unit (e.g. `12.5em`). If it is not valid, that is not a length or out of the range accepted by the CSS property, the default value is used.
-        If the given unit is a relative length, `attr()` computes it to an absolute length.
-        Leading and trailing spaces are stripped.
+If no `<fallback-value>` is set, the return value will default to an empty string when no `<attr-type>` is set or the [guaranteed-invalid value](/en-US/docs/Glossary/guaranteed_invalid_value) when an `<attr-type>` is set.
 
-        Default value: `0`, or, if `0` is not a valid value for the property, the property's minimum value.
+## Description
 
-    - `em`, `ex`, `px`, `rem`, `vw`, `vh`, `vmin`, `vmax`, `mm`, `cm`, `in`, `pt`, or `pc`
+### Limitations and security
 
-      - : The attribute value is parsed as a CSS {{CSSxRef("&lt;number&gt;")}}, that is without the unit (e.g. `12.5`), and interpreted as a {{CSSxRef("&lt;length&gt;")}} with the specified unit. If it is not valid, that is not a number or out of the range accepted by the CSS property, the default value is used.
-        If the given unit is a relative length, `attr()` computes it to an absolute length.
-        Leading and trailing spaces are stripped.
+The `attr()` function can reference attributes that were never intended by the page author to be used for styling, and might contain sensitive information (for example, a security token used by scripts on the page). In general, this is fine, but it can become a security threat when used in URLs. You therefore can't use `attr()` to dynamically construct URLs.
 
-        Default value: `0`, or, if `0` is not a valid value for the property, the property's minimum value.
+```html
+<!-- This won't work! -->
+<span data-icon="https://example.org/icons/question-mark.svg">help</span>
+<style>
+  span[data-icon] {
+    background-image: url(attr(data-icon));
+  }
+</style>
+```
 
-    - `angle`
+Values that use `attr()` get marked as _"`attr()`-tained"_. Using an `attr()`-tainted value as or in a `<url>` makes a declaration become ["invalid at computed value time" or IACVT for short](https://brm.us/iacvt)
 
-      - : The attribute value is parsed as a CSS {{CSSxRef("&lt;angle&gt;")}} dimension, that is including the unit (e.g. `30.5deg`). If it is not valid, that is not an angle or out of the range accepted by the CSS property, the default value is used.
-        Leading and trailing spaces are stripped.
+### Backwards compatibility
 
-        Default value: `0deg`, or, if `0deg` is not a valid value for the property, the property's minimum value.
+Generally speaking, the modern `attr()` syntax is backwards-compatible because the old way of using it — without specifying an `<attr-type>` — behaves the same as before. Having `attr(data-attr)` in your code is the same as writing `attr(data-attr type(<string>))` or the simpler `attr(data-attr string))`.
 
-    - `deg`, `grad`, `rad`
+However, there are two edge cases where the modern `attr()` syntax behaves differently from the old syntax.
 
-      - : The attribute value is parsed as a CSS {{CSSxRef("&lt;number&gt;")}}, that is without the unit (e.g. `12.5`), and interpreted as an {{CSSxRef("&lt;angle&gt;")}} with the specified unit. If it is not valid, that is not a number or out of the range accepted by the CSS property, the default value is used.
-        Leading and trailing spaces are stripped.
+In the following snippet, browsers that don't support the modern `attr()` syntax will discard the second declaration because they cannot parse it. The result in those browsers is `"Hello World"`.
 
-        Default value: `0deg`, or, if `0deg` is not a valid value for the property, the property's minimum value.
+```html
+<div text="Hello"></div>
+```
 
-    - `time`
+```css
+div::before {
+  content: attr(text) " World";
+}
+div::before {
+  content: attr(text) 1px;
+}
+```
 
-      - : The attribute value is parsed as a CSS {{CSSxRef("&lt;time&gt;")}} dimension, that is including the unit (e.g. `30.5ms`). If it is not valid, that is not a time or out of the range accepted by the CSS property, the default value is used.
-        Leading and trailing spaces are stripped.
+In browsers with support for the modern syntax, the output will be … nothing. Those browsers will successfully parse the second declaration but, because it is invalid content for the `content` property, the declaration becomes ["invalid at computed value time" or IACVT for short](https://brm.us/iacvt).
 
-        Default value: `0s`, or, if `0s` is not a valid value for the property, the property's minimum value.
+To prevent this kind of situation, [feature detection](#feature_detection) is recommended.
 
-    - `s`, `ms`
+A second edge case is the following:
 
-      - : The attribute value is parsed as a CSS {{CSSxRef("&lt;number&gt;")}}, that is without the unit (e.g. `12.5`), and interpreted as an {{CSSxRef("&lt;time&gt;")}} with the specified unit. If it is not valid, that is not a number or out of the range accepted by the CSS property, the default value is used.
-        Leading and trailing spaces are stripped.
+```html
+<div id="parent"><div id="child" data-attr="foo"></div></div>
+```
 
-        Default value: `0s`, or, if `0s` is not a valid value for the property, the property's minimum value.
+```css
+#parent {
+  --x: attr(data-attr);
+}
+#child::before {
+  content: var(--x);
+}
+```
 
-    - `frequency`
+Browsers without support for modern syntax display the text `"foo"`. In browsers with modern `attr()` support there is no output.
 
-      - : The attribute value is parsed as a CSS {{CSSxRef("&lt;frequency&gt;")}} dimension, that is including the unit (e.g. `30.5kHz`). If it is not valid, that is not a frequency or out of the range accepted by the CSS property, the default value is used.
+This is because `attr()` — similar to custom properties that use the `var()` function — get substituted at [computed value time](https://brm.us/iacvt/#custom-properties). With the modern behavior, `--x` first tries to read the `data-attr` attribute from the `#parent` element, which results in an empty string because there is no such attribute on `#parent`. That empty string then gets inherited by the `#child` element, resulting in a `content: ;` declaration being set.
 
-        Default value: `0Hz`, or, if `0Hz` is not a valid value for the property, the property's minimum value.
+To prevent this sort of situation, don't pass inherited `attr()` values onto children unless you explicitly want to.
 
-    - `Hz`, `kHz`
+### Feature detection
 
-      - : The attribute value is parsed as a CSS {{CSSxRef("&lt;number&gt;")}}, that is without the unit (e.g. `12.5`), and interpreted as a {{CSSxRef("&lt;frequency&gt;")}} with the specified unit. If it is not valid, that is not a number or out of the range accepted by the CSS property, the default value is used.
-        Leading and trailing spaces are stripped.
+You can feature detect support for modern `attr()` syntax using the {{CSSxRef("@supports")}} at-rule. In the test, try to assign advanced `attr()` to a (non-custom) CSS property.
 
-        Default value: `0Hz`, or, if `0Hz` is not a valid value for the property, the property's minimum value.
+For example:
 
-    - `%`
+```css
+@supports (x: attr(x type(*))) {
+  /* Browser has modern attr() support */
+}
 
-      - : The attribute value is parsed as a CSS {{CSSxRef("&lt;number&gt;")}}, that is without the unit (e.g. `12.5`), and interpreted as a {{CSSxRef("&lt;percentage&gt;")}}. If it is not valid, that is not a number or out of the range accepted by the CSS property, the default value is used.
-        If the given value is used as a length, `attr()` computes it to an absolute length.
-        Leading and trailing spaces are stripped.
+@supports not (x: attr(x type(*))) {
+  /* Browser does not have modern attr() support */
+}
+```
 
-        Default value: `0%`, or, if `0%` is not a valid value for the property, the property's minimum value.
+We can perform the same check in JavaScript with [`CSS.supports()`](/en-US/docs/Web/API/CSS/supports_static):
 
-- `<fallback>`
-  - : The value to be used if the associated attribute is missing or contains an invalid value. If not set, CSS will use the default value defined for each `<type-or-unit>`.
+```js
+if (CSS.supports("x: attr(x type(*))")) {
+  /* Browser has modern attr() support */
+}
+
+if (!CSS.supports("x: attr(x type(*))")) {
+  /* Browser does not have modern attr() support */
+}
+```
 
 ## Formal syntax
 
@@ -170,6 +210,32 @@ In this example, we prepend the value of the `data-foo` [`data-*`](/en-US/docs/W
 #### Result
 
 {{EmbedLiveSample("content_property", "100%", 50)}}
+
+### Using a fallback value
+
+{{SeeCompatTable}}
+
+In this example, we append the value of `data-browser` [`data-*`](/en-US/docs/Web/HTML/Global_attributes/data-*) [global attribute](/en-US/docs/Web/HTML/Global_attributes) to the {{HTMLElement("p")}} element. If the `data-browser` attribute is missing from the {{HTMLElement("p")}} element, we append the _fallback_ value of "**Unknown**".
+
+#### HTML
+
+```html
+<p data-browser="Firefox">My favorite browser is:</p>
+<p>Your favorite browser is:</p>
+```
+
+#### CSS
+
+```css
+p::after {
+  content: " " attr(data-browser, "Unknown");
+  color: tomato;
+}
+```
+
+#### Result
+
+{{EmbedLiveSample("using_fallback", "100%", 90)}}
 
 ### color value
 
@@ -200,7 +266,7 @@ In this example, we set the CSS value of {{CSSXRef("background-color")}} to the 
 }
 
 .background[data-background] {
-  background-color: attr(data-background color, red);
+  background-color: attr(data-background type(<color>), red);
 }
 ```
 
@@ -208,31 +274,191 @@ In this example, we set the CSS value of {{CSSXRef("background-color")}} to the 
 
 {{EmbedLiveSample("color_value", "100%", 50)}}
 
-### using fallback
+### Using dimension units
 
 {{SeeCompatTable}}
 
-In this example, we append the value of `data-browser` [`data-*`](/en-US/docs/Web/HTML/Global_attributes/data-*) [global attribute](/en-US/docs/Web/HTML/Global_attributes) to the {{HTMLElement("p")}} element. If the `data-browser` attribute is missing from the {{HTMLElement("p")}} element, we append the _fallback_ value of "**Unknown**".
+In this example the `data-rotation` attribute is parsed into a `deg` unit, which specifies the element's rotation.
 
 #### HTML
 
 ```html
-<p data-browser="Firefox">My favorite browser is:</p>
-<p>Your favorite browser is:</p>
+<div data-rotation="-3">I am rotated by -3 degrees</div>
+<div data-rotation="2">And I by 2 degrees</div>
+<div>And so am I, using the fallback value of 1.5deg</div>
 ```
 
 #### CSS
 
+```css hidden
+body {
+  min-height: 100svh;
+  display: grid;
+  place-content: center;
+  gap: 1em;
+}
+div {
+  margin: 0 auto;
+  border: 1px solid;
+  border-radius: 0.25em;
+  padding: 0.5em;
+}
+```
+
 ```css
-p::after {
-  content: " " attr(data-browser, "Unknown");
-  color: tomato;
+div {
+  width: fit-content;
+  transform-origin: 50% 50%;
+  rotate: attr(data-rotation deg, 1.5deg);
 }
 ```
 
 #### Result
 
-{{EmbedLiveSample("using_fallback", "100%", 90)}}
+{{EmbedLiveSample("using_dimension_units", "100%", 300)}}
+
+### Parsing `attr()` values as `<custom-ident>`s
+
+{{SeeCompatTable}}
+
+In this example, the values for the {{cssxref("view-transition-name")}} property are derived from the `id` attribute of the element. The attribute gets parsed into a {{CSSxRef("&lt;custom-ident&gt;")}}, which is what {{cssxref("view-transition-name")}} accepts as a value.
+
+The resulting values for {{cssxref("view-transition-name")}} are `card-1`, `card-2`, `card-3`, etc.
+
+#### HTML
+
+The HTML contains four cards with different `id` attributes and a "Shuffle cards" `<button>`, which shuffles the cards.
+
+```html
+<div class="cards">
+  <div class="card" id="card-1">1</div>
+  <div class="card" id="card-2">2</div>
+  <div class="card" id="card-3">3</div>
+  <div class="card" id="card-4">4</div>
+</div>
+<button>Shuffle cards</button>
+```
+
+```html hidden
+<div class="warning">
+  <p>
+    You browser does not support advanced <code>attr()</code>. As a result, this
+    demo won’t do anything.
+  </p>
+</div>
+```
+
+#### CSS
+
+The cards are laid out in a flex container:
+
+```css
+.cards {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  padding: 1em;
+}
+```
+
+```css hidden
+:root {
+  view-transition-name: none;
+}
+::view-transition {
+  pointer-events: none;
+}
+
+@supports (x: attr(x type(*))) {
+  .warning {
+    display: none;
+  }
+}
+
+@layer layout {
+  .card {
+    border-radius: 0.25em;
+    width: 20vw;
+    max-width: 5em;
+    aspect-ratio: 1 / 1.6;
+    background: lightgrey;
+
+    display: grid;
+    place-content: center;
+    font-size: 2em;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    min-height: 100svh;
+    display: grid;
+    place-content: center;
+  }
+
+  button {
+    justify-self: center;
+  }
+}
+
+@layer warning {
+  .warning {
+    padding: 1em;
+    border: 1px solid #ccc;
+    background: rgba(255 255 205 / 0.8);
+    text-align: center;
+    order: -1;
+    margin: 1em;
+  }
+
+  .warning > :first-child {
+    margin-top: 0;
+  }
+  .warning > :last-child {
+    margin-bottom: 0;
+  }
+}
+```
+
+On each card, the `attr()` function gets the `id` attribute and parses it into a {{CSSxRef("&lt;custom-ident&gt;")}}, which is used as the value for the {{cssxref("view-transition-name")}} property. When there is no `id` set on a card, the fallback value `none` is used instead.
+
+```css
+.card {
+  view-transition-name: attr(id type(<custom-ident>), none);
+  view-transition-class: card;
+}
+```
+
+#### JavaScript
+
+When the `<button>` is pressed the cards are shuffled. This is done by randomizing the order of an array containing references to all the cards and then updating the {{CSSxRef("order")}} property of each card to its new array index position.
+
+To animate each card to its new position, [View Transitions](/en-US/docs/Web/API/View_Transition_API/Using) are used. This is done by wrapping the `order` update in a call to [`document.startViewTransition`](/en-US/docs/Web/API/Document/startViewTransition).
+
+```js
+const shuffle = (array) => {
+  for (let i = array.length - 1; i >= 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+};
+
+document.querySelector("button").addEventListener("click", (e) => {
+  const $cards = Array.from(document.querySelectorAll(".card"));
+  shuffle($cards);
+  document.startViewTransition(() => {
+    $cards.forEach(($card, i) => {
+      $card.style.setProperty("order", i);
+    });
+  });
+});
+```
+
+#### Result
+
+{{EmbedLiveSample("parsing_attr_values_as_custom-idents", "100%", 400)}}
 
 ## Specifications
 

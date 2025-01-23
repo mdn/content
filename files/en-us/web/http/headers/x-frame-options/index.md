@@ -2,15 +2,11 @@
 title: X-Frame-Options
 slug: Web/HTTP/Headers/X-Frame-Options
 page-type: http-header
-status:
-  - deprecated
 browser-compat: http.headers.X-Frame-Options
 ---
 
-{{HTTPSidebar}}{{deprecated_header}}
-
-> [!WARNING]
-> Instead of this header, use the {{HTTPHeader("Content-Security-Policy/frame-ancestors", "frame-ancestors")}} directive in a {{HTTPHeader("Content-Security-Policy")}} header.
+> [!NOTE]
+> For more comprehensive options than offered by this header, see the {{HTTPHeader("Content-Security-Policy/frame-ancestors", "frame-ancestors")}} directive in a {{HTTPHeader("Content-Security-Policy")}} header.
 
 The HTTP **`X-Frame-Options`** {{Glossary("response header")}} can be used to indicate whether a browser should be allowed to render a page in a {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("embed")}} or {{HTMLElement("object")}}. Sites can use this to avoid [clickjacking](/en-US/docs/Web/Security/Types_of_attacks#clickjacking) attacks, by ensuring that their content is not embedded into other sites.
 
