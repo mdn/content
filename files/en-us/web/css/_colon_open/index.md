@@ -7,7 +7,7 @@ browser-compat: css.selectors.open
 
 {{CSSRef}}
 
-The **`:open`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) selects elements in the open state. It works only on elements that have both open and closed states. For example, it matches {{HTMLElement("details")}} and {{HTMLElement("dialog")}} when they are in their open state, and matches {{HTMLElement("select")}} and {{HTMLElement("input")}} when they are in modes which have a picker and the picker is showing.
+The **`:open`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) selects elements in the open state. It works only on elements that have both open and closed states. It matches {{HTMLElement("details")}} and {{HTMLElement("dialog")}} when they are in their open state, and matches {{HTMLElement("select")}} and {{HTMLElement("input")}} when they are in modes which have a picker and the picker is showing.
 
 ## Syntax
 
