@@ -173,7 +173,7 @@ For example, the following two import maps:
 ```html
 <script type="importmap">
   {
-     "imports": {
+    "imports": {
       "/app/": "./original-app/"
     }
   }
