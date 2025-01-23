@@ -2,10 +2,12 @@
 title: Temporal.PlainDateTime.prototype.daysInMonth
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainDateTime/daysInMonth
 page-type: javascript-instance-accessor-property
+status:
+  - experimental
 browser-compat: javascript.builtins.Temporal.PlainDateTime.daysInMonth
 ---
 
-{{JSRef}}
+{{JSRef}}{{SeeCompatTable}}
 
 The **`daysInMonth`** accessor property of {{jsxref("Temporal.PlainDateTime")}} instances returns a positive integer representing the number of days in the month of this date. It is [calendar](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal#calendars)-dependent.
 

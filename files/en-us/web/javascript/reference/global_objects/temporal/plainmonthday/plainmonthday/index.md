@@ -2,10 +2,12 @@
 title: Temporal.PlainMonthDay()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainMonthDay/PlainMonthDay
 page-type: javascript-constructor
+status:
+  - experimental
 browser-compat: javascript.builtins.Temporal.PlainMonthDay.PlainMonthDay
 ---
 
-{{JSRef}}
+{{JSRef}}{{SeeCompatTable}}
 
 The **`Temporal.PlainMonthDay()`** constructor creates {{jsxref("Temporal.PlainMonthDay")}} objects.
 

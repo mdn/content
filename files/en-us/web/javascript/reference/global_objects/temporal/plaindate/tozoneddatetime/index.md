@@ -2,10 +2,12 @@
 title: Temporal.PlainDate.prototype.toZonedDateTime()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainDate/toZonedDateTime
 page-type: javascript-instance-method
+status:
+  - experimental
 browser-compat: javascript.builtins.Temporal.PlainDate.toZonedDateTime
 ---
 
-{{JSRef}}
+{{JSRef}}{{SeeCompatTable}}
 
 The **`toZonedDateTime()`** method of {{jsxref("Temporal.PlainDate")}} instances returns a new {{jsxref("Temporal.ZonedDateTime")}} object representing this date, a supplied time, and a supplied time zone, in the same calendar system.
 

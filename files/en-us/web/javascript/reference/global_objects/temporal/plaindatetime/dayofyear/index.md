@@ -2,10 +2,12 @@
 title: Temporal.PlainDateTime.prototype.dayOfYear
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainDateTime/dayOfYear
 page-type: javascript-instance-accessor-property
+status:
+  - experimental
 browser-compat: javascript.builtins.Temporal.PlainDateTime.dayOfYear
 ---
 
-{{JSRef}}
+{{JSRef}}{{SeeCompatTable}}
 
 The **`dayOfYear`** accessor property of {{jsxref("Temporal.PlainDateTime")}} instances returns a positive integer representing the 1-based day index in the year of this date. The first day of this year is `1`, and the last day is the {{jsxref("Temporal/PlainDateTime/daysInYear", "daysInYear")}}. It is [calendar](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal#calendars)-dependent.
 

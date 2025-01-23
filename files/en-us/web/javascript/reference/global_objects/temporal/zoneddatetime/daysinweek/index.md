@@ -2,10 +2,12 @@
 title: Temporal.ZonedDateTime.prototype.daysInWeek
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime/daysInWeek
 page-type: javascript-instance-accessor-property
+status:
+  - experimental
 browser-compat: javascript.builtins.Temporal.ZonedDateTime.daysInWeek
 ---
 
-{{JSRef}}
+{{JSRef}}{{SeeCompatTable}}
 
 The **`daysInWeek`** accessor property of {{jsxref("Temporal.ZonedDateTime")}} instances returns a positive integer representing the number of days in the week of this date. It is [calendar](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal#calendars)-dependent.
 

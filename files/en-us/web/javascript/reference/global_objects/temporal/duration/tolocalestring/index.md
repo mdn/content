@@ -2,10 +2,12 @@
 title: Temporal.Duration.prototype.toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/Duration/toLocaleString
 page-type: javascript-instance-method
+status:
+  - experimental
 browser-compat: javascript.builtins.Temporal.Duration.toLocaleString
 ---
 
-{{JSRef}}
+{{JSRef}}{{SeeCompatTable}}
 
 The **`toLocaleString()`** method of {{jsxref("Temporal.Duration")}} instances returns a string with a language-sensitive representation of this duration. In implementations with [`Intl.DurationFormat` API](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DurationFormat) support, this method delegates to `Intl.DurationFormat`.
 
