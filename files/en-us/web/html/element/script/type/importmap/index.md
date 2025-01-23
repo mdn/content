@@ -215,7 +215,6 @@ Would be equivalent to the following single import map:
 
 Module specifiers in each registered map that were already resolved before it was registered are dropped. Future resolution of these specifiers will provide the same results as their previous resolution.
 
-
 For example, if the module specifier "/app/helper.js" was already resolved, the following new import map:
 
 ```html
@@ -265,6 +264,7 @@ For example, the following two import maps:
   }
 </script>
 ```
+
 Would be equivalent to the following single import map:
 
 ```html
