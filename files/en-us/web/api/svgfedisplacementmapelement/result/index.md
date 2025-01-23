@@ -23,7 +23,7 @@ An {{domxref("SVGAnimatedString")}}.
 ```js
 const feDisplacementMapElement = document.querySelector("feDisplacementMap");
 const filterName = feDisplacementMapElement.result;
-console.log(filterName.baseVa); // the filter's assigned name
+console.log(filterName.baseVal); // the filter's assigned name
 ```
 
 ## Specifications
