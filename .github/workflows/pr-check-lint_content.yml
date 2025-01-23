@@ -39,14 +39,14 @@ jobs:
           echo "DIFF_DOCUMENTS=${DIFF_DOCUMENTS}" >> $GITHUB_ENV
 
       - name: Checkout HEAD
-        if: ${{ env.DIFF_DOCUMENTS }}
+        if: env.DIFF_DOCUMENTS
         uses: actions/checkout@v4
         with:
           ref: ${{ github.event.pull_request.head.sha }}
           path: pr_head
 
       - name: Get changed content from HEAD
-        if: ${{ env.DIFF_DOCUMENTS }}
+        if: env.DIFF_DOCUMENTS
         run: |
           git config --global user.email "108879845+mdn-bot@users.noreply.github.com"
           git config --global user.name "mdn-bot"
@@ -62,21 +62,21 @@ jobs:
           git commit -m "Code from PR head"
 
       - name: Setup Node.js environment
-        if: ${{ env.DIFF_DOCUMENTS }}
+        if: env.DIFF_DOCUMENTS
         uses: actions/setup-node@v4
         with:
           node-version-file: ".nvmrc"
           cache: yarn
 
       - name: Install all yarn packages
-        if: ${{ env.DIFF_DOCUMENTS }}
+        if: env.DIFF_DOCUMENTS
         run: yarn --frozen-lockfile
         env:
           # https://github.com/microsoft/vscode-ripgrep#github-api-limit-note
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Lint and format markdown files
-        if: ${{ env.DIFF_DOCUMENTS }}
+        if: env.DIFF_DOCUMENTS
         run: |
           # Generate random delimiter
           # https://docs.github.com/en/actions/using-workflows/workflow-commands-for-github-actions#multiline-strings
@@ -120,13 +120,13 @@ jobs:
           git diff
 
       - name: Setup reviewdog
-        if: ${{ env.FILES_MODIFIED == 'true' || env.MD_LINT_FAILED == 'true' }}
+        if: env.FILES_MODIFIED == 'true' || env.MD_LINT_FAILED == 'true'
         uses: reviewdog/action-setup@v1
         with:
           reviewdog_version: latest
 
       - name: Suggest changes using diff
-        if: ${{ env.FILES_MODIFIED == 'true' }}
+        if: env.FILES_MODIFIED == 'true'
         env:
           REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -141,7 +141,7 @@ jobs:
             -reporter=github-pr-review < "${TMPFILE}"
 
       - name: Add reviews for markdownlint errors
-        if: ${{ env.MD_LINT_FAILED == 'true' }}
+        if: env.MD_LINT_FAILED == 'true'
         env:
           REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -154,7 +154,7 @@ jobs:
             -reporter="github-pr-review"
 
       - name: Fail if any issues pending
-        if: ${{ env.FILES_MODIFIED == 'true' || env.MD_LINT_FAILED == 'true' || env.FM_LINT_FAILED == 'true' }}
+        if: env.FILES_MODIFIED == 'true' || env.MD_LINT_FAILED == 'true' || env.FM_LINT_FAILED == 'true'
         env:
           MD_LINT_FAILED: ${{ env.MD_LINT_FAILED }}
           FM_LINT_FAILED: ${{ env.FM_LINT_FAILED }}
