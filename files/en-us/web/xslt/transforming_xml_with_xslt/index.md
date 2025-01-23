@@ -22,43 +22,43 @@ Our focus here is on the second type of stylesheet that Gecko supports: the XSLT
 
 ### Elements
 
-[Elements](/en-US/docs/Web/XSLT/Element)
+[Elements](/en-US/docs/Web/XSLT/Reference/Element)
 
-- [xsl:apply-imports](/en-US/docs/Web/XSLT/Element/apply-imports) _(supported)_
-- [xsl:apply-templates](/en-US/docs/Web/XSLT/Element/apply-templates) _(supported)_
-- [xsl:attribute](/en-US/docs/Web/XSLT/Element/attribute) _(supported)_
-- [xsl:attribute-set](/en-US/docs/Web/XSLT/Element/attribute-set) _(supported)_
-- [xsl:call-template](/en-US/docs/Web/XSLT/Element/call-template) _(supported)_
-- [xsl:choose](/en-US/docs/Web/XSLT/Element/choose) _(supported)_
-- [xsl:comment](/en-US/docs/Web/XSLT/Element/comment) _(supported)_
-- [xsl:copy](/en-US/docs/Web/XSLT/Element/copy) _(supported)_
-- [xsl:copy-of](/en-US/docs/Web/XSLT/Element/copy-of) _(supported)_
-- [xsl:decimal-format](/en-US/docs/Web/XSLT/Element/decimal-format) _(supported)_
-- [xsl:element](/en-US/docs/Web/XSLT/Element/element) _(supported)_
-- [xsl:fallback](/en-US/docs/Web/XSLT/Element/fallback) _(not supported)_
-- [xsl:for-each](/en-US/docs/Web/XSLT/Element/for-each) _(supported)_
-- [xsl:if](/en-US/docs/Web/XSLT/Element/if) _(supported)_
-- [xsl:import](/en-US/docs/Web/XSLT/Element/import) _(mostly supported)_
-- [xsl:include](/en-US/docs/Web/XSLT/Element/include) _(supported)_
-- [xsl:key](/en-US/docs/Web/XSLT/Element/key) _(supported)_
-- [xsl:message](/en-US/docs/Web/XSLT/Element/message) _(supported)_
-- [xsl:namespace-alias](/en-US/docs/Web/XSLT/Element/namespace-alias) _(not supported)_
-- [xsl:number](/en-US/docs/Web/XSLT/Element/number) _(partially supported)_
-- [xsl:otherwise](/en-US/docs/Web/XSLT/Element/otherwise) _(supported)_
-- [xsl:output](/en-US/docs/Web/XSLT/Element/output) _(partially supported)_
-- [xsl:param](/en-US/docs/Web/XSLT/Element/param) _(supported)_
-- [xsl:preserve-space](/en-US/docs/Web/XSLT/Element/preserve-space) _(supported)_
-- [xsl:processing-instruction](/en-US/docs/Web/XSLT/Element/processing-instruction)
-- [xsl:sort](/en-US/docs/Web/XSLT/Element/sort) _(supported)_
-- [xsl:strip-space](/en-US/docs/Web/XSLT/Element/strip-space) _(supported)_
-- [xsl:stylesheet](/en-US/docs/Web/XSLT/Element/stylesheet) _(partially supported)_
-- [xsl:template](/en-US/docs/Web/XSLT/Element/template) _(supported)_
-- [xsl:text](/en-US/docs/Web/XSLT/Element/text) _(partially supported)_
-- [xsl:transform](/en-US/docs/Web/XSLT/Element/transform) _(supported)_
-- [xsl:value-of](/en-US/docs/Web/XSLT/Element/value-of) _(partially supported)_
-- [xsl:variable](/en-US/docs/Web/XSLT/Element/variable) _(supported)_
-- [xsl:when](/en-US/docs/Web/XSLT/Element/when) _(supported)_
-- [xsl:with-param](/en-US/docs/Web/XSLT/Element/with-param) _(supported)_
+- [xsl:apply-imports](/en-US/docs/Web/XSLT/Reference/Element/apply-imports) _(supported)_
+- [xsl:apply-templates](/en-US/docs/Web/XSLT/Reference/Element/apply-templates) _(supported)_
+- [xsl:attribute](/en-US/docs/Web/XSLT/Reference/Element/attribute) _(supported)_
+- [xsl:attribute-set](/en-US/docs/Web/XSLT/Reference/Element/attribute-set) _(supported)_
+- [xsl:call-template](/en-US/docs/Web/XSLT/Reference/Element/call-template) _(supported)_
+- [xsl:choose](/en-US/docs/Web/XSLT/Reference/Element/choose) _(supported)_
+- [xsl:comment](/en-US/docs/Web/XSLT/Reference/Element/comment) _(supported)_
+- [xsl:copy](/en-US/docs/Web/XSLT/Reference/Element/copy) _(supported)_
+- [xsl:copy-of](/en-US/docs/Web/XSLT/Reference/Element/copy-of) _(supported)_
+- [xsl:decimal-format](/en-US/docs/Web/XSLT/Reference/Element/decimal-format) _(supported)_
+- [xsl:element](/en-US/docs/Web/XSLT/Reference/Element/element) _(supported)_
+- [xsl:fallback](/en-US/docs/Web/XSLT/Reference/Element/fallback) _(not supported)_
+- [xsl:for-each](/en-US/docs/Web/XSLT/Reference/Element/for-each) _(supported)_
+- [xsl:if](/en-US/docs/Web/XSLT/Reference/Element/if) _(supported)_
+- [xsl:import](/en-US/docs/Web/XSLT/Reference/Element/import) _(mostly supported)_
+- [xsl:include](/en-US/docs/Web/XSLT/Reference/Element/include) _(supported)_
+- [xsl:key](/en-US/docs/Web/XSLT/Reference/Element/key) _(supported)_
+- [xsl:message](/en-US/docs/Web/XSLT/Reference/Element/message) _(supported)_
+- [xsl:namespace-alias](/en-US/docs/Web/XSLT/Reference/Element/namespace-alias) _(not supported)_
+- [xsl:number](/en-US/docs/Web/XSLT/Reference/Element/number) _(partially supported)_
+- [xsl:otherwise](/en-US/docs/Web/XSLT/Reference/Element/otherwise) _(supported)_
+- [xsl:output](/en-US/docs/Web/XSLT/Reference/Element/output) _(partially supported)_
+- [xsl:param](/en-US/docs/Web/XSLT/Reference/Element/param) _(supported)_
+- [xsl:preserve-space](/en-US/docs/Web/XSLT/Reference/Element/preserve-space) _(supported)_
+- [xsl:processing-instruction](/en-US/docs/Web/XSLT/Reference/Element/processing-instruction)
+- [xsl:sort](/en-US/docs/Web/XSLT/Reference/Element/sort) _(supported)_
+- [xsl:strip-space](/en-US/docs/Web/XSLT/Reference/Element/strip-space) _(supported)_
+- [xsl:stylesheet](/en-US/docs/Web/XSLT/Reference/Element/stylesheet) _(partially supported)_
+- [xsl:template](/en-US/docs/Web/XSLT/Reference/Element/template) _(supported)_
+- [xsl:text](/en-US/docs/Web/XSLT/Reference/Element/text) _(partially supported)_
+- [xsl:transform](/en-US/docs/Web/XSLT/Reference/Element/transform) _(supported)_
+- [xsl:value-of](/en-US/docs/Web/XSLT/Reference/Element/value-of) _(partially supported)_
+- [xsl:variable](/en-US/docs/Web/XSLT/Reference/Element/variable) _(supported)_
+- [xsl:when](/en-US/docs/Web/XSLT/Reference/Element/when) _(supported)_
+- [xsl:with-param](/en-US/docs/Web/XSLT/Reference/Element/with-param) _(supported)_
 
 ### Axes
 

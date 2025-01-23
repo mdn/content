@@ -14,7 +14,7 @@ XSLT is most often used to convert data between different XML schemas or to conv
 
 ## Documentation
 
-- [XSLT Element Reference](/en-US/docs/Web/XSLT/Element)
+- [XSLT Element Reference](/en-US/docs/Web/XSLT/Reference/Element)
   - : Reference.
 - [Transforming XML with XSLT](/en-US/docs/Web/XSLT/Transforming_XML_with_XSLT)
   - : XSLT allows a stylesheet author to transform a primary XML document in two significant ways: manipulating and sorting the content, including a wholesale reordering of it if so desired, and transforming the content into a different format.

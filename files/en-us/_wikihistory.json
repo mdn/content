@@ -127131,7 +127131,18 @@
     "modified": "2019-03-24T00:09:17.416Z",
     "contributors": ["tommorris", "teoli", "sicking"]
   },
-  "Web/XSLT/Element": {
+  "Web/XSLT/PI_Parameters": {
+    "modified": "2019-03-23T23:52:15.197Z",
+    "contributors": [
+      "SphinxKnight",
+      "Sheppy",
+      "Pekarna",
+      "Fredchat",
+      "Nickolay",
+      "sicking"
+    ]
+  },
+  "Web/XSLT/Reference/Element": {
     "modified": "2019-03-24T00:14:46.715Z",
     "contributors": [
       "ExE-Boss",
@@ -127147,7 +127158,7 @@
       "Dria"
     ]
   },
-  "Web/XSLT/Element/apply-imports": {
+  "Web/XSLT/Reference/Element/apply-imports": {
     "modified": "2019-03-23T23:43:46.904Z",
     "contributors": [
       "ExE-Boss",
@@ -127161,7 +127172,7 @@
       "Dria"
     ]
   },
-  "Web/XSLT/Element/apply-templates": {
+  "Web/XSLT/Reference/Element/apply-templates": {
     "modified": "2019-03-23T23:43:44.196Z",
     "contributors": [
       "ExE-Boss",
@@ -127175,7 +127186,7 @@
       "Dria"
     ]
   },
-  "Web/XSLT/Element/attribute": {
+  "Web/XSLT/Reference/Element/attribute": {
     "modified": "2019-03-23T23:43:47.471Z",
     "contributors": [
       "ExE-Boss",
@@ -127190,7 +127201,7 @@
       "Dria"
     ]
   },
-  "Web/XSLT/Element/attribute-set": {
+  "Web/XSLT/Reference/Element/attribute-set": {
     "modified": "2019-03-23T23:43:44.737Z",
     "contributors": [
       "ExE-Boss",
@@ -127204,7 +127215,7 @@
       "Dria"
     ]
   },
-  "Web/XSLT/Element/call-template": {
+  "Web/XSLT/Reference/Element/call-template": {
     "modified": "2019-03-23T23:43:45.299Z",
     "contributors": [
       "ExE-Boss",
@@ -127219,7 +127230,7 @@
       "Dria"
     ]
   },
-  "Web/XSLT/Element/choose": {
+  "Web/XSLT/Reference/Element/choose": {
     "modified": "2019-03-23T23:51:26.001Z",
     "contributors": [
       "ExE-Boss",
@@ -127235,7 +127246,7 @@
       "Dria"
     ]
   },
-  "Web/XSLT/Element/comment": {
+  "Web/XSLT/Reference/Element/comment": {
     "modified": "2019-03-23T23:43:46.122Z",
     "contributors": [
       "ExE-Boss",
@@ -127249,7 +127260,7 @@
       "Dria"
     ]
   },
-  "Web/XSLT/Element/copy": {
+  "Web/XSLT/Reference/Element/copy": {
     "modified": "2019-03-23T23:43:46.021Z",
     "contributors": [
       "ExE-Boss",
@@ -127263,7 +127274,7 @@
       "Dria"
     ]
   },
-  "Web/XSLT/Element/copy-of": {
+  "Web/XSLT/Reference/Element/copy-of": {
     "modified": "2019-03-23T23:43:45.653Z",
     "contributors": [
       "ExE-Boss",
@@ -127277,7 +127288,7 @@
       "Dria"
     ]
   },
-  "Web/XSLT/Element/decimal-format": {
+  "Web/XSLT/Reference/Element/decimal-format": {
     "modified": "2019-03-23T23:43:43.644Z",
     "contributors": [
       "ExE-Boss",
@@ -127290,7 +127301,7 @@
       "CitizenK"
     ]
   },
-  "Web/XSLT/Element/element": {
+  "Web/XSLT/Reference/Element/element": {
     "modified": "2019-03-23T23:46:27.595Z",
     "contributors": [
       "ExE-Boss",
@@ -127305,7 +127316,7 @@
       "CitizenK"
     ]
   },
-  "Web/XSLT/Element/fallback": {
+  "Web/XSLT/Reference/Element/fallback": {
     "modified": "2019-03-23T23:43:46.291Z",
     "contributors": [
       "ExE-Boss",
@@ -127318,7 +127329,7 @@
       "CitizenK"
     ]
   },
-  "Web/XSLT/Element/for-each": {
+  "Web/XSLT/Reference/Element/for-each": {
     "modified": "2019-03-23T23:43:46.604Z",
     "contributors": [
       "ExE-Boss",
@@ -127331,7 +127342,7 @@
       "CitizenK"
     ]
   },
-  "Web/XSLT/Element/if": {
+  "Web/XSLT/Reference/Element/if": {
     "modified": "2019-03-23T23:43:44.538Z",
     "contributors": [
       "ExE-Boss",
@@ -127344,7 +127355,7 @@
       "CitizenK"
     ]
   },
-  "Web/XSLT/Element/import": {
+  "Web/XSLT/Reference/Element/import": {
     "modified": "2019-03-23T23:43:44.287Z",
     "contributors": [
       "ExE-Boss",
@@ -127357,7 +127368,7 @@
       "CitizenK"
     ]
   },
-  "Web/XSLT/Element/include": {
+  "Web/XSLT/Reference/Element/include": {
     "modified": "2019-03-23T23:43:45.387Z",
     "contributors": [
       "ExE-Boss",
@@ -127370,7 +127381,7 @@
       "CitizenK"
     ]
   },
-  "Web/XSLT/Element/key": {
+  "Web/XSLT/Reference/Element/key": {
     "modified": "2019-03-23T23:43:46.516Z",
     "contributors": [
       "ExE-Boss",
@@ -127383,7 +127394,7 @@
       "CitizenK"
     ]
   },
-  "Web/XSLT/Element/message": {
+  "Web/XSLT/Reference/Element/message": {
     "modified": "2019-03-23T23:43:47.380Z",
     "contributors": [
       "ExE-Boss",
@@ -127396,7 +127407,7 @@
       "CitizenK"
     ]
   },
-  "Web/XSLT/Element/namespace-alias": {
+  "Web/XSLT/Reference/Element/namespace-alias": {
     "modified": "2019-03-23T23:43:47.275Z",
     "contributors": [
       "ExE-Boss",
@@ -127409,7 +127420,7 @@
       "CitizenK"
     ]
   },
-  "Web/XSLT/Element/number": {
+  "Web/XSLT/Reference/Element/number": {
     "modified": "2019-03-23T23:43:45.547Z",
     "contributors": [
       "ExE-Boss",
@@ -127422,7 +127433,7 @@
       "CitizenK"
     ]
   },
-  "Web/XSLT/Element/otherwise": {
+  "Web/XSLT/Reference/Element/otherwise": {
     "modified": "2019-03-23T23:43:48.892Z",
     "contributors": [
       "ExE-Boss",
@@ -127435,7 +127446,7 @@
       "CitizenK"
     ]
   },
-  "Web/XSLT/Element/output": {
+  "Web/XSLT/Reference/Element/output": {
     "modified": "2019-03-23T23:43:51.603Z",
     "contributors": [
       "ExE-Boss",
@@ -127447,7 +127458,7 @@
       "CitizenK"
     ]
   },
-  "Web/XSLT/Element/param": {
+  "Web/XSLT/Reference/Element/param": {
     "modified": "2019-03-23T23:43:49.631Z",
     "contributors": [
       "ExE-Boss",
@@ -127460,7 +127471,7 @@
       "CitizenK"
     ]
   },
-  "Web/XSLT/Element/preserve-space": {
+  "Web/XSLT/Reference/Element/preserve-space": {
     "modified": "2019-03-23T23:43:47.668Z",
     "contributors": [
       "ExE-Boss",
@@ -127472,7 +127483,7 @@
       "CitizenK"
     ]
   },
-  "Web/XSLT/Element/processing-instruction": {
+  "Web/XSLT/Reference/Element/processing-instruction": {
     "modified": "2019-03-23T23:43:48.104Z",
     "contributors": [
       "ExE-Boss",
@@ -127484,7 +127495,7 @@
       "CitizenK"
     ]
   },
-  "Web/XSLT/Element/sort": {
+  "Web/XSLT/Reference/Element/sort": {
     "modified": "2019-03-23T23:46:25.569Z",
     "contributors": [
       "ExE-Boss",
@@ -127497,7 +127508,7 @@
       "CitizenK"
     ]
   },
-  "Web/XSLT/Element/strip-space": {
+  "Web/XSLT/Reference/Element/strip-space": {
     "modified": "2019-03-23T23:43:48.022Z",
     "contributors": [
       "ExE-Boss",
@@ -127509,7 +127520,7 @@
       "CitizenK"
     ]
   },
-  "Web/XSLT/Element/stylesheet": {
+  "Web/XSLT/Reference/Element/stylesheet": {
     "modified": "2020-10-15T21:18:07.082Z",
     "contributors": [
       "sideshowbarker",
@@ -127524,7 +127535,7 @@
       "CitizenK"
     ]
   },
-  "Web/XSLT/Element/template": {
+  "Web/XSLT/Reference/Element/template": {
     "modified": "2019-03-23T23:43:47.932Z",
     "contributors": [
       "ExE-Boss",
@@ -127536,7 +127547,7 @@
       "CitizenK"
     ]
   },
-  "Web/XSLT/Element/text": {
+  "Web/XSLT/Reference/Element/text": {
     "modified": "2019-03-23T23:43:46.996Z",
     "contributors": [
       "ExE-Boss",
@@ -127549,7 +127560,7 @@
       "CitizenK"
     ]
   },
-  "Web/XSLT/Element/transform": {
+  "Web/XSLT/Reference/Element/transform": {
     "modified": "2019-03-23T23:43:47.834Z",
     "contributors": [
       "ExE-Boss",
@@ -127562,7 +127573,7 @@
       "CitizenK"
     ]
   },
-  "Web/XSLT/Element/value-of": {
+  "Web/XSLT/Reference/Element/value-of": {
     "modified": "2019-03-23T23:45:34.399Z",
     "contributors": [
       "ExE-Boss",
@@ -127576,7 +127587,7 @@
       "CitizenK"
     ]
   },
-  "Web/XSLT/Element/variable": {
+  "Web/XSLT/Reference/Element/variable": {
     "modified": "2019-03-23T23:43:47.576Z",
     "contributors": [
       "ExE-Boss",
@@ -127588,7 +127599,7 @@
       "CitizenK"
     ]
   },
-  "Web/XSLT/Element/when": {
+  "Web/XSLT/Reference/Element/when": {
     "modified": "2019-03-23T23:43:47.757Z",
     "contributors": [
       "ExE-Boss",
@@ -127601,7 +127612,7 @@
       "CitizenK"
     ]
   },
-  "Web/XSLT/Element/with-param": {
+  "Web/XSLT/Reference/Element/with-param": {
     "modified": "2019-03-23T23:43:47.094Z",
     "contributors": [
       "ExE-Boss",
@@ -127612,17 +127623,6 @@
       "Ptak82",
       "Nickolay",
       "CitizenK"
-    ]
-  },
-  "Web/XSLT/PI_Parameters": {
-    "modified": "2019-03-23T23:52:15.197Z",
-    "contributors": [
-      "SphinxKnight",
-      "Sheppy",
-      "Pekarna",
-      "Fredchat",
-      "Nickolay",
-      "sicking"
     ]
   },
   "Web/XSLT/Transforming_XML_with_XSLT": {

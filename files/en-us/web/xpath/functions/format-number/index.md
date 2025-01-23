@@ -22,7 +22,7 @@ format-number(number, pattern, decimalFormat)
 - `pattern`
   - : A string in the format of the Java [DecimalFormat](https://docs.oracle.com/javase/8/docs/api/java/text/DecimalFormat.html) class.
 - `decimalFormat` (optional)
-  - : The name of an [`xsl:decimal-format`](/en-US/docs/Web/XSLT/Element/decimal-format) element that defines the number format to be used. If omitted, the default decimal-format will be used.
+  - : The name of an [`xsl:decimal-format`](/en-US/docs/Web/XSLT/Reference/Element/decimal-format) element that defines the number format to be used. If omitted, the default decimal-format will be used.
 
 ### Return value
 
