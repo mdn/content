@@ -7,21 +7,21 @@ browser-compat: webextensions.api.commands
 
 {{AddonSidebar}}
 
-Listen for the user executing commands that you have registered using the [`commands` manifest.json key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands).
+Listen for the user executing commands that your extension registered using the [`commands` manifest.json key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands).
 
 ## Types
 
 - {{WebExtAPIRef("commands.Command")}}
-  - : Object representing a command. This contains the information specified for the command in the [`commands` manifest.json key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands).
+  - : Object containing a command's settings.
 
 ## Functions
 
 - {{WebExtAPIRef("commands.getAll")}}
-  - : Gets all registered commands for this extension.
+  - : Gets all registered commands for the extension.
 - {{WebExtAPIRef("commands.reset")}}
-  - : Reset the given command's description and shortcut to the values given in the manifest key.
+  - : Reset a command's description and shortcut to the values given in the manifest key.
 - {{WebExtAPIRef("commands.update")}}
-  - : Change the description or shortcut for the given command.
+  - : Change the description or shortcut for a command.
 
 ## Events
 
