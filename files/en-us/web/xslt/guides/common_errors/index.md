@@ -1,6 +1,6 @@
 ---
 title: Common XSLT Errors
-slug: Web/XSLT/Common_errors
+slug: Web/XSLT/Guides/Common_errors
 page-type: guide
 ---
 

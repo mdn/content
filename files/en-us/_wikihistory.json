@@ -127127,11 +127127,11 @@
       "Mathieu Deaudelin"
     ]
   },
-  "Web/XSLT/Common_errors": {
+  "Web/XSLT/Guides/Common_errors": {
     "modified": "2019-03-24T00:09:17.416Z",
     "contributors": ["tommorris", "teoli", "sicking"]
   },
-  "Web/XSLT/PI_Parameters": {
+  "Web/XSLT/Guides/PI_Parameters": {
     "modified": "2019-03-23T23:52:15.197Z",
     "contributors": [
       "SphinxKnight",
@@ -127140,6 +127140,58 @@
       "Fredchat",
       "Nickolay",
       "sicking"
+    ]
+  },
+  "Web/XSLT/Guides/Transforming_XML_with_XSLT": {
+    "modified": "2019-03-18T20:49:03.271Z",
+    "contributors": [
+      "mfuji09",
+      "ExE-Boss",
+      "chrisdavidmills",
+      "ethertank",
+      "jswisher",
+      "bovinespirit",
+      "SamB",
+      "Brettz9",
+      "Fredchat",
+      "Kitchen",
+      "Sebuls",
+      "Mgjbot",
+      "Callek",
+      "Sheppy",
+      "Ptak82",
+      "NickolayBot",
+      "alecananian",
+      "Dria",
+      "Nickolay",
+      "CitizenK"
+    ]
+  },
+  "Web/XSLT/Guides/Transforming_XML_with_XSLT/An_Overview": {
+    "modified": "2019-03-23T23:43:18.530Z",
+    "contributors": [
+      "SphinxKnight",
+      "chrisdavidmills",
+      "Fredchat",
+      "jswisher",
+      "trevorh",
+      "Dria",
+      "CitizenK"
+    ]
+  },
+  "Web/XSLT/Guides/Transforming_XML_with_XSLT/For_Further_Reading": {
+    "modified": "2019-03-23T23:43:15.921Z",
+    "contributors": [
+      "SphinxKnight",
+      "chrisdavidmills",
+      "ethertank",
+      "jswisher",
+      "Fredchat",
+      "Major Small",
+      "Nickolay",
+      "Ptak82",
+      "Dria",
+      "CitizenK"
     ]
   },
   "Web/XSLT/Reference/Element": {
@@ -127622,58 +127674,6 @@
       "Mgjbot",
       "Ptak82",
       "Nickolay",
-      "CitizenK"
-    ]
-  },
-  "Web/XSLT/Transforming_XML_with_XSLT": {
-    "modified": "2019-03-18T20:49:03.271Z",
-    "contributors": [
-      "mfuji09",
-      "ExE-Boss",
-      "chrisdavidmills",
-      "ethertank",
-      "jswisher",
-      "bovinespirit",
-      "SamB",
-      "Brettz9",
-      "Fredchat",
-      "Kitchen",
-      "Sebuls",
-      "Mgjbot",
-      "Callek",
-      "Sheppy",
-      "Ptak82",
-      "NickolayBot",
-      "alecananian",
-      "Dria",
-      "Nickolay",
-      "CitizenK"
-    ]
-  },
-  "Web/XSLT/Transforming_XML_with_XSLT/An_Overview": {
-    "modified": "2019-03-23T23:43:18.530Z",
-    "contributors": [
-      "SphinxKnight",
-      "chrisdavidmills",
-      "Fredchat",
-      "jswisher",
-      "trevorh",
-      "Dria",
-      "CitizenK"
-    ]
-  },
-  "Web/XSLT/Transforming_XML_with_XSLT/For_Further_Reading": {
-    "modified": "2019-03-23T23:43:15.921Z",
-    "contributors": [
-      "SphinxKnight",
-      "chrisdavidmills",
-      "ethertank",
-      "jswisher",
-      "Fredchat",
-      "Major Small",
-      "Nickolay",
-      "Ptak82",
-      "Dria",
       "CitizenK"
     ]
   },

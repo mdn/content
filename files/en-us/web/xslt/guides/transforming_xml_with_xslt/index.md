@@ -1,6 +1,6 @@
 ---
 title: Transforming XML with XSLT
-slug: Web/XSLT/Transforming_XML_with_XSLT
+slug: Web/XSLT/Guides/Transforming_XML_with_XSLT
 page-type: guide
 ---
 
@@ -8,7 +8,7 @@ page-type: guide
 
 ## An Overview
 
-[An Overview](/en-US/docs/Web/XSLT/Transforming_XML_with_XSLT/An_Overview)
+[An Overview](/en-US/docs/Web/XSLT/Guides/Transforming_XML_with_XSLT/An_Overview)
 
 The separation of content and presentation is a key design feature of [XML](/en-US/docs/Web/XML). The structure of an XML document is designed to reflect and clarify important relationships among the individual aspects of the content itself, unhindered by a need to provide any indication about how this data should eventually be presented. This intelligent structuring is particularly important as more and more data transfers are automated and take place between highly heterogeneous machines linked by a network.
 
@@ -121,15 +121,15 @@ Our focus here is on the second type of stylesheet that Gecko supports: the XSLT
 
 ## For Further Reading
 
-[For Further Reading](/en-US/docs/Web/XSLT/Transforming_XML_with_XSLT/For_Further_Reading)
+[For Further Reading](/en-US/docs/Web/XSLT/Guides/Transforming_XML_with_XSLT/For_Further_Reading)
 
-- [Books](/en-US/docs/Web/XSLT/Transforming_XML_with_XSLT/For_Further_Reading#books)
-- [Digital](/en-US/docs/Web/XSLT/Transforming_XML_with_XSLT/For_Further_Reading#digital)
+- [Books](/en-US/docs/Web/XSLT/Guides/Transforming_XML_with_XSLT/For_Further_Reading#books)
+- [Digital](/en-US/docs/Web/XSLT/Guides/Transforming_XML_with_XSLT/For_Further_Reading#digital)
 
-  - [Websites](/en-US/docs/Web/XSLT/Transforming_XML_with_XSLT/For_Further_Reading#websites)
-  - [Articles](/en-US/docs/Web/XSLT/Transforming_XML_with_XSLT/For_Further_Reading#articles)
-  - [Tutorials/Examples](/en-US/docs/Web/XSLT/Transforming_XML_with_XSLT/For_Further_Reading#tutorialsexamples)
-  - [Other](/en-US/docs/Web/XSLT/Transforming_XML_with_XSLT/For_Further_Reading#other)
+  - [Websites](/en-US/docs/Web/XSLT/Guides/Transforming_XML_with_XSLT/For_Further_Reading#websites)
+  - [Articles](/en-US/docs/Web/XSLT/Guides/Transforming_XML_with_XSLT/For_Further_Reading#articles)
+  - [Tutorials/Examples](/en-US/docs/Web/XSLT/Guides/Transforming_XML_with_XSLT/For_Further_Reading#tutorialsexamples)
+  - [Other](/en-US/docs/Web/XSLT/Guides/Transforming_XML_with_XSLT/For_Further_Reading#other)
 
 ## Original Document Information
 

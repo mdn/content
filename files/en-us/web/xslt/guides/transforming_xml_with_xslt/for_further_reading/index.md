@@ -1,12 +1,12 @@
 ---
 title: For further reading
-slug: Web/XSLT/Transforming_XML_with_XSLT/For_Further_Reading
+slug: Web/XSLT/Guides/Transforming_XML_with_XSLT/For_Further_Reading
 page-type: guide
 ---
 
 {{XsltSidebar}}
 
-[« Transforming XML with XSLT](/en-US/docs/Web/XSLT/Transforming_XML_with_XSLT)
+[« Transforming XML with XSLT](/en-US/docs/Web/XSLT/Guides/Transforming_XML_with_XSLT)
 
 ## Print
 
