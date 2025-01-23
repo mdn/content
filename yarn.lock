@@ -5548,9 +5548,9 @@ junk@^4.0.1:
   integrity sha512-Qush0uP+G8ZScpGMZvHUiRfI0YBWuB3gVBYlI0v0vvOJt5FLicco+IkP0a50LqTTQhmts/m6tP5SWE+USyIvcQ==
 
 katex@^0.16.0:
-  version "0.16.18"
-  resolved "https://registry.yarnpkg.com/katex/-/katex-0.16.18.tgz#20781284288bc52805c519e48ac756163ad4b1f3"
-  integrity sha512-LRuk0rPdXrecAFwQucYjMiIs0JFefk6N1q/04mlw14aVIVgxq1FO0MA9RiIIGVaKOB5GIP5GH4aBBNraZERmaQ==
+  version "0.16.21"
+  resolved "https://registry.yarnpkg.com/katex/-/katex-0.16.21.tgz#8f63c659e931b210139691f2cc7bb35166b792a3"
+  integrity sha512-XvqR7FgOHtWupfMiigNzmh+MgUVmDGU2kXZm899ZkPfcuoPuFxyHmXsgATDpFZDAXCI8tvinaVcDo8PIIJSo4A==
   dependencies:
     commander "^8.3.0"
 
