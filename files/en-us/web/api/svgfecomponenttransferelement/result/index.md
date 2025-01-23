@@ -25,7 +25,7 @@ const feComponentTransferElement = document.querySelector(
   "feComponentTransfer",
 );
 const filterName = feComponentTransferElement.result;
-console.log(filterName.baseVa); // the filter's assigned name
+console.log(filterName.baseVal); // the filter's assigned name
 ```
 
 ## Specifications
