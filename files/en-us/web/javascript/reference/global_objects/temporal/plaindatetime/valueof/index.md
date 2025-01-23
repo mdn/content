@@ -2,10 +2,12 @@
 title: Temporal.PlainDateTime.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainDateTime/valueOf
 page-type: javascript-instance-method
+status:
+  - experimental
 browser-compat: javascript.builtins.Temporal.PlainDateTime.valueOf
 ---
 
-{{JSRef}}
+{{JSRef}}{{SeeCompatTable}}
 
 The **`valueOf()`** method of {{jsxref("Temporal.PlainDateTime")}} instances throws a {{jsxref("TypeError")}}, which prevents `Temporal.PlainDateTime` instances from being [implicitly converted to primitives](/en-US/docs/Web/JavaScript/Data_structures#primitive_coercion) when used in arithmetic or comparison operations.
 

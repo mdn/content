@@ -2,10 +2,12 @@
 title: Temporal.ZonedDateTime.prototype.daysInYear
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime/daysInYear
 page-type: javascript-instance-accessor-property
+status:
+  - experimental
 browser-compat: javascript.builtins.Temporal.ZonedDateTime.daysInYear
 ---
 
-{{JSRef}}
+{{JSRef}}{{SeeCompatTable}}
 
 The **`daysInYear`** accessor property of {{jsxref("Temporal.ZonedDateTime")}} instances returns a positive integer representing the number of days in the year of this date. It is [calendar](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal#calendars)-dependent.
 

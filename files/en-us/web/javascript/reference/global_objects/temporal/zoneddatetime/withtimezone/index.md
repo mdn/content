@@ -2,10 +2,12 @@
 title: Temporal.ZonedDateTime.prototype.withTimeZone()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime/withTimeZone
 page-type: javascript-instance-method
+status:
+  - experimental
 browser-compat: javascript.builtins.Temporal.ZonedDateTime.withTimeZone
 ---
 
-{{JSRef}}
+{{JSRef}}{{SeeCompatTable}}
 
 The **`withTimeZone()`** method of {{jsxref("Temporal.ZonedDateTime")}} instances returns a new `Temporal.ZonedDateTime` object representing the same instant as this date-time but in the new time zone. Because all `Temporal` objects are designed to be immutable, this method essentially functions as the setter for the date-time's {{jsxref("Temporal/ZonedDateTime/timeZoneId", "timeZoneId")}} property.
 
