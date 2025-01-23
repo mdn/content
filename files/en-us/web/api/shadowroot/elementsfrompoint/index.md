@@ -35,7 +35,7 @@ An array of {{domxref('Element')}} objects.
 let customElem = document.querySelector("my-custom-element");
 let shadow = customElem.shadowRoot;
 const elements = shadow.elementsFromPoint(20, 20);
-const msg = elements.map(el => el.localName).join(" < ");
+const msg = elements.map((el) => el.localName).join(" < ");
 if (msg) {
   console.log(msg);
 } else {
