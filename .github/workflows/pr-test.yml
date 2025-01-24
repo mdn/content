@@ -112,11 +112,6 @@ jobs:
           # Save the PR number into the build
           echo ${{ github.event.number }} > ${BUILD_OUT_ROOT}/NR
 
-          # Add the custom 404 page to provide production links to the unbuilt documents
-          mkdir -p ${BUILD_OUT_ROOT}/en-us/_spas/
-          cp -v ./.github/workflows/404.html ${BUILD_OUT_ROOT}/en-us/_spas/404.html
-          cp -v ./.github/workflows/404.js ${BUILD_OUT_ROOT}/en-us/_spas/404.js
-
           # Download the raw diff blob and store that inside the build
           # directory.
           # The purpose of this is for the PR Review Companion to later
@@ -128,6 +123,11 @@ jobs:
         run: |
           # Exclude the .map files, as they're used for debugging JS and CSS.
           rsync -a --exclude "*.map" node_modules/@mdn/yari/client/build/ $BUILD_OUT_ROOT
+
+          # Add the custom 404 page to provide production links to the unbuilt documents
+          cp -v ./.github/workflows/404.html ${BUILD_OUT_ROOT}/en-us/404/index.html
+          cp -v ./.github/workflows/404.js ${BUILD_OUT_ROOT}/en-us/404/index.js
+
           # Show the final disk usage size of the build.
           du -sh $BUILD_OUT_ROOT
 
