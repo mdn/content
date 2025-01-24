@@ -28,6 +28,8 @@ sidebar:
       - /MDN/Writing_guidelines
       - /MDN/Writing_guidelines/What_we_write
       - /MDN/Writing_guidelines/Writing_style_guide
+      - title: learning_guidelines
+        link: /MDN/Writing_guidelines/Learning_content
       - title: how_to_guides
         details: closed
         children:
@@ -76,6 +78,7 @@ l10n:
     community_guidelines: Gemeinschaftsrichtlinien
     contributing_to_mdn_web_docs: Beiträge zu MDN Web Docs
     writing_guide: Schreibanleitung
+    learning_guidelines: Learning content guidelines
     how_to_guides: Anleitungen
     page_structures: Seitenstrukturen
   en-US:
@@ -84,6 +87,7 @@ l10n:
     community_guidelines: Community guidelines
     contributing_to_mdn_web_docs: Contributing to MDN Web Docs
     writing_guide: Writing guidelines
+    learning_guidelines: Learning content guidelines
     how_to_guides: How-to guides
     page_structures: Page structures
   es:
@@ -92,6 +96,7 @@ l10n:
     community_guidelines: Community guidelines
     contributing_to_mdn_web_docs: Contributing to MDN Web Docs
     writing_guide: Writing guidelines
+    learning_guidelines: Learning content guidelines
     how_to_guides: How-to guides
     page_structures: Page structures
   fr:
@@ -100,6 +105,7 @@ l10n:
     community_guidelines: Règles de la communauté
     contributing_to_mdn_web_docs: Contributing to MDN Web Docs
     writing_guide: Writing guidelines
+    learning_guidelines: Learning content guidelines
     how_to_guides: How-to guides
     page_structures: Page structures
   ja:
@@ -108,6 +114,7 @@ l10n:
     community_guidelines: Community guidelines
     contributing_to_mdn_web_docs: Contributing to MDN Web Docs
     writing_guide: Writing guidelines
+    learning_guidelines: Learning content guidelines
     how_to_guides: How-to guides
     page_structures: Page structures
   ko:
@@ -116,6 +123,7 @@ l10n:
     community_guidelines: 커뮤니티 지침
     contributing_to_mdn_web_docs: MDN에 기여하기
     writing_guide: Writing guidelines
+    learning_guidelines: Learning content guidelines
     how_to_guides: How-to guides
     page_structures: Page structures
   pt-BR:
@@ -124,6 +132,7 @@ l10n:
     community_guidelines: Community guidelines
     contributing_to_mdn_web_docs: Contributing to MDN Web Docs
     writing_guide: Writing guidelines
+    learning_guidelines: Learning content guidelines
     how_to_guides: How-to guides
     page_structures: Page structures
   ru:
@@ -132,6 +141,7 @@ l10n:
     community_guidelines: Community guidelines
     contributing_to_mdn_web_docs: Contributing to MDN Web Docs
     writing_guide: Writing guidelines
+    learning_guidelines: Learning content guidelines
     how_to_guides: How-to guides
     page_structures: Page structures
   zh-CN:
@@ -140,6 +150,7 @@ l10n:
     community_guidelines: 社区指南
     contributing_to_mdn_web_docs: 为 MDN 做贡献
     writing_guide: 撰写指南
+    learning_guidelines: Learning content guidelines
     how_to_guides: MDN 写作指南
     page_structures: 页面结构
   zh-TW:
@@ -148,5 +159,6 @@ l10n:
     community_guidelines: Community guidelines
     contributing_to_mdn_web_docs: Contributing to MDN Web Docs
     writing_guide: Writing guidelines
+    learning_guidelines: Learning content guidelines
     how_to_guides: How-to guides
     page_structures: Page structures
