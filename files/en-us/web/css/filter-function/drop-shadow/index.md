@@ -115,7 +115,7 @@ div:nth-child(5) {
 
 {{EmbedLiveSample("Setting a drop shadow", "100%", "300px")}}
 
-In the absence of a `<color>` value in the `drop-shadow()` function in the first box, the shadow uses the value of the `color` property from the element (`lime`). The second and third shadows illustrate that the length and color values can be specified in any order. The third shadow shows the blurring effect when a third `<length>` value is specified. The fourth shadow uses negative offsets which shifts shadow to the left and top.
+In the absence of a `<color>` value in the `drop-shadow()` function in the first box, the shadow uses the value of the `color` property from the element (`lime`). The second and third shadows illustrate that the length and color values can be specified in any order. The third shadow shows the blurring effect when a third `<length>` value is specified. The fourth shadow uses negative offsets which shifts shadow to the left and top. The fifth example shows using multiple drop-shadows on a single element.
 
 ## Specifications
 
