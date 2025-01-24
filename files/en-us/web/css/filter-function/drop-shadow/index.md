@@ -39,7 +39,7 @@ drop-shadow(5px 5px 15px red)
 /* drop-shadow( <color> <length> <length> <length> ) */
 drop-shadow(#e23 0.5rem 0.5rem 1rem)
 
-/* You can pass multiple drop-shadow's to a filter to stack them */
+/* Pass multiple drop-shadows to a filter to stack them */
 drop-shadow(10px 10px red) drop-shadow(-5px -5px yellow)
 ```
 
