@@ -1,6 +1,6 @@
 ---
 title: Challenge solutions
-slug: Web/Guide/CSS/Getting_started/Challenge_solutions
+slug: Learn_web_development/Core/Challenges
 page-type: guide
 ---
 

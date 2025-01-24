@@ -89,39 +89,39 @@ sidebar:
     title: Reference
   - type: listSubPages
     path: /Web/JavaScript/Reference/Global_Objects
+    includeParent: true
     title: Global_Objects
     details: closed
-    includeParent: true
   - type: listSubPages
     path: /Web/JavaScript/Reference/Operators
+    includeParent: true
     title: Operators
     details: closed
-    includeParent: true
   - type: listSubPages
     path: /Web/JavaScript/Reference/Statements
+    includeParent: true
     title: Statements
     details: closed
-    includeParent: true
   - type: listSubPages
     path: /Web/JavaScript/Reference/Functions
+    includeParent: true
     title: Functions
     details: closed
-    includeParent: true
   - type: listSubPages
     path: /Web/JavaScript/Reference/Classes
+    includeParent: true
     title: Classes
     details: closed
-    includeParent: true
   - type: listSubPages
     path: /Web/JavaScript/Reference/Regular_expressions
+    includeParent: true
     title: Guide_RegExp
     details: closed
-    includeParent: true
   - type: listSubPages
     path: /Web/JavaScript/Reference/Errors
+    includeParent: true
     title: Errors
     details: closed
-    includeParent: true
   - title: More
     details: closed
     children:

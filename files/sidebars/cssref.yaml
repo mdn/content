@@ -57,53 +57,54 @@ sidebar:
     link: /Web/CSS/Reference
   - type: listSubPages
     path: /Web/CSS
-    title: Modules
     tags: css-module
+    title: Modules
     details: closed
   - type: listSubPagesGrouped
     path: /Web/CSS
-    title: Properties
     tags:
       - css-property
       - css-shorthand-property
+    title: Properties
     details: closed
   - type: listSubPages
     path: /Web/CSS
-    title: Selectors
     tags: css-selector
+    title: Selectors
     details: closed
   - type: listSubPages
     path: /Web/CSS
-    title: Combinators
     tags: css-combinator
+    title: Combinators
     details: closed
   - type: listSubPages
     path: /Web/CSS
-    title: Pseudo-classes
     tags: css-pseudo-class
+    title: Pseudo-classes
     details: closed
   - type: listSubPages
     path: /Web/CSS
-    title: Pseudo-elements
     tags: css-pseudo-element
+    title: Pseudo-elements
     details: closed
   - type: listSubPages
     path: /Web/CSS
-    title: At-rules
     tags: css-at-rule
+    title: At-rules
     details: closed
   - type: listSubPages
     path: /Web/CSS
-    title: Functions
     tags: css-function
-    details: closed
     depth: 2
+    title: Functions
+    details: closed
   - type: listSubPages
     path: /Web/CSS
-    title: Types
     tags: css-type
+    title: Types
     details: closed
   - type: section
+    link: /Web/CSS/Guides
     title: Guides
   - title: Animations
     details: closed
