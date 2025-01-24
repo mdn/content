@@ -62,7 +62,7 @@ The `drop-shadow()` function accepts a parameter of type `<shadow>` (defined in 
 
 ### Setting a drop shadow
 
-```html
+```html-nolint
 <div>drop-shadow(16px 16px)</div>
 <div>drop-shadow(16px 16px red)</div>
 <div>drop-shadow(red 1rem 1rem 10px)</div>
@@ -75,7 +75,7 @@ The `drop-shadow()` function accepts a parameter of type `<shadow>` (defined in 
 </div>
 ```
 
-```css
+```css-nolint
 div {
   display: inline-block;
   margin: 0 0.5rem 2rem 1rem;
