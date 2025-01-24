@@ -87,27 +87,21 @@ The example below shows a three-column track grid with new rows created at a min
 
 ### Properties
 
-- Implicit grid properties:
-
-  - {{CSSxRef("grid-auto-columns")}}
-  - {{CSSxRef("grid-auto-flow")}}
-  - {{CSSxRef("grid-auto-rows")}}
-
-- Explicit grid properties:
-  - {{CSSxRef("grid-template-columns")}}
-  - {{CSSxRef("grid-template-rows")}}
-  - {{CSSxRef("grid-template-areas")}}
-    - {{CSSxRef("grid-template")}} shorthand
+- {{CSSxRef("grid-auto-columns")}}
+- {{CSSxRef("grid-auto-flow")}}
+- {{CSSxRef("grid-auto-rows")}}
+- {{CSSxRef("grid-template-columns")}}
+- {{CSSxRef("grid-template-rows")}}
+- {{CSSxRef("grid-template-areas")}}
+- {{CSSxRef("grid-template")}} shorthand
 - {{CSSxRef("grid")}} shorthand
-
-- Grid placement properties:
-  - {{CSSxRef("grid-column-start")}}
-  - {{CSSxRef("grid-column-end")}}
-    - {{CSSxRef("grid-column")}} shorthand
-  - {{CSSxRef("grid-row-start")}}
-  - {{CSSxRef("grid-row-end")}}
-    - {{CSSxRef("grid-row")}} shorthand
-      - {{CSSxRef("grid-area")}} shorthand
+- {{CSSxRef("grid-column-start")}}
+- {{CSSxRef("grid-column-end")}}
+- {{CSSxRef("grid-column")}} shorthand
+- {{CSSxRef("grid-row-start")}}
+- {{CSSxRef("grid-row-end")}}
+- {{CSSxRef("grid-row")}} shorthand
+- {{CSSxRef("grid-area")}} shorthand
 
 ### Functions
 
