@@ -144,7 +144,7 @@ When you access the web, quite a lot happens between your first interaction (for
    2. When that file is received by the browser, it will start to parse it, and will probably find instructions to make more requests. As discussed above, these might be for files to embed such as images, style information, scripts, and so on.
 4. When all of the resources have been requested, the web browser parses and renders them as required, before displaying the result to the user.
 
-This description of how the web works is heavily simplified, but it is all you really need to know at this point. You will find a more detailed account of how web pages and requested and rendered by a web browser in our [Web standards](/en-US/docs/Learn_web_development/Getting_started/Web_standards) module, slightly later on.
+This description of how the web works is heavily simplified, but it is all you really need to know at this point. You will find a more detailed account of how web pages are requested and rendered by a web browser in our [Web standards](/en-US/docs/Learn_web_development/Getting_started/Web_standards) module, slightly later on.
 
 For now, try opening a web browser and loading up a couple of your favorite sites, thinking about the above steps as you do so.
 
@@ -208,7 +208,7 @@ As a result, you need to be careful to check the answers they give you, and not 
 
   - Typing in `"ant fish cheese"` (with the quotes) will only return results that contain that exact phrase.
   - `"ant cheese" -fish` will return results that contain `ant` and/or `cheese` but not `fish`.
-  - `and OR cheese` will only return results with one term or the other, not both. From our testing, this one only seemed to work effectively in Google.
+  - `ant OR cheese` will only return results with one term or the other, not both. From our testing, this one only seemed to work effectively in Google.
   - `intitle:cheese` will only return results that have "cheese" in the main title of the page.
 
   > [!NOTE]

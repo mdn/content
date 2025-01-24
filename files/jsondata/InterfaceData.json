@@ -552,6 +552,14 @@
       "inh": "CSSRule",
       "impl": []
     },
+    "CSSFunctionDeclarations": {
+      "inh": "CSSRule",
+      "impl": []
+    },
+    "CSSFunctionDescriptors": {
+      "inh": "CSSStyleDeclaration",
+      "impl": []
+    },
     "CSSFunctionRule": {
       "inh": "CSSGroupingRule",
       "impl": []
@@ -3070,6 +3078,26 @@
     },
     "SharedStorage": {
       "inh": "",
+      "impl": []
+    },
+    "SharedStorageAppendMethod": {
+      "inh": "SharedStorageModifierMethod",
+      "impl": []
+    },
+    "SharedStorageClearMethod": {
+      "inh": "SharedStorageModifierMethod",
+      "impl": []
+    },
+    "SharedStorageDeleteMethod": {
+      "inh": "SharedStorageModifierMethod",
+      "impl": []
+    },
+    "SharedStorageModifierMethod": {
+      "inh": "",
+      "impl": []
+    },
+    "SharedStorageSetMethod": {
+      "inh": "SharedStorageModifierMethod",
       "impl": []
     },
     "SharedStorageWorklet": {
