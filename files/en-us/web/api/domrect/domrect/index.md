@@ -18,13 +18,13 @@ new DOMRect(x, y, width, height)
 
 ### Parameters
 
-- `x`
+- {{domxref("DOMRect.x", "x")}}
   - : The `x` coordinate of the `DOMRect`'s origin.
-- `y`
+- {{domxref("DOMRect.y", "y")}}
   - : The `y` coordinate of the `DOMRect`'s origin.
-- `width`
+- {{domxref("DOMRect.width", "width")}}
   - : The width of the `DOMRect`.
-- `height`
+- {{domxref("DOMRect.height", "height")}}
   - : The height of the `DOMRect`.
 
 ### Return value

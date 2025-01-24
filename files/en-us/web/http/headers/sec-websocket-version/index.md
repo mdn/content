@@ -8,7 +8,7 @@ spec-urls: https://datatracker.ietf.org/doc/html/rfc6455#section-11.3.5
 
 {{HTTPSidebar}}
 
-The **Sec-WebSocket-Version** HTTP {{glossary("request header", "request")}} and {{glossary("response header")}} is used in the [WebSocket](/en-US/docs/Web/API/WebSockets_API) opening [handshake](/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_servers#the_websocket_handshake) to indicate the WebSocket protocol supported by the client, and the protocol versions supported by the server if it does _not_ support the version specified in the request.
+The HTTP **Sec-WebSocket-Version** {{glossary("request header", "request")}} and {{glossary("response header")}} is used in the [WebSocket](/en-US/docs/Web/API/WebSockets_API) opening [handshake](/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_servers#the_websocket_handshake) to indicate the WebSocket protocol supported by the client, and the protocol versions supported by the server if it does _not_ support the version specified in the request.
 
 The header can only appear once in a request, and specifies the WebSocket version that web application is using.
 The current version of the protocol at time of writing is 13.
@@ -29,7 +29,7 @@ The header should not be sent in responses if the server understands the version
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>yes</td>
+      <td>Yes (<code>Sec-</code> prefix)</td>
     </tr>
   </tbody>
 </table>
@@ -51,16 +51,16 @@ Sec-WebSocket-Version: <server-supported-versions>
 ## Directives
 
 - `<version>`
-
   - : The WebSocket protocol version the client wishes to use when communicating with the server.
     This number should be the most recent version possible listed in the [IANA WebSocket Version Number Registry](https://www.iana.org/assignments/websocket/websocket.xml#version-number).
     The most recent final version of the WebSocket protocol is version 13.
-
 - `<server-supported-versions>`
   - : On error, a comma-delineated list of the WebSocket protocol versions supported by the server.
     The header is not sent in responses if `<version>` is supported.
 
 ## Examples
+
+### WebSocket opening handshake
 
 The version supported by the client is specified in the original `WebSocket` [handshake request](/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_servers#the_websocket_handshake).
 For the current protocol, the version is "13", as shown below.

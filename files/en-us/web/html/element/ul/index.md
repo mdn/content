@@ -45,7 +45,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 ## Examples
 
-### Simple example
+### Basic example
 
 ```html
 <ul>
@@ -57,7 +57,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 #### Result
 
-{{EmbedLiveSample("Simple_example", 400, 120)}}
+{{EmbedLiveSample("Basic_example", 400, 120)}}
 
 ### Nesting a list
 

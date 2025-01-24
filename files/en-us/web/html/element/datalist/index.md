@@ -57,7 +57,7 @@ The types {{HTMLElement("input/month", "month")}}, {{HTMLElement("input/week", "
 Predefined values can be shown there, allowing the user to quickly fill the control value.
 
 > [!NOTE]
-> When type is not supported, `text` type creating simple text field will be used instead. That field will correctly recognize recommended values and display them to the user in a drop-down menu.
+> When these types are not supported, a basic `text` type will be rendered instead, creating a text field. That field will correctly recognize recommended values and display them to the user in a drop-down menu.
 
 ```html
 <input type="time" list="popularHours" />

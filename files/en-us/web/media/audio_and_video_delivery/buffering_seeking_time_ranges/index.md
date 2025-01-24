@@ -12,7 +12,7 @@ Sometimes it's useful to know how much {{htmlelement("audio") }} or {{htmlelemen
 
 The `buffered` attribute will tell us which parts of the media has been downloaded. It returns a {{ domxref("TimeRanges") }} object, which will tell us which chunks of media have been downloaded. This is usually contiguous but if the user jumps about while media is buffering, it may contain holes.
 
-This will work with {{htmlelement("audio") }} or {{htmlelement("video") }}; for now let's consider a simple audio example:
+This will work with {{htmlelement("audio") }} or {{htmlelement("video") }}; for now let's consider an audio example:
 
 ```html
 <audio id="my-audio" controls src="music.mp3"></audio>

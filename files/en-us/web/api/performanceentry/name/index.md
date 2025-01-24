@@ -75,7 +75,10 @@ A string. The value depends on the subclass of the `PerformanceEntry` object as 
     </tr>
     <tr>
       <td>{{domxref('PerformanceNavigationTiming')}}</td>
-      <td>The resolved URL of the requested resource. This value doesn't change even if the request is redirected.</td>
+      <td>The resolved URL of the requested resource.
+      Note that this omits any <a href="/en-US/docs/Web/URI/Fragment/Text_fragments">text fragments</a> or other fragment directives.
+      The value doesn't change even if the request is redirected.
+      </td>
     </tr>
     <tr>
       <td>{{domxref('PerformancePaintTiming')}}</td>

@@ -34,6 +34,7 @@
     "lint:yml": "prettier -c \"**/*.yml\"",
     "prepare": "husky || true",
     "start": "yarn up-to-date-check && env-cmd --silent cross-env CONTENT_ROOT=files REACT_APP_DISABLE_AUTH=true BUILD_OUT_ROOT=build yari-server",
+    "start:rari": "yarn up-to-date-check && env-cmd --silent cross-env CONTENT_ROOT=files REACT_APP_DISABLE_AUTH=true BUILD_OUT_ROOT=build rari-server",
     "up-to-date-check": "node scripts/up-to-date-check.js",
     "jest": "cross-env NODE_OPTIONS=--experimental-vm-modules jest",
     "test:front-matter-linter": "yarn jest tests"
@@ -41,7 +42,7 @@
   "dependencies": {
     "@apideck/better-ajv-errors": "^0.3.6",
     "@caporal/core": "^2.0.7",
-    "@mdn/yari": "2.65.1",
+    "@mdn/yari": "4.2.0",
     "ajv": "^8.17.1",
     "ajv-formats": "^3.0.1",
     "async": "^3.2.6",
@@ -49,14 +50,14 @@
     "cli-progress": "^3.12.0",
     "cross-env": "7.0.3",
     "env-cmd": "10.1.0",
-    "fdir": "^6.4.2",
+    "fdir": "^6.4.3",
     "gray-matter": "^4.0.3",
-    "husky": "9.1.6",
+    "husky": "9.1.7",
     "js-yaml": "^4.1.0",
-    "lint-staged": "15.2.10",
-    "markdownlint-cli2": "0.15.0",
+    "lint-staged": "15.4.2",
+    "markdownlint-cli2": "0.17.2",
     "markdownlint-rule-search-replace": "1.2.0",
-    "prettier": "3.3.3"
+    "prettier": "3.4.2"
   },
   "devDependencies": {
     "jest": "^29.7.0"

@@ -76,7 +76,7 @@ Promise.allSettled([
 
 - [Polyfill of `Promise.allSettled` in `core-js`](https://github.com/zloirock/core-js#ecmascript-promise)
 - [Using promises](/en-US/docs/Web/JavaScript/Guide/Using_promises) guide
-- [Graceful asynchronous programming with promises](/en-US/docs/Learn/JavaScript/Asynchronous/Promises)
+- [Graceful asynchronous programming with promises](/en-US/docs/Learn_web_development/Extensions/Async_JS/Promises)
 - {{jsxref("Promise")}}
 - {{jsxref("Promise.all()")}}
 - {{jsxref("Promise.any()")}}

@@ -30,7 +30,7 @@ forEach(callbackFn)
 
 ## Description
 
-`forEach()` iterates the iterator and invokes the `callbackFn` function once for each element. Unlike most other iterator helper methods, it does not work well with infinite iterators, because it is not lazy.
+`forEach()` iterates the iterator and invokes the `callbackFn` function once for each element. Unlike most other iterator helper methods, it does not work with infinite iterators, because it is not lazy.
 
 ## Examples
 

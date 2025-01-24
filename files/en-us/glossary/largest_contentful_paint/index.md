@@ -1,5 +1,5 @@
 ---
-title: Largest contentful paint
+title: Largest Contentful Paint (LCP)
 slug: Glossary/Largest_contentful_paint
 page-type: glossary-definition
 ---
@@ -20,5 +20,5 @@ The following elements are considered when determining the LCP:
 
 - [`LargestContentfulPaint`](/en-US/docs/Web/API/LargestContentfulPaint)
 - Related glossary terms:
-  - {{Glossary("First contentful paint")}}
-  - {{Glossary("First paint")}}
+  - {{Glossary("First Contentful Paint")}}
+  - {{Glossary("First Paint")}}

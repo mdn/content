@@ -31,6 +31,7 @@
 -moz-visitedhyperlinktext
 -moz-win-communicationstext
 -moz-win-mediatext
+3rdparty
 accentcolor
 accentcolortext
 Accept-EncodXng
@@ -298,6 +299,7 @@ importmap
 imscjs
 inactivetitlebarcolor
 indexeddb-examples
+indexifembedded
 inputreport
 inputsourceschange
 intl.uidirection.locale

@@ -28,7 +28,7 @@ A `GPUAdapter` object is requested using the {{domxref("GPU.requestAdapter()")}}
 
 ## Instance methods
 
-- {{domxref("GPUAdapter.requestAdapterInfo", "requestAdapterInfo()")}} {{Experimental_Inline}} {{deprecated_inline}} {{non-standard_inline}}
+- {{domxref("GPUAdapter.requestAdapterInfo", "requestAdapterInfo()")}} {{deprecated_inline}} {{non-standard_inline}}
   - : Returns a {{jsxref("Promise")}} that fulfills with a {{domxref("GPUAdapterInfo")}} object containing identifying information about the adapter.
 - {{domxref("GPUAdapter.requestDevice", "requestDevice()")}} {{Experimental_Inline}}
   - : Returns a {{jsxref("Promise")}} that fulfills with a {{domxref("GPUDevice")}} object, which is the primary interface for communicating with the GPU.

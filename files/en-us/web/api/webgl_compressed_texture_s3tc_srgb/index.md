@@ -24,7 +24,7 @@ The compressed texture formats are exposed by four constants and can be used in 
 - `ext.COMPRESSED_SRGB_S3TC_DXT1_EXT`
   - : A DXT1-compressed image in an sRGB image format.
 - `ext.COMPRESSED_SRGB_ALPHA_S3TC_DXT1_EXT`
-  - : A DXT1-compressed image in an sRGB image format with a simple on/off alpha value.
+  - : A DXT1-compressed image in an sRGB image format with an on/off alpha value.
 - `ext.COMPRESSED_SRGB_ALPHA_S3TC_DXT3_EXT`
   - : A DXT3-compressed image in an sRGBA image format.
 - `ext.COMPRESSED_SRGB_ALPHA_S3TC_DXT5_EXT`

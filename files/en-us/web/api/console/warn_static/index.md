@@ -45,5 +45,5 @@ None ({{jsxref("undefined")}}).
 ## See also
 
 - [Microsoft Edge's documentation for `console.warn()`](https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/console/api#warn)
-- [Node.JS documentation for `console.warn()`](https://nodejs.org/docs/latest/api/console.html#consolewarndata-args)
+- [Node.js documentation for `console.warn()`](https://nodejs.org/docs/latest/api/console.html#consolewarndata-args)
 - [Google Chrome's documentation for `console.warn()`](https://developer.chrome.com/docs/devtools/console/api/#warn)

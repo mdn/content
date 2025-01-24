@@ -17,7 +17,7 @@ The three main types of cloud computing are Infrastructure as a Service (IaaS), 
 - Platform as a Service
   - : PaaS provides a platform allowing customers to develop, run, and manage applications without worrying about the underlying infrastructure such as servers, storage, and networking. PaaS allows developers to focus on writing code and application logic, without managing servers or operating systems. Examples include Google App Engine, Microsoft Azure App Service, Heroku, and AWS Elastic Beanstalk.
 - Software as a Service
-  - : SaaS delivers software applications over the internet, which users can access via a web browser. The provider manages all the underlying infrastructure, platform, and data. Businesses using SaaS don't need to install or manage software locally. Instead, they can access software such as email, CRM, and collaboration tools directly from a web browser. Examples include Google Workspace, Microsoft 365, Slack, Github, and ChatGPT.
+  - : SaaS delivers software applications over the internet, which users can access via a web browser. The provider manages all the underlying infrastructure, platform, and data. Businesses using SaaS don't need to install or manage software locally. Instead, they can access software such as email, CRM, and collaboration tools directly from a web browser. Examples include Google Workspace, Microsoft 365, Slack, GitHub, and ChatGPT.
 
 ## See also
 

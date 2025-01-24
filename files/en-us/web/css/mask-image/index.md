@@ -101,4 +101,4 @@ In the following cases, the mask is counted as a transparent black image layer:
 ## See also
 
 - [Clipping and Masking in CSS](https://css-tricks.com/clipping-masking-css/)
-- [Apply effects to images with CSS's mask-image property](https://web.dev/articles/css-masking)
+- [Apply effects to images with CSS's `mask-image` property](https://web.dev/articles/css-masking)

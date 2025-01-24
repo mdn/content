@@ -42,5 +42,5 @@ Some syntax, like the one of {{HTTPHeader("Accept")}}, allow additional specifie
 
 ## More information
 
-- [HTTP headers](/en-US/docs/Web/HTTP/Headers) using q-values in their syntax: {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Encoding")}}, {{HTTPHeader("Accept-Language")}}, {{HTTPHeader("TE")}}, {{HTTPHeader("Want-Digest")}}.
+- [HTTP headers](/en-US/docs/Web/HTTP/Headers) using q-values in their syntax: {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Encoding")}}, {{HTTPHeader("Accept-Language")}}, {{HTTPHeader("TE")}}.
 - [Header field definitions.](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html)

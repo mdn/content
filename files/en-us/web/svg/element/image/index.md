@@ -7,7 +7,7 @@ browser-compat: svg.elements.image
 
 {{SVGRef}}
 
-The **`<image>`** SVG element includes images inside SVG documents. It can display {{glossary("raster image")}} files or other SVG files.
+The **`<image>`** [SVG](/en-US/docs/Web/SVG) element includes images inside SVG documents. It can display {{glossary("raster image")}} files or other SVG files.
 
 The only image formats SVG software must support are {{glossary("JPEG")}}, {{glossary("PNG")}}, and other SVG files. Animated {{glossary("GIF")}} behavior is undefined.
 

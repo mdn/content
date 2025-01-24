@@ -8,7 +8,7 @@ spec-urls: https://datatracker.ietf.org/doc/html/rfc6455#section-11.3.4
 
 {{HTTPSidebar}}
 
-The **`Sec-WebSocket-Protocol`** HTTP {{glossary("request header", "request")}} and {{glossary("response header")}} is used in the [WebSocket](/en-US/docs/Web/API/WebSockets_API) opening [handshake](/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_servers#the_websocket_handshake) to negotiate a [sub-protocol](/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_servers#subprotocols) to use in the communication.
+The HTTP **`Sec-WebSocket-Protocol`** {{glossary("request header", "request")}} and {{glossary("response header")}} is used in the [WebSocket](/en-US/docs/Web/API/WebSockets_API) opening [handshake](/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_servers#the_websocket_handshake) to negotiate a [sub-protocol](/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_servers#subprotocols) to use in the communication.
 This can be a well understood protocol, such as SOAP or WAMP, or a custom protocol understood by the client and server.
 
 In a request the header specifies one or more WebSocket sub-protocols that the web application would like to use, in order of preference.
@@ -28,7 +28,7 @@ The sub-protocol selected by the server is made available to the web application
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>yes</td>
+      <td>Yes (<code>Sec-</code> prefix)</td>
     </tr>
   </tbody>
 </table>
@@ -54,6 +54,8 @@ Sec-WebSocket-Protocol: <selected-sub-protocol>
     The sub-protocols may be selected from the [IANA WebSocket Subprotocol Name Registry](https://www.iana.org/assignments/websocket/websocket.xml#subprotocol-name), or may be a custom name jointly understood by the client and the server.
 
 ## Examples
+
+### WebSocket opening handshake
 
 The sub-protocol is specified in the original WebSocket [handshake request](/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_servers#the_websocket_handshake).
 The request below shows that the client prefers `soap`, but also supports `wamp`.

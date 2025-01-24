@@ -37,6 +37,8 @@ These types include keywords and identifiers as well as strings, and URLs.
       - : The computed value of the property on the element's parent.
     - {{CSSXref("revert")}}
       - : Rolls back the cascade to the value of the earlier origin.
+    - {{CSSXref("revert-layer")}}
+      - : Rolls back the cascade to the value of the earlier [cascade layer](/en-US/docs/Web/CSS/@layer).
     - {{CSSXref("unset")}}
       - : Acts as `inherit` or `initial` depending on whether the property is inherited or not.
 - {{cssxref("&lt;custom-ident&gt;")}}
@@ -148,5 +150,5 @@ These data types are used in [CSS math function](/en-US/docs/Web/CSS/CSS_Functio
 ## See also
 
 - [CSS Units and Values](/en-US/docs/Web/CSS/CSS_Values_and_Units)
-- [Introduction to CSS: Values and Units](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)
+- [Learn: Values and units](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
 - [CSS Functional Notation](/en-US/docs/Web/CSS/CSS_Functions)

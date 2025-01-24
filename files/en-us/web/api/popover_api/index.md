@@ -2,7 +2,10 @@
 title: Popover API
 slug: Web/API/Popover_API
 page-type: web-api-overview
-browser-compat: api.HTMLElement.popover
+browser-compat:
+  - api.HTMLElement.popover
+  - api.HTMLElement.beforetoggle_event.popover_elements
+  - api.HTMLElement.toggle_event.popover_elements
 ---
 
 {{DefaultAPISidebar("Popover API")}}

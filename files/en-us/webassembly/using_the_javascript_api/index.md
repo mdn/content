@@ -11,7 +11,7 @@ If you have already [compiled a module from another language using tools like Em
 > [!NOTE]
 > If you are unfamiliar with the basic concepts mentioned in this article and need more explanation, read [WebAssembly concepts](/en-US/docs/WebAssembly/Concepts) first, then come back.
 
-## Some simple examples
+## Some examples
 
 Let's run through some examples that explain how to use the WebAssembly JavaScript API, and how to use it to load a Wasm module in a web page.
 

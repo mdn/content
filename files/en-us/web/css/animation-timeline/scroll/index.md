@@ -69,7 +69,7 @@ animation-timeline: scroll(x self);
 > [!NOTE]
 > The scroller and axis values can be specified in any order.
 
-### Formal syntax
+## Formal syntax
 
 {{CSSSyntax}}
 

@@ -344,4 +344,3 @@ Notice that when clicking on a radio button, there's a nice, smooth fade out/in 
 
 - {{HTMLElement("input")}} and the {{domxref("HTMLInputElement")}} interface that implements it.
 - {{domxref("RadioNodeList")}}: the interface that describes a list of radio buttons
-- [Compatibility of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

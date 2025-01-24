@@ -43,7 +43,7 @@ The `value` of the `time` input is always in 24-hour format that includes leadin
 
 In this example, you can see the time input's value by entering a time and seeing how it changes afterward.
 
-First, a look at the HTML. This is simple enough, with the label and input as we've seen before, but with the addition of a {{HTMLElement("p")}} element with a {{HTMLElement("span")}} to display the value of the `time` input:
+First, a look at the HTML. We include a label and input, and add a {{HTMLElement("p")}} element with a {{HTMLElement("span")}} to display the value of the `time` input:
 
 ```html
 <form>
@@ -118,7 +118,7 @@ When `any` is set as the value for `step`, the default 60 seconds is used, and t
 
 ### Basic uses of time
 
-The simplest use of `<input type="time">` involves a basic `<input>` and {{htmlelement("label")}} element combination, as seen below:
+The most basic use of `<input type="time">` involves a basic `<input>` and {{htmlelement("label")}} element combination, as seen below:
 
 ```html
 <form>
@@ -284,7 +284,7 @@ In this example, we create an interface element for choosing time using the nati
 ### CSS
 
 ```css
-input[type="number"] {
+input[type="time"] {
   width: 100px;
 }
 
@@ -378,5 +378,4 @@ input:valid + span::after {
 - [`<input type="month">`](/en-US/docs/Web/HTML/Element/input/month)
 - The generic {{HTMLElement("input")}} element and the interface used to manipulate it, {{domxref("HTMLInputElement")}}
 - [Date and time formats used in HTML](/en-US/docs/Web/HTML/Date_and_time_formats)
-- [Date and Time picker tutorial](/en-US/docs/Learn/Forms/HTML5_input_types#date_and_time_pickers)
-- [Compatibility of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [Date and Time picker tutorial](/en-US/docs/Learn_web_development/Extensions/Forms/HTML5_input_types#date_and_time_pickers)

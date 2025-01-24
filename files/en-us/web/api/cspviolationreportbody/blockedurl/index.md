@@ -23,7 +23,7 @@ If the value is not the URL of a resource, it must be one of the following strin
   - : An `eval()`.
     For example, `eval()` was used but [`'unsafe-eval'`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#unsafe-eval) was not specified in the CSP.
 - `wasm-eval`
-  - : An WASM evaluation.
+  - : An Wasm evaluation.
     For example, `eval()` was used but [`'wasm-unsafe-eval'`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#wasm-unsafe-eval) was not specified in the CSP.
 - `trusted-types-policy`
   - : A resource that violated the [`trusted-types`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/trusted-types) CSP directive.

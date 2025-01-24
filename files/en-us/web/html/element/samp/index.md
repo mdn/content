@@ -34,7 +34,7 @@ samp {
 
 ### Basic example
 
-In this simple example, a paragraph includes an example of the output of a program.
+In this basic example, a paragraph includes an example of the output of a program.
 
 ```html
 <p>

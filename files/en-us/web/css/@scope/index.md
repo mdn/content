@@ -278,7 +278,7 @@ To fix this, you can use `@scope` as follows:
 Now the innermost paragraph is correctly colored black. This is because it is only one DOM tree hierarchy level away from the `.light-theme` scope root, but two levels away from the `.dark-theme` scope root. Therefore, the light style wins.
 
 > [!NOTE]
-> Scoping proximity overrules source order but is itself overridden by other, higher-priority criteria such as [importance](/en-US/docs/Web/CSS/important), [layers](/en-US/docs/Learn/CSS/Building_blocks/Cascade_layers), and [specificity](/en-US/docs/Web/CSS/Specificity).
+> Scoping proximity overrules source order but is itself overridden by other, higher-priority criteria such as [importance](/en-US/docs/Web/CSS/important), [layers](/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers), and [specificity](/en-US/docs/Web/CSS/Specificity).
 
 ## Formal syntax
 
@@ -423,8 +423,8 @@ img {
 
 In our CSS, we have two `@scope` blocks:
 
-- The first `@scope` block defines its scope root as elements with a class of `.feature` (in this case, the outer `<div>` only), demonstrating how `@scope` can be used to theme a specific HTML subset.
-- The second `@scope` block also defines its scope root as elements with a class of `.feature`, but in addition defines a scope limit of `figure`. This ensures that contained rulesets will only be applied to matching elements within the scope root (`<div class="figure"> ... </div>` in this case) that **are not** nested inside descendant `<figure>` elements. This `@scope` block contains a single ruleset that styles `<img>` elements with a thick black border and a golden background color.
+- The first `@scope` block defines its scope root as elements with a class of `.feature` (in this case, the outer `<article>` only), demonstrating how `@scope` can be used to theme a specific HTML subset.
+- The second `@scope` block also defines its scope root as elements with a class of `.feature`, but also defines a scope limit of `figure`. This ensures that contained rulesets will only be applied to matching elements within the scope root (`<article class="feature"> ... </article>` in this case) that **are not** nested inside descendant `<figure>` elements. This `@scope` block contains a single ruleset that styles `<img>` elements with a thick black border and a golden background color.
 
 ```css
 /* Scoped CSS */

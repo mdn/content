@@ -7,7 +7,7 @@ spec-urls: https://drafts.csswg.org/selectors/#specificity-rules
 
 {{CSSRef}}
 
-**Specificity** is the algorithm used by browsers to determine the [CSS declaration](/en-US/docs/Learn/CSS/First_steps/What_is_CSS#css_syntax) that is the most relevant to an element, which in turn, determines the property value to apply to the element. The specificity algorithm calculates the weight of a [CSS selector](/en-US/docs/Web/CSS/Reference#selectors) to determine which rule from competing CSS declarations gets applied to an element.
+**Specificity** is the algorithm used by browsers to determine the [CSS declaration](/en-US/docs/Learn_web_development/Core/Styling_basics/What_is_CSS#css_syntax_basics) that is the most relevant to an element, which in turn, determines the property value to apply to the element. The specificity algorithm calculates the weight of a [CSS selector](/en-US/docs/Web/CSS/Reference#selectors) to determine which rule from competing CSS declarations gets applied to an element.
 
 > [!NOTE]
 > Browsers consider specificity **after** determining [cascade origin and importance](/en-US/docs/Web/CSS/Cascade). In other words, for competing property declarations, specificity is relevant and compared only between selectors from the one [cascade origin and layer](/en-US/docs/Web/CSS/@layer) that has precedence for the property. [Scoping proximity](/en-US/docs/Web/CSS/@scope#how_scope_conflicts_are_resolved) and order of appearance become relevant when the selector specificities of the competing declarations in the cascade layer with precedence are equal.
@@ -491,7 +491,7 @@ A few things to remember about specificity:
 
 ## See also
 
-- ["Specificity" in "Cascade and inheritance"](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#specificity_2)
+- ["Specificity" in "Handling conflicts"](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts#specificity_2)
 - [SpeciFISHity](https://specifishity.com/)
 - [Specificity Calculator](https://specificity.keegan.st/): An interactive website to test and understand your own CSS rules
 - [_ID-CLASS-TYPE_ exercise](https://estelle.github.io/CSS/selectors/exercises/specificity.html) a specificity quiz
@@ -502,7 +502,7 @@ A few things to remember about specificity:
 - [Inheritance](/en-US/docs/Web/CSS/Inheritance)
 - [Initial](/en-US/docs/Web/CSS/initial_value), [computed](/en-US/docs/Web/CSS/computed_value), [used](/en-US/docs/Web/CSS/used_value), and [actual](/en-US/docs/Web/CSS/actual_value) values
 - [Value definition syntax](/en-US/docs/Web/CSS/Value_definition_syntax)
-- [Building blocks: the CSS cascade](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-- [Building blocks: cascade layers](/en-US/docs/Learn/CSS/Building_blocks/Cascade_layers)
+- [Learn: Handling conflicts](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
+- [Learn: cascade layers](/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)
 - [CSS cascade and inheritance](/en-US/docs/Web/CSS/CSS_cascade) module
 - [CSS nesting module](/en-US/docs/Web/CSS/CSS_nesting)

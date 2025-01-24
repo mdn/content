@@ -47,7 +47,7 @@ This article provides information about the changes in Firefox 70 that will affe
   - {{cssxref("text-underline-offset")}}.
   - {{cssxref("text-decoration-skip-ink")}}. The default value is `auto`, which means that by default underlines and overlines are now interrupted where they would otherwise cross over a {{Glossary("glyph")}}.
 
-- The {{cssxref("display")}} property now accepts two keyword values representing the inner and outer display type ([Firefox bug 1038294](https://bugzil.la/1038294), [Webkit bug 1105868](https://bugzil.la/1105868) and [Webkit bug 1557825](https://bugzil.la/1557825)).
+- The {{cssxref("display")}} property now accepts two keyword values representing the inner and outer display type ([Firefox bug 1038294](https://bugzil.la/1038294), [WebKit bug 1105868](https://bugzil.la/1105868) and [WebKit bug 1557825](https://bugzil.la/1557825)).
 - The {{cssxref("font-size")}} property now accepts the new keyword value `xxx-large`. ([Firefox bug 1553545](https://bugzil.la/1553545)).
 - The {{cssxref(":visited")}} pseudo-class no longer matches {{htmlelement("link")}} elements, for logic and performance reasons ([Firefox bug 1572246](https://bugzil.la/1572246); see [Intent to ship: Make \<link> elements always unvisited](https://groups.google.com/forum/#!msg/mozilla.dev.platform/1NP6oJzK6zg/ftAz_TajAAAJ) and [\[selectors\] :link and \<link>](https://github.com/w3c/csswg-drafts/issues/3817) for more reasoning as to why).
 - We now support an `auto` value for the {{cssxref("quotes")}} property ([Firefox bug 1421938](https://bugzil.la/1421938)).

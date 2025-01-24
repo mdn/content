@@ -22,6 +22,10 @@ where:
 - _parameters_ {{optional_inline}}
   - : Optional additional parameters to pass to the paintWorklet
 
+## Formal syntax
+
+{{CSSSyntax}}
+
 ## Examples
 
 ### Basic CSS paint() usage

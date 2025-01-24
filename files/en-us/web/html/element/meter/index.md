@@ -37,7 +37,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 ## Examples
 
-### Simple Example
+### Basic Example
 
 #### HTML
 
@@ -47,7 +47,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 #### Result
 
-{{EmbedLiveSample("Simple_example", 300, 60)}}
+{{EmbedLiveSample("Basic_example", 300, 60)}}
 
 ### High and low range example
 

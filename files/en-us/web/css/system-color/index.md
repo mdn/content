@@ -22,94 +22,94 @@ A `<system-color>` value can be used anywhere a [`<color>`](/en-US/docs/Web/CSS/
 Note that these keywords are _case insensitive_, but are listed here with mixed case for readability.
 
 - `AccentColor`
-  - : Background of accented user interface controls
+  - : Background of accented user interface controls.
 - `AccentColorText`
-  - : Text of accented user interface controls
+  - : Text of accented user interface controls.
 - `ActiveText`
-  - : Text of active links
+  - : Text of active links.
 - `ButtonBorder`
-  - : Base border color of controls
+  - : Base border color of controls.
 - `ButtonFace`
-  - : Background color of controls
+  - : Background color of controls.
 - `ButtonText`
-  - : Text color of controls
+  - : Text color of controls.
 - `Canvas`
-  - : Background of application content or documents
+  - : Background of application content or documents.
 - `CanvasText`
-  - : Text color in application content or documents
+  - : Text color in application content or documents.
 - `Field`
-  - : Background of input fields
+  - : Background of input fields.
 - `FieldText`
-  - : Text in input fields
+  - : Text in input fields.
 - `GrayText`
-  - : Text color for disabled items (e.g. a disabled control)
+  - : Text color for disabled items (for example, a disabled control).
 - `Highlight`
-  - : Background of selected items
+  - : Background of selected items.
 - `HighlightText`
-  - : Text color of selected items
+  - : Text color of selected items.
 - `LinkText`
-  - : Text of non-active, non-visited links
+  - : Text of non-active, non-visited links.
 - `Mark`
-  - : Background of text that has been specially marked (such as by the HTML `mark` element)
+  - : Background of text that has been specially marked (such as by the HTML `mark` element).
 - `MarkText`
-  - : Text that has been specially marked (such as by the HTML `mark` element)
+  - : Text that has been specially marked (such as by the HTML `mark` element).
 - `SelectedItem`
-  - : Background of selected items, for example, a selected checkbox
+  - : Background of selected items, for example, a selected checkbox.
 - `SelectedItemText`
-  - : Text of selected items
+  - : Text of selected items.
 - `VisitedText`
-  - : Text of visited links
+  - : Text of visited links.
 
 ### Deprecated system color keywords
 
 The following keywords were defined in earlier versions of the CSS Color Module. They are now deprecated for use on public web pages.
 
-- `ActiveBorder`
-  - : Active window border.
-- `ActiveCaption`
-  - : Active window caption. Should be used with `CaptionText` as foreground color.
-- `AppWorkspace`
-  - : Background color of multiple document interface.
-- `Background`
-  - : Desktop background.
-- `ButtonHighlight`
-  - : The color of the border facing the light source for 3-D elements that appear 3-D due to that layer of surrounding border.
-- `ButtonShadow`
-  - : The color of the border away from the light source for 3-D elements that appear 3-D due to that layer of surrounding border.
-- `CaptionText`
-  - : Text in caption, size box, and scrollbar arrow box. Should be used with the `ActiveCaption` background color.
-- `InactiveBorder`
-  - : Inactive window border.
-- `InactiveCaption`
-  - : Inactive window caption. Should be used with the `InactiveCaptionText` foreground color.
-- `InactiveCaptionText`
-  - : Color of text in an inactive caption. Should be used with the `InactiveCaption` background color.
-- `InfoBackground`
-  - : Background color for tooltip controls. Should be used with the `InfoText` foreground color.
-- `InfoText`
-  - : Text color for tooltip controls. Should be used with the `InfoBackground` background color.
-- `Menu`
-  - : Menu background. Should be used with the `MenuText` or `-moz-MenuBarText` foreground color.
-- `MenuText`
-  - : Text in menus. Should be used with the `Menu` background color.
-- `Scrollbar`
-  - : Background color of scroll bars.
-- `ThreeDDarkShadow`
-  - : The color of the darker (generally outer) of the two borders away from the light source for 3-D elements that appear 3-D due to two concentric layers of surrounding border.
-- `ThreeDFace`
-  - : The face background color for 3-D elements that appear 3-D due to two concentric layers of surrounding border. Should be used with the `ButtonText` foreground color.
-- `ThreeDHighlight`
-  - : The color of the lighter (generally outer) of the two borders facing the light source for 3-D elements that appear 3-D due to two concentric layers of surrounding border.
-- `ThreeDLightShadow`
-  - : The color of the darker (generally inner) of the two borders facing the light source for 3-D elements that appear 3-D due to two concentric layers of surrounding border.
-- `ThreeDShadow`
-  - : The color of the lighter (generally inner) of the two borders away from the light source for 3-D elements that appear 3-D due to two concentric layers of surrounding border.
-- `Window`
-  - : Window background. Should be used with the `WindowText` foreground color.
-- `WindowFrame`
-  - : Window frame.
-- `WindowText`
-  - : Text in windows. Should be used with the `Window` background color.
+- `ActiveBorder` {{Deprecated_Inline}}
+  - : Active window border. Same as `ButtonBorder`.
+- `ActiveCaption` {{Deprecated_Inline}}
+  - : Active window caption. Should be used with `CaptionText` as foreground color. Same as `Canvas`.
+- `AppWorkspace` {{Deprecated_Inline}}
+  - : Background color of multiple document interface. Same as `Canvas`.
+- `Background` {{Deprecated_Inline}}
+  - : Desktop background. Same as `Canvas`.
+- `ButtonHighlight` {{Deprecated_Inline}}
+  - : The color of the border facing the light source for 3-D elements that appear 3-D due to that layer of surrounding border. Same as `ButtonFace`.
+- `ButtonShadow` {{Deprecated_Inline}}
+  - : The color of the border away from the light source for 3-D elements that appear 3-D due to that layer of surrounding border. Same as `ButtonFace`.
+- `CaptionText` {{Deprecated_Inline}}
+  - : Text in caption, size box, and scrollbar arrow box. Should be used with the `ActiveCaption` background color. Same as `CanvasText`.
+- `InactiveBorder` {{Deprecated_Inline}}
+  - : Inactive window border. Same as `ButtonBorder`.
+- `InactiveCaption` {{Deprecated_Inline}}
+  - : Inactive window caption. Should be used with the `InactiveCaptionText` foreground color. Same as `Canvas`.
+- `InactiveCaptionText` {{Deprecated_Inline}}
+  - : Color of text in an inactive caption. Should be used with the `InactiveCaption` background color. Same as `GrayText`.
+- `InfoBackground` {{Deprecated_Inline}}
+  - : Background color for tooltip controls. Should be used with the `InfoText` foreground color. Same as `Canvas`.
+- `InfoText` {{Deprecated_Inline}}
+  - : Text color for tooltip controls. Should be used with the `InfoBackground` background color. Same as `CanvasText`.
+- `Menu` {{Deprecated_Inline}}
+  - : Menu background. Should be used with the `MenuText` or `-moz-MenuBarText` foreground color. Same as `Canvas`.
+- `MenuText` {{Deprecated_Inline}}
+  - : Text in menus. Should be used with the `Menu` background color. Same as `CanvasText`.
+- `Scrollbar` {{Deprecated_Inline}}
+  - : Background color of scroll bars. Same as `Canvas`.
+- `ThreeDDarkShadow` {{Deprecated_Inline}}
+  - : The color of the darker (generally outer) of the two borders away from the light source for 3-D elements that appear 3-D due to two concentric layers of surrounding border. Same as `ButtonBorder`.
+- `ThreeDFace` {{Deprecated_Inline}}
+  - : The face background color for 3-D elements that appear 3-D due to two concentric layers of surrounding border. Should be used with the `ButtonText` foreground color. Same as `ButtonFace`.
+- `ThreeDHighlight` {{Deprecated_Inline}}
+  - : The color of the lighter (generally outer) of the two borders facing the light source for 3-D elements that appear 3-D due to two concentric layers of surrounding border. Same as `ButtonBorder`.
+- `ThreeDLightShadow` {{Deprecated_Inline}}
+  - : The color of the darker (generally inner) of the two borders facing the light source for 3-D elements that appear 3-D due to two concentric layers of surrounding border. Same as `ButtonBorder`.
+- `ThreeDShadow` {{Deprecated_Inline}}
+  - : The color of the lighter (generally inner) of the two borders away from the light source for 3-D elements that appear 3-D due to two concentric layers of surrounding border. Same as `ButtonBorder`.
+- `Window` {{Deprecated_Inline}}
+  - : Window background. Should be used with the `WindowText` foreground color. Same as `Canvas`.
+- `WindowFrame` {{Deprecated_Inline}}
+  - : Window frame. Same as `ButtonBorder`.
+- `WindowText` {{Deprecated_Inline}}
+  - : Text in windows. Should be used with the `Window` background color. Same as `CanvasText`.
 
 ## Examples
 

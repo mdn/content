@@ -40,9 +40,9 @@ If you don't specify a `value`, you get an empty button:
 
 `<input type="button">` elements have no default behavior (their cousins, `<input type="submit">` and [`<input type="reset">`](/en-US/docs/Web/HTML/Element/input/reset) are used to submit and reset forms, respectively). To make buttons do anything, you have to write JavaScript code to do the work.
 
-### A simple button
+### A basic button
 
-We'll begin by creating a simple button with a {{domxref("Element/click_event", "click")}} event handler that starts our machine (well, it toggles the `value` of the button and the text content of the following paragraph):
+We'll begin by creating a basic button with a {{domxref("Element/click_event", "click")}} event handler that starts our machine (well, it toggles the `value` of the button and the text content of the following paragraph):
 
 ```html
 <form>
@@ -70,7 +70,7 @@ function updateButton() {
 
 The script gets a reference to the {{domxref("HTMLInputElement")}} object representing the `<input>` in the DOM, saving this reference in the variable `button`. {{domxref("EventTarget.addEventListener", "addEventListener()")}} is then used to establish a function that will be run when {{domxref("Element/click_event", "click")}} events occur on the button.
 
-{{EmbedLiveSample("A_simple_button", 650, 100)}}
+{{EmbedLiveSample("A_basic_button", 650, 100)}}
 
 ### Adding keyboard shortcuts to buttons
 
@@ -180,7 +180,7 @@ Buttons don't participate in constraint validation; they have no real value to b
 
 ## Examples
 
-The below example shows a very simple drawing app created using a {{htmlelement("canvas")}} element and some simple CSS and JavaScript (we'll hide the CSS for brevity). The top two controls allow you to choose the color and size of the drawing pen. The button, when clicked, invokes a function that clears the canvas.
+The below example shows a very simple drawing app created using a {{htmlelement("canvas")}} element and some CSS and JavaScript (we'll hide the CSS for brevity). The top two controls allow you to choose the color and size of the drawing pen. The button, when clicked, invokes a function that clears the canvas.
 
 ```html
 <div class="toolbar">
@@ -352,4 +352,3 @@ draw();
 
 - {{HTMLElement("input")}} and the {{domxref("HTMLInputElement")}} interface which implements it.
 - The more modern {{HTMLElement("button")}} element.
-- [Compatibility of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

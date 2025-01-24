@@ -39,7 +39,7 @@ Use `<p>` elements, and use CSS properties like {{cssxref("margin")}} to control
 
 ## Examples
 
-### Simple br
+### Basic br
 
 In the following example we use `<br>` elements to create line breaks between the different lines of a postal address:
 
@@ -53,7 +53,7 @@ USA<br />
 
 #### Result
 
-{{ EmbedLiveSample('Simple_br', 640, 120) }}
+{{ EmbedLiveSample('Basic_br', 640, 120) }}
 
 ## Technical summary
 

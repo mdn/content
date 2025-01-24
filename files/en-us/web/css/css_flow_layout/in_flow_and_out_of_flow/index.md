@@ -216,4 +216,4 @@ In this guide, we have covered the ways to take an element out of flow in order 
 
 ## See also
 
-- [Positioning](/en-US/docs/Learn/CSS/CSS_layout/Positioning) in the CSS Layout learn area
+- [Learn: Positioning](/en-US/docs/Learn_web_development/Core/CSS_layout/Positioning)

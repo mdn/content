@@ -73,7 +73,7 @@ The `border-collapse` property is specified as a single keyword, which may be ch
     </tr>
     <tr>
       <td class="sa">Safari</td>
-      <td class="wk">Webkit</td>
+      <td class="wk">WebKit</td>
     </tr>
     <tr>
       <td class="ch">Chrome</td>
@@ -104,7 +104,7 @@ The `border-collapse` property is specified as a single keyword, which may be ch
     </tr>
     <tr>
       <td class="sa">Safari</td>
-      <td class="wk">Webkit</td>
+      <td class="wk">WebKit</td>
     </tr>
     <tr>
       <td class="ch">Chrome</td>

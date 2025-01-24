@@ -7,7 +7,7 @@ browser-compat: svg.elements.style
 
 {{SVGRef}}
 
-The SVG **`<style>`** element allows style sheets to be embedded directly within SVG content.
+The **`<style>`** [SVG](/en-US/docs/Web/SVG) element allows style sheets to be embedded directly within SVG content.
 
 > [!NOTE]
 > SVG's `style` element has the same attributes as the corresponding element in HTML (see HTML's {{HTMLElement("style")}} element).
@@ -42,10 +42,10 @@ svg {
 
 - {{SVGAttr("type")}}
   - : This attribute defines type of the style sheet language to use as a media type string.
-    _Value type_: [**\<string>**](/en-US/docs/Web/CSS/string); _Default value_: `text/css`; _Animatable_: **no**
+    _Value type_: [**`<media-type>`**](/en-US/docs/Glossary/MIME_type); _Default value_: `text/css`; _Animatable_: **no**
 - {{SVGAttr("media")}}
   - : This attribute defines to which {{cssxref('@media', 'media')}} the style applies.
-    _Value type_: [**`<string>`**](/en-US/docs/Web/CSS/string); _Default value_: `all`; _Animatable_: **no**
+    _Value type_: [**`<media-query-list>`**](/en-US/docs/Web/CSS/@media#syntax); _Default value_: `all`; _Animatable_: **no**
 - {{SVGAttr("title")}}
   - : This attribute is the title of the style sheet which can be used to switch between [alternate style sheets](/en-US/docs/Web/CSS/Alternative_style_sheets).
     _Value type_: [**`<string>`**](/en-US/docs/Web/CSS/string); _Default value_: _none_; _Animatable_: **no**

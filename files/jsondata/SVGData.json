@@ -29,19 +29,19 @@
         ]
       },
       "attributes": [
+        "ariaAttributes",
         "conditionalProcessingAttributes",
         "coreAttributes",
-        "graphicalEventAttributes",
         "presentationAttributes",
         "xLinkAttributes",
-        "'class'",
-        "'style'",
-        "'externalResourcesRequired'",
-        "'transform'",
-        "'xlink:show'",
-        "'xlink:actuate'",
-        "'xlink:href'",
-        "'target'"
+        "'href'",
+        "'target'",
+        "'download'",
+        "'ping'",
+        "'rel'",
+        "'hreflang'",
+        "'type'",
+        "'referrerpolicy'"
       ],
       "interfaces": ["SVGAElement"]
     },
@@ -993,25 +993,24 @@
           "descriptiveElements",
           "&lt;animate&gt;",
           "&lt;animateTransform&gt;",
+          "&lt;script&gt;",
           "&lt;set&gt;",
-          "&lt;stop&gt;"
+          "&lt;stop&gt;",
+          "&lt;style&gt;"
         ]
       },
       "attributes": [
         "coreAttributes",
         "presentationAttributes",
         "xLinkAttributes",
-        "'class'",
-        "'style'",
-        "'externalResourcesRequired'",
         "'gradientUnits'",
         "'gradientTransform'",
+        "'href'",
         "'x1'",
         "'y1'",
         "'x2'",
         "'y2'",
-        "'spreadMethod'",
-        "'xlink:href'"
+        "'spreadMethod'"
       ],
       "interfaces": ["SVGLinearGradientElement"]
     },
@@ -1195,20 +1194,16 @@
         "elements": [
           "animationElements",
           "descriptiveElements",
+          "gradientElements",
           "shapeElements",
           "structuralElements",
-          "gradientElements",
           "&lt;a&gt;",
           "&lt;clipPath&gt;",
-          "&lt;cursor&gt;",
           "&lt;filter&gt;",
-          "&lt;font&gt;",
-          "&lt;font-face&gt;",
           "&lt;foreignObject&gt;",
           "&lt;image&gt;",
           "&lt;marker&gt;",
           "&lt;mask&gt;",
-          "&lt;pattern&gt;",
           "&lt;script&gt;",
           "&lt;style&gt;",
           "&lt;switch&gt;",
@@ -1217,23 +1212,19 @@
         ]
       },
       "attributes": [
-        "conditionalProcessingAttributes",
         "coreAttributes",
         "presentationAttributes",
         "xLinkAttributes",
-        "'class'",
-        "'style'",
-        "'externalResourcesRequired'",
         "'viewBox'",
-        "'patternUnits'",
-        "'patternContentUnits'",
-        "'patternTransform'",
+        "'preserveAspectRatio'",
         "'x'",
         "'y'",
         "'width'",
         "'height'",
-        "'xlink:href'",
-        "'preserveAspectRatio'"
+        "'patternUnits'",
+        "'patternContentUnits'",
+        "'patternTransform'",
+        "'href'"
       ],
       "interfaces": ["SVGPatternElement"]
     },
@@ -1283,26 +1274,26 @@
           "descriptiveElements",
           "&lt;animate&gt;",
           "&lt;animateTransform&gt;",
+          "&lt;script&gt;",
           "&lt;set&gt;",
-          "&lt;stop&gt;"
+          "&lt;stop&gt;",
+          "&lt;style&gt;"
         ]
       },
       "attributes": [
         "coreAttributes",
         "presentationAttributes",
         "xLinkAttributes",
-        "'class'",
-        "'style'",
-        "'externalResourcesRequired'",
-        "'gradientUnits'",
-        "'gradientTransform'",
         "'cx'",
         "'cy'",
-        "'r'",
         "'fx'",
         "'fy'",
-        "'spreadMethod'",
-        "'xlink:href'"
+        "'fr'",
+        "'gradientUnits'",
+        "'gradientTransform'",
+        "'href'",
+        "'r'",
+        "'spreadMethod'"
       ],
       "interfaces": ["SVGRadialGradientElement"]
     },
@@ -1338,9 +1329,9 @@
       "attributes": [
         "coreAttributes",
         "xLinkAttributes",
-        "'externalResourcesRequired'",
         "'type'",
-        "'xlink:href'"
+        "'href'",
+        "'crossorigin'"
       ],
       "interfaces": ["SVGScriptElement"]
     },
@@ -1366,13 +1357,16 @@
       "categories": ["gradientElement"],
       "content": {
         "description": "anyNumberOfElementsAnyOrder",
-        "elements": ["&lt;animate&gt;", "&lt;set&gt;"]
+        "elements": [
+          "&lt;animate&gt;",
+          "&lt;script&gt;",
+          "&lt;set&gt;",
+          "&lt;style&gt;"
+        ]
       },
       "attributes": [
         "coreAttributes",
         "presentationAttributes",
-        "'class'",
-        "'style'",
         "'offset'",
         "'stop-color'",
         "'stop-opacity'"

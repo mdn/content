@@ -39,7 +39,7 @@ This article provides information about the changes in Firefox 65 that will affe
   - {{cssxref("break-inside")}} is now an alias for {{cssxref("page-break-inside")}}.
 
 - The {{cssxref("overflow-wrap")}} property's `anywhere` value has been implemented ([Firefox bug 1505786](https://bugzil.la/1505786)).
-- The new step position keywords `jump-start`, `jump-end`, `jump-none`, and `jump-both` — usable inside the [`steps()` timing function](/en-US/docs/Web/CSS/easing-function#step_easing_function) — have been implemented ([Firefox bug 1496619](https://bugzil.la/1496619)). This also coincides with the removal of the `frames()` timing function, which was the previous way of implementing such functionality, now deprecated.
+- The new step position keywords `jump-start`, `jump-end`, `jump-none`, and `jump-both` — usable inside the [`steps()` timing function](/en-US/docs/Web/CSS/easing-function/steps) — have been implemented ([Firefox bug 1496619](https://bugzil.la/1496619)). This also coincides with the removal of the `frames()` timing function, which was the previous way of implementing such functionality, now deprecated.
 - Some new {{cssxref("appearance", "-webkit-appearance")}} values have been added, for compatibility with other browsers. In particular:
 
   - `meter`, which is now used as the default value for {{htmlelement("meter")}} elements in UA stylesheets. The existing value `meterbar` is now an alias for `meter` ([Firefox bug 1501483](https://bugzil.la/1501483)).

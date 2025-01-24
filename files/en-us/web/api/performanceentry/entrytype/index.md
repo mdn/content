@@ -30,7 +30,7 @@ A string. The return value depends on the subtype of the `PerformanceEntry` obje
 
 - `first-input`
 
-  - : Reports the {{Glossary("first input delay")}} (FID).
+  - : Reports the {{Glossary("First Input Delay")}} (FID).
 
     The entry instance will be a {{domxref("PerformanceEventTiming")}} object.
 

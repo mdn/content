@@ -9,7 +9,7 @@ browser-compat: svg.elements.font-face-name
 
 {{SVGRef}}{{deprecated_header}}
 
-The **`<font-face-name>`** element points to a locally installed copy of this font, identified by its name.
+The **`<font-face-name>`** [SVG](/en-US/docs/Web/SVG) element points to a locally installed copy of this font, identified by its name.
 
 ## Usage context
 

@@ -1,5 +1,5 @@
 ---
-title: First Meaningful Paint
+title: First Meaningful Paint (FMP)
 slug: Glossary/First_meaningful_paint
 page-type: glossary-definition
 ---
@@ -16,5 +16,5 @@ FMP is very sensitive to small differences in the page load. This can lead to in
 ## See also
 
 - Related glossary terms:
-  - {{Glossary("First contentful paint")}}
-  - {{Glossary("Largest contentful paint")}}
+  - {{Glossary("First Contentful Paint")}}
+  - {{Glossary("Largest Contentful Paint")}}

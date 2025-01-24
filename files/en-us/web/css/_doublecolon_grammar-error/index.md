@@ -32,7 +32,7 @@ Only a small subset of CSS properties can be used in a rule with `::grammar-erro
 
 ## Examples
 
-### Simple document grammar check
+### Basic document grammar check
 
 In this example, eventual supporting browsers should highlight any flagged grammatical errors with the styles shown.
 
@@ -55,7 +55,7 @@ In this example, eventual supporting browsers should highlight any flagged gramm
 
 #### Result
 
-{{EmbedLiveSample('Simple_document_grammar_check', '100%', 60)}}
+{{EmbedLiveSample('Basic_document_grammar_check', '100%', 60)}}
 
 ## Specifications
 

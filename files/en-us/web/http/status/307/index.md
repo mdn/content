@@ -42,7 +42,7 @@ Accept: */*
 
 ```http
 HTTP/2 307
-location: /en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data
+location: /en-US/docs/Learn_web_development/Core/Scripting/Network_requests
 content-type: text/plain; charset=utf-8
 date: Fri, 19 Jul 2024 12:57:17 GMT
 ```

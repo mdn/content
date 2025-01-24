@@ -42,13 +42,11 @@ This directive may have one of the following values:
   - : No form submissions may be made. The single quotes are mandatory.
 - `<source-expression-list>`
 
-  - : A space-separated list of _source expression_ values. Form submissions may be made to URLs that match any of the given source expressions.
+  - : A space-separated list of _source expression_ values. Form submissions may be made to URLs that match any of the given source expressions. For this directive, the following source expression values are applicable:
 
-    Source expressions are specified as keyword values or URL patterns: the syntax for each source expression is given in [CSP Source Values](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources). However, only the following subset of those values apply to `form-action`:
-
-    - `<host-source>`
-    - `<scheme-source>`
-    - the keyword value `'self'`.
+    - [`<host-source>`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#host-source)
+    - [`<scheme-source>`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#scheme-source)
+    - [`'self'`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#self)
 
 ## Examples
 

@@ -12,5 +12,5 @@ The most prominent function of DNS is the translation of human-friendly domain n
 
 ## See also
 
-- [Understanding domain names](/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name)
+- [Understanding domain names](/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name)
 - [Domain Name System](https://en.wikipedia.org/wiki/Domain_Name_System) on Wikipedia

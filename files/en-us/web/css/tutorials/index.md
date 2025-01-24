@@ -15,14 +15,14 @@ They are grouped by complexity so that you can choose the most appropriate for y
 
 ## Beginner-level CSS tutorials
 
-- [CSS basics](/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics)
+- [CSS basics](/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Styling_the_content)
   - : This guide is aimed at complete beginners: You haven't written one single line of CSS? — this is for you.
     It explains the fundamental concepts of the language and guides you in writing basic stylesheets.
 - [Using multiple backgrounds](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
   - : Backgrounds are fundamental for nice styling: CSS allows you to set several of them on each box. This tutorial explains how they interact and how to achieve nice effects.
 - [Resizing background images](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images)
   - : CSS allows you to resize images used as an element's background.
-    This tutorial describes how to achieve this in a simple way.
+    This tutorial describes how to achieve this.
 - [Using media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
   - : The size of the screens, or the kind of devices like touchscreens or printed sheets vary greatly nowadays.
     Media queries are the fundamental building blocks in building websites that render everywhere in their best quality.

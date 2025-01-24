@@ -36,7 +36,7 @@ A number representing the sign of `A`:
 - If `x` is negative zero, returns `-0`.
 - Otherwise, returns `NaN`.
 
-### Formal syntax
+## Formal syntax
 
 {{CSSSyntax}}
 

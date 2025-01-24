@@ -20,17 +20,15 @@ This guide assumes you have the following basic background:
 
 The JavaScript documentation on MDN includes the following:
 
-- [Learn Web Development](/en-US/docs/Learn) provides information for beginners and introduces basic concepts of programming and the Internet.
+- [Dynamic scripting with JavaScript](/en-US/docs/Learn_web_development/Core/Scripting) provides structured JavaScript guides for beginners and introduces basic concepts of programming and the Internet.
 - [JavaScript Guide](/en-US/docs/Web/JavaScript/Guide) (this guide) provides an overview about the JavaScript language and its objects.
 - [JavaScript Reference](/en-US/docs/Web/JavaScript/Reference) provides detailed reference material for JavaScript.
-
-If you are new to JavaScript, start with the articles in the [learning area](/en-US/docs/Learn) and the [JavaScript Guide](/en-US/docs/Web/JavaScript/Guide). Once you have a firm grasp of the fundamentals, you can use the [JavaScript Reference](/en-US/docs/Web/JavaScript/Reference) to get more details on individual objects and statements.
 
 ## What is JavaScript?
 
 JavaScript is a cross-platform, object-oriented scripting language used to make webpages interactive (e.g., having complex animations, clickable buttons, popup menus, etc.). There are also more advanced server side versions of JavaScript such as Node.js, which allow you to add more functionality to a website than downloading files (such as realtime collaboration between multiple computers). Inside a host environment (for example, a web browser), JavaScript can be connected to the objects of its environment to provide programmatic control over them.
 
-JavaScript contains a standard library of objects, such as `Array`, `Date`, and `Math`, and a core set of language elements such as operators, control structures, and statements. Core JavaScript can be extended for a variety of purposes by supplementing it with additional objects; for example:
+JavaScript contains a standard library of objects, such as `Array`, `Map`, and `Math`, and a core set of language elements such as operators, control structures, and statements. Core JavaScript can be extended for a variety of purposes by supplementing it with additional objects; for example:
 
 - _Client-side JavaScript_ extends the core language by supplying objects to control a browser and its _Document Object Model_ (DOM). For example, client-side extensions allow an application to place elements on an HTML form and respond to user events such as mouse clicks, form input, and page navigation.
 - _Server-side JavaScript_ extends the core language by supplying objects relevant to running JavaScript on a server. For example, server-side extensions allow an application to communicate with a database, provide continuity of information from one invocation to another of the application, or perform file manipulations on a server.
@@ -47,7 +45,7 @@ JavaScript is a very free-form language compared to Java. You do not have to dec
 
 Java is a class-based programming language designed for fast execution and type safety. Type safety means, for instance, that you can't cast a Java integer into an object reference or access private memory by corrupting the Java bytecode. Java's class-based model means that programs consist exclusively of classes and their methods. Java's class inheritance and strong typing generally require tightly coupled object hierarchies. These requirements make Java programming more complex than JavaScript programming.
 
-In contrast, JavaScript descends in spirit from a line of smaller, dynamically typed languages such as HyperTalk and dBASE. These scripting languages offer programming tools to a much wider audience because of their easier syntax, specialized built-in functionality, and minimal requirements for object creation.
+In contrast, JavaScript descends in spirit from a line of smaller, dynamically typed languages such as HyperTalk and dBase. These scripting languages offer programming tools to a much wider audience because of their easier syntax, specialized built-in functionality, and minimal requirements for object creation.
 
 | JavaScript                                                                                                                                                                   | Java                                                                                                                                                                                     |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

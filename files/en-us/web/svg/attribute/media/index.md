@@ -63,7 +63,7 @@ svg {
     </tr>
     <tr>
       <th scope="row">Animatable</th>
-      <td>Yes</td>
+      <td>No</td>
     </tr>
   </tbody>
 </table>

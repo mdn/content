@@ -18,7 +18,7 @@ The CSS Writing Modes Level 3 Specification defines the impact a change the docu
 
 The specification defines the _inline base direction_ as the direction in which content is ordered on a line. This defines the start and end of the inline direction. The start is where sentences start and the end is where a line of text ends before it would begin to wrap onto a new line.
 
-The _block flow direction_ is the direction in which boxes, for example paragraphs, stack in that writing mode. The CSS writing-mode property controls the block flow direction. If you want to change your page, or part of your page, to `vertical-lr` then you can set `writing-mode: vertical-lr` on the element and this will change the direction of the blocks and therefore the inline direction as well.
+The _block flow direction_ is the direction in which boxes, for example paragraphs, stack in that writing mode. The CSS `writing-mode` property controls the block flow direction. If you want to change your page, or part of your page, to `vertical-lr` then you can set `writing-mode: vertical-lr` on the element and this will change the direction of the blocks and therefore the inline direction as well.
 
 While certain languages will use a particular writing mode or text direction, we can also use these properties for creative effect, such as running a heading vertically.
 

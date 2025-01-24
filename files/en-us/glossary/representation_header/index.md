@@ -36,10 +36,9 @@ Representation headers are not mutually exclusive with {{Glossary("Content heade
 
 ## See also
 
-- [RFC 9110, section 3.2: Representations](https://httpwg.org/specs/rfc9110.html#representations)
-- [List of all HTTP headers](/en-US/docs/Web/HTTP/Headers)
 - Related glossary terms:
   - {{Glossary("Content header")}}
+- [RFC 9110, section 3.2: Representations](https://httpwg.org/specs/rfc9110.html#representations)
+- [List of all HTTP headers](/en-US/docs/Web/HTTP/Headers)
 - {{HTTPHeader("Repr-Digest")}}, {{HTTPHeader("Want-Repr-Digest")}}
 - {{HTTPHeader("Content-Digest")}}, {{HTTPHeader("Want-Content-Digest")}}
-- {{HTTPHeader("Digest")}} {{Deprecated_Inline}}, {{HTTPHeader("Want-Digest")}} {{Deprecated_Inline}}

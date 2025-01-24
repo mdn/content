@@ -128,4 +128,4 @@ Content-Type: text/html
 - [`rel="preconnect"`](/en-US/docs/Web/HTML/Attributes/rel/preconnect) ({{htmlelement("link")}} attribute)
 - [`rel="preload"`](/en-US/docs/Web/HTML/Attributes/rel/preload) ({{htmlelement("link")}} attribute)
 - [`fetchpriority`](/en-US/docs/Web/HTML/Element/link#fetchpriority) ({{htmlelement("link")}} attribute)
-- [Early Hints update: How Cloudflare, Google, and Shopify are working together to build a faster Internet for everyone](https://blog.cloudflare.com/early-hints-performance/) from the CloudFlare blog
+- [Early Hints update: How Cloudflare, Google, and Shopify are working together to build a faster Internet for everyone](https://blog.cloudflare.com/early-hints-performance/) from the Cloudflare blog

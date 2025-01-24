@@ -24,7 +24,7 @@ A user may make a selection from left to right (in document order) or right to l
 - {{DOMxRef("Selection.focusNode")}} {{ReadOnlyInline}}
   - : Returns the {{DOMxRef("Node")}} in which the selection ends. Can return `null` if selection never existed in the document (for example, in an `iframe` that was never clicked on).
 - {{DOMxRef("Selection.focusOffset")}} {{ReadOnlyInline}}
-  - : Returns a number representing the offset of the selection's anchor within the `focusNode`. If `focusNode` is a text node, this is the number of characters within `focusNode` preceding the focus. If `focusNode` is an element, this is the number of child nodes of the `focusNode` preceding the focus.
+  - : Returns a number representing the offset of the selection's focus within the `focusNode`. If `focusNode` is a text node, this is the number of characters within `focusNode` preceding the focus. If `focusNode` is an element, this is the number of child nodes of the `focusNode` preceding the focus.
 - {{DOMxRef("Selection.isCollapsed")}} {{ReadOnlyInline}}
   - : Returns a Boolean indicating whether the selection's start and end points are at the same position.
 - {{DOMxRef("Selection.rangeCount")}} {{ReadOnlyInline}}
@@ -100,7 +100,7 @@ As the [Selection API specification notes](https://www.w3.org/TR/selection-api/#
 
 Selection and input focus (indicated by {{DOMxRef("Document.activeElement")}}) have a complex relationship that varies by browser. In cross-browser compatible code, it's better to handle them separately.
 
-Safari and Chrome (unlike Firefox) currently focus the element containing selection when modifying the selection programmatically; it's possible that this may change in the future (see [W3C bug 14383](https://www.w3.org/Bugs/Public/show_bug.cgi?id=14383) and [Webkit bug 38696](https://webkit.org/b/38696)).
+Safari and Chrome (unlike Firefox) currently focus the element containing selection when modifying the selection programmatically; it's possible that this may change in the future (see [W3C bug 14383](https://www.w3.org/Bugs/Public/show_bug.cgi?id=14383) and [WebKit bug 38696](https://webkit.org/b/38696)).
 
 ### Behavior of Selection API in terms of editing host focus changes
 

@@ -13,9 +13,8 @@ browser-compat: http.headers.DNT
 > [!NOTE]
 > The DNT (Do Not Track) specification has been discontinued. See {{domxref("Navigator.doNotTrack")}} for more information.
 
-The **`DNT`** (**D**o **N**ot
-**T**rack) request header indicates the user's tracking preference. It lets
-users indicate whether they would prefer privacy rather than personalized content.
+The HTTP **`DNT`** (Do Not Track) {{Glossary("request header")}} indicates the user's tracking preference.
+It lets users indicate whether they would prefer privacy rather than personalized content.
 
 DNT is deprecated in favor of [Global Privacy Control](https://globalprivacycontrol.org/), which is communicated to servers using the {{HTTPHeader("Sec-GPC")}} header, and accessible to clients from {{domxref("navigator.globalPrivacyControl")}}.
 
@@ -27,7 +26,7 @@ DNT is deprecated in favor of [Global Privacy Control](https://globalprivacycont
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>yes</td>
+      <td>Yes</td>
     </tr>
   </tbody>
 </table>
@@ -42,11 +41,11 @@ DNT: null
 
 ## Directives
 
-- 0
+- `0`
   - : The user prefers to allow tracking on the target site.
-- 1
+- `1`
   - : The user prefers not to be tracked on the target site.
-- null
+- `null`
   - : The user has not specified a preference about tracking.
 
 ## Examples

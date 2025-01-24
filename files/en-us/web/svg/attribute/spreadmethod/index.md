@@ -2,7 +2,9 @@
 title: spreadMethod
 slug: Web/SVG/Attribute/spreadMethod
 page-type: svg-attribute
-browser-compat: svg.elements.linearGradient.spreadMethod
+browser-compat:
+  - svg.elements.linearGradient.spreadMethod
+  - svg.elements.radialGradient.spreadMethod
 ---
 
 {{SVGRef}}
@@ -14,7 +16,7 @@ You can use this attribute with the following SVG elements:
 - {{SVGElement("linearGradient")}}
 - {{SVGElement("radialGradient")}}
 
-## Context notes
+## Usage notes
 
 <table class="properties">
   <tbody>

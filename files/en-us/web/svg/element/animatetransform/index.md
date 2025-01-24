@@ -7,7 +7,7 @@ browser-compat: svg.elements.animateTransform
 
 {{SVGRef}}
 
-The `animateTransform` element animates a transformation attribute on its target element, thereby allowing animations to control translation, scaling, rotation, and/or skewing.
+The **`<animateTransform>`** [SVG](/en-US/docs/Web/SVG) element animates a transformation attribute on its target element, thereby allowing animations to control translation, scaling, rotation, and/or skewing.
 
 ## Usage context
 

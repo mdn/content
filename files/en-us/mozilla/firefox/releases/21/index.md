@@ -17,7 +17,7 @@ Firefox 21 was released on May 14, 2013. This article lists key changes that are
 
 ### JavaScript
 
-- EcmaScript for XML (E4X), an ancient JavaScript extension, has been removed. Implemented only in Gecko, it never got significant traction ([Firefox bug 788293](https://bugzil.la/788293)).
+- ECMAScript for XML (E4X), an ancient JavaScript extension, has been removed. Implemented only in Gecko, it never got significant traction ([Firefox bug 788293](https://bugzil.la/788293)).
 - [parseInt](/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt) no longer treats strings with leading "0" as octal ([Firefox bug 786135](https://bugzil.la/786135)).
 
 ### CSS

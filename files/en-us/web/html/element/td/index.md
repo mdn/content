@@ -320,7 +320,16 @@ While the [visual result](#result_2) is unchanged from the [previous example tab
             >cell</a
           ></code
         >
-        if a descendant of a {{HTMLElement("table")}} element
+        if a descendant of a {{HTMLElement("table")}} element, or <code
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role"
+            >gridcell</a
+          ></code
+        >
+        if a descendant of an element with <code
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role"
+            >grid</a
+          ></code
+        > role
       </td>
     </tr>
     <tr>
@@ -344,7 +353,7 @@ While the [visual result](#result_2) is unchanged from the [previous example tab
 
 ## See also
 
-- [Learn: HTML tables](/en-US/docs/Learn/HTML/Tables)
+- [Learn: HTML table basics](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics)
 - {{HTMLElement("caption")}}, {{HTMLElement("col")}}, {{HTMLElement("colgroup")}}, {{HTMLElement("table")}}, {{HTMLElement("tbody")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("th")}}, {{HTMLElement("thead")}}, {{HTMLElement("tr")}}: Other table-related elements
 - {{cssxref("background-color")}}: CSS property to set the background color of each data cell
 - {{cssxref("border")}}: CSS property to control borders of data cells

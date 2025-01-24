@@ -23,8 +23,8 @@ To measure render times of other elements, use the {{domxref("PerformanceElement
 
 Additional key paint moments are provided by the {{domxref("PerformancePaintTiming")}} API:
 
-- {{Glossary("First paint")}} (FP): Time when anything is rendered. Note that the marking of the first paint is optional, not all user agents report it.
-- {{Glossary("First contentful paint")}} (FCP): Time when the first bit of DOM text or image content is rendered.
+- {{Glossary("First Paint")}} (FP): Time when anything is rendered. Note that the marking of the first paint is optional, not all user agents report it.
+- {{Glossary("First Contentful Paint")}} (FCP): Time when the first bit of DOM text or image content is rendered.
 
 `LargestContentfulPaint` inherits from {{domxref("PerformanceEntry")}}.
 
@@ -85,9 +85,13 @@ observer.observe({ type: "largest-contentful-paint", buffered: true });
 
 ### Cross-origin image render time
 
-For security reasons, the value of the {{domxref("LargestContentfulPaint.renderTime", "renderTime")}} property is `0` if the resource is a cross-origin request. Instead the {{domxref("LargestContentfulPaint.loadTime", "loadTime")}} is exposed. To expose cross-origin render time information, the {{HTTPHeader("Timing-Allow-Origin")}} HTTP response header needs to be set.
+For security reasons, the value of the {{domxref("LargestContentfulPaint.renderTime", "renderTime")}} property was originally `0` if the resource is a cross-origin request. Instead the {{domxref("LargestContentfulPaint.loadTime", "loadTime")}} property should be used as a fallback.
 
-For example, to allow `https://developer.mozilla.org` to see `renderTime`, the cross-origin resource should send:
+Browsers [may now expose a slightly coarsened render time](https://github.com/w3c/paint-timing/issues/104) in these situations. Check for [browser support](#browser_compatibility).
+
+To expose more accurate cross-origin render-time information, the {{HTTPHeader("Timing-Allow-Origin")}} HTTP response header needs to be set.
+
+For example, to allow `https://developer.mozilla.org` to see an accurate `renderTime`, the cross-origin resource should send:
 
 ```http
 Timing-Allow-Origin: https://developer.mozilla.org
@@ -112,5 +116,5 @@ const isAccurateLCP = entry.renderTime ? true : false;
 ## See also
 
 - {{Glossary("Largest Contentful Paint")}}
-- {{Glossary("First contentful paint")}}
-- {{Glossary("First paint")}}
+- {{Glossary("First Contentful Paint")}}
+- {{Glossary("First Paint")}}

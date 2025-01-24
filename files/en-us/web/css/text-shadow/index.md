@@ -65,7 +65,7 @@ This property applies to both {{cssxref("::first-line")}} and {{cssxref("::first
 
 ## Examples
 
-### Simple shadow
+### Basic shadow
 
 ```css
 .red-text-shadow {
@@ -80,7 +80,7 @@ This property applies to both {{cssxref("::first-line")}} and {{cssxref("::first
 </p>
 ```
 
-{{EmbedLiveSample('Simple_shadow', '660px', '90px')}}
+{{EmbedLiveSample('Basic_shadow', '660px', '90px')}}
 
 ### Multiple shadows
 

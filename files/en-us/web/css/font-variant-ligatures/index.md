@@ -41,7 +41,7 @@ font-variant-ligatures: revert-layer;
 font-variant-ligatures: unset;
 ```
 
-The font-variant-ligatures property is specified as `normal`, `none`, or one or more of the other value types listed below. Spaces separate multiple values.
+The `font-variant-ligatures` property is specified as `normal`, `none`, or one or more of the other value types listed below. Spaces separate multiple values.
 
 ### Values
 

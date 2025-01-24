@@ -131,7 +131,9 @@ This example has `fr` equal to `5%` and is representing how the attributes `fx` 
   <tbody>
     <tr>
       <th scope="row">Value</th>
-      <td>{{cssxref("length")}}</td>
+      <td>
+        <strong><a href="/en-US/docs/Web/SVG/Content_type#length">&#x3C;length></a></strong>
+      </td>
     </tr>
     <tr>
       <th scope="row">Default value</th>

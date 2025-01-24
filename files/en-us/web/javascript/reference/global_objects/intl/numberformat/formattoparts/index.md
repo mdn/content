@@ -7,85 +7,65 @@ browser-compat: javascript.builtins.Intl.NumberFormat.formatToParts
 
 {{JSRef}}
 
-The **`formatToParts()`** method of {{jsxref("Intl.NumberFormat")}} instances allows locale-aware formatting of strings produced by this `Intl.NumberFormat` object.
+The **`formatToParts()`** method of {{jsxref("Intl.NumberFormat")}} instances returns an array of objects representing each part of the formatted string that would be returned by {{jsxref("Intl/NumberFormat/format", "format()")}}. It is useful for building custom strings from the locale-specific tokens.
 
 {{EmbedInteractiveExample("pages/js/intl-numberformat-prototype-formattoparts.html")}}
 
 ## Syntax
 
 ```js-nolint
-formatToParts()
 formatToParts(number)
 ```
 
 ### Parameters
 
-- `number` {{optional_inline}}
-  - : A {{jsxref("Number")}} or {{jsxref("BigInt")}} to format.
+- `number`
+  - : A {{jsxref("Number")}}, {{jsxref("BigInt")}}, or string, to format. Strings are parsed in the same way as in [number conversion](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion), except that `formatToParts()` will use the exact value that the string represents, avoiding loss of precision during implicitly conversion to a number.
 
 ### Return value
 
-An {{jsxref("Array")}} of objects containing the formatted number in parts.
+An {{jsxref("Array")}} of objects containing the formatted number in parts. Each object has two properties, `type` and `value`, each containing a string. The string concatenation of `value`, in the order provided, will result in the same string as {{jsxref("Intl/NumberFormat/format", "format()")}}. The `type` may be one of the following:
 
-## Description
-
-The `formatToParts()` method is useful for custom formatting of number
-strings. It returns an {{jsxref("Array")}} of objects containing the locale-specific
-tokens from which it possible to build custom strings while preserving the
-locale-specific parts. The structure the `formatToParts()` method returns,
-looks like this:
-
-```js
-[
-  { type: "integer", value: "3" },
-  { type: "group", value: "." },
-  { type: "integer", value: "500" },
-];
-```
-
-Possible types are the following:
-
-- `compact`
-  - : The exponent in `"long"` or `"short"` form, depending on how `compactDisplay` (which defaults to `short`) is specified when `notation` is set to `compact`.
-- `currency`
-  - : The currency string, such as the symbols "$" and "€" or the name "Dollar", "Euro", depending on how `currencyDisplay` is specified.
-- `decimal`
-  - : The decimal separator string (".").
-- `exponentInteger`
-  - : The exponent integer value, when `notation` is set to `scientific` or `engineering`.
-- `exponentMinusSign`
-  - : The exponent minus sign string ("-").
-- `exponentSeparator`
-  - : The exponent separator, when `notation` is set to `scientific` or `engineering`.
-- `fraction`
-  - : The fraction number.
-- `group`
-  - : The group separator string (",").
-- `infinity`
-  - : The {{jsxref("Infinity")}} string ("∞").
-- `integer`
-  - : The integer number.
 - `literal`
-  - : Any literal strings or whitespace in the formatted number.
-- `minusSign`
-  - : The minus sign string ("-").
+  - : Any string that's a part of the format pattern; for example `" "`. Note that common tokens like the decimal separator or the plus/minus signs have their own token types.
+- `integer`
+  - : The integral part of the number, or a segment of it if using grouping (controlled by `options.useGrouping`).
+- `group`
+  - : The group separator string, such as `","`. Only present when using grouping (controlled by `options.useGrouping`).
+- `decimal`
+  - : The decimal separator string, such as `"."`. Only present when `fraction` is present.
+- `fraction`
+  - : The fractional part of the number.
+- `compact`
+  - : The compact exponent, such as `"M"` or `"thousands"`. Only present when `options.notation` is `"compact"`. The form (`"short"` or `"long"`) can be controlled via `options.compactDisplay`.
+- `exponentSeparator`
+  - : The exponent separator, such as `"E"`. Only present when `options.notation` is `"scientific"` or `"engineering"`.
+- `exponentMinusSign`
+  - : The exponent minus sign string, such as `"-"`. Only present when `options.notation` is `"scientific"` or `"engineering"` and the exponent is negative.
+- `exponentInteger`
+  - : The exponent's integer value. Only present when `options.notation` is `"scientific"` or `"engineering"`.
 - `nan`
-  - : The {{jsxref("NaN")}} string ("NaN").
+  - : A string representing {{jsxref("NaN")}}, such as `"NaN"`. This is the sole token representing the number itself when the number is `NaN`.
+- `infinity`
+  - : A string representing {{jsxref("Infinity")}} or `-Infinity`, such as `"∞"`. This is the sole token representing the number itself when the number is `Infinity` or `-Infinity`.
 - `plusSign`
-  - : The plus sign string ("+").
+  - : The plus sign, such as `"+"`.
+- `minusSign`
+  - : The minus sign, such as `"-"`.
 - `percentSign`
-  - : The percent sign string ("%").
+  - : The percent sign, such as `"%"`. Only present when `options.style` is `"percent"`.
 - `unit`
-  - : The unit string, such as the "l" or "litres", depending on how `unitDisplay` is specified.
+  - : The unit string, such as `"l"` or `"litres"`. Only present when `options.style` is `"unit"`. The form (`"short"`, `"narrow"`, or `"long"`) can be controlled via `options.unitDisplay`.
+- `currency`
+  - : The currency string, such as `"$"`, `"€"`, `"Dollar"`, or `"Euro"`. Only present when `options.style` is `"currency"`. The form (`"code"`, `"symbol"`, `"narrowSymbol"`, or `"name"`) can be controlled via `options.currencyDisplay`.
 - `unknown`
-  - : The string for `unknown` type results.
+  - : Reserved for any token that's not recognized as one of the above; should be rarely encountered.
 
 ## Examples
 
-### Comparing format and formatToParts
+### Using formatToParts()
 
-`NumberFormat` outputs localized, opaque strings that cannot be manipulated
-directly:
+The `format()` method outputs localized, opaque strings that cannot be manipulated directly:
 
 ```js
 const number = 3500;
@@ -99,10 +79,7 @@ formatter.format(number);
 // "3.500,00 €"
 ```
 
-However, in many User Interfaces there is a desire to customize the formatting of this
-string. The `formatToParts` method enables locale-aware formatting of
-strings produced by `NumberFormat` formatters by providing you the string
-in parts:
+However, in many user interfaces you may want to customize the formatting of this string, or interleave it with other texts. The `formatToParts()` method produces the same information in parts:
 
 ```js
 formatter.formatToParts(number);
@@ -119,11 +96,7 @@ formatter.formatToParts(number);
 ];
 ```
 
-Now the information is available separately and it can be formatted and concatenated
-again in a customized way. For example by using {{jsxref("Array.prototype.map()")}},
-[arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions),
-a [switch statement](/en-US/docs/Web/JavaScript/Reference/Statements/switch),
-[template literals](/en-US/docs/Web/JavaScript/Reference/Template_literals), and {{jsxref("Array.prototype.reduce()")}}.
+Now the information is available separately and it can be formatted and concatenated again in a customized way. For example by using {{jsxref("Array.prototype.map()")}}, [arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions), a [switch statement](/en-US/docs/Web/JavaScript/Reference/Statements/switch), [template literals](/en-US/docs/Web/JavaScript/Reference/Template_literals), and {{jsxref("Array.prototype.join()")}}, to insert additional markup for certain components.
 
 ```js
 const numberString = formatter
@@ -136,12 +109,8 @@ const numberString = formatter
         return value;
     }
   })
-  .reduce((string, part) => string + part);
-```
+  .join("");
 
-This will make the currency bold, when using the `formatToParts()` method.
-
-```js
 console.log(numberString);
 // "3.500,00 <strong>€</strong>"
 ```
@@ -158,4 +127,3 @@ console.log(numberString);
 
 - {{jsxref("Intl.NumberFormat")}}
 - {{jsxref("Intl/NumberFormat/format", "Intl.NumberFormat.prototype.format()")}}
-- {{jsxref("Intl/DateTimeFormat/formatToParts", "Intl.DateTimeFormat.prototype.formatToParts()")}}

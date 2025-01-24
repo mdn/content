@@ -7,7 +7,7 @@ browser-compat: svg.elements.feOffset
 
 {{SVGRef}}
 
-The **`<feOffset>`** SVG filter primitive allows to offset the input image. The input image as a whole is offset by the values specified in the {{SVGAttr("dx")}} and {{SVGAttr("dy")}} attributes.
+The **`<feOffset>`** [SVG](/en-US/docs/Web/SVG) filter primitive enables offsetting an input image relative to its current position. The input image as a whole is offset by the values specified in the {{SVGAttr("dx")}} and {{SVGAttr("dy")}} attributes.
 
 ## Usage context
 

@@ -25,7 +25,7 @@ To minimize the scope for cookie vulnerabilities on your site, limit access to c
 - `HttpOnly`
   - : Cookies that don't require access from JavaScript should have the `HttpOnly` directive set to block access, such as from {{domxref("Document.cookie")}}. It is particularly important that session identifiers don't have JavaScript access, to help prevent attacks such as CSRF.
 - `Expires` and `Max-Age`
-  - : Cookies should expire as soon as they are no longer needed. Session identifiers in particular should expire as quickly as possible. `Expires` is preferred unless you need to support IE < 8, in which case use `Max-Age`.
+  - : Cookies should expire as soon as they are no longer needed. Session identifiers in particular should expire as quickly as possible.
     - `Expires`: Sets an absolute expiration date for a given cookie.
     - `Max-Age`: Sets a relative expiration date for a given cookie.
       > **Note:** `Expires` has been available for longer than `Max-Age`; however, `Max-Age` is less error-prone, and takes precedence when both are set. The rationale behind this is that when you set an `Expires` date and time, they're relative to the client on which the cookie is being set. If the server is set to a different time, this could cause errors.
@@ -37,10 +37,10 @@ To minimize the scope for cookie vulnerabilities on your site, limit access to c
 
   - : Forbid sending cookies via cross-origin requests (for example from {{htmlelement("img")}} elements) using `SameSite`. You should use one of the following two values:
 
-    - `SameSite=Strict`: Only send the cookie in same-site contexts (navigations and other requests). Cookies are omitted in same-origin contexts (e.g. navigating `a.example.com` to `b.example.com`), cross-site requests (e.g. hotlinking), and cross-site navigation (e.g. when following a link from a different web page). This is a very strict setting, but it does provide strong [CSRF](/en-US/docs/Web/Security/Practical_implementation_guides/CSRF_prevention) protection, so use this value if possible.
+    - `SameSite=Strict`: Only send the cookie in same-site contexts (navigations and other requests). Cookies are omitted in cross-site requests (e.g. embedding images or other resources from other sites) and cross-site navigation (e.g. when following a link from a different web page). This is a very strict setting, but it does provide strong [CSRF](/en-US/docs/Web/Security/Practical_implementation_guides/CSRF_prevention) protection, so use this value if possible.
     - `SameSite=Lax`: Send the cookie in same-site requests and when navigating _to_ your website. This should be used if `Strict` is too restrictive.
 
-    Both of the above values are useful in protecting against [Clickjacking](/en-US/docs/Glossary/Clickjacking) attacks in cases that rely on the user being authenticated.
+    Both of the above values are useful in protecting against [clickjacking](/en-US/docs/Web/Security/Attacks/Clickjacking) attacks in cases that rely on the user being authenticated.
 
     > [!NOTE]
     > In theory, `SameSite=Strict` should be more useful than it is in practice. It often breaks navigations — for example, users clicking a link to a website on which they are already logged in (i.e. a valid session cookie is set) appear not to be logged in, because the browser has deliberately omitted the session cookie. The best middle ground is to use `SameSite=Strict` only on tokens where CSRF is a concern or use `SameSite=Strict` everywhere, but reload the page and do a cookie check in JavaScript if there's an indication that the user is logged in but required cookies are not being sent.

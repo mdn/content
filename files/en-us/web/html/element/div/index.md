@@ -18,7 +18,7 @@ As a "pure" container, the `<div>` element does not inherently represent anythin
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
 > [!NOTE]
-> The `align` attribute is obsolete; do not use it anymore. Instead, you should use CSS properties or techniques such as [CSS Grid](/en-US/docs/Web/CSS/CSS_grid_layout) or [CSS Flexbox](/en-US/docs/Learn/CSS/CSS_layout/Flexbox) to align and position `<div>` elements on the page.
+> The `align` attribute is obsolete; do not use it anymore. Instead, you should use CSS properties or techniques such as [CSS Grid](/en-US/docs/Web/CSS/CSS_grid_layout) or [CSS Flexbox](/en-US/docs/Learn_web_development/Core/CSS_layout/Flexbox) to align and position `<div>` elements on the page.
 
 ## Usage notes
 
@@ -30,7 +30,7 @@ The `<div>` element has [an implicit role of `generic`](https://www.w3.org/TR/wa
 
 ## Examples
 
-### A simple example
+### A basic example
 
 ```html
 <div>
@@ -42,7 +42,7 @@ The `<div>` element has [an implicit role of `generic`](https://www.w3.org/TR/wa
 
 #### Result
 
-{{EmbedLiveSample("A_simple_example", 650, 60)}}
+{{EmbedLiveSample("A_basic_example", 650, 60)}}
 
 ### A styled example
 

@@ -2,7 +2,9 @@
 title: HTMLDetailsElement
 slug: Web/API/HTMLDetailsElement
 page-type: web-api-interface
-browser-compat: api.HTMLDetailsElement
+browser-compat:
+  - api.HTMLDetailsElement
+  - api.HTMLElement.toggle_event.details_elements
 ---
 
 {{APIRef("HTML DOM")}}

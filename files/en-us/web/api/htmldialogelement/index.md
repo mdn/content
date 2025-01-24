@@ -2,7 +2,10 @@
 title: HTMLDialogElement
 slug: Web/API/HTMLDialogElement
 page-type: web-api-interface
-browser-compat: api.HTMLDialogElement
+browser-compat:
+  - api.HTMLDialogElement
+  - api.HTMLElement.beforetoggle_event.dialog_elements
+  - api.HTMLElement.toggle_event.dialog_elements
 ---
 
 {{APIRef("HTML DOM")}}

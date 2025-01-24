@@ -1,39 +1,57 @@
+# Do not add comments to this file. They will be lost.
+
 sidebar:
   - type: section
     link: /Web/MathML
-
-  - type: section
-    title: Guides
   - children:
-      - link: /Web/MathML/Authoring
-      - link: /Web/MathML/Fonts
-      - link: /Web/MathML/Values
-
+      - link: /Web/MathML/Guides
+        title: Beginners
+        details: closed
+        children:
+          - /Web/MathML/Guides/Getting_started
+          - /Web/MathML/Guides/Text_containers
+          - /Web/MathML/Guides/Fractions_and_roots
+          - /Web/MathML/Guides/Scripts
+          - /Web/MathML/Guides/Tables
+          - /Web/MathML/Guides/Three_famous_mathematical_formulas
+      - title: Guides
+        details: closed
+        children:
+          - /Web/MathML/Authoring
+          - /Web/MathML/Fonts
   - type: section
     title: Reference
   - type: listSubPages
+    path: /Web/MathML/Element
     title: Elements
     details: closed
-    path: /en-US/docs/Web/MathML/Element
+    code: true
   - type: listSubPages
+    path: /Web/MathML/Global_attributes
     title: Global attributes
     details: closed
-    path: /en-US/docs/Web/MathML/Global_attributes
+    code: true
   - /Web/MathML/Attribute
-
+  - /Web/MathML/Values
   - type: section
     title: Examples
   - children:
       - link: /Web/MathML/Examples/Deriving_the_Quadratic_Formula
       - link: /Web/MathML/Examples/MathML_Pythagorean_Theorem
-
 l10n:
+  de:
+    Reference: Referenz
+    Elements: Elemente
+    Global attributes: Globale Attribute
+    Guides: Anleitungen
+    Examples: Beispiele
   en-US:
     Reference: Reference
     Elements: Elements
     Global attributes: Global attributes
     Guides: Guides
     Examples: Examples
+    Beginners: Beginner's tutorials
   fr:
     Reference: Références
     Elements: Éléments

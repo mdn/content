@@ -82,7 +82,7 @@ A non-exhaustive list of permission-aware APIs includes:
 
 ## Examples
 
-We have created a simple example called Location Finder.
+We have created an example called Location Finder.
 You can [run the example live](https://chrisdavidmills.github.io/location-finder-permissions-api/), [view the source code on GitHub](https://github.com/chrisdavidmills/location-finder-permissions-api/tree/gh-pages), or read more about how it works in our article [Using the Permissions API](/en-US/docs/Web/API/Permissions_API/Using_the_Permissions_API).
 
 The [`Permissions.query()` example](/en-US/docs/Web/API/Permissions/query#test_support_for_various_permissions) also so shows code that tests most permissions on the current browser and logs the result.

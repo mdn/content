@@ -66,7 +66,7 @@ There are other things beyond going asynchronous, which can help you improve you
 - Data size
   - : Do your best to optimize the size of your data; smaller level files will download and be processed faster than larger ones.
 - Subjective factors
-  - : Anything you can do to help keep the user engaged during the startup process will help make the time seem to go by faster. Displaying a mock splash screen can improve [perceived performance](/en-US/docs/Learn/Performance/Perceived_performance). For heavy sites, anything you can do to help the user feel like your app is doing something instead of sitting there quietly helps.
+  - : Anything you can do to help keep the user engaged during the startup process will help make the time seem to go by faster. Displaying a mock splash screen can improve [perceived performance](/en-US/docs/Learn_web_development/Extensions/Performance/Perceived_performance). For heavy sites, anything you can do to help the user feel like your app is doing something instead of sitting there quietly helps.
 
 ## See also
 
