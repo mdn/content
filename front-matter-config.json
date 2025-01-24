@@ -548,7 +548,13 @@
         "then": {
           "properties": {
             "page-type": {
-              "enum": ["guide", "landing-page", "xslt-element", "xslt-axis"]
+              "enum": [
+                "guide",
+                "landing-page",
+                "listing-page",
+                "xslt-element",
+                "xslt-axis"
+              ]
             }
           }
         },

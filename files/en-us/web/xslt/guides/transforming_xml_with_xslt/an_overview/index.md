@@ -6,8 +6,6 @@ page-type: guide
 
 {{XsltSidebar}}
 
-[« Transforming XML with XSLT](/en-US/docs/Web/XSLT/Guides/Transforming_XML_with_XSLT)
-
 The eXtensible Stylesheet Language/Transform is a very powerful language, and a complete discussion of it is well beyond the scope of this article, but a brief discussion of some basic concepts will be helpful in understanding the description of Netscape's capabilities that follows.
 
 - An XSLT stylesheet is an XML document.

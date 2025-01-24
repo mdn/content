@@ -6,8 +6,6 @@ page-type: guide
 
 {{XsltSidebar}}
 
-[« Transforming XML with XSLT](/en-US/docs/Web/XSLT/Guides/Transforming_XML_with_XSLT)
-
 ## Print
 
 ### Books

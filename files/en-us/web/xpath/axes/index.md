@@ -8,7 +8,7 @@ page-type: landing-page
 
 There are thirteen different axes in the [XPath](/en-US/docs/Web/XPath) specification. An axis represents a relationship to the context node, and is used to locate nodes relative to that node on the tree.
 
-For further information on using XPath expressions, please see the [For Further Reading](/en-US/docs/Web/XSLT/Guides/Transforming_XML_with_XSLT#for_further_reading) section at the end of [Transforming XML with XSLT](/en-US/docs/Web/XSLT/Guides/Transforming_XML_with_XSLT) document. Also see the ['axes' section in the xpath spec](https://www.w3.org/TR/xpath-30/#axes).
+For further information on using XPath expressions, please see the [For Further Reading](/en-US/docs/Web/XSLT/Guides/Transforming_XML_with_XSLT/For_Further_Reading) section of the [Transforming XML with XSLT](/en-US/docs/Web/XSLT/Guides/Transforming_XML_with_XSLT) guide. Also see the ['axes' section in the xpath spec](https://www.w3.org/TR/xpath-30/#axes).
 
 - `ancestor`
   - : Indicates all the ancestors of the context node beginning with the parent node and traveling through to the root node.

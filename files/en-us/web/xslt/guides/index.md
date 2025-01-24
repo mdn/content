@@ -2,8 +2,10 @@
 title: XSLT guides
 short-title: Guides
 slug: Web/XSLT/Guides
-page-type: landing-page
+page-type: listing-page
 ---
+
+{{XsltSidebar}}
 
 This page lists guides for XSLT usage on the web.
 

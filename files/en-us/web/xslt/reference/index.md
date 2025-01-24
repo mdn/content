@@ -2,7 +2,7 @@
 title: XSLT references
 short-title: References
 slug: Web/XSLT/Reference
-page-type: landing-page
+page-type: listing-page
 ---
 
 {{XsltSidebar}}
