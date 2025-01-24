@@ -31,7 +31,7 @@ p::first-line {
 }
 ```
 
-Double colons (`::`) are used for pseudo-elements. This distinguishes pseudo-elements from [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes) that use a single colon (`:`) in their notation. Note, browsers support the single colon syntax only for the original four pseudo-elements: `::before`, `::after`, `::first-line`, and `::first-letter`.
+Double colons (`::`) are used for pseudo-elements. This distinguishes pseudo-elements from [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes) that use a single colon (`:`) in their notation. Note, browsers support single colon syntax for the original four pseudo-elements: `::before`, `::after`, `::first-line`, and `::first-letter`.
 
 Pseudo-elements do not exist independently. The element of which a pseudo-element is a part is called its _originating element_. A pseudo-element must appear after all the other components in the [complex](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#complex_selector) or [compound](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#compound_selector) selector. The last element in the selector is the originating element of the pseudo-element. For example, you can select a paragraph's first line using `p::first-line` but not the first-line's children. So `p::first-line > *` is invalid.
 
@@ -49,7 +49,7 @@ A pseudo-element can be selected based on the current state of the originating e
 - {{CSSxRef("::cue")}}
   - : The [WebVTT](/en-US/docs/Web/API/WebVTT_API) cues within a selected element.
     This can be used to [style captions and other cues](/en-US/docs/Web/API/WebVTT_API#styling_webvtt_in_html_or_a_stylesheet) in media with VTT tracks.
-
+The [CSS pseudo-elements](/en-US/docs/Web/CSS/CSS_pseudo-elements) module also defines the `::postfix` and `::prefix` sub-pseudo elements. These are not yet supported by any browser. 
 ## Highlight pseudo-elements
 
 Selects document sections based on content and document status, enabling those areas to be styled differently to indicate that status to the user.
