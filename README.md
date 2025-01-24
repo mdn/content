@@ -17,7 +17,7 @@ In addition to English-language articles, over 35 volunteers lead translation an
 
 ## Build the site
 
-To set up the site locally, you need to have [Node.js](https://nodejs.org/) and [Yarn](https://yarnpkg.com/) installed.
+To set up the site locally, you need to have [Node.js](https://nodejs.org/) and [Yarn](https://classic.yarnpkg.com/) installed.
 You can check if these are installed by running the following commands:
 
 ```bash

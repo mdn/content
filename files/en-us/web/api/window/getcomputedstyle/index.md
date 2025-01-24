@@ -149,7 +149,7 @@ Java.
   {{cssxref("font-size")}} as well as shorthand names like {{cssxref("font")}}.
 - CSS property values may be accessed using the
   {{DOMxRef("CSSStyleDeclaration.getPropertyValue", "getPropertyValue(propName)")}} method or by indexing directly into the object
-  using array or [dot notation](/en-US/docs/Learn/JavaScript/Objects/Basics#dot_notation) such as `obj['z-index']` or `obj.zIndex`.
+  using array or [dot notation](/en-US/docs/Learn_web_development/Core/Scripting/Object_basics#dot_notation) such as `obj['z-index']` or `obj.zIndex`.
 - The values returned by `getComputedStyle` are [resolved values](/en-US/docs/Web/CSS/resolved_value).
   These are usually the same as CSS 2.1's
   [computed values](/en-US/docs/Web/CSS/computed_value), but for some older properties

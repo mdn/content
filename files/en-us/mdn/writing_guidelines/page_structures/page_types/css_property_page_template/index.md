@@ -33,7 +33,7 @@ page-type: mdn-writing-guide
 >     For example, the [`background-color`](/en-US/docs/Web/CSS/background-color) property has a title of _background-color_.
 > - **slug**
 >   - : The `slug` value is the end of the URL path after `https://developer.mozilla.org/en-US/docs/`. This will be formatted as `Web/CSS/NameOfTheProperty`.
->     For example, the slug for the [`background-color`](/en-US/docs/Web/CSS/background-color) property is `Web/CSS/background-color`. For a multi-word component such as `Getting_started` in a slug, the slug should use an underscore as in `/en-US/docs/Learn/HTML/Getting_started`.
+>     For example, the slug for the [`background-color`](/en-US/docs/Web/CSS/background-color) property is `Web/CSS/background-color`. For a multi-word component such as `Getting_started` in a slug, the slug should use an underscore as in `/en-US/docs/Learn_web_development/Core/Structuring_content`.
 > - **page-type**
 >   - : The `page-type` value for CSS properties is `css-property`. For a shorthand CSS property, the value is `css-shorthand-property`. For example, the `page-type` value for the [animation](/en-US/docs/Web/CSS/animation) property is `css-shorthand-property` because it is a shorthand property, whereas the `page-type` value for the [animation-delay](/en-US/docs/Web/CSS/animation-delay) property is `css-property`.
 > - **status**

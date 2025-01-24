@@ -76,7 +76,7 @@ These images help users preview your web app's interface and features in app sto
 
     - `form_factor` {{Optional_Inline}}
 
-      - : A string that represents represents the screen shape of a broad class of devices to which the screenshot applies.
+      - : A string that represents the screen shape of a broad class of devices to which the screenshot applies.
         Specify this property only when the screenshot applies to a specific screen layout.
         If `form_factor` is not specified, the screenshot is considered suitable for all screen types.
 
@@ -142,7 +142,7 @@ This example shows how to add screenshots for a meal planning app for different 
 ```json
 {
   "name": "Meal Planner",
-  "screenshots": "screenshots": [
+  "screenshots": [
     {
       "src": "screenshots/desktop-home.webp",
       "sizes": "1920x1080",

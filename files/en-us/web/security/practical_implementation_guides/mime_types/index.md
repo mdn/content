@@ -32,4 +32,4 @@ X-Content-Type-Options: nosniff
 ## See also
 
 - [MIME types (IANA media types): MIME sniffing](/en-US/docs/Web/HTTP/MIME_types#mime_sniffing)
-- [Properly configuring server MIME types](/en-US/docs/Learn/Server-side/Configuring_server_MIME_types)
+- [Properly configuring server MIME types](/en-US/docs/Learn_web_development/Extensions/Server-side/Configuring_server_MIME_types)

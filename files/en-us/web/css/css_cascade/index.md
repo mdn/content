@@ -1,5 +1,5 @@
 ---
-title: CSS cascade and inheritance
+title: CSS cascading and inheritance
 slug: Web/CSS/CSS_cascade
 page-type: css-module
 spec-urls:
@@ -9,7 +9,7 @@ spec-urls:
 
 {{CSSRef}}
 
-The **CSS cascade and inheritance** module defines the rules for assigning values to properties by way of cascading and inheritance. This module specifies the rules for finding the specified value for all properties on all elements.
+The **CSS cascading and inheritance** module defines the rules for assigning values to properties by way of cascading and inheritance. This module specifies the rules for finding the specified value for all properties on all elements.
 
 One of the fundamental design principles of CSS is cascading of rules. It allows several style sheets to influence the presentation of a document. CSS property-value declarations define how a document is rendered. Multiple declarations may set different values for the same element and property combination, but only one value can be applied to any CSS property. The CSS cascade module defines how these conflicts are resolved.
 
@@ -61,8 +61,8 @@ The opposite also occurs. Sometimes there are no declarations defining the value
   - [author origin](/en-US/docs/Web/CSS/Cascade#author_stylesheets)
   - [user origin](/en-US/docs/Web/CSS/Cascade#user_stylesheets)
 - [Declaring layers](/en-US/docs/Web/CSS/@import#importing_css_rules_into_a_cascade_layer)
-  - [named layer](/en-US/docs/Learn/CSS/Building_blocks/Cascade_layers#the_layer_statement_at-rule_for_named_layers)
-  - [anonymous layer](/en-US/docs/Learn/CSS/Building_blocks/Cascade_layers#the_layer_block_at-rule_for_named_and_anonymous_layers)
+  - [named layer](/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers#the_layer_statement_at-rule_for_named_layers)
+  - [anonymous layer](/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers#the_layer_block_at-rule_for_named_and_anonymous_layers)
 - Glossary: {{glossary("style origin")}}
 
 ## Guides
@@ -71,11 +71,11 @@ The opposite also occurs. Sometimes there are no declarations defining the value
 
   - : Guide to the cascade algorithm that defines how user agents combine property values originating from different sources.
 
-- [Learn: Cascade, specificity, and inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+- [Learn: Handling conflicts](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
 
   - : The most fundamental concepts of CSS — the cascade, specificity, and inheritance — which control how CSS is applied to HTML and how conflicts are resolved.
 
-- [Learn: Cascade layers](/en-US/docs/Learn/CSS/Building_blocks/Cascade_layers)
+- [Learn: Cascade layers](/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)
 
   - : Introduction to [cascade layers](/en-US/docs/Web/CSS/@layer), a more advanced feature that builds on the fundamental concepts of the [CSS cascade](/en-US/docs/Web/CSS/Cascade) and [CSS specificity](/en-US/docs/Web/CSS/Specificity).
 

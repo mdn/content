@@ -17,6 +17,11 @@ undefined. The cursor's primary key can be any data type.
 
 A value of any data type.
 
+### Exceptions
+
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if the cursor is advancing or has finished.
+
 ## Examples
 
 In this simple fragment we create a transaction, retrieve an object store, then use a

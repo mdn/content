@@ -40,7 +40,7 @@ The steps for defining accessible description in HTML are defined in the [HTML-A
 
 - [Accessible Name and Description Computation 1.2 (accname)](https://w3c.github.io/accname/#mapping_additional_nd_description)
 - [Accessibility](/en-US/docs/Web/Accessibility)
-- [Learn accessibility](/en-US/docs/Learn/Accessibility)
+- [Learn accessibility](/en-US/docs/Learn_web_development/Core/Accessibility)
 - [Web accessibility](https://en.wikipedia.org/wiki/Web_accessibility) on Wikipedia
 - [Web Accessibility In Mind](https://webaim.org/)
 - [ARIA](/en-US/docs/Web/Accessibility/ARIA)

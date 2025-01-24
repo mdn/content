@@ -22,7 +22,7 @@ It is worth noting that you do not have to use grid in an _all or nothing_ way. 
 
 ### Floats
 
-[Floats](/en-US/docs/Learn/CSS/CSS_layout/Floats) used to be used to create multiple column layouts. If you're supporting an old codebase with floated layouts, there will be no conflict. Grid items ignore the float property; the fact is that _a grid item takes precedence._ In the example below, I have a simple media object. If the {{cssxref("float")}} is not removed from legacy CSS, as the container is a grid container, it's OK. We can use the alignment properties that are implemented in CSS grids.
+[Floats](/en-US/docs/Learn_web_development/Core/CSS_layout/Floats) used to be used to create multiple column layouts. If you're supporting an old codebase with floated layouts, there will be no conflict. Grid items ignore the float property; the fact is that _a grid item takes precedence._ In the example below, I have a simple media object. If the {{cssxref("float")}} is not removed from legacy CSS, as the container is a grid container, it's OK. We can use the alignment properties that are implemented in CSS grids.
 
 The {{cssxref("float")}} no longer applies, and I can use the CSS Box Alignment property {{cssxref("align-self")}} to align my content to the end of the container:
 

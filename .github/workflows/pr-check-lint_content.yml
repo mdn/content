@@ -39,14 +39,14 @@ jobs:
           echo "DIFF_DOCUMENTS=${DIFF_DOCUMENTS}" >> $GITHUB_ENV
 
       - name: Checkout HEAD
-        if: ${{ env.DIFF_DOCUMENTS }}
+        if: env.DIFF_DOCUMENTS
         uses: actions/checkout@v4
         with:
           ref: ${{ github.event.pull_request.head.sha }}
           path: pr_head
 
       - name: Get changed content from HEAD
-        if: ${{ env.DIFF_DOCUMENTS }}
+        if: env.DIFF_DOCUMENTS
         run: |
           git config --global user.email "108879845+mdn-bot@users.noreply.github.com"
           git config --global user.name "mdn-bot"
@@ -62,27 +62,35 @@ jobs:
           git commit -m "Code from PR head"
 
       - name: Setup Node.js environment
-        if: ${{ env.DIFF_DOCUMENTS }}
+        if: env.DIFF_DOCUMENTS
         uses: actions/setup-node@v4
         with:
           node-version-file: ".nvmrc"
           cache: yarn
 
       - name: Install all yarn packages
-        if: ${{ env.DIFF_DOCUMENTS }}
+        if: env.DIFF_DOCUMENTS
         run: yarn --frozen-lockfile
         env:
           # https://github.com/microsoft/vscode-ripgrep#github-api-limit-note
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Lint and format markdown files
-        if: ${{ env.DIFF_DOCUMENTS }}
+        if: env.DIFF_DOCUMENTS
         run: |
           # Generate random delimiter
           # https://docs.github.com/en/actions/using-workflows/workflow-commands-for-github-actions#multiline-strings
           EOF="$(openssl rand -hex 8)"
 
           files_to_lint="$DIFF_DOCUMENTS"
+
+          echo "crlf line ending check"
+          CRLF_FAILED=true
+          CRLF_LOG=$(git ls-files --eol ${files_to_lint} | grep -E 'w/(mixed|crlf)') || CRLF_FAILED=false
+          echo "CRLF_LOG<<${EOF}" >> $GITHUB_ENV
+          echo "${CRLF_LOG}" >> $GITHUB_ENV
+          echo "${EOF}" >> $GITHUB_ENV
+          echo "CRLF_FAILED=${CRLF_FAILED}" >> $GITHUB_ENV
 
           echo "Running markdownlint --fix"
           MD_LINT_FAILED=false
@@ -101,6 +109,12 @@ jobs:
           echo "FM_LINT_FAILED=${FM_LINT_FAILED}" >> $GITHUB_ENV
 
           echo "Running Prettier"
+          PRETTIER_FAILED=false
+          PRETTIER_LOG=$(yarn prettier --check ${files_to_lint} 2>&1) || PRETTIER_FAILED=true
+          echo "PRETTIER_LOG<<${EOF}" >> $GITHUB_ENV
+          echo "${PRETTIER_LOG}" >> $GITHUB_ENV
+          echo "${EOF}" >> $GITHUB_ENV
+          echo "PRETTIER_FAILED=${PRETTIER_FAILED}" >> $GITHUB_ENV
           yarn prettier -w ${files_to_lint}
 
           if [[ -n $(git diff) ]]; then
@@ -108,8 +122,10 @@ jobs:
           fi
 
           # info for troubleshooting
+          echo CRLF_FAILED=${CRLF_FAILED}
           echo MD_LINT_FAILED=${MD_LINT_FAILED}
           echo FM_LINT_FAILED=${FM_LINT_FAILED}
+          echo PRETTIER_FAILED=${PRETTIER_FAILED}
           git diff
 
       - name: Setup reviewdog
@@ -147,11 +163,40 @@ jobs:
             -reporter="github-pr-review"
 
       - name: Fail if any issues pending
-        if: env.FILES_MODIFIED == 'true' || env.MD_LINT_FAILED == 'true' || env.FM_LINT_FAILED == 'true'
+        if: env.FILES_MODIFIED == 'true' || env.CRLF_FAILED == 'true' || env.MD_LINT_FAILED == 'true' || env.FM_LINT_FAILED == 'true'
+        env:
+          CRLF_FAILED: ${{ env.CRLF_FAILED }}
+          MD_LINT_FAILED: ${{ env.MD_LINT_FAILED }}
+          FM_LINT_FAILED: ${{ env.FM_LINT_FAILED }}
+          PRETTIER_FAILED: ${{ env.PRETTIER_FAILED }}
+          CRLF_LOG: ${{ env.CRLF_LOG }}
+          MD_LINT_LOG: ${{ env.MD_LINT_LOG }}
+          FM_LINT_LOG: ${{ env.FM_LINT_LOG }}
+          PRETTIER_LOG: ${{ env.PRETTIER_LOG }}
         run: |
-          echo -e "\nLogs from markdownlint:"
-          echo "${MD_LINT_LOG}"
-          echo -e "\nLogs from front-matter linter:"
-          echo "${FM_LINT_LOG}"
-          echo -e "\nPlease fix all the linting issues mentioned in above logs and in the review comments."
+          echo -e "\nPlease fix all the linting issues mentioned in the following logs and in the PR review comments."
+
+          if [[ ${CRLF_FAILED} == 'true' ]]; then
+            echo -e "\n\n🪵 In the following files make sure all the lines end with only Line Feed (LF) character and not with Carriage Return Line Feed (CRLF) characters:"
+            echo "${CRLF_LOG}"
+            echo "For more information refer https://gist.github.com/LunarLambda/3df0840b336a5e314e4ffdac03cbf619 ."
+            echo "You may use https://app.execeratics.com/LFandCRLFonline/?l=en online tool to convert line endings from CRLF to LF."
+          fi
+
+          if [[ ${MD_LINT_FAILED} == 'true' ]]; then
+            echo -e "\n\n🪵 Logs from markdownlint:"
+            echo "${MD_LINT_LOG}"
+          fi
+
+          if [[ ${FM_LINT_FAILED} == 'true' ]]; then
+            echo -e "\n\n🪵 Logs from front-matter linter:"
+            echo "${FM_LINT_LOG}"
+          fi
+
+          if [[ ${PRETTIER_FAILED} == 'true' ]]; then
+            echo -e "\n\n🪵 Logs from Prettier formatter:"
+            echo "${PRETTIER_LOG}"
+            echo -e "\nYou can use Prettier playground to format the files online (configuration pre-filled): https://prettier.io/playground/#N4Igxg9gdgLgprEAuEBiABABwIYGd7owAWc6CMAlgE6kBmFANqSTSADQgSaXS7KjYqVCAHcACoIR8U2BiOwBPPhwBGVbGADWcGAGVsAWzgAZClDjIYVAK5xV6rTt04wZgOaWbdkLjgGKnrYccAAemHBUFEawsgAqEVCCFHDStLK+HLjuTACK1hDwyGkMGSAAVrghutlweQUWSMWlAI758GLCmNIgeAC05nAAJkPsIFbYjO4AwhAGBtjIPQwMo1lQbkwAgjBWFCrW7RGm5kXp3kQwBgwA6kQU8LgucLpS9xQAbvcKi2C4yiDvWwASSgw1gujAkW4m1BuhgCiYpxK3kwwl813UmEWqJSEXeFg4Zl8VBgHWwbnmSNKOCoxMW8yomkGoigo1RZhg1wog2IyAAHAAGDg0VrUOBkikLRpnDgwbAqLk8ojIABMHGsvli8tSMpAfhUQ2Gg2M2HW1nJcAAYhAqPMdu5FtgDhAQABfV1AA \n"
+          fi
+
           exit 1

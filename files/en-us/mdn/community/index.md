@@ -7,7 +7,7 @@ page-type: mdn-community-guide
 {{MDNSidebar}}
 
 👋 Welcome to MDN Web Docs, an open-source, collaborative project that documents web platform technologies, including [HTML](/en-US/docs/Web/HTML), [CSS](/en-US/docs/Web/CSS), [JavaScript](/en-US/docs/Web/JavaScript), and [Web APIs](/en-US/docs/Web/API).
-We also provide extensive [learning resources](/en-US/docs/Learn) for early-stage developers and students.
+We also provide extensive [learning resources](/en-US/docs/Learn_web_development) for early-stage developers and students.
 
 ## Ways to contribute
 
@@ -63,7 +63,7 @@ We are a small team working hard to keep up with the documentation demands of a 
 Unfortunately, we can't help with general support questions.
 If you're learning to code, you can refer to the following resources:
 
-- [Learn web development](/en-US/docs/Learn)
+- [Learn web development](/en-US/docs/Learn_web_development)
 - [MDN Web Docs learn forum](https://discourse.mozilla.org/c/mdn/learn/250)
 - [Stack Overflow](https://stackoverflow.com/questions/)
 

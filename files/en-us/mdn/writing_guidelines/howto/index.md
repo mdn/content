@@ -11,4 +11,4 @@ This section of MDN Web Docs writing guidelines contains all the step-by-step in
 > [!NOTE]
 > All the way through this section, we assume that you've read the contribution guidelines, are familiar with the `mdn/content` repository, and know how to use git and GitHub.
 
-{{LandingPageListSubpages}}
+{{SubpagesWithSummaries}}

@@ -6,17 +6,15 @@ sidebar:
     title: JavaScript
   - type: section
     title: Tutorials
-  - title: Complete_beginners
+  - title: Beginners
     details: closed
     children:
-      - link: /Learn/Getting_started_with_the_web/JavaScript_basics
-        title: Basics
-      - link: /Learn/JavaScript/First_steps
-        title: First_steps
-      - link: /Learn/JavaScript/Building_blocks
-        title: Building_blocks
-      - link: /Learn/JavaScript/Objects
-        title: Introducing_objects
+      - link: /Learn_web_development/Getting_started/Your_first_website/Adding_interactivity
+        title: Adding_interactivity
+      - link: /Learn_web_development/Core/Scripting
+        title: Dynamic_scripting_with_JavaScript
+      - link: /Learn_web_development/Core/Frameworks_libraries
+        title: JavaScript_frameworks_and_libraries
   - title: Guide
     details: closed
     children:
@@ -32,10 +30,10 @@ sidebar:
         title: Guide_Functions
       - link: /Web/JavaScript/Guide/Expressions_and_operators
         title: Guide_Expressions
-      - link: /Web/JavaScript/Guide/Numbers_and_dates
+      - link: /Web/JavaScript/Guide/Numbers_and_strings
         title: Guide_Numbers
-      - link: /Web/JavaScript/Guide/Text_formatting
-        title: Guide_Text
+      - link: /Web/JavaScript/Guide/Representing_dates_times
+        title: Guide_Dates
       - link: /Web/JavaScript/Guide/Regular_expressions
         title: Guide_RegExp
       - link: /Web/JavaScript/Guide/Indexed_collections
@@ -52,6 +50,8 @@ sidebar:
         title: Guide_Typed_arrays
       - link: /Web/JavaScript/Guide/Iterators_and_generators
         title: Guide_Iterators_generators
+      - link: /Web/JavaScript/Guide/Internationalization
+        title: Guide_Internationalization
       - link: /Web/JavaScript/Guide/Meta_programming
         title: Guide_Meta
       - link: /Web/JavaScript/Guide/Modules
@@ -59,10 +59,12 @@ sidebar:
   - title: Intermediate
     details: closed
     children:
-      - link: /Learn/Tools_and_testing/Client-side_JavaScript_frameworks
-        title: Frameworks
-      - link: /Learn/JavaScript/Client-side_web_APIs
-        title: Client-side_APIs
+      - link: /Learn_web_development/Extensions/Advanced_JavaScript_objects
+        title: Advanced JavaScript objects
+      - link: /Learn_web_development/Extensions/Async_JS
+        title: Asynchronous_JavaScript
+      - link: /Learn_web_development/Extensions/Client-side_APIs
+        title: Client-side_web_APIs
       - link: /Web/JavaScript/Language_overview
         title: Language_overview
       - link: /Web/JavaScript/Data_structures
@@ -138,9 +140,56 @@ sidebar:
       - link: /Web/JavaScript/Reference/Deprecated_and_obsolete_features
         title: Deprecated_features
 l10n:
+  de:
+    Overview: JavaScript-Technologie (Übersicht)
+    Tutorials: Tutorials
+    Guide: JavaScript-Handbuch
+    Guide_Introduction: Einführung
+    Guide_Grammar: Grammatik und Typen
+    Guide_Control_flow: Steuerfluss und Fehlerbehandlung
+    Guide_Loops: Schleifen und Iteration
+    Guide_Functions: Funktionen
+    Guide_Expressions: Ausdrücke und Operatoren
+    Guide_Numbers: Numbers and strings
+    Guide_Dates: Representing dates & times
+    Guide_RegExp: Reguläre Ausdrücke
+    Guide_Indexed_collections: Indexierte Sammlungen
+    Guide_keyed_collections: Gekennzeichnete Sammlungen
+    Guide_Objects: Arbeiten mit Objekten
+    Guide_Classes: Verwendung von Klassen
+    Guide_Promises: Verwendung von Promises
+    Guide_Typed_arrays: Typisierte Arrays in JavaScript
+    Guide_Iterators_generators: Iteratoren und Generatoren
+    Guide_Internationalization: Internationalization
+    Guide_Meta: Metaprogrammierung
+    Guide_Modules: JavaScript-Module
+    Intermediate: Mittelstufe
+    Language_overview: Sprachübersicht
+    Data_structures: JavaScript-Datenstrukturen
+    Equality: Gleichheitsvergleiche und Gleichheit
+    Closures: Closures
+    Advanced: Fortgeschritten
+    Inheritance: Vererbung und die Prototypenkette
+    Strict_mode: Strenger Modus
+    Memory_management: Speicherverwaltung
+    Event_loop: Konkurrenzmodell und Ereignisschleife
+    Reference: Referenzen
+    Global_Objects: Eingebaute Objekte
+    Operators: Ausdrücke und Operatoren
+    Statements: Anweisungen und Deklarationen
+    Functions: Funktionen
+    Classes: Klassen
+    Errors: Fehler
+    More: Sonstiges
+    Lexical_grammar: Lexikalische Grammatik
+    Enumerability: Aufzählbarkeit und Eigentum von Eigenschaften
+    Iteration_protocols: Iterationsprotokolle
+    Template_strings: Vorlagenliterale
+    Trailing_commas: Abschließende Kommas
+    Deprecated_features: Veraltete Funktionen
   en-US:
     Overview: JavaScript technologies overview
-    Tutorials: Tutorials
+    Tutorials: Tutorials and guides
     Guide: JavaScript Guide
     Guide_Introduction: Introduction
     Guide_Grammar: Grammar and types
@@ -148,8 +197,8 @@ l10n:
     Guide_Loops: Loops and iteration
     Guide_Functions: Functions
     Guide_Expressions: Expressions and operators
-    Guide_Numbers: Numbers and dates
-    Guide_Text: Text formatting
+    Guide_Numbers: Numbers and strings
+    Guide_Dates: Representing dates & times
     Guide_RegExp: Regular expressions
     Guide_Indexed_collections: Indexed collections
     Guide_keyed_collections: Keyed collections
@@ -158,16 +207,16 @@ l10n:
     Guide_Promises: Using promises
     Guide_Typed_arrays: JavaScript typed arrays
     Guide_Iterators_generators: Iterators and generators
+    Guide_Internationalization: Internationalization
     Guide_Meta: Meta programming
     Guide_Modules: JavaScript modules
-    Complete_beginners: Complete beginners
-    Basics: JavaScript basics
-    First_steps: JavaScript first steps
-    Building_blocks: JavaScript building blocks
+    Beginners: Beginner's tutorials
+    Adding_interactivity: "Your first website: Adding interactivity"
+    Dynamic_scripting_with_JavaScript: Dynamic scripting with JavaScript
+    JavaScript_frameworks_and_libraries: JavaScript frameworks and libraries
     Intermediate: Intermediate
-    Introducing_objects: Introducing JavaScript objects
-    Client-side_APIs: Client-side web APIs
-    Frameworks: Client-side JavaScript frameworks
+    Asynchronous_JavaScript: Asynchronous JavaScript
+    Client-side_web_APIs: Client-side web APIs
     Language_overview: Language overview
     Data_structures: JavaScript data structures
     Equality: Equality comparisons and sameness
@@ -187,7 +236,6 @@ l10n:
     More: Misc
     Lexical_grammar: Lexical grammar
     Enumerability: Enumerability and ownership of properties
-    Data_types: Data types and data structures
     Iteration_protocols: Iteration protocols
     Template_strings: Template literals
     Trailing_commas: Trailing commas
@@ -202,8 +250,8 @@ l10n:
     Guide_Loops: Циклы и итерации
     Guide_Functions: Функции
     Guide_Expressions: Выражения и операторы
-    Guide_Numbers: Числа и даты
-    Guide_Text: Форматирование текста
+    Guide_Numbers: Numbers and strings
+    Guide_Dates: Representing dates & times
     Guide_RegExp: Регулярные выражения
     Guide_Indexed_collections: Упорядоченные наборы данных
     Guide_keyed_collections: Коллекции
@@ -212,16 +260,10 @@ l10n:
     Guide_Promises: Использование промисов
     Guide_Typed_arrays: Типизированные массивы JavaScript
     Guide_Iterators_generators: Итераторы и генераторы
+    Guide_Internationalization: Internationalization
     Guide_Meta: Метапрограммирование
     Guide_Modules: Модули JavaScript
-    Complete_beginners: Базовые
-    Basics: Основы JavaScript
-    First_steps: Первые шаги в JavaScript
-    Building_blocks: Структурные элементы JavaScript
     Intermediate: Средние
-    Introducing_objects: Введение в объекты JavaScript
-    Client-side_APIs: Клиентский API веба
-    Frameworks: Понимание JavaScript-фреймворков для фронтенда
     Language_overview: Language overview
     Data_structures: Структуры данных JavaScript
     Equality: Проверки на равенство и когда их использовать
@@ -241,7 +283,6 @@ l10n:
     More: Ещё
     Lexical_grammar: Лексическая грамматика
     Enumerability: Перечисляемость и принадлежность свойств
-    Data_types: Типы и структуры данных
     Iteration_protocols: Протоколы перебора
     Template_strings: Шаблонные строки
     Trailing_commas: Висящие запятые
@@ -256,8 +297,8 @@ l10n:
     Guide_Loops: Boucles et itération
     Guide_Functions: Fonctions
     Guide_Expressions: Expressions et opérateurs
-    Guide_Numbers: Nombres et dates
-    Guide_Text: Formatage du texte
+    Guide_Numbers: Numbers and strings
+    Guide_Dates: Representing dates & times
     Guide_RegExp: Expressions rationnelles
     Guide_Indexed_collections: Collections indexées
     Guide_keyed_collections: Collections avec clés
@@ -266,16 +307,10 @@ l10n:
     Guide_Promises: Utiliser les promesses
     Guide_Typed_arrays: Tableaux typés en JavaScript
     Guide_Iterators_generators: Itérateurs et générateurs
+    Guide_Internationalization: Internationalization
     Guide_Meta: Métaprogrammation
     Guide_Modules: Modules JavaScript
-    Complete_beginners: Débutant
-    Basics: Les bases en JavaScript
-    First_steps: Premiers pas en JavaScript
-    Building_blocks: Les briques JavaScript
     Intermediate: Intermédiaire
-    Introducing_objects: Introduction aux objets JavaScript
-    Client-side_APIs: Les API web côté client
-    Frameworks: Les frameworks JavaScript côté client
     Language_overview: Language overview
     Data_structures: Structures de données en JavaScript
     Equality: Différents tests d'égalité
@@ -295,7 +330,6 @@ l10n:
     More: Divers
     Lexical_grammar: Grammaire lexicale
     Enumerability: Rattachement des propriétés
-    Data_types: Types et structures de données
     Iteration_protocols: Protocoles d'itération
     Template_strings: Gabarits de chaînes de caractères
     Trailing_commas: Virgules finales
@@ -310,8 +344,8 @@ l10n:
     Guide_Loops: 循环与迭代
     Guide_Functions: 函数
     Guide_Expressions: 表达式与运算符
-    Guide_Numbers: 数字和日期
-    Guide_Text: 文本格式化
+    Guide_Numbers: 数字与字符串
+    Guide_Dates: 表达日期与时间
     Guide_RegExp: 正则表达式
     Guide_Indexed_collections: 索引集合类
     Guide_keyed_collections: 带键的集合
@@ -320,16 +354,10 @@ l10n:
     Guide_Promises: 使用 Promise
     Guide_Typed_arrays: JavaScript 类型化数组
     Guide_Iterators_generators: 迭代器和生成器
+    Guide_Internationalization: 国际化
     Guide_Meta: 元编程
     Guide_Modules: JavaScript 模块
-    Complete_beginners: 快速入门
-    Basics: JavaScript 基础知识
-    First_steps: JavaScript 第一步
-    Building_blocks: 构建 JavaScript 代码块
     Intermediate: 中级
-    Introducing_objects: 介绍 JavaScript 对象
-    Client-side_APIs: 客户端 Web API
-    Frameworks: 客户端 JavaScript 框架
     Language_overview: 语言概述
     Data_structures: JavaScript 数据结构
     Equality: 如何正确判断相等性
@@ -349,7 +377,6 @@ l10n:
     More: 更多
     Lexical_grammar: 词法文法
     Enumerability: 属性的可枚举性和所有权
-    Data_types: 数据类型和数据解构
     Iteration_protocols: 迭代协议
     Template_strings: 模板字符串
     Trailing_commas: 尾后逗号
@@ -364,8 +391,8 @@ l10n:
     Guide_Loops: ループとイテレーター
     Guide_Functions: 関数
     Guide_Expressions: 式と演算子
-    Guide_Numbers: 数と日付
-    Guide_Text: テキスト処理
+    Guide_Numbers: Numbers and strings
+    Guide_Dates: Representing dates & times
     Guide_RegExp: 正規表現
     Guide_Indexed_collections: インデックス付きコレクション
     Guide_keyed_collections: キー付きコレクション
@@ -374,16 +401,10 @@ l10n:
     Guide_Promises: プロミスの使用
     Guide_Typed_arrays: JavaScript 型付き配列
     Guide_Iterators_generators: イテレーターとジェネレーター
+    Guide_Internationalization: Internationalization
     Guide_Meta: メタプログラミング
     Guide_Modules: JavaScript モジュール
-    Complete_beginners: 初級編
-    Basics: JavaScript の基礎
-    First_steps: JavaScript の第一歩
-    Building_blocks: JavaScript の構成要素
     Intermediate: 中級編
-    Introducing_objects: JavaScript オブジェクト入門
-    Client-side_APIs: クライアントサイド Web API
-    Frameworks: クライアントサイド JavaScript フレームワーク
     Language_overview: Language overview
     Data_structures: JavaScript のデータ構造
     Equality: 等値比較と同一性
@@ -403,7 +424,6 @@ l10n:
     More: その他
     Lexical_grammar: 字句文法
     Enumerability: プロパティの列挙可能性と所有権
-    Data_types: データ型とデータ構造
     Iteration_protocols: 反復処理プロトコル
     Template_strings: テンプレート文字列
     Trailing_commas: 末尾のカンマ
@@ -418,8 +438,8 @@ l10n:
     Guide_Loops: 루프와 반복
     Guide_Functions: 함수
     Guide_Expressions: 표현식과 연산자
-    Guide_Numbers: 숫자와 날짜
-    Guide_Text: 텍스트 서식
+    Guide_Numbers: Numbers and strings
+    Guide_Dates: Representing dates & times
     Guide_RegExp: 정규 표현식
     Guide_Indexed_collections: index 기반의 컬렉션
     Guide_keyed_collections: key 기반의 컬렉션
@@ -428,16 +448,10 @@ l10n:
     Guide_Promises: promise 사용하기
     Guide_Typed_arrays: JavaScript 형식화 배열
     Guide_Iterators_generators: 반복기와 생성기
+    Guide_Internationalization: Internationalization
     Guide_Meta: 메타 프로그래밍
     Guide_Modules: JavaScript 모듈
-    Complete_beginners: 입문서
-    Basics: JavaScript 기본
-    First_steps: JavaScript 첫걸음
-    Building_blocks: JavaScript 구성요소
     Intermediate: 중급서
-    Introducing_objects: JavaScript 객체 소개
-    Client-side_APIs: 클라이언트 사이드 웹 API
-    Frameworks: 클라이언트 사이드 JavaScript 프레임워크
     Language_overview: JavaScript 재입문하기 (JS ​자습서)
     Data_structures: JavaScript의 타입과 자료구조
     Equality: 동치 비교 및 동일성
@@ -457,7 +471,6 @@ l10n:
     More: 기타
     Lexical_grammar: Lexical 문법
     Enumerability: 열거성과 속성의 소유권
-    Data_types: 데이터 타입과 자료구조
     Iteration_protocols: Iteration 프로토콜
     Template_strings: 템플릿 리터럴
     Trailing_commas: Trailing commas
@@ -472,8 +485,8 @@ l10n:
     Guide_Loops: Repetição e iteração
     Guide_Functions: Funções
     Guide_Expressions: Expressões e operadores
-    Guide_Numbers: Números e datas
-    Guide_Text: Formatação de texto
+    Guide_Numbers: Numbers and strings
+    Guide_Dates: Representing dates & times
     Guide_RegExp: Expressões Regulares
     Guide_Indexed_collections: Coleções indexadas
     Guide_keyed_collections: Coleções com chave (chave-valor)
@@ -482,16 +495,10 @@ l10n:
     Guide_Promises: Usando "promises"
     Guide_Typed_arrays: Arranjos tipados em JavaScript
     Guide_Iterators_generators: Iteradores e geradores
+    Guide_Internationalization: Internationalization
     Guide_Meta: Metaprogramação
     Guide_Modules: JavaScript modules
-    Complete_beginners: Completos iniciantes
-    Basics: O básico de JavaScript
-    First_steps: Primeiros passos com JavaScript
-    Building_blocks: Blocos de construção de JavaScript
     Intermediate: Intermediário
-    Introducing_objects: Introdução a objetos JavaScript
-    Client-side_APIs: APIs Web para aplicações Cliente
-    Frameworks: Client-side JavaScript frameworks
     Language_overview: Language overview
     Data_structures: Estruturas de dados de JavaScript
     Equality: Comparadores de igualdade e semelhança
@@ -511,7 +518,6 @@ l10n:
     More: Mais conteúdo
     Lexical_grammar: Gramática léxica
     Enumerability: Enumerabilidade e domínio de propriedades
-    Data_types: Tipos de dados e estruturas de dados
     Iteration_protocols: Protocolos de iteração
     Template_strings: Template literals
     Trailing_commas: Trailing commas

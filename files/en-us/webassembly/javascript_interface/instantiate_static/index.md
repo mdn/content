@@ -31,7 +31,9 @@ compile and instantiate WebAssembly code. This function has two overloads:
 ### Primary overload — taking Wasm binary code
 
 ```js
+WebAssembly.instantiate(bufferSource);
 WebAssembly.instantiate(bufferSource, importObject);
+WebAssembly.instantiate(bufferSource, importObject, compileOptions);
 ```
 
 #### Parameters
@@ -45,13 +47,19 @@ WebAssembly.instantiate(bufferSource, importObject);
     `Instance`, such as functions or [`WebAssembly.Memory`](/en-US/docs/WebAssembly/JavaScript_interface/Memory) objects.
     There must be one matching property for each declared import of the compiled module or
     else a [`WebAssembly.LinkError`](/en-US/docs/WebAssembly/JavaScript_interface/LinkError) is thrown.
+- `compileOptions` {{optional_inline}}
+  - : An object containing compilation options. Properties can include:
+    - `builtins` {{optional_inline}}
+      - : An array of strings that enables the usage of [JavaScript builtins](/en-US/docs/WebAssembly/JavaScript_builtins) in the compiled Wasm module. The strings define the builtins you want to enable. Currently the only available value is `"js-string"`, which enables JavaScript string builtins.
+    - `importedStringConstants` {{optional_inline}}
+      - : A string specifying a namespace for [imported global string constants](/en-US/docs/WebAssembly/Imported_string_constants). This property needs to be specified if you wish to use imported global string constants in the Wasm module.
 
 #### Return value
 
 A `Promise` that resolves to a `ResultObject` which contains two
 fields:
 
-- `module`: A [`WebAssembly.Module`](/en-US/docs/WebAssembly/JavaScript_interface/Module) object representing the compiled WebAssembly module. This `Module` can be instantiated again, shared via {{domxref("Worker.postMessage", "postMessage()")}}, or [cached](/en-US/docs/WebAssembly/Caching_modules).
+- `module`: A [`WebAssembly.Module`](/en-US/docs/WebAssembly/JavaScript_interface/Module) object representing the compiled WebAssembly module. This `Module` can be instantiated again, shared via {{domxref("Worker.postMessage", "postMessage()")}}, or [cached](/en-US/docs/Web/Progressive_web_apps/Guides/Caching).
 - `instance`: A [`WebAssembly.Instance`](/en-US/docs/WebAssembly/JavaScript_interface/Instance) object that contains all the [Exported WebAssembly functions](/en-US/docs/WebAssembly/Exported_functions).
 
 #### Exceptions
@@ -65,7 +73,9 @@ fields:
 ### Secondary overload — taking a module object instance
 
 ```js
+WebAssembly.instantiate(module);
 WebAssembly.instantiate(module, importObject);
+WebAssembly.instantiate(module, importObject, compileOptions);
 ```
 
 #### Parameters
@@ -77,6 +87,12 @@ WebAssembly.instantiate(module, importObject);
     `Instance`, such as functions or [`WebAssembly.Memory`](/en-US/docs/WebAssembly/JavaScript_interface/Memory) objects.
     There must be one matching property for each declared import of `module` or
     else a [`WebAssembly.LinkError`](/en-US/docs/WebAssembly/JavaScript_interface/LinkError) is thrown.
+- `compileOptions` {{optional_inline}}
+  - : An object containing compilation options. Properties can include:
+    - `builtins` {{optional_inline}}
+      - : An array of strings that enables the usage of [JavaScript builtins](/en-US/docs/WebAssembly/JavaScript_builtins) in the compiled Wasm module. The strings define the builtins you want to enable. Currently the only available value is `"js-string"`, which enables JavaScript string builtins.
+    - `importedStringConstants` {{optional_inline}}
+      - : A string specifying a namespace for [imported global string constants](/en-US/docs/WebAssembly/Imported_string_constants). This property needs to be specified if you wish to use imported global string constants in the Wasm module.
 
 #### Return value
 
@@ -161,6 +177,29 @@ onmessage = (e) => {
     instance.exports.exported_func();
   });
 };
+```
+
+### Enabling JavaScript builtins and global string imports
+
+This example enables JavaScript string builtins and imported global string constants when compiling and instantiating the Wasm module with `instantiate()`, before running the exported `main()` function (which logs `"hello world!"` to the console). [See it running live](https://mdn.github.io/webassembly-examples/js-builtin-examples/instantiate/).
+
+```js
+const importObject = {
+  // Regular import
+  m: {
+    log: console.log,
+  },
+};
+
+const compileOptions = {
+  builtins: ["js-string"], // Enable JavaScript string builtins
+  importedStringConstants: "string_constants", // Enable imported global string constants
+};
+
+fetch("log-concat.wasm")
+  .then((response) => response.arrayBuffer())
+  .then((bytes) => WebAssembly.instantiate(bytes, importObject, compileOptions))
+  .then((result) => result.instance.exports.main());
 ```
 
 ## Specifications

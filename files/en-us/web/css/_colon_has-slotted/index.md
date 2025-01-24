@@ -58,7 +58,7 @@ This example has two `<slot>` elements, one of which has been assigned some cont
 
 ### Result
 
-The `<slot>` element that has been assigned content matched the `:has-slotted` pseudo-class and has the `color` value of `rebbecapurple` applied.
+The `<slot>` element that has been assigned content matched the `:has-slotted` pseudo-class and has the `color` value of `rebeccapurple` applied.
 
 {{EmbedLiveSample("simple_example",100,300)}}
 

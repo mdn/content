@@ -14,7 +14,7 @@ The header is optional and may be added to, modified, or removed, by any of the 
 
 This header is used for debugging, statistics, and generating location-dependent content.
 By design, it exposes privacy sensitive information, such as the IP address of the client.
-Therefore, the user's privacy must be kept in mind when deploying this header.
+Therefore, the user's privacy must be kept in mind when using this header.
 
 The alternative and de-facto standard versions of this header are the {{HTTPHeader("X-Forwarded-For")}}, {{HTTPHeader("X-Forwarded-Host")}} and {{HTTPHeader("X-Forwarded-Proto")}} headers.
 

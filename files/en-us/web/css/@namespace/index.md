@@ -25,7 +25,7 @@ browser-compat: css.at-rules.namespace
 
 ## Description
 
-The defined namespaces can be used to restrict the [universal](/en-US/docs/Web/CSS/Universal_selectors), [type](/en-US/docs/Web/CSS/Type_selectors), and [attribute](/en-US/docs/Web/CSS/Attribute_selectors) [selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors) to only select elements within that namespace. The `@namespace` rule is generally only useful when dealing with documents containing multiple namespaces—such as HTML with inline SVG or MathML, or XML that mixes multiple vocabularies.
+The defined namespaces can be used to restrict the [universal](/en-US/docs/Web/CSS/Universal_selectors), [type](/en-US/docs/Web/CSS/Type_selectors), and [attribute](/en-US/docs/Web/CSS/Attribute_selectors) [selectors](/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors) to only select elements within that namespace. The `@namespace` rule is generally only useful when dealing with documents containing multiple namespaces—such as HTML with inline SVG or MathML, or XML that mixes multiple vocabularies.
 
 Any `@namespace` rules must follow all {{cssxref("@charset")}} and {{cssxref("@import")}} rules, and precede all other at-rules and [style declarations](/en-US/docs/Web/API/CSSStyleDeclaration) in a style sheet.
 

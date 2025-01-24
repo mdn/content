@@ -13,12 +13,16 @@ The **CSS inline layout** module defines the block-axis alignment and sizing of 
 
 ### Properties
 
+- {{cssxref("alignment-baseline")}}
 - {{cssxref("dominant-baseline")}}
 - {{cssxref("initial-letter")}}
 - {{cssxref("line-height")}}
+- {{cssxref("text-box-edge")}}
+- {{cssxref("text-box-trim")}}
+- {{cssxref("text-box")}} shorthand
 - {{cssxref("vertical-align")}}
 
-The specification also defines the `alignment-baseline`, `baseline-shift`, `baseline-source`, `initial-letter-align`, `initial-letter-wrap`, `inline-sizing`, `line-fit-edge`, `text-box`, `text-box-edge`, and `text-box-trim` properties, which are not yet supported by any browser.
+The specification also defines the `baseline-shift`, `baseline-source`, `initial-letter-align`, `initial-letter-wrap`, `inline-sizing`, and `line-fit-edge` properties, which are not yet supported by any browser.
 
 ### Glossary terms
 

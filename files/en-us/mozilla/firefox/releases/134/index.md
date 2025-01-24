@@ -6,21 +6,17 @@ page-type: firefox-release-notes
 
 {{FirefoxSidebar}}
 
-This article provides information about the changes in Firefox 134 that affect developers. Firefox 134 is the current [Beta version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#beta) and ships on [January 7, 2025](https://whattrainisitnow.com/release/?version=134).
+This article provides information about the changes in Firefox 134 that affect developers. Firefox 134 was released on [January 7, 2025](https://whattrainisitnow.com/release/?version=134).
 
 ## Changes for web developers
 
-### Developer Tools
-
 ### HTML
 
-#### Removals
+No notable changes
 
 ### CSS
 
-- The {{CSSXRef("align-self")}} and {{CSSXRef("justify-self")}} CSS properties and {{CSSXRef("place-self")}} CSS shorthand property are now supported for [absolutely positioned](/en-US/docs/Learn/CSS/CSS_layout/Positioning#absolute_positioning) elements. ([Firefox bug 1920160](https://bugzil.la/1920160)).
-
-#### Removals
+- The {{CSSXRef("align-self")}} and {{CSSXRef("justify-self")}} CSS properties and {{CSSXRef("place-self")}} CSS shorthand property are now supported for [absolutely positioned](/en-US/docs/Learn_web_development/Core/CSS_layout/Positioning#absolute_positioning) elements. ([Firefox bug 1920160](https://bugzil.la/1920160)).
 
 ### JavaScript
 
@@ -28,20 +24,6 @@ This article provides information about the changes in Firefox 134 that affect d
 - The {{jsxref("Promise.try()")}} convenience method is now supported.
   The method takes a callback of any kind (a function that returns or throws, synchronously or asynchronously) and wraps its result in a {{jsxref("Promise")}}.
   This allows you to use promise semantics ({{jsxref("Promise.then", ".then()")}}, {{jsxref("Promise.catch", ".catch()")}}) to handle the result from any kind of method. ([Firefox bug 1917879](https://bugzil.la/1917879) and [Firefox bug 1905364](https://bugzil.la/1905364)).
-
-#### Removals
-
-### SVG
-
-#### Removals
-
-### HTTP
-
-#### Removals
-
-### Security
-
-#### Removals
 
 ### APIs
 
@@ -55,25 +37,21 @@ This article provides information about the changes in Firefox 134 that affect d
 
 - WebRTC simulcast of screen-shared video with the [VP8 codec](/en-US/docs/Web/Media/Formats/Video_codecs#vp8) is now supported (simulcast from other video sources has been enabled for a long time). More precisely, {{domxref("MediaStreamTrack")}} objects for screen and window capture (for example, from {{domxref("MediaDevices.getDisplayMedia()")}}), can now be encoded as multiple simulcast layers when using VP8. ([Firefox bug 1692873](https://bugzil.la/1692873)).
 
-#### Removals
-
-### WebAssembly
-
-#### Removals
-
 ### WebDriver conformance (WebDriver BiDi, Marionette)
-
-#### General
 
 #### WebDriver BiDi
 
+- Implemented the `browser.getClientWindows` command, which allows to retrieve information about the currently opened browser windows ([Firefox bug 1855025](https://bugzilla.mozilla.org/show_bug.cgi?id=1855025))
+- Added support for the `initiatorType` and `destination` fields to all network events ([Firefox bug 1904892](https://bugzilla.mozilla.org/show_bug.cgi?id=1904892) and [Firefox bug 1933331](https://bugzilla.mozilla.org/show_bug.cgi?id=1933331)). They allow to understand why and how the request was created.
+- The `browsingContext.navigationStarted` event is no longer emitted when the initial about:blank page is loaded for a new top-level browsing context ([Firefox bug 1922014](https://bugzilla.mozilla.org/show_bug.cgi?id=1922014))
+- We fixed a bug where the `requestTime` of network events would sometimes be set to 0 ([Firefox bug 1930849](https://bugzilla.mozilla.org/show_bug.cgi?id=1930849))
+- The `browsingContext.traverseHistory` command can now only be used with top-level browsing contexts ([Firefox bug 1924859](https://bugzilla.mozilla.org/show_bug.cgi?id=1924859))
+- Improved the reliability of commands sent during a navigation, for instance when a browsing context is being replaced ([Firefox bug 1927073](https://bugzilla.mozilla.org/show_bug.cgi?id=1927073)).
+
 #### Marionette
 
-## Changes for add-on developers
-
-### Removals
-
-### Other
+- The `Addon:Install` and `Addon:Uninstall` commands are now available for GeckoView (Firefox for Android) ([Firefox bug 1806135](https://bugzilla.mozilla.org/show_bug.cgi?id=1806135)).
+- The `Addon:Install` command can now be used to install extensions enabled in Private Browsing mode ([Firefox bug 1810718](https://bugzilla.mozilla.org/show_bug.cgi?id=1810718))
 
 ## Experimental web features
 

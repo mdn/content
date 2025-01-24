@@ -72,7 +72,9 @@
       },
       {
         "if": {
-          "properties": { "slug": { "type": "string", "pattern": "^Learn/" } }
+          "properties": {
+            "slug": { "type": "string", "pattern": "^Learn_web_development/" }
+          }
         },
         "then": {
           "properties": {

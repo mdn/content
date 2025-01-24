@@ -35,7 +35,7 @@ A {{HTTPHeader("Content-Digest")}} applies to the content of a specific message,
 Repr-Digest: <digest-algorithm>=<digest-value>
 
 // Multiple digest algorithms
-Repr-Digest: <digest-algorithm>=<digest-value>,<digest-algorithm>=<digest-value>
+Repr-Digest: <digest-algorithm>=<digest-value>,…,<digest-algorithmN>=<digest-valueN>
 ```
 
 ## Directives

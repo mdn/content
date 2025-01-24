@@ -151,7 +151,7 @@ The elements that we should focus on are the "parent", "child", and "sibling" `<
 What's notable about this layout is that there is no content between the parent and child elements, and the child element has a top margin applied.
 You might expect the top margin to effectively push the child element down within the parent element, but what happens instead is something called [_margin collapse_](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing).
 In this case, the margin of the child element extends well above the parent's bounding box and pushes the parent element further down the page.
-This is easier to see if you inspect the box model of the child element [in your browser's developer tools](/en-US/docs/Learn/CSS/Building_blocks/The_box_model#use_browser_devtools_to_view_the_box_model).
+This is easier to see if you inspect the box model of the child element [in your browser's developer tools](/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model#use_browser_devtools_to_view_the_box_model).
 
 Change the selected option in the `<select>` element to see the effect of different `display` values.
 You can use any value with `flow-root` to create a new formatting context for the parent, making the child element margin relative to its parent's outer edge and avoiding the margin collapse.
@@ -225,7 +225,7 @@ p {
 
 {{EmbedLiveSample("display_block_flow-root_and_display_inline_flow-root", '90%', 380)}}
 
-The `flow-root` value makes sense if you think about block and inline layout, which is sometimes called [normal flow](/en-US/docs/Learn/CSS/CSS_layout/Normal_Flow). Our HTML page creates a new formatting context (floats and margins cannot extend out from the boundaries) and our content lays out in normal flow, using block and inline layout, unless we change the value of `display` to use some other formatting context. Creating a grid or flex container also creates a new formatting context (a grid or flex formatting context, respectively.) These also contain everything inside them. However, if you want to contain floats and margins but continue using block and inline layout, you can create a new flow root, and start over with block and inline layout. From that point downwards everything is contained inside the new flow root.
+The `flow-root` value makes sense if you think about block and inline layout, which is sometimes called [normal flow](/en-US/docs/Learn_web_development/Core/CSS_layout/Introduction#normal_layout_flow). Our HTML page creates a new formatting context (floats and margins cannot extend out from the boundaries) and our content lays out in normal flow, using block and inline layout, unless we change the value of `display` to use some other formatting context. Creating a grid or flex container also creates a new formatting context (a grid or flex formatting context, respectively.) These also contain everything inside them. However, if you want to contain floats and margins but continue using block and inline layout, you can create a new flow root, and start over with block and inline layout. From that point downwards everything is contained inside the new flow root.
 
 This is why `display: flow-root` can be written using the multi-keyword syntax `display: block flow-root`. You are creating a block formatting context, with a block-level box and children participating in normal flow. What about the matched pair `display: inline flow-root`? This is the current way of describing `display: inline-block`.
 

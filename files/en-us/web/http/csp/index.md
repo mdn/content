@@ -10,7 +10,7 @@ page-type: guide
 
 The primary use case for CSP is to control which resources, in particular JavaScript resources, a document is allowed to load. This is mainly used as a defense against {{glossary("cross-site scripting")}} (XSS) attacks, in which an attacker is able to inject malicious code into the victim's site.
 
-A CSP can have other purposes as well, including defending against {{glossary("clickjacking")}} and helping to ensure that a site's pages will be loaded over HTTPS.
+A CSP can have other purposes as well, including defending against [clickjacking](/en-US/docs/Web/Security/Attacks/Clickjacking) and helping to ensure that a site's pages will be loaded over HTTPS.
 
 In this guide we'll start by describing how a CSP is delivered to a browser and what it looks like at a high level.
 
@@ -170,7 +170,7 @@ For this approach to work, it must not be possible for an attacker to guess the 
 
 This in turn means that the server cannot serve static HTML, because it must insert a new nonce each time. Typically the server would use a templating engine to insert the nonce.
 
-Here's a snippet of [Express](/en-US/docs/Learn/Server-side/Express_Nodejs) code to demonstrate:
+Here's a snippet of [Express](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs) code to demonstrate:
 
 ```js
 function content(nonce) {

@@ -70,6 +70,14 @@ sidebar:
       - /MDN/At_ten/History_of_MDN
   - /MDN/Changelog
 l10n:
+  de:
+    history: Geschichte
+    advisory_board: Product Advisory Board
+    community_guidelines: Gemeinschaftsrichtlinien
+    contributing_to_mdn_web_docs: Beiträge zu MDN Web Docs
+    writing_guide: Schreibanleitung
+    how_to_guides: Anleitungen
+    page_structures: Seitenstrukturen
   en-US:
     history: History
     advisory_board: Advisory Board

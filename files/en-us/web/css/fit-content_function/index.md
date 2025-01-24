@@ -44,6 +44,10 @@ fit-content(40%)
 
     In grid properties it is relative to the inline size of the grid container in column tracks and to the block size of the grid container for row tracks. Otherwise it is relative to the available inline size or block size of the laid out box depending on the writing mode.
 
+## Formal syntax
+
+{{CSSSyntax("fit-content")}}
+
 ## Examples
 
 ### Sizing grid columns with fit-content

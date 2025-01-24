@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Math.LN10
 
 {{JSRef}}
 
-The **`Math.LN10`** static data property represents the natural logarithm of 10, approximately 2.302.
+The **`Math.LN10`** static data property represents the natural logarithm of 10, approximately 2.303.
 
 {{EmbedInteractiveExample("pages/js/math-ln10.html", "shorter")}}
 
@@ -15,7 +15,7 @@ The **`Math.LN10`** static data property represents the natural logarithm of 10,
 
 <!-- prettier-ignore-start -->
 <math display="block">
-  <semantics><mrow><mi>𝙼𝚊𝚝𝚑.𝙻𝙽𝟷𝟶</mi><mo>=</mo><mo lspace="0em" rspace="0em">ln</mo><mo stretchy="false">(</mo><mn>10</mn><mo stretchy="false">)</mo><mo>≈</mo><mn>2.302</mn></mrow><annotation encoding="TeX">\mathtt{Math.LN10} = \ln(10) \approx 2.302</annotation></semantics>
+  <semantics><mrow><mi>𝙼𝚊𝚝𝚑.𝙻𝙽𝟷𝟶</mi><mo>=</mo><mo lspace="0em" rspace="0em">ln</mo><mo stretchy="false">(</mo><mn>10</mn><mo stretchy="false">)</mo><mo>≈</mo><mn>2.303</mn></mrow><annotation encoding="TeX">\mathtt{Math.LN10} = \ln(10) \approx 2.303</annotation></semantics>
 </math>
 <!-- prettier-ignore-end -->
 

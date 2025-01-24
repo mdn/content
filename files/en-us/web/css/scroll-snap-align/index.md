@@ -7,7 +7,7 @@ browser-compat: css.properties.scroll-snap-align
 
 {{CSSRef}}
 
-The `scroll-snap-align` property specifies the box's snap position as an alignment of its [snap area](/en-US/docs/Glossary/Scroll_snap#snap_area) (as the alignment subject) within its snap container's snap port (as the alignment container).
+The `scroll-snap-align` property specifies the box's snap position as an alignment of its [snap area](/en-US/docs/Glossary/Scroll_snap#snap_area) (as the {{glossary("alignment subject")}}) within its snap container's snap port (as the {{glossary("alignment container")}}).
 
 {{EmbedInteractiveExample("pages/css/scroll-snap-align.html")}}
 

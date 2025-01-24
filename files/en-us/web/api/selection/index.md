@@ -24,7 +24,7 @@ A user may make a selection from left to right (in document order) or right to l
 - {{DOMxRef("Selection.focusNode")}} {{ReadOnlyInline}}
   - : Returns the {{DOMxRef("Node")}} in which the selection ends. Can return `null` if selection never existed in the document (for example, in an `iframe` that was never clicked on).
 - {{DOMxRef("Selection.focusOffset")}} {{ReadOnlyInline}}
-  - : Returns a number representing the offset of the selection's anchor within the `focusNode`. If `focusNode` is a text node, this is the number of characters within `focusNode` preceding the focus. If `focusNode` is an element, this is the number of child nodes of the `focusNode` preceding the focus.
+  - : Returns a number representing the offset of the selection's focus within the `focusNode`. If `focusNode` is a text node, this is the number of characters within `focusNode` preceding the focus. If `focusNode` is an element, this is the number of child nodes of the `focusNode` preceding the focus.
 - {{DOMxRef("Selection.isCollapsed")}} {{ReadOnlyInline}}
   - : Returns a Boolean indicating whether the selection's start and end points are at the same position.
 - {{DOMxRef("Selection.rangeCount")}} {{ReadOnlyInline}}

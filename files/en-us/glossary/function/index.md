@@ -65,7 +65,7 @@ function loop(x) {
 // Arrow function
 const loop2 = (x) => {
   if (x >= 10) return;
-  loop(x + 1);
+  loop2(x + 1);
 };
 ```
 

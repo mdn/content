@@ -135,18 +135,19 @@ The table below shows the opener behaviour for the different directive values.
 
 ## Examples
 
-### Certain features depend on cross-origin isolation
+### Features that depend on cross-origin isolation
 
-Certain features like {{jsxref("SharedArrayBuffer")}} objects or {{domxref("Performance.now()")}} with unthrottled timers are only available if your document has a COOP header with the value `same-origin` set.
+Certain features, such as access to {{jsxref("SharedArrayBuffer")}} objects or using {{domxref("Performance.now()")}} with unthrottled timers, are only available if your document is {{domxref("Window.crossOriginIsolated","cross-origin isolated","","nocode")}}.
+
+To use these features in a document, you will need to set the COOP header to `same-origin` and the {{HTTPHeader("Cross-Origin-Embedder-Policy")}} header to `require-corp` (or `credentialless`).
+In addition the feature must not be blocked by {{HTTPHeader("Permissions-Policy/cross-origin-isolated","Permissions-Policy: cross-origin-isolated")}}.
 
 ```http
 Cross-Origin-Opener-Policy: same-origin
 Cross-Origin-Embedder-Policy: require-corp
 ```
 
-See also the {{HTTPHeader("Cross-Origin-Embedder-Policy")}} header which you'll need to set to `require-corp` or `credentialless` as well.
-
-To check if cross-origin isolation has been successful, you can test against the {{domxref("Window.crossOriginIsolated")}} property or the {{domxref("WorkerGlobalScope.crossOriginIsolated")}} property available to window and worker contexts:
+You can use the {{domxref("Window.crossOriginIsolated")}} and {{domxref("WorkerGlobalScope.crossOriginIsolated")}} properties to check if a document is cross-origin isolated, and hence whether or not the features are restricted:
 
 ```js
 const myWorker = new Worker("worker.js");

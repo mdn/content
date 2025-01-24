@@ -6,7 +6,7 @@ page-type: landing-page
 
 {{jsSidebar}}
 
-**JavaScript** (**JS**) is a lightweight interpreted (or [just-in-time](https://en.wikipedia.org/wiki/Just-in-time_compilation) compiled) programming language with {{Glossary("First-class Function", "first-class functions")}}. While it is most well-known as the scripting language for Web pages, [many non-browser environments](https://en.wikipedia.org/wiki/JavaScript#Other_usage) also use it, such as {{Glossary("Node.js")}}, [Apache CouchDB](https://couchdb.apache.org/) and [Adobe Acrobat](https://opensource.adobe.com/dc-acrobat-sdk-docs/acrobatsdk/). JavaScript is a [prototype-based](/en-US/docs/Glossary/Prototype-based_programming), multi-paradigm, [single-threaded](/en-US/docs/Glossary/Thread), [dynamic](/en-US/docs/Glossary/Dynamic_typing) language, supporting object-oriented, imperative, and declarative (e.g. functional programming) styles.
+**JavaScript** (**JS**) is a lightweight interpreted (or {{Glossary("Just_In_Time_Compilation", "just-in-time compiled")}}) programming language with {{Glossary("First-class Function", "first-class functions")}}. While it is most well-known as the scripting language for Web pages, [many non-browser environments](https://en.wikipedia.org/wiki/JavaScript#Other_usage) also use it, such as {{Glossary("Node.js")}}, [Apache CouchDB](https://couchdb.apache.org/) and [Adobe Acrobat](https://opensource.adobe.com/dc-acrobat-sdk-docs/acrobatsdk/). JavaScript is a [prototype-based](/en-US/docs/Glossary/Prototype-based_programming), multi-paradigm, [single-threaded](/en-US/docs/Glossary/Thread), [dynamic](/en-US/docs/Glossary/Dynamic_typing) language, supporting object-oriented, imperative, and declarative (e.g. functional programming) styles.
 
 JavaScript's dynamic capabilities include runtime object construction, variable parameter lists, function variables, dynamic script creation (via [`eval`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval)), object introspection (via [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) and [`Object` utilities](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#static_methods)), and source-code recovery (JavaScript functions store their source text and can be retrieved through [`toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/toString)).
 
@@ -23,34 +23,32 @@ JavaScript documentation of core language features (pure [ECMAScript](/en-US/doc
 
 For more information about JavaScript specifications and related technologies, see [JavaScript technologies overview](/en-US/docs/Web/JavaScript/JavaScript_technologies_overview).
 
-## Tutorials
+## Beginner's tutorials
 
-Learn how to program in JavaScript with guides and tutorials.
+Learn how to program in JavaScript from the ground up with our beginner's tutorials.
 
-### For complete beginners
+- [Your first website: Adding interactivity](/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Adding_interactivity)
+  - : This article provides a brief tour of what JavaScript is and how to use it, aimed at people who are completely new to web development.
+- [Dynamic scripting with JavaScript](/en-US/docs/Learn_web_development/Core/Scripting)
+  - : Our [Learn web development](/en-US/docs/Learn_web_development) section's JavaScript module teaches all the JavaScript fundamentals from the ground up.
+- [JavaScript frameworks and libraries](/en-US/docs/Learn_web_development/Core/Frameworks_libraries)
+  - : JavaScript frameworks are an essential part of modern front-end web development, providing developers with tried and tested tools for building scalable, interactive web applications. Many modern companies use frameworks as a standard part of their tooling, so many front-end development jobs now require framework experience. In this set of articles, we aim to give you a comfortable starting point to help you begin learning frameworks.
 
-Head over to our [Learning Area JavaScript topic](/en-US/docs/Learn/JavaScript) if you want to learn JavaScript but have no previous experience with JavaScript or programming. The complete modules available there are as follows:
+## JavaScript guides
 
-- [JavaScript first steps](/en-US/docs/Learn/JavaScript/First_steps)
-  - : Answers some fundamental questions such as "what is JavaScript?", "what does it look like?", and "what can it do?", along with discussing key JavaScript features such as variables, strings, numbers, and arrays.
-- [JavaScript building blocks](/en-US/docs/Learn/JavaScript/Building_blocks)
-  - : Continues our coverage of JavaScript's key fundamental features, turning our attention to commonly-encountered types of code blocks such as conditional statements, loops, functions, and events.
-- [Introducing JavaScript objects](/en-US/docs/Learn/JavaScript/Objects)
-  - : The object-oriented nature of JavaScript is important to understand if you want to go further with your knowledge of the language and write more efficient code, therefore we've provided this module to help you.
-- [Asynchronous JavaScript](/en-US/docs/Learn/JavaScript/Asynchronous)
-  - : Discusses asynchronous JavaScript, why it is important, and how it can be used to effectively handle potential blocking operations such as fetching resources from a server.
-- [Client-side web APIs](/en-US/docs/Learn/JavaScript/Client-side_web_APIs)
-  - : Explores what APIs are, and how to use some of the most common APIs you'll come across often in your development work.
-
-### JavaScript guide
+### Fundamental language guides
 
 - [JavaScript Guide](/en-US/docs/Web/JavaScript/Guide)
   - : A much more detailed guide to the JavaScript language, aimed at those with previous programming experience either in JavaScript or another language.
 
 ### Intermediate
 
-- [Understanding client-side JavaScript frameworks](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks)
-  - : JavaScript frameworks are an essential part of modern front-end web development, providing developers with proven tools for building scalable, interactive web applications. This module gives you some fundamental background knowledge about how client-side frameworks work and how they fit into your toolset, before moving on to a series of tutorials covering some of today's most popular ones.
+- [Advanced JavaScript objects](/en-US/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects)
+  - : The object-oriented nature of JavaScript is important to understand if you want to go further with your knowledge of the language and write more efficient code, therefore we've provided this module to help you.
+- [Asynchronous JavaScript](/en-US/docs/Learn_web_development/Extensions/Async_JS)
+  - : In this module, we take a look at {{Glossary("asynchronous")}} JavaScript, why it is important, and how it can be used to effectively handle potential blocking operations, such as fetching resources from a server.
+- [Client-side web APIs](/en-US/docs/Learn_web_development/Extensions/Client-side_APIs)
+  - : Explores what APIs are, and how to use some of the most common APIs you'll come across often in your development work.
 - [JavaScript language overview](/en-US/docs/Web/JavaScript/Language_overview)
   - : An overview of the basic syntax and semantics of JavaScript for those coming from other programming languages to get up to speed.
 - [JavaScript data structures](/en-US/docs/Web/JavaScript/Data_structures)
@@ -76,7 +74,7 @@ Head over to our [Learning Area JavaScript topic](/en-US/docs/Learn/JavaScript) 
 Browse the complete [JavaScript reference](/en-US/docs/Web/JavaScript/Reference) documentation.
 
 - [Standard objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects)
-  - : Get to know standard built-in objects {{jsxref("Array")}}, {{jsxref("Boolean")}}, {{jsxref("Date")}}, {{jsxref("Error")}}, {{jsxref("Function")}}, {{jsxref("JSON")}}, {{jsxref("Math")}}, {{jsxref("Number")}}, {{jsxref("Object")}}, {{jsxref("RegExp")}}, {{jsxref("String")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, {{jsxref("WeakMap")}}, {{jsxref("WeakSet")}}, and others.
+  - : Get to know standard built-in objects: {{jsxref("Array")}}, {{jsxref("Boolean")}}, {{jsxref("Error")}}, {{jsxref("Function")}}, {{jsxref("JSON")}}, {{jsxref("Math")}}, {{jsxref("Number")}}, {{jsxref("Object")}}, {{jsxref("RegExp")}}, {{jsxref("String")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, {{jsxref("WeakMap")}}, {{jsxref("WeakSet")}}, and others.
 - [Expressions and operators](/en-US/docs/Web/JavaScript/Reference/Operators)
   - : Learn more about the behavior of JavaScript's operators {{jsxref("Operators/instanceof", "instanceof")}}, {{jsxref("Operators/typeof", "typeof")}}, {{jsxref("Operators/new", "new")}}, {{jsxref("Operators/this", "this")}}, the [operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence), and more.
 - [Statements and declarations](/en-US/docs/Web/JavaScript/Reference/Statements)

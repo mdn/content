@@ -299,6 +299,7 @@ importmap
 imscjs
 inactivetitlebarcolor
 indexeddb-examples
+indexifembedded
 inputreport
 inputsourceschange
 intl.uidirection.locale

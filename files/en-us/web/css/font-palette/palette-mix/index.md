@@ -53,6 +53,10 @@ palette-mix(method, palette1 [p1], palette2 [p2])
     - If `p1 = p2 = 0%`, the function is invalid.
     - If `p1 + p2 ≠ 100%`, then `p1' = p1 / (p1 + p2)` and `p2' = p2 / (p1 + p2)`, where `p1'` and `p2'` are the normalization results.
 
+## Formal syntax
+
+{{CSSSyntax}}
+
 ## Examples
 
 ### Using `palette-mix()` to blend two palettes

@@ -47,5 +47,5 @@ console.log(myRules[2].layerName); // returns `null`
 
 ## See also
 
-- Learning area : [Cascade layers](/en-US/docs/Learn/CSS/Building_blocks/Cascade_layers)
+- Learning area : [Cascade layers](/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)
 - {{cssxref("@import")}} and {{cssxref("@layer")}}

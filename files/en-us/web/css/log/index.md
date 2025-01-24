@@ -39,7 +39,7 @@ The logarithm of `value`, when `base` is defined.
 
 The natural logarithm (base `e`) of `value`, when `base` is not defined.
 
-### Formal syntax
+## Formal syntax
 
 {{CSSSyntax}}
 
