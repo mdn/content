@@ -169,6 +169,43 @@ This means that the `button` object has not been initialized yet, so we can't ad
 > [!NOTE]
 > This is a very common error — you need to be careful that the objects referenced in your code exist before you try to do stuff to them.
 
+You might wonder why this code works, since we're using `updateName` before we define it. This is because of how JavaScript handles function declarations:
+
+1. During the initial parsing phase, JavaScript "hoists" (moves) all function declarations to the top of their scope.
+2. Then the code executes from top to bottom.
+
+So the code above is effectively processed as if it were written like this:
+
+```js
+// Behind the scenes, JavaScript hoists the function declaration
+function updateName() {
+  const name = prompt("Enter a new name");
+  button.textContent = `Player 1: ${name}`;
+}
+
+const button = document.querySelector("button");
+button.addEventListener("click", updateName);
+```
+
+However, this hoisting behavior only works for function declarations (using the `function` keyword). It does not work the same way for variables or function expressions:
+
+```js
+button.addEventListener("click", updateName); // Error: button is undefined
+
+const button = document.querySelector("button");
+
+const updateName = function () {
+  // This function expression is not hoisted
+  const name = prompt("Enter a new name");
+  button.textContent = `Player 1: ${name}`;
+};
+```
+
+> [!NOTE]
+> While function hoisting allows you to use functions before their declaration in the code, it's generally considered good practice to declare your functions before you use them. This makes your code easier to read and understand.
+
+To learn more about how JavaScript handles declarations and hoisting, see our detailed guide on [hoisting](/en-US/docs/Glossary/Hoisting).
+
 ### Interpreted versus compiled code
 
 You might hear the terms **interpreted** and **compiled** in the context of programming.
