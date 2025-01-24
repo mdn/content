@@ -959,10 +959,10 @@
   resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-5.6.32.tgz#1b19eea918a458d6da77527b82cb935fe1ac8498"
   integrity sha512-z5ygobHDF+1XrBK5opSziQT6uY76tpEb6JStUpFppnwgwmBslfsSuZDzHTl2SzqYX69Ge3kM//zNO0u8btcdow==
 
-"@mdn/rari@^0.1.19":
-  version "0.1.19"
-  resolved "https://registry.yarnpkg.com/@mdn/rari/-/rari-0.1.19.tgz#5b879095e71dd9d5d51b51a598a1fd5d33e43842"
-  integrity sha512-xSyNIivcvi0Y872yh+ipqwfwuvNFT993bUJYLej8KGDOZ6gYMj8gbzVFRVQWfteV3/vDH12nusXNMuYn9nu9Ow==
+"@mdn/rari@^0.1.20":
+  version "0.1.20"
+  resolved "https://registry.yarnpkg.com/@mdn/rari/-/rari-0.1.20.tgz#c34dc362d23748bd8e05f74cec59e7f22e33dcce"
+  integrity sha512-n54XXjJlWq69E4DtkeT/VxOkhzGCqadvZbe5EbEFU9p3MQC4hTXhrjnqMPuBgYxVI9G0RAczcWVKQaW8UnQY5w==
   dependencies:
     extract-zip "^2.0.1"
     https-proxy-agent "^7.0.2"
@@ -970,10 +970,10 @@
     proxy-from-env "^1.1.0"
     tar "^7.4.3"
 
-"@mdn/yari@4.2.0":
-  version "4.2.0"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-4.2.0.tgz#07c127c270680a13a34399c70197186d4d6925a8"
-  integrity sha512-COGho4rHpQh+XUqtqUck8895YawhQy6Ifixch3EJxQxlMz0aJEmXnfHum7aW5sp/OShjYbwqS8+scLErlKkoIA==
+"@mdn/yari@4.2.1":
+  version "4.2.1"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-4.2.1.tgz#f7ba8b8a35420464fa7fc9e0ff34aa4312fea84d"
+  integrity sha512-4WN4cdYmz1lpZj1KlIK7BlarZfOobh3CxgsSC7mMVsY++0k3spSIhjXd7q/BM171dv3eFnl+FLI9tEUpIII8qg==
   dependencies:
     "@caporal/core" "^2.0.7"
     "@codemirror/lang-css" "^6.3.1"
@@ -987,7 +987,7 @@
     "@lit/task" "^1.0.2"
     "@mdn/bcd-utils-api" "^0.0.7"
     "@mdn/browser-compat-data" "^5.6.32"
-    "@mdn/rari" "^0.1.19"
+    "@mdn/rari" "^0.1.20"
     "@mozilla/glean" "5.0.3"
     "@sentry/node" "^8.51.0"
     "@stripe/stripe-js" "^5.5.0"
