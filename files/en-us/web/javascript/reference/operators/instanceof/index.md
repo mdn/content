@@ -143,16 +143,16 @@ stringObject instanceof Object; // true
 stringObject instanceof Date; // false
 ```
 
-### Using instanceof with Date
+### Using instanceof with Map
 
-The following example shows the behavior of `instanceof` with `Date` objects.
+The following example shows the behavior of `instanceof` with `Map` objects.
 
 ```js
-const myDate = new Date();
+const myMap = new Map();
 
-myDate instanceof Date; // true
-myDate instanceof Object; // true
-myDate instanceof String; // false
+myMap instanceof Map; // true
+myMap instanceof Object; // true
+myMap instanceof String; // false
 ```
 
 ### Objects created using Object.create()
