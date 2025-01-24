@@ -8,7 +8,7 @@ browser-compat: api.ShadowRoot.elementsFromPoint
 
 {{APIRef("DOM")}}{{Non-standard_Header}}
 
-The **`elementsFromPoint()`** method of the {{domxref("ShadowRoot")}} interface returns an array of all the shadow root elements at the specified coordinates (relative to the viewport). The elements are ordered from the element in the topmost layer, to the bottommost element.
+The **`elementsFromPoint()`** method of the {{domxref("ShadowRoot")}} interface returns an array of all the shadow root elements at the specified coordinates (relative to the viewport). The elements are ordered from the topmost element (highest in the display z-order), to the bottommost element.
 
 It operates in a similar way to the {{domxref("ShadowRoot.elementFromPoint")}} method. Some browsers return only the shadow root elements present at that location. Other browsers include elements outside of the [shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM), from the shadow DOM element in the topmost layer to the document root node, such as the {{htmlelement("html")}} or {{SVGElement("svg")}} root element. In these browsers, it operates similar to the {{domxref("Document.elementsFromPoint")}} method, but with the ability to cross the [shadow boundary](/en-US/docs/Glossary/Shadow_tree).
 
