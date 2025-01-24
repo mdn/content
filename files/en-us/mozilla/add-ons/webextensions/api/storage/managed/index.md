@@ -37,6 +37,9 @@ storageItem.then((res) => {
 });
 ```
 
+> [!NOTE]
+> A browser restart is required to load changes to the JSON manifest into managed storage.
+
 ## Methods
 
 The `managed` object implements the methods defined on the {{WebExtAPIRef("storage.StorageArea")}} type:
