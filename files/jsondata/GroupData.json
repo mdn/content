@@ -957,6 +957,13 @@
       ],
       "events": ["HTMLElement: command"]
     },
+    "JS Self-Profiling API": {
+      "overview": ["JS Self-Profiling API"],
+      "guides": [
+        "/docs/Web/API/JS_Self-Profiling_API/Profile_content_and_format"
+      ],
+      "interfaces": ["Profiler"]
+    },
     "Keyboard API": {
       "overview": ["Keyboard API"],
       "interfaces": ["Keyboard", "KeyboardLayoutMap"],
