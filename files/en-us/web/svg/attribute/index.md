@@ -49,7 +49,6 @@ Below is a list of all of the attributes available in SVG along with links to re
 - {{SVGAttr("color")}}
 - {{SVGAttr("color-interpolation")}}
 - {{SVGAttr("color-interpolation-filters")}}
-- {{SVGAttr("color-rendering")}}
 - {{SVGAttr("crossorigin")}}
 - {{SVGAttr("cursor")}}
 - {{SVGAttr("cx")}}
@@ -59,7 +58,6 @@ Below is a list of all of the attributes available in SVG along with links to re
 
 - {{SVGAttr("d")}}
 - {{SVGAttr("data-*")}}
-- {{SVGAttr("decelerate")}}
 - {{SVGAttr("decoding")}}
 - {{SVGAttr("descent")}}
 - {{SVGAttr("diffuseConstant")}}
@@ -94,9 +92,8 @@ Below is a list of all of the attributes available in SVG along with links to re
 - {{SVGAttr("font-style")}}
 - {{SVGAttr("font-variant")}}
 - {{SVGAttr("font-weight")}}
-- {{SVGAttr("format")}}
-- {{SVGAttr("from")}}
 - {{SVGAttr("fr")}}
+- {{SVGAttr("from")}}
 - {{SVGAttr("fx")}}
 - {{SVGAttr("fy")}}
 
@@ -107,7 +104,6 @@ Below is a list of all of the attributes available in SVG along with links to re
 - {{SVGAttr("glyph-name")}}
 - {{SVGAttr("glyph-orientation-horizontal")}}
 - {{SVGAttr("glyph-orientation-vertical")}}
-- {{SVGAttr("glyphRef")}}
 - {{SVGAttr("gradientTransform")}}
 - {{SVGAttr("gradientUnits")}}
 
@@ -115,11 +111,11 @@ Below is a list of all of the attributes available in SVG along with links to re
 
 - {{SVGAttr("hanging")}}
 - {{SVGAttr("height")}}
-- {{SVGAttr("href")}}
-- {{SVGAttr("hreflang")}}
 - {{SVGAttr("horiz-adv-x")}}
 - {{SVGAttr("horiz-origin-x")}}
 - {{SVGAttr("horiz-origin-y")}}
+- {{SVGAttr("href")}}
+- {{SVGAttr("hreflang")}}
 
 ### I
 
@@ -190,8 +186,8 @@ Below is a list of all of the attributes available in SVG along with links to re
 
 ### P
 
-- {{SVGAttr("panose-1")}}
 - {{SVGAttr("paint-order")}}
+- {{SVGAttr("panose-1")}}
 - {{SVGAttr("path")}}
 - {{SVGAttr("pathLength")}}
 - {{SVGAttr("patternContentUnits")}}
@@ -374,6 +370,7 @@ Below is a list of all of the attributes available in SVG along with links to re
 
 - {{SVGAttr("alignment-baseline")}}
 - {{SVGAttr("baseline-shift")}}
+- {{SVGAttr("clip")}}
 - {{SVGAttr("clip-path")}}
 - {{SVGAttr("clip-rule")}}
 - {{SVGAttr("color")}}
@@ -409,7 +406,7 @@ Below is a list of all of the attributes available in SVG along with links to re
 - {{SVGAttr("marker-mid")}}
 - {{SVGAttr("marker-start")}}
 - {{SVGAttr("mask")}}
-- `mask-type`
+- {{SVGAttr("mask-type")}}
 - {{SVGAttr("opacity")}}
 - {{SVGAttr("overflow")}}
 - {{SVGAttr("pointer-events")}}
@@ -429,14 +426,14 @@ Below is a list of all of the attributes available in SVG along with links to re
 - {{SVGAttr("stroke-width")}}
 - {{SVGAttr("text-anchor")}}
 - {{SVGAttr("text-decoration")}}
-- `text-overflow`
+- {{SVGAttr("text-overflow")}}
 - {{SVGAttr("text-rendering")}}
 - {{SVGAttr("transform")}}
 - {{SVGAttr("transform-origin")}}
 - {{SVGAttr("unicode-bidi")}}
 - {{SVGAttr("vector-effect")}}
 - {{SVGAttr("visibility")}}
-- `white-space`
+- {{SVGAttr("white-space")}}
 - {{SVGAttr("width")}}
 - {{SVGAttr("word-spacing")}}
 - {{SVGAttr("writing-mode")}}
@@ -459,7 +456,7 @@ Below is a list of all of the attributes available in SVG along with links to re
 - Animation timing attributes
   - : {{SVGAttr("begin")}}, {{SVGAttr("dur")}}, {{SVGAttr("end")}}, {{SVGAttr("min")}}, {{SVGAttr("max")}}, {{SVGAttr("restart")}}, {{SVGAttr("repeatCount")}}, {{SVGAttr("repeatDur")}}, {{SVGAttr("fill")}}
 - Animation value attributes
-  - : {{SVGAttr("calcMode")}}, {{SVGAttr("values")}}, {{SVGAttr("keyTimes")}}, {{SVGAttr("keySplines")}}, {{SVGAttr("from")}}, {{SVGAttr("to")}}, {{SVGAttr("by")}}, {{SVGAttr("autoReverse")}}, {{SVGAttr("accelerate")}}, {{SVGAttr("decelerate")}}
+  - : {{SVGAttr("calcMode")}}, {{SVGAttr("values")}}, {{SVGAttr("keyTimes")}}, {{SVGAttr("keySplines")}}, {{SVGAttr("from")}}, {{SVGAttr("to")}}, {{SVGAttr("by")}}, {{SVGAttr("autoReverse")}}
 - Animation addition attributes
   - : {{SVGAttr("additive")}}, {{SVGAttr("accumulate")}}
 
