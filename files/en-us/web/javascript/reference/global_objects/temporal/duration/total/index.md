@@ -2,10 +2,12 @@
 title: Temporal.Duration.prototype.total()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/Duration/total
 page-type: javascript-instance-method
+status:
+  - experimental
 browser-compat: javascript.builtins.Temporal.Duration.total
 ---
 
-{{JSRef}}
+{{JSRef}}{{SeeCompatTable}}
 
 The **`total()`** method of {{jsxref("Temporal.Duration")}} instances returns a number representing the total duration in the given unit.
 

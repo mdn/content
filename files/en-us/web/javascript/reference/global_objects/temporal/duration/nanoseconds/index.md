@@ -2,10 +2,12 @@
 title: Temporal.Duration.prototype.nanoseconds
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/Duration/nanoseconds
 page-type: javascript-instance-accessor-property
+status:
+  - experimental
 browser-compat: javascript.builtins.Temporal.Duration.nanoseconds
 ---
 
-{{JSRef}}
+{{JSRef}}{{SeeCompatTable}}
 
 The **`nanoseconds`** accessor property of {{jsxref("Temporal.Duration")}} instances returns an integer representing the number of nanoseconds in the duration.
 

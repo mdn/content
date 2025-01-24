@@ -284,7 +284,7 @@ These properties are defined on `Date.prototype` and shared by all `Date` instan
   - : Returns a string with a locality-sensitive representation of the time portion of this date, based on system settings.
 - {{jsxref("Date.prototype.toString()")}}
   - : Returns a string representing the specified `Date` object. Overrides the {{jsxref("Object.prototype.toString()")}} method.
-- {{jsxref("Date.prototype.toTemporalInstant()")}}
+- {{jsxref("Date.prototype.toTemporalInstant()")}} {{experimental_inline}}
   - : Returns a new {{jsxref("Temporal.Instant")}} object with the same {{jsxref("Temporal/Instant/epochMilliseconds", "epochMilliseconds")}} value as this date's [timestamp](#the_epoch_timestamps_and_invalid_date).
 - {{jsxref("Date.prototype.toTimeString()")}}
   - : Returns the "time" portion of the `Date` as a human-readable string.

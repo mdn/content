@@ -2,10 +2,12 @@
 title: Temporal.Duration
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/Duration
 page-type: javascript-class
+status:
+  - experimental
 browser-compat: javascript.builtins.Temporal.Duration
 ---
 
-{{JSRef}}
+{{JSRef}}{{SeeCompatTable}}
 
 The **`Temporal.Duration`** object represents a difference between two time points, which can be used in date/time arithmetic. It is fundamentally represented as a combination of years, months, weeks, days, hours, minutes, seconds, milliseconds, microseconds, and nanoseconds values.
 
@@ -82,72 +84,72 @@ Because a duration is a difference between two time points, it can be positive, 
 
 ## Constructor
 
-- {{jsxref("Temporal/Duration/Duration", "Temporal.Duration()")}}
+- {{jsxref("Temporal/Duration/Duration", "Temporal.Duration()")}} {{experimental_inline}}
   - : Creates a new `Temporal.Duration` object by directly supplying the underlying data.
 
 ## Static methods
 
-- {{jsxref("Temporal/Duration/compare", "Temporal.Duration.compare()")}}
+- {{jsxref("Temporal/Duration/compare", "Temporal.Duration.compare()")}} {{experimental_inline}}
   - : Returns a number (-1, 0, or 1) indicating whether the first duration is shorter, equal to, or longer than the second duration.
-- {{jsxref("Temporal/Duration/from", "Temporal.Duration.from()")}}
+- {{jsxref("Temporal/Duration/from", "Temporal.Duration.from()")}} {{experimental_inline}}
   - : Creates a new `Temporal.Duration` object from another `Temporal.Duration` object, an object with duration properties, or an ISO 8601 string.
 
 ## Instance properties
 
 These properties are defined on `Temporal.Duration.prototype` and shared by all `Temporal.Duration` instances.
 
-- {{jsxref("Temporal/Duration/blank", "Temporal.Duration.prototype.blank")}}
+- {{jsxref("Temporal/Duration/blank", "Temporal.Duration.prototype.blank")}} {{experimental_inline}}
   - : Returns a boolean that is `true` if this duration represents a zero duration, and `false` otherwise. Equivalent to `duration.sign === 0`.
 - {{jsxref("Object/constructor", "Temporal.Duration.prototype.constructor")}}
   - : The constructor function that created the instance object. For `Temporal.Duration` instances, the initial value is the {{jsxref("Temporal/Duration/Duration", "Temporal.Duration()")}} constructor.
-- {{jsxref("Temporal/Duration/days", "Temporal.Duration.prototype.days")}}
+- {{jsxref("Temporal/Duration/days", "Temporal.Duration.prototype.days")}} {{experimental_inline}}
   - : Returns an integer representing the number of days in the duration.
-- {{jsxref("Temporal/Duration/hours", "Temporal.Duration.prototype.hours")}}
+- {{jsxref("Temporal/Duration/hours", "Temporal.Duration.prototype.hours")}} {{experimental_inline}}
   - : Returns an integer representing the number of hours in the duration.
-- {{jsxref("Temporal/Duration/microseconds", "Temporal.Duration.prototype.microseconds")}}
+- {{jsxref("Temporal/Duration/microseconds", "Temporal.Duration.prototype.microseconds")}} {{experimental_inline}}
   - : Returns an integer representing the number of microseconds in the duration.
-- {{jsxref("Temporal/Duration/milliseconds", "Temporal.Duration.prototype.milliseconds")}}
+- {{jsxref("Temporal/Duration/milliseconds", "Temporal.Duration.prototype.milliseconds")}} {{experimental_inline}}
   - : Returns an integer representing the number of milliseconds in the duration.
-- {{jsxref("Temporal/Duration/minutes", "Temporal.Duration.prototype.minutes")}}
+- {{jsxref("Temporal/Duration/minutes", "Temporal.Duration.prototype.minutes")}} {{experimental_inline}}
   - : Returns an integer representing the number of minutes in the duration.
-- {{jsxref("Temporal/Duration/months", "Temporal.Duration.prototype.months")}}
+- {{jsxref("Temporal/Duration/months", "Temporal.Duration.prototype.months")}} {{experimental_inline}}
   - : Returns an integer representing the number of months in the duration.
-- {{jsxref("Temporal/Duration/nanoseconds", "Temporal.Duration.prototype.nanoseconds")}}
+- {{jsxref("Temporal/Duration/nanoseconds", "Temporal.Duration.prototype.nanoseconds")}} {{experimental_inline}}
   - : Returns an integer representing the number of nanoseconds in the duration.
-- {{jsxref("Temporal/Duration/seconds", "Temporal.Duration.prototype.seconds")}}
+- {{jsxref("Temporal/Duration/seconds", "Temporal.Duration.prototype.seconds")}} {{experimental_inline}}
   - : Returns an integer representing the number of seconds in the duration.
-- {{jsxref("Temporal/Duration/sign", "Temporal.Duration.prototype.sign")}}
+- {{jsxref("Temporal/Duration/sign", "Temporal.Duration.prototype.sign")}} {{experimental_inline}}
   - : Returns `1` if this duration is positive, `-1` if negative, and `0` if zero.
-- {{jsxref("Temporal/Duration/weeks", "Temporal.Duration.prototype.weeks")}}
+- {{jsxref("Temporal/Duration/weeks", "Temporal.Duration.prototype.weeks")}} {{experimental_inline}}
   - : Returns an integer representing the number of weeks in the duration.
-- {{jsxref("Temporal/Duration/years", "Temporal.Duration.prototype.years")}}
+- {{jsxref("Temporal/Duration/years", "Temporal.Duration.prototype.years")}} {{experimental_inline}}
   - : Returns an integer representing the number of years in the duration.
 - `Temporal.Duration.prototype[Symbol.toStringTag]`
   - : The initial value of the [`[Symbol.toStringTag]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Temporal.Duration"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 
 ## Instance methods
 
-- {{jsxref("Temporal/Duration/abs", "Temporal.Duration.prototype.abs()")}}
+- {{jsxref("Temporal/Duration/abs", "Temporal.Duration.prototype.abs()")}} {{experimental_inline}}
   - : Returns a new `Temporal.Duration` object with the absolute value of this duration (all fields keep the same magnitude, but sign becomes positive).
-- {{jsxref("Temporal/Duration/add", "Temporal.Duration.prototype.add()")}}
+- {{jsxref("Temporal/Duration/add", "Temporal.Duration.prototype.add()")}} {{experimental_inline}}
   - : Returns a new `Temporal.Duration` object with the sum of this duration and a given duration (in a form convertible by {{jsxref("Temporal/Duration/from", "Temporal.Duration.from()")}}). The result is [balanced](#duration_balancing).
-- {{jsxref("Temporal/Duration/negated", "Temporal.Duration.prototype.negated()")}}
+- {{jsxref("Temporal/Duration/negated", "Temporal.Duration.prototype.negated()")}} {{experimental_inline}}
   - : Returns a new `Temporal.Duration` object with the negated value of this duration (all fields keep the same magnitude, but sign becomes reversed).
-- {{jsxref("Temporal/Duration/round", "Temporal.Duration.prototype.round()")}}
+- {{jsxref("Temporal/Duration/round", "Temporal.Duration.prototype.round()")}} {{experimental_inline}}
   - : Returns a new `Temporal.Duration` object with the duration rounded to the given smallest unit and/or [balanced](#duration_balancing) to the given largest unit.
-- {{jsxref("Temporal/Duration/subtract", "Temporal.Duration.prototype.subtract()")}}
+- {{jsxref("Temporal/Duration/subtract", "Temporal.Duration.prototype.subtract()")}} {{experimental_inline}}
   - : Returns a new `Temporal.Duration` object with the difference between this duration and a given duration (in a form convertible by {{jsxref("Temporal/Duration/from", "Temporal.Duration.from()")}}). Equivalent to [adding](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Duration/add) the [negated](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Duration/negated) value of the other duration.
-- {{jsxref("Temporal/Duration/toJSON", "Temporal.Duration.prototype.toJSON()")}}
+- {{jsxref("Temporal/Duration/toJSON", "Temporal.Duration.prototype.toJSON()")}} {{experimental_inline}}
   - : Returns a string representing this duration in the same [ISO 8601 format](#iso_8601_duration_format) as calling {{jsxref("Temporal/Duration/toString", "toString()")}}. Intended to be implicitly called by {{jsxref("JSON.stringify()")}}.
-- {{jsxref("Temporal/Duration/toLocaleString", "Temporal.Duration.prototype.toLocaleString()")}}
+- {{jsxref("Temporal/Duration/toLocaleString", "Temporal.Duration.prototype.toLocaleString()")}} {{experimental_inline}}
   - : Returns a string with a language-sensitive representation of this duration. In implementations with [`Intl.DurationFormat` API](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DurationFormat) support, this method delegates to `Intl.DurationFormat`.
-- {{jsxref("Temporal/Duration/toString", "Temporal.Duration.prototype.toString()")}}
+- {{jsxref("Temporal/Duration/toString", "Temporal.Duration.prototype.toString()")}} {{experimental_inline}}
   - : Returns a string representing this duration in the [ISO 8601 format](#iso_8601_duration_format).
-- {{jsxref("Temporal/Duration/total", "Temporal.Duration.prototype.total()")}}
+- {{jsxref("Temporal/Duration/total", "Temporal.Duration.prototype.total()")}} {{experimental_inline}}
   - : Returns a number representing the total duration in the given unit.
-- {{jsxref("Temporal/Duration/valueOf", "Temporal.Duration.prototype.valueOf()")}}
+- {{jsxref("Temporal/Duration/valueOf", "Temporal.Duration.prototype.valueOf()")}} {{experimental_inline}}
   - : Throws a {{jsxref("TypeError")}}, which prevents `Temporal.Duration` instances from being [implicitly converted to primitives](/en-US/docs/Web/JavaScript/Data_structures#primitive_coercion) when used in arithmetic or comparison operations.
-- {{jsxref("Temporal/Duration/with", "Temporal.Duration.prototype.with()")}}
+- {{jsxref("Temporal/Duration/with", "Temporal.Duration.prototype.with()")}} {{experimental_inline}}
   - : Returns a new `Temporal.Duration` object representing this duration with some fields replaced by new values.
 
 ## Specifications

@@ -2,10 +2,12 @@
 title: Temporal.PlainMonthDay.prototype.monthCode
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainMonthDay/monthCode
 page-type: javascript-instance-accessor-property
+status:
+  - experimental
 browser-compat: javascript.builtins.Temporal.PlainMonthDay.monthCode
 ---
 
-{{JSRef}}
+{{JSRef}}{{SeeCompatTable}}
 
 The **`monthCode`** accessor property of {{jsxref("Temporal.PlainMonthDay")}} instances returns a calendar-specific string representing the month of this date. It is [calendar](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal#calendars)-dependent.
 
