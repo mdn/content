@@ -28,7 +28,6 @@ Reading the values of these attributes out in [JavaScript](/en-US/docs/Web/JavaS
 
 To get a `data` attribute through the `dataset` object, get the property by the part of the attribute name after `data-` (note that dashes are converted to {{Glossary("camel_case", "camel case")}}).
 
-
 ```html
 <ul id="something">
   <li data-id="1">A
