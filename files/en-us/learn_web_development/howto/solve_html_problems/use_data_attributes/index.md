@@ -28,8 +28,16 @@ Reading the values of these attributes out in [JavaScript](/en-US/docs/Web/JavaS
 
 To get a `data` attribute through the `dataset` object, get the property by the part of the attribute name after `data-` (note that dashes are converted to {{Glossary("camel_case", "camel case")}}).
 
+
+```html
+<ul id="something">
+  <li data-id="1">A
+  <li data-id="2">B
+  <li data-id="3">C
+</ul>
+```
 ```js
-const article = document.querySelector("#electric-cars");
+const article = document.querySelector('#something [data-id="2"]')
 // The following would also work:
 // const article = document.getElementById("electric-cars")
 
