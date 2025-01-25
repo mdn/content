@@ -81,19 +81,19 @@ SELECT * FROM users WHERE name = 'a';DROP TABLE users; SELECT * FROM userinfo WH
 
 The modified statement creates a valid SQL statement that deletes the `users` table and selects all data from the `userinfo` table (which reveals the information of every user). This works because the first part of the injected text (`a';`) completes the original statement.
 
-To avoid such attacks, the best practice is to use *parameterized queries* (prepared statements). This approach ensures that the user input is treated as a string of data rather than executable SQL.
+To avoid such attacks, the best practice is to use parameterized queries (prepared statements). This approach ensures that the user input is treated as a string of data rather than executable SQL.
 
 In the following statement, we use parameterized query, which will treat the `name` and `password` as strings rather than executable SQL. This prevents users from injecting malicious code, such as using a `;` to bypass authentication and log in without a password.
 
-````SQL
+```SQL
 SELECT * FROM users WHERE name = ? AND password = ?;
-````
+```
 
 When executing the above query, for example, in Python, we pass the `name` and `password` as parameters, as shown below.
 
-````Python
+```Python
 cursor.execute("SELECT * FROM users WHERE name = ? AND password = ?", (name, password))
-````
+```
 
 Some Web frameworks will handle SQL injection protection for the developer, such as Django, by using models (Django's batteries).
 
