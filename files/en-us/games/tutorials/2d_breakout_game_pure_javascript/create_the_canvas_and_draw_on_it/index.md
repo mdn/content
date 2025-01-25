@@ -36,6 +36,7 @@ The HTML document structure is quite minimal, as the game will be rendered entir
   </head>
   <body>
     <canvas id="myCanvas" width="480" height="320"></canvas>
+    <pre id="gamemessage"></pre>
 
     <script>
       // JavaScript code goes here
