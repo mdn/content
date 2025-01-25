@@ -165,7 +165,7 @@ function draw() {
     if (x > paddleX && x < paddleX + paddleWidth) {
       dy = -dy;
     } else {
-      const logElement = document.getElementById('gamemessage');
+      const logElement = document.getElementById("gamemessage");
       logElement.textContent = "GAME OVER";
       document.location.reload();
       clearInterval(interval); // Needed for Chrome to end game
