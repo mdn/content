@@ -15,7 +15,7 @@ The **CSSOM view** module lets you manipulate the visual view of a document, inc
 
 - {{domxref("Window")}} events:
   - {{domxref("Window/resize_event", "resize")}}
-- {{domxref("VisualViewport")}} events: 
+- {{domxref("VisualViewport")}} events:
   - {{domxref("VisualViewport/resize_event", "resize")}}
   - {{domxref("VisualViewport/scroll_event", "scroll")}}
   - {{domxref("VisualViewport/scrollend_event", "scrollend")}}
