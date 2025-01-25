@@ -52,7 +52,7 @@ Then replace the second if statement with the following:
 if (y + dy < ballRadius) {
   dy = -dy;
 } else if (y + dy > canvas.height - ballRadius) {
-  const logElement = document.getElementById('gamemessage');
+  const logElement = document.getElementById("gamemessage");
   logElement.textContent = "GAME OVER";
   document.location.reload();
   clearInterval(interval); // Needed for Chrome to end game
