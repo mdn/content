@@ -30,9 +30,9 @@ To get a `data` attribute through the `dataset` object, get the property by the 
 
 ```html
 <ul id="something">
-  <li data-id="1">A
-  <li data-id="2">B
-  <li data-id="3">C
+  <li data-id="1">A</li>
+  <li data-id="2">B</li>
+  <li data-id="3">C</li>
 </ul>
 ```
 ```js
