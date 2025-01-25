@@ -63,7 +63,7 @@ Learning outcomes:
 Resources:
 
 - [Accessibility overview](/en-US/docs/Learn_web_development/Core/Accessibility)
-- [Inclusive design principles](https://inclusivedesignprinciples.org/), inclusivedesignprinciples.org
+- [Inclusive design principles](https://inclusivedesignprinciples.info/), inclusivedesignprinciples.info
 
 ## Design briefs
 

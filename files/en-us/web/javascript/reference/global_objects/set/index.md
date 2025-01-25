@@ -67,7 +67,7 @@ The `Set` object provides some methods that allow you to compose sets like you w
       <td>
         <math><semantics><mrow><mi>A</mi><mo>∪</mo><mi>B</mi></mrow><annotation encoding="TeX">A\cup B</annotation></semantics></math>
       </td>
-      <td style="margin:0;padding:0"><img src="union/diagram.svg" alt="A Venn diagram where two circles overlap. The symmetric difference of A and B is the region contained by either or both circles." style="margin:0;border:0;border-radius:0" width="200" /></td>
+      <td style="margin:0;padding:0"><img src="union/diagram.svg" alt="A Venn diagram where two circles overlap. The union of A and B is the region contained by either or both circles." style="margin:0;border:0;border-radius:0" width="200" /></td>
     </tr>
     <tr>
       <td>{{jsxref("Set/isDisjointFrom", "A.isDisjointFrom(B)")}}</td>
