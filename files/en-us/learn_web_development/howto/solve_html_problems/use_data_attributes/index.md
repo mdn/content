@@ -36,7 +36,7 @@ To get a `data` attribute through the `dataset` object, get the property by the 
 </ul>
 ```
 ```js
-const article = document.querySelector('#something [data-id="2"]')
+const article = document.querySelector('#something [data-id="2"]');
 // The following would also work:
 // const article = document.getElementById("electric-cars")
 
