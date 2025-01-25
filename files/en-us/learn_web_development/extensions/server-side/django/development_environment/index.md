@@ -426,8 +426,7 @@ In addition to branches, it is possible to create `tags` on any branch and later
 
 ### Create an account and repository on GitHub
 
-First we will create a free account on GitHub.
-With a free account you can't create private repos, but you can create as many _public_ repositories ("repos") as you like.
+First we will create an account on GitHub (this is free).
 Then we create and configure a repository named "django_local_library" for storing the [Local library website](/en-US/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) as we evolve it in the rest of this tutorial.
 
 The steps are:
