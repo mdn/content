@@ -34,8 +34,9 @@ With the latter methods, servers will need to be updated to send the required da
 
 ## Browser Requirements
 
-Google Chrome requires CT log inclusion for all certificates issued with a notBefore date of after 30 April 2018. Users will be prevented from visiting sites using non-compliant TLS certificates. Chrome had previously required CT inclusion for _Extended Validation_ (EV) and Symantec-issued certificates.
+Google Chrome 107 and later requires CT log inclusion for all certificates issued with a notBefore date of after 30 April 2018. Users will be prevented from visiting sites using non-compliant TLS certificates.
+Chrome had previously required CT inclusion for _Extended Validation_ (EV) and Symantec-issued certificates.
 
 Apple [requires](https://support.apple.com/en-gb/103214) a varying number of SCTs in order for Safari and other servers to trust server certificates.
 
-On desktop platforms, Firefox requires CT log inclusion for all certificates issued by certificate authorities in Mozilla's Root CA Program as of version 135. Firefox for Android does not currently require CT log inclusion.
+Firefox desktop from version 135 requires CT log inclusion for all certificates issued by certificate authorities in Mozilla's Root CA Program. Firefox for Android does not currently require CT log inclusion.
