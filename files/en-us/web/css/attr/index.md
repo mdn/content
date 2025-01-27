@@ -70,7 +70,7 @@ The parameters are:
       attr(data-size type(<length> | <percentage>), 0px)
       ```
 
-      For [security reasons](#limitations_and_security) {{CSSxRef("&lt;url&gt;")}} is not allowed as a `<syntax>`.
+      For [security reasons](#limitations_and_security) {{CSSxRef("url_value", "&lt;url&gt;")}} is not allowed as a `<syntax>`.
 
     - The `<attr-unit>` identifier specifies the unit a numeric value should have (if any). It can be the `%` character (percentage) or a [CSS distance unit](/en-US/docs/Web/CSS/CSS_Values_and_Units#distance_units) such as `px`, `rem`, `deg`, `s`, etc.
 
