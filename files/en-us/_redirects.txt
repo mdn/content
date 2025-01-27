@@ -12791,6 +12791,7 @@
 /en-US/docs/Web/JavaScript/Guide/Inheritance_Revisited	/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain
 /en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain	/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain
 /en-US/docs/Web/JavaScript/Guide/JavaScript_Overview	/en-US/docs/Web/JavaScript/Guide/Introduction
+/en-US/docs/Web/JavaScript/Guide/Numbers_and_dates	/en-US/docs/Web/JavaScript/Guide/Numbers_and_strings
 /en-US/docs/Web/JavaScript/Guide/Obsolete_Pages	/en-US/docs/Web/JavaScript/Guide
 /en-US/docs/Web/JavaScript/Guide/Obsolete_Pages/Block_Statement	/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling
 /en-US/docs/Web/JavaScript/Guide/Obsolete_Pages/Calling_Functions	/en-US/docs/Web/JavaScript/Guide/Functions
@@ -12876,6 +12877,7 @@
 /en-US/docs/Web/JavaScript/Guide/Regular_expressions/Unicode_property_escapes	/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape
 /en-US/docs/Web/JavaScript/Guide/Sameness	/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness
 /en-US/docs/Web/JavaScript/Guide/Statements	/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling
+/en-US/docs/Web/JavaScript/Guide/Text_formatting	/en-US/docs/Web/JavaScript/Guide/Numbers_and_strings
 /en-US/docs/Web/JavaScript/Guide/The_Iterator_protocol	/en-US/docs/Web/JavaScript/Reference/Iteration_protocols
 /en-US/docs/Web/JavaScript/Guide/The_legacy_Iterator_protocol	/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
 /en-US/docs/Web/JavaScript/Guide/Using_native_JSON	/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON

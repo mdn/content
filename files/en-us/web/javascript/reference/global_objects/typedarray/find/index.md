@@ -42,9 +42,9 @@ See {{jsxref("Array.prototype.find()")}} for more details. This method is not ge
 
 ## Examples
 
-### Find a prime number in a typed array
+### Find the first prime number in a typed array
 
-The following example finds an element in the typed array that is a prime number (or returns {{jsxref("undefined")}} if there is no prime number).
+The following example returns the first element in the typed array that is a prime number, or {{jsxref("undefined")}} if there is no prime number.
 
 ```js
 function isPrime(element, index, array) {

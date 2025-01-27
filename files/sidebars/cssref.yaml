@@ -97,6 +97,7 @@ sidebar:
     title: Functions
     tags: css-function
     details: closed
+    depth: 2
   - type: listSubPages
     path: /Web/CSS
     title: Types
@@ -375,9 +376,40 @@ l10n:
     Transitions: Transitions
     Tools: Outils
   ja:
+    Beginners: 初心者向けチュートリアル
+    Styling_the_content: "初めてのウェブサイト: コンテンツのスタイル設定"
+    CSS_styling_basics: CSS スタイル設定の基本
+    CSS_text_styling: CSS テキストの装飾
     CSS_layout: CSS レイアウト
+    Guides: ガイド
+    Animations: アニメーション
+    Backgrounds_and_Borders: 背景と境界
+    Resizing_background_images: 背景画像の拡大縮小
+    Box_alignment_in_block_layout: ブロックレイアウトでのボックス配置
+    Box_model: ボックスモデル
+    Colors: 色
+    Color_contrast: "アクセシビリティ: 色のコントラスト"
+    Columns: 段組み
+    Conditional_rules: 条件付きルール
+    Containment: 拘束
+    CSSOM_view: CSSOM view
     Flexbox: フレックスボックス
+    Flow_layout: フローレイアウト
+    Fonts: フォント
+    Grid: グリッド
+    Images: 画像
+    Lists_and_counters: リストとカウンター
+    Logical_properties: 論理的プロパティ
+    Math_functions: 数学関数
+    Media_queries: メディアクエリー
+    Nesting: 入れ子のスタイルルール
     Positioning: 位置指定
+    Scroll_snap: スクロールスナップ
+    Shapes: シェイプ
+    Text: テキスト
+    Transforms: 座標変換
+    Transitions: トランジション
+    Tools: ツール
   ko:
     CSS_layout: CSS 레이아웃
     Guides: 안내서

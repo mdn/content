@@ -90,3 +90,4 @@ console.log(new Intl.Collator("sv", { sensitivity: "base" }).compare("ä", "a"))
 ## See also
 
 - {{jsxref("Intl")}}
+- {{jsxref("String.prototype.localeCompare()")}}

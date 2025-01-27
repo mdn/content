@@ -59,7 +59,7 @@ async function writeData() {
   const stream = await transport.createUnidirectionalStream({
     sendOrder: "596996858",
   });
-  const writer = stream.writable.getWriter();
+  const writer = stream.getWriter();
   const data1 = new Uint8Array([65, 66, 67]);
   const data2 = new Uint8Array([68, 69, 70]);
   writer.write(data1);
@@ -80,7 +80,7 @@ You can also use {{domxref("WritableStreamDefaultWriter.abort()")}} to abruptly 
 // ...
 
 const stream = await transport.createUnidirectionalStream();
-const writer = ws.getWriter();
+const writer = stream.getWriter();
 
 // ...
 
