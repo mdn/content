@@ -18,7 +18,7 @@ formatToParts(duration)
 ### Parameters
 
 - `duration` {{optional_inline}}
-  - : The duration object to be formatted. It should include some or all of the following properties: `"months"`, `"weeks"`, `"days"`, `"hours"`, `"minutes"`, `"seconds"`, `"milliseconds"`, `"microseconds"`, `"nanoseconds"`.
+  - : The duration object to be formatted. It should include some or all of the following properties: `years`, `months`, `weeks`, `days`, `hours`, `minutes`, `seconds`, `milliseconds`, `microseconds`, `nanoseconds`. Can be a {{jsxref("Temporal.Duration")}} object.
 
 ### Return value
 
@@ -80,3 +80,4 @@ new Intl.DurationFormat("en", { style: "long" }).formatToParts(duration);
 
 - {{jsxref("Intl.DurationFormat")}}
 - {{jsxref("Intl/DurationFormat/format", "Intl.DurationFormat.prototype.format()")}}
+- {{jsxref("Temporal.Duration")}}
