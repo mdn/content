@@ -38,6 +38,9 @@ This article provides information about the changes in Firefox 135 that affect d
 
 ### APIs
 
+- The {{domxref("PublicKeyCredential.getClientCapabilities_static", "PublicKeyCredential.getClientCapabilities()")}} static method is supported, allowing a web app to check if a browser enables particular [WebAuthn](/en-US/docs/Web/API/Web_Authentication_API) capabilities and [extensions](/en-US/docs/Web/API/Web_Authentication_API/WebAuthn_extensions) without having to resort to user agent sniffing.
+  ([Firefox bug 1884466](https://bugzil.la/1884466)).
+
 #### DOM
 
 #### Media, WebRTC, and Web Audio
