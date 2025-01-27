@@ -177,7 +177,7 @@ The {{htmlelement("input")}} elements represent the different data items entered
 
 The attributes are as follows:
 
-- `type`: Specifies the type of form control to create. There are many different types of from controls, from simple text fields of different types to radio buttons, checkboxes, and more. Type `text"` renders a basic text field that can accept any value.
+- `type`: Specifies the type of form control to create. There are many different types of from controls, from simple text fields of different types to radio buttons, checkboxes, and more. Type `text` renders a basic text field that can accept any value.
 - `name`: Specifies a name for the data item. When the form is submitted, the data is sent in name/value pairs. In each case, the name is equal to this `name` attribute value, and the value is equal to the text entered in the text field.
 - `id`: Specifies an ID that can be used to identify the element. In this case, it is used to associate the from control with its `<label>`.
 - `required`: Specifies that a value has to be entered into the form element before the form can be submitted. This should only be set on inputs that you require, not on optional fields.
