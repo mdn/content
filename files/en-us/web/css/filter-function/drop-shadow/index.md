@@ -68,9 +68,7 @@ The `drop-shadow()` function accepts a parameter of type `<shadow>` (defined in 
 <div>drop-shadow(red 1rem 1rem 10px)</div>
 <div>drop-shadow(-16px -16px red)</div>
 <div>
-  drop-shadow(1px 1px red)
-  drop-shadow(1px -1px red)
-  drop-shadow(-1px 1px red)
+  drop-shadow(1px 1px red) drop-shadow(1px -1px red) drop-shadow(-1px 1px red)
   drop-shadow(-1px -1px red)
 </div>
 ```
@@ -105,11 +103,8 @@ div:nth-child(4) {
 }
 
 div:nth-child(5) {
-  filter:
-    drop-shadow(1px 1px red)
-    drop-shadow(1px -1px red)
-    drop-shadow(-1px 1px red)
-    drop-shadow(-1px -1px red);
+  filter: drop-shadow(1px 1px red) drop-shadow(1px -1px red)
+    drop-shadow(-1px 1px red) drop-shadow(-1px -1px red);
 }
 ```
 
