@@ -346,11 +346,12 @@ Apart from that, the restrictions on what elements can be cropped are as follows
 
 ## Element Capture versus Region Capture
 
-As explained above, the Element Capture captures the element itself, whereas Region Capture captures the area of the screen the element is rendered in. This means that Element Capture will always show just the captured element, even if other DOM content overlaps it, whereas Region Capture can result in overlapping content being shown over the top of the content you intended to share.
+As explained above, Element Capture captures the element itself, whereas Region Capture captures the area of the screen the element is rendered in. This means that Element Capture will always show just the captured element, even if other DOM content overlaps it, whereas Region Capture can result in overlapping content being shown over the top of the content you intended to share.
 
-This could be a major problem if that content is private, for example message notifications or speaker notes. If you can't guarantee that your app can keep private content from being shared, then you may lose trust in your users.
+There are legitimate use cases for both:
 
-As a result, it is generally recommended that you use the newer Element Capture API over the older Region Capture API, unless you need to support older browser versions that do not support Element Capture.
+- If you need to keep the capture specific to one element, and occlude anything outside it, then you should use the Element Capture API. For example, if you've got private content appearing such as a set of message notifications or a speaker notes UI, you won't want it showing up in the capture.
+- However, if you really do want to capture a region of the screen, regardless of what is shown in it, you should use the Region Capture API. The [Region Capture Demo](https://region-capture-demo.glitch.me/) shows a useful possibility — zooming in on a particular section of the screen as you show multiple users around on an interactive walkthrough of some kind.
 
 ## See also
 
