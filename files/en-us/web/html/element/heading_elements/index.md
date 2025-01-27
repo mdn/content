@@ -36,6 +36,22 @@ While using multiple `<h1>` elements on one page is allowed by the HTML standard
 
 Prefer using only one `<h1>` per page and [nest headings](#nesting) without skipping levels.
 
+### Specify `font-size` and `margin-block` on `<h1>`
+
+The HTML standard specifies that `<h1>` elements in a `<section>`, `<article>`, `<aside>`, or `<nav>` element should render as an `<h2>` (smaller {{cssxref("font-size")}} and {{cssxref("margin-block")}}), or as an `<h3>` if nested another level, and so on. There is a [proposal](https://github.com/whatwg/html/issues/7867) to remove this special default style, so that `<h1>` always has the same default style (as it was originally).
+
+To avoid getting smaller `<h1>`, and to avoid the rendering changing when browsers remove the special `<h1>` default styling, use the following style rule:
+
+```css
+h1 { margin-block: 0.67em; font-size: 2em; }
+```
+
+Alternatively, to avoid overwriting other style rules, use {{cssxref(":where()"}} which has zero specificity:
+
+```css
+:where(h1) { margin-block: 0.67em; font-size: 2em; }
+```
+
 ## Accessibility
 
 ### Navigation
