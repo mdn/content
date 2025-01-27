@@ -125,15 +125,17 @@ This method returns an object with properties named for capabilities or WebAuthn
 This can be used, for example, to check various kinds of authenticators that the client supports, such as passkeys or biometric user verification, whether the client supports methods to keep relying party and authenticator credentials in sync, or allow a single passkey to be used on different websites with the same origin.
 
 The code below shows how you might use the method to check if the client supports authenticators that offer biometric user verification.
+Note that the actual actions performed depend on your site.
+For sites that _require_ biometric authentication you might replace the login UI with a page indicating that a different browser must be used.
 
 ```js
 async function checkisUserVerifyingPlatformAuthenticatorAvailable() {
   const capabilities = await PublicKeyCredential.getClientCapabilities();
   // Check the capability: userVerifyingPlatformAuthenticator
   if (capabilities.userVerifyingPlatformAuthenticator) {
-    log("Biometric login supported");
+    // Perform actions if biometric support is possible
   } else {
-    log("Biometric login not supported. Do password.");
+    // Perform actions is biometric support is not possible.
   }
 }
 ```
