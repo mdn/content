@@ -32,10 +32,11 @@ The WebAuthn client capability strings are:
   - : The client is capable of conditional mediation when creating/registering credentials.
 - `conditionalGet`
   - : The client is capable of conditional mediation when authenticating credentials (using [`mediation=conditional`](/en-US/docs/Web/API/CredentialsContainer/get#conditional) in your [`get()`](/en-US/docs/Web/API/CredentialsContainer/get) call).
-    This means that the client supports workflows where the credentials can be silently fetched/autofilled on sign in.
+    This means that the client supports workflows where the credentials can be silently fetched/auto-filled on sign in.
     This capability is equivalent to [`isConditionalMediationAvailable()`](/en-US/docs/Web/API/PublicKeyCredential/isConditionalMediationAvailable_static) resolving to `true`.
 - `hybridTransport`
   - : The client supports usage of the [hybrid](/en-US/docs/Web/API/AuthenticatorAttestationResponse/getTransports#hybrid) transport.
+    This means the the client can use authenticators that rely on Bluetooth, NFC or USB.
 - `passkeyPlatformAuthenticator`
   - : The client supports usage of a passkey platform authenticator, locally and/or via hybrid transport.
     These authenticators enable passwordless multi-factor authentication, providing proof of possession of a credential private key provide and requiring a second authentication mechanism such as a PIN or biometric check.
