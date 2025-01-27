@@ -2,10 +2,12 @@
 title: Temporal.ZonedDateTime.prototype.add()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime/add
 page-type: javascript-instance-method
+status:
+  - experimental
 browser-compat: javascript.builtins.Temporal.ZonedDateTime.add
 ---
 
-{{JSRef}}
+{{JSRef}}{{SeeCompatTable}}
 
 The **`add()`** method of {{jsxref("Temporal.ZonedDateTime")}} instances returns a new `Temporal.ZonedDateTime` object representing this date-time moved forward by a given duration (in a form convertible by {{jsxref("Temporal/Duration/from", "Temporal.Duration.from()")}}).
 

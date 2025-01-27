@@ -2,10 +2,12 @@
 title: Temporal.ZonedDateTime.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime/valueOf
 page-type: javascript-instance-method
+status:
+  - experimental
 browser-compat: javascript.builtins.Temporal.ZonedDateTime.valueOf
 ---
 
-{{JSRef}}
+{{JSRef}}{{SeeCompatTable}}
 
 The **`valueOf()`** method of {{jsxref("Temporal.ZonedDateTime")}} instances throws a {{jsxref("TypeError")}}, which prevents `Temporal.ZonedDateTime` instances from being [implicitly converted to primitives](/en-US/docs/Web/JavaScript/Data_structures#primitive_coercion) when used in arithmetic or comparison operations.
 

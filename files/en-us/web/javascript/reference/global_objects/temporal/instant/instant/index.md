@@ -2,10 +2,12 @@
 title: Temporal.Instant()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/Instant/Instant
 page-type: javascript-constructor
+status:
+  - experimental
 browser-compat: javascript.builtins.Temporal.Instant.Instant
 ---
 
-{{JSRef}}
+{{JSRef}}{{SeeCompatTable}}
 
 The **`Temporal.Instant()`** constructor creates {{jsxref("Temporal.Instant")}} objects.
 

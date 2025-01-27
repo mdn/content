@@ -10,7 +10,7 @@ browser-compat: api.Element.previousElementSibling
 
 The **`Element.previousElementSibling`**
 read-only property returns the {{domxref("Element")}} immediately prior to the specified
-one in its parent's children list, or `null` if the specified element is the first one in the list.
+one in its parent's {{domxref("Element.children", "children")}} list, or `null` if the specified element is the first one in the list.
 
 ## Value
 

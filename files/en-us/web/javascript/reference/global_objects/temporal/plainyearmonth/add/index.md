@@ -2,10 +2,12 @@
 title: Temporal.PlainYearMonth.prototype.add()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainYearMonth/add
 page-type: javascript-instance-method
+status:
+  - experimental
 browser-compat: javascript.builtins.Temporal.PlainYearMonth.add
 ---
 
-{{JSRef}}
+{{JSRef}}{{SeeCompatTable}}
 
 The **`add()`** method of {{jsxref("Temporal.PlainYearMonth")}} instances returns a new `Temporal.PlainYearMonth` object representing this year-month moved forward by a given duration (in a form convertible by {{jsxref("Temporal/Duration/from", "Temporal.Duration.from()")}}).
 

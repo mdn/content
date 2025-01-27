@@ -2,10 +2,12 @@
 title: Temporal.PlainDate.prototype.since()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainDate/since
 page-type: javascript-instance-method
+status:
+  - experimental
 browser-compat: javascript.builtins.Temporal.PlainDate.since
 ---
 
-{{JSRef}}
+{{JSRef}}{{SeeCompatTable}}
 
 The **`since()`** method of {{jsxref("Temporal.PlainDate")}} instances returns a new {{jsxref("Temporal.Duration")}} object representing the duration from another date (in a form convertible by {{jsxref("Temporal/PlainDate/from", "Temporal.PlainDate.from()")}}) to this date. The duration is positive if the other date is before this date, and negative if after.
 

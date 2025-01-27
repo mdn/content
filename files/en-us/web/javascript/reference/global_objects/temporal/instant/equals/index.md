@@ -2,10 +2,12 @@
 title: Temporal.Instant.prototype.equals()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/Instant/equals
 page-type: javascript-instance-method
+status:
+  - experimental
 browser-compat: javascript.builtins.Temporal.Instant.equals
 ---
 
-{{JSRef}}
+{{JSRef}}{{SeeCompatTable}}
 
 The **`equals()`** method of {{jsxref("Temporal.Instant")}} instances returns `true` if this instant is equivalent in value to another instant (in a form convertible by {{jsxref("Temporal/Instant/from", "Temporal.Instant.from()")}}), and `false` otherwise. They are compared by their {{jsxref("Temporal/Instant/epochNanoseconds", "epochNanoseconds")}}. It is equivalent to `Temporal.Instant.compare(this, other) === 0`.
 

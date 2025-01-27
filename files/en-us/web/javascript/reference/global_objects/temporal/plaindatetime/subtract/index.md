@@ -2,10 +2,12 @@
 title: Temporal.PlainDateTime.prototype.subtract()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainDateTime/subtract
 page-type: javascript-instance-method
+status:
+  - experimental
 browser-compat: javascript.builtins.Temporal.PlainDateTime.subtract
 ---
 
-{{JSRef}}
+{{JSRef}}{{SeeCompatTable}}
 
 The **`subtract()`** method of {{jsxref("Temporal.PlainDateTime")}} instances returns a new `Temporal.PlainDateTime` object representing this date-time moved backward by a given duration (in a form convertible by {{jsxref("Temporal/Duration/from", "Temporal.Duration.from()")}}).
 

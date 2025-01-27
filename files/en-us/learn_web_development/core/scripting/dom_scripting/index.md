@@ -295,13 +295,11 @@ We have reached the end of our study of document and DOM manipulation. At this p
 
 ## See also
 
-There are lots more features you can use to manipulate your documents. Check out some of our references and see what you can discover:
-
-- {{domxref("Document")}}
-- {{domxref("Window")}}
-- {{domxref("Node")}}
-- {{domxref("HTMLElement")}}, {{domxref("HTMLInputElement")}}, {{domxref("HTMLImageElement")}}, etc.
-
-(See our [Web API index](/en-US/docs/Web/API) for the full list of Web APIs documented on MDN!)
+- There are lots more features you can use to manipulate your documents. Check out some of our references and see what you can discover:
+  - {{domxref("Document")}}
+  - {{domxref("Window")}}
+  - {{domxref("Node")}}
+  - {{domxref("HTMLElement")}}, {{domxref("HTMLInputElement")}}, {{domxref("HTMLImageElement")}}, etc.
+- [DOM Scripting](https://explainers.dev/dom-scripting/), explainers.dev
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/Object_basics","Learn_web_development/Core/Scripting/Network_requests", "Learn_web_development/Core/Scripting")}}
