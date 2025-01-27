@@ -165,7 +165,7 @@ We've also put each input/label pair and the submit button inside a separate {{h
 
 This is a common pattern for form structuring. Some people use `<p>` elements to separate out their form elements, some use {{htmlelement("div")}}, {{htmlelement("section")}}, or even {{htmlelement("li")}} elements. It doesn't matter a great deal, as long as the elements used make semantic sense. For example, it makes sense to divide form element groups up into separate paragraphs or sections of content, or even items in a list. It would make less sense to represent them as [blockquotes](/en-US/docs/Web/HTML/Element/blockquote), [asides](/en-US/docs/Web/HTML/Element/aside), or [addresses](/en-US/docs/Web/HTML/Element/address).
 
-There is a specialized element for grouping form elements together called {{htmlelement("fieldset")}}. This is useful only in certain circumstances, such as in complex forms, and when grouping together multiple checkboxes and radio buttons. We'll look at a couple of examples of this later on.
+There is a specialized element for grouping form elements together called {{htmlelement("fieldset")}}. This is useful in certain circumstances, such as in complex forms, and when grouping together multiple checkboxes and radio buttons. We'll look at a couple of examples of this later on.
 
 ### `<input>` elements
 
