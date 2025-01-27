@@ -10,7 +10,7 @@ page-type: guide
 
 ## What is a grid?
 
-A grid is a set of intersecting horizontal and vertical lines defining columns and rows. Elements can be placed onto the grid within these column and row lines. CSS grid layout has the following features:
+A grid is a set of intersecting horizontal and vertical lines defining rows and columns. Elements can be placed onto the grid within these column and row lines. CSS grid layout has the following features:
 
 ### Fixed and flexible track sizes
 

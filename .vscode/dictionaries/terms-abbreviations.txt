@@ -278,6 +278,7 @@ HPKE
 HPKP
 HTCPCP
 HVXC
+IACVT
 ICANN
 ICNS
 iconset
@@ -679,6 +680,7 @@ sublocality
 submatch
 submatches
 subminor
+subminute
 subpage
 subpages
 subpanels
@@ -714,6 +716,7 @@ sundried
 sunsetting
 supercookie
 superdomain
+superpowered
 superscaling
 supersets
 SVCB

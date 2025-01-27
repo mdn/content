@@ -49,7 +49,7 @@ svg {
           title="Single bar: exactly one of the entities must be present"
           >|</a
         >
-        <code>&#x3C;filter-function-list></code>
+        <code>&#x3C;filter-value-list></code>
       </td>
     </tr>
     <tr>
