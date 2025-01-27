@@ -954,10 +954,10 @@
   resolved "https://registry.yarnpkg.com/@mdn/bcd-utils-api/-/bcd-utils-api-0.0.7.tgz#555e80c33df520df068943e6b18ebc07f0e24d19"
   integrity sha512-IHkkypEjlIkBkx4mJ2//Xbzog9M/Lzne1Sl8db2cIHJ/5pe3NCqSLwSchmqzcUN+/WJr/U+V3tNAbWunk2xZcA==
 
-"@mdn/browser-compat-data@^5.6.32":
-  version "5.6.32"
-  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-5.6.32.tgz#1b19eea918a458d6da77527b82cb935fe1ac8498"
-  integrity sha512-z5ygobHDF+1XrBK5opSziQT6uY76tpEb6JStUpFppnwgwmBslfsSuZDzHTl2SzqYX69Ge3kM//zNO0u8btcdow==
+"@mdn/browser-compat-data@^5.6.33":
+  version "5.6.33"
+  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-5.6.33.tgz#7936c50a4819fccad39ada5aff34418d1c8bbed0"
+  integrity sha512-56GEfTIgrPXAc9EL3MbJmv0QiIxZR/UzpOCzPtCGsW/IYr+3Bj1DbtBXnNMD2vOMqv1UVdCxy7LXxRcU+wxO5A==
 
 "@mdn/rari@^0.1.20":
   version "0.1.20"
@@ -970,10 +970,10 @@
     proxy-from-env "^1.1.0"
     tar "^7.4.3"
 
-"@mdn/yari@4.2.1":
-  version "4.2.1"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-4.2.1.tgz#f7ba8b8a35420464fa7fc9e0ff34aa4312fea84d"
-  integrity sha512-4WN4cdYmz1lpZj1KlIK7BlarZfOobh3CxgsSC7mMVsY++0k3spSIhjXd7q/BM171dv3eFnl+FLI9tEUpIII8qg==
+"@mdn/yari@4.2.2":
+  version "4.2.2"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-4.2.2.tgz#21767ba322b214c4ef606e880270e18737c8b32e"
+  integrity sha512-BfPD0cE06mtIYR7Ll73wrfHXDWd6egA47MOOaBs57InDtacmY6VM4bAF0A02ewPW2Y8lRm1B2mAMlz7MRkBseA==
   dependencies:
     "@caporal/core" "^2.0.7"
     "@codemirror/lang-css" "^6.3.1"
@@ -986,7 +986,7 @@
     "@lit/react" "^1.0.7"
     "@lit/task" "^1.0.2"
     "@mdn/bcd-utils-api" "^0.0.7"
-    "@mdn/browser-compat-data" "^5.6.32"
+    "@mdn/browser-compat-data" "^5.6.33"
     "@mdn/rari" "^0.1.20"
     "@mozilla/glean" "5.0.3"
     "@sentry/node" "^8.51.0"
@@ -1037,7 +1037,7 @@
     mdn-data "^2.15.0"
     open "^10.1.0"
     open-editor "^5.1.0"
-    openai "^4.80.0"
+    openai "^4.80.1"
     pg "^8.13.1"
     pgvector "^0.2.0"
     prism-svelte "^0.5.0"
@@ -1064,7 +1064,7 @@
     unist-builder "^4.0.0"
     unist-util-visit "^5.0.0"
     web-features "^2.19.0"
-    web-specs "^3.35.0"
+    web-specs "^3.36.0"
 
 "@mozilla/glean@5.0.3":
   version "5.0.3"
@@ -5612,10 +5612,10 @@ linkify-it@^5.0.0:
   dependencies:
     uc.micro "^2.0.0"
 
-lint-staged@15.4.2:
-  version "15.4.2"
-  resolved "https://registry.yarnpkg.com/lint-staged/-/lint-staged-15.4.2.tgz#f986bcb6b03822a996c600447c692c69640c7607"
-  integrity sha512-gCqzB/Li281uZJgReNci+oXXqUEdrFAQAzTE/LwoxxiEuP41vozNe4BATS+4ehdqkWn+Z6bGc3EDcBja3npBVw==
+lint-staged@15.4.3:
+  version "15.4.3"
+  resolved "https://registry.yarnpkg.com/lint-staged/-/lint-staged-15.4.3.tgz#e73587cc857f580c99f907abefe9ac8d8d5e74c1"
+  integrity sha512-FoH1vOeouNh1pw+90S+cnuoFwRfUD9ijY2GKy5h7HS3OR7JVir2N2xrsa0+Twc1B7cW72L+88geG5cW4wIhn7g==
   dependencies:
     chalk "^5.4.1"
     commander "^13.1.0"
@@ -6840,10 +6840,10 @@ open@^10.1.0:
     is-inside-container "^1.0.0"
     is-wsl "^3.1.0"
 
-openai@^4.80.0:
-  version "4.80.0"
-  resolved "https://registry.yarnpkg.com/openai/-/openai-4.80.0.tgz#693e5be69a21ed31658a5e0cd8132056cd7a6fb8"
-  integrity sha512-5TqdNQgjOMxo3CkCvtjzuSwuznO/o3q5aak0MTy6IjRvPtvVA1wAFGJU3eZT1JHzhs2wFb/xtDG0o6Y/2KGCfw==
+openai@^4.80.1:
+  version "4.80.1"
+  resolved "https://registry.yarnpkg.com/openai/-/openai-4.80.1.tgz#0869ae7d4efbe1794dbec9b648aa329d369cea36"
+  integrity sha512-+6+bbXFwbIE88foZsBEt36bPkgZPdyFN82clAXG61gnHb2gXdZApDyRrcAHqEtpYICywpqaNo57kOm9dtnb7Cw==
   dependencies:
     "@types/node" "^18.11.18"
     "@types/node-fetch" "^2.6.4"
@@ -8916,10 +8916,10 @@ web-namespaces@^2.0.0:
   resolved "https://registry.yarnpkg.com/web-namespaces/-/web-namespaces-2.0.1.tgz#1010ff7c650eccb2592cebeeaf9a1b253fd40692"
   integrity sha512-bKr1DkiNa2krS7qxNtdrtHAmzuYGFQLiQ13TsorsdT6ULTkPLKuu5+GsFpDlg6JFjUTwX2DyhMPG2be8uPrqsQ==
 
-web-specs@^3.35.0:
-  version "3.35.0"
-  resolved "https://registry.yarnpkg.com/web-specs/-/web-specs-3.35.0.tgz#27de67081d39d706ec44a03775dbc9166a38e297"
-  integrity sha512-C0Fs9B39exvcWvkf46jBumUoC4Ki4JMkcDh3bebTNKKksmo0j0tJ1V0Indkm4JH+Lc2PD+0ROrV2TMoYYHpjvA==
+web-specs@^3.36.0:
+  version "3.36.0"
+  resolved "https://registry.yarnpkg.com/web-specs/-/web-specs-3.36.0.tgz#13cfe2ee9077755084f4e421cd0db4b03e386b15"
+  integrity sha512-aMv2R+GCDm+pLUkSR4aE2S6NbtSY9N4hdbg/xPQ0tVTN5wa7x6b+kGCbr2ycvjVgN/fKOxGle93+yUOtrYXdCg==
 
 web-streams-polyfill@4.0.0-beta.3:
   version "4.0.0-beta.3"
