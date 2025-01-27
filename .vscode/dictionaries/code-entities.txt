@@ -170,6 +170,7 @@ devtools.errorconsole
 devtools.inspector.ruleview
 devtools.netmonitor
 devtools.webconsole
+diak
 dialogheight
 dialogleft
 dialogtext
@@ -253,6 +254,7 @@ FunciOES
 funcref
 fwdred
 fwid
+gara
 gattserverdisconnected
 geometrychange
 geor
@@ -270,6 +272,7 @@ Grek
 greklow
 GSUB
 gujr
+gukh
 gulpfile
 hanidays
 hanidec
@@ -323,6 +326,7 @@ jsdouble
 jspubtd.h
 jsval
 kaios
+kawi
 kerx
 Key_Codeinput
 KEY_dead_abovecomma
@@ -355,6 +359,7 @@ keywordsearch
 khmr
 KIND_NONHEAP
 knda
+krai
 lanatham
 laoo
 largeop
@@ -439,9 +444,12 @@ msword
 mtei
 mths
 mymr
+mymrepka
+mymrpao
 mymrshan
 mymrtlng
 nacl_arch
+nagm
 nalt
 navigateerror
 navigatesuccess
@@ -492,6 +500,7 @@ Okhsl
 Okhsv
 olck
 oldstyle
+onao
 onbeforematch
 onbeforetoggle
 oncanmakepayment
@@ -592,6 +601,7 @@ rcap
 readingerror
 readwriteflush
 reflectionchange
+reiwa
 removestream
 replacewithcommas
 replacewithspaces
@@ -669,6 +679,7 @@ streamfilter
 stripsurroundingwhitespace
 SUBDOCUMENT
 sund
+sunu
 superspeed
 SVGDOMElement
 SVGHKernElement
@@ -697,6 +708,7 @@ tibt
 Timecount
 tirh
 titl
+tnsa
 todoapp
 togglecamera
 togglemicrophone

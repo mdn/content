@@ -247,6 +247,7 @@ Icecast
 idb-keyval
 Igalia
 Imagify
+inclusivedesignprinciples
 Inkscape
 intercooler
 Invision
