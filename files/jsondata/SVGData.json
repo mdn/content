@@ -935,7 +935,11 @@
       "interfaces": ["SVGHKernElement"]
     },
     "image": {
-      "categories": ["graphicsElement", "graphicsReferencingElement", "renderableElement"],
+      "categories": [
+        "graphicsElement",
+        "graphicsReferencingElement",
+        "renderableElement"
+      ],
       "content": {
         "description": "anyNumberOfElementsAnyOrder",
         "elements": [
