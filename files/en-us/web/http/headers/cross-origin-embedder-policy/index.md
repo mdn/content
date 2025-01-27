@@ -7,7 +7,18 @@ browser-compat: http.headers.Cross-Origin-Embedder-Policy
 
 {{HTTPSidebar}}
 
-The HTTP **`Cross-Origin-Embedder-Policy`** (COEP) {{Glossary("response header")}} configures embedding cross-origin resources into the document.
+The HTTP **`Cross-Origin-Embedder-Policy`** (COEP) {{Glossary("response header")}} configures the current document's policy for loading and embedding cross-origin resources.
+
+The policy for whether a particular resource is embeddable cross-site may be defined for that resource using the {{HTTPHeader("Cross-Origin-Resource-Policy")}} (CORP) header for a `no-cors` fetch, or using [CORS](/en-US/docs/Web/HTTP/CORS).
+If neither of these policies are set, then by default, resources can be loaded or embedded into a document as though they had a CORP value of `cross-site`.
+
+The **`Cross-Origin-Embedder-Policy`** allows you to require that CORP or CORS headers be set in order to load cross-site resources into the current document.
+You can also set the policy to keep the default behaviour, or to allow the resources to be loaded, but strip any credentials that might otherwise be sent.
+The policy applies to loaded resources, and resources in {{htmlelement("iframe")}}s and nested frames.
+
+> [!NOTE]
+> The `Cross-Origin-Embedder-Policy` doesn't override or affect the embedding behaviour for a resource for which CORP or CORS has been set.
+> If CORP restricts a resource to being embedded only `same-origin`, it won't be loaded cross-origin into a resource irrespective of the COEP value.
 
 <table class="properties">
   <tbody>
@@ -31,7 +42,7 @@ Cross-Origin-Embedder-Policy: unsafe-none | require-corp | credentialless
 ### Directives
 
 - `unsafe-none`
-  - : Allows the document to load cross-origin resources without giving explicit permission through the CORS protocol or the {{HTTPHeader("Cross-Origin-Resource-Policy")}} header.
+  - : Allows the document to load cross-origin resources **without** giving explicit permission through the CORS protocol or the {{HTTPHeader("Cross-Origin-Resource-Policy")}} header.
     This is the default value.
 - `require-corp`
 
@@ -40,7 +51,8 @@ Cross-Origin-Embedder-Policy: unsafe-none | require-corp | credentialless
     Cross-origin resource loading will be blocked by COEP unless:
 
     - The resource is requested in `no-cors` mode and the response includes a {{HTTPHeader("Cross-Origin-Resource-Policy")}} header that allows it to be loaded into the document origin.
-    - The resource is requested in `cors` mode (the HTML [`crossorigin`](/en-US/docs/Web/HTML/Attributes/crossorigin) attribute is set) and the resource supports CORS.
+    - The resource is requested in `cors` mode and the resource supports and is permitted by CORS.
+      This can be done, for example, in HTML using the [`crossorigin`](/en-US/docs/Web/HTML/Attributes/crossorigin) attribute, or in JavaScript by making a request with [`{mode="cors"}`](/en-US/docs/Web/API/RequestInit#cors).
 
 - `credentialless`
 
@@ -80,13 +92,15 @@ if (crossOriginIsolated) {
 
 ### Avoiding COEP blockage with CORS
 
-If you enable COEP using `require-corp` and want to embed a cross origin resource that supports [CORS](/en-US/docs/Web/HTTP/CORS), you will need to explicitly specify the HTML [`crossorigin`](/en-US/docs/Web/HTML/Attributes/crossorigin) attribute so that it is requested in `cors` mode.
+If you enable COEP using `require-corp` and want to embed a cross origin resource that supports [CORS](/en-US/docs/Web/HTTP/CORS), you will need to explicitly specify that it is requested in `cors` mode.
 
-For example, you would use this approach to fetch an image from a third-party site that supports CORS:
+For example, to fetch an image declared in HTML from a third-party site that supports CORS, you can use the [`crossorigin`](/en-US/docs/Web/HTML/Attributes/crossorigin) attribute so that it is requested in `cors` mode:
 
 ```html
 <img src="https://thirdparty.com/img.png" crossorigin />
 ```
+
+You can similarly use the [`HTMLScriptElement.crossOrigin`](/en-US/docs/Web/API/HTMLScriptElement/crossOrigin) attribute or fetch with `{ mode: 'cors' }` to request a file in CORS mode using JavaScript.
 
 If CORS is not supported for some images, a COEP value of `credentialless` can be used as an alternative to load the image without any explicit opt-in from the cross-origin server, at the cost of requesting it without cookies.
 
@@ -101,3 +115,6 @@ If CORS is not supported for some images, a COEP value of `credentialless` can b
 ## See also
 
 - {{HTTPHeader("Cross-Origin-Opener-Policy")}}
+- {{domxref("Window.crossOriginIsolated")}} and {{domxref("WorkerGlobalScope.crossOriginIsolated")}}
+- [Cross Origin Opener Policy](https://web.dev/articles/why-coop-coep#coep) in _Why you need "cross-origin isolated" for powerful features_ on web.dev (2020)
+- [COOP and COEP explained: Artur Janc, Charlie Reis, Anne van Kesteren](https://docs.google.com/document/d/1zDlfvfTJ_9e8Jdc8ehuV4zMEu9ySMCiTGMS9y0GU92k/edit?tab=t.0) ()
