@@ -6,6 +6,21 @@ page-type: mdn-writing-guide
 
 {{MDNSidebar}}
 
+## Adding SVGs
+
+If you're adding images, especially diagrams, consider using SVG format for the following reasons:
+
+- **Authors can edit SVG directly** using any IDE or online tools.
+  Editing a .png usually involves recreating an asset from scratch or with image editing software, which is error-prone and can introduce visual or compression artifacts etc.
+- **SVG can be diffed by Git**. In contrast, an entire file is diffed as a change in binaries, so a .png that's 1MB will increase the repository size by 1MB on each commit (or pull request).
+
+### Adding to shared-assets
+
+If you want to reduce duplication across content directories or even repositories, you can store SVGs in the [mdn/shared-assets repository](https://github.com/mdn/shared-assets) with any source files you have.
+You can find examples and instructions in the [HTTP directory of the shared-assets](https://github.com/mdn/shared-assets/tree/main/images/diagrams/http) repository.
+
+To use the shared-assets repository, see the [Using shared assets in documentation](https://github.com/mdn/shared-assets?tab=readme-ov-file#using-shared-assets-in-documentation) section of the project README.
+
 ## Adding images
 
 To add an image to a document, add your image file to the document's folder, and then reference the image from within the document's `index.md` file using [Markdown image syntax](https://github.github.com/gfm/#images) or the equivalent HTML `<img>` element.
@@ -278,3 +293,7 @@ For example, if the video URL is `https://www.youtube.com/watch?v=ELS2OOUvxIw`, 
 ```plain
 \{{EmbedYouTube("ELS2OOUvxIw")}}
 ```
+
+## See also
+
+- [Using SVG format instead of .png images](https://github.com/orgs/mdn/discussions/631) MDN GitHub discussion
