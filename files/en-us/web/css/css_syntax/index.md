@@ -52,7 +52,7 @@ This module doesn't define any properties, [data types](/en-US/docs/Web/CSS/CSS_
 
   - : Overview of how the user agent handles invalid CSS.
 
-- [Learn CSS first steps: CSS syntax](/en-US/docs/Learn/CSS/First_steps/What_is_CSS#css_syntax)
+- [Learn CSS first steps: CSS syntax](/en-US/docs/Learn_web_development/Core/Styling_basics/What_is_CSS#css_syntax_basics)
 
   - : Introductory guide to CSS, including an introduction to CSS syntax.
 
@@ -62,7 +62,7 @@ This module doesn't define any properties, [data types](/en-US/docs/Web/CSS/CSS_
 
 - [CSS specificity](/en-US/docs/Web/CSS/Specificity)
 
-[CSS cascade](/en-US/docs/Web/CSS/CSS_cascade) module:
+[CSS cascading and inheritance](/en-US/docs/Web/CSS/CSS_cascade) module:
 
 - {{cssxref("@import")}} at-rule
 - {{cssxref("important")}} flag

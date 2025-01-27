@@ -13,7 +13,7 @@ You can use this attribute with the following SVG elements:
 
 - {{SVGElement('pattern')}}
 
-## Example
+## Examples
 
 ```css hidden
 html,
@@ -55,9 +55,13 @@ svg {
 </svg>
 ```
 
-{{EmbedLiveSample("Example", '100%', 200)}}
+{{EmbedLiveSample("Examples", '100%', 200)}}
 
-## pattern
+## Elements
+
+You can use this attribute with the SVG elements described in the sections below.
+
+### `<pattern>`
 
 For {{SVGElement('pattern')}}, `patternUnits` defines the coordinate system in use for the geometry properties ({{ SVGAttr("x") }}, {{ SVGAttr("y") }}, {{ SVGAttr("width") }} and {{ SVGAttr("height") }}) of the element.
 

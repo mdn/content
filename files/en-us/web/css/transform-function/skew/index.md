@@ -76,6 +76,10 @@ skew(ax, ay)
   </tbody>
 </table>
 
+## Formal syntax
+
+{{CSSSyntax}}
+
 ## Examples
 
 ### Skewing on the x-axis only

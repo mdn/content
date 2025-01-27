@@ -278,7 +278,7 @@ The Firefox DevTools HTML Inspector will highlight text nodes, and also show you
 
 There are a few ways of getting around this problem:
 
-Use [Flexbox](/en-US/docs/Learn/CSS/CSS_layout/Flexbox) to create the horizontal list of items instead of trying an `inline-block` solution. This handles everything for you, and is definitely the preferred solution:
+Use [Flexbox](/en-US/docs/Learn_web_development/Core/CSS_layout/Flexbox) to create the horizontal list of items instead of trying an `inline-block` solution. This handles everything for you, and is definitely the preferred solution:
 
 ```css
 ul {

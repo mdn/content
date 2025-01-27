@@ -97,7 +97,7 @@ Localization is a big part of the Mozilla community; it is a component of almost
 
 Time: _0:58:05 - 1:02:46_
 
-The MDN [Learning Area](/en-US/docs/Learn) is a new effort to teach basic web skills. Over the last 10 years, MDN added a lot of advanced material, serving experts with valuable information. This project is focused on materials for beginners, and tries to fill in a lot of knowledge gaps.
+The MDN [Learning Area](/en-US/docs/Learn_web_development) is a new effort to teach basic web skills. Over the last 10 years, MDN added a lot of advanced material, serving experts with valuable information. This project is focused on materials for beginners, and tries to fill in a lot of knowledge gaps.
 
 ### The future of MDN<br>What will be different when we celebrate 20 years of MDN?
 

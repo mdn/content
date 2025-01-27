@@ -45,7 +45,7 @@ The `padding-block` property takes the same values as the {{cssxref("padding-lef
 
 ## Description
 
-These values corresponds to the {{cssxref("padding-top")}} and {{cssxref("padding-bottom")}}, or {{cssxref("padding-right")}}, and {{cssxref("padding-left")}} property depending on the values defined for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}.
+The padding values specified by `padding-block` can be equivalent to the {{cssxref("padding-top")}} and {{cssxref("padding-bottom")}} properties or the {{cssxref("padding-right")}} and {{cssxref("padding-left")}} properties, depending on the values defined for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}.
 
 ## Formal definition
 

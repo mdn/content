@@ -99,8 +99,8 @@ _No changes._
 - The {{DOMxRef("AudioParam.setValueCurveAtTime()")}} method has been updated to correctly accept an array of floating-point values to indicate the parameter's values to change to over time. Previously, it required a {{jsxref("Float32Array")}} ([Firefox bug 1421091](https://bugzil.la/1421091)).
 - {{DOMxRef("AudioParam.setValueCurveAtTime()")}} has also been updated to correctly return a proper `TypeError` when a non-finite value is found in the `values` array ([Firefox bug 1472095](https://bugzil.la/1472095)).
 - In addition, `setValueCurveAtTime()` has been updated to ensure that, when the parameter finishes following the specified value curve after the duration elapses, the value of the parameter is set to the last value in the list of values to curve through ([Firefox bug 1308436](https://bugzil.la/1308436)).
-- The `RTCRTPStreamStats` dictionary has been renamed to {{DOMxRef("RTCRtpStreamStats")}} for consistency with other WebRTC dictionaries and the specification ([Firefox bug 1480498](https://bugzil.la/1480498)).
-- Support for the `RTCRtpStreamStats` dictionary's {{DOMxRef("RTCRtpStreamStats.kind", "kind")}} property has been added ([Firefox bug 1481851](https://bugzil.la/1481851)).
+- The `RTCRTPStreamStats` dictionary has been renamed to `RTCRtpStreamStats` for consistency with other WebRTC dictionaries and the specification ([Firefox bug 1480498](https://bugzil.la/1480498)).
+- Support for the `RTCRtpStreamStats` dictionary's `kind` property has been added ([Firefox bug 1481851](https://bugzil.la/1481851)).
 - The `RTCRtpStreamStats` dictionary's `isRemote` property is deprecated and will be removed in Firefox 65. A warning is now output to console when this property is accessed. See [this blog post on the Advancing WebRTC blog](https://blog.mozilla.org/webrtc/getstats-isremote-65/) for details ([Firefox bug 1393306](https://bugzil.la/1393306)).
 
 #### Canvas and WebGL

@@ -14,6 +14,41 @@ The **`mathsize`** [global attribute](/en-US/docs/Web/MathML/Global_attributes) 
 > [!NOTE]
 > Use CSS for styling MathML whenever possible. The `mathsize` attribute should only be included for applications that are not CSS-aware and will be overridden by the CSS `font-size` property, if set.
 
+## Example
+
+```css hidden
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: grid;
+  place-items: center;
+}
+```
+
+```html
+<math display="block">
+  <msup mathsize="16px">
+    <mi>a</mi>
+    <mn>2</mn>
+  </msup>
+  <mo>+</mo>
+  <msup mathsize="24px">
+    <mi>b</mi>
+    <mn>2</mn>
+  </msup>
+  <mo>=</mo>
+  <msup mathsize="32px">
+    <mi>c</mi>
+    <mn>2</mn>
+  </msup>
+</math>
+```
+
+{{EmbedLiveSample("Example", "", 150)}}
+
 ## Syntax
 
 ```html-nolint

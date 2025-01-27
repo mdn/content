@@ -33,7 +33,11 @@ In this example, each box has a border, two striped background images, and a sol
 div {
   width: 200px;
   height: 200px;
-  background-image: repeating-linear-gradient(45deg, red 0 15px, pink 15px 30px),
+  background-image: repeating-linear-gradient(
+      45deg,
+      red 0 15px,
+      pink 15px 30px
+    ),
     repeating-linear-gradient(-45deg, blue 0 15px, lightblue 15px 30px);
   background-size: 150px 150px;
   background-repeat: no-repeat;

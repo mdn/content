@@ -20,7 +20,7 @@ There are many other attributes to achieve various purposes:
 
 - [Referrer](/en-US/docs/Web/HTTP/Headers/Referrer-Policy)/{{glossary("CORS")}} control for security and privacy: see [`crossorigin`](#crossorigin) and [`referrerpolicy`](#referrerpolicy).
 - Use both [`width`](#width) and [`height`](#height) to set the intrinsic size of the image, allowing it to take up space before it loads, to mitigate content layout shifts.
-- Responsive image hints with [`sizes`](#sizes) and [`srcset`](#srcset) (see also the {{htmlelement("picture")}} element and our [Responsive images](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images) tutorial).
+- Responsive image hints with [`sizes`](#sizes) and [`srcset`](#srcset) (see also the {{htmlelement("picture")}} element and our [Responsive images](/en-US/docs/Web/HTML/Responsive_images) tutorial).
 
 ## Supported image formats
 
@@ -193,7 +193,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
     - `no-referrer`: The {{HTTPHeader("Referer")}} header will not be sent.
     - `no-referrer-when-downgrade`: The {{HTTPHeader("Referer")}} header will not be sent to {{Glossary("origin")}}s without {{Glossary("TLS")}} ({{Glossary("HTTPS")}}).
-    - `origin`: The sent referrer will be limited to the origin of the referring page: its [scheme](/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL), {{Glossary("host")}}, and {{Glossary("port")}}.
+    - `origin`: The sent referrer will be limited to the origin of the referring page: its [scheme](/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL), {{Glossary("host")}}, and {{Glossary("port")}}.
     - `origin-when-cross-origin`: The referrer sent to other origins will be limited to the scheme, the host, and the port. Navigations on the same origin will still include the path.
     - `same-origin`: A referrer will be sent for {{Glossary("Same-origin policy", "same origin")}}, but cross-origin requests will contain no referrer information.
     - `strict-origin`: Only send the origin of the document as the referrer when the protocol security level stays the same (HTTPS→HTTPS), but don't send it to a less secure destination (HTTPS→HTTP).
@@ -229,7 +229,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
     If the `srcset` attribute uses width descriptors, the `sizes` attribute must also be present, or the `srcset` itself will be ignored.
 
-    The user agent selects any of the available sources at its discretion. This provides them with significant leeway to tailor their selection based on things like user preferences or {{glossary("bandwidth")}} conditions. See our [Responsive images](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images) tutorial for an example.
+    The user agent selects any of the available sources at its discretion. This provides them with significant leeway to tailor their selection based on things like user preferences or {{glossary("bandwidth")}} conditions. See our [Responsive images](/en-US/docs/Web/HTML/Responsive_images) tutorial for an example.
 
 - `width`
   - : The intrinsic width of the image in pixels. Must be an integer without a unit.
@@ -526,6 +526,6 @@ Although `<img>` elements have innocent uses, they can have undesirable conseque
 - {{HTMLElement("picture")}}, {{HTMLElement("object")}}, and {{HTMLElement("embed")}} elements
 - {{cssxref("object-fit")}}, {{cssxref("object-position")}}, {{cssxref("image-orientation")}}, {{cssxref("image-rendering")}}, and {{cssxref("image-resolution")}}: Image-related CSS properties.
 - {{domxref("HTMLImageElement")}} interface for this element
-- [Images in HTML](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
+- [HTML images](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_images)
 - [Image file type and format guide](/en-US/docs/Web/Media/Formats/Image_types)
-- [Responsive images](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
+- [Responsive images](/en-US/docs/Web/HTML/Responsive_images)

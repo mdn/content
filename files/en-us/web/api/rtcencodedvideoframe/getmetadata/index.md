@@ -51,7 +51,7 @@ An object with the following properties:
   - : A positive integer value indicating synchronization source ("ssrc") of the stream of RTP packets that are described by this encoded video frame.
     A source might be something like a camera or microphone, or some kind of mixer app that combines multiple sources.
     All packets from the same source share the same time source and sequence space, and so can be ordered relative to each other.
-    Note two frames with the same value refer to the same source (for more information see [`RTCRtpStreamStats.ssrc`](/en-US/docs/Web/API/RTCRtpStreamStats/ssrc)).
+    Note two frames with the same value refer to the same source (for more information see [`RTCInboundRtpStreamStats.ssrc`](/en-US/docs/Web/API/RTCInboundRtpStreamStats#ssrc)).
 - `payloadType`
   - : A positive integer value in the range from 0 to 127 that describes the format of the RTP payload.
     The mappings of values to formats is defined in RFC3550.

@@ -92,4 +92,4 @@ input:required:invalid {
 ## See also
 
 - Other validation-related pseudo-classes: {{ cssxref(":optional") }}, {{ cssxref(":invalid") }}, {{ cssxref(":valid") }}
-- [Form data validation](/en-US/docs/Learn/Forms/Form_validation)
+- [Form data validation](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation)

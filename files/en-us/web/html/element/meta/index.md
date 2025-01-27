@@ -185,5 +185,5 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 ## See also
 
 - [Standard metadata names](/en-US/docs/Web/HTML/Element/meta/name)
-- [Learn: `<meta>`](/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#metadata_the_meta_element)
+- [Learn: `<meta>`](/en-US/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#metadata_the_meta_element)
 - [The viewport meta tag](/en-US/docs/Web/HTML/Viewport_meta_tag)

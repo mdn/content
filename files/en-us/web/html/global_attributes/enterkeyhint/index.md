@@ -14,7 +14,7 @@ is an [enumerated](/en-US/docs/Glossary/Enumerated) attribute defining what acti
 
 ## Description
 
-[Form controls](/en-US/docs/Learn/Forms) (such as [`<textarea>`](/en-US/docs/Web/HTML/Element/textarea)
+[Form controls](/en-US/docs/Learn_web_development/Extensions/Forms) (such as [`<textarea>`](/en-US/docs/Web/HTML/Element/textarea)
 or [`<input>`](/en-US/docs/Web/HTML/Element/input) elements) or elements using
 [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) can specify an
 [`inputmode`](/en-US/docs/Web/HTML/Global_attributes/inputmode) attribute to control what kind of virtual keyboard
@@ -44,49 +44,37 @@ The `enterkeyhint` attribute is an [enumerated](/en-US/docs/Glossary/Enumerated)
     <tr>
       <td><code>enterkeyhint="enter"</code></td>
       <td>Typically inserting a new line.</td>
-      <td><kbd>↵</kbd></td>
+      <td><kbd>return</kbd>, <kbd>↵</kbd></td>
     </tr>
     <tr>
       <td><code>enterkeyhint="done"</code></td>
-      <td>
-        Typically meaning there is nothing more to input and the input method
-        editor (IME) will be closed.
-      </td>
-      <td><kbd>Done</kbd></td>
+      <td>Typically meaning there is nothing more to input and the input method editor (IME) will be closed.</td>
+      <td><kbd>done</kbd>, <kbd>✅</kbd></td>
     </tr>
     <tr>
       <td><code>enterkeyhint="go"</code></td>
-      <td>
-        Typically meaning to take the user to the target of the text they typed.
-      </td>
-      <td><kbd>Open</kbd></td>
+      <td>Typically meaning to take the user to the target of the text they typed.</td>
+      <td><kbd>go</kbd>, <kbd>🡢</kbd></td>
     </tr>
     <tr>
       <td><code>enterkeyhint="next"</code></td>
-      <td>
-        Typically taking the user to the next field that will accept text.
-      </td>
-      <td><kbd>Next</kbd></td>
+      <td>Typically taking the user to the next field that will accept text.</td>
+      <td><kbd>next</kbd>, <kbd>⇥</kbd></td>
     </tr>
     <tr>
       <td><code>enterkeyhint="previous"</code></td>
-      <td>
-        Typically taking the user to the previous field that will accept text.
-      </td>
-      <td><kbd>Previous</kbd></td>
+      <td>Typically taking the user to the previous field that will accept text.</td>
+      <td><kbd>return</kbd>, <kbd>⇤</kbd></td>
     </tr>
     <tr>
       <td><code>enterkeyhint="search"</code></td>
-      <td>
-        Typically taking the user to the results of searching for the text they
-        have typed.
-      </td>
-      <td><kbd>Search</kbd></td>
+      <td>Typically taking the user to the results of searching for the text they have typed.</td>
+      <td><kbd>search</kbd>, <kbd>🔍</kbd></td>
     </tr>
     <tr>
       <td><code>enterkeyhint="send"</code></td>
       <td>Typically delivering the text to its target.</td>
-      <td><kbd>Send</kbd></td>
+      <td><kbd>send</kbd></td>
     </tr>
   </tbody>
 </table>

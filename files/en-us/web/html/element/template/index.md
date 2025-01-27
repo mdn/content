@@ -237,7 +237,7 @@ The second code block is identical except that it sets the `shadowrootdelegatesf
 </div>
 ```
 
-Last of all we use the following CSS to apply a green-yellow border to the parent `<div>` element when it has focus.
+Last of all we use the following CSS to apply a red border to the parent `<div>` element when it has focus.
 
 ```css
 div:focus {
@@ -380,7 +380,7 @@ Since `firstClone` is a `DocumentFragment`, only its children are added to `cont
 
 - [`part`](/en-US/docs/Web/HTML/Global_attributes/part) and [`exportparts`](/en-US/docs/Web/HTML/Global_attributes/exportparts) HTML attributes
 - {{HTMLElement("slot")}} HTML element
-- {{CSSXref(":host")}}, {{CSSXref(":host_function", ":host()")}}, and {{CSSXref(":host-context", ":host-context()")}} CSS pseudo-classes
+- {{CSSXref(":has-slotted")}}, {{CSSXref(":host")}}, {{CSSXref(":host_function", ":host()")}}, and {{CSSXref(":host-context", ":host-context()")}} CSS pseudo-classes
 - {{CSSXref("::part")}} and {{CSSXref("::slotted")}} CSS pseudo-elements
 - [`ShadowRoot`](/en-US/docs/Web/API/ShadowRoot) interface
 - [Using templates and slots](/en-US/docs/Web/API/Web_components/Using_templates_and_slots)

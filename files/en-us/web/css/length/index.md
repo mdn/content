@@ -326,6 +326,6 @@ inputElem.addEventListener("change", () => {
 
 ## See also
 
-- [CSS values & units tutorial](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)
+- [Learn: Values and units](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
 - [CSS values & units](/en-US/docs/Web/CSS/CSS_Values_and_Units) module
 - [Box Model](/en-US/docs/Web/CSS/CSS_box_model)

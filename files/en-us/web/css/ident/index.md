@@ -26,9 +26,9 @@ Note that `id1`, `Id1`, `iD1` and `ID1` are all different identifiers because th
 
 ### Escaping characters
 
-Escaping a character means representing it in a way that changes how it is interpreted by a software system. In CSS, you can escape a character by adding a backslash (`\`) in front of the character. Any character, except the hexadecimal digits `0-9`, `a-f`, and `A-F`, can be escaped in this way. For example, `&` can be escaped as `\&`.
+{{glossary("Escape character", "Escaping a character")}} means representing it in a way that changes how it is interpreted by a software system. In CSS, you can escape a character by adding a backslash (`\`) in front of the character. Any character, except the hexadecimal digits `0-9`, `a-f`, and `A-F`, can be escaped in this way. For example, `&` can be escaped as `\&`.
 
-You can also escape any character with a backslash followed by the character's Unicode {{glossary("code point")}} represented by one to six hexadecimal digits. For example, `&` can be escaped as `\26`. In this usage, if the escaped character is followed by a hexadecimal digit, do one of the following:
+You can also escape any character with a backslash followed by the character's {{glossary("Unicode")}} {{glossary("code point")}} represented by one to six hexadecimal digits. For example, `&` can be escaped as `\26`. In this usage, if the escaped character is followed by a hexadecimal digit, do one of the following:
 
 - Place a space or other whitespace character after the Unicode code point.
 - Provide the full six-digit Unicode code point of the character being escaped.

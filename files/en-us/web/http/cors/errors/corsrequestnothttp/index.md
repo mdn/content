@@ -28,7 +28,7 @@ Unfortunately this had security implications, as noted in this advisory: [CVE-20
 Many browsers, including Firefox and Chrome, now treat all local files as having _opaque origins_ (by default).
 As a result, loading a local file with included local resources will now result in CORS errors.
 
-Developers who need to perform local testing should now [set up a local server](/en-US/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server).
+Developers who need to perform local testing should now [set up a local server](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server).
 As all files are served from the same scheme and domain (`localhost`) they all have the same origin, and do not trigger cross-origin errors.
 
 > [!NOTE]
@@ -38,4 +38,4 @@ As all files are served from the same scheme and domain (`localhost`) they all h
 
 - [CORS errors](/en-US/docs/Web/HTTP/CORS/Errors)
 - [CORS introduction](/en-US/docs/Web/HTTP/CORS)
-- [What is a URL?](/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)
+- [What is a URL?](/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL)

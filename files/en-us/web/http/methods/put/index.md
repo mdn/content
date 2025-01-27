@@ -35,7 +35,7 @@ The difference between `PUT` and {{HTTPMethod("POST")}} is that `PUT` is {{Gloss
     </tr>
     <tr>
       <th scope="row">
-        Allowed in <a href="/en-US/docs/Learn/Forms">HTML forms</a>
+        Allowed in <a href="/en-US/docs/Learn_web_development/Extensions/Forms">HTML forms</a>
       </th>
       <td>No</td>
     </tr>
@@ -90,7 +90,8 @@ Content-Location: /existing.html
 
 ## Browser compatibility
 
-{{Compat}}
+The browser doesn't use the `PUT` method for user-initiated actions, so "browser compatibility" doesn't apply.
+Developers can set this request method using [`fetch()`](/en-US/docs/Web/API/Window/fetch).
 
 ## See also
 

@@ -1,13 +1,14 @@
+# Do not add comments to this file. They will be lost.
+
 sidebar:
   - type: section
     link: /MDN
-
-  - details: closed
-    title: community_guidelines
+  - title: community_guidelines
+    details: closed
     children:
       - /MDN/Community
-      - details: closed
-        title: contributing_to_mdn_web_docs
+      - title: contributing_to_mdn_web_docs
+        details: closed
         children:
           - /MDN/Community/Contributing
           - /MDN/Community/Contributing/Getting_started
@@ -21,15 +22,14 @@ sidebar:
       - /MDN/Community/Issues
       - /MDN/Community/Pull_requests
       - /MDN/Community/Roles_teams
-
-  - details: closed
-    title: writing_guide
+  - title: writing_guide
+    details: closed
     children:
       - /MDN/Writing_guidelines
       - /MDN/Writing_guidelines/What_we_write
       - /MDN/Writing_guidelines/Writing_style_guide
-      - details: closed
-        title: how_to_guides
+      - title: how_to_guides
+        details: closed
         children:
           - /MDN/Writing_guidelines/Howto
           - /MDN/Writing_guidelines/Howto/Images_media
@@ -42,8 +42,8 @@ sidebar:
           - /MDN/Writing_guidelines/Howto/Write_an_api_reference
           - /MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_glossary
           - /MDN/Writing_guidelines/Howto/Markdown_in_MDN
-      - details: closed
-        title: page_structures
+      - title: page_structures
+        details: closed
         children:
           - /MDN/Writing_guidelines/Page_structures
           - /MDN/Writing_guidelines/Page_structures/Banners_and_notices
@@ -58,22 +58,26 @@ sidebar:
           - /MDN/Writing_guidelines/Page_structures/Feature_status
       - /MDN/Writing_guidelines/Attrib_copyright_license
       - /MDN/Writing_guidelines/Experimental_deprecated_obsolete
-
-  - details: closed
-    title: advisory_board
+  - title: advisory_board
+    details: closed
     children:
       - /MDN/MDN_Product_Advisory_Board
       - /MDN/MDN_Product_Advisory_Board/Membership
-
-  - details: closed
-    title: history
+  - title: history
+    details: closed
     children:
       - /MDN/At_ten
       - /MDN/At_ten/History_of_MDN
-
   - /MDN/Changelog
-
 l10n:
+  de:
+    history: Geschichte
+    advisory_board: Product Advisory Board
+    community_guidelines: Gemeinschaftsrichtlinien
+    contributing_to_mdn_web_docs: Beiträge zu MDN Web Docs
+    writing_guide: Schreibanleitung
+    how_to_guides: Anleitungen
+    page_structures: Seitenstrukturen
   en-US:
     history: History
     advisory_board: Advisory Board

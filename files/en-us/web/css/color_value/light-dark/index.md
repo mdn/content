@@ -46,9 +46,9 @@ Functional notation: `light-dark(light-color, dark-color)`
 - `dark-color`
   - : {{CSSXref("&lt;color&gt;")}} value to be set for dark {{CSSXref("color-scheme")}}.
 
-### Formal syntax
+## Formal syntax
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Example
 

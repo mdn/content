@@ -37,6 +37,6 @@ Returns `true` if the element's value has no validity problems; otherwise, retur
 - {{domxref("HTMLSelectElement.checkValidity()")}}
 - {{HTMLElement("select")}}
 - {{HTMLElement("form")}}
-- [Learn: Client-side form validation](/en-US/docs/Learn/Forms/Form_validation)
+- [Learn: Client-side form validation](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation)
 - [Guide: Constraint validation](/en-US/docs/Web/HTML/Constraint_validation)
 - CSS {{cssxref(":valid")}} and {{cssxref(":invalid")}} pseudo-classes

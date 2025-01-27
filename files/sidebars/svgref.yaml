@@ -1,10 +1,12 @@
+# Do not add comments to this file. They will be lost.
+
 sidebar:
   - type: section
     link: /Web/SVG
   - type: section
     title: Tutorials
-  - details: closed
-    title: Introducing SVG from scratch
+  - title: Introducing SVG from scratch
+    details: closed
     children:
       - /Web/SVG/Tutorial/Introduction
       - /Web/SVG/Tutorial/Getting_Started
@@ -26,13 +28,15 @@ sidebar:
   - type: section
     title: Reference
   - type: listSubPages
+    path: /Web/SVG/Element
     title: Elements
     details: closed
-    path: /en-US/docs/Web/SVG/Element
+    code: true
   - type: listSubPages
+    path: /Web/SVG/Attribute
     title: Attributes
     details: closed
-    path: /en-US/docs/Web/SVG/Attribute
+    code: true
   - type: section
     title: Guides
   - children:
@@ -41,8 +45,14 @@ sidebar:
       - /Web/SVG/Namespaces_Crash_Course
       - /Web/SVG/SVG_animation_with_SMIL
       - /Web/SVG/SVG_as_an_Image
-
 l10n:
+  de:
+    Tutorials: Tutorials
+    Reference: Referenz
+    Elements: Elemente
+    Attributes: Attribute
+    Guides: Leitfäden
+    Introducing SVG from scratch: Einführung in SVG von Anfang an
   en-US:
     Tutorials: Tutorials
     Reference: Reference

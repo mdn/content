@@ -57,7 +57,7 @@ Firefox ESR is the long-term support edition of Firefox for desktop for use by o
 
 ## Contents
 
-{{LandingPageListSubpages}}
+{{SubpagesWithSummaries}}
 
 ## See also
 

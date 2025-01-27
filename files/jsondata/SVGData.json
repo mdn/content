@@ -29,19 +29,19 @@
         ]
       },
       "attributes": [
+        "ariaAttributes",
         "conditionalProcessingAttributes",
         "coreAttributes",
-        "graphicalEventAttributes",
         "presentationAttributes",
         "xLinkAttributes",
-        "'class'",
-        "'style'",
-        "'externalResourcesRequired'",
-        "'transform'",
-        "'xlink:show'",
-        "'xlink:actuate'",
-        "'xlink:href'",
-        "'target'"
+        "'href'",
+        "'target'",
+        "'download'",
+        "'ping'",
+        "'rel'",
+        "'hreflang'",
+        "'type'",
+        "'referrerpolicy'"
       ],
       "interfaces": ["SVGAElement"]
     },
@@ -1194,20 +1194,16 @@
         "elements": [
           "animationElements",
           "descriptiveElements",
+          "gradientElements",
           "shapeElements",
           "structuralElements",
-          "gradientElements",
           "&lt;a&gt;",
           "&lt;clipPath&gt;",
-          "&lt;cursor&gt;",
           "&lt;filter&gt;",
-          "&lt;font&gt;",
-          "&lt;font-face&gt;",
           "&lt;foreignObject&gt;",
           "&lt;image&gt;",
           "&lt;marker&gt;",
           "&lt;mask&gt;",
-          "&lt;pattern&gt;",
           "&lt;script&gt;",
           "&lt;style&gt;",
           "&lt;switch&gt;",
@@ -1216,23 +1212,19 @@
         ]
       },
       "attributes": [
-        "conditionalProcessingAttributes",
         "coreAttributes",
         "presentationAttributes",
         "xLinkAttributes",
-        "'class'",
-        "'style'",
-        "'externalResourcesRequired'",
         "'viewBox'",
-        "'patternUnits'",
-        "'patternContentUnits'",
-        "'patternTransform'",
+        "'preserveAspectRatio'",
         "'x'",
         "'y'",
         "'width'",
         "'height'",
-        "'xlink:href'",
-        "'preserveAspectRatio'"
+        "'patternUnits'",
+        "'patternContentUnits'",
+        "'patternTransform'",
+        "'href'"
       ],
       "interfaces": ["SVGPatternElement"]
     },
@@ -1337,9 +1329,9 @@
       "attributes": [
         "coreAttributes",
         "xLinkAttributes",
-        "'externalResourcesRequired'",
         "'type'",
-        "'xlink:href'"
+        "'href'",
+        "'crossorigin'"
       ],
       "interfaces": ["SVGScriptElement"]
     },
@@ -1375,8 +1367,6 @@
       "attributes": [
         "coreAttributes",
         "presentationAttributes",
-        "'class'",
-        "'style'",
         "'offset'",
         "'stop-color'",
         "'stop-opacity'"

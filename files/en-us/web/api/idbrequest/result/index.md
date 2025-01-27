@@ -9,13 +9,17 @@ browser-compat: api.IDBRequest.result
 {{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
 
 The **`result`** read-only property of the
-{{domxref("IDBRequest")}} interface returns the result of the request. If the request
-is not completed, the result is not available and an `InvalidStateError` exception is
-thrown.
+{{domxref("IDBRequest")}} interface returns the result of the request.
 
 ## Value
 
 any
+
+### Exceptions
+
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown when attempting to access the property if the request
+    is not completed, and therefore the result is not available.
 
 ## Examples
 

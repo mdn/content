@@ -1,7 +1,8 @@
+# Do not add comments to this file. They will be lost.
+
 sidebar:
   - type: section
     link: /Web/Progressive_web_apps
-
   - type: section
     link: /Web/Progressive_web_apps/Guides
   - /Web/Progressive_web_apps/Guides/What_is_a_progressive_web_app
@@ -10,7 +11,6 @@ sidebar:
   - /Web/Progressive_web_apps/Guides/Offline_and_background_operation
   - /Web/Progressive_web_apps/Guides/Caching
   - /Web/Progressive_web_apps/Guides/Best_practices
-
   - type: section
     link: /Web/Progressive_web_apps/Tutorials
   - link: /Web/Progressive_web_apps/Tutorials/CycleTracker
@@ -31,7 +31,6 @@ sidebar:
       - /Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs
       - /Web/Progressive_web_apps/Tutorials/js13kGames/Re-engageable_Notifications_Push
       - /Web/Progressive_web_apps/Tutorials/js13kGames/Loading
-
   - type: section
     link: /Web/Progressive_web_apps/How_to
   - /Web/Progressive_web_apps/How_to/Trigger_install_prompt
@@ -42,6 +41,5 @@ sidebar:
   - /Web/Progressive_web_apps/How_to/Expose_common_actions_as_shortcuts
   - /Web/Progressive_web_apps/How_to/Share_data_between_apps
   - /Web/Progressive_web_apps/How_to/Associate_files_with_your_PWA
-
   - type: section
     link: /Web/Progressive_web_apps/Reference

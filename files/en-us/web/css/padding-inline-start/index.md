@@ -38,9 +38,9 @@ padding-inline-start: unset;
 
 ## Description
 
-In English, a left-to-right top-to-bottom language, the `padding-inline-start` property for this paragraph of text corresponds to the {{cssxref("padding-top")}} property. However, whether this logical property corresponds to the `padding-top`, {{cssxref("padding-right")}}, or {{cssxref("padding-bottom")}}, or {{cssxref("padding-left")}} depends on the element's {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}.
+The `padding-inline-start` property takes the same values as physical properties such as {{cssxref("padding-top")}}. However, it can be equivalent to {{cssxref("padding-left")}}, {{cssxref("padding-right")}}, `padding-top`, or {{cssxref("padding-bottom")}} depending on the values set for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}.
 
-It relates to {{cssxref("padding-block-start")}}, {{cssxref("padding-block-end")}}, and {{cssxref("padding-inline-end")}}, which define the other paddings of the element.
+It relates to {{cssxref("padding-block-start")}}, {{cssxref("padding-block-end")}}, and {{cssxref("padding-inline-end")}}, which define the other padding values of the element.
 
 ## Formal definition
 

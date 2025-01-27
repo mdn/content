@@ -28,7 +28,7 @@ You can use different units for each value in your expression. You may also use 
 - The expression can be values combining the addition ( + ), subtraction ( - ), multiplication ( \* ) and division ( / ) operators, using standard operator precedence rules. Make sure to put a space on each side of the + and - operands. The operands in the expression may be any \<length> syntax value.
 - You can (and often need to) combine `min()` and `max()` values, or use `max()` within a `clamp()` or `calc()` function.
 
-### Formal syntax
+## Formal syntax
 
 {{CSSSyntax}}
 
@@ -90,4 +90,4 @@ Think of the `max()` function as finding the minimum value allowed for a propert
 - {{CSSxRef("calc", "calc()")}}
 - {{CSSxRef("clamp", "clamp()")}}
 - {{CSSxRef("min", "min()")}}
-- [CSS Values](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)
+- [Learn: Values and units](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units)

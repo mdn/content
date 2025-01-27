@@ -60,7 +60,7 @@ The resulting page content is styled like this:
 
 ## See also
 
-- [Learn more about CSS selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors) in our introduction to CSS.
+- [Learn more about CSS selectors](/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors) in our introduction to CSS.
 - Basic selectors
 
   - [Type selectors](/en-US/docs/Web/CSS/Type_selectors) `elementname`

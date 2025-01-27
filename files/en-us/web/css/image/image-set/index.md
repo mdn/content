@@ -51,9 +51,9 @@ image-set(
 - `type(<string>)` {{optional_inline}}
   - : A valid MIME type string, for example "image/jpeg".
 
-### Formal syntax
+## Formal syntax
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Accessibility
 

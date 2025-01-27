@@ -74,9 +74,8 @@ function FindProxyForURL(url, host) {
 }
 ```
 
-See [Proxy Auto-Configuration (PAC)](/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file) for more examples.
-
 ## See also
 
-- {{HTTPMethod("CONNECT")}}
-- [Proxy server on Wikipedia](https://en.wikipedia.org/wiki/Proxy_server)
+- [Proxy Auto-Configuration (PAC) file](/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file)
+- {{HTTPMethod("CONNECT")}} method
+- {{glossary("Proxy server")}}

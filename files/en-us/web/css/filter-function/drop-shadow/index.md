@@ -38,6 +38,9 @@ drop-shadow(5px 5px 15px red)
 /* The order of color and length values can be changed */
 /* drop-shadow( <color> <length> <length> <length> ) */
 drop-shadow(#e23 0.5rem 0.5rem 1rem)
+
+/* Pass multiple drop-shadows to a filter to stack them */
+drop-shadow(10px 10px red) drop-shadow(-5px -5px yellow)
 ```
 
 The `drop-shadow()` function accepts a parameter of type `<shadow>` (defined in the {{cssxref("box-shadow")}} property), with the exception that the `inset` keyword and `spread` parameters are not allowed.
@@ -64,6 +67,10 @@ The `drop-shadow()` function accepts a parameter of type `<shadow>` (defined in 
 <div>drop-shadow(16px 16px red)</div>
 <div>drop-shadow(red 1rem 1rem 10px)</div>
 <div>drop-shadow(-16px -16px red)</div>
+<div>
+  drop-shadow(1px 1px red) drop-shadow(1px -1px red) drop-shadow(-1px 1px red)
+  drop-shadow(-1px -1px red)
+</div>
 ```
 
 ```css
@@ -92,13 +99,18 @@ div:nth-child(3) {
 }
 
 div:nth-child(4) {
-  filter: drop-shadow(-16px -6px red);
+  filter: drop-shadow(-16px -16px red);
+}
+
+div:nth-child(5) {
+  filter: drop-shadow(1px 1px red) drop-shadow(1px -1px red)
+    drop-shadow(-1px 1px red) drop-shadow(-1px -1px red);
 }
 ```
 
 {{EmbedLiveSample("Setting a drop shadow", "100%", "300px")}}
 
-In the absence of a `<color>` value in the `drop-shadow()` function in the first box, the shadow uses the value of the `color` property from the element (`lime`). The second and third shadows illustrate that the length and color values can be specified in any order. The third shadow shows the blurring effect when a third `<length>` value is specified. The fourth shadow uses negative offsets which shifts shadow to the left and top.
+In the absence of a `<color>` value in the `drop-shadow()` function in the first box, the shadow uses the value of the `color` property from the element (`lime`). The second and third shadows illustrate that the length and color values can be specified in any order. The third shadow shows the blurring effect when a third `<length>` value is specified. The fourth shadow uses negative offsets, which shift the shadow to the left and top. The fifth example shows how to use multiple drop-shadows on a single element.
 
 ## Specifications
 
