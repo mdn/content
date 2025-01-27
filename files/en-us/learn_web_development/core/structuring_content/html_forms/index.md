@@ -61,7 +61,7 @@ Buttons are usually created using HTML {{htmlelement("button")}} elements (they 
 
 Forms are created using elements such as {{htmlelement("form")}}, {{htmlelement("label")}}, {{htmlelement("input")}}, and {{htmlelement("select")}}. Form elements can be used to create more complex controls than simple buttons allow — for example a drop-down menu containing multiple options that allow you choose between different themes for a user interface element.
 
-However, crucially, they can also be used to create forms for users to fill in when they need to submit information to a website server. Think about ecommerce sites — when you want to search for a product to buy, you use a form to enter search terms. When you want to pay for the item and finalize delivery, you use a form to enter your postal address, and another form to enter your credit card details.
+However, crucially, they can also be used to create forms for users to fill in when they need to submit information to a website server. Think about ecommerce sites — when you want to search for a product to buy, you use a form to enter search terms. When you want to pay for some items and finalize delivery, you use a form to enter your postal address, and another form to enter your credit card details.
 
 We'll be concentrating mainly on this — more traditional — use of form elements in this article. Note that buttons are also commonly used inside forms, to submit the entered data to the server.
 
@@ -101,7 +101,9 @@ It would give you the following output — try clicking it:
 
 {{EmbedLiveSample("basic-button-with-js", "100%", "60")}}
 
-You are not expected to understand how the JavaScript works for now. You'll learn more about it later on in the course. In the next section, you'll see a demonstration of the second main use of buttons — submitting forms.
+You are not expected to understand how the JavaScript works for now. You'll learn more about it later on in the course.
+
+In the next section, you'll see a demonstration of the second main use of buttons — submitting forms.
 
 ## The anatomy of a form
 
@@ -136,14 +138,14 @@ This is rendered as follows:
 
 {{EmbedLiveSample("form-anatomy", "100%", "200")}}
 
-Because of the way MDN works, you can enter text into the input fields, but you won't see the form submit properly when you press the button. To follow along with the next sections, copy the HTML code above into a new HTML file and open it in a browser tab.
+Because of the way MDN works, you can enter text into the input fields, but you won't see the form submit properly when you press the button. To follow along with the next sections, copy the HTML code above into a new HTML file using your [code editor](/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Code_editors) and open it in a new browser tab.
 
 ### The `<form>` element
 
-As we said earlier, the {{htmlelement("form")}} element acts as the outer wrapper for the form, grouping together all the form controls inside it. When the `<button>` is pressed, all the data represented by the from controls will be submitted to the server. The `<form>` element can take many attributes, but the two most important ones, which we've included here, are as follows:
+As we said earlier, the {{htmlelement("form")}} element acts as the outer wrapper for the form, grouping together all the form controls inside it. When the `<button>` is pressed, all the data represented by the form controls will be submitted to the server. The `<form>` element can take many attributes, but the two most important ones, which we've included here, are as follows:
 
 - `action`: Contains a path to the page that we want to send the submitted form data to, to be processed. Later on, after you submit the form, you'll see `/submit_page` included in the URL. You'll also get a {{HTTPStatus("404")}} error response because the page doesn't actually exist, but that's fine for now.
-- `method`: Specifies the data transmission [method](/en-US/docs/Web/HTTP/Methods) you want to use to send the form data to the server. Don't worry about this too much for now; the `get` value causes the data to be sent as parameters attached to the end of the URL.
+- `method`: Specifies the data transmission [method](/en-US/docs/Web/HTTP/Methods) you want to use for sending the form data to the server. Don't worry about this too much for now; the `get` value causes the data to be sent as parameters attached to the end of the URL.
 
 > [!CALLOUT]
 >
@@ -153,7 +155,7 @@ As we said earlier, the {{htmlelement("form")}} element acts as the outer wrappe
 >
 > The above two attributes cause the form data to be submitted in a URL along the following lines:
 >
-> `/learn-forms/basic-anatomy/submit_page?name=Bob&email=bob%40bob.com`
+> `/some/url/submit_page?name=Bob&email=bob%40bob.com`
 
 #### Structuring forms
 
@@ -165,7 +167,7 @@ We've also put each input/label pair and the submit button inside a separate {{h
 
 This is a common pattern for form structuring. Some people use `<p>` elements to separate out their form elements, some use {{htmlelement("div")}}, {{htmlelement("section")}}, or even {{htmlelement("li")}} elements. It doesn't matter a great deal, as long as the elements used make semantic sense. For example, it makes sense to divide form element groups up into separate paragraphs or sections of content, or even items in a list. It would make less sense to represent them as [blockquotes](/en-US/docs/Web/HTML/Element/blockquote), [asides](/en-US/docs/Web/HTML/Element/aside), or [addresses](/en-US/docs/Web/HTML/Element/address).
 
-There is a specialized element for grouping form elements together called {{htmlelement("fieldset")}}. This is useful in certain circumstances, such as in complex forms, and when grouping together multiple checkboxes and radio buttons. We'll look at a couple of examples of this later on.
+There is a specialized element for grouping form elements together called {{htmlelement("fieldset")}}. This is useful in certain circumstances, such as in complex forms, and when grouping together multiple checkboxes and radio buttons. We'll look at a couple of `<fieldset>` examples later on.
 
 ### `<input>` elements
 
@@ -177,22 +179,22 @@ The {{htmlelement("input")}} elements represent the different data items entered
 
 The attributes are as follows:
 
-- `type`: Specifies the type of form control to create. There are many different types of from controls, from simple text fields of different types to radio buttons, checkboxes, and more. Type `text` renders a basic text field that can accept any value.
+- `type`: Specifies the type of form control to create. There are many different types of form controls, from simple text fields of different types to radio buttons, checkboxes, and more. Type `text` renders a basic text field that can accept any value.
 - `name`: Specifies a name for the data item. When the form is submitted, the data is sent in name/value pairs. In each case, the name is equal to this `name` attribute value, and the value is equal to the text entered in the text field.
-- `id`: Specifies an ID that can be used to identify the element. In this case, it is used to associate the from control with its `<label>`.
+- `id`: Specifies an ID that can be used to identify the element. In this case, it is used to associate the form control with its `<label>`.
 - `required`: Specifies that a value has to be entered into the form element before the form can be submitted. This should only be set on inputs that you require, not on optional fields.
 
 You should be aware that some input types usually don't get their values from text entered into a field. For example, [`<input type="color">`](/en-US/docs/Web/HTML/Element/input/color) renders a color picker widget that you choose a color from, whereas [`<input type="radio">`](/en-US/docs/Web/HTML/Element/input/radio) renders a radio button control that can be selected, or not.
 
-In the case of radio buttons, you generally need to provide the value that would be submitted if it is selected inside a specific `value` attribute. Note that you _can_ specify a `value` attribute on input types like `"text"` and `"color"` — the effect is that the value is pre-filled into the form field when it is first rendered.
+In the case of radio buttons, you generally need to provide the value that would be submitted if it is selected inside a specific `value` attribute. Note that you _can_ specify a `value` attribute on input types like `text` and `color` — the effect is that the value is pre-filled into the form field when it is first rendered.
 
 > [!CALLOUT]
 >
 > **Try it out**
 >
-> 1. Again, go to the example in a separate tab, and try submitting the form with no value entered in either field. You'll see an error message pop up next to the "Name" field saying something like "Please fill in this field" (it will vary across different browsers). This is the `required` attribute — and the browser's default client-side form validation — in action.
+> 1. Again, go to the example you loaded in a separate tab, and try submitting the form with no value entered in either field. You'll see an error message pop up next to the "Name" field saying something like "Please fill in this field" (it will vary across different browsers). This is the `required` attribute — and the browser's default client-side form validation — in action.
 > 2. Now try submitting the form with a valid name entered in the first field, but a value that is not a valid email address in the second field (something like "aaaa" will do). This time you'll see an error message pop up next to the "Email" field saying something like "Please enter an email address".
-> 3. For this exercise, you'll need to edit the form code. You can do this by going to the live example above and pressing the "Play" button, or by copying the form code into an HTML file and running it locally. Try editing the form to include `value="Bob"` on the first input. When you reload the code, you'll see that the first field has a value of "Bob" entered into it by default.
+> 3. For this exercise, you'll need to edit the form code. You can do this by opening the local example you created in your text editor, editing it there, and saving it. Try editing the form to include `value="Bob"` on the first input. When you reload the code, you'll see that the first field has a value of "Bob" entered into it by default.
 
 #### Specialized text field inputs
 
@@ -206,7 +208,7 @@ The second exercise above raises an interesting point. The second input field sp
 
 ### `<label>` elements
 
-As we said above, {{htmlelement("label")}} elements provide identifying labels associated with the form controls that describe the data that should be entered into them. You can put whatever text content you like in `<label>` elements, but they should accurately describe what data the associated form control expects. The association is created by giving the form control an `id` attribute, then giving the `<label>` element a `for` attribute with the same value as the control's `id`.
+As we said above, {{htmlelement("label")}} elements provide identifying labels associated with form controls that describe the data that should be entered into them. You can put whatever text content you like in `<label>` elements, but they should accurately describe what data the associated form control expects. The association is created by giving the form control an `id` attribute, then giving the `<label>` element a `for` attribute with the same value as the control's `id`.
 
 For example:
 
@@ -217,8 +219,8 @@ For example:
 
 `<label>` elements are important for several reasons, most notably that:
 
-- When visually impaired users use a screen reader to help them read and interact with web page content, the screen reader will read out the associated label text when each control is encountered, making it easier for them to understand what content should be entered into each one.
-- It enables you to focus the form element by clicking on the label text as well as the control itself. This is especially useful for mobile phone users, where it can be difficult to accurately select a form element with your finger on a touch screen. Making the **hit area** larger is useful in such circumstances.
+- When visually impaired users use a screen reader to help them read and interact with web page content, the screen reader will read out the associated label text when each control is encountered. This makes it easier for the users to understand what content should be entered into each control.
+- They enable you to focus the form elements by clicking on their label text as well as the controls. This is especially useful for mobile phone users, where it can be difficult to accurately select a form element with your finger on a touch screen. Making the **hit area** larger is useful in such circumstances.
 
 #### Explicit and implicit form labels
 
@@ -233,17 +235,17 @@ The form label style you saw above is called an **explicit form label** — the 
 
 The nesting makes an implicit association between control and label, and you no longer need the `id` and `for` attributes.
 
-Either approach is OK, but we'd recommend using the explicit labeling approach. This is because the explicit association is usually easier to identify and understand, especially as your HTML code gets more complex. In addition, screen readers (and other assistive technologies) don't all handle implicit labels correctly.
+Either approach is OK, but we'd recommend using the explicit labeling approach. This is because the explicit association is usually easier to identify and understand, especially as your HTML code gets more complex. In addition, screen readers (and other assistive technologies) don't always handle implicit labels correctly.
 
 You can read more about form labeling best practices in [HTML Inputs and Labels: A Love Story](https://css-tricks.com/html-inputs-and-labels-a-love-story/), csstricks.com (2021).
 
 ### The `<button>` element
 
-When a {{htmlelement("button")}} element is included inside a `<form>` element, its default behavior is that it will submit the form, provided the data is valid. You've already seen this behavior when playing with our basic form example above.
+When a {{htmlelement("button")}} element is included inside a `<form>` element, its default behavior is that it will submit the form, provided there is no invalid data present causing submission to be blocked by client-side form validation. You've already seen this behavior when playing with our basic form example above.
 
-There are other button behaviors that can be specified via use of the `<button>` element's `type` attribute:
+There are other button behaviors that can be specified via the `<button>` element's `type` attribute:
 
-- `<button type="submit">` explicitly declares that a button should behave like a submit button. You don't ever really need to declare this, unless for some reason you are including other buttons inside your `<form>`, and you want to make it clear which one the submit button is. And this will be very rare.
+- `<button type="submit">` explicitly declares that a button should behave like a submit button. You don't ever really need to declare this, unless for some reason you are including other buttons inside your `<form>`, and you want to make it clear which one the submit button is. This will be very rare.
 - `<button type="reset">` creates a _reset button_ — this immediately deletes all data out of the form, resetting it to its initial state. **Don't use reset buttons** — they used to be popular in the early days of the web, but they are usually more annoying than they are helpful. Most people have experienced filling out a long form only to click the reset button by accident instead of the submit button, meaning they have to start again.
 - `<button type="button">` creates a button with the same behavior as buttons specified outside of `<form>` elements. As we saw earlier, they do absolutely nothing by default, and JavaScript is needed to give them functionality.
 
@@ -254,7 +256,7 @@ There are other button behaviors that can be specified via use of the `<button>`
 
 We've already talked about the importance of form labels for accessibility, but we also wanted to include some commentary on the general importance of using the correct semantic elements to create forms (for example, use a `<button>` to submit your form, and not a `<div>` programmed to behave like a `<button>`.) It is perfectly possible to use a combination of CSS and JavaScript to make pretty much any HTML element look and behave like a form element. Developers usually do this for design reasons — some form controls are hard to style.
 
-However, when you do this, you are making life harder for yourself and your users. The browser provides so many `<button>` and form control features by default, with no JavaScript or other extra code required, to make forms more usable for all users.
+However, when you do this, you are making life harder for yourself and your users. The browser provides several `<button>` and form control features by default, with no JavaScript or other extra code required, to make forms more usable for all users.
 
 For example:
 
@@ -262,7 +264,7 @@ For example:
 - Form controls and buttons are keyboard-accessible by default. In the previous example, try moving forward and backward between the form elements using <kbd>Tab</kbd> and <kbd>Shift</kbd> + <kbd>Tab</kbd> (called "tabbing").
 - Notice also how tabbing between the form elements causes the focused element to be highlighted using a blue outline (called the **focus outline**). This is an important feature for keyboard users to know where they currently are in the form.
 
-If you don't use the correct semantic elements to implement your forms, you'll have re-implement all of this functionality, otherwise your form elements will not behave as users expect, and they will seem broken. It all adds up.
+If you don't use the correct semantic elements to implement your forms, you'll have re-implement all of this functionality, otherwise your form elements will not behave as users expect, and therefore seem broken. It all adds up.
 
 ## Other control types
 
@@ -330,17 +332,17 @@ This is rendered as follows:
 
 {{EmbedLiveSample("form-other-controls", "100%", "500")}}
 
-We'd recommend that you open a version of this example in a separate tab as you work through the next few sections, in which we look at each control type in turn. To achieve this, open the above example in the MDN Playground by clicking the "Play" button in the top-right corner. This will also allow you to edit the code as required by some of the exercise sections below. You can also find a standalone version at [Other form controls example](#).
+We'd recommend that you open this example in a separate browser tab as you work through the next few sections, in which we look at each control type in turn. To achieve this, copy the code into an HTML file using your code editor, and open it in a browser tab.
 
 > [!CALLOUT]
 >
 > **Try it out**
 >
-> Before moving on, play with the different form controls, select some values, and try submitting it.
+> Before moving on, play with the different form controls, select some values, and try submitting the form.
 
 ### Radio buttons
 
-The "Choose hotel room type" buttons are implemented using [`<input type="radio">`](/en-US/docs/Web/HTML/Element/input/radio) controls. these render as a set of push button controls where only one of the set can be selected at any one time — you can't select more than one at once. They are named after the buttons found on old-fashioned radios, where you select one and the previously-selected one pops out again.
+The "Choose hotel room type" buttons are implemented using [`<input type="radio">`](/en-US/docs/Web/HTML/Element/input/radio) controls. These render as a set of push button controls where only one of the set can be selected at any one time — you can't select more than one at once. They are named after the buttons found on old-fashioned radios, where you press one button and the previously-selected one pops out again.
 
 Our example code look looks like this:
 
@@ -360,14 +362,14 @@ Our example code look looks like this:
 </fieldset>
 ```
 
-`"radio"` input types mostly work the same as `"radio"` input types, but with a few differences:
+`radio` input types mostly work the same as `text` input types, but with a few differences:
 
-- The `name` attributes for each set of radio buttons have to contain the same value, to associate them together as one set. If they contain different values, they will effectively be separate groups, with different values on submission.
+- The `name` attributes for each set of radio buttons have to contain the same value, to associate them together as one set. If they contain different values, they will effectively be separate sets, with different values on submission.
 - You have to include a `value` attribute containing the value to submit for each radio button. The submitted value will be a name/value pair, but the name will always be the same, for example `hotel=economy` or `hotel=superior`.
 - The `<label>` for each radio button should describe that particular value choice, rather than the overall value you are selecting. The preferred way to provide a description of the overall value choice is to wrap them in a {{htmlelement("fieldset")}}, which takes a {{htmlelement("legend")}} element as a child that contains the description.
 
 > [!NOTE]
-> Besides structuring and labelling forms, fieldsets have other uses, such as [disabling](#disabling_form_controls) an entire set of controls as a single unit.
+> Besides structuring and labeling forms, fieldsets have other uses, such as [disabling](#disabling_form_controls) an entire set of controls as a single unit.
 
 It's also worth noting that we've applied the `checked` attribute to the first radio button — this causes it be selected when the page first loads. This is how we justify marking the hotel room type value as "required" — one option will always be selected, and you can't deselect a radio button without selecting another one.
 
@@ -375,28 +377,27 @@ It's also worth noting that we've applied the `checked` attribute to the first r
 >
 > **Try it out**
 >
-> Try removing the `checked` attribute from the first radio button to see the effect it has. Put it back before you move on.
+> Try removing the `checked` attribute from the first radio button, save, then reload, to see the effect it has. Put it back before you move on.
 
 #### Disabling form controls
 
 In the radio button example, you'll notice that the third radio button has the `disabled` attribute set on it. This causes the rendered control to be grayed out and unselectable. This is useful in many situations where an option is normally available, just not right now. For example, a product might be out of stock, or as in our example's case, penthouse suites are all booked up!
 
-You can set the `disabled` attribute on any form control, including `<button>` element. `<fieldset>` elements can also accept the `disabled` attribute — this causes every from control inside the fieldset to be disabled.
+You can set the `disabled` attribute on any form control, including `<button>` elements. `<fieldset>` elements can also accept the `disabled` attribute — this causes every form control inside the fieldset to be disabled.
 
 > [!CALLOUT]
 >
 > **Try it out**
 >
-> Try setting the `disabled` attribute on the two `<fieldset>` elements to see the effect it has. Remove them again before moving on.
+> Try setting the `disabled` attribute on the two `<fieldset>` elements, save, then reload, to see the effect it has. Remove them again before moving on.
 
 ### Checkboxes
 
-Our "classes to attend" selectors are implemented using [`<input type="checkbox">`](/en-US/docs/Web/HTML/Element/input/checkbox) controls. these render as a set of on/off state checkboxes — you can select more than one at once.
+Our "classes to attend" selectors are implemented using [`<input type="checkbox">`](/en-US/docs/Web/HTML/Element/input/checkbox) controls. these render as a set of on/off state checkboxes. Unlike radio buttons, you can select more than one at once.
 
 ```html-nolint
 <fieldset>
   <legend>Choose classes to attend:</legend>
-
   <div>
     <input type="checkbox" id="yoga" name="yoga" />
     <label for="yoga">Yoga (+$10)</label>
@@ -410,9 +411,9 @@ Our "classes to attend" selectors are implemented using [`<input type="checkbox"
 </fieldset>
 ```
 
-As you can see from the code snippets, radio buttons and checkboxes are implemented in a very similar way (they can also take `checked` attributes to render them pre-selected when the page loads). They also behave in a fairly similar fashion, except that radio buttons allow you to choose zero or one item out of many, and checkboxes allow you to choose zero or more items out of many.
+As you can see from the code snippets, radio buttons and checkboxes are implemented in a very similar way (they can also take `checked` attributes to render them pre-selected when the page loads). They also behave in a fairly similar fashion, except that radio buttons allow you to choose zero or one items out of many, and checkboxes allow you to choose zero or more items out of many.
 
-The main difference (apart from the `type` value!) is that each checkbox has a different `name` value, and they generally aren't given `value` attributes. Behavior-wise, this means they represent different data values, whereas a radio button set only represents one. On submission, each value is submitted with a value of `on` if the checkbox was selected — `yoga=on`, `balloon=on`, etc.
+The main difference (apart from the `type` value!) is that each checkbox has a different `name` value, and they generally aren't given `value` attributes. Behavior-wise, this means they represent different data values, whereas a radio button set only represents one. On submission, each value is submitted with a value of `on` if the checkbox was checked — `yoga=on`, `balloon=on`, etc.
 
 > [!NOTE]
 > It is possible to change the value submitted for a checkbox by giving it a `value` attribute, for example: `<input type="checkbox" id="yoga" name="yoga" value="yes" />` would result in `yoga=yes` being submitted if checked. However, there is not much point doing this. A checkbox is either submitted with a single value if checked, or it isn't submitted at all. It doesn't really matter what value is sent to the server.
@@ -450,7 +451,7 @@ Multi-line text input fields are created using {{htmlelement("textarea")}} eleme
 <textarea id="comments" name="comments" rows="5" cols="33"></textarea>
 ```
 
-They behave in the same way as `<input type="text">` elements, except that they allow multiple lines of text to be entered. The `rows` attribute specifies the number of rows tall the text area will be by default, while the `colss` attribute specifies the number of columns wide the text area will be by default. If they are not specified, the values used are `cols="20"` and `rows="2"`.
+They behave in the same way as `<input type="text">` elements, except that they allow multiple lines of text to be entered. The `rows` attribute specifies the number of rows tall the text area will be by default, while the `cols` attribute specifies the number of columns wide the text area will be by default. If they are not specified, the values used are `cols="20"` and `rows="2"`.
 
 > [!CALLOUT]
 >
@@ -460,14 +461,14 @@ They behave in the same way as `<input type="text">` elements, except that they 
 
 ## Form validation
 
-Earlier on, we looked at some of the basic client-side form validation provided by the browser — using the `required` attribute to specify that a field must be filled out before the form can be submitted and check the correct value type for specific value types like email addresses, URLs, numbers, etc. Validation is important for two main reasons:
+Earlier on, we looked at some of the basic client-side form validation provided by the browser. The `required` attribute is used to specify that a field must be filled out before the form can be submitted; it also checks the correct value type is entered for specific value types like email addresses, URLs, numbers, etc. Validation is important for two main reasons:
 
-- making sure that data is submitted in the correct format so that it doesn't cause errors in your application.
-- making sure data does not cause security problems. Bad people know how to submit data formatte specifically so that it, for example, can execute commands to delete databases or take control of a system.
+- Making sure that data is submitted in the correct format so that it doesn't cause errors in your application.
+- Making sure data does not cause security problems. Bad people know how to submit data formatted specifically so that, on insecure applications, it can execute commands to delete databases or take control of a system.
 
-Form validation is a huge topic that is beyond scope for this article, so we will leave it here for now. For now, bear in mind that there are two types of form validation:
+Form validation is a huge topic that is beyond scope for this article, so we will leave it here for now. Just bear in mind that there are two types of form validation:
 
-- Client-side validation, which happens in the browser, implemented using a combination of form validation attributes (like `required`) and JavaScript. Client-side validation is useful for giving users instant hints when they entered the wrong data, but is no so effective at stopping malicious data from getting through. It is too easy to turn off JavaScript or alter client-side code so that the validation no longer works.
+- Client-side validation, which happens in the browser, implemented using a combination of form validation attributes (like `required`) and JavaScript. Client-side validation is useful for giving users instant hints when they have entered the wrong data, but is not so effective at stopping malicious data from getting through. It is too easy to turn off JavaScript or alter client-side code so that the validation no longer works.
 - Server-side validation, which happens on the server, implemented using whatever language the server is using. Server-side validation is great for stopping malicious code, as it can't be tampered with easily. It is not so good at giving users hints about incorrect data as the data has to go to the server, get validated, and then the result sent back to the client before the user can be notified.
 
 In short, both client-side and server-side validation are needed. If you want to start learning more about validation, a good place to start is [Client-side form validation](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation).
