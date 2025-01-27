@@ -422,6 +422,7 @@ mkcol
 mkvirtualenv
 mlabeledtr
 mlym
+MMDD
 Mobi
 mod_autoindex
 modif
@@ -601,7 +602,6 @@ rcap
 readingerror
 readwriteflush
 reflectionchange
-reiwa
 removestream
 replacewithcommas
 replacewithspaces
