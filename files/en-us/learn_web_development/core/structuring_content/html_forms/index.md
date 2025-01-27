@@ -136,7 +136,7 @@ This is rendered as follows:
 
 {{EmbedLiveSample("form-anatomy", "100%", "200")}}
 
-Because of the way MDN works, you can enter text into the input fields, but you won't see the form submit properly when you press the button. Before following along with the next few sections, open our [Form anatomy example](#) in a separate browser tab.
+Because of the way MDN works, you can enter text into the input fields, but you won't see the form submit properly when you press the button. To follow along with the next sections, copy the HTML code above into a new HTML file and open it in a browser tab.
 
 ### The `<form>` element
 
