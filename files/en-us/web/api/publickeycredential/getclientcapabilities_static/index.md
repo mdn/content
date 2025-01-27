@@ -10,7 +10,7 @@ browser-compat: api.PublicKeyCredential.getClientCapabilities_static
 
 The **`getClientCapabilities()`** static method of the {{domxref("PublicKeyCredential")}} interface returns a {{jsxref("Promise")}} that resolves with an object that can be used to check whether or not particular WebAuthn client capabilities and [extensions](/en-US/docs/Web/API/Web_Authentication_API/WebAuthn_extensions) are supported.
 
-A WebAuthn Relying Party can evaluate these to offer appropriate workflows and experiences to users.
+A web application can use the information to appropriately customize the user interface and workflows.
 
 ## Syntax
 
@@ -77,7 +77,7 @@ If the key is not present for an extension then a Relying Party (RP) can't assum
 
 ### Check all capabilities
 
-This example shows how iterate the capabilities and their values.
+This example shows how iterate get the capabilities object and iterates its values.
 
 ```html hidden
 <pre id="log"></pre>
@@ -122,8 +122,6 @@ async function checkClientCapabilities() {
     for (const [key, value] of Object.entries(capabilities)) {
       log(` ${key}: ${value}`);
     }
-
-    // You can further use these capabilities to adjust your WebAuthn flow.
   }
 }
 ```
@@ -143,41 +141,73 @@ if (typeof PublicKeyCredential.getClientCapabilities === "function") {
 
 #### Result
 
-{{EmbedLiveSample("Test", "", "400")}}
+{{EmbedLiveSample("Check all capabilities", "", "370")}}
 
-### Example 2 : A more workflow centric test
+### Test for user verifying platform authenticator
 
-<!--
-OK, so a real example showing a workflow modification.
-```js
-// Check for specific capabilities:
-if (capabilities.relatedOrigins) {
-  log("Related Origins are supported.");
-} else {
-  log("Related Origins are NOT supported.");
+This example checks a single capability `userVerifyingPlatformAuthenticator`, and might then use the result to configure the user interface.
+
+```html hidden
+<pre id="log"></pre>
+<button id="reset" type="button">Reset</button>
+```
+
+```js hidden
+const logElement = document.querySelector("#log");
+function log(text) {
+  logElement.innerText = `${logElement.innerText}${text}\n`;
+  logElement.scrollTop = logElement.scrollHeight;
+}
+
+const reload = document.querySelector("#reset");
+
+reload.addEventListener("click", () => {
+  window.location.reload(true);
+});
+```
+
+```css hidden
+#log {
+  height: 130px;
+  overflow: scroll;
+  padding: 0.5rem;
+  border: 1px solid black;
 }
 ```
--->
 
-<!--
+#### JavaScript
+
+The code is similar to the previous example, except that we check a particular returned capability, and we use `try...catch` to catch the case where `getClientCapabilities()` is not supported.
+
 ```js
-PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable()
-  .then((available) => {
-    if (available) {
-      // We can proceed with the creation of a PublicKeyCredential
-      // with this authenticator
+checkisUserVerifyingPlatformAuthenticatorAvailable();
+
+async function checkisUserVerifyingPlatformAuthenticatorAvailable() {
+  try {
+    const capabilities = await PublicKeyCredential.getClientCapabilities();
+
+    if (capabilities.userVerifyingPlatformAuthenticator) {
+      log("We can proceed with creation of a PublicKeyCredential (true)");
     } else {
-      // Use another kind of authenticator or a classical login/password
-      // workflow
+      log("userVerifyingPlatformAuthenticator not supported. Do fallback.");
     }
-  })
-  .catch((err) => {
-    // Something went wrong
-    console.error(err);
-  });
+  } catch (error) {
+    if (error instanceof TypeError) {
+      log(
+        "PublicKeyCredential.getClientCapabilities() is not supported on this browser.",
+      );
+    } else {
+      log(`Unexpected error: ${error}`);
+    }
+  }
+}
 ```
 
--->
+#### Result
+
+The log below displays either a string indicating the method is not supported, or one that indicates whether or not the `userVerifyingPlatformAuthenticator` is supported.
+
+{{EmbedLiveSample("Test for user verifying platform authenticator", "", "200")}}
 
 ## Specifications
 
@@ -189,4 +219,4 @@ PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable()
 
 ## See also
 
-[Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API)
+- [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API)
