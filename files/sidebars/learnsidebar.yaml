@@ -312,7 +312,7 @@ l10n:
     Django_web_framework_(Python): Django Web-Framework (Python)
     Further_resources: Weitere Ressourcen
     Getting_started_modules: Einstiegsmodule
-    Environment_setup: Einrichtungsumgebung
+    Environment_setup: Umgebung einrichten
     Your_first_website: Ihre erste Website
     Web_standards: Webstandards
     Soft_skills: Soziale Kompetenzen
@@ -327,7 +327,7 @@ l10n:
     Version_control: Versionskontrolle
     Extension_modules: Erweiterungsmodule
     Understanding_client-side_tools: Verständnis für clientseitige Tools
-    Server-side_websites: Serverseitige Websites
+    Server-side_websites: Serverseitige Programmierung
     Server-side_first_steps: Erste Schritte auf der Serverseite
     Express_web_framework_(Node.js): Express Web-Framework (Node.js)
     Web_performance: Web-Performance
