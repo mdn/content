@@ -57,15 +57,15 @@ l10n:
     WebAssembly_home_page: WebAssembly-Startseite
     Tutorials: Anleitungen
     WebAssembly_concepts: WebAssembly-Konzepte
-    Compiling_to_wasm: Kompilieren von C/C++ zu WebAssembly
-    Compiling_rust_to_wasm: Kompilieren von Rust zu WebAssembly
-    JavaScript_API: Verwenden der WebAssembly-JavaScript-API
-    Text_format: Verständnis des WebAssembly-Textformats
-    Text_format_to_wasm: Umwandeln des WebAssembly-Textformats in wasm
-    Loading_and_running: Laden und Ausführen von WebAssembly-Code
+    Compiling_to_wasm: C/C++ zu WebAssembly kompilieren
+    Compiling_rust_to_wasm: Rust zu WebAssembly kompilieren
+    JavaScript_API: WebAssembly-JavaScript-API verwenden
+    Text_format: WebAssembly-Textformat verstehen
+    Text_format_to_wasm: WebAssembly-Textformat in wasm umwandeln
+    Loading_and_running: WebAssembly-Code laden und ausführen
     Exported_functions: Exportierte WebAssembly-Funktionen
-    JavaScript_builtins: JavaScript-Eingebauten
-    Imported_string_constants: Importierte globale Zeichenkettenkonstanten
+    JavaScript_builtins: JavaScript-Standardobjekte
+    Imported_string_constants: Importierte globale String-Konstanten
     JavaScript_interface: JavaScript-Schnittstelle
   en-US:
     WebAssembly_home_page: WebAssembly home page

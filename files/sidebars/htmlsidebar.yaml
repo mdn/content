@@ -78,8 +78,8 @@ sidebar:
 l10n:
   de:
     Beginners: Einsteiger-Tutorials
-    Creating_the_content: "Ihre erste Website: Erstellen der Inhalte"
-    Structuring_content_with_HTML: Strukturierung von Inhalten mit HTML
+    Creating_the_content: "Ihre erste Website: Inhalte erstellen"
+    Structuring_content_with_HTML: Inhalte mit HTML strukturieren
     Reference: Referenzen
     HTML_Elements: HTML-Elemente
     Global_attributes: Globale Attribute
