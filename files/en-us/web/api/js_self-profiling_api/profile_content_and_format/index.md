@@ -71,7 +71,7 @@ The profile object contains four properties, all arrays:
     - `frameId`: the index of an element in `frames` which represents the most-nested frame in the stack.
     - `parentId`: the index of another entry in `stacks`, which represents the call stack up to but not including the frame represented by `frameId`. This is not present if the frame represented by `frameId` was at the top level of the stack.
 
-## An example
+## Example
 
 In the following example we have a web page that contains a button: when the user presses the button, the page generates some prime numbers.
 
@@ -130,7 +130,7 @@ export function genPrimes() {
 }
 ```
 
-If we run this code, we'll get a profile that's something like this:
+If we run this code, a profile such as the one below will be logged to the developer tools console:
 
 ```json
 {

@@ -29,7 +29,7 @@ async function profileGeneratePrimes() {
 }
 ```
 
-The profiler is a _sampling profiler_: this means that it periodically records (or _samples_),the current state of the JavaScript {{glossary("call stack")}}. The profile consists of the collection of these samples. This enables you to understand where, statistically, the program is spending most of its time.
+The profiler is a _sampling profiler_: this means that it periodically records (or _samples_) the current state of the JavaScript {{glossary("call stack")}}. The profile consists of the collection of these samples. This enables you to understand where, statistically, the program is spending most of its time.
 
 To understand exactly what a profile contains and how it is formatted, see [Profile anatomy and format](/en-US/docs/Web/API/JS_Self-Profiling_API/Profile_content_and_format).
 
