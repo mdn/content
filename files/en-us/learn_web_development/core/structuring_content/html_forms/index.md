@@ -10,7 +10,7 @@ page-type: tutorial-chapter
 
 HTML forms and buttons are powerful tools for interacting with a website's users. Most commonly, they provide users with controls to manipulate a user interface (UI) or input data when required.
 
-In this article we provide an introduction to the basics of forms and buttons. There is a lot more know — a lot of input types and form features are not mentioned here — but this will give you what you need to know at this stage. The advanced/specialized cases can be studied on a need-to-know basis, as part of the constant learning you'll experience throughout your career.
+In this article, we provide an introduction to the basics of forms and buttons. There is a lot more to know — a lot of input types and form features are not mentioned — but this article will give you a solid foundation for most cases. You can learn the advanced or specialized uses on a need-to-know basis as part of the constant learning you'll do throughout your career.
 
 <table>
   <tbody>
