@@ -235,7 +235,7 @@ The nesting makes an implicit association between control and label, and you no 
 
 Either approach is OK, but we'd recommend using the explicit labeling approach. This is because the explicit association is usually easier to identify and understand, especially as your HTML code gets more complex. In addition, screen readers (and other assistive technologies) don't all handle implicit labels correctly.
 
-You can read more about form labelling best practices in [HTML Inputs and Labels: A Love Story](https://css-tricks.com/html-inputs-and-labels-a-love-story/), csstricks.com (2021).
+You can read more about form labeling best practices in [HTML Inputs and Labels: A Love Story](https://css-tricks.com/html-inputs-and-labels-a-love-story/), csstricks.com (2021).
 
 ### The `<button>` element
 
