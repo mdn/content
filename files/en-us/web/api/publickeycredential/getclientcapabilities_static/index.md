@@ -32,6 +32,7 @@ The WebAuthn client capability strings are:
   - : The client is capable of conditional mediation when creating/registering credentials.
 - `conditionalGet`
   - : The client is capable of conditional mediation when authenticating credentials (using [`mediation=conditional`](/en-US/docs/Web/API/CredentialsContainer/get#conditional) in your [`get()`](/en-US/docs/Web/API/CredentialsContainer/get) call).
+    This means that the client supports workflows where the credentials can be silently fetched/autofilled on sign in.
     This capability is equivalent to [`isConditionalMediationAvailable()`](/en-US/docs/Web/API/PublicKeyCredential/isConditionalMediationAvailable_static) resolving to `true`.
 - `hybridTransport`
   - : The client supports usage of the [hybrid](/en-US/docs/Web/API/AuthenticatorAttestationResponse/getTransports#hybrid) transport.
@@ -65,9 +66,12 @@ The returned {{jsxref("Promise")}} may be rejected with the following values:
 ## Description
 
 The method allows you to check if a given capability or extension is supported, and use the information offer an appropriate user experience.
+
 For example, support for the `userVerifyingPlatformAuthenticator` capability indicates that biometrics such as a fingerprint sensor are allowed.
 A web application could use this to display a fingerprint icon if the capability is supported, or a password input if it is not.
 If biometric login is required, then it could instead provide notification that the site cannot authenticate using this browser or device.
+Similarly, `conditionalGet` indicates that the client supports conditional mediation when signing in a user, which allows for the browser to silently autofill credentials.
+In this case the user might simply be offered a sign-in button in order to log in to the site.
 
 If the value of a given capability is present in the map, then `true` indicates that the capability is currently supported, and `false` indicates that it is not.
 However if a key is not present for a particular capability, no assumptions can be made about the availability of the associated feature.
