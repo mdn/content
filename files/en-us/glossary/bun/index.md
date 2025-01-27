@@ -10,6 +10,7 @@ page-type: glossary-definition
 
 Unlike [Node.js](https://nodejs.org/) and [Deno](https://deno.com/), Bun is built on Apple's [JavaScriptCore](https://trac.webkit.org/wiki/JavaScriptCore). Notable features of Bun include:
 
+- Drop-in Node.js replacement: almost all Node.js programs can run using Bun-equivalent commands.
 - State-of-the-art JavaScript execution speed in most real-world scenarios.
 - Native support for JavaScript syntax extensions like JSX and TypeScript.
 - Global cache for managing package installations to minimize disk usage.
