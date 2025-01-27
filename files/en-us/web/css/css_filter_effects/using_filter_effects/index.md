@@ -82,7 +82,7 @@ img {
 }
 ```
 
-{{EmbedLiveSample("Applying_sepia_filter_effect", 600, 300)}}
+{{EmbedLiveSample("Applying_sepia_filter_effect", 600, 550)}}
 
 ### Applying filter effects to other elements
 
@@ -150,7 +150,7 @@ p {
 </div>
 ```
 
-{{EmbedLiveSample('Applying_multiple_filters','100%','280')}}
+{{EmbedLiveSample('Applying_multiple_filters','100%','300')}}
 
 ### Applying repeated filters
 
@@ -315,7 +315,7 @@ The SVG `url()` filter value can be included as the value of the SVG [`<image>`]
 }
 ```
 
-{{EmbedLiveSample('blur_example','100%','280')}}
+{{EmbedLiveSample('blur_example','100%','550')}}
 
 ## See also
 
