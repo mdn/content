@@ -249,7 +249,7 @@ console.log(getScore()); // "Chamakh scored 5"
 A function can refer to and call itself. There are three ways for a function to refer to itself:
 
 1. The function's name
-2. [`arguments.callee`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/callee)
+2. [`arguments.callee`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/callee) (This feature is deprecated)
 3. An in-scope variable that refers to the function
 
 For example, consider the following function definition:
@@ -263,7 +263,7 @@ const foo = function bar() {
 Within the function body, the following are all equivalent:
 
 1. `bar()`
-2. `arguments.callee()`
+2. `arguments.callee()` (not recommended)
 3. `foo()`
 
 A function that calls itself is called a _recursive function_. In some ways, recursion is analogous to a loop. Both execute the same code multiple times, and both require a condition (to avoid an infinite loop, or rather, infinite recursion in this case).
