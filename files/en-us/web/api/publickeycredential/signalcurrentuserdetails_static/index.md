@@ -10,15 +10,9 @@ browser-compat: api.PublicKeyCredential.signalCurrentUserDetails_static
 
 {{APIRef("Web Authentication API")}}{{securecontext_header}}{{seecompattable}}
 
-The **`signalCurrentUserDetails()`** static method of the {{domxref("PublicKeyCredential")}} interface signals to the authenticator that a particular user has updated their user name and/or display name.
+The **`signalCurrentUserDetails()`** static method of the {{domxref("PublicKeyCredential")}} interface signals to the authenticator that a particular user has updated their user name and/or display name on the [relying party](https://en.wikipedia.org/wiki/Relying_party) (RP) server.
 
-## Description
-
-It is possible for the information stored in a user's authenticator about a [discoverable credential](/en-US/docs/Web/API/Web_Authentication_API#discoverable_credentials_and_conditional_mediation) (for example, [a passkey](https://passkeys.dev/)) to go out sync with the relying party's server. This can occur when the user updates their user name or display name on the relying party's site without updating the authenticator.
-
-The next time they try to sign in with a discoverable credential, the credential will still be presented to them with the old user name/display name in the relevant UI, which can result in a confusing user experience.
-
-To avoid this issue, `signalCurrentUserDetails()` should be called on the relying party site each time a user updates their user account details or signs in, to tell the authenticator that the user information has been updated. It is up to the authenticator how to handle this information, but the expectation is that it will synchronize its user information with the provided update.
+This allows the authenticator to update user account details, to make sure they stay in sync with those held by the RP. It should only be used when the current user is authenticated — after sign in, or when they change the metadata associated with their credentials on the RP site.
 
 ## Syntax
 
@@ -35,7 +29,7 @@ signalCurrentUserDetails(options)
     - `name`
       - : A string representing the updated user [`name`](/en-US/docs/Web/API/PublicKeyCredentialCreationOptions#name_2).
     - `rpId`
-      - : A string representing the [`id` of the relying party](/en-US/docs/Web/API/PublicKeyCredentialCreationOptions#id_2) that sent the signal.
+      - : A string representing the [`id` of the RP](/en-US/docs/Web/API/PublicKeyCredentialCreationOptions#id_2) that sent the signal.
     - `userId`
       - : A base64url-encoded string representing the [`id` of the user](/en-US/docs/Web/API/PublicKeyCredentialCreationOptions#id_3) the credentials relate to.
 
@@ -47,12 +41,21 @@ A {{jsxref("Promise")}} that resolves to {{jsxref("undefined")}}.
 
 The promise rejects with a `TypeError` {{domxref("DOMException")}} if the `userId` is not a valid base64url-encoded string.
 
+It also rejects with a `SecurityError` {{domxref("DOMException")}} if the RP domain is not valid.
+
+## Description
+
+It is possible for the information stored in a user's authenticator about a [discoverable credential](/en-US/docs/Web/API/Web_Authentication_API#discoverable_credentials_and_conditional_mediation) (for example, [a passkey](https://passkeys.dev/)) to go out sync with the RP server. This can occur when the user updates their user name or display name on the RP site without updating the authenticator.
+
+The next time they try to sign in with a discoverable credential, the credential will still be presented to them with the old user name/display name in the relevant UI, which can result in a confusing user experience.
+
+To avoid this issue, `signalCurrentUserDetails()` should be called on the RP site each time a user updates their user account details or signs in, to tell the authenticator that the user information has been updated. It is up to the authenticator how to handle this information, but the expectation is that it will synchronize its user information with the provided update.
+
 ## Examples
 
-The following snippet shows typical usage of `signalCurrentUserDetails()`:
+### Signaling the current user details
 
 ```js
-// Feature detection
 if (PublicKeyCredential.signalCurrentUserDetails) {
   await PublicKeyCredential.signalCurrentUserDetails({
     rpId: "example.com",

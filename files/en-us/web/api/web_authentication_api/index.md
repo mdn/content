@@ -117,13 +117,13 @@ A typical authentication flow is as follows:
 
 ### Discoverable credentials and conditional mediation
 
-A **discoverable credential** is one that stores credential IDs and associated metadata such as user names and display names in a client-side authenticator of some kind — such as a browser password manager, authenticator app, or hardware solution such as a YubiKey. Having this information available in the authenticator means that the relying party does not have to provide a `credentialId` when asserting it, although it can do if desired in the same way as you would for a non-discoverable credential.
+A **discoverable credential** is one that stores credential IDs and associated metadata such as [user names](/en-US/docs/Web/API/PublicKeyCredentialCreationOptions#name_2) and [display names](/en-US/docs/Web/API/PublicKeyCredentialCreationOptions#displayname) in a client-side authenticator of some kind — such as a browser password manager, authenticator app, or hardware solution such as a YubiKey. Having this information available in the authenticator means that the relying party does not have to provide a [`credentialId`](/en-US/docs/Web/API/PublicKeyCredentialRequestOptions#id) when asserting it, although it can do if desired in the same way as you would for a non-discoverable credential.
 
 A discoverable credential is created via a [`create()`](/en-US/docs/Web/API/CredentialsContainer/create) call with a specified [`residentKey`](/en-US/docs/Web/API/PublicKeyCredentialCreationOptions#residentkey), and then subsequently used for authentication via a [`get()`](/en-US/docs/Web/API/CredentialsContainer/get) call with **conditional mediation** specified, that is, [`mediation`](/en-US/docs/Web/API/CredentialsContainer/get#mediation) set to `conditional`.
 
 You can check whether conditional mediation is available on a specific user agent by calling the {{domxref("PublicKeyCredential.isConditionalMediationAvailable()")}} method.
 
-Conditional mediation results in discoverable credentials being presented to the user in a non-modal dialog box along with an indication of the origin requesting credentials. In practice, this means autofilling available credentials in your login forms. The metadata stored in discoverable credentials can be displayed to help users choose a credential when logging in. To display discoverable credentials in your login forms, you also need to include [`autocomplete="webauthn"`](/en-US/docs/Web/HTML/Attributes/autocomplete#webauthn) on your form fields.
+Conditional mediation results in discoverable credentials found in the authenticator being presented to the user in a non-modal dialog box along with an indication of the origin requesting credentials. In practice, this means autofilling available credentials in your login forms. The metadata stored in discoverable credentials can be displayed to help users choose a credential when logging in. To display discoverable credentials in your login forms, you also need to include [`autocomplete="webauthn"`](/en-US/docs/Web/HTML/Attributes/autocomplete#webauthn) on your form fields.
 
 [Passkeys](https://passkeys.dev/) are a significant use case for discoverable credentials; see [Create a passkey for passwordless logins](https://web.dev/articles/passkey-registration) and [Sign in with a passkey through form autofill](https://web.dev/articles/passkey-form-autofill) for implementation details. See also [Discoverable credentials deep dive](https://web.dev/articles/webauthn-discoverable-credentials) for more general information on discoverable credentials.
 
@@ -131,6 +131,12 @@ When conditional mediation is used for authentication, the prevent silent access
 
 > [!NOTE]
 > If no credentials are discovered, the non-modal dialog will not be visible, and the user agent can prompt the user to take action in a way that depends on the type of credential (for example, to insert a device containing credentials).
+
+It is possible for the information stored in a user's authenticator about a discoverable credential to go out sync with the relying party's server. The API provides methods to allow the relying party server to signal changes to the authenticator, so it can update its stored credentials:
+
+- {{domxref("PublicKeyCredential.signalAllAcceptedCredentials_static", "PublicKeyCredential.signalAllAcceptedCredentials()")}}
+- {{domxref("PublicKeyCredential.signalCurrentUserDetails_static", "PublicKeyCredential.signalCurrentUserDetails()")}}
+- {{domxref("PublicKeyCredential.signalUnknownCredential_static", "PublicKeyCredential.signalUnknownCredential()")}}
 
 ## Controlling access to the API
 
