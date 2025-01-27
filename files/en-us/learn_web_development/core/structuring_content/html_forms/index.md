@@ -471,7 +471,7 @@ Form validation is a huge topic that is beyond scope for this article, so we wil
 - Client-side validation, which happens in the browser, implemented using a combination of form validation attributes (like `required`) and JavaScript. Client-side validation is useful for giving users instant hints when they have entered the wrong data, but is not so effective at stopping malicious data from getting through. It is too easy to turn off JavaScript or alter client-side code so that the validation no longer works.
 - Server-side validation, which happens on the server, implemented using whatever language the server is using. Server-side validation is great for stopping malicious code, as it can't be tampered with easily. It is not so good at giving users hints about incorrect data as the data has to go to the server, get validated, and then the result sent back to the client before the user can be notified.
 
-In short, both client-side and server-side validation are needed. If you want to start learning more about validation, a good place to start is [Client-side form validation](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation).
+In short, don't decide between using either client-side or server-side validation - you will need both. You need client-side validation to give users feedback on their input and server-side validation to make sure messages are in a format your server can safely handle. If you want to start learning more about validation, a good place to start is [Client-side form validation](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation).
 
 ## Summary
 
