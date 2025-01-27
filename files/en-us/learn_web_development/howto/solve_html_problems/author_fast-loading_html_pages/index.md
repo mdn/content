@@ -190,5 +190,5 @@ Note: Even though these attributes do help a lot the first time a page is loaded
 ## See also
 
 - Book: ["Speed Up Your Site" by Andy King](https://www.websiteoptimization.com/)
-- The excellent and very complete [Best Practices for Speeding Up Your Website](https://developer.yahoo.com/performance/rules.html) (Yahoo!)
-- Tools for analyzing and optimizing performance: [Google PageSpeed Tools](https://developers.google.com/speed)
+- [Learn performance](https://web.dev/learn/performance) via web.dev (2023)
+- Tools for analyzing and optimizing performance: [Google PageSpeed Tools](https://developers.google.com/speed) and[PageSpeed Insights](https://pagespeed.web.dev/)
