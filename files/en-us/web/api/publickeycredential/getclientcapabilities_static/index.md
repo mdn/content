@@ -65,6 +65,9 @@ The returned {{jsxref("Promise")}} may be rejected with the following values:
 ## Description
 
 The method allows you to check if a given capability or extension is supported, and use the information offer an appropriate user experience.
+For example, support for the `userVerifyingPlatformAuthenticator` capability indicates that biometrics such as a fingerprint sensor are allowed.
+A web application could use this to display a fingerprint icon if the capability is supported, or a password input if it is not.
+If biometric login is required, then it could instead provide notification that the site cannot authenticate using this browser or device.
 
 If the value of a given capability is present in the map, then `true` indicates that the capability is currently supported, and `false` indicates that it is not.
 However if a key is not present for a particular capability, no assumptions can be made about the availability of the associated feature.
@@ -187,9 +190,9 @@ async function checkisUserVerifyingPlatformAuthenticatorAvailable() {
     const capabilities = await PublicKeyCredential.getClientCapabilities();
 
     if (capabilities.userVerifyingPlatformAuthenticator) {
-      log("We can proceed with creation of a PublicKeyCredential (true)");
+      log("Biometric login supported");
     } else {
-      log("userVerifyingPlatformAuthenticator not supported. Do fallback.");
+      log("Biometric login not supported. Do password.");
     }
   } catch (error) {
     if (error instanceof TypeError) {
@@ -203,9 +206,12 @@ async function checkisUserVerifyingPlatformAuthenticatorAvailable() {
 }
 ```
 
+Note that here we log the result of a check.
+In a real application we might update the user interface to show appropriate options for verifying the user.
+
 #### Result
 
-The log below displays either a string indicating the method is not supported, or one that indicates whether or not the `userVerifyingPlatformAuthenticator` is supported.
+The log below displays either a string indicating the method is not supported, or one that indicates whether biometric or password login is supported.
 
 {{EmbedLiveSample("Test for user verifying platform authenticator", "", "200")}}
 
