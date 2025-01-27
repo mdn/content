@@ -82,7 +82,7 @@ if (crossOriginIsolated) {
 
 If you enable COEP using `require-corp` and want to embed a cross origin resource that supports [CORS](/en-US/docs/Web/HTTP/CORS), you will need to explicitly specify the HTML [`crossorigin`](/en-US/docs/Web/HTML/Attributes/crossorigin) attribute so that it is requested in `cors` mode.
 
-For example, you would you this approach to fetch an image from a third-party site that supports CORS:
+For example, you would use this approach to fetch an image from a third-party site that supports CORS:
 
 ```html
 <img src="https://thirdparty.com/img.png" crossorigin />
