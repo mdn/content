@@ -14,6 +14,6 @@ Other writing systems have different baselines. For example, Tibetan and similar
 
 ## See also
 
-- [CSS box alignment](/en-US/docs/Web/CSS/CSS_box_alignment#types_of_alignment)
+- [CSS box alignment](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment#types_of_alignment)
 - [CSS inline layout](/en-US/docs/Web/CSS/CSS_inline_layout) module
 - [Baseline (Typography)](<https://en.wikipedia.org/wiki/Baseline_(typography)>) on Wikipedia

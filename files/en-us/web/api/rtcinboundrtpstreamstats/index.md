@@ -26,6 +26,9 @@ The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} re
 - {{domxref("RTCInboundRtpStreamStats.lastPacketReceivedTimestamp", "lastPacketReceivedTimestamp")}}
   - : A {{domxref("DOMHighResTimeStamp")}} indicating the time at which the last packet was received for this source.
     The [`timestamp`](#timestamp) property, on the other hand, indicates the time at which the statistics object was generated.
+- {{domxref("RTCInboundRtpStreamStats.mid", "mid")}}
+  - : A string that uniquely identifies the pairing of source and destination of the transceiver's stream.
+    This is the value of the corresponding {{domxref("RTCRtpTransceiver.mid")}} unless that is null, in which case the statistic property is not present.
 - {{domxref("RTCInboundRtpStreamStats.nackCount", "nackCount")}}
   - : An integer value indicating the total number of Negative ACKnowledgement (NACK) packets this receiver has sent.
 - {{domxref("RTCInboundRtpStreamStats.packetsDuplicated", "packetsDuplicated")}}

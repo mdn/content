@@ -97,6 +97,7 @@ sidebar:
     title: Functions
     tags: css-function
     details: closed
+    depth: 2
   - type: listSubPages
     path: /Web/CSS
     title: Types

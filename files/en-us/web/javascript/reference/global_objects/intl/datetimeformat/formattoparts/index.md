@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Intl.DateTimeFormat.formatToParts
 
 {{JSRef}}
 
-The **`formatToParts()`** method of {{jsxref("Intl.DateTimeFormat")}} instances allows locale-aware formatting of strings produced by this `Intl.DateTimeFormat` object.
+The **`formatToParts()`** method of {{jsxref("Intl.DateTimeFormat")}} instances returns an array of objects representing each part of the formatted string that would be returned by {{jsxref("Intl/DatetimeFormat/format", "format()")}}. It is useful for building custom strings from the locale-specific tokens.
 
 {{EmbedInteractiveExample("pages/js/intl-datetimeformat-prototype-formattoparts.html", "taller")}}
 
@@ -20,65 +20,57 @@ formatToParts(date)
 ### Parameters
 
 - `date` {{optional_inline}}
-  - : The date to format.
+
+  - : The date to format. Can be a {{jsxref("Date")}} or {{jsxref("Temporal.PlainDateTime")}} object. Additionally can be a {{jsxref("Temporal.PlainTime")}}, {{jsxref("Temporal.PlainDate")}}, {{jsxref("Temporal.PlainYearMonth")}}, or {{jsxref("Temporal.PlainMonthDay")}} object if the `DateTimeFormat` object was configured to print at least one relevant part of the date.
+
+    > [!NOTE]
+    > A {{jsxref("Temporal.ZonedDateTime")}} object will always throw a `TypeError`; use {{jsxref("Temporal/ZonedDateTime/toLocaleString", "Temporal.ZonedDateTime.prototype.toLocaleString()")}} or convert it to a {{jsxref("Temporal.PlainDateTime")}} object instead.
+
+    Omitting it results in formatting the current date (as returned by {{jsxref("Date.now()")}}), which could be slightly confusing, so it is advisable to always explicitly pass a date.
 
 ### Return value
 
-An {{jsxref("Array")}} of objects containing the formatted date in parts.
+An {{jsxref("Array")}} of objects containing the formatted date in parts. Each object has two properties, `type` and `value`, each containing a string. The string concatenation of `value`, in the order provided, will result in the same string as {{jsxref("Intl/DateTimeFormat/format", "format()")}}. The `type` may be one of the [date-time components](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#date-time_component_options):
 
-## Description
-
-The `formatToParts()` method is useful for custom formatting of date
-strings. It returns an {{jsxref("Array")}} of objects containing the locale-specific
-tokens from which it possible to build custom strings while preserving the
-locale-specific parts. The structure the `formatToParts()` method returns,
-looks like this:
-
-```js
-[
-  { type: "day", value: "17" },
-  { type: "weekday", value: "Monday" },
-];
-```
-
-Possible types are the following:
-
-- `day`
-  - : The string used for the day, for example `"17"`.
-- `dayPeriod`
-  - : The string used for the day period, for example, `"AM"`,
-    `"PM"`, `"in the morning"`, or `"noon"`
-- `era`
-  - : The string used for the era, for example `"BC"` or `"AD"`.
-- `fractionalSecond`
-  - : The string used for the fractional seconds, for example `"0"` or `"00"` or `"000"`.
-- `hour`
-  - : The string used for the hour, for example `"3"` or `"03"`.
-- `literal`
-  - : The string used for separating date and time values, for example `"/"`,
-    `","`, `"o'clock"`, `"de"`, etc.
-- `minute`
-  - : The string used for the minute, for example `"00"`.
-- `month`
-  - : The string used for the month, for example `"12"`.
-- `relatedYear`
-  - : The string used for the related 4-digit Gregorian year, in the event that the
-    calendar's representation would be a yearName instead of a year, for example `"2019"`.
-- `second`
-  - : The string used for the second, for example `"07"` or `"42"`.
-- `timeZoneName`
-  - : The string used for the name of the time zone, for example `"UTC"`. Default is the timezone of the current environment.
 - `weekday`
-  - : The string used for the weekday, for example `"M"`, `"Monday"`, or `"Montag"`.
+  - : For example `"M"`, `"Monday"`, or `"Montag"`.
+- `era`
+  - : For example `"BC"` or `"AD"`.
 - `year`
-  - : The string used for the year, for example `"2012"` or `"96"`.
+  - : For example `"2012"` or `"96"`.
+- `month`
+  - : For example `"12"` or `"January"`.
+- `day`
+  - : For example `"17"`.
+- `dayPeriod`
+  - : For example `"AM"`, `"PM"`, `"in the morning"`, or `"noon"`.
+- `hour`
+  - : For example `"3"` or `"03"`.
+- `minute`
+  - : For example `"00"`.
+- `second`
+  - : For example `"07"` or `"42"`.
+- `fractionalSecond`
+  - : For example `"0"`, `"00"`, or `"000"`.
+- `timeZoneName`
+  - : For example `"UTC"`, `"CET"`, or `"Central European Time"`.
+
+The `type` may also be one of the following:
+
+- `literal`
+  - : Any string that's a part of the format pattern and not influenced by the `date`; for example `"/"`, `", "`, `"o'clock"`, `"de"`, `" "`, etc.
+- `relatedYear`
+  - : A 4-digit Gregorian year, in the event that the calendar's representation would be a `yearName` instead of a year; for example `"2019"`. See [named years](#named_years) for more details.
 - `yearName`
-  - : The string used for the yearName in relevant contexts, for example `"geng-zi"`
+  - : The name given to the year, usually in calendars without the concept of continuous years; for example `"geng-zi"`.
+- `unknown`
+  - : Reserved for any token that's not recognized as any of the above; should be rarely encountered.
 
 ## Examples
 
-`DateTimeFormat` outputs localized, opaque strings that cannot be
-manipulated directly:
+### Using formatToParts()
+
+The `format()` method outputs localized, opaque strings that cannot be manipulated directly:
 
 ```js
 const date = Date.UTC(2012, 11, 17, 3, 0, 42);
@@ -100,9 +92,7 @@ formatter.format(date);
 // "Monday, 12/17/2012, 3:00:42.000 AM"
 ```
 
-However, in many User Interfaces there is a desire to customize the formatting of this
-string. The `formatToParts` method enables locale-aware formatting of strings
-produced by `DateTimeFormat` formatters by providing you the string in parts:
+However, in many user interfaces you may want to customize the formatting of this string, or interleave it with other texts. The `formatToParts()` method produces the same information in parts:
 
 ```js
 formatter.formatToParts(date);
@@ -128,12 +118,7 @@ formatter.formatToParts(date);
 ];
 ```
 
-Now the information is available separately and it can be formatted and concatenated
-again in a customized way. For example by using {{jsxref("Array.prototype.map()")}},
-[arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions),
-a [switch statement](/en-US/docs/Web/JavaScript/Reference/Statements/switch),
-[template literals](/en-US/docs/Web/JavaScript/Reference/Template_literals),
-and {{jsxref("Array.prototype.join()")}}.
+Now the information is available separately and it can be formatted and concatenated again in a customized way. For example by using {{jsxref("Array.prototype.map()")}}, [arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions), a [switch statement](/en-US/docs/Web/JavaScript/Reference/Statements/switch), [template literals](/en-US/docs/Web/JavaScript/Reference/Template_literals), and {{jsxref("Array.prototype.join()")}}, to insert additional markup for certain components.
 
 ```js
 const dateString = formatter
@@ -147,52 +132,20 @@ const dateString = formatter
     }
   })
   .join("");
-```
-
-This will emphasize the day period when using the `formatToParts()` method.
-
-```js
-console.log(formatter.format(date));
-// "Monday, 12/17/2012, 3:00:42.000 AM"
 
 console.log(dateString);
 // "Monday, 12/17/2012, 3:00:42.000 <em>AM</em>"
 ```
 
-### Named Years and Mixed calendars
+### Named years
 
-In some cases, calendars use named years. Chinese and Tibetan calendars, for example,
-use a 60-year [sexagenary cycle](https://en.wikipedia.org/wiki/Sexagenary_cycle) of named years.
-These years are disambiguated by relationship to
-corresponding years on the Gregorian calendar. When this is the case, the result of
-`formatToParts()` will contain an entry for `relatedYear` when a
-year would normally be present, containing the 4-digit Gregorian year, instead of an
-entry for `year`. Setting an entry in the bag for `year` (with any
-value) will yield both the and the `yearName` Gregorian
-`relatedYear`:
-
-```js
-const opts = { year: "numeric", month: "numeric", day: "numeric" };
-const df = new Intl.DateTimeFormat("zh-u-ca-chinese", opts);
-df.formatToParts(Date.UTC(2012, 11, 17, 3, 0, 42));
-
-// return value
-[
-  { type: "relatedYear", value: "2012" },
-  { type: "literal", value: "年" },
-  { type: "month", value: "十一月" },
-  { type: "day", value: "4" },
-];
-```
-
-If the `year` option is not set in the bag (to any value), the result will
-include only the `relatedYear`:
+Some calendars use named years; for example, the Chinese and Tibetan calendars use a 60-year [sexagenary cycle](https://en.wikipedia.org/wiki/Sexagenary_cycle) of named years. These calendars do not have a universal way to unambiguously number each year, so years are disambiguated by relationship to corresponding years on the Gregorian calendar. In this case, when the `DateTimeFormat` is configured to output the year component, a token for `relatedYear` is output instead of `year`.
 
 ```js
 const df = new Intl.DateTimeFormat("zh-u-ca-chinese");
 df.formatToParts(Date.UTC(2012, 11, 17, 3, 0, 42));
 
-// return value
+// return value:
 [
   { type: "relatedYear", value: "2012" },
   { type: "literal", value: "年" },
@@ -201,37 +154,24 @@ df.formatToParts(Date.UTC(2012, 11, 17, 3, 0, 42));
 ];
 ```
 
-In cases where the `year` would be output, `.format()` may
-commonly present these side-by-side:
+Sometimes, the combination of date-time component options maps to a format that also includes a `yearName`. There isn't a separate option that controls whether `yearName` is displayed or not. For example, the options below sets `month` to `"long"` and results in a `yearName` token, despite `year` still being `"numeric"`:
 
 ```js
-const df = new Intl.DateTimeFormat("zh-u-ca-chinese", { year: "numeric" });
-df.format(Date.UTC(2012, 11, 17, 3, 0, 42)); // 2012壬辰年
+const opts = { year: "numeric", month: "long", day: "numeric" };
+const df = new Intl.DateTimeFormat("zh-u-ca-chinese", opts);
+df.formatToParts(Date.UTC(2012, 11, 17, 3, 0, 42));
+
+// return value:
+[
+  { type: "relatedYear", value: "2012" },
+  { type: "yearName", value: "壬辰" },
+  { type: "literal", value: "年" },
+  { type: "month", value: "十一月" },
+  { type: "day", value: "4" },
+];
 ```
 
-This also makes it possible to mix locale and calendar in both `format`:
-
-```js
-const df = new Intl.DateTimeFormat("en-u-ca-chinese", { year: "numeric" });
-const date = Date.UTC(2012, 11, 17, 3, 0, 42);
-df.format(date); // 2012(ren-chen)
-```
-
-And `formatToParts`:
-
-```js
-const opts = { month: "numeric", day: "numeric", year: "numeric" };
-const df = new Intl.DateTimeFormat("en-u-ca-chinese", opts);
-const date = Date.UTC(2012, 11, 17, 3);
-df.formatToParts(date);
-// [
-//   { type: 'month', value: '11' },
-//   { type: 'literal', value: '/' },
-//   { type: 'day', value: '4' },
-//   { type: 'literal', value: '/' },
-//   { type: 'relatedYear', value: '2012' }
-// ]
-```
+Because `format()` just concatenates all the `value` strings together, you will see the Gregorian year and the year name together in the output in this case.
 
 ## Specifications
 
@@ -245,6 +185,3 @@ df.formatToParts(date);
 
 - {{jsxref("Intl.DateTimeFormat")}}
 - {{jsxref("Intl/DateTimeFormat/format", "Intl.DateTimeFormat.prototype.format()")}}
-- {{jsxref("Date.prototype.toLocaleString()")}}
-- {{jsxref("Date.prototype.toLocaleDateString()")}}
-- {{jsxref("Date.prototype.toLocaleTimeString()")}}
