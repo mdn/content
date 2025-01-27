@@ -53,7 +53,7 @@ So far in the course, you have seen a couple of ways in which users can interact
 - [Links](/en-US/docs/Learn_web_development/Core/Structuring_content/Creating_links) can be used to navigate to different sections of content, either on the same page or a different page.
 - [`<video>` and `<audio>`](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio) elements generally feature controls such as play/pause, fast forward, rewind, etc., which allow users to consume media content as they wish.
 
-However, these features tend to faciliate one-way interactions, with users passively consuming content. This is fine, but the web is a two-way experience. Website users set preferences for how they want to experience content and services. They order taxis and request call backs. They provide feedback and make complaints. They buy products and get them delivered to their homes.
+However, these features tend to facilitate one-way interactions, with users passively consuming content. This is fine, but the web is a two-way experience. Website users set preferences for how they want to experience content and services. They order taxis and request call backs. They provide feedback and make complaints. They buy products and get them delivered to their homes.
 
 To provide this two-way experience, you need to use buttons and forms.
 
