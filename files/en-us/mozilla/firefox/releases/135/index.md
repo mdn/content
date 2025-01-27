@@ -34,7 +34,8 @@ This article provides information about the changes in Firefox 135 that affect d
 
 ### Security
 
-- [Certificate Transparency](/en-US/docs/Web/Security/Certificate_Transparency) is a standard for ensuring that certificates are publicly disclosed before web browsers will trust them. Firefox now supports this feature on desktop versions (but not Android), affecting servers that use certificates issued by a certificate authority in Mozilla's Root CA Program.
+- [Certificate Transparency](/en-US/docs/Web/Security/Certificate_Transparency) is a standard for ensuring that certificates are publicly disclosed before web browsers will trust them. Firefox now supports this feature on desktop versions (but not Android.
+  This affects servers that use certificates issued by a certificate authority in Mozilla's Root CA Program.
   ([Firefox bug 1938242](https://bugzil.la/1938242)).
 
 #### Removals
