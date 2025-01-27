@@ -117,6 +117,27 @@ A typical authentication flow is as follows:
 
 5. Once verified by the server, the authentication flow is considered successful.
 
+### Customizing workflows based on client capabilities
+
+The signup and login workflows can be customized based on the capabilities of the WebAuthn client (browser), which can be obtained using the {{domxref("PublicKeyCredential.getClientCapabilities_static", "PublicKeyCredential.getClientCapabilities()")}} static method.
+
+This method returns an object with properties named for capabilities or WebAuthn extensions, where the corresponding value indicates whether the feature is supported.
+This can be used, for example, to check various kinds of authenticators that the client supports, such as passkeys or biometric user verification, whether the client supports methods to keep relying party and authenticator credentials in sync, or allow a single passkey to be used on different websites with the same origin.
+
+The code below shows how you might use the method to check if the client supports authenticators that offer biometric user verification.
+
+```js
+async function checkisUserVerifyingPlatformAuthenticatorAvailable() {
+  const capabilities = await PublicKeyCredential.getClientCapabilities();
+  // Check the capability: userVerifyingPlatformAuthenticator
+  if (capabilities.userVerifyingPlatformAuthenticator) {
+    log("Biometric login supported");
+  } else {
+    log("Biometric login not supported. Do password.");
+  }
+}
+```
+
 ## Controlling access to the API
 
 The availability of WebAuthn can be controlled using a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy), specifying two directives in particular:

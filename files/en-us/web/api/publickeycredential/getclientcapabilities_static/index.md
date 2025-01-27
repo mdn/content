@@ -85,7 +85,7 @@ If the key is not present for an extension then a Relying Party (RP) can't assum
 
 ### Check all capabilities
 
-This example shows how iterate get the capabilities object and iterates its values.
+This example shows how to get the capabilities object and iterates its values.
 
 ```html hidden
 <pre id="log"></pre>
