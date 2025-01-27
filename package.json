@@ -18,8 +18,8 @@
   },
   "type": "module",
   "scripts": {
-    "info:deprecated": "echo '' && echo '🗑️  This command is deprecated, and will be removed soon.' && echo ''",
-    "info:rari": "echo '' && echo '🐥 This command is now using rari: https://github.com/mdn/rari' && echo '🐞 Please report any issues here:  https://github.com/mdn/rari/issues/new?template=bug.yml' && echo ''",
+    "info:deprecated": "printf '\\n🗑️  This command is deprecated, and will be removed soon.\\n\\n'",
+    "info:rari": "printf '\\n🐥 This command is now using rari: https://github.com/mdn/rari\\n🐞 Please report any issues here:  https://github.com/mdn/rari/issues/new?template=bug.yml\\n\\n'",
     "postinstall": "node scripts/update-history.js",
     "build": "yarn -s info:rari && env-cmd --silent cross-env CONTENT_ROOT=files BUILD_OUT_ROOT=build rari-build",
     "build:legacy": "yarn -s info:deprecated && env-cmd --silent cross-env CONTENT_ROOT=files BUILD_OUT_ROOT=build yari-build",
