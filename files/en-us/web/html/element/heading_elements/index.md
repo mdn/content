@@ -43,13 +43,19 @@ The HTML standard specifies that `<h1>` elements in a `<section>`, `<article>`, 
 To avoid getting smaller `<h1>`, and to avoid the rendering changing when browsers remove the special `<h1>` default styling, use the following style rule:
 
 ```css
-h1 { margin-block: 0.67em; font-size: 2em; }
+h1 {
+  margin-block: 0.67em;
+  font-size: 2em;
+}
 ```
 
 Alternatively, to avoid overwriting other style rules, use {{cssxref(":where()"}} which has zero specificity:
 
 ```css
-:where(h1) { margin-block: 0.67em; font-size: 2em; }
+:where(h1) {
+  margin-block: 0.67em;
+  font-size: 2em;
+}
 ```
 
 ## Accessibility
