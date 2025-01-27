@@ -516,6 +516,8 @@ const getCode = (function () {
 console.log(getCode()); // "0]Eal(eh&2"
 ```
 
+In the code above, a concept called [IIFE](https://developer.mozilla.org/en-US/docs/Glossary/IIFE) (Immediately Invoked Function Expression) is used which self executes as soon as it is made. Since it's not a named function, we know that it can not be called directly. Closure allows the unnamed returned function to know the details of `apiCode` without `apiCode` being in its local scope. Hence there is no way for changing the value of `apiCode`.
+
 > [!NOTE]
 > There are a number of pitfalls to watch out for when using closures!
 >
