@@ -233,7 +233,7 @@ The form label style you saw above is called an **explicit form label** — the 
 
 The nesting makes an implicit association between control and label, and you no longer need the `id` and `for` attributes.
 
-Either approach is OK, but we'd recommend using the explicit labelling approach. This is because we feel that the explicit association is easier to identify and understand, especially as your HTML code gets more complex. In addition, screen readers (and other assistive technologies) don't all handle implicit labels correctly.
+Either approach is OK, but we'd recommend using the explicit labeling approach. This is because the explicit association is usually easier to identify and understand, especially as your HTML code gets more complex. In addition, screen readers (and other assistive technologies) don't all handle implicit labels correctly.
 
 You can read more about form labelling best practices in [HTML Inputs and Labels: A Love Story](https://css-tricks.com/html-inputs-and-labels-a-love-story/), csstricks.com (2021).
 
