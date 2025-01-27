@@ -9,10 +9,10 @@ browser-compat: api.ClipboardItem
 
 The **`ClipboardItem`** interface of the [Clipboard API](/en-US/docs/Web/API/Clipboard_API) represents a single item format, used when reading or writing clipboard data using {{domxref("Clipboard.read()")}} and {{domxref("Clipboard.write()")}} respectively.
 
-The benefit of having the **`ClipboardItem`** interface to represent data items is that it enables developers to cope with the varying scope of file types and data.
+The **`ClipboardItem`** interface enables developers to use a single type to represent a range of different data formats.
 
 > [!NOTE]
-> The `read()` and `write()` methods can be used to work with text strings and arbitrary data items represented by {{domxref("Blob")}}s. However, if you are solely working with text, it is more convenient to use the {{domxref("Clipboard.readText()")}} and {{domxref("Clipboard.writeText()")}} methods.
+> The `read()` and `write()` methods can be used to work with text strings and arbitrary data items represented by {{domxref("Blob")}} instances. However, if you are solely working with text, it is more convenient to use the {{domxref("Clipboard.readText()")}} and {{domxref("Clipboard.writeText()")}} methods.
 
 ## Constructor
 
@@ -44,7 +44,7 @@ In this example we first define two constants containing references to a {{htmle
 
 Next, we define a function called `copyToClipboard()`. This starts off by storing a `"text/plain"` MIME type in a constant, then creating an object called `clipboardItemData` that contains one property with a key equal to the MIME type and a value of the text we want to copy to the clipboard (the content of the `<p>` element, in this case). Because we are working with text, we can pass it in directly rather than having to create a {{domxref("Blob")}}.
 
-We construct a new `ClipboardItem` object using the {{domxref("ClipboardItem.ClipboardItem", "ClipboardItem()")}} constructor, and pass it in to the {{domxref("Clipboard.write()")}} method to copy the text to the clipboard.
+We construct a new `ClipboardItem` object using the {{domxref("ClipboardItem.ClipboardItem", "ClipboardItem()")}} constructor, and pass it into the {{domxref("Clipboard.write()")}} method to copy the text to the clipboard.
 
 Finally, we add an event listener to the `<button>` so that it runs the function when pressed.
 
@@ -67,7 +67,7 @@ copyBtn.addEventListener("click", copyToClipboard);
 ### Writing an image to the clipboard
 
 Here we use {{domxref("ClipboardItem.supports_static", "supports()")}} to check whether the `image/svg+xml` MIME data type is supported.
-If it is, we fetch an SVG image with the ["Fetch API"](/en-US/docs/Web/API/Fetch_API), and then read it into a {{domxref("Blob")}}, which we can use to create a `ClipboardItem` that is written to the clipboard.
+If it is, we fetch an SVG image with the [Fetch API](/en-US/docs/Web/API/Fetch_API), and then read it into a {{domxref("Blob")}}, which we can use to create a `ClipboardItem` that is written to the clipboard.
 
 ```js
 async function writeClipImg() {

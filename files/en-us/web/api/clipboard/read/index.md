@@ -136,7 +136,7 @@ The example will fetch the image data from the clipboard and display the image i
 
 This example uses the `read()` method to read data from the clipboard and log whatever data is stored in the clipboard.
 
-This differs from the previous version in that it will display text, image, and other {{domxref("Blob")}}-type {{domxref("ClipboardItem")}} objects (rather than just images).
+This differs from the previous version in that it will display text, HTML, and image {{domxref("ClipboardItem")}} objects (rather than just images).
 
 #### HTML
 
