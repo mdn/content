@@ -145,7 +145,7 @@ async function getPermission(permission) {
     if (permission === "top-level-storage-access") {
       result = await navigator.permissions.query({
         name: permission,
-        requestedOrigin: window.location.origin
+        requestedOrigin: window.location.origin,
       });
     } else {
       result = await navigator.permissions.query({ name: permission });
