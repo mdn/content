@@ -206,7 +206,7 @@ The second exercise above raises an interesting point. The second input field sp
 
 ### `<label>` elements
 
-As we said above, {{htmlelement("label")}} element provide identifying labels associated with the form controls that describe the data that should be entered into them. You can put whatever text content you like in `<label>` elements, but they should accurately describe what data the associated form control expects. The association is created by giving the form control an `id` attribute, then giving the `<label>` element a `for` attribute with the same value as the control's `id`.
+As we said above, {{htmlelement("label")}} elements provide identifying labels associated with the form controls that describe the data that should be entered into them. You can put whatever text content you like in `<label>` elements, but they should accurately describe what data the associated form control expects. The association is created by giving the form control an `id` attribute, then giving the `<label>` element a `for` attribute with the same value as the control's `id`.
 
 For example:
 
