@@ -69,7 +69,7 @@ SQL injection types include Error-based SQL injection, SQL injection based on bo
 
 This vulnerability is present if user input that is passed to an underlying SQL statement can change the meaning of the statement. For example, the following code is intended to list all users with a particular name (`userName`) that has been supplied from an HTML form:
 
-```sql
+```python
 statement = "SELECT * FROM users WHERE name = '" + userName + "';"
 ```
 
@@ -81,24 +81,19 @@ SELECT * FROM users WHERE name = 'a';DROP TABLE users; SELECT * FROM userinfo WH
 
 The modified statement creates a valid SQL statement that deletes the `users` table and selects all data from the `userinfo` table (which reveals the information of every user). This works because the first part of the injected text (`a';`) completes the original statement.
 
-To avoid such attacks, the best practice is to use parameterized queries (prepared statements). This approach ensures that the user input is treated as a string of data rather than executable SQL.
+To avoid such attacks, the best practice is to use parameterized queries (prepared statements). This approach ensures that the user input is treated as a string of data rather than executable SQL, so that the user cannot abuse special SQL syntax characters to generate unintended SQL statements. The following is an example:
 
-In the following statement, we use parameterized query, which will treat the `name` and `password` as strings rather than executable SQL. This prevents users from injecting malicious code, such as using a `;` to bypass authentication and log in without a password.
-
-```SQL
+```sql
 SELECT * FROM users WHERE name = ? AND password = ?;
 ```
 
 When executing the above query, for example, in Python, we pass the `name` and `password` as parameters, as shown below.
 
-```Python
+```python
 cursor.execute("SELECT * FROM users WHERE name = ? AND password = ?", (name, password))
 ```
 
-Some Web frameworks will handle SQL injection protection for the developer, such as Django, by using models (Django's batteries).
-
-> [!NOTE]
-> This section draws heavily on the information in [Wikipedia here](https://en.wikipedia.org/wiki/SQL_injection).
+Libraries often provide well-abstracted APIs that handle SQL injection protection for the developer, such as Django's models. You can avoid SQL injection by using encapsulated APIs rather than directly writing raw SQL.
 
 ### Cross-Site Request Forgery (CSRF)
 
