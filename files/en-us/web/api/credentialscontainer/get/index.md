@@ -94,7 +94,7 @@ A {{jsxref("Promise")}} that resolves with one of the following subclasses of {{
 - {{domxref("OTPCredential")}}
 - {{domxref("PublicKeyCredential")}}
 
-If [conditional mediation](#mediation) was specified in the `get()` call, the browser UI dialog is not shown and the promise remains pending until the user picks an account to sign-in with from available autofill suggestions:
+If [conditional mediation](#mediation) was specified in the `get()` call, the browser UI dialog is shown and the promise remains pending until the user picks an account to sign-in with from available autofill suggestions:
 
 - If the user then makes a gesture outside of the browser UI dialog, it closes without resolving or rejecting the promise and without causing a user-visible error condition.
 - If the user selects a credential, the relevant {{domxref("PublicKeyCredential")}} is returned to the caller.
