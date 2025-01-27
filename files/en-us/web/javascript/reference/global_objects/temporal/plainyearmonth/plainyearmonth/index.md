@@ -2,10 +2,12 @@
 title: Temporal.PlainYearMonth()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainYearMonth/PlainYearMonth
 page-type: javascript-constructor
+status:
+  - experimental
 browser-compat: javascript.builtins.Temporal.PlainYearMonth.PlainYearMonth
 ---
 
-{{JSRef}}
+{{JSRef}}{{SeeCompatTable}}
 
 The **`Temporal.PlainYearMonth()`** constructor creates {{jsxref("Temporal.PlainYearMonth")}} objects.
 

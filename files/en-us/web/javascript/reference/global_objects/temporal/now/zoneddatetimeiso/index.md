@@ -2,10 +2,12 @@
 title: Temporal.Now.zonedDateTimeISO()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/Now/zonedDateTimeISO
 page-type: javascript-static-method
+status:
+  - experimental
 browser-compat: javascript.builtins.Temporal.Now.zonedDateTimeISO
 ---
 
-{{JSRef}}
+{{JSRef}}{{SeeCompatTable}}
 
 The **`Temporal.Now.zonedDateTimeISO()`** static method returns the current date and time as a {{jsxref("Temporal.ZonedDateTime")}} object, in the ISO 8601 calendar and the specified time zone.
 

@@ -2,10 +2,12 @@
 title: Temporal.PlainTime.prototype.millisecond
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainTime/millisecond
 page-type: javascript-instance-accessor-property
+status:
+  - experimental
 browser-compat: javascript.builtins.Temporal.PlainTime.millisecond
 ---
 
-{{JSRef}}
+{{JSRef}}{{SeeCompatTable}}
 
 The **`millisecond`** accessor property of {{jsxref("Temporal.PlainTime")}} instances returns a integer from 0 to 999 representing the millisecond (10<sup>-3</sup> second) component of this time.
 

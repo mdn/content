@@ -397,7 +397,7 @@ l10n:
     Guide_Indexed_collections: インデックス付きコレクション
     Guide_keyed_collections: キー付きコレクション
     Guide_Objects: オブジェクトを利用する
-    Guide_Classes: Using classes
+    Guide_Classes: クラスの使用
     Guide_Promises: プロミスの使用
     Guide_Typed_arrays: JavaScript 型付き配列
     Guide_Iterators_generators: イテレーターとジェネレーター
@@ -405,13 +405,13 @@ l10n:
     Guide_Meta: メタプログラミング
     Guide_Modules: JavaScript モジュール
     Intermediate: 中級編
-    Language_overview: Language overview
+    Language_overview: 言語概要
     Data_structures: JavaScript のデータ構造
     Equality: 等値比較と同一性
     Closures: クロージャ
     Advanced: 上級編
     Inheritance: 継承とプロトタイプチェーン
-    Strict_mode: Strict モード
+    Strict_mode: 厳格モード
     Memory_management: メモリー管理
     Event_loop: 並列モデルとイベントループ
     Reference: リファレンス
@@ -420,7 +420,7 @@ l10n:
     Statements: 文と宣言
     Functions: 関数
     Classes: クラス
-    Errors: Errors
+    Errors: エラー
     More: その他
     Lexical_grammar: 字句文法
     Enumerability: プロパティの列挙可能性と所有権
