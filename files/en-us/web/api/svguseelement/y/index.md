@@ -38,8 +38,8 @@ const uses = document.querySelectorAll("use");
 const yUse1 = uses[0].y;
 const yUse2 = uses[1].y;
 
-console.dir(yUse1.baseVal.value); // output: 100 (50% of 200)
-console.dir(yUse2.baseVal.value); // output: 100 (50% of 200)
+console.log(yUse1.baseVal.value); // output: 100 (50% of 200)
+console.log(yUse2.baseVal.value); // output: 50 (25% of 200)
 ```
 
 ## Specifications
