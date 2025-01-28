@@ -6,8 +6,6 @@ page-type: landing-page
 
 EXSLT is a set of extensions to [XSLT](/en-US/docs/Web/XSLT). There are a number of modules; those that are supported by Firefox are listed below:
 
-{{SubpagesWithSummaries}}
-
 ## EXSLT modules
 
 To use an EXSLT function, you need to declare the namespace the function is in, and then use the appropriate prefix when calling the function. For example, to use the regular expressions package:
@@ -31,8 +29,8 @@ The EXSLT Common package provides basic functions that expand upon the capabilit
 
 #### Functions
 
-- [`exsl:node-set()`](/en-US/docs/Web/EXSLT/exsl/node-set)
-- [`exsl:object-type()`](/en-US/docs/Web/EXSLT/exsl/object-type)
+- [`exsl:node-set()`](/en-US/docs/Web/EXSLT/Reference/exsl/node-set)
+- [`exsl:object-type()`](/en-US/docs/Web/EXSLT/Reference/exsl/object-type)
 
 ### Math
 
@@ -40,10 +38,10 @@ The EXSLT Math package provides functions for working with numeric values and co
 
 #### Functions
 
-- [`math:highest()`](/en-US/docs/Web/EXSLT/math/highest)
-- [`math:lowest()`](/en-US/docs/Web/EXSLT/math/lowest)
-- [`math:max()`](/en-US/docs/Web/EXSLT/math/max)
-- [`math:min()`](/en-US/docs/Web/EXSLT/math/min)
+- [`math:highest()`](/en-US/docs/Web/EXSLT/Reference/math/highest)
+- [`math:lowest()`](/en-US/docs/Web/EXSLT/Reference/math/lowest)
+- [`math:max()`](/en-US/docs/Web/EXSLT/Reference/math/max)
+- [`math:min()`](/en-US/docs/Web/EXSLT/Reference/math/min)
 
 ### Regular expressions
 
@@ -53,9 +51,9 @@ The EXSLT Regular Expressions namespace is `http://exslt.org/regular-expressions
 
 #### Functions
 
-- [`regexp:match()`](/en-US/docs/Web/EXSLT/regexp/match)
-- [`regexp:replace()`](/en-US/docs/Web/EXSLT/regexp/replace)
-- [`regexp:test()`](/en-US/docs/Web/EXSLT/regexp/test)
+- [`regexp:match()`](/en-US/docs/Web/EXSLT/Reference/regexp/match)
+- [`regexp:replace()`](/en-US/docs/Web/EXSLT/Reference/regexp/replace)
+- [`regexp:test()`](/en-US/docs/Web/EXSLT/Reference/regexp/test)
 
 ### Sets
 
@@ -63,12 +61,12 @@ The EXSLT Sets package offers functions that let you perform set manipulation. T
 
 #### Functions
 
-- [`set:difference()`](/en-US/docs/Web/EXSLT/set/difference)
-- [`set:distinct()`](/en-US/docs/Web/EXSLT/set/distinct)
-- [`set:intersection()`](/en-US/docs/Web/EXSLT/set/intersection)
-- [`set:has-same-node()`](/en-US/docs/Web/EXSLT/set/has-same-node)
-- [`set:leading()`](/en-US/docs/Web/EXSLT/set/leading)
-- [`set:trailing()`](/en-US/docs/Web/EXSLT/set/trailing)
+- [`set:difference()`](/en-US/docs/Web/EXSLT/Reference/set/difference)
+- [`set:distinct()`](/en-US/docs/Web/EXSLT/Reference/set/distinct)
+- [`set:intersection()`](/en-US/docs/Web/EXSLT/Reference/set/intersection)
+- [`set:has-same-node()`](/en-US/docs/Web/EXSLT/Reference/set/has-same-node)
+- [`set:leading()`](/en-US/docs/Web/EXSLT/Reference/set/leading)
+- [`set:trailing()`](/en-US/docs/Web/EXSLT/Reference/set/trailing)
 
 ### Strings
 
@@ -76,9 +74,9 @@ The EXSLT Strings package provides functions that allow the manipulation of stri
 
 #### Functions
 
-- [`str:concat()`](/en-US/docs/Web/EXSLT/str/concat)
-- [`str:split()`](/en-US/docs/Web/EXSLT/str/split)
-- [`str:tokenize()`](/en-US/docs/Web/EXSLT/str/tokenize)
+- [`str:concat()`](/en-US/docs/Web/EXSLT/Reference/str/concat)
+- [`str:split()`](/en-US/docs/Web/EXSLT/Reference/str/split)
+- [`str:tokenize()`](/en-US/docs/Web/EXSLT/Reference/str/tokenize)
 
 ## See also
 
@@ -91,32 +89,32 @@ The EXSLT Strings package provides functions that allow the manipulation of stri
     <li><strong><a href="/en-US/docs/Web/EXSLT">EXSLT</a></strong></li>
     <li class="toggle">
       <details open>
-        <summary><a href="/en-US/docs/Web/EXSLT/exsl">Common (exsl)</a></summary>
-        {{ListSubpagesForSidebar("/en-US/docs/Web/EXSLT/exsl", "", "", "exsl:", ")")}}
+        <summary><a href="/en-US/docs/Web/EXSLT/Reference/exsl">Common (exsl)</a></summary>
+        {{ListSubpagesForSidebar("/en-US/docs/Web/EXSLT/Reference/exsl", "", "", "exsl:", ")")}}
       </details>
     </li>
     <li class="toggle">
       <details open>
-        <summary><a href="/en-US/docs/Web/EXSLT/math">Math (math)</a></summary>
-        {{ListSubpagesForSidebar("/en-US/docs/Web/EXSLT/math", "", "", "math:", ")")}}
+        <summary><a href="/en-US/docs/Web/EXSLT/Reference/math">Math (math)</a></summary>
+        {{ListSubpagesForSidebar("/en-US/docs/Web/EXSLT/Reference/math", "", "", "math:", ")")}}
       </details>
     </li>
     <li class="toggle">
       <details open>
-        <summary><a href="/en-US/docs/Web/EXSLT/regexp">Regular expressions (regexp)</a></summary>
-        {{ListSubpagesForSidebar("/en-US/docs/Web/EXSLT/regexp", "", "", "regexp:", ")")}}
+        <summary><a href="/en-US/docs/Web/EXSLT/Reference/regexp">Regular expressions (regexp)</a></summary>
+        {{ListSubpagesForSidebar("/en-US/docs/Web/EXSLT/Reference/regexp", "", "", "regexp:", ")")}}
       </details>
     </li>
     <li class="toggle">
       <details open>
-        <summary><a href="/en-US/docs/Web/EXSLT/set">Sets (set)</a></summary>
-        {{ListSubpagesForSidebar("/en-US/docs/Web/EXSLT/set", "", "", "set:", ")")}}
+        <summary><a href="/en-US/docs/Web/EXSLT/Reference/set">Sets (set)</a></summary>
+        {{ListSubpagesForSidebar("/en-US/docs/Web/EXSLT/Reference/set", "", "", "set:", ")")}}
       </details>
     </li>
     <li class="toggle">
       <details open>
-        <summary><a href="/en-US/docs/Web/EXSLT/str">Strings (str)</a></summary>
-        {{ListSubpagesForSidebar("/en-US/docs/Web/EXSLT/str", "", "", "str:", ")")}}
+        <summary><a href="/en-US/docs/Web/EXSLT/Reference/str">Strings (str)</a></summary>
+        {{ListSubpagesForSidebar("/en-US/docs/Web/EXSLT/Reference/str", "", "", "str:", ")")}}
       </details>
     </li>
   </ol>

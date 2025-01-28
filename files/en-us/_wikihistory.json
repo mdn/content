@@ -90736,11 +90736,11 @@
       "Mgjbot"
     ]
   },
-  "Web/EXSLT/exsl": {
+  "Web/EXSLT/Reference/exsl": {
     "modified": "2020-10-15T21:15:06.381Z",
     "contributors": ["ExE-Boss", "Sheppy", "Anonymous"]
   },
-  "Web/EXSLT/exsl/node-set": {
+  "Web/EXSLT/Reference/exsl/node-set": {
     "modified": "2020-10-15T21:12:53.491Z",
     "contributors": [
       "ExE-Boss",
@@ -90752,7 +90752,7 @@
       "Fredchat"
     ]
   },
-  "Web/EXSLT/exsl/object-type": {
+  "Web/EXSLT/Reference/exsl/object-type": {
     "modified": "2020-10-15T21:12:48.342Z",
     "contributors": [
       "ExE-Boss",
@@ -90764,11 +90764,11 @@
       "Fredchat"
     ]
   },
-  "Web/EXSLT/math": {
+  "Web/EXSLT/Reference/math": {
     "modified": "2020-10-15T21:15:07.341Z",
     "contributors": ["ExE-Boss", "Sheppy", "Anonymous"]
   },
-  "Web/EXSLT/math/highest": {
+  "Web/EXSLT/Reference/math/highest": {
     "modified": "2020-10-15T21:16:01.579Z",
     "contributors": [
       "ExE-Boss",
@@ -90780,7 +90780,7 @@
       "Fredchat"
     ]
   },
-  "Web/EXSLT/math/lowest": {
+  "Web/EXSLT/Reference/math/lowest": {
     "modified": "2020-10-15T21:15:54.233Z",
     "contributors": [
       "ExE-Boss",
@@ -90792,11 +90792,11 @@
       "Fredchat"
     ]
   },
-  "Web/EXSLT/math/max": {
+  "Web/EXSLT/Reference/math/max": {
     "modified": "2020-10-15T21:16:21.981Z",
     "contributors": ["ExE-Boss", "SphinxKnight", "Sheppy", "Mgjbot", "Fredchat"]
   },
-  "Web/EXSLT/math/min": {
+  "Web/EXSLT/Reference/math/min": {
     "modified": "2020-12-09T19:00:46.440Z",
     "contributors": [
       "bershanskiy",
@@ -90807,15 +90807,15 @@
       "Fredchat"
     ]
   },
-  "Web/EXSLT/regexp": {
+  "Web/EXSLT/Reference/regexp": {
     "modified": "2020-10-15T21:15:07.389Z",
     "contributors": ["ExE-Boss", "Sheppy", "Anonymous"]
   },
-  "Web/EXSLT/regexp/match": {
+  "Web/EXSLT/Reference/regexp/match": {
     "modified": "2020-10-15T21:16:21.567Z",
     "contributors": ["ExE-Boss", "SphinxKnight", "Sheppy", "Mgjbot", "Fredchat"]
   },
-  "Web/EXSLT/regexp/replace": {
+  "Web/EXSLT/Reference/regexp/replace": {
     "modified": "2020-10-15T21:15:42.283Z",
     "contributors": [
       "ExE-Boss",
@@ -90826,27 +90826,27 @@
       "Fredchat"
     ]
   },
-  "Web/EXSLT/regexp/test": {
+  "Web/EXSLT/Reference/regexp/test": {
     "modified": "2020-10-15T21:16:21.765Z",
     "contributors": ["ExE-Boss", "SphinxKnight", "Sheppy", "Mgjbot", "Fredchat"]
   },
-  "Web/EXSLT/set": {
+  "Web/EXSLT/Reference/set": {
     "modified": "2020-10-15T21:15:07.269Z",
     "contributors": ["ExE-Boss", "wbamberg", "Sheppy", "ethertank", "Anonymous"]
   },
-  "Web/EXSLT/set/difference": {
+  "Web/EXSLT/Reference/set/difference": {
     "modified": "2020-10-15T21:16:23.041Z",
     "contributors": ["ExE-Boss", "SphinxKnight", "Sheppy", "Mgjbot", "Fredchat"]
   },
-  "Web/EXSLT/set/distinct": {
+  "Web/EXSLT/Reference/set/distinct": {
     "modified": "2020-10-15T21:16:23.658Z",
     "contributors": ["ExE-Boss", "SphinxKnight", "Sheppy", "Mgjbot", "Fredchat"]
   },
-  "Web/EXSLT/set/has-same-node": {
+  "Web/EXSLT/Reference/set/has-same-node": {
     "modified": "2020-10-15T21:16:21.576Z",
     "contributors": ["ExE-Boss", "SphinxKnight", "Sheppy", "Mgjbot", "Fredchat"]
   },
-  "Web/EXSLT/set/intersection": {
+  "Web/EXSLT/Reference/set/intersection": {
     "modified": "2020-10-15T21:15:40.534Z",
     "contributors": [
       "ExE-Boss",
@@ -90857,11 +90857,11 @@
       "Fredchat"
     ]
   },
-  "Web/EXSLT/set/leading": {
+  "Web/EXSLT/Reference/set/leading": {
     "modified": "2020-10-15T21:16:20.608Z",
     "contributors": ["ExE-Boss", "Sheppy", "trevorh", "Mgjbot", "Fredchat"]
   },
-  "Web/EXSLT/set/trailing": {
+  "Web/EXSLT/Reference/set/trailing": {
     "modified": "2020-10-15T21:16:20.461Z",
     "contributors": [
       "ExE-Boss",
@@ -90872,11 +90872,11 @@
       "Fredchat"
     ]
   },
-  "Web/EXSLT/str": {
+  "Web/EXSLT/Reference/str": {
     "modified": "2020-10-15T21:15:08.278Z",
     "contributors": ["ExE-Boss", "wbamberg", "Sheppy", "ethertank", "Anonymous"]
   },
-  "Web/EXSLT/str/concat": {
+  "Web/EXSLT/Reference/str/concat": {
     "modified": "2020-10-15T21:16:22.009Z",
     "contributors": [
       "ExE-Boss",
@@ -90887,7 +90887,7 @@
       "Fredchat"
     ]
   },
-  "Web/EXSLT/str/split": {
+  "Web/EXSLT/Reference/str/split": {
     "modified": "2020-10-15T21:16:21.322Z",
     "contributors": [
       "ExE-Boss",
@@ -90898,7 +90898,7 @@
       "Fredchat"
     ]
   },
-  "Web/EXSLT/str/tokenize": {
+  "Web/EXSLT/Reference/str/tokenize": {
     "modified": "2020-10-15T21:16:22.107Z",
     "contributors": [
       "ExE-Boss",
