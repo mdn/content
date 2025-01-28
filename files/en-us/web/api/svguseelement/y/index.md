@@ -27,7 +27,7 @@ Given the following SVG:
     <circle id="circle2" cx="50" cy="50" r="40" fill="red" />
   </defs>
   <use x="50%" y="50%" href="#circle1" />
-  <use x="25%" y="50%" href="#circle2" />
+  <use x="25%" y="25%" href="#circle2" />
 </svg>
 ```
 
