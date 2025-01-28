@@ -50,9 +50,14 @@ requestAnimationFrame(callback)
 ### Return value
 
 A `long` integer value, the request ID, that uniquely identifies the entry
-in the callback list. This is a non-zero value, but you may not make any other
-assumptions about its value. You can pass this value to
+in the callback list. You may not make any about its value. You can pass this value to
 {{domxref("window.cancelAnimationFrame()")}} to cancel the refresh callback request.
+
+> [!WARNING]
+> The returned value may seem to always be non-zero, however implementations typically increment an integer that may overflow and end up reaching 0.
+> While unlikely to cause issues for short-lived applications, you may want to use `null` for invalid handles instead of 0.
+> Note that it would take ~500 days to reach for a 60Hz based rendering with 100 calls to `requestAnimationFrame()` per frame.
+
 
 ## Examples
 
