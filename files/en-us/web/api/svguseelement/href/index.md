@@ -3,7 +3,7 @@ title: "SVGUseElement: href property"
 short-title: href
 slug: Web/API/SVGUseElement/href
 page-type: web-api-instance-property
-browser-compat: api.SVGAnimationElement.href
+browser-compat: api.SVGUseElement.href
 ---
 
 {{APIRef("SVG")}}
