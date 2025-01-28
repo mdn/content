@@ -17,21 +17,21 @@ This article explains what the cascade is and the order in which {{Glossary("CSS
 
 The CSS cascade algorithm's job is to select CSS declarations in order to determine the correct values for CSS properties. CSS declarations come from different origin types: **[User-agent stylesheets](#user-agent_stylesheets)**, **[Author stylesheets](#author_stylesheets)**, and **[User stylesheets](#user_stylesheets)**.
 
-Though style sheets come from these different origins and can be within different [layers](/en-US/docs/Web/CSS/@layer) in each of these origins, they overlap in terms of their default scope; to make this work, the cascade algorithm defines how they interact. Before addressing the interactions, we'll define some key terms in the next few sections.
+Though stylesheets come from these different origins and can be within different [layers](/en-US/docs/Web/CSS/@layer) in each of these origins, they overlap in terms of their default scope; to make this work, the cascade algorithm defines how they interact. Before addressing the interactions, we'll define some key terms in the next few sections.
 
 ### User-agent stylesheets
 
-User-agents, or browsers, have basic style sheets that give default styles to any document. These style sheets are named **user-agent stylesheets**. Most browsers use actual stylesheets for this purpose, while others simulate them in code. The end result is the same.
+User-agents, or browsers, have basic stylesheets that give default styles to any document. These stylesheets are named **user-agent stylesheets**. Most browsers use actual stylesheets for this purpose, while others simulate them in code. The end result is the same.
 
 Some browsers let users modify the user-agent stylesheet, but this is rare and not something that can be controlled.
 
 Although some constraints on user-agent stylesheets are set by the HTML specification, browsers have a lot of latitude: that means some differences exist between browsers. To simplify the development process, Web developers may use a CSS reset stylesheet, such as [normalize.css](https://github.com/necolas/normalize.css), which sets common properties values to a known state for all browsers before beginning to make alterations to suit their specific needs.
 
-Unless the user-agent stylesheet includes an [`!important`](/en-US/docs/Web/CSS/Specificity#the_!important_exception) next to a property, making it "important", styles declared by author styles, including a reset style sheet, take precedence over the user-agent styles, regardless of the specificity of the associated selector.
+Unless the user-agent stylesheet includes an [`!important`](/en-US/docs/Web/CSS/Specificity#the_!important_exception) next to a property, making it "important", styles declared by author styles, including a reset stylesheet, take precedence over the user-agent styles, regardless of the specificity of the associated selector.
 
 ### Author stylesheets
 
-**Author stylesheets** are the most common type of style sheet; these are the styles written by web developers. These styles can reset user-agent styles, as noted above, and define the styles for the design of a given web page or application. The author, or web developer, defines the styles for the document using one or more linked or imported stylesheets, {{HTMLElement('style')}} blocks, and inline styles defined with the [`style`](/en-US/docs/Web/HTML/Global_attributes/style) attribute. These author styles define the look and feel of the website — its theme.
+**Author stylesheets** are the most common type of stylesheet; these are the styles written by web developers. These styles can reset user-agent styles, as noted above, and define the styles for the design of a given web page or application. The author, or web developer, defines the styles for the document using one or more linked or imported stylesheets, {{HTMLElement('style')}} blocks, and inline styles defined with the [`style`](/en-US/docs/Web/HTML/Global_attributes/style) attribute. These author styles define the look and feel of the website — its theme.
 
 ### User stylesheets
 
@@ -48,25 +48,28 @@ Let's take a look at cascading origin type before diving into cascade layers wit
 The cascading algorithm determines how to find the value to apply for each property for each document element. The following steps apply to the cascading algorithm:
 
 1. **Relevance**: It first filters all the rules from the different sources to keep only the rules that apply to a given element. That means rules whose selector matches the given element and which are part of an appropriate `media` at-rule.
-
 2. **Origin and importance**: Then it sorts these rules according to their importance, that is, whether or not they are followed by `!important`, and by their origin. Ignoring layers for the moment, the cascade order is as follows:
 
-   | Order (low to high) | Origin                   | Importance   |
-   | ------------------- | ------------------------ | ------------ |
-   | 1                   | user-agent (browser)     | normal       |
-   | 2                   | user                     | normal       |
-   | 3                   | author (developer)       | normal       |
-   | 4                   | CSS @keyframe animations |              |
-   | 5                   | author (developer)       | `!important` |
-   | 6                   | user                     | `!important` |
-   | 7                   | user-agent (browser)     | `!important` |
-   | 8                   | CSS transitions          |              |
+   | Precedence Order (low to high) | Origin                   | Importance   |
+   | ------------------------------ | ------------------------ | ------------ |
+   | 1                              | user-agent (browser)     | normal       |
+   | 2                              | user                     | normal       |
+   | 3                              | author (developer)       | normal       |
+   | 4                              | CSS @keyframe animations |              |
+   | 5                              | author (developer)       | `!important` |
+   | 6                              | user                     | `!important` |
+   | 7                              | user-agent (browser)     | `!important` |
+   | 8                              | CSS transitions          |              |
 
 3. **Specificity**: In case of equality with an origin, the [specificity](/en-US/docs/Web/CSS/Specificity) of a rule is considered to choose one value or another. The specificity of the selectors are compared, and the declaration with the highest specificity wins.
 4. **Scoping proximity**: When two selectors in the origin layer with precedence have the same specificity, the property value within scoped rules with the smallest number of hops up the DOM hierarchy to the scope root wins. See [How `@scope` conflicts are resolved](/en-US/docs/Web/CSS/@scope#how_scope_conflicts_are_resolved) for more details and an example.
 5. **Order of appearance**: In the origin with precedence, if there are competing values for a property that are in style block matching selectors of equal specificity and scoping proximity, the last declaration in the style order is applied.
 
-The cascade is in ascending order, meaning animations have precedence of normal values, whether those are declared in user, author, or user-agent styles, important values take precedence over animations, and transitions have precedence over important values.
+The cascade is in ascending order, meaning:
+
+- Animations take precedence over normal values, whether declared in user, author, or user-agent styles.
+- Important values take precedence over animations, whether declared in user, author, or user-agent styles.
+- Transitions take precedence over important values.
 
 > **Note:** **Transitions and animations**
 >
@@ -80,7 +83,7 @@ The cascade algorithm is applied _before_ the specificity algorithm, meaning if 
 
 Before taking a deeper look at how cascade layers impact the cascade, let's look at an example involving multiple sources of CSS across the various origins, and work through the steps of the cascade algorithm:
 
-Here we have a user agent style sheet, two author style sheets, and a user stylesheet, with no inline styles within the HTML:
+Here we have a user agent stylesheet, two author stylesheets, and a user stylesheet, with no inline styles within the HTML:
 
 **User-agent CSS:**
 
@@ -149,9 +152,9 @@ Once again, there are five steps in the cascade algorithm, in order:
 
 The `1px` is for print media. Due to lack of _relevance_ based on its media type, it is removed from consideration.
 
-No declaration is marked as `!important`, so the precedence order is author style sheets over user style sheets over user-agent stylesheet. Based on _origin and importance_, the `1em` from the user stylesheet and the `10px` from the user-agent stylesheet are removed from consideration.
+No declaration is marked as `!important`, so the precedence order is author stylesheets over user stylesheets over user-agent stylesheet. Based on _origin and importance_, the `1em` from the user stylesheet and the `10px` from the user-agent stylesheet are removed from consideration.
 
-Note that even though the user style on `.specific` of `1em` has a higher specificity, it's a normal declaration in a user style sheet. As such, it has a lower precedence than any author styles, and gets removed by the origin and importance step of the algorithm before specificity even comes into play.
+Note that even though the user style on `.specific` of `1em` has a higher specificity, it's a normal declaration in a user stylesheet. As such, it has a lower precedence than any author styles, and gets removed by the origin and importance step of the algorithm before specificity even comes into play.
 
 There are three declarations in author stylesheets:
 
@@ -188,7 +191,7 @@ margin-left: 3px;
 ```
 
 > [!NOTE]
-> The declaration defined in the user CSS, while it may have greater specificity, is not chosen as the cascade algorithm's _origin and importance_ is applied before the _specificity_ algorithm. The declaration defined in a cascade layer, though it may come later in the code, will not have precedence either as normal styles in cascade layers have less precedence than normal unlayered styles. _Order of appearance_ only matters when both origin, importance, and specificity are equal.
+> The declaration defined in the user CSS, while it may have greater specificity, is not chosen as the cascade algorithm's _origin and importance_ is applied before the _specificity_ algorithm. The declaration defined in a cascade layer, though it may come later in the code, will not take precedence either as normal styles in cascade layers have less precedence than normal unlayered styles. _Order of appearance_ only matters when both origin, importance, and specificity are equal.
 
 ## Author styles: inline styles, layers, and precedence
 
@@ -196,7 +199,7 @@ The [table in Cascading order](#cascading_order) provided a precedence order ove
 
 The order in which layers are declared is important in determining precedence. Normal styles in a layer take precedence over styles declared in prior layers; with normal styles declared outside of any layer taking precedence over normal layered styles regardless of specificity.
 
-In this example, the author used CSS's {{CSSXref('@import')}} rule to import five external style sheets within a {{HTMLElement('style')}} information element.
+In this example, the author used CSS's {{CSSXref('@import')}} rule to import five external stylesheets within a {{HTMLElement('style')}} information element.
 
 ```html
 <style>
@@ -221,38 +224,40 @@ and then in the body of the document we have inline styles:
 In the CSS code block above, three cascade layers named "A", "B", and "C", were created, in that order. Three stylesheets were imported directly into layers and two were imported without creating or being assigned to a layer.
 The "All unlayered styles" in the list below (normal author style precedence - order 4) includes styles from these two stylesheets and the additional unlayered CSS style blocks. In addition, there are two inline styles, a normal `line-height` declaration and an important `text-decoration` declaration:
 
-| Order (low to high) | Author style         | Importance   |
-| ------------------- | -------------------- | ------------ |
-| 1                   | A - first layer      | normal       |
-| 2                   | B - second layer     | normal       |
-| 3                   | C - last layer       | normal       |
-| 4                   | All unlayered styles | normal       |
-| 5                   | inline `style`       | normal       |
-| 6                   | animations           |              |
-| 7                   | All unlayered styles | `!important` |
-| 8                   | C - last layer       | `!important` |
-| 9                   | B - second layer     | `!important` |
-| 10                  | A - first layer      | `!important` |
-| 11                  | inline `style`       | `!important` |
-| 12                  | transitions          |              |
+| Precedence Order (low to high) | Author style         | Importance   |
+| ------------------------------ | -------------------- | ------------ |
+| 1                              | A - first layer      | normal       |
+| 2                              | B - second layer     | normal       |
+| 3                              | C - last layer       | normal       |
+| 4                              | All unlayered styles | normal       |
+| 5                              | inline `style`       | normal       |
+| 6                              | animations           |              |
+| 7                              | All unlayered styles | `!important` |
+| 8                              | C - last layer       | `!important` |
+| 9                              | B - second layer     | `!important` |
+| 10                             | A - first layer      | `!important` |
+| 11                             | inline `style`       | `!important` |
+| 12                             | transitions          |              |
 
-In all origin types, the non important styles contained in layers have the lowest precedence. In our example, the normal styles associated with the first declared layer (A) have lower precedence than normal styles in the second declared layer (B), which have lower precedence than normal styles in the third declared layer (C). These layered styles have lower precedence than all normal unlayered styles, which includes normal styles from `unlayeredStyles.css`, `moreUnlayeredStyles.css`, and the `color` of `p` in the `<style>` itself.
+In all origin types, normal styles contained in layers have the lowest precedence. In our example, the normal styles associated with the first declared layer (A) have lower precedence than normal styles in the second declared layer (B), which have lower precedence than normal styles in the third declared layer (C). These layered styles have lower precedence than all normal unlayered styles, which includes normal styles from `unlayeredStyles.css`, `moreUnlayeredStyles.css`, and the `color` of `p` in the `<style>` itself.
 
-If any of the layered styles in A, B, or C, have selectors with higher specificity matching an element, similar to `:root body p { color: black;}`, it doesn't matter. Those declarations are removed from consideration because of _origin_; normal layered styles have less precedence than normal unlayered styles. If, however, the more specific selector `:root body p { color: black;}` was found in `unlayeredStyles.css`, as both _origin and importance_ have the same precedence, _specificity_ would mean the more specific, black declaration would win.
+If any layered styles in A, B, or C have selectors with higher specificity matching an element, similar to `:root body p { color: black; }`, it doesn't matter. Those declarations are removed from consideration because of _origin_; normal layered styles have less precedence than normal unlayered styles. If, however, the more specific selector `:root body p { color: black; }` was found in `unlayeredStyles.css`, as both _origin and importance_ have the same precedence, _specificity_ would mean the more specific, black declaration would win.
 
-The layer order of precedence is inverted for styles declared as `!important`. Important styles declared in a layer take precedence over important styles declared outside of a layer. Important styles in the first declared layer (A) take precedence over important declarations found in layer B, which takes precedence over C, which have precedence over important declarations in the unlayered styles.
+The layer order of precedence is inverted for styles declared as `!important`. Important declarations found in a layer take precedence over important declarations found outside of a layer. Important declarations found in the first layer (A) take precedence over important declarations found in layer B, which take precedence over important declarations found in layer C, which take precedence over important declarations found outside of a layer.
 
 ### Inline styles
 
-Only relevant to author styles are inline styles, declared with the `style` attribute. Normal inline styles take precedence over any other normal author styles, no matter the specificity of the selector. If `line-height: 2;` were declared in a `:root body p` selector block in any of the five imported stylesheets, the line height would still be `1.6`.
+Only relevant to author styles are inline styles, declared with the `style` attribute. Normal inline styles take precedence over any other normal author styles, no matter the specificity of the selector. If `line-height: 2;` were declared in a `:root body p` selector block in any of the five imported stylesheets, the line height would still be `1.6`. Normal inline styles do not take precedence over animated or transitioned properties.
 
-Normal inline styles take precedence over any other normal author styles unless the property is being altered by a CSS animation.
+Important inline styles take precedence over all other author styles, regardless of whether they are important, inline, or layered. Important inline styles also take precedence over animated properties, but not transitioned properties. Three things can override an important inline style:
 
-All important inline styles take precedence over all author styles, important and not, inline and not, layered and not. Important styles also take precedence over animated properties, but not transitioning properties. Three things can override an important inline style: 1) an important user style, 2) an important user agent style, or 3) a property value being transitioned.
+- An important user style.
+- An important user agent style.
+- A transitioned property.
 
 ### Importance and layers
 
-The origin type precedence order is inverted for important styles. Important styles declared outside of any cascade layer have lower precedence than those declared as part of a layer. Important values that come in early layers have precedence over important styles declared in subsequent cascade layers.
+The origin type precedence order is inverted for important styles. Important styles declared outside of any cascade layer have lower precedence than those declared as part of a layer. Important styles that come in early layers take precedence over important styles declared in subsequent cascade layers.
 
 Take for example the following CSS:
 
@@ -260,6 +265,7 @@ Take for example the following CSS:
 p {
   color: red;
 }
+
 @layer B {
   :root p {
     color: blue;
@@ -275,6 +281,7 @@ When we add `!important` to this bit of CSS, the precedence order is reversed wi
 p {
   color: red !important;
 }
+
 @layer B {
   :root p {
     color: blue !important;
@@ -282,10 +289,10 @@ p {
 }
 ```
 
-Now the paragraph will be blue. The `!important` in the earliest declared layer takes precedence of subsequent layers and unlayered important declarations. If the inline style contained !important, such as `<p style="color: black !important">`, again the paragraph would be black. Inline importance does take precedence over all other author declared `!important` declarations, no matter the specificity.
+Now the paragraph will be blue. The `!important` in the earliest declared layer takes precedence over subsequent layers and unlayered important declarations. If the inline style contained `!important`, such as `<p style="color: black !important">`, again the paragraph would be black. Inline importance does take precedence over all other author declared `!important` declarations, no matter the specificity.
 
 > [!NOTE]
-> The `!important` flag reverses the precedence of cascade layers. For this reason, try not to use `!important` to override external styles. Instead, use {{cssxref("@import")}} together with the `layer` keyword or `layer()` function to import external style sheets (from frameworks, widget stylesheets, libraries, etc.) into layers. Importing stylesheets into a layer as the first declaration in your CSS demotes their precedence, and author-defined layers, defined later in your CSS, will have higher precedence. The `!important` flag should only be used sparingly, if ever, to guard required styles against later overrides, in the first declared layer.
+> The `!important` flag reverses the precedence of cascade layers. For this reason, try not to use `!important` to override external styles. Instead, use {{cssxref("@import")}} together with the `layer` keyword or `layer()` function to import external stylesheets (from frameworks, widget stylesheets, libraries, etc.) into layers. Importing stylesheets into a layer as the first declaration in your CSS demotes their precedence, and author-defined layers, defined later in your CSS, will have higher precedence. The `!important` flag should only be used sparingly, if ever, to guard required styles against later overrides, in the first declared layer.
 
 Styles that are transitioning take precedence over all important styles, no matter who or how they are declared.
 
@@ -351,14 +358,13 @@ Presentational attributes cannot be declared `!important`.
 
 ## CSS animations and the cascade
 
-[CSS animations](/en-US/docs/Web/CSS/CSS_animations), using {{ cssxref("@keyframes")}} at-rules, define animations between states. Keyframes don't cascade, meaning that at any given time CSS takes values from only one single {{cssxref("@keyframes")}}, and never mixes multiple ones together.
-
-If the several keyframe animations are defined with the same animation name, the last defined `@keyframes` in the origin and layer with the greatest precedence. Only one `@keyframes` definition is used, even if the `@keyframes` animate different property. `@keyframes` with the same name are never combined.
+[CSS animations](/en-US/docs/Web/CSS/CSS_animations), using {{cssxref("@keyframes")}} at-rules, define animations between states. `@keyframes` don't cascade, meaning that at any given time CSS takes values from only one single set of `@keyframes` and never mixes multiple ones. If multiple sets of `@keyframes` are defined with the same animation name, the last defined set in the origin and layer with the greatest precedence is used. Other `@keyframes` are ignored, even if they animate different properties.
 
 ```css
 p {
   animation: infinite 5s alternate repeatedName;
 }
+
 @keyframes repeatedName {
   from {
     font-size: 1rem;
@@ -378,6 +384,7 @@ p {
     }
   }
 }
+
 @layer B {
   @keyframes repeatedName {
     from {
@@ -390,7 +397,7 @@ p {
 }
 ```
 
-In this example, there are three separate animation declaration named `repeatedName`. When `animation: infinite 5s alternate repeatedName` is applied to the paragraph, only one animation is applied: the keyframe animation defined in the unlayered CSS takes precedence over the layered keyframe animation declarations based on origin and cascade layer precedence order. In this example, only the element's font size will be animated.
+In this example, there are three separate animation declaration named `repeatedName`. When `animation: infinite 5s alternate repeatedName` is applied to the paragraph, only one animation is applied: the keyframe animation defined in the unlayered CSS takes precedence over the layered keyframe animation declarations based on origin and layer precedence order. In this example, only the element's font size will be animated.
 
 > [!NOTE]
 > There are no important animations, as property declarations in a {{cssxref('@keyframes')}} block that contain `!important` as part of the value are ignored.
@@ -409,7 +416,7 @@ After your content has finished altering styles, it may find itself in a situati
 
 - [Learn: Handling conflicts](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
 - [Learn: cascade layers](/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)
-- [CSS cascade and inheritance](/en-US/docs/Web/CSS/CSS_cascade) module
+- [CSS cascading and inheritance](/en-US/docs/Web/CSS/CSS_cascade) module
 - [CSS syntax](/en-US/docs/Web/CSS/Syntax)
 - [Specificity](/en-US/docs/Web/CSS/Specificity)
 - [Inheritance](/en-US/docs/Web/CSS/Inheritance)

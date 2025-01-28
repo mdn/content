@@ -69,7 +69,7 @@ SQL injection types include Error-based SQL injection, SQL injection based on bo
 
 This vulnerability is present if user input that is passed to an underlying SQL statement can change the meaning of the statement. For example, the following code is intended to list all users with a particular name (`userName`) that has been supplied from an HTML form:
 
-```sql
+```python
 statement = "SELECT * FROM users WHERE name = '" + userName + "';"
 ```
 
@@ -81,21 +81,19 @@ SELECT * FROM users WHERE name = 'a';DROP TABLE users; SELECT * FROM userinfo WH
 
 The modified statement creates a valid SQL statement that deletes the `users` table and selects all data from the `userinfo` table (which reveals the information of every user). This works because the first part of the injected text (`a';`) completes the original statement.
 
-To avoid this sort of attack, you must ensure that any user data that is passed to an SQL query cannot change the nature of the query. One way to do this is to [escape](https://en.wikipedia.org/wiki/Escape_character) all the characters in the user input that have a special meaning in SQL.
-
-> [!NOTE]
-> The SQL statement treats the **'** character as the beginning and end of a string literal. By putting a backslash in front of this character (**\\'**), we escape the symbol, and tell SQL to instead treat it as a character (just a part of the string).
-
-In the following statement, we escape the **'** character. The SQL will now interpret the name as the whole string in bold (which is a very odd name indeed, but not harmful).
+To avoid such attacks, the best practice is to use parameterized queries (prepared statements). This approach ensures that the user input is treated as a string of data rather than executable SQL, so that the user cannot abuse special SQL syntax characters to generate unintended SQL statements. The following is an example:
 
 ```sql
-SELECT * FROM users WHERE name = 'a\';DROP TABLE users; SELECT * FROM userinfo WHERE \'t\' = \'t';
+SELECT * FROM users WHERE name = ? AND password = ?;
 ```
 
-Web frameworks will often take care of the character escaping for you. Django, for example, ensures that any user-data passed to querysets (model queries) is escaped.
+When executing the above query, for example, in Python, we pass the `name` and `password` as parameters, as shown below.
 
-> [!NOTE]
-> This section draws heavily on the information in [Wikipedia here](https://en.wikipedia.org/wiki/SQL_injection).
+```python
+cursor.execute("SELECT * FROM users WHERE name = ? AND password = ?", (name, password))
+```
+
+Libraries often provide well-abstracted APIs that handle SQL injection protection for the developer, such as Django's models. You can avoid SQL injection by using encapsulated APIs rather than directly writing raw SQL.
 
 ### Cross-Site Request Forgery (CSRF)
 

@@ -20,6 +20,8 @@ This property specifies the _block flow direction_, which is the direction in wh
 writing-mode: horizontal-tb;
 writing-mode: vertical-rl;
 writing-mode: vertical-lr;
+writing-mode: sideways-rl;
+writing-mode: sideways-lr;
 
 /* Global values */
 writing-mode: inherit;
@@ -51,7 +53,7 @@ The `writing-mode` property is specified as one of the values listed below. The 
   - : Deprecated except for SVG1 documents. For CSS, use `horizontal-tb` instead.
 - `tb`
   - : Deprecated except for SVG1 documents. For CSS, use `vertical-lr` instead.
-- `tb-lr`
+- `tb-lr` {{Deprecated_Inline}}
   - : Deprecated except for SVG1 documents. For CSS, use `vertical-lr` instead.
 - `tb-rl`
   - : Deprecated except for SVG1 documents. For CSS, use `vertical-rl` instead.

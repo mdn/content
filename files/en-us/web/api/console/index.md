@@ -127,7 +127,7 @@ console.info("My first car was a", car, ". The object is:", someObject);
 The output will look like this:
 
 ```plain
-My first car was a Dodge Charger. The object is: {str:"Some text", id:5}
+My first car was a Dodge Charger . The object is: {str:"Some text", id:5}
 ```
 
 #### Using string substitutions
