@@ -49,6 +49,8 @@ This article provides information about the changes in Firefox 135 that affect d
 
 #### Media, WebRTC, and Web Audio
 
+- The {{domxref("RTCOutboundRtpStreamStats.mid", "mid")}} and {{domxref("RTCOutboundRtpStreamStats.rid", "rid")}} properties of the {{domxref("RTCOutboundRtpStreamStats")}} interface, and the{{domxref("RTCOutboundRtpStreamStats.mid", "mid")}} property of the {{domxref("RTCInboundRtpStreamStats")}} interface are now supported. ([Firefox bug 1643001](https://bugzil.la/1643001)).
+
 #### Removals
 
 ### WebAssembly
