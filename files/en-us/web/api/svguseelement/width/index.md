@@ -38,8 +38,8 @@ const uses = document.querySelectorAll("use");
 const widthUse1 = uses[0].width;
 const widthUse2 = uses[1].width;
 
-console.dir(widthUse1.baseVal.value); // output: 50
-console.dir(widthUse2.baseVal.value); // output: 100
+console.log(widthUse1.baseVal.value); // output: 50
+console.log(widthUse2.baseVal.value); // output: 100
 ```
 
 ## Specifications
