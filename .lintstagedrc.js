@@ -20,4 +20,5 @@ export default {
   ".vscode/dictionaries/*.txt": (filenames) => [
     `node scripts/sort_and_unique_file_lines.js ${filenames.join(" ")}`,
   ],
+  "files/sidebars/*.yaml": (filenames) => [`yarn content fmt-sidebars`],
 };
