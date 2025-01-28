@@ -7,7 +7,7 @@ page-type: listing-page
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Manifest/Reference")}}
 
-This page lists references for web app manifest members usage on the web.
+This page lists references for [Web app manifest](/en-US/docs/Web/Manifest) members usage on the web.
 
 {{SubPagesWithSummaries}}
 

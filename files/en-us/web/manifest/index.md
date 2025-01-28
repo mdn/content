@@ -5,7 +5,7 @@ page-type: landing-page
 browser-compat: html.manifest
 ---
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}
+{{QuickLinksWithSubpages("/en-US/docs/Web/Manifest/Reference")}}
 
 A **web application manifest**, defined in the [Web Application Manifest](https://w3c.github.io/manifest/) specification, is a {{Glossary("JSON")}} text file that provides information about a web application.
 
@@ -69,9 +69,9 @@ If the manifest requires credentials to fetch, the [`crossorigin`](/en-US/docs/W
 
 In some browsers and operating systems, a splash screen is displayed when an installed PWA is launched. This splash screen is automatically generated and its appearance is defined by members in the web app manifest, specifically:
 
-- [`name`](/en-US/docs/Web/Manifest/name)
-- [`background_color`](/en-US/docs/Web/Manifest/background_color)
-- [`icons`](/en-US/docs/Web/Manifest/icons)
+- [`name`](/en-US/docs/Web/Manifest/Reference/name)
+- [`background_color`](/en-US/docs/Web/Manifest/Reference/background_color)
+- [`icons`](/en-US/docs/Web/Manifest/Reference/icons)
 
 ## Browser compatibility
 
