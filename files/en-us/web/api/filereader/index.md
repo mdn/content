@@ -9,11 +9,7 @@ browser-compat: api.FileReader
 
 The **`FileReader`** interface lets web applications asynchronously read the contents of files (or raw data buffers) stored on the user's computer, using {{domxref("File")}} or {{domxref("Blob")}} objects to specify the file or data to read.
 
-File objects may be obtained from a {{domxref("FileList")}} object returned as a result of a user selecting files using the {{HTMLElement("input")}} element, or from a drag and drop operation's {{domxref("DataTransfer")}} object.
-
-**`FileReader`** is designed to read the contents of files that the user has explicitly selected through an HTML `<input type="file">` element or by drag-and-drop interactions. It works with a {{domxref("File")}} object, which the browser securely provides when the user selects a file. **`FileReader`** cannot access files directly using a pathname (e.g., `/home/john-doe/documents/file.txt`), as it does not have unrestricted access to the user's file system for security reasons.
-
-If you need to access files directly by pathname on the user's local file system, you can use the [File System Access API](/en-US/docs/Web/API/File_System_API), which requires explicit user permission. For accessing files located on a server, you can use {{domxref("Window/fetch", "fetch()")}} with [CORS](/en-US/docs/Web/HTTP/CORS) permission if reading cross-origin resources or other server-side tools like {{Glossary("Node.js")}}. The **`FileReader`** interface ensures secure, user-consented access to file content in web applications.
+File objects may be obtained from a {{domxref("FileList")}} object returned as a result of a user selecting files using the `<input type="file">` element, or from a drag and drop operation's {{domxref("DataTransfer")}} object. `FileReader` can only access the contents of files that the user has explicitly selected; it cannot be used to read a file by pathname from the user's file system. To read files on the client's file system by pathname, use the [File System Access API](/en-US/docs/Web/API/File_System_API). To read server-side files, use {{domxref("Window/fetch", "fetch()")}}, with [CORS](/en-US/docs/Web/HTTP/CORS) permission if reading cross-origin.
 
 {{InheritanceDiagram}}
 
@@ -54,77 +50,6 @@ See [Using files from web applications](/en-US/docs/Web/API/File_API/Using_files
 - {{domxref("FileReader.readAsText()")}}
   - : Starts reading the contents of the specified {{domxref("Blob")}}, once finished, the `result` attribute contains the contents of the file as a text string. An optional encoding name can be specified.
 
-## Examples
-
-### File Reader
-
-This example reads and displays the contents of a text file directly in the browser.
-
-#### HTML
-
-```html
-<h1>File Reader</h1>
-<input type="file" id="file-input" />
-<div id="message"></div>
-<pre id="file-content"></pre>
-```
-
-#### JavaScript
-
-```js
-// Function to initialize the program
-function initializeApp() {
-  // Select HTML elements
-  const fileInput = document.getElementById("file-input");
-  const fileContentDisplay = document.getElementById("file-content");
-  const messageDisplay = document.getElementById("message");
-
-  // Add event listener to file input
-  fileInput.addEventListener("change", handleFileSelection);
-
-  // Handles file selection and reads its content
-  function handleFileSelection(event) {
-    const file = event.target.files[0];
-    fileContentDisplay.textContent = ""; // Clear previous file content
-    messageDisplay.textContent = ""; // Clear previous messages
-
-    // Validate file existence and type
-    if (!file) {
-      showMessage("No file selected. Please choose a file.", "error");
-      return;
-    }
-
-    if (!file.type.startsWith("text")) {
-      showMessage("Unsupported file type. Please select a text file.", "error");
-      return;
-    }
-
-    // Read the file
-    const reader = new FileReader();
-    reader.onload = () => {
-      fileContentDisplay.textContent = reader.result;
-    };
-    reader.onerror = () => {
-      showMessage("Error reading the file. Please try again.", "error");
-    };
-    reader.readAsText(file);
-  }
-
-  // Displays a message to the user
-  function showMessage(message, type) {
-    messageDisplay.textContent = message;
-    messageDisplay.style.color = type === "error" ? "red" : "green";
-  }
-}
-
-// Initialize the app when the DOM is fully loaded
-document.addEventListener("DOMContentLoaded", initializeApp);
-```
-
-### Result
-
-{{EmbedLiveSample("Examples", 640, 300)}}
-
 ## Events
 
 Listen to these events using {{domxref("EventTarget/addEventListener", "addEventListener()")}} or by assigning an event listener to the `oneventname` property of this interface. Remove the event listeners with {{domxref("EventTarget.removeEventListener", "removeEventListener()")}}, once `FileReader` is no longer used, to avoid memory leaks.
@@ -141,6 +66,68 @@ Listen to these events using {{domxref("EventTarget/addEventListener", "addEvent
   - : Fired when a read has started.
 - {{domxref("FileReader/progress_event", "progress")}}
   - : Fired periodically as data is read.
+
+## Examples
+
+### Using FileReader
+
+This example reads and displays the contents of a text file directly in the browser.
+
+#### HTML
+
+```html
+<h1>File Reader</h1>
+<input type="file" id="file-input" />
+<div id="message"></div>
+<pre id="file-content"></pre>
+```
+
+#### JavaScript
+
+```js
+const fileInput = document.getElementById("file-input");
+const fileContentDisplay = document.getElementById("file-content");
+const messageDisplay = document.getElementById("message");
+
+fileInput.addEventListener("change", handleFileSelection);
+
+function handleFileSelection(event) {
+  const file = event.target.files[0];
+  fileContentDisplay.textContent = ""; // Clear previous file content
+  messageDisplay.textContent = ""; // Clear previous messages
+
+  // Validate file existence and type
+  if (!file) {
+    showMessage("No file selected. Please choose a file.", "error");
+    return;
+  }
+
+  if (!file.type.startsWith("text")) {
+    showMessage("Unsupported file type. Please select a text file.", "error");
+    return;
+  }
+
+  // Read the file
+  const reader = new FileReader();
+  reader.onload = () => {
+    fileContentDisplay.textContent = reader.result;
+  };
+  reader.onerror = () => {
+    showMessage("Error reading the file. Please try again.", "error");
+  };
+  reader.readAsText(file);
+}
+
+// Displays a message to the user
+function showMessage(message, type) {
+  messageDisplay.textContent = message;
+  messageDisplay.style.color = type === "error" ? "red" : "green";
+}
+```
+
+### Result
+
+{{EmbedLiveSample("Using FileReader", 640, 300)}}
 
 ## Specifications
 
