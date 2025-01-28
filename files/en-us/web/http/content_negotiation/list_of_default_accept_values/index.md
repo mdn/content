@@ -36,7 +36,7 @@ This is typically used for requests initiated via the address bar of a browser, 
 
 \[3] This is an improvement over earlier `Accept` headers as it no longer ranks `image/png` above `text/html`.
 
-\[4] Rechecked and added values for Safari 13.1 to 18.1 and Chrome 131. Values may have changed before specified versions. 
+\[4] Rechecked and added values for Safari 13.1 to 18.1 and Chrome 131. Values may have changed before specified versions.
 
 ## Values for an image
 
