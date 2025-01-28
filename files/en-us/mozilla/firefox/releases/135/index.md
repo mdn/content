@@ -71,7 +71,7 @@ This article provides information about the changes in Firefox 135 that affect d
 
   - When performing actions, individual actions are now retried during dispatch, particularly in situations where a single action triggers a navigation that replaces the current browsing context ([Firefox bug 1930530](https://bugzilla.mozilla.org/show_bug.cgi?id=1930530), [Firefox bug 1930090](https://bugzilla.mozilla.org/show_bug.cgi?id=1930090)).
 
-  * When performing actions, a `TypeError: can't access property "getActor", browsingContext.currentWindowGlobal is null` error occurred if an action (not the last one) in the action chain closed the window, and the remaining actions were still being dispatched ([Firefox bug 1932916](https://bugzilla.mozilla.org/show_bug.cgi?id=1932916))
+  - When performing actions, a `TypeError: can't access property "getActor", browsingContext.currentWindowGlobal is null` error occurred if an action (not the last one) in the action chain closed the window, and the remaining actions were still being dispatched ([Firefox bug 1932916](https://bugzilla.mozilla.org/show_bug.cgi?id=1932916))
 
 * Some Marionette and WebDriver BiDi commands that rely internally on a `requestAnimationFrame` being emitted before returning would hang if the current browsing context was navigated during their execution ([Firefox bug 1937118](https://bugzilla.mozilla.org/show_bug.cgi?id=1937118)).
 
