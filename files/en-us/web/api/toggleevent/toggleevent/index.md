@@ -19,7 +19,7 @@ new ToggleEvent(type, init)
 ### Parameters
 
 - `type`
-  - : A string representing the type of event. In the case of `ToggleEvent` this is always `toggle`.
+  - : A string representing the type of event. In the case of `ToggleEvent` this is always `toggle` or `beforetoggle`.
 - `init`
   - : An object containing the following properties:
     - `newState`
