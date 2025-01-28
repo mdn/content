@@ -67,7 +67,7 @@ This article provides information about the changes in Firefox 135 that affect d
 
   - We now support proper queuing of action sequences without race conditions. This is particularly important for WebDriver BiDi's `input.performActions` command, which can be called multiple times in parallel and must execute the enqueued actions sequentially ([Firefox bug 1915798](https://bugzilla.mozilla.org/show_bug.cgi?id=1915798)).
 
-  * When dispatching actions, the `input cancel list` is incorrectly updated before the actual action is dispatched. This can cause unexpected side effects if the action fails to execute, potentially leaving a reverse action in place when the actions are released ([Firefox bug 1930845](https://bugzilla.mozilla.org/show_bug.cgi?id=1930845)).
+  - When dispatching actions, the `input cancel list` is incorrectly updated before the actual action is dispatched. This can cause unexpected side effects if the action fails to execute, potentially leaving a reverse action in place when the actions are released ([Firefox bug 1930845](https://bugzilla.mozilla.org/show_bug.cgi?id=1930845)).
 
   * When performing actions, individual actions are now retried during dispatch, particularly in situations where a single action triggers a navigation that replaces the current browsing context ([Firefox bug 1930530](https://bugzilla.mozilla.org/show_bug.cgi?id=1930530), [Firefox bug 1930090](https://bugzilla.mozilla.org/show_bug.cgi?id=1930090)).
 
