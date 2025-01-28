@@ -6,10 +6,8 @@ function getContentsAfterHost() {
 }
 
 window.addEventListener("DOMContentLoaded", () => {
-  if (location.hostname.endsWith("content.dev.mdn.mozit.cloud")) {
-    const link = document.createElement("a");
-    link.href = `https://developer.mozilla.org${getContentsAfterHost()}`;
-    link.textContent = "View on MDN production server";
-    document.body.appendChild(link);
-  }
+  const link = document.createElement("a");
+  link.href = `https://developer.mozilla.org${getContentsAfterHost()}`;
+  link.textContent = "View on MDN production server";
+  document.body.appendChild(link);
 });
