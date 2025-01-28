@@ -49,6 +49,8 @@ This article provides information about the changes in Firefox 135 that affect d
 
 #### Media, WebRTC, and Web Audio
 
+- The {{domxref("RTCOutboundRtpStreamStats.mid", "mid")}} and {{domxref("RTCOutboundRtpStreamStats.rid", "rid")}} properties of the {{domxref("RTCOutboundRtpStreamStats")}} interface, and the{{domxref("RTCOutboundRtpStreamStats.mid", "mid")}} property of the {{domxref("RTCInboundRtpStreamStats")}} interface are now supported. ([Firefox bug 1643001](https://bugzil.la/1643001)).
+
 #### Removals
 
 ### WebAssembly
@@ -67,11 +69,11 @@ This article provides information about the changes in Firefox 135 that affect d
 
   - We now support proper queuing of action sequences without race conditions. This is particularly important for WebDriver BiDi's `input.performActions` command, which can be called multiple times in parallel and must execute the enqueued actions sequentially ([Firefox bug 1915798](https://bugzilla.mozilla.org/show_bug.cgi?id=1915798)).
 
-  - When dispatching actions, the `input cancel list` is incorrectly updated before the actual action is dispatched. This can cause unexpected side effects if the action fails to execute, potentially leaving a reverse action in place when the actions are released ([Firefox bug 1930845](https://bugzilla.mozilla.org/show_bug.cgi?id=1930845)).
+  - When dispatching actions, the `input cancel list` is now correctly updated only after the action has been successfully dispatched. Previously, if an action failed to execute, a reverse action could be left in place, leading to unexpected side effects when resetting the state of the `input source` ([Firefox bug 1930845](https://bugzilla.mozilla.org/show_bug.cgi?id=1930845)).
 
   - When performing actions, individual actions are now retried during dispatch, particularly in situations where a single action triggers a navigation that replaces the current browsing context ([Firefox bug 1930530](https://bugzilla.mozilla.org/show_bug.cgi?id=1930530), [Firefox bug 1930090](https://bugzilla.mozilla.org/show_bug.cgi?id=1930090)).
 
-  - When performing actions, a `TypeError: can't access property "getActor", browsingContext.currentWindowGlobal is null` error occurred if an action (not the last one) in the action chain closed the window, and the remaining actions were still being dispatched ([Firefox bug 1932916](https://bugzilla.mozilla.org/show_bug.cgi?id=1932916))
+  - When performing actions, a `TypeError: can't access property "getActor", browsingContext.currentWindowGlobal is null` error occurred if an action (not the last one) in the action chain closed the window, and the remaining actions were still being dispatched ([Firefox bug 1932916](https://bugzilla.mozilla.org/show_bug.cgi?id=1932916)).
 
 - Some Marionette and WebDriver BiDi commands that rely internally on a `requestAnimationFrame` being emitted before returning would hang if the current browsing context was navigated during their execution ([Firefox bug 1937118](https://bugzilla.mozilla.org/show_bug.cgi?id=1937118)).
 
