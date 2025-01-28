@@ -58,7 +58,6 @@ in the callback list. You may not make any about its value. You can pass this va
 > While unlikely to cause issues for short-lived applications, you may want to use `null` for invalid handles instead of 0.
 > Note that it would take ~500 days to reach for a 60Hz based rendering with 100 calls to `requestAnimationFrame()` per frame.
 
-
 ## Examples
 
 In this example, an element is animated for 2 seconds (2000 milliseconds). The element
