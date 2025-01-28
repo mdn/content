@@ -4,7 +4,6 @@ slug: Web/CSS/CSS_box_model
 page-type: css-module
 spec-urls:
   - https://drafts.csswg.org/css-box-4/
-  - https://drafts.csswg.org/css-box-3/
 ---
 
 {{CSSRef}}
@@ -37,7 +36,7 @@ The CSS box model module defines physical (or "page relative") properties such a
 
 ### Data types
 
-- [`<box>`](/en-US/docs/Web/CSS/box-edge)
+- [`<box-edge>`](/en-US/docs/Web/CSS/box-edge)
   - [`<visual-box>`](/en-US/docs/Web/CSS/box-edge#visual-box)
   - [`<layout-box>`](/en-US/docs/Web/CSS/box-edge#layout-box)
   - [`<paint-box>`](/en-US/docs/Web/CSS/box-edge#paint-box)
