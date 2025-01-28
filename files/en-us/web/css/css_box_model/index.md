@@ -2,8 +2,7 @@
 title: CSS box model
 slug: Web/CSS/CSS_box_model
 page-type: css-module
-spec-urls:
-  - https://drafts.csswg.org/css-box-4/
+spec-urls: https://drafts.csswg.org/css-box-4/
 ---
 
 {{CSSRef}}
