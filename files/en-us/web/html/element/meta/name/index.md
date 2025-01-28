@@ -217,6 +217,12 @@ The CSS Device Adaptation specification defines the following metadata name:
 
 ### Other metadata names
 
+#### application-title
+
+The `application-title` metadata name is used by web applications that are installed as standalone apps on supporting desktop operating systems to customize an app's title bar. Although the text content of the {{HTMLElement("title")}} element is usually displayed in browser tabs when the app is running in a browser, the `application-title` metadata name can be used to set a different title for the app when it is running as a standalone installed app.
+
+#### WHATWG MetaExtensions
+
 The [WHATWG Wiki MetaExtensions page](https://wiki.whatwg.org/wiki/MetaExtensions) contains a large set of non-standard metadata names that have not been formally accepted yet; however, some of the names included there are already used quite commonly in practice — including the following:
 
 - `creator`: the name of the creator of the document, such as an organization or institution. If there are more than one, several {{HTMLElement("meta")}} elements should be used.
@@ -245,8 +251,6 @@ The [WHATWG Wiki MetaExtensions page](https://wiki.whatwg.org/wiki/MetaExtension
   > - If you want to remove a page, `noindex` will work, but only after the robot visits the page again. Ensure that the `robots.txt` file is not preventing revisits.
   > - Some values are mutually exclusive, like `index` and `noindex`, or `follow` and `nofollow`. In these cases the robot's behavior is undefined and may vary between them.
   > - Some crawler robots, like Google, Yahoo and Bing, support the same values for the HTTP header {{HTTPHeader("X-Robots-Tag")}}; this allows non-HTML documents like images to use these rules.
-
-<!-- ## Technical summary -->
 
 ## Specifications
 
