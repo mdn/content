@@ -6,7 +6,7 @@ page-type: firefox-release-notes
 
 {{FirefoxSidebar}}
 
-This article provides information about the changes in Firefox 135 that affect developers. Firefox 135 is the current [Nightly version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly) and ships on [February 4, 2025](https://whattrainisitnow.com/release/?version=135).
+This article provides information about the changes in Firefox 135 that affect developers. Firefox 135 is the current [Beta version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly) and ships on [February 4, 2025](https://whattrainisitnow.com/release/?version=135).
 
 ## Changes for web developers
 
@@ -22,6 +22,11 @@ This article provides information about the changes in Firefox 135 that affect d
 
 ### JavaScript
 
+- The [JSON parse with source proposal](https://github.com/tc39/proposal-json-parse-with-source) is now supported, which aims to provide features to mitigate issues around loss of precision when converting values such as large floats and date values between JavaScript values and JSON text ([Firefox bug 1934622](https://bugzil.la/1934622)). Specifically, the following features are now available:
+  - The `JSON.parse()` [`reviver` parameter `context` argument](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse#the_reviver_parameter): Provides access to the original JSON source text that was parsed.
+  - [`JSON.isRawJSON()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/isRawJSON): Tests whether a value is an object returned by `JSON.rawJSON()`.
+  - [`JSON.rawJSON()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/rawJSON): Creates a "raw JSON" object containing a piece of JSON text, which can then be included in an object to preserve the specified value when that object is stringified.
+
 #### Removals
 
 ### SVG
@@ -34,13 +39,22 @@ This article provides information about the changes in Firefox 135 that affect d
 
 ### Security
 
+- [Certificate Transparency](/en-US/docs/Web/Security/Certificate_Transparency) is a standard for ensuring that certificates are publicly disclosed before web browsers will trust them. Firefox now supports this feature on desktop versions (but not Android).
+  This only affects servers that use certificates issued by a certificate authority in Mozilla's Root CA Program.
+  ([Firefox bug 1938242](https://bugzil.la/1938242)).
+
 #### Removals
 
 ### APIs
 
+- The {{domxref("PublicKeyCredential.getClientCapabilities_static", "PublicKeyCredential.getClientCapabilities()")}} static method is supported, allowing a web app to check if a browser enables particular [WebAuthn](/en-US/docs/Web/API/Web_Authentication_API) capabilities and [extensions](/en-US/docs/Web/API/Web_Authentication_API/WebAuthn_extensions) without having to resort to user agent sniffing.
+  ([Firefox bug 1884466](https://bugzil.la/1884466)).
+
 #### DOM
 
 #### Media, WebRTC, and Web Audio
+
+- The {{domxref("RTCOutboundRtpStreamStats.mid", "mid")}} and {{domxref("RTCOutboundRtpStreamStats.rid", "rid")}} properties of the {{domxref("RTCOutboundRtpStreamStats")}} interface, and the{{domxref("RTCOutboundRtpStreamStats.mid", "mid")}} property of the {{domxref("RTCInboundRtpStreamStats")}} interface are now supported. ([Firefox bug 1643001](https://bugzil.la/1643001)).
 
 #### Removals
 

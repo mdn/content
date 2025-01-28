@@ -243,7 +243,7 @@ We include an {{htmlelement("input/range")}} of type `range`, nested in a {{html
 <p id="example">LeagueMono, font-weight: <output>400</output> (example)</p>
 <p>LeagueMono, font-weight: 700 (comparison)</p>
 <label
-  >Change the font size:
+  >Change the font weight:
   <input type="range" min="50" max="1000" step="50" value="400" />
 </label>
 ```
