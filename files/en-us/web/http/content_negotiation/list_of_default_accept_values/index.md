@@ -14,25 +14,29 @@ These are the values sent when the context doesn't give better information.
 Note that all browsers add the `*/*` MIME Type to cover all cases.
 This is typically used for requests initiated via the address bar of a browser, or via an HTML {{HTMLElement("a")}} element.
 
-| User Agent                 | Value                                                                                                                               |
-| -------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| Firefox 132 and later [1]  | `text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8`                                                                   |
-| Firefox 128 to 131         | `text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8`                     |
-| Firefox 92 to 127          | `text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8`                                             |
-| Firefox 72 to 91 [2]       | `text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8`                                                        |
-| Firefox 66 to 71 [2]       | `text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8`                                                                   |
-| Firefox 65 [2]             | `text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8`                                                        |
-| Firefox 64 and earlier [2] | `text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8`                                                                   |
-| Safari, Chrome             | `text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8`                                             |
-| Safari 5 [3]               | `text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8`                                                                   |
-| Edge                       | `text/html, application/xhtml+xml, image/jxr, */*`                                                                                  |
-| Opera                      | `text/html, application/xml;q=0.9, application/xhtml+xml, image/png, image/webp, image/jpeg, image/gif, image/x-xbitmap, */*;q=0.1` |
+| User Agent                 | Value                                                                                                                                     |
+| -------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| Firefox 132 and later [1]  | `text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8`                                                                         |
+| Firefox 128 to 131         | `text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8`                           |
+| Firefox 92 to 127          | `text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8`                                                   |
+| Firefox 72 to 91 [2]       | `text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8`                                                              |
+| Firefox 66 to 71 [2]       | `text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8`                                                                         |
+| Firefox 65 [2]             | `text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8`                                                              |
+| Firefox 64 and earlier [2] | `text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8`                                                                         |
+| Safari 13.1 to 18.1+ [4]   | `text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8`                                                                         |
+| Chrome 131+ [4]            | `text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7` |
+| Safari, Chrome [4]         | `text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8`                                                   |
+| Safari 5 [3]               | `text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8`                                                                         |
+| Edge                       | `text/html, application/xhtml+xml, image/jxr, */*`                                                                                        |
+| Opera                      | `text/html, application/xml;q=0.9, application/xhtml+xml, image/png, image/webp, image/jpeg, image/gif, image/x-xbitmap, */*;q=0.1`       |
 
 \[1] The value can be set to an arbitrary string using the `network.http.accept` preference (`about:config`).
 
 \[2] The value can be set to an arbitrary string using the [`network.http.accept.default`](https://kb.mozillazine.org/Network.http.accept.default) preference (`about:config`).
 
 \[3] This is an improvement over earlier `Accept` headers as it no longer ranks `image/png` above `text/html`.
+
+\[4] Rechecked and added values for Safari 13.1 to 18.1 and Chrome 131. Values may have changed before specified versions. 
 
 ## Values for an image
 
