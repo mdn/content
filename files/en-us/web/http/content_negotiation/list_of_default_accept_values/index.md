@@ -16,8 +16,9 @@ This is typically used for requests initiated via the address bar of a browser, 
 
 | User Agent                 | Value                                                                                                                               |
 | -------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| Firefox 128 and later [1]  | `text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8`                     |
-| Firefox 92 to 127 [1]      | `text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8`                                             |
+| Firefox 132 and later [1]  | `text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8`                                                                   |
+| Firefox 128 to 131         | `text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8`                     |
+| Firefox 92 to 127          | `text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8`                                             |
 | Firefox 72 to 91 [2]       | `text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8`                                                        |
 | Firefox 66 to 71 [2]       | `text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8`                                                                   |
 | Firefox 65 [2]             | `text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8`                                                        |
