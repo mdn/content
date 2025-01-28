@@ -59,7 +59,7 @@ This article provides information about the changes in Firefox 135 that affect d
 
 #### General
 
-* To make user events more realistic and better simulate real user interactions in the browser, we have moved the action sequence processing of the `Perform Actions` commands in both Marionette and WebDriver BiDi from the content process to the parent process. While events are still sent synchronously from the content process, they are now triggered asynchronously via IPC calls originating from the parent process ([Firefox bug 1922077](https://bugzilla.mozilla.org/show_bug.cgi?id=1922077)).
+- To make user events more realistic and better simulate real user interactions in the browser, we have moved the action sequence processing of the `Perform Actions` commands in both Marionette and WebDriver BiDi from the content process to the parent process. While events are still sent synchronously from the content process, they are now triggered asynchronously via IPC calls originating from the parent process ([Firefox bug 1922077](https://bugzilla.mozilla.org/show_bug.cgi?id=1922077)).
 
   Due to this significant change, some regressions may still exist. If you encounter any issues, please [file a bug for the Remote Agent](https://bugzilla.mozilla.org/enter_bug.cgi?product=Remote%20Protocol&component=Remote%20Agent). If the regressions block test execution, you can temporarily revert to the previous behavior by setting the Firefox preference `remote.events.async.enabled` to `false`.
 
