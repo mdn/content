@@ -250,7 +250,7 @@ The [WHATWG Wiki MetaExtensions page](https://wiki.whatwg.org/wiki/MetaExtension
 
 #### Other names
 
-- `application-title`: used by web applications that are installed as standalone apps on supporting desktop operating systems to customize an app's title bar. Although the text content of the {{HTMLElement("title")}} element is usually displayed in browser tabs when the app is running in a browser, the `application-title` metadata name can be used to set a different title for the app when it is running as a standalone installed app.
+- `application-title`: Used to customize an app's title bar for web applications installed as standalone apps on supporting desktop operating systems. While the text content of the {{HTMLElement("title")}} element is usually displayed in browser tabs when the app is running in a browser, the `application-title` metadata name can be used to set a different title for the application when it is running as a standalone installed app.
 
 ## Specifications
 
