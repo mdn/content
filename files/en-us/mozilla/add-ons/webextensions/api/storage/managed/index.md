@@ -38,7 +38,7 @@ storageItem.then((res) => {
 ```
 
 > [!NOTE]
-> A browser restart is required to load changes to the JSON manifest or policy into managed storage.
+> In Firefox, a browser restart is required to load changes to the JSON manifest or policy into managed storage. In other browsers, the loading of changes is dynamic.
 
 ## Methods
 
