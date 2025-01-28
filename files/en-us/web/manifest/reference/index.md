@@ -1,6 +1,6 @@
 ---
-title: Web app manifest references
-short-title: References
+title: Web app manifest members reference
+short-title: Reference
 slug: Web/Manifest/Reference
 page-type: listing-page
 ---
