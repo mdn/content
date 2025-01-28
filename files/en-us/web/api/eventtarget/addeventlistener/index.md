@@ -296,7 +296,7 @@ myButton.addEventListener("click", () => {
 console.log(someString); // Expected Value: 'Data' (will never output 'Data Again')
 ```
 
-Read [the function guide](/en-US/docs/Web/JavaScript/Guide/Functions#function_scope) for more information about function scopes.
+Read [the function guide](/en-US/docs/Web/JavaScript/Guide/Functions#function_scopes_and_closures) for more information about function scopes.
 
 ### Memory issues
 

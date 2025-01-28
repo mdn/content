@@ -11,7 +11,7 @@ The **`font-kerning`** [CSS](/en-US/docs/Web/CSS) property sets the use of the k
 
 {{EmbedInteractiveExample("pages/css/font-kerning.html")}}
 
-_Kerning_ defines how letters are spaced. In _well-kerned_ fonts, this feature makes character spacing more uniform and pleasant to read than it would otherwise be.
+_Kerning_ affects how letters are spaced. In _well-kerned_ fonts, this feature makes character spacing more uniform and pleasant to read by reducing white space between certain character combinations.
 
 In the image below, for instance, the examples on the left do not use kerning, while the ones on the right do:
 
