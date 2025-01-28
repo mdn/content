@@ -89,7 +89,7 @@ document.querySelectorAll("button").forEach((button) => {
     try {
       input.showPicker();
     } catch (error) {
-      window.alert(error);
+      console.log(error);
     }
   });
 });

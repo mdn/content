@@ -6,7 +6,7 @@ page-type: firefox-release-notes
 
 {{FirefoxSidebar}}
 
-This article provides information about the changes in Firefox 135 that affect developers. Firefox 135 is the current [Nightly version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly) and ships on [February 4, 2025](https://whattrainisitnow.com/release/?version=135).
+This article provides information about the changes in Firefox 135 that affect developers. Firefox 135 is the current [Beta version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly) and ships on [February 4, 2025](https://whattrainisitnow.com/release/?version=135).
 
 ## Changes for web developers
 
@@ -34,9 +34,16 @@ This article provides information about the changes in Firefox 135 that affect d
 
 ### Security
 
+- [Certificate Transparency](/en-US/docs/Web/Security/Certificate_Transparency) is a standard for ensuring that certificates are publicly disclosed before web browsers will trust them. Firefox now supports this feature on desktop versions (but not Android).
+  This only affects servers that use certificates issued by a certificate authority in Mozilla's Root CA Program.
+  ([Firefox bug 1938242](https://bugzil.la/1938242)).
+
 #### Removals
 
 ### APIs
+
+- The {{domxref("PublicKeyCredential.getClientCapabilities_static", "PublicKeyCredential.getClientCapabilities()")}} static method is supported, allowing a web app to check if a browser enables particular [WebAuthn](/en-US/docs/Web/API/Web_Authentication_API) capabilities and [extensions](/en-US/docs/Web/API/Web_Authentication_API/WebAuthn_extensions) without having to resort to user agent sniffing.
+  ([Firefox bug 1884466](https://bugzil.la/1884466)).
 
 #### DOM
 

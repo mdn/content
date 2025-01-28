@@ -456,7 +456,7 @@ In the next article, we'll explore text and how JavaScript allows us to manipula
 
 ## See also
 
-- [Numbers and dates](/en-US/docs/Web/JavaScript/Guide/Numbers_and_dates)
+- [Numbers and strings](/en-US/docs/Web/JavaScript/Guide/Numbers_and_strings)
 - [Expressions and operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators)
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/Variables", "Learn_web_development/Core/Scripting/Strings", "Learn_web_development/Core/Scripting")}}

@@ -118,7 +118,7 @@ In previous articles, we've seen the usage of [generated content](/en-US/docs/We
 
 The idea is that we can use the [`::before`](/en-US/docs/Web/CSS/::before) and [`::after`](/en-US/docs/Web/CSS/::after) pseudo-elements along with the [`content`](/en-US/docs/Web/CSS/content) property to make a chunk of content appear before or after the affected element. The chunk of content is not added to the DOM, so it may be invisible to some screen readers. Because it is a pseudo-element, it can be targeted with styles in the same way that any actual DOM node can.
 
-This is really useful when you want to add a visual indicator to an element, such as a label or icon, when alternative indicators are also available to ensure accessibility for all users. For example, in our [custom radio buttons example](https://mdn.github.io/learning-area/html/forms/styling-examples/radios-styled.html), we use generated content to handle the placement and animation of the a custom radio button's inner circle when a radio button is selected:
+This is really useful when you want to add a visual indicator to an element, such as a label or icon, when alternative indicators are also available to ensure accessibility for all users. For example, in our [custom radio buttons example](https://mdn.github.io/learning-area/html/forms/styling-examples/radios-styled.html), we use generated content to handle the placement and animation of the custom radio button's inner circle when a radio button is selected:
 
 ```css
 input[type="radio"]::before {

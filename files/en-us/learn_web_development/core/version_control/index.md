@@ -8,33 +8,33 @@ page-type: learn-module
 
 {{PreviousMenu("Learn_web_development/Core/Design_for_developers", "Learn_web_development/Core")}}
 
-Version control tools are an essential part of modern workflows, for backing up and collaborating on codebases. This module takes you through the essentials of version control using Git and GitHub.
+Version control tools (often called **Version Control Systems**, or **VCS**) are an essential part of modern workflows, for backing up and collaborating on codebases. This module takes you through the essentials of version control using Git and GitHub.
 
 ## Overview
 
-VCSes are essential for software development:
+Version control tools are essential for software development:
 
 - It is rare that you will work on a project completely on your own, and as soon as you start working with other people you start to run the risk of conflicting with each other's work — this is when both of you try to update the same piece of code at the same time. You need to have some kind of mechanism in place to manage the occurrences, and help avoid loss of work as a result.
 - When working on a project on your own or with others, you'll want to be able to back up the code in a central place, so it is not lost if your computer breaks.
 - You will also want to be able to roll back to earlier versions if a problem is later discovered. You might have started doing this in your own work by creating different versions of the same file, e.g. `myCode.js`, `myCode_v2.js`, `myCode_v3.js`, `myCode_final.js`, `myCode_really_really_final.js`, etc., but this is really error-prone and unreliable.
 - Different team members will commonly want to create their own separate versions of the code (called **branches** in Git), work on a new feature in that version, and then get it merged in a controlled manner (in GitHub we use **pull requests**) with the master version when they are done with it.
 
-VCSes provide tools to meet the above needs. [Git](https://git-scm.com/) is an example of a VCS, and [GitHub](https://github.com/) is a website + infrastructure that provides a Git server plus a number of really useful tools for working with git repositories individually or in teams, such as reporting issues with the code, reviewing tools, project management features such as assigning tasks and task statuses, and more.
+Version control tools meet the above needs. [Git](https://git-scm.com/) is an example of a version control tool, and [GitHub](https://github.com/) is a website + infrastructure that provides a Git server plus a number of really useful tools for working with git repositories individually or in teams, such as reporting issues with the code, reviewing tools, project management features such as assigning tasks and task statuses, and more.
 
 > [!NOTE]
-> Git is actually a _distributed_ version control system, meaning that a complete copy of the repository containing the codebase is made on your computer (and everyone else's). You make changes to your own copy and then push those changes back up to the server, where an administrator will decide whether to merge your changes with the master copy.
+> Git is actually a _distributed_ version control tools, meaning that a complete copy of the repository containing the codebase is made on your computer (and everyone else's). You make changes to your own copy and then push those changes back up to the server, where an administrator will decide whether to merge your changes with the master copy.
 
 ## Prerequisites
 
 To use Git and GitHub, you need:
 
 - A desktop computer with Git installed on it (see the [Git downloads page](https://git-scm.com/downloads)).
-- A tool to use Git. Depending on how you like to work, you could use a [Git GUI client](https://git-scm.com/downloads/guis/) (we'd recommend GitHub Desktop, SourceTree or Git Kraken) or just stick to using a terminal window. In fact, it is probably useful for you to get to know at least the basics of git terminal commands, even if you intend to use a GUI.
+- A tool to use Git. Depending on how you like to work, you could use a [Git GUI client](https://git-scm.com/downloads/guis/) (we'd recommend [GitHub Desktop](https://desktop.github.com/download/), [SourceTree](https://www.sourcetreeapp.com/) or [Git Kraken](https://www.gitkraken.com/)) or just stick to using a terminal window. In fact, it is probably useful for you to get to know at least the basics of git terminal commands, even if you intend to use a GUI.
 - A [GitHub account](https://github.com/signup). If you haven't already got one, sign up now using the provided link.
 
-In terms of prerequisite knowledge, you don't need to know anything about web development, Git/GitHub, or VCSes to start this module. However, it is recommended that you know some coding so that you have reasonable computer literacy, and some code to store in your repositories!
+In terms of prerequisite knowledge, you don't need to know anything about web development, Git/GitHub, or version control to start this module. However, it is recommended that you know some coding so that you have reasonable computer literacy, and some code to store in your repositories!
 
-It is also preferable that you have some basic terminal knowledge, so for example moving between directories, creating files, and modifying the system `PATH`.
+It is also preferable that you have some basic terminal knowledge, so for example moving between directories and creating files. You can find out all the basics in our [Command line crash course](/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Command_line).
 
 > [!NOTE]
 > GitHub is not the only site/toolset you can use with Git. There are other alternatives such as [GitLab](https://about.gitlab.com/) that you could try, and you could also try setting your own Git server up and using it instead of GitHub. We've only stuck with GitHub in this course to provide a single way that works.
@@ -61,7 +61,7 @@ Note that the links below take you to resources on external sites. Eventually, w
 - [Hello, World (from GitHub)](https://docs.github.com/en/get-started/start-your-journey/hello-world)
   - : This is a good place to start — this practical guide gets you to jump right into using GitHub, learning the basics of Git such as creating repositories and branches, making commits, and opening and merging pull requests.
 - [Git Handbook (from GitHub)](https://docs.github.com/en/get-started/using-git/about-git)
-  - : This Git Handbook goes into a little more depth, explaining what a VCS is, what a repository is, how the basic GitHub model works, Git commands and examples, and more.
+  - : This Git Handbook goes into a little more depth, explaining what a version control tool is, what a repository is, how the basic GitHub model works, Git commands and examples, and more.
 - [Forking Projects (from GitHub)](https://docs.github.com/en/get-started/exploring-projects-on-github/contributing-to-a-project)
   - : Forking projects is essential when you want to contribute to someone else's code. This guide explains how.
 - [About Pull Requests (from GitHub)](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests)

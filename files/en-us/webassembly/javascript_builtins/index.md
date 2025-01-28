@@ -152,7 +152,7 @@ You can build up the example by following the steps below. In addition, you can 
 
 ### JavaScript
 
-The JavaScript for the example is shown below. To test this locally, include it in an HTML page using a method of your chooosing (for example, inside {{htmlelement("script")}} tags, or in an external `.js` file referenced via `<script src="">`).
+The JavaScript for the example is shown below. To test this locally, include it in an HTML page using a method of your choosing (for example, inside {{htmlelement("script")}} tags, or in an external `.js` file referenced via `<script src="">`).
 
 ```js
 const importObject = {

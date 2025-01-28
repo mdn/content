@@ -20,9 +20,9 @@ With web access on mobile devices being so popular and renowned platforms such a
       <th scope="row">Learning outcomes:</th>
       <td>
         <ul>
-          <li>Familiarity with screenreaders on iOS and Android.</li>
+          <li>Familiarity with screen readers on iOS and Android.</li>
           <li>Familiarity with accessibility issues behind some types of events.</li>
-          <li>Specific techniques for more usable user input machanisms on mobile.</li>
+          <li>Specific techniques for more usable user input mechanisms on mobile.</li>
           <li>Know that mobile browsers provide specific usability advantages for specific <code>&lt;input&gt;</code> types such as <code>number</code> or <code>tel</code>.</li>
         </ul>
       </td>

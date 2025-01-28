@@ -47,7 +47,7 @@ Below you will find links to documentation, examples, and tools to work with Mat
 - [MathML attribute reference](/en-US/docs/Web/MathML/Attribute)
   - : Information about MathML attributes that modify the appearance or behavior of elements.
 - [MathML attribute values](/en-US/docs/Web/MathML/Attribute)
-  - : Further information about MathML atribute values.
+  - : Further information about MathML attribute values.
 - [MathML examples](/en-US/docs/Web/MathML/Examples)
   - : MathML samples and examples to help you understand how it works.
 
