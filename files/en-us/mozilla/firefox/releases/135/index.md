@@ -63,7 +63,7 @@ This article provides information about the changes in Firefox 135 that affect d
 
   Due to this significant change, some regressions may still exist. If you encounter any issues, please [file a bug for the Remote Agent](https://bugzilla.mozilla.org/enter_bug.cgi?product=Remote%20Protocol&component=Remote%20Agent). If the regressions block test execution, you can temporarily revert to the previous behavior by setting the Firefox preference `remote.events.async.enabled` to `false`.
 
-* With the processing of actions now handled in the parent process the following issues were fixed as well:
+- With the processing of actions now handled in the parent process the following issues were fixed as well:
 
   * We now support proper queuing of action sequences without race conditions. This is particularly important for WebDriver BiDi's `input.performActions` command, which can be called multiple times in parallel and must execute the enqueued actions sequentially ([Firefox bug 1915798](https://bugzilla.mozilla.org/show_bug.cgi?id=1915798)).
 
