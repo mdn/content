@@ -166,9 +166,9 @@ For example, the map below defines integrity metadata for the `square.js` module
 
 ### Merging multiple import maps
 
-Internally, browsers maintain a single global import map representation. When multiple import maps are included in the Document, their contents are merged into the global import map when they are registered.
+Internally, browsers maintain a single global import map representation. When multiple import maps are included in a document, their contents are merged into the global import map when they are registered.
 
-For example, the following two import maps:
+For example, consider the following two import maps:
 
 ```html
 <script type="importmap">
@@ -195,7 +195,7 @@ For example, the following two import maps:
 </script>
 ```
 
-Would be equivalent to the following single import map:
+These are equivalent to the following single import map:
 
 ```html
 <script type="importmap">
@@ -213,9 +213,9 @@ Would be equivalent to the following single import map:
 </script>
 ```
 
-Module specifiers in each registered map that were already resolved before it was registered are dropped. Future resolution of these specifiers will provide the same results as their previous resolution.
+Module specifiers in each registered map that were already resolved beforehand are dropped. Subsequent resolutions of these specifiers will provide the same results as their previous resolutions.
 
-For example, if the module specifier "/app/helper.js" was already resolved, the following new import map:
+For example, if the module specifier `/app/helper.js` was already resolved, the following new import map:
 
 ```html
 <script type="importmap">
@@ -228,7 +228,7 @@ For example, if the module specifier "/app/helper.js" was already resolved, the 
 </script>
 ```
 
-Would be equivalent to the following one:
+Would be equivalent to:
 
 ```html
 <script type="importmap">
@@ -240,9 +240,9 @@ Would be equivalent to the following one:
 </script>
 ```
 
-You may notice that the `/app/helper.js` rule was ignored and not incorporated into the map.
+The `/app/helper.js` rule was ignored and not incorporated into the map.
 
-Similarly, module specifiers in a registered map that were already mapped to URLs in the global map are dropped and their previous mapping prevails.
+Similarly, module specifiers in a registered map that were already mapped to URLs in the global map are dropped; their previous mapping prevails.
 
 For example, the following two import maps:
 
@@ -267,7 +267,7 @@ For example, the following two import maps:
 </script>
 ```
 
-Would be equivalent to the following single import map:
+Are equivalent to the following single import map:
 
 ```html
 <script type="importmap">
@@ -280,7 +280,7 @@ Would be equivalent to the following single import map:
 </script>
 ```
 
-You can notice that the `/app/helper/` rule was dropped from the second map.
+The `/app/helper/` rule was dropped from the second map.
 
 > [!NOTE]
 > In non-supporting browsers (check the [compatibility data](#browser_compatibility)), a [polyfill](https://github.com/guybedford/es-module-shims) can be used to avoid issues related to module resolution.
