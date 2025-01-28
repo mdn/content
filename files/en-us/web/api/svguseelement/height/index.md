@@ -38,8 +38,8 @@ const uses = document.querySelectorAll("use");
 const heightUse1 = uses[0].height;
 const heightUse2 = uses[1].height;
 
-console.dir(heightUse1.baseVal.value); // output: 50
-console.dir(heightUse2.baseVal.value); // output: 100
+console.log(heightUse1.baseVal.value); // output: 50
+console.log(heightUse2.baseVal.value); // output: 100
 ```
 
 ## Specifications
