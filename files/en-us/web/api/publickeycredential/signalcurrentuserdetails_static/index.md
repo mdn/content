@@ -39,9 +39,12 @@ A {{jsxref("Promise")}} that resolves to {{jsxref("undefined")}}.
 
 ### Exceptions
 
-The promise rejects with a `TypeError` {{domxref("DOMException")}} if the `userId` is not a valid base64url-encoded string.
+The promise rejects with the following exceptions:
 
-It also rejects with a `SecurityError` {{domxref("DOMException")}} if the RP domain is not valid.
+- `SecurityError` {{domxref("DOMException")}}
+  - : The RP domain is not valid.
+- `TypeError` {{domxref("DOMException")}}
+  - : The `credentialId` is not a valid base64url-encoded string.
 
 ## Description
 
@@ -54,6 +57,8 @@ To avoid this issue, `signalCurrentUserDetails()` should be called on the RP sit
 ## Examples
 
 ### Signaling the current user details
+
+In this example, we invoke the `signalCurrentUserDetail()` method, passing it the details of a credential the user has just edited on the RP. As a result, the authenticator should update its own copy of the credential so that it stays in sync with the RP.
 
 ```js
 if (PublicKeyCredential.signalCurrentUserDetails) {

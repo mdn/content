@@ -12,7 +12,9 @@ browser-compat: api.PublicKeyCredential.signalAllAcceptedCredentials_static
 
 The **`signalAllAcceptedCredentials()`** static method of the {{domxref("PublicKeyCredential")}} interface signals to the authenticator all of the valid [credential IDs](/en-US/docs/Web/API/PublicKeyCredentialRequestOptions#id) that the [relying party](https://en.wikipedia.org/wiki/Relying_party) (RP) server still holds for a particular user.
 
-This allows the authenticator to update credential information and remove credentials that are no longer regognized by the RP, such as those for deleted accounts. It should only be used when the current user is authenticated — after sign in, and following deletion of a credential on the RP site.
+This allows the authenticator to update credential information, removing all credentials that are no longer recognized by the RP, such as those for deleted accounts. The method should be called each time a user authenticates with the RP.
+
+`signalAllAcceptedCredentials()` should _only_ be called when the current user is authenticated — after sign up or sign-in, or when the user deletes a credential — as it exposes sensitive information belonging to the user.
 
 ## Syntax
 
@@ -37,9 +39,12 @@ A {{jsxref("Promise")}} that resolves to {{jsxref("undefined")}}.
 
 ### Exceptions
 
-The promise rejects with a `TypeError` {{domxref("DOMException")}} if the `userId` or any of the `allAcceptedCredentialIds` elements are not valid base64url-encoded strings.
+The promise rejects with the following exceptions:
 
-It also rejects with a `SecurityError` {{domxref("DOMException")}} if the RP domain is not valid.
+- `SecurityError` {{domxref("DOMException")}}
+  - : The RP domain is not valid.
+- `TypeError` {{domxref("DOMException")}}
+  - : The `userId` or any of the `allAcceptedCredentialIds` elements are not valid base64url-encoded strings.
 
 ## Description
 
@@ -47,22 +52,18 @@ It is possible for the information stored in a user's authenticator about a [dis
 
 The next time they try to sign in with a discoverable credential, the deleted credential will still be presented in the relevant UI, but the sign-in attempt will fail because the RP server won't recognize it. This results in a confusing user experience.
 
-To avoid this issue, `signalAllAcceptedCredentials()` should be called on the RP site each time a user deletes a credential or signs in, to tell the authenticator which credentials are still valid for the given user. It is up to the authenticator how to handle this information, but the expectation is that it will synchronize its information with the provided credentials list. Credentials that don't appear in the list should be removed so that the user won't be offered credentials that don't exist in the sign-in UI.
+To mitigate this issue, `signalAllAcceptedCredentials()` should be called by the RP site each time a user deletes a credential or signs in, to tell the authenticator which credentials are still valid for the given user. It is up to the authenticator how to handle this information, but the expectation is that it will synchronize its information with the provided credentials list. Credentials that don't appear in the list should be removed so that the user won't be offered credentials that don't exist in the sign-in UI.
 
 > [!WARNING]
 > Exercise caution when invoking `signalAllAcceptedCredentials()` — any valid credentials not included in the list are intended to be removed from the authenticator, which will prevent the user from signing in with them. Passing an empty list may remove all of the user's credentials. Some authenticators may support restoring credentials via a subsequent call to `signalAllAcceptedCredentials()` with the previously removed credential IDs included in the list.
 
-### `signalAllAcceptedCredentials()` versus `signalUnknownCredential()`
-
-It may seem like `signalAllAcceptedCredentials()` and {{domxref("PublicKeyCredential.signalUnknownCredential_static", "signalUnknownCredential()")}} have similar purposes, so what situation should each one be used in?
-
-To be clear, `signalAllAcceptedCredentials()` should only be used in cases where the user is authenticated and you want to update the state of a user's credentials. Don't use it in cases where the user is not authenticated — for example if authentication failed because the user deleted a credential from the RP but later tried to sign in with it because it was still showing in the authenticator. Using `signalAllAcceptedCredentials()` for this purpose would share the entire list of `credentialId`s for a given user with an unauthenticated party, which may not be desirable.
-
-In cases where the user is not authenticated, you should instead use `signalUnknownCredential()`. It doesn't reveal the user's `credentialId` list to the authenticator, minimizing the data shared with an unauthenticated party.
+`signalAllAcceptedCredentials()` should _only_ be called when the current user is authenticated because it exposes sensitive information belonging to the user. If the user is not authenticated because they tried to log in with a credential that does not exist on the RP server, you should instead call {{domxref("PublicKeyCredential.signalUnknownCredential_static", "PublicKeyCredential.signalUnknownCredential()")}} with the unrecognized credential, so the authenticator can delete it. See [Discoverable credential synchronization methods](/en-US/docs/Web/API/Web_Authentication_API#discoverable_credential_synchronization_methods) for a more detailed comparison.
 
 ## Examples
 
 ### Signaling the accepted credentials
+
+In this example, we invoke the `signalAllAcceptedCredentials()` method, passing it the details of a credential the user has just logged in with. As a result, the authenticator should update its own copy of the credentials so that it stays in sync with the RP.
 
 ```js
 if (PublicKeyCredential.signalAllAcceptedCredentials) {

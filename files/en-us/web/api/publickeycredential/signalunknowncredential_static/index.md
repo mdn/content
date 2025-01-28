@@ -12,7 +12,7 @@ browser-compat: api.PublicKeyCredential.signalUnknownCredential_static
 
 The **`signalUnknownCredential()`** static method of the {{domxref("PublicKeyCredential")}} interface signals to the authenticator that a [credential ID](/en-US/docs/Web/API/PublicKeyCredentialRequestOptions#id) was not recognized by the [relying party](https://en.wikipedia.org/wiki/Relying_party) (RP) server.
 
-This allows the authenticator to remove credentials that are not allowed by the RP, such as those for deleted accounts, or accounts that were not properly stored on the server. It should only be used when the current user is not authenticated — after sign in fails because the account details were not available to the RP.
+This allows the authenticator to remove credentials that are not allowed by the RP, such as those for deleted accounts, or accounts that were created and stored on the authenticator but not properly updated on the server. Generally the method is called after sign in fails because the account details were not available to the RP. It can be used even when the current user is not authenticated because it does not expose sensitive information.
 
 ## Syntax
 
@@ -35,9 +35,12 @@ A {{jsxref("Promise")}} that resolves to {{jsxref("undefined")}}.
 
 ### Exceptions
 
-The promise rejects with a `TypeError` {{domxref("DOMException")}} if the `credentialId` is not a valid base64url-encoded string.
+The promise rejects with the following exceptions:
 
-It also rejects with a `SecurityError` {{domxref("DOMException")}} if the RP domain is not valid.
+- `SecurityError` {{domxref("DOMException")}}
+  - : The RP domain is not valid.
+- `TypeError` {{domxref("DOMException")}}
+  - : The `credentialId` is not a valid base64url-encoded string.
 
 ## Description
 
@@ -45,25 +48,37 @@ It is possible for the information stored in a user's authenticator about a [dis
 
 The next time they try to sign in with a discoverable credential, the deleted credential will still be presented in the relevant UI, but the attempt to sign in will fail because the RP server won't recognize it. This results in a confusing user experience.
 
-To avoid this issue, `signalUnknownCredential()` should be called on the RP site each time a discoverable credential-based sign-in fails, or when a discoverable credential is created but fails to be stored on the server for some reason. This tells the authenticator that the credential ID was not recognized. It is up to the authenticator how to handle this information, but the expectation is that it will delete the relevant credential so that the same confusion does not occur again.
+To avoid this issue, `signalUnknownCredential()` should be called on the RP site each time a discoverable credential-based sign-in fails, to inform the authenticator that the credential ID was not recognized.
 
-### `signalUnknownCredential()` versus `signalAllAcceptedCredentials()`
+It is up to the authenticator how to handle this information, but the expectation is that it will delete the relevant credential so that there is no mismatch in the data stored on the authenticator and relying party.
 
-It may seem like `signalUnknownCredential()` and {{domxref("PublicKeyCredential.signalAllAcceptedCredentials_static", "signalAllAcceptedCredentials()")}} have similar purposes, so what situation should each one be used in?
+In addition, `signalUnknownCredential()` might also be called if a web app is able to create a discoverable credential on the authenticator but is, for any reason, unable to upload the credential information to the server.
 
-To be clear, `signalUnknownCredential()` should be used to update the authenticator when the user is not authenticated. It only passes a single `credentialId` to the authenticator — the same one the client just tried to authenticate with. Using `signalAllAcceptedCredentials()` for this purpose would share the entire list of `credentialId`s for a given user with an unauthenticated party, which may not be desirable.
-
-`signalAllAcceptedCredentials()` should be used in cases where the user is authenticated and you want to update the state of a user's credentials.
+`signalUnknownCredential()` can be called even when the current user is not authenticated because it does not expose sensitive information.
 
 ## Examples
 
 ### Signaling an unknown credential
 
+In this example, a login attempt is made using discoverable credentials via a [`get()`](/en-US/docs/Web/API/CredentialsContainer/get) call. The credential is returned successfully, and the credential ID and payload are stored in constants.
+
+The payload is sent to the RP server via a [`fetch()`](/en-US/docs/Web/API/Window/fetch) request to log the user in, but the request fails with a {{httpstatus("404")}} response because the RP doesn't recognize that user (for example because that credential was prevously deleted from the RP).
+
+As a result of this, we invoke the `signalUnknownCredential()` method, passing it the `rpId` and credential ID, to inform the authenticator that the credential is unknown to the RP. The authenticator should then delete the credential so it does not cause the same problem again.
+
 ```js
 const credential = await navigator.credentials.get({
-  // get() options
+  challenge: new Uint8Array([139, 66, 181, 87, 7, 203, ...]),
+  rpId: "example.com",
+  allowCredentials: []
+  // Empty allowCredentials list means only discoverable
+  // credentials are presented to the user
 });
 
+// Retrieve base64url-encoded credential ID,
+// such as "vI0qOggiE3OT01ZRWBYz5l4MEgU0c7PmAA"
+const credID = credential.id;
+// Retrieve payload to send to the RP server
 const payload = credential.toJSON();
 
 const result = await fetch("/login", {
@@ -75,7 +90,7 @@ if (result.status === 404) {
   if (PublicKeyCredential.signalUnknownCredential) {
     await PublicKeyCredential.signalUnknownCredential({
       rpId: "example.com",
-      credentialId: "vI0qOggiE3OT01ZRWBYz5l4MEgU0c7PmAA", // base64url-encoded credential ID
+      credentialId: credID
     });
   } else {
     // Encourage the user to delete the credential from the authenticator
