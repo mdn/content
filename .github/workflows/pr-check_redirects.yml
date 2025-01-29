@@ -40,4 +40,4 @@ jobs:
 
       - name: Check redirects file(s)
         if: steps.filter.outputs.required_files == 'true'
-        run: yarn content validate-redirects en-us --strict
+        run: yarn content:legacy validate-redirects en-us --strict
