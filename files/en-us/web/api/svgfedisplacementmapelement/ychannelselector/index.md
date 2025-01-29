@@ -38,6 +38,8 @@ An {{domxref("SVGAnimatedEnumeration")}} object.
 </svg>
 ```
 
+We can access the `yChannelSelector ` attribute and get its value:
+
 ```js
 const displacementMap = document.querySelector("feDisplacementMap");
 
