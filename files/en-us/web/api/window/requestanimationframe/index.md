@@ -56,8 +56,8 @@ in the callback list. You should not make any assumptions about its value. You c
 > [!WARNING]
 > The request ID is typically implemented as a per-window incrementing counter. Therefore, even when it starts counting at 1, it may overflow and end up reaching 0.
 > While unlikely to cause issues for short-lived applications, you should avoid `0` as a sentinel value for invalid request identifier IDs and instead prefer unattainable values such as `null`.
-> As of January 2025, browsers such as WebKit and Chrome also don't implement it with an `unsigned long` but with a `signed long`, meaning you can not use negative values either. Firefox will return an error and fail instead of wrapping.
-> This also means that request IDs are not truely unique, and may be reused over time for browsers not implementing the check.
+> The spec doesn't specify the overflowing behavior, so browsers have divergent behaviors. When overflowing, the value would either wrap around to 0, to a negative value, or fail with an error.
+> Unless overflow throws, request IDs are also not truly unique because there are only finitely many 32-bit integers for possibly infinitely many callbacks.
 > Note that it would however take ~500 days to reach the issue when rendering at 60Hz with 100 calls to `requestAnimationFrame()` per frame.
 
 ## Examples
