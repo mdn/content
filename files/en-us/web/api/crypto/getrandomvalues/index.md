@@ -55,7 +55,9 @@ the Unix `/dev/urandom` device, or other source of random or pseudorandom data.
 
 ```js
 const array = new Uint32Array(10);
-self.crypto.getRandomValues(array);
+// Also available as window.crypto.getRandomValues(array)
+// or self.crypto.getRandomValues(array) depending on context
+crypto.getRandomValues(array);
 
 console.log("Your lucky numbers:");
 for (const num of array) {

@@ -27,9 +27,9 @@ A string containing a randomly generated, 36 character long v4 UUID.
 ## Examples
 
 ```js
-/* Assuming that self.crypto.randomUUID() is available */
-
-let uuid = self.crypto.randomUUID();
+// Also available as window.crypto.randomUUID()
+// or self.crypto.randomUUID() depending on context
+const uuid = crypto.randomUUID();
 console.log(uuid); // for example "36b8f84d-df4e-4d49-b662-bcde71a8764f"
 ```
 
