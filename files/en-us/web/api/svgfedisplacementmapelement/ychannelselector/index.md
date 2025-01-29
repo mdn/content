@@ -16,7 +16,9 @@ An {{domxref("SVGAnimatedEnumeration")}} object.
 
 ## Examples
 
-### Accessing the `yChannelSelector` Property
+### Accessing the `yChannelSelector` attribute
+
+In this example, the {{SVGElement("feDisplacementMap")}} element defined in the  {{SVGElement("filter")}}  includes a `yChannelSelector` attribute.
 
 ```html
 <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
