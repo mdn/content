@@ -21,7 +21,7 @@ There are a number of guides within MDN docs. These articles aim to add addition
 
 - [Learn to style HTML using CSS](/en-US/docs/Learn_web_development/Core/Styling_basics)
   - : Our complete CSS tutorial, taking you from first steps through styling text, creating layouts, and more.
-- [CSS Layout Guides](/en-US/docs/Web/Guide/CSS/CSS_Layout)
+- [CSS Layout Guides](/en-US/docs/Web/CSS/Guides)
   - : There are a large number of guides to CSS Layout across MDN, this page collects them all together.
 - [Using CSS animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations)
   - : CSS animations make it possible to animate transitions from one CSS style configuration to another. This guide will help you get started with the animation properties.
