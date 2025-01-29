@@ -1,5 +1,6 @@
 ---
 title: "XSLT: Extensible Stylesheet Language Transformations"
+short-title: XSLT
 slug: Web/XSLT
 page-type: landing-page
 ---

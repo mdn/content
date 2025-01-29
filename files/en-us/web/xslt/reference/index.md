@@ -1,6 +1,6 @@
 ---
-title: XSLT references
-short-title: References
+title: XSLT reference
+short-title: Reference
 slug: Web/XSLT/Reference
 page-type: listing-page
 ---

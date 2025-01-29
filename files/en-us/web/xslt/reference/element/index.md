@@ -1,5 +1,6 @@
 ---
 title: XSLT elements reference
+short-title: Elements
 slug: Web/XSLT/Reference/Element
 page-type: landing-page
 ---
