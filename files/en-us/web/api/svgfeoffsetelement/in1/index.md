@@ -16,7 +16,9 @@ An {{domxref("SVGAnimatedString")}} object.
 
 ## Examples
 
-### Accessing the `in` Property of `feOffset` Element
+### Accessing the `in` attribute of `<feOffset>` element
+
+In this example, we access the `in` attribute value of the `<feOffset>` element by using the `in1` read-only property of the `SVGFEOffsetElement` interface.
 
 ```html
 <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
