@@ -30,7 +30,7 @@ DOMMatrixReadOnly.rotate(rotX, rotY, rotZ)
 - `rotZ` {{optional_inline}}
   - : A number; the z-coordinate of the vector denoting the axis of rotation.
 
-If `rotY` and `rotZ` are both missing, `rotZ` is set to the value of `rotX`, and both `rotX` and `rotY` are `0`.
+If only `rotX` is passed, then `rotX` is used as the value for the z-coordinate, and the x- and -y-coordinates are both set to zero.
 
 ### Return value
 
