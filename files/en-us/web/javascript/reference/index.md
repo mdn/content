@@ -62,6 +62,7 @@ If you are new to JavaScript, start with the [guide](/en-US/docs/Web/JavaScript/
 - {{jsxref("BigInt")}}
 - {{jsxref("Math")}}
 - {{jsxref("Date")}}
+- {{jsxref("Temporal")}}
 
 ### Text processing
 

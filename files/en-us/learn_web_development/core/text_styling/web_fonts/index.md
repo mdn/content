@@ -198,8 +198,6 @@ Now that you have worked through our articles on text styling fundamentals, it's
 ## See also
 
 - [Variable fonts guide](/en-US/docs/Web/CSS/CSS_fonts/Variable_fonts_guide)
-  - : Variable fonts allow many different variations of a typeface to be incorporated into a single file, rather than having a separate font file for every width, weight, or style. They are somewhat advanced for our beginner's course, but have a look at this guide if you feel like stretching yourself.
 - [Fonts knowledge](https://fonts.google.com/knowledge), Google Fonts
-  - : A series of useful, in-depth articles covering different aspects of using fonts.
 
 {{PreviousMenuNext("Learn_web_development/Core/Text_styling/Styling_links", "Learn_web_development/Core/Text_styling/Typesetting_a_homepage", "Learn_web_development/Core/Text_styling")}}

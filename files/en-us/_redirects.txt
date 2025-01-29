@@ -491,7 +491,7 @@
 /en-US/docs/CSS/Getting_Started	/en-US/docs/Learn_web_development/Core/Styling_basics
 /en-US/docs/CSS/Getting_Started/Boxes	/en-US/docs/Learn_web_development/Core/Styling_basics
 /en-US/docs/CSS/Getting_Started/Cascading_and_inheritance	/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts
-/en-US/docs/CSS/Getting_Started/Challenge_solutions	/en-US/docs/Web/Guide/CSS/Getting_started/Challenge_solutions
+/en-US/docs/CSS/Getting_Started/Challenge_solutions	/en-US/docs/Learn_web_development/Core/Challenges
 /en-US/docs/CSS/Getting_Started/Content	/en-US/docs/Learn_web_development/Howto/Solve_CSS_problems/Generated_content
 /en-US/docs/CSS/Getting_Started/How_CSS_works	/en-US/docs/Learn_web_development/Core/Styling_basics/What_is_CSS
 /en-US/docs/CSS/Getting_Started/JavaScript	/en-US/docs/Learn_web_development/Core/Scripting/DOM_scripting
@@ -12444,12 +12444,14 @@
 /en-US/docs/Web/Guide/Audio_and_video_manipulation	/en-US/docs/Web/Media/Audio_and_video_manipulation
 /en-US/docs/Web/Guide/CSS/Block_formatting_context	/en-US/docs/Web/CSS/CSS_display/Block_formatting_context
 /en-US/docs/Web/Guide/CSS/CSS_Image_Sprites	/en-US/docs/Web/CSS/CSS_images/Implementing_image_sprites_in_CSS
+/en-US/docs/Web/Guide/CSS/CSS_Layout	/en-US/docs/Web/CSS/Guides
 /en-US/docs/Web/Guide/CSS/Consistent_list_indentation	/en-US/docs/Web/CSS/CSS_lists/Consistent_list_indentation
 /en-US/docs/Web/Guide/CSS/Counters	/en-US/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters
 /en-US/docs/Web/Guide/CSS/Flexible_boxes	/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox
 /en-US/docs/Web/Guide/CSS/Getting_started	/en-US/docs/Learn_web_development/Core/Styling_basics
 /en-US/docs/Web/Guide/CSS/Getting_started/Boxes	/en-US/docs/Learn_web_development/Core/Styling_basics
 /en-US/docs/Web/Guide/CSS/Getting_started/Cascading_and_inheritance	/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts
+/en-US/docs/Web/Guide/CSS/Getting_started/Challenge_solutions	/en-US/docs/Learn_web_development/Core/Challenges
 /en-US/docs/Web/Guide/CSS/Getting_started/Content	/en-US/docs/Learn_web_development/Howto/Solve_CSS_problems/Generated_content
 /en-US/docs/Web/Guide/CSS/Getting_started/How_CSS_works	/en-US/docs/Learn_web_development/Core/Styling_basics/What_is_CSS
 /en-US/docs/Web/Guide/CSS/Getting_started/JavaScript	/en-US/docs/Learn_web_development/Core/Scripting/DOM_scripting
@@ -12791,6 +12793,7 @@
 /en-US/docs/Web/JavaScript/Guide/Inheritance_Revisited	/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain
 /en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain	/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain
 /en-US/docs/Web/JavaScript/Guide/JavaScript_Overview	/en-US/docs/Web/JavaScript/Guide/Introduction
+/en-US/docs/Web/JavaScript/Guide/Numbers_and_dates	/en-US/docs/Web/JavaScript/Guide/Numbers_and_strings
 /en-US/docs/Web/JavaScript/Guide/Obsolete_Pages	/en-US/docs/Web/JavaScript/Guide
 /en-US/docs/Web/JavaScript/Guide/Obsolete_Pages/Block_Statement	/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling
 /en-US/docs/Web/JavaScript/Guide/Obsolete_Pages/Calling_Functions	/en-US/docs/Web/JavaScript/Guide/Functions
@@ -12876,6 +12879,7 @@
 /en-US/docs/Web/JavaScript/Guide/Regular_expressions/Unicode_property_escapes	/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape
 /en-US/docs/Web/JavaScript/Guide/Sameness	/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness
 /en-US/docs/Web/JavaScript/Guide/Statements	/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling
+/en-US/docs/Web/JavaScript/Guide/Text_formatting	/en-US/docs/Web/JavaScript/Guide/Numbers_and_strings
 /en-US/docs/Web/JavaScript/Guide/The_Iterator_protocol	/en-US/docs/Web/JavaScript/Reference/Iteration_protocols
 /en-US/docs/Web/JavaScript/Guide/The_legacy_Iterator_protocol	/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
 /en-US/docs/Web/JavaScript/Guide/Using_native_JSON	/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON
