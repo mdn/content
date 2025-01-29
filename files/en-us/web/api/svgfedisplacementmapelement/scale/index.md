@@ -16,7 +16,7 @@ An {{domxref("SVGAnimatedNumber")}} object.
 
 ## Examples
 
-### Accessing the `scale` Property
+### Accessing the `scale` attribute
 
 In this example, the {{SVGElement("feDisplacementMap")}} element defined in the  {{SVGElement("filter")}}  includes a `scale` attribute.
 
