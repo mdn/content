@@ -14,6 +14,19 @@ The **`edgeMode`** read-only property of the {{domxref("SVGFEConvolveMatrixEleme
 
 An {{domxref("SVGAnimatedEnumeration")}} object.
 
+## Examples
+
+In this example, we retrieve the `<feConvolveMatrix>` filter element's `edgeMode` attribute value using the `edgeMode` property of the `SVGFEConvolveMatrixElement` interface.
+
+If our SVG contains the following filter:
+
+`<feConvolveMatrix kernelMatrix="3 0 0 0 0 0 0 0 -4" id="el"  edgeMode="wrap" />`
+
+We can access the number associated with the enumerated keyword value of the `edgeMode` attribute of the `feConvolveMatrix` element.
+
+`const el = document.getElementById("el");
+console.log(el.edgeMode.baseVal); // output: 2`
+
 ## Specifications
 
 {{Specifications}}
