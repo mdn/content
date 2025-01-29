@@ -45,7 +45,7 @@ customElements.define(
       const sRoot = this.attachShadow({ mode: "open" });
       sRoot.appendChild(templateContent.cloneNode(true));
 
-      // get the top most Element in the top left corner of the viewport
+      // get the topmost element in the top left corner of the viewport
       const srElement = this.shadowRoot.elementFromPoint(0, 0);
       // apply a border to that element
       srElement.style.border = "1px dashed red";
