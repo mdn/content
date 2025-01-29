@@ -36,7 +36,7 @@ While using multiple `<h1>` elements on one page is allowed by the HTML standard
 
 Prefer using only one `<h1>` per page and [nest headings](#nesting) without skipping levels.
 
-### Specifying a uniform font size  for `<h1>`
+### Specifying a uniform font size for `<h1>`
 
 The [HTML standard](https://html.spec.whatwg.org/multipage/rendering.html#sections-and-headings) specifies that `<h1>` elements in a `<section>`, `<article>`, `<aside>`, or `<nav>` element should render as an `<h2>` (smaller {{cssxref("font-size")}} with an adjusted {{cssxref("margin-block")}}), or as an `<h3>` if nested another level, and so on.
 
