@@ -105,6 +105,7 @@ sidebar:
     details: closed
   - type: section
     title: Guides
+    link: /Web/CSS/Guides
   - title: Animations
     details: closed
     children:
