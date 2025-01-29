@@ -40,7 +40,7 @@ In this example, the {{SVGElement("feDisplacementMap")}} element defined in the 
 </svg>
 ```
 
-We can access the `yChannelSelector ` attribute and get its value:
+We can access the `yChannelSelector` attribute and get its value:
 
 ```js
 const displacementMap = document.querySelector("feDisplacementMap");
