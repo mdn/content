@@ -736,7 +736,7 @@ Inputs, being replaced elements, have a few features not applicable to non form 
 
 <table class="no-markdown">
   <caption>
-    Captions super relevant to the
+    Pseudo-classes relevant to the
     <code>&#x3C;input></code>
     element:
   </caption>
@@ -869,6 +869,12 @@ Inputs, being replaced elements, have a few features not applicable to non form 
         invalid input but only after the user interaction, such as by focusing
         on the control, leaving the control, or attempting to submit the form
         containing the invalid control.
+      </td>
+    </tr>
+    <tr>
+      <td>{{Cssxref(":open")}}</td>
+      <td>
+        <code>&lt;input&gt;</code> elements that display a picker for the user to choose a value from (for example <a href="/en-US/docs/Web/HTML/Element/input/color"><code>&lt;input type="color"&gt;</code></a>) — but only when the element is in the "open" state, that is, when the picker is displayed.
       </td>
     </tr>
   </tbody>

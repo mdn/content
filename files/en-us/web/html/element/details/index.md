@@ -9,7 +9,7 @@ browser-compat: html.elements.details
 
 The **`<details>`** [HTML](/en-US/docs/Web/HTML) element creates a disclosure widget in which information is visible only when the widget is toggled into an "open" state. A summary or label must be provided using the {{HTMLElement("summary")}} element.
 
-A disclosure widget is typically presented onscreen using a small triangle that rotates (or twists) to indicate open/closed status, with a label next to the triangle. The contents of the `<summary>` element are used as the label for the disclosure widget. The contents of the `<details>` provide the {{glossary("accessible description")}} for the `<summary>`.
+A disclosure widget is typically presented onscreen using a small triangle that rotates (or twists) to indicate "open"/"closed" state, with a label next to the triangle. The contents of the `<summary>` element are used as the label for the disclosure widget. The contents of the `<details>` provide the {{glossary("accessible description")}} for the `<summary>`.
 
 {{EmbedInteractiveExample("pages/tabbed/details.html", "tabbed-shorter")}}
 
@@ -44,7 +44,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 ## Events
 
-In addition to the usual events supported by HTML elements, the `<details>` element supports the {{domxref("HTMLElement/toggle_event", "toggle")}} event, which is dispatched to the `<details>` element whenever its state changes between open and closed. It is sent _after_ the state is changed, although if the state changes multiple times before the browser can dispatch the event, the events are coalesced so that only one is sent.
+In addition to the usual events supported by HTML elements, the `<details>` element supports the {{domxref("HTMLElement/toggle_event", "toggle")}} event, which is dispatched to the `<details>` element whenever its state changes between "open" and "closed". It is sent _after_ the state is changed, although if the state changes multiple times before the browser can dispatch the event, the events are coalesced so that only one is sent.
 
 You can use an event listener for the `toggle` event to detect when the widget changes state:
 
@@ -166,14 +166,15 @@ details > p {
   box-shadow: 3px 3px 4px black;
 }
 
-details[open] > summary {
+details:open > summary {
   background-color: #ccf;
 }
 ```
 
 This CSS creates a look similar to a tabbed interface, where clicking the tab opens it to reveal its contents.
 
-The selector `details[open]` can be used to style the element which is open.
+> [!NOTE]
+> In browsers that don't support the {{cssxref(":open")}} pseudo-class, you can use the attribute selector `details[open]` to style the `<details>` element when it is in the "open" state.
 
 #### HTML
 
