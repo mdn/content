@@ -16,7 +16,7 @@ An {{domxref("SVGAnimatedEnumeration")}} object.
 
 ## Examples
 
-### Accessing the `xChannelSelector` Property
+### Accessing the `xChannelSelector` attribute
 
 In this example, the {{SVGElement("feDisplacementMap")}} element defined in the  {{SVGElement("filter")}}  includes a `xChannelSelector` attribute.
 
