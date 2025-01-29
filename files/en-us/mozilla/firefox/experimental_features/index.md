@@ -948,6 +948,56 @@ None.
   </tbody>
 </table>
 
+### Temporal API
+
+The [Temporal object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal) enables date and time management in various scenarios, including built-in time zone and calendar representation. ([Firefox bug 1912511](https://bugzil.la/1912511)). This includes:
+
+- The {{jsxref("Temporal.Duration")}} object for working between two points in time.
+- The {{jsxref("Temporal.Instant")}} object for setting a specific point in time.
+- The {{jsxref("Temporal.Now")}} object for getting the current point in time.
+- The {{jsxref("Temporal.PlainDate")}} object represents a specific date.
+- The {{jsxref("Temporal.PlainDateTime")}} object represents a specific date and time.
+- The {{jsxref("Temporal.PlainMonthDay")}} object represents a specific date with out a specific year, such as an anniversary.
+- The {{jsxref("Temporal.PlainTime")}} object represents a specific time.
+- The {{jsxref("Temporal.PlainYearMonth")}} object represents a year and month without a date or time.
+- The {{jsxref("Temporal.ZonedDateTime")}} object represents a date and time with a time zone.
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>135</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>—</td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>—</td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>—</td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2">javascript.options.experimental.temporal</td>
+    </tr>
+  </tbody>
+</table>
+
 ## APIs
 
 ### Cookie Store API
