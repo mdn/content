@@ -10,7 +10,7 @@ browser-compat: api.SVGFEColorMatrixElement.height
 
 The **`height`** read-only property of the {{domxref("SVGFEColorMatrixElement")}} interface describes the vertical size of an SVG filter primitive as a {{domxref("SVGAnimatedLength")}}.
 
-It reflects the {{SVGElement("feColorMatrix")}} element's {{SVGAttr("height")}} filter primitive attribute. The `<feColorMatrix>` filter applies a matrix transformation on the {{glossary("RGBA")}} color and alpha values.
+It reflects the {{SVGElement("feColorMatrix")}} element's {{SVGAttr("height")}} filter primitive attribute. The `<feColorMatrix>` filter applies a matrix transformation on the {{glossary("RGB")}} color and {{glossary("alpha")}} values.
 
 The attribute is a [`<length>`](/en-US/docs/Web/SVG/Content_type#length) or a [`<percentage>`](/en-US/docs/Web/SVG/Content_type#percentage) relative to the height of the filter region. The default value is `100%`. The property value is a length in user coordinate system units.
 
