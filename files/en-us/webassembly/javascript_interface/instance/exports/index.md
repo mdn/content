@@ -7,7 +7,7 @@ browser-compat: webassembly.api.Instance.exports
 
 {{WebAssemblySidebar}}
 
-The **`exports`** readonly property of the
+The **`exports`** read-only property of the
 [`WebAssembly.Instance`](/en-US/docs/WebAssembly/JavaScript_interface/Instance) object prototype returns an object containing as its
 members all the functions exported from the WebAssembly module instance, to allow them
 to be accessed and used by JavaScript.
