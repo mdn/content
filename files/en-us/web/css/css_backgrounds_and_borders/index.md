@@ -7,7 +7,7 @@ spec-urls: https://drafts.csswg.org/css-backgrounds/
 
 {{CSSRef}}
 
-The **CSS backgrounds and borders** module provides properties for adding borders, rounded corners, and box shadows to elements.
+The **CSS backgrounds and borders** module provides properties for adding backgrounds, borders, rounded corners, and box shadows to elements.
 
 You can add different types of border styles, including borders made of images of any image type, from raster images to CSS gradients. Borders can be square or rounded, and a different radius can be set for each corner. Elements can be rounded whether or not they have a visible border.
 

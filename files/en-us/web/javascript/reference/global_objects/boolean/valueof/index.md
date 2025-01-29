@@ -38,8 +38,8 @@ This method is usually called internally by JavaScript and not explicitly in cod
 ### Using `valueOf()`
 
 ```js
-x = new Boolean();
-myVar = x.valueOf(); // assigns false to myVar
+const x = new Boolean();
+const myVar = x.valueOf(); // assigns false to myVar
 ```
 
 ## Specifications

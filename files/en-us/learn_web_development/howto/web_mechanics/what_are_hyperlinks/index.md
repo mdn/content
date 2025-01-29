@@ -4,7 +4,7 @@ slug: Learn_web_development/Howto/Web_mechanics/What_are_hyperlinks
 page-type: learn-faq
 ---
 
-{{QuicklinksWithSubPages("Learn/Common_questions")}}
+{{QuicklinksWithSubPages("/en-US/docs/Learn_web_development/Howto")}}
 
 In this article, we'll go over what hyperlinks are and why they matter.
 

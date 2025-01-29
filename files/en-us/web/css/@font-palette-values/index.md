@@ -24,11 +24,11 @@ The [&lt;dashed-ident&gt;](/en-US/docs/Web/CSS/dashed-ident) is a user defined i
 
 ### Descriptors
 
-- [font-family](/en-US/docs/Web/CSS/@font-palette-values/font-family)
-  - : Specifies the name of the font family that this palette can be applied to.
-- [base-palette](/en-US/docs/Web/CSS/@font-palette-values/base-palette)
+- {{cssxref("@font-palette-values/base-palette", "base-palette")}}
   - : Specifies the name or index of the base-palette, created by the font-maker, to use.
-- [override-colors](/en-US/docs/Web/CSS/@font-palette-values/override-colors)
+- {{cssxref("@font-palette-values/font-family", "font-family")}}
+  - : Specifies the name of the font family that this palette can be applied to. A `font-family` name is required for the `@font-palette-values` rule to be valid.
+- {{cssxref("@font-palette-values/override-colors", "override-colors")}}
   - : Specifies the colors in the base palette to override.
 
 ## Formal syntax

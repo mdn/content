@@ -136,7 +136,7 @@ modern isolation features:
   for the {{httpheader("Cross-Origin-Opener-Policy")}} and
   {{httpheader("Cross-Origin-Embedder-Policy")}} HTTP headers
 - If used on an origin-isolated page, i.e. one that uses the
-  {{httpheader("Origin-Isolation")}} HTTP header
+  {{httpheader("Origin-Agent-Cluster")}} {{experimental_inline}} HTTP header
 
 Finally, setting `document.domain` does not change the origin used for
 origin-checks by some Web APIs, preventing sub-domain access via this mechanism.

@@ -129,15 +129,19 @@ For example, this CSS will apply styles only if your browser's {{glossary("viewp
 }
 ```
 
-This can also be written as:
+The following media queries are equivalent to the above example:
 
 ```css
 @media (width <= 1250px) {
   /* … */
 }
+
+@media (1250px >= width) {
+  /* … */
+}
 ```
 
-With media query range features, you can either use the inclusive `min-` and `max-` prefixes or the more concise range syntax operators `<=` and `=>`.
+With media query range features, you can either use the inclusive `min-` and `max-` prefixes or the more concise range syntax operators `<=` and `>=`.
 
 The following media queries are equivalent:
 
@@ -149,17 +153,25 @@ The following media queries are equivalent:
 @media (30em <= width <= 50em) {
   /* … */
 }
+
+@media (50em >= width >= 30em) {
+  /* … */
+}
 ```
 
-The range comparisons above are inclusive. To not include the comparison value, use `<` and `>`.
+The range comparisons above are inclusive. To exclude the comparison value, use `<` and/or `>`.
 
 ```css
 @media (30em < width < 50em) {
   /* … */
 }
+
+@media (50em > width > 30em) {
+  /* … */
+}
 ```
 
-If you create a media feature query without specifying a value, the nested styles will be used as long as the feature's value is not 0 or `none`.
+If you create a media feature query without specifying a value, the nested styles will be used as long as the feature's value is not `0` or `none`.
 For example, this CSS will apply to any device with a color screen:
 
 ```css
@@ -175,11 +187,13 @@ For more [Media feature](/en-US/docs/Web/CSS/@media#media_features) examples, pl
 ## Creating complex media queries
 
 Sometimes you may want to create a media query that depends on multiple conditions. This is where the _logical operators_ come in: `not`, `and`, and `only`.
-Furthermore, you can combine multiple media queries into a _comma-separated list_; this allows you to apply the same styles in different situations.
+Furthermore, you can combine multiple media queries into a comma-separated list; this allows you to apply the same styles in different situations, with the contained media queries evaluated as a logical `or` composition: interpreted as if each media query were within parentheses with an `or` between them.
 
 In the previous example, we saw the `and` operator used to group a media _type_ with a media _feature_.
-The `and` operator can also combine multiple media features into a single media query. The `not` operator, meanwhile, negates a media query, basically reversing its normal meaning.
-The `only` operator prevents older browsers from applying the styles.
+The `and` operator can also combine multiple media features within a single media query.
+The `not` operator negates a media query, or a media feature when used with brackets, basically reversing their normal meanings.
+The `or` operator can, under certain conditions, be used to combine multiple media features within a single media query.
+Lastly, the `only` operator was used to prevent older browsers from applying the styles without evaluating the media feature expressions but it has no effect in modern browsers.
 
 > [!NOTE]
 > In most cases, the `all` media type is used by default when no other type is specified.
@@ -305,6 +319,21 @@ For example, the following query tests for devices that have a monochrome displa
 
 ```css
 @media (not (color)) or (hover) {
+  /* … */
+}
+```
+
+Note that you cannot use the `or` operator on the same level as the `and` and `not` operators. You can either separate the media features with a comma or use parenthesis to group sub-expressions of media features to clarify the order of evaluation.
+
+For example, the following queries are both valid:
+
+```css
+@media ((color) and (hover)) or (monochrome) {
+  /* … */
+}
+
+/* or */
+@media (color) and (hover), (monochrome) {
   /* … */
 }
 ```

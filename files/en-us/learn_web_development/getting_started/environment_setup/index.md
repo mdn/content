@@ -8,7 +8,7 @@ page-type: landing-page
 
 {{NextMenu("Learn_web_development/Getting_started/Environment_setup/Installing_software", "Learn_web_development/Getting_started")}}
 
-In the _Environment_setup_ module, we show you what tools you need to do simple web development and how to install them properly and help you understand important aspects of your environment such as file systems and the command line.
+In the _Environment setup_ module, we show you what tools you need to do simple web development and how to install them properly and help you understand important aspects of your environment such as file systems and the command line.
 
 ## Prerequisites
 
