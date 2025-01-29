@@ -163,11 +163,11 @@ In addition, it also isn't ideal for an application with a built-in "share scree
 
 ## The Element Capture API
 
-The Element Capture API restricts the captured region to a specified rendered DOM element. In this section we will explore a second demo that is identical to the one presented above, except that it uses Element Capture on top of basic Screen Capture. See this demo running live at [Element Capture API example](https://mdn.github.io/dom-examples/screen-capture-api/element-capture) (also see the [source code](https://github.com/mdn/dom-examples/tree/main/screen-capture-api/element-capture)).
+The Element Capture API restricts the captured region to a specified rendered DOM tree (a selected element and its descendants). In this section we will explore a second demo that is identical to the one presented above, except that it uses Element Capture on top of basic Screen Capture. See this demo running live at [Element Capture API example](https://mdn.github.io/dom-examples/screen-capture-api/element-capture) (also see the [source code](https://github.com/mdn/dom-examples/tree/main/screen-capture-api/element-capture)).
 
 The HTML is identical to the previous example, and the CSS is _nearly_ identical. We'll explain the differences in the JavaScript now, then look at the CSS differences later on, in the [Issues with the Element Capture API](#issues-with-the-element-capture-api) section.
 
-To use the Element Capture API, we first grab a reference to a DOM element that we will later use as a **restriction target** — the screen area shown in the stream will be restricted to just that rendered element:
+To use the Element Capture API, we first grab a reference to a DOM element that we will later use as a **restriction target** — the screen area shown in the stream will be restricted to just that rendered element and its descendants:
 
 ```js
 const demoElem = document.querySelector("#demo");
@@ -266,13 +266,13 @@ Other issues and restrictions are as follows:
 
 ## The Region Capture API
 
-The Region Capture API has a very similar effect to the Element Capture API, except that rather than restricting the captured region to a specific rendered DOM element, it crops the stream to the area of the screen in which a specific element is rendered. Let's look at a demo and then explore the differences between the two in more detail later on.
+The Region Capture API has a very similar effect to the Element Capture API, except that rather than restricting the captured region to a specific rendered DOM tree, it crops the stream to the area of the current browser tab defined by the bounding box of the target element. Let's look at a demo and then explore the differences between the two in more detail later on.
 
 In this section we will explore a third demo that is identical to the others, except that it uses Region Capture on top of basic Screen Capture. See this demo running live at [Region Capture API example](https://mdn.github.io/dom-examples/screen-capture-api/region-capture) (also see the [source code](https://github.com/mdn/dom-examples/tree/main/screen-capture-api/region-capture)).
 
-The HTML is identical to the previous examples, and the CSS is nearly identical (see [Issues with the Region Capture API](#issues-with-the-region-capture-api) section for more). The JavaScript is nearly the same as the Element Capture JavaScript, with a few notable differences, which we'll now explain.
+The HTML is identical to the previous examples, and the CSS is nearly identical (see [Issues with the Region Capture API](#issues-with-the-region-capture-api) section for more). The JavaScript is nearly the same as the Element Capture JavaScript, with a few notable differences that we'll now explain.
 
-To use the Region Capture API, we first grab a reference to a DOM element that we will later use as a **crop target** — the screen area shown in the stream will be cropped to just the area that element is rendered in:
+To use the Region Capture API, we first grab a reference to a DOM element that we will later use as a **crop target** — the region shown in the stream will be cropped to just the area that element is rendered in:
 
 ```js
 const demoElem = document.querySelector("#demo");
@@ -325,7 +325,7 @@ await track.cropTo(null);
 
 ### Issues with the Region Capture API
 
-Region Capture doesn't have the same level of restrictions as Element Capture — it is cropping the stream to a particular size, rather than broadcasting a specific element, so it doesn't require this rule:
+Region Capture doesn't have the same level of restrictions as Element Capture — it is cropping the stream to a particular size, rather than broadcasting a specific rendered DOM tree, so it doesn't require this rule:
 
 ```css
 #demo {
@@ -346,12 +346,12 @@ Apart from that, the restrictions on what elements can be cropped are as follows
 
 ## Element Capture versus Region Capture
 
-As explained above, Element Capture captures the element itself, whereas Region Capture captures the area of the screen the element is rendered in. This means that Element Capture will always show just the captured element, even if other DOM content overlaps it, whereas Region Capture can result in overlapping content being shown over the top of the content you intended to share.
+As explained above, Element Capture captures the element itself (and its descendants), whereas Region Capture captures the area of the tab defined by the bounding box of the target element. This means that Element Capture will always show just the captured element, even if other DOM content overlaps it, whereas Region Capture can result in overlapping content being shown over the top of the content you intended to share.
 
 There are legitimate use cases for both:
 
-- If you need to keep the capture specific to one element, and occlude anything outside it, then you should use the Element Capture API. For example, if you've got private content appearing such as a set of message notifications or a speaker notes UI, you won't want it showing up in the capture.
-- However, if you really do want to capture a region of the screen, regardless of what is shown in it, you should use the Region Capture API. The [Region Capture Demo](https://region-capture-demo.glitch.me/) shows a useful possibility — zooming in on a particular section of the screen as you show multiple users around on an interactive walkthrough of some kind.
+- If you need to keep the capture specific to one DOM tree, and exclude anything outside it, then the Element Capture API is a better choice. For example, if you've got private content appearing such as a set of message notifications or a speaker notes UI, you won't want it showing up in the capture.
+- However, if you really do want to capture a region of the screen, regardless of what is shown in it, the Region Capture API will serve you well. The [Region Capture Demo](https://region-capture-demo.glitch.me/) shows a useful possibility — zooming in on a particular section of the screen as you show multiple users around on an interactive walkthrough of some kind.
 
 ## See also
 
