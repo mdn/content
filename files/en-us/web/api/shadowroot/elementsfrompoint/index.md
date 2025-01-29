@@ -32,8 +32,8 @@ An array of {{domxref('Element')}} objects.
 ## Examples
 
 ```js
-let customElem = document.querySelector("my-custom-element");
-let shadow = customElem.shadowRoot;
+const customElem = document.querySelector("my-custom-element");
+const shadow = customElem.shadowRoot;
 const elements = shadow.elementsFromPoint(20, 20);
 const msg = elements.map((el) => el.localName).join(" < ");
 if (msg) {
