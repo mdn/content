@@ -73,7 +73,7 @@ The JSON for a single report might look like this:
 ## Usage notes
 
 The `report-to` directive is intended to replace `report-uri`, and browsers that support `report-to` ignore the `report-uri` directive.
-However, until `report-to` is broadly supported you can specify both headers as shown:
+However, until `report-to` is broadly supported you can specify both directives as shown:
 
 ```http
 Content-Security-Policy: …; report-uri https://endpoint.example.com; report-to endpoint_name

@@ -386,7 +386,7 @@ In this section, you will learn how to use JavaScript and DOM API features to al
 
 1. Choose another image to feature on your example site. Ideally, the image will be the same size as the image you added previously, or as close as possible.
 2. Save this image in your `images` folder.
-3. Add the following JavaScript code to your `main.js` file, making sure to replace `firefox2.png` and both instances of `firefox-icon.png` with your second and first image names, respectvely.
+3. Add the following JavaScript code to your `main.js` file, making sure to replace `firefox2.png` and both instances of `firefox-icon.png` with your second and first image names, respectively.
 
    ```js
    const myImage = document.querySelector("img");

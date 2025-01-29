@@ -4,7 +4,7 @@ slug: Web/API/WebGL_API/By_example/Color_masking
 page-type: guide
 ---
 
-{{DefaultAPISidebar("WebGL")}}{{PreviousNext("Learn/WebGL/By_example/Simple_color_animation","Learn/WebGL/By_example/Basic_scissoring")}}
+{{DefaultAPISidebar("WebGL")}}{{PreviousNext("Web/API/WebGL_API/By_example/Simple_color_animation","Web/API/WebGL_API/By_example/Basic_scissoring")}}
 
 This WebGL example modifies random colors by applying color masking to limit the range of displayed colors to specific shades.
 
@@ -117,4 +117,4 @@ window.addEventListener(
 
 The source code of this example is also available on [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/color-masking).
 
-{{PreviousNext("Learn/WebGL/By_example/Simple_color_animation","Learn/WebGL/By_example/Basic_scissoring")}}
+{{PreviousNext("Web/API/WebGL_API/By_example/Simple_color_animation","Web/API/WebGL_API/By_example/Basic_scissoring")}}

@@ -30,9 +30,9 @@ new PointerEvent(type, options)
     - `pointerId`
       - : A number, defaulting to `0`, that sets the value of the instance's {{domxref("PointerEvent.pointerId")}}.
     - `width`
-      - : A number,, defaulting to `1`, that sets the value of the instance's {{domxref("PointerEvent.width")}}.
+      - : A number, defaulting to `1`, that sets the value of the instance's {{domxref("PointerEvent.width")}}.
     - `height`
-      - : A number,, defaulting to `1`, that sets the value of the instance's {{domxref("PointerEvent.height")}}.
+      - : A number, defaulting to `1`, that sets the value of the instance's {{domxref("PointerEvent.height")}}.
     - `pressure`
       - : A number, defaulting to `0`, that sets the value of the instance's {{domxref("PointerEvent.pressure")}}.
     - `tangentialPressure`

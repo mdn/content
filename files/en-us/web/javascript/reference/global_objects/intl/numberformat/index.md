@@ -149,3 +149,4 @@ For an exhaustive list of options, see the [`Intl.NumberFormat()` constructor](/
 
 - [Polyfill of `Intl.NumberFormat` in FormatJS](https://formatjs.github.io/docs/polyfills/intl-numberformat/)
 - {{jsxref("Intl")}}
+- {{jsxref("Number.prototype.toLocaleString()")}}
