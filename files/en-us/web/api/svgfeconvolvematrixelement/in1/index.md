@@ -38,7 +38,7 @@ In this example, the `<feConvolveMatrix>` element applies a convolution filter t
 </svg>
 ```
 
-We can access the `in` attribute of the `feConvolveMatrix` element.
+We can access the `in` attribute of the `<feConvolveMatrix>` element.
 
 ```js
 const convolveMatrix = document.querySelector("feConvolveMatrix");
