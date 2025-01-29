@@ -4,8 +4,6 @@ slug: Web/Media/Guides/Formats/Audio_codecs
 page-type: guide
 ---
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/Media/Guides")}}
-
 Even modest quality, high-fidelity stereo sound can use a substantial amount of disk space. For web developers, an even bigger concern is the network bandwidth needed in order to transfer audio, whether for streaming or to download it for use during gameplay. The processing of audio data to encode and decode it is handled by an audio **{{Glossary("codec")}}** (**CO**der/**DEC**oder). In this article, we look at audio codecs used on the web to compress and decompress audio, what their capabilities and use cases are, and offer guidance when choosing audio codecs to use for your content.
 
 Additionally, WebRTC implementations generally use a subset of these codecs for their encoding and decoding of media, and may support additional codecs as well, for optimal cross-platform support of video and audio conferencing, and to integrate better with legacy telecommunication solutions. See [Codecs used by WebRTC](/en-US/docs/Web/Media/Guides/Formats/WebRTC_codecs) for details.

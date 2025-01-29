@@ -1,14 +1,12 @@
 ---
-title: Audio and Video Delivery
+title: Audio and video delivery
 slug: Web/Media/Guides/Audio_and_video_delivery
 page-type: guide
 ---
 
-{{QuickLinksWithSubPages("/en-US/docs/Web/Media")}}
-
 We can deliver audio and video on the web in a number of ways, ranging from 'static' media files to adaptive live streams. This article is intended as a starting point for exploring the various delivery mechanisms of web-based media and compatibility with popular browsers.
 
-## The Audio and Video Elements
+## Audio and video HTML elements
 
 Whether we are dealing with pre-recorded audio files or live streams, the mechanism for making them available through the browser's {{ htmlelement("audio")}} and {{ htmlelement("video")}} elements remains pretty much the same. Currently, to support all browsers we need to specify two formats, although with the adoption of MP3 and MP4 formats in Firefox and Opera, this is changing fast. You can find compatibility information in the [Guide to media types and formats on the web](/en-US/docs/Web/Media/Guides/Formats).
 
@@ -28,7 +26,7 @@ To deliver video and audio, the general workflow is usually something like this:
   <!-- fallback for browsers that don't support mp3 -->
   <source src="audio-file.ogg" type="audio/ogg" />
 
-  <!-- fallback for browsers that don't support audio tag -->
+  <!-- fallback for browsers that don't support audio element -->
   <a href="audio-file.mp3">download audio</a>
 </audio>
 ```
@@ -40,7 +38,7 @@ The code above will create an audio player that attempts to preload as much audi
 
 For further info see [Cross Browser Audio Basics (HTML Audio In Detail)](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery/Cross-browser_audio_basics#html_audio_in_detail)
 
-### HTML Video
+### HTML video
 
 ```html
 <video
@@ -63,7 +61,7 @@ For further info see [Cross Browser Audio Basics (HTML Audio In Detail)](/en-US/
     srclang="no"
     label="Norwegian" />
 
-  <!-- fallback for browsers that don't support video tag -->
+  <!-- fallback for browsers that don't support video element -->
   <a href="video-file.mp4">download video</a>
 </video>
 ```
@@ -369,18 +367,18 @@ This lets you detect which sources failed to load, which may be useful. Consider
 
 ```html
 <video>
-<source id="mp4_src"
-  src="video.mp4"
-  type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
-</source>
-<source id="3gp_src"
-  src="video.3gp"
-  type='video/3gpp; codecs="mp4v.20.8, samr"'>
-</source>
-<source id="ogg_src"
-  src="video.ogv"
-  type='video/ogv; codecs="theora, vorbis"'>
-</source>
+  <source
+    id="mp4_src"
+    src="video.mp4"
+    type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
+  <source
+    id="3gp_src"
+    src="video.3gp"
+    type='video/3gpp; codecs="mp4v.20.8, samr"' />
+  <source
+    id="ogg_src"
+    src="video.ogv"
+    type='video/ogv; codecs="theora, vorbis"' />
 </video>
 ```
 
@@ -444,9 +442,9 @@ Another way to show the fallback content of a video, when none of the sources co
 
 ```html
 <video controls>
-  <source src="dynamicsearch.mp4" type="video/mp4"></source>
+  <source src="dynamicsearch.mp4" type="video/mp4" />
   <a href="dynamicsearch.mp4">
-    <img src="dynamicsearch.jpg" alt="Dynamic app search in Firefox OS">
+    <img src="dynamicsearch.jpg" alt="Dynamic app search in Firefox OS" />
   </a>
   <p>Click image to play a video demo of dynamic app search</p>
 </video>

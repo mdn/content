@@ -4,9 +4,13 @@ slug: Web/Media/Guides/Images
 page-type: guide
 ---
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}
-
 The {{Glossary("HTML")}} {{HTMLElement("img")}} element lets you embed images into an HTML document, while the {{HTMLElement("picture")}} element enables [responsive images](/en-US/docs/Web/HTML/Responsive_images). In this guide you'll find links to resources that deal with adding images to websites.
+These articles provide guidance on selecting and configuring image types.
+
+- [Image file type and format guide](/en-US/docs/Web/Media/Guides/Formats/Image_types)
+  - : A guide to the various image file types commonly supported by web browsers including details about their individual use cases, capabilities, and compatibility factors. Additionally, this article provides guidance for selecting the best image file type for a given situation.
+- [Including `width` and `height` attributes helps avoid jank](/en-US/docs/Learn_web_development/Extensions/Performance/Multimedia#rendering_strategy_preventing_jank_when_loading_images)
+  - : This changes how browsers load images so their {{glossary("aspect ratio", "aspect ratios")}} are calculated by the browser early on and can later be used to reserve the display size of an image before it's loaded.
 
 ## References
 
@@ -28,16 +32,7 @@ These articles cover some of the HTML elements and CSS properties that are used 
 - {{cssxref("background-image")}}
   - : The **`background-image`** [CSS](/en-US/docs/Web/CSS) property sets one or more background images for an element.
 
-## Guides
-
-These articles provide guidance on selecting and configuring image types.
-
-- [Image file type and format guide](/en-US/docs/Web/Media/Guides/Formats/Image_types)
-  - : A guide to the various image file types commonly supported by web browsers including details about their individual use cases, capabilities, and compatibility factors. Additionally, this article provides guidance for selecting the best image file type for a given situation.
-- [Including `width` and `height` attributes helps avoid jank](/en-US/docs/Learn_web_development/Extensions/Performance/Multimedia#rendering_strategy_preventing_jank_when_loading_images)
-  - : This changes how browsers load images so their {{glossary("aspect ratio", "aspect ratios")}} are calculated by the browser early on and can later be used to reserve the display size of an image before it's loaded.
-
-## Other topics
+## See also
 
 - [Responsive Images](/en-US/docs/Web/HTML/Responsive_images)
   - : In this article, we'll learn about the concept of responsive images — images that work well on devices with widely differing screen sizes, resolutions, and other such features — and look at what tools HTML provides to help implement them.

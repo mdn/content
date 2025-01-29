@@ -4,8 +4,6 @@ slug: Web/Media/Guides/Formats/Image_types
 page-type: guide
 ---
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/Media/Guides")}}
-
 In this guide, we'll cover the image file types generally supported by web browsers, and provide insights that will help you select the most appropriate formats to use for your site's imagery.
 
 ## Common image file types

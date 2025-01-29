@@ -5,11 +5,9 @@ slug: Web/Media
 page-type: landing-page
 ---
 
-{{QuickLinksWithSubpages}}
-
-Over the years, the web's ability to present, create, and manage audio, video, and other media has grown.
-There are now a large number of APIs available, as well as HTML elements, DOM interfaces, and other features that make it possible to work with media in exciting and immersive ways.
-This article lists the various APIs with links to documentation you may find helpful in mastering them.
+Over the years, the web's ability to present, create, and manage audio, video, and other media has matured.
+There are now a large number of APIs, as well as HTML elements, DOM interfaces, and other features that make it possible to work with media in exciting and immersive ways.
+This article lists guides and references for various features you may use when incorporating media into your projects.
 
 ## Guides
 

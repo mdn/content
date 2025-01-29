@@ -38,6 +38,12 @@
           "enum": ["deprecated", "experimental", "non-standard"]
         }
       },
+      "sidebar": {
+        "title": "Sidebar",
+        "description": "A YAML sidebar defined in /files/sidebars",
+        "type": "string",
+        "enum": ["mediasidebar"]
+      },
       "browser-compat": {
         "title": "Browser Compatibility",
         "description": "Browser compatibility location",

@@ -4,8 +4,6 @@ slug: Web/Media/Guides/Streaming
 page-type: guide
 ---
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}
-
 In this guide, we'll examine the techniques used to stream audio and/or video media on the web, and how you can optimize your code, your media, your server, and the options you use while performing the streaming to bring out the best quality and performance possible.
 
 ## Protocols

@@ -4,8 +4,6 @@ slug: Web/Media/Guides/Formats/Video_codecs
 page-type: guide
 ---
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}
-
 This guide introduces the video codecs you're most likely to encounter or consider using on the web, summaries of their capabilities and any compatibility and utility concerns, and advice to help you choose the right codec for your project's video.
 
 Due to the sheer size of uncompressed video data, it's necessary to compress it significantly in order to store it, let alone transmit it over a network. Imagine the amount of data needed to store uncompressed video:

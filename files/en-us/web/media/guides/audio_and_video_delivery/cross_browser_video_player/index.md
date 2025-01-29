@@ -4,8 +4,6 @@ slug: Web/Media/Guides/Audio_and_video_delivery/cross_browser_video_player
 page-type: guide
 ---
 
-{{QuickLinksWithSubPages("/en-US/docs/Web/Media")}}
-
 This article describes a simple HTML video player that uses the Media and Fullscreen APIs. As well as working fullscreen, the player features custom controls rather than just using the browser defaults. The player controls themselves won't be styled beyond the basics required to get them working; full styling of the player will be taken care of in a future article.
 
 ## Working example

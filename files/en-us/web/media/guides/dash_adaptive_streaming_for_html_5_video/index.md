@@ -1,10 +1,8 @@
 ---
-title: DASH Adaptive Streaming for HTML 5 Video
+title: DASH Adaptive Streaming for HTML video
 slug: Web/Media/Guides/DASH_Adaptive_Streaming_for_HTML_5_Video
 page-type: guide
 ---
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}
 
 Dynamic Adaptive Streaming over HTTP (DASH) is an adaptive streaming protocol. This means that it allows for a video stream to switch between bit rates on the basis of network performance, in order to keep a video playing.
 
@@ -103,10 +101,8 @@ You'll want to modify your web page to point to the DASH manifest first, instead
 
 That's it! If DASH is supported by the browser, your video will now stream adaptively.
 
-## Links
+## See also
 
-[WebM DASH Specification at The WebM Project](https://wiki.webmproject.org/adaptive-streaming/webm-dash-specification)
-
-[DASH Industry Forum](https://dashif.org/)
-
-[WebM project description of how to create DASH files with FFMPEG](https://wiki.webmproject.org/adaptive-streaming/instructions-to-playback-adaptive-webm-using-dash)
+- [WebM DASH Specification at The WebM Project](https://wiki.webmproject.org/adaptive-streaming/webm-dash-specification)
+- [DASH Industry Forum](https://dashif.org/)
+- [WebM project description of how to create DASH files with FFMPEG](https://wiki.webmproject.org/adaptive-streaming/instructions-to-playback-adaptive-webm-using-dash)

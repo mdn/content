@@ -4,8 +4,6 @@ slug: Web/Media/Guides/Audio_and_video_delivery/buffering_seeking_time_ranges
 page-type: guide
 ---
 
-{{QuickLinksWithSubPages("/en-US/docs/Web/Media")}}
-
 Sometimes it's useful to know how much {{htmlelement("audio") }} or {{htmlelement("video") }} has downloaded or is playable without delay — a good example of this is the buffered progress bar of an audio or video player. This article discusses how to build a buffer/seek bar using [TimeRanges](/en-US/docs/Web/API/TimeRanges), and other features of the media API.
 
 ## Buffered

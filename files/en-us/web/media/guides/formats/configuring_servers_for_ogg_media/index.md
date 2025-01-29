@@ -4,8 +4,6 @@ slug: Web/Media/Guides/Formats/Configuring_servers_for_Ogg_media
 page-type: guide
 ---
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/Media/Guides")}}
-
 HTML {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements allow media presentation without the need for the user to install extensions or other software.
 This guide covers server configuration that may be necessary to correctly serve Ogg media files.
 This information may also be useful if you encounter other media types your server isn't already configured to recognize.

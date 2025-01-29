@@ -4,8 +4,6 @@ slug: Web/Media/Guides/Audio_and_video_delivery/Live_streaming_web_audio_and_vid
 page-type: guide
 ---
 
-{{QuickLinksWithSubPages("/en-US/docs/Web/Media")}}
-
 Livestreaming technology is often employed to relay live events such as sports, concerts and more generally TV and Radio programmes that are output live. Often shortened to just streaming, livestreaming is the process of transmitting media 'live' to computers and devices. This is a fairly complex and nascent subject with a lot of variables, so in this article, we'll introduce you to the subject and let you know how you can get started.
 
 The key consideration when streaming media to a browser is the fact that rather than playing a finite file we are relaying a file that is being created on the fly and has no pre-determined start or end.

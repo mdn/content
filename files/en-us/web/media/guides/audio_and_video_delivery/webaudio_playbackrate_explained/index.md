@@ -1,10 +1,8 @@
 ---
-title: Web Audio playbackRate explained
+title: Web audio playbackRate explained
 slug: Web/Media/Guides/Audio_and_video_delivery/WebAudio_playbackRate_explained
 page-type: guide
 ---
-
-{{QuickLinksWithSubPages("/en-US/docs/Web/Media")}}
 
 The {{domxref("HTMLMediaElement.playbackRate", "playbackRate")}} property of the {{ htmlelement("audio") }} and {{ htmlelement("video") }} elements allows us to change the speed, or rate, at which a piece of web audio or video is playing. This article explains `playbackRate` in detail.
 
@@ -24,7 +22,7 @@ Here we create an {{ htmlelement("audio") }} element, and set its `src` to a fil
 
 Let's create a {{ htmlelement("video") }} element first, and set up video and playback rate controls in HTML:
 
-```html
+```html live-sample___playback-rate
 <video id="myVideo" controls>
   <source
     src="http://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v"
@@ -42,7 +40,7 @@ Let's create a {{ htmlelement("video") }} element first, and set up video and pl
 
 And apply some JavaScript to it:
 
-```js
+```js live-sample___playback-rate
 window.onload = () => {
   const v = document.getElementById("myVideo");
   const p = document.getElementById("pbr");
@@ -60,8 +58,9 @@ window.onload = () => {
 ```
 
 Finally, we listen for the `input` event firing on the {{ htmlelement("input") }} element, allowing us to react to the playback rate control being changed.
+Try adjusting the playback rate control to see the effect:
 
-> **Note:** [Try out this example live](https://jsbin.com/UGIxoJis/1/edit), and try adjusting the playback rate control to see the effect.
+{{embedlivesample("playback-rate")}}
 
 ## defaultPlaybackRate and ratechange
 
