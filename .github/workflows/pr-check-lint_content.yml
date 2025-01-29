@@ -84,6 +84,14 @@ jobs:
 
           files_to_lint="$DIFF_DOCUMENTS"
 
+          echo "crlf line ending check"
+          CRLF_FAILED=true
+          CRLF_LOG=$(git ls-files --eol ${files_to_lint} | grep -E 'w/(mixed|crlf)') || CRLF_FAILED=false
+          echo "CRLF_LOG<<${EOF}" >> $GITHUB_ENV
+          echo "${CRLF_LOG}" >> $GITHUB_ENV
+          echo "${EOF}" >> $GITHUB_ENV
+          echo "CRLF_FAILED=${CRLF_FAILED}" >> $GITHUB_ENV
+
           echo "Running markdownlint --fix"
           MD_LINT_FAILED=false
           MD_LINT_LOG=$(yarn markdownlint-cli2 --fix ${files_to_lint} 2>&1) || MD_LINT_FAILED=true
@@ -114,6 +122,7 @@ jobs:
           fi
 
           # info for troubleshooting
+          echo CRLF_FAILED=${CRLF_FAILED}
           echo MD_LINT_FAILED=${MD_LINT_FAILED}
           echo FM_LINT_FAILED=${FM_LINT_FAILED}
           echo PRETTIER_FAILED=${PRETTIER_FAILED}
@@ -154,16 +163,25 @@ jobs:
             -reporter="github-pr-review"
 
       - name: Fail if any issues pending
-        if: env.FILES_MODIFIED == 'true' || env.MD_LINT_FAILED == 'true' || env.FM_LINT_FAILED == 'true'
+        if: env.FILES_MODIFIED == 'true' || env.CRLF_FAILED == 'true' || env.MD_LINT_FAILED == 'true' || env.FM_LINT_FAILED == 'true'
         env:
+          CRLF_FAILED: ${{ env.CRLF_FAILED }}
           MD_LINT_FAILED: ${{ env.MD_LINT_FAILED }}
           FM_LINT_FAILED: ${{ env.FM_LINT_FAILED }}
           PRETTIER_FAILED: ${{ env.PRETTIER_FAILED }}
+          CRLF_LOG: ${{ env.CRLF_LOG }}
           MD_LINT_LOG: ${{ env.MD_LINT_LOG }}
           FM_LINT_LOG: ${{ env.FM_LINT_LOG }}
           PRETTIER_LOG: ${{ env.PRETTIER_LOG }}
         run: |
           echo -e "\nPlease fix all the linting issues mentioned in the following logs and in the PR review comments."
+
+          if [[ ${CRLF_FAILED} == 'true' ]]; then
+            echo -e "\n\n🪵 In the following files make sure all the lines end with only Line Feed (LF) character and not with Carriage Return Line Feed (CRLF) characters:"
+            echo "${CRLF_LOG}"
+            echo "For more information refer https://gist.github.com/LunarLambda/3df0840b336a5e314e4ffdac03cbf619 ."
+            echo "You may use https://app.execeratics.com/LFandCRLFonline/?l=en online tool to convert line endings from CRLF to LF."
+          fi
 
           if [[ ${MD_LINT_FAILED} == 'true' ]]; then
             echo -e "\n\n🪵 Logs from markdownlint:"
