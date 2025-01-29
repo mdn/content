@@ -16,7 +16,7 @@ An {{domxref("SVGAnimatedString")}} object.
 
 ## Examples
 
-In this example, the `feConvolveMatrix` element applies a convolution filter to an input graphic specified by the `in` attribute.
+In this example, the `<feConvolveMatrix>` element applies a convolution filter to an input graphic specified by the `in` attribute.
 
 ```html
 <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
