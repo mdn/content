@@ -16,7 +16,9 @@ An {{domxref("SVGAnimatedNumber")}} object.
 
 ## Examples
 
-### Accessing the `dx` Property
+### Accessing the `dx` attribute
+
+In this example, we access the amount to offset, or horizontal shift, of the `<feOffset>` element, using the `dx` read-only property of the `SVGFEOffsetElement` interface.
 
 ```html
 <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
