@@ -24,6 +24,12 @@ There are plans to further extend possible queries by adding the generalized con
 
 ## Reference
 
+### Properties
+
+- {{cssxref("container")}}
+- {{cssxref("container-name")}}
+- {{cssxref("container-type")}}
+
 ### At-rules
 
 - {{cssxref("@media")}}
