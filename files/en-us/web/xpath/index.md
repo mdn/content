@@ -13,29 +13,27 @@ XPath is mainly used in [XSLT](/en-US/docs/Web/XSLT), but can also be used as a 
 XPath uses a path notation (as in URLs) for navigating through the hierarchical structure of an XML document. It uses a non-XML syntax so that it can be used in URIs and XML attribute values.
 
 > [!NOTE]
-> Support for XPath varies widely; it's supported reasonably well in Firefox (although there are no plans to improve support further), while other browsers implement it to a lesser extent, if at all. If you need a polyfill, you may consider [js-xpath](https://pilotfiber.dl.sourceforge.net/project/js-xpath/js-xpath/1.0.0/xpath.js) or [wicked-good-xpath](https://github.com/google/wicked-good-xpath).
+> Support for XPath varies; it's supported reasonably well in Firefox, while other browsers implement it to a lesser extent, if at all.
+> If you need a polyfill, you may consider [js-xpath](https://pilotfiber.dl.sourceforge.net/project/js-xpath/js-xpath/1.0.0/xpath.js) or [wicked-good-xpath](https://github.com/google/wicked-good-xpath).
 
-## Documentation
+## Guides
 
-- [Introduction to using XPath in JavaScript](/en-US/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript)
+- [Introduction to using XPath in JavaScript](/en-US/docs/Web/XPath/Guides/Introduction_to_using_XPath_in_JavaScript)
   - : Describes a non-XSLT use of XPath.
-- [XPath:Axes](/en-US/docs/Web/XPath/Axes)
-  - : List and definition of the axes defined in the XPath specification. Axes are used to describe the relationships between nodes.
-- [XPath:Functions](/en-US/docs/Web/XPath/Functions)
-  - : List and description of the core XPath functions and XSLT-specific additions to XPath.
-- [Transforming XML with XSLT](/en-US/docs/Web/XSLT/Transforming_XML_with_XSLT)
-  - : XSLT uses XPath to address code segments in an XML document that it wishes to transform.
-- [XPath snippets](/en-US/docs/Web/XPath/Snippets)
+- [XPath snippets](/en-US/docs/Web/XPath/Guides/Snippets)
   - : These are JavaScript utility functions, that can be used in your own code, based on [DOM Level 3 XPath](https://www.w3.org/TR/DOM-Level-3-XPath/) APIs.
-- [What is XSLT?](https://www.xml.com/pub/a/2000/08/holman/)
-  - : This extensive introduction to XSLT and XPath assumes no prior knowledge of the technologies, and guides the reader through background, context, structure, concepts, and introductory terminology.
 
-## Tools
+## Reference
 
-- [XPath tester](https://extendsclass.com/xpath-tester.html)
-  - : An online XPath Builder/Debugger.
+- [XPath:Axes](/en-US/docs/Web/XPath/Reference/Axes)
+  - : List and definition of the axes defined in the XPath specification. Axes are used to describe the relationships between nodes.
+- [XPath:Functions](/en-US/docs/Web/XPath/Reference/Functions)
+  - : List and description of the core XPath functions and XSLT-specific additions to XPath.
 
-## Related Topics
+## See also
 
 - [XSLT](/en-US/docs/Web/XSLT), [XML](/en-US/docs/Web/XML), [DOM](/en-US/docs/Web/API/Document_Object_Model)
-- [Comparison of CSS Selectors and XPath](/en-US/docs/Web/XPath/Comparison_with_CSS_selectors)
+- [Transforming XML with XSLT](/en-US/docs/Web/XSLT/Transforming_XML_with_XSLT)
+- [Comparison of CSS Selectors and XPath](/en-US/docs/Web/XPath/Guides/Comparison_with_CSS_selectors)
+- [What is XSLT?](https://www.xml.com/pub/a/2000/08/holman/) introduces XSLT and XPath, including background, context, structure, concepts, and terminology - xml.com (2000)
+- [XPath tester](https://extendsclass.com/xpath-tester.html) online XPath Builder/Debugger

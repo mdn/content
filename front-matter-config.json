@@ -518,7 +518,7 @@
         "then": {
           "properties": {
             "page-type": {
-              "enum": ["guide", "landing-page", "xpath-function"]
+              "enum": ["guide", "landing-page", "xpath-function", "reference"]
             }
           }
         },

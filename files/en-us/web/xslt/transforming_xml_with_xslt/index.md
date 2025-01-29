@@ -62,62 +62,62 @@ Our focus here is on the second type of stylesheet that Gecko supports: the XSLT
 
 ### Axes
 
-[Axes](/en-US/docs/Web/XPath/Axes)
+[Axes](/en-US/docs/Web/XPath/Reference/Axes)
 
-- [ancestor](/en-US/docs/Web/XPath/Axes#ancestor)
-- [ancestor-or-self](/en-US/docs/Web/XPath/Axes#ancestor-or-self)
-- [attribute](/en-US/docs/Web/XPath/Axes#attribute)
-- [child](/en-US/docs/Web/XPath/Axes#child)
-- [descendant](/en-US/docs/Web/XPath/Axes#descendant)
-- [descendant-or-self](/en-US/docs/Web/XPath/Axes#descendant-or-self)
-- [following](/en-US/docs/Web/XPath/Axes#following)
-- [following-sibling](/en-US/docs/Web/XPath/Axes#following-sibling)
-- [namespace](/en-US/docs/Web/XPath/Axes#namespace) _(not supported)_
-- [parent](/en-US/docs/Web/XPath/Axes#parent)
-- [preceding](/en-US/docs/Web/XPath/Axes#preceding)
-- [preceding-sibling](/en-US/docs/Web/XPath/Axes#preceding-sibling)
-- [self](/en-US/docs/Web/XPath/Axes#self)
+- [ancestor](/en-US/docs/Web/XPath/Reference/Axes#ancestor)
+- [ancestor-or-self](/en-US/docs/Web/XPath/Reference/Axes#ancestor-or-self)
+- [attribute](/en-US/docs/Web/XPath/Reference/Axes#attribute)
+- [child](/en-US/docs/Web/XPath/Reference/Axes#child)
+- [descendant](/en-US/docs/Web/XPath/Reference/Axes#descendant)
+- [descendant-or-self](/en-US/docs/Web/XPath/Reference/Axes#descendant-or-self)
+- [following](/en-US/docs/Web/XPath/Reference/Axes#following)
+- [following-sibling](/en-US/docs/Web/XPath/Reference/Axes#following-sibling)
+- [namespace](/en-US/docs/Web/XPath/Reference/Axes#namespace) _(not supported)_
+- [parent](/en-US/docs/Web/XPath/Reference/Axes#parent)
+- [preceding](/en-US/docs/Web/XPath/Reference/Axes#preceding)
+- [preceding-sibling](/en-US/docs/Web/XPath/Reference/Axes#preceding-sibling)
+- [self](/en-US/docs/Web/XPath/Reference/Axes#self)
 
 ### Functions
 
-[Functions](/en-US/docs/Web/XPath/Functions)
+[Functions](/en-US/docs/Web/XPath/Reference/Functions)
 
-- [boolean()](/en-US/docs/Web/XPath/Functions/boolean) _(supported)_
-- [ceiling()](/en-US/docs/Web/XPath/Functions/ceiling) _(supported)_
-- [concat()](/en-US/docs/Web/XPath/Functions/concat) _(supported)_
-- [contains()](/en-US/docs/Web/XPath/Functions/contains) _(supported)_
-- [count()](/en-US/docs/Web/XPath/Functions/count) _(supported)_
-- [current()](/en-US/docs/Web/XPath/Functions/current) _(supported)_
-- [document()](/en-US/docs/Web/XPath/Functions/document) _(supported)_
-- [element-available()](/en-US/docs/Web/XPath/Functions/element-available) _(supported)_
-- [false()](/en-US/docs/Web/XPath/Functions/false) _(supported)_
-- [floor()](/en-US/docs/Web/XPath/Functions/floor) _(supported)_
-- [format-number()](/en-US/docs/Web/XPath/Functions/format-number) _(supported)_
-- [function-available()](/en-US/docs/Web/XPath/Functions/function-available) _(supported)_
-- [generate-id()](/en-US/docs/Web/XPath/Functions/generate-id) _(supported)_
-- [id()](/en-US/docs/Web/XPath/Functions/id) _(partially supported)_
-- [key()](/en-US/docs/Web/XPath/Functions/key) _(supported)_
-- [lang()](/en-US/docs/Web/XPath/Functions/lang) _(supported)_
-- [last()](/en-US/docs/Web/XPath/Functions/last) _(supported)_
-- [local-name()](/en-US/docs/Web/XPath/Functions/local-name) _(supported)_
-- [name()](/en-US/docs/Web/XPath/Functions/name) _(supported)_
-- [namespace-uri()](/en-US/docs/Web/XPath/Functions/namespace-uri) _(supported)_
-- [normalize-space()](/en-US/docs/Web/XPath/Functions/normalize-space) _(supported)_
-- [not()](/en-US/docs/Web/XPath/Functions/not) _(supported)_
-- [number()](/en-US/docs/Web/XPath/Functions/number) _(supported)_
-- [position()](/en-US/docs/Web/XPath/Functions/position) _(supported)_
-- [round()](/en-US/docs/Web/XPath/Functions/round) _(supported)_
-- [starts-with()](/en-US/docs/Web/XPath/Functions/starts-with) _(supported)_
-- [string()](/en-US/docs/Web/XPath/Functions/string) _(supported)_
-- [string-length()](/en-US/docs/Web/XPath/Functions/string-length) _(supported)_
-- [substring()](/en-US/docs/Web/XPath/Functions/substring) _(supported)_
-- [substring-after()](/en-US/docs/Web/XPath/Functions/substring-after) _(supported)_
-- [substring-before()](/en-US/docs/Web/XPath/Functions/substring-before) _(supported)_
-- [sum()](/en-US/docs/Web/XPath/Functions/sum) _(supported)_
-- [system-property()](/en-US/docs/Web/XPath/Functions/system-property) _(supported)_
-- [translate()](/en-US/docs/Web/XPath/Functions/translate) _(supported)_
-- [true()](/en-US/docs/Web/XPath/Functions/true) _(supported)_
-- [unparsed-entity-url()](/en-US/docs/Web/XPath/Functions/unparsed-entity-url) _(not supported)_
+- [boolean()](/en-US/docs/Web/XPath/Reference/Functions/boolean) _(supported)_
+- [ceiling()](/en-US/docs/Web/XPath/Reference/Functions/ceiling) _(supported)_
+- [concat()](/en-US/docs/Web/XPath/Reference/Functions/concat) _(supported)_
+- [contains()](/en-US/docs/Web/XPath/Reference/Functions/contains) _(supported)_
+- [count()](/en-US/docs/Web/XPath/Reference/Functions/count) _(supported)_
+- [current()](/en-US/docs/Web/XPath/Reference/Functions/current) _(supported)_
+- [document()](/en-US/docs/Web/XPath/Reference/Functions/document) _(supported)_
+- [element-available()](/en-US/docs/Web/XPath/Reference/Functions/element-available) _(supported)_
+- [false()](/en-US/docs/Web/XPath/Reference/Functions/false) _(supported)_
+- [floor()](/en-US/docs/Web/XPath/Reference/Functions/floor) _(supported)_
+- [format-number()](/en-US/docs/Web/XPath/Reference/Functions/format-number) _(supported)_
+- [function-available()](/en-US/docs/Web/XPath/Reference/Functions/function-available) _(supported)_
+- [generate-id()](/en-US/docs/Web/XPath/Reference/Functions/generate-id) _(supported)_
+- [id()](/en-US/docs/Web/XPath/Reference/Functions/id) _(partially supported)_
+- [key()](/en-US/docs/Web/XPath/Reference/Functions/key) _(supported)_
+- [lang()](/en-US/docs/Web/XPath/Reference/Functions/lang) _(supported)_
+- [last()](/en-US/docs/Web/XPath/Reference/Functions/last) _(supported)_
+- [local-name()](/en-US/docs/Web/XPath/Reference/Functions/local-name) _(supported)_
+- [name()](/en-US/docs/Web/XPath/Reference/Functions/name) _(supported)_
+- [namespace-uri()](/en-US/docs/Web/XPath/Reference/Functions/namespace-uri) _(supported)_
+- [normalize-space()](/en-US/docs/Web/XPath/Reference/Functions/normalize-space) _(supported)_
+- [not()](/en-US/docs/Web/XPath/Reference/Functions/not) _(supported)_
+- [number()](/en-US/docs/Web/XPath/Reference/Functions/number) _(supported)_
+- [position()](/en-US/docs/Web/XPath/Reference/Functions/position) _(supported)_
+- [round()](/en-US/docs/Web/XPath/Reference/Functions/round) _(supported)_
+- [starts-with()](/en-US/docs/Web/XPath/Reference/Functions/starts-with) _(supported)_
+- [string()](/en-US/docs/Web/XPath/Reference/Functions/string) _(supported)_
+- [string-length()](/en-US/docs/Web/XPath/Reference/Functions/string-length) _(supported)_
+- [substring()](/en-US/docs/Web/XPath/Reference/Functions/substring) _(supported)_
+- [substring-after()](/en-US/docs/Web/XPath/Reference/Functions/substring-after) _(supported)_
+- [substring-before()](/en-US/docs/Web/XPath/Reference/Functions/substring-before) _(supported)_
+- [sum()](/en-US/docs/Web/XPath/Reference/Functions/sum) _(supported)_
+- [system-property()](/en-US/docs/Web/XPath/Reference/Functions/system-property) _(supported)_
+- [translate()](/en-US/docs/Web/XPath/Reference/Functions/translate) _(supported)_
+- [true()](/en-US/docs/Web/XPath/Reference/Functions/true) _(supported)_
+- [unparsed-entity-url()](/en-US/docs/Web/XPath/Reference/Functions/unparsed-entity-url) _(not supported)_
 
 ## For Further Reading
 
