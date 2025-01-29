@@ -21,7 +21,7 @@ In this example, we retrieve the `<feConvolveMatrix>` filter element's `edgeMode
 If our SVG contains the following filter:
 
 ```html
-<feConvolveMatrix kernelMatrix="3 0 0 0 0 0 0 0 -4" id="el"  edgeMode="wrap" />
+<feConvolveMatrix kernelMatrix="3 0 0 0 0 0 0 0 -4" id="el" edgeMode="wrap" />
 ```
 
 We can access the number associated with the enumerated keyword value of the `edgeMode` attribute of the `feConvolveMatrix` element.
