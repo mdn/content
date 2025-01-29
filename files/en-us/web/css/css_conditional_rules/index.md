@@ -24,6 +24,12 @@ There are plans to further extend possible queries by adding the generalized con
 
 ## Reference
 
+### Properties
+
+- {{cssxref("container")}}
+- {{cssxref("container-name")}}
+- {{cssxref("container-type")}}
+
 ### At-rules
 
 - {{cssxref("@media")}}
@@ -80,7 +86,7 @@ There are plans to further extend possible queries by adding the generalized con
 
 ## Related concepts
 
-- [CSS cascade and inheritance](/en-US/docs/Web/CSS/CSS_cascade) module
+- [CSS cascading and inheritance](/en-US/docs/Web/CSS/CSS_cascade) module
 
   - {{cssxref("@import")}} at-rule
 
@@ -125,4 +131,4 @@ There are plans to further extend possible queries by adding the generalized con
 
 - [CSS container queries](/en-US/docs/Web/CSS/CSS_containment/Container_queries) module
 - [CSS media queries](/en-US/docs/Web/CSS/CSS_media_queries) module
-- [CSS cascade and inheritance](/en-US/docs/Web/CSS/CSS_cascade) module
+- [CSS cascading and inheritance](/en-US/docs/Web/CSS/CSS_cascade) module

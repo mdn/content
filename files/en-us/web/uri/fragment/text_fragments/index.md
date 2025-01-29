@@ -64,7 +64,7 @@ Supporting browsers will scroll to and highlight the first text fragment in the 
 - Matches are case-insensitive.
 - Individual `textStart`, `textEnd`, `prefix-`, and `-suffix` strings need to reside wholly inside the same [block-level element](/en-US/docs/Glossary/Block-level_content), but complete matches can span across multiple element boundaries.
 - For security reasons, the feature requires links to be opened in a noopener context — you need to add `rel="noopener"` to your {{htmlelement("a")}} elements, and add `noopener` to your {{domxref("window.open()")}} calls when using this feature.
-- Text fragments are invoked only on full (non-same-page), user-initiated navigations.
+- Text fragments are invoked only on user-initiated navigations.
 - Text fragments are only applied to the main frame; text will not be searched inside {{htmlelement("iframe")}}s, and `iframe` navigation will not invoke a text fragment.
 - For sites that wish to opt-out, Chromium-based browsers support a [Document Policy](https://wicg.github.io/document-policy/) header value that they can send so user agents will not process Text Fragments:
 

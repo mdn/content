@@ -174,7 +174,7 @@ You can also use keywords:
 
 In the example below, the _balloons.jpg_ image has length units set to size it inside the box. You can see this has distorted the image.
 
-Try the following.
+Try the following:
 
 - Change the length units used to modify the size of the background.
 - Remove the length units and see what happens when you use `background-size: cover` or `background-size: contain`.

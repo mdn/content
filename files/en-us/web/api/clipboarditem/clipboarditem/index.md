@@ -11,7 +11,10 @@ browser-compat: api.ClipboardItem.ClipboardItem
 The **`ClipboardItem()`** constructor creates a new {{domxref("ClipboardItem")}} object, which represents data to be stored or retrieved via the [Clipboard API](/en-US/docs/Web/API/Clipboard_API) {{domxref("clipboard.write()")}} and {{domxref("clipboard.read()")}} methods, respectively.
 
 > [!NOTE]
-> Image format support varies by browser. See the browser compatibility table for the {{domxref("Clipboard")}} interface.
+> The `read()` and `write()` methods can be used to work with text strings and arbitrary data items represented by {{domxref("Blob")}} instances. However, if you are solely working with text, it is more convenient to use the {{domxref("Clipboard.readText()")}} and {{domxref("Clipboard.writeText()")}} methods.
+
+> [!NOTE]
+> Image format support varies by browser. See the [browser compatibility table](/en-US/docs/Web/API/Clipboard#browser_compatibility) for the `Clipboard` interface.
 
 ## Syntax
 
@@ -24,7 +27,10 @@ new ClipboardItem(data, options)
 
 - `data`
   - : An {{jsxref("Object")}} with the {{Glossary("MIME type")}} as the key and data as the value.
-    The data can be represented as a {{domxref("Blob")}}, a {{jsxref("String")}} or a {{jsxref("Promise")}} which resolves to either a blob or string.
+    The data can be represented as one of the following:
+    - a {{domxref("Blob")}}
+    - a string
+    - a {{jsxref("Promise")}} that resolves to either a `Blob` or string.
 - `options` {{optional_inline}}
 
   - : An object with the following properties:
@@ -35,9 +41,6 @@ new ClipboardItem(data, options)
         The default is `unspecified`.
 
         `inline` signifies to apps that receive the paste that the `ClipboardItem` should be inserted inline at the point of paste. `attachment` signifies to apps that receive the paste that the `ClipboardItem` should be added as an attachment. `unspecified` doesn't signify any information to apps that receive the paste.
-
-> [!NOTE]
-> You can also work with text via the {{domxref("Clipboard.readText()")}} and {{domxref("Clipboard.writeText()")}} methods of the {{domxref("Clipboard")}} interface.
 
 ## Examples
 

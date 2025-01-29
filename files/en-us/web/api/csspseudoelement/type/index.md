@@ -47,4 +47,4 @@ console.log(mySelector === typeOfPseudoElement); // Outputs true
 ## See also
 
 - {{DOMxRef('Element.pseudo()')}}
-- [List of pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements#list_of_pseudo-elements)
+- [List of pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements#alphabetical_index)

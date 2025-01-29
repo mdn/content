@@ -75,9 +75,6 @@ The alignment of text and inline-level content is defined in [CSS text module](/
 
 - {{cssxref("alignment-baseline")}}
 - {{cssxref("dominant-baseline")}}
-- {{cssxref("grid-column-gap")}}
-- {{cssxref("grid-gap")}}
-- {{cssxref("grid-row-gap")}}
 - {{cssxref("scroll-snap-align")}}
 - SVG {{SVGAttr("dominant-baseline")}} attribute
 - {{Glossary("Cross axis")}}

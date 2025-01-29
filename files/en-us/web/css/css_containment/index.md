@@ -20,9 +20,6 @@ Container queries are similar to dimension [media queries](/en-US/docs/Web/CSS/C
 ### Properties
 
 - {{cssxref("contain")}}
-- {{cssxref("container")}} shorthand
-  - {{cssxref("container-name")}}
-  - {{cssxref("container-type")}}
 - {{cssxref("content-visibility")}}
 
 ### At-rules and descriptors
@@ -77,6 +74,12 @@ Container queries are similar to dimension [media queries](/en-US/docs/Web/CSS/C
 - [Layout and the containing block](/en-US/docs/Web/CSS/Containing_block)
 - [Block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context)
 
+- [CSS conditional rules](/en-US/docs/Web/CSS/CSS_conditional_rules) module
+
+  - {{CSSxRef("container")}} property
+  - {{CSSxRef("container-name")}} property
+  - {{CSSxRef("container-type")}} property
+
 - [CSS media queries](/en-US/docs/Web/CSS/CSS_media_queries) module
 
   - {{cssxref("@media")}} at-rule
@@ -87,7 +90,7 @@ Container queries are similar to dimension [media queries](/en-US/docs/Web/CSS/C
   - {{cssxref("@starting-style")}} at-rule
   - {{cssxref("transition-behavior")}} property
 
-- CSS box sizing module
+- [CSS box sizing](/en-US/docs/Web/CSS/CSS_box_sizing) module
 
   - {{CSSxRef("aspect-ratio")}} property
   - {{cssxref("contain-intrinsic-size")}} shorthand property
@@ -101,6 +104,7 @@ Container queries are similar to dimension [media queries](/en-US/docs/Web/CSS/C
   - [Using CSS counters](/en-US/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters) guide
 
 - [CSS nesting](/en-US/docs/Web/CSS/CSS_nesting) module
+
   - [CSS nesting at-rules](/en-US/docs/Web/CSS/CSS_nesting/Nesting_at-rules) guide
 
 ## Specifications

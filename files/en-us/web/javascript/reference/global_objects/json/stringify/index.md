@@ -66,7 +66,7 @@ A JSON string representing the given value, or undefined.
     - if it is in an array, the index in the array, as a string
     - if `JSON.stringify()` was directly called on this object, an empty string
 
-    {{jsxref("Date")}} objects implement the [`toJSON()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toJSON) method which returns a string (the same as [`date.toISOString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toISOString)). Thus, they will be stringified as strings.
+    All {{jsxref("Temporal")}} objects implement the `toJSON()` method, which returns a string (the same as calling `toString()`). Thus, they will be serialized as strings. Similarly, {{jsxref("Date")}} objects implement `toJSON()`, which returns the same as [`toISOString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toISOString).
 
   - Only [enumerable own properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties) are visited. This means {{jsxref("Map")}}, {{jsxref("Set")}}, etc. will become `"{}"`. You can use the [`replacer`](#the_replacer_parameter) parameter to serialize them to something more useful.
 

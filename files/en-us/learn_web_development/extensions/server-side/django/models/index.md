@@ -257,7 +257,7 @@ We can get all records for a model as a `QuerySet`, using `objects.all()`. The `
 all_books = Book.objects.all()
 ```
 
-Django's `filter()` method allows us to filter the returned `QuerySet` to match a specified **text** or **numeric** field against particular criteria. For example, to filter for books that contain "wild" in the title and then count them, we could do the following.
+Django's `filter()` method allows us to filter the returned `QuerySet` to match a specified **text** or **numeric** field against particular criteria. For example, to filter for books that contain "wild" in the title and then count them, we could do the following:
 
 ```python
 wild_books = Book.objects.filter(title__contains='wild')

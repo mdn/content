@@ -104,7 +104,9 @@ const sab = new SharedArrayBuffer(1024);
 const int32 = new Int32Array(sab);
 ```
 
-A reading thread is sleeping and waiting on location 0 which is expected to be 0. As long as that is true, it will not go on. However, once the writing thread has stored a new value, it will be notified by the writing thread and return the new value (123).
+A reading thread is sleeping and waiting on location 0 because the provided value matches what is stored at the provided index.
+The reading thread will not move on until the writing thread has called `Atomics.notify()` on position 0 of the provided typed array.
+Note that if, after being woken up, the value of location 0 has not been changed by the writing thread, the reading thread will **not** go back to sleep, but will continue on.
 
 ```js
 Atomics.wait(int32, 0, 0);

@@ -504,5 +504,5 @@ A few things to remember about specificity:
 - [Value definition syntax](/en-US/docs/Web/CSS/Value_definition_syntax)
 - [Learn: Handling conflicts](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
 - [Learn: cascade layers](/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)
-- [CSS cascade and inheritance](/en-US/docs/Web/CSS/CSS_cascade) module
+- [CSS cascading and inheritance](/en-US/docs/Web/CSS/CSS_cascade) module
 - [CSS nesting module](/en-US/docs/Web/CSS/CSS_nesting)

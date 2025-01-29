@@ -75,3 +75,4 @@ new Intl.DurationFormat("pt", { style: "narrow" }).format(duration);
 
 - [Polyfill of `Intl.DurationFormat` in FormatJS](https://formatjs.github.io/docs/polyfills/intl-durationformat/)
 - {{jsxref("Intl")}}
+- {{jsxref("Temporal/Duration/toLocaleString", "Temporal.Duration.prototype.toLocaleString()")}}

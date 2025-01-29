@@ -14,6 +14,8 @@ The **CSS display** module defines how the CSS formatting box tree is generated 
 ### Properties
 
 - {{CSSxRef("display")}}
+- {{CSSxRef("order")}}
+- {{CSSxRef("visibility")}}
 
 ### Data types
 

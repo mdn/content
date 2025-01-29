@@ -28,17 +28,12 @@ For more information, see the [Importing modules using import maps](/en-US/docs/
 
 The `src`, `async`, `nomodule`, `defer`, `crossorigin`, `integrity`, and `referrerpolicy` attributes must not be specified.
 
-Only the first import map in the document with an inline definition is processed; any additional import maps and external import maps are ignored.
-
 ### Exceptions
 
 - `TypeError`
   - : The import map definition is not a JSON object, the `importmap` key is defined but its value is not a JSON object, or the `scopes` key is defined but its value is not a JSON object.
 
 Browsers generate console warnings for other cases where the import map JSON does not conform to the [import map](#import_map_json_representation) schema.
-
-An [`error` event](/en-US/docs/Web/API/HTMLElement/error_event) is fired at script elements with `type="importmap"` that are not processed.
-This might occur, for example, if module loading has already started when an import map is processed, or if multiple import maps are defined in the page.
 
 ## Description
 
@@ -168,6 +163,127 @@ For example, the map below defines integrity metadata for the `square.js` module
   }
 </script>
 ```
+
+### Merging multiple import maps
+
+Internally, browsers maintain a single global import map representation. When multiple import maps are included in a document, their contents are merged into the global import map when they are registered.
+
+For example, consider the following two import maps:
+
+```html
+<script type="importmap">
+  {
+    "imports": {
+      "/app/": "./original-app/"
+    }
+  }
+</script>
+```
+
+```html
+<script type="importmap">
+  {
+    "imports": {
+      "/app/helper": "./helper/index.mjs"
+    },
+    "scopes": {
+      "/js": {
+        "/app/": "./js-app/"
+      }
+    }
+  }
+</script>
+```
+
+These are equivalent to the following single import map:
+
+```html
+<script type="importmap">
+  {
+    "imports": {
+      "/app/": "./original-app/",
+      "/app/helper": "./helper/index.mjs"
+    },
+    "scopes": {
+      "/js": {
+        "/app/": "./js-app/"
+      }
+    }
+  }
+</script>
+```
+
+Module specifiers in each registered map that were already resolved beforehand are dropped. Subsequent resolutions of these specifiers will provide the same results as their previous resolutions.
+
+For example, if the module specifier `/app/helper.js` was already resolved, the following new import map:
+
+```html
+<script type="importmap">
+  {
+    "imports": {
+      "/app/helper.js": "./helper/index.mjs",
+      "lodash": "/node_modules/lodash-es/lodash.js"
+    }
+  }
+</script>
+```
+
+Would be equivalent to:
+
+```html
+<script type="importmap">
+  {
+    "imports": {
+      "lodash": "/node_modules/lodash-es/lodash.js"
+    }
+  }
+</script>
+```
+
+The `/app/helper.js` rule was ignored and not incorporated into the map.
+
+Similarly, module specifiers in a registered map that were already mapped to URLs in the global map are dropped; their previous mapping prevails.
+
+For example, the following two import maps:
+
+```html
+<script type="importmap">
+  {
+    "imports": {
+      "/app/helper": "./helper/index.mjs",
+      "lodash": "/node_modules/lodash-es/lodash.js"
+    }
+  }
+</script>
+```
+
+```html
+<script type="importmap">
+  {
+    "imports": {
+      "/app/helper": "./main/helper/index.mjs"
+    }
+  }
+</script>
+```
+
+Are equivalent to the following single import map:
+
+```html
+<script type="importmap">
+  {
+    "imports": {
+      "/app/helper": "./helper/index.mjs",
+      "lodash": "/node_modules/lodash-es/lodash.js"
+    }
+  }
+</script>
+```
+
+The `/app/helper/` rule was dropped from the second map.
+
+> [!NOTE]
+> In non-supporting browsers (check the [compatibility data](#browser_compatibility)), a [polyfill](https://github.com/guybedford/es-module-shims) can be used to avoid issues related to module resolution.
 
 ## Import map JSON representation
 

@@ -84,9 +84,7 @@ const callback = (entries, observer) => {
 };
 ```
 
-The list of entries received by the callback includes one entry for each threshold-crossing event — multiple entries can be received at a time, either from multiple targets or from a single target crossing multiple thresholds in a short amount of time. The entries are dispatched using a queue, so they should be ordered by the time they were generated, but you should preferably use {{domxref("IntersectionObserverEntry.time")}} to correctly order them.
-
-Each entry in the list of thresholds is an {{domxref("IntersectionObserverEntry")}} object describing one threshold that was crossed; that is, each entry describes how much of a given element is intersecting with the root element, whether or not the element is considered to be intersecting or not, etc. The entry only contains information about that particular instant — if you want information that requires tracking over time, such as the scroll direction and speed, you may need to compute that yourself by memorizing previously received entries.
+The list of entries received by the callback includes one {{domxref("IntersectionObserverEntry")}} object for each threshold-crossing event — multiple entries can be received at a time, either from multiple targets or from a single target crossing multiple thresholds in a short amount of time. The entries are dispatched using a queue, so they should be ordered by the time they were generated, but you should preferably use {{domxref("IntersectionObserverEntry.time")}} to correctly order them. Each entry describes how much of a given element is intersecting with the root element, whether or not the element is considered to be intersecting or not, etc. The entry only contains information about that particular instant — if you want information that requires tracking over time, such as the scroll direction and speed, you may need to compute that yourself by memorizing previously received entries.
 
 Be aware that your callback is executed on the main thread. It should operate as quickly as possible; if anything time-consuming needs to be done, use {{domxref("Window.requestIdleCallback()")}}.
 

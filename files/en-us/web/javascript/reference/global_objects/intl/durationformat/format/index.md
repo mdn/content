@@ -18,7 +18,7 @@ format(duration)
 ### Parameters
 
 - `duration`
-  - : The duration object to be formatted. It should include some or all of the following properties: `months`, `weeks`, `days`, `hours`, `minutes`, `seconds`, `milliseconds`, `microseconds`, `nanoseconds`.
+  - : The duration object to be formatted. It should include some or all of the following properties: `years`, `months`, `weeks`, `days`, `hours`, `minutes`, `seconds`, `milliseconds`, `microseconds`, `nanoseconds`. Can be a {{jsxref("Temporal.Duration")}} object.
 
 ### Return value
 
@@ -128,5 +128,4 @@ new Intl.DurationFormat("en", { style: "digital", fractionalDigits: 3 }).format(
 ## See also
 
 - {{jsxref("Intl.DurationFormat")}}
-- {{jsxref("Intl.supportedValuesOf()")}}
-- {{jsxref("Intl")}}
+- {{jsxref("Temporal.Duration")}}

@@ -19,7 +19,7 @@ toLocaleString()
 
 ### Parameters
 
-None. However, all objects that override this method are expected to accept at most two parameters, corresponding to `locales` and `options`, such as {{jsxref("Date.prototype.toLocaleString")}}. The parameter positions should not be used for any other purpose.
+None. However, all objects that override this method are expected to accept at most two parameters, corresponding to `locales` and `options`, such as {{jsxref("Number.prototype.toLocaleString")}}. The parameter positions should not be used for any other purpose.
 
 ### Return value
 

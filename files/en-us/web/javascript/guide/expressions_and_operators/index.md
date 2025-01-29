@@ -1038,16 +1038,16 @@ if the specified object is of the specified object type. The syntax is:
 object instanceof objectType
 ```
 
-where `object` is the object to test against `objectType`, and `objectType` is a constructor representing a type, such as {{jsxref("Date")}} or {{jsxref("Array")}}.
+where `object` is the object to test against `objectType`, and `objectType` is a constructor representing a type, such as {{jsxref("Map")}} or {{jsxref("Array")}}.
 
 Use `instanceof` when you need to confirm the type of an object at runtime.
 For example, when catching exceptions, you can branch to different exception-handling code depending on the type of exception thrown.
 
-For example, the following code uses `instanceof` to determine whether `theDay` is a `Date` object. Because `theDay` is a `Date` object, the statements in the `if` statement execute.
+For example, the following code uses `instanceof` to determine whether `obj` is a `Map` object. Because `obj` is a `Map` object, the statements inside the `if` block execute.
 
 ```js
-const theDay = new Date(1995, 12, 17);
-if (theDay instanceof Date) {
+const obj = new Map();
+if (obj instanceof Map) {
   // statements to execute
 }
 ```

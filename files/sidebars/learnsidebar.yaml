@@ -311,6 +311,33 @@ l10n:
     Web_forms: Webformulare — Arbeiten mit Benutzerdaten
     Django_web_framework_(Python): Django Web-Framework (Python)
     Further_resources: Weitere Ressourcen
+    Getting_started_modules: Einstiegsmodule
+    Environment_setup: Umgebung einrichten
+    Your_first_website: Ihre erste Website
+    Web_standards: Webstandards
+    Soft_skills: Soziale Kompetenzen
+    Core_modules: Kernmodule
+    Structuring_content_with_HTML: Inhalte mit HTML strukturieren
+    CSS_styling_basics: Grundlagen des CSS-Stylings
+    CSS_text_styling: CSS-Textgestaltung
+    Dynamic_scripting_with_JavaScript: Dynamisches Scripting mit JavaScript
+    JavaScript_frameworks_and_libraries: JavaScript-Frameworks und -Bibliotheken
+    Accessibility: Barrierefreiheit
+    Design_for_developers: Design für Entwickler:innen
+    Version_control: Versionskontrolle
+    Extension_modules: Erweiterungsmodule
+    Understanding_client-side_tools: Verständnis für clientseitige Tools
+    Server-side_websites: Serverseitige Programmierung
+    Server-side_first_steps: Erste Schritte auf der Serverseite
+    Express_web_framework_(Node.js): Express Web-Framework (Node.js)
+    Web_performance: Web-Performance
+    Testing: Tests
+    Transform_and_animate_CSS: CSS transformieren und animieren
+    Security_and_privacy: Sicherheit und Datenschutz
+    How_to_solve_common_problems: Häufige Probleme lösen
+    About: Über
+    Resources_for_educators: Ressourcen für Lehrkräfte
+    Changelog: Änderungsprotokoll
   en-US:
     Getting_started_modules: Getting started modules
     Environment_setup: Environment setup

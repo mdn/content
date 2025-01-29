@@ -83,4 +83,4 @@ console.log(numbers()); // 5
 
 - [Scope](/en-US/docs/Glossary/Scope)
 - [Declaring variables in the JavaScript Guide](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#declaring_variables)
-- [Function scope in the JavaScript Guide](/en-US/docs/Web/JavaScript/Guide/Functions#function_scope)
+- [Function scope in the JavaScript Guide](/en-US/docs/Web/JavaScript/Guide/Functions#function_scopes_and_closures)

@@ -72,7 +72,7 @@ That means if a managed cache intentionally ignores a `no-store` directive, ther
 
 Note that some CDNs provide their own headers that are effective only for that CDN (for example, `Surrogate-Control`). Currently, work is underway to define a [`CDN-Cache-Control`](https://httpwg.org/specs/rfc9213.html) header to standardize those.
 
-![Type of Cache](type-of-cache.png)
+![Types of caches, including a private cache in the browser, a shared (proxy) cache, a reverse proxy cache, and a shared (managed) cache in a CDN, leading to the origin server's cache](https://mdn.github.io/shared-assets/images/diagrams/http/cache/type-of-cache.svg)
 
 ## Heuristic caching
 
@@ -481,7 +481,7 @@ Request collapse occurs when requests are arriving at the same time, so even if 
 
 If the response is personalized to a particular user and you do not want it to be shared in collapse, you should add the `private` directive:
 
-![Request Collapse](request-collapse.png)
+![Request collapse shown as multiple clients sending GET requests and a cache consolidating them into one GET to the origin. The origin server responds with a 200 OK that the cache shares back to all clients.](https://mdn.github.io/shared-assets/images/diagrams/http/cache/request-collapse.svg)
 
 ## Common caching patterns
 
