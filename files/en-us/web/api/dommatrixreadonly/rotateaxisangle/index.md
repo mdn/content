@@ -49,7 +49,7 @@ console.log(matrix.rotateAxisAngle(10, 20, 30, 45).toString());
     -0.525, 0.791, 0.315, 0, 
     0.441, -0.063, 0.895, 
     0, 0, 0, 0, 1) */
-console.log(matrix.rotateAxisAngle(5, 5, 5, -45).toString()); 
+console.log(matrix.rotateAxisAngle(5, 5, 5, -45).toString());
 /* matrix3d(
     0.805, -0.311, 0.506, 0, 
     0.506, 0.805, -0.311, 0, 
