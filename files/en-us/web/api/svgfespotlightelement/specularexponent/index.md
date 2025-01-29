@@ -16,7 +16,9 @@ An {{domxref("SVGAnimatedNumber")}} object.
 
 ## Examples
 
-### Accessing the `specularExponent` Property
+### Accessing the `specularExponent` attribute of the `<feSpotLight>` element
+
+In this example, we access the exponent value controlling the focus of the `<feSpotLight>` filter element's light source by using the `specularExponent` read-only property of the `SVGFESpotLightElement` interface.
 
 ```html
 <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
