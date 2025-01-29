@@ -14,7 +14,7 @@ To 3D-scale a matrix without mutating it, see {{domxref("DOMMatrixReadOnly.scale
 
 ## Syntax
 
-The `scale3dSelf()` method is specified with either one or six values.
+The `scale3dSelf()` method is specified with zero to four values.
 
 ```js
 DOMMatrix.scale3dSelf();
