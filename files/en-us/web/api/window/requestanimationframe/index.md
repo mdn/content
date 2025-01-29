@@ -49,15 +49,16 @@ requestAnimationFrame(callback)
 
 ### Return value
 
-A `long` integer value, the request ID, that uniquely identifies the entry
+An `unsigned long` integer value, the request ID, that uniquely identifies the entry
 in the callback list. You should not make any assumptions about its value. You can pass this value to
 {{domxref("window.cancelAnimationFrame()")}} to cancel the refresh callback request.
 
 > [!WARNING]
 > The request ID is typically implemented as a per-window incrementing counter. Therefore, even when it starts counting at 1, it may overflow and end up reaching 0.
 > While unlikely to cause issues for short-lived applications, you should avoid `0` as a sentinel value for invalid request identifier IDs and instead prefer unattainable values such as `null`.
-> This also means that request IDs are not truely unique, and may be reused over time.  
-> Note that it would however take ~500 days to reach cycle back to 0 when rendering at 60Hz based rendering with 100 calls to `requestAnimationFrame()` per frame.
+> As of January 2025, browsers such as WebKit and Chrome also don't implement it with an `unsigned long` but with a `signed long`, meaning you can not use negative values either. Firefox will return an error and fail instead of wrapping.
+> This also means that request IDs are not truely unique, and may be reused over time for browsers not implementing the check.  
+> Note that it would however take ~500 days to reach the issue when rendering at 60Hz with 100 calls to `requestAnimationFrame()` per frame.
 
 ## Examples
 
@@ -165,3 +166,4 @@ function animate() {
 - {{domxref("DedicatedWorkerGlobalScope.requestAnimationFrame()")}}
 - [Animating with JavaScript: from setInterval to requestAnimationFrame](https://hacks.mozilla.org/2011/08/animating-with-javascript-from-setinterval-to-requestanimationframe/) - Blog post
 - [TestUFO: Test your web browser for requestAnimationFrame() Timing Deviations](https://www.testufo.com/#test=animation-time-graph)
+- [Firefox switching to uint32_t for the requestAnimationFrame request ID](https://phabricator.services.mozilla.com/rMOZILLACENTRAL149722297f033d5c3ad126d0c72edcb1cb96d72e)
