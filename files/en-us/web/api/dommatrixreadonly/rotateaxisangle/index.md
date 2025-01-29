@@ -43,7 +43,7 @@ A [`DOMMatrix`](/en-US/docs/Web/API/DOMMatrix).
 const matrix = new DOMMatrix(); // create a matrix
 console.log(matrix.rotateAxisAngle().toString()); // matrix(1, 0, 0, 1, 0, 0)
 console.log(matrix.rotateAxisAngle(10, 20, 30).toString()); // matrix(1, 0, 0, 1, 0, 0)
-console.log(matrix.rotateAxisAngle(10, 20, 30, 45).toString()); 
+console.log(matrix.rotateAxisAngle(10, 20, 30, 45).toString());
 /* matrix3d(
     0.728, 0.609, -0.315, 0, 
     -0.525, 0.791, 0.315, 0, 
