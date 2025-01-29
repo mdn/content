@@ -25,7 +25,7 @@ Before diving into how to add captions to the video player, there are a number o
 
 For this article we will refer to the text tracks displayed as subtitles, as their content is aimed at hearing people who have difficulty understanding the language of the film, rather than deaf or hard-of-hearing people.
 
-### The \<track> element
+### The `<track>` element
 
 HTML allows us to specify subtitles for a video using the {{ htmlelement("track") }} element. The various attributes of this element allow us to specify such things as the type of content that we're adding, the language it's in, and of course a reference to the text file that contains the actual subtitle information.
 

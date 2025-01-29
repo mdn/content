@@ -548,20 +548,16 @@
       {
         "if": {
           "properties": {
-            "slug": { "type": "string", "pattern": "^Web/Media" }
+            "slug": { "type": "string", "pattern": "^Web/Media/" }
           }
         },
         "then": {
           "properties": {
             "page-type": {
               "enum": ["guide", "landing-page", "listing-page"]
-            },
-            "sidebar": {
-              "enum": ["mediasidebar"]
             }
           }
-        },
-        "else": false
+        }
       },
       {
         "if": {
