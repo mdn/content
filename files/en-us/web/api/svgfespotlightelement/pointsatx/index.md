@@ -16,7 +16,9 @@ An {{domxref("SVGAnimatedNumber")}} object.
 
 ## Examples
 
-### Accessing the `pointsAtX` Property
+### Accessing the `pointsAtX` attribute of the `<feSpotLight>` element
+
+In this example, we access the `x` location of the `<feSpotLight>` element in the SVG coordinate system by using the `pointsAtX` read-only property of the `SVGFESpotLightElement` interface.
 
 ```html
 <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
