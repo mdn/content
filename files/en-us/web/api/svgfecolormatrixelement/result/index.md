@@ -10,7 +10,7 @@ browser-compat: api.SVGFEColorMatrixElement.result
 
 The **`result`** read-only property of the {{domxref("SVGFEColorMatrixElement")}} interface describes the assigned name of an SVG filter primitive as a {{domxref("SVGAnimatedString")}}.
 
-It reflects the {{SVGElement("feColorMatrix")}} element's {{SVGAttr("result")}} attribute. The `<feColorMatrix>` filter applies a matrix transformation on the {{glossary("RGBA")}} color and alpha values. The attribute value is a {{cssxref("custom-ident")}}. If supplied, then graphics that result from processing this filter primitive can be referenced by an {{SVGAttr("in")}} attribute on a subsequent filter primitive within the same {{SVGElement("filter")}} element.
+It reflects the {{SVGElement("feColorMatrix")}} element's {{SVGAttr("result")}} attribute. The `<feColorMatrix>` filter applies a matrix transformation on the {{glossary("RGB")}} color and {{glossary("alpha")}} values. The attribute value is a {{cssxref("custom-ident")}}. If supplied, then graphics that result from processing this filter primitive can be referenced by an {{SVGAttr("in")}} attribute on a subsequent filter primitive within the same {{SVGElement("filter")}} element.
 
 If no `result` attribute is defined, the filter's `result.baseVal` and `result.animVal` are empty strings, and the output of the `<feColorMatrix>` filter will only be available for re-use as the implicit input into the next filter primitive if that filter primitive provides no value for its `in` attribute.
 
