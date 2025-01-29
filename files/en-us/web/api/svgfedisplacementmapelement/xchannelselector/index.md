@@ -40,6 +40,8 @@ In this example, the {{SVGElement("feDisplacementMap")}} element defined in the 
 </svg>
 ```
 
+We can access the `xChannelSelector ` attribute and get its value:
+
 ```js
 const displacementMap = document.querySelector("feDisplacementMap");
 
