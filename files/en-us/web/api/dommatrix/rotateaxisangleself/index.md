@@ -44,9 +44,17 @@ A [`DOMMatrix`](/en-US/docs/Web/API/DOMMatrix).
 ```js
 const matrix = new DOMMatrix(); // create a matrix
 console.log(matrix.rotateAxisAngleSelf(10, 20, 30, 45).toString());
-// "matrix3d(0.728, 0.609, -0.315, 0, -0.525, 0.791, 0.315, 0, 0.441, -0.063, 0.895, 0, 0, 0, 0, 1)"
+/* "matrix3d(
+    0.728, 0.609, -0.315, 0, 
+    -0.525, 0.791, 0.315, 0, 
+    0.441, -0.063, 0.895, 
+    0, 0, 0, 0, 1)" */
 console.log(matrix.toString());
-// "matrix3d(0.728, 0.609, -0.315, 0, -0.525, 0.791, 0.315, 0, 0.441, -0.063, 0.895, 0, 0, 0, 0, 1)"
+/* "matrix3d(
+    0.728, 0.609, -0.315, 0, 
+    -0.525, 0.791, 0.315, 0, 
+    0.441, -0.063, 0.895, 0, 
+    0, 0, 0, 1)" */
 ```
 
 ## Specifications

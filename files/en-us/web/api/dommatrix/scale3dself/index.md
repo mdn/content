@@ -44,11 +44,23 @@ Returns itself; a {{domxref("DOMMatrix")}}.
 ```js
 const matrix = new DOMMatrix();
 console.log(matrix.scale3dSelf(2).toString());
-// matrix3d(2, 0, 0, 0, 0, 2, 0, 0, 0, 0, 2, 0, 0, 0, 0, 1)
+/* matrix3d(
+    2, 0, 0, 0, 
+    0, 2, 0, 0, 
+    0, 0, 2, 0, 
+    0, 0, 0, 1) */
 console.log(matrix.scale3dSelf(3.1, 25, 25, 1.25).toString());
-// matrix3d(6.2, 0, 0, 0, 0, 6.2, 0, 0, 0, 0, 6.2, 0, -105, -105, -5.25, 1)
+/* matrix3d(
+    6.2, 0, 0, 0,
+    0, 6.2, 0, 0, 
+    0, 0, 6.2, 0, 
+    -105, -105, -5.25, 1) */
 console.log(matrix.toString());
-// matrix3d(6.2, 0, 0, 0, 0, 6.2, 0, 0, 0, 0, 6.2, 0, -105, -105, -5.25, 1) (same as above)
+/* matrix3d(
+    6.2, 0, 0, 0, 
+    0, 6.2, 0, 0, 
+    0, 0, 6.2, 0, 
+    -105, -105, -5.25, 1) (same as above) */
 ```
 
 ## Specifications

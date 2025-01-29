@@ -46,9 +46,17 @@ console.log(matrix.toString()); // no transforms applied
 // matrix(1, 0, 0, 1, 0, 0)
 
 console.log(matrix.scale3d(2).toString());
-// matrix3d(2, 0, 0, 0, 0, 2, 0, 0, 0, 0, 2, 0, 0, 0, 0, 1)
+/* matrix3d(
+    2, 0, 0, 0, 
+    0, 2, 0, 0, 
+    0, 0, 2, 0, 
+    0, 0, 0, 1) */
 console.log(matrix.scale3d(0.5, 25, 25, 1.25).toString());
-// matrix3d(0.5, 0, 0, 0, 0, 0.5, 0, 0, 0, 0, 0.5, 0, 12.5, 12.5, 0.625, 1)
+/* matrix3d(
+    0.5, 0, 0, 0, 
+    0, 0.5, 0, 0, 
+    0, 0, 0.5, 0, 1
+    2.5, 12.5, 0.625, 1) */
 console.log(matrix.toString()); // original matrix is unchanged
 // matrix(1, 0, 0, 1, 0, 0)
 ```
