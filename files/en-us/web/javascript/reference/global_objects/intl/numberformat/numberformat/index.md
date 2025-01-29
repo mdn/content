@@ -526,7 +526,7 @@ console.log(
 > [!WARNING]
 > Watch out for default values as they may affect formatting.
 > If only one `SignificantDigits` property is used, then its counterpart will automatically be applied with the default value.
-> The default maximum and minimum significant digit values are 20 and 1, respectively.
+> The default maximum and minimum significant digit values are 21 and 1, respectively.
 
 #### Specifying significant and fractional digits at the same time
 
