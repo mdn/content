@@ -113,7 +113,7 @@ jobs:
 
       - run: yarn content fix-redirects en-US
 
-      - run: yarn content validate-redirects en-us
+      - run: yarn content validate-redirects en-US
 
   build:
     runs-on: ubuntu-latest
