@@ -21,10 +21,11 @@ In this example, two {{SVGElement("feComposite")}} elements are defined in a fil
 ```html
 <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
   <filter id="filter1">
+  <feImage href="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"  width="200" />
     <feComposite in="SourceGraphic" operator="over" />
     <feComposite in="SourceGraphic" operator="in" />
   </filter>
-  <rect width="100" height="100" style="fill:red;" filter="url(#filter1)" />
+  <circle cx="50" cy="50" r="30" filter="url(#filter1)" />
 </svg>
 ```
 
