@@ -16,7 +16,9 @@ An {{domxref("SVGAnimatedNumber")}} object.
 
 ## Examples
 
-### Accessing the `stdDeviationY` attribute
+### Accessing the `stdDeviationY` value
+
+In this example, we retrieve the vertical standard deviation for the blur operation of the `<feDropShadow>` by using the `stdDeviationY` read-only property of the `SVGFEDropShadowElement` interface.
 
 ```html
 <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
