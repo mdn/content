@@ -1,8 +1,9 @@
 ---
 title: substring-after
 slug: Web/XPath/Reference/Functions/substring-after
+sidebar:
+  - xsltsidebar
 page-type: xpath-function
-sidebar: "xsltsidebar"
 ---
 
 The `substring-after` function returns a string that is the rest of a given string after a given substring.

@@ -1,8 +1,9 @@
 ---
 title: current
 slug: Web/XPath/Reference/Functions/current
+sidebar:
+  - xsltsidebar
 page-type: xpath-function
-sidebar: "xsltsidebar"
 ---
 
 The `current` function can be used to get the context node in an XSLT instruction.

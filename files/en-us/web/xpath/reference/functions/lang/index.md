@@ -1,8 +1,9 @@
 ---
 title: lang
 slug: Web/XPath/Reference/Functions/lang
+sidebar:
+  - xsltsidebar
 page-type: xpath-function
-sidebar: "xsltsidebar"
 ---
 
 The `lang` function determines whether the context node matches the given language and returns boolean true or false.

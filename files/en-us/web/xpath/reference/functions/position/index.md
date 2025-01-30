@@ -1,8 +1,9 @@
 ---
 title: position
 slug: Web/XPath/Reference/Functions/position
+sidebar:
+  - xsltsidebar
 page-type: xpath-function
-sidebar: "xsltsidebar"
 ---
 
 The `position` function returns a number equal to the context position from the expression evaluation context.

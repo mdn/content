@@ -1,8 +1,9 @@
 ---
 title: id
 slug: Web/XPath/Reference/Functions/id
+sidebar:
+  - xsltsidebar
 page-type: xpath-function
-sidebar: "xsltsidebar"
 ---
 
 The `id` function finds nodes matching the given ids and returns a node-set containing the identified nodes.

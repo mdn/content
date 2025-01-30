@@ -6,7 +6,7 @@ export default {
   "!*.md": (files) => [`prettier --ignore-unknown --write ${files.join(" ")}`],
   "*.md": (files) => [
     `markdownlint-cli2 --fix ${files.join(" ")}`,
-    `node scripts/front-matter_linter.js ${files.join(" ")}`,
+    `node scripts/front-matter_linter.js --fix true ${files.join(" ")}`,
     `node scripts/update-moved-file-links.js --check`,
     `prettier --write ${files.join(" ")}`,
   ],

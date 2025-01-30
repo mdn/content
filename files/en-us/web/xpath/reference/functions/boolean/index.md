@@ -1,8 +1,9 @@
 ---
 title: boolean
 slug: Web/XPath/Reference/Functions/boolean
+sidebar:
+  - xsltsidebar
 page-type: xpath-function
-sidebar: "xsltsidebar"
 ---
 
 The `boolean` function evaluates an expression and returns true or false.

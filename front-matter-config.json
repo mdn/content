@@ -23,15 +23,15 @@
         "description": "URL path of the page",
         "type": "string"
       },
-      "sidebar": {
-        "title": "sidebar",
-        "description": "A YAML sidebar defined in /files/en-us/sidebars",
-        "type": "string"
-      },
       "page-type": {
         "title": "Page Type",
         "description": "Type of the page",
         "type": "string"
+      },
+      "sidebar": {
+        "title": "sidebar",
+        "description": "A sidebar defined as YAML in /files/en-us/sidebars",
+        "type": "array"
       },
       "status": {
         "title": "Status",
@@ -565,6 +565,7 @@
     "title",
     "short-title",
     "slug",
+    "sidebar",
     "page-type",
     "status",
     "browser-compat",

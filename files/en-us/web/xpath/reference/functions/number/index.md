@@ -1,8 +1,9 @@
 ---
 title: number
 slug: Web/XPath/Reference/Functions/number
+sidebar:
+  - xsltsidebar
 page-type: xpath-function
-sidebar: "xsltsidebar"
 ---
 
 The `number` function converts an object to a number and returns the number.

@@ -1,8 +1,9 @@
 ---
 title: "false"
 slug: Web/XPath/Reference/Functions/false
+sidebar:
+  - xsltsidebar
 page-type: xpath-function
-sidebar: "xsltsidebar"
 ---
 
 The `false` function returns boolean false.

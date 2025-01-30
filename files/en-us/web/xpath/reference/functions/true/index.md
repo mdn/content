@@ -1,8 +1,9 @@
 ---
 title: "true"
 slug: Web/XPath/Reference/Functions/true
+sidebar:
+  - xsltsidebar
 page-type: xpath-function
-sidebar: "xsltsidebar"
 ---
 
 The `true` function returns a boolean value of true.

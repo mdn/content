@@ -1,8 +1,9 @@
 ---
 title: round
 slug: Web/XPath/Reference/Functions/round
+sidebar:
+  - xsltsidebar
 page-type: xpath-function
-sidebar: "xsltsidebar"
 ---
 
 The `round` function returns a number that is the nearest integer to the given number.

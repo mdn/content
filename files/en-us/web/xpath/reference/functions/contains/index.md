@@ -1,8 +1,9 @@
 ---
 title: contains
 slug: Web/XPath/Reference/Functions/contains
+sidebar:
+  - xsltsidebar
 page-type: xpath-function
-sidebar: "xsltsidebar"
 ---
 
 The `contains` function determines whether the first argument string contains the second argument string and returns boolean true or false.

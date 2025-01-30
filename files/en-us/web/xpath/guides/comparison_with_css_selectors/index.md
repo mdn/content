@@ -2,8 +2,9 @@
 title: Comparison of CSS selectors and XPath
 short-title: CSS selectors and XPath
 slug: Web/XPath/Guides/Comparison_with_CSS_selectors
+sidebar:
+  - xsltsidebar
 page-type: guide
-sidebar: "xsltsidebar"
 ---
 
 This article seeks to document the difference between CSS selectors and XPath for web developers to be able to better choose the right tool for the right job.

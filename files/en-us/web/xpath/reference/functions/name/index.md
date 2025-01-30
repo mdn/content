@@ -1,8 +1,9 @@
 ---
 title: name
 slug: Web/XPath/Reference/Functions/name
+sidebar:
+  - xsltsidebar
 page-type: xpath-function
-sidebar: "xsltsidebar"
 ---
 
 The `name` function returns a string representing the QName of the first node in a given node-set.
