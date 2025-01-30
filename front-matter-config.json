@@ -306,12 +306,7 @@
         "then": {
           "properties": {
             "page-type": {
-              "enum": [
-                "guide",
-                "landing-page",
-                "listing-page",
-                "web-manifest-member"
-              ]
+              "enum": ["guide", "landing-page", "web-manifest-member"]
             }
           }
         },
