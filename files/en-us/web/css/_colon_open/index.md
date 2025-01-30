@@ -5,7 +5,7 @@ page-type: css-pseudo-class
 browser-compat: css.selectors.open
 ---
 
-{{CSSRef}}
+{{CSSRef}}{{SeeCompatTable}}
 
 The **`:open`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents an element that has "open" and "closed" states, only when it is currently in the "open" state.
 
@@ -33,57 +33,63 @@ Note that the "open" and "closed" states are semantic states, and don't necessar
 
 ### Basic `:open` usage
 
-In this example, we have a {{htmlelement("details")}} / {{htmlelement("summary")}} element structure, with some basic styling. We use the `:open` pseudo-class to apply a different foreground and background color to the {{htmlelement("details")}} element when it is in the "open" state.
+This example demonstrates some of the HTML elements that have an open state.
 
-#### HTML
+### CSS
+
+```css
+details:open > summary {
+  background-color: pink;
+}
+
+:is(select, input):open {
+  background-color: pink;
+}
+```
+
+```css hidden
+@supports not selector(:open) {
+  body::before {
+    content: "Your browser doesn't support :open selector.";
+    background-color: wheat;
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  body > * {
+    display: none;
+  }
+}
+```
+
+### HTML
 
 ```html
 <details>
-  <summary>
-    The answer to the Ultimate Question of Life, the Universe, and Everything
-  </summary>
-  42.
+  <summary>Details</summary>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pulvinar dapibus
+  lacus, sit amet finibus lectus mollis eu. Nullam quis orci dictum, porta lacus
+  et, cursus nunc. Aenean pulvinar imperdiet neque fermentum facilisis. Nulla
+  facilisi. Curabitur vitae sapien ut nunc pulvinar semper vitae vitae nisi.
 </details>
+<hr />
+
+<label for="pet-select">Choose a pet:</label>
+<select id="pet-select">
+  <option value="dog">Dog</option>
+  <option value="cat">Cat</option>
+  <option value="hamster">Hamster</option>
+</select>
+<hr />
+
+<label for="start">Start date:</label>
+<input type="date" id="start" />
 ```
 
-#### CSS
+### Result
 
-```css hidden
-body {
-  font-family: sans-serif;
-}
-```
-
-```css
-details {
-  border: 1px solid #aaa;
-  border-radius: 4px;
-  padding: 0.5em 0.5em 0;
-  background: #fee;
-}
-
-details:open {
-  padding: 0.5em;
-  background: purple;
-  color: white;
-}
-
-summary {
-  font-weight: bold;
-  margin: -0.5em -0.5em 0;
-  padding: 0.5em;
-}
-
-details:open summary {
-  margin-bottom: 0.5em;
-}
-```
-
-#### Result
-
-The result is as follows. Try opening the `<details>` element to see the effect:
-
-{{ EmbedLiveSample("Basic `:open` usage", "100%", "100") }}
+{{EmbedLiveSample("Basic `:open` usage", 300, 200)}}
 
 ### Custom `<select>` styling with `:open`
 
@@ -178,3 +184,4 @@ The result is as follows. Try opening the `<select>` dropdown to see the effect 
 
 - The {{htmlelement("details")}}, {{htmlelement("dialog")}}, {{htmlelement("select")}}, and {{htmlelement("input")}} elements
 - The {{cssxref(":popover-open")}} pseudo-class
+- {{Cssxref(":modal")}}

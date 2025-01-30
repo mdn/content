@@ -500,6 +500,7 @@
               "enum": [
                 "guide",
                 "landing-page",
+                "listing-page",
                 "how-to",
                 "tutorial",
                 "tutorial-chapter"
