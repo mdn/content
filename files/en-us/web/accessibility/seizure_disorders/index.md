@@ -307,7 +307,7 @@ The methods for sniffing them out is not a casual exercise. You may be intereste
 
 #### Text can also be animated
 
-Translations and transformations can animate text in a div, and do harm. Although it is experimental technology, [`CSSKeyframe.keyText`](/en-US/docs/Web/API/CSSKeyframeRule/keyText) is being developed. Moving text can induce seizures for the same reasons that moving images do, so avoid animating your text. It's a good idea to avoid using moving text anyhow, as many screen readers cannot read moving text and it's bad user experience even for those with no vision or vestibular issues.
+Translations and transformations can animate text in a div, and do harm. Moving text can induce seizures for the same reasons that moving images do, so avoid animating your text. It's a good idea to avoid using moving text anyhow, as many screen readers cannot read moving text and it's bad user experience even for those with no vision or vestibular issues.
 
 ### CSS for animation
 
