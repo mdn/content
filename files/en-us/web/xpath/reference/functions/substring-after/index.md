@@ -4,8 +4,6 @@ slug: Web/XPath/Reference/Functions/substring-after
 page-type: xpath-function
 ---
 
-{{XsltSidebar}}
-
 The `substring-after` function returns a string that is the rest of a given string after a given substring.
 
 ## Syntax

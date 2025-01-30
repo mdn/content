@@ -4,8 +4,6 @@ slug: Web/XPath/Reference/Functions/round
 page-type: xpath-function
 ---
 
-{{XsltSidebar}}
-
 The `round` function returns a number that is the nearest integer to the given number.
 
 ## Syntax

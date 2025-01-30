@@ -4,8 +4,6 @@ slug: Web/XPath/Reference/Functions/true
 page-type: xpath-function
 ---
 
-{{XsltSidebar}}
-
 The `true` function returns a boolean value of true.
 
 ## Syntax

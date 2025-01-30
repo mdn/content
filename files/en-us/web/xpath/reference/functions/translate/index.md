@@ -4,8 +4,6 @@ slug: Web/XPath/Reference/Functions/translate
 page-type: xpath-function
 ---
 
-{{XsltSidebar}}
-
 The `translate` function evaluates a string and a set of characters to translate and returns the translated string.
 
 ## Syntax

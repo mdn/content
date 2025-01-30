@@ -4,8 +4,6 @@ slug: Web/XPath/Reference/Functions/substring
 page-type: xpath-function
 ---
 
-{{XsltSidebar}}
-
 The `substring` function returns a part of a given string.
 
 ## Syntax

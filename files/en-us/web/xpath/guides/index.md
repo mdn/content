@@ -5,8 +5,6 @@ slug: Web/XPath/Guides
 page-type: landing-page
 ---
 
-{{XsltSidebar}}
-
 This page lists guides for XPath.
 They're intended to help you understand what kinds of things are possible using XPath in JavaScript, and highlight the similarities with CSS selectors.
 

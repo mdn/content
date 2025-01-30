@@ -4,8 +4,6 @@ slug: Web/XPath/Reference/Functions/position
 page-type: xpath-function
 ---
 
-{{XsltSidebar}}
-
 The `position` function returns a number equal to the context position from the expression evaluation context.
 
 ## Syntax

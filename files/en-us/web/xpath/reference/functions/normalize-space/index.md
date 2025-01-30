@@ -4,8 +4,6 @@ slug: Web/XPath/Reference/Functions/normalize-space
 page-type: xpath-function
 ---
 
-{{XsltSidebar}}
-
 The `normalize-space` function strips leading and trailing white-space from a string, replaces sequences of whitespace characters by a single space, and returns the resulting string.
 
 ## Syntax

@@ -4,8 +4,6 @@ slug: Web/XPath/Reference/Functions/last
 page-type: xpath-function
 ---
 
-{{XsltSidebar}}
-
 The `last` function returns a number equal to the context size from the expression evaluation context.
 
 ## Syntax

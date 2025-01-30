@@ -4,8 +4,6 @@ slug: Web/XPath/Reference/Functions/string-length
 page-type: xpath-function
 ---
 
-{{XsltSidebar}}
-
 The `string-length` function returns a number equal to the number of characters in a given string.
 
 ## Syntax

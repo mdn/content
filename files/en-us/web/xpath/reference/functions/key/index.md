@@ -4,8 +4,6 @@ slug: Web/XPath/Reference/Functions/key
 page-type: xpath-function
 ---
 
-{{XsltSidebar}}
-
 The `key` function returns a node-set of nodes that have the given value for the given key.
 
 ## Syntax

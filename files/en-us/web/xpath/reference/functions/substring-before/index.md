@@ -4,8 +4,6 @@ slug: Web/XPath/Reference/Functions/substring-before
 page-type: xpath-function
 ---
 
-{{XsltSidebar}}
-
 The `substring-before` function returns a string that is the part of a given string before a given substring.
 
 ## Syntax

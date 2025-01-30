@@ -4,8 +4,6 @@ slug: Web/XPath/Reference/Functions/false
 page-type: xpath-function
 ---
 
-{{XsltSidebar}}
-
 The `false` function returns boolean false.
 
 ## Syntax

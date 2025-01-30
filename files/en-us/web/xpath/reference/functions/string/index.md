@@ -4,8 +4,6 @@ slug: Web/XPath/Reference/Functions/string
 page-type: xpath-function
 ---
 
-{{XsltSidebar}}
-
 The `string` function converts the given argument to a string.
 
 ## Syntax

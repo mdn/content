@@ -4,8 +4,6 @@ slug: Web/XPath/Reference/Functions/number
 page-type: xpath-function
 ---
 
-{{XsltSidebar}}
-
 The `number` function converts an object to a number and returns the number.
 
 ## Syntax

@@ -4,8 +4,6 @@ slug: Web/XPath/Reference/Functions/document
 page-type: xpath-function
 ---
 
-{{XsltSidebar}}
-
 The `document` finds a node-set in an external document, or multiple external documents, and returns the resulting node-set.
 
 ## Syntax

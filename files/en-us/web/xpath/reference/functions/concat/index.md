@@ -4,8 +4,6 @@ slug: Web/XPath/Reference/Functions/concat
 page-type: xpath-function
 ---
 
-{{XsltSidebar}}
-
 The `concat` function concatenates two or more strings and returns the resulting string.
 
 ## Syntax

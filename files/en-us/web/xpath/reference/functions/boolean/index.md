@@ -4,8 +4,6 @@ slug: Web/XPath/Reference/Functions/boolean
 page-type: xpath-function
 ---
 
-{{XsltSidebar}}
-
 The `boolean` function evaluates an expression and returns true or false.
 
 ## Syntax

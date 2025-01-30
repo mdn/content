@@ -4,8 +4,6 @@ slug: Web/XPath/Reference/Functions/format-number
 page-type: xpath-function
 ---
 
-{{XsltSidebar}}
-
 The `format-number` function evaluates a number and returns a string representing the number in a given format.
 
 ## Syntax

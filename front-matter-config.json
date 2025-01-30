@@ -23,6 +23,11 @@
         "description": "URL path of the page",
         "type": "string"
       },
+      "sidebar": {
+        "title": "sidebar",
+        "description": "A YAML sidebar defined in /files/en-us/sidebars",
+        "type": "string"
+      },
       "page-type": {
         "title": "Page Type",
         "description": "Type of the page",
