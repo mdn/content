@@ -8,7 +8,7 @@ browser-compat: api.SVGFECompositeElement.in1
 
 {{APIRef("SVG")}}
 
-The **`in1`** read-only property of the {{domxref("SVGFECompositeElement")}} interface reflects the {{SVGAttr("in")}} attribute of the given element.
+The **`in1`** read-only property of the {{domxref("SVGFECompositeElement")}} interface reflects the {{SVGAttr("in")}} attribute of the given {{SVGElement("feComposite")}} element.
 
 ## Value
 
