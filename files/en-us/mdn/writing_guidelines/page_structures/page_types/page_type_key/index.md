@@ -26,11 +26,12 @@ Each main area of the site — JavaScript, CSS, and so on — has a set of domai
 
 These page types are not specific to a particular MDN technology area:
 
-- `guide`: a generic guide page with no specific structure.
-- `landing-page`: a page that acts primarily as a navigation aid, listing links to other pages.
-- `how-to`: a page that acts primarily as a goal-oriented how-to article.
-- `tutorial`: a page that is the overview page of a learning-oriented article.
-- `tutorial-chapter`: a page that is a part of a multipart tutorial.
+- `guide`: a generic guide with no specific structure.
+- `landing-page`: an overview of the topic, section introduction, and navigation to key areas.
+- `listing-page`: a brief description of the section and a list of subpages within that section.
+- `how-to`: a goal-oriented how-to article.
+- `tutorial`: an overview of a learning-oriented article.
+- `tutorial-chapter`: a part of a multipart tutorial.
 
 ## Domain-specific page types
 
