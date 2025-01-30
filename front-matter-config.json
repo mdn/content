@@ -31,7 +31,18 @@
       "sidebar": {
         "title": "Sidebar navigation",
         "description": "A sidebar defined as YAML in /files/en-us/sidebars",
-        "type": "array"
+        "type": ["array", "string"],
+        "items": {
+          "type": "string",
+          "enum": [
+            "mediasidebar",
+            "urlsidebar",
+            "xmlsidebar",
+            "xpathsidebar",
+            "xsltsidebar",
+            "exsltsidebar"
+          ]
+        }
       },
       "status": {
         "title": "Status",
@@ -566,10 +577,10 @@
     "title",
     "short-title",
     "slug",
-    "sidebar",
     "page-type",
     "status",
     "browser-compat",
-    "spec-urls"
+    "spec-urls",
+    "sidebar"
   ]
 }
