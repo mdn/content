@@ -16,7 +16,9 @@ XSLT is most often used to convert data between different XML schemas or to conv
 
 ### Reference
 
-{{ListSubpages("/en-US/docs/Web/XSLT/Reference")}}
+- [XSLT elements reference](/en-US/docs/Web/XSLT/Reference/Element)
+  - : This page describes XSLT elements, focusing on top-level elements used in `<xsl:stylesheet>` or `<xsl:transform>` and instructions for templates.
+    It also briefly covers literal result elements (LREs), which copy non-instruction elements like `<hr>` directly to the output, and attribute value templates that use XPath expressions to set attribute values.
 
 ### Guides
 
@@ -29,7 +31,8 @@ XSLT is most often used to convert data between different XML schemas or to conv
 
 ## Related topics
 
-- [XML](/en-US/docs/Web/XML/XML_introduction), [XPath](/en-US/docs/Web/XPath)
+- [XML](/en-US/docs/Web/XML/XML_introduction)
+- [XPath](/en-US/docs/Web/XPath)
 
 ## See also
 
