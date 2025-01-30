@@ -2,8 +2,7 @@
 title: CSS paged media
 slug: Web/CSS/CSS_paged_media
 page-type: css-module
-spec-urls:
-  - https://drafts.csswg.org/css-page/
+spec-urls: https://drafts.csswg.org/css-page/
 ---
 
 {{CSSRef}}
