@@ -950,7 +950,7 @@ None.
 
 ### Temporal API
 
-The [Temporal object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal) enables date and time management in various scenarios, including built-in time zone and calendar representation. ([Firefox bug 1912511](https://bugzil.la/1912511)). This includes:
+The [Temporal object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal) aims to simplify working with dates and times in various scenarios, with built-in time zone and calendar representations. ([Firefox bug 1912511](https://bugzil.la/1912511)). This includes:
 
 - A **duration** (difference between two time points): {{jsxref("Temporal.Duration")}}
 - **Points in time**:
