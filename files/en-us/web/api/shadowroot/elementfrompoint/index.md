@@ -3,6 +3,8 @@ title: "ShadowRoot: elementFromPoint() method"
 short-title: elementFromPoint()
 slug: Web/API/ShadowRoot/elementFromPoint
 page-type: web-api-instance-method
+status:
+  - non-standard
 browser-compat: api.ShadowRoot.elementFromPoint
 ---
 
