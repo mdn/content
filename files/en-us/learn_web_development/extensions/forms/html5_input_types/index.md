@@ -264,6 +264,20 @@ input:valid + span:after {
 
 Let's look at the different available types in brief. Note that the usage of these types is quite complex, especially considering browser support (see below); to find out the full details, follow the links below to the reference pages for each type, including detailed examples.
 
+### `date`
+
+[`<input type="date">`](/en-US/docs/Web/HTML/Element/input/date) creates a widget to display and pick a date (year, month, and day, with no time).
+
+```html hidden
+<label for="date">Enter the date:</label><br />
+```
+
+```html
+<input type="date" name="date" id="date" />
+```
+
+{{EmbedLiveSample('date','100%','50')}}
+
 ### `datetime-local`
 
 [`<input type="datetime-local">`](/en-US/docs/Web/HTML/Element/input/datetime-local) creates a widget to display and pick a date with time with no specific time zone information.
