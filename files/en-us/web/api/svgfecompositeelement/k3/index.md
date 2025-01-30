@@ -21,10 +21,20 @@ In this example, two {{SVGElement("feComposite")}} elements are defined in a fil
 ```html
 <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
   <filter id="filter1">
-    <feComposite k1="1" k2="2" k3="3" k4="4" operator="over" />
-    <feComposite k1="5" k2="6" k3="7" k4="8" operator="in" />
+    <feImage
+      href="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+      width="140"
+      x="30"
+      y="10" />
+    <feComposite
+      in2="SourceGraphic"
+      operator="arithmetic"
+      k1="0.1"
+      k2="0.2"
+      k3="0.3"
+      k4="0.4" />
   </filter>
-  <rect width="100" height="100" style="fill:red;" filter="url(#filter1)" />
+  <circle cx="100" cy="50" r="30" filter="url(#filter1)" />
 </svg>
 ```
 
@@ -33,8 +43,7 @@ We can access the `k3` attribute:
 ```js
 const composites = document.querySelectorAll("feComposite");
 
-console.log(composites[0].k3.baseVal); // output: 3
-console.log(composites[1].k3.baseVal); // output: 7
+console.log(composites[0].k3.baseVal); // output: 0.3
 ```
 
 ## Specifications

@@ -16,39 +16,44 @@ An {{domxref("SVGAnimatedEnumeration")}} object.
 
 ## Examples
 
-Using `over` operator in {{SVGElement("feComposite")}} element.
+Using `out`, `in` and `over` operators in {{SVGElement("feComposite")}} element.
 
 ```html
 <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
   <filter id="filter1">
-    <feComposite in="SourceGraphic" in2="BackgroundImage" operator="over" />
+    <feImage
+      href="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+      width="200"
+      x="-70"
+      y="10" />
+    <feComposite in2="SourceGraphic" operator="out" />
   </filter>
-  <rect
-    x="50"
-    y="50"
-    width="100"
-    height="100"
-    style="fill:blue;"
-    filter="url(#filter1)" />
-  <rect x="30" y="30" width="100" height="100" style="fill:green;" />
-</svg>
-```
-
-Using `xor` operator on the same element.
-
-```html
-<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-  <filter id="filter1">
-    <feComposite in="SourceGraphic" in2="BackgroundImage" operator="over" />
+  <filter id="filter2">
+    <feImage
+      href="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+      width="120"
+      x="30"
+      y="10" />
+    <feComposite in2="SourceGraphic" operator="in" />
+    <feComposite in2="SourceGraphic" operator="over" />
   </filter>
-  <rect
-    x="50"
-    y="50"
-    width="100"
-    height="100"
-    style="fill:blue;"
-    filter="url(#filter1)" />
-  <rect x="30" y="30" width="100" height="100" style="fill:green;" />
+  <filter id="filter3">
+    <feImage
+      href="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+      width="140"
+      x="80"
+      y="10" />
+    <feComposite
+      in2="SourceGraphic"
+      operator="arithmetic"
+      k1="0.1"
+      k2="0.2"
+      k3="0.3"
+      k4="0.4" />
+  </filter>
+  <circle cx="30" cy="50" r="30" filter="url(#filter1)" />
+  <circle cx="90" cy="50" r="30" filter="url(#filter2)" />
+  <circle cx="150" cy="50" r="30" filter="url(#filter3)" />
 </svg>
 ```
 
