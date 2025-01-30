@@ -963,7 +963,7 @@ The [Temporal object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Tempor
         - Year, month: {{jsxref("Temporal.PlainYearMonth")}}
         - Month, day: {{jsxref("Temporal.PlainMonthDay")}}
       - Time (hour, minute, second, millisecond, nanosecond): {{jsxref("Temporal.PlainTime")}}
-- The current time as various class instances, or in a specific format: {{jsxref("Temporal.Now")}}
+- **Now** (current time) as various class instances, or in a specific format: {{jsxref("Temporal.Now")}}
 
 <table>
   <thead>
