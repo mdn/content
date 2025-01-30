@@ -2,6 +2,7 @@
 title: floor
 slug: Web/XPath/Reference/Functions/floor
 page-type: xpath-function
+sidebar: "xsltsidebar"
 ---
 
 The `floor` function evaluates a decimal number and returns the largest integer less than or equal to the decimal number.

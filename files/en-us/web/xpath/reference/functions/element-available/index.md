@@ -2,6 +2,7 @@
 title: element-available
 slug: Web/XPath/Reference/Functions/element-available
 page-type: xpath-function
+sidebar: "xsltsidebar"
 ---
 
 The `element-available` function determines if an element is available and returns true or false.

@@ -2,6 +2,7 @@
 title: not
 slug: Web/XPath/Reference/Functions/not
 page-type: xpath-function
+sidebar: "xsltsidebar"
 ---
 
 The `not` function evaluates a boolean expression and returns the opposite value.

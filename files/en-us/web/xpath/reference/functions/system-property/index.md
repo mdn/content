@@ -2,6 +2,7 @@
 title: system-property
 slug: Web/XPath/Reference/Functions/system-property
 page-type: xpath-function
+sidebar: "xsltsidebar"
 ---
 
 The `system-property` function returns an object representing the given system-property.
