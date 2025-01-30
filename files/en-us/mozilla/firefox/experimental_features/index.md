@@ -952,15 +952,18 @@ None.
 
 The [Temporal object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal) enables date and time management in various scenarios, including built-in time zone and calendar representation. ([Firefox bug 1912511](https://bugzil.la/1912511)). This includes:
 
-- The {{jsxref("Temporal.Duration")}} object for working between two points in time.
-- The {{jsxref("Temporal.Instant")}} object for setting a specific point in time.
-- The {{jsxref("Temporal.Now")}} object for getting the current point in time.
-- The {{jsxref("Temporal.PlainDate")}} object represents a specific date.
-- The {{jsxref("Temporal.PlainDateTime")}} object represents a specific date and time.
-- The {{jsxref("Temporal.PlainMonthDay")}} object represents a specific date with out a specific year, such as an anniversary.
-- The {{jsxref("Temporal.PlainTime")}} object represents a specific time.
-- The {{jsxref("Temporal.PlainYearMonth")}} object represents a year and month without a date or time.
-- The {{jsxref("Temporal.ZonedDateTime")}} object represents a date and time with a time zone.
+- A **duration** (difference between two time points): {{jsxref("Temporal.Duration")}}
+- **Points in time**:
+  - As a unique instant in history:
+    - A timestamp: {{jsxref("Temporal.Instant")}}
+    - A date-time with a time zone: {{jsxref("Temporal.ZonedDateTime")}}
+  - **Time-zone-unaware date/time ("Plain")**:
+    - Date (year, month, day) + time (hour, minute, second, millisecond, nanosecond): {{jsxref("Temporal.PlainDateTime")}}
+      - Date (year, month, day): {{jsxref("Temporal.PlainDate")}}
+        - Year, month: {{jsxref("Temporal.PlainYearMonth")}}
+        - Month, day: {{jsxref("Temporal.PlainMonthDay")}}
+      - Time (hour, minute, second, millisecond, nanosecond): {{jsxref("Temporal.PlainTime")}}
+- The current time as various class instances, or in a specific format: {{jsxref("Temporal.Now")}}
 
 <table>
   <thead>
