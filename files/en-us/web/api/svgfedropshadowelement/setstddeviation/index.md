@@ -31,6 +31,8 @@ None ({{jsxref('undefined')}}).
 
 ### Using `setStdDeviation()`
 
+In this example, we set the horizontal and vertical standard deviations for a blur operation for a `<feDropShadow>` filter shadow effect using the `setStdDeviation()` method of the `SVGFEDropShadowElement` interface.
+
 ```html
 <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
   <defs>
