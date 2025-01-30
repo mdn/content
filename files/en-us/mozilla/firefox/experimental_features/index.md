@@ -996,7 +996,7 @@ The [Temporal object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Tempor
     </tr>
     <tr>
       <th>Preference name</th>
-      <td colspan="2">javascript.options.experimental.temporal</td>
+      <td colspan="2"><code>javascript.options.experimental.temporal</code></td>
     </tr>
   </tbody>
 </table>
