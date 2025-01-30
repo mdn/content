@@ -12,10 +12,6 @@ XPath is mainly used in [XSLT](/en-US/docs/Web/XSLT), but can also be used as a 
 
 XPath uses a path notation (as in URLs) for navigating through the hierarchical structure of an XML document. It uses a non-XML syntax so that it can be used in URIs and XML attribute values.
 
-> [!NOTE]
-> Support for XPath varies; it's supported reasonably well in Firefox, while other browsers implement it to a lesser extent, if at all.
-> If you need a polyfill, you may consider [js-xpath](https://pilotfiber.dl.sourceforge.net/project/js-xpath/js-xpath/1.0.0/xpath.js) or [wicked-good-xpath](https://github.com/google/wicked-good-xpath).
-
 ## Guides
 
 - [Introduction to using XPath in JavaScript](/en-US/docs/Web/XPath/Guides/Introduction_to_using_XPath_in_JavaScript)
