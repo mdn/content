@@ -8,7 +8,7 @@ browser-compat: api.SVGFECompositeElement.k2
 
 {{APIRef("SVG")}}
 
-The **`k2`** read-only property of the {{domxref("SVGFECompositeElement")}} interface reflects the {{SVGAttr("k2")}} attribute of the given element.
+The **`k2`** read-only property of the {{domxref("SVGFECompositeElement")}} interface reflects the {{SVGAttr("k2")}} attribute of the given {{SVGElement("feComposite")}} element.
 
 ## Value
 

@@ -8,7 +8,7 @@ browser-compat: api.SVGFECompositeElement.operator
 
 {{APIRef("SVG")}}
 
-The **`operator`** read-only property of the {{domxref("SVGFECompositeElement")}} interface reflects the {{SVGAttr("operator")}} attribute of the given element.
+The **`operator`** read-only property of the {{domxref("SVGFECompositeElement")}} interface reflects the {{SVGAttr("operator")}} attribute of the given {{SVGElement("feComposite")}} element.
 
 ## Value
 
