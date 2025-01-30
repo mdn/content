@@ -524,7 +524,8 @@
           "properties": {
             "page-type": {
               "enum": ["guide", "landing-page", "xpath-function", "reference"]
-            }
+            },
+            "sidebar": { "enum": ["xsltsidebar"] }
           }
         },
         "else": false
