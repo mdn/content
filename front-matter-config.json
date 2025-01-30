@@ -525,7 +525,7 @@
             "page-type": {
               "enum": ["guide", "landing-page", "xpath-function", "reference"]
             },
-            "sidebar": { "enum": ["xsltsidebar"] }
+            "sidebar": true
           }
         },
         "else": false
