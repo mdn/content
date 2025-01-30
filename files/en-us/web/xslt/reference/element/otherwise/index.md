@@ -2,9 +2,8 @@
 title: <xsl:otherwise>
 slug: Web/XSLT/Reference/Element/otherwise
 page-type: xslt-element
+sidebar: xsltsidebar
 ---
-
-{{XsltSidebar}}
 
 The `<xsl:otherwise>` element is used to define the action that should be taken when none of the `<xsl:when>` conditions apply. It is similar to the `else` or `default` case in other programming languages.
 

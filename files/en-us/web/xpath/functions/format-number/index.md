@@ -2,9 +2,8 @@
 title: format-number
 slug: Web/XPath/Functions/format-number
 page-type: xpath-function
+sidebar: xsltsidebar
 ---
-
-{{XsltSidebar}}
 
 The `format-number` function evaluates a number and returns a string representing the number in a given format.
 

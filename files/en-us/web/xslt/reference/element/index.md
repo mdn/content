@@ -3,9 +3,8 @@ title: XSLT elements reference
 short-title: Elements
 slug: Web/XSLT/Reference/Element
 page-type: landing-page
+sidebar: xsltsidebar
 ---
-
-{{XsltSidebar}}
 
 There are two types of elements discussed here: top-level elements and instructions. A top-level element must appear as the child of either `<xsl:stylesheet>` or `<xsl:transform>`. An instruction, on the other hand, is associated with a template. A stylesheet may include several templates. A third type of element, not discussed here, is the literal result element (LRE). An LRE also appears in a template. It consists of any non-instruction element that should be copied as-is to the result document, for example, an `<hr>` element in an HTML conversion stylesheet.
 

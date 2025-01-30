@@ -2,9 +2,8 @@
 title: <xsl:apply-templates>
 slug: Web/XSLT/Reference/Element/apply-templates
 page-type: xslt-element
+sidebar: xsltsidebar
 ---
-
-{{XsltSidebar}}
 
 The `<xsl:apply-templates>` element selects a set of nodes in the input tree and instructs the processor to apply the proper templates to them.
 

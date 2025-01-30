@@ -2,9 +2,8 @@
 title: <xsl:fallback>
 slug: Web/XSLT/Reference/Element/fallback
 page-type: xslt-element
+sidebar: xsltsidebar
 ---
-
-{{XsltSidebar}}
 
 The `<xsl:fallback>` element specifies what template to use if a given extension (or, eventually, newer version) element is not supported.
 

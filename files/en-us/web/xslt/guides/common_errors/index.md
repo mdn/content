@@ -2,9 +2,8 @@
 title: Common XSLT Errors
 slug: Web/XSLT/Guides/Common_errors
 page-type: guide
+sidebar: xsltsidebar
 ---
-
-{{XsltSidebar}}
 
 ### MIME types
 

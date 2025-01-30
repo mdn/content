@@ -2,9 +2,8 @@
 title: <xsl:import>
 slug: Web/XSLT/Reference/Element/import
 page-type: xslt-element
+sidebar: xsltsidebar
 ---
-
-{{XsltSidebar}}
 
 The `<xsl:import>` element is a top-level element that serves to import the contents of one stylesheet into another stylesheet. Generally speaking, the contents of the imported stylesheet have a lower import precedence than that of the importing stylesheet. This is in contrast to `<xsl:include>` where the contents of the included stylesheet have exactly the same precedence as the contents of the including stylesheet.
 

@@ -2,9 +2,8 @@
 title: <xsl:template>
 slug: Web/XSLT/Reference/Element/template
 page-type: xslt-element
+sidebar: xsltsidebar
 ---
-
-{{XsltSidebar}}
 
 The `<xsl:template>` element defines an output producing template. This element must have either the match attribute or the name attribute set.
 

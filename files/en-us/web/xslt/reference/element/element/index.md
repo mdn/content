@@ -2,9 +2,8 @@
 title: <xsl:element>
 slug: Web/XSLT/Reference/Element/element
 page-type: xslt-element
+sidebar: xsltsidebar
 ---
-
-{{XsltSidebar}}
 
 The `<xsl:element>` element creates an element in the output document.
 

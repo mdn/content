@@ -2,9 +2,8 @@
 title: <xsl:stylesheet>
 slug: Web/XSLT/Reference/Element/stylesheet
 page-type: xslt-element
+sidebar: xsltsidebar
 ---
-
-{{XsltSidebar}}
 
 The `<xsl:stylesheet>` element (or the equivalent `<xsl:transform>` element) is the outermost element of a stylesheet.
 

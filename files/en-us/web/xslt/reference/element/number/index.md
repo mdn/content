@@ -2,9 +2,8 @@
 title: <xsl:number>
 slug: Web/XSLT/Reference/Element/number
 page-type: xslt-element
+sidebar: xsltsidebar
 ---
-
-{{XsltSidebar}}
 
 The `<xsl:number>` element counts things sequentially. It can also be used to quickly format a number.
 

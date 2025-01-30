@@ -2,9 +2,8 @@
 title: <xsl:with-param>
 slug: Web/XSLT/Reference/Element/with-param
 page-type: xslt-element
+sidebar: xsltsidebar
 ---
-
-{{XsltSidebar}}
 
 The `<xsl:with-param>` element sets the value of a parameter to be passed into a template.
 

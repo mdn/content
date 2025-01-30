@@ -2,9 +2,8 @@
 title: <xsl:decimal-format>
 slug: Web/XSLT/Reference/Element/decimal-format
 page-type: xslt-element
+sidebar: xsltsidebar
 ---
-
-{{XsltSidebar}}
 
 The `<xsl:decimal-format>` element defines the characters and symbols that are to be used in converting numbers into strings using the `format-number( )` function.
 

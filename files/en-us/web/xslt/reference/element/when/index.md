@@ -2,9 +2,8 @@
 title: <xsl:when>
 slug: Web/XSLT/Reference/Element/when
 page-type: xslt-element
+sidebar: xsltsidebar
 ---
-
-{{XsltSidebar}}
 
 The `<xsl:when>` element always appears within an `<xsl:choose>` element, acting like a case statement.
 

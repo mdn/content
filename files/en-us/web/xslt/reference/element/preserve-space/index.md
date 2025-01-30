@@ -2,9 +2,8 @@
 title: <xsl:preserve-space>
 slug: Web/XSLT/Reference/Element/preserve-space
 page-type: xslt-element
+sidebar: xsltsidebar
 ---
-
-{{XsltSidebar}}
 
 The `<xsl:preserve-space>` element defines the elements in the source document for which whitespace should be preserved. If there is more than one element, separate the names with a whitespace character. Preserving whitespace is the default setting, so this element only needs to be used to counteract an `<xsl:strip-space>` element.
 

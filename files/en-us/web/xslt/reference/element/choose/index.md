@@ -2,9 +2,8 @@
 title: <xsl:choose>
 slug: Web/XSLT/Reference/Element/choose
 page-type: xslt-element
+sidebar: xsltsidebar
 ---
-
-{{XsltSidebar}}
 
 The `<xsl:choose>` element defines a choice among a number of alternatives. It behaves like a switch statement in procedural languages.
 

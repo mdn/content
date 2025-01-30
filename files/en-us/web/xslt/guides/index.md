@@ -3,9 +3,8 @@ title: XSLT guides
 short-title: Guides
 slug: Web/XSLT/Guides
 page-type: listing-page
+sidebar: xsltsidebar
 ---
-
-{{XsltSidebar}}
 
 This page lists guides for XSLT usage on the web.
 

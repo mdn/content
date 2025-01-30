@@ -3,9 +3,8 @@ title: XSLT reference
 short-title: Reference
 slug: Web/XSLT/Reference
 page-type: listing-page
+sidebar: xsltsidebar
 ---
-
-{{XsltSidebar}}
 
 This page lists references for XSLT usage on the web.
 
