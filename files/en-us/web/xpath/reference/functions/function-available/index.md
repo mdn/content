@@ -1,9 +1,9 @@
 ---
 title: function-available
 slug: Web/XPath/Reference/Functions/function-available
+page-type: xpath-function
 sidebar:
   - xsltsidebar
-page-type: xpath-function
 ---
 
 The `function-available` function determines if a given function is available and returns boolean true or false.

@@ -1,9 +1,9 @@
 ---
 title: sum
 slug: Web/XPath/Reference/Functions/sum
+page-type: xpath-function
 sidebar:
   - xsltsidebar
-page-type: xpath-function
 ---
 
 The `sum` function returns a number that is the sum of the numeric values of each node in a given node-set.

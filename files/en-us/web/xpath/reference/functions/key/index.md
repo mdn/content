@@ -1,9 +1,9 @@
 ---
 title: key
 slug: Web/XPath/Reference/Functions/key
+page-type: xpath-function
 sidebar:
   - xsltsidebar
-page-type: xpath-function
 ---
 
 The `key` function returns a node-set of nodes that have the given value for the given key.

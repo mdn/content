@@ -2,9 +2,9 @@
 title: XPath guides
 short-title: Guides
 slug: Web/XPath/Guides
+page-type: landing-page
 sidebar:
   - xsltsidebar
-page-type: landing-page
 ---
 
 This page lists guides for XPath.

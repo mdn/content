@@ -1,9 +1,9 @@
 ---
 title: document
 slug: Web/XPath/Reference/Functions/document
+page-type: xpath-function
 sidebar:
   - xsltsidebar
-page-type: xpath-function
 ---
 
 The `document` finds a node-set in an external document, or multiple external documents, and returns the resulting node-set.

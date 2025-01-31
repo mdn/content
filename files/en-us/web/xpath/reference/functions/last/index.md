@@ -1,9 +1,9 @@
 ---
 title: last
 slug: Web/XPath/Reference/Functions/last
+page-type: xpath-function
 sidebar:
   - xsltsidebar
-page-type: xpath-function
 ---
 
 The `last` function returns a number equal to the context size from the expression evaluation context.

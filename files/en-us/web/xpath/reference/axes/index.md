@@ -1,9 +1,9 @@
 ---
 title: Axes
 slug: Web/XPath/Reference/Axes
+page-type: landing-page
 sidebar:
   - xsltsidebar
-page-type: landing-page
 ---
 
 There are thirteen different axes in the [XPath](/en-US/docs/Web/XPath) specification. An axis represents a relationship to the context node, and is used to locate nodes relative to that node on the tree.

@@ -1,9 +1,9 @@
 ---
 title: ceiling
 slug: Web/XPath/Reference/Functions/ceiling
+page-type: xpath-function
 sidebar:
   - xsltsidebar
-page-type: xpath-function
 ---
 
 The `ceiling` function evaluates a decimal number and returns the smallest integer greater than or equal to the decimal number.

@@ -2,9 +2,9 @@
 title: Introduction to using XPath in JavaScript
 short-title: Using XPath in JavaScript
 slug: Web/XPath/Guides/Introduction_to_using_XPath_in_JavaScript
+page-type: guide
 sidebar:
   - xsltsidebar
-page-type: guide
 ---
 
 This document describes the interface for using [XPath](/en-US/docs/Web/XPath) in JavaScript.

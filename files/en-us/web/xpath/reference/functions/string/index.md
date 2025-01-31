@@ -1,9 +1,9 @@
 ---
 title: string
 slug: Web/XPath/Reference/Functions/string
+page-type: xpath-function
 sidebar:
   - xsltsidebar
-page-type: xpath-function
 ---
 
 The `string` function converts the given argument to a string.
