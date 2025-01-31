@@ -72,14 +72,14 @@ button {
 And finally, we can add some JavaScript to implement dynamic behavior:
 
 ```js
-const button = document.querySelector("button");
-
-button.addEventListener("click", updateName);
-
 function updateName() {
   const name = prompt("Enter a new name");
   button.textContent = `Player 1: ${name}`;
 }
+
+const button = document.querySelector("button");
+
+button.addEventListener("click", updateName);
 ```
 
 {{ EmbedLiveSample('A_high-level_definition', '100%', 80) }}
@@ -151,23 +151,23 @@ This means that you need to be careful what order you put things in.
 For example, let's return to the block of JavaScript we saw in our first example:
 
 ```js
-const button = document.querySelector("button");
-
-button.addEventListener("click", updateName);
-
 function updateName() {
   const name = prompt("Enter a new name");
   button.textContent = `Player 1: ${name}`;
 }
+
+const button = document.querySelector("button");
+
+button.addEventListener("click", updateName);
 ```
 
-Here we first select a button using `document.querySelector`, then attaching an event listener to it using `addEventListener` so that when the button is clicked, the `updateName()` code block (lines 5–8) is run. The `updateName()` code block (these types of reusable code blocks are called "functions") asks the user for a new name, and then inserts that name into the button text to update the display.
+Here, we first define a code block called `updateName()` (these types of reusable code blocks are called **functions**), which asks the user for a new name and inserts that name into the text of a button. We then store a reference to a button using `document.querySelector` and attach an event listener to it using `addEventListener` so that when the button is clicked, the `updateName()` function is run.
 
-If you swapped the order of the first two lines of code, it would no longer work — instead, you'd get an error returned in the [browser developer console](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools) — `Uncaught ReferenceError: Cannot access 'button' before initialization`.
+If you were to swap the order of the `const button = ...` and `button.addEventListener(...)` lines, the code would no longer work — instead, you'd get an error returned in the [browser developer console](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools) — `Uncaught ReferenceError: Cannot access 'button' before initialization`.
 This means that the `button` object has not been initialized yet, so we can't add an event listener to it.
 
 > [!NOTE]
-> This is a very common error — you need to be careful that the objects referenced in your code exist before you try to do stuff to them.
+> It is not always true that JavaScript runs exactly in order from top to bottom, due to behaviors like [hoisting](/en-US/docs/Glossary/Hoisting), but for now, bear in mind that generally items need to be defined before you can use them. This is a common source of errors.
 
 ### Interpreted versus compiled code
 

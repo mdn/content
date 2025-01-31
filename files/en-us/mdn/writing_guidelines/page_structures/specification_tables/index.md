@@ -3,9 +3,8 @@ title: Specification tables
 slug: MDN/Writing_guidelines/Page_structures/Specification_tables
 page-type: mdn-writing-guide
 browser-compat: css.properties.text-align
+sidebar: mdnsidebar
 ---
-
-{{MDNSidebar}}
 
 Every reference page on MDN should provide information about the specification or specifications in which that API or technology was defined. This article demonstrates what these tables look like and explains how to add them.
 

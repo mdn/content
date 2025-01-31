@@ -1,20 +1,23 @@
 ---
-title: Community discussions
+title: GitHub Discussions
 slug: MDN/Community/Discussions
 page-type: mdn-community-guide
+sidebar: mdnsidebar
 ---
 
-{{MDNSidebar}}
+On MDN Web Docs, we encourage our community to start and/or engage in discussions around topics related to the overall project.
+We ask that you keep each discussion focused on the topic at hand instead of covering multiple topics in one discussion.
 
-On MDN Web Docs, we encourage our community to start and/or engage in discussions around topics related to the overall project. Discussions are categorized by different topic areas. We ask that you keep each discussion focused on the topic at hand instead of covering multiple topics in one discussion.
+> [!NOTE]
+> Don't report bugs in `mdn/mdn-community`.
+> If you see something wrong on MDN Web Docs, open a GitHub issue in the [relevant MDN GitHub repository](https://github.com/mdn/).
 
-**Note:** `mdn-community/discussions` is not the place to report problems.
-If you see something wrong on MDN Web Docs, it's best to open a GitHub issue in the [relevant MDN GitHub repository](https://github.com/mdn/).
-If you're not sure whether to open an issue or start discussion, consider the following guidelines:
+If you're not sure whether to open a GitHub issue or discussion, here's what each are for:
 
-- Issues should be used for reporting a bug or a work item with clearly defined and actionable tasks and outcomes.
-- Use Discussions when an issue requires a dialogue to agree upon a course of action or define an actionable piece of work.
-- If your discussion doesn't progress or you're unsure of the next steps, refer to the [Guidelines for managing and resolving discussions](/en-US/docs/MDN/Community/Discussions/Managing_and_resolving_discussions) for advice on moving forward, including expectations on timelines.
+- **Issues** are for reporting bugs or tracking a work item with defined and actionable tasks and outcomes.
+- **Discussions** are for reaching consensus about how we're working and for defining tasks.
+
+If your discussion doesn't progress or you're unsure of the next steps, refer to the [Guidelines for managing and resolving discussions](/en-US/docs/MDN/Community/Discussions/Managing_and_resolving_discussions) for advice on moving forward, including expectations on timelines.
 
 Check out the subject of each discussion category below so that you can start your discussion in the proper place.
 
@@ -74,42 +77,10 @@ Check out the subject of each discussion category below so that you can start yo
     </tr>
     <tr>
       <td>
-        🎨
-        <a
-          href="https://github.com/orgs/mdn/discussions/categories/design-system"
-          >Design system</a
-        >
-      </td>
-      <td>
-        Discussions related to design improvements. Design is subjective, but we
-        are always open to suggestions from the community. Any improvement that
-        can help the MDN Web Docs experience even better for a wider audience is
-        welcome. If you have constructive feedback around the design, user
-        experience, and accessibility of MDN Web Docs, we'd love to hear from
-        you.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        👩‍💻
-        <a
-          href="https://github.com/orgs/mdn/discussions/categories/code-examples"
-          >Code examples</a
-        >
-      </td>
-      <td>
-        Discussions related to all code examples on MDN Web Docs. This includes
-        interactive examples, live samples and static code examples. For help
-        with general coding challenges on MDN Web Docs, see our
-        <a href="/en-US/docs/MDN/Community/Communication_channels">Communication channels</a>.
-      </td>
-    </tr>
-    <tr>
-      <td>
         🌐
         <a
           href="https://github.com/orgs/mdn/discussions/categories/localization"
-          >Translated content</a
+          >Localization</a
         >
       </td>
       <td>
@@ -174,20 +145,5 @@ Check out the subject of each discussion category below so that you can start yo
         There is a separate discussion category for MDN Plus.
       </td>
     </tr>
-    <tr>
-      <td>
-        🤖
-        <a
-          href="https://github.com/orgs/mdn/discussions/categories/polls"
-          >Polls</a
-        >
-      </td>
-      <td>
-        This category is meant for use by the MDN Web Docs staff. We will use
-        this category to run polls around topics where we need your input. So,
-        keep your eyes peeled. 👀
-      </td>
-    </tr>
-
   </tbody>
 </table>
