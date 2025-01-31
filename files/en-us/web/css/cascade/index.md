@@ -416,7 +416,7 @@ After your content has finished altering styles, it may find itself in a situati
 
 - [Learn: Handling conflicts](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
 - [Learn: cascade layers](/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)
-- [CSS cascade and inheritance](/en-US/docs/Web/CSS/CSS_cascade) module
+- [CSS cascading and inheritance](/en-US/docs/Web/CSS/CSS_cascade) module
 - [CSS syntax](/en-US/docs/Web/CSS/Syntax)
 - [Specificity](/en-US/docs/Web/CSS/Specificity)
 - [Inheritance](/en-US/docs/Web/CSS/Inheritance)

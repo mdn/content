@@ -2,10 +2,12 @@
 title: Temporal.PlainDate.prototype.toPlainYearMonth()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainDate/toPlainYearMonth
 page-type: javascript-instance-method
+status:
+  - experimental
 browser-compat: javascript.builtins.Temporal.PlainDate.toPlainYearMonth
 ---
 
-{{JSRef}}
+{{JSRef}}{{SeeCompatTable}}
 
 The **`toPlainYearMonth()`** method of {{jsxref("Temporal.PlainDate")}} instances returns a new {{jsxref("Temporal.PlainYearMonth")}} object representing the {{jsxref("Temporal/PlainDate/year", "year")}} and {{jsxref("Temporal/PlainDate/month", "month")}} of this date in the same calendar system.
 

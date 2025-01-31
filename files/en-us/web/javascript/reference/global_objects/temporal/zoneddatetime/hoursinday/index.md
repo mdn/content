@@ -2,10 +2,12 @@
 title: Temporal.ZonedDateTime.prototype.hoursInDay
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime/hoursInDay
 page-type: javascript-instance-accessor-property
+status:
+  - experimental
 browser-compat: javascript.builtins.Temporal.ZonedDateTime.hoursInDay
 ---
 
-{{JSRef}}
+{{JSRef}}{{SeeCompatTable}}
 
 The **`hoursInDay`** accessor property of {{jsxref("Temporal.ZonedDateTime")}} instances returns a positive integer representing the number of hours in the day of this date in the time zone. It may be more or less than 24 in the case of offset changes such as daylight saving time.
 
