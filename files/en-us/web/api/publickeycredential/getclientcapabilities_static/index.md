@@ -38,8 +38,9 @@ The WebAuthn client capability strings are:
   - : The client supports usage of the [hybrid](/en-US/docs/Web/API/AuthenticatorAttestationResponse/getTransports#hybrid) transport.
     This means the the client can use authenticators that rely on Bluetooth, NFC or USB.
 - `passkeyPlatformAuthenticator`
-  - : The client supports usage of a passkey platform authenticator, locally and/or via hybrid transport.
-    These authenticators enable passwordless multi-factor authentication, providing proof of possession of a credential private key provide and requiring a second authentication mechanism such as a PIN or biometric check.
+  - : The client allows usage of a passkey authenticator that supports multi-factor authentication mechanisms such as a PIN or biometric check.
+     The authenticator can part of the same platform (device) as the client, or connected via a hybrid transport such as Bluetooth or USB.
+     See [Passkeys developer guide for relying parties](https://developers.google.com/identity/passkeys/developer-guides).
 - `userVerifyingPlatformAuthenticator`
   - : The client supports usage of a user-verifying platform authenticator.
     These require user input for authorization.
