@@ -28,17 +28,18 @@ A {{jsxref("Promise")}} that resolves to an object where the property names are 
 
 The WebAuthn client capability strings are:
 
-- `conditionalCreate`
+- `"conditionalCreate"`
   - : The client is capable of creating [discoverable credentials](/en-US/docs/Web/API/Web_Authentication_API#discoverable_credentials_and_conditional_mediation).
-- `conditionalGet`
+- `"conditionalGet"`
   - : The client is capable of authenticating using [discoverable credentials](/en-US/docs/Web/API/Web_Authentication_API#discoverable_credentials_and_conditional_mediation).
     This capability is equivalent to [`isConditionalMediationAvailable()`](/en-US/docs/Web/API/PublicKeyCredential/isConditionalMediationAvailable_static) resolving to `true`.
-- `hybridTransport`
+- `"hybridTransport"`
   - : The client supports usage of the [hybrid](/en-US/docs/Web/API/AuthenticatorAttestationResponse/getTransports#hybrid) transport.
     This means that the client can use authenticators that rely on Bluetooth, NFC or USB.
-- `passkeyPlatformAuthenticator`
+- `"passkeyPlatformAuthenticator"`
   - : The client allows usage of a passkey authenticator that supports multi-factor authentication mechanisms such as a PIN or biometric check.
-     The authenticator can part of the same platform (device) as the client, or connected via a hybrid transport such as Bluetooth or USB.
+     The authenticator can be part of the same platform (device) as the client, or connected via a hybrid transport such as Bluetooth or USB.
+     The credentials are stored on the authenticator.
      See [Passkeys developer guide for relying parties](https://developers.google.com/identity/passkeys/developer-guides).
 - `userVerifyingPlatformAuthenticator`
   - : The client has a platform authenticator (part of the same device) that support multi-factor authentication mechanisms, such as a PIN or biometric check.
