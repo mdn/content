@@ -3,6 +3,7 @@ title: Media guides
 short-title: Guides
 slug: Web/Media/Guides
 page-type: listing-page
+sidebar: mediasidebar
 ---
 
 This page lists guides for media on the web.

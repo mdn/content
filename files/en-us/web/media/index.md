@@ -3,6 +3,7 @@ title: Media technologies on the web
 short-title: Media
 slug: Web/Media
 page-type: landing-page
+sidebar: mediasidebar
 ---
 
 Over the years, the web's ability to present, create, and manage audio, video, and other media has matured.

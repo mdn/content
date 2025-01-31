@@ -2,6 +2,7 @@
 title: Web audio codec guide
 slug: Web/Media/Guides/Formats/Audio_codecs
 page-type: guide
+sidebar: mediasidebar
 ---
 
 Even modest quality, high-fidelity stereo sound can use a substantial amount of disk space. For web developers, an even bigger concern is the network bandwidth needed in order to transfer audio, whether for streaming or to download it for use during gameplay. The processing of audio data to encode and decode it is handled by an audio **{{Glossary("codec")}}** (**CO**der/**DEC**oder). In this article, we look at audio codecs used on the web to compress and decompress audio, what their capabilities and use cases are, and offer guidance when choosing audio codecs to use for your content.

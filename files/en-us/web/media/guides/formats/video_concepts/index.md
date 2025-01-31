@@ -2,6 +2,7 @@
 title: Digital video concepts
 slug: Web/Media/Guides/Formats/Video_concepts
 page-type: guide
+sidebar: mediasidebar
 ---
 
 In this article, we explore important concepts that are useful to understand in order to fully grasp how to work with video on the web.

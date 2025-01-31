@@ -2,6 +2,7 @@
 title: Media container formats (file types)
 slug: Web/Media/Guides/Formats/Containers
 page-type: guide
+sidebar: mediasidebar
 ---
 
 The format of audio and video media files is defined in two parts (three if a file has both audio and video in it, of course): the audio and/or video codecs used and the media container format (or file type) used.

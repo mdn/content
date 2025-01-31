@@ -2,6 +2,7 @@
 title: Digital audio concepts
 slug: Web/Media/Guides/Formats/Audio_concepts
 page-type: guide
+sidebar: mediasidebar
 ---
 
 Representing audio in digital form involves a number of steps and processes, with multiple formats available both for the raw audio and the encoded or compressed audio which is actually used on the web. This guide is an overview examining how audio is represented digitally, and how codecs are used to encode and decode audio for use on the web.

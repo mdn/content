@@ -2,6 +2,7 @@
 title: Using images in HTML
 slug: Web/Media/Guides/Images
 page-type: guide
+sidebar: mediasidebar
 ---
 
 The {{Glossary("HTML")}} {{HTMLElement("img")}} element lets you embed images into an HTML document, while the {{HTMLElement("picture")}} element enables [responsive images](/en-US/docs/Web/HTML/Responsive_images). In this guide you'll find links to resources that deal with adding images to websites.

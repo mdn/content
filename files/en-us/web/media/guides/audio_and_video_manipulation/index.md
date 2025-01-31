@@ -2,6 +2,7 @@
 title: Audio and video manipulation
 slug: Web/Media/Guides/Audio_and_video_manipulation
 page-type: guide
+sidebar: mediasidebar
 ---
 
 The beauty of the web is that you can combine technologies to create new forms. Having native audio and video in the browser means we can use these data streams with technologies such as {{htmlelement("canvas")}}, [WebGL](/en-US/docs/Web/API/WebGL_API) or [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) to modify audio and video directly, for example adding reverb/compression effects to audio, or grayscale/sepia filters to video. This article provides a reference to explain what you need to do.

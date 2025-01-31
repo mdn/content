@@ -2,6 +2,7 @@
 title: Configuring servers for Ogg media
 slug: Web/Media/Guides/Formats/Configuring_servers_for_Ogg_media
 page-type: guide
+sidebar: mediasidebar
 ---
 
 HTML {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements allow media presentation without the need for the user to install extensions or other software.

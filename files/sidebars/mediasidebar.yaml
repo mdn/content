@@ -6,7 +6,6 @@ sidebar:
     title: Media
   - type: section
     link: /Web/Media/Guides
-    title: Guides
   - /Web/Media/Guides/Images
   - /Web/Media/Guides/Audio_and_video_manipulation
   - /Web/Media/Guides/Autoplay

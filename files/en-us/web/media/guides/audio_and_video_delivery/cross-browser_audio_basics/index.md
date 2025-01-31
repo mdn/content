@@ -2,6 +2,7 @@
 title: Cross-browser audio basics
 slug: Web/Media/Guides/Audio_and_video_delivery/Cross-browser_audio_basics
 page-type: guide
+sidebar: mediasidebar
 ---
 
 This article provides:

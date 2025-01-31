@@ -2,6 +2,7 @@
 title: Video player styling basics
 slug: Web/Media/Guides/Audio_and_video_delivery/Video_player_styling_basics
 page-type: guide
+sidebar: mediasidebar
 ---
 
 In the previous [Cross browser video player article](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery/cross_browser_video_player) we described how to build a cross-browser HTML video player using the Media and Fullscreen APIs. This follow-up article looks at how to style this custom player, including making it responsive.
