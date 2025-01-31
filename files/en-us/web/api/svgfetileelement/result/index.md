@@ -8,7 +8,7 @@ browser-compat: api.SVGFETileElement.result
 
 {{APIRef("SVG")}}
 
-The **`result`** read-only property of the {{domxref("SVGFETileElement")}} interface describes the assigned name of an SVG filter primitive as a {{domxref("SVGAnimatedString")}}.
+The **`result`** read-only property of the {{domxref("SVGFETileElement")}} interface describes the assigned name of an SVG filter primitive as an {{domxref("SVGAnimatedString")}}.
 
 It reflects the {{SVGAttr("result")}} attribute of the {{SVGElement("feTitle")}} element, which fills a target rectangle with a repeated, tiled pattern of an input image. The attribute value is a {{cssxref("custom-ident")}}. If supplied, then graphics that result from processing this filter primitive can be referenced by an {{SVGAttr("in")}} attribute on a subsequent filter primitive within the same {{SVGElement("filter")}} element.
 
