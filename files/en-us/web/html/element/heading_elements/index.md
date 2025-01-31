@@ -52,7 +52,7 @@ h1 {
 }
 ```
 
-Alternatively, to avoid overwriting other style rules that target `<h1>` you can use {{cssxref(":where()"}}, which has zero specificity:
+Alternatively, to avoid overwriting other style rules that target `<h1>` you can use {{cssxref(":where()")}}, which has zero specificity:
 
 ```css
 :where(h1) {

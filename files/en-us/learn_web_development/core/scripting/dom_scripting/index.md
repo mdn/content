@@ -188,7 +188,7 @@ When you want to remove a node based only on a reference to itself, which is fai
 linkPara.remove();
 ```
 
-This method is not supported in older browsers. They have no method to tell a node to remove itself, so you'd have to do the following.
+This method is not supported in older browsers. They have no method to tell a node to remove itself, so you'd have to do the following:
 
 ```js
 linkPara.parentNode.removeChild(linkPara);
