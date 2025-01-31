@@ -161,7 +161,7 @@ const button = document.querySelector("button");
 button.addEventListener("click", updateName);
 ```
 
-Here we first select a button using `document.querySelector`, then attaching an event listener to it using `addEventListener` so that when the button is clicked, the `updateName()` code block (lines 1–4) is run. The `updateName()` code block (these types of reusable code blocks are called "functions") asks the user for a new name, and then inserts that name into the button text to update the display.
+Here, we first define a code block called `updateName()` (these types of reusable code blocks are called **functions**), which asks the user for a new name and inserts that name into the text of a button. We then store a reference to a button using `document.querySelector` and attach an event listener to it using `addEventListener` so that when the button is clicked, the `updateName()` function is run.
 
 If you were to place the `addEventListener` code block before the button element selection (i.e., swapping the order of `const button = ...` and `button.addEventListener(...)`), it would no longer work — instead, you'd get an error returned in the [browser developer console](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools) — `Uncaught ReferenceError: Cannot access 'button' before initialization`.
 This means that the `button` object has not been initialized yet, so we can't add an event listener to it.
