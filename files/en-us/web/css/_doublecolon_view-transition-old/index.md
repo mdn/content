@@ -64,6 +64,8 @@ The following default styling is included in the UA stylesheet:
   - : Causes the pseudo-element to match the default `root` view transition snapshot group created by the user agent to contain the view transition for the overall page. This group includes any element not assigned to its own specific view transition snapshot group via the {{cssxref("view-transition-name")}} property.
 - {{cssxref("custom-ident")}}
   - : Causes the pseudo-element to match a specific view transition snapshot group created by assigning the given {{cssxref("custom-ident")}} to an element via the {{cssxref("view-transition-name")}} property.
+- .{{cssxref("custom-ident")}}
+  - : Causes the pseudo-element to match a specific view transition group created by assigning the given {{cssxref("custom-ident")}} to one or more elements via the {{cssxref("view-transition-class")}} property.
 
 ## Examples
 

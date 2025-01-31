@@ -49,6 +49,8 @@ In addition, the element's transform is animated from the "old" view state's scr
   - : Causes the pseudo-element to match the default `root` view transition group created by the user agent to contain the view transition for the overall page. This group includes any element not assigned to its own specific view transition group via the {{cssxref("view-transition-name")}} property.
 - {{cssxref("custom-ident")}}
   - : Causes the pseudo-element to match a specific view transition group created by assigning the given {{cssxref("custom-ident")}} to an element via the {{cssxref("view-transition-name")}} property.
+- .{{cssxref("custom-ident")}}
+  - : Causes the pseudo-element to match a specific view transition group created by assigning the given {{cssxref("custom-ident")}} to one or more elements via the {{cssxref("view-transition-class")}} property.
 
 ## Examples
 
@@ -57,6 +59,10 @@ In addition, the element's transform is animated from the "old" view state's scr
   animation-duration: 0.3s;
   animation-timing-function: ease;
   z-index: 1;
+}
+
+::view-transition-group(.card) {
+  animation-duration: 1s;
 }
 ```
 

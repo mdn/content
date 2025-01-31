@@ -42,12 +42,18 @@ During a view transition, `::view-transition-image-pair` has {{cssxref("isolatio
   - : Causes the pseudo-element to match the default `root` view transition group created by the user agent to contain the view transition for the overall page. This group includes any element not assigned to its own specific view transition group via the {{cssxref("view-transition-name")}} property.
 - {{cssxref("custom-ident")}}
   - : Causes the pseudo-element to match a specific view transition group created by assigning the given {{cssxref("custom-ident")}} to an element via the {{cssxref("view-transition-name")}} property.
+- .{{cssxref("custom-ident")}}
+  - : Causes the pseudo-element to match a specific view transition group created by assigning the given {{cssxref("custom-ident")}} to one or more elements via the {{cssxref("view-transition-class")}} property.
 
 ## Examples
 
 ```css
 ::view-transition-image-pair(root) {
   isolation: auto;
+}
+
+::view-transition-image-pair(.card) {
+  isolation: isolate;
 }
 ```
 
