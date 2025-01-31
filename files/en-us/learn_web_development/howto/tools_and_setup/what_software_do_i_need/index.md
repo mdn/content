@@ -122,7 +122,7 @@ All desktop operating systems come with a basic text editor. These editors are a
       <td>
         <ul>
           <li>
-            <a href="https://en.wikipedia.org/wiki/Vi" rel="external">Vi</a>
+            <a href="https://en.wikipedia.org/wiki/Vi_(text_editor)" rel="external">Vi</a>
             (All UNIX)
           </li>
           <li>
@@ -162,7 +162,11 @@ All desktop operating systems come with a basic text editor. These editors are a
     </tr>
     <tr>
       <td>ChromeOS</td>
-      <td></td>
+      <td>
+        <ul>
+          <li><a href="https://en.wikipedia.org/wiki/Text_(Chrome_app)">Text</a></li>
+        </ul>
+      </td>
       <td>
         <ul>
           <li><a href="https://shiftedit.net/">ShiftEdit</a></li>
