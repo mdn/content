@@ -1,7 +1,7 @@
 export default {
   "files/en-us/_redirects.txt": (filenames) => [
-    `yarn content fix-redirects`,
-    `yarn content:legacy validate-redirects en-us --strict`,
+    `yarn content fix-redirects en-US`,
+    `yarn content validate-redirects en-US`,
   ],
   "!*.md": (filenames) => [
     `prettier --ignore-unknown --write ${filenames.join(" ")}`,
