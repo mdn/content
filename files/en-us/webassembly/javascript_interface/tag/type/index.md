@@ -3,9 +3,8 @@ title: WebAssembly.Tag.prototype.type()
 slug: WebAssembly/JavaScript_interface/Tag/type
 page-type: webassembly-instance-method
 browser-compat: webassembly.api.Tag.type
+sidebar: webassemblysidebar
 ---
-
-{{WebAssemblySidebar}}
 
 The **`type()`** prototype method of the [`Tag`](/en-US/docs/WebAssembly/JavaScript_interface/Tag) object can be used to get the sequence of data types associated with the tag.
 

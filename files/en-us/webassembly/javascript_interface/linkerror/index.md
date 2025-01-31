@@ -3,9 +3,8 @@ title: WebAssembly.LinkError
 slug: WebAssembly/JavaScript_interface/LinkError
 page-type: webassembly-interface
 browser-compat: webassembly.api.LinkError
+sidebar: webassemblysidebar
 ---
-
-{{WebAssemblySidebar}}
 
 The **`WebAssembly.LinkError`** object indicates an error during module instantiation (besides [traps](https://webassembly.github.io/simd/core/intro/overview.html#trap) from the start function).
 

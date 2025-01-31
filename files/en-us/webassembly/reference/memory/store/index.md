@@ -5,9 +5,8 @@ slug: WebAssembly/Reference/Memory/Store
 page-type: webassembly-instruction
 browser-compat: webassembly.multiMemory
 spec-urls: https://webassembly.github.io/spec/core/syntax/instructions.html#syntax-instr-memory
+sidebar: webassemblysidebar
 ---
-
-{{WebAssemblySidebar}}
 
 The **`store`** [memory instructions](/en-US/docs/WebAssembly/Reference/Memory), are used to store a number on the stack in a memory.
 

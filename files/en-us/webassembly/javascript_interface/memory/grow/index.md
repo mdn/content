@@ -3,9 +3,8 @@ title: WebAssembly.Memory.prototype.grow()
 slug: WebAssembly/JavaScript_interface/Memory/grow
 page-type: webassembly-instance-method
 browser-compat: webassembly.api.Memory.grow
+sidebar: webassemblysidebar
 ---
-
-{{WebAssemblySidebar}}
 
 The **`grow()`** prototype method of the [`WebAssembly.Memory`](/en-US/docs/WebAssembly/JavaScript_interface/Memory) object increases the size of the memory instance by a specified number of WebAssembly pages.
 

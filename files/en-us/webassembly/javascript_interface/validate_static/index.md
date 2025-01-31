@@ -3,9 +3,8 @@ title: WebAssembly.validate()
 slug: WebAssembly/JavaScript_interface/validate_static
 page-type: webassembly-function
 browser-compat: webassembly.api.validate_static
+sidebar: webassemblysidebar
 ---
-
-{{WebAssemblySidebar}}
 
 The **`WebAssembly.validate()`** static method validates a given [typed array](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) of WebAssembly binary
 code, returning whether the bytes form a valid Wasm module (`true`) or not

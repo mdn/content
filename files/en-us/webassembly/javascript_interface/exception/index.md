@@ -3,9 +3,10 @@ title: WebAssembly.Exception
 slug: WebAssembly/JavaScript_interface/Exception
 page-type: webassembly-interface
 browser-compat: webassembly.api.Exception
+sidebar: webassemblysidebar
 ---
 
-{{WebAssemblySidebar}} {{AvailableInWorkers}}
+{{AvailableInWorkers}}
 
 The **`WebAssembly.Exception`** object represents a runtime exception thrown from WebAssembly to JavaScript, or thrown from JavaScript to a WebAssembly exception handler.
 

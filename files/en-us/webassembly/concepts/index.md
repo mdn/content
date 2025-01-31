@@ -2,9 +2,8 @@
 title: WebAssembly Concepts
 slug: WebAssembly/Concepts
 page-type: guide
+sidebar: webassemblysidebar
 ---
-
-{{WebAssemblySidebar}}
 
 This article explains the concepts behind how WebAssembly works including its goals, the problems it solves, and how it runs inside the web browser's JavaScript engine.
 

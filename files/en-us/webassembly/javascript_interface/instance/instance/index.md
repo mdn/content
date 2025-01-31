@@ -3,9 +3,8 @@ title: WebAssembly.Instance() constructor
 slug: WebAssembly/JavaScript_interface/Instance/Instance
 page-type: webassembly-constructor
 browser-compat: webassembly.api.Instance.Instance
+sidebar: webassemblysidebar
 ---
-
-{{WebAssemblySidebar}}
 
 The **`WebAssembly.Instance()`** constructor creates a new
 `Instance` object which is a stateful, executable instance of a

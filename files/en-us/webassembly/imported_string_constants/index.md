@@ -2,9 +2,8 @@
 title: WebAssembly Imported global string constants
 slug: WebAssembly/Imported_string_constants
 page-type: guide
+sidebar: webassemblysidebar
 ---
-
-{{WebAssemblySidebar}}
 
 WebAssembly imported global string constants make working with JavaScript strings inside Wasm modules easier by removing the need for a lot of the boilerplate associated with traditional string imports.
 

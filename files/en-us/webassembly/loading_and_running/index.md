@@ -2,9 +2,8 @@
 title: Loading and running WebAssembly code
 slug: WebAssembly/Loading_and_running
 page-type: guide
+sidebar: webassemblysidebar
 ---
-
-{{WebAssemblySidebar}}
 
 To use WebAssembly in JavaScript, you first need to pull your module into memory before compilation/instantiation. This article provides a reference for the different mechanisms that can be used to fetch WebAssembly bytecode, as well as how to compile/instantiate then run it.
 

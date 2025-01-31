@@ -2,9 +2,8 @@
 title: Compiling an Existing C Module to WebAssembly
 slug: WebAssembly/existing_C_to_Wasm
 page-type: guide
+sidebar: webassemblysidebar
 ---
-
-{{WebAssemblySidebar}}
 
 A core use-case for WebAssembly is to take the existing ecosystem of C libraries and allow developers to use them on the web.
 

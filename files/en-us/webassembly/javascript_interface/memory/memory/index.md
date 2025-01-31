@@ -3,9 +3,8 @@ title: WebAssembly.Memory() constructor
 slug: WebAssembly/JavaScript_interface/Memory/Memory
 page-type: webassembly-constructor
 browser-compat: webassembly.api.Memory.Memory
+sidebar: webassemblysidebar
 ---
-
-{{WebAssemblySidebar}}
 
 The **`WebAssembly.Memory()`** constructor creates a new `Memory` object whose [`buffer`](/en-US/docs/WebAssembly/JavaScript_interface/Memory/buffer) property is a resizable {{jsxref("ArrayBuffer")}} or {{jsxref("SharedArrayBuffer")}} that holds the raw bytes of memory accessed by a [`WebAssembly.Instance`](/en-US/docs/WebAssembly/JavaScript_interface/Instance).
 

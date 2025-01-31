@@ -3,9 +3,8 @@ title: WebAssembly.CompileError() constructor
 slug: WebAssembly/JavaScript_interface/CompileError/CompileError
 page-type: webassembly-constructor
 browser-compat: webassembly.api.CompileError.CompileError
+sidebar: webassemblysidebar
 ---
-
-{{WebAssemblySidebar}}
 
 The **`WebAssembly.CompileError()`** constructor creates a new
 WebAssembly `CompileError` object, which indicates an error during

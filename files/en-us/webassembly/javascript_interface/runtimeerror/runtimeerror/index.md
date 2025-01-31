@@ -3,9 +3,8 @@ title: WebAssembly.RuntimeError() constructor
 slug: WebAssembly/JavaScript_interface/RuntimeError/RuntimeError
 page-type: webassembly-constructor
 browser-compat: webassembly.api.RuntimeError.RuntimeError
+sidebar: webassemblysidebar
 ---
-
-{{WebAssemblySidebar}}
 
 The **`WebAssembly.RuntimeError()`** constructor creates a new
 WebAssembly `RuntimeError` object — the type that is thrown whenever

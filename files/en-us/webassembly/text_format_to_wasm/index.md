@@ -2,9 +2,8 @@
 title: Converting WebAssembly text format to Wasm
 slug: WebAssembly/Text_format_to_Wasm
 page-type: guide
+sidebar: webassemblysidebar
 ---
-
-{{WebAssemblySidebar}}
 
 WebAssembly has an S-expression-based textual representation, an intermediate form designed to be exposed in text editors, browser developer tools, etc. This article explains a little bit about how it works, and how to use available tools to convert text format files to the Wasm format.
 

@@ -5,9 +5,8 @@ slug: WebAssembly/Reference/Memory/Fill
 page-type: webassembly-instruction
 browser-compat: webassembly.multiMemory
 spec-urls: https://webassembly.github.io/spec/core/syntax/instructions.html#syntax-instr-memory
+sidebar: webassemblysidebar
 ---
-
-{{WebAssemblySidebar}}
 
 The **`fill`** [memory instruction](/en-US/docs/WebAssembly/Reference/Memory) sets all bytes in a memory region to a given byte.
 

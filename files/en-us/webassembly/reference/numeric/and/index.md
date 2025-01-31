@@ -2,9 +2,8 @@
 title: AND
 slug: WebAssembly/Reference/Numeric/AND
 page-type: webassembly-instruction
+sidebar: webassemblysidebar
 ---
-
-{{WebAssemblySidebar}}
 
 The **`and`** instructions, are used for performing a bitwise AND, similar to the **`&`** operator in other languages.
 

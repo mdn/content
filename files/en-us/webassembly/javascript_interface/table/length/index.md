@@ -3,9 +3,8 @@ title: WebAssembly.Table.prototype.length
 slug: WebAssembly/JavaScript_interface/Table/length
 page-type: webassembly-instance-property
 browser-compat: webassembly.api.Table.length
+sidebar: webassemblysidebar
 ---
-
-{{WebAssemblySidebar}}
 
 The read-only **`length`** prototype property of the [`WebAssembly.Table`](/en-US/docs/WebAssembly/JavaScript_interface/Table) object returns the length of the table, i.e. the number of elements in the table.
 

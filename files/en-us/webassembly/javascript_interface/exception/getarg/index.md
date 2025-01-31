@@ -3,9 +3,8 @@ title: WebAssembly.Exception.prototype.getArg()
 slug: WebAssembly/JavaScript_interface/Exception/getArg
 page-type: webassembly-instance-method
 browser-compat: webassembly.api.Exception.getArg
+sidebar: webassemblysidebar
 ---
-
-{{WebAssemblySidebar}}
 
 The **`getArg()`** prototype method of the [`Exception`](/en-US/docs/WebAssembly/JavaScript_interface/Exception) object can be used to get the value of a specified item in the exception's data arguments.
 

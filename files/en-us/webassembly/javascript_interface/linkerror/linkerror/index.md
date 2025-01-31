@@ -3,9 +3,8 @@ title: WebAssembly.LinkError() constructor
 slug: WebAssembly/JavaScript_interface/LinkError/LinkError
 page-type: webassembly-constructor
 browser-compat: webassembly.api.LinkError.LinkError
+sidebar: webassemblysidebar
 ---
-
-{{WebAssemblySidebar}}
 
 The **`WebAssembly.LinkError()`** constructor creates a new
 WebAssembly `LinkError` object, which indicates an error during module

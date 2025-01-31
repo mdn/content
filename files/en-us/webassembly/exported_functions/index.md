@@ -2,9 +2,8 @@
 title: Exported WebAssembly functions
 slug: WebAssembly/Exported_functions
 page-type: guide
+sidebar: webassemblysidebar
 ---
-
-{{WebAssemblySidebar}}
 
 Exported WebAssembly functions are how WebAssembly functions are represented in JavaScript. This article describes what they are in a little more detail.
 

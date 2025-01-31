@@ -3,9 +3,8 @@ title: WebAssembly.Exception constructor
 slug: WebAssembly/JavaScript_interface/Exception/Exception
 page-type: webassembly-constructor
 browser-compat: webassembly.api.Exception.Exception
+sidebar: webassemblysidebar
 ---
-
-{{WebAssemblySidebar}}
 
 The **`WebAssembly.Exception()`** constructor is used to create a new [`WebAssembly.Exception`](/en-US/docs/WebAssembly/JavaScript_interface/Exception).
 

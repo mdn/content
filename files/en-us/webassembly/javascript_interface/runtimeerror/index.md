@@ -3,9 +3,8 @@ title: WebAssembly.RuntimeError
 slug: WebAssembly/JavaScript_interface/RuntimeError
 page-type: webassembly-interface
 browser-compat: webassembly.api.RuntimeError
+sidebar: webassemblysidebar
 ---
-
-{{WebAssemblySidebar}}
 
 The **`WebAssembly.RuntimeError`** object is the error type that is thrown whenever WebAssembly specifies a [trap](https://webassembly.github.io/spec/core/intro/overview.html#trap).
 

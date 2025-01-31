@@ -5,9 +5,8 @@ page-type: webassembly-interface
 browser-compat:
   - webassembly.api.Memory
   - webassembly.multiMemory
+sidebar: webassemblysidebar
 ---
-
-{{WebAssemblySidebar}}
 
 The **`WebAssembly.Memory`** object is a resizable {{jsxref("ArrayBuffer")}} or {{jsxref("SharedArrayBuffer")}} that holds raw bytes of memory accessed by a [`WebAssembly.Instance`](/en-US/docs/WebAssembly/JavaScript_interface/Instance).
 

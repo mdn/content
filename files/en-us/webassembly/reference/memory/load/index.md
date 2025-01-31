@@ -5,9 +5,8 @@ slug: WebAssembly/Reference/Memory/Load
 page-type: webassembly-instruction
 browser-compat: webassembly.multiMemory
 spec-urls: https://webassembly.github.io/spec/core/syntax/instructions.html#syntax-instr-memory
+sidebar: webassemblysidebar
 ---
-
-{{WebAssemblySidebar}}
 
 The **`load`** [memory instructions](/en-US/docs/WebAssembly/Reference/Memory) are used to load a number from a memory onto the stack.
 

@@ -2,9 +2,8 @@
 title: Using the WebAssembly JavaScript API
 slug: WebAssembly/Using_the_JavaScript_API
 page-type: guide
+sidebar: webassemblysidebar
 ---
-
-{{WebAssemblySidebar}}
 
 If you have already [compiled a module from another language using tools like Emscripten](/en-US/docs/WebAssembly/C_to_Wasm), or [loaded and run the code yourself](/en-US/docs/WebAssembly/Loading_and_running), the next step is to learn more about using the other features of the WebAssembly JavaScript API. This article teaches you what you'll need to know.
 

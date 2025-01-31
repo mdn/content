@@ -3,9 +3,8 @@ title: WebAssembly.Table.prototype.get()
 slug: WebAssembly/JavaScript_interface/Table/get
 page-type: webassembly-instance-method
 browser-compat: webassembly.api.Table.get
+sidebar: webassemblysidebar
 ---
-
-{{WebAssemblySidebar}}
 
 The **`get()`** prototype method of the [`WebAssembly.Table()`](/en-US/docs/WebAssembly/JavaScript_interface/Table) object retrieves the element stored at a given index.
 

@@ -3,9 +3,8 @@ title: WebAssembly
 slug: WebAssembly/JavaScript_interface
 page-type: webassembly-interface
 browser-compat: webassembly.api
+sidebar: webassemblysidebar
 ---
-
-{{WebAssemblySidebar}}
 
 The **`WebAssembly`** JavaScript object acts as the namespace for all [WebAssembly](/en-US/docs/WebAssembly)-related functionality.
 

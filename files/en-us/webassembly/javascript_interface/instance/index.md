@@ -3,9 +3,8 @@ title: WebAssembly.Instance
 slug: WebAssembly/JavaScript_interface/Instance
 page-type: webassembly-interface
 browser-compat: webassembly.api.Instance
+sidebar: webassemblysidebar
 ---
-
-{{WebAssemblySidebar}}
 
 A **`WebAssembly.Instance`** object is a stateful, executable instance of a [`WebAssembly.Module`](/en-US/docs/WebAssembly/JavaScript_interface/Module). `Instance` objects contain all the [Exported WebAssembly functions](/en-US/docs/WebAssembly/Exported_functions) that allow calling into WebAssembly code from JavaScript.
 

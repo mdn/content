@@ -3,9 +3,8 @@ title: WebAssembly.Table.prototype.grow()
 slug: WebAssembly/JavaScript_interface/Table/grow
 page-type: webassembly-instance-method
 browser-compat: webassembly.api.Table.grow
+sidebar: webassemblysidebar
 ---
-
-{{WebAssemblySidebar}}
 
 The **`grow()`** prototype method of the [`WebAssembly.Table`](/en-US/docs/WebAssembly/JavaScript_interface/Table) object increases the size of the `Table` instance by a specified number of elements, filled with the provided value.
 

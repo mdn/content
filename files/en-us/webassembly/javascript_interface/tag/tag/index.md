@@ -3,9 +3,8 @@ title: WebAssembly.Tag() constructor
 slug: WebAssembly/JavaScript_interface/Tag/Tag
 page-type: webassembly-constructor
 browser-compat: webassembly.api.Tag.Tag
+sidebar: webassemblysidebar
 ---
-
-{{WebAssemblySidebar}}
 
 The **`WebAssembly.Tag()`** constructor creates a new [`WebAssembly.Tag`](/en-US/docs/WebAssembly/JavaScript_interface/Tag) object.
 

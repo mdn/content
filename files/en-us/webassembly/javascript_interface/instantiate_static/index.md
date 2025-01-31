@@ -3,9 +3,8 @@ title: WebAssembly.instantiate()
 slug: WebAssembly/JavaScript_interface/instantiate_static
 page-type: webassembly-function
 browser-compat: webassembly.api.instantiate_static
+sidebar: webassemblysidebar
 ---
-
-{{WebAssemblySidebar}}
 
 The **`WebAssembly.instantiate()`** function allows you to
 compile and instantiate WebAssembly code. This function has two overloads:

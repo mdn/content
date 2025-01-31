@@ -7,9 +7,8 @@ browser-compat:
   - webassembly.api.Memory.grow
   - webassembly.multiMemory
 spec-urls: https://webassembly.github.io/spec/core/syntax/instructions.html#syntax-instr-memory
+sidebar: webassemblysidebar
 ---
-
-{{WebAssemblySidebar}}
 
 The **`grow`** [memory instruction](/en-US/docs/WebAssembly/Reference/Memory) increases the size of the memory instance by a specified number of pages.
 

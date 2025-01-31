@@ -3,9 +3,8 @@ title: WebAssembly.CompileError
 slug: WebAssembly/JavaScript_interface/CompileError
 page-type: webassembly-interface
 browser-compat: webassembly.api.CompileError
+sidebar: webassemblysidebar
 ---
-
-{{WebAssemblySidebar}}
 
 The **`WebAssembly.CompileError`** object indicates an error during WebAssembly decoding or validation.
 

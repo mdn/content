@@ -5,9 +5,10 @@ page-type: webassembly-instance-property
 status:
   - non-standard
 browser-compat: webassembly.api.Exception.stack
+sidebar: webassemblysidebar
 ---
 
-{{WebAssemblySidebar}} {{non-standard_header}}
+{{non-standard_header}}
 
 The read-only **`stack`** property of an object instance of type [`WebAssembly.Exception`](/en-US/docs/WebAssembly/JavaScript_interface/Exception) _may_ contain a stack trace.
 

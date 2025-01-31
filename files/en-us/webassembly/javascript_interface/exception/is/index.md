@@ -3,9 +3,8 @@ title: WebAssembly.Exception.prototype.is()
 slug: WebAssembly/JavaScript_interface/Exception/is
 page-type: webassembly-instance-method
 browser-compat: webassembly.api.Exception.is
+sidebar: webassemblysidebar
 ---
-
-{{WebAssemblySidebar}}
 
 The **`is()`** prototype method of the [`Exception`](/en-US/docs/WebAssembly/JavaScript_interface/Exception) object can be used to test if the `Exception` matches a given tag.
 

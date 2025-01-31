@@ -2,9 +2,8 @@
 title: WebAssembly JavaScript builtins
 slug: WebAssembly/JavaScript_builtins
 page-type: guide
+sidebar: webassemblysidebar
 ---
-
-{{WebAssemblySidebar}}
 
 WebAssembly JavaScript builtins are Wasm equivalents of JavaScript operations that provide a way to use JavaScript features inside Wasm modules without having to import JavaScript glue code to provide a bridge between JavaScript and WebAssembly values and calling conventions.
 

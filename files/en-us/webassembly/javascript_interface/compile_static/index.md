@@ -3,9 +3,8 @@ title: WebAssembly.compile()
 slug: WebAssembly/JavaScript_interface/compile_static
 page-type: webassembly-function
 browser-compat: webassembly.api.compile_static
+sidebar: webassemblysidebar
 ---
-
-{{WebAssemblySidebar}}
 
 The **`WebAssembly.compile()`** static method compiles WebAssembly binary code into a [`WebAssembly.Module`](/en-US/docs/WebAssembly/JavaScript_interface/Module) object.
 This function is useful if it is necessary to compile a module before it can be instantiated (otherwise, the [`WebAssembly.instantiate()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiate_static) function should be used).

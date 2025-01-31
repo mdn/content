@@ -3,9 +3,8 @@ title: WebAssembly.Memory.prototype.buffer
 slug: WebAssembly/JavaScript_interface/Memory/buffer
 page-type: webassembly-instance-property
 browser-compat: webassembly.api.Memory.buffer
+sidebar: webassemblysidebar
 ---
-
-{{WebAssemblySidebar}}
 
 The read-only **`buffer`** prototype property of the [`WebAssembly.Memory`](/en-US/docs/WebAssembly/JavaScript_interface/Memory) object returns the buffer contained in the memory. Depending on whether or not the memory was constructed with `shared: true`, the buffer is either an {{jsxref("ArrayBuffer")}} or a {{jsxref("SharedArrayBuffer")}}.
 

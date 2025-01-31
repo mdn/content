@@ -3,9 +3,8 @@ title: WebAssembly.Instance.prototype.exports
 slug: WebAssembly/JavaScript_interface/Instance/exports
 page-type: webassembly-instance-property
 browser-compat: webassembly.api.Instance.exports
+sidebar: webassemblysidebar
 ---
-
-{{WebAssemblySidebar}}
 
 The **`exports`** read-only property of the
 [`WebAssembly.Instance`](/en-US/docs/WebAssembly/JavaScript_interface/Instance) object prototype returns an object containing as its

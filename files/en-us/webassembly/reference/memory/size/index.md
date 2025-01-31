@@ -5,9 +5,8 @@ slug: WebAssembly/Reference/Memory/Size
 page-type: webassembly-instruction
 browser-compat: webassembly.multiMemory
 spec-urls: https://webassembly.github.io/spec/core/syntax/instructions.html#syntax-instr-memory
+sidebar: webassemblysidebar
 ---
-
-{{WebAssemblySidebar}}
 
 The **`size`** [memory instruction](/en-US/docs/WebAssembly/Reference/Memory) is used to get the current number of pages in a memory.
 

@@ -3,9 +3,8 @@ title: WebAssembly.instantiateStreaming()
 slug: WebAssembly/JavaScript_interface/instantiateStreaming_static
 page-type: webassembly-function
 browser-compat: webassembly.api.instantiateStreaming_static
+sidebar: webassemblysidebar
 ---
-
-{{WebAssemblySidebar}}
 
 The **`WebAssembly.instantiateStreaming()`** static method compiles
 and instantiates a WebAssembly module directly from a streamed underlying source. This

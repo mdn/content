@@ -3,9 +3,8 @@ title: WebAssembly.Module.customSections()
 slug: WebAssembly/JavaScript_interface/Module/customSections_static
 page-type: webassembly-static-method
 browser-compat: webassembly.api.Module.customSections_static
+sidebar: webassemblysidebar
 ---
-
-{{WebAssemblySidebar}}
 
 The **`WebAssembly.Module.customSections()`** static method returns a copy
 of the contents of all custom sections in the given module with the given string name.

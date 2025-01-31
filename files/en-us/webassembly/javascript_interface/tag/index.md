@@ -3,9 +3,8 @@ title: WebAssembly.Tag
 slug: WebAssembly/JavaScript_interface/Tag
 page-type: webassembly-interface
 browser-compat: webassembly.api.Tag
+sidebar: webassemblysidebar
 ---
-
-{{WebAssemblySidebar}}
 
 The **`WebAssembly.Tag`** object defines a _type_ of a WebAssembly exception that can be thrown to/from WebAssembly code.
 

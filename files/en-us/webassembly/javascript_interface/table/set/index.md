@@ -3,9 +3,8 @@ title: WebAssembly.Table.prototype.set()
 slug: WebAssembly/JavaScript_interface/Table/set
 page-type: webassembly-instance-method
 browser-compat: webassembly.api.Table.set
+sidebar: webassemblysidebar
 ---
-
-{{WebAssemblySidebar}}
 
 The **`set()`** prototype method of the [`WebAssembly.Table`](/en-US/docs/WebAssembly/JavaScript_interface/Table) object mutates a reference stored at a given index to a different value.
 

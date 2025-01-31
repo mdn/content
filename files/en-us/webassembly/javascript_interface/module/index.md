@@ -3,9 +3,8 @@ title: WebAssembly.Module
 slug: WebAssembly/JavaScript_interface/Module
 page-type: webassembly-interface
 browser-compat: webassembly.api.Module
+sidebar: webassemblysidebar
 ---
-
-{{WebAssemblySidebar}}
 
 A **`WebAssembly.Module`** object contains stateless WebAssembly code that has already been compiled by the browser — this can be efficiently [shared with Workers](/en-US/docs/Web/API/Worker/postMessage), and instantiated multiple times.
 

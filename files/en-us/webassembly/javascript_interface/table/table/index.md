@@ -3,9 +3,8 @@ title: WebAssembly.Table() constructor
 slug: WebAssembly/JavaScript_interface/Table/Table
 page-type: webassembly-constructor
 browser-compat: webassembly.api.Table.Table
+sidebar: webassemblysidebar
 ---
-
-{{WebAssemblySidebar}}
 
 The **`WebAssembly.Table()`** constructor creates a new `Table` object of the given size and element type, filled with the provided value.
 

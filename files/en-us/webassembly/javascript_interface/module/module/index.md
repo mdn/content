@@ -3,9 +3,8 @@ title: WebAssembly.Module() constructor
 slug: WebAssembly/JavaScript_interface/Module/Module
 page-type: webassembly-constructor
 browser-compat: webassembly.api.Module.Module
+sidebar: webassemblysidebar
 ---
-
-{{WebAssemblySidebar}}
 
 A **`WebAssembly.Module()`** constructor creates a new Module
 object containing stateless WebAssembly code that has already been compiled by the
