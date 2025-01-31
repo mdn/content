@@ -291,17 +291,16 @@ l10n:
     CSS_layout: CSS-Layout
     Guides: Leitfäden
     Animations: Animationen
-    "Accessibility_Understanding_colors_and_luminance": "Barrierefreiheit: Farbwerte verstehen"
+    Accessibility_Understanding_colors_and_luminance: "Barrierefreiheit: Farbwerte verstehen"
     Applying_color_to_HTML_elements: Farben auf HTML-Elemente anwenden
     At-rules: At-Regeln
     Backgrounds_and_Borders: Hintergründe und Rahmen
     Resizing_background_images: Hintergrundbilder skalieren
-    "Box alignment": "Box-Ausrichtung"
+    Box alignment: Box-Ausrichtung
     Box_alignment_in_block_layout: Box-Ausrichtung im Block-Layout
     Box_model: Box-Modell
     Colors: Farben
     Color_contrast: "Barrierefreiheit: Farbkontrast"
-    Color_values: "CSS-Farbwerte"
     Columns: Spalten
     Combinators: Kombinatoren
     Conditional_rules: Bedingte Regeln
