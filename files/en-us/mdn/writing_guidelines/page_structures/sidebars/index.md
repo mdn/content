@@ -2,9 +2,8 @@
 title: Sidebars
 slug: MDN/Writing_guidelines/Page_structures/Sidebars
 page-type: mdn-writing-guide
+sidebar: mdnsidebar
 ---
-
-{{MDNSidebar}}
 
 MDN pages all include sidebars. Most of them are created using a standard system that defines data structures in YAML files, and includes sidebars on pages using macro calls.
 
@@ -141,11 +140,11 @@ sidebar:
       - title: contributing_to_mdn_web_docs
         details: closed
         children:
-          - /MDN/Community/Contributing
-          - /MDN/Community/Contributing/Getting_started
-          - /MDN/Community/Contributing/Our_repositories
-          - /MDN/Community/Contributing/Translated_content
-          - /MDN/Community/Contributing/Security_vulnerability_response
+          - /MDN/Community
+          - /MDN/Community/Getting_started
+          - /MDN/Community/Our_repositories
+          - /MDN/Community/Translated_content
+          - /MDN/Community/Security_vulnerability_response
       - /MDN/Community/Open_source_etiquette
       - /MDN/Community/Communication_channels
       - /MDN/Community/Discussions

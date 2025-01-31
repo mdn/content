@@ -11237,54 +11237,6 @@
       "ziyunfei"
     ]
   },
-  "MDN/At_ten": {
-    "modified": "2020-12-14T11:30:31.427Z",
-    "contributors": [
-      "fscholz",
-      "nasimrja",
-      "chandan987",
-      "stephaniehobson",
-      "jsx",
-      "daniellascandles",
-      "h8erofthem8tixs",
-      "jswisher",
-      "chrisdavidmills",
-      "wkforever",
-      "Sheppy"
-    ]
-  },
-  "MDN/At_ten/History_of_MDN": {
-    "modified": "2020-12-12T07:24:50.578Z",
-    "contributors": [
-      "bershanskiy",
-      "Sheppy",
-      "jswisher",
-      "jwhitlock",
-      "stephaniehobson",
-      "groovecoder"
-    ]
-  },
-  "MDN/MDN_Product_Advisory_Board": {
-    "modified": "2019-06-05T12:41:23.682Z",
-    "contributors": [
-      "Sheppy",
-      "wbamberg",
-      "alispivak",
-      "stephaniehobson",
-      "chrisdavidmills",
-      "KadirTopal"
-    ]
-  },
-  "MDN/MDN_Product_Advisory_Board/Membership": {
-    "modified": "2020-08-24T15:00:45.099Z",
-    "contributors": [
-      "chrisdavidmills",
-      "wbamberg",
-      "alispivak",
-      "Sheppy",
-      "KadirTopal"
-    ]
-  },
   "MDN/Writing_guidelines/Howto/Document_a_CSS_property": {
     "modified": "2020-02-18T19:54:27.563Z",
     "contributors": [

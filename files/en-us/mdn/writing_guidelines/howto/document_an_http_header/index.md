@@ -1,14 +1,13 @@
 ---
 title: How to document an HTTP header
+short-title: Document an HTTP header
 slug: MDN/Writing_guidelines/Howto/Document_an_HTTP_header
 page-type: mdn-writing-guide
+sidebar: mdnsidebar
 ---
 
-{{MDNSidebar}}
-
-The [HTTP headers reference](/en-US/docs/Web/HTTP/Headers) on MDN Web Docs documents HTTP header fields. These are components of the header section of request and response messages in the Hypertext Transfer Protocol ([HTTP](/en-US/docs/Web/HTTP)). They define the operating parameters of an HTTP transaction. This article explains how to create a new reference page for an HTTP header.
-
-You will need to know or be able to dive into some [HTTP](/en-US/docs/Web/HTTP).
+The [HTTP headers reference](/en-US/docs/Web/HTTP/Headers) documents the header section of request and response messages in the Hypertext Transfer Protocol ([HTTP](/en-US/docs/Web/HTTP)).
+This article explains how to create a new reference page for an HTTP header.
 
 ## Step 1 – Determine the HTTP header to document
 
@@ -26,7 +25,7 @@ You will need to know or be able to dive into some [HTTP](/en-US/docs/Web/HTTP).
 
 ## Step 3 – Create the HTTP header page
 
-- All header pages live under this tree: [/docs/Web/HTTP/Headers/](/en-US/docs/Web/HTTP/Headers)
+- All header pages live under this tree: [`files/en-us/web/http/headers`](https://github.com/mdn/content/tree/main/files/en-us/web/http/headers)
 - To create a new page, see the instructions in our [how to create a page](/en-US/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting) guide.
 
 ## Step 4 – Write the content
