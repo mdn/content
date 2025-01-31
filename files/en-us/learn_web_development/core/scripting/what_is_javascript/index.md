@@ -167,10 +167,7 @@ If you were to swap the order of the `const button = ...` and `button.addEventLi
 This means that the `button` object has not been initialized yet, so we can't add an event listener to it.
 
 > [!NOTE]
-> This is a very common error — you need to be careful that the objects referenced in your code exist before you try to do stuff to them.
-
-> [!NOTE]
-> It is not always true that JavaScript runs exactly in order from top to bottom, due to behaviors like [hoisting](/en-US/docs/Glossary/Hoisting), but for now, bear in mind that generally items need to be defined before you can use them. This is a very common source of errors.
+> It is not always true that JavaScript runs exactly in order from top to bottom, due to behaviors like [hoisting](/en-US/docs/Glossary/Hoisting), but for now, bear in mind that generally items need to be defined before you can use them. This is a common source of errors.
 
 ### Interpreted versus compiled code
 
