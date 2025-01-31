@@ -100,7 +100,7 @@ function log(text) {
 
 ```css hidden
 #log {
-  height: 250px;
+  height: 230px;
   overflow: scroll;
   padding: 0.5rem;
   border: 1px solid black;
@@ -141,7 +141,7 @@ if (typeof PublicKeyCredential.getClientCapabilities === "function") {
 
 #### Result
 
-{{EmbedLiveSample("Check all capabilities", "", "370")}}
+{{EmbedLiveSample("Check all capabilities", "", "280")}}
 
 ### Test for user verifying platform authenticator
 
@@ -149,7 +149,6 @@ This example checks a single capability, `userVerifyingPlatformAuthenticator`. A
 
 ```html hidden
 <pre id="log"></pre>
-<button id="reset" type="button">Reset</button>
 ```
 
 ```js hidden
@@ -158,17 +157,11 @@ function log(text) {
   logElement.innerText = `${logElement.innerText}${text}\n`;
   logElement.scrollTop = logElement.scrollHeight;
 }
-
-const reload = document.querySelector("#reset");
-
-reload.addEventListener("click", () => {
-  window.location.reload(true);
-});
 ```
 
 ```css hidden
 #log {
-  height: 130px;
+  height: 40px;
   overflow: scroll;
   padding: 0.5rem;
   border: 1px solid black;
@@ -210,7 +203,7 @@ In a real application we might update the user interface to show appropriate opt
 
 The log below displays either a string indicating the method is not supported, or one that indicates whether biometric or password login is supported.
 
-{{EmbedLiveSample("Test for user verifying platform authenticator", "", "200")}}
+{{EmbedLiveSample("Test for user verifying platform authenticator", "", "90")}}
 
 ## Specifications
 
