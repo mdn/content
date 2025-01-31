@@ -29,13 +29,13 @@ Values may include:
 
 - `ble`
   - : The authenticator may be used over [BLE (Bluetooth Low Energy)](https://en.wikipedia.org/wiki/Bluetooth_Low_Energy).
-- `hybrid`
+- `"hybrid"`
   - : The authenticator can be used over a combination of (often separate) data transport and proximity mechanisms. This supports, for example, authentication on a desktop computer using a smartphone.
-- `internal`
+- `"internal"`
   - : The authenticator is specifically bound to the client device (cannot be removed).
-- `nfc`
+- `"nfc"`
   - : The authenticator may be used over [NFC (Near Field Communication)](https://en.wikipedia.org/wiki/Near-field_communication).
-- `usb`
+- `"usb"`
   - : The authenticator can be contacted over USB.
 
 ## Examples
