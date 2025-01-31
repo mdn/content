@@ -170,7 +170,7 @@ This means that the `button` object has not been initialized yet, so we can't ad
 > This is a very common error — you need to be careful that the objects referenced in your code exist before you try to do stuff to them.
 
 > [!NOTE]
-> It is not always true that JavaScript runs in order from top to bottom, due to behaviors like [hoisting](/en-US/docs/Glossary/Hoisting), but don't worry too much about this for now.
+> It is not always true that JavaScript runs exactly in order from top to bottom, due to behaviors like [hoisting](/en-US/docs/Glossary/Hoisting), but for now, bear in mind that generally items need to be defined before you can use them. This is a very common source of errors.
 
 ### Interpreted versus compiled code
 
