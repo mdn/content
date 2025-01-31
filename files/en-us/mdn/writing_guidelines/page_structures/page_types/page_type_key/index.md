@@ -182,7 +182,7 @@ This section lists `page-type` values for pages under [Mozilla/Add-ons/WebExtens
 
 This section lists `page-type` values for pages under [Web/Manifest](/en-US/docs/Web/Manifest). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the [generic page type](#generic_page_types) values.
 
-- `web-manifest-member`: a member of a manifest, like [`description`](/en-US/docs/Web/Manifest/description).
+- `web-manifest-member`: a member of a manifest, like [`description`](/en-US/docs/Web/Manifest/Reference/description).
 
 ### XPath page types
 
@@ -194,7 +194,7 @@ This section lists `page-type` values for pages under [Web/XPath](/en-US/docs/We
 
 This section lists `page-type` values for pages under [Web/XSLT](/en-US/docs/Web/XSLT). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the [generic page type](#generic_page_types) values.
 
-- `xslt-element`: an element of XSLT, like [`<xsl:message>`](/en-US/docs/Web/XSLT/Element/message).
+- `xslt-element`: an element of XSLT, like [`<xsl:message>`](/en-US/docs/Web/XSLT/Reference/Element/message).
 
 ### EXSLT page types
 
