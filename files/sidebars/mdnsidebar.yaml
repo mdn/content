@@ -25,34 +25,17 @@ sidebar:
       - /MDN/Writing_guidelines/Writing_style_guide
       - /MDN/Writing_guidelines/Experimental_deprecated_obsolete
       - /MDN/Writing_guidelines/Attrib_copyright_license
-      - title: how_to_guides
+      - type: listSubPages
+        path: /MDN/Writing_guidelines/Howto
+        title: how_to_guides
         details: closed
-        children:
-          - /MDN/Writing_guidelines/Howto
-          - /MDN/Writing_guidelines/Howto/Research_technology
-          - /MDN/Writing_guidelines/Howto/Markdown_in_MDN
-          - /MDN/Writing_guidelines/Howto/Creating_moving_deleting
-          - /MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_glossary
-          - /MDN/Writing_guidelines/Howto/Document_a_CSS_property
-          - /MDN/Writing_guidelines/Howto/Write_an_api_reference
-          - /MDN/Writing_guidelines/Howto/Document_an_HTTP_header
-          - /MDN/Writing_guidelines/Howto/Document_web_errors
-          - /MDN/Writing_guidelines/Howto/JSON_Structured_data
-          - /MDN/Writing_guidelines/Howto/Images_media
-      - title: page_structures
+        includeParent: true
+      - type: listSubPages
+        path: /MDN/Writing_guidelines/Page_structures
+        title: page_structures
         details: closed
-        children:
-          - /MDN/Writing_guidelines/Page_structures
-          - /MDN/Writing_guidelines/Page_structures/Banners_and_notices
-          - /MDN/Writing_guidelines/Page_structures/Code_examples
-          - /MDN/Writing_guidelines/Page_structures/Compatibility_tables
-          - /MDN/Writing_guidelines/Page_structures/Live_samples
-          - /MDN/Writing_guidelines/Page_structures/Page_types
-          - /MDN/Writing_guidelines/Page_structures/Sidebars
-          - /MDN/Writing_guidelines/Page_structures/Specification_tables
-          - /MDN/Writing_guidelines/Page_structures/Syntax_sections
-          - /MDN/Writing_guidelines/Page_structures/Macros
-          - /MDN/Writing_guidelines/Page_structures/Feature_status
+        includeParent: true
+
 l10n:
   de:
     community_resources: Gemeinschaftsrichtlinien
