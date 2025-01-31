@@ -44,7 +44,7 @@ The Device Posture API introduces a couple of new features enabling you to run s
 
 ## Examples
 
-You can find example code snippets in the above reference pages and a complete example showing all of the features in action — see [Device Posture API test](#). (TBD, FILL IN WHEN IT HAS BEEN APPROVED AND ADDED TO THE DOM-EXAMPLES DEMO).
+You can find example code snippets in the above reference pages and a complete example showing all of the features in action — see [Device Posture API test](https://mdn.github.io/dom-examples/device-posture-api/).
 
 ## Specifications
 
