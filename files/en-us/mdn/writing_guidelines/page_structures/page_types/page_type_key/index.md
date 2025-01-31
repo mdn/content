@@ -2,9 +2,8 @@
 title: The page-type front matter key
 slug: MDN/Writing_guidelines/Page_structures/Page_types/Page_type_key
 page-type: mdn-writing-guide
+sidebar: mdnsidebar
 ---
-
-{{MDNSidebar}}
 
 The `page-type` front matter key describes the type of an MDN page.
 This allows MDN content tools to better automate content checking and sidebar organization.

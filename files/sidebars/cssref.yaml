@@ -57,51 +57,51 @@ sidebar:
     link: /Web/CSS/Reference
   - type: listSubPages
     path: /Web/CSS
-    title: Modules
     tags: css-module
+    title: Modules
     details: closed
   - type: listSubPagesGrouped
     path: /Web/CSS
-    title: Properties
     tags:
       - css-property
       - css-shorthand-property
+    title: Properties
     details: closed
   - type: listSubPages
     path: /Web/CSS
-    title: Selectors
     tags: css-selector
+    title: Selectors
     details: closed
   - type: listSubPages
     path: /Web/CSS
-    title: Combinators
     tags: css-combinator
+    title: Combinators
     details: closed
   - type: listSubPages
     path: /Web/CSS
-    title: Pseudo-classes
     tags: css-pseudo-class
+    title: Pseudo-classes
     details: closed
   - type: listSubPages
     path: /Web/CSS
-    title: Pseudo-elements
     tags: css-pseudo-element
+    title: Pseudo-elements
     details: closed
   - type: listSubPages
     path: /Web/CSS
-    title: At-rules
     tags: css-at-rule
+    title: At-rules
     details: closed
   - type: listSubPages
     path: /Web/CSS
-    title: Functions
     tags: css-function
-    details: closed
     depth: 2
+    title: Functions
+    details: closed
   - type: listSubPages
     path: /Web/CSS
-    title: Types
     tags: css-type
+    title: Types
     details: closed
   - type: section
     title: Guides
@@ -291,17 +291,16 @@ l10n:
     CSS_layout: CSS-Layout
     Guides: Leitfäden
     Animations: Animationen
-    "Accessibility_Understanding_colors_and_luminance": "Barrierefreiheit: Farbwerte verstehen"
+    Accessibility_Understanding_colors_and_luminance: "Barrierefreiheit: Farbwerte verstehen"
     Applying_color_to_HTML_elements: Farben auf HTML-Elemente anwenden
     At-rules: At-Regeln
     Backgrounds_and_Borders: Hintergründe und Rahmen
     Resizing_background_images: Hintergrundbilder skalieren
-    "Box alignment": "Box-Ausrichtung"
+    Box alignment: Box-Ausrichtung
     Box_alignment_in_block_layout: Box-Ausrichtung im Block-Layout
     Box_model: Box-Modell
     Colors: Farben
     Color_contrast: "Barrierefreiheit: Farbkontrast"
-    Color_values: "CSS-Farbwerte"
     Columns: Spalten
     Combinators: Kombinatoren
     Conditional_rules: Bedingte Regeln
