@@ -70,7 +70,7 @@ i32.store (memory $memoryName)  ;; store in memory with name "$memoryName"
 ## Browser compatibility
 
 > [!NOTE]
-> Memory support in Wasm modules matches the [`WebAssembly.Memory`](/en-US/docs/WebAssembly/JavaScript_interface/Memory) JavaScript API.
+> Memory support in Wasm modules matches the [`WebAssembly.Memory`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Memory) JavaScript API.
 > The [multiMemory](#webassembly.multimemory) key indicates versions in which `store` can be used with a specified memory.
 
 {{Compat}}
