@@ -77,7 +77,7 @@ In this case the user might simply be offered a sign-in button in order to log i
 If the value of a given capability is present in the map, then `true` indicates that the capability is currently supported, and `false` indicates that it is not.
 However if a key is not present for a particular capability, no assumptions can be made about the availability of the associated feature.
 
-For an extension the assumptions are the same, but note that generally if an extension is implemented the value will be `true`.
+For an extension the assumptions are the same.
 Note though, that even if the extension is supported by the client a particular authenticator may not support that extension, so RPs must not assume that this is a guarantee that the authenticator processing steps for that extension will be performed.
 If the key is not present for an extension then a Relying Party (RP) can't assume that client processing steps for that extension will be carried out by this client or that the extension will be forwarded to the authenticator.
 
