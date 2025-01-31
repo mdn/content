@@ -8,7 +8,7 @@ browser-compat: api.SVGFEOffsetElement.result
 
 {{APIRef("SVG")}}
 
-The **`result`** read-only property of the {{domxref("SVGFEOffsetElement")}} interface describes the assigned name of an SVG filter primitive as a {{domxref("SVGAnimatedString")}}.
+The **`result`** read-only property of the {{domxref("SVGFEOffsetElement")}} interface describes the assigned name of an SVG filter primitive as an {{domxref("SVGAnimatedString")}}.
 
 It reflects the {{SVGAttr("result")}} attribute of the {{SVGElement("feOffset")}} element, which offsets the input image relative to its current position. The attribute value is a {{cssxref("custom-ident")}}. If supplied, then graphics that result from processing this filter primitive can be referenced by an {{SVGAttr("in")}} attribute on a subsequent filter primitive within the same {{SVGElement("filter")}} element.
 
