@@ -22,8 +22,7 @@ It's fine if the answer to this question is "I want something to do with my time
 - I want to publicly demonstrate my own skills for my college or university course or to improve my chances of getting a job.
 
 Some of these reasons are self-serving, and that's fine!
-Having a clear set of reasons for contributing will make it easier to decide what to work on first.
-Your presence on the project should be productive, and it shouldn't stop others from being so, too.
+Having a clear set of reasons for contributing will make you more productive and make it easier to work with the community.
 
 ## Be polite, be kind, avoid incendiary or offensive language
 
@@ -47,9 +46,9 @@ Beyond that, don't make assumptions, such as:
 - Expectations
 - Sense of humor
 
-You should keep what you write on topic and avoid controversial subjects like religion or politics.
-Refrain from swearing or offensive language, even if it is not directed at anyone in particular.
-It is not needed for participation, and some people are sensitive to it.
+You should keep what you write on topic and avoid controversial subjects, such as religion or politics.
+Refrain from swearing or potentially offensive language.
+It rarely improves communication, and can make it harder for others to participate.
 
 Be supportive and respectful even if you disagree with someone, or don't like a decision they've made.
 Be aware that there are rules in place in any good OSP to protect its contributors against being made to feel uncomfortable while contributing.

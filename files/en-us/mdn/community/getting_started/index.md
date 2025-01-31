@@ -32,8 +32,8 @@ If you are new to GitHub, we encourage you to take the following free, self-pace
 - [Using Markdown](https://github.com/skills/communicate-using-markdown)
 
 > [!NOTE]
-> Do not feel overwhelmed or like you have to read through and complete all of the course work.
-> With the knowledge gained from the "Introduction to GitHub" course, you will be well on your way.
+> The "Introduction to GitHub" course should be enough to get you started.
+> Feel free to jump forward and return to the other documents later on.
 
 We also recommend reading the following learning material:
 
@@ -42,9 +42,8 @@ We also recommend reading the following learning material:
 - [Deep dive into collaborating with pull requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests)
 
 Some writing-specific contribution opportunities will require a reasonable understanding of the English language.
-That said, do not let perfect be the enemy of "good enough." Even if your grammar isn't good, don't worry about it!
-We have a team of people who aim to ensure that MDN's contents are as good as possible.
-In addition, someone will review your work to make sure what gets published is tidy and accurate.
+That said, don't worry if your grammar isn't perfect: we have a team of people who will review your writing and help improve it.
+We need your technical expertise, and we'll help polish your English in order to get it.
 
 ## Choosing what to work on and getting started
 
