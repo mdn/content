@@ -3,9 +3,8 @@ title: Community resources
 short-title: Resources
 slug: MDN/Community
 page-type: mdn-community-guide
+sidebar: mdnsidebar
 ---
-
-{{MDNSidebar}}
 
 👋 Welcome to MDN Web Docs, an open-source, collaborative project that documents web platform technologies, including [HTML](/en-US/docs/Web/HTML), [CSS](/en-US/docs/Web/CSS), [JavaScript](/en-US/docs/Web/JavaScript), and [Web APIs](/en-US/docs/Web/API).
 We also provide extensive [learning resources](/en-US/docs/Learn_web_development) for early-stage developers and students.

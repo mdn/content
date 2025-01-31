@@ -2,9 +2,8 @@
 title: Pull request submission and reviews
 slug: MDN/Community/Pull_requests
 page-type: mdn-community-guide
+sidebar: mdnsidebar
 ---
-
-{{MDNSidebar}}
 
 This document describes how contributors make changes to MDN Web Docs and how the changes are reviewed and land on the site.
 Content changes to MDN Web Docs include:

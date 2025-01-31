@@ -2,9 +2,8 @@
 title: GitHub Discussions
 slug: MDN/Community/Discussions
 page-type: mdn-community-guide
+sidebar: mdnsidebar
 ---
-
-{{MDNSidebar}}
 
 On MDN Web Docs, we encourage our community to start and/or engage in discussions around topics related to the overall project.
 We ask that you keep each discussion focused on the topic at hand instead of covering multiple topics in one discussion.

@@ -3,9 +3,8 @@ title: Getting started with MDN Web Docs
 short-title: Getting started
 slug: MDN/Community/Getting_started
 page-type: mdn-community-guide
+sidebar: mdnsidebar
 ---
-
-{{MDNSidebar}}
 
 We are an open community of developers, technical writers, and learners building resources for a better Web, regardless of brand, browser, or platform.
 Anyone can contribute, and each person who does contribute has an impact on millions of readers.

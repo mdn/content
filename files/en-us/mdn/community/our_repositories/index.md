@@ -3,9 +3,8 @@ title: MDN GitHub repositories
 short-title: GitHub repositories
 slug: MDN/Community/Our_repositories
 page-type: mdn-community-guide
+sidebar: mdnsidebar
 ---
-
-{{MDNSidebar}}
 
 MDN Web Docs is a complex project with lots of moving parts.
 It's a good idea to get familiar with the different code repositories.

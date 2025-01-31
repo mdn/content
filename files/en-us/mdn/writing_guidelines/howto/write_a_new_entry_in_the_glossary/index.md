@@ -3,9 +3,8 @@ title: How to add a glossary entry
 short-title: Add a glossary entry
 slug: MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_glossary
 page-type: mdn-writing-guide
+sidebar: mdnsidebar
 ---
-
-{{MDNSidebar}}
 
 This article explains how to add and link to entries in the [MDN Web Docs glossary](/en-US/docs/Glossary).
 It also provides guidelines about glossary entry layout and content.

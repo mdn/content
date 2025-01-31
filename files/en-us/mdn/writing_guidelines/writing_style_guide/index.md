@@ -3,9 +3,8 @@ title: Writing style guide
 short-title: Style guide
 slug: MDN/Writing_guidelines/Writing_style_guide
 page-type: mdn-writing-guide
+sidebar: mdnsidebar
 ---
-
-{{MDNSidebar}}
 
 This writing style guide describes how content should be written, organized, spelled, and formatted on MDN Web Docs.
 

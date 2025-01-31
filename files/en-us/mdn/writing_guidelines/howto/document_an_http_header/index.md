@@ -3,9 +3,8 @@ title: How to document an HTTP header
 short-title: Document an HTTP header
 slug: MDN/Writing_guidelines/Howto/Document_an_HTTP_header
 page-type: mdn-writing-guide
+sidebar: mdnsidebar
 ---
-
-{{MDNSidebar}}
 
 The [HTTP headers reference](/en-US/docs/Web/HTTP/Headers) documents the header section of request and response messages in the Hypertext Transfer Protocol ([HTTP](/en-US/docs/Web/HTTP)).
 This article explains how to create a new reference page for an HTTP header.

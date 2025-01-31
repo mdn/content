@@ -2,9 +2,8 @@
 title: Attribution and copyright licensing
 slug: MDN/Writing_guidelines/Attrib_copyright_license
 page-type: mdn-writing-guide
+sidebar: mdnsidebar
 ---
-
-{{MDNSidebar}}
 
 MDN Web Docs content is available free of charge and is available under various open-source licenses.
 

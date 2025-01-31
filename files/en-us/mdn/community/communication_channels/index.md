@@ -2,9 +2,8 @@
 title: Communication channels
 slug: MDN/Community/Communication_channels
 page-type: mdn-community-guide
+sidebar: mdnsidebar
 ---
-
-{{MDNSidebar}}
 
 There are various communication channels that the community can use to contact MDN Web Docs staff and participate in discussions.
 
