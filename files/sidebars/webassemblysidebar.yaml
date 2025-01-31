@@ -3,8 +3,8 @@
 sidebar:
   - type: section
     link: /WebAssembly
-    title: WebAssembly_home_page
-  - title: Tutorials
+    title: WebAssembly
+  - title: Guides
     details: open
     children:
       - link: /WebAssembly/Guides/Concepts
