@@ -29,30 +29,32 @@ A {{jsxref("Promise")}} that resolves to an object where the property names are 
 The WebAuthn client capability strings are:
 
 - `conditionalCreate`
-  - : The client is capable of conditional mediation when creating/registering credentials.
+  - : The client is capable of creating [discoverable credentials](/en-US/docs/Web/API/Web_Authentication_API#discoverable_credentials_and_conditional_mediation).
 - `conditionalGet`
-  - : The client is capable of conditional mediation when authenticating credentials (using [`mediation=conditional`](/en-US/docs/Web/API/CredentialsContainer/get#conditional) in your [`get()`](/en-US/docs/Web/API/CredentialsContainer/get) call).
-    This means that the client supports workflows where the credentials can be silently fetched/auto-filled on sign in.
+  - : The client is capable of authenticating using [discoverable credentials](/en-US/docs/Web/API/Web_Authentication_API#discoverable_credentials_and_conditional_mediation).
     This capability is equivalent to [`isConditionalMediationAvailable()`](/en-US/docs/Web/API/PublicKeyCredential/isConditionalMediationAvailable_static) resolving to `true`.
 - `hybridTransport`
   - : The client supports usage of the [hybrid](/en-US/docs/Web/API/AuthenticatorAttestationResponse/getTransports#hybrid) transport.
-    This means the the client can use authenticators that rely on Bluetooth, NFC or USB.
+    This means that the client can use authenticators that rely on Bluetooth, NFC or USB.
 - `passkeyPlatformAuthenticator`
   - : The client allows usage of a passkey authenticator that supports multi-factor authentication mechanisms such as a PIN or biometric check.
      The authenticator can part of the same platform (device) as the client, or connected via a hybrid transport such as Bluetooth or USB.
      See [Passkeys developer guide for relying parties](https://developers.google.com/identity/passkeys/developer-guides).
 - `userVerifyingPlatformAuthenticator`
-  - : The client supports usage of a user-verifying platform authenticator.
-    These require user input for authorization.
+  - : The client has a platform authenticator (part of the same device) that support multi-factor authentication mechanisms, such as a PIN or biometric check.
+     The credentials may be stored on either the RP or the authenticator.
 - `relatedOrigins`
   - : The client supports [Related Origin Requests](https://web.dev/articles/webauthn-related-origin-requests).
     These clients allow a passkey to be used across multiple sites that have the same origin.
 - `signalAllAcceptedCredentials`
   - : The client supports the [`PublicKeyCredential.signalAllAcceptedCredentials()`](/en-US/docs/Web/API/PublicKeyCredential/signalAllAcceptedCredentials_static) static method.
+     If not supported, then RP workflows will need to prompt the user to manually delete credentials from the authenticator.
 - `signalCurrentUserDetails`
   - : The client supports the [`PublicKeyCredential.signalCurrentUserDetails()`](/en-US/docs/Web/API/PublicKeyCredential/signalCurrentUserDetails_static) static method.
+     If not supported, then RP workflows will need to prompt the user to manuall update user details on the authenticator.  
 - `signalUnknownCredential`
   - : The client supports the [`PublicKeyCredential.signalUnknownCredential()`](/en-US/docs/Web/API/PublicKeyCredential/signalUnknownCredential_static) static method.
+     If not supported, then RP workflows will need to prompt the user to manually delete credentials from the authenticator.
 
 The [web extension](/en-US/docs/Web/API/Web_Authentication_API/WebAuthn_extensions) strings are formatted by prefixing the [extension identifier](/en-US/docs/Web/API/Web_Authentication_API/WebAuthn_extensions#available_extensions) with the prefix `extension:`.
 For example, the key `extension.appid` can be used to check if the [`appid` extension](/en-US/docs/Web/API/Web_Authentication_API/WebAuthn_extensions#appid) is supported.
