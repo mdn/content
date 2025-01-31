@@ -48,7 +48,7 @@ The `findIndex()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Globa
 
 ## Examples
 
-### Find the index of a prime number in an array
+### Find the index of the first prime number in an array
 
 The following example returns the index of the first element in the array that is a prime number, or `-1` if there is no prime number.
 

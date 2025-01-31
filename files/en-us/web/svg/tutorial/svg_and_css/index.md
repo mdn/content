@@ -413,7 +413,7 @@ Notes about this demonstration:
 
 Change the stylesheet so that the inner petals all turn pink when the mouse pointer is over any one of them, without changing the way the outer petals work.
 
-[See a solution to this challenge.](/en-US/docs/Web/Guide/CSS/Getting_started/Challenge_solutions#svg_and_css)
+[See a solution to this challenge.](/en-US/docs/Learn_web_development/Core/Challenges#svg_and_css)
 
 ## Simplified structure
 

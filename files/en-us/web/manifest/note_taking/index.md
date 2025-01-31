@@ -15,7 +15,7 @@ The `note_taking` member identifies a web app as a note-taking app and defines r
 
 An object, which may contain the following values:
 
-- `new_note_url`
+- `new_note_url` {{experimental_inline}}
 
   - : A string representing the URL the developer would prefer the user agent to load when the user wants to take a new note via the web app. This value is a hint, and different implementations may choose to ignore it or provide it as a choice in appropriate places. The `new_note_url` is parsed with the app's manifest URL as its base URL and is ignored if not within the [scope](/en-US/docs/Web/Manifest/scope) of the manifest.
 
