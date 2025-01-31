@@ -71,7 +71,7 @@ document.getElementById("updateShadow").addEventListener("click", () => {
 });
 ```
 
-{{EmbedLiveSample("Examples", "", "220")}}
+{{EmbedLiveSample("Examples", "", "240")}}
 
 Click on the red rectangle to update the drop shadow's blur effect.
 
