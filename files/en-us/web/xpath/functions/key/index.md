@@ -2,9 +2,8 @@
 title: key
 slug: Web/XPath/Functions/key
 page-type: xpath-function
+sidebar: xsltsidebar
 ---
-
-{{XsltSidebar}}
 
 The `key` function returns a node-set of nodes that have the given value for the given key.
 
@@ -17,7 +16,7 @@ key( keyname, value )
 ### Parameters
 
 - `keyname`
-  - : A string containing the name of the [`xsl:key`](/en-US/docs/Web/XSLT/Element/key) element to be used.
+  - : A string containing the name of the [`xsl:key`](/en-US/docs/Web/XSLT/Reference/Element/key) element to be used.
 - `value`
   - : The returned node-set will contain every node that has this value for the given key.
 
@@ -27,7 +26,7 @@ A node set.
 
 ## Description
 
-- The [`xsl:key`](/en-US/docs/Web/XSLT/Element/key) element defines what attribute on what given elements will be used to match the key.
+- The [`xsl:key`](/en-US/docs/Web/XSLT/Reference/Element/key) element defines what attribute on what given elements will be used to match the key.
 
 This function is an XSLT-specific addition to XPath. It is not a part of the core XPath function library.
 

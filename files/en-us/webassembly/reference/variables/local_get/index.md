@@ -2,9 +2,8 @@
 title: Local get
 slug: WebAssembly/Reference/Variables/Local_get
 page-type: webassembly-instruction
+sidebar: webassemblysidebar
 ---
-
-{{WebAssemblySidebar}}
 
 The **`local.get`** instruction loads the value of a local variable onto the stack.
 

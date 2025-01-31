@@ -70,7 +70,7 @@ You should have most of the pieces of software already if you've been following 
 
 Besides the tools we're going to install that contribute to our toolchain, you will need to create an account with GitHub if you wish to complete the tutorial. However, you can still follow the local development part without it. As mentioned previously, GitHub is a source code repository service that adds community features such as issue tracking, following project releases, and much more. In the next chapter, we will push to a GitHub code repository, which will cause a cascade effect that (should) deploy all the software to a home on the web.
 
-Signed up for [GitHub](https://github.com/) by clicking the _Sign Up_ link on the homepage if you don't already have an account, and follow the instructions.
+Sign up for [GitHub](https://github.com/) by clicking the _Sign Up_ link on the homepage if you don't already have an account, and follow the instructions.
 
 ### Installing git
 

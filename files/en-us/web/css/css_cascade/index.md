@@ -5,6 +5,7 @@ page-type: css-module
 spec-urls:
   - https://drafts.csswg.org/css-cascade/
   - https://drafts.csswg.org/css-cascade-5/
+  - https://drafts.csswg.org/css-cascade-6/
 ---
 
 {{CSSRef}}
