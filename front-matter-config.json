@@ -30,7 +30,7 @@
       },
       "sidebar": {
         "title": "Sidebar navigation",
-        "description": "A sidebar defined as YAML in /files/en-us/sidebars",
+        "description": "Sidebar navigation(s) to show, defined as YAML in /files/en-us/sidebars",
         "type": ["array", "string"],
         "items": {
           "type": "string",
