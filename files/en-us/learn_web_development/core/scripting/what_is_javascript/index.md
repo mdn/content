@@ -72,14 +72,14 @@ button {
 And finally, we can add some JavaScript to implement dynamic behavior:
 
 ```js
-const button = document.querySelector("button");
-
-button.addEventListener("click", updateName);
-
 function updateName() {
   const name = prompt("Enter a new name");
   button.textContent = `Player 1: ${name}`;
 }
+
+const button = document.querySelector("button");
+
+button.addEventListener("click", updateName);
 ```
 
 {{ EmbedLiveSample('A_high-level_definition', '100%', 80) }}
@@ -151,60 +151,26 @@ This means that you need to be careful what order you put things in.
 For example, let's return to the block of JavaScript we saw in our first example:
 
 ```js
-const button = document.querySelector("button");
-
-button.addEventListener("click", updateName);
-
 function updateName() {
   const name = prompt("Enter a new name");
   button.textContent = `Player 1: ${name}`;
 }
+
+const button = document.querySelector("button");
+
+button.addEventListener("click", updateName);
 ```
 
-Here we first select a button using `document.querySelector`, then attaching an event listener to it using `addEventListener` so that when the button is clicked, the `updateName()` code block (lines 5–8) is run. The `updateName()` code block (these types of reusable code blocks are called "functions") asks the user for a new name, and then inserts that name into the button text to update the display.
+Here we first select a button using `document.querySelector`, then attaching an event listener to it using `addEventListener` so that when the button is clicked, the `updateName()` code block (lines 1–4) is run. The `updateName()` code block (these types of reusable code blocks are called "functions") asks the user for a new name, and then inserts that name into the button text to update the display.
 
-If you swapped the order of the first two lines of code, it would no longer work — instead, you'd get an error returned in the [browser developer console](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools) — `Uncaught ReferenceError: Cannot access 'button' before initialization`.
+If you were to place the `addEventListener` code block before the button element selection (i.e., swapping the order of `const button = ...` and `button.addEventListener(...)`), it would no longer work — instead, you'd get an error returned in the [browser developer console](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools) — `Uncaught ReferenceError: Cannot access 'button' before initialization`.
 This means that the `button` object has not been initialized yet, so we can't add an event listener to it.
 
 > [!NOTE]
 > This is a very common error — you need to be careful that the objects referenced in your code exist before you try to do stuff to them.
 
-You might wonder why this code works, since we're using `updateName` before we define it. This is because of how JavaScript handles function declarations:
-
-1. During the initial parsing phase, JavaScript "hoists" (moves) all function declarations to the top of their scope.
-2. Then the code executes from top to bottom.
-
-So the code above is effectively processed as if it were written like this:
-
-```js
-// Behind the scenes, JavaScript hoists the function declaration
-function updateName() {
-  const name = prompt("Enter a new name");
-  button.textContent = `Player 1: ${name}`;
-}
-
-const button = document.querySelector("button");
-button.addEventListener("click", updateName);
-```
-
-However, this hoisting behavior only works for function declarations (using the `function` keyword). It does not work the same way for variables or function expressions:
-
-```js
-button.addEventListener("click", updateName); // Error: button is undefined
-
-const button = document.querySelector("button");
-
-const updateName = function () {
-  // This function expression is not hoisted
-  const name = prompt("Enter a new name");
-  button.textContent = `Player 1: ${name}`;
-};
-```
-
 > [!NOTE]
-> While function hoisting allows you to use functions before their declaration in the code, it's generally considered good practice to declare your functions before you use them. This makes your code easier to read and understand.
-
-To learn more about how JavaScript handles declarations and hoisting, see our detailed guide on [hoisting](/en-US/docs/Glossary/Hoisting).
+> It is not always true that JavaScript runs in order from top to bottom, due to behaviors like [hoisting](/en-US/docs/Glossary/Hoisting), but don't worry too much about this for now.
 
 ### Interpreted versus compiled code
 
