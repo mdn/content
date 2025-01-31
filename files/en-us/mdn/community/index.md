@@ -9,8 +9,6 @@ sidebar: mdnsidebar
 👋 Welcome to MDN Web Docs, an open-source, collaborative project that documents web platform technologies, including [HTML](/en-US/docs/Web/HTML), [CSS](/en-US/docs/Web/CSS), [JavaScript](/en-US/docs/Web/JavaScript), and [Web APIs](/en-US/docs/Web/API).
 We also provide extensive [learning resources](/en-US/docs/Learn_web_development) for early-stage developers and students.
 
-## Community resources
-
 - [Getting started](/en-US/docs/MDN/Community/Getting_started)
   - : This section explains how you can start contributing and the type of contributions we accept.
     Anyone can contribute, and each person who does contribute has an impact on millions of readers.

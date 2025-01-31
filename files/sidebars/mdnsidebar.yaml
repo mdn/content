@@ -27,15 +27,14 @@ sidebar:
       - /MDN/Writing_guidelines/Attrib_copyright_license
       - type: listSubPages
         path: /MDN/Writing_guidelines/Howto
+        includeParent: true
         title: how_to_guides
         details: closed
-        includeParent: true
       - type: listSubPages
         path: /MDN/Writing_guidelines/Page_structures
+        includeParent: true
         title: page_structures
         details: closed
-        includeParent: true
-
 l10n:
   de:
     community_resources: Gemeinschaftsrichtlinien

@@ -51,7 +51,7 @@ It rarely improves communication, and can make it harder for others to participa
 
 Be supportive and respectful even if you disagree with someone, or don't like a decision they've made.
 Be aware that there are rules in place in any good OSP to protect its contributors against being made to feel uncomfortable while contributing.
-This usually can be found in a `CODE_OF_CONDUCT.md` file on GitHub.
+This usually can be found in a `CODE_OF_CONDUCT.md` file on GitHub (see [`mdn/content` CODE_OF_CONDUCT](https://github.com/mdn/content/blob/main/CODE_OF_CONDUCT.md) for an example).
 
 MDN's repos are governed by the wide-reaching [Mozilla Community Participation Guidelines](https://www.mozilla.org/en-US/about/governance/policies/participation/) (CPG).
 Usually mildly offensive behavior on MDN Web Docs repos (such as constantly being off-topic/disruptive, or being rude) will be first responded to with a warning, followed by a final warning, then a temporary or permanent ban.
@@ -78,7 +78,7 @@ You should read style guides if they have one, and if in doubt about whether som
 
 ## Read the manual
 
-Good OSPs will always make contributor documentation readily available. On GitHub projects, it is usually in the repo's CONTRIBUTING.md file, or sometimes in the project's README.md file. Being a documentation project, MDN content has a [README](https://github.com/mdn/content/blob/main/README.md) and a decent set of contributor docs on the site itself (see [Contributing to MDN Web Docs](/en-US/docs/MDN/Community)).
+Good OSPs will always make contributor documentation readily available. On GitHub projects, it is usually in the repo's CONTRIBUTING.md file, or sometimes in the project's README.md file. Being a documentation project, MDN content has a [README](https://github.com/mdn/content/blob/main/README.md) and a decent set of contributor docs on the site itself (see [Community resources](/en-US/docs/MDN/Community)).
 
 Don't be afraid to ask for help, but always try to find the answer to your question first before asking.
 This way you build up your knowledge of the project and become more independent, and don't put unnecessary burden on the other contributors.

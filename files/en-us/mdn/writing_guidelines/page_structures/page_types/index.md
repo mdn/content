@@ -241,7 +241,7 @@ The list of subpages can be generated automatically using the [`SubpagesWithSumm
 - [Web APIs](/en-US/docs/Web/API)
 - [JavaScript](/en-US/docs/Web/JavaScript)
 - [Learn web development](/en-US/docs/Learn_web_development)
-- [Contributing to MDN](/en-US/docs/MDN/Community)
+- [Community resources](/en-US/docs/MDN/Community)
 
 ## See also
 
