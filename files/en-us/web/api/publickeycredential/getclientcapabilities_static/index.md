@@ -130,7 +130,7 @@ Before calling the function we check that it is defined, and log the result.
 
 ```js
 // Call the function to check capabilities.
-if (typeof PublicKeyCredential.getClientCapabilities === "function") {
+if (PublicKeyCredential.getClientCapabilities) {
   checkClientCapabilities();
 } else {
   log(
