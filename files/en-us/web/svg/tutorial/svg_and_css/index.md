@@ -433,7 +433,6 @@ See below how the structure then looks like.
     rel="stylesheet"
     href="style8.css"
     type="text/css" />
-
   <title>SVG demonstration</title>
   <desc>Mozilla CSS Getting Started - SVG demonstration</desc>
 
