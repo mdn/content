@@ -5,6 +5,8 @@ page-type: http-header
 browser-compat: http.headers.X-Frame-Options
 ---
 
+{{HTTPSidebar}}
+
 > [!NOTE]
 > For more comprehensive options than offered by this header, see the {{HTTPHeader("Content-Security-Policy/frame-ancestors", "frame-ancestors")}} directive in a {{HTTPHeader("Content-Security-Policy")}} header.
 
