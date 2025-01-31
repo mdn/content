@@ -10,7 +10,7 @@ browser-compat: api.PublicKeyCredential.getClientCapabilities_static
 
 The **`getClientCapabilities()`** static method of the {{domxref("PublicKeyCredential")}} interface returns a {{jsxref("Promise")}} that resolves with an object that can be used to check whether or not particular WebAuthn client capabilities and [extensions](/en-US/docs/Web/API/Web_Authentication_API/WebAuthn_extensions) are supported.
 
-A web application can use the information to appropriately customize the user interface and workflows.
+A relying party (RP) can use this information to appropriately customize its sign-in and sign-up user interfaces and workflows.
 
 ## Syntax
 
@@ -66,30 +66,28 @@ The returned {{jsxref("Promise")}} may be rejected with the following values:
 
 ## Description
 
-The method allows you to check if a given capability or extension is supported, and use the information offer an appropriate user experience.
+`getClientCapabilities()` allows you to check if a given capability or extension is supported, and use the information to offer an appropriate user experience.
 
 For example, support for the `userVerifyingPlatformAuthenticator` capability indicates that biometrics such as a fingerprint sensor are allowed.
 A web application could use this to display a fingerprint icon if the capability is supported, or a password input if it is not.
 If biometric login is required, then it could instead provide notification that the site cannot authenticate using this browser or device.
-Similarly, `conditionalGet` indicates that the client supports conditional mediation when signing in a user, which allows for the browser to silently autofill credentials.
-In this case the user might simply be offered a sign-in button in order to log in to the site.
+Similarly, `conditionalGet` indicates that the client supports conditional mediation when signing in a user, which means the browser can provide autofilled discoverable credentials in a login form (for example an autocompeting text field or a drop-down list), along with a sign-in button.
 
-If the value of a given capability is present in the map, then `true` indicates that the capability is currently supported, and `false` indicates that it is not.
-However if a key is not present for a particular capability, no assumptions can be made about the availability of the associated feature.
+If the value of a given capability is present in the returned object, then `true` indicates that the capability is currently supported, and `false` indicates that it is not.
+However, if a key is not present for a particular capability, no assumptions can be made about the availability of the associated feature.
 
 For an extension the assumptions are the same.
 Note though, that even if the extension is supported by the client a particular authenticator may not support that extension, so RPs must not assume that this is a guarantee that the authenticator processing steps for that extension will be performed.
-If the key is not present for an extension then a Relying Party (RP) can't assume that client processing steps for that extension will be carried out by this client or that the extension will be forwarded to the authenticator.
+If the key is not present for an extension, an RP can't assume that the client processing steps for that extension will be carried out by this client, or that the extension will be forwarded to the authenticator.
 
 ## Examples
 
 ### Check all capabilities
 
-This example shows how to get the capabilities object and iterates its values.
+This example shows how to get the capabilities object and iterate its values.
 
 ```html hidden
 <pre id="log"></pre>
-<button id="reset" type="button">Reset</button>
 ```
 
 ```js hidden
@@ -98,12 +96,6 @@ function log(text) {
   logElement.innerText = `${logElement.innerText}${text}\n`;
   logElement.scrollTop = logElement.scrollHeight;
 }
-
-const reload = document.querySelector("#reset");
-
-reload.addEventListener("click", () => {
-  window.location.reload(true);
-});
 ```
 
 ```css hidden
@@ -153,7 +145,7 @@ if (typeof PublicKeyCredential.getClientCapabilities === "function") {
 
 ### Test for user verifying platform authenticator
 
-This example checks a single capability `userVerifyingPlatformAuthenticator`, and might then use the result to configure the user interface.
+This example checks a single capability, `userVerifyingPlatformAuthenticator`. A real application might use the result to configure the user interface.
 
 ```html hidden
 <pre id="log"></pre>

@@ -119,14 +119,17 @@ A typical authentication flow is as follows:
 
 ### Customizing workflows based on client capabilities
 
-The signup and login workflows can be customized based on the capabilities of the WebAuthn client (browser), which can be obtained using the {{domxref("PublicKeyCredential.getClientCapabilities_static", "PublicKeyCredential.getClientCapabilities()")}} static method.
+The signup and login workflows can be customized based on the capabilities of the WebAuthn client (browser). The {{domxref("PublicKeyCredential.getClientCapabilities_static", "PublicKeyCredential.getClientCapabilities()")}} static method can be used to query those capabilities; it returns an object where each key refers to a WebAuthn capability or extension, and each value is a boolean indicating support for that feature.
 
-This method returns an object with properties named for capabilities or WebAuthn extensions, where the corresponding value indicates whether the feature is supported.
-This can be used, for example, to check various kinds of authenticators that the client supports, such as passkeys or biometric user verification, whether the client supports methods to keep relying party and authenticator credentials in sync, or allow a single passkey to be used on different websites with the same origin.
+This can be used, for example, to check:
 
-The code below shows how you might use the method to check if the client supports authenticators that offer biometric user verification.
+- Client support for various authenticators such as passkeys or biometric user verification.
+- Whether the client supports methods to keep relying party and authenticator credentials in sync
+- Whether the client allows a single passkey to be used on different websites with the same origin.
+
+The code below shows how you might use `getClientCapabilities()` to check if the client supports authenticators that offer biometric user verification.
 Note that the actual actions performed depend on your site.
-For sites that _require_ biometric authentication you might replace the login UI with a page indicating that a different browser must be used.
+For sites that _require_ biometric authentication, you might replace the login UI with a message indicating that biometric authentication is needed, and the user should try a different browser or device.
 
 ```js
 async function checkisUserVerifyingPlatformAuthenticatorAvailable() {
