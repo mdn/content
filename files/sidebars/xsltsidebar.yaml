@@ -14,18 +14,8 @@ sidebar:
   - type: listSubPages
     path: /Web/EXSLT
   - type: section
-    link: /Web/XPath
+    link: /Web/XPath/Functions
   - type: listSubPages
-    path: /Web/XPath/Guides
-    title: Guides
-    includeParent: true
-  - title: Reference
-    link: /Web/XPath/Reference
-  - children:
-      - type: listSubPages
-        path: /Web/XPath/Reference/Functions
-        title: Functions
-        details: closed
-        includeParent: true
-        code: true
-      - /Web/XPath/Reference/Axes
+    path: /Web/XPath/Functions
+  - type: section
+    link: /Web/XPath/Axes
