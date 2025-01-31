@@ -22,7 +22,7 @@ You can convert from `Date` to `Temporal.Instant` using the {{jsxref("Date.proto
 `Instant` objects can be serialized and parsed using the [RFC 9557](https://datatracker.ietf.org/doc/html/rfc9557) format, an extension to the [ISO 8601 / RFC 3339](https://datatracker.ietf.org/doc/html/rfc3339) format. The string has the following form (spaces are only for readability and should not be present in the actual string):
 
 ```plain
-YYYY-MM-DD T HH:mm:ss.sssssssss Z/±HH:mm:ss.sssssssss
+YYYY-MM-DD T HH:mm:ss.sssssssss Z/±HH:mm
 ```
 
 - `YYYY`
@@ -39,8 +39,8 @@ YYYY-MM-DD T HH:mm:ss.sssssssss Z/±HH:mm:ss.sssssssss
   - : A two-digit number from `00` to `59`. Defaults to `00`.
 - `ss.sssssssss` {{optional_inline}}
   - : A two-digit number from `00` to `59`. May optionally be followed by a `.` or `,` and one to nine digits. Defaults to `00`. The `HH`, `mm`, and `ss` components can be separated by `:` or nothing. You can omit either just `ss` or both `ss` and `mm`, so the time can be one of three forms: `HH`, `HH:mm`, or `HH:mm:ss.sssssssss`.
-- `Z/±HH:mm:ss.sssssssss`
-  - : Either the UTC designator `Z` or `z`, or an offset from UTC in the form `+` or `-` followed by the same format as the time component. Note that subminute precision may be unsupported by other systems. If an offset is provided, the time is interpreted in the specified offset.
+- `Z/±HH:mm`
+  - : Either the UTC designator `Z` or `z`, or an offset from UTC in the form `+` or `-` followed by the same format as the time component. Note that subminute precision (`:ss.sssssssss`) may be unsupported by other systems, and is accepted but never output. If an offset is provided, the time is interpreted in the specified offset.
 
 As an input, you may optionally include the time zone identifier and calendar, in the same format as [`ZonedDateTime`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#rfc_9557_format), but they will be ignored. Other annotations in the `[key=value]` format are also ignored, and they must not have the critical flag.
 

@@ -318,7 +318,7 @@ The concept of a "week" is not connected with any astronomical event, but is a c
 All `Temporal` classes can be serialized and deserialized using the format specified in [RFC 9557](https://datatracker.ietf.org/doc/html/rfc9557), which is based on [ISO 8601 / RFC 3339](https://datatracker.ietf.org/doc/html/rfc3339). The format, in its full form, is as follows (spaces are only for readability and should not be present in the actual string):
 
 ```plain
-YYYY-MM-DD T HH:mm:ss.sssssssss Z/±HH:mm:ss.sssssssss [time_zone_id] [u-ca=calendar_id]
+YYYY-MM-DD T HH:mm:ss.sssssssss Z/±HH:mm [time_zone_id] [u-ca=calendar_id]
 ```
 
 Different classes have different requirements for the presence of each component, so you will find a section titled "RFC 9557 format" in each class's documentation, which specifies the format recognized by that class.
