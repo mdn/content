@@ -124,7 +124,7 @@ The signup and login workflows can be customized based on the capabilities of th
 This can be used, for example, to check:
 
 - Client support for various authenticators such as passkeys or biometric user verification.
-- Whether the client supports methods to keep relying party and authenticator credentials in sync
+- Whether the client [supports methods to keep relying party and authenticator credentials in sync](/en-US/docs/Web/API/Web_Authentication_API#discoverable_credential_synchronization_methods).
 - Whether the client allows a single passkey to be used on different websites with the same origin.
 
 The code below shows how you might use `getClientCapabilities()` to check if the client supports authenticators that offer biometric user verification.
