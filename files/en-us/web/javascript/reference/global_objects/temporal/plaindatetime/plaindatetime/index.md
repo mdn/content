@@ -58,7 +58,7 @@ A new `Temporal.PlainDateTime` object, representing the date-time specified by t
 ### Exceptions
 
 - {{jsxref("RangeError")}}
-  - : Thrown if any of the components is not a finite number, or they don't represent a valid date-time.
+  - : Thrown if any of the components is not a finite number, or they don't represent a valid date-time, or represent a date-time that is outside the range of supported dates (about a quarter million years in the future or past)
 
 ## Examples
 

@@ -58,6 +58,7 @@ A new `Temporal.ZonedDateTime` object, representing the date and time specified 
     - The provided properties that specify the same component are inconsistent.
     - The provided non-numerical properties are not valid; for example, if `monthCode` is never a valid month code in this calendar.
     - The provided numerical properties are out of range, and `options.overflow` is set to `"reject"`.
+    - The provided string or properties form a date and time that are outside the range of supported dates (about a quarter million years in the future or past).
 
 ## Examples
 
