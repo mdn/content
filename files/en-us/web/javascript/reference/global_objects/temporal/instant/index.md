@@ -15,7 +15,7 @@ The **`Temporal.Instant`** object represents a unique point in history, with nan
 
 `Temporal.Instant` is semantically the same as {{jsxref("Date")}}. They both encapsulate a single point in time, but `Temporal.Instant` is more precise because it stores nanoseconds rather than milliseconds. `Temporal.Instant` also avoids pitfalls of `Date` because it does not assume any calendar or time zone information—if you want to read any date or time information such as year or month, you need to convert it to a {{jsxref("Temporal.ZonedDateTime")}} first, using {{jsxref("Temporal/Instant/toZonedDateTimeISO()", "toZonedDateTimeISO()")}}.
 
-You can convert from `Date` to `Temporal.Instant` using the {{jsxref("Date.prototype.toTemporalInstant()")}} method, which should be preferred over other methods such as `Temporal.Instant.fromEpochMilliseconds()` because the former involves less user code and may be more optimized. You can also convert from `Temporal.Instant` to `Date` using its epoch milliseconds, such as `new Date(instant.epochMilliseconds)`.
+You can convert from `Date` to `Temporal.Instant` using the {{jsxref("Date.prototype.toTemporalInstant()")}} method, which should be preferred over other methods such as {{jsxref("Temporal/Instant/fromEpochMilliseconds", "Temporal.Instant.fromEpochMilliseconds()")}} because the former involves less user code and may be more optimized. You can also convert from `Temporal.Instant` to `Date` using its epoch milliseconds, such as `new Date(instant.epochMilliseconds)`.
 
 ### RFC 9557 format
 
