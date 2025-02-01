@@ -44,11 +44,11 @@ There are many other undesirable legacies about `Date`, such as all setters bein
     - As a timestamp: {{jsxref("Temporal.Instant")}}
     - As a date-time component combination paired with a time zone: {{jsxref("Temporal.ZonedDateTime")}}
   - Representing a time-zone-unaware date/time (which are all prefixed with "Plain"):
-    - Date (year, month, day) + time (hour, minute, second, millisecond, nanosecond): {{jsxref("Temporal.PlainDateTime")}} (Note: `ZonedDateTime` is equivalent to `PlainDateTime` plus a time zone)
+    - Date (year, month, day) + time (hour, minute, second, millisecond, microsecond, nanosecond): {{jsxref("Temporal.PlainDateTime")}} (Note: `ZonedDateTime` is equivalent to `PlainDateTime` plus a time zone)
       - Date (year, month, day): {{jsxref("Temporal.PlainDate")}}
         - Year, month: {{jsxref("Temporal.PlainYearMonth")}}
         - Month, day: {{jsxref("Temporal.PlainMonthDay")}}
-      - Time (hour, minute, second, millisecond, nanosecond): {{jsxref("Temporal.PlainTime")}}
+      - Time (hour, minute, second, millisecond, microsecond, nanosecond): {{jsxref("Temporal.PlainTime")}}
 
 Furthermore, there's also another utility namespace, {{jsxref("Temporal.Now")}}, which provides methods for getting the current time in various formats.
 
@@ -265,7 +265,7 @@ With these tables, you should have a basic idea of how to navigate the `Temporal
 
 ### Calendars
 
-A calendar is a way to organize days, typically into periods of weeks, months, years, and eras. Most of the world uses the Gregorian calendar, but there are many other calendars in use, especially in religious and cultural contexts. By default, all calendar-aware `Temporal` objects use the ISO 8601 calendar system, which is based on the Gregorian calendar and defines additional week-numbering rules. {{jsxref("Intl/Locale/getCalendars", "Intl.Locale.prototype.getCalendars()")}} lists most of the calendars likely to be supported by browsers. Here we provide a brief overview of how calendar systems are formed to help you internalize what factors may vary between calendars.
+A calendar is a way to organize days, typically into periods of weeks, months, years, and eras. Most of the world uses the Gregorian calendar, but there are many other calendars in use, especially in religious and cultural contexts. By default, all calendar-aware `Temporal` objects use the ISO 8601 calendar system, which is based on the Gregorian calendar and defines additional week-numbering rules. [`Intl.supportedValuesOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#supported_calendar_types) lists most of the calendars likely to be supported by browsers. Here we provide a brief overview of how calendar systems are formed to help you internalize what factors may vary between calendars.
 
 There are three prominent periodic events on Earth: its rotation around the sun (365.242 days for one revolution), the moon's rotation around the Earth (29.53 days from new moon to new moon), and its rotation around its axis (24 hours from sunrise to sunrise). Every culture has the same measure of a "day", which is 24 hours. Occasional changes such as daylight saving time are not part of the calendar, but are part of the [time zone](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#time_zones_and_offsets)'s information.
 
