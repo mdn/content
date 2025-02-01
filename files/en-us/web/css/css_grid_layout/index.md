@@ -145,7 +145,7 @@ The example below shows a three-column track grid with new rows created at a min
   - [Grid axis](/en-US/docs/Glossary/Grid_Axis)
   - [Grid row](/en-US/docs/Glossary/Grid_Row)
   - [Grid column](/en-US/docs/Glossary/Grid_Column)
-- [CSS fragmentation](/en-US/docs/Web/CSS/CSS_fragmentation) module
+- [CSS box alignment](/en-US/docs/Web/CSS/CSS_box_alignment) module
   - {{CSSxRef("row-gap")}}
   - {{CSSxRef("column-gap")}}
   - {{CSSxRef("gap")}}
