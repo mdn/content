@@ -17,7 +17,7 @@ The inserted item is the item itself and not a copy.
 ## Syntax
 
 ```js-nolint
-SVGNumberList.appendItem(newItem)
+appendItem(newItem)
 ```
 
 ### Parameters

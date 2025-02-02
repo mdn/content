@@ -15,8 +15,8 @@ To mutate the matrix as you skew it along the x-axis, see {{domxref("DOMMatrix.s
 ## Syntax
 
 ```js-nolint
-DOMMatrixReadOnly.skewX()
-DOMMatrixReadOnly.skewX(sX)
+skewX()
+skewX(sX)
 ```
 
 ### Parameters

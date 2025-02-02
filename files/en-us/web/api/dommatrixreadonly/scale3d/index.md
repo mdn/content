@@ -15,12 +15,12 @@ To mutate the matrix as you 3D-scale it, see {{domxref("DOMMatrix.scale3dSelf()"
 
 ## Syntax
 
-```js
-DOMMatrixReadOnly.scale3d();
-DOMMatrixReadOnly.scale3d(scale);
-DOMMatrixReadOnly.scale3d(scale, originX);
-DOMMatrixReadOnly.scale3d(scale, originX, originY);
-DOMMatrixReadOnly.scale3d(scale, originX, originY, originZ);
+```js-nolint
+scale3d()
+scale3d(scale)
+scale3d(scale, originX)
+scale3d(scale, originX, originY)
+scale3d(scale, originX, originY, originZ)
 ```
 
 ### Parameters

@@ -23,7 +23,7 @@ The first item is indexed at `0`. The inserted item is the item itself and not a
 ## Syntax
 
 ```js-nolint
-SVGNumberList.insertItemBefore(newItem, index)
+insertItemBefore(newItem, index)
 ```
 
 ### Parameters

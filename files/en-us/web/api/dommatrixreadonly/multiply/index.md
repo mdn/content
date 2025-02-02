@@ -15,8 +15,8 @@ To mutate the matrix as you multiply it, see {{domxref("DOMMatrix.multiplySelf()
 ## Syntax
 
 ```js-nolint
-  DOMMatrixReadOnly.multiply()
-  DOMMatrixReadOnly.multiply(otherMatrix)
+multiply()
+multiply(otherMatrix)
 ```
 
 ### Parameters

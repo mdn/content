@@ -15,10 +15,10 @@ To mutate the matrix as you rotate it, see {{domxref("DOMMatrix.rotateSelf()")}}
 ## Syntax
 
 ```js-nolint
-DOMMatrixReadOnly.rotate()
-DOMMatrixReadOnly.rotate(rotX)
-DOMMatrixReadOnly.rotate(rotX, rotY)
-DOMMatrixReadOnly.rotate(rotX, rotY, rotZ)
+rotate()
+rotate(rotX)
+rotate(rotX, rotY)
+rotate(rotX, rotY, rotZ)
 ```
 
 ### Parameters

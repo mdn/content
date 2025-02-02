@@ -15,7 +15,7 @@ To invert a matrix without mutating it, see {{domxref("DOMMatrixReadOnly.inverse
 ## Syntax
 
 ```js-nolint
-  DOMMatrix.invertSelf()
+invertSelf()
 ```
 
 ### Return value

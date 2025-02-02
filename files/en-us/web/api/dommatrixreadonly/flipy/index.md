@@ -13,7 +13,7 @@ The **`flipY()`** method of the {{domxref("DOMMatrixReadOnly")}} interface creat
 ## Syntax
 
 ```js-nolint
-  DOMMatrixReadOnly.flipY()
+flipY()
 ```
 
 ### Return value

@@ -13,8 +13,8 @@ The **`preMultiplySelf()`** method of the {{domxref("DOMMatrix")}} interface mod
 ## Syntax
 
 ```js-nolint
-  DOMMatrix.preMultiplySelf()
-  DOMMatrix.preMultiplySelf(otherMatrix)
+preMultiplySelf()
+preMultiplySelf(otherMatrix)
 ```
 
 ### Parameters

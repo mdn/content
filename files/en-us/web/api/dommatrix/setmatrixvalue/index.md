@@ -13,7 +13,7 @@ The **`setMatrixValue()`** method of the {{domxref("DOMMatrix")}} interface repl
 ## Syntax
 
 ```js-nolint
-  DOMMatrix.setMatrixValue( transformList )
+setMatrixValue(transformList)
 ```
 
 ### Parameters

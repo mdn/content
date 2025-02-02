@@ -13,12 +13,6 @@ browser-compat: api.NDEFRecord.mediaType
 The **`mediaType`**
 property of the {{DOMxRef("NDEFRecord")}} interface returns the {{Glossary("MIME type")}} of the record. This value will be `null` if `recordType` is not equal to `"mime"`.
 
-## Syntax
-
-```js-nolint
-NDEFRecord.mediaType
-```
-
 ### Value
 
 A string, containing the {{Glossary("MIME type")}} of the record
