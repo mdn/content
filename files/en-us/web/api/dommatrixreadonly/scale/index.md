@@ -14,15 +14,13 @@ original matrix with a scale transform applied.
 
 ## Syntax
 
-The `scale()` method is specified with either one or six values.
-
-```js
-DOMMatrixReadOnly.scale(scaleX);
-DOMMatrixReadOnly.scale(scaleX, scaleY);
-DOMMatrixReadOnly.scale(scaleX, scaleY, scaleZ);
-DOMMatrixReadOnly.scale(scaleX, scaleY, scaleZ, originX);
-DOMMatrixReadOnly.scale(scaleX, scaleY, scaleZ, originX, originY);
-DOMMatrixReadOnly.scale(scaleX, scaleY, scaleZ, originX, originY, originZ);
+```js-nolint
+scale(scaleX)
+scale(scaleX, scaleY)
+scale(scaleX, scaleY, scaleZ)
+scale(scaleX, scaleY, scaleZ, originX)
+scale(scaleX, scaleY, scaleZ, originX, originY)
+scale(scaleX, scaleY, scaleZ, originX, originY, originZ)
 ```
 
 ### Parameters

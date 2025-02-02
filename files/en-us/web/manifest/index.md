@@ -1,11 +1,12 @@
 ---
 title: Web app manifests
+short-title: Manifest
 slug: Web/Manifest
 page-type: landing-page
 browser-compat: html.manifest
 ---
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}
+{{QuickLinksWithSubpages("/en-US/docs/Web/Manifest/Reference")}}
 
 A **web application manifest**, defined in the [Web Application Manifest](https://w3c.github.io/manifest/) specification, is a {{Glossary("JSON")}} text file that provides information about a web application.
 
@@ -19,10 +20,10 @@ This section lists the members that may appear in the manifest.
 
 All members are optional in the specification, but some applications require some members to be present. For example, [PWAs must provide certain manifest members](/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable#required_manifest_members).
 
-{{ListSubpages("/en-US/docs/Web/Manifest")}}
+{{ListSubpages("/en-US/docs/Web/Manifest/Reference")}}
 
 > [!NOTE]
-> The `dir`, `lang`, `iarc_rating_id`, and `note_taking` members are not implemented.
+> The `dir`, `lang`, and `iarc_rating_id` members are not implemented.
 
 ## Example manifest
 
@@ -69,9 +70,9 @@ If the manifest requires credentials to fetch, the [`crossorigin`](/en-US/docs/W
 
 In some browsers and operating systems, a splash screen is displayed when an installed PWA is launched. This splash screen is automatically generated and its appearance is defined by members in the web app manifest, specifically:
 
-- [`name`](/en-US/docs/Web/Manifest/name)
-- [`background_color`](/en-US/docs/Web/Manifest/background_color)
-- [`icons`](/en-US/docs/Web/Manifest/icons)
+- [`name`](/en-US/docs/Web/Manifest/Reference/name)
+- [`background_color`](/en-US/docs/Web/Manifest/Reference/background_color)
+- [`icons`](/en-US/docs/Web/Manifest/Reference/icons)
 
 ## Browser compatibility
 

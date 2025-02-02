@@ -55,7 +55,7 @@ Intl.Collator(locales, options)
     - `localeMatcher`
       - : The locale matching algorithm to use. Possible values are `"lookup"` and `"best fit"`; the default is `"best fit"`. For information about this option, see [Locale identification and negotiation](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation).
     - `collation`
-      - : Variant collations for certain locales, such as `"emoji"`, `"pinyin"`, `"stroke"`, and so on. For a list of supported collation types, see [`Intl.Locale.prototype.getCollations()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/getCollations#supported_collation_types); the default is `"default"`. This option can also be set through the `co` Unicode extension key; if both are provided, this `options` property takes precedence.
+      - : Variant collations for certain locales, such as `"emoji"`, `"pinyin"`, `"stroke"`, and so on. For a list of supported collation types, see [`Intl.supportedValuesOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#supported_collation_types); the default is `"default"`. This option can also be set through the `co` Unicode extension key; if both are provided, this `options` property takes precedence.
     - `numeric`
       - : Whether numeric collation should be used, such that "1" < "2" < "10". Possible values are `true` and `false`; the default is `false`. This option can also be set through the `kn` Unicode extension key; if both are provided, this `options` property takes precedence.
     - `caseFirst`

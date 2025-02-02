@@ -2,9 +2,8 @@
 title: Page types
 slug: MDN/Writing_guidelines/Page_structures/Page_types
 page-type: mdn-writing-guide
+sidebar: mdnsidebar
 ---
-
-{{MDNSidebar}}
 
 There are a number of types of pages that are used repeatedly on MDN.
 This article describes these page types, their purpose, and gives examples of each and templates to use when creating a new page.
@@ -242,7 +241,7 @@ The list of subpages can be generated automatically using the [`SubpagesWithSumm
 - [Web APIs](/en-US/docs/Web/API)
 - [JavaScript](/en-US/docs/Web/JavaScript)
 - [Learn web development](/en-US/docs/Learn_web_development)
-- [Contributing to MDN](/en-US/docs/MDN/Community/Contributing)
+- [Community resources](/en-US/docs/MDN/Community)
 
 ## See also
 

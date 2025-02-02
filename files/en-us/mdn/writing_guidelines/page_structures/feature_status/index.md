@@ -2,9 +2,8 @@
 title: Feature status
 slug: MDN/Writing_guidelines/Page_structures/Feature_status
 page-type: mdn-writing-guide
+sidebar: mdnsidebar
 ---
-
-{{MDNSidebar}}
 
 A feature status provides developers with information about the implementation stage of the feature among browser vendors and is one of the following:
 

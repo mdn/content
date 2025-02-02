@@ -14,7 +14,7 @@ removes all or part of the data from this `CharacterData` node.
 ## Syntax
 
 ```js-nolint
-characterData.deleteData(offset, count)
+deleteData(offset, count)
 ```
 
 ### Parameters
