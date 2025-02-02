@@ -35,7 +35,7 @@ Next we turn our attention to accessibility tooling, providing information on th
 
 ## Accessibility tools
 
-Let's have a look at the tools can make use of when implementing accessibile websites and fixing accessibility issues.
+Let's have a look at the tools can make use of when implementing accessible websites and fixing accessibility issues.
 
 ### Testing source order
 

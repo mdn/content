@@ -4,7 +4,7 @@ slug: Learn_web_development/Howto/Web_mechanics/What_is_a_URL
 page-type: learn-faq
 ---
 
-{{QuicklinksWithSubPages("Learn/Common_questions")}}
+{{QuicklinksWithSubPages("/en-US/docs/Learn_web_development/Howto")}}
 
 This article discusses Uniform Resource Locators (URLs), explaining what they are and how they're structured.
 

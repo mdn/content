@@ -4,7 +4,7 @@ slug: Learn_web_development/Howto/Tools_and_setup/Checking_that_your_web_site_is
 page-type: learn-faq
 ---
 
-{{QuicklinksWithSubPages("Learn/Common_questions")}}
+{{QuicklinksWithSubPages("/en-US/docs/Learn_web_development/Howto")}}
 
 In this article, we go over various troubleshooting steps for a website and some basic actions to take in order to solve these issues.
 
@@ -38,7 +38,7 @@ Let's see how to diagnose and solve those problems.
 
 ## Active Learning
 
-_There is no active learning available yet. [Please, consider contributing](/en-US/docs/MDN/Community/Contributing/Getting_started)._
+_There is no active learning available yet. [Please, consider contributing](/en-US/docs/MDN/Community/Getting_started)._
 
 ## Dig deeper
 

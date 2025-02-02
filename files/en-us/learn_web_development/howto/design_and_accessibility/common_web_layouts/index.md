@@ -4,7 +4,7 @@ slug: Learn_web_development/Howto/Design_and_accessibility/Common_web_layouts
 page-type: learn-faq
 ---
 
-{{QuicklinksWithSubPages("Learn/Common_questions")}}
+{{QuicklinksWithSubPages("/en-US/docs/Learn_web_development/Howto")}}
 
 When designing pages for your website, it's good to have an idea of the most common layouts.
 
@@ -68,7 +68,7 @@ These are rules of thumb you can draw on. There are complex designs and exceptio
 
 ## Active learning
 
-_There is no active learning available yet. [Please, consider contributing](/en-US/docs/MDN/Community/Contributing/Getting_started)._
+_There is no active learning available yet. [Please, consider contributing](/en-US/docs/MDN/Community/Getting_started)._
 
 ## Deeper dive
 

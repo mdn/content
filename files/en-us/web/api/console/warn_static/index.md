@@ -2,7 +2,7 @@
 title: "console: warn() static method"
 short-title: warn()
 slug: Web/API/console/warn_static
-page-type: web-api-instance-method
+page-type: web-api-static-method
 browser-compat: api.console.warn_static
 ---
 

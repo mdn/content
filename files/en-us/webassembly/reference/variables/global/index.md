@@ -2,9 +2,8 @@
 title: Global
 slug: WebAssembly/Reference/Variables/Global
 page-type: webassembly-instruction
+sidebar: webassemblysidebar
 ---
-
-{{WebAssemblySidebar}}
 
 The **`global`** instruction declares a new global variable.
 

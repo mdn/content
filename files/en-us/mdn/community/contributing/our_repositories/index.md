@@ -1,10 +1,9 @@
 ---
 title: MDN Web Docs Repositories
-slug: MDN/Community/Contributing/Our_repositories
+slug: MDN/Community/Our_repositories
 page-type: mdn-community-guide
+sidebar: mdnsidebar
 ---
-
-{{MDNSidebar}}
 
 [MDN Web Docs](/) is a complex project with lots of moving parts. It's a good idea to get familiar with the projects different repositories. This document intends to help you find the different repositories (repos) you may need when contributing to different parts of the MDN Web Docs project.
 

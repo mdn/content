@@ -29,7 +29,7 @@ Designing your icon as an SVG file is a good idea, as this will allow it to be s
 
 ## Reference your icons in the web app manifest
 
-Use the [`icons`](/en-US/docs/Web/Manifest/icons) web app manifest member to define a set of icons for your PWA.
+Use the [`icons`](/en-US/docs/Web/Manifest/Reference/icons) web app manifest member to define a set of icons for your PWA.
 
 As described in [Create the necessary icon sizes](#create_the_necessary_icon_sizes), you should create multiple versions of your icon to ensure it appears correctly in all the places where it's used. This is why the `icons` member is an array of objects, each of which represents an icon, with its own size, type, and purpose. Each icon object has the following properties:
 
@@ -159,7 +159,7 @@ You can also use tools like [Maskable.app](https://maskable.app/) to preview how
 
 ## See also
 
-- [`icons` manifest member](/en-US/docs/Web/Manifest/icons)
+- [`icons` manifest member](/en-US/docs/Web/Manifest/Reference/icons)
 - [App design](https://web.dev/learn/pwa/app-design#the_icon) on web.dev
 - [Adaptive icon support in PWAs with maskable icons](https://web.dev/articles/maskable-icon) on web.dev
 - [Define icons and a theme color](https://learn.microsoft.com/en-us/microsoft-edge/progressive-web-apps-chromium/how-to/icon-theme-color) on microsoft.com
