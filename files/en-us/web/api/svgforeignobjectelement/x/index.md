@@ -8,9 +8,9 @@ browser-compat: api.SVGForeignObjectElement.x
 
 {{APIRef("SVG")}}
 
-The **`x`** read-only property of the {{domxref("SVGForeignObjectElement")}} interface describes the x-axis coordinate of the **`foreignObject`** element. It reflects the computed value of the {{SVGAttr("x")}} attribute on the {{SVGElement("foreignObject")}} element.
+The **`x`** read-only property of the {{domxref("SVGForeignObjectElement")}} interface describes the x-axis coordinate of the `<foreignObject>` element. It reflects the computed value of the {{SVGAttr("x")}} attribute on the {{SVGElement("foreignObject")}} element.
 
-The attribute value is a [`<length>`](/en-US/docs/Web/SVG/Content_type#length), [`<percentage>`](/en-US/docs/Web/SVG/Content_type#percentage), or [`<number>`](/en-US/docs/Web/SVG/Content_type#number). The numeric value of the {{domxref("SVGAnimatedLength.baseVal")}} is the x-coordinate of the **`foreignObject`** element in the user coordinate system.
+The attribute value is a [`<length>`](/en-US/docs/Web/SVG/Content_type#length), [`<percentage>`](/en-US/docs/Web/SVG/Content_type#percentage), or [`<number>`](/en-US/docs/Web/SVG/Content_type#number). The numeric value of the {{domxref("SVGAnimatedLength.baseVal")}} is the x-coordinate of the `<foreignObject>` element in the user coordinate system.
 
 ## Value
 

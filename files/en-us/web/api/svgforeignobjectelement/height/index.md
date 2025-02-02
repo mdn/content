@@ -8,9 +8,9 @@ browser-compat: api.SVGForeignObjectElement.height
 
 {{APIRef("SVG")}}
 
-The **`height`** read-only property of the {{domxref("SVGForeignObjectElement")}} interface describes the height of the **`foreignObject`** element. It reflects the computed value of the {{SVGAttr("height")}} attribute on the {{SVGElement("foreignObject")}} element.
+The **`height`** read-only property of the {{domxref("SVGForeignObjectElement")}} interface describes the height of the `<foreignObject>` element. It reflects the computed value of the {{SVGAttr("height")}} attribute on the {{SVGElement("foreignObject")}} element.
 
-The attribute value is a [`<length>`](/en-US/docs/Web/SVG/Content_type#length), [`<percentage>`](/en-US/docs/Web/SVG/Content_type#percentage), or [`<number>`](/en-US/docs/Web/SVG/Content_type#number). The numeric value of the {{domxref("SVGAnimatedLength.baseVal")}} is the y-coordinate of the **`foreignObject`** element in the user coordinate system.
+The attribute value is a [`<length>`](/en-US/docs/Web/SVG/Content_type#length), [`<percentage>`](/en-US/docs/Web/SVG/Content_type#percentage), or [`<number>`](/en-US/docs/Web/SVG/Content_type#number). The numeric value of the {{domxref("SVGAnimatedLength.baseVal")}} is the y-coordinate of the `<foreignObject>` element in the user coordinate system.
 
 ## Value
 
