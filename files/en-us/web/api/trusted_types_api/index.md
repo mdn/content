@@ -8,11 +8,11 @@ spec-urls: https://w3c.github.io/trusted-types/dist/spec/
 
 {{DefaultAPISidebar("Trusted Types API")}}{{AvailableInWorkers}}
 
-The **Trusted Types API** gives web developers a way to ensure that input has been passed through a sanitization function before being passed to an API that might execute that input. This can help to protect against client-side [cross-site scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS) attacks.
+The **Trusted Types API** gives web developers a way to ensure that input has been passed through a [sanitization](/en-US/docs/Web/Security/Attacks/XSS#sanitization) function before being passed to an API that might execute that input. This can help to protect against client-side [cross-site scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS) attacks.
 
 ## Concepts and usage
 
-Client-side, or DOM-based, XSS attacks happen when data crafted by an attacker (such as that input into a form field) is passed to a function that executes that data as code. These functions are known as _injection sinks_.
+Client-side, or DOM-based, XSS attacks happen when data crafted by an attacker is passed to a browser API that executes that data as code. These APIs are known as _injection sinks_.
 
 Examples of injection sinks include:
 
@@ -39,7 +39,7 @@ In the Trusted Types API:
 
 With this API, instead of passing a string to an injection sink like `innerHTML`, you use a `TrustedTypePolicy` to create a `TrustedHTML` object from the string, then pass that into the sink, and can be sure that the string has been passed through a sanitization function.
 
-Note that the trusted types API does _not_ itself include a sanitization function: you supply your own function when you define the `TrustedTypePolicy` that you will use.
+Note that the Trusted Types API does _not_ itself include a sanitization function: you supply your own function when you define the `TrustedTypePolicy` that you will use.
 
 For example, this code creates a `TrustedTypePolicy` that can create `TrustedHTML` objects by sanitizing the input strings with the [DOMPurify](https://github.com/cure53/DOMPurify) library:
 
@@ -78,7 +78,7 @@ Additionally, the {{CSP("trusted-types")}} CSP directive can be used to control 
 
 ### The Trusted Types polyfills
 
-The Trusted Types API is not yet available in all modern browsers, but it is usable today thanks to [polyfills created by the W3C](https://github.com/w3c/trusted-types?tab=readme-ov-file#polyfill).
+The Trusted Types API is not yet available in all modern browsers, but it is usable everywhere today thanks to [polyfills created by the W3C](https://github.com/w3c/trusted-types?tab=readme-ov-file#polyfill).
 
 There are two polyfills:
 
@@ -87,9 +87,9 @@ There are two polyfills:
 
 Note that as long as you have tested your code, with trusted types enforced, in a browser that fully supports their enforcement using a CSP, you can still benefit from trusted types in other browsers even without enforcing their use in those other browsers.
 
-This is because, if you have enforced the use of trusted types in a browser that supports enforcement, then you must refactor your code to ensure that all data is passed through the Trusted Types API (and therefore has been through a sanitization function) before being passed to an injection sink.
+This is because, if you have enforced the use of trusted types in a browser, then you must refactor your code to ensure that all data is passed through the Trusted Types API (and therefore has been through a sanitization function) before being passed to an injection sink.
 
-If you then run the same code in a different browser without enforcement, it will still go through the same code paths, and give you the same protection.
+If you then run the refactored code in a different browser without enforcement, it will still go through the same code paths, and give you the same protection.
 
 The W3C also offers the following [_"tinyfill"_](https://github.com/w3c/trusted-types?tab=readme-ov-file#tinyfill):
 
@@ -98,7 +98,7 @@ if (typeof trustedTypes == "undefined")
   trustedTypes = { createPolicy: (n, rules) => rules };
 ```
 
-This code provides an implementation of `trustedTypes.createPolicy()` which just returns the [`policyOptions`](/en-US/docs/Web/API/TrustedTypePolicyFactory/createPolicy#policyoptions) object it was passed. This object defines sanitization functions for data, and these functions are expected to return strings.
+This code provides an implementation of `trustedTypes.createPolicy()` which just returns the [`policyOptions`](/en-US/docs/Web/API/TrustedTypePolicyFactory/createPolicy#policyoptions) object it was passed. The `policyOptions` object defines sanitization functions for data, and these functions are expected to return strings.
 
 With this tinyfill in place, suppose we create a policy:
 
