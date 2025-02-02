@@ -1,9 +1,9 @@
 ---
 title: "SVGNumberList: insertItemBefore() method"
 short-title: insertItemBefore()
-slug: Web/API/SVGLengthList/insertItemBefore
+slug: Web/API/SVGNumberList/insertItemBefore
 page-type: web-api-instance-method
-browser-compat: api.SVGLengthList.insertItemBefore
+browser-compat: api.SVGNumberList.insertItemBefore
 ---
 
 {{APIRef("SVG")}}
