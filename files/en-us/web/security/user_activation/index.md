@@ -55,13 +55,12 @@ APIs that require transient activation (list is not exhaustive):
 - {{domxref("RemotePlayback.prompt()")}}
 - {{domxref("Serial.requestPort()")}}
 - {{domxref("USB.requestDevice()")}}
-- {{domxref("Keyboard.lock()")}}
 - {{domxref("Window.getScreenDetails()")}}
 - {{domxref("Window.open()")}}
 - {{domxref("Window.queryLocalFonts()")}}
+- {{domxref("Window.showDirectoryPicker()")}}
 - {{domxref("Window.showOpenFilePicker()")}}
 - {{domxref("Window.showSaveFilePicker()")}}
-- {{domxref("Window.showDirectoryPicker()")}}
 - {{domxref("WindowClient.focus()")}}
 - {{domxref("XRSystem.requestSession()")}}
 

@@ -17,8 +17,8 @@ Otherwise this property returns `false`.
 Windows that are part of an origin-keyed agent cluster are subjects to some additional restrictions, compared with windows that are not. In particular, they cannot:
 
 - Set {{domxref("Document.domain")}}, which is a legacy feature that normally allows same-site cross-origin pages to synchronously access each other's DOM.
-- Send [`WebAssembly.Module`](/en-US/docs/WebAssembly/JavaScript_interface/Module) objects to other same-site cross-origin pages via {{domxref("Window.postMessage()")}}.
-- Send {{jsxref("SharedArrayBuffer")}} or [`WebAssembly.Memory`](/en-US/docs/WebAssembly/JavaScript_interface/Memory) objects to other same-site cross-origin pages.
+- Send [`WebAssembly.Module`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Module) objects to other same-site cross-origin pages via {{domxref("Window.postMessage()")}}.
+- Send {{jsxref("SharedArrayBuffer")}} or [`WebAssembly.Memory`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Memory) objects to other same-site cross-origin pages.
 
 To request that the browser assign this window to an origin-keyed agent cluster, the server must send the {{httpheader("Origin-Agent-Cluster")}} response header.
 

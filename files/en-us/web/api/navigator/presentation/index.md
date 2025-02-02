@@ -12,13 +12,7 @@ The `presentation` read-only property of {{DOMxRef("Navigator")}} serves as the 
 point for the [Presentation API](/en-US/docs/Web/API/Presentation_API) and
 returns a reference to {{DOMxRef("Presentation")}} object.
 
-## Syntax
-
-```js-nolint
-const presentation = navigator.presentation
-```
-
-### Value
+## Value
 
 A reference to {{DOMxRef("Presentation")}} object.
 

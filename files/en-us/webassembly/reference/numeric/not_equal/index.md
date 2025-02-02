@@ -2,9 +2,8 @@
 title: Not equal
 slug: WebAssembly/Reference/Numeric/Not_equal
 page-type: webassembly-instruction
+sidebar: webassemblysidebar
 ---
-
-{{WebAssemblySidebar}}
 
 The **`ne`** instructions, short for _not equal_, check if two numbers are not equal. If the numbers are not equal `1` will be pushed on to the stack, otherwise `0` will be pushed on to the stack.
 

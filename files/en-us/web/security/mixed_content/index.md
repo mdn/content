@@ -129,7 +129,7 @@ The screenshot below shows the console warning when an image is upgraded on Fire
 ![Screen shot of the web console displaying upgrade warning for mixed content image.](mixed_content_console_upgradable.png)
 
 On browser versions that still display "optionally blockable" content, an icon is used to indicate that there is mixed content in the displayed content, along with a console warning.
-The screenshot below shows the icon and console warning for Firebox starting supporting upgradable mixed-content.
+The screenshot below shows the icon and console warning for Firefox starting supporting upgradable mixed-content.
 
 ![Screen shot of the web console displaying display warning for mixed content image.](mixed_content_console_displayed.png)
 

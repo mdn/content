@@ -21,7 +21,7 @@ method.
 multiDrawArraysWEBGL(mode,
     firstsList, firstsOffset,
     countsList, countsOffset,
-    drawCount);
+    drawCount)
 ```
 
 ### Parameters

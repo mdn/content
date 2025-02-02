@@ -11,14 +11,7 @@ browser-compat: api.RTCSessionDescription.type
 The property **`RTCSessionDescription.type`** is a read-only
 string value which describes the description's type.
 
-## Syntax
-
-```js-nolint
-const value = sessionDescription.type
-sessionDescription.type = value
-```
-
-### Value
+## Value
 
 The possible values are:
 

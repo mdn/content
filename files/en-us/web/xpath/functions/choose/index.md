@@ -2,9 +2,8 @@
 title: choose
 slug: Web/XPath/Functions/choose
 page-type: xpath-function
+sidebar: xsltsidebar
 ---
-
-{{XsltSidebar}}
 
 The `choose` function returns one of the specified objects based on a boolean parameter.
 
