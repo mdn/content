@@ -15,7 +15,7 @@ The object is initialized to the identity matrix.
 ## Syntax
 
 ```js-nolint
-SVGSVGElement.createSVGMatrix()
+createSVGMatrix()
 ```
 
 ### Parameters

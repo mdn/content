@@ -13,7 +13,7 @@ The `unpauseAnimations()` method of the {{domxref("SVGSVGElement")}} interface r
 ## Syntax
 
 ```js-nolint
-SVGSVGElement.unpauseAnimations()
+unpauseAnimations()
 ```
 
 ### Parameters

@@ -15,7 +15,7 @@ If `getCurrentTime()` is called before the document timeline has begun (for exam
 ## Syntax
 
 ```js-nolint
-SVGSVGElement.getCurrentTime()
+getCurrentTime()
 ```
 
 ### Parameters

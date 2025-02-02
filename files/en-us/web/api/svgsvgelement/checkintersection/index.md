@@ -15,7 +15,7 @@ Each candidate graphics element is to be considered a match only if the same gra
 ## Syntax
 
 ```js-nolint
-SVGSVGElement.checkIntersection(element, rect)
+checkIntersection(element, rect)
 ```
 
 ### Parameters

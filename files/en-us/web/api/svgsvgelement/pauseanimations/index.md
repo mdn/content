@@ -13,7 +13,7 @@ The `pauseAnimations()` method of the {{domxref("SVGSVGElement")}} interface sus
 ## Syntax
 
 ```js-nolint
-SVGSVGElement.pauseAnimations()
+pauseAnimations()
 ```
 
 ### Parameters

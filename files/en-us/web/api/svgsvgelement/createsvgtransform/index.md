@@ -15,7 +15,7 @@ The object is initialized to an identity matrix transform (`SVG_TRANSFORM_MATRIX
 ## Syntax
 
 ```js-nolint
-SVGSVGElement.createSVGTransform()
+createSVGTransform()
 ```
 
 ### Parameters

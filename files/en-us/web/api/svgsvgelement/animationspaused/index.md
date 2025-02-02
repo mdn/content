@@ -15,7 +15,7 @@ The method returns `true` if this SVG document fragment is in a paused state.
 ## Syntax
 
 ```js-nolint
-SVGSVGElement.animationsPaused()
+animationsPaused()
 ```
 
 ### Parameters

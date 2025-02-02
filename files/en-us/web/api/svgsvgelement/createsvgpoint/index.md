@@ -15,7 +15,7 @@ The object is initialized to the point `(0,0)` in the user coordinate system.
 ## Syntax
 
 ```js-nolint
-SVGSVGElement.createSVGPoint()
+createSVGPoint()
 ```
 
 ### Parameters

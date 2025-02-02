@@ -15,7 +15,7 @@ Each candidate graphics element is to be considered a match only if the same gra
 ## Syntax
 
 ```js-nolint
-SVGSVGElement.checkEnclosure(element, rect)
+checkEnclosure(element, rect)
 ```
 
 ### Parameters

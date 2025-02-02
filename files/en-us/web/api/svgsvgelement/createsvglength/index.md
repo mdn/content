@@ -15,7 +15,7 @@ The object is initialized to a value of `0` degrees (unitless).
 ## Syntax
 
 ```js-nolint
-SVGSVGElement.createSVGLength()
+createSVGLength()
 ```
 
 ### Parameters

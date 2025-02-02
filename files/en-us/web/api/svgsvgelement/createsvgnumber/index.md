@@ -15,7 +15,7 @@ The object is initialized to `0`.
 ## Syntax
 
 ```js-nolint
-SVGSVGElement.createSVGNumber()
+createSVGNumber()
 ```
 
 ### Parameters

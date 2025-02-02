@@ -13,7 +13,7 @@ The `getElementById()` method of the {{domxref("SVGSVGElement")}} interface sear
 ## Syntax
 
 ```js-nolint
-SVGSVGElement.getElementById(id)
+getElementById(id)
 ```
 
 ### Parameters

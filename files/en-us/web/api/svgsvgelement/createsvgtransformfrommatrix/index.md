@@ -15,7 +15,7 @@ The object is initialized to the given matrix transform (i.e., `SVG_TRANSFORM_MA
 ## Syntax
 
 ```js-nolint
-SVGSVGElement.createSVGTransformFromMatrix(matrix)
+createSVGTransformFromMatrix(matrix)
 ```
 
 ### Parameters

@@ -15,7 +15,7 @@ If `setCurrentTime()` is called before the document timeline has begun (for exam
 ## Syntax
 
 ```js-nolint
-SVGSVGElement.setCurrentTime(time)
+setCurrentTime(time)
 ```
 
 ### Parameters

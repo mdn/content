@@ -13,7 +13,7 @@ The `deselectAll()` method of the {{domxref("SVGSVGElement")}} interface unselec
 ## Syntax
 
 ```js-nolint
-SVGSVGElement.deselectAll()
+deselectAll()
 ```
 
 ### Parameters

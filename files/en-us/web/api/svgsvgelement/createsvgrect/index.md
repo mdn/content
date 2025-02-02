@@ -15,7 +15,7 @@ The object is initialized such that all values are set to `0` user units.
 ## Syntax
 
 ```js-nolint
-SVGSVGElement.createSVGRect()
+createSVGRect()
 ```
 
 ### Parameters
