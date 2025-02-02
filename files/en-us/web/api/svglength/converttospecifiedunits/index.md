@@ -18,7 +18,7 @@ This function will:
 ## Syntax
 
 ```js-nolint
-SVGLength.convertToSpecifiedUnits(unitType)
+convertToSpecifiedUnits(unitType)
 ```
 
 ### Parameters

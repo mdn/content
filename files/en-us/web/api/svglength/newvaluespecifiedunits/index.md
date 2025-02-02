@@ -13,7 +13,7 @@ The `newValueSpecifiedUnits()` method of the {{domxref("SVGLength")}} interface 
 ## Syntax
 
 ```js-nolint
-SVGLength.newValueSpecifiedUnits(unitType, valueInSpecifiedUnits)
+newValueSpecifiedUnits(unitType, valueInSpecifiedUnits)
 ```
 
 ### Parameters
