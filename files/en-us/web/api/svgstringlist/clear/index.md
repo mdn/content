@@ -8,7 +8,7 @@ browser-compat: api.SVGStringList.clear
 
 {{APIRef("SVG")}}
 
-The `clear()` method of the {{domxref("SVGStringList")}} interface clears all existing current items from the list, with the result being an empty list.
+The **`clear()`** method of the {{domxref("SVGStringList")}} interface clears all existing items from the list, with the result being an empty list.
 
 ## Syntax
 
@@ -22,12 +22,12 @@ None.
 
 ### Return value
 
-None ({{jsxref('undefined')}}).
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
-- `NoModificationAllowedError` {{domxref("DOMException")}}
-  - : Thrown if {{domxref("SVGStringList")}} corresponds to a read-only attribute or when the object itself is read-only.
+- {{domxref("DOMException")}} `NoModificationAllowedError`
+  - : Thrown if the {{domxref("SVGStringList")}} corresponds to a read-only attribute or when the object itself is read-only.
 
 ## Specifications
 
