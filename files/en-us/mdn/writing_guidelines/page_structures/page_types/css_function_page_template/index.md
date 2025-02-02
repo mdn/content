@@ -2,9 +2,8 @@
 title: CSS function page template
 slug: MDN/Writing_guidelines/Page_structures/Page_types/CSS_function_page_template
 page-type: mdn-writing-guide
+sidebar: mdnsidebar
 ---
-
-{{MDNSidebar}}
 
 > **Note:** _Remove this note block before publishing._
 >

@@ -2,9 +2,8 @@
 title: Population count
 slug: WebAssembly/Reference/Numeric/Population_count
 page-type: webassembly-instruction
+sidebar: webassemblysidebar
 ---
-
-{{WebAssemblySidebar}}
 
 The **`popcnt`** instructions, short for _population count_, are used to count the amount of `1`s in a numbers binary representation.
 

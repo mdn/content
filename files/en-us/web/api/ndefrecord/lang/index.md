@@ -17,12 +17,6 @@ a textual payload, or `null` if one was not supplied.
 The record might be missing a language tag, for example, if the recorded information is
 not locale-specific.
 
-## Syntax
-
-```js-nolint
-NDEFRecord.lang
-```
-
 ### Value
 
 A string.
