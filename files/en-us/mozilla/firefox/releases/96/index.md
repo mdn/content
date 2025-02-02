@@ -53,7 +53,7 @@ No notable changes.
 
 #### Media, WebRTC, and Web Audio
 
-- A number of deprecated non-standard statistics fields have been removed from the [WebRTC Statistics API](/en-US/docs/Web/API/WebRTC_Statistics_API), including: `bitrateMean`, `bitrateStdDev`, `framerateMean`, `framerateStdDev`, and `droppedFrames`.
+- A number of deprecated non-standard statistics fields have been removed from the WebRTC API {{domxref("RTCStatsReport")}} interface, including: `bitrateMean`, `bitrateStdDev`, `framerateMean`, `framerateStdDev`, and `droppedFrames`.
   ([Firefox bug 1367562](https://bugzil.la/1367562)).
 
 ### WebDriver conformance (Marionette)
