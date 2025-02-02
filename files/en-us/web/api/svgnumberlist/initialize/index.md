@@ -8,9 +8,7 @@ browser-compat: api.SVGNumberList.initialize
 
 {{APIRef("SVG")}}
 
-The `initialize()` method of the {{domxref("SVGNumberList")}} interface clears all existing current items from the list and re-initializes the list to hold the single item specified by the parameter.
-
-If the inserted item is already in a list, it is removed from its previous list before it is inserted into this list. The inserted item is the item itself and not a copy.
+The **`initialize()`** method of the {{domxref("SVGNumberList")}} interface clears all existing items from the list and re-initializes the list to hold the single item specified by the parameter. If the inserted item is already in a list, it is removed from its previous list before it is inserted into this list. The inserted item is the item itself and not a copy. The return value is the item inserted into the list.
 
 ## Syntax
 
@@ -21,16 +19,16 @@ initialize(newItem)
 ### Parameters
 
 - `newItem`
-  - : An {{domxref("SVGNumber")}} item that is inserted into the list.
+  - : The {{domxref("SVGNumber")}} to add to the list.
 
 ### Return value
 
-An {{domxref("SVGNumber")}} object; the item inserted into the list.
+The {{domxref("SVGNumber")}} that was added to the list.
 
 ### Exceptions
 
-- `NoModificationAllowedError` {{domxref("DOMException")}}
-  - : Thrown if {{domxref("SVGNumberList")}} corresponds to a read-only attribute or when the object itself is read-only.
+- {{domxref("DOMException")}} `NoModificationAllowedError`
+  - : Thrown if the {{domxref("SVGNumberList")}} corresponds to a read-only attribute or when the object itself is read-only.
 
 ## Specifications
 
@@ -39,7 +37,3 @@ An {{domxref("SVGNumber")}} object; the item inserted into the list.
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- {{domxref("SVGNumber")}}

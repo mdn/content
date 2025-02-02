@@ -1,14 +1,14 @@
 ---
-title: "SVGNumberList: removeItem() method"
+title: "SVGStringList: removeItem() method"
 short-title: removeItem()
-slug: Web/API/SVGNumberList/removeItem
+slug: Web/API/SVGStringList/removeItem
 page-type: web-api-instance-method
-browser-compat: api.SVGNumberList.removeItem
+browser-compat: api.SVGStringList.removeItem
 ---
 
 {{APIRef("SVG")}}
 
-The **`removeItem()`** method of the {{domxref("SVGNumberList")}} interface removes an existing item at the given index from the list.
+The **`removeItem()`** method of the {{domxref("SVGStringList")}} interface removes an existing item at the given index from the list.
 
 ## Syntax
 
@@ -23,12 +23,12 @@ removeItem(index)
 
 ### Return value
 
-The {{domxref("SVGNumber")}} that was removed from the list.
+The string that was removed from the list.
 
 ### Exceptions
 
 - {{domxref("DOMException")}} `NoModificationAllowedError`
-  - : Thrown if the {{domxref("SVGNumberList")}} corresponds to a read-only attribute or when the object itself is read-only.
+  - : Thrown if the {{domxref("SVGStringList")}} corresponds to a read-only attribute or when the object itself is read-only.
 - {{domxref("DOMException")}} `IndexSizeError`
   - : Thrown when the index is out of bounds for the list.
 
