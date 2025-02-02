@@ -139,7 +139,7 @@ console.log(jsonText);
 // [[1,"one"],[2,"two"],[3,"three"]]
 
 const map2 = JSON.parse(jsonText, (key, value) =>
-  Array.isArray(value) ? new Map(value) : value,
+  Array.isArray(value) && value.every(Array.isArray) ? new Map(value) : value,
 );
 
 console.log(map2);
