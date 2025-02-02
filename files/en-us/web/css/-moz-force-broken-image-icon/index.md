@@ -55,7 +55,7 @@ img {
 {{EmbedLiveSample('Examples','125','125')}}
 
 > [!NOTE]
-> The alt text may not be visible if `-moz-force-broken-image-icon` is set to `1` and the image has no (or too small) `height` or `width` set. 
+> The alt text may not be visible if `-moz-force-broken-image-icon` is set to `1` and the image has no (or too small) `height` or `width` set.
 
 ## Notes
 
