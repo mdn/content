@@ -17,7 +17,7 @@ The first item is indexed at `0`.
 ## Syntax
 
 ```js-nolint
-SVGNumberList.getItem(index)
+getItem(index)
 ```
 
 ### Parameters

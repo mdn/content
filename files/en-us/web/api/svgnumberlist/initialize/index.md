@@ -15,7 +15,7 @@ If the inserted item is already in a list, it is removed from its previous list 
 ## Syntax
 
 ```js-nolint
-SVGNumberList.initialize(newItem)
+initialize(newItem)
 ```
 
 ### Parameters

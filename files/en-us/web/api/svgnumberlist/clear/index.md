@@ -13,7 +13,7 @@ The `clear()` method of the {{domxref("SVGNumberList")}} interface clears all ex
 ## Syntax
 
 ```js-nolint
-SVGNumberList.clear()
+clear()
 ```
 
 ### Parameters
