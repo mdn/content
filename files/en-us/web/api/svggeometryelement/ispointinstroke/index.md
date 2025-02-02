@@ -8,9 +8,7 @@ browser-compat: api.SVGGeometryElement.isPointInStroke
 
 {{APIRef("SVG")}}
 
-The **`SVGGeometryElement.isPointInStroke()`** method determines whether a given point is within the
-stroke shape of an element. The `point` argument is interpreted as a point in the local coordinate
-system of the element.
+The **`isPointInStroke()`** method of the {{domxref("SVGGeometryElement")}} interface determines whether a given point is within the stroke shape of an element. The `point` argument is interpreted as a point in the local coordinate system of the element.
 
 ## Syntax
 
@@ -21,8 +19,7 @@ isPointInStroke(point)
 ### Parameters
 
 - `point`
-  - : A {{domxref("DOMPointInit")}} object interpreted as a point in the local coordinate system
-    of the element.
+  - : An object representing a point interpreted in the local coordinate system of the element. It is converted to a {{domxref("DOMPoint")}} object using the same algorithm as [`DOMPoint.fromPoint()`](/en-US/docs/Web/API/DOMPoint/fromPoint_static).
 
 ### Return value
 
@@ -69,7 +66,7 @@ for (const point of points) {
     const pointObj = { x: point[0], y: point[1] };
     isPointInStroke = circle.isPointInStroke(pointObj);
   } catch {
-    // Fallback for browsers that don't support DOMPointInit as an argument
+    // Fallback for browsers that don't support DOMPoint as an argument
     const pointObj = svg.createSVGPoint();
     pointObj.x = point[0];
     pointObj.y = point[1];
@@ -85,10 +82,7 @@ for (const point of points) {
   pointEl.cx.baseVal.value = point[0];
   pointEl.cy.baseVal.value = point[1];
   pointEl.r.baseVal.value = 5;
-  const pathEl = document.createElementNS(
-    "http://www.w3.org/2000/svg",
-    "path",
-  );
+  const pathEl = document.createElementNS("http://www.w3.org/2000/svg", "path");
   if (isPointInStroke) {
     pointEl.setAttribute("fill", "rgb(0 170 0 / 50%)");
     pointEl.setAttribute("stroke", "rgb(0 170 0)");
