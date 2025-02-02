@@ -4,11 +4,11 @@ sidebar:
   - type: section
     link: /Web/XSLT
   - type: listSubPages
-    path: /Web/XSLT/Transforming_XML_with_XSLT
+    path: /Web/XSLT/Guides/Transforming_XML_with_XSLT
   - type: section
-    link: /Web/XSLT/Element
+    link: /Web/XSLT/Reference/Element
   - type: listSubPages
-    path: /Web/XSLT/Element
+    path: /Web/XSLT/Reference/Element
   - type: section
     link: /Web/EXSLT
   - type: listSubPages

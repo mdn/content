@@ -309,6 +309,7 @@ On mobile the heading is smaller, but on desktop, we see the larger heading size
 ```html live-sample___type-rwd
 <div class="wrapper">
   <div class="col1">
+    <h1>Watch my size!</h1>
     <p>
       This layout is responsive. See what happens if you make the browser window
       wider or narrow.

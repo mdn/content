@@ -2,7 +2,7 @@
 title: "console: log() static method"
 short-title: log()
 slug: Web/API/console/log_static
-page-type: web-api-instance-method
+page-type: web-api-static-method
 browser-compat: api.console.log_static
 ---
 

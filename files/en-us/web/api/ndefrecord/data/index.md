@@ -14,12 +14,6 @@ The **`data`**
 property of the {{DOMxRef("NDEFRecord")}} interface returns a
 {{jsxref("DataView")}} containing the raw bytes of the record's payload.
 
-## Syntax
-
-```js-nolint
-NDEFRecord.data
-```
-
 ### Value
 
 A {{jsxref("DataView")}} that contains encoded payload data of the record.

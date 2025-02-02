@@ -25,7 +25,7 @@ To minimize the scope for cookie vulnerabilities on your site, limit access to c
 - `HttpOnly`
   - : Cookies that don't require access from JavaScript should have the `HttpOnly` directive set to block access, such as from {{domxref("Document.cookie")}}. It is particularly important that session identifiers don't have JavaScript access, to help prevent attacks such as CSRF.
 - `Expires` and `Max-Age`
-  - : Cookies should expire as soon as they are no longer needed. Session identifiers in particular should expire as quickly as possible. `Expires` is preferred unless you need to support IE < 8, in which case use `Max-Age`.
+  - : Cookies should expire as soon as they are no longer needed. Session identifiers in particular should expire as quickly as possible.
     - `Expires`: Sets an absolute expiration date for a given cookie.
     - `Max-Age`: Sets a relative expiration date for a given cookie.
       > **Note:** `Expires` has been available for longer than `Max-Age`; however, `Max-Age` is less error-prone, and takes precedence when both are set. The rationale behind this is that when you set an `Expires` date and time, they're relative to the client on which the cookie is being set. If the server is set to a different time, this could cause errors.

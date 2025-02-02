@@ -76,7 +76,7 @@ _This interface also inherits methods from its parent, {{domxref("SVGGraphicsEle
 - {{domxref("SVGTextContentElement.getRotationOfChar()")}}
   - : Returns a float representing the rotation of typographic character.
 - {{domxref("SVGTextContentElement.getCharNumAtPosition()")}}
-  - : Returns a long representing the character which caused a text glyph to be rendered at a given position in the coordinate system. Because the relationship between characters and glyphs is not one-to-one, only the first character of the relevant typographic character is returned
+  - : Returns a long representing the character which caused a text glyph to be rendered at a given position in the coordinate system. Because the relationship between characters and glyphs is not one-to-one, only the first character of the relevant typographic character is returned.
 - {{domxref("SVGTextContentElement.selectSubString()")}} {{deprecated_inline}}
   - : Selects text within the element.
 

@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Intl.RelativeTimeFormat.formatToParts
 
 {{JSRef}}
 
-The **`formatToParts()`** method of {{jsxref("Intl.RelativeTimeFormat")}} instances returns an {{jsxref("Array")}} of objects representing the relative time format in parts that can be used for custom locale-aware formatting.
+The **`formatToParts()`** method of {{jsxref("Intl.RelativeTimeFormat")}} instances returns an array of objects representing each part of the formatted string that would be returned by {{jsxref("Intl/RelativeTimeFormat/format", "format()")}}. It is useful for building custom strings from the locale-specific tokens.
 
 {{EmbedInteractiveExample("pages/js/intl-relativetimeformat-prototype-formattoparts.html")}}
 
@@ -26,15 +26,13 @@ formatToParts(value, unit)
 
 ### Return value
 
-An {{jsxref("Array")}} of objects containing the formatted relative time in parts.
+An {{jsxref("Array")}} of objects containing the formatted relative time in parts. Each object has two or three properties, `type`, `value`, and optionally `unit`, each containing a string. The string concatenation of `value`, in the order provided, will result in the same string as {{jsxref("Intl/RelativeTimeFormat/format", "format()")}}. The parts can be thought of as directly obtained from calling {{jsxref("Intl/NumberFormat/formatToParts", "Intl.NumberFormat.prototype.formatToParts()")}} with the numeric value, passing only the `numberingSystem` option, and then adding additional `type: "literal"` tokens, such as `"in "`, `" days ago"`, etc. All tokens that are produced by the `NumberFormat` have an additional `unit` property, which is the singular form of the input `unit`; this is for programmatic usage and is not localized. The localized unit is output as a part of a literal token.
 
-## Description
-
-The `Intl.RelativeTimeFormat.prototype.formatToParts` method is a version of the format method which it returns an array of objects which represent "parts" of the object, separating the formatted number into its constituent parts and separating it from other surrounding text. These objects have two properties: type a `NumberFormat` formatToParts type, and value, which is the String which is the component of the output. If a "part" came from `NumberFormat`, it will have a unit property which indicates the unit being formatted; literals which are part of the larger frame will not have this property.
+When `options.numeric` is `"auto"`, and there's a special string for the value, the returned array is a single literal token.
 
 ## Examples
 
-### Using formatToParts
+### Using formatToParts()
 
 ```js
 const rtf = new Intl.RelativeTimeFormat("en", { numeric: "auto" });
@@ -62,3 +60,4 @@ rtf.formatToParts(100, "day");
 ## See also
 
 - {{jsxref("Intl.RelativeTimeFormat")}}
+- {{jsxref("Intl/RelativeTimeFormat/format", "Intl.RelativeTimeFormat.prototype.format()")}}

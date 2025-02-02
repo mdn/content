@@ -53,7 +53,7 @@ In HTTP/1.1, persistence is the default, and the header is no longer needed (but
 >
 > - Buggy [proxies](https://en.wikipedia.org/wiki/Proxy_server) are still common and these lead to strange and erratic behaviors that Web developers cannot foresee and diagnose easily.
 > - Pipelining is complex to implement correctly: the size of the resource being transferred, the effective [RTT](https://en.wikipedia.org/wiki/Round-trip_delay_time) that will be used, as well as the effective bandwidth, have a direct incidence on the improvement provided by the pipeline. Without knowing these, important messages may be delayed behind unimportant ones. The notion of important even evolves during page layout! HTTP pipelining therefore brings a marginal improvement in most cases only.
-> - Pipelining is subject to the [HOL](https://en.wikipedia.org/wiki/Head-of-line_blocking) problem.
+> - Pipelining is subject to the {{glossary("head of line blocking", "head-of-line blocking")}}.
 >
 > For these reasons, pipelining has been superseded by a better algorithm, _multiplexing_, that is used by HTTP/2.
 
