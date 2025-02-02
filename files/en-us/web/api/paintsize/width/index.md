@@ -14,7 +14,7 @@ The **`width`** read-only property of the {{domxref("PaintSize")}} interface ret
 
 ## Value
 
-A double-precision integer.
+A floating point number.
 
 ## Specifications
 

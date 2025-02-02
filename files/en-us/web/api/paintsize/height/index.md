@@ -14,7 +14,7 @@ The **`height`** read-only property of the {{domxref("PaintSize")}} interface re
 
 ## Value
 
-A double-precision integer.
+A floating point number.
 
 ## Specifications
 
