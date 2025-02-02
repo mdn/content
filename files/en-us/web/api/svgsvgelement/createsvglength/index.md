@@ -22,7 +22,7 @@ None.
 
 ### Return value
 
-An {{domxref("SVGLength")}} object, initialized to a value of `0` (unitless)..
+An {{domxref("SVGLength")}} object, initialized to a value of `0` (unitless).
 
 ## Specifications
 

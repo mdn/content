@@ -61,7 +61,7 @@ dominant-baseline: unset;
     If there is no parent text content element, the scaled-baseline-table value is constructed as for {{SVGElement("text")}} elements.
 
 - `alphabetic`
-  - : The baseline-identifier for the dominant-baseline is set to be `alphabetic`, the derived baseline-table is constructed using the `alphabetic` baseline-table in the font, and the baseline-table font-size is changed to the value of the element's {{SVGAttr('font-size')}} SVG attribute or the CSS {{cssxref('font-size')}}, if set..
+  - : The baseline-identifier for the dominant-baseline is set to be `alphabetic`, the derived baseline-table is constructed using the `alphabetic` baseline-table in the font, and the baseline-table font-size is changed to the value of the element's {{SVGAttr('font-size')}} SVG attribute or the CSS {{cssxref('font-size')}}, if set.
 - `central`
   - : The baseline-identifier for the dominant-baseline is set to be `central`. The derived baseline-table is constructed from the defined baselines in the font's baseline-table. That font baseline-table is chosen using the following priority order of baseline-table names: `ideographic`, `alphabetic`, `hanging`, `mathematical`. The baseline-table font-size is changed to the value of the element's {{SVGAttr('font-size')}} SVG attribute or the CSS {{cssxref('font-size')}}, if set.
 - `hanging`
