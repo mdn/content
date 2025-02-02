@@ -19,7 +19,7 @@ setMatrixValue(transformList)
 ### Parameters
 
 - `transformList`
-  - : A string; the list of transform values separated by commas, within `matrix()` or `matrix3d()` function syntax.
+  - : A string. Its value follows the same syntax as the CSS {{cssxref("transform")}} property value.
 
 ### Return value
 
