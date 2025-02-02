@@ -13,7 +13,7 @@ The `getScreenCTM()` method of the {{domxref("SVGGraphicsElement")}} interface r
 ## Syntax
 
 ```js-nolint
-SVGGraphicsElement.getScreenCTM()
+getScreenCTM()
 ```
 
 ### Parameters

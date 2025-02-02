@@ -13,7 +13,7 @@ The `getCTM()` method of the {{domxref("SVGGraphicsElement")}} interface represe
 ## Syntax
 
 ```js-nolint
-SVGGraphicsElement.getCTM()
+getCTM()
 ```
 
 ### Parameters
