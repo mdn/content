@@ -14,7 +14,7 @@ Setting this attribute will cause {{domxref("SVGLength.valueInSpecifiedUnits")}}
 
 ## Value
 
-An `integer`; the length value in user units as a float.
+The length value in user units as a float.
 
 ## Examples
 

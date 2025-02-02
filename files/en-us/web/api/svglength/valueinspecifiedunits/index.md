@@ -14,7 +14,7 @@ Setting this attribute will cause {{domxref("SVGLength.value", "value")}} and {{
 
 ## Value
 
-An `integer`; the numeric factor of the length as a float.
+The numeric factor of the length as a float.
 
 ## Examples
 
