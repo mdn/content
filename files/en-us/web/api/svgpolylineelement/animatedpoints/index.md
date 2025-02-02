@@ -12,7 +12,7 @@ The **`animatedPoints`** read-only property of the {{domxref("SVGPolylineElement
 
 ## Value
 
-A {{DOMxRef("SVGPointList")}} object.
+An {{DOMxRef("SVGPointList")}} object.
 
 ## Examples
 

@@ -12,7 +12,7 @@ The **`points`** read-only property of the {{domxref("SVGPolylineElement")}} int
 
 ## Value
 
-A {{DOMxRef("SVGPointList")}} object.
+An {{DOMxRef("SVGPointList")}} object.
 
 ## Examples
 
