@@ -10,8 +10,6 @@ browser-compat: api.SVGSVGElement.createSVGNumber
 
 The `createSVGNumber()` method of the {{domxref("SVGSVGElement")}} interface creates an {{domxref("SVGNumber")}} object outside of any document trees.
 
-The object is initialized to `0`.
-
 ## Syntax
 
 ```js-nolint
@@ -24,7 +22,7 @@ None.
 
 ### Return value
 
-An {{domxref("SVGNumber")}} object.
+An {{domxref("SVGNumber")}} object, initialized to `0`.
 
 ## Specifications
 

@@ -10,7 +10,7 @@ browser-compat: api.SVGSVGElement.currentTranslate
 
 The **`currentTranslate`** read-only property of the {{domxref("SVGSVGElement")}} interface reflects the translation factor that takes into account user "magnification" corresponding to an outermost {{SVGElement("svg")}} element.
 
-The behavior is undefined for {{SVGElement("svg")}} elements that are not at the outermost level.
+If the {{SVGElement("svg")}} element is not at the outermost level, then `currentTranslate` is always `{ x: 0, y: 0 }` and is read-only. Otherwise, it is writable.
 
 ## Value
 

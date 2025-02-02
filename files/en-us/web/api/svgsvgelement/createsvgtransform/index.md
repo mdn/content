@@ -10,8 +10,6 @@ browser-compat: api.SVGSVGElement.createSVGTransform
 
 The `createSVGTransform()` method of the {{domxref("SVGSVGElement")}} interface creates an {{domxref("SVGTransform")}} object outside of any document trees.
 
-The object is initialized to an identity matrix transform (`SVG_TRANSFORM_MATRIX`).
-
 ## Syntax
 
 ```js-nolint
@@ -24,7 +22,7 @@ None.
 
 ### Return value
 
-An {{domxref("SVGTransform")}} object.
+An {{domxref("SVGTransform")}} object, initialized to the identity matrix transform (`matrix(1, 0, 0, 1, 0, 0)`).
 
 ## Specifications
 

@@ -10,8 +10,6 @@ browser-compat: api.SVGSVGElement.createSVGLength
 
 The `createSVGLength()` method of the {{domxref("SVGSVGElement")}} interface creates an {{domxref("SVGLength")}} object outside of any document trees.
 
-The object is initialized to a value of `0` degrees (unitless).
-
 ## Syntax
 
 ```js-nolint
@@ -24,7 +22,7 @@ None.
 
 ### Return value
 
-An {{domxref("SVGLength")}} object.
+An {{domxref("SVGLength")}} object, initialized to a value of `0` (unitless)..
 
 ## Specifications
 

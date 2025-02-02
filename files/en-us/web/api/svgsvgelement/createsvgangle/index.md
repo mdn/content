@@ -10,8 +10,6 @@ browser-compat: api.SVGSVGElement.createSVGAngle
 
 The `createSVGAngle()` method of the {{domxref("SVGSVGElement")}} interface creates an {{domxref("SVGAngle")}} object outside of any document trees.
 
-The object is initialized to a value of `0` degrees (unitless).
-
 ## Syntax
 
 ```js-nolint
@@ -24,7 +22,7 @@ None.
 
 ### Return value
 
-An {{domxref("SVGAngle")}} object.
+An {{domxref("SVGAngle")}} object, initialized to a value of `0` (unitless).
 
 ## Specifications
 

@@ -8,9 +8,7 @@ browser-compat: api.SVGSVGElement.createSVGRect
 
 {{APIRef("SVG")}}
 
-The `createSVGRect()` method of the {{domxref("SVGSVGElement")}} interface creates an {{domxref("SVGRect")}} object outside of any document trees.
-
-The object is initialized such that all values are set to `0` user units.
+The `createSVGRect()` method of the {{domxref("SVGSVGElement")}} interface creates an {{domxref("DOMRect")}} object outside of any document trees.
 
 ## Syntax
 
@@ -24,7 +22,7 @@ None.
 
 ### Return value
 
-An {{domxref("SVGRect")}} object.
+A {{domxref("DOMRect")}} object, initialized with `x`, `y`, `width`, and `height` all set to `0`.
 
 ## Specifications
 
@@ -36,4 +34,4 @@ An {{domxref("SVGRect")}} object.
 
 ## See also
 
-- {{domxref("SVGRect")}}
+- {{domxref("DOMRect")}}

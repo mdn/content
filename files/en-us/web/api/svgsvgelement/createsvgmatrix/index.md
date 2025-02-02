@@ -8,9 +8,7 @@ browser-compat: api.SVGSVGElement.createSVGMatrix
 
 {{APIRef("SVG")}}
 
-The `createSVGMatrix()` method of the {{domxref("SVGSVGElement")}} interface creates an {{domxref("DOMMatrix", "SVGMatrix")}} object outside of any document trees.
-
-The object is initialized to the identity matrix.
+The `createSVGMatrix()` method of the {{domxref("SVGSVGElement")}} interface creates a {{domxref("DOMMatrix")}} object outside of any document trees.
 
 ## Syntax
 
@@ -24,7 +22,7 @@ None.
 
 ### Return value
 
-An {{domxref("DOMMatrix", "SVGMatrix")}} object.
+A {{domxref("DOMMatrix")}} object, initialized to the identity matrix.
 
 ## Specifications
 

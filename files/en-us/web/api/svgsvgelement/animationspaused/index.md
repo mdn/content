@@ -10,8 +10,6 @@ browser-compat: api.SVGSVGElement.animationsPaused
 
 The `animationsPaused()` method of the {{domxref("SVGSVGElement")}} interface checks whether the animations in the SVG document fragment are currently paused.
 
-The method returns `true` if this SVG document fragment is in a paused state.
-
 ## Syntax
 
 ```js-nolint
@@ -24,7 +22,7 @@ None.
 
 ### Return value
 
-A boolean.
+A boolean. `true` if this SVG document fragment is in a paused state.
 
 ## Examples
 

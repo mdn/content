@@ -124,7 +124,7 @@ _This interface also inherits methods from its parent, {{domxref("SVGGraphicsEle
 - {{domxref("SVGSVGElement.createSVGPoint()")}}
   - : Creates an {{domxref("SVGPoint")}} object outside of any document trees. The object is initialized to the point `(0,0)` in the user coordinate system.
 - {{domxref("SVGSVGElement.createSVGMatrix()")}}
-  - : Creates an {{domxref("DOMMatrix", "SVGMatrix")}} object outside of any document trees. The object is initialized to the identity matrix.
+  - : Creates a {{domxref("DOMMatrix")}} object outside of any document trees. The object is initialized to the identity matrix.
 - {{domxref("SVGSVGElement.createSVGRect()")}}
   - : Creates an {{domxref("SVGRect")}} object outside of any document trees. The object is initialized such that all values are set to `0` user units.
 - {{domxref("SVGSVGElement.createSVGTransform()")}}

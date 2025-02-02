@@ -10,8 +10,6 @@ browser-compat: api.SVGSVGElement.createSVGPoint
 
 The `createSVGPoint()` method of the {{domxref("SVGSVGElement")}} interface creates an {{domxref("SVGPoint")}} object outside of any document trees.
 
-The object is initialized to the point `(0,0)` in the user coordinate system.
-
 ## Syntax
 
 ```js-nolint
@@ -24,7 +22,7 @@ None.
 
 ### Return value
 
-An {{domxref("SVGPoint")}} object.
+An {{domxref("SVGPoint")}} object, initialized to the point `(0,0)` in the user coordinate system.
 
 ## Specifications
 

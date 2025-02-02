@@ -8,9 +8,7 @@ browser-compat: api.SVGSVGElement.createSVGTransformFromMatrix
 
 {{APIRef("SVG")}}
 
-The `createSVGTransformFromMatrix()` method of the {{domxref("SVGSVGElement")}} interface creates an {{domxref("SVGTransform")}} object outside of any document trees.
-
-The object is initialized to the given matrix transform (i.e., `SVG_TRANSFORM_MATRIX`). The values from the parameter matrix are copied, the matrix parameter is not adopted as `SVGTransform::matrix`.
+The `createSVGTransformFromMatrix()` method of the {{domxref("SVGSVGElement")}} interface creates an {{domxref("SVGTransform")}} object outside of any document trees, based on the given {{domxref("DOMMatrix")}} object.
 
 ## Syntax
 
@@ -21,11 +19,11 @@ createSVGTransformFromMatrix(matrix)
 ### Parameters
 
 - `matrix`
-  - : An {{domxref("DOMMatrix", "SVGMatrix")}} object representing the initial matrix for the transform.
+  - : A {{domxref("DOMMatrix")}} object representing the initial matrix for the transform.
 
 ### Return value
 
-An {{domxref("SVGTransform")}} object.
+An {{domxref("SVGTransform")}} object, initialized to the given matrix transform. It is a `matrix()` transform if the `matrix` is [2D](/en-US/docs/Web/API/DOMMatrixReadOnly/is2D), and a `matrix3d()` transform otherwise.
 
 ## Examples
 
@@ -66,4 +64,4 @@ rectElement.transform.baseVal.appendItem(transform);
 ## See also
 
 - {{domxref("SVGTransform")}}
-- {{domxref("DOMMatrix", "SVGMatrix")}}
+- {{domxref("DOMMatrix")}}
