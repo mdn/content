@@ -53,7 +53,7 @@ console.log(matrix.toString()); // original is unchanged
 ## See also
 
 - {{domxref("DOMMatrixReadOnly.skewY()")}}
-- {{domxref("DOMMatrix.skewX()")}}
+- {{domxref("DOMMatrix.skewXSelf()")}}
 - CSS {{cssxref("transform")}} property and the {{cssxref("transform-function/skew", "skew()")}}, {{cssxref("transform-function/skewX", "skewX()")}}, and {{cssxref("transform-function/matrix", "matrix()")}} functions
 - [CSS transforms](/en-US/docs/Web/CSS/CSS_transforms) module
 - SVG [`transform`](/en-US/docs/Web/SVG/Attribute/transform) attribute

@@ -54,8 +54,8 @@ console.log(matrix.toString());
 ## See also
 
 - {{domxref("DOMMatrixReadOnly.rotateFromVector()")}}
-- {{domxref("DOMMatrixRead.rotateSelf()")}}
-- {{domxref("DOMMatrixRead.rotateAxisAngleSelf()")}}
+- {{domxref("DOMMatrix.rotateSelf()")}}
+- {{domxref("DOMMatrix.rotateAxisAngleSelf()")}}
 - CSS {{cssxref("transform")}} property and {{cssxref("transform-function/rotate3d", "rotate3d()")}} function
 - CSS {{cssxref("rotate")}} property
 - [CSS transforms](/en-US/docs/Web/CSS/CSS_transforms) module
