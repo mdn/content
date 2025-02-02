@@ -55,7 +55,7 @@ img {
 {{EmbedLiveSample('Examples','125','125')}}
 
 > [!NOTE]
-> If `-moz-force-broken-image-icon` is set to `1`, the `alt` attribute will not be displayed if the image has a specified height or width.
+> The alt text may not be visible if `-moz-force-broken-image-icon` is set to `1` and the image has no (or too small) `height` or `width` set. 
 
 ## Notes
 
