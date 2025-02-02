@@ -12,7 +12,11 @@ The **`meetOrSlice`** read-only property of the {{domxref("SVGPreserveAspectRati
 
 ## Value
 
-An `integer`; the meet-or-slice type as an unsigned short.
+One of the following:
+
+- `SVGPreserveAspectRatio.SVG_MEETORSLICE_UNKNOWN` (0)
+- `SVGPreserveAspectRatio.SVG_MEETORSLICE_MEET` (1)
+- `SVGPreserveAspectRatio.SVG_MEETORSLICE_SLICE` (2)
 
 ## Examples
 
