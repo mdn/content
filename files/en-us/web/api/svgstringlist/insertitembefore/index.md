@@ -13,17 +13,14 @@ The `insertItemBefore()` method of the {{domxref("SVGStringList")}} interface in
 The first item is indexed at `0`. The inserted item is the item itself and not a copy.
 
 - If `newItem` is already in a list, it is removed from its previous list before it is inserted into this list.
-
 - If the item is already in this list, note that the index of the item to insert before is before the removal of the item.
-
 - If the `index` is equal to 0, then the new item is inserted at the front of the list.
-
 - If the index is greater than or equal to {{domxref("SVGStringList.numberOfItems", "numberOfItems")}}, then the new item is appended to the end of the list.
 
 ## Syntax
 
 ```js-nolint
-SVGStringList.insertItemBefore(newItem, index)
+insertItemBefore(newItem, index)
 ```
 
 ### Parameters

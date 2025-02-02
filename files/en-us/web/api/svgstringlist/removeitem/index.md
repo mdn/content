@@ -13,7 +13,7 @@ The `removeItem()` method of the {{domxref("SVGStringList")}} interface removes 
 ## Syntax
 
 ```js-nolint
-SVGStringList.removeItem(index)
+removeItem(index)
 ```
 
 ### Parameters

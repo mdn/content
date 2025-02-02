@@ -13,13 +13,12 @@ The `replaceItem()` method of the {{domxref("SVGStringList")}} interface replace
 The inserted item is the item itself and not a copy.
 
 - If `newItem` is already in a list, it is removed from its previous list before it is inserted into this list.
-
 - If the item is already in this list, note that the `index` of the item to replace is before the removal of the item.
 
 ## Syntax
 
 ```js-nolint
-SVGStringList.replaceItem(newItem, index)
+replaceItem(newItem, index)
 ```
 
 ### Parameters

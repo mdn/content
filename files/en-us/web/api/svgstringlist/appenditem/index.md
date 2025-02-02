@@ -15,7 +15,7 @@ If `newItem` is already in a list, it is removed from its previous list before i
 ## Syntax
 
 ```js-nolint
-SVGStringList.appendItem(newItem)
+appendItem(newItem)
 ```
 
 ### Parameters
