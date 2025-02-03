@@ -20,7 +20,7 @@ This article provides information about the changes in Firefox 135 that affect d
 
 #### Removals
 
-- The -moz-user-input CSS property has been removed. This property has been deprecated and no longer allows the disabling of input fields [Firefox bug 1935198](https://bugzil.la/1935198).
+- The `-moz-user-input` CSS property allowed you to disable input fields. The property is now deprecated and has been removed ([Firefox bug 1935198](https://bugzil.la/1935198)).
 
 ### JavaScript
 
