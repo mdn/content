@@ -73,7 +73,6 @@ const element = document.querySelector("#container");
 element.innerHTML = userInput; // Throws a TypeError
 ```
 
-
 Additionally, the {{CSP("trusted-types")}} CSP directive can be used to control which policies your code is allowed to create. When you create a policy using {{domxref("TrustedTypePolicyFactory/createPolicy", "trustedTypes.createPolicy()")}}, you pass a name for the policy. The `trusted-types` CSP directive lists acceptable policy names, so `createPolicy()` will throw an exception if it is passed a name which was not listed in `trusted-types`. This prevents some code in your web application from creating a policy that you were not expecting.
 
 ### The Trusted Types polyfills
