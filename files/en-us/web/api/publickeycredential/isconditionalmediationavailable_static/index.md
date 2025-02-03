@@ -25,7 +25,7 @@ The prevent silent access flag (see {{domxref("CredentialsContainer.preventSilen
 ## Syntax
 
 ```js-nolint
-isConditionalMediationAvailable()
+PublicKeyCredential.isConditionalMediationAvailable()
 ```
 
 ### Parameters

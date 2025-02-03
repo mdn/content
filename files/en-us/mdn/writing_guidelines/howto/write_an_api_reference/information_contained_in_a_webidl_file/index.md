@@ -2,9 +2,8 @@
 title: Information contained in a WebIDL file
 slug: MDN/Writing_guidelines/Howto/Write_an_api_reference/Information_contained_in_a_WebIDL_file
 page-type: mdn-writing-guide
+sidebar: mdnsidebar
 ---
-
-{{MDNSidebar}}
 
 When writing documentation about an API, the sources of information are many: the specifications describe what should be implemented as well as the model, and the implementations describe what has actually been put in the browsers. WebIDL files are a very condensed way of giving a lot, but not all, of the information about the API. This document provides a reference to help understand WebIDL syntax.
 

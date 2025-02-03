@@ -13,7 +13,7 @@ The `setScale()` method of the {{domxref("SVGTransform")}} interface sets the tr
 ## Syntax
 
 ```js-nolint
-SVGTransform.setScale(sx, sy)
+setScale(sx, sy)
 ```
 
 ### Parameters

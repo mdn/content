@@ -2,9 +2,8 @@
 title: WebAssembly numeric instructions
 slug: WebAssembly/Reference/Numeric
 page-type: landing-page
+sidebar: webassemblysidebar
 ---
-
-{{WebAssemblySidebar}}
 
 WebAssembly numeric instructions.
 
