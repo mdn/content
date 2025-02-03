@@ -182,6 +182,6 @@ The result is as follows. Try opening the `<select>` dropdown to see the effect 
 
 ## See also
 
-- The {{htmlelement("details")}}, {{htmlelement("dialog")}}, {{htmlelement("select")}}, and {{htmlelement("input")}} elements
-- The {{cssxref(":popover-open")}} pseudo-class
+- {htmlelement("details")}}, {{htmlelement("dialog")}}, {{htmlelement("select")}}, and {{htmlelement("input")}} elements
+- {{cssxref(":popover-open")}} pseudo-class
 - {{Cssxref(":modal")}}
