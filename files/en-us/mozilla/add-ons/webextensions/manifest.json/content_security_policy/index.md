@@ -229,7 +229,7 @@ Policy that omits the `"object-src"` directive:
 "content_security_policy": "script-src 'self' https://*.jquery.com;"
 ```
 
-However, this is only invalid in browsers that support obsolete [plugins](/en-US/docs/Glossary/Plugin). See [object-src directive](#object-src_directive) for more details..
+However, this is only invalid in browsers that support obsolete [plugins](/en-US/docs/Glossary/Plugin). See [object-src directive](#object-src_directive) for more details.
 
 Policy that omits the `"self"` keyword in the `"script-src"` directive:
 

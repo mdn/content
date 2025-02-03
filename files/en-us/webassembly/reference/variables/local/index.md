@@ -2,9 +2,8 @@
 title: Local
 slug: WebAssembly/Reference/Variables/Local
 page-type: webassembly-instruction
+sidebar: webassemblysidebar
 ---
-
-{{WebAssemblySidebar}}
 
 The **`local`** instruction declares a new local variable.
 
