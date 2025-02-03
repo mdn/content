@@ -1,6 +1,6 @@
 ---
-title: "DOMMatrixReadOnly: transformPoint method"
-short-title: transformPoint
+title: "DOMMatrixReadOnly: transformPoint() method"
+short-title: transformPoint()
 slug: Web/API/DOMMatrixReadOnly/transformPoint
 page-type: web-api-instance-method
 browser-compat: api.DOMMatrixReadOnly.transformPoint
@@ -15,9 +15,9 @@ You can also create a new `DOMPoint` by applying a matrix to a point with the {{
 
 ## Syntax
 
-```js
-DOMMatrixReadOnly.transformPoint();
-DOMMatrixReadOnly.transformPoint(point);
+```js-nolint
+transformPoint()
+transformPoint(point)
 ```
 
 ### Parameters

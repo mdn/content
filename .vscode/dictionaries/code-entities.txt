@@ -399,6 +399,7 @@ mathsans
 mathtt
 max-smbps
 maxplaybackrate
+mdnsidebar
 media.autoplay.block-webaudio
 media.getusermedia
 media.mediasource
@@ -790,6 +791,7 @@ wcho
 wdth
 weba
 webappmanifest
+webassemblysidebar
 webauthn
 webbundle
 webcal
