@@ -1,6 +1,6 @@
 ---
 title: Functions
-slug: Web/XPath/Functions
+slug: Web/XPath/Reference/Functions
 page-type: guide
 sidebar: xsltsidebar
 ---

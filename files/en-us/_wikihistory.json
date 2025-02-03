@@ -126560,23 +126560,6 @@
       "Jt"
     ]
   },
-  "Web/XPath/Functions": {
-    "modified": "2019-08-11T00:05:54.428Z",
-    "contributors": [
-      "ExE-Boss",
-      "SphinxKnight",
-      "Sheppy",
-      "mete0r",
-      "Cuimingda",
-      "Mgjbot",
-      "Fredchat",
-      "Ptak82",
-      "Nickolay",
-      "Jonnyq",
-      "CitizenK",
-      "Dria"
-    ]
-  },
   "Web/XPath/Guides/Comparison_with_CSS_selectors": {
     "modified": "2019-06-06T12:32:39.713Z",
     "contributors": ["ExE-Boss", "criticabug", "chrisdavidmills"]
@@ -126629,6 +126612,23 @@
       "Fredchat",
       "Ptak82",
       "Nickolay",
+      "CitizenK",
+      "Dria"
+    ]
+  },
+  "Web/XPath/Reference/Functions": {
+    "modified": "2019-08-11T00:05:54.428Z",
+    "contributors": [
+      "ExE-Boss",
+      "SphinxKnight",
+      "Sheppy",
+      "mete0r",
+      "Cuimingda",
+      "Mgjbot",
+      "Fredchat",
+      "Ptak82",
+      "Nickolay",
+      "Jonnyq",
       "CitizenK",
       "Dria"
     ]
