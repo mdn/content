@@ -28,7 +28,7 @@ XPath uses a path notation (as in URLs) for navigating through the hierarchical 
 ## See also
 
 - [XSLT](/en-US/docs/Web/XSLT), [XML](/en-US/docs/Web/XML), [DOM](/en-US/docs/Web/API/Document_Object_Model)
-- [Transforming XML with XSLT](/en-US/docs/Web/XSLT/Transforming_XML_with_XSLT)
+- [Transforming XML with XSLT](/en-US/docs/Web/XSLT/Guides/Transforming_XML_with_XSLT)
 - [Comparison of CSS Selectors and XPath](/en-US/docs/Web/XPath/Guides/Comparison_with_CSS_selectors)
 - [What is XSLT?](https://www.xml.com/pub/a/2000/08/holman/) introduces XSLT and XPath, including background, context, structure, concepts, and terminology - xml.com (2000)
 - [XPath tester](https://extendsclass.com/xpath-tester.html) online XPath Builder/Debugger
