@@ -54,8 +54,6 @@ sidebar:
         code: true
 l10n:
   de:
-    WebAssembly_home_page: WebAssembly-Startseite
-    Tutorials: Anleitungen
     WebAssembly_concepts: WebAssembly-Konzepte
     Compiling_to_Wasm: C/C++ zu WebAssembly kompilieren
     Compiling_Rust_to_Wasm: Rust zu WebAssembly kompilieren
@@ -68,8 +66,6 @@ l10n:
     Imported_string_constants: Importierte globale String-Konstanten
     JavaScript_interface: JavaScript-Schnittstelle
   en-US:
-    WebAssembly_home_page: WebAssembly home page
-    Tutorials: Tutorials
     WebAssembly_concepts: WebAssembly concepts
     Compiling_to_Wasm: Compiling from C/C++ to WebAssembly
     Compiling_Rust_to_Wasm: Compiling from Rust to WebAssembly
@@ -82,8 +78,6 @@ l10n:
     Imported_string_constants: Imported global string constants
     JavaScript_interface: JavaScript interface
   fr:
-    WebAssembly_home_page: Page d'accueil WebAssembly
-    Tutorials: Tutoriels
     WebAssembly_concepts: Concepts WebAssembly
     Compiling_to_Wasm: Compiler du C/C++ en WebAssembly
     Compiling_Rust_to_Wasm: Compiler du Rust en WebAssembly
@@ -94,8 +88,6 @@ l10n:
     Exported_functions: Fonctions WebAssembly exportées
     JavaScript_interface: JavaScript interface
   ko:
-    WebAssembly_home_page: 웹어셈블리 홈페이지
-    Tutorials: 자습서
     WebAssembly_concepts: 웹어셈블리의 개념
     Compiling_to_Wasm: C/C++ 모듈을 웹어셈블리로 컴파일하기
     Compiling_Rust_to_Wasm: Rust를 웹어셈블리로 컴파일하기
@@ -106,8 +98,6 @@ l10n:
     Exported_functions: 내보낸 웹어셈블리(Exported WebAssembly) 함수
     JavaScript_interface: JavaScript 인터페이스
   ru:
-    WebAssembly_home_page: WebAssembly
-    Tutorials: Уроки
     WebAssembly_concepts: Основы WebAssembly
     Compiling_to_Wasm: Компиляция кода C/C++ в WebAssembly
     Compiling_Rust_to_Wasm: Компиляция Rust в WebAssembly
@@ -118,8 +108,6 @@ l10n:
     Exported_functions: Экспортируемые функции WebAssembly
     JavaScript_interface: JavaScript interface
   zh-CN:
-    WebAssembly_home_page: WebAssembly
-    Tutorials: 教程
     WebAssembly_concepts: WebAssembly 概念
     Compiling_to_Wasm: 将 C/C++ 编译为 WebAssembly
     Compiling_Rust_to_Wasm: 将 Rust 编译为 WebAssembly
