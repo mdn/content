@@ -156,17 +156,17 @@ The `plaintext-only` value of the [`contenteditable`](/en-US/docs/Web/HTML/Globa
     <tr>
       <th>Nightly</th>
       <td>133</td>
-      <td>yes</td>
+      <td>Yes</td>
     </tr>
     <tr>
       <th>Developer Edition</th>
-      <td>133</td>
-      <td>No</td>
+      <td>135</td>
+      <td>Yes</td>
     </tr>
     <tr>
       <th>Beta</th>
-      <td>133</td>
-      <td>No</td>
+      <td>135</td>
+      <td>Yes</td>
     </tr>
     <tr>
       <th>Release</th>
@@ -1282,7 +1282,7 @@ This adds the promise-based methods {{domxref("SourceBuffer.appendBufferAsync", 
 
 #### AVIF compliance strictness
 
-The `image.avif.compliance_strictness` preference can be used to control the _strictness_ applied when processing [AVIF](/en-US/docs/Web/Media/Formats/Image_types#avif_image) images.
+The `image.avif.compliance_strictness` preference can be used to control the _strictness_ applied when processing [AVIF](/en-US/docs/Web/Media/Guides/Formats/Image_types#avif_image) images.
 This allows Firefox users to display images that render on some other browsers, even if they are not strictly compliant.
 
 Permitted values are:
