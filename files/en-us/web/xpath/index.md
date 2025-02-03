@@ -2,9 +2,8 @@
 title: XPath
 slug: Web/XPath
 page-type: landing-page
+sidebar: xsltsidebar
 ---
-
-{{XsltSidebar}}
 
 XPath stands for XML Path Language. It uses a non-XML syntax to provide a flexible way of addressing (pointing to) different parts of an [XML](/en-US/docs/Web/XML/XML_introduction) document. It can also be used to test addressed nodes within a document to determine whether they match a pattern or not.
 
@@ -23,7 +22,7 @@ XPath uses a path notation (as in URLs) for navigating through the hierarchical 
   - : List and definition of the axes defined in the XPath specification. Axes are used to describe the relationships between nodes.
 - [XPath:Functions](/en-US/docs/Web/XPath/Functions)
   - : List and description of the core XPath functions and XSLT-specific additions to XPath.
-- [Transforming XML with XSLT](/en-US/docs/Web/XSLT/Transforming_XML_with_XSLT)
+- [Transforming XML with XSLT](/en-US/docs/Web/XSLT/Guides/Transforming_XML_with_XSLT)
   - : XSLT uses XPath to address code segments in an XML document that it wishes to transform.
 - [XPath snippets](/en-US/docs/Web/XPath/Snippets)
   - : These are JavaScript utility functions, that can be used in your own code, based on [DOM Level 3 XPath](https://www.w3.org/TR/DOM-Level-3-XPath/) APIs.

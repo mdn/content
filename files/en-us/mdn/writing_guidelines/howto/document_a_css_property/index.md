@@ -1,10 +1,10 @@
 ---
 title: How to document a CSS property
+short-title: Document a CSS property
 slug: MDN/Writing_guidelines/Howto/Document_a_CSS_property
 page-type: mdn-writing-guide
+sidebar: mdnsidebar
 ---
-
-{{MDNSidebar}}
 
 As the [CSS](/en-US/docs/Web/CSS) standards evolve, new properties are always being added. The [CSS Reference](/en-US/docs/Web/CSS/Reference) on MDN Web Docs needs to be kept up-to-date with these developments. This article provides step-by-step instructions for creating a CSS property reference page.
 

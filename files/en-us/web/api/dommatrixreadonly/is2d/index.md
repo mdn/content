@@ -2,7 +2,7 @@
 title: "DOMMatrixReadOnly: is2D property"
 short-title: is2D
 slug: Web/API/DOMMatrixReadOnly/is2D
-page-type: web-api-instance-method
+page-type: web-api-instance-property
 browser-compat: api.DOMMatrixReadOnly.is2D
 ---
 

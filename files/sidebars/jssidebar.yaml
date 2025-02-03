@@ -89,39 +89,39 @@ sidebar:
     title: Reference
   - type: listSubPages
     path: /Web/JavaScript/Reference/Global_Objects
+    includeParent: true
     title: Global_Objects
     details: closed
-    includeParent: true
   - type: listSubPages
     path: /Web/JavaScript/Reference/Operators
+    includeParent: true
     title: Operators
     details: closed
-    includeParent: true
   - type: listSubPages
     path: /Web/JavaScript/Reference/Statements
+    includeParent: true
     title: Statements
     details: closed
-    includeParent: true
   - type: listSubPages
     path: /Web/JavaScript/Reference/Functions
+    includeParent: true
     title: Functions
     details: closed
-    includeParent: true
   - type: listSubPages
     path: /Web/JavaScript/Reference/Classes
+    includeParent: true
     title: Classes
     details: closed
-    includeParent: true
   - type: listSubPages
     path: /Web/JavaScript/Reference/Regular_expressions
+    includeParent: true
     title: Guide_RegExp
     details: closed
-    includeParent: true
   - type: listSubPages
     path: /Web/JavaScript/Reference/Errors
+    includeParent: true
     title: Errors
     details: closed
-    includeParent: true
   - title: More
     details: closed
     children:
@@ -141,8 +141,8 @@ sidebar:
         title: Deprecated_features
 l10n:
   de:
-    Overview: JavaScript-Technologie (Übersicht)
-    Tutorials: Tutorials
+    Overview: Übersicht über JavaScript-Technologien
+    Tutorials: Tutorials und Anleitungen
     Guide: JavaScript-Handbuch
     Guide_Introduction: Einführung
     Guide_Grammar: Grammatik und Typen
@@ -150,20 +150,26 @@ l10n:
     Guide_Loops: Schleifen und Iteration
     Guide_Functions: Funktionen
     Guide_Expressions: Ausdrücke und Operatoren
-    Guide_Numbers: Numbers and strings
-    Guide_Dates: Representing dates & times
+    Guide_Numbers: Zahlen und Zeichenketten
+    Guide_Dates: Darstellung von Daten und Uhrzeiten
     Guide_RegExp: Reguläre Ausdrücke
     Guide_Indexed_collections: Indexierte Sammlungen
-    Guide_keyed_collections: Gekennzeichnete Sammlungen
+    Guide_keyed_collections: Schlüsselbasierte Sammlungen
     Guide_Objects: Arbeiten mit Objekten
     Guide_Classes: Verwendung von Klassen
     Guide_Promises: Verwendung von Promises
     Guide_Typed_arrays: Typisierte Arrays in JavaScript
     Guide_Iterators_generators: Iteratoren und Generatoren
-    Guide_Internationalization: Internationalization
+    Guide_Internationalization: Internationalisierung
     Guide_Meta: Metaprogrammierung
     Guide_Modules: JavaScript-Module
+    Beginners: Tutorials für Anfänger
+    Adding_interactivity: "Ihre erste Webseite: Interaktivität hinzufügen"
+    Dynamic_scripting_with_JavaScript: Dynamisches Scripting mit JavaScript
+    JavaScript_frameworks_and_libraries: JavaScript-Frameworks und -Bibliotheken
     Intermediate: Mittelstufe
+    Asynchronous_JavaScript: Asynchrones JavaScript
+    Client-side_web_APIs: Clientseitige Web-APIs
     Language_overview: Sprachübersicht
     Data_structures: JavaScript-Datenstrukturen
     Equality: Gleichheitsvergleiche und Gleichheit
@@ -184,7 +190,7 @@ l10n:
     Lexical_grammar: Lexikalische Grammatik
     Enumerability: Aufzählbarkeit und Eigentum von Eigenschaften
     Iteration_protocols: Iterationsprotokolle
-    Template_strings: Vorlagenliterale
+    Template_strings: Template-Literale
     Trailing_commas: Abschließende Kommas
     Deprecated_features: Veraltete Funktionen
   en-US:

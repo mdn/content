@@ -13,7 +13,7 @@ The **`isConditionalMediationAvailable()`** static method of the {{domxref("Publ
 ## Syntax
 
 ```js-nolint
-isConditionalMediationAvailable()
+PublicKeyCredential.isConditionalMediationAvailable()
 ```
 
 ### Parameters
