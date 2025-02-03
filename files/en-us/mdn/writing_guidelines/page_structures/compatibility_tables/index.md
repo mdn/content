@@ -3,9 +3,8 @@ title: Compatibility tables and the browser compatibility data repository (BCD)
 slug: MDN/Writing_guidelines/Page_structures/Compatibility_tables
 page-type: mdn-writing-guide
 browser-compat: api.AbortController
+sidebar: mdnsidebar
 ---
-
-{{MDNSidebar}}
 
 MDN has a standard format for tables that illustrate compatibility of shared technologies across all browsers, such as DOM, HTML, CSS, JavaScript, SVG, etc.
 To make this data available in multiple projects programmatically, a Node.js package is built from the [browser-compat-data repository](https://github.com/mdn/browser-compat-data) and published to npm.

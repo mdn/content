@@ -13,7 +13,7 @@ The **`DataView`** view provides a low-level interface for reading and writing m
 
 ### Endianness
 
-Multi-byte number formats are represented in memory differently depending on machine architecture — see [Endianness](/en-US/docs/Glossary/Endianness) for an explanation. `DataView` accessors provide explicit control of how data is accessed, regardless of the executing computer's endianness. For example, [WebAssembly](/en-US/docs/WebAssembly) memory is always little-endian, so you should use `DataView` instead of typed arrays to read and write multi-byte values. See [`WebAssembly.Memory`](/en-US/docs/WebAssembly/JavaScript_interface/Memory) for an example.
+Multi-byte number formats are represented in memory differently depending on machine architecture — see [Endianness](/en-US/docs/Glossary/Endianness) for an explanation. `DataView` accessors provide explicit control of how data is accessed, regardless of the executing computer's endianness. For example, [WebAssembly](/en-US/docs/WebAssembly) memory is always little-endian, so you should use `DataView` instead of typed arrays to read and write multi-byte values. See [`WebAssembly.Memory`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Memory) for an example.
 
 ```js
 const littleEndian = (() => {

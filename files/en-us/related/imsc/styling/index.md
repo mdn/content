@@ -8,7 +8,7 @@ IMSC offers many options for styling documents, and most of the IMSC styling pro
 
 ## Inline styling
 
-The simplest way of styling content elements like `<p>` or `<span>` is by specifying one or more style attributes, such as `tts:color`, on them. For instance, the following
+The simplest way of styling content elements like `<p>` or `<span>` is by specifying one or more style attributes, such as `tts:color`, on them. For instance, the following:
 
 ```xml
 <p tts:textAlign="center"

@@ -26,7 +26,7 @@ If a passive listener calls `preventDefault()`, nothing will happen and a consol
 ## Syntax
 
 ```js-nolint
-event.preventDefault()
+preventDefault()
 ```
 
 ## Examples
