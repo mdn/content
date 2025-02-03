@@ -19,7 +19,7 @@ The `share()` method will throw exceptions if the permission is supported but ha
 ## Syntax
 
 ```js-nolint
-navigator.share(data)
+share(data)
 ```
 
 ### Parameters

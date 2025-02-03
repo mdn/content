@@ -81,7 +81,7 @@ Beyond that, a PWA has some additional features:
 
 A PWA must have a web app manifest, and the [manifest must include enough information for the browser to install the PWA](/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable#the_web_app_manifest).
 
-The manifest can define many other aspects of the PWA's appearance, such as [theme color](/en-US/docs/Web/Manifest/theme_color) and [background color](/en-US/docs/Web/Manifest/background_color), and its behavior, including its ability to [act as a share target](/en-US/docs/Web/Manifest/share_target) for data from other apps or to [handle particular file types](/en-US/docs/Web/Manifest/file_handlers).
+The manifest can define many other aspects of the PWA's appearance, such as [theme color](/en-US/docs/Web/Manifest/Reference/theme_color) and [background color](/en-US/docs/Web/Manifest/Reference/background_color), and its behavior, including its ability to [act as a share target](/en-US/docs/Web/Manifest/Reference/share_target) for data from other apps or to [handle particular file types](/en-US/docs/Web/Manifest/Reference/file_handlers).
 
 #### Service worker
 

@@ -2,9 +2,8 @@
 title: substring
 slug: Web/XPath/Functions/substring
 page-type: xpath-function
+sidebar: xsltsidebar
 ---
-
-{{XsltSidebar}}
 
 The `substring` function returns a part of a given string.
 
