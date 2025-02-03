@@ -1,6 +1,6 @@
 ---
 title: unparsed-entity-url
-slug: Web/XPath/Functions/unparsed-entity-url
+slug: Web/XPath/Reference/Functions/unparsed-entity-url
 page-type: xpath-function
 sidebar: xsltsidebar
 ---

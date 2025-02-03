@@ -43,4 +43,4 @@ The following is an annotated list of core [XPath](/en-US/docs/Web/XPath) functi
 - [system-property()](/en-US/docs/Web/XPath/Functions/system-property) _XSLT-specific_
 - [translate()](/en-US/docs/Web/XPath/Functions/translate)
 - [true()](/en-US/docs/Web/XPath/Functions/true)
-- [unparsed-entity-url()](/en-US/docs/Web/XPath/Functions/unparsed-entity-url) _XSLT-specific_
+- [unparsed-entity-url()](/en-US/docs/Web/XPath/Reference/Functions/unparsed-entity-url) _XSLT-specific_

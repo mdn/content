@@ -13535,6 +13535,7 @@
 /en-US/docs/Web/XPath/Axes/preceding-sibling	/en-US/docs/Web/XPath/Reference/Axes#preceding-sibling
 /en-US/docs/Web/XPath/Axes/self	/en-US/docs/Web/XPath/Reference/Axes#self
 /en-US/docs/Web/XPath/Comparison_with_CSS_selectors	/en-US/docs/Web/XPath/Guides/Comparison_with_CSS_selectors
+/en-US/docs/Web/XPath/Functions/unparsed-entity-url	/en-US/docs/Web/XPath/Reference/Functions/unparsed-entity-url
 /en-US/docs/Web/XPath/Index	/en-US/docs/Web/XPath
 /en-US/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript	/en-US/docs/Web/XPath/Guides/Introduction_to_using_XPath_in_JavaScript
 /en-US/docs/Web/XSLT/Common_errors	/en-US/docs/Web/XSLT/Guides/Common_errors
@@ -13882,7 +13883,7 @@
 /en-US/docs/XPath/Functions/system-property	/en-US/docs/Web/XPath/Functions/system-property
 /en-US/docs/XPath/Functions/translate	/en-US/docs/Web/XPath/Functions/translate
 /en-US/docs/XPath/Functions/true	/en-US/docs/Web/XPath/Functions/true
-/en-US/docs/XPath/Functions/unparsed-entity-url	/en-US/docs/Web/XPath/Functions/unparsed-entity-url
+/en-US/docs/XPath/Functions/unparsed-entity-url	/en-US/docs/Web/XPath/Reference/Functions/unparsed-entity-url
 /en-US/docs/XPath:Axes	/en-US/docs/Web/XPath/Reference/Axes
 /en-US/docs/XPath:Axes:ancestor	/en-US/docs/Web/XPath/Reference/Axes#ancestor
 /en-US/docs/XPath:Axes:ancestor-or-self	/en-US/docs/Web/XPath/Reference/Axes#ancestor-or-self
@@ -13933,7 +13934,7 @@
 /en-US/docs/XPath:Functions:system-property	/en-US/docs/Web/XPath/Functions/system-property
 /en-US/docs/XPath:Functions:translate	/en-US/docs/Web/XPath/Functions/translate
 /en-US/docs/XPath:Functions:true	/en-US/docs/Web/XPath/Functions/true
-/en-US/docs/XPath:Functions:unparsed-entity-url	/en-US/docs/Web/XPath/Functions/unparsed-entity-url
+/en-US/docs/XPath:Functions:unparsed-entity-url	/en-US/docs/Web/XPath/Reference/Functions/unparsed-entity-url
 /en-US/docs/XPathExpression	/en-US/docs/Web/API/XPathExpression
 /en-US/docs/XPathResult	/en-US/docs/Web/API/XPathResult
 /en-US/docs/XPathResult/booleanValue	/en-US/docs/Web/API/XPathResult/booleanValue
