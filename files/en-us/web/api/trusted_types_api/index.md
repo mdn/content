@@ -63,7 +63,8 @@ element.innerHTML = trustedHTML;
 
 The API described above enables you to sanitize data, but it doesn't ensure that your code never passes input directly to an injection sink: that is, it doesn't stop you passing a string into `innerHTML`.
 
-However, if you include the {{CSP("require-trusted-types-for")}} directive in your [CSP](/en-US/docs/Web/HTTP/CSP), then passing strings into injection sinks will result in a `TypeError` exception:
+In order to enforce that a trusted type must always be passed, you include the {{CSP("require-trusted-types-for")}} directive in your [CSP](/en-US/docs/Web/HTTP/CSP).
+With this directive set, passing strings into injection sinks will result in a `TypeError` exception:
 
 ```js example-bad
 const userInput = "I might be XSS";
@@ -72,7 +73,6 @@ const element = document.querySelector("#container");
 element.innerHTML = userInput; // Throws a TypeError
 ```
 
-Instead, you must always pass a trusted type.
 
 Additionally, the {{CSP("trusted-types")}} CSP directive can be used to control which policies your code is allowed to create. When you create a policy using {{domxref("TrustedTypePolicyFactory/createPolicy", "trustedTypes.createPolicy()")}}, you pass a name for the policy. The `trusted-types` CSP directive lists acceptable policy names, so `createPolicy()` will throw an exception if it is passed a name which was not listed in `trusted-types`. This prevents some code in your web application from creating a policy that you were not expecting.
 
