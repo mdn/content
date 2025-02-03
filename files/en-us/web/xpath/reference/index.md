@@ -2,7 +2,7 @@
 title: XPath reference
 short-title: Reference
 slug: Web/XPath/Reference
-page-type: landing-page
+page-type: listing-page
 sidebar:
   - xsltsidebar
 ---
