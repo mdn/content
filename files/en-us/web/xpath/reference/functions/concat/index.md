@@ -2,8 +2,7 @@
 title: concat
 slug: Web/XPath/Reference/Functions/concat
 page-type: xpath-function
-sidebar:
-  - xsltsidebar
+sidebar: xsltsidebar
 ---
 
 The `concat` function concatenates two or more strings and returns the resulting string.

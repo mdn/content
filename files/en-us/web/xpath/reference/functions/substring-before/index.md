@@ -2,8 +2,7 @@
 title: substring-before
 slug: Web/XPath/Reference/Functions/substring-before
 page-type: xpath-function
-sidebar:
-  - xsltsidebar
+sidebar: xsltsidebar
 ---
 
 The `substring-before` function returns a string that is the part of a given string before a given substring.

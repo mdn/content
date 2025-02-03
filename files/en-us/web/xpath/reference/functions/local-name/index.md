@@ -2,8 +2,7 @@
 title: local-name
 slug: Web/XPath/Reference/Functions/local-name
 page-type: xpath-function
-sidebar:
-  - xsltsidebar
+sidebar: xsltsidebar
 ---
 
 The `local-name` function returns a string representing the local name of the first node in a given node-set.

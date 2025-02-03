@@ -2,8 +2,7 @@
 title: starts-with
 slug: Web/XPath/Reference/Functions/starts-with
 page-type: xpath-function
-sidebar:
-  - xsltsidebar
+sidebar: xsltsidebar
 ---
 
 The `starts-with` checks whether the first string starts with the second string and returns true or false.

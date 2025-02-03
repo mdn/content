@@ -3,8 +3,7 @@ title: XPath reference
 short-title: Reference
 slug: Web/XPath/Reference
 page-type: listing-page
-sidebar:
-  - xsltsidebar
+sidebar: xsltsidebar
 ---
 
 The following pages contain reference documentation for XPath.
