@@ -126556,443 +126556,11 @@
       "Jt"
     ]
   },
-  "Web/XPath/Axes": {
-    "modified": "2019-03-24T00:17:50.976Z",
-    "contributors": [
-      "ExE-Boss",
-      "SphinxKnight",
-      "Davorak",
-      "Sheppy",
-      "brettsky",
-      "Cuimingda",
-      "Mgjbot",
-      "Fredchat",
-      "Ptak82",
-      "Nickolay",
-      "CitizenK",
-      "Dria"
-    ]
-  },
-  "Web/XPath/Comparison_with_CSS_selectors": {
+  "Web/XPath/Guides/Comparison_with_CSS_selectors": {
     "modified": "2019-06-06T12:32:39.713Z",
     "contributors": ["ExE-Boss", "criticabug", "chrisdavidmills"]
   },
-  "Web/XPath/Functions": {
-    "modified": "2019-08-11T00:05:54.428Z",
-    "contributors": [
-      "ExE-Boss",
-      "SphinxKnight",
-      "Sheppy",
-      "mete0r",
-      "Cuimingda",
-      "Mgjbot",
-      "Fredchat",
-      "Ptak82",
-      "Nickolay",
-      "Jonnyq",
-      "CitizenK",
-      "Dria"
-    ]
-  },
-  "Web/XPath/Functions/boolean": {
-    "modified": "2019-10-11T08:27:44.097Z",
-    "contributors": [
-      "mfuji09",
-      "chrisdavidmills",
-      "robinmatthur",
-      "Sheppy",
-      "ethertank",
-      "Mgjbot",
-      "Fredchat",
-      "Ptak82",
-      "Jonnyq"
-    ]
-  },
-  "Web/XPath/Functions/ceiling": {
-    "modified": "2019-03-23T23:49:13.930Z",
-    "contributors": [
-      "SphinxKnight",
-      "Sheppy",
-      "Mgjbot",
-      "Fredchat",
-      "ComputerJy",
-      "Ptak82",
-      "Jonnyq"
-    ]
-  },
-  "Web/XPath/Functions/choose": {
-    "modified": "2019-03-24T00:01:33.145Z",
-    "contributors": ["Fredchat", "Sheppy"]
-  },
-  "Web/XPath/Functions/concat": {
-    "modified": "2019-03-23T23:49:16.456Z",
-    "contributors": [
-      "SphinxKnight",
-      "billccn",
-      "Sheppy",
-      "Mgjbot",
-      "Shoot",
-      "Fredchat",
-      "Ptak82",
-      "Jonnyq"
-    ]
-  },
-  "Web/XPath/Functions/contains": {
-    "modified": "2019-03-23T23:49:14.230Z",
-    "contributors": [
-      "hellpanderrr",
-      "SphinxKnight",
-      "Sheppy",
-      "Mgjbot",
-      "Fredchat",
-      "Ptak82",
-      "Jonnyq"
-    ]
-  },
-  "Web/XPath/Functions/count": {
-    "modified": "2019-03-23T23:49:11.406Z",
-    "contributors": [
-      "SphinxKnight",
-      "Sheppy",
-      "Mgjbot",
-      "Shoot",
-      "Fredchat",
-      "Ptak82",
-      "Jonnyq"
-    ]
-  },
-  "Web/XPath/Functions/current": {
-    "modified": "2019-03-23T23:43:52.275Z",
-    "contributors": [
-      "SphinxKnight",
-      "Sheppy",
-      "Markus Prokott",
-      "Fredchat",
-      "Ptak82",
-      "Nickolay",
-      "Jonnyq"
-    ]
-  },
-  "Web/XPath/Functions/document": {
-    "modified": "2020-05-13T10:17:12.125Z",
-    "contributors": [
-      "chrisdavidmills",
-      "SphinxKnight",
-      "Sheppy",
-      "Markus Prokott",
-      "Fredchat",
-      "Ptak82",
-      "Jonnyq"
-    ]
-  },
-  "Web/XPath/Functions/element-available": {
-    "modified": "2019-03-23T23:43:50.600Z",
-    "contributors": ["SphinxKnight", "Sheppy", "Fredchat", "Ptak82", "Jonnyq"]
-  },
-  "Web/XPath/Functions/false": {
-    "modified": "2019-03-23T23:49:21.978Z",
-    "contributors": [
-      "SphinxKnight",
-      "Sheppy",
-      "Mgjbot",
-      "Fredchat",
-      "Ptak82",
-      "Jonnyq"
-    ]
-  },
-  "Web/XPath/Functions/floor": {
-    "modified": "2019-03-23T23:57:57.293Z",
-    "contributors": [
-      "SphinxKnight",
-      "Sheppy",
-      "Android",
-      "Mgjbot",
-      "Fredchat",
-      "Ptak82",
-      "Jonnyq"
-    ]
-  },
-  "Web/XPath/Functions/format-number": {
-    "modified": "2019-03-23T23:46:35.564Z",
-    "contributors": [
-      "SphinxKnight",
-      "Sheppy",
-      "Docwhat",
-      "Fredchat",
-      "Ptak82",
-      "Jonnyq"
-    ]
-  },
-  "Web/XPath/Functions/function-available": {
-    "modified": "2019-03-23T23:43:52.726Z",
-    "contributors": ["SphinxKnight", "Sheppy", "Fredchat", "Ptak82", "Jonnyq"]
-  },
-  "Web/XPath/Functions/generate-id": {
-    "modified": "2019-03-23T23:43:52.818Z",
-    "contributors": ["SphinxKnight", "Sheppy", "Fredchat", "Ptak82", "Jonnyq"]
-  },
-  "Web/XPath/Functions/id": {
-    "modified": "2019-03-23T23:49:23.187Z",
-    "contributors": [
-      "SphinxKnight",
-      "Sheppy",
-      "Mgjbot",
-      "Shoot",
-      "Fredchat",
-      "Ptak82",
-      "Jonnyq"
-    ]
-  },
-  "Web/XPath/Functions/key": {
-    "modified": "2019-03-23T23:43:52.512Z",
-    "contributors": ["SphinxKnight", "Sheppy", "Fredchat", "Ptak82", "Jonnyq"]
-  },
-  "Web/XPath/Functions/lang": {
-    "modified": "2019-03-23T23:49:21.772Z",
-    "contributors": [
-      "SphinxKnight",
-      "Sheppy",
-      "Mgjbot",
-      "Shoot",
-      "Fredchat",
-      "Ptak82",
-      "Jonnyq"
-    ]
-  },
-  "Web/XPath/Functions/last": {
-    "modified": "2019-03-23T23:49:22.896Z",
-    "contributors": [
-      "SphinxKnight",
-      "Sheppy",
-      "Mgjbot",
-      "Fredchat",
-      "Ptak82",
-      "Momoko",
-      "Jonnyq"
-    ]
-  },
-  "Web/XPath/Functions/local-name": {
-    "modified": "2019-03-23T23:49:22.756Z",
-    "contributors": [
-      "SphinxKnight",
-      "Sheppy",
-      "Mgjbot",
-      "Fredchat",
-      "Ptak82",
-      "Jonnyq"
-    ]
-  },
-  "Web/XPath/Functions/name": {
-    "modified": "2019-03-23T23:49:23.974Z",
-    "contributors": [
-      "SphinxKnight",
-      "Sheppy",
-      "Mgjbot",
-      "Fredchat",
-      "Ptak82",
-      "Jonnyq"
-    ]
-  },
-  "Web/XPath/Functions/namespace-uri": {
-    "modified": "2019-03-23T23:49:22.667Z",
-    "contributors": [
-      "SphinxKnight",
-      "Sheppy",
-      "Mgjbot",
-      "Fredchat",
-      "Ptak82",
-      "Jonnyq"
-    ]
-  },
-  "Web/XPath/Functions/normalize-space": {
-    "modified": "2019-03-23T23:49:25.369Z",
-    "contributors": [
-      "SphinxKnight",
-      "Sheppy",
-      "Mgjbot",
-      "Shoot",
-      "Fredchat",
-      "Ptak82",
-      "Jonnyq"
-    ]
-  },
-  "Web/XPath/Functions/not": {
-    "modified": "2019-03-23T23:49:24.482Z",
-    "contributors": [
-      "SphinxKnight",
-      "ixth",
-      "Sheppy",
-      "Markus Prokott",
-      "Mgjbot",
-      "Shoot",
-      "Fredchat",
-      "Nickolay",
-      "Ptak82",
-      "Jonnyq"
-    ]
-  },
-  "Web/XPath/Functions/number": {
-    "modified": "2019-03-23T23:49:25.574Z",
-    "contributors": [
-      "SphinxKnight",
-      "Sheppy",
-      "Shoot",
-      "Mgjbot",
-      "Fredchat",
-      "Ptak82",
-      "Jonnyq"
-    ]
-  },
-  "Web/XPath/Functions/position": {
-    "modified": "2019-03-23T23:49:19.581Z",
-    "contributors": [
-      "SphinxKnight",
-      "Sheppy",
-      "Mgjbot",
-      "Gopireddy",
-      "Jake Archibald",
-      "Fredchat",
-      "Ptak82",
-      "Jonnyq"
-    ]
-  },
-  "Web/XPath/Functions/round": {
-    "modified": "2019-03-23T23:49:23.692Z",
-    "contributors": [
-      "SphinxKnight",
-      "Sheppy",
-      "Mgjbot",
-      "Fredchat",
-      "Ptak82",
-      "Jonnyq"
-    ]
-  },
-  "Web/XPath/Functions/starts-with": {
-    "modified": "2019-03-23T23:49:22.069Z",
-    "contributors": [
-      "fhllrmyr",
-      "SphinxKnight",
-      "Sheppy",
-      "Mgjbot",
-      "Ptak82",
-      "Jonnyq"
-    ]
-  },
-  "Web/XPath/Functions/string": {
-    "modified": "2019-03-23T23:49:18.639Z",
-    "contributors": [
-      "MaxValue",
-      "SphinxKnight",
-      "Sheppy",
-      "Mgjbot",
-      "Ptak82",
-      "Jonnyq"
-    ]
-  },
-  "Web/XPath/Functions/string-length": {
-    "modified": "2019-03-23T23:49:19.661Z",
-    "contributors": ["SphinxKnight", "Sheppy", "Mgjbot", "Ptak82", "Jonnyq"]
-  },
-  "Web/XPath/Functions/substring": {
-    "modified": "2019-03-23T23:49:21.056Z",
-    "contributors": [
-      "SphinxKnight",
-      "Sheppy",
-      "Mgjbot",
-      "Ptak82",
-      "Jonnyq",
-      "Nickolay"
-    ]
-  },
-  "Web/XPath/Functions/substring-after": {
-    "modified": "2020-01-04T09:21:09.942Z",
-    "contributors": [
-      "mfuji09",
-      "vor0nwe",
-      "SphinxKnight",
-      "Sheppy",
-      "Mgjbot",
-      "Docwhat",
-      "Dietrich",
-      "Ptak82",
-      "Waldo",
-      "Jonnyq"
-    ]
-  },
-  "Web/XPath/Functions/substring-before": {
-    "modified": "2019-03-18T21:09:22.312Z",
-    "contributors": [
-      "vor0nwe",
-      "SphinxKnight",
-      "Sheppy",
-      "Mgjbot",
-      "Docwhat",
-      "Dietrich",
-      "Ptak82",
-      "Jonnyq"
-    ]
-  },
-  "Web/XPath/Functions/sum": {
-    "modified": "2019-03-23T23:49:20.197Z",
-    "contributors": [
-      "SphinxKnight",
-      "Sheppy",
-      "Mgjbot",
-      "Shoot",
-      "Gopireddy",
-      "Ptak82",
-      "Jonnyq"
-    ]
-  },
-  "Web/XPath/Functions/system-property": {
-    "modified": "2020-08-06T04:20:35.872Z",
-    "contributors": [
-      "mfuji09",
-      "SphinxKnight",
-      "sanjula40",
-      "Sheppy",
-      "Mgjbot",
-      "Ptak82",
-      "Jonnyq"
-    ]
-  },
-  "Web/XPath/Functions/translate": {
-    "modified": "2019-12-14T08:11:05.270Z",
-    "contributors": [
-      "elix0n",
-      "jdlauret",
-      "vor0nwe",
-      "fscholz",
-      "SphinxKnight",
-      "LeoSko",
-      "chbrown",
-      "jakub.vanek",
-      "Lemondoge",
-      "Sheppy",
-      "Mgjbot",
-      "Diablownik",
-      "Jake Archibald",
-      "Ptak82",
-      "Jonnyq",
-      "AlanKrueger"
-    ]
-  },
-  "Web/XPath/Functions/true": {
-    "modified": "2019-03-23T23:49:18.738Z",
-    "contributors": ["SphinxKnight", "Sheppy", "Mgjbot", "Ptak82", "Jonnyq"]
-  },
-  "Web/XPath/Functions/unparsed-entity-url": {
-    "modified": "2019-06-06T02:16:13.856Z",
-    "contributors": [
-      "SphinxKnight",
-      "sanjula40",
-      "Sheppy",
-      "Mgjbot",
-      "Ptak82",
-      "alecananian"
-    ]
-  },
-  "Web/XPath/Introduction_to_using_XPath_in_JavaScript": {
+  "Web/XPath/Guides/Introduction_to_using_XPath_in_JavaScript": {
     "modified": "2020-03-04T11:40:28.386Z",
     "contributors": [
       "fscholz",
@@ -127027,9 +126595,441 @@
       "Dria"
     ]
   },
-  "Web/XPath/Snippets": {
+  "Web/XPath/Guides/Snippets": {
     "modified": "2019-03-23T22:48:13.524Z",
     "contributors": ["ExE-Boss", "SphinxKnight", "sideshowbarker"]
+  },
+  "Web/XPath/Reference/Axes": {
+    "modified": "2019-03-24T00:17:50.976Z",
+    "contributors": [
+      "ExE-Boss",
+      "SphinxKnight",
+      "Davorak",
+      "Sheppy",
+      "brettsky",
+      "Cuimingda",
+      "Mgjbot",
+      "Fredchat",
+      "Ptak82",
+      "Nickolay",
+      "CitizenK",
+      "Dria"
+    ]
+  },
+  "Web/XPath/Reference/Functions": {
+    "modified": "2019-08-11T00:05:54.428Z",
+    "contributors": [
+      "ExE-Boss",
+      "SphinxKnight",
+      "Sheppy",
+      "mete0r",
+      "Cuimingda",
+      "Mgjbot",
+      "Fredchat",
+      "Ptak82",
+      "Nickolay",
+      "Jonnyq",
+      "CitizenK",
+      "Dria"
+    ]
+  },
+  "Web/XPath/Reference/Functions/boolean": {
+    "modified": "2019-10-11T08:27:44.097Z",
+    "contributors": [
+      "mfuji09",
+      "chrisdavidmills",
+      "robinmatthur",
+      "Sheppy",
+      "ethertank",
+      "Mgjbot",
+      "Fredchat",
+      "Ptak82",
+      "Jonnyq"
+    ]
+  },
+  "Web/XPath/Reference/Functions/ceiling": {
+    "modified": "2019-03-23T23:49:13.930Z",
+    "contributors": [
+      "SphinxKnight",
+      "Sheppy",
+      "Mgjbot",
+      "Fredchat",
+      "ComputerJy",
+      "Ptak82",
+      "Jonnyq"
+    ]
+  },
+  "Web/XPath/Reference/Functions/choose": {
+    "modified": "2019-03-24T00:01:33.145Z",
+    "contributors": ["Fredchat", "Sheppy"]
+  },
+  "Web/XPath/Reference/Functions/concat": {
+    "modified": "2019-03-23T23:49:16.456Z",
+    "contributors": [
+      "SphinxKnight",
+      "billccn",
+      "Sheppy",
+      "Mgjbot",
+      "Shoot",
+      "Fredchat",
+      "Ptak82",
+      "Jonnyq"
+    ]
+  },
+  "Web/XPath/Reference/Functions/contains": {
+    "modified": "2019-03-23T23:49:14.230Z",
+    "contributors": [
+      "hellpanderrr",
+      "SphinxKnight",
+      "Sheppy",
+      "Mgjbot",
+      "Fredchat",
+      "Ptak82",
+      "Jonnyq"
+    ]
+  },
+  "Web/XPath/Reference/Functions/count": {
+    "modified": "2019-03-23T23:49:11.406Z",
+    "contributors": [
+      "SphinxKnight",
+      "Sheppy",
+      "Mgjbot",
+      "Shoot",
+      "Fredchat",
+      "Ptak82",
+      "Jonnyq"
+    ]
+  },
+  "Web/XPath/Reference/Functions/current": {
+    "modified": "2019-03-23T23:43:52.275Z",
+    "contributors": [
+      "SphinxKnight",
+      "Sheppy",
+      "Markus Prokott",
+      "Fredchat",
+      "Ptak82",
+      "Nickolay",
+      "Jonnyq"
+    ]
+  },
+  "Web/XPath/Reference/Functions/document": {
+    "modified": "2020-05-13T10:17:12.125Z",
+    "contributors": [
+      "chrisdavidmills",
+      "SphinxKnight",
+      "Sheppy",
+      "Markus Prokott",
+      "Fredchat",
+      "Ptak82",
+      "Jonnyq"
+    ]
+  },
+  "Web/XPath/Reference/Functions/element-available": {
+    "modified": "2019-03-23T23:43:50.600Z",
+    "contributors": ["SphinxKnight", "Sheppy", "Fredchat", "Ptak82", "Jonnyq"]
+  },
+  "Web/XPath/Reference/Functions/false": {
+    "modified": "2019-03-23T23:49:21.978Z",
+    "contributors": [
+      "SphinxKnight",
+      "Sheppy",
+      "Mgjbot",
+      "Fredchat",
+      "Ptak82",
+      "Jonnyq"
+    ]
+  },
+  "Web/XPath/Reference/Functions/floor": {
+    "modified": "2019-03-23T23:57:57.293Z",
+    "contributors": [
+      "SphinxKnight",
+      "Sheppy",
+      "Android",
+      "Mgjbot",
+      "Fredchat",
+      "Ptak82",
+      "Jonnyq"
+    ]
+  },
+  "Web/XPath/Reference/Functions/format-number": {
+    "modified": "2019-03-23T23:46:35.564Z",
+    "contributors": [
+      "SphinxKnight",
+      "Sheppy",
+      "Docwhat",
+      "Fredchat",
+      "Ptak82",
+      "Jonnyq"
+    ]
+  },
+  "Web/XPath/Reference/Functions/function-available": {
+    "modified": "2019-03-23T23:43:52.726Z",
+    "contributors": ["SphinxKnight", "Sheppy", "Fredchat", "Ptak82", "Jonnyq"]
+  },
+  "Web/XPath/Reference/Functions/generate-id": {
+    "modified": "2019-03-23T23:43:52.818Z",
+    "contributors": ["SphinxKnight", "Sheppy", "Fredchat", "Ptak82", "Jonnyq"]
+  },
+  "Web/XPath/Reference/Functions/id": {
+    "modified": "2019-03-23T23:49:23.187Z",
+    "contributors": [
+      "SphinxKnight",
+      "Sheppy",
+      "Mgjbot",
+      "Shoot",
+      "Fredchat",
+      "Ptak82",
+      "Jonnyq"
+    ]
+  },
+  "Web/XPath/Reference/Functions/key": {
+    "modified": "2019-03-23T23:43:52.512Z",
+    "contributors": ["SphinxKnight", "Sheppy", "Fredchat", "Ptak82", "Jonnyq"]
+  },
+  "Web/XPath/Reference/Functions/lang": {
+    "modified": "2019-03-23T23:49:21.772Z",
+    "contributors": [
+      "SphinxKnight",
+      "Sheppy",
+      "Mgjbot",
+      "Shoot",
+      "Fredchat",
+      "Ptak82",
+      "Jonnyq"
+    ]
+  },
+  "Web/XPath/Reference/Functions/last": {
+    "modified": "2019-03-23T23:49:22.896Z",
+    "contributors": [
+      "SphinxKnight",
+      "Sheppy",
+      "Mgjbot",
+      "Fredchat",
+      "Ptak82",
+      "Momoko",
+      "Jonnyq"
+    ]
+  },
+  "Web/XPath/Reference/Functions/local-name": {
+    "modified": "2019-03-23T23:49:22.756Z",
+    "contributors": [
+      "SphinxKnight",
+      "Sheppy",
+      "Mgjbot",
+      "Fredchat",
+      "Ptak82",
+      "Jonnyq"
+    ]
+  },
+  "Web/XPath/Reference/Functions/name": {
+    "modified": "2019-03-23T23:49:23.974Z",
+    "contributors": [
+      "SphinxKnight",
+      "Sheppy",
+      "Mgjbot",
+      "Fredchat",
+      "Ptak82",
+      "Jonnyq"
+    ]
+  },
+  "Web/XPath/Reference/Functions/namespace-uri": {
+    "modified": "2019-03-23T23:49:22.667Z",
+    "contributors": [
+      "SphinxKnight",
+      "Sheppy",
+      "Mgjbot",
+      "Fredchat",
+      "Ptak82",
+      "Jonnyq"
+    ]
+  },
+  "Web/XPath/Reference/Functions/normalize-space": {
+    "modified": "2019-03-23T23:49:25.369Z",
+    "contributors": [
+      "SphinxKnight",
+      "Sheppy",
+      "Mgjbot",
+      "Shoot",
+      "Fredchat",
+      "Ptak82",
+      "Jonnyq"
+    ]
+  },
+  "Web/XPath/Reference/Functions/not": {
+    "modified": "2019-03-23T23:49:24.482Z",
+    "contributors": [
+      "SphinxKnight",
+      "ixth",
+      "Sheppy",
+      "Markus Prokott",
+      "Mgjbot",
+      "Shoot",
+      "Fredchat",
+      "Nickolay",
+      "Ptak82",
+      "Jonnyq"
+    ]
+  },
+  "Web/XPath/Reference/Functions/number": {
+    "modified": "2019-03-23T23:49:25.574Z",
+    "contributors": [
+      "SphinxKnight",
+      "Sheppy",
+      "Shoot",
+      "Mgjbot",
+      "Fredchat",
+      "Ptak82",
+      "Jonnyq"
+    ]
+  },
+  "Web/XPath/Reference/Functions/position": {
+    "modified": "2019-03-23T23:49:19.581Z",
+    "contributors": [
+      "SphinxKnight",
+      "Sheppy",
+      "Mgjbot",
+      "Gopireddy",
+      "Jake Archibald",
+      "Fredchat",
+      "Ptak82",
+      "Jonnyq"
+    ]
+  },
+  "Web/XPath/Reference/Functions/round": {
+    "modified": "2019-03-23T23:49:23.692Z",
+    "contributors": [
+      "SphinxKnight",
+      "Sheppy",
+      "Mgjbot",
+      "Fredchat",
+      "Ptak82",
+      "Jonnyq"
+    ]
+  },
+  "Web/XPath/Reference/Functions/starts-with": {
+    "modified": "2019-03-23T23:49:22.069Z",
+    "contributors": [
+      "fhllrmyr",
+      "SphinxKnight",
+      "Sheppy",
+      "Mgjbot",
+      "Ptak82",
+      "Jonnyq"
+    ]
+  },
+  "Web/XPath/Reference/Functions/string": {
+    "modified": "2019-03-23T23:49:18.639Z",
+    "contributors": [
+      "MaxValue",
+      "SphinxKnight",
+      "Sheppy",
+      "Mgjbot",
+      "Ptak82",
+      "Jonnyq"
+    ]
+  },
+  "Web/XPath/Reference/Functions/string-length": {
+    "modified": "2019-03-23T23:49:19.661Z",
+    "contributors": ["SphinxKnight", "Sheppy", "Mgjbot", "Ptak82", "Jonnyq"]
+  },
+  "Web/XPath/Reference/Functions/substring": {
+    "modified": "2019-03-23T23:49:21.056Z",
+    "contributors": [
+      "SphinxKnight",
+      "Sheppy",
+      "Mgjbot",
+      "Ptak82",
+      "Jonnyq",
+      "Nickolay"
+    ]
+  },
+  "Web/XPath/Reference/Functions/substring-after": {
+    "modified": "2020-01-04T09:21:09.942Z",
+    "contributors": [
+      "mfuji09",
+      "vor0nwe",
+      "SphinxKnight",
+      "Sheppy",
+      "Mgjbot",
+      "Docwhat",
+      "Dietrich",
+      "Ptak82",
+      "Waldo",
+      "Jonnyq"
+    ]
+  },
+  "Web/XPath/Reference/Functions/substring-before": {
+    "modified": "2019-03-18T21:09:22.312Z",
+    "contributors": [
+      "vor0nwe",
+      "SphinxKnight",
+      "Sheppy",
+      "Mgjbot",
+      "Docwhat",
+      "Dietrich",
+      "Ptak82",
+      "Jonnyq"
+    ]
+  },
+  "Web/XPath/Reference/Functions/sum": {
+    "modified": "2019-03-23T23:49:20.197Z",
+    "contributors": [
+      "SphinxKnight",
+      "Sheppy",
+      "Mgjbot",
+      "Shoot",
+      "Gopireddy",
+      "Ptak82",
+      "Jonnyq"
+    ]
+  },
+  "Web/XPath/Reference/Functions/system-property": {
+    "modified": "2020-08-06T04:20:35.872Z",
+    "contributors": [
+      "mfuji09",
+      "SphinxKnight",
+      "sanjula40",
+      "Sheppy",
+      "Mgjbot",
+      "Ptak82",
+      "Jonnyq"
+    ]
+  },
+  "Web/XPath/Reference/Functions/translate": {
+    "modified": "2019-12-14T08:11:05.270Z",
+    "contributors": [
+      "elix0n",
+      "jdlauret",
+      "vor0nwe",
+      "fscholz",
+      "SphinxKnight",
+      "LeoSko",
+      "chbrown",
+      "jakub.vanek",
+      "Lemondoge",
+      "Sheppy",
+      "Mgjbot",
+      "Diablownik",
+      "Jake Archibald",
+      "Ptak82",
+      "Jonnyq",
+      "AlanKrueger"
+    ]
+  },
+  "Web/XPath/Reference/Functions/true": {
+    "modified": "2019-03-23T23:49:18.738Z",
+    "contributors": ["SphinxKnight", "Sheppy", "Mgjbot", "Ptak82", "Jonnyq"]
+  },
+  "Web/XPath/Reference/Functions/unparsed-entity-url": {
+    "modified": "2019-06-06T02:16:13.856Z",
+    "contributors": [
+      "SphinxKnight",
+      "sanjula40",
+      "Sheppy",
+      "Mgjbot",
+      "Ptak82",
+      "alecananian"
+    ]
   },
   "Web/XSLT": {
     "modified": "2020-09-28T10:37:51.636Z",
