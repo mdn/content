@@ -4023,7 +4023,7 @@
 /en-US/docs/Intro_HTML5	/en-US/docs/Learn_web_development/Core/Structuring_content
 /en-US/docs/Introducing_Content_Security_Policy	/en-US/docs/Web/HTTP/CSP
 /en-US/docs/Introduction_to_Object-Oriented_JavaScript	/en-US/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects
-/en-US/docs/Introduction_to_using_XPath_in_JavaScript	/en-US/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript
+/en-US/docs/Introduction_to_using_XPath_in_JavaScript	/en-US/docs/Web/XPath/Guides/Introduction_to_using_XPath_in_JavaScript
 /en-US/docs/JS/Glossary	/en-US/docs/Glossary
 /en-US/docs/JS/this	/en-US/docs/Web/JavaScript/Reference/Operators/this
 /en-US/docs/JS/with	/en-US/docs/Web/JavaScript/Reference/Statements/with
@@ -7737,7 +7737,7 @@
 /en-US/docs/Using_Web_Standards_in_your_Web_Pages:Making_your_page_using_web_standards_-_how_to	/en-US/docs/Learn_web_development/Core/Structuring_content/Debugging_HTML
 /en-US/docs/Using_Web_Standards_in_your_Web_Pages:Using_XMLHttpRequest	/en-US/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest
 /en-US/docs/Using_XMLHttpRequest	/en-US/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest
-/en-US/docs/Using_XPath	/en-US/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript
+/en-US/docs/Using_XPath	/en-US/docs/Web/XPath/Guides/Introduction_to_using_XPath_in_JavaScript
 /en-US/docs/Using_an_External_Spell-checker	/en-US/docs/Mozilla/Firefox/Releases/3/Using_an_external_spell_checker
 /en-US/docs/Using_audio_and_video_in_Firefox	/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio
 /en-US/docs/Using_files_from_web_applications	/en-US/docs/Web/API/File_API/Using_files_from_web_applications
@@ -7746,9 +7746,9 @@
 /en-US/docs/Using_gradients	/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradients
 /en-US/docs/Using_native_JSON	/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON
 /en-US/docs/Using_the/target_selector	/en-US/docs/Web/CSS/CSS_Selectors/Using_the_:target_pseudo-class_in_selectors
-/en-US/docs/Using_theMozilla_JavaScript_interface_to_XPath	/en-US/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript
+/en-US/docs/Using_theMozilla_JavaScript_interface_to_XPath	/en-US/docs/Web/XPath/Guides/Introduction_to_using_XPath_in_JavaScript
 /en-US/docs/Using_the_:target_selector	/en-US/docs/Web/CSS/CSS_Selectors/Using_the_:target_pseudo-class_in_selectors
-/en-US/docs/Using_the_Mozilla_JavaScript_interface_to_XPath	/en-US/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript
+/en-US/docs/Using_the_Mozilla_JavaScript_interface_to_XPath	/en-US/docs/Web/XPath/Guides/Introduction_to_using_XPath_in_JavaScript
 /en-US/docs/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations	/en-US/docs/Web/API/XSLTProcessor
 /en-US/docs/Using_the_W3C_DOM_Level_1_Core	/en-US/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model
 /en-US/docs/Using_the_W3C_DOM_Level_1_Core/Example	/en-US/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model
@@ -12893,7 +12893,7 @@
 /en-US/docs/Web/JavaScript/Guide/Working_With_Private_Class_Features	/en-US/docs/Web/JavaScript/Guide/Using_Classes#private_fields
 /en-US/docs/Web/JavaScript/Guide/iterable	/en-US/docs/Web/JavaScript/Reference/Iteration_protocols
 /en-US/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript	/en-US/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects
-/en-US/docs/Web/JavaScript/Introduction_to_using_XPath_in_JavaScript	/en-US/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript
+/en-US/docs/Web/JavaScript/Introduction_to_using_XPath_in_JavaScript	/en-US/docs/Web/XPath/Guides/Introduction_to_using_XPath_in_JavaScript
 /en-US/docs/Web/JavaScript/JavaScript_templates	/en-US/docs/Web/JavaScript/Reference/Template_literals
 /en-US/docs/Web/JavaScript/Javascript_How_To_Tutorials	/en-US/docs/Web/JavaScript/Guide
 /en-US/docs/Web/JavaScript/Language_Resources	/en-US/docs/Web/JavaScript/JavaScript_technologies_overview
@@ -13536,6 +13536,7 @@
 /en-US/docs/Web/XPath/Axes/self	/en-US/docs/Web/XPath/Reference/Axes#self
 /en-US/docs/Web/XPath/Comparison_with_CSS_selectors	/en-US/docs/Web/XPath/Guides/Comparison_with_CSS_selectors
 /en-US/docs/Web/XPath/Index	/en-US/docs/Web/XPath
+/en-US/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript	/en-US/docs/Web/XPath/Guides/Introduction_to_using_XPath_in_JavaScript
 /en-US/docs/Web/XSLT/Common_errors	/en-US/docs/Web/XSLT/Guides/Common_errors
 /en-US/docs/Web/XSLT/EXSLT	/en-US/docs/Web/EXSLT
 /en-US/docs/Web/XSLT/Element	/en-US/docs/Web/XSLT/Reference/Element

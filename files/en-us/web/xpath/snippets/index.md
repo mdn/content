@@ -152,4 +152,4 @@ function getXPathForElement(el, xml) {
 
 ## See also
 
-- [Introduction to using XPath in JavaScript](/en-US/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript)
+- [Introduction to using XPath in JavaScript](/en-US/docs/Web/XPath/Guides/Introduction_to_using_XPath_in_JavaScript)
