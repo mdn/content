@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.BigInt
 
 {{JSRef}}
 
-**`BigInt`** values represent numeric values which are [too large](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER) to be represented by the `number` {{Glossary("Primitive", "primitive")}}.
+**`BigInt`** values represent integer values which are [too high](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER) or [too low](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MIN_SAFE_INTEGER) to be represented by the `number` {{Glossary("Primitive", "primitive")}}.
 
 ## Description
 

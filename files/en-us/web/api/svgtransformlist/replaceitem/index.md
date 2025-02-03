@@ -19,7 +19,7 @@ The inserted item is the item itself and not a copy.
 ## Syntax
 
 ```js-nolint
-SVGTransformList.replaceItem(newItem, index)
+replaceItem(newItem, index)
 ```
 
 ### Parameters

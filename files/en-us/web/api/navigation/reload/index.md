@@ -16,7 +16,7 @@ The **`reload()`** method of the
 ## Syntax
 
 ```js-nolint
-navigate(options)
+reload(options)
 ```
 
 ### Parameters
