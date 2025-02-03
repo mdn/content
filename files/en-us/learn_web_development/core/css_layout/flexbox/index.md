@@ -337,8 +337,6 @@ We now have multiple rows. Each row has as many flexbox children fitted into it 
 
 But there's more we can do here. First of all, try changing your {{cssxref("flex-direction")}} property value to `row-reverse`. Now you'll see that you still have your multiple row layout, but it starts from the opposite corner of the browser window and flows in reverse. The following image shows the updated layout.
 
-![Flex items are laid out in multiple rows in the flex container, with the flex-direction property set to row-reverse. The items are now flowing in reverse order, starting from the opposite end of the container. Each row has as many items as possible, with overflow moving to the next line.](flexbox-example4.png)
-
 ## flex-flow shorthand
 
 At this point it's worth noting that a shorthand exists for {{cssxref("flex-direction")}} and {{cssxref("flex-wrap")}}: {{cssxref("flex-flow")}}. So, for example, you can replace
