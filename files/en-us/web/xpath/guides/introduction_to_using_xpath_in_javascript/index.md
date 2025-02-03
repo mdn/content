@@ -80,7 +80,7 @@ We obtain the returned value of the expression by accessing the following proper
 
 ##### Example
 
-The following uses the XPath expression [`count(//p)`](/en-US/docs/Web/XPath/Functions/count) to obtain the number of `<p>` elements in an HTML document:
+The following uses the XPath expression [`count(//p)`](/en-US/docs/Web/XPath/Reference/Functions/count) to obtain the number of `<p>` elements in an HTML document:
 
 ```js
 const paragraphCount = document.evaluate(
@@ -323,7 +323,7 @@ Another approach to match default elements in a non-null namespace (and one whic
 
 If one wishes to provide flexibility in namespaces (as they are intended) by not necessarily requiring a particular prefix to be used when finding a namespaced element or attribute, one must use special techniques.
 
-While one can adapt the approach in the above section to test for namespaced elements regardless of the prefix chosen (using [`local-name()`](/en-US/docs/Web/XPath/Functions/local-name) in combination with [`namespace-uri()`](/en-US/docs/Web/XPath/Functions/namespace-uri) instead of [`name()`](/en-US/docs/Web/XPath/Functions/name)), a more challenging situation occurs, however, if one wishes to grab an element with a particular namespaced attribute in a predicate (given the absence of implementation-independent variables in XPath 1.0).
+While one can adapt the approach in the above section to test for namespaced elements regardless of the prefix chosen (using [`local-name()`](/en-US/docs/Web/XPath/Reference/Functions/local-name) in combination with [`namespace-uri()`](/en-US/docs/Web/XPath/Reference/Functions/namespace-uri) instead of [`name()`](/en-US/docs/Web/XPath/Reference/Functions/name)), a more challenging situation occurs, however, if one wishes to grab an element with a particular namespaced attribute in a predicate (given the absence of implementation-independent variables in XPath 1.0).
 
 For example, one might try (incorrectly) to grab an element with a namespaced attribute as follows: `const xpathLink = someElements[local-name(@*)="href" and namespace-uri(@*)='http://www.w3.org/1999/xlink'];`
 
