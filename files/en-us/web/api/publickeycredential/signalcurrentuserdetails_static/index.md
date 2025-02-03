@@ -12,7 +12,7 @@ browser-compat: api.PublicKeyCredential.signalCurrentUserDetails_static
 
 The **`signalCurrentUserDetails()`** static method of the {{domxref("PublicKeyCredential")}} interface signals to the authenticator that a particular user has updated their user name and/or display name on the [relying party](https://en.wikipedia.org/wiki/Relying_party) (RP) server.
 
-This allows the authenticator to update user account details, to make sure they stay in sync with those held by the RP. It should only be used when the current user is authenticated — after sign in, or when they change the metadata associated with their credentials on the RP site.
+This allows the authenticator to update user account details, to make sure they stay in sync with those held by the RP. It should only be used when the current user is authenticated — after sign in, or when they change the metadata associated with their credentials on the RP web app.
 
 ## Syntax
 
@@ -48,11 +48,11 @@ The promise rejects with the following exceptions:
 
 ## Description
 
-It is possible for the information stored in a user's authenticator about a [discoverable credential](/en-US/docs/Web/API/Web_Authentication_API#discoverable_credentials_and_conditional_mediation) (for example, [a passkey](https://passkeys.dev/)) to go out sync with the RP server. This can occur when the user updates their user name or display name on the RP site without updating the authenticator.
+It is possible for the information stored in a user's authenticator about a [discoverable credential](/en-US/docs/Web/API/Web_Authentication_API#discoverable_credentials_and_conditional_mediation) (for example, [a passkey](https://passkeys.dev/)) to go out sync with the RP server. This can occur when the user updates their user name or display name on the RP web app without updating the authenticator.
 
 The next time they try to sign in with a discoverable credential, the credential will still be presented to them with the old user name/display name in the relevant UI, which can result in a confusing user experience.
 
-To avoid this issue, `signalCurrentUserDetails()` should be called on the RP site each time a user updates their user account details or signs in, to tell the authenticator that the user information has been updated. It is up to the authenticator how to handle this information, but the expectation is that it will synchronize its user information with the provided update.
+To avoid this issue, `signalCurrentUserDetails()` should be called on the RP web app each time a user updates their user account details or signs in, to tell the authenticator that the user information has been updated. It is up to the authenticator how to handle this information, but the expectation is that it will synchronize its user information with the provided update.
 
 ## Examples
 

@@ -119,18 +119,20 @@ A typical authentication flow is as follows:
 
 A **discoverable credential** is one that is supplied by an authenticator to the browser to offer to the user as a login option. In contrast, a non-discoverable credential is one that the relying party site tells the browser to offer as a login option.
 
-Discoverable credential `credentialId`s and associated metadata such as [user names](/en-US/docs/Web/API/PublicKeyCredentialCreationOptions#name_2) and [display names](/en-US/docs/Web/API/PublicKeyCredentialCreationOptions#displayname) are stored in a client-side authenticator such as a browser password manager, authenticator app, or hardware solution such as a YubiKey. Having this information available in the authenticator means that the relying party does not have to provide a [`credentialId`](/en-US/docs/Web/API/PublicKeyCredentialRequestOptions#id) when asserting it, although it can do if desired in the same way as you would for a non-discoverable credential.
+Discoverable credential `credentialId`s and associated metadata such as [user names](/en-US/docs/Web/API/PublicKeyCredentialCreationOptions#name_2) and [display names](/en-US/docs/Web/API/PublicKeyCredentialCreationOptions#displayname) are stored in a client-side authenticator such as a browser password manager, authenticator app, or hardware solution such as a YubiKey. Having this information available in the authenticator means that the user can log in conventiently without having to supply credentials, and the relying party does not have to provide a [`credentialId`](/en-US/docs/Web/API/PublicKeyCredentialRequestOptions#id) when asserting it (although it can do if desired).
 
-A discoverable credential is created via a [`create()`](/en-US/docs/Web/API/CredentialsContainer/create) call with a specified [`residentKey`](/en-US/docs/Web/API/PublicKeyCredentialCreationOptions#residentkey), and then subsequently used for authentication via a [`get()`](/en-US/docs/Web/API/CredentialsContainer/get) call with **conditional mediation** specified, that is, [`mediation`](/en-US/docs/Web/API/CredentialsContainer/get#mediation) set to `conditional` and an empty [`allowCredentials`](/en-US/docs/Web/API/PublicKeyCredentialRequestOptions#allowcredentials) list. The `credentialId` is used by the authenticator to identify the correct private key during authentication.
+A discoverable credential is created via a [`create()`](/en-US/docs/Web/API/CredentialsContainer/create) call with a specified [`residentKey`](/en-US/docs/Web/API/PublicKeyCredentialCreationOptions#residentkey). The `credentialId`, user metadata, and public key for the new credential is stored by the authenticator as discussed above, but also returned to the web app and stored on the RP server.
 
-You can check whether conditional mediation is available on a specific user agent by calling the {{domxref("PublicKeyCredential.isConditionalMediationAvailable()")}} method.
+In order to authenticate, the RP server calls [`get()`](/en-US/docs/Web/API/CredentialsContainer/get) with **conditional mediation** specified, that is [`mediation`](/en-US/docs/Web/API/CredentialsContainer/get#mediation) set to `conditional`, an empty [`allowCredentials`](/en-US/docs/Web/API/PublicKeyCredentialRequestOptions#allowcredentials) list (meaning only discoverable credentials can be shown), and a challenge.
 
 Conditional mediation results in discoverable credentials found in the authenticator being presented to the user in a non-modal UI along with an indication of the origin requesting credentials, rather than a modal dialog. In practice, this means autofilling available credentials in your login forms. The metadata stored in discoverable credentials can be displayed to help users choose a credential when logging in. To display discoverable credentials in your login forms, you also need to include [`autocomplete="webauthn"`](/en-US/docs/Web/HTML/Attributes/autocomplete#webauthn) on your form fields.
 
-The sign-in flow for discoverable credentials is very similar to that of non-discoverable credentials, except that:
+To reiterate, the relying party doesn't tell the authenticator what credentials to offer to the user — instead, the authenticator supplies the list it has available. Once the user selects a credential, the authenticator uses it to sign the challenge with the associated private key, and the browser returns the signed challenge and its `credentialId` to the RP server.
 
-1. The [`allowCredentials`](/en-US/docs/Web/API/PublicKeyCredentialRequestOptions#allowcredentials) list included in the associated `get()` call must be empty, meaning only discoverable credentials can be shown. To reiterate, the relying party doesn't tell the authenticator what credentials to offer to the user — instead, the authenticator supplies the list it has available.
-2. The way the login choices are presented to the user is different — in a login form rather than a modal dialog.
+The subsequent authentication process on the RP server is the same as for non-discoverable credentials.
+
+> [!NOTE]
+> You can check whether conditional mediation is available on a specific user agent by calling the {{domxref("PublicKeyCredential.isConditionalMediationAvailable()")}} method.
 
 [Passkeys](https://passkeys.dev/) are a significant use case for discoverable credentials; see [Create a passkey for passwordless logins](https://web.dev/articles/passkey-registration) and [Sign in with a passkey through form autofill](https://web.dev/articles/passkey-form-autofill) for implementation details. See also [Discoverable credentials deep dive](https://web.dev/articles/webauthn-discoverable-credentials) for more general information on discoverable credentials.
 
@@ -141,18 +143,18 @@ When conditional mediation is used for authentication, the prevent silent access
 
 #### Discoverable credential synchronization methods
 
-It is possible for the information stored in a user's authenticator about a discoverable credential to go out sync with the relying party's server. The API provides methods to allow the relying party server to signal changes to the authenticator, so it can update its stored credentials:
+It is possible for the information stored in a user's authenticator about a discoverable credential to go out sync with the relying party's server. This might happen when the user deletes a credential or modifies their user/display name on the RP web app without updating the authenticator.
 
-- {{domxref("PublicKeyCredential.signalAllAcceptedCredentials_static", "PublicKeyCredential.signalAllAcceptedCredentials()")}}
-- {{domxref("PublicKeyCredential.signalCurrentUserDetails_static", "PublicKeyCredential.signalCurrentUserDetails()")}}
-- {{domxref("PublicKeyCredential.signalUnknownCredential_static", "PublicKeyCredential.signalUnknownCredential()")}}
+The API provides methods to allow the relying party server to signal changes to the authenticator, so it can update its stored credentials:
 
-It may seem like `signalUnknownCredential()` and {{domxref("PublicKeyCredential.signalAllAcceptedCredentials_static", "signalAllAcceptedCredentials()")}} have similar purposes, so what situation should each one be used in?
+- {{domxref("PublicKeyCredential.signalAllAcceptedCredentials_static", "PublicKeyCredential.signalAllAcceptedCredentials()")}}: Signals to the authenticator all of the valid credential IDs that the RP server still holds for a particular user.
+- {{domxref("PublicKeyCredential.signalCurrentUserDetails_static", "PublicKeyCredential.signalCurrentUserDetails()")}}: Signals to the authenticator that a particular user has updated their user name and/or display name on the RP server.
+- {{domxref("PublicKeyCredential.signalUnknownCredential_static", "PublicKeyCredential.signalUnknownCredential()")}}: Signals to the authenticator that a credential ID was not recognized by the RP server.
 
-To be clear:
+It may seem like `signalUnknownCredential()` and `signalAllAcceptedCredentials()` have similar purposes, so what situation should each one be used in?
 
-- `signalUnknownCredential()` should be used to update the authenticator when the user is not authenticated. It only passes a single `credentialId` to the authenticator — the same one the client just tried to authenticate with. Using `signalAllAcceptedCredentials()` for this purpose would share the entire list of `credentialId`s for a given user with an unauthenticated party, which may not be desirable.
 - `signalAllAcceptedCredentials()` should be used in cases where the user is authenticated and you want to update the state of a user's credentials.
+- `signalUnknownCredential()` should be used to update the authenticator when the user is _not_ authenticated. It only passes a single `credentialId` to the authenticator — the same one the client just tried to authenticate with. Using `signalAllAcceptedCredentials()` for this purpose would share the entire list of `credentialId`s for a given user with an unauthenticated party, which may not be desirable.
 
 ## Controlling access to the API
 

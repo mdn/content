@@ -44,11 +44,11 @@ The promise rejects with the following exceptions:
 
 ## Description
 
-It is possible for the information stored in a user's authenticator about a [discoverable credential](/en-US/docs/Web/API/Web_Authentication_API#discoverable_credentials_and_conditional_mediation) (for example, [a passkey](https://passkeys.dev/)) to go out sync with the RP server. This usually occurs when the user deletes a credential from the RP site without updating the authenticator.
+It is possible for the information stored in a user's authenticator about a [discoverable credential](/en-US/docs/Web/API/Web_Authentication_API#discoverable_credentials_and_conditional_mediation) (for example, [a passkey](https://passkeys.dev/)) to go out sync with the RP server. This usually occurs when the user deletes a credential from the RP web app without updating the authenticator.
 
-The next time they try to sign in with a discoverable credential, the deleted credential will still be presented in the relevant UI, but the attempt to sign in will fail because the RP server won't recognize it. This results in a confusing user experience.
+When a user attempts to log in using discoverable credentials, they are presented with a set of credentials from the authenticator to choose from, and the selected credential is returned to the RP web app to log in with. If the user selects a credential that has been deleted from the RP server, it won't be recognized, and the login will fail. This is a confusing experience for users, who expect to only be offered credentials that should succeed.
 
-To avoid this issue, `signalUnknownCredential()` should be called on the RP site each time a discoverable credential-based sign-in fails, to inform the authenticator that the credential ID was not recognized.
+To mitigate this issue, `signalUnknownCredential()` should be called on the RP web app each time a discoverable credential-based sign-in fails, to inform the authenticator that the credential ID was not recognized.
 
 It is up to the authenticator how to handle this information, but the expectation is that it will delete the relevant credential so that there is no mismatch in the data stored on the authenticator and relying party.
 
