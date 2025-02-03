@@ -126,11 +126,11 @@ At a minimum, if you omit the `type` property, use appropriate and unambiguous f
 
 This example shows how to declare multiple icons for different scenarios and devices. If an icon for a specific situation is not supported or not available, browsers will fall back to other available formats and sizes.
 
-- Two icons of the same size (`48x48`) are provided in different formats. The first is explicitly specified as [WebP](/en-US/docs/Web/Media/Formats/Image_types#webp_image) using the `type` property. If a browser doesn't support WebP, it will fall back to the second icon of the same size. For the second icon, the browser will determine the MIME type either from the HTTP header or by inferring it from the image file's content. Icons at this size are typically used for browser tabs and bookmarks.
+- Two icons of the same size (`48x48`) are provided in different formats. The first is explicitly specified as [WebP](/en-US/docs/Web/Media/Guides/Formats/Image_types#webp_image) using the `type` property. If a browser doesn't support WebP, it will fall back to the second icon of the same size. For the second icon, the browser will determine the MIME type either from the HTTP header or by inferring it from the image file's content. Icons at this size are typically used for browser tabs and bookmarks.
 
-- An [ICO](/en-US/docs/Web/Media/Formats/Image_types#ico_microsoft_windows_icon) file is provided with multiple sizes ranging from `72x72` to `256x256`. ICO files contain multiple raster icons that are individually optimized for various display sizes. Icons at these sizes are commonly used for desktop shortcuts.
+- An [ICO](/en-US/docs/Web/Media/Guides/Formats/Image_types#ico_microsoft_windows_icon) file is provided with multiple sizes ranging from `72x72` to `256x256`. ICO files contain multiple raster icons that are individually optimized for various display sizes. Icons at these sizes are commonly used for desktop shortcuts.
 
-- For larger icons (`257x257` and above), an [SVG](/en-US/docs/Web/Media/Formats/Image_types#svg_scalable_vector_graphics) file is specified. The `sizes` value of this icon is set to `any`, which allows a browser to use this icon at any size. SVG icons maintain their quality at larger sizes. These icons are ideal for high-resolution displays like in [progressive web apps (PWAs)](/en-US/docs/Web/Progressive_web_apps).
+- For larger icons (`257x257` and above), an [SVG](/en-US/docs/Web/Media/Guides/Formats/Image_types#svg_scalable_vector_graphics) file is specified. The `sizes` value of this icon is set to `any`, which allows a browser to use this icon at any size. SVG icons maintain their quality at larger sizes. These icons are ideal for high-resolution displays like in [progressive web apps (PWAs)](/en-US/docs/Web/Progressive_web_apps).
 
 ```json
 {
@@ -166,6 +166,6 @@ This example shows how to declare multiple icons for different scenarios and dev
 
 ## See also
 
-- [Image file type and format guide](/en-US/docs/Web/Media/Formats/Image_types#webp_image)
+- [Image file type and format guide](/en-US/docs/Web/Media/Guides/Formats/Image_types#webp_image)
 - [Monochrome icons and solid fills](https://w3c.github.io/manifest/#monochrome-icons-and-solid-fills)
 - [Icon masks and safe zone](https://w3c.github.io/manifest/#icon-masks)
