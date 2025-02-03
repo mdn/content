@@ -2,9 +2,8 @@
 title: contains
 slug: Web/XPath/Functions/contains
 page-type: xpath-function
+sidebar: xsltsidebar
 ---
-
-{{XsltSidebar}}
 
 The `contains` function determines whether the first argument string contains the second argument string and returns boolean true or false.
 

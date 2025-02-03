@@ -803,19 +803,15 @@
       "interfaces": ["SVGFontFaceUriElement"]
     },
     "foreignObject": {
-      "categories": ["noCategory"],
+      "categories": ["graphicsElement", "renderableElement"],
       "content": {
         "description": "anyElementsOrCharacterData"
       },
       "attributes": [
+        "ariaAttributes",
         "conditionalProcessingAttributes",
         "coreAttributes",
-        "graphicalEventAttributes",
         "presentationAttributes",
-        "'class'",
-        "'style'",
-        "'externalResourcesRequired'",
-        "'transform'",
         "'x'",
         "'y'",
         "'width'",
@@ -939,26 +935,37 @@
       "interfaces": ["SVGHKernElement"]
     },
     "image": {
-      "categories": ["graphicsElement", "graphicsReferencingElement"],
+      "categories": [
+        "graphicsElement",
+        "graphicsReferencingElement",
+        "renderableElement"
+      ],
       "content": {
         "description": "anyNumberOfElementsAnyOrder",
-        "elements": ["animationElements", "descriptiveElements"]
+        "elements": [
+          "animationElements",
+          "descriptiveElements",
+          "&lt;animate&gt;",
+          "&lt;animateMotion&gt;",
+          "&lt;animateTransform&gt;",
+          "&lt;discard&gt;",
+          "&lt;script&gt;",
+          "&lt;set&gt;",
+          "&lt;style&gt;"
+        ]
       },
       "attributes": [
+        "ariaAttributes",
         "conditionalProcessingAttributes",
         "coreAttributes",
-        "graphicalEventAttributes",
         "xLinkAttributes",
         "presentationAttributes",
-        "'class'",
-        "'style'",
-        "'externalResourcesRequired'",
-        "'transform'",
         "'x'",
         "'y'",
         "'width'",
         "'height'",
-        "'xlink:href'",
+        "'crossorigin'",
+        "'href'",
         "'preserveAspectRatio'"
       ],
       "interfaces": ["SVGImageElement"]

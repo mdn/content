@@ -13,12 +13,6 @@ browser-compat: api.NDEFRecord.recordType
 The **`recordType`**
 property of the {{DOMxRef("NDEFRecord")}} interface returns the record type of the record.
 
-## Syntax
-
-```js-nolint
-NDEFRecord.recordType
-```
-
 ### Value
 
 A string which can be one of the following:

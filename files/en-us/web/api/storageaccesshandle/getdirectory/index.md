@@ -1,5 +1,5 @@
 ---
-title: "StorageAccessHandle: getDirectory() property"
+title: "StorageAccessHandle: getDirectory() method"
 short-title: getDirectory()
 slug: Web/API/StorageAccessHandle/getDirectory
 page-type: web-api-instance-method
@@ -14,7 +14,7 @@ browser-compat: api.StorageAccessHandle.getDirectory
 ## Syntax
 
 ```js-nolint
-handle.getDirectory()
+getDirectory()
 ```
 
 ### Parameters

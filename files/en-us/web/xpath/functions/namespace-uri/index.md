@@ -2,9 +2,8 @@
 title: namespace-uri
 slug: Web/XPath/Functions/namespace-uri
 page-type: xpath-function
+sidebar: xsltsidebar
 ---
-
-{{XsltSidebar}}
 
 The `namespace-uri` function returns a string representing the namespace URI of the first node in a given node-set.
 

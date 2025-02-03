@@ -24,7 +24,7 @@ multiDrawElementsInstancedWEBGL(mode,
     type,
     firstsList, firstsOffset,
     instanceCountsList, instanceCountsOffset,
-    drawCount);
+    drawCount)
 ```
 
 ### Parameters

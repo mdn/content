@@ -22,7 +22,7 @@ new URLSearchParams(options)
 
 - `options` {{optional_inline}}
   - : One of:
-    - A string, which will be parsed from `application/x-www-form-urlencoded` format. A leading `'?'` character is ignored.
+    - A string, which will be parsed from `application/x-www-form-urlencoded` format. A leading `'?'` character is ignored. This is the only form that decodes [percent-encoding](/en-US/docs/Glossary/Percent-encoding), and decodes `+` to U+0020 SPACE.
     - A literal sequence of name-value string pairs, or any object — such as a {{domxref("FormData")}} object — with an [iterator](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators#iterators) that produces a sequence of string pairs. Note that {{domxref("File")}} entries will be serialized as `[object File]` rather than as their filename (as they would in an `application/x-www-form-urlencoded` form).
     - A record of string keys and string values. Note that nesting is not supported.
 

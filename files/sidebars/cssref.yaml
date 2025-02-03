@@ -57,54 +57,55 @@ sidebar:
     link: /Web/CSS/Reference
   - type: listSubPages
     path: /Web/CSS
-    title: Modules
     tags: css-module
+    title: Modules
     details: closed
   - type: listSubPagesGrouped
     path: /Web/CSS
-    title: Properties
     tags:
       - css-property
       - css-shorthand-property
+    title: Properties
     details: closed
   - type: listSubPages
     path: /Web/CSS
-    title: Selectors
     tags: css-selector
+    title: Selectors
     details: closed
   - type: listSubPages
     path: /Web/CSS
-    title: Combinators
     tags: css-combinator
+    title: Combinators
     details: closed
   - type: listSubPages
     path: /Web/CSS
-    title: Pseudo-classes
     tags: css-pseudo-class
+    title: Pseudo-classes
     details: closed
   - type: listSubPages
     path: /Web/CSS
-    title: Pseudo-elements
     tags: css-pseudo-element
+    title: Pseudo-elements
     details: closed
   - type: listSubPages
     path: /Web/CSS
-    title: At-rules
     tags: css-at-rule
+    title: At-rules
     details: closed
   - type: listSubPages
     path: /Web/CSS
-    title: Functions
     tags: css-function
-    details: closed
     depth: 2
+    title: Functions
+    details: closed
   - type: listSubPages
     path: /Web/CSS
-    title: Types
     tags: css-type
+    title: Types
     details: closed
   - type: section
     title: Guides
+    link: /Web/CSS/Guides
   - title: Animations
     details: closed
     children:
@@ -137,7 +138,7 @@ sidebar:
       - /Web/CSS/CSS_colors/Relative_colors
       - /Web/CSS/CSS_colors/Using_color_wisely
       - link: /Web/Accessibility/Understanding_Colors_and_Luminance
-        title: Accessibility_Understanding_colors_and_luminance"
+        title: Accessibility_Understanding_colors_and_luminance
       - link: /Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast
         title: Color_contrast
   - title: Columns
@@ -283,37 +284,52 @@ sidebar:
       - /Web/CSS/CSS_Backgrounds_and_Borders/Border-radius_generator
 l10n:
   de:
+    Beginners: Einsteiger-Tutorials
+    Styling_the_content: "Ihre erste Website: Das Styling des Inhalts"
+    CSS_styling_basics: Grundlagen des CSS-Stylings
+    CSS_text_styling: CSS-Textgestaltung
     CSS_layout: CSS-Layout
-    Combinators: Kombinatoren
     Guides: Leitfäden
     Animations: Animationen
+    Accessibility_Understanding_colors_and_luminance: "Barrierefreiheit: Farbwerte verstehen"
+    Applying_color_to_HTML_elements: Farben auf HTML-Elemente anwenden
+    At-rules: At-Regeln
     Backgrounds_and_Borders: Hintergründe und Rahmen
     Resizing_background_images: Hintergrundbilder skalieren
+    Box alignment: Box-Ausrichtung
     Box_alignment_in_block_layout: Box-Ausrichtung im Block-Layout
     Box_model: Box-Modell
     Colors: Farben
     Color_contrast: "Barrierefreiheit: Farbkontrast"
     Columns: Spalten
+    Combinators: Kombinatoren
     Conditional_rules: Bedingte Regeln
     Containment: Containment
     CSSOM_view: CSSOM-Ansicht
     Flexbox: Flexbox
     Flow_layout: Fluss-Layout
     Fonts: Schriftarten
+    Functions: Funktionen
     Grid: Raster
     Images: Bilder
     Lists_and_counters: Listen und Zähler
     Logical_properties: Logische Eigenschaften
     Math_functions: Mathematische Funktionen
     Media_queries: Media-Abfragen
+    Modules: Module
     Nesting: Verschachteln von Stilregeln
     Positioning: Positionierung
+    Pseudo-classes: Pseudo-Klassen
+    Pseudo-elements: Pseudo-Elemente
+    Properties: Eigenschaften
     Scroll_snap: Scroll-Snap
+    Selectors: Selektoren
     Shapes: Formen
     Text: Text
     Transforms: Transformationen
     Transitions: Übergänge
     Tools: Werkzeuge
+    Types: Typen
   en-US:
     Beginners: Beginner's tutorials
     Styling_the_content: "Your first website: Styling the content"
@@ -376,9 +392,40 @@ l10n:
     Transitions: Transitions
     Tools: Outils
   ja:
+    Beginners: 初心者向けチュートリアル
+    Styling_the_content: "初めてのウェブサイト: コンテンツのスタイル設定"
+    CSS_styling_basics: CSS スタイル設定の基本
+    CSS_text_styling: CSS テキストの装飾
     CSS_layout: CSS レイアウト
+    Guides: ガイド
+    Animations: アニメーション
+    Backgrounds_and_Borders: 背景と境界
+    Resizing_background_images: 背景画像の拡大縮小
+    Box_alignment_in_block_layout: ブロックレイアウトでのボックス配置
+    Box_model: ボックスモデル
+    Colors: 色
+    Color_contrast: "アクセシビリティ: 色のコントラスト"
+    Columns: 段組み
+    Conditional_rules: 条件付きルール
+    Containment: 拘束
+    CSSOM_view: CSSOM view
     Flexbox: フレックスボックス
+    Flow_layout: フローレイアウト
+    Fonts: フォント
+    Grid: グリッド
+    Images: 画像
+    Lists_and_counters: リストとカウンター
+    Logical_properties: 論理的プロパティ
+    Math_functions: 数学関数
+    Media_queries: メディアクエリー
+    Nesting: 入れ子のスタイルルール
     Positioning: 位置指定
+    Scroll_snap: スクロールスナップ
+    Shapes: シェイプ
+    Text: テキスト
+    Transforms: 座標変換
+    Transitions: トランジション
+    Tools: ツール
   ko:
     CSS_layout: CSS 레이아웃
     Guides: 안내서

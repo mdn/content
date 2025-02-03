@@ -2,7 +2,7 @@
 title: "DOMMatrixReadOnly: isIdentity property"
 short-title: isIdentity
 slug: Web/API/DOMMatrixReadOnly/isIdentity
-page-type: web-api-instance-method
+page-type: web-api-instance-property
 browser-compat: api.DOMMatrixReadOnly.isIdentity
 ---
 
