@@ -119,7 +119,7 @@ A typical authentication flow is as follows:
 
 A **discoverable credential** is one that is supplied by an authenticator to the browser to offer to the user as a login option. In contrast, a non-discoverable credential is one that the relying party site tells the browser to offer as a login option.
 
-Discoverable credential `credentialId`s and associated metadata such as [user names](/en-US/docs/Web/API/PublicKeyCredentialCreationOptions#name_2) and [display names](/en-US/docs/Web/API/PublicKeyCredentialCreationOptions#displayname) are stored in a client-side authenticator such as a browser password manager, authenticator app, or hardware solution such as a YubiKey. Having this information available in the authenticator means that the user can log in conventiently without having to supply credentials, and the relying party does not have to provide a [`credentialId`](/en-US/docs/Web/API/PublicKeyCredentialRequestOptions#id) when asserting it (although it can do if desired; if the credential is asserted by the RP then the non-discoverable workflow is followed).
+Discoverable credential `credentialId`s and associated metadata such as [user names](/en-US/docs/Web/API/PublicKeyCredentialCreationOptions#name_2) and [display names](/en-US/docs/Web/API/PublicKeyCredentialCreationOptions#displayname) are stored in a client-side authenticator such as a browser password manager, authenticator app, or hardware solution such as a YubiKey. Having this information available in the authenticator means that the user can log in conveniently without having to supply credentials, and the relying party does not have to provide a [`credentialId`](/en-US/docs/Web/API/PublicKeyCredentialRequestOptions#id) when asserting it (although it can do if desired; if the credential is asserted by the RP then the non-discoverable workflow is followed).
 
 A discoverable credential is created via a [`create()`](/en-US/docs/Web/API/CredentialsContainer/create) call with a specified [`residentKey`](/en-US/docs/Web/API/PublicKeyCredentialCreationOptions#residentkey). The `credentialId`, user metadata, and public key for the new credential is stored by the authenticator as discussed above, but also returned to the web app and stored on the RP server.
 
@@ -153,8 +153,8 @@ The API provides methods to allow the relying party server to signal changes to 
 
 It may seem like `signalUnknownCredential()` and `signalAllAcceptedCredentials()` have similar purposes, so what situation should each one be used in?
 
-- `signalAllAcceptedCredentials()` should be used in cases where the user is authenticated and you want to update the state of a user's credentials.
-- `signalUnknownCredential()` should be used to update the authenticator when the user is _not_ authenticated. It only passes a single `credentialId` to the authenticator — the same one the client just tried to authenticate with. Using `signalAllAcceptedCredentials()` for this purpose would share the entire list of `credentialId`s for a given user with an unauthenticated party, which may not be desirable.
+- `signalAllAcceptedCredentials()` should be called in cases where the user _is_ authenticated. It should be called after every successful sign-in, and when the user is logged in and you want to update the state of their credentials.
+- `signalUnknownCredential()` should be called to update the authenticator when the user _is not_ authenticated. It only passes a single `credentialId` to the authenticator — the same one the client just tried to authenticate with. Using `signalAllAcceptedCredentials()` for this purpose would share the entire list of `credentialId`s for a given user with an unauthenticated party, which may not be desirable.
 
 ## Controlling access to the API
 
