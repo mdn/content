@@ -6,7 +6,6 @@ page-type: mdn-writing-guide
 sidebar: mdnsidebar
 ---
 
-
 ## Adding SVGs
 
 If you're adding images, especially diagrams, consider using SVG format for the following reasons:
