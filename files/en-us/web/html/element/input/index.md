@@ -874,7 +874,7 @@ Inputs, being replaced elements, have a few features not applicable to non form 
     <tr>
       <td>{{Cssxref(":open")}}</td>
       <td>
-        <code>&lt;input&gt;</code> elements that display a picker for the user to choose a value from (for example <a href="/en-US/docs/Web/HTML/Element/input/color"><code>&lt;input type="color"&gt;</code></a>) — but only when the element is in the "open" state, that is, when the picker is displayed.
+        <code>&lt;input&gt;</code> elements that display a picker for the user to choose a value from (for example <a href="/en-US/docs/Web/HTML/Element/input/color"><code>&lt;input type="color"&gt;</code></a>) — but only when the element is in the open state, that is, when the picker is displayed.
       </td>
     </tr>
   </tbody>

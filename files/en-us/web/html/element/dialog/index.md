@@ -291,7 +291,7 @@ When animating `<dialog>`s with CSS transitions, the following features are requ
 - [`@starting-style`](/en-US/docs/Web/CSS/@starting-style) at-rule
   - : Provides a set of starting values for properties set on the `<dialog>` that you want to transition from every time it is opened. This is needed to avoid unexpected behavior. By default, CSS transitions only occur when a property changes from one value to another on a visible element; they are not triggered on elements' first style updates, or when the `display` type changes from `none` to another type.
 - [`display`](/en-US/docs/Web/CSS/display) property
-  - : Add `display` to the transitions list so that the `<dialog>` will remain as `display: block` (or another visible `display` value set on the dialog's "open" state) for the duration of the transition, ensuring the other transitions are visible.
+  - : Add `display` to the transitions list so that the `<dialog>` will remain as `display: block` (or another visible `display` value set on the dialog's open state) for the duration of the transition, ensuring the other transitions are visible.
 - [`overlay`](/en-US/docs/Web/CSS/overlay) property
   - : Include `overlay` in the transitions list to ensure the removal of the `<dialog>` from the top layer is deferred until the transition completes, again ensuring the transition is visible.
 - {{cssxref("transition-behavior")}} property
@@ -319,13 +319,13 @@ In the CSS, we include a `@starting-style` block that defines the transition sta
 We also set a starting style value for the {{cssxref("background-color")}} property on the [`::backdrop`](/en-US/docs/Web/CSS/::backdrop) that appears behind the `<dialog>` when it opens, to provide a nice darkening animation. The `dialog:open::backdrop` selector selects only the backdrops of `<dialog>` elements when the dialog is open.
 
 ```css
-/*   "Open" state of the dialog  */
+/* Open state of the dialog  */
 dialog:open {
   opacity: 1;
   transform: scaleY(1);
 }
 
-/*   Closed state of the dialog   */
+/* Closed state of the dialog   */
 dialog {
   opacity: 0;
   transform: scaleY(0);
@@ -338,7 +338,7 @@ dialog {
   transition: all 0.7s allow-discrete; */
 }
 
-/*   Before "open" state  */
+/* Before open state  */
 /* Needs to be after the previous dialog:open rule to take effect,
     as the specificity is the same */
 @starting-style {
@@ -374,7 +374,7 @@ because the nesting selector cannot represent pseudo-elements. */
 ```
 
 > [!NOTE]
-> In browsers that don't support the {{cssxref(":open")}} pseudo-class, you can use the attribute selector `dialog[open]` to style the `<dialog>` element when it is in the "open" state.
+> In browsers that don't support the {{cssxref(":open")}} pseudo-class, you can use the attribute selector `dialog[open]` to style the `<dialog>` element when it is in the open state.
 
 ##### JavaScript
 
