@@ -38,6 +38,8 @@ This article provides information about the changes in Firefox 136 that affect d
 
 ### APIs
 
+- The maximum size of [Data URLs](/en-US/docs/Web/URI/Schemes/data) has been increased from 32MB to 512MB, matching the limit for Chromium browsers ([Firefox bug 1911300](https://bugzil.la/1911300)).
+
 #### DOM
 
 #### Media, WebRTC, and Web Audio
