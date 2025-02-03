@@ -21,7 +21,7 @@ The **`:open`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Ps
 
 The `:open` pseudo-class selects any element currently in the "open" state, which includes the following elements:
 
-- {{htmlelement("details")}} and {{htmlelement("dialog")}} elements that are in an open state, that is, they hae the `open` attribute set.
+- {{htmlelement("details")}} and {{htmlelement("dialog")}} elements that are in an open state, that is, they have the `open` attribute set.
 - {{htmlelement("input")}} elements that display a picker for the user to choose a value from (for example [`<input type="color">`](/en-US/docs/Web/HTML/Element/input/color)), when the picker is displayed.
 - {{htmlelement("select")}} elements that display a drop-down box for the user to choose a value from, when the drop-down is displayed.
 
