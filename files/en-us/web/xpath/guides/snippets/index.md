@@ -1,6 +1,6 @@
 ---
 title: XPath snippets
-slug: Web/XPath/Snippets
+slug: Web/XPath/Guides/Snippets
 page-type: guide
 sidebar: xsltsidebar
 ---

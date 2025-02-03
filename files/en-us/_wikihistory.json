@@ -126599,6 +126599,10 @@
       "Dria"
     ]
   },
+  "Web/XPath/Guides/Snippets": {
+    "modified": "2019-03-23T22:48:13.524Z",
+    "contributors": ["ExE-Boss", "SphinxKnight", "sideshowbarker"]
+  },
   "Web/XPath/Reference/Axes": {
     "modified": "2019-03-24T00:17:50.976Z",
     "contributors": [
@@ -127030,10 +127034,6 @@
       "Ptak82",
       "alecananian"
     ]
-  },
-  "Web/XPath/Snippets": {
-    "modified": "2019-03-23T22:48:13.524Z",
-    "contributors": ["ExE-Boss", "SphinxKnight", "sideshowbarker"]
   },
   "Web/XSLT": {
     "modified": "2020-09-28T10:37:51.636Z",

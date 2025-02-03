@@ -13575,6 +13575,7 @@
 /en-US/docs/Web/XPath/Functions/unparsed-entity-url	/en-US/docs/Web/XPath/Reference/Functions/unparsed-entity-url
 /en-US/docs/Web/XPath/Index	/en-US/docs/Web/XPath
 /en-US/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript	/en-US/docs/Web/XPath/Guides/Introduction_to_using_XPath_in_JavaScript
+/en-US/docs/Web/XPath/Snippets	/en-US/docs/Web/XPath/Guides/Snippets
 /en-US/docs/Web/XSLT/Common_errors	/en-US/docs/Web/XSLT/Guides/Common_errors
 /en-US/docs/Web/XSLT/EXSLT	/en-US/docs/Web/EXSLT
 /en-US/docs/Web/XSLT/Element	/en-US/docs/Web/XSLT/Reference/Element
