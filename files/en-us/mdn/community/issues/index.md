@@ -1,13 +1,11 @@
 ---
-title: Guidelines to open and work on issues
+title: Creating and working on issues
 slug: MDN/Community/Issues
 page-type: mdn-community-guide
+sidebar: mdnsidebar
 ---
 
-{{MDNSidebar}}
-
 As a contributor, you can [report](#guidelines_for_reporting_an_issue) and [work](#guidelines_for_working_on_an_issue) on issues.
-
 After you report an issue, the issue gets triaged. Issue [triaging](#guidelines_for_triaging_issues) is typically done by people assigned the role of a maintainer or an owner.
 
 ## General guidelines for participation
@@ -32,7 +30,7 @@ Avoid doing the following:
 
 ### Before filing an issue
 
-If you think you've found a bug with the content on MDN Web Docs or with the look and feel of the website, search the current open issues in the [relevant repository](/en-US/docs/MDN/Community/Contributing/Our_repositories) and make sure nobody else has reported the issue.
+If you think you've found a bug with the content on MDN Web Docs or with the look and feel of the website, search the current open issues in the [relevant repository](/en-US/docs/MDN/Community/Our_repositories) and make sure nobody else has reported the issue.
 
 ### Reporting an issue
 

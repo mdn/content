@@ -129,11 +129,13 @@ flex: 200px;
 
 Try this now. You'll see that the layout looks much better with this included:
 
-![Flex items are laid out in multiple rows in the flex container. The flex-wrap property is set to 'wrap' in the flex container which displays the flex items in a new row if the flex items in the previous row overflow outside the flexbox container. Each flex item is given a width of 200 pixels. All the items are stretched to be the same height, as tall as the flex item with the most content.](flexbox-example4.png)
+![Flex items are laid out in multiple rows in the flex container. The flex-wrap property is set to 'wrap' in the flex container which displays the flex items in a new row if the flex items in the previous row overflow outside the flexbox container. Each flex item is given a width of 200 pixels. All the items are stretched to be the same height, as tall as the flex item with the most content.](flexbox-example6.png)
 
 We now have multiple rows. Each row has as many flexbox children fitted into it as is sensible. Any overflow is moved down to the next line. The `flex: 200px` declaration set on the articles means that each will be at least `200px` wide. We'll discuss this property in more detail later on. You might also notice that the last few children on the last row are each made wider so that the entire row is still filled.
 
-But there's more we can do here. First of all, try changing your {{cssxref("flex-direction")}} property value to `row-reverse`. Now you'll see that you still have your multiple row layout, but it starts from the opposite corner of the browser window and flows in reverse.
+But there's more we can do here. First of all, try changing your {{cssxref("flex-direction")}} property value to `row-reverse`. Now you'll see that you still have your multiple row layout, but it starts from the opposite corner of the browser window and flows in reverse. The following image shows the updated layout.
+
+![Flex items are laid out in multiple rows in the flex container, with the flex-direction property set to row-reverse. The items are now flowing in reverse order, starting from the opposite end of the container. Each row has as many items as possible, with overflow moving to the next line.](flexbox-example4.png)
 
 ## flex-flow shorthand
 

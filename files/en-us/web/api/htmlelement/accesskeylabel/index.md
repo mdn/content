@@ -12,12 +12,6 @@ The **`HTMLElement.accessKeyLabel`**
 read-only property returns a string containing the element's
 browser-assigned access key (if any); otherwise it returns an empty string.
 
-## Syntax
-
-```js-nolint
-label = element.accessKeyLabel
-```
-
 ## Example
 
 ### JavaScript

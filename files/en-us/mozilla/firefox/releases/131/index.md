@@ -33,7 +33,7 @@ This article provides information about the changes in Firefox 131 that affect d
 
 ### WebAssembly
 
-- The new exception reference with the value of `exnref` can now be used to help with [exception handling](/en-US/docs/WebAssembly/JavaScript_interface/Exception) between WebAssembly and JavaScript in both directions. ([Firefox bug 1908375](https://bugzil.la/1908375)).
+- The new exception reference with the value of `exnref` can now be used to help with [exception handling](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Exception) between WebAssembly and JavaScript in both directions. ([Firefox bug 1908375](https://bugzil.la/1908375)).
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
