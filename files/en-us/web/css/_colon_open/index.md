@@ -97,7 +97,7 @@ In this example, we have a basic {{htmlelement("select")}} element with some cus
 
 #### HTML
 
-There is nothing special about our fruit selector, except that we have put it inside a wrapper element to make it easier to apply generated content to the example ({{cssxref("::after")}} and {{cssxref("::before")}} do not play well with `<select>` elements because their content is fully controlled by the browser).
+There is nothing special about our fruit selector, except that we have put it inside a wrapper element to make it easier to apply generated content to the example ({{cssxref("::after")}} and {{cssxref("::before")}} do not play well with `<select>` elements).
 
 ```html
 <p>
