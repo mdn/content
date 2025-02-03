@@ -21,7 +21,7 @@ Our focus here is on the second type of stylesheet that Gecko supports: the XSLT
 ## XSLT/XPath reference
 
 - [Elements](/en-US/docs/Web/XSLT/Reference/Element)
-- [Axes](/en-US/docs/Web/XPath/Axes)
+- [Axes](/en-US/docs/Web/XPath/Reference/Axes)
 - [Functions](/en-US/docs/Web/XPath/Functions)
 
 ## Original Document Information

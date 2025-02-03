@@ -126560,27 +126560,6 @@
       "Jt"
     ]
   },
-  "Web/XPath/Axes": {
-    "modified": "2019-03-24T00:17:50.976Z",
-    "contributors": [
-      "ExE-Boss",
-      "SphinxKnight",
-      "Davorak",
-      "Sheppy",
-      "brettsky",
-      "Cuimingda",
-      "Mgjbot",
-      "Fredchat",
-      "Ptak82",
-      "Nickolay",
-      "CitizenK",
-      "Dria"
-    ]
-  },
-  "Web/XPath/Comparison_with_CSS_selectors": {
-    "modified": "2019-06-06T12:32:39.713Z",
-    "contributors": ["ExE-Boss", "criticabug", "chrisdavidmills"]
-  },
   "Web/XPath/Functions": {
     "modified": "2019-08-11T00:05:54.428Z",
     "contributors": [
@@ -126996,6 +126975,10 @@
       "alecananian"
     ]
   },
+  "Web/XPath/Guides/Comparison_with_CSS_selectors": {
+    "modified": "2019-06-06T12:32:39.713Z",
+    "contributors": ["ExE-Boss", "criticabug", "chrisdavidmills"]
+  },
   "Web/XPath/Introduction_to_using_XPath_in_JavaScript": {
     "modified": "2020-03-04T11:40:28.386Z",
     "contributors": [
@@ -127028,6 +127011,23 @@
       "Lies",
       "Jt",
       "Nickolay",
+      "Dria"
+    ]
+  },
+  "Web/XPath/Reference/Axes": {
+    "modified": "2019-03-24T00:17:50.976Z",
+    "contributors": [
+      "ExE-Boss",
+      "SphinxKnight",
+      "Davorak",
+      "Sheppy",
+      "brettsky",
+      "Cuimingda",
+      "Mgjbot",
+      "Fredchat",
+      "Ptak82",
+      "Nickolay",
+      "CitizenK",
       "Dria"
     ]
   },

@@ -18,4 +18,4 @@ sidebar:
   - type: listSubPages
     path: /Web/XPath/Functions
   - type: section
-    link: /Web/XPath/Axes
+    link: /Web/XPath/Reference/Axes

@@ -1,6 +1,6 @@
 ---
 title: Axes
-slug: Web/XPath/Axes
+slug: Web/XPath/Reference/Axes
 page-type: landing-page
 sidebar: xsltsidebar
 ---
