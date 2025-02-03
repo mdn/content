@@ -2,9 +2,8 @@
 title: Live examples
 slug: MDN/Writing_guidelines/Page_structures/Live_samples
 page-type: mdn-writing-guide
+sidebar: mdnsidebar
 ---
-
-{{MDNSidebar}}
 
 MDN supports displaying code blocks within the articles as _live samples_, enabling readers to see both the code and its output as it would look on a web page. This feature allows readers to understand exactly what the executed code would produce, making the documentation dynamic and instructive.
 It also allows authors to be absolutely sure that the code blocks in documentation have the expected output, and work appropriately when used with different browsers.
