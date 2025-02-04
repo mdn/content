@@ -35,30 +35,30 @@ The WebAuthn client capability strings are:
     This capability is equivalent to [`isConditionalMediationAvailable()`](/en-US/docs/Web/API/PublicKeyCredential/isConditionalMediationAvailable_static) resolving to `true`.
 - `"hybridTransport"`
   - : The client supports usage of the [hybrid](/en-US/docs/Web/API/AuthenticatorAttestationResponse/getTransports#hybrid) transport.
-    This means that the client can use authenticators that rely on Bluetooth, NFC or USB.
+    This means that the client can use authenticators that rely on Bluetooth, NFC, or USB.
 - `"passkeyPlatformAuthenticator"`
   - : The client allows usage of a passkey authenticator that supports multi-factor authentication mechanisms such as a PIN or biometric check.
     The authenticator can be part of the same platform (device) as the client, or connected via a hybrid transport such as Bluetooth or USB.
     The credentials are stored on the authenticator.
     See [Passkeys developer guide for relying parties](https://developers.google.com/identity/passkeys/developer-guides).
 - `userVerifyingPlatformAuthenticator`
-  - : The client has a platform authenticator (part of the same device) that support multi-factor authentication mechanisms, such as a PIN or biometric check.
+  - : The client has a platform authenticator (part of the same device) that supports multi-factor authentication mechanisms, such as a PIN or biometric check.
     The credentials may be stored on either the RP or the authenticator.
 - `relatedOrigins`
   - : The client supports [Related Origin Requests](https://web.dev/articles/webauthn-related-origin-requests).
     These clients allow a passkey to be used across multiple sites that have the same origin.
 - `signalAllAcceptedCredentials`
   - : The client supports the [`PublicKeyCredential.signalAllAcceptedCredentials()`](/en-US/docs/Web/API/PublicKeyCredential/signalAllAcceptedCredentials_static) static method.
-    If not supported, then RP workflows will need to prompt the user to manually delete credentials from the authenticator.
+    If not supported, RP workflows will need to prompt the user to manually delete credentials on the authenticator.
 - `signalCurrentUserDetails`
   - : The client supports the [`PublicKeyCredential.signalCurrentUserDetails()`](/en-US/docs/Web/API/PublicKeyCredential/signalCurrentUserDetails_static) static method.
-    If not supported, then RP workflows will need to prompt the user to manuall update user details on the authenticator.
+    If not supported, RP workflows will need to prompt the user to manually update user details on the authenticator.
 - `signalUnknownCredential`
   - : The client supports the [`PublicKeyCredential.signalUnknownCredential()`](/en-US/docs/Web/API/PublicKeyCredential/signalUnknownCredential_static) static method.
-    If not supported, then RP workflows will need to prompt the user to manually delete credentials from the authenticator.
+    If not supported, RP workflows will need to prompt the user to manually delete credentials from the authenticator.
 
 The [web extension](/en-US/docs/Web/API/Web_Authentication_API/WebAuthn_extensions) strings are formatted by prefixing the [extension identifier](/en-US/docs/Web/API/Web_Authentication_API/WebAuthn_extensions#available_extensions) with the prefix `extension:`.
-For example, the key `extension.appid` can be used to check if the [`appid` extension](/en-US/docs/Web/API/Web_Authentication_API/WebAuthn_extensions#appid) is supported.
+For example, the key `extension:appid` can be used to check if the [`appid` extension](/en-US/docs/Web/API/Web_Authentication_API/WebAuthn_extensions#appid) is supported.
 
 ### Exceptions
 
@@ -75,7 +75,7 @@ The returned {{jsxref("Promise")}} may be rejected with the following values:
 For example, support for the `userVerifyingPlatformAuthenticator` capability indicates that biometrics such as a fingerprint sensor are allowed.
 A web application could use this to display a fingerprint icon if the capability is supported, or a password input if it is not.
 If biometric login is required, then it could instead provide notification that the site cannot authenticate using this browser or device.
-Similarly, `conditionalGet` indicates that the client supports conditional mediation when signing in a user, which means the browser can provide autofilled discoverable credentials in a login form (for example an autocompeting text field or a drop-down list), along with a sign-in button.
+Similarly, `conditionalGet` indicates that the client supports conditional mediation when signing in a user, which means the browser can provide auto-filled discoverable credentials in a login form (for example an autocompleting text field or a drop-down list), along with a sign-in button.
 
 If the value of a given capability is present in the returned object, then `true` indicates that the capability is currently supported, and `false` indicates that it is not.
 However, if a key is not present for a particular capability, no assumptions can be made about the availability of the associated feature.

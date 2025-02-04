@@ -136,9 +136,9 @@ async function checkisUserVerifyingPlatformAuthenticatorAvailable() {
   const capabilities = await PublicKeyCredential.getClientCapabilities();
   // Check the capability: userVerifyingPlatformAuthenticator
   if (capabilities.userVerifyingPlatformAuthenticator) {
-    // Perform actions if biometric support is possible
+    // Perform actions if biometric support is available
   } else {
-    // Perform actions is biometric support is not possible.
+    // Perform actions if biometric support is not available.
   }
 }
 ```
