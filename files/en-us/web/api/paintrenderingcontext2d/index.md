@@ -9,9 +9,13 @@ browser-compat: api.PaintRenderingContext2D
 
 {{APIRef("CSS Painting API")}}{{SeeCompatTable}}
 
-The **`PaintRenderingContext2D`** interface of the [CSS Painting API](/en-US/docs/Web/API/CSS_Painting_API) is the rendering context for drawing to the bitmap for the [CSS Painting API](/en-US/docs/Web/API/CSS_Painting_API). It implements a subset of the {{domxref("CanvasRenderingContext2D")}} API.
+The **`PaintRenderingContext2D`** interface of the [CSS Painting API](/en-US/docs/Web/API/CSS_Painting_API) is the API's rendering context for drawing to the bitmap. It implements a subset of the {{domxref("CanvasRenderingContext2D")}} API, with the following exceptions:
 
-The interface is only available in {{domxref("CanvasRenderingContext2D", "paint worklet global scope")}}.
+- It doesn't implement the [`CanvasImageData` pixel manipulation](/en-US/docs/Web/API/CanvasRenderingContext2D#pixel_manipulation), [`CanvasUserInterface` focus](/en-US/docs/Web/API/CanvasRenderingContext2D/drawFocusIfNeeded), [`CanvasText` text drawing](/en-US/docs/Web/API/CanvasRenderingContext2D), or [`CanvasTextDrawingStyles` text style](/en-US/docs/Web/API/CanvasRenderingContext2D#text_styles) interface methods.
+- The output bitmap is the size of the object it is rendering to.
+- The value `currentColor`, when used as a color, is treated as opaque black.
+
+The interface is only available in {{domxref("PaintWorkletGlobalScope")}}.
 
 ## Instance properties and methods
 
@@ -96,7 +100,7 @@ _The `PaintRenderingContext2D` implements a subset of the {{domxref("CanvasRende
 - {{domxref("CanvasRenderingContext2D.clearRect()")}}
   - : Erases the pixels in the given rectangle, setting them to transparent black.
 - {{domxref("CanvasRenderingContext2D.fillRect()")}}
-  - : Paints the pixels of the given rectangle, filling it with the current fill style. 
+  - : Paints the pixels of the given rectangle, filling it with the current fill style.
 - {{domxref("CanvasRenderingContext2D.strokeRect()")}}
   - : Paints the outline of the given rectangle using the current stroke style.
 
