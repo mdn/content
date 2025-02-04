@@ -1,66 +1,62 @@
 ---
-title: Tutorials
-slug: Web/Tutorials
+title: Web development tutorials
+short-title: Tutorials
+slug: MDN/Tutorials
 page-type: landing-page
+sidebar: mdnsidebar
 ---
 
-The links on this page lead to a variety of tutorials and training materials. Whether you are just starting, learning the basics, or are an old hand at web development, you can find helpful resources here for best practices.
+The links on this page lead to a variety of tutorials and learning materials.
+Whether you are a beginner, intermediate, or expert at web development, you will find something helpful here.
 
-These resources are created by forward-thinking companies and web developers who have embraced open standards and best practices for web development and that provide or allow translations, through an open content license such as Creative Commons.
+These tutorials are created by forward-thinking companies and web developers who have embraced open standards and good practices, and allow or provide translations through an open content license such as Creative Commons.
 
-## For complete beginners to the Web
+## For complete beginners
 
 - [Getting started with the Web](/en-US/docs/Learn_web_development/Getting_started/Your_first_website)
-  - : _Getting started with the Web_ is a concise series introducing you to the practicalities of web development. You'll set up the tools you need to construct a simple webpage and publish your own simple code.
+  - : _Getting started with the Web_ is a concise series introducing you to the practicalities of web development.
+    You'll set up the tools you need to construct a basic webpage and publish your own code.
 
-## HTML Tutorials
+## HTML tutorials
 
-### Introductory level
+### Introduction to HTML
 
 - [Structuring content with HTML](/en-US/docs/Learn_web_development/Core/Structuring_content)
-  - : Our introductory HTML learning module teaches HTML from the ground up — no previous knowledge required. It sets the stage, getting you used to important concepts and syntax, looking at applying HTML to text, how to create hyperlinks, and how to use HTML to structure a webpage.
-- [Creating a Simple Web Page with HTML](https://www.theblogstarter.com/html-for-beginners/)
-  - : An HTML guide for beginners that includes explanations of common tags, including HTML tags. Also includes a step-by-step guide to creating a basic web page with code examples.
+  - : Our introductory HTML learning module teaches HTML from the ground up — no previous knowledge required.
+    It sets the stage, getting you used to important concepts and syntax, looking at applying HTML to text, how to create hyperlinks, and how to use HTML to structure a webpage.
+- [HTML for Beginners](https://www.theblogstarter.com/html-for-beginners/)
+  - : An HTML guide for beginners that includes explanations of common tags, including HTML tags.
+    Also includes a step-by-step guide to creating a basic web page with code examples.
 - [HTML Challenges](https://en.wikiversity.org/wiki/Web_Design/HTML_Challenges)
-  - : Use these challenges to hone your HTML skills (for example, "Should I use an \<h2> element or a \<strong> element?"), focusing on meaningful markup.
+  - : Use these challenges to hone your HTML skills (for example, "Should I use an `<h2>` element or a `<strong>` element?"), focusing on meaningful markup.
 
-### Advanced level
+### Advanced HTML topics
 
 - [Web forms](/en-US/docs/Learn_web_development/Extensions/Forms)
-  - : Forms are a very important part of the Web — these provide much of the functionality you need for interacting with websites, e.g. registering and logging in, sending feedback, buying products, and more. This module gets you started with creating the client-side parts of forms.
+  - : Forms are a very important part of the Web — these provide much of the functionality you need for interacting with websites, such as registering and logging in, sending feedback, buying products, and more. This module gets you started with creating the client-side parts of forms.
 - [Tips for authoring fast-loading HTML pages](/en-US/docs/Learn_web_development/Howto/Solve_HTML_problems/Author_fast-loading_HTML_pages)
   - : Optimize web pages to provide a more responsive site for visitors and reduce the load on your web server and Internet connection.
 
-## CSS Tutorials
+## CSS tutorials
 
-### Introductory level
+### Introduction to CSS
 
 - [CSS basics](/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Styling_the_content)
   - : CSS (Cascading Style Sheets) is the code you use to style your webpage. _CSS Basics_ takes you through what you need to get started. We'll answer questions like: How do I make my text black or red? How do I make my content show up in such-and-such a place on the screen? How do I decorate my webpage with background images and colors?
 - [CSS Styling basics](/en-US/docs/Learn_web_development/Core/Styling_basics)
   - : CSS (Cascading Style Sheets) is used to style and lay out web pages — for example, to alter the font, color, size, and spacing of your content, split it into multiple columns, or add animations and other decorative features. This module provides a gentle beginning to your path toward CSS mastery with the basics of how it works, what the syntax looks like, and how you can start using it to add styling to HTML.
-- [CSS layout](/en-US/docs/Learn_web_development/Core/CSS_layout)
-
-  - : In previous modules we looked at how to style and manipulate the boxes that your content sits inside. Now it's time to look at how to correctly lay out your boxes in relation to one another, and the browser viewport. This module looks at floats, positioning, other modern layout tools, and building responsive designs that will adapt to different devices, screen sizes, and resolutions.
-
 - [Selectors](/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)
-
   - : Target HTML elements, including based on element state, with CSS.
-
 - [Specificity](/en-US/docs/Web/CSS/Specificity)
-
-  - : Understanding the browser algorithm to determine which CSS declarations get applied to an element when there are competing declarations, with a [specificity quiz](https://estelle.github.io/CSS/selectors/exercises/specificity.html)
-
+  - : Understanding the browser algorithm to determine which CSS declarations get applied to an element when there are competing declarations, with a [specificity quiz](https://estelle.github.io/CSS/selectors/exercises/specificity.html).
 - [Handling conflicts](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
-
   - : The cascade, specificity, and inheritance control how CSS is applied to HTML and how conflicts between style declarations are resolved.
-
 - [CSS text Styling](/en-US/docs/Learn_web_development/Core/Text_styling)
   - : Here we look at text styling fundamentals, including setting font, boldness, and italics, line and letter spacing, and drop shadows and other text features. We round off the module by looking at applying custom fonts to your page, and styling lists and links.
 - [Solve common CSS problems](/en-US/docs/Learn_web_development/Howto/Solve_CSS_problems/CSS_FAQ)
   - : Common questions and answers for beginners.
 
-### Intermediate level
+### Intermediate CSS topics
 
 - [CSS layout](/en-US/docs/Learn_web_development/Core/CSS_layout)
   - : At this point we've already looked at CSS fundamentals, how to style text, and how to style and manipulate the boxes that your content sits inside. Now it's time to look at how to place your boxes in the right place in relation to the viewport, and one another. We have covered the necessary prerequisites so can now dive deep into CSS layout, looking at different display settings, traditional layout methods involving float and positioning, and new fangled layout tools like flexbox.
@@ -71,7 +67,7 @@ These resources are created by forward-thinking companies and web developers who
 - [CSS Challenges](https://en.wikiversity.org/wiki/Web_Design/CSS_challenges)
   - : Flex your CSS skills, and see where you need more practice.
 
-### Advanced level
+### Advanced CSS topics
 
 - [Using CSS transforms](/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
   - : Apply rotation, skewing, scaling, and translation using CSS.
@@ -80,9 +76,9 @@ These resources are created by forward-thinking companies and web developers who
 - [Canvas tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial)
   - : Learn how to draw graphics using scripting using the canvas element.
 
-## JavaScript Tutorials
+## JavaScript tutorials
 
-### Introductory level
+### Introduction to JavaScript
 
 - [Dynamic scripting with JavaScript](/en-US/docs/Learn_web_development/Core/Scripting)
   - : In this module, we continue our coverage of all JavaScript's key fundamental features, turning our attention to commonly-encountered types of code blocks such as conditional statements, loops, functions, and events. You've seen this stuff already in the course, but only in passing — here we'll discuss it all explicitly.
@@ -93,7 +89,7 @@ These resources are created by forward-thinking companies and web developers who
 - [freeCodeCamp](https://www.freecodecamp.org)
   - : freeCodeCamp teaches a variety of languages and frameworks for web development. It also has a [forum](https://forum.freecodecamp.org/), an [internet radio station](https://coderadio.freecodecamp.org), and a [blog](https://www.freecodecamp.org/news).
 
-### Intermediate level
+### Intermediate JavaScript topics
 
 - [Introducing JavaScript objects](/en-US/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects)
   - : In JavaScript, most things are objects, from core JavaScript features like strings and arrays to the browser APIs built on top of JavaScript. You can even create your own objects to encapsulate related functions and variables into efficient packages. The object-oriented nature of JavaScript is important to understand if you want to go further with your knowledge of the language and write more efficient code, therefore we've provided this module to help you. Here we teach object theory and syntax in detail, look at how to create your own objects, and explain what JSON data is and how to work with it.
@@ -108,7 +104,7 @@ These resources are created by forward-thinking companies and web developers who
 - [JavaScript.info - The Modern JavaScript Tutorial](https://javascript.info/)
   - : Part 1: The Language. Part 2: Working with Browsers.
 
-### Advanced level
+### Advanced JavaScript topics
 
 - [JavaScript Guide](/en-US/docs/Web/JavaScript/Guide)
   - : A comprehensive, regularly updated guide to JavaScript for all levels of learning from beginner to advanced.
