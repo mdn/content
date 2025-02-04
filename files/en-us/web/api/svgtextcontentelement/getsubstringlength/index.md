@@ -15,7 +15,7 @@ Note that this method only accounts for the widths of the glyphs in the substrin
 ## Syntax
 
 ```js-nolint
-SVGTextContentElement.getSubStringLength(index, length)
+getSubStringLength(index, length)
 ```
 
 ### Parameters

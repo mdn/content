@@ -2,9 +2,8 @@
 title: Code examples
 slug: MDN/Writing_guidelines/Page_structures/Code_examples
 page-type: mdn-writing-guide
+sidebar: mdnsidebar
 ---
-
-{{MDNSidebar}}
 
 On MDN, you'll see numerous code examples inserted throughout the pages to demonstrate usage of web platform features. This article discusses the different mechanisms available for adding code examples to pages, along with which ones you should use and when.
 

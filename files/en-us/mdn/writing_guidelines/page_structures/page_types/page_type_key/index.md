@@ -2,9 +2,8 @@
 title: The page-type front matter key
 slug: MDN/Writing_guidelines/Page_structures/Page_types/Page_type_key
 page-type: mdn-writing-guide
+sidebar: mdnsidebar
 ---
-
-{{MDNSidebar}}
 
 The `page-type` front matter key describes the type of an MDN page.
 This allows MDN content tools to better automate content checking and sidebar organization.
@@ -151,12 +150,12 @@ This section lists `page-type` values for pages under [Web/API](/en-US/docs/Web/
 
 This section lists `page-type` values for pages under [WebAssembly/](/en-US/docs/WebAssembly). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the generic page type values.
 
-- `webassembly-function`: a global function, that is a method directly under the `WebAssembly` object that acts as a namespace, like [`WebAssembly.instantiate()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiate_static).
-- `webassembly-constructor`: a constructor, like [`WebAssembly.Exception()`](/en-US/docs/WebAssembly/JavaScript_interface/Exception/Exception).
-- `webassembly-interface`: a WebAssembly interface, like [`WebAssembly.LinkError`](/en-US/docs/WebAssembly/JavaScript_interface/LinkError).
-- `webassembly-instance-property`: an instance property, like [`WebAssembly.Instance.exports`](/en-US/docs/WebAssembly/JavaScript_interface/Instance/exports).
-- `webassembly-instance-method`: an instance method, like [`WebAssembly.Exception.getArg()`](/en-US/docs/WebAssembly/JavaScript_interface/Exception/getArg).
-- `webassembly-static-method`: a static method, like [`WebAssembly.Module.exports()`](/en-US/docs/WebAssembly/JavaScript_interface/Module/exports_static).
+- `webassembly-function`: a global function, that is a method directly under the `WebAssembly` object that acts as a namespace, like [`WebAssembly.instantiate()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/instantiate_static).
+- `webassembly-constructor`: a constructor, like [`WebAssembly.Exception()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Exception/Exception).
+- `webassembly-interface`: a WebAssembly interface, like [`WebAssembly.LinkError`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/LinkError).
+- `webassembly-instance-property`: an instance property, like [`WebAssembly.Instance.exports`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Instance/exports).
+- `webassembly-instance-method`: an instance method, like [`WebAssembly.Exception.getArg()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Exception/getArg).
+- `webassembly-static-method`: a static method, like [`WebAssembly.Module.exports()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Module/exports_static).
 - `webassembly-instruction`: an instruction, or a set of instructions, like [`Wrap`](/en-US/docs/WebAssembly/Reference/Numeric/Wrap).
 
 ### WebDriver page types
@@ -182,19 +181,19 @@ This section lists `page-type` values for pages under [Mozilla/Add-ons/WebExtens
 
 This section lists `page-type` values for pages under [Web/Manifest](/en-US/docs/Web/Manifest). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the [generic page type](#generic_page_types) values.
 
-- `web-manifest-member`: a member of a manifest, like [`description`](/en-US/docs/Web/Manifest/description).
+- `web-manifest-member`: a member of a manifest, like [`description`](/en-US/docs/Web/Manifest/Reference/description).
 
 ### XPath page types
 
 This section lists `page-type` values for pages under [Web/XPath](/en-US/docs/Web/XPath). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the [generic page type](#generic_page_types) values.
 
-- `xpath-function`: a function, like [`ceiling()`](/en-US/docs/Web/XPath/Functions/ceiling)
+- `xpath-function`: a function, like [`ceiling()`](/en-US/docs/Web/XPath/Reference/Functions/ceiling)
 
 ### XSLT page types
 
 This section lists `page-type` values for pages under [Web/XSLT](/en-US/docs/Web/XSLT). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the [generic page type](#generic_page_types) values.
 
-- `xslt-element`: an element of XSLT, like [`<xsl:message>`](/en-US/docs/Web/XSLT/Element/message).
+- `xslt-element`: an element of XSLT, like [`<xsl:message>`](/en-US/docs/Web/XSLT/Reference/Element/message).
 
 ### EXSLT page types
 

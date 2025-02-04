@@ -13,7 +13,7 @@ The `setStdDeviation()` method of the {{domxref("SVGFEDropShadowElement")}} inte
 ## Syntax
 
 ```js-nolint
-SVGFEDropShadowElement.setStdDeviation(x, y)
+setStdDeviation(x, y)
 ```
 
 ### Parameters

@@ -167,5 +167,5 @@ This is done repeatedly as the video plays, so that frame after frame is process
 ## See also
 
 - [Web media technologies](/en-US/docs/Web/Media)
-- [Guide to media types and formats on the web](/en-US/docs/Web/Media/Formats)
+- [Guide to media types and formats on the web](/en-US/docs/Web/Media/Guides/Formats)
 - [Learning area: HTML video and audio](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
