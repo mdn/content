@@ -133,7 +133,7 @@ _The `PaintRenderingContext2D` implements a subset of the {{domxref("CanvasRende
 - {{domxref("CanvasRenderingContext2D.lineJoin")}}
   - : Defines the type of corners where two lines meet. Possible values: `round`, `bevel`, `miter` (default).
 - {{domxref("CanvasRenderingContext2D.miterLimit")}}
-  - : A number specifying the miter limit ratio, in coordinate space units. Default `10`.
+  - : A number specifying the miter limit ratio, in coordinate space units.
 - {{domxref("CanvasRenderingContext2D.getLineDash()")}}
   - : Returns the current line dash pattern as an [`Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) of numbers that specify the lengths of the alternative lines and gaps in coordinate space units.
 - {{domxref("CanvasRenderingContext2D.setLineDash()")}}
