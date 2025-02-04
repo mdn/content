@@ -49,7 +49,7 @@ To have more control over content and website appearance, most professionals/bus
 
 If you get your web hosting _and_ domain name from the same company, they tend to be configured automatically to talk to one another. However, If you get them from separate companies, or want to change your hosting to a different company, you need to do a bit of setup to point the domain name to the correct server. This is so that people will see your website when they navigate to that web address. This is usually done by logging into your domain registrar's website, and setting your domain's [nameservers](https://kinsta.com/knowledgebase/what-is-a-nameserver/) to the ones provided by your hosting company.
 
-To actually transfer the website files on to the hosting company's web server, different companies will have different mechanisms available. Many will have more than one option; typical options include:
+Companies use various mechanisms to transfer files to their web servers. Many will have more than one option; typical options include:
 
 - A drag and drop interface (you'll see an example of this in [Publishing via GitHub](#publishing_via_github), later on).
 - An {{Glossary("FTP", "File Transfer Protocol (FTP)")}} program. FTP programs vary widely, but generally, you have to connect to your web server using details provided by your hosting company (typically username, password, hostname). Then the program shows you your local files and the web server's files in two windows, and provides a way for you to transfer files back and forth.
