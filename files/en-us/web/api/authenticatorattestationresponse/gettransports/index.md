@@ -24,13 +24,19 @@ None.
 
 ### Return value
 
-An {{jsxref("Array")}} of strings representing the different transports supported by the authenticator, in lexicographical order. Values may include:
+An {{jsxref("Array")}} of strings representing the different transports supported by the authenticator, in lexicographical order.
+Values may include:
 
-- `"ble"`: The authenticator may be used over [BLE (Bluetooth Low Energy)](https://en.wikipedia.org/wiki/Bluetooth_Low_Energy).
-- `"hybrid"`: The authenticator can be used over a combination of (often separate) data transport and proximity mechanisms. This supports, for example, authentication on a desktop computer using a smartphone.
-- `"internal"`: The authenticator is specifically bound to the client device (cannot be removed).
-- `"nfc"`: The authenticator may be used over [NFC (Near Field Communication)](https://en.wikipedia.org/wiki/Near-field_communication).
-- `"usb"`: The authenticator can be contacted over USB.
+- `ble`
+  - : The authenticator may be used over [BLE (Bluetooth Low Energy)](https://en.wikipedia.org/wiki/Bluetooth_Low_Energy).
+- `"hybrid"`
+  - : The authenticator can be used over a combination of (often separate) data transport and proximity mechanisms. This supports, for example, authentication on a desktop computer using a smartphone.
+- `"internal"`
+  - : The authenticator is specifically bound to the client device (cannot be removed).
+- `"nfc"`
+  - : The authenticator may be used over [NFC (Near Field Communication)](https://en.wikipedia.org/wiki/Near-field_communication).
+- `"usb"`
+  - : The authenticator can be contacted over USB.
 
 ## Examples
 
