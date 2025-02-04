@@ -14,9 +14,6 @@ The **CSS paged media** module defines the properties that control the presentat
 ### Properties
 
 - {{cssxref('page')}}
-- {{cssxref('page-break-after')}} {{Deprecated_Inline}}
-- {{cssxref('page-break-before')}} {{Deprecated_Inline}}
-- {{cssxref('page-break-inside')}} {{Deprecated_Inline}}
 
 ### At-rules
 
@@ -29,6 +26,14 @@ The **CSS paged media** module defines the properties that control the presentat
 - {{cssxref(':left')}}
 - {{cssxref(':right')}}
 
+## Related concepts
+
+- {{cssxref("break-after")}} property
+- {{cssxref("break-before")}} property
+- {{cssxref("break-inside")}} property
+- {{cssxref("orphans")}} property
+- {{cssxref("widows")}} property
+
 ## Specifications
 
 {{Specifications}}
@@ -37,9 +42,4 @@ The **CSS paged media** module defines the properties that control the presentat
 
 - [Printing](/en-US/docs/Web/CSS/CSS_media_queries/Printing) guide
 - [CSS fragmentation](/en-US/docs/Web/CSS/CSS_fragmentation) module
-  - {{cssxref("break-after")}}
-  - {{cssxref("break-before")}}
-  - {{cssxref("break-inside")}}
-  - {{cssxref("orphans")}}
-  - {{cssxref("widows")}}
 - [CSS media queries](/en-US/docs/Web/CSS/CSS_media_queries) module
