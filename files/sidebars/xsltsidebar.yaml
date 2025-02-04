@@ -14,8 +14,8 @@ sidebar:
   - type: listSubPages
     path: /Web/EXSLT
   - type: section
-    link: /Web/XPath/Functions
+    link: /Web/XPath/Reference/Functions
   - type: listSubPages
-    path: /Web/XPath/Functions
+    path: /Web/XPath/Reference/Functions
   - type: section
-    link: /Web/XPath/Axes
+    link: /Web/XPath/Reference/Axes

@@ -156,6 +156,31 @@ It may seem like `signalUnknownCredential()` and `signalAllAcceptedCredentials()
 - `signalAllAcceptedCredentials()` should be called after every successful sign-in, and when the user is logged in and you want to update the state of their credentials. It must only be called when a user is authenticated, as it shares the entire list of `credentialId`s for a given user. This would cause a privacy leak if the user is not authenticated.
 - `signalUnknownCredential()` should be called after an unsuccessful login, to signal to the authenticator that the `credentialId` of the selected credential cannot be validated, and should be removed. The method can safely be called when the user is not authenticated as it passes a single `credentialId` to the authenticator — the one the client just tried to authenticate with — and no user information.
 
+### Customizing workflows based on client capabilities
+
+The signup and login workflows can be customized based on the capabilities of the WebAuthn client (browser). The {{domxref("PublicKeyCredential.getClientCapabilities_static", "PublicKeyCredential.getClientCapabilities()")}} static method can be used to query those capabilities; it returns an object where each key refers to a WebAuthn capability or extension, and each value is a boolean indicating support for that feature.
+
+This can be used, for example, to check:
+
+- Client support for various authenticators such as passkeys or biometric user verification.
+- Whether the client [supports methods to keep relying party and authenticator credentials in sync](/en-US/docs/Web/API/Web_Authentication_API#discoverable_credential_synchronization_methods).
+- Whether the client allows a single passkey to be used on different websites with the same origin.
+
+The code below shows how you might use `getClientCapabilities()` to check if the client supports authenticators that offer biometric user verification.
+Note that the actual actions performed depend on your site.
+For sites that _require_ biometric authentication, you might replace the login UI with a message indicating that biometric authentication is needed, and the user should try a different browser or device.
+
+```js
+async function checkisUserVerifyingPlatformAuthenticatorAvailable() {
+  const capabilities = await PublicKeyCredential.getClientCapabilities();
+  // Check the capability: userVerifyingPlatformAuthenticator
+  if (capabilities.userVerifyingPlatformAuthenticator) {
+    // Perform actions if biometric support is available
+  } else {
+    // Perform actions if biometric support is not available.
+  }
+}
+
 ## Controlling access to the API
 
 The availability of WebAuthn can be controlled using a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy), specifying two directives in particular:

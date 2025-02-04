@@ -18,7 +18,7 @@ As you can see, the color without an alpha channel completely blocks the backgro
 
 - [CSS colors](/en-US/docs/Web/CSS/CSS_colors)
 - [Learn: Values and units](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
-- [Image file type and format guide](/en-US/docs/Web/Media/Formats/Image_types)
+- [Image file type and format guide](/en-US/docs/Web/Media/Guides/Formats/Image_types)
 - [Alpha compositing](https://en.wikipedia.org/wiki/Alpha_compositing) on Wikipedia
 - [RGBA color model](https://en.wikipedia.org/wiki/RGBA_color_model) on Wikipedia
 - [Channel (digital image)](<https://en.wikipedia.org/wiki/Channel_(digital_image)>) on Wikipedia
