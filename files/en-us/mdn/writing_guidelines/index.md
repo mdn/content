@@ -2,9 +2,8 @@
 title: Writing guidelines
 slug: MDN/Writing_guidelines
 page-type: mdn-writing-guide
+sidebar: mdnsidebar
 ---
-
-{{MDNSidebar}}
 
 MDN Web Docs is an open-source project. The sections outlined below describe our guidelines for _what_ we document and _how_ we do it on MDN Web Docs. To learn about _how to contribute_, see our [contribution guidelines](/en-US/docs/MDN/Community).
 

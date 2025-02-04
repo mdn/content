@@ -142,7 +142,7 @@ context node, document.body. If the "." was left out (leaving `//h2`) the
 query would start from the root node (`html`) which would be more
 wasteful.)
 
-See [Introduction to using XPath in JavaScript](/en-US/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript) for more information.
+See [Introduction to using XPath in JavaScript](/en-US/docs/Web/XPath/Guides/Introduction_to_using_XPath_in_JavaScript) for more information.
 
 ### Getting element by xml:id
 

@@ -13,7 +13,7 @@ The `setTranslate()` method of the {{domxref("SVGTransform")}} interface sets th
 ## Syntax
 
 ```js-nolint
-SVGTransform.setTranslate(tx, ty)
+setTranslate(tx, ty)
 ```
 
 ### Parameters

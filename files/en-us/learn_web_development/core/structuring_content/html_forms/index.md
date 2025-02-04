@@ -61,7 +61,7 @@ Buttons are usually created using HTML {{htmlelement("button")}} elements (they 
 
 Forms are created using elements such as {{htmlelement("form")}}, {{htmlelement("label")}}, {{htmlelement("input")}}, and {{htmlelement("select")}}. Form elements can be used to create more complex controls than simple buttons allow — for example a drop-down menu containing multiple options that allow you choose between different themes for a user interface element.
 
-However, crucially, they can also be used to create forms for users to fill in when they need to submit information to a website server. Think about ecommerce sites — when you want to search for a product to buy, you use a form to enter search terms. When you want to pay for some items and finalize delivery, you use a form to enter your postal address, and another form to enter your credit card details.
+However, crucially, they can also be used to create forms for users to fill in when they need to submit information to a website server. Think about e-commerce sites — when you want to search for a product to buy, you use a form to enter search terms. When you want to pay for some items and finalize delivery, you use a form to enter your postal address, and another form to enter your credit card details.
 
 We'll be concentrating mainly on this — more traditional — use of form elements in this article. Note that buttons are also commonly used inside forms, to submit the entered data to the server.
 
@@ -315,7 +315,7 @@ There are many other control types you can use to collect data in a form. Let's 
       <option value="walk">Walk</option>
       <option value="bus">Bus</option>
       <option value="train">Train</option>
-      <option value="jetpack">Jetpack</option>
+      <option value="jetPack">Jet pack</option>
     </select>
   </p>
   <p>
@@ -431,7 +431,7 @@ Drop-down menus, for example the "How are you getting here" selection control in
   <option value="walk">Walk</option>
   <option value="bus">Bus</option>
   <option value="train">Train</option>
-  <option value="jetpack">Jetpack</option>
+  <option value="jetPack">Jet pack</option>
 </select>
 ```
 

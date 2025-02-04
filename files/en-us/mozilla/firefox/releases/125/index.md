@@ -71,7 +71,7 @@ No notable changes.
 
 #### Media, WebRTC, and Web Audio
 
-- The [AV1](/en-US/docs/Web/Media/Formats/Video_codecs#av1) codec is now supported for [Encrypted Media Extensions](/en-US/docs/Web/API/Encrypted_Media_Extensions_API), enabling higher-quality playback from video streaming providers. ([Firefox bug 1601817](https://bugzil.la/1601817)).
+- The [AV1](/en-US/docs/Web/Media/Guides/Formats/Video_codecs#av1) codec is now supported for [Encrypted Media Extensions](/en-US/docs/Web/API/Encrypted_Media_Extensions_API), enabling higher-quality playback from video streaming providers. ([Firefox bug 1601817](https://bugzil.la/1601817)).
 
 #### Removals
 
@@ -84,7 +84,7 @@ No notable changes.
   The memory can be created in JavaScript and imported into the Wasm module, or created in the Wasm module and exported.
   Each new linear memory in a Wasm instance is given a sequential index, starting from zero.
   WebAssembly [memory instructions](/en-US/docs/WebAssembly/Reference/Memory) use the index to reference the memory on which they are operating, defaulting to the first memory defined if no index is specified.
-  For more information, see [WebAssembly Memory](/en-US/docs/WebAssembly/Understanding_the_text_format#webassembly_memory) in _Understanding WebAssembly text format_.
+  For more information, see [WebAssembly Memory](/en-US/docs/WebAssembly/Guides/Understanding_the_text_format#webassembly_memory) in _Understanding WebAssembly text format_.
   ([Firefox bug 1860816](https://bugzil.la/1860816)).
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
