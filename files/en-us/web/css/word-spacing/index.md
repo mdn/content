@@ -87,3 +87,4 @@ Legible `word-spacing` must be determined on a case-by-case basis, as different 
 ## See also
 
 - {{cssxref("letter-spacing")}}
+- SVG {{SVGAttr("word-spacin")}} attribute
