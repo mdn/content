@@ -14,12 +14,6 @@ browser-compat: api.MediaStreamEvent.stream
 The read-only property **`MediaStreamEvent.stream`** returns
 the {{domxref("MediaStream")}} associated with the event.
 
-## Syntax
-
-```js-nolint
-event.stream
-```
-
 ## Example
 
 ```js

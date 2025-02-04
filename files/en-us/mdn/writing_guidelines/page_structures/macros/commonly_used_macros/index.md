@@ -2,9 +2,8 @@
 title: Commonly-used macros
 slug: MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros
 page-type: mdn-writing-guide
+sidebar: mdnsidebar
 ---
-
-{{MDNSidebar}}
 
 This page lists many of the general-purpose macros created for use on MDN.
 For additional how-to information on using these macros, see [Using macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros).

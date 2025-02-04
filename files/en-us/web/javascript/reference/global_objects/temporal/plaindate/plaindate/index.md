@@ -2,10 +2,12 @@
 title: Temporal.PlainDate()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainDate/PlainDate
 page-type: javascript-constructor
+status:
+  - experimental
 browser-compat: javascript.builtins.Temporal.PlainDate.PlainDate
 ---
 
-{{JSRef}}
+{{JSRef}}{{SeeCompatTable}}
 
 The **`Temporal.PlainDate()`** constructor creates {{jsxref("Temporal.PlainDate")}} objects.
 

@@ -2,10 +2,12 @@
 title: Temporal.ZonedDateTime.prototype.epochNanoseconds
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime/epochNanoseconds
 page-type: javascript-instance-accessor-property
+status:
+  - experimental
 browser-compat: javascript.builtins.Temporal.ZonedDateTime.epochNanoseconds
 ---
 
-{{JSRef}}
+{{JSRef}}{{SeeCompatTable}}
 
 The **`epochNanoseconds`** accessor property of {{jsxref("Temporal.ZonedDateTime")}} instances returns a {{jsxref("BigInt")}} representing the number of nanoseconds elapsed since the Unix epoch (midnight at the beginning of January 1, 1970, UTC) to this instant.
 

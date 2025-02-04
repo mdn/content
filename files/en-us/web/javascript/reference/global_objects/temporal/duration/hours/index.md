@@ -2,10 +2,12 @@
 title: Temporal.Duration.prototype.hours
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/Duration/hours
 page-type: javascript-instance-accessor-property
+status:
+  - experimental
 browser-compat: javascript.builtins.Temporal.Duration.hours
 ---
 
-{{JSRef}}
+{{JSRef}}{{SeeCompatTable}}
 
 The **`hours`** accessor property of {{jsxref("Temporal.Duration")}} instances returns an integer representing the number of hours in the duration.
 

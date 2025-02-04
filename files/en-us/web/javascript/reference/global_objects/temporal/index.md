@@ -2,10 +2,12 @@
 title: Temporal
 slug: Web/JavaScript/Reference/Global_Objects/Temporal
 page-type: javascript-namespace
+status:
+  - experimental
 browser-compat: javascript.builtins.Temporal
 ---
 
-{{JSRef}}
+{{JSRef}}{{SeeCompatTable}}
 
 The **`Temporal`** object enables date and time management in various scenarios, including built-in time zone and calendar representation, wall-clock time conversions, arithmetics, formatting, and more. It is designed as a full replacement for the {{jsxref("Date")}} object.
 
@@ -325,23 +327,23 @@ This is very similar to the [date time string format](/en-US/docs/Web/JavaScript
 
 ## Static properties
 
-- {{jsxref("Temporal.Duration")}}
+- {{jsxref("Temporal.Duration")}} {{experimental_inline}}
   - : Represents a difference between two time points, which can be used in date/time arithmetic. It is fundamentally represented as a combination of years, months, weeks, days, hours, minutes, seconds, milliseconds, microseconds, and nanoseconds values.
-- {{jsxref("Temporal.Instant")}}
+- {{jsxref("Temporal.Instant")}} {{experimental_inline}}
   - : Represents a unique point in history, with nanosecond precision. It is fundamentally represented as the number of nanoseconds since the Unix epoch (midnight at the beginning of January 1, 1970, UTC), without any time zone or calendar system.
-- {{jsxref("Temporal.Now")}}
+- {{jsxref("Temporal.Now")}} {{experimental_inline}}
   - : Provides methods for getting the current time in various formats.
-- {{jsxref("Temporal.PlainDate")}}
+- {{jsxref("Temporal.PlainDate")}} {{experimental_inline}}
   - : Represents a calendar date (a date without a time or time zone); for example, an event on a calendar which happens during the whole day no matter which time zone it's happening in. It is fundamentally represented as an ISO 8601 calendar date, with year, month, and day fields, and an associated calendar system.
-- {{jsxref("Temporal.PlainDateTime")}}
+- {{jsxref("Temporal.PlainDateTime")}} {{experimental_inline}}
   - : Represents a date (calendar date) and time (wall-clock time) without a time zone. It is fundamentally represented as a combination of a [date](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainDate) (with an associated calendar system) and a [time](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainTime).
-- {{jsxref("Temporal.PlainMonthDay")}}
+- {{jsxref("Temporal.PlainMonthDay")}} {{experimental_inline}}
   - : Represents the month and day of a calendar date, without a year or time zone; for example, an event on a calendar that recurs every year and happens during the whole day. It is fundamentally represented as an ISO 8601 calendar date, with year, month, and day fields, and an associated calendar system. The year is used to disambiguate the month-day in non-ISO calendar systems.
-- {{jsxref("Temporal.PlainTime")}}
+- {{jsxref("Temporal.PlainTime")}} {{experimental_inline}}
   - : Represents a time without a date or time zone; for example, a recurring event that happens at the same time every day. It is fundamentally represented as a combination of hour, minute, second, millisecond, microsecond, and nanosecond values.
-- {{jsxref("Temporal.PlainYearMonth")}}
+- {{jsxref("Temporal.PlainYearMonth")}} {{experimental_inline}}
   - : Represents the year and month of a calendar date, without a day or time zone; for example, an event on a calendar that happens during the whole month. It is fundamentally represented as an ISO 8601 calendar date, with year, month, and day fields, and an associated calendar system. The day is used to disambiguate the year-month in non-ISO calendar systems.
-- {{jsxref("Temporal.ZonedDateTime")}}
+- {{jsxref("Temporal.ZonedDateTime")}} {{experimental_inline}}
   - : Represents a date and time with a time zone. It is fundamentally represented as a combination of an [instant](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Instant), a time zone, and a calendar system.
 - `Temporal[Symbol.toStringTag]`
   - : The initial value of the [`[Symbol.toStringTag]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Temporal"`. This property is used in {{jsxref("Object.prototype.toString()")}}.

@@ -2,10 +2,12 @@
 title: Temporal.ZonedDateTime.prototype.getTimeZoneTransition()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime/getTimeZoneTransition
 page-type: javascript-instance-method
+status:
+  - experimental
 browser-compat: javascript.builtins.Temporal.ZonedDateTime.getTimeZoneTransition
 ---
 
-{{JSRef}}
+{{JSRef}}{{SeeCompatTable}}
 
 The **`getTimeZoneTransition()`** method of {{jsxref("Temporal.ZonedDateTime")}} instances returns a {{jsxref("Temporal.ZonedDateTime")}} object representing the closest instant after or before this instant at which the time zone's UTC offset changes (the returned instant is the first instant after the change), or `null` if there is no such transition. This is useful for finding out the offset rules of a time zone, such as its daylight saving time pattern.
 

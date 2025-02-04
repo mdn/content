@@ -28,9 +28,9 @@ A new object with properties reflecting the options computed during the initiali
 - `locale`
   - : The BCP 47 language tag for the locale actually used, determined by the [locale negotiation](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation) process. Only the `ca`, `hc`, and `nu` Unicode extension keys, if requested, may be included in the output.
 - `calendar`
-  - : The value provided for this property in the `options` argument, or using the Unicode extension key `"ca"`, with default filled in as needed. It is a supported [calendar type](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/getCalendars#supported_calendar_types) for this locale. The default is locale dependent.
+  - : The value provided for this property in the `options` argument, or using the Unicode extension key `"ca"`, with default filled in as needed. It is a supported [calendar type](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#supported_calendar_types) for this locale. The default is locale dependent.
 - `numberingSystem`
-  - : The value provided for this property in the `options` argument, or using the Unicode extension key `"nu"`, with default filled in as needed. It is a supported [numbering system](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/getNumberingSystems#supported_numbering_system_types) for this locale. The default is locale dependent.
+  - : The value provided for this property in the `options` argument, or using the Unicode extension key `"nu"`, with default filled in as needed. It is a supported [numbering system](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#supported_numbering_system_types) for this locale. The default is locale dependent.
 - `timeZone`
 
   - : The value provided for this property in the `options` argument, with default filled in as needed. It is an [IANA time zone name](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#time_zones_and_offsets). The default is the runtime's default time zone.
