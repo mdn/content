@@ -937,45 +937,45 @@ Now when you try this using a screen reader, you'll have buttons be reported usi
 
 There are a whole host of other [roles](/en-US/docs/Web/Accessibility/ARIA/Roles) that can identify non-semantic element structures as common UI features that go beyond what's available in standard HTML, for example [`combobox`](/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role), [`slider`](/en-US/docs/Web/Accessibility/ARIA/Roles/slider_role), [`tabpanel`](/en-US/docs/Web/Accessibility/ARIA/Roles/tabpanel_role), [`tree`](/en-US/docs/Web/Accessibility/ARIA/Roles/tree_role). You can see several useful examples in the [Deque university code library](https://dequeuniversity.com/library/) to give you an idea of how such controls can be made accessible.
 
-Let's go through an example of our own. We'll return to our simple absolutely-positioned tabbed interface (see [Hiding things](/en-US/docs/Learn_web_development/Core/Accessibility/CSS_and_JavaScript#hiding_things) in our CSS and JavaScript accessibility article), which you can find at [Tabbed info box example](/en-US/docs/Learn_web_development/Core/CSS_layout/Practical_positioning_examples#a_fixed_position_tabbed_info-box).
+Let's go through an example of our own. We'll return to our simple absolutely-positioned tabbed interface (see [Hiding things](/en-US/docs/Learn_web_development/Core/Accessibility/CSS_and_JavaScript#hiding_things) in our CSS and JavaScript accessibility article), which you can find at [Tabbed info box example](/en-US/docs/Learn_web_development/Core/CSS_layout/Practical_positioning_examples#a_tabbed_info-box).
 
-This example as-is works fine in terms of keyboard accessibility — you can happily tab between the different tabs and select them to show the tab contents. It is also fairly accessible too — you can scroll through the content and use the headings to navigate, even if you can't see what is happening on screen. It is however not that obvious what the content is — a screen reader currently reports the content as a list of links, and some content with three headings. It doesn't give you any idea of what the relationship is between the content. Giving the user more clues as to the structure of the content is always good.
+<!-- This example as-is works fine in terms of keyboard accessibility — you can happily tab between the different tabs and select them to show the tab contents. It is also fairly accessible too — you can scroll through the content and use the headings to navigate, even if you can't see what is happening on screen. It is however not that obvious what the content is — a screen reader currently reports the content as a list of links, and some content with three headings. It doesn't give you any idea of what the relationship is between the content. Giving the user more clues as to the structure of the content is always good. -->
 
-To improve things, we've created a new version of the example.
+<!-- To improve things, we've created a new version of the example. -->
 
 ```html live-sample___aria-tabbed-info-box
 <section class="info-box">
-  <ul role="tablist">
-    <li
-      class="active"
+  <div role="tablist" class="manual">
+    <button
+      id="tab-1"
+      type="button"
       role="tab"
       aria-selected="true"
-      aria-setsize="3"
-      aria-posinset="1"
-      tabindex="0">
-      Tab 1
-    </li>
-    <li
+      aria-controls="tabpanel-1">
+      <span>Tab 1</span>
+    </button>
+    <button
+      id="tab-2"
+      type="button"
       role="tab"
       aria-selected="false"
-      aria-setsize="3"
-      aria-posinset="2"
-      tabindex="0">
-      Tab 2
-    </li>
-    <li
+      aria-controls="tabpanel-2"
+      tabindex="-1">
+      <span>Tab 2</span>
+    </button>
+    <button
+      id="tab-3"
+      type="button"
       role="tab"
       aria-selected="false"
-      aria-setsize="3"
-      aria-posinset="3"
-      tabindex="0">
-      Tab 3
-    </li>
-  </ul>
+      aria-controls="tabpanel-3"
+      tabindex="-1">
+      <span>Tab 3</span>
+    </button>
+  </div>
   <div class="panels">
-    <article class="active-panel" role="tabpanel" aria-hidden="false">
+    <article id="tabpanel-1" role="tabpanel" aria-labelledby="tab-1">
       <h2>The first tab</h2>
-
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
         turpis nibh, porttitor nec venenatis eu, pulvinar in augue. Vestibulum
@@ -986,23 +986,28 @@ To improve things, we've created a new version of the example.
         urna. Nulla facilisi.
       </p>
     </article>
-    <article role="tabpanel" aria-hidden="true">
+    <article
+      id="tabpanel-2"
+      role="tabpanel"
+      aria-labelledby="tab-2"
+      class="is-hidden">
       <h2>The second tab</h2>
-
       <p>
         This tab hasn't got any Lorem Ipsum in it. But the content isn't very
         exciting all the same.
       </p>
     </article>
-    <article role="tabpanel" aria-hidden="true">
+    <article
+      id="tabpanel-3"
+      role="tabpanel"
+      aria-labelledby="tab-3"
+      class="is-hidden">
       <h2>The third tab</h2>
-
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
         turpis nibh, porttitor nec venenatis eu, pulvinar in augue. And now an
         ordered list: how exciting!
       </p>
-
       <ol>
         <li>dui neque eleifend lorem, a auctor libero turpis at sem.</li>
         <li>Aliquam ut porttitor urna.</li>
@@ -1013,159 +1018,214 @@ To improve things, we've created a new version of the example.
 </section>
 ```
 
-```css hidden live-sample___aria-tabbed-info-box
+```css live-sample___aria-tabbed-info-box
 /* General setup */
-body {
+
+html {
   font-family: sans-serif;
+}
+
+* {
   box-sizing: border-box;
+}
+
+body {
   margin: 0;
 }
 
 /* info-box setup */
 
 .info-box {
-  width: calc(100% - 20px);
+  width: 452px;
   height: 400px;
-  margin: 0 auto;
+  margin: 1.25rem auto 0;
 }
 
 /* styling info-box tabs */
 
-ul[role="tablist"] {
-  padding-left: 0;
-  margin-top: 0;
+.info-box [role="tablist"] {
+  min-width: 100%;
+  display: flex;
 }
 
-li[role="tab"] {
-  float: left;
-  list-style-type: none;
-  width: calc(100% / 3);
-  display: inline-block;
-  line-height: 3;
-  background-color: red;
-  color: black;
-  text-align: center;
+.info-box [role="tab"] {
+  border: none;
+  background: white;
+  padding: 0 1rem 0 1rem;
+  line-height: 3rem;
+  color: #b60000;
+  font-weight: bold;
+  outline: none;
 }
 
-li[role="tab"]:focus,
-li[role="tab"]:hover {
-  background-color: #a60000;
-  color: white;
+.info-box [role="tab"]:focus span,
+.info-box [role="tab"]:hover span {
+  outline: 1px solid blue;
+  outline-offset: 6px;
+  border-radius: 4px;
 }
 
-li[role="tab"].active {
-  background-color: #a60000;
+.info-box [role="tab"][aria-selected="true"] {
+  background-color: #b60000;
   color: white;
 }
 
 /* styling info-box panels */
 
 .info-box .panels {
+  height: 352px;
   clear: both;
   position: relative;
-  height: 352px;
 }
 
-.info-box article {
-  background-color: #a60000;
+.info-box [role="tabpanel"] {
   color: white;
   position: absolute;
-  padding: 10px;
+  padding: 0.8rem 1.2rem;
   height: 352px;
   top: 0;
+  background-color: #b60000;
   left: 0;
 }
 
-.info-box .active-panel {
-  z-index: 1;
+.info-box [role="tabpanel"].is-hidden {
+  display: none;
 }
 ```
 
 ```js live-sample___aria-tabbed-info-box
-let tabs = document.querySelectorAll(".info-box li");
-let panels = document.querySelectorAll(".info-box article");
+class TabsManual {
+  constructor(groupNode) {
+    this.tablistNode = groupNode;
 
-for (let i = 0; i < tabs.length; i++) {
-  let tab = tabs[i];
-  setTabHandler(tab);
-}
+    this.tabs = [];
 
-function setTab(e) {
-  if (e.type === "keypress" && e.keyCode !== 13) {
-    return;
-  }
+    this.firstTab = null;
+    this.lastTab = null;
 
-  let tabPos = Number(this.getAttribute("aria-posinset")) - 1;
-  for (let i = 0; i < tabs.length; i++) {
-    if (tabs[i].getAttribute("class")) {
-      tabs[i].removeAttribute("class");
+    this.tabs = Array.from(this.tablistNode.querySelectorAll("[role=tab]"));
+    this.tabpanels = [];
+
+    for (let i = 0; i < this.tabs.length; i += 1) {
+      const tab = this.tabs[i];
+      const tabpanel = document.getElementById(
+        tab.getAttribute("aria-controls"),
+      );
+
+      tab.tabIndex = -1;
+      tab.setAttribute("aria-selected", "false");
+      this.tabpanels.push(tabpanel);
+
+      tab.addEventListener("keydown", this.onKeydown.bind(this));
+      tab.addEventListener("click", this.onClick.bind(this));
+
+      if (!this.firstTab) {
+        this.firstTab = tab;
+      }
+      this.lastTab = tab;
     }
 
-    tabs[i].setAttribute("aria-selected", "false");
+    this.setSelectedTab(this.firstTab);
   }
 
-  this.setAttribute("class", "active");
-  this.setAttribute("aria-selected", "true");
+  setSelectedTab(currentTab) {
+    for (let i = 0; i < this.tabs.length; i += 1) {
+      const tab = this.tabs[i];
+      if (currentTab === tab) {
+        tab.setAttribute("aria-selected", "true");
+        tab.removeAttribute("tabindex");
+        this.tabpanels[i].classList.remove("is-hidden");
+      } else {
+        tab.setAttribute("aria-selected", "false");
+        tab.tabIndex = -1;
+        this.tabpanels[i].classList.add("is-hidden");
+      }
+    }
+  }
 
-  for (let i = 0; i < panels.length; i++) {
-    if (panels[i].getAttribute("class")) {
-      panels[i].removeAttribute("class");
+  moveFocusToTab(currentTab) {
+    currentTab.focus();
+  }
+
+  moveFocusToPreviousTab(currentTab) {
+    let index;
+
+    if (currentTab === this.firstTab) {
+      this.moveFocusToTab(this.lastTab);
+    } else {
+      index = this.tabs.indexOf(currentTab);
+      this.moveFocusToTab(this.tabs[index - 1]);
+    }
+  }
+
+  moveFocusToNextTab(currentTab) {
+    let index;
+
+    if (currentTab === this.lastTab) {
+      this.moveFocusToTab(this.firstTab);
+    } else {
+      index = this.tabs.indexOf(currentTab);
+      this.moveFocusToTab(this.tabs[index + 1]);
+    }
+  }
+
+  /* EVENT HANDLERS */
+
+  onKeydown(event) {
+    const tgt = event.currentTarget;
+    let flag = false;
+
+    switch (event.key) {
+      case "ArrowLeft":
+        this.moveFocusToPreviousTab(tgt);
+        flag = true;
+        break;
+
+      case "ArrowRight":
+        this.moveFocusToNextTab(tgt);
+        flag = true;
+        break;
+
+      case "Home":
+        this.moveFocusToTab(this.firstTab);
+        flag = true;
+        break;
+
+      case "End":
+        this.moveFocusToTab(this.lastTab);
+        flag = true;
+        break;
+
+      default:
+        break;
     }
 
-    panels[i].setAttribute("aria-hidden", "true");
+    if (flag) {
+      event.stopPropagation();
+      event.preventDefault();
+    }
   }
 
-  panels[tabPos].setAttribute("class", "active-panel");
-  panels[tabPos].setAttribute("aria-hidden", "false");
+  // Since this example uses buttons for the tabs, the click onr also is activated
+  // with the space and enter keys
+  onClick(event) {
+    this.setSelectedTab(event.currentTarget);
+  }
 }
 
-function setTabHandler(tab) {
-  tab.addEventListener("click", setTab);
-  tab.addEventListener("keypress", setTab);
-}
+// Initialize tablist
+
+window.addEventListener("load", function () {
+  const tablists = document.querySelectorAll("[role=tablist].manual");
+  for (let i = 0; i < tablists.length; i++) {
+    new TabsManual(tablists[i]);
+  }
+});
 ```
 
 {{EmbedLiveSample("aria-tabbed-info-box", "100", "420")}}
 
-We've updated the structure of the tabbed interface like so:
-
-```html
-<ul role="tablist">
-  <li
-    class="active"
-    role="tab"
-    aria-selected="true"
-    aria-setsize="3"
-    aria-posinset="1"
-    tabindex="0">
-    Tab 1
-  </li>
-  <li
-    role="tab"
-    aria-selected="false"
-    aria-setsize="3"
-    aria-posinset="2"
-    tabindex="0">
-    Tab 2
-  </li>
-  <li
-    role="tab"
-    aria-selected="false"
-    aria-setsize="3"
-    aria-posinset="3"
-    tabindex="0">
-    Tab 3
-  </li>
-</ul>
-<div class="panels">
-  <article class="active-panel" role="tabpanel" aria-hidden="false">…</article>
-  <article role="tabpanel" aria-hidden="true">…</article>
-  <article role="tabpanel" aria-hidden="true">…</article>
-</div>
-```
-
-> [!NOTE]
-> The most striking change here is that we've removed the links that were originally present in the [example](/en-US/docs/Learn_web_development/Core/CSS_layout/Practical_positioning_examples#a_fixed_position_tabbed_info-box), and just used the list items as the tabs — this was done because it makes things less confusing for screen reader users (the links don't really take you anywhere; they just change the view), and it allows the setsize/position in set features to work better — when these were put on the links, the browser kept reporting "1 of 1" all the time, not "1 of 3", "2 of 3", etc.
+In this example we have used a combination of semantic elements, aria roles and aria attributes. The first of these is we have used a {{htmlelement("button")}} element as a _tab_, this means that the tab can be selected via a mouse click or via the keyboard using space or enter.
 
 ARIA features used include:
 
@@ -1173,19 +1233,16 @@ ARIA features used include:
   - : These identify the important areas of the tabbed interface — the container for the tabs, the tabs themselves, and the corresponding tabpanels.
 - [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected)
   - : Defines which tab is currently selected. As different tabs are selected by the user, the value of this attribute on the different tabs is updated via JavaScript.
-- [`aria-hidden`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-hidden)
-  - : Hides an element from being read out by a screen reader. As different tabs are selected by the user, the value of this attribute on the different tabs is updated via JavaScript.
-- `tabindex="0"`
-  - : As we've removed the links, we need to give the list items this attribute to provide it with keyboard focus.
-- [`aria-setsize`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-setsize)
-  - : This property allows you to specify to screen readers that an element is part of a series, and how many items the series has.
-- [`aria-posinset`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-posinset)
-  - : This property allows you to specify what position in a series an element is in. Along with `aria-setsize`, it provides a screen reader with enough information to tell you that you are currently on item "1 of 3", etc. In many cases, browsers should be able to infer this information from the element hierarchy, but it certainly helps to provide more clues.
+- `tabindex="-1"`
+  - : `tabindex="-1"` takes the element out of the tab order. As we are using JavaScript to allow the user to control the tabs via keyboard or mouse we do not want the user to be able to use the tab key to navigate to the buttons.
+- [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
+  - : This attribute identifies an element (by its `id`) that labels the element, in this example the `<article>` is labelled by the corresponding tab or `<button>`.
+- [`aria-controls`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-controls)
+  - : This attribute identifies an element (by its `id`) that is controlled the element, in this example the `<article>` is controlled by the corresponding tab or `<button>`.
 
-In our tests, this new structure did serve to improve things overall. The tabs are now recognized as tabs (e.g. "tab" is spoken by the screen reader), the selected tab is indicated by "selected" being read out with the tab name, and the screen reader also tells you which tab number you are currently on. In addition, because of the `aria-hidden` settings (only the non-hidden tab ever has `aria-hidden="false"` set), the non-hidden content is the only one you can navigate down to, meaning the selected content is easier to find.
+We could have used `aria-hidden` to hide the content of the tabpanels from assistive technologies but if that content contained focusable content, such as links, the user would still be able to tab to that content even when aria-hidden=true is set for the non-active panels. In this example we have applied `class="is-hidden"` to tabpanels that correspond to the tabs with `aria-selected="false"` and using CSS to `display: none;` which prevents the hidden content from being tabbed to.
 
-> [!NOTE]
-> If there is anything you explicitly don't want screen readers to read out, you can give them the `aria-hidden="true"` attribute.
+In our tests, this new structure did serve to improve things overall. The `<button>`s are now recognized as tabs (e.g. "tab" is spoken by the screen reader), the selected tab is indicated by "selected" being read out with the tab name and any content that is not shown can not be tabbed to. The user can also navigate the tabs with keyboard or mouse.
 
 ## Test your skills!
 
