@@ -44,11 +44,11 @@ There are many other undesirable legacies about `Date`, such as all setters bein
     - As a timestamp: {{jsxref("Temporal.Instant")}}
     - As a date-time component combination paired with a time zone: {{jsxref("Temporal.ZonedDateTime")}}
   - Representing a time-zone-unaware date/time (which are all prefixed with "Plain"):
-    - Date (year, month, day) + time (hour, minute, second, millisecond, nanosecond): {{jsxref("Temporal.PlainDateTime")}} (Note: `ZonedDateTime` is equivalent to `PlainDateTime` plus a time zone)
+    - Date (year, month, day) + time (hour, minute, second, millisecond, microsecond, nanosecond): {{jsxref("Temporal.PlainDateTime")}} (Note: `ZonedDateTime` is equivalent to `PlainDateTime` plus a time zone)
       - Date (year, month, day): {{jsxref("Temporal.PlainDate")}}
         - Year, month: {{jsxref("Temporal.PlainYearMonth")}}
         - Month, day: {{jsxref("Temporal.PlainMonthDay")}}
-      - Time (hour, minute, second, millisecond, nanosecond): {{jsxref("Temporal.PlainTime")}}
+      - Time (hour, minute, second, millisecond, microsecond, nanosecond): {{jsxref("Temporal.PlainTime")}}
 
 Furthermore, there's also another utility namespace, {{jsxref("Temporal.Now")}}, which provides methods for getting the current time in various formats.
 
@@ -265,7 +265,7 @@ With these tables, you should have a basic idea of how to navigate the `Temporal
 
 ### Calendars
 
-A calendar is a way to organize days, typically into periods of weeks, months, years, and eras. Most of the world uses the Gregorian calendar, but there are many other calendars in use, especially in religious and cultural contexts. By default, all calendar-aware `Temporal` objects use the ISO 8601 calendar system, which is based on the Gregorian calendar and defines additional week-numbering rules. {{jsxref("Intl/Locale/getCalendars", "Intl.Locale.prototype.getCalendars()")}} lists most of the calendars likely to be supported by browsers. Here we provide a brief overview of how calendar systems are formed to help you internalize what factors may vary between calendars.
+A calendar is a way to organize days, typically into periods of weeks, months, years, and eras. Most of the world uses the Gregorian calendar, but there are many other calendars in use, especially in religious and cultural contexts. By default, all calendar-aware `Temporal` objects use the ISO 8601 calendar system, which is based on the Gregorian calendar and defines additional week-numbering rules. [`Intl.supportedValuesOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#supported_calendar_types) lists most of the calendars likely to be supported by browsers. Here we provide a brief overview of how calendar systems are formed to help you internalize what factors may vary between calendars.
 
 There are three prominent periodic events on Earth: its rotation around the sun (365.242 days for one revolution), the moon's rotation around the Earth (29.53 days from new moon to new moon), and its rotation around its axis (24 hours from sunrise to sunrise). Every culture has the same measure of a "day", which is 24 hours. Occasional changes such as daylight saving time are not part of the calendar, but are part of the [time zone](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#time_zones_and_offsets)'s information.
 
@@ -318,12 +318,27 @@ The concept of a "week" is not connected with any astronomical event, but is a c
 All `Temporal` classes can be serialized and deserialized using the format specified in [RFC 9557](https://datatracker.ietf.org/doc/html/rfc9557), which is based on [ISO 8601 / RFC 3339](https://datatracker.ietf.org/doc/html/rfc3339). The format, in its full form, is as follows (spaces are only for readability and should not be present in the actual string):
 
 ```plain
-YYYY-MM-DD T HH:mm:ss.sssssssss Z/±HH:mm:ss.sssssssss [time_zone_id] [u-ca=calendar_id]
+YYYY-MM-DD T HH:mm:ss.sssssssss Z/±HH:mm [time_zone_id] [u-ca=calendar_id]
 ```
 
 Different classes have different requirements for the presence of each component, so you will find a section titled "RFC 9557 format" in each class's documentation, which specifies the format recognized by that class.
 
 This is very similar to the [date time string format](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#date_time_string_format) used by {{jsxref("Date")}}, which is also based on ISO 8601. The main addition is the ability to specify micro- and nanosecond components, and the ability to specify the time zone and calendar system.
+
+### Representable dates
+
+All `Temporal` objects that represent a specific calendar date impose a similar limit on the range of representable dates, which is ±10<sup>8</sup> days (inclusive) from the Unix epoch, or the range of instants from `-271821-04-20T00:00:00` to `+275760-09-13T00:00:00`. This is the same range as [valid dates](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date). More specifically:
+
+- {{jsxref("Temporal.Instant")}} and {{jsxref("Temporal.ZonedDateTime")}} apply this limit directly on its `epochNanoseconds` value.
+- {{jsxref("Temporal.PlainDateTime")}} interprets the date-time in the UTC time zone and requires it to be ±(10<sup>8</sup> + 1) days (exclusive) from the Unix epoch, so its valid range is `-271821-04-19T00:00:00` to `+275760-09-14T00:00:00`, exclusive. This allows any `ZonedDateTime` to be converted to a `PlainDateTime` regardless of its offset.
+- {{jsxref("Temporal.PlainDate")}} applies the same check as `PlainDateTime` to the noon (`12:00:00`) of that date, so its valid range is `-271821-04-19` to `+275760-09-13`. This allows any `PlainDateTime` to be converted to a `PlainDate` regardless of its time, and vice versa.
+- {{jsxref("Temporal.PlainYearMonth")}} has the valid range of `-271821-04` to `+275760-09`. This allows any `PlainDate` to be converted to a `PlainYearMonth` regardless of its date (except if a non-ISO month's first day falls in the ISO month `-271821-03`).
+
+The `Temporal` objects will refuse to construct an instance representing a date/time beyond this limit. This includes:
+
+- Using the constructor or `from()` static method.
+- Using the `with()` method to update calendar fields.
+- Using `add()`, `subtract()`, `round()`, or any other method to derive new instances.
 
 ## Static properties
 
