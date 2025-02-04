@@ -9,12 +9,12 @@ browser-compat: css.properties.text-box-trim
 
 {{CSSRef}}{{seecompattable}}
 
-The **`text-box-trim`** [CSS](/en-US/docs/Web/CSS) property specifies which of the over and under [leading](/en-US/docs/Glossary/Leading) to trim from text content.
+The **`text-box-trim`** [CSS](/en-US/docs/Web/CSS) property specifies which of the over and under edges of text content to trim.
 
-Leading differs across fonts, making consistent typesetting historically challenging on the web. `text-box-trim` — along with its counterpart property {{cssxref("text-box-edge")}}, which specifies the amount of leading to trim — makes consistent typesetting easier to achieve.
+Vertical spacing differs between fonts, making consistent typesetting historically challenging on the web. The `text-box-trim` property — along with its counterpart property {{cssxref("text-box-edge")}}, which specifies how much space to trim — makes consistent typesetting easier to achieve.
 
 > [!NOTE]
-> There is also a shorthand property — {{cssxref("text-box")}}, which can be used to specify the `text-box-trim` and `text-box-edge` values in a single declaration.
+> The {{cssxref("text-box")}} shorthand property can be used to specify the `text-box-trim` and `text-box-edge` values in a single declaration.
 
 ## Syntax
 
@@ -38,21 +38,21 @@ text-box-trim: unset;
 The `text-box-trim` property value may be specified as one of the following keywords:
 
 - `none`
-  - : The default value. No leading is trimmed from the text.
+  - : The default value. No space is trimmed from the text.
 - `trim-both`
-  - : The start (over) and end (under) leading is trimmed from the text.
+  - : The start (over) and end (under) edges are both trimmed.
 - `trim-start`
-  - : The start (over) leading is trimmed from the text.
+  - : The start (over) edge is trimmed.
 - `trim-end`
-  - : The end (under) leading is trimmed from the text.
+  - : The end (under) edge is trimmed.
 
 ## Description
 
-Font files specify an amount of space — termed leading — to be included above and below text, to contain capital letters, ascenders, descenders, etc., and provide spacing between lines. The amount of leading included varies between fonts, making it difficult to consistently set block-level text spacing.
+Font files specify an amount of space, termed leading, to be included above and below text to provide spacing between lines. The amount of leading included varies between fonts, as does the space within the font (the height of the capital letter, ascenders, descenders, etc.), making it difficult to consistently set block-level text spacing.
 
-The `text-box-trim` property allows you to trim the over and under leading, making it much easier to control text spacing in the block direction.
+The `text-box-trim` property allows you to trim the over and under edge of the text content, making it much easier to control text spacing in the block direction.
 
-The actual amount of leading trimmed is specified using the {{cssxref("text-box-edge")}} property. For example, you can choose to trim the over leading in line with a font's capital letters or lower-case letters, and the under leading flush with the font's baseline.
+The actual amount of space trimmed is specified using the {{cssxref("text-box-edge")}} property. For example, you can choose to trim the over edge in line with a font's capital letters or lower-case letters, and the under edge flush with the font's baseline.
 
 ## Formal definition
 
@@ -66,9 +66,9 @@ The actual amount of leading trimmed is specified using the {{cssxref("text-box-
 
 ### Basic `text-box-trim` usage
 
-In the following example we set `text-box-edge: cap alphabetic` on two paragraphs, which trims the over leading to the top of the capital letters and the under leading flush with the text baseline.
+In the following example we set `text-box-edge: cap alphabetic` on two paragraphs, which trims the over edge to the top of the capital letters and the under edge flush with the text baseline.
 
-We then set `text-box-trim` values of `trim-end` on the first one, and `trim-both` on the second one. This results in the first paragraph only having its under leading trimmed, whereas the second one has both the over _and_ under leading trimmed.
+We then set `text-box-trim` values of `trim-end` on the first one, and `trim-both` on the second one. This results in the first paragraph only having its under edge trimmed, whereas the second one has both the over _and_ under edge trimmed.
 
 ```html hidden
 <p class="one">This is .one</p>
@@ -94,14 +94,14 @@ p {
   margin: 0;
   font-size: 6rem;
   font-weight: bold;
-  border-top: 5px solid magenta;
-  border-bottom: 5px solid magenta;
 }
 ```
 
 ```css
 p {
   text-box-edge: cap alphabetic;
+  border-top: 5px solid magenta;
+  border-bottom: 5px solid magenta;
 }
 
 .one {
@@ -115,7 +115,7 @@ p {
 
 #### Result
 
-The output is as follows. Note how we've included a top and bottom border on each paragraph, so that you can see how the leading has been trimmed in each case.
+The output is as follows. Note how we've included a top and bottom border on each paragraph, so that you can see how the space has been trimmed in each case.
 
 {{EmbedLiveSample("Basic `text-box-edge` usage","100%","360")}}
 
@@ -127,7 +127,7 @@ In this example we provide a user interface that allows you to choose the `text-
 
 In our HTML, we include three main items:
 
-- Three {{htmlelement("select")}} elements allowing you to set which edges of the text the leading should be trimmed from (the `text-box-trim` value) and how much leading to trim from the block start and end of the text (the {{cssxref("text-box-edge")}} value).
+- Three {{htmlelement("select")}} elements allowing you to set which edges of the text the leading should be trimmed from (the `text-box-trim` value) and how much space to trim from the block-start and block-end edges of the text (the {{cssxref("text-box-edge")}} value).
 - A {{htmlelement("p")}} element containing the text that the `text-box-*` values are applied to. This paragraph has [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) set on it so you can edit the text.
 - Another `<p>` element that we write the `text-box-*` declarations applied to the first paragraph into, so you can see what code is being applied after each change to the `<select>` element values.
 
@@ -284,7 +284,7 @@ The output is as follows:
 
 {{EmbedLiveSample("`text-box-trim` value comparison","100%","520")}}
 
-`text-box-trim` is initially set to `trim-both`, meaning that over _and_ under leading is trimmed from the text. `text-box-edge` is initially set to `cap alphabetic`, meaning that leading is trimmed flush with the top of capital letters at the start edge of the text, and flush with the baseline at the end edge of the text.
+`text-box-trim` is initially set to `trim-both`, meaning that the over _and_ under edges are trimmed. `text-box-edge` is initially set to `cap alphabetic`, meaning that the text is trimmed flush with the top of capital letters at the start edge, and flush with the baseline at the end edge.
 
 Try changing the `<select>` values to see the effect they have on the display text.
 
