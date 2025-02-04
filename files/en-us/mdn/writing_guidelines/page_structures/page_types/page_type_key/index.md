@@ -187,7 +187,7 @@ This section lists `page-type` values for pages under [Web/Manifest](/en-US/docs
 
 This section lists `page-type` values for pages under [Web/XPath](/en-US/docs/Web/XPath). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the [generic page type](#generic_page_types) values.
 
-- `xpath-function`: a function, like [`ceiling()`](/en-US/docs/Web/XPath/Functions/ceiling)
+- `xpath-function`: a function, like [`ceiling()`](/en-US/docs/Web/XPath/Reference/Functions/ceiling)
 
 ### XSLT page types
 

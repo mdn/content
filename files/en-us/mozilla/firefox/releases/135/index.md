@@ -20,6 +20,8 @@ This article provides information about the changes in Firefox 135 that affect d
 
 #### Removals
 
+- The [`-moz-user-input`](/en-US/docs/Web/CSS/-moz-user-input) CSS property allowed you to disable input fields. The property is now deprecated and has been removed ([Firefox bug 1935198](https://bugzil.la/1935198)).
+
 ### JavaScript
 
 - The [JSON parse with source proposal](https://github.com/tc39/proposal-json-parse-with-source) is now supported, which aims to provide features to mitigate issues around loss of precision when converting values such as large floats and date values between JavaScript values and JSON text ([Firefox bug 1934622](https://bugzil.la/1934622)). Specifically, the following features are now available:

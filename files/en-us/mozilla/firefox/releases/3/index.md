@@ -40,7 +40,7 @@ If you're a developer trying to get a handle on all the new features in Firefox 
   - : Firefox 3 provides support for a substantial subset of the [EXSLT](/en-US/docs/Web/EXSLT) extensions to [XSLT](/en-US/docs/Web/XSLT).
 - [SVG improvements in Firefox 3](/en-US/docs/Mozilla/Firefox/Releases/3/SVG_improvements)
   - : SVG support in Firefox 3 has been upgraded significantly, with support for over two dozen new filters, several new elements and attributes, and other improvements.
-- [Animated PNG graphics](/en-US/docs/Web/Media/Formats/Image_types#apng_animated_portable_network_graphics)
+- [Animated PNG graphics](/en-US/docs/Web/Media/Guides/Formats/Image_types#apng_animated_portable_network_graphics)
   - : Firefox 3 supports the animated PNG (APNG) image format.
 
 ### For XUL and extension developers
