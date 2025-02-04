@@ -67,7 +67,7 @@ This reference day canonicalization ensures that {{jsxref("Temporal/PlainYearMon
     - The provided properties that specify the same component are inconsistent.
     - The provided non-numerical properties are not valid; for example, if `monthCode` is never a valid month code in this calendar.
     - The provided numerical properties are out of range, and `options.overflow` is set to `"reject"`.
-    - The provided string or properties form a date that is outside the range of supported dates (about a quarter million years in the future or past).
+    - The info is not in the [representable range](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal#representable_dates), which is ±(10<sup>8</sup> + 1) days, or about ±273,972.6 years, from the Unix epoch.
 
 ## Examples
 
