@@ -53,7 +53,7 @@ Companies use various mechanisms to transfer files to their web servers. Many wi
 
 - A drag and drop interface (you'll see an example of this in [Publishing via GitHub](#publishing_via_github), later on).
 - An {{Glossary("FTP", "File Transfer Protocol (FTP)")}} program. FTP programs vary widely, but generally, you have to connect to your web server using details provided by your hosting company (typically username, password, hostname). Then the program shows you your local files and the web server's files in two windows, and provides a way for you to transfer files back and forth.
-- Keeping your source code in a GitHub repo (again, see below) and granting the hosting comppany access to that repo so they can grab the code from there to publish.
+- Keeping website source code in a GitHub repo (see below) and granting the hosting company access so they can fetch the source, build it if necessary, and publish it.
 - Some companies will provide [command line tools](/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Command_line) for you to use to transfer your files.
 
 #### Tips for finding hosting and domains
