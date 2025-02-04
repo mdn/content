@@ -150,7 +150,7 @@ label {
 }
 ```
 
-When the `<select>` is opened, we use the `:open` pseudo-class to set a different background color and an up arrow background image on it. We also set a different background color and border on the enclosing `<label>` element using a combination of the `:open` and {{cssxref(":has()")}} pseudo-classes to create a parent selector. We are literally saying "select the `<label>`, but only when its descendant `<select>` is open."
+When the `<select>` is opened, we use the `:open` pseudo-class to set a different background color and change the background image to an up arrow. We also set a different background color and border on the enclosing `<label>` element using a combination of the `:open` and {{cssxref(":has()")}} pseudo-classes to create a parent selector. We are literally saying "select the `<label>`, but only when its descendant `<select>` is open."
 
 ```css
 select:open {
