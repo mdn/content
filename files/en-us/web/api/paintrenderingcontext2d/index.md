@@ -126,8 +126,6 @@ _The `PaintRenderingContext2D` implements a subset of the {{domxref("CanvasRende
 
 ### Line styles
 
-The following methods and properties control how lines are drawn.
-
 - {{domxref("CanvasRenderingContext2D.lineWidth")}}
   - : A number specifying the line width, in coordinate space units.
 - {{domxref("CanvasRenderingContext2D.lineCap")}}
