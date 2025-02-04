@@ -33,7 +33,7 @@ The returned object has the following properties:
 
 - `codecs`
 
-  - : An array of objects, each describing the basic capabilities of a single [media codec](/en-US/docs/Web/Media/Formats/WebRTC_codecs) supported by the {{domxref("RTCRtpSender")}}.
+  - : An array of objects, each describing the basic capabilities of a single [media codec](/en-US/docs/Web/Media/Guides/Formats/WebRTC_codecs) supported by the {{domxref("RTCRtpSender")}}.
 
     > [!NOTE]
     > The array contains special entries that represent the underlying components of the transport — these may be ignored if you're only interested in the actual codecs used for the media itself.
@@ -50,7 +50,7 @@ The returned object has the following properties:
       - : A string indicating the codec's MIME media type and subtype.
         The MIME type strings used by RTP differ from those used elsewhere.
         See {{RFC(3555, "", 4)}} for the complete IANA registry of these types.
-        Also see [Codecs used by WebRTC](/en-US/docs/Web/Media/Formats/WebRTC_codecs) for details about potential codecs that might be referenced here.
+        Also see [Codecs used by WebRTC](/en-US/docs/Web/Media/Guides/Formats/WebRTC_codecs) for details about potential codecs that might be referenced here.
     - `sdpFmtpLine` {{optional_inline}}
       - : A string giving the format specific parameters field from the `a=fmtp` line in the SDP which corresponds to the codec, if such a line exists.
         If there is no parameters field, this property is left out.

@@ -33,6 +33,8 @@ The **`PublicKeyCredential`** interface provides information about a public key 
 
 ## Static methods
 
+- {{domxref("PublicKeyCredential.getClientCapabilities_static", "PublicKeyCredential.getClientCapabilities()")}}
+  - : Returns a {{jsxref("Promise")}} that resolves with an object that can be used to check whether or not particular WebAuthn capabilities and [extensions](/en-US/docs/Web/API/Web_Authentication_API/WebAuthn_extensions) are supported.
 - {{domxref("PublicKeyCredential.isConditionalMediationAvailable_static", "PublicKeyCredential.isConditionalMediationAvailable()")}}
   - : Returns a {{jsxref("Promise")}} which resolves to `true` if conditional mediation is available.
 - {{domxref("PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable_static", "PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable()")}}

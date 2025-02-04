@@ -230,7 +230,7 @@ The following changes were made to the {{domxref("CanvasRenderingContext2D")}} i
   - : The developing WebGL standard is now supported by Firefox.
 - [Optimizing graphics performance](/en-US/docs/Optimizing_graphics_performance)
   - : Tips and tricks for getting the most out of graphics and video performance in Firefox 4.
-- [Support for WebM video](/en-US/docs/Web/Media/Formats#webm)
+- [Support for WebM video](/en-US/docs/Web/Media/Guides/Formats#webm)
   - : The new open [WebM](https://www.webmproject.org/) video format is supported by Gecko 2.0.
 - [SVG animation with SMIL](/en-US/docs/Web/SVG/SVG_animation_with_SMIL)
   - : Support for SMIL animation of SVG is now available.

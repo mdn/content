@@ -3,12 +3,10 @@ title: "PaintSize: width property"
 short-title: width
 slug: Web/API/PaintSize/width
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.PaintSize.width
 ---
 
-{{APIRef("CSS Painting API")}}{{SeeCompatTable}}
+{{APIRef("CSS Painting API")}}
 
 The **`width`** read-only property of the {{domxref("PaintSize")}} interface returns the width of the output bitmap that the author should draw.
 
