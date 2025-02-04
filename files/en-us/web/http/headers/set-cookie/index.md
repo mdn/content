@@ -104,7 +104,6 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
     The `Expires` attribute is set by the server with a value relative to its own internal clock, which may differ from that of the client browser.
     Firefox and Chromium-based browsers internally use an expiry (max-age) value that is adjusted to compensate for clock difference, storing and expiring cookies at the time intended by the server.
     The adjustment for clock skew is calculated from the value of the {{httpheader("DATE")}} header.
-    
     Note that the specification explains how the attribute should be parsed, but does not indicate if/how the value should be corrected by the recipient.
 
 - `HttpOnly` {{optional_inline}}
