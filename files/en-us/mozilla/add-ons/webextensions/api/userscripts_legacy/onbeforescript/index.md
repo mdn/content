@@ -1,13 +1,16 @@
 ---
-title: userScripts.onBeforeScript
-slug: Mozilla/Add-ons/WebExtensions/API/userScripts/onBeforeScript
+title: userScripts.onBeforeScript (Legacy)
+slug: Mozilla/Add-ons/WebExtensions/API/userScripts_legacy/onBeforeScript
 page-type: webextension-api-event
-browser-compat: webextensions.api.userScripts.onBeforeScript
+browser-compat: webextensions.api.userScripts_legacy.onBeforeScript
 ---
 
 {{AddonSidebar}}
 
-The `onBeforeScript` event of the {{WebExtAPIRef("userScripts","browser.userScripts")}} is fired before a user script is executed. It can only be included in the API script, the script registered in [`"user_scripts"`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts), where it is used to detect that the custom API methods should be exported to the user script.
+> [!WARNING]
+> This is documentation for the legacy `userScripts` API. It's available in Firefox for Manifest V2. For functionality to work with user scripts in Manifest V3 see the new {{WebExtAPIRef("userScripts")}} API.
+
+The `onBeforeScript` event of the {{WebExtAPIRef("userScripts_legacy","browser.userScripts")}} is fired before a user script is executed. It can only be included in the API script, the script registered in [`"user_scripts"`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts), where it is used to detect that the custom API methods should be exported to the user script.
 
 ## Syntax
 
@@ -102,4 +105,4 @@ browser.userScripts.onBeforeScript.addListener((script) => {
 
 ## See also
 
-- {{WebExtAPIRef("contentScripts")}}
+- {{WebExtAPIRef("contentScripts_legacy")}}

@@ -33,7 +33,7 @@ Several extension APIs include the `cookieStoreId` in objects to enable extensio
 - {{WebExtAPIRef("downloads")}} where you can associate a download with a cookie store.
 - {{WebExtAPIRef("proxy")}} where the details passed into the {{WebExtAPIRef("proxy.onRequest")}} listener identify the cookie store associated with the request.
 - {{WebExtAPIRef("tabs")}} where you can {{WebExtAPIRef("tabs.create","create")}} a tab in a container tab, {{WebExtAPIRef("tabs.tab","get")}} the `cookieStoreId` for a tab, and {{WebExtAPIRef("tabs.query","query")}} tabs based on their associated cookie store.
-- {{WebExtAPIRef("userScripts.register")}} enables you to register a content script restricted to documents associated with one or more `cookieStoreIds`.
+- {{WebExtAPIRef("userScripts_legacy.register","userScripts.register")}} (legacy version, Manifest V2 only) enables you to register a content script restricted to documents associated with one or more `cookieStoreIds`.
 - {{WebExtAPIRef("webRequest")}} where all the events return the `cookieStoreId` of the request.
 - {{WebExtAPIRef("windows.create")}} where you can specify the cookie store for the tabs added to a window when it's created.
 

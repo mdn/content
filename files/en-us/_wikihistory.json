@@ -14430,18 +14430,6 @@
     "modified": "2020-10-15T22:22:39.367Z",
     "contributors": ["rebloor", "hellosct1", "bershanskiy"]
   },
-  "Mozilla/Add-ons/WebExtensions/API/userScripts/UserScriptOptions": {
-    "modified": "2020-06-22T16:28:43.349Z",
-    "contributors": ["hellosct1", "MelchiorIm3Tal", "irenesmith"]
-  },
-  "Mozilla/Add-ons/WebExtensions/API/userScripts/Working_with_userScripts": {
-    "modified": "2020-06-22T16:28:43.959Z",
-    "contributors": ["irenesmith", "hellosct1"]
-  },
-  "Mozilla/Add-ons/WebExtensions/API/userScripts/onBeforeScript": {
-    "modified": "2020-10-15T22:23:14.808Z",
-    "contributors": ["chrisdavidmills", "rebloor", "bershanskiy"]
-  },
   "Mozilla/Add-ons/WebExtensions/API/userScripts/register": {
     "modified": "2020-10-15T22:21:40.204Z",
     "contributors": [
@@ -14453,6 +14441,14 @@
       "bershanskiy",
       "stoyanster"
     ]
+  },
+  "Mozilla/Add-ons/WebExtensions/API/userScripts_legacy/Working_with_userScripts": {
+    "modified": "2020-06-22T16:28:43.959Z",
+    "contributors": ["irenesmith", "hellosct1"]
+  },
+  "Mozilla/Add-ons/WebExtensions/API/userScripts_legacy/onBeforeScript": {
+    "modified": "2020-10-15T22:23:14.808Z",
+    "contributors": ["chrisdavidmills", "rebloor", "bershanskiy"]
   },
   "Mozilla/Add-ons/WebExtensions/API/webNavigation": {
     "modified": "2020-10-15T21:38:48.088Z",
