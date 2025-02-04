@@ -104,7 +104,7 @@ The value of `--stop-color` is set to `cornflowerblue` at first, but when you ho
 
 ## See also
 
-- [CSS cascade and inheritance](/en-US/docs/Web/CSS/CSS_cascade)
+- [CSS cascading and inheritance](/en-US/docs/Web/CSS/CSS_cascade)
 - [CSS scoping](/en-US/docs/Web/CSS/CSS_scoping) module
 - [Using shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM)
 - [CSS Painting API](/en-US/docs/Web/API/CSS_Painting_API) module

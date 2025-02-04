@@ -17,7 +17,7 @@ For a 3D matrix, the returned string contains all [16 elements](/en-US/docs/Web/
 ## Syntax
 
 ```js-nolint
-DOMMatrixReadOnly.toString()
+toString()
 ```
 
 ### Parameters

@@ -3,8 +3,8 @@ title: CSS overflow
 slug: Web/CSS/CSS_overflow
 page-type: css-module
 spec-urls:
-  - https://drafts.csswg.org/css-overflow-3
-  - https://drafts.csswg.org/css-overflow-4
+  - https://drafts.csswg.org/css-overflow-3/
+  - https://drafts.csswg.org/css-overflow-4/
 ---
 
 {{CSSRef}}

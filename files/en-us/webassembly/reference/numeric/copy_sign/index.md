@@ -2,9 +2,8 @@
 title: Copy sign
 slug: WebAssembly/Reference/Numeric/Copy_sign
 page-type: webassembly-instruction
+sidebar: webassemblysidebar
 ---
-
-{{WebAssemblySidebar}}
 
 The **`copysign`** instructions, are used to copy just the sign bit from one number to another.
 

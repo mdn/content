@@ -2,9 +2,8 @@
 title: Learn forum
 slug: MDN/Community/Learn_forum
 page-type: mdn-community-guide
+sidebar: mdnsidebar
 ---
-
-{{MDNSidebar}}
 
 Our [Learn web development](/en-US/docs/Learn_web_development) pages get over a million views per month, and has an [active forum](https://discourse.mozilla.org/c/mdn/learn/250) where people go to ask for assistance.
 We'd love some help with answering posts, and growing our learning community.

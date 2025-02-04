@@ -15,7 +15,7 @@ The values from the parameter matrix are copied; the matrix parameter is not ado
 ## Syntax
 
 ```js-nolint
-SVGTransformList.createSVGTransformFromMatrix(matrix)
+createSVGTransformFromMatrix(matrix)
 ```
 
 ### Parameters

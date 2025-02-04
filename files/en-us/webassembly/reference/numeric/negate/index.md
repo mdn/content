@@ -2,9 +2,8 @@
 title: Negate
 slug: WebAssembly/Reference/Numeric/Negate
 page-type: webassembly-instruction
+sidebar: webassemblysidebar
 ---
-
-{{WebAssemblySidebar}}
 
 The **`neg`** instructions, short for _negate_, are used to negate a number. That is, turn a positive number into a negative number and a negative number into a positive number.
 

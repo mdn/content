@@ -43,7 +43,7 @@ See {{jsxref("Array.prototype.findLast()")}} for more details. This method is no
 
 ### Find the last prime number in a typed array
 
-The following example returns the value of the last element in the typed array that is a prime number, or {{jsxref("undefined")}} if there is no prime number.
+The following example returns the last element in the typed array that is a prime number, or {{jsxref("undefined")}} if there is no prime number.
 
 ```js
 function isPrime(element) {

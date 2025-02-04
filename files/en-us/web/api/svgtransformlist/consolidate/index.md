@@ -17,7 +17,7 @@ The returned item is the item itself and not a copy. Any changes made to the ite
 ## Syntax
 
 ```js-nolint
-SVGTransformList.consolidate()
+consolidate()
 ```
 
 ### Parameters
