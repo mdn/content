@@ -207,7 +207,7 @@ registerPaint(
 );
 ```
 
-The three parameters of the `paint()` function include the drawing context, paint size and properties. To be able to access properties, we include the static `inputProperties()` method, which provides live access to CSS properties, including regular properties and [custom properties](/en-US/docs/Web/CSS/CSS_cascading_variables), and returns an {{jsxref("Array", "array", "", 1)}} of property names. We'll take a look at `inputArguments` in the last section.
+The three parameters of the `paint()` function include the drawing context, paint size and properties. To be able to access properties, we include the static `inputProperties()` method, which provides live access to CSS properties, including regular properties and [custom properties](/en-US/docs/Web/CSS/CSS_cascading_variables), and returns an {{jsxref("Array", "array", "", 1)}} of property names. We'll take a look at [`inputArguments`](/en-US/docs/Web/API/CSS_Painting_API/Guide#passing_parameters) in the last section.
 
 Let's create a list of items with a background image that rotates between three different colors and three widths.
 
@@ -414,7 +414,7 @@ The result looks like this:
 
 {{EmbedGHLiveSample("dom-examples/css-painting/fancy-header-highlight/", 200, 200)}}
 
-While you can't edit the worklet itself, you can play around with the CSS and HTML. Maybe try {{cssxref("float")}} and {{cssxref("clear")}} on the headers?
+While you can't edit the worklet itself, you can play around with the CSS and HTML. Maybe try {{cssxref("scale")}} and {{cssxref("rotate")}} on the headers?
 
 You could try making the background images above without the CSS Paint API. It is doable, but you would have to declare a different, fairly complex linear gradient for each different color you wanted to create. With the CSS Paint API, one worklet can be reused, with different colors passed in this case.
 
