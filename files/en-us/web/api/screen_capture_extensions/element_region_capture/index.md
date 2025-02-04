@@ -342,16 +342,16 @@ Apart from that, the restrictions on what elements can be cropped are as follows
 - The element will not be cropped to if it is off-screen.
 - The element will not be cropped to if the track being cropped has clones or is not a track captured from the user's screen.
 - The element will not be captured if the `cropTarget` was created in a tab other than the one being captured.
-- Because Region Capture crops to an area of the screen rather than capturing a specific element, any content drawn on top of the cropped element will be shown in the stream.
+- Because Region Capture crops to an area of the current browser tab rather than capturing a specific element, any content drawn on top of the cropped area will be shown in the stream.
 
 ## Element Capture versus Region Capture
 
-As explained above, Element Capture captures the element itself (and its descendants), whereas Region Capture captures the area of the tab defined by the bounding box of the target element. This means that Element Capture will always show just the captured element, even if other DOM content overlaps it, whereas Region Capture can result in overlapping content being shown over the top of the content you intended to share.
+As explained above, Element Capture captures the element itself (and its descendants), whereas Region Capture captures the area of the browser tab defined by the bounding box of the target element. Element Capture will always show just the captured element, even if other DOM content overlaps it, whereas Region Capture can result in overlapping content being shown over the top of the content you intended to share.
 
 There are legitimate use cases for both:
 
-- If you need to keep the capture specific to one DOM tree, and exclude anything outside it, then the Element Capture API is a better choice. For example, if you've got private content appearing such as a set of message notifications or a speaker notes UI, you won't want it showing up in the capture.
-- However, if you really do want to capture a region of the screen, regardless of what is shown in it, the Region Capture API will serve you well. The [Region Capture Demo](https://region-capture-demo.glitch.me/) shows a useful possibility — zooming in on a particular section of the screen as you show multiple users around on an interactive walkthrough of some kind.
+- If you need to keep the capture specific to one DOM tree, and exclude anything outside it, then the Element Capture API is a better choice. For example, you don't want private content such as a set of message notifications or a speaker notes UI showing up in the capture.
+- However, if you really do want to capture a region of the browser tab, regardless of what is shown in it, the Region Capture API will serve you well. The [Region Capture Demo](https://region-capture-demo.glitch.me/) shows a useful possibility — zooming in on a particular area of the tab as you show multiple users an interactive walkthrough of some kind.
 
 ## See also
 
