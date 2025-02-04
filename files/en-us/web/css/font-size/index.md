@@ -219,10 +219,10 @@ See the W3C Editor's Draft for a more detailed description of [font-relative len
 
 ## See also
 
-- SVG {{SVGAttr("font-size")}} attribute
 - {{cssxref("font-size-adjust")}}
 - {{cssxref("font-style")}}
 - {{cssxref("font-weight")}}
 - {{cssxref("math-depth")}}
 - {{cssxref("math-style")}}
+- SVG {{SVGAttr("font-size")}} attribute
 - [Learn: Fundamental text and font styling](/en-US/docs/Learn_web_development/Core/Text_styling/Fundamentals)

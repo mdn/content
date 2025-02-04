@@ -108,6 +108,6 @@ Some written languages should not have any letter spacing applied. For instance,
 
 ## See also
 
-- SVG {{SVGAttr("letter-spacing")}} attribute
 - {{cssxref("font-kerning")}}
 - {{cssxref("word-spacing")}}
+- SVG {{SVGAttr("letter-spacing")}} attribute

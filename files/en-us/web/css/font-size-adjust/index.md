@@ -226,8 +226,8 @@ span {
 
 ## See also
 
-- SVG {{SVGAttr("font-size-adjust")}} attribute
 - {{cssxref("font-size")}}
 - {{cssxref("font-weight")}}
 - {{cssxref("@font-face/size-adjust", "size-adjust")}} `@font-face` descriptor
+- SVG {{SVGAttr("font-size-adjust")}} attribute
 - [Learn: Fundamental text and font styling](/en-US/docs/Learn_web_development/Core/Text_styling/Fundamentals)

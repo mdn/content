@@ -57,6 +57,6 @@ color-interpolation-filters: unset;
 
 ## See also
 
+- {{cssxref("color-interpolation")}}
 - SVG {{SVGAttr("color-interpolation-filters")}} attribute
-- CSS {{cssxref("color-interpolation")}} property
 - [sRGB specification](https://webstore.iec.ch/en/publication/6169)

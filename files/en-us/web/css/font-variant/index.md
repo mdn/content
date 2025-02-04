@@ -120,7 +120,7 @@ p.small {
 
 ## See also
 
-- SVG {{SVGAttr("font-variant")}} attribute
 - {{cssxref("text-transform")}}
 - {{cssxref("text-combine-upright")}}
 - {{cssxref("text-orientation")}}
+- SVG {{SVGAttr("font-variant")}} attribute

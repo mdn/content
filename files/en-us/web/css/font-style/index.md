@@ -129,7 +129,7 @@ Large sections of text set with a `font-style` value of `italic` may be difficul
 
 ## See also
 
-- SVG {{SVGAttr("font-style")}} attribute
 - {{cssxref("font-family")}}
 - {{cssxref("font-weight")}}
+- SVG {{SVGAttr("font-style")}} attribute
 - [Learn: Fundamental text and font styling](/en-US/docs/Learn_web_development/Core/Text_styling/Fundamentals)
