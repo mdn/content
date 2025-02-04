@@ -64,7 +64,7 @@ The problem here is that visually they work, but screen readers can't make any s
 [WAI-ARIA](https://www.w3.org/TR/wai-aria/) (Web Accessibility Initiative - Accessible Rich Internet Applications) is a specification written by the W3C, defining a set of additional HTML attributes that can be applied to elements to provide additional semantics and improve accessibility wherever it is lacking. There are three main features defined in the spec:
 
 - [Roles](/en-US/docs/Web/Accessibility/ARIA/Roles)
-  - : These define what an element is or does. Many of these are so-called landmark roles, which largely duplicate the semantic value of structural elements, such as `role="navigation"` ({{htmlelement("nav")}}) or `role="complementary"` ({{htmlelement("aside")}}). Some other roles describe different page structures, such as `role="banner"`, `role="search"`, `role="tablist"`, and `role="tabpanel"`, which are commonly found in UIs.
+  - : These define what an element is or does. Many of these are so-called landmark roles, which largely duplicate the semantic value of structural elements, such as `role="navigation"` ({{htmlelement("nav")}}), `role="banner"` (document {{htmlelement("header")}}), `role="complementary"` ({{htmlelement("aside")}}) or , `role="search"` ({{htmlelement("search")}}). Some other roles describe different page structures that do not have elements with that match those roles, such as `role="tablist"`, and `role="tabpanel"`, which are commonly found in UIs.
 - Properties
   - : These define properties of elements, which can be used to give them extra meaning or semantics. As an example, `aria-required="true"` specifies that a form input needs to be filled in order to be valid, whereas `aria-labelledby="label"` allows you to put an ID on an element, then reference it as being the label for anything else on the page, including multiple elements, which is not possible using `<label for="input">`. As an example, you could use `aria-labelledby` to specify that a key description contained in a {{htmlelement("div")}} is the label for multiple table cells, or you could use it as an alternative to image alt text — specify existing information on the page as an image's alt text, rather than having to repeat it inside the `alt` attribute. You can see an example of this at [Text alternatives](/en-US/docs/Learn_web_development/Core/Accessibility/HTML#text_alternatives).
 - States
@@ -374,7 +374,7 @@ Let's improve it by the use of some ARIA features.
 
   <!-- Even is it's not mandatory, it's common practice to put the main navigation menu within the main header -->
 
-  <nav role="navigation">
+  <nav>
     <ul>
       <li><a href="#">Home</a></li>
       <li><a href="#">Our team</a></li>
@@ -384,21 +384,23 @@ Let's improve it by the use of some ARIA features.
 
     <!-- A Search form is another common non-linear way to navigate through a website. -->
 
-    <form role="search">
-      <input
-        type="search"
-        name="q"
-        placeholder="Search query"
-        aria-label="Search through site content" />
-      <input type="submit" value="Go!" />
-    </form>
+    <search>
+      <form>
+        <input
+          type="search"
+          name="q"
+          placeholder="Search query"
+          aria-label="Search through site content" />
+        <input type="submit" value="Go!" />
+      </form>
+    </search>
   </nav>
 </header>
 
 <!-- Here is our page's main content -->
 <main>
   <!-- It contains an article -->
-  <article role="article">
+  <article>
     <h2>Article heading</h2>
 
     <p>
@@ -425,7 +427,7 @@ Let's improve it by the use of some ARIA features.
   </article>
 
   <!-- the aside content can also be nested within the main content -->
-  <aside role="complementary">
+  <aside>
     <h2>Related</h2>
     <ul>
       <li><a href="#">Oh I do like to be beside the seaside</a></li>
@@ -607,19 +609,21 @@ Firstly, we added some [`role`](/en-US/docs/Web/Accessibility/ARIA/Roles) attrib
 ```html
 <header>
   <h1>…</h1>
-  <nav role="navigation">
+  <nav>
     <ul>
       …
     </ul>
-    <form role="search">
-      <!-- search form -->
-    </form>
+    <search>
+      <form>
+        <!-- search form -->
+      </form>
+    </search>
   </nav>
 </header>
 
 <main>
-  <article role="article">…</article>
-  <aside role="complementary">…</aside>
+  <article>…</article>
+  <aside>…</aside>
 </main>
 
 <footer>…</footer>
