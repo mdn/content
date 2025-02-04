@@ -55,7 +55,7 @@ _The `PaintRenderingContext2D` implements a subset of the {{domxref("CanvasRende
 ### Compositing
 
 - {{domxref("CanvasRenderingContext2D.globalAlpha")}}
-  - : Alpha value that is applied to shapes and images before they are composited onto the canvas. Default `1.0` (opaque).
+  - : Alpha value that is applied to shapes and images before they are composited onto the canvas.
 - {{domxref("CanvasRenderingContext2D.globalCompositeOperation")}}
   - : With `globalAlpha` applied, this sets how shapes and images are drawn onto the existing bitmap.
 
