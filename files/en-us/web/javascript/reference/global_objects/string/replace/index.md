@@ -70,6 +70,14 @@ The replacement string can include the following special replacement patterns:
 
 "foo".replace(/(f)|(g)/, "$2");
 // "oo"; the second group exists but isn't matched
+
+"foo bar foo".replace(/(bar)/, "$1");
+// "foo bar foo"; the pattern only matched `bar`, so only `bar` was replaced
+//                but it was replaced with the first captured group `bar`
+
+"foo bar foo".replace(/.*(bar).*/, "$1");
+// "bar"; the pattern matched the whole string, so the whole string was replaced
+//        by the first captured group `bar`
 ```
 
 ### Specifying a function as the replacement
