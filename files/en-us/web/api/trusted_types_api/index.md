@@ -21,7 +21,9 @@ Examples of injection sinks include:
 - Functions that execute code such as {{jsxref("Global_Objects/eval", "eval()")}}.
 - Setters for {{domxref("Element")}} attributes that accept a URL of code to load or execute.
 
-One of the main defenses against DOM-based XSS attacks is to [sanitize](/en-US/docs/Web/Security/Attacks/XSS#sanitization) data before passing it to an injection sink. The Trusted Types API enables a developer to ensure that any data passed to an injection sink has been passed through a sanitization function. It is really in two parts:
+One of the main defenses against DOM-based XSS attacks is to [sanitize](/en-US/docs/Web/Security/Attacks/XSS#sanitization) data before passing it to an injection sink. The Trusted Types API enables a developer to centralize the sanitization code and to ensure that any data passed to an injection sink has been passed through the sanitization code.
+
+The API is really in two parts:
 
 - A JavaScript API enables a developer to sanitize data before passing it to an injection sink.
 - Two [CSP](/en-US/docs/Web/HTTP/CSP) directives enforce and control the usage of the JavaScript API.
