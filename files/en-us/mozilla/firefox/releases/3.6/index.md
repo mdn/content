@@ -84,7 +84,7 @@ Gecko 1.9.2 introduces JavaScript 1.8.2, which adds a number of language feature
 ### XPath
 
 - The choose() XPath method is now supported
-  - : The [`choose()`](/en-US/docs/Web/XPath/Reference/Functions/choose) method is now supported by our implementation of [XPath](/en-US/docs/Web/XPath).
+  - : The [`choose()`](/en-US/docs/Web/XML/XPath/Reference/Functions/choose) method is now supported by our implementation of [XPath](/en-US/docs/Web/XML/XPath).
 
 ## For XUL and add-on developers
 
