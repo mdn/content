@@ -1,39 +1,36 @@
 ---
-title: "-webkit-line-clamp"
-slug: Web/CSS/-webkit-line-clamp
+title: line-clamp
+slug: Web/CSS/line-clamp
 page-type: css-property
 browser-compat: css.properties.line-clamp
 ---
 
 {{CSSRef}}
 
-The **`-webkit-line-clamp`** [CSS](/en-US/docs/Web/CSS) property allows limiting of the contents of a {{Glossary("block")}} to the specified number of lines.
+The **`line-clamp`** [CSS](/en-US/docs/Web/CSS) property allows limiting of the contents of a {{Glossary("block")}} to the specified number of lines.
 
-It only works in combination with the {{cssxref("display")}} property set to `-webkit-box` or `-webkit-inline-box` and the {{cssxref("box-orient", "-webkit-box-orient")}} property set to `vertical`. Despite them being deprecated, the co-dependency of these three properties is fully specified behavior and will continue to be supported.
+Currently this property is only supported with a vendor-prefix as `-webkit-line-clamp`. And only works in combination with the {{cssxref("display")}} property set to `-webkit-box` or `-webkit-inline-box` and the {{cssxref("box-orient", "-webkit-box-orient")}} property set to `vertical`. Despite them being deprecated, the co-dependency of these three properties is fully specified behavior and will continue to be supported.
 
 In most cases you will also want to set {{cssxref("overflow")}} to `hidden`, otherwise the contents won't be clipped but an ellipsis will still be shown after the specified number of lines.
 
 When applied to anchor elements, the truncating can happen in the middle of the text, not necessarily at the end.
 
-> [!NOTE]
-> This property was originally implemented in WebKit and has some issues, such as the dependency on two other legacy properties. It got standardized in [CSS Overflow Module Level 4](https://drafts.csswg.org/css-overflow-4/#propdef--webkit-line-clamp) for legacy support. CSS Overflow Module Level 4 also defines a {{cssxref("line-clamp")}} property, which is meant to replace this property and avoid its issues. However, all browsers that support `line-clamp` will also support `-webkit-line-clamp` for compatibility reasons.
-
 ## Syntax
 
 ```css
 /* Keyword value */
--webkit-line-clamp: none;
+line-clamp: none;
 
 /* <integer> values */
--webkit-line-clamp: 3;
--webkit-line-clamp: 10;
+line-clamp: 3;
+line-clamp: 10;
 
 /* Global values */
--webkit-line-clamp: inherit;
--webkit-line-clamp: initial;
--webkit-line-clamp: revert;
--webkit-line-clamp: revert-layer;
--webkit-line-clamp: unset;
+line-clamp: inherit;
+line-clamp: initial;
+line-clamp: revert;
+line-clamp: revert-layer;
+line-clamp: unset;
 ```
 
 ### Values
@@ -92,4 +89,3 @@ p {
 ## See also
 
 - [Line Clampin' (Truncating Multiple Line Text)](https://css-tricks.com/line-clampin/)
-- {{cssxref("line-clamp")}}
