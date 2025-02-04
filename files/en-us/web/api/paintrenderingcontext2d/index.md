@@ -11,11 +11,11 @@ browser-compat: api.PaintRenderingContext2D
 
 The **`PaintRenderingContext2D`** interface of the [CSS Painting API](/en-US/docs/Web/API/CSS_Painting_API) is the rendering context for drawing to the bitmap for the [CSS Painting API](/en-US/docs/Web/API/CSS_Painting_API). It implements a subset of the {{domxref("CanvasRenderingContext2D")}} API.
 
-The interface is only available in {{domxref("CanvasRenderingContext2D", "paint worklet global scope", "", 1)}}.
+The interface is only available in {{domxref("CanvasRenderingContext2D", "paint worklet global scope")}}.
 
 ## Instance properties and methods
 
-_All PaintRenderingContext2D's properties and methods have the same usage as in `CanvasRenderingContext2D`_
+_The `PaintRenderingContext2D` implements a subset of the {{domxref("CanvasRenderingContext2D")}} API, with all properties and methods having the same usage as in `CanvasRenderingContext2D`_
 
 ### Context
 
@@ -34,7 +34,7 @@ _All PaintRenderingContext2D's properties and methods have the same usage as in 
 ### Transformations
 
 - {{domxref("CanvasRenderingContext2D.getTransform()")}}
-  - : Retrieves the current transformation matrix being applied to the context.
+  - : Retrieves the current transformation matrix being applied to the context as a {{domxref("DOMMatrix")}}.
 - {{domxref("CanvasRenderingContext2D.rotate()")}}
   - : Adds a rotation to the transformation matrix. The angle argument represents a clockwise rotation angle and is expressed in radians.
 - {{domxref("CanvasRenderingContext2D.scale()")}}
@@ -53,7 +53,7 @@ _All PaintRenderingContext2D's properties and methods have the same usage as in 
 - {{domxref("CanvasRenderingContext2D.globalAlpha")}}
   - : Alpha value that is applied to shapes and images before they are composited onto the canvas. Default `1.0` (opaque).
 - {{domxref("CanvasRenderingContext2D.globalCompositeOperation")}}
-  - : With `globalAlpha` applied this sets how shapes and images are drawn onto the existing bitmap.
+  - : With `globalAlpha` applied, this sets how shapes and images are drawn onto the existing bitmap.
 
 ### Image smoothing
 
@@ -65,9 +65,9 @@ _All PaintRenderingContext2D's properties and methods have the same usage as in 
 ### Fill and stroke styles
 
 - {{domxref("CanvasRenderingContext2D.fillStyle")}}
-  - : Color or style to use inside shapes. Default `#000` (black).
+  - : Color or style to use inside shapes.
 - {{domxref("CanvasRenderingContext2D.strokeStyle")}}
-  - : Color or style to use for the lines around shapes. Default `#000` (black).
+  - : Color or style to use for the lines around shapes.
 
 ### Gradients and patterns
 
@@ -78,71 +78,71 @@ _All PaintRenderingContext2D's properties and methods have the same usage as in 
 - {{domxref("CanvasRenderingContext2D.createRadialGradient()")}}
   - : Creates a radial gradient given by the coordinates of the two circles represented by the parameters.
 - {{domxref("CanvasRenderingContext2D.createPattern()")}}
-  - : Creates a pattern using the specified image. It repeats the source in the directions specified by the repetition argument. This method returns a {{domxref("CanvasPattern")}}.
+  - : Creates a {{domxref("CanvasPattern")}} pattern of the specified image repeated in the directions specified by the repetition argument.
 
 ### Shadows
 
 - {{domxref("CanvasRenderingContext2D.shadowBlur")}}
-  - : Specifies the blurring effect. Default: `0`.
+  - : Specifies the amount of blur as a number.
 - {{domxref("CanvasRenderingContext2D.shadowColor")}}
-  - : Color of the shadow. Default: fully-transparent black.
+  - : Specifies the color of the shadow as a CSS {{cssxref("&lt;color&gt;")}}.
 - {{domxref("CanvasRenderingContext2D.shadowOffsetX")}}
-  - : Horizontal distance the shadow will be offset. Default: `0`.
+  - : Specifies the horizontal distance the shadow will be offset as a number.
 - {{domxref("CanvasRenderingContext2D.shadowOffsetY")}}
-  - : Vertical distance the shadow will be offset. Default: `0`.
+  - : Specifies the vertical distance the shadow will be offset as a number.
 
 ### Drawing rectangles
 
 - {{domxref("CanvasRenderingContext2D.clearRect()")}}
-  - : Sets all pixels in the rectangle defined by starting point _(x, y)_ and size _(width, height)_ to transparent black, erasing any previously drawn content.
+  - : Erases the pixels in the given rectangle, setting them to transparent black.
 - {{domxref("CanvasRenderingContext2D.fillRect()")}}
-  - : Draws a filled rectangle at _(x, y)_ position whose size is determined by _width_ and _height_.
+  - : Paints the pixels of the given rectangle, filling it with the current fill style. 
 - {{domxref("CanvasRenderingContext2D.strokeRect()")}}
-  - : Paints a rectangle which has a starting point at _(x, y)_ and has a _w_ width and an _h_ height onto the canvas, using the current stroke style.
+  - : Paints the outline of the given rectangle using the current stroke style.
 
 ### Drawing paths
 
 - {{domxref("CanvasRenderingContext2D.beginPath()")}}
-  - : Starts a new path by emptying the list of sub-paths. Call this method when you want to create a new path.
+  - : Starts a new path, emptying the list of sub-paths. Call this method when you want to create a new path.
 - {{domxref("CanvasRenderingContext2D.fill()")}}
-  - : Fills the current sub-paths with the current fill style.
+  - : Fills the sub-paths of the current path with the current fill style.
 - {{domxref("CanvasRenderingContext2D.stroke()")}}
-  - : Strokes the current sub-paths with the current stroke style.
+  - : Strokes the sub-paths of the current path with the current stroke style.
 - {{domxref("CanvasRenderingContext2D.clip()")}}
-  - : Creates a clipping path from the current sub-paths. Everything drawn after `clip()` is called appears inside the clipping path only. For an example, see [Clipping paths](/en-US/docs/Web/API/Canvas_API/Tutorial/Compositing) in the Canvas tutorial.
+  - : Turns the current or given path into the current clipping region, using the given fill rule to determine which points are in the path. Subsequent path modifications will appear inside the clipping path only.
 - {{domxref("CanvasRenderingContext2D.isPointInPath()")}}
-  - : Reports whether or not the specified point is contained in the current path.
+  - : A boolean whose value is `true` if the specified point is contained in the current or specified path.
 - {{domxref("CanvasRenderingContext2D.isPointInStroke()")}}
-  - : Reports whether or not the specified point is inside the area contained by the stroking of a path.
+  - : A boolean whose value is `true` if the point is inside the area contained by the stroking of a path
 
 ### Drawing images
 
 - {{domxref("CanvasRenderingContext2D.drawImage()")}}
-  - : Draws the specified image. This method is available in multiple formats, providing a great deal of flexibility in its use.
+  - : Draws the given image or specified portion thereof, optionally at a specified size and position.
 
 ### Line styles
 
 The following methods and properties control how lines are drawn.
 
 - {{domxref("CanvasRenderingContext2D.lineWidth")}}
-  - : Width of lines. Default `1.0`.
+  - : A number specifying the line width, in coordinate space units.
 - {{domxref("CanvasRenderingContext2D.lineCap")}}
   - : Type of endings on the end of lines. Possible values: `butt` (default), `round`, `square`.
 - {{domxref("CanvasRenderingContext2D.lineJoin")}}
   - : Defines the type of corners where two lines meet. Possible values: `round`, `bevel`, `miter` (default).
 - {{domxref("CanvasRenderingContext2D.miterLimit")}}
-  - : Miter limit ratio. Default `10`.
+  - : A number specifying the miter limit ratio, in coordinate space units. Default `10`.
 - {{domxref("CanvasRenderingContext2D.getLineDash()")}}
-  - : Returns the current line dash pattern array containing an even number of non-negative numbers.
+  - : Returns the current line dash pattern as an [`Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) of numbers that specify the lengths of the alternative lines and gaps in coordinate space units.
 - {{domxref("CanvasRenderingContext2D.setLineDash()")}}
-  - : Sets the current line dash pattern.
+  - : Sets the list of line and dash distances as the current line dash pattern (as used when stroking).
 - {{domxref("CanvasRenderingContext2D.lineDashOffset")}}
   - : Specifies where to start a dash array on a line.
 
 ### Paths
 
 - {{domxref("CanvasRenderingContext2D.closePath()")}}
-  - : Causes the point of the pen to move back to the start of the current sub-path. It tries to draw a straight line from the current point to the start. If the shape has already been closed or has only one point, this function does nothing.
+  - : Marks the current subpath as closed, drawing a straight line from the current point to the start, and starts a new subpath with a point the same as the start and end of the newly closed subpath. If the shape has already been closed or has only one point, this function does nothing.
 - {{domxref("CanvasRenderingContext2D.moveTo()")}}
   - : Moves the starting point of a new sub-path to the (x, y) coordinates.
 - {{domxref("CanvasRenderingContext2D.lineTo()")}}

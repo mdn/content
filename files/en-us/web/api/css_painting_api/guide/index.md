@@ -19,7 +19,7 @@ To elaborate over these steps, we're going to start by creating a half-highlight
 ![Text reading 'My Cool Header' with a solid yellow background image block on the bottom left two thirds of the header](mycoolheader.png)
 
 > [!NOTE]
-> See [CSS Painting API Example](https://mdn.github.io/dom-examples/css-painting/) for a full working demo (see the full [source code](https://github.com/mdn/dom-examples/tree/main/css-painting) also).
+> See [CSS Painting API Example](https://mdn.github.io/dom-examples/css-painting/) for a full working demo along with the [source code](https://github.com/mdn/dom-examples/tree/main/css-painting).
 
 ## CSS paint worklet
 
