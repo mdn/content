@@ -27,7 +27,7 @@ The `:open` pseudo-class selects any element currently in the open state, which 
 
 Note that the open and closed states are semantic states, and don't necessary correlate with the visibility of the element in question. For example, a `<details>` element that is expanded to show its content is open, and will be selected by the `details:open` selector, even if it is hidden with a {{cssxref("visibility")}} value of `hidden`.
 
-{{domxref("Popover API", "Popover", "", "nocode")}} elements (that is, elements with the [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover) attribute set on them) have distinct semantic states representing popovers that are showing or hidden, which can coexist alongside open and closed states. You can't use the `:open` pseudo-class to target styles at popovers that are in the showing state — instead, you need to use the {{cssxref(":popover-open")}} pseudo-class.
+{{domxref("Popover API", "Popover", "", "nocode")}} elements (that is, elements with the [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover) attribute set on them) have distinct semantic states representing popovers that are showing or hidden, which can coexist alongside open and closed states. To target a popover element in an showing state, use the {{cssxref(":popover-open")}} pseudo-class instead.
 
 ## Examples
 
@@ -93,31 +93,29 @@ details:open > summary {
 
 ### Custom `<select>` styling with `:open`
 
-In this example, we have a basic {{htmlelement("select")}} element with some custom styling applied. The `:open` pseudo-class is used to apply a styling enhancement to its open state — when the dropdown menu is displayed.
+In this example, we give a basic {{htmlelement("select")}} element some custom styling. The `:open` pseudo-class is used to apply a styling enhancement to its open state — when the dropdown menu is displayed.
 
 #### HTML
 
-There is nothing special about our fruit selector, except that we have put it inside a wrapper {{domxref("div")}} element to make it easier to style the surrounding space.
+There is nothing special about our fruit selector.
 
 ```html
-<p>
-  <label for="fruit">Choose your favourite fruit:</label>
-  <div class="select-wrapper">
-    <select name="fruit" id="fruit">
-      <option>apple</option>
-      <option>banana</option>
-      <option>boysenberry</option>
-      <option>cranberry</option>
-      <option>fig</option>
-      <option>grapefruit</option>
-      <option>lemon</option>
-      <option>orange</option>
-      <option>papaya</option>
-      <option>pomegranate</option>
-      <option>tomato</option>
-    </select>
-  </div>
-</p>
+<label>
+  Choose your favourite fruit:
+  <select name="fruit">
+    <option>apple</option>
+    <option>banana</option>
+    <option>boysenberry</option>
+    <option>cranberry</option>
+    <option>fig</option>
+    <option>grapefruit</option>
+    <option>lemon</option>
+    <option>orange</option>
+    <option>papaya</option>
+    <option>pomegranate</option>
+    <option>tomato</option>
+  </select>
+</label>
 ```
 
 > [!NOTE]
@@ -125,21 +123,9 @@ There is nothing special about our fruit selector, except that we have put it in
 
 #### CSS
 
-In the CSS, we set an {{cssxref("appearance")}} value of `none` on our `<select>` element to remove the default OS styling from the select box, and provide some basic styles of or own. We then set some {{cssxref("padding")}} on the select wrapper, and a {{cssxref("position")}} value of `relative` so that absolutely-positioned descendents will be positioned relative to the wrapper.
+In the CSS, we set an {{cssxref("appearance")}} value of `none` on our `<select>` element to remove the default OS styling from the select box, and provide some basic styles of or own. Most notably, we set an {{glossary("SVG")}} background image of a down arrow on the right-hand side — users tend to recognize `<select>` elements by the down arrow, so it is a good idea to include it.
 
-Finally in this section, we use the {{cssxref("::after")}} pseudo-element to place an absolutely-positioned generated content down arrow at the right-hand side of the `<select>` element — users tend to recognize `<select>` elements by the down arrow, so it is a good idea to include it.
-
-```css hidden
-* {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: sans-serif;
-  margin: 20px auto;
-  max-width: 400px;
-}
-```
+We then set some {{cssxref("padding")}} on the surrounding {{htmlelement("label")}} element, and a transparent border to keep the layout consistent when we later add a colored border to it.
 
 ```css
 select {
@@ -151,32 +137,30 @@ select {
   padding: 5px;
   border: 1px solid black;
   background-color: white;
+  background: url("data:image/svg+xml,%3Csvg width='20' height='20' viewbox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='5,5 15,5 10,15'/%3E%3C/svg%3E")
+    no-repeat right 3px center / 1em 1em;
 }
 
-.select-wrapper {
+label {
+  font-family: sans-serif;
+  max-width: 20em;
+  display: block;
   padding: 20px;
-  position: relative;
-}
-
-.select-wrapper::after {
-  position: absolute;
-  content: "▼";
-  font-size: 0.8rem;
-  top: 26px;
-  right: 26px;
+  border: 2px solid transparent;
 }
 ```
 
-We set a different background color on the `<select>` element when it is open using the `:open` pseudo-class. We also set a different background color and border on the select wrapper `<div>` when the `<select>` element is open, using a combination of the `:open` and {{cssxref(":has()")}} pseudo-classes to create a parent selector. We are literally saying "select the wrapper `<div>`, but only when its descendant `<select>` is open."
+When the `<select>` is opened, we use the `:open` pseudo-class to set a different background color and an up arrow background image on it. We also set a different background color and border on the enclosing `<label>` element using a combination of the `:open` and {{cssxref(":has()")}} pseudo-classes to create a parent selector. We are literally saying "select the `<label>`, but only when its descendant `<select>` is open."
 
 ```css
 select:open {
   background-color: #f8f2dc;
+  background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewbox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='5,15 10,5 15,15'/%3E%3C/svg%3E");
 }
 
-.select-wrapper:has(select:open) {
+label:has(select:open) {
   background-color: #81adc8;
-  border: 2px solid #cd4631;
+  border-color: #cd4631;
 }
 ```
 
@@ -184,7 +168,7 @@ select:open {
 
 The result is as follows. Try opening the `<select>` dropdown to see the effect on the styling:
 
-{{ EmbedLiveSample("Custom `<select>` styling with `:open`", "100%", "200") }}
+{{ EmbedLiveSample("Custom `<select>` styling with `:open`", "100%", "100") }}
 
 ## Specifications
 
