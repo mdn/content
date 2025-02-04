@@ -109,7 +109,9 @@ We talked about some of the problems that prompted WAI-ARIA to be created earlie
 - Accessibility of non-semantic controls
   - : When a series of nested `<div>`s along with CSS/JavaScript is used to create a complex UI-feature, or a native control is greatly enhanced/changed via JavaScript, accessibility can suffer — screen reader users will find it difficult to work out what the feature does if there are no semantics or other clues. In these situations, ARIA can help to provide what's missing with a combination of roles like `button`, `listbox`, or `tablist`, and properties like `aria-required` or `aria-posinset` to provide further clues as to functionality.
 
-One thing to remember though — **you should only use WAI-ARIA when you need to!** Ideally, you should _always_ use [native HTML features](/en-US/docs/Learn_web_development/Core/Accessibility/HTML) to provide the semantics required by screen readers to tell their users what is going on. Sometimes this isn't possible, either because you have limited control over the code, or because you are creating something complex that doesn't have an easy HTML element to implement it. In such cases, WAI-ARIA can be a valuable accessibility enhancing tool.
+#### You should only use WAI-ARIA when you need to!
+
+Using the correct HTML elements implicitly gives you the roles that are needed and you should _always_ use [native HTML features](/en-US/docs/Learn_web_development/Core/Accessibility/HTML) to provide the semantics required by screen readers to tell their users what is going on. Sometimes this isn't possible, either because you have limited control over the code, or because you are creating something complex that doesn't have an easy HTML element to implement it. In such cases, WAI-ARIA can be a valuable accessibility enhancing tool.
 
 But again, only use it when necessary!
 
@@ -366,7 +368,7 @@ If you go to VoiceOver's landmarks menu (accessed using VoiceOver key + U and th
 
 However, we could do better here. The search form is a really important landmark that people will want to find, but it is not listed in the landmarks menu or treated like a notable landmark beyond the actual input being called out as a search input (`<input type="search">`).
 
-Let's improve it by the use of some ARIA features.
+We could improve it by the use of the ARIA `role="search"`, but using the {{htmlelement("search")}} element implicitly gives that role to the form.
 
 ```html live-sample___aria-website-roles
 <header>
@@ -604,7 +606,7 @@ footer {
 
 {{EmbedLiveSample("aria-website-roles", "100", "850")}}
 
-Firstly, we added some [`role`](/en-US/docs/Web/Accessibility/ARIA/Roles) attributes to our HTML structure, which has a structure like this:
+Most importantly, we have used semantic HTML that gives meaning and roles to the structure of the page without adding unnecessary [`role`](/en-US/docs/Web/Accessibility/ARIA/Roles) attributes to our HTML structure, which has a structure like this:
 
 ```html
 <header>
@@ -644,9 +646,9 @@ Now if we use VoiceOver to look at this example, we get some improvements:
 - The search form is called out as a separate item, both when browsing through the page, and in the Landmarks menu.
 - The label text contained in the `aria-label` attribute is read out when the form input is highlighted.
 
-Beyond this, the site is more likely to be accessible to users of older browsers such as IE8; it is worth including ARIA roles for that purpose. And if for some reason your site is built using just `<div>`s, you should definitely include the ARIA roles to provide these much needed semantics!
+If you need to support older browsers such as IE8; it is worth including ARIA roles for that purpose. And if for some reason your site is built using just `<div>`s, you should definitely include the ARIA roles to provide these much needed semantics!
 
-The improved semantics of the search form have shown what is made possible when ARIA goes beyond the semantics available in HTML. You'll see a lot more about these semantics and the power of ARIA properties/attributes below, especially in the [Accessibility of non-semantic controls](#accessibility_of_non-semantic_controls) section. For now though, let's look at how ARIA can help with dynamic content updates.
+You'll see a lot more about these semantics and the power of ARIA properties/attributes below, especially in the [Accessibility of non-semantic controls](#accessibility_of_non-semantic_controls) section. For now though, let's look at how ARIA can help with dynamic content updates.
 
 ### Dynamic content updates
 
