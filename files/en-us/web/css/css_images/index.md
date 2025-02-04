@@ -4,8 +4,7 @@ slug: Web/CSS/CSS_images
 page-type: css-module
 spec-urls:
   - https://drafts.csswg.org/css-images/
-  - https://compat.spec.whatwg.org/#css-%3Cimage%3E-type
-  - https://drafts.csswg.org/css-values/#urls
+  - https://compat.spec.whatwg.org/#css-gradient-fns
 ---
 
 {{CSSRef}}
@@ -30,10 +29,10 @@ The **CSS images** module defines the types of images that can be used (the {{CS
 - {{CSSxRef("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}
 - {{CSSxRef("gradient/conic-gradient", "conic-gradient()")}}
 - {{CSSxRef("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}
-- {{cssxref("url_value", "&lt;url&gt;")}}
+- {{CSSxRef("cross-fade", "cross-fade()")}}
 - {{CSSxRef("element", "element()")}}
 - {{CSSxRef("image/image", "image()")}}
-- {{CSSxRef("cross-fade", "cross-fade()")}}
+- {{CSSxRef("image/image-set", "image-set()")}}
 
 ### Data types
 
@@ -54,6 +53,11 @@ The **CSS images** module defines the types of images that can be used (the {{CS
 
   - : Learn about the `aspect-ratio` property, discuss aspect ratios for replaced and non-replaced elements, and examine some common aspect ratio use cases.
 
+## Related concepts
+
+- {{cssxref("url_value", "&lt;url&gt;")}}
+- {{cssxref("url_function", "url()")}}
+
 ## Specifications
 
 {{Specifications}}
@@ -63,3 +67,4 @@ The **CSS images** module defines the types of images that can be used (the {{CS
 - [CSS filter effects](/en-US/docs/Web/CSS/CSS_filter_effects) module
 - [CSS compositing and blending](/en-US/docs/Web/CSS/CSS_compositing_and_blending) module
 - [CSS colors](/en-US/docs/Web/CSS/CSS_colors) module
+- [CSS values and units](/en-US/docs/Web/CSS/CSS_Values_and_Units) module
