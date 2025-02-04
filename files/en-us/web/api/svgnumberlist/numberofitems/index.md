@@ -8,11 +8,11 @@ browser-compat: api.SVGNumberList.numberOfItems
 
 {{APIRef("SVG")}}
 
-The **`numberOfItems`** read-only property of the {{domxref("SVGNumberList")}} interface represents the number of items in the list.
+The **`numberOfItems`** property of the {{domxref("SVGNumberList")}} interface returns the number of items in the list. {{domxref("SVGNumberList.length", "length")}} is an alias of of it.
 
 ## Value
 
-An integer; the number of {{domxref("SVGNumber")}} objects in the list as an unsigned long.
+A non-negative integer that represents the number of items in the list.
 
 ## Specifications
 
@@ -21,7 +21,3 @@ An integer; the number of {{domxref("SVGNumber")}} objects in the list as an uns
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- {{domxref("SVGNumber")}}

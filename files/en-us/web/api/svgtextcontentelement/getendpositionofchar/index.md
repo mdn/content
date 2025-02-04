@@ -13,7 +13,7 @@ The `getEndPositionOfChar()` method of the {{domxref("SVGTextContentElement")}} 
 ## Syntax
 
 ```js-nolint
-SVGTextContentElement.getEndPositionOfChar(index)
+getEndPositionOfChar(index)
 ```
 
 ### Parameters

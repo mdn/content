@@ -30,11 +30,11 @@ It is hard to talk about privacy without also talking about security — they ar
 
 **Personal information** is any information that describes a user. Examples include:
 
-- Physical attributes such as height, gender expression, weight, hair color, or age
 - Postal address, email address, phone number, or other contact information
 - Passport number, bank account, credit card, social security number, or other official identifiers
+- Physical attributes such as height, gender expression, weight, hair color, or age
 - Health information such as medical history, allergies, or ongoing conditions
-- Usernames and passwords
+- Usernames, when they can be linked to an individual
 - Hobbies, interests, or other personal preferences
 - Biometric data such as fingerprints or facial recognition data
 

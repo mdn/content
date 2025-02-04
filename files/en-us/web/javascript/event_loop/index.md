@@ -41,7 +41,7 @@ Order of operations:
 3. When `foo` returns, the top frame element is popped out of the stack (leaving only `bar`'s call frame).
 4. When `bar` returns, the stack is empty.
 
-Note that the arguments and local variables may continue to exist, as they are stored outside the stack — so they can be accessed by any [nested functions](/en-US/docs/Web/JavaScript/Guide/Functions#nested_functions_and_closures) long after their outer function has returned.
+Note that the arguments and local variables may continue to exist, as they are stored outside the stack — so they can be accessed by any [nested functions](/en-US/docs/Web/JavaScript/Guide/Functions#function_scopes_and_closures) long after their outer function has returned.
 
 ### Heap
 
