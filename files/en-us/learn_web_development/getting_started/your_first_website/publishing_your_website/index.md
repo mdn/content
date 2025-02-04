@@ -99,7 +99,7 @@ Now let's examine how to publish your site via GitHub Pages.
       > Make sure your folder has an `index.html` file.
    4. Select all of your sample website's files (for example using the <kbd>Ctrl</kbd> + <kbd>A</kbd> keyboard shortcut, or <kbd>Cmd</kbd> + <kbd>A</kbd> on macOS).
    5. Drag the files from your file explorer over the "Drag files here to add them to your repository" section of the GitHub page.
-   6. The section's border and text should change to indicate when you are ready to drop the files. Release the mouse button when this happens.
+   6. The section's border and text changes to indicate a drop is possible. Drop the files at this point.
    7. Click the _Commit changes_ button at the bottom of the page.
 5. Navigate your browser to _username_.github.io to see your website online. For example, for the username _chrisdavidmills_, go to [_chrisdavidmills_.github.io](https://chrisdavidmills.github.io/).
 
