@@ -332,7 +332,7 @@ All `Temporal` objects that represent a specific calendar date impose a similar 
 - {{jsxref("Temporal.Instant")}} and {{jsxref("Temporal.ZonedDateTime")}} apply this limit directly on its `epochNanoseconds` value.
 - {{jsxref("Temporal.PlainDateTime")}} interprets the date-time in the UTC time zone and requires it to be ±(10<sup>8</sup> + 1) days (exclusive) from the Unix epoch, so its valid range is `-271821-04-19T00:00:00` to `+275760-09-14T00:00:00`, exclusive. This allows any `ZonedDateTime` to be converted to a `PlainDateTime` regardless of its offset.
 - {{jsxref("Temporal.PlainDate")}} applies the same check as `PlainDateTime` to the noon (`12:00:00`) of that date, so its valid range is `-271821-04-19` to `+275760-09-13`. This allows any `PlainDateTime` to be converted to a `PlainDate` regardless of its time, and vice versa.
-- {{jsxref("Temporal.PlainYearMonth")}} has the valid range of `-271821-04` to `+275760-09`. This allows any `PlainDate` to be converted to a `PlainYearMonth` regardless of its date. Non-ISO calendars may have smaller valid ranges
+- {{jsxref("Temporal.PlainYearMonth")}} has the valid range of `-271821-04` to `+275760-09`. This allows any `PlainDate` to be converted to a `PlainYearMonth` regardless of its date (except if a non-ISO month's first day falls in the ISO month `-271821-03`).
 
 The `Temporal` objects will refuse to construct an instance representing a date/time beyond this limit. This includes:
 
