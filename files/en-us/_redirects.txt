@@ -5850,7 +5850,7 @@
 /en-US/docs/MDN/Contribute/Guidelines/Writing_style_guide	/en-US/docs/MDN/Writing_guidelines/Writing_style_guide
 /en-US/docs/MDN/Contribute/Help_beginners	/en-US/docs/MDN/Community/Learn_forum
 /en-US/docs/MDN/Contribute/How_to_document_a_CSS_property	/en-US/docs/MDN/Writing_guidelines/Howto/Document_a_CSS_property
-/en-US/docs/MDN/Contribute/Howto	/en-US/docs/MDN/Community/Getting_started
+/en-US/docs/MDN/Contribute/Howto	/en-US/docs/MDN/Writing_guidelines/Howto
 /en-US/docs/MDN/Contribute/Howto/Add_or_update_browser_compatibility_data	https://github.com/mdn/browser-compat-data/blob/main/docs/contributing.md
 /en-US/docs/MDN/Contribute/Howto/Compatibility_tables	/en-US/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables
 /en-US/docs/MDN/Contribute/Howto/Convert_code_samples_to_be_live	/en-US/docs/MDN/Writing_guidelines/Page_structures/Live_samples
