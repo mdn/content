@@ -170,7 +170,7 @@ The code below shows how you might use `getClientCapabilities()` to check if the
 Note that the actual actions performed depend on your site.
 For sites that _require_ biometric authentication, you might replace the login UI with a message indicating that biometric authentication is needed, and the user should try a different browser or device.
 
-```js
+````js
 async function checkisUserVerifyingPlatformAuthenticatorAvailable() {
   const capabilities = await PublicKeyCredential.getClientCapabilities();
   // Check the capability: userVerifyingPlatformAuthenticator
@@ -203,7 +203,7 @@ If you wish to allow access to a specific subdomain only, you could provide it l
 ```http
 Permissions-Policy: publickey-credentials-get=("https://subdomain.example.com")
 Permissions-Policy: publickey-credentials-create=("https://subdomain.example.com")
-```
+````
 
 ### Allowing embedded `create` and `get()` calls in an `<iframe>`
 
