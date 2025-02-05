@@ -36,8 +36,8 @@ If you're a developer trying to get a handle on all the new features in Firefox 
   - : Firefox 3 offers a number of new features in Firefox 3's DOM implementation, including support for several Internet Explorer extensions to the DOM.
 - [JavaScript 1.8 support](/en-US/docs/New_in_JavaScript_1.8)
   - : Firefox 3 offers JavaScript 1.8.
-- [EXSLT support](/en-US/docs/Web/EXSLT)
-  - : Firefox 3 provides support for a substantial subset of the [EXSLT](/en-US/docs/Web/EXSLT) extensions to [XSLT](/en-US/docs/Web/XSLT).
+- [EXSLT support](/en-US/docs/Web/XML/EXSLT)
+  - : Firefox 3 provides support for a substantial subset of the [EXSLT](/en-US/docs/Web/XML/EXSLT) extensions to [XSLT](/en-US/docs/Web/XML/XSLT).
 - [SVG improvements in Firefox 3](/en-US/docs/Mozilla/Firefox/Releases/3/SVG_improvements)
   - : SVG support in Firefox 3 has been upgraded significantly, with support for over two dozen new filters, several new elements and attributes, and other improvements.
 - [Animated PNG graphics](/en-US/docs/Web/Media/Guides/Formats/Image_types#apng_animated_portable_network_graphics)

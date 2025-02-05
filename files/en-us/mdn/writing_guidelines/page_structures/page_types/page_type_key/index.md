@@ -185,21 +185,21 @@ This section lists `page-type` values for pages under [Web/Manifest](/en-US/docs
 
 ### XPath page types
 
-This section lists `page-type` values for pages under [Web/XPath](/en-US/docs/Web/XPath). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the [generic page type](#generic_page_types) values.
+This section lists `page-type` values for pages under [Web/XPath](/en-US/docs/Web/XML/XPath). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the [generic page type](#generic_page_types) values.
 
-- `xpath-function`: a function, like [`ceiling()`](/en-US/docs/Web/XPath/Reference/Functions/ceiling)
+- `xpath-function`: a function, like [`ceiling()`](/en-US/docs/Web/XML/XPath/Reference/Functions/ceiling)
 
 ### XSLT page types
 
-This section lists `page-type` values for pages under [Web/XSLT](/en-US/docs/Web/XSLT). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the [generic page type](#generic_page_types) values.
+This section lists `page-type` values for pages under [Web/XSLT](/en-US/docs/Web/XML/XSLT). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the [generic page type](#generic_page_types) values.
 
-- `xslt-element`: an element of XSLT, like [`<xsl:message>`](/en-US/docs/Web/XSLT/Reference/Element/message).
+- `xslt-element`: an element of XSLT, like [`<xsl:message>`](/en-US/docs/Web/XML/XSLT/Reference/Element/message).
 
 ### EXSLT page types
 
-This section lists `page-type` values for pages under [Web/EXSLT](/en-US/docs/Web/EXSLT). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the [generic page type](#generic_page_types) values.
+This section lists `page-type` values for pages under [Web/EXSLT](/en-US/docs/Web/XML/EXSLT). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the [generic page type](#generic_page_types) values.
 
-- `xslt-function`: a function of EXSLT, like [`exsl:node-set()`](/en-US/docs/Web/EXSLT/exsl/node-set).
+- `xslt-function`: a function of EXSLT, like [`exsl:node-set()`](/en-US/docs/Web/XML/EXSLT/exsl/node-set).
 
 ### Firefox page types
 
