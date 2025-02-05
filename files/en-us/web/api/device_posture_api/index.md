@@ -22,7 +22,7 @@ The Device Posture API defines **postures**, which indicate the current physical
   - : Indicates a folded screen — this can include a foldable device being used in a book or laptop posture.
     ![A selection of folded screens, including foldable mobiles and tablets in book and laptop postures](folded-screens.png)
 
-The Device Posture API introduces a couple of new features enabling you to run script and vary layouts depending on current device posture and posture changes:
+The Device Posture API includes features enabling you to run scripts and vary layouts depending on current device posture and posture changes:
 
 - The {{domxref("DevicePosture", "Navigator.devicePosture")}} object, which contains a {{domxref("DevicePosture.type", "type")}} property containing the device's current posture and a {{domxref("DevicePosture.change_event", "change")}} event that fires when the device posture changes.
 - The [`device-posture`](/en-US/docs/Web/CSS/@media/device-posture) [media query](/en-US/docs/Web/CSS/CSS_media_queries) feature, which applies CSS conditionally depending on what posture the device is currently in.
