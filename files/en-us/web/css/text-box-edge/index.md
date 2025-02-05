@@ -11,7 +11,7 @@ browser-compat: css.properties.text-box-edge
 
 The **`text-box-edge`** [CSS](/en-US/docs/Web/CSS) property specifies an amount of space to trim from text content.
 
-Vertical spacing differs between fonts, making consistent typesetting historically challenging on the web. The `text-box-edge` property — along with its counterpart property {{cssxref("text-box-trim")}}, which specifies which edge(s) to trim space from — makes consistent typesetting easier to achieve. `text-box-edge` has no effect if `text-box-trim` is set or defaults to none.
+Vertical spacing differs between fonts, making consistent typesetting historically challenging on the web. The `text-box-edge` property — along with its counterpart property {{cssxref("text-box-trim")}}, which specifies which edge(s) to trim space from — makes consistent typesetting easier to achieve. The `text-box-edge` property has no effect if `text-box-trim` is set or defaults to `none`.
 
 > [!NOTE]
 > The {{cssxref("text-box")}} shorthand property can be used to specify the `text-box-edge` and `text-box-trim` values in a single declaration.
