@@ -60,7 +60,7 @@ If `text-box-trim` is omitted, it is set to `both`. If `text-box-edge` is omitte
 
 ### Basic `text-box` usage
 
-In the following example we have two `<p>` elements with classes of `one` and `two`.
+In the following example, we have two `<p>` elements with classes of `one` and `two`.
 
 We apply a `text-box` value of `trim-end cap alphabetic` to the first one. The {{cssxref("text-box-edge")}} value of `cap alphabetic` specifies to trim the over edge to the top of the capital letters and the under edge flush with the text baseline. However, because the {{cssxref("text-box-trim")}} value is set to `trim-end`, only the under edge is trimmed.
 
