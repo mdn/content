@@ -184,7 +184,7 @@ We have hidden the exact HTML code for brevity.
 
 #### CSS
 
-In our CSS, we apply the imported font to the {{htmlelement("html")}} element and lay out the UI using some rudimentary [flexbox](/en-US/docs/Learn_web_development/Core/CSS_layout/Flexbox). We have hidden most of the CSS code for brevity, but below we show the rules styling the paragraph the `text-box-*` effects are applied to (`.display`), and the paragraph that shows the `text-box-*` rules being applied (`.code`):
+In our CSS, we apply the imported font to the {{htmlelement("html")}} element and lay out the UI using [flexbox](/en-US/docs/Learn_web_development/Core/CSS_layout/Flexbox). We have hidden most of the CSS code for brevity, but below we show the rules styling the paragraph the `text-box-*` effects are applied to and the `<output>` that shows the `text-box-*` rules being applied:
 
 ```css hidden
 html {
