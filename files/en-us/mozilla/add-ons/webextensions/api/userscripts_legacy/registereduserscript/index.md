@@ -1,6 +1,6 @@
 ---
 title: userScripts.RegisteredUserScript (Legacy)
-slug: Mozilla/Add-ons/WebExtensions/API/userScripts/RegisteredUserScript
+slug: Mozilla/Add-ons/WebExtensions/API/userScripts_legacy/RegisteredUserScript
 page-type: webextension-api-type
 browser-compat: webextensions.api.userScripts_legacy.RegisteredUserScript
 ---

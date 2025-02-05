@@ -1,6 +1,6 @@
 ---
 title: userScripts.register() (Legacy) (Legacy)
-slug: Mozilla/Add-ons/WebExtensions/API/userScripts/register
+slug: Mozilla/Add-ons/WebExtensions/API/userScripts_legacy/register
 page-type: webextension-api-function
 browser-compat: webextensions.api.userScripts_legacy.register
 ---

@@ -1,6 +1,6 @@
 ---
 title: userScripts (Legacy)
-slug: Mozilla/Add-ons/WebExtensions/API/userScripts
+slug: Mozilla/Add-ons/WebExtensions/API/userScripts_legacy
 page-type: webextension-api
 browser-compat: webextensions.api.userScripts_legacy
 ---
