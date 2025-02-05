@@ -248,7 +248,7 @@ const displayElem = document.querySelector("p");
 const codeElem = document.querySelector("output");
 ```
 
-Next, we define a function called `setEdgeTrim()`. This applies a {{cssxref("text-box")}} value to the first paragraph based on the values of the `<select>` elements, and also prints the applied declarations to the second paragraph (both the longhand and shorthand equivalents):
+Next, we define a function called `setEdgeTrim()`. This applies a {{cssxref("text-box")}} value to the paragraph based on the values of the `<select>` elements, and also prints the applied declarations to the output (both the longhand and shorthand equivalents):
 
 ```js
 function setEdgeTrim() {
