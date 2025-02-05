@@ -12,7 +12,6 @@ In CSS, typographic leading is the difference between the content height and the
 
 The height of text-only content is relative to the height of the font. In digital font files, the height contains all characters, including capital letters, ascenders, descenders, etc. Different fonts have different base line-heights, meaning that lines of text with the same `font-size` will produce line boxes of differing heights, affecting the appearance of spacing between lines. This can be controlled with the {{cssxref("text-box")}} properties, which enable trimming off extra spacing above and below text.
 
-The space at the block-start and block-end edge of a line is referred to as over and under leading, respectively.
 
 The area of a font above the cap baseline is referred to as the _over edge_. The area below the {{glossary("/Baseline/Typography", "alphabetic baseline")}} is referred to as the _under edge_.
 
