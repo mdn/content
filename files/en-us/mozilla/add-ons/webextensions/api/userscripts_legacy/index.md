@@ -1,16 +1,16 @@
 ---
-title: userScripts
+title: userScripts (Legacy)
 slug: Mozilla/Add-ons/WebExtensions/API/userScripts
 page-type: webextension-api
-browser-compat: webextensions.api.userScripts
+browser-compat: webextensions.api.userScripts_legacy
 ---
 
 {{AddonSidebar}}
 
-Use this API to register user scripts, third-party scripts designed to manipulate webpages or provide new features. Registering a user script instructs the browser to attach the script to pages that match the URL patterns specified during registration.
+> [!WARNING]
+> This is documentation for the legacy `userScripts` API. It's available in Firefox for Manifest V2. For functionality to work with user scripts in Manifest V3 see the new {{WebExtAPIRef("userScripts")}} API.
 
-> [!NOTE]
-> This is documentation for the legacy API version, available in Firefox for Manifest V2. A new API has been designed, see [WECG issue 279](https://github.com/w3c/webextensions/issues/279). This new version of the API will be available in Firefox for use in Manifest V3. Development is tracked in [Firefox bug 1875475](https://bugzil.la/1875475). Chrome includes [an implementation of the new API](https://developer.chrome.com/docs/extensions/reference/api/userScripts). Meanwhile, when using Manifest V3 or higher, use {{WebExtAPIRef("scripting.registerContentScripts()")}} to register scripts.
+Use this API to register user scripts, third-party scripts designed to manipulate webpages or provide new features. Registering a user script instructs the browser to attach the script to pages that match the URL patterns specified during registration.
 
 This API offers similar capabilities to {{WebExtAPIRef("contentScripts")}} but with features suited to handling third-party scripts:
 
@@ -21,24 +21,24 @@ This API offers similar capabilities to {{WebExtAPIRef("contentScripts")}} but w
 > [!WARNING]
 > This API requires the presence of the [`user_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts) key in the manifest.json, even if no API script is specified. For example. `user_scripts: {}`.
 
-To use the API, call `{{WebExtAPIRef("userScripts.register","register()")}}` passing in an object defining the scripts to register. The method returns a Promise that is resolved with a `{{WebExtAPIRef("userScripts.RegisteredUserScript","RegisteredUserScript")}}` object.
+To use the API, call `{{WebExtAPIRef("userScripts_legacy.register","register()")}}` passing in an object defining the scripts to register. The method returns a Promise that is resolved with a `{{WebExtAPIRef("userScripts_legacy.RegisteredUserScript","RegisteredUserScript")}}` object.
 
 > [!NOTE]
 > User scripts are unregistered when the related extension page (from which the user scripts were registered) is unloaded, so you should register a user script from an extension page that persists at least as long as you want the user scripts to stay registered.
 
 ## Types
 
-- {{WebExtAPIRef("userScripts.RegisteredUserScript")}}
-  - : The `object` returned by the {{WebExtAPIRef("userScripts.register","register()")}} method. It represents the registered user scripts and is used to deregister the user scripts.
+- {{WebExtAPIRef("userScripts_legacy.RegisteredUserScript")}}
+  - : The `object` returned by the {{WebExtAPIRef("userScripts_legacy.register","register()")}} method. It represents the registered user scripts and is used to deregister the user scripts.
 
 ## Methods
 
-- {{WebExtAPIRef("userScripts.register()")}}
+- {{WebExtAPIRef("userScripts_legacy.register()")}}
   - : Registers user scripts.
 
 ## Events
 
-- {{WebExtAPIRef("userScripts.onBeforeScript")}}
+- {{WebExtAPIRef("userScripts_legacy.onBeforeScript")}}
   - : An event available to the API script, registered in[`"user_scripts"`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts), that execute before a user script executes. Use it to trigger the export of the additional APIs provided by the API script, so they are available to the user script.
 
 ## Browser compatibility

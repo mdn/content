@@ -6123,7 +6123,11 @@
 /en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy/registerProxyScript	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy
 /en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy/unregister	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy
 /en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/moveInSuccession()	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/moveInSuccession
-/en-US/docs/Mozilla/Add-ons/WebExtensions/API/userScripts/RegisteredUserScript/RegisteredUserScript.unregister()	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/userScripts/RegisteredUserScript/unregister
+/en-US/docs/Mozilla/Add-ons/WebExtensions/API/userScripts/RegisteredUserScript/RegisteredUserScript.unregister()	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/userScripts_legacy/RegisteredUserScript/unregister
+/en-US/docs/Mozilla/Add-ons/WebExtensions/API/userScripts/RegisteredUserScript/unregister	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/userScripts_legacy/RegisteredUserScript/unregister
+/en-US/docs/Mozilla/Add-ons/WebExtensions/API/userScripts/UserScriptOptions	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/userScripts_legacy/UserScriptOptions
+/en-US/docs/Mozilla/Add-ons/WebExtensions/API/userScripts/Working_with_userScripts	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/userScripts_legacy/Working_with_userScripts
+/en-US/docs/Mozilla/Add-ons/WebExtensions/API/userScripts/onBeforeScript	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/userScripts_legacy/onBeforeScript
 /en-US/docs/Mozilla/Add-ons/WebExtensions/API/windows/update()	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/windows/update
 /en-US/docs/Mozilla/Add-ons/WebExtensions/Accessible_guidelines	https://extensionworkshop.com/documentation/develop/build-an-accessible-extension/
 /en-US/docs/Mozilla/Add-ons/WebExtensions/Add-on_ID	https://extensionworkshop.com/documentation/develop/extensions-and-the-add-on-id/
