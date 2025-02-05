@@ -79,7 +79,7 @@ Media feature expressions test for their presence, value, or range of values, an
 - {{cssxref("@media/device-height", "device-height")}}
   - : Height of the rendering surface of the output device. Deprecated in Media Queries Level 4.
 - {{cssxref("@media/device-posture", "device-posture")}} {{experimental_inline}}
-  - : Detects the device's current posture. Added in the [Device Posture API](/en-US/docs/Web/API/Device_Posture_API).
+  - : Detects the device's current posture. Defined in the [Device Posture API](/en-US/docs/Web/API/Device_Posture_API).
 - {{cssxref("@media/device-width", "device-width")}}
   - : Width of the rendering surface of the output device. Deprecated in Media Queries Level 4.
 - {{cssxref("@media/display-mode", "display-mode")}}
