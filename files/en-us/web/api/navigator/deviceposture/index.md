@@ -36,5 +36,7 @@ function reportPostureOutput() {
 
 ## See also
 
+- {{domxref("DevicePosture")}}
+- {{domxref("devicePosture.type")
 - [Device Posture API](/en-US/docs/Web/API/Device_Posture_API)
 - CSS [`device-posture`](/en-US/docs/Web/CSS/@media/device-posture) {{cssxref("@media")}} feature
