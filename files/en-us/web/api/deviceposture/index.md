@@ -28,7 +28,7 @@ _Inherits properties from its parent, {{DOMxRef("EventTarget")}}._
 ## Examples
 
 ```js
-const postureOutput = document.querySelector("p");
+const postureOutput = document.getElementById("currentPosture");
 
 function reportPostureOutput() {
   postureOutput.textContent = `Device posture: ${navigator.devicePosture.type}`;
