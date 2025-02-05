@@ -2,15 +2,19 @@
 title: Screen Capture API
 slug: Web/API/Screen_Capture_API
 page-type: web-api-overview
-browser-compat: api.MediaDevices.getDisplayMedia
+browser-compat:
+  - api.MediaDevices.getDisplayMedia
+  - api.CropTarget
+  - api.RestrictionTarget
+spec-urls:
+  - https://w3c.github.io/mediacapture-screen-share/
+  - https://screen-share.github.io/element-capture/
+  - https://w3c.github.io/mediacapture-region/
 ---
 
 {{DefaultAPISidebar("Screen Capture API")}}
 
 The Screen Capture API introduces additions to the existing Media Capture and Streams API to let the user select a screen or portion of a screen (such as a window) to capture as a media stream. This stream can then be recorded or shared with others over the network.
-
-> [!NOTE]
-> You can find documentation for extensions to the Screen Capture API — such as the Element Capture and Region Capture APIs — in the [Screen Capture extensions](/en-US/docs/Web/API/Screen_Capture_extensions) section.
 
 ## Screen Capture API concepts and usage
 
@@ -27,10 +31,28 @@ The {{jsxref("Promise")}} returned by `getDisplayMedia()` resolves to a {{domxre
 
 See the article [Using the Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API/Using_Screen_Capture) for a more in-depth look at how to use the API to capture screen contents as a stream.
 
+## Screen Capture extensions
+
+There are several APIs that extend the Screen Capture API functionality with additional functionality, for example to limit the part of the screen captured in the stream to a particular crop or element:
+
+- The **Element Capture API** restricts the captured region to a specified rendered DOM element.
+- The **Region Capture API** crops the captured region to the area of the screen in which a specified DOM element is rendered.
+
+See [Using the Element Capture and Region Capture APIs](/en-US/docs/Web/API/Screen_Capture_API/Element_Region_Capture) to learn more.
+
 ## Interfaces
 
 - {{domxref("CaptureController")}}
   - : Provides methods that can be used to further manipulate a capture session separate from its initiation via {{domxref("MediaDevices.getDisplayMedia()")}}. A `CaptureController` object is associated with a capture session by passing it into a {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} call as the value of the options object's `controller` property.
+
+## Screen Capture extension interfaces
+
+- {{domxref("BrowserCaptureMediaStreamTrack")}}
+  - : Represents a single video track; extends the {{domxref("MediaStreamTrack")}} class with methods to limit the part of a self-capture stream (for example, a user's screen or window) that is captured.
+- {{domxref("CropTarget")}}
+  - : Provides a static method, {{domxref("CropTarget.fromElement_static", "fromElement()")}}, which returns a {{domxref("CropTarget")}} instance that can be used to crop a captured video track to the area in which a specified element is rendered.
+- {{domxref("RestrictionTarget")}}
+  - : Provides a static method, {{domxref("RestrictionTarget.fromElement_static", "fromElement()")}}, which returns a {{domxref("RestrictionTarget")}} instance that can be used to restrict a captured video track to a specified DOM element.
 
 ## Additions to the MediaDevices interface
 
@@ -91,5 +113,5 @@ The default allowlist is `self`, which lets any content within the same origin u
 ## See also
 
 - [Using the Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API/Using_Screen_Capture)
-- [Screen Capture extensions](/en-US/docs/Web/API/Screen_Capture_extensions)
+- [Using the Element Capture and Region Capture APIs](/en-US/docs/Web/API/Screen_Capture_API/Element_Region_Capture)
 - {{domxref("MediaDevices.getDisplayMedia()")}}

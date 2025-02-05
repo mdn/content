@@ -1339,8 +1339,16 @@
     },
     "Screen Capture API": {
       "overview": ["Screen Capture API"],
-      "guides": ["/docs/Web/API/Screen_Capture_API/Using_Screen_Capture"],
-      "interfaces": ["CaptureController"],
+      "guides": [
+        "/docs/Web/API/Screen_Capture_API/Using_Screen_Capture",
+        "/docs/Web/API/Screen_Capture_API/Element_Region_Capture"
+      ],
+      "interfaces": [
+        "BrowserCaptureMediaStreamTrack",
+        "CaptureController",
+        "CropTarget",
+        "RestrictionTarget"
+      ],
       "methods": ["MediaDevices.getDisplayMedia()"],
       "properties": [
         "MediaTrackConstraints.displaySurface",
@@ -1354,20 +1362,6 @@
         "MediaTrackSupportedConstraints.logicalSurface",
         "MediaTrackSupportedConstraints.suppressLocalAudioPlayback"
       ],
-      "events": []
-    },
-    "Screen Capture extensions": {
-      "overview": ["Screen Capture extensions"],
-      "guides": [
-        "/docs/Web/API/Screen_Capture_extensions/Element_Region_Capture"
-      ],
-      "interfaces": [
-        "BrowserCaptureMediaStreamTrack",
-        "CropTarget",
-        "RestrictionTarget"
-      ],
-      "methods": ["MediaDevices.getDisplayMedia()"],
-      "properties": [],
       "events": []
     },
     "Screen Orientation API": {

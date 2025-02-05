@@ -6,7 +6,7 @@ page-type: web-api-static-method
 browser-compat: api.CropTarget.fromElement_static
 ---
 
-{{APIRef("Screen Capture extensions")}}{{SeeCompatTable}}{{securecontext_header}}
+{{APIRef("Screen Capture API")}}{{SeeCompatTable}}{{securecontext_header}}
 
 The **`fromElement()`** static method of the {{domxref("CropTarget")}} interface returns a `CropTarget` instance that can be used to crop a captured video track to the area in which a specified element is rendered.
 
@@ -19,7 +19,7 @@ CropTarget.fromElement(element)
 ### Parameters
 
 - `element`
-  - : A reference to a DOM element that you want to use as a crop target.
+  - : A reference to an {{domxref("Element")}} that you want to use as a crop target.
 
 ### Return value
 
@@ -51,7 +51,7 @@ await track.cropTo(cropTarget);
 videoElem.srcObject = stream;
 ```
 
-See [Using the Element Capture and Region Capture APIs](/en-US/docs/Web/API/Screen_Capture_extensions/Element_Region_Capture) for in-context example code.
+See [Using the Element Capture and Region Capture APIs](/en-US/docs/Web/API/Screen_Capture_API/Element_Region_Capture) for in-context example code.
 
 ## Specifications
 
@@ -63,5 +63,5 @@ See [Using the Element Capture and Region Capture APIs](/en-US/docs/Web/API/Scre
 
 ## See also
 
-- [Screen Capture extensions](/en-US/docs/Web/API/Screen_Capture_extensions)
 - [Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API)
+- [Using the Element Capture and Region Capture APIs](/en-US/docs/Web/API/Screen_Capture_API/Element_Region_Capture)

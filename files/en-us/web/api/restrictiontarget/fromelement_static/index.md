@@ -6,9 +6,9 @@ page-type: web-api-static-method
 browser-compat: api.RestrictionTarget.fromElement_static
 ---
 
-{{APIRef("Screen Capture extensions")}}{{SeeCompatTable}}{{securecontext_header}}
+{{APIRef("Screen Capture API")}}{{SeeCompatTable}}{{securecontext_header}}
 
-The **`fromElement()`** static method of the {{domxref("RestrictionTarget")}} interface returns a {{domxref("RestrictionTarget")}} instance that can be used to restrict a captured video track to a specified DOM element.
+The **`fromElement()`** static method of the {{domxref("RestrictionTarget")}} interface returns a {{domxref("RestrictionTarget")}} instance that can be used to restrict a captured video track to a specified DOM element (plus its decendants).
 
 ## Syntax
 
@@ -20,7 +20,7 @@ RestrictionTarget.fromElement(element)
 
 - `element`
 
-  - : A reference to a DOM element that you want to use as a restriction target. For an element to be used as a restriction target, it must:
+  - : A reference to an {{domxref("Element")}} that you want to use as a restriction target. For an element to be used as a restriction target, it must:
 
     - Form a [stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context).
     - Be flattened in 3D space (for example, it is not subjected to any 3D [transforms](/en-US/docs/Web/CSS/CSS_transforms)).
@@ -64,7 +64,7 @@ await track.restrictTo(restrictionTarget);
 videoElem.srcObject = stream;
 ```
 
-See [Using the Element Capture and Region Capture APIs](/en-US/docs/Web/API/Screen_Capture_extensions/Element_Region_Capture) for in-context example code.
+See [Using the Element Capture and Region Capture APIs](/en-US/docs/Web/API/Screen_Capture_API/Element_Region_Capture) for in-context example code.
 
 ## Specifications
 
@@ -76,5 +76,5 @@ See [Using the Element Capture and Region Capture APIs](/en-US/docs/Web/API/Scre
 
 ## See also
 
-- [Screen Capture extensions](/en-US/docs/Web/API/Screen_Capture_extensions)
 - [Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API)
+- [Using the Element Capture and Region Capture APIs](/en-US/docs/Web/API/Screen_Capture_API/Element_Region_Capture)

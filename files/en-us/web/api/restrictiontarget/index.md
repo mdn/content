@@ -7,16 +7,16 @@ status:
 browser-compat: api.RestrictionTarget
 ---
 
-{{APIRef("Screen Capture extensions")}}{{SeeCompatTable}}
+{{APIRef("Screen Capture API")}}{{SeeCompatTable}}
 
-The **`RestrictionTarget`** interface of the {{domxref("Screen Capture extensions", "Screen Capture extensions", "", "nocode")}} provides a static method, {{domxref("RestrictionTarget.fromElement_static", "fromElement()")}}, which returns a `RestrictionTarget` instance that can be used to restrict a captured video track to a specified DOM element.
+The **`RestrictionTarget`** interface of the {{domxref("Screen Capture API", "Screen Capture API", "", "nocode")}} provides a static method, {{domxref("RestrictionTarget.fromElement_static", "fromElement()")}}, which returns a `RestrictionTarget` instance that can be used to restrict a captured video track to a specified DOM element.
 
 {{InheritanceDiagram}}
 
 ## Static methods
 
 - {{domxref("RestrictionTarget.fromElement_static", "fromElement()")}} {{Experimental_Inline}}
-  - : Returns a `RestrictionTarget` instance that can be used to crop a captured video track to a specified DOM element.
+  - : Returns a `RestrictionTarget` instance that can be used to restrict a captured video track to a specified DOM element (plus its decendants).
 
 ## Examples
 
@@ -42,7 +42,7 @@ await track.restrictTo(restrictionTarget);
 videoElem.srcObject = stream;
 ```
 
-See [Using the Element Capture and Region Capture APIs](/en-US/docs/Web/API/Screen_Capture_extensions/Element_Region_Capture) for in-context example code.
+See [Using the Element Capture and Region Capture APIs](/en-US/docs/Web/API/Screen_Capture_API/Element_Region_Capture) for in-context example code.
 
 ## Specifications
 
@@ -54,5 +54,5 @@ See [Using the Element Capture and Region Capture APIs](/en-US/docs/Web/API/Scre
 
 ## See also
 
-- [Screen Capture extensions](/en-US/docs/Web/API/Screen_Capture_extensions)
 - [Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API)
+- [Using the Element Capture and Region Capture APIs](/en-US/docs/Web/API/Screen_Capture_API/Element_Region_Capture)

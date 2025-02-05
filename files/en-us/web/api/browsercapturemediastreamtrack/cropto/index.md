@@ -3,12 +3,14 @@ title: "BrowserCaptureMediaStreamTrack: cropTo() method"
 short-title: cropTo()
 slug: Web/API/BrowserCaptureMediaStreamTrack/cropTo
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.BrowserCaptureMediaStreamTrack.cropTo
 ---
 
-{{APIRef("Screen Capture extensions")}}{{SeeCompatTable}}{{securecontext_header}}
+{{APIRef("Screen Capture API")}}{{SeeCompatTable}}{{securecontext_header}}
 
-The **`cropTo()`** method of the {{domxref("BrowserCaptureMediaStreamTrack")}} interface crops a self-capture stream to the area in which a specified crop target element is rendered.
+The **`cropTo()`** method of the {{domxref("BrowserCaptureMediaStreamTrack")}} interface crops a self-capture stream to the area in which a specified DOM element is rendered.
 
 ## Syntax
 
@@ -30,7 +32,7 @@ The promise will reject if:
 - The track [`kind`](/en-US/docs/Web/API/MediaStreamTrack/kind) is not `"video"`, or its [`readyState`](/en-US/docs/Web/API/MediaStreamTrack/readyState) is not `"live"`.
 - The crop target element no longer exists.
 - The track being cropped has clones or is not a track captured from the user's screen.
-- `CropTarget` is not one of the values specified above.
+- `CropTarget` is not a {{domxref("CropTarget")}} instance, `null`, or `undefined`.
 - `CropTarget` was created in a tab other than the one being captured.
 
 ## Examples
@@ -59,7 +61,7 @@ await track.cropTo(cropTarget);
 videoElem.srcObject = stream;
 ```
 
-See [Using the Element Capture and Region Capture APIs](/en-US/docs/Web/API/Screen_Capture_extensions/Element_Region_Capture) for in-context example code.
+See [Using the Element Capture and Region Capture APIs](/en-US/docs/Web/API/Screen_Capture_API/Element_Region_Capture) for in-context example code.
 
 ### Stopping the cropping
 
@@ -80,5 +82,5 @@ await track.cropTo(null);
 
 ## See also
 
-- [Screen Capture extensions](/en-US/docs/Web/API/Screen_Capture_extensions)
 - [Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API)
+- [Using the Element Capture and Region Capture APIs](/en-US/docs/Web/API/Screen_Capture_API/Element_Region_Capture)

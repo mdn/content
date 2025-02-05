@@ -3,14 +3,19 @@ title: "BrowserCaptureMediaStreamTrack: clone() method"
 short-title: clone()
 slug: Web/API/BrowserCaptureMediaStreamTrack/clone
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.BrowserCaptureMediaStreamTrack.clone
 ---
 
-{{APIRef("Screen Capture extensions")}}{{SeeCompatTable}}{{securecontext_header}}
+{{APIRef("Screen Capture API")}}{{SeeCompatTable}}{{securecontext_header}}
 
 The **`clone()`** method of the {{domxref("BrowserCaptureMediaStreamTrack")}} interface returns a clone of the original `BrowserCaptureMediaStreamTrack`.
 
 This method is functionally identical to {{domxref("MediaStreamTrack.clone()")}}, except that it handles cases where cropping or restriction have been applied to the track. The returned clone is identical to the original `BrowserCaptureMediaStreamTrack`, but with any cropping or restriction removed.
+
+> [!NOTE]
+> When attempting to crop a captured stream using {{domxref("BrowserCaptureMediaStreamTrack.cropTo", "cropTo()")}} or restrict it using {{domxref("BrowserCaptureMediaStreamTrack.restrictTo", "restrictTo()")}}, elements will not be cropped or restricted to if the track being captured has clones.
 
 ## Syntax
 
@@ -60,5 +65,5 @@ const clonedTrack = track.clone();
 
 ## See also
 
-- [Screen Capture extensions](/en-US/docs/Web/API/Screen_Capture_extensions)
 - [Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API)
+- [Using the Element Capture and Region Capture APIs](/en-US/docs/Web/API/Screen_Capture_API/Element_Region_Capture)
