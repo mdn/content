@@ -20,7 +20,7 @@ The `device-posture` feature is specified as a keyword value chosen from the lis
 
 ## Examples
 
-The following snippet is taken from our [Device Posture API test](https://mdn.github.io/dom-examples/device-posture-api/). In this demo, we have two panels of equal size, laid out side-by-side on landscape screens and top-to-bottom on portrait screens. We use the `device-posture` media feature to detect when the device is in a folded posture, and add a larger gutter in between the two panels so that the content is less likely to be hidden by the physical join, or rendered difficult to read due to close proximity to the central fold.
+In this example, the `device-posture` media feature detects when a device is in a folded posture, adding a margin based on its [`orientation`](/en-US/docs/Web/CSS/@media/orientation), to create a larger gutter between a device's two panels.
 
 ```css
 @media (device-posture: folded) and (orientation: landscape) {
