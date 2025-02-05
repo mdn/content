@@ -77,29 +77,33 @@ element.innerHTML = userInput; // Throws a TypeError
 
 Additionally, the {{CSP("trusted-types")}} CSP directive can be used to control which policies your code is allowed to create. When you create a policy using {{domxref("TrustedTypePolicyFactory/createPolicy", "trustedTypes.createPolicy()")}}, you pass a name for the policy. The `trusted-types` CSP directive lists acceptable policy names, so `createPolicy()` will throw an exception if it is passed a name which was not listed in `trusted-types`. This prevents some code in your web application from creating a policy that you were not expecting.
 
-### The Trusted Types polyfills
+### Cross-browser support for trusted types
 
-The Trusted Types API is not yet available in all modern browsers, but it is usable everywhere today thanks to [polyfills created by the W3C](https://github.com/w3c/trusted-types?tab=readme-ov-file#polyfill).
+The Trusted Types API is not yet available in all modern browsers, but it is usable everywhere today thanks to [compatibility aids created by the W3C](https://github.com/w3c/trusted-types/tree/main?tab=readme-ov-file#polyfill).
 
-There are two polyfills:
+- The [_full_ polyfill](https://github.com/w3c/trusted-types/blob/main/src/polyfill/full.js) defines the JavaScript API, attempts to infer the CSP from the current document, and enforces the use of trusted types based on the inferred CSP.
+- The [_API only_ polyfill](https://github.com/w3c/trusted-types/blob/main/src/polyfill/api_only.js) defines only the JavaScript API, and does not include the ability to enforce the use of trusted types using a CSP.
 
-- The _API only_ polyfill defines only the JavaScript API, and does not include the ability to enforce the use of trusted types using a CSP.
-- The _full_ polyfill defines the JavaScript API, attempts to infer the CSP from the current document, and enforces the use of trusted types based on the inferred CSP.
+As well as these two polyfills, the W3C provides what it calls a _tinyfill_, which we'll explain in more detail below.
 
-Note that as long as you have tested your code, with trusted types enforced, in a browser that fully supports their enforcement using a CSP, you can still benefit from trusted types in other browsers even without enforcing their use in those other browsers.
+Note that as long as you have tested your code, with trusted types enforced, in one browser, then you don't necessarily need to enforce trusted types in a different browser. This means that if you have tested your website in a browser that fully supports trusted types, you can then use just the API polyfill or the tinyfill in other browsers - you don't need to use the full polyfill.
 
 This is because, if you have enforced the use of trusted types in a browser, then you must refactor your code to ensure that all data is passed through the Trusted Types API (and therefore has been through a sanitization function) before being passed to an injection sink.
 
 If you then run the refactored code in a different browser without enforcement, it will still go through the same code paths, and give you the same protection.
 
-The W3C also offers the following [_"tinyfill"_](https://github.com/w3c/trusted-types?tab=readme-ov-file#tinyfill):
+#### Trusted Types tinyfill
+
+In this section we'll look at how the trusted types tinyfill can protect a website, even though it doesn't add support for trusted types at all.
+
+The trusted types tinyfill is just this:
 
 ```js
 if (typeof trustedTypes == "undefined")
   trustedTypes = { createPolicy: (n, rules) => rules };
 ```
 
-This code provides an implementation of `trustedTypes.createPolicy()` which just returns the [`policyOptions`](/en-US/docs/Web/API/TrustedTypePolicyFactory/createPolicy#policyoptions) object it was passed. The `policyOptions` object defines sanitization functions for data, and these functions are expected to return strings.
+It provides an implementation of `trustedTypes.createPolicy()` which just returns the [`policyOptions`](/en-US/docs/Web/API/TrustedTypePolicyFactory/createPolicy#policyoptions) object it was passed. The `policyOptions` object defines sanitization functions for data, and these functions are expected to return strings.
 
 With this tinyfill in place, suppose we create a policy:
 
