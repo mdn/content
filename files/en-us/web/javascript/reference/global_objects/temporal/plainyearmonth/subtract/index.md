@@ -37,6 +37,11 @@ subtract(duration, options)
 
 A new `Temporal.PlainYearMonth` object representing the year-month specified by the original `PlainYearMonth`, minus the duration.
 
+### Exceptions
+
+- {{jsxref("RangeError")}}
+  - : Thrown if the result is not in the [representable range](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal#representable_dates), which is ±(10<sup>8</sup> + 1) days, or about ±273,972.6 years, from the Unix epoch.
+
 ## Description
 
 Subtracting a duration is equivalent to [adding](Web/JavaScript/Reference/Global_Objects/Temporal/PlainYearMonth/add) its [negation](Web/JavaScript/Reference/Global_Objects/Temporal/Duration/negated), so all the same considerations apply. Subtracting a positive duration starts from the end of the year-month and moves backward, so any increment smaller than the month's length is ignored.
