@@ -72413,17 +72413,6 @@
       "velvel53"
     ]
   },
-  "Web/CSS/-webkit-line-clamp": {
-    "modified": "2020-10-15T22:18:29.295Z",
-    "contributors": [
-      "ddbeck",
-      "Sheppy",
-      "Siilwyn",
-      "chrisdavidmills",
-      "rsinohara",
-      "Sebastianz"
-    ]
-  },
   "Web/CSS/-webkit-mask-box-image": {
     "modified": "2020-10-15T21:08:28.807Z",
     "contributors": [
@@ -85701,6 +85690,17 @@
       "ishita",
       "mkato",
       "teoli"
+    ]
+  },
+  "Web/CSS/line-clamp": {
+    "modified": "2020-10-15T22:18:29.295Z",
+    "contributors": [
+      "ddbeck",
+      "Sheppy",
+      "Siilwyn",
+      "chrisdavidmills",
+      "rsinohara",
+      "Sebastianz"
     ]
   },
   "Web/CSS/line-height": {

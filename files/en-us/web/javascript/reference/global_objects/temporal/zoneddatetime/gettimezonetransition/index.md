@@ -23,7 +23,7 @@ getTimeZoneTransition(options)
 ### Parameters
 
 - `direction`
-  - : A string representing the [`direction`](#direction_2) option. This is a convenience overload, so `getTimeZoneTransition(direction)` is equivalent to `round({ direction })`, where `direction` is a string.
+  - : A string representing the [`direction`](#direction_2) option. This is a convenience overload, so `getTimeZoneTransition(direction)` is equivalent to `getTimeZoneTransition({ direction })`, where `direction` is a string.
 - `options`
   - : An object containing the following property:
     - `direction`
