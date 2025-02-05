@@ -179,3 +179,7 @@ svg {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- CSS {{cssxref("fill-rule")}} property

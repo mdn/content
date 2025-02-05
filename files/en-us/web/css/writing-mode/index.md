@@ -291,12 +291,12 @@ span {
 
 ## See also
 
-- SVG [`writing-mode`](/en-US/docs/Web/SVG/Attribute/writing-mode) attribute
 - {{Cssxref("direction")}}
 - {{Cssxref("unicode-bidi")}}
 - {{Cssxref("text-orientation")}}
 - {{Cssxref("text-combine-upright")}}
 - [CSS logical properties](/en-US/docs/Web/CSS/CSS_logical_properties_and_values)
-- [Styling vertical text (Chinese, Japanese, Korean and Mongolian)](https://www.w3.org/International/articles/vertical-text/) on W3.org (2022)
 - [CSS writing modes](/en-US/docs/Web/CSS/CSS_writing_modes) module
+- SVG {{SVGAttr("writing-mode")}} attribute
+- [Styling vertical text (Chinese, Japanese, Korean and Mongolian)](https://www.w3.org/International/articles/vertical-text/) on W3.org (2022)
 - [Creating vertical form controls](/en-US/docs/Web/CSS/CSS_writing_modes/Vertical_controls)
