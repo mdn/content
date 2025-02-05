@@ -47,8 +47,6 @@ The `<text-edge>` data type is composed of one or two keywords representing spec
 
 ## Examples
 
-### Valid text-edge values
-
 See [`text-box-edge` examples](/en-US/docs/Web/CSS/text-box-edge#examples)
 
 ## Specifications
