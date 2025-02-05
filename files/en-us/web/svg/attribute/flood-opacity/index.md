@@ -92,4 +92,5 @@ svg {
 
 ## See also
 
+- CSS {{cssxref("flood-opacity")}} property
 - {{SVGAttr("flood-color")}}

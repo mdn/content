@@ -1323,3 +1323,7 @@ svg {
 ## Specifications
 
 {{Specifications}}
+
+## See also
+
+- CSS {{cssxref("y")}} property

@@ -204,7 +204,7 @@ In this fourth SVG, the `color-interpolation` attribute is included on the `<rad
 
 - {{SVGElement("linearGradient")}}
 - {{SVGElement("radialGradient")}}
-- {{CSSXref("color-interpolation")}}
+- CSS {{cssxref("color-interpolation")}} property
 - [sRGB specification](https://webstore.iec.ch/en/publication/6169)
 - {{SVGAttr("color-interpolation-filters")}}
 - [Computer color is broken](https://www.youtube.com/watch?v=LKnqECcg6Gw) - popular demonstration of linearRGB

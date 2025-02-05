@@ -86,4 +86,4 @@ For a description of the values, please see the CSS {{cssxref("overflow")}} prop
 
 ## See also
 
-- {{cssxref("overflow")}}
+- CSS {{cssxref("overflow")}} property

@@ -11714,6 +11714,7 @@
 /en-US/docs/Web/CSS/-webkit-font-variant-ligatures	/en-US/docs/Web/CSS/font-variant-ligatures
 /en-US/docs/Web/CSS/-webkit-hyphens	/en-US/docs/Web/CSS/hyphens
 /en-US/docs/Web/CSS/-webkit-justify-content	/en-US/docs/Web/CSS/justify-content
+/en-US/docs/Web/CSS/-webkit-line-clamp	/en-US/docs/Web/CSS/line-clamp
 /en-US/docs/Web/CSS/-webkit-linear-gradient	/en-US/docs/Web/CSS/gradient/linear-gradient
 /en-US/docs/Web/CSS/-webkit-mask	/en-US/docs/Web/CSS/mask
 /en-US/docs/Web/CSS/-webkit-mask-attachment	/en-US/docs/Web/CSS
