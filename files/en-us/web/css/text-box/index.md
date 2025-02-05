@@ -62,7 +62,7 @@ If `text-box-trim` is omitted, it is set to `both`. If `text-box-edge` is omitte
 
 In the following example, we have two `<p>` elements with classes of `one` and `two`.
 
-We apply a `text-box` value of `trim-end cap alphabetic` to the first one. The {{cssxref("text-box-edge")}} value of `cap alphabetic` specifies to trim the over edge to the top of the capital letters and the under edge flush with the text baseline. However, because the {{cssxref("text-box-trim")}} value is set to `trim-end`, only the under edge is trimmed.
+We apply a `text-box` value of `trim-end cap alphabetic` to the first paragraph. The {{cssxref("text-box-edge")}} value of `cap alphabetic` specifies to trim the over edge to the top of the capital letters and the under edge flush with the text baseline. Because the {{cssxref("text-box-trim")}} value is set to `trim-end`, only the under edge is trimmed.
 
 We apply a `text-box` value of `trim-both ex alphabetic` to the second one. The {{cssxref("text-box-edge")}} value of `ex alphabetic` specifies to trim the over edge to the font's x-height (the top of the short lower-case letters) and the under edge flush with the text baseline. Because the {{cssxref("text-box-trim")}} value is set to `trim-both`, both the over _and_ under edge are trimmed.
 
