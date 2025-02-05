@@ -43,6 +43,6 @@ navigator.devicePosture.addEventListener("change", reportPostureOutput);
 
 ## See also
 
-- {{cssxref("@media/device-posture", "device-posture")}} media query feature
+- CSS {{cssxref("@media/device-posture", "device-posture")}} `@media` feature
 - [Device Posture API](/en-US/docs/Web/API/Device_Posture_API)
 - [Origin trial for Foldable APIs](https://developer.chrome.com/blog/foldable-apis-ot) on developer.chrome.com (2024)
