@@ -177,7 +177,7 @@ We have hidden the exact HTML code for brevity.
         </select>
       </div>
     </section>
-    <p class="code"></p>
+    <output></output>
   </body>
 </html>
 ```
