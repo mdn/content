@@ -1,5 +1,5 @@
 ---
-title: "::details-content"
+title: ::details-content
 slug: Web/CSS/::details-content
 page-type: css-pseudo-element
 status:

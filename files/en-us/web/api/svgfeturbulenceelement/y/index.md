@@ -1,6 +1,6 @@
 ---
 title: "SVGFETurbulenceElement: y property"
-short-title: "y"
+short-title: y
 slug: Web/API/SVGFETurbulenceElement/y
 page-type: web-api-instance-property
 browser-compat: api.SVGFETurbulenceElement.y
