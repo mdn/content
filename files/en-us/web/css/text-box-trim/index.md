@@ -216,7 +216,7 @@ select {
 ```
 
 ```css
-.display {
+p {
   margin: 0;
   font-size: 6rem;
   font-weight: bold;
@@ -224,7 +224,7 @@ select {
   border-bottom: 5px solid magenta;
 }
 
-.code {
+output {
   border: 2px solid gray;
   border-radius: 10px;
   padding: 10px;
