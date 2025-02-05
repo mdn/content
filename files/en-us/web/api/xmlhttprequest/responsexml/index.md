@@ -75,7 +75,7 @@ xhr.send();
 - {{domxref("XMLHttpRequest")}}
 - {{domxref("XMLHttpRequest.response")}}
 - {{domxref("XMLHttpRequest.responseType")}}
-- [Parsing and serializing XML](/en-US/docs/Web/XML/Parsing_and_serializing_XML)
+- [Parsing and serializing XML](/en-US/docs/Web/XML/Guides/Parsing_and_serializing_XML)
 - Parsing XML into a DOM tree: {{domxref("DOMParser")}}
 - Serializing a DOM tree into XML: {{domxref("XMLSerializer")}} (specifically, the
   {{domxref("XMLSerializer.serializeToString", "serializeToString()")}} method)

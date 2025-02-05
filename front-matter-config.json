@@ -529,7 +529,7 @@
       {
         "if": {
           "properties": {
-            "slug": { "type": "string", "pattern": "^Web/XPath" }
+            "slug": { "type": "string", "pattern": "^Web/XML/XPath" }
           }
         },
         "then": {
@@ -544,7 +544,7 @@
       {
         "if": {
           "properties": {
-            "slug": { "type": "string", "pattern": "^Web/EXSLT" }
+            "slug": { "type": "string", "pattern": "^Web/XML/EXSLT" }
           }
         },
         "then": {
@@ -559,7 +559,7 @@
       {
         "if": {
           "properties": {
-            "slug": { "type": "string", "pattern": "^Web/XSLT" }
+            "slug": { "type": "string", "pattern": "^Web/XML/XSLT" }
           }
         },
         "then": {
