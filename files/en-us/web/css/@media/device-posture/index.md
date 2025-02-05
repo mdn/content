@@ -7,20 +7,20 @@ browser-compat: css.at-rules.media.device-posture
 
 {{CSSRef}}{{seecompattable}}
 
-The **`device-posture`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/@media#media_features) can be used to detect the device's [current posture](/en-US/docs/Web/API/Device_Posture_API).
+The **`device-posture`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/@media#media_features) can be used to detect the device's [current posture](/en-US/docs/Web/API/Device_Posture_API), that is, whether the viewport is in a flat (`continuous`) or folded state (`folded`).
 
 ## Syntax
 
 The `device-posture` feature is specified as a keyword value chosen from the list below:
 
 - `continuous`
-  - : Indicates a flat screen posture — this can include a foldable device while it is being used flat, a seamless curved display, or a standard desktop, laptop, tablet or mobile screen.
+  - : Indicates a flat screen state. Foldable devices are `continuous` while they are flat; either fully opened or fully closed. Non-foldable devices are considered flat and therefore always `continuous` — this includes seamless curved displays and standard desktop, laptop, tablet, and mobile screens.
 - `folded`
-  - : Indicates a folded screen posture — this can include a foldable device being used in a book or laptop posture.
+  - : Indicates a folded screen state. Foldable devices are `folded` while used in a book or laptop posture.
 
 ## Examples
 
-In this example, the `device-posture` media feature detects when a device is in a folded posture, adding a margin based on its [`orientation`](/en-US/docs/Web/CSS/@media/orientation), to create a larger gutter between a device's two panels.
+In this example, the `device-posture` media feature detects when a device is in a folded posture, adding a margin based on its [`orientation`](/en-US/docs/Web/CSS/@media/orientation) to create a larger gutter between the application's two panels for easier reading.
 
 ```css
 @media (device-posture: folded) and (orientation: landscape) {
@@ -35,6 +35,8 @@ In this example, the `device-posture` media feature detects when a device is in 
   }
 }
 ```
+
+To see the above code in action, view the [Device Posture API demo](https://mdn.github.io/dom-examples/device-posture-api/) on a foldable device.
 
 ## Specifications
 

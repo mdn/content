@@ -9,7 +9,7 @@ browser-compat: api.DevicePosture
 
 {{APIRef("Device Posture API")}}{{SeeCompatTable}}
 
-The **`DevicePosture`** interface of the {{domxref("Device Posture API", "Device Posture API", "", "nocode")}} represents the device's posture.
+The **`DevicePosture`** interface of the {{domxref("Device Posture API", "Device Posture API", "", "nocode")}} represents the device's posture, that is, whether the viewport is in a flat or folded state.
 
 {{InheritanceDiagram}}
 
@@ -31,6 +31,7 @@ _Inherits properties from its parent, {{DOMxRef("EventTarget")}}._
 const postureOutput = document.getElementById("currentPosture");
 
 function reportPostureOutput() {
+  // type property returns "continuous" or "folded"
   postureOutput.textContent = `Device posture: ${navigator.devicePosture.type}`;
 }
 
@@ -47,6 +48,6 @@ navigator.devicePosture.addEventListener("change", reportPostureOutput);
 
 ## See also
 
-- {{cssxref("@media/device-posture", "device-posture")}} media query feature
+- CSS {{cssxref("@media/device-posture", "device-posture")}} `@media` feature
 - [Device Posture API](/en-US/docs/Web/API/Device_Posture_API)
 - [Origin trial for Foldable APIs](https://developer.chrome.com/blog/foldable-apis-ot) on developer.chrome.com (2024)
