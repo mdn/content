@@ -129,7 +129,7 @@ In our HTML, we include three main items:
 
 - Three {{htmlelement("select")}} elements allowing you to set which edges of the text the leading should be trimmed from (the `text-box-trim` value) and how much space to trim from the block-start and block-end edges of the text (the {{cssxref("text-box-edge")}} value).
 - A {{htmlelement("p")}} element containing the text that the `text-box-*` values are applied to. This paragraph has [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) set on it so you can edit the text.
-- Another `<p>` element that we write the `text-box-*` declarations applied to the first paragraph into, so you can see what code is being applied after each change to the `<select>` element values.
+- An `<output>` element that displays the `text-box-*` declarations applied to the paragraph. This is updated when a selection is made.
 
 We also import a font from the Google Fonts service to apply to our demo's text.
 
