@@ -1,6 +1,6 @@
 ---
 title: "SVGFEMorphologyElement: y property"
-short-title: "y"
+short-title: y
 slug: Web/API/SVGFEMorphologyElement/y
 page-type: web-api-instance-property
 browser-compat: api.SVGFEMorphologyElement.y

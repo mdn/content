@@ -1,6 +1,6 @@
 ---
 title: "SVGTextPositioningElement: y property"
-short-title: "y"
+short-title: y
 slug: Web/API/SVGTextPositioningElement/y
 page-type: web-api-instance-property
 browser-compat: api.SVGTextPositioningElement.y

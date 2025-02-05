@@ -1,6 +1,6 @@
 ---
 title: "SVGFEFloodElement: y property"
-short-title: "y"
+short-title: y
 slug: Web/API/SVGFEFloodElement/y
 page-type: web-api-instance-property
 browser-compat: api.SVGFEFloodElement.y

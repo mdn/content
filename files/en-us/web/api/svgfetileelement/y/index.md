@@ -1,6 +1,6 @@
 ---
 title: "SVGFETileElement: y property"
-short-title: "y"
+short-title: y
 slug: Web/API/SVGFETileElement/y
 page-type: web-api-instance-property
 browser-compat: api.SVGFETileElement.y
