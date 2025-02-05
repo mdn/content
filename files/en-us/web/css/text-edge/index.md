@@ -9,7 +9,7 @@ browser-compat: css.types.text-edge
 
 The **`<text-edge>`** {{glossary("enumerated")}} [data type](/en-US/docs/Web/CSS/CSS_Types) defines keywords that specify font metrics representing specific regions on a font's block-start edge and block-end edge. Each keyword specifies a position of a font's over and/or under edge.
 
-The `text-edge` values are used in the {{cssxref("text-box-edge")}} property to define regions of spacing to trim from the block-start edge and block-end edge of specified text content.
+The `<text-edge>` values are used in the {{cssxref("text-box-edge")}} property to specify an amount of space to trim from text content.
 
 ## Syntax
 
@@ -23,8 +23,16 @@ The `text-edge` values are used in the {{cssxref("text-box-edge")}} property to 
 
 The `<text-edge>` data type is composed of one or two keywords representing specific regions on a font's block-start (over) edge and/or block-end (under) edge:
 
-- When two values are specified, the first value specifies the position of the font's over edge, and the second value specifies the position of the font's under edge
-- When only one value is specified, both edges are assigned that same keyword.
+- When one value is specified, the position of the font's over edge and under edge are specified using that same keyword.
+- When two values are specified, the first value specifies the position of the font's over edge, and the second value specifies the position of the font's under edge.
+
+### Single keyword values
+
+- `text`
+  - : The font's over and under edges are its start and end boundaries. This can be considered the default, as this is where the boundaries are normally without any manipulation.
+
+> [!NOTE]
+> The specification also defines the `ideographic` and `ideographic-ink` keywords, which are intended to specify over and under edge positions specific to [CJK language characters](https://en.wikipedia.org/wiki/CJK_characters). Currently their exact behavior is being debated and they are are not supported by any browser.
 
 ### Two keyword values
 
@@ -36,14 +44,6 @@ The `<text-edge>` data type is composed of one or two keywords representing spec
   - : The font's over edge is its x-height baseline, which is the top of its short lower-case letters.
 - `text`
   - : The font's over or under edge is its start and end boundaries. This can be considered the default, as this is where the boundaries are normally without any manipulation.
-
-### Single keyword values
-
-- `text`
-  - : The font's over and under edges are its start and end boundaries. This can be considered the default, as this is where the boundaries are normally without any manipulation.
-
-> [!NOTE]
-> The specification also defines the `ideographic` and `ideographic-ink` keywords, which are intended to represent over and under edge positions specific to [CJK language characters](https://en.wikipedia.org/wiki/CJK_characters). Currently their exact behavior is being debated and they are are not supported by any browser.
 
 ## Examples
 
