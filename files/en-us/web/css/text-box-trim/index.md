@@ -244,8 +244,8 @@ const boxTrimSelect = document.getElementById("box-trim");
 const trimOverSelect = document.getElementById("trim-over");
 const trimUnderSelect = document.getElementById("trim-under");
 
-const displayElem = document.querySelector(".display");
-const codeElem = document.querySelector(".code");
+const displayElem = document.querySelector("p");
+const codeElem = document.querySelector("output");
 ```
 
 Next, we define a function called `setEdgeTrim()`. This applies a {{cssxref("text-box")}} value to the first paragraph based on the values of the `<select>` elements, and also prints the applied declarations to the second paragraph (both the longhand and shorthand equivalents):
