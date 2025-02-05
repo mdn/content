@@ -11,7 +11,7 @@ The **Device Posture API** allows developers to create user interfaces that adap
 
 ## Concepts and usage
 
-Foldable devices present unique design challenges to developers — they can be used like a regular flat screen or like a book. In addition, some of them feature a single folded screen, and some of them feature two screens with a physical join in the middle. Care must be taken to ensure that content is not hidden by the physical join, or rendered difficult to read due to close proximity to the central fold.
+Foldable devices present unique design challenges to developers — they can be used like a regular flat screen or like a book. In addition, some of them feature a single folded screen, and some of them feature two screens with a hinged join in the middle. Care must be taken to ensure that content is not hidden by the physical join, or rendered difficult to read due to close proximity to the central fold.
 
 The Device Posture API defines **postures**, which indicate the current physical state of a foldable device. The current available postures are:
 
