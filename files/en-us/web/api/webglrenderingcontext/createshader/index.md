@@ -23,11 +23,11 @@ createShader(type)
 ### Parameters
 
 - `type`
-  - : Either `gl.VERTEX_SHADER` or `gl.FRAGMENT_SHADER`
+  - : Either `gl.VERTEX_SHADER` or `gl.FRAGMENT_SHADER`. The {{domxref("WebGLRenderingContext")}} will set the `gl.INVALID_ENUM` error flag if an unacceptable value has been specified.
 
 ### Return value
 
-A new ({{domxref("WebGLShader")}}).
+A new ({{domxref("WebGLShader")}}), or `null` if an error occurs creating the ({{domxref("WebGLShader")}}) (such as providing an invalid value for `type`).
 
 ## Examples
 
