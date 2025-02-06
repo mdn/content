@@ -11,7 +11,7 @@ The **CSS grid layout** module excels at dividing a page into major regions or d
 
 Like tables, grid layout enables an author to align elements into columns and rows. However, many more layouts are either possible or easier with CSS grid than they were with tables. For example, a grid container's child elements could position themselves so they actually overlap and layer, similar to CSS positioned elements.
 
-## Grid in action
+## Grid layout in action
 
 The example shows a three-column track grid with new rows created at a minimum of 100 pixels and a maximum of auto. Items have been placed onto the grid using line-based placement.
 
@@ -73,7 +73,7 @@ The example shows a three-column track grid with new rows created at a minimum o
 }
 ```
 
-{{EmbedLiveSample("Grid_in_action", "100%", "460")}}
+{{EmbedLiveSample("Grid_layout_in_action", "100%", "460")}}
 
 This sample animation uses {{cssxref("display")}}, {{cssxref("grid-template-columns")}}, {{cssxref("grid-template-rows")}}, and {{cssxref("gap")}} to create the grid, and {{cssxref("grid-column")}} and {{cssxref("grid-row")}} to position items within in the grid. To view and edit the HTML and CSS used, click the 'Play' at the top right of the example.
 
