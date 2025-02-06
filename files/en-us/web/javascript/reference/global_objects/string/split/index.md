@@ -292,8 +292,8 @@ console.log(commands.split(splitCommands, 3)); // ["light on", "brightness up", 
 ## See also
 
 - [Polyfill of `String.prototype.split` in `core-js` with fixes and implementation of modern behavior like `Symbol.split` support](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [Regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions) guide
 - {{jsxref("String.prototype.charAt()")}}
 - {{jsxref("String.prototype.indexOf()")}}
 - {{jsxref("String.prototype.lastIndexOf()")}}
 - {{jsxref("Array.prototype.join()")}}
-- [Regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions) guide

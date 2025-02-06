@@ -7,7 +7,7 @@ spec-urls: https://drafts.csswg.org/css-grid/
 
 {{CSSRef}}
 
-The **CSS grid layout** module excels at dividing a page into major regions or defining the relationship in terms of size, position, and layer, between parts of a control built from HTML primitives.
+The **CSS grid layout** module excels at dividing a page into major regions or defining the relationship in terms of size, position, and layering between parts of a control built from HTML primitives.
 
 Like tables, grid layout enables an author to align elements into columns and rows. However, many more layouts are either possible or easier with CSS grid than they were with tables. For example, a grid container's child elements could position themselves so they actually overlap and layer, similar to CSS positioned elements.
 
@@ -103,9 +103,6 @@ The example below shows a three-column track grid with new rows created at a min
 - {{CSSxRef("grid-row")}}
 - {{CSSxRef("grid-column")}}
 - {{CSSxRef("grid-area")}}
-- {{CSSxRef("row-gap")}}
-- {{CSSxRef("column-gap")}}
-- {{CSSxRef("gap")}}
 
 ### Functions
 
@@ -148,6 +145,10 @@ The example below shows a three-column track grid with new rows created at a min
   - [Grid axis](/en-US/docs/Glossary/Grid_Axis)
   - [Grid row](/en-US/docs/Glossary/Grid_Row)
   - [Grid column](/en-US/docs/Glossary/Grid_Column)
+- [CSS box alignment](/en-US/docs/Web/CSS/CSS_box_alignment) module
+  - {{CSSxRef("row-gap")}}
+  - {{CSSxRef("column-gap")}}
+  - {{CSSxRef("gap")}}
 - [CSS flexible box layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout) module
 - [CSS display](/en-US/docs/Web/CSS/CSS_display) module
 - [Grid by example](https://gridbyexample.com/)

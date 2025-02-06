@@ -19,4 +19,4 @@ The style origins are used to determine where to stop rolling back (or backtrack
 
 ## See also
 
-- [CSS Cascading and Inheritance: Cascading Origins](https://drafts.csswg.org/css-cascade-4/#cascading-origins)
+- [CSS cascading and inheritance: Cascading Origins](https://drafts.csswg.org/css-cascade-4/#cascading-origins)

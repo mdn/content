@@ -45,17 +45,17 @@ The `writing-mode` property is specified as one of the values listed below. The 
   - : For `ltr` scripts, content flows vertically from top to bottom. For `rtl` scripts, content flows vertically from bottom to top. All the glyphs, even those in vertical scripts, are set sideways toward the right.
 - `sideways-lr`
   - : For `ltr` scripts, content flows vertically from bottom to top. For `rtl` scripts, content flows vertically from top to bottom. All the glyphs, even those in vertical scripts, are set sideways toward the left.
-- `lr` {{Deprecated_Inline}}
+- `lr`
   - : Deprecated except for SVG1 documents. For CSS, use `horizontal-tb` instead.
-- `lr-tb` {{Deprecated_Inline}}
+- `lr-tb`
   - : Deprecated except for SVG1 documents. For CSS, use `horizontal-tb` instead.
-- `rl` {{Deprecated_Inline}}
+- `rl`
   - : Deprecated except for SVG1 documents. For CSS, use `horizontal-tb` instead.
-- `tb` {{Deprecated_Inline}}
+- `tb`
   - : Deprecated except for SVG1 documents. For CSS, use `vertical-lr` instead.
 - `tb-lr` {{Deprecated_Inline}}
   - : Deprecated except for SVG1 documents. For CSS, use `vertical-lr` instead.
-- `tb-rl` {{Deprecated_Inline}}
+- `tb-rl`
   - : Deprecated except for SVG1 documents. For CSS, use `vertical-rl` instead.
 
 ## Formal definition
@@ -291,12 +291,12 @@ span {
 
 ## See also
 
-- SVG [`writing-mode`](/en-US/docs/Web/SVG/Attribute/writing-mode) attribute
 - {{Cssxref("direction")}}
 - {{Cssxref("unicode-bidi")}}
 - {{Cssxref("text-orientation")}}
 - {{Cssxref("text-combine-upright")}}
 - [CSS logical properties](/en-US/docs/Web/CSS/CSS_logical_properties_and_values)
-- [Styling vertical text (Chinese, Japanese, Korean and Mongolian)](https://www.w3.org/International/articles/vertical-text/) on W3.org (2022)
 - [CSS writing modes](/en-US/docs/Web/CSS/CSS_writing_modes) module
+- SVG {{SVGAttr("writing-mode")}} attribute
+- [Styling vertical text (Chinese, Japanese, Korean and Mongolian)](https://www.w3.org/International/articles/vertical-text/) on W3.org (2022)
 - [Creating vertical form controls](/en-US/docs/Web/CSS/CSS_writing_modes/Vertical_controls)

@@ -367,7 +367,7 @@ function updateImageDisplay() {
 The custom `validFileType()` function takes a {{domxref("File")}} object as a parameter, then uses {{jsxref("Array.prototype.includes()")}} to check if any value in the `fileTypes` matches the file's `type` property. If a match is found, the function returns `true`. If no match is found, it returns `false`.
 
 ```js
-// https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types
+// https://developer.mozilla.org/en-US/docs/Web/Media/Guides/Formats/Image_types
 const fileTypes = [
   "image/apng",
   "image/bmp",

@@ -92,6 +92,7 @@ svg {
 
 ## See also
 
+- CSS {{cssxref("fill-opacity")}} property
 - {{SVGAttr("opacity")}}
 - {{SVGAttr("stop-opacity")}}
 - {{SVGAttr("stroke-opacity")}}
