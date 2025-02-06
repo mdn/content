@@ -1,11 +1,11 @@
 ---
 title: Developer guides
-slug: Web/Guide
+slug: MDN/Guides
 page-type: landing-page
 ---
 
 <section id="Quick_links">
-  {{ListSubpagesForSidebar("/en-US/docs/Web/Guide")}}
+  {{ListSubpagesForSidebar("/en-US/docs/MDN/Guides")}}
 </section>
 
 There are a number of guides within MDN docs. These articles aim to add additional usage examples, or teach you how to use an API or feature. This page links to some of the most popular material.

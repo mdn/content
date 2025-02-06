@@ -12,7 +12,7 @@ The open Web presents incredible opportunities for developers. To take full adva
 
 ## Documentation for Web developers
 
-- [Web Developer Guide](/en-US/docs/Web/Guide)
+- [Web Developer Guide](/en-US/docs/MDN/Guides)
   - : The Web Developer Guide provides useful how-to content to help you actually use Web technologies to do what you want or need to do.
 - [Tutorials for Web developers](/en-US/docs/MDN/Tutorials)
   - : Tutorials to take you step-by-step through learning HTML, CSS, JavaScript, and Web APIs.
