@@ -1,7 +1,7 @@
 ---
 title: EXSLT reference
 short-title: Reference
-slug: Web/XML/EXSLT
+slug: Web/XML/EXSLT/Reference
 page-type: listing-page
 sidebar: xmlsidebar
 ---
