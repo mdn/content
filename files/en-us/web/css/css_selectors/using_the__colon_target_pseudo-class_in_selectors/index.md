@@ -6,7 +6,7 @@ page-type: guide
 
 {{CSSRef}}
 
-When a URL points at a specific piece of a document using a [URL fragment identifier](/en-US/docs/Web/URI/Fragment#fragment), it can be difficult for the user to notice. This guide discusses using CSS to draw attention to the target of a URL to improve user experience.
+When a URL points at a specific piece of a document using a [URL fragment identifier](/en-US/docs/Web/URI/Reference/Fragment#fragment), it can be difficult for the user to notice. This guide discusses using CSS to draw attention to the target of a URL to improve user experience.
 
 ## Picking a Target
 

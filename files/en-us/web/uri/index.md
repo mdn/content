@@ -55,7 +55,7 @@ http://www.example.com:80/path/to/myfile.html?key1=value1&key2=value2#SomewhereI
 
 ![Protocol](mdn-url-protocol@x2.png)
 
-`http://` is the [_scheme_](/en-US/docs/Web/URI/Schemes) of the URL, indicating which protocol the browser must use. Usually it is the HTTP protocol or its secured version, HTTPS. The Web requires one of these two, but browsers also know how to handle other protocols such as `mailto:` (to open a mail client) or `ftp:` to handle a file transfer, so don't be surprised if you see such protocols. The [schemes](/en-US/docs/Web/URI/Schemes) reference provides a list of the most common schemes, and documentation for some of them.
+`http://` is the [_scheme_](/en-US/docs/Web/URI/Reference/Schemes) of the URL, indicating which protocol the browser must use. Usually it is the HTTP protocol or its secured version, HTTPS. The Web requires one of these two, but browsers also know how to handle other protocols such as `mailto:` (to open a mail client) or `ftp:` to handle a file transfer, so don't be surprised if you see such protocols. The [schemes](/en-US/docs/Web/URI/Reference/Schemes) reference provides a list of the most common schemes, and documentation for some of them.
 
 When using URLs in {{Glossary("HTML")}} content, you should generally only use a few of these URL schemes. When referring to subresources — that is, files that are being loaded as part of a larger document — you should only use the HTTP and HTTPS schemes. Increasingly, browsers are removing support for using FTP to load subresources, for security reasons.
 
@@ -89,7 +89,7 @@ The URI [_authority_](/en-US/docs/Web/URI/Reference/Authority) is comprised of u
 
 ![Anchor](mdn-url-anchor@x2.png)
 
-`#SomewhereInTheDocument` is the [_fragment_](/en-US/docs/Web/URI/Fragment) of the URL, which is an anchor to another part of the resource itself. An anchor represents a sort of "bookmark" inside the resource, giving the browser the directions to show the content located at that "bookmarked" spot. On an HTML document, for example, the browser will scroll to the point where the anchor is defined; on a video or audio document, the browser will try to go to the time the anchor represents. It is worth noting that the part after the #, also known as the fragment identifier, is never sent to the server with the request.
+`#SomewhereInTheDocument` is the [_fragment_](/en-US/docs/Web/URI/Reference/Fragment) of the URL, which is an anchor to another part of the resource itself. An anchor represents a sort of "bookmark" inside the resource, giving the browser the directions to show the content located at that "bookmarked" spot. On an HTML document, for example, the browser will scroll to the point where the anchor is defined; on a video or audio document, the browser will try to go to the time the anchor represents. It is worth noting that the part after the #, also known as the fragment identifier, is never sent to the server with the request.
 
 There's a special [text fragment](/en-US/docs/Web/URI/Guides/Text_fragments) feature that allows you to link to a specific part of a web page identified by its text content.
 

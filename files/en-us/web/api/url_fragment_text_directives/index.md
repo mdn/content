@@ -38,4 +38,4 @@ The **URL fragment text directives** API allows web apps to interact with _text 
 
 ## See also
 
-- [URI fragment](/en-US/docs/Web/URI/Fragment)
+- [URI fragment](/en-US/docs/Web/URI/Reference/Fragment)

@@ -65,8 +65,8 @@ let updating = browser.tabs.update(
         For security reasons, in Firefox, this may not be a privileged URL. So passing any of the following URLs will fail, with {{WebExtAPIRef("runtime.lastError")}} being set to an error message:
 
         - chrome: URLs
-        - [javascript: URLs](/en-US/docs/Web/URI/Schemes/javascript)
-        - [data: URLs](/en-US/docs/Web/URI/Schemes/data)
+        - [javascript: URLs](/en-US/docs/Web/URI/Reference/Schemes/javascript)
+        - [data: URLs](/en-US/docs/Web/URI/Reference/Schemes/data)
         - file: URLs (i.e., files on the filesystem. However, to use a file packaged inside the extension, see below)
         - privileged about: URLs (for example, `about:config`, `about:addons`, `about:debugging`, `about:newtab`). Non-privileged URLs (e.g., `about:blank`) are allowed.
 

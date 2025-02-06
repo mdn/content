@@ -7,7 +7,7 @@ spec-urls: https://www.rfc-editor.org/rfc/rfc3986.html#section-3.1
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/URI")}}
 
-The **authority** of a URI is the section that comes after the [scheme](/en-US/docs/Web/URI/Schemes) and before the path. It may have up to three parts: user information, host, and port.
+The **authority** of a URI is the section that comes after the [scheme](/en-US/docs/Web/URI/Reference/Schemes) and before the path. It may have up to three parts: user information, host, and port.
 
 ## Syntax
 
@@ -47,4 +47,4 @@ user@host:port
 ## See also
 
 - [URIs](/en-US/docs/Web/URI)
-- [Choosing between www and non-www URLs](/en-US/docs/Web/URI/Reference/Authority/Choosing_between_www_and_non-www_URLs)
+- [Choosing between www and non-www URLs](/en-US/docs/Web/URI/Guides/Choosing_between_www_and_non-www_URLs)

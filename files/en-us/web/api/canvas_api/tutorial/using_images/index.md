@@ -98,7 +98,7 @@ draw();
 
 ### Embedding an image via data: URL
 
-Another possible way to include images is via the [data: URL](/en-US/docs/Web/URI/Schemes/data). Data URLs allow you to completely define an image as a Base64 encoded string of characters directly in your code.
+Another possible way to include images is via the [data: URL](/en-US/docs/Web/URI/Reference/Schemes/data). Data URLs allow you to completely define an image as a Base64 encoded string of characters directly in your code.
 
 ```js
 const img = new Image(); // Create new img element

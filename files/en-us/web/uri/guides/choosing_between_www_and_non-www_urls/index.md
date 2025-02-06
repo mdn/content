@@ -1,6 +1,6 @@
 ---
 title: Choosing between www and non-www URLs
-slug: Web/URI/Reference/Authority/Choosing_between_www_and_non-www_URLs
+slug: Web/URI/Guides/Choosing_between_www_and_non-www_URLs
 page-type: guide
 ---
 

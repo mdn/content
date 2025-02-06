@@ -1,6 +1,6 @@
 ---
 title: Data URLs
-slug: Web/URI/Schemes/data
+slug: Web/URI/Reference/Schemes/data
 page-type: guide
 browser-compat: http.data-url
 ---

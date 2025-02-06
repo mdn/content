@@ -1,6 +1,6 @@
 ---
 title: Resource URLs
-slug: Web/URI/Schemes/resource
+slug: Web/URI/Reference/Schemes/resource
 page-type: guide
 ---
 

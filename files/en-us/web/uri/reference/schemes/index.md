@@ -1,6 +1,6 @@
 ---
 title: URI schemes
-slug: Web/URI/Schemes
+slug: Web/URI/Reference/Schemes
 page-type: guide
 spec-urls: https://www.rfc-editor.org/rfc/rfc3986.html#section-3.1
 ---
@@ -19,7 +19,7 @@ protocol:
   - : A sequence of characters that identifies the protocol to use. It should consist of only alphanumeric characters and the `+`, `-`, and `.` characters. Common schemes are:
     - [`blob`](/en-US/docs/Web/API/URL/createObjectURL_static)
       - : Binary Large Object; a pointer to a large in-memory object
-    - [`data`](/en-US/docs/Web/URI/Schemes/data)
+    - [`data`](/en-US/docs/Web/URI/Reference/Schemes/data)
       - : Data directly embedded in the URL
     - `file`
       - : Host-specific file names
@@ -27,11 +27,11 @@ protocol:
       - : {{Glossary("FTP","File Transfer Protocol")}}
     - `http` / `https`
       - : Hyper text transfer protocol (Secure) ({{glossary("HTTP")}}/{{glossary("HTTPS")}})
-    - [`javascript`](/en-US/docs/Web/URI/Schemes/javascript)
+    - [`javascript`](/en-US/docs/Web/URI/Reference/Schemes/javascript)
       - : URL-embedded JavaScript code
     - `mailto`
       - : Electronic mail address
-    - [`resource`](/en-US/docs/Web/URI/Schemes/resource) {{Non-standard_inline}}
+    - [`resource`](/en-US/docs/Web/URI/Reference/Schemes/resource) {{Non-standard_inline}}
       - : Firefox and Firefox browser extensions to load resources internally
     - `ssh`
       - : Secure shell
@@ -51,6 +51,6 @@ protocol:
 ## See also
 
 - [URIs](/en-US/docs/Web/URI)
-- [Data URLs](/en-US/docs/Web/URI/Schemes/data)
-- [Resource URLs](/en-US/docs/Web/URI/Schemes/resource)
+- [Data URLs](/en-US/docs/Web/URI/Reference/Schemes/data)
+- [Resource URLs](/en-US/docs/Web/URI/Reference/Schemes/resource)
 - [IANA list of URI schemes](https://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml)

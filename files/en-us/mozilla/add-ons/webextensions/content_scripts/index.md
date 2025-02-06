@@ -74,7 +74,7 @@ The set of domains can be restricted further through enterprise policies: Firefo
 
 ### Limitations
 
-Whole tabs or frames may be loaded using [`data:` URI](/en-US/docs/Web/URI/Schemes/data), {{DOMxRef("URL.createObjectURL_static", "Blob")}} objects, and other similar techniques. Support of content scripts injection into such special documents varies across browsers, see the Firefox [bug #1411641 comment 41](https://bugzil.la/1411641#c41) for some details.
+Whole tabs or frames may be loaded using [`data:` URI](/en-US/docs/Web/URI/Reference/Schemes/data), {{DOMxRef("URL.createObjectURL_static", "Blob")}} objects, and other similar techniques. Support of content scripts injection into such special documents varies across browsers, see the Firefox [bug #1411641 comment 41](https://bugzil.la/1411641#c41) for some details.
 
 ## Content script environment
 
