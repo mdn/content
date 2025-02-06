@@ -52,7 +52,7 @@ A string that identifies the encoding method to use when submitting the form dat
 - `text/plain`
   - : Plain text; mostly useful only for debugging, so you can easily see the data that's to be submitted.
 
-If specified, the value of the `formenctype` attribute overrides the owning form's [`action`](/en-US/docs/Web/HTML/Element/form#action) attribute.
+If specified, the value of the `formenctype` attribute overrides the owning form's [`enctype`](/en-US/docs/Web/HTML/Element/form#enctype) attribute.
 
 This attribute is also available on [`<input type="image">`](/en-US/docs/Web/HTML/Element/input/image) and {{HTMLElement("button")}} elements.
 

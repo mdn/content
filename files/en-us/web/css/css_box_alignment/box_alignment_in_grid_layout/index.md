@@ -8,7 +8,7 @@ page-type: guide
 
 The [CSS box alignment](/en-US/docs/Web/CSS/CSS_box_alignment) module details how alignment works in various layout methods. On this page, we explore how box alignment works in the context of [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout).
 
-As this guide aims to detail things which are specific to CSS grid layout and Box Alignment, it should be read in conjunction with the [box alignment overview](/en-US/docs/Web/CSS/CSS_box_alignment/box_alignment) guide, which details the common features of box alignment across layout methods.
+As this guide aims to detail things which are specific to CSS grid layout and Box Alignment, it should be read in conjunction with the [box alignment overview](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment) guide, which details the common features of box alignment across layout methods.
 
 ## Basic example
 

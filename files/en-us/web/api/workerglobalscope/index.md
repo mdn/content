@@ -32,7 +32,7 @@ _This interface inherits properties from the {{domxref("EventTarget")}} interfac
 - {{domxref("WorkerGlobalScope.isSecureContext")}} {{ReadOnlyInline}}
   - : Returns a boolean indicating whether the current context is secure (`true`) or not (`false`).
 - {{domxref("WorkerGlobalScope.location")}} {{ReadOnlyInline}}
-  - : Returns the {{domxref("WorkerLocation")}} associated with the worker. It is a specific location object, mostly a subset of the {{domxref("Location")}} for browsing scopes, but adapted to workers.r.
+  - : Returns the {{domxref("WorkerLocation")}} associated with the worker. It is a specific location object, mostly a subset of the {{domxref("Location")}} for browsing scopes, but adapted to workers.
 - {{domxref("WorkerGlobalScope.navigator")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("WorkerNavigator")}} associated with the worker. It is a specific navigator object, mostly a subset of the {{domxref("Navigator")}} for browsing scopes, but adapted to workers.
 - {{domxref("WorkerGlobalScope.origin")}} {{ReadOnlyInline}}

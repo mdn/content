@@ -35,7 +35,7 @@ slice(start, end)
 
 ### Return value
 
-A new {{jsxref("ArrayBuffer")}} containing the extracted elements.
+A new {{jsxref("ArrayBuffer")}} containing the extracted elements. It is not [resizable](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/resizable), even if the original was.
 
 ## Examples
 

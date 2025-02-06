@@ -15,7 +15,7 @@ If no character is found at the specified position, `-1` is returned.
 ## Syntax
 
 ```js-nolint
-SVGTextContentElement.getCharNumAtPosition(point)
+getCharNumAtPosition(point)
 ```
 
 ### Parameters

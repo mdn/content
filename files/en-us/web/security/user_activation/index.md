@@ -73,7 +73,7 @@ APIs that require sticky activation (not exhaustive):
 - {{domxref("Window/beforeunload_event", "beforeunload")}} event
 - {{domxref("Navigator.vibrate()")}}
 - {{domxref("VirtualKeyboard.show()")}}
-- Autoplay of [Media and Web Audio APIs](/en-US/docs/Web/Media/Autoplay_guide) (in particular for [`AudioContexts`](/en-US/docs/Web/API/AudioContext)).
+- Autoplay of [Media and Web Audio APIs](/en-US/docs/Web/Media/Guides/Autoplay) (in particular for [`AudioContexts`](/en-US/docs/Web/API/AudioContext)).
 
 ## UserActivation API
 

@@ -1,6 +1,6 @@
 ---
 title: CSS box alignment overview
-slug: Web/CSS/CSS_box_alignment/box_alignment
+slug: Web/CSS/CSS_box_alignment/Box_alignment
 page-type: guide
 ---
 

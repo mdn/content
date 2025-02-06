@@ -275,6 +275,7 @@ O
 
 - {{CSSxRef(":only-child")}}
 - {{CSSxRef(":only-of-type")}}
+- {{CSSxRef(":open")}}
 - {{CSSxRef(":optional")}}
 - {{CSSxRef(":out-of-range")}}
 

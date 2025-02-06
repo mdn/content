@@ -187,5 +187,6 @@ p.min-blue {
 - {{cssxref("min-width")}}, {{cssxref("max-width")}}
 - {{cssxref("block-size")}}, {{cssxref("inline-size")}}
 - {{cssxref("anchor-size()")}}
+- SVG {{SVGAttr("width")}} attribute
 - [Introduction to the CSS basic box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
 - [CSS box model](/en-US/docs/Web/CSS/CSS_box_model) module

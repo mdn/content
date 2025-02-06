@@ -14,9 +14,9 @@ browser-compat: api.StorageAccessHandle.SharedWorker
 ## Syntax
 
 ```js-nolint
-handle.SharedWorker(aURL)
-handle.SharedWorker(aURL, name)
-handle.SharedWorker(aURL, options)
+SharedWorker(aURL)
+SharedWorker(aURL, name)
+SharedWorker(aURL, options)
 ```
 
 ### Parameters

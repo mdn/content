@@ -2,9 +2,8 @@
 title: Min
 slug: WebAssembly/Reference/Numeric/Min
 page-type: webassembly-instruction
+sidebar: webassemblysidebar
 ---
-
-{{WebAssemblySidebar}}
 
 The **`min`** instructions, are used for getting the lower of two numbers.
 

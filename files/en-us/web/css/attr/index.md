@@ -70,7 +70,7 @@ The parameters are:
       attr(data-size type(<length> | <percentage>), 0px)
       ```
 
-      For [security reasons](#limitations_and_security) {{CSSxRef("&lt;url&gt;")}} is not allowed as a `<syntax>`.
+      For [security reasons](#limitations_and_security) {{CSSxRef("url_value", "&lt;url&gt;")}} is not allowed as a `<syntax>`.
 
     - The `<attr-unit>` identifier specifies the unit a numeric value should have (if any). It can be the `%` character (percentage) or a [CSS distance unit](/en-US/docs/Web/CSS/CSS_Values_and_Units#distance_units) such as `px`, `rem`, `deg`, `s`, etc.
 
@@ -107,7 +107,7 @@ The `attr()` function can reference attributes that were never intended by the p
 </style>
 ```
 
-Values that use `attr()` get marked as _"`attr()`-tained"_. Using an `attr()`-tainted value as or in a `<url>` makes a declaration become ["invalid at computed value time" or IACVT for short](https://brm.us/iacvt)
+Values that use `attr()` get marked as _"`attr()`-tainted"_. Using an `attr()`-tainted value as or in a `<url>` makes a declaration become ["invalid at computed value time" or IACVT for short](https://brm.us/iacvt)
 
 ### Backwards compatibility
 

@@ -2,9 +2,8 @@
 title: Criteria for inclusion on MDN Web Docs
 slug: MDN/Writing_guidelines/What_we_write/Criteria_for_inclusion
 page-type: mdn-writing-guide
+sidebar: mdnsidebar
 ---
-
-{{MDNSidebar}}
 
 This article describes, in detail, criteria for content to be included on MDN Web Docs, the application process for including new documentation, and expectations and guidelines for a party applying.
 
