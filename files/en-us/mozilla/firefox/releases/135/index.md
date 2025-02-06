@@ -68,6 +68,10 @@ No notable changes
 
 - Added support for the `format` field in the `browsingContext.captureScreenshot` command, allowing clients to specify different file formats (`image/png` and `image/jpg` are currently supported) and define the compression quality for screenshots ([Firefox bug 1861737](https://bugzilla.mozilla.org/show_bug.cgi?id=1861737)).
 
+## Changes for add-on developers
+
+- {{WebExtAPIRef("commands.update")}} can now assign keyboard shortcuts for commands to the `F13` to `F19` keys. However, extensions can't assign these keys from the [`commands` manifest.json key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands). Users can also assign features to these keys using [Manage Extension Shortcuts](https://support.mozilla.org/en-US/kb/manage-extension-shortcuts-firefox) ([Firefox bug 1924542](https://bugzil.la/1924542))
+
 ## Experimental web features
 
 These features are newly shipped in Firefox 135 but are disabled by default. To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`. You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
