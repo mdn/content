@@ -18,6 +18,10 @@ The **CSS paged media** module defines the properties that control the presentat
 ### At-rules
 
 - {{cssxref('@page')}}
+  - {{cssxref('@page/page-orientation', 'page-orientation')}} descriptor
+  - {{cssxref('@page/size', 'size')}} descriptor
+  - [Margin descriptors](/en-US/docs/Web/CSS/margin)
+- [Margin at-rules](/en-US/docs/Web/CSS/@page#margin_at-rules)
 
 ### Pseudo-classes
 
@@ -28,11 +32,12 @@ The **CSS paged media** module defines the properties that control the presentat
 
 ## Related concepts
 
-- {{cssxref("break-after")}} property
-- {{cssxref("break-before")}} property
-- {{cssxref("break-inside")}} property
-- {{cssxref("orphans")}} property
-- {{cssxref("widows")}} property
+- [CSS fragmentation](/en-US/docs/Web/CSS/CSS_fragmentation) module
+  - {{cssxref("break-after")}} property
+  - {{cssxref("break-before")}} property
+  - {{cssxref("break-inside")}} property
+  - {{cssxref("orphans")}} property
+  - {{cssxref("widows")}} property
 
 ## Specifications
 
