@@ -2,6 +2,8 @@
 title: :open
 slug: Web/CSS/:open
 page-type: css-pseudo-class
+status:
+  - experimental
 browser-compat: css.selectors.open
 ---
 
