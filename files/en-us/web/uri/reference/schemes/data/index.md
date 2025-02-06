@@ -1,7 +1,8 @@
 ---
-title: Data URLs
-slug: Web/URI/Schemes/data
-page-type: guide
+title: "data: URLs"
+short-title: "data:"
+slug: Web/URI/Reference/Schemes/data
+page-type: reference
 browser-compat: http.data-url
 sidebar: urlsidebar
 ---

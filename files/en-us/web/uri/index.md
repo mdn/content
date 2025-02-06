@@ -1,7 +1,7 @@
 ---
 title: URIs
 slug: Web/URI
-page-type: guide
+page-type: landing-page
 spec-urls: https://www.rfc-editor.org/rfc/rfc3986.html
 sidebar: urlsidebar
 ---

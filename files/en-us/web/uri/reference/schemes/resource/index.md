@@ -1,7 +1,8 @@
 ---
-title: Resource URLs
+title: "javascript: URLs"
+short-title: "resource:"
 slug: Web/URI/Reference/Schemes/resource
-page-type: guide
+page-type: reference
 sidebar: urlsidebar
 ---
 
