@@ -14,7 +14,7 @@ The **fragment** of a URI is the last part of the URI, starting with the `#` cha
 #fragment
 ```
 
-- fragment
+- `fragment`
 
   - : A sequence of any characters. The exact format of the fragment is defined by the resource itself. Some common examples:
 

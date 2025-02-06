@@ -17,11 +17,11 @@ user@host
 user@host:port
 ```
 
-- host
+- `host`
   - : The _host_ is usually the domain name or IP address of the server hosting the resource. The domain name is resolved to an IP address using the {{glossary("DNS", "Domain Name System")}}.
-- port {{optional_inline}}
+- `port` {{optional_inline}}
   - : The _port_ is a number that indicates the port on which the server is listening for requests. It is optional and defaults to 80 for HTTP and 443 for HTTPS. Other schemes may define their own defaults or make it mandatory.
-- user {{optional_inline}}
+- `user` {{optional_inline}}
 
   - : The _user_ is optional and is used for authentication purposes. It is not commonly used in web URIs.
 
