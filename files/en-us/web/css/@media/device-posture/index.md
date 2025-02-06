@@ -36,7 +36,7 @@ In this example, the `device-posture` media feature detects when a device is in 
 }
 ```
 
-To see the above code in action, view the [Device Posture API demo](https://mdn.github.io/dom-examples/device-posture-api/) on a foldable device.
+To see the above code in action, view the [Device Posture API demo](https://mdn.github.io/dom-examples/device-posture-api/) on a foldable device if possible. Current browser developer tools enable emulating foldable devices, but don't include emulation of partially folded devices — only fully open or closed devices — so they will always return `continuous`.
 
 ## Specifications
 

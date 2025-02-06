@@ -43,6 +43,8 @@ The Device Posture API includes features enabling you to run scripts and vary la
 
 You can find a complete example showing all of the features in action in the [Device Posture API demo](https://mdn.github.io/dom-examples/device-posture-api/).
 
+If possible, you should view this on a foldable device. Current browser developer tools enable emulating foldable devices, but don't include emulation of partially folded devices — only fully open or closed — so they will always return `continuous`.
+
 ## Specifications
 
 {{Specifications}}

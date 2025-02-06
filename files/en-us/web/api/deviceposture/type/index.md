@@ -24,9 +24,10 @@ A string representing the device's current posture. The value can be one of:
 ## Examples
 
 ```js
-const postureOutput = document.querySelector("p");
+const postureOutput = document.getElementById("currentPosture");
 
 function reportPostureOutput() {
+  // type property returns "continuous" or "folded"
   postureOutput.textContent = `Device posture: ${navigator.devicePosture.type}`;
 }
 
