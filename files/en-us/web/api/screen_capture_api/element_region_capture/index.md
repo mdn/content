@@ -10,13 +10,22 @@ This guide provides a walkthrough of typical usage of the Element Capture and Re
 
 ## Background
 
-By default, the [Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API) captures an entire screen, window, or tab. The Element Capture and Region Capture extensions to the API enable you to restrict the captured stream to a specific rendered DOM tree, or to the part of the screen defined by a specific DOM tree's bounding box.
+By default, the [Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API) captures an entire screen, window, or tab. The Element Capture and Region Capture APIs respectively enable you to restrict the captured stream to a specific rendered DOM tree, or to the part of the screen defined by a specific DOM tree's bounding box.
 
 This is useful when you want to share only a limited region to cut down on unnecessary bandwidth or screen space required to show the capture, or for privacy reasons (you might not want to show other participants your message notifications, or background settings required to run the demo you are sharing).
 
 In addition, when capturing your web cam output, you can end up with one of those undesirable "infinite wormhole" or "hall of mirrors" type effects. The Element Capture and Region Capture APIs can help you avoid these kinds of problems too.
 
-In the next section we'll start with a basic Screen Capture API demo to illustrate the issues described above.
+## When to use each API
+
+The Element Capture API captures the element itself (and its descendants), whereas the Region Capture API captures the area of the browser tab defined by the bounding box of the target element. Element Capture will always show just the captured element, even if other DOM content overlaps it, whereas Region Capture can result in overlapping content being shown over the top of the content you intended to share.
+
+There are legitimate use cases for both:
+
+- If you need to keep the capture specific to one DOM tree, and exclude anything outside it, then the Element Capture API is a better choice. For example, you don't want private content such as a set of message notifications or a speaker notes UI showing up in the capture.
+- However, if you really do want to capture a region of the browser tab, regardless of what is shown in it, the Region Capture API will serve you well. The [Region Capture Demo](https://region-capture-demo.glitch.me/) (see the [source code](https://glitch.com/edit/#!/region-capture-demo)) shows a useful possibility — zooming in on a particular area of the tab as you show multiple users an interactive walkthrough of some kind.
+
+In the next section we'll start with a basic Screen Capture API demo to illustrate the issues that the Element Capture and Region Capture APIs were created to solve.
 
 ## Screen Capture API demo
 
@@ -180,7 +189,7 @@ async function startCapture() {
 }
 ```
 
-1. Here, we start by grabbing the media stream as before, using, `mediaDevices.getDisplayMedia()`.
+1. Here, we start by grabbing the media stream as before, using `mediaDevices.getDisplayMedia()`.
 2. We then isolate the video track from the stream using {{domxref("MediaStream.getVideoTracks()")}}.
 3. We create the necessary `restrictionTarget` object to apply the restriction to the video track by running {{domxref("RestrictionTarget.fromElement_static", "RestrictionTarget.fromElement()")}}, passing to it the DOM element reference we grabbed earlier.
 4. We apply the restriction target to the track by calling {{domxref("BrowserCaptureMediaStreamTrack.restrictTo()")}} on it, passing it the `restrictionTarget` object.
@@ -197,14 +206,9 @@ Try running the [Element Capture API example](https://mdn.github.io/dom-examples
 
 ### Restrictions on the Element Capture API
 
-To ensure that the element is **eligible for restriction**, that is, it will be captured when chosen as the restriction target element, it must:
+To ensure that the element is **eligible for restriction**, that is, it will be captured when chosen as the restriction target element, it must form a [stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context) and be flattened in 3D space.
 
-- Form a [stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context).
-- Be flattened in 3D space.
-- Be on-screen.
-- Not be hidden via `display: none`.
-
-To handle the first two restrictions, we've set the following additional CSS rule that targets the demo container element:
+To handle these restrictions, we've set the following additional CSS rule that targets the demo container element:
 
 ```css
 #demo {
@@ -219,10 +223,7 @@ To handle the first two restrictions, we've set the following additional CSS rul
 
 The {{cssxref("isolation")}} property is set to `isolate` to make the element form a stacking context, and the {{cssxref("transform-style")}} property is set to `flat` to flatten it. Also, because of the nature of the isolation we've set, the element will no longer inherit the page's default white color. As a result, we set {{cssxref("background-color")}} to `white` to stop the capture being transparent.
 
-Other restrictions are as follows:
-
-- When the element is captured, any alpha-channel value set on it is not included. If the restriction target element is semi-transparent, it will end up looking different in the capture.
-- The element will not be captured if the track being restricted has clones or is not a track captured from the user's screen.
+For the full list of restrictions on the elements that can be used as restriction targets, see the [`RestrictionTarget.fromElement()`](/en-US/docs/Web/API/RestrictionTarget/fromElement_static#element) reference page.
 
 ## The Region Capture API
 
@@ -271,36 +272,23 @@ Try running the [Region Capture API example](https://mdn.github.io/dom-examples/
 
 ### Restrictions on the Region Capture API
 
-To ensure that the element is **eligible for cropping**, that is, it will be captured when chosen as the crop target element, it must be on-screen, and not hidden (for example, via `display: none`). Region Capture doesn't have the same level of restrictions as Element Capture — it is cropping the stream to a particular size, rather than broadcasting a specific rendered DOM tree, so it doesn't require this rule:
+Region Capture doesn't have the same level of restrictions as Element Capture — it is cropping the stream to a particular size, rather than broadcasting a specific rendered DOM tree, so it doesn't require this rule:
 
 ```css
 #demo {
-  isolation: isolate;
   /* Forms a stacking context */
-  transform-style: flat;
+  isolation: isolate;
   /* Flattened */
+  transform-style: flat;
+  /* Explicit background color to stop the capture being transparent */
   background-color: white;
 }
 ```
 
-Other restrictions are as follows:
-
-- The element will not be cropped to if the track being cropped has clones or is not a track captured from the user's screen.
-- The element will not be captured if the `cropTarget` was created in a tab other than the one being captured.
-- Because Region Capture crops to an area of the current browser tab rather than capturing a specific element, any content drawn on top of the cropped area will be shown in the stream.
-
-## When to use each API
-
-As explained above, Element Capture captures the element itself (and its descendants), whereas Region Capture captures the area of the browser tab defined by the bounding box of the target element. Element Capture will always show just the captured element, even if other DOM content overlaps it, whereas Region Capture can result in overlapping content being shown over the top of the content you intended to share.
-
-There are legitimate use cases for both:
-
-- If you need to keep the capture specific to one DOM tree, and exclude anything outside it, then the Element Capture API is a better choice. For example, you don't want private content such as a set of message notifications or a speaker notes UI showing up in the capture.
-- However, if you really do want to capture a region of the browser tab, regardless of what is shown in it, the Region Capture API will serve you well. The [Region Capture Demo](https://region-capture-demo.glitch.me/) (see the [source code](https://glitch.com/edit/#!/region-capture-demo)) shows a useful possibility — zooming in on a particular area of the tab as you show multiple users an interactive walkthrough of some kind.
+However, there are still restrictions on the elements that can be used as crop targets. For the full list, see the [`CropTarget.fromElement()`](/en-US/docs/Web/API/CropTarget/fromElement_static#element) reference page.
 
 ## See also
 
-- [Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API)
 - [Capture a video stream from any element](https://developer.chrome.com/docs/web-platform/element-capture) on developer.chrome.com (2025)
 - [Better tab sharing with Region Capture](https://developer.chrome.com/docs/web-platform/region-capture) on developer.chrome.com (2023)
 - [Element Capture Demo](https://element-capture-demo.glitch.me/)

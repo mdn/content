@@ -31,24 +31,19 @@ The {{jsxref("Promise")}} returned by `getDisplayMedia()` resolves to a {{domxre
 
 See the article [Using the Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API/Using_Screen_Capture) for a more in-depth look at how to use the API to capture screen contents as a stream.
 
-## Screen Capture extensions
+The Screen Capture API also has features that limit the part of the screen captured in the stream:
 
-There are several APIs that extend the Screen Capture API functionality with additional functionality, for example to limit the part of the screen captured in the stream to a particular crop or element:
-
-- The **Element Capture API** restricts the captured region to a specified rendered DOM element.
+- The **Element Capture API** restricts the captured region to a specified rendered DOM element and its descendants.
 - The **Region Capture API** crops the captured region to the area of the screen in which a specified DOM element is rendered.
 
 See [Using the Element Capture and Region Capture APIs](/en-US/docs/Web/API/Screen_Capture_API/Element_Region_Capture) to learn more.
 
 ## Interfaces
 
-- {{domxref("CaptureController")}}
-  - : Provides methods that can be used to further manipulate a capture session separate from its initiation via {{domxref("MediaDevices.getDisplayMedia()")}}. A `CaptureController` object is associated with a capture session by passing it into a {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} call as the value of the options object's `controller` property.
-
-## Screen Capture extension interfaces
-
 - {{domxref("BrowserCaptureMediaStreamTrack")}}
   - : Represents a single video track; extends the {{domxref("MediaStreamTrack")}} class with methods to limit the part of a self-capture stream (for example, a user's screen or window) that is captured.
+- {{domxref("CaptureController")}}
+  - : Provides methods that can be used to further manipulate a capture session separate from its initiation via {{domxref("MediaDevices.getDisplayMedia()")}}. A `CaptureController` object is associated with a capture session by passing it into a {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} call as the value of the options object's `controller` property.
 - {{domxref("CropTarget")}}
   - : Provides a static method, {{domxref("CropTarget.fromElement_static", "fromElement()")}}, which returns a {{domxref("CropTarget")}} instance that can be used to crop a captured video track to the area in which a specified element is rendered.
 - {{domxref("RestrictionTarget")}}

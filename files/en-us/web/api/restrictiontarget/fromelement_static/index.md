@@ -27,7 +27,9 @@ RestrictionTarget.fromElement(element)
     - Be rendered (for example, not be off-screen or hidden via `display: none`).
     - Contain only one box fragment (for example, not be broken across multiple lines).
 
-      If it does not meet the above criteria, it is considered to be **not eligible for restriction**.
+    If it does not meet the above criteria, it is considered to be **not eligible for restriction**.
+
+    In addition, the element will not be captured if the track being restricted has clones (that is, created by {{domxref("BrowserCaptureMediaStreamTrack.clone()")}}) or is captured from a different tab to the current user's tab (passed via {{domxref("Window.postMessage()")}}, for example).
 
 > [!NOTE]
 > When the element is captured, any alpha-channel value set on it is not included. If the restriction target element is semi-transparent, it will end up completely opaque in the capture and therefore end up looking different.
@@ -36,7 +38,7 @@ RestrictionTarget.fromElement(element)
 
 A {{jsxref("Promise")}} that resolves to a {{domxref("RestrictionTarget")}} object instance, which can then be passed to {{domxref("BrowserCaptureMediaStreamTrack.restrictTo()")}} to restrict the video captured in the track to just the particular DOM element the `RestrictionTarget` was created with.
 
-`RestrictionTarget` objects are serializable. They can be passed to another document using {{domxref("Window.postMessage()")}}, for example.
+`RestrictionTarget` objects are serializable. They can be passed to another document using mechanisms such as {{domxref("Window.postMessage()")}}.
 
 The promise will reject if the restriction target element is not eligible for restriction.
 

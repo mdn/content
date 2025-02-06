@@ -15,7 +15,7 @@ The **`clone()`** method of the {{domxref("BrowserCaptureMediaStreamTrack")}} in
 This method is functionally identical to {{domxref("MediaStreamTrack.clone()")}}, except that it handles cases where cropping or restriction have been applied to the track. The returned clone is identical to the original `BrowserCaptureMediaStreamTrack`, but with any cropping or restriction removed.
 
 > [!NOTE]
-> When attempting to crop a captured stream using {{domxref("BrowserCaptureMediaStreamTrack.cropTo", "cropTo()")}} or restrict it using {{domxref("BrowserCaptureMediaStreamTrack.restrictTo", "restrictTo()")}}, elements will not be cropped or restricted to if the track being captured has clones.
+> If a track has clones, its {{domxref("BrowserCaptureMediaStreamTrack.cropTo", "cropTo()")}} and {{domxref("BrowserCaptureMediaStreamTrack.restrictTo", "restrictTo()")}} methods will reject.
 
 ## Syntax
 
