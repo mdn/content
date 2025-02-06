@@ -15,11 +15,11 @@ To mutate the matrix as you rotate it, see {{domxref("DOMMatrix.rotateAxisAngleS
 ## Syntax
 
 ```js-nolint
-DOMMatrixReadOnly.rotateAxisAngle()
-DOMMatrixReadOnly.rotateAxisAngle(rotX)
-DOMMatrixReadOnly.rotateAxisAngle(rotX, rotY)
-DOMMatrixReadOnly.rotateAxisAngle(rotX, rotY, rotZ)
-DOMMatrixReadOnly.rotateAxisAngle(rotX, rotY, rotZ, angle)
+rotateAxisAngle()
+rotateAxisAngle(rotX)
+rotateAxisAngle(rotX, rotY)
+rotateAxisAngle(rotX, rotY, rotZ)
+rotateAxisAngle(rotX, rotY, rotZ, angle)
 ```
 
 ### Parameters

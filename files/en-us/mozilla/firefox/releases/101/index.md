@@ -43,7 +43,7 @@ No notable changes.
 
 #### Media, WebRTC, and Web Audio
 
-- [AV1 codec parameters](/en-US/docs/Web/Media/Formats/codecs_parameter#av1) are now properly parsed in media support queries.
+- [AV1 codec parameters](/en-US/docs/Web/Media/Guides/Formats/codecs_parameter#av1) are now properly parsed in media support queries.
   This means that [`MediaCapabilities.decodingInfo()`](/en-US/docs/Web/API/MediaCapabilities/decodingInfo), [`HTMLMediaElement.canPlayType()`](/en-US/docs/Web/API/HTMLMediaElement/canPlayType), and [`MediaSource.isTypeSupported()`](/en-US/docs/Web/API/MediaSource/isTypeSupported_static) will now accurately report support for playback for AV1 sources based on the provided codec parameters.
   [`MediaCapabilities.decodingInfo()`](/en-US/docs/Web/API/MediaCapabilities/decodingInfo) will also use the information to accurately report on "efficient decoding" of AV1 videos.
   For more information, see [Firefox bug 1757861](https://bugzil.la/1757861).

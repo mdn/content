@@ -69,4 +69,4 @@ For a description of the values, please refer to the [CSS `font-family`](/en-US/
 
 ## See also
 
-- {{cssxref("font-family")}}
+- CSS {{cssxref("font-family")}} property

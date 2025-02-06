@@ -1,5 +1,5 @@
 ---
-title: "::view-transition-new"
+title: ::view-transition-new
 slug: Web/CSS/::view-transition-new
 page-type: css-pseudo-element
 browser-compat: css.selectors.view-transition-new

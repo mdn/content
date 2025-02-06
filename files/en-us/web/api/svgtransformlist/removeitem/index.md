@@ -13,7 +13,7 @@ The `removeItem()` method of the {{domxref("SVGTransformList")}} interface remov
 ## Syntax
 
 ```js-nolint
-SVGTransformList.removeItem(index)
+removeItem(index)
 ```
 
 ### Parameters

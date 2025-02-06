@@ -13,11 +13,7 @@ If this hasn't been set yet, this is `null`.
 
 The returned value typically reflects a remote description which has been received over the signaling server (as either an offer or an answer) and then put into effect by your code calling {{domxref("RTCPeerConnection.setRemoteDescription()")}} in response.
 
-## Syntax
-
-```js-nolint
-const sessionDescription = peerConnection.remoteDescription
-```
+## Value
 
 On a more fundamental level, the returned value is the value of {{domxref("RTCPeerConnection.pendingRemoteDescription")}} if that property isn't
 `null`;

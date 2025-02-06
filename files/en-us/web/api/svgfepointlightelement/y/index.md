@@ -1,6 +1,6 @@
 ---
 title: "SVGFEPointLightElement: y property"
-short-title: "y"
+short-title: y
 slug: Web/API/SVGFEPointLightElement/y
 page-type: web-api-instance-property
 browser-compat: api.SVGFEPointLightElement.y

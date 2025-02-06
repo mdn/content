@@ -428,6 +428,11 @@ See below how the structure then looks like.
   viewBox="-300 -300 600 600"
   xmlns="http://www.w3.org/2000/svg"
   xmlns:xlink="http://www.w3.org/1999/xlink">
+  <link
+    xmlns="http://www.w3.org/1999/xhtml"
+    rel="stylesheet"
+    href="style8.css"
+    type="text/css" />
   <title>SVG demonstration</title>
   <desc>Mozilla CSS Getting Started - SVG demonstration</desc>
 
@@ -483,4 +488,4 @@ See below how the structure then looks like.
 
 ## What next?
 
-In this demonstration, your SVG-enabled browser already knows how to display SVG elements. The stylesheet only modifies the display in certain ways. This is also true for HTML documents. But you can use CSS for general-purpose XML documents, where there is no predefined way to display the elements. The next page demonstrates this: [XML introduction](/en-US/docs/Web/XML/XML_introduction)
+In this demonstration, your SVG-enabled browser already knows how to display SVG elements. The stylesheet only modifies the display in certain ways. This is also true for HTML documents. But you can use CSS for general-purpose XML documents, where there is no predefined way to display the elements. The next page demonstrates this: [XML introduction](/en-US/docs/Web/XML/Guides/XML_introduction)

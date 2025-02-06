@@ -41,6 +41,11 @@ A new `Temporal.PlainDate` object representing the date specified by the origina
 
 Subtracting a duration is equivalent to [adding](Web/JavaScript/Reference/Global_Objects/Temporal/PlainDate/add) its [negation](Web/JavaScript/Reference/Global_Objects/Temporal/Duration/negated), so all the same considerations apply.
 
+### Exceptions
+
+- {{jsxref("RangeError")}}
+  - : Thrown if the result is not in the [representable range](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal#representable_dates), which is ±(10<sup>8</sup> + 1) days, or about ±273,972.6 years, from the Unix epoch.
+
 ## Examples
 
 ### Subtracting a duration

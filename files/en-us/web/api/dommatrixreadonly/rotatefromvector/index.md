@@ -15,9 +15,9 @@ To mutate the matrix as you rotate it by the angle between the specified vector 
 ## Syntax
 
 ```js-nolint
-DOMMatrixReadOnly.rotateFromVector()
-DOMMatrixReadOnly.rotateFromVector(rotX)
-DOMMatrixReadOnly.rotateFromVector(rotX, rotY)
+rotateFromVector()
+rotateFromVector(rotX)
+rotateFromVector(rotX, rotY)
 ```
 
 ### Parameters

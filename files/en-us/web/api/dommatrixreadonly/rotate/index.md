@@ -15,18 +15,18 @@ To mutate the matrix as you rotate it, see {{domxref("DOMMatrix.rotateSelf()")}}
 ## Syntax
 
 ```js-nolint
-DOMMatrixReadOnly.rotate()
-DOMMatrixReadOnly.rotate(rotX)
-DOMMatrixReadOnly.rotate(rotX, rotY)
-DOMMatrixReadOnly.rotate(rotX, rotY, rotZ)
+rotate()
+rotate(rotX)
+rotate(rotX, rotY)
+rotate(rotX, rotY, rotZ)
 ```
 
 ### Parameters
 
 - `rotX`
-  - : A number; the x-coordinate of the vector denoting the axis of rotation. If non-zero, [`is2D`](/en-US/docs/Web/API/DOMMatrix#is2d) is false.
+  - : A number; the x-coordinate of the vector denoting the axis of rotation. If non-zero, [`is2D`](/en-US/docs/Web/API/DOMMatrixReadonly/is2D) is false.
 - `rotY` {{optional_inline}}
-  - : A number; the y-coordinate of the vector denoting the axis of rotation. If non-zero, [`is2D`](/en-US/docs/Web/API/DOMMatrix#is2d) is false.
+  - : A number; the y-coordinate of the vector denoting the axis of rotation. If non-zero, [`is2D`](/en-US/docs/Web/API/DOMMatrixReadonly/is2D) is false.
 - `rotZ` {{optional_inline}}
   - : A number; the z-coordinate of the vector denoting the axis of rotation.
 

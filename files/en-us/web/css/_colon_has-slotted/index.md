@@ -1,5 +1,5 @@
 ---
-title: ":has-slotted"
+title: :has-slotted
 slug: Web/CSS/:has-slotted
 page-type: css-pseudo-class
 status:

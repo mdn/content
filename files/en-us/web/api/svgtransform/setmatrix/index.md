@@ -15,7 +15,7 @@ Note that the values from the parameter `matrix` are copied, meaning changes to 
 ## Syntax
 
 ```js-nolint
-SVGTransform.setMatrix(matrix)
+setMatrix(matrix)
 ```
 
 ### Parameters
