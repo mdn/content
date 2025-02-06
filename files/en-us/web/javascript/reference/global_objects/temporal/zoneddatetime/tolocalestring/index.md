@@ -43,7 +43,7 @@ See the [`Intl.DateTimeFormat()` constructor](/en-US/docs/Web/JavaScript/Referen
 
 A string representing the given date-time according to language-specific conventions.
 
-In implementations with `Intl.DateTimeFormat`, this is equivalent to `new Intl.DateTimeFormat(locales, options).format(dateTime.toInstant())`, where `options` has been normalized as described above.
+In implementations with `Intl.DateTimeFormat`, this is equivalent to `new Intl.DateTimeFormat(locales, { ...options, timeZone: dateTime.timeZoneId }).format(dateTime.toInstant())`, where `options` has been normalized as described above.
 
 > [!NOTE]
 > Most of the time, the formatting returned by `toLocaleString()` is consistent. However, the output may vary between implementations, even within the same locale — output variations are by design and allowed by the specification. It may also not be what you expect. For example, the string may use non-breaking spaces or be surrounded by bidirectional control characters. You should not compare the results of `toLocaleString()` to hardcoded constants.
