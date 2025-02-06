@@ -9,7 +9,16 @@ browser-compat: javascript.builtins.Intl.DateTimeFormat.supportedLocalesOf
 
 The **`Intl.DateTimeFormat.supportedLocalesOf()`** static method returns an array containing those of the provided locales that are supported in date and time formatting without having to fall back to the runtime's default locale.
 
-{{EmbedInteractiveExample("pages/js/intl-datetimeformat-supportedlocalesof.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Intl.DateTimeFormat.supportedLocalesOf", "shorter")}}
+
+```js interactive-example
+const locales1 = ["ban", "id-u-co-pinyin", "de-ID"];
+const options1 = { localeMatcher: "lookup" };
+
+console.log(Intl.DateTimeFormat.supportedLocalesOf(locales1, options1));
+// Expected output: Array ["id-u-co-pinyin", "de-ID"]
+// (Note: the exact output may be browser-dependent)
+```
 
 ## Syntax
 

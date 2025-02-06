@@ -9,7 +9,22 @@ browser-compat: javascript.builtins.String.@@iterator
 
 The **`[Symbol.iterator]()`** method of {{jsxref("String")}} values implements the [iterable protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) and allows strings to be consumed by most syntaxes expecting iterables, such as the [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) and {{jsxref("Statements/for...of", "for...of")}} loops. It returns a [string iterator object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator) that yields the Unicode code points of the string value as individual strings.
 
-{{EmbedInteractiveExample("pages/js/string-prototype-@@iterator.html")}}
+{{InteractiveExample("JavaScript Demo: String.prototype[Symbol.iterator]()")}}
+
+```js interactive-example
+const str = "The quick red fox jumped over the lazy dog's back.";
+
+const iterator = str[Symbol.iterator]();
+let theChar = iterator.next();
+
+while (!theChar.done && theChar.value !== " ") {
+  console.log(theChar.value);
+  theChar = iterator.next();
+  // Expected output: "T"
+  //                  "h"
+  //                  "e"
+}
+```
 
 ## Syntax
 

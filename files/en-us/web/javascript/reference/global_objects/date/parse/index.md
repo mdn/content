@@ -11,7 +11,18 @@ The **`Date.parse()`** static method parses a string representation of a date, a
 
 Only the [date time string format](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#date_time_string_format) is explicitly specified to be supported. Other formats are implementation-defined and may not work across all browsers. A library can help if many different formats are to be accommodated.
 
-{{EmbedInteractiveExample("pages/js/date-parse.html")}}
+{{InteractiveExample("JavaScript Demo: Date.parse()")}}
+
+```js interactive-example
+const unixTimeZero = Date.parse("01 Jan 1970 00:00:00 GMT");
+const javaScriptRelease = Date.parse("04 Dec 1995 00:12:00 GMT");
+
+console.log(unixTimeZero);
+// Expected output: 0
+
+console.log(javaScriptRelease);
+// Expected output: 818035920000
+```
 
 ## Syntax
 

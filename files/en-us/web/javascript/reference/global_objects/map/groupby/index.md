@@ -14,7 +14,25 @@ The **`Map.groupBy()`** static method groups the elements of a given iterable us
 
 The method is primarily useful when grouping elements that are associated with an object, and in particular when that object might change over time. If the object is invariant, you might instead represent it using a string, and group elements with {{jsxref("Object.groupBy()")}}.
 
-{{EmbedInteractiveExample("pages/js/map-groupby.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Map.groupBy()", "taller")}}
+
+```js interactive-example
+const inventory = [
+  { name: "asparagus", type: "vegetables", quantity: 9 },
+  { name: "bananas", type: "fruit", quantity: 5 },
+  { name: "goat", type: "meat", quantity: 23 },
+  { name: "cherries", type: "fruit", quantity: 12 },
+  { name: "fish", type: "meat", quantity: 22 },
+];
+
+const restock = { restock: true };
+const sufficient = { restock: false };
+const result = Map.groupBy(inventory, ({ quantity }) =>
+  quantity < 6 ? restock : sufficient,
+);
+console.log(result.get(restock));
+// [{ name: "bananas", type: "fruit", quantity: 5 }]
+```
 
 ## Syntax
 
