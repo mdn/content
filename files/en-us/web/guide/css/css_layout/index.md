@@ -77,7 +77,7 @@ CSS Grid Layout introduces a two-dimensional grid system to CSS. Grids can be us
   - : How to name lines, and place items by line name rather than number.
 - [Auto-placement in CSS Grid Layout](/en-US/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout)
   - : How to manage the auto-placement algorithm, and understand how the browser places items.
-- [Aligning items in CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
+- [Box alignment in CSS Grid Layout](/en-US/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
   - : How to align items, and distribute space on both axes in grid.
 - [CSS Grid, Logical Values and Writing Modes](/en-US/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)
   - : How to use flow relative, rather than physical, properties and values with grid.
