@@ -13,7 +13,7 @@ The **`toJSON()`** method of the {{domxref("DOMMatrixReadOnly")}} interface crea
 ## Syntax
 
 ```js-nolint
-DOMMatrixReadOnly.toJSON()
+toJSON()
 ```
 
 ### Parameters

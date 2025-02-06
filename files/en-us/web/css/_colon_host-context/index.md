@@ -1,5 +1,5 @@
 ---
-title: ":host-context()"
+title: :host-context()
 slug: Web/CSS/:host-context
 page-type: css-pseudo-class
 browser-compat: css.selectors.host-context

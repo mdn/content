@@ -2,9 +2,8 @@
 title: Promote
 slug: WebAssembly/Reference/Numeric/Promote
 page-type: webassembly-instruction
+sidebar: webassemblysidebar
 ---
-
-{{WebAssemblySidebar}}
 
 The **`promote`** instruction, is used to convert (promote) numbers of type `f32` to type `f64`.
 

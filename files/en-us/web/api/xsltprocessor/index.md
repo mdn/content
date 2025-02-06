@@ -7,7 +7,7 @@ browser-compat: api.XSLTProcessor
 
 {{APIRef("XSLT")}}
 
-An **`XSLTProcessor`** applies an [XSLT](/en-US/docs/Web/XSLT) stylesheet transformation to an XML document to
+An **`XSLTProcessor`** applies an [XSLT](/en-US/docs/Web/XML/XSLT) stylesheet transformation to an XML document to
 produce a new XML document as output. It has methods to load the XSLT stylesheet, to
 manipulate `<xsl:param>` parameter values, and to apply the
 transformation to documents.
@@ -328,7 +328,7 @@ async function sort() {
 
 ## See also
 
-- [XSLT](/en-US/docs/Web/XSLT)
+- [XSLT](/en-US/docs/Web/XML/XSLT)
 - [What kind of language is XSLT?](https://developer.ibm.com/technologies/web-development/) at [IBM developer](https://developer.ibm.com/)
 - [XSLT Tutorial](https://zvon.org/xxl/XSLTutorial/Books/Book1/index.html) at [zvon.org](https://zvon.org/)
 - [XPath Tutorial](https://zvon.org/xxl/XPathTutorial/General/examples.html) at [zvon.org](https://zvon.org/)

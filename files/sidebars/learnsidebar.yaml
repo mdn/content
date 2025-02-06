@@ -311,6 +311,33 @@ l10n:
     Web_forms: Webformulare — Arbeiten mit Benutzerdaten
     Django_web_framework_(Python): Django Web-Framework (Python)
     Further_resources: Weitere Ressourcen
+    Getting_started_modules: Einstiegsmodule
+    Environment_setup: Umgebung einrichten
+    Your_first_website: Ihre erste Website
+    Web_standards: Webstandards
+    Soft_skills: Soziale Kompetenzen
+    Core_modules: Kernmodule
+    Structuring_content_with_HTML: Inhalte mit HTML strukturieren
+    CSS_styling_basics: Grundlagen des CSS-Stylings
+    CSS_text_styling: CSS-Textgestaltung
+    Dynamic_scripting_with_JavaScript: Dynamisches Scripting mit JavaScript
+    JavaScript_frameworks_and_libraries: JavaScript-Frameworks und -Bibliotheken
+    Accessibility: Barrierefreiheit
+    Design_for_developers: Design für Entwickler:innen
+    Version_control: Versionskontrolle
+    Extension_modules: Erweiterungsmodule
+    Understanding_client-side_tools: Verständnis für clientseitige Tools
+    Server-side_websites: Serverseitige Programmierung
+    Server-side_first_steps: Erste Schritte auf der Serverseite
+    Express_web_framework_(Node.js): Express Web-Framework (Node.js)
+    Web_performance: Web-Performance
+    Testing: Tests
+    Transform_and_animate_CSS: CSS transformieren und animieren
+    Security_and_privacy: Sicherheit und Datenschutz
+    How_to_solve_common_problems: Häufige Probleme lösen
+    About: Über
+    Resources_for_educators: Ressourcen für Lehrkräfte
+    Changelog: Änderungsprotokoll
   en-US:
     Getting_started_modules: Getting started modules
     Environment_setup: Environment setup
@@ -360,12 +387,39 @@ l10n:
     Django_web_framework_(Python): Веб-фреймворк Django (Python)
     Further_resources: Дальнейшее чтение
   zh-CN:
+    Getting_started_modules: 入门模块
+    Environment_setup: 配置环境
+    Your_first_website: 你的第一个网站
+    Web_standards: Web 标准
+    Soft_skills: 软性技能
+    Core_modules: 核心模块
+    Structuring_content_with_HTML: 使用 HTML 构建内容
+    CSS_styling_basics: CSS 样式基础
+    CSS_text_styling: CSS 文本样式
     CSS_layout: CSS 排版
-    Asynchronous_JavaScript: 异步 JavaScript
+    Dynamic_scripting_with_JavaScript: 使用 JavaScript 动态编码
+    JavaScript_frameworks_and_libraries: JavaScript 架构和库
+    Accessibility: 无障碍
+    Design_for_developers: 为开发人员设计
+    Version_control: 版本控制
+    Extension_modules: 扩展模块
     Client-side_web_APIs: 客户端 Web API
-    Web_forms: Web 表单——与用户数据打交道
-    Django_web_framework_(Python): Django Web 框架（Python）
+    Asynchronous_JavaScript: 异步 JavaScript
+    Web_forms: Web 表单
+    Understanding_client-side_tools: 理解客户端工具
+    Server-side_websites: 服务端网站
+    Server-side_first_steps: 服务端基础
+    Django_web_framework_(Python): Django web 框架（Python）
+    Express_web_framework_(Node.js): Express web 框架（Node.js）
+    Web_performance: Web 性能
+    Testing: 测试
+    Transform_and_animate_CSS: CSS 变换与动画化
+    Security_and_privacy: 安全与隐私
     Further_resources: 更多资源
+    How_to_solve_common_problems: 如何解决常见问题
+    About: 关于
+    Resources_for_educators: 面向教育工作者的资源
+    Changelog: 更新日志
   zh-TW:
     CSS_layout: CSS 版面配置
     Asynchronous_JavaScript: 非同步的 JavaScript

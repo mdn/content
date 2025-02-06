@@ -21,7 +21,7 @@ There are a number of guides within MDN docs. These articles aim to add addition
 
 - [Learn to style HTML using CSS](/en-US/docs/Learn_web_development/Core/Styling_basics)
   - : Our complete CSS tutorial, taking you from first steps through styling text, creating layouts, and more.
-- [CSS Layout Guides](/en-US/docs/Web/Guide/CSS/CSS_Layout)
+- [CSS Layout Guides](/en-US/docs/Web/CSS/Guides)
   - : There are a large number of guides to CSS Layout across MDN, this page collects them all together.
 - [Using CSS animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations)
   - : CSS animations make it possible to animate transitions from one CSS style configuration to another. This guide will help you get started with the animation properties.
@@ -33,9 +33,9 @@ There are a number of guides within MDN docs. These articles aim to add addition
 
 ## Media
 
-- [Audio and video delivery](/en-US/docs/Web/Media/Audio_and_video_delivery)
+- [Audio and video delivery](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery)
   - : We can deliver audio and video on the web in several ways, ranging from 'static' media files to adaptive live streams. This article is intended as a starting point for exploring the various delivery mechanisms of web-based media and compatibility with popular browsers.
-- [Audio and video manipulation](/en-US/docs/Web/Media/Audio_and_video_manipulation)
+- [Audio and video manipulation](/en-US/docs/Web/Media/Guides/Audio_and_video_manipulation)
   - : The beauty of the web is that you can combine technologies to create new forms. Having native audio and video in the browser means we can use these data streams with technologies such as {{htmlelement("canvas")}}, [WebGL](/en-US/docs/Web/API/WebGL_API) or [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) to modify audio and video directly, for example adding reverb/compression effects to audio, or grayscale/sepia filters to video. This article provides a reference to explain what you need to do.
 
 ## APIs
@@ -44,7 +44,7 @@ There are a number of guides within MDN docs. These articles aim to add addition
   - : The [`FormData`](/en-US/docs/Web/API/FormData) object lets you compile a set of key/value pairs to send using {{domxref("Window/fetch", "fetch()")}}. It's primarily intended for sending form data, but can be used independently of forms to transmit keyed data. The transmission is in the same format that the form's `submit()` method would use to send the data if the form's encoding type were set to "multipart/form-data".
 - [Progressive web apps](/en-US/docs/Web/Progressive_web_apps#core_pwa_guides)
   - : Progressive web apps (PWAs) use modern web APIs along with traditional progressive enhancement strategy to create cross-platform web applications. These apps work everywhere and provide several features that give them the same user experience advantages as native apps. This set of guides tells you all you need to know about PWAs.
-- [Parsing and serializing XML](/en-US/docs/Web/XML/Parsing_and_serializing_XML)
+- [Parsing and serializing XML](/en-US/docs/Web/XML/Guides/Parsing_and_serializing_XML)
   - : The web platform provides different methods of parsing and serializing XML, each with its pros and cons.
 
 ## Performance

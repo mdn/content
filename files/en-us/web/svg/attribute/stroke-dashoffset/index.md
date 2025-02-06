@@ -134,3 +134,7 @@ The offset is usually expressed in user units resolved against the {{SVGAttr('pa
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- CSS {{cssxref("stroke-dashoffset")}} property

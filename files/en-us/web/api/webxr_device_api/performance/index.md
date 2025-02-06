@@ -32,7 +32,7 @@ When using libraries that perform things such as matrix mathematics, you typical
 
 While an individual vector or matrix doesn't occupy an inordinate amount of memory, the sheer number of vectors and matrices and other structures that are used to build each frame of a 3D scene means the memory management becomes a problem eventually if you keep allocating and de-allocating memory objects.
 
-Consider the following
+Consider the following:
 
 ```js
 function drawScene(gl, view, programInfo, buffers, texture, deltaTime) {
