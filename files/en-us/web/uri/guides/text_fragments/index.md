@@ -1,6 +1,6 @@
 ---
 title: Text fragments
-slug: Web/URI/Fragment/Text_fragments
+slug: Web/URI/Guides/Text_fragments
 page-type: guide
 browser-compat:
   - html.elements.a.text_fragments

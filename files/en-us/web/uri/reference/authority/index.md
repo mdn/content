@@ -1,6 +1,6 @@
 ---
 title: URI authority
-slug: Web/URI/Authority
+slug: Web/URI/Reference/Authority
 page-type: guide
 spec-urls: https://www.rfc-editor.org/rfc/rfc3986.html#section-3.1
 ---
@@ -47,4 +47,4 @@ user@host:port
 ## See also
 
 - [URIs](/en-US/docs/Web/URI)
-- [Choosing between www and non-www URLs](/en-US/docs/Web/URI/Authority/Choosing_between_www_and_non-www_URLs)
+- [Choosing between www and non-www URLs](/en-US/docs/Web/URI/Reference/Authority/Choosing_between_www_and_non-www_URLs)

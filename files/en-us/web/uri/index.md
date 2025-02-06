@@ -63,7 +63,7 @@ FTP is still acceptable at the top level (such as typed directly into the browse
 
 ### Authority
 
-The URI [_authority_](/en-US/docs/Web/URI/Authority) is comprised of user info (optional and usually unspecified), the host name, and the port.
+The URI [_authority_](/en-US/docs/Web/URI/Reference/Authority) is comprised of user info (optional and usually unspecified), the host name, and the port.
 
 ![Domain Name](mdn-url-domain@x2.png)
 
@@ -91,7 +91,7 @@ The URI [_authority_](/en-US/docs/Web/URI/Authority) is comprised of user info (
 
 `#SomewhereInTheDocument` is the [_fragment_](/en-US/docs/Web/URI/Fragment) of the URL, which is an anchor to another part of the resource itself. An anchor represents a sort of "bookmark" inside the resource, giving the browser the directions to show the content located at that "bookmarked" spot. On an HTML document, for example, the browser will scroll to the point where the anchor is defined; on a video or audio document, the browser will try to go to the time the anchor represents. It is worth noting that the part after the #, also known as the fragment identifier, is never sent to the server with the request.
 
-There's a special [text fragment](/en-US/docs/Web/URI/Fragment/Text_fragments) feature that allows you to link to a specific part of a web page identified by its text content.
+There's a special [text fragment](/en-US/docs/Web/URI/Guides/Text_fragments) feature that allows you to link to a specific part of a web page identified by its text content.
 
 ## Examples
 
