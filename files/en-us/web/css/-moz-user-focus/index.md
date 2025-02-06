@@ -1,5 +1,5 @@
 ---
-title: "-moz-user-focus"
+title: -moz-user-focus
 slug: Web/CSS/-moz-user-focus
 page-type: css-property
 status:

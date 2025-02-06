@@ -1,5 +1,5 @@
 ---
-title: "-webkit-border-before"
+title: -webkit-border-before
 slug: Web/CSS/-webkit-border-before
 page-type: css-shorthand-property
 status:

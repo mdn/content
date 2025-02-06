@@ -2,9 +2,8 @@
 title: Communication channels
 slug: MDN/Community/Communication_channels
 page-type: mdn-community-guide
+sidebar: mdnsidebar
 ---
-
-{{MDNSidebar}}
 
 There are various communication channels that the community can use to contact MDN Web Docs staff and participate in discussions.
 
@@ -56,7 +55,7 @@ You can use the forums listed below for discussing code problems.
 
 ## Localization channels
 
-Each localization team has its own [method of communication](/en-US/docs/MDN/Community/Contributing/Translated_content).
+Each localization team has its own [method of communication](/en-US/docs/MDN/Community/Translated_content).
 
 ## Email
 

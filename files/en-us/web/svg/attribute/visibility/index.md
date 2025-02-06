@@ -169,4 +169,4 @@ button.addEventListener("click", (evt) => {
 ## See also
 
 - {{SVGAttr("display")}} attribute
-- {{cssxref("visibility")}}
+- CSS {{cssxref("visibility")}} property

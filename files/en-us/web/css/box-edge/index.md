@@ -15,9 +15,9 @@ The box-edge keywords are the components of, but not limited to, the data types 
 
 ```plain
 <visual-box> = content-box | padding-box | border-box /* the three <box> values */
-<layout-box> = <box> | margin-box /* the <shape-box> values */
-<paint-box> = <box> | fill-box | stroke-box
-<coord-box> = <box> | fill-box | stroke-box | view-box
+<layout-box> = <visual-box> | margin-box /* the <shape-box> values */
+<paint-box> = <visual-box> | fill-box | stroke-box
+<coord-box> = <paint-box> | fill-box | stroke-box | view-box
 <geometry-box> = <shape-box> | fill-box | stroke-box | view-box
 ```
 

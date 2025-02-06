@@ -2,7 +2,7 @@
 title: "console: dirxml() static method"
 short-title: dirxml()
 slug: Web/API/console/dirxml_static
-page-type: web-api-instance-method
+page-type: web-api-static-method
 browser-compat: api.console.dirxml_static
 ---
 

@@ -69,4 +69,4 @@ For a description of the values, please refer to the [CSS `font-style`](/en-US/d
 
 ## See also
 
-- {{cssxref("font-style")}}
+- CSS {{cssxref("font-style")}} property

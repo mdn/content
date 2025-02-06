@@ -45,8 +45,8 @@ There are several types of [response attributes](https://xhr.spec.whatwg.org/) d
 
 If you use `XMLHttpRequest` to get the content of a remote XML document, the {{domxref("XMLHttpRequest.responseXML", "responseXML")}} property will be a DOM object containing a parsed XML document. This could prove difficult to manipulate and analyze. There are four primary ways of analyzing this XML document:
 
-1. Using [XPath](/en-US/docs/Web/XPath) to address (or point to) parts of it.
-2. Manually [Parsing and serializing XML](/en-US/docs/Web/XML/Parsing_and_serializing_XML) to strings or objects.
+1. Using [XPath](/en-US/docs/Web/XML/XPath) to address (or point to) parts of it.
+2. Manually [Parsing and serializing XML](/en-US/docs/Web/XML/Guides/Parsing_and_serializing_XML) to strings or objects.
 3. Using {{domxref("XMLSerializer")}} to serialize **DOM trees to strings or to files**.
 4. {{jsxref("RegExp")}} can be used if you always know the content of the XML document beforehand. You might want to remove line breaks, if you use `RegExp` to scan with regard to line breaks. However, this method is a "last resort" since if the XML code changes slightly, the method will likely fail.
 

@@ -1,0 +1,23 @@
+# Do not add comments to this file. They will be lost.
+
+sidebar:
+  - type: section
+    link: /Web/Media
+    title: Media
+  - type: section
+    link: /Web/Media/Guides
+  - /Web/Media/Guides/Images
+  - /Web/Media/Guides/Audio_and_video_manipulation
+  - /Web/Media/Guides/Autoplay
+  - /Web/Media/Guides/Streaming
+  - /Web/Media/Guides/DASH_Adaptive_Streaming_for_HTML_5_Video
+  - type: listSubPages
+    path: /Web/Media/Guides/Audio_and_video_delivery
+    link: /Web/Media/Guides/Audio_and_video_delivery
+    title: Audio and video delivery
+    details: closed
+  - type: listSubPages
+    path: /Web/Media/Guides/Formats
+    link: /Web/Media/Guides/Formats
+    title: Media formats
+    details: closed

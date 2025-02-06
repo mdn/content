@@ -2,9 +2,8 @@
 title: Ceil
 slug: WebAssembly/Reference/Numeric/Ceil
 page-type: webassembly-instruction
+sidebar: webassemblysidebar
 ---
-
-{{WebAssemblySidebar}}
 
 The **`ceil`** instructions, are used for getting the value of a number rounded up to the next integer.
 

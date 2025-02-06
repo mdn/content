@@ -1,5 +1,5 @@
 ---
-title: "-webkit-prefixed CSS extensions"
+title: -webkit-prefixed CSS extensions
 slug: Web/CSS/WebKit_Extensions
 page-type: landing-page
 status:

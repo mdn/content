@@ -2,9 +2,8 @@
 title: XOR
 slug: WebAssembly/Reference/Numeric/XOR
 page-type: webassembly-instruction
+sidebar: webassemblysidebar
 ---
-
-{{WebAssemblySidebar}}
 
 The **`xor`** instructions, are used for performing a bitwise XOR, similar to the **`^`** operator in other languages.
 
