@@ -25,7 +25,7 @@ since(other, options)
 - `other`
   - : A string, an object, or a {{jsxref("Temporal.PlainDate")}} instance representing a date to subtract from this date. It is converted to a `Temporal.PlainDate` object using the same algorithm as {{jsxref("Temporal/PlainDate/from", "Temporal.PlainDate.from()")}}. It must have the same calendar as `this`.
 - `options` {{optional_inline}}
-  - : An object containing the options for {{jsxref("Temporal/Duration/round", "Temporal.Duration.prototype.round()")}}, which includes `largestUnit`, `roundingIncrement`, `roundingMode`, and `smallestUnit`. `largestUnit` and `smallestUnit` only accept the units: `"year"`, `"month"`, `"week"`, `"day"`, or their plural forms. For `largestUnit`, the default value `"auto"` means `"day"` or `smallestUnit`, whichever is greater. For `smallestUnit`, the default value is `"day"`. The current date is used as the `relativeTo` option. Note that using [units larger than `"day"`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Duration#calendar_durations) may make the duration not portable to other calendars or dates.
+  - : An object containing the options for {{jsxref("Temporal/Duration/round", "Temporal.Duration.prototype.round()")}}, which includes `largestUnit`, `roundingIncrement`, `roundingMode`, and `smallestUnit`. `largestUnit` and `smallestUnit` only accept the units: `"years"`, `"months"`, `"weeks"`, `"days"`, or their singular forms. For `largestUnit`, the default value `"auto"` means `"days"` or `smallestUnit`, whichever is greater. For `smallestUnit`, the default value is `"days"`. The current date is used as the `relativeTo` option. Note that using [units larger than `"days"`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Duration#calendar_durations) may make the duration not portable to other calendars or dates.
 
 ### Return value
 
@@ -50,13 +50,13 @@ const formatter = new Intl.DurationFormat("en-US", { style: "long" });
 console.log(`It's been ${formatter.format(duration)} since that Christmas...`);
 // Expected output: "It's been [number] days since that Christmas..."
 
-const duration2 = now.since(date, { smallestUnit: "month" });
+const duration2 = now.since(date, { smallestUnit: "months" });
 console.log(`It's been ${formatter.format(duration2)} since that Christmas...`);
 // Expected output: "It's been [number] months since that Christmas..."
 
 const duration3 = now.since(date, {
-  largestUnit: "year",
-  smallestUnit: "month",
+  largestUnit: "years",
+  smallestUnit: "months",
 });
 console.log(`It's been ${formatter.format(duration3)} since that Christmas...`);
 // Expected output: "It's been [number] years, [number] months since that Christmas..."
@@ -70,7 +70,7 @@ By default the fractional part of the `smallestUnit` is truncated. You can round
 const date1 = Temporal.PlainDate.from("2022-01-01");
 const date2 = Temporal.PlainDate.from("2022-01-28");
 const duration = date2.since(date1, {
-  smallestUnit: "day",
+  smallestUnit: "days",
   roundingIncrement: 5,
   roundingMode: "ceil",
 });
