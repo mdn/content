@@ -216,7 +216,7 @@ A link is included in the content box above to demonstrate the effects of keyboa
 
 ## Reference
 
-### CSS properties
+### Properties
 
 - {{CSSxRef("overflow")}} shorthand
 - {{CSSxRef("overflow-block")}}
@@ -227,10 +227,10 @@ A link is included in the content box above to demonstrate the effects of keyboa
 - {{CSSxRef("scroll-behavior")}}
 - {{CSSxRef("scrollbar-gutter")}}
 - {{CSSxRef("text-overflow")}}
-- {{CSSxRef("-webkit-line-clamp")}}
+- {{CSSxRef("line-clamp")}}
 
 > [!NOTE]
-> The CSS overflow module level 4 introduces the `block-ellipsis`, `continue`, `line-clamp`, and `max-lines` properties. These have not yet been implemented.
+> The CSS overflow module level 4 introduces the `block-ellipsis`, `continue`, `max-lines`, and `overflow-clip-margin-block`, `overflow-clip-margin-block-end`, `overflow-clip-margin-block-start`, `overflow-clip-margin-bottom`, `overflow-clip-margin-inline`, `overflow-clip-margin-inline-end`, `overflow-clip-margin-inline-start`, `overflow-clip-margin-left`, `overflow-clip-margin-right`, `overflow-clip-margin-top` properties. These have not yet been implemented.
 
 ### Data types
 
