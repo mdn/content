@@ -3,9 +3,8 @@ title: URIs
 slug: Web/URI
 page-type: guide
 spec-urls: https://www.rfc-editor.org/rfc/rfc3986.html
+sidebar: urlsidebar
 ---
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/URI")}}
 
 **Uniform Resource Identifiers (URI)** are used to identify "resources" on the web. They are commonly used as targets of [HTTP](/en-US/docs/Web/HTTP) requests, in which case the URI represents a location for a physical resource, such as a document, a photo, binary data, etc. URIs can also be used to trigger behaviors other than fetching a resource, including opening the email client, sending text messages, or executing JavaScript, when used in other places such as the [`href`](/en-US/docs/Web/HTML/Element/a#href) of an HTML `<a>` link.
 

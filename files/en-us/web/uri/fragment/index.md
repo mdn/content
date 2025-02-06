@@ -1,6 +1,6 @@
 ---
 title: URI fragment
-slug: Web/URI/Reference/Fragment
+slug: Web/URI/Fragment
 page-type: guide
 spec-urls: https://www.rfc-editor.org/rfc/rfc3986.html#section-3.5
 sidebar: urlsidebar

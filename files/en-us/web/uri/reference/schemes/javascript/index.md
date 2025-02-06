@@ -3,9 +3,8 @@ title: "javascript: URLs"
 slug: Web/URI/Reference/Schemes/javascript
 page-type: guide
 spec-urls: https://html.spec.whatwg.org/multipage/browsing-the-web.html#the-javascript:-url-special-case
+sidebar: urlsidebar
 ---
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/URI")}}
 
 > [!WARNING]
 > Using `javascript:` URLs on the web is discouraged as it may lead to execution of arbitrary code, similar to the ramifications of using [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval). It may also reduce {{glossary("accessibility")}} because it deviates from normal link behavior.

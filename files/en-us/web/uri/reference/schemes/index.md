@@ -3,9 +3,8 @@ title: URI schemes
 slug: Web/URI/Reference/Schemes
 page-type: guide
 spec-urls: https://www.rfc-editor.org/rfc/rfc3986.html#section-3.1
+sidebar: urlsidebar
 ---
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/URI")}}
 
 The **scheme** of a URI is the first part of the URI, before the `:` character. It indicates which protocol the browser must use to fetch the resource. The scheme may affect how the rest of the URI is structured and interpreted.
 
