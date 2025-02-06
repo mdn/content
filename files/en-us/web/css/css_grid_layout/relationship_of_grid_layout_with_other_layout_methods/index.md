@@ -61,7 +61,7 @@ We also set the {{cssxref("flex-wrap")}} property to `wrap`, so that if the spac
 }
 ```
 
-{{ EmbedLiveSample('One-dimensional_versus_two-dimensional_layout', '500', '230') }}
+{{ EmbedLiveSample('One-dimensional_versus_two-dimensional_layout', '500', '170') }}
 
 In the image, you can see that two items have wrapped onto a new line. These items are sharing the available space and not lining up underneath the items above. This is because when you wrap flex items, each new row (or column when working by column) is an independent flex line in the flex container. Space distribution happens across the flex line.
 
@@ -222,7 +222,7 @@ This example uses a grid to create the same layout. We use the box alignment pro
 }
 ```
 
-{{ EmbedLiveSample('Alignment_in_CSS_Grids', '200', '310') }}
+{{ EmbedLiveSample('Alignment_in_CSS_Grids', '200', '240') }}
 
 ### The `fr` unit and `flex-basis`
 
@@ -273,7 +273,7 @@ In this next example, we have used the `auto-fill` keyword in place of an intege
 }
 ```
 
-{{ EmbedLiveSample('Auto-filling_grid_tracks', '500', '170') }}
+{{ EmbedLiveSample('Auto-filling_grid_tracks', '500', '70') }}
 
 ### A flexible number of tracks
 
@@ -316,7 +316,7 @@ In this example, we create auto filled tracks with `minmax`. We want our tracks 
 }
 ```
 
-{{ EmbedLiveSample('A_flexible_number_of_tracks', '500', '170') }}
+{{ EmbedLiveSample('A_flexible_number_of_tracks', '500', '70') }}
 
 With grid layout, we can create a grid with a dynamic number of flexible tracks and have the items laid out on the grid aligned by rows and columns.
 
@@ -382,7 +382,7 @@ In the below example we have a wrapper containing four child items. Item three i
 }
 ```
 
-{{ EmbedLiveSample('A_grid_container_as_containing_block', '500', '330') }}
+{{ EmbedLiveSample('A_grid_container_as_containing_block', '500', '270') }}
 
 You can see that the item is taking the area from grid column line 2 to 4, and starting after line 1. Then it is offset in that area using the top and left properties. However, it has been taken out of flow as is usual for absolutely positioned items and so the auto-placement rules now place items into the same space. The item also doesn't cause the additional row to be created to span to row line 3.
 

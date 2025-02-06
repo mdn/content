@@ -409,7 +409,7 @@ In this example, we use `minmax()` within the `grid-auto-rows` property value. B
 </div>
 ```
 
-{{ EmbedLiveSample('Track_sizing_and_minmax', '240', '470') }}
+{{ EmbedLiveSample('Track_sizing_and_minmax', '240', '270') }}
 
 ## Grid lines
 
@@ -634,7 +634,7 @@ If we set `box1` to `display: grid`, we can give it a track definition and it to
 }
 ```
 
-{{ EmbedLiveSample('Nesting_without_subgrid', '600', '340') }}
+{{ EmbedLiveSample('Nesting_without_subgrid', '600', '250') }}
 
 In this case the nested grid has no relationship to the parent. As you can see in the example it has not inherited the {{cssxref("gap")}} of the parent and the lines in the nested grid do not align to the lines in the parent grid.
 
@@ -775,7 +775,7 @@ We can control the order in which items stack up by using the `z-index` property
 }
 ```
 
-{{ EmbedLiveSample('Controlling_the_order', '230', '460') }}
+{{ EmbedLiveSample('Controlling_the_order', '230', '420') }}
 
 ## Next steps
 

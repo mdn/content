@@ -11,31 +11,11 @@ The **CSS grid layout** module excels at dividing a page into major regions or d
 
 Like tables, grid layout enables an author to align elements into columns and rows. However, many more layouts are either possible or easier with CSS grid than they were with tables. For example, a grid container's child elements could position themselves so they actually overlap and layer, similar to CSS positioned elements.
 
-## Basic example
+## Grid in action
 
-The example below shows a three-column track grid with new rows created at a minimum of 100 pixels and a maximum of auto. Items have been placed onto the grid using line-based placement.
+The example shows a three-column track grid with new rows created at a minimum of 100 pixels and a maximum of auto. Items have been placed onto the grid using line-based placement.
 
-```css hidden
-* {
-  box-sizing: border-box;
-}
-.wrapper {
-  max-width: 940px;
-  margin: 0 auto;
-}
-
-.wrapper > div {
-  border: 2px solid rgb(233 171 88);
-  border-radius: 5px;
-  background-color: rgb(233 171 88 / 50%);
-  padding: 1em;
-  color: #d9480f;
-}
-```
-
-### HTML
-
-```html
+```html hidden
 <div class="wrapper">
   <div class="one">One</div>
   <div class="two">Two</div>
@@ -46,9 +26,21 @@ The example below shows a three-column track grid with new rows created at a min
 </div>
 ```
 
-### CSS
-
-```css
+```css hidden
+* {
+  box-sizing: border-box;
+}
+.wrapper {
+  max-width: 940px;
+  margin: 0 auto;
+}
+.wrapper > div {
+  border: 2px solid rgb(233 171 88);
+  border-radius: 5px;
+  background-color: rgb(233 171 88 / 50%);
+  padding: 1em;
+  color: #d9480f;
+}
 .wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -81,7 +73,9 @@ The example below shows a three-column track grid with new rows created at a min
 }
 ```
 
-{{EmbedLiveSample("Basic_example", "100%", "460")}}
+{{EmbedLiveSample("Grid_in_action", "100%", "460")}}
+
+This sample animation uses {{cssxref("display")}}, {{cssxref("grid-template-columns")}}, {{cssxref("grid-template-rows")}}, and {{cssxref("gap")}} to create the grid, and {{cssxref("grid-column")}} and {{cssxref("grid-row")}} to position items within in the grid. To view and edit the HTML and CSS used, click the 'Play' at the top right of the example.
 
 ## Reference
 
@@ -103,7 +97,6 @@ The example below shows a three-column track grid with new rows created at a min
 - {{CSSxRef("grid-row")}} shorthand
 - {{CSSxRef("grid-area")}} shorthand
 
-
 ### Functions
 
 - {{CSSxRef("repeat", "repeat()")}}
@@ -113,18 +106,6 @@ The example below shows a three-column track grid with new rows created at a min
 ### Data types and values
 
 - {{CSSxRef("&lt;flex&gt;")}} (`fr` unit)
-
-```html
-<!-- these pages are a work in progress -->
-<auto-repeat />
-<auto-track-list />
-<line-name-list />
-<line-names />
-<track-list />
-<track-repeat />
-<track-size />
-auto-fill auto-fit
-```
 
 ### Terms and glossary definitions
 
@@ -183,11 +164,11 @@ auto-fill auto-fit
 
 - [Subgrid](/en-US/docs/Web/CSS/CSS_grid_layout/Subgrid)
 
-  - : x
+  - : What subgrid does with use cases and design patterns that subgrid solves.
 
 - [Masonry layout](/en-US/docs/Web/CSS/CSS_grid_layout/Masonry_layout)
 
-  - : x
+  - : Details what masonry layout is and it is used.
 
 - [Box alignment in CSS grid layout](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_grid_layout)
 

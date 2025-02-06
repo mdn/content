@@ -370,7 +370,7 @@ We give the image area a grid area name of `img` and the text area `content`, th
 </div>
 ```
 
-{{ EmbedLiveSample('Media_object_example', '300', '200') }}
+{{ EmbedLiveSample('Media_object_example', '300', '105') }}
 
 ### Displaying the image on the other side of the box
 
@@ -418,7 +418,7 @@ We might want to be able to display our box with the image the other way around.
 </div>
 ```
 
-{{ EmbedLiveSample('Displaying_the_image_on_the_other_side_of_the_box', '300', '200') }}
+{{ EmbedLiveSample('Displaying_the_image_on_the_other_side_of_the_box', '300', '105') }}
 
 ## Grid definition shorthands
 

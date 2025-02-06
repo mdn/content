@@ -158,7 +158,7 @@ body {
 }
 ```
 
-{{EmbedLiveSample('Sizing_rows_using_minmax', '500', '330')}}
+{{EmbedLiveSample('Sizing_rows_using_minmax', '500', '300')}}
 
 ### Sizing rows using a track listing
 
@@ -475,7 +475,7 @@ body {
 }
 ```
 
-{{EmbedLiveSample('Filling_in_the_gaps', '500', '730')}}
+{{EmbedLiveSample('Filling_in_the_gaps', '500', '680')}}
 
 ### Anonymous grid items
 

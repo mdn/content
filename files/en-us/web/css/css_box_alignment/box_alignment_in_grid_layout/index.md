@@ -14,7 +14,7 @@ As this guide aims to detail things which are specific to CSS grid layout and Bo
 
 In this example using [grid layout](/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout), there is extra space in the {{glossary("grid container")}} after laying out the fixed-width tracks on the inline {{glossary("main axis")}}. This space is distributed using {{cssxref("justify-content")}}. On the block {{glossary("cross axis")}} the alignment of the items inside their grid areas is controlled with {{cssxref("align-items")}}. The first item overrides the `align-items` value set on the group by setting {{cssxref("align-self")}} to `center`.
 
-{{EmbedGHLiveSample("css-examples/box-alignment/overview/grid-align-items.html", '100%', 500)}}
+{{EmbedGHLiveSample("css-examples/box-alignment/overview/grid-align-items.html", '100%', 670)}}
 
 ## Grid axes
 

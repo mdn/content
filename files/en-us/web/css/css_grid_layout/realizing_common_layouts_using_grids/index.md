@@ -152,7 +152,7 @@ The three-column layout has two `1fr` unit side columns and a middle column that
 
 In this layout, we're displaying the `nav` in the left column, alongside the `content`. In the right column we have the `sidebar` and underneath it the advertisements (`ad`). The `footer` now spans across the entire bottom of the layout. Again, we use a flexbox to display the navigation; but this time we display it as a column instead of a row.
 
-{{ EmbedLiveSample('A_responsive_layout_with_1_to_3_fluid_columns_using_grid-template-areas', '800', '500') }}
+{{ EmbedLiveSample('A_responsive_layout_with_1_to_3_fluid_columns_using_grid-template-areas', '800', '570') }}
 
 This basic example demonstrates how we can use a grid layout to rearrange a layout for different breakpoints. In particular, we're changing the location of the `ad` block as appropriate in our different column setups. This named areas method can be very helpful, especially at the prototyping stage. You may find it easier to play with the location of elements when using names rather than numbers.
 
@@ -360,7 +360,7 @@ Finally, for screens larger than our largest breakpoint, we define a three-colum
 }
 ```
 
-{{ EmbedLiveSample('Building_a_layout_using_the_12-column_system', '800', '450') }}
+{{ EmbedLiveSample('Building_a_layout_using_the_12-column_system', '800', '570') }}
 
 Once again, check your grid inspector in your browser developer tools to see how the layout has taken shape.
 

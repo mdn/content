@@ -299,7 +299,7 @@ You can also use the `span` keyword. This item will span 3 lines starting from t
 </div>
 ```
 
-{{ EmbedLiveSample('Twelve-column_grid_using_repeat', '500', '330') }}
+{{ EmbedLiveSample('Twelve-column_grid_using_repeat', '500', '120') }}
 
 If you take a look at this layout your browser's developer tools, you will see how the column lines are shown, and how our items are placed against these lines.
 
@@ -382,7 +382,7 @@ Using a track list, we can use the `span` keyword to span a number of lines, inc
 </div>
 ```
 
-{{ EmbedLiveSample('Defining_named_lines_with_a_track_list', '500', '330') }}
+{{ EmbedLiveSample('Defining_named_lines_with_a_track_list', '500', '230') }}
 
 ### Twelve-column grid framework
 
@@ -456,7 +456,7 @@ We can place this on our grid layout framework:
 }
 ```
 
-{{ EmbedLiveSample('Twelve-column_grid_framework', '500', '330') }}
+{{ EmbedLiveSample('Twelve-column_grid_framework', '500', '220') }}
 
 Once again, the developer tool's grid highlighter is helpful to show us how the grid we have placed our items on works.
 

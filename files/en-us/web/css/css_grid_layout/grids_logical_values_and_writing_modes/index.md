@@ -66,7 +66,7 @@ body {
 }
 ````
 
-{{EmbedLiveSample("Issues with physical properties","",200)}}
+{{EmbedLiveSample("Issues with physical properties","",140)}}
 
 This is a very basic demonstration of the problem that can arise when using physical values and properties in CSS. If we write CSS using physical properties and keywords, we tell the browser our assumption as to how the text is flowing, preventing the browser from handling alternative writing modes.
 

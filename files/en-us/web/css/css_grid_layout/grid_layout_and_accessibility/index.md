@@ -73,7 +73,7 @@ In this example, we have a grid containing five items, each containing a link. T
 </div>
 ```
 
-{{ EmbedLiveSample('Visual_not_logical_re-ordering', '500', '330') }}
+{{ EmbedLiveSample('Visual_not_logical_re-ordering', '500', '230') }}
 
 The specification says that in this scenario, if box 1 really makes sense logically in that position, we should go back to our HTML source and make the change there rather than reordering using grid layout. This is what is meant by visual versus logical reordering; logical ordering is important for the meaning and structure of our document and we should make sure that we preserve that structure.
 
