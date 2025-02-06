@@ -120,7 +120,7 @@ Firefox and Chrome include a Proxy API. However, the design of these two APIs is
 Firefox and Chrome provide incompatible APIs for working with a [sidebar](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars).
 
 - **In Firefox (and Opera)**: a sidebar is specified with the [`sidebar_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action) manifest key and manipulated with the {{WebExtAPIRef("sidebarAction")}} API.
-- **In Chrome**: an initial sidebar can be specified with the `side_panel` manifest key. The [`sidePanel` API](https://help.opera.com/en/extensions/sidebar-action-api) then enables panels to be manipulated.
+- **In Chrome**: an initial sidebar can be specified with the `side_panel` manifest key. The [`sidePanel` API](https://developer.chrome.com/docs/extensions/reference/api/sidePanel) then enables panels to be manipulated.
 
 #### Tabs API
 

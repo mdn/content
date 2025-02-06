@@ -12,7 +12,7 @@ Gets and sets properties of an extension's sidebar.
 A [sidebar](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars) is a pane displayed at the left or right of a web page. The browser provides a UI that enables the user to see the available sidebars and select one to display. An extension defines sidebars using the [`sidebar_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action) manifest.json key. The extension can then get and set the sidebar's properties using this API.
 
 > [!NOTE]
-> Chrome provides support for sidebars through the [`sidePanel` API](https://help.opera.com/en/extensions/sidebar-action-api). This API is not compatible with `sidebarAction`.
+> Chrome provides support for sidebars through the [`sidePanel` API](https://developer.chrome.com/docs/extensions/reference/api/sidePanel). This API is not compatible with `sidebarAction`.
 
 The `sidebarAction` API is based on Opera's [sidebarAction API](https://help.opera.com/en/extensions/sidebar-action-api/) and closely modeled on the {{WebExtAPIRef("browserAction")}} API. However, Firefox has not implemented `setBadgeText()`, `getBadgeText()`, `setBadgeBackgroundColor()`, `getBadgeBackgroundColor()`, `onFocus`, and `onBlur`.
 
