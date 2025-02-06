@@ -1,5 +1,5 @@
 ---
-title: Developer guides
+title: Web developer guides
 short-title: Guides
 slug: MDN/Guides
 page-type: landing-page
