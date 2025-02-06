@@ -58,7 +58,7 @@ console.log(`${duration.toLocaleString("en-US")} since last billing`);
 
 const duration2 = now.since(lastBilling, { smallestUnit: "days" });
 console.log(`${duration2.toLocaleString("en-US")} since last billing`);
-// Expected output: "[number] days since last billing
+// Expected output: "[number] days since last billing"
 
 const duration3 = now.since(lastBilling, {
   largestUnit: "years",
