@@ -1,5 +1,6 @@
 ---
 title: Choosing between www and non-www URLs
+short-title: Using 'www' in URLs
 slug: Web/URI/Guides/Choosing_between_www_and_non-www_URLs
 page-type: guide
 sidebar: urlsidebar
