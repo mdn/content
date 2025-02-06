@@ -65,7 +65,7 @@ You can see the behavior described above in action in our [Multiple auto popover
 
 ## Using manual popover state
 
-The alternative to auto state is **manual state**, achieved by setting `popover="manual"` on your popover element:
+One alternative to auto state is **manual state**, achieved by setting `popover="manual"` on your popover element:
 
 ```html
 <div id="mypopover" popover="manual">Popover content</div>
@@ -189,6 +189,101 @@ There are three different ways to create nested popovers:
    ```
 
 See our [Nested popover menu example](https://mdn.github.io/dom-examples/popover-api/nested-popovers/) ([source](https://github.com/mdn/dom-examples/tree/main/popover-api/nested-popovers)) for an example. You'll notice that quite a few event handlers have been used to display and hide the subpopover appropriately during mouse and keyboard access, and also to hide both menus when an option is selected from either. Depending on how you handle loading of new content, either in an SPA or multi-page website, some of all of these may not be necessary, but they have been included in this demo for illustrative purposes.
+
+## Using "hint" popover state
+
+There is a third type of popover you can create — **hint popovers**, designated by setting `popover="hint"` on your popover element. `hint` popovers are similar to `auto` popovers, but with a significant difference. They can be light-dismissed, but they do not light-dismiss `auto` popovers when shown, only `hint` popovers.
+
+This is useful for situations where, for example, you have toolbar buttons that can be pressed to show UI popovers, but you also want to reveal tooltips when the buttons are hovered, without dismissing the UI popovers.
+
+`hint` popovers tend to be shown and hidden in response to non-click JavaScript events such as [`mouseover`](/en-US/docs/Web/API/Element/mouseover_event)/[`mouseout`](/en-US/docs/Web/API/Element/mouseout_event) and [`focus`](/en-US/docs/Web/API/Element/focus_event)/[`blur`](/en-US/docs/Web/API/Element/blur_event). When clicking on a button, the click itself would cause an open `auto` popover to light-dismiss.
+
+See our [popover hint demo](https://mdn.github.io/dom-examples/popover-api/popover-hint/) ([source](https://github.com/mdn/dom-examples/tree/main/popover-api/popover-hint)) for an example that behaves exactly as described above. The demo features a button bar; when pressed, the buttons show popup sub-menus inside which further options can be selected. However, when hovered over or focused, the buttons also show tooltips to give the user an idea of what each button does.
+
+In the below sections, we'll walk through all the important parts of the code.
+
+### Creating the sub-menus with `popover="auto"`
+
+The popup sub-menus are created declaratively, using `auto` popovers. First, the control buttons:
+
+```html
+<section id="button-bar">
+  <button popovertarget="submenu-1" popovertargetaction="toggle" id="menu-1">
+    Menu A
+  </button>
+
+  <button popovertarget="submenu-2" popovertargetaction="toggle" id="menu-2">
+    Menu B
+  </button>
+
+  <button popovertarget="submenu-3" popovertargetaction="toggle" id="menu-3">
+    Menu C
+  </button>
+</section>
+```
+
+Now, the popovers themselves:
+
+```html
+<div id="submenu-1" popover="auto">
+  <button>Option A</button><br /><button>Option B</button>
+</div>
+<div id="submenu-2" popover="auto">
+  <button>Option A</button><br /><button>Option B</button>
+</div>
+<div id="submenu-3" popover="auto">
+  <button>Option A</button><br /><button>Option B</button>
+</div>
+```
+
+### Creating the tooltips with `popover="hint"`
+
+The sub-menu popovers work fine as they are, opening when the toolbar buttons are clicked, but how do we also show tooltips on button hover/focus? First, we create the tooltips in HTML, using `hint` popovers:
+
+```html
+<div id="tooltip-1" class="tooltip" popover="hint">Tooltip A</div>
+<div id="tooltip-2" class="tooltip" popover="hint">Tooltip B</div>
+<div id="tooltip-3" class="tooltip" popover="hint">Tooltip C</div>
+```
+
+To control the showing/hiding, we need to use JavaScript. First of all, we grab references to the `hint` popovers and the control buttons in two separate {{domxref("NodeList")}}s using {{domxref("Document.querySelectorAll()")}}:
+
+```js
+const tooltips = document.querySelectorAll(".tooltip");
+const btns = document.querySelectorAll("#button-bar button");
+```
+
+Next, we create a function, `addEventListeners()`, which sets four event listeners (via {{domxref("EventTarget.addEventListener()")}}) on a given {{htmlelement("button")}}, chosen by grabbing the `<button>` at a specific index value of the `btns` `NodeList`. The functions act on the `hint` popover at the same index value of the `tooltips` `NodeList`, allowing us to keep the buttons and the tooltips in sync — showing/hiding the correct tooltip when a button is interacted with.
+
+The event listeners [show](/en-US/docs/Web/API/HTMLElement/showPopover) the popover on [`mouseover`](/en-US/docs/Web/API/Element/mouseover_event) and [`focus`](/en-US/docs/Web/API/Element/focus_event), and [hide](/en-US/docs/Web/API/HTMLElement/hidePopover) the popover on [`mouseout`](/en-US/docs/Web/API/Element/mouseout_event) and [`blur`](/en-US/docs/Web/API/Element/blur_event), meaning that the tooltips can be accessed via mouse and keyboard.
+
+```js
+function addEventListeners(i) {
+  btns[i].addEventListener("mouseover", () => {
+    tooltips[i].showPopover();
+  });
+
+  btns[i].addEventListener("mouseout", () => {
+    tooltips[i].hidePopover();
+  });
+
+  btns[i].addEventListener("focus", () => {
+    tooltips[i].showPopover();
+  });
+
+  btns[i].addEventListener("blur", () => {
+    tooltips[i].hidePopover();
+  });
+}
+```
+
+Finally, we use a [`for`](/en-US/docs/Web/JavaScript/Reference/Statements/for) loop to iterate through the `<buttons>` in the `btns` `NodeList`, calling the `addEventListeners()` function for each one so that all of them have the desired event listeners set.
+
+```js
+for (let i = 0; i < btns.length; i++) {
+  addEventListeners(i);
+}
+```
 
 ## Styling popovers
 

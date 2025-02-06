@@ -8,7 +8,7 @@ browser-compat: api.HTMLElement.popover
 
 {{APIRef("Popover API")}}
 
-The **`popover`** property of the {{domxref("HTMLElement")}} interface gets and sets an element's popover state via JavaScript (`"auto"` or `"manual"`), and can be used for feature detection.
+The **`popover`** property of the {{domxref("HTMLElement")}} interface gets and sets an element's popover state via JavaScript (`"auto"`, `"hint"`, or `"manual"`), and can be used for feature detection.
 
 It reflects the value of the [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover) global HTML attribute.
 
@@ -16,12 +16,21 @@ It reflects the value of the [`popover`](/en-US/docs/Web/HTML/Global_attributes/
 
 An enumerated value; possible values are:
 
-- `"auto"`: In [auto state](/en-US/docs/Web/API/Popover_API/Using#auto_state_and_light_dismiss):
-  - The popover can be "light dismissed" — this means that you can hide the popover by clicking outside it or pressing the <kbd>Esc</kbd> key.
-  - Usually, only one popover can be shown at a time — showing a second popover when one is already shown will hide the first one. The exception to this rule is when you have nested auto popovers. See [Nested popovers](/en-US/docs/Web/API/Popover_API/Using#nested_popovers) for more details.
-- `"manual"`: In [manual state](/en-US/docs/Web/API/Popover_API/Using#using_manual_popover_state):
-  - The popover cannot be "light dismissed", although declarative show/hide/toggle buttons will still work.
-  - Multiple independent popovers can be shown at a time.
+- `"auto"`
+
+  - : In [auto state](/en-US/docs/Web/API/Popover_API/Using#auto_state_and_light_dismiss):
+    - Popovers can be "light dismissed" — this means that you can hide the popover by clicking outside it or pressing the <kbd>Esc</kbd> key.
+    - Usually, only one popover can be shown at a time — showing a second popover when one is already shown will hide the first one. The exception to this rule is when you have nested auto popovers. See [Nested popovers](/en-US/docs/Web/API/Popover_API/Using#nested_popovers) for more details.
+
+- `"hint"`
+
+  - : [`hint`](/en-US/docs/Web/API/Popover_API/Using#using_hint_popover_state) popovers are similar to `auto` popovers, but with a significant difference. They can be light-dismissed, but they do not light-dismiss `auto` popovers when shown, only `hint` popovers. `hint` popovers tend to be shown and hidden in response to non-click JavaScript events such as [`mouseover`](/en-US/docs/Web/API/Element/mouseover_event)/[`mouseout`](/en-US/docs/Web/API/Element/mouseout_event) and [`focus`](/en-US/docs/Web/API/Element/focus_event)/[`blur`](/en-US/docs/Web/API/Element/blur_event). When clicking on a button, the click itself would cause an open `auto` popover to light-dismiss.
+
+- `"manual"`
+
+  - : In [manual state](/en-US/docs/Web/API/Popover_API/Using#using_manual_popover_state):
+    - Popovers cannot be "light dismissed", although declarative show/hide/toggle buttons will still work.
+    - Multiple independent popovers can be shown at a time.
 
 ## Examples
 
