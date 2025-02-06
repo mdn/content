@@ -23,6 +23,9 @@ The **CSS paged media** module defines the properties that control the presentat
   - [Margin descriptors](/en-US/docs/Web/CSS/margin)
 - [Margin at-rules](/en-US/docs/Web/CSS/@page#margin_at-rules)
 
+> [!NOTE]
+> CSS paged media module introduces two `@page` descriptors that have not been implemented: `bleeds`, `marks`.
+
 ### Pseudo-classes
 
 - {{cssxref(':blank')}}
