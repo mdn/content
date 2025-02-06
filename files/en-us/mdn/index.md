@@ -9,6 +9,9 @@ sidebar: mdnsidebar
 Our mission is to provide developers with the information they need to easily build projects on the web platform.
 The resources below describe how the site works, how we write documentation, the guidelines and conventions we follow, and how you can get involved.
 
+- [Web development tutorials](/en-US/docs/MDN/Tutorials)
+  - : A curated list of tutorials and learning materials for beginners, intermediate-level, or expert web developers.
+    Explore detailed tutorials for web technologies like CSS, JavaScript, HTML, and more.
 - [MDN Web Docs Community](/en-US/docs/MDN/Community)
   - : These pages describe how to get started contributing to MDN Web Docs.
     You can find out where to look for answers, how to work on GitHub issues, open discussions, or suggest new content.

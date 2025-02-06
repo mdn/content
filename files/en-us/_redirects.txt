@@ -13547,6 +13547,7 @@
 /en-US/docs/Web/Security/Securing_your_site/Configuring_server_MIME_types	/en-US/docs/Learn_web_development/Extensions/Server-side/Configuring_server_MIME_types
 /en-US/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion	/en-US/docs/Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion
 /en-US/docs/Web/Text_fragments	/en-US/docs/Web/URI/Fragment/Text_fragments
+/en-US/docs/Web/Tutorials	/en-US/docs/MDN/Tutorials
 /en-US/docs/Web/WebDriver/Commands/New_Window	/en-US/docs/Web/WebDriver/Commands/NewWindow
 /en-US/docs/Web/WebGL	/en-US/docs/Web/API/WebGL_API
 /en-US/docs/Web/WebGL/Adding_2D_content_to_a_WebGL_context	/en-US/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context

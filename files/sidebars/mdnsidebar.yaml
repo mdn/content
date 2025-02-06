@@ -3,6 +3,7 @@
 sidebar:
   - type: section
     link: /MDN
+  - /MDN/Tutorials
   - title: community_resources
     details: closed
     children:
