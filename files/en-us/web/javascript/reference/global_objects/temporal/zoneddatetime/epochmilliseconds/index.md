@@ -18,11 +18,11 @@ The set accessor of `epochMilliseconds` is `undefined`. You cannot change this p
 ### Using epochMilliseconds
 
 ```js
-const instant = Temporal.ZonedDateTime.from("2021-08-01T12:34:56.789Z[UTC]");
-console.log(instant.epochMilliseconds); // 1627821296789
+const zdt = Temporal.ZonedDateTime.from("2021-08-01T12:34:56.789Z[UTC]");
+console.log(zdt.epochMilliseconds); // 1627821296789
 
-const instant2 = Temporal.ZonedDateTime.from("1969-08-01T12:34:56.789Z[UTC]");
-console.log(instant2.epochMilliseconds); // -13173903211
+const zdt2 = Temporal.ZonedDateTime.from("1969-08-01T12:34:56.789Z[UTC]");
+console.log(zdt2.epochMilliseconds); // -13173903211
 ```
 
 ### Creating a ZonedDateTime object from an epochMilliseconds value

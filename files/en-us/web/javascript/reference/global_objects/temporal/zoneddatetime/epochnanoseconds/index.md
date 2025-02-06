@@ -20,11 +20,11 @@ An instant can only represent ±10<sup>8</sup> days (about ±273,972.6 years) ar
 ### Using epochNanoseconds
 
 ```js
-const instant = Temporal.ZonedDateTime.from("2021-08-01T12:34:56.789Z[UTC]");
-console.log(instant.epochNanoseconds); // 1627821296789000000n
+const zdt = Temporal.ZonedDateTime.from("2021-08-01T12:34:56.789Z[UTC]");
+console.log(zdt.epochNanoseconds); // 1627821296789000000n
 
-const instant2 = Temporal.ZonedDateTime.from("1969-08-01T12:34:56.789Z[UTC]");
-console.log(instant2.epochNanoseconds); // -13173903211000000n
+const zdt2 = Temporal.ZonedDateTime.from("1969-08-01T12:34:56.789Z[UTC]");
+console.log(zdt2.epochNanoseconds); // -13173903211000000n
 ```
 
 ### Creating a ZonedDateTime object from an epochNanoseconds value
