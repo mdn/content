@@ -7,6 +7,9 @@ on:
     paths:
       - "files/**/*.md"
 
+# No GITHUB_TOKEN permissions, as we don't use it.
+permissions: {}
+
 jobs:
   check_url_issues:
     #if: github.repository == 'mdn/content'

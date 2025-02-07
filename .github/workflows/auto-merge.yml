@@ -3,6 +3,9 @@ name: auto-merge
 on:
   pull_request_target:
 
+# No GITHUB_TOKEN permissions, as we use AUTOMERGE_TOKEN instead.
+permissions: {}
+
 jobs:
   auto-merge:
     runs-on: ubuntu-latest

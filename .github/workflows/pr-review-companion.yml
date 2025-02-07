@@ -11,6 +11,12 @@ on:
     types:
       - completed
 
+permissions:
+  # Download artifact.
+  actions: read
+  # Post comment in pull request.
+  pull-requests: write
+
 jobs:
   review:
     runs-on: ubuntu-latest
