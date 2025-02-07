@@ -12,7 +12,7 @@ Even though modern HTML and CSS are designed to enable the creation of semantic,
 
 ## Re-ordering content in CSS grid layout
 
-We've already seen in these guides that grid gives us power to re-order the content of our page by positioning items using line-based placement of grid template areas. This placement can be done without considering the item's location in the source.. There is also the {{cssxref("order")}} property, which can change how items auto-place. The {{cssxref("grid-auto-flow")}} property has a `dense` value which can take items visually out of DOM order.
+We've already seen in these guides that CSS grid layout gives us the power to re-order our page content by positioning items using [line-based placement of grid template areas](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement). This placement can be done without considering the item's location in the source. There is also the {{cssxref("order")}} property, which can change how items auto-place. The {{cssxref("grid-auto-flow")}} property has a `dense` value, which can take items visually out of the DOM order.
 
 The CSS grid layout specification includes a [Reordering and Accessibility](https://drafts.csswg.org/css-grid/#order-accessibility) section. The introduction to that section details what browsers should do when content is visually reordered using grid layout:
 
