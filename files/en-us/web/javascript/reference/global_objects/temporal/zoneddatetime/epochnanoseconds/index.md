@@ -11,20 +11,20 @@ browser-compat: javascript.builtins.Temporal.ZonedDateTime.epochNanoseconds
 
 The **`epochNanoseconds`** accessor property of {{jsxref("Temporal.ZonedDateTime")}} instances returns a {{jsxref("BigInt")}} representing the number of nanoseconds elapsed since the Unix epoch (midnight at the beginning of January 1, 1970, UTC) to this instant.
 
-The set accessor of `epochNanoseconds` is `undefined`. You cannot change this property directly. To create a new `Temporal.ZonedDateTime` object with the desired new `epochNanoseconds` value, use the {{jsxref("Temporal/ZonedDateTime/add", "add()")}} or {{jsxref("Temporal/ZonedDateTime/subtract", "subtract()")}} method with the appropriate duration.
+The set accessor of `epochNanoseconds` is `undefined`. You cannot change this property directly. To create a new `Temporal.ZonedDateTime` object with the desired new `epochNanoseconds` value, use the {{jsxref("Temporal/ZonedDateTime/ZonedDateTime", "new Temporal.ZonedDateTime()")}} constructor instead.
 
-An instant can only represent ±10<sup>8</sup> days (about ±273,972.6 years) around the epoch, which is ±8.64e21 nanoseconds. Attempting to set `epochNanosecond` beyond this boundary throws a {{jsxref("RangeError")}}.
+An instant can only represent ±10<sup>8</sup> days (about ±273,972.6 years) around the epoch, which is ±8.64e21 nanoseconds. Attempting to set `epochNanoseconds` beyond this boundary throws a {{jsxref("RangeError")}}.
 
 ## Examples
 
 ### Using epochNanoseconds
 
 ```js
-const instant = Temporal.ZonedDateTime.from("2021-08-01T12:34:56.789Z[UTC]");
-console.log(instant.epochNanoseconds); // 1627821296789000000n
+const zdt = Temporal.ZonedDateTime.from("2021-08-01T12:34:56.789Z[UTC]");
+console.log(zdt.epochNanoseconds); // 1627821296789000000n
 
-const instant2 = Temporal.ZonedDateTime.from("1969-08-01T12:34:56.789Z[UTC]");
-console.log(instant2.epochNanoseconds); // -13173903211000000n
+const zdt2 = Temporal.ZonedDateTime.from("1969-08-01T12:34:56.789Z[UTC]");
+console.log(zdt2.epochNanoseconds); // -13173903211000000n
 ```
 
 ### Creating a ZonedDateTime object from an epochNanoseconds value

@@ -1,5 +1,5 @@
 ---
-title: ":autofill"
+title: :autofill
 slug: Web/CSS/:autofill
 page-type: css-pseudo-class
 browser-compat: css.selectors.autofill

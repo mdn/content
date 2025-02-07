@@ -15,8 +15,8 @@ To mutate the matrix as you multiply it, see {{domxref("DOMMatrix.multiplySelf()
 ## Syntax
 
 ```js-nolint
-  DOMMatrixReadOnly.multiply()
-  DOMMatrixReadOnly.multiply(otherMatrix)
+multiply()
+multiply(otherMatrix)
 ```
 
 ### Parameters
@@ -48,6 +48,6 @@ console.log(multipliedMatrix.toString()); // output: matrix(1, 0, 0, 1, 26, 42)
 ## See also
 
 - {{domxref("DOMMatrix.multiplySelf()")}}
-- {{domxref("DOMMatrixReadOnly.preMultiply()")}}
+- {{domxref("DOMMatrix.preMultiplySelf()")}}
 - CSS {{CSSxRef("transform-function/matrix", "matrix()")}} function
 - CSS {{CSSxRef("transform-function/matrix3d", "matrix3d()")}} function

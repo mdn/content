@@ -1,5 +1,5 @@
 ---
-title: "::slotted()"
+title: ::slotted()
 slug: Web/CSS/::slotted
 page-type: css-pseudo-element
 browser-compat: css.selectors.slotted

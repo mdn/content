@@ -2,9 +2,8 @@
 title: Guidelines for writing code examples
 slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide
 page-type: mdn-writing-guide
+sidebar: mdnsidebar
 ---
-
-{{MDNSidebar}}
 
 The guidelines described in this article apply to the styling and formatting of code examples, irrespective of the language. For guidelines about what content to include while writing the code examples, see the [writing style guide](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide#code_examples).
 

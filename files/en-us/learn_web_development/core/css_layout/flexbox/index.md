@@ -51,9 +51,55 @@ Flexbox features may be the perfect solution for your one dimensional layout nee
 
 ## Introducing a simple example
 
-In this article, you'll work through a series of exercises to help you understand how flexbox works. To get started, you should make a local copy of the first starter file — [flexbox0.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/flexbox/flexbox0.html) from our GitHub repo. Load it in a modern browser (like Firefox or Chrome) and have a look at the code in your code editor. You can also [see it live here](https://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox0.html).
+In this article, you'll work through a series of exercises to help you understand how flexbox works. To get started, you should make a local copy of the HTML and CSS. Load it in a modern browser (like Firefox or Chrome) and have a look at the code in your code editor. Alternatively open the example in {{LiveSampleLink("flexbox_0", "open the playground")}}.
 
-![Image showing the starting point of flexbox tutorial](bih741v.png)
+```html live-sample___flexbox_0
+<header>
+  <h1>Sample flexbox example</h1>
+</header>
+<section>
+  <article>
+    <h2>First article</h2>
+    <p>Content…</p>
+  </article>
+  <article>
+    <h2>Second article</h2>
+    <p>Content…</p>
+  </article>
+  <article>
+    <h2>Third article</h2>
+    <p>Content…</p>
+  </article>
+</section>
+```
+
+```css live-sample___flexbox_0
+body {
+  font-family: sans-serif;
+  margin: 0;
+}
+header {
+  background: purple;
+  height: 100px;
+}
+h1 {
+  text-align: center;
+  color: white;
+  line-height: 100px;
+  margin: 0;
+}
+section {
+  zoom: 0.8;
+}
+article {
+  padding: 10px;
+  margin: 10px;
+  background: aqua;
+}
+/* Add your flexbox CSS below here */
+```
+
+{{EmbedLiveSample("flexbox_0", "100", "415")}}
 
 You'll see that we have a {{htmlelement("header")}} element with a top level heading inside it and a {{htmlelement("section")}} element containing three {{htmlelement("article")}}s. We're going to use these to create a fairly standard three column layout.
 
@@ -61,7 +107,53 @@ You'll see that we have a {{htmlelement("header")}} element with a top level hea
 
 To start with, we need to select which elements are to be laid out as flexible boxes. To do this, we set a special value of {{cssxref("display")}} on the parent element of the elements you want to affect. In this case we want to lay out the {{htmlelement("article")}} elements, so we set this on the {{htmlelement("section")}}:
 
-```css
+```html hidden live-sample___flexbox_1
+<header>
+  <h1>Sample flexbox example</h1>
+</header>
+<section>
+  <article>
+    <h2>First article</h2>
+    <p>Content…</p>
+  </article>
+  <article>
+    <h2>Second article</h2>
+    <p>Content…</p>
+  </article>
+  <article>
+    <h2>Third article</h2>
+    <p>Content…</p>
+  </article>
+</section>
+```
+
+```css hidden live-sample___flexbox_1
+body {
+  font-family: sans-serif;
+  margin: 0;
+}
+header {
+  background: purple;
+  height: 100px;
+}
+h1 {
+  text-align: center;
+  color: white;
+  line-height: 100px;
+  margin: 0;
+}
+section {
+  zoom: 0.8;
+}
+article {
+  padding: 10px;
+  margin: 10px;
+  background: aqua;
+}
+/* Add your flexbox CSS below here */
+```
+
+```css live-sample___flexbox_1
 section {
   display: flex;
 }
@@ -69,7 +161,7 @@ section {
 
 This causes the `<section>` element to become a **flex container** and its children become **flex items**. This is what it looks like:
 
-![A two row container that includes a single column in the first row and a 3-column layout in the second row that shows how a webpage can be divided into different layouts depending on the contents](flexbox-example2.png)
+{{EmbedLiveSample("flexbox_1", "100", "210")}}
 
 This single declaration gives us everything we need. Incredible, right? We have a multiple column layout with equal-sized columns, and the columns are all the same height. This is because the default values given to flex items (the children of the flex container) are set up to solve common problems such as this.
 
@@ -111,29 +203,139 @@ You'll see that this puts the items back in a column layout, much like they were
 
 ## Wrapping
 
-One issue that arises when you have a fixed width or height in your layout is that eventually your flexbox children will overflow their container, breaking the layout. Have a look at our [flexbox-wrap0.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/flexbox/flexbox-wrap0.html) example and try [viewing it live](https://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox-wrap0.html) (take a local copy of this file now if you want to follow along with this example):
+One issue that arises when you have a fixed width or height in your layout is that eventually your flexbox children will overflow their container, breaking the layout. In the following example we have 5 {{htmlelement("article")}}s, which don't fit, because they have a `min-width` of `400px`, so there is a horizontal scroll.
 
-![The Sample flexbox example has all the flex items laid out in a single row of the flex container. The eighth flex item overflows the browser window, and the page has visible horizontal and vertical scroll bars as it cannot be accommodated within the width of the window as the previous seven flex items have taken the space available within the viewport.](flexbox-example3.png)
-
-Here we see that the children are indeed breaking out of their container. By default, the browser tries to place all the flex items in a single row if the `flex-direction` is set to `row` or a single column if the `flex-direction` is set to `column`. One way in which you can fix this is to add the following declaration to your {{htmlelement("section")}} rule:
-
-```css
-flex-wrap: wrap;
+```html hidden live-sample___flex-wrap_0
+<header>
+  <h1>Sample flexbox example</h1>
+</header>
+<section>
+  <article>
+    <h2>First article</h2>
+    <p>Content…</p>
+  </article>
+  <article>
+    <h2>Second article</h2>
+    <p>Content…</p>
+  </article>
+  <article>
+    <h2>Third article</h2>
+    <p>Content…</p>
+  </article>
+  <article>
+    <h2>Fourth article</h2>
+    <p>Content…</p>
+  </article>
+  <article>
+    <h2>Fifth article</h2>
+    <p>Content…</p>
+  </article>
+</section>
 ```
 
-Also, add the following declaration to your {{htmlelement("article")}} rule:
-
-```css
-flex: 200px;
+```css hidden live-sample___flex-wrap_0
+body {
+  font-family: sans-serif;
+  margin: 0;
+}
+header {
+  background: purple;
+  height: 100px;
+}
+h1 {
+  text-align: center;
+  color: white;
+  line-height: 100px;
+  margin: 0;
+}
+article {
+  min-width: 400px;
+  padding: 10px;
+  margin: 10px;
+  background: aqua;
+}
+section {
+  display: flex;
+  flex-direction: row;
+  zoom: 0.8;
+}
 ```
 
-Try this now. You'll see that the layout looks much better with this included:
+{{EmbedLiveSample("flex-wrap_0", "100", "230")}}
 
-![Flex items are laid out in multiple rows in the flex container. The flex-wrap property is set to 'wrap' in the flex container which displays the flex items in a new row if the flex items in the previous row overflow outside the flexbox container. Each flex item is given a width of 200 pixels. All the items are stretched to be the same height, as tall as the flex item with the most content.](flexbox-example4.png)
+Here we see that the children are indeed breaking out of their container. By default, the browser tries to place all the flex items in a single row if the `flex-direction` is set to `row` or a single column if the `flex-direction` is set to `column`.
+
+```html hidden live-sample___flex-wrap_1
+<header>
+  <h1>Sample flexbox example</h1>
+</header>
+<section>
+  <article>
+    <h2>First article</h2>
+    <p>Content…</p>
+  </article>
+  <article>
+    <h2>Second article</h2>
+    <p>Content…</p>
+  </article>
+  <article>
+    <h2>Third article</h2>
+    <p>Content…</p>
+  </article>
+  <article>
+    <h2>Fourth article</h2>
+    <p>Content…</p>
+  </article>
+  <article>
+    <h2>Fifth article</h2>
+    <p>Content…</p>
+  </article>
+</section>
+```
+
+```css hidden live-sample___flex-wrap_1
+body {
+  font-family: sans-serif;
+  margin: 0;
+}
+header {
+  background: purple;
+  height: 100px;
+}
+h1 {
+  text-align: center;
+  color: white;
+  line-height: 100px;
+  margin: 0;
+}
+article {
+  min-width: 400px;
+  padding: 10px;
+  margin: 10px;
+  background: aqua;
+}
+section {
+  display: flex;
+  flex-direction: row;
+  zoom: 0.8;
+}
+```
+
+One way in which you can fix this is to add the following declaration to your {{htmlelement("section")}} rule:
+
+```css live-sample___flex-wrap_1
+section {
+  flex-wrap: wrap;
+}
+```
+
+You'll see that the layout looks much better with this included:
+
+{{EmbedLiveSample("flex-wrap_1", "100", "430")}}
 
 We now have multiple rows. Each row has as many flexbox children fitted into it as is sensible. Any overflow is moved down to the next line. The `flex: 200px` declaration set on the articles means that each will be at least `200px` wide. We'll discuss this property in more detail later on. You might also notice that the last few children on the last row are each made wider so that the entire row is still filled.
 
-But there's more we can do here. First of all, try changing your {{cssxref("flex-direction")}} property value to `row-reverse`. Now you'll see that you still have your multiple row layout, but it starts from the opposite corner of the browser window and flows in reverse.
+But there's more we can do here. First of all, try changing your {{cssxref("flex-direction")}} property value to `row-reverse`. Now you'll see that you still have your multiple row layout, but it starts from the opposite corner of the browser window and flows in reverse. The following image shows the updated layout.
 
 ## flex-flow shorthand
 
@@ -152,45 +354,190 @@ flex-flow: row wrap;
 
 ## Flexible sizing of flex items
 
-Let's now return to our first example and look at how we can control what proportion of space flex items take up compared to the other flex items. Open your local copy of [flexbox0.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/flexbox/flexbox0.html), or take a copy of [flexbox1.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/flexbox/flexbox1.html) as a new starting point ([see it live](https://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox1.html)).
+Let's now return to our first example and look at how we can control what proportion of space flex items take up compared to the other flex items.
 
-First, add the following rule to the bottom of your CSS:
+```html hidden live-sample___flexbox_2
+<header>
+  <h1>Sample flexbox example</h1>
+</header>
+<section>
+  <article>
+    <h2>First article</h2>
+    <p>Content…</p>
+  </article>
+  <article>
+    <h2>Second article</h2>
+    <p>Content…</p>
+  </article>
+  <article>
+    <h2>Third article</h2>
+    <p>Content…</p>
+  </article>
+</section>
+```
 
-```css
+```css hidden live-sample___flexbox_2
+body {
+  font-family: sans-serif;
+  margin: 0;
+}
+header {
+  background: purple;
+  height: 100px;
+}
+h1 {
+  text-align: center;
+  color: white;
+  line-height: 100px;
+  margin: 0;
+}
+article {
+  padding: 10px;
+  margin: 10px;
+  background: aqua;
+}
+section {
+  zoom: 0.8;
+  display: flex;
+}
+```
+
+In your local copy, add the following rule to the bottom of your CSS:
+
+```css live-sample___flexbox_2
 article {
   flex: 1;
 }
 ```
 
+{{EmbedLiveSample("flexbox_2", "100", "210")}}
+
 This is a unitless proportion value that dictates how much available space along the main axis each flex item will take up compared to other flex items. In this case, we're giving each {{htmlelement("article")}} element the same value (a value of `1`), which means they'll all take up an equal amount of the spare space left after properties like padding and margin have been set. This value is proportionally shared among the flex items: giving each flex item a value of `400000` would have exactly the same effect.
+
+```html hidden live-sample___flexbox_3
+<header>
+  <h1>Sample flexbox example</h1>
+</header>
+<section>
+  <article>
+    <h2>First article</h2>
+    <p>Content…</p>
+  </article>
+  <article>
+    <h2>Second article</h2>
+    <p>Content…</p>
+  </article>
+  <article>
+    <h2>Third article</h2>
+    <p>Content…</p>
+  </article>
+</section>
+```
+
+```css hidden live-sample___flexbox_3
+body {
+  font-family: sans-serif;
+  margin: 0;
+}
+header {
+  background: purple;
+  height: 100px;
+}
+h1 {
+  text-align: center;
+  color: white;
+  line-height: 100px;
+  margin: 0;
+}
+article {
+  padding: 10px;
+  margin: 10px;
+  background: aqua;
+}
+section {
+  zoom: 0.8;
+  display: flex;
+}
+article {
+  flex: 1;
+}
+```
 
 Now add the following rule below the previous one:
 
-```css
+```css live-sample___flexbox_3
 article:nth-of-type(3) {
   flex: 2;
 }
 ```
 
+{{EmbedLiveSample("flexbox_3", "100", "210")}}
+
 Now when you refresh, you'll see that the third {{htmlelement("article")}} takes up twice as much of the available width as the other two. There are now four proportion units available in total (since 1 + 1 + 2 = 4). The first two flex items have one unit each, so they each take 1/4 of the available space. The third one has two units, so it takes up 2/4 of the available space (or one-half).
 
 You can also specify a minimum size value within the flex value. Try updating your existing article rules like so:
 
-```css
-article {
-  flex: 1 200px;
-}
+```html hidden live-sample___flexbox_4
+<header>
+  <h1>Sample flexbox example</h1>
+</header>
+<section>
+  <article>
+    <h2>First article</h2>
+    <p>Content…</p>
+  </article>
+  <article>
+    <h2>Second article</h2>
+    <p>Content…</p>
+  </article>
+  <article>
+    <h2>Third article</h2>
+    <p>Content…</p>
+  </article>
+</section>
+```
 
-article:nth-of-type(3) {
-  flex: 2 200px;
+```css hidden live-sample___flexbox_4
+body {
+  font-family: sans-serif;
+  margin: 0;
+}
+header {
+  background: purple;
+  height: 100px;
+}
+h1 {
+  text-align: center;
+  color: white;
+  line-height: 100px;
+  margin: 0;
+}
+article {
+  padding: 10px;
+  margin: 10px;
+  background: aqua;
+}
+section {
+  zoom: 0.8;
+  display: flex;
 }
 ```
 
-This basically states, "Each flex item will first be given `200px` of the available space. After that, the rest of the available space will be shared according to the proportion units." Try refreshing and you'll see a difference in how the space is shared.
+```css live-sample___flexbox_4
+article {
+  flex: 1 100px;
+}
 
-![A flex container with three flex items. The third flex item is slightly larger than the first two.](flexbox-example1.png)
+article:nth-of-type(3) {
+  flex: 2 100px;
+}
+```
 
-All the flex items have a minimum width of 200 pixels—set using 'flex'. The value of flex for first two flex items is 1 and for the third item is 2. This splits the remaining space in the flex container into 4 proportion units. One unit is assigned to each of the first two flex items and 2 units are assigned to the third flex item, making the third flex item wider than the other two, which are of the same width.
+This basically states, "Each flex item will first be given `100px` of the available space. After that, the rest of the available space will be shared according to the proportion units." You'll see a difference in how the space is shared.
+
+{{EmbedLiveSample("flexbox_4", "100", "210")}}
+
+All the flex items have a minimum width of 100 pixels—set using 'flex'. The value of flex for first two flex items is 1 and for the third item is 2. This splits the remaining space in the flex container into 4 proportion units. One unit is assigned to each of the first two flex items and 2 units are assigned to the third flex item, making the third flex item wider than the other two, which are of the same width.
 
 The real value of flexbox can be seen in its flexibility/responsiveness. If you resize the browser window or add another {{htmlelement("article")}} element, the layout continues to work just fine.
 
@@ -206,15 +553,75 @@ We'd advise against using the longhand flex properties unless you really have to
 
 ## Horizontal and vertical alignment
 
-You can also use flexbox features to align flex items along the main or cross axis. Let's explore this by looking at a new example: [flex-align0.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/flexbox/flex-align0.html) ([see it live also](https://mdn.github.io/learning-area/css/css-layout/flexbox/flex-align0.html)). We're going to turn this into a neat, flexible button/toolbar. At the moment you'll see a horizontal menu bar with some buttons jammed into the top left-hand corner.
+You can also use flexbox features to align flex items along the main or cross axis. Let's explore this by looking at a new example:
 
-![Five buttons are laid out in a row in a flex container. The buttons are jammed into the top left-hand corner that doesn't look neat.](flexbox-example5.png)
+```html live-sample___flex-align_0
+<div>
+  <button>Smile</button>
+  <button>Laugh</button>
+  <button>Wink</button>
+  <button>Shrug</button>
+  <button>Blush</button>
+</div>
+```
+
+```css live-sample___flex-align_0
+body {
+  font-family: sans-serif;
+  width: 90%;
+  max-width: 960px;
+  margin: 10px auto;
+}
+div {
+  height: 100px;
+  border: 1px solid black;
+}
+button {
+  font-size: 18px;
+  line-height: 1.5;
+  width: 15%;
+}
+/* Add your flexbox CSS below here */
+```
+
+We're going to turn this into a neat, flexible button/toolbar. At the moment you'll see a horizontal menu bar with some buttons jammed into the top left-hand corner.
+
+{{EmbedLiveSample("flex-align_0", "100", "125")}}
 
 First, take a local copy of this example.
 
 Now, add the following to the bottom of the example's CSS:
 
-```css
+```html hidden live-sample___flex-align_1
+<div>
+  <button>Smile</button>
+  <button>Laugh</button>
+  <button>Wink</button>
+  <button>Shrug</button>
+  <button>Blush</button>
+</div>
+```
+
+```css hidden live-sample___flex-align_1
+body {
+  font-family: sans-serif;
+  width: 90%;
+  max-width: 960px;
+  margin: 10px auto;
+}
+div {
+  height: 100px;
+  border: 1px solid black;
+}
+button {
+  font-size: 18px;
+  line-height: 1.5;
+  width: 15%;
+}
+/* Add your flexbox CSS below here */
+```
+
+```css live-sample___flex-align_1
 div {
   display: flex;
   align-items: center;
@@ -222,7 +629,7 @@ div {
 }
 ```
 
-![Five buttons are laid out in a row in a flex container. The flex items are positioned vertically centered and they are evenly spaced out horizontally.](flexbox_center_space-around.png)
+{{EmbedLiveSample("flex-align_1", "100", "125")}}
 
 Refresh the page and you'll see that the buttons are now nicely centered horizontally and vertically. We've done this via two new properties. The flex items are positioned at the center of the cross-axis by setting the `align-items` property to `center`. The flex items are spaced evenly along the main-axis by setting the `justify-content` property to `space-around`.
 
@@ -234,13 +641,47 @@ The {{cssxref("align-items")}} property controls where the flex items sit on the
 
 You can override the {{cssxref("align-items")}} behavior for individual flex items by applying the {{cssxref("align-self")}} property to them. For example, try adding the following to your CSS:
 
-```css
+```html hidden live-sample___flex-align_2
+<div>
+  <button>Smile</button>
+  <button>Laugh</button>
+  <button>Wink</button>
+  <button>Shrug</button>
+  <button>Blush</button>
+</div>
+```
+
+```css hidden live-sample___flex-align_2
+body {
+  font-family: sans-serif;
+  width: 90%;
+  max-width: 960px;
+  margin: 10px auto;
+}
+div {
+  height: 100px;
+  border: 1px solid black;
+}
+button {
+  font-size: 18px;
+  line-height: 1.5;
+  width: 15%;
+}
+div {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+/* Add your flexbox CSS below here */
+```
+
+```css live-sample___flex-align_2
 button:first-child {
   align-self: flex-end;
 }
 ```
 
-![Five buttons are laid out in a row in a flex container. All the flex items except the first one are positioned at the center of the cross-axis, or vertically centered. The first item is flush against the bottom of the flex container, at the end of the cross-axis The flex items are spaced evenly along the main-axis, or width, of the container.](flexbox_first-child_flex-end.png)
+{{EmbedLiveSample("flex-align_2", "100", "125")}}
 
 Have a look at what effect this has and remove it again when you've finished.
 
@@ -288,9 +729,87 @@ While you can change the order using `order`, the tabbing order remains the same
 
 ## Nested flex boxes
 
-It's possible to create some pretty complex layouts with flexbox. It's perfectly OK to set a flex item to also be a flex container, so that its children are also laid out like flexible boxes. Have a look at [complex-flexbox.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/flexbox/complex-flexbox.html) ([see it live also](https://mdn.github.io/learning-area/css/css-layout/flexbox/complex-flexbox.html)).
+It's possible to create some pretty complex layouts with flexbox. It's perfectly OK to set a flex item to also be a flex container, so that its children are also laid out like flexible boxes.
 
-![The Sample flexbox example has three flex item children laid out in a row. The first two are the same width, the third is slightly wider. The third flex item is also a flex container. It has a set of buttons in two rows followed by text. The first row of buttons has 4 buttons that are laid out in a row; the buttons are the same width, taking up the full width of the container. The second row has a single button that takes up the entire width of the row on its own.](flexbox-example7.png)
+```html hidden live-sample___flex-nesting
+<header>
+  <h1>Complex flexbox example</h1>
+</header>
+<section>
+  <article>
+    <h2>First article</h2>
+    <p>Content…</p>
+  </article>
+  <article>
+    <h2>Second article</h2>
+    <p>Content…</p>
+  </article>
+  <article>
+    <div>
+      <button>Smile</button>
+      <button>Laugh</button>
+      <button>Wink</button>
+      <button>Shrug</button>
+      <button>Blush</button>
+    </div>
+    <div>
+      <p>Paragraph one content…</p>
+    </div>
+    <div>
+      <p>Paragraph two content…</p>
+    </div>
+  </article>
+</section>
+```
+
+```css hidden live-sample___flex-nesting
+body {
+  font-family: sans-serif;
+  margin: 0;
+}
+header {
+  background: purple;
+  height: 100px;
+}
+h1 {
+  text-align: center;
+  color: white;
+  line-height: 100px;
+  margin: 0;
+}
+article {
+  padding: 10px;
+  margin: 10px;
+  background: aqua;
+}
+section {
+  display: flex;
+  zoom: 0.8;
+}
+article {
+  flex: 1 170px;
+}
+article:nth-of-type(3) {
+  flex: 3 170px;
+  display: flex;
+  flex-flow: column;
+}
+article:nth-of-type(3) div:first-child {
+  flex: 1 100px;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+button {
+  flex: 1 auto;
+  margin: 5px;
+  font-size: 18px;
+  line-height: 1.5;
+}
+```
+
+{{EmbedLiveSample("flex-nesting", "100", "290")}}
 
 This complex layout has a few flex items that are also flex containers. The HTML for this is fairly straightforward. We've got a {{htmlelement("section")}} element containing three {{htmlelement("article")}}s. The third {{htmlelement("article")}} contains three {{htmlelement("div")}}s, and the first {{htmlelement("div")}} contains five {{htmlelement("button")}}s:
 
@@ -318,11 +837,11 @@ Next, we set some flex values on the {{htmlelement("article")}}s themselves. Tak
 
 ```css
 article {
-  flex: 1 200px;
+  flex: 1 100px;
 }
 
 article:nth-of-type(3) {
-  flex: 3 200px;
+  flex: 3 100px;
   display: flex;
   flex-flow: column;
 }

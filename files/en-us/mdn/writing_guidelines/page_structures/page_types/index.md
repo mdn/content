@@ -2,9 +2,8 @@
 title: Page types
 slug: MDN/Writing_guidelines/Page_structures/Page_types
 page-type: mdn-writing-guide
+sidebar: mdnsidebar
 ---
-
-{{MDNSidebar}}
 
 There are a number of types of pages that are used repeatedly on MDN.
 This article describes these page types, their purpose, and gives examples of each and templates to use when creating a new page.
@@ -66,6 +65,7 @@ Below are examples of the various pages you'll find on MDN along with templates 
 - [HTTP header](#http_header_reference_page)
 - [Landing page](#landing_page)
 - [SVG element](#svg_element_reference_page)
+- [Learn web development pages](#learn_web_development_pages)
 
 Each section includes links to live example pages for that page type.
 
@@ -235,6 +235,19 @@ It opens with a brief summary of the topic, then presents a structured list of l
 
 The list of subpages can be generated automatically using the [`SubpagesWithSummaries`](https://github.com/mdn/yari/blob/main/kumascript/macros/SubpagesWithSummaries.ejs) template. However, in more complex cases, the list may need to be created (and maintained) by hand.
 
+### Learn web development pages
+
+The [Learn web development](/en-US/docs/Learn_web_development) section of MDN is aimed specifically at folks learning the basic fundamentals of web development, and as such, requires a different approach to the rest of MDN's content. You can find more guidelines at [Learn web development writing guidelines](/en-US/docs/MDN/Writing_guidelines/Learning_content).
+
+There are only a few types of page inside Learn web development:
+
+- **Module group landing page**, for example [Core learning modules](/en-US/docs/Learn_web_development/Core)
+  - : These contain an intro paragraph, a section detailing the prerequisites you should have before starting the module group, and a list of the modules, followed by an optional list of "See also" links.
+- **Module landing page**, for example [Structuring content with HTML](/en-US/docs/Learn_web_development/Core/Structuring_content)
+  - : These contain an intro paragraph, a section detailing the prerequisites you should have before starting the module, and a list of the contained tutorials, followed by an optional list of "Additional tutorials" that are related but not part of the central learning pathway, and an optional list of "See also" links.
+- **Tutorial page**, for example [Basic HTML syntax](/en-US/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax)
+  - : The structure of a Learn tutorial is not strict, but it must provide a hands-on learning experience (see [Learn web development writing guidelines > Approach](/en-US/docs/MDN/Writing_guidelines/Learning_content#approach)), it must have a set of "Prerequisites" and "Learning outcomes" listed at the top, and the content must teach the stated learning outcomes.
+
 ### Examples
 
 - [HTML](/en-US/docs/Web/HTML)
@@ -242,7 +255,7 @@ The list of subpages can be generated automatically using the [`SubpagesWithSumm
 - [Web APIs](/en-US/docs/Web/API)
 - [JavaScript](/en-US/docs/Web/JavaScript)
 - [Learn web development](/en-US/docs/Learn_web_development)
-- [Contributing to MDN](/en-US/docs/MDN/Community/Contributing)
+- [Community resources](/en-US/docs/MDN/Community)
 
 ## See also
 

@@ -28,7 +28,7 @@ The `External` object has the following methods:
       </td>
       <td>
         Dummy function; does nothing. See
-        <a href="/en-US/docs/Web/OpenSearch#autodiscovery_of_search_plugins"
+        <a href="/en-US/docs/Web/XML/Guides/OpenSearch#autodiscovery_of_search_plugins"
           >Autodiscovery of search plugins</a
         >.
       </td>

@@ -31,7 +31,7 @@ console.log(d3.minutes); // 0
 console.log(d4.minutes); // 60
 
 // Balance d4
-const d4Balanced = d4.round({ largestUnit: "hour" });
+const d4Balanced = d4.round({ largestUnit: "hours" });
 console.log(d4Balanced.minutes); // 0
 console.log(d4Balanced.hours); // 1
 ```

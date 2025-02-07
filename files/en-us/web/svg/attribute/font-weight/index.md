@@ -72,4 +72,4 @@ For a description of the values, please refer to the [CSS `font-weight`](/en-US/
 
 ## See also
 
-- {{cssxref("font-weight")}}
+- CSS {{cssxref("font-weight")}} property

@@ -1,5 +1,5 @@
 ---
-title: "::-moz-meter-bar"
+title: ::-moz-meter-bar
 slug: Web/CSS/::-moz-meter-bar
 page-type: css-pseudo-element
 status:

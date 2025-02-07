@@ -62,7 +62,7 @@ This module doesn't define any properties, [data types](/en-US/docs/Web/CSS/CSS_
 
 - [CSS specificity](/en-US/docs/Web/CSS/Specificity)
 
-[CSS cascade](/en-US/docs/Web/CSS/CSS_cascade) module:
+[CSS cascading and inheritance](/en-US/docs/Web/CSS/CSS_cascade) module:
 
 - {{cssxref("@import")}} at-rule
 - {{cssxref("important")}} flag

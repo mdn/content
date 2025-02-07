@@ -18,7 +18,7 @@ Firefox 2 introduces a vast array of new features and capabilities. This article
   - : A tutorial on creating a microsummary generator.
 - [Microsummary XML grammar reference](/en-US/docs/Microsummary_XML_grammar_reference)
   - : A reference guide to the XML grammar used for creating microsummary generators.
-- [Creating OpenSearch plugins for Firefox](/en-US/docs/Web/OpenSearch)
+- [Creating OpenSearch plugins for Firefox](/en-US/docs/Web/XML/Guides/OpenSearch)
   - : Firefox 2 supports the OpenSearch search engine format.
 - [Creating MozSearch plugins](/en-US/docs/Creating_MozSearch_plugins)
   - : Firefox 2 supports MozSearch, a search plugin format based on OpenSearch, but intended only for internal use.
@@ -45,7 +45,7 @@ Firefox 2 introduces a vast array of new features and capabilities. This article
   - : API that lets developers access and parse RSS and Atom feeds.
 - [SAX support](/en-US/docs/SAX)
   - : Event-based XML parser API.
-- [Adding search engines from web pages](/en-US/docs/Web/OpenSearch)
+- [Adding search engines from web pages](/en-US/docs/Web/XML/Guides/OpenSearch)
   - : JavaScript code can instruct Firefox to install a new search engine plugin, which can be written using either OpenSearch or Sherlock format.
 - [Using spell checking in XUL](/en-US/docs/Using_spell_checking_in_XUL)
   - : How to check the spelling of words or get a list of suggested spellings from code.

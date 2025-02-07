@@ -1,5 +1,5 @@
 ---
-title: ":first"
+title: :first
 slug: Web/CSS/:first
 page-type: css-pseudo-class
 browser-compat: css.selectors.first
