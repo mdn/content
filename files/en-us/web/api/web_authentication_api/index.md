@@ -171,7 +171,7 @@ Note that the actual actions performed depend on your site.
 For sites that _require_ biometric authentication, you might replace the login UI with a message indicating that biometric authentication is needed, and the user should try a different browser or device.
 
 ```js
-async function checkisUserVerifyingPlatformAuthenticatorAvailable() {
+async function checkIsUserVerifyingPlatformAuthenticatorAvailable() {
   const capabilities = await PublicKeyCredential.getClientCapabilities();
   // Check the capability: userVerifyingPlatformAuthenticator
   if (capabilities.userVerifyingPlatformAuthenticator) {
