@@ -142,7 +142,7 @@ The `background` key can also contain this optional property:
     <tr>
       <td><code>preferred_environment</code></td>
       <td>
-        <p>A <code>String</code> value.</p>
+        <p>An <code>Array</code> of <code>String<code> listing the preferred environments in order of precedence.</p>
         <p>Where your extension specifies background script and service worker environments, requests the browser to run the extension using your preferred environment. See <a href="#browser_support">Browser support</a> for details of the environments supported in the major browsers.</p>
         <ul>
           <li>
