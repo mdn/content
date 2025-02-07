@@ -12,9 +12,6 @@ The [Learn web development](/en-US/docs/Learn_web_development) section of MDN is
 
 MDN Learn Web Development (also known as Learn)'s target audience is people who are not expert front-end developers — this includes students, junior or trainee web developers, hobbyists, and teachers looking for best practice guidance on what to teach their students.
 
-> [!NOTE]
-> We are avoiding using the word "beginner", as that term is subjective — for example, some beginners to web development may have previous programming experience in non-web languages and therefore may find certain topics easy, whereas others may find certain topics quite difficult. In addition, someone who has worked as a web designer professionally for many years might be an expert in HTML and CSS, but still be a beginner in JavaScript.
-
 ## Topic coverage
 
 Learn provides a structured pathway containing learning outcomes, designed to teach the fundamental skills and practices that will set readers up for being successful front-end developers. Learners can rely on it to provide the correct information for their studies, and educators can rely on it to provide the correct outcomes to base their courses and curricula around.
@@ -25,9 +22,9 @@ As a result, we are aiming to strictly limit the scope of Learn to:
 - The fundamental technologies required at the start of a web developer's journey in our [Core modules](/en-US/docs/Learn_web_development/Core).
 - "Second wave" topics representing useful next steps for relative beginners to move on to once they've mastered the Core modules, in our [Extensions modules](/en-US/docs/Learn_web_development/Extensions).
 
-Learn is not intended to be the place on MDN for introductory content on _all_ topics. This means that niche topics such as MathML and Web Games, and advanced or specialist topics such as regular expressions, performance testing, WebRTC, and WebGPU, do not belong on Learn.
+Learn is not intended to be the place on MDN for introductory content on _all_ topics. This means that niche topics such as MathML and Web Games, and advanced or specialist topics such as regular expressions, performance testing, WebRTC, and WebGPU, do not belong in Learn.
 
-If you do not see a topic covered on Learn and you think it should be covered, don't just try to add it — discuss it with us first (see [Suggesting content](/en-US/docs/MDN/Writing_guidelines/What_we_write#suggesting_content)).
+If you do not see a topic covered in Learn and you think it should be covered, don't just try to add it — discuss it with us first (see [Suggesting content](/en-US/docs/MDN/Writing_guidelines/What_we_write#suggesting_content)).
 
 ## Approach
 
@@ -45,7 +42,7 @@ There are a few differences, however:
   > Try this...
   ```
 
-- **Challenges**: Learn content includes challenges periodically to test that the reader understands the topics they have learnt about before moving on to the next article. These are currently written in a few different styles, for example see [Challenge: Structuring a page of content](/en-US/docs/Learn_web_development/Core/Structuring_content/Structuring_a_page_of_content) and [Test your skills: HTML images](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_images/Test_your_skills:_HTML_images), but we intend to improve the consistency and experience her in the future.
+- **Challenges**: Learn content includes challenges periodically to test that the reader understands the topics they have learnt about before moving on to the next article. These are currently written in a few different styles, for example see [Challenge: Structuring a page of content](/en-US/docs/Learn_web_development/Core/Structuring_content/Structuring_a_page_of_content) and [Test your skills: HTML images](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_images/Test_your_skills:_HTML_images), but we intend to improve the consistency and experience of these in the future.
 - **Density and completeness**: MDN content is generally known for its comprehensiveness. Learn content is specifically not as exhaustively complete as the rest of the MDN content. It is less dense and gentler in its approach, to allow learners to pick up useful skills and make regular progress, without feeling overwhelmed. They can dive deeper later on. Learn content can omit details to provide a more comfortable learning experience, provided it does not teach the reader anything misleading or bad practice.
 - **Stable learning outcomes**: The learning outcomes at the top of each tutorial provide a summary of what each tutorial teaches, and together provide a structured curriculum for front-end web development. It is vital that the learning outcomes and what is taught both remain stable and in sync, otherwise the content cannot be trusted as a basis for formal learning (for example educational courses of certifications). As such, changes to the learning outcomes should happen slowly, and not without good reason. If you try to add content that is not covered in the associated learning outcomes (or vice versa), your pull request will be closed. [Make a suggestion](/en-US/docs/MDN/Writing_guidelines/What_we_write#suggesting_content) first.
 
@@ -68,7 +65,15 @@ However, we:
 
 - Won't add these links in a way that compromises the integrity of MDN's content and is openly spammy; only where we feel they are genuinely useful.
 - Will always make sure a free option is available beside anything that is paywalled. In many cases, we've managed to convince our partners to make content available for free that was previously paywalled.
-- Will clearly mark partner content with a "MDN Curriculum partner" label, so you can clearly tell them apart from other links.
+- Will clearly mark partner content with a "MDN learning partner" label, so you can clearly tell them apart from other links.
+
+### "See also" link order
+
+On Learn content pages, the "See also" links that appear at the bottom should appear in the following order:
+
+1. Internal links.
+2. Links to free content.
+3. Links to mixed free/paywalled content.
 
 ### Current education partners
 
