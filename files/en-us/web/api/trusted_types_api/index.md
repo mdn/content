@@ -86,10 +86,9 @@ The Trusted Types API is not yet available in all modern browsers, but it is usa
 
 As well as these two polyfills, the W3C provides what it calls a _tinyfill_, which we'll explain in more detail below.
 
-Note that as long as you have tested your code, with trusted types enforced, in one browser, then you don't necessarily need to enforce trusted types in a different browser. This means that if you have tested your website in a browser that fully supports trusted types, you can then use just the API polyfill or the tinyfill in other browsers - you don't need to use the full polyfill.
+Note that as long as you have tested your code on a supporting browser with CSP enforcement enabled, then you don't need to use the _full polyfill_ above on other browsers — you can get the same benefits using the _API only polyfill_ or the _tinyfill_.
 
-This is because, if you have enforced the use of trusted types in a browser, then you must refactor your code to ensure that all data is passed through the Trusted Types API (and therefore has been through a sanitization function) before being passed to an injection sink.
-
+This is because the enforcement forces you to refactor your code to ensure that all data is passed through the Trusted Types API (and therefore has been through a sanitization function) before being passed to an injection sink.
 If you then run the refactored code in a different browser without enforcement, it will still go through the same code paths, and give you the same protection.
 
 #### Trusted Types tinyfill
