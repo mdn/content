@@ -11850,7 +11850,7 @@
 /en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes	/en-US/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes
 /en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility	/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility
 /en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Logical_Values_and_Writing_Modes	/en-US/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes
-/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement	/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement
+/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement	/en-US/docs/Web/CSS/CSS_grid_layout
 /en-US/docs/Web/CSS/CSS_Grid_Layout/Grid_logical_values_and_writing_modes	/en-US/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes
 /en-US/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid	/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement
 /en-US/docs/Web/CSS/CSS_Grid_Layout/Masonry	/en-US/docs/Web/CSS/CSS_grid_layout/Masonry_layout
@@ -11915,6 +11915,7 @@
 /en-US/docs/Web/CSS/CSS_descriptor_definition	/en-US/docs/Web/CSS
 /en-US/docs/Web/CSS/CSS_flex-wrap	/en-US/docs/Web/CSS/flex-wrap
 /en-US/docs/Web/CSS/CSS_flexible_box_layout/Backwards_compatibility_of_flexbox	/en-US/docs/Glossary/Flexbox
+/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement	/en-US/docs/Web/CSS/CSS_grid_layout
 /en-US/docs/Web/CSS/CSS_grid_layout/Layout_using_line-based_placement	/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement
 /en-US/docs/Web/CSS/CSS_grid_layout/Layout_using_named_grid_lines	/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines
 /en-US/docs/Web/CSS/CSS_miscellaneous	/en-US/docs/Web/CSS
