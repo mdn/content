@@ -99,7 +99,7 @@ lots of text…
 - Length limitations
   - : Browsers are not required to support any particular maximum length of data.
     Chromium and Firefox limit `data` URLs to 512MB, and Safari (WebKit) limits them to 2048MB.
-    Note that Firefox 97 increased the limit from 256KB to 32MB, and Firefox 136 increased it to 512MB.
+    Note that Firefox 97 increased the limit from 256KB to 32MB, and [Firefox 136 increased it to 512MB](/en-US/docs/Mozilla/Firefox/Releases/136).
 - Lack of error handling
   - : Invalid parameters in media, or typos when specifying `'base64'`, are ignored, but no error is provided.
 - No support for query strings, etc.
