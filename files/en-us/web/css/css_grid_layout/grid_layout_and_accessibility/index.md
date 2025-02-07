@@ -98,7 +98,7 @@ The [`subgrid`](/en-US/docs/Web/CSS/CSS_grid_layout/Subgrid) value of `grid-temp
 
 Starting out with a well-structured document is a very good way to avoid accessibility problems.
 
-## See aldo
+## See also
 
 - [Flexbox & the keyboard navigation disconnect](https://tink.uk/flexbox-the-keyboard-navigation-disconnect/) and [(Human After All): Accessibility remix video](https://www.youtube.com/watch?v=spxT2CmHoPk) via Léonie Watson (2016)
 - [Grid, content re-ordering and accessibility](https://css-tricks.com/grid-content-re-ordering-and-accessibility/) via CSS-tricks (2019)
