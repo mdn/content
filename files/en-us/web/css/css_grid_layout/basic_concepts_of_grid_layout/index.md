@@ -480,6 +480,8 @@ The second item starts on grid column line 1, and spans one track. This is the d
 
 {{ EmbedLiveSample('Positioning_items_against_lines', '230', '450') }}
 
+Use the grid Inspector in your developer tools to see how the items are positioned against the lines of the grid.
+
 ### Line-positioning shorthands
 
 The longhand values used above can be compressed onto one line for columns with the {{cssxref("grid-column")}} shorthand, and one line for rows with the {{cssxref("grid-row")}} shorthand. The following example would give the same positioning as in the previous code, but with far less CSS. The value before the forward slash character (`/`) is the start line, the value after the end line.
