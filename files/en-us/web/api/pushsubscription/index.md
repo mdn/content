@@ -61,8 +61,8 @@ const pushSubscription = await serviceWorkerRegistration.pushManager.subscribe()
 const subscriptionObject = {
   endpoint: pushSubscription.endpoint,
   keys: {
-    p256dh: pushSubscription.getKeys('p256dh'),
-    auth: pushSubscription.getKeys('auth'),
+    p256dh: pushSubscription.getKey('p256dh'),
+    auth: pushSubscription.getKey('auth'),
   },
   encoding: PushManager.supportedContentEncodings,
   /* other app-specific data, such as user identity */
