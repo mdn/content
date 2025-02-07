@@ -23,7 +23,7 @@ new NavigationCurrentEntryChangeEvent(type, init)
 - `type`
   - : A string representing the type of event.
 - `init`
-  - : An object that, _in addition of the properties defined in {{domxref("Event/Event", "Event()")}}_, can have the following properties:
+  - : An object that, _in addition to the properties defined in {{domxref("Event/Event", "Event()")}}_, has the following properties:
     - `from`
       - : A {{domxref("NavigationHistoryEntry")}} object representing the location being navigated to.
     - `navigationType` {{optional_inline}}
