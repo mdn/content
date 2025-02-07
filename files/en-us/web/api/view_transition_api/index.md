@@ -67,7 +67,7 @@ See [Using the View Transition API](/en-US/docs/Web/API/View_Transition_API/Usin
 - {{cssxref("view-transition-name")}}
   - : Provides the selected element with a separate identifying name and causes it to participate in a separate view transition from the root view transition — or no view transition if the `none` value is specified.
 - {{cssxref("view-transition-class")}}
-  - : Provides the selected elements with an additional method of styling an element that already has a `view-transition-name`
+  - : Provides the selected elements that already have a `view-transition-name` with an additional method of styling
 
 ### Pseudo-elements
 
