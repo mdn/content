@@ -11,6 +11,10 @@ name: Ping other repos
 on:
   push:
     branches: [main]
+
+# No GITHUB_TOKEN permissions, as we use REPO_PINGER_MDN_SPEC_LINKS.
+permissions: {}
+
 jobs:
   ping:
     # Don't run in forks, or when Dependabot merges a PR.

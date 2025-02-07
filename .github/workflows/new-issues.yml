@@ -6,6 +6,10 @@ on:
       - reopened
       - opened
 
+permissions:
+  # Label issues.
+  issues: write
+
 jobs:
   label-new-issues:
     runs-on: ubuntu-latest

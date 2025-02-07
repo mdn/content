@@ -6,6 +6,9 @@ on:
     - cron: "0 0 * * 6"
   workflow_dispatch:
 
+# No GITHUB_TOKEN permissions, as we use AUTOMERGE_TOKEN instead.
+permissions: {}
+
 jobs:
   update:
     if: github.repository == 'mdn/content'

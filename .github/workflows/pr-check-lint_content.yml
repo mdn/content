@@ -10,6 +10,7 @@ on:
       - "files/**/*.md"
 
 permissions:
+  # Compare commits and add reviewdog comments.
   pull-requests: write
 
 concurrency:
