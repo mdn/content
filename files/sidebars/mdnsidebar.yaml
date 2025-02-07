@@ -4,6 +4,7 @@ sidebar:
   - type: section
     link: /MDN
   - /MDN/Tutorials
+  - /MDN/Guides
   - title: community_resources
     details: closed
     children:

@@ -1,14 +1,13 @@
 ---
-title: Developer guides
-slug: Web/Guide
+title: Web developer guides
+short-title: Guides
+slug: MDN/Guides
 page-type: landing-page
+sidebar: mdnsidebar
 ---
 
-<section id="Quick_links">
-  {{ListSubpagesForSidebar("/en-US/docs/Web/Guide")}}
-</section>
-
-There are a number of guides within MDN docs. These articles aim to add additional usage examples, or teach you how to use an API or feature. This page links to some of the most popular material.
+There are many guides on MDN Web Docs that teach you how to use features or APIs through practical examples.
+This page is a curated list of some of the most popular goal-oriented learning material.
 
 ## HTML
 

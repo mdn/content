@@ -10,6 +10,9 @@ on:
       - package.json
       - yarn.lock
 
+# No GITHUB_TOKEN permissions, as we don't use it.
+permissions: {}
+
 jobs:
   block:
     # This makes sure it only runs on our origin repo

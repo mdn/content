@@ -12428,6 +12428,7 @@
 /en-US/docs/Web/Events/webkitmouseforceup	/en-US/docs/Web/API/Element/webkitmouseforceup_event
 /en-US/docs/Web/Events/webkitmouseforcewillbegin	/en-US/docs/Web/API/Element/webkitmouseforcewillbegin_event
 /en-US/docs/Web/Events/wheel	/en-US/docs/Web/API/Element/wheel_event
+/en-US/docs/Web/Guide	/en-US/docs/MDN/Guides
 /en-US/docs/Web/Guide/AJAX	/en-US/docs/Learn_web_development/Core/Scripting/Network_requests
 /en-US/docs/Web/Guide/AJAX/Community	/en-US/docs/Learn_web_development/Core/Scripting/Network_requests
 /en-US/docs/Web/Guide/AJAX/Getting_Started	/en-US/docs/Learn_web_development/Core/Scripting/Network_requests
@@ -12607,7 +12608,7 @@
 /en-US/docs/Web/Guide/HTML/Using_data_attributes	/en-US/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes
 /en-US/docs/Web/Guide/HTML/XHTML	/en-US/docs/Glossary/XHTML
 /en-US/docs/Web/Guide/Houdini	/en-US/docs/Web/API/Houdini_APIs
-/en-US/docs/Web/Guide/Index	/en-US/docs/Web/Guide
+/en-US/docs/Web/Guide/Index	/en-US/docs/MDN/Guides
 /en-US/docs/Web/Guide/Introduction_to_Web_development	/en-US/docs/Learn_web_development
 /en-US/docs/Web/Guide/Mobile	/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design
 /en-US/docs/Web/Guide/Mobile/A_hybrid_approach	/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design
@@ -12621,7 +12622,7 @@
 /en-US/docs/Web/Guide/Printing	/en-US/docs/Web/CSS/CSS_media_queries/Printing
 /en-US/docs/Web/Guide/Responsive_design	/en-US/docs/Web/Progressive_web_apps
 /en-US/docs/Web/Guide/Responsive_design/Responsive_design_references	/en-US/docs/Web/Progressive_web_apps
-/en-US/docs/Web/Guide/SVG-in-OpenType	/en-US/docs/Web/Guide
+/en-US/docs/Web/Guide/SVG-in-OpenType	/en-US/docs/MDN/Guides
 /en-US/docs/Web/Guide/Terminology	/en-US/docs/Glossary
 /en-US/docs/Web/Guide/Touch_events	/en-US/docs/Web/API/Touch_events
 /en-US/docs/Web/Guide/User_experience/Using_the_Page_Visibility_API	/en-US/docs/Web/API/Page_Visibility_API
@@ -13997,7 +13998,7 @@
 /en-US/docs/Web_Audio_API	/en-US/docs/Web/API/Web_Audio_API
 /en-US/docs/Web_Audio_API/Porting_webkitAudioContext_code_to_standards_based_AudioContext	/en-US/docs/Web/API/Web_Audio_API
 /en-US/docs/Web_Audio_API/Using_Web_Audio_API	/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API
-/en-US/docs/Web_Development	/en-US/docs/Web/Guide
+/en-US/docs/Web_Development	/en-US/docs/MDN/Guides
 /en-US/docs/Web_Development/HTTP_cookies	/en-US/docs/Web/HTTP/Cookies
 /en-US/docs/Web_Development/Introduction_to_Web_development	/en-US/docs/Learn_web_development
 /en-US/docs/Web_Development/Mobile	/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design
