@@ -12,6 +12,8 @@ The **`HTMLAreaElement.search`** property is a search
 string, also called a _query string_, that is a string containing
 a `'?'` followed by the parameters of the URL.
 
+The query is {{Glossary("Percent-encoding", "percent-encoded")}} when setting but not percent-decoded when read. If the URL does not have search parameters, this property contains an empty string, `""`.
+
 Modern browsers provide
 [`URLSearchParams`](/en-US/docs/Web/API/URLSearchParams/get#examples)
 and
