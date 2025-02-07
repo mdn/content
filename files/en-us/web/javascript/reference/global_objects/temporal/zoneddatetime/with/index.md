@@ -23,7 +23,7 @@ with(info, options)
 ### Parameters
 
 - `info`
-  - : An object containing at least one of the properties recognized by {{jsxref("Temporal/ZonedDateTime/from", "Temporal.ZonedDateTime.from()")}} (except `calendar`): `day`, `era` and `eraYear`, `hour`, `microsecond`, `millisecond`, `minute`, `month`, `monthCode`, `nanosecond`, `offset`, `second`, `year`. Unspecified properties use the values from the original date-time. You only need to provide one of `month` or `monthCode`, and one of `era` and `eraYear` or `year`, and the other will be updated accordingly.
+  - : An object containing at least one of the properties recognized by {{jsxref("Temporal/ZonedDateTime/from", "Temporal.ZonedDateTime.from()")}} (except `calendar` and `timeZone`): `day`, `era` and `eraYear`, `hour`, `microsecond`, `millisecond`, `minute`, `month`, `monthCode`, `nanosecond`, `offset`, `second`, `year`. Unspecified properties use the values from the original date-time. You only need to provide one of `month` or `monthCode`, and one of `era` and `eraYear` or `year`, and the other will be updated accordingly.
 - `options` {{optional_inline}}
   - : An object containing some or all of the following properties (in the order they are retrieved and validated):
     - `disambiguation` {{optional_inline}}
