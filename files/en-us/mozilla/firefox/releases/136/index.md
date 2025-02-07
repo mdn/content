@@ -58,7 +58,7 @@ This article provides information about the changes in Firefox 136 that affect d
 
 ## Changes for add-on developers
 
-- Adds the `preferred_environment` property to the [`background` manifest key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background), enabling extensions to request that the browser run their background scripts as a document or service workers ([Firefox bug 1798655](https://bugzil.la/1798655)).
+- Adds the `preferred_environment` property to the [`background` manifest key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background), enabling extensions to request that the browser run their background scripts as a document or service worker ([Firefox bug 1798655](https://bugzil.la/1798655)).
 - {{WebExtAPIRef("menus.update")}} and {{WebExtAPIRef("menus.remove")}} and the aliases {{WebExtAPIRef("contextMenus.update")}} and {{WebExtAPIRef("contextMenus.remove")}} now reject with an error when the menu item doesn't exist. Previously, the error was ignored and the promise fulfilled. ([Firefox bug 1688743](https://bugzil.la/1688743)).
 
 ### Removals
