@@ -43,7 +43,7 @@ The accepted values are as follows:
 - `<pt-name-selector>`
   - : The {{cssxref("custom-ident")}} set as the value of the {{cssxref("view-transition-name")}} property.
 - `<pt-class-selector>`
-  - : The {{cssxref("custom-ident")}} set as the value of the {{cssxref("view-transition-class")}} property preceded by a period (.).
+  - : The {{cssxref("custom-ident")}} set as the value of the {{cssxref("view-transition-class")}} property preceded by a period (`.`).
 
 ## Examples
 
