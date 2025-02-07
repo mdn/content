@@ -217,11 +217,9 @@ With this CSS applied, the generated pseudo-element tree will now look like this
 The existence of the second set of pseudo-elements allows separate view transition styling to be applied just to the `<figcaption>`. The different old and new view captures are handled separately from one another.
 
 > [!NOTE]
-> The value of `view-transition-name` can be anything you want except for `none` and `auto` — the `none` value specifically means that the element will not participate in a view transition.
+> The value of `view-transition-name` is a unique {{cssxref("custom-ident")}}; it can be any identifier that wouldn't be misinterpreted as a keyword. Avoid `none` as that value means the element will not participate in any view transitions. Also avoid `auto` for now, as it's being discussed as a way to [determine `view-transition-name` automatically](https://drafts.csswg.org/css-view-transitions-2/#auto-vt-name).
 >
 > `view-transition-name` values must also be unique. If two rendered elements have the same `view-transition-name` at the same time, {{domxref("ViewTransition.ready")}} will reject and the transition will be skipped.
->
-> Support for determining the `view-transition-name` automatically is being discussed in the [CSS View Transitions Module Level 2](https://drafts.csswg.org/css-view-transitions-2/#auto-vt-name) spec.
 
 The following code applies a custom animation just to the `<figcaption>`:
 
