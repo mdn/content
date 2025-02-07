@@ -32,16 +32,16 @@ The **`document.write()`** method writes text in one or more {{domxref("TrustedH
 
 ```js-nolint
 write()
-write(text1)
-write(text1, text2)
-write(text1, text2, /* …, */ textN)
+write(markup1)
+write(markup1, markup2)
+write(markup1, markup2, /* …, */ markupN)
 ```
 
 ### Parameters
 
-- `text1`, …, `textN`
-  - : {{domxref("TrustedHTML")}} and/or string objects containing the text to be written to the document.
-    `TrustedHTML` is recommended for sanitizing any text that may have been provided as user input.
+- `markup1`, …, `markupN`
+  - : {{domxref("TrustedHTML")}} or string objects containing the text to be written to the document.
+    `TrustedHTML` is recommended for sanitizing any markup that may have been provided as user input.
 
 ### Return value
 
@@ -56,44 +56,82 @@ None ({{jsxref("undefined")}}).
 
 ## Description
 
-`document.write()` parses the text in the objects passed as parameters into the open document's object model (DOM), in the order that the parameters are specified.
+`document.write()` parses the markup text in the objects passed as parameters into the open document's object model (DOM), in the order that the parameters are specified.
 
 The passed objects may be strings or {{domxref("TrustedHTML")}} objects (if supported by the browser), or both.
 
+### Writing strings
+
 For example, this code fragment opens the current document, and then parses strings containing {{htmlelement("h1")}} and {{htmlelement("p")}} elements to a stream.
+In the middle it writes a string variable `untrustedUserInputString`, which we assume to have come from user input.
 After writing it calls {{domxref("document.close()")}} to tell the browser to finish loading the page.
 
 ```js
 document.open();
-document.write("<h1>Out with the old</h1>", "<p>in with the new!</p>");
+document.write(
+  "<h1>Out with the old</h1>",
+  untrustedUserInputString,
+  "<p>in with the new!</p>",
+);
 document.close();
 ```
 
-Above we're hard-coding the strings, but if any of the text was provided as user input, it would potentially provide a path for executing unsafe code in the content of the current origin ([XSS attacks](/en-US/docs/Web/Security/Attacks/XSS)).
-This can be mitigated by use the [Trusted Types API](/en-US/docs/Web/API/Trusted_Types_API), which allows you to ensure that [injection_sinks](/en-US/docs/Web/API/Trusted_Types_API#injection_sinks) like `write()` may only be passed objects that have already been sanitized of unwanted elements and attributes.
+Note that in this example we've hard-coded the strings.
+If any of the text was provided as user input, it would potentially provide a path for executing unsafe code in the content of the current origin (an [XSS attack](/en-US/docs/Web/Security/Attacks/XSS)).
+The next section explains how you can mitigate the risk using trusted types.
 
-For `write()`, this means that instead of passing a string you pass a {{domxref("TrustedHTML")}} object that contains a sanitized version any user input.
+### Writing TrustedHTML
+
+The [Trusted Types API](/en-US/docs/Web/API/Trusted_Types_API) allows you to ensure that [injection sinks](/en-US/docs/Web/API/Trusted_Types_API#injection_sinks) may only be passed objects that have already been sanitized of unwanted elements and attributes.
+
+For `write()`, this means that instead of passing strings you can pass {{domxref("TrustedHTML")}} instances that contain sanitized versions of input markup.
+This code shows how you might re-write the example above to take advantage of trusted types.
+
+Note that we've created separate policies for trusted and untrusted content, because it is likely our document will have both, and they will have different sanitization requirements.
+The [trusted type enforcement](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types) makes you check that appropriate sanitization has been applied to all sinks! It doesn't specify how you sanitize content, if at all.
 
 ```js
-// Create a policy for parsing text to be written to documents
-const writeDocumentHTMLPolicy = trustedTypes.createPolicy("myDocumentPolicy", {
-  createHTML: (string) =>
-    string.replace(/* some kind of santization function */),
-});
+// Create a policy for sanitizing the trusted part of the document
+const trustedWriteDocumentHTMLPolicy = trustedTypes.createPolicy(
+  "trusted_contentdocumentPolicy",
+  {
+    createHTML: (string) => string.replace(/* minimal sanitization function */),
+  },
+);
 
-// Use policy to sanitize potentially unsafe text, returning a TrustedHTML object contains
-const escapedDocumentHTML = writeDocumentHTMLPolicy.createHTML(
+// Sanitize the trusted part of the document, returning a TrustedHTML object
+const sanitizedOutWithOld = trustedWriteDocumentHTMLPolicy.createHTML(
   "<h1>Out with the old</h1>",
+);
+const sanitizedInWithNew = trustedWriteDocumentHTMLPolicy.createHTML(
+  "<p>in with the new!</p>",
+);
+
+// Create and use policy for sanitizing untrusted content
+const userInputWriteDocumentHTMLPolicy = trustedTypes.createPolicy(
+  "userinput_contentdocumentPolicy",
+  {
+    createHTML: (string) => string.replace(/* robust sanitization function */),
+  },
+);
+
+const sanitizedDocumentHTML = writeDocumentHTMLPolicy.createHTML(
+  "<script>/* Untrusted Input */</script>",
 );
 
 // Pass the TrustedHTML to write()
 document.open();
-document.write(escapedDocumentHTML, "<p>in with the new!</p>");
+document.write(sanitizedOutWithOld, sanitizedDocumentHTML, sanitizedInWithNew);
 document.close();
 ```
 
+> [!NOTE]
+> You can also mix strings and `TrustedTypes` in a call to `write()`.
+> While this is not recommended (all sinks should be passed trusted types) it may be used while migrating to the new approach.
+> In this case, you must also create a [default policy](/en-US/docs/Web/API/TrustedTypePolicyFactory/createPolicy#creating_a_default_policy) to convert your strings to `TrustedTypes` automatically when trusted types are enforced.
+
 [The trusted types JavaScript API](/en-US/docs/Web/API/Trusted_Types_API#the_trusted_types_javascript_api) section of _Trusted Types API_ explains policy definition and enforcement in more detail.
-We also provide an example below.
+We also provide examples below.
 
 ### Usage notes
 
@@ -142,7 +180,7 @@ replace.addEventListener("click", () => {
 
 ### Writing TrustedHTML
 
-This example is the same as the one before, except that the first parameter is sanitized.
+This example is the same as the one before, except that between the original string parameters we supply a sanitized `TrustedHTML` instance.
 
 ```html
 <p>Some original document content.</p>
@@ -157,12 +195,16 @@ const writeDocumentHTMLPolicy = trustedTypes.createPolicy("myDocumentPolicy", {
 });
 
 const escapedDocumentHTML = writeDocumentHTMLPolicy.createHTML(
-  "<h1>Out with the old</h1>",
+  "Potentially <script>Untrusted</script>",
 );
 
 replace.addEventListener("click", () => {
   document.open();
-  document.write(escapedDocumentHTML, "<p>in with the new!</p>");
+  document.write(
+    "<h1>Out with the old</h1>",
+    escapedDocumentHTML,
+    "<p>in with the new!</p>",
+  );
   document.close();
 });
 ```
@@ -170,6 +212,19 @@ replace.addEventListener("click", () => {
 Press the button and note that the "heading text" is rendered as plain text.
 
 {{EmbedLiveSample("Writing TrustedHTML")}}
+
+<!--
+
+```js
+// Create a default policy.
+// Must be present when strings are used and trusted types are enforced
+trustedTypes.createPolicy('default', {
+  createHTML: (string) => {
+    console.log(`TT Default policy - input: ${text}`);
+    return string;
+  },
+});
+```
 
 We use the {{domxref("Window.trustedTypes")}} to access the global {{domxref("TrustedTypePolicyFactory")}}, and call its {{domxref("TrustedTypePolicyFactory/createPolicy","createPolicy()")}} method to define the sanitize function used for creating {{domxref("TrustedHTML")}} objects from text.
 For example, this code creates a policy named `"myDocumentPolicy"` that we use to sanitize some text, and then we can pass the returned `TrustedHTML` to `write()`.
@@ -182,6 +237,8 @@ If trusted types are enforced using [CSP: require-trusted-types-for](/en-US/docs
 While you should create and use appropriate policies, it is possible to define a [default policy](/en-US/docs/Web/API/TrustedTypePolicyFactory/createPolicy#the_default_policy) that will automatically be applied to strings used in this API.
 
 For more information see [Trusted Types API](/en-US/docs/Web/API/Trusted_Types_API).
+
+-->
 
 ## Specifications
 
