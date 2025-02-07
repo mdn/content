@@ -180,6 +180,7 @@ async function checkisUserVerifyingPlatformAuthenticatorAvailable() {
     // Perform actions if biometric support is not available.
   }
 }
+````
 
 ## Controlling access to the API
 
