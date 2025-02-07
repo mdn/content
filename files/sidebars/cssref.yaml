@@ -82,7 +82,7 @@ sidebar:
     tags: css-pseudo-class
     title: Pseudo-classes
     details: closed
-  - type: listSubPages
+  - type: listSubPagesGrouped
     path: /Web/CSS
     tags: css-pseudo-element
     title: Pseudo-elements
