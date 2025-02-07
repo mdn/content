@@ -74,7 +74,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
     Moreover other URL features can locate specific parts of the resource, including:
 
     - Sections of a page with document fragments
-    - Specific text portions with [text fragments](/en-US/docs/Web/URI/Guides/Text_fragments)
+    - Specific text portions with [text fragments](/en-US/docs/Web/URI/Reference/Fragment/Text_fragments)
     - Pieces of media files with media fragments
 
 - `hreflang`
@@ -563,4 +563,4 @@ Using `target="_blank"` without [`rel="noreferrer"`](/en-US/docs/Web/HTML/Attrib
 - {{CSSxRef(":link")}} is a CSS pseudo-class that will match `<a>` elements with URL in `href` attribute that was not yet visited by the user.
 - {{CSSxRef(":visited")}} is a CSS pseudo-class that will match `<a>` elements with URL in `href` attribute that was visited by the user in the past.
 - {{CSSxRef(":any-link")}} is a CSS pseudo-class that will match `<a>` elements with `href` attribute.
-- [Text fragments](/en-US/docs/Web/URI/Guides/Text_fragments) are user-agent instructions added to URLs that allow content authors to link to specific text on a page, without IDs being required.
+- [Text fragments](/en-US/docs/Web/URI/Reference/Fragment/Text_fragments) are user-agent instructions added to URLs that allow content authors to link to specific text on a page, without IDs being required.

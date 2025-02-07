@@ -13547,13 +13547,15 @@
 /en-US/docs/Web/Security/Securing_your_site	/en-US/docs/Web/Security/Practical_implementation_guides
 /en-US/docs/Web/Security/Securing_your_site/Configuring_server_MIME_types	/en-US/docs/Learn_web_development/Extensions/Server-side/Configuring_server_MIME_types
 /en-US/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion	/en-US/docs/Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion
-/en-US/docs/Web/Text_fragments	/en-US/docs/Web/URI/Guides/Text_fragments
+/en-US/docs/Web/Text_fragments	/en-US/docs/Web/URI/Reference/Fragment/Text_fragments
 /en-US/docs/Web/Tutorials	/en-US/docs/MDN/Tutorials
 /en-US/docs/Web/URI/Authority	/en-US/docs/Web/URI/Reference/Authority
 /en-US/docs/Web/URI/Authority/Choosing_between_www_and_non-www_URLs	/en-US/docs/Web/URI/Guides/Choosing_between_www_and_non-www_URLs
 /en-US/docs/Web/URI/Fragment	/en-US/docs/Web/URI/Reference/Fragment
-/en-US/docs/Web/URI/Fragment/Text_fragments	/en-US/docs/Web/URI/Guides/Text_fragments
+/en-US/docs/Web/URI/Fragment/Text_fragments	/en-US/docs/Web/URI/Reference/Fragment/Text_fragments
+/en-US/docs/Web/URI/Guides/Text_fragments	/en-US/docs/Web/URI/Reference/Fragment/Text_fragments
 /en-US/docs/Web/URI/Reference/Authority/Choosing_between_www_and_non-www_URLs	/en-US/docs/Web/URI/Guides/Choosing_between_www_and_non-www_URLs
+/en-US/docs/Web/URI/Reference/Text_fragments	/en-US/docs/Web/URI/Reference/Fragment/Text_fragments
 /en-US/docs/Web/URI/Schemes	/en-US/docs/Web/URI/Reference/Schemes
 /en-US/docs/Web/URI/Schemes/data	/en-US/docs/Web/URI/Reference/Schemes/data
 /en-US/docs/Web/URI/Schemes/javascript	/en-US/docs/Web/URI/Reference/Schemes/javascript

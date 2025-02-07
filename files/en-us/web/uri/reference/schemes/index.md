@@ -1,5 +1,6 @@
 ---
 title: URI schemes
+short-title: Scheme
 slug: Web/URI/Reference/Schemes
 page-type: reference
 spec-urls: https://www.rfc-editor.org/rfc/rfc3986.html#section-3.1
@@ -29,7 +30,7 @@ protocol:
     - `ftp`
       - : {{Glossary("FTP","File Transfer Protocol")}}
     - `http` / `https`
-      - : Hyper text transfer protocol (Secure) ({{glossary("HTTP")}}/{{glossary("HTTPS")}})
+      - : Hyper text transfer protocol (and secure connections) ({{glossary("HTTP")}}/{{glossary("HTTPS")}})
     - [`javascript`](/en-US/docs/Web/URI/Reference/Schemes/javascript)
       - : URL-embedded JavaScript code
     - `mailto`
@@ -39,13 +40,13 @@ protocol:
     - `ssh`
       - : Secure shell
     - `tel`
-      - : telephone
+      - : Telephone
     - `urn`
       - : Uniform Resource Names
     - `view-source`
       - : Source code of the resource
     - `ws` / `wss`
-      - : [WebSocket connections (Secure)](/en-US/docs/Web/API/WebSockets_API)
+      - : [WebSocket connections](/en-US/docs/Web/API/WebSockets_API) (and secure connections)
 
 ## Specifications
 

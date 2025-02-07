@@ -1,7 +1,7 @@
 ---
 title: Text fragments
-slug: Web/URI/Guides/Text_fragments
-page-type: guide
+slug: Web/URI/Reference/Fragment/Text_fragments
+page-type: reference
 browser-compat:
   - html.elements.a.text_fragments
   - api.FragmentDirective

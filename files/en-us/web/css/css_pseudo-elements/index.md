@@ -102,7 +102,7 @@ The specification also defines the `::details-content` and `::search-text` pseud
   - {{cssxref("content")}} property
   - {{cssxref("quotes")}} property
 
-- [Text fragments](/en-US/docs/Web/URI/Guides/Text_fragments)
+- [Text fragments](/en-US/docs/Web/URI/Reference/Fragment/Text_fragments)
 
 - {{DOMXref("AnimationEvent.pseudoElement")}} property
 - {{DOMXref("KeyframeEffect.pseudoElement")}} property
