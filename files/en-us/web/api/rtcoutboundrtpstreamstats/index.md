@@ -17,24 +17,24 @@ The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} re
   - : A boolean that indicates whether this RTP stream is configured to be sent, or is disabled.
 - {{domxref("RTCOutboundRtpStreamStats.frameHeight", "frameHeight")}}
   - : An integer indicating the height of the last encoded frame, in pixels.
-    _Only exists for video streams._
+    _Undefined for audio streams._
 - {{domxref("RTCOutboundRtpStreamStats.frameWidth", "frameWidth")}}
   - : An integer indicating the width of the last encoded frame, in pixels.
-    _Only exists for video streams._
+    _Undefined for audio streams._
 - {{domxref("RTCOutboundRtpStreamStats.framesEncoded", "framesEncoded")}}
   - : The number of frames that have been successfully encoded so far for sending on this RTP stream.
-    _Only exists for video streams._
+    _Undefined for audio streams._
 - {{domxref("RTCOutboundRtpStreamStats.framesPerSecond", "framesPerSecond")}}
   - : A number that represents the encoded frames sent in the last second.
-    _Only exists for video streams._
+    _Undefined for audio streams._
 - {{domxref("RTCOutboundRtpStreamStats.framesSent", "framesSent")}}
   - : A positive integer that represents the total number of encoded frames sent on this RTP stream.
-    _Only exists for video streams._
+    _Undefined for audio streams._
 - {{domxref("RTCOutboundRtpStreamStats.headerBytesSent", "headerBytesSent")}}
   - : A positive integer that represents the total number of RTP header and padding bytes sent for this SSRC.
 - {{domxref("RTCOutboundRtpStreamStats.keyFramesEncoded", "keyFramesEncoded")}}
   - : A positive integer that represents the total number of key frames successfully encoded in this RTP media stream.
-    _Only exists for video streams._
+    _Undefined for audio streams._
 - {{domxref("RTCOutboundRtpStreamStats.mediaSourceId", "mediaSourceId")}}
   - : A string that represents the id of the stats object of the track currently attached to the sender of this stream.
 - {{domxref("RTCOutboundRtpStreamStats.mid", "mid")}}
@@ -46,14 +46,14 @@ The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} re
 - {{domxref("RTCOutboundRtpStreamStats.qpSum", "qpSum")}}
   - : A 64-bit value containing the sum of the QP values for every frame encoded by this {{domxref("RTCRtpSender")}}.
     This locally-computed value provides an indication of how heavily compressed the data is.
-    _Only exists for video streams._
+    _Undefined for audio streams._
 - {{domxref("RTCOutboundRtpStreamStats.qualityLimitationDurations", "qualityLimitationDurations")}} {{experimental_inline}}
   - : A map of the reasons that a media stream's resolution or framerate has been reduced, and the time that the quality was reduced for each reason.
-    _Only exists for video streams._
+    _Undefined for audio streams._
 - {{domxref("RTCOutboundRtpStreamStats.qualityLimitationReason", "qualityLimitationReason")}} {{experimental_inline}}
   - : A string indicating the reason why the stream is being quality-limited.
     One of: `none`, `cpu`, `bandwidth`, or `other`.
-    _Only exists for video streams._
+    _Undefined for audio streams._
 - {{domxref("RTCOutboundRtpStreamStats.remoteId", "remoteId")}}
   - : A string which identifies the {{domxref("RTCRemoteInboundRtpStreamStats")}} object that provides statistics for the remote peer for this same SSRC.
     This ID is stable across multiple calls to `getStats()`.
@@ -62,18 +62,18 @@ The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} re
 - {{domxref("RTCOutboundRtpStreamStats.retransmittedPacketsSent", "retransmittedPacketsSent")}}
   - : A positive integer that represents the total number of packets retransmitted for the source associated with this stream.
 - {{domxref("RTCOutboundRtpStreamStats.rid", "rid")}}
-  - : A string that indicates the RTP stream ID for a corresponding audio stream.
+  - : A string that indicates the RTP stream ID for a corresponding video stream.
 - {{domxref("RTCOutboundRtpStreamStats.scalabilityMode", "scalabilityMode")}}
   - : A string that represents the scalability mode for the RTP stream, if one has been configured.
 - {{domxref("RTCOutboundRtpStreamStats.targetBitrate", "targetBitrate")}}
   - : A number that represents the bit rate that the `RTCRtpSender`'s codec is currently attempting to achieve for the stream.
 - {{domxref("RTCOutboundRtpStreamStats.totalEncodeTime", "totalEncodeTime")}}
   - : A number that represents the total number of seconds that have been spent encoding the frames encoded for this stream {{domxref("RTCRtpSender")}}.
-    _Only exists for video streams._
+    _Undefined for audio streams._
 - {{domxref("RTCOutboundRtpStreamStats.totalEncodedBytesTarget", "totalEncodedBytesTarget")}} {{experimental_inline}}
   - : A cumulative sum of the _target_ frame sizes for all of the frames encoded so far.
     This will likely differ from the total of the _actual_ frame sizes.
-    _Only exists for video streams._
+    _Undefined for audio streams._
 - {{domxref("RTCOutboundRtpStreamStats.totalPacketSendDelay", "totalPacketSendDelay")}}
   - : A number that represents the total time in seconds that packets have spent buffered locally before being transmitted.
 

@@ -12,10 +12,10 @@ The **`totalEncodeTime`** property of the {{domxref("RTCOutboundRtpStreamStats")
 
 The average encode time can be calculated by dividing this value by `framesEncoded`.
 The time it takes to encode one frame is the time between sending the encoder a frame and the encoder returning encoded data for that frame.
-It does not include time any time spent packetizing the resulting data.
+It does not include any time spent packetizing the resulting data.
 
 > [!NOTE]
-> This property only exists for video media.
+> The property is undefined for audio streams.
 
 ## Value
 

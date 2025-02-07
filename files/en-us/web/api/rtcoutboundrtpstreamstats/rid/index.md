@@ -10,16 +10,16 @@ browser-compat: api.RTCStatsReport.type_outbound-rtp.rid
 
 The **`rid`** property of the {{domxref("RTCOutboundRtpStreamStats")}} dictionary is a string that specifies the RTP stream ID, if defined.
 
-The property only exists for audio streams where the rid has been set for the corresponding {{domxref("RTCRtpSender")}}.
+The property is only defined where the `rid` has been set for the corresponding {{domxref("RTCRtpSender")}}.
 If set, this value will be present regardless of whether the RID RTP header extension has been negotiated.
 
 ## Value
 
 The value of the [`encodings.rid`](/en-US/docs/Web/API/RTCRtpSender/setParameters#rid) argument passed to {{domxref("RTCRtpSender.setParameters()")}}, if any, when the corresponding transceiver is created.
-If the stream ID was not set this property does not exist.
+The property is undefined if the stream ID was not set.
 
 > [!NOTE]
-> This property only exists for audio streams.
+> The property is undefined for audio streams.
 
 ## Specifications
 

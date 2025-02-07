@@ -13,7 +13,7 @@ The **`frameHeight`** property of the {{domxref("RTCOutboundRtpStreamStats")}} d
 Note that the resolution of the encoded frame may be lower than that of the media source, which is provided in {{domxref("RTCVideoSourceStats.height")}}.
 
 > [!NOTE]
-> The value does not exist for audio, or before the first frame is encoded.
+> The property is undefined for audio streams, and before the first frame is encoded.
 
 ## Value
 

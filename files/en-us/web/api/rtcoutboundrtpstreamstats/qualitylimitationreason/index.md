@@ -19,7 +19,7 @@ If the most limiting factor cannot be determined the result will be reported usi
 The amount of time the encoded media has had its quality reduced in each of the potential ways that can be done can be found in {{domxref("RTCOutboundRtpStreamStats.qualityLimitationDurations", "qualityLimitationDurations")}}.
 
 > [!NOTE]
-> This property only exists for video media.
+> The property is undefined for audio streams.
 
 ## Value
 

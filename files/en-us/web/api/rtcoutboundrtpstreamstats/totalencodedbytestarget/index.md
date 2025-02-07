@@ -8,7 +8,7 @@ browser-compat: api.RTCStatsReport.type_outbound-rtp.totalEncodedBytesTarget
 
 {{APIRef("WebRTC")}}
 
-The **`totalEncodedBytesTarget`** property of the {{domxref("RTCOutboundRtpStreamStats")}} dictionary represents the cumulative sum of the target frame sizes for all of the frames encoded so far.
+The **`totalEncodedBytesTarget`** property of the {{domxref("RTCOutboundRtpStreamStats")}} dictionary represents the sum of the target frame sizes for all of the frames encoded so far.
 
 The codec has a target maximum size for each frame that it is asked to compress, in bytes.
 This property indicates the cumulative total of the target sizes for each frame at the current time.
@@ -18,11 +18,11 @@ You can compare to {{domxref("RTCOutboundRtpStreamStats/bytesSent","bytesSent")}
 The value increases every time {{domxref("RTCOutboundRtpStreamStats/framesEncoded","framesEncoded")}} goes up.
 
 > [!NOTE]
-> This property only exists for video media.
+> The property is undefined for audio streams.
 
 ## Value
 
-A positive integer, in bytes.
+The sum of the target frame sizes in bytes, represented as a positive integer.
 
 ## Specifications
 
