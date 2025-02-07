@@ -61,17 +61,17 @@ const pushSubscription = await serviceWorkerRegistration.pushManager.subscribe()
 const subscriptionObject = {
   endpoint: pushSubscription.endpoint,
   keys: {
-    p256dh: pushSubscription.getKey('p256dh'),
-    auth: pushSubscription.getKey('auth'),
+    p256dh: pushSubscription.getKey("p256dh"),
+    auth: pushSubscription.getKey("auth"),
   },
   encoding: PushManager.supportedContentEncodings,
   /* other app-specific data, such as user identity */
 };
 
 // Stringify the object an post to the app server
-fetch(`https://example.com/push/`, {
+fetch("https://example.com/push/", {
   method: "post",
-  body: JSON.stringify(subscriptionObject);
+  body: JSON.stringify(subscriptionObject),
 });
 ```
 
