@@ -16,7 +16,7 @@ The **CSS view transitions** module defines the behavior of the [View Transition
 ### Properties
 
 - {{cssxref("view-transition-name")}} {{experimental_inline}}
-- {{cssxref("view-transition-class)}} {{experimental_inline}}
+- {{cssxref("view-transition-class")}} {{experimental_inline}}
 
 ### At-rules and descriptors
 
