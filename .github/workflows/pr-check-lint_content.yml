@@ -130,7 +130,7 @@ jobs:
 
       - name: Setup reviewdog
         if: env.FILES_MODIFIED == 'true' || env.MD_LINT_FAILED == 'true'
-        uses: reviewdog/action-setup@v1
+        uses: reviewdog/action-setup@3f401fe1d58fe77e10d665ab713057375e39b887 # v1.3.0
         with:
           reviewdog_version: latest
 
