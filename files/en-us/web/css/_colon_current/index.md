@@ -1,5 +1,5 @@
 ---
-title: ":current"
+title: :current
 slug: Web/CSS/:current
 page-type: css-pseudo-class
 status:

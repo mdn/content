@@ -62,9 +62,9 @@ Beyond loading a subset of images, you should look into the format of the images
 The optimal file format typically depends on the character of the image.
 
 > [!NOTE]
-> For general information on image types see the [Image file type and format guide](/en-US/docs/Web/Media/Formats/Image_types)
+> For general information on image types see the [Image file type and format guide](/en-US/docs/Web/Media/Guides/Formats/Image_types)
 
-The [SVG](/en-US/docs/Web/Media/Formats/Image_types#svg_scalable_vector_graphics) format is more appropriate for images that have few colors and that are not photo-realistic. This requires the source to be available as in a vector graphic format. Should such an image only exist as a bitmap, then [PNG](/en-US/docs/Web/Media/Formats/Image_types#png_portable_network_graphics) would be the fallback format to choose. Examples of these types of motifs are logos, illustrations, charts, or icons (note: SVGs are far better than icon fonts!). Both formats support transparency.
+The [SVG](/en-US/docs/Web/Media/Guides/Formats/Image_types#svg_scalable_vector_graphics) format is more appropriate for images that have few colors and that are not photo-realistic. This requires the source to be available as in a vector graphic format. Should such an image only exist as a bitmap, then [PNG](/en-US/docs/Web/Media/Guides/Formats/Image_types#png_portable_network_graphics) would be the fallback format to choose. Examples of these types of motifs are logos, illustrations, charts, or icons (note: SVGs are far better than icon fonts!). Both formats support transparency.
 
 PNGs can be saved with three different output combinations:
 
@@ -78,17 +78,17 @@ With photographic motifs that do not feature transparency, there is a much wider
 
 Other formats improve on JPEG's capabilities regarding compression, but are not available on every browser:
 
-- [WebP](/en-US/docs/Web/Media/Formats/Image_types#webp_image) — Excellent choice for both images and animated images. WebP offers much better compression than PNG or JPEG with support for higher color depths, animated frames, transparency, etc. (but not progressive display.). Supported by all major browsers except Safari 14 on macOS desktop Big Sur or earlier.
+- [WebP](/en-US/docs/Web/Media/Guides/Formats/Image_types#webp_image) — Excellent choice for both images and animated images. WebP offers much better compression than PNG or JPEG with support for higher color depths, animated frames, transparency, etc. (but not progressive display.). Supported by all major browsers except Safari 14 on macOS desktop Big Sur or earlier.
 
   > [!NOTE]
   > Despite Apple [announcing support for WebP in Safari 14](https://developer.apple.com/videos/play/wwdc2020/10663/?time=1174), Safari versions earlier than 16.0 don't display `.webp` images successfully on macOS desktop versions earlier than 11/Big Sur. Safari for iOS 14 _does_ display `.webp` images successfully.
 
-- [AVIF](/en-US/docs/Web/Media/Formats/Image_types#avif_image) — Good choice for both images and animated images due to high performance and royalty-free image format (even more efficient than WebP, but not as widely supported). It is now supported on Chrome, Edge, Opera, and Firefox. [Squoosh](https://squoosh.app/) is a good online tool for converting previous image formats to AVIF.
+- [AVIF](/en-US/docs/Web/Media/Guides/Formats/Image_types#avif_image) — Good choice for both images and animated images due to high performance and royalty-free image format (even more efficient than WebP, but not as widely supported). It is now supported on Chrome, Edge, Opera, and Firefox. [Squoosh](https://squoosh.app/) is a good online tool for converting previous image formats to AVIF.
 - **JPEG2000** — once to be the successor to JPEG but only supported in Safari. Doesn't support progressive display either.
 
 Given the narrow support for JPEG-XR and JPEG2000, and also taking decode costs into the equation, the only serious contender for JPEG is WebP. Which is why you could offer your images in that flavor too. This can be done via the `<picture>` element with the help of a `<source>` element equipped with a [type attribute](/en-US/docs/Web/HTML/Element/picture#the_type_attribute).
 
-If all of this sounds a bit complicated or feels like too much work for your team then there are also online services that you can use as image CDNs that will automate the serving of the correct image format on the fly, according to the type of device or browser requesting the image. The biggest ones are [Cloudinary](https://cloudinary.com/blog/make_all_images_on_your_website_responsive_in_3_easy_steps) and [Image Engine](https://imageengine.io/).
+If all of this sounds a bit complicated or feels like too much work for your team then there are also online services that you can use as image CDNs that will automate the serving of the correct image format on the fly, according to the type of device or browser requesting the image. Popular choices include [Cloudinary](https://cloudinary.com/blog/make_all_images_on_your_website_responsive_in_3_easy_steps), [Image Engine](https://imageengine.io/), [ImageKit](https://imagekit.io/docs/image-optimization#automatic-format-conversion), and [imgix](https://www.imgix.com/).
 
 Finally, should you want to include animated images on your page, then know that Safari allows the use of video files within `<img>` and `<picture>` elements. These also allow you to add in an **Animated WebP** for all other modern browsers.
 

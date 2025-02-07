@@ -1,5 +1,5 @@
 ---
-title: ":is()"
+title: :is()
 slug: Web/CSS/:is
 page-type: css-pseudo-class
 browser-compat: css.selectors.is

@@ -2,9 +2,8 @@
 title: Floor
 slug: WebAssembly/Reference/Numeric/Floor
 page-type: webassembly-instruction
+sidebar: webassemblysidebar
 ---
-
-{{WebAssemblySidebar}}
 
 The **`floor`** instructions, are used for getting the value of a number rounded down to the next integer.
 

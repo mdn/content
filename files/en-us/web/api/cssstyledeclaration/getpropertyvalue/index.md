@@ -56,7 +56,7 @@ The returned string might differ from the value specified in the style specifica
 </script>
 ```
 
-Will set a value `rgb(51, 13, 242);`. This is important when compairing styles by string.
+Will set a value `rgb(51, 13, 242);`. This is important when comparing styles by string.
 
 ## Specifications
 

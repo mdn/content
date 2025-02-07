@@ -13,7 +13,7 @@ The `getComputedTextLength()` method of the {{domxref("SVGTextContentElement")}}
 ## Syntax
 
 ```js-nolint
-SVGTextContentElement.getComputedTextLength()
+getComputedTextLength()
 ```
 
 ### Parameters

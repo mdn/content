@@ -44,11 +44,11 @@ There are many other undesirable legacies about `Date`, such as all setters bein
     - As a timestamp: {{jsxref("Temporal.Instant")}}
     - As a date-time component combination paired with a time zone: {{jsxref("Temporal.ZonedDateTime")}}
   - Representing a time-zone-unaware date/time (which are all prefixed with "Plain"):
-    - Date (year, month, day) + time (hour, minute, second, millisecond, nanosecond): {{jsxref("Temporal.PlainDateTime")}} (Note: `ZonedDateTime` is equivalent to `PlainDateTime` plus a time zone)
+    - Date (year, month, day) + time (hour, minute, second, millisecond, microsecond, nanosecond): {{jsxref("Temporal.PlainDateTime")}} (Note: `ZonedDateTime` is equivalent to `PlainDateTime` plus a time zone)
       - Date (year, month, day): {{jsxref("Temporal.PlainDate")}}
         - Year, month: {{jsxref("Temporal.PlainYearMonth")}}
         - Month, day: {{jsxref("Temporal.PlainMonthDay")}}
-      - Time (hour, minute, second, millisecond, nanosecond): {{jsxref("Temporal.PlainTime")}}
+      - Time (hour, minute, second, millisecond, microsecond, nanosecond): {{jsxref("Temporal.PlainTime")}}
 
 Furthermore, there's also another utility namespace, {{jsxref("Temporal.Now")}}, which provides methods for getting the current time in various formats.
 
@@ -265,7 +265,7 @@ With these tables, you should have a basic idea of how to navigate the `Temporal
 
 ### Calendars
 
-A calendar is a way to organize days, typically into periods of weeks, months, years, and eras. Most of the world uses the Gregorian calendar, but there are many other calendars in use, especially in religious and cultural contexts. By default, all calendar-aware `Temporal` objects use the ISO 8601 calendar system, which is based on the Gregorian calendar and defines additional week-numbering rules. {{jsxref("Intl/Locale/getCalendars", "Intl.Locale.prototype.getCalendars()")}} lists most of the calendars likely to be supported by browsers. Here we provide a brief overview of how calendar systems are formed to help you internalize what factors may vary between calendars.
+A calendar is a way to organize days, typically into periods of weeks, months, years, and eras. Most of the world uses the Gregorian calendar, but there are many other calendars in use, especially in religious and cultural contexts. By default, all calendar-aware `Temporal` objects use the ISO 8601 calendar system, which is based on the Gregorian calendar and defines additional week-numbering rules. [`Intl.supportedValuesOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#supported_calendar_types) lists most of the calendars likely to be supported by browsers. Here we provide a brief overview of how calendar systems are formed to help you internalize what factors may vary between calendars.
 
 There are three prominent periodic events on Earth: its rotation around the sun (365.242 days for one revolution), the moon's rotation around the Earth (29.53 days from new moon to new moon), and its rotation around its axis (24 hours from sunrise to sunrise). Every culture has the same measure of a "day", which is 24 hours. Occasional changes such as daylight saving time are not part of the calendar, but are part of the [time zone](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#time_zones_and_offsets)'s information.
 
@@ -273,7 +273,7 @@ There are three prominent periodic events on Earth: its rotation around the sun 
 - Some calendars primarily define one month as 29.5 days on average, by defining months to alternate between 29 and 30 days. Then, 12 months may be grouped into a year of 354 days. These calendars are called _lunar calendars_. The Islamic calendar is a lunar calendar. Because a lunar year is artificial and does not correlate with the season cycle, lunar calendars are generally rarer.
 - Some calendars also primarily define months based on lunar cycles, like lunar calendars. Then, to compensate for the 11-day discrepancy with the solar year, an extra month, the _leap month_, is added about every 3 years. These calendars are called _lunisolar calendars_. The Hebrew calendar and the Chinese calendar are lunisolar calendars.
 
-In `Temporal`, every date under one calendar system is uniquely identified by three components: `year`, `month`, and `day`. `year` is an integer that may be zero or negative, which increases monotonously with time. The year `1` (or `0`, if it exists) is known as the calendar epoch, and is arbitrary for each calendar. `month` is an integer that increments by 1 every time, starting at `1` and ending at `date.monthsInYear`, then resetting back to `1` as the year advances. `day` is also a positive integer, but it may not start at 1 or increment by 1 every time, because political changes may cause days to be skipped or repeated. But in general, `day` monotonously increases and resets as the month advances.
+In `Temporal`, every date under one calendar system is uniquely identified by three components: `year`, `month`, and `day`. While `year` is typically a positive integer, it may also be zero or negative, and increases monotonically with time. The year `1` (or `0`, if it exists) is known as the calendar epoch, and is arbitrary for each calendar. `month` is a positive integer that increments by 1 every time, starting at `1` and ending at `date.monthsInYear`, then resetting back to `1` as the year advances. `day` is also a positive integer, but it may not start at 1 or increment by 1 every time, because political changes may cause days to be skipped or repeated. But in general, `day` monotonically increases and resets as the month advances.
 
 In addition to `year`, a year can also be uniquely identified by the combination of `era` and `eraYear`, for calendars that use eras. For example, the Gregorian calendar uses the era "CE" (Common Era) and "BCE" (Before Common Era), and the year `-1` is the same as `{ era: "bce", eraYear: 1 }`. `era` is a lowercase string, and `eraYear` is an arbitrary integer that may be zero or negative, or even decrease with time (usually for the oldest era).
 
@@ -302,7 +302,7 @@ In addition to `month`, a month in a year can also be uniquely identified by the
 
 In addition to `day` (which is a month-based index), a day in a year can also be uniquely identified by the `dayOfYear`. `dayOfYear` is a positive integer that increments by 1 every time, starting at `1` and ending at `date.daysInYear`.
 
-The concept of a "week" is not connected with any astronomical event, but is a cultural construct. Therefore, weeks can have 4, 5, 6, 8, or more days, or not even a fixed number of days. To get the specific number of days of the week of a date, use the date's `daysInWeek`. `Temporal` identifies weeks by the combination of `weekOfYear` and `yearOfWeek`. `weekOfYear` is a positive integer that increments by 1 every time, starting at `1`, then resetting back to `1` as the year advances. `yearOfWeek` is generally the same as `year`, but may be different at the start or end of each year, because one week may cross two years, and `yearOfWeek` picks one of the two years based on the calendar's rules.
+The concept of a "week" is not connected with any astronomical event, but is a cultural construct. While the most common length is `7` days, weeks can also have 4, 5, 6, 8, or more days — or even lack a fixed number of days altogether. To get the specific number of days of the week of a date, use the date's `daysInWeek`. `Temporal` identifies weeks by the combination of `weekOfYear` and `yearOfWeek`. `weekOfYear` is a positive integer that increments by 1 every time, starting at `1`, then resetting back to `1` as the year advances. `yearOfWeek` is generally the same as `year`, but may be different at the start or end of each year, because one week may cross two years, and `yearOfWeek` picks one of the two years based on the calendar's rules.
 
 > [!NOTE]
 > Always use `weekOfYear` and `yearOfWeek` as a pair; don't use `weekOfYear` and `year`.
@@ -318,12 +318,27 @@ The concept of a "week" is not connected with any astronomical event, but is a c
 All `Temporal` classes can be serialized and deserialized using the format specified in [RFC 9557](https://datatracker.ietf.org/doc/html/rfc9557), which is based on [ISO 8601 / RFC 3339](https://datatracker.ietf.org/doc/html/rfc3339). The format, in its full form, is as follows (spaces are only for readability and should not be present in the actual string):
 
 ```plain
-YYYY-MM-DD T HH:mm:ss.sssssssss Z/±HH:mm:ss.sssssssss [time_zone_id] [u-ca=calendar_id]
+YYYY-MM-DD T HH:mm:ss.sssssssss Z/±HH:mm [time_zone_id] [u-ca=calendar_id]
 ```
 
 Different classes have different requirements for the presence of each component, so you will find a section titled "RFC 9557 format" in each class's documentation, which specifies the format recognized by that class.
 
 This is very similar to the [date time string format](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#date_time_string_format) used by {{jsxref("Date")}}, which is also based on ISO 8601. The main addition is the ability to specify micro- and nanosecond components, and the ability to specify the time zone and calendar system.
+
+### Representable dates
+
+All `Temporal` objects that represent a specific calendar date impose a similar limit on the range of representable dates, which is ±10<sup>8</sup> days (inclusive) from the Unix epoch, or the range of instants from `-271821-04-20T00:00:00` to `+275760-09-13T00:00:00`. This is the same range as [valid dates](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date). More specifically:
+
+- {{jsxref("Temporal.Instant")}} and {{jsxref("Temporal.ZonedDateTime")}} apply this limit directly on its `epochNanoseconds` value.
+- {{jsxref("Temporal.PlainDateTime")}} interprets the date-time in the UTC time zone and requires it to be ±(10<sup>8</sup> + 1) days (exclusive) from the Unix epoch, so its valid range is `-271821-04-19T00:00:00` to `+275760-09-14T00:00:00`, exclusive. This allows any `ZonedDateTime` to be converted to a `PlainDateTime` regardless of its offset.
+- {{jsxref("Temporal.PlainDate")}} applies the same check as `PlainDateTime` to the noon (`12:00:00`) of that date, so its valid range is `-271821-04-19` to `+275760-09-13`. This allows any `PlainDateTime` to be converted to a `PlainDate` regardless of its time, and vice versa.
+- {{jsxref("Temporal.PlainYearMonth")}} has the valid range of `-271821-04` to `+275760-09`. This allows any `PlainDate` to be converted to a `PlainYearMonth` regardless of its date (except if a non-ISO month's first day falls in the ISO month `-271821-03`).
+
+The `Temporal` objects will refuse to construct an instance representing a date/time beyond this limit. This includes:
+
+- Using the constructor or `from()` static method.
+- Using the `with()` method to update calendar fields.
+- Using `add()`, `subtract()`, `round()`, or any other method to derive new instances.
 
 ## Static properties
 

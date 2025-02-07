@@ -1,5 +1,5 @@
 ---
-title: "-moz-image-rect"
+title: -moz-image-rect
 slug: Web/CSS/-moz-image-rect
 page-type: css-function
 status:

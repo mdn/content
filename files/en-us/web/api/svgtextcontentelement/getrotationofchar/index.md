@@ -13,7 +13,7 @@ The `getRotationOfChar()` method of the {{domxref("SVGTextContentElement")}} int
 ## Syntax
 
 ```js-nolint
-SVGTextContentElement.getRotationOfChar(index)
+getRotationOfChar(index)
 ```
 
 ### Parameters

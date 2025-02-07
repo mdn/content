@@ -1,5 +1,5 @@
 ---
-title: "::target-text"
+title: ::target-text
 slug: Web/CSS/::target-text
 page-type: css-pseudo-element
 browser-compat: css.selectors.target-text

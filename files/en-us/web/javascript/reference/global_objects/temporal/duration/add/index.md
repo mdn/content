@@ -35,7 +35,7 @@ A new `Temporal.Duration` object representing the sum of this duration and `othe
 
 ## Description
 
-Non-calendar durations unambiguously represent a fixed amount of time. Internally, `this` and `other` are both converted to nanoseconds (assuming 24-hour days) and added together. The result is then converted back to a `Temporal.Duration` object, so the result is always [balanced](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Duration#duration_balancing) with the largest possible unit being `days`.
+Non-calendar durations unambiguously represent a fixed amount of time. Internally, `this` and `other` are both converted to nanoseconds (assuming 24-hour days) and added together. The result is then converted back to a `Temporal.Duration` object, so the result is always [balanced or top-heavy](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Duration#duration_balancing) with the largest possible unit being `days`.
 
 If you want to perform addition or subtraction with a calendar duration, you can add both durations to a starting point and then figure out the difference between the two resulting instants; that is, `dur1 + dur2` is equivalent to `(start + dur1 + dur2) - start`.
 
@@ -59,7 +59,7 @@ console.log(d3.toString()); // "PT10M"
 const d1 = Temporal.Duration.from({ days: 1 });
 const d2 = Temporal.Duration.from({ months: 1 });
 
-d1.add(d2); // RangeError: can't compare durations when "relativeTo" is undefined
+d1.add(d2); // RangeError: for calendar duration arithmetic, use date arithmetic relative to a starting point
 
 const start = Temporal.PlainDateTime.from("2022-01-01T00:00"); // ISO 8601 calendar
 const result = start.add(d1).add(d2).since(start);

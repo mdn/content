@@ -1,6 +1,6 @@
 ---
 title: "SVGFEMergeElement: y property"
-short-title: "y"
+short-title: y
 slug: Web/API/SVGFEMergeElement/y
 page-type: web-api-instance-property
 browser-compat: api.SVGFEMergeElement.y
