@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.Temporal.ZonedDateTime.toLocaleString
 
 {{JSRef}}{{SeeCompatTable}}
 
-The **`toLocaleString()`** method of {{jsxref("Temporal.ZonedDateTime")}} instances returns a string with a language-sensitive representation of this date-time. In implementations with [`Intl.DateTimeFormat` API](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) support, this method delegates to `Intl.DateTimeFormat` and passes this date-time converted to an {{jsxref("Temporal.Instant")}} (because `Intl.DateTimeFormat` cannot directly format a `Temporal.ZonedDateTime`).
+The **`toLocaleString()`** method of {{jsxref("Temporal.ZonedDateTime")}} instances returns a string with a language-sensitive representation of this date-time. In implementations with [`Intl.DateTimeFormat` API](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) support, this method delegates to `Intl.DateTimeFormat` and passes this date-time converted to a {{jsxref("Temporal.Instant")}} (because `Intl.DateTimeFormat` cannot directly format a `Temporal.ZonedDateTime`).
 
 Every time `toLocaleString` is called, it has to perform a search in a big database of localization strings, which is potentially inefficient. When the method is called many times with the same arguments, it is better to create a {{jsxref("Intl.DateTimeFormat")}} object and use its {{jsxref("Intl/DateTimeFormat/format", "format()")}} method, because a `DateTimeFormat` object remembers the arguments passed to it and may decide to cache a slice of the database, so future `format` calls can search for localization strings within a more constrained context. However, currently `Intl.DateTimeFormat` does not support formatting `Temporal.ZonedDateTime` objects, so you must convert them to `Temporal.Instant` objects first before passing them to `format()`.
 
@@ -43,7 +43,7 @@ See the [`Intl.DateTimeFormat()` constructor](/en-US/docs/Web/JavaScript/Referen
 
 A string representing the given date-time according to language-specific conventions.
 
-In implementations with `Intl.DateTimeFormat`, this is equivalent to `new Intl.DateTimeFormat(locales, options).format(dateTime.toInstant())`, where `options` has been normalized as described above.
+In implementations with `Intl.DateTimeFormat`, this is equivalent to `new Intl.DateTimeFormat(locales, { ...options, timeZone: dateTime.timeZoneId }).format(dateTime.toInstant())`, where `options` has been normalized as described above.
 
 > [!NOTE]
 > Most of the time, the formatting returned by `toLocaleString()` is consistent. However, the output may vary between implementations, even within the same locale — output variations are by design and allowed by the specification. It may also not be what you expect. For example, the string may use non-breaking spaces or be surrounded by bidirectional control characters. You should not compare the results of `toLocaleString()` to hardcoded constants.

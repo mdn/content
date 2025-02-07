@@ -25,7 +25,7 @@ since(other, options)
 - `other`
   - : A string, an object, or a {{jsxref("Temporal.PlainDateTime")}} instance representing a date-time to subtract from this date-time. It is converted to a `Temporal.PlainDateTime` object using the same algorithm as {{jsxref("Temporal/PlainDateTime/from", "Temporal.PlainDateTime.from()")}}. It must have the same calendar as `this`.
 - `options` {{optional_inline}}
-  - : An object containing the options for {{jsxref("Temporal/Duration/round", "Temporal.Duration.prototype.round()")}}, which includes `largestUnit`, `roundingIncrement`, `roundingMode`, and `smallestUnit`. `largestUnit` and `smallestUnit` accept all possible units. For `largestUnit`, the default value `"auto"` means `"day"` or `smallestUnit`, whichever is greater. For `smallestUnit`, the default value is `"nanosecond"`. The current date is used as the `relativeTo` option. Note that using [units larger than `"day"`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Duration#calendar_durations) may make the duration not portable to other calendars or dates.
+  - : An object containing the options for {{jsxref("Temporal/Duration/round", "Temporal.Duration.prototype.round()")}}, which includes `largestUnit`, `roundingIncrement`, `roundingMode`, and `smallestUnit`. `largestUnit` and `smallestUnit` accept all possible units. For `largestUnit`, the default value `"auto"` means `"days"` or `smallestUnit`, whichever is greater. For `smallestUnit`, the default value is `"nanoseconds"`. The current date is used as the `relativeTo` option. Note that using [units larger than `"days"`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Duration#calendar_durations) may make the duration not portable to other calendars or dates.
 
 ### Return value
 
@@ -56,13 +56,13 @@ const duration = now.since(lastBilling);
 console.log(`${duration.toLocaleString("en-US")} since last billing`);
 // Expected output: "[number] days, [number] hr, [number] min, [number] sec since last billing"
 
-const duration2 = now.since(lastBilling, { smallestUnit: "day" });
+const duration2 = now.since(lastBilling, { smallestUnit: "days" });
 console.log(`${duration2.toLocaleString("en-US")} since last billing`);
-// Expected output: "[number] days since last billing
+// Expected output: "[number] days since last billing"
 
 const duration3 = now.since(lastBilling, {
-  largestUnit: "year",
-  smallestUnit: "day",
+  largestUnit: "years",
+  smallestUnit: "days",
 });
 console.log(`${duration3.toLocaleString("en-US")} since last billing`);
 // Expected output: "[number] months, [number] days since last billing"
@@ -76,7 +76,7 @@ By default the fractional part of the `smallestUnit` is truncated. You can round
 const dt1 = Temporal.PlainDateTime.from("2022-01-01T00:00:00");
 const dt2 = Temporal.PlainDateTime.from("2022-01-28T12:34:56");
 const duration = dt2.since(dt1, {
-  smallestUnit: "day",
+  smallestUnit: "days",
   roundingIncrement: 5,
   roundingMode: "ceil",
 });

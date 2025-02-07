@@ -25,7 +25,7 @@ since(other, options)
 - `other`
   - : A string, an object, or a {{jsxref("Temporal.ZonedDateTime")}} instance representing a date-time to subtract from this date-time. It is converted to a `Temporal.ZonedDateTime` object using the same algorithm as {{jsxref("Temporal/ZonedDateTime/from", "Temporal.ZonedDateTime.from()")}}. It must have the same calendar as `this`.
 - `options` {{optional_inline}}
-  - : An object containing the options for {{jsxref("Temporal/Duration/round", "Temporal.Duration.prototype.round()")}}, which includes `largestUnit`, `roundingIncrement`, `roundingMode`, and `smallestUnit`. `largestUnit` and `smallestUnit` accept all possible units. For `largestUnit`, the default value `"auto"` means `"hour"` or `smallestUnit`, whichever is greater. For `smallestUnit`, the default value is `"nanosecond"`. The current date is used as the `relativeTo` option. Note that using [units larger than `"hour"`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Duration#calendar_durations) may make the duration not portable to other calendars, dates, or time zones.
+  - : An object containing the options for {{jsxref("Temporal/Duration/round", "Temporal.Duration.prototype.round()")}}, which includes `largestUnit`, `roundingIncrement`, `roundingMode`, and `smallestUnit`. `largestUnit` and `smallestUnit` accept all possible units. For `largestUnit`, the default value `"auto"` means `"hours"` or `smallestUnit`, whichever is greater. For `smallestUnit`, the default value is `"nanoseconds"`. The current date is used as the `relativeTo` option. Note that using [units larger than `"hours"`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Duration#calendar_durations) may make the duration not portable to other calendars, dates, or time zones.
 
 ### Return value
 
@@ -37,7 +37,7 @@ A new {{jsxref("Temporal.Duration")}} object representing the duration _since_ `
   - : Thrown in one of the following cases:
     - `other` has a different calendar than `this`.
     - Any of the options is invalid.
-    - `other` has a different time zone than `this`, and `largestUnit` is `"day"` or above.
+    - `other` has a different time zone than `this`, and `largestUnit` is `"days"` or above.
 
 ## Description
 
@@ -57,7 +57,7 @@ const end = Temporal.ZonedDateTime.from(
   "2024-11-04T01:00:00-05:00[America/New_York]",
 );
 console.log(end.since(start).toString()); // PT25H
-console.log(end.since(start, { largestUnit: "day" }).toString()); // PT1D
+console.log(end.since(start, { largestUnit: "days" }).toString()); // PT1D
 
 const start2 = Temporal.ZonedDateTime.from(
   "2024-03-10T01:00:00-05:00[America/New_York]",
@@ -66,7 +66,7 @@ const end2 = Temporal.ZonedDateTime.from(
   "2024-03-11T01:00:00-04:00[America/New_York]",
 );
 console.log(end2.since(start2).toString()); // PT23H
-console.log(end2.since(start2, { largestUnit: "day" }).toString()); // PT1D
+console.log(end2.since(start2, { largestUnit: "days" }).toString()); // PT1D
 ```
 
 For this reason, the returned duration is purely time-based with no date portion by default, so that it stays unambiguous.
@@ -85,10 +85,10 @@ const end = Temporal.ZonedDateTime.from(
 );
 
 end.since(start); // PT25H
-end.since(start, { largestUnit: "day" }); // RangeError: time zones "America/Lima" and "America/New_York" aren't compatible
+end.since(start, { largestUnit: "days" }); // RangeError: time zones "America/Lima" and "America/New_York" aren't compatible
 
-end.withTimeZone("America/New_York").since(start, { largestUnit: "day" }); // P1D
-end.since(start.withTimeZone("America/Lima"), { largestUnit: "day" }); // P1D1H
+end.withTimeZone("America/New_York").since(start, { largestUnit: "days" }); // P1D
+end.since(start.withTimeZone("America/Lima"), { largestUnit: "days" }); // P1D1H
 ```
 
 For more examples about how to use `since()`, especially with rounding, see {{jsxref("Temporal/PlainDate/since", "Temporal.PlainDate.prototype.since()")}} and {{jsxref("Temporal/PlainTime/since", "Temporal.PlainTime.prototype.since()")}}.
