@@ -91,6 +91,19 @@ You can supply the body as an instance of any of the following types:
 - {{domxref("FormData")}}
 - {{domxref("ReadableStream")}}
 
+Other objects are converted to strings using their `toString()` method. For example, you can use a {{domxref("URLSearchParams")}} object to encode form data (see [setting headers](#setting_headers) for more information):
+
+```js
+const response = await fetch("https://example.org/post", {
+  headers: {
+    "Content-Type": "application/x-www-form-urlencoded",
+  },
+  // Automatically converted to "username=example&password=password"
+  body: new URLSearchParams({ username: "example", password: "password" }),
+  // ...
+});
+```
+
 Note that just like response bodies, request bodies are streams, and making the request reads the stream, so if a request contains a body, you can't make it twice:
 
 ```js example-bad
