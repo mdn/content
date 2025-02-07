@@ -39,6 +39,12 @@ The **CSS positioned layout** module defines how to position elements on a web p
 - [Understanding z-index](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index)
   - : Presents the notion of stacking context and explains how z-ordering works, with several examples.
 
+## Related concepts
+
+- {{cssxref("float")}}
+- {{cssxref("clear")}}
+- {{cssxref("transform")}}
+
 ## Specifications
 
 {{Specifications}}
