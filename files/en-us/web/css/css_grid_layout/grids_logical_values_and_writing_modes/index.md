@@ -6,11 +6,11 @@ page-type: guide
 
 {{CSSRef}}
 
-One of the important features of grid layout is the support for different writing modes that is built into the specification. In this guide, we look at this feature of grid and other modern layout methods, learning a little about writing modes and logical vs. physical properties as we do so.
+One of the most important features of CSS grid layout is the support for different writing modes built into the specification. In this guide, we look at this feature of CSS grid layout and other modern layout methods, learning a little about writing modes and logical vs. physical properties as we do so.
 
 ## Logical and physical properties and values
 
-CSS is full of **physical** positioning properties and keywords – `left` and `right`, `top` and `bottom`. In the code snippet below, we position an item using absolute positioning and use the physical {{glossary("inset properties")}} as offset values to push the item around, so the item is placed 20 pixels from the top, and 30 pixels from the left of the container:
+CSS is full of **physical** positioning properties and keywords – `left` and `right`, `top` and `bottom`. In the code snippet below, we position an item using absolute positioning and use the physical {{glossary("inset properties")}} as offset values to push the item around. The item is placed 20 pixels from the top and 30 pixels from the left of the container:
 
 ```css
 .container {
@@ -29,15 +29,15 @@ CSS is full of **physical** positioning properties and keywords – `left` and `
 </div>
 ```
 
-This example used the {{cssxref("left")}} and {{cssxref("right")}}; these are just two of the many **{{glossary("physical properties")}}** in CSS. We can also add margins, padding, and borders using these physical properties of {{cssxref("margin-left")}}, {{cssxref("padding-left")}}, and so on. You might also see physical keywords in use, such as when using `text-align: right` to align text to the right.
+This example uses the {{cssxref("left")}} and {{cssxref("right")}} properties; these are just two of the many **{{glossary("physical properties")}}** in CSS. We can also add margins, padding, and borders using physical properties, for example {{cssxref("margin-left")}} and {{cssxref("padding-left")}}. You might also see physical keywords in use, such as when using `text-align: right` to align text to the right.
 
 We call these keywords and properties _physical_ because they relate to the screen you are looking at. Left is always left, no matter what direction your text is running.
 
 ### Issues with physical properties
 
-Physical properties can be an issue when developing a site that has to work in multiple languages, including languages that have text starting on the right rather than the left. Browsers are designed to correctly display content regardless of the language. Some CSS features can override browser defaults and cause content to be displayed less than optimally.
+Physical properties can cause issues when developing a site that has to work in multiple languages, including languages where the text flows from right to left, or top to bottom. Browsers are designed to correctly display content regardless of the language. Some CSS features can override browser defaults and cause content to display less than optimally.
 
-In this example, the {{cssxref("direction")}} has been set to {{glossary("rtl")}}, which switches the writing mode from the default for an English language document of `ltr`. We have two paragraphs. These should be going from right-to-left because of the direction set on an ancestor. The first paragraph has {{cssxref("text-align")}} set to `left`, so the first paragraph sticks to the left. The second goes from right to left.
+In this example, the {{cssxref("direction")}} property has been set to {{glossary("rtl")}}, which switches the writing mode from the default for an English language document of `ltr`. We have two paragraphs. These should both flow from right to left because of the `direction` value set on an ancestor element (`<body>`). The first paragraph has {{cssxref("text-align")}} set to `left`, so it aligns with the left of its container. The second paragraph aligns with the right and flows from right to left.
 
 ```html hidden
 <p class="left">
@@ -68,21 +68,21 @@ body {
 
 {{EmbedLiveSample("Issues with physical properties","",140)}}
 
-This is a very basic demonstration of the problem that can arise when using physical values and properties in CSS. If we write CSS using physical properties and keywords, we tell the browser our assumption as to how the text is flowing, preventing the browser from handling alternative writing modes.
+This is a basic demonstration of the problems that can arise when using physical values and properties in CSS. If we write CSS using physical properties and keywords, we tell the browser our assumption as to how the text will flow and prevent it from handling alternative writing modes.
 
 ### Logical properties and values
 
-\*\*{{glossary("Logical properties")}} and values do not make an assumption about text direction. This is why we use the keyword `start` in grid layout to align something to the start of the container. Working in English, `start` may be on the left, however it doesn't have to be. The word `start` infers no physical location, which enables right-to-left translations, such as Arabic, to start the content on the right.
+**{{glossary("Logical properties")}} and values** do not assume a text direction. This is why we use the keyword `start` in CSS grid layout to align something with the start of a container. When working with English content, `start` will be on the left, however, it doesn't have to be. The word `start` infers no physical location, which enables websites to start the content on the right when right-to-left languages, such as Arabic, are used.
 
 ## Block and Inline
 
-When using logical rather than physical properties, we don't seeing the world as left to right, and top to bottom. We have a different reference point. This is where understanding the _block_ and _inline_ axes, introduced in the [grid alignment guide](/en-US/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout), becomes very useful. If you think about layout in terms of block and inline, the way things work in grid will make a lot of sense.
+When using logical rather than physical properties, we don't see the world as left to right, and top to bottom. We have a different reference point. This is where understanding the _block_ and _inline_ axes, introduced in the [grid alignment guide](/en-US/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout), becomes very useful. If you think about layout in terms of block and inline, the way things work in CSS grid layout makes a lot of sense.
 
 ![An image showing the default direction of the block and inline axes.](8-horizontal-tb.png)
 
 ## CSS writing modes
 
-The [CSS writing modes](/en-US/docs/Web/CSS/CSS_writing_modes) module details using different writing modes in CSS. These features are not just for the support of languages that have a different writing mode to English; they can also be used for creative purposes. The examples in this section make use of the {{cssxref("writing-mode")}} property to make changes to the writing mode applied to our grid to demonstrate how logical values work.
+The [CSS writing modes](/en-US/docs/Web/CSS/CSS_writing_modes) module specifies how writing modes work in CSS. These features are not just for supporting languages with a different writing mode to English; they can also be used for creative purposes. The examples in this section make use of the {{cssxref("writing-mode")}} property to make changes to the writing mode applied to our grid, demonstrating how logical values work in the process.
 
 ### `writing-mode`
 
@@ -94,9 +94,9 @@ Writing modes are more than just left to right and right to left text, and the `
 - `sideways-rl`
 - `sideways-lr`
 
-The value `horizontal-tb`, which stands for "horizontal, top to bottom", is the default for text on the web. It is the direction in which you are reading this guide. The other properties will change the way that text flows in our document, matching the different writing modes found around the world.
+The value `horizontal-tb`, which stands for "horizontal, top to bottom", is the default for text on the web. It is the direction in which you are reading this guide. The other values change how text flows in our document, matching the different writing modes found worldwide.
 
-As an example, we have two paragraphs below. The first uses the default `horizontal-tb`, and the second uses `vertical-rl`. In these modes, text still runs left to right, however the direction of the text is vertical - inline text now runs down the page, from top to bottom.
+As an example, we have two paragraphs below. The first uses the default `horizontal-tb` value, and the second uses `vertical-rl`. In the second writing mode, text still runs left to right, however the direction of the text is vertical — inline text now runs down the page, from top to bottom.
 
 ```css hidden
 .wrapper > p {
@@ -174,7 +174,7 @@ In this example, the grid has three columns and two row tracks. This means there
 
 ### Setting writing mode
 
-If we add `writing-mode: vertical-lr` to the grid container in the previous example, we can see that the block and inline axes now run in a different direction. The block or _column_ axis now runs across the page from left to right, inline runs down the page, creating rows from top to bottom.
+If we add `writing-mode: vertical-lr` to the grid container in the previous example, we can see that the block and inline axes now run in a different direction. The block or _column_ axis now runs across the page from left to right, while the inline axis runs down the page, creating rows from top to bottom.
 
 ```css hidden
 * {
@@ -288,7 +288,7 @@ If you want to see how these work, with a right to left as well as top to bottom
 
 ## Auto-placement and writing modes
 
-As we've seen in the previous examples, writing mode can change the visual direction in which items place themselves onto the grid. Items will, by default, place themselves along the inline axis, adding new rows in the block direction. We've now seen that the inline axis may not always run from left to right, and the block axis is not always top to bottom.
+As we've seen in the previous examples, writing mode can change the visual direction in which items place themselves onto the grid. Items will, by default, place themselves along the inline axis, adding new rows in the block direction. We've now seen that the inline axis does not always run from left to right, and the block axis does not always run from top to bottom.
 
 ## Line-based placement and Writing Modes
 
@@ -296,7 +296,7 @@ The key thing to remember when placing items by line number, is that line 1 is t
 
 ### Line-based placement with left to right text
 
-In this example, we have a grid which is in the default `ltr` direction with three items positioned using line-based placement.
+In this example, we have a grid laid out in the default `ltr` direction, with three items positioned using line-based placement.
 
 - Item 1 starts at column line 1, spanning one track.
 - Item 2 starts at column line -1, spanning to -3.
@@ -353,7 +353,7 @@ In this example, we have a grid which is in the default `ltr` direction with thr
 
 ### Line-based placement with right to left text
 
-If we add the {{cssxref("direction")}} property with a value of `rtl` to the grid container in the previous example, line 1 becomes the right-hand side of the grid, and line -1 on the left.
+If we add the {{cssxref("direction")}} property with a value of `rtl` to the grid container in the previous example, line 1 is placed on the right-hand side of the grid, and line -1 on the left.
 
 ```css hidden
 * {
@@ -411,7 +411,7 @@ If we add the {{cssxref("direction")}} property with a value of `rtl` to the gri
 
 {{ EmbedLiveSample('Line-based_placement_with_right_to_left_text', '500', '240') }}
 
-If you are switching the direction of your text, either for entire pages or for parts of pages, and are using lines, you may want to [name your lines](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines), if you do not want the layout to completely switch direction. For some things, for example, where a grid contains text content, this switching may be exactly what you want. For other usage it may not.
+If you are switching the direction of your text, either for entire pages or for parts of pages, and are using lines, you may want to [name your lines](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines) to avoid the layout completely switching direction. For some things, for example, where a grid contains text content, this switching may be exactly what you want. For other uses it may not.
 
 ### The strange order of values in the `grid-area` property
 
@@ -435,7 +435,7 @@ This is counter-clockwise! It's the reverse of what we do for margins and paddin
 
 ## Mixed writing modes and grid layout
 
-In addition to displaying documents, using the correct writing mode for the language, writing modes can be used creatively within documents that are otherwise `ltr`. In this example, we have a grid layout with a set of links down one side. We use writing modes (`writing-mode: vertical-lr`) to turn these on their side in the column track:
+In addition to displaying documents using the correct writing mode for the language, writing modes can be used creatively within documents that are otherwise `ltr`. In this example, we have a grid layout with a set of links down one side. We use writing modes (`writing-mode: vertical-lr`) to turn these on their side in the column track:
 
 ```css
 .wrapper {
@@ -497,6 +497,6 @@ nav a {
 
 ## Physical values and logical properties
 
-If you do combine logical grid properties with the physical properties, remember that physical properties will not change according to writing mode. In the guide to [Aligning items in CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout), we used auto margins to push one item away from the others; we used physical properties for this. Just like the grid placement and alignment properties and values respect writing modes, there are logical property equivalents for most physical properties.
+If you combine logical grid properties with physical properties, remember that physical properties will not change according to writing mode. In our [Aligning items in CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout) guide, we use auto margins to push one item away from the others; this employs physical properties. There are logical property equivalents for most physical properties, which respect writing modes in the same way as grid placement and alignment properties and values.
 
-Similarly, when using absolute positioning within a grid area, you can use logical {{glossary("inset-area")}} properties to place items inside the grid area. The key thing if mixing logical and physical properties or values is to be aware of the tension between them. For example, be aware that you may need to make changes to your CSS to cope with a switch from `ltr` to `rtl`. Your understanding of block and inline through grid will help you to understand [CSS logical properties and values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values).
+Similarly, when using absolute positioning within a grid area, you can use logical {{glossary("inset properties")} to place items inside the grid area. When mixing logical and physical properties or values, be aware of the tension between them. For example, you may need to change your CSS to cope with a switch from `ltr` to `rtl`. Your understanding of block and inline through grid will help you to understand [CSS logical properties and values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values).
