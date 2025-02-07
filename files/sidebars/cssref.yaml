@@ -77,7 +77,7 @@ sidebar:
     tags: css-combinator
     title: Combinators
     details: closed
-  - type: listSubPages
+  - type: listSubPagesGrouped
     path: /Web/CSS
     tags: css-pseudo-class
     title: Pseudo-classes
