@@ -29,9 +29,12 @@ The promise will reject if:
 
 - The track [`kind`](/en-US/docs/Web/API/MediaStreamTrack/kind) is not `"video"`, or its [`readyState`](/en-US/docs/Web/API/MediaStreamTrack/readyState) is not `"live"`.
 - The restriction target element no longer exists.
-- The track being restricted has clones or is not a track captured from the user's screen.
+- The track being restricted is not a track captured from the user's screen.
 - `restrictionTarget` is not a {{domxref("RestrictionTarget")}} instance, `null`, or `undefined`.
 - `restrictionTarget` was created in a tab other than the one being captured.
+
+> [!NOTE]
+> In Chromium, if a track has clones, `restrictTo()` will reject (see [Chrome issue 41482026](https://issues.chromium.org/issues/41482026)).
 
 ## Examples
 
