@@ -48,7 +48,7 @@ In this example, the {{cssxref("direction")}} property has been set to {{glossar
 <p>I have no alignment set and use the direction set in the document.</p>
 ```
 
-````css
+```css
 body {
   direction: rtl;
 }
@@ -56,7 +56,8 @@ body {
   text-align: left;
 }
 
-```css hidden p {
+```css hidden
+p {
   border: 2px solid #ffa94d;
   border-radius: 5px;
   background-color: #ffd8a8;
