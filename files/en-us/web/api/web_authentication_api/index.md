@@ -204,7 +204,7 @@ If you wish to allow access to a specific subdomain only, you could provide it l
 ```http
 Permissions-Policy: publickey-credentials-get=("https://subdomain.example.com")
 Permissions-Policy: publickey-credentials-create=("https://subdomain.example.com")
-````
+```
 
 ### Allowing embedded `create` and `get()` calls in an `<iframe>`
 
