@@ -30,7 +30,7 @@ A number representing the [timestamp](/en-US/docs/Web/JavaScript/Reference/Globa
 
 This function is useful for setting date values based on string values, for example in conjunction with the {{jsxref("Date/setTime", "setTime()")}} method.
 
-The spec doesn't explicitly specify what formats `parse()` can parse, but it does give a few invariants:
+The formats that `parse()` can handle are not explicitly specified, but there are a few invariants:
 
 - The [date time string format](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#date_time_string_format) (produced by {{jsxref("Date/toISOString", "toISOString()")}}) must be supported.
 - If `x` is any Date whose milliseconds amount is zero, then `x.valueOf()` should be equal to any of the following: `Date.parse(x.toString())`, `Date.parse(x.toUTCString())`, `Date.parse(x.toISOString())`. This means the formats produced by {{jsxref("Date/toString", "toString()")}} and {{jsxref("Date/toUTCString", "toUTCString()")}} should be supported too.
@@ -75,11 +75,11 @@ Date.parse("Thu, 01 Jan 1970 00:00:00 GMT");
 ### Non-standard date strings
 
 > [!NOTE]
-> This section contains implementation-specific behavior that can be inconsistent across implementations and across versions. It is not meant to be a comprehensive browser compatibility table and you should always conduct your own tests before using any format in your code.
+> This section contains implementation-specific behavior that may be inconsistent across browsers or different versions of browsers. It is not meant to be a comprehensive browser compatibility table and you should always conduct your own tests before using any format in your code.
 
 Implementations usually default to the local time zone when the date string is non-standard. For consistency, we will assume that the runtime uses the UTC timezone, and unless specified otherwise, the output will vary with the device's time zone. [Daylight Saving Time (DST), of the local time zone, can also have an effect on this](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getTimezoneOffset#varied_results_in_daylight_saving_time_dst_regions).
 
-Here are some more examples of very non-standard date strings. Browsers parse date strings really generously and may decide to drop any part of the string that they can't parse, and they often copy each other's behavior for compatibility, so again, the goal here is only to provide some examples, and is not comprehensive in any way.
+Here are some more examples of non-standard date strings. Browsers are very lenient when parsing date strings and may discard any part of a string that they cannot parse. For compatibility reasons, browsers often copy each other's behavior, so these handling patterns tend to propagate cross-browser. As previously stated, the following examples are for illustration only, and are not exhaustive by any means:
 
 <table>
 <thead>
