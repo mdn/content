@@ -56,8 +56,7 @@ body {
   text-align: left;
 }
 
-```css hidden
-p {
+```css hidden p {
   border: 2px solid #ffa94d;
   border-radius: 5px;
   background-color: #ffd8a8;
