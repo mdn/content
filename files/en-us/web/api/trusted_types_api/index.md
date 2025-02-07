@@ -23,7 +23,7 @@ Examples of injection sinks include:
 
 One of the main defenses against DOM-based XSS attacks is to [sanitize](/en-US/docs/Web/Security/Attacks/XSS#sanitization) data before passing it to an injection sink. The Trusted Types API enables a developer to centralize the sanitization code and to ensure that any data passed to an injection sink has been passed through the sanitization code.
 
-The API is really in two parts:
+The API has two main parts:
 
 - A JavaScript API enables a developer to sanitize data before passing it to an injection sink.
 - Two [CSP](/en-US/docs/Web/HTTP/CSP) directives enforce and control the usage of the JavaScript API.
