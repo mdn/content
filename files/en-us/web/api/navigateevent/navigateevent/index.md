@@ -23,7 +23,7 @@ new NavigateEvent(type, init)
 - `type`
   - : A string representing the type of event.
 - `init`
-  - : An object that, _in addition of the properties defined in {{domxref("Event/Event", "Event()")}}_, can have the following properties:
+  - : An object that, _in addition to the properties defined in {{domxref("Event/Event", "Event()")}}_, has the following properties:
     - `canIntercept` {{optional_inline}}
       - : A boolean defining whether the navigation can be intercepted or not (e.g. you can't intercept a cross-origin navigation). Defaults to `false`.
     - `destination`
@@ -35,7 +35,7 @@ new NavigateEvent(type, init)
     - `hashChange` {{optional_inline}}
       - : A boolean defining if the navigation is a fragment navigation (i.e. to a fragment identifier in the same document). Defaults to `false`.
     - `hasUAVisualTransition` {{optional_inline}}
-      - : A boolean defining if the user agent has performed a visual transition for this navigation before dispatching this event.
+      - : A boolean defining whether the user agent has performed a visual transition for this navigation before dispatching this event. Defaults to `false`.
     - `info` {{optional_inline}}
       - : The `info` data value passed by the initiating navigation operation (e.g. {{domxref("Navigation.back()")}}, or {{domxref("Navigation.navigate()")}}).
     - `navigationType` {{optional_inline}}
