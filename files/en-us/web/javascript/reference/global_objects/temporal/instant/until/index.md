@@ -43,7 +43,7 @@ A new {{jsxref("Temporal.Duration")}} object representing the duration from this
 ```js
 const launch = Temporal.Instant.fromEpochMilliseconds(2051222400000);
 const now = Temporal.Now.instant();
-const duration = now.until(launch, { smallestUnit: "minute" });
+const duration = now.until(launch, { smallestUnit: "minutes" });
 console.log(`It will be ${duration.toLocaleString("en-US")} until the launch`);
 ```
 
