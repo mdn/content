@@ -25,7 +25,31 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
-### Disposing an async iterator
+### Declaring an async iterator with `await using`
+
+The `Symbol.asyncDispose` method is intended to be automatically called in an `await using` declaration. This is useful if you have an async iterator that you manually iterate over by calling its `next()` method; if you iterate it with {{jsxref("Statements/for-await...of", "for await...of")}} or something similar, then error handling and cleanup is done automatically.
+
+```js
+async function* generateNumbers() {
+  try {
+    yield 1;
+    yield 2;
+    yield 3;
+  } finally {
+    console.log("Cleaning up");
+  }
+}
+
+async function doSomething() {
+  await using numbers = generateNumbers();
+  const res1 = await numbers.next();
+  // Not iterating the rest of the numbers
+  // Before the function exists, the async iterator is disposed
+  // Logs "Cleaning up"
+}
+
+doSomething();
+```
 
 ## Specifications
 
@@ -36,3 +60,7 @@ None ({{jsxref("undefined")}}).
 {{Compat}}
 
 ## See also
+
+- [JavaScript resource management](/en-US/docs/Web/JavaScript/Guide/Resource_management)
+- {{jsxref("Symbol.asyncDispose")}}
+- {{jsxref("Statements/await_using", "await using")}}
