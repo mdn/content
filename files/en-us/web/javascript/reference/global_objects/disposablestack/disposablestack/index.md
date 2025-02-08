@@ -25,8 +25,6 @@ None.
 
 A new `DisposableStack` object.
 
-### Exceptions
-
 ## Examples
 
 ### Creating an DisposableStack

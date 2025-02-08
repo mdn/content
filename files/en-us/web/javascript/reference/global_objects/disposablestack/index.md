@@ -13,12 +13,16 @@ The **`DisposableStack`** object represents a stack of [disposers](/en-US/docs/W
 
 A `DisposableStack` is not exactly a "stack" in terms of its interface. It has several methods for pushing disposers to it, but it has no way to pop one disposer off. Rather, _all_ disposers are popped and executed one-by-one when the stack is disposed.
 
-It is good practice to _not_ extract the resource acquisition expression to a separate statement, no matter how long the expression is. You should always wrap {{jsxref("DisposableStack/use", "use()")}} or {{jsxref("DisposableStack/adopt", "adopt()")}} around the resource acquisition expression to ensure that the resource is registered to the stack immediately.
+You register [disposable resources](/en-US/docs/Web/JavaScript/Guide/Resource_management) to the `DisposableStack` using its {{jsxref("DisposableStack/use", "use()")}}, {{jsxref("DisposableStack/adopt", "adopt()")}}, or {{jsxref("DisposableStack/defer", "defer()")}} methods.
 
-```js example-good
+```js
 using stack = new DisposableStack();
 const handle = stack.use(new FileHandle("file.txt"));
 ```
+
+Then, when the `stack` goes out of scope, all resources registered to it are disposed in reverse order of registration.
+
+It is good practice to _not_ extract the resource acquisition expression to a separate statement, no matter how long the expression is. You should always wrap the `use()` or `adopt()` call around the resource acquisition expression to ensure that the resource is registered to the stack immediately.
 
 ```js example-bad
 using stack = new DisposableStack();

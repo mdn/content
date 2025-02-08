@@ -54,9 +54,31 @@ const handle = new FileHandle("file.txt");
 stack.defer(() => handle.close());
 ```
 
-It also allows you to reuse the same disposer function for multiple resources of the same type.
+In the same spirit of "make your resource registered as soon as it's declared", you should always wrap your resource acquisition expression in `adopt()`, instead of extracting it to a separate statement.
+
+```js example-bad
+using stack = new DisposableStack();
+const handle = new FileHandle("file.txt");
+stack.adopt(handle, (handle) => handle.close());
+```
 
 ## Examples
+
+### Using adopt()
+
+This function creates a file handle that gets closed when the function completes. The file handle does not implement the disposable protocol, so we use `adopt()` to register it to the stack.
+
+```js
+function readFile(fileName) {
+  using stack = new DisposableStack();
+  const handle = stack.adopt(new FileHandle(fileName), (handle) =>
+    handle.close(),
+  );
+  const data = handle.read();
+  // The handle.close() method is called here before exiting
+  return data;
+}
+```
 
 ## Specifications
 
@@ -69,3 +91,6 @@ It also allows you to reuse the same disposer function for multiple resources of
 ## See also
 
 - [JavaScript resource management](/en-US/docs/Web/JavaScript/Guide/Resource_management)
+- {{jsxref("DisposableStack")}}
+- {{jsxref("DisposableStack.prototype.defer()")}}
+- {{jsxref("DisposableStack.prototype.use()")}}

@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.DisposableStack.@@dispose
 
 {{JSRef}}
 
-The **`[Symbol.dispose]()`** method of {{jsxref("DisposableStack")}} instances implements the _disposable protocal_ and allows it to be disposed when used with {{jsxref("Statements/using", "using")}} or {{jsxref("Statements/await_using", "await using")}}. It is an alias for the {{jsxref("DisposableStack/dispose", "dispose()")}} method.
+The **`[Symbol.dispose]()`** method of {{jsxref("DisposableStack")}} instances implements the _disposable protocol_ and allows it to be disposed when used with {{jsxref("Statements/using", "using")}} or {{jsxref("Statements/await_using", "await using")}}. It is an alias for the {{jsxref("DisposableStack/dispose", "dispose()")}} method.
 
 ## Syntax
 
@@ -25,7 +25,19 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
-### Disposing an iterator
+### Declaring a stack with `using`
+
+The `Symbol.dispose` method is intended to be automatically called in a `using` declaration.
+
+```js
+function doSomething() {
+  using stack = new DisposableStack();
+  const resource = stack.use(new Resource());
+  resource.doSomething();
+  // stack is disposed here immediately before the function exists
+  // which causes the resource to be disposed
+}
+```
 
 ## Specifications
 
@@ -38,3 +50,5 @@ None ({{jsxref("undefined")}}).
 ## See also
 
 - [JavaScript resource management](/en-US/docs/Web/JavaScript/Guide/Resource_management)
+- {{jsxref("DisposableStack")}}
+- {{jsxref("DisposableStack.prototype.dispose()")}}
