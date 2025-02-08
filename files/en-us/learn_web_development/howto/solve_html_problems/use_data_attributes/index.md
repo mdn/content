@@ -58,7 +58,7 @@ article.dataset.parent; // "cars"
 
 Each property is a string and can be read and written. In the above case setting `article.dataset.columns = 5` would change that attribute to `"5"`.
 
-You can also use [`querySelectorAll()`](/en-US/docs/Web/API/Document/querySelectorAll) with data attribute selectors to find all elements that have a specific data attribute or value:
+You can also use [`document.querySelector()`](/en-US/docs/Web/API/Document/querySelector) or [`document.querySelectorAll()`](/en-US/docs/Web/API/Document/querySelectorAll) with data attribute selectors to find one element or all elements that match:
 
 ```js
 // Find all elements with a data-columns attribute
