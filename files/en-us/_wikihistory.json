@@ -66284,10 +66284,6 @@
       "JesseW"
     ]
   },
-  "Web/API/Window/console": {
-    "modified": "2020-01-26T11:16:36.044Z",
-    "contributors": ["alattalatta", "Zearin_Galaurum", "tjcrowder", "Sheppy"]
-  },
   "Web/API/Window/copy_event": {
     "modified": "2020-10-15T22:16:13.286Z",
     "contributors": ["mfuji09", "wbamberg"]

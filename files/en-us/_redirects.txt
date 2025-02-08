@@ -10556,6 +10556,7 @@
 /en-US/docs/Web/API/Window/animationend_event	/en-US/docs/Web/API/Element/animationend_event
 /en-US/docs/Web/API/Window/animationiteration_event	/en-US/docs/Web/API/Element/animationiteration_event
 /en-US/docs/Web/API/Window/animationstart_event	/en-US/docs/Web/API/Element/animationstart_event
+/en-US/docs/Web/API/Window/console	/en-US/docs/Web/API/console
 /en-US/docs/Web/API/Window/content	/en-US/docs/Web/API/Window
 /en-US/docs/Web/API/Window/convertPointFromNodeToPage	/en-US/docs/Web/API/Window/webkitConvertPointFromNodeToPage
 /en-US/docs/Web/API/Window/convertPointFromPageToNode	/en-US/docs/Web/API/Window/webkitConvertPointFromPageToNode
