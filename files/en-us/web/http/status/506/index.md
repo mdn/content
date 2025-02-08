@@ -21,10 +21,6 @@ Lack of standardization of how clients automatically choose from responses, and 
 506 Variant Also Negotiates
 ```
 
-## Specifications
-
-{{Specifications}}
-
 ## Examples
 
 ### Resource with variants
@@ -70,6 +66,10 @@ Alternates: {"index.html.en" 1 {type text/html} {language en} {length 48}}, {"an
 </body>
 </html>
 ```
+
+## Specifications
+
+{{Specifications}}
 
 ## See also
 
