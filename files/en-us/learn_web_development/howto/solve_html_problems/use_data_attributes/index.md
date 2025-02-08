@@ -66,10 +66,6 @@ const articles = document.querySelectorAll("[data-columns]");
 
 // Find all elements with data-columns="3"
 const threeColumnArticles = document.querySelectorAll('[data-columns="3"]');
-
-// Find elements with a data-parent attribute containing "cars"
-const carRelated = document.querySelectorAll('[data-parent="cars"]');
-
 // You can then iterate over the results
 threeColumnArticles.forEach((article) => {
   console.log(article.dataset.indexNumber);
