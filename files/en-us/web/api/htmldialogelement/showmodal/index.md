@@ -31,7 +31,7 @@ None ({{jsxref("undefined")}}).
 ### Exceptions
 
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : Thrown if the dialog is already open (i.e. if the `open` attribute is already set on the {{htmlelement("dialog")}} element), or if the dialog is also a [popover](/en-US/docs/Web/API/Popover_API) that is already being shown.
+  - : Thrown if the dialog is already open and non-modal (i.e. if the dialog has already been opened with {{domxref("HTMLDialogElement.show()")}}).
 
 ## Examples
 
