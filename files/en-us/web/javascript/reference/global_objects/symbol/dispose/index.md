@@ -19,11 +19,11 @@ The well-known symbol `Symbol.dispose`.
 
 An object is disposable if it has the `[Symbol.dispose]()` method. The method is expected to have the following semantics:
 
-- Invoking this method notifies the Disposable object that the caller does not intend to continue to use this object. This method should perform any necessary logic to perform explicit clean-up of the resource including, but not limited to, file system handles, streams, host objects, etc.
+- Invoking this method notifies the Disposable object that the caller does not intend to continue to use this object. This method should perform any necessary logic to explicit clean up the resource including, but not limited to, file system handles, streams, host objects, etc.
 - When an exception is thrown from this method, it typically means that the resource could not be explicitly freed.
 - If called more than once on the same object, the function should not throw an exception. However, this requirement is not enforced.
 
-This method should not return a promise, as promises returned by `[Symbol.dispose]()` are not awaited by {{jsxref("Statements/await_using", "await using")}}.
+This method should not return a promise, as promises returned by `[Symbol.dispose]()` are not awaited by {{jsxref("Statements/await_using", "await using")}}. To declare async disposables, use {{jsxref("Symbol.asyncDispose")}}.
 
 ## Examples
 
