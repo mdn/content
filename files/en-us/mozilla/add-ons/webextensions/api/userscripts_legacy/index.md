@@ -28,18 +28,18 @@ To use the API, call `{{WebExtAPIRef("userScripts_legacy.register","register()")
 
 ## Types
 
-- {{WebExtAPIRef("userScripts_legacy.RegisteredUserScript")}}
+- {{WebExtAPIRef("userScripts_legacy.RegisteredUserScript", "userScripts.RegisteredUserScript")}}
   - : The `object` returned by the {{WebExtAPIRef("userScripts_legacy.register","register()")}} method. It represents the registered user scripts and is used to deregister the user scripts.
 
 ## Methods
 
-- {{WebExtAPIRef("userScripts_legacy.register()")}}
+- {{WebExtAPIRef("userScripts_legacy.register", "userScripts.register()")}}
   - : Registers user scripts.
 
 ## Events
 
-- {{WebExtAPIRef("userScripts_legacy.onBeforeScript")}}
-  - : An event available to the API script, registered in[`"user_scripts"`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts), that execute before a user script executes. Use it to trigger the export of the additional APIs provided by the API script, so they are available to the user script.
+- {{WebExtAPIRef("userScripts_legacy.onBeforeScript", "userScripts.onBeforeScript")}}
+  - : An event available to the API script, registered in [`"user_scripts"`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts), that execute before a user script executes. Use it to trigger the export of the additional APIs provided by the API script, so they are available to the user script.
 
 ## Browser compatibility
 
@@ -47,5 +47,5 @@ To use the API, call `{{WebExtAPIRef("userScripts_legacy.register","register()")
 
 ## See also
 
-- [Working with `userScripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/userScripts_legacy/Working_with_userScripts)
+- [Working with `userScripts` (Legacy)](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/userScripts_legacy/Working_with_userScripts)
 - {{WebExtAPIRef("contentScripts","browser.contentScripts")}}
