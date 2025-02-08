@@ -10,16 +10,34 @@ HTML is designed with extensibility in mind for data that should be associated w
 
 ## HTML syntax
 
-The syntax is simple. Any attribute on any element whose attribute name starts with `data-` is a data attribute. Say you have an article and you want to store some extra information that doesn't have any visual representation. Just use `data` attributes for that:
+The syntax is simple. Any attribute on any element whose attribute name starts with `data-` is a data attribute. Say you have some articles and you want to store some extra information that doesn't have any visual representation. Just use `data` attributes for that:
 
 ```html
-<article
-  id="electric-cars"
-  data-columns="3"
-  data-index-number="12314"
-  data-parent="cars">
-  …
-</article>
+<main>
+  <article
+    id="electric-cars"
+    data-columns="3"
+    data-index-number="12314"
+    data-parent="cars">
+    <!-- Electric car content -->
+  </article>
+
+  <article
+    id="solar-cars"
+    data-columns="3"
+    data-index-number="12315"
+    data-parent="cars">
+    <!-- Solar car content -->
+  </article>
+
+  <article
+    id="flying-cars"
+    data-columns="4"
+    data-index-number="12316"
+    data-parent="cars">
+    <!-- Flying car content -->
+  </article>
+</main>
 ```
 
 ## JavaScript access
@@ -39,6 +57,24 @@ article.dataset.parent; // "cars"
 ```
 
 Each property is a string and can be read and written. In the above case setting `article.dataset.columns = 5` would change that attribute to `"5"`.
+
+You can also use [`querySelectorAll()`](/en-US/docs/Web/API/Document/querySelectorAll) with data attribute selectors to find all elements that have a specific data attribute or value:
+
+```js
+// Find all elements with a data-columns attribute
+const articles = document.querySelectorAll("[data-columns]");
+
+// Find all elements with data-columns="3"
+const threeColumnArticles = document.querySelectorAll('[data-columns="3"]');
+
+// Find elements with a data-parent attribute containing "cars"
+const carRelated = document.querySelectorAll('[data-parent="cars"]');
+
+// You can then iterate over the results
+threeColumnArticles.forEach((article) => {
+  console.log(article.dataset.indexNumber);
+});
+```
 
 ## CSS access
 
