@@ -8,8 +8,6 @@ sidebar: jssidebar
 
 The **`await using`** declaration declares block-scoped local variables that are _asynchronously disposed_. Like {{jsxref("Statements/const", "const")}}, variables declared with `await using` must be initialized and cannot be reassigned. The variable's value must be either `null`, `undefined`, or an object with an [`[Symbol.asyncDispose]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/asyncDispose) or [`[Symbol.dispose]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/dispose) method. When the variable goes out of scope, the `[Symbol.asyncDispose]()` or `[Symbol.dispose]()` method of the object is called and awaited, to ensure that resources are freed.
 
-{{EmbedInteractiveExample("pages/js/statement-await-using.html")}}
-
 ## Syntax
 
 ```js-nolint

@@ -8,8 +8,6 @@ sidebar: jssidebar
 
 The **`using`** declaration declares block-scoped local variables that are _synchronously disposed_. Like {{jsxref("Statements/const", "const")}}, variables declared with `using` must be initialized and cannot be reassigned. The variable's value must be either `null`, `undefined`, or an object with a [`[Symbol.dispose]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/dispose) method. When the variable goes out of scope, the `[Symbol.dispose]()` method of the object is called, to ensure that resources are freed.
 
-{{EmbedInteractiveExample("pages/js/statement-using.html")}}
-
 ## Syntax
 
 ```js-nolint
@@ -37,13 +35,11 @@ Most notably, it cannot be used:
 - At the top level of a script, because script scopes are persistent.
 - In the initializer of a [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) loop. Because the loop variable can only be a string or symbol, this doesn't make sense.
 
-A `using` declares a disposable resource that's tied to the lifetime of the variable's scope (block, function, module, etc.). When the scope exits, the resource is disposed of synchronously.
+A `using` declares a disposable resource that's tied to the lifetime of the variable's scope (block, function, module, etc.). When the scope exits, the resource is disposed of synchronously. The variable is allowed to have value `null` or `undefined`, so the resource can be optionally present.
 
 When the variable is first declared, a _disposer_ is retrieved from the object. If the `[Symbol.dispose]` property doesn't contain a function, a `TypeError` is thrown. This disposer is saved to the scope.
 
-When the variable goes out of scope, the disposer is called. If the scope contains multiple `using` or `await using` declarations, all disposers are run in sequence in the reverse order of declaration, regardless of the type of declaration. All disposers are guaranteed to run (much like the `finally` block in `try...catch...finally`). All errors thrown during disposal, including the initial error that caused the scope exit (if applicable), are all aggregated inside one {{jsxref("SuppressedError")}}, with each earlier exception as the `suppressed` property and the later exception as the `error` property. This `SuppressedError` is thrown after disposal is complete.
-
-The variable is allowed to have value `null` or `undefined`, so the resource can be optionally present.
+When the variable goes out of scope, the disposer is called. If the scope contains multiple `using` or `await using` declarations, all disposers are run in the reverse order of declaration, regardless of the type of declaration. All disposers are guaranteed to run (much like the `finally` block in `try...catch...finally`). All errors thrown during disposal, including the initial error that caused the scope exit (if applicable), are all aggregated inside one {{jsxref("SuppressedError")}}, with each earlier exception as the `suppressed` property and the later exception as the `error` property. This `SuppressedError` is thrown after disposal is complete.
 
 `using` ties resource management to lexical scopes, which is both convenient and sometimes confusing. There are many ways to preserve the variable's value when the variable itself is out of scope, so you may hold a reference to an already-disposed resource. See below for some examples where it may not behave how you expect. If you want to hand-manage resource disposal, while maintaining the same error handling guarantees, you can use {{jsxref("DisposableStack")}} instead.
 

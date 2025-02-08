@@ -30,6 +30,22 @@ A new {{jsxref("DisposableStack")}} instance.
 
 ## Examples
 
+### Claiming ownership of a stack
+
+```js
+function consumeStack(stack) {
+  using newStack = stack.move(); // newStack now owns the disposers
+  console.log(stack.disposed); // true
+  console.log(newStack.disposed); // false
+  // newStack is disposed here immediately before the function exists
+}
+
+const stack = new DisposableStack();
+console.log(stack.disposed); // false
+consumeStack(stack);
+console.log(stack.disposed); // true
+```
+
 ## Specifications
 
 {{Specifications}}
@@ -41,3 +57,5 @@ A new {{jsxref("DisposableStack")}} instance.
 ## See also
 
 - [JavaScript resource management](/en-US/docs/Web/JavaScript/Guide/Resource_management)
+- {{jsxref("DisposableStack")}}
+- {{jsxref("DisposableStack.prototype.dispose()")}}

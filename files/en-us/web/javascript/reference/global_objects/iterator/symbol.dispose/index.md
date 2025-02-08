@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Iterator.@@dispose
 
 {{JSRef}}
 
-The **`[Symbol.dispose]()`** method of {{jsxref("Iterator")}} instances implements the _disposable protocal_ and allows it to be disposed when used with {{jsxref("Statements/using", "using")}} or {{jsxref("Statements/await_using", "await using")}}. It calls the `return` method of `this`, if it exists.
+The **`[Symbol.dispose]()`** method of {{jsxref("Iterator")}} instances implements the _disposable protocol_ and allows it to be disposed when used with {{jsxref("Statements/using", "using")}} or {{jsxref("Statements/await_using", "await using")}}. It calls the `return()` method of `this`, if it exists.
 
 ## Syntax
 

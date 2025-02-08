@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.AsyncIterator.@@asyncDispose
 
 {{JSRef}}
 
-The **`[Symbol.asyncDispose]()`** method of {{jsxref("AsyncIterator")}} instances implements the _async disposable protocal_ and allows it to be disposed when used with {{jsxref("Statements/await_using", "await using")}}. It calls and awaits the `return` method of `this`, if it exists.
+The **`[Symbol.asyncDispose]()`** method of {{jsxref("AsyncIterator")}} instances implements the _async disposable protocol_ and allows it to be disposed when used with {{jsxref("Statements/await_using", "await using")}}. It calls and awaits the `return()` method of `this`, if it exists.
 
 ## Syntax
 

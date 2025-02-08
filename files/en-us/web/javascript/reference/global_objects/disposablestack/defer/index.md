@@ -18,7 +18,7 @@ defer(onDispose)
 ### Parameters
 
 - `onDispose`
-  - : A function that will be called when the stack is disposed.
+  - : A function that will be called when the stack is disposed. The function receives no arguments.
 
 ### Return value
 
@@ -31,7 +31,37 @@ None ({{jsxref("undefined")}}).
 - {{jsxref("ReferenceError")}}
   - : Thrown if the stack is already disposed.
 
+## Description
+
+The primary purpose of `defer()` is to register a cleanup callback that's not specific to the disposal of a particular resource. If the callback is specific to a resource, you should use {{jsxref("DisposableStack/use", "use()")}} or {{jsxref("DisposableStack/adopt", "adopt()")}} instead. You can also use `defer` when the resource is not claimed within your code:
+
+```js
+function consumeResource(someResource) {
+  using stack = new DisposableStack();
+  stack.defer(() => someResource.dispose());
+  // Do something with someResource
+}
+```
+
 ## Examples
+
+### Using defer()
+
+This function sets a simple lock to prevent multiple async operations from running at the same time. The lock is released when the function completes.
+
+```js
+let isLocked = false;
+
+async function requestWithLock(url, options) {
+  if (isLocked) {
+    return undefined;
+  }
+  using stack = new DisposableStack();
+  isLocked = true;
+  stack.defer(() => (isLocked = false));
+  return fetch(url, options);
+}
+```
 
 ## Specifications
 
@@ -44,3 +74,6 @@ None ({{jsxref("undefined")}}).
 ## See also
 
 - [JavaScript resource management](/en-US/docs/Web/JavaScript/Guide/Resource_management)
+- {{jsxref("DisposableStack")}}
+- {{jsxref("DisposableStack.prototype.adopt()")}}
+- {{jsxref("DisposableStack.prototype.use()")}}
