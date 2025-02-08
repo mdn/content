@@ -173,7 +173,7 @@ Some things to note:
 
 ## The `DisposableStack` and `AsyncDisposableStack` objects
 
-`using` and `await using` are special syntaxes. Syntaxes are convenient and hides a lot of the complexity, but sometimes you need to do things manually.
+`using` and `await using` are special syntaxes. Syntaxes are convenient and hide a lot of the complexity, but sometimes you need to do things manually.
 
 For one common example: what if you don't want to dispose the resource at the end of _this_ scope, but at some _later_ scope? Consider this:
 
@@ -198,9 +198,49 @@ if (someCondition) {
 
 However, this means all logic has to be written inside the `if` or `else`, causing a lot of duplication. What we want to do is to acquire and register the resource in one scope but dispose it in another. We can use a {{jsxref("DisposableStack")}} for this purpose.
 
-Another use case is when you have a resource that does not yet implement the disposable protocol, so it will be rejected by `using`. Yet another use case is when you have a disposal action to perform but it's not "tethered" to any resource in particular. Maybe you just want to log a message saying "All database connections closed" when there are multiple connections open simultaneously.
+```js
+{
+  using stack = new DisposableStack();
+  let reader;
+  if (someCondition) {
+    reader = stack.use(stream.getReader());
+  } else {
+    reader = stack.use(stream.getReader({ mode: "byob" }));
+  }
+  // Do something with reader
+  // Before scope exit, stack is disposed, which disposes reader
+}
+```
 
-TODO
+Another use case is when you have a resource that does not yet implement the disposable protocol, so it will be rejected by `using`.
+
+```js
+{
+  using stack = new DisposableStack();
+  // Suppose reader does not have the [Symbol.dispose]() method,
+  // then it cannot be used with using.
+  // However, we can manually pass a disposer function to stack.adopt
+  const reader = stack.adopt(stream.getReader(), (reader) =>
+    reader.releaseLock(),
+  );
+  // Do something with reader
+  // Before scope exit, stack is disposed, which disposes reader
+}
+```
+
+Yet another use case is when you have a disposal action to perform but it's not "tethered" to any resource in particular. Maybe you just want to log a message saying "All database connections closed" when there are multiple connections open simultaneously.
+
+```js
+{
+  using stack = new DisposableStack();
+  stack.defer(() => console.log("All database connections closed"));
+  const connection1 = stack.use(openConnection());
+  const connection2 = stack.use(openConnection());
+  // Do something with connection1 and connection2
+  // Before scope exit, stack is disposed, which first disposes connection1
+  // and connection2 and then logs the message
+}
+```
 
 ## Error handling
 
