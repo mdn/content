@@ -68,10 +68,12 @@ line-clamp: unset;
 ```css
 p {
   width: 300px;
+  overflow: hidden;
   display: -webkit-box;
   -webkit-box-orient: vertical;
+
   -webkit-line-clamp: 3;
-  overflow: hidden;
+  line-clamp: 3;
 }
 ```
 
