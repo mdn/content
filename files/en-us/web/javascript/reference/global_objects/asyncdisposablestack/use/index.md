@@ -7,7 +7,9 @@ browser-compat: javascript.builtins.AsyncDisposableStack.use
 
 {{JSRef}}
 
-The **`use()`** method of {{jsxref("AsyncDisposableStack")}} instances
+The **`use()`** method of {{jsxref("AsyncDisposableStack")}} instances registers a value that implements the [async disposable protocol](/en-US/docs/Web/JavaScript/Guide/Resource_management) to the stack.
+
+See {{jsxref("DisposableStack.prototype.use()")}} for general information about the `use()` method.
 
 ## Syntax
 
@@ -18,13 +20,22 @@ use(value)
 ### Parameters
 
 - `value`
-  - :
+  - : The value to register to the stack. Must contain a `[Symbol.asyncDispose]()` or `[Symbol.dispose]()` method.
 
 ### Return value
 
 The same `value` that was passed in.
 
+### Exceptions
+
+- {{jsxref("TypeError")}}
+  - : Thrown if `value` does not contain a `[Symbol.asyncDispose]()` or `[Symbol.dispose]()` method.
+- {{jsxref("ReferenceError")}}
+  - : Thrown if the stack is already disposed.
+
 ## Examples
+
+### Using use()
 
 ## Specifications
 
@@ -37,3 +48,6 @@ The same `value` that was passed in.
 ## See also
 
 - [JavaScript resource management](/en-US/docs/Web/JavaScript/Guide/Resource_management)
+- {{jsxref("AsyncDisposableStack")}}
+- {{jsxref("AsyncDisposableStack.prototype.adopt()")}}
+- {{jsxref("AsyncDisposableStack.prototype.defer()")}}

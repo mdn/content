@@ -19,7 +19,7 @@ The well-known symbol `Symbol.asyncDispose`.
 
 An object is async disposable if it has the `[Symbol.asyncDispose]()` method. The method is expected to have the following semantics:
 
-- Invoking this method notifies the AsyncDisposable object that the caller does not intend to continue to use this object. This method should perform any necessary logic to perform explicit clean-up of the resource including, but not limited to, file system handles, streams, host objects, etc.
+- Invoking this method notifies the AsyncDisposable object that the caller does not intend to continue to use this object. This method should perform any necessary logic to explicit clean up the resource including, but not limited to, file system handles, streams, host objects, etc.
 - When an exception is thrown from this method, it typically means that the resource could not be explicitly freed. An AsyncDisposable object is not considered "disposed" until the resulting Promise has been fulfilled.
 - If called more than once on the same object, the function should not throw an exception. However, this requirement is not enforced.
 

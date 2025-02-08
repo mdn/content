@@ -25,6 +25,37 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
+### Disposing a stack
+
+Here we push three disposers to the stack, using the {{jsxref("DisposableStack/use", "use()")}}, {{jsxref("DisposableStack/adopt", "adopt()")}}, and {{jsxref("DisposableStack/defer", "defer()")}} methods. When `dispose()` is called, the disposers are called in reverse order of registration.
+
+Note that usually you don't need to call `dispose()` manually. Declare the stack with {{jsxref("Statements/using", "using")}}, and its [`[Symbol.dispose]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/DisposableStack/Symbol.dispose) method will be automatically called when the stack goes out of scope.
+
+```js
+class Resource {
+  dispose() {
+    console.log("Resource disposed");
+  }
+  [Symbol.dispose]() {
+    console.log("Resource disposed via Symbol.dispose");
+  }
+}
+
+function doSomething() {
+  const stack = new DisposableStack();
+  const resource = stack.use(new Resource());
+  const resource2 = stack.adopt(new Resource(), (resource) =>
+    resource.dispose(),
+  );
+  stack.defer(() => console.log("Deferred disposer"));
+  stack.dispose();
+  // Logs in order:
+  // Deferred disposer
+  // Resource disposed
+  // Resource disposed via Symbol.dispose
+}
+```
+
 ## Specifications
 
 {{Specifications}}
@@ -36,3 +67,8 @@ None ({{jsxref("undefined")}}).
 ## See also
 
 - [JavaScript resource management](/en-US/docs/Web/JavaScript/Guide/Resource_management)
+- {{jsxref("DisposableStack")}}
+- {{jsxref("DisposableStack.prototype.adopt()")}}
+- {{jsxref("DisposableStack.prototype.defer()")}}
+- {{jsxref("DisposableStack.prototype.use()")}}
+- [`DisposableStack.prototype[Symbol.dispose]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/DisposableStack/Symbol.dispose)
