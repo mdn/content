@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Iterator.@@dispose
 
 {{JSRef}}
 
-The **`[Symbol.dispose]()`** method of {{jsxref("Iterator")}} instances implements the _disposable protocol_ and allows it to be disposed when used with {{jsxref("Statements/using", "using")}} or {{jsxref("Statements/await_using", "await using")}}. It calls the `return()` method of `this`, if it exists.
+The **`[Symbol.dispose]()`** method of {{jsxref("Iterator")}} instances implements the _disposable protocol_ and allows it to be disposed when used with {{jsxref("Statements/using", "using")}}. It calls the `return()` method of `this`, if it exists.
 
 ## Syntax
 
@@ -25,7 +25,31 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
-### Disposing an iterator
+### Declaring an iterator with `using`
+
+The `Symbol.dispose` method is intended to be automatically called in a `using` declaration. This is useful if you have an iterator that you manually iterate over by calling its `next()` method; if you iterate it with {{jsxref("Statements/for...of", "for...of")}} or something similar, then error handling and cleanup is done automatically.
+
+```js
+function* generateNumbers() {
+  try {
+    yield 1;
+    yield 2;
+    yield 3;
+  } finally {
+    console.log("Cleaning up");
+  }
+}
+
+function doSomething() {
+  using numbers = generateNumbers();
+  const res1 = numbers.next();
+  // Not iterating the rest of the numbers
+  // Before the function exists, the async iterator is disposed
+  // Logs "Cleaning up"
+}
+
+doSomething();
+```
 
 ## Specifications
 
@@ -36,3 +60,7 @@ None ({{jsxref("undefined")}}).
 {{Compat}}
 
 ## See also
+
+- [JavaScript resource management](/en-US/docs/Web/JavaScript/Guide/Resource_management)
+- {{jsxref("Symbol.dispose")}}
+- {{jsxref("Statements/using", "using")}}
