@@ -2,6 +2,8 @@
 title: device-posture
 slug: Web/CSS/@media/device-posture
 page-type: css-media-feature
+status:
+  - experimental
 browser-compat: css.at-rules.media.device-posture
 ---
 
