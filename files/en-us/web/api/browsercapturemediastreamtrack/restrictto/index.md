@@ -3,6 +3,8 @@ title: "BrowserCaptureMediaStreamTrack: restrictTo() method"
 short-title: restrictTo()
 slug: Web/API/BrowserCaptureMediaStreamTrack/restrictTo
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.BrowserCaptureMediaStreamTrack.restrictTo
 ---
 

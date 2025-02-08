@@ -2,12 +2,10 @@
 title: :open
 slug: Web/CSS/:open
 page-type: css-pseudo-class
-status:
-  - experimental
 browser-compat: css.selectors.open
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
 The **`:open`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents an element that has open and closed states, only when it is currently in the open state.
 

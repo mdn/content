@@ -3,6 +3,8 @@ title: "RestrictionTarget: fromElement() static method"
 short-title: fromElement()
 slug: Web/API/RestrictionTarget/fromElement_static
 page-type: web-api-static-method
+status:
+  - experimental
 browser-compat: api.RestrictionTarget.fromElement_static
 ---
 
