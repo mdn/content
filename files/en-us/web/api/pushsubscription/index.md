@@ -78,18 +78,15 @@ fetch("https://example.com/push/", {
 ### Unsubscribing from a push manager
 
 ```js
-navigator.serviceWorker.ready.then((reg) => {
-  reg.pushManager.getSubscription().then((subscription) => {
-    subscription
-      .unsubscribe()
-      .then((successful) => {
-        // You've successfully unsubscribed
-      })
-      .catch((e) => {
-        // Unsubscribing failed
-      });
+navigator.serviceWorker.ready
+  .then((reg) => reg.pushManager.getSubscription())
+  .then((subscription) => subscription.unsubscribe())
+  .then((successful) => {
+    // You've successfully unsubscribed
+  })
+  .catch((e) => {
+    // Unsubscribing failed
   });
-});
 ```
 
 ## Specifications
