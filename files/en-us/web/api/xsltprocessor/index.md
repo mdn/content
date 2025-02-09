@@ -103,7 +103,7 @@ const fragment = xsltProcessor.transformToFragment(xmlRef, document);
 
 ### Basic Example
 
-The basic example will load an XML file and apply a XSL transformation on it. These are the same files used in the [Generating HTML](/en-US/docs/Web/API/XSLTProcessor/Generating_HTML) example. The XML file describes an article and the XSL file formats the information for display.
+The basic example will load an XML file and apply a XSL transformation on it. These are the same files used in the [Generating HTML](/en-US/docs/Web/API/Document_Object_Model/Transforming_with_XSLT#generating_html) example. The XML file describes an article and the XSL file formats the information for display.
 
 #### XML
 
@@ -329,6 +329,7 @@ async function sort() {
 ## See also
 
 - [XSLT](/en-US/docs/Web/XML/XSLT)
+- [Transforming with XSLT](/en-US/docs/Web/API/Document_Object_Model/Transforming_with_XSLT)
 - [What kind of language is XSLT?](https://developer.ibm.com/technologies/web-development/) at [IBM developer](https://developer.ibm.com/)
 - [XSLT Tutorial](https://zvon.org/xxl/XSLTutorial/Books/Book1/index.html) at [zvon.org](https://zvon.org/)
 - [XPath Tutorial](https://zvon.org/xxl/XPathTutorial/General/examples.html) at [zvon.org](https://zvon.org/)
