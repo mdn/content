@@ -81,7 +81,7 @@ body {
 
 ### Escaping ambiguous characters
 
-Suppose you want to demonstrate HTML code in a `<pre>` element. If you include characters like `<` directly in the text, they will be interpreted as HTML tags instead. To display these characters as text, you need to escape them using their respective character references.
+Suppose you want to demonstrate HTML code in a `<pre>` element. The character sequences that define valid HTML tags (starting with `<` and ending with `>`) will not be displayed. To display the tag characters as text, you need to escape (at least) the `<` character using its character reference, so that the sequences no longer define valid tags.
 
 In reality, the HTML parser treats most characters as plain text unless in specific contexts. For example, `< code` is fine, but `<code` would be misparsed; `&am;` is fine, but `&amp;` is not. However, it's a good practice to escape all ambiguous characters to avoid any confusion, especially if you are programmatically generating HTML and injecting the `<pre>` content. In this case, here's a good rule of thumb for how to escape characters:
 
@@ -89,7 +89,7 @@ In reality, the HTML parser treats most characters as plain text unless in speci
 2. Replace any ampersands (`&`) with `&amp;`. Do this step first, so that new `&` characters generated in the next step don't get escaped.
 3. Replace any `<` characters with `&lt;`.
 
-This should result in the content being displayed as you intended. The replacement of other HTML syntax characters is optional (like `>` to `&gt;`, `"` to `&quot;`, and `'` to `&apos;`), but you can do them if you want to be extra safe.
+This should result in the content being displayed as you intended. The replacement of other HTML syntax characters is optional (like `>` to `&gt;`, `"` to `&quot;`, and `'` to `&apos;`), but will do no harm.
 
 #### HTML
 
