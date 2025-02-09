@@ -26,7 +26,7 @@ Additionally, the [WebTransport API](/en-US/docs/Web/API/WebTransport_API) is ex
 - [`WebSocket`](/en-US/docs/Web/API/WebSocket)
   - : The primary interface for connecting to a WebSocket server and then sending and receiving data on the connection.
 - [`WebSocketStream`](/en-US/docs/Web/API/WebSocketStream) {{non-standard_inline}}
-  - : Promise-based interface for connecting to a WebSocket server; uses [streams](/en-US/docs/Web/API/Streams_API) to send and receive data on the connection.
+  - : Promise-based interface for connecting to a WebSocket server uses [streams](/en-US/docs/Web/API/Streams_API) to send and receive data on the connection.
 - [`CloseEvent`](/en-US/docs/Web/API/CloseEvent)
   - : The event sent by the WebSocket object when the connection closes.
 - [`MessageEvent`](/en-US/docs/Web/API/MessageEvent)
@@ -48,7 +48,7 @@ The HTTP headers are used in the [WebSocket handshake](/en-US/docs/Web/API/WebSo
     In responses, it is sent only if the requested protocol version is not supported by the server, and lists the versions that the server supports.
 - {{HTTPHeader("Sec-WebSocket-Protocol")}}
   - : An HTTP header that in requests indicates the sub-protocols supported by the client in preferred order.
-    In responses, it indicates the the sub-protocol selected by the server from the client's preferences.
+    In responses, it indicates the sub-protocol selected by the server from the client's preferences.
 - {{HTTPHeader("Sec-WebSocket-Extensions")}}
   - : An HTTP header that in requests indicates the WebSocket extensions supported by the client in preferred order.
     In responses, it indicates the extension selected by the server from the client's preferences.
