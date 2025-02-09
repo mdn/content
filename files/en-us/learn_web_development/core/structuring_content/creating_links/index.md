@@ -272,11 +272,7 @@ Other tips:
 
 ### Linking to non-HTML resources — leave clear signposts
 
-When linking to a resource that will be downloaded (like a PDF or Word document), streamed (like video or audio), or has another potentially unexpected effect (opens a popup window), you should add clear wording to reduce any confusion.
-
-For example:
-
-- If you're on a low bandwidth connection, click a link, and then a multiple megabyte download starts unexpectedly.
+When linking to a resource that will be downloaded (like a PDF or Word document), streamed (like video or audio), or has another potentially unexpected effect (opens a popup window), you should add clear wording to reduce any confusion. For example, if you're on a low bandwidth connection, click a link, and then a multiple megabyte download starts unexpectedly.
 
 Let's look at some examples, to see what kind of text can be used here:
 
@@ -288,7 +284,7 @@ Let's look at some examples, to see what kind of text can be used here:
 </p>
 
 <p>
-  <a href="https://www.example.com/video-stream/" target="_blank">
+  <a href="https://www.example.com/video-stream/">
     Watch the video (stream opens in separate tab, HD quality)
   </a>
 </p>
@@ -305,6 +301,24 @@ When you are linking to a resource that's to be downloaded rather than opened in
   Download Latest Firefox for Windows (64-bit) (English, US)
 </a>
 ```
+
+### Open links in a new tab: yes or no?
+
+Links by default open in the same tab as the page they are on, which allows the user to navigate back to the previous page using the browser's back button. However, many sites (including MDN) choose to open certain links, especially external links, in a new tab. This is done using the [`target`](/en-US/docs/Web/HTML/Element/a#target) attribute.
+
+```html
+Firefox is developed by the
+<a href="https://www.mozilla.org/en-US/" target="_blank">Mozilla Foundation</a>.
+```
+
+It should be a conscious user experience decision of whether to open links in a new tab or not. Here are some things to consider:
+
+- Opening links in a new tab presents the two documents simultaneously, which is useful for a "parallel" navigation experience, where the linked page may be an aside that the user is not expected to spend a prolonged period of time on. On the other hand, links that open in the same tab are more like a continuation of the current page.
+- Opening links in a new tab can be disorienting for users who are accustomed to using the back button.
+- Even when links are opened in the same tab by default, users can still choose to open them in a new tab, using keyboard shortcuts or context menu options. On the other hand, links that open in a new tab are hard to open in the same tab.
+- Screen reader users may be confused by links that open in a new tab, as they may not realize that the new tab has opened, and they may lose context about their location on the page.
+
+"External links open in new tabs, internal links open in the same tab" is a common principle to stick to. And, if you are not sure, it's always best to open all links in the same tab. You can provide cues for links that open in new tabs, such as an icon next to the link text.
 
 ## Active learning: creating a navigation menu
 
