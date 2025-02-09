@@ -55,7 +55,8 @@ This example shows how you might put the needed information from `PushSubscripti
 
 ```js
 // Get a PushSubscription object
-const pushSubscription = await serviceWorkerRegistration.pushManager.subscribe();
+const pushSubscription =
+  await serviceWorkerRegistration.pushManager.subscribe();
 
 // Create an object containing the information needed by the app server
 const subscriptionObject = {
