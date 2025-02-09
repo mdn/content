@@ -39,12 +39,8 @@ You can use this attribute with the following SVG elements:
 - sum
   - : Specifies that the animation will add to the underlying value of the attribute and other lower priority animations.
 - replace
-  - : Specifies that the animation will override the underlying value of the attribute and other lower priority animations. This is the default, however the behavior is also affected by the animation value attributes {{SVGAttr("by")}} and {{SVGAttr("to")}}, as described in [SMIL Animation: How from, to and by attributes affect additive behavior](https://www.w3.org/TR/2001/REC-smil-animation-20010904/#FromToByAndAdditive).
+  - : Specifies that the animation will override the underlying value of the attribute and other lower priority animations. This is the default, however the behavior is also affected by the animation value attributes {{SVGAttr("by")}} and {{SVGAttr("to")}}, as described in [SMIL Animation: How from, to and by attributes affect additive behavior](https://www.w3.org/TR/smil-animation/#FromToByAndAdditive).
 
 ## Specifications
 
 {{Specifications}}
-
-## See also
-
-- [SMIL Animation specification](https://www.w3.org/TR/2001/REC-smil-animation-20010904/#AdditiveAttribute)
