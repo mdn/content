@@ -83,6 +83,5 @@ Next, let's look at limitations of the Firefox implementation of the API. In bro
 ## See also
 
 - [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
-- [Introduction to the File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
 - [File and Directory Entries API](https://wicg.github.io/entries-api/) specification
 - Original specification for the [File API: Directories and System](https://dev.w3.org/2009/dap/file-system/file-dir-sys.html) (often called the "FileSystem API"); Google Chrome was the only browser to implement this **abandoned** API.

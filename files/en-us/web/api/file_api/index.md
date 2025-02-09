@@ -17,6 +17,16 @@ Sets of files made available in this way are represented as {{domxref("FileList"
 
 {{domxref("File")}} objects can be passed to {{domxref("FileReader")}} objects to access the contents of the file. The {{domxref("FileReader")}} interface is asynchronous, but a synchronous version, available only in [web workers](/en-US/docs/Web/API/Web_Workers_API), is provided by the {{domxref("FileReaderSync")}} interface.
 
+## Relationship to other file-related APIs
+
+There are two other major APIs that also deal with files: [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API) and [File System API](/en-US/docs/Web/API/File_System_API).
+
+The File API is the most basic one. It supports reading and processing file data explicitly provided by the user in the form of a form element input or drag-and-drop operation. It also enables binary data handling via blobs.
+
+The File and Directory Entries API, like the File API, also deals with files provided by the user via form inputs or drag-and-drop operations. However, instead of a single file, the input element now allows the selection of a directory or multiple files. The API then provides a way to process the directory or files. It is mostly Chrome's own invention—you will find that its extensions to other interfaces are all prefixed with `webkit`. The [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API#history) has a more complete story about its implementation and standardization. It was originally intended to support a full virtual file system, but now only supports read operations on user-provided data.
+
+The File System API provides a virtual file system for web applications, so that they could persistently store data (via [Origin private file systems](/en-US/docs/Web/API/File_System_API/Origin_private_file_system)). The File System Access API further extends the API to allow websites to read and write user files (while OPFS is invisible to the user), subject to user consent. However, unlike the other two, the File System API is purely JavaScript and does not deal with form inputs.
+
 ## Interfaces
 
 - {{domxref("Blob")}}
