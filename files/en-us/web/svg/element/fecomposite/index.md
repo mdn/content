@@ -9,6 +9,8 @@ browser-compat: svg.elements.feComposite
 
 The **`<feComposite>`** [SVG](/en-US/docs/Web/SVG) filter primitive performs the combination of two input images pixel-wise in image space using one of the Porter-Duff compositing operations: `over`, `in`, `atop`, `out`, `xor`, `lighter`, or `arithmetic`.
 
+Like other filter primitives, it handles color components in the `linearRGB` color space by default. You can use {{svgattr("color-interpolation-filters")}} to use `sRGB` instead.
+
 The table below shows each of these operations using an image of the MDN logo composited with a red circle:
 
 <table class="no-markdown">

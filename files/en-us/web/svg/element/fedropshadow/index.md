@@ -12,6 +12,8 @@ The **`<feDropShadow>`** [SVG](/en-US/docs/Web/SVG) filter primitive creates a d
 > [!NOTE]
 > The drop shadow color and opacity can be changed by using the {{SVGAttr('flood-color')}} and {{SVGAttr('flood-opacity')}} presentation attributes.
 
+Like other filter primitives, it handles color components in the `linearRGB` color space by default. You can use {{svgattr("color-interpolation-filters")}} to use `sRGB` instead.
+
 ## Example
 
 ```css hidden

@@ -9,6 +9,8 @@ browser-compat: svg.elements.feMerge
 
 The **`<feMerge>`** [SVG](/en-US/docs/Web/SVG) element allows filter effects to be applied concurrently instead of sequentially. This is achieved by other filters storing their output via the {{ SVGAttr("result") }} attribute and then accessing it in a {{ SVGElement("feMergeNode") }} child.
 
+Like other filter primitives, it handles color components in the `linearRGB` color space by default. You can use {{svgattr("color-interpolation-filters")}} to use `sRGB` instead.
+
 ## Usage context
 
 {{svginfo}}
