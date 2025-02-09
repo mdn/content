@@ -26,7 +26,7 @@ Additionally, the [WebTransport API](/en-US/docs/Web/API/WebTransport_API) is ex
 - [`WebSocket`](/en-US/docs/Web/API/WebSocket)
   - : The primary interface for connecting to a WebSocket server and then sending and receiving data on the connection.
 - [`WebSocketStream`](/en-US/docs/Web/API/WebSocketStream) {{non-standard_inline}}
-  - : Promise-based interface for connecting to a WebSocket server uses [streams](/en-US/docs/Web/API/Streams_API) to send and receive data on the connection.
+  - : Promise-based interface for connecting to a WebSocket server; uses [streams](/en-US/docs/Web/API/Streams_API) to send and receive data on the connection.
 - [`CloseEvent`](/en-US/docs/Web/API/CloseEvent)
   - : The event sent by the WebSocket object when the connection closes.
 - [`MessageEvent`](/en-US/docs/Web/API/MessageEvent)
