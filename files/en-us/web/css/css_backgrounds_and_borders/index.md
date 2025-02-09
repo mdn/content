@@ -92,8 +92,6 @@ Click "Play" in the example above to see or edit the code for the animation in t
 - {{cssxref("background")}} shorthand
 - {{cssxref("background-position-x")}}
 - {{cssxref("background-position-y")}}
-- {{cssxref("background-position-inline")}}
-- {{cssxref("background-position-block")}}
 
 - {{cssxref("border-bottom-color")}}
 - {{cssxref("border-bottom-style")}}
@@ -116,8 +114,6 @@ Click "Play" in the example above to see or edit the code for the animation in t
 - {{cssxref("border-width")}} shorthand
 - {{cssxref("border")}} shorthand
 
-- {{cssxref("border-collapse")}}
-
 - {{cssxref("border-bottom-left-radius")}}
 - {{cssxref("border-bottom-right-radius")}}
 - {{cssxref("border-top-left-radius")}}
@@ -132,6 +128,9 @@ Click "Play" in the example above to see or edit the code for the animation in t
 - {{cssxref("border-image")}} shorthand
 
 - {{cssxref("box-shadow")}}
+
+> [!NOTE]
+> The CSS backgrounds and borders module introduces some properties implemented: `background-position-block`, `background-position-inline`, `background-repeat-block`, `background-repeat-inline`, `background-repeat-x`, `background-repeat-y` and `background-tbd`.
 
 ### Data types
 
