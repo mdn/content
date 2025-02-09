@@ -12,7 +12,7 @@ Returns all the rules matched for the extension. Callers can filter the list of 
 ## Syntax
 
 ```js-nolint
-let gettingMatchedRules = browser.declarativeNetRequest.getMatchedRules(
+let gettingMatchedRules = await browser.declarativeNetRequest.getMatchedRules(
     filter                // object
 );
 ```
