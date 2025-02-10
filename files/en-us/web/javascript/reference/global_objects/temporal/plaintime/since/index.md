@@ -25,7 +25,7 @@ since(other, options)
 - `other`
   - : A string, an object, or a {{jsxref("Temporal.PlainTime")}} instance representing a time to subtract from this time. It is converted to a `Temporal.PlainTime` object using the same algorithm as {{jsxref("Temporal/PlainTime/from", "Temporal.PlainTime.from()")}}.
 - `options` {{optional_inline}}
-  - : An object containing the options for {{jsxref("Temporal/Duration/round", "Temporal.Duration.prototype.round()")}}, which includes `largestUnit`, `roundingIncrement`, `roundingMode`, and `smallestUnit`. `largestUnit` and `smallestUnit` only accept the units: `"hour"`, `"minute"`, `"second"`, `"millisecond"`, `"microsecond"`, `"nanosecond"`, or their plural forms. For `largestUnit`, the default value `"auto"` means `"hour"`. For `smallestUnit`, the default value is `"nanosecond"`.
+  - : An object containing the options for {{jsxref("Temporal/Duration/round", "Temporal.Duration.prototype.round()")}}, which includes `largestUnit`, `roundingIncrement`, `roundingMode`, and `smallestUnit`. `largestUnit` and `smallestUnit` only accept the units: `"hours"`, `"minutes"`, `"seconds"`, `"milliseconds"`, `"microseconds"`, `"nanoseconds"`, or their singular forms. For `largestUnit`, the default value `"auto"` means `"hours"`. For `smallestUnit`, the default value is `"nanoseconds"`.
 
 ### Return value
 
@@ -47,13 +47,13 @@ const duration = now.since(lunchTime);
 console.log(`You had lunch ${duration.toLocaleString("en-US")} ago`);
 // Example output: "You had lunch 3 hr, 42 min, 21 sec, 343 ms, 131 μs, 718 ns ago"
 
-const duration2 = now.since(lunchTime, { smallestUnit: "minute" });
+const duration2 = now.since(lunchTime, { smallestUnit: "minutes" });
 console.log(`You had lunch ${duration2.toLocaleString("en-US")} ago`);
 // Example output: "You had lunch 3 hr, 42 min ago"
 
 const duration3 = now.since(lunchTime, {
-  largestUnit: "minute",
-  smallestUnit: "minute",
+  largestUnit: "minutes",
+  smallestUnit: "minutes",
 });
 console.log(`You had lunch ${duration3.toLocaleString("en-US")} ago`);
 // Example output: "You had lunch 222 min ago"
@@ -67,7 +67,7 @@ By default the fractional part of the `smallestUnit` is truncated. You can round
 const time1 = Temporal.PlainTime.from("12:30:00");
 const time2 = Temporal.PlainTime.from("12:30:01");
 const duration = time2.since(time1, {
-  smallestUnit: "second",
+  smallestUnit: "seconds",
   roundingIncrement: 15,
   roundingMode: "ceil",
 });

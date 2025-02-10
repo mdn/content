@@ -25,7 +25,7 @@ since(other, options)
 - `other`
   - : A string or a {{jsxref("Temporal.Instant")}} instance representing an instant to subtract from this instant. It is converted to a `Temporal.Instant` object using the same algorithm as {{jsxref("Temporal/Instant/from", "Temporal.Instant.from()")}}.
 - `options` {{optional_inline}}
-  - : An object containing the options for {{jsxref("Temporal/Duration/round", "Temporal.Duration.prototype.round()")}}, which includes `largestUnit`, `roundingIncrement`, `roundingMode`, and `smallestUnit`. `largestUnit` and `smallestUnit` only accept the units: `"hour"`, `"minute"`, `"second"`, `"millisecond"`, `"microsecond"`, `"nanosecond"`, or their plural forms. For `largestUnit`, the default value `"auto"` means `"second"` or `smallestUnit`, whichever is greater. For `smallestUnit`, the default value is `"nanosecond"`.
+  - : An object containing the options for {{jsxref("Temporal/Duration/round", "Temporal.Duration.prototype.round()")}}, which includes `largestUnit`, `roundingIncrement`, `roundingMode`, and `smallestUnit`. `largestUnit` and `smallestUnit` only accept the units: `"hours"`, `"minutes"`, `"seconds"`, `"milliseconds"`, `"microseconds"`, `"nanoseconds"`, or their singular forms. For `largestUnit`, the default value `"auto"` means `"seconds"` or `smallestUnit`, whichever is greater. For `smallestUnit`, the default value is `"nanoseconds"`.
 
 ### Return value
 
@@ -54,9 +54,9 @@ Because an instant does not carry calendar information, the resulting duration a
 ```js
 const lastUpdated = Temporal.Instant.fromEpochMilliseconds(1735235418000);
 const now = Temporal.Now.instant();
-const duration = now.since(lastUpdated, { smallestUnit: "minute" });
+const duration = now.since(lastUpdated, { smallestUnit: "minutes" });
 const roundedDuration = duration.round({
-  largestUnit: "year",
+  largestUnit: "years",
   // Use the ISO calendar; you can convert to another calendar using
   // withCalendar()
   relativeTo: now.toZonedDateTimeISO("UTC"),

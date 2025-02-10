@@ -35,6 +35,8 @@ browser.commands.update(
 
         - an empty string to clear the shortcut.
         - a string matching the format of the [`commands` manifest.json key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands) to set a new shortcut key. If the string does not match this format, the function throws an error.
+          > [!NOTE]
+          > From Firefox 135, extensions can use this method to assign the `F13` to `F19` keys in addition to the keys supported by `commands`.
 
 ### Return value
 

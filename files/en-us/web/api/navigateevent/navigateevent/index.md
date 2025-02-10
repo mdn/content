@@ -10,8 +10,7 @@ browser-compat: api.NavigateEvent.NavigateEvent
 
 {{APIRef("Navigation API")}}{{SeeCompatTable}}
 
-The **`NavigateEvent()`** constructor creates a new
-{{domxref("NavigateEvent")}} object instance.
+The **`NavigateEvent()`** constructor creates a new {{domxref("NavigateEvent")}} object instance.
 
 ## Syntax
 
@@ -22,9 +21,9 @@ new NavigateEvent(type, init)
 ### Parameters
 
 - `type`
-  - : A string representing the type of event. In the case of `NavigateEvent` this is always `navigate`.
+  - : A string representing the type of event.
 - `init`
-  - : An object containing the following properties:
+  - : An object that, _in addition to the properties defined in {{domxref("Event/Event", "Event()")}}_, has the following properties:
     - `canIntercept` {{optional_inline}}
       - : A boolean defining whether the navigation can be intercepted or not (e.g. you can't intercept a cross-origin navigation). Defaults to `false`.
     - `destination`
@@ -35,6 +34,8 @@ new NavigateEvent(type, init)
       - : The {{domxref("FormData")}} object representing the submitted data in the case of a `POST` form submission. Defaults to `null`.
     - `hashChange` {{optional_inline}}
       - : A boolean defining if the navigation is a fragment navigation (i.e. to a fragment identifier in the same document). Defaults to `false`.
+    - `hasUAVisualTransition` {{optional_inline}}
+      - : A boolean defining whether the user agent has performed a visual transition for this navigation before dispatching this event. Defaults to `false`.
     - `info` {{optional_inline}}
       - : The `info` data value passed by the initiating navigation operation (e.g. {{domxref("Navigation.back()")}}, or {{domxref("Navigation.navigate()")}}).
     - `navigationType` {{optional_inline}}
@@ -43,6 +44,10 @@ new NavigateEvent(type, init)
       - : An {{domxref("AbortSignal")}}, which will become aborted if the navigation is cancelled (e.g. by the user pressing the browser's "Stop" button, or another navigation starting and thus cancelling the ongoing one).
     - `userInitiated` {{optional_inline}}
       - : A boolean defining whether the navigation was initiated by the user (e.g. by clicking a link, submitting a form, or pressing the browser's "Back"/"Forward" buttons). Defaults to `false`.
+
+### Return value
+
+A new {{domxref("NavigateEvent")}} object.
 
 ## Examples
 

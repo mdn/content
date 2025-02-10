@@ -218,6 +218,7 @@ A link is included in the content box above to demonstrate the effects of keyboa
 
 ### Properties
 
+- {{CSSxRef("line-clamp")}}
 - {{CSSxRef("overflow")}} shorthand
 - {{CSSxRef("overflow-block")}}
 - {{CSSxRef("overflow-clip-margin")}}
@@ -227,7 +228,6 @@ A link is included in the content box above to demonstrate the effects of keyboa
 - {{CSSxRef("scroll-behavior")}}
 - {{CSSxRef("scrollbar-gutter")}}
 - {{CSSxRef("text-overflow")}}
-- {{CSSxRef("line-clamp")}}
 
 > [!NOTE]
 > The CSS Overflow Module Level 4 introduces the `block-ellipsis`, `continue`, `max-lines`, `overflow-clip-margin-block`, `overflow-clip-margin-block-end`, `overflow-clip-margin-block-start`, `overflow-clip-margin-bottom`, `overflow-clip-margin-inline`, `overflow-clip-margin-inline-end`, `overflow-clip-margin-inline-start`, `overflow-clip-margin-left`, `overflow-clip-margin-right`, and `overflow-clip-margin-top` properties. These have not yet been implemented.
