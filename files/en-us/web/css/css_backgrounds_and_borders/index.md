@@ -2,7 +2,9 @@
 title: CSS backgrounds and borders
 slug: Web/CSS/CSS_backgrounds_and_borders
 page-type: css-module
-spec-urls: https://drafts.csswg.org/css-backgrounds/
+spec-urls:
+  - https://drafts.csswg.org/css-backgrounds/
+  - https://drafts.csswg.org/css-backgrounds-4/
 ---
 
 {{CSSRef}}
@@ -130,7 +132,7 @@ Click "Play" in the example above to see or edit the code for the animation in t
 - {{cssxref("box-shadow")}}
 
 > [!NOTE]
-> The CSS backgrounds and borders module introduces some properties implemented: `background-position-block`, `background-position-inline`, `background-repeat-block`, `background-repeat-inline`, `background-repeat-x`, `background-repeat-y` and `background-tbd`.
+> The CSS backgrounds and borders module introduces some properties that not yet implemented in any browser: `background-position-block`, `background-position-inline`, `background-repeat-block`, `background-repeat-inline`, `background-repeat-x`, `background-repeat-y` and `background-tbd`.
 
 ### Data types
 
