@@ -85,7 +85,7 @@ body {
   - : Common design patterns that are typical Flexbox use cases.
 - [CSS layout: flexbox](/en-US/docs/Learn_web_development/Core/CSS_layout/Flexbox)
   - : Learn how to use flexbox layout to create web layouts.
-- [Box alignment in flexbox](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox)
+- [Box alignment in flexbox](/en-US/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox)
   - : Details features of [CSS box alignment](/en-US/docs/Web/CSS/CSS_box_alignment) which are specific to flexbox.
 
 ## Related concepts

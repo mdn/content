@@ -97,7 +97,7 @@ CSS Grid Layout introduces a two-dimensional grid system to CSS. Grids can be us
 
 - [Box alignment in block layout](/en-US/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Block_Abspos_Tables)
   - : The alignment properties are specified for block and inline layout, though there is no browser support as yet.
-- [Box alignment in flexbox](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox)
+- [Box alignment in flexbox](/en-US/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox)
   - : The alignment properties first appeared with flexbox; this guide explains how they work.
 - [Box alignment in grid layout](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_grid_layout)
   - : How to align items in grid layout.

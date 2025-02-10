@@ -141,5 +141,5 @@ Instead of applying `place-items: center;` on the container, you can achieve the
 
 ## Resources on MDN
 
-- [Box alignment in flexbox](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox)
+- [Box alignment in flexbox](/en-US/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox)
 - [CSS box alignment guide](/en-US/docs/Web/CSS/CSS_box_alignment)

@@ -11839,7 +11839,7 @@
 /en-US/docs/Web/CSS/CSS_Device_Adaptation	/en-US/docs/Web/CSS
 /en-US/docs/Web/CSS/CSS_Device_Adaptation/Viewport_Concepts	/en-US/docs/Web/CSS/Viewport_concepts
 /en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Advanced_layouts_with_flexbox	/en-US/docs/Glossary/Flexbox
-/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Box_Alignment_in_Flexbox	/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox
+/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Box_Alignment_in_Flexbox	/en-US/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox
 /en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax	/en-US/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis
 /en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Mixins	/en-US/docs/Glossary/Flexbox
 /en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes	/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox

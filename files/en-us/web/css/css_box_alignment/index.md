@@ -55,7 +55,7 @@ The alignment of text and inline-level content is defined in [CSS text module](/
 
   - : Overview of the general concepts found in the CSS box alignment module.
 
-- [Box alignment in flexbox](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox)
+- [Box alignment in flexbox](/en-US/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox)
 
   - : How box alignment works in the context of flexbox.
 
