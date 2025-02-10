@@ -60,7 +60,7 @@ A' | 0 0 0 1 0 |
 
 In it, every new value is exactly 1 times its old value, with nothing else added. It is recommended to start manipulating the matrix from here.
 
-Like other filter primitives, it handles color components in the `linearRGB` color space by default. You can use {{svgattr("color-interpolation-filters")}} to use `sRGB` instead.
+Like other filter primitives, it handles color components in the `linearRGB` {{glossary("color space")}} by default. You can use {{svgattr("color-interpolation-filters")}} to use `sRGB` instead.
 
 ## Usage context
 

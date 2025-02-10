@@ -9,7 +9,7 @@ browser-compat: svg.elements.feMorphology
 
 The **`<feMorphology>`** [SVG](/en-US/docs/Web/SVG) filter primitive is used to erode or dilate the input image. Its usefulness lies especially in fattening or thinning effects.
 
-Like other filter primitives, it handles color components in the `linearRGB` color space by default. You can use {{svgattr("color-interpolation-filters")}} to use `sRGB` instead.
+Like other filter primitives, it handles color components in the `linearRGB` {{glossary("color space")}} by default. You can use {{svgattr("color-interpolation-filters")}} to use `sRGB` instead.
 
 ## Usage context
 

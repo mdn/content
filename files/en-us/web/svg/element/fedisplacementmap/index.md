@@ -15,7 +15,7 @@ The formula for the transformation looks like this:
 
 where `P(x,y)` is the input image, {{SVGAttr("in")}}, and `P'(x,y)` is the destination. `XC(x,y)` and `YC(x,y)` are the component values of the channel designated by {{SVGAttr("xChannelSelector")}} and {{SVGAttr("yChannelSelector")}}.
 
-Like other filter primitives, it handles color components in the `linearRGB` color space by default. You can use {{svgattr("color-interpolation-filters")}} to use `sRGB` instead.
+Like other filter primitives, it handles color components in the `linearRGB` {{glossary("color space")}} by default. You can use {{svgattr("color-interpolation-filters")}} to use `sRGB` instead.
 
 ## Usage context
 
