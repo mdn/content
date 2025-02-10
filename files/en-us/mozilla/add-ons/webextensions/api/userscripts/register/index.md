@@ -7,7 +7,7 @@ browser-compat: webextensions.api.userScripts.register
 
 {{AddonSidebar}}
 
-This method enables user scripts to be registered from an extension's pages (such as the background page).
+This method registers user scripts from an extension's pages (such as the background page).
 
 This method is very similar to the {{WebExtAPIRef("contentScripts.register","contentScripts.register()")}} API method (for example, they both return a promise that resolves to an API object with an {{WebExtAPIRef("userScripts.RegisteredUserScript.unregister","unregister()")}} method for unregistering the script). There are, however, differences in the options supported.
 
