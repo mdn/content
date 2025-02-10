@@ -70,6 +70,11 @@ This article provides information about the changes in Firefox 136 that affect d
 
 These features are newly shipped in Firefox 136 but are disabled by default. To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`. You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
 
+- **Error.captureStackTrace()**: <code>javascript.options.experimental.error_capture_stack_trace</code>.
+  The {{jsxref("Error.captureStackTrace()")}} static method installs stack trace information on a provided object as the {{jsxref("Error.stack")}} property.
+  Its main use case is to install a stack trace on a custom error object that does not derive from the {{jsxref("Error")}} interface.
+  ([Firefox bug 1886820](https://bugzil.la/1886820)).
+
 ## Older versions
 
 {{Firefox_for_developers}}
