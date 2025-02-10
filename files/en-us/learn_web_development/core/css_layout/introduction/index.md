@@ -129,7 +129,7 @@ The methods that can override normal flow and change how elements are laid out i
 - Positioning
   - : The {{cssxref("position")}} property allows you to precisely control the placement of boxes inside other boxes. `static` positioning is the default in normal flow, but you can cause elements to be laid out differently using other values, for example, fixing them to the top of the browser viewport using `position: fixed`.
 - Specific layout systems accessed through `display`
-  - : We also have entire layout methods that are enabled via specific `display` values. This most important ones for you to know about are [CSS grid](/en-US/docs/Learn_web_development/Core/CSS_layout/Grids) and [Flexbox](/en-US/docs/Learn_web_development/Core/CSS_layout/Flexbox), which both alter how child elements are laid out inside their parents.
+  - : We also have entire layout methods that are enabled via specific `display` values. The most important ones for you to know about are [CSS grid](/en-US/docs/Learn_web_development/Core/CSS_layout/Grids) and [Flexbox](/en-US/docs/Learn_web_development/Core/CSS_layout/Flexbox), which both alter how child elements are laid out inside their parents.
 - Responsive design
   - : Responsive design refers to creating layouts that adapt to different devices the web page is rendered on (for example, desktops and mobile phones). Responsive design doesn't provide any specific layout tools of its own; its most significant component is the {{cssxref("@media")}} at-rule, which allows you to apply different layouts depending on device attributes such as screen width or resolution.
 
