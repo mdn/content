@@ -78,7 +78,7 @@ Media feature expressions test for their presence, value, or range of values, an
   - : Width-to-height aspect ratio of the output device. Deprecated in Media Queries Level 4.
 - {{cssxref("@media/device-height", "device-height")}}
   - : Height of the rendering surface of the output device. Deprecated in Media Queries Level 4.
-- {{cssxref("@media/device-posture", "device-posture")}} {{experimental_inline}}
+- {{cssxref("@media/device-posture", "device-posture")}}
   - : Detects the device's current posture, that is, whether the viewport is in a flat or folded state. Defined in the [Device Posture API](/en-US/docs/Web/API/Device_Posture_API).
 - {{cssxref("@media/device-width", "device-width")}}
   - : Width of the rendering surface of the output device. Deprecated in Media Queries Level 4.
