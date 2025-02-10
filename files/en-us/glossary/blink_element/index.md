@@ -30,7 +30,7 @@ The `<blink>` element was used like this:
 
 - The CSS {{cssxref("text-decoration-line")}} property has a `blink` value that should have the same effect, but most modern browsers ignore it.
 - The JavaScript {{jsxref("String.blink()")}} method wraps a text string in `<blink></blink>` tags but, as discussed earlier, this element is no longer supported anywhere.
-- [CSS animations](/en-US/docs/Web/CSS/CSS_animations) could still be used to create blinking text. However, you should avoid blinking text on web pages for the reasons discussed above.
+- [CSS animations](/en-US/docs/Web/CSS/CSS_Animations) could still be used to create blinking text. However, you should avoid blinking text on web pages for the reasons discussed above.
 
 ## See also
 

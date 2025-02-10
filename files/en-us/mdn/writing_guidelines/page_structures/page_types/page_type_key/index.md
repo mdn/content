@@ -63,7 +63,7 @@ This section lists `page-type` values for pages under [Web/CSS](/en-US/docs/Web/
 - `css-function`: a [function](/en-US/docs/Web/CSS/CSS_Functions), like {{cssxref("max")}}.
 - `css-keyword`: a keyword, like {{cssxref("inherit")}}.
 - `css-media-feature`: a [media feature](/en-US/docs/Web/CSS/@media#media_features), like [`hover`](/en-US/docs/Web/CSS/@media/hover).
-- `css-module`: a module, like [CSS Animations](/en-US/docs/Web/CSS/CSS_animations).
+- `css-module`: a module, like [CSS Animations](/en-US/docs/Web/CSS/CSS_Animations).
 - `css-property`: a property, like {{cssxref("background-color")}}.
 - `css-pseudo-class`: a [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes), like {{cssxref(":enabled")}}.
 - `css-pseudo-element`: a [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements), like {{cssxref("::before")}}.

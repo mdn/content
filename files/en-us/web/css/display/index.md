@@ -285,7 +285,7 @@ There is one exception, which is when animating to or from `display: none`. In t
 
 This behavior is useful for creating entry/exit animations where you want to for example remove a container from the DOM with `display: none`, but have it fade out with [`opacity`](/en-US/docs/Web/CSS/opacity) rather than disappearing immediately.
 
-When animating `display` with [CSS animations](/en-US/docs/Web/CSS/CSS_animations), you need to provide the starting `display` value in an explicit keyframe (for example using `0%` or `from`). See [Using CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations) for an example.
+When animating `display` with [CSS animations](/en-US/docs/Web/CSS/CSS_Animations), you need to provide the starting `display` value in an explicit keyframe (for example using `0%` or `from`). See [Using CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations) for an example.
 
 When animating `display` with [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions), two additional features are needed:
 

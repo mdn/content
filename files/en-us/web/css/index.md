@@ -38,7 +38,7 @@ The [CSS reference](/en-US/docs/Web/CSS/Reference) is an exhaustive reference fo
 - [Initial](/en-US/docs/Web/CSS/initial_value), [computed](/en-US/docs/Web/CSS/computed_value), [used](/en-US/docs/Web/CSS/used_value), and [actual](/en-US/docs/Web/CSS/actual_value) values
 - [CSS shorthand properties](/en-US/docs/Web/CSS/Shorthand_properties)
 - [CSS flexible box](/en-US/docs/Web/CSS/CSS_flexible_box_layout), [multi-column](/en-US/docs/Web/CSS/CSS_multicol_layout) and [grid](/en-US/docs/Web/CSS/CSS_grid_layout) layout
-- [Animation](/en-US/docs/Web/CSS/CSS_animations), [transitions](/en-US/docs/Web/CSS/CSS_transitions), and [transforms](/en-US/docs/Web/CSS/CSS_transforms)
+- [Animation](/en-US/docs/Web/CSS/CSS_Animations), [transitions](/en-US/docs/Web/CSS/CSS_transitions), and [transforms](/en-US/docs/Web/CSS/CSS_transforms)
 
 ## Cookbook
 

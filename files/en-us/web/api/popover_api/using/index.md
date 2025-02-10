@@ -247,7 +247,7 @@ Popovers are set to `display: none;` when hidden and `display: block;` when show
 - When animating `display` from `block` (or another visible `display` value) to `none`, the value will flip to `none` at `100%` of the animation duration so it is visible throughout.
 
 > [!NOTE]
-> When animating using [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions), [`transition-behavior: allow-discrete`](/en-US/docs/Web/CSS/transition-behavior) needs to be set to enable the above behavior. When animating with [CSS animations](/en-US/docs/Web/CSS/CSS_animations), the above behavior is available by default; an equivalent step is not required.
+> When animating using [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions), [`transition-behavior: allow-discrete`](/en-US/docs/Web/CSS/transition-behavior) needs to be set to enable the above behavior. When animating with [CSS animations](/en-US/docs/Web/CSS/CSS_Animations), the above behavior is available by default; an equivalent step is not required.
 
 ### Transitioning a popover
 

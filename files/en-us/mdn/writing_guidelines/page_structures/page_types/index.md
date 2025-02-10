@@ -160,7 +160,7 @@ For example, the `<easing-function>` data type and the `prefers-reduced-motion` 
 
 #### Examples
 
-- [CSS animations](/en-US/docs/Web/CSS/CSS_animations)
+- [CSS animations](/en-US/docs/Web/CSS/CSS_Animations)
 - [CSS basic user interface](/en-US/docs/Web/CSS/CSS_basic_user_interface)
 - [CSS filter effects](/en-US/docs/Web/CSS/CSS_filter_effects)
 - [CSS scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap)

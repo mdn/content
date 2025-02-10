@@ -231,7 +231,7 @@ selectElem.addEventListener("change", () => {
 
 ## See also
 
-- [CSS animations](/en-US/docs/Web/CSS/CSS_animations)
+- [CSS animations](/en-US/docs/Web/CSS/CSS_Animations)
 - [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions)
 - [cubic-bezier.com](https://cubic-bezier.com/) by Lea Verou (2011)
 - [`linear()` easing generator](https://linear-easing-generator.netlify.app/) by Jake Archibald

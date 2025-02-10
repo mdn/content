@@ -10,7 +10,7 @@ spec-urls:
 
 {{CSSRef}}
 
-The **CSS scroll-driven animations** module provides functionality that builds on top of the [CSS animations module](/en-US/docs/Web/CSS/CSS_animations) and [Web Animations API](/en-US/docs/Web/API/Web_Animations_API). It allows you to animate property values based on a progression along a scroll-based timeline instead of the default time-based document timeline. This means that you can animate an element by scrolling a scrollable element, rather than just by the passing of time.
+The **CSS scroll-driven animations** module provides functionality that builds on top of the [CSS animations module](/en-US/docs/Web/CSS/CSS_Animations) and [Web Animations API](/en-US/docs/Web/API/Web_Animations_API). It allows you to animate property values based on a progression along a scroll-based timeline instead of the default time-based document timeline. This means that you can animate an element by scrolling a scrollable element, rather than just by the passing of time.
 
 There are two types of scroll-based timelines:
 
@@ -81,5 +81,5 @@ Possible values of the {{cssxref("animation-timeline")}} property for defining _
 ## See also
 
 - [Animate elements on scroll with Scroll-driven animations](https://developer.chrome.com/docs/css-ui/scroll-driven-animations) on developer.chrome.com
-- [CSS animations](/en-US/docs/Web/CSS/CSS_animations)
+- [CSS animations](/en-US/docs/Web/CSS/CSS_Animations)
 - [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)

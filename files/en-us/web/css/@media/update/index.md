@@ -24,7 +24,7 @@ The `update` feature is specified as a single keyword value chosen from the list
 - `slow`
   - : The layout may change dynamically according to the usual rules of CSS, but the output device is not able to render or display changes quickly enough for them to be perceived as a smooth animation. Examples: e-book readers or severely underpowered devices.
 - `fast`
-  - : The layout may change dynamically according to the usual rules of CSS, and the output device is not unusually constrained in speed, so regularly-updating things like [CSS Animations](/en-US/docs/Web/CSS/CSS_animations) can be used. Example: computer screens.
+  - : The layout may change dynamically according to the usual rules of CSS, and the output device is not unusually constrained in speed, so regularly-updating things like [CSS Animations](/en-US/docs/Web/CSS/CSS_Animations) can be used. Example: computer screens.
 
 ## Examples
 

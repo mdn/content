@@ -160,6 +160,6 @@ See [Using CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animatio
 - {{cssxref("animation-range")}}
 - [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations)
 - [Using CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
-- [CSS animations](/en-US/docs/Web/CSS/CSS_animations) module
+- [CSS animations](/en-US/docs/Web/CSS/CSS_Animations) module
 - [Animate elements on scroll with Scroll-driven animations](https://developer.chrome.com/docs/css-ui/scroll-driven-animations)
 - {{domxref("AnimationEvent")}}

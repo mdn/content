@@ -50,7 +50,7 @@ Block at-rules end in a `{}`-block that contain nested rules, other at-rules, or
 - {{cssxref("@font-feature-values")}} (plus `@swash`, `@ornaments`, `@annotation`, `@stylistic`, `@styleset` and `@character-variant`)
   - : Controls font display per font-family by defining font-specific alternates, or custom names, to feature indexes in {{cssxref("font-variant-alternates")}} in OpenType ([CSS fonts](/en-US/docs/Web/CSS/CSS_fonts)).
 - {{cssxref("@keyframes")}} (and the `@-webkit-keyframes` alias)
-  - : Define a named animation by describing defining CSS styles for intermediate steps (or keyframes) in the animation sequence ([CSS animations](/en-US/docs/Web/CSS/CSS_animations)).
+  - : Define a named animation by describing defining CSS styles for intermediate steps (or keyframes) in the animation sequence ([CSS animations](/en-US/docs/Web/CSS/CSS_Animations)).
 - {{cssxref("@layer")}}
   - : Creates a named cascade layer with the CSS rules for that layer inside ([CSS cascading and inheritance](/en-US/docs/Web/CSS/CSS_cascade)). Also used as a [statement at-rule](#layer) to define the order of precedence in case of multiple cascade layers
 - {{cssxref("@media")}}

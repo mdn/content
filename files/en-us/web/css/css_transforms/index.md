@@ -760,5 +760,5 @@ The cube in the above example is comprised of six `<div>` elements, all of which
 ## See also
 
 - [Basic SVG transformations](/en-US/docs/Web/SVG/Tutorial/Basic_Transformations) tutorial
-- [CSS animations](/en-US/docs/Web/CSS/CSS_animations) module
+- [CSS animations](/en-US/docs/Web/CSS/CSS_Animations) module
 - [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions) module
