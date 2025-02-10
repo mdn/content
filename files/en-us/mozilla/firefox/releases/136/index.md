@@ -44,6 +44,14 @@ This article provides information about the changes in Firefox 136 that affect d
 
 #### Media, WebRTC, and Web Audio
 
+- WebRTC can now send and receive video encoded using the [AV1 codec](/en-US/docs/Web/Media/Guides/Formats/Video_codecs#av1).
+  When sending, it can be used for both sending multiple simultaneous versions of the same source ("simulcast") and singlecast.
+  ([Firefox bug 1944878](https://bugzil.la/1944878) and [Firefox bug 1944878](https://bugzil.la/1944878)).
+- WebRTC simulcast of screen-shared video with the [H264 codec](/en-US/docs/Web/Media/Guides/Formats/Video_codecs#avc_h.264) is also supported.
+  What this means is that {{domxref("MediaStreamTrack")}} objects for screen and window capture (for example, from {{domxref("MediaDevices.getDisplayMedia()")}}), can now be encoded as multiple simulcast layers when using H264, AV1 or [VP8 codec](/en-US/docs/Web/Media/Guides/Formats/Video_codecs#vp8).
+  Note that he H264 codec is hardware-enabled on Android.
+  ([Firefox bug 1944878](https://bugzil.la/1944878)).
+
 #### Removals
 
 ### WebAssembly
