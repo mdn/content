@@ -319,7 +319,7 @@ Whether or not to open links in a new tab should be a conscious decision, based 
 - Screen reader users may be confused by links that open in a new tab, as they may not realize that the new tab has opened, and they may lose context about their location on the page.
 
 A common approach is to open external links in new tabs and internal links in the same tab.
-Some designers prefer to open all links in the same tab. 
+Some designers prefer to open all links in the same tab.
 If you do open links in new tabs, then it is recommended that you provide cues for these links, such as an icon next to the link text.
 
 ## Active learning: creating a navigation menu
