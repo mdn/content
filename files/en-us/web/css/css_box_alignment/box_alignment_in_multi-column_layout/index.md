@@ -25,4 +25,4 @@ The {{cssxref("column-gap")}} property was originally specified in the multiple-
 - [Box alignment overview](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment)
 - [Box alignment in flexbox](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox)
 - [Box alignment in CSS grid layout](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_grid_layout)
-- [Box alignment for block, absolutely positioned and table layout](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_block_abspos_tables)
+- [Box alignment for block, absolutely positioned and table layout](/en-US/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Block_Abspos_Tables)

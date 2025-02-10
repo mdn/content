@@ -8,7 +8,7 @@ page-type: guide
 
 The [CSS box alignment](/en-US/docs/Web/CSS/CSS_box_alignment) module specifies CSS features that relate to the alignment of boxes in the various CSS box layout models. The module aims to create a consistent method of alignment across all of CSS. The CSS box alignment properties provide full horizontal and vertical alignment capabilities.
 
-This guide details the general concepts found in this module. Additional guides provide more information on box alignment in [flexbox](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox), [grid layout](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_grid_layout), [multiple-column layout](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_multi-column_layout), and [block, absolutely positioned and table layout](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_block_abspos_tables). Alignment of text is covered by the [CSS text](/en-US/docs/Web/CSS/CSS_text) and [CSS inline layout](/en-US/docs/Web/CSS/CSS_inline_layout) modules.
+This guide details the general concepts found in this module. Additional guides provide more information on box alignment in [flexbox](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox), [grid layout](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_grid_layout), [multiple-column layout](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_multi-column_layout), and [block, absolutely positioned and table layout](/en-US/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Block_Abspos_Tables). Alignment of text is covered by the [CSS text](/en-US/docs/Web/CSS/CSS_text) and [CSS inline layout](/en-US/docs/Web/CSS/CSS_inline_layout) modules.
 
 ## Key concepts and terminology
 
@@ -276,7 +276,7 @@ As the CSS box alignment properties are implemented differently depending on the
 - [Box alignment in flexbox](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox)
 - [Box alignment in CSS grid layout](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_grid_layout)
 - [Box alignment in multiple-column layout](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_multi-column_layout)
-- [Box alignment for block, absolutely positioned and table layout](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_block_abspos_tables)
+- [Box alignment for block, absolutely positioned and table layout](/en-US/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Block_Abspos_Tables)
 
 ## See also
 

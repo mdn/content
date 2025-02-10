@@ -67,7 +67,7 @@ The alignment of text and inline-level content is defined in [CSS text module](/
 
   - : How box alignment works in the context of multi-column layout.
 
-- [Box alignment for block, absolutely positioned and table layout](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_block_abspos_tables)
+- [Box alignment for block, absolutely positioned and table layout](/en-US/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Block_Abspos_Tables)
 
   - : How box alignment works in the context of block layout, including floated, positioned, and table elements.
 
