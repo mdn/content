@@ -278,13 +278,13 @@ Let's look at some examples, to see what kind of text can be used here:
 
 ```html
 <p>
-  <a href="https://www.example.com/large-report.pdf">
+  <a href="/large-report.pdf" download>
     Download the sales report (PDF, 10MB)
   </a>
 </p>
 
 <p>
-  <a href="https://www.example.com/video-stream/">
+  <a href="https://www.example.com/video-stream/" target="_blank">
     Watch the video (stream opens in separate tab, HD quality)
   </a>
 </p>
