@@ -18,6 +18,8 @@ This article provides information about the changes in Firefox 136 that affect d
 
 ### CSS
 
+- The {{CSSXRef(":has-slotted")}} [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) is used to style elements in {{HTMLElement("template")}} that have content added to a {{HTMLElement("slot")}} element when rendering a [web component](/en-US/docs/Web/API/Web_components) ([Firefox bug 1940691](https://bugzil.la/1940691)).
+
 #### Removals
 
 ### JavaScript
