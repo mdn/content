@@ -23,7 +23,7 @@ For example, if you use `grid-template-columns: subgrid` and the nested grid spa
 
 In the example below, the grid layout has nine `1fr` column tracks and four rows that are a minimum of `100px` tall.
 
-The `.item` is placed between column lines 2 to 7 and rows 2 to 4. This grid item is itself a grid (`display: grid`) that is a subgrid created by giving it column tracks that are a subgrid (`grid-template-columns: subgrid`) and normally defined rows. The subgrid has five-column tracks as it spans five column tracks.
+The `.item` is placed between column lines 2 to 7 and rows 2 to 4. This grid item is itself specified as a grid using `display: grid` and then defined as a subgrid by giving it column tracks that are a subgrid (`grid-template-columns: subgrid`) and normally defined rows. The subgrid has five-column tracks as it spans five column tracks.
 
 Because the `.item` is a subgrid, even though the `.subitem` is not a direct child of the outer `.grid`, it can be placed on that outer grid, with its columns aligned with the outer grid's columns. The rows are not a subgrid, so behave as a nested grid normally does. The grid area on the parent expands to be large enough for this nested grid.
 
