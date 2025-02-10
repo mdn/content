@@ -41,12 +41,8 @@ i {
   border-radius: 50%;
   animation: falling 3s linear 0s infinite backwards;
   /* Snowflakes are made with CSS linear gradients (https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients) */
-  background-image: linear-gradient(
-      180deg,
-      transparent 40%,
-      white 40% 60%,
-      transparent 60%
-    ),
+  background-image:
+    linear-gradient(180deg, transparent 40%, white 40% 60%, transparent 60%),
     linear-gradient(90deg, transparent 40%, white 40% 60%, transparent 60%),
     linear-gradient(45deg, transparent 43%, white 43% 57%, transparent 57%),
     linear-gradient(135deg, transparent 43%, white 43% 57%, transparent 57%);

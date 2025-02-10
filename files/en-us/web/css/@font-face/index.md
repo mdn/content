@@ -85,7 +85,8 @@ The `@font-face` at-rule may be used not only at the top level of a CSS, but als
   .className {
     @font-face {
       font-family: "MyHelvetica";
-      src: local("Helvetica Neue Bold"), local("HelveticaNeue-Bold"),
+      src:
+        local("Helvetica Neue Bold"), local("HelveticaNeue-Bold"),
         url("MgOpenModernaBold.ttf");
       font-weight: bold;
     }
@@ -128,7 +129,8 @@ In this example, the user's local copy of "Helvetica Neue Bold" is used; if the 
 ```css
 @font-face {
   font-family: "MyHelvetica";
-  src: local("Helvetica Neue Bold"), local("HelveticaNeue-Bold"),
+  src:
+    local("Helvetica Neue Bold"), local("HelveticaNeue-Bold"),
     url("MgOpenModernaBold.ttf");
   font-weight: bold;
 }
