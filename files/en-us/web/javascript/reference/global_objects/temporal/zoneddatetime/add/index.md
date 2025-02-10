@@ -35,6 +35,11 @@ add(duration, options)
 
 A new `Temporal.ZonedDateTime` object representing the date-time specified by the original `ZonedDateTime`, plus the duration.
 
+### Exceptions
+
+- {{jsxref("RangeError")}}
+  - : Thrown if the result is not in the [representable range](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal#representable_dates), which is ±10<sup>8</sup> days, or about ±273,972.6 years, from the Unix epoch.
+
 ## Description
 
 For how [calendar durations](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Duration#calendar_durations) are added, see {{jsxref("Temporal/PlainDate/add", "Temporal.PlainDate.prototype.add()")}}.

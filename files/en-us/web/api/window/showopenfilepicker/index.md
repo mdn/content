@@ -39,7 +39,7 @@ showOpenFilePicker()
       - : A boolean value that defaults to `false`. When
         set to `true` multiple files may be selected.
     - `startIn` {{Optional_Inline}}
-      - : A `FileSystemHandle` or a well known directory (`"desktop"`, `"documents"`,
+      - : A {{domxref("FileSystemHandle")}} or a well known directory (`"desktop"`, `"documents"`,
         `"downloads"`, `"music"`, `"pictures"`, or `"videos"`) to open the dialog in.
     - `types` {{Optional_Inline}}
 

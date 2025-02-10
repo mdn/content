@@ -60,7 +60,7 @@ Supporting browsers will scroll to and highlight the first text fragment in the 
 
 ### Usage notes
 
-- Text strings used for the `textStart`, `textEnd`, `prefix-`, and `-suffix` values need to be [percent-encoded](/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent).
+- Text strings used for the `textStart`, `textEnd`, `prefix-`, and `-suffix` values need to be [percent-encoded](/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent). In addition, [the standard](https://wicg.github.io/scroll-to-text-fragment/#syntax) requires the URL-safe dash character `'-'` to be similarly percent-encoded.
 - Matches are case-insensitive.
 - Individual `textStart`, `textEnd`, `prefix-`, and `-suffix` strings need to reside wholly inside the same [block-level element](/en-US/docs/Glossary/Block-level_content), but complete matches can span across multiple element boundaries.
 - For security reasons, the feature requires links to be opened in a noopener context — you need to add `rel="noopener"` to your {{htmlelement("a")}} elements, and add `noopener` to your {{domxref("window.open()")}} calls when using this feature.

@@ -1,6 +1,6 @@
 ---
 title: "SVGFEComponentTransferElement: y property"
-short-title: "y"
+short-title: y
 slug: Web/API/SVGFEComponentTransferElement/y
 page-type: web-api-instance-property
 browser-compat: api.SVGFEComponentTransferElement.y

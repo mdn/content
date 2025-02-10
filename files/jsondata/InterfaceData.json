@@ -56,6 +56,10 @@
       "inh": "",
       "impl": []
     },
+    "AnimationTrigger": {
+      "inh": "",
+      "impl": []
+    },
     "AnimationWorkletGlobalScope": {
       "inh": "WorkletGlobalScope",
       "impl": []

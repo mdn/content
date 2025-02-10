@@ -90,4 +90,4 @@ For a description of the values, please refer to the CSS {{cssxref("display")}} 
 ## See also
 
 - {{SVGAttr("visibility")}} attribute
-- {{cssxref("display")}}
+- CSS {{cssxref("display")}} property

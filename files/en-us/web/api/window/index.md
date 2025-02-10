@@ -33,7 +33,7 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
   - : This property indicates whether the current window is closed or not.
 - {{domxref("Window.console")}} {{ReadOnlyInline}}
   - : Returns a reference to the console object which provides access to the browser's debugging console.
-- {{domxref("Window.cookieStore")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
+- {{domxref("Window.cookieStore")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns a reference to the {{domxref("CookieStore")}} object for the current document context.
 - {{domxref("Window.credentialless")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a boolean that indicates whether the current document was loaded inside a credentialless {{htmlelement("iframe")}}. See [IFrame credentialless](/en-US/docs/Web/Security/IFrame_credentialless) for more details.
