@@ -156,7 +156,7 @@ A **CSS module landing page** provides an overview of the features that the modu
 The module landing page serves primarily as a _navigation_ page, but also functions as an at-a-glance _reference_ page for the module.
 
 Some related properties and features that belong in other modules, but that are closely related to the functionality offered by the module you are documenting, can also be covered in a _Related concepts_ section.
-For example, the `<easing-function>` data type and the `prefers-reduced-motion` media query are not covered in the CSS animations module, but because they are closely related with CSS animations, it is a good idea to highlight them in the [Related concepts](/en-US/docs/Web/CSS/CSS_animations#related_concepts) section of the CSS animations module landing page.
+For example, the `<easing-function>` data type and the `prefers-reduced-motion` media query are not covered in the CSS animations module, but because they are closely related with CSS animations, it is a good idea to highlight them in the [Related concepts](/en-US/docs/Web/CSS/CSS_Animationsrelated_concepts) section of the CSS animations module landing page.
 
 #### Examples
 
