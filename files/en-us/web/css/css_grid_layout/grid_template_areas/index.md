@@ -483,4 +483,6 @@ You can use this syntax in the exact same way as the {{cssxref("grid-template")}
 
 We will revisit the other functionality offered by this shorthand when we take a look at [auto-placement in grid layout](/en-US/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout) and the `grid-auto-flow` property.
 
+## Next steps
+
 If you've been working along the [grid guides](/en-US/docs/Web/CSS/CSS_grid_layout#guides), you should be in a position to create grid layouts using [line-based placement](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement) or [named areas](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines). Now let's take a look at creating [grid layouts using named grid lines](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines).
