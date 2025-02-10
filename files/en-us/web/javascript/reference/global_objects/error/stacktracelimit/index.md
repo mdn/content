@@ -10,11 +10,11 @@ browser-compat: javascript.builtins.Error.stackTraceLimit
 {{JSRef}}{{Non-standard_Header}}
 
 > [!NOTE]
-> This feature is part of the currently non-standard [V8 stack trace API](https://v8.dev/docs/stack-trace-api). However, due to compatibility reasons, it is also implemented by JavaScriptCore.
+> This feature is part of the currently non-standard [V8 stack trace API](https://v8.dev/docs/stack-trace-api). However, for compatibility reasons, it is also implemented by JavaScriptCore.
 
 The **`Error.stackTraceLimit`** static data property indicates the maximum number of stack frames captured by the stack trace of an error. It can be set by user code to change the engine's behavior.
 
-Generally, _reading_ this property is not very useful, but you can _set_ it to a new value. Setting it to a larger value can be useful for debugging, as it allows you to see more of the call stack. Setting it to a smaller value can be useful for performance, as it can reduce the amount of stack captured.
+Generally, _reading_ this property is not very useful, but you can _set_ it to a new value. Setting it to a larger value can be useful for debugging, as it allows you to see more of the call stack. Setting it to a smaller value can improve performance as it reduces the amount of stack captured.
 
 ## Value
 
