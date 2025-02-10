@@ -22,6 +22,8 @@ This article provides information about the changes in Firefox 136 that affect d
 
 ### JavaScript
 
+- {{jsxref("Intl.DurationFormat")}} is now supported, enabling locale-sensitive formatting of durations. ([Firefox bug 1648139](https://bugzil.la/1648139)).
+
 #### Removals
 
 ### SVG
