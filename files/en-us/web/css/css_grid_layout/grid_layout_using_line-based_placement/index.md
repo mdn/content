@@ -61,7 +61,7 @@ If we do not place these on to the grid in any way they will lay out according t
 
 ## Positioning items by line number
 
-We can use line-based placement to control where these items sit on the grid. We can use the {{cssxref("grid-column-start")}} and {{cssxref("grid-column-end")}} properties to make the first item to start on the far left of the grid and span a single column track. With {{cssxref("grid-row-start")}} and {{cssxref("grid-row-end")}} we make the item start on the first row line, at the top of the grid and span to the fourth row line.
+We can use line-based placement to control where these items sit on the grid. We can use the {{cssxref("grid-column-start")}} and {{cssxref("grid-column-end")}} properties to make the first item start on the far left of the grid and span a single column track. With {{cssxref("grid-row-start")}} and {{cssxref("grid-row-end")}}, we make the item start on the first row line at the top of the grid, and span to the fourth row line.
 
 ```css
 .box1 {
@@ -74,7 +74,7 @@ We can use line-based placement to control where these items sit on the grid. We
 
 As you position some items, other items on the grid will continue to be laid out using the auto-placement rules. This behavior is explained in the [Auto-placement in grid layout](/en-US/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout) guide. For now, observe how the grid is laying out un-placed items into empty cells of the grid.
 
-Addressing each item individually, using the same properties but with different values, we place all four items, spanning row and column tracks.
+Addressing each item individually using the same properties but with different values, we place all four items, spanning row and column tracks.
 
 ```css hidden
 * {
@@ -375,16 +375,16 @@ We can take things a step further and define each area with a single property â€
 
 {{ EmbedLiveSample('The_grid-area_property', '300', '330') }}
 
-This order of values for `grid-area` can seem a little strange, it is the opposite of the direction in which we specify margins and padding as a shorthand for example. It may help to realize that this is due to grid using the flow-relative directions defined in [CSS writing modes](/en-US/docs/Web/CSS/CSS_writing_modes). We explore how grids work with writing modes in [grids, logical values, and writing modes](/en-US/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes). For now, consider the concept of four {{glossary("Flow relative values", "flow-relative")}} directions:
+This order of values for `grid-area` can seem a little strange â€” it is the opposite of the direction in which we specify margins and padding as a shorthand, for example. It may help to realize that this is due to CSS grid layout using the flow-relative directions defined in [CSS writing modes](/en-US/docs/Web/CSS/CSS_writing_modes). We explore how grids work with writing modes in [grids, logical values, and writing modes](/en-US/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes). For now, consider the concept of four {{glossary("Flow relative values", "flow-relative")}} directions:
 
 - `block-start`
 - `block-end`
 - `inline-start`
 - `inline-end`
 
-We are working in English, a left-to-right language. Our `block-start` is the top row line of the grid container, `block-end` is the final row line of the container. Our `inline-start` is the left-hand column line as `inline-start` is always the point from which text would be written in the current writing mode, i`nline-end` is the final column line of our grid.
+We are working in English, a left-to-right language. Our `block-start` is the top row line of the grid container, `block-end` is the final row line of the container. Our `inline-start` is the left-hand column line as `inline-start` is always the point from which text would be written in the current writing mode, while `inline-end` is the final column line of our grid.
 
-When we specify our grid area using the `grid-area` property we first define both start lines `block-start` and `inline-start`, then both end lines `block-end` and `inline-end`. This seems unusual at first as we are used to the {{glossary("physical properties")}} of `top`, `right`, `bottom` and `left`, but makes more sense if you start to think of websites as being multi-directional in writing mode.
+When we specify our grid area using the `grid-area` property we first define both start lines `block-start` and `inline-start`, then both end lines `block-end` and `inline-end`. This seems unusual at first as we are used to the {{glossary("physical properties")}} of `top`, `right`, `bottom`, and `left`, but it makes more sense if you start to think of websites as being multi-directional in different writing modes.
 
 ## Counting backwards
 
@@ -625,4 +625,4 @@ In the second example, we specify the end row line we want the item to finish at
 
 To become familiar with line based positioning in grid, try to build a few common layouts by placing items onto grids with varying numbers of columns. Remember that if you do not place all of the items, any leftover items will be placed according to auto-placement rules. This may result in the layout you want, but if something is appearing somewhere unexpected, check that you have set a position for it.
 
-Also, remember that items on the grid can overlap each other when you place them explicitly like this. That can create some nice effects, however you can also end up with things overlapping incorrectly if you specify the wrong start or end line. Inspecting grids with your browser developer tools can be very helpful as you learn, especially if your grid is quite complicated.
+Also, remember that items on the grid can overlap when you place them explicitly like this. Overlapping items can create some nice effects, however, you can also end up with incorrect overlapping if you specify the wrong start or end line. Inspecting grids with your browser developer tools can be very helpful for identifying such problems as you learn, especially if your grid is quite complicated.

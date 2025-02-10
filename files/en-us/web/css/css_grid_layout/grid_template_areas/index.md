@@ -31,7 +31,7 @@ We can also define an area by giving it a name and then specify the location of 
 
 ![An image showing a simple two column layout with header and footer](4_layout.png)
 
-With the {{cssxref("grid-area")}} property we can assign each of these areas a name. By itself, this does not create any layout. Rather, it provided named areas to use in a layout.
+With the {{cssxref("grid-area")}} property we can assign each of these areas a name. By itself, this does not create any layout. Rather, it provides named areas to use in a layout.
 
 ```css
 .header {
@@ -48,7 +48,7 @@ With the {{cssxref("grid-area")}} property we can assign each of these areas a n
 }
 ```
 
-Having defined these names we then create the layout. This time, instead of placing items using line numbers specified on the items themselves, we create the whole layout on the grid container. Here we create a 9-column grid, then define the `hd` and `ft` to span all 9 columns, while the `sd` spans three and `main` spans six. Each spans only one row.
+Having defined these names, we then create the layout. This time, instead of placing items using line numbers specified on the items themselves, we create the whole layout on the grid container. Here we create a 9-column grid and specify that the `hd` and `ft` areas span all 9 columns, while `sd` spans three and `main` spans six. Each area spans only one row.
 
 ```css
 .wrapper {
@@ -165,7 +165,7 @@ In order to make the layout neater we can use multiple `.` characters. As long a
 
 ## Spanning multiple cells
 
-In our example each of the areas spans multiple grid cells and we achieve this by repeating the name of that grid area multiple times with white space between. You can add extra white space in order to keep your columns neatly lined up in the value of `grid-template-areas`. You can see that we have done this in order that the `hd` and `ft` line up with `main`.
+In our example, each area spans multiple grid cells and we achieve this by repeating the name of that grid area multiple times with white space between. You can add extra white space to keep your columns neatly lined up in the value of `grid-template-areas`. You can see that we have done this so that the `hd` and `ft` areas line up with `main`.
 
 The area that you create by chaining the area names must be rectangular, at this point there is no way to create an L-shaped area. The specification does note that a future level might provide this functionality. You can however span rows just as easily as columns. For example we could make our sidebar span down to the end of the footer by replacing the `.` with `sd`.
 
@@ -287,7 +287,7 @@ For our layout above, we might like to have a very simple layout at narrow width
 }
 ```
 
-We can then redefine that layout inside [media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) to go to our two columns layout, and perhaps take it to a three column layout if the available space is even wider. Note that for the wide layout we keep my nine column track grid, we redefine where items are placed using `grid-template-areas`.
+We can then redefine that layout inside [media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) to go to our two columns layout, and perhaps take it to a three column layout if the available space is even wider. Note that for the wide layout, we keep the nine-column track grid, redefining where items are placed using `grid-template-areas`.
 
 ```css
 @media (min-width: 30em) {
@@ -426,7 +426,7 @@ Having looked at various ways of placing items on our grids and many of the prop
 
 These can quickly become difficult to read for other developers, or even your future self. However they are part of the specification and it is likely you will come across them in examples or in use by other developers, even if you choose not to use them.
 
-Before using any shorthand it is worth remembering that shorthands not only enable the setting of many properties in one go, they also **reset** everything that you do not, or cannot set in the shorthand to their initial values. Therefore if you use a shorthand, be aware that it may reset things you have applied elsewhere.
+Before using any shorthand it is worth remembering that shorthands not only enable the setting of many properties in one go, but they also **reset** everything that you do not (or cannot) set in the shorthand to their initial values. Therefore if you use a shorthand, be aware that it may reset things you have applied elsewhere.
 
 The two shorthands for the grid container are the explicit grid shorthand {{cssxref("grid-template")}} and the grid definition shorthand {{cssxref("grid")}} .
 
@@ -438,7 +438,7 @@ The {{cssxref("grid-template")}} shorthand property sets the following longhand 
 - {{cssxref("grid-template-columns")}}
 - {{cssxref("grid-template-areas")}}
 
-The property is referred to as the _explicit grid shorthand_ because it is setting those things that you control when you define an explicit grid, and not those which impact any implicit row or column tracks that might be created.
+The property is referred to as the _explicit grid shorthand_ because it sets values that you control when you define an explicit grid, and not those that impact any implicit row or column tracks that might be created.
 
 The following code creates a layout using {{cssxref("grid-template")}} that is the same as the layout created earlier in this guide.
 

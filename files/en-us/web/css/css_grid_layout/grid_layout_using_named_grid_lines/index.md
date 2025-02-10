@@ -6,9 +6,9 @@ page-type: guide
 
 {{CSSRef}}
 
-In previous guides, we've looked at placing items by the lines created by [defining grid tracks](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement) and also how to place items [using named template areas](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_template_areas). In this guide, we look at how these two things work together when we use named lines.
+In previous guides, we've looked at placing items on the lines created by [defining grid tracks](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement) and also how to place items [using named template areas](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_template_areas). In this guide, we look at how these two things work together when we use named lines.
 
-Line naming is incredibly useful, but some of the more baffling looking grid syntax comes from this combination of names and track sizes. Once you work through some examples, it should become clearer and easier to work with.
+Line naming is incredibly useful, but some of the more confusing grid syntax comes from this combination of names and track sizes. Once you work through some examples, it should become clearer and easier to work with.
 
 ## Naming lines when defining a grid
 
@@ -34,7 +34,7 @@ You can assign some or all of the lines in your grid a name when you define your
 }
 ```
 
-When defining the grid, we name our lines inside square brackets (`[]`). Those names can be anything you like. We define a name for the start and end of the container, both for rows and columns. In this case, the center block of the grid is named `content-start` and `content-end`, for both columns and rows.
+When defining the grid, we name our lines inside square brackets (`[]`). Those names can be anything you like. We define a name for the start and end of the container, both for rows and columns. In this case, the grid center block's start rows and columns are both named `content-start`, and its end rows and columns are both named `content-end`.
 
 ```css
 .wrapper {
@@ -44,7 +44,7 @@ When defining the grid, we name our lines inside square brackets (`[]`). Those n
 }
 ```
 
-We don't need to name all of lines in our grids; you may choose to name just the key lines of your layout.
+We don't need to name all of the lines in our grids; you may choose to name just the key lines of your layout.
 
 Once the lines have names, we can use the name we defined, rather than the line number, to place the grid items.
 
@@ -84,7 +84,7 @@ Once the lines have names, we can use the name we defined, rather than the line 
 
 {{ EmbedLiveSample('Naming_lines_when_defining_a_grid', '500', '330') }}
 
-Everything else about line-based placement still works in the same way. In our grid layout, we basically provided each numeric line with an alias name. In our grid items we reference a name rather than a number. Naming lines in this way is useful as, when creating a responsive design, we can update the container's grid properties rather than updating the grid items within each [media query](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries).
+Everything else about line-based placement still works in the same way. In our grid layout, we provided each numeric line with an alias name. In our grid items, we reference a name rather than a number. Naming lines in this way is useful — when creating a responsive design, we can update the container's grid properties rather than updating the grid items within each [media query](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries).
 
 ### Giving lines multiple names
 
@@ -92,7 +92,7 @@ You may want to give a line more than one name, perhaps it denotes the sidebar-e
 
 ## Implicit grid areas from named lines
 
-When naming the lines, we mentioned that you can name these anything you like. The name is a {{cssxref("custom ident")}}, an author-defined name. When choosing the name you need to avoid words that might appear in the specification and be confusing - such as `span`. Idents are not quoted.
+When naming the lines, we mentioned that you can name these anything you like. The name is a {{cssxref("custom-ident")}}, an author-defined name. When choosing the name you need to avoid words that might appear in the specification and be confusing - such as `span`. Idents are not quoted.
 
 While you can choose any name, if you append `-start` and `-end` to the lines around an area, as we have in the example above, grid will create a named area of the main name used. Taking the above example, we have `content-start` and `content-end` both for rows and for columns. This means we get a grid area named `content`, and could place something in that area should we wish to.
 
@@ -161,7 +161,7 @@ This gives us column and row lines:
 - `ft-start`
 - `ft-end`
 
-You can see the named lines in the image. Mote that some lines have two names - for example `sd-end` and `main-start` refer to the same column line.
+You can see the named lines in the image. Note that some lines have two names - for example, `sd-end` and `main-start` refer to the same column line.
 
 ![An image showing the implicit line names created by our grid areas.](5_multiple_lines_from_areas.png)
 
@@ -237,7 +237,7 @@ Positioning `overlay` using these implicit named lines is the same as positionin
 
 {{ EmbedLiveSample('Implicit_Grid_lines_from_named_areas', '500', '330') }}
 
-Given that we have this ability to position created lines from named areas and areas from named lines, it is worth taking a little bit of time to plan your naming strategy when starting out creating your grid layout. By selecting names that will make sense to you and your team, you will make using the layouts you create more inuitive.
+Given that we have this ability to position created lines from named areas and areas from named lines, it is worth taking a little bit of time to plan your naming strategy when starting out creating your grid layout. Selecting names that make sense to you and your team will make your layouts more intuitive.
 
 ## Multiple lines with the same name with repeat()
 
@@ -276,7 +276,7 @@ In this example, we create a grid with 12 equal-width columns. Before defining t
 
 Once you have created the grid you can place items onto it. As we have multiple lines named `col-start` if you place an item to start after line `col-start`, the first line named `col-start` will be used. In our case, this is the far left line. To address another line, use the name with the number for that line.
 
-To place an item spanning from the first line named `col-start` to the 5th with that name, we can use:
+To place an item spanning from the first line named `col-start` to the 5th line with that name, we can use:
 
 ```css
 .item1to5 {
@@ -301,13 +301,13 @@ You can also use the `span` keyword. This item will span 3 lines starting from t
 
 {{ EmbedLiveSample('Twelve-column_grid_using_repeat', '500', '120') }}
 
-If you take a look at this layout your browser's developer tools, you will see how the column lines are shown, and how our items are placed against these lines.
+If you look at this layout in your browser's developer tools, you will see how the column lines are shown, and how our items are placed against these lines.
 
 ![The 12 column grid with items placed. The Firefox grid highlighter shows the position of the lines.](5_named_lines1.png)
 
 ### Defining named lines with a track list
 
-The repeat syntax can also take a track list; it not just single track sizes that can be repeated.
+The `repeat()` syntax can also take a track list; it is not just single track sizes that can be repeated.
 
 This CSS creates an eight track grid, with a narrower `1fr` width column named `col1-start` followed by a wider `3fr` column named `col2-start`.
 
@@ -317,7 +317,7 @@ This CSS creates an eight track grid, with a narrower `1fr` width column named `
 }
 ```
 
-If your repeating syntax puts two lines next to each other then they will be merged and create the same result as giving a line multiple names in a non-repeating track definition. The following definition creates four `1fr` tracks, with each having a start and end line.
+If your repeating syntax puts two lines next to each other then they will be merged and create the same result as giving a line multiple names in a non-repeating track definition. The following definition creates four `1fr` tracks, each with a start and end line.
 
 ```css
 .wrapper {
@@ -325,7 +325,7 @@ If your repeating syntax puts two lines next to each other then they will be mer
 }
 ```
 
-If we write this declaration without using repeat notation, it would look like this:
+If we write this declaration without using repeat notation, it looks like this:
 
 ```css
 .wrapper {
@@ -386,9 +386,9 @@ Using a track list, we can use the `span` keyword to span a number of lines, inc
 
 ### Twelve-column grid framework
 
-Learning about numeric and named line-based placement and [grid template areas](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_template_areas), we now know there are several ways to place items using grid. This may seem overly complex, but you don't need to use all of them. In practice, using named template areas works well for straightforward layouts as this method gives that good visual representation of what your layout looks like, and makes it more intuitive to move things around on the grid. For example, when working with a strict multiple column layout, the named lines demonstration in the last part of this guide works well.
+Having learned about numeric and named line-based placement and [grid template areas](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_template_areas), we now know there are several ways to place items using CSS grid layout. This may seem overly complex, but you don't need to use all of them. In practice, using named template areas works well for straightforward layouts as this method gives a good visual representation of what your layout looks like, and makes it more intuitive to move things around on the grid. For example, when working with a strict multiple-column layout, the named lines demonstration in the last part of this guide works well.
 
-Last decade's grid systems, including Foundation or Bootstrap, were based on a 12 column grid. The frameworks imported code to do the calculations that ensured the columns added up to 100%. Frameworks aren't needed! The only CSS we need for a 12-column grid "framework" is:
+Legacy grid systems such as Foundation or Bootstrap are based on a 12-column grid. These frameworks import code to do calculations that ensure the columns add up to 100%. Frameworks aren't needed! The only CSS we need for a 12-column grid "framework" is:
 
 ```css
 .wrapper {
@@ -400,7 +400,7 @@ Last decade's grid systems, including Foundation or Bootstrap, were based on a 1
 
 We can then use this "framework" to lay out our page.
 
-For example, to create a three column layout with a header and footer, we might have the following markup.
+For example, to create a three-column layout with a header and footer, we can use the following markup.
 
 ```css hidden
 * {
@@ -462,6 +462,6 @@ Once again, the developer tool's grid highlighter is helpful to show us how the 
 
 ![The layout with the grid highlighted.](5_named_lines2.png)
 
-That's all we need. We don't need to do any calculations! Grid automatically removed our 10 pixel gutter track before assigning the space to the `1fr` column tracks.
+That's all we need. We don't need to do any calculations! CSS grid layout automatically removed our 10-pixel gutter track before assigning the space to the `1fr` column tracks.
 
-Up next, we will look at how grid can position items for us - without us needing to use placement properties at all, in the [auto-placement in grid layout](/en-US/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout) guide.
+Up next, we will look at how CSS grid layout can position items for us without requiring placement properties at all, in the [auto-placement in grid layout](/en-US/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout) guide.
