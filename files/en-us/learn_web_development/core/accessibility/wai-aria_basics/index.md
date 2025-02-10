@@ -939,10 +939,6 @@ There are a whole host of other [roles](/en-US/docs/Web/Accessibility/ARIA/Roles
 
 Let's go through an example of our own. We'll return to our simple absolutely-positioned tabbed interface (see [Hiding things](/en-US/docs/Learn_web_development/Core/Accessibility/CSS_and_JavaScript#hiding_things) in our CSS and JavaScript accessibility article), which you can find at [Tabbed info box example](/en-US/docs/Learn_web_development/Core/CSS_layout/Practical_positioning_examples#a_tabbed_info-box).
 
-<!-- This example as-is works fine in terms of keyboard accessibility — you can happily tab between the different tabs and select them to show the tab contents. It is also fairly accessible too — you can scroll through the content and use the headings to navigate, even if you can't see what is happening on screen. It is however not that obvious what the content is — a screen reader currently reports the content as a list of links, and some content with three headings. It doesn't give you any idea of what the relationship is between the content. Giving the user more clues as to the structure of the content is always good. -->
-
-<!-- To improve things, we've created a new version of the example. -->
-
 ```html live-sample___aria-tabbed-info-box
 <section class="info-box">
   <div role="tablist" class="manual">
@@ -976,15 +972,7 @@ Let's go through an example of our own. We'll return to our simple absolutely-po
   <div class="panels">
     <article id="tabpanel-1" role="tabpanel" aria-labelledby="tab-1">
       <h2>The first tab</h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
-        turpis nibh, porttitor nec venenatis eu, pulvinar in augue. Vestibulum
-        et orci scelerisque, vulputate tellus quis, lobortis dui. Vivamus varius
-        libero at ipsum mattis efficitur ut nec nisl. Nullam eget tincidunt
-        metus. Donec ultrices, urna maximus consequat aliquet, dui neque
-        eleifend lorem, a auctor libero turpis at sem. Aliquam ut porttitor
-        urna. Nulla facilisi.
-      </p>
+      <p>This is the content for tab one and is just a paragraph.</p>
     </article>
     <article
       id="tabpanel-2"
@@ -992,10 +980,7 @@ Let's go through an example of our own. We'll return to our simple absolutely-po
       aria-labelledby="tab-2"
       class="is-hidden">
       <h2>The second tab</h2>
-      <p>
-        This tab hasn't got any Lorem Ipsum in it. But the content isn't very
-        exciting all the same.
-      </p>
+      <p>This is the content for tab two and is just a paragraph.</p>
     </article>
     <article
       id="tabpanel-3"
@@ -1003,16 +988,12 @@ Let's go through an example of our own. We'll return to our simple absolutely-po
       aria-labelledby="tab-3"
       class="is-hidden">
       <h2>The third tab</h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
-        turpis nibh, porttitor nec venenatis eu, pulvinar in augue. And now an
-        ordered list: how exciting!
-      </p>
-      <ol>
-        <li>dui neque eleifend lorem, a auctor libero turpis at sem.</li>
-        <li>Aliquam ut porttitor urna.</li>
-        <li>Nulla facilisi</li>
-      </ol>
+      <p>This is the content for tab three and is a paragraph and a list.</p>
+      <ul>
+        <li>Cat</li>
+        <li>Dog</li>
+        <li>Horse</li>
+      </ul>
     </article>
   </div>
 </section>
@@ -1037,7 +1018,7 @@ body {
 
 .info-box {
   width: 452px;
-  height: 400px;
+  height: 250px;
   margin: 1.25rem auto 0;
 }
 
@@ -1073,7 +1054,7 @@ body {
 /* styling info-box panels */
 
 .info-box .panels {
-  height: 352px;
+  height: 200px;
   clear: both;
   position: relative;
 }
@@ -1082,7 +1063,8 @@ body {
   color: white;
   position: absolute;
   padding: 0.8rem 1.2rem;
-  height: 352px;
+  height: 200px;
+  width: 100%;
   top: 0;
   background-color: #b60000;
   left: 0;
@@ -1223,7 +1205,7 @@ window.addEventListener("load", function () {
 });
 ```
 
-{{EmbedLiveSample("aria-tabbed-info-box", "100", "420")}}
+{{EmbedLiveSample("aria-tabbed-info-box", "100", "270")}}
 
 In this example we have used a combination of semantic elements, aria roles and aria attributes. The first of these is we have used a {{htmlelement("button")}} element as a _tab_, this means that the tab can be selected via a mouse click or via the keyboard using space or enter.
 
