@@ -36,7 +36,7 @@ Firefox 5, based on Gecko 5.0, was released on June 21, 2011. This article provi
 
 ### CSS
 
-- [CSS animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+- [CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
   - : Support for CSS animations has been added, using the `-moz-` prefix for now.
 
 ### DOM

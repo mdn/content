@@ -50,5 +50,5 @@ For unregistered custom properties, the animation type is discrete.
 
 ## See also
 
-- [Using CSS Animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+- [Using CSS Animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
 - [Using CSS Transitions](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)

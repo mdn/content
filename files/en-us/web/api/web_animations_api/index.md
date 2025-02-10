@@ -53,6 +53,6 @@ The Web Animations API adds features to {{domxref("document")}} and {{domxref("e
 - CSS {{cssxref("animation")}} shorthand property
 - CSS {{cssxref("animation-timeline")}} property
 - [Using the Web Animations API](/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API)
-- [Using CSS animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+- [Using CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
 - [CSS animations](/en-US/docs/Web/CSS/CSS_animations) module
 - [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations) module

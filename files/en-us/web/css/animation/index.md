@@ -294,7 +294,7 @@ is 'overwritten' by the bounce animation.
 
 {{EmbedLiveSample('Cascading Multiple Animations')}}
 
-See [Using CSS animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations#examples) for additional examples.
+See [Using CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations#examples) for additional examples.
 
 ## Specifications
 
@@ -306,5 +306,5 @@ See [Using CSS animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animatio
 
 ## See also
 
-- [Using CSS animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+- [Using CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
 - JavaScript {{domxref("AnimationEvent")}} API
