@@ -16,7 +16,7 @@ The **`RestrictionTarget`** interface of the {{domxref("Screen Capture API", "Sc
 ## Static methods
 
 - {{domxref("RestrictionTarget.fromElement_static", "fromElement()")}} {{Experimental_Inline}}
-  - : Returns a `RestrictionTarget` instance that can be used to restrict a captured video track to a specified DOM element (plus its decendants).
+  - : Returns a `RestrictionTarget` instance that can be used to restrict a captured video track to a specified DOM element (plus its descendants).
 
 ## Examples
 
