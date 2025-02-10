@@ -230,7 +230,7 @@ A link is included in the content box above to demonstrate the effects of keyboa
 - {{CSSxRef("text-overflow")}}
 
 > [!NOTE]
-> The CSS overflow module level 4 introduces the `block-ellipsis`, `continue`, `line-clamp`, and `max-lines` properties. These have not yet been implemented.
+> The CSS overflow module level 4 introduces the `block-ellipsis`, `continue`, and `max-lines` properties. These have not yet been implemented.
 
 ### Data types
 
