@@ -272,7 +272,7 @@ Other tips:
 
 ### Linking to non-HTML resources — leave clear signposts
 
-When linking to a resource that will not be opened in the current page as a "normal navigation", you should add clear wording to the link text about what is going to happen. For example, if you're downloading or streaming a resource, or if the link is going to open a popup or perform some other potentially unexpected effect, this should be stated in the text. This is important for users on low bandwidth connection and want to avoid downloading assets of multiple megabytes. It also helps to set up expectations for screen reader users, who may not be aware of what's happening otherwise.
+When linking to a resource that will not be opened in the current page as a "normal navigation", you should add clear wording to the link text about what is going to happen. For example, if you're downloading or streaming a resource, or if the link is going to open a popup or perform some other potentially unexpected effect, this should be stated in the text. This is important for users on low bandwidth connections, who might want to avoid downloading assets of multiple megabytes. It also helps to set up expectations for screen reader users, who may not be aware of what's happening otherwise.
 
 Let's look at some examples, to see what kind of text can be used here:
 
