@@ -1,31 +1,21 @@
 ---
-title: userScripts.ExecutionWorld
-slug: Mozilla/Add-ons/WebExtensions/API/userScripts/ExecutionWorld
+title: userScripts.ScriptSource
+slug: Mozilla/Add-ons/WebExtensions/API/userScripts/ScriptSource
 page-type: webextension-api-type
-browser-compat: webextensions.api.userScripts.ExecutionWorld
+browser-compat: webextensions.api.userScripts.ScriptSource
 ---
 
 {{AddonSidebar}}
 
-Specifies the execution environment of a script injected with {{WebExtAPIRef("userScripts.register()")}}
-or {{WebExtAPIRef("userScripts.update()")}}.
+Specifies the code or a file source for a user script.
 
 ## Type
 
-Values of this type are strings. Possible values are:
+Values of this type are ?. Possible values are:
 
-- `MAIN`
+- `id`
 
-  The web page execution environment. This environment is shared with the web page without isolation.
-  Scripts in this environment do not have any access to APIs that are only available to content scripts.
-
-  > [!WARNING]
-  > Due to the lack of isolation, the web page can detect and interfere with the executed code.
-  > Do not use the `MAIN` world unless it is acceptable for web pages to read, access, or modify the logic or data that flows through the executed code.
-
-- `USER_SCRIPT`
-
-  Specifies the user scripts execution environment which is exempt from the page's content security policy (CSP).
+- ``
 
 {{WebExtExamples("h2")}}
 
