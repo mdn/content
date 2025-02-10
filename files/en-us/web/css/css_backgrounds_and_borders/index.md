@@ -141,7 +141,7 @@ Click "Play" in the example above to see or edit the code for the animation in t
 
 - [Learn CSS: background and borders](/en-US/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)
   - : Explains how to implement decorative images using CSS background images.
-- [Using multiple backgrounds](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
+- [Using multiple backgrounds](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds)
   - : Explains how to set one or more backgrounds on an element.
 - [Resizing background images](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images)
   - : Describes how to change the size and repeating behavior of background images.

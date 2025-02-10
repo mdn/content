@@ -76,7 +76,7 @@ When we talk about a fancy box, the core properties to handle that are [backgrou
 
 Before we jump to some practical examples, let's step back a bit as there are two things you should know about backgrounds.
 
-- It's possible to set [several backgrounds](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds) on a single box. They are stacked on top of each other like layers.
+- It's possible to set [several backgrounds](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds) on a single box. They are stacked on top of each other like layers.
 - Backgrounds can be either solid colors or images: solid color always fills the whole surface but images can be scaled and positioned.
 
 ```html hidden

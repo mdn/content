@@ -186,5 +186,5 @@ div {
 
 - {{cssxref("background-position-x")}}
 - {{cssxref("background-position-y")}}
-- [Using multiple backgrounds](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
+- [Using multiple backgrounds](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds)
 - {{cssxref("transform-origin")}}
