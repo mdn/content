@@ -7,17 +7,14 @@ browser-compat: webextensions.api.userScripts.UserScriptFilter
 
 {{AddonSidebar}}
 
-Specifies the code or a file source for a user script.
+A list of user scripts to be processed by {{WebExtAPIRef("userScripts.getScripts()")}} or {{WebExtAPIRef("userScripts.unregister()")}}.
 
 ## Type
 
-Values of this type are ?. Possible values are:
+Values of this type are an object containing these properties:
 
-- ``
-
-- ``
-
-  .
+- `ids` {{optional_inline}}
+  - : `array` of `string`. IDs of user scripts to be processed by {{WebExtAPIRef("userScripts.getScripts()")}} and {{WebExtAPIRef("userScripts.unregister()")}}.
 
 {{WebExtExamples("h2")}}
 

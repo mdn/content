@@ -7,17 +7,32 @@ browser-compat: webextensions.api.userScripts.RegisteredUserScript
 
 {{AddonSidebar}}
 
-An object representing a registered user script.
+An object representing registered user scripts.
 
 ## Type
 
-Values of this type are ?. Possible values are:
+Values of this type are an object containing these properties:
 
-- ``
-
-- ``
-
-  .
+- `allFrames` {{optional_inline}}
+  - : `boolean`. If `allFrames` is `true`, the script is injected into all of a page's frames. By default, it's `false` and the script is only injected into the top frame.
+- `id`
+  - : `string`. The ID of a user script. This property must not start with a '\_', which is reserved as a prefix for generated script IDs.
+- `js`
+  - : `array` of {{WebExtAPIRef("userScripts.ScriptSource")}}. The scripts to inject into matching pages.
+- `matches` {{optional_inline}}
+  - : `array` of `string`. [Match patterns](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) for the pages to run the script in. `matches` or `includeGlobs` must be specified.
+- `excludeMatches` {{optional_inline}}
+  - : `array` of `string`. [Match patterns](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) for pages that the script must not be run in.
+- `includeGlobs` {{optional_inline}}
+  - : `string`. Glob patterns for the pages to run the script in. `matches` or `includeGlobs` must be specified.
+- `excludeGlobs` {{optional_inline}}
+  - : `string`. Glob patterns for pages that the script must not be run in.
+- `runAt` {{optional_inline}}
+  - : {{WebExtAPIRef("extensionTypes.RunAt")}}. The earliest the script is injected into a tab. Defaults to "document_idle".
+- `world` {{optional_inline}}
+  - : {{WebExtAPIRef("userScripts.ExecutionWorld")}}. The execution environment to use to run the scripts. Defaults to "USER_SCRIPT".
+- `worldId` {{optional_inline}}
+  - : `string`. ID of a user script world execute the script in. Only valid if `world` is `USER_SCRIPT` or omitted. If `worldId` is omitted, the script is execute in the default `USER_SCRIPT` world (""). Values with leading underscores (`_`) are reserved. The maximum length is 256 characters.
 
 ## Browser compatibility
 

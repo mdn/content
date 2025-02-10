@@ -7,21 +7,21 @@ browser-compat: webextensions.api.userScripts.ScriptSource
 
 {{AddonSidebar}}
 
-Specifies the code or a file source for a user script.
+The code or source file for a user script.
 
 ## Type
 
-Values of this type are ?. Possible values are:
+Values of this type are an object containing these properties:
 
-- `id`
+- `file` {{optional_inline}}
+  - : `string`. The path of the file containing the user script code. The path is relative to the extension's root directory.
+- `allFrames` {{optional_inline}}
+  - : `code`. JavaScript code for the user script.
 
-- ``
+`file` or `code` must be specified.
 
 {{WebExtExamples("h2")}}
 
 ## Browser compatibility
 
 {{Compat}}
-
-> [!NOTE]
-> This API is based on Chromium's [`chrome.scripting`](https://developer.chrome.com/docs/extensions/reference/api/scripting#type-ExecutionWorld) API.
