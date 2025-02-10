@@ -7,7 +7,7 @@ spec-urls: https://drafts.csswg.org/css-page/
 
 {{CSSRef}}
 
-The **CSS paged media** module defines the properties that control the presentation of content for print or any other media that splits content into discrete pages. It allows you to set page breaks, control printable area, style left and right pages differently, and control breaks inside elements.
+The **CSS paged media** module defines the properties that control the presentation of content for print or any other media that splits content into discrete pages. It allows you to set page breaks, control printable areas, style left and right pages differently, and control breaks inside elements.
 
 ## Reference
 
@@ -24,7 +24,7 @@ The **CSS paged media** module defines the properties that control the presentat
 - [Margin at-rules](/en-US/docs/Web/CSS/@page#margin_at-rules)
 
 > [!NOTE]
-> CSS paged media module introduces two `@page` descriptors that have not been implemented: `bleeds`, `marks`.
+> CSS paged media module introduces two `@page` descriptors that have not been implemented: `bleeds` and `marks`.
 
 ### Pseudo-classes
 
