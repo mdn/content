@@ -48,16 +48,16 @@ There are a few points to note about `calc()`, which are detailed in the section
 
 The `calc()` function must stand in place of a full CSS value of one of the following types:
 
-- {{cssxref("&lt;length&gt;")}},
-- {{cssxref("&lt;frequency&gt;")}},
-- {{cssxref("&lt;angle&gt;")}},
-- {{cssxref("&lt;time&gt;")}},
-- {{cssxref("flex_value", "&lt;flex&gt;")}},
-- {{cssxref("&lt;resolution&gt;")}},
-- {{cssxref("&lt;percentage&gt;")}},
-- {{cssxref("&lt;number&gt;")}},
-- {{cssxref("&lt;integer&gt;")}},
-- One of the mixed types like {{cssxref("&lt;length-percentage&gt;")}}.
+- {{cssxref("&lt;length&gt;")}}
+- {{cssxref("&lt;frequency&gt;")}}
+- {{cssxref("&lt;angle&gt;")}}
+- {{cssxref("&lt;time&gt;")}}
+- {{cssxref("flex_value", "&lt;flex&gt;")}}
+- {{cssxref("&lt;resolution&gt;")}}
+- {{cssxref("&lt;percentage&gt;")}}
+- {{cssxref("&lt;number&gt;")}}
+- {{cssxref("&lt;integer&gt;")}}
+- One of the mixed types like {{cssxref("&lt;length-percentage&gt;")}}
 
 `calc()` cannot only replace the numeric part of percentage values, length values, etc., without also replacing the unit after it. For example, `calc(100 / 4)%` is invalid, while `calc(100% / 4)` is valid.
 
@@ -80,7 +80,7 @@ When an {{cssxref("&lt;integer&gt;")}} is expected, the `calc()` expression can 
 
 The `calc()` function can be used to manipulate color channels directly within the context of [relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors). This allows for dynamic adjustments of color channels in color models such as [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb), [`hsl()`](/en-US/docs/Web/CSS/color_value/hsl), and [`lch()`](/en-US/docs/Web/CSS/color_value/lch).
 
-The relative color syntax defines a number of color-channel keywords, each of which represents the value of the color channel as a {{cssxref("&lt;number&gt;")}} (see [Channel values resolve to `<number>` values](/en-US/docs/Web/CSS/CSS_colors/Relative_colors#channel_values_resolve_to_number_values) for more information). The `calc()` function can use these color-channel keywords to perform dynamic adjustments on the color channels, for example, `calc(r + 10)`.
+The relative color syntax defines several color-channel keywords, each of which represents the value of the color channel as a {{cssxref("&lt;number&gt;")}} (see [Channel values resolve to `<number>` values](/en-US/docs/Web/CSS/CSS_colors/Relative_colors#channel_values_resolve_to_number_values) for more information). The `calc()` function can use these color-channel keywords to perform dynamic adjustments on the color channels, for example, `calc(r + 10)`.
 
 ## Formal syntax
 
@@ -129,7 +129,7 @@ This ensures that text size will scale if the page is zoomed.
 
 ### Automatically sizing form fields to fit their container
 
-Another use case for `calc()` is to help ensure that form fields fit in the available space, without extruding past the edge of their container, while maintaining an appropriate margin.
+Another use case for `calc()` is to help ensure that form fields fit in the available space, without extruding past the edge of their container while maintaining an appropriate margin.
 
 Let's look at some CSS:
 
