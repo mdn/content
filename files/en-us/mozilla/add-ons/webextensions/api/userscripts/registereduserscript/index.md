@@ -15,16 +15,16 @@ Values of this type are an object containing these properties:
 
 - `allFrames` {{optional_inline}}
   - : `boolean`. If `allFrames` is `true`, the script is injected into all of a page's frames. By default, it's `false` and the script is only injected into the top frame.
-- `id`
+- `id` {{optional_inline}} for {{WebExtAPIRef("userScripts.update()")}} calls, required for {{WebExtAPIRef("userScripts.register()")}}
   - : `string`. The ID of a user script. This property must not start with a '\_', which is reserved as a prefix for generated script IDs.
-- `js`
+- `js` {{optional_inline}} for {{WebExtAPIRef("userScripts.update()")}} calls, required for {{WebExtAPIRef("userScripts.register()")}}
   - : `array` of {{WebExtAPIRef("userScripts.ScriptSource")}}. The scripts to inject into matching pages.
 - `matches` {{optional_inline}}
-  - : `array` of `string`. [Match patterns](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) for the pages to run the script in. `matches` or `includeGlobs` must be specified.
+  - : `array` of `string`. [Match patterns](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) for the pages to run the script in. `matches` or `includeGlobs` must be specified in {{WebExtAPIRef("userScripts.register()")}} calls.
 - `excludeMatches` {{optional_inline}}
   - : `array` of `string`. [Match patterns](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) for pages that the script must not be run in.
 - `includeGlobs` {{optional_inline}}
-  - : `string`. Glob patterns for the pages to run the script in. `matches` or `includeGlobs` must be specified.
+  - : `string`. Glob patterns for the pages to run the script in. `matches` or `includeGlobs` must be specified {{WebExtAPIRef("userScripts.register()")}} calls.
 - `excludeGlobs` {{optional_inline}}
   - : `string`. Glob patterns for pages that the script must not be run in.
 - `runAt` {{optional_inline}}

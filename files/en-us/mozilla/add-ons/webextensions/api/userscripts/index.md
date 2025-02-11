@@ -65,19 +65,19 @@ When an extension updates, user scripts are cleared. To restore scripts, add cod
 ## Methods
 
 - {{WebExtAPIRef("userScripts.configureWorld()")}}
-  - : Configures the `USER_SCRIPT` execution environment.
+  - : Configures a `USER_SCRIPT` execution environment for the extension.
 - {{WebExtAPIRef("userScripts.getScripts()")}}
-  - : Returns the extension's registered user scripts.
+  - : Returns user scripts registered by the extension.
 - {{WebExtAPIRef("userScripts.getWorldConfigurations()")}}
-  - : Returns all the registered world configurations.
+  - : Returns all the extension's registered world configurations.
 - {{WebExtAPIRef("userScripts.register()")}}
-  - : Registers user scripts.
+  - : Registers user scripts for the extension.
 - {{WebExtAPIRef("userScripts.resetWorldConfiguration()")}}
-  - : Resets the configuration for a user script world.
+  - : Resets the configuration for a `USER_SCRIPT` world registered by the extension.
 - {{WebExtAPIRef("userScripts.unregister()")}}
-  - : Unregisters all the user scripts registered by the extension.
+  - : Unregisters user scripts registered by the extension.
 - {{WebExtAPIRef("userScripts.update()")}}
-  - : Updates one or more of the extension's user scripts.
+  - : Updates user scripts registered by the extension.
 
 ## Browser compatibility
 

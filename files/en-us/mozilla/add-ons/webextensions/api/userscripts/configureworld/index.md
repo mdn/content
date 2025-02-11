@@ -7,27 +7,28 @@ browser-compat: webextensions.api.userScripts.configureWorld
 
 {{AddonSidebar}}
 
-This method configures the `USER_SCRIPT` execution environment.
+Configures a `USER_SCRIPT` execution environment for the extension.
 
 This is an asynchronous method that returns a {{JSxRef("Promise")}}.
 
 ## Syntax
 
 ```js-nolint
-const registeredUserScript = await browser.userScripts.configureWorld(
-  userScriptOptions       // object
+const configuredWorld = await browser.userScripts.configureWorld(
+  properties       // object
 );
 ```
 
 ### Parameters
 
+- `properties`
+  - : {{WebExtAPIRef("userScripts.WorldProperties")}}. Details of the configuration for a `USER_SCRIPT` world.
+
 ### Return value
 
-A {{JSxRef("Promise")}} that is …
+A {{JSxRef("Promise")}} fulfilled with no arguments if the request is successful. If the request fails, the promise is rejected with an error message.
 
-## Examples
-
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

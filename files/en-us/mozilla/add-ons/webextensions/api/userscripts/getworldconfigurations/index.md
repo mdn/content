@@ -7,27 +7,25 @@ browser-compat: webextensions.api.userScripts.getWorldConfigurations
 
 {{AddonSidebar}}
 
-This method returns all the registered world configurations.
+Returns all the `USER_SCRIPT` world configurations registered by the extension with {{WebExtAPIRef("userScripts.configureWorld()")}}.
 
 This is an asynchronous method that returns a {{JSxRef("Promise")}}.
 
 ## Syntax
 
 ```js-nolint
-const registeredUserScript = await browser.userScripts.getWorldConfigurations(
-  userScriptOptions       // object
-);
+const gettingWorldConfigurations = await browser.userScripts.getWorldConfigurations();
 ```
 
 ### Parameters
 
+This function takes no parameters.
+
 ### Return value
 
-A {{JSxRef("Promise")}} that is …
+A {{JSxRef("Promise")}} fulfilled with an array of {{WebExtAPIRef("userScripts.WorldProperties")}} objects. If the request fails, the promise is rejected with an error message.
 
-## Examples
-
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

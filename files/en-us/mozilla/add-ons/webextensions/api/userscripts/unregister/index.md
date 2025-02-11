@@ -7,27 +7,28 @@ browser-compat: webextensions.api.userScripts.unregister
 
 {{AddonSidebar}}
 
-Unregisters all the user scripts registered by the extension.
+Unregisters user scripts registered by the extension.
 
 This is an asynchronous method that returns a {{JSxRef("Promise")}}.
 
 ## Syntax
 
 ```js-nolint
-const registeredUserScript = await browser.userScripts.unregister(
-  userScriptOptions       // object
+const unregisteringUserScripts = await browser.userScripts.unregister(
+  filter       // object
 );
 ```
 
 ### Parameters
 
+- `filter` {{optional_inline}}
+  - : {{WebExtAPIRef("userScripts.UserScriptFilter")}}. A list of user script IDs to return.
+
 ### Return value
 
-A {{JSxRef("Promise")}} that is …
+A {{JSxRef("Promise")}} fulfilled with no arguments if the user scripts are unregistered. If the request fails, the promise is rejected with an error message.
 
-## Examples
-
-{{WebExtExamples}}
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 
