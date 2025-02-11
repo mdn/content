@@ -25,8 +25,8 @@ sidebar:
       - /MDN/Writing_guidelines
       - /MDN/Writing_guidelines/What_we_write
       - /MDN/Writing_guidelines/Writing_style_guide
-      - title: learning_guidelines
-        link: /MDN/Writing_guidelines/Learning_content
+      - link: /MDN/Writing_guidelines/Learning_content
+        title: learning_guidelines
       - /MDN/Writing_guidelines/Experimental_deprecated_obsolete
       - /MDN/Writing_guidelines/Attrib_copyright_license
       - type: listSubPages
