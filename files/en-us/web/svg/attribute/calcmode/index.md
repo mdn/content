@@ -51,3 +51,7 @@ You can use this attribute with the following SVG elements:
 ## Specifications
 
 {{Specifications}}
+
+## See also
+
+- [SVG animation with SMIL](/en-US/docs/Web/SVG/SVG_animation_with_SMIL)

@@ -48,3 +48,7 @@ This attribute will be ignored if the animation function is specified with only 
 ## Specifications
 
 {{Specifications}}
+
+## See also
+
+- [SVG animation with SMIL](/en-US/docs/Web/SVG/SVG_animation_with_SMIL)

@@ -66,3 +66,7 @@ svg {
 ## Specifications
 
 {{Specifications}}
+
+## See also
+
+- [SVG animation with SMIL](/en-US/docs/Web/SVG/SVG_animation_with_SMIL)

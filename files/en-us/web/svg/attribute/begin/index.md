@@ -412,3 +412,7 @@ _This example is embedded in an iFrame. If you want to activate the key events, 
 ## Specifications
 
 {{Specifications}}
+
+## See also
+
+- [SVG animation with SMIL](/en-US/docs/Web/SVG/SVG_animation_with_SMIL)
