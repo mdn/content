@@ -298,7 +298,7 @@ Headers used by the [WebSockets API](/en-US/docs/Web/API/WebSockets_API) in the 
   - : Request header containing a key that verifies that the client explicitly intends to open a `WebSocket`.
 - {{HTTPHeader("Sec-WebSocket-Protocol")}}
   - : In requests, this header indicates the sub-protocols supported by the client in preferred order.
-    In responses, it indicates the the sub-protocol selected by the server from the client's preferences.
+    In responses, it indicates the sub-protocol selected by the server from the client's preferences.
 - {{HTTPHeader("Sec-WebSocket-Version")}}
   - : In requests, this header indicates the version of the WebSocket protocol used by the client.
     In responses, it is sent only if the requested protocol version is not supported by the server, and lists the versions that the server supports.

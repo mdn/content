@@ -112,7 +112,7 @@ An `<easing-function>` can be one of the following types:
         ![Two graphs of Input progress to Output progress. In the step-start graph, an unfilled circle represents the origin point (0, 0), with a horizontal line extending from (0, 1) to (1, 1). In the step-end graph, a horizontal line extends from the origin to (1, 0), with an unfilled circle at (1,0) and a solid circle at (1, 1).](step.svg)
 
     - {{cssxref("easing-function/steps", "steps()")}}
-      - : Creates a stair-shaped curve using an {{cssxref("&lt;integer&gt;")}} to specify the number of intervals and an optional optional keyword to control the timing of jumps.
+      - : Creates a stair-shaped curve using an {{cssxref("&lt;integer&gt;")}} to specify the number of intervals and an optional keyword to control the timing of jumps.
 
 ## Formal syntax
 

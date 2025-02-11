@@ -18,7 +18,7 @@ This article provides information about the changes in Firefox 130 that affect d
 ### CSS
 
 - The [`hyphens`](/en-US/docs/Web/CSS/hyphens) CSS property is now properly supported for Czech and Slovak languages.
-  Among other things, this ensures that words will will no longer split on syllables ([Firefox bug 1908931](https://bugzil.la/1908931)).
+  Among other things, this ensures that words will no longer split on syllables ([Firefox bug 1908931](https://bugzil.la/1908931)).
 
 ### APIs
 
@@ -60,7 +60,7 @@ These features are newly shipped in Firefox 130 but are disabled by default. To 
 - **Request video frame callback:** `media.rvfc.enabled`.
 
   The {{domxref('HTMLVideoElement/requestVideoFrameCallback','requestVideoFrameCallback()')}} method of the {{domxref('HTMLVideoElement')}} interface registers a callback function that runs when a new video frame is sent to the compositor. This enables developers to perform efficient operations on each video frame, such as video analysis, painting to a canvas, synchronization with external audio sources, and so on. The method returns a callback handle that can be passed to {{domxref('HTMLVideoElement.cancelVideoFrameCallback()')}} in order to cancel the outstanding callback request.
-  Both methods are are enabled by default on the nightly build. ([Firefox bug 1800882](https://bugzil.la/1800882)).
+  Both methods are enabled by default on the nightly build. ([Firefox bug 1800882](https://bugzil.la/1800882)).
 
 - **CSP violation reports using the Reporting API:** `dom.reporting.enabled`.
 
