@@ -466,6 +466,8 @@ We follow similar cross-referencing guidelines in the [See also](#see_also) sect
 
 External links are allowed on MDN Web Docs in specific situations. Use the guidelines described in this section to decide whether or not it is okay to include an external link on MDN Web Docs. Your pull request to add an external link will be rejected if it does not meet the guidelines described here.
 
+If you are considering adding an external link to MDN [Learn web development](/en-US/docs/Learn_web_development) content, please also read [Learn web development writing guidelines > External links and embeds](/en-US/docs/MDN/Writing_guidelines/Learning_content#external_links_and_embeds).
+
 In general, if you're considering adding an external link, you need to ensure that there is minimal risk of the following:
 
 - Broken or outdated links

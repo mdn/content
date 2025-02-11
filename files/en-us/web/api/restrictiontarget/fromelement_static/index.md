@@ -3,12 +3,14 @@ title: "RestrictionTarget: fromElement() static method"
 short-title: fromElement()
 slug: Web/API/RestrictionTarget/fromElement_static
 page-type: web-api-static-method
+status:
+  - experimental
 browser-compat: api.RestrictionTarget.fromElement_static
 ---
 
 {{APIRef("Screen Capture API")}}{{SeeCompatTable}}{{securecontext_header}}
 
-The **`fromElement()`** static method of the {{domxref("RestrictionTarget")}} interface returns a {{domxref("RestrictionTarget")}} instance that can be used to restrict a captured video track to a specified DOM element (plus its decendants).
+The **`fromElement()`** static method of the {{domxref("RestrictionTarget")}} interface returns a {{domxref("RestrictionTarget")}} instance that can be used to restrict a captured video track to a specified DOM element (plus its descendants).
 
 ## Syntax
 

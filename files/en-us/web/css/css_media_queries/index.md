@@ -125,6 +125,8 @@ When designing reusable HTML components, you may also use [container queries](/e
   - {{DOMxRef("MediaList")}} interface
     - {{DOMxRef("MediaList.mediaText", "mediaText")}} property
   - {{DOMxRef("MediaQueryListEvent")}} object
+- [Device Posture API](/en-US/docs/Web/API/Device_Posture_API)
+  - {{cssxref("@media/device-posture", "device-posture")}} descriptor
 - HTML
   - `sizes` attribute for [`<img>`](/en-US/docs/Web/HTML/Element/img#sizes), [`<link>`](/en-US/docs/Web/HTML/Element/link#sizes), and [`<source>`](/en-US/docs/Web/HTML/Element/source#sizes) for {{HTMLElement("picture")}}
   - `media` attribute for [`<link>`](/en-US/docs/Web/HTML/Element/link#media), [`<source>`](/en-US/docs/Web/HTML/Element/source#media), and [`<style>`](/en-US/docs/Web/HTML/Element/style#media) [HTML](/en-US/docs/Web/HTML)

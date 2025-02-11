@@ -29862,6 +29862,10 @@
       "asadotzler"
     ]
   },
+  "Web/API/Document_Object_Model/Transforming_with_XSLT": {
+    "modified": "2019-03-23T23:49:50.843Z",
+    "contributors": ["SphinxKnight", "teoli", "Mgjbot", "Sebuls", "JdeValk"]
+  },
   "Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces": {
     "modified": "2020-08-22T02:28:27.619Z",
     "contributors": [
@@ -70800,25 +70804,6 @@
     "modified": "2020-10-15T21:43:51.327Z",
     "contributors": ["ExE-Boss", "fscholz", "erikadoyle", "rolfedh", "cvrebert"]
   },
-  "Web/API/XSLTProcessor/Basic_Example": {
-    "modified": "2019-03-23T23:49:54.758Z",
-    "contributors": ["teoli", "ethertank", "Mgjbot", "Sebuls", "JdeValk"]
-  },
-  "Web/API/XSLTProcessor/Generating_HTML": {
-    "modified": "2019-03-23T23:49:48.545Z",
-    "contributors": [
-      "SphinxKnight",
-      "teoli",
-      "Mgjbot",
-      "Sebuls",
-      "Interfaced",
-      "JdeValk"
-    ]
-  },
-  "Web/API/XSLTProcessor/Introduction": {
-    "modified": "2019-03-23T23:49:50.843Z",
-    "contributors": ["SphinxKnight", "teoli", "Mgjbot", "Sebuls", "JdeValk"]
-  },
   "Web/API/console": {
     "modified": "2020-10-15T21:05:51.622Z",
     "contributors": [
@@ -76764,26 +76749,6 @@
       "j9t",
       "juandesouza",
       "mfluehr",
-      "aermolaev",
-      "teoli",
-      "scuveedog"
-    ]
-  },
-  "Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement": {
-    "modified": "2020-11-12T04:31:28.635Z",
-    "contributors": [
-      "rachelandrew",
-      "iskin",
-      "AnthonyIsaacs",
-      "nayyirjutha",
-      "alberts+",
-      "nevan",
-      "ripeshade",
-      "mfluehr",
-      "david_ross",
-      "Konrud",
-      "RitchieVincent",
-      "Zcorpan",
       "aermolaev",
       "teoli",
       "scuveedog"
