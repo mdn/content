@@ -12,7 +12,21 @@ returning a Boolean result.
 Unlike the [strict equality](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality) operator,
 it attempts to convert and compare operands that are of different types.
 
-{{EmbedInteractiveExample("pages/js/expressions-equality.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Equality operator")}}
+
+```js interactive-example
+console.log(1 == 1);
+// Expected output: true
+
+console.log("hello" == "hello");
+// Expected output: true
+
+console.log("1" == 1);
+// Expected output: true
+
+console.log(0 == false);
+// Expected output: true
+```
 
 ## Syntax
 
