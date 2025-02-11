@@ -34,7 +34,10 @@ A new {{jsxref("Temporal.ZonedDateTime")}} instance representing the same date-t
 ### Exceptions
 
 - {{jsxref("RangeError")}}
-  - : Thrown if any of the options is invalid, or if `timeZone` is not a valid time zone identifier.
+  - : Thrown in one of the following cases:
+    - Any of the options is invalid.
+    - `timeZone` is not a valid time zone identifier.
+    - The wall-clock time is ambiguous in the time zone, and `options.disambiguation` is set to `"reject"`.
 - {{jsxref("TypeError")}}
   - : Thrown if any of the arguments are not of the expected type.
 

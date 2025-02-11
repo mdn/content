@@ -20,10 +20,6 @@ The **`::-webkit-meter-bar`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US
 }
 ```
 
-## Specifications
-
-Not part of any standard.
-
 ## Examples
 
 ### HTML
@@ -79,6 +75,10 @@ if (is_safari) {
 ### Result
 
 {{ EmbedLiveSample('Examples') }}
+
+## Specifications
+
+Not part of any standard.
 
 ## Browser compatibility
 

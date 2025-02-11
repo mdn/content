@@ -41,7 +41,8 @@ div {
   margin: 10px;
   border: dotted 15px; /* defaults to `currentcolor` */
   border-radius: 100px 0;
-  background-image: radial-gradient(
+  background-image:
+    radial-gradient(
       circle,
       transparent 60%,
       currentcolor 60% 70%,

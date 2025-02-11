@@ -101,7 +101,7 @@ There is nothing special about our fruit selector.
 
 ```html
 <label>
-  Choose your favourite fruit:
+  Choose your favorite fruit:
   <select name="fruit">
     <option>apple</option>
     <option>banana</option>
