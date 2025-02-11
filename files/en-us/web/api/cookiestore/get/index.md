@@ -134,7 +134,7 @@ function log(text) {
 The code first sets a cookie (which we then use to demonstrate `get()`).
 
 We then await on `get()`, specifying the name of the cookie.
-If the promise resolves with an object we log the properties of the cookie: otherwise we log that no matching cookie was found.
+If the returned Promise resolves with an object we log the properties of the cookie: otherwise we log that no matching cookie was found.
 
 ```js
 async function cookieTest() {
