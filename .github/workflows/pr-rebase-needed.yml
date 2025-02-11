@@ -6,7 +6,7 @@ on:
     types: [synchronize]
 
 concurrency:
-  group: pr-conflicts-${{ github.workflow }}-${{ github.event.pull_request.number }}
+  group: pr-rebase-needed-${{ github.event.pull_request.number }}
   cancel-in-progress: true
 
 jobs:
