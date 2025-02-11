@@ -132,7 +132,7 @@ Click "Play" in the example above to see or edit the code for the animation in t
 - {{cssxref("box-shadow")}}
 
 > [!NOTE]
-> The CSS backgrounds and borders module introduces some properties that not yet implemented in any browser: `background-position-block`, `background-position-inline`, `background-repeat-block`, `background-repeat-inline`, `background-repeat-x`, `background-repeat-y` and `background-tbd`.
+> The CSS Backgrounds Module Level 4 introduces the `background-position-block`, `background-position-inline`, `background-repeat-block`, `background-repeat-inline`, `background-repeat-x`, `background-repeat-y`, and `background-tbd` properties. These have not yet been implemented.
 
 ### Data types
 
