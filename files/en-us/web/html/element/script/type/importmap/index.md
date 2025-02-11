@@ -80,7 +80,7 @@ Note that in this case the property and mapped path must both have a trailing fo
 <script type="importmap">
   {
     "imports": {
-      "shapes/": "./module/shapes/",
+      "shapes/": "./modules/shapes/",
       "other-shapes/": "https://example.com/modules/shapes/"
     }
   }
@@ -101,9 +101,9 @@ They can also contain or end with path separators, or be absolute URLs, or be re
 ```json
 {
   "imports": {
-    "modules/shapes/": "./module/src/shapes/",
-    "modules/square": "./module/src/other/shapes/square.js",
-    "https://example.com/modules/square.js": "./module/src/other/shapes/square.js",
+    "modules/shapes/": "./modules/src/shapes/",
+    "modules/square": "./modules/src/other/shapes/square.js",
+    "https://example.com/modules/square.js": "./modules/src/other/shapes/square.js",
     "../modules/shapes/": "/modules/shapes/"
   }
 }
@@ -126,7 +126,7 @@ For example, the map below will only use the scoped map if the loading module ha
 <script type="importmap">
   {
     "imports": {
-      "square": "./module/shapes/square.js"
+      "square": "./modules/shapes/square.js"
     },
     "scopes": {
       "/modules/custom-shapes/": {
@@ -155,10 +155,10 @@ For example, the map below defines integrity metadata for the `square.js` module
 <script type="importmap">
   {
     "imports": {
-      "square": "./module/shapes/square.js"
+      "square": "./modules/shapes/square.js"
     },
     "integrity": {
-      "./module/shapes/square.js": "sha384-oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC"
+      "./modules/shapes/square.js": "sha384-oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC"
     }
   }
 </script>
