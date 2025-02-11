@@ -49,7 +49,7 @@ This article provides information about the changes in Firefox 136 that affect d
 
   Note that while any of the supported cookie properties can be [set](/en-US/docs/Web/API/CookieStore/get), the cookie objects returned by the [`get()`](/en-US/docs/Web/API/CookieStore/get) and [`getAll()`](/en-US/docs/Web/API/CookieStore/getAll) methods or in events omit all properties other than `name` and `value` (matching the information returned by the {{domxref("document.cookie")}}).
 
-  The following interfaces and properties are not implemented: [`ServiceWorkerRegistration.cookies`](/en-US/docs/Web/API/ServiceWorkerRegistration/cookies) and [`CookieStoreManager`](/en-US/docs/Web/API/CookieStoreManager), [`ExtendableCookieChangeEvent`](/en-US/docs/Web/API/ExtendableCookieChangeEvent).
+  The following interfaces and properties are not implemented: [`ServiceWorkerRegistration.cookies`](/en-US/docs/Web/API/ServiceWorkerRegistration/cookies), [`CookieStoreManager`](/en-US/docs/Web/API/CookieStoreManager), and [`ExtendableCookieChangeEvent`](/en-US/docs/Web/API/ExtendableCookieChangeEvent).
 
 #### DOM
 
