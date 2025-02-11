@@ -47,6 +47,10 @@ If we wanted the text to stand by itself, we could specify that it is a paragrap
 <p>My cat is very grumpy</p>
 ```
 
+HTML lives inside text files called **HTML documents**, or just **documents**, with a `.html` file extension. Where previously we've talked about web pages, an HTML document contains the web page's content and specifies its structure.
+
+The most common HTML file you'll encounter is `index.html`, which is generally used to contain a website's home page content.
+
 > [!NOTE]
 > Tags in HTML are not case-sensitive. This means they can be written in uppercase or lowercase. For example, a {{htmlelement("title")}} tag could be written as `<title>`, `<TITLE>`, `<Title>`, `<TiTlE>`, etc., and it will work. However, it is best practice to write all tags in lowercase for consistency and readability.
 

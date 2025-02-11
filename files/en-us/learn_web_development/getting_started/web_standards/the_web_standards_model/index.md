@@ -25,6 +25,7 @@ This article provides some useful background on the web and web standards — ho
           <li>Web standards, and the key principles they are built on.</li>
           <li>How standards bodies operate — for example the <a href="https://www.w3.org/">W3C</a>, <a href="https://whatwg.org/">WHATWG</a>, <a href="https://tc39.es/">TC39</a>, and <a href="https://www.khronos.org/">Khronos Group</a>; the process of standards creation.</li>
           <li>The main web standards technologies, and how they work together.</li>
+          <li>Server-side (dynamic) versus client-side (static) files.</li>
           <li>Web best practices.</li>
         </ul>
       </td>
@@ -192,22 +193,33 @@ There are other technologies used on the web, for example:
 
 However, HTML, CSS, and JavaScript by far the most important technologies to learn, so we will focus mainly on those in our learning pathway.
 
-### Tools
+## Tools
 
-Once you've learned the "raw" technologies that can be used to build web pages (such as HTML, CSS, and JavaScript), you'll soon start to come across various tools that can be used to make your work easier or more efficient. Examples include:
+Once you've learned about the "raw" web standards that can be used to build web pages (such as HTML, CSS, and JavaScript), you'll soon start to come across various tools that can be used to make your work easier or more efficient. Examples include:
 
-- The [developer tools](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools) inside modern browsers that can be used to debug your code.
+- [Developer tools](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools) inside modern browsers that can be used to debug your code.
 - [Testing tools](/en-US/docs/Learn_web_development/Extensions/Testing) that can be used to run tests to show whether your code is behaving as you intended it to.
 - [Frameworks and libraries](/en-US/docs/Learn_web_development/Core/Frameworks_libraries) built on top of JavaScript that allow you to build certain types of website much more quickly and effectively.
 - So-called **Linters** and **formatters**, which take a set of rules for coding style, look at your code, and update your code to follow those rules. Prettier, which you [met earlier in the course](/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Code_editors#enhancing_your_code_editor_with_extensions), is an example of a formatter.
 
-### Server-side languages and frameworks
+## Server-side languages and frameworks
 
 HTML, CSS, and JavaScript are front-end (or client-side) languages, which means they are run by the browser to produce a website front-end that your users can use.
 
-There are another class of languages called back-end (or server-side) languages, meaning that they are run on the server before the result is then sent to the browser to be displayed. A typical use for a server-side language is to get some data out of a database, generate some HTML to contain the data, then send the HTML over to the browser to display it to the user.
+There is another class of languages called back-end (or server-side) languages, meaning that they are run on the server before the result is then sent to the browser to be displayed. A typical use for a server-side language is to get some data out of a database, generate some HTML to contain the data, then send the HTML over to the browser to display it to the user.
 
-Example server-side frameworks include ASP.NET (C#), Django (Python), Laravel (PHP), and Next.js (JavaScript).
+Example server-side frameworks and languages include ASP.NET (C#), Django (Python), Laravel (PHP), and Next.js (JavaScript).
+
+These technologies are not considered to be "web standards" — they are developed by organizations outside the web standards processes of organization such as the W3C and WHATWG — although some of them will have processes that are similarly open.
+
+### Static versus dynamic
+
+Another way that client-side and server-side languages are often described is **static** and **dynamic**:
+
+- A plain HTML file is stored on the server. When requested, it is delivered to the client, unchanged, and rendered by the browser. Because it does not change, it is referred to as "static".
+- Revisiting the server-side example we briefly described above, when some server-side code (for example, a Python script or an ASP.NET page) queries a database, generates some HTML to contain the data and then returns that HTML to the client for the browser to render and display, that HTML is the same page, but with some of the content changed depending on what inputs the server-side code received in the request. It is therefore referred to as "dynamic".
+
+There is often a bit of overlap between the concepts of static and dynamic code. Server-side languages usually define HTML structures inside a template file, which tend to be mostly static HTML with some special dynamic sections included that change depending on what data needs to be inserted.
 
 ## Web best practices
 
