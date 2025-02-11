@@ -19,7 +19,7 @@ The two mechanisms within Web Storage are as follows:
 
 - `localStorage` does the same thing, but persists even when the browser is closed and reopened.
 
-These mechanisms are available via the {{domxref("Window.sessionStorage")}} and {{domxref("Window.localStorage")}} properties. Invoking one of these will return an instance of a {{domxref("Storage")}} object, through which data items can be set, retrieved and removed. A different storage object is used for the `sessionStorage` and `localStorage` for each origin — they function and are controlled separately.
+These mechanisms are available via the {{domxref("Window.sessionStorage")}} and {{domxref("Window.localStorage")}} properties. Accessing one of these will return an instance of a {{domxref("Storage")}} object, through which data items can be set, retrieved and removed. A different storage object is used for the `sessionStorage` and `localStorage` for each origin — they function and are controlled separately. For `sessionStorage`, the data is shared between all browsing contexts on the same tab (usually embedded iframes) that are from the same origin. For `localStorage`, the data is shared between all same-origin tabs as well.
 
 To learn about the amount of storage available using the APIs, and what happens when storage limits are exceeded, see [Storage quotas and eviction criteria](/en-US/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria).
 
