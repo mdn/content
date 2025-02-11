@@ -399,7 +399,7 @@
     "@codemirror/view" "^6.0.0"
     crelt "^1.0.5"
 
-"@codemirror/state@^6.0.0", "@codemirror/state@^6.4.0", "@codemirror/state@^6.5.0", "@codemirror/state@^6.5.1":
+"@codemirror/state@^6.0.0", "@codemirror/state@^6.4.0", "@codemirror/state@^6.5.0", "@codemirror/state@^6.5.2":
   version "6.5.2"
   resolved "https://registry.yarnpkg.com/@codemirror/state/-/state-6.5.2.tgz#8eca3a64212a83367dc85475b7d78d5c9b7076c6"
   integrity sha512-FVqsPqtPWKVVL3dPSxy8wEF/ymIEuVzF1PK3VbUgrxXpJUSHQWWZz4JMToquRxnkw+36LTamCZG2iua2Ptq0fA==
@@ -532,7 +532,7 @@
     "@inquirer/type" "^3.0.4"
     ansi-escapes "^4.3.2"
 
-"@inquirer/prompts@^7.2.4":
+"@inquirer/prompts@^7.3.1":
   version "7.3.1"
   resolved "https://registry.yarnpkg.com/@inquirer/prompts/-/prompts-7.3.1.tgz#3fa954a7d9e71197b489a1d2a25a1e19b6688e76"
   integrity sha512-r1CiKuDV86BDpvj9DRFR+V+nIjsVBOsa2++dqdPqLYAef8kgHYvmQ8ySdP/ZeAIOWa27YGJZRkENdP3dK0H3gg==
@@ -935,12 +935,12 @@
   resolved "https://registry.yarnpkg.com/@mdn/bcd-utils-api/-/bcd-utils-api-0.0.7.tgz#555e80c33df520df068943e6b18ebc07f0e24d19"
   integrity sha512-IHkkypEjlIkBkx4mJ2//Xbzog9M/Lzne1Sl8db2cIHJ/5pe3NCqSLwSchmqzcUN+/WJr/U+V3tNAbWunk2xZcA==
 
-"@mdn/browser-compat-data@^5.6.33":
-  version "5.6.36"
-  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-5.6.36.tgz#209c3a37aa1b2cbd503cfa7bb0755084a50cc1ff"
-  integrity sha512-UhTBGnR9L8x1hpCA/VlVxwY8CXfyWPoTDAlWz5n1iwJxDaiqA0XkTfi5p6FuHMHE/EuUUtfiSIu14nzQUtJPDg==
+"@mdn/browser-compat-data@^5.6.37":
+  version "5.6.37"
+  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-5.6.37.tgz#228d97894a0f0d6a77273e3f707fc31e30ce8112"
+  integrity sha512-rzlUUSgxSc4mjfNDzVXg7vxjacefyoM/LkvbAL5MLgEDL7CMa/Fu+rASR1v2JqiZtDcPBBbQxnk0BqgOKQfAPQ==
 
-"@mdn/rari@^0.1.21":
+"@mdn/rari@^0.1.24":
   version "0.1.24"
   resolved "https://registry.yarnpkg.com/@mdn/rari/-/rari-0.1.24.tgz#6daa8d4a41d2fef1bdd17cdff2625557985f9657"
   integrity sha512-IujIGfFn+gogol55wXr/72R4env2+9AoCKCHBciUQRpGAkOW9Fx87gy3JAhp/dR7GJMp9hEhTr3ajmtij4r7WA==
@@ -951,26 +951,26 @@
     proxy-from-env "^1.1.0"
     tar "^7.4.3"
 
-"@mdn/yari@4.3.0":
-  version "4.3.0"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-4.3.0.tgz#95e879e21335c5be3036427b3362332c5c91f1e8"
-  integrity sha512-L/yrQqGAllr2pLi92IPFJcNeJg0pQl20IGScFr6+TR05ERx4otXNAnTvs2nWDI9dHVK6CUWQ1ptQJbjIpIVVEA==
+"@mdn/yari@4.3.1":
+  version "4.3.1"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-4.3.1.tgz#21c8d77c3e56630ca54b454919a3a985c1129d36"
+  integrity sha512-mJlPPUxARKXHKp8oigxmbrF0YhRG9l1fvqgvd10BLRliLWq9VtQdIGoR8BHWPIfWyBkt88BpezNMt3Pcvydqhg==
   dependencies:
     "@caporal/core" "^2.0.7"
     "@codemirror/lang-css" "^6.3.1"
     "@codemirror/lang-html" "^6.4.9"
     "@codemirror/lang-javascript" "^6.2.2"
-    "@codemirror/state" "^6.5.1"
+    "@codemirror/state" "^6.5.2"
     "@codemirror/theme-one-dark" "^6.1.2"
     "@fast-csv/parse" "^5.0.2"
-    "@inquirer/prompts" "^7.2.4"
+    "@inquirer/prompts" "^7.3.1"
     "@lit/react" "^1.0.7"
     "@lit/task" "^1.0.2"
     "@mdn/bcd-utils-api" "^0.0.7"
-    "@mdn/browser-compat-data" "^5.6.33"
-    "@mdn/rari" "^0.1.21"
+    "@mdn/browser-compat-data" "^5.6.37"
+    "@mdn/rari" "^0.1.24"
     "@mozilla/glean" "5.0.3"
-    "@sentry/node" "^8.52.0"
+    "@sentry/node" "^8.54.0"
     "@stripe/stripe-js" "^5.6.0"
     "@use-it/interval" "^1.0.0"
     "@vscode/ripgrep" "^1.15.10"
@@ -1018,7 +1018,7 @@
     mdn-data "^2.15.0"
     open "^10.1.0"
     open-editor "^5.1.0"
-    openai "^4.80.1"
+    openai "^4.83.0"
     pg "^8.13.1"
     pgvector "^0.2.0"
     prism-svelte "^0.5.0"
@@ -1044,8 +1044,8 @@
     unified "^11.0.5"
     unist-builder "^4.0.0"
     unist-util-visit "^5.0.0"
-    web-features "^2.20.0"
-    web-specs "^3.36.0"
+    web-features "^2.22.0"
+    web-specs "^3.38.0"
 
 "@mozilla/glean@5.0.3":
   version "5.0.3"
@@ -1408,7 +1408,7 @@
   resolved "https://registry.yarnpkg.com/@sentry/core/-/core-8.54.0.tgz#a2ebec965cadcb6de89e116689feeef79d5862a6"
   integrity sha512-03bWf+D1j28unOocY/5FDB6bUHtYlm6m6ollVejhg45ZmK9iPjdtxNWbrLsjT1WRym0Tjzowu+A3p+eebYEv0Q==
 
-"@sentry/node@^8.52.0":
+"@sentry/node@^8.54.0":
   version "8.54.0"
   resolved "https://registry.yarnpkg.com/@sentry/node/-/node-8.54.0.tgz#4ba175e320c36263f75a88670f4a5507754cf8f0"
   integrity sha512-z9ak481OtCw3V4l55ke/9FOiorF2J/niO1J1gvGefXpgFucpw0M3qqEFjB5cpg9HoZM8Y1WtA1OFusfTAnvcXg==
@@ -6769,7 +6769,7 @@ open@^10.1.0:
     is-inside-container "^1.0.0"
     is-wsl "^3.1.0"
 
-openai@^4.80.1:
+openai@^4.83.0:
   version "4.83.0"
   resolved "https://registry.yarnpkg.com/openai/-/openai-4.83.0.tgz#87edfebecf8a4dc2317269dd704cf0ebd9f11979"
   integrity sha512-fmTsqud0uTtRKsPC7L8Lu55dkaTwYucqncDHzVvO64DKOpNTuiYwjbR/nVgpapXuYy8xSnhQQPUm+3jQaxICgw==
@@ -8839,17 +8839,17 @@ warning@^4.0.3:
   dependencies:
     loose-envify "^1.0.0"
 
-web-features@^2.20.0:
-  version "2.22.0"
-  resolved "https://registry.yarnpkg.com/web-features/-/web-features-2.22.0.tgz#c1749a726e944fe3349456faaa5a122cd5e6ab49"
-  integrity sha512-IyUdFGAOq/O0cGuwopLTZoXn9eiXdaFVn3zpAvTubeCOSx2ln2VRlBVnlWsdl0rd9qXkndRuU+kYb2WRe/Tz/Q==
+web-features@^2.22.0:
+  version "2.23.0"
+  resolved "https://registry.yarnpkg.com/web-features/-/web-features-2.23.0.tgz#8decde0d4edcff50f65ec5502718d4d89656a4cb"
+  integrity sha512-QlQxkjr6mHriSez8gYK1I8OI7asv4cIxx/VNNqFtvN1GvTQXLU5/BJoaWA2wnfoeFfY0nEyx+Qz9Ty0601GLDw==
 
 web-namespaces@^2.0.0:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/web-namespaces/-/web-namespaces-2.0.1.tgz#1010ff7c650eccb2592cebeeaf9a1b253fd40692"
   integrity sha512-bKr1DkiNa2krS7qxNtdrtHAmzuYGFQLiQ13TsorsdT6ULTkPLKuu5+GsFpDlg6JFjUTwX2DyhMPG2be8uPrqsQ==
 
-web-specs@^3.36.0:
+web-specs@^3.38.0:
   version "3.38.0"
   resolved "https://registry.yarnpkg.com/web-specs/-/web-specs-3.38.0.tgz#689fdba9b1681ee1d70773f29292499b0061bde9"
   integrity sha512-Y6cZC2QOWm0AzH2QIHhxZ3gv7n9PXGH1KkpheMl+tc1C48YYOJnLxuOeoMdFkdOhQZxmllMWBvz+6BYeaBl3Bw==
