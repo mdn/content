@@ -12,7 +12,7 @@ The {{domxref("MediaTrackSupportedConstraints")}} dictionary's **`logicalSurface
 
 The supported constraints list is obtained by calling {{domxref("MediaDevices.getSupportedConstraints","navigator.mediaDevices.getSupportedConstraints()")}}.
 
-### Value
+## Value
 
 A boolean value which is `true` if the {{domxref("MediaTrackConstraints.logicalSurface", "logicalSurface")}} constraint is supported by the device and user agent.
 

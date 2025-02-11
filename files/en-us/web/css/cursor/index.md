@@ -400,3 +400,4 @@ Cursor changes that intersect toolbar areas are commonly blocked to avoid spoofi
 
 - {{cssxref("pointer-events")}}
 - {{cssxref("url_value", "&lt;url&gt;")}} type
+- SVG {{SVGAttr("cursor")}} attribute

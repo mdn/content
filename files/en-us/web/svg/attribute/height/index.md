@@ -860,3 +860,7 @@ For {{SVGElement('use')}}, `height` defines the vertical length for the referenc
 ## Specifications
 
 {{Specifications}}
+
+## See also
+
+- CSS {{cssxref("height")}} property

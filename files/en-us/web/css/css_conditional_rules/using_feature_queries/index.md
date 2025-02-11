@@ -265,7 +265,7 @@ Feature queries are a useful tool for progressively enhancing a site. They enabl
 
 You don't need to use feature queries to start using new CSS features; CSS error handling means the browser simply ignores CSS it does not yet recognize. However, feature queries are a useful alternative to fallback declarations, and enable writing code once that can eventually be supported everywhere.
 
-### See also
+## See also
 
 - [CSS conditional rules](/en-US/docs/Web/CSS/CSS_conditional_rules) module
 - [Using CSS media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)

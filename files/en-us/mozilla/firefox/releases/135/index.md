@@ -6,19 +6,19 @@ page-type: firefox-release-notes
 
 {{FirefoxSidebar}}
 
-This article provides information about the changes in Firefox 135 that affect developers. Firefox 135 is the current [Beta version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly) and ships on [February 4, 2025](https://whattrainisitnow.com/release/?version=135).
+This article provides information about the changes in Firefox 135 that affect developers. Firefox 135 was released on [February 4, 2025](https://whattrainisitnow.com/release/?version=135).
 
 ## Changes for web developers
 
-### Developer Tools
-
 ### HTML
 
-#### Removals
+No notable changes
 
 ### CSS
 
 #### Removals
+
+- The [`-moz-user-input`](/en-US/docs/Web/CSS/-moz-user-input) CSS property allowed you to disable input fields. The property is now deprecated and has been removed ([Firefox bug 1935198](https://bugzil.la/1935198)).
 
 ### JavaScript
 
@@ -27,23 +27,11 @@ This article provides information about the changes in Firefox 135 that affect d
   - [`JSON.isRawJSON()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/isRawJSON): Tests whether a value is an object returned by `JSON.rawJSON()`.
   - [`JSON.rawJSON()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/rawJSON): Creates a "raw JSON" object containing a piece of JSON text, which can then be included in an object to preserve the specified value when that object is stringified.
 
-#### Removals
-
-### SVG
-
-#### Removals
-
-### HTTP
-
-#### Removals
-
 ### Security
 
 - [Certificate Transparency](/en-US/docs/Web/Security/Certificate_Transparency) is a standard for ensuring that certificates are publicly disclosed before web browsers will trust them. Firefox now supports this feature on desktop versions (but not Android).
   This only affects servers that use certificates issued by a certificate authority in Mozilla's Root CA Program.
   ([Firefox bug 1938242](https://bugzil.la/1938242)).
-
-#### Removals
 
 ### APIs
 
@@ -55,12 +43,6 @@ This article provides information about the changes in Firefox 135 that affect d
 #### Media, WebRTC, and Web Audio
 
 - The {{domxref("RTCOutboundRtpStreamStats.mid", "mid")}} and {{domxref("RTCOutboundRtpStreamStats.rid", "rid")}} properties of the {{domxref("RTCOutboundRtpStreamStats")}} interface, and the{{domxref("RTCOutboundRtpStreamStats.mid", "mid")}} property of the {{domxref("RTCInboundRtpStreamStats")}} interface are now supported. ([Firefox bug 1643001](https://bugzil.la/1643001)).
-
-#### Removals
-
-### WebAssembly
-
-#### Removals
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
@@ -88,9 +70,7 @@ This article provides information about the changes in Firefox 135 that affect d
 
 ## Changes for add-on developers
 
-### Removals
-
-### Other
+- {{WebExtAPIRef("commands.update")}} can now assign keyboard shortcuts for commands to the `F13` to `F19` keys. However, extensions can't assign these keys from the [`commands` manifest.json key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands). Users can also assign features to these keys using [Manage Extension Shortcuts](https://support.mozilla.org/en-US/kb/manage-extension-shortcuts-firefox) ([Firefox bug 1924542](https://bugzil.la/1924542))
 
 ## Experimental web features
 

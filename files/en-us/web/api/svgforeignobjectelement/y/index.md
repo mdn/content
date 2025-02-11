@@ -1,6 +1,6 @@
 ---
 title: "SVGForeignObjectElement: y property"
-short-title: "y"
+short-title: y
 slug: Web/API/SVGForeignObjectElement/y
 page-type: web-api-instance-property
 browser-compat: api.SVGForeignObjectElement.y

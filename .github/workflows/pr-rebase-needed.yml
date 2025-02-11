@@ -5,6 +5,10 @@ on:
   pull_request_target:
     types: [synchronize]
 
+permissions:
+  # Label pull requests.
+  pull-requests: write
+
 concurrency:
   group: pr-rebase-needed-${{ github.event.pull_request.number }}
   cancel-in-progress: true

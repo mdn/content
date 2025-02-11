@@ -1,6 +1,6 @@
 ---
 title: "SVGFECompositeElement: y property"
-short-title: "y"
+short-title: y
 slug: Web/API/SVGFECompositeElement/y
 page-type: web-api-instance-property
 browser-compat: api.SVGFECompositeElement.y

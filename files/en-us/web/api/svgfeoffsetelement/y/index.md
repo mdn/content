@@ -1,6 +1,6 @@
 ---
 title: "SVGFEOffsetElement: y property"
-short-title: "y"
+short-title: y
 slug: Web/API/SVGFEOffsetElement/y
 page-type: web-api-instance-property
 browser-compat: api.SVGFEOffsetElement.y

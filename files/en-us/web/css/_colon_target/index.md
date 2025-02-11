@@ -1,5 +1,5 @@
 ---
-title: ":target"
+title: :target
 slug: Web/CSS/:target
 page-type: css-pseudo-class
 browser-compat: css.selectors.target
