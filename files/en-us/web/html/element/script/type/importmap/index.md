@@ -57,7 +57,7 @@ The import map below defines an `imports` key that has a "module specifier map" 
 <script type="importmap">
   {
     "imports": {
-      "square": "./module/shapes/square.js",
+      "square": "./modules/shapes/square.js",
       "circle": "https://example.com/shapes/circle.js"
     }
   }
