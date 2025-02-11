@@ -72,7 +72,7 @@ justify-content: unset;
 
 - `left`
 
-  - : The items are packed flush with each other toward the left edge of the alignment container. When the property's horizontal axis is not parallel with the inline axis, such as when [`flex-direction: column;`](/en-US/docs/Web/CSS/flex-direction) is set, this value behaves like `start`.
+  - : The items are packed flush to each other toward the left edge of the alignment container. When the property's horizontal axis is not parallel with the inline axis, such as when [`flex-direction: column;`](/en-US/docs/Web/CSS/flex-direction) is set, this value behaves like `start`.
 
 - `right`
 
