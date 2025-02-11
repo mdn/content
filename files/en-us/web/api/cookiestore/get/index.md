@@ -8,7 +8,7 @@ browser-compat: api.CookieStore.get
 
 {{securecontext_header}}{{APIRef("Cookie Store API")}}{{AvailableInWorkers("window_and_service")}}
 
-The **`get()`** method of the {{domxref("CookieStore")}} interface returns a single cookie with the given `name` or `options` object. The method will return the first matching cookie for the passed parameters.
+The **`get()`** method of the {{domxref("CookieStore")}} interface returns a {{jsxref("Promise")}} that resolves to single cookie with the given `name` or `options` object. The method will return the first matching cookie for the passed parameters.
 
 ## Syntax
 
@@ -40,7 +40,9 @@ Or
 
 ### Return value
 
-A {{jsxref("Promise")}} that resolves with an object representing the first cookie matching the submitted `name` or `options`. This object contains the following properties:
+A {{jsxref("Promise")}} that resolves with an object representing the first cookie matching the submitted `name` or `options`, or `null` if there is no matching cookie.
+
+The object returned for a match contains the following properties:
 
 - `domain`
 
@@ -93,17 +95,86 @@ A {{jsxref("Promise")}} that resolves with an object representing the first cook
 
 ## Examples
 
-In this example, we return a cookie named "cookie1". If the cookie is found the result of the Promise is an object containing the details of a single cookie.
+### Getting a cookie by name
 
-```js
-const cookie = await cookieStore.get("cookie1");
+In this example we get a particular cookie named `cookie1`, awaiting the returned Promise, and logging the resolved object.
 
-if (cookie) {
-  console.log(cookie);
-} else {
-  console.log("Cookie not found");
+```html hidden
+<button id="showCookies" type="button">Show cookies</button>
+<button id="reset" type="button">Reset</button>
+<pre id="log"></pre>
+```
+
+```css hidden
+#log {
+  height: 180px;
+  overflow: scroll;
+  padding: 0.5rem;
+  border: 1px solid black;
 }
 ```
+
+```js hidden
+const reload = document.querySelector("#reset");
+
+reload.addEventListener("click", () => {
+  window.location.reload(true);
+});
+
+const logElement = document.querySelector("#log");
+
+function log(text) {
+  logElement.innerText = `${logElement.innerText}${text}\n`;
+  logElement.scrollTop = logElement.scrollHeight;
+}
+```
+
+#### JavaScript
+
+The code first sets a cookie (which we then use to demonstrate `get()`).
+
+We then await on `get()`, specifying the name of the cookie.
+If the promise resolves with an object we log the properties of the cookie: otherwise we log that no matching cookie was found.
+
+```js
+async function cookieTest() {
+  // await on setting the cookie
+  await cookieStore.set({
+    name: "cookie1",
+    value: `cookie1-value`,
+  });
+
+  // await on getting the cookie
+  const cookie = await cookieStore.get("cookie1");
+
+  // log the cookie object keys and values.
+  if (cookie) {
+    log("cookie1:");
+    for (const [key, value] of Object.entries(cookie)) {
+      log(` ${key}: ${value}`);
+    }
+  } else {
+    log("cookie1: Cookie not found");
+  }
+}
+```
+
+```js hidden
+const showCookies = document.querySelector("#showCookies");
+
+showCookies.addEventListener("click", () => {
+  cookieTest();
+});
+```
+
+Note that some logging and other code is omitted for brevity.
+
+#### Result
+
+Press **Show cookies** to set the cookie and then display it.
+Note that some browsers will only display the `name` and `value`, while others will display all the properties of the cookie.
+
+{{EmbedLiveSample('Setting a cookie with name and value', 100, 250)}}
 
 ## Specifications
 
