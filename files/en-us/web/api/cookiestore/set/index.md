@@ -69,18 +69,170 @@ A {{jsxref("Promise")}} that resolves with {{jsxref("undefined")}} when setting 
 
 ## Examples
 
-The following example sets a cookie by passing an object with `name`, `value`, `expires`, and `domain`.
+### Setting a cookie with name and value
+
+The following example sets a cookie by passing a `name` and `value` of cookie1 and cookie1-value, respectively.
+This approach can be used when you only want to set a name and value.
+
+```html hidden
+<button id="showCookies" type="button">Show cookies</button>
+<button id="reset" type="button">Reset</button>
+<pre id="log"></pre>
+```
+
+```css hidden
+#log {
+  height: 180px;
+  overflow: scroll;
+  padding: 0.5rem;
+  border: 1px solid black;
+}
+```
+
+```js hidden
+const reload = document.querySelector("#reset");
+
+reload.addEventListener("click", () => {
+  window.location.reload(true);
+});
+
+const logElement = document.querySelector("#log");
+
+function log(text) {
+  logElement.innerText = `${logElement.innerText}${text}\n`;
+  logElement.scrollTop = logElement.scrollHeight;
+}
+```
+
+```js hidden
+function logCookie(name, cookie) {
+  if (cookie) {
+    log(`${name}:`);
+    for (const [key, value] of Object.entries(cookie)) {
+      log(` ${key}: ${value}`);
+    }
+  } else {
+    log(`${name}: Cookie not found`);
+  }
+}
+```
+
+#### JavaScript
+
+The example code first awaits for the cookie to be set, then waits to get the value and log it (note the logging and other display code is omitted).
+Note that asynchronous code is called within an `async` function because you can't `await` on a top level function.
 
 ```js
-const day = 24 * 60 * 60 * 1000;
+async function cookieTest() {
+  // await on setting the cookie
+  await cookieStore.set({
+    name: "cookie1",
+    value: `cookie1-value`,
+  });
 
-cookieStore.set({
-  name: "cookie1",
-  value: "cookie1-value",
-  expires: Date.now() + day,
-  domain: "example.com",
+  // await on getting the cookie and then log its values
+  const cookie = await cookieStore.get("cookie1");
+  logCookie("cookie1", cookie);
+}
+```
+
+```js hidden
+const showCookies = document.querySelector("#showCookies");
+
+showCookies.addEventListener("click", () => {
+  cookieTest();
 });
 ```
+
+#### Result
+
+Press **Show cookies** to set the cookie and then display it.
+Note that some browsers will only display the `name` and `value`, while others will display all the properties of the cookie.
+
+{{EmbedLiveSample('Setting a cookie with name and value', 100, 250)}}
+
+### Setting a cookie with options
+
+The following example sets a cookie by passing an "options" object with `name`, `value`, `expires`, and `partitioned`.
+
+```html hidden
+<button id="showCookies" type="button">Show cookies</button>
+<button id="reset" type="button">Reset</button>
+<pre id="log"></pre>
+```
+
+```css hidden
+#log {
+  height: 180px;
+  overflow: scroll;
+  padding: 0.5rem;
+  border: 1px solid black;
+}
+```
+
+```js hidden
+const reload = document.querySelector("#reset");
+
+reload.addEventListener("click", () => {
+  window.location.reload(true);
+});
+
+const logElement = document.querySelector("#log");
+
+function log(text) {
+  logElement.innerText = `${logElement.innerText}${text}\n`;
+  logElement.scrollTop = logElement.scrollHeight;
+}
+```
+
+```js hidden
+function logCookie(name, cookie) {
+  if (cookie) {
+    log(`${name}:`);
+    for (const [key, value] of Object.entries(cookie)) {
+      log(` ${key}: ${value}`);
+    }
+  } else {
+    log(`${name}: Cookie not found`);
+  }
+}
+```
+
+#### JavaScript
+
+The example code first awaits for the cookie to be set, then waits to get the value and log it (note the logging and other display code is omitted).
+Note that asynchronous code is called within an `async` function because you can't `await` on a top level function.
+
+```js
+async function cookieTest() {
+  const day = 24 * 60 * 60 * 1000;
+  await cookieStore.set({
+    name: "cookie2",
+    value: `cookie2-value`,
+    expires: Date.now() + day,
+    partitioned: true,
+  });
+
+  const cookie = await cookieStore.get("cookie2");
+  logCookie("cookie2", cookie);
+}
+```
+
+```js hidden
+const showCookies = document.querySelector("#showCookies");
+
+showCookies.addEventListener("click", () => {
+  cookieTest();
+});
+```
+
+#### Result
+
+Press **Show cookies** to set the cookie and then display it.
+Note that some browsers will only display the `name` and `value`, while others will display all the properties of the cookie.
+Even if the values are not displayed, they are still set.
+
+{{EmbedLiveSample('Setting a cookie with options', 100, 250)}}
 
 ## Specifications
 
