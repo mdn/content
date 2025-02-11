@@ -63,7 +63,7 @@ justify-content: unset;
 
 - `flex-end`
 
-  - : The items are packed flush to each other toward the end edge of the alignment container depending on the flex container's main-end side.
+  - : The items are packed flush to each other at the end edge of the alignment container on the flex container's main-end side.
     This only applies to flex layout items. For items that are not children of a flex container, this value is treated like `end`.
 
 - `center`
