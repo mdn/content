@@ -316,7 +316,7 @@
       {
         "if": {
           "properties": {
-            "slug": { "type": "string", "pattern": "^Web/Manifest/" }
+            "slug": { "type": "string", "pattern": "^Web/Progressive_web_apps/Manifest/" }
           }
         },
         "then": {
