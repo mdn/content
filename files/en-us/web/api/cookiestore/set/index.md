@@ -201,7 +201,6 @@ function logCookie(name, cookie) {
 #### JavaScript
 
 The example code first awaits for the cookie to be set, then waits to get the value and log it (note the logging and other display code is omitted).
-Note that asynchronous code is called within an `async` function because you can't `await` on a top level function.
 
 ```js
 async function cookieTest() {
@@ -217,6 +216,8 @@ async function cookieTest() {
   logCookie("cookie2", cookie);
 }
 ```
+
+Note that some logging and other code is omitted for brevity.
 
 ```js hidden
 const showCookies = document.querySelector("#showCookies");
