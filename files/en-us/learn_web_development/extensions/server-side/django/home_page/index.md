@@ -339,7 +339,7 @@ You can add an image into the page in a similar way, for example:
 ```django
 {% load static %}
 <img
-  src="{% static 'catalog/images/local_library_model_uml.png' %}"
+  src="{% static 'images/local_library_model_uml.png' %}"
   alt="UML diagram"
   style="width:555px;height:540px;" />
 ```
