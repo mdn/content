@@ -7,7 +7,7 @@ browser-compat: html.global_attributes.inert
 
 {{HTMLSidebar("Global_attributes")}}
 
-The **`inert`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) is a Boolean attribute indicating that the browser will ignore the element. With the `inert` attribute, all of the element's flat tree descendants (such as modal {{htmlelement("dialog")}}s) that don't otherwise escape inertness are ignored. The `inert` attribute also makes the browser ignore input events sent by the user, including focus-related events and events from assistive technologies.
+The **`inert`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) is a Boolean attribute indicating that the element and all of its flat tree descendants become _inert_. Modal {{htmlelement("dialog")}}s generated with [`showModal()`](/en-US/docs/Web/API/HTMLDialogElement/showModal) escape inertness, meaning that they don't inherit inertness from their ancestors, but can only be made inert by having the `inert` attribute explicitly set on themselves.
 
 Specifically, `inert` does the following:
 
