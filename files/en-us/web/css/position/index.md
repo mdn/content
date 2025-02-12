@@ -165,7 +165,7 @@ Elements that are relatively positioned remain in the normal flow of the documen
   the same line. Overflowing inline elements
   <span>wrap onto a new line if possible — like this one containing text</span>,
   or just go on to a new line if not, much like this image will do:
-  <img src="long.jpg" />
+  <img src="https://mdn.github.io/shared-assets/images/examples/long.jpg" />
 </p>
 ```
 

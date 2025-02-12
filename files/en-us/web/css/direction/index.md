@@ -91,7 +91,8 @@ blockquote {
 
 ## See also
 
-- {{Cssxref("unicode-bidi")}}
-- {{Cssxref("writing-mode")}}
+- {{CSSxRef("unicode-bidi")}}
+- {{CSSxRef("writing-mode")}}
+- SVG {{SVGAttr("direction")}} attribute
 - The HTML [`dir`](/en-US/docs/Web/HTML/Global_attributes/dir) global attribute
 - [Creating vertical form controls](/en-US/docs/Web/CSS/CSS_writing_modes/Vertical_controls)

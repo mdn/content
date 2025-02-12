@@ -10,7 +10,7 @@ browser-compat: api.SVGRect.height
 
 The **`height`** property of the {{domxref("SVGRect")}} interface is an alias for the {{DOMXref("DOMRect.height")}} property. It describes the vertical size of the element. It reflects the SVG element's {{SVGattr("height")}} attribute and the CSS {{cssxref("height")}} property.
 
-The height is a length; it is the distance from the top of element to the bottom of the element in the the user coordinate system. Its syntax is the same as that for [`<length>`](/en-US/docs/Web/SVG/Content_type#length).
+The height is a length; it is the distance from the top of element to the bottom of the element in the user coordinate system. Its syntax is the same as that for [`<length>`](/en-US/docs/Web/SVG/Content_type#length).
 
 ## Usage context
 
