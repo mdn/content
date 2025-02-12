@@ -170,7 +170,7 @@ https://developer.mozilla.org/en-US/
 The main parts of the URL are:
 
 - `https`
-  - : The **protocol** being used to send the request. In this case, we are using [HTTPS](/en-US/docs/Glossary/HTTPS), which is a secure version of HTTP that stops bad people from stealing data while it is being transported. On the modern web, pretty much every server uses HTTPS, so if you don't include it explicitly, the browser assumes that is what you are using and adds it for you.
+  - : The **protocol** being used to send the request. In this case, we are using [HTTPS](/en-US/docs/Glossary/HTTPS), which is a secure version of HTTP that stops bad people from reading your data while it is being transported. On the modern web, pretty much every server uses HTTPS, so if you don't include it explicitly, the browser assumes that is what you are using and adds it for you.
 - `developer.mozilla.org`
   - : The [**domain name**](/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name) of the URL, which represents the top-level location of the server you are connecting to. In this case, the web address you typed in is equal to the domain name, but this is not always the case — you could choose to type in a more complicated web address. Note that the `developer` part is a **subdomain** (distinct content area) of Mozilla's `mozilla.org` domain. There are other subdomains on Mozilla's site that host distinct content — see [support.mozilla.org](https://support.mozilla.org) and [bugzilla.mozilla.org](https://bugzilla.mozilla.org), for example.
 - `/en-US/`
