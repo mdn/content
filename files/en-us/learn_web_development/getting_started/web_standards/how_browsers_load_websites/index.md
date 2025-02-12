@@ -163,7 +163,7 @@ The final output is as follows:
 
 ## What else happens?
 
-There are several other things that happen during page rendering, but we won't discuss them all here. One notable additional occurence worth mentioning is that an accessibility tree is built, based on the DOM, for assistive technologies (for example screen readers) to hook into, which enables people who are not able to see the rendered content to interact with it.
+There are several other things that happen during page rendering, but we won't discuss them all here. One notable additional occurrence worth mentioning is that an accessibility tree is built, based on the DOM, for assistive technologies (for example screen readers) to hook into, which enables people who are not able to see the rendered content to interact with it.
 
 You will learn more about this later on, in our [Accessibility](/en-US/docs/Learn_web_development/Core/Accessibility) module.
 
