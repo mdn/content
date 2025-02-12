@@ -52,7 +52,7 @@ The `/* */` comment syntax is used for both single and multiline comments. There
 - [Syntax](/en-US/docs/Web/CSS/Syntax) guide
 - [Value definition syntax](/en-US/docs/Web/CSS/Value_definition_syntax)
 - [CSS error handling](/en-US/docs/Web/CSS/CSS_syntax/Error_handling)
-- [Specificity](/en-US/docs/Web/CSS/Specificity)
+- [Specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity)
 - [Inheritance](/en-US/docs/Web/CSS/Inheritance)
 - [Learn: Handling conflicts](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
 - [Learn: cascade layers](/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)

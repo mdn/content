@@ -469,7 +469,7 @@
 /en-US/docs/CSS/CSS_transitions	/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions
 /en-US/docs/CSS/CSS_values_serialization	/en-US/docs/Web/CSS
 /en-US/docs/CSS/CSS_values_syntax	/en-US/docs/Web/CSS
-/en-US/docs/CSS/Cascade	/en-US/docs/Web/CSS/Cascade
+/en-US/docs/CSS/Cascade	/en-US/docs/Web/CSS/CSS_cascade/Cascade
 /en-US/docs/CSS/Child_selectors	/en-US/docs/Web/CSS/Child_combinator
 /en-US/docs/CSS/Class_selectors	/en-US/docs/Web/CSS/Class_selectors
 /en-US/docs/CSS/Comments	/en-US/docs/Web/CSS/Comments
@@ -523,7 +523,7 @@
 /en-US/docs/CSS/Scaling_background_images	/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images
 /en-US/docs/CSS/Scaling_of_SVG_backgrounds	/en-US/docs/Web/CSS/Scaling_of_SVG_backgrounds
 /en-US/docs/CSS/Shorthand_properties	/en-US/docs/Web/CSS/Shorthand_properties
-/en-US/docs/CSS/Specificity	/en-US/docs/Web/CSS/Specificity
+/en-US/docs/CSS/Specificity	/en-US/docs/Web/CSS/CSS_cascade/Specificity
 /en-US/docs/CSS/Syntax	/en-US/docs/Web/CSS/Syntax
 /en-US/docs/CSS/Text-overflow_TEST	/en-US/docs/Web/CSS/text-overflow
 /en-US/docs/CSS/Tutorial/Using_CSS_flexible_boxes	/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox
@@ -11940,6 +11940,7 @@
 /en-US/docs/Web/CSS/CSS_transform_functions	/en-US/docs/Web/CSS/transform
 /en-US/docs/Web/CSS/CSS_values_serialization	/en-US/docs/Web/CSS
 /en-US/docs/Web/CSS/CSS_values_syntax	/en-US/docs/Web/CSS
+/en-US/docs/Web/CSS/Cascade	/en-US/docs/Web/CSS/CSS_cascade/Cascade
 /en-US/docs/Web/CSS/Child_selectors	/en-US/docs/Web/CSS/Child_combinator
 /en-US/docs/Web/CSS/Common_CSS_Questions	/en-US/docs/Learn_web_development/Howto/Solve_CSS_problems/CSS_FAQ
 /en-US/docs/Web/CSS/Compositing_and_Blending	/en-US/docs/Web/CSS/CSS_compositing_and_blending
@@ -11970,6 +11971,7 @@
 /en-US/docs/Web/CSS/Reference/object-position	/en-US/docs/Web/CSS/object-position
 /en-US/docs/Web/CSS/Selector_lists	/en-US/docs/Web/CSS/Selector_list
 /en-US/docs/Web/CSS/Selectors	/en-US/docs/Web/CSS/CSS_Selectors
+/en-US/docs/Web/CSS/Specificity	/en-US/docs/Web/CSS/CSS_cascade/Specificity
 /en-US/docs/Web/CSS/Text-overflow_TEST	/en-US/docs/Web/CSS/text-overflow
 /en-US/docs/Web/CSS/Tools	/en-US/docs/Web/CSS
 /en-US/docs/Web/CSS/Tools/Border-image_generator	/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Border-image_generator
