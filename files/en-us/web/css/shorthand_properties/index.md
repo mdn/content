@@ -168,7 +168,7 @@ Just like margins and paddings, the inset values are ordered clockwise - top, ri
 
 CSS provides a universal shorthand property, {{cssxref("all")}}, which applies its value to every property in the document. Its purpose is to change the properties' inheritance model.
 
-See [Handling conflicts](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts) or [Introducing the CSS Cascade](/en-US/docs/Web/CSS/Cascade) for more information about how inheritance works in CSS.
+See [Handling conflicts](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts) or [Introducing the CSS Cascade](/en-US/docs/Web/CSS/CSS_cascade/Cascade) for more information about how inheritance works in CSS.
 
 ## Shorthand properties
 
@@ -249,7 +249,7 @@ See [Handling conflicts](/en-US/docs/Learn_web_development/Core/Styling_basics/H
 - [At-rules](/en-US/docs/Web/CSS/At-rule)
 - [Specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity)
 - [Inheritance](/en-US/docs/Web/CSS/Inheritance)
-- [Introducing the CSS Cascade](/en-US/docs/Web/CSS/Cascade)
+- [Introducing the CSS Cascade](/en-US/docs/Web/CSS/CSS_cascade/Cascade)
 - [Learn: Handling conflicts](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
 - [Learn: Cascade layers](/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)
 - [CSS cascading and inheritance](/en-US/docs/Web/CSS/CSS_cascade) module

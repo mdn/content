@@ -111,7 +111,7 @@ Combinators are selectors that establish a relationship between two or more simp
 
 - [CSS syntax](/en-US/docs/Web/CSS/Syntax)
 - [At-rules](/en-US/docs/Web/CSS/At-rule)
-- [Cascade](/en-US/docs/Web/CSS/Cascade)
+- [Cascade](/en-US/docs/Web/CSS/CSS_cascade/Cascade)
 - [Comments](/en-US/docs/Web/CSS/Comments)
 - [Descriptor](/en-US/docs/Glossary/CSS_Descriptor)
 - [Inheritance](/en-US/docs/Web/CSS/Inheritance)

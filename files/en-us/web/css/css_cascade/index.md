@@ -49,7 +49,7 @@ The opposite also occurs. Sometimes there are no declarations defining the value
 ### Key concepts and definitions
 
 - [specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity)
-- [Cascade origin and importance](/en-US/docs/Web/CSS/Cascade)
+- [Cascade origin and importance](/en-US/docs/Web/CSS/CSS_cascade/Cascade)
 - [Values](/en-US/docs/Web/CSS/Value_definition_syntax)
   - [actual value](/en-US/docs/Web/CSS/actual_value)
   - [computed value](/en-US/docs/Web/CSS/computed_value)
@@ -57,10 +57,10 @@ The opposite also occurs. Sometimes there are no declarations defining the value
   - [resolved value](/en-US/docs/Web/CSS/resolved_value)
   - [specified value](/en-US/docs/Web/CSS/specified_value)
   - [used value](/en-US/docs/Web/CSS/used_value)
-- [Origin types](/en-US/docs/Web/CSS/Cascade#origin_types)
-  - [user-agent origin](/en-US/docs/Web/CSS/Cascade#user-agent_stylesheets)
-  - [author origin](/en-US/docs/Web/CSS/Cascade#author_stylesheets)
-  - [user origin](/en-US/docs/Web/CSS/Cascade#user_stylesheets)
+- [Origin types](/en-US/docs/Web/CSS/CSS_cascade/Cascade#origin_types)
+  - [user-agent origin](/en-US/docs/Web/CSS/CSS_cascade/Cascade#user-agent_stylesheets)
+  - [author origin](/en-US/docs/Web/CSS/CSS_cascade/Cascade#author_stylesheets)
+  - [user origin](/en-US/docs/Web/CSS/CSS_cascade/Cascade#user_stylesheets)
 - [Declaring layers](/en-US/docs/Web/CSS/@import#importing_css_rules_into_a_cascade_layer)
   - [named layer](/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers#the_layer_statement_at-rule_for_named_layers)
   - [anonymous layer](/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers#the_layer_block_at-rule_for_named_and_anonymous_layers)
@@ -68,7 +68,7 @@ The opposite also occurs. Sometimes there are no declarations defining the value
 
 ## Guides
 
-- [Introducing the CSS Cascade](/en-US/docs/Web/CSS/Cascade)
+- [Introducing the CSS Cascade](/en-US/docs/Web/CSS/CSS_cascade/Cascade)
 
   - : Guide to the cascade algorithm that defines how user agents combine property values originating from different sources.
 
@@ -78,7 +78,7 @@ The opposite also occurs. Sometimes there are no declarations defining the value
 
 - [Learn: Cascade layers](/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)
 
-  - : Introduction to [cascade layers](/en-US/docs/Web/CSS/@layer), a more advanced feature that builds on the fundamental concepts of the [CSS cascade](/en-US/docs/Web/CSS/Cascade) and [CSS specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity).
+  - : Introduction to [cascade layers](/en-US/docs/Web/CSS/@layer), a more advanced feature that builds on the fundamental concepts of the [CSS cascade](/en-US/docs/Web/CSS/CSS_cascade/Cascade) and [CSS specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity).
 
 - [CSS inheritance](/en-US/docs/Web/CSS/Inheritance)
   - : A guide to CSS inheritance.
@@ -86,7 +86,7 @@ The opposite also occurs. Sometimes there are no declarations defining the value
 ## Related concepts
 
 - [Element-attached styles](/en-US/docs/Web/HTML/Global_attributes/style)
-- [Inline styles and the cascade](/en-US/docs/Web/CSS/Cascade#inline_styles)
+- [Inline styles and the cascade](/en-US/docs/Web/CSS/CSS_cascade/Cascade#inline_styles)
 - [Conditional rules for @imports](/en-US/docs/Web/CSS/@import#importing_css_rules_conditional_on_media_queries)
 
 ## Specifications

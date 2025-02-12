@@ -6,7 +6,7 @@ page-type: learn-module-chapter
 
 {{LearnSidebar}}
 
-This lesson aims to introduce you to [cascade layers](/en-US/docs/Web/CSS/@layer), a more advanced feature that builds on the fundamental concepts of the [CSS cascade](/en-US/docs/Web/CSS/Cascade) and [CSS specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity).
+This lesson aims to introduce you to [cascade layers](/en-US/docs/Web/CSS/@layer), a more advanced feature that builds on the fundamental concepts of the [CSS cascade](/en-US/docs/Web/CSS/CSS_cascade/Cascade) and [CSS specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity).
 
 If you are new to CSS, working through this lesson may seem less relevant immediately and a little more academic than some other parts of the course. However, knowing the basics of what cascade layers are should you encounter them in your projects is helpful. The more you work with CSS, understanding cascade layers and knowing how to leverage their power will save you from a lot of pain managing a code base with CSS from different parties, plugins, and development teams.
 
@@ -53,7 +53,7 @@ For each step, only the declarations "still in the running" move on to "compete"
 
 ### Origin and cascade
 
-There are three [cascade origin types](/en-US/docs/Web/CSS/Cascade#origin_types): user-agent stylesheets, user stylesheets, and author stylesheets. The browser sorts each declaration into six origin buckets by origin and importance. There are eight levels of precedence: the six origin buckets, properties that are transitioning, and properties that are animating. The order of precedence goes from normal user-agent styles, which have the lowest precedence, to styles within currently applied animations, to important user-agent styles, and then styles being transitioned, which have the highest precedence:
+There are three [cascade origin types](/en-US/docs/Web/CSS/CSS_cascade/Cascade#origin_types): user-agent stylesheets, user stylesheets, and author stylesheets. The browser sorts each declaration into six origin buckets by origin and importance. There are eight levels of precedence: the six origin buckets, properties that are transitioning, and properties that are animating. The order of precedence goes from normal user-agent styles, which have the lowest precedence, to styles within currently applied animations, to important user-agent styles, and then styles being transitioned, which have the highest precedence:
 
 1. user-agent normal styles
 2. user normal styles

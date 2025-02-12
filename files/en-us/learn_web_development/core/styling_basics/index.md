@@ -65,7 +65,7 @@ These tutorials are not part of the learning pathway, but they are interesting n
 - [Advanced styling effects](/en-US/docs/Learn_web_development/Core/Styling_basics/Advanced_styling_effects)
   - : This article will give you guidance on how to go about debugging a CSS problem, and show you how the DevTools included in all modern browsers can help you to find out what is going on.
 - [Cascade layers](/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)
-  - : This lesson aims to introduce you to [cascade layers](/en-US/docs/Web/CSS/@layer), a more advanced feature that builds on the fundamental concepts of the [CSS cascade](/en-US/docs/Web/CSS/Cascade) and [CSS specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity).
+  - : This lesson aims to introduce you to [cascade layers](/en-US/docs/Web/CSS/@layer), a more advanced feature that builds on the fundamental concepts of the [CSS cascade](/en-US/docs/Web/CSS/CSS_cascade/Cascade) and [CSS specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity).
 - [Handling different text directions](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_different_text_directions)
   - : In recent years, CSS has evolved in order to better support different directionality of content, including right-to-left but also top-to-bottom content (such as Japanese) — these different directionalities are called writing modes. As you progress in your study and begin to work with layout, an understanding of writing modes will be very helpful to you, therefore we will introduce them in this article.
 - [Organizing CSS](/en-US/docs/Learn_web_development/Core/Styling_basics/Organizing)

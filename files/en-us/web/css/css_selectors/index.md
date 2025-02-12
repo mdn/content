@@ -182,7 +182,7 @@ Selectors, whether used in CSS or JavaScript, enable targeting HTML elements bas
 
 - {{cssxref("important", "!important")}}
 - [Specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity)
-- [Cascade](/en-US/docs/Web/CSS/Cascade)
+- [Cascade](/en-US/docs/Web/CSS/CSS_cascade/Cascade)
 
 - {{domxref("Document.querySelector")}} method
 - {{domxref("Document.querySelectorAll")}} method

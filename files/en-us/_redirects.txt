@@ -469,7 +469,7 @@
 /en-US/docs/CSS/CSS_transitions	/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions
 /en-US/docs/CSS/CSS_values_serialization	/en-US/docs/Web/CSS
 /en-US/docs/CSS/CSS_values_syntax	/en-US/docs/Web/CSS
-/en-US/docs/CSS/Cascade	/en-US/docs/Web/CSS/Cascade
+/en-US/docs/CSS/Cascade	/en-US/docs/Web/CSS/CSS_cascade/Cascade
 /en-US/docs/CSS/Child_selectors	/en-US/docs/Web/CSS/Child_combinator
 /en-US/docs/CSS/Class_selectors	/en-US/docs/Web/CSS/Class_selectors
 /en-US/docs/CSS/Comments	/en-US/docs/Web/CSS/Comments
@@ -11929,6 +11929,7 @@
 /en-US/docs/Web/CSS/CSS_transform_functions	/en-US/docs/Web/CSS/transform
 /en-US/docs/Web/CSS/CSS_values_serialization	/en-US/docs/Web/CSS
 /en-US/docs/Web/CSS/CSS_values_syntax	/en-US/docs/Web/CSS
+/en-US/docs/Web/CSS/Cascade	/en-US/docs/Web/CSS/CSS_cascade/Cascade
 /en-US/docs/Web/CSS/Child_selectors	/en-US/docs/Web/CSS/Child_combinator
 /en-US/docs/Web/CSS/Common_CSS_Questions	/en-US/docs/Learn_web_development/Howto/Solve_CSS_problems/CSS_FAQ
 /en-US/docs/Web/CSS/Compositing_and_Blending	/en-US/docs/Web/CSS/CSS_compositing_and_blending

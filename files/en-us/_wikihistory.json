@@ -76239,6 +76239,37 @@
       "Fredchat"
     ]
   },
+  "Web/CSS/CSS_cascade/Cascade": {
+    "modified": "2020-07-27T13:35:05.470Z",
+    "contributors": [
+      "wbamberg",
+      "jswisher",
+      "mfuji09",
+      "fazl",
+      "marcelobcortes",
+      "birtles",
+      "agarun",
+      "ExE-Boss",
+      "dashlee92",
+      "oliverbaptiste",
+      "01abhishekjain",
+      "michaeljgut",
+      "Sheppy",
+      "Biiinggg",
+      "mfluehr",
+      "chrisdavidmills",
+      "merelinguist",
+      "verv0eren",
+      "HarryPehkonen",
+      "malozaibi",
+      "Sebastianz",
+      "mrevan",
+      "rralian",
+      "nasifmdtanjim",
+      "velvel53",
+      "teoli"
+    ]
+  },
   "Web/CSS/CSS_cascade/Specificity": {
     "modified": "2020-11-14T16:01:00.890Z",
     "contributors": [
@@ -77851,37 +77882,6 @@
       "LiuYanandGithub",
       "mfluehr",
       "Sebastianz",
-      "teoli"
-    ]
-  },
-  "Web/CSS/Cascade": {
-    "modified": "2020-07-27T13:35:05.470Z",
-    "contributors": [
-      "wbamberg",
-      "jswisher",
-      "mfuji09",
-      "fazl",
-      "marcelobcortes",
-      "birtles",
-      "agarun",
-      "ExE-Boss",
-      "dashlee92",
-      "oliverbaptiste",
-      "01abhishekjain",
-      "michaeljgut",
-      "Sheppy",
-      "Biiinggg",
-      "mfluehr",
-      "chrisdavidmills",
-      "merelinguist",
-      "verv0eren",
-      "HarryPehkonen",
-      "malozaibi",
-      "Sebastianz",
-      "mrevan",
-      "rralian",
-      "nasifmdtanjim",
-      "velvel53",
       "teoli"
     ]
   },
