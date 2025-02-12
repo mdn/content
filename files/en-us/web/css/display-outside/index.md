@@ -70,4 +70,4 @@ span {
   - {{CSSxRef("&lt;display-legacy&gt;")}}
 
 - [Block and inline layout in normal flow](/en-US/docs/Web/CSS/CSS_display/Block_and_inline_layout_in_normal_flow)
-- [Formatting contexts explained](/en-US/docs/Web/CSS/CSS_display/Introduction_to_formatting_contexts)
+- [Introduction to formatting contexts](/en-US/docs/Web/CSS/CSS_display/Introduction_to_formatting_contexts)
