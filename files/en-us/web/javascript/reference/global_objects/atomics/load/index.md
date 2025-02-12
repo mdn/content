@@ -10,7 +10,21 @@ browser-compat: javascript.builtins.Atomics.load
 The **`Atomics.load()`** static
 method returns a value at a given position in the array.
 
-{{EmbedInteractiveExample("pages/js/atomics-load.html")}}
+{{InteractiveExample("JavaScript Demo: Atomics.load()")}}
+
+```js interactive-example
+// Create a SharedArrayBuffer with a size in bytes
+const buffer = new SharedArrayBuffer(16);
+const uint8 = new Uint8Array(buffer);
+uint8[0] = 5;
+
+// 5 + 2 = 7
+console.log(Atomics.add(uint8, 0, 2));
+// Expected output: 5
+
+console.log(Atomics.load(uint8, 0));
+// Expected output: 7
+```
 
 ## Syntax
 

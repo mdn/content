@@ -11,7 +11,22 @@ The **`in`** operator returns `true` if the specified property is in the specifi
 
 The `in` operator cannot be used to search for values in other collections. To test if a certain value exists in an array, use {{jsxref("Array.prototype.includes()")}}. For sets, use {{jsxref("Set.prototype.has()")}}.
 
-{{EmbedInteractiveExample("pages/js/expressions-inoperator.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - in operator")}}
+
+```js interactive-example
+const car = { make: "Honda", model: "Accord", year: 1998 };
+
+console.log("make" in car);
+// Expected output: true
+
+delete car.make;
+if ("make" in car === false) {
+  car.make = "Suzuki";
+}
+
+console.log(car.make);
+// Expected output: "Suzuki"
+```
 
 ## Syntax
 

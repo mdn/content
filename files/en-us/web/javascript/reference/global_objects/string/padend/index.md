@@ -11,7 +11,19 @@ The **`padEnd()`** method of {{jsxref("String")}} values pads this string with a
 string (repeated, if needed) so that the resulting string reaches a given length. The
 padding is applied from the end of this string.
 
-{{EmbedInteractiveExample("pages/js/string-padend.html")}}
+{{InteractiveExample("JavaScript Demo: String.padEnd()")}}
+
+```js interactive-example
+const str1 = "Breaded Mushrooms";
+
+console.log(str1.padEnd(25, "."));
+// Expected output: "Breaded Mushrooms........"
+
+const str2 = "200";
+
+console.log(str2.padEnd(5));
+// Expected output: "200  "
+```
 
 ## Syntax
 
