@@ -56,7 +56,7 @@ For now, let's imagine that the internet is a road. On one end of the road is th
 
 ![A black-and-white photo of a person crossing a road at a crosswalk](road.jpg)
 
-In addition to the client and the server, we also need to know about the other things involved in navigating to a web page:
+In order for data to get back and forth, we need the following things:
 
 - **Your internet connection**: Allows you to send and receive data on the internet. It's basically like the street between your house and the shop.
 - **TCP/IP**: **Transmission Control Protocol** and **Internet Protocol** (TCP/IP) are communication protocols that define how data should travel across the internet. This is like the transport mechanisms that let you place an order, go to the shop, and buy your goods. In our example, this is like a car or a bike (or however else you might travel along the road).
