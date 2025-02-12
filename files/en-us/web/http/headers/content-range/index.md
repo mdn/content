@@ -57,6 +57,14 @@ Content-Range: <unit> */<size>
 Content-Range: bytes 200-1000/67589
 ```
 
+### Range not satisfiable
+
+If the server cannot satisfy the requested range request, it should respond with 416 Range Not Satisfiable and a header like this:
+
+```http
+Content-Range: bytes */67589
+```
+
 ## Specifications
 
 {{Specifications}}
