@@ -102,7 +102,7 @@ Earlier we used the term "packets" to describe the format in which the data is t
 Basically, when data is sent across the web, it is sent in thousands of small chunks. There are multiple reasons why data is sent in small packets, but most significantly:
 
 - They are sometimes dropped or corrupted and, when this happens, it's quicker and easier to replace small chunks than entire files.
-- Additionally, the packets can be routed along different paths, making the exchange faster and allowing many different users to download the same website at the same time. If each website was sent as a single big chunk, only one user could download it at a time, which obviously would make the web very inefficient and not much fun to use.
+- Additionally, the packets can be routed along different paths, making the exchange faster and allowing many different users to download the same website at the same time. If each website was sent as a single big chunk, only one user could download it at a time, which would make the web very inefficient and not much fun to use.
 
 ## HTTP basics
 
