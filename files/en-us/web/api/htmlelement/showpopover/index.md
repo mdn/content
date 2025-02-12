@@ -16,11 +16,17 @@ When `showPopover()` is called on an element with the [`popover`](/en-US/docs/We
 
 ```js-nolint
 showPopover()
+showPopover(options)
 ```
 
 ### Parameters
 
-None.
+- `options` {{optional_inline}}
+  - : An object that can contain the following properties:
+    - `source` {{optional_inline}}
+      - : An {{domxref("HTMLElement")}} reference; programmatically defines the invoker of the popover associated with the toggle action, that is, the control button or link associated with the popover.
+
+Associating a popover with a control using the `source` option creates an implicit anchor reference between the two. This makes it very convenient to position popovers relative to their controls using [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning). Explicit associations do not need to be made using the {{cssxref("anchor-name")}} and {{cssxref("position-anchor")}} properties.
 
 ### Return value
 

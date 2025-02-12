@@ -557,6 +557,8 @@ A few additional non-standard attributes are listed following the descriptions o
 
   - : Turns an `<input type="button">` element into a popover control button; takes the ID of the popover element to control as its value. See the {{domxref("Popover API", "Popover API", "", "nocode")}} landing page for more details.
 
+    Associating a popover with a control using the `popovertarget` attribute creates an implicit anchor reference between the two. This makes it very convenient to position popovers relative to their controls using [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning). Explicit associations do not need to be made using the {{cssxref("anchor-name")}} and {{cssxref("position-anchor")}} properties.
+
 - `popovertargetaction`
 
   - : Specifies the action to be performed on a popover element being controlled by a control `<input type="button">`. Possible values are:

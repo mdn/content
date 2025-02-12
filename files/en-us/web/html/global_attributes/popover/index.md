@@ -13,9 +13,11 @@ The **`popover`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) is 
 
 The `popover` attribute can take one of the following values:
 
-- `auto` (setting `popover` is equivalent to setting `popover="auto"`)
+- `auto`
 - `hint`
 - `manual`
+
+Setting an empty value for `popover` — `popover` or `popover=""` — is equivalent to setting `popover="auto"`.
 
 ## Description
 

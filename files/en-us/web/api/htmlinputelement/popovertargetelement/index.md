@@ -12,6 +12,8 @@ The **`popoverTargetElement`** property of the {{domxref("HTMLInputElement")}} i
 
 It is the JavaScript equivalent of the [`popovertarget`](/en-US/docs/Web/HTML/Element/button#popovertarget) HTML attribute.
 
+Associating a popover with a control using the `popoverTargetElement` property creates an implicit anchor reference between the two. This makes it very convenient to position popovers relative to their controls using [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning). Explicit associations do not need to be made using the {{cssxref("anchor-name")}} and {{cssxref("position-anchor")}} properties.
+
 ## Value
 
 A reference to a popover element in the DOM.

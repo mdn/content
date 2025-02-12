@@ -204,7 +204,9 @@ In the below sections, we'll walk through all the important parts of the code.
 
 ### Creating the sub-menus with `popover="auto"`
 
-The popup sub-menus are created declaratively, using `auto` popovers. First, the control buttons:
+The popup sub-menus are created declaratively, using `auto` popovers.
+
+First, the control buttons:
 
 ```html
 <section id="button-bar">
@@ -260,7 +262,7 @@ The event listeners [show](/en-US/docs/Web/API/HTMLElement/showPopover) the popo
 ```js
 function addEventListeners(i) {
   btns[i].addEventListener("mouseover", () => {
-    tooltips[i].showPopover();
+    tooltips[i].showPopover({ source: btns[i] });
   });
 
   btns[i].addEventListener("mouseout", () => {
@@ -268,7 +270,7 @@ function addEventListeners(i) {
   });
 
   btns[i].addEventListener("focus", () => {
-    tooltips[i].showPopover();
+    tooltips[i].showPopover({ source: btns[i] });
   });
 
   btns[i].addEventListener("blur", () => {
@@ -333,6 +335,14 @@ The {{cssxref("::backdrop")}} pseudo-element is a full-screen element placed dir
 ```
 
 See our [Popover blur background example](https://mdn.github.io/dom-examples/popover-api/blur-background/) ([source](https://github.com/mdn/dom-examples/tree/main/popover-api/blur-background)) for an idea of how this renders.
+
+### Implicit popover anchor associations
+
+Associating a popover with a control using the [`popovertarget`](/en-US/docs/Web/HTML/Element/button#popovertarget) and [`id`](/en-US/docs/Web/HTML/Global_attributes/id) attributes creates an implicit anchor reference between the two, as does programmatically associating a popover action such as {{domxref("HTMLElement.showPopover", "showPopover()")}} with a control using the `source` option.
+
+This makes it very convenient to position popovers relative to their controls using [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning). Explicit associations do not need to be made using the {{cssxref("anchor-name")}} and {{cssxref("position-anchor")}} properties.
+
+For an example that uses this implicit association, see the [Using "hint" popover state](/en-US/docs/Web/API/Popover_API/Using#using_hint_popover_state) section above.
 
 ## Animating popovers
 

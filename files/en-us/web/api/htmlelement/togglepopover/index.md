@@ -21,15 +21,27 @@ When `togglePopover()` is called on an element with the [`popover`](/en-US/docs/
 ## Syntax
 
 ```js-nolint
+togglePopover()
 togglePopover(force)
+togglePopover(options)
 ```
 
 ### Parameters
 
-- `force`
+A boolean (`force`) or an options object:
+
+- `force` {{optional_inline}}
   - : A boolean, which causes `togglePopover()` to behave like {{domxref("HTMLElement.showPopover", "showPopover()")}} or {{domxref("HTMLElement.hidePopover", "hidePopover()")}}, except that it doesn't throw an exception if the popover is already in the target state.
     - If set to `true`, the popover is shown if it was initially hidden. If it was initially shown, nothing happens.
     - If set to `false`, the popover is hidden if it was initially shown. If it was initially hidden, nothing happens.
+- `options` {{optional_inline}}
+  - : An object that can contain the following properties:
+    - `force` {{optional_inline}}
+      - : A boolean; see the `force` description above.
+    - `source` {{optional_inline}}
+      - : An {{domxref("HTMLElement")}} reference; programmatically defines the invoker of the popover associated with the toggle action, that is, the control button or link associated with the popover.
+
+Associating a popover with a control using the `source` option creates an implicit anchor reference between the two. This makes it very convenient to position popovers relative to their controls using [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning). Explicit associations do not need to be made using the {{cssxref("anchor-name")}} and {{cssxref("position-anchor")}} properties.
 
 ### Return value
 

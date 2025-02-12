@@ -29,9 +29,9 @@ Historically, associating an element with another element and dynamically changi
 
 ## Associating anchor and positioned elements
 
-To associate an element with an anchor, you need to first declare which element is the anchor, and then specify which positioned element(s) to associate with that anchor. This can be done via CSS or via the HTML [`anchor`](/en-US/docs/Web/HTML/Global_attributes/anchor) attribute.
+To associate an element with an anchor, you need to first declare which element is the anchor, and then specify which positioned element(s) to associate with that anchor. This can be done explicitly via CSS or via the HTML [`anchor`](/en-US/docs/Web/HTML/Global_attributes/anchor) attribute, or in some cases, implicitly.
 
-### CSS-only method
+### Explicit CSS-only method
 
 To declare an element as an anchor with CSS, you need to set an anchor name on it via the {{cssxref("anchor-name")}} property. The anchor name needs to be a {{cssxref("dashed-ident")}}. In this example, we also set the anchor's {{cssxref("width")}} to `fit-content` to get a small square anchor, which better demonstrates the anchoring effect.
 
@@ -90,7 +90,7 @@ This will render as follows:
 
 The anchor and infobox are now associated, but for the moment you'll have to trust us on this. They are not tethered to each other yet — if you were to position the anchor and move it somewhere else on the page, it would move on its own, leaving the infobox in the same place. You'll see the actual tethering in action when we look at [positioning elements based on anchor position](#positioning_elements_relative_to_their_anchor).
 
-### HTML method
+### Explicit HTML method
 
 To associate a positioned element with an anchor in HTML, you can use the [`anchor`](/en-US/docs/Web/HTML/Global_attributes/anchor) attribute. You need to give the anchor element an [`id`](/en-US/docs/Web/HTML/Global_attributes/id). The `anchor` attribute is then set on the anchor-positioned element, with a value equal to the `id` of the anchor element you want to associate it with.
 
@@ -141,7 +141,15 @@ This gives us the same result that we achieved earlier with CSS. We associated a
 > [!NOTE]
 > The [`anchor`](/en-US/docs/Web/HTML/Global_attributes/anchor) attribute currently has less support than the CSS equivalent. See the [`anchor` attribute compatibility table](/en-US/docs/Web/HTML/Global_attributes/anchor#browser_compatibility) for more information.
 
-We've associated the two elements, but they are not yet tethered. To tether them together, the positioned element needs to be positioned relative to its anchor, which is done with CSS.
+### Implicit anchor association
+
+In some cases, an implicit anchor reference will be made between two elements, due to the semantic nature of their relationship. For example, when using the [Popover API](/en-US/docs/Web/API/Popover_API) to associate a popover with a control, an implicit anchor reference is made between the two. This can occur when:
+
+- Declaratively associating a popover with a control using the [`popovertarget`](/en-US/docs/Web/HTML/Element/button#popovertarget) and [`id`](/en-US/docs/Web/HTML/Global_attributes/id) attributes.
+- Programmatically associating a popover action such as {{domxref("HTMLElement.showPopover", "showPopover()")}} with a control using the `source` option.
+
+> [!NOTE]
+> The methods above associate an anchor with an element, but they are not yet tethered. To tether them together, the positioned element needs to be positioned relative to its anchor, which is done with CSS.
 
 ## Positioning elements relative to their anchor
 
