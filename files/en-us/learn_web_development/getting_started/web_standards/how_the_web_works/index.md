@@ -147,7 +147,7 @@ The full response is more complex than this, but we have omitted most of it for 
 Above, we met the `200` [status code](/en-US/docs/Web/HTTP/Status), which indicates that the HTTP request was successful. There are many other status code that you'll come across; the most common ones are:
 
 - `301`
-  - : The requested resource has been permanently moved to a new location, which is provided in the response.
+  - : The requested resource has been permanently moved to a new location, which is provided in the response. This is used for redirecting content when it's moved.
 - `400`
   - : The server cannot or will not process the request due to a problem with the request itself.
 - `403`
