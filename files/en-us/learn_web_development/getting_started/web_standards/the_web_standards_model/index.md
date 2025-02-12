@@ -195,7 +195,7 @@ However, HTML, CSS, and JavaScript by far the most important technologies to lea
 
 ## Tools
 
-Once you've learned about the "raw" web standards that can be used to build web pages (such as HTML, CSS, and JavaScript), you'll soon start to come across various tools that can be used to make your work easier or more efficient. Examples include:
+Once you've learned about the standard, foundational technologies used to build web pages (such as HTML, CSS, and JavaScript), you'll soon start to come across various tools that can be used to make your work easier or more efficient. Examples include:
 
 - [Developer tools](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools) inside modern browsers that can be used to debug your code.
 - [Testing tools](/en-US/docs/Learn_web_development/Extensions/Testing) that can be used to run tests to show whether your code is behaving as you intended it to.
