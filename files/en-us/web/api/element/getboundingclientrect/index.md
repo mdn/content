@@ -68,7 +68,6 @@ current scrolling position.
 > 
 > Inconsistent behavior exists across different browsers: In Safari, the returned {{domxref("DOMRect")}} properties may not match those in Firefox and Chrome. To align results, you may need to multiply the returned properties by the zoom factor.
 
-
 ## Examples
 
 ### Basic
