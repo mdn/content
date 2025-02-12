@@ -76424,6 +76424,23 @@
       "DBaron"
     ]
   },
+  "Web/CSS/CSS_display/Containing_block": {
+    "modified": "2020-10-17T13:39:05.533Z",
+    "contributors": [
+      "mfuji09",
+      "chrisdavidmills",
+      "alattalatta",
+      "nsangwan",
+      "gregprice",
+      "mustafasalah",
+      "Konrud",
+      "CaTmmao",
+      "Sheppy",
+      "tshinnic",
+      "mfluehr",
+      "Gwyn"
+    ]
+  },
   "Web/CSS/CSS_display/Flow_layout_and_overflow": {
     "modified": "2020-06-24T00:31:43.651Z",
     "contributors": ["mfuji09", "estelle", "rachelandrew"]
@@ -77920,23 +77937,6 @@
       "tregagnon",
       "jswisher",
       "McGurk"
-    ]
-  },
-  "Web/CSS/Containing_block": {
-    "modified": "2020-10-17T13:39:05.533Z",
-    "contributors": [
-      "mfuji09",
-      "chrisdavidmills",
-      "alattalatta",
-      "nsangwan",
-      "gregprice",
-      "mustafasalah",
-      "Konrud",
-      "CaTmmao",
-      "Sheppy",
-      "tshinnic",
-      "mfluehr",
-      "Gwyn"
     ]
   },
   "Web/CSS/Descendant_combinator": {

@@ -11811,7 +11811,7 @@
 /en-US/docs/Web/CSS/Adjacent_sibling_combinator	/en-US/docs/Web/CSS/Next-sibling_combinator
 /en-US/docs/Web/CSS/Adjacent_sibling_selectors	/en-US/docs/Web/CSS/Next-sibling_combinator
 /en-US/docs/Web/CSS/Alias	/en-US/docs/Web/CSS/cursor
-/en-US/docs/Web/CSS/All_About_The_Containing_Block	/en-US/docs/Web/CSS/Containing_block
+/en-US/docs/Web/CSS/All_About_The_Containing_Block	/en-US/docs/Web/CSS/CSS_display/Containing_block
 /en-US/docs/Web/CSS/Aural	/en-US/docs/Web/CSS/@media/aural
 /en-US/docs/Web/CSS/Block_formatting_context	/en-US/docs/Web/CSS/CSS_display/Block_formatting_context
 /en-US/docs/Web/CSS/CSS3_Columns	/en-US/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts
@@ -11943,6 +11943,7 @@
 /en-US/docs/Web/CSS/Child_selectors	/en-US/docs/Web/CSS/Child_combinator
 /en-US/docs/Web/CSS/Common_CSS_Questions	/en-US/docs/Learn_web_development/Howto/Solve_CSS_problems/CSS_FAQ
 /en-US/docs/Web/CSS/Compositing_and_Blending	/en-US/docs/Web/CSS/CSS_compositing_and_blending
+/en-US/docs/Web/CSS/Containing_block	/en-US/docs/Web/CSS/CSS_display/Containing_block
 /en-US/docs/Web/CSS/Currentcolor	/en-US/docs/Web/CSS/color_value#currentcolor_keyword
 /en-US/docs/Web/CSS/Descendant_selectors	/en-US/docs/Web/CSS/Descendant_combinator
 /en-US/docs/Web/CSS/Draft_Implementations_of_CSS_Features	/en-US/docs/Web/CSS/Mozilla_Extensions
