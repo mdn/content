@@ -135,7 +135,7 @@ The full response is more complex than this, but we have omitted most of it for 
 - `HTTP/2 200`
   - : The version of HTTP that the server is using to send the response, in this case HTTP/2, followed by a [status code](/en-US/docs/Web/HTTP/Status) indicating whether the request was successful. `200` indicates success.
 - `date`, `expires`, etc.
-  - : [HTTP headers](/en-US/docs/Web/HTTP/Headers) containing additional information about the reponse (note that requests can have headers too), which provide extra information and/or modify its behavior.
+  - : [HTTP headers](/en-US/docs/Web/HTTP/Headers) containing additional information about the response (note that requests can have headers too), which provide extra information and/or modify its behavior.
 - `<!doctype html>`, etc.
   - : The response body, which in this case contains the MDN homepage's HTML document.
 
