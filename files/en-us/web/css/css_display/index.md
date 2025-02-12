@@ -31,6 +31,7 @@ The **CSS display** module defines how the CSS formatting box tree is generated 
 - {{glossary("block/css", "Block")}}
 - [Block formatting context (BFC)](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context)
 - {{glossary("Block-level content")}}
+- [Containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block)
 - {{glossary("Flex")}}
 - [Flow layout](/en-US/docs/Web/CSS/CSS_display/Flow_layout)
 - {{glossary("Grid")}}
