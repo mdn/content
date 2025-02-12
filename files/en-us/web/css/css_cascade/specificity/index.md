@@ -1,6 +1,6 @@
 ---
 title: Specificity
-slug: Web/CSS/Specificity
+slug: Web/CSS/CSS_cascade/Specificity
 page-type: guide
 spec-urls: https://drafts.csswg.org/selectors/#specificity-rules
 ---

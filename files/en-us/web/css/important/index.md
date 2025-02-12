@@ -69,7 +69,7 @@ p {
 }
 ```
 
-This example displays a case of over-specifying a selector. No matter how high the selector [specificity](/en-US/docs/Web/CSS/Specificity) matches a normal declaration, an important declaration from the same source and cascade layer will always have precedence. In this case, the paragraph will always be red.
+This example displays a case of over-specifying a selector. No matter how high the selector [specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity) matches a normal declaration, an important declaration from the same source and cascade layer will always have precedence. In this case, the paragraph will always be red.
 
 When two important declarations from the same origin and layer apply to the same element, browsers select and use the declaration with the highest specificity.
 
@@ -153,5 +153,5 @@ This feature is supported in all browsers.
 
 ## See also
 
-- [CSS Specificity](/en-US/docs/Web/CSS/Specificity)
+- [CSS Specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity)
 - [CSS Cascade](/en-US/docs/Web/CSS/Cascade)

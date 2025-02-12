@@ -41,7 +41,7 @@ While working through this lesson may seem less relevant immediately and a littl
 
 CSS stands for **Cascading Style Sheets**, and that first word _cascading_ is incredibly important to understand — the way that the cascade behaves is key to understanding CSS.
 
-At some point, you will be working on a project and you will find that the CSS you thought should be applied to an element is not working. Often, the problem is that you create two rules that apply different values of the same property to the same element. [**Cascade**](/en-US/docs/Web/CSS/Cascade) and the closely-related concept of [**specificity**](/en-US/docs/Web/CSS/Specificity) are mechanisms that control which rule applies when there is such a conflict. The rule that's styling your element may not be the one you expect, so you need to understand how these mechanisms work.
+At some point, you will be working on a project and you will find that the CSS you thought should be applied to an element is not working. Often, the problem is that you create two rules that apply different values of the same property to the same element. [**Cascade**](/en-US/docs/Web/CSS/Cascade) and the closely-related concept of [**specificity**](/en-US/docs/Web/CSS/CSS_cascade/Specificity) are mechanisms that control which rule applies when there is such a conflict. The rule that's styling your element may not be the one you expect, so you need to understand how these mechanisms work.
 
 Also significant here is the concept of [**inheritance**](/en-US/docs/Web/CSS/Inheritance), which means that some CSS properties by default inherit values set on the current element's parent element and some don't. This can also cause some behavior that you might not expect.
 
@@ -70,7 +70,7 @@ h1 {
 
 ### Specificity
 
-[Specificity](/en-US/docs/Web/CSS/Specificity) is the algorithm that the browser uses to decide which property value is applied to an element. If multiple style blocks have different selectors that configure the same property with different values and target the same element, specificity decides the property value that gets applied to the element. Specificity is basically a measure of how specific a selector's selection will be:
+[Specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity) is the algorithm that the browser uses to decide which property value is applied to an element. If multiple style blocks have different selectors that configure the same property with different values and target the same element, specificity decides the property value that gets applied to the element. Specificity is basically a measure of how specific a selector's selection will be:
 
 - An element selector is less specific; it will select all elements of that type that appear on a page, so it has less weight. Pseudo-element selectors have the same specificity as regular element selectors.
 - A class selector is more specific; it will select only the elements on a page that have a specific `class` attribute value, so it has more weight. Attribute selectors and pseudo-classes have the same weight as a class.

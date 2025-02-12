@@ -48,7 +48,7 @@ The opposite also occurs. Sometimes there are no declarations defining the value
 
 ### Key concepts and definitions
 
-- {{cssxref("Specificity")}}
+- [specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity)
 - [Cascade origin and importance](/en-US/docs/Web/CSS/Cascade)
 - [Values](/en-US/docs/Web/CSS/Value_definition_syntax)
   - [actual value](/en-US/docs/Web/CSS/actual_value)
@@ -78,7 +78,7 @@ The opposite also occurs. Sometimes there are no declarations defining the value
 
 - [Learn: Cascade layers](/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)
 
-  - : Introduction to [cascade layers](/en-US/docs/Web/CSS/@layer), a more advanced feature that builds on the fundamental concepts of the [CSS cascade](/en-US/docs/Web/CSS/Cascade) and [CSS specificity](/en-US/docs/Web/CSS/Specificity).
+  - : Introduction to [cascade layers](/en-US/docs/Web/CSS/@layer), a more advanced feature that builds on the fundamental concepts of the [CSS cascade](/en-US/docs/Web/CSS/Cascade) and [CSS specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity).
 
 - [CSS inheritance](/en-US/docs/Web/CSS/Inheritance)
   - : A guide to CSS inheritance.

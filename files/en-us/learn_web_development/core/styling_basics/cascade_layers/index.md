@@ -6,7 +6,7 @@ page-type: learn-module-chapter
 
 {{LearnSidebar}}
 
-This lesson aims to introduce you to [cascade layers](/en-US/docs/Web/CSS/@layer), a more advanced feature that builds on the fundamental concepts of the [CSS cascade](/en-US/docs/Web/CSS/Cascade) and [CSS specificity](/en-US/docs/Web/CSS/Specificity).
+This lesson aims to introduce you to [cascade layers](/en-US/docs/Web/CSS/@layer), a more advanced feature that builds on the fundamental concepts of the [CSS cascade](/en-US/docs/Web/CSS/Cascade) and [CSS specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity).
 
 If you are new to CSS, working through this lesson may seem less relevant immediately and a little more academic than some other parts of the course. However, knowing the basics of what cascade layers are should you encounter them in your projects is helpful. The more you work with CSS, understanding cascade layers and knowing how to leverage their power will save you from a lot of pain managing a code base with CSS from different parties, plugins, and development teams.
 
@@ -45,7 +45,7 @@ The 'C' in CSS stands for "Cascading". It is the method by which styles cascade 
 2. **Importance:** Sort rules based on whether they are normal or important. Important styles are those that have the [`!important`](/en-US/docs/Web/CSS/important) flag set.
 3. **Origin:** Within each of the two importance buckets, sort rules by author, user, or user-agent origin.
 4. **Cascade layers:** Within each of the six origin importance buckets, sort by cascade layer. The layer order for normal declarations is from the first layer created to the last, followed by unlayered normal styles. This order is inverted for important styles, with unlayered important styles having the lowest precedence.
-5. **Specificity:** For competing styles in the origin layer with precedence, sort declarations by [specificity](/en-US/docs/Web/CSS/Specificity).
+5. **Specificity:** For competing styles in the origin layer with precedence, sort declarations by [specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity).
 6. **Scoping proximity**: When two selectors in the origin layer with precedence have the same specificity, the property value within scoped rules with the smallest number of hops up the DOM hierarchy to the scope root wins. See [How `@scope` conflicts are resolved](/en-US/docs/Web/CSS/@scope#how_scope_conflicts_are_resolved) for more details and an example.
 7. **Order of appearance:** When two selectors in the origin layer with precedence have the same specificity and scope proximity, the property value from the last declared selector with the highest specificity wins.
 
@@ -68,9 +68,9 @@ The "user-agent" is the browser. The "user" is the site visitor. The "author" is
 
 ### Origin and specificity
 
-For each property, the declaration that "wins" is the one from the origin with precedence based on the weight (normal or important). Ignoring layers for the moment, the value from the origin with the highest precedence gets applied. If the winning origin has more than one property declaration for an element, the [specificity](/en-US/docs/Web/CSS/Specificity) of the selectors for those competing property values are compared. Specificity is never compared between selectors from different origins.
+For each property, the declaration that "wins" is the one from the origin with precedence based on the weight (normal or important). Ignoring layers for the moment, the value from the origin with the highest precedence gets applied. If the winning origin has more than one property declaration for an element, the [specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity) of the selectors for those competing property values are compared. Specificity is never compared between selectors from different origins.
 
-In the example below, there are two links. The first has no author styles applied, so only user-agent styles are applied (and your personal user styles, if any). The second has [`text-decoration`](/en-US/docs/Web/CSS/text-decoration) and [`color`](/en-US/docs/Web/CSS/color) set by author styles even though the selector in the author stylesheet has a specificity of [`0-0-0`](/en-US/docs/Web/CSS/Specificity#selector_weight_categories). The reason why author styles "win" is because when there are conflicting styles from different origins, the rules from the origin with precedence are applied, irrespective of the specificity in the origin that doesn't have precedence.
+In the example below, there are two links. The first has no author styles applied, so only user-agent styles are applied (and your personal user styles, if any). The second has [`text-decoration`](/en-US/docs/Web/CSS/text-decoration) and [`color`](/en-US/docs/Web/CSS/color) set by author styles even though the selector in the author stylesheet has a specificity of [`0-0-0`](/en-US/docs/Web/CSS/CSS_cascade/Specificity#selector_weight_categories). The reason why author styles "win" is because when there are conflicting styles from different origins, the rules from the origin with precedence are applied, irrespective of the specificity in the origin that doesn't have precedence.
 
 ```html live-sample___basic-cascade
 <p><a href="https://example.org">User agent styles</a></p>
@@ -86,7 +86,7 @@ In the example below, there are two links. The first has no author styles applie
 
 {{EmbedLiveSample("basic-cascade")}}
 
-The "competing" selector in the user-agent stylesheet at the time of this writing is `a:any-link`, which has a specificity weight of `0-1-1`. While this is greater than the `0-0-0` selector in the author stylesheet, even if the selector in your current user agent is different, it doesn't matter: the specificity weights from author and user-agent origins are never compared. Learn more about [how specificity weight is calculated](/en-US/docs/Web/CSS/Specificity#how_is_specificity_calculated).
+The "competing" selector in the user-agent stylesheet at the time of this writing is `a:any-link`, which has a specificity weight of `0-1-1`. While this is greater than the `0-0-0` selector in the author stylesheet, even if the selector in your current user agent is different, it doesn't matter: the specificity weights from author and user-agent origins are never compared. Learn more about [how specificity weight is calculated](/en-US/docs/Web/CSS/CSS_cascade/Specificity#how_is_specificity_calculated).
 
 Origin precedence always wins over selector specificity. If an element property is styled with a normal style declaration in multiple origins, the author style sheet will always override the redundant normal properties declared in a user or user-agent stylesheet. If the style is important, the user-agent stylesheet will always win over author and user styles. Cascade origin precedence ensures specificity conflicts between origins never happen.
 

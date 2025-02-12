@@ -28,7 +28,7 @@ The {{glossary("user agent")}} performs four steps to calculate a property's act
   - [CSS syntax](/en-US/docs/Web/CSS/Syntax)
   - [At-rules](/en-US/docs/Web/CSS/At-rule)
   - [Comments](/en-US/docs/Web/CSS/Comments)
-  - [Specificity](/en-US/docs/Web/CSS/Specificity)
+  - [Specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity)
   - [Inheritance](/en-US/docs/Web/CSS/Inheritance)
   - [Box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
   - [Layout modes](/en-US/docs/Web/CSS/Layout_mode)

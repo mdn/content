@@ -523,7 +523,7 @@
 /en-US/docs/CSS/Scaling_background_images	/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images
 /en-US/docs/CSS/Scaling_of_SVG_backgrounds	/en-US/docs/Web/CSS/Scaling_of_SVG_backgrounds
 /en-US/docs/CSS/Shorthand_properties	/en-US/docs/Web/CSS/Shorthand_properties
-/en-US/docs/CSS/Specificity	/en-US/docs/Web/CSS/Specificity
+/en-US/docs/CSS/Specificity	/en-US/docs/Web/CSS/CSS_cascade/Specificity
 /en-US/docs/CSS/Syntax	/en-US/docs/Web/CSS/Syntax
 /en-US/docs/CSS/Text-overflow_TEST	/en-US/docs/Web/CSS/text-overflow
 /en-US/docs/CSS/Tutorial/Using_CSS_flexible_boxes	/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox
@@ -11958,6 +11958,7 @@
 /en-US/docs/Web/CSS/Reference/object-position	/en-US/docs/Web/CSS/object-position
 /en-US/docs/Web/CSS/Selector_lists	/en-US/docs/Web/CSS/Selector_list
 /en-US/docs/Web/CSS/Selectors	/en-US/docs/Web/CSS/CSS_Selectors
+/en-US/docs/Web/CSS/Specificity	/en-US/docs/Web/CSS/CSS_cascade/Specificity
 /en-US/docs/Web/CSS/Text-overflow_TEST	/en-US/docs/Web/CSS/text-overflow
 /en-US/docs/Web/CSS/Tools	/en-US/docs/Web/CSS
 /en-US/docs/Web/CSS/Tools/Border-image_generator	/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Border-image_generator

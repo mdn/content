@@ -47,7 +47,7 @@ Finally, note that for non-replaced inline elements, the amount of space taken u
   - [CSS syntax](/en-US/docs/Web/CSS/Syntax)
   - [At-rules](/en-US/docs/Web/CSS/At-rule)
   - [Comments](/en-US/docs/Web/CSS/Comments)
-  - [Specificity](/en-US/docs/Web/CSS/Specificity)
+  - [Specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity)
   - [Inheritance](/en-US/docs/Web/CSS/Inheritance)
   - [Layout modes](/en-US/docs/Web/CSS/Layout_mode)
   - [Visual formatting models](/en-US/docs/Web/CSS/Visual_formatting_model)

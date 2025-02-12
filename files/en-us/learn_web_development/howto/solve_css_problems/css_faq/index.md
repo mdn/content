@@ -248,7 +248,7 @@ div {
 <div id="orange" class="green" style="color: red;">This is red</div>
 ```
 
-The rules are more complicated when the selector has multiple parts. A more detailed explanation about how selector specificity is calculated can be found in the [CSS specificity documentation](/en-US/docs/Web/CSS/Specificity).
+The rules are more complicated when the selector has multiple parts. A more detailed explanation about how selector specificity is calculated can be found in the [CSS specificity documentation](/en-US/docs/Web/CSS/CSS_cascade/Specificity).
 
 ## What do the -moz-\*, -ms-\*, -webkit-\*, -o-\* and -khtml-\* properties do?
 
