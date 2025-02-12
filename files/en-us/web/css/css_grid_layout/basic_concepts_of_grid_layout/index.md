@@ -480,7 +480,7 @@ The second item starts on grid column line 1, and spans one track. This is the d
 
 {{ EmbedLiveSample('Positioning_items_against_lines', '230', '450') }}
 
-Use the grid Inspector in your developer tools to see how the items are positioned against the lines of the grid.
+Use the grid inspector in your developer tools to see how the items are positioned against the lines of the grid.
 
 ### Line-positioning shorthands
 
