@@ -83,7 +83,7 @@ The keyword values can be grouped into six value categories.
 > }
 > ```
 >
-> See [Using the multi-keyword syntax with CSS display](/en-US/docs/Web/CSS/display/multi-keyword_syntax_of_display) for more information.
+> See [Using the multi-keyword syntax with CSS display](/en-US/docs/Web/CSS/CSS_display/multi-keyword_syntax_of_display) for more information.
 
 ### Inside
 
@@ -224,7 +224,7 @@ This can also be specified using the legacy single value:
 }
 ```
 
-For more information on these changes, see the [Using the multi-keyword syntax with CSS display](/en-US/docs/Web/CSS/display/multi-keyword_syntax_of_display) guide.
+For more information on these changes, see the [Using the multi-keyword syntax with CSS display](/en-US/docs/Web/CSS/CSS_display/multi-keyword_syntax_of_display) guide.
 
 ### Global
 
@@ -241,7 +241,7 @@ The individual pages for the different types of value that `display` can have se
 
 ### Multi-keyword values
 
-- [Using the multi-keyword syntax with CSS display](/en-US/docs/Web/CSS/display/multi-keyword_syntax_of_display)
+- [Using the multi-keyword syntax with CSS display](/en-US/docs/Web/CSS/CSS_display/multi-keyword_syntax_of_display)
 
 ### CSS Flow Layout (display: block, display: inline)
 

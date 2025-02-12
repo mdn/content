@@ -41,7 +41,7 @@ The **CSS display** module defines how the CSS formatting box tree is generated 
 
 ## Guides
 
-- [Using the multi-keyword syntax with CSS display](/en-US/docs/Web/CSS/display/multi-keyword_syntax_of_display)
+- [Using the multi-keyword syntax with CSS display](/en-US/docs/Web/CSS/CSS_display/multi-keyword_syntax_of_display)
   - : Describes the multi-keyword syntax and compares this syntax with legacy single-keyword values.
 - [Block and inline layout in normal flow](/en-US/docs/Web/CSS/CSS_display/Block_and_inline_layout_in_normal_flow)
   - : The basics of how block and inline elements behave when they are part of the normal flow.

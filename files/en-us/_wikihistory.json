@@ -76461,6 +76461,18 @@
       "rachelandrew"
     ]
   },
+  "Web/CSS/CSS_display/multi-keyword_syntax_of_display": {
+    "modified": "2020-10-15T22:26:04.121Z",
+    "contributors": [
+      "ExE-Boss",
+      "gerfolder",
+      "blueblots",
+      "zbjornson",
+      "pallxk",
+      "chrisdavidmills",
+      "rachelandrew"
+    ]
+  },
   "Web/CSS/CSS_filter_effects": {
     "modified": "2020-12-02T11:05:43.361Z",
     "contributors": ["peterbe", "wbamberg", "fscholz", "mfluehr"]
@@ -83084,18 +83096,6 @@
       "fscholz",
       "ExE-Boss",
       "chrisdavidmills"
-    ]
-  },
-  "Web/CSS/display/multi-keyword_syntax_of_display": {
-    "modified": "2020-10-15T22:26:04.121Z",
-    "contributors": [
-      "ExE-Boss",
-      "gerfolder",
-      "blueblots",
-      "zbjornson",
-      "pallxk",
-      "chrisdavidmills",
-      "rachelandrew"
     ]
   },
   "Web/CSS/easing-function": {
