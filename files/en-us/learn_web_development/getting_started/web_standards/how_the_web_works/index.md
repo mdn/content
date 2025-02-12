@@ -46,7 +46,7 @@ Computers connected to the internet are called **clients** and **servers**. A si
 ![Two circles representing client and server. An arrow labelled request is going from client to server, and an arrow labelled responses is going from server to client](simple-client-server.png)
 
 - Clients are the typical web user's internet-connected devices (for example, your computer connected to your Wi-Fi, or your phone connected to your mobile network) and web-accessing software available on those devices (usually a web browser like Firefox or Chrome).
-- Servers are computers that store webpages, sites, or apps. When a client device wants to access a webpage, a copy of the webpage code is downloaded from the server onto the client machine to rendered by the browser and displayed to the user.
+- Servers are computers that store webpages, sites, or apps. When a client wants to access a webpage, a copy of the webpage code is downloaded from the server onto the client machine to rendered by the browser and displayed to the user.
 
 ## The other parts of the toolbox
 
@@ -62,9 +62,9 @@ In order for data to get back and forth, we need the following things:
 - **TCP/IP**: **Transmission Control Protocol** and **Internet Protocol** (TCP/IP) are communication protocols that define how data should travel across the internet. This is like the transport mechanisms that let you place an order, go to the shop, and buy your goods. In our example, this is like a car or a bike (or however else you might travel along the road).
 - **DNS**: The **Domain Name System** (DNS) is like an address book for websites. When you type a web address in your browser, the browser looks at the DNS to find the website's IP address — the actual address the server is located at — before it can retrieve the website (see [DNS explained](#dns_explained) below for more information). The browser needs to find out which server the website lives on, so it can send HTTP messages to the right place (see below). This is like looking up the address of the shop before you visit it.
 - **HTTP**: **Hypertext Transfer Protocol** (HTTP) is an application {{Glossary("Protocol", "protocol")}} that defines a language for clients and servers to speak to each other. This is like the language you use to order your goods. See [HTTP basics](#http_basics) below.
-- **Component files**: A website is made up of many different files, which are like the different goods you buy from the shop. These files come in two main types:
+- **Files**: A website is made up of many different files, which are like the different goods you buy from the shop. These files come in two main types:
 
-  - **Code files**: Websites are built primarily from HTML, CSS, and JavaScript — the different programming languages websites are written in, which the browser interprets and assembles into a web page to display to a user.
+  - **Code**: Websites are built primarily from HTML, CSS, and JavaScript — the different programming languages websites are written in, which the browser interprets and assembles into a web page to display to a user.
   - **Assets**: This is a collective term for all the other items that appear on a website — such as images, music, video, Word documents, and PDFs — that aren't code that the browser interprets.
 
   > [!NOTE]
@@ -144,16 +144,16 @@ The full response is more complex than this, but we have omitted most of it for 
 
 ### Other status codes
 
-Above, we met the `200` [status code](/en-US/docs/Web/HTTP/Status), which indicates that the HTTP request was successful. There are many other status code that you'll come across; the most common ones are:
+Above, we met the `200` [status code](/en-US/docs/Web/HTTP/Status), which indicates that the HTTP request was successful. There are many HTTP status codes with specific meanings and uses, but you will only commonly see a few:
 
 - `301`
   - : The requested resource has been permanently moved to a new location, which is provided in the response. This is used for redirecting content when it's moved.
 - `400`
-  - : The server cannot or will not process the request due to a problem with the request itself.
+  - : The server can't process the request. This usually happens when the request isn't in a format the server understands, or has errors in it.
 - `403`
-  - : The server will not give the client access to the requested resource because it does not have the necessary permissions to access it.
+  - : The server will not give the client access to the requested resource. This usually happens when the server knows who the client is, but they don't have permission to access the requested page.
 - `404`
-  - : The server cannot find the requested resource.
+  - : The server cannot find the requested resource. This status is commonly returned if the URL is wrong or if content is deleted without putting a redirect in place.
 - `503`
   - : The request cannot be handled due to a problem with the server. This is common when servers are offline for maintenance, and it's expected to be temporary.
 

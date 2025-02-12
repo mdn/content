@@ -210,14 +210,14 @@ There is another class of languages called back-end (or server-side) languages, 
 
 Example server-side frameworks and languages include ASP.NET (C#), Django (Python), Laravel (PHP), and Next.js (JavaScript).
 
-These technologies are not considered to be "web standards" — they are developed by organizations outside the web standards processes of organization such as the W3C and WHATWG — although some of them will have processes that are similarly open.
+These technologies are not considered to be "web standards" — they are developed by organizations outside the web standards processes of organizations such as the W3C and WHATWG — although some of them will have processes that are similarly open.
 
 ### Static versus dynamic
 
 Another way that client-side and server-side languages are often described is **static** and **dynamic**:
 
 - A plain HTML file is stored on the server. When requested, it is delivered to the client, unchanged, and rendered by the browser. Because it does not change, it is referred to as "static".
-- Revisiting the server-side example we briefly described above, when some server-side code (for example, a Python script or an ASP.NET page) queries a database, generates some HTML to contain the data and then returns that HTML to the client for the browser to render and display, that HTML is the same page, but with some of the content changed depending on what inputs the server-side code received in the request. It is therefore referred to as "dynamic".
+- When server-side code (for example, a Python script or an ASP.NET page) generates some HTML containing data and returns that HTML to the client, the contents of the HTML change depending on what the server-side code does. It is therefore referred to as "dynamic".
 
 There is often a bit of overlap between the concepts of static and dynamic code. Server-side languages usually define HTML structures inside a template file, which tend to be mostly static HTML with some special dynamic sections included that change depending on what data needs to be inserted.
 

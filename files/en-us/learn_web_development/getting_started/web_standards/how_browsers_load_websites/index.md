@@ -161,9 +161,9 @@ The final output is as follows:
 
 {{EmbedLiveSample('Handling the JavaScript', '100%', 90)}}
 
-## What else happens?
+## What other rendering steps are there?
 
-There are several other things that happen during page rendering, but we won't discuss them all here. One notable additional occurrence worth mentioning is that an accessibility tree is built, based on the DOM, for assistive technologies (for example screen readers) to hook into, which enables people who are not able to see the rendered content to interact with it.
+Several other things happen during page rendering, but we won't discuss them all here. One notable additional occurrence worth mentioning is that an accessibility tree is built, based on the DOM, for assistive technologies (for example screen readers) to hook into, which enables people who are not able to see the rendered content to interact with it.
 
 You will learn more about this later on, in our [Accessibility](/en-US/docs/Learn_web_development/Core/Accessibility) module.
 
@@ -171,13 +171,13 @@ You will learn more about this later on, in our [Accessibility](/en-US/docs/Lear
 
 Front-end web development can sometimes be frustrating, and some people consider the browser to be a hostile programming environment. This is because, unlike other programming environments, it is much harder to make guarantees about the environment your code will run on. You cannot know ahead of time all the different combinations of operating system, browser, language, location, network connection, CPU, GPU, memory, battery life, etc., that your users will have, therefore you cannot guarantee a perfect user experience for all of them.
 
-Modern browsers tend to implement web standards pretty consistently, but there is still a lot of uncertainty to navigate. As a web developer, you will need to embrace that uncertainty and learn to program defensively. This relies on adhering to the [best practices](/en-US/docs/Learn_web_development/Getting_started/Web_standards/The_web_standards_model#web_best_practices) outlined in the previous article.
+Modern browsers tend to implement web standards pretty consistently, but there is still a lot of uncertainty to navigate. As a web developer, you will need to embrace that uncertainty, programming defensively and being conservative with the features you use. This relies on adhering to the [best practices](/en-US/docs/Learn_web_development/Getting_started/Web_standards/The_web_standards_model#web_best_practices) outlined in the previous article.
 
 On the upside, the web is also an awesome programming environment, for many reasons.
 
-- For a start, it is designed with universal access in mind — its basic state is accessible and linkable. Some of these basics are harder to achieve in other environments.
+- For a start, it is designed with universal access in mind. The web's basic state is accessible and linkable. Some of these basics are harder to achieve in other environments.
 - App delivery across the web is simple and powerful. You don't need to take your users through a complicated installation process: you just point them to a web address and off they go.
-- As a result, app updates are also easy — in many cases, you can just reload the browser tab. You don't need to worry about getting your users to constantly download and install large packages.
+- App updates are usually straightforward. In many cases, visitors can see new versions of an application when they reload their browser tab. You don't need to worry about getting visitors to regularly download and install software updates.
 - The web community is vibrant and helpful. As we discuss later on in our [Research and learning](/en-US/docs/Learn_web_development/Getting_started/Soft_skills/Research_and_learning) article, there are lots of places you can do to ask for help, and great resources available to learn from.
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Web_standards/The_web_standards_model", "Learn_web_development/Getting_started/Soft_skills", "Learn_web_development/Getting_started/Web_standards")}}
