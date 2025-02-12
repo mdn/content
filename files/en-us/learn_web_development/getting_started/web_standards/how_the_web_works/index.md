@@ -155,7 +155,7 @@ Above, we met the `200` [status code](/en-US/docs/Web/HTTP/Status), which indica
 - `404`
   - : The server cannot find the requested resource.
 - `503`
-  - : The request cannot be handled due to a problem with the server.
+  - : The request cannot be handled due to a problem with the server. This is common when servers are offline for maintenance, and it's expected to be temporary.
 
 ## Components of a URL
 
