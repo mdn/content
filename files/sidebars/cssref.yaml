@@ -163,6 +163,15 @@ sidebar:
     details: closed
     children:
       - /Web/CSS/CSSOM_view/Coordinate_systems
+  - title: Display
+    details: closed
+    children:
+      - /Web/CSS/CSS_display/Block_and_inline_layout_in_normal_flow
+      - /Web/CSS/CSS_display/In_flow_and_out_of_flow
+      - /Web/CSS/CSS_display/Introduction_to_formatting_contexts
+      - /Web/CSS/CSS_display/Flow_layout_and_writing_modes
+      - /Web/CSS/CSS_display/Flow_layout_and_overflow
+      - /Web/CSS/CSS_display/multi-keyword_syntax_of_display
   - title: Flexbox
     details: closed
     children:
@@ -173,14 +182,6 @@ sidebar:
       - /Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis
       - /Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items
       - /Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox
-  - title: Flow_layout
-    details: closed
-    children:
-      - /Web/CSS/CSS_flow_layout/Block_and_inline_layout_in_normal_flow
-      - /Web/CSS/CSS_flow_layout/In_flow_and_out_of_flow
-      - /Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts
-      - /Web/CSS/CSS_flow_layout/Flow_layout_and_writing_modes
-      - /Web/CSS/CSS_flow_layout/Flow_layout_and_overflow
   - title: Fonts
     details: closed
     children:
@@ -305,8 +306,8 @@ l10n:
     Conditional_rules: Bedingte Regeln
     Containment: Containment
     CSSOM_view: CSSOM-Ansicht
+    Display: Display
     Flexbox: Flexbox
-    Flow_layout: Fluss-Layout
     Fonts: Schriftarten
     Functions: Funktionen
     Grid: Raster
@@ -347,8 +348,8 @@ l10n:
     Conditional_rules: Conditional rules
     Containment: Containment
     CSSOM_view: CSSOM view
+    Display: Display
     Flexbox: Flexbox
-    Flow_layout: Flow layout
     Fonts: Fonts
     Grid: Grid
     Images: Images
@@ -376,7 +377,7 @@ l10n:
     Conditional_rules: Règles conditionnelles
     CSSOM_view: Vue CSSOM
     Flexbox: Boîtes flexibles
-    Flow_layout: Disposition de flux
+    Display: Mis en page
     Fonts: Polices
     Grid: Grille
     Images: Images
@@ -407,9 +408,9 @@ l10n:
     Columns: 段組み
     Conditional_rules: 条件付きルール
     Containment: 拘束
+    Display: フローレイアウト
     CSSOM_view: CSSOM view
     Flexbox: フレックスボックス
-    Flow_layout: フローレイアウト
     Fonts: フォント
     Grid: グリッド
     Images: 画像
@@ -436,8 +437,8 @@ l10n:
     Columns: 열
     Conditional_rules: CSS에서 규칙 정의하기
     CSSOM_view: CSSOM view
+    Display: 플로 레이아웃
     Flexbox: 플렉스박스
-    Flow_layout: 플로 레이아웃
     Fonts: 글꼴
     Grid: 그리드
     Images: 이미지
@@ -466,8 +467,8 @@ l10n:
     Columns: Колонки
     Conditional_rules: Условные конструкции
     CSSOM_view: CSSOM View
+    Display: Потоковая раскладка
     Flexbox: Флексбокс
-    Flow_layout: Потоковая раскладка
     Fonts: Шрифты
     Grid: Грид
     Images: Изображения
@@ -495,8 +496,8 @@ l10n:
     Columns: 多列
     Conditional_rules: 条件规则
     CSSOM_view: CSS 对象模型视图
+    Display: 流式布局
     Flexbox: 弹性盒布局
-    Flow_layout: 流式布局
     Fonts: 字体
     Grid: 网格布局
     Images: 图片
