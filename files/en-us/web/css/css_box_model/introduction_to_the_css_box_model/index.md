@@ -40,7 +40,7 @@ Finally, note that for non-replaced inline elements, the amount of space taken u
 
 ## See also
 
-- [Layout and the containing block](/en-US/docs/Web/CSS/Containing_block)
+- [Layout and the containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block)
 - [Introducing the CSS Cascade](/en-US/docs/Web/CSS/CSS_cascade/Cascade)
 - [Learn: Handling conflicts](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
 - CSS key concepts:
