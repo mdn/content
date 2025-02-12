@@ -75982,23 +75982,6 @@
       "CitizenK"
     ]
   },
-  "Web/CSS/CSS_Types": {
-    "modified": "2020-12-11T13:13:56.675Z",
-    "contributors": [
-      "rachelandrew",
-      "chrisdavidmills",
-      "ramiy",
-      "mfuji09",
-      "wbamberg",
-      "jswisher",
-      "estelle",
-      "Sheppy",
-      "mfluehr",
-      "david_ross",
-      "CarloMartini",
-      "mantou"
-    ]
-  },
   "Web/CSS/CSS_Values_and_Units": {
     "modified": "2020-10-29T16:36:56.704Z",
     "contributors": [
@@ -76014,6 +75997,23 @@
       "estelle",
       "rachelandrew",
       "chrisdavidmills"
+    ]
+  },
+  "Web/CSS/CSS_Values_and_Units/CSS_data_types": {
+    "modified": "2020-12-11T13:13:56.675Z",
+    "contributors": [
+      "rachelandrew",
+      "chrisdavidmills",
+      "ramiy",
+      "mfuji09",
+      "wbamberg",
+      "jswisher",
+      "estelle",
+      "Sheppy",
+      "mfluehr",
+      "david_ross",
+      "CarloMartini",
+      "mantou"
     ]
   },
   "Web/CSS/CSS_animated_properties": {
@@ -76270,6 +76270,30 @@
       "teoli"
     ]
   },
+  "Web/CSS/CSS_cascade/Inheritance": {
+    "modified": "2020-09-16T06:00:09.005Z",
+    "contributors": [
+      "mfuji09",
+      "OtterOne",
+      "Malvoz",
+      "Sheppy",
+      "mfluehr",
+      "GiS91",
+      "kscarfone",
+      "teoli",
+      "shitface",
+      "FredB",
+      "sloppy_4455",
+      "miken32",
+      "Marsf",
+      "Zearin",
+      "Mgjbot",
+      "Killerowski",
+      "Bedi",
+      "Fredchat",
+      "DBaron"
+    ]
+  },
   "Web/CSS/CSS_cascade/Specificity": {
     "modified": "2020-11-14T16:01:00.890Z",
     "contributors": [
@@ -76321,6 +76345,114 @@
       "MattBrubeck",
       "fryn",
       "jwalker"
+    ]
+  },
+  "Web/CSS/CSS_cascade/actual_value": {
+    "modified": "2020-07-14T09:14:02.638Z",
+    "contributors": [
+      "mfuji09",
+      "wbamberg",
+      "mfluehr",
+      "sergio-vb",
+      "Sebastianz",
+      "teoli",
+      "kscarfone",
+      "ethertank",
+      "Sheppy",
+      "FredB",
+      "ziyunfei",
+      "McGurk"
+    ]
+  },
+  "Web/CSS/CSS_cascade/computed_value": {
+    "modified": "2020-08-10T14:01:43.680Z",
+    "contributors": [
+      "mfuji09",
+      "wbamberg",
+      "hinell",
+      "mfluehr",
+      "Cath_kb",
+      "Sebastianz",
+      "Sheppy",
+      "Urgot",
+      "Dholbert",
+      "kscarfone",
+      "ethertank",
+      "trevorh",
+      "mmjyu",
+      "FredB",
+      "teoli",
+      "Jürgen Jeka",
+      "Mgjbot",
+      "Marsf",
+      "Fredchat",
+      "DBaron"
+    ]
+  },
+  "Web/CSS/CSS_cascade/initial_value": {
+    "modified": "2020-07-07T12:36:02.958Z",
+    "contributors": [
+      "wbamberg",
+      "gerfolder",
+      "mfluehr",
+      "CannedYerins",
+      "kscarfone",
+      "Sheppy",
+      "FredB",
+      "teoli",
+      "ethertank",
+      "kyleb",
+      "Marsf",
+      "Mgjbot",
+      "Kohei",
+      "Pastelgrim",
+      "Killerowski",
+      "Bedi",
+      "Fredchat",
+      "DBaron"
+    ]
+  },
+  "Web/CSS/CSS_cascade/specified_value": {
+    "modified": "2020-08-10T14:28:31.353Z",
+    "contributors": [
+      "mfuji09",
+      "wbamberg",
+      "hinell",
+      "mfluehr",
+      "asteroidb612",
+      "Sheppy",
+      "BychekRU",
+      "Sebastianz",
+      "McGurk"
+    ]
+  },
+  "Web/CSS/CSS_cascade/used_value": {
+    "modified": "2020-07-07T12:48:07.054Z",
+    "contributors": [
+      "wbamberg",
+      "mfuji09",
+      "myf",
+      "hinell",
+      "FumiyaShibusawa",
+      "Tuman",
+      "shogunsea",
+      "mfluehr",
+      "Loadmaster",
+      "Mori",
+      "david_ross",
+      "DecadeCode",
+      "azoorob3",
+      "fcard",
+      "Syle91",
+      "kscarfone",
+      "phil_nist",
+      "Kritz",
+      "Dholbert",
+      "teoli",
+      "ethertank",
+      "Sheppy",
+      "FredB",
+      "yonathan"
     ]
   },
   "Web/CSS/CSS_cascading_variables": {
@@ -78103,30 +78235,6 @@
       "miken32"
     ]
   },
-  "Web/CSS/Inheritance": {
-    "modified": "2020-09-16T06:00:09.005Z",
-    "contributors": [
-      "mfuji09",
-      "OtterOne",
-      "Malvoz",
-      "Sheppy",
-      "mfluehr",
-      "GiS91",
-      "kscarfone",
-      "teoli",
-      "shitface",
-      "FredB",
-      "sloppy_4455",
-      "miken32",
-      "Marsf",
-      "Zearin",
-      "Mgjbot",
-      "Killerowski",
-      "Bedi",
-      "Fredchat",
-      "DBaron"
-    ]
-  },
   "Web/CSS/Inline_formatting_context": {
     "modified": "2020-04-27T22:33:13.546Z",
     "contributors": ["pans9", "chrisdavidmills", "rachelandrew"]
@@ -78774,23 +78882,6 @@
       "Jeremie",
       "Inkbug",
       "ziyunfei"
-    ]
-  },
-  "Web/CSS/actual_value": {
-    "modified": "2020-07-14T09:14:02.638Z",
-    "contributors": [
-      "mfuji09",
-      "wbamberg",
-      "mfluehr",
-      "sergio-vb",
-      "Sebastianz",
-      "teoli",
-      "kscarfone",
-      "ethertank",
-      "Sheppy",
-      "FredB",
-      "ziyunfei",
-      "McGurk"
     ]
   },
   "Web/CSS/align-content": {
@@ -82589,31 +82680,6 @@
       "brianloveswords"
     ]
   },
-  "Web/CSS/computed_value": {
-    "modified": "2020-08-10T14:01:43.680Z",
-    "contributors": [
-      "mfuji09",
-      "wbamberg",
-      "hinell",
-      "mfluehr",
-      "Cath_kb",
-      "Sebastianz",
-      "Sheppy",
-      "Urgot",
-      "Dholbert",
-      "kscarfone",
-      "ethertank",
-      "trevorh",
-      "mmjyu",
-      "FredB",
-      "teoli",
-      "Jürgen Jeka",
-      "Mgjbot",
-      "Marsf",
-      "Fredchat",
-      "DBaron"
-    ]
-  },
   "Web/CSS/contain": {
     "modified": "2020-12-09T11:47:29.070Z",
     "contributors": [
@@ -85266,29 +85332,6 @@
       "Sebastianz",
       "OlofT",
       "Ruggero"
-    ]
-  },
-  "Web/CSS/initial_value": {
-    "modified": "2020-07-07T12:36:02.958Z",
-    "contributors": [
-      "wbamberg",
-      "gerfolder",
-      "mfluehr",
-      "CannedYerins",
-      "kscarfone",
-      "Sheppy",
-      "FredB",
-      "teoli",
-      "ethertank",
-      "kyleb",
-      "Marsf",
-      "Mgjbot",
-      "Kohei",
-      "Pastelgrim",
-      "Killerowski",
-      "Bedi",
-      "Fredchat",
-      "DBaron"
     ]
   },
   "Web/CSS/inline-size": {
@@ -88616,20 +88659,6 @@
       "rebeccahauck"
     ]
   },
-  "Web/CSS/specified_value": {
-    "modified": "2020-08-10T14:28:31.353Z",
-    "contributors": [
-      "mfuji09",
-      "wbamberg",
-      "hinell",
-      "mfluehr",
-      "asteroidb612",
-      "Sheppy",
-      "BychekRU",
-      "Sebastianz",
-      "McGurk"
-    ]
-  },
   "Web/CSS/string": {
     "modified": "2020-10-15T21:10:29.888Z",
     "contributors": [
@@ -90229,35 +90258,6 @@
       "paul-go",
       "GuyLewin",
       "estelle"
-    ]
-  },
-  "Web/CSS/used_value": {
-    "modified": "2020-07-07T12:48:07.054Z",
-    "contributors": [
-      "wbamberg",
-      "mfuji09",
-      "myf",
-      "hinell",
-      "FumiyaShibusawa",
-      "Tuman",
-      "shogunsea",
-      "mfluehr",
-      "Loadmaster",
-      "Mori",
-      "david_ross",
-      "DecadeCode",
-      "azoorob3",
-      "fcard",
-      "Syle91",
-      "kscarfone",
-      "phil_nist",
-      "Kritz",
-      "Dholbert",
-      "teoli",
-      "ethertank",
-      "Sheppy",
-      "FredB",
-      "yonathan"
     ]
   },
   "Web/CSS/user-modify": {

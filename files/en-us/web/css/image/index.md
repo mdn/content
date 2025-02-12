@@ -7,7 +7,7 @@ browser-compat: css.types.image
 
 {{CSSRef}}
 
-The **`<image>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) represents a two-dimensional image.
+The **`<image>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) represents a two-dimensional image.
 
 ## Syntax
 
