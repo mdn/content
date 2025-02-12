@@ -60,7 +60,7 @@ Block at-rules end in a `{}`-block that contain nested rules, other at-rules, or
 - {{cssxref("@position-try")}}
   - : Defines custom position options which can be used to define fallback positioning and alignment options for anchor-positioned elements ([CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning)).
 - {{cssxref("@property")}}
-  - : Defines a [CSS custom property](/en-US/docs/Web/CSS/Using_CSS_custom_properties), allowing for property type checking and constraining, setting default values, and defining whether a custom property can inherit values or not ([CSS custom properties for cascading variables](/en-US/docs/Web/CSS/CSS_cascading_variables)).
+  - : Defines a [CSS custom property](/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties), allowing for property type checking and constraining, setting default values, and defining whether a custom property can inherit values or not ([CSS custom properties for cascading variables](/en-US/docs/Web/CSS/CSS_cascading_variables)).
 - {{cssxref("@scope")}}
   - : Defines a scope in which to apply them to selected elements and the styles to apply to the elements in that scope ([CSS cascading and inheritance](/en-US/docs/Web/CSS/CSS_cascade)).
 - {{cssxref("@starting-style")}}
