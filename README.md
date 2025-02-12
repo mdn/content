@@ -1,50 +1,45 @@
-# Welcome to MDN Web Docs
+# Bienvenue sur MDN Web Docs
 
 ![github-profile](https://user-images.githubusercontent.com/10350960/166113119-629295f6-c282-42c9-9379-af2de5ad4338.png)
 
-[MDN Web Docs][] is an open-source, collaborative project that documents web technologies including CSS, HTML, JavaScript, and Web APIs.
-Alongside detailed reference documentation, we provide extensive learning resources for students and beginners getting started with web development.
+[MDN Web Docs](https://developer.mozilla.org/fr/) est un projet collaboratif et open-source qui documente les technologies web, y compris CSS, HTML, JavaScript, et les API Web.  
+Nous offrons une documentation de référence détaillée, accompagnée de ressources d'apprentissage étendues pour les étudiants et débutants souhaitant se lancer dans le développement web.
 
-## MDN's mission
+## La mission de MDN
 
-MDN's mission is to provide a blueprint for a better internet and empower a new generation of developers and content creators to build it.
+La mission de MDN est de fournir un modèle pour un internet meilleur et de donner aux nouvelles générations de développeurs et créateurs de contenu les outils nécessaires pour le bâtir.
 
-The strength of MDN Web Docs lies in its vast community of active readers and contributors.
-Since 2005, approximately 45,000 contributors have created the documentation we know and love.
-Together, contributors have created over 45,000 documents that make up an up-to-date, comprehensive, and free resource for web developers worldwide.
+La force de MDN Web Docs repose sur sa vaste communauté de lecteurs et contributeurs actifs.  
+Depuis 2005, environ 45 000 contributeurs ont enrichi la documentation que nous connaissons et aimons aujourd'hui. Ensemble, ils ont créé plus de 45 000 documents, offrant ainsi une ressource complète, à jour et gratuite pour les développeurs web du monde entier.
 
-In addition to English-language articles, over 35 volunteers lead translation and localization efforts for Chinese, French, Japanese, Korean, Portuguese, Russian, and Spanish.
+Outre les articles en anglais, plus de 35 bénévoles mènent des efforts de traduction et de localisation pour les langues suivantes : chinois, français, japonais, coréen, portugais, russe, et espagnol.
 
-## Build the site
+## Développer le site localement
 
-To set up the site locally, you need to have [Node.js](https://nodejs.org/) and [Yarn](https://classic.yarnpkg.com/) installed.
-You can check if these are installed by running the following commands:
+Pour configurer le site en local, vous devez avoir [Node.js](https://nodejs.org/) et [Yarn](https://classic.yarnpkg.com/) installés.  
+Vérifiez si ces outils sont installés en exécutant les commandes suivantes :
 
 ```bash
 node -v
 yarn -v
 ```
 
-After you have installed Node.js and Yarn, you can install the dependencies using `yarn` and start the local preview:
+Une fois Node.js et Yarn installés, vous pouvez installer les dépendances avec la commande yarn et démarrer l'aperçu local du site :
 
 ```bash
 yarn
 yarn start
 ```
 
-Once started, a live preview is available at `http://localhost:5042/`.
+Une fois lancé, un aperçu en direct sera disponible à l'adresse suivante : http://localhost:5042/.
 
-## Contribute to MDN Web Docs
+## Contribuer à MDN Web Docs
 
-You can contribute to MDN Web Docs and be a part of our community through content contributions, engineering, or translation work.
-The MDN Web Docs project welcomes contributions from everyone who shares our goals and wants to contribute constructively and respectfully within our community.
+Vous pouvez contribuer à MDN Web Docs et faire partie de notre communauté en apportant des contributions de contenu, de développement ou de traduction.
+Le projet MDN Web Docs accueille les contributions de tous ceux qui partagent nos objectifs et souhaitent participer de manière constructive et respectueuse au sein de notre communauté.
 
-To find out how to get started, see the [CONTRIBUTING.md](CONTRIBUTING.md) document in this repository.
-By participating in and contributing to our projects and discussions, you acknowledge that you have read and agree to our [Code of Conduct](CODE_OF_CONDUCT.md), which means adhering to [Mozilla's Community Participation Guidelines](https://www.mozilla.org/en-US/about/governance/policies/participation/).
+Pour savoir comment commencer, consultez le document [CONTRIBUTING.md](CONTRIBUTING.md) dans ce dépôt.
+En participant à nos projets et discussions, vous reconnaissez avoir lu et accepté notre Code de Conduite, ce qui implique de respecter les lignes directrices de participation de Mozilla.
+Contactez-nous
 
-## Get in touch
-
-You can communicate with the MDN Web Docs team and community using the [communication channels][].
-
-[communication channels]: https://developer.mozilla.org/en-US/docs/MDN/Community/Communication_channels
-[MDN Web Docs]: https://developer.mozilla.org/
+Vous pouvez communiquer avec l'équipe [MDN Web Docs](https://developer.mozilla.org/) et la [communauté via nos canaux de communication](https://developer.mozilla.org/en-US/docs/MDN/Community/Communication_channels).
