@@ -178,6 +178,6 @@ On the upside, the web is also an awesome programming environment, for many reas
 - For a start, it is designed with univeral access in mind — its basic state is accessible and linkable. Some of these basics are harder to achieve in other environments.
 - App delivery across the web is simple and powerful. You don't need to take your users through a complicated installation process: you just point them to a web address and off they go.
 - As a result, app updates are also easy — in many cases, you can just reload the browser tab. You don't need to worry about getting your users to constantly download and install large packages.
-- The web community is vibrant and helpful. as we discuss later on in our [Research and learning](/en-US/docs/Learn_web_development/Getting_started/Soft_skills/Research_and_learning) article, there are lots of places you can do to ask for help, and great resources available to learn from.
+- The web community is vibrant and helpful. As we discuss later on in our [Research and learning](/en-US/docs/Learn_web_development/Getting_started/Soft_skills/Research_and_learning) article, there are lots of places you can do to ask for help, and great resources available to learn from.
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Web_standards/The_web_standards_model", "Learn_web_development/Getting_started/Soft_skills", "Learn_web_development/Getting_started/Web_standards")}}
