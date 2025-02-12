@@ -95,6 +95,7 @@ Other objects are converted to strings using their `toString()` method. For exam
 
 ```js
 const response = await fetch("https://example.org/post", {
+  method: "POST",
   headers: {
     "Content-Type": "application/x-www-form-urlencoded",
   },
