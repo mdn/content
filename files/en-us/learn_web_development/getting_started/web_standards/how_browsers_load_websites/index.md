@@ -41,7 +41,7 @@ To summarize the [overview of web technologies](/en-US/docs/Learn_web_developmen
 - Media assets such as images, videos, audio files, [PDFs](/en-US/docs/Glossary/PDF), and [SVGs](/en-US/docs/Glossary/SVG), which are embedded in web pages or otherwise displayed by the browser.
 - Other kinds of file that the browser can't handle natively and therefore hands off to a relevant app on the device to render, for example Word or Pages documents, PowerPoint slide decks, and Open Office files.
 
-## Web page rendereding
+## Web page rendering
 
 When the user navigates to a new web page (by clicking a link, or entering a web address in the browser address bar), several HTTP requests are sent, and several files are sent back in HTTP responses. The files received in these responses are processed by the browser and put together into a web page that the user can interact with. This process of assembling the pieces into a web page is called **rendering**.
 
