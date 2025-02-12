@@ -113,7 +113,7 @@ You will find that you quickly learn some values, whereas others you will need t
 
 ## How is CSS applied to HTML?
 
-As explained in [How browsers load websites](/en-US/docs/Learn_web_development/Getting_started/Web_standards/How_browsers_load_websites), when a web page is navigated to, the browser first receives the HTML document containing the web page content and converts it to a **DOM tree**.
+As explained in [How browsers load websites](/en-US/docs/Learn_web_development/Getting_started/Web_standards/How_browsers_load_websites), when you navigate to a web page, the browser first receives the HTML document containing the web page content and converts it to a **DOM tree**.
 
 After that, any CSS rules found in the web page (either inserted directly in the HTML, or in referenced external `.css` files) are sorted into different "buckets", based on the different elements they will be applied to (as specified by their selectors). The CSS rules are then applied to the DOM tree, resulting in a **render tree**, which is then painted to the browser window.
 
