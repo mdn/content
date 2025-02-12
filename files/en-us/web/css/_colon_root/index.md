@@ -29,7 +29,7 @@ The **`:root`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Ps
 
 ### Declaring global CSS variables
 
-`:root` can be useful for declaring global [CSS variables](/en-US/docs/Web/CSS/Using_CSS_custom_properties):
+`:root` can be useful for declaring global [CSS variables](/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties):
 
 ```css
 :root {

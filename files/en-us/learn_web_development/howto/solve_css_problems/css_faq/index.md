@@ -94,7 +94,7 @@ h1 {
 
 ## How do I derive one style from another?
 
-CSS does not exactly allow one style to be defined in terms of another. However, assigning multiple classes to a single element can provide the same effect, and [CSS Variables](/en-US/docs/Web/CSS/Using_CSS_custom_properties) now provide a way to define style information in one place that can be reused in multiple places.
+CSS does not exactly allow one style to be defined in terms of another. However, assigning multiple classes to a single element can provide the same effect, and [CSS Variables](/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties) now provide a way to define style information in one place that can be reused in multiple places.
 
 ## How do I assign multiple classes to an element?
 

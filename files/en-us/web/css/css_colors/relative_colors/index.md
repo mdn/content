@@ -26,7 +26,7 @@ color(from origin-color colorspace channel1 channel2 channel3 / alpha)
 Relative colors are created using the same [color functions](/en-US/docs/Web/CSS/CSS_colors#functions) as absolute colors, but with different parameters:
 
 1. Include a basic color function (represented by _`color-function()`_ above) such as [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb), [`hsl()`](/en-US/docs/Web/CSS/color_value/hsl), etc. Which one you pick depends on the color model you want to use for the relative color you are creating (the **output color**).
-2. Pass in the **origin color** (represented above by _`origin-color`_) your relative color will be based on, preceded by the `from` keyword. This can be any valid {{cssxref("&lt;color&gt;")}} value using any available color model including a color value contained in a [CSS custom property](/en-US/docs/Web/CSS/Using_CSS_custom_properties), system colors, `currentColor`, or even another relative color.
+2. Pass in the **origin color** (represented above by _`origin-color`_) your relative color will be based on, preceded by the `from` keyword. This can be any valid {{cssxref("&lt;color&gt;")}} value using any available color model including a color value contained in a [CSS custom property](/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties), system colors, `currentColor`, or even another relative color.
 3. In the case of the [`color()`](/en-US/docs/Web/CSS/color_value/color) function, include the _[`colorspace`](/en-US/docs/Web/CSS/color_value/color#colorspace)_ of the output color.
 4. Provide an output value for each individual channel. The output color is defined after the origin color — represented above by the _`channel1`_, _`channel2`_, and _`channel3`_ placeholders. The channels defined here depend on the [color function](/en-US/docs/Web/CSS/CSS_colors#functions) you are using for your relative color. For example, if you are using [`hsl()`](/en-US/docs/Web/CSS/color_value/hsl), you would need to define the values for hue, saturation, and lightness. Each channel value can be a new value, the same as the original value, or a value relative to the channel value of the origin color.
 5. Optionally, an `alpha` channel value for the output color can be defined, preceded by a slash (`/`). If the `alpha` channel value is not explicitly specified, it defaults to the alpha channel value of the _`origin-color`_ (not 100%, which is the case for absolute color values).
@@ -173,7 +173,7 @@ It is worth mentioning again that the color system of the origin color doesn't n
 
 ## Using custom properties
 
-When creating a relative color, you can use values defined in [CSS custom properties](/en-US/docs/Web/CSS/Using_CSS_custom_properties) both for the origin color and within the output color channel value definitions. Let's look at an example.
+When creating a relative color, you can use values defined in [CSS custom properties](/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties) both for the origin color and within the output color channel value definitions. Let's look at an example.
 
 In the below CSS we define two custom properties:
 
