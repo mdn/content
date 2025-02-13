@@ -7,7 +7,7 @@ browser-compat: css.types.length-percentage
 
 {{CSSRef}}
 
-The **`<length-percentage>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) represents a value that can be either a {{Cssxref("length")}} or a {{Cssxref("percentage")}}.
+The **`<length-percentage>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) represents a value that can be either a {{Cssxref("length")}} or a {{Cssxref("percentage")}}.
 
 ## Syntax
 

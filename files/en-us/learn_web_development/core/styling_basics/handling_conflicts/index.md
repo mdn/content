@@ -43,7 +43,7 @@ CSS stands for **Cascading Style Sheets**, and that first word _cascading_ is in
 
 At some point, you will be working on a project and you will find that the CSS you thought should be applied to an element is not working. Often, the problem is that you create two rules that apply different values of the same property to the same element. [**Cascade**](/en-US/docs/Web/CSS/CSS_cascade/Cascade) and the closely-related concept of [**specificity**](/en-US/docs/Web/CSS/CSS_cascade/Specificity) are mechanisms that control which rule applies when there is such a conflict. The rule that's styling your element may not be the one you expect, so you need to understand how these mechanisms work.
 
-Also significant here is the concept of [**inheritance**](/en-US/docs/Web/CSS/Inheritance), which means that some CSS properties by default inherit values set on the current element's parent element and some don't. This can also cause some behavior that you might not expect.
+Also significant here is the concept of [**inheritance**](/en-US/docs/Web/CSS/CSS_cascade/Inheritance), which means that some CSS properties by default inherit values set on the current element's parent element and some don't. This can also cause some behavior that you might not expect.
 
 Let's start by taking a quick look at the key things we are dealing with, then we'll look at each in turn and see how they interact with each other and your CSS. These can seem like a tricky set of concepts to understand. As you get more practice writing CSS, the way it works will become more obvious to you.
 
@@ -191,7 +191,7 @@ CSS provides five special universal property values for controlling inheritance.
 - {{cssxref("inherit")}}
   - : Sets the property value applied to a selected element to be the same as that of its parent element. Effectively, this "turns on inheritance".
 - {{cssxref("initial")}}
-  - : Sets the property value applied to a selected element to the [initial value](/en-US/docs/Web/CSS/initial_value) of that property.
+  - : Sets the property value applied to a selected element to the [initial value](/en-US/docs/Web/CSS/CSS_cascade/initial_value) of that property.
 - {{cssxref("revert")}}
   - : Resets the property value applied to a selected element to the browser's default styling rather than the defaults applied to that property. This value acts like {{cssxref("unset")}} in many cases.
 - {{cssxref("revert-layer")}}

@@ -419,6 +419,6 @@ After your content has finished altering styles, it may find itself in a situati
 - [CSS cascading and inheritance](/en-US/docs/Web/CSS/CSS_cascade) module
 - [CSS syntax](/en-US/docs/Web/CSS/Syntax)
 - [Specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity)
-- [Inheritance](/en-US/docs/Web/CSS/Inheritance)
+- [Inheritance](/en-US/docs/Web/CSS/CSS_cascade/Inheritance)
 - [At-rules](/en-US/docs/Web/CSS/At-rule)
-- [Initial](/en-US/docs/Web/CSS/initial_value), [computed](/en-US/docs/Web/CSS/computed_value), [used](/en-US/docs/Web/CSS/used_value), and [actual](/en-US/docs/Web/CSS/actual_value) values
+- [Initial](/en-US/docs/Web/CSS/CSS_cascade/initial_value), [computed](/en-US/docs/Web/CSS/CSS_cascade/computed_value), [used](/en-US/docs/Web/CSS/CSS_cascade/used_value), and [actual](/en-US/docs/Web/CSS/CSS_cascade/actual_value) values

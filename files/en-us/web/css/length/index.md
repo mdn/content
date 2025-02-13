@@ -7,7 +7,7 @@ browser-compat: css.types.length
 
 {{CSSRef}}
 
-The **`<length>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) represents a distance value. Lengths can be used in numerous CSS properties, such as {{Cssxref("width")}}, {{Cssxref("height")}}, {{Cssxref("margin")}}, {{Cssxref("padding")}}, {{Cssxref("border-width")}}, {{Cssxref("font-size")}}, and {{Cssxref("text-shadow")}}.
+The **`<length>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) represents a distance value. Lengths can be used in numerous CSS properties, such as {{Cssxref("width")}}, {{Cssxref("height")}}, {{Cssxref("margin")}}, {{Cssxref("padding")}}, {{Cssxref("border-width")}}, {{Cssxref("font-size")}}, and {{Cssxref("text-shadow")}}.
 
 > [!NOTE]
 > Although {{cssxref("&lt;percentage&gt;")}} values are usable in some of the same properties that accept `<length>` values, they are not themselves `<length>` values. See {{cssxref("&lt;length-percentage&gt;")}}.
@@ -19,7 +19,7 @@ The `<length>` data type consists of a {{cssxref("&lt;number&gt;")}} followed by
 > [!NOTE]
 > Some properties allow negative `<length>` values, while others do not.
 
-The [specified value](/en-US/docs/Web/CSS/specified_value) of a length (_specified length_) is represented by its quantity and unit. The [computed value](/en-US/docs/Web/CSS/computed_value) of a length (_computed length_) is the specified length resolved to an absolute length, and its unit is not distinguished.
+The [specified value](/en-US/docs/Web/CSS/CSS_cascade/specified_value) of a length (_specified length_) is represented by its quantity and unit. The [computed value](/en-US/docs/Web/CSS/CSS_cascade/computed_value) of a length (_computed length_) is the specified length resolved to an absolute length, and its unit is not distinguished.
 
 The `<length>` units can be relative or absolute. Relative lengths represent a measurement in terms of some other distance. Depending on the unit, this distance can be the size of a specific character, the [line height](/en-US/docs/Web/CSS/line-height), or the size of the {{Glossary("viewport")}}. Style sheets that use relative length units can more easily scale from one output environment to another.
 
