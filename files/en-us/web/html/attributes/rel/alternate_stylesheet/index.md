@@ -1,7 +1,7 @@
 ---
 title: Alternate stylesheet
 slug: Web/HTML/Attributes/rel/alternate_stylesheet
-page-type: guide
+page-type: html-attribute-value
 browser-compat: html.elements.link.rel.alternate_stylesheet
 ---
 
