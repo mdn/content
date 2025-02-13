@@ -25,11 +25,16 @@ None.
 
 A new `AsyncDisposableStack` object.
 
-### Exceptions
-
 ## Examples
 
 ### Creating an AsyncDisposableStack
+
+```js
+const stack = new AsyncDisposableStack();
+stack.defer(() => console.log("Disposed!"));
+await stack.disposeAsync();
+// Logs: Disposed!
+```
 
 ## Specifications
 
