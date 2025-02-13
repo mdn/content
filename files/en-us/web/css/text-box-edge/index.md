@@ -42,12 +42,12 @@ text-box-edge: unset;
 The `text-box-edge` property value is specified as `auto` or a {{cssxref("&lt;text-edge&gt;")}} value:
 
 - `auto`
-  - : Equivalent to the `text-edge` value `text`.
+  - : Equivalent to the `text-edge` value `text`. This is the default value.
 - {{cssxref("&lt;text-edge&gt;")}}
   - : One or two separate keywords representing over and under edge positions to trim the font leading to.
     - If two values are specified, the first value specifies the trimming behavior to apply to the block-start (over) edge of the text, and the second value specifies the trimming behavior to apply to the block-end (under) edge of the text.
-      - Valid over edge trimming values: `text` (the default), `cap`, and `ex`.
-      - Valid under edge trimming values: `text` (the default) and `alphabetic`.
+      - Valid over edge trimming values: `text`, `cap`, and `ex`.
+      - Valid under edge trimming values: `text` and `alphabetic`.
     - If one value is specified, it specifies the over _and_ under edge trimming behavior. At the time of writing, the only valid single value is `text`.
 
 ## Description

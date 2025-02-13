@@ -42,11 +42,11 @@ text-box: unset;
 
 ### Values
 
-The `text-box` value can be composed of a {{cssxref("text-box-trim")}} value followed by a {{cssxref("text-box-edge")}} value. See those pages for value descriptions.
+The `text-box` value can be composed of a {{cssxref("text-box-trim")}} value and a {{cssxref("text-box-edge")}} value separated by a space. See those pages for value descriptions.
 
 The `text-box` property can also take a keyword of `normal`, which is equivalent to `text-box: none auto;`
 
-If `text-box-trim` is omitted, it is set to `both`. If `text-box-edge` is omitted, it is set to `auto`.
+If `text-box-trim` is omitted, it is set to `trim-both`. If `text-box-edge` is omitted, it is set to `auto`.
 
 ## Formal definition
 
