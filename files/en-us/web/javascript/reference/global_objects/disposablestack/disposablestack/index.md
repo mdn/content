@@ -29,6 +29,13 @@ A new `DisposableStack` object.
 
 ### Creating an DisposableStack
 
+```js
+const stack = new DisposableStack();
+stack.defer(() => console.log("Disposed!"));
+stack.dispose();
+// Logs: Disposed!
+```
+
 ## Specifications
 
 {{Specifications}}

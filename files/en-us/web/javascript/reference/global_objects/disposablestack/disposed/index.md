@@ -18,12 +18,10 @@ The **`disposed`** accessor property of {{jsxref("DisposableStack")}} instances 
 ### Checking if a stack is disposed
 
 ```js
-function doSomething() {
-  const stack = new DisposableStack();
-  console.log(stack.disposed); // false
-  stack.dispose();
-  console.log(stack.disposed); // true
-}
+const stack = new DisposableStack();
+console.log(stack.disposed); // false
+stack.dispose();
+console.log(stack.disposed); // true
 ```
 
 ## Specifications

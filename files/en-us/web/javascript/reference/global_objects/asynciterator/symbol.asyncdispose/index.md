@@ -44,7 +44,7 @@ async function doSomething() {
   await using numbers = generateNumbers();
   const res1 = await numbers.next();
   // Not iterating the rest of the numbers
-  // Before the function exists, the async iterator is disposed
+  // Before the function exits, the async iterator is disposed
   // Logs "Cleaning up"
 }
 

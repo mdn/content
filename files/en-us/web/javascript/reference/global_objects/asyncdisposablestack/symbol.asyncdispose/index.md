@@ -25,7 +25,19 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
-### Disposing an AsyncDisposableStack
+### Declaring a stack with `await using`
+
+The `Symbol.asyncDispose` method is intended to be automatically called in a `await using` declaration.
+
+```js
+async function doSomething() {
+  await using stack = new AsyncDisposableStack();
+  const resource = stack.use(new Resource());
+  resource.doSomething();
+  // stack is disposed here immediately before the function exits
+  // which causes the resource to be disposed
+}
+```
 
 ## Specifications
 
@@ -38,3 +50,5 @@ None ({{jsxref("undefined")}}).
 ## See also
 
 - [JavaScript resource management](/en-US/docs/Web/JavaScript/Guide/Resource_management)
+- {{jsxref("AsyncDisposableStack")}}
+- {{jsxref("AsyncDisposableStack.prototype.disposeAsync()")}}

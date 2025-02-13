@@ -37,6 +37,17 @@ The same `value` that was passed in.
 
 ### Using use()
 
+This function reads a file and returns its contents. The file handle is automatically closed when the function completes, assuming the `FileHandle` class implements an `[Symbol.asyncDispose]()` method that asynchronously closes the file.
+
+```js
+async function readFileContents(path) {
+  await using stack = new AsyncDisposableStack();
+  const handle = stack.use(new FileHandle(path));
+  const data = await handle.read();
+  return data;
+}
+```
+
 ## Specifications
 
 {{Specifications}}
