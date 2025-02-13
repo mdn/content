@@ -31,8 +31,6 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
   - : An alias for {{domxref("Window.navigator")}}.
 - {{domxref("Window.closed")}} {{ReadOnlyInline}}
   - : This property indicates whether the current window is closed or not.
-- {{domxref("Window.console")}} {{ReadOnlyInline}}
-  - : Returns a reference to the console object which provides access to the browser's debugging console.
 - {{domxref("Window.cookieStore")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns a reference to the {{domxref("CookieStore")}} object for the current document context.
 - {{domxref("Window.credentialless")}} {{ReadOnlyInline}} {{Experimental_Inline}}
