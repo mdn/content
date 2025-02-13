@@ -39,7 +39,7 @@ The same `value` that was passed in.
 
 ### Using adopt()
 
-This function creates a file handle that gets closed when the function completes. The file handle does not implement the async disposable protocol, so we use `adopt()` to register it to the stack.
+This function creates a file handle that gets closed when the function completes. The file handle does not implement the async disposable protocol, so we use `adopt()` to register it to the stack. Because the `handle.close()` method returns a promise, we need to use an `AsyncDisposableStack` so that the disposal gets awaited.
 
 ```js
 async function readFile(fileName) {
