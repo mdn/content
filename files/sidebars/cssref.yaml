@@ -483,12 +483,19 @@ l10n:
     Transitions: Переходы
     Tools: Инструменты
   zh-CN:
+    Beginners: 初学者教程
+    Styling_the_content: 你的第一个网站：样式化内容
+    CSS_styling_basics: CSS 样式基础
+    CSS_text_styling: CSS 文本样式
+    Containment: CSS 局限
     CSS_layout: CSS 布局概述
     Combinators: 关系选择器
     Guides: 指南
     Animations: 动画
+    At-rules: At 规则
     Backgrounds_and_Borders: 背景和边框
     Resizing_background_images: 重设背景图片的大小
+    Box alignment: 盒对齐
     Box_alignment_in_block_layout: 块布局中的盒对齐方式
     Box_model: 盒模型
     Colors: 颜色
@@ -499,6 +506,7 @@ l10n:
     Display: 流式布局
     Flexbox: 弹性盒布局
     Fonts: 字体
+    Functions: 函数
     Grid: 网格布局
     Images: 图片
     Lists_and_counters: 列表和计数器
@@ -513,6 +521,15 @@ l10n:
     Transforms: 变换
     Transitions: 过渡
     Tools: 工具
+    Accessibility_Understanding_colors_and_luminance: 无障碍：理解颜色和亮度
+    Applying_color_to_HTML_elements: 为 HTML 元素应用颜色
+    Resizing_background_images: 调整背景图片的大小
+    Modules: 模块
+    Pseudo-classes: 伪类
+    Pseudo-elements: 伪元素
+    Properties: 属性
+    Selectors: 选择器
+    Types: 类型
   zh-TW:
     CSS_layout: CSS 版面配置
     Flexbox: 彈性區塊
