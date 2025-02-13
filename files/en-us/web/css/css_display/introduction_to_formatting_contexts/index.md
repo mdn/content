@@ -1,6 +1,6 @@
 ---
 title: Introduction to formatting contexts
-slug: Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts
+slug: Web/CSS/CSS_display/Introduction_to_formatting_contexts
 page-type: guide
 ---
 
@@ -39,7 +39,7 @@ This is useful because a new BFC will behave much like the outermost document in
 
 Let's have a look at a couple of these in order to see the effect creating a new BFC.
 
-In the example below, we have a floated element inside a `<div>` with a border applied. The content of that `<div>` has floated alongside the floated element. As the content of the float is taller than the content alongside it, the border of the `<div>` now runs through the float. As explained in the [guide to in-flow and out of flow elements](/en-US/docs/Web/CSS/CSS_flow_layout/In_flow_and_out_of_flow), the float has been taken out of flow so the background and border of the div only contain the content and not the float.
+In the example below, we have a floated element inside a `<div>` with a border applied. The content of that `<div>` has floated alongside the floated element. As the content of the float is taller than the content alongside it, the border of the `<div>` now runs through the float. As explained in the [guide to in-flow and out of flow elements](/en-US/docs/Web/CSS/CSS_display/In_flow_and_out_of_flow), the float has been taken out of flow so the background and border of the div only contain the content and not the float.
 
 ```html live-sample___float
 <div class="box">
@@ -180,7 +180,7 @@ This guide covers flow layout and is therefore not referring to other possible f
 
 ## Summary
 
-In this guide, we have looked in more detail at the block and Inline formatting contexts and the important subject of creating a block formatting context (BFC). In the next guide, we will find out [how normal flow interacts with different writing modes](/en-US/docs/Web/CSS/CSS_flow_layout/Flow_layout_and_writing_modes).
+In this guide, we have looked in more detail at the block and Inline formatting contexts and the important subject of creating a block formatting context (BFC). In the next guide, we will find out [how normal flow interacts with different writing modes](/en-US/docs/Web/CSS/CSS_display/Flow_layout_and_writing_modes).
 
 ## See also
 

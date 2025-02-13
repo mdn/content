@@ -28,12 +28,12 @@ After CSS 2.1, the scope of the specification increased significantly and the pr
 The [CSS reference](/en-US/docs/Web/CSS/Reference) is an exhaustive reference for seasoned Web developers, describing every property and concept of CSS, including:
 
 - The [syntax and forms of the language](/en-US/docs/Web/CSS/Syntax)
-- [Specificity](/en-US/docs/Web/CSS/Specificity), [inheritance](/en-US/docs/Web/CSS/Inheritance), and [the cascade](/en-US/docs/Web/CSS/Cascade)
+- [Specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity), [inheritance](/en-US/docs/Web/CSS/Inheritance), and [the cascade](/en-US/docs/Web/CSS/CSS_cascade/Cascade)
 - [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors), including [pseudo-elements](/en-US/docs/Web/CSS/CSS_pseudo-elements), [nesting](/en-US/docs/Web/CSS/CSS_nesting), [scoping](/en-US/docs/Web/CSS/CSS_scoping) and [shadow parts](/en-US/docs/Web/CSS/CSS_shadow_parts)
 - [CSS at-rules](/en-US/docs/Web/CSS/At-rule), including [media](/en-US/docs/Web/CSS/CSS_media_queries) and [container](/en-US/docs/Web/CSS/CSS_containment) queries
 - [CSS units and values](/en-US/docs/Web/CSS/CSS_Values_and_Units) and [functional notations](/en-US/docs/Web/CSS/CSS_Functions)
 - [Box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model) and [margin collapse](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
-- The [containing block](/en-US/docs/Web/CSS/Containing_block)
+- The [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block)
 - [Stacking](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context) and [block-formatting](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context) contexts
 - [Initial](/en-US/docs/Web/CSS/initial_value), [computed](/en-US/docs/Web/CSS/computed_value), [used](/en-US/docs/Web/CSS/used_value), and [actual](/en-US/docs/Web/CSS/actual_value) values
 - [CSS shorthand properties](/en-US/docs/Web/CSS/Shorthand_properties)

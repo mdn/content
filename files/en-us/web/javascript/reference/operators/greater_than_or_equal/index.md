@@ -11,7 +11,22 @@ The **greater than or equal (`>=`)** operator returns `true` if
 the left operand is greater than or equal to the right operand, and `false`
 otherwise.
 
-{{EmbedInteractiveExample("pages/js/expressions-greater-than-or-equal.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Greater than or equal operator")}}
+
+```js interactive-example
+console.log(5 >= 3);
+// Expected output: true
+
+console.log(3 >= 3);
+// Expected output: true
+
+// Compare bigint to number
+console.log(3n >= 5);
+// Expected output: false
+
+console.log("ab" >= "aa");
+// Expected output: true
+```
 
 ## Syntax
 

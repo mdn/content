@@ -69,7 +69,7 @@ The parameters are:
 
     - `block`
 
-      - : The length of the anchor element's [containing block](/en-US/docs/Web/CSS/Containing_block) in the block direction.
+      - : The length of the anchor element's [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block) in the block direction.
 
     - `inline`
 

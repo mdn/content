@@ -28,7 +28,7 @@ For most properties, the resolved value is the [computed value](/en-US/docs/Web/
   - [Actual values](/en-US/docs/Web/CSS/actual_value)
 - [CSS syntax](/en-US/docs/Web/CSS/Syntax)
 - [At-rules](/en-US/docs/Web/CSS/At-rule)
-- [Specificity](/en-US/docs/Web/CSS/Specificity)
+- [Specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity)
 - [Inheritance](/en-US/docs/Web/CSS/Inheritance)
 - [Value definition syntax](/en-US/docs/Web/CSS/Value_definition_syntax)
 - [Shorthand properties](/en-US/docs/Web/CSS/Shorthand_properties)

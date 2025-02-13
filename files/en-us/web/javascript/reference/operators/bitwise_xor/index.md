@@ -9,7 +9,15 @@ browser-compat: javascript.operators.bitwise_xor
 
 The **bitwise XOR (`^`)** operator returns a number or BigInt whose binary representation has a `1` in each bit position for which the corresponding bits of either but not both operands are `1`.
 
-{{EmbedInteractiveExample("pages/js/expressions-bitwise-xor.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Bitwise XOR", "shorter")}}
+
+```js interactive-example
+const a = 5; // 00000000000000000000000000000101
+const b = 3; // 00000000000000000000000000000011
+
+console.log(a ^ b); // 00000000000000000000000000000110
+// Expected output: 6
+```
 
 ## Syntax
 

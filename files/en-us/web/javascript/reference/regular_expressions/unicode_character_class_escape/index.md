@@ -9,7 +9,23 @@ browser-compat: javascript.regular_expressions.unicode_character_class_escape
 
 A **unicode character class escape** is a kind of [character class escape](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class_escape) that matches a set of characters specified by a Unicode property. It's only supported in [Unicode-aware mode](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_mode). When the [`v`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicodeSets) flag is enabled, it can also be used to match finite-length strings.
 
-{{EmbedInteractiveExample("pages/js/regexp-unicode-property-escapes.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: RegExp Unicode property escapes", "taller")}}
+
+```js interactive-example
+const sentence = "A ticket to 大阪 costs ¥2000 👌.";
+
+const regexpEmojiPresentation = /\p{Emoji_Presentation}/gu;
+console.log(sentence.match(regexpEmojiPresentation));
+// Expected output: Array ["👌"]
+
+const regexpNonLatin = /\P{Script_Extensions=Latin}+/gu;
+console.log(sentence.match(regexpNonLatin));
+// Expected output: Array [" ", " ", " 大阪 ", " ¥2000 👌."]
+
+const regexpCurrencyOrPunctuation = /\p{Sc}|\p{P}/gu;
+console.log(sentence.match(regexpCurrencyOrPunctuation));
+// Expected output: Array ["¥", "."]
+```
 
 ## Syntax
 
