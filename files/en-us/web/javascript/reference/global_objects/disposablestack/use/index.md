@@ -47,7 +47,7 @@ stack.use(handle);
 
 ### Using use()
 
-This function reads a file and returns its contents. The file handle is automatically closed when the function completes.
+This function reads a file and returns its contents. The file handle is automatically closed when the function completes, assuming the `FileHandle` class implements an `[Symbol.dispose]()` method that synchronously closes the file.
 
 ```js
 function readFileContents(path) {
