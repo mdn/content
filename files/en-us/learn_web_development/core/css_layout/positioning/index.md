@@ -118,7 +118,9 @@ If you now save and refresh, you'll get a result something like this:
   the same line. Overflowing inline elements
   <span>wrap onto a new line if possible — like this one containing text</span>,
   or just go on to a new line if not, much like this image will do:
-  <img src="long.jpg" alt="snippet of cloth" />
+  <img
+    src="https://mdn.github.io/shared-assets/images/examples/long.jpg"
+    alt="snippet of cloth" />
 </p>
 ```
 
@@ -194,7 +196,9 @@ If you now save and refresh, you should see something like so:
   the same line. Overflowing inline elements
   <span>wrap onto a new line if possible — like this one containing text</span>,
   or just go on to a new line if not, much like this image will do:
-  <img src="long.jpg" alt="snippet of cloth" />
+  <img
+    src="https://mdn.github.io/shared-assets/images/examples/long.jpg"
+    alt="snippet of cloth" />
 </p>
 ```
 
@@ -277,7 +281,9 @@ This should give the following result:
   the same line. Overflowing inline elements
   <span>wrap onto a new line if possible — like this one containing text</span>,
   or just go on to a new line if not, much like this image will do:
-  <img src="long.jpg" alt="snippet of cloth" />
+  <img
+    src="https://mdn.github.io/shared-assets/images/examples/long.jpg"
+    alt="snippet of cloth" />
 </p>
 ```
 
@@ -368,7 +374,9 @@ You should now see the lime paragraph on top:
   the same line. Overflowing inline elements
   <span>wrap onto a new line if possible — like this one containing text</span>,
   or just go on to a new line if not, much like this image will do:
-  <img src="long.jpg" alt="snippet of cloth" />
+  <img
+    src="https://mdn.github.io/shared-assets/images/examples/long.jpg"
+    alt="snippet of cloth" />
 </p>
 ```
 
@@ -476,7 +484,9 @@ You should now see the finished example:
   the same line. Overflowing inline elements
   <span>wrap onto a new line if possible — like this one containing text</span>,
   or just go on to a new line if not, much like this image will do:
-  <img src="long.jpg" alt="snippet of cloth" />
+  <img
+    src="https://mdn.github.io/shared-assets/images/examples/long.jpg"
+    alt="snippet of cloth" />
 </p>
 ```
 

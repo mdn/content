@@ -60,7 +60,7 @@ This module doesn't define any properties, [data types](/en-US/docs/Web/CSS/CSS_
 
 [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors) module:
 
-- [CSS specificity](/en-US/docs/Web/CSS/Specificity)
+- [CSS specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity)
 
 [CSS cascading and inheritance](/en-US/docs/Web/CSS/CSS_cascade) module:
 

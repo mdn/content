@@ -67,11 +67,11 @@ These tutorials are not part of the learning pathway, but they are interesting n
 
 ## See also
 
-- [Learn HTML and CSS](https://v2.scrimba.com/learn-html-and-css-c0p?via=mdn), Scrimba <sup>_MDN Curriculum partner_</sup>
-  - : [Scrimba's](https://scrimba.com?via=mdn) _Learn HTML and CSS_ course teaches you HTML and CSS through building and deploying five awesome projects, with fun interactive lessons and challenges taught by knowledgeable teachers.
-- [The basics of semantic HTML](https://v2.scrimba.com/the-frontend-developer-career-path-c0j/~0xid?via=mdn), Scrimba <sup>_MDN Curriculum partner_</sup>
-  - : This interactive lesson provides a useful description of HTML, with particular emphasis on why the _semantic_ aspect of it is important.
 - [Learn HTML](https://www.codecademy.com/learn/learn-html), Codecademy
-  - : Another useful (and free resource) for learning HTML basics.
+  - : A useful (and free resource) for learning HTML basics.
+- [Learn HTML and CSS](https://v2.scrimba.com/learn-html-and-css-c0p?via=mdn), Scrimba <sup>_MDN learning partner_</sup>
+  - : [Scrimba's](https://scrimba.com?via=mdn) _Learn HTML and CSS_ course teaches you HTML and CSS through building and deploying five awesome projects, with fun interactive lessons and challenges taught by knowledgeable teachers.
+- [The basics of semantic HTML](https://v2.scrimba.com/the-frontend-developer-career-path-c0j/~0xid?via=mdn), Scrimba <sup>_MDN learning partner_</sup>
+  - : This interactive lesson provides a useful description of HTML, with particular emphasis on why the _semantic_ aspect of it is important.
 
 {{NextMenu("Learn_web_development/Core/Structuring_content/Basic_HTML_syntax", "Learn_web_development/Core")}}

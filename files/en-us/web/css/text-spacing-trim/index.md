@@ -121,7 +121,8 @@ This example compares the effect of four different `text-spacing-trim` propertie
 
 ```css
 main {
-  font-family: "Yu Gothic", "YuGothic", "Noto Sans JP", "Hiragino Sans",
+  font-family:
+    "Yu Gothic", "YuGothic", "Noto Sans JP", "Hiragino Sans",
     "Hiragino Kaku Gothic ProN", sans-serif;
   display: grid;
   gap: 0.5em;

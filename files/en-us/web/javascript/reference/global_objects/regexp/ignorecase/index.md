@@ -9,7 +9,21 @@ browser-compat: javascript.builtins.RegExp.ignoreCase
 
 The **`ignoreCase`** accessor property of {{jsxref("RegExp")}} instances returns whether or not the `i` flag is used with this regular expression.
 
-{{EmbedInteractiveExample("pages/js/regexp-prototype-ignorecase.html")}}
+{{InteractiveExample("JavaScript Demo: RegExp.prototype.ignoreCase")}}
+
+```js interactive-example
+const regex1 = new RegExp("foo");
+const regex2 = new RegExp("foo", "i");
+
+console.log(regex1.test("Football"));
+// Expected output: false
+
+console.log(regex2.ignoreCase);
+// Expected output: true
+
+console.log(regex2.test("Football"));
+// Expected output: true
+```
 
 ## Description
 

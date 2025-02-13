@@ -70,7 +70,7 @@ The `border-image` property may be specified with anywhere from one to five of t
 Assistive technology cannot parse border images. If the image contains information critical to understanding the page's overall purpose, it is better to describe it semantically in the document.
 
 - [MDN Understanding WCAG, Guideline 1.1 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
-- [Understanding Success Criterion 1.1.1 | Understanding WCAG 2.0](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
+- [Understanding Success Criterion 1.1.1 | Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv-all.html)
 
 ## Formal definition
 
@@ -163,8 +163,8 @@ To match the size of a single diamond, we will use a value of 81 divided by 3, o
   border: 10px solid transparent;
   padding: 20px;
   border-radius: 20px;
-  background-image: linear-gradient(white, white),
-    linear-gradient(to right, cyan, lime);
+  background-image:
+    linear-gradient(white, white), linear-gradient(to right, cyan, lime);
   background-origin: border-box;
   background-clip: padding-box, border-box;
 }

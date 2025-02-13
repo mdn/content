@@ -1,5 +1,5 @@
 ---
-title: "::-moz-progress-bar"
+title: ::-moz-progress-bar
 slug: Web/CSS/::-moz-progress-bar
 page-type: css-pseudo-element
 status:

@@ -4,8 +4,11 @@ on:
   - pull_request_target
 
 permissions:
+  # Patch issues, see: https://github.com/CodelyTV/pr-size-labeler/pull/89
   issues: write
+  # Label pull requests.
   pull-requests: write
+  # Fetch files (used by actions/labeler to get config).
   contents: read
 
 jobs:
@@ -29,7 +32,7 @@ jobs:
     name: Label by size
     runs-on: ubuntu-latest
     steps:
-      - uses: codelytv/pr-size-labeler@v1
+      - uses: codelytv/pr-size-labeler@1c3422395d899286d5ee2c809fd5aed264d5eb9b # v1.10.2
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           github_api_url: "https://api.github.com"

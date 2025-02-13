@@ -100,7 +100,7 @@ If the `href` attribute or the deprecated {{SVGAttr("xlink:href")}} attribute is
 
 Refer to the descriptions of the individual animation elements for any restrictions on what types of elements can be targets of particular types of animations.
 
-Except for any SVG-specific rules explicitly mentioned in this specification, the normative definition for this attribute is the {{Glossary("SMIL")}} Animation specification. In particular, see [SMIL Animation: Specifying the animation target](https://www.w3.org/TR/2001/REC-smil-animation-20010904/#SpecifyingAnimationTarget).
+Except for any SVG-specific rules explicitly mentioned in this specification, the normative definition for this attribute is the {{Glossary("SMIL")}} Animation specification. In particular, see [SMIL Animation: Specifying the animation target](https://www.w3.org/TR/smil-animation/#SpecifyingAnimationTarget).
 
 <table class="properties">
   <tbody>

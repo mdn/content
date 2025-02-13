@@ -1,6 +1,6 @@
 ---
 title: "SVGFEDisplacementMapElement: y property"
-short-title: "y"
+short-title: y
 slug: Web/API/SVGFEDisplacementMapElement/y
 page-type: web-api-instance-property
 browser-compat: api.SVGFEDisplacementMapElement.y
