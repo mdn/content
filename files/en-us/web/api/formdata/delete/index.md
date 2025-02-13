@@ -33,6 +33,28 @@ You can delete a key and its values using `delete()`:
 formData.delete("username");
 ```
 
+Do not delete a key while iterating over FormData as making changes to FormData during iteration will result in unexpected behaviour such as keys not being deleted:
+
+```js
+// Bad code
+for (var [key, value] of formData.entries()) {
+  if (value.length === 0) {
+    formData.delete(key);
+  }
+}
+```
+
+Instead make an array of formData first:
+
+```js
+// Good code
+for (var [key, value] of Array.from(formData.entries())) {
+  if (value.length === 0) {
+    formData.delete(key);
+  }
+}
+```
+
 ## Specifications
 
 {{Specifications}}
