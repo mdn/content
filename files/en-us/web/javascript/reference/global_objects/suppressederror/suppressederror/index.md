@@ -34,7 +34,20 @@ SuppressedError(error, suppressed, message)
 
 ## Examples
 
-### Creating an SuppressedError
+### Creating a SuppressedError
+
+```js
+try {
+  throw new SuppressedError(
+    new Error("New error"),
+    new Error("Original error"),
+    "Hello",
+  );
+} catch (e) {
+  console.log(e.suppressed); // Error: "Original error"
+  console.log(e.error); // Error: "New error"
+}
+```
 
 ## Specifications
 
