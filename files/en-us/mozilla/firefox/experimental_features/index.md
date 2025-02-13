@@ -1002,16 +1002,11 @@ This includes:
   </tbody>
 </table>
 
-## APIs
+### Error.captureStackTrace
 
-### Cookie Store API
-
-The [Cookie Store API](/en-US/docs/Web/API/Cookie_Store_API) is a modern, {{jsxref("Promise")}}-based method of managing cookies that does not block the event loop and does not rely on {{domxref("Document")}} (it can therefore be made available to [service workers](/en-US/docs/Web/API/Service_Worker_API)). A subset of the Cookie Store API has been implemented ([Firefox bug 1800882](https://bugzil.la/1800882)). This includes:
-
-- The [`CookieStore`](/en-US/docs/Web/API/CookieStore) interface, but `partitioned` is not included in return values.
-- The [`CookieChangeEvent`](/en-US/docs/Web/API/CookieChangeEvent) interface, excluding `partitioned` properties.
-- The [`Window.cookieStore`](/en-US/docs/Web/API/Window/cookieStore) property.
-- The [`ServiceWorkerGlobalScope.cookieStore`](/en-US/docs/Web/API/ServiceWorkerGlobalScope/cookieStore) property.
+The {{jsxref("Error.captureStackTrace()")}} static method installs stack trace information on a provided object as the {{jsxref("Error.stack")}} property.
+Its main use case is to install a stack trace on a custom error object that does not derive from the {{jsxref("Error")}} interface.
+([Firefox bug 1886820](https://bugzil.la/1886820)).
 
 <table>
   <thead>
@@ -1024,30 +1019,32 @@ The [Cookie Store API](/en-US/docs/Web/API/Cookie_Store_API) is a modern, {{jsxr
   <tbody>
     <tr>
       <th>Nightly</th>
-      <td>132</td>
-      <td>Yes</td>
+      <td>136</td>
+      <td>No</td>
     </tr>
     <tr>
       <th>Developer Edition</th>
-      <td>132</td>
+      <td>136</td>
       <td>No</td>
     </tr>
     <tr>
       <th>Beta</th>
-      <td>132</td>
+      <td>136</td>
       <td>No</td>
     </tr>
     <tr>
       <th>Release</th>
-      <td>132</td>
+      <td>136</td>
       <td>No</td>
     </tr>
     <tr>
       <th>Preference name</th>
-      <td colspan="2"><code>dom.cookieStore.enabled</code></td>
+      <td colspan="2"><code>javascript.options.experimental.error_capture_stack_trace</code></td>
     </tr>
   </tbody>
 </table>
+
+## APIs
 
 ### CloseWatcher Interface
 
