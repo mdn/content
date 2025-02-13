@@ -626,7 +626,7 @@ Along with the Harding tool, is generally recognized to be one of the two "gold 
 
 - [CSS Color Module Level 3](https://www.w3.org/TR/css-color-3/)
 - [Personalization Semantics Explainer 1.0](https://www.w3.org/TR/personalization-semantics-1.0/). Working Draft
-- [Personalization Tools 1.0](https://www.w3.org/TR/2019/WD-personalization-semantics-tools-1.0-20190711/) Working Draft
+- [WAI-Adapt: Tools Module](https://www.w3.org/TR/adapt-tools/) Working Draft
 - [Three Flashes or Below Threshold Understanding SC 2.3.1](https://www.w3.org/TR/UNDERSTANDING-WCAG20/seizure-does-not-violate.html) Understanding WCAG 2.0 (Older, but contains some explanations of references made in the WCAG 2.1 criteria)
 - [Three Flashes or Below Threshold Understanding Success Criterion 2.3.1](https://www.w3.org/WAI/WCAG21/Understanding/three-flashes-or-below-threshold.html) Understanding WCAG 2.1
 - [Understanding Success Criteria 1.4.3: Contrast (Minimum)](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html)

@@ -4,7 +4,7 @@ Thanks for taking the time to contribute to [MDN Web Docs](https://developer.moz
 
 This document covers project setup steps along with a set of guidelines for contributing to MDN Web Docs content.
 Everyone participating in this project is expected to follow our [Code of Conduct](https://github.com/mdn/content/blob/main/CODE_OF_CONDUCT.md), which means adhering to [Mozilla's Community Participation Guidelines](https://www.mozilla.org/en-US/about/governance/policies/participation/).
-If you want to jump right in, see [Getting started with MDN Web Docs][] for an overview of how to join, and the [Contribute page][] on MDN for a filtered list of tasks.
+If you want to jump right in, see [Getting started with MDN Web Docs][] for an overview of how to join, and the [Community resources][] on MDN.
 
 ## Getting started
 
@@ -419,7 +419,7 @@ There are some important rules of etiquette to remember that will help during th
 When contributing to the content you agree to license your contributions
 according to [our license](LICENSE.md).
 
-[contribute page]: https://developer.mozilla.org/en-US/docs/MDN/Community/Contributing
+[community resources]: https://developer.mozilla.org/en-US/docs/MDN/Community
 [getting started with mdn web docs]: https://developer.mozilla.org/en-US/docs/MDN/Community/Contributing/Getting_started
 [getting ready to contribute]: https://developer.mozilla.org/en-US/docs/MDN/Community/Contributing/Getting_started#getting_ready_to_contribute
 [how to write in markdown]: https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN

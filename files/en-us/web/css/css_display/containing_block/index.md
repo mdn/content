@@ -1,6 +1,6 @@
 ---
 title: Layout and the containing block
-slug: Web/CSS/Containing_block
+slug: Web/CSS/CSS_display/Containing_block
 page-type: guide
 ---
 

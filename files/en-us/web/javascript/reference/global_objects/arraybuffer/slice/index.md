@@ -9,7 +9,21 @@ browser-compat: javascript.builtins.ArrayBuffer.slice
 
 The **`slice()`** method of {{jsxref("ArrayBuffer")}} instances returns a new `ArrayBuffer` whose contents are a copy of this `ArrayBuffer`'s bytes from `start`, inclusive, up to `end`, exclusive. If either `start` or `end` is negative, it refers to an index from the end of the array, as opposed to from the beginning.
 
-{{EmbedInteractiveExample("pages/js/arraybuffer-slice.html")}}
+{{InteractiveExample("JavaScript Demo: ArrayBuffer.slice()")}}
+
+```js interactive-example
+// Create an ArrayBuffer with a size in bytes
+const buffer = new ArrayBuffer(16);
+const int32View = new Int32Array(buffer);
+// Produces Int32Array [0, 0, 0, 0]
+
+int32View[1] = 42;
+const sliced = new Int32Array(buffer.slice(4, 12));
+// Produces Int32Array [42, 0]
+
+console.log(sliced[0]);
+// Expected output: 42
+```
 
 ## Syntax
 

@@ -111,12 +111,12 @@ Combinators are selectors that establish a relationship between two or more simp
 
 - [CSS syntax](/en-US/docs/Web/CSS/Syntax)
 - [At-rules](/en-US/docs/Web/CSS/At-rule)
-- [Cascade](/en-US/docs/Web/CSS/Cascade)
+- [Cascade](/en-US/docs/Web/CSS/CSS_cascade/Cascade)
 - [Comments](/en-US/docs/Web/CSS/Comments)
 - [Descriptor](/en-US/docs/Glossary/CSS_Descriptor)
 - [Inheritance](/en-US/docs/Web/CSS/Inheritance)
 - [Shorthand properties](/en-US/docs/Web/CSS/Shorthand_properties)
-- [Specificity](/en-US/docs/Web/CSS/Specificity)
+- [Specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity)
 - [Value definition syntax](/en-US/docs/Web/CSS/Value_definition_syntax)
 - [CSS unit and value types](/en-US/docs/Web/CSS/CSS_Values_and_Units)
 - [CSS functional notations](/en-US/docs/Web/CSS/CSS_Functions)
@@ -134,7 +134,7 @@ Combinators are selectors that establish a relationship between two or more simp
 
 - [Block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context)
 - [Box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
-- [Containing block](/en-US/docs/Web/CSS/Containing_block)
+- [Containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block)
 - [Layout mode](/en-US/docs/Web/CSS/Layout_mode)
 - [Margin collapsing](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
 - [Replaced elements](/en-US/docs/Web/CSS/Replaced_element)

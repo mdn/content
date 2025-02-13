@@ -1,6 +1,6 @@
 ---
 title: Using CSS custom properties (variables)
-slug: Web/CSS/Using_CSS_custom_properties
+slug: Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties
 page-type: guide
 ---
 
@@ -10,7 +10,7 @@ page-type: guide
 
 Complex websites have very large amounts of CSS, and this often results in a lot of repeated CSS values. For example, it's common to see the same color used in hundreds of different places in stylesheets. Changing a color that's been duplicated in many places requires a search and replace across all rules and CSS files. Custom properties allow a value to be defined in one place, then referenced in multiple other places so that it's easier to work with. Another benefit is readability and semantics. For example, `--main-text-color` is easier to understand than the hexadecimal color `#00ff00`, especially if the color is used in different contexts.
 
-Custom properties defined [using two dashes (`--`)](/en-US/docs/Web/CSS/--*) are subject to the [cascade](/en-US/docs/Web/CSS/Cascade) and inherit their value from their parent.
+Custom properties defined [using two dashes (`--`)](/en-US/docs/Web/CSS/--*) are subject to the [cascade](/en-US/docs/Web/CSS/CSS_cascade/Cascade) and inherit their value from their parent.
 The {{cssxref("@property")}} at-rule allows more control over the custom property and lets you specify whether it inherits its value from a parent, what the initial value is, and the type constraints that should apply.
 
 > [!NOTE]
