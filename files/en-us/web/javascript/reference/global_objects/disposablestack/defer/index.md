@@ -59,7 +59,8 @@ async function requestWithLock(url, options) {
   using stack = new DisposableStack();
   isLocked = true;
   stack.defer(() => (isLocked = false));
-  return fetch(url, options);
+  const data = await fetch(url, options).then((res) => res.json());
+  return data;
 }
 ```
 

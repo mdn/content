@@ -37,6 +37,18 @@ None ({{jsxref("undefined")}}).
 
 ### Using defer()
 
+One use case of `defer()` is when you claim ownership of a resource that gets passed in. In this example, we claim ownership of a file handle that gets passed in, by setting up a closing callback when the function exits.
+
+```js
+async function consumeResource(handle) {
+  await using stack = new AsyncDisposableStack();
+  stack.defer(async () => {
+    await handle.close();
+  });
+  // Do something with handle
+}
+```
+
 ## Specifications
 
 {{Specifications}}
@@ -48,6 +60,6 @@ None ({{jsxref("undefined")}}).
 ## See also
 
 - [JavaScript resource management](/en-US/docs/Web/JavaScript/Guide/Resource_management)
-- {{jsxref("DisposableStack")}}
-- {{jsxref("DisposableStack.prototype.adopt()")}}
-- {{jsxref("DisposableStack.prototype.use()")}}
+- {{jsxref("AsyncDisposableStack")}}
+- {{jsxref("AsyncDisposableStack.prototype.adopt()")}}
+- {{jsxref("AsyncDisposableStack.prototype.use()")}}

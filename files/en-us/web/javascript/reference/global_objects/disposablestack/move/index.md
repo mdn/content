@@ -37,7 +37,7 @@ function consumeStack(stack) {
   using newStack = stack.move(); // newStack now owns the disposers
   console.log(stack.disposed); // true
   console.log(newStack.disposed); // false
-  // newStack is disposed here immediately before the function exists
+  // newStack is disposed here immediately before the function exits
 }
 
 const stack = new DisposableStack();
