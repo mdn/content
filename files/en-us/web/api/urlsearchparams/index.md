@@ -62,6 +62,7 @@ Although `URLSearchParams` is functionally similar to a {{jsxref("Map")}}, when 
 ## Examples
 
 ```js
+// const paramsString = window.location.search;
 const paramsString = "q=URLUtils.searchParams&topic=api";
 const searchParams = new URLSearchParams(paramsString);
 
