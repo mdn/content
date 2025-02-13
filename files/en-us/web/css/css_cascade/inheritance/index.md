@@ -102,9 +102,9 @@ We can see here another border around the word "emphasized text".
 - [Learn: Handling conflicts](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
 - [Learn: cascade layers](/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)
 - [CSS cascading and inheritance](/en-US/docs/Web/CSS/CSS_cascade) module
-- [CSS syntax](/en-US/docs/Web/CSS/Syntax) guide
+- [CSS syntax](/en-US/docs/Web/CSS/CSS_syntax/Syntax) guide
 - [CSS syntax](/en-US/docs/Web/CSS/CSS_syntax) module
-- [At-rules](/en-US/docs/Web/CSS/At-rule)
+- [At-rules](/en-US/docs/Web/CSS/CSS_syntax/At-rule)
 - [Initial](/en-US/docs/Web/CSS/CSS_cascade/initial_value), [computed](/en-US/docs/Web/CSS/CSS_cascade/computed_value), [used](/en-US/docs/Web/CSS/CSS_cascade/used_value), and [actual](/en-US/docs/Web/CSS/CSS_cascade/actual_value) values
 - [Value definition syntax](/en-US/docs/Web/CSS/Value_definition_syntax)
 - [CSS nesting module](/en-US/docs/Web/CSS/CSS_nesting)

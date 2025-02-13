@@ -1,6 +1,6 @@
 ---
 title: Syntax
-slug: Web/CSS/Syntax
+slug: Web/CSS/CSS_syntax/Syntax
 page-type: guide
 ---
 
@@ -17,7 +17,7 @@ Setting CSS properties to specific values is the core function of the CSS langua
 
 Both properties and values are case-insensitive by default in CSS. The pair is separated by a colon, `:` (U+003A COLON), and white spaces before, between, and after properties and values, but not necessarily inside, are ignored.
 
-![css syntax - declaration.png](css_syntax_-_declaration.png)
+![A css declaration is a property value pair, with a colon separating the two entities and a semi-colon closing the declaration.](css_syntax_-_declaration.png)
 
 There are [hundreds of different properties](/en-US/docs/Web/CSS/Reference) in CSS and a practically endless number of different values. Not all pairs of properties and values are allowed and each property defines what are the valid values. When a value is not valid for a given property, the declaration is deemed _invalid_ and is wholly ignored by the CSS engine.
 
@@ -25,13 +25,13 @@ There are [hundreds of different properties](/en-US/docs/Web/CSS/Reference) in C
 
 Declarations are grouped in **blocks**, that is in a structure delimited by an opening brace, `{` (U+007B LEFT CURLY BRACKET), and a closing one, `}` (U+007D RIGHT CURLY BRACKET). Blocks sometimes can be nested, so opening and closing braces must be matched.
 
-![css syntax - block.png](css_syntax_-_block.png)
+![Two braces delimit the start and end of a CSS block, with css content or no content between the braces.](css_syntax_-_block.png)
 
 Such blocks are naturally called **declaration blocks** and declarations inside them are separated by a semicolon, `;` (U+003B SEMICOLON). A declaration block may be empty, that is containing null declaration. White spaces around declarations are ignored. The last declaration of a block doesn't need to be terminated by a semicolon, though it is often considered _good style_ to do it as it prevents forgetting to add it when extending the block with another declaration.
 
 A CSS declaration block is visualized in the diagram below.
 
-![css syntax - declarations block.png](declaration-block.png)
+![Within a CSS block, encompassed in braces, semicolons separate declarations, with the final semicolon being optional but recommended as good practice.](declaration-block.png)
 
 > [!NOTE]
 > The content of a CSS declaration block, that is a list of semicolon-separated declarations, without the initial and closing braces, can be put inside an HTML [`style`](/en-US/docs/Web/HTML/Global_attributes/style) attribute.
@@ -44,7 +44,7 @@ CSS allows this by associating conditions with declarations blocks. Each (valid)
 
 A CSS ruleset (or rule) is visualized in the diagram below.
 
-![css syntax - ruleset.png](ruleset.png)
+![A group of comma-separated selectors precedes the brace-delimited declaration block content multiple declarations ending in semicolons.](ruleset.png)
 
 As an element of the page may be matched by several selectors, and therefore by several rules potentially containing a given property several times, with different values, the CSS standard defines which one has precedence over the other and must be applied: this is called the cascade algorithm (see [Handling conflicts](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)).
 
@@ -59,12 +59,12 @@ Rulesets are the main building blocks of a style sheet, which often consists of 
 
 A **statement** is a building block that begins with any non-space characters and ends at the first closing brace or semicolon (outside a string, non-escaped and not included into another {}, () or \[] pair).
 
-![css syntax - statements Venn diag.png](css_syntax_-_statements_venn_diag.png)
+![A Venn diagram of statements noting all rulesets are nested statements, while some at-rules are nested statements but most aren't. Anthing that is not an at-rule or nested is invalid.](css_syntax_-_statements_venn_diag.png)
 
 There are two kinds of statements:
 
 - **Rulesets** (or _rules_) that, as seen, associate a collection of CSS declarations to a condition described by a [selector](/en-US/docs/Web/CSS/CSS_selectors).
-- **At-rules** that start with an at sign, `@` (U+0040 COMMERCIAL AT), followed by an identifier and then continuing up to the end of the statement, that is up to the next semicolon (;) outside of a block, or the end of the next block. Each type of [at-rules](/en-US/docs/Web/CSS/At-rule), defined by the identifier, may have its own internal syntax, and semantics of course. They are used to convey meta-data information (like {{ cssxref("@layer") }} or {{ cssxref("@import") }}), conditional information (like {{ cssxref("@media") }} or {{ cssxref("@document") }}), or descriptive information (like {{ cssxref("@font-face") }}).
+- **At-rules** that start with an at sign, `@` (U+0040 COMMERCIAL AT), followed by an identifier and then continuing up to the end of the statement, that is up to the next semicolon (;) outside of a block, or the end of the next block. Each type of [at-rules](/en-US/docs/Web/CSS/CSS_syntax/At-rule), defined by the identifier, may have its own internal syntax, and semantics of course. They are used to convey meta-data information (like {{ cssxref("@layer") }} or {{ cssxref("@import") }}), conditional information (like {{ cssxref("@media") }} or {{ cssxref("@document") }}), or descriptive information (like {{ cssxref("@font-face") }}).
 
 Any statement which isn't a ruleset or an at-rule is invalid and ignored.
 
@@ -74,20 +74,17 @@ There is another group of statements – the **nested statements**. These are st
 
 ## See also
 
-- CSS key concepts:
-  - **CSS syntax**
-  - [Comments](/en-US/docs/Web/CSS/Comments)
-  - [Specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity)
-  - [Inheritance](/en-US/docs/Web/CSS/CSS_cascade/Inheritance)
-  - [Box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
-  - [Layout modes](/en-US/docs/Web/CSS/Layout_mode)
-  - [Visual formatting models](/en-US/docs/Web/CSS/Visual_formatting_model)
-  - [Margin collapsing](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
-  - Values
-    - [Initial values](/en-US/docs/Web/CSS/CSS_cascade/initial_value)
-    - [Computed values](/en-US/docs/Web/CSS/CSS_cascade/computed_value)
-    - [Used values](/en-US/docs/Web/CSS/CSS_cascade/used_value)
-    - [Actual values](/en-US/docs/Web/CSS/CSS_cascade/actual_value)
-  - [Value definition syntax](/en-US/docs/Web/CSS/Value_definition_syntax)
-  - [Shorthand properties](/en-US/docs/Web/CSS/Shorthand_properties)
-  - [Replaced elements](/en-US/docs/Web/CSS/Replaced_element)
+- [CSS syntax](/en-US/docs/Web/CSS/CSS_syntax) module
+- [Selectors and combinators](/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators)
+- [Selector structure](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure)
+- [Error handling](/en-US/docs/Web/CSS/CSS_syntax/Error_handling)
+- [Specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity)
+- [Inheritance](/en-US/docs/Web/CSS/CSS_cascade/Inheritance)
+- [Cascade](/en-US/docs/Web/CSS/CSS_cascade/Cascade)
+- [Value definition syntax](/en-US/docs/Web/CSS/Value_definition_syntax)
+- Values
+  - [Initial values](/en-US/docs/Web/CSS/CSS_cascade/initial_value)
+  - [Computed values](/en-US/docs/Web/CSS/CSS_cascade/computed_value)
+  - [Used values](/en-US/docs/Web/CSS/CSS_cascade/used_value)
+  - [Actual values](/en-US/docs/Web/CSS/CSS_cascade/actual_value)
+- [Shorthand properties](/en-US/docs/Web/CSS/Shorthand_properties)
