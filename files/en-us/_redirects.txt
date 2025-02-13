@@ -134,7 +134,7 @@
 /en-US/docs/Addons/Add-on_guidelines	https://extensionworkshop.com/documentation/publish/add-on-policies/
 /en-US/docs/Addons/Working_with_AMO	/en-US/docs/Mozilla/Add-ons
 /en-US/docs/Advanced_styling_for_HTML_forms	/en-US/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling
-/en-US/docs/Alternative_style_sheets	/en-US/docs/Web/CSS/Alternative_style_sheets
+/en-US/docs/Alternative_style_sheets	/en-US/docs/Web/HTML/Attributes/rel/Alternate_stylesheet
 /en-US/docs/An_Overview_of_Accessible_Web_Applications_and_Widgets	/en-US/docs/Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets
 /en-US/docs/An_overview_of_NSS_Internals	https://firefox-source-docs.mozilla.org/security/nss/index.html
 /en-US/docs/Animation	/en-US/docs/Web/API/Animation
@@ -452,7 +452,7 @@
 /en-US/docs/CSS/@supports	/en-US/docs/Web/CSS/@supports
 /en-US/docs/CSS/Adjacent_sibling_selectors	/en-US/docs/Web/CSS/Next-sibling_combinator
 /en-US/docs/CSS/Alias	/en-US/docs/Web/CSS/cursor
-/en-US/docs/CSS/Alternative_style_sheets	/en-US/docs/Web/CSS/Alternative_style_sheets
+/en-US/docs/CSS/Alternative_style_sheets	/en-US/docs/Web/HTML/Attributes/rel/Alternate_stylesheet
 /en-US/docs/CSS/At-rule	/en-US/docs/Web/CSS/At-rule
 /en-US/docs/CSS/Attribute_selectors	/en-US/docs/Web/CSS/Attribute_selectors
 /en-US/docs/CSS/Aural	/en-US/docs/Web/CSS/@media/aural
@@ -11813,6 +11813,7 @@
 /en-US/docs/Web/CSS/Adjacent_sibling_selectors	/en-US/docs/Web/CSS/Next-sibling_combinator
 /en-US/docs/Web/CSS/Alias	/en-US/docs/Web/CSS/cursor
 /en-US/docs/Web/CSS/All_About_The_Containing_Block	/en-US/docs/Web/CSS/CSS_display/Containing_block
+/en-US/docs/Web/CSS/Alternative_style_sheets	/en-US/docs/Web/HTML/Attributes/rel/Alternate_stylesheet
 /en-US/docs/Web/CSS/Aural	/en-US/docs/Web/CSS/@media/aural
 /en-US/docs/Web/CSS/Block_formatting_context	/en-US/docs/Web/CSS/CSS_display/Block_formatting_context
 /en-US/docs/Web/CSS/CSS3_Columns	/en-US/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts

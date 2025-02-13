@@ -1,22 +1,22 @@
 ---
-title: Alternative style sheets
-slug: Web/CSS/Alternative_style_sheets
+title: Alternate stylesheet
+slug: Web/HTML/Attributes/rel/alternate_stylesheet
 page-type: guide
 browser-compat: html.elements.link.rel.alternate_stylesheet
 ---
 
-{{CSSRef}}
+{{HTMLSidebar}}
 
-Specifying **alternative style sheets** in a web page provides a way for users to see multiple versions of a page, based on their needs or preferences.
+The **`alternate stylesheet`** keyword pair for the [`rel`](/en-US/docs/Web/HTML/Element/link#rel) attribute of the {{HTMLElement("link")}} element indicates that the target resource an _alternative style sheet_. Specifying **alternative style sheets** in a web page provides a way for users to see multiple versions of a page, based on their needs or preferences.
 
 > [!NOTE]
 > This feature is not well supported in browsers without an extension. To offer alternative presentations that work with a user's existing preferences, see the CSS [media features](/en-US/docs/Web/CSS/@media#media_features) {{cssxref("@media/prefers-color-scheme","prefers-color-scheme")}} and {{cssxref("@media/prefers-contrast","prefers-contrast")}}.
 
-Firefox lets the user select the stylesheet using the _View > Page Style_ submenu. Other browsers require an extension to enable this functionality. The web page can also provide its own user interface to let the user switch styles.
+Firefox lets the user select the {{glossary("stylesheet")}} using the _View > Page Style_ submenu, which displays the values of the [`title`](/en-US/docs/Web/HTML/Global_attributes/title) attributes. Other browsers require an extension to enable this functionality. The web page can also provide its own user interface to let the user switch styles.
 
 ## An example: specifying the alternative stylesheets
 
-The alternate stylesheets are commonly specified using a {{HTMLElement("link")}} element with `rel="alternate stylesheet"` and `title="…"` attributes. For example:
+Alternate stylesheets are specified using {{HTMLElement("link")}} elements with `rel="alternate stylesheet"` and `title="…"` attributes. For example:
 
 ```html
 <link href="reset.css" rel="stylesheet" />
@@ -28,7 +28,7 @@ The alternate stylesheets are commonly specified using a {{HTMLElement("link")}}
 
 In this example, the styles "Default Style", "Fancy", and "Basic" will be listed in the _Page Style_ submenu, with "Default Style" pre-selected. When the user selects a different style, the page will immediately be re-rendered using that style sheet.
 
-No matter what style is selected, the rules from the reset.css stylesheet will always be applied.
+No matter what style is selected, the rules from the `reset.css` stylesheet will always be applied.
 
 ### Try it out
 
@@ -42,7 +42,7 @@ Any stylesheet in a document falls into one of the following categories:
 - **Preferred** (has `rel="stylesheet"`, with `title="…"` specified): applied by default, but {{domxref("StyleSheet.disabled", "disabled", "", 1)}} if an alternate stylesheet is selected. **There can only be one preferred stylesheet**, so providing stylesheets with different title attributes will cause some of them to be ignored.
 - **Alternate** (`rel="alternate stylesheet"`, with `title="…"` specified): disabled by default, can be selected.
 
-When style sheets are referenced with a `title` attribute on the {{HTMLElement("link", "&lt;link rel=\"stylesheet\"&gt;")}} or {{HTMLElement("style")}} element, the title becomes one of the choices offered to the user. Style sheets linked with the same `title` are part of the same choice. Style sheets linked without a `title` attribute are always applied.
+When style sheets are referenced with a `title` attribute on the {{HTMLElement("link", "&lt;link rel=\"stylesheet\"&gt;")}} or {{HTMLElement("style")}} element, the title becomes one of the choices offered to the user. Style sheets linked with the same [`title`](/en-US/docs/Web/HTML/Global_attributes/title) are part of the same choice. Style sheets linked without a `title` attribute are always applied.
 
 Use `rel="stylesheet"` to link to the default style, and `rel="alternate stylesheet"` to link to alternative style sheets. This tells the browser which style sheet title should be selected by default, and makes that default selection apply in browsers that do not support alternate style sheets.
 
@@ -53,3 +53,8 @@ Use `rel="stylesheet"` to link to the default style, and `rel="alternate stylesh
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [CSS](/en-US/docs/Web/CSS)
+- [Using dynamic styling information](/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)
