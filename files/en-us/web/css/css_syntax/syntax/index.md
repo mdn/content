@@ -44,7 +44,7 @@ CSS allows this by associating conditions with declarations blocks. Each (valid)
 
 A CSS ruleset (or rule) is visualized in the diagram below.
 
-![A group of comma-separated selectors precedes the brace-delimited declaration block content multiple declarations ending in semicolons.](ruleset.png)
+![A group of comma-separated selectors precedes the brace-delimited declaration block, which contains multiple declarations ending in semicolons.](ruleset.png)
 
 As an element of the page may be matched by several selectors, and therefore by several rules potentially containing a given property several times, with different values, the CSS standard defines which one has precedence over the other and must be applied: this is called the cascade algorithm (see [Handling conflicts](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)).
 
