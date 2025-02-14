@@ -7,7 +7,7 @@ spec-urls: https://drafts.csswg.org/css-syntax/
 
 {{CSSRef}}
 
-**At-rules** are [CSS statements](/en-US/docs/Web/CSS/CSS_syntax/Syntax#css_statements) that instruct CSS how to behave. They begin with an at-keywork, an at sign, `@` (U+0040 COMMERCIAL AT), followed by an identifier. They include everything from the at-keyword up to the next semicolon, `;` (U+003B SEMICOLON), or the next [CSS block](/en-US/docs/Web/CSS/CSS_syntax/Syntax#css_declaration_blocks), whichever comes first.
+**At-rules** are [CSS statements](/en-US/docs/Web/CSS/CSS_syntax/Syntax#css_statements) that instruct CSS how to behave. They begin with an at-sign, `@` (U+0040 COMMERCIAL AT), followed by an identifier. They include everything from the at-keyword up to the next semicolon, `;` (U+003B SEMICOLON), or the next [CSS block](/en-US/docs/Web/CSS/CSS_syntax/Syntax#css_declaration_blocks), whichever comes first.
 
 At-rules are used to group and structure style rules and other at-rules, declare style information not associated with selected content, and manage syntactic constructs such as imports and namespaces keyword mappings.
 
