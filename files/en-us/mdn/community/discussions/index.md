@@ -9,8 +9,8 @@ On MDN Web Docs, we encourage our community to start and/or engage in discussion
 We ask that you keep each discussion focused on the topic at hand instead of covering multiple topics in one discussion.
 
 > [!NOTE]
-> Don't report bugs in `mdn/mdn-community`.
-> If you see something wrong on MDN Web Docs, open a GitHub issue in the [relevant MDN GitHub repository](https://github.com/mdn/).
+> Don't report bugs in GitHub Discussions.
+> If you see something wrong on MDN Web Docs, open a GitHub issue in the [the relevant GitHub repository](/en-US/docs/MDN/Community/Our_repositories).
 
 If you're not sure whether to open a GitHub issue or discussion, here's what each are for:
 
@@ -127,22 +127,14 @@ Check out the subject of each discussion category below so that you can start yo
         >
       </td>
       <td>
-        Discussions related to the
-        <a href="https://github.com/mdn/yari">core</a> MDN Web Docs platform.
+        Discussions related to the frontend and build system of
+        MDN Web Docs.
         Your suggestions to improve the architecture and existing features, such
-        as navigation and search, are welcome. However, if you believe you found
-        a bug related to the platform, please
-        <a
-          href="https://github.com/mdn/yari/issues/choose?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc"
-          >report it</a
-        >
-        on the Yari repository. This is also the place for discussions related
+        as navigation and search, are welcome. If you believe you found
+        a bug, report it on [the relevant repository](/en-US/docs/MDN/Community/Our_repositories). This is also the place for discussions related
         to existing tooling, such as
-        <a href="https://github.com/mdn/bob">BoB</a>,
-        <a href="https://github.com/mdn/markdown/">markdown</a>,
         <a href="https://github.com/mdn/workflows">reusable workflows</a>, etc.
-        NOTE: This category is not for MDN Plus-related feature discussions.
-        There is a separate discussion category for MDN Plus.
+        NOTE: There is a separate discussion category for MDN Plus.
       </td>
     </tr>
   </tbody>

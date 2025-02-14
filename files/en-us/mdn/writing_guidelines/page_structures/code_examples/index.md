@@ -1,5 +1,6 @@
 ---
-title: Code examples
+title: Code examples on MDN
+short-title: Code examples
 slug: MDN/Writing_guidelines/Page_structures/Code_examples
 page-type: mdn-writing-guide
 sidebar: mdnsidebar
