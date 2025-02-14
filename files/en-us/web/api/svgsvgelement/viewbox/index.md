@@ -26,7 +26,7 @@ Give the following SVG opening tag:
 <svg viewbox="-12 -18 200 300" x="5" y="5" height="400" width="600"></svg>
 ```
 
-We can retrieve the viewBox values, but they differ from the {{domxref("SVGSVGElement.x", "x")}}, {{domxref("SVGSVGElement.y", "y")}}, {{domxref("SVGSVGElement.width", "widht")}}, and {{domxref("SVGSVGElement.height", "height")}} properties:
+We can retrieve the viewBox values, but they differ from the {{domxref("SVGSVGElement.x", "x")}}, {{domxref("SVGSVGElement.y", "y")}}, {{domxref("SVGSVGElement.width", "width")}}, and {{domxref("SVGSVGElement.height", "height")}} properties:
 
 ```js
 const svg = document.querySelector("svg");
