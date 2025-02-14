@@ -172,7 +172,7 @@ const greeting = "I'm a bad example";
 This issue was resolved in:
 
 - <https://github.com/mdn/content/issues/3512>
-- <https://github.com/mdn/pull/7017>
+- <https://github.com/mdn/yari/pull/7017>
 
 ## Notes, warnings, and callouts
 
