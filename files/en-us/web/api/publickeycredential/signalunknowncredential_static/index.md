@@ -62,7 +62,7 @@ In addition, `signalUnknownCredential()` might also be called if a web app is ab
 
 In this example, a login attempt is made using discoverable credentials via a [`get()`](/en-US/docs/Web/API/CredentialsContainer/get) call. The credential is returned successfully, and the credential ID and payload are stored in constants.
 
-The payload is sent to the RP server via a [`fetch()`](/en-US/docs/Web/API/Window/fetch) request to log the user in, but the request fails with a {{httpstatus("404")}} response because the RP doesn't recognize that user (for example because that credential was prevously deleted from the RP).
+The payload is sent to the RP server via a [`fetch()`](/en-US/docs/Web/API/Window/fetch) request to log the user in, but the request fails with a {{httpstatus("404")}} response because the RP doesn't recognize that user (for example because that credential was previously deleted from the RP).
 
 As a result of this, we invoke the `signalUnknownCredential()` method, passing it the `rpId` and credential ID, to inform the authenticator that the credential is unknown to the RP. The authenticator should then delete the credential so it does not cause the same problem again.
 

@@ -11,13 +11,13 @@ The **`<pre>`** [HTML](/en-US/docs/Web/HTML) element represents preformatted tex
 
 Whitespace inside this element is displayed as written, with one exception. If one or more leading newline characters are included immediately following the opening `<pre>` tag, the _first_ newline character is stripped.
 
+`<pre>` elements' text content is parsed as HTML, so if you want to ensure that your text content stays as plain text, some syntax characters, such as `<`, may need to be escaped using their respective {{glossary("character reference", "character references")}}. See [escaping ambiguous characters](#escaping_ambiguous_characters) for more information.
+
+`<pre>` elements commonly contain {{HTMLElement("code")}}, {{HTMLElement("samp")}}, and {{HTMLElement("kbd")}} elements, to represent computer code, computer output, and user input, respectively.
+
 By default, `<pre>` is a [block-level](/en-US/docs/Glossary/Block-level_content) element, i.e. its default {{cssxref("display")}} value is `block`.
 
 {{EmbedInteractiveExample("pages/tabbed/pre.html", "tabbed-standard")}}
-
-If you have to display reserved characters such as `<`, `>`, `&`, and `"` within the `<pre>` tag, the characters must be escaped using their respective {{glossary("character reference", "character references")}}.
-
-`<pre>` elements commonly contain {{HTMLElement("code")}}, {{HTMLElement("samp")}}, and {{HTMLElement("kbd")}} elements, to represent computer code, computer output, and user input, respectively.
 
 ## Attributes
 
@@ -79,7 +79,17 @@ body {
 
 {{EmbedLiveSample("Basic_example")}}
 
-### Escaping reserved characters
+### Escaping ambiguous characters
+
+Suppose you want to demonstrate HTML code in a `<pre>` element. The character sequences that define valid HTML tags (starting with `<` and ending with `>`) will not be displayed. To display the tag characters as text, you need to escape (at least) the `<` character using its character reference, so that the sequences no longer define valid tags.
+
+In reality, the HTML parser treats most characters as plain text unless in specific contexts. For example, `< code` is fine, but `<code` would be misparsed; `&am;` is fine, but `&amp;` is not. However, it's a good practice to escape all ambiguous characters to avoid any confusion, especially if you are programmatically generating HTML and injecting the `<pre>` content. In this case, here's a good rule of thumb for how to escape characters:
+
+1. First, write the content out, as you would like it to appear in the HTML document.
+2. Replace any ampersands (`&`) with `&amp;`. Do this step first, so that new `&` characters generated in the next step don't get escaped.
+3. Replace any `<` characters with `&lt;`.
+
+This should result in the content being displayed as you intended. The replacement of other HTML syntax characters is optional (like `>` to `&gt;`, `"` to `&quot;`, and `'` to `&apos;`), but will do no harm.
 
 #### HTML
 

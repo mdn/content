@@ -7,7 +7,7 @@ spec-urls: https://drafts.csswg.org/css-values/#url-value
 
 {{CSSRef}}
 
-The **`<url>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) is a pointer to a resource. The resource could be an image, a video, a CSS file, a font file, an SVG feature etc.
+The **`<url>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) is a pointer to a resource. The resource could be an image, a video, a CSS file, a font file, an SVG feature etc.
 
 ## Syntax
 

@@ -52,9 +52,9 @@ The `/* */` comment syntax is used for both single and multiline comments. There
 - [Syntax](/en-US/docs/Web/CSS/Syntax) guide
 - [Value definition syntax](/en-US/docs/Web/CSS/Value_definition_syntax)
 - [CSS error handling](/en-US/docs/Web/CSS/CSS_syntax/Error_handling)
-- [Specificity](/en-US/docs/Web/CSS/Specificity)
-- [Inheritance](/en-US/docs/Web/CSS/Inheritance)
+- [Specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity)
+- [Inheritance](/en-US/docs/Web/CSS/CSS_cascade/Inheritance)
 - [Learn: Handling conflicts](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
 - [Learn: cascade layers](/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)
 - [CSS cascading and inheritance](/en-US/docs/Web/CSS/CSS_cascade) module
-- [Initial](/en-US/docs/Web/CSS/initial_value), [computed](/en-US/docs/Web/CSS/computed_value), [used](/en-US/docs/Web/CSS/used_value), and [actual](/en-US/docs/Web/CSS/actual_value) values
+- [Initial](/en-US/docs/Web/CSS/CSS_cascade/initial_value), [computed](/en-US/docs/Web/CSS/CSS_cascade/computed_value), [used](/en-US/docs/Web/CSS/CSS_cascade/used_value), and [actual](/en-US/docs/Web/CSS/CSS_cascade/actual_value) values

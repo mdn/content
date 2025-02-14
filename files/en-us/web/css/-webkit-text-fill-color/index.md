@@ -1,5 +1,5 @@
 ---
-title: "-webkit-text-fill-color"
+title: -webkit-text-fill-color
 slug: Web/CSS/-webkit-text-fill-color
 page-type: css-property
 browser-compat: css.properties.-webkit-text-fill-color

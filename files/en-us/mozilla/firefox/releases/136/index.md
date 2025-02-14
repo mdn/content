@@ -6,7 +6,7 @@ page-type: firefox-release-notes
 
 {{FirefoxSidebar}}
 
-This article provides information about the changes in Firefox 136 that affect developers. Firefox 136 is the current [Nightly version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly) and ships on [March 4, 2025](https://whattrainisitnow.com/release/?version=136).
+This article provides information about the changes in Firefox 136 that affect developers. Firefox 136 is the current [Beta version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#beta) and ships on [March 4, 2025](https://whattrainisitnow.com/release/?version=136).
 
 ## Changes for web developers
 
@@ -21,6 +21,8 @@ This article provides information about the changes in Firefox 136 that affect d
 #### Removals
 
 ### JavaScript
+
+- {{jsxref("Intl.DurationFormat")}} is now supported, enabling locale-sensitive formatting of durations. ([Firefox bug 1933303](https://bugzil.la/1933303)).
 
 #### Removals
 
@@ -37,6 +39,17 @@ This article provides information about the changes in Firefox 136 that affect d
 #### Removals
 
 ### APIs
+
+- The maximum size of [Data URLs](/en-US/docs/Web/URI/Schemes/data) has been increased from 32MB to 512MB, matching the limit for Chromium browsers ([Firefox bug 1911300](https://bugzil.la/1911300)).
+- The [Cookie Store API](/en-US/docs/Web/API/Cookie_Store_API) is a modern, {{glossary("asynchronous")}} {{jsxref("Promise")}}-based method of managing cookies, which can be used in both the main thread and in [service workers](/en-US/docs/Web/API/Service_Worker_API).
+  A subset of the Cookie Store API has been implemented ([Firefox bug 1937477](https://bugzil.la/1937477)). This includes:
+
+  - The [`CookieStore`](/en-US/docs/Web/API/CookieStore) interface, for getting, setting, and deleting cookies.
+  - The [`Window.cookieStore`](/en-US/docs/Web/API/Window/cookieStore) and [`ServiceWorkerGlobalScope.cookieStore`](/en-US/docs/Web/API/ServiceWorkerGlobalScope/cookieStore) properties for getting `CookieStore` instances.
+  - The [`change` event](/en-US/docs/Web/API/CookieStore/change_event) (and its interface [`CookieChangeEvent`](/en-US/docs/Web/API/CookieChangeEvent)), which fires in main thread and service worker contexts when cookies are set or deleted.
+
+  Note that while any of the supported cookie properties can be [set](/en-US/docs/Web/API/CookieStore/get), the cookie objects returned by the [`get()`](/en-US/docs/Web/API/CookieStore/get) and [`getAll()`](/en-US/docs/Web/API/CookieStore/getAll) methods, and in the `change` event, omit all properties other than `name` and `value` (matching the information returned by the {{domxref("document.cookie")}}).
+  The following interfaces and properties are not implemented: [`ServiceWorkerRegistration.cookies`](/en-US/docs/Web/API/ServiceWorkerRegistration/cookies), [`CookieStoreManager`](/en-US/docs/Web/API/CookieStoreManager), and [`ExtendableCookieChangeEvent`](/en-US/docs/Web/API/ExtendableCookieChangeEvent).
 
 #### DOM
 
@@ -67,6 +80,11 @@ This article provides information about the changes in Firefox 136 that affect d
 ## Experimental web features
 
 These features are newly shipped in Firefox 136 but are disabled by default. To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`. You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
+
+- **Error.captureStackTrace()**: <code>javascript.options.experimental.error_capture_stack_trace</code>.
+  The {{jsxref("Error.captureStackTrace()")}} static method installs stack trace information on a provided object as the {{jsxref("Error.stack")}} property.
+  Its main use case is to install a stack trace on a custom error object that does not derive from the {{jsxref("Error")}} interface.
+  ([Firefox bug 1886820](https://bugzil.la/1886820)).
 
 ## Older versions
 

@@ -40,23 +40,23 @@ Finally, note that for non-replaced inline elements, the amount of space taken u
 
 ## See also
 
-- [Layout and the containing block](/en-US/docs/Web/CSS/Containing_block)
-- [Introducing the CSS Cascade](/en-US/docs/Web/CSS/Cascade)
+- [Layout and the containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block)
+- [Introducing the CSS Cascade](/en-US/docs/Web/CSS/CSS_cascade/Cascade)
 - [Learn: Handling conflicts](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
 - CSS key concepts:
   - [CSS syntax](/en-US/docs/Web/CSS/Syntax)
   - [At-rules](/en-US/docs/Web/CSS/At-rule)
   - [Comments](/en-US/docs/Web/CSS/Comments)
-  - [Specificity](/en-US/docs/Web/CSS/Specificity)
-  - [Inheritance](/en-US/docs/Web/CSS/Inheritance)
+  - [Specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity)
+  - [Inheritance](/en-US/docs/Web/CSS/CSS_cascade/Inheritance)
   - [Layout modes](/en-US/docs/Web/CSS/Layout_mode)
   - [Visual formatting models](/en-US/docs/Web/CSS/Visual_formatting_model)
   - [Margin collapsing](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - Values
-    - [Initial values](/en-US/docs/Web/CSS/initial_value)
-    - [Computed values](/en-US/docs/Web/CSS/computed_value)
-    - [Used values](/en-US/docs/Web/CSS/used_value)
-    - [Actual values](/en-US/docs/Web/CSS/actual_value)
+    - [Initial values](/en-US/docs/Web/CSS/CSS_cascade/initial_value)
+    - [Computed values](/en-US/docs/Web/CSS/CSS_cascade/computed_value)
+    - [Used values](/en-US/docs/Web/CSS/CSS_cascade/used_value)
+    - [Actual values](/en-US/docs/Web/CSS/CSS_cascade/actual_value)
   - [Value definition syntax](/en-US/docs/Web/CSS/Value_definition_syntax)
   - [Shorthand properties](/en-US/docs/Web/CSS/Shorthand_properties)
   - [Replaced elements](/en-US/docs/Web/CSS/Replaced_element)

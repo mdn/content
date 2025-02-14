@@ -137,9 +137,9 @@ A caption is placed directly beneath the `<table>` tag.
 
 ### Active learning: Adding a caption
 
-Let's try this out, revisiting an example we first met in the previous article.
+Let's try this out, using a language teacher's school timetable as an example.
 
-1. Open up your language teacher's school timetable from the end of [HTML table basics](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics#active_learning_colgroup_and_col), or make a local copy of our [timetable-fixed.html](https://github.com/mdn/learning-area/blob/main/html/tables/basic/timetable-fixed.html) file.
+1. Make a local copy of our [timetable-fixed.html](https://github.com/mdn/learning-area/blob/main/html/tables/basic/timetable-fixed.html) file.
 2. Add a suitable caption for the table.
 3. Save your code and open it in a browser to see what it looks like.
 

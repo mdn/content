@@ -1,11 +1,11 @@
 ---
-title: ":open"
+title: :open
 slug: Web/CSS/:open
 page-type: css-pseudo-class
 browser-compat: css.selectors.open
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
 The **`:open`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents an element that has open and closed states, only when it is currently in the open state.
 
@@ -101,7 +101,7 @@ There is nothing special about our fruit selector.
 
 ```html
 <label>
-  Choose your favourite fruit:
+  Choose your favorite fruit:
   <select name="fruit">
     <option>apple</option>
     <option>banana</option>

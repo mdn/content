@@ -11,7 +11,7 @@ browser-compat: javascript.builtins.Temporal.Instant.epochMilliseconds
 
 The **`epochMilliseconds`** accessor property of {{jsxref("Temporal.Instant")}} instances returns an integer representing the number of milliseconds elapsed since the Unix epoch (midnight at the beginning of January 1, 1970, UTC) to this instant. It is equivalent to dividing `epochNanoseconds` by `1e6` and flooring the result.
 
-The set accessor of `epochMilliseconds` is `undefined`. You cannot change this property directly. To create a new `Temporal.Instant` object with the desired new `epochMilliseconds` value, use the {{jsxref("Temporal/Instant/add", "add()")}} or {{jsxref("Temporal/Instant/subtract", "subtract()")}} method with the appropriate duration.
+The set accessor of `epochMilliseconds` is `undefined`. You cannot change this property directly. To create a new `Temporal.Instant` object with the desired new `epochMilliseconds` value, use the {{jsxref("Temporal/Instant/fromEpochMilliseconds", "Temporal.Instant.fromEpochMilliseconds()")}} static method instead.
 
 ## Examples
 

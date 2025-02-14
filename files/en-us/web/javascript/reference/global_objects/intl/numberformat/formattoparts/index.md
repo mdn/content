@@ -9,7 +9,19 @@ browser-compat: javascript.builtins.Intl.NumberFormat.formatToParts
 
 The **`formatToParts()`** method of {{jsxref("Intl.NumberFormat")}} instances returns an array of objects representing each part of the formatted string that would be returned by {{jsxref("Intl/NumberFormat/format", "format()")}}. It is useful for building custom strings from the locale-specific tokens.
 
-{{EmbedInteractiveExample("pages/js/intl-numberformat-prototype-formattoparts.html")}}
+{{InteractiveExample("JavaScript Demo: Intl.NumberFormat.prototype.formatToParts")}}
+
+```js interactive-example
+const amount = 654321.987;
+const options = { style: "currency", currency: "USD" };
+const numberFormat = new Intl.NumberFormat("en-US", options);
+
+const parts = numberFormat.formatToParts(amount);
+const partValues = parts.map((p) => p.value);
+
+console.log(partValues);
+// Expected output: "["$", "654", ",", "321", ".", "99"]"
+```
 
 ## Syntax
 

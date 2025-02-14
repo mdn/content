@@ -1,5 +1,5 @@
 ---
-title: ":indeterminate"
+title: :indeterminate
 slug: Web/CSS/:indeterminate
 page-type: css-pseudo-class
 browser-compat: css.selectors.indeterminate

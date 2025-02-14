@@ -9,7 +9,19 @@ browser-compat: javascript.builtins.Date.valueOf
 
 The **`valueOf()`** method of {{jsxref("Date")}} instances returns the number of milliseconds for this date since the [epoch](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date), which is defined as the midnight at the beginning of January 1, 1970, UTC.
 
-{{EmbedInteractiveExample("pages/js/date-valueof.html")}}
+{{InteractiveExample("JavaScript Demo: Date.valueOf()")}}
+
+```js interactive-example
+const date1 = new Date(Date.UTC(96, 1, 2, 3, 4, 5));
+
+console.log(date1.valueOf());
+// Expected output: 823230245000
+
+const date2 = new Date("02 Feb 1996 03:04:05 GMT");
+
+console.log(date2.valueOf());
+// Expected output: 823230245000
+```
 
 ## Syntax
 

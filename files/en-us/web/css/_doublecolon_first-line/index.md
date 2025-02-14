@@ -1,5 +1,5 @@
 ---
-title: "::first-line"
+title: ::first-line
 slug: Web/CSS/::first-line
 page-type: css-pseudo-element
 browser-compat: css.selectors.first-line
