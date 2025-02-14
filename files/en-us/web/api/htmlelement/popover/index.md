@@ -25,9 +25,9 @@ An enumerated value; possible values are:
 - `"hint"`
 
   - : [`hint`](/en-US/docs/Web/API/Popover_API/Using#using_hint_popover_state) popovers do not close `auto` popovers when they are displayed, but will close other hint popovers.
-   They can be light dismissed and will respond to close requests.
-   Usually they are shown and hidden in response to non-click JavaScript events such as [`mouseover`](/en-US/docs/Web/API/Element/mouseover_event)/[`mouseout`](/en-US/docs/Web/API/Element/mouseout_event) and [`focus`](/en-US/docs/Web/API/Element/focus_event)/[`blur`](/en-US/docs/Web/API/Element/blur_event).
-   With this kind of implementation a click outside the button would cause an open `auto` popover to light-dismiss"
+    They can be light dismissed and will respond to close requests.
+    Usually they are shown and hidden in response to non-click JavaScript events such as [`mouseover`](/en-US/docs/Web/API/Element/mouseover_event)/[`mouseout`](/en-US/docs/Web/API/Element/mouseout_event) and [`focus`](/en-US/docs/Web/API/Element/focus_event)/[`blur`](/en-US/docs/Web/API/Element/blur_event).
+    With this kind of implementation a click outside the button would cause an open `auto` popover to light-dismiss"
 
 - `"manual"`
 
