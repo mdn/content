@@ -10,7 +10,7 @@ It also allows authors to be absolutely sure that the code blocks in documentati
 
 The live sample system can process code blocks written in HTML, CSS, and JavaScript, regardless of the order in which they are written in the page. This ensures that the output corresponds to the combined source code because the system runs the code directly within the page.
 
-Unlike [Interactive examples](/en-US/docs/MDN/Writing_guidelines/Page_structures/Code_examples#what_types_of_code_example_are_available), live samples don't provide inbuilt support for capturing console logging or resetting examples that are changed by user input.
+Unlike [Interactive examples](/en-US/docs/MDN/Writing_guidelines/Page_structures/Code_examples#what_types_of_code_example_are_on_mdn), live samples don't provide inbuilt support for capturing console logging or resetting examples that are changed by user input.
 The [Examples](#examples) section shows how you can implement these, and other, useful features.
 
 ## How does the live sample system work?
