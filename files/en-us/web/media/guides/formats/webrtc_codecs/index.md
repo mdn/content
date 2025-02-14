@@ -100,7 +100,7 @@ In addition to the mandatory codecs, some browsers support additional codecs as 
       <td>—</td>
       <td>
         <p>Chrome (113+), Firefox (136+)</p>
-        <p>Firefox 136 also supports simulcast.</p>
+        <p>Firefox 136 supports AV1 for simulcast.</p>
       </td>
     </tr>
   </tbody>
