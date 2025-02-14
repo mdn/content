@@ -19,11 +19,7 @@ You can find examples in the [HTTP directory of the shared-assets](https://githu
 
 To use anything from the shared-assets repository in an MDN page, see the [Using shared assets in documentation](https://github.com/mdn/shared-assets?tab=readme-ov-file#using-shared-assets-in-documentation) section of the project README.
 
-## Adding images to MDN pages
-
-These sections describe how to make images available in MDN pages.
-
-### Using vector formats
+## Using vector formats
 
 In general, if you're adding images, especially diagrams, consider using a vector format like SVG for the following reasons:
 
@@ -32,7 +28,7 @@ In general, if you're adding images, especially diagrams, consider using a vecto
 - **SVG can be diffed by Git**. In contrast, an entire file is diffed as a change in binaries when modified, so a .png that's 1MB will increase the repository size by 1MB on each merge commit when it's been modified.
 - **Flexible UX**. SVGs are vector formats, so they don't appear blurry at any scaling.
 
-### Committing images to content repositories
+## Committing images to content repositories
 
 If the shared assets repository is not appropriate for your use case, you can add images to a content (en-US or translated-content) repository.
 To add an image to a document, add your image file to the document's folder, and then reference the image from within the document's `index.md` file using [Markdown image syntax](https://github.github.com/gfm/#images) or the equivalent HTML `<img>` element.
