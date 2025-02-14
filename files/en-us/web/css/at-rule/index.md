@@ -105,4 +105,4 @@ Block at-rules end in a `{}`-block that contain nested rules, other at-rules, or
 - [CSS conditional rules](/en-US/docs/Web/CSS/CSS_conditional_rules) module
 - [CSS syntax](/en-US/docs/Web/CSS/Syntax)
 - [Specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity)
-- [Inheritance](/en-US/docs/Web/CSS/Inheritance)
+- [Inheritance](/en-US/docs/Web/CSS/CSS_cascade/Inheritance)
