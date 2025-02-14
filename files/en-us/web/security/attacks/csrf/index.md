@@ -75,7 +75,7 @@ To take advantage of this protection you must understand all the places in your 
 
 Web browsers distinguish two sorts of HTTP requests: [_simple_ requests](/en-US/docs/Web/HTTP/CORS#simple_requests) and other requests.
 
-By default, only simple requests can be sent cross-origin. The reason for allowing simple requests cross-origin is that these are the same sorts of requests that could already be made cross-origin using a `<form>` element, as in the example above. So it is assumed that websites already must implement CSRF protection against simple requests.
+By default, only simple requests can be sent cross-origin. The reason for allowing simple requests cross-origin is that these are the same sorts of requests that could already be made cross-origin using a `<form>` element, as in the example above. So it is assumed that websites must already implement CSRF protection against simple requests.
 
 All other requests are by default not allowed cross-origin, so a CSRF attack would not succeed if the request is not simple.
 
