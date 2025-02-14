@@ -9,7 +9,7 @@ browser-compat: css.types.text-edge
 
 The **`<text-edge>`** {{glossary("enumerated")}} [data type](/en-US/docs/Web/CSS/CSS_Types) defines keywords that specify font metrics representing specific regions on a font's block-start edge and block-end edge. Each keyword specifies a position of a font's over and/or under edge.
 
-The `<text-edge>` values are used in the {{cssxref("text-box-edge")}} property to specify an amount of space to trim from text content.
+The `<text-edge>` values are used in the {{cssxref("text-box-edge")}} property to specify an amount of space to trim from the block-start and block-end edge of a text element's block container.
 
 ## Syntax
 
@@ -29,7 +29,7 @@ The `<text-edge>` data type is composed of one or two keywords representing spec
 ### Single keyword values
 
 - `text`
-  - : The font's over and under edges are its start and end boundaries, which include the font's ascenders and decenders but exclude the half-leading set on the text. This can be considered the default, as this is where the boundaries are normally without any manipulation.
+  - : The font's over and under edges are its start and end boundaries, which include the font's ascenders and decenders but exclude the half-leading set on the text.
 
 > [!NOTE]
 > The specification also defines the `ideographic` and `ideographic-ink` keywords, which are intended to specify over and under edge positions specific to [CJK language characters](https://en.wikipedia.org/wiki/CJK_characters). Currently their exact behavior is being debated and they are are not supported by any browser.
@@ -43,7 +43,7 @@ The `<text-edge>` data type is composed of one or two keywords representing spec
 - `ex`
   - : The font's over edge is its x-height baseline, which is the top of its short lower-case letters.
 - `text`
-  - : The font's over edge is its start boundary, or its under edge is its end boundary, depending on which edge the value is set for. This can be considered the default, as this is where the boundaries are normally without any manipulation.
+  - : The font's over edge is its start boundary, or its under edge is its end boundary, depending on which edge the value is set for.
 
 ## Examples
 

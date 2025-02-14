@@ -9,7 +9,7 @@ browser-compat: css.properties.text-box
 
 {{CSSRef}}{{seecompattable}}
 
-The **`text-box`** [CSS](/en-US/docs/Web/CSS) property is a shorthand that corresponds to the {{cssxref("text-box-trim")}} and {{cssxref("text-box-edge")}} properties, which together specify the amount of space to trim from the block-start edge and block-end edge of specified text content. This includes, but is not limited to, the text's [leading](/en-US/docs/Glossary/Leading).
+The **`text-box`** [CSS](/en-US/docs/Web/CSS) property is a shorthand that corresponds to the {{cssxref("text-box-trim")}} and {{cssxref("text-box-edge")}} properties, which together specify the amount of space to trim from the block-start edge and block-end edge of a text element's block container. This includes, but is not limited to, the text's [leading](/en-US/docs/Glossary/Leading).
 
 ## Constituent properties
 
@@ -62,9 +62,9 @@ If `text-box-trim` is omitted, it is set to `trim-both`. If `text-box-edge` is o
 
 In the following example, we have two `<p>` elements with classes of `one` and `two`.
 
-We apply a `text-box` value of `trim-end cap alphabetic` to the first paragraph. The {{cssxref("text-box-edge")}} value of `cap alphabetic` specifies trimming the over edge to the top of the capital letters and the under edge flush with the text baseline. Because the {{cssxref("text-box-trim")}} value is set to `trim-end`, only the under edge is trimmed.
+We apply a `text-box` value of `trim-end cap alphabetic` to the first paragraph. The {{cssxref("text-box-edge")}} value of `cap alphabetic` specifies trimming the over edge to the top of the capital letters and the under edge flush with the text baseline. Because the {{cssxref("text-box-trim")}} value is set to `trim-end`, only the under edge of the paragraph is trimmed.
 
-We apply a `text-box` value of `trim-both ex alphabetic` to the second paragraph. The {{cssxref("text-box-edge")}} value of `ex alphabetic` specifies trimming the over edge to the font's x-height (the top edge of the short lower-case letters) and the under edge flush with the text baseline. Because the {{cssxref("text-box-trim")}} value is set to `trim-both`, both the over _and_ under edge are trimmed.
+We apply a `text-box` value of `trim-both ex alphabetic` to the second paragraph. The {{cssxref("text-box-edge")}} value of `ex alphabetic` specifies trimming the over edge to the font's x-height (the top edge of the short lower-case letters) and the under edge flush with the text baseline. Because the {{cssxref("text-box-trim")}} value is set to `trim-both`, both the over _and_ under edge of the paragraph are trimmed.
 
 ```html hidden
 <p class="one">This is .one</p>
