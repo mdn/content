@@ -8,7 +8,7 @@ In a cross-site request forgery (CSRF) attack, an attacker tricks the user or th
 
 ## Overview
 
-A website typically performs special actions on a user's behalf — buying a product or making an appointment, for example — by receiving an HTTP request from the user's browser, often with URL parameters detailing the action to perform. To ensure that the request really comes from the user in question, the browser expects the request to include {{glossary("credential", "credentials")}} for the user: for example, a cookie containing the user's session ID.
+A website typically performs special actions on a user's behalf — buying a product or making an appointment, for example — by receiving an HTTP request from the user's browser, often with URL parameters detailing the action to perform. To ensure that the request really comes from the user in question, the browser expects the request to include {{glossary("Credential", "credentials")}} for the user: for example, a cookie containing the user's session ID.
 
 In the example below, the user has previously signed into their bank, and the browser has stored a session cookie for the user. The page contains a {{htmlelement("form")}} element, which enables the user to transfer funds to another person. When the user submits the form, the browser sends a {{httpmethod("POST")}} request to the server, including the form data. If the user is signed in, the request includes the user's cookie. The server validates the cookie and performs the special action — in this case, transferring money:
 
@@ -113,7 +113,7 @@ The server can then check for the existence of the header: if it exists, then th
 
 We've said that non-simple requests are _by default_ not sent cross-origin. The catch is that the [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/CORS) protocol allows a website to relax this restriction.
 
-When a site issues a non-simple request cross-origin, the browser sends a {{glossary("preflight request")}}. This asks the server if it is prepared to accept the request.
+When a site issues a non-simple request cross-origin, the browser sends a {{glossary("Preflight request", "preflight request")}}. This asks the server if it is prepared to accept the request.
 
 - If the server responds with an {{httpheader("Access-Control-Allow-Origin")}} response header which matches the sender's origin, then the request is allowed.
 - If the server also sends an {{httpheader("Access-Control-Allow-Credentials")}} response header, then the request is allowed to include the site's credentials.
@@ -131,7 +131,7 @@ The `Strict` value offers the most protection: if this attribute is set, the bro
 The `Lax` value relaxes this restriction: cookies are included in cross-site requests for top-level navigations only. This means that, for example, attempts to make a request using a form submission would not include `Lax` cookies. The problem with this value is that can still pop up new windows or trigger top-level
 navigations in order to create request that satisfies the `Lax` constraint.
 
-Another problem with the `SameSite` attribute is that it protects you from requests from a different {{glossary("site")}}, not a different {{glossary("origin")}}. This is a looser protection, because (for example) `https://foo.example.org` and `https://bar.example.org` are considered the same site, although they are different origins. Effectively, if you rely on same-site protection, you have to trust all your site's subdomains.
+Another problem with the `SameSite` attribute is that it protects you from requests from a different {{glossary("Site", "site")}}, not a different {{glossary("Origin", "origin")}}. This is a looser protection, because (for example) `https://foo.example.org` and `https://bar.example.org` are considered the same site, although they are different origins. Effectively, if you rely on same-site protection, you have to trust all your site's subdomains.
 
 Even so, it is worth setting the `SameSite` attribute for sensitive cookies to `Strict` if you can, or `Lax` if you have to.
 
