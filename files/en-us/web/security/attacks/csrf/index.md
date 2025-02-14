@@ -10,7 +10,7 @@ In a cross-site request forgery (CSRF) attack, an attacker tricks the user or th
 
 A website typically performs special actions on a user's behalf — buying a product or making an appointment, for example — by receiving an HTTP request from the user's browser, often with URL parameters detailing the action to perform. To ensure that the request really comes from the user in question, the browser expects the request to include {{glossary("credential", "credentials")}} for the user: for example, a cookie containing the user's session ID.
 
-In the example below, the user has previously signed into their bank, and the browser has stored a session cookie for the user. The page contains a {{htmlelement("form")}} element, which enables the user to transfer funds to another person. When the user submits the form, the browser sends a {{httpmethod("POST")}} request to the server, including the form fields. If the user is signed in, the request includes the user's cookie. The server validates the cookie and performs the special action — in this case, transferring money:
+In the example below, the user has previously signed into their bank, and the browser has stored a session cookie for the user. The page contains a {{htmlelement("form")}} element, which enables the user to transfer funds to another person. When the user submits the form, the browser sends a {{httpmethod("POST")}} request to the server, including the form data. If the user is signed in, the request includes the user's cookie. The server validates the cookie and performs the special action — in this case, transferring money:
 
 ![Diagram showing a user submitting a browser form, the browser then making a POST request to the server, and the server validating the request.](form-post.svg)
 
@@ -36,12 +36,14 @@ When the user visits the page, the browser submits the form to the bank's websit
 
 ![Diagram showing a CSRF attack in which a decoy page submits a POST request to the website for the user's bank.](csrf-form-post.svg)
 
-If the website uses a {{httpmethod("GET")}} request to carry out the action, then the attacker can avoid having to use a form at all, and can execute the attack with markup like this:
+There are other ways the attacker could issue a cross-site request forgery. For example, if the website uses a {{httpmethod("GET")}} request to carry out the action, then the attacker can avoid having to use a form at all, and can execute the attack by sending the user a link to a page that contains markup like this:
 
 ```html
 <img
   src="https://my-bank.example.org/transfer?recipient=attacker&amount=1000" />
 ```
+
+When the user loads the page, the browser tries to fetch the image resource, which is really the transaction request.
 
 In general, a CSRF attack is possible if your website:
 
@@ -50,6 +52,14 @@ In general, a CSRF attack is possible if your website:
 - Uses parameters in the request that an attacker can predict.
 
 ## Defenses against CSRF
+
+In this section we'll outline two alternative defenses against CSRF and a third practice which can be used to provide defense in depth for either of the other two.
+
+- The first primary defense is to use _CSRF tokens_ embedded in the page. This method is especially appropriate if you're issuing state-changing requests from form elements, as in our example above.
+
+- The alternative defense is to ensure that state-changing requests are not _simple requests_, which enables them to rely on the browser's built-in cross-origin request blocking. This method is appropriate if you're issuing state-changing requests from JavaScript APIs like {{domxref("Window.fetch()", "fetch()")}}.
+
+Finally, we'll discuss the `SameSite` cookie attribute, which can be used to provide defense in depth alongside either of the previous methods.
 
 ### CSRF tokens
 
@@ -110,7 +120,7 @@ When a site issues a non-simple request cross-origin, the browser sends a {{glos
 
 This means that if your server sends an `Access-Control-Allow-Origin` response header including the sender's origin, and an `Access-Control-Allow-Credentials` response header, then the server is vulnerable to a CSRF attack from that origin.
 
-### SameSite cookies
+### Defense in depth: SameSite cookies
 
 The [`SameSite`](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-rfc6265bis-02#section-5.3.7) cookie attribute provides some protection against CSRF attacks. It's not a complete defense, and is best considered as an addition to one of the other defenses, providing some degree of defense in depth.
 
