@@ -1,7 +1,10 @@
 ---
 title: Comments
-slug: Web/CSS/Comments
+slug: Web/CSS/CSS_syntax/Comments
 page-type: guide
+spec-urls:
+  - https://www.w3.org/TR/CSS21/syndata.html#comments
+  - https://drafts.csswg.org/css-syntax-3/#consume-comment
 ---
 
 {{CSSRef}}
@@ -44,17 +47,10 @@ The `/* */` comment syntax is used for both single and multiline comments. There
 
 ## Specifications
 
-- [CSS 2.1 Syntax and basic data types #comments](https://www.w3.org/TR/CSS21/syndata.html#comments)
+{{Specifications}}
 
 ## See also
 
 - [CSS syntax](/en-US/docs/Web/CSS/CSS_syntax) module
-- [Syntax](/en-US/docs/Web/CSS/Syntax) guide
-- [Value definition syntax](/en-US/docs/Web/CSS/Value_definition_syntax)
+- [Syntax](/en-US/docs/Web/CSS/CSS_syntax/Syntax) guide
 - [CSS error handling](/en-US/docs/Web/CSS/CSS_syntax/Error_handling)
-- [Specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity)
-- [Inheritance](/en-US/docs/Web/CSS/CSS_cascade/Inheritance)
-- [Learn: Handling conflicts](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
-- [Learn: cascade layers](/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)
-- [CSS cascading and inheritance](/en-US/docs/Web/CSS/CSS_cascade) module
-- [Initial](/en-US/docs/Web/CSS/CSS_cascade/initial_value), [computed](/en-US/docs/Web/CSS/CSS_cascade/computed_value), [used](/en-US/docs/Web/CSS/CSS_cascade/used_value), and [actual](/en-US/docs/Web/CSS/CSS_cascade/actual_value) values

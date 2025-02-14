@@ -495,10 +495,10 @@ A few things to remember about specificity:
 - [SpeciFISHity](https://specifishity.com/)
 - [Specificity Calculator](https://specificity.keegan.st/): An interactive website to test and understand your own CSS rules
 - [_ID-CLASS-TYPE_ exercise](https://estelle.github.io/CSS/selectors/exercises/specificity.html) a specificity quiz
-- [CSS syntax](/en-US/docs/Web/CSS/Syntax) guide
+- [CSS syntax](/en-US/docs/Web/CSS/CSS_syntax/Syntax) guide
 - [CSS syntax](/en-US/docs/Web/CSS/CSS_syntax) module
 - [CSS error handling](/en-US/docs/Web/CSS/CSS_syntax/Error_handling)
-- [At-rules](/en-US/docs/Web/CSS/At-rule)
+- [At-rules](/en-US/docs/Web/CSS/CSS_syntax/At-rule)
 - [Inheritance](/en-US/docs/Web/CSS/CSS_cascade/Inheritance)
 - [Initial](/en-US/docs/Web/CSS/CSS_cascade/initial_value), [computed](/en-US/docs/Web/CSS/CSS_cascade/computed_value), [used](/en-US/docs/Web/CSS/CSS_cascade/used_value), and [actual](/en-US/docs/Web/CSS/CSS_cascade/actual_value) values
 - [Value definition syntax](/en-US/docs/Web/CSS/Value_definition_syntax)
