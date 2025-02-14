@@ -44,7 +44,11 @@ Below are the video codecs which are _required_ in any fully WebRTC-compliant br
     <tr>
       <th scope="row"><a href="#vp8">VP8</a></th>
       <td>—</td>
-      <td>Chrome, Edge, Firefox, Safari (12.1+)</td>
+      <td><p>Chrome, Edge, Firefox, Safari (12.1+)</p>
+        <p>
+          Firefox 134 supports VP8 for simulcast.
+        </p>
+      </td>
     </tr>
     <tr>
       <th scope="row"><a href="#avc_h.264">AVC / H.264</a></th>
@@ -52,15 +56,13 @@ Below are the video codecs which are _required_ in any fully WebRTC-compliant br
       <td>
         <p>Chrome (52+), Edge, Firefox, Safari</p>
         <p>
-          Firefox for Android 68 and later do not support AVC (H.264) anymore.
-          This is due to a change in Google Play store requirements that prevent
-          Firefox from downloading and installing the OpenH264 codec needed to
-          handle H.264 in WebRTC connections. See
-          <a
-            href="https://support.mozilla.org/en-US/kb/firefox-android-openh264"
-            >this article on SUMO</a
-          >
-          for details.
+          Firefox 136+ supports H.264 for simulcast.
+          This includes Firefox for Android, which is hardware supported.
+        </p>
+        <p>
+          Firefox for Android 68 to "some version" before version 136 do not support AVC (H.264) .
+          This is due to a change in Google Play store requirements that prevent Firefox from downloading and installing the OpenH264 codec needed to handle H.264 in WebRTC connections.
+          See <a href="https://support.mozilla.org/en-US/kb/firefox-android-openh264">this article on SUMO</a> for details.
         </p>
       </td>
     </tr>
@@ -91,7 +93,15 @@ In addition to the mandatory codecs, some browsers support additional codecs as 
     <tr>
       <th scope="row">VP9</th>
       <td>—</td>
-      <td>Chrome (48+), Firefox</td>
+      <td><p>Chrome (48+), Firefox</p></td>
+    </tr>
+    <tr>
+      <th scope="row">AV1</th>
+      <td>—</td>
+      <td>
+        <p>Chrome (113+), Firefox (136+)</p>
+        <p>Firefox 136 also supports simulcast.</p>
+      </td>
     </tr>
   </tbody>
 </table>
@@ -158,6 +168,10 @@ Unless signaled otherwise, the pixel aspect ratio is 1:1, indicating that pixels
 #### Other notes
 
 The payload format used for AVC in WebRTC is described in {{RFC(6184, "RTP Payload Format for H.264 Video")}}. AVC implementations for WebRTC are required to support the special "filler payload" and "full frame freeze" SEI messages; these are used to support switching among multiple input streams seamlessly.
+
+### AV1
+
+AV1 is [described in general](/en-US/docs/Web/Media/Guides/Formats/Video_codecs#av1) in the main [guide to video codecs used on the web](/en-US/docs/Web/Media/Guides/Formats/Video_codecs).
 
 ## Supported audio codecs
 
