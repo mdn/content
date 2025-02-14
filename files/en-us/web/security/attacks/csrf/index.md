@@ -8,7 +8,7 @@ In a cross-site request forgery (CSRF) attack, an attacker tricks the user or th
 
 ## Overview
 
-A website typically performs special actions on a user's behalf — buying a product or making an appointment, for example — by receiving an HTTP request from the user's browser, often with URL parameters detailing the action to perform. To ensure that the request really comes from the user in question, the browser expects the request to include {{glossary("Credential", "credentials")}} for the user: for example, a cookie containing the user's session ID.
+A website typically performs special actions on a user's behalf — buying a product or making an appointment, for example — by receiving an HTTP request from the user's browser, often with URL parameters detailing the action to perform. To ensure that the request really comes from the user in question, the server expects the request to include {{glossary("Credential", "credentials")}} for the user: for example, a cookie containing the user's session ID.
 
 In the example below, the user has previously signed into their bank, and the browser has stored a session cookie for the user. The page contains a {{htmlelement("form")}} element, which enables the user to transfer funds to another person. When the user submits the form, the browser sends a {{httpmethod("POST")}} request to the server, including the form data. If the user is signed in, the request includes the user's cookie. The server validates the cookie and performs the special action — in this case, transferring money:
 
@@ -63,7 +63,7 @@ Finally, we'll discuss the `SameSite` cookie attribute, which can be used to pro
 
 ### CSRF tokens
 
-The most common and widely effective defense against CSRF is the _CSRF token_. In this defense, when the server serves a page, it embeds an unpredictable value in the page, called the CSRF token. Then when the browser sends the state-changing request to the server, it includes the CSRF token in the HTTP request. The browser checks the token value and carries out the request only if it matches. Because an attacker can't guess the token value, they can't issue a successful forgery.
+In this defense, when the server serves a page, it embeds an unpredictable value in the page, called the CSRF token. Then when the browser sends the state-changing request to the server, it includes the CSRF token in the HTTP request. The browser checks the token value and carries out the request only if it matches. Because an attacker can't guess the token value, they can't issue a successful forgery.
 
 For form submissions, the CSRF token is usually implemented as a hidden form field. For a JavaScript API like `fetch()`, the token might be placed in a cookie or embedded in the page, and the JavaScript extracts the value and sends it as an extra header.
 
@@ -75,7 +75,7 @@ To take advantage of this protection you must understand all the places in your 
 
 Web browsers distinguish two sorts of HTTP requests: [_simple_ requests](/en-US/docs/Web/HTTP/CORS#simple_requests) and other requests.
 
-By default, only simple requests can be sent cross-origin. The reason for allowing simple requests cross-origin is that these are the same sorts of requests that could already be made cross-origin using a `<form>`, as in the example above. So it is assumed that websites already must implement CSRF protection against simple requests.
+By default, only simple requests can be sent cross-origin. The reason for allowing simple requests cross-origin is that these are the same sorts of requests that could already be made cross-origin using a `<form>` element, as in the example above. So it is assumed that websites already must implement CSRF protection against simple requests.
 
 All other requests are by default not allowed cross-origin, so a CSRF attack would not succeed if the request is not simple.
 
@@ -115,10 +115,10 @@ We've said that non-simple requests are _by default_ not sent cross-origin. The 
 
 When a site issues a non-simple request cross-origin, the browser sends a {{glossary("Preflight request", "preflight request")}}. This asks the server if it is prepared to accept the request.
 
-- If the server responds with an {{httpheader("Access-Control-Allow-Origin")}} response header which matches the sender's origin, then the request is allowed.
-- If the server also sends an {{httpheader("Access-Control-Allow-Credentials")}} response header, then the request is allowed to include the site's credentials.
+- If the server responds with an {{httpheader("Access-Control-Allow-Origin")}} response header which matches the sender's origin, then the browser will send the real request.
+- If the server also sends an {{httpheader("Access-Control-Allow-Credentials")}} response header, then the real request is allowed to include the site's credentials.
 
-This means that if your server sends an `Access-Control-Allow-Origin` response header including the sender's origin, and an `Access-Control-Allow-Credentials` response header, then the server is vulnerable to a CSRF attack from that origin.
+This is obviously useful in cases where you want to accept requests from some other origins. However, it means that if your server sends an `Access-Control-Allow-Origin` response header including the sender's origin, and an `Access-Control-Allow-Credentials` response header, then the server is vulnerable to a CSRF attack from that origin.
 
 ### Defense in depth: SameSite cookies
 
@@ -126,10 +126,10 @@ The [`SameSite`](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-rfc626
 
 This attribute controls when a browser is allowed to include the cookie in a cross-site request. It has three possible values: `None`, `Lax` and `Strict`.
 
-The `Strict` value offers the most protection: if this attribute is set, the browser will not include the cookie in any cross-site request. However, this creates a usability issue: if the user is logged into your site, and follows a link to your site from a different site, then your cookies will not be included, and the user will not be recognized.
+The `Strict` value offers the most protection: if this attribute is set, the browser will not include the cookie in any cross-site request. However, this creates a usability issue: if the user is logged into your site, and follows a link to your site from a different site, then your cookies will not be included, and the user will not be recognized when they reach your site.
 
-The `Lax` value relaxes this restriction: cookies are included in cross-site requests for top-level navigations only. This means that, for example, attempts to make a request using a form submission would not include `Lax` cookies. The problem with this value is that can still pop up new windows or trigger top-level
-navigations in order to create request that satisfies the `Lax` constraint.
+The `Lax` value relaxes this restriction: cookies are included in cross-site requests for top-level navigations only. This means that, for example, attempts to make a request using a form submission would not include `Lax` cookies. The problem with this value is that attackers can still pop up new windows or trigger top-level
+navigations in order to create cross-site requests that satisfy the `Lax` constraint.
 
 Another problem with the `SameSite` attribute is that it protects you from requests from a different {{glossary("Site", "site")}}, not a different {{glossary("Origin", "origin")}}. This is a looser protection, because (for example) `https://foo.example.org` and `https://bar.example.org` are considered the same site, although they are different origins. Effectively, if you rely on same-site protection, you have to trust all your site's subdomains.
 
