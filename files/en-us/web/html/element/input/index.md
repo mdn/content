@@ -559,6 +559,8 @@ A few additional non-standard attributes are listed following the descriptions o
 
     Associating a popover with a control using the `popovertarget` attribute creates an implicit anchor reference between the two. This makes it very convenient to position popovers relative to their controls using [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning). Explicit associations do not need to be made using the {{cssxref("anchor-name")}} and {{cssxref("position-anchor")}} properties.
 
+    See [Associating anchor and positioned elements](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#associating_anchor_and_positioned_elements) for more details on anchor references.
+
 - `popovertargetaction`
 
   - : Specifies the action to be performed on a popover element being controlled by a control `<input type="button">`. Possible values are:

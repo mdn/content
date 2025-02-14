@@ -55,7 +55,7 @@ When a popover element is set with `popover` or `popover="auto"` as shown above,
 
 - The popover can be "light dismissed" — this means that you can hide the popover by clicking outside it.
 - The popover can also be closed, using browser-specific mechanisms such as pressing the <kbd>Esc</kbd> key.
-- Usually, only one popover can be shown at a time — showing a second popover when one is already shown will hide the first one. The exception to this rule is when you have nested auto popovers. See the [Nested popovers](#nested_popovers) section for more details.
+- Usually, only one `auto` popover can be shown at a time — showing a second popover when one is already shown will hide the first one. The exception to this rule is when you have nested auto popovers. See the [Nested popovers](#nested_popovers) section for more details.
 
 > **Note:** `popover="auto"` popovers are also dismissed by successful {{domxref("HTMLDialogElement.showModal()")}} and {{domxref("Element.requestFullscreen()")}} calls on other elements in the document. Bear in mind however that calling these methods on a shown popover will result in failure because those behaviors don't make sense on an already-shown popover. You can however call them on an element with the `popover` attribute that isn't currently being shown.
 
@@ -74,7 +74,7 @@ One alternative to auto state is **manual state**, achieved by setting `popover=
 In this state:
 
 - The popover cannot be "light dismissed", although declarative show/hide/toggle buttons (as seen earlier) will still work.
-- Multiple independent popovers can be shown at a time.
+- Multiple independent popovers can be shown simultaneously.
 
 You can see this behavior in action in our [Multiple manual popovers example](https://mdn.github.io/dom-examples/popover-api/multiple-manual/) ([source](https://github.com/mdn/dom-examples/tree/main/popover-api/multiple-manual)).
 
@@ -192,15 +192,18 @@ See our [Nested popover menu example](https://mdn.github.io/dom-examples/popover
 
 ## Using "hint" popover state
 
-There is a third type of popover you can create — **hint popovers**, designated by setting `popover="hint"` on your popover element. `hint` popovers are similar to `auto` popovers, but with a significant difference. They can be light-dismissed, but they do not light-dismiss `auto` popovers when shown, only `hint` popovers.
+There is a third type of popover you can create — **hint popovers**, designated by setting `popover="hint"` on your popover element. `hint` popovers do not close `auto` popovers when they are displayed, but will close other `hint` popovers. They can be light dismissed and will respond to close requests.
 
-This is useful for situations where, for example, you have toolbar buttons that can be pressed to show UI popovers, but you also want to reveal tooltips when the buttons are hovered, without dismissing the UI popovers.
+This is useful for situations where, for example, you have toolbar buttons that can be pressed to show UI popovers, but you also want to reveal tooltips when the buttons are hovered, without closing the UI popovers.
 
-`hint` popovers tend to be shown and hidden in response to non-click JavaScript events such as [`mouseover`](/en-US/docs/Web/API/Element/mouseover_event)/[`mouseout`](/en-US/docs/Web/API/Element/mouseout_event) and [`focus`](/en-US/docs/Web/API/Element/focus_event)/[`blur`](/en-US/docs/Web/API/Element/blur_event). When clicking on a button, the click itself would cause an open `auto` popover to light-dismiss.
+`hint` popovers tend to be shown and hidden in response to non-click JavaScript events such as [`mouseover`](/en-US/docs/Web/API/Element/mouseover_event)/[`mouseout`](/en-US/docs/Web/API/Element/mouseout_event) and [`focus`](/en-US/docs/Web/API/Element/focus_event)/[`blur`](/en-US/docs/Web/API/Element/blur_event). Clicking a button to open a `hint` popover would cause an open `auto` popover to light-dismiss.
 
-See our [popover hint demo](https://mdn.github.io/dom-examples/popover-api/popover-hint/) ([source](https://github.com/mdn/dom-examples/tree/main/popover-api/popover-hint)) for an example that behaves exactly as described above. The demo features a button bar; when pressed, the buttons show popup sub-menus inside which further options can be selected. However, when hovered over or focused, the buttons also show tooltips to give the user an idea of what each button does.
+See our [popover hint demo](https://mdn.github.io/dom-examples/popover-api/popover-hint/) ([source](https://github.com/mdn/dom-examples/tree/main/popover-api/popover-hint)) for an example that behaves exactly as described above. The demo features a button bar; when pressed, the buttons show `auto` popup sub-menus inside which further options can be selected. However, when hovered over or focused, the buttons also show tooltips (`hint` popovers) to give the user an idea of what each button does, which do not hide a currently-showing sub-menu.
 
 In the below sections, we'll walk through all the important parts of the code.
+
+> [!NOTE]
+> You _can_ use `hint` popovers alongside `manual` popovers, although there is not really much of a reason to. They are designed to circumvent some of the limitations of `auto` popovers, enabling use cases like the one detailed in this section.
 
 ### Creating the sub-menus with `popover="auto"`
 
@@ -240,7 +243,7 @@ Now, the popovers themselves:
 
 ### Creating the tooltips with `popover="hint"`
 
-The sub-menu popovers work fine as they are, opening when the toolbar buttons are clicked, but how do we also show tooltips on button hover/focus? First, we create the tooltips in HTML, using `hint` popovers:
+The sub-menu popovers work fine as they are, opening when the toolbar buttons are pressed, but how do we also show tooltips on button hover/focus? First, we create the tooltips in HTML, using `hint` popovers:
 
 ```html
 <div id="tooltip-1" class="tooltip" popover="hint">Tooltip A</div>
@@ -338,7 +341,7 @@ See our [Popover blur background example](https://mdn.github.io/dom-examples/pop
 
 ### Implicit popover anchor associations
 
-Associating a popover with a control using the [`popovertarget`](/en-US/docs/Web/HTML/Element/button#popovertarget) and [`id`](/en-US/docs/Web/HTML/Global_attributes/id) attributes creates an implicit anchor reference between the two, as does programmatically associating a popover action such as {{domxref("HTMLElement.showPopover", "showPopover()")}} with a control using the `source` option.
+Associating a popover with a control using the [`popovertarget`](/en-US/docs/Web/HTML/Element/button#popovertarget) and [`id`](/en-US/docs/Web/HTML/Global_attributes/id) attributes creates an implicit anchor reference between the two, as does programmatically associating a popover action such as {{domxref("HTMLElement.showPopover", "showPopover()")}} with a control using the `source` option. See [Associating anchor and positioned elements](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#associating_anchor_and_positioned_elements) for more details on anchor references.
 
 This makes it very convenient to position popovers relative to their controls using [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning). Explicit associations do not need to be made using the {{cssxref("anchor-name")}} and {{cssxref("position-anchor")}} properties.
 

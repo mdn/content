@@ -29,7 +29,7 @@ Historically, associating an element with another element and dynamically changi
 
 ## Associating anchor and positioned elements
 
-To associate an element with an anchor, you need to first declare which element is the anchor, and then specify which positioned element(s) to associate with that anchor. This can be done explicitly via CSS or via the HTML [`anchor`](/en-US/docs/Web/HTML/Global_attributes/anchor) attribute, or in some cases, implicitly.
+To associate an element with an anchor, you need to first declare which element is the anchor, and then specify which positioned element(s) to associate with that anchor. This creates an anchor reference between the two. This association can be created explicitly via CSS or via the HTML [`anchor`](/en-US/docs/Web/HTML/Global_attributes/anchor) attribute, or in some cases, implicitly.
 
 ### Explicit CSS-only method
 

@@ -13,11 +13,21 @@ The **`popover`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) is 
 
 The `popover` attribute can take one of the following values:
 
-- `auto`
-- `hint`
-- `manual`
+- `"auto"`
 
-Setting an empty value for `popover` — `popover` or `popover=""` — is equivalent to setting `popover="auto"`.
+  - : [`auto`](/en-US/docs/Web/API/Popover_API/Using#auto_state_and_light_dismiss) popovers can be "light dismissed" — this means that you can hide the popover by clicking outside it or pressing the <kbd>Esc</kbd> key. Showing an `auto` popover will generally close other `auto` popovers that are already displayed, unless they are nested.
+
+    > [!NOTE]
+    > Setting an empty value for `popover` — `popover` or `popover=""` — is equivalent to setting `popover="auto"`.
+
+- `"hint"`
+
+  - : [`hint`](/en-US/docs/Web/API/Popover_API/Using#using_hint_popover_state) popovers do not close `auto` popovers when they are displayed, but will close other hint popovers.
+    They can be light dismissed and will respond to close requests.
+
+- `"manual"`
+
+  - : [`manual`](/en-US/docs/Web/API/Popover_API/Using#using_manual_popover_state) popovers cannot be "light dismissed" are not automatically closed. Popovers must explicitly be displayed and closed using declarative show/hide/toggle buttons or JavaScript. Multiple independent `manual` popovers can be shown simultaneously.
 
 ## Description
 
@@ -25,13 +35,17 @@ Popover elements are hidden via `display: none` until opened via an invoking/con
 
 When open, popover elements will appear above all other elements in the {{glossary("top layer")}}, and won't be influenced by parent elements' {{cssxref('position')}} or {{cssxref('overflow')}} styling.
 
-Popovers that have the [`auto`](/en-US/docs/Web/API/Popover_API/Using#auto_state_and_light_dismiss) state can be shown and hidden using associated controls (designated by the [`popovertarget`](/en-US/docs/Web/HTML/Element/button#popovertarget) attribute, ) and "light dismissed" by clicking outside the popover area, opening another popover, or pressing browser-specific mechanisms such as the <kbd>Esc</kbd> key. Generally only one `auto` popover can be displayed on-screen at a time — showing a second popover when one is already shown will hide the first one. They can also be controlled using JavaScript, for example the {{domxref("HTMLElement.togglePopover()")}} method can be used to toggle a popover between shown and hidden.
+Popovers that have the [`auto`](/en-US/docs/Web/API/Popover_API/Using#auto_state_and_light_dismiss) state can be shown and hidden using associated controls (designated by the [`popovertarget`](/en-US/docs/Web/HTML/Element/button#popovertarget) attribute) and "light dismissed" by clicking outside the popover area, opening another popover, or pressing browser-specific mechanisms such as the <kbd>Esc</kbd> key.
+
+Generally only one `auto` popover can be displayed on-screen at a time — showing a second popover when one is already shown will hide the first one. The exception to this rule is when you have nested auto popovers. See [Nested popovers](/en-US/docs/Web/API/Popover_API/Using#nested_popovers) for more details.
+
+They can also be controlled using JavaScript, for example the {{domxref("HTMLElement.togglePopover()")}} method can be used to toggle a popover between shown and hidden.
 
 By contrast, [`manual`](/en-US/docs/Web/API/Popover_API/Using#using_manual_popover_state) popovers must be manually shown and hidden — they don't automatically close other popovers when they are displayed and they can't be light dismissed. This allows for use cases where you want to show multiple popovers at the same time.
 
-[`hint`](/en-US/docs/Web/API/Popover_API/Using#using_hint_popover_state) popovers are similar to `auto` popovers, but with a significant difference. They can be light-dismissed, but they do not light-dismiss `auto` popovers when shown, only `hint` popovers. This is useful for situations where, for example, you have toolbar buttons that can be pressed to show UI popovers, but you also want to reveal tooltips when the buttons are hovered, without dismissing the UI popovers.
+[`hint`](/en-US/docs/Web/API/Popover_API/Using#using_hint_popover_state) popovers do not close `auto` popovers when they are displayed, but will close other hint popovers. They can be light dismissed and will respond to close requests.
 
-`hint` popovers tend to be shown and hidden in response to non-click JavaScript events such as [`mouseover`](/en-US/docs/Web/API/Element/mouseover_event)/[`mouseout`](/en-US/docs/Web/API/Element/mouseout_event) and [`focus`](/en-US/docs/Web/API/Element/focus_event)/[`blur`](/en-US/docs/Web/API/Element/blur_event). When clicking on a button, the click itself would cause an open `auto` popover to light-dismiss.
+Usually `hint` popovers are shown and hidden in response to non-click JavaScript events such as [`mouseover`](/en-US/docs/Web/API/Element/mouseover_event)/[`mouseout`](/en-US/docs/Web/API/Element/mouseout_event) and [`focus`](/en-US/docs/Web/API/Element/focus_event)/[`blur`](/en-US/docs/Web/API/Element/blur_event). Clicking a button to open a `hint` popover would cause an open `auto` popover to light-dismiss.
 
 For detailed information on usage, see the {{domxref("Popover API", "Popover API", "", "nocode")}} landing page.
 
