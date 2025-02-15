@@ -27,7 +27,7 @@ createShader(type)
 
 ### Return value
 
-A new ({{domxref("WebGLShader")}}), or `null` if an error occurs creating the ({{domxref("WebGLShader")}}) (such as providing an invalid value for `type`).
+A new {{domxref("WebGLShader")}} instance, or `null` if an error occurs creating the shader (for example, because `type` was an invalid value).
 
 ## Examples
 
