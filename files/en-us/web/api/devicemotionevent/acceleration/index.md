@@ -27,7 +27,7 @@ acceleration on the three axes in the {{domxref("Device orientation events/Orien
 - `x`
   - : Represents the acceleration along the x axis
 - `y`
-  - : Represents the acceleration along the y axis 
+  - : Represents the acceleration along the y axis
 - `z`
   - : Represents the acceleration along the z axis
 
