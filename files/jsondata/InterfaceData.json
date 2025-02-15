@@ -3136,14 +3136,6 @@
       "inh": "EventTarget",
       "impl": []
     },
-    "SpeechGrammar": {
-      "inh": "",
-      "impl": []
-    },
-    "SpeechGrammarList": {
-      "inh": "",
-      "impl": []
-    },
     "SpeechRecognition": {
       "inh": "EventTarget",
       "impl": []
