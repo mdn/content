@@ -22,7 +22,7 @@ the gravitational force, in contrast to {{DOMxRef("DeviceMotionEvent.acceleratio
 ## Value
 
 The `acceleration` property is an object providing information about
-acceleration on the three axes in the {{domxref("Device orientation events/Orientation and motion data explained", "Device coordinate frame", "", "nocode")}}. Each axis is represented with its own property:
+acceleration on the three axes in the [Device coordinate frame](/en-US/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained#device_coordinate_frame). Each axis is represented with its own property:
 
 - `x`
   - : Represents the acceleration along the x axis
