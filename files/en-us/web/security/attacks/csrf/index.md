@@ -79,7 +79,7 @@ By default, only simple requests can be sent cross-origin. The reason for allowi
 
 All other requests are by default not allowed cross-origin, so a CSRF attack would not succeed if the request is not simple.
 
-So one CSRF defense is to ensure that state-changing requests are never simple requests. This of course means that a website can't use forms to issue them, so this strategy is usually applicable for a {{glossary("SPA", "single-page app")}} that uses JavaScript APIs like {{domxref("Window.fetch()", "fetch()")}} to retrieve content from the server and then renders this content in the client.
+So one CSRF defense is to ensure that state-changing requests are never simple requests. This of course means that a website can't use forms to issue them, so this strategy is usually applicable for a website that uses JavaScript APIs like {{domxref("Window.fetch()", "fetch()")}} to issue state-changing requests.
 
 For example, setting the request's {{httpheader("Content-Type")}} to `"application/json"` will prevent it from being treated like a simple request:
 
