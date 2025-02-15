@@ -81,7 +81,19 @@ All other requests are by default not allowed cross-origin, so a CSRF attack wou
 
 So one CSRF defense is to ensure that state-changing requests are never simple requests. This of course means that a website can't use forms to issue them, so this strategy is usually applicable for a website that uses JavaScript APIs like {{domxref("Window.fetch()", "fetch()")}} to issue state-changing requests.
 
-For example, setting a custom header on the request will prevent it being treated like a simple request:
+For example, setting the request's {{httpheader("Content-Type")}} to `"application/json"` will prevent it from being treated like a simple request:
+
+```js
+fetch("https://my-bank.example.org/transfer", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify({ recipient: "joe", amount: "100" }),
+});
+```
+
+Similarly, setting a custom header on the request will prevent it being treated like a simple request:
 
 ```js
 fetch("https://my-bank.example.org/transfer", {
