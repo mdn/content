@@ -28,7 +28,7 @@ The service worker is what makes the application work offline while making sure 
 The service worker is also responsible for:
 
 - Installing the cache when the app is installed.
-- Updating itself and the other application file as needed.
+- Updating itself and the other application files as needed.
 - Removing cached files that are no longer used.
 
 We achieve these tasks by reacting to three service worker events, including the
@@ -67,7 +67,7 @@ const APP_STATIC_RESOURCES = [
 ];
 ```
 
-You don't need to include the various icons that are used by all the different operating systems and devices in the list. But do include any images that are used within the app, including assets to used within any splash pages that may be visible if the app is slow as the app loads or used in any "you need to connect to the internet for the full experience" type pages.
+You don't need to include the various icons that are used by all the different operating systems and devices in the list. But do include any images that are used within the app, including assets to be used within any splash pages that may be visible if the app is slow, as the app loads, or used in any "you need to connect to the internet for the full experience" type pages.
 
 Do not include the service worker file in the list of resources to be cached.
 
@@ -87,7 +87,6 @@ const APP_STATIC_RESOURCES = [
   "/index.html",
   "/style.css",
   "/app.js",
-  "/cycletracker.json",
   "/icons/wheel.svg",
 ];
 ```
