@@ -18,6 +18,8 @@ size of one _CSS pixel_ to the size of one _physical pixel_. In simpler
 terms, this tells the browser how many of the screen's actual pixels should be used to
 draw a single CSS pixel.
 
+Page zooming affects the value of `devicePixelRatio`. When a page is zoomed in (made larger), the size of a CSS pixel increases, and so the `devicePixelRatio` value increases. However, pinch-zooming does not affect `devicePixelRatio`.
+
 This is useful when dealing with the difference between rendering on a standard display
 versus a HiDPI or Retina display, which use more screen pixels to draw the same objects,
 resulting in a sharper image.
