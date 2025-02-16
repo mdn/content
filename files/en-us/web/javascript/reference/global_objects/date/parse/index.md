@@ -12,7 +12,9 @@ The **`Date.parse()`** static method parses a string representation of a date, a
 {{InteractiveExample("JavaScript Demo: Date.parse()")}}
 
 ```js interactive-example
-const unixTimeZero = Date.parse("01 Jan 1970 00:00:00 GMT");
+// Standard date-time string format
+const unixTimeZero = Date.parse("1970-01-01T00:00:00Z");
+// Non-standard format resembling toUTCString()
 const javaScriptRelease = Date.parse("04 Dec 1995 00:12:00 GMT");
 
 console.log(unixTimeZero);
