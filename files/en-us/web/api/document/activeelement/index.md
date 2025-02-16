@@ -21,8 +21,8 @@ Typically a user can press the <kbd>Tab</kbd> key to move the focus around the p
 
 The deepest {{domxref('Element')}} which currently has focus.
 
-- If the focused element is within a shadow tree within the current document (for example, focused element is inside an `iframe`, and the invoking `document` contains that iframe), then this will be the root element of that tree (in this example, that `iframe`).
-- If the focused element is within a document tree that's not descended from the current document (for example, focused element is in the main document, and the invoking `document` is an embedded iframe), then this will be `null`.
+- If the focused element is within a shadow tree within the current document (for example, the focused element is inside an `iframe`, and the invoking `document` contains that iframe), then this will be the root element of that tree (in this example, that `iframe`).
+- If the focused element is within a document tree that's not descended from the current document (for example, the focused element is in the main document, and the invoking `document` is an embedded iframe), then this will be `null`.
 - If there's no focused element, this is the {{domxref("Document.body")}} or {{domxref("Document.documentElement")}}.
 
 ## Examples
