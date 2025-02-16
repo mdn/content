@@ -47,6 +47,8 @@ Let's focus on the color value at the second row and second column of the image 
  3*200 + 2*220 + 1*240) / (9+8+7+6+5+4+3+2+1)
 ```
 
+Like other filter primitives, it handles color components in the `linearRGB` {{glossary("color space")}} by default. You can use {{svgattr("color-interpolation-filters")}} to use `sRGB` instead.
+
 ## Usage context
 
 {{svginfo}}

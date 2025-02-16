@@ -278,6 +278,7 @@ HPKE
 HPKP
 HTCPCP
 HVXC
+IACVT
 ICANN
 ICNS
 iconset
@@ -632,6 +633,7 @@ snapport
 snapshotted
 snapshotting
 SNES
+spammy
 spatialization
 spatializations
 spatialize
@@ -679,6 +681,7 @@ sublocality
 submatch
 submatches
 subminor
+subminute
 subpage
 subpages
 subpanels

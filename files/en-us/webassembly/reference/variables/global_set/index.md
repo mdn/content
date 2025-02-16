@@ -2,9 +2,8 @@
 title: Global set
 slug: WebAssembly/Reference/Variables/Global_set
 page-type: webassembly-instruction
+sidebar: webassemblysidebar
 ---
-
-{{WebAssemblySidebar}}
 
 The **`global.set`** instruction sets the values of a global variable.
 

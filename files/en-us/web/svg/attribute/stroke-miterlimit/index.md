@@ -132,3 +132,7 @@ The value of `stroke-miterlimit` must be greater than or equal to 1.
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- CSS {{cssxref("stroke-miterlimit")}} property

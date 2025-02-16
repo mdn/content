@@ -8,8 +8,9 @@ browser-compat: api.Location.hostname
 
 {{ApiRef("URL API")}}
 
-The **`hostname`** property of the {{domxref("Location")}}
-interface is a string containing the {{glossary("domain name")}} of the URL.
+The **`hostname`** property of the {{domxref("Location")}} interface is a string containing either the {{glossary("domain name")}} or {{glossary("IP address")}} of the location URL. If the URL does not have a hostname, this property contains an empty string, `""`. IPv4 and IPv6 addresses are normalized, such as stripping leading zeros, and domain names are converted to [IDN](https://en.wikipedia.org/wiki/Internationalized_domain_name).
+
+See {{domxref("URL.hostname")}} for more information.
 
 ## Value
 

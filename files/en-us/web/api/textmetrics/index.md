@@ -32,7 +32,7 @@ The **`TextMetrics`** interface represents the dimensions of a piece of text in 
 - {{domxref("TextMetrics.hangingBaseline")}} {{ReadOnlyInline}}
   - : Returns the distance from the horizontal line indicated by the {{domxref("CanvasRenderingContext2D.textBaseline")}} property to the hanging baseline of the line box, in CSS pixels.
 - {{domxref("TextMetrics.alphabeticBaseline")}} {{ReadOnlyInline}}
-  - : Returns the distance from the horizontal line indicated by the {{domxref("CanvasRenderingContext2D.textBaseline")}} property to the alphabetic baseline of the line box, in CSS pixels.
+  - : Returns the distance from the horizontal line indicated by the {{domxref("CanvasRenderingContext2D.textBaseline")}} property to the {{glossary("/Baseline/Typography", "alphabetic baseline")}} of the line box, in CSS pixels.
 - {{domxref("TextMetrics.ideographicBaseline")}} {{ReadOnlyInline}}
   - : Returns the distance from the horizontal line indicated by the {{domxref("CanvasRenderingContext2D.textBaseline")}} property to the ideographic baseline of the line box, in CSS pixels.
 

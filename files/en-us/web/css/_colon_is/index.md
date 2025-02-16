@@ -1,5 +1,5 @@
 ---
-title: ":is()"
+title: :is()
 slug: Web/CSS/:is
 page-type: css-pseudo-class
 browser-compat: css.selectors.is
@@ -225,6 +225,6 @@ some-element::after {
 
 ## See also
 
-- {{CSSxRef(":where", ":where()")}} - Like `:is()`, but with 0 [specificity](/en-US/docs/Web/CSS/Specificity).
+- {{CSSxRef(":where", ":where()")}} - Like `:is()`, but with 0 [specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity).
 - [Selector list](/en-US/docs/Web/CSS/Selector_list)
 - [Web components](/en-US/docs/Web/API/Web_components)

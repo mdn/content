@@ -87,7 +87,7 @@ In addition to the pre-defined keywords that are part of the specification for a
 
 ### URLs
 
-A {{cssxref("url_value", "&lt;url&gt;")}} type uses functional notation, which accepts a `<string>` that is a URL. This may be an absolute URL or a relative URL. For example, if you wanted to include a background image, you might use either of the following.
+A {{cssxref("url_value", "&lt;url&gt;")}} type uses functional notation, which accepts a `<string>` that is a URL. This may be an absolute URL or a relative URL. For example, if you wanted to include a background image, you might use either of the following:
 
 ```css
 .box {
@@ -326,6 +326,6 @@ Some legacy functional notations, such as legacy syntax for `rgb()`, `rgba()`, `
 
 ## See also
 
-- [CSS Basic Data Types](/en-US/docs/Web/CSS/CSS_Types)
+- [CSS Basic Data Types](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)
 - [Learn: Values and units](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
 - [Trigonometric functions in CSS](https://web.dev/articles/css-trig-functions)

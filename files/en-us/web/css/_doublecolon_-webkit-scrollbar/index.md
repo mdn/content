@@ -1,5 +1,5 @@
 ---
-title: "::-webkit-scrollbar"
+title: ::-webkit-scrollbar
 slug: Web/CSS/::-webkit-scrollbar
 page-type: css-pseudo-element
 status:

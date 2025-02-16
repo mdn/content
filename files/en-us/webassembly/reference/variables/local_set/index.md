@@ -2,9 +2,8 @@
 title: Local set
 slug: WebAssembly/Reference/Variables/Local_set
 page-type: webassembly-instruction
+sidebar: webassemblysidebar
 ---
-
-{{WebAssemblySidebar}}
 
 The **`local.set`** instruction sets the values of a local variable.
 

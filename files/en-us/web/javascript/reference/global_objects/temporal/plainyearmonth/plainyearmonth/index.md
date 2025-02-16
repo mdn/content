@@ -47,7 +47,8 @@ A new `Temporal.PlainYearMonth` object, representing the year-month of the date 
   - : Thrown if `calendar` is not a string or `undefined`.
 - {{jsxref("RangeError")}}
   - : Thrown in one of the following cases:
-    - `year`, `month`, or `referenceDay` is not a finite number, or do not represent a valid date in the ISO calendar system.
+    - `year`, `month`, or `referenceDay` is not a finite number.
+    - The `year`, `month`, and `referenceDay` combination does not represent a valid date in the ISO calendar system, or is not in the [representable range](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal#representable_dates), which is ±(10<sup>8</sup> + 1) days, or about ±273,972.6 years, from the Unix epoch.
     - `calendar` is not a valid calendar identifier.
 
 ## Examples

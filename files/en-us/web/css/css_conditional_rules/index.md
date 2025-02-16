@@ -24,8 +24,15 @@ There are plans to further extend possible queries by adding the generalized con
 
 ## Reference
 
+### Properties
+
+- {{cssxref("container")}}
+- {{cssxref("container-name")}}
+- {{cssxref("container-type")}}
+
 ### At-rules
 
+- {{cssxref("@container")}}
 - {{cssxref("@media")}}
 - {{cssxref("@supports")}}
 
@@ -34,6 +41,7 @@ There are plans to further extend possible queries by adding the generalized con
 
 ### Functions
 
+- [`style()`](/en-US/docs/Web/CSS/@container#container_style_queries)
 - [`font-tech()`](/en-US/docs/Web/CSS/@supports#font-tech)
 - [`font-format()`](/en-US/docs/Web/CSS/@supports#font-format)
 - [`selector()`](/en-US/docs/Web/CSS/@supports#function_syntax)
@@ -44,6 +52,9 @@ There are plans to further extend possible queries by adding the generalized con
 
 ### data types
 
+- [`<container-name>`](/en-US/docs/Web/CSS/@container#values)
+- [`<style-feature>`](/en-US/docs/Web/CSS/@container#container_style_queries)
+- [Container relative `<length>` units](/en-US/docs/Web/CSS/length#container_query_length_units)
 - [`<media-query>`](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries#syntax)
 - [`<supports-condition>`](/en-US/docs/Web/CSS/@import#importing_css_rules_conditional_on_feature_support)
 - `<supports-feature>` (see [`supports()`](/en-US/docs/Web/CSS/@import#supports-condition))
@@ -91,10 +102,6 @@ There are plans to further extend possible queries by adding the generalized con
   - [`<media-condition>`](/en-US/docs/Web/CSS/@media#logical_operators)
   - [`<media-query-list>`](/en-US/docs/Web/SVG/Attribute/media)
   - [CSS logical operators](/en-US/docs/Web/CSS/@media#logical_operators) (`not`, `or`, and `and`)
-
-- [CSS containment](/en-US/docs/Web/CSS/CSS_containment)
-
-  - {{cssxref("@container")}} at-rule
 
 - [CSSOM view](/en-US/docs/Web/CSS/CSSOM_view) module
 

@@ -2,20 +2,20 @@
 
 sidebar:
   - type: section
-    link: /Web/XSLT
+    link: /Web/XML/XSLT
   - type: listSubPages
-    path: /Web/XSLT/Transforming_XML_with_XSLT
+    path: /Web/XML/XSLT/Guides/Transforming_XML_with_XSLT
   - type: section
-    link: /Web/XSLT/Element
+    link: /Web/XML/XSLT/Reference/Element
   - type: listSubPages
-    path: /Web/XSLT/Element
+    path: /Web/XML/XSLT/Reference/Element
   - type: section
-    link: /Web/EXSLT
+    link: /Web/XML/EXSLT
   - type: listSubPages
-    path: /Web/EXSLT
+    path: /Web/XML/EXSLT
   - type: section
-    link: /Web/XPath/Functions
+    link: /Web/XML/XPath/Reference/Functions
   - type: listSubPages
-    path: /Web/XPath/Functions
+    path: /Web/XML/XPath/Reference/Functions
   - type: section
-    link: /Web/XPath/Axes
+    link: /Web/XML/XPath/Reference/Axes

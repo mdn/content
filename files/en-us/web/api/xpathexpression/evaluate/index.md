@@ -9,7 +9,7 @@ browser-compat: api.XPathExpression.evaluate
 {{APIRef("DOM XPath")}}
 
 The **`evaluate()`** method of the
-{{domxref("XPathExpression")}} interface executes an [XPath](/en-US/docs/Web/XPath) expression on the given node or document and
+{{domxref("XPathExpression")}} interface executes an [XPath](/en-US/docs/Web/XML/XPath) expression on the given node or document and
 returns an {{domxref("XPathResult")}}.
 
 ## Syntax
