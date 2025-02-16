@@ -44,6 +44,10 @@ browser.action.setBadgeTextColor(
 - If `windowId` and `tabId` are both supplied, the function fails and the color is not set.
 - If `windowId` and `tabId` are both omitted, the global badge text color is set instead.
 
+### Return value
+
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that resolves when the color has been set.
+
 ## Examples
 
 A badge text color that starts off as red, and turns green when the browser action is clicked:

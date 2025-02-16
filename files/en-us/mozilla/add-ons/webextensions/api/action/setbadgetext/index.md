@@ -50,6 +50,10 @@ This API is also available as `chrome.action.setBadgeText()`.
 - If `windowId` and `tabId` are both supplied, the function fails.
 - If `windowId` and `tabId` are both omitted, the global badge is set.
 
+### Return value
+
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that resolves when the text has been set.
+
 ## Examples
 
 Add a badge indicating how many times the user clicked the button:

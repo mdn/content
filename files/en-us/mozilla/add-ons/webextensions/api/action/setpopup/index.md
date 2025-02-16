@@ -49,6 +49,10 @@ browser.action.setPopup(
 - If `windowId` and `tabId` are both supplied, the function fails and the popup is not set.
 - If `windowId` and `tabId` are both omitted, the global popup is set.
 
+### Return value
+
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that resolves when the popup has been set.
+
 ## Examples
 
 This code adds a pair of context menu items that you can use to switch between two popups. Note that you'll need the "contextMenus" [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) set in the extension's manifest to create context menu items.
