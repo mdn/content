@@ -135,7 +135,7 @@ svg {
 ### arcs
 
 > [!NOTE]
-> The `arcs` value has been introduced in SVG2 and it isn't widely supported yet, see [Browser compatibility](#browser_compatibility) below for details.
+> The `arcs` value isn't widely supported yet.
 
 The `arcs` value indicates that an arcs corner is to be used to join path segments. The arcs shape is formed by extending the outer edges of the stroke at the join point with arcs that have the same curvature as the outer edges at the join point.
 
@@ -275,7 +275,7 @@ svg {
 ### miter-clip
 
 > [!NOTE]
-> The `miter-clip` value as been introduced in SVG2 and it isn't widely supported yet, see [Browser compatibility](#browser_compatibility) below for details.
+> The `miter-clip` value isn't widely supported yet.
 
 The `miter-clip` value indicates that a sharp corner is to be used to join path segments. The corner is formed by extending the outer edges of the stroke at the tangents of the path segments until they intersect.
 
