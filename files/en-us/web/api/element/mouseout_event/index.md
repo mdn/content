@@ -12,7 +12,7 @@ The **`mouseout`** event is fired at an {{domxref("Element")}} when a pointing d
 
 `mouseout` is also delivered to an element if the cursor enters a child element, because the child element obscures the visible area of the element.
 
-If the target element has elements inside, `mouseout` and `mouseover` events will fire as the mouse moves over the boundaries of these elemenets. For instance, `mouseout` will fire on the parent as the mouse moves into one of the child elements, because the mouse is not directly over the parent anymore. Because it gets complicated, usually everybody listens for `mouseenter` and `mouseleave` events instead, because those events don't have that problem. `mouseout` and `mouseover` were standardized first, before developers realized this problem. Years later, the enter and leave events were added to the dom. Out and over events still work, but are rarely used.
+If the target element has child elements, `mouseout` and `mouseover` events fire as the mouse moves over the boundaries of these elements too, not just the target element itself. Usually, {{domxref("Element/mouseenter_event", "mouseenter")}} and {{domxref("Element/mouseleave_event", "mouseleave")}} events' behavior is more sensible, because they are not affected by moving into child elements.
 
 ## Syntax
 

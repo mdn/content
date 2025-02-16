@@ -10,7 +10,7 @@ browser-compat: api.Element.mousemove_event
 
 The `mousemove` event is fired at an element when a pointing device (usually a mouse) is moved while the cursor's hotspot is inside it.
 
-These events happen whether or not any mouse buttons are pressed. They can come at 100 events per second or faster, but the actual rate depends on how fast the user moves the mouse, how fast the machine is, what other tasks and processes are happening, etc.
+These events happen whether or not any mouse buttons are pressed. They can fire at a very high rate, depends on how fast the user moves the mouse, how fast the machine is, what other tasks and processes are happening, etc.
 
 ## Syntax
 

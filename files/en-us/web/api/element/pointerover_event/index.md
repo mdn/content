@@ -10,7 +10,7 @@ browser-compat: api.Element.pointerover_event
 
 The `pointerover` event is fired when a pointing device is moved into an element's hit test boundaries.
 
-`pointerover` and `pointerout` events have the same problems as {{domxref("Element/mouseover_event", "mouseover")}} and {{domxref("Element/mouseout_event", "mouseout")}}. {{domxref("Element/pointerenter_event", "pointerenter")}} and {{domxref("Element/pointerleave_event", "pointerleave")}} are probably what you should listen for instead.
+`pointerover` events have the same problems as {{domxref("Element/mouseover_event", "mouseover")}}. If the target element has child elements, `pointerout` and `pointerover` events fire as the pointer moves over the boundaries of these elements too, not just the target element itself. Usually, {{domxref("Element/pointerenter_event", "pointerenter")}} and {{domxref("Element/pointerleave_event", "pointerleave")}} events' behavior is more sensible, because they are not affected by moving into child elements.
 
 ## Syntax
 

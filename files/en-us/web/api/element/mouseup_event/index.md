@@ -12,8 +12,7 @@ The **`mouseup`** event is fired at an {{domxref("Element")}} when a button on a
 
 `mouseup` events are the counterpoint to {{domxref("Element.mousedown_event", "mousedown")}} events.
 
-> [!NOTE]
-> This behavior is different from {{domxref("Element/pointerup_event", "pointerup")}} events. `mouseup` events fire whenever any button on a mouse is released. `pointerup` events fire only upon the last button release; previous button releases, while other buttons are held down, don't fire `pointerup` events.
+This behavior is different from {{domxref("Element/pointerup_event", "pointerup")}} events. When using a physical mouse, `mouseup` events fire whenever any button on a mouse is released. `pointerup` events fire only upon the last button release; previous button releases, while other buttons are held down, don't fire `pointerup` events.
 
 ## Syntax
 

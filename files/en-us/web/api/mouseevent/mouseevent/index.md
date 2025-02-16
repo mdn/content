@@ -89,5 +89,3 @@ new MouseEvent(type, options)
 ## See also
 
 - {{domxref("MouseEvent")}}, the interface of the objects it constructs.
-- {{domxref("PointerEvent")}}, similar, but with more features, like multi-touch.
-- {{domxref("Pointer_Events")}}, discussion of pointer & mouse events and their correspondence.

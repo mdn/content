@@ -10,11 +10,9 @@ browser-compat: api.Element.mousedown_event
 
 The **`mousedown`** event is fired at an {{domxref("Element")}} when a pointing device button is pressed while the pointer is inside the element.
 
-> [!NOTE]
-> This differs from the {{domxref("Element/click_event", "click")}} event in that `click` is fired after a full click action occurs; that is, the mouse button is pressed and released while the pointer remains inside the same element. `mousedown` is fired the moment the button is initially pressed.
+This differs from the {{domxref("Element/click_event", "click")}} event in that `click` is fired after a full click action occurs; that is, the mouse button is pressed and released while the pointer remains inside the same element. `mousedown` is fired the moment the button is initially pressed.
 
-> [!NOTE]
-> This behavior is different from {{domxref("Element/pointerdown_event", "pointerdown")}} events. MouseDown events fire whenever any button on a mouse is pressed down. `pointerdown` events fire only upon the first button press; subsequent button presses don't fire `pointerdown` events.
+This behavior is different from {{domxref("Element/pointerdown_event", "pointerdown")}} events. When using a physical mouse, `mousedown` events fire whenever any button on a mouse is pressed down. `pointerdown` events fire only upon the first button press; subsequent button presses don't fire `pointerdown` events.
 
 ## Syntax
 

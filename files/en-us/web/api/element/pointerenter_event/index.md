@@ -8,7 +8,7 @@ browser-compat: api.Element.pointerenter_event
 
 {{APIRef}}
 
-The `pointerenter` event fires when a pointing device is moved into the hit test boundaries of an element or one of its descendants, including as a result of a {{domxref("Element/pointerdown_event", "pointerdown")}} event from a device that does not support hover (see {{domxref("Element/pointerdown_event", "pointerdown")}}). Otherwise, `pointerenter` works the same as {{domxref("Element/mouseenter_event", "mouseenter")}}, and are dispatched at the same time. They are dispatched at the same time, also, as {{domxref("Element/mouseover_event", "mouseover")}} and {{domxref("Element/pointerover_event", "pointerover")}} events, if appropriate.
+The `pointerenter` event fires when a pointing device is moved into the hit test boundaries of an element or one of its descendants, including as a result of a {{domxref("Element/pointerdown_event", "pointerdown")}} event from a device that does not support hover (see {{domxref("Element/pointerdown_event", "pointerdown")}}). Otherwise, `pointerenter` works the same as {{domxref("Element/mouseenter_event", "mouseenter")}}, and are dispatched at the same time. They are also dispatched at the same time as {{domxref("Element/mouseover_event", "mouseover")}} and {{domxref("Element/pointerover_event", "pointerover")}} events, if appropriate.
 
 ## Syntax
 
