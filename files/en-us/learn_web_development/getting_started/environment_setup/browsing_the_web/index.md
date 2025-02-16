@@ -152,7 +152,7 @@ For now, try opening a web browser and loading up a couple of your favorite site
 
 As a web developer, you will spend a lot of time searching for information, from syntax you can't remember to solutions to specific problems. It is therefore a good idea to learn how to effectively search the web.
 
-If you are looking for general information about a specific web technology feature, you should type the name of the feature into the MDN search box. For example, try typing `box model`, `fetch()` or `video element` into the the search box and see what comes up. If you don't find the information you need, try expanding your search — try your search term in a search engine.
+If you are looking for general information about a specific web technology feature, you should type the name of the feature into the MDN search box. For example, try typing `box model`, `fetch()` or `video element` into the search box and see what comes up. If you don't find the information you need, try expanding your search — try your search term in a search engine.
 
 If you are looking for a solution to a specific problem, such as `how to print out the fibonacci sequence with JavaScript` or `how to calculate whether a number is a prime number with JavaScript`, it is a good idea to search on a website such as [StackOverflow](https://stackoverflow.com), which is a community dedicated to answering programming problems. Again, try using a general search engine if a specific site doesn't give you a helpful answer.
 

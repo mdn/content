@@ -9,7 +9,15 @@ browser-compat: javascript.builtins.Date.toTimeString
 
 The **`toTimeString()`** method of {{jsxref("Date")}} instances returns a string representing the time portion of this date interpreted in the local timezone.
 
-{{EmbedInteractiveExample("pages/js/date-totimestring.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Date.toTimeString()", "shorter")}}
+
+```js interactive-example
+const event = new Date("August 19, 1975 23:15:30");
+
+console.log(event.toTimeString());
+// Expected output: "23:15:30 GMT+0200 (CEST)"
+// Note: your timezone may vary
+```
 
 ## Syntax
 

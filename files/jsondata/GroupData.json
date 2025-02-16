@@ -220,7 +220,7 @@
       "overview": ["Console API"],
       "interfaces": ["console"],
       "methods": [],
-      "properties": ["Window.console"],
+      "properties": [],
       "events": []
     },
     "Cookie Store API": {

@@ -633,6 +633,7 @@ snapport
 snapshotted
 snapshotting
 SNES
+spammy
 spatialization
 spatializations
 spatialize

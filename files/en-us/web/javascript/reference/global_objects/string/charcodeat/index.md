@@ -11,7 +11,20 @@ The **`charCodeAt()`** method of {{jsxref("String")}} values returns an integer 
 
 `charCodeAt()` always indexes the string as a sequence of [UTF-16 code units](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_code_points_and_grapheme_clusters), so it may return lone surrogates. To get the full Unicode code point at the given index, use {{jsxref("String.prototype.codePointAt()")}}.
 
-{{EmbedInteractiveExample("pages/js/string-charcodeat.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: String.charCodeAt()", "shorter")}}
+
+```js interactive-example
+const sentence = "The quick brown fox jumps over the lazy dog.";
+
+const index = 4;
+
+console.log(
+  `Character code ${sentence.charCodeAt(index)} is equal to ${sentence.charAt(
+    index,
+  )}`,
+);
+// Expected output: "Character code 113 is equal to q"
+```
 
 ## Syntax
 

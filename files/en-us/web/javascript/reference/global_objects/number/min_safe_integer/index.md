@@ -11,7 +11,21 @@ The **`Number.MIN_SAFE_INTEGER`** static data property represents the minimum sa
 
 To represent integers smaller than this, consider using {{jsxref("BigInt")}}.
 
-{{EmbedInteractiveExample("pages/js/number-min-safe-integer.html")}}
+{{InteractiveExample("JavaScript Demo: Number.MIN_SAFE_INTEGER")}}
+
+```js interactive-example
+const x = Number.MIN_SAFE_INTEGER - 1;
+const y = Number.MIN_SAFE_INTEGER - 2;
+
+console.log(Number.MIN_SAFE_INTEGER);
+// Expected output: -9007199254740991
+
+console.log(x);
+// Expected output: -9007199254740992
+
+console.log(x === y);
+// Expected output: true
+```
 
 ## Value
 
