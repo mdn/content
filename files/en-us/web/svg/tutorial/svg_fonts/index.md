@@ -13,65 +13,69 @@ The recommended modern approach is to use CSS, in much the same way as you would
 
 ## Apply and style a font using CSS
 
-Fonts can be applied using CSS in exactly the same way as in HTML.
-
-The code below shows how you might style the given `<text>` element with a particular font, in this case the system font "Courier New".
-Note that the CSS can be external to the SVG as shown, or nested within an SVG {{SVGElement("style")}} element.
-
-```css
-text {
-  /* Specify the system or custom font to use */
-  font-family: "Courier New", sans-serif;
-  /* Add other styling */
-  font-size: 24px;
-  font-weight: bold;
-  font-style: italic;
-}
-```
+The code below shows how you might style the given `<text>` element with a particular font using CSS: in this case the system font "Courier New".
+Note that the CSS here is nested within an SVG {{SVGElement("style")}} element, but could also be applied in the including HTML.
 
 ```html
 <svg>
+  <style>
+    text {
+      /* Specify the system or custom font to use */
+      font-family: "Courier New", sans-serif;
+
+      /* Add other styling */
+      font-size: 24px;
+      font-weight: bold;
+      font-style: italic;
+    }
+  </style>
   <text x="10" y="20">Some text</text>
 </svg>
 ```
 
 This renders as shown below:
 
-{{EmbedLiveSample("How to apply a font", "100", "50px")}}
+{{EmbedLiveSample("How to apply a font", "100", "30px")}}
 
 ## Using web fonts with `@font-face`
 
-The previous section uses CSS to apply a system font, but you can apply a web font specified using the {{cssxref("@font-face")}} at-rule in the same way.
+The previous section uses CSS to apply a system font, but you can apply a web font specified using the {{cssxref("@font-face")}} at-rule in exactly same way.
 
-This shows how we might use the rule to create the a font named "My Font":
-
-```css
-@font-face {
-  font-family: "My Font";
-  src:
-    url("path/to/MyFont.woff2") format("woff2"),
-    url("path/to/MyFont.woff") format("woff");
-}
-```
-
-We can then use web font in exactly the same way as we previously used the system font:
-
-```css
-text {
-  /* Specify the system or custom font to use */
-  font-family: "My Font", sans-serif;
-  /* Add other styling */
-  font-size: 24px;
-  font-weight: bold;
-  font-style: italic;
-}
-```
+The example demonstrates how, first defining and then using a font family named "FiraSans":
 
 ```html
-<svg>
-  <text x="10" y="20">Some text</text>
+<svg
+  viewBox="0 0 400 50"
+  width="350"
+  height="50"
+  xmlns="http://www.w3.org/2000/svg">
+  <style>
+    /* Define the font family using web fonts */
+    @font-face {
+      font-family: "FiraSans";
+      src:
+        url("https://mdn.github.io/shared-assets/fonts/FiraSans-Italic.woff2")
+          format("woff2"),
+        url("https://mdn.github.io/shared-assets/fonts/FiraSans-Bold.woff2")
+          format("woff2");
+    }
+
+    /* Style the text */
+    text {
+      /* Specify the system or custom font to use */
+      font-family: "FiraSans", sans-serif;
+
+      /* Add other styling */
+      font-size: 24px;
+      font-weight: bold;
+      font-style: italic;
+    }
+  </style>
+  <text x="10" y="20">Text styled with custom font</text>
 </svg>
 ```
+
+{{EmbedLiveSample("Using web fonts with @font-face", "100", "70px")}}
 
 ## Referencing a style in the text element
 
