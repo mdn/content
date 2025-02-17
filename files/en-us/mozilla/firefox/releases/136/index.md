@@ -22,6 +22,8 @@ This article provides information about the changes in Firefox 136 that affect d
 
 ### JavaScript
 
+- {{jsxref("Intl.DurationFormat")}} is now supported, enabling locale-sensitive formatting of durations. ([Firefox bug 1933303](https://bugzil.la/1933303)).
+
 #### Removals
 
 ### SVG
@@ -29,6 +31,11 @@ This article provides information about the changes in Firefox 136 that affect d
 #### Removals
 
 ### HTTP
+
+- The {{httpheader("Referer")}} HTTP header is now sent in requests following a page refresh that redirects to a new page (if permitted by the {{httpheader("Referrer-Policy")}}), and {{domxref("document.referrer")}} will be set to the referrer URL after navigating.
+  The page refresh may be triggered by the {{httpheader("Refresh")}} response header, or equivalent {{htmlelement("meta")}} in markup (for example `<meta http-equiv="refresh" content="3;url=https://www.mozilla.org" />`).
+  Note that same-page refreshes are treated as same-page navigation to a page fragment: since the page isn't re-requested, {{httpheader("Referer")}} isn't sent.
+  ([Firefox bug 1928291](https://bugzil.la/1928291))
 
 #### Removals
 

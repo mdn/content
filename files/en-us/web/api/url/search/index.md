@@ -8,10 +8,11 @@ browser-compat: api.URL.search
 
 {{ApiRef("URL API")}} {{AvailableInWorkers}}
 
-The **`search`** property of the {{domxref("URL")}} interface
-is a search string, also called a _query string_, that is a
-string containing a `'?'` followed by the parameters of the
-URL.
+The **`search`** property of the {{domxref("URL")}} interface is a search string, also called a _query string_, that is a string containing a `"?"` followed by the parameters of the URL. If the URL does not have a search query, this property contains an empty string, `""`.
+
+This property can be set to change the query string of the URL. When setting, a single `"?"` prefix is added to the provided value, if not already present. Setting it to `""` removes the query string.
+
+The query is {{Glossary("Percent-encoding", "percent-encoded")}} when setting but not percent-decoded when reading.
 
 Modern browsers provide the {{domxref("URL.searchParams")}} property to make it easy to
 parse out the parameters from the query string.
