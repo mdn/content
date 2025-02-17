@@ -48,7 +48,7 @@ Content-Range: <unit> */<size>
     Currently, only `bytes` is supported.
 - `<range>`
   - : A range with the format `<range-start>-<range-end>`, where `<range-start>` and `<range-end>` are integers for the start and end position (zero-indexed & inclusive) of the range in the given `<unit>`, respectively.
-    `*` is used in a {{httpstatus("416")}} (Range Not Satisfiable) response to indicate that the value is not a range.
+    `*` is used in a {{HTTPStatus("416", "416 Range Not Satisfiable")}} response to indicate that the value is not a range.
 - `<size>`
   - : The total length of the document (or `*` if unknown).
 
@@ -77,7 +77,7 @@ HTTP/2 416
 
 Content-Range: bytes */67589
 ```
-   
+
 ## Specifications
 
 {{Specifications}}
