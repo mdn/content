@@ -56,13 +56,11 @@ Below are the video codecs which are _required_ in any fully WebRTC-compliant br
       <td>
         <p>Chrome (52+), Edge, Firefox, Safari</p>
         <p>
-          Firefox 136+ supports H.264 for simulcast.
-          This includes Firefox for Android, which is hardware supported.
-        </p>
-        <p>
-          Firefox for Android 68 to "some version" before version 136 do not support AVC (H.264) .
-          This is due to a change in Google Play store requirements that prevent Firefox from downloading and installing the OpenH264 codec needed to handle H.264 in WebRTC connections.
-          See <a href="https://support.mozilla.org/en-US/kb/firefox-android-openh264">this article on SUMO</a> for details.
+          <ul>
+            <li>Firefox 136+ supports H.264 for simulcast.</li>
+            <li>Firefox for Android 73+ is hardware supported.</li>
+            <li>Firefox for Android versions 68 to 72 do not support H.264 (due to a change in <a href="https://support.mozilla.org/en-US/kb/firefox-android-openh264">Google Play store requirements</a> that prevent Firefox from downloading and installing the OpenH264 codec needed to handle H.264 in WebRTC connections).</li>
+          </ul>
         </p>
       </td>
     </tr>
