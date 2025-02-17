@@ -15,7 +15,6 @@ It is exactly equivalent to using [`<meta http-equiv="refresh" content="...">`](
 
 > [!NOTE]
 > Following a refresh to a new page, the {{httpheader("Referer")}} header should be included in the subsequent request for the page (if permitted by the {{httpheader("Referrer-Policy")}}), and {{domxref("document.referrer")}} should be set to the referrer URL after navigating.
-> The header may not be sent for same-page refreshes on some browsers.
 > See [browser compatibility](#browser_compatibility) for more information.
 
 <table class="properties">
