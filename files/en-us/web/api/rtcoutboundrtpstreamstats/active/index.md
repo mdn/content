@@ -3,10 +3,12 @@ title: "RTCOutboundRtpStreamStats: active property"
 short-title: active
 slug: Web/API/RTCOutboundRtpStreamStats/active
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.RTCStatsReport.type_outbound-rtp.active
 ---
 
-{{APIRef("WebRTC")}}
+{{APIRef("WebRTC")}}{{SeeCompatTable}}
 
 The **`active`** property of the {{domxref("RTCOutboundRtpStreamStats")}} dictionary is a boolean that indicates whether this RTP stream is configured to be sent, or is disabled.
 
