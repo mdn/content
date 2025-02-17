@@ -13,6 +13,7 @@ This data can be used for analytics, logging, optimized caching, and more.
 
 When you click a link, the `Referer` contains the address of the page that includes the link.
 When you make resource requests to another domain, the `Referer` contains the address of the page that uses the requested resource.
+The `Referer` may also be sent in requests following a page refresh (see {{httpheader("Refresh")}}) that causes a navigation to a new page.
 
 The `Referer` header can contain an _origin_, _path_, and _querystring_, and may not contain [URL fragments](/en-US/docs/Web/URI/Fragment) (i.e., `#section`) or `username:password` information.
 The request's _referrer policy_ defines the data that can be included. See {{HTTPHeader("Referrer-Policy")}} for more [information](/en-US/docs/Web/HTTP/Headers/Referrer-Policy#directives) and [examples](/en-US/docs/Web/HTTP/Headers/Referrer-Policy#examples).
