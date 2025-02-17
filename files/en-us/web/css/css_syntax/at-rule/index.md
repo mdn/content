@@ -1,15 +1,19 @@
 ---
 title: At-rules
-slug: Web/CSS/At-rule
+slug: Web/CSS/CSS_syntax/At-rule
 page-type: guide
-spec-urls: https://drafts.csswg.org/css-conditional/
+spec-urls: https://drafts.csswg.org/css-syntax/
 ---
 
 {{CSSRef}}
 
-**At-rules** are [CSS statements](/en-US/docs/Web/CSS/Syntax#css_statements) that instruct CSS how to behave. They begin with an at sign, `@` (U+0040 COMMERCIAL AT), followed by an identifier, and include everything up to the next semicolon, `;` (U+003B SEMICOLON), or the next [CSS block](/en-US/docs/Web/CSS/Syntax#css_declaration_blocks), whichever comes first.
+**At-rules** are [CSS statements](/en-US/docs/Web/CSS/CSS_syntax/Syntax#css_statements) that instruct CSS how to behave. They begin with an at-sign, `@` (U+0040 COMMERCIAL AT), followed by an identifier. They include everything from the at-keyword up to the next semicolon, `;` (U+003B SEMICOLON), or the next [CSS block](/en-US/docs/Web/CSS/CSS_syntax/Syntax#css_declaration_blocks), whichever comes first.
+
+At-rules are used to group and structure style rules and other at-rules, declare style information not directly associated with selected content, and manage syntactic constructs such as imports and namespaces keyword mappings.
 
 ## Syntax
+
+The at-rule is defined in the [CSS syntax](/en-US/docs/Web/CSS/CSS_syntax) module, with different at-rules being defined in their respective modules. They generally take one of two forms depending on the specific rule and its purpose: statement at-rules and block at-rules, which can contain nested qualified rules, at-rules, or declarations.
 
 ### Statement at-rules
 
@@ -100,9 +104,9 @@ Block at-rules end in a `{}`-block that contain nested rules, other at-rules, or
 
 - [CSS at-rule functions](/en-US/docs/Web/CSS/At-rule-functions)
 - [Nesting CSS at-rules](/en-US/docs/Web/CSS/CSS_nesting/Nesting_at-rules)
-- [CSS statements](/en-US/docs/Web/CSS/Syntax#css_statements)
+- [CSS statements](/en-US/docs/Web/CSS/CSS_syntax/Syntax#css_statements)
 - [CSSRule](/en-US/docs/Web/API/CSSRule) interface
 - [CSS conditional rules](/en-US/docs/Web/CSS/CSS_conditional_rules) module
-- [CSS syntax](/en-US/docs/Web/CSS/Syntax)
+- [CSS syntax](/en-US/docs/Web/CSS/CSS_syntax/Syntax)
 - [Specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity)
 - [Inheritance](/en-US/docs/Web/CSS/CSS_cascade/Inheritance)

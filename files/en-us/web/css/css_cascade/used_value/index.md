@@ -105,8 +105,8 @@ CSS 2.0 defined only _computed value_ as the last step in a property's calculati
 
 - {{domxref("window.getComputedStyle")}}
 - CSS key concepts:
-  - [CSS syntax](/en-US/docs/Web/CSS/Syntax)
-  - [Comments](/en-US/docs/Web/CSS/Comments)
+  - [CSS syntax](/en-US/docs/Web/CSS/CSS_syntax/Syntax)
+  - [Comments](/en-US/docs/Web/CSS/CSS_syntax/Comments)
   - [Specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity)
   - [Inheritance](/en-US/docs/Web/CSS/CSS_cascade/Inheritance)
   - [Box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)

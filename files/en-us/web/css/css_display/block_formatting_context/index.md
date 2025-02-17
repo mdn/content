@@ -227,7 +227,7 @@ In this example, we wrap the second `<div>` in an outer `<div>`, and create a ne
 
 ## See also
 
-- [CSS syntax](/en-US/docs/Web/CSS/Syntax)
+- [CSS syntax](/en-US/docs/Web/CSS/CSS_syntax/Syntax)
 - [Specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity)
 - [Inheritance](/en-US/docs/Web/CSS/CSS_cascade/Inheritance)
 - [Box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
