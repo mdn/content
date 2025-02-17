@@ -58,6 +58,8 @@ This article provides information about the changes in Firefox 137 that affect d
 
 ## Changes for add-on developers
 
+- The 10 MB quota for data stored by the {{WebExtAPIRef("storage.session")}} API is now enforced. ([Firefox bug 1915688](https://bugzil.la/1915688))
+
 ### Removals
 
 ### Other
