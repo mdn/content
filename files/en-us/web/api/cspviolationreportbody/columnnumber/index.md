@@ -83,7 +83,7 @@ Note that while there might be multiple reports in the returned array, for brevi
 
 #### Results
 
-You can try this out using a [local server](/en-US/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server).
+You can try this out using a [local server](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server).
 Copy the above code into `test/index.html` and `test/main.js` and run the server in the root directory.
 Assuming the address of the local server is `http://127.0.0.1:9999`, you can then load the HTML file from `http://127.0.0.1:9999/test/` (or `http://127.0.0.1:9999/test/index.html`).
 

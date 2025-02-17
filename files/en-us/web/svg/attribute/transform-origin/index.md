@@ -36,7 +36,7 @@ You can use this attribute with any SVG element.
 > [!NOTE]
 > The default value of `transform-origin` is `0 0` for all SVG elements except for root `<svg>` elements and `<svg>` elements that are a direct child of a [foreignObject](/en-US/docs/Web/SVG/Element/foreignObject), and whose transform-origin is `50% 50%`, like other CSS elements.
 
-The `transform-origin` property may be specified using one, two, or three values, where each value represents an offset. Offsets that are not explicitly defined are reset to their corresponding [initial values](/en-US/docs/Web/CSS/initial_value).
+The `transform-origin` property may be specified using one, two, or three values, where each value represents an offset. Offsets that are not explicitly defined are reset to their corresponding [initial values](/en-US/docs/Web/CSS/CSS_cascade/initial_value).
 
 If a single {{cssxref("&lt;length&gt;")}} or {{cssxref("&lt;percentage&gt;")}} value is defined, it represents the horizontal offset.
 
@@ -324,3 +324,7 @@ figcaption {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- CSS {{cssxref("transform-origin")}} property

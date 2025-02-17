@@ -27,4 +27,4 @@ An {{domxref("HTMLFormElement")}} or `null`.
 - {{domxref("HTMLObjectElement")}}
 - {{domxref("HTMLFormElement")}}
 - {{HTMLElement("object")}}
-- [HTML forms guide](/en-US/docs/Learn/Forms)
+- [HTML forms guide](/en-US/docs/Learn_web_development/Extensions/Forms)

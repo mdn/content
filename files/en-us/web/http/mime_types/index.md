@@ -99,7 +99,7 @@ pieces, often with different MIME types; they can also be used — especially in
 scenarios — to represent multiple, separate files which are all part of the same
 transaction. They represent a **composite document**.
 
-Except for `multipart/form-data`, used in the {{HTTPMethod("POST")}} method of [HTML Forms](/en-US/docs/Learn/Forms), and `multipart/byteranges`, used with {{HTTPStatus("206")}} `Partial Content` to send part of a document, HTTP doesn't handle multipart documents in a special way: the message is transmitted to the browser (which will likely
+Except for `multipart/form-data`, used in the {{HTTPMethod("POST")}} method of [HTML Forms](/en-US/docs/Learn_web_development/Extensions/Forms), and `multipart/byteranges`, used with {{HTTPStatus("206")}} `Partial Content` to send part of a document, HTTP doesn't handle multipart documents in a special way: the message is transmitted to the browser (which will likely
 show a "Save As" window if it doesn't know how to display the document).
 
 There are two multipart types:
@@ -184,34 +184,34 @@ The subtype specifies which specific image file format the data represents.
 
 The following image types are used commonly enough to be considered _safe_ for use on web pages:
 
-- [`image/apng`](/en-US/docs/Web/Media/Formats/Image_types#apng_animated_portable_network_graphics): Animated Portable Network Graphics (APNG)
-- [`image/avif`](/en-US/docs/Web/Media/Formats/Image_types#avif_image) : AV1 Image File Format (AVIF)
-- [`image/gif`](/en-US/docs/Web/Media/Formats/Image_types#gif_graphics_interchange_format): Graphics Interchange Format (GIF)
-- [`image/jpeg`](/en-US/docs/Web/Media/Formats/Image_types#jpeg_joint_photographic_experts_group_image): Joint Photographic Expert Group image (JPEG)
-- [`image/png`](/en-US/docs/Web/Media/Formats/Image_types#png_portable_network_graphics): Portable Network Graphics (PNG)
-- [`image/svg+xml`](/en-US/docs/Web/Media/Formats/Image_types#svg_scalable_vector_graphics): Scalable Vector Graphics (SVG)
-- [`image/webp`](/en-US/docs/Web/Media/Formats/Image_types#webp_image): Web Picture format (WEBP)
+- [`image/apng`](/en-US/docs/Web/Media/Guides/Formats/Image_types#apng_animated_portable_network_graphics): Animated Portable Network Graphics (APNG)
+- [`image/avif`](/en-US/docs/Web/Media/Guides/Formats/Image_types#avif_image) : AV1 Image File Format (AVIF)
+- [`image/gif`](/en-US/docs/Web/Media/Guides/Formats/Image_types#gif_graphics_interchange_format): Graphics Interchange Format (GIF)
+- [`image/jpeg`](/en-US/docs/Web/Media/Guides/Formats/Image_types#jpeg_joint_photographic_experts_group_image): Joint Photographic Expert Group image (JPEG)
+- [`image/png`](/en-US/docs/Web/Media/Guides/Formats/Image_types#png_portable_network_graphics): Portable Network Graphics (PNG)
+- [`image/svg+xml`](/en-US/docs/Web/Media/Guides/Formats/Image_types#svg_scalable_vector_graphics): Scalable Vector Graphics (SVG)
+- [`image/webp`](/en-US/docs/Web/Media/Guides/Formats/Image_types#webp_image): Web Picture format (WEBP)
 
-The [Image file type and format guide](/en-US/docs/Web/Media/Formats/Image_types#common_image_file_types) provides information and recommendations about when to use the different image formats.
+The [Image file type and format guide](/en-US/docs/Web/Media/Guides/Formats/Image_types#common_image_file_types) provides information and recommendations about when to use the different image formats.
 
 ### Audio and video types
 
 As is the case for images, HTML doesn't mandate that web browsers support any specific file and codec types for the {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements, so it's important to consider your target audience and the range of browsers (and versions of those browsers) they may be using when choosing the file type and codecs to use for media.
 
-Our [media container formats guide](/en-US/docs/Web/Media/Formats/Containers) provides a list of the file types that are commonly supported by web browsers,
+Our [media container formats guide](/en-US/docs/Web/Media/Guides/Formats/Containers) provides a list of the file types that are commonly supported by web browsers,
 including information about what their special use cases may be, any drawbacks they have, and compatibility information, along with other details.
 
-The [audio codec](/en-US/docs/Web/Media/Formats/Audio_codecs) and [video codec](/en-US/docs/Web/Media/Formats/Video_codecs) guides list the various codecs that web browsers often support, providing compatibility details along with technical information such as how many audio channels they support, what sort of compression is used, and what bit rates and so forth they're useful at.
-The [codecs used by WebRTC](/en-US/docs/Web/Media/Formats/WebRTC_codecs) guide expands upon this by specifically covering the codecs supported by the major web browsers, so you can choose the codecs that best cover the range of browsers you wish to support.
+The [audio codec](/en-US/docs/Web/Media/Guides/Formats/Audio_codecs) and [video codec](/en-US/docs/Web/Media/Guides/Formats/Video_codecs) guides list the various codecs that web browsers often support, providing compatibility details along with technical information such as how many audio channels they support, what sort of compression is used, and what bit rates and so forth they're useful at.
+The [codecs used by WebRTC](/en-US/docs/Web/Media/Guides/Formats/WebRTC_codecs) guide expands upon this by specifically covering the codecs supported by the major web browsers, so you can choose the codecs that best cover the range of browsers you wish to support.
 
 As for MIME types of audio or video files, they typically specify the container format (file type).
-The optional [codecs parameter](/en-US/docs/Web/Media/Formats/codecs_parameter) can be added to the MIME type to further specify which codecs to use and what options were used to encode the media, such as codec profile, level, or other such information.
+The optional [codecs parameter](/en-US/docs/Web/Media/Guides/Formats/codecs_parameter) can be added to the MIME type to further specify which codecs to use and what options were used to encode the media, such as codec profile, level, or other such information.
 
 For more information on common media types, see the [Common MIME types](/en-US/docs/Web/HTTP/MIME_types/Common_types) page.
 
 ### multipart/form-data
 
-The `multipart/form-data` type can be used when sending the values of a completed [HTML Form](/en-US/docs/Learn/Forms) from browser to server.
+The `multipart/form-data` type can be used when sending the values of a completed [HTML Form](/en-US/docs/Learn_web_development/Extensions/Forms) from browser to server.
 
 As a multipart document format, it consists of different parts, delimited by a boundary (a string starting with a double dash `--`).
 Each part is its own entity with its own HTTP headers, {{HTTPHeader("Content-Disposition")}}, and {{HTTPHeader("Content-Type")}} for file uploading fields.
@@ -325,7 +325,7 @@ Some common incorrect server configurations:
   In this case, configure the server to send `application/x-rar-compressed`.
 - Audio and video.
   Only resources with the correct MIME Type will be played in {{HTMLElement("video")}} or {{HTMLElement("audio")}} elements.
-  Be sure to specify the correct [media type for audio and video](/en-US/docs/Web/Media/Formats).
+  Be sure to specify the correct [media type for audio and video](/en-US/docs/Web/Media/Guides/Formats).
 - Proprietary file types.
   A specific type like `application/vnd.mspowerpoint` lets users open such files automatically in the presentation software of their choice.
 
@@ -351,5 +351,5 @@ MIME types are not the only way to convey document type information:
 ## See also
 
 - [Web media technologies](/en-US/docs/Web/Media)
-- [Guide to media types used on the web](/en-US/docs/Web/Media/Formats)
-- [Properly configuring server MIME types](/en-US/docs/Learn/Server-side/Configuring_server_MIME_types)
+- [Guide to media types used on the web](/en-US/docs/Web/Media/Guides/Formats)
+- [Properly configuring server MIME types](/en-US/docs/Learn_web_development/Extensions/Server-side/Configuring_server_MIME_types)

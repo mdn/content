@@ -260,7 +260,7 @@ img {
 
 ## Using Generated Content as the floated item
 
-In the examples above, we have used images or a visible element to define the shape, meaning that you can see the shape on the page. Instead, you might want to flow some text along a non-rectangular invisible line. We could, for example, add an empty floated {{htmlelement("div")}} or {{htmlelement("span")}} element to our DOM and make it invisible. However, we can create a shape with only CSS using [generated content](/en-US/docs/Learn/CSS/Howto/Generated_content) and keep all our styling functionality inside the CSS.
+In the examples above, we have used images or a visible element to define the shape, meaning that you can see the shape on the page. Instead, you might want to flow some text along a non-rectangular invisible line. We could, for example, add an empty floated {{htmlelement("div")}} or {{htmlelement("span")}} element to our DOM and make it invisible. However, we can create a shape with only CSS using [generated content](/en-US/docs/Learn_web_development/Howto/Solve_CSS_problems/Generated_content) and keep all our styling functionality inside the CSS.
 
 In this example, we use generated content to insert an element with a height and width of 150px. We can then use basic shapes, box values, or even the alpha channel of an image to create a shape for the text to wrap around.
 

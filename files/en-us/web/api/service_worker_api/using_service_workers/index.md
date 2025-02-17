@@ -93,15 +93,19 @@ A single service worker can control many pages. Each time a page within your sco
 
 #### Why is my service worker failing to register?
 
-This could be for the following reasons:
+A service worker fails to register for one of the following reasons:
 
-- You are not running your application through HTTPS.
-- The path to your service worker file is not written correctly — it needs to be written relative to the origin, not your app's root directory. In our example, the worker is at `https://bncb2v.csb.app/sw.js`, and the app's root is `https://bncb2v.csb.app/`. But the path needs to be written as `/sw.js`.
-- It is also not allowed to point to a service worker of a different origin than that of your app.
-- The service worker will only catch requests from clients under the service worker's scope.
-- The max scope for a service worker is the location of the worker (in other words if the script `sw.js` is located in `/js/sw.js`, it can only control URLs under `/js/` by default). A list of max scopes for that worker can be specified with the `Service-Worker-Allowed` header.
-- In Firefox, Service Worker APIs are hidden and cannot be used when the user is in [private browsing mode](https://bugzil.la/1320796), or when history is disabled, or if cookies are cleared when Firefox is closed.
-- In Chrome, registration fails when the "Block all cookies (not recommended)" option is enabled.
+- You are not running your application in a [secure context](/en-US/docs/Web/Security/Secure_Contexts) (over HTTPS).
+- The path of the service worker file is incorrect.
+  The path must be relative to the origin, not an app's root directory.
+  In our example, the worker is at `https://bncb2v.csb.app/sw.js`, and the app's root is `https://bncb2v.csb.app/`, so the service worker must be specified as `/sw.js`.
+- The path to your service worker points to a service worker of a different origin to your app.
+- The service worker registration contains a `scope` option broader than permitted by the worker path.
+  The default scope for a service worker is the directory where the worker is located.
+  In other words, if the script `sw.js` is located in `/js/sw.js`, it can only control URLs in (or nested within) the `/js/` path by default.
+  The scope for a service worker can be broadened (or narrowed) with the {{HTTPHeader("Service-Worker-Allowed")}} header.
+- Browser-specific settings are enabled, such as blocking all cookies, private browsing mode, automatic cookie deletion on close, etc.
+  See [`serviceWorker.register()` browser compatibility](/en-US/docs/Web/API/ServiceWorkerContainer/register#browser_compatibility) for more information.
 
 ### Install and activate: populating your cache
 
@@ -200,18 +204,18 @@ const putInCache = async (request, response) => {
   await cache.put(request, response);
 };
 
-const cacheFirst = async (request) => {
+const cacheFirst = async (request, event) => {
   const responseFromCache = await caches.match(request);
   if (responseFromCache) {
     return responseFromCache;
   }
   const responseFromNetwork = await fetch(request);
-  putInCache(request, responseFromNetwork.clone());
+  event.waitUntil(putInCache(request, responseFromNetwork.clone()));
   return responseFromNetwork;
 };
 
 self.addEventListener("fetch", (event) => {
-  event.respondWith(cacheFirst(event.request));
+  event.respondWith(cacheFirst(event.request, event));
 });
 ```
 
@@ -219,7 +223,7 @@ If the request URL is not available in the cache, we request the resource from t
 
 Cloning the response is necessary because request and response streams can only be read once. In order to return the response to the browser and put it in the cache we have to clone it. So the original gets returned to the browser and the clone gets sent to the cache. They are each read once.
 
-What might look a bit weird is that the promise returned by `putInCache()` is not awaited. But the reason is that we don't want to wait until the response clone has been added to the cache before returning a response.
+What might look a bit weird is that the promise returned by `putInCache()` is not awaited. The reason is that we don't want to wait until the response clone has been added to the cache before returning a response. However, we do need to call `event.waitUntil()` on the promise, to make sure the service worker doesn't terminate before the cache is populated.
 
 The only trouble we have now is that if the request doesn't match anything in the cache, and the network is not available, our request will still fail. Let's provide a default fallback so that whatever happens, the user will at least get something:
 
@@ -229,7 +233,7 @@ const putInCache = async (request, response) => {
   await cache.put(request, response);
 };
 
-const cacheFirst = async ({ request, fallbackUrl }) => {
+const cacheFirst = async ({ request, fallbackUrl, event }) => {
   // First try to get the resource from the cache
   const responseFromCache = await caches.match(request);
   if (responseFromCache) {
@@ -242,7 +246,7 @@ const cacheFirst = async ({ request, fallbackUrl }) => {
     // response may be used only once
     // we need to save clone to put one copy in cache
     // and serve second one
-    putInCache(request, responseFromNetwork.clone());
+    event.waitUntil(putInCache(request, responseFromNetwork.clone()));
     return responseFromNetwork;
   } catch (error) {
     const fallbackResponse = await caches.match(fallbackUrl);
@@ -264,6 +268,7 @@ self.addEventListener("fetch", (event) => {
     cacheFirst({
       request: event.request,
       fallbackUrl: "/gallery/myLittleVader.jpg",
+      event,
     }),
   );
 });
@@ -304,7 +309,12 @@ const putInCache = async (request, response) => {
   await cache.put(request, response);
 };
 
-const cacheFirst = async ({ request, preloadResponsePromise, fallbackUrl }) => {
+const cacheFirst = async ({
+  request,
+  preloadResponsePromise,
+  fallbackUrl,
+  event,
+}) => {
   // First try to get the resource from the cache
   const responseFromCache = await caches.match(request);
   if (responseFromCache) {
@@ -315,7 +325,7 @@ const cacheFirst = async ({ request, preloadResponsePromise, fallbackUrl }) => {
   const preloadResponse = await preloadResponsePromise;
   if (preloadResponse) {
     console.info("using preload response", preloadResponse);
-    putInCache(request, preloadResponse.clone());
+    event.waitUntil(putInCache(request, preloadResponse.clone()));
     return preloadResponse;
   }
 
@@ -325,7 +335,7 @@ const cacheFirst = async ({ request, preloadResponsePromise, fallbackUrl }) => {
     // response may be used only once
     // we need to save clone to put one copy in cache
     // and serve second one
-    putInCache(request, responseFromNetwork.clone());
+    event.waitUntil(putInCache(request, responseFromNetwork.clone()));
     return responseFromNetwork;
   } catch (error) {
     const fallbackResponse = await caches.match(fallbackUrl);
@@ -375,6 +385,7 @@ self.addEventListener("fetch", (event) => {
       request: event.request,
       preloadResponsePromise: event.preloadResponse,
       fallbackUrl: "/gallery/myLittleVader.jpg",
+      event,
     }),
   );
 });
@@ -452,3 +463,4 @@ self.addEventListener("activate", (event) => {
 
 - [Promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 - [Using web workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)
+- {{HTTPHeader("Service-Worker-Allowed")}} HTTP header

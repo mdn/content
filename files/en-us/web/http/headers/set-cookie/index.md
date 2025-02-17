@@ -7,11 +7,11 @@ browser-compat: http.headers.Set-Cookie
 
 {{HTTPSidebar}}
 
-The **`Set-Cookie`** HTTP response header is used to send a cookie from the server to the user agent, so that the user agent can send it back to the server later.
-To send multiple cookies, multiple **`Set-Cookie`** headers should be sent in the same response.
+The HTTP **`Set-Cookie`** {{Glossary("response header")}} is used to send a cookie from the server to the user agent, so that the user agent can send it back to the server later.
+To send multiple cookies, multiple `Set-Cookie` headers should be sent in the same response.
 
 > [!WARNING]
-> Browsers block frontend JavaScript code from accessing the `Set-Cookie` header, as required by the Fetch spec, which defines `Set-Cookie` as a [forbidden response-header name](https://fetch.spec.whatwg.org/#forbidden-response-header-name) that [must be filtered out](https://fetch.spec.whatwg.org/#ref-for-forbidden-response-header-name%E2%91%A0) from any response exposed to frontend code.
+> Browsers block frontend JavaScript code from accessing the `Set-Cookie` header, as required by the Fetch spec, which defines `Set-Cookie` as a [forbidden response header name](https://fetch.spec.whatwg.org/#forbidden-response-header-name) that [must be filtered out](https://fetch.spec.whatwg.org/#ref-for-forbidden-response-header-name%E2%91%A0) from any response exposed to frontend code.
 >
 > When a [Fetch API](/en-US/docs/Web/API/Fetch_API/Using_Fetch) or [XMLHttpRequest API](/en-US/docs/Web/API/XMLHttpRequest_API) request [uses CORS](/en-US/docs/Web/HTTP/CORS#what_requests_use_cors), browsers will ignore `Set-Cookie` headers present in the server's response unless the request includes credentials. Visit [Using the Fetch API - Including credentials](/en-US/docs/Web/API/Fetch_API/Using_Fetch#including_credentials) and the [XMLHttpRequest article](/en-US/docs/Web/API/XMLHttpRequest_API) to learn how to include credentials.
 
@@ -25,11 +25,11 @@ For more information, see the guide on [Using HTTP cookies](/en-US/docs/Web/HTTP
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>no</td>
+      <td>No</td>
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden response header name")}}</th>
-      <td>yes</td>
+      <td>Yes</td>
     </tr>
   </tbody>
 </table>
@@ -101,7 +101,10 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
     > [!WARNING]
     > Many web browsers have a _session restore_ feature that will save all tabs and restore them the next time the browser is used. Session cookies will also be restored, as if the browser was never closed.
 
-    When an `Expires` date is set, the deadline is relative to the _client_ the cookie is being set on, not the server.
+    The `Expires` attribute is set by the server with a value relative to its own internal clock, which may differ from that of the client browser.
+    Firefox and Chromium-based browsers internally use an expiry (max-age) value that is adjusted to compensate for clock difference, storing and expiring cookies based on the time intended by the server.
+    The adjustment for clock skew is calculated from the value of the {{httpheader("DATE")}} header.
+    Note that the specification explains how the attribute should be parsed, but does not indicate if/how the value should be corrected by the recipient.
 
 - `HttpOnly` {{optional_inline}}
 
@@ -145,6 +148,10 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
       - : Means that the cookie is not sent on cross-site requests, such as on requests to load images or frames, but is sent when a user is navigating to the origin site from an external site (for example, when following a link).
         This is the default behavior if the `SameSite` attribute is not specified.
 
+        > [!WARNING]
+        > Not all browsers set `SameSite=Lax` by default.
+        > See [Browser compatibility](#browser_compatibility) for details.
+
     - `None`
 
       - : Means that the browser sends the cookie with both cross-site and same-site requests.
@@ -167,15 +174,16 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
   - : Indicates that the cookie is sent to the server only when a request is made with the `https:` scheme (except on localhost), and therefore, is more resistant to [man-in-the-middle](/en-US/docs/Glossary/MitM) attacks.
 
     > [!NOTE]
-    > Do not assume that `Secure` prevents all access to sensitive information in cookies (session keys, login details, etc.). Cookies with this attribute can still be read/modified either with access to the client's hard disk or from JavaScript if the `HttpOnly` cookie attribute is not set.
+    > Do not assume that `Secure` prevents all access to sensitive information in cookies (session keys, login details, etc.).
+    > Cookies with this attribute can still be read/modified either with access to the client's hard disk or from JavaScript if the `HttpOnly` cookie attribute is not set.
     >
-    > Insecure sites (`http:`) cannot set cookies with the `Secure` attribute (since Chrome 52 and Firefox 52). The `https:` requirements are ignored when the `Secure` attribute is set by localhost (since Chrome 89 and Firefox 75).
+    > Insecure sites (`http:`) cannot set cookies with the `Secure` attribute. The `https:` requirements are ignored when the `Secure` attribute is set by localhost.
 
 ## Examples
 
 ### Session cookie
 
-**Session cookies** are removed when the client shuts down. Cookies are session cookies if they do not specify the `Expires` or `Max-Age` attribute.
+Session cookies are removed when the client shuts down. Cookies are session cookies if they do not specify the `Expires` or `Max-Age` attribute.
 
 ```http
 Set-Cookie: sessionId=38afes7a8
@@ -183,7 +191,7 @@ Set-Cookie: sessionId=38afes7a8
 
 ### Permanent cookie
 
-**Permanent cookies** are removed at a specific date (`Expires`) or after a specific length of time (`Max-Age`) and not when the client is closed.
+Permanent cookies are removed at a specific date (`Expires`) or after a specific length of time (`Max-Age`) and not when the client is closed.
 
 ```http
 Set-Cookie: id=a3fWa; Expires=Wed, 21 Oct 2015 07:28:00 GMT
@@ -251,10 +259,6 @@ Set-Cookie: __Host-example=34d8g; SameSite=None; Secure; Path=/; Partitioned;
 ## Browser compatibility
 
 {{Compat}}
-
-### Compatibility notes
-
-- Starting with Chrome 52 and Firefox 52, insecure sites (`http:`) can't set cookies with the `Secure` attribute anymore.
 
 ## See also
 

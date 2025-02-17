@@ -4,7 +4,7 @@ Thanks for taking the time to contribute to [MDN Web Docs](https://developer.moz
 
 This document covers project setup steps along with a set of guidelines for contributing to MDN Web Docs content.
 Everyone participating in this project is expected to follow our [Code of Conduct](https://github.com/mdn/content/blob/main/CODE_OF_CONDUCT.md), which means adhering to [Mozilla's Community Participation Guidelines](https://www.mozilla.org/en-US/about/governance/policies/participation/).
-If you want to jump right in, see [Getting started with MDN Web Docs][] for an overview of how to join, and the [Contribute page][] on MDN for a filtered list of tasks.
+If you want to jump right in, see [Getting started with MDN Web Docs][] for an overview of how to join, and the [Community resources][] on MDN.
 
 ## Getting started
 
@@ -200,12 +200,7 @@ This will make it easier to submit a pull request for your changes.
 2. Open a browser and navigate to the equivalent pages you've changed.
    If you changed `files/en-us/web/javascript/index.md`, you would navigate to `http://localhost:5042/en-us/docs/web/javascript` in your browser, for example.
 
-3. Check for errors by clicking `Show flaws` on each previewed page.
-   You may be able to fix flaws by running:
-
-   ```bash
-   yarn content flaws <page_slug>
-   ```
+3. Check for detected flaws at the top of the previewed page. Some flaws may be automatically fixable.
 
 4. Commit your changes to the branch (our example is using the `fix-typo` branch) and push the changes to your fork's remote:
 
@@ -254,7 +249,8 @@ yarn content move <from-slug> <to-slug> [locale]
 > See the [Redirecting a document](#redirecting-a-document) section for more information.
 
 To use `yarn content move`, provide the slug of the document you'd like to move (e.g., `Learn/Accessibility`), and the slug of its new location (e.g., `Learn/A11y`).
-The locale of the existing document can be provided as an optional third argument (this defaults to `en-US`).
+The locale of the existing document can be provided as an optional third argument (this defaults to `en-US`). For other locales,
+`CONTENT_TRANSLATED_ROOT` has to be set correctly in your environment.
 If the document you'd like to move contains child documents (i.e. it represents a document tree), the `yarn content move` command will move the entire tree.
 
 Let's say you want to move the entire `/en-US/Learn/Accessibility` tree to `/en-US/Learn/A11y`, you can do so as follows:
@@ -423,7 +419,7 @@ There are some important rules of etiquette to remember that will help during th
 When contributing to the content you agree to license your contributions
 according to [our license](LICENSE.md).
 
-[contribute page]: https://developer.mozilla.org/en-US/docs/MDN/Community/Contributing
+[community resources]: https://developer.mozilla.org/en-US/docs/MDN/Community
 [getting started with mdn web docs]: https://developer.mozilla.org/en-US/docs/MDN/Community/Contributing/Getting_started
 [getting ready to contribute]: https://developer.mozilla.org/en-US/docs/MDN/Community/Contributing/Getting_started#getting_ready_to_contribute
 [how to write in markdown]: https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN

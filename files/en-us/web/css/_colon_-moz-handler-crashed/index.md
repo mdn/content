@@ -1,5 +1,5 @@
 ---
-title: ":-moz-handler-crashed"
+title: :-moz-handler-crashed
 slug: Web/CSS/:-moz-handler-crashed
 page-type: css-pseudo-class
 status:

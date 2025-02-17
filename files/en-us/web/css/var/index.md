@@ -43,7 +43,7 @@ The syntax of the fallback, like that of custom properties, allows commas. For e
 
     > **Note:** `var(--a,)` is valid, specifying that if the `--a` custom property is not defined or equals a [CSS-wide keyword](/en-US/docs/Web/CSS/CSS_Values_and_Units#css-wide_values), the `var()` should be replaced with nothing.
 
-### Formal syntax
+## Formal syntax
 
 {{CSSSyntax}}
 
@@ -240,6 +240,6 @@ Note how the paragraphs using `var()` are reset to the default black, but the pa
 ## See also
 
 - {{cssxref("env","env(…)")}} – read‑only environment variables controlled by the user‑agent.
-- [Using CSS custom properties (variables)](/en-US/docs/Web/CSS/Using_CSS_custom_properties)
+- [Using CSS custom properties (variables)](/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties)
 - {{cssxref("@property")}} at-rule
 - [CSS custom properties for cascading variables](/en-US/docs/Web/CSS/CSS_cascading_variables) module

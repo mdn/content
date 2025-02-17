@@ -26,7 +26,7 @@ Common use cases for `<picture>`:
 - **Offering alternative image formats**, for cases where certain formats are not supported.
 
   > [!NOTE]
-  > For example, newer formats like [AVIF](/en-US/docs/Web/Media/Formats/Image_types#avif_image) or [WEBP](/en-US/docs/Web/Media/Formats/Image_types#webp_image) have many advantages, but might not be supported by the browser. A list of supported image formats can be found in: [Image file type and format guide](/en-US/docs/Web/Media/Formats/Image_types).
+  > For example, newer formats like [AVIF](/en-US/docs/Web/Media/Guides/Formats/Image_types#avif_image) or [WEBP](/en-US/docs/Web/Media/Guides/Formats/Image_types#webp_image) have many advantages, but might not be supported by the browser. A list of supported image formats can be found in: [Image file type and format guide](/en-US/docs/Web/Media/Guides/Formats/Image_types).
 
 - **Saving bandwidth and speeding page load times** by loading the most appropriate image for the viewer's display.
 
@@ -101,7 +101,7 @@ The `sizes` attribute is not mandatory when using srcset, but it is recommended 
 Without sizes, the browser will use the default size of the image as specified by its dimensions in pixels. This may not be the best fit for all devices, especially if the image is displayed on different screen sizes or in different contexts.
 
 Please note that sizes will have its effect only if width dimension descriptors are provided with srcset instead of pixel ratio values (200w instead of 2x for example).
-For more information on using `srcset`, see the [Responsive images](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images) documentation.
+For more information on using `srcset`, see the [Responsive images](/en-US/docs/Web/HTML/Responsive_images) documentation.
 
 ### The type attribute
 
@@ -179,4 +179,4 @@ The `type` attribute specifies a [MIME type](/en-US/docs/Web/HTTP/MIME_types) fo
 - {{HTMLElement("img")}} element
 - {{HTMLElement("source")}} element
 - Positioning and sizing the picture within its frame: {{cssxref("object-position")}} and {{cssxref("object-fit")}}
-- [Image file type and format guide](/en-US/docs/Web/Media/Formats/Image_types)
+- [Image file type and format guide](/en-US/docs/Web/Media/Guides/Formats/Image_types)

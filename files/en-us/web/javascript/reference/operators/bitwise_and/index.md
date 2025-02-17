@@ -9,7 +9,15 @@ browser-compat: javascript.operators.bitwise_and
 
 The **bitwise AND (`&`)** operator returns a number or BigInt whose binary representation has a `1` in each bit position for which the corresponding bits of both operands are `1`.
 
-{{EmbedInteractiveExample("pages/js/expressions-bitwise-and.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Bitwise AND", "shorter")}}
+
+```js interactive-example
+const a = 5; // 00000000000000000000000000000101
+const b = 3; // 00000000000000000000000000000011
+
+console.log(a & b); // 00000000000000000000000000000001
+// Expected output: 1
+```
 
 ## Syntax
 

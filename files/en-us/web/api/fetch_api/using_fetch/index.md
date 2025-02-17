@@ -10,7 +10,7 @@ The [Fetch API](/en-US/docs/Web/API/Fetch_API) provides a JavaScript interface f
 
 Fetch is the modern replacement for {{domxref("XMLHttpRequest")}}: unlike `XMLHttpRequest`, which uses callbacks, Fetch is promise-based and is integrated with features of the modern web such as [service workers](/en-US/docs/Web/API/Service_Worker_API) and [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/CORS).
 
-With the Fetch API, you make a request by calling {{domxref("Window/fetch", "fetch()")}}, which is available as a global function in both {{domxref("Window", "window", "", "", "nocode")}} and {{domxref("WorkerGlobalScope", "worker", "", "", "nocode")}} contexts. You pass it a {{domxref("Request")}} object or a string containing the URL to fetch, along with an optional argument to configure the request.
+With the Fetch API, you make a request by calling {{domxref("Window/fetch", "fetch()")}}, which is available as a global function in both {{domxref("Window", "window")}} and {{domxref("WorkerGlobalScope", "worker")}} contexts. You pass it a {{domxref("Request")}} object or a string containing the URL to fetch, along with an optional argument to configure the request.
 
 The `fetch()` function returns a {{jsxref("Promise")}} which is fulfilled with a {{domxref("Response")}} object representing the server's response. You can then check the request status and extract the body of the response in various formats, including text and JSON, by calling the appropriate method on the response.
 
@@ -91,6 +91,19 @@ You can supply the body as an instance of any of the following types:
 - {{domxref("FormData")}}
 - {{domxref("ReadableStream")}}
 
+Other objects are converted to strings using their `toString()` method. For example, you can use a {{domxref("URLSearchParams")}} object to encode form data (see [setting headers](#setting_headers) for more information):
+
+```js
+const response = await fetch("https://example.org/post", {
+  headers: {
+    "Content-Type": "application/x-www-form-urlencoded",
+  },
+  // Automatically converted to "username=example&password=password"
+  body: new URLSearchParams({ username: "example", password: "password" }),
+  // ...
+});
+```
+
 Note that just like response bodies, request bodies are streams, and making the request reads the stream, so if a request contains a body, you can't make it twice:
 
 ```js example-bad
@@ -155,7 +168,7 @@ const response = await fetch("https://example.org/post", {
 });
 ```
 
-Many headers are set automatically by the browser and can't be set by a script: these are called {{glossary("Forbidden header name", "Forbidden header names")}}. If the {{domxref("Request.mode", "mode")}} option is set to `no-cors`, then the set of permitted headers is further restricted.
+Compared to using plain objects, the `Headers` object provides some additional input sanitization. For example, it normalizes header names to lowercase, strips leading and trailing whitespace from header values, and prevents certain headers from being set. Many headers are set automatically by the browser and can't be set by a script: these are called {{glossary("Forbidden header name", "Forbidden header names")}}. If the {{domxref("Request.mode", "mode")}} option is set to `no-cors`, then the set of permitted headers is further restricted.
 
 ### Making POST requests
 

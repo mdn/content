@@ -221,7 +221,7 @@ const vsSource = `
   `;
 ```
 
-The key change here is that instead of fetching the vertex color, we're fetching the texture coordinates and passing them to the vertex shader; this will indicate the location within the texture corresponding to the vertex.
+The key change here is that instead of fetching the vertex color, we're fetching the texture coordinates and passing them to the fragment shader; this will indicate the location within the texture corresponding to the vertex.
 
 ### The fragment shader
 
@@ -345,7 +345,7 @@ At this point, the rotating cube should be good to go.
 
 Loading of WebGL textures is subject to cross-domain access controls. In order for your content to load a texture from another domain, CORS approval needs to be obtained. See [HTTP access control](/en-US/docs/Web/HTTP/CORS) for details on CORS.
 
-Because WebGL now requires textures to be loaded from secure contexts, you can't use textures loaded from `file:///` URLs in WebGL. That means that you'll need a secure web server to test and deploy your code. For local testing, see our guide [How do you set up a local testing server?](/en-US/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server) for help.
+Because WebGL now requires textures to be loaded from secure contexts, you can't use textures loaded from `file:///` URLs in WebGL. That means that you'll need a secure web server to test and deploy your code. For local testing, see our guide [How do you set up a local testing server?](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server) for help.
 
 See this [hacks.mozilla.org article](https://hacks.mozilla.org/2011/11/using-cors-to-load-webgl-textures-from-cross-domain-images/) for an explanation of how to use CORS-approved images as WebGL textures.
 

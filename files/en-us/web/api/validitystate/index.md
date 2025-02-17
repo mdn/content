@@ -16,7 +16,7 @@ For each of these Boolean properties, a value of `true` indicates that the speci
 - {{domxref("ValidityState.badInput", "badInput")}} {{ReadOnlyInline}}
   - : A boolean value that is `true` if the user has provided input that the browser is unable to convert.
 - {{domxref("ValidityState.customError", "customError")}} {{ReadOnlyInline}}
-  - : A boolean value indicating whether the element's custom validity message has been set to a non-empty string by calling the element's {{domxref('HTMLObjectElement.setCustomValidity', 'setCustomValidity()')}} method.
+  - : A boolean value indicating whether the element's custom validity message has been set to a non-empty string by calling the element's {{domxref('HTMLInputElement.setCustomValidity', 'setCustomValidity()')}} method.
 - {{domxref("ValidityState.patternMismatch", "patternMismatch")}} {{ReadOnlyInline}}
   - : A boolean value that is `true` if the value does not match the specified [`pattern`](/en-US/docs/Web/HTML/Element/input#pattern), and `false` if it does match. If `true`, the element matches the {{cssxref(":invalid")}} CSS pseudo-class.
 - {{domxref("ValidityState.rangeOverflow", "rangeOverflow")}} {{ReadOnlyInline}}
@@ -47,4 +47,4 @@ For each of these Boolean properties, a value of `true` indicates that the speci
 ## See also
 
 - [Guide: Constraint validation](/en-US/docs/Web/HTML/Constraint_validation)
-- [Tutorial: Form data validation](/en-US/docs/Learn/Forms/Form_validation)
+- [Tutorial: Form data validation](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation)

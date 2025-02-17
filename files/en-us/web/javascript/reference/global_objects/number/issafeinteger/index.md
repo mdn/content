@@ -9,7 +9,22 @@ browser-compat: javascript.builtins.Number.isSafeInteger
 
 The **`Number.isSafeInteger()`** static method determines whether the provided value is a number that is a _safe integer_.
 
-{{EmbedInteractiveExample("pages/js/number-issafeinteger.html")}}
+{{InteractiveExample("JavaScript Demo: Number.isSafeInteger()")}}
+
+```js interactive-example
+function warn(x) {
+  if (Number.isSafeInteger(x)) {
+    return "Precision safe.";
+  }
+  return "Precision may be lost!";
+}
+
+console.log(warn(Math.pow(2, 53)));
+// Expected output: "Precision may be lost!"
+
+console.log(warn(Math.pow(2, 53) - 1));
+// Expected output: "Precision safe."
+```
 
 ## Syntax
 

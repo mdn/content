@@ -73,4 +73,4 @@ For a description of the values, please refer to the [CSS `letter-spacing`](/en-
 
 ## See also
 
-- {{cssxref("letter-spacing")}}
+- CSS {{cssxref("letter-spacing")}} property

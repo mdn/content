@@ -15,7 +15,7 @@ Web accessibility is formally defined and discussed at the {{Glossary("W3C")}} t
 ## See also
 
 - [Accessibility](/en-US/docs/Web/Accessibility)
-- [Learn accessibility](/en-US/docs/Learn/Accessibility)
+- [Learn accessibility](/en-US/docs/Learn_web_development/Core/Accessibility)
 - [ARIA](/en-US/docs/Web/Accessibility/ARIA)
 - [Web accessibility](https://en.wikipedia.org/wiki/Web_accessibility) on Wikipedia
 - [Web Accessibility Initiative (WAI)](https://www.w3.org/WAI/) on W3C

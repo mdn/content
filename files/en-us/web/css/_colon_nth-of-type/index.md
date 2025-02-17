@@ -1,5 +1,5 @@
 ---
-title: ":nth-of-type()"
+title: :nth-of-type()
 slug: Web/CSS/:nth-of-type
 page-type: css-pseudo-class
 browser-compat: css.selectors.nth-of-type

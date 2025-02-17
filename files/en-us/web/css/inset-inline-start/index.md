@@ -19,8 +19,8 @@ This {{glossary("inset properties", "inset property")}} has no effect on non-pos
 /* <length> values */
 inset-inline-start: 3px;
 inset-inline-start: 2.4em;
-inset-inline-start: anchor(self-end);
 inset-inline-start: calc(anchor(--myAnchor 50%) + 10px);
+inset-inline-start: anchor-size(width);
 
 /* <percentage>s of the width or height of the containing block */
 inset-inline-start: 10%;

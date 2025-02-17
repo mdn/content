@@ -2,7 +2,7 @@
 title: "console: timeLog() static method"
 short-title: timeLog()
 slug: Web/API/console/timeLog_static
-page-type: web-api-instance-method
+page-type: web-api-static-method
 browser-compat: api.console.timeLog_static
 ---
 

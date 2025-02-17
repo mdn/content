@@ -1,5 +1,5 @@
 ---
-title: "RTCRtpScriptTransformer: sendKeyFrameRequest()"
+title: "RTCRtpScriptTransformer: sendKeyFrameRequest() method"
 short-title: sendKeyFrameRequest()
 slug: Web/API/RTCRtpScriptTransformer/sendKeyFrameRequest
 page-type: web-api-instance-method

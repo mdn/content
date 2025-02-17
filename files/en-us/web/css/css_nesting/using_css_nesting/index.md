@@ -50,10 +50,7 @@ parent child {
 
 ### Examples
 
-In these examples, one without and one with the `&` nesting selector, the `<input>` inside the `<label>` is being styled differently to the `<input>` that is a sibling of a `<label>`. This demonstrates the impact of omitting the `&` nesting selector.
-
-> [!NOTE]
-> This example demonstrates different outputs in browsers implementing the original specification versus the current nesting spec. The original, pre-August 2023 nesting spec that was implemented in Chrome or Safari, requires the `&` nesting combinator. If your browser supports the current spec, the output of both examples matches that of the second example.
+In these examples, one without and one with the `&` nesting selector, the `<input>` inside the `<label>` is being styled differently to the `<input>` that is a sibling of a `<label>`.
 
 #### Without nesting selector
 
@@ -89,6 +86,7 @@ label {
   /* styles for label */
   font-family: system-ui;
   font-size: 1.25rem;
+
   input {
     /* styles for input in a label  */
     border: blue 2px dashed;
@@ -102,9 +100,7 @@ label {
 
 #### With nesting selector
 
-##### HTML
-
-```html-nolint
+```html-nolint hidden
 <form>
   <label for="name">Name:
     <input type="text" id="name" />
@@ -134,6 +130,7 @@ label {
   /* styles for label */
   font-family: system-ui;
   font-size: 1.25rem;
+
   & input {
     /* styles for input in a label  */
     border: blue 2px dashed;
@@ -147,7 +144,7 @@ label {
 
 ## Combinators
 
-[CSS Combinators](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators) can also be used with or without the `&` nesting selector.
+[CSS Combinators](/en-US/docs/Learn_web_development/Core/Styling_basics/Combinators) can also be used with or without the `&` nesting selector.
 
 ### Example
 
@@ -332,7 +329,7 @@ As opposed to:
 
 #### Appending nesting selector
 
-In this example there are 3 cards, one of which is featured. The cards are all exactly the same except the featured card will have an alternative color for the heading. By appending the `&` nesting selector the style for the `.featured .h2` can be nested in the style for the `h2`.
+In this example there are 3 cards, one of which is featured. The cards are all exactly the same except the featured card will have an alternative color for the heading. By appending the `&` nesting selector the style for the `.featured h2` can be nested in the style for the `h2`.
 
 ##### HTML
 
@@ -424,7 +421,7 @@ That's why the `color-black` is inside a nested declaration even though it is a 
 
 > [!NOTE]
 > Support for the rule was added with {{domxref("CSSNestedDeclarations")}}.
-> Browsers that [do not support this interface](/en-US/docs/Web/API/CSSNestedDeclarations#browser_compatibility) this interface may parse nested rules in the wrong order.
+> Browsers that [do not support this interface](/en-US/docs/Web/API/CSSNestedDeclarations#browser_compatibility) may parse nested rules in the wrong order.
 
 ## Concatenation (is not possible)
 
@@ -441,7 +438,7 @@ In CSS preprocessors such as [Sass](https://sass-lang.com/), it is possible to u
 ```
 
 > [!WARNING]
-> This is not possible in CSS nesting: when a [combinator](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators) is not used, the nested selector is treated as a [type selector](/en-US/docs/Web/CSS/Type_selectors). Allowing concatenation would break this.
+> This is not possible in CSS nesting: when a [combinator](/en-US/docs/Learn_web_development/Core/Styling_basics/Combinators) is not used, the nested selector is treated as a [type selector](/en-US/docs/Web/CSS/Type_selectors). Allowing concatenation would break this.
 
 In [compound selectors](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#compound_selector), the type selector must come first. Writing `&Element` (a [type selector](/en-US/docs/Web/CSS/Type_selectors)) makes the CSS selector, and the entire selector block, invalid. As the type selector must come first, the compound selector must be written as `Element&`.
 

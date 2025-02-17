@@ -217,6 +217,8 @@ The CSS Device Adaptation specification defines the following metadata name:
 
 ### Other metadata names
 
+#### Names defined in the WHATWG MetaExtensions wiki
+
 The [WHATWG Wiki MetaExtensions page](https://wiki.whatwg.org/wiki/MetaExtensions) contains a large set of non-standard metadata names that have not been formally accepted yet; however, some of the names included there are already used quite commonly in practice — including the following:
 
 - `creator`: the name of the creator of the document, such as an organization or institution. If there are more than one, several {{HTMLElement("meta")}} elements should be used.
@@ -241,12 +243,14 @@ The [WHATWG Wiki MetaExtensions page](https://wiki.whatwg.org/wiki/MetaExtension
   >
   > - Only cooperative robots follow these rules. Do not expect to prevent email harvesters with them.
   > - The robot still needs to access the page in order to read these rules. To prevent bandwidth consumption, consider if using a _{{Glossary("robots.txt")}}_ file is more appropriate.
-  > - The `robots` `<meta>` tag and `robots.txt` file serve different purposes: `robots.txt` controls the crawling of pages, and does not affect indexing or other behavior controlled by `robots` meta. A page that can't be crawled may still be indexed if it is referenced by another document.
+  > - The `<meta name="robots">` element and `robots.txt` file serve different purposes: `robots.txt` controls the crawling of pages, and does not affect indexing or other behavior controlled by `robots` meta. A page that can't be crawled may still be indexed if it is referenced by another document.
   > - If you want to remove a page, `noindex` will work, but only after the robot visits the page again. Ensure that the `robots.txt` file is not preventing revisits.
   > - Some values are mutually exclusive, like `index` and `noindex`, or `follow` and `nofollow`. In these cases the robot's behavior is undefined and may vary between them.
-  > - Some crawler robots, like Google, Yahoo and Bing, support the same values for the HTTP header `X-Robots-Tag`; this allows non-HTML documents like images to use these rules.
+  > - Some crawler robots, like Google, Yahoo and Bing, support the same values for the HTTP header {{HTTPHeader("X-Robots-Tag")}}; this allows non-HTML documents like images to use these rules.
 
-<!-- ## Technical summary -->
+#### Other names
+
+- `application-title`: Used to customize an app's title bar for web applications installed as standalone apps on supporting desktop operating systems. While the text content of the {{HTMLElement("title")}} element is usually displayed in browser tabs when the app is running in a browser, the `application-title` metadata name can be used to set a different title for the application when it is running as a standalone installed app.
 
 ## Specifications
 
@@ -259,4 +263,4 @@ The [WHATWG Wiki MetaExtensions page](https://wiki.whatwg.org/wiki/MetaExtension
 ## See also
 
 - [Viewport `<meta>` tag](/en-US/docs/Web/HTML/Viewport_meta_tag)
-- [Metadata: the `<meta>` element](/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#metadata_the_meta_element) in [What's in the head? Metadata in HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
+- [Metadata: the `<meta>` element](/en-US/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#metadata_the_meta_element)

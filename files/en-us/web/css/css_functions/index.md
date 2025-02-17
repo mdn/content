@@ -6,7 +6,7 @@ page-type: guide
 
 {{CSSRef}}
 
-**CSS value functions** are statements that invoke special data processing or calculations to return a [CSS](/en-US/docs/Web/CSS) [value](/en-US/docs/Web/CSS/CSS_Values_and_Units) for a CSS property. CSS value functions represent more complex [data types](/en-US/docs/Web/CSS/CSS_Types) and they may take some input arguments to calculate the return value.
+**CSS value functions** are statements that invoke special data processing or calculations to return a [CSS](/en-US/docs/Web/CSS) [value](/en-US/docs/Web/CSS/CSS_Values_and_Units) for a CSS property. CSS value functions represent more complex [data types](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) and they may take some input arguments to calculate the return value.
 
 ## Syntax
 
@@ -25,7 +25,7 @@ Functions can take multiple arguments, which are formatted similarly to CSS prop
 
 ## Transform functions
 
-The {{CSSxRef("&lt;transform-function&gt;")}} CSS [data type](/en-US/docs/Web/CSS/CSS_Types) represent appearance transformation. It is used as a value of {{CSSxRef("transform")}} property.
+The {{CSSxRef("&lt;transform-function&gt;")}} CSS [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) represent appearance transformation. It is used as a value of {{CSSxRef("transform")}} property.
 
 ### Translate functions
 
@@ -97,6 +97,8 @@ Each of the pages below contains detailed information about a math function's sy
 
 - {{CSSxRef("calc", "calc()")}}
   - : Performs basic arithmetic calculations on numerical values.
+- {{CSSxRef("calc-size", "calc-size()")}}
+  - : Perform calculations on intrinsic size values such as `auto`, `fit-content`, and `max-content`, which are not supported by the `calc()` function.
 
 ### Comparison functions
 
@@ -155,7 +157,7 @@ Each of the pages below contains detailed information about a math function's sy
 
 ## Filter functions
 
-The {{CSSxRef("&lt;filter-function&gt;")}} CSS [data type](/en-US/docs/Web/CSS/CSS_Types) represents a graphical effect that can change the appearance of an input image. It is used in the {{CSSxRef("filter")}} and {{CSSxRef("backdrop-filter")}} properties.
+The {{CSSxRef("&lt;filter-function&gt;")}} CSS [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) represents a graphical effect that can change the appearance of an input image. It is used in the {{CSSxRef("filter")}} and {{CSSxRef("backdrop-filter")}} properties.
 
 - {{CSSxRef("filter-function/blur", "blur()")}}
   - : Increases the image gaussian blur.
@@ -180,7 +182,7 @@ The {{CSSxRef("&lt;filter-function&gt;")}} CSS [data type](/en-US/docs/Web/CSS/C
 
 ## Color functions
 
-The {{CSSxRef("color_value","&lt;color&gt;")}} CSS [data type](/en-US/docs/Web/CSS/CSS_Types) specifies different color representations.
+The {{CSSxRef("color_value","&lt;color&gt;")}} CSS [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) specifies different color representations.
 
 - {{CSSxRef("color_value/rgb", "rgb()")}}
   - : Defines a given color according to its red, green, blue and alpha (transparency) components.
@@ -207,7 +209,7 @@ The {{CSSxRef("color_value","&lt;color&gt;")}} CSS [data type](/en-US/docs/Web/C
 
 ## Image functions
 
-The {{CSSxRef("&lt;image&gt;")}} CSS [data type](/en-US/docs/Web/CSS/CSS_Types) provides graphical representation of images or gradients.
+The {{CSSxRef("&lt;image&gt;")}} CSS [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) provides graphical representation of images or gradients.
 
 ### Gradient functions
 
@@ -250,7 +252,7 @@ CSS counter functions are generally used with the {{CSSxRef("content")}} propert
 
 ## Shape functions
 
-The {{CSSxRef("&lt;basic-shape&gt;")}} CSS [data type](/en-US/docs/Web/CSS/CSS_Types) represents a graphical shape. It is used in the {{CSSxRef("clip-path")}}, {{CSSxRef("offset-path")}}, and {{CSSxRef("shape-outside")}} properties.
+The {{CSSxRef("&lt;basic-shape&gt;")}} CSS [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) represents a graphical shape. It is used in the {{CSSxRef("clip-path")}}, {{CSSxRef("offset-path")}}, and {{CSSxRef("shape-outside")}} properties.
 
 - {{CSSxRef("basic-shape/circle","circle()")}}
   - : Defines a circle shape.
@@ -268,6 +270,8 @@ The {{CSSxRef("&lt;basic-shape&gt;")}} CSS [data type](/en-US/docs/Web/CSS/CSS_T
   - : Accepts an SVG path string to enable a shape to be drawn.
 - {{CSSxRef("basic-shape/shape", "shape()")}}
   - : Accepts a comma-separated list of commands defining the shape to be drawn.
+- {{CSSxRef("ray", "ray()")}}
+  - : Valid with `offset-path` only, it defines the line segment an animated element can follow.
 
 ## Reference functions
 
@@ -277,7 +281,7 @@ The following functions are used as a value of properties to reference a value d
   - : Uses the attributes defined on HTML element.
 - {{CSSxRef("env", "env()")}}
   - : Uses the user-agent defined as environment variable.
-- {{cssxref("url_value", "&lt;url&gt;")}}
+- {{cssxref("url_function", "url()")}}
   - : Uses a file from the specified URL.
 - {{CSSxRef("var", "var()")}}
   - : Uses the custom property value instead of any part of a value of another property.
@@ -312,7 +316,7 @@ CSS font functions are used with the {{CSSxRef("font-variant-alternates")}} prop
 
 ## Easing functions
 
-The following functions are used as a value in transition and animation properties:
+The {{CSSxRef("&lt;easing-function&gt;")}} CSS [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) represents a mathematical function. It is used in transition and animation properties:
 
 - {{cssxref("easing-function/linear", "linear()")}}
   - : Easing function that interpolates linearly between its points.
@@ -342,4 +346,4 @@ The anchor positioning functions are used when positioning and sizing anchor-pos
 ## See also
 
 - [CSS Values and Units](/en-US/docs/Web/CSS/CSS_Values_and_Units)
-- [Introduction to CSS: Values and Units](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)
+- [Learn: Values and units](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units)

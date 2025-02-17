@@ -10,4 +10,4 @@ page-type: glossary-definition
 
 ## See also
 
-- [Perceived performance](/en-US/docs/Learn/Performance/Perceived_performance)
+- [Perceived performance](/en-US/docs/Learn_web_development/Extensions/Performance/Perceived_performance)

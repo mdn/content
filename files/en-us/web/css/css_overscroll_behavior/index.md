@@ -34,13 +34,13 @@ This module defines the overscroll behavior, enabling you to specify the actions
 
 ## Guides
 
-- [CSS building blocks: Overflowing content](/en-US/docs/Learn/CSS/Building_blocks/Overflowing_content)
+- [Learn: Overflowing content](/en-US/docs/Learn_web_development/Core/Styling_basics/Overflow)
   - : Learn what overflow is and how to manage it.
 
 ## Related concepts
 
 - [`scrollbar`](/en-US/docs/Web/Accessibility/ARIA/Roles/scrollbar_role) ARIA role
-- [Containing block](/en-US/docs/Web/CSS/Containing_block) concept
+- [Containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block) concept
 - [CSS overflow](/en-US/docs/Web/CSS/CSS_overflow) module:
   - {{cssxref("overflow")}} shorthand property
     - {{Cssxref("overflow-x")}}

@@ -358,8 +358,9 @@ Use the sliders in the example below to modify the translation, rotation, scale,
   padding: 0;
   margin-bottom: 4px;
   accent-color: blue; /* or any color */
-  font-family: Inter, "system-ui", "Segoe UI", Roboto, Oxygen, Ubuntu,
-    Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family:
+    Inter, "system-ui", "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 }
 
 #allTransformFieldset > legend {
@@ -699,7 +700,7 @@ The cube in the above example is comprised of six `<div>` elements, all of which
 - {{cssxref("transform-function/skewX", "skewX()")}}
 - {{cssxref("transform-function/skewY", "skewY()")}}
 - {{cssxref("transform-function/translate", "translate()")}}
-- {{cssxref("transform-function/translate3d", "translate()")}}
+- {{cssxref("transform-function/translate3d", "translate3d()")}}
 - {{cssxref("transform-function/translateX", "translateX()")}}
 - {{cssxref("transform-function/translateY", "translateY()")}}
 - {{cssxref("transform-function/translateZ", "translateZ()")}}

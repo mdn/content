@@ -1,5 +1,5 @@
 ---
-title: ":valid"
+title: :valid
 slug: Web/CSS/:valid
 page-type: css-pseudo-class
 browser-compat: css.selectors.valid
@@ -92,5 +92,5 @@ Notice how the required text inputs are invalid when empty, but valid when they 
 ## See also
 
 - Other validation-related pseudo-classes: {{ cssxref(":required") }}, {{ cssxref(":optional") }}, {{ cssxref(":invalid") }}
-- [Form data validation](/en-US/docs/Learn/Forms/Form_validation)
+- [Form data validation](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation)
 - Accessing the [validity state](/en-US/docs/Web/API/ValidityState) from JavaScript

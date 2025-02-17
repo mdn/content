@@ -314,18 +314,18 @@ The HTML contains a `<dialog>` element, plus a button to show the dialog. Additi
 
 ##### CSS
 
-In the CSS, we include a `@starting-style` block that defines the transition starting styles for the `opacity` and `transform` properties, transition end styles on the `dialog[open]` state, and default styles on the default `dialog` state to transition back to once the `<dialog>` has appeared. Note how the `<dialog>`'s `transition` list includes not only these properties, but also the `display` and `overlay` properties, each with `allow-discrete` set on them.
+In the CSS, we include a `@starting-style` block that defines the transition starting styles for the `opacity` and `transform` properties, transition end styles on the `dialog:open` state, and default styles on the default `dialog` state to transition back to once the `<dialog>` has appeared. Note how the `<dialog>`'s `transition` list includes not only these properties, but also the `display` and `overlay` properties, each with `allow-discrete` set on them.
 
-We also set a starting style value for the {{cssxref("background-color")}} property on the [`::backdrop`](/en-US/docs/Web/CSS/::backdrop) that appears behind the `<dialog>` when it opens, to provide a nice darkening animation. The `dialog[open]::backdrop` selector selects only the backdrops of `<dialog>` elements when the dialog is open.
+We also set a starting style value for the {{cssxref("background-color")}} property on the [`::backdrop`](/en-US/docs/Web/CSS/::backdrop) that appears behind the `<dialog>` when it opens, to provide a nice darkening animation. The `dialog:open::backdrop` selector selects only the backdrops of `<dialog>` elements when the dialog is open.
 
 ```css
-/*   Open state of the dialog  */
-dialog[open] {
+/* Open state of the dialog  */
+dialog:open {
   opacity: 1;
   transform: scaleY(1);
 }
 
-/*   Closed state of the dialog   */
+/* Closed state of the dialog   */
 dialog {
   opacity: 0;
   transform: scaleY(0);
@@ -338,11 +338,11 @@ dialog {
   transition: all 0.7s allow-discrete; */
 }
 
-/*   Before-open state  */
-/* Needs to be after the previous dialog[open] rule to take effect,
+/* Before open state  */
+/* Needs to be after the previous dialog:open rule to take effect,
     as the specificity is the same */
 @starting-style {
-  dialog[open] {
+  dialog:open {
     opacity: 0;
     transform: scaleY(0);
   }
@@ -359,7 +359,7 @@ dialog::backdrop {
   transition: all 0.7s allow-discrete; */
 }
 
-dialog[open]::backdrop {
+dialog:open::backdrop {
   background-color: rgb(0 0 0 / 25%);
 }
 
@@ -367,11 +367,14 @@ dialog[open]::backdrop {
 because the nesting selector cannot represent pseudo-elements. */
 
 @starting-style {
-  dialog[open]::backdrop {
+  dialog:open::backdrop {
     background-color: rgb(0 0 0 / 0%);
   }
 }
 ```
+
+> [!NOTE]
+> In browsers that don't support the {{cssxref(":open")}} pseudo-class, you can use the attribute selector `dialog[open]` to style the `<dialog>` element when it is in the open state.
 
 ##### JavaScript
 
@@ -398,7 +401,7 @@ The code renders as follows:
 {{ EmbedLiveSample("Transitioning dialog elements", "100%", "200") }}
 
 > [!NOTE]
-> Because `<dialog>`s change from `display: none` to `display: block` each time they are shown, the `<dialog>` transitions from its `@starting-style` styles to its `dialog[open]` styles every time the entry transition occurs. When the `<dialog>` closes, it transitions from its `dialog[open]` state to the default `dialog` state.
+> Because `<dialog>`s change from `display: none` to `display: block` each time they are shown, the `<dialog>` transitions from its `@starting-style` styles to its `dialog:open` styles every time the entry transition occurs. When the `<dialog>` closes, it transitions from its `dialog:open` state to the default `dialog` state.
 >
 > It is possible for the style transition on entry and exit to be different in such cases. See our [Demonstration of when starting styles are used](/en-US/docs/Web/CSS/@starting-style#demonstration_of_when_starting_styles_are_used) example for a proof of this.
 
@@ -435,11 +438,11 @@ dialog {
   animation: fade-out 0.7s ease-out;
 }
 
-dialog[open] {
+dialog:open {
   animation: fade-in 0.7s ease-out;
 }
 
-dialog[open]::backdrop {
+dialog:open::backdrop {
   animation: backdrop-fade-in 0.7s ease-out forwards;
 }
 
@@ -576,4 +579,4 @@ The code renders as follows:
 - {{domxref("HTMLDialogElement/open", "open")}} property of the `HTMLDialogElement` interface
 - [`inert`](/en-US/docs/Web/HTML/Global_attributes/inert) global attribute for HTML elements
 - {{CSSXref("::backdrop")}} CSS pseudo-element
-- [Web forms](/en-US/docs/Learn/Forms) in the Learn area
+- [Web forms](/en-US/docs/Learn_web_development/Extensions/Forms) in the Learn area

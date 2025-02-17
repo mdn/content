@@ -1,0 +1,135 @@
+# This file tests more or less everything related to a pull request. All
+# in one big job. At the end, if all the testing passes, it proceeds
+# to upload all the files that were built to our Dev environment.
+# This way, if the tests passed, you'll be able to review the built
+# pages on a public URL.
+
+name: PR Test Legacy
+
+on:
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  # Compare two commits.
+  contents: read
+
+jobs:
+  tests:
+    if: github.repository == 'mdn/content'
+    runs-on: ubuntu-latest
+    env:
+      BASE_SHA: ${{ github.event.pull_request.base.sha }}
+      HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+      # This is the directory where the built files will be placed.
+      # It's also hardcoded in the `yarn build` command in package.json.
+      # If you change it here, you must also make the same change in
+      # package.json.
+      BUILD_OUT_ROOT: build
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Get changed files
+        run: |
+          # Use the GitHub API to get the list of changed files
+          # documentation: https://docs.github.com/rest/commits/commits#compare-two-commits
+          DIFF_DOCUMENTS=$(gh api repos/{owner}/{repo}/compare/${BASE_SHA}...${HEAD_SHA} \
+            --jq '.files | .[] | select(.status|IN("added", "modified", "renamed", "copied", "changed")) | .filename')
+
+          # filter out files that are not markdown files
+          GIT_DIFF_CONTENT=$(echo "${DIFF_DOCUMENTS}" | egrep -i "^files/.*\.(md)$" | xargs)
+          echo "GIT_DIFF_CONTENT=${GIT_DIFF_CONTENT}" >> $GITHUB_ENV
+
+          # filter out files that are not attachments
+          GIT_DIFF_FILES=$(echo "${DIFF_DOCUMENTS}" | egrep -i "^files/.*\.(png|jpeg|jpg|gif|svg|webp)$" | xargs)
+          echo "GIT_DIFF_FILES=${GIT_DIFF_FILES}" >> $GITHUB_ENV
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js environment
+        if: env.GIT_DIFF_CONTENT || env.GIT_DIFF_FILES
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: ".nvmrc"
+          cache: yarn
+
+      - name: Install all yarn packages
+        if: env.GIT_DIFF_CONTENT || env.GIT_DIFF_FILES
+        run: yarn --frozen-lockfile
+        env:
+          # https://github.com/microsoft/vscode-ripgrep#github-api-limit-note
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build changed content
+        id: build-content
+        if: env.GIT_DIFF_CONTENT
+        env:
+          CONTENT_ROOT: ${{ github.workspace }}/files
+
+          # This is so that if there's a single 'unsafe_html' flaw, it
+          # completely fails the build.
+          # But all other flaws should be 'warn', so that we can include
+          # information about the flaws when we analyze the built PR.
+          BUILD_FLAW_LEVELS: "unsafe_html: error, *:warn"
+
+          # Because we build these pages in a way that you get a toolbar,
+          # so the flaws can be displayed, but we don't want any of the
+          # other toolbar features like "Fix fixable flaws" or "Quick-edit"
+          # we set this to disable that stuff.
+          REACT_APP_CRUD_MODE_READONLY: true
+
+          BUILD_LIVE_SAMPLES_BASE_URL: https://live.mdnyalp.dev
+          BUILD_LEGACY_LIVE_SAMPLES_BASE_URL: https://live-samples.mdn.allizom.net
+
+          # In these builds, we never care for or need the ability to sign in.
+          # This environment variable will disable that functionality entirely.
+          REACT_APP_DISABLE_AUTH: true
+
+          # TODO: This should be implicit when `CI=true`
+          BUILD_NO_PROGRESSBAR: true
+
+          # Playground
+          REACT_APP_PLAYGROUND_BASE_HOST: mdnyalp.dev
+
+        run: |
+          # The reason this script isn't in `package.json` is because
+          # you don't need that script as a writer. It's only used in CI
+          # and it can't use the default CONTENT_ROOT that gets set in
+          # package.json.
+          yarn build $GIT_DIFF_CONTENT
+
+          echo "Disk usage size of the build"
+          du -sh $BUILD_OUT_ROOT
+
+          # Save the PR number into the build
+          echo ${{ github.event.number }} > ${BUILD_OUT_ROOT}/NR
+
+          # Download the raw diff blob and store that inside the build
+          # directory.
+          # The purpose of this is for the PR Review Companion to later
+          # be able to use this raw diff file for the benefit of analyzing.
+          wget https://github.com/${{ github.repository }}/compare/${BASE_SHA}...${HEAD_SHA}.diff -O ${BUILD_OUT_ROOT}/DIFF
+
+      - name: Merge static assets with built documents
+        if: env.GIT_DIFF_CONTENT
+        run: |
+          # Exclude the .map files, as they're used for debugging JS and CSS.
+          rsync -a --exclude "*.map" node_modules/@mdn/yari/client/build/ $BUILD_OUT_ROOT
+          # Show the final disk usage size of the build.
+          du -sh $BUILD_OUT_ROOT
+
+      - uses: actions/upload-artifact@v4
+        if: env.GIT_DIFF_CONTENT
+        with:
+          name: build
+          path: ${{ env.BUILD_OUT_ROOT }}
+
+      - name: Check changed files
+        if: env.GIT_DIFF_FILES
+        run: |
+          echo $GIT_DIFF_FILES
+
+          export CONTENT_ROOT=$(pwd)/files
+          yarn filecheck $GIT_DIFF_FILES

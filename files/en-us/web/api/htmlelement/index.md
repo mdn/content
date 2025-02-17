@@ -27,13 +27,13 @@ _Also inherits properties from its parent, {{DOMxRef("Element")}}._
   - : A string that represents the element's capitalization behavior for user input. Valid values are: `none`, `off`, `on`, `characters`, `words`, `sentences`.
 - {{domxref("HTMLElement.autofocus")}}
   - : A boolean value reflecting the [`autofocus`](/en-US/docs/Web/HTML/Element/select#autofocus) HTML global attribute, which indicates whether the control should be focused when the page loads, or when dialog or popover become shown if specified in an element inside {{htmlelement("dialog")}} elements or elements whose popover attribute is set.
-- {{domxref("HTMLElement.autocorrect")}} {{experimental_inline}}
+- {{domxref("HTMLElement.autocorrect")}}
   - : A boolean that represents whether or not text input by a user should be automatically corrected.
     This reflects the [`autocorrect`](/en-US/docs/Web/HTML/Global_attributes/autocorrect) HTML global attribute.
 - {{DOMxRef("HTMLElement.contentEditable")}}
   - : A string, where a value of `true` means the element is editable and a value of `false` means it isn't.
 - {{DOMxRef("HTMLElement.dataset")}} {{ReadOnlyInline}}
-  - : Returns a {{DOMxRef("DOMStringMap")}} with which script can read and write the element's [custom data attributes](/en-US/docs/Learn/HTML/Howto/Use_data_attributes) (`data-*`).
+  - : Returns a {{DOMxRef("DOMStringMap")}} with which script can read and write the element's [custom data attributes](/en-US/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes) (`data-*`).
 - {{DOMxRef("HTMLElement.dir")}}
   - : A string, reflecting the `dir` global attribute, representing the directionality of the element. Possible values are `"ltr"`, `"rtl"`, and `"auto"`.
 - {{DOMxRef("HTMLElement.draggable")}}
@@ -86,6 +86,8 @@ _Also inherits properties from its parent, {{DOMxRef("Element")}}._
   - : A boolean value representing the translation.
 - {{DOMxRef("HTMLElement.virtualKeyboardPolicy")}} {{Experimental_Inline}}
   - : A string indicating the on-screen virtual keyboard behavior on devices such as tablets, mobile phones, or other devices where a hardware keyboard may not be available, if the element's content is editable (for example, it is an {{htmlelement("input")}} or {{htmlelement("textarea")}} element, or an element with the [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) attribute set).
+- {{DOMxRef("HTMLElement.writingSuggestions")}}
+  - : A string indicating if browser-provided writing suggestions should be enabled under the scope of the element or not.
 
 ## Instance methods
 

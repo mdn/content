@@ -18,7 +18,16 @@ If no values satisfy the testing function, {{jsxref("undefined")}} is returned.
 - If you need to find if any element satisfies the provided testing function, use {{jsxref("Array/some", "some()")}}.
 - If you need to find all elements that satisfy the provided testing function, use {{jsxref("Array/filter", "filter()")}}.
 
-{{EmbedInteractiveExample("pages/js/array-find.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Array.find()", "shorter")}}
+
+```js interactive-example
+const array1 = [5, 12, 8, 130, 44];
+
+const found = array1.find((element) => element > 10);
+
+console.log(found);
+// Expected output: 12
+```
 
 ## Syntax
 
@@ -86,9 +95,9 @@ const result = inventory.find(({ name }) => name === "cherries");
 console.log(result); // { name: 'cherries', quantity: 5 }
 ```
 
-### Find a prime number in an array
+### Find the first prime number in an array
 
-The following example finds an element in the array that is a prime number (or returns {{jsxref("undefined")}} if there is no prime number):
+The following example returns the first element in the array that is a prime number, or {{jsxref("undefined")}} if there is no prime number.
 
 ```js
 function isPrime(element, index, array) {

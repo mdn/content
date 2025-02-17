@@ -30,7 +30,7 @@ _No changes._
 
 #### Removals
 
-- The `-moz-` prefixed-[Multiple-column layout](/en-US/docs/Learn/CSS/CSS_layout/Multiple-column_Layout) properties have been removed ([Firefox bug 1308636](https://bugzil.la/1308636)).
+- The `-moz-` prefixed-[Multiple-column layout](/en-US/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout) properties have been removed ([Firefox bug 1308636](https://bugzil.la/1308636)).
 
 ### SVG
 

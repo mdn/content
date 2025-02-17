@@ -129,7 +129,7 @@ The `rel` attribute has no default value. If the attribute is omitted or if none
   - : Allows the page to be [render-blocked](/en-US/docs/Glossary/Render_blocking) until the essential parts of the document are parsed so it will render consistently. Note that render-blocking occurs only when supplemented with the [`blocking="render"`](/en-US/docs/Web/HTML/Element/link#blocking) attribute.
 
     > [!NOTE]
-    > See [Stabilizing page state to make cross-document transitions consistent](/en-US/docs/Web/API/View_Transitions_API/Using#stabilizing_page_state_to_make_cross-document_transitions_consistent) for more information on its use.
+    > See [Stabilizing page state to make cross-document transitions consistent](/en-US/docs/Web/API/View_Transition_API/Using#stabilizing_page_state_to_make_cross-document_transitions_consistent) for more information on its use.
 
 - `help`
   - : Relevant to {{htmlelement('form')}}, {{htmlelement('link')}}, {{htmlelement('a')}}, and {{htmlelement('area')}}, the `help` keyword indicates that the linked to content provides context-sensitive help, providing information for the parent of the element defining the hyperlink, and its children. When used within `<link>`, the help is for the whole document. When included with {{htmlelement('a')}} and {{htmlelement('area')}} and supported, the default {{cssxref('cursor')}} will be `help` instead of `pointer`.
@@ -209,7 +209,7 @@ The `rel` attribute has no default value. If the attribute is omitted or if none
 
   - : Relevant to {{htmlelement('form')}}, {{htmlelement('link')}}, {{htmlelement('a')}}, and {{htmlelement('area')}} elements, the `search` keywords indicates that the hyperlink references a document whose interface is specially designed for searching in the current document, site, and related resources, providing a link to a resource that can be used to search.
 
-    If the [`type`](/en-US/docs/Web/HTML/Element/link#type) attribute is set to `application/opensearchdescription+xml` the resource is an [OpenSearch](/en-US/docs/Web/OpenSearch) plugin that can be easily added to the interface of Firefox.
+    If the [`type`](/en-US/docs/Web/HTML/Element/link#type) attribute is set to `application/opensearchdescription+xml` the resource is an [OpenSearch](/en-US/docs/Web/XML/Guides/OpenSearch) plugin that can be easily added to the interface of Firefox.
 
 - `stylesheet`
 

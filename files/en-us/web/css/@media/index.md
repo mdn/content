@@ -7,7 +7,7 @@ browser-compat: css.at-rules.media
 
 {{CSSRef}}
 
-The **`@media`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rule) can be used to apply part of a style sheet based on the result of one or more [media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries). With it, you specify a media query and a block of CSS to apply to the document if and only if the media query matches the device on which the content is being used.
+The **`@media`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule) can be used to apply part of a style sheet based on the result of one or more [media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries). With it, you specify a media query and a block of CSS to apply to the document if and only if the media query matches the device on which the content is being used.
 
 > [!NOTE]
 > In JavaScript, the rules created using `@media` can be accessed with the {{domxref("CSSMediaRule")}} CSS object model interface.
@@ -78,6 +78,8 @@ Media feature expressions test for their presence, value, or range of values, an
   - : Width-to-height aspect ratio of the output device. Deprecated in Media Queries Level 4.
 - {{cssxref("@media/device-height", "device-height")}}
   - : Height of the rendering surface of the output device. Deprecated in Media Queries Level 4.
+- {{cssxref("@media/device-posture", "device-posture")}}
+  - : Detects the device's current posture, that is, whether the viewport is in a flat or folded state. Defined in the [Device Posture API](/en-US/docs/Web/API/Device_Posture_API).
 - {{cssxref("@media/device-width", "device-width")}}
   - : Width of the rendering surface of the output device. Deprecated in Media Queries Level 4.
 - {{cssxref("@media/display-mode", "display-mode")}}
@@ -171,6 +173,10 @@ Some media queries have corresponding [user agent client hints](/en-US/docs/Web/
 These are HTTP headers that request content that is pre-optimized for the particular media requirement.
 They include {{HTTPHeader("Sec-CH-Prefers-Color-Scheme")}} and {{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}}.
 
+## Formal syntax
+
+{{csssyntax}}
+
 ## Accessibility
 
 To best accommodate people who adjust a site's text size, use [`em`](/en-US/docs/Web/CSS/CSS_Values_and_Units#numeric_data_types)s when you need a {{cssxref("&lt;length&gt;")}} for your [media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries).
@@ -185,10 +191,6 @@ For example, the media query [`prefers-reduced-motion`](/en-US/docs/Web/CSS/@med
 Because media queries provide insights into the capabilities—and by extension, the features and design—of the device the user is working with, there is the potential that they could be abused to construct a ["fingerprint"](/en-US/docs/Glossary/Fingerprinting) which identifies the device, or at least categorizes it to some degree of detail that may be undesirable to users.
 
 Because of this potential, a browser may opt to fudge the returned values in some manner in order to prevent them from being used to precisely identify a computer. A browser might also offer additional measures in this area; for example, if Firefox's "Resist Fingerprinting" setting is enabled, many media queries report default values rather than values representing the actual device state.
-
-## Formal syntax
-
-{{csssyntax}}
 
 ## Examples
 

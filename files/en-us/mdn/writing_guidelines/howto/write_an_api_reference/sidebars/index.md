@@ -2,9 +2,8 @@
 title: API reference sidebars
 slug: MDN/Writing_guidelines/Howto/Write_an_api_reference/Sidebars
 page-type: mdn-writing-guide
+sidebar: mdnsidebar
 ---
-
-{{MDNSidebar}}
 
 You are able to include a custom sidebar on API reference pages it so that it displays links to related Interfaces, tutorials, and other resources relevant just to that API.
 This article explains how.

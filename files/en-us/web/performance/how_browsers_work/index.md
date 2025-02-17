@@ -150,7 +150,7 @@ While the CSS is being parsed and the CSSOM created, other assets, including Jav
 
 #### Building the accessibility tree
 
-The browser also builds an [accessibility](/en-US/docs/Learn/Accessibility) tree that assistive devices use to parse and interpret content. The accessibility object model (AOM) is like a semantic version of the DOM. The browser updates the accessibility tree when the DOM is updated. The accessibility tree is not modifiable by assistive technologies themselves.
+The browser also builds an [accessibility](/en-US/docs/Learn_web_development/Core/Accessibility) tree that assistive devices use to parse and interpret content. The accessibility object model (AOM) is like a semantic version of the DOM. The browser updates the accessibility tree when the DOM is updated. The accessibility tree is not modifiable by assistive technologies themselves.
 
 Until the AOM is built, the content is not accessible to [screen readers](/en-US/docs/Web/Accessibility/ARIA/ARIA_Screen_Reader_Implementors_Guide).
 
@@ -164,7 +164,7 @@ The third step in the critical rendering path is combining the DOM and CSSOM int
 
 Elements that aren't going to be displayed, like the [`<head>`](/en-US/docs/Web/HTML/Element/head) element and its children and any nodes with `display: none`, such as the `script { display: none; }` you will find in user agent stylesheets, are not included in the render tree as they will not appear in the rendered output. Nodes with `visibility: hidden` applied are included in the render tree, as they do take up space. As we have not given any directives to override the user agent default, the `script` node in our code example above will not be included in the render tree.
 
-Each visible node has its CSSOM rules applied to it. The render tree holds all the visible nodes with content and computed styles — matching up all the relevant styles to every visible node in the DOM tree, and determining, based on the [CSS cascade](/en-US/docs/Web/CSS/Cascade), what the computed styles are for each node.
+Each visible node has its CSSOM rules applied to it. The render tree holds all the visible nodes with content and computed styles — matching up all the relevant styles to every visible node in the DOM tree, and determining, based on the [CSS cascade](/en-US/docs/Web/CSS/CSS_cascade/Cascade), what the computed styles are for each node.
 
 ### Layout
 

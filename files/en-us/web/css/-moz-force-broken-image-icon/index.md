@@ -1,5 +1,5 @@
 ---
-title: "-moz-force-broken-image-icon"
+title: -moz-force-broken-image-icon
 slug: Web/CSS/-moz-force-broken-image-icon
 page-type: css-property
 status:
@@ -55,7 +55,7 @@ img {
 {{EmbedLiveSample('Examples','125','125')}}
 
 > [!NOTE]
-> Unless the image has a specified height and width the alt attribute will not be displayed if `-moz-force-broken-image-icon` is set to `1`.
+> The alt text may not be visible if `-moz-force-broken-image-icon` is set to `1` and the image has no (or too small) `height` or `width` set.
 
 ## Notes
 

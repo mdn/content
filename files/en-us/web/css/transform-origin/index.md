@@ -70,7 +70,7 @@ transform-origin: revert-layer;
 transform-origin: unset;
 ```
 
-The `transform-origin` property may be specified using one, two, or three values, where each value represents an offset. Offsets that are not explicitly defined are reset to their corresponding [initial values](/en-US/docs/Web/CSS/initial_value).
+The `transform-origin` property may be specified using one, two, or three values, where each value represents an offset. Offsets that are not explicitly defined are reset to their corresponding [initial values](/en-US/docs/Web/CSS/CSS_cascade/initial_value).
 
 If a single {{cssxref("&lt;length&gt;")}} or {{cssxref("&lt;percentage&gt;")}} value is defined, it represents the horizontal offset.
 
@@ -320,4 +320,5 @@ transform-origin: 100% -30%;
 ## See also
 
 - [Using CSS transforms](/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
+- SVG {{SVGAttr("transform-origin")}} attribute
 - <https://css-tricks.com/almanac/properties/t/transform-origin/>

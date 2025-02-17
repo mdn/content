@@ -29,6 +29,9 @@ No notable changes
 
 ### HTTP
 
+- The [default/document value](/en-US/docs/Web/HTTP/Content_negotiation/List_of_default_Accept_values#default_values) of the HTTP {{httpheader("Accept")}} header was changed to `text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8`.
+  This removes image MIME types that sometimes caused compatibility issues, and aligns with the fetch specification and Safari. ([Firefox bug 1917177](https://bugzil.la/1917177)).
+
 #### Removals
 
 - HTTP/2 Server Push is deactivated by default with the preference `network.http.http2.allow-push` now set to `false`.
@@ -44,6 +47,7 @@ No notable changes
 - The {{domxref("Notification.silent")}} property is now supported, which controls whether system notifications should be silent. When `silent: true` is specified in the {{domxref("Notification.Notification", "Notification()")}} constructor, the resulting system notification is issued without accompanying sounds or vibrations, regardless of device settings ([Firefox bug 1809028](https://bugzil.la/1809028)).
 - The `fetchpriority` attribute of the {{htmlelement("link")}}, {{htmlelement("script")}}, and {{htmlelement("img")}} elements, the `fetchPriority` property of the {{domxref("HTMLLinkElement")}}, {{domxref("HTMLScriptElement")}}, and {{domxref("HTMLImageElement")}} interfaces, the [`options.priority`](/en-US/docs/Web/API/RequestInit#priority) parameter passed to the [`Request()` constructor](/en-US/docs/Web/API/Request/Request), and the `fetchpriority` directive in the HTTP {{httpheader("Link")}} header, are now supported. These allow developers to provide a hint about the relative priority for fetching a particular resource compared to other resources of the same type, and can be used alongside other ways of setting the priority, such as preloading. ([Firefox bug 1854077](https://bugzil.la/1854077)).
 - The {{domxref("CSSNestedDeclarations")}} interface and associated {{domxref("CSSNestedDeclarations.style")}} property are now supported ([Firefox bug 1918408](https://bugzil.la/1918408)).
+- The `microphone` and `camera` [permissions](/en-US/docs/Web/API/Permissions_API) can now be used in the {{domxref("Permissions.query()")}} method to test whether access to the corresponding hardware has been granted, denied, or still requires user approval. ([Firefox bug 1609427](https://bugzil.la/1609427) and [Firefox bug 1915222](https://bugzil.la/1915222)).
 
 #### Media, WebRTC, and Web Audio
 

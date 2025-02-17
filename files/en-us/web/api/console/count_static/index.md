@@ -2,7 +2,7 @@
 title: "console: count() static method"
 short-title: count()
 slug: Web/API/console/count_static
-page-type: web-api-instance-method
+page-type: web-api-static-method
 browser-compat: api.console.count_static
 ---
 

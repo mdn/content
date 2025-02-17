@@ -175,8 +175,7 @@ Relative URLs are resolved to absolute URL addresses using the [base URL](/en-US
 ```
 
 The import map is defined using a [JSON object](/en-US/docs/Web/HTML/Element/script/type/importmap#import_map_json_representation) inside a `<script>` element with the `type` attribute set to [`importmap`](/en-US/docs/Web/HTML/Element/script/type/importmap).
-There can only be one import map in the document, and because it is used to resolve which modules are loaded in both static and dynamic imports, it must be declared before any `<script>` elements that import modules.
-Note that the import map only applies to the document — the specification does not cover how to apply an import map in a worker or worklet context. <!-- https://github.com/WICG/import-maps/issues/2 -->
+Note that an import map only applies to the document — the specification does not cover how to apply an import map in a worker or worklet context. <!-- https://github.com/WICG/import-maps/issues/2 -->
 
 With this map you can now use the property names above as module specifiers.
 If there is no trailing forward slash on the module specifier key then the whole module specifier key is matched and substituted.
@@ -780,7 +779,7 @@ Another advantage of dynamic imports is that they are always available, even in 
 
 ## Top level await
 
-Top level await is a feature available within modules. This means the `await` keyword can be used. It allows modules to act as big [asynchronous functions](/en-US/docs/Learn/JavaScript/Asynchronous/Introducing) meaning code can be evaluated before use in parent modules, but without blocking sibling modules from loading.
+Top level await is a feature available within modules. This means the `await` keyword can be used. It allows modules to act as big [asynchronous functions](/en-US/docs/Learn_web_development/Extensions/Async_JS/Introducing) meaning code can be evaluated before use in parent modules, but without blocking sibling modules from loading.
 
 Let's take a look at an example. You can find all the files and code described in this section within the [`top-level-await`](https://github.com/mdn/js-examples/tree/main/module-examples/top-level-await) directory, which extends from the previous examples.
 

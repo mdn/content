@@ -9,9 +9,9 @@ browser-compat: api.CSSPositionTryDescriptors
 
 {{APIRef("CSSOM")}}{{SeeCompatTable}}
 
-The **`CSSPositionTryDescriptors`** interface defines properties that represent the list of CSS descriptors that can be set in the body of a {{cssxref("@position-try")}} [at-rule](/en-US/docs/Web/CSS/At-rule).
+The **`CSSPositionTryDescriptors`** interface defines properties that represent the list of CSS descriptors that can be set in the body of a {{cssxref("@position-try")}} [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule).
 
-Each descriptor in the body of the corresponding {{cssxref("@position-try")}} at-rule can be accessed using either its property name in [bracket notation](/en-US/docs/Learn/JavaScript/Objects/Basics#bracket_notation) or the camel-case version of the property name "propertyName" in [dot notation](/en-US/docs/Learn/JavaScript/Objects/Basics#dot_notation).
+Each descriptor in the body of the corresponding {{cssxref("@position-try")}} at-rule can be accessed using either its property name in [bracket notation](/en-US/docs/Learn_web_development/Core/Scripting/Object_basics#bracket_notation) or the camel-case version of the property name "propertyName" in [dot notation](/en-US/docs/Learn_web_development/Core/Scripting/Object_basics#dot_notation).
 For example, you can access the CSS property "property-name" as `style["property-name"]` or `style.propertyName`, where `style` is a `CSSPositionTryDescriptors` instance.
 A property with a single-word name like {{cssxref("height")}} can be accessed using either notation: `style["height"]` or `style.height`.
 

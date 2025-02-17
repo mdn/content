@@ -8,7 +8,7 @@ page-type: guide
 
 **CSS math functions** allow a property value - such as the `height`, `animation-duration`, or `font-size` of an element - to be written as a mathematical expression.
 
-Without using any math, the built-in [CSS units](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units) like `rem`, `vw`, and `%` are often flexible enough to style HTML elements to achieve a particular user experience.
+Without using any math, the built-in [CSS units](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units) like `rem`, `vw`, and `%` are often flexible enough to style HTML elements to achieve a particular user experience.
 
 However, there are cases where we might feel limited by expressing an element's style using a single value and unit. Consider the following examples:
 

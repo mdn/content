@@ -1,5 +1,5 @@
 ---
-title: ":state()"
+title: :state()
 slug: Web/CSS/:state
 page-type: css-pseudo-class
 browser-compat: css.selectors.state
@@ -104,5 +104,5 @@ For a live example of this code in action, see the [Matching a custom state in a
 
 - [`CustomStateSet`](/en-US/docs/Web/API/CustomStateSet)
 - [Pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes)
-- [Pseudo-classes and pseudo-elements](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
+- [Learn: Pseudo-classes and pseudo-elements](/en-US/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements)
 - [Custom states and custom state pseudo-class CSS selectors](/en-US/docs/Web/API/Web_components/Using_custom_elements#custom_states_and_custom_state_pseudo-class_css_selectors) in [Using custom elements](/en-US/docs/Web/API/Web_components/Using_custom_elements)

@@ -28,4 +28,4 @@ See the main {{domxref("PageSwapEvent")}} page.
 
 ## See also
 
-- [View Transitions API](/en-US/docs/Web/API/View_Transitions_API)
+- [View Transition API](/en-US/docs/Web/API/View_Transition_API)

@@ -2,9 +2,8 @@
 title: Syntax sections
 slug: MDN/Writing_guidelines/Page_structures/Syntax_sections
 page-type: mdn-writing-guide
+sidebar: mdnsidebar
 ---
-
-{{MDNSidebar}}
 
 The syntax section of an MDN reference page contains a syntax box defining the exact syntax that a feature has (e.g. what parameters can it accept, which ones are optional?) This article explains how to write syntax boxes for reference articles.
 
@@ -249,11 +248,10 @@ Next, you should include a "Values" section — this contains a description list
 
 #### Formal syntax
 
-The last section, "Formal syntax", is automatically generated from the data included in the [MDN data repo](https://github.com/mdn/data)'s CSS directory. You just need to include a `CSSSyntax` macro call below the title, and it will take care of the rest.
+The last section, "Formal syntax", is automatically generated using the `\{{CSSSyntax}}` macro. This macro fetches data from the CSS specifications using the [@webref/css npm package](https://www.npmjs.com/package/@webref/css). To include the formal syntax in your document:
 
-The only complication arises from making sure the data you need is present. The [properties.json](https://github.com/mdn/data/blob/main/css/properties.json) file needs to contain an entry for the property you are documenting, and the [types.json](https://github.com/mdn/data/blob/main/css/types.json) file needs to contain an entry for all of the value types used in the property's value.
-
-You need to do this by forking the [MDN data repo](https://github.com/mdn/data), cloning your fork locally, making the changes in a new branch, then submitting a pull request against the upstream repo. You can [find more details about using Git here](/en-US/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables).
+1. Add a heading like: `## Formal syntax`.
+2. Place the `\{{CSSSyntax}}` macro directly below this heading.
 
 ### Selectors
 

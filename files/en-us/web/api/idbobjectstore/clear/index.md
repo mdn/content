@@ -36,6 +36,8 @@ If the operation is successful, the value of the request's {{domxref("IDBRequest
 
 ### Exceptions
 
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if the object store has been deleted.
 - `ReadOnlyError` {{domxref("DOMException")}}
   - : Thrown if the transaction associated with this operation is in read-only [mode](/en-US/docs/Web/API/IDBTransaction/mode).
 - `TransactionInactiveError` {{domxref("DOMException")}}

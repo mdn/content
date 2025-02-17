@@ -17,7 +17,7 @@ No notable changes.
 ### CSS
 
 - The {{cssxref("align-content")}} property has been updated to work with `display: block;` layouts. This brings all the layout positions from `flex` and `grid` to `block`, enabling developers to align block-level elements without converting their container to a `flex` or `grid` container. ([Firefox bug 1882853](https://bugzil.la/1882853)).
-- The CSS property [`transform-box`](/en-US/docs/Web/CSS/transform-box) now supports the values `content-box` and `stroke-box`. For the reference box, the `content-box` value uses the [content box](/en-US/docs/Learn/CSS/Building_blocks/The_box_model#parts_of_a_box) and the `stroke-box` value uses the stroke bounding box that contains an SVG's shape ([Firefox bug 1868374](https://bugzil.la/1868374)).
+- The CSS property [`transform-box`](/en-US/docs/Web/CSS/transform-box) now supports the values `content-box` and `stroke-box`. For the reference box, the `content-box` value uses the [content box](/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model#parts_of_a_box) and the `stroke-box` value uses the stroke bounding box that contains an SVG's shape ([Firefox bug 1868374](https://bugzil.la/1868374)).
 - The [`content-visibility`](/en-US/docs/Web/CSS/content-visibility) CSS property value `auto` is now enabled by default. This allows content to skip rendering if it is not [relevant to the user](/en-US/docs/Web/CSS/CSS_containment#relevant_to_the_user). ([Firefox bug 1874874](https://bugzil.la/1874874)).
 
 ### JavaScript
@@ -71,7 +71,7 @@ No notable changes.
 
 #### Media, WebRTC, and Web Audio
 
-- The [AV1](/en-US/docs/Web/Media/Formats/Video_codecs#av1) codec is now supported for [Encrypted Media Extensions](/en-US/docs/Web/API/Encrypted_Media_Extensions_API), enabling higher-quality playback from video streaming providers. ([Firefox bug 1601817](https://bugzil.la/1601817)).
+- The [AV1](/en-US/docs/Web/Media/Guides/Formats/Video_codecs#av1) codec is now supported for [Encrypted Media Extensions](/en-US/docs/Web/API/Encrypted_Media_Extensions_API), enabling higher-quality playback from video streaming providers. ([Firefox bug 1601817](https://bugzil.la/1601817)).
 
 #### Removals
 
@@ -84,7 +84,7 @@ No notable changes.
   The memory can be created in JavaScript and imported into the Wasm module, or created in the Wasm module and exported.
   Each new linear memory in a Wasm instance is given a sequential index, starting from zero.
   WebAssembly [memory instructions](/en-US/docs/WebAssembly/Reference/Memory) use the index to reference the memory on which they are operating, defaulting to the first memory defined if no index is specified.
-  For more information, see [WebAssembly Memory](/en-US/docs/WebAssembly/Understanding_the_text_format#webassembly_memory) in _Understanding WebAssembly text format_.
+  For more information, see [WebAssembly Memory](/en-US/docs/WebAssembly/Guides/Understanding_the_text_format#webassembly_memory) in _Understanding WebAssembly text format_.
   ([Firefox bug 1860816](https://bugzil.la/1860816)).
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)

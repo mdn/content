@@ -1,5 +1,5 @@
 ---
-title: ":placeholder-shown"
+title: :placeholder-shown
 slug: Web/CSS/:placeholder-shown
 page-type: css-pseudo-class
 browser-compat: css.selectors.placeholder-shown
@@ -134,4 +134,4 @@ input.student-id:placeholder-shown {
 
 - The {{CSSxRef("::placeholder")}} pseudo-element styles the placeholder _itself_.
 - Related HTML elements: {{HTMLElement("input")}}, {{HTMLElement("textarea")}}
-- [HTML forms](/en-US/docs/Learn/Forms)
+- [HTML forms](/en-US/docs/Learn_web_development/Extensions/Forms)

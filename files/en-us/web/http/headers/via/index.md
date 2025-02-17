@@ -7,10 +7,8 @@ browser-compat: http.headers.Via
 
 {{HTTPSidebar}}
 
-The **`Via`** general header is added by proxies, both forward
-and reverse, and can appear in the request or response headers. It
-is used for tracking message forwards, avoiding request loops, and identifying the
-protocol capabilities of senders along the request/response chain.
+The **`Via`** {{glossary("request header", "request")}} and {{glossary("response header")}} is added by {{Glossary("Proxy_server", "proxies")}}, both forward and reverse.
+It is used for tracking message forwards, avoiding request loops, and identifying the protocol capabilities of senders along the request/response chain.
 
 <table class="properties">
   <tbody>
@@ -23,7 +21,7 @@ protocol capabilities of senders along the request/response chain.
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>yes</td>
+      <td>Yes</td>
     </tr>
   </tbody>
 </table>
@@ -31,20 +29,22 @@ protocol capabilities of senders along the request/response chain.
 ## Syntax
 
 ```http
-Via: [ <protocol-name> "/" ] <protocol-version> <host> [ ":" <port> ]
-Via: [ <protocol-name> "/" ] <protocol-version> <pseudonym>
+Via: [<protocol-name>/]<protocol-version> <host>[:<port>]
+Via: [<protocol-name>/]<protocol-version> <pseudonym>
 ```
 
 ## Directives
 
-- \<protocol-name>
-  - : Optional. The name of the protocol used, such as "HTTP".
-- \<protocol-version>
+- `<protocol-name>` {{optional_inline}}
+  - : The name of the protocol used, such as "HTTP".
+- `<protocol-version>`
   - : The version of the protocol used, such as "1.1".
-- \<host> and \<port>
-  - : Public proxy URL and port.
-- \<pseudonym>
+- `<host>`
+  - : Public proxy URL and optional `<port>`.
+    If a host is not provided, then a `<pseudonym>` must be used.
+- `<pseudonym>`
   - : Name/alias of an internal proxy.
+    If a pseudonym is not provided, then a `<host>` must be used.
 
 ## Examples
 

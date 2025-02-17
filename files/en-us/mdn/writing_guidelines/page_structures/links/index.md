@@ -2,9 +2,8 @@
 title: Link macros
 slug: MDN/Writing_guidelines/Page_structures/Links
 page-type: mdn-writing-guide
+sidebar: mdnsidebar
 ---
-
-{{MDNSidebar}}
 
 MDN provides numerous macros to create always up-to-date links to MDN content. In this guide, you will learn about MDN cross-reference macros that you can use to include a single link to another page or a list of links to all of a document's subpages.
 
@@ -12,7 +11,7 @@ MDN provides numerous macros to create always up-to-date links to MDN content. I
 
 MDN provides macros that create a list of links:
 
-- [`\{{LandingPageListSubPages}}`](https://github.com/mdn/yari/blob/main/kumascript/macros/LandingPageListSubpages.ejs)
+- [`\{{SubpagesWithSummaries}}`](https://github.com/mdn/yari/blob/main/kumascript/macros/SubpagesWithSummaries.ejs)
 
   - : Inserts a definition list ({{HTMLElement("dl")}}) of the subpages of the current page, with each page's title as the {{HTMLElement("dt")}} term and its first paragraph as the {{HTMLElement("dd")}} term.
 

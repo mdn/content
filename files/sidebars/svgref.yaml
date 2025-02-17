@@ -46,6 +46,13 @@ sidebar:
       - /Web/SVG/SVG_animation_with_SMIL
       - /Web/SVG/SVG_as_an_Image
 l10n:
+  de:
+    Tutorials: Tutorials
+    Reference: Referenz
+    Elements: Elemente
+    Attributes: Attribute
+    Guides: Leitfäden
+    Introducing SVG from scratch: Einführung in SVG von Anfang an
   en-US:
     Tutorials: Tutorials
     Reference: Reference

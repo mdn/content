@@ -2,9 +2,8 @@
 title: Guidelines for writing shell prompt code examples
 slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/Shell
 page-type: mdn-writing-guide
+sidebar: mdnsidebar
 ---
-
-{{MDNSidebar}}
 
 The following guidelines cover how to write Shell prompt code examples for MDN Web Docs.
 
@@ -40,4 +39,4 @@ When writing a shell code block:
 
 ## See also
 
-[Django server-side development docs](/en-US/docs/Learn/Server-side/Django) show good practice presentation of shell prompt commands.
+[Django server-side development docs](/en-US/docs/Learn_web_development/Extensions/Server-side/Django) show good practice presentation of shell prompt commands.

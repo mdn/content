@@ -9,7 +9,16 @@ browser-compat: javascript.builtins.String.match
 
 The **`match()`** method of {{jsxref("String")}} values retrieves the result of matching this string against a [regular expression](/en-US/docs/Web/JavaScript/Guide/Regular_expressions).
 
-{{EmbedInteractiveExample("pages/js/string-match.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: String.match()", "shorter")}}
+
+```js interactive-example
+const paragraph = "The quick brown fox jumps over the lazy dog. It barked.";
+const regex = /[A-Z]/g;
+const found = paragraph.match(regex);
+
+console.log(found);
+// Expected output: Array ["T", "I"]
+```
 
 ## Syntax
 
@@ -163,6 +172,7 @@ console.log("123".match("1\\.3")); // null
 ## See also
 
 - [Polyfill of `String.prototype.match` in `core-js` with fixes and implementation of modern behavior like `Symbol.match` support](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [Regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions) guide
 - {{jsxref("String.prototype.matchAll()")}}
 - {{jsxref("RegExp")}}
 - {{jsxref("RegExp.prototype.exec()")}}

@@ -9,7 +9,22 @@ browser-compat: javascript.builtins.Function.call
 
 The **`call()`** method of {{jsxref("Function")}} instances calls this function with a given `this` value and arguments provided individually.
 
-{{EmbedInteractiveExample("pages/js/function-call.html")}}
+{{InteractiveExample("JavaScript Demo: Function.call()")}}
+
+```js interactive-example
+function Product(name, price) {
+  this.name = name;
+  this.price = price;
+}
+
+function Food(name, price) {
+  Product.call(this, name, price);
+  this.category = "food";
+}
+
+console.log(new Food("cheese", 5).name);
+// Expected output: "cheese"
+```
 
 ## Syntax
 
@@ -128,4 +143,4 @@ slice(arguments);
 - {{jsxref("Function.prototype.apply()")}}
 - {{jsxref("Reflect.apply()")}}
 - [Spread syntax (`...`)](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
-- [Introduction to Object-Oriented JavaScript](/en-US/docs/Learn/JavaScript/Objects)
+- [Introduction to Object-Oriented JavaScript](/en-US/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects)
