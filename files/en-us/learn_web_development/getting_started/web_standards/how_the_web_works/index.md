@@ -109,9 +109,9 @@ Basically, when data is sent across the web, it is sent in thousands of small ch
 HTTP uses a simple language of verbs to perform actions such as making requests (see [HTTP request methods](/en-US/docs/Web/HTTP/Methods)). The HTTP [`GET`](/en-US/docs/Web/HTTP/Methods/GET) method is the one normally used to make HTTP requests of the type described above. For example, a request for the MDN home page might look like this:
 
 ```http
-GET / HTTP/2
+GET /en-US/ HTTP/2
 
-Host: https://developer.mozilla.org/en-US/
+Host: developer.mozilla.org
 ```
 
 The response sent by the server might looks something like this:
