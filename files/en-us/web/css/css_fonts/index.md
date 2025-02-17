@@ -33,6 +33,7 @@ The CSS fonts module also supports variable fonts. Unlike regular fonts, where e
 - {{cssxref("font-weight")}}
 
 - {{cssxref("font-synthesis")}} shorthand
+- {{cssxref("font-synthesis-position")}}
 - {{cssxref("font-synthesis-small-caps")}}
 - {{cssxref("font-synthesis-style")}}
 - {{cssxref("font-synthesis-weight")}}
@@ -46,6 +47,8 @@ The CSS fonts module also supports variable fonts. Unlike regular fonts, where e
 - {{cssxref("font-variant-numeric")}}
 - {{cssxref("font-variant-position")}}
 - {{cssxref("font-variation-settings")}}
+
+The specification also defines the `font-width` property, which are not yet supported by any browser.
 
 ### At-rules and descriptors
 
@@ -65,6 +68,8 @@ The CSS fonts module also supports variable fonts. Unlike regular fonts, where e
     - {{cssxref("@font-face/size-adjust", "size-adjust")}}
     - {{cssxref("@font-face/src", "src")}}
     - {{cssxref("@font-face/unicode-range", "unicode-range")}}
+
+The specification also defines the `font-language-override`, `font-named-instance`, `font-width`, `font-size`, `subscript-position-override`, `subscript-size-override`, `superscript-position-override`, `superscript-size-override` descriptors, which are not yet supported by any browser.
 
 - At-rule: {{cssxref("@font-feature-values")}}
 
