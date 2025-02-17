@@ -44,9 +44,9 @@ Finally, note that for non-replaced inline elements, the amount of space taken u
 - [Introducing the CSS Cascade](/en-US/docs/Web/CSS/CSS_cascade/Cascade)
 - [Learn: Handling conflicts](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
 - CSS key concepts:
-  - [CSS syntax](/en-US/docs/Web/CSS/Syntax)
-  - [At-rules](/en-US/docs/Web/CSS/At-rule)
-  - [Comments](/en-US/docs/Web/CSS/Comments)
+  - [CSS syntax](/en-US/docs/Web/CSS/CSS_syntax/Syntax)
+  - [At-rules](/en-US/docs/Web/CSS/CSS_syntax/At-rule)
+  - [Comments](/en-US/docs/Web/CSS/CSS_syntax/Comments)
   - [Specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity)
   - [Inheritance](/en-US/docs/Web/CSS/CSS_cascade/Inheritance)
   - [Layout modes](/en-US/docs/Web/CSS/Layout_mode)

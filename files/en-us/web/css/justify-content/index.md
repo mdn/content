@@ -58,12 +58,12 @@ justify-content: unset;
 
 - `flex-start`
 
-  - : The items are packed flush to each other toward the edge of the alignment container depending on the flex container's main-start side.
+  - : The items are packed flush to each other toward the start edge of the alignment container on the flex container's main-start side.
     This only applies to flex layout items. For items that are not children of a flex container, this value is treated like `start`.
 
 - `flex-end`
 
-  - : The items are packed flush to each other toward the edge of the alignment container depending on the flex container's main-end side.
+  - : The items are packed flush to each other at the end edge of the alignment container on the flex container's main-end side.
     This only applies to flex layout items. For items that are not children of a flex container, this value is treated like `end`.
 
 - `center`
@@ -72,7 +72,7 @@ justify-content: unset;
 
 - `left`
 
-  - : The items are packed flush with each other toward the left edge of the alignment container. When the property's horizontal axis is not parallel with the inline axis, such as when [`flex-direction: column;`](/en-US/docs/Web/CSS/flex-direction) is set, this value behaves like `start`.
+  - : The items are packed flush to each other toward the left edge of the alignment container. When the property's horizontal axis is not parallel with the inline axis, such as when [`flex-direction: column;`](/en-US/docs/Web/CSS/flex-direction) is set, this value behaves like `start`.
 
 - `right`
 
