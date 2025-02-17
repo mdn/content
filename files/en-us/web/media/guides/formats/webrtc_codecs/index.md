@@ -42,21 +42,24 @@ Below are the video codecs which are _required_ in any fully WebRTC-compliant br
   </thead>
   <tbody>
     <tr>
-      <th scope="row"><a href="#vp8">VP8</a></th>
+      <th id="vp8_table" scope="row"><a href="#vp8">VP8</a></th>
       <td>—</td>
       <td><p>Chrome, Edge, Firefox, Safari (12.1+)</p>
         <p>
           Firefox 134 supports VP8 for simulcast.
+          Firefox 136+ supports the <a href="#dependency_descriptor_rtp_header_extension">DD RTP header extension</a> with VP8.
         </p>
       </td>
     </tr>
     <tr>
-      <th scope="row"><a href="#avc_h.264">AVC / H.264</a></th>
+      <th id="h264_table" scope="row"><a href="#avc_h.264">AVC / H.264</a></th>
       <td>Constrained Baseline (CB)</td>
       <td>
         <p>Chrome (52+), Edge, Firefox, Safari</p>
         <p>
           <ul>
+            <li>Firefox 137+ supports the <a href="#dependency_descriptor_rtp_header_extension">DD RTP header extension</a> with H264 on desktop.
+            Firefox on Android does not support the DD header (<a href="https://bugzil.la/1947116">Firefox bug 1947116</a>).</li>
             <li>Firefox 136+ supports H.264 for simulcast.</li>
             <li>Firefox for Android 73+ is hardware supported.</li>
             <li>Firefox for Android versions 68 to 72 do not support H.264 (due to a change in <a href="https://support.mozilla.org/en-US/kb/firefox-android-openh264">Google Play store requirements</a> that prevent Firefox from downloading and installing the OpenH264 codec needed to handle H.264 in WebRTC connections).</li>
@@ -89,16 +92,21 @@ In addition to the mandatory codecs, some browsers support additional codecs as 
   </thead>
   <tbody>
     <tr>
-      <th scope="row">VP9</th>
+      <th id="vp9_table" scope="row">VP9</th>
       <td>—</td>
-      <td><p>Chrome (48+), Firefox</p></td>
+      <td>
+        <p>Chrome (48+), Firefox</p>
+        <p>Firefox does not support VP9 for simulcast by default (<a href="https://bugzil.la/1633876">Firefox bug 1633876</a>).
+        Firefox 136+ supports the <a href="#dependency_descriptor_rtp_header_extension">DD RTP header extension</a> with VP9.
+        </p>
+      </td>
     </tr>
     <tr>
-      <th scope="row">AV1</th>
+      <th id="av1_table" scope="row"><a href="#av1">AV1</a></th>
       <td>—</td>
       <td>
         <p>Chrome (113+), Firefox (136+)</p>
-        <p>Firefox 136 supports AV1 for simulcast.</p>
+        <p>Firefox 136 supports AV1 for simulcast and the <a href="#dependency_descriptor_rtp_header_extension">DD RTP header extension</a>.</p>
       </td>
     </tr>
   </tbody>
@@ -170,6 +178,17 @@ The payload format used for AVC in WebRTC is described in {{RFC(6184, "RTP Paylo
 ### AV1
 
 AV1 is [described in general](/en-US/docs/Web/Media/Guides/Formats/Video_codecs#av1) in the main [guide to video codecs used on the web](/en-US/docs/Web/Media/Guides/Formats/Video_codecs).
+
+#### Dependency Descriptor RTP Header Extension
+
+WebRTC supports the concept of simulcast: the ability to send multiple versions simultaneous versions of the same source with different resolutions and bitrates.
+A Selective Forwarding Unit (SFU)/Selective Forwarding Middlebox (SFM) can then be used to forward the most suitable version for a particular recipient based on network conditions and device capabilities.
+
+SFUs rely on the ability to determine frame dependency relationships, such as between a chain of interframes back to the last keyframe, in order to forward packets and switch simulcast layers without a receiver noticing.
+VP8, VP9, and other older codecs include frame dependency information in an RTP payload header.
+AV1 instead uses the [Dependency Descriptor (DD) RTP Header Extension](https://aomediacodec.github.io/av1-rtp-spec/#43-dependency-descriptor-rtp-header-extension) defined in the specification _RTP Payload Format For AV1 (v1.0)_, which is a more flexible, efficient, and extensible way to describe the relationships between frames in a multi-layered video stream.
+
+While simulcast using AV1 relies on the DD header, it is also recommended for use with other codecs because it allows for codec-independent forwarding in the SFU, even in end-to-end encryption (E2EE) scenarios where the payload header cannot be parsed by an SFU.
 
 ## Supported audio codecs
 
