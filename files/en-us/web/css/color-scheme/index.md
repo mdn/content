@@ -87,6 +87,8 @@ footer {
 }
 ```
 
+Along with the above CSS, also use the [`<meta name="color-scheme">`](/en-US/docs/Web/HTML/Element/meta/name#color-scheme) HTML {{HTMLElement("meta")}} tag to inform user agents about the desired color scheme of the page immediately before CSS in the page is loaded. The meta tag helps prevent unwanted screen flashes during the page load.
+
 ### Styling based on color schemes
 
 To style elements based on color scheme preferences, use the [`prefers-color-scheme`](/en-US/docs/Web/CSS/@media/prefers-color-scheme) media query. The example below opts in the entire page to using both light and dark operating system color schemes via the `color-scheme` property, and then uses `prefers-color-scheme` to specify the desired foreground and background colors for individual elements in those color schemes.
