@@ -43,7 +43,7 @@ Sec-CH-UA-Form-Factors: <form-factor>, …, <form-factor>
     - `"Desktop"`
       - : A user-agent running on a personal computer.
     - `"Automotive"`
-      - : A user-agent embedded in a vehicle, where the user may be responsible for operating the vehicle and unable to attend to small details.
+      - : A user-agent embedded in a vehicle, where the user may be responsible for operating the vehicle and have limited ability to interact.
     - `"Mobile"`
       - : Small, touch-oriented device typically carried on a user's person.
     - `"Tablet"`
