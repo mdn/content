@@ -18,6 +18,8 @@ This article provides information about the changes in Firefox 136 that affect d
 
 ### CSS
 
+- The [`:open`](/en-US/docs/Web/CSS/:open) pseudo-class is now supported and allows you to select any element that is currently in an open state, this applies to the {{htmlelement("details")}}, {{htmlelement("dialog")}}, {{htmlelement("input")}} elements with a picker and {{htmlelement("select")}} elements which present a drop-down box. ([Firefox bug 1936113](https://bugzil.la/1936113)).
+
 #### Removals
 
 ### JavaScript
