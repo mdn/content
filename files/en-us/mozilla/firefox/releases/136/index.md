@@ -14,7 +14,7 @@ This article provides information about the changes in Firefox 136 that affect d
 
 ### HTML
 
-- The [`autocorrect`](/en-US/docs/Web/HTML/Global_attributes/autocorrect) global attribute allows autocorrection in editable text elements including: most kinds of text {{htmlelement("input")}} elements, {{htmlelement("textarea")}} elements, and elements that have the [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) attribute set. This attribute varies differently depending on the user agent and OS settings. ([Firefox bug 1927977](https://bugzil.la/1927977)).
+- The [`autocorrect`](/en-US/docs/Web/HTML/Global_attributes/autocorrect) global attribute allows autocorrection in editable text elements including: most kinds of text {{htmlelement("input")}} elements, {{htmlelement("textarea")}} elements, and elements that have the [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) attribute set. The specific autocorrection behavior depends on the user agent and underlying OS. ([Firefox bug 1927977](https://bugzil.la/1927977)).
 
 #### Removals
 
