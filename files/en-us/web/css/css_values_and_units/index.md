@@ -186,7 +186,7 @@ Additional functions, including `calc-mix()`, `crossorigin()`, `first-valid()`, 
 - [calc-size calculation]()
 - [calculation]()
 - [CSS-wide keywords](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types#css-wide_keywords)
-- [device pixel]()
+- {{glossary("device pixel")}}
 - [dimension]()
 - [down]()
 - [dynamic viewport size]()
@@ -194,13 +194,8 @@ Additional functions, including `calc-mix()`, `crossorigin()`, `first-valid()`, 
 - [else]()
 - [fetch a style resource]()
 - [functional notation]()
-- [ident]()
 - {{glossary("identifier")}}
 - [infinite]()
-- [inline-end]()
-- [inline-start]()
-- [integer]()
-- [interpolate]()
 - {{glossary("interpolation")}}
 - {{glossary("keyword")}}
 - [large viewport size]()
@@ -216,7 +211,6 @@ Additional functions, including `calc-mix()`, `crossorigin()`, `first-valid()`, 
 - [numeric data types]()
 - [operator nodes]()
 - {{glossary("origin")}}
-- [percentage]()
 - [physical unit]()
 - [pi]()
 - {{glossary("pixel")}}
