@@ -18,7 +18,7 @@ Values of this type are an object containing these properties:
 - `allFrames` {{optional_inline}}
   - : `code`. JavaScript code for the user script.
 
-`file` or `code` must be specified.
+`file` or `code` must be specified, not both.
 
 {{WebExtExamples("h2")}}
 

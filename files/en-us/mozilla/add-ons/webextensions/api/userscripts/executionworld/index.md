@@ -23,7 +23,7 @@ Values of this type are a string. Possible values are:
 
 - `USER_SCRIPT`
 
-  Specifies the user scripts execution environment, which is exempt from the page's content security policy (CSP).
+  The default execution environment for user scripts. This environment is isolated from the page's context and other `USER_SCRIPT` worlds. Extension APIs are unavailable, unlike [`ISOLATED` worlds of content scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/scripting/ExecutionWorld). Several `USER_SCRIPT` worlds can exist when scripts are registered with `worldId`. {WebExtAPIRef("userScripts.configureWorld()")}} is used to change the configuration of a `USER_SCRIPT` world.
 
 {{WebExtExamples("h2")}}
 

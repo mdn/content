@@ -19,7 +19,7 @@ Along with the message, the listener is passed:
 ## Syntax
 
 ```js-nolint
-browser.runtime.onUserScriptMessage.addListener()
+browser.runtime.onUserScriptMessage.addListener(listener)
 browser.runtime.onUserScriptMessage.removeListener(listener)
 browser.runtime.onUserScriptMessage.hasListener(listener)
 ```
@@ -71,8 +71,9 @@ browser.runtime.sendMessage("my message");
 
 function handleMessage(message, sender) {
   // check that the message originated from "myScriptWorld" world
-  if (sender.userScriptWorldI === "myScriptWorld") {
+  if (sender.userScriptWorldId === "myScriptWorld") {
     // process message
+    console.log(message);
   }
 }
 

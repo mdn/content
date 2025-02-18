@@ -31,12 +31,12 @@ In the `MAIN` world, host pages and other extensions can see and access running 
 
 ## Messaging
 
-Like content scripts and offscreen documents, user scripts communicate with other parts of an extension with messages using {{WebExtAPIRef("runtime.sendMessage()")}} and {{WebExtAPIRef("runtime.connect()")}}. However, user scripts receive messages using the dedicated {{WebExtAPIRef("runtime.onUserScriptMessage")}} and {{WebExtAPIRef("runtime.onUserScriptConnect")}}. Dedicated handlers are used as they make it easier to identify messages from user scripts, which are a less-trusted context.
+Like content scripts and other extension scripts, user scripts communicate with other parts of an extension with messages using {{WebExtAPIRef("runtime.sendMessage()")}} and {{WebExtAPIRef("runtime.connect()")}}. However, user scripts receive messages using the dedicated {{WebExtAPIRef("runtime.onUserScriptMessage")}} and {{WebExtAPIRef("runtime.onUserScriptConnect")}}. Dedicated handlers are used as they make it easier to identify messages from user scripts, which are a less-trusted context.
 
-Before sending a message, call {{WebExtAPIRef("userScripts.configureWorld()")}} with the `messaging` argument set to `true`. The `csp` and `messaging` arguments can be passed at the same time.
+To enable messaging APIs, call {{WebExtAPIRef("userScripts.configureWorld()")}} with the `messaging` argument set to `true` before registering a user script. The `csp` and `messaging` arguments can be passed at the same time.
 
 ```js
-chrome.userScripts.configureWorld({
+browser.userScripts.configureWorld({
   messaging: true,
 });
 ```

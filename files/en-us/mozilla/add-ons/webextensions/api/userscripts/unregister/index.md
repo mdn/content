@@ -22,7 +22,7 @@ const unregisteringUserScripts = await browser.userScripts.unregister(
 ### Parameters
 
 - `filter` {{optional_inline}}
-  - : {{WebExtAPIRef("userScripts.UserScriptFilter")}}. A list of user script IDs to return.
+  - : {{WebExtAPIRef("userScripts.UserScriptFilter")}}. A list of user script IDs to unregister. If not specified, all user scripts are unregistered.
 
 ### Return value
 
