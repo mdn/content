@@ -14,22 +14,20 @@ You can also define async generator functions using the [`async function*` decla
 {{InteractiveExample("JavaScript Demo: Expressions - Async Function Asterisk", "taller")}}
 
 ```js interactive-example
-async function* foo() {
+async function joinAll(generator) {
+  let str = "";
+  for await (const val of generator()) {
+    str = str + val;
+  }
+  return str;
+}
+
+const str = generate(async function* () {
   yield await Promise.resolve("a");
   yield await Promise.resolve("b");
   yield await Promise.resolve("c");
-}
-
-let str = "";
-
-async function generate() {
-  for await (const val of foo()) {
-    str = str + val;
-  }
-  console.log(str);
-}
-
-generate();
+});
+console.log(str);
 // Expected output: "abc"
 ```
 

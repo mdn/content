@@ -62,7 +62,6 @@ If the code block is pseudocode, the output of a command, or otherwise not a pro
 ### Code line length
 
 - Code lines shouldn't be so long that they require horizontal scrolling to read.
-- As a recommended practice, keep code lines up to a maximum of 80 characters long (64 for [interactive examples](https://github.com/mdn/interactive-examples)).
 - Break long lines at natural breaking points for the sake of readability, but not at the expense of best practices.
 
 For example, this is not great:

@@ -16,7 +16,7 @@ When the reference orientation direction is horizontal and the `glyph-orientatio
 This attribute is applied only to text written in a horizontal {{SVGAttr("writing-mode")}}.
 
 > [!NOTE]
-> As a presentation attribute, `glyph-orientation-horizontal` can be used as a CSS property.
+> As a presentation attribute, `glyph-orientation-horizontal` also has a CSS property counterpart: {{cssxref("glyph-orientation-horizontal")}}. When both are specified, the CSS property takes priority.
 
 You can use this attribute with the following SVG elements:
 

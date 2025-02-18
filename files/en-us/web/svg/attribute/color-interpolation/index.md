@@ -17,7 +17,7 @@ The `color-interpolation` property chooses between color operations occurring in
 When a child element is blended into a background, the value of the `color-interpolation` property on the child determines the type of blending, not the value of the `color-interpolation` on the parent. For gradients which make use of the {{SVGAttr("href")}} or the deprecated {{SVGAttr("xlink:href")}} attribute to reference another gradient, the gradient uses the property's value from the gradient element which is directly referenced by the {{SVGAttr("fill")}} or {{SVGAttr("stroke")}} property. When animating colors, color interpolation is performed according to the value of the `color-interpolation` property on the element being animated.
 
 > [!NOTE]
-> As a presentation attribute, {{CSSXref("color-interpolation")}} can be used as a CSS property.
+> As a presentation attribute, `color-interpolation` also has a CSS property counterpart: {{cssxref("color-interpolation")}}. When both are specified, the CSS property takes priority.
 
 You can use this attribute with the following SVG elements:
 

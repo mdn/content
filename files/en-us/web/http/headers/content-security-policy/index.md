@@ -261,7 +261,7 @@ Paths that do not end in `/` are matched exactly. For example:
 
 ### \<scheme-source>
 
-A [scheme](/en-US/docs/Web/URI/Schemes), such as `https:`. The colon is required.
+A [scheme](/en-US/docs/Web/URI/Reference/Schemes), such as `https:`. The colon is required.
 
 Secure upgrades are allowed, so:
 

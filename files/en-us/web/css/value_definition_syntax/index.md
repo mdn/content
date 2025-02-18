@@ -443,19 +443,19 @@ Here are some more examples:
 ## See also
 
 - CSS key concepts:
-  - [CSS syntax](/en-US/docs/Web/CSS/Syntax)
-  - [Comments](/en-US/docs/Web/CSS/Comments)
+  - [CSS syntax](/en-US/docs/Web/CSS/CSS_syntax/Syntax)
+  - [Comments](/en-US/docs/Web/CSS/CSS_syntax/Comments)
   - [Specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity)
-  - [Inheritance](/en-US/docs/Web/CSS/Inheritance)
+  - [Inheritance](/en-US/docs/Web/CSS/CSS_cascade/Inheritance)
   - [Box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
   - [Layout modes](/en-US/docs/Web/CSS/Layout_mode)
   - [Visual formatting models](/en-US/docs/Web/CSS/Visual_formatting_model)
   - [Margin collapsing](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - Values
-    - [Initial values](/en-US/docs/Web/CSS/initial_value)
-    - [Computed values](/en-US/docs/Web/CSS/computed_value)
-    - [Used values](/en-US/docs/Web/CSS/used_value)
-    - [Actual values](/en-US/docs/Web/CSS/actual_value)
+    - [Initial values](/en-US/docs/Web/CSS/CSS_cascade/initial_value)
+    - [Computed values](/en-US/docs/Web/CSS/CSS_cascade/computed_value)
+    - [Used values](/en-US/docs/Web/CSS/CSS_cascade/used_value)
+    - [Actual values](/en-US/docs/Web/CSS/CSS_cascade/actual_value)
   - **Value definition syntax**
   - [Shorthand properties](/en-US/docs/Web/CSS/Shorthand_properties)
   - [Replaced elements](/en-US/docs/Web/CSS/Replaced_element)
