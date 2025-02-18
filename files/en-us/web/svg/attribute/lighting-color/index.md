@@ -9,6 +9,9 @@ browser-compat: svg.global_attributes.lighting-color
 
 The **`lighting-color`** attribute defines the color of the light source for lighting filter primitives.
 
+> [!NOTE]
+> As a presentation attribute, `lighting-color` also has a CSS property counterpart: {{cssxref("lighting-color")}}. When both are specified, the CSS property takes priority.
+
 You can use this attribute with the following SVG elements:
 
 - {{SVGElement("feDiffuseLighting")}}
