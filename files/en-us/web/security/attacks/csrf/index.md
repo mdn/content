@@ -10,7 +10,7 @@ In a cross-site request forgery (CSRF) attack, an attacker tricks the user or th
 
 A website typically performs special actions on a user's behalf — buying a product or making an appointment, for example — by receiving an HTTP request from the user's browser, often with parameters detailing the action to perform. To ensure that the request really comes from the user in question, the server expects the request to include {{glossary("Credential", "credentials")}} for the user: for example, a cookie containing the user's session ID.
 
-In the example below, the user has previously signed into their bank, and the browser has stored a session cookie for the user. The page contains a {{htmlelement("form")}} element, which enables the user to transfer funds to another person. When the user submits the form, the browser sends a {{httpmethod("POST")}} request to the server, including the form data. If the user is signed in, the request includes the user's cookie. The server validates the cookie and performs the special action — in this case, transferring money:
+The example below shows the expected interactions when a user signs into their bank using a session cookie stored in the browser. The page contains a {{htmlelement("form")}} element, which enables the user to transfer funds to another person. When the user submits the form, the browser sends a {{httpmethod("POST")}} request to the server, including the form data. If the user is signed in, the request includes the user's cookie. The server validates the cookie and performs the special action — in this case, transferring money:
 
 ![Diagram showing a user submitting a browser form, the browser then making a POST request to the server, and the server validating the request.](form-post.svg)
 
