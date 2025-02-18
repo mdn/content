@@ -39,7 +39,7 @@ The getter for this property returns the domain portion of the current document'
 origin. In most cases, this will be the hostname portion of the document's URL. However,
 there are some exceptions:
 
-- If the page has an opaque {{glossary("origin")}}, e.g. for a page with a [data URL](/en-US/docs/Web/URI/Schemes/data), then it will
+- If the page has an opaque {{glossary("origin")}}, e.g. for a page with a [data URL](/en-US/docs/Web/URI/Reference/Schemes/data), then it will
   return the empty string.
 - If the `document.domain` [setter](#setting_the_domain) has been used, then
   it will return the value that was set.

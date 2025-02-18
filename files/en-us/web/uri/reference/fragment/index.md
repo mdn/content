@@ -1,11 +1,11 @@
 ---
 title: URI fragment
-slug: Web/URI/Fragment
-page-type: guide
+short-title: Fragment
+slug: Web/URI/Reference/Fragment
+page-type: reference
 spec-urls: https://www.rfc-editor.org/rfc/rfc3986.html#section-3.5
+sidebar: urlsidebar
 ---
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/URI")}}
 
 The **fragment** of a URI is the last part of the URI, starting with the `#` character. It is used to identify a specific part of the resource, such as a section of a document or a position in a video. The fragment is not sent to the server when the URI is requested, but it is processed by the client (such as the browser) after the resource is retrieved.
 
@@ -15,12 +15,10 @@ The **fragment** of a URI is the last part of the URI, starting with the `#` cha
 #fragment
 ```
 
-- fragment
-
+- `fragment`
   - : A sequence of any characters. The exact format of the fragment is defined by the resource itself. Some common examples:
-
     - In an HTML document, it can be the [`id`](/en-US/docs/Web/HTML/Global_attributes/id) attribute of an element, and the browser will scroll to that element.
-    - It can be a [text fragment](/en-US/docs/Web/URI/Fragment/Text_fragments) in the form of `#:~:text=...`, which makes the browser highlight the specified text.
+    - It can be a [text fragment](/en-US/docs/Web/URI/Reference/Fragment/Text_fragments) in the form of `#:~:text=...`, which makes the browser highlight the specified text.
     - It can be a [media fragment](https://www.w3.org/TR/media-frags/) in the form of `#t=...`, which makes the video or audio start playing from that time.
 
 ## Examples
@@ -39,4 +37,4 @@ The **fragment** of a URI is the last part of the URI, starting with the `#` cha
 ## See also
 
 - [URIs](/en-US/docs/Web/URI)
-- [Text fragments](/en-US/docs/Web/URI/Fragment/Text_fragments)
+- [Text fragments](/en-US/docs/Web/URI/Reference/Fragment/Text_fragments)

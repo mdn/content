@@ -3603,7 +3603,7 @@
 /en-US/docs/Glossary/Static_property	/en-US/docs/Glossary/property/JavaScript
 /en-US/docs/Glossary/Transferable_objects	/en-US/docs/Web/API/Web_Workers_API/Transferable_objects
 /en-US/docs/Glossary/Transmission_Control_Protocol_(TCP)	/en-US/docs/Glossary/TCP
-/en-US/docs/Glossary/URI/www_vs_non-www_URLs	/en-US/docs/Web/URI/Authority/Choosing_between_www_and_non-www_URLs
+/en-US/docs/Glossary/URI/www_vs_non-www_URLs	/en-US/docs/Web/URI/Guides/Choosing_between_www_and_non-www_URLs
 /en-US/docs/Glossary/WWW	/en-US/docs/Glossary/World_Wide_Web
 /en-US/docs/Glossary/WebExtension	/en-US/docs/Glossary/WebExtensions
 /en-US/docs/Glossary/Web_Sockets	/en-US/docs/Glossary/WebSockets
@@ -7259,7 +7259,7 @@
 /en-US/docs/The_XSLT_JavaScript_Interface_in_Gecko:Resources	/en-US/docs/Web/API/XSLTProcessor
 /en-US/docs/The_XSLT_JavaScript_Interface_in_Gecko:Setting_Parameters	/en-US/docs/Web/API/XSLTProcessor
 /en-US/docs/The_add-on_bar	/en-US/docs/Mozilla/Firefox/Releases/4/The_add-on_bar
-/en-US/docs/The_data_URL_scheme	/en-US/docs/Web/URI/Schemes/data
+/en-US/docs/The_data_URL_scheme	/en-US/docs/Web/URI/Reference/Schemes/data
 /en-US/docs/Thunderbird/Autoconfiguration	https://www.bucksch.org/1/projects/thunderbird/autoconfiguration/
 /en-US/docs/Thunderbird/Autoconfiguration/FileFormat/Definition	https://www.bucksch.org/1/projects/thunderbird/autoconfiguration/config-file-format.html
 /en-US/docs/Thunderbird/Autoconfiguration/FileFormat/HowTo	https://www.bucksch.org/1/projects/thunderbird/autoconfiguration/how-to-create-your-own
@@ -7686,8 +7686,8 @@
 /en-US/docs/Transforming_XML_with_XSLT:The_Netscape_XSLT_XPath_Reference:Functions	/en-US/docs/Web/XML/XPath/Reference/Functions
 /en-US/docs/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces	/en-US/docs/Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces
 /en-US/docs/URI	/en-US/docs/Glossary/URI
-/en-US/docs/URI/www and non-www URLs	/en-US/docs/Web/URI/Authority/Choosing_between_www_and_non-www_URLs
-/en-US/docs/URI/www_vs_non-www_URLs	/en-US/docs/Web/URI/Authority/Choosing_between_www_and_non-www_URLs
+/en-US/docs/URI/www and non-www URLs	/en-US/docs/Web/URI/Guides/Choosing_between_www_and_non-www_URLs
+/en-US/docs/URI/www_vs_non-www_URLs	/en-US/docs/Web/URI/Guides/Choosing_between_www_and_non-www_URLs
 /en-US/docs/URL.createObjectURL	/en-US/docs/Web/API/URL/createObjectURL_static
 /en-US/docs/URLUtilsReadOnly.origin	/en-US/docs/Web/API/WorkerLocation/origin
 /en-US/docs/USA	/en-US/docs/Web/Progressive_web_apps
@@ -12752,15 +12752,15 @@
 /en-US/docs/Web/HTTP/Access_control_CORS	/en-US/docs/Web/HTTP/CORS
 /en-US/docs/Web/HTTP/Basic_access_authentication	/en-US/docs/Web/HTTP/Authentication
 /en-US/docs/Web/HTTP/Basics_of_HTTP	/en-US/docs/Web/HTTP
-/en-US/docs/Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs	/en-US/docs/Web/URI/Authority/Choosing_between_www_and_non-www_URLs
-/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs	/en-US/docs/Web/URI/Schemes/data
-/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs	/en-US/docs/Web/URI/Schemes/data
+/en-US/docs/Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs	/en-US/docs/Web/URI/Guides/Choosing_between_www_and_non-www_URLs
+/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs	/en-US/docs/Web/URI/Reference/Schemes/data
+/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs	/en-US/docs/Web/URI/Reference/Schemes/data
 /en-US/docs/Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP	/en-US/docs/Web/HTTP/Evolution_of_HTTP
-/en-US/docs/Web/HTTP/Basics_of_HTTP/Introduction_to_www_and_non-www_URLs	/en-US/docs/Web/URI/Authority/Choosing_between_www_and_non-www_URLs
+/en-US/docs/Web/HTTP/Basics_of_HTTP/Introduction_to_www_and_non-www_URLs	/en-US/docs/Web/URI/Guides/Choosing_between_www_and_non-www_URLs
 /en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types	/en-US/docs/Web/HTTP/MIME_types
 /en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types	/en-US/docs/Web/HTTP/MIME_types/Common_types
 /en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Complete_list_of_MIME_types	/en-US/docs/Web/HTTP/MIME_types/Common_types
-/en-US/docs/Web/HTTP/Basics_of_HTTP/Resource_URLs	/en-US/docs/Web/URI/Schemes/resource
+/en-US/docs/Web/HTTP/Basics_of_HTTP/Resource_URLs	/en-US/docs/Web/URI/Reference/Schemes/resource
 /en-US/docs/Web/HTTP/CORS/Errors/Reason:_CORS_header_‘Origin’_cannot_be_added	/en-US/docs/Web/HTTP/CORS/Errors/CORSOriginHeaderNotAdded
 /en-US/docs/Web/HTTP/Caching_FAQ	/en-US/docs/Web/HTTP/Caching
 /en-US/docs/Web/HTTP/Configuring_servers_for_Ogg_media	/en-US/docs/Web/Media/Guides/Formats/Configuring_servers_for_Ogg_media
@@ -12838,8 +12838,8 @@
 /en-US/docs/Web/HTTP/Status/506_Variant_Also_Negotiates	/en-US/docs/Web/HTTP/Status/506
 /en-US/docs/Web/HTTP/Status/510_Not_Extended	/en-US/docs/Web/HTTP/Status/510
 /en-US/docs/Web/HTTP/X-Frame-Options	/en-US/docs/Web/HTTP/Headers/X-Frame-Options
-/en-US/docs/Web/HTTP/data_URIs	/en-US/docs/Web/URI/Schemes/data
-/en-US/docs/Web/HTTP/www_and_non-www_URLs	/en-US/docs/Web/URI/Authority/Choosing_between_www_and_non-www_URLs
+/en-US/docs/Web/HTTP/data_URIs	/en-US/docs/Web/URI/Reference/Schemes/data
+/en-US/docs/Web/HTTP/www_and_non-www_URLs	/en-US/docs/Web/URI/Guides/Choosing_between_www_and_non-www_URLs
 /en-US/docs/Web/Houdini	/en-US/docs/Web/API/Houdini_APIs
 /en-US/docs/Web/Houdini/CSS_Painting_API	/en-US/docs/Web/API/CSS_Painting_API/Guide
 /en-US/docs/Web/Houdini/CSS_Typed_OM	/en-US/docs/Web/API/CSS_Typed_OM_API
@@ -13584,8 +13584,19 @@
 /en-US/docs/Web/Security/Securing_your_site	/en-US/docs/Web/Security/Practical_implementation_guides
 /en-US/docs/Web/Security/Securing_your_site/Configuring_server_MIME_types	/en-US/docs/Learn_web_development/Extensions/Server-side/Configuring_server_MIME_types
 /en-US/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion	/en-US/docs/Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion
-/en-US/docs/Web/Text_fragments	/en-US/docs/Web/URI/Fragment/Text_fragments
+/en-US/docs/Web/Text_fragments	/en-US/docs/Web/URI/Reference/Fragment/Text_fragments
 /en-US/docs/Web/Tutorials	/en-US/docs/MDN/Tutorials
+/en-US/docs/Web/URI/Authority	/en-US/docs/Web/URI/Reference/Authority
+/en-US/docs/Web/URI/Authority/Choosing_between_www_and_non-www_URLs	/en-US/docs/Web/URI/Guides/Choosing_between_www_and_non-www_URLs
+/en-US/docs/Web/URI/Fragment	/en-US/docs/Web/URI/Reference/Fragment
+/en-US/docs/Web/URI/Fragment/Text_fragments	/en-US/docs/Web/URI/Reference/Fragment/Text_fragments
+/en-US/docs/Web/URI/Guides/Text_fragments	/en-US/docs/Web/URI/Reference/Fragment/Text_fragments
+/en-US/docs/Web/URI/Reference/Authority/Choosing_between_www_and_non-www_URLs	/en-US/docs/Web/URI/Guides/Choosing_between_www_and_non-www_URLs
+/en-US/docs/Web/URI/Reference/Text_fragments	/en-US/docs/Web/URI/Reference/Fragment/Text_fragments
+/en-US/docs/Web/URI/Schemes	/en-US/docs/Web/URI/Reference/Schemes
+/en-US/docs/Web/URI/Schemes/data	/en-US/docs/Web/URI/Reference/Schemes/data
+/en-US/docs/Web/URI/Schemes/javascript	/en-US/docs/Web/URI/Reference/Schemes/javascript
+/en-US/docs/Web/URI/Schemes/resource	/en-US/docs/Web/URI/Reference/Schemes/resource
 /en-US/docs/Web/WebDriver/Commands/New_Window	/en-US/docs/Web/WebDriver/Commands/NewWindow
 /en-US/docs/Web/WebGL	/en-US/docs/Web/API/WebGL_API
 /en-US/docs/Web/WebGL/Adding_2D_content_to_a_WebGL_context	/en-US/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
@@ -14334,7 +14345,7 @@
 /en-US/docs/cssText	/en-US/docs/Web/API/CSSRule/cssText
 /en-US/docs/ctrlKey	/en-US/docs/Web/API/MouseEvent/ctrlKey
 /en-US/docs/currentTarget	/en-US/docs/Web/API/Event/currentTarget
-/en-US/docs/data_URIs	/en-US/docs/Web/URI/Schemes/data
+/en-US/docs/data_URIs	/en-US/docs/Web/URI/Reference/Schemes/data
 /en-US/docs/de_temp	/en-US/docs/Web/API/document/documentElement
 /en-US/docs/defineGetter	/en-US/docs/Web/JavaScript/Guide/Working_with_objects
 /en-US/docs/defineSetter	/en-US/docs/Web/JavaScript/Guide/Working_with_objects
@@ -14589,5 +14600,5 @@
 /en-US/docs/window.toolbar	/en-US/docs/Web/API/Window/toolbar
 /en-US/docs/window.unescape	/en-US/docs/Web/JavaScript/Reference/Global_Objects/unescape
 /en-US/docs/window.window	/en-US/docs/Web/API/Window/window
-/en-US/docs/www_vs_non-www_URLs	/en-US/docs/Web/URI/Authority/Choosing_between_www_and_non-www_URLs
+/en-US/docs/www_vs_non-www_URLs	/en-US/docs/Web/URI/Guides/Choosing_between_www_and_non-www_URLs
 /en-US/docs/xml:base	/en-US/docs/Web/API/Node/baseURI
