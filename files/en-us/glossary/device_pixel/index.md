@@ -15,4 +15,4 @@ A device pixel is density-dependent, varying based on the device's screen resolu
 - CSS {{cssxref("&lt;resolution&gt;")}} data type
 - CSS {{cssxref("@media/resolution", "resolution")}} @media feature
 - CSS {{cssxref("image-resolution")}} property
-- {{domxref("devicePixelRatio)}} API
+- {{domxref("devicePixelRatio")}} API
