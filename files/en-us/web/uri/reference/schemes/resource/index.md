@@ -1,5 +1,5 @@
 ---
-title: "javascript: URLs"
+title: "resource: URLs"
 short-title: "resource:"
 slug: Web/URI/Reference/Schemes/resource
 page-type: reference
