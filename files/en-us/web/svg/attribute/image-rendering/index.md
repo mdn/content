@@ -12,7 +12,7 @@ The **`image-rendering`** attribute provides a hint to the browser about how to 
 The resampling is always done in a truecolor (e.g., 24-bit) color space even if the original data and/or the target device is indexed color.
 
 > [!NOTE]
-> As a presentation attribute, `image-rendering` can be used as a CSS property. See the CSS {{cssxref("image-rendering")}} property for more information.
+> As a presentation attribute, `image-rendering` also has a CSS property counterpart: {{cssxref("image-rendering")}}. When both are specified, the CSS property takes priority.
 
 You can use this attribute with the following SVG elements:
 

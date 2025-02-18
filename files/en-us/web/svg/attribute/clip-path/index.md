@@ -10,7 +10,7 @@ browser-compat: svg.global_attributes.clip-path
 The **`clip-path`** presentation attribute defines or associates a clipping path with the element it is related to.
 
 > [!NOTE]
-> As a presentation attribute `clip-path` can be used as a CSS property.
+> As a presentation attribute, `clip-path` also has a CSS property counterpart: {{cssxref("clip-path")}}. When both are specified, the CSS property takes priority.
 
 You can use this attribute with the following SVG elements:
 
