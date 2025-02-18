@@ -25,6 +25,7 @@ ACEFGHIJKLMN
 aceghijklmop
 adipscing
 aeio
+aeiou
 aliquyam
 animometer
 annunaki
@@ -52,12 +53,14 @@ bleh
 BlYAJQFz
 bobsmith
 bologi
+booh
 bookinst
 BOOKINSTANCE
 bookinstances
 Bookmarksgrove
 boooo
 booooed
+boooooooh
 borderify
 boxbg
 BRAH
@@ -112,6 +115,7 @@ dubby
 Duden
 dXNlcm5hbWU6cGFzc3dvcmQ
 EACC
+easi
 efregre
 eirmod
 elitr
@@ -267,6 +271,7 @@ screenleft-screentop
 Scrupulum
 seakale
 serverstart
+shhhh
 skjfndskjfnbdskjfb
 snapsvg.io
 soclis
