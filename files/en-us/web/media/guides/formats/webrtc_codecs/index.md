@@ -181,14 +181,21 @@ AV1 is [described in general](/en-US/docs/Web/Media/Guides/Formats/Video_codecs#
 
 #### Dependency Descriptor RTP Header Extension
 
-WebRTC supports the concept of simulcast: the ability to send multiple versions simultaneous versions of the same source with different resolutions and bitrates.
+WebRTC supports two main technologies for efficiently sending video for consumption by recipients that are operating with different capabilities and network conditions.
+
+_Simulcast_ sends multiple simultaneous versions of the same source with different resolutions and bitrates in separate streams.
 A Selective Forwarding Unit (SFU)/Selective Forwarding Middlebox (SFM) can then be used to forward the most suitable version for a particular recipient based on network conditions and device capabilities.
 
 SFUs rely on the ability to determine frame dependency relationships, such as between a chain of interframes back to the last keyframe, in order to forward packets and switch simulcast layers without a receiver noticing.
 VP8, VP9, and other older codecs include frame dependency information in an RTP payload header.
 AV1 instead uses the [Dependency Descriptor (DD) RTP Header Extension](https://aomediacodec.github.io/av1-rtp-spec/#43-dependency-descriptor-rtp-header-extension) defined in the specification _RTP Payload Format For AV1 (v1.0)_, which is a more flexible, efficient, and extensible way to describe the relationships between frames in a multi-layered video stream.
-
 While simulcast using AV1 relies on the DD header, it is also recommended for use with other codecs because it allows for codec-independent forwarding in the SFU, even in end-to-end encryption (E2EE) scenarios where the payload header cannot be parsed by an SFU.
+
+[Scalable Video Coding (SVC)](https://www.w3.org/TR/webrtc-svc/) is different in that it encodes a source in a single stream, with multiple layers that can be selectively decoded to obtain video with particular resolutions, bitrate, or quality.
+An SFU/SMF can forward just some layers in order to send a stream that is appropriate for each recipient's network and device.
+
+The DD header provides the efficient mechanism for an SFU (or other system) to determine the dependencies between layers in an SVC encoded stream.
+Note that these dependencies are much more complicated than needed to for selecting streams to forward when using simulcast (see the [dependency diagrams](https://www.w3.org/TR/webrtc-svc/#dependencydiagrams*) in the SVC specification for a "flavor" of the complexity).
 
 ## Supported audio codecs
 
