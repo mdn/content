@@ -125937,7 +125937,7 @@
       "fscholz"
     ]
   },
-  "Web/URI/Authority/Choosing_between_www_and_non-www_URLs": {
+  "Web/URI/Guides/Choosing_between_www_and_non-www_URLs": {
     "modified": "2020-02-15T14:08:06.893Z",
     "contributors": [
       "francoraphael",
@@ -125954,7 +125954,7 @@
       "dbruant"
     ]
   },
-  "Web/URI/Schemes/data": {
+  "Web/URI/Reference/Schemes/data": {
     "modified": "2020-11-21T14:56:28.316Z",
     "contributors": [
       "simon04",
@@ -126001,7 +126001,7 @@
       "Waldo"
     ]
   },
-  "Web/URI/Schemes/resource": {
+  "Web/URI/Reference/Schemes/resource": {
     "modified": "2019-03-23T22:04:02.489Z",
     "contributors": ["ExE-Boss", "gmierz", "David_B", "chrisdavidmills"]
   },

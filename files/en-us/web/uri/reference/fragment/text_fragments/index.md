@@ -1,14 +1,13 @@
 ---
 title: Text fragments
-slug: Web/URI/Fragment/Text_fragments
-page-type: guide
+slug: Web/URI/Reference/Fragment/Text_fragments
+page-type: reference
 browser-compat:
   - html.elements.a.text_fragments
   - api.FragmentDirective
   - css.selectors.target-text
+sidebar: urlsidebar
 ---
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/URI")}}
 
 **Text fragments** allow linking directly to a specific portion of text in a web document, without requiring the author to annotate it with an ID, using particular syntax in the URL fragment. Supporting browsers are free to choose how to draw attention to the linked text, e.g. with a color highlight and/or scrolling to the content on the page. This is useful because it allows web content authors to deep-link to other content they don't control, without relying on the presence of IDs to make that possible. Building on top of that, it could be used to generate more effective content-sharing links for users to pass to one another.
 
