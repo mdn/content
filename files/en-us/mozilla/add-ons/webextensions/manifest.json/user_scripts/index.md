@@ -49,11 +49,11 @@ The API script:
 - has access to the window and document globals related to the webpage it is attached to.
 - has access to the same subset of WebExtension APIs usually available in a content script.
 
-The script executes automatically on any webpage defined in `matches` by {{WebExtAPIRef("userScripts_legacy.register")}}. However, this is before the user script sandbox object is created and the custom API methods can be exported.
+The script executes automatically on any webpage defined in `matches` by {{WebExtAPIRef("userScripts_legacy.register", "userScripts.register()")}}. However, this is before the user script sandbox object is created and the custom API methods can be exported.
 
-To export the custom API methods, the script listens for {{WebExtAPIRef("userScripts_legacy.onBeforeScript")}} and then export the custom API methods.
+To export the custom API methods, the script listens for {{WebExtAPIRef("userScripts_legacy.onBeforeScript", "userScripts.onBeforeScript")}} and then export the custom API methods.
 
-Not every user script may need to consume all of the custom API methods. You can, therefore, include details of the APIs needed in `scriptMetadata` when running {{WebExtAPIRef("userScripts_legacy.register")}}. The API script then accesses the `scriptMetadata` through the `script` parameter received by the {{WebExtAPIRef("userScripts_legacy.onBeforeScript")}} listener (as `script.metadata`).
+Not every user script may need to consume all of the custom API methods. You can, therefore, include details of the APIs needed in `scriptMetadata` when running {{WebExtAPIRef("userScripts_legacy.register", "userScripts.register()")}}. The API script then accesses the `scriptMetadata` through the `script` parameter received by the {{WebExtAPIRef("userScripts_legacy.onBeforeScript", "userScripts.onBeforeScript")}} listener (as `script.metadata`).
 
 ## Browser compatibility
 
@@ -61,5 +61,5 @@ Not every user script may need to consume all of the custom API methods. You can
 
 ## See also
 
-- {{WebExtAPIRef("userScripts_legacy","userScripts")}}
+- {{WebExtAPIRef("userScripts_legacy","userScripts")}} (Legacy)
 - {{WebExtAPIRef("contentScripts")}}

@@ -14,7 +14,7 @@ If the attribute value is a unitless number (like `128`), the browser processes 
 If the attribute value has a unit identifier, such as `.25em` or `1%`, then the browser converts the \<length> into its corresponding value in the current user coordinate system.
 
 > [!NOTE]
-> As a presentation attribute, `letter-spacing` can be used as a CSS property. See the CSS {{cssxref("letter-spacing")}} property for more information.
+> As a presentation attribute, `letter-spacing` also has a CSS property counterpart: {{cssxref("letter-spacing")}}. When both are specified, the CSS property takes priority.
 
 You can use this attribute with the following SVG elements:
 

@@ -85,6 +85,23 @@ This example shows how to use `requestVideoFrameCallback()` to draw the frames o
 
 ```js
 if ("requestVideoFrameCallback" in HTMLVideoElement.prototype) {
+  const video = document.createElement("video");
+  const fpsInfo = document.createElement("div");
+  const metadataInfo = document.createElement("div");
+  const canvas = document.createElement("canvas");
+  const ctx = canvas.getContext("2d");
+
+  // 'Big Buck Bunny' licensed under CC 3.0 by the Blender foundation. Hosted by archive.org
+  // Poster from peach.blender.org
+  video.src =
+    "https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4";
+  video.poster =
+    "https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?x11217";
+  video.width = 640;
+  video.controls = true;
+
+  document.body.append(video, fpsInfo, metadataInfo, canvas);
+
   let paintCount = 0;
   let startTime = 0.0;
 

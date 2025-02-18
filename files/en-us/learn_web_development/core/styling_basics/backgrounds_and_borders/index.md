@@ -342,8 +342,8 @@ When you do this you may end up with background images overlapping each other. T
 The other `background-*` properties can also have comma-separated values in the same way as `background-image`:
 
 ```css
-background-image: url(image1.png), url(image2.png), url(image3.png),
-  url(image4.png);
+background-image:
+  url(image1.png), url(image2.png), url(image3.png), url(image4.png);
 background-repeat: no-repeat, repeat-x, repeat;
 background-position:
   10px 20px,
@@ -374,7 +374,8 @@ Let's play. The example below includes two background images. To demonstrate the
 }
 
 .box {
-  background-image: url(https://mdn.github.io/shared-assets/images/examples/star.png),
+  background-image:
+    url(https://mdn.github.io/shared-assets/images/examples/star.png),
     url(https://mdn.github.io/shared-assets/images/examples/big-star.png);
 }
 ```

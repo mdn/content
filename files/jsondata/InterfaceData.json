@@ -56,6 +56,10 @@
       "inh": "",
       "impl": []
     },
+    "AnimationTrigger": {
+      "inh": "",
+      "impl": []
+    },
     "AnimationWorkletGlobalScope": {
       "inh": "WorkletGlobalScope",
       "impl": []
@@ -3130,14 +3134,6 @@
     },
     "SourceBufferList": {
       "inh": "EventTarget",
-      "impl": []
-    },
-    "SpeechGrammar": {
-      "inh": "",
-      "impl": []
-    },
-    "SpeechGrammarList": {
-      "inh": "",
       "impl": []
     },
     "SpeechRecognition": {

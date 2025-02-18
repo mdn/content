@@ -41,14 +41,17 @@ Besides the generic `Error` constructor, there are other core error constructors
 - {{jsxref("Error/Error", "Error()")}}
   - : Creates a new `Error` object.
 
+## Static properties
+
+- {{jsxref("Error.stackTraceLimit")}} {{non-standard_inline}}
+  - : A non-standard numerical property that limits how many stack frames to include in an error stack trace.
+
 ## Static methods
 
-- `Error.captureStackTrace()` {{non-standard_inline}}
-  - : A non-standard V8 function that creates the {{jsxref("Error/stack", "stack")}} property on an Error instance.
-- `Error.stackTraceLimit` {{non-standard_inline}}
-  - : A non-standard V8 numerical property that limits how many stack frames to include in an error stacktrace.
+- {{jsxref("Error.captureStackTrace()")}} {{non-standard_inline}}
+  - : A non-standard function that creates the {{jsxref("Error/stack", "stack")}} property on the provided object.
 - `Error.prepareStackTrace()` {{non-standard_inline}} {{optional_inline}}
-  - : A non-standard V8 function that, if provided by user code, is called by the V8 JavaScript engine for thrown exceptions, allowing the user to provide custom formatting for stacktraces.
+  - : A non-standard function that, if provided by user code, is called by the JavaScript engine for thrown exceptions, allowing the user to provide custom formatting for stack traces. See the [V8 Stack Trace API](https://v8.dev/docs/stack-trace-api#customizing-stack-traces) docs.
 
 ## Instance properties
 
@@ -187,7 +190,7 @@ class CustomError extends Error {
     // Pass remaining arguments (including vendor specific ones) to parent constructor
     super(...params);
 
-    // Maintains proper stack trace for where our error was thrown (only available on V8)
+    // Maintains proper stack trace for where our error was thrown (non-standard)
     if (Error.captureStackTrace) {
       Error.captureStackTrace(this, CustomError);
     }
@@ -205,7 +208,7 @@ try {
   console.error(e.name); // CustomError
   console.error(e.foo); // baz
   console.error(e.message); // bazMessage
-  console.error(e.stack); // stacktrace
+  console.error(e.stack); // stack trace
 }
 ```
 

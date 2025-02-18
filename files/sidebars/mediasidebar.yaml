@@ -12,12 +12,12 @@ sidebar:
   - /Web/Media/Guides/Streaming
   - /Web/Media/Guides/DASH_Adaptive_Streaming_for_HTML_5_Video
   - type: listSubPages
-    link: /Web/Media/Guides/Audio_and_video_delivery
     path: /Web/Media/Guides/Audio_and_video_delivery
+    link: /Web/Media/Guides/Audio_and_video_delivery
     title: Audio and video delivery
     details: closed
   - type: listSubPages
-    link: /Web/Media/Guides/Formats
     path: /Web/Media/Guides/Formats
+    link: /Web/Media/Guides/Formats
     title: Media formats
     details: closed
