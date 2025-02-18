@@ -70,9 +70,9 @@ Root element font relative length units define the `<length>` value in terms of 
 
 ### Relative length units based on viewport
 
-The viewport-percentage length units are based on four different viewport sizes: small, large, dynamic, and default. The allowance for the different viewport sizes is in response to browser interfaces expanding and retracting dynamically and hiding and showing the content underneath.
+The **viewport-percentage length units** are based on four different viewport sizes: small, large, dynamic, and default. The allowance for the different viewport sizes is in response to browser interfaces expanding and retracting dynamically and hiding and showing the content underneath.
 
-- **Small**
+- **Small viewport units**
 
   - : When you want the smallest possible viewport in response to browser interfaces expanding dynamically, you should use the small viewport size. The small viewport size allows the content you design to fill the entire viewport when browser interfaces are expanded. Choosing this size might also possibly leave empty spaces when browser interfaces retract.
 
@@ -80,7 +80,7 @@ The viewport-percentage length units are based on four different viewport sizes:
 
     The small viewport size is represented by the `sv` prefix and results in the `sv*` viewport-percentage length units. The sizes of the small viewport-percentage units are fixed, and therefore stable, unless the viewport itself is resized.
 
-- **Large**
+- **Large viewport units**
 
   - : When you want the largest possible viewport in response to browser interfaces retracting dynamically, you should use the large viewport size. The large viewport size allows the content you design to fill the entire viewport when browser interfaces are retracting. You need to be aware that the content might get hidden when browser interfaces expand.
 
@@ -88,7 +88,7 @@ The viewport-percentage length units are based on four different viewport sizes:
 
     The large viewport unit is represented by the `lv` prefix and results in the `lv*` viewport-percentage units. The sizes of the large viewport-percentage units are fixed and therefore stable, unless the viewport itself is resized.
 
-- **Dynamic**
+- **Dynamic viewport units**
 
   - : When you want the viewport to be automatically sized in response to browser interfaces dynamically expanding or retracting, you can use the dynamic viewport size. The dynamic viewport size allows the content you design to fit exactly within the viewport, irrespective of the presence of dynamic browser interfaces.
 
@@ -97,7 +97,7 @@ The viewport-percentage length units are based on four different viewport sizes:
     > [!NOTE]
     > While the dynamic viewport size can give you more control and flexibility, using viewport-percentage units based on the dynamic viewport size can cause the content to resize while a user is scrolling a page. This can lead to degradation of the user interface and cause a performance hit.
 
-- **Default**
+- **Default viewport units**
 
   - : The default viewport size is defined by the browser. The behavior of the resulting viewport-percentage unit could be equivalent to the viewport-percentage unit based on the small viewport size, the large viewport size, an intermediate size between the two, or the dynamic viewport size.
 
@@ -183,7 +183,7 @@ For more information, see [Container queries](/en-US/docs/Web/CSS/CSS_containmen
 
 ## Absolute length units
 
-Absolute length units represent a physical measurement when the physical properties of the output medium are known, such as for print layout. This is done by anchoring one of the units to a physical unit and then defining the others relative to it. The anchoring is done differently for low-resolution devices, such as screens, versus high-resolution devices, such as printers.
+**Absolute length units** represent a physical measurement when the physical properties of the output medium are known, such as for print layout. This is done by anchoring one of the units to a **physical unit** or the **visual angle unit** and then defining the others relative to it. Physical units include `cm`, `in`, `mm`, `pc`, `pt`, `px`, and `Q`.The anchoring is done differently for low-resolution devices, such as screens, versus high-resolution devices, such as printers.
 
 For low-dpi devices, the unit `px` represents the physical _reference pixel_; other units are defined relative to it. Thus, `1in` is defined as `96px`, which equals `72pt`. The consequence of this definition is that on such devices, dimensions described in inches (`in`), centimeters (`cm`), or millimeters (`mm`) don't necessarily match the size of the physical unit with the same name.
 
