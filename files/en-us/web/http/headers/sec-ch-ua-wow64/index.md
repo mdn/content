@@ -9,10 +9,10 @@ spec-urls: https://wicg.github.io/ua-client-hints/#sec-ch-ua-wow64
 
 {{HTTPSidebar}}{{SecureContext_Header}}
 
-The HTTP **`Sec-CH-UA-WoW64`** {{Glossary("request header")}} is a [user agent client hint](/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) indicating if a 32-bit User-Agent application is running on a 64-bit Windows machine.
+The HTTP **`Sec-CH-UA-WoW64`** {{Glossary("request header")}} is a [user agent client hint](/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) indicating if a 32-bit user-agent application is running on a 64-bit Windows machine.
 
-[WoW64](https://en.wikipedia.org/wiki/WoW64) was commonly used to know which NPAPI plugin installer should be offered for download.
-This client hint header is used for backwards compatibility considerations, to provide a one-to-one mapping from the User-Agent string of certain browsers to UA client hints.
+[WoW64](https://en.wikipedia.org/wiki/WoW64) was commonly used to know which [NPAPI](https://en.wikipedia.org/wiki/NPAPI) plugin installer should be offered for download.
+This client hint header is used for backwards compatibility considerations, to provide a one-to-one mapping from the user-agent string of certain browsers to UA client hints.
 
 <table class="properties">
   <tbody>
@@ -39,7 +39,7 @@ Sec-CH-UA-WoW64: <boolean>
 ### Directives
 
 - `<boolean>`
-  - : `?1` means the user agent's binary is running in 32-bit mode on 64-bit Windows (true) and `?0` means the inverse (false).
+  - : `?1` indicates that the user agent's binary is running in 32-bit mode on 64-bit Windows (true), while `?0` means that it is not (false).
 
 ## Examples
 
