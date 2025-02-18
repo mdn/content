@@ -26,7 +26,7 @@ Each event corresponds to a particular stage in the navigation. The sequence of 
 
   - `{{WebExtAPIRef("webNavigation.onCreatedNavigationTarget", "onCreatedNavigationTarget")}}` is fired before `onBeforeNavigate` if the browser needed to create a new tab or window for the navigation (for example, because the user opened a link in a new tab).
   - {{WebExtAPIRef("webNavigation.onHistoryStateUpdated", "onHistoryStateUpdated")}} is fired if a page uses the [history API](/en-US/docs/Web/API/History_API) to update the URL displayed in the browser's location bar.
-  - {{WebExtAPIRef("webNavigation.onReferenceFragmentUpdated", "onReferenceFragmentUpdated")}} is fired if the [fragment identifier](/en-US/docs/Web/URI/Fragment) for a page is changed.
+  - {{WebExtAPIRef("webNavigation.onReferenceFragmentUpdated", "onReferenceFragmentUpdated")}} is fired if the [fragment identifier](/en-US/docs/Web/URI/Reference/Fragment) for a page is changed.
   - {{WebExtAPIRef("webNavigation.onErrorOccurred", "onErrorOccurred")}} can be fired at any point.
 
 Each navigation is a URL transition in a particular browser frame. The browser frame is identified by a tab ID and a frame ID. The frame may be the top-level browsing context in the tab, or may be a nested browsing context implemented as an [iframe](/en-US/docs/Web/HTML/Element/iframe).

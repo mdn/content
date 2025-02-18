@@ -2,7 +2,7 @@
 title: "console: error() static method"
 short-title: error()
 slug: Web/API/console/error_static
-page-type: web-api-instance-method
+page-type: web-api-static-method
 browser-compat: api.console.error_static
 ---
 

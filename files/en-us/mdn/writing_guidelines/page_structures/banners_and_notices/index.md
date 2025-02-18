@@ -2,9 +2,8 @@
 title: Banners and notices
 slug: MDN/Writing_guidelines/Page_structures/Banners_and_notices
 page-type: mdn-writing-guide
+sidebar: mdnsidebar
 ---
-
-{{MDNSidebar}}
 
 Banners and notices are displayed in some pages, in particular API reference, in order to highlight important factors that will affect how the described content is used.
 For example, banners are used to highlight when a particular interface, method or property is deprecated, and should not be used in production code, or can only be used in a secure context.

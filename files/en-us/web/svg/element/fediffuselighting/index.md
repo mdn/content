@@ -11,6 +11,8 @@ The **`<feDiffuseLighting>`** [SVG](/en-US/docs/Web/SVG) filter primitive lights
 
 The light map produced by this filter primitive can be combined with a texture image using the multiply term of the `arithmetic` operator of the {{SVGElement("feComposite")}} filter primitive. Multiple light sources can be simulated by adding several of these light maps together before applying it to the texture image.
 
+Like other filter primitives, it handles color components in the `linearRGB` {{glossary("color space")}} by default. You can use {{svgattr("color-interpolation-filters")}} to use `sRGB` instead.
+
 ## Usage context
 
 {{svginfo}}

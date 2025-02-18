@@ -2,9 +2,8 @@
 title: WebAssembly memory instructions
 slug: WebAssembly/Reference/Memory
 page-type: landing-page
+sidebar: webassemblysidebar
 ---
-
-{{WebAssemblySidebar}}
 
 WebAssembly memory instructions.
 

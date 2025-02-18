@@ -14,7 +14,7 @@ This property enables access to the URI set for a link within an SVG document.
 
 ## Value
 
-A {{domxref("SVGAnimatedString")}} indicating the value of the href attribute. Additionally, for elements defined to support it, it reflects the value of the {{SVGAttr("xlink:href")}} {{deprecated_inline}} attribute when the href attribute is not set.
+An {{domxref("SVGAnimatedString")}} indicating the value of the href attribute. Additionally, for elements defined to support it, it reflects the value of the {{SVGAttr("xlink:href")}} {{deprecated_inline}} attribute when the href attribute is not set.
 
 ## Examples
 

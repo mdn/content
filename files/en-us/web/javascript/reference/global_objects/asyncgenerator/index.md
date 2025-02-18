@@ -13,7 +13,27 @@ Async generator methods always yield {{jsxref("Promise")}} objects.
 
 `AsyncGenerator` is a subclass of the hidden {{jsxref("AsyncIterator")}} class.
 
-{{EmbedInteractiveExample("pages/js/expressions-async-function-asterisk.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Async Function Asterisk", "taller")}}
+
+```js interactive-example
+async function* foo() {
+  yield await Promise.resolve("a");
+  yield await Promise.resolve("b");
+  yield await Promise.resolve("c");
+}
+
+let str = "";
+
+async function generate() {
+  for await (const val of foo()) {
+    str = str + val;
+  }
+  console.log(str);
+}
+
+generate();
+// Expected output: "abc"
+```
 
 ## Constructor
 

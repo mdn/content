@@ -9,8 +9,6 @@ browser-compat: api.NodeIterator
 
 The **`NodeIterator`** interface represents an iterator to traverse nodes of a DOM subtree in document order.
 
-## Syntax
-
 A `NodeIterator` can be created using the {{domxref("Document.createNodeIterator()")}} method, as follows:
 
 ```js

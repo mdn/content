@@ -1,5 +1,5 @@
 ---
-title: ":-moz-user-disabled"
+title: :-moz-user-disabled
 slug: Web/CSS/:-moz-user-disabled
 page-type: css-pseudo-class
 status:

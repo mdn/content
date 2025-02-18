@@ -2,7 +2,7 @@
 title: "console: assert() static method"
 short-title: assert()
 slug: Web/API/console/assert_static
-page-type: web-api-instance-method
+page-type: web-api-static-method
 browser-compat: api.console.assert_static
 ---
 

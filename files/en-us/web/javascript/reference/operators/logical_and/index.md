@@ -11,7 +11,15 @@ The **logical AND (`&&`)** (logical conjunction) operator for a set of boolean o
 
 More generally, the operator returns the value of the first {{Glossary("falsy")}} operand encountered when evaluating from left to right, or the value of the last operand if they are all {{Glossary("truthy")}}.
 
-{{EmbedInteractiveExample("pages/js/expressions-logical-and.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Logical AND", "shorter")}}
+
+```js interactive-example
+const a = 3;
+const b = -2;
+
+console.log(a > 0 && b > 0);
+// Expected output: false
+```
 
 ## Syntax
 

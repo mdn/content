@@ -10,7 +10,7 @@ browser-compat: api.Navigator.getAutoplayPolicy
 
 {{APIRef("HTML DOM")}}{{SeeCompatTable}}
 
-The **`getAutoplayPolicy()`** method of the _Autoplay Policy Detection API_ provides information about whether [autoplay](/en-US/docs/Web/Media/Autoplay_guide) of media elements and audio contexts is allowed, disallowed, or only allowed if the audio is muted.
+The **`getAutoplayPolicy()`** method of the _Autoplay Policy Detection API_ provides information about whether [autoplay](/en-US/docs/Web/Media/Guides/Autoplay) of media elements and audio contexts is allowed, disallowed, or only allowed if the audio is muted.
 
 Applications can use this information to provide an appropriate user experience.
 For example, if the user agent policy only allows autoplay of inaudible content, the application might mute videos so that they can still autoplay.
@@ -300,4 +300,4 @@ The result is the same as in the previous example:
 
 ## See also
 
-- [Autoplay guide for media and Web Audio APIs](/en-US/docs/Web/Media/Autoplay_guide)
+- [Autoplay guide for media and Web Audio APIs](/en-US/docs/Web/Media/Guides/Autoplay)

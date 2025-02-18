@@ -1,5 +1,5 @@
 ---
-title: "::-webkit-slider-runnable-track"
+title: ::-webkit-slider-runnable-track
 slug: Web/CSS/::-webkit-slider-runnable-track
 page-type: css-pseudo-element
 status:

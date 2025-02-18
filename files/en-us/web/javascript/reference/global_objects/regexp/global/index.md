@@ -9,7 +9,19 @@ browser-compat: javascript.builtins.RegExp.global
 
 The **`global`** accessor property of {{jsxref("RegExp")}} instances returns whether or not the `g` flag is used with this regular expression.
 
-{{EmbedInteractiveExample("pages/js/regexp-prototype-global.html")}}
+{{InteractiveExample("JavaScript Demo: RegExp.prototype.global")}}
+
+```js interactive-example
+const regex1 = new RegExp("foo", "g");
+
+console.log(regex1.global);
+// Expected output: true
+
+const regex2 = new RegExp("bar", "i");
+
+console.log(regex2.global);
+// Expected output: false
+```
 
 ## Description
 

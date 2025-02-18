@@ -6,7 +6,7 @@ page-type: landing-page
 
 {{CSSRef}}
 
-**Cascading Style Sheets** (**CSS**) is a [stylesheet](/en-US/docs/Web/API/StyleSheet) language used to describe the presentation of a document written in [HTML](/en-US/docs/Web/HTML) or [XML](/en-US/docs/Web/XML/XML_introduction) (including XML dialects such as [SVG](/en-US/docs/Web/SVG), [MathML](/en-US/docs/Web/MathML) or {{Glossary("XHTML")}}). CSS describes how elements should be rendered on screen, on paper, in speech, or on other media.
+**Cascading Style Sheets** (**CSS**) is a [stylesheet](/en-US/docs/Web/API/StyleSheet) language used to describe the presentation of a document written in [HTML](/en-US/docs/Web/HTML) or [XML](/en-US/docs/Web/XML/Guides/XML_introduction) (including XML dialects such as [SVG](/en-US/docs/Web/SVG), [MathML](/en-US/docs/Web/MathML) or {{Glossary("XHTML")}}). CSS describes how elements should be rendered on screen, on paper, in speech, or on other media.
 
 CSS is among the core languages of the **open web** and is standardized across Web browsers according to [W3C specifications](https://www.w3.org/Style/CSS/#specs). Previously, the development of various parts of CSS specification was done synchronously, which allowed the versioning of the latest recommendations. You might have heard about CSS1, CSS2.1, or even CSS3. There will never be a CSS3 or a CSS4; rather, everything is now just "CSS" with individual CSS modules having version numbers.
 
@@ -27,15 +27,15 @@ After CSS 2.1, the scope of the specification increased significantly and the pr
 
 The [CSS reference](/en-US/docs/Web/CSS/Reference) is an exhaustive reference for seasoned Web developers, describing every property and concept of CSS, including:
 
-- The [syntax and forms of the language](/en-US/docs/Web/CSS/Syntax)
-- [Specificity](/en-US/docs/Web/CSS/Specificity), [inheritance](/en-US/docs/Web/CSS/Inheritance), and [the cascade](/en-US/docs/Web/CSS/Cascade)
+- The [syntax and forms of the language](/en-US/docs/Web/CSS/CSS_syntax/Syntax)
+- [Specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity), [inheritance](/en-US/docs/Web/CSS/CSS_cascade/Inheritance), and [the cascade](/en-US/docs/Web/CSS/CSS_cascade/Cascade)
 - [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors), including [pseudo-elements](/en-US/docs/Web/CSS/CSS_pseudo-elements), [nesting](/en-US/docs/Web/CSS/CSS_nesting), [scoping](/en-US/docs/Web/CSS/CSS_scoping) and [shadow parts](/en-US/docs/Web/CSS/CSS_shadow_parts)
-- [CSS at-rules](/en-US/docs/Web/CSS/At-rule), including [media](/en-US/docs/Web/CSS/CSS_media_queries) and [container](/en-US/docs/Web/CSS/CSS_containment) queries
+- [CSS at-rules](/en-US/docs/Web/CSS/CSS_syntax/At-rule), including [media](/en-US/docs/Web/CSS/CSS_media_queries) and [container](/en-US/docs/Web/CSS/CSS_containment) queries
 - [CSS units and values](/en-US/docs/Web/CSS/CSS_Values_and_Units) and [functional notations](/en-US/docs/Web/CSS/CSS_Functions)
 - [Box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model) and [margin collapse](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
-- The [containing block](/en-US/docs/Web/CSS/Containing_block)
+- The [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block)
 - [Stacking](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context) and [block-formatting](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context) contexts
-- [Initial](/en-US/docs/Web/CSS/initial_value), [computed](/en-US/docs/Web/CSS/computed_value), [used](/en-US/docs/Web/CSS/used_value), and [actual](/en-US/docs/Web/CSS/actual_value) values
+- [Initial](/en-US/docs/Web/CSS/CSS_cascade/initial_value), [computed](/en-US/docs/Web/CSS/CSS_cascade/computed_value), [used](/en-US/docs/Web/CSS/CSS_cascade/used_value), and [actual](/en-US/docs/Web/CSS/CSS_cascade/actual_value) values
 - [CSS shorthand properties](/en-US/docs/Web/CSS/Shorthand_properties)
 - [CSS flexible box](/en-US/docs/Web/CSS/CSS_flexible_box_layout), [multi-column](/en-US/docs/Web/CSS/CSS_multicol_layout) and [grid](/en-US/docs/Web/CSS/CSS_grid_layout) layout
 - [Animation](/en-US/docs/Web/CSS/CSS_animations), [transitions](/en-US/docs/Web/CSS/CSS_transitions), and [transforms](/en-US/docs/Web/CSS/CSS_transforms)
@@ -56,5 +56,5 @@ The [CSS layout cookbook](/en-US/docs/Web/CSS/Layout_cookbook) aims to bring tog
 
 ## See also
 
-- Web languages to which CSS is often applied: [HTML](/en-US/docs/Web/HTML), [SVG](/en-US/docs/Web/SVG), [MathML](/en-US/docs/Web/MathML), {{Glossary("XHTML")}}, and [XML](/en-US/docs/Web/XML/XML_introduction).
+- Web languages to which CSS is often applied: [HTML](/en-US/docs/Web/HTML), [SVG](/en-US/docs/Web/SVG), [MathML](/en-US/docs/Web/MathML), {{Glossary("XHTML")}}, and [XML](/en-US/docs/Web/XML/Guides/XML_introduction).
 - [Stack Overflow questions about CSS](https://stackoverflow.com/questions/tagged/css)

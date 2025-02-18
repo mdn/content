@@ -14,6 +14,8 @@ it has already been sent. When a request is aborted, its
 `XMLHttpRequest.UNSENT` (0) and the request's
 {{domxref("XMLHttpRequest.status", "status")}} code is set to 0.
 
+If the request is still in progress (its `readyState` is not `XMLHttpRequest.DONE` or `XMLHttpRequest.UNSENT`), a {{domxref("XMLHttpRequest/readystatechange_event", "readystatechange")}} event, {{domxref("XMLHttpRequest/abort_event", "abort")}}, and a {{domxref("XMLHttpRequest/loadend_event", "loadend")}} event are dispatched, in that order. For synchronous requests, no events are dispatched and an error is thrown instead.
+
 ## Syntax
 
 ```js-nolint

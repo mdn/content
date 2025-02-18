@@ -8,7 +8,7 @@ browser-compat: api.HTMLTrackElement.track
 
 {{APIRef("HTML DOM")}}
 
-The readonly **`track`** property of the {{domxref("HTMLTrackElement")}} interface returns a {{DOMxRef("TextTrack")}} object corresponding to the text track of the {{HTMLElement("track")}} element.
+The **`track`** read-only property of the {{domxref("HTMLTrackElement")}} interface returns a {{DOMxRef("TextTrack")}} object corresponding to the text track of the {{HTMLElement("track")}} element.
 
 ## Value
 

@@ -1,5 +1,5 @@
 ---
-title: "::-moz-list-number"
+title: ::-moz-list-number
 slug: Web/CSS/::-moz-list-number
 page-type: css-pseudo-element
 status:

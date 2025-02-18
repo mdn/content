@@ -10,7 +10,7 @@ browser-compat: svg.global_attributes.shape-rendering
 The **`shape-rendering`** attribute provides hints to the renderer about what tradeoffs to make when rendering shapes like paths, circles, or rectangles.
 
 > [!NOTE]
-> As a presentation attribute, `shape-rendering` can be used as a CSS property. See {{cssxref('shape-rendering')}} for more.
+> As a presentation attribute, `shape-rendering` also has a CSS property counterpart: {{cssxref("shape-rendering")}}. When both are specified, the CSS property takes priority.
 
 You can use this attribute with the following SVG elements:
 

@@ -2,10 +2,12 @@
 title: page-break-inside
 slug: Web/CSS/page-break-inside
 page-type: css-property
+status:
+  - deprecated
 browser-compat: css.properties.page-break-inside
 ---
 
-{{CSSRef}}
+{{CSSRef}}{{deprecated_header}}
 
 > [!WARNING]
 > This property has been replaced by the {{cssxref("break-inside")}} property.

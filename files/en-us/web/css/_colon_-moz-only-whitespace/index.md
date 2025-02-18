@@ -1,5 +1,5 @@
 ---
-title: ":-moz-only-whitespace"
+title: :-moz-only-whitespace
 slug: Web/CSS/:-moz-only-whitespace
 page-type: css-pseudo-class
 status:

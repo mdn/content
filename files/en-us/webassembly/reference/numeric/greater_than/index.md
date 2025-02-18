@@ -2,9 +2,8 @@
 title: Greater than
 slug: WebAssembly/Reference/Numeric/Greater_than
 page-type: webassembly-instruction
+sidebar: webassemblysidebar
 ---
-
-{{WebAssemblySidebar}}
 
 The **`gt`** instructions, short for _greater than_, check if a number is greater than another number. If the first number is greater than the second number equal `1` will be pushed on to the stack, otherwise `0` will be pushed on to the stack.
 

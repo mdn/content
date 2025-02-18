@@ -1,5 +1,5 @@
 ---
-title: "::-webkit-progress-bar"
+title: ::-webkit-progress-bar
 slug: Web/CSS/::-webkit-progress-bar
 page-type: css-pseudo-element
 status:

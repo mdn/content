@@ -252,7 +252,7 @@ htmlElem.addEventListener("click", showHide);
 document.addEventListener("keydown", showHide);
 
 function showHide() {
-  if (divElem.classList[0] === "show") {
+  if (divElem.classList.contains("show")) {
     divElem.classList.remove("show");
     divElem.classList.add("hide");
   } else {

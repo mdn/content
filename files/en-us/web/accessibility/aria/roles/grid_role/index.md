@@ -244,7 +244,7 @@ trs.forEach((row) => {
   row.querySelectorAll("td").forEach((el) => {
     el.dataset.row = rowIndex;
     el.dataset.col = colIndex;
-    rowIndex++;
+    colIndex++;
   });
   if (colIndex > maxCol) {
     maxCol = colIndex - 1;

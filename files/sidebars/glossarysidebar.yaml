@@ -6,3 +6,5 @@ sidebar:
     title: Glossary
   - type: listSubPages
     path: /Glossary
+    depth: 2
+    nested: true

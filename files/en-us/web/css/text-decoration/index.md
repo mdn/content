@@ -126,4 +126,5 @@ The `text-decoration` property is specified as one or more space-separated value
 
 - The individual text-decoration properties are {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-decoration-style")}}, and {{cssxref("text-decoration-thickness")}}.
 - The {{cssxref("text-decoration-skip-ink")}}, {{cssxref("text-underline-offset")}}, and {{cssxref("text-underline-position")}} properties also affect text-decoration, but are not included in the shorthand.
-- The {{cssxref("list-style")}} attribute controls the appearance of items in HTML {{HTMLElement("ol")}} and {{HTMLElement("ul")}} lists.
+- The {{cssxref("list-style")}} property controls the appearance of items in HTML {{HTMLElement("ol")}} and {{HTMLElement("ul")}} lists.
+- SVG {{SVGAttr("text-decoration")}} attribute

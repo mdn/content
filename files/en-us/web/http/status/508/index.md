@@ -18,10 +18,6 @@ It was introduced as a fallback for cases where WebDAV clients do not support {{
 508 Loop Detected
 ```
 
-## Specifications
-
-{{Specifications}}
-
 ## Examples
 
 ### Infinite loop in WebDAV search
@@ -50,6 +46,10 @@ Content-Length: 72
   "Message": "Please check the resources for cyclic references and try again."
 }
 ```
+
+## Specifications
+
+{{Specifications}}
 
 ## See also
 

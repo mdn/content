@@ -2,9 +2,8 @@
 title: Feature status
 slug: MDN/Writing_guidelines/Page_structures/Feature_status
 page-type: mdn-writing-guide
+sidebar: mdnsidebar
 ---
-
-{{MDNSidebar}}
 
 A feature status provides developers with information about the implementation stage of the feature among browser vendors and is one of the following:
 
@@ -69,12 +68,11 @@ The following macros are used to render the status banners in page headers:
 
 The following macros are used to render inline status icons next to definition list items:
 
-- [`\{{Experimental_Inline}}`](https://github.com/mdn/yari/blob/main/kumascript/macros/experimental_inline.ejs) icon: {{Experimental_Inline}}
-- [`\{{Non-standard_Inline}}`](https://github.com/mdn/yari/blob/main/kumascript/macros/Non-standard_Inline.ejs) icon: {{Non-standard_Inline}}
-- [`\{{Deprecated_Inline}}`](https://github.com/mdn/yari/blob/main/kumascript/macros/Deprecated_Inline.ejs) icon: {{Deprecated_Inline}}
+- [`\{{Experimental_Inline}}`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/badges.rs) icon: {{Experimental_Inline}}
+- [`\{{Non-standard_Inline}}`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/badges.rs) icon: {{Non-standard_Inline}}
+- [`\{{Deprecated_Inline}}`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/badges.rs) icon: {{Deprecated_Inline}}
 
 ## See also
 
 - [Sidebar macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Sidebars)
 - [Link macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Links)
-- [List of macros](https://github.com/mdn/yari/tree/main/kumascript/macros) on GitHub

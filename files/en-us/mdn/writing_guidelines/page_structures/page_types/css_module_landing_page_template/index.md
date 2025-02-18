@@ -2,9 +2,8 @@
 title: CSS module landing page template
 slug: MDN/Writing_guidelines/Page_structures/Page_types/CSS_module_landing_page_template
 page-type: mdn-writing-guide
+sidebar: mdnsidebar
 ---
-
-{{MDNSidebar}}
 
 > **Note:** _Remember to remove this note block before publishing._
 >

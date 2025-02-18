@@ -7,7 +7,7 @@ browser-compat: css.at-rules.container
 
 {{CSSRef}}
 
-The **`@container`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rule) is a conditional group rule that applies styles to a [containment context](/en-US/docs/Web/CSS/CSS_containment/Container_queries#naming_containment_contexts).
+The **`@container`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule) is a conditional group rule that applies styles to a [containment context](/en-US/docs/Web/CSS/CSS_containment/Container_queries#naming_containment_contexts).
 Style declarations are filtered by a condition and applied to the container if the condition is true.
 The condition is evaluated when the container size or [`<style-feature>`](#container_style_queries) value changes.
 
@@ -148,6 +148,10 @@ The following descriptors can be used within the container condition:
 - `width`
   - : The width of the container expressed as a {{cssxref("length")}} value.
 
+## Formal syntax
+
+{{csssyntax}}
+
 ## Examples
 
 ### Setting styles based on a container's size
@@ -260,8 +264,6 @@ The following query evaluates to true and applies the declared style if the cont
 
 ### Container style queries
 
-{{CSSRef}}{{SeeCompatTable}}
-
 Container queries can also evaluate the computed style of the container element. A _container style query_ is a `@container` query that uses one or more `style()` functional notations. The boolean syntax and logic combining style features into a style query is the same as for [CSS feature queries](/en-US/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries).
 
 ```css
@@ -273,7 +275,7 @@ Container queries can also evaluate the computed style of the container element.
 }
 ```
 
-The parameter of each `style()` is a single `<style-feature>`. A **`<style-feature>`** is a valid CSS [declaration](/en-US/docs/Web/CSS/Syntax#css_declarations), a CSS property, or a [`<custom-property-name>`](/en-US/docs/Web/CSS/var#values).
+The parameter of each `style()` is a single `<style-feature>`. A **`<style-feature>`** is a valid CSS [declaration](/en-US/docs/Web/CSS/CSS_syntax/Syntax#css_declarations), a CSS property, or a [`<custom-property-name>`](/en-US/docs/Web/CSS/var#values).
 
 ```css
 @container style(--themeBackground),

@@ -224,4 +224,5 @@ font-family:
 
 - {{cssxref("font-style")}}
 - {{cssxref("font-weight")}}
+- SVG {{SVGAttr("font-family")}} attribute
 - [Learn: Fundamental text and font styling](/en-US/docs/Learn_web_development/Core/Text_styling/Fundamentals)

@@ -16,7 +16,7 @@ created with its {{domxref("ShadowRoot.mode")}} closed.
 ## Syntax
 
 ```js-nolint
-const composed = Event.composedPath()
+composedPath()
 ```
 
 ### Parameters

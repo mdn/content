@@ -4,7 +4,7 @@ slug: Learn_web_development/Howto/Design_and_accessibility/Design_for_all_types_
 page-type: learn-faq
 ---
 
-{{QuicklinksWithSubPages("Learn/Common_questions")}}
+{{QuicklinksWithSubPages("/en-US/docs/Learn_web_development/Howto")}}
 
 This article provides basic tips to help you design websites for any kind of user.
 
@@ -36,7 +36,7 @@ When you're building a website, one top issue to consider is [Universal Design](
 
 ## Active Learning
 
-_There is no active learning available yet. [Please, consider contributing](/en-US/docs/MDN/Community/Contributing/Getting_started)._
+_There is no active learning available yet. [Please, consider contributing](/en-US/docs/MDN/Community/Getting_started)._
 
 ## Dig deeper
 

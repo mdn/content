@@ -9,7 +9,15 @@ browser-compat: javascript.builtins.Array.from
 
 The **`Array.from()`** static method creates a new, shallow-copied `Array` instance from an [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol) or [array-like](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#working_with_array-like_objects) object.
 
-{{EmbedInteractiveExample("pages/js/array-from.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Array.from()", "shorter")}}
+
+```js interactive-example
+console.log(Array.from("foo"));
+// Expected output: Array ["f", "o", "o"]
+
+console.log(Array.from([1, 2, 3], (x) => x + x));
+// Expected output: Array [2, 4, 6]
+```
 
 ## Syntax
 

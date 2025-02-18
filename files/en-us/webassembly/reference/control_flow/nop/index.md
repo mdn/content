@@ -2,9 +2,8 @@
 title: nop
 slug: WebAssembly/Reference/Control_flow/nop
 page-type: webassembly-instruction
+sidebar: webassemblysidebar
 ---
-
-{{WebAssemblySidebar}}
 
 **`nop`** stands for no-operation. It literally does nothing.
 

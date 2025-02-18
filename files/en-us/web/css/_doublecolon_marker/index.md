@@ -1,5 +1,5 @@
 ---
-title: "::marker"
+title: ::marker
 slug: Web/CSS/::marker
 page-type: css-pseudo-element
 browser-compat: css.selectors.marker

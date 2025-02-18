@@ -9,7 +9,21 @@ browser-compat: javascript.builtins.Object.isSealed
 
 The **`Object.isSealed()`** static method determines if an object is [sealed](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/seal).
 
-{{EmbedInteractiveExample("pages/js/object-issealed.html")}}
+{{InteractiveExample("JavaScript Demo: Object.isSealed()")}}
+
+```js interactive-example
+const object1 = {
+  property1: 42,
+};
+
+console.log(Object.isSealed(object1));
+// Expected output: false
+
+Object.seal(object1);
+
+console.log(Object.isSealed(object1));
+// Expected output: true
+```
 
 ## Syntax
 

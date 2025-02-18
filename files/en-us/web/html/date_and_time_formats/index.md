@@ -430,6 +430,6 @@ Why worry about the Y10K problem if it is going to happen many centuries after y
 - {{HTMLElement("input")}}
 - {{HTMLElement("ins")}} and {{HTMLElement("del")}}: see the `datetime` attribute, which specifies either a date or a local date and time at which the content was inserted or deleted
 - [The ISO 8601 specification](https://www.iso.org/iso-8601-date-and-time-format.html)
-- [Numbers and Dates](/en-US/docs/Web/JavaScript/Guide/Numbers_and_dates) in the [JavaScript Guide](/en-US/docs/Web/JavaScript/Guide)
+- [Representing dates & times](/en-US/docs/Web/JavaScript/Guide/Representing_dates_times) in the [JavaScript Guide](/en-US/docs/Web/JavaScript/Guide)
 - The JavaScript {{jsxref("Date")}} object
 - The [`Intl.DateTimeFormat`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) object for formatting dates and times for a given locale

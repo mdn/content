@@ -14,7 +14,7 @@ removes the {{domxref("Attr")}} corresponding to the given namespace and local n
 ## Syntax
 
 ```js-nolint
-removeNamedItem(namespace, localName)
+removeNamedItemNS(namespace, localName)
 ```
 
 ### Parameters

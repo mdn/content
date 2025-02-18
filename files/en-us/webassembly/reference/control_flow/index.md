@@ -2,9 +2,8 @@
 title: WebAssembly control flow instructions
 slug: WebAssembly/Reference/Control_flow
 page-type: landing-page
+sidebar: webassemblysidebar
 ---
-
-{{WebAssemblySidebar}}
 
 WebAssembly control flow instructions.
 

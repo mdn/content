@@ -23,7 +23,7 @@ system of the specified DOM {{domxref("Node")}}.
 ## Syntax
 
 ```js-nolint
-convertPointFromPageToNode(node, pagePoint)
+webkitConvertPointFromPageToNode(node, pagePoint)
 ```
 
 ### Parameters

@@ -463,6 +463,9 @@ If a link is hovered over, the browser will start prefetching that specific link
 
 If the user hovers over another link before the prefetch completes, the `expects_no_vary_search` pattern tells the browser that there is no need to cancel the current prefetch, because all `/users` URLs with `id` URL parameter values effectively point to the same page for this context (and for caching purposes).
 
+> [!WARNING]
+> Additional care must be taken when using prerender with `No-Vary-Search` since the page may initially be prerendered with different URL parameters. `No-Vary-Search` is used for URL parameters that deliver the same resource from the server, but are used by the client for various reasons (client-side rendering, UTM parameters for analytics measurement, etc.). As the initial prerender may be for different URL parameters, any code depending on them should only run after prerender activation.
+
 ### `eagerness` example
 
 The following set of document rules shows how `eagerness` can be used to hint at the eagerness with which the browser should prerender each matching set of links.

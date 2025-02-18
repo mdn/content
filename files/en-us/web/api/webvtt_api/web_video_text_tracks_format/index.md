@@ -474,7 +474,7 @@ For example, the following `STYLE` block would match all cue text and color it y
 
 ```plain
 STYLE
-cue {
+::cue {
   color: yellow;
 }
 ```
@@ -487,16 +487,16 @@ For example, the following block would match cue payload text marked up with `la
 
 ```plain
 STYLE
-cue(c),
-cue(i),
-cue(b),
-cue(u),
-cue(ruby),
-cue(rt),
-cue(v) {
+::cue(c),
+::cue(i),
+::cue(b),
+::cue(u),
+::cue(ruby),
+::cue(rt),
+::cue(v) {
   color: red;
 }
-cue(lang) {
+::cue(lang) {
   color: yellow;
 }
 ```

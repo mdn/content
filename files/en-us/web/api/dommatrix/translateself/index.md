@@ -15,8 +15,8 @@ To translate a matrix without mutating it, see {{domxref("DOMMatrixReadOnly.tran
 ## Syntax
 
 ```js-nolint
-DOMMatrix.translateSelf(translateX, translateY)
-DOMMatrix.translateSelf(translateX, translateY, translateZ)
+translateSelf(translateX, translateY)
+translateSelf(translateX, translateY, translateZ)
 ```
 
 ### Parameters

@@ -536,7 +536,6 @@ Of course Express is deliberately a very lightweight web application framework, 
 
 ## See also
 
-- [Venkat.R - Manage Multiple Node versions](https://medium.com/@ramsunvtech/manage-multiple-node-versions-e3245d5ede44)
 - [Modules](https://nodejs.org/api/modules.html#modules_modules) (Node API docs)
 - [Express](https://expressjs.com/) (home page)
 - [Basic routing](https://expressjs.com/en/starter/basic-routing.html) (Express docs)

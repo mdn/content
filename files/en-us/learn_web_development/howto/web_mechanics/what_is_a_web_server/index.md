@@ -4,7 +4,7 @@ slug: Learn_web_development/Howto/Web_mechanics/What_is_a_web_server
 page-type: learn-faq
 ---
 
-{{QuicklinksWithSubPages("Learn/Common_questions")}}
+{{QuicklinksWithSubPages("Learn_web_development/Howto")}}
 
 In this article, we explain what web servers are, how web servers work, and why they are important.
 

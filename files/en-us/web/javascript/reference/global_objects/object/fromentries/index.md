@@ -9,7 +9,19 @@ browser-compat: javascript.builtins.Object.fromEntries
 
 The **`Object.fromEntries()`** static method transforms a list of key-value pairs into an object.
 
-{{EmbedInteractiveExample("pages/js/object-fromentries.html")}}
+{{InteractiveExample("JavaScript Demo: Object.fromEntries()")}}
+
+```js interactive-example
+const entries = new Map([
+  ["foo", "bar"],
+  ["baz", 42],
+]);
+
+const obj = Object.fromEntries(entries);
+
+console.log(obj);
+// Expected output: Object { foo: "bar", baz: 42 }
+```
 
 ## Syntax
 

@@ -25,8 +25,8 @@ In the previous article, we looked at one of the most important features for mak
       <th scope="row">Learning outcomes:</th>
       <td>
         <ul>
-          <li>An understanding of the accessibility issues associated with tables.<li>
-          <li>Adding captions to tables.<li>
+          <li>An understanding of the accessibility issues associated with tables.</li>
+          <li>Adding captions to tables.</li>
           <li>Better table structuring with head, body, and footer.</li>
           <li>Creating further association between headers and cells with the <code>scope</code>, <code>id</code>, and <code>headers</code> attributes.</li>
         </ul>
@@ -137,9 +137,9 @@ A caption is placed directly beneath the `<table>` tag.
 
 ### Active learning: Adding a caption
 
-Let's try this out, revisiting an example we first met in the previous article.
+Let's try this out, using a language teacher's school timetable as an example.
 
-1. Open up your language teacher's school timetable from the end of [HTML table basics](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics#active_learning_colgroup_and_col), or make a local copy of our [timetable-fixed.html](https://github.com/mdn/learning-area/blob/main/html/tables/basic/timetable-fixed.html) file.
+1. Make a local copy of our [timetable-fixed.html](https://github.com/mdn/learning-area/blob/main/html/tables/basic/timetable-fixed.html) file.
 2. Add a suitable caption for the table.
 3. Save your code and open it in a browser to see what it looks like.
 

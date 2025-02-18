@@ -4,7 +4,7 @@ slug: Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost
 page-type: learn-faq
 ---
 
-{{QuicklinksWithSubPages("Learn/Common_questions")}}
+{{QuicklinksWithSubPages("/en-US/docs/Learn_web_development/Howto")}}
 
 Getting involved on the Web isn't as cheap as it looks. In this article we discuss how much you may have to spend, and why.
 

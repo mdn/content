@@ -10,7 +10,22 @@ browser-compat: javascript.builtins.Number.toExponential
 The **`toExponential()`** method of {{jsxref("Number")}} values returns a string representing
 this number in exponential notation.
 
-{{EmbedInteractiveExample("pages/js/number-toexponential.html")}}
+{{InteractiveExample("JavaScript Demo: Number.toExponential()")}}
+
+```js interactive-example
+function expo(x, f) {
+  return Number.parseFloat(x).toExponential(f);
+}
+
+console.log(expo(123456, 2));
+// Expected output: "1.23e+5"
+
+console.log(expo("123456"));
+// Expected output: "1.23456e+5"
+
+console.log(expo("oink"));
+// Expected output: "NaN"
+```
 
 ## Syntax
 

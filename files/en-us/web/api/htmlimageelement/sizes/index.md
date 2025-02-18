@@ -21,33 +21,10 @@ by [media queries](/en-US/docs/Web/CSS/CSS_media_queries).
 ## Value
 
 A string containing a comma-separated list of source size descriptors
-followed by an optional fallback size. Each **source size descriptor** is
+followed by an optional fallback size. Each source size descriptor is
 comprised of a media condition, then at least one whitespace character, then the
-**source size value** to use for the image when the media condition
-evaluates to `true`.
-
-### Media conditions
-
-Each source size descriptor consists of a media condition as defined by the media
-queries standard. Because a source size descriptor is used to specify the width to use
-for the image during layout of the page, the media condition is typically (but not
-necessarily) based entirely on [width](/en-US/docs/Web/CSS/@media/width) information. See
-[Using media queries, Syntax](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries#syntax) for
-details on how to construct a media condition.
-
-### Source size values
-
-The source size value is a CSS {{cssxref("length")}}. It may
-be specified using font-relative units (such as `em` or `ex`),
-absolute units (such as `px` or `cm`), or the `vw`
-unit, which lets you specify the width as a percentage of the viewport width
-(`1vw` being 1% of the viewport width).
-
-> [!NOTE]
-> The source size value must _not_ be specified as a
-> percentage of the container size; that is, lengths such as `50%` or
-> `100%` are not allowed, as there would be uncertainty as to what the
-> specified value is a percentage of.
+source size value to use for the image when the media condition
+evaluates to `true`. For more information about the syntax of the `sizes` attribute, see [`<img>`](/en-US/docs/Web/HTML/Element/img#sizes).
 
 ## Examples
 

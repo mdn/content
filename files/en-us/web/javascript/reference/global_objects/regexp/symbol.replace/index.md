@@ -9,7 +9,18 @@ browser-compat: javascript.builtins.RegExp.@@replace
 
 The **`[Symbol.replace]()`** method of {{jsxref("RegExp")}} instances specifies how [`String.prototype.replace()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace) and [`String.prototype.replaceAll()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replaceAll) should behave when the regular expression is passed in as the pattern.
 
-{{EmbedInteractiveExample("pages/js/regexp-prototype-@@replace.html")}}
+{{InteractiveExample("JavaScript Demo: RegExp.prototype[SYmbol.replace]()")}}
+
+```js interactive-example
+class RegExp1 extends RegExp {
+  [Symbol.replace](str) {
+    return RegExp.prototype[Symbol.replace].call(this, str, "#!@?");
+  }
+}
+
+console.log("football".replace(new RegExp1("foo")));
+// Expected output: "#!@?tball"
+```
 
 ## Syntax
 

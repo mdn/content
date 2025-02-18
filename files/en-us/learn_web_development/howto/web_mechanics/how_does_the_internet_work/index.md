@@ -4,7 +4,7 @@ slug: Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work
 page-type: learn-faq
 ---
 
-{{QuicklinksWithSubPages("Learn/Common_questions")}}
+{{QuicklinksWithSubPages("/en-US/docs/Learn_web_development/Howto")}}
 
 This article discusses what the Internet is and how it works.
 

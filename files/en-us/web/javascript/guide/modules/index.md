@@ -175,8 +175,7 @@ Relative URLs are resolved to absolute URL addresses using the [base URL](/en-US
 ```
 
 The import map is defined using a [JSON object](/en-US/docs/Web/HTML/Element/script/type/importmap#import_map_json_representation) inside a `<script>` element with the `type` attribute set to [`importmap`](/en-US/docs/Web/HTML/Element/script/type/importmap).
-There can only be one import map in the document, and because it is used to resolve which modules are loaded in both static and dynamic imports, it must be declared before any `<script>` elements that import modules.
-Note that the import map only applies to the document — the specification does not cover how to apply an import map in a worker or worklet context. <!-- https://github.com/WICG/import-maps/issues/2 -->
+Note that an import map only applies to the document — the specification does not cover how to apply an import map in a worker or worklet context. <!-- https://github.com/WICG/import-maps/issues/2 -->
 
 With this map you can now use the property names above as module specifiers.
 If there is no trailing forward slash on the module specifier key then the whole module specifier key is matched and substituted.

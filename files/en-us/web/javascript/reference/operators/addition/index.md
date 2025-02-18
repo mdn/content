@@ -9,7 +9,21 @@ browser-compat: javascript.operators.addition
 
 The **addition (`+`)** operator produces the sum of numeric operands or string concatenation.
 
-{{EmbedInteractiveExample("pages/js/expressions-addition.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Addition operator")}}
+
+```js interactive-example
+console.log(2 + 2);
+// Expected output: 4
+
+console.log(2 + true);
+// Expected output: 3
+
+console.log("hello " + "everyone");
+// Expected output: "hello everyone"
+
+console.log(2001 + ": A Space Odyssey");
+// Expected output: "2001: A Space Odyssey"
+```
 
 ## Syntax
 

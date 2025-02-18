@@ -25,7 +25,7 @@ In this article, we'll explain what asynchronous programming is, why we need it,
           <li>To gain familiarity with what asynchronous JavaScript is, how it differs from synchronous JavaScript, and why we need it.</li>
           <li>What synchronous programming is, and why it can sometimes be problematic.</li>
           <li>How asynchronous programming aims to solve these problems.</li>
-          <li>Event handlers and callback functions, and how they relate to asychronous programming.</li>
+          <li>Event handlers and callback functions, and how they relate to asynchronous programming.</li>
         </ul>
       </td>
     </tr>

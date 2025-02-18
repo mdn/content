@@ -237,7 +237,7 @@ The second code block is identical except that it sets the `shadowrootdelegatesf
 </div>
 ```
 
-Last of all we use the following CSS to apply a green-yellow border to the parent `<div>` element when it has focus.
+Last of all we use the following CSS to apply a red border to the parent `<div>` element when it has focus.
 
 ```css
 div:focus {

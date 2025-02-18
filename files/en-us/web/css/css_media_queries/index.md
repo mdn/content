@@ -16,7 +16,7 @@ Media queries are a key component of [responsive design](/en-US/docs/Learn_web_d
 
 Other common examples include increasing the font size and hiding navigation menus when printing a page, adjusting the padding between paragraphs when a page is viewed in portrait or landscape mode, or increasing the size of buttons to provide a larger hit area on touchscreens.
 
-In [CSS](/en-US/docs/Web/CSS), use the {{cssxref("@media")}} [at-rule](/en-US/docs/Web/CSS/At-rule) to conditionally apply part of a style sheet based on the result of a media query. To conditionally apply an entire style sheet, use {{cssxref("@import")}}.
+In [CSS](/en-US/docs/Web/CSS), use the {{cssxref("@media")}} [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule) to conditionally apply part of a style sheet based on the result of a media query. To conditionally apply an entire style sheet, use {{cssxref("@import")}}.
 
 When designing reusable HTML components, you may also use [container queries](/en-US/docs/Web/CSS/CSS_containment/Container_queries), which allow you to apply styles based on the size of a containing element rather than the viewport or other device characteristics.
 
@@ -125,6 +125,8 @@ When designing reusable HTML components, you may also use [container queries](/e
   - {{DOMxRef("MediaList")}} interface
     - {{DOMxRef("MediaList.mediaText", "mediaText")}} property
   - {{DOMxRef("MediaQueryListEvent")}} object
+- [Device Posture API](/en-US/docs/Web/API/Device_Posture_API)
+  - {{cssxref("@media/device-posture", "device-posture")}} descriptor
 - HTML
   - `sizes` attribute for [`<img>`](/en-US/docs/Web/HTML/Element/img#sizes), [`<link>`](/en-US/docs/Web/HTML/Element/link#sizes), and [`<source>`](/en-US/docs/Web/HTML/Element/source#sizes) for {{HTMLElement("picture")}}
   - `media` attribute for [`<link>`](/en-US/docs/Web/HTML/Element/link#media), [`<source>`](/en-US/docs/Web/HTML/Element/source#media), and [`<style>`](/en-US/docs/Web/HTML/Element/style#media) [HTML](/en-US/docs/Web/HTML)

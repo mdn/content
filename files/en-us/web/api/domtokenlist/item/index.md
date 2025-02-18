@@ -18,7 +18,7 @@ determined by its position in the list, its index.
 ## Syntax
 
 ```js-nolint
-tokenList.item(index)
+item(index)
 ```
 
 ### Parameters

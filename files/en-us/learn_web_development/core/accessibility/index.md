@@ -21,7 +21,7 @@ You should be familiar with [HTML](/en-US/docs/Learn_web_development/Core/Struct
 
 - [What is accessibility?](/en-US/docs/Learn_web_development/Core/Accessibility/What_is_accessibility)
   - : This article starts off the module with a good look at what accessibility is — this includes what groups of people we need to consider and why, what tools different people use to interact with the web, and how we can make accessibility part of our web development workflow.
-- [Accessibility tooling and assitive technology](/en-US/docs/Learn_web_development/Core/Accessibility/Tooling)
+- [Accessibility tooling and assistive technology](/en-US/docs/Learn_web_development/Core/Accessibility/Tooling)
   - : Next we turn our attention to accessibility tooling, providing information on the kinds of tools you can use to help solve accessibility issues, and the assistive technologies used by people with disabilities as they browse the web. You'll be using these tools throughout subsequent articles.
 - [HTML: A good basis for accessibility](/en-US/docs/Learn_web_development/Core/Accessibility/HTML)
   - : A great deal of web content can be made accessible just by making sure the correct HTML elements are always used for the correct purpose. This article looks in detail at how HTML can be used to ensure maximum accessibility.
@@ -38,8 +38,6 @@ You should be familiar with [HTML](/en-US/docs/Learn_web_development/Core/Struct
 
 ## See also
 
-- [Learn Accessible Web Design](https://v2.scrimba.com/learn-accessible-web-design-c031?via=mdn) <sup>_MDN Curriculum partner_</sup>
-  - : [Scrimba's](https://scrimba.com?via=mdn) _Learn Accessible Web Design_ course teaches you how to write accessible HTML by solving interactive coding challenges and fixing a real-world website.
 - [Start Building Accessible Web Applications Today](https://egghead.io/courses/start-building-accessible-web-applications-today)
   - : An excellent series of video tutorials by Marcy Sutton.
 - [Deque University resources](https://dequeuniversity.com/resources/)
@@ -48,5 +46,7 @@ You should be familiar with [HTML](/en-US/docs/Learn_web_development/Core/Struct
   - : Includes guides, checklists, tools, and more.
 - [Web Accessibility Evaluation Tools List](https://www.w3.org/WAI/ER/tools/)
   - : Includes a list of web accessibility evaluation tools.
+- [Learn Accessible Web Design](https://v2.scrimba.com/learn-accessible-web-design-c031?via=mdn) <sup>_MDN learning partner_</sup>
+  - : [Scrimba's](https://scrimba.com?via=mdn) _Learn Accessible Web Design_ course teaches you how to write accessible HTML by solving interactive coding challenges and fixing a real-world website.
 
 {{NextMenu("Learn_web_development/Core/Accessibility/What_is_accessibility", "Learn_web_development/Core")}}

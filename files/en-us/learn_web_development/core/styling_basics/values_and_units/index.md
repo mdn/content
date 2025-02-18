@@ -8,7 +8,7 @@ page-type: learn-module-chapter
 
 {{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Handling_conflicts", "Learn_web_development/Core/Styling_basics/Sizing", "Learn_web_development/Core/Styling_basics")}}
 
-CSS rules contain [declarations](/en-US/docs/Web/CSS/Syntax#css_declarations), which in turn are composed of properties and values.
+CSS rules contain [declarations](/en-US/docs/Web/CSS/CSS_syntax/Syntax#css_declarations), which in turn are composed of properties and values.
 Each property used in CSS has a **value type** that describes what kind of values it is allowed to have.
 In this lesson, we will take a look at some of the most frequently used value types, what they are, and how they work.
 
@@ -43,7 +43,7 @@ In this lesson, we will take a look at some of the most frequently used value ty
 
 In CSS specifications and on the property pages here on MDN you will be able to spot value types as they will be surrounded by angle brackets (`<`, `>`), such as [`<color>`](/en-US/docs/Web/CSS/color_value) or {{cssxref("length")}}. When you see the value type `<color>` as valid for a particular property, that means you can use any valid color as a value for that property, as listed on the [`<color>`](/en-US/docs/Web/CSS/color_value) reference page.
 
-Sometimes value types and properties can have the same, or similar names — For example, there is a {{cssxref("color")}} property and a [`<color>`](/en-US/docs/Web/CSS/color_value) data type. You can use the angle brackets to determine which one you are studying in each case. HTML elements also use angle brackets, but it should be clear from the context which one you are looking at. If yo are not sure, try searching for it on MDN.
+Sometimes value types and properties can have the same, or similar names — For example, there is a {{cssxref("color")}} property and a [`<color>`](/en-US/docs/Web/CSS/color_value) data type. You can use the angle brackets to determine which one you are studying in each case. HTML elements also use angle brackets, but it should be clear from the context which one you are looking at. If you are not sure, try searching for it on MDN.
 
 > [!NOTE]
 > You'll see CSS value types referred to as _data types_. The terms are basically interchangeable — when you see something in CSS referred to as a data type, it is really just a fancy way of saying value type. The term _value_ refers to any particular expression supported by a value type that you choose to use.

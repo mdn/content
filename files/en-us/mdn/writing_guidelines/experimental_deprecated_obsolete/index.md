@@ -2,9 +2,8 @@
 title: Experimental, deprecated, and obsolete
 slug: MDN/Writing_guidelines/Experimental_deprecated_obsolete
 page-type: mdn-writing-guide
+sidebar: mdnsidebar
 ---
-
-{{MDNSidebar}}
 
 These terms are commonly associated with technologies and specifications and are used on MDN Web Docs to label the status of a technology. For the definition of these terms, MDN Web Docs align with the [Browser Compatibility Data (BCD)](https://github.com/mdn/browser-compat-data/blob/main/schemas/compat-data-schema.md#status-information) repository.
 These terms are described below in the context of their use on MDN Web Docs.

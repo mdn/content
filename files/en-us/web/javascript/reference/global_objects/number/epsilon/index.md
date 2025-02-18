@@ -9,7 +9,17 @@ browser-compat: javascript.builtins.Number.EPSILON
 
 The **`Number.EPSILON`** static data property represents the difference between 1 and the smallest floating point number greater than 1.
 
-{{EmbedInteractiveExample("pages/js/number-epsilon.html")}}
+{{InteractiveExample("JavaScript Demo: Number.EPSILON")}}
+
+```js interactive-example
+const result = Math.abs(0.2 - 0.3 + 0.1);
+
+console.log(result);
+// Expected output: 2.7755575615628914e-17
+
+console.log(result < Number.EPSILON);
+// Expected output: true
+```
 
 ## Value
 

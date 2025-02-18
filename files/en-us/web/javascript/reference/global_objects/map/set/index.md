@@ -9,7 +9,18 @@ browser-compat: javascript.builtins.Map.set
 
 The **`set()`** method of {{jsxref("Map")}} instances adds or updates an entry in this map with a specified key and a value.
 
-{{EmbedInteractiveExample("pages/js/map-prototype-set.html")}}
+{{InteractiveExample("JavaScript Demo: Map.prototype.set()")}}
+
+```js interactive-example
+const map1 = new Map();
+map1.set("bar", "foo");
+
+console.log(map1.get("bar"));
+// Expected output: "foo"
+
+console.log(map1.get("baz"));
+// Expected output: undefined
+```
 
 ## Syntax
 

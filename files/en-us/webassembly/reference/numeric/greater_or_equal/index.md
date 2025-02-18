@@ -2,9 +2,8 @@
 title: Greater or equal
 slug: WebAssembly/Reference/Numeric/Greater_or_equal
 page-type: webassembly-instruction
+sidebar: webassemblysidebar
 ---
-
-{{WebAssemblySidebar}}
 
 The **`ge`** instructions, short for _greater or equal_, check if a number is greater than or equal to another number. If the first number is greater than or equal to the second number equal `1` will be pushed on to the stack, otherwise `0` will be pushed on to the stack.
 

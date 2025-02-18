@@ -9,7 +9,23 @@ browser-compat: javascript.functions.rest_parameters
 
 The **rest parameter** syntax allows a function to accept an indefinite number of arguments as an array, providing a way to represent [variadic functions](https://en.wikipedia.org/wiki/Variadic_function) in JavaScript.
 
-{{EmbedInteractiveExample("pages/js/functions-restparameters.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Functions Rest Parameters", "taller")}}
+
+```js interactive-example
+function sum(...theArgs) {
+  let total = 0;
+  for (const arg of theArgs) {
+    total += arg;
+  }
+  return total;
+}
+
+console.log(sum(1, 2, 3));
+// Expected output: 6
+
+console.log(sum(1, 2, 3, 4));
+// Expected output: 10
+```
 
 ## Syntax
 

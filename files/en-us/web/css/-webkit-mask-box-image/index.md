@@ -1,5 +1,5 @@
 ---
-title: "-webkit-mask-box-image"
+title: -webkit-mask-box-image
 slug: Web/CSS/-webkit-mask-box-image
 page-type: css-shorthand-property
 status:
@@ -78,10 +78,10 @@ Border repeat styles, when included, are interpreted in the order of `<repeat-x>
 
 ## Formal definition
 
-- [Initial value](/en-US/docs/Web/CSS/initial_value): `none`
+- [Initial value](/en-US/docs/Web/CSS/CSS_cascade/initial_value): `none`
 - Applies to: all elements
-- [Inherited](/en-US/docs/Web/CSS/Inheritance): no
-- [Computed value](/en-US/docs/Web/CSS/computed_value): as specified
+- [Inherited](/en-US/docs/Web/CSS/CSS_cascade/Inheritance): no
+- [Computed value](/en-US/docs/Web/CSS/CSS_cascade/computed_value): as specified
 
 ## Formal syntax
 

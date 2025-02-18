@@ -9,7 +9,22 @@ browser-compat: javascript.builtins.Object.toString
 
 The **`toString()`** method of {{jsxref("Object")}} instances returns a string representing this object. This method is meant to be overridden by derived objects for custom [type coercion](/en-US/docs/Web/JavaScript/Data_structures#type_coercion) logic.
 
-{{EmbedInteractiveExample("pages/js/object-prototype-tostring.html")}}
+{{InteractiveExample("JavaScript Demo: Object.prototype.toString()")}}
+
+```js interactive-example
+function Dog(name) {
+  this.name = name;
+}
+
+const dog1 = new Dog("Gabby");
+
+Dog.prototype.toString = function dogToString() {
+  return `${this.name}`;
+};
+
+console.log(dog1.toString());
+// Expected output: "Gabby"
+```
 
 ## Syntax
 

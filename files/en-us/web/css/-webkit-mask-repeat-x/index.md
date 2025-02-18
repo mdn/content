@@ -1,5 +1,5 @@
 ---
-title: "-webkit-mask-repeat-x"
+title: -webkit-mask-repeat-x
 slug: Web/CSS/-webkit-mask-repeat-x
 page-type: css-property
 status:

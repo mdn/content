@@ -13,13 +13,6 @@ A string that reflects the [`src`](/en-US/docs/Web/HTML/Element/iframe#src) HTML
 
 Note that programmatically removing an `<iframe>`'s src attribute (e.g. via {{domxref("Element.removeAttribute()")}}) causes `about:blank` to be loaded in the frame.
 
-## Syntax
-
-```js-nolint
-src = iframeElt.src
-iframeElt.src= src
-```
-
 ## Example
 
 ```js

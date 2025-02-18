@@ -9,7 +9,19 @@ browser-compat: javascript.builtins.Function.length
 
 The **`length`** data property of a {{jsxref("Function")}} instance indicates the number of parameters expected by the function.
 
-{{EmbedInteractiveExample("pages/js/function-length.html")}}
+{{InteractiveExample("JavaScript Demo: Function.length")}}
+
+```js interactive-example
+function func1() {}
+
+function func2(a, b) {}
+
+console.log(func1.length);
+// Expected output: 0
+
+console.log(func2.length);
+// Expected output: 2
+```
 
 ## Value
 

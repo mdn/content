@@ -61,7 +61,7 @@ TODO
 ## Selling yourself to would-be employers
 
 - Create a portfolio.
-- Build the perfect resumé.
+- Build the perfect résumé.
 - Get experience — build real projects and contribute to open source.
 - Build your online persona.
 - Use sites like [LinkedIn](https://www.linkedin.com/) to help with the above.

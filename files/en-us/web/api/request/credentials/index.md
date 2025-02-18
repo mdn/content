@@ -31,7 +31,7 @@ In the following snippet, we create a new request using the {{domxref("Request.R
 
 ```js
 const request = new Request("flowers.jpg");
-const request = request.request; // returns "same-origin" by default
+const credentials = request.credentials; // returns "same-origin" by default
 ```
 
 ## Specifications

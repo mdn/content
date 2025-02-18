@@ -2,7 +2,7 @@
 title: "console: info() static method"
 short-title: info()
 slug: Web/API/console/info_static
-page-type: web-api-instance-method
+page-type: web-api-static-method
 browser-compat: api.console.info_static
 ---
 

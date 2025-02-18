@@ -13,7 +13,7 @@ It modifies the coordinate space of the CSS [visual formatting model](/en-US/doc
 {{EmbedInteractiveExample("pages/css/transform.html")}}
 
 If the property has a value different from `none`, a [stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context) will be created.
-In that case, the element will act as a [containing block](/en-US/docs/Web/CSS/Containing_block) for any `position: fixed;` or `position: absolute;` elements that it contains.
+In that case, the element will act as a [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block) for any `position: fixed;` or `position: absolute;` elements that it contains.
 
 > [!WARNING]
 > Only transformable elements can be `transform`ed.
@@ -196,4 +196,5 @@ Please see [Using CSS transforms](/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_t
 - [Using CSS transforms](/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
 - {{cssxref("&lt;transform-function&gt;")}} data type with all the transform functions explained.
 - Individual CSS properties: {{cssxref('translate')}}, {{cssxref('rotate')}}, and {{cssxref('scale')}} (there is no `skew` property).
+- SVG {{SVGAttr("transform")}} attribute
 - Online tool to visualize CSS Transform functions: [CSS Transform Playground](https://css-transform.moro.es/)

@@ -7,6 +7,9 @@ on:
     paths:
       - .vscode/dictionaries/*
 
+# No GITHUB_TOKEN permissions, as we don't use it.
+permissions: {}
+
 jobs:
   docs:
     runs-on: ubuntu-latest

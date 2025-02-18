@@ -2,9 +2,8 @@
 title: HTML element page template
 slug: MDN/Writing_guidelines/Page_structures/Page_types/HTML_element_page_template
 page-type: mdn-writing-guide
+sidebar: mdnsidebar
 ---
-
-{{MDNSidebar}}
 
 > **Note:** _Remove this whole explanatory note before publishing_
 >

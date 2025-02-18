@@ -32,7 +32,7 @@ createDocument(namespaceURI, qualifiedName, documentType)
 
 ### Return value
 
-None ({{jsxref("undefined")}}).
+The newly-created {{domxref("XMLDocument")}}.
 
 ## Examples
 

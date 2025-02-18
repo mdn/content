@@ -25,9 +25,6 @@ The possible values are:
 
 ## Usage notes
 
-> [!NOTE]
-> In Firefox, the `loading` attribute must be defined before the `src` attribute, otherwise it has no effect ([Firefox bug 1647077](https://bugzil.la/1647077)).
-
 ### JavaScript must be enabled
 
 Loading is only deferred when JavaScript is enabled.

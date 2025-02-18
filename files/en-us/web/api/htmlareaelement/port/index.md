@@ -8,10 +8,11 @@ browser-compat: api.HTMLAreaElement.port
 
 {{ApiRef("HTML DOM")}}
 
-The **`port`** property of the {{domxref("HTMLAreaElement")}} interface is a string containing the port number of the URL, or the empty string if the port is the default for the protocol.
+The **`port`** property of the {{domxref("HTMLAreaElement")}} interface is a string containing the port number of the `<area>` element's `href`. If the port is the default for the protocol (`80` for `ws:` and `http:`, `443` for `wss:` and `https:`, and `21` for `ftp:`), this property contains an empty string, `""`.
 
-> [!NOTE]
-> If the {{domxref("HTMLAreaElement")}} object refers to a URL that doesn't contain an explicit port number (e.g., `https://localhost`) or contains a port number that's the default port number corresponding to the protocol part of the URL (e.g., `https://localhost:443`), then the `port` property will be the empty string: `''`.
+This property can be set to change the port of the URL. If the URL has no {{domxref("HTMLAnchorElement.host", "host")}} or its scheme is `file:`, then setting this property has no effect. It also silently ignores invalid port numbers.
+
+See {{domxref("URL.port")}} for more information.
 
 ## Value
 

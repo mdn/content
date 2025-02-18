@@ -10,7 +10,7 @@ browser-compat: svg.global_attributes.stroke
 The **`stroke`** attribute is a presentation attribute defining the color (_or any SVG paint servers like gradients or patterns_) used to paint the outline of the shape.
 
 > [!NOTE]
-> As a presentation attribute, `stroke` can be used as a CSS property. See {{cssxref('stroke')}} for more.
+> As a presentation attribute, `stroke` also has a CSS property counterpart: {{cssxref("stroke")}}. When both are specified, the CSS property takes priority.
 
 You can use this attribute with the following SVG elements:
 
@@ -126,3 +126,7 @@ The output is as follows:
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- CSS {{cssxref("stroke")}} property

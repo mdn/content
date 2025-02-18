@@ -9,7 +9,21 @@ browser-compat: javascript.operators.multiplication
 
 The **multiplication (`*`)** operator produces the product of the operands.
 
-{{EmbedInteractiveExample("pages/js/expressions-multiplication.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Multiplication operator")}}
+
+```js interactive-example
+console.log(3 * 4);
+// Expected output: 12
+
+console.log(-3 * 4);
+// Expected output: -12
+
+console.log("3" * 2);
+// Expected output: 6
+
+console.log("foo" * 2);
+// Expected output: NaN
+```
 
 ## Syntax
 

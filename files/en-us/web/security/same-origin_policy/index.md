@@ -26,7 +26,7 @@ The following table gives examples of origin comparisons with the URL `http://st
 
 ### Inherited origins
 
-Scripts executed from pages with an `about:blank` or [`javascript:` URL](/en-US/docs/Web/URI/Schemes/javascript) inherit the origin of the document containing that URL, since these types of URLs do not contain information about an origin server.
+Scripts executed from pages with an `about:blank` or [`javascript:` URL](/en-US/docs/Web/URI/Reference/Schemes/javascript) inherit the origin of the document containing that URL, since these types of URLs do not contain information about an origin server.
 
 For example, `about:blank` is often used as a URL of new, empty popup windows into which the parent script writes content (e.g. via the {{domxref("Window.open()")}} mechanism). If this popup also contains JavaScript, that script would inherit the same origin as the script that created it.
 

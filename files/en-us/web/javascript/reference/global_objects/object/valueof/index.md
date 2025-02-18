@@ -9,7 +9,22 @@ browser-compat: javascript.builtins.Object.valueOf
 
 The **`valueOf()`** method of {{jsxref("Object")}} instances converts the `this` value [to an object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#object_coercion). This method is meant to be overridden by derived objects for custom [type conversion](/en-US/docs/Web/JavaScript/Data_structures#type_coercion) logic.
 
-{{EmbedInteractiveExample("pages/js/object-prototype-valueof.html")}}
+{{InteractiveExample("JavaScript Demo: Object.prototype.valueOf()")}}
+
+```js interactive-example
+function MyNumberType(n) {
+  this.number = n;
+}
+
+MyNumberType.prototype.valueOf = function () {
+  return this.number;
+};
+
+const object1 = new MyNumberType(4);
+
+console.log(object1 + 3);
+// Expected output: 7
+```
 
 ## Syntax
 

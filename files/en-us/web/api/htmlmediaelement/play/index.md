@@ -73,7 +73,7 @@ UI based on whether the returned promise is fulfilled or rejected. See the
 > returned promise is resolved. Be sure your code doesn't expect an immediate response.
 
 For even more in-depth information about autoplay and autoplay blocking, see our
-article [Autoplay guide for media and Web Audio APIs](/en-US/docs/Web/Media/Autoplay_guide).
+article [Autoplay guide for media and Web Audio APIs](/en-US/docs/Web/Media/Guides/Autoplay).
 
 ## Examples
 
@@ -135,5 +135,5 @@ You can [try out or remix this example in real time on Glitch](https://media-pla
 
 - [Web media technologies](/en-US/docs/Web/Media)
 - Learning: [HTML video and audio](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
-- [Autoplay guide for media and Web Audio APIs](/en-US/docs/Web/Media/Autoplay_guide)
+- [Autoplay guide for media and Web Audio APIs](/en-US/docs/Web/Media/Guides/Autoplay)
 - [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

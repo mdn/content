@@ -2,9 +2,8 @@
 title: Truncate (float to int)
 slug: WebAssembly/Reference/Numeric/Truncate_float_to_int
 page-type: webassembly-instruction
+sidebar: webassemblysidebar
 ---
-
-{{WebAssemblySidebar}}
 
 The **`trunc`** instructions, are used for converting floating points to integers. It's named truncate since it truncates the fractional part of the number when doing the conversion. There are signed and unsigned versions of this instruction.
 

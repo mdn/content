@@ -2,9 +2,8 @@
 title: Left rotate
 slug: WebAssembly/Reference/Numeric/Left_rotate
 page-type: webassembly-instruction
+sidebar: webassemblysidebar
 ---
-
-{{WebAssemblySidebar}}
 
 The **`rotl`** instructions, short for _rotate-left_, are used for performing a bitwise left-rotate.
 

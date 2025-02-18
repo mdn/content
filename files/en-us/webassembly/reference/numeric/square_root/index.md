@@ -2,9 +2,8 @@
 title: Square root
 slug: WebAssembly/Reference/Numeric/Square_root
 page-type: webassembly-instruction
+sidebar: webassemblysidebar
 ---
-
-{{WebAssemblySidebar}}
 
 The **`sqrt`** instructions, short for _square root_, are used to get the square root of a number.
 

@@ -1,5 +1,5 @@
 ---
-title: SVG fonts
+title: Using fonts in SVG
 slug: Web/SVG/Tutorial/SVG_fonts
 page-type: guide
 ---
@@ -8,103 +8,91 @@ page-type: guide
 
 {{ PreviousNext("Web/SVG/Tutorial/Filter_effects", "Web/SVG/Tutorial/SVG_Image_Tag") }}
 
-When SVG was specified, support for web fonts was not widespread in browsers. Since accessing the correct font file is crucial for rendering text correctly, a font description technology was added to SVG to provide this ability. It was implemented as a means of embedding glyph information into SVG when rendered.
+SVG supports multiple ways to specify fonts for {{SVGElement("text")}} elements.
+The recommended modern approach is to use CSS, in much the same way as you would style fonts in HTML.
 
-The base for defining an SVG font is the {{ SVGElement("font") }} element.
+## Apply and style a font using CSS
 
-## Defining a font
-
-There are some ingredients required for embedding a font in SVG. Let's show an example declaration (the one [from the specification](https://www.w3.org/TR/SVG/fonts.html#FontElement)), and explain the details.
-
-```html
-<font id="Font1" horiz-adv-x="1000">
-  <font-face
-    font-family="Super Sans"
-    font-weight="bold"
-    font-style="normal"
-    units-per-em="1000"
-    cap-height="600"
-    x-height="400"
-    ascent="700"
-    descent="300"
-    alphabetic="0"
-    mathematical="350"
-    ideographic="400"
-    hanging="500">
-    <font-face-src>
-      <font-face-name name="Super Sans Bold" />
-    </font-face-src>
-  </font-face>
-  <missing-glyph><path d="M0,0h200v200h-200z" /></missing-glyph>
-  <!-- Outline of exclamation point glyph -->
-  <glyph unicode="!" horiz-adv-x="300"></glyph>
-  <glyph unicode="@"><!-- Outline of @ glyph --></glyph>
-  <!-- more glyphs -->
-</font>
-```
-
-We start with the {{ SVGElement("font") }} element. This bears an `id` attribute, to enable it to be referenced via a URI (see below). The `horiz-adv-x` attribute determines how wide a character is on average compared to the path definitions of the single glyphs. The value `1000` sets a reasonable value to work with. There are several accompanying attributes that help further define the basic glyph-box layout.
-
-The {{ SVGElement("font-face") }} element is the SVG equivalent of the CSS [`@font-face`](/en-US/docs/Web/CSS/@font-face) declaration. It defines basic properties of the final font such as weight, style, etc. In the example above, the first and most important to be defined is `font-family`, the value of which can then be referenced in CSS and SVG `font-family` properties. The `font-weight` and `font-style` attributes have the same purpose as the equivalent descriptors in CSS. All following attributes are rendering instructions for the font layout engine; for example, how much of the glyphs' overall heights are [ascenders](<https://en.wikipedia.org/wiki/Ascender_(typography)>).
-
-Its child, the {{ SVGElement("font-face-src") }} element, corresponds to CSS' `src` descriptor in `@font-face` declarations. You can point to external sources for font declarations by means of its children {{ SVGElement("font-face-name") }} and {{ SVGElement("font-face-uri") }}. The above example states that if the renderer has a local font available named "Super Sans Bold", it should use this instead.
-
-Following {{ SVGElement("font-face-src") }} is a {{ SVGElement("missing-glyph") }} element. This defines what should be displayed if a certain glyph is not found in the font and if there are no fallback mechanisms. It also shows how glyphs are created: By adding any graphical SVG content inside. You can use literally any other SVG elements in here, even {{ SVGElement("filter") }}, {{ SVGElement("a") }} or {{ SVGElement("script") }}. For basic glyphs, however, you can add a `d` attribute — this defines a shape for the glyph exactly like how standard SVG paths work.
-
-The actual glyphs are then defined by {{ SVGElement("glyph") }} elements. The most important attribute is `unicode`. It defines the unicode code point represented by this glyph. If you also specify the [`lang`](/en-US/docs/Web/HTML/Global_attributes/lang) attribute on a glyph, you can further restrict it to certain languages (represented by `xml:lang` on the target) exclusively. Again, you can use arbitrary SVG to define the glyph, which allows for great effects in supporting user agents.
-
-Two more elements can be defined inside `font`: {{ SVGElement("hkern") }} and {{ SVGElement("vkern") }}. Each carries references to at least two characters (attributes `u1` and `u2`) and an attribute `k` that determines how much the distance between those characters should be decreased. The below example instructs user agents to place the "A" and "V" characters closer together than the standard distance between characters.
+The code below shows how you might style the given `<text>` element with a particular font using CSS: in this case the system font "Courier New".
+Note that the CSS here is nested within an SVG {{SVGElement("style")}} element, but could also be applied in the including HTML.
 
 ```html
-<hkern u1="A" u2="V" k="20" />
+<svg>
+  <style>
+    text {
+      /* Specify the system or custom font to use */
+      font-family: "Courier New", sans-serif;
+
+      /* Add other styling */
+      font-size: 24px;
+      font-weight: bold;
+      font-style: italic;
+    }
+  </style>
+  <text x="10" y="20">Some text</text>
+</svg>
 ```
 
-## Referencing a font
+This renders as shown below:
 
-When you have put together your font declaration as described above, you can just use the `font-family` attribute to actually apply the font to some SVG text:
+{{EmbedLiveSample("How to apply a font", "100", "30px")}}
+
+## Using web fonts with `@font-face`
+
+The previous section uses CSS to apply a system font, but you can apply a web font specified using the {{cssxref("@font-face")}} at-rule in exactly same way.
+
+The example demonstrates how, first defining and then using a font family named "FiraSans":
 
 ```html
-<font>
-  <font-face font-family="Super Sans" />
-  <!-- and so on -->
-</font>
+<svg
+  viewBox="0 0 400 50"
+  width="350"
+  height="50"
+  xmlns="http://www.w3.org/2000/svg">
+  <style>
+    /* Define the font family using web fonts */
+    @font-face {
+      font-family: "FiraSans";
+      src:
+        url("https://mdn.github.io/shared-assets/fonts/FiraSans-Italic.woff2")
+          format("woff2"),
+        url("https://mdn.github.io/shared-assets/fonts/FiraSans-Bold.woff2")
+          format("woff2");
+    }
 
-<text font-family="Super Sans">My text uses Super Sans</text>
+    /* Style the text */
+    text {
+      /* Specify the system or custom font to use */
+      font-family: "FiraSans", sans-serif;
+
+      /* Add other styling */
+      font-size: 24px;
+      font-weight: bold;
+      font-style: italic;
+    }
+  </style>
+  <text x="10" y="20">Text styled with custom font</text>
+</svg>
 ```
 
-However, you are free to combine several methods for great freedom of how and where to define the font.
+{{EmbedLiveSample("Using web fonts with @font-face", "100", "70px")}}
 
-### Option: Use CSS @font-face
+## Referencing a style in the text element
 
-You can use `@font-face` to reference remote (and not so remote) fonts:
+You can also directly reference a style within a {{SVGElement("text")}} element using the {{SVGAttr("font-family")}} attribute.
+This code shows how we might apply the custom "My Font" to the `<text>` element.
 
-```html
-<font id="Super_Sans">
-  <!-- and so on -->
-</font>
-
-<style>
-  @font-face {
-    font-family: "Super Sans";
-    src: url(#Super_Sans);
-  }
-</style>
-
-<text font-family="Super Sans">My text uses Super Sans</text>
+```svg
+<svg>
+  <text font-family="My Font" x="10" y="20">Text using "My Font" font</text>
+</svg>
 ```
 
-### Option: reference a remote font
+Note that this is similar to applying style to an HTML element.
+While there are cases where it can be useful, generally it is better to use CSS and CSS selectors.
 
-The above mentioned `font-face-uri` element allows you to reference an external font; hence, allowing greater re-usability:
-
-```html
-<font>
-  <font-face font-family="Super Sans">
-    <font-face-src>
-      <font-face-uri href="fonts.svg#Super_Sans" />
-    </font-face-src>
-  </font-face>
-</font>
-```
+> [!NOTE]
+> The older SVG font format using {{ SVGElement("font") }} and {{ SVGElement("font-face") }} elements is deprecated and should not be used.
+> Using CSS provides better performance and compatibility.
 
 {{ PreviousNext("Web/SVG/Tutorial/Filter_effects", "Web/SVG/Tutorial/SVG_Image_Tag") }}

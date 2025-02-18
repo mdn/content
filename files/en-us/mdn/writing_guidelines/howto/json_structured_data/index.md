@@ -1,10 +1,10 @@
 ---
 title: How to use structured data
+short-title: Use structured data
 slug: MDN/Writing_guidelines/Howto/JSON_Structured_data
 page-type: mdn-writing-guide
+sidebar: mdnsidebar
 ---
-
-{{MDNSidebar}}
 
 MDN stores data in well-defined structures when possible. This information is then centralized and can be updated once, while being used in numerous places.
 

@@ -9,7 +9,34 @@ browser-compat: javascript.builtins.Intl.NumberFormat
 
 The **`Intl.NumberFormat`** object enables language-sensitive number formatting.
 
-{{EmbedInteractiveExample("pages/js/intl-numberformat.html")}}
+{{InteractiveExample("JavaScript Demo: Intl.NumberFormat")}}
+
+```js interactive-example
+const number = 123456.789;
+
+console.log(
+  new Intl.NumberFormat("de-DE", { style: "currency", currency: "EUR" }).format(
+    number,
+  ),
+);
+// Expected output: "123.456,79 €"
+
+// The Japanese yen doesn't use a minor unit
+console.log(
+  new Intl.NumberFormat("ja-JP", { style: "currency", currency: "JPY" }).format(
+    number,
+  ),
+);
+// Expected output: "￥123,457"
+
+// Limit to three significant digits
+console.log(
+  new Intl.NumberFormat("en-IN", { maximumSignificantDigits: 3 }).format(
+    number,
+  ),
+);
+// Expected output: "1,23,000"
+```
 
 ## Constructor
 
@@ -149,3 +176,4 @@ For an exhaustive list of options, see the [`Intl.NumberFormat()` constructor](/
 
 - [Polyfill of `Intl.NumberFormat` in FormatJS](https://formatjs.github.io/docs/polyfills/intl-numberformat/)
 - {{jsxref("Intl")}}
+- {{jsxref("Number.prototype.toLocaleString()")}}

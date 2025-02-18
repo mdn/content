@@ -1,5 +1,5 @@
 ---
-title: ":link"
+title: :link
 slug: Web/CSS/:link
 page-type: css-pseudo-class
 browser-compat: css.selectors.link

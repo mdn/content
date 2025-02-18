@@ -10,7 +10,16 @@ browser-compat: javascript.builtins.Array.concat
 The **`concat()`** method of {{jsxref("Array")}} instances is used to merge two or more arrays.
 This method does not change the existing arrays, but instead returns a new array.
 
-{{EmbedInteractiveExample("pages/js/array-concat.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Array.concat()", "shorter")}}
+
+```js interactive-example
+const array1 = ["a", "b", "c"];
+const array2 = ["d", "e", "f"];
+const array3 = array1.concat(array2);
+
+console.log(array3);
+// Expected output: Array ["a", "b", "c", "d", "e", "f"]
+```
 
 ## Syntax
 

@@ -56,6 +56,10 @@
       "inh": "",
       "impl": []
     },
+    "AnimationTrigger": {
+      "inh": "",
+      "impl": []
+    },
     "AnimationWorkletGlobalScope": {
       "inh": "WorkletGlobalScope",
       "impl": []
@@ -550,6 +554,14 @@
     },
     "CSSFontPaletteValuesRule": {
       "inh": "CSSRule",
+      "impl": []
+    },
+    "CSSFunctionDeclarations": {
+      "inh": "CSSRule",
+      "impl": []
+    },
+    "CSSFunctionDescriptors": {
+      "inh": "CSSStyleDeclaration",
       "impl": []
     },
     "CSSFunctionRule": {
@@ -2324,6 +2336,10 @@
       "inh": "",
       "impl": []
     },
+    "NavigatorLogin": {
+      "inh": "",
+      "impl": []
+    },
     "NavigatorManagedData": {
       "inh": "EventTarget",
       "impl": []
@@ -3068,12 +3084,36 @@
       "inh": "",
       "impl": []
     },
+    "SharedStorageAppendMethod": {
+      "inh": "SharedStorageModifierMethod",
+      "impl": []
+    },
+    "SharedStorageClearMethod": {
+      "inh": "SharedStorageModifierMethod",
+      "impl": []
+    },
+    "SharedStorageDeleteMethod": {
+      "inh": "SharedStorageModifierMethod",
+      "impl": []
+    },
+    "SharedStorageModifierMethod": {
+      "inh": "",
+      "impl": []
+    },
+    "SharedStorageSetMethod": {
+      "inh": "SharedStorageModifierMethod",
+      "impl": []
+    },
     "SharedStorageWorklet": {
       "inh": "Worklet",
       "impl": []
     },
     "SharedStorageWorkletGlobalScope": {
       "inh": "WorkletGlobalScope",
+      "impl": []
+    },
+    "SharedStorageWorkletNavigator": {
+      "inh": "",
       "impl": []
     },
     "SharedWorker": {
@@ -3094,14 +3134,6 @@
     },
     "SourceBufferList": {
       "inh": "EventTarget",
-      "impl": []
-    },
-    "SpeechGrammar": {
-      "inh": "",
-      "impl": []
-    },
-    "SpeechGrammarList": {
-      "inh": "",
       "impl": []
     },
     "SpeechRecognition": {

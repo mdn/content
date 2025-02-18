@@ -14,7 +14,7 @@ positioned ancestor element.
 
 A positioned ancestor might be:
 
-- a [containing block](/en-US/docs/Web/CSS/Containing_block#identifying_the_containing_block) for absolutely-positioned elements
+- a [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block#identifying_the_containing_block) for absolutely-positioned elements
 - an element with a different effective [zoom](/en-US/docs/Web/CSS/zoom) value (that is, the product of all zoom scales of its parents) from this element
 - `td`, `th`, `table` in case the element itself is static positioned.
 

@@ -17,13 +17,7 @@ priority values reported to the remote peer by a {{Glossary("user agent")}} are 
 to determine which candidates are considered "more desirable". The higher the value,
 the more desirable the candidate is.
 
-## Syntax
-
-```js-nolint
-priority = rtcIceCandidateStats.priority
-```
-
-### Value
+## Value
 
 A positive integer indicating the priority of the {{domxref("RTCIceCandidate")}}
 described by the `RTCIceCandidateStats` object. The value may be anywhere

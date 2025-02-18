@@ -9,7 +9,18 @@ browser-compat: javascript.builtins.TypedArray.findLast
 
 The **`findLast()`** method of {{jsxref("TypedArray")}} instances iterates the typed array in reverse order and returns the value of the first element that satisfies the provided testing function. If no elements satisfy the testing function, {{jsxref("undefined")}} is returned. This method has the same algorithm as {{jsxref("Array.prototype.findLast()")}}.
 
-{{EmbedInteractiveExample("pages/js/typedarray-findlast.html")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.findLast()")}}
+
+```js interactive-example
+function isNegative(element /*, index, array */) {
+  return element < 0;
+}
+
+const int8 = new Int8Array([10, 0, -10, 20, -30, 40, 50]);
+
+console.log(int8.find(isNegative));
+// Expected output: -30
+```
 
 ## Syntax
 
@@ -43,7 +54,7 @@ See {{jsxref("Array.prototype.findLast()")}} for more details. This method is no
 
 ### Find the last prime number in a typed array
 
-The following example returns the value of the last element in the typed array that is a prime number, or {{jsxref("undefined")}} if there is no prime number.
+The following example returns the last element in the typed array that is a prime number, or {{jsxref("undefined")}} if there is no prime number.
 
 ```js
 function isPrime(element) {

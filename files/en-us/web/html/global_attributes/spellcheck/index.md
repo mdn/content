@@ -39,3 +39,4 @@ You should consider setting `spellcheck` to `false` for elements that can contai
 ## See also
 
 - All [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+- [`autocorrect`](/en-US/docs/Web/HTML/Global_attributes/autocorrect).

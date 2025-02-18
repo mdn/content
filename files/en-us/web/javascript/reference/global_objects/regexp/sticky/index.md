@@ -9,7 +9,23 @@ browser-compat: javascript.builtins.RegExp.sticky
 
 The **`sticky`** accessor property of {{jsxref("RegExp")}} instances returns whether or not the `y` flag is used with this regular expression.
 
-{{EmbedInteractiveExample("pages/js/regexp-prototype-sticky.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: RegExp.prototype.sticky", "taller")}}
+
+```js interactive-example
+const str1 = "table football";
+const regex1 = new RegExp("foo", "y");
+
+regex1.lastIndex = 6;
+
+console.log(regex1.sticky);
+// Expected output: true
+
+console.log(regex1.test(str1));
+// Expected output: true
+
+console.log(regex1.test(str1));
+// Expected output: false
+```
 
 ## Description
 

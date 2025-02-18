@@ -15,7 +15,7 @@ In this final article in our "Asynchronous JavaScript" module, we'll introduce _
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-         A solid understanding of <a href="/en-US/docs/Learn_web_development/Core/Scripting">JavaScript fundamentals</a> and asynchronous concepts, as covered in previous lesosns in this module.
+         A solid understanding of <a href="/en-US/docs/Learn_web_development/Core/Scripting">JavaScript fundamentals</a> and asynchronous concepts, as covered in previous lessons in this module.
       </td>
     </tr>
     <tr>

@@ -197,7 +197,7 @@ Objects are ad-hoc key-value pairs, so they are often used as maps. However, the
 
 ### Dates
 
-When representing dates, the best choice is to use the built-in [`Date`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) utility in JavaScript.
+JavaScript provides two sets of APIs for representing dates: the legacy {{jsxref("Date")}} object and the modern {{jsxref("Temporal")}} object. `Date` has many undesirable design choices and should be avoided in new code if possible.
 
 ### Indexed collections: Arrays and typed Arrays
 

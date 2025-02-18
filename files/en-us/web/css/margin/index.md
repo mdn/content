@@ -23,7 +23,7 @@ This property is a shorthand for the following CSS properties:
 ## Syntax
 
 ```css
-/* Apply to all four sides */
+/* apply to all four sides */
 margin: 1em;
 margin: -3px;
 
@@ -35,6 +35,14 @@ margin: 1em auto 2em;
 
 /* top | right | bottom | left */
 margin: 2px 1em 0 auto;
+
+/* anchor-size() values */
+margin: 5% anchor-size(width);
+margin: calc(anchor-size(width) / 4) 1em 0
+  anchor-size(--myAnchor self-inline, 50px);
+
+/* Keyword values */
+margin: auto;
 
 /* Global values */
 margin: inherit;
@@ -54,9 +62,13 @@ The `margin` property may be specified using one, two, three, or four values. Ea
 ### Values
 
 - {{cssxref("length")}}
+
   - : The size of the margin as a fixed value.
+
+    - For _anchor-positioned elements_, the {{cssxref("anchor-size()")}} function resolves to a {{cssxref("&lt;length&gt;")}} value relative to the associated _anchor element_'s width or height (see [Setting element margin based on anchor size](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#setting_element_margin_based_on_anchor_size)).
+
 - {{cssxref("percentage")}}
-  - : The size of the margin as a percentage, relative to the inline size (_width_ in a horizontal language, defined by {{cssxref("writing-mode")}}) of the [containing block](/en-US/docs/Web/CSS/Containing_block).
+  - : The size of the margin as a percentage, relative to the inline size (_width_ in a horizontal language, defined by {{cssxref("writing-mode")}}) of the [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block).
 - `auto`
   - : The browser selects a suitable margin to use. For example, in certain cases this value can be used to center an element.
 

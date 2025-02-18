@@ -1,5 +1,5 @@
 ---
-title: ":focus-visible"
+title: :focus-visible
 slug: Web/CSS/:focus-visible
 page-type: css-pseudo-class
 browser-compat: css.selectors.focus-visible

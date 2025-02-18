@@ -86,7 +86,7 @@ Allowed values are:
 <meta name="viewport" content="interactive-widget=resizes-content" />
 ```
 
-When the {{Glossary("viewport")}} gets resized, the initial [containing block](/en-US/docs/Web/CSS/Containing_block) also gets resized, thereby affecting the computed size of [viewport units](/en-US/docs/Web/CSS/length#relative_length_units_based_on_viewport).
+When the {{Glossary("viewport")}} gets resized, the initial [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block) also gets resized, thereby affecting the computed size of [viewport units](/en-US/docs/Web/CSS/length#relative_length_units_based_on_viewport).
 
 ## Common viewport sizes for mobile and tablet devices
 

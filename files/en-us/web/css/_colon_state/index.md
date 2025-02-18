@@ -1,5 +1,5 @@
 ---
-title: ":state()"
+title: :state()
 slug: Web/CSS/:state
 page-type: css-pseudo-class
 browser-compat: css.selectors.state

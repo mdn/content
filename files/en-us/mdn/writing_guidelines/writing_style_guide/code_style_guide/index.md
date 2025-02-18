@@ -2,9 +2,8 @@
 title: Guidelines for writing code examples
 slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide
 page-type: mdn-writing-guide
+sidebar: mdnsidebar
 ---
-
-{{MDNSidebar}}
 
 The guidelines described in this article apply to the styling and formatting of code examples, irrespective of the language. For guidelines about what content to include while writing the code examples, see the [writing style guide](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide#code_examples).
 
@@ -63,7 +62,6 @@ If the code block is pseudocode, the output of a command, or otherwise not a pro
 ### Code line length
 
 - Code lines shouldn't be so long that they require horizontal scrolling to read.
-- As a recommended practice, keep code lines up to a maximum of 80 characters long (64 for [interactive examples](https://github.com/mdn/interactive-examples)).
 - Break long lines at natural breaking points for the sake of readability, but not at the expense of best practices.
 
 For example, this is not great:

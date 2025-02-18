@@ -9,7 +9,18 @@ browser-compat: javascript.builtins.Intl.Segments
 
 A **`Segments`** object is an iterable collection of the segments of a text string. It is returned by a call to the [`segment()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment) method of an [`Intl.Segmenter`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter) object.
 
-{{EmbedInteractiveExample("pages/js/segments-prototype-containing.html")}}
+{{InteractiveExample("JavaScript Demo: Segments.prototype.containing")}}
+
+```js interactive-example
+const segmenterFr = new Intl.Segmenter("fr", { granularity: "word" });
+const string1 = "Que ma joie demeure";
+
+const segments = segmenterFr.segment(string1);
+
+console.log(segments.containing(5));
+// Expected output:
+// Object {segment: 'ma', index: 4, input: 'Que ma joie demeure', isWordLike: true}
+```
 
 ## Instance methods
 

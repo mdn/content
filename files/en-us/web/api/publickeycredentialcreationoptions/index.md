@@ -63,7 +63,7 @@ The **`PublicKeyCredentialCreationOptions`** dictionary represents the object pa
 
     - `residentKey` {{optional_inline}}
 
-      - : A string that specifies the extent to which the relying party desires to create a **client-side discoverable credential** (i.e., one that is usable in authentication requests where the relying party does not provide credential IDs — {{domxref("CredentialsContainer.get()", "navigator.credentials.get()")}} is called with an empty `allowCredentials` value). The alternative is a **server-side credential**, where the relying party must provide credential IDs in the `get()` `allowCredentials` value.
+      - : A string that specifies the extent to which the relying party desires to create a client-side [discoverable credential](/en-US/docs/Web/API/Web_Authentication_API#discoverable_credentials_and_conditional_mediation) (that is, one that is usable in authentication requests where the relying party does not provide credential IDs — {{domxref("CredentialsContainer.get()", "navigator.credentials.get()")}} is called with an empty `allowCredentials` value). The alternative is a **server-side credential**, where the relying party must provide credential IDs in the `get()` `allowCredentials` value.
         Possible values are:
 
         - `"discouraged"`
@@ -71,7 +71,7 @@ The **`PublicKeyCredentialCreationOptions`** dictionary represents the object pa
         - `"preferred"`
           - : The relying party strongly prefers creation of a client-side discoverable credential, but will accept a server-side credential. The user agent should guide the user through setting up user verification, if needed, to create a discoverable credential. This takes precedence over the `userVerification` setting.
         - `"required"`
-          - : The relying party requires a client-side discoverable credential. If one cannot be created, an error is thrown.
+          - : The relying party requires a client-side discoverable credential. If one cannot be created, a `NotAllowedError` {{domxref("DOMException")}} is thrown. See the [`create()` exceptions list](/en-US/docs/Web/API/CredentialsContainer/create#exceptions) for more details.
 
         If omitted, `residentKey` defaults to `"required"` if `requireResidentKey` is `true`, otherwise the default value is `"discouraged"`.
 

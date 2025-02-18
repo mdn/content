@@ -214,5 +214,6 @@ p.overlay {
 - {{Cssxref("overflow-x")}}, {{Cssxref("overflow-y")}}
 - {{Cssxref("overflow-block")}}, {{Cssxref("overflow-clip-margin")}}, {{Cssxref("overflow-inline")}}
 - {{Cssxref("clip")}}, {{Cssxref("display")}}, {{cssxref("text-overflow")}}, {{cssxref("white-space")}}
-- [CSS overflow](/en-US/docs/Web/CSS/CSS_overflow)
+- SVG {{SVGAttr("overflow")}} attribute
+- [CSS overflow](/en-US/docs/Web/CSS/CSS_overflow) module
 - [Keyboard-only scrolling areas](https://adrianroselli.com/2022/06/keyboard-only-scrolling-areas.html) on adrianroselli.com (2022)

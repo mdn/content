@@ -66,7 +66,7 @@ In the following example, we apply a short stylesheet to a document:
 
 ### Multiple style elements
 
-In this example we've included two `<style>` elements — notice how the conflicting declarations in the later `<style>` element override those in the earlier one, if they have equal [specificity](/en-US/docs/Web/CSS/Specificity).
+In this example we've included two `<style>` elements — notice how the conflicting declarations in the later `<style>` element override those in the earlier one, if they have equal [specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity).
 
 ```html
 <!doctype html>

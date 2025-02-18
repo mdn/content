@@ -49,11 +49,8 @@ div {
   line-height: 100px;
   text-align: center;
   float: left;
-  background-image: repeating-linear-gradient(
-      to right,
-      black 0px 1px,
-      transparent 1px 20px
-    ),
+  background-image:
+    repeating-linear-gradient(to right, black 0px 1px, transparent 1px 20px),
     repeating-linear-gradient(black 0px 1px, transparent 1px 20px);
   background-size:
     181px 5px,

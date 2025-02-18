@@ -24,7 +24,7 @@ _This interface also inherits properties from its ancestors {{domxref("HTMLEleme
   - : A boolean value that reflects the [`autoplay`](/en-US/docs/Web/HTML/Element/video#autoplay) HTML attribute, indicating whether playback should automatically begin as soon as enough media is available to do so without interruption.
 
     > [!NOTE]
-    > Automatically playing audio when the user doesn't expect or desire it is a poor user experience and should be avoided in most cases, though there are exceptions. See the [Autoplay guide for media and Web Audio APIs](/en-US/docs/Web/Media/Autoplay_guide) for more information. Keep in mind that browsers may ignore autoplay requests, so you should ensure that your code isn't dependent on autoplay working.
+    > Automatically playing audio when the user doesn't expect or desire it is a poor user experience and should be avoided in most cases, though there are exceptions. See the [Autoplay guide for media and Web Audio APIs](/en-US/docs/Web/Media/Guides/Autoplay) for more information. Keep in mind that browsers may ignore autoplay requests, so you should ensure that your code isn't dependent on autoplay working.
 
 - {{domxref("HTMLMediaElement.buffered")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("TimeRanges")}} object that indicates the ranges of the media source that the browser has buffered (if any) at the moment the `buffered` property is accessed.
@@ -111,7 +111,7 @@ _This interface also inherits methods from its ancestors {{domxref("HTMLElement"
 - {{domxref("HTMLMediaElement.captureStream()")}}
   - : Returns {{domxref("MediaStream")}}, captures a stream of the media content.
 - {{domxref("HTMLMediaElement.canPlayType()")}}
-  - : Given a string specifying a MIME media type (potentially with the [`codecs` parameter](/en-US/docs/Web/Media/Formats/codecs_parameter) included), `canPlayType()` returns the string `probably` if the media should be playable, `maybe` if there's not enough information to determine whether the media will play or not, or an empty string if the media cannot be played.
+  - : Given a string specifying a MIME media type (potentially with the [`codecs` parameter](/en-US/docs/Web/Media/Guides/Formats/codecs_parameter) included), `canPlayType()` returns the string `probably` if the media should be playable, `maybe` if there's not enough information to determine whether the media will play or not, or an empty string if the media cannot be played.
 - {{domxref("HTMLMediaElement.fastSeek()")}}
   - : Quickly seeks to the given time with low precision.
 - {{domxref("HTMLMediaElement.load()")}}
@@ -212,5 +212,5 @@ Listen to these events using {{domxref("EventTarget.addEventListener", "addEvent
 
 - [Web media technologies](/en-US/docs/Web/Media)
 - Learning area: [HTML video and audio](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
-- [Media type and format guide](/en-US/docs/Web/Media/Formats)
-- [Handling media support issues in web content](/en-US/docs/Web/Media/Formats/Support_issues)
+- [Media type and format guide](/en-US/docs/Web/Media/Guides/Formats)
+- [Handling media support issues in web content](/en-US/docs/Web/Media/Guides/Formats/Support_issues)

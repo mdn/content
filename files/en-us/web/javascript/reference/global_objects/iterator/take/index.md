@@ -69,7 +69,7 @@ for (const n of fibonacci().take(5)) {
 // 5
 ```
 
-Because `fibonacci()` is an infinite iterator, you can't use a `for` loop to iterate it directly.
+Because `fibonacci()` is an infinite iterator, using a `for` loop to iterate it without any logic to exit early (such as a {{jsxref("Statements/break", "break")}} statement) would result in an infinite loop.
 
 ### Combining drop() with take()
 

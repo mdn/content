@@ -27,13 +27,13 @@ This article provides information about the changes in Firefox 131 that affect d
 ### APIs
 
 - The {{domxref('PointerEvent.altitudeAngle','altitudeAngle')}} and {{domxref('PointerEvent.azimuthAngle','azimuthAngle')}} properties of the {{domxref('PointerEvent')}} interface are now supported. These provide the angle between the pointer/stylus and the screen (X-Y plane), and the rotation of the stylus over the screen relative to its x-axis, respectively. ([Firefox bug 1656377](https://bugzil.la/1656377)).
-- [Text fragments](/en-US/docs/Web/URI/Fragment/Text_fragments) are now supported, allowing users to link to and highlight specific portions of text in a web page. This feature uses a particular syntax in the [URL fragment](/en-US/docs/Web/URI/Fragment) that identifies the target based on patterns in the rendered text.
+- [Text fragments](/en-US/docs/Web/URI/Reference/Fragment/Text_fragments) are now supported, allowing users to link to and highlight specific portions of text in a web page. This feature uses a particular syntax in the [URL fragment](/en-US/docs/Web/URI/Reference/Fragment) that identifies the target based on patterns in the rendered text.
   Developers can now also use the existence of the {{domxref("Document.fragmentDirective")}} property (an instance of the {{domxref("FragmentDirective")}} interface) to feature-check for text fragment support. Additionally, the {{CSSxRef("::target-text")}} pseudo-element can be used to select and style text that has been selected using a text fragment link. ([Firefox bug 1914877](https://bugzil.la/1914877))
 - The {{domxref('Document/caretPositionFromPoint','caretPositionFromPoint()')}} method of the {{domxref("Document")}} interface has been updated to return the text node and offset for a caret position within a shadow DOM, provided the shadow root corresponding to the point has been supplied to the method. {{domxref("ShadowRoot")}} objects can be passed to the method using the `shadowRoots` property of the newly added `options` argument. ([Firefox bug 1914596](https://bugzil.la/1914596)).
 
 ### WebAssembly
 
-- The new exception reference with the value of `exnref` can now be used to help with [exception handling](/en-US/docs/WebAssembly/JavaScript_interface/Exception) between WebAssembly and JavaScript in both directions. ([Firefox bug 1908375](https://bugzil.la/1908375)).
+- The new exception reference with the value of `exnref` can now be used to help with [exception handling](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Exception) between WebAssembly and JavaScript in both directions. ([Firefox bug 1908375](https://bugzil.la/1908375)).
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 

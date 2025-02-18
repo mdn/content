@@ -15,7 +15,7 @@ The **`updateInkTrailStartPoint()`** method of the {{domxref("DelegatedInkTrailP
 ## Syntax
 
 ```js-nolint
-requestPresenter(event, style)
+updateInkTrailStartPoint(event, style)
 ```
 
 ### Parameters

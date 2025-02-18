@@ -1,5 +1,5 @@
 ---
-title: ":-moz-first-node"
+title: :-moz-first-node
 slug: Web/CSS/:-moz-first-node
 page-type: css-pseudo-class
 status:

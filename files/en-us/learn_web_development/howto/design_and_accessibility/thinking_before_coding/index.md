@@ -4,7 +4,7 @@ slug: Learn_web_development/Howto/Design_and_accessibility/Thinking_before_codin
 page-type: learn-faq
 ---
 
-{{QuicklinksWithSubPages("Learn/Common_questions")}}
+{{QuicklinksWithSubPages("/en-US/docs/Learn_web_development/Howto")}}
 
 This article covers the all-important first step of every project: define what you want to accomplish with it.
 
@@ -35,7 +35,7 @@ All of this is called _project ideation_ and is a necessary first step to reach 
 
 ## Active Learning
 
-_There is no active learning available yet. [Please, consider contributing](/en-US/docs/MDN/Community/Contributing/Getting_started)._
+_There is no active learning available yet. [Please, consider contributing](/en-US/docs/MDN/Community/Getting_started)._
 
 ## Deeper dive
 

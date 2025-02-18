@@ -9,7 +9,18 @@ browser-compat: javascript.builtins.Intl.Segmenter.resolvedOptions
 
 The **`resolvedOptions()`** method of {{jsxref("Intl.Segmenter")}} instances returns a new object with properties reflecting the options computed during initialization of this `Segmenter` object.
 
-{{EmbedInteractiveExample("pages/js/intl-segmenter-prototype-resolvedoptions.html")}}
+{{InteractiveExample("JavaScript Demo: Intl.Segmenter.prototype.resolvedOptions")}}
+
+```js interactive-example
+const segmenter1 = new Intl.Segmenter("fr-FR");
+const options1 = segmenter1.resolvedOptions();
+
+console.log(options1.locale);
+// Expected output: "fr-FR"
+
+console.log(options1.granularity);
+// Expected output: "grapheme"
+```
 
 ## Syntax
 

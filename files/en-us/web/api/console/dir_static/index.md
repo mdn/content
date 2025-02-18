@@ -2,7 +2,7 @@
 title: "console: dir() static method"
 short-title: dir()
 slug: Web/API/console/dir_static
-page-type: web-api-instance-method
+page-type: web-api-static-method
 browser-compat: api.console.dir_static
 ---
 

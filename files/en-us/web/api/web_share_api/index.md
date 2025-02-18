@@ -16,7 +16,7 @@ The **Web Share API** provides a mechanism for sharing text, links, files, and o
 > This API is _not available_ in [Web Workers](/en-US/docs/Web/API/Web_Workers_API) (not exposed via {{domxref("WorkerNavigator")}}).
 
 > [!NOTE]
-> This API should not be confused with the [Web Share Target API](/en-US/docs/Web/Manifest/share_target), which allows a website to specify itself as a share target.
+> This API should not be confused with the [Web Share Target API](/en-US/docs/Web/Manifest/Reference/share_target), which allows a website to specify itself as a share target.
 
 ## Concepts and usage
 
@@ -80,4 +80,4 @@ The above example is taken from our [Web share test](https://mdn.github.io/dom-e
 
 ## See also
 
-- [Web Share Target API](/en-US/docs/Web/Manifest/share_target)
+- [Web Share Target API](/en-US/docs/Web/Manifest/Reference/share_target)

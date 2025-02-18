@@ -207,7 +207,7 @@ You can find a number of examples at our [webaudio-examples repo](https://github
 - [Basic concepts behind Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API)
 - [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
 - [Advanced techniques: creating sound, sequencing, timing, scheduling](/en-US/docs/Web/API/Web_Audio_API/Advanced_techniques)
-- [Autoplay guide for media and Web Audio APIs](/en-US/docs/Web/Media/Autoplay_guide)
+- [Autoplay guide for media and Web Audio APIs](/en-US/docs/Web/Media/Guides/Autoplay)
 - [Using IIR filters](/en-US/docs/Web/API/Web_Audio_API/Using_IIR_filters)
 - [Visualizations with Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API)
 - [Web audio spatialization basics](/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
@@ -228,4 +228,4 @@ You can find a number of examples at our [webaudio-examples repo](https://github
 ### Related topics
 
 - [Web media technologies](/en-US/docs/Web/Media)
-- [Guide to media types and formats on the web](/en-US/docs/Web/Media/Formats)
+- [Guide to media types and formats on the web](/en-US/docs/Web/Media/Guides/Formats)

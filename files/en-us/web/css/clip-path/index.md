@@ -635,10 +635,9 @@ clipPathSelect.addEventListener("change", (evt) => {
 
 ## See also
 
+- {{CSSxRef("clip-rule")}}
+- {{CSSxRef("mask")}}
+- {{CSSxRef("filter")}}
+- SVG {{SVGAttr("clip-path")}} attribute
 - [Shapes in clipping and masking – and how to use them](https://hacks.mozilla.org/2017/06/css-shapes-clipping-and-masking/)
-- CSS properties: {{cssxref("mask")}}, {{cssxref("filter")}}
 - [Applying SVG effects to HTML content](/en-US/docs/Web/SVG/Applying_SVG_effects_to_HTML_content)
-- SVG attributes:
-
-  - {{SVGAttr("clip-path")}}
-  - {{SVGAttr("clip-rule")}}

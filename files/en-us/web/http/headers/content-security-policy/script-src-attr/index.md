@@ -10,7 +10,7 @@ browser-compat: http.headers.Content-Security-Policy.script-src-attr
 The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`script-src-attr`** directive specifies valid sources for JavaScript inline event handlers.
 
 This directive only specifies valid sources for inline script event handlers like `onclick`.
-It does not apply to other JavaScript sources that can trigger script execution, such as URLs loaded directly into {{HTMLElement("script")}} elements and [XSLT stylesheets](/en-US/docs/Web/XSLT).
+It does not apply to other JavaScript sources that can trigger script execution, such as URLs loaded directly into {{HTMLElement("script")}} elements and [XSLT stylesheets](/en-US/docs/Web/XML/XSLT).
 (Valid sources can be specified for all JavaScript script sources using {{CSP("script-src")}}, or just for `<script>` elements using {{CSP("script-src-elem")}}.)
 
 <table class="properties">

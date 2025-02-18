@@ -2,7 +2,7 @@
 title: "console: trace() static method"
 short-title: trace()
 slug: Web/API/console/trace_static
-page-type: web-api-instance-method
+page-type: web-api-static-method
 browser-compat: api.console.trace_static
 ---
 

@@ -156,17 +156,17 @@ The `plaintext-only` value of the [`contenteditable`](/en-US/docs/Web/HTML/Globa
     <tr>
       <th>Nightly</th>
       <td>133</td>
-      <td>yes</td>
+      <td>Yes</td>
     </tr>
     <tr>
       <th>Developer Edition</th>
-      <td>133</td>
-      <td>No</td>
+      <td>135</td>
+      <td>Yes</td>
     </tr>
     <tr>
       <th>Beta</th>
-      <td>133</td>
-      <td>No</td>
+      <td>135</td>
+      <td>Yes</td>
     </tr>
     <tr>
       <th>Release</th>
@@ -354,7 +354,7 @@ For more information, see [Firefox bug 1807685](https://bugzil.la/1807685), [Fir
 
 ### @scope at-rule
 
-The [@scope](/en-US/docs/Web/CSS/@scope) [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rule) allows you to select specific child elements without having to overly increase the specificity of CSS selectors ([Firefox bug 1886441](https://bugzil.la/1886441)).
+The [@scope](/en-US/docs/Web/CSS/@scope) [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule) allows you to select specific child elements without having to overly increase the specificity of CSS selectors ([Firefox bug 1886441](https://bugzil.la/1886441)).
 
 <table>
   <thead>
@@ -908,9 +908,23 @@ None.
 
 ## JavaScript
 
-### Intl.DurationFormat
+### Temporal API
 
-{{jsxref("Intl.DurationFormat")}} enables locale-sensitive formatting of durations. ([Firefox bug 1648139](https://bugzil.la/1648139)).
+The [Temporal object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal) aims to simplify working with dates and times in various scenarios, with built-in time zone and calendar representations ([Firefox bug 1912511](https://bugzil.la/1912511)).
+This includes:
+
+- A **duration** (difference between two time points): {{jsxref("Temporal.Duration")}}
+- **Points in time**:
+  - As a unique instant in history:
+    - A timestamp: {{jsxref("Temporal.Instant")}}
+    - A date-time with a time zone: {{jsxref("Temporal.ZonedDateTime")}}
+  - **Time-zone-unaware date/time ("Plain")**:
+    - Date (year, month, day) + time (hour, minute, second, millisecond, nanosecond): {{jsxref("Temporal.PlainDateTime")}}
+      - Date (year, month, day): {{jsxref("Temporal.PlainDate")}}
+        - Year, month: {{jsxref("Temporal.PlainYearMonth")}}
+        - Month, day: {{jsxref("Temporal.PlainMonthDay")}}
+      - Time (hour, minute, second, millisecond, nanosecond): {{jsxref("Temporal.PlainTime")}}
+- **Now** (current time) as various class instances, or in a specific format: {{jsxref("Temporal.Now")}}
 
 <table>
   <thead>
@@ -923,34 +937,36 @@ None.
   <tbody>
     <tr>
       <th>Nightly</th>
-      <td>134</td>
-      <td>Yes</td>
+      <td>135</td>
+      <td>No</td>
     </tr>
     <tr>
       <th>Developer Edition</th>
-      <td>134</td>
-      <td>No</td>
+      <td>—</td>
+      <td>—</td>
     </tr>
     <tr>
       <th>Beta</th>
-      <td>134</td>
-      <td>No</td>
+      <td>—</td>
+      <td>—</td>
     </tr>
     <tr>
       <th>Release</th>
-      <td>134</td>
-      <td>No</td>
+      <td>—</td>
+      <td>—</td>
     </tr>
     <tr>
       <th>Preference name</th>
-      <td colspan="2">NA</td>
+      <td colspan="2"><code>javascript.options.experimental.temporal</code></td>
     </tr>
   </tbody>
 </table>
 
-### JSON.parse with source
+### Error.captureStackTrace
 
-The [`JSON.parse` source text access proposal](https://github.com/tc39/proposal-json-parse-with-source) extends [`JSON.parse`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse) behavior to provide features to mitigate issues around loss of precision when converting values such as large floats and date values between JavaScript values and JSON text. ([Firefox bug 1913085](https://bugzil.la/1913085), [Firefox bug 1925334](https://bugzil.la/1925334)).
+The {{jsxref("Error.captureStackTrace()")}} static method installs stack trace information on a provided object as the {{jsxref("Error.stack")}} property.
+Its main use case is to install a stack trace on a custom error object that does not derive from the {{jsxref("Error")}} interface.
+([Firefox bug 1886820](https://bugzil.la/1886820)).
 
 <table>
   <thead>
@@ -963,77 +979,32 @@ The [`JSON.parse` source text access proposal](https://github.com/tc39/proposal-
   <tbody>
     <tr>
       <th>Nightly</th>
-      <td>132</td>
+      <td>136</td>
       <td>No</td>
     </tr>
     <tr>
       <th>Developer Edition</th>
-      <td>132</td>
+      <td>136</td>
       <td>No</td>
     </tr>
     <tr>
       <th>Beta</th>
-      <td>132</td>
+      <td>136</td>
       <td>No</td>
     </tr>
     <tr>
       <th>Release</th>
-      <td>132</td>
+      <td>136</td>
       <td>No</td>
     </tr>
     <tr>
       <th>Preference name</th>
-      <td colspan="2"><code>javascript.options.experimental.json_parse_with_source</code></td>
+      <td colspan="2"><code>javascript.options.experimental.error_capture_stack_trace</code></td>
     </tr>
   </tbody>
 </table>
 
 ## APIs
-
-### Cookie Store API
-
-The [Cookie Store API](/en-US/docs/Web/API/Cookie_Store_API) is a modern, {{jsxref("Promise")}}-based method of managing cookies that does not block the event loop and does not rely on {{domxref("Document")}} (it can therefore be made available to [service workers](/en-US/docs/Web/API/Service_Worker_API)). A subset of the Cookie Store API has been implemented ([Firefox bug 1800882](https://bugzil.la/1800882)). This includes:
-
-- The [`CookieStore`](/en-US/docs/Web/API/CookieStore) interface, but `partitioned` is not included in return values.
-- The [`CookieChangeEvent`](/en-US/docs/Web/API/CookieChangeEvent) interface, excluding `partitioned` properties.
-- The [`Window.cookieStore`](/en-US/docs/Web/API/Window/cookieStore) property.
-- The [`ServiceWorkerGlobalScope.cookieStore`](/en-US/docs/Web/API/ServiceWorkerGlobalScope/cookieStore) property.
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>132</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>132</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>132</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>132</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>dom.cookieStore.enabled</code></td>
-    </tr>
-  </tbody>
-</table>
 
 ### CloseWatcher Interface
 
@@ -1090,6 +1061,11 @@ This subset of the API has been implemented:
 
 - {{domxref("TrustedTypePolicyFactory")}}:
   - {{domxref("TrustedTypePolicyFactory/getAttributeType", "getAttributeType()")}} and {{domxref("TrustedTypePolicyFactory/getPropertyType", "getPropertyType()")}} ([Firefox bug 1917783](https://bugzil.la/1917783), [Firefox bug 1917784](https://bugzil.la/1917784)).
+- The {{domxref("Document.write()", "write()")}} and {{domxref("Document.writeln()","writeln()")}} methods of the {{domxref("Document")}} interface now accept {{domxref("TrustedHTML")}} objects as parameters, in addition to strings. ([Firefox bug 1906301](https://bugzil.la/1906301)).
+- The {{domxref("HTMLScriptElement.text","text")}}, {{domxref("HTMLScriptElement.innerText","innerText")}}, and {{domxref("HTMLScriptElement.textContent","textContent")}} properties of the {{domxref("HTMLScriptElement")}} interface now accept {{domxref("TrustedScript")}} objects a value, while {{domxref("HTMLScriptElement.src", "src")}} accepts {{domxref("TrustedScriptURL")}} values. ([Firefox bug 1905706](https://bugzil.la/1905706)).
+- The {{domxref("Window.setInterval()")}} and {{domxref("Window.setTimeout()")}} methods can be called with a {{domxref("TrustedScript")}}. ([Firefox bug 1931290](https://bugzil.la/1931290)).
+- The global [`trustedTypes`](/en-US/docs/Web/API/Window/trustedTypes) property is available for accessing the Trusted Types API.
+- The properties {{domxref("Element.innerHTML")}} and {{domxref("ShadowRoot.innerHTML")}} can be called with [trusted types](/en-US/docs/Web/API/Trusted_Types_API).
 
 <table>
   <thead>
@@ -1268,7 +1244,7 @@ This adds the promise-based methods {{domxref("SourceBuffer.appendBufferAsync", 
 
 #### AVIF compliance strictness
 
-The `image.avif.compliance_strictness` preference can be used to control the _strictness_ applied when processing [AVIF](/en-US/docs/Web/Media/Formats/Image_types#avif_image) images.
+The `image.avif.compliance_strictness` preference can be used to control the _strictness_ applied when processing [AVIF](/en-US/docs/Web/Media/Guides/Formats/Image_types#avif_image) images.
 This allows Firefox users to display images that render on some other browsers, even if they are not strictly compliant.
 
 Permitted values are:

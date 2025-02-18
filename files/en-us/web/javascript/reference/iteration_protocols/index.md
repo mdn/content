@@ -225,6 +225,7 @@ const [b, c, d] = obj;
 // Returning 3
 // Already reached the end (the last call returned `done: true`),
 // so `return` is not called
+console.log([b, c, d]); // [1, 2, undefined]; the value associated with `done: true` is not reachable
 
 for (const b of obj) {
   break;

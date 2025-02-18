@@ -1,5 +1,5 @@
 ---
-title: ":hover"
+title: :hover
 slug: Web/CSS/:hover
 page-type: css-pseudo-class
 browser-compat: css.selectors.hover

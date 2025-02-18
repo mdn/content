@@ -386,7 +386,7 @@ In this section, you will learn how to use JavaScript and DOM API features to al
 
 1. Choose another image to feature on your example site. Ideally, the image will be the same size as the image you added previously, or as close as possible.
 2. Save this image in your `images` folder.
-3. Add the following JavaScript code to your `main.js` file, making sure to replace `firefox2.png` and both instances of `firefox-icon.png` with your second and first image names, respectvely.
+3. Add the following JavaScript code to your `main.js` file, making sure to replace `firefox2.png` and both instances of `firefox-icon.png` with your second and first image names, respectively.
 
    ```js
    const myImage = document.querySelector("img");
@@ -491,10 +491,12 @@ If you have followed all the instructions in this article, you should end up wit
 
 If you get stuck, you can compare your work with our [finished example code on GitHub](https://github.com/mdn/beginner-html-site-scripted/blob/main/scripts/main.js).
 
-We have just scratched the surface of JavaScript in this article. You'll find a lot more JavaScript in our [Core](/en-US/docs/Learn_web_development/Core) and [Extension](/en-US/docs/Learn_web_development/Extensions) modules, starting at [Dynamic scripting with JavaScript](/en-US/docs/Learn_web_development/Core/Scripting).
+Now that you've finished creating your website, the next step is to get it online so that others can check it out. We'll show you how to do so in our next article — [Publishing your website](/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website).
 
 ## See also
 
+- [Dynamic scripting with JavaScript](/en-US/docs/Learn_web_development/Core/Scripting)
+  - : We have just scratched the surface of JavaScript in this article. You'll find a lot more JavaScript later on in our learning pathway, starting with our _Dynamic scripting with JavaScript_ module.
 - [Learn JavaScript](https://learnjavascript.online/)
   - : This is an excellent resource for aspiring web developers! Learn JavaScript in an interactive environment, with short lessons and interactive tests, guided by an automated assessment. The first 40 lessons are free. The complete course is available for a small one-time payment.
 

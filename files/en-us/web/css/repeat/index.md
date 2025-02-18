@@ -120,7 +120,7 @@ There is a fourth form, `<name-repeat>`, which is used to add line names to subg
 
 ## Formal syntax
 
-{{CSSSyntax}}
+{{CSSSyntaxRaw(`<track-repeat> <auto-repeat> <fixed-repeat> <name-repeat>`)}}
 
 ## Examples
 

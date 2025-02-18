@@ -6,32 +6,24 @@ page-type: web-api-instance-property
 browser-compat: api.Document.activeElement
 ---
 
-{{APIRef("Shadow DOM")}}
+{{APIRef("DOM")}}
 
-The **`activeElement`** read-only property
-of the {{domxref("Document")}} interface returns the {{domxref("Element")}} within the DOM that currently has focus.
+The **`activeElement`** read-only property of the {{domxref("Document")}} interface returns the {{domxref("Element")}} within the DOM that is receiving keyboard events such as {{domxref("Element/keydown_event", "keydown")}} and {{domxref("Element/keyup_event", "keyup")}}. This is usually analogous to the focused element.
 
-Often `activeElement` will return a {{domxref("HTMLInputElement")}} or
-{{domxref("HTMLTextAreaElement")}} object if it has the text selection at the time. If
-so, you can get more detail by using the object's `selectionStart` and `selectionEnd` properties.
-Other times the focused element might be a {{HTMLElement("select")}} element (menu) or
-an {{HTMLElement("input")}} element.
+Which elements are focusable varies depending on the platform and the browser's current configuration. For example, on Safari, following the behavior of macOS, elements that aren't text input elements are not focusable by default, unless the "Full Keyboard Access" setting is enabled in System Preferences.
 
-Typically a user can press the tab key to move the focus around the page among
-focusable elements, and use the space bar to activate one (that is, to press a button or
-toggle a radio button). Which elements are focusable varies depending on the platform
-and the browser's current configuration. For example, on macOS systems, elements that
-aren't text input elements are not typically focusable by default.
+Typically a user can press the <kbd>Tab</kbd> key to move the focus around the page among focusable elements, and use keyboard gestures such as <kbd>Space</kbd> or <kbd>Enter</kbd> to simulate clicks on the focused element.
 
 > [!NOTE]
-> Focus (which element is receiving user input events) is not
-> the same thing as selection (the currently highlighted part of the document). You can
-> get the current selection using {{domxref("window.getSelection()")}}.
+> Focus (which element is receiving user input events) is not the same thing as selection (the currently highlighted part of the document). You can get the current selection using {{domxref("window.getSelection()")}}.
 
 ## Value
 
-The {{domxref('Element')}} which currently has focus, {{HTMLElement("body")}} or
-`null` if there is no focused element.
+The deepest {{domxref('Element')}} which currently has focus.
+
+- If the focused element is within a shadow tree within the current document (for example, the focused element is inside an `iframe`, and the invoking `document` contains that iframe), then this will be the root element of that tree (in this example, that `iframe`).
+- If the focused element is within a document tree that's not descended from the current document (for example, the focused element is in the main document, and the invoking `document` is an embedded iframe), then this will be `null`.
+- If there's no focused element, this is the {{domxref("Document.body")}} or {{domxref("Document.documentElement")}}.
 
 ## Examples
 

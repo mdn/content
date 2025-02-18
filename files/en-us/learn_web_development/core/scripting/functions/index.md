@@ -356,7 +356,9 @@ function greeting() {
 }
 ```
 
-Both functions you want to call are called `greeting()`, but you can only ever access the `first.js` file's `greeting()` function (the second one is ignored). In addition, an error results when attempting (in the `second.js` file) to assign a new value to the `name` variable — because it was already declared with `const`, and so can't be reassigned.
+You will see that the second script does not load and run at all, and an error is printed in the console: `Uncaught SyntaxError: Identifier 'name' has already been declared`. This is because the `name` constant is already declared in `first.js`, and you can't declare the same constant twice in the same scope. Because the second script did not load, the `greeting()` function from `second.js` is not available to be called. Therefore, you will see an alert box displaying `Hello Chris: welcome to our company.`.
+
+Try removing the second `const name = "Zaptec";` line from `second.js` and reloading the page. Now both scripts execute, and the alert box says `Our company is called Chris.`. Functions are allowed to be redeclared, and the last declaration gets used. The previous declarations are effectively overwritten.
 
 > [!NOTE]
 > You can see this example [running live on GitHub](https://mdn.github.io/learning-area/javascript/building-blocks/functions/conflict.html) (see also the [source code](https://github.com/mdn/learning-area/tree/main/javascript/building-blocks/functions)).
@@ -479,7 +481,7 @@ This article has explored the fundamental concepts behind functions, paving the 
 
 - [Functions detailed guide](/en-US/docs/Web/JavaScript/Guide/Functions) — covers some advanced features not included here.
 - [Functions reference](/en-US/docs/Web/JavaScript/Reference/Functions)
-- [Using functions to write less code](https://v2.scrimba.com/the-frontend-developer-career-path-c0j/~04g?via=mdn), Scrimba <sup>_MDN Curriculum partner_</sup>
+- [Using functions to write less code](https://v2.scrimba.com/the-frontend-developer-career-path-c0j/~04g?via=mdn), Scrimba <sup>_MDN learning partner_</sup>
   - : An interactive lesson providing a useful functions introduction.
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/Loops","Learn_web_development/Core/Scripting/Build_your_own_function", "Learn_web_development/Core/Scripting")}}

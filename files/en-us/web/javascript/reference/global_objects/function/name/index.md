@@ -9,7 +9,21 @@ browser-compat: javascript.builtins.Function.name
 
 The **`name`** data property of a {{jsxref("Function")}} instance indicates the function's name as specified when it was created, or it may be either `anonymous` or `''` (an empty string) for functions created anonymously.
 
-{{EmbedInteractiveExample("pages/js/function-name.html")}}
+{{InteractiveExample("JavaScript Demo: Function.name")}}
+
+```js interactive-example
+const func1 = function () {};
+
+const object = {
+  func2: function () {},
+};
+
+console.log(func1.name);
+// Expected output: "func1"
+
+console.log(object.func2.name);
+// Expected output: "func2"
+```
 
 ## Value
 

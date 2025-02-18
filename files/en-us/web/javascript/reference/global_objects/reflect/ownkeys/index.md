@@ -9,7 +9,22 @@ browser-compat: javascript.builtins.Reflect.ownKeys
 
 The **`Reflect.ownKeys()`** static method returns an array of the `target` object's own property keys.
 
-{{EmbedInteractiveExample("pages/js/reflect-ownkeys.html")}}
+{{InteractiveExample("JavaScript Demo: Reflect.ownKeys()")}}
+
+```js interactive-example
+const object1 = {
+  property1: 42,
+  property2: 13,
+};
+
+const array1 = [];
+
+console.log(Reflect.ownKeys(object1));
+// Expected output: Array ["property1", "property2"]
+
+console.log(Reflect.ownKeys(array1));
+// Expected output: Array ["length"]
+```
 
 ## Syntax
 

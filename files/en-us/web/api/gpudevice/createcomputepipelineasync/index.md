@@ -19,7 +19,7 @@ The **`createComputePipelineAsync()`** method of the
 ## Syntax
 
 ```js-nolint
-createComputePipeline(descriptor)
+createComputePipelineAsync(descriptor)
 ```
 
 ### Parameters

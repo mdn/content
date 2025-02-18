@@ -13,6 +13,6 @@ It helps isolate potentially malicious documents, reducing possible attack vecto
 ## See also
 
 - [Same-origin policy](/en-US/docs/Web/Security/Same-origin_policy)
-- Related glossary terms::
+- Related glossary terms:
   - {{Glossary("CORS")}}
   - {{Glossary("origin")}}

@@ -158,7 +158,7 @@ _No changes._
 ### Other
 
 - Corrected the behavior of {{DOMxRef("PerformanceObserver.observe()")}} to do nothing if no valid entry types are found in the specified array of entry types to observe, or if the array is empty or missing. Previously, Firefox was incorrectly throwing a `TypeError` ([Firefox bug 1403027](https://bugzil.la/1403027)).
-- In [OpenSearch](/en-US/docs/Web/OpenSearch), Firefox now accepts `application/json` as a search URL type, as an alias of `application/x-suggestions+json` ([Firefox bug 1425827](https://bugzil.la/1425827)).
+- In [OpenSearch](/en-US/docs/Web/XML/Guides/OpenSearch), Firefox now accepts `application/json` as a search URL type, as an alias of `application/x-suggestions+json` ([Firefox bug 1425827](https://bugzil.la/1425827)).
 
 ## Changes for add-on developers
 

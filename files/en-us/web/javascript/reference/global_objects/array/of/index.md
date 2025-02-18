@@ -11,7 +11,15 @@ The **`Array.of()`** static method creates a new `Array`
 instance from a variable number of arguments, regardless of number or type of the
 arguments.
 
-{{EmbedInteractiveExample("pages/js/array-of.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Array.of()", "shorter")}}
+
+```js interactive-example
+console.log(Array.of("foo", 2, "bar", true));
+// Expected output: Array ["foo", 2, "bar", true]
+
+console.log(Array.of());
+// Expected output: Array []
+```
 
 ## Syntax
 

@@ -2,13 +2,11 @@
 title: Using the View Transition API
 slug: Web/API/View_Transition_API/Using
 page-type: guide
-status:
-  - experimental
 ---
 
 {{DefaultAPISidebar("View Transition API")}}
 
-This article explains the theory behind how the [View Transition API](/en-US/docs/Web/API/View_Transition_API)) works, how to create view transitions and customize the transition animations, and how to manipulate active view transitions. This covers view transitions for both DOM state updates in a single-page app (SPA), and navigating between documents in a multi-page app (MPA).
+This article explains the theory behind how the [View Transition API](/en-US/docs/Web/API/View_Transition_API) works, how to create view transitions and customize the transition animations, and how to manipulate active view transitions. This covers view transitions for both DOM state updates in a single-page app (SPA), and navigating between documents in a multi-page app (MPA).
 
 ## The view transition process
 

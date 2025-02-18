@@ -60,7 +60,7 @@ The parameters are:
     - `left`
       - : The left of the anchor element
     - `start`
-      - : The logical start of the anchor element's [containing block](/en-US/docs/Web/CSS/Containing_block) along the axis of the inset property on which the `anchor()` function is set.
+      - : The logical start of the anchor element's [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block) along the axis of the inset property on which the `anchor()` function is set.
     - `end`
       - : The logical end of the anchor element's containing block along the axis of the inset property on which the `anchor()` function is set.
     - `self-start`

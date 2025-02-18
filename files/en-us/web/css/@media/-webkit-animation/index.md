@@ -1,5 +1,5 @@
 ---
-title: "-webkit-animation"
+title: -webkit-animation
 slug: Web/CSS/@media/-webkit-animation
 page-type: css-media-feature
 status:

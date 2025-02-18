@@ -23,7 +23,7 @@ transformToDocument(source)
 
 ### Return value
 
-A {{domxref("Document")}}. The actual interface depends on the [output method](https://www.w3.org/TR/1999/REC-xslt-19991116#output) of the stylesheet:
+A {{domxref("Document")}}. The actual interface depends on the output method of the stylesheet, as specified by [`<xsl:output>`](/en-US/docs/Web/XML/XSLT/Reference/Element/output) element's `method`.
 
 | Output method | Result interface                                                                                       |
 | ------------- | ------------------------------------------------------------------------------------------------------ |

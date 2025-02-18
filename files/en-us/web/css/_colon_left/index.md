@@ -1,5 +1,5 @@
 ---
-title: ":left"
+title: :left
 slug: Web/CSS/:left
 page-type: css-pseudo-class
 browser-compat: css.selectors.left
@@ -7,7 +7,7 @@ browser-compat: css.selectors.left
 
 {{CSSRef}}
 
-The **`:left`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes), used with the {{cssxref("@page")}} [at-rule](/en-US/docs/Web/CSS/At-rule), represents all left-hand pages of a printed document.
+The **`:left`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes), used with the {{cssxref("@page")}} [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule), represents all left-hand pages of a printed document.
 
 ```css
 /* Selects any left-hand pages when printing */

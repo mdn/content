@@ -9,7 +9,21 @@ browser-compat: javascript.operators.assignment
 
 The **assignment (`=`)** operator is used to assign a value to a variable or property. The assignment expression itself has a value, which is the assigned value. This allows multiple assignments to be chained in order to assign a single value to multiple variables.
 
-{{EmbedInteractiveExample("pages/js/expressions-assignment.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Assignment")}}
+
+```js interactive-example
+let x = 2;
+const y = 3;
+
+console.log(x);
+// Expected output: 2
+
+console.log((x = y + 1)); // 3 + 1
+// Expected output: 4
+
+console.log((x = x * y)); // 4 * 3
+// Expected output: 12
+```
 
 ## Syntax
 

@@ -9,6 +9,8 @@ browser-compat: webextensions.api.tabs.TAB_ID_NONE
 
 A special ID value given to tabs that are not browser tabs (for example, tabs in devtools windows).
 
+Its value is `-1`.
+
 ## Browser compatibility
 
 {{Compat}}

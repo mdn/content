@@ -39,11 +39,6 @@ CSS.paintWorklet.addModule("css-component.js");
 This added module contains {{domxref("PaintWorkletGlobalScope.registerPaint")}} functions,
 which register completely configurable worklets.
 
-> [!NOTE]
-> You can write your own worklets, or install components created by other people.
-> The [Houdini.how](https://houdini.how/) website is a collection of worklets,
-> with [instructions on how to use them](https://houdini.how/usage/).
-
 The CSS `paint()` function is an additional function supported by the {{cssxref("image")}} type.
 It takes parameters that include the name of the worklet,
 plus additional parameters needed by the worklet.
@@ -140,6 +135,5 @@ _This API is currently a proposal, and has no browser implementations or documen
 
 ## See also
 
-- The [Worklet library](https://houdini.how/) for examples and code.
 - [Interactive introduction to Houdini](https://houdini.glitch.me/)
 - [Is Houdini Ready Yet?](https://houdini.glitch.me/)

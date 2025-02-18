@@ -1,5 +1,5 @@
 ---
-title: "StorageAccessHandle: revokeObjectURL() property"
+title: "StorageAccessHandle: revokeObjectURL() method"
 short-title: revokeObjectURL()
 slug: Web/API/StorageAccessHandle/revokeObjectURL
 page-type: web-api-instance-method
@@ -14,7 +14,7 @@ browser-compat: api.StorageAccessHandle.revokeObjectURL
 ## Syntax
 
 ```js-nolint
-handle.revokeObjectURL(objectURL)
+revokeObjectURL(objectURL)
 ```
 
 ### Parameters

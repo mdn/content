@@ -62,7 +62,7 @@ Values of this type are strings. Possible values are:
 - `xmlhttprequest`
   - : Requests sent by an {{domxref("XMLHttpRequest")}} object or through the [Fetch API](/en-US/docs/Web/API/Fetch_API).
 - `xslt`
-  - : [XSLT](/en-US/docs/Web/XSLT) stylesheets loaded for transforming an XML document.
+  - : [XSLT](/en-US/docs/Web/XML/XSLT) stylesheets loaded for transforming an XML document.
 - `other`
   - : Resources that aren't covered by any other available type.
 

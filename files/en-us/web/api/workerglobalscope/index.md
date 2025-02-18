@@ -19,8 +19,6 @@ _This interface inherits properties from the {{domxref("EventTarget")}} interfac
 
 - {{domxref("WorkerGlobalScope.caches")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns the {{domxref("CacheStorage")}} object associated with the current context. This object enables functionality such as storing assets for offline use, and generating custom responses to requests.
-- {{domxref("console")}} {{ReadOnlyInline}} {{Non-standard_inline}}
-  - : Returns the {{domxref("console")}} associated with the worker.
 - {{domxref("WorkerGlobalScope.crossOriginIsolated")}} {{ReadOnlyInline}}
   - : Returns a boolean value that indicates whether the website is in a cross-origin isolation state.
 - {{domxref("WorkerGlobalScope.crypto")}} {{ReadOnlyInline}}
@@ -32,7 +30,7 @@ _This interface inherits properties from the {{domxref("EventTarget")}} interfac
 - {{domxref("WorkerGlobalScope.isSecureContext")}} {{ReadOnlyInline}}
   - : Returns a boolean indicating whether the current context is secure (`true`) or not (`false`).
 - {{domxref("WorkerGlobalScope.location")}} {{ReadOnlyInline}}
-  - : Returns the {{domxref("WorkerLocation")}} associated with the worker. It is a specific location object, mostly a subset of the {{domxref("Location")}} for browsing scopes, but adapted to workers.r.
+  - : Returns the {{domxref("WorkerLocation")}} associated with the worker. It is a specific location object, mostly a subset of the {{domxref("Location")}} for browsing scopes, but adapted to workers.
 - {{domxref("WorkerGlobalScope.navigator")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("WorkerNavigator")}} associated with the worker. It is a specific navigator object, mostly a subset of the {{domxref("Navigator")}} for browsing scopes, but adapted to workers.
 - {{domxref("WorkerGlobalScope.origin")}} {{ReadOnlyInline}}

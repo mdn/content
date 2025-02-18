@@ -149,3 +149,4 @@ td {
 ## See also
 
 - {{cssxref("display")}}
+- SVG {{SVGAttr("visibility")}} attribute

@@ -2,7 +2,7 @@
 title: "console: timeEnd() static method"
 short-title: timeEnd()
 slug: Web/API/console/timeEnd_static
-page-type: web-api-instance-method
+page-type: web-api-static-method
 browser-compat: api.console.timeEnd_static
 ---
 

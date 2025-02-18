@@ -1,5 +1,5 @@
 ---
-title: "-webkit-box-reflect"
+title: -webkit-box-reflect
 slug: Web/CSS/-webkit-box-reflect
 page-type: css-property
 status:

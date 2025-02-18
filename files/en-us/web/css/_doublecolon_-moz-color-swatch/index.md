@@ -1,5 +1,5 @@
 ---
-title: "::-moz-color-swatch"
+title: ::-moz-color-swatch
 slug: Web/CSS/::-moz-color-swatch
 page-type: css-pseudo-element
 status:

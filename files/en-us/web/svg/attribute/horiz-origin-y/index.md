@@ -44,7 +44,7 @@ You can use this attribute with the following SVG elements:
 </table>
 
 - `<number>`
-  - : This value indicates the x-coordinate of the origin of a glyph for horizontally oriented text.
+  - : This value indicates the y-coordinate of the origin of a glyph for horizontally oriented text.
 
 ## Specifications
 

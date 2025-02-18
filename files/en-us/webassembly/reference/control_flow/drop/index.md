@@ -2,9 +2,8 @@
 title: Drop
 slug: WebAssembly/Reference/Control_flow/Drop
 page-type: webassembly-instruction
+sidebar: webassemblysidebar
 ---
-
-{{WebAssemblySidebar}}
 
 The **`drop`** instruction, pops a value from the stack, and discards it.
 

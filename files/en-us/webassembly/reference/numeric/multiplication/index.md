@@ -2,9 +2,8 @@
 title: Multiplication
 slug: WebAssembly/Reference/Numeric/Multiplication
 page-type: webassembly-instruction
+sidebar: webassemblysidebar
 ---
-
-{{WebAssemblySidebar}}
 
 The **`mul`** instructions, short for _multiplication_, are used for multiplying one number by another number, similar to the **`*`** operator in other languages.
 

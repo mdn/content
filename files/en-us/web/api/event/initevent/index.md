@@ -26,7 +26,7 @@ Once dispatched, it doesn't do anything anymore.
 ## Syntax
 
 ```js-nolint
-event.initEvent(type, bubbles, cancelable)
+initEvent(type, bubbles, cancelable)
 ```
 
 ### Parameters

@@ -84,7 +84,7 @@ An `SVGTransformList` is indexable and can be accessed like an array.
           <li>readonly unsigned long <code>numberOfItems</code></li>
           <li>
             readonly unsigned long
-            <code>length</code> {{ non-standard_inline() }}
+            <code>length</code>
           </li>
         </ul>
       </td>
@@ -103,10 +103,10 @@ An `SVGTransformList` is indexable and can be accessed like an array.
 
 ## Instance properties
 
-| Name                                 | Type          | Description                      |
-| ------------------------------------ | ------------- | -------------------------------- |
-| `numberOfItems`                      | unsigned long | The number of items in the list. |
-| `length` {{ non-standard_inline() }} | unsigned long | The number of items in the list. |
+| Name                                                           | Type          | Description                      |
+| -------------------------------------------------------------- | ------------- | -------------------------------- |
+| {{domxref("SVGTransformList.numberOfItems", "numberOfItems")}} | unsigned long | The number of items in the list. |
+| {{domxref("SVGTransformList.length", "length")}}               | unsigned long | The number of items in the list. |
 
 ## Instance methods
 
@@ -121,7 +121,7 @@ An `SVGTransformList` is indexable and can be accessed like an array.
   <tbody>
     <tr>
       <td>
-        <code><strong>clear</strong>()</code>
+        <code><strong>{{domxref("SVGTransformList.clear", "clear")}}</strong>()</code>
       </td>
       <td><code>void</code></td>
       <td>
@@ -143,7 +143,7 @@ An `SVGTransformList` is indexable and can be accessed like an array.
     <tr>
       <td>
         <code
-          ><strong>initialize</strong>(in
+          ><strong>{{domxref("SVGTransformList.initialize", "initialize")}}</strong>(in
           {{ domxref("SVGTransform") }} <em>newItem</em>)</code
         >
       </td>
@@ -170,7 +170,7 @@ An `SVGTransformList` is indexable and can be accessed like an array.
     </tr>
     <tr>
       <td>
-        <code><strong>getItem</strong>(in unsigned long <em>index</em>)</code>
+        <code><strong>{{domxref("SVGTransformList.getItem", "getItem")}}</strong>(in unsigned long <em>index</em>)</code>
       </td>
       <td>{{ domxref("SVGTransform") }}</td>
       <td>
@@ -193,7 +193,7 @@ An `SVGTransformList` is indexable and can be accessed like an array.
     <tr>
       <td>
         <code
-          ><strong>insertItemBefore</strong>(in
+          ><strong>{{domxref("SVGTransformList.insertItemBefore", "insertItemBefore")}}</strong>(in
           {{ domxref("SVGTransform") }} <em>newItem</em>, in unsigned
           long <em>index</em>)</code
         >
@@ -225,7 +225,7 @@ An `SVGTransformList` is indexable and can be accessed like an array.
     <tr>
       <td>
         <code
-          ><strong>replaceItem</strong>(in
+          ><strong>{{domxref("SVGTransformList.replaceItem", "replaceItem")}}</strong>(in
           {{ domxref("SVGTransform") }} <em>newItem</em>, in unsigned
           long <em>index</em>)</code
         >
@@ -259,7 +259,7 @@ An `SVGTransformList` is indexable and can be accessed like an array.
     <tr>
       <td>
         <code
-          ><strong>removeItem</strong>(in unsigned long <em>index</em>)</code
+          ><strong>{{domxref("SVGTransformList.removeItem", "removeItem")}}</strong>(in unsigned long <em>index</em>)</code
         >
       </td>
       <td>{{ domxref("SVGTransform") }}</td>
@@ -284,7 +284,7 @@ An `SVGTransformList` is indexable and can be accessed like an array.
     <tr>
       <td>
         <code
-          ><strong>appendItem</strong>(in
+          ><strong>{{domxref("SVGTransformList.appendItem", "appendItem")}}</strong>(in
           {{ domxref("SVGTransform") }} <em>newItem</em>)</code
         >
       </td>
@@ -310,7 +310,7 @@ An `SVGTransformList` is indexable and can be accessed like an array.
     <tr>
       <td>
         <code
-          ><strong>createSVGTransformFromMatrix</strong>(in
+          ><strong>{{domxref("SVGTransformList.createSVGTransformFromMatrix", "createSVGTransformFromMatrix")}}</strong>(in
           {{ domxref("DOMMatrix") }})</code
         >
       </td>
@@ -324,7 +324,7 @@ An `SVGTransformList` is indexable and can be accessed like an array.
     </tr>
     <tr>
       <td>
-        <code><strong>consolidate</strong>()</code>
+        <code><strong>{{domxref("SVGTransformList.consolidate", "consolidate")}}</strong>()</code>
       </td>
       <td>{{ domxref("SVGTransform") }}</td>
       <td>

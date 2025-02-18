@@ -2,9 +2,8 @@
 title: call
 slug: WebAssembly/Reference/Control_flow/call
 page-type: webassembly-instruction
+sidebar: webassemblysidebar
 ---
-
-{{WebAssemblySidebar}}
 
 **`call`** calls a function, `return_call` being the tail-call version of it. `call_indirect` calls a function in a table with the `return_call_indirect` tail-call version as well.
 

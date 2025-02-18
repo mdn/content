@@ -16,13 +16,13 @@ The **`SVGEllipseElement`** interface provides access to the properties of {{SVG
 _Inherits methods from its parent interface, {{domxref("SVGGeometryElement")}}._
 
 - {{domxref("SVGEllipseElement.cx")}} {{ReadOnlyInline}}
-  - : This property returns a {{domxref("SVGAnimatedLength")}} reflecting the {{SVGAttr("cx")}} attribute of the given {{SVGElement("ellipse")}} element.
+  - : This property returns an {{domxref("SVGAnimatedLength")}} reflecting the {{SVGAttr("cx")}} attribute of the given {{SVGElement("ellipse")}} element.
 - {{domxref("SVGEllipseElement.cy")}} {{ReadOnlyInline}}
-  - : This property returns a {{domxref("SVGAnimatedLength")}} reflecting the {{SVGAttr("cy")}} attribute of the given {{SVGElement("ellipse")}} element.
+  - : This property returns an {{domxref("SVGAnimatedLength")}} reflecting the {{SVGAttr("cy")}} attribute of the given {{SVGElement("ellipse")}} element.
 - {{domxref("SVGEllipseElement.rx")}} {{ReadOnlyInline}}
-  - : This property returns a {{domxref("SVGAnimatedLength")}} reflecting the {{SVGAttr("rx")}} attribute of the given {{SVGElement("ellipse")}} element.
+  - : This property returns an {{domxref("SVGAnimatedLength")}} reflecting the {{SVGAttr("rx")}} attribute of the given {{SVGElement("ellipse")}} element.
 - {{domxref("SVGEllipseElement.ry")}} {{ReadOnlyInline}}
-  - : This property returns a {{domxref("SVGAnimatedLength")}} reflecting the {{SVGAttr("ry")}} attribute of the given {{SVGElement("ellipse")}} element.
+  - : This property returns an {{domxref("SVGAnimatedLength")}} reflecting the {{SVGAttr("ry")}} attribute of the given {{SVGElement("ellipse")}} element.
 
 ## Instance methods
 

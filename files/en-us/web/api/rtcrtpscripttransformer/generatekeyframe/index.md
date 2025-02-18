@@ -1,5 +1,5 @@
 ---
-title: "RTCRtpScriptTransformer: generateKeyFrame()"
+title: "RTCRtpScriptTransformer: generateKeyFrame() method"
 short-title: generateKeyFrame()
 slug: Web/API/RTCRtpScriptTransformer/generateKeyFrame
 page-type: web-api-instance-method

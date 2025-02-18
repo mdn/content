@@ -2,10 +2,12 @@
 title: page-break-before
 slug: Web/CSS/page-break-before
 page-type: css-property
+status:
+  - deprecated
 browser-compat: css.properties.page-break-before
 ---
 
-{{CSSRef}}
+{{CSSRef}}{{deprecated_header}}
 
 > [!WARNING]
 > This property has been replaced by the {{cssxref("break-before")}} property.

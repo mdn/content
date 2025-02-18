@@ -10,7 +10,7 @@ browser-compat: svg.global_attributes.font-stretch
 The **`font-stretch`** attribute indicates the desired amount of condensing or expansion in the glyphs used to render the text.
 
 > [!NOTE]
-> As a presentation attribute, `font-stretch` can be used as a CSS property. See the CSS {{cssxref("font-stretch")}} property for more information.
+> As a presentation attribute, `font-stretch` also has a CSS property counterpart: {{cssxref("font-stretch")}}. When both are specified, the CSS property takes priority.
 
 You can use this attribute with the following SVG elements:
 
@@ -48,4 +48,4 @@ You can use this attribute with the following SVG elements:
 
 ## See also
 
-- {{cssxref("font-stretch")}}
+- CSS {{cssxref("font-stretch")}} property

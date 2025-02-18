@@ -1,5 +1,5 @@
 ---
-title: "-webkit-transform-3d"
+title: -webkit-transform-3d
 slug: Web/CSS/@media/-webkit-transform-3d
 page-type: css-media-feature
 browser-compat: css.at-rules.media.-webkit-transform-3d

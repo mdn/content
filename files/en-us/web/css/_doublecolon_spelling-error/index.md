@@ -1,5 +1,5 @@
 ---
-title: "::spelling-error"
+title: ::spelling-error
 slug: Web/CSS/::spelling-error
 page-type: css-pseudo-element
 browser-compat: css.selectors.spelling-error

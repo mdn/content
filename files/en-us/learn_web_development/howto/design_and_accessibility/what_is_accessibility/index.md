@@ -4,7 +4,7 @@ slug: Learn_web_development/Howto/Design_and_accessibility/What_is_accessibility
 page-type: learn-faq
 ---
 
-{{QuicklinksWithSubPages("Learn/Common_questions")}}
+{{QuicklinksWithSubPages("/en-US/docs/Learn_web_development/Howto")}}
 
 This article introduces the basic concepts behind web accessibility.
 
@@ -27,7 +27,7 @@ Because of physical or technical limitations, maybe your visitors can't experien
 
 ## Active learning
 
-_There is no active learning available yet. [Please, consider contributing](/en-US/docs/MDN/Community/Contributing/Getting_started)._
+_There is no active learning available yet. [Please, consider contributing](/en-US/docs/MDN/Community/Getting_started)._
 
 ## Dig deeper
 

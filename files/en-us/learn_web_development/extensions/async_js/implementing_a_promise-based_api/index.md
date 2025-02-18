@@ -15,7 +15,7 @@ In the last article we discussed how to use APIs that return promises. In this a
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-         A solid understanding of <a href="/en-US/docs/Learn_web_development/Core/Scripting">JavaScript fundamentals</a> and asynchronous concepts, as covered in previous lesosns in this module.
+         A solid understanding of <a href="/en-US/docs/Learn_web_development/Core/Scripting">JavaScript fundamentals</a> and asynchronous concepts, as covered in previous lessons in this module.
       </td>
     </tr>
     <tr>
@@ -78,6 +78,7 @@ function alarm(person, delay) {
   return new Promise((resolve, reject) => {
     if (delay < 0) {
       reject(new Error("Alarm delay must not be negative"));
+      return;
     }
     setTimeout(() => {
       resolve(`Wake up, ${person}!`);
@@ -132,6 +133,7 @@ function alarm(person, delay) {
   return new Promise((resolve, reject) => {
     if (delay < 0) {
       reject(new Error("Alarm delay must not be negative"));
+      return;
     }
     setTimeout(() => {
       resolve(`Wake up, ${person}!`);
@@ -190,6 +192,7 @@ function alarm(person, delay) {
   return new Promise((resolve, reject) => {
     if (delay < 0) {
       reject(new Error("Alarm delay must not be negative"));
+      return;
     }
     setTimeout(() => {
       resolve(`Wake up, ${person}!`);

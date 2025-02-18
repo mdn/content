@@ -16,7 +16,7 @@ This chapter assumes that you are already somewhat familiar with JavaScript and 
 
 ## Overview of classes
 
-If you have some hands-on experience with JavaScript, or have followed along with the guide, you probably have already used classes, even if you haven't created one. For example, this [may seem familiar to you](/en-US/docs/Web/JavaScript/Guide/Numbers_and_dates):
+If you have some hands-on experience with JavaScript, or have followed along with the guide, you probably have already used classes, even if you haven't created one. For example, this [may seem familiar to you](/en-US/docs/Web/JavaScript/Guide/Representing_dates_times):
 
 ```js
 const bigDay = new Date(2019, 6, 19);

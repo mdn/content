@@ -239,7 +239,7 @@ H
 
 - {{CSSxRef(":has", ":has()")}} {{Experimental_Inline}}
 - {{CSSxRef(":host")}}
-- {{CSSxRef(":host", ":host()")}}
+- {{CSSxRef(":host_function", ":host()")}}
 - {{CSSxRef(":host-context", ":host-context()")}} {{Experimental_Inline}}
 - {{CSSxRef(":hover")}}
 
@@ -275,6 +275,7 @@ O
 
 - {{CSSxRef(":only-child")}}
 - {{CSSxRef(":only-of-type")}}
+- {{CSSxRef(":open")}}
 - {{CSSxRef(":optional")}}
 - {{CSSxRef(":out-of-range")}}
 

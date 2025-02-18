@@ -7,7 +7,7 @@ browser-compat: css.at-rules.page.size
 
 {{CSSRef}}
 
-The **`size`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rule) descriptor, used with the {{cssxref("@page")}} at-rule, defines the size and orientation of the box which is used to represent a page. Most of the time, this size corresponds to the target size of the printed page if applicable.
+The **`size`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule) descriptor, used with the {{cssxref("@page")}} at-rule, defines the size and orientation of the box which is used to represent a page. Most of the time, this size corresponds to the target size of the printed page if applicable.
 
 Size may either be defined with a "scalable" keyword (in this case the page will fill the available dimensions) or with absolute dimensions.
 

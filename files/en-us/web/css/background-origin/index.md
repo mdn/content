@@ -74,7 +74,8 @@ The `background-origin` property is specified as one of the keyword values liste
 
 ```css
 div {
-  background-image: url("logo.jpg"), url("main-back.png"); /* Applies two images to the background */
+  background-image:
+    url("logo.jpg"), url("main-back.png"); /* Applies two images to the background */
   background-position:
     top right,
     0px 0px;
@@ -90,7 +91,8 @@ In this example the box has a thick dotted border. The first gradient uses the `
 .box {
   margin: 10px 0;
   color: #fff;
-  background: linear-gradient(
+  background:
+    linear-gradient(
       90deg,
       rgb(131 58 180 / 100%) 0%,
       rgb(253 29 29 / 60%) 60%,

@@ -1,5 +1,5 @@
 ---
-title: ":invalid"
+title: :invalid
 slug: Web/CSS/:invalid
 page-type: css-pseudo-class
 browser-compat: css.selectors.invalid

@@ -26,6 +26,11 @@ compileShader(shader)
 
 None ({{jsxref("undefined")}}).
 
+### Exceptions
+
+- {{jsxref("TypeError")}}
+  - : Thrown if the specified `shader` is not of type `WebGLShader`.
+
 ## Examples
 
 ```js

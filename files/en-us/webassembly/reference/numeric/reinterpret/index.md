@@ -2,9 +2,8 @@
 title: Reinterpret
 slug: WebAssembly/Reference/Numeric/Reinterpret
 page-type: webassembly-instruction
+sidebar: webassemblysidebar
 ---
-
-{{WebAssemblySidebar}}
 
 The **`reinterpret`** instructions, are used to reinterpret the bits of a number as a different type.
 

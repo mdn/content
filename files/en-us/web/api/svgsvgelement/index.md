@@ -23,6 +23,10 @@ _This interface also inherits properties from its parent, {{domxref("SVGGraphics
   - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("width")}} attribute of the given {{SVGElement("svg")}} element.
 - {{domxref("SVGSVGElement.height")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("height")}} attribute of the given {{SVGElement("svg")}} element.
+- {{domxref("SVGSVGElement.viewBox")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedRect")}} corresponding to the {{SVGAttr("viewBox")}} attribute of the given {{SVGElement("svg")}} element.
+- {{domxref("SVGSVGElement.preserveAspectRatio")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedPreserveAspectRatio")}} corresponding to the {{SVGAttr("preserveAspectRatio")}} attribute of the given {{SVGElement("svg")}} element.
 - {{domxref("SVGSVGElement.pixelUnitToMillimeterX")}} {{Deprecated_Inline}}
   - : A float representing the size of the pixel unit (as defined by CSS2) along the x-axis of the viewport, which represents a unit somewhere in the range of 70dpi to 120dpi, and, on systems that support this, might actually match the characteristics of the target medium. On systems where it is impossible to know the size of a pixel, a suitable default pixel size is provided.
 - {{domxref("SVGSVGElement.pixelUnitToMillimeterY")}} {{Deprecated_Inline}}
@@ -32,7 +36,7 @@ _This interface also inherits properties from its parent, {{domxref("SVGGraphics
 - {{domxref("SVGSVGElement.screenPixelToMillimeterY")}} {{Deprecated_Inline}}
   - : Corresponding size of a screen pixel along the y-axis of the viewport.
 - {{domxref("SVGSVGElement.useCurrentView")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : The initial view (i.e., before magnification and panning) of the current innermost SVG document fragment can be either the "standard" view, i.e., based on attributes on the {{SVGElement("svg")}} element such as {{SVGAttr("viewBox")}}) or on a "custom" view (i.e., a hyperlink into a particular {{SVGElement("view")}} or other element). If the initial view is the "standard" view, then this attribute is `false`. If the initial view is a "custom" view, then this attribute is `true`.
+  - : The initial view (i.e., before magnification and panning) of the current innermost SVG document fragment can be either the "standard" view, i.e., based on attributes on the {{SVGElement("svg")}} element such as {{SVGAttr("viewBox")}} or on a "custom" view (i.e., a hyperlink into a particular {{SVGElement("view")}} or other element). If the initial view is the "standard" view, then this attribute is `false`. If the initial view is a "custom" view, then this attribute is `true`.
 - {{domxref("SVGSVGElement.currentView")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
 
   - : An {{domxref("SVGViewSpec")}} defining the initial view (i.e., before magnification and panning) of the current innermost SVG document fragment. The meaning depends on the situation: If the initial view was a "standard" view, then:
@@ -120,7 +124,7 @@ _This interface also inherits methods from its parent, {{domxref("SVGGraphicsEle
 - {{domxref("SVGSVGElement.createSVGPoint()")}}
   - : Creates an {{domxref("SVGPoint")}} object outside of any document trees. The object is initialized to the point `(0,0)` in the user coordinate system.
 - {{domxref("SVGSVGElement.createSVGMatrix()")}}
-  - : Creates an {{domxref("DOMMatrix", "SVGMatrix")}} object outside of any document trees. The object is initialized to the identity matrix.
+  - : Creates a {{domxref("DOMMatrix")}} object outside of any document trees. The object is initialized to the identity matrix.
 - {{domxref("SVGSVGElement.createSVGRect()")}}
   - : Creates an {{domxref("SVGRect")}} object outside of any document trees. The object is initialized such that all values are set to `0` user units.
 - {{domxref("SVGSVGElement.createSVGTransform()")}}

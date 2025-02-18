@@ -248,8 +248,8 @@ In [block layout](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_block_a
 
 - [Basic concepts of flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
 - [Aligning items in a flex container](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
-- [Box alignment in CSS grid layouts](/en-US/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
+- [Box alignment in grid layout](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_grid_layout)
 - [CSS box alignment](/en-US/docs/Web/CSS/CSS_box_alignment)
-- [Block and inline layout in normal flow](/en-US/docs/Web/CSS/CSS_flow_layout/Block_and_inline_layout_in_normal_flow)
+- [Block and inline layout in normal flow](/en-US/docs/Web/CSS/CSS_display/Block_and_inline_layout_in_normal_flow)
 - [Block-level_content](/en-US/docs/Glossary/Block-level_content)
 - {{CSSXRef("display")}}

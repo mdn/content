@@ -4,7 +4,7 @@ slug: Learn_web_development/Howto/Web_mechanics/What_is_a_URL
 page-type: learn-faq
 ---
 
-{{QuicklinksWithSubPages("Learn/Common_questions")}}
+{{QuicklinksWithSubPages("/en-US/docs/Learn_web_development/Howto")}}
 
 This article discusses Uniform Resource Locators (URLs), explaining what they are and how they're structured.
 
@@ -111,7 +111,7 @@ The {{Glossary("HTML")}} language (see [Structuring content with HTML](/en-US/do
 - to display other HTML documents with the {{HTMLElement("iframe")}} element.
 
 > [!NOTE]
-> When specifying URLs to load resources as part of a page (such as when using the `<script>`, `<audio>`, `<img>`, `<video>`, and the like), you should generally only use HTTP and HTTPS URLs, with few exceptions (one notable one being `data:`; see [Data URLs](/en-US/docs/Web/URI/Schemes/data)). Using FTP, for example, is not secure and is no longer supported by modern browsers.
+> When specifying URLs to load resources as part of a page (such as when using the `<script>`, `<audio>`, `<img>`, `<video>`, and the like), you should generally only use HTTP and HTTPS URLs, with few exceptions (one notable one being `data:`; see [Data URLs](/en-US/docs/Web/URI/Reference/Schemes/data)). Using FTP, for example, is not secure and is no longer supported by modern browsers.
 
 Other technologies, such as {{Glossary("CSS")}} or {{Glossary("JavaScript")}}, use URLs extensively, and these are really the heart of the Web.
 
@@ -149,4 +149,4 @@ Linguistic semantics are of course irrelevant to computers. You've probably ofte
 
 ## See also
 
-[Data URLs](/en-US/docs/Web/URI/Schemes/data): URLs prefixed with the `data:` scheme, allow content creators to embed small files inline in documents.
+[Data URLs](/en-US/docs/Web/URI/Reference/Schemes/data): URLs prefixed with the `data:` scheme, allow content creators to embed small files inline in documents.

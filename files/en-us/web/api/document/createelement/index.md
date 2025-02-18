@@ -8,19 +8,19 @@ browser-compat: api.Document.createElement
 
 {{APIRef("DOM")}}
 
-In an [HTML](/en-US/docs/Web/HTML) document, the **`document.createElement()`** method creates the HTML element specified by _tagName_, or an {{domxref("HTMLUnknownElement")}} if _tagName_ isn't recognized.
+In an [HTML](/en-US/docs/Web/HTML) document, the **`document.createElement()`** method creates the HTML element specified by `localName`, or an {{domxref("HTMLUnknownElement")}} if `localName` isn't recognized.
 
 ## Syntax
 
 ```js-nolint
-createElement(tagName)
-createElement(tagName, options)
+createElement(localName)
+createElement(localName, options)
 ```
 
 ### Parameters
 
-- `tagName`
-  - : A string that specifies the type of element to be created. The {{domxref("Node.nodeName", "nodeName")}} of the created element is initialized with the value of _tagName_. Don't use qualified names (like "html:a") with this method. When called on an HTML document, `createElement()` converts _tagName_ to lower case before creating the element. In Firefox, Opera, and Chrome, `createElement(null)` works like `createElement("null")`.
+- `localName`
+  - : A string that specifies the type of element to be created. Don't use qualified names (like "html:a") with this method. When called on an HTML document, `createElement()` converts `localName` to lower case before creating the element. In Firefox, Opera, and Chrome, `createElement(null)` works like `createElement("null")`.
 - `options` {{optional_inline}}
   - : An object with the following properties:
     - `is`

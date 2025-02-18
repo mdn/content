@@ -2,9 +2,8 @@
 title: Guidelines for writing JavaScript code examples
 slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/JavaScript
 page-type: mdn-writing-guide
+sidebar: mdnsidebar
 ---
-
-{{MDNSidebar}}
 
 The following guidelines cover writing JavaScript example code for MDN Web Docs. This article is a list of rules for writing concise examples that will be understandable by as many people as possible.
 

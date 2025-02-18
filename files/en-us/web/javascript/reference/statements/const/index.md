@@ -9,7 +9,22 @@ browser-compat: javascript.statements.const
 
 The **`const`** declaration declares block-scoped local variables. The value of a constant can't be changed through reassignment using the [assignment operator](/en-US/docs/Web/JavaScript/Reference/Operators/Assignment), but if a constant is an [object](/en-US/docs/Web/JavaScript/Data_structures#objects), its properties can be added, updated, or removed.
 
-{{EmbedInteractiveExample("pages/js/statement-const.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - Const")}}
+
+```js interactive-example
+const number = 42;
+
+try {
+  number = 99;
+} catch (err) {
+  console.log(err);
+  // Expected output: TypeError: invalid assignment to const 'number'
+  // (Note: the exact output may be browser-dependent)
+}
+
+console.log(number);
+// Expected output: 42
+```
 
 ## Syntax
 

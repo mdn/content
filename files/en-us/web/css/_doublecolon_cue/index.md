@@ -1,5 +1,5 @@
 ---
-title: "::cue"
+title: ::cue
 slug: Web/CSS/::cue
 page-type: css-pseudo-element
 browser-compat: css.selectors.cue

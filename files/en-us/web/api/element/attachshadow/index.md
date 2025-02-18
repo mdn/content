@@ -115,7 +115,7 @@ Returns a {{domxref("ShadowRoot")}} object.
 
 - `NotSupportedError` {{domxref("DOMException")}}
 
-  - : This may can be thrown when you try to attach a shadow root to an element:
+  - : This error may be thrown when you try to attach a shadow root to an element:
 
     - outside the HTML namespace or that can't have a shadow attached to it.
     - where the element definition static property `disabledFeatures` has been given a value of `"shadow"`.

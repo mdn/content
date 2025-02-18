@@ -15,7 +15,7 @@ IMSC is a markup language you can use to define timed text for adding subtitles 
 
 If you are not already familiar with XML or HTML, read up on them first and then come back here:
 
-- [XML Introduction](/en-US/docs/Web/XML/XML_introduction)
+- [XML Introduction](/en-US/docs/Web/XML/Guides/XML_introduction)
 - [HTML Basics](/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Creating_the_content)
 
 > [!NOTE]

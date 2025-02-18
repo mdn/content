@@ -15,7 +15,21 @@ The **`Math.log()`** static method returns the natural logarithm (base [e](/en-U
 </math>
 <!-- prettier-ignore-end -->
 
-{{EmbedInteractiveExample("pages/js/math-log.html")}}
+{{InteractiveExample("JavaScript Demo: Math.log()")}}
+
+```js interactive-example
+function getBaseLog(x, y) {
+  return Math.log(y) / Math.log(x);
+}
+
+// 2 x 2 x 2 = 8
+console.log(getBaseLog(2, 8));
+// Expected output: 3
+
+// 5 x 5 x 5 x 5 = 625
+console.log(getBaseLog(5, 625));
+// Expected output: 4
+```
 
 ## Syntax
 

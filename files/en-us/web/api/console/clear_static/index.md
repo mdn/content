@@ -2,7 +2,7 @@
 title: "console: clear() static method"
 short-title: clear()
 slug: Web/API/console/clear_static
-page-type: web-api-instance-method
+page-type: web-api-static-method
 browser-compat: api.console.clear_static
 ---
 

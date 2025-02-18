@@ -15,7 +15,21 @@ The **`Math.log10()`** static method returns the base 10 logarithm of a number. 
 </math>
 <!-- prettier-ignore-end -->
 
-{{EmbedInteractiveExample("pages/js/math-log10.html")}}
+{{InteractiveExample("JavaScript Demo: Math.log10()")}}
+
+```js interactive-example
+console.log(Math.log10(100000));
+// Expected output: 5
+
+console.log(Math.log10(2));
+// Expected output: 0.3010299956639812
+
+console.log(Math.log10(1));
+// Expected output: 0
+
+console.log(Math.log10(0));
+// Expected output: -Infinity
+```
 
 ## Syntax
 

@@ -1,5 +1,5 @@
 ---
-title: "-webkit-prefixed CSS extensions"
+title: -webkit-prefixed CSS extensions
 slug: Web/CSS/WebKit_Extensions
 page-type: landing-page
 status:
@@ -36,7 +36,7 @@ User agents based on WebKit or Blink, such as Safari and Chrome, support several
 
 - {{CSSxRef("-webkit-line-align")}}
 - {{CSSxRef("-webkit-line-box-contain")}}
-- {{CSSxRef("-webkit-line-clamp")}}
+- {{CSSxRef("line-clamp", "-webkit-line-clamp")}}
 - {{CSSxRef("-webkit-line-grid")}}
 - {{CSSxRef("-webkit-line-snap")}}
 - {{CSSxRef("-webkit-locale")}}

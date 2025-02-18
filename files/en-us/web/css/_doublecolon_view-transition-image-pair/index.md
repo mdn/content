@@ -1,5 +1,5 @@
 ---
-title: "::view-transition-image-pair"
+title: ::view-transition-image-pair
 slug: Web/CSS/::view-transition-image-pair
 page-type: css-pseudo-element
 browser-compat: css.selectors.view-transition-image-pair

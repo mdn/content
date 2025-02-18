@@ -19,6 +19,9 @@ browser-compat:
 
 The **`fill`** attribute has two different meanings. For shapes and text it's a presentation attribute that defines the color (_or any SVG paint servers like gradients or patterns_) used to paint the element; for animation it defines the final state of the animation.
 
+> [!NOTE]
+> When used as a presentation attribute, `fill` also has a CSS property counterpart: {{cssxref("fill")}}. When both are specified, the CSS property takes priority.
+
 The SVG presentational `fill` attribute and the CSS {{cssxref("fill")}} property can be used with the following SVG elements:
 
 - {{SVGElement('circle')}}
@@ -222,9 +225,6 @@ For {{SVGElement('circle')}}, `fill` is a presentation attribute that defines th
   </tbody>
 </table>
 
-> [!NOTE]
-> As a presentation attribute `fill` can be used as a CSS property.
-
 ## ellipse
 
 For {{SVGElement('ellipse')}}, `fill` is a presentation attribute that defines the color of the ellipse.
@@ -249,9 +249,6 @@ For {{SVGElement('ellipse')}}, `fill` is a presentation attribute that defines t
     </tr>
   </tbody>
 </table>
-
-> [!NOTE]
-> As a presentation attribute `fill` can be used as a CSS property.
 
 ## path
 
@@ -278,9 +275,6 @@ For {{SVGElement('path')}}, `fill` is a presentation attribute that defines the 
   </tbody>
 </table>
 
-> [!NOTE]
-> As a presentation attribute `fill` can be used as a CSS property.
-
 ## polygon
 
 For {{SVGElement('polygon')}}, `fill` is a presentation attribute that defines the color of the interior of the shape. (_The interior is defined by the {{SVGAttr('fill-rule')}} attribute or {{cssxref("fill-rule")}} property._)
@@ -305,9 +299,6 @@ For {{SVGElement('polygon')}}, `fill` is a presentation attribute that defines t
     </tr>
   </tbody>
 </table>
-
-> [!NOTE]
-> As a presentation attribute `fill` can be used as a CSS property.
 
 ## polyline
 
@@ -334,9 +325,6 @@ For {{SVGElement('polyline')}}, `fill` is a presentation attribute that defines 
   </tbody>
 </table>
 
-> [!NOTE]
-> As a presentation attribute `fill` can be used as a CSS property.
-
 ## rect
 
 For {{SVGElement('rect')}}, `fill` is a presentation attribute that defines the color of the rectangle.
@@ -361,9 +349,6 @@ For {{SVGElement('rect')}}, `fill` is a presentation attribute that defines the 
     </tr>
   </tbody>
 </table>
-
-> [!NOTE]
-> As a presentation attribute `fill` can be used as a CSS property.
 
 ## set
 
@@ -416,9 +401,6 @@ For {{SVGElement('text')}}, `fill` is a presentation attribute that defines the 
   </tbody>
 </table>
 
-> [!NOTE]
-> As a presentation attribute `fill` can be used as a CSS property.
-
 ## textPath
 
 For {{SVGElement('textPath')}}, `fill` is a presentation attribute that defines the color of the text.
@@ -443,9 +425,6 @@ For {{SVGElement('textPath')}}, `fill` is a presentation attribute that defines 
     </tr>
   </tbody>
 </table>
-
-> [!NOTE]
-> As a presentation attribute `fill` can be used as a CSS property.
 
 ## tref
 
@@ -475,9 +454,6 @@ For {{SVGElement('tref')}}, `fill` is a presentation attribute that defines the 
   </tbody>
 </table>
 
-> [!NOTE]
-> As a presentation attribute `fill` can be used as a CSS property.
-
 ## tspan
 
 For {{SVGElement('tspan')}}, `fill` is a presentation attribute that defines the color of the text.
@@ -503,9 +479,6 @@ For {{SVGElement('tspan')}}, `fill` is a presentation attribute that defines the
   </tbody>
 </table>
 
-> [!NOTE]
-> As a presentation attribute `fill` can be used as a CSS property.
-
 ## Specifications
 
 {{Specifications}}
@@ -513,3 +486,7 @@ For {{SVGElement('tspan')}}, `fill` is a presentation attribute that defines the
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- CSS {{cssxref("fill")}} property

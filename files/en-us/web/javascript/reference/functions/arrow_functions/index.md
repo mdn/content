@@ -13,7 +13,14 @@ An **arrow function expression** is a compact alternative to a traditional [func
 - Arrow functions cannot be used as [constructors](/en-US/docs/Glossary/Constructor). Calling them with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new) throws a {{jsxref("TypeError")}}. They also don't have access to the [`new.target`](/en-US/docs/Web/JavaScript/Reference/Operators/new.target) keyword.
 - Arrow functions cannot use [`yield`](/en-US/docs/Web/JavaScript/Reference/Operators/yield) within their body and cannot be created as generator functions.
 
-{{EmbedInteractiveExample("pages/js/functions-arrow.html")}}
+{{InteractiveExample("JavaScript Demo: Functions =>")}}
+
+```js interactive-example
+const materials = ["Hydrogen", "Helium", "Lithium", "Beryllium"];
+
+console.log(materials.map((material) => material.length));
+// Expected output: Array [8, 6, 7, 9]
+```
 
 ## Syntax
 

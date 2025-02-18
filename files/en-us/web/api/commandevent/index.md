@@ -11,7 +11,7 @@ browser-compat: api.CommandEvent
 
 The **`CommandEvent`** interface represents an event notifying the user when a {{domxref("HTMLButtonElement", "button")}} element with valid {{domxref("HTMLButtonElement.commandForElement", "commandForElement")}} and {{domxref("HTMLButtonElement.command", "command")}} attributes is about to invoke an interactive element.
 
-It is the event object for the `HTMLElement` {{domxref("HTMLElement.command_event", "command")}} event, which represents an action from an Invoker Control it is invoked (for example when it is clicked or pressed).
+This is the event object for the `HTMLElement` {{domxref("HTMLElement.command_event", "command")}} event, which represents an action from an Invoker Control when it is invoked (for example when it is clicked or pressed).
 
 {{InheritanceDiagram}}
 

@@ -11,7 +11,30 @@ The **`finally()`** method of {{jsxref("Promise")}} instances schedules a functi
 
 This lets you avoid duplicating code in both the promise's {{jsxref("Promise/then", "then()")}} and {{jsxref("Promise/catch", "catch()")}} handlers.
 
-{{EmbedInteractiveExample("pages/js/promise-finally.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Promise.finally()", "taller")}}
+
+```js interactive-example
+function checkMail() {
+  return new Promise((resolve, reject) => {
+    if (Math.random() > 0.5) {
+      resolve("Mail has arrived");
+    } else {
+      reject(new Error("Failed to arrive"));
+    }
+  });
+}
+
+checkMail()
+  .then((mail) => {
+    console.log(mail);
+  })
+  .catch((err) => {
+    console.error(err);
+  })
+  .finally(() => {
+    console.log("Experiment completed");
+  });
+```
 
 ## Syntax
 

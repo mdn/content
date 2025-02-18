@@ -74,7 +74,7 @@ The main reason to use microtasks is that: to ensure consistent ordering of task
 One situation in which microtasks can be used to ensure that the ordering of execution is always consistent is when promises are used in one clause of an `if...else` statement (or other conditional statement), but not in the other clause. Consider code such as this:
 
 ```js
-customElement.prototype.getData = (url) => {
+customElement.prototype.getData = function (url) {
   if (this.cache[url]) {
     this.data = this.cache[url];
     this.dispatchEvent(new Event("load"));
@@ -122,7 +122,7 @@ Even worse, sometimes the element's `data` property will be set and other times 
 We can ensure consistent ordering of these operations by using a microtask in the `if` clause to balance the two clauses:
 
 ```js
-customElement.prototype.getData = (url) => {
+customElement.prototype.getData = function (url) {
   if (this.cache[url]) {
     queueMicrotask(() => {
       this.data = this.cache[url];

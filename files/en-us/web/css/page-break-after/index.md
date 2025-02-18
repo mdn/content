@@ -2,10 +2,12 @@
 title: page-break-after
 slug: Web/CSS/page-break-after
 page-type: css-property
+status:
+  - deprecated
 browser-compat: css.properties.page-break-after
 ---
 
-{{CSSRef}}
+{{CSSRef}}{{deprecated_header}}
 
 > [!WARNING]
 > This property has been replaced by the {{cssxref("break-after")}} property.

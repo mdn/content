@@ -8,13 +8,59 @@ page-type: learn-module-assessment
 
 {{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Fancy_letterheaded_paper", "Learn_web_development/Core/Text_styling", "Learn_web_development/Core/Styling_basics")}}
 
-In this challenge, you'll get some more practice in creating cool-looking boxes by trying to create an eye-catching box.
+In this assessment, you'll get some more practice in creating cool-looking boxes by trying to create an eye-catching box.
+
+<table>
+  <tbody>
+    <tr>
+      <th scope="row">Prerequisites:</th>
+      <td>
+        Before attempting this assessment you should have already worked
+        through all the articles in this module.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Objective:</th>
+      <td>
+        To test comprehension of the CSS box model and other box-related
+        features such as borders and backgrounds.
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ## Starting point
 
-To start this challenge, you should:
+To get this assessment started, you should:
 
-- Make local copies of the starting [HTML](https://github.com/mdn/learning-area/blob/main/css/styling-boxes/cool-information-box-start/index.html) and [CSS](https://github.com/mdn/learning-area/blob/main/css/styling-boxes/cool-information-box-start/style.css) — save them as `index.html` and `style.css` in a new directory.
+- Save the HTML and CSS shown below as two separate files — `index.html` and `style.css` — in a new directory.
+
+### HTML
+
+```html
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Cool box</title>
+    <!-- your css link goes here -->
+  </head>
+  <body>
+    <div>This is a cool box</div>
+  </body>
+</html>
+```
+
+### CSS
+
+```css
+html {
+  font-family: sans-serif;
+}
+
+/* Your CSS below here */
+```
 
 Alternatively, you could use an online editor such as [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
 You could paste the HTML and fill in the CSS into one of these online editors.

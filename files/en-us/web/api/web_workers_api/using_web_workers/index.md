@@ -66,15 +66,12 @@ const myWorker = new Worker("worker.js");
 The magic of workers happens via the {{domxref("Worker.postMessage", "postMessage()")}} method and the {{domxref("Worker.message_event", "onmessage")}} event handler. When you want to send a message to the worker, you post messages to it like this ([main.js](https://github.com/mdn/dom-examples/blob/main/web-workers/simple-web-worker/main.js)):
 
 ```js
-first.onchange = () => {
-  myWorker.postMessage([first.value, second.value]);
-  console.log("Message posted to worker");
-};
-
-second.onchange = () => {
-  myWorker.postMessage([first.value, second.value]);
-  console.log("Message posted to worker");
-};
+[first, second].forEach((input) => {
+  input.onchange = () => {
+    myWorker.port.postMessage([first.value, second.value]);
+    console.log("Message posted to worker");
+  };
+});
 ```
 
 So here we have two {{htmlelement("input")}} elements represented by the variables `first` and `second`; when the value of either is changed, `myWorker.postMessage([first.value,second.value])` is used to send the value inside both to the worker, as an array. You can send pretty much anything you like in the message.

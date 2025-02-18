@@ -909,3 +909,7 @@ This example includes three {{SVGElement("rect")}} elements with varied `width` 
 ## Specifications
 
 {{Specifications}}
+
+## See also
+
+- CSS {{cssxref("width")}} property

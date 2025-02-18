@@ -7,7 +7,7 @@ browser-compat: css.types.number
 
 {{CSSRef}}
 
-The **`<number>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) represents a number, being either an integer or a number with a fractional component.
+The **`<number>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) represents a number, being either an integer or a number with a fractional component.
 
 ## Syntax
 

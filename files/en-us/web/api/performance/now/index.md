@@ -62,6 +62,21 @@ The specification (Level 2) requires that `performance.now()` should tick during
 
 More details can also be found in the specification issue [hr-time#115](https://github.com/w3c/hr-time/issues/115#issuecomment-1172985601).
 
+## Security requirements
+
+To offer protection against timing attacks and [fingerprinting](/en-US/docs/Glossary/Fingerprinting), `performance.now()` is coarsened based on whether or not the document is {{domxref("Window.crossOriginIsolated","cross-origin isolated","","nocode")}}.
+
+- Resolution in isolated contexts: 5 microseconds
+- Resolution in non-isolated contexts: 100 microseconds
+
+You can use the {{domxref("Window.crossOriginIsolated")}} and {{domxref("WorkerGlobalScope.crossOriginIsolated")}} properties to check if the document is cross-origin isolated:
+
+```js
+if (crossOriginIsolated) {
+  // Use measureUserAgentSpecificMemory
+}
+```
+
 ## Examples
 
 ### Using `performance.now()`
@@ -74,26 +89,6 @@ doSomething();
 const t1 = performance.now();
 console.log(`Call to doSomething took ${t1 - t0} milliseconds.`);
 ```
-
-## Security requirements
-
-To offer protection against timing attacks and [fingerprinting](/en-US/docs/Glossary/Fingerprinting), `performance.now()` is coarsened based on site isolation status.
-
-- Resolution in isolated contexts: 5 microseconds
-- Resolution in non-isolated contexts: 100 microseconds
-
-Cross-origin isolate your site using the {{HTTPHeader("Cross-Origin-Opener-Policy")}} and
-{{HTTPHeader("Cross-Origin-Embedder-Policy")}} headers:
-
-```http
-Cross-Origin-Opener-Policy: same-origin
-Cross-Origin-Embedder-Policy: require-corp
-```
-
-These headers ensure a top-level document does not share a browsing context group with
-cross-origin documents. COOP process-isolates your document and potential attackers
-can't access to your global object if they were opening it in a popup, preventing a set
-of cross-origin attacks dubbed [XS-Leaks](https://github.com/xsleaks/xsleaks).
 
 ## Specifications
 

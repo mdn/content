@@ -6,7 +6,7 @@ page-type: glossary-definition
 
 {{GlossarySidebar}}
 
-An {{glossary("HTML")}} **character reference** is a formatted pattern of characters that is used to represent another character in the rendered web page.
+An {{glossary("HTML")}} **character reference** is an {{glossary("escape character", "escape sequence")}} of {{glossary("character", "characters")}} that is used to represent another character in the rendered web page.
 
 Character references are used as replacements for characters that are reserved in HTML, such as the less-than (`<`) and greater-than (`>`) symbols used by the HTML parser to identify element {{Glossary('tag','tags')}}, or `"` or `'` within attributes, which may be enclosed by those characters.
 They can also be used for invisible characters that would otherwise be impossible to type, including non-breaking spaces, control characters like left-to-right and right-to-left marks, and for characters that are hard to type on a standard keyboard.
@@ -21,7 +21,7 @@ There are three types of character references:
 
 - **Decimal numeric character references**
 
-  - : These references start with `&#`, followed by one or more ASCII digits representing the base-ten integer that corresponds to the character's Unicode code point, and ending with `;`.
+  - : These references start with `&#`, followed by one or more ASCII digits representing the base-ten integer that corresponds to the character's {{glossary("Unicode")}} {{glossary("code point")}}, and ending with `;`.
     For example, the decimal character reference for `<` is `&#60;`, because the Unicode code point for the symbol is `U+0003C`, and `3C` hexadecimal is 60 in decimal.
 
 - **Hexadecimal numeric character reference**
@@ -50,3 +50,11 @@ A very small subset of useful named character references along with their unicod
 | °         | `&deg;`         | U+000B0            |
 
 The full list of HTML named character references [can found in the HTML specification here](https://html.spec.whatwg.org/multipage/named-characters.html#named-character-references).
+
+## See also
+
+- Related glossary terms:
+  - {{glossary("Character")}}
+  - {{glossary("Escape character")}}
+  - {{glossary("Code point")}}
+  - {{glossary("Unicode")}}

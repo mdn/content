@@ -79,7 +79,7 @@ Learn how to make your app accessible in [accessibility](/en-US/docs/Web/Accessi
 Users expect installed PWAs to behave like any installed platform-specific app. To provide the app-like experience that users expect, integrate your app with the operating system in some way. For example:
 
 - Use the [Notifications API](/en-US/docs/Web/API/Notifications_API) to send notifications to the user's device.
-- Handle files with the [`file_handlers`](/en-US/docs/Web/Manifest/file_handlers) web app manifest member.
+- Handle files with the [`file_handlers`](/en-US/docs/Web/Manifest/Reference/file_handlers) web app manifest member.
 - [Display badges](/en-US/docs/Web/Progressive_web_apps/How_to/Display_badge_on_app_icon) on the app icon.
 - Enable [data sharing between apps](/en-US/docs/Web/Progressive_web_apps/How_to/Share_data_between_apps).
 

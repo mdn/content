@@ -10,7 +10,7 @@ Welcome to **Getting started**! If you are a complete beginner (i.e. you've not 
 
 ## Prerequisites
 
-There is no prequisite knowledge for starting this course. Also note that we don't consider learning these topics as required before moving on to the [Core modules](/en-US/docs/Learn_web_development/Core), but we believe students will have an easier time if they spend some time on these topics first.
+There is no prerequisite knowledge for starting this course. Also note that we don't consider learning these topics as required before moving on to the [Core modules](/en-US/docs/Learn_web_development/Core), but we believe students will have an easier time if they spend some time on these topics first.
 
 ## Modules
 

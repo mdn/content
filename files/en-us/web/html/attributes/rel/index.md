@@ -209,7 +209,7 @@ The `rel` attribute has no default value. If the attribute is omitted or if none
 
   - : Relevant to {{htmlelement('form')}}, {{htmlelement('link')}}, {{htmlelement('a')}}, and {{htmlelement('area')}} elements, the `search` keywords indicates that the hyperlink references a document whose interface is specially designed for searching in the current document, site, and related resources, providing a link to a resource that can be used to search.
 
-    If the [`type`](/en-US/docs/Web/HTML/Element/link#type) attribute is set to `application/opensearchdescription+xml` the resource is an [OpenSearch](/en-US/docs/Web/OpenSearch) plugin that can be easily added to the interface of Firefox.
+    If the [`type`](/en-US/docs/Web/HTML/Element/link#type) attribute is set to `application/opensearchdescription+xml` the resource is an [OpenSearch](/en-US/docs/Web/XML/Guides/OpenSearch) plugin that can be easily added to the interface of Firefox.
 
 - `stylesheet`
 

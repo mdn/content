@@ -11,7 +11,7 @@ browser-compat: api.URL.pathname
 The **`pathname`** property of the {{domxref("URL")}} interface represents a location in a hierarchical structure. It is a string constructed from a list of path segments, each of which is prefixed by a `/` character.
 
 HTTPS, HTTP, or other URLs with [hierarchical schemes](https://www.rfc-editor.org/rfc/rfc3986#section-1.2.3) (which the URL standard calls "[special schemes](https://url.spec.whatwg.org/#special-scheme)") always have at least one (invisible) path segment: the empty string.
-The `pathname` value for such URLs will therefore always have a least one `/` character.
+The `pathname` value for such URLs will therefore always have at least one `/` character.
 
 For non-hierarchical schemes, if the URL has no path segments, the value of its `pathname` property will be the empty string.
 

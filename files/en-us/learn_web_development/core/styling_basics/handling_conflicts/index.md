@@ -41,15 +41,15 @@ While working through this lesson may seem less relevant immediately and a littl
 
 CSS stands for **Cascading Style Sheets**, and that first word _cascading_ is incredibly important to understand — the way that the cascade behaves is key to understanding CSS.
 
-At some point, you will be working on a project and you will find that the CSS you thought should be applied to an element is not working. Often, the problem is that you create two rules that apply different values of the same property to the same element. [**Cascade**](/en-US/docs/Web/CSS/Cascade) and the closely-related concept of [**specificity**](/en-US/docs/Web/CSS/Specificity) are mechanisms that control which rule applies when there is such a conflict. The rule that's styling your element may not be the one you expect, so you need to understand how these mechanisms work.
+At some point, you will be working on a project and you will find that the CSS you thought should be applied to an element is not working. Often, the problem is that you create two rules that apply different values of the same property to the same element. [**Cascade**](/en-US/docs/Web/CSS/CSS_cascade/Cascade) and the closely-related concept of [**specificity**](/en-US/docs/Web/CSS/CSS_cascade/Specificity) are mechanisms that control which rule applies when there is such a conflict. The rule that's styling your element may not be the one you expect, so you need to understand how these mechanisms work.
 
-Also significant here is the concept of [**inheritance**](/en-US/docs/Web/CSS/Inheritance), which means that some CSS properties by default inherit values set on the current element's parent element and some don't. This can also cause some behavior that you might not expect.
+Also significant here is the concept of [**inheritance**](/en-US/docs/Web/CSS/CSS_cascade/Inheritance), which means that some CSS properties by default inherit values set on the current element's parent element and some don't. This can also cause some behavior that you might not expect.
 
 Let's start by taking a quick look at the key things we are dealing with, then we'll look at each in turn and see how they interact with each other and your CSS. These can seem like a tricky set of concepts to understand. As you get more practice writing CSS, the way it works will become more obvious to you.
 
 ### Cascade
 
-Stylesheets [**cascade**](/en-US/docs/Web/CSS/Cascade) — at a very simple level, this means that the origin, the cascade layer, and the order of CSS rules matter. When two rules both have equal specificity, the one that is defined last in the stylesheet is the one that will be used.
+Stylesheets [**cascade**](/en-US/docs/Web/CSS/CSS_cascade/Cascade) — at a very simple level, this means that the origin and the order of CSS rules matter. When two rules both have equal specificity, the one that is defined last in the stylesheet is the one that will be used. There are other concepts that have an effect, such as [cascade layers](/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers), but these are more advanced and we won't cover them in any detail here.
 
 In the below example, we have two rules that could apply to the `<h1>` element. The `<h1>` content ends up being colored blue. This is because both the rules are from the same source, have an identical element selector, and therefore, carry the same specificity, but the last one in the source order wins.
 
@@ -70,7 +70,7 @@ h1 {
 
 ### Specificity
 
-[Specificity](/en-US/docs/Web/CSS/Specificity) is the algorithm that the browser uses to decide which property value is applied to an element. If multiple style blocks have different selectors that configure the same property with different values and target the same element, specificity decides the property value that gets applied to the element. Specificity is basically a measure of how specific a selector's selection will be:
+[Specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity) is the algorithm that the browser uses to decide which property value is applied to an element. If multiple style blocks have different selectors that configure the same property with different values and target the same element, specificity decides the property value that gets applied to the element. Specificity is basically a measure of how specific a selector's selection will be:
 
 - An element selector is less specific; it will select all elements of that type that appear on a page, so it has less weight. Pseudo-element selectors have the same specificity as regular element selectors.
 - A class selector is more specific; it will select only the elements on a page that have a specific `class` attribute value, so it has more weight. Attribute selectors and pseudo-classes have the same weight as a class.
@@ -191,7 +191,7 @@ CSS provides five special universal property values for controlling inheritance.
 - {{cssxref("inherit")}}
   - : Sets the property value applied to a selected element to be the same as that of its parent element. Effectively, this "turns on inheritance".
 - {{cssxref("initial")}}
-  - : Sets the property value applied to a selected element to the [initial value](/en-US/docs/Web/CSS/initial_value) of that property.
+  - : Sets the property value applied to a selected element to the [initial value](/en-US/docs/Web/CSS/CSS_cascade/initial_value) of that property.
 - {{cssxref("revert")}}
   - : Resets the property value applied to a selected element to the browser's default styling rather than the defaults applied to that property. This value acts like {{cssxref("unset")}} in many cases.
 - {{cssxref("revert-layer")}}
@@ -200,7 +200,7 @@ CSS provides five special universal property values for controlling inheritance.
   - : Resets the property to its natural value, which means that if the property is naturally inherited it acts like `inherit`, otherwise it acts like `initial`.
 
 > [!NOTE]
-> See [Origin types](/en-US/docs/Web/CSS/Cascade#origin_types) for more information on each of these and how they work.
+> See [Origin types](/en-US/docs/Web/CSS/CSS_cascade/Cascade#origin_types) for more information on each of these and how they work.
 
 We can look at a list of links and explore how universal values work. The live example below allows you to play with the CSS and see what happens when you make changes. Playing with code really is the best way to better understand HTML and CSS.
 
@@ -479,17 +479,15 @@ Let's walk through this to see what's happening — try removing some of the pro
 4. The 2nd element _does_ get the red background color, but no border. Why? Because of the `!important` flag in the second rule. Adding the `!important` flag after `border: none` means that this declaration will win over the `border` value in the previous rule, even though the ID selector has higher specificity.
 
 > [!NOTE]
-> The only way to override an important declaration is to include another important declaration with the _same specificity_ later in the source order, or one with higher specificity, or to include an important declaration in a prior cascade layer (we haven't covered cascade layers yet).
+> The only way to override an important declaration is to include another important declaration with the _same specificity_ later in the source order, or one with higher specificity.
 
 One situation in which you may have to use the `!important` flag is when you are working on a CMS where you can't edit the core CSS modules, and you really want to override an inline style or an important declaration that can't be overridden in any other way. But really, don't use it if you can avoid it.
 
 ## The effect of CSS location
 
-Finally, it is important to note that the precedence of a CSS declaration depends on what stylesheet and cascade layer it is specified in.
+Finally, it is important to note that the precedence of a CSS declaration depends on what stylesheet it is specified in.
 
 It is possible for users to set custom stylesheets to override the developer's styles. For example, a visually impaired user might want to set the font size on all web pages they visit to be double the normal size to allow for easier reading.
-
-It is also possible to declare developer styles in cascade layers: you can make non-layered styles override styles declared in layers or you can make styles declared in later layers override styles from earlier declared layers. For example, as a developer you may not be able to edit a third-party stylesheet, but you can import the external stylesheet into a cascade layer so that all of your styles easily override the imported styles without worrying about third-party selector specificity.
 
 ### Order of overriding declarations
 

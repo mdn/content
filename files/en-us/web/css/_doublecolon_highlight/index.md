@@ -1,5 +1,5 @@
 ---
-title: "::highlight()"
+title: ::highlight()
 slug: Web/CSS/::highlight
 page-type: css-pseudo-element
 browser-compat: css.selectors.highlight

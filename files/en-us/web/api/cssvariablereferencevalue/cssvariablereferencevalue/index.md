@@ -22,7 +22,7 @@ new CSSVariableReferenceValue(variable, fallback)
 - `variable`
   - : A [custom property name](/en-US/docs/Web/CSS/--*).
 - `fallback` {{optional_inline}}
-  - : A [custom property fallback value](/en-US/docs/Web/CSS/Using_CSS_custom_properties#custom_property_fallback_values).
+  - : A [custom property fallback value](/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties#custom_property_fallback_values).
 
 ## Specifications
 

@@ -11,7 +11,7 @@ page-type: guide
 In practice, web developers don't need to implement compression mechanisms, both browsers and servers have it implemented already, but they have to be sure that the server is configured adequately. Compression happens at three different levels:
 
 - first some file formats are compressed with specific optimized methods,
-- then general encryption can happen at the HTTP level (the resource is transmitted compressed from end to end),
+- then general compression can happen at the HTTP level (the resource is transmitted compressed from end to end),
 - and finally compression can be defined at the connection level, between two nodes of an HTTP connection.
 
 ## File format compression

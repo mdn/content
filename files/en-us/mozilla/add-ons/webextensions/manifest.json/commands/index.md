@@ -183,6 +183,8 @@ Key combinations must consist of 2 or 3 keys:
    - the letters `A` – `Z`
    - the numbers `0` – `9`
    - the function keys `F1` – `F12`
+     > [!NOTE]
+     > From Firefox 135, users can assign the `F13` to `F19` keys to an extension using [Manage Extension Shortcuts](https://support.mozilla.org/en-US/kb/manage-extension-shortcuts-firefox). Your extension can't assign these keys from the manifest file. However, it can assign them using {{WebExtAPIRef("commands.update")}}.
    - `Comma`, `Period`, `Home`, `End`, `PageUp`, `PageDown`, `Space`, `Insert`, `Delete`, `Up`, `Down`, `Left`, `Right`
 
 The key is then given as a string containing the set of key values, in the order listed above, separated by "`+`". For example, `"Ctrl+Shift+Z"`.

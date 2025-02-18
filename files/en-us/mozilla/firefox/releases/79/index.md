@@ -86,9 +86,9 @@ See also [Firefox 79: The safe return of shared memory, new tooling, and platfor
 
 ### WebAssembly
 
-- [WebAssembly Bulk memory operations](/en-US/docs/WebAssembly/Understanding_the_text_format#bulk_memory_operations) are now shipped ([Firefox bug 1528294](https://bugzil.la/1528294)).
-- [WebAssembly Reference types](/en-US/docs/WebAssembly/Understanding_the_text_format#reference_types) are now shipped ([Firefox bug 1637884](https://bugzil.la/1637884)).
-- [WebAssembly Threads](/en-US/docs/WebAssembly/Understanding_the_text_format#webassembly_threads) (Shared memory & Atomics) are now shipped ([Firefox bug 1389458](https://bugzil.la/1389458), [Firefox bug 1648685](https://bugzil.la/1648685)).
+- [WebAssembly Bulk memory operations](/en-US/docs/WebAssembly/Guides/Understanding_the_text_format#bulk_memory_operations) are now shipped ([Firefox bug 1528294](https://bugzil.la/1528294)).
+- [WebAssembly Reference types](/en-US/docs/WebAssembly/Guides/Understanding_the_text_format#reference_types) are now shipped ([Firefox bug 1637884](https://bugzil.la/1637884)).
+- [WebAssembly Threads](/en-US/docs/WebAssembly/Guides/Understanding_the_text_format#webassembly_threads) (Shared memory & Atomics) are now shipped ([Firefox bug 1389458](https://bugzil.la/1389458), [Firefox bug 1648685](https://bugzil.la/1648685)).
 
 ## Changes for add-on developers
 

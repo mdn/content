@@ -49,4 +49,4 @@ The MDN [Accessibility Learning Area](/en-US/docs/Learn_web_development/Core/Acc
 ## See also
 
 - [WAI Interest Group](https://www.w3.org/WAI/about/groups/waiig/)
-- [Developer guides](/en-US/docs/Web/Guide)
+- [Developer guides](/en-US/docs/MDN/Guides)

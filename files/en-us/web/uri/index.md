@@ -1,27 +1,28 @@
 ---
 title: URIs
 slug: Web/URI
-page-type: guide
+page-type: landing-page
 spec-urls: https://www.rfc-editor.org/rfc/rfc3986.html
+sidebar: urlsidebar
 ---
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/URI")}}
+**Uniform Resource Identifiers (URI)** are used to identify "resources" on the web.
+URIs are commonly used as targets of [HTTP](/en-US/docs/Web/HTTP) requests, in which case the URI represents a location for a physical resource, such as a document, a photo, binary data.
+The most common type of URI is a Uniform Resource Locator ({{Glossary("URL")}}), which is known as the _web address_.
 
-**Uniform Resource Identifiers (URI)** are used to identify "resources" on the web. They are commonly used as targets of [HTTP](/en-US/docs/Web/HTTP) requests, in which case the URI represents a location for a physical resource, such as a document, a photo, binary data, etc. URIs can also be used to trigger behaviors other than fetching a resource, including opening the email client, sending text messages, or executing JavaScript, when used in other places such as the [`href`](/en-US/docs/Web/HTML/Element/a#href) of an HTML `<a>` link.
+URIs can be used to trigger behaviors other than fetching a resource, including opening an email client, sending text messages, or executing JavaScript, when used in other places such as the [`href`](/en-US/docs/Web/HTML/Element/a#href) of an HTML `<a>` link.
 
 ## URLs and URNs
 
 ### URLs
 
-The most common form of URI is the Uniform Resource Locator ({{Glossary("URL")}}), which is known as the _web address_.
+Any of the following URLs can be typed into your browser's address bar to tell it to load the associated document (resource):
 
 ```url
 https://developer.mozilla.org
 https://developer.mozilla.org/en-US/docs/Learn_web_development/
 https://developer.mozilla.org/en-US/search?q=URL
 ```
-
-Any of those URLs can be typed into your browser's address bar to tell it to load the associated page (resource).
 
 A URL is composed of different parts, some mandatory and others optional. A more complex example might look like this:
 
@@ -55,7 +56,7 @@ http://www.example.com:80/path/to/myfile.html?key1=value1&key2=value2#SomewhereI
 
 ![Protocol](mdn-url-protocol@x2.png)
 
-`http://` is the [_scheme_](/en-US/docs/Web/URI/Schemes) of the URL, indicating which protocol the browser must use. Usually it is the HTTP protocol or its secured version, HTTPS. The Web requires one of these two, but browsers also know how to handle other protocols such as `mailto:` (to open a mail client) or `ftp:` to handle a file transfer, so don't be surprised if you see such protocols. The [schemes](/en-US/docs/Web/URI/Schemes) reference provides a list of the most common schemes, and documentation for some of them.
+`http://` is the [_scheme_](/en-US/docs/Web/URI/Reference/Schemes) of the URL, indicating which protocol the browser must use. Usually it is the HTTP protocol or its secured version, HTTPS. The Web requires one of these two, but browsers also know how to handle other protocols such as `mailto:` (to open a mail client) or `ftp:` to handle a file transfer, so don't be surprised if you see such protocols. The [schemes](/en-US/docs/Web/URI/Reference/Schemes) reference provides a list of the most common schemes, and documentation for some of them.
 
 When using URLs in {{Glossary("HTML")}} content, you should generally only use a few of these URL schemes. When referring to subresources — that is, files that are being loaded as part of a larger document — you should only use the HTTP and HTTPS schemes. Increasingly, browsers are removing support for using FTP to load subresources, for security reasons.
 
@@ -63,7 +64,7 @@ FTP is still acceptable at the top level (such as typed directly into the browse
 
 ### Authority
 
-The URI [_authority_](/en-US/docs/Web/URI/Authority) is comprised of user info (optional and usually unspecified), the host name, and the port.
+The URI [_authority_](/en-US/docs/Web/URI/Reference/Authority) is comprised of user info (optional and usually unspecified), the host name, and the port.
 
 ![Domain Name](mdn-url-domain@x2.png)
 
@@ -89,9 +90,9 @@ The URI [_authority_](/en-US/docs/Web/URI/Authority) is comprised of user info (
 
 ![Anchor](mdn-url-anchor@x2.png)
 
-`#SomewhereInTheDocument` is the [_fragment_](/en-US/docs/Web/URI/Fragment) of the URL, which is an anchor to another part of the resource itself. An anchor represents a sort of "bookmark" inside the resource, giving the browser the directions to show the content located at that "bookmarked" spot. On an HTML document, for example, the browser will scroll to the point where the anchor is defined; on a video or audio document, the browser will try to go to the time the anchor represents. It is worth noting that the part after the #, also known as the fragment identifier, is never sent to the server with the request.
+`#SomewhereInTheDocument` is the [_fragment_](/en-US/docs/Web/URI/Reference/Fragment) of the URL, which is an anchor to another part of the resource itself. An anchor represents a sort of "bookmark" inside the resource, giving the browser the directions to show the content located at that "bookmarked" spot. On an HTML document, for example, the browser will scroll to the point where the anchor is defined; on a video or audio document, the browser will try to go to the time the anchor represents. It is worth noting that the part after the #, also known as the fragment identifier, is never sent to the server with the request.
 
-There's a special [text fragment](/en-US/docs/Web/URI/Fragment/Text_fragments) feature that allows you to link to a specific part of a web page identified by its text content.
+There's a special [text fragment](/en-US/docs/Web/URI/Reference/Fragment/Text_fragments) feature that allows you to link to a specific part of a web page identified by its text content.
 
 ## Examples
 

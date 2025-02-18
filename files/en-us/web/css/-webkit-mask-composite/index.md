@@ -1,5 +1,5 @@
 ---
-title: "-webkit-mask-composite"
+title: -webkit-mask-composite
 slug: Web/CSS/-webkit-mask-composite
 page-type: css-property
 status:

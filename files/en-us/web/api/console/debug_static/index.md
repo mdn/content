@@ -2,7 +2,7 @@
 title: "console: debug() static method"
 short-title: debug()
 slug: Web/API/console/debug_static
-page-type: web-api-instance-method
+page-type: web-api-static-method
 browser-compat: api.console.debug_static
 ---
 

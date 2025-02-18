@@ -2,7 +2,7 @@
 title: "console: table() static method"
 short-title: table()
 slug: Web/API/console/table_static
-page-type: web-api-instance-method
+page-type: web-api-static-method
 browser-compat: api.console.table_static
 ---
 

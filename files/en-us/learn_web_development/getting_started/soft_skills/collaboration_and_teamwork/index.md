@@ -28,7 +28,7 @@ As a professional in the web industry, you are going to have to work with other 
           <li>Effective techniques to practice collaboration with teammates, including sharing useful information.</li>
           <li>Learn to ask useful questions and help one another.</li>
           <li>Widen the net to meetup groups or open source projects to find people to help and collaborate with.</li>
-          <li>Learn to not fear failure, and instead embrace it as an effectve learning tool.</li>
+          <li>Learn to not fear failure, and instead embrace it as an effective learning tool.</li>
         </ul>
       </td>
     </tr>

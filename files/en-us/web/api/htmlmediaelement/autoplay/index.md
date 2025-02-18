@@ -25,7 +25,7 @@ active (that is, when {{domxref("MediaStream.active")}} becomes `true`).
 > creating media elements whose source will be set at a later time, under user control.
 
 For a much more in-depth look at autoplay, autoplay blocking, and how to respond when
-autoplay is blocked by the user's browser, see our article [Autoplay guide for media and Web Audio APIs](/en-US/docs/Web/Media/Autoplay_guide).
+autoplay is blocked by the user's browser, see our article [Autoplay guide for media and Web Audio APIs](/en-US/docs/Web/Media/Guides/Autoplay).
 
 ## Value
 

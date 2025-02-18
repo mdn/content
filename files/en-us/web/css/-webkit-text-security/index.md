@@ -1,5 +1,5 @@
 ---
-title: "-webkit-text-security"
+title: -webkit-text-security
 slug: Web/CSS/-webkit-text-security
 page-type: css-property
 status:
