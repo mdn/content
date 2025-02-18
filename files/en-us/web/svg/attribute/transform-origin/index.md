@@ -12,7 +12,7 @@ The **`transform-origin`** SVG attribute sets the origin for an item's transform
 You can use this attribute with any SVG element.
 
 > [!NOTE]
-> As a presentation attribute, `transform-origin` also has its CSS property counterpart; see {{cssxref("transform-origin")}}. When both are specified, the CSS property takes priority.
+> As a presentation attribute, `transform-origin` also has a CSS property counterpart: {{cssxref("transform-origin")}}. When both are specified, the CSS property takes priority.
 
 ## Usage notes
 
@@ -36,9 +36,12 @@ You can use this attribute with any SVG element.
 > [!NOTE]
 > The default value of `transform-origin` is `0 0` for all SVG elements except for root `<svg>` elements and `<svg>` elements that are a direct child of a [`foreignObject`](/en-US/docs/Web/SVG/Element/foreignObject). These elements have `transform-origin: 50% 50%`, as in normal CSS.
 
-The lengths and percentages specified are all relative to the [reference box](/en-US/docs/Web/CSS/transform-box). Because the default value for `transform-box` is `view-box`, the transform origin coordinates are relative to the `viewBox` of the SVG element, unless the element itself has an associated CSS layout box.
+Specified lengths, percentages, and keywords (`left`, `center`, `right`, `top`, and `bottom`) are all relative to the [reference box](/en-US/docs/Web/CSS/transform-box). Because the default value for `transform-box` is `view-box`, the transform origin coordinates are relative to the `viewBox` of the SVG element, unless the element itself has an associated CSS layout box.
 
-## Example
+## Examples
+
+The following examples demonstrate the rotation of a rectangular box 30° around a number of different `transform-origin`s.
+The SVG is declared in each case with the original box drawn with a dashed red outline, followed by the rotated box drawn in lime, and then the `transform-origin` drawn as a red crosshair marker.
 
 ### Default transform-origin
 
