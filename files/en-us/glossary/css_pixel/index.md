@@ -10,4 +10,5 @@ The term **CSS pixel** is synonymous with the CSS unit of absolute length _px_ â
 
 ## See also
 
-- [CSS Length Explained](https://hacks.mozilla.org/2013/09/css-length-explained/) on the MDN Hacks Blog
+- {{glossary("device pixel")}}
+- [CSS Length Explained](https://hacks.mozilla.org/2013/09/css-length-explained/) via MDN Hacks Blog (2013)
