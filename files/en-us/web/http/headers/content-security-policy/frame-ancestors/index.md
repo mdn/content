@@ -47,17 +47,17 @@ Content-Security-Policy: frame-ancestors <source-expression-list>;
 This directive may have one of the following values:
 
 - `'none'`
-  - : No resources of this type may be loaded. The single quotes are mandatory.
+  - : This resource may not be embedded. The single quotes are mandatory.
 - `<source-expression-list>`
 
-  - : A space-separated list of _source expression_ values. Resources of this type may be loaded if they match any of the given source expressions. For this directive, the following source expression values are applicable:
+  - : A space-separated list of _source expression_ values. This resource may be embedded if the embedder matches any of the given source expressions. For this directive, the following source expression values are applicable:
 
     - [`<host-source>`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#host-source)
     - [`<scheme-source>`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#scheme-source)
     - [`'self'`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#self)
 
 > [!NOTE]
-> The `frame-ancestors` directive's syntax is similar to a source list of other directives (e.g. {{CSP("child-src")}}), but will not fall back to the `default-src` setting. A policy that declares `default-src 'none'` will still allow the resource to be embedded by anyone.
+> The `frame-ancestors` directive's syntax is similar to the source list syntax accepted by other directives (e.g., {{CSP("child-src")}}), but it does not fall back to the `default-src` setting. A policy that declares `default-src 'none'` still allows the resource to be embedded by anyone.
 
 ## Examples
 
