@@ -38,8 +38,7 @@ The `start_url` manifest member is used to specify the URL that should be opened
     > If [`scope`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/scope) is not specified in the manifest it will be inferred from the `start_url` (or effective `start_url` if the value is undefined or invalid).
 
     > [!NOTE]
-    > Leaving the `start_url` unspecified can lead to unwanted consequences (see [Installability](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable#installability)). Set it specifically to a relative path instead: `"start_url": "./"`.
-
+    > Leaving the `start_url` unspecified can lead to unwanted consequences (see [Installability](/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable#installability)). Set it specifically to a relative path instead: `"start_url": "./"`.
 
 ## Description
 
