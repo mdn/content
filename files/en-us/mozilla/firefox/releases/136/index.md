@@ -14,6 +14,8 @@ This article provides information about the changes in Firefox 136 that affect d
 
 ### HTML
 
+- The `plaintext-only` value of the [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) global attribute indicates that the element is editable; rich text formatting is disabled and any formatting in pasted text is automatically stripped ([Firefox bug 1922724](https://bugzil.la/1922724)).
+
 #### Removals
 
 ### CSS
