@@ -10,9 +10,9 @@ browser-compat: svg.global_attributes.color
 The **`color`** attribute is used to provide a potential indirect value, `currentcolor`, for the {{SVGAttr("fill")}}, {{SVGAttr("stroke")}}, {{SVGAttr("stop-color")}}, {{SVGAttr("flood-color")}}, and {{SVGAttr("lighting-color")}} attributes.
 
 > [!NOTE]
-> As a presentation attribute, `color` can be used as a CSS property. See [CSS color](/en-US/docs/Web/CSS/color) for further information.
+> As a presentation attribute, `color` also has a CSS property counterpart: {{cssxref("color")}}. When both are specified, the CSS property takes priority.
 
-As a presentation attribute, it can be applied to any element, but as noted above, it has no direct effect on SVG elements.
+Technically, `color` can be applied to any element, but it has no direct effect on SVG elements.
 
 ## Usage notes
 
