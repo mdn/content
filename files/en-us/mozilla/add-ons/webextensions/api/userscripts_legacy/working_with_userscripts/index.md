@@ -1,10 +1,13 @@
 ---
 title: Working with userScripts
-slug: Mozilla/Add-ons/WebExtensions/API/userScripts/Working_with_userScripts
+slug: Mozilla/Add-ons/WebExtensions/API/userScripts_legacy/Working_with_userScripts
 page-type: guide
 ---
 
 {{AddonSidebar}}
+
+> [!WARNING]
+> This is documentation for the legacy `userScripts` API. It's available in Firefox for Manifest V2. For functionality to work with user scripts in Manifest V3 see the new {{WebExtAPIRef("userScripts")}} API.
 
 By implementing userScripts, extension developers can modify how sites look and/or work to better meet user needs.
 
@@ -103,6 +106,6 @@ Once the script has been registered, navigate to a page whose domain name ends i
 
 ## See also
 
-- {{WebExtAPIRef("userScripts")}}
-- {{WebExtAPIRef("userScripts.register()", "userScripts.register()")}}
-- {{WebExtAPIRef("userScripts.onBeforeScript")}}
+- {{WebExtAPIRef("userScripts_legacy","userScripts")}}
+- {{WebExtAPIRef("userScripts_legacy.register()", "userScripts.register()")}}
+- {{WebExtAPIRef("userScripts_legacy.onBeforeScript")}}
