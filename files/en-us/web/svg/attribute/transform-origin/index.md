@@ -12,7 +12,7 @@ The **`transform-origin`** SVG attribute sets the origin for an item's transform
 You can use this attribute with any SVG element.
 
 > [!NOTE]
-> As a presentation attribute `transform-origin` can be used as a CSS property. See {{cssxref("transform-origin")}} for more.
+> As a presentation attribute, `transform-origin` also has its CSS property counterpart; see {{cssxref("transform-origin")}}. When both are specified, the CSS property takes priority.
 
 ## Usage notes
 
