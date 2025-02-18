@@ -9,7 +9,33 @@ browser-compat: html.elements.menu
 
 The **`<menu>`** [HTML](/en-US/docs/Web/HTML) element is described in the HTML specification as a semantic alternative to {{HTMLElement("ul")}}, but treated by browsers (and exposed through the accessibility tree) as no different than {{HTMLElement("ul")}}. It represents an unordered list of items (which are represented by {{HTMLElement("li")}} elements).
 
-{{EmbedInteractiveExample("pages/tabbed/menu.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;menu&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<div class="news">
+  <a href="#">NASA’s Webb Delivers Deepest Infrared Image of Universe Yet</a>
+  <menu>
+    <li><button id="save">Save for later</button></li>
+    <li><button id="share">Share this news</button></li>
+  </menu>
+</div>
+```
+
+```css interactive-example
+.news {
+  background-color: bisque;
+  padding: 1em;
+  border: solid thin black;
+}
+
+menu {
+  list-style-type: none;
+  display: flex;
+  padding: 0;
+  margin-bottom: 0;
+  gap: 1em;
+}
+```
 
 ## Attributes
 

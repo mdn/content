@@ -9,7 +9,29 @@ browser-compat: html.global_attributes.title
 
 The **`title`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) contains text representing advisory information related to the element it belongs to.
 
-{{EmbedInteractiveExample("pages/tabbed/attribute-title.html","tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: title", "tabbed-shorter")}}
+
+```html interactive-example
+<p>
+  Use the <code>title</code> attribute on an <code>iframe</code> to clearly
+  identify the content of the <code>iframe</code> to screen readers.
+</p>
+
+<iframe
+  title="Wikipedia page for the HTML language"
+  src="https://en.m.wikipedia.org/wiki/HTML"></iframe>
+<iframe
+  title="Wikipedia page for the CSS language"
+  src="https://en.m.wikipedia.org/wiki/CSS"></iframe>
+```
+
+```css interactive-example
+iframe {
+  height: 200px;
+  margin-bottom: 24px;
+  width: 100%;
+}
+```
 
 The main use of the `title` attribute is to label {{HTMLElement("iframe")}} elements for assistive technology.
 
