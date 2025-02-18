@@ -9,6 +9,8 @@ browser-compat: webextensions.api.runtime.onUserScriptMessage
 
 Use this event to listen for messages sent from one of the extension's [`USER_SCRIPT` worlds](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/userScripts/ExecutionWorld).
 
+In Firefox, this event requires the [`userScripts` permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/userScripts#permissions). In Chrome, the event is always present, including in extensions that don't declare the `userScripts` permission and have no code to fire the event.
+
 A user script can only send messages using {{WebExtAPIRef('runtime.sendMessage')}} from a `USER_SCRIPT` world that is configured by {{WebExtAPIRef('userScripts.configureWorld()')}} with `messaging` set to `true`.
 
 Along with the message, the listener is passed:
