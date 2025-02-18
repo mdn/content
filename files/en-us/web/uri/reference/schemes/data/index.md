@@ -1,11 +1,11 @@
 ---
-title: Data URLs
-slug: Web/URI/Schemes/data
-page-type: guide
+title: "data: URLs"
+short-title: "data:"
+slug: Web/URI/Reference/Schemes/data
+page-type: reference
 browser-compat: http.data-url
+sidebar: urlsidebar
 ---
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/URI")}}
 
 **Data URLs**, URLs prefixed with the `data:` scheme, allow content creators to embed small files inline in documents. They were formerly known as "data URIs" until that name was retired by the WHATWG.
 

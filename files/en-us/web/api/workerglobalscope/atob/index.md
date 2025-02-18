@@ -53,7 +53,7 @@ const decodedData = self.atob(encodedData); // decode the string
 ## See also
 
 - [A polyfill of `atob`](https://github.com/zloirock/core-js#base64-utility-methods) is available in [`core-js`](https://github.com/zloirock/core-js)
-- [`data` URLs](/en-US/docs/Web/URI/Schemes/data)
+- [`data` URLs](/en-US/docs/Web/URI/Reference/Schemes/data)
 - {{domxref("Window.atob()")}}: the same method, but in window scopes.
 - {{domxref("WorkerGlobalScope.btoa()")}}
 - {{jsxref("Uint8Array.fromBase64()")}}

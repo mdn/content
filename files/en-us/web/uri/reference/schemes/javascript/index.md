@@ -1,11 +1,11 @@
 ---
 title: "javascript: URLs"
-slug: Web/URI/Schemes/javascript
-page-type: guide
+short-title: "javascript:"
+slug: Web/URI/Reference/Schemes/javascript
+page-type: reference
 spec-urls: https://html.spec.whatwg.org/multipage/browsing-the-web.html#the-javascript:-url-special-case
+sidebar: urlsidebar
 ---
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/URI")}}
 
 > [!WARNING]
 > Using `javascript:` URLs on the web is discouraged as it may lead to execution of arbitrary code, similar to the ramifications of using [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval). It may also reduce {{glossary("accessibility")}} because it deviates from normal link behavior.
@@ -31,7 +31,7 @@ javascript:<script>
 - The browser address bar itself.
 
 > [!NOTE]
-> Some other contexts that use URLs, such as the [`href`](/en-US/docs/Web/HTML/Element/link#href) attribute of `<link>` elements, do not allow `javascript:` URLs, because they are resource locations, not navigation targets. For these cases, if you want to write JavaScript inline, use [`data:`](/en-US/docs/Web/URI/Schemes/data) URLs with the `text/javascript` MIME type.
+> Some other contexts that use URLs, such as the [`href`](/en-US/docs/Web/HTML/Element/link#href) attribute of `<link>` elements, do not allow `javascript:` URLs, because they are resource locations, not navigation targets. For these cases, if you want to write JavaScript inline, use [`data:`](/en-US/docs/Web/URI/Reference/Schemes/data) URLs with the `text/javascript` MIME type.
 
 When a browser attempts to navigate to such a location, it parses and executes the script body. The script may have a _completion value_ (not a return value), which is the same value if the script were executed with [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval). If the last statement is an [expression](/en-US/docs/Web/JavaScript/Reference/Statements/Expression_statement), the completion value is the value of that expression. If this completion value is a string, that string is treated as an HTML document and the browser navigates to a new document with that content, using the same URL as the current page. No history entry is created. If the completion value is not a string, the browser only executes the code and does not navigate. Therefore, it's often recommended that if the script ends with a function call like `javascript:foo()`, you should prefix it with {{jsxref("Operators/void", "void")}} to prevent accidental navigation if the function happens to return a string.
 

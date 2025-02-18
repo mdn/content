@@ -1,13 +1,13 @@
 ---
 title: URI authority
-slug: Web/URI/Authority
-page-type: guide
+short-title: Authority
+slug: Web/URI/Reference/Authority
+page-type: reference
 spec-urls: https://www.rfc-editor.org/rfc/rfc3986.html#section-3.1
+sidebar: urlsidebar
 ---
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/URI")}}
-
-The **authority** of a URI is the section that comes after the [scheme](/en-US/docs/Web/URI/Schemes) and before the path. It may have up to three parts: user information, host, and port.
+The **authority** of a URI is the section that comes after the [scheme](/en-US/docs/Web/URI/Reference/Schemes) and before the path. It may have up to three parts: user information, host, and port.
 
 ## Syntax
 
@@ -18,11 +18,11 @@ user@host
 user@host:port
 ```
 
-- host
+- `host`
   - : The _host_ is usually the domain name or IP address of the server hosting the resource. The domain name is resolved to an IP address using the {{glossary("DNS", "Domain Name System")}}.
-- port {{optional_inline}}
+- `port` {{optional_inline}}
   - : The _port_ is a number that indicates the port on which the server is listening for requests. It is optional and defaults to 80 for HTTP and 443 for HTTPS. Other schemes may define their own defaults or make it mandatory.
-- user {{optional_inline}}
+- `user` {{optional_inline}}
 
   - : The _user_ is optional and is used for authentication purposes. It is not commonly used in web URIs.
 
@@ -47,4 +47,4 @@ user@host:port
 ## See also
 
 - [URIs](/en-US/docs/Web/URI)
-- [Choosing between www and non-www URLs](/en-US/docs/Web/URI/Authority/Choosing_between_www_and_non-www_URLs)
+- [Choosing between www and non-www URLs](/en-US/docs/Web/URI/Guides/Choosing_between_www_and_non-www_URLs)
