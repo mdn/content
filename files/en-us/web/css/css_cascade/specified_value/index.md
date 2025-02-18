@@ -61,8 +61,8 @@ p {
 
 - [Specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity)
 - [Inheritance](/en-US/docs/Web/CSS/CSS_cascade/Inheritance)
-- [CSS syntax](/en-US/docs/Web/CSS/Syntax)
-- [At-rules](/en-US/docs/Web/CSS/At-rule)
+- [CSS syntax](/en-US/docs/Web/CSS/CSS_syntax/Syntax)
+- [At-rules](/en-US/docs/Web/CSS/CSS_syntax/At-rule)
 - [Box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
 - [Layout modes](/en-US/docs/Web/CSS/Layout_mode)
 - [Visual formatting models](/en-US/docs/Web/CSS/Visual_formatting_model)

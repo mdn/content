@@ -38,7 +38,7 @@ Before starting this module, you should have a basic work environment set up (as
 - [Handling conflicts](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
   - : The aim of this lesson is to develop your understanding of some of the most fundamental concepts of CSS — the cascade, specificity, and inheritance — which control how CSS is applied to HTML and how conflicts between style declarations are resolved.
 - [Values and units](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
-  - : CSS rules contain [declarations](/en-US/docs/Web/CSS/Syntax#css_declarations), which in turn are composed of properties and values. Each property used in CSS has a **value type** that describes what kind of values it is allowed to have. In this lesson, we will take a look at some of the most frequently used value types, what they are, and how they work.
+  - : CSS rules contain [declarations](/en-US/docs/Web/CSS/CSS_syntax/Syntax#css_declarations), which in turn are composed of properties and values. Each property used in CSS has a **value type** that describes what kind of values it is allowed to have. In this lesson, we will take a look at some of the most frequently used value types, what they are, and how they work.
 - [Sizing items in CSS](/en-US/docs/Learn_web_development/Core/Styling_basics/Sizing)
   - : Understanding how big the different features in your design will be is important. In this lesson we will summarize the various ways elements get a size via CSS and define a few terms about sizing that will help you in the future.
 - [Backgrounds and borders](/en-US/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)

@@ -14,6 +14,8 @@ This article provides information about the changes in Firefox 136 that affect d
 
 ### HTML
 
+- The [`autocorrect`](/en-US/docs/Web/HTML/Global_attributes/autocorrect) global attribute allows autocorrection in editable text elements including: most kinds of text {{htmlelement("input")}} elements, {{htmlelement("textarea")}} elements, and elements that have the [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) attribute set. The specific autocorrection behavior depends on the user agent and underlying OS. ([Firefox bug 1927977](https://bugzil.la/1927977)).
+
 #### Removals
 
 ### CSS
@@ -31,6 +33,11 @@ This article provides information about the changes in Firefox 136 that affect d
 #### Removals
 
 ### HTTP
+
+- The {{httpheader("Referer")}} HTTP header is now sent in requests following a page refresh that redirects to a new page (if permitted by the {{httpheader("Referrer-Policy")}}), and {{domxref("document.referrer")}} will be set to the referrer URL after navigating.
+  The page refresh may be triggered by the {{httpheader("Refresh")}} response header, or equivalent {{htmlelement("meta")}} in markup (for example `<meta http-equiv="refresh" content="3;url=https://www.mozilla.org" />`).
+  Note that same-page refreshes are treated as same-page navigation to a page fragment: since the page isn't re-requested, {{httpheader("Referer")}} isn't sent.
+  ([Firefox bug 1928291](https://bugzil.la/1928291))
 
 #### Removals
 
