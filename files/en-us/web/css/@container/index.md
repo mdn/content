@@ -9,7 +9,7 @@ browser-compat: css.at-rules.container
 
 The **`@container`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule) is a conditional group rule that applies styles to a [containment context](/en-US/docs/Web/CSS/CSS_containment/Container_queries#naming_containment_contexts).
 Style declarations are filtered by a condition and applied to the container if the condition is true.
-The condition is evaluated when the container size or [`<style-feature>`](#container_style_queries) value changes.
+The condition is evaluated when the tested container size, [`<style-feature>`](#container_style_queries), or scroll-state changes.
 
 The {{cssxref("container-name")}} property specifies a list of query container names. These names can be used by `@container` rules to filter which query containers are targeted. The optional, case-sensitive `<container-name>` filters the query containers that are targeted by the query.
 
@@ -35,9 +35,10 @@ For example:
 }
 
 /* with an optional <container-name> */
-@container tall (height > 30rem) {
+@container sticky-heading scroll-state(stuck: top) {
   h2 {
-    line-height: 1.6;
+    background: purple;
+    color: white;
   }
 }
 
@@ -49,7 +50,7 @@ For example:
 }
 
 /* condition list */
-@container card (width > 400px), style(--responsive: true) {
+@container card (width > 400px), style(--responsive: true), scroll-state(stuck: top) {
   h2 {
     font-size: 1.5em;
   }
@@ -65,10 +66,10 @@ For example:
     - `<container-name>`
       - : Optional. The name of the container that the styles will be applied to when the query evaluates to true, specified as an {{cssxref("ident")}}.
     - `<container-query>`
-      - : A set of features that are evaluated against the query container when the size of the container changes.
+      - : A set of features that are evaluated against the query container when the tested size, [`<style-feature>`](#container_style_queries), or scroll-state of the container changes.
 
 - `<stylesheet>`
-  - : A set of CSS declarations.
+  - : A set of CSS rules or declarations.
 
 ### Logical keywords in container queries
 
@@ -123,7 +124,15 @@ Details about usage and naming restrictions are described in the {{cssxref("cont
 
 ### Descriptors
 
-The following descriptors can be used within the container condition:
+The descriptors available to be used within the `<container-condition>` are listed in the follwing sections.
+
+#### Size container descriptors
+
+Size container descriptors are specified as-is inside the `<container-condition>`, for example:
+
+```css
+@container (width > 400px) { ... }
+```
 
 - `aspect-ratio`
 
@@ -147,6 +156,103 @@ The following descriptors can be used within the container condition:
 
 - `width`
   - : The width of the container expressed as a {{cssxref("length")}} value.
+
+#### Scroll-state container descriptors
+
+Scroll-state container descriptors are specified inside the `<container-condition>` within a set of parentheses following the `scroll-state` keyword, for example:
+
+```css
+@container scroll-state(scrollable: top) { ... }
+```
+
+- `scrollable`
+
+  - : Whether the container can be scrolled in the given direction via user-initiated scrolling (for example by dragging the scrollbar or using a trackpad gesture). In other words, is there any overflowing content in the given direction that can be scrolled to? Possible values are:
+
+    - `none`
+      - : The container cannot be scrolled in any direction.
+    - `top`
+      - : The container can be scrolled towards its top edge.
+    - `right`
+      - : The container can be scrolled towards its right-hand edge.
+    - `bottom`
+      - : The container can be scrolled towards its bottom edge.
+    - `left`
+      - : The container can be scrolled towards its left-hand edge.
+    - `x`
+      - : The container can be scrolled horizontally towards its left-hand and right-hand edges.
+    - `y`
+      - : The container can be scrolled vertically towards its top and bottom edges.
+    - `block-start`
+      - : The container can be scrolled towards its block-start edge.
+    - `block-end`
+      - : The container can be scrolled towards its block-end edge.
+    - `inline-start`
+      - : The container can be scrolled towards its inline-start edge.
+    - `inline-end`
+      - : The container can be scrolled towards its inline-end edge.
+    - `block`
+      - : The container can be scrolled in its block direction towards its block-start and block-end edges.
+    - `inline`
+      - : The container can be scrolled in its inline direction towards its inline-start and inline-end edges.
+
+    To evaluate a container with a `scrollable` scroll-state query, it must be a scroll container. If the test passes, the rules inside the `@container` block are applied to descendants of the scroll container.
+
+- `snapped`
+
+  - : Whether a container is, or will be, snapped to a [scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap) container ancestor along a given axis. Containers designated as scroll snap targets on which the [`scrollsnapchanging`](/en-US/docs/Web/API/Element/scrollsnapchanging_event) event is firing will match the `snapped` descriptor. Possible values are:
+
+    - `none`
+      - : The container is not a scroll snap target for its ancestor scroll container. The `none` value negates the matching — containers that _are_ snap targets for the scroll container will _not_ have the `@container` styles applied, whereas non-snap targets _will_ have the styles applied. This is true even if the ancestor is not designated as a scroll snap container (for example, by having a suitable {{cssxref("scroll-snap-type")}} value set on it).
+    - `x`
+      - : The container is a horizontal scroll snap target for its ancestor scroll container, that is, it is snapping horizontally to its ancestor.
+    - `y`
+      - : The container is a vertical scroll snap target for its ancestor scroll container, that is, it is snapping vertically to its ancestor.
+    - `block`
+      - : The container is a block-axis scroll snap target for its ancestor scroll container, that is, it is snapping to its ancestor in the block direction.
+    - `inline`
+      - : The container is an inline-axis scroll snap target for its ancestor scroll container, that is, it is snapping to its ancestor in the inline direction.
+    - `both`
+      - : The container is a horizontal and vertical scroll snap target for its ancestor scroll container, that is, it is snapping to its ancestor in both directions. With a value of `both`, the container won't match if it is only snapping to its ancestor along the horizontal _or_ vertical axis. It needs to be both.
+
+    To evaluate a container with a `snapped` scroll-state query, it must be a container with a scroll container ancestor. If the test passes, the rules inside the `@container` block are applied to descendants of the container.
+
+- `stuck`
+
+  - : Whether a container with a {{cssxref("position")}} value of `sticky` is stuck to an edge of its scolling container ancestor. Possible values are:
+
+    - `none`
+      - : The container is not stuck to any edges of its container.
+    - `top`
+      - : The container is stuck to the top edge of its container.
+    - `right`
+      - : The container is stuck to the right-hand edge of its container.
+    - `bottom`
+      - : The container is stuck to the bottom edge of its container.
+    - `left`
+      - : The container is stuck to the left-hand edge of its container.
+    - `block-start`
+      - : The container is stuck to the block-start edge of its container.
+    - `block-end`
+      - : The container is stuck to the block-end edge of its container.
+    - `inline-start`
+      - : The container is stuck to the inline-start edge of its container.
+    - `inline-end`
+      - : The container is stuck to the inline-end edge of its container.
+
+    To evaluate a container with a `stuck` scroll-state query, it must have `position: sticky` set on it, and be inside a scroll container. If the test passes, the rules inside the `@container` block are applied to descendants of the `position: sticky` container.
+
+    It is possible for two values from opposite axes to match at the same time:
+
+    ```css
+    @container scroll-state((stuck: top) and (stuck: left)) { ... }
+    ```
+
+    However, two values from opposite edges will never match at the same time:
+
+    ```css
+    @container scroll-state((stuck: left) and (stuck: right)) { ... }
+    ```
 
 ## Formal syntax
 
@@ -305,6 +411,55 @@ Style features that query a shorthand property are true if the computed values m
 
 The global `revert` and `revert-layer` are invalid as values in a `<style-feature>` and cause the container style query to be false.
 
+### Scroll-state queries
+
+Scroll state container queries allow you to selectively apply CSS rules to a container's children based on a scroll-state condition. Some of the conditions relate to the container themselves, and some relate to their scrolling ancestor. Let's look at a quick example involving the `stuck` scroll-state declaration, which evaluates whether a container with a {{cssxref("position")}} value of `sticky` is stuck to a specified edge of its scrolling container.
+
+In this example we have a scrolling {{htmlelement("article")}} containing structured text, which includes {{htmlelement("header")}} elements containing [`<h2>`](/en-US/docs/Web/HTML/Element/Heading_Elements) elements:
+
+```html
+<article>
+  <h1>Sticky reader with scroll-state container query</h1>
+  <section>
+    <header>
+      <h2>This first section is interesting</h2>
+    </header>
+
+    ...
+  </section>
+
+  ...
+</article>
+```
+
+We want the headers to stick to the top of the scrolling container when they reach it, but also be styled differently as a result. First of all, we apply a {{cssxref("position")}} value of `sticky` to the `<heading>` elements to achieve the sticking effect. We also apply a {{cssxref("container-type")}} value of `scroll-state` to establish them as scroll-state query containers, and a {{cssxref("container-name")}} so we can explicitly target these containers with a container query.
+
+```css
+header {
+  background: white;
+  position: sticky;
+  top: -1px;
+  container-type: scroll-state;
+  container-name: sticky-heading;
+}
+```
+
+Next, we set up the query by defining a `@container` block. We include the `container-name` value set in the above rule so the query only affects those named containers, and specify the query as `scroll-state(stuck: top)`. This query states that the styles contained within the `@container` block are only applied to matching elements inside the containers when the containers are stuck to the top edge of their scrolling ancestor (the document's `<html>` element, in this case).
+
+```css
+@container sticky-heading scroll-state(stuck: top) {
+  h2 {
+    background: purple;
+    color: white;
+    box-shadow: 0 5px 5px #0007;
+  }
+}
+```
+
+Note that you can apply styles to descendants of the container when a container query matches, but not the container itself. This is why we are targetting the styles to the `<h2>` children of the `<header>` elements, not the `<header>` elements themselves.
+
+See [Using container scroll-state queries](/en-US/docs/Web/CSS/CSS_conditional_rules/Container_scroll-state_queries) for a full walkthrough of this example and others.
+
 ## Specifications
 
 {{Specifications}}
@@ -317,6 +472,7 @@ The global `revert` and `revert-layer` are invalid as values in a `<style-featur
 
 - [Using container queries](/en-US/docs/Web/CSS/CSS_containment/Container_queries)
 - [Using container size and style queries](/en-US/docs/Web/CSS/CSS_containment/Container_size_and_style_queries)
+- [Using container scroll-state queries](/en-US/docs/Web/CSS/CSS_conditional_rules/Container_scroll-state_queries)
 - {{Cssxref("container-name")}}
 - {{Cssxref("container-type")}}
 - {{Cssxref("contain")}}
