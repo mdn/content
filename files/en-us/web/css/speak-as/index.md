@@ -44,6 +44,14 @@ speak-as: spell-out digits no-punctuation;
 > [!NOTE]
 > The support of `speak-as` property is very limited or inconsistently implemented across different assistive technologies (such as screen readers or speech synthesizers). It's often recommended not to fully rely on it solely to deliver your critical information, to ensure it remains user friendly and accessible to a wide audience.
 
+## Formal definition
+
+{{CSSInfo}}
+
+## Formal syntax
+
+{{CSSSyntax}}
+
 ## Examples
 
 ### HTML
@@ -82,12 +90,10 @@ speak-as: spell-out digits no-punctuation;
 
 ## Browser compatibility
 
-
 {{Compat}}
 
 ## See also
 
-- How to use [speak-as descriptor](/en-US/docs/Web/CSS/@counter-style/speak-as) as descriptor for {{cssxref("@counter-style")}} which is part of the `@counter-style` at-rule.
-- More information on {{cssxref("@counter-style")}}.
-- [CSS counter styles](/en-US/docs/Web/CSS/CSS_counter_styles)
-- [CSS lists and counters](/en-US/docs/Web/CSS/CSS_lists)
+- {{cssxref("@counter-style")}} at-rule {{cssxref("@counter-style/speak-as", "speak-as")}} descriptor
+- [CSS counter styles](/en-US/docs/Web/CSS/CSS_counter_styles) module
+- [CSS lists and counters](/en-US/docs/Web/CSS/CSS_lists) module
