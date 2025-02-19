@@ -24,7 +24,7 @@ There are two types of container queries: _container size queries_ and _containe
   - : Size queries enable applying styles to elements based on the current [size](/en-US/docs/Web/CSS/@container#descriptors) of a containing element, including the orientation and {{glossary("aspect ratio")}}. The containing elements need to be explicitly declared as _size query containers_.
 
 - **Container style queries**
-  - : Style queries enable applying styles to elements based on a containing element's style features. Any non-empty element can be a style query container. Currently, the only style feature supported by style queries is CSS [custom properties](/en-US/docs/Web/CSS/Using_CSS_custom_properties). In this case, the query returns true or false depending on the computed value of the containing element's custom properties. When container style queries are fully supported, they will enable you to apply styles to any element's descendants based on any property, declaration, or computed value — for example if the container is `display: inline flex` or has a non-transparent background color.
+  - : Style queries enable applying styles to elements based on a containing element's style features. Any non-empty element can be a style query container. Currently, the only style feature supported by style queries is CSS [custom properties](/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties). In this case, the query returns true or false depending on the computed value of the containing element's custom properties. When container style queries are fully supported, they will enable you to apply styles to any element's descendants based on any property, declaration, or computed value — for example if the container is `display: inline flex` or has a non-transparent background color.
 
 In this guide, we learn the basics of container queries by looking at:
 
@@ -125,7 +125,7 @@ A _container style query_ is a `@container` query that evaluates computed styles
 }
 ```
 
-The parameter of each `style()` function is a single **`<style-feature>`**. Per the CSS containment specification, a `<style-feature>` can be a valid CSS [declaration](/en-US/docs/Web/CSS/Syntax#css_declarations), a CSS property, or a [`<custom-property-name>`](/en-US/docs/Web/CSS/var#values). The only style feature currently supported is custom properties, with or without a value. See the [browser compatibility table](#browser_compatibility).
+The parameter of each `style()` function is a single **`<style-feature>`**. Per the CSS containment specification, a `<style-feature>` can be a valid CSS [declaration](/en-US/docs/Web/CSS/CSS_syntax/Syntax#css_declarations), a CSS property, or a [`<custom-property-name>`](/en-US/docs/Web/CSS/var#values). The only style feature currently supported is custom properties, with or without a value. See the [browser compatibility table](#browser_compatibility).
 
 If the `<style-feature>` includes a value, the style query evaluates to true if the computed value of the custom property (or, in the future, the CSS declaration) passed as the `style()` argument is true for the container being queried. Otherwise, it resolves to false.
 A style feature without a value evaluates to true if the computed value is different from the [initial value](#registered_properties) for the given property.
@@ -164,7 +164,7 @@ Now, let's dive in and take a look at the different `<style-feature>` types.
 
 ### Style queries for custom properties
 
-Style queries for custom properties allow you to query the [custom properties](/en-US/docs/Web/CSS/Using_CSS_custom_properties), also called "CSS variables", of a parent element. They are included within a `<style-query>` just as you would include any regular CSS property within a feature query: either with or without a value.
+Style queries for custom properties allow you to query the [custom properties](/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties), also called "CSS variables", of a parent element. They are included within a `<style-query>` just as you would include any regular CSS property within a feature query: either with or without a value.
 
 #### Standalone custom property queries
 

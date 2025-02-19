@@ -40,7 +40,7 @@ The XML file that describes a search engine follows the basic template below. Se
 
   - : URL of an icon for the search engine. When possible, include a 16×16 image of type `image/x-icon` (such as `/favicon.ico`) and a 64×64 image of type `image/jpeg` or `image/png`.
 
-    The URL may also use the [`data:` URL scheme](/en-US/docs/Web/URI/Schemes/data). (You can generate a `data:` URL from an icon file at [The `data:` URL kitchen](https://software.hixie.ch/utilities/cgi/data/data).)
+    The URL may also use the [`data:` URL scheme](/en-US/docs/Web/URI/Reference/Schemes/data). (You can generate a `data:` URL from an icon file at [The `data:` URL kitchen](https://software.hixie.ch/utilities/cgi/data/data).)
 
     ```xml
     <Image height="16" width="16" type="image/x-icon">https://example.com/favicon.ico</Image>

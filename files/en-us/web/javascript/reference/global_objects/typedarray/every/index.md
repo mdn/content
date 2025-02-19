@@ -9,7 +9,18 @@ browser-compat: javascript.builtins.TypedArray.every
 
 The **`every()`** method of {{jsxref("TypedArray")}} instances tests whether all elements in the typed array pass the test implemented by the provided function. It returns a Boolean value. This method has the same algorithm as {{jsxref("Array.prototype.every()")}}.
 
-{{EmbedInteractiveExample("pages/js/typedarray-every.html")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.every()")}}
+
+```js interactive-example
+function isNegative(element, index, array) {
+  return element < 0;
+}
+
+const int8 = new Int8Array([-10, -20, -30, -40, -50]);
+
+console.log(int8.every(isNegative));
+// Expected output: true
+```
 
 ## Syntax
 

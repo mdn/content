@@ -66,7 +66,7 @@ Firefox 10 shipped on January 31, 2012. This article provides information about 
 #### Web Workers
 
 - The attribute `XMLHttpRequest.responseType` and `XMLHttpRequest.response` are now available from inside [Workers](/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers#section_2).
-- The [`Worker()`](/en-US/docs/Web/API/Worker#worker) constructor now accepts [data URLs](/en-US/docs/Web/URI/Schemes/data).
+- The [`Worker()`](/en-US/docs/Web/API/Worker#worker) constructor now accepts [data URLs](/en-US/docs/Web/URI/Reference/Schemes/data).
 
 #### IndexedDB
 

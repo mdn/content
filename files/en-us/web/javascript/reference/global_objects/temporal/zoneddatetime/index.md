@@ -68,7 +68,7 @@ The IANA time zone database changes from time to time, usually to add new time z
 | `Asia/Ho_Chi_Minh`               | `Asia/Saigon`                   |
 | `Europe/Kyiv`                    | `Europe/Kiev`                   |
 
-Historically, these renames caused problems for programmers because the the Unicode [CLDR database](https://github.com/unicode-org/cldr-json/blob/main/cldr-json/cldr-bcp47/bcp47/timezone.json) (a library used by browsers rely on to supply time zone identifiers and data) did not follow IANA's renaming for [stability reasons](https://unicode.org/reports/tr35/#Time_Zone_Identifiers). As a result, some browsers like Chrome and Safari reported CLDR's outdated identifiers, while other browsers like Firefox overrode CLDR's defaults and reported the up-to-date primary identifiers.
+Historically, these renames caused problems for programmers because the Unicode [CLDR database](https://github.com/unicode-org/cldr-json/blob/main/cldr-json/cldr-bcp47/bcp47/timezone.json) (a library used by browsers rely on to supply time zone identifiers and data) did not follow IANA's renaming for [stability reasons](https://unicode.org/reports/tr35/#Time_Zone_Identifiers). As a result, some browsers like Chrome and Safari reported CLDR's outdated identifiers, while other browsers like Firefox overrode CLDR's defaults and reported the up-to-date primary identifiers.
 
 With the introduction of Temporal, this behavior is now more standardized:
 

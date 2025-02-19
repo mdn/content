@@ -613,7 +613,8 @@ body {
 
 .container {
   position: relative;
-  background: linear-gradient(to right, #000 0%, transparent 50%, #fff 100%),
+  background:
+    linear-gradient(to right, #000 0%, transparent 50%, #fff 100%),
     linear-gradient(to bottom, #ff0 0%, #f0f 50%, #0ff 100%);
   width: 150px;
   height: 150px;

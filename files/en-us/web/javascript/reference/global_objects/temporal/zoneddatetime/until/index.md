@@ -37,7 +37,7 @@ A new {{jsxref("Temporal.Duration")}} object representing the duration from this
   - : Thrown in one of the following cases:
     - `other` has a different calendar than `this`.
     - Any of the options is invalid.
-    - `other` has a different time zone than `this`, and `largestUnit` is `"day"` or above.
+    - `other` has a different time zone than `this`, and `largestUnit` is `"days"` or above.
 
 ## Examples
 
@@ -53,7 +53,7 @@ if (Temporal.ZonedDateTime.compare(flight, now) < 0) {
     "The flight is already in the past. The result may not make sense.",
   );
 }
-const duration = now.until(flight, { largestUnit: "day" });
+const duration = now.until(flight, { largestUnit: "days" });
 console.log(`The flight is in ${duration.toLocaleString("en-US")}`);
 ```
 

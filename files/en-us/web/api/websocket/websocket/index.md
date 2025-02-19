@@ -22,7 +22,7 @@ new WebSocket(url, protocols)
 - `url`
 
   - : The URL of the target WebSocket server to connect to.
-    The URL must use one of the following schemes: `ws`, `wss`, `http`, or `https`, and cannot include a [URL fragment](/en-US/docs/Web/URI/Fragment).
+    The URL must use one of the following schemes: `ws`, `wss`, `http`, or `https`, and cannot include a [URL fragment](/en-US/docs/Web/URI/Reference/Fragment).
     If a relative URL is provided, it is relative to the base URL of the calling script.
 
 - `protocols` {{optional_inline}}
@@ -48,7 +48,7 @@ new WebSocket(url, protocols)
 
     - parsing of [`url`](#url) fails
     - [`url`](#url) has a scheme other than `ws`, `wss`, `http`, or `https`
-    - [`url`](#url) has a [fragment](/en-US/docs/Web/URI/Fragment)
+    - [`url`](#url) has a [fragment](/en-US/docs/Web/URI/Reference/Fragment)
     - any of the values in [`protocols`](#protocols) occur more than once, or otherwise fail to match the requirements for elements that comprise the value of [`Sec-WebSocket-Protocol`](/en-US/docs/Web/HTTP/Protocol_upgrade_mechanism#sec-websocket-protocol) fields as defined by the WebSocket Protocol specification
 
 ## Examples

@@ -17,6 +17,9 @@ All content on MDN Web Docs must be relevant to the technology section in which 
 
 Outbound links to commercial sites that are relevant to the topic from which they are linked will be judged on a case-by-case basis. Their value in aiding web developers must outweigh the commercial benefit to the linked site.
 
+> [!NOTE]
+> You will see links to commercial sites in the MDN [Learn web development](/en-US/docs/Learn_web_development) section, but these are used sparingly, and we only link to trusted education partners. You can read more about this at [Learn web development writing guidelines > External links and embeds](/en-US/docs/MDN/Writing_guidelines/Learning_content#external_links_and_embeds).
+
 ### Neutrality
 
 Articles on MDN Web Docs must maintain a [neutral point-of-view](https://en.wikipedia.org/wiki/Wikipedia:Neutral_point_of_view), reporting on browser variations without editorial bias. Derogatory comments about any browser or user agent is not acceptable.
