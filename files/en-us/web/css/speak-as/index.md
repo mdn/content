@@ -44,7 +44,7 @@ speak-as: spell-out digits no-punctuation;
 > [!NOTE]
 > The support of `speak-as` property is very limited or inconsistently implemented across different assistive technologies (such as screen readers or speech synthesizers). It's often recommended not to fully rely on it solely to deliver your critical information, to ensure it remains user friendly and accessible to a wide audience.
 
-## Example
+## Examples
 
 ### HTML
 
