@@ -19,7 +19,7 @@ A boolean value.
 ## Examples
 
 ```js
-window.addEventListener("popstate", (event) => {
+window.addEventListener("popstate", async (event) => {
   // Fetch the new content
   const newContent = await fetchNewContent(location.href);
 
