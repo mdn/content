@@ -23,11 +23,11 @@ The **CSS ruby layout** module provides the rendering model and formatting contr
 
 The CSS ruby layout module adds the following values to the {{cssxref("display")}} property:
 
- - `ruby`
- - `ruby-base`
- - `ruby-text`
- - `ruby-base-container`
- - `ruby-text-container`
+- `ruby`
+- `ruby-base`
+- `ruby-text`
+- `ruby-base-container`
+- `ruby-text-container`
 
 ### Glossary and keywords
 
