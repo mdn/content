@@ -58,6 +58,8 @@ This article provides information about the changes in Firefox 137 that affect d
 
 ## Changes for add-on developers
 
+- Adds {{WebExtAPIRef("commands.openShortcutSettings")}} that opens the Manage Extension Shortcuts page of Manage Your Extensions (`about:addons`) and, if the extension has shortcuts, scrolls to and highlights the extension's shortcut key options. ([Firefox bug 1538451](https://bugzil.la/1538451))
+
 ### Removals
 
 ### Other

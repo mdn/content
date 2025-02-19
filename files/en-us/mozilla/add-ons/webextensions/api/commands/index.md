@@ -18,10 +18,12 @@ Listen for the user executing commands that you have registered using the [`comm
 
 - {{WebExtAPIRef("commands.getAll")}}
   - : Gets all registered commands for this extension.
+- {{WebExtAPIRef("commands.openShortcutSettings")}}
+  - : Opens the Manage Extension Shortcuts page, highlighting the extension's shortcut options, if it has any.
 - {{WebExtAPIRef("commands.reset")}}
-  - : Reset the given command's description and shortcut to the values given in the manifest key.
+  - : Resets the given command's description and shortcut to the values given in the manifest key.
 - {{WebExtAPIRef("commands.update")}}
-  - : Change the description or shortcut for the given command.
+  - : Changes the description or shortcut for the given command.
 
 ## Events
 
