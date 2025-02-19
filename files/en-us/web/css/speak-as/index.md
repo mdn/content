@@ -88,6 +88,10 @@ speak-as: spell-out digits no-punctuation;
   }
 ```
 
+## Specifications
+
+{{Specifications}}
+
 ## Browser compatibility
 
 {{Compat}}
