@@ -61,4 +61,8 @@ The CSS ruby layout module adds the following values to the {{cssxref("display")
 
 ## See also
 
+- {{cssxref("direction")}}
+- {{cssxref("unicode-bidi")}}
 - {{cssxref("font-variant-east-asian")}}
+- {{cssxref(":lang()")}}
+- HTML [`lang`](/en-US/docs/Web/HTML/Global_attributes/lang) attribute
