@@ -290,7 +290,7 @@ An example of this can be found on the [`page`](/en-US/docs/Web/CSS/page#example
 This example shows how to split the `<section>`s into individual pages in `landscape` format with each page having a 20% margin when printed.
 Clicking the print button will launch a print dialog with the html sections split into individual pages.
 
-```html live-sample___size-property
+```html live-sample___page-size
 <button>Print page</button>
 <article>
   <section>
@@ -308,7 +308,7 @@ Clicking the print button will launch a print dialog with the html sections spli
 </article>
 ```
 
-```js live-sample___size-property
+```js live-sample___page-size
 const button = document.querySelector("button");
 
 button.addEventListener("click", () => {
@@ -316,10 +316,10 @@ button.addEventListener("click", () => {
 });
 ```
 
-```css live-sample___size-property
+```css live-sample___page-size
 @page {
   size: landscape;
-  margin: 20%;
+  margin: 2cm;
 }
 
 section {
@@ -334,7 +334,7 @@ section {
 }
 ```
 
-```css hidden live-sample___size-property
+```css hidden live-sample___page-size
 body {
   font-family: "Helvetica", sans-serif;
   background-color: silver;
@@ -359,7 +359,7 @@ section {
 }
 ```
 
-{{EmbedLiveSample('size-property', '100%', '540', , , , , "allow-modals")}}
+{{EmbedLiveSample('page-size', '100%', '540', , , , , "allow-modals")}}
 
 ### @page pseudo-class examples
 

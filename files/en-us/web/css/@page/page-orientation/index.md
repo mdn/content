@@ -56,7 +56,7 @@ This descriptor helps with the layout and orientation of printed documents, espe
 This example shows how the contents of a print document can be rotated to suit the page content and the page position.
 In this first part of the CSS code, [named pages](/en-US/docs/Web/CSS/@page#named_pages) are set up to define the direction in which to rotate the content.
 
-```css live-sample___size-property
+```css live-sample___rotating-pages
 @page upright {
   size: portrait;
   page-orientation: upright;
@@ -73,7 +73,7 @@ In this first part of the CSS code, [named pages](/en-US/docs/Web/CSS/@page#name
 }
 ```
 
-```css hidden live-sample___size-property
+```css hidden live-sample___rotating-pages
 fieldset {
   display: flex;
   flex-direction: row;
@@ -97,7 +97,7 @@ p {
 
 The second part of the CSS code declares a named page rule defined above for the selectors, such as `<section class="left">…</section>`.
 
-```css live-sample___size-property
+```css live-sample___rotating-pages
 @media print {
   .upright {
     page: upright;
@@ -111,7 +111,7 @@ The second part of the CSS code declares a named page rule defined above for the
 }
 ```
 
-```html hidden live-sample___size-property
+```html hidden live-sample___rotating-pages
 <fieldset id="printStyle">
   <legend>
     Click Print. The page will be laid out in the defined orientation.
@@ -326,7 +326,7 @@ The second part of the CSS code declares a named page rule defined above for the
 </div>
 ```
 
-```js hidden live-sample___size-property
+```js hidden live-sample___rotating-pages
 const printButton = document.querySelector("#print");
 printButton.addEventListener("click", () => {
   window.print();
