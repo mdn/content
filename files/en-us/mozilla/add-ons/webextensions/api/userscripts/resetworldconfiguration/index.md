@@ -7,7 +7,9 @@ browser-compat: webextensions.api.userScripts.resetWorldConfiguration
 
 {{AddonSidebar}}
 
-Resets the configuration of a `USER_SCRIPT` world registered by the extension. Any scripts injected into the world are moved to the default `USER_SCRIPT` world configuration.
+Resets the configuration of a `USER_SCRIPT` world set by {{WebExtAPIRef("userScripts.configureWorld")}} to the defaults specified in {{WebExtAPIRef("userScripts.WorldProperties")}}. When the default world is reset, all worlds without an explicit configuration are also reset.
+
+Any scripts injected into a reset world are moved to the default `USER_SCRIPT` world.
 
 This is an asynchronous method that returns a {{JSxRef("Promise")}}.
 
@@ -22,7 +24,7 @@ const resettingWorldConfiguration = await browser.userScripts.resetWorldConfigur
 ### Parameters
 
 - `worldId` {{optional_inline}}
-  - : `string` The ID of the `USER_SCRIPT` world to reset. If omitted or empty, resets the default world's configuration.
+  - : `string` The ID of the `USER_SCRIPT` world to reset. If omitted or empty, resets the configuration of the default world and all worlds without a configuration set by {{WebExtAPIRef("userScripts.configureWorld")}}.
 
 ### Return value
 
