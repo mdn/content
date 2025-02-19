@@ -27,6 +27,8 @@ The [`has`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/has) method 
 
 The `Set` object provides some methods that allow you to compose sets like you would with mathematical operations. These methods include:
 
+Try to modify the file.
+
 <table>
   <thead>
     <tr>
