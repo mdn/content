@@ -8,7 +8,8 @@ browser-compat: api.CookieStore.getAll
 
 {{securecontext_header}}{{APIRef("Cookie Store API")}}{{AvailableInWorkers("window_and_service")}}
 
-The **`getAll()`** method of the {{domxref("CookieStore")}} interface returns a list of cookies that match the `name` or `options` passed to it. Passing no parameters will return all cookies for the current context.
+The **`getAll()`** method of the {{domxref("CookieStore")}} interface returns a {{jsxref("Promise")}} that resolves as an array of cookies that match the `name` or `options` passed to it.
+Passing no parameters will return all cookies for the current context.
 
 ## Syntax
 
@@ -92,17 +93,102 @@ Each object contains the following properties:
 
 ## Examples
 
-In this example, we use `getAll()` with no parameters. This returns all of the cookies for this context as an array of objects.
+### Get all cookies for this context
 
-```js
-const cookies = await cookieStore.getAll();
+In this example, we use `getAll()` with no parameters. This returns a {{jsxref("Promise")}} that resolves with all of the cookies for this context as an array of objects, or an empty array if there are no cookies.
 
-if (cookies.length > 0) {
-  console.log(cookies);
-} else {
-  console.log("Cookie not found");
+```html hidden
+<button id="showCookies" type="button">Show cookies</button>
+<button id="reset" type="button">Reset</button>
+<pre id="log"></pre>
+```
+
+```css hidden
+#log {
+  height: 300px;
+  overflow: scroll;
+  padding: 0.5rem;
+  border: 1px solid black;
 }
 ```
+
+```js hidden
+const reload = document.querySelector("#reset");
+
+reload.addEventListener("click", () => {
+  window.location.reload(true);
+});
+
+const logElement = document.querySelector("#log");
+
+function log(text) {
+  logElement.innerText = `${logElement.innerText}${text}\n`;
+  logElement.scrollTop = logElement.scrollHeight;
+}
+```
+
+```js hidden
+function logCookie(name, cookie) {
+  if (cookie) {
+    log(`${name}:`);
+    for (const [key, value] of Object.entries(cookie)) {
+      log(` ${key}: ${value}`);
+    }
+  } else {
+    log(`${name}: Cookie not found`);
+  }
+}
+```
+
+#### JavaScript
+
+The code first sets two cookies (which we then use to demonstrate `getAll()`).
+
+We then await on `getAll()`, without specifying any parameters.
+If the returned Promise resolves with an object we iterate the array, logging the properties of each cookie.
+
+```js
+async function cookieTest() {
+  // Set two cookies
+  await cookieStore.set({
+    name: "cookie1",
+    value: `cookie1-value`,
+  });
+
+  await cookieStore.set({
+    name: "cookie2",
+    value: `cookie2-value`,
+  });
+
+  // Get all cookies
+  const cookies = await cookieStore.getAll();
+
+  // Iterate the cookies, or log that none were found
+  if (cookies.length > 0) {
+    log(`Found cookies: ${cookies.length}:`);
+    cookies.forEach((cookie) => logCookie(cookie.value, cookie));
+  } else {
+    log("Cookies not found");
+  }
+}
+```
+
+```js hidden
+const showCookies = document.querySelector("#showCookies");
+
+showCookies.addEventListener("click", () => {
+  cookieTest();
+});
+```
+
+Note that some logging and other code is omitted for brevity.
+
+#### Result
+
+Press **Show cookies** to add and then get all the cookies.
+Note that some browsers will only display the `name` and `value`, while others will display all the properties of each cookie.
+
+{{EmbedLiveSample('Get all cookies for this context', 100, 350)}}
 
 ## Specifications
 
