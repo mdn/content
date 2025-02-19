@@ -12,7 +12,7 @@ The **`requestClose()`** method of the {{domxref("HTMLDialogElement")}} interfac
 An optional string may be passed as an argument, updating the `returnValue` of the dialog.
 
 This method differs from the `HTMLDialogElement.close()` method by firing a `cancel` event before firing the `close` event. This allows
-authors to prevent the dialog from closing. This method exposes the same behavior as the dialogs internal close watcher.
+authors to prevent the dialog from closing. This method exposes the same behavior as the dialog's internal close watcher.
 
 ## Syntax
 
@@ -32,7 +32,7 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
-The following example shows a simple button that, when clicked, opens a {{htmlelement("dialog")}} containing a form via the `showModal()` method.
+The following example shows a simple button that, when clicked, opens a {{htmlelement("dialog")}} containing a form, via the `showModal()` method.
 From there you can click the _X_ button to request to close the dialog (via the `HTMLDialogElement.requestClose()` method), or submit the form via the submit button.
 
 ```html
