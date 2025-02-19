@@ -89,7 +89,7 @@ p {
     display: none;
   }
   section {
-    font-family: Roboto;
+    font-family: Roboto, sans-serif;
     font-size: 1.5rem;
   }
 }
