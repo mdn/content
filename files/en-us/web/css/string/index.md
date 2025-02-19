@@ -58,6 +58,6 @@ awesome string"
 
 ## See also
 
-- [CSS Units and Values](/en-US/docs/Web/CSS/CSS_Values_and_Units)
-- [CSS Basic Data Types](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)
+- [CSS units and values](/en-US/docs/Web/CSS/CSS_Values_and_Units) module
+- [CSS basic data types](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)
 - [Introduction to CSS: Values and units](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units)

@@ -10,7 +10,7 @@ spec-urls:
 
 {{CSSRef}}
 
-Every CSS declaration includes a property / value pair. Depending on the property, the value can include a single integer or keyword, to a series of keywords and values with or without units. Every property also accepts the CSS wides values. The CSS values and units module defines the global values, the data types — values and units — that CSS properties accept. This module also defines the CSS value definition syntax, or formal grammar, used to define the set of valid values for every CSS property and function.
+Every CSS declaration includes a property / value pair. Depending on the property, the value can include a single integer or keyword, to a series of keywords and values with or without units. Every property also accepts the CSS wides values. The CSS values and units module defines the data types — values and units — that CSS properties accept. This module also defines the CSS value definition syntax, or formal grammar, used to define the set of valid values for every CSS property and function.
 
 ## Reference
 
@@ -57,7 +57,7 @@ Additional functions, including `calc-mix()`, `crossorigin()`, `first-valid()`, 
 - [`<attr-name>`](/en-US/docs/Web/CSS/attr#attr-name)
 - [`<attr-type>`](/en-US/docs/Web/CSS/attr#attr-type)
 - [`<attr-unit>`](/en-US/docs/Web/CSS/attr#attr-unit)
-- {{CSSxRef("&lt;calc-keyword&gt;")}}
+- {{CSSxRef("&lt;calc-keyword&gt;")}} (`e`, `pi`, `infinity`, {{glossary("NaN")}})
 - [`<calc-size-basis>`](/en-US/docs/Web/CSS/calc-size#calc-size-basis)
 - [`<calc-sum>`](/en-US/docs/Web/CSS/calc-sum)
 - [`<custom-ident>`](/en-US/docs/Web/CSS/custom-ident)
@@ -76,7 +76,7 @@ Additional functions, including `calc-mix()`, `crossorigin()`, `first-valid()`, 
 - [`<position>`](/en-US/docs/Web/CSS/position)
 - [`<ratio>`](/en-US/docs/Web/CSS/ratio)
 - [`<resolution>`](/en-US/docs/Web/CSS/resolution)
-- [`<rounding-strategy>`](/en-US/docs/Web/CSS/round#rounding-strategy)
+- [`<rounding-strategy>`](/en-US/docs/Web/CSS/round#rounding-strategy) (`down`, `up`, `to-zero`)
 - [`<string>`](/en-US/docs/Web/CSS/string)
 - [`<syntax>`](/en-US/docs/Web/CSS/syntax)
 - [`<time-percentage>`](/en-US/docs/Web/CSS/time-percentage)
@@ -84,11 +84,6 @@ Additional functions, including `calc-mix()`, `crossorigin()`, `first-valid()`, 
 - [`<url>`](/en-US/docs/Web/CSS/url)
 - [`<url-modifier>`](/en-US/docs/Web/CSS/url_function#url-modifier)
 - [`<view-timeline-name>`](/en-US/docs/Web/CSS/view-timeline-name)
-
-#### Keywords
-
-- [infinity]()
-- [none]()
 
 #### Units
 
@@ -173,75 +168,24 @@ Additional functions, including `calc-mix()`, `crossorigin()`, `first-valid()`, 
 - [Viewport units](/en-US/docs/Web/CSS/CSS_Values_and_Units/numeric_data_types#viewport_units) (`dvh`, `dvw`, `lvh`, `lvw`, `svh`, `svw`, `vb` , `vh`, `vi` , `vmax`, `vmin`, `vw`)
 - [Visual angle unit](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#absolute_length_units) (`px`)
 
-### Keyterms
+### Key concepts
 
-- [absolute length](/en-US/docs/Web/CSS/length#absolute_length_units)
-- [add]()
-- [addition]()
-- [advance measure]()
-- [anonymous]()
+- {{glossary("advance measure")}}
 - [bracketed range notation](/en-US/docs/Web/CSS/Value_definition_syntax#bracketed_range_notation_minmax)
-- [calc-operator nodes]()
-- [calc-size basis]()
-- [calc-size calculation]()
-- [calculation]()
+- [Component value combinators](/en-US/docs/Web/CSS/Value_definition_syntax#component_value_combinators)
 - [CSS-wide keywords](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types#css-wide_keywords)
 - {{glossary("device pixel")}}
-- [dimension]()
-- [down]()
-- [dynamic viewport size]()
-- [e]()
-- [else]()
-- [fetch a style resource]()
-- [functional notation]()
+- [functional notation](/en-US/docs/Web/CSS/CSS_Functions)
 - {{glossary("identifier")}}
-- [infinite]()
 - {{glossary("interpolation")}}
 - {{glossary("keyword")}}
-- [large viewport size]()
-- [local font-relative lengths]()
-- [local url flag]()
-- [math function]()
-- {{glossary("NaN")}}
-- [negative infinity]()
-- [negative zero]()
-- [no-referrer]()
-- [not additive]()
-- [number]()
-- [numeric data types]()
-- [operator nodes]()
+- [math function](/en-US/docs/Web/CSS/CSS_Functions/Using_CSS_math_functions)
+- [numeric data types](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types)
 - {{glossary("origin")}}
-- [physical unit]()
-- [pi]()
 - {{glossary("pixel")}}
-- [positive infinity]()
-- [positive zero]()
-- [progress value]()
-- [random functions]()
-- [random-caching key]()
-- [ratio]()
-- [reference pixel]()
-- [relative length]()
-- [resolved type]()
-- [root font-relative lengths]()
-- [same-origin]()
-- [signed zero]()
-- [simplify]()
-- [size]()
-- [small viewport size]()
-- [snap a length as a border width]()
-- [specified length]()
-- [strict-origin]()
-- [strict-origin-when-cross-origin]()
-- [textual data types]()
-- [to-zero]()
-- [top-level calculation]()
-- [up]()
+- [textual data types](/en-US/docs/Web/CSS/CSS_Values_and_Units/Textual_data_types)
 - {{glossary("URL")}}
-- [value accumulation]()
-- [value addition]()
-- [value definition syntax]()
-- [viewport-percentage lengths]()
+- [value definition syntax](/en-US/docs/Web/CSS/Value_definition_syntax)
 
 ## Guides
 
@@ -253,7 +197,7 @@ Additional functions, including `calc-mix()`, `crossorigin()`, `first-valid()`, 
 
   - : Overview of the numeric data types, including integers, numbers, percentages, and dimensions, along with relative and absolute dimensions, angles, and time units.
 
-- [Textual data types](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types)
+- [Textual data types](/en-US/docs/Web/CSS/CSS_Values_and_Units/Textual_data_types)
 
   - : Overview of the textual data types, including pre-defined keyword values, global css keyword values, and URLs.
 
@@ -284,6 +228,12 @@ Additional functions, including `calc-mix()`, `crossorigin()`, `first-valid()`, 
 
 ## See also
 
-- [CSS Basic Data Types](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)
-- [Learn: Values and units](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
-- [Trigonometric functions in CSS](https://web.dev/articles/css-trig-functions)
+- {{cssxref("initial")}}
+- {{cssxref("inherit")}}
+- {{cssxref("revert")}}
+- {{cssxref("revert-layer")}}
+- {{cssxref("unset")}}
+- {{cssxref("all")}}
+- [CSS cascading and inheritance](/en-US/docs/Web/CSS/CSS_cascade) module
+- [CSS flexible box layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout) module
+- [CSS containment](/en-US/docs/Web/CSS/CSS_containment) module
