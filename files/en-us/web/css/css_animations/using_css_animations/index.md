@@ -522,8 +522,66 @@ The code renders as follows:
 
 {{ EmbedLiveSample("Animating display and content-visibility", "100%", "350") }}
 
+### Using CSS animations with Flexbox
+
+Using Flexbox in conjunction with CSS animations allows you to create dynamic, interactive layouts, in particular to rearrange elements, animate their position or modify their appearance according to their flexible layout.
+
+#### Example: Animation for reorganizing flexible elements
+
+Here's an example where we use Flexbox and @keyframes to animate the movement of elements in a list:
+
+```css
+.container {
+  display: flex;
+  gap: 10px;
+}
+
+.item {
+  width: 100px;
+  height: 100px;
+  background-color: lightblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  animation: moveItems 2s infinite alternate ease-in-out;
+}
+
+@keyframes moveItems {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(50px);
+  }
+}
+```
+
+Then, regarding our HTML :
+
+```html
+<section class="container">
+  <div class="item">1</div>
+  <div class="item">2</div>
+  <div class="item">3</div>
+</section>
+```
+
+In this example :
+
+- Flexbox is used to align elements horizontally.
+- The animation moves each element along the X axis to create a fluid movement effect.
+- We could also animate changes in `order`, `align-items` or `justify-content` for even more dynamic effects.
+
+#### Tips for smooth integration
+
+- Use `flex-grow` and `flex-shrink`: these properties can be animated to smoothly enlarge or reduce the size of elements.
+- Change the order of elements (`order`): An animation on `order` can give an automatic reordering effect.
+- Play with `align-items` and `justify-content`: By animating these properties, you can move groups of elements without changing their HTML structure.
+
 ## See also
 
 - {{domxref("AnimationEvent", "AnimationEvent")}}
 - [Using CSS transitions](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
 - [Using the Web Animations API](/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API)
+- [FlexBox](https://believemy.com/en/r/the-complete-flexbox-css-guide)
