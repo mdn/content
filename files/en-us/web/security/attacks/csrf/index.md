@@ -146,6 +146,16 @@ Another problem with the `SameSite` attribute is that it protects you from reque
 
 See [Bypassing SameSite cookie restrictions](https://portswigger.net/web-security/csrf/bypassing-samesite-restrictions) for more details.
 
+### Defense summary checklist
+
+We can summarize the defenses above as follows:
+
+- Understand where in your website you are implementing state-changing requests that use session cookies to check which user issued the request.
+- If you are using `<form>` elements to issue these requests, ensure you are using a web framework with support for CSRF tokens, and use it.
+- If you are using JavaScript APIs like `fetch()` or `XMLHttpRequest` to issue these requests, ensure that they are not simple requests: for example, by adding a custom header and checking for its existence in the server.
+- In either case, avoid using the `GET` method to issue state-changing requests.
+- Set the `SameSite` attribute for session cookies to `Strict` if you can, or `Lax` if you have to.
+
 ## See also
 
 - [Cross-Site Request Forgery Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html) at [owasp.org](https://owasp.org/)
