@@ -111,7 +111,7 @@ class Square extends Rectangle {
   constructor(length) {
     // Here, it calls the parent class's constructor with lengths
     // provided for the Rectangle's width and height
-    super(length, length);
+    super(width, height);
 
     // Note: In derived classes, super() must be called before you
     // can use 'this'. Moving this to the top causes a ReferenceError.
