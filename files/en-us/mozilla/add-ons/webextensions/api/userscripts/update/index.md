@@ -25,7 +25,7 @@ const updatingUserScript = await browser.userScripts.update(
 
   - : `array` of {{WebExtAPIRef("userScripts.RegisteredUserScript")}}. Details of user scripts to update.
 
-    Each {{WebExtAPIRef("userScripts.RegisteredUserScript")}} must specify at least one property. Properties that are `null` or omitted are not changed. Passing an empty array clears the array.
+    Properties that are `null` or omitted are not changed. Passing an empty array to `matches`, `excludeMatches`, `globs` and `excludeGlobs` clears these properties.
 
 ### Return value
 
@@ -33,24 +33,26 @@ A {{JSxRef("Promise")}} fulfilled with no arguments if all the requested user sc
 
 ## Examples
 
-This snippet updates `matches` for all registered user scripts.
+This snippet shows two examples of updates to a user scripts. The first update fails because it attempts to create an invalid script registration. The second example shows a successful update.
 
 ```js
-await browser.userScripts.update([
+// Valid registration:
+await browser.userScripts.register([
   {
     worldId: "myScriptId",
+    js: [{ code: "console.log('Hello world!');" }],
     matches: ["*://example.com/*"],
   },
 ]);
-```
 
-This snippet updates `matches` for all user scripts running in the `"myScriptId"` world.
+// Invalid! Would result in script without matches or includeGlobs!
+await browser.userScripts.update([{ matches: [] }]);
 
-```js
+// Valid: replaces matches with includeGlobs.
 await browser.userScripts.update([
   {
-    worldId: "myScriptId",
-    matches: ["*://example.com/*"],
+    matches: [],
+    includeGlobs: ["*example*"],
   },
 ]);
 ```

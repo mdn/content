@@ -15,7 +15,7 @@ Values of this type are an object containing these properties:
 
 - `allFrames` {{optional_inline}}
   - : `boolean`. If `allFrames` is `true`, the script is injected into all of a page's frames. By default, it's `false` and the script is only injected into the top frame.
-- `id` {{optional_inline}} for {{WebExtAPIRef("userScripts.update()")}} calls, required for {{WebExtAPIRef("userScripts.register()")}}
+- `id`
   - : `string`. The ID of a user script. This property must not start with a '\_', which is reserved as a prefix for generated script IDs.
 - `js` {{optional_inline}} for {{WebExtAPIRef("userScripts.update()")}} calls, required for {{WebExtAPIRef("userScripts.register()")}}
   - : `array` of {{WebExtAPIRef("userScripts.ScriptSource")}}. The scripts to inject into matching pages.
