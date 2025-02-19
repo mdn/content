@@ -423,11 +423,12 @@ But for now, you can simply use `no-cache` instead.
 
 ### Clearing an already-stored cache
 
-Unfortunately, there are no cache directives for clearing already-stored responses from caches.
+Unfortunately, there are no cache directives for clearing already-stored responses from caches on intermediate servers.
 
 Imagine that clients/caches store a [fresh](/en-US/docs/Web/HTTP/Caching#fresh_and_stale_based_on_age) response for a path, with no request flight to the server. There is nothing a server could do to that path.
 
-Alternatively, `Clear-Site-Data` can clear a browser cache for a site. But be careful: that clears every stored response for a site — and only in browsers, not for a shared cache.
+[`Clear-Site-Data: cache`](/en-US/docs/Web/HTTP/Headers/Clear-Site-Data#cache) can be used to clear every stored response for a site in the browser cache (use with care).
+Note that this will not affected shared/intermediate caches.
 
 ## Specifications
 
