@@ -17,7 +17,7 @@ spec-urls:
 
 The **File System API** — with extensions provided via the [**File System Access API**](https://wicg.github.io/file-system-access/) to access files on the device file system — allows read, write and file management capabilities.
 
-This API is unrelated to the [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API), which supports reading a directory or a list of files provided by the user. See [File API](/en-US/docs/Web/API/File_API#relationship_to_other_file-related_apis) for a comparison of the three APIs.
+See [Relationship to other file-related APIs](/en-US/docs/Web/API/File_API#relationship_to_other_file-related_apis) for a comparison between this API, the [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API), and the [File API](/en-US/docs/Web/API/File_API).
 
 ## Concepts and Usage
 
