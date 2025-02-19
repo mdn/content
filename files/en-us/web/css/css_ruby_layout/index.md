@@ -23,9 +23,9 @@ The **CSS ruby layout** module provides the rendering model and formatting contr
 
 The CSS ruby layout module adds the following values to the {{cssxref("display")}} property:
 
- - `ruby
+ - `ruby`
  - `ruby-base`
- - `ruby-text
+ - `ruby-text`
  - `ruby-base-container`
  - `ruby-text-container`
 
@@ -42,10 +42,10 @@ The CSS ruby layout module adds the following values to the {{cssxref("display")
 
 [CSS text decoration](/en-US/docs/Web/CSS/CSS_Text_Decoration) module
 
-- {{cssxref("text-emphasis")}}
 - {{cssxref("text-emphasis-color")}}
 - {{cssxref("text-emphasis-position")}}
 - {{cssxref("text-emphasis-style")}}
+- {{cssxref("text-emphasis")}} shorthand
 
 [HTML elements](/en-US/docs/Web/HTML/Element)
 
