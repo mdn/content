@@ -85,8 +85,6 @@ Now we can use it by just adding it to our HTML document:
 So far so good, but the element isn't very flexible.
 We can only display one bit of text inside it, meaning that at the moment it is even less useful than a regular paragraph! We can make it possible to display different text in each element instance in a nice declarative way using the {{htmlelement("slot")}} element.
 
-### Named slots
-
 Slots are identified by their `name` attribute, and allow you to define placeholders in your template that can be filled with any markup fragment you want when the element is used in the markup.
 
 So, if we want to add a slot into our trivial example, we could update our template's paragraph element like this:
@@ -122,9 +120,7 @@ or
 And that's it for our trivial example.
 If you want to play with it some more, you can [find it on GitHub](https://github.com/mdn/web-components-examples/tree/main/simple-template) (see it [running live](https://mdn.github.io/web-components-examples/simple-template/) also).
 
-### Unnamed (default) slots
-
-You can also create slots without a name attribute, known as unnamed or default slots. An unnamed slot will capture all content passed into the element that isn't explicitly assigned to a named slot. Here's an example:
+A slot can be defined without a name attribute (or with `name=""`), which creates a default slot that will capture any content not explicitly assigned to a named slot. Here's an example:
 
 ```html
 <template id="custom-paragraph">
