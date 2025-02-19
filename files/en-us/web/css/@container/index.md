@@ -124,7 +124,7 @@ Details about usage and naming restrictions are described in the {{cssxref("cont
 
 ### Descriptors
 
-The descriptors available to be used within the `<container-condition>` are listed in the follwing sections.
+The descriptors available to be used within the `<container-condition>` are listed in the following sections.
 
 #### Size container descriptors
 
