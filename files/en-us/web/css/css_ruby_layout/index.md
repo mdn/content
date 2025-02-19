@@ -19,9 +19,41 @@ The **CSS ruby layout** module provides the rendering model and formatting contr
 > [!NOTE]
 > CSS ruby layout module introduces two properties that have not been implemented: `ruby-merge`, `ruby-overhang`.
 
-## Related concepts
+### Display values
+
+The CSS ruby layout module adds the following values to the {{cssxref("display")}} property:
+
+ - `ruby
+ - `ruby-base`
+ - `ruby-text
+ - `ruby-base-container`
+ - `ruby-text-container`
+
+### Glossary and keywords
 
 - {{Glossary("ruby")}}
+
+## Related concepts
+
+[CSS display](/en-US/docs/Web/CSS/CSS_Display) module
+
+- {{cssxref("display")}}
+- {{CSSxRef("&lt;display-internal&gt;")}}
+
+[CSS text decoration](/en-US/docs/Web/CSS/CSS_Text_Decoration) module
+
+- {{cssxref("text-emphasis")}}
+- {{cssxref("text-emphasis-color")}}
+- {{cssxref("text-emphasis-position")}}
+- {{cssxref("text-emphasis-style")}}
+
+[HTML elements](/en-US/docs/Web/HTML/Element)
+
+- {{HTMLElement("rb")}}
+- {{HTMLElement("rp")}}
+- {{HTMLElement("rt")}}
+- {{HTMLElement("rtc")}}
+- {{HTMLElement("ruby")}}
 
 ## Specifications
 
@@ -29,4 +61,4 @@ The **CSS ruby layout** module provides the rendering model and formatting contr
 
 ## See also
 
-- {{HTMLElement('ruby')}}
+- {{cssxref("font-variant-east-asian")}}
