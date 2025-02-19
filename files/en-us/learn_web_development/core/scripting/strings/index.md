@@ -86,7 +86,7 @@ console.log(backtick);
 You must use the same character for the start and end of a string, or you will get an error:
 
 ```js-nolint example-bad
-const badQuotes = 'This is not allowed!";
+const brokenQuotes = 'This is not allowed!";
 ```
 
 Strings declared using single quotes and strings declared using double quotes are the same, and which you use is down to personal preference — although it is good practice to choose one style and use it consistently in your code.
@@ -122,25 +122,28 @@ Joining strings together like this is called _concatenation_.
 Let's have a look at concatenation being used in action:
 
 ```html
-<button>Press me</button>
-<div id="greeting"></div>
+<label for="userName">Enter a name:</label>
+<input type="text" id="name" name="userName" size="15" />
+<pre id="greeting"></pre>
 ```
 
 ```js
-const button = document.querySelector("button");
+const userInput = document.querySelector("#name");
+const greeting = document.querySelector("#greeting");
 
 function greet() {
-  const name = prompt("What is your name?");
-  const greeting = document.querySelector("#greeting");
+  const name = userInput.value;
   greeting.textContent = `Hello ${name}, nice to see you!`;
 }
 
-button.addEventListener("click", greet);
+userInput.addEventListener("change", greet);
 ```
 
-{{ EmbedLiveSample('Concatenation_in_context', '100%', 50) }}
+Any text that's entered into the [`<input type="text">`](/en-US/docs/Web/HTML/Element/input/text) element can be stored in a variable, in this case one called `name`.
+We then display a string that inserts `name` into a generic greeting message.
+Enter a name and hit <kbd>Enter</kbd>:
 
-Here, we are using the {{domxref("window.prompt()", "window.prompt()")}} function, which prompts the user to answer a question via a popup dialog box and then stores the text they enter inside a given variable — in this case `name`. We then display a string that inserts the name into a generic greeting message.
+{{EmbedLiveSample('Concatenation_in_context', '100%', 70)}}
 
 ### Concatenation using "+"
 
@@ -208,7 +211,7 @@ See our [Template literals](/en-US/docs/Web/JavaScript/Reference/Template_litera
 Since we use quotes to indicate the start and end of strings, how can we include actual quotes in strings? We know that this won't work:
 
 ```js-nolint example-bad
-const badQuotes = "She said "I think so!"";
+const brokenQuotes = "She said "I think so!"";
 ```
 
 One common option is to use one of the other characters to declare the string:
