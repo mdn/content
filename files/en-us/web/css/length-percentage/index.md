@@ -78,4 +78,4 @@ width: calc(100% - 200px);
 
 - {{cssxref("&lt;percentage&gt;")}}
 - {{cssxref("&lt;length&gt;")}}
-- [CSS Values and Units](/en-US/docs/Web/CSS/CSS_Values_and_Units)
+- [CSS values and units](/en-US/docs/Web/CSS/CSS_Values_and_Units) module
