@@ -4,6 +4,7 @@ slug: Web/API/HTMLDialogElement
 page-type: web-api-interface
 browser-compat:
   - api.HTMLDialogElement
+  - api.HTMLDialogElement.requestClose
   - api.HTMLElement.beforetoggle_event.dialog_elements
   - api.HTMLElement.toggle_event.dialog_elements
 ---
@@ -29,6 +30,8 @@ _Also inherits methods from its parent interface, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLDialogElement.close()")}}
   - : Closes the dialog. An optional string may be passed as an argument, updating the `returnValue` of the dialog.
+- {{domxref("HTMLDialogElement.requestClose()")}}
+  - : Requests to close the dialog. An optional string may be passed as an argument, updating the `returnValue` of the dialog.
 - {{domxref("HTMLDialogElement.show()")}}
   - : Displays the dialog modelessly, i.e. still allowing interaction with content outside of the dialog.
 - {{domxref("HTMLDialogElement.showModal()")}}
@@ -41,7 +44,7 @@ _Also inherits events from its parent interface, {{DOMxRef("HTMLElement")}}._
 Listen to these events using {{DOMxRef("EventTarget.addEventListener", "addEventListener()")}} or by assigning an event listener to the `oneventname` property of this interface.
 
 - {{domxref("HTMLDialogElement/cancel_event", "cancel")}}
-  - : Fired when the user dismisses the current open dialog with the escape key.
+  - : Fired when the dialog is requested to close, whether with the escape key, or via the `HTMLDialogElement.requestClose()` method.
 - {{domxref("HTMLDialogElement/close_event", "close")}}
   - : Fired when the dialog is closed, whether with the escape key, the `HTMLDialogElement.close()` method, or via submitting a form within the dialog with [`method="dialog"`](/en-US/docs/Web/HTML/Element/form#method).
 
@@ -156,6 +159,7 @@ dialog.addEventListener("close", (event) => {
 ##### Cancel event
 
 The {{domxref("HTMLDialogElement/cancel_event", "cancel")}} event is fired when "platform specific methods" are used to close the dialog, such as the <kbd>Esc</kbd> key.
+It is also fired when the `HTMLDialogElement.requestClose()` method is called.
 The event is "cancelable" which means that we could use it to prevent the dialog from closing.
 Here we just treat the cancel as a "close" operation, and reset the {{domxref("HTMLDialogElement.returnValue")}} to `""` to clear any value that may have been set.
 
