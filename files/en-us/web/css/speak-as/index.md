@@ -7,7 +7,7 @@ browser-compat: css.properties.speak-as
 
 {{CSSRef}}
 
-The **`speak-as`** property is a part of [CSS](/en-US/docs/Web/CSS) Speech, which is used to manipulate how the [HTML](/en-US/docs/Web/HTML) content is spoken by assistive technologies, especially screen readers. More specifically, **`speak-as`** specifies how elements (any HTML element if not paired with [@counter-style](/en-US/docs/Web/CSS/@counter-style/speak-as)) and/or their content are spoken.
+The **`speak-as`** [CSS](/en-US/docs/Web/CSS) property is used to manipulate how the [HTML](/en-US/docs/Web/HTML) content is spoken by assistive technologies, especially screen readers. More specifically, **`speak-as`** specifies how elements (any HTML element if not paired with [@counter-style](/en-US/docs/Web/CSS/@counter-style/speak-as)) and/or their content are spoken.
 
 ## Syntax
 
