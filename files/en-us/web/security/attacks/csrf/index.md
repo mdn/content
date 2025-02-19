@@ -4,13 +4,13 @@ slug: Web/Security/Attacks/CSRF
 page-type: guide
 ---
 
-In a cross-site request forgery (CSRF) attack, an attacker tricks the user or the browser into making an HTTP request to the target site. The request includes the user's credentials and causes the server to carry out some harmful action, thinking that the user intended it.
+In a cross-site request forgery (CSRF) attack, an attacker tricks the user or the browser into making an HTTP request to the target site from a malicious site. The request includes the user's credentials and causes the server to carry out some harmful action, thinking that the user intended it.
 
 ## Overview
 
 A website typically performs special actions on a user's behalf — buying a product or making an appointment, for example — by receiving an HTTP request from the user's browser, often with parameters detailing the action to perform. To ensure that the request really comes from the user in question, the server expects the request to include {{glossary("Credential", "credentials")}} for the user: for example, a cookie containing the user's session ID.
 
-The example below shows the expected interactions when a user signs into their bank using a session cookie stored in the browser. The page contains a {{htmlelement("form")}} element, which enables the user to transfer funds to another person. When the user submits the form, the browser sends a {{httpmethod("POST")}} request to the server, including the form data. If the user is signed in, the request includes the user's cookie. The server validates the cookie and performs the special action — in this case, transferring money:
+In the example below, the user has previously signed into their bank, and the browser has stored a session cookie for the user. The page contains a {{htmlelement("form")}} element, which enables the user to transfer funds to another person. When the user submits the form, the browser sends a {{httpmethod("POST")}} request to the server, including the form data. If the user is signed in, the request includes the user's cookie. The server validates the cookie and performs the special action — in this case, transferring money:
 
 ![Diagram showing a user submitting a browser form, the browser then making a POST request to the server, and the server validating the request.](form-post.svg)
 
@@ -32,7 +32,7 @@ const form = document.querySelector("form");
 form.submit();
 ```
 
-When the user visits the page, the browser submits the form to the bank's website. Because the user is signed into their bank, the request includes the user's real cookie, so the bank's server successfully validates the request, and transfers the funds:
+When the user visits the page, the browser submits the form to the bank's website. Because the user is signed into their bank, the request may include the user's real cookie, so the bank's server successfully validates the request, and transfers the funds:
 
 ![Diagram showing a CSRF attack in which a decoy page submits a POST request to the website for the user's bank.](csrf-form-post.svg)
 
@@ -55,17 +55,19 @@ In general, a CSRF attack is possible if your website:
 
 In this section we'll outline two alternative defenses against CSRF and a third practice which can be used to provide defense in depth for either of the other two.
 
-- The first primary defense is to use _CSRF tokens_ embedded in the page. This method is especially appropriate if you're issuing state-changing requests from form elements, as in our example above.
+- The first primary defense is to [use _CSRF tokens_](#csrf_tokens) embedded in the page. This is the most common method if you're issuing state-changing requests from form elements, as in our example above.
 
-- The alternative defense is to ensure that state-changing requests are not _simple requests_, which enables them to rely on the browser's built-in cross-origin request blocking. This method is appropriate if you're issuing state-changing requests from JavaScript APIs like {{domxref("Window.fetch()", "fetch()")}}.
+- The alternative defense is to ensure that state-changing requests are [not _simple requests_](#avoiding_simple_requests), so that cross-origin requests are blocked by default. This method is appropriate if you're issuing state-changing requests from JavaScript APIs like {{domxref("Window.fetch()", "fetch()")}}.
 
-Finally, we'll discuss the `SameSite` cookie attribute, which can be used to provide defense in depth alongside either of the previous methods.
+Finally, we'll discuss [the `SameSite` cookie attribute](#defense_in_depth_samesite_cookies), which can be used to provide defense in depth alongside either of the previous methods.
 
 ### CSRF tokens
 
-In this defense, when the server serves a page, it embeds an unpredictable value in the page, called the CSRF token. Then when the browser sends the state-changing request to the server, it includes the CSRF token in the HTTP request. The browser checks the token value and carries out the request only if it matches. Because an attacker can't guess the token value, they can't issue a successful forgery.
+In this defense, when the server serves a page, it embeds an unpredictable value in the page, called the CSRF token. Then when the browser sends the state-changing request to the server, it includes the CSRF token in the HTTP request. The browser checks the token value and carries out the request only if it matches. Because an attacker can't guess the token value, they can't issue a successful forgery. Even if the attacker does discover a token after it has been used, the request can't be replayed if the token changes every time.
 
-For form submissions, the CSRF token is usually implemented as a hidden form field. For a JavaScript API like `fetch()`, the token might be placed in a cookie or embedded in the page, and the JavaScript extracts the value and sends it as an extra header.
+For form submissions, the CSRF token is usually included in a hidden form field, so that on form submission it is automatically sent back to the server for checking.
+
+For a JavaScript API like `fetch()`, the token might be placed in a cookie or embedded in the page, and the JavaScript extracts the value and sends it as an extra header.
 
 Modern web frameworks usually have built-in support for CSRF tokens: for example, [Django](https://www.djangoproject.com/) enables you to protect forms using the [`csrf_token`](https://docs.djangoproject.com/en/5.1/ref/csrf/) tag. This generates an additional hidden form field containing the token, which the framework then checks on the server.
 
@@ -75,11 +77,11 @@ To take advantage of this protection you must understand all the places in your 
 
 Web browsers distinguish two sorts of HTTP requests: [_simple_ requests](/en-US/docs/Web/HTTP/CORS#simple_requests) and other requests.
 
-By default, only simple requests can be sent cross-origin. The reason for allowing simple requests cross-origin is that these are the same sorts of requests that could already be made cross-origin using a `<form>` element, as in the example above. So it is assumed that websites must already implement CSRF protection against simple requests.
+Simple requests are the sorts of requests that a `<form>` element can make. Since forms have been able to make cross-origin requests since the early days of the web, it's important for compatibility that they should still be able to make cross-origin requests, and this means that forms must defend against CSRF using some mechanism such as a CSRF token.
 
-All other requests are by default not allowed cross-origin, so a CSRF attack would not succeed if the request is not simple.
+However, other parts of the web platform, in particular JavaScript APIs like {{domxref("Window.fetch()", "fetch()")}}, can make different sorts of requests (for example, requests that set custom headers), and these requests are by default not allowed cross-origin, so a CSRF attack would not succeed.
 
-So one CSRF defense is to ensure that state-changing requests are never simple requests. This of course means that a website can't use forms to issue them, so this strategy is usually applicable for a website that uses JavaScript APIs like {{domxref("Window.fetch()", "fetch()")}} to issue state-changing requests.
+So a website that uses `fetch()` or `XMLHttpRequest` can defend against CSRF by ensuring that the state-changing requests that it issues are never simple requests.
 
 For example, setting the request's {{httpheader("Content-Type")}} to `"application/json"` will prevent it from being treated like a simple request:
 
