@@ -66,7 +66,7 @@ No notable changes
 
 #### WebDriver BiDi
 
-- Added support for the `format` field in the `browsingContext.captureScreenshot` command, allowing clients to specify different file formats (`image/png` and `image/jpg` are currently supported) and define the compression quality for screenshots ([Firefox bug 1861737](https://bugzilla.mozilla.org/show_bug.cgi?id=1861737)).
+- Added support for the `format` field in the `browsingContext.captureScreenshot` command, allowing clients to specify different file formats (`image/png` and `image/jpeg` are currently supported) and define the compression quality for screenshots ([Firefox bug 1861737](https://bugzilla.mozilla.org/show_bug.cgi?id=1861737)).
 
 ## Changes for add-on developers
 
