@@ -140,7 +140,7 @@ However, `Lax` offers significantly weaker protection than `Strict`:
 - An attacker can trigger a top-level navigation that sends the request, for example by setting {{domxref("Document.location", "document.location")}}.
 - Even if the server does check that the request was not sent using `GET`, some web frameworks support "method override": this enables an attacker to send a request using `GET` but have it appear to the server as if it used `POST`.
 
-So although `Lax` is a reasonable defense in depth against CSRF, as long as you avoid making state-changing requests that use `GET`, it should not be the only defense. It should be deployed alongside one of the previous defenses, as a defense in depth.
+So although `Lax` is a reasonable defense in depth against CSRF, as long as you avoid making state-changing requests that use `GET`, it should not be the only defense. It should be deployed alongside one of the previous defenses.
 
 Another problem with the `SameSite` attribute is that it protects you from requests from a different {{glossary("Site", "site")}}, not a different {{glossary("Origin", "origin")}}. This is a looser protection, because (for example) `https://foo.example.org` and `https://bar.example.org` are considered the same site, although they are different origins. Effectively, if you rely on same-site protection, you have to trust all your site's subdomains.
 
