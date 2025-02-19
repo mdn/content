@@ -41,7 +41,7 @@ See [Using the popover API](/en-US/docs/Web/API/Popover_API/Using) for a detaile
 ## HTML attributes
 
 - [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover)
-  - : A global attribute that turns an element into a popover element; takes a popover state (`"auto"` or `"manual"`) as its value.
+  - : A global attribute that turns an element into a popover element; takes a popover state (`"auto"`, `"hint"`, or `"manual"`) as its value.
 - [`popovertarget`](/en-US/docs/Web/HTML/Element/button#popovertarget)
   - : Turns a {{htmlelement("button")}} or {{htmlelement("input")}} element into a popover control button; takes the ID of the popover element to control as its value.
 - [`popovertargetaction`](/en-US/docs/Web/HTML/Element/button#popovertargetaction)
@@ -64,7 +64,7 @@ See [Using the popover API](/en-US/docs/Web/API/Popover_API/Using) for a detaile
 ### Instance properties
 
 - {{domxref("HTMLElement.popover")}}
-  - : Gets and sets an element's popover state via JavaScript (`"auto"` or `"manual"`), and can be used for feature detection. Reflects the value of the [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover) global HTML attribute.
+  - : Gets and sets an element's popover state via JavaScript (`"auto"`, `"hint"`, or `"manual"`), and can be used for feature detection. Reflects the value of the [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover) global HTML attribute.
 - {{domxref("HTMLButtonElement.popoverTargetElement")}} and {{domxref("HTMLInputElement.popoverTargetElement")}}
   - : Gets and sets the popover element being controlled by the control button. The JavaScript equivalent of the [`popovertarget`](/en-US/docs/Web/HTML/Element/button#popovertarget) HTML attribute.
 - {{domxref("HTMLButtonElement.popoverTargetAction")}} and {{domxref("HTMLInputElement.popoverTargetAction")}}
