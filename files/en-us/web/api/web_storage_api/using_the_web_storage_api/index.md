@@ -182,7 +182,9 @@ However, there's no generic way to store arbitrary data types. Furthermore, the 
 
 ### Responding to storage changes with the StorageEvent
 
-The {{domxref("StorageEvent")}} is fired whenever a change is made to the {{domxref("Storage")}} object (note that this event is not fired for sessionStorage changes). This won't work on the same page that is making the changes — it is really a way for other pages on the domain using the storage to sync any changes that are made. Pages on other domains can't access the same storage objects.
+The {{domxref("Window/storage_event", "storage")}} event is fired whenever a change is made to the {{domxref("Storage")}} object of another document that shares the same storage space. This won't work on the same page that is making the changes — it is really a way for other pages on the domain using the storage to sync any changes that are made. Pages on other domains can't access the same storage objects.
+
+For `localStorage`, the storage space is shared between all tabs with the same origin. For `sessionStorage`, the storage space is only shared within the tab, among all iframes from the same origin.
 
 On the events page (see [events.js](https://github.com/mdn/dom-examples/blob/main/web-storage/event.js)) the only JavaScript is as follows:
 
