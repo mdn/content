@@ -15,25 +15,20 @@ This document describes the repositories (repos) you may need when contributing 
 - [content](https://github.com/mdn/content)
   - : This is where all the English content of the site is maintained, and where you'll make all changes to page content, prose, and in-page code examples.
 - [rari](https://github.com/mdn/rari)
-  - : This is the backend part of the MDN Web Docs platform, where you'll go if you want to make changes to page structures and rendering machinery.
+  - : The **backend** of the MDN Web Docs platform, where you'll go if you want to make changes to page structures, templating, and rendering machinery.
 - [yari](https://github.com/mdn/yari)
-  - : This is the frontend part of the MDN Web Docs platform, where you'll find styles, design, and layout functionality.
+  - : The **frontend** of MDN Web Docs, where you'll find styles, design, and layout functionality.
 - [browser-compat-data](https://github.com/mdn/browser-compat-data)
   - : Data used to generate the browser compatibility tables found on our reference pages.
     If you have information about browser compatibility of Web features — or are willing and able to do some research and/or experimentation — you can help update MDN's [Browser Compatibility Data](https://github.com/mdn/browser-compat-data/blob/main/docs/contributing.md)
 - [translated-content](https://github.com/mdn/translated-content)
   - : This is where localized content lives.
     Go here if you want to help translate pages into any of our [actively maintained locales](https://github.com/mdn/translated-content#locales).
-- [interactive-examples](https://github.com/mdn/interactive-examples)
-  - : The example code at the top of many of our reference pages (the code inside the ["Try it" section](/en-US/docs/Web/JavaScript/Reference/Global_Objects/globalThis)).
 
 ### Infrastructure
 
-- [bob](https://github.com/mdn/bob)
-  - : The rendering system that produces the editable, copyable examples found at the top of many of our reference pages.
-    This project builds the examples from the source code stored in the `interactive-examples` repository.
 - [rumba](https://github.com/mdn/rumba)
-  - : MDN's back-end system that mainly powers MDN Plus.
+  - : A back-end system that powers MDN Plus.
 - [workflows](https://github.com/mdn/workflows)
   - : A collection of reusable GitHub Actions for use on MDN Web Docs repositories.
 

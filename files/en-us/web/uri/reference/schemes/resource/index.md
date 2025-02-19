@@ -1,10 +1,12 @@
 ---
-title: Resource URLs
-slug: Web/URI/Schemes/resource
-page-type: guide
+title: "resource: URLs"
+short-title: "resource:"
+slug: Web/URI/Reference/Schemes/resource
+page-type: reference
+sidebar: urlsidebar
 ---
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/URI")}}{{non-standard_header}}
+{{non-standard_header}}
 
 Resource URLs, URLs prefixed with the `resource:` scheme, are used by
 Firefox and Firefox browser extensions to load resources internally, but some of the

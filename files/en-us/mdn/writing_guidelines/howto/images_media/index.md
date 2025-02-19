@@ -279,7 +279,9 @@ Ask a member of MDN Web Docs team to upload the video if you don't have somewher
 > [!NOTE]
 > Mark the video as "unlisted" if it doesn't make sense out of the context of the page (if it's a short video, then it probably doesn't).
 
-Once uploaded, you can embed the video in the page using the [`EmbedYouTube`](https://github.com/mdn/yari/blob/main/kumascript/macros/EmbedYouTube.ejs) macro.
+### Embedding
+
+Once uploaded, you can embed the video in the page using the [`EmbedYouTube`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/embeds/embed_youtube.rs) macro.
 This is used by inserting the following in your page at the position you want the video to appear:
 
 ```plain

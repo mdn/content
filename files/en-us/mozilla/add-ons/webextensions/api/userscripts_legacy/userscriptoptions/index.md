@@ -1,10 +1,13 @@
 ---
-title: UserScripts.UserScriptOptions
-slug: Mozilla/Add-ons/WebExtensions/API/userScripts/UserScriptOptions
+title: UserScripts.UserScriptOptions (Legacy)
+slug: Mozilla/Add-ons/WebExtensions/API/userScripts_legacy/UserScriptOptions
 page-type: webextension-api-type
 ---
 
 {{AddonSidebar}}
+
+> [!WARNING]
+> This is documentation for the legacy `userScripts` API. It's available in Firefox for Manifest V2. For functionality to work with user scripts in Manifest V3 see the new {{WebExtAPIRef("userScripts")}} API.
 
 The UserScriptOptions object represents the content scripts to register. It has similar syntax to the contentScript options supported by browser.contentScripts.register. The differences are:
 

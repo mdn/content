@@ -14550,22 +14550,6 @@
     "modified": "2020-10-15T22:20:45.849Z",
     "contributors": ["rebloor", "irenesmith", "bershanskiy", "pesar81"]
   },
-  "Mozilla/Add-ons/WebExtensions/API/userScripts/RegisteredUserScript/unregister": {
-    "modified": "2020-10-15T22:22:39.367Z",
-    "contributors": ["rebloor", "hellosct1", "bershanskiy"]
-  },
-  "Mozilla/Add-ons/WebExtensions/API/userScripts/UserScriptOptions": {
-    "modified": "2020-06-22T16:28:43.349Z",
-    "contributors": ["hellosct1", "MelchiorIm3Tal", "irenesmith"]
-  },
-  "Mozilla/Add-ons/WebExtensions/API/userScripts/Working_with_userScripts": {
-    "modified": "2020-06-22T16:28:43.959Z",
-    "contributors": ["irenesmith", "hellosct1"]
-  },
-  "Mozilla/Add-ons/WebExtensions/API/userScripts/onBeforeScript": {
-    "modified": "2020-10-15T22:23:14.808Z",
-    "contributors": ["chrisdavidmills", "rebloor", "bershanskiy"]
-  },
   "Mozilla/Add-ons/WebExtensions/API/userScripts/register": {
     "modified": "2020-10-15T22:21:40.204Z",
     "contributors": [
@@ -14577,6 +14561,22 @@
       "bershanskiy",
       "stoyanster"
     ]
+  },
+  "Mozilla/Add-ons/WebExtensions/API/userScripts_legacy/RegisteredUserScript/unregister": {
+    "modified": "2020-10-15T22:22:39.367Z",
+    "contributors": ["rebloor", "hellosct1", "bershanskiy"]
+  },
+  "Mozilla/Add-ons/WebExtensions/API/userScripts_legacy/UserScriptOptions": {
+    "modified": "2020-06-22T16:28:43.349Z",
+    "contributors": ["hellosct1", "MelchiorIm3Tal", "irenesmith"]
+  },
+  "Mozilla/Add-ons/WebExtensions/API/userScripts_legacy/Working_with_userScripts": {
+    "modified": "2020-06-22T16:28:43.959Z",
+    "contributors": ["irenesmith", "hellosct1"]
+  },
+  "Mozilla/Add-ons/WebExtensions/API/userScripts_legacy/onBeforeScript": {
+    "modified": "2020-10-15T22:23:14.808Z",
+    "contributors": ["chrisdavidmills", "rebloor", "bershanskiy"]
   },
   "Mozilla/Add-ons/WebExtensions/API/webNavigation": {
     "modified": "2020-10-15T21:38:48.088Z",
@@ -125937,7 +125937,7 @@
       "fscholz"
     ]
   },
-  "Web/URI/Authority/Choosing_between_www_and_non-www_URLs": {
+  "Web/URI/Guides/Choosing_between_www_and_non-www_URLs": {
     "modified": "2020-02-15T14:08:06.893Z",
     "contributors": [
       "francoraphael",
@@ -125954,7 +125954,7 @@
       "dbruant"
     ]
   },
-  "Web/URI/Schemes/data": {
+  "Web/URI/Reference/Schemes/data": {
     "modified": "2020-11-21T14:56:28.316Z",
     "contributors": [
       "simon04",
@@ -126001,7 +126001,7 @@
       "Waldo"
     ]
   },
-  "Web/URI/Schemes/resource": {
+  "Web/URI/Reference/Schemes/resource": {
     "modified": "2019-03-23T22:04:02.489Z",
     "contributors": ["ExE-Boss", "gmierz", "David_B", "chrisdavidmills"]
   },
