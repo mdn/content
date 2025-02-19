@@ -12,11 +12,20 @@ The **`speak-as`** property is a part of [CSS](/en-US/docs/Web/CSS) Speech, whic
 ## Syntax
 
 ```css
+/* single value syntax */
 speak-as: normal;
 speak-as: spell-out;
 speak-as: literal-punctuation;
 speak-as: digits;
 speak-as: no-punctuation;
+
+/* multiple value syntax */
+speak-as: spell-out literal-punctuation;
+speak-as: spell-out no-punctuation;
+speak-as: digits literal-punctuation;
+speak-as: digits no-punctuation;
+speak-as: spell-out digits literal-punctuation;
+speak-as: spell-out digits no-punctuation;
 ```
 
 ### Values
