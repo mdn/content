@@ -32,7 +32,7 @@ body {
 ```
 
 ```js live-sample___modify-rule
-const stylesheet = document.styleSheets[1];
+const stylesheet = document.styleSheets[0];
 stylesheet.cssRules[0].style.backgroundColor = "cornflowerblue";
 ```
 
