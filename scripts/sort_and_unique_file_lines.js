@@ -59,5 +59,6 @@ for (const filePath of filePaths) {
     }
   } else {
     fs.writeFileSync(filePath, sortedContent);
+    console.log(`Sorted ${filePath}`);
   }
 }

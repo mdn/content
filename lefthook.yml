@@ -1,0 +1,46 @@
+pre-commit:
+  parallel: true
+  commands:
+    log-url-issues:
+      glob: "*"
+      run: |
+        node scripts/log-url-issues.js
+
+    fix-redirects:
+      glob: "files/en-us/_redirects.txt"
+      run: yarn content fix-redirects en-US && yarn content validate-redirects en-US
+
+    fmt-sidebars:
+      glob: "files/sidebars/*.yaml"
+      run: yarn content fmt-sidebars
+
+    format-non-md:
+      glob: "*.{js,json,yml,yaml,css,html}"
+      run: prettier --ignore-unknown --write {staged_files}
+
+    yarn-filecheck:
+      glob: "*.{svg,png,jpeg,jpg,gif}"
+      run: yarn filecheck {staged_files}
+
+    sort-vscode-dicts:
+      glob: ".vscode/dictionaries/*.txt"
+      run: node scripts/sort_and_unique_file_lines.js {staged_files}
+
+    markdown:
+      glob: "*.md"
+      run: |
+        node scripts/front-matter_linter.js --fix true {staged_files}
+        markdownlint-cli2 --fix {staged_files}
+        prettier --write {staged_files}
+        node scripts/update-moved-file-links.js --check
+
+post-merge:
+  commands:
+    yarn-post-merge-main:
+      run: |
+        BRANCH="$(git rev-parse --abbrev-ref HEAD)"
+        if [ "$BRANCH" != "main" ]; then
+          exit 0
+        else
+          yarn
+        fi
