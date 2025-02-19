@@ -12,9 +12,10 @@ The **`popoverTargetElement`** property of the {{domxref("HTMLButtonElement")}} 
 
 It is the JavaScript equivalent of the [`popovertarget`](/en-US/docs/Web/HTML/Element/button#popovertarget) HTML attribute.
 
-Associating a popover with a control using the `popoverTargetElement` property creates an implicit anchor reference between the two. This makes it very convenient to position popovers relative to their controls using [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning). Explicit associations do not need to be made using the {{cssxref("anchor-name")}} and {{cssxref("position-anchor")}} properties.
+Establishing a relationship between a popover and its invoker button using the `popoverTargetElement` property has two additional useful effects:
 
-See [Associating anchor and positioned elements](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#associating_anchor_and_positioned_elements) for more details on anchor references.
+- The browser creates an implicit [`aria-details`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-details) and [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded) relationship between popover and invoker, and places the popover in a logical position in the keyboard focus navigation order when shown. This makes the popover more accessible to keyboard and assistive technology (AT) users (see also [Popover accessibility features](/en-US/docs/Web/API/Popover_API/Using#popover_accessibility_features)).
+- The browser creates an implicit anchor reference between the two, making it very convenient to position popovers relative to their controls using [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning). See [Implicit popover anchor associations](/en-US/docs/Web/API/Popover_API/Using#implicit_popover_anchor_associations) for more details.
 
 ## Value
 

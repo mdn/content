@@ -21,7 +21,7 @@ In its simplest form, a popover is created by adding the [`popover`](/en-US/docs
 > [!NOTE]
 > Setting the `popover` attribute with no value is equivalent to setting `popover="auto"`.
 
-Adding this attribute causes the element to be hidden on page load by having {{cssxref("display", "display: none")}} set on it. To show/hide the popover, you need to add some control buttons. You can set a {{htmlelement("button")}} (or {{htmlelement("input")}} of `type="button"`) as a popover control button by giving it a [`popovertarget`](/en-US/docs/Web/HTML/Element/button#popovertarget) attribute, the value of which should be the ID of the popover to control:
+Adding this attribute causes the element to be hidden on page load by having {{cssxref("display", "display: none")}} set on it. To show/hide the popover, you need to add at least one control button (also know as the popover **invoker**). You can set a {{htmlelement("button")}} (or {{htmlelement("input")}} of `type="button"`) as a popover control button by giving it a [`popovertarget`](/en-US/docs/Web/HTML/Element/button#popovertarget) attribute, the value of which should be the ID of the popover to control:
 
 ```html
 <button popovertarget="mypopover">Toggle the popover</button>
@@ -62,6 +62,18 @@ When a popover element is set with `popover` or `popover="auto"` as shown above,
 Auto state is useful when you only want to show a single popover at once. Perhaps you have multiple teaching UI messages that you want to show, but don't want the display to start getting cluttered and confusing, or perhaps you are showing status messages where the new status overrides any previous status.
 
 You can see the behavior described above in action in our [Multiple auto popovers example](https://mdn.github.io/dom-examples/popover-api/multiple-auto/) ([source](https://github.com/mdn/dom-examples/tree/main/popover-api/multiple-auto)). Try light dismissing the popovers after they are shown, and see what happens when you try to show both at the same time.
+
+## Popover accessibility features
+
+When a relationship is established between a popover and its control (invoker) via the `popovertarget` attribute, the API automatically makes two other changes to the environment to allow keyboard and assistive technology (AT) users to more easily interact with the popover:
+
+- When the popover is shown, the keyboard focus navigation order is updated so that the popover is next in the sequence: for example, when a button is pressed to show a popover, any buttons inside the popover will be next in the tabbing order (will be focused by pressing the <kbd>Tab</kbd> key). Conversely, when closing the popover via the keyboard (usually via via the <kbd>Esc</kbd> key), focus is shifted back to the invoker.
+- To allow AT such as screen readers to make sense of the relationship between the invoker and the popover, an implicit [`aria-details`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-details) and [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded) relationship is set up between them.
+
+Setting up a relationship between a popover and its control in this manner also creates an [Implicit popover anchor association](/en-US/docs/Web/API/Popover_API/Using#implicit_popover_anchor_associations).
+
+> [!NOTE]
+> You can also set up a popover-invoker relationship using the `source` option of the {{domxref("HTMLElement.showPopover()")}} and {{domxref("HTMLElement.togglePopover()")}} methods, but bear in mind that in this case, only the focus navigation order changes are made, not the implicit ARIA relationship. This because the `source` option can be set to any kind of element, not just `<button>` elements, and it cannot be guaranteed that the relationship would make sense.
 
 ## Using manual popover state
 
@@ -204,6 +216,8 @@ In the below sections, we'll walk through all the important parts of the code.
 
 > [!NOTE]
 > You _can_ use `hint` popovers alongside `manual` popovers, although there is not really much of a reason to. They are designed to circumvent some of the limitations of `auto` popovers, enabling use cases like the one detailed in this section.
+>
+> Note also that `popover="hint"` falls back to `popover="manual"` in unsupporting browsers.
 
 ### Creating the sub-menus with `popover="auto"`
 
@@ -341,11 +355,31 @@ See our [Popover blur background example](https://mdn.github.io/dom-examples/pop
 
 ### Implicit popover anchor associations
 
-Associating a popover with a control using the [`popovertarget`](/en-US/docs/Web/HTML/Element/button#popovertarget) and [`id`](/en-US/docs/Web/HTML/Global_attributes/id) attributes creates an implicit anchor reference between the two, as does programmatically associating a popover action such as {{domxref("HTMLElement.showPopover", "showPopover()")}} with a control using the `source` option. See [Associating anchor and positioned elements](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#associating_anchor_and_positioned_elements) for more details on anchor references.
+Associating a popover with its invoker using the [`popovertarget`](/en-US/docs/Web/HTML/Element/button#popovertarget) attribute or the `source` option of the {{domxref("HTMLElement.showPopover()")}} or {{domxref("HTMLElement.togglePopover()")}} methods creates an implicit anchor reference between the two.
 
-This makes it very convenient to position popovers relative to their controls using [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning). Explicit associations do not need to be made using the {{cssxref("anchor-name")}} and {{cssxref("position-anchor")}} properties.
+This makes it very convenient to position a popover relative to its control using [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning). Explicit associations do not need to be made using the {{cssxref("anchor-name")}} and {{cssxref("position-anchor")}} properties. However, you still need to specify the positioning CSS.
 
-For an example that uses this implicit association, see the [Using "hint" popover state](/en-US/docs/Web/API/Popover_API/Using#using_hint_popover_state) section above.
+For example, you could use a combination of {{cssxref("anchor()")}} function values set on {{glossary("inset properties")}}, and `anchor-center` values set on alignment properties:
+
+```css
+.my-popover {
+  bottom: calc(anchor(top) + 20px);
+  justify-self: anchor-center;
+}
+```
+
+Or you could use a {{cssxref("position-area")}} property:
+
+```css
+.my-popover {
+  position-area: top;
+}
+```
+
+See [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#positioning_elements_relative_to_their_anchor) for more details on associating anchor and positioned elements and positioning elements relative to their anchor.
+
+> [!NOTE]
+> For an example that uses this implicit association, see our [popover hint demo](https://mdn.github.io/dom-examples/popover-api/popover-hint/) ([source](https://github.com/mdn/dom-examples/tree/main/popover-api/popover-hint)). If you check out the CSS code, you'll see that no explicit anchor associations are made using the {{cssxref("anchor-name")}} and {{cssxref("position-anchor")}} properties.
 
 ## Animating popovers
 
