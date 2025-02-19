@@ -48,6 +48,10 @@ browser.action.setTitle(
 - If `windowId` and `tabId` are both supplied, the function fails and the title is not set.
 - If `windowId` and `tabId` are both omitted, the global title is set.
 
+### Return value
+
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that resolves when the title has been set.
+
 ## Examples
 
 This code switches the title between "this" and "that" each time the user clicks the browser action:
