@@ -149,6 +149,6 @@ These data types are used in [CSS math function](/en-US/docs/Web/CSS/CSS_Functio
 
 ## See also
 
-- [CSS units and values](/en-US/docs/Web/CSS/CSS_Values_and_Units) module
+- [CSS values and units](/en-US/docs/Web/CSS/CSS_Values_and_Units) module
 - [Learn: Values and units](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
 - [CSS Functional Notation](/en-US/docs/Web/CSS/CSS_Functions)

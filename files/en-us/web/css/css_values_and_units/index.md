@@ -148,7 +148,7 @@ Additional functions, including `calc-mix()`, `crossorigin()`, `first-valid()`, 
 - [`vw`](/en-US/docs/Web/CSS/length#vw)
 - [`x`](/en-US/docs/Web/CSS/length#x)
 
-[Flex units](/en-US/docs/Web/CSS/CSS_Values_and_Units/numeric_data_types#flex_units) (`fr`) and [container units](/en-US/docs/Web/CSS/CSS_Values_and_Units/numeric_data_types#container_units) (`cqb`,`cqh`,`cqi`,`cqmax`,`cqmin`,`cqw`) are defined in the [CSS flexible box layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout) and [CSS containment](/en-US/docs/Web/CSS/CSS_containment) modules, respectively.
+[Flex units](/en-US/docs/Web/CSS/CSS_Values_and_Units/numeric_data_types#flex_units) (`fr`) and [container units](/en-US/docs/Web/CSS/CSS_Values_and_Units/numeric_data_types#container_units) (`cqb`,`cqh`,`cqi`,`cqmax`,`cqmin`,`cqw`) are defined in the [CSS flexible box layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout) and [CSS conditional rules](/en-US/docs/Web/CSS/CSS_conditional_rules) modules, respectively.
 
 #### Unit categorizations
 
@@ -199,7 +199,7 @@ Additional functions, including `calc-mix()`, `crossorigin()`, `first-valid()`, 
 
 - [Textual data types](/en-US/docs/Web/CSS/CSS_Values_and_Units/Textual_Data_Types)
 
-  - : Overview of the textual data types, including pre-defined keyword values, global css keyword values, and URLs.
+  - : Overview of the textual data types, including pre-defined keyword values, global CSS keyword values, and URLs.
 
 - [CSS value functions](/en-US/docs/Web/CSS/CSS_Functions)
 
@@ -207,7 +207,7 @@ Additional functions, including `calc-mix()`, `crossorigin()`, `first-valid()`, 
 
 - [Value definition syntax](/en-US/docs/Web/CSS/Value_definition_syntax)
 
-  - : The formal grammar used to define the set of valid values for CSS properties and function.
+  - : The formal grammar used to define the set of valid values for CSS properties and functions.
 
 - [Learn: Values and units](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
 
@@ -215,12 +215,34 @@ Additional functions, including `calc-mix()`, `crossorigin()`, `first-valid()`, 
 
 ## Related
 
-- [Flex units](/en-US/docs/Web/CSS/CSS_Values_and_Units/numeric_data_types#flex_units) (`fr`)
-- [Container units](/en-US/docs/Web/CSS/CSS_Values_and_Units/numeric_data_types#container_units) (`cqb`,`cqh`,`cqi`,`cqmax`,`cqmin`,`cqw`)
-- {{cssxref("&lt;color&gt;")}}
-- {{cssxref("&lt;image&gt;")}}
-- {{cssxref("&lt;position&gt;")}}
-- {{cssxref("&lt;flex&gt;")}}
+- [CSS cascading and inheritance](/en-US/docs/Web/CSS/CSS_cascade) module
+
+  - {{cssxref("initial")}}
+  - {{cssxref("inherit")}}
+  - {{cssxref("revert")}}
+  - {{cssxref("revert-layer")}}
+  - {{cssxref("unset")}}
+  - {{cssxref("all")}}
+
+- [CSS flexible box layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout) module
+
+  - {{cssxref("&lt;flex&gt;")}}
+  - [Flex units](/en-US/docs/Web/CSS/CSS_Values_and_Units/numeric_data_types#flex_units) (`fr`)
+
+- [CSS conditional rules](/en-US/docs/Web/CSS/CSS_conditional_rules) module
+
+  - [Container units](/en-US/docs/Web/CSS/CSS_Values_and_Units/numeric_data_types#container_units) (`cqb`,`cqh`,`cqi`,`cqmax`,`cqmin`,`cqw`)
+
+- [CSS colors](/en-US/docs/Web/CSS/CSS_colors) module
+
+  - {{cssxref("&lt;color&gt;")}}
+  - {{cssxref("system-color")}}
+  - [`color-mix()`](/en-US/docs/Web/CSS/color_value/color-mix)
+
+- [CSS images](/en-US/docs/Web/CSS/CSS_images) module
+
+  - {{cssxref("&lt;image&gt;")}}
+  - {{cssxref("&lt;gradient&gt;")}}
 
 ## Specifications
 
@@ -228,12 +250,5 @@ Additional functions, including `calc-mix()`, `crossorigin()`, `first-valid()`, 
 
 ## See also
 
-- {{cssxref("initial")}}
-- {{cssxref("inherit")}}
-- {{cssxref("revert")}}
-- {{cssxref("revert-layer")}}
-- {{cssxref("unset")}}
-- {{cssxref("all")}}
-- [CSS cascading and inheritance](/en-US/docs/Web/CSS/CSS_cascade) module
-- [CSS flexible box layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout) module
-- [CSS containment](/en-US/docs/Web/CSS/CSS_containment) module
+- [CSS syntax](/en-US/docs/Web/CSS/CSS_syntax) module
+- [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors) module
