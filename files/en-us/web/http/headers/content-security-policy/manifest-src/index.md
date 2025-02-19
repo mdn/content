@@ -9,7 +9,7 @@ browser-compat: http.headers.Content-Security-Policy.manifest-src
 
 The HTTP
 {{HTTPHeader("Content-Security-Policy")}}`: manifest-src`
-directive specifies which [manifest](/en-US/docs/Web/Manifest) can be applied
+directive specifies which [manifest](/en-US/docs/Web/Progressive_web_apps/Manifest) can be applied
 to the resource.
 
 <table class="properties">
@@ -78,5 +78,5 @@ The following {{HTMLElement("link")}} is blocked and won't load:
 ## See also
 
 - {{HTTPHeader("Content-Security-Policy")}}
-- [Web app manifest](/en-US/docs/Web/Manifest)
+- [Web app manifest](/en-US/docs/Web/Progressive_web_apps/Manifest)
 - {{HTMLElement("link")}}

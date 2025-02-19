@@ -167,7 +167,7 @@ The `rel` attribute has no default value. If the attribute is omitted or if none
     > Although recognized, the synonym `copyright` is incorrect and must be avoided.
 
 - `manifest`
-  - : [Web app manifest](/en-US/docs/Web/Manifest). Requires the use of the CORS protocol for cross-origin fetching.
+  - : [Web app manifest](/en-US/docs/Web/Progressive_web_apps/Manifest). Requires the use of the CORS protocol for cross-origin fetching.
 - `modulepreload`
   - : Useful for improved performance, and relevant to the {{htmlelement('link')}} anywhere in the document, setting `rel="modulepreload"` tells the browser to preemptively fetch the script (and dependencies) and store it in the document's module map for later evaluation. `modulepreload` links can ensure network fetching is done with the module ready (but not evaluated) in the module map before it is necessarily needed. See also [`modulepreload`](/en-US/docs/Web/HTML/Attributes/rel/modulepreload).
 - `next`

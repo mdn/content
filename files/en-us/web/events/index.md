@@ -399,7 +399,7 @@ This topic provides an index to the main _sorts_ of events you might be interest
       <td>
         <p>
           Events related to installation of
-          <a href="/en-US/docs/Web/Manifest">progressive web app manifests</a>.
+          <a href="/en-US/docs/Web/Progressive_web_apps/Manifest">progressive web app manifests</a>.
         </p>
       </td>
       <td>
