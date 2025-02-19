@@ -130,12 +130,21 @@ This attribute controls when a browser is allowed to include the cookie in a cro
 
 The `Strict` value offers the most protection: if this attribute is set, the browser will not include the cookie in any cross-site request. However, this creates a usability issue: if the user is logged into your site, and follows a link to your site from a different site, then your cookies will not be included, and the user will not be recognized when they reach your site.
 
-The `Lax` value relaxes this restriction: cookies are included in cross-site requests for top-level navigations only. This means that, for example, attempts to make a request using a form submission would not include `Lax` cookies. The problem with this value is that attackers can still pop up new windows or trigger top-level
-navigations in order to create cross-site requests that satisfy the `Lax` constraint.
+The `Lax` value relaxes this restriction: cookies are included in cross-site requests if both the following conditions apply:
+
+- The request was a navigation of the top-level browsing context.
+- The request used a {{glossary("Safe/HTTP", "safe")}} method: notably, {{httpmethod("GET")}} is safe but {{httpmethod("POST")}} is not.
+
+However, `Lax` offers significantly weaker protection than `Strict`:
+
+- An attacker can trigger a top-level navigation that sends the request, for example by setting {{domxref("Document.location", "document.location")}}.
+- Even if the server does check that the request was not sent using `GET`, some web frameworks support "method override": this enables an attacker to send a request using `GET` but have it appear to the server as if it used `POST`.
+
+So although `Lax` is a reasonable defense in depth against CSRF, as long as you avoid making state-changing requests that use `GET`, it should not be the only defense. It should be deployed alongside one of the previous defenses, as a defense in depth.
 
 Another problem with the `SameSite` attribute is that it protects you from requests from a different {{glossary("Site", "site")}}, not a different {{glossary("Origin", "origin")}}. This is a looser protection, because (for example) `https://foo.example.org` and `https://bar.example.org` are considered the same site, although they are different origins. Effectively, if you rely on same-site protection, you have to trust all your site's subdomains.
 
-Even so, it is worth setting the `SameSite` attribute for sensitive cookies to `Strict` if you can, or `Lax` if you have to.
+See [Bypassing SameSite cookie restrictions](https://portswigger.net/web-security/csrf/bypassing-samesite-restrictions) for more details.
 
 ## See also
 
