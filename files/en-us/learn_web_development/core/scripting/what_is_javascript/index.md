@@ -44,7 +44,7 @@ It is the third layer of the layer cake of standard web technologies, two of whi
 
 The three layers build on top of one another nicely. Let's take a button as an example. We can mark it up using HTML to give it structure and purpose:
 
-```html
+```html live-sample___string-concat-name
 <button type="button">Player 1: Chris</button>
 ```
 
@@ -52,7 +52,7 @@ The three layers build on top of one another nicely. Let's take a button as an e
 
 Then we can add some CSS into the mix to get it looking nice:
 
-```css
+```css live-sample___string-concat-name
 button {
   font-family: "helvetica neue", helvetica, sans-serif;
   letter-spacing: 1px;
@@ -71,7 +71,7 @@ button {
 
 And finally, we can add some JavaScript to implement dynamic behavior:
 
-```js
+```js live-sample___string-concat-name
 function updateName() {
   const name = prompt("Enter a new name");
   button.textContent = `Player 1: ${name}`;
@@ -82,9 +82,10 @@ const button = document.querySelector("button");
 button.addEventListener("click", updateName);
 ```
 
-{{ EmbedLiveSample('A_high-level_definition', '100%', 80) }}
+You can click "Play" to see and edit the example in the MDN Playground.
+Try clicking on the text label to see what happens.
 
-Try clicking on this last version of the text label to see what happens (note also that you can find this demo on GitHub — see the [source code](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/what-is-js/javascript-label.html), or [run it live](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/javascript-label.html))!
+{{EmbedLiveSample('string-concat-name', , '80', , , , , "allow-modals")}}
 
 JavaScript can do a lot more than that — let's explore what in more detail.
 
