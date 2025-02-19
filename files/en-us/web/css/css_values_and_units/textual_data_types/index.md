@@ -104,7 +104,7 @@ The parameter for `url()` can be either quoted or unquoted. If unquoted, it is p
 
 ## See also
 
-- [Numeric data types](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types)
+- [Numeric data types](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_Data_Types)
 - [CSS data types](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)
 - [CSS values and units](/en-US/docs/Web/CSS/CSS_Values_and_Units) module
 - [Learn: Values and units](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
