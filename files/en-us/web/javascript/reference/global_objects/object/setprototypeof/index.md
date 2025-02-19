@@ -14,7 +14,20 @@ The **`Object.setPrototypeOf()`** static method sets the prototype (i.e., the in
 >
 > Because this feature is a part of the language, it is still the burden on engine developers to implement that feature performantly (ideally). Until engine developers address this issue, if you are concerned about performance, you should avoid setting the `[[Prototype]]` of an object. Instead, create a new object with the desired `[[Prototype]]` using {{jsxref("Object.create()")}}.
 
-{{EmbedInteractiveExample("pages/js/object-setprototypeof.html")}}
+{{InteractiveExample("JavaScript Demo: Object.setPrototypeOf()")}}
+
+```js interactive-example
+const obj = {};
+const parent = { foo: "bar" };
+
+console.log(obj.foo);
+// Expected output: undefined
+
+Object.setPrototypeOf(obj, parent);
+
+console.log(obj.foo);
+// Expected output: "bar"
+```
 
 ## Syntax
 

@@ -23,7 +23,7 @@ with(info, options)
 ### Parameters
 
 - `info`
-  - : An object containing at least one of the properties recognized by {{jsxref("Temporal/ZonedDateTime/from", "Temporal.ZonedDateTime.from()")}} (except `calendar`): `day`, `era` and `eraYear`, `hour`, `microsecond`, `millisecond`, `minute`, `month`, `monthCode`, `nanosecond`, `offset`, `second`, `year`. Unspecified properties use the values from the original date-time. You only need to provide one of `month` or `monthCode`, and one of `era` and `eraYear` or `year`, and the other will be updated accordingly.
+  - : An object containing at least one of the properties recognized by {{jsxref("Temporal/ZonedDateTime/from", "Temporal.ZonedDateTime.from()")}} (except `calendar` and `timeZone`): `day`, `era` and `eraYear`, `hour`, `microsecond`, `millisecond`, `minute`, `month`, `monthCode`, `nanosecond`, `offset`, `second`, `year`. Unspecified properties use the values from the original date-time. You only need to provide one of `month` or `monthCode`, and one of `era` and `eraYear` or `year`, and the other will be updated accordingly.
 - `options` {{optional_inline}}
   - : An object containing some or all of the following properties (in the order they are retrieved and validated):
     - `disambiguation` {{optional_inline}}
@@ -52,6 +52,7 @@ A new `Temporal.ZonedDateTime` object, where the fields specified in `info` that
     - The provided properties that specify the same component are inconsistent.
     - The provided non-numerical properties are not valid; for example, if `monthCode` is never a valid month code in this calendar.
     - The provided numerical properties are out of range, and `options.overflow` is set to `"reject"`.
+    - The wall-clock time represented by the provided properties is ambiguous in the time zone, and `options.disambiguation` is set to `"reject"`.
     - The result is not in the [representable range](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal#representable_dates), which is ±10<sup>8</sup> days, or about ±273,972.6 years, from the Unix epoch.
 
 ## Examples

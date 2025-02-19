@@ -359,6 +359,7 @@ keywordsearch
 khmr
 KIND_NONHEAP
 knda
+Kore
 krai
 lanatham
 laoo

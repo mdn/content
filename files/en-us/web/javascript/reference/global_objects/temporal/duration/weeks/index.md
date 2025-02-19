@@ -32,7 +32,7 @@ console.log(d4.weeks); // 0
 
 // Balance d4
 const d4Balanced = d4.round({
-  largestUnit: "week",
+  largestUnit: "weeks",
   relativeTo: Temporal.PlainDate.from("2021-01-01"), // ISO 8601 calendar
 });
 console.log(d4Balanced.weeks); // 1
