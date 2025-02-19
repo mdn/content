@@ -75793,27 +75793,6 @@
       "webinista"
     ]
   },
-  "Web/CSS/Alternative_style_sheets": {
-    "modified": "2020-10-15T21:15:55.661Z",
-    "contributors": [
-      "wbamberg",
-      "mfuji09",
-      "sideshowbarker",
-      "chrisdavidmills",
-      "mfluehr",
-      "Nickolay",
-      "r-o-b",
-      "Sebastianz",
-      "teoli",
-      "Sheppy",
-      "justinpotts",
-      "minitech",
-      "Mgjbot",
-      "Kohei",
-      "Sevenspade",
-      "DBaron"
-    ]
-  },
   "Web/CSS/Attribute_selectors": {
     "modified": "2020-10-15T21:04:18.142Z",
     "contributors": [
@@ -91376,6 +91355,27 @@
       "Itazulay",
       "estelle",
       "perfmattersconf"
+    ]
+  },
+  "Web/HTML/Attributes/rel/Alternate_stylesheet": {
+    "modified": "2020-10-15T21:15:55.661Z",
+    "contributors": [
+      "wbamberg",
+      "mfuji09",
+      "sideshowbarker",
+      "chrisdavidmills",
+      "mfluehr",
+      "Nickolay",
+      "r-o-b",
+      "Sebastianz",
+      "teoli",
+      "Sheppy",
+      "justinpotts",
+      "minitech",
+      "Mgjbot",
+      "Kohei",
+      "Sevenspade",
+      "DBaron"
     ]
   },
   "Web/HTML/Attributes/rel/dns-prefetch": {
