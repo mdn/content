@@ -53,7 +53,7 @@ The client may choose to provide the hint, and add the `Sec-CH-UA-Model` header 
 For example, on mobile phone the client might add the header as shown:
 
 ```http
-GET /GET /my/page HTTP/1.1
+GET /my/page HTTP/1.1
 Host: example.site
 
 Sec-CH-UA: " Not A;Brand";v="99", "Chromium";v="96", "Google Chrome";v="96"
