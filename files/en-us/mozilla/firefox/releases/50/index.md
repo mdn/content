@@ -141,7 +141,6 @@ Firefox 50 was released on November 15, 2016. This article lists key changes tha
   - {{domxref("HTMLInputElement.webkitdirectory")}} as well as the [`webkitdirectory`](/en-US/docs/Web/HTML/Element/input#webkitdirectory) attribute of the {{HTMLElement("input")}} element have been implemented; this lets you configure a file input to accept directories instead of files ([Firefox bug 1258489](https://bugzil.la/1258489)).
   - {{domxref("HTMLInputElement.webkitEntries")}} has been implemented; this returns an array of {{domxref("FileSystemEntry")}}-based objects representing the selected items.
   - {{domxref("File.webkitRelativePath")}} has been implemented; this contains the path of the file relative to the root of the containing {{domxref("FileSystemDirectoryEntry")}} that was among the items in the list returned by {{domxref("HTMLInputElement.webkitEntries")}}.
-  - See [File and Directory Entries API support in Firefox](/en-US/docs/Web/API/File_and_Directory_Entries_API/Firefox_support) for details about what we do and do not support in this API.
   - These APIs are now enabled by default; some were previously available but only behind a preference ([Firefox bug 1288683](https://bugzil.la/1288683)).
 
 - We've implemented {{domxref("DataTransferItem.webkitGetAsEntry()")}} as part of the [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API); this lets you obtain a {{domxref("FileSystemEntry")}} representing a dropped file ([Firefox bug 1289255](https://bugzil.la/1289255)). This is enabled by default.

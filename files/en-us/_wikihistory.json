@@ -35509,23 +35509,6 @@
       "ScottMichaud"
     ]
   },
-  "Web/API/File_and_Directory_Entries_API/Firefox_support": {
-    "modified": "2019-03-23T22:26:21.406Z",
-    "contributors": ["Sheppy"]
-  },
-  "Web/API/File_and_Directory_Entries_API/Introduction": {
-    "modified": "2020-11-30T19:15:21.994Z",
-    "contributors": [
-      "peterbe",
-      "modster",
-      "fscholz",
-      "Sheppy",
-      "teoli",
-      "Anonymous",
-      "kscarfone",
-      "grendel"
-    ]
-  },
   "Web/API/FocusEvent": {
     "modified": "2020-10-15T21:24:22.014Z",
     "contributors": [

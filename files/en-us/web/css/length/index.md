@@ -193,7 +193,7 @@ For high-dpi devices, inches (`in`), centimeters (`cm`), and millimeters (`mm`) 
 > Many users increase their {{Glossary("user agent")}}'s default font size to make text more legible. Absolute lengths can cause accessibility problems because they are fixed and do not scale according to user settings. For this reason, prefer relative lengths (such as `em` or `rem`) when setting `font-size`.
 
 - `px`
-  - : One pixel. For screen displays, it traditionally represents one device pixel (dot). However, for _printers_ and _high-resolution screens_, one CSS pixel implies multiple device pixels. `1px` = `1in / 96`.
+  - : One pixel. For screen displays, it traditionally represents one {{glossary("device pixel")}} (dot). However, for _printers_ and _high-resolution screens_, one CSS pixel implies multiple device pixels. `1px` = `1in / 96`.
 - `cm`
   - : One centimeter. `1cm` = `96px / 2.54`.
 - `mm`
