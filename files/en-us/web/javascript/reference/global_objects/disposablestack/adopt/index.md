@@ -41,42 +41,44 @@ The primary purpose of `adopt()` is to register a value that doesn't implement t
 
 ```js example-good
 using stack = new DisposableStack();
-const handle = stack.adopt(new FileHandle("file.txt"), (handle) =>
-  handle.close(),
+const reader = stack.adopt(stream.getReader(), (reader) =>
+  reader.releaseLock(),
 );
 ```
 
 ```js example-bad
 using stack = new DisposableStack();
-const handle = new FileHandle("file.txt");
+const reader = stream.getReader();
 // If someone adds code in between these lines and an error occurs,
-// the handle will leak.
-stack.defer(() => handle.close());
+// the stream will be locked forever.
+stack.defer(() => reader.close());
 ```
 
 In the same spirit of "make your resource registered as soon as it's declared", you should always wrap your resource acquisition expression in `adopt()`, instead of extracting it to a separate statement.
 
 ```js example-bad
 using stack = new DisposableStack();
-const handle = new FileHandle("file.txt");
-stack.adopt(handle, (handle) => handle.close());
+const reader = stream.getReader();
+stack.adopt(reader, (reader) => reader.close());
 ```
 
 ## Examples
 
 ### Using adopt()
 
-This function creates a file handle that gets closed when the function completes. The file handle does not implement the disposable protocol, so we use `adopt()` to register it to the stack.
+This code consumes a {{domxref("ReadableStream")}} via a {{domxref("ReadableStreamDefaultReader")}}. The reader does not implement the disposable protocol, so we use `adopt()` to register it to the stack.
 
 ```js
-function readFile(fileName) {
+{
   using stack = new DisposableStack();
-  const handle = stack.adopt(new FileHandle(fileName), (handle) =>
-    handle.close(),
+  const reader = stack.adopt(stream.getReader(), (reader) =>
+    reader.releaseLock(),
   );
-  const data = handle.read();
-  // The handle.close() method is called here before exiting
-  return data;
+  const { value, done } = reader.read();
+  if (!done) {
+    // Process the value
+  }
+  // The reader.releaseLock() method is called here before exiting
 }
 ```
 
