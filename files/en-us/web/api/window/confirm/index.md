@@ -75,4 +75,4 @@ Alternatively, a {{HTMLElement("dialog")}} element can be used for confirmations
 - {{HTMLElement("dialog")}} element
 - {{domxref("window.alert()")}}
 - {{domxref("window.prompt()")}}
-- [Never Use a Warning When you Mean Undo](https://alistapart.com/article/neveruseawarning/) on alistapart.com (2017)
+- [Never Use a Warning When you Mean Undo](https://alistapart.com/article/neveruseawarning/) on A List Apart (2017)

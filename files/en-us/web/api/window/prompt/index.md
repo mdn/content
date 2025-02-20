@@ -109,4 +109,4 @@ const aNumber = Number(window.prompt("Type a number", ""));
 - {{HTMLElement("dialog")}} element
 - {{domxref("window.alert", "alert")}}
 - {{domxref("window.confirm", "confirm")}}
-- [Never Use a Warning When you Mean Undo](https://alistapart.com/article/neveruseawarning/) on alistapart.com (2017)
+- [Never Use a Warning When you Mean Undo](https://alistapart.com/article/neveruseawarning/) on A List Apart (2017)
