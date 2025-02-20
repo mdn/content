@@ -93,7 +93,7 @@ and `margin-bottom` default computed values.
 
 {{domxref("Window.getComputedStyle()")}} returns resolved values, which are usually the same as computed values (as `computedStyleMap()` does), but for some properties, they are the used values instead. For example, percentage values for widths are resolved to pixel values _post-layout_, so the used values are in pixels, while the computed values are still in percentages.
 
-Note that the way we present it makes the two APIs seem more similar than they are. `computedStyleMap()` contains [CSS Typed OM](/en-US/docs/Web/API/CSS_Typed_OM_API) objects, while `getComputedStyle()` contains strings. The former is more precise and more powerful.
+Note that the way we present it makes the two APIs seem more similar than they are. `computedStyleMap()` contains [CSS Typed OM](/en-US/docs/Web/API/CSS_Typed_OM_API) objects, while `getComputedStyle()` contains strings. The former presents the same information in a more structured and processable way.
 
 ```html
 <div class="container">
