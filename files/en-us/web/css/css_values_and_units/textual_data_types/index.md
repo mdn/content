@@ -6,7 +6,7 @@ page-type: guide
 
 {{CSSRef}}
 
-Every CSS declaration consists of a property/value pair. The value can take various forms depending on the property, such as a single keyword, integer, function, or a combination of different items; some values have units, while others do not. This guide provides an overview of the textual data types. Refer to the page for each value type for more detailed information.
+Every CSS declaration consists of a property/value pair. The value can include various data types depending on the property, such as a single keyword, integer, function, or a combination of different types; some values have units, while others do not. This guide provides an overview of the textual data types. Refer to the page for each value type for more detailed information.
 
 Text data types are either {{cssxref("&lt;string&gt;")}}, a quoted series of characters, an {{cssxref("&lt;ident&gt;")}}, a "CSS Identifier" which is an unquoted string, or an optionally quoted {{cssxref("url_value", "&lt;url&gt;")}}. A `<string>` is quoted with either single or double quotes. CSS identifiers, listed in the specifications as `<ident>` or {{cssxref("&lt;custom-ident&gt;")}}, must be unquoted.
 
