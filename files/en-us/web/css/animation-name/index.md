@@ -46,7 +46,7 @@ animation-name: unset;
 - {{cssxref("&lt;custom-ident&gt;")}}
   - : An unquoted name identifying the animation. This identifier is composed of a combination of case-sensitive letters `a` to `z`, numbers `0` to `9`, underscores (`_`), and/or dashes (`-`). The first non-dash character must be a letter. Also, two dashes are forbidden at the beginning of the identifier. Furthermore, the identifier can't be `none`, `unset`, `initial`, or `inherit`.
 - {{cssxref("&lt;string&gt;")}}
-  - : A series of characters following the same rules as custom identifiers, as described above, except that they are surrounded by either double (") or single (') quotes. If using a quoted string (quoted) for both the `animation-name` and the corresponding {{cssxref("@keyframes")}} at-rule name, `none`, global keywords, and names starting with an underscore or double dashes are valid, though not recommended. 
+  - : A series of characters following the same rules as custom identifiers, as described above, except that they are surrounded by either double (") or single (') quotes. If using a quoted string (quoted) for both the `animation-name` and the corresponding {{cssxref("@keyframes")}} at-rule name, `none`, global keywords, and names starting with an underscore or double dashes are valid, though not recommended.
 
 > [!NOTE]
 > When you specify multiple comma-separated values on an `animation-*` property, they are applied to the animations in the order in which the `animation-name`s appear. For situations where the number of animations and `animation-*` property values do not match, see [Setting multiple animation property values](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations#setting_multiple_animation_property_values).
