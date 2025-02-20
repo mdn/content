@@ -18,7 +18,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js-nolint
-let openedShortcutSettings = await browser.commands.openShortcutSettings();
+let openedShortcutSettings = browser.commands.openShortcutSettings();
 ```
 
 ### Parameters
