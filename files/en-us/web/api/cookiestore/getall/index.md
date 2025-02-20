@@ -14,6 +14,7 @@ Passing no parameters will return all cookies for the current context.
 ## Syntax
 
 ```js-nolint
+getAll()
 getAll(name)
 getAll(options)
 ```
