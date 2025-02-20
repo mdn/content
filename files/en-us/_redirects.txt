@@ -16,8 +16,8 @@
 /en-US/docs/AJAX:WAI_ARIA_Live_Regions/API_Support	/en-US/docs/Mozilla/Firefox/Releases/3/WAI_ARIA_Live_Regions_API_Support
 /en-US/docs/AJAX:WAI_ARIA_Live_Regions_API_Support	/en-US/docs/Mozilla/Firefox/Releases/3/WAI_ARIA_Live_Regions_API_Support
 /en-US/docs/API	/en-US/docs/Web/API
-/en-US/docs/API/File/Basic_Concepts_About_the_File_API	/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction
-/en-US/docs/API/File/Basic_concepts_about_file_api	/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction
+/en-US/docs/API/File/Basic_Concepts_About_the_File_API	/en-US/docs/Web/API/File_System_API
+/en-US/docs/API/File/Basic_concepts_about_file_api	/en-US/docs/Web/API/File_System_API
 /en-US/docs/API/Full_Screen_API	/en-US/docs/Web/API/Fullscreen_API
 /en-US/docs/API/Fullscreen	/en-US/docs/Web/API/Fullscreen_API
 /en-US/docs/API/Fullscreen_API	/en-US/docs/Web/API/Fullscreen_API
@@ -134,7 +134,7 @@
 /en-US/docs/Addons/Add-on_guidelines	https://extensionworkshop.com/documentation/publish/add-on-policies/
 /en-US/docs/Addons/Working_with_AMO	/en-US/docs/Mozilla/Add-ons
 /en-US/docs/Advanced_styling_for_HTML_forms	/en-US/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling
-/en-US/docs/Alternative_style_sheets	/en-US/docs/Web/CSS/Alternative_style_sheets
+/en-US/docs/Alternative_style_sheets	/en-US/docs/Web/HTML/Attributes/rel/Alternate_stylesheet
 /en-US/docs/An_Overview_of_Accessible_Web_Applications_and_Widgets	/en-US/docs/Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets
 /en-US/docs/An_overview_of_NSS_Internals	https://firefox-source-docs.mozilla.org/security/nss/index.html
 /en-US/docs/Animation	/en-US/docs/Web/API/Animation
@@ -452,7 +452,7 @@
 /en-US/docs/CSS/@supports	/en-US/docs/Web/CSS/@supports
 /en-US/docs/CSS/Adjacent_sibling_selectors	/en-US/docs/Web/CSS/Next-sibling_combinator
 /en-US/docs/CSS/Alias	/en-US/docs/Web/CSS/cursor
-/en-US/docs/CSS/Alternative_style_sheets	/en-US/docs/Web/CSS/Alternative_style_sheets
+/en-US/docs/CSS/Alternative_style_sheets	/en-US/docs/Web/HTML/Attributes/rel/Alternate_stylesheet
 /en-US/docs/CSS/At-rule	/en-US/docs/Web/CSS/CSS_syntax/At-rule
 /en-US/docs/CSS/Attribute_selectors	/en-US/docs/Web/CSS/Attribute_selectors
 /en-US/docs/CSS/Aural	/en-US/docs/Web/CSS/@media/aural
@@ -1280,7 +1280,7 @@
 /en-US/docs/DOM/FileList	/en-US/docs/Web/API/FileList
 /en-US/docs/DOM/FileReader	/en-US/docs/Web/API/FileReader
 /en-US/docs/DOM/FileReaderSync	/en-US/docs/Web/API/FileReaderSync
-/en-US/docs/DOM/File_API/File_System_API	/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction
+/en-US/docs/DOM/File_API/File_System_API	/en-US/docs/Web/API/File_System_API
 /en-US/docs/DOM/File_API/File_System_API/DirectoryEntry	/en-US/docs/Web/API/FileSystemDirectoryEntry
 /en-US/docs/DOM/File_API/File_System_API/DirectoryEntrySync	/en-US/docs/Web/API/DirectoryEntrySync
 /en-US/docs/DOM/File_API/File_System_API/DirectoryReader	/en-US/docs/Web/API/FileSystemDirectoryReader
@@ -1293,7 +1293,7 @@
 /en-US/docs/DOM/File_API/File_System_API/FileSystemSync	/en-US/docs/Web/API/FileSystemSync
 /en-US/docs/DOM/File_API/File_System_API/LocalFileSystem	/en-US/docs/Web/API/File_and_Directory_Entries_API
 /en-US/docs/DOM/File_API/File_System_API/LocalFileSystemSync	/en-US/docs/Web/API/File_and_Directory_Entries_API
-/en-US/docs/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API	/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction
+/en-US/docs/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API	/en-US/docs/Web/API/File_System_API
 /en-US/docs/DOM/GainNode	/en-US/docs/Web/API/GainNode
 /en-US/docs/DOM/HTMLAnchorElement	/en-US/docs/Web/API/HTMLAnchorElement
 /en-US/docs/DOM/HTMLAreaElement	/en-US/docs/Web/API/HTMLAreaElement
@@ -2761,7 +2761,7 @@
 /en-US/docs/Document_Object_Model_(DOM)/FileList	/en-US/docs/Web/API/FileList
 /en-US/docs/Document_Object_Model_(DOM)/FileReader	/en-US/docs/Web/API/FileReader
 /en-US/docs/Document_Object_Model_(DOM)/FileReaderSync	/en-US/docs/Web/API/FileReaderSync
-/en-US/docs/Document_Object_Model_(DOM)/File_API/File_System_API	/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction
+/en-US/docs/Document_Object_Model_(DOM)/File_API/File_System_API	/en-US/docs/Web/API/File_System_API
 /en-US/docs/Document_Object_Model_(DOM)/File_API/File_System_API/DirectoryEntry	/en-US/docs/Web/API/FileSystemDirectoryEntry
 /en-US/docs/Document_Object_Model_(DOM)/File_API/File_System_API/DirectoryEntrySync	/en-US/docs/Web/API/DirectoryEntrySync
 /en-US/docs/Document_Object_Model_(DOM)/File_API/File_System_API/DirectoryReader	/en-US/docs/Web/API/FileSystemDirectoryReader
@@ -2772,7 +2772,7 @@
 /en-US/docs/Document_Object_Model_(DOM)/File_API/File_System_API/FileException	/en-US/docs/Web/API/File_and_Directory_Entries_API
 /en-US/docs/Document_Object_Model_(DOM)/File_API/File_System_API/FileSystem	/en-US/docs/Web/API/FileSystem
 /en-US/docs/Document_Object_Model_(DOM)/File_API/File_System_API/FileSystemSync	/en-US/docs/Web/API/FileSystemSync
-/en-US/docs/Document_Object_Model_(DOM)/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API	/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction
+/en-US/docs/Document_Object_Model_(DOM)/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API	/en-US/docs/Web/API/File_System_API
 /en-US/docs/Document_Object_Model_(DOM)/HTMLAnchorElement	/en-US/docs/Web/API/HTMLAnchorElement
 /en-US/docs/Document_Object_Model_(DOM)/HTMLAreaElement	/en-US/docs/Web/API/HTMLAreaElement
 /en-US/docs/Document_Object_Model_(DOM)/HTMLAudioElement	/en-US/docs/Web/API/HTMLAudioElement
@@ -8612,9 +8612,11 @@
 /en-US/docs/Web/API/FileSystemFlags/create	/en-US/docs/Web/API/FileSystemDirectoryEntry/getFile
 /en-US/docs/Web/API/FileSystemFlags/exclusive	/en-US/docs/Web/API/FileSystemDirectoryEntry/getFile
 /en-US/docs/Web/API/File_Handle_API	/en-US/docs/Web/API/File_and_Directory_Entries_API
-/en-US/docs/Web/API/File_System_API/Introduction	/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction
+/en-US/docs/Web/API/File_System_API/Introduction	/en-US/docs/Web/API/File_System_API
 /en-US/docs/Web/API/File_System_Access_API	/en-US/docs/Web/API/File_System_API
 /en-US/docs/Web/API/File_System_Access_API/Origin_private_file_system	/en-US/docs/Web/API/File_System_API/Origin_private_file_system
+/en-US/docs/Web/API/File_and_Directory_Entries_API/Firefox_support	/en-US/docs/Web/API/File_and_Directory_Entries_API
+/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction	/en-US/docs/Web/API/File_System_API
 /en-US/docs/Web/API/Float32Array	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array
 /en-US/docs/Web/API/Float64Array	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float64Array
 /en-US/docs/Web/API/FocusEvent.FocusEvent	/en-US/docs/Web/API/FocusEvent/FocusEvent
@@ -11821,6 +11823,7 @@
 /en-US/docs/Web/CSS/Adjacent_sibling_selectors	/en-US/docs/Web/CSS/Next-sibling_combinator
 /en-US/docs/Web/CSS/Alias	/en-US/docs/Web/CSS/cursor
 /en-US/docs/Web/CSS/All_About_The_Containing_Block	/en-US/docs/Web/CSS/CSS_display/Containing_block
+/en-US/docs/Web/CSS/Alternative_style_sheets	/en-US/docs/Web/HTML/Attributes/rel/Alternate_stylesheet
 /en-US/docs/Web/CSS/At-rule	/en-US/docs/Web/CSS/CSS_syntax/At-rule
 /en-US/docs/Web/CSS/Aural	/en-US/docs/Web/CSS/@media/aural
 /en-US/docs/Web/CSS/Block_formatting_context	/en-US/docs/Web/CSS/CSS_display/Block_formatting_context
@@ -12493,8 +12496,8 @@
 /en-US/docs/Web/Guide/API/DOM/Using_dynamic_styling_information	/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information
 /en-US/docs/Web/Guide/API/DOM/Using_full_screen_mode	/en-US/docs/Web/API/Fullscreen_API
 /en-US/docs/Web/Guide/API/DOM/Whitespace_in_the_DOM	/en-US/docs/Web/API/Document_Object_Model/Whitespace
-/en-US/docs/Web/Guide/API/File System	/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction
-/en-US/docs/Web/Guide/API/File System/Introduction	/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction
+/en-US/docs/Web/Guide/API/File System	/en-US/docs/Web/API/File_System_API
+/en-US/docs/Web/Guide/API/File System/Introduction	/en-US/docs/Web/API/File_System_API
 /en-US/docs/Web/Guide/API/Gamepad	/en-US/docs/Web/API/Gamepad_API/Using_the_Gamepad_API
 /en-US/docs/Web/Guide/API/Vibration	/en-US/docs/Web/API/Vibration_API
 /en-US/docs/Web/Guide/API/WebRTC	/en-US/docs/Web/API/WebRTC_API
@@ -12585,8 +12588,8 @@
 /en-US/docs/Web/Guide/Events/Touch_events	/en-US/docs/Web/API/Touch_events
 /en-US/docs/Web/Guide/Events/Touch_events_(Mozilla_experimental)	/en-US/docs/Web/API/Touch_events
 /en-US/docs/Web/Guide/Events/Using_device_orientation_with_3D_transforms	/en-US/docs/Web/API/Device_orientation_events/Using_device_orientation_with_3D_transforms
-/en-US/docs/Web/Guide/File_System_API	/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction
-/en-US/docs/Web/Guide/File_System_API/Introduction	/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction
+/en-US/docs/Web/Guide/File_System_API	/en-US/docs/Web/API/File_System_API
+/en-US/docs/Web/Guide/File_System_API/Introduction	/en-US/docs/Web/API/File_System_API
 /en-US/docs/Web/Guide/Graphics	/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_images
 /en-US/docs/Web/Guide/Graphics/Drawing_graphics_with_canvas	/en-US/docs/Web/API/Canvas_API/Tutorial
 /en-US/docs/Web/Guide/HTML	/en-US/docs/Learn_web_development/Core/Structuring_content
@@ -14054,8 +14057,8 @@
 /en-US/docs/WebGL/Using_textures_in_WebGL	/en-US/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL
 /en-US/docs/WebGL/WebGLRenderingContext	/en-US/docs/Web/API/WebGLRenderingContext
 /en-US/docs/WebGL/WebGL_best_practices	/en-US/docs/Web/API/WebGL_API/WebGL_best_practices
-/en-US/docs/WebGuide/API/File_System	/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction
-/en-US/docs/WebGuide/API/File_System/Introduction	/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction
+/en-US/docs/WebGuide/API/File_System	/en-US/docs/Web/API/File_System_API
+/en-US/docs/WebGuide/API/File_System/Introduction	/en-US/docs/Web/API/File_System_API
 /en-US/docs/WebRTC	/en-US/docs/Web/API/WebRTC_API
 /en-US/docs/WebRTC/Introduction	/en-US/docs/Web/API/WebRTC_API
 /en-US/docs/WebRTC/Introduction-redirect-1	/en-US/docs/Web/API/WebRTC_API

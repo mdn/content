@@ -35525,23 +35525,6 @@
       "ScottMichaud"
     ]
   },
-  "Web/API/File_and_Directory_Entries_API/Firefox_support": {
-    "modified": "2019-03-23T22:26:21.406Z",
-    "contributors": ["Sheppy"]
-  },
-  "Web/API/File_and_Directory_Entries_API/Introduction": {
-    "modified": "2020-11-30T19:15:21.994Z",
-    "contributors": [
-      "peterbe",
-      "modster",
-      "fscholz",
-      "Sheppy",
-      "teoli",
-      "Anonymous",
-      "kscarfone",
-      "grendel"
-    ]
-  },
   "Web/API/FocusEvent": {
     "modified": "2020-10-15T21:24:22.014Z",
     "contributors": [
@@ -75829,27 +75812,6 @@
       "webinista"
     ]
   },
-  "Web/CSS/Alternative_style_sheets": {
-    "modified": "2020-10-15T21:15:55.661Z",
-    "contributors": [
-      "wbamberg",
-      "mfuji09",
-      "sideshowbarker",
-      "chrisdavidmills",
-      "mfluehr",
-      "Nickolay",
-      "r-o-b",
-      "Sebastianz",
-      "teoli",
-      "Sheppy",
-      "justinpotts",
-      "minitech",
-      "Mgjbot",
-      "Kohei",
-      "Sevenspade",
-      "DBaron"
-    ]
-  },
   "Web/CSS/Attribute_selectors": {
     "modified": "2020-10-15T21:04:18.142Z",
     "contributors": [
@@ -91464,6 +91426,27 @@
       "Itazulay",
       "estelle",
       "perfmattersconf"
+    ]
+  },
+  "Web/HTML/Attributes/rel/Alternate_stylesheet": {
+    "modified": "2020-10-15T21:15:55.661Z",
+    "contributors": [
+      "wbamberg",
+      "mfuji09",
+      "sideshowbarker",
+      "chrisdavidmills",
+      "mfluehr",
+      "Nickolay",
+      "r-o-b",
+      "Sebastianz",
+      "teoli",
+      "Sheppy",
+      "justinpotts",
+      "minitech",
+      "Mgjbot",
+      "Kohei",
+      "Sevenspade",
+      "DBaron"
     ]
   },
   "Web/HTML/Attributes/rel/dns-prefetch": {
