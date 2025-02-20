@@ -69,7 +69,7 @@ The specification also defines the `font-width` property, which is not yet suppo
     - {{cssxref("@font-face/src", "src")}}
     - {{cssxref("@font-face/unicode-range", "unicode-range")}}
 
-The specification also defines the `font-language-override`, `font-named-instance`, `font-width`, `font-size`, `subscript-position-override`, `subscript-size-override`, `superscript-position-override`, `superscript-size-override` descriptors, which are not yet supported by any browser.
+The specification also defines the `font-language-override`, `font-named-instance`, `font-width`, `font-size`, `subscript-position-override`, `subscript-size-override`, `superscript-position-override`, and `superscript-size-override` descriptors, which are not yet supported by any browser.
 
 - At-rule: {{cssxref("@font-feature-values")}}
 
