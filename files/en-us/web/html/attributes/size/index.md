@@ -16,7 +16,29 @@ If no `size` is specified, or an invalid value is specified, the input has no si
 
 The `size` attribute has no impact on constraint validation.
 
-{{EmbedInteractiveExample("pages/tabbed/attribute-size.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: size", "tabbed-standard")}}
+
+```html interactive-example
+<label for="firstName">First Name:</label>
+<input id="firstName" name="firstName" type="text" size="10" />
+
+<label for="lastName">Last Name:</label>
+<input id="lastName" name="lastName" type="text" size="20" />
+
+<label for="fruit">Favourite fruit:</label>
+<select id="fruit" name="fruit" size="2">
+  <option>Orange</option>
+  <option>Banana</option>
+  <option>Apple</option>
+</select>
+```
+
+```css interactive-example
+label {
+  display: block;
+  margin-top: 1rem;
+}
+```
 
 ## Examples
 

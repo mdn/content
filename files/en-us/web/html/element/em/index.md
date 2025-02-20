@@ -9,7 +9,21 @@ browser-compat: html.elements.em
 
 The **`<em>`** [HTML](/en-US/docs/Web/HTML) element marks text that has stress emphasis. The `<em>` element can be nested, with each level of nesting indicating a greater degree of emphasis.
 
-{{EmbedInteractiveExample("pages/tabbed/em.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;em&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>Get out of bed <em>now</em>!</p>
+
+<p>We <em>had</em> to do something about it.</p>
+
+<p>This is <em>not</em> a drill!</p>
+```
+
+```css interactive-example
+/* stylelint-disable-next-line block-no-empty */
+em {
+}
+```
 
 ## Attributes
 

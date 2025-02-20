@@ -12,7 +12,17 @@ The **`spellcheck`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) 
 > [!NOTE]
 > This attribute is merely a hint for the browser: browsers are not required to check for spelling errors. Typically non-editable elements are not checked for spelling errors, even if the `spellcheck` attribute is set to `true` and the browser supports spellchecking.
 
-{{EmbedInteractiveExample("pages/tabbed/attribute-spellcheck.html","tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: spellcheck", "tabbed-shorter")}}
+
+```html interactive-example
+<textarea spellcheck="true">
+This exampull will be checkd fur spellung when you try to edit it.</textarea
+>
+
+<textarea spellcheck="false">
+This exampull will nut be checkd fur spellung when you try to edit it.</textarea
+>
+```
 
 It may have the following values:
 

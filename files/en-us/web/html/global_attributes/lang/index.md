@@ -12,7 +12,29 @@ The **`lang`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) helps 
 > [!NOTE]
 > The default value of `lang` is the empty string, which means that the language is unknown. Therefore, it is recommended to always specify an appropriate value for this attribute.
 
-{{EmbedInteractiveExample("pages/tabbed/attribute-lang.html","tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: lang", "tabbed-shorter")}}
+
+```html interactive-example
+<p>This paragraph is English, but the language is not specifically defined.</p>
+
+<p lang="en-GB">This paragraph is defined as British English.</p>
+
+<p lang="fr">Ce paragraphe est défini en français.</p>
+```
+
+```css interactive-example
+p::before {
+  padding-right: 5px;
+}
+
+[lang="en-GB"]::before {
+  content: "(In British English) ";
+}
+
+[lang="fr"]::before {
+  content: "(In French) ";
+}
+```
 
 If the attribute value is the _empty string_ (`lang=""`), the language is set to _unknown_; if the language tag is not valid according to BCP47, it is set to _invalid_.
 

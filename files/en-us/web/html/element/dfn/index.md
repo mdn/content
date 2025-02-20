@@ -13,7 +13,20 @@ The **`<dfn>`** [HTML](/en-US/docs/Web/HTML) element indicates a term to be defi
 - The {{HTMLElement("dt")}}/{{HTMLElement("dd")}} pairing
 - The nearest [section](/en-US/docs/Web/HTML/Content_categories#sectioning_content) ancestor of the `<dfn>` element,
 
-{{EmbedInteractiveExample("pages/tabbed/dfn.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;dfn&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>
+  A <dfn id="def-validator">validator</dfn> is a program that checks for syntax
+  errors in code or documents.
+</p>
+```
+
+```css interactive-example
+/* stylelint-disable-next-line block-no-empty */
+dfn {
+}
+```
 
 ## Attributes
 

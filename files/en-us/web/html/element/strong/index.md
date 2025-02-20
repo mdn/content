@@ -9,7 +9,21 @@ browser-compat: html.elements.strong
 
 The **`<strong>`** [HTML](/en-US/docs/Web/HTML) element indicates that its contents have strong importance, seriousness, or urgency. Browsers typically render the contents in bold type.
 
-{{EmbedInteractiveExample("pages/tabbed/strong.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;strong&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>
+  ... the most important rule, the rule you can never forget, no matter how much
+  he cries, no matter how much he begs:
+  <strong>never feed him after midnight</strong>.
+</p>
+```
+
+```css interactive-example
+p {
+  font-size: 1rem;
+}
+```
 
 ## Attributes
 
