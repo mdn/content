@@ -175,11 +175,11 @@ Additional functions, including `calc-mix()`, `crossorigin()`, `first-valid()`, 
 - [Component value combinators](/en-US/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax#component_value_combinators)
 - [CSS-wide keywords](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types#css-wide_keywords)
 - {{glossary("device pixel")}}
-- [functional notation](/en-US/docs/Web/CSS/CSS_Functions)
+- [functional notation](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)
 - {{glossary("identifier")}}
 - {{glossary("interpolation")}}
 - {{glossary("keyword")}}
-- [math function](/en-US/docs/Web/CSS/CSS_Functions/Using_CSS_math_functions)
+- [math function](/en-US/docs/Web/CSS/CSS_Values_and_Units/Using_CSS_math_functions)
 - [numeric data types](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types)
 - {{glossary("origin")}}
 - {{glossary("pixel")}}
@@ -201,7 +201,7 @@ Additional functions, including `calc-mix()`, `crossorigin()`, `first-valid()`, 
 
   - : Overview of the textual data types, including pre-defined keyword values, global CSS keyword values, and URLs.
 
-- [CSS value functions](/en-US/docs/Web/CSS/CSS_Functions)
+- [CSS value functions](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)
 
   - : Overview of the CSS statements that invoke special data processing or calculations to return a CSS value for a CSS property.
 

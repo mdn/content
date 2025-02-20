@@ -75847,10 +75847,6 @@
       "chrisdavidmills"
     ]
   },
-  "Web/CSS/CSS_Functions": {
-    "modified": "2020-12-11T10:25:38.547Z",
-    "contributors": ["rachelandrew", "ramiy", "chrisdavidmills", "mfuji09"]
-  },
   "Web/CSS/CSS_Selectors": {
     "modified": "2020-10-23T03:22:59.082Z",
     "contributors": [
@@ -75908,6 +75904,10 @@
       "rachelandrew",
       "chrisdavidmills"
     ]
+  },
+  "Web/CSS/CSS_Values_and_Units/CSS_Value_Functions": {
+    "modified": "2020-12-11T10:25:38.547Z",
+    "contributors": ["rachelandrew", "ramiy", "chrisdavidmills", "mfuji09"]
   },
   "Web/CSS/CSS_Values_and_Units/CSS_data_types": {
     "modified": "2020-12-11T13:13:56.675Z",

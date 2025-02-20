@@ -221,7 +221,7 @@ sidebar:
   - title: Math_functions
     details: closed
     children:
-      - /Web/CSS/CSS_Functions/Using_CSS_math_functions
+      - /Web/CSS/CSS_Values_and_Units/Using_CSS_math_functions
   - title: Media_queries
     details: closed
     children:
