@@ -146,7 +146,7 @@ function logCookie(name, cookie) {
 The code first sets two cookies (which we then use to demonstrate `getAll()`).
 
 We then await on `getAll()`, without specifying any parameters.
-If the returned Promise resolves with an object we iterate the array, logging the properties of each cookie.
+If the returned promise resolves with an object we iterate the array, logging the properties of each cookie.
 
 ```js
 async function cookieTest() {
