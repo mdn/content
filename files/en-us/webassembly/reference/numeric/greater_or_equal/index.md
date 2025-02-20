@@ -9,7 +9,35 @@ The **`ge`** instructions, short for _greater or equal_, check if a number is gr
 
 The integer types have separate greater or equal instructions for signed (**`ge_s`**) and unsigned (**`ge_u`**) numbers.
 
-{{EmbedInteractiveExample("pages/wat/ge.html", "tabbed-taller")}}
+{{InteractiveExample("Wat Demo: ge", "tabbed-taller")}}
+
+```wat interactive-example
+(module
+  (import "env" "log_bool" (func $log_bool (param i32)))
+  (func $main
+    ;; load `10` and `2` onto the stack
+    i32.const 10
+    i32.const 2
+
+    i32.ge_u ;; check if `10` is greater than or equal to '2'
+    call $log_bool ;; log the result
+  )
+  (start $main)
+)
+```
+
+```js interactive-example
+const url = "{%wasm-url%}";
+
+function log_bool(value) {
+  console.log(Boolean(value));
+  // Expected output: true
+}
+
+await WebAssembly.instantiateStreaming(fetch(url), {
+  env: { log_bool },
+});
+```
 
 ## Syntax
 

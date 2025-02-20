@@ -9,7 +9,28 @@ The **`trunc`** instructions, are used for converting floating points to integer
 
 There's another [**`trunc`**](/en-US/docs/WebAssembly/Reference/Numeric/Truncate_float_to_float) instruction that truncates the fractional part of a floating point without converting it to and integer.
 
-{{EmbedInteractiveExample("pages/wat/trunc_float_to_int.html", "tabbed-taller")}}
+{{InteractiveExample("Wat Demo: trunc_float_to_int", "tabbed-taller")}}
+
+```wat interactive-example
+(module
+  (import "console" "log" (func $log (param i32)))
+  (func $main
+
+    f32.const 10.5 ;; push an f32 onto the stack
+
+    i32.trunc_f32_s ;; convert from f32 to signed i32 rounding towards zero (.5 will be lost)
+
+    call $log ;; log the result
+
+  )
+  (start $main)
+)
+```
+
+```js interactive-example
+const url = "{%wasm-url%}";
+await WebAssembly.instantiateStreaming(fetch(url), { console });
+```
 
 ## Syntax
 

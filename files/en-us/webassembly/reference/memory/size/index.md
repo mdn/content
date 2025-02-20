@@ -13,7 +13,26 @@ The **`size`** [memory instruction](/en-US/docs/WebAssembly/Reference/Memory) is
 The instruction adds the size (in pages) to the top of the stack.
 Currently each page is 64KiB.
 
-{{EmbedInteractiveExample("pages/wat/size.html", "tabbed-standard")}}
+{{InteractiveExample("Wat Demo: size", "tabbed-standard")}}
+
+```wat interactive-example
+(module
+  (import "console" "log" (func $log (param i32)))
+  (memory 2)
+  (func $main
+
+    memory.size ;; get the memory size
+    call $log ;; log the result
+
+  )
+  (start $main)
+)
+```
+
+```js interactive-example
+const url = "{%wasm-url%}";
+await WebAssembly.instantiateStreaming(fetch(url), { console });
+```
 
 ## Syntax
 
