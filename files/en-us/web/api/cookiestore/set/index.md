@@ -71,7 +71,7 @@ A {{jsxref("Promise")}} that resolves with {{jsxref("undefined")}} when setting 
 
 ### Setting a cookie with name and value
 
-The following example sets a cookie by passing a `name` and `value` of cookie1 and cookie1-value, respectively.
+The following example sets a cookie by passing a `name` and `value` of "cookie1" and "cookie1-value", respectively.
 This approach can be used when you only want to set a name and value.
 
 ```html hidden
@@ -119,7 +119,7 @@ function logCookie(name, cookie) {
 
 #### JavaScript
 
-The example code first awaits for the cookie to be set, then waits to get the value and log it (note the logging and other display code is omitted).
+The example code first waits for the cookie to be set, then waits to get the value, then logs the value (note that the logging and other display code is omitted).
 Note that asynchronous code is called within an `async` function because you can't `await` on a top level function.
 
 ```js
@@ -153,7 +153,7 @@ Note that some browsers will only display the `name` and `value`, while others w
 
 ### Setting a cookie with options
 
-The following example sets a cookie by passing an "options" object with `name`, `value`, `expires`, and `partitioned`.
+The following example sets a cookie by passing an `options` object with `name`, `value`, `expires`, and `partitioned`.
 
 ```html hidden
 <button id="showCookies" type="button">Show cookies</button>
