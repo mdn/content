@@ -117,7 +117,7 @@ Combinators are selectors that establish a relationship between two or more simp
 - [Inheritance](/en-US/docs/Web/CSS/CSS_cascade/Inheritance)
 - [Shorthand properties](/en-US/docs/Web/CSS/Shorthand_properties)
 - [Specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity)
-- [Value definition syntax](/en-US/docs/Web/CSS/Value_definition_syntax)
+- [Value definition syntax](/en-US/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
 - [CSS values and units](/en-US/docs/Web/CSS/CSS_Values_and_Units/)
 - [CSS functional notations](/en-US/docs/Web/CSS/CSS_Functions)
 

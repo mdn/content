@@ -171,8 +171,8 @@ Additional functions, including `calc-mix()`, `crossorigin()`, `first-valid()`, 
 ### Key concepts
 
 - {{glossary("advance measure")}}
-- [bracketed range notation](/en-US/docs/Web/CSS/Value_definition_syntax#bracketed_range_notation_minmax)
-- [Component value combinators](/en-US/docs/Web/CSS/Value_definition_syntax#component_value_combinators)
+- [bracketed range notation](/en-US/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax#bracketed_range_notation_minmax)
+- [Component value combinators](/en-US/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax#component_value_combinators)
 - [CSS-wide keywords](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types#css-wide_keywords)
 - {{glossary("device pixel")}}
 - [functional notation](/en-US/docs/Web/CSS/CSS_Functions)
@@ -185,7 +185,7 @@ Additional functions, including `calc-mix()`, `crossorigin()`, `first-valid()`, 
 - {{glossary("pixel")}}
 - [textual data types](/en-US/docs/Web/CSS/CSS_Values_and_Units/Textual_data_types)
 - {{glossary("URL")}}
-- [value definition syntax](/en-US/docs/Web/CSS/Value_definition_syntax)
+- [value definition syntax](/en-US/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
 
 ## Guides
 
@@ -205,7 +205,7 @@ Additional functions, including `calc-mix()`, `crossorigin()`, `first-valid()`, 
 
   - : Overview of the CSS statements that invoke special data processing or calculations to return a CSS value for a CSS property.
 
-- [Value definition syntax](/en-US/docs/Web/CSS/Value_definition_syntax)
+- [Value definition syntax](/en-US/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
 
   - : The formal grammar used to define the set of valid values for CSS properties and functions.
 

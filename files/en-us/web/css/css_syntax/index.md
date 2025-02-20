@@ -44,7 +44,7 @@ This module doesn't define any properties, [data types](/en-US/docs/Web/CSS/CSS_
 
   - : Overview of CSS syntax, including CSS declarations, declaration blocks, rulesets, and statements.
 
-- [Value definition syntax](/en-US/docs/Web/CSS/Value_definition_syntax)
+- [Value definition syntax](/en-US/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
 
   - : Explains the formal grammar for defining valid values for CSS properties and functions, along with semantic constraints. A guide for understanding CSS component value types, combinators, and multipliers.
 
