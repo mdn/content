@@ -9,7 +9,32 @@ browser-compat: css.at-rules.layer
 
 The **`@layer`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule) is used to declare a cascade layer and can also be used to define the order of precedence in case of multiple cascade layers.
 
-{{EmbedInteractiveExample("pages/tabbed/at-rule-layer.html", "tabbed-standard")}}
+{{InteractiveExample("CSS Demo: @layer", "tabbed-standard")}}
+
+```css interactive-example
+@layer module, state;
+
+@layer state {
+  .alert {
+    background-color: brown;
+  }
+  p {
+    border: medium solid limegreen;
+  }
+}
+
+@layer module {
+  .alert {
+    border: medium solid violet;
+    background-color: yellow;
+    color: white;
+  }
+}
+```
+
+```html interactive-example
+<p class="alert">Beware of the zombies</p>
+```
 
 ## Syntax
 

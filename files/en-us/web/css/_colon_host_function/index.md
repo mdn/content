@@ -14,7 +14,51 @@ The most obvious use of this is to put a class name only on certain custom eleme
 > [!NOTE]
 > While other functional pseudo-classes such as {{CSSxRef(":is", ":is()")}} and {{CSSxRef(":not", ":not()")}} accept a list of selectors as their parameters, `:host()` takes a single compound selector as its parameter. In addition, while `:is()` and `:not()` only take into account the specificity of their argument, the specificity of `:host()` is both the specificity of the pseudo-class **and** the specificity of its argument.
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-class-host_function.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: :host()", "tabbed-shorter")}}
+
+```css interactive-example
+/* Following CSS is being applied inside the shadow DOM. */
+
+:host(h1) {
+  color: red;
+}
+
+:host(#shadow-dom-host) {
+  border: 2px dashed blue;
+}
+```
+
+```html interactive-example
+<!-- elements outside shadow dom -->
+<div id="container">
+  <h1 id="shadow-dom-host"></h1>
+</div>
+```
+
+```js interactive-example
+const shadowDom = init();
+
+// add a <span> element in the shadow DOM
+const span = document.createElement("span");
+span.textContent = "Inside shadow DOM";
+shadowDom.appendChild(span);
+
+// attach shadow DOM to the #shadow-dom-host element
+function init() {
+  const host = document.getElementById("shadow-dom-host");
+  const shadowDom = host.attachShadow({ mode: "open" });
+
+  const cssTab = document.querySelector("#css-output");
+  const shadowStyle = document.createElement("style");
+  shadowStyle.textContent = cssTab.textContent;
+  shadowDom.appendChild(shadowStyle);
+
+  cssTab.addEventListener("change", () => {
+    shadowStyle.textContent = cssTab.textContent;
+  });
+  return shadowDom;
+}
+```
 
 ```css
 /* Selects a shadow root host, only if it is

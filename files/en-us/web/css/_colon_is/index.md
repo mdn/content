@@ -12,7 +12,50 @@ The **`:is()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Ps
 > [!NOTE]
 > Originally named `:matches()` (and `:any()`), this selector was renamed to `:is()` in [CSSWG issue #3258](https://github.com/w3c/csswg-drafts/issues/3258).
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-class-is.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: :is", "tabbed-shorter")}}
+
+```css interactive-example
+ol {
+  list-style-type: upper-alpha;
+  color: darkblue;
+}
+
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+:is(ol, ul, menu:unsupported) :is(ol, ul) {
+  color: green;
+}
+
+:is(ol, ul) :is(ol, ul) ol {
+  list-style-type: lower-greek;
+  color: chocolate;
+}
+```
+
+```html interactive-example
+<ol>
+  <li>Saturn</li>
+  <li>
+    <ul>
+      <li>Mimas</li>
+      <li>Enceladus</li>
+      <li>
+        <ol>
+          <li>Voyager</li>
+          <li>Cassini</li>
+        </ol>
+      </li>
+      <li>Tethys</li>
+    </ul>
+  </li>
+  <li>Uranus</li>
+  <li>
+    <ol>
+      <li>Titania</li>
+      <li>Oberon</li>
+    </ol>
+  </li>
+</ol>
+```
 
 ## Syntax
 

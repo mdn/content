@@ -9,7 +9,31 @@ browser-compat: css.selectors.placeholder
 
 The **`::placeholder`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents the [placeholder text](/en-US/docs/Web/HTML/Element/input#placeholder) in an {{HTMLElement("input")}} or {{HTMLElement("textarea")}} element.
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-element-placeholder.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: ::placeholder", "tabbed-shorter")}}
+
+```css interactive-example
+input {
+  margin-top: 0.5rem;
+}
+
+input::placeholder {
+  font-weight: bold;
+  opacity: 0.5;
+  color: red;
+}
+```
+
+```html interactive-example
+<label for="first-name">Your phone number:</label><br />
+
+<input
+  id="first-name"
+  type="tel"
+  name="phone"
+  minlength="9"
+  maxlength="9"
+  placeholder="It must be 9 digits" />
+```
 
 Only the subset of CSS properties that apply to the {{cssxref("::first-line")}} pseudo-element can be used in a rule using `::placeholder` in its selector.
 

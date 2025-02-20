@@ -9,7 +9,20 @@ browser-compat: css.selectors.selection
 
 The **`::selection`** CSS [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) applies styles to the part of a document that has been highlighted by the user (such as clicking and dragging the mouse across text).
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-element-selection.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: ::selection", "tabbed-shorter")}}
+
+```css interactive-example
+p::selection {
+  color: red;
+  background-color: yellow;
+}
+```
+
+```html interactive-example
+<p>
+  Select a fragment of this paragraph, to see how its appearance is affected.
+</p>
+```
 
 ## Allowable properties
 

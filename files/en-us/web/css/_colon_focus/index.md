@@ -9,7 +9,38 @@ browser-compat: css.selectors.focus
 
 The **`:focus`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents an element (such as a form input) that has received focus. It is generally triggered when the user clicks or taps on an element or selects it with the keyboard's <kbd>Tab</kbd> key.
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-class-focus.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: :focus", "tabbed-shorter")}}
+
+```css interactive-example
+label {
+  display: block;
+  margin-top: 1em;
+}
+
+input:focus {
+  background-color: lightblue;
+}
+
+select:focus {
+  background-color: ivory;
+}
+```
+
+```html interactive-example
+<form>
+  <p>Which flavor would you like to order?</p>
+  <label>Full Name: <input name="firstName" type="text" /></label>
+  <label
+    >Flavor:
+    <select name="flavor">
+      <option>Cherry</option>
+      <option>Green Tea</option>
+      <option>Moose Tracks</option>
+      <option>Mint Chip</option>
+    </select>
+  </label>
+</form>
+```
 
 > [!NOTE]
 > This pseudo-class applies only to the focused element itself. Use {{CSSxRef(":focus-within")}} if you want to select an element that _contains_ a focused element.
