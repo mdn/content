@@ -29,7 +29,7 @@ const registeredUserScript = await browser.userScripts.register(
 
 ### Return value
 
-A {{JSxRef("Promise")}} fulfilled with no arguments if all the requested user scripts are registered. If any user scripts fail to register or the request fails for another reason, none of the scripts register and the promise is rejected with an error message.
+A {{JSxRef("Promise")}} fulfilled with no arguments if all the requested user scripts are registered. If any user scripts fail to register or the request fails for another reason, none of the scripts are registered and the promise is rejected with an error message.
 
 ## Examples
 

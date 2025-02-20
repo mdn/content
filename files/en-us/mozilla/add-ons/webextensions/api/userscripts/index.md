@@ -54,7 +54,7 @@ When an extension updates, user scripts are cleared. To restore scripts, add cod
   - : The execution environment for a script injected with {{WebExtAPIRef("userScripts.register()")}}
     or {{WebExtAPIRef("userScripts.update()")}}.
 - {{WebExtAPIRef("userScripts.RegisteredUserScript")}}
-  - : An `object` returned by {{WebExtAPIRef("userScripts.getScripts","getScripts()")}} and the input to {{WebExtAPIRef("userScripts.register","register()")}} and {{WebExtAPIRef("userScripts.update","update()")}} representing registered user scripts.
+  - : An `object` returned by {{WebExtAPIRef("userScripts.getScripts","getScripts()")}} representing registered user scripts and used as input to {{WebExtAPIRef("userScripts.register","register()")}} and {{WebExtAPIRef("userScripts.update","update()")}}.
 - {{WebExtAPIRef("userScripts.ScriptSource")}}
   - : The code or a file source for a user script.
 - {{WebExtAPIRef("userScripts.UserScriptFilter")}}
