@@ -73,7 +73,6 @@ _This interface inherits methods from its parent interface, {{domxref("FileSyste
 ## See also
 
 - [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
-- [Introduction to the File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
 - {{domxref("FileSystemDirectoryReader")}}
 - {{domxref("FileSystemEntry")}}
 - {{domxref("FileSystemFileEntry")}}
