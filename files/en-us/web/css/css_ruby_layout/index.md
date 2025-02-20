@@ -35,25 +35,20 @@ The CSS ruby layout module adds the following values to the {{cssxref("display")
 
 ## Related concepts
 
-[CSS display](/en-US/docs/Web/CSS/CSS_Display) module
-
-- {{cssxref("display")}}
-- {{CSSxRef("&lt;display-internal&gt;")}}
-
-[CSS text decoration](/en-US/docs/Web/CSS/CSS_Text_Decoration) module
-
-- {{cssxref("text-emphasis-color")}}
-- {{cssxref("text-emphasis-position")}}
-- {{cssxref("text-emphasis-style")}}
-- {{cssxref("text-emphasis")}} shorthand
-
-[HTML elements](/en-US/docs/Web/HTML/Element)
-
-- {{HTMLElement("rb")}}
-- {{HTMLElement("rp")}}
-- {{HTMLElement("rt")}}
-- {{HTMLElement("rtc")}}
-- {{HTMLElement("ruby")}}
+- [CSS display](/en-US/docs/Web/CSS/CSS_Display) module
+  - {{cssxref("display")}}
+  - {{CSSxRef("&lt;display-internal&gt;")}}
+- [CSS text decoration](/en-US/docs/Web/CSS/CSS_Text_Decoration) module
+  - {{cssxref("text-emphasis-color")}}
+  - {{cssxref("text-emphasis-position")}}
+  - {{cssxref("text-emphasis-style")}}
+  - {{cssxref("text-emphasis")}} shorthand
+- [HTML elements](/en-US/docs/Web/HTML/Element)
+  - {{HTMLElement("rb")}}
+  - {{HTMLElement("rp")}}
+  - {{HTMLElement("rt")}}
+  - {{HTMLElement("rtc")}}
+  - {{HTMLElement("ruby")}}
 
 ## Specifications
 
