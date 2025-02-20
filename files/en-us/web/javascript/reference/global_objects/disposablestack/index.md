@@ -17,7 +17,7 @@ You register [disposable resources](/en-US/docs/Web/JavaScript/Guide/Resource_ma
 
 ```js
 using stack = new DisposableStack();
-const handle = stack.use(new FileHandle("file.txt"));
+const reader = stack.use(stream.getReader());
 ```
 
 Then, when the `stack` goes out of scope, all resources registered to it are disposed in reverse order of registration.
@@ -26,8 +26,8 @@ It is good practice to _not_ extract the resource acquisition expression to a se
 
 ```js example-bad
 using stack = new DisposableStack();
-const handle = new FileHandle("file.txt");
-stack.use(handle);
+const reader = stream.getReader();
+stack.use(reader);
 ```
 
 Functionally, these two code snippets are equivalent. However, the first one is less error-prone because the resource is declared and registered in a single line. If someone puts more code between the second and third lines of the second snippet, an error could occur, causing the resource to leak.
@@ -73,6 +73,7 @@ These properties are defined on `DisposableStack.prototype` and shared by all `D
 
 ## See also
 
+- [Polyfill of `DisposableStack` in `core-js`](https://github.com/zloirock/core-js#explicit-resource-management)
 - [JavaScript resource management](/en-US/docs/Web/JavaScript/Guide/Resource_management)
 - {{jsxref("Symbol.dispose")}}
 - {{jsxref("Statements/using", "using")}}

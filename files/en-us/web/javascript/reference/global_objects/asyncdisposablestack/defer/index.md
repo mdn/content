@@ -37,7 +37,7 @@ None ({{jsxref("undefined")}}).
 
 ### Using defer()
 
-One use case of `defer()` is when you claim ownership of a resource that gets passed in. In this example, we claim ownership of a file handle that gets passed in, by setting up a closing callback when the function exits.
+One use case of `defer()` is when you claim ownership of a resource that gets passed in. In this example, we claim ownership of a file handle (as a Node.js [`FileHandle`](https://nodejs.org/api/fs.html#class-filehandle)) that gets passed in, by setting up a closing callback when the function exits.
 
 ```js
 async function consumeResource(handle) {
