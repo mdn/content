@@ -8,7 +8,7 @@ browser-compat: api.CookieStore.get
 
 {{securecontext_header}}{{APIRef("Cookie Store API")}}{{AvailableInWorkers("window_and_service")}}
 
-The **`get()`** method of the {{domxref("CookieStore")}} interface returns a {{jsxref("Promise")}} that resolves to single cookie with the given `name` or `options` object. The method will return the first matching cookie for the passed parameters.
+The **`get()`** method of the {{domxref("CookieStore")}} interface returns a {{jsxref("Promise")}} that resolves to a single cookie matching the given `name` or `options` object. The method will return the first cookie that matches.
 
 ## Syntax
 
@@ -131,10 +131,10 @@ function log(text) {
 
 #### JavaScript
 
-The code first sets a cookie (which we then use to demonstrate `get()`).
+The code first sets a cookie.
 
 We then await on `get()`, specifying the name of the cookie.
-If the returned Promise resolves with an object we log the properties of the cookie: otherwise we log that no matching cookie was found.
+If the returned promise resolves with an object we log the properties of the cookie: otherwise we log that no matching cookie was found.
 
 ```js
 async function cookieTest() {
