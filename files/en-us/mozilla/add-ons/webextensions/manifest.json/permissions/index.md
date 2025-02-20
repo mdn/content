@@ -132,7 +132,7 @@ These permissions are available in Manifest V2 and above unless otherwise noted:
 - `theme`
 - `topSites`
 - `unlimitedStorage`
-- `userScripts` (This permission is [optional-only](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions#optional-only_permissions) in Firefox. In Chrome, the extension user must also activate [developer mode](https://developer.chrome.com/docs/extensions/reference/api/userScripts#developer_mode_for_extension_users).)
+- 'userScripts' (see [userScripts permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/userScripts#permissions))
 - `webNavigation`
 - `webRequest`
 - `webRequestAuthProvider` (Manifest V3 and above)

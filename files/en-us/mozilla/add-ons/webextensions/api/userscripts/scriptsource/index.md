@@ -7,7 +7,7 @@ browser-compat: webextensions.api.userScripts.ScriptSource
 
 {{AddonSidebar}}
 
-The code or source file for a user script.
+The code or source file for a user script. This describes the object values of the "js" property in {{WebExtAPIRef("userScripts.RegisteredUserScript","RegisteredUserScript")}}.
 
 ## Type
 

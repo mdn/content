@@ -15,7 +15,7 @@ This is an asynchronous method that returns a {{JSxRef("Promise")}}.
 
 ```js-nolint
 const updatingUserScript = await browser.userScripts.update(
-  scripts       // object
+  scripts       // array of objects
 );
 ```
 
@@ -29,7 +29,7 @@ const updatingUserScript = await browser.userScripts.update(
 
 ### Return value
 
-A {{JSxRef("Promise")}} fulfilled with no arguments if all the requested user scripts are updated. If any user scripts fail to update or the request fails for another reason, the promise is rejected with an error message.
+A {{JSxRef("Promise")}} fulfilled with no arguments if all the requested user scripts are updated. If any user scripts fail to update or the request fails for another reason, none of the scripts are updated and the promise is rejected with an error message.
 
 ## Examples
 

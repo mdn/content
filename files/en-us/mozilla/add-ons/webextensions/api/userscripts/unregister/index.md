@@ -15,7 +15,7 @@ This is an asynchronous method that returns a {{JSxRef("Promise")}}.
 
 ```js-nolint
 const unregisteringUserScripts = await browser.userScripts.unregister(
-  filter       // object
+  filter       // optional object
 );
 ```
 
