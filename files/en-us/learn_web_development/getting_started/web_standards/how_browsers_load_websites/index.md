@@ -87,7 +87,7 @@ Certain HTML elements, when parsed, will trigger more HTTP requests:
 
 - {{htmlelement("link")}} elements referencing external [CSS](/en-US/docs/Learn_web_development/Core/Styling_basics) stylesheets.
 - {{htmlelement("script")}} elements referencing external [JavaScript](/en-US/docs/Learn_web_development/Core/Scripting) files.
-- Elements such as {{htmlelement("img")}}, {{htmlelement("video")}}, and {{htmlelement("video")}}, which reference media files you want to embed in the web page.
+- Elements such as {{htmlelement("img")}}, {{htmlelement("video")}}, and {{htmlelement("audio")}}, which reference media files you want to embed in the web page.
 
 ## Parsing CSS and rendering the page
 

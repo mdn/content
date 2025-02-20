@@ -16,7 +16,7 @@ The **CSS Properties and Values API** — part of the [CSS Houdini](/en-US/docs/
 - {{domxref('CSS/registerProperty_static', 'CSS.registerProperty')}}
   - : Defines how a browser should parse [CSS custom properties](/en-US/docs/Web/CSS/--*). Access this interface through {{domxref('CSS/registerProperty_static', 'CSS.registerProperty')}} in [JavaScript](/en-US/docs/Web/JavaScript).
 - {{cssxref('@property')}}
-  - : Defines how a browser should parse [CSS custom properties](/en-US/docs/Web/CSS/--*). Access this interface through {{cssxref('@property')}} [at-rule](/en-US/docs/Web/CSS/At-rule) in [CSS](/en-US/docs/Web/CSS).
+  - : Defines how a browser should parse [CSS custom properties](/en-US/docs/Web/CSS/--*). Access this interface through {{cssxref('@property')}} [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule) in [CSS](/en-US/docs/Web/CSS).
 
 ## Examples
 
@@ -31,7 +31,7 @@ window.CSS.registerProperty({
 });
 ```
 
-The same registration can take place in [CSS](/en-US/docs/Web/CSS) using the {{cssxref('@property')}} [at-rule](/en-US/docs/Web/CSS/At-rule):
+The same registration can take place in [CSS](/en-US/docs/Web/CSS) using the {{cssxref('@property')}} [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule):
 
 ```css
 @property --my-color {

@@ -110,7 +110,12 @@ Each object must include a `"resources"` property and either a `"matches"` or `"
       <td>
         Optional. Defaults to <code>[]</code>, meaning that other websites cannot access the resource.
         <p>
-        A list of URL <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">match patterns</a> specifying the pages that can access the resources. Only the origin is used to match URLs. Origins include subdomain matching. Paths must be set to <code>/*</code>.
+        A list of URL <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">match patterns</a> specifying the pages that can access the resources. Only the origin is used to match URLs. However:
+        <ul>
+          <li>In Firefox and Safari, any path can be included.</li>
+          <li>In Chrome, the path must be set to <code>/*</code>.</li>
+        </ul>
+        Origins include subdomain matching.
       </td>
     </tr>
     <tr>

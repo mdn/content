@@ -3,10 +3,12 @@ title: "RTCOutboundRtpStreamStats: qualityLimitationDurations property"
 short-title: qualityLimitationDurations
 slug: Web/API/RTCOutboundRtpStreamStats/qualityLimitationDurations
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.RTCStatsReport.type_outbound-rtp.qualityLimitationDurations
 ---
 
-{{APIRef("WebRTC")}}
+{{APIRef("WebRTC")}}{{SeeCompatTable}}
 
 The **`qualityLimitationDurations`** property of the {{domxref("RTCOutboundRtpStreamStats")}} dictionary is a map of the reasons that a media stream's quality has been reduced by a codec during encoding, and the time during which the quality was reduced for each reason.
 

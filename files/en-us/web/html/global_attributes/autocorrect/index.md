@@ -155,3 +155,8 @@ If the device has a substitute for the entered word, this will be used to autoco
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- All [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+- [`spellcheck`](/en-US/docs/Web/HTML/Global_attributes/spellcheck).

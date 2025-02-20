@@ -11,7 +11,7 @@ page-type: tutorial-chapter
 
 A PWA manifest file is a JSON file that provides information about the features of that app to make it look and behave like a native app when installed on the user's device. The manifest contains metadata for your app, including its name, icons, and presentational directives.
 
-While according to the spec, all of the manifest keys, or members, are optional, some browsers, operating systems, and app distributors have [require specific members](/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable#required_manifest_members) for a web app to be a PWA. By including a name or short name, the start URL, an icon meeting some minimum requirements, and the type of application viewport in which the PWA should be viewed, your app will meet the manifest requirements of a PWA.
+While, according to the spec, all of the manifest keys (or members) are optional, some browsers, operating systems, and app distributors have [specific required members](/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable#required_manifest_members) for a web app to be a PWA. By including a name or short name, the start URL, an icon meeting some minimum requirements, and the type of application viewport in which the PWA should be viewed, your app will meet the manifest requirements of a PWA.
 
 A minimalist manifest file for our menstrual cycle tracking app could look like this:
 

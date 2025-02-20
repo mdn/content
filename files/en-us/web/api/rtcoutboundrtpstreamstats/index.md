@@ -13,7 +13,7 @@ The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} re
 
 ## Instance properties
 
-- {{domxref("RTCOutboundRtpStreamStats.active", "active")}}
+- {{domxref("RTCOutboundRtpStreamStats.active", "active")}} {{experimental_inline}}
   - : A boolean that indicates whether this RTP stream is configured to be sent, or is disabled.
 - {{domxref("RTCOutboundRtpStreamStats.frameHeight", "frameHeight")}}
   - : An integer indicating the height of the last encoded frame, in pixels.
@@ -32,7 +32,7 @@ The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} re
     _Undefined for audio streams._
 - {{domxref("RTCOutboundRtpStreamStats.headerBytesSent", "headerBytesSent")}}
   - : A positive integer that represents the total number of RTP header and padding bytes sent for this SSRC.
-- {{domxref("RTCOutboundRtpStreamStats.keyFramesEncoded", "keyFramesEncoded")}}
+- {{domxref("RTCOutboundRtpStreamStats.keyFramesEncoded", "keyFramesEncoded")}} {{experimental_inline}}
   - : A positive integer that represents the total number of key frames successfully encoded in this RTP media stream.
     _Undefined for audio streams._
 - {{domxref("RTCOutboundRtpStreamStats.mediaSourceId", "mediaSourceId")}}
@@ -63,7 +63,7 @@ The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} re
   - : A positive integer that represents the total number of packets retransmitted for the source associated with this stream.
 - {{domxref("RTCOutboundRtpStreamStats.rid", "rid")}}
   - : A string that indicates the RTP stream ID for a corresponding video stream.
-- {{domxref("RTCOutboundRtpStreamStats.scalabilityMode", "scalabilityMode")}}
+- {{domxref("RTCOutboundRtpStreamStats.scalabilityMode", "scalabilityMode")}} {{experimental_inline}}
   - : A string that represents the scalability mode for the RTP stream, if one has been configured.
 - {{domxref("RTCOutboundRtpStreamStats.targetBitrate", "targetBitrate")}}
   - : A number that represents the bit rate that the `RTCRtpSender`'s codec is currently attempting to achieve for the stream.
