@@ -56,12 +56,11 @@ If in doubt, ask questions on the issue.
 
 Here's a list of ways you can contribute to MDN Web Docs:
 
-- [Fixing known high impact issues](https://github.com/orgs/mdn/projects/25/views/1)
-- [Reviewing pull requests](/en-US/docs/MDN/Community/Pull_requests)
-- [Help beginners to learn on MDN Web Docs](/en-US/docs/MDN/Community/Learn_forum)
-- [Contribute to MDN Web Docs interactive examples](https://github.com/mdn/interactive-examples/blob/main/CONTRIBUTING.md)
+- [Work on good first issues](https://github.com/orgs/mdn/projects/25/views/1)
+- [Review pull requests](/en-US/docs/MDN/Community/Pull_requests)
+- [Help beginners in our community](/en-US/docs/MDN/Community)
 - [Help translate MDN Web Docs](/en-US/docs/MDN/Community/Translated_content)
-- [Help fix known platform issues](https://github.com/mdn/yari/issues)
+- [Help fix known backend issues](https://github.com/mdn/rari/issues) and [known frontend issues](https://github.com/mdn/yari/issues)
 - [Help us keep browser compatibility data up to date](https://github.com/mdn/browser-compat-data)
 
 ## Contributions

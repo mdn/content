@@ -27,9 +27,9 @@ You can explicitly specify the initial value by using the {{cssxref("initial")}}
 
 - {{cssxref("initial")}}
 - CSS key concepts:
-  - [CSS syntax](/en-US/docs/Web/CSS/Syntax)
-  - [At-rules](/en-US/docs/Web/CSS/At-rule)
-  - [Comments](/en-US/docs/Web/CSS/Comments)
+  - [CSS syntax](/en-US/docs/Web/CSS/CSS_syntax/Syntax)
+  - [At-rules](/en-US/docs/Web/CSS/CSS_syntax/At-rule)
+  - [Comments](/en-US/docs/Web/CSS/CSS_syntax/Comments)
   - [Specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity)
   - [Inheritance](/en-US/docs/Web/CSS/CSS_cascade/Inheritance)
   - [Box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
