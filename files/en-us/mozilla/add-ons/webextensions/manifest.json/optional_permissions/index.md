@@ -113,7 +113,7 @@ Optional permissions are generally available for use in the [`permissions`](/en-
 
 The optional-only API permissions are:
 
-- 'userScripts' (Firefox only)
+- 'userScripts' (see [userScripts permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/userScripts#permissions))
 
 ## Examples
 

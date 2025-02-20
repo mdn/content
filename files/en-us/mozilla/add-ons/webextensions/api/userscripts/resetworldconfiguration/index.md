@@ -10,6 +10,7 @@ browser-compat: webextensions.api.userScripts.resetWorldConfiguration
 Resets the configuration of a `USER_SCRIPT` world set by {{WebExtAPIRef("userScripts.configureWorld")}} to the defaults specified in {{WebExtAPIRef("userScripts.WorldProperties")}}. When the default world is reset, all worlds without an explicit configuration are also reset.
 
 Changes to world configurations only apply to new instances of the world: A configuration won't apply to a world initialized by the execution of a user script in a document until the document is reloaded. However, the browser may revoke certain privileges when a configuration is updated. For example, message calls from a `USER_SCRIPT` world may fail when `messaging` is reset to `false`.
+Changes to world configurations only apply to new instances of the world: A configuration won't apply to a world initialized by the execution of a user script in a document until the document is reloaded. However, the browser may revoke certain privileges when a configuration is updated. For example, message calls from a `USER_SCRIPT` world may fail when `messaging` is reset to `false`.
 
 This is an asynchronous method that returns a {{JSxRef("Promise")}}.
 
