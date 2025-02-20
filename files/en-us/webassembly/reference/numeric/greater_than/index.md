@@ -9,7 +9,35 @@ The **`gt`** instructions, short for _greater than_, check if a number is greate
 
 The integer types have separate greater than instructions for signed (**`gt_s`**) and unsigned (**`gt_u`**) numbers.
 
-{{EmbedInteractiveExample("pages/wat/gt.html", "tabbed-taller")}}
+{{InteractiveExample("Wat Demo: gt", "tabbed-taller")}}
+
+```wat interactive-example
+(module
+  (import "env" "log_bool" (func $log_bool (param i32)))
+  (func $main
+    ;; load `10` and `2` onto the stack
+    i32.const 10
+    i32.const 2
+
+    i32.gt_u ;; check if `10` is greater than '2'
+    call $log_bool ;; log the result
+  )
+  (start $main)
+)
+```
+
+```js interactive-example
+const url = "{%wasm-url%}";
+
+function log_bool(value) {
+  console.log(Boolean(value));
+  // Expected output: true
+}
+
+await WebAssembly.instantiateStreaming(fetch(url), {
+  env: { log_bool },
+});
+```
 
 ## Syntax
 

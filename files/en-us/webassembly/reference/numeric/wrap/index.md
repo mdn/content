@@ -9,7 +9,27 @@ The **`wrap`** instruction, is used to convert numbers of type `i64` to type `i3
 
 One can think of wrap either as reducing the value [mod](https://en.wikipedia.org/wiki/Modular_arithmetic) 2<sup>32</sup>, or as discarding the high 32 bits to produce a value containing just the low 32 bits.
 
-{{EmbedInteractiveExample("pages/wat/wrap.html", "tabbed-taller")}}
+{{InteractiveExample("Wat Demo: wrap", "tabbed-taller")}}
+
+```wat interactive-example
+(module
+  (import "console" "log" (func $log (param i32)))
+  (func $main
+
+    i64.const 10 ;; push an i64 onto the stack
+
+    i32.wrap_i64 ;; wrap from i64 to i32
+
+    call $log ;; log the result
+  )
+  (start $main)
+)
+```
+
+```js interactive-example
+const url = "{%wasm-url%}";
+await WebAssembly.instantiateStreaming(fetch(url), { console });
+```
 
 ## Syntax
 
