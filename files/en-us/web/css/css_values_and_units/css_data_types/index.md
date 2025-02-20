@@ -9,7 +9,7 @@ spec-urls: https://drafts.csswg.org/css-values/
 
 **CSS data types** define typical values (including keywords and units) accepted by CSS properties and functions. They are a special kind of [component value type](https://www.w3.org/TR/css3-values/#component-types).
 
-The most commonly-used types are defined in the [CSS Values and Units](/en-US/docs/Web/CSS/CSS_Values_and_Units) specification. This specification also defines [functional notations](/en-US/docs/Web/CSS/CSS_Functions), which allow for more complex types or processing. Other types are defined in the specifications to which they apply.
+The most commonly-used types are defined in the [CSS Values and Units](/en-US/docs/Web/CSS/CSS_Values_and_Units) module. This module also defines [functional notations](/en-US/docs/Web/CSS/CSS_Functions), which allow for more complex types or processing. Other types are defined in the specifications to which they apply.
 
 Below you will find a reference to the types that you are most likely to come across, however it is not a comprehensive reference for all types defined in every CSS specification.
 
@@ -149,6 +149,6 @@ These data types are used in [CSS math function](/en-US/docs/Web/CSS/CSS_Functio
 
 ## See also
 
-- [CSS Units and Values](/en-US/docs/Web/CSS/CSS_Values_and_Units)
+- [CSS values and units](/en-US/docs/Web/CSS/CSS_Values_and_Units) module
 - [Learn: Values and units](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
 - [CSS Functional Notation](/en-US/docs/Web/CSS/CSS_Functions)
