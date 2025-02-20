@@ -465,7 +465,7 @@ You may want to overwrite that response once it expired on the server, but there
 
 One of the methods mentioned in the specification is to send a request for the same URL with an unsafe method such as `POST`, but for many clients that is difficult to do.
 
-The [`Clear-Site-Data: cache`](/en-US/docs/Web/HTTP/Headers/Clear-Site-Data#cache) header and directive value (if supported) can be used to clear browser caches — but has no effect on intermediate caches.
+The [`Clear-Site-Data: cache`](/en-US/docs/Web/HTTP/Headers/Clear-Site-Data#cache) header and directive value can be used to clear browser caches — but has no effect on intermediate caches.
 Otherwise responses will remain in the browser cache until `max-age` expires, unless the user manually performs a reload, force-reload, or clear-history action.
 
 Caching reduces access to the server, which means that the server loses control of that URL. If the server does not want to lose control of a URL — for example, in the case that a resource is frequently updated — you should add `no-cache` so that the server will always receive requests and send the intended responses.
