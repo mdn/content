@@ -7,7 +7,7 @@ spec-urls: https://drafts.csswg.org/css-values/
 
 {{CSSRef}}
 
-Every CSS declaration includes a property / value pair. Depending on the property, the value can include a single integer or keyword, to a series of keywords and values, including numeric values with or without units. Numeric data types include {{cssxref("&lt;integer&gt;")}}, {{cssxref("&lt;number&gt;")}}, {{cssxref("&lt;dimension&gt;")}}, and {{cssxref("&lt;percentage&gt;")}} values. This guide is an overview numeric data types. Refer to the page for each value type for more detailed information.
+Every CSS declaration consists of a property/value pair. The value can take various forms depending on the property, such as a single number, keyword, function, or a combination of different items; some values have units, while others do not. Numeric data types include {{cssxref("&lt;integer&gt;")}}, {{cssxref("&lt;number&gt;")}}, {{cssxref("&lt;dimension&gt;")}}, and {{cssxref("&lt;percentage&gt;")}} values. This guide is an overview of numeric data types. Refer to the page for each value type for more detailed information.
 
 ## Integers
 
