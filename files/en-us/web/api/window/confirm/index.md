@@ -12,12 +12,6 @@ browser-compat: api.Window.confirm
 
 Under some conditions — for example, when the user switches tabs — the browser may not actually display a dialog, or may not wait for the user to confirm or cancel the dialog.
 
-Dialog boxes are modal windows — they prevent the user from accessing the rest of the program's interface until the dialog box is closed.
-For this reason, you should not overuse any function that creates a dialog box (or modal window).
-Regardless, there are good reasons to [avoid using dialog boxes for confirmation](https://alistapart.com/article/neveruseawarning/).
-
-Alternatively {{HTMLElement("dialog")}} element can be used for confirmations.
-
 ## Syntax
 
 ```js-nolint
@@ -61,6 +55,14 @@ windowButton.addEventListener("click", () => {
 ```
 
 {{EmbedLiveSample('confirm', , , , , , , 'allow-modals allow-popups')}}
+
+## Notes
+
+Dialog boxes are modal windows — they prevent the user from accessing the rest of the program's interface until the dialog box is closed.
+For this reason, you should not overuse any function that creates a dialog box (or modal window).
+Regardless, there are good reasons to [avoid using dialog boxes for confirmation](https://alistapart.com/article/neveruseawarning/).
+
+Alternatively {{HTMLElement("dialog")}} element can be used for confirmations.
 
 ## Specifications
 

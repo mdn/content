@@ -12,18 +12,6 @@ browser-compat: api.Window.prompt
 
 Under some conditions (when the user switches tabs, for example) the browser may not display a dialog, or may not wait for the user to submit text or to cancel the dialog.
 
-A prompt dialog contains a single-line textbox, a Cancel button, and an OK button, and returns the (possibly empty) text the user entered into that textbox.
-The result is a string, which means you should sometimes cast the value given by the user.
-For example, if their answer should be a Number, you should cast the value to Number.
-
-```js
-const aNumber = Number(window.prompt("Type a number", ""));
-```
-
-Dialog boxes are modal windows; they prevent the user from accessing the rest of the program's interface until the dialog box is closed.
-For this reason, you should not overuse any function that creates a dialog box (or modal window).
-Alternatively {{HTMLElement("dialog")}} element can be used to take user inputs.
-
 ## Syntax
 
 ```js-nolint
@@ -93,6 +81,22 @@ sign = window.prompt("Are you feeling lucky");
 // open a prompt with the text "Are you feeling lucky" and "sure" as the default value
 sign = prompt("Are you feeling lucky", "sure");
 ```
+
+## Notes
+
+Under some conditions (when the user switches tabs, for example) the browser may not display a dialog, or may not wait for the user to submit text or to cancel the dialog.
+
+A prompt dialog contains a single-line textbox, a Cancel button, and an OK button, and returns the (possibly empty) text the user entered into that textbox.
+The result is a string, which means you should sometimes cast the value given by the user.
+For example, if their answer should be a Number, you should cast the value to Number.
+
+```js
+const aNumber = Number(window.prompt("Type a number", ""));
+```
+
+Dialog boxes are modal windows; they prevent the user from accessing the rest of the program's interface until the dialog box is closed.
+For this reason, you should not overuse any function that creates a dialog box (or modal window).
+Alternatively {{HTMLElement("dialog")}} element can be used to take user inputs.
 
 ## Specifications
 
