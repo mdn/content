@@ -59,10 +59,8 @@ windowButton.addEventListener("click", () => {
 ## Notes
 
 Dialog boxes are modal windows — they prevent the user from accessing the rest of the program's interface until the dialog box is closed.
-For this reason, you should not overuse any function that creates a dialog box (or modal window).
-Regardless, there are good reasons to [avoid using dialog boxes for confirmation](https://alistapart.com/article/neveruseawarning/).
-
-Alternatively {{HTMLElement("dialog")}} element can be used for confirmations.
+For this reason, you should not overuse any function that creates a dialog box or a modal window.
+Alternatively, a {{HTMLElement("dialog")}} element can be used for confirmations.
 
 ## Specifications
 
@@ -77,3 +75,4 @@ Alternatively {{HTMLElement("dialog")}} element can be used for confirmations.
 - {{HTMLElement("dialog")}} element
 - {{domxref("window.alert()")}}
 - {{domxref("window.prompt()")}}
+- [Never Use a Warning When you Mean Undo](https://alistapart.com/article/neveruseawarning/) on alistapart.com (2017)

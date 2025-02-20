@@ -84,7 +84,9 @@ sign = prompt("Are you feeling lucky", "sure");
 
 ## Notes
 
-Under some conditions (when the user switches tabs, for example) the browser may not display a dialog, or may not wait for the user to submit text or to cancel the dialog.
+Dialog boxes are modal windows — they prevent the user from accessing the rest of the program's interface until the dialog box is closed.
+For this reason, you should not overuse any function that creates a dialog box or a modal window.
+Alternatively, a {{HTMLElement("dialog")}} element can be used for confirmations.
 
 A prompt dialog contains a single-line textbox, a Cancel button, and an OK button, and returns the (possibly empty) text the user entered into that textbox.
 The result is a string, which means you should sometimes cast the value given by the user.
@@ -93,10 +95,6 @@ For example, if their answer should be a Number, you should cast the value to Nu
 ```js
 const aNumber = Number(window.prompt("Type a number", ""));
 ```
-
-Dialog boxes are modal windows; they prevent the user from accessing the rest of the program's interface until the dialog box is closed.
-For this reason, you should not overuse any function that creates a dialog box (or modal window).
-Alternatively {{HTMLElement("dialog")}} element can be used to take user inputs.
 
 ## Specifications
 
@@ -111,3 +109,4 @@ Alternatively {{HTMLElement("dialog")}} element can be used to take user inputs.
 - {{HTMLElement("dialog")}} element
 - {{domxref("window.alert", "alert")}}
 - {{domxref("window.confirm", "confirm")}}
+- [Never Use a Warning When you Mean Undo](https://alistapart.com/article/neveruseawarning/) on alistapart.com (2017)
