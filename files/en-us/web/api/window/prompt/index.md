@@ -65,7 +65,7 @@ signButton.addEventListener("click", () => {
 });
 ```
 
-{{EmbedLiveSample('prompt', , , , , , , "allow-modals")}}
+{{EmbedLiveSample('prompt', , , , , , , 'allow-modals')}}
 
 ### Prompt messages and default values
 

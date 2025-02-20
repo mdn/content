@@ -138,7 +138,7 @@ function greet() {
 button.addEventListener("click", greet);
 ```
 
-{{EmbedLiveSample('string-concat', , '50', , , , , "allow-modals")}}
+{{EmbedLiveSample('string-concat', , '50', , , , , 'allow-modals')}}
 
 Here, we are using the {{domxref("window.prompt()", "window.prompt()")}} function, which prompts the user to answer a question via a popup dialog box and then stores the text they enter inside a given variable — in this case `name`. We then display a string that inserts the name into a generic greeting message.
 

@@ -85,7 +85,7 @@ button.addEventListener("click", updateName);
 You can click "Play" to see and edit the example in the MDN Playground.
 Try clicking on the text label to see what happens.
 
-{{EmbedLiveSample('string-concat-name', , '80', , , , , "allow-modals")}}
+{{EmbedLiveSample('string-concat-name', , '80', , , , , 'allow-modals')}}
 
 JavaScript can do a lot more than that — let's explore what in more detail.
 
