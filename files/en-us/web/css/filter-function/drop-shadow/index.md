@@ -9,7 +9,19 @@ browser-compat: css.types.filter-function.drop-shadow
 
 The **`drop-shadow()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) applies a drop shadow effect to the input image. Its result is a {{cssxref("&lt;filter-function&gt;")}}.
 
-{{EmbedInteractiveExample("pages/css/function-drop-shadow.html")}}
+{{InteractiveExample("CSS Demo: drop-shadow()")}}
+
+```css interactive-example-choice
+filter: drop-shadow(30px 10px 4px #4444dd);
+```
+
+```css interactive-example-choice
+filter: drop-shadow(0 -6mm 4mm rgb(160, 0, 210));
+```
+
+```css interactive-example-choice
+filter: drop-shadow(0 0 0.75rem crimson);
+```
 
 A drop shadow is effectively a blurred, offset version of the input image's alpha mask, drawn in a specific color and composited below the image.
 

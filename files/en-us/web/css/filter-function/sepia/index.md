@@ -9,7 +9,23 @@ browser-compat: css.types.filter-function.sepia
 
 The **`sepia()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) converts the input image to sepia, giving it a warmer, more yellow/brown appearance. Its result is a {{cssxref("&lt;filter-function&gt;")}}.
 
-{{EmbedInteractiveExample("pages/css/function-sepia.html")}}
+{{InteractiveExample("CSS Demo: sepia()")}}
+
+```css interactive-example-choice
+filter: sepia(0);
+```
+
+```css interactive-example-choice
+filter: sepia(0.2);
+```
+
+```css interactive-example-choice
+filter: sepia(60%);
+```
+
+```css interactive-example-choice
+filter: sepia(1);
+```
 
 ## Syntax
 

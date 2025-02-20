@@ -9,7 +9,36 @@ browser-compat: css.properties.outline-offset
 
 The **`outline-offset`** [CSS](/en-US/docs/Web/CSS) property sets the amount of space between an [outline](/en-US/docs/Web/CSS/outline) and the edge or border of an element.
 
-{{EmbedInteractiveExample("pages/css/outline-offset.html")}}
+{{InteractiveExample("CSS Demo: outline-offset")}}
+
+```css interactive-example-choice
+outline-offset: 4px;
+```
+
+```css interactive-example-choice
+outline-offset: 0.6rem;
+```
+
+```css interactive-example-choice
+outline-offset: 12px;
+outline: 5px dashed blue;
+```
+
+```html interactive-example
+<div class="transition-all" id="example-element">
+  This is a box with an outline around it.
+</div>
+```
+
+```css interactive-example
+#example-element {
+  border: 2px solid crimson;
+  outline: 0.75em solid;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+```
 
 ## Syntax
 

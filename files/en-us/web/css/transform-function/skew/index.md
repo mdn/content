@@ -10,7 +10,23 @@ browser-compat: css.types.transform-function.skew
 The **`skew()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) defines a transformation that skews an element on the 2D
 plane. Its result is a {{cssxref("&lt;transform-function&gt;")}} data type.
 
-{{EmbedInteractiveExample("pages/css/function-skew.html")}}
+{{InteractiveExample("CSS Demo: skew()")}}
+
+```css interactive-example-choice
+transform: skew(0);
+```
+
+```css interactive-example-choice
+transform: skew(15deg, 15deg);
+```
+
+```css interactive-example-choice
+transform: skew(-0.06turn, 18deg);
+```
+
+```css interactive-example-choice
+transform: skew(0.312rad);
+```
 
 This transformation is a shear mapping ([transvection](https://en.wikipedia.org/wiki/Shear_mapping)) that distorts
 each point within an element by a certain angle in the horizontal and vertical directions. The effect is as if you

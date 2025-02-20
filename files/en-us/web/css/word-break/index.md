@@ -9,7 +9,40 @@ browser-compat: css.properties.word-break
 
 The **`word-break`** [CSS](/en-US/docs/Web/CSS) property sets whether line breaks appear wherever the text would otherwise overflow its content box.
 
-{{EmbedInteractiveExample("pages/css/word-break.html")}}
+{{InteractiveExample("CSS Demo: word-break")}}
+
+```css interactive-example-choice
+word-break: normal;
+```
+
+```css interactive-example-choice
+word-break: break-all;
+```
+
+```css interactive-example-choice
+word-break: keep-all;
+```
+
+```css interactive-example-choice
+word-break: break-word;
+```
+
+```html interactive-example
+<div class="transition-all" id="example-element">
+  Honorificabilitudinitatibus califragilisticexpialidocious
+  Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
+  グレートブリテンおよび北アイルランド連合王国という言葉は本当に長い言葉
+</div>
+```
+
+```css interactive-example
+#example-element {
+  width: 80%;
+  padding: 20px;
+  text-align: start;
+  border: solid 1px darkgray;
+}
+```
 
 ## Syntax
 

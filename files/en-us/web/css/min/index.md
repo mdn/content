@@ -9,7 +9,19 @@ browser-compat: css.types.min
 
 The **`min()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) lets you set the smallest (most negative) value from a list of comma-separated expressions as the value of a CSS property value. The `min()` function can be used anywhere a {{CSSxRef("&lt;length&gt;")}}, {{CSSxRef("&lt;frequency&gt;")}}, {{CSSxRef("&lt;angle&gt;")}}, {{CSSxRef("&lt;time&gt;")}}, {{CSSxRef("&lt;percentage&gt;")}}, {{CSSxRef("&lt;number&gt;")}}, or {{CSSxRef("&lt;integer&gt;")}} is allowed.
 
-{{EmbedInteractiveExample("pages/css/function-min.html")}}
+{{InteractiveExample("CSS Demo: min()")}}
+
+```css interactive-example-choice
+width: min(50vw, 200px);
+```
+
+```css interactive-example-choice
+width: min(50vw, 4000px);
+```
+
+```css interactive-example-choice
+width: min(150vw, 100px);
+```
 
 In the first above example, the width will be at most 200px, but will be smaller if the viewport is less than 400px wide (in which case 1vw would be 4px, so 50vw would be 200px). This technique uses an absolute unit to specify a fixed maximum value for the property, and a relative unit to allow the value to shrink to suit smaller viewports.
 

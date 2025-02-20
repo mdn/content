@@ -9,7 +9,27 @@ browser-compat: css.types.filter-function.opacity
 
 The **`opacity()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) applies transparency to the samples in the input image. Its result is a {{cssxref("&lt;filter-function&gt;")}}.
 
-{{EmbedInteractiveExample("pages/css/function-opacity.html")}}
+{{InteractiveExample("CSS Demo: opacity()")}}
+
+```css interactive-example-choice
+filter: opacity(1);
+```
+
+```css interactive-example-choice
+filter: opacity(80%);
+```
+
+```css interactive-example-choice
+filter: opacity(50%);
+```
+
+```css interactive-example-choice
+filter: opacity(0.2);
+```
+
+```css interactive-example-choice
+filter: opacity(0);
+```
 
 > [!NOTE]
 > This function is similar to the more established {{Cssxref("opacity")}} property. The difference is that with filters, some browsers provide hardware acceleration for better performance.

@@ -9,7 +9,27 @@ browser-compat: css.properties.font-size
 
 The **`font-size`** [CSS](/en-US/docs/Web/CSS) property sets the size of the font. Changing the font size also updates the sizes of the font size-relative {{cssxref("&lt;length&gt;")}} units, such as `em`, `ex`, and so forth.
 
-{{EmbedInteractiveExample("pages/css/font-size.html")}}
+{{InteractiveExample("CSS Demo: font-size")}}
+
+```css interactive-example-choice
+font-size: 1.2rem;
+```
+
+```css interactive-example-choice
+font-size: x-small;
+```
+
+```css interactive-example-choice
+font-size: smaller;
+```
+
+```css interactive-example-choice
+font-size: 12px;
+```
+
+```css interactive-example-choice
+font-size: 80%;
+```
 
 ## Syntax
 

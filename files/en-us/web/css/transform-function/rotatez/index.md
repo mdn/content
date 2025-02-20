@@ -10,7 +10,23 @@ browser-compat: css.types.transform-function.rotateZ
 The **`rotateZ()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) defines a transformation that rotates an element around the
 z-axis without deforming it. Its result is a {{cssxref("&lt;transform-function&gt;")}} data type.
 
-{{EmbedInteractiveExample("pages/css/function-rotateZ.html")}}
+{{InteractiveExample("CSS Demo: rotateZ()")}}
+
+```css interactive-example-choice
+transform: rotateZ(0);
+```
+
+```css interactive-example-choice
+transform: rotateZ(90deg);
+```
+
+```css interactive-example-choice
+transform: rotateZ(-0.25turn);
+```
+
+```css interactive-example-choice
+transform: rotateZ(3.142rad);
+```
 
 The axis of rotation passes through an origin, defined by the {{ cssxref("transform-origin") }} CSS property.
 

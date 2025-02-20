@@ -10,7 +10,23 @@ browser-compat: css.types.transform-function.rotateX
 The **`rotateX()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) defines a transformation that rotates an element around the
 x-axis (horizontal) without deforming it. Its result is a {{cssxref("&lt;transform-function&gt;")}} data type.
 
-{{EmbedInteractiveExample("pages/css/function-rotateX.html")}}
+{{InteractiveExample("CSS Demo: rotateX()")}}
+
+```css interactive-example-choice
+transform: rotateX(0);
+```
+
+```css interactive-example-choice
+transform: rotateX(45deg);
+```
+
+```css interactive-example-choice
+transform: rotateX(-0.2turn);
+```
+
+```css interactive-example-choice
+transform: rotateX(3.142rad);
+```
 
 The axis of rotation passes through an origin, defined by the {{ cssxref("transform-origin") }} CSS property.
 

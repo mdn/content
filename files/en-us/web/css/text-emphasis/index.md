@@ -9,7 +9,37 @@ browser-compat: css.properties.text-emphasis
 
 The **`text-emphasis`** [CSS](/en-US/docs/Web/CSS) property applies emphasis marks to text (except spaces and control characters). It is a [shorthand](/en-US/docs/Web/CSS/Shorthand_properties) for {{cssxref("text-emphasis-style")}} and {{cssxref("text-emphasis-color")}}.
 
-{{EmbedInteractiveExample("pages/css/text-emphasis.html")}}
+{{InteractiveExample("CSS Demo: text-emphasis")}}
+
+```css interactive-example-choice
+text-emphasis: none;
+```
+
+```css interactive-example-choice
+text-emphasis: filled red;
+```
+
+```css interactive-example-choice
+text-emphasis: "x";
+```
+
+```css interactive-example-choice
+text-emphasis: filled double-circle #ffb703;
+```
+
+```html interactive-example
+<p>
+  I'd far rather be
+  <span class="transition-all" id="example-element">happy than right</span> any
+  day.
+</p>
+```
+
+```css interactive-example
+p {
+  font: 1.5em sans-serif;
+}
+```
 
 The `text-emphasis` property is quite different from {{cssxref("text-decoration")}}. The `text-decoration` property does not inherit, and the decoration specified is applied across the whole element. However, text-emphasis does inherit, which means it is possible to change emphasis marks for descendants.
 
