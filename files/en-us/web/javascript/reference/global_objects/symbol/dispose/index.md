@@ -29,7 +29,30 @@ This method should not return a promise, as promises returned by `[Symbol.dispos
 
 ### User defined disposables
 
-`[Symbol.dispose]` allows the creation of custom disposables. See the `using` reference for more information.
+`[Symbol.dispose]` allows the creation of custom disposables. See the {{jsxref("Statements/using", "using")}} reference for more information.
+
+```js
+class Disposable {
+  constructor() {
+    this.disposed = false;
+  }
+
+  [Symbol.dispose]() {
+    this.disposed = true;
+  }
+
+  get isDisposed() {
+    return this.disposed;
+  }
+}
+
+const resource = new Disposable();
+{
+  using resourceUsed = resource;
+  console.log(resource.isDisposed); // false
+}
+console.log(resource.isDisposed); // true
+```
 
 ## Specifications
 
@@ -41,6 +64,7 @@ This method should not return a promise, as promises returned by `[Symbol.dispos
 
 ## See also
 
+- [Polyfill of `Symbol.dispose` in `core-js`](https://github.com/zloirock/core-js#explicit-resource-management)
 - [JavaScript resource management](/en-US/docs/Web/JavaScript/Guide/Resource_management)
 - {{jsxref("Symbol.asyncDispose")}}
 - {{jsxref("Statements/using", "using")}}

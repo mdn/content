@@ -39,22 +39,25 @@ You should make your resource registered as soon as it's declared. This means yo
 
 ```js example-bad
 using stack = new DisposableStack();
-const handle = new FileHandle("file.txt");
-stack.use(handle);
+const reader = stream.getReader();
+stack.use(reader);
 ```
 
 ## Examples
 
 ### Using use()
 
-This function reads a file and returns its contents. The file handle is automatically closed when the function completes, assuming the `FileHandle` class implements an `[Symbol.dispose]()` method that synchronously closes the file.
+This code consumes a {{domxref("ReadableStream")}} via a {{domxref("ReadableStreamDefaultReader")}}. The reader automatically closed when the function completes, assuming it implements an `[Symbol.dispose]()` method that synchronously releases the lock on the stream.
 
 ```js
-function readFileContents(path) {
+{
   using stack = new DisposableStack();
-  const handle = stack.use(new FileHandle(path));
-  const data = handle.read();
-  return data;
+  const reader = stack.use(stream.getReader());
+  const { value, done } = reader.read();
+  if (!done) {
+    // Process the value
+  }
+  // The reader.releaseLock() method is called here before exiting
 }
 ```
 

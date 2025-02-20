@@ -52,6 +52,7 @@ These properties are defined on `AsyncDisposableStack.prototype` and shared by a
 
 ## See also
 
+- [Polyfill of `AsyncDisposableStack` in `core-js`](https://github.com/zloirock/core-js#explicit-resource-management)
 - [JavaScript resource management](/en-US/docs/Web/JavaScript/Guide/Resource_management)
 - {{jsxref("Symbol.asyncDispose")}}
 - {{jsxref("Statements/await_using", "await using")}}

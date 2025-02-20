@@ -42,11 +42,168 @@ The variable is allowed to have value `null` or `undefined`, so the resource can
 
 ## Examples
 
-You should also check {{jsxref("Statements/using", "using")}} for more examples.
+You should also check {{jsxref("Statements/using", "using")}} for more examples, especially some general caveats with respect to scope-based resource management.
+
+### Basic usage
+
+Usually, you use `await using` on some library-provided resource that already implements the async disposable protocol. For example, the Node.js [`FileHandle`](https://nodejs.org/api/fs.html#filehandlesymbolasyncdispose) is async disposable:
+
+```js
+import fs from "node:fs/promises";
+
+async function example() {
+  await using file = await fs.open("example.txt", "r");
+  console.log(await file.read());
+  // Before `file` goes out of scope, it is disposed by calling `file[Symbol.asyncDispose]()` and awaited.
+}
+```
+
+Note that there are two `await` operations in the declaration for `file`, which do different things and are both necessary. `await fs.open()` causes an await during _acquisition_: it waits for the file to be opened and unwraps the returned promise into a `FileHandle` object. `await using file` causes an await during _disposal_: it makes `file` disposed asynchronously when the variable goes out of scope.
 
 ### `await using` with `for await...of`
 
-### Implicit work on scope exit
+It's very easy to confuse the following three syntaxes:
+
+- `for await (using x of y) { ... }`
+- `for (await using x of y) { ... }`
+- `for (using x of await y) { ... }`
+
+It may be even more confusing to know that they can be used together.
+
+```js
+for await (await using x of await y) {
+  // ...
+}
+```
+
+First, `await y` does what you expect: we {{jsxref("Operators/await", "await")}} the promise `y`, which is expected to resolve to an object we iterate over. Let us set this variant aside.
+
+The {{jsxref("Statements/for-await...of", "for await...of")}} loop requires the `y` object to be an _async iterable_. This means that the object must have a `[Symbol.asyncIterator]` method that returns an _async iterator_, whose `next()` method returns a promise representing the result. This is for when the iterable doesn't know what the next value is, or even if it's done yet, until some async operation is complete.
+
+On the other hand, the `await using x` syntax requires the `x` object, as yielded from the iterable, to be an _async disposable_. This means that the object must have a `[Symbol.asyncDispose]` method that returns a promise representing the disposal operation. This is a separate concern from the iteration itself, and is only called when the variable `x` goes out of scope.
+
+In other words, all of the following four combinations are valid and do different things:
+
+- `for (using x of y)`: `y` is synchronously iterated, yielding one result at a time, which can be disposed synchronously.
+- `for await (using x of y)`: `y` is asynchronously iterated, yielding one result at a time after awaiting, but the result value can be disposed synchronously.
+- `for (await using x of y)`: `y` is synchronously iterated, yielding one result at a time, but the result value can only be disposed asynchronously.
+- `for await (await using x of y)`: `y` is asynchronously iterated, yielding one result at a time after awaiting, and the result value can only be disposed asynchronously.
+
+Below, we create some fictitious values of `y` to demonstrate their use cases. For asynchronous APIs, we base our code on the Node.js [`fs/promises`](https://nodejs.org/api/fs.html#promises-api) module.
+
+```js
+const syncIterableOfSyncDisposables = [
+  stream1.getReader(),
+  stream2.getReader(),
+];
+for (using reader of syncIterableOfSyncDisposables) {
+  console.log(reader.read());
+}
+```
+
+```js
+async function* requestMany(urls) {
+  for (const url of urls) {
+    const res = await fetch(url);
+    yield res.body.getReader();
+  }
+}
+const asyncIterableOfSyncDisposables = requestMany([
+  "https://example.com",
+  "https://example.org",
+]);
+for await (using reader of asyncIterableOfSyncDisposables) {
+  console.log(reader.read());
+}
+```
+
+```js
+const syncIterableOfAsyncDisposables = fs
+  .globSync("*.txt")
+  .map((path) => fs.open(path, "r"));
+for (await using file of syncIterableOfAsyncDisposables) {
+  console.log(await file.read());
+}
+```
+
+```js
+async function* globHandles(pattern) {
+  for await (const path of fs.glob(pattern)) {
+    yield await fs.open(path, "r");
+  }
+}
+const asyncIterableOfAsyncDisposables = globHandles("*.txt");
+for await (await using file of asyncIterableOfAsyncDisposables) {
+  console.log(await file.read());
+}
+```
+
+### Implicit await on scope exit
+
+As soon as one `await using` is declared in a scope, the scope will always have an `await` on exit, even if the variable is `null` or `undefined`. This ensures stable execution order and error handling. The [Control flow effects of await](/en-US/docs/Web/JavaScript/Reference/Operators/await#control_flow_effects_of_await) examples have more details on this.
+
+```js
+async function example() {
+  await using nothing = null;
+  console.log("Example call");
+}
+
+example().then(() => console.log("Example done"));
+Promise.resolve().then(() => console.log("Microtask done"));
+// Output:
+// Example call
+// Microtask done
+// Example done
+```
+
+Consider the same code but with a synchronous {{jsxref("Statements/using", "using")}} instead:
+
+```js
+async function example() {
+  using nothing = null;
+  console.log("Example call");
+}
+
+example().then(() => console.log("Example done"));
+Promise.resolve().then(() => console.log("Microtask done"));
+// Output:
+// Example call
+// Example done
+// Microtask done
+```
+
+For a more realistic example, consider two calls to a function in parallel:
+
+```js
+class Resource {
+  #name;
+  constructor(name) {
+    this.#name = name;
+  }
+  async [Symbol.asyncDispose]() {
+    console.log(`Disposing resource ${this.#name}`);
+  }
+}
+
+async function example(id, createOptionalResource) {
+  await using required = new Resource(`required ${id}`);
+  await using optional = createOptionalResource
+    ? new Resource("optional")
+    : null;
+  await using another = new Resource(`another ${id}`);
+}
+
+example(1, true);
+example(2, false);
+// Output:
+// Disposing resource another 1
+// Disposing resource another 2
+// Disposing resource optional
+// Disposing resource required 1
+// Disposing resource required 2
+```
+
+As you can see, the `required 2` resource is disposed in the same tick as `required 1`. If the `optional` resource did not cause a redundant `await`, then `required 2` would have been disposed earlier, which would be simultaneous with `optional`.
 
 ## Specifications
 

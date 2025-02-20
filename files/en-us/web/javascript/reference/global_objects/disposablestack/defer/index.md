@@ -36,10 +36,10 @@ None ({{jsxref("undefined")}}).
 The primary purpose of `defer()` is to register a cleanup callback that's not specific to the disposal of a particular resource. If the callback is specific to a resource, you should use {{jsxref("DisposableStack/use", "use()")}} or {{jsxref("DisposableStack/adopt", "adopt()")}} instead. You can also use `defer` when the resource is not claimed within your code:
 
 ```js
-function consumeResource(someResource) {
+function consumeReader(reader) {
   using stack = new DisposableStack();
-  stack.defer(() => someResource.dispose());
-  // Do something with someResource
+  stack.defer(() => reader.releaseLock());
+  // Do something with reader
 }
 ```
 
