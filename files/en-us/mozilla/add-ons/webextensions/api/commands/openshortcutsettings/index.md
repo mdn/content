@@ -7,7 +7,11 @@ browser-compat: webextensions.api.commands.openShortcutSettings
 
 {{AddonSidebar}}
 
-Opens the Manage Extension Shortcuts page of Manage Your Extensions (`about:addons`) and, if the extension has shortcuts, scrolls to and highlights the extension's shortcut key options.
+Opens the browser UI that enables users to configure an extension's keyboard shortcuts.
+
+In Firefox, this function opens the [Manage Extension Shortcuts](https://support.mozilla.org/en-US/kb/manage-extension-shortcuts-firefox) view.
+
+Chrome doesn't support this function yet. In Chrome, `chrome://extensions/shortcuts` can be opened using the `tabs.create` function.
 
 This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
