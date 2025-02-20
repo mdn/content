@@ -78,7 +78,7 @@ Additional functions, including `calc-mix()`, `crossorigin()`, `first-valid()`, 
 - [`<resolution>`](/en-US/docs/Web/CSS/resolution)
 - [`<rounding-strategy>`](/en-US/docs/Web/CSS/round#rounding-strategy) (`down`, `up`, `to-zero`)
 - [`<string>`](/en-US/docs/Web/CSS/string)
-- [`<syntax>`](/en-US/docs/Web/CSS/@property/syntax)
+- [`<syntax>`](/en-US/docs/Web/CSS/CSS_syntax/Syntax)
 - [`<time-percentage>`](/en-US/docs/Web/CSS/time-percentage)
 - [`<time>`](/en-US/docs/Web/CSS/time)
 - [`<url>`](/en-US/docs/Web/CSS/url)
