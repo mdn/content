@@ -205,6 +205,10 @@ Additional functions, including `calc-mix()`, `crossorigin()`, `first-valid()`, 
 
   - : Overview of the CSS statements that invoke special data processing or calculations to return a CSS value for a CSS property.
 
+- [Using CSS math functions](/en-US/docs/Web/CSS/CSS_Values_and_Units/Using_CSS_Math_Functions)
+
+  - : The CSS math functions that allow a property value to be written as a mathematical expression.
+
 - [Value definition syntax](/en-US/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
 
   - : The formal grammar used to define the set of valid values for CSS properties and functions.
