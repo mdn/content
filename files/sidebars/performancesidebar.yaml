@@ -1,0 +1,9 @@
+# Do not add comments to this file. They will be lost.
+
+sidebar:
+  - type: section
+    link: /Web/Performance
+    title: Performance
+  - type: listSubPages
+    path: /Web/Performance/Guides
+    link: /Web/Performance/Guides
