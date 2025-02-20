@@ -48,7 +48,7 @@ The CSS fonts module also supports variable fonts. Unlike regular fonts, where e
 - {{cssxref("font-variant-position")}}
 - {{cssxref("font-variation-settings")}}
 
-The specification also defines the `font-width` property, which are not yet supported by any browser.
+The specification also defines the `font-width` property, which is not yet supported by any browser.
 
 ### At-rules and descriptors
 
