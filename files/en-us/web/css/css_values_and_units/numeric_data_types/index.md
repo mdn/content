@@ -1,6 +1,6 @@
 ---
 title: Numeric data types
-slug: Web/CSS/CSS_Values_and_Units/numeric_data_types
+slug: Web/CSS/CSS_Values_and_Units/Numeric_data_types
 page-type: guide
 spec-urls: https://drafts.csswg.org/css-values/
 ---
@@ -227,7 +227,7 @@ Some legacy functional notations, such as legacy syntax for `rgb()`, `rgba()`, `
 
 ## See also
 
-- [Textual data types](/en-US/docs/Web/CSS/CSS_Values_and_Units/Textual_Data_Types)
+- [Textual data types](/en-US/docs/Web/CSS/CSS_Values_and_Units/Textual_data_types)
 - [CSS data types](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)
 - [CSS values and units](/en-US/docs/Web/CSS/CSS_Values_and_Units) module
 - [Learn: Values and units](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units)

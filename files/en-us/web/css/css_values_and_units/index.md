@@ -148,25 +148,25 @@ Additional functions, including `calc-mix()`, `crossorigin()`, `first-valid()`, 
 - [`vw`](/en-US/docs/Web/CSS/length#vw)
 - [`x`](/en-US/docs/Web/CSS/length#x)
 
-[Flex units](/en-US/docs/Web/CSS/CSS_Values_and_Units/numeric_data_types#flex_units) (`fr`) and [container units](/en-US/docs/Web/CSS/CSS_Values_and_Units/numeric_data_types#container_units) (`cqb`,`cqh`,`cqi`,`cqmax`,`cqmin`,`cqw`) are defined in the [CSS flexible box layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout) and [CSS conditional rules](/en-US/docs/Web/CSS/CSS_conditional_rules) modules, respectively.
+[Flex units](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#flex_units) (`fr`) and [container units](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#container_units) (`cqb`,`cqh`,`cqi`,`cqmax`,`cqmin`,`cqw`) are defined in the [CSS flexible box layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout) and [CSS conditional rules](/en-US/docs/Web/CSS/CSS_conditional_rules) modules, respectively.
 
 #### Unit categorizations
 
-- [Absolute length units](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_Data_Types#absolute_length_units) (`cm`, `in`, `mm`, `pc`, `pt`, `px`, `Q`)
-- [Angle units](/en-US/docs/Web/CSS/CSS_Values_and_Units/numeric_data_types#angle_units) (`deg`, `grad`, `rad`, `turn`)
+- [Absolute length units](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#absolute_length_units) (`cm`, `in`, `mm`, `pc`, `pt`, `px`, `Q`)
+- [Angle units](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#angle_units) (`deg`, `grad`, `rad`, `turn`)
 - [Default viewport units](/en-US/docs/Web/CSS/length#default_viewport_units) (`vb` , `vh`, `vi` , `vmax`, `vmin`, `vw`)
 - [Dynamic viewport units](/en-US/docs/Web/CSS/length#dynamic_viewport_units) (`dvb`, `dvh`, `dvi`, `dvmax`, `dvmin`, `dvw`)
-- [Frequency units](/en-US/docs/Web/CSS/CSS_Values_and_Units/numeric_data_types#frequency_units) (`Hz`, `kHz`)
+- [Frequency units](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#frequency_units) (`Hz`, `kHz`)
 - [Large viewport-percentage units](/en-US/docs/Web/CSS/length#large_viewport_units) (`lvb`, `lvh`, `lvi`, `lvmax`, `lvmin`, `lvw`)
-- [Local font-relative length units](/en-US/docs/Web/CSS/CSS_Values_and_Units/numeric_data_types#local_font-relative_lengths) (`cap`, `ch` ,`em`, `ex`, `ic`, `lh`)
-- [Physical units](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_Data_Types#absolute_length_units) (`cm`, `in`, `mm`, `pc`, `pt`, `Q`)
-- [Relative length units](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_Data_Types) (`cap`, `ch`, `em`, `ex`, `ic`, `lh`, `rem`, `rlh`, `vb`, `vh`, `vi`, `vmax`, `vmin`, `vw`)
-- [Resolution units](/en-US/docs/Web/CSS/CSS_Values_and_Units/numeric_data_types#resolution_units) (`dpcm`, `dpi` , `dppx`, `x`)
-- [Root font-relative length units](/en-US/docs/Web/CSS/CSS_Values_and_Units/numeric_data_types#root_font-relative_lengths) (`rcap` ,`rch`, `rem`, `rex`, `ric`, `rlh`)
+- [Local font-relative length units](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#local_font-relative_lengths) (`cap`, `ch` ,`em`, `ex`, `ic`, `lh`)
+- [Physical units](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#absolute_length_units) (`cm`, `in`, `mm`, `pc`, `pt`, `Q`)
+- [Relative length units](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types) (`cap`, `ch`, `em`, `ex`, `ic`, `lh`, `rem`, `rlh`, `vb`, `vh`, `vi`, `vmax`, `vmin`, `vw`)
+- [Resolution units](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#resolution_units) (`dpcm`, `dpi` , `dppx`, `x`)
+- [Root font-relative length units](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#root_font-relative_lengths) (`rcap` ,`rch`, `rem`, `rex`, `ric`, `rlh`)
 - [Small viewport-percentage unit](/en-US/docs/Web/CSS/length#small_viewport_units) (`svb`, `svh`, `svi`, `svmax`, `svmin`, `svw`)
-- [Time units](/en-US/docs/Web/CSS/CSS_Values_and_Units/numeric_data_types#time_units) (`ms`, `s`)
-- [Viewport units](/en-US/docs/Web/CSS/CSS_Values_and_Units/numeric_data_types#viewport_units) (`dvh`, `dvw`, `lvh`, `lvw`, `svh`, `svw`, `vb` , `vh`, `vi` , `vmax`, `vmin`, `vw`)
-- [Visual angle unit](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_Data_Types#absolute_length_units) (`px`)
+- [Time units](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#time_units) (`ms`, `s`)
+- [Viewport units](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#viewport_units) (`dvh`, `dvw`, `lvh`, `lvw`, `svh`, `svw`, `vb` , `vh`, `vi` , `vmax`, `vmin`, `vw`)
+- [Visual angle unit](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#absolute_length_units) (`px`)
 
 ### Key concepts
 
@@ -180,10 +180,10 @@ Additional functions, including `calc-mix()`, `crossorigin()`, `first-valid()`, 
 - {{glossary("interpolation")}}
 - {{glossary("keyword")}}
 - [math function](/en-US/docs/Web/CSS/CSS_Functions/Using_CSS_math_functions)
-- [numeric data types](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_Data_Types)
+- [numeric data types](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types)
 - {{glossary("origin")}}
 - {{glossary("pixel")}}
-- [textual data types](/en-US/docs/Web/CSS/CSS_Values_and_Units/Textual_Data_Types)
+- [textual data types](/en-US/docs/Web/CSS/CSS_Values_and_Units/Textual_data_types)
 - {{glossary("URL")}}
 - [value definition syntax](/en-US/docs/Web/CSS/Value_definition_syntax)
 
@@ -193,11 +193,11 @@ Additional functions, including `calc-mix()`, `crossorigin()`, `first-valid()`, 
 
   - : Introduction to CSS data types that define typical values accepted by CSS properties and functions.
 
-- [Numeric data types](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_Data_Types)
+- [Numeric data types](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types)
 
   - : Overview of the numeric data types, including integers, numbers, percentages, and dimensions, along with relative and absolute dimensions, angles, and time units.
 
-- [Textual data types](/en-US/docs/Web/CSS/CSS_Values_and_Units/Textual_Data_Types)
+- [Textual data types](/en-US/docs/Web/CSS/CSS_Values_and_Units/Textual_data_types)
 
   - : Overview of the textual data types, including pre-defined keyword values, global CSS keyword values, and URLs.
 
@@ -227,11 +227,11 @@ Additional functions, including `calc-mix()`, `crossorigin()`, `first-valid()`, 
 - [CSS flexible box layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout) module
 
   - {{cssxref("&lt;flex&gt;")}}
-  - [Flex units](/en-US/docs/Web/CSS/CSS_Values_and_Units/numeric_data_types#flex_units) (`fr`)
+  - [Flex units](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#flex_units) (`fr`)
 
 - [CSS conditional rules](/en-US/docs/Web/CSS/CSS_conditional_rules) module
 
-  - [Container units](/en-US/docs/Web/CSS/CSS_Values_and_Units/numeric_data_types#container_units) (`cqb`,`cqh`,`cqi`,`cqmax`,`cqmin`,`cqw`)
+  - [Container units](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#container_units) (`cqb`,`cqh`,`cqi`,`cqmax`,`cqmin`,`cqw`)
 
 - [CSS colors](/en-US/docs/Web/CSS/CSS_colors) module
 

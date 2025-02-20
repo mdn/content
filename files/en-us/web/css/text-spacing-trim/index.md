@@ -175,5 +175,5 @@ p {
 
 ## See also
 
-- [`ic`](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_Data_Types#local_font-relative_lengths) and [`ric`](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_Data_Types#root_font-relative_lengths) units
+- [`ic`](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#local_font-relative_lengths) and [`ric`](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#root_font-relative_lengths) units
 - [CSS Text](/en-US/docs/Web/CSS/CSS_text) module

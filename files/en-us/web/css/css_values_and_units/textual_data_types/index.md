@@ -1,26 +1,18 @@
 ---
 title: Textual data types
-slug: Web/CSS/CSS_Values_and_Units/textual_data_types
+slug: Web/CSS/CSS_Values_and_Units/Textual_data_types
 page-type: guide
-spec-urls: https://drafts.csswg.org/css-values/
 ---
 
 {{CSSRef}}
 
 Every CSS declaration includes a property / value pair. Depending on the property, the value can include a single integer or keyword, to a series of keywords and values with or without units. There are a common set of data types — values and units — that CSS properties accept. Below is an overview of the textual data types. Refer to the page for each value type for more detailed information.
 
-## Textual data types
-
-- {{cssxref("&lt;custom-ident&gt;")}}
-- Pre-defined keywords as an `<ident>`
-- {{cssxref("&lt;string&gt;")}}
-- {{cssxref("url_value", "&lt;url&gt;")}}
-
-Text data types are either `<string>`, a quoted series of characters, or an `<ident>`, a "CSS Identifier" which is an unquoted string. A `<string>` must be quoted with either single or double quotes. CSS Identifiers, listed in the specifications as `<ident>` or `<custom-ident>`, must be unquoted.
+Text data types are either {{cssxref("&lt;string&gt;")}}, a quoted series of characters, an {{cssxref("&lt;ident&gt;")}}, a "CSS Identifier" which is an unquoted string, or an optionally quoted {{cssxref("url_value", "&lt;url&gt;")}}. A `<string>` is quoted with either single or double quotes. CSS identifiers, listed in the specifications as `<ident>` or {{cssxref("&lt;custom-ident&gt;")}}, must be unquoted.
 
 In the CSS specifications, values that can be defined by the web developer, like keyframe animations, font-family names, or grid areas are listed as a {{cssxref("&lt;custom-ident&gt;")}}, {{cssxref("&lt;string&gt;")}}, or both.
 
-When both quoted and unquoted user defined text values are permitted, the specification will list `<custom-ident> | <string>`, meaning quotes are optional, such as is the case with animation names:
+When both quoted and unquoted user defined text values are permitted, the specification will list `<custom-ident> | <string>`, meaning quotes are optional, such as is the case with [keyframe animation names]:
 
 ```css
 @keyframe validIdent {
@@ -49,11 +41,11 @@ In comparison, a data type that is a {{cssxref("&lt;string&gt;")}}, such as a st
 
 While you can generally create any name you want, including using emojis, the identifier can't be `none`, `unset`, `initial`, or `inherit`, start with a digit or two dashes, and generally you don't want it to be any other pre-defined CSS keyword. See the {{cssxref("&lt;custom-ident&gt;")}} and {{cssxref("&lt;string&gt;")}} reference pages for more details.
 
-### Pre-defined keyword values
+## Pre-defined keyword values
 
-Pre-defined keywords are text values defined by the specification for that property. These keywords are also CSS Identifiers and are therefore used without quotes.
+Pre-defined keywords are text values defined by the specification for that property. These keywords are also CSS identifiers, and are therefore used without quotes.
 
-When viewing CSS property value syntax in a CSS specification or the MDN property page, allowable keywords will be listed in the following form. The following values are the pre-defined keyword values allowed for {{cssxref("float")}}.
+When viewing CSS property value syntax in a CSS specification or the MDN property page, allowable keywords will be listed in the following form. The following {{glossary("enumerated")}} values are the pre-defined keyword values allowed for {{cssxref("float")}}.
 
 ```plain
 left | right | none | inline-start | inline-end
@@ -67,9 +59,9 @@ Such values are used without quotes:
 }
 ```
 
-### CSS-wide values
+## CSS-wide values
 
-In addition to the pre-defined keywords that are part of the specification for a property, all CSS properties accept the CSS-wide property values {{cssxref("initial")}}, {{cssxref("inherit")}}, {{cssxref("unset")}}, {{cssxref("revert")}}, and {{cssxref("revert-layer")}}, which explicitly specify defaulting behaviors.
+In addition to the pre-defined keywords that are part of the specification for a property, all CSS properties accept the CSS-wide, or "global", property values {{cssxref("initial")}}, {{cssxref("inherit")}}, {{cssxref("unset")}}, {{cssxref("revert")}}, and {{cssxref("revert-layer")}}, which explicitly specify defaulting behaviors.
 
 - {{cssxref("initial")}}
   - : Represents the value specified as the property's initial value.
@@ -82,7 +74,7 @@ In addition to the pre-defined keywords that are part of the specification for a
 - {{cssxref("revert-layer")}}
   - : Rolls back the value of a property in a [cascade layer](/en-US/docs/Web/CSS/@layer) to the value of the property in a CSS rule matching the element in a previous cascade layer. The value of the property with this keyword is recalculated as if no rules were specified on the target element in the current cascade layer.
 
-### URLs
+## URLs
 
 A {{cssxref("url_value", "&lt;url&gt;")}} type uses functional notation, which accepts a `<string>` that is a URL. This may be an absolute URL or a relative URL. For example, if you wanted to include a background image, you might use either of the following:
 
@@ -98,13 +90,10 @@ A {{cssxref("url_value", "&lt;url&gt;")}} type uses functional notation, which a
 
 The parameter for `url()` can be either quoted or unquoted. If unquoted, it is parsed as a `<url-token>`, which has extra requirements including the escaping of certain characters. See {{cssxref("url_value", "&lt;url&gt;")}} for more information.
 
-## Specifications
-
-{{Specifications}}
-
 ## See also
 
-- [Numeric data types](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_Data_Types)
+- [Numeric data types](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types)
 - [CSS data types](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)
 - [CSS values and units](/en-US/docs/Web/CSS/CSS_Values_and_Units) module
 - [Learn: Values and units](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
+- [CSS cascade and inheritance](/en-US/docs/Web/CSS/CSS_cascade) module
