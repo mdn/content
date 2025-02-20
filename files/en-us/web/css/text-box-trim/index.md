@@ -66,7 +66,7 @@ The actual amount of space trimmed is specified using the {{cssxref("text-box-ed
 
 ### Basic `text-box-trim` usage
 
-In the following example we set `text-box-edge: cap alphabetic` on two paragraphs, which trims the over edge to the top of the capital letters and the under edge flush with the text baseline.
+In the following example we set `text-box-edge: cap alphabetic` on two paragraphs, which trims the over edge of the text elements' block containers to the top of the capital letters and the under edge flush with the text baseline.
 
 We then set `text-box-trim` values of `trim-end` on the first one, and `trim-both` on the second one. This results in the first paragraph only having its under edge trimmed, whereas the second one has both the over _and_ under edge trimmed.
 

@@ -29,7 +29,7 @@ The `<text-edge>` data type is composed of one or two keywords representing spec
 ### Single keyword values
 
 - `text`
-  - : The font's over and under edges are its start and end boundaries, which include the font's ascenders and decenders but exclude the half-leading set on the text.
+  - : The font's over and under edges are its start and end boundaries: this includes the font's ascenders and decenders but excludes the half-leading set on the text.
 
 > [!NOTE]
 > The specification also defines the `ideographic` and `ideographic-ink` keywords, which are intended to specify over and under edge positions specific to [CJK language characters](https://en.wikipedia.org/wiki/CJK_characters). Currently their exact behavior is being debated and they are are not supported by any browser.
@@ -43,7 +43,7 @@ The `<text-edge>` data type is composed of one or two keywords representing spec
 - `ex`
   - : The font's over edge is its x-height baseline, which is the top of its short lower-case letters.
 - `text`
-  - : The font's over edge is its start boundary, or its under edge is its end boundary, depending on which edge the value is set for.
+  - : The font's over edge is its start boundary (includes the font's ascenders but excludes the over edge half-leading), or its under edge is its end boundary (includes the font's descenders but excludes the under edge half-leading), depending on which edge the value is set for.
 
 ## Examples
 

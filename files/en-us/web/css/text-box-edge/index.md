@@ -44,7 +44,7 @@ The `text-box-edge` property value is specified as `auto` or a {{cssxref("&lt;te
 - `auto`
   - : The default value. Equivalent to the `text-edge` value `text`.
 - {{cssxref("&lt;text-edge&gt;")}}
-  - : One or two separate keywords representing over and under edge positions to trim the font leading to.
+  - : One or two separate keywords representing over and under edge positions to trim the text element's block container to.
     - If two values are specified, the first value specifies the trimming behavior to apply to the block-start (over) edge of the text, and the second value specifies the trimming behavior to apply to the block-end (under) edge of the text.
       - Valid over edge trimming values: `text`, `cap`, and `ex`.
       - Valid under edge trimming values: `text` and `alphabetic`.
@@ -72,7 +72,7 @@ These properties make it much easier to control text spacing in the block direct
 
 ### Basic `text-box-edge` usage
 
-The most common `text-box-edge` values you'll use for horizontal {{cssxref("writing-mode")}} languages such as English or Arabic are `cap alphabetic` and `ex alphabetic`. The `cap` value trims the over edge to the top of the capital letters, whereas `ex` trims the over edge to the font's x-height (the top edge of the short lower-case letters). In each case, `alphabetic` trims the under-edge flush with the text baseline.
+The most common `text-box-edge` values you'll use for horizontal {{cssxref("writing-mode")}} languages such as English or Arabic are `cap alphabetic` and `ex alphabetic`. The `cap` value trims the over edge of the text element's block container to the top of the capital letters, whereas `ex` trims the over edge to the font's x-height (the top edge of the short lower-case letters). In each case, `alphabetic` trims the under-edge flush with the text baseline.
 
 In this example, we demonstrate the effect of both of these common values, on two {{htmlelement("p")}} elements. Additionally, a {{cssxref("text-box-trim")}} value of `trim-both` has been set on both of them, so that their start _and_ end edges are trimmed.
 
