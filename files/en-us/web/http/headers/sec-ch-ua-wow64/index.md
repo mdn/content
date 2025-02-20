@@ -4,7 +4,7 @@ slug: Web/HTTP/Headers/Sec-CH-UA-WoW64
 page-type: http-header
 status:
   - experimental
-spec-urls: https://wicg.github.io/ua-client-hints/#sec-ch-ua-wow64
+browser-compat: http.headers.Sec-CH-UA-WoW64
 ---
 
 {{HTTPSidebar}}{{SecureContext_Header}}

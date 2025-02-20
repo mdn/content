@@ -4,7 +4,7 @@ slug: Web/HTTP/Headers/Sec-CH-UA-Form-Factors
 page-type: http-header
 status:
   - experimental
-spec-urls: https://wicg.github.io/ua-client-hints/#sec-ch-ua-form-factors
+browser-compat: http.headers.Sec-CH-UA-Form-Factors
 ---
 
 {{HTTPSidebar}}{{SecureContext_Header}}
