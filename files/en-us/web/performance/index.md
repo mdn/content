@@ -12,11 +12,41 @@ The longer it takes for a site to respond, the more users will abandon the site.
 
 There are tools, APIs, and best practices that help us measure and improve web performance. We cover them in this section:
 
-## Key performance guides
+## Web performance guides
 
-{{SubpagesWithSummaries}}
+- [Animation performance and frame rate](/en-US/docs/Web/Performance/Guides/Animation_performance_and_frame_rate)
+  - : Animation on the web can be done via {{domxref('SVGAnimationElement', 'SVG')}}, {{domxref('window.requestAnimationFrame','JavaScript')}}, including {{htmlelement('canvas')}} and {{domxref('WebGL_API', 'WebGL')}}, CSS {{cssxref('animation')}}, {{htmlelement('video')}}, animated GIFs and even animated PNGs and other image types.
+    The performance cost of animating a CSS property can vary from one property to another, and animating expensive CSS properties can result in {{glossary('jank')}} as the browser struggles to hit a smooth {{glossary("FPS", "frame rate")}}.
+- [Critical rendering path](/en-US/docs/Web/Performance/Guides/Critical_rendering_path)
+  - : The Critical Rendering Path is the sequence of steps the browser goes through to convert the HTML, CSS, and JavaScript into pixels on the screen. Optimizing the critical render path improves render performance.
+    The critical rendering path includes the [Document Object Model](/en-US/docs/Web/API/Document_Object_Model) (DOM), [CSS Object Model](/en-US/docs/Web/API/CSS_Object_Model) (CSSOM), render tree and layout.
+- [CSS and JavaScript animation performance](/en-US/docs/Web/Performance/Guides/CSS_JavaScript_animation_performance)
+  - : Animations are critical for a pleasurable user experience on many applications. There are many ways to implement web animations, such as CSS {{cssxref("transition","transitions")}}/{{cssxref("animation","animations")}} or JavaScript-based animations (using {{domxref("Window.requestAnimationFrame","requestAnimationFrame()")}}). In this article, we analyze the performance differences between CSS-based and JavaScript-based animation.
+- [Using dns-prefetch](/en-US/docs/Web/Performance/Guides/dns-prefetch)
+  - : **`DNS-prefetch`** is an attempt to resolve domain names before resources get requested. This could be a file loaded later or link target a user tries to follow.
+- [Performance fundamentals](/en-US/docs/Web/Performance/Guides/Fundamentals)
+  - : Performance means efficiency. In the context of Open Web Apps, this document explains in general what performance is, how the browser platform helps improve it, and what tools and processes you can use to test and improve it.
+- [Populating the page: how browsers work](/en-US/docs/Web/Performance/Guides/How_browsers_work)
+  - : Users want web experiences with content that is fast to load and smooth to interact with. Therefore, a developer should strive to achieve these two goals.
+    To understand how to improve performance and perceived performance, it helps to understand how the browser works.
+- [Recommended Web Performance Timings: How long is too long?](/en-US/docs/Web/Performance/Guides/How_long_is_too_long)
+  - : There are no clear set rules as to what constitutes a slow pace when loading pages, but there are specific guidelines for indicating content will load (1 second), idling (50ms), animating (16.7ms) and responding to user input (50 to 200ms).
+- [Lazy loading](/en-US/docs/Web/Performance/Guides/Lazy_loading)
+  - : **Lazy loading** is a strategy to identify resources as non-blocking (non-critical) and load these only when needed. It's a way to shorten the length of the [critical rendering path](/en-US/docs/Web/Performance/Guides/Critical_rendering_path), which translates into reduced page load times.
+- [Navigation and resource timings](/en-US/docs/Web/Performance/Guides/Navigation_and_resource_timings)
+  - : **Navigation timings** are metrics measuring a browser's document navigation events. **Resource timings** are detailed network timing measurements regarding the loading of an application's resources. Both provide the same read-only properties, but navigation timing measures the main document's timings whereas the resource timing provides the times for all the assets or resources called in by that main document and the resources' requested resources.
+- [Optimizing startup performance](/en-US/docs/Web/Performance/Guides/Optimizing_startup_performance)
+  - : Improving your startup performance is often one of the highest value performance optimizations that can be made. How long does your app take to start up? Does it seem to lock up the device or the user's browser while the app loads? That makes users worry that your application has crashed, or that something else is wrong. Good user experience includes ensuring your app loads quickly. This article provides performance tips and suggestions for both writing new applications and porting applications to the web from other platforms.
+- [Performance budgets](/en-US/docs/Web/Performance/Guides/Performance_budgets)
+  - : A performance budget is a limit to prevent regressions. It can apply to a file, a file type, all files loaded on a page, a specific metric (e.g. [Time to Interactive](/en-US/docs/Glossary/Time_to_interactive)), a custom metric (e.g. Time to Hero Element), or a threshold over a period of time.
+- [Performance Monitoring: RUM vs. synthetic monitoring](/en-US/docs/Web/Performance/Guides/Rum-vs-Synthetic)
+  - : **Synthetic monitoring** and **real user monitoring (RUM)** are two approaches for monitoring and providing insight into web performance. RUM and synthetic monitoring provide for different views of performance and have benefits, good use cases and shortfalls. RUM is generally best suited for understanding long-term trends whereas synthetic monitoring is very well suited to regression testing and mitigating shorter-term performance issues during development. In this article we define and compare these two performance monitoring approaches.
+- [Speculative loading](/en-US/docs/Web/Performance/Guides/Speculative_loading)
+  - : **Speculative loading** refers to the practice of performing navigation actions (such as DNS fetching, fetching resources, or rendering documents) before the associated pages are actually visited, based on predictions as to what pages the user is most likely to visit next.
+- [Understanding latency](/en-US/docs/Web/Performance/Guides/Understanding_latency)
+  - : **Latency** is the time it takes for a packet of data to travel from source to a destination. In terms of performance optimization, it's important to optimize to reduce causes of latency and to test site performance emulating high latency to optimize for users with lousy connections. This article explains what latency is, how it impacts performance, how to measure latency, and how to reduce it.
 
-## Beginner's tutorials
+## Tutorials for beginners
 
 The MDN [Web Performance Learning Area](/en-US/docs/Learn_web_development/Extensions/Performance) contains modern, up-to-date tutorials covering Performance essentials. Start here if you are a newcomer to performance:
 

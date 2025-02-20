@@ -1,6 +1,6 @@
 ---
 title: Understanding latency
-slug: Web/Performance/Understanding_latency
+slug: Web/Performance/Guides/Understanding_latency
 page-type: guide
 ---
 

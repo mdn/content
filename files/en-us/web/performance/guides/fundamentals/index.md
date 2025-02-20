@@ -1,6 +1,6 @@
 ---
 title: Performance fundamentals
-slug: Web/Performance/Fundamentals
+slug: Web/Performance/Guides/Fundamentals
 page-type: guide
 ---
 
@@ -102,7 +102,7 @@ The Web platform is highly dynamic. JavaScript is a dynamically-typed language, 
 Another problem that can delay startup is idle time, caused by waiting for responses to requests (like database loads). To avoid this problem, applications should issue requests as early as possible in startup (this is called "front-loading"). Then when the data is needed later, hopefully it's already available and the application doesn't have to wait.
 
 > [!NOTE]
-> For much more information on improving startup performance, read [Optimizing startup performance](/en-US/docs/Web/Performance/Optimizing_startup_performance).
+> For much more information on improving startup performance, read [Optimizing startup performance](/en-US/docs/Web/Performance/Guides/Optimizing_startup_performance).
 
 On the same note, notice that locally-cached, static resources can be loaded much faster than dynamic data fetched over high-latency, low-bandwidth mobile networks. Network requests should never be on the critical path to early application startup. Local caching/offline apps can be achieved via [Service Workers](/en-US/docs/Web/API/Service_Worker_API). See [Offline and background operation](/en-US/docs/Web/Progressive_web_apps/Guides/Offline_and_background_operation) for a guide about using service workers for offline and background sync capabilities.
 

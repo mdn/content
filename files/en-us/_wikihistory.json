@@ -121996,11 +121996,11 @@
       "christopherwilson1"
     ]
   },
-  "Web/Performance/Animation_performance_and_frame_rate": {
+  "Web/Performance/Guides/Animation_performance_and_frame_rate": {
     "modified": "2019-12-19T10:15:55.245Z",
     "contributors": ["chrisdavidmills", "ElliotHawkins", "estelle"]
   },
-  "Web/Performance/CSS_JavaScript_animation_performance": {
+  "Web/Performance/Guides/CSS_JavaScript_animation_performance": {
     "modified": "2019-10-26T11:17:02.269Z",
     "contributors": [
       "leela52452",
@@ -122014,7 +122014,7 @@
       "MashKao"
     ]
   },
-  "Web/Performance/Critical_rendering_path": {
+  "Web/Performance/Guides/Critical_rendering_path": {
     "modified": "2020-03-17T21:07:35.050Z",
     "contributors": [
       "duongchiduc",
@@ -122026,7 +122026,7 @@
       "estelle"
     ]
   },
-  "Web/Performance/Fundamentals": {
+  "Web/Performance/Guides/Fundamentals": {
     "modified": "2020-02-29T08:23:04.473Z",
     "contributors": [
       "chrisdavidmills",
@@ -122051,7 +122051,7 @@
       "mingxinhe"
     ]
   },
-  "Web/Performance/How_browsers_work": {
+  "Web/Performance/Guides/How_browsers_work": {
     "modified": "2020-09-26T16:40:32.931Z",
     "contributors": [
       "chrisdavidmills",
@@ -122066,11 +122066,11 @@
       "andydavies"
     ]
   },
-  "Web/Performance/How_long_is_too_long": {
+  "Web/Performance/Guides/How_long_is_too_long": {
     "modified": "2019-12-19T10:57:35.679Z",
     "contributors": ["chrisdavidmills", "walonge", "estelle"]
   },
-  "Web/Performance/Lazy_loading": {
+  "Web/Performance/Guides/Lazy_loading": {
     "modified": "2020-08-31T09:44:55.538Z",
     "contributors": [
       "Malvoz",
@@ -122089,23 +122089,23 @@
       "garyvh2"
     ]
   },
-  "Web/Performance/Navigation_and_resource_timings": {
+  "Web/Performance/Guides/Navigation_and_resource_timings": {
     "modified": "2019-12-04T11:51:24.811Z",
     "contributors": ["hallb9", "estelle"]
   },
-  "Web/Performance/Optimizing_startup_performance": {
+  "Web/Performance/Guides/Optimizing_startup_performance": {
     "modified": "2020-10-06T08:30:52.483Z",
     "contributors": ["mpasierbski", "c-torres", "chrisdavidmills", "Sheppy"]
   },
-  "Web/Performance/Performance_budgets": {
+  "Web/Performance/Guides/Performance_budgets": {
     "modified": "2019-12-03T19:40:16.999Z",
     "contributors": ["hallb9", "TimmersThomas", "alfredolopez", "estelle"]
   },
-  "Web/Performance/Rum-vs-Synthetic": {
+  "Web/Performance/Guides/Rum-vs-Synthetic": {
     "modified": "2019-11-20T12:16:41.850Z",
     "contributors": ["stefanboeck", "fabkrum", "estelle", "TheBox193"]
   },
-  "Web/Performance/Understanding_latency": {
+  "Web/Performance/Guides/Understanding_latency": {
     "modified": "2019-12-19T10:06:28.250Z",
     "contributors": [
       "chrisdavidmills",
@@ -122115,7 +122115,7 @@
       "irenesmith"
     ]
   },
-  "Web/Performance/dns-prefetch": {
+  "Web/Performance/Guides/dns-prefetch": {
     "modified": "2019-12-19T09:52:53.543Z",
     "contributors": ["chrisdavidmills", "estelle", "dkreitschmann", "mojosam"]
   },

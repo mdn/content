@@ -1,6 +1,6 @@
 ---
 title: CSS and JavaScript animation performance
-slug: Web/Performance/CSS_JavaScript_animation_performance
+slug: Web/Performance/Guides/CSS_JavaScript_animation_performance
 page-type: guide
 ---
 

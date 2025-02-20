@@ -1,6 +1,6 @@
 ---
 title: "Performance Monitoring: RUM vs. synthetic monitoring"
-slug: Web/Performance/Rum-vs-Synthetic
+slug: Web/Performance/Guides/Rum-vs-Synthetic
 page-type: guide
 ---
 

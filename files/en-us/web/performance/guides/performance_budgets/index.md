@@ -1,6 +1,6 @@
 ---
 title: Performance budgets
-slug: Web/Performance/Performance_budgets
+slug: Web/Performance/Guides/Performance_budgets
 page-type: guide
 ---
 

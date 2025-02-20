@@ -1,6 +1,6 @@
 ---
 title: Animation performance and frame rate
-slug: Web/Performance/Animation_performance_and_frame_rate
+slug: Web/Performance/Guides/Animation_performance_and_frame_rate
 page-type: guide
 ---
 

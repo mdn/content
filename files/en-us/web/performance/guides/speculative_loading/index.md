@@ -1,6 +1,6 @@
 ---
 title: Speculative loading
-slug: Web/Performance/Speculative_loading
+slug: Web/Performance/Guides/Speculative_loading
 page-type: guide
 ---
 
@@ -66,7 +66,7 @@ For example:
 ```
 
 > [!NOTE]
-> See [Using dns-prefetch](/en-US/docs/Web/Performance/dns-prefetch) for more details.
+> See [Using dns-prefetch](/en-US/docs/Web/Performance/Guides/dns-prefetch) for more details.
 
 ### `<link rel="preload">`
 

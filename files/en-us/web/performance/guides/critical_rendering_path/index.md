@@ -1,6 +1,6 @@
 ---
 title: Critical rendering path
-slug: Web/Performance/Critical_rendering_path
+slug: Web/Performance/Guides/Critical_rendering_path
 page-type: guide
 ---
 

@@ -1,13 +1,13 @@
 ---
 title: Lazy loading
-slug: Web/Performance/Lazy_loading
+slug: Web/Performance/Guides/Lazy_loading
 page-type: guide
 spec-urls: https://html.spec.whatwg.org/multipage/#lazy-loading-attributes
 ---
 
 {{QuickLinksWithSubPages("Web/Performance")}}
 
-**Lazy loading** is a strategy to identify resources as non-blocking (non-critical) and load these only when needed. It's a way to shorten the length of the [critical rendering path](/en-US/docs/Web/Performance/Critical_rendering_path), which translates into reduced page load times.
+**Lazy loading** is a strategy to identify resources as non-blocking (non-critical) and load these only when needed. It's a way to shorten the length of the [critical rendering path](/en-US/docs/Web/Performance/Guides/Critical_rendering_path), which translates into reduced page load times.
 
 Lazy loading can occur on different moments in the application, but it typically happens on some user interactions such as scrolling and navigation.
 
@@ -16,7 +16,7 @@ Lazy loading can occur on different moments in the application, but it typically
 As the web has evolved, we have come to see huge increases in the number and size of assets sent to users.
 Between 2011 and 2019, the median resource weight increased from **\~100KB** to **\~400KB** for desktop and **\~50KB** to **\~350KB** for mobile. While Image size has increased from **\~250KB** to **\~900KB** on desktop and **\~100KB** to **\~850KB** on mobile.
 
-One of the methods we can use to tackle this problem is to shorten the [Critical Rendering Path](/en-US/docs/Web/Performance/Critical_rendering_path) length by lazy loading resources that are not critical for the first render to happen.
+One of the methods we can use to tackle this problem is to shorten the [Critical Rendering Path](/en-US/docs/Web/Performance/Guides/Critical_rendering_path) length by lazy loading resources that are not critical for the first render to happen.
 A practical example would be when you land on the home page of an e-commerce site with a link to a cart page/section, and none of the cart page's resources (such as JavaScript, CSS, and images) are downloaded **until** you navigate there.
 
 ## Strategies
@@ -40,7 +40,7 @@ Any script tag with `type="module"` is treated as a [JavaScript module](/en-US/d
 
 ### CSS
 
-By default, CSS is treated as a [render blocking](/en-US/docs/Web/Performance/Critical_rendering_path) resource, so the browser won't render any processed content until the [CSSOM](/en-US/docs/Web/API/CSS_Object_Model) is constructed. CSS must be thin, delivered as quickly as possible, and the usage media types and queries are advised to unblock rendering.
+By default, CSS is treated as a [render blocking](/en-US/docs/Web/Performance/Guides/Critical_rendering_path) resource, so the browser won't render any processed content until the [CSSOM](/en-US/docs/Web/API/CSS_Object_Model) is constructed. CSS must be thin, delivered as quickly as possible, and the usage media types and queries are advised to unblock rendering.
 
 ```html
 <link href="style.css" rel="stylesheet" media="all" />
@@ -60,7 +60,7 @@ See also: [Element Link](/en-US/docs/Web/HTML/Element/link).
 
 ### Images and iframes
 
-Very often, webpages contain many images that contribute to data-usage and how fast a page can load. Most of those images are off-screen ([non-critical](/en-US/docs/Web/Performance/Critical_rendering_path)), requiring a user interaction, like scrolling, in order to view them.
+Very often, webpages contain many images that contribute to data-usage and how fast a page can load. Most of those images are off-screen ([non-critical](/en-US/docs/Web/Performance/Guides/Critical_rendering_path)), requiring a user interaction, like scrolling, in order to view them.
 
 #### Loading attribute
 

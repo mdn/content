@@ -1,6 +1,6 @@
 ---
 title: Using dns-prefetch
-slug: Web/Performance/dns-prefetch
+slug: Web/Performance/Guides/dns-prefetch
 page-type: guide
 ---
 

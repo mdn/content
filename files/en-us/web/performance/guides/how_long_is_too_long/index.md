@@ -1,6 +1,6 @@
 ---
 title: "Recommended Web Performance Timings: How long is too long?"
-slug: Web/Performance/How_long_is_too_long
+slug: Web/Performance/Guides/How_long_is_too_long
 page-type: guide
 ---
 
@@ -12,7 +12,7 @@ There are no clear set rules as to what constitutes a slow pace when loading pag
 
 The 'Under a second' is often touted as optimal for load, but what does that mean? A second should be considered a rule in the maximum amount of time to indicate to a user that the request for new content was made and will load, such as the browser displaying the page title and the background color of the page displaying.
 
-The first asset retrieved from a request is usually an HTML document, which then makes calls for additional assets. As noted in the description of the [critical rendering path](/en-US/docs/Web/Performance/Critical_rendering_path), when received, browsers immediately start processing the HTML, rendering the content as it is received rather than waiting for additional assets to load.
+The first asset retrieved from a request is usually an HTML document, which then makes calls for additional assets. As noted in the description of the [critical rendering path](/en-US/docs/Web/Performance/Guides/Critical_rendering_path), when received, browsers immediately start processing the HTML, rendering the content as it is received rather than waiting for additional assets to load.
 
 Yes, one second for loading is a goal, but it's something few sites achieve. Expectations differ. A 'hello world' on the corporate network would be expected to load in milliseconds, but a user downloading a cat video on a five-year-old device over an edge network in northern Siberia would likely find a 20-second download speedy. If you wait three or four seconds without communicating to the user that a load is happening and showing some progress, the typical site will lose potential visitors, and those visitors will take a long time to come back if they ever do.
 

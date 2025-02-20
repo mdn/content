@@ -4,6 +4,19 @@ sidebar:
   - type: section
     link: /Web/Performance
     title: Performance
-  - type: listSubPages
-    path: /Web/Performance/Guides
+  - type: section
     link: /Web/Performance/Guides
+  - /Web/Performance/Guides/Animation_performance_and_frame_rate
+  - /Web/Performance/Guides/Critical_rendering_path
+  - /Web/Performance/Guides/CSS_JavaScript_animation_performance
+  - /Web/Performance/Guides/dns-prefetch
+  - /Web/Performance/Guides/Fundamentals
+  - /Web/Performance/Guides/How_browsers_work
+  - /Web/Performance/Guides/How_long_is_too_long
+  - /Web/Performance/Guides/Lazy_loading
+  - /Web/Performance/Guides/Navigation_and_resource_timings
+  - /Web/Performance/Guides/Optimizing_startup_performance
+  - /Web/Performance/Guides/Performance_budgets
+  - /Web/Performance/Guides/Rum-vs-Synthetic
+  - /Web/Performance/Guides/Speculative_loading
+  - /Web/Performance/Guides/Understanding_latency
