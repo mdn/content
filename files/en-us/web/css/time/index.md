@@ -58,4 +58,4 @@ The `<time>` data type consists of a {{cssxref("&lt;number&gt;")}} followed by o
 ## See also
 
 - {{cssxref("&lt;time-percentage&gt;")}}
-- [CSS Values and Units](/en-US/docs/Web/CSS/CSS_Values_and_Units)
+- [CSS values and units](/en-US/docs/Web/CSS/CSS_Values_and_Units) module
