@@ -14,7 +14,7 @@ Several [functions](#functions), such as `blur()` and `contrast()`, are availabl
 {{InteractiveExample("CSS Demo: filter")}}
 
 ```css interactive-example-choice
-filter: url("../../shared-assets/images/examples/shadow.svg#element-id");
+filter: url("/shared-assets/images/examples/shadow.svg#element-id");
 ```
 
 ```css interactive-example-choice
@@ -41,7 +41,7 @@ filter: drop-shadow(16px 16px 20px red) invert(75%);
 <div class="example-container">
   <img
     id="example-element"
-    src="../../shared-assets/images/examples/firefox-logo.svg"
+    src="/shared-assets/images/examples/firefox-logo.svg"
     width="200" />
 </div>
 ```

@@ -31,7 +31,7 @@ mix-blend-mode: difference;
 <div class="example-container">
   <img
     id="example-element"
-    src="../../shared-assets/images/examples/firefox-logo.svg"
+    src="/shared-assets/images/examples/firefox-logo.svg"
     width="200" />
 </div>
 ```

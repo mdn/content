@@ -22,7 +22,7 @@ isolation: isolate;
 ```html interactive-example
 <div class="background-container">
   <div id="example-element">
-    <img src="../../shared-assets/images/examples/firefox-logo.svg" />
+    <img src="/shared-assets/images/examples/firefox-logo.svg" />
     <p><code>mix-blend-mode: multiply;</code></p>
   </div>
 </div>

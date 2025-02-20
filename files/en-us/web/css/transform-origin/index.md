@@ -34,7 +34,7 @@ transform-origin: bottom right 60px;
   <img
     alt=""
     id="crosshair"
-    src="../../shared-assets/images/examples/crosshair.svg"
+    src="/shared-assets/images/examples/crosshair.svg"
     width="24px" />
   <div id="static-element"></div>
 </div>

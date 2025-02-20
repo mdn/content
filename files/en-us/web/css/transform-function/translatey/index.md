@@ -32,12 +32,12 @@ transform: translateY(3ch);
 <img
   class="transition-all"
   id="static-element"
-  src="../../shared-assets/images/examples/firefox-logo.svg"
+  src="/shared-assets/images/examples/firefox-logo.svg"
   width="200" />
 <img
   class="transition-all"
   id="example-element"
-  src="../../shared-assets/images/examples/firefox-logo.svg"
+  src="/shared-assets/images/examples/firefox-logo.svg"
   width="200" />
 ```
 

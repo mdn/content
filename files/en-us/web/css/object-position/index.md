@@ -33,7 +33,7 @@ object-position: 250px 125px;
 <img
   class="transition-all"
   id="example-element"
-  src="../../shared-assets/images/examples/moon.jpg" />
+  src="/shared-assets/images/examples/moon.jpg" />
 ```
 
 ```css interactive-example

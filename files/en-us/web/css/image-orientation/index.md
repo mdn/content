@@ -23,7 +23,7 @@ image-orientation: from-image;
 <img
   class="transition-all"
   id="example-element"
-  src="../../shared-assets/images/examples/hummingbird.jpg" />
+  src="/shared-assets/images/examples/hummingbird.jpg" />
 ```
 
 ```css interactive-example

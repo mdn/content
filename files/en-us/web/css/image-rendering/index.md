@@ -31,7 +31,7 @@ image-rendering: pixelated;
 <img
   class="transition-all"
   id="example-element"
-  src="../../shared-assets/images/examples/lizard.png" />
+  src="/shared-assets/images/examples/lizard.png" />
 ```
 
 ```css interactive-example

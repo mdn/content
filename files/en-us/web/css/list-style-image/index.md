@@ -14,7 +14,7 @@ It is often more convenient to use the shorthand {{ cssxref("list-style") }}.
 {{InteractiveExample("CSS Demo: list-style-image")}}
 
 ```css interactive-example-choice
-list-style-image: url("../../shared-assets/images/examples/rocket.svg");
+list-style-image: url("/shared-assets/images/examples/rocket.svg");
 ```
 
 ```css interactive-example-choice

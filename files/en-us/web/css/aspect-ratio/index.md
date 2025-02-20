@@ -34,7 +34,7 @@ aspect-ratio: 0.5;
   class="transition-all"
   height="640"
   id="example-element"
-  src="../../shared-assets/images/examples/plumeria.jpg"
+  src="/shared-assets/images/examples/plumeria.jpg"
   width="466" />
 ```
 

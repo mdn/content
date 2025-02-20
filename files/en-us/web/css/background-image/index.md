@@ -12,25 +12,25 @@ The **`background-image`** [CSS](/en-US/docs/Web/CSS) property sets one or more 
 {{InteractiveExample("CSS Demo: background-image")}}
 
 ```css interactive-example-choice
-background-image: url("../../shared-assets/images/examples/lizard.png");
+background-image: url("/shared-assets/images/examples/lizard.png");
 ```
 
 ```css interactive-example-choice
 background-image:
-  url("../../shared-assets/images/examples/lizard.png"),
-  url("../../shared-assets/images/examples/star.png");
+  url("/shared-assets/images/examples/lizard.png"),
+  url("/shared-assets/images/examples/star.png");
 ```
 
 ```css interactive-example-choice
 background-image:
-  url("../../shared-assets/images/examples/star.png"),
-  url("../../shared-assets/images/examples/lizard.png");
+  url("/shared-assets/images/examples/star.png"),
+  url("/shared-assets/images/examples/lizard.png");
 ```
 
 ```css interactive-example-choice
 background-image:
   linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)),
-  url("../../shared-assets/images/examples/lizard.png");
+  url("/shared-assets/images/examples/lizard.png");
 ```
 
 ```html interactive-example

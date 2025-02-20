@@ -40,7 +40,7 @@ object-fit: scale-down;
 <img
   class="transition-all"
   id="example-element"
-  src="../../shared-assets/images/examples/plumeria-146x200.jpg" />
+  src="/shared-assets/images/examples/plumeria-146x200.jpg" />
 ```
 
 ```css interactive-example
