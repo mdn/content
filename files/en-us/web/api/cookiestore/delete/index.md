@@ -100,9 +100,8 @@ async function getCookieNames() {
 
 #### JavaScript
 
-The code first sets two cookies (which we then use to demonstrate deletion).
-
-We then list the names of both cookies (code for getting the cookie names not shown), delete one of the cookies, and then list all cooking names again.
+The code first sets two cookies.
+We then list the names of both cookies (code for getting the cookie names not shown), delete one of the cookies, and then list all cookie names again.
 
 ```js
 async function cookieTest() {

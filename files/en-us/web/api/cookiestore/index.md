@@ -33,7 +33,7 @@ The `CookieStore` is accessed via attributes in the global scope in a {{domxref(
 
 ### Setting cookies
 
-The following example sets cookie by passing a `name` and `value` and then by setting an options value.
+The following example sets cookies by passing a `name` and `value` and then by setting an `options` value.
 
 ```html hidden
 <button id="showCookies" type="button">Show cookies</button>
@@ -82,7 +82,7 @@ function logCookie(name, cookie) {
 
 The example code sets two cookies, the first using `name` and `value` parameters, and the second using an "options" object with `name`, `value`, `expires`, and `partitioned` properties set.
 
-The {{apiref("CookieStore.get()")}} method is then used to get the cookies, which are then logged.
+We then use the {{domxref("CookieStore.get()")}} method to get the cookies, which are then logged.
 
 ```js
 async function cookieTest() {
@@ -177,10 +177,10 @@ function logCookie(name, cookie) {
 
 #### JavaScript
 
-The example code first sets a number of cookies that we'll use for demonstrating the get methods.
+The example code first sets three cookies that we'll use for demonstrating the get methods.
 
 First it creates `cookie1` and `cookie2` using the {{domxref("CookieStore.set()")}} method.
-Then it creates a couple of using the older synchronous {{domxref("Document.cookie")}} property (just so we can show that these are also fetched using our get methods)
+Then it creates a third cookie using the older synchronous {{domxref("Document.cookie")}} property (just so we can show that these are also fetched using the `get()` and `getAll()` methods).
 
 The code then uses {{domxref("CookieStore.get()")}} to fetch "cookie1" and log its properties and {{domxref("CookieStore.getAll()")}} (without arguments) to fetch all cookies in the current context.
 
@@ -238,7 +238,7 @@ Press **Show cookies** to set the cookies and then display them in the log below
 
 ### Delete a named cookie
 
-In this example, a cookie is deleted by passing its name to the `delete()` method.
+In this example, we delete a cookie by passing its name to the {{domxref("CookieStore.delete()","delete()")}} method.
 
 ```html hidden
 <button id="showCookies" type="button">Show cookies</button>
@@ -286,7 +286,7 @@ async function getCookieNames() {
 
 The code first sets two cookies (which we then use to demonstrate deletion).
 
-We then list the names of both cookies (code for getting the cookie names not shown), delete one of the cookies, and then list all cooking names again.
+We then list the names of both cookies (code for getting the cookie names not shown), delete one of the cookies, and then list all cookie names again.
 
 ```js
 async function cookieTest() {
