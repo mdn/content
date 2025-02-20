@@ -37,14 +37,15 @@ The same `value` that was passed in.
 
 ### Using use()
 
-This function reads a file and returns its contents. The file handle is automatically closed when the function completes, assuming the `FileHandle` class implements an `[Symbol.asyncDispose]()` method that asynchronously closes the file.
+This function reads a file (as a Node.js [`FileHandle`](https://nodejs.org/api/fs.html#class-filehandle)) and returns its contents. The file handle is automatically closed when the function completes, given that the `FileHandle` class implements an `[Symbol.asyncDispose]()` method that asynchronously closes the file.
 
 ```js
 async function readFileContents(path) {
   await using stack = new AsyncDisposableStack();
-  const handle = stack.use(new FileHandle(path));
+  const handle = stack.use(fs.open(path));
   const data = await handle.read();
   return data;
+  // The stack is disposed here, which causes handle to be closed too
 }
 ```
 

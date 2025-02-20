@@ -61,6 +61,7 @@ doSomething();
 
 ## See also
 
+- [Polyfill of `Iterator.prototype[Symbol.dispose]` in `core-js`](https://github.com/zloirock/core-js#explicit-resource-management)
 - [JavaScript resource management](/en-US/docs/Web/JavaScript/Guide/Resource_management)
 - {{jsxref("Symbol.dispose")}}
 - {{jsxref("Statements/using", "using")}}

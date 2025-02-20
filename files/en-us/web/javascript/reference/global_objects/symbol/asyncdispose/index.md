@@ -29,29 +29,7 @@ An object is async disposable if it has the `[Symbol.asyncDispose]()` method. Th
 
 `[Symbol.asyncDispose]` allows the creation of custom async disposables. See the `await using` reference for more information.
 
-```js
-class FileHandle {
-  #fd;
-  constructor(path) {
-    this.#fd = fs.open(path);
-  }
-  async write(text) {
-    await fs.write(this.#fd, text);
-  }
-  async [Symbol.asyncDispose]() {
-    await fs.close(this.#fd);
-  }
-}
-
-async function doTask() {
-  await using log = new FileHandle("./log.txt");
-  doSomething();
-  await log.write("Did something");
-  doSomethingElse();
-  await log.write("Did something else");
-  // [Symbol.asyncDispose]() automatically called at the end of this function
-}
-```
+TODO
 
 ## Specifications
 
@@ -63,6 +41,7 @@ async function doTask() {
 
 ## See also
 
+- [Polyfill of `Symbol.asyncDispose` in `core-js`](https://github.com/zloirock/core-js#explicit-resource-management)
 - [JavaScript resource management](/en-US/docs/Web/JavaScript/Guide/Resource_management)
 - {{jsxref("Symbol.dispose")}}
 - {{jsxref("Statements/await_using", "await using")}}
