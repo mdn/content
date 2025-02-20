@@ -16,7 +16,7 @@ This is an asynchronous method that returns a {{JSxRef("Promise")}}.
 ## Syntax
 
 ```js-nolint
-const resettingWorldConfiguration = await browser.userScripts.resetWorldConfiguration(
+let resettingWorldConfiguration = browser.userScripts.resetWorldConfiguration(
   worldId       // optional string
 );
 ```

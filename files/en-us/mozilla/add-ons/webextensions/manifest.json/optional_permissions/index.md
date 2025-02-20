@@ -88,6 +88,7 @@ The optional API permissions are:
 - `tabHide`
 - `tabs`
 - `topSites`
+- 'userScripts' ([optional-only](#optional-only_permissions))
 - `webNavigation`
 - `webRequest`
 - `webRequestBlocking`

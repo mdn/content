@@ -14,7 +14,7 @@ This is an asynchronous method that returns a {{JSxRef("Promise")}}.
 ## Syntax
 
 ```js-nolint
-const registeredUserScript = await browser.userScripts.register(
+let registeredUserScript = browser.userScripts.register(
   scripts       // object
 )
 ```

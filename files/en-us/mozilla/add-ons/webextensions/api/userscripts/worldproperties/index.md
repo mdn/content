@@ -7,7 +7,7 @@ browser-compat: webextensions.api.userScripts.WorldProperties
 
 {{AddonSidebar}}
 
-The configuration of a `USER_SCRIPT` execution environment.
+The configuration of a `USER_SCRIPT` execution environment. Used in {{WebExtAPIRef("userScripts.configureWorld")}} and {{WebExtAPIRef("userScripts.getWorldConfigurations")}}.
 
 ## Type
 

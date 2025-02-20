@@ -23,11 +23,13 @@ To use this API, you need the `userScripts` permission and `host_permissions` fo
 
 ## Execution worlds
 
-When registering a user script (using {{WebExtAPIRef("userScripts.register()")}}) your extension can run it in an isolated `USER_SCRIPT` world or the `MAIN` world.
+When a user script is registered or updated (using {{WebExtAPIRef("userScripts.register()")}} or {{WebExtAPIRef("userScripts.update()")}}), your extension can set it to run in an isolated `USER_SCRIPT` world or the `MAIN` world.
 
 The isolated `USER_SCRIPT` world provides an execution environment that isn't accessible to a host page or other extensions. This means a user script can change its JavaScript environment without affecting the host page or other extensions' user and content scripts. In this environment, user scripts aren't visible to the host page or other extensions' user and content scripts. The API also enables an extension to configure a content security policy (CSP) for the `USER_SCRIPT` world using {{WebExtAPIRef("userScripts.configureWorld()")}}.
 
 In the `MAIN` world, host pages and other extensions can see and access running user scripts.
+
+These execution world values are defined in {{WebExtAPIRef("userScripts.ExecutionWorld","ExecutionWorld")}}.
 
 ## Messaging
 
@@ -85,4 +87,4 @@ When an extension updates, user scripts are cleared. To restore scripts, add cod
 
 ## See also
 
-- {{WebExtAPIRef("contentScripts","browser.contentScripts")}}
+- {{WebExtAPIRef("scripting","browser.scripting")}}

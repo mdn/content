@@ -7,7 +7,7 @@ browser-compat: webextensions.api.userScripts.RegisteredUserScript
 
 {{AddonSidebar}}
 
-An object representing registered user scripts.
+An object representing registered user scripts. Returned by {{WebExtAPIRef("userScripts.getScripts","getScripts()")}} and used as input to {{WebExtAPIRef("userScripts.register","register()")}} and {{WebExtAPIRef("userScripts.update","update()")}}.
 
 ## Type
 

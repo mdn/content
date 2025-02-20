@@ -14,7 +14,7 @@ This is an asynchronous method that returns a {{JSxRef("Promise")}}.
 ## Syntax
 
 ```js-nolint
-const updatingUserScript = await browser.userScripts.update(
+let updatingUserScript = browser.userScripts.update(
   scripts       // array of objects
 );
 ```
