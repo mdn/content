@@ -25,8 +25,7 @@ getComputedStyle(element, pseudoElt)
 ### Parameters
 
 - `element`
-  - : The {{DOMxRef("Element")}} for which to get the computed style. Non-elements, like a
-    {{DOMxRef("Text")}} node, will throw an error.
+  - : The {{DOMxRef("Element")}} for which to get the computed style. Non-elements, like a {{DOMxRef("Text")}} node, will throw an error.
 - `pseudoElt` {{optional_inline}}
   - : A string specifying the pseudo-element to match. Omitted (or `null`) for
     real elements.
@@ -43,9 +42,7 @@ Note that:
 - In Firefox, properties with the value `auto` return the used value, not the value `auto`. So if you apply `top:auto` and `bottom:0` on an element with `height:30px` and a containing block of `height:100px`, Firefox's computed style for `top` returns `70px`, as 100 − 30 = 70.
 - For compatibility reasons, serialized color values are expressed as [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb) colors if the alpha channel value is exactly `1`, and `rgba()` colors otherwise. In both cases, legacy syntax is used, with commas as separators (for example `rgb(255, 0, 0)`).
 
-The returned object is the same {{DOMxRef("CSSStyleDeclaration")}} type as the object
-returned from the element's {{DOMxRef("HTMLElement/style", "style")}} property. However,
-the two objects have different purposes:
+The returned object is the same {{DOMxRef("CSSStyleDeclaration")}} type as the object returned from the element's {{DOMxRef("HTMLElement/style", "style")}} property. However, the two objects have different purposes:
 
 - The object from `getComputedStyle` is read-only, and should be used to inspect the element's style — including those set by a `<style>` element or an external stylesheet.
 - The `element.style` object should be used to **set** styles on that element, or inspect styles directly added to it from JavaScript manipulation or the global `style` attribute.
@@ -106,7 +103,7 @@ para.textContent =
 
 #### Result
 
-{{EmbedLiveSample('Examples', '100%', '240px')}}
+{{EmbedLiveSample('retrieving_computed_styles', '100%', '240px')}}
 
 ### Use with pseudo-elements
 
