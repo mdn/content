@@ -6,13 +6,13 @@ page-type: guide
 
 {{CSSRef}}
 
-Every CSS declaration includes a property / value pair. Depending on the property, the value can include a single integer or keyword, to a series of keywords and values with or without units. There are a common set of data types — values and units — that CSS properties accept. Below is an overview of the textual data types. Refer to the page for each value type for more detailed information.
+Every CSS declaration consists of a property/value pair. The value can take various forms depending on the property, such as a single keyword, integer, function, or a combination of different items; some values have units, while others do not. This guide provides an overview of the textual data types. Refer to the page for each value type for more detailed information.
 
 Text data types are either {{cssxref("&lt;string&gt;")}}, a quoted series of characters, an {{cssxref("&lt;ident&gt;")}}, a "CSS Identifier" which is an unquoted string, or an optionally quoted {{cssxref("url_value", "&lt;url&gt;")}}. A `<string>` is quoted with either single or double quotes. CSS identifiers, listed in the specifications as `<ident>` or {{cssxref("&lt;custom-ident&gt;")}}, must be unquoted.
 
-In the CSS specifications, values that can be defined by the web developer, like keyframe animations, font-family names, or grid areas are listed as a {{cssxref("&lt;custom-ident&gt;")}}, {{cssxref("&lt;string&gt;")}}, or both.
+In CSS specifications, values that can be defined by the web developer — such as keyframe animation names, font-family names, or grid areas — are listed as a {{cssxref("&lt;custom-ident&gt;")}}, {{cssxref("&lt;string&gt;")}}, or both.
 
-When both quoted and unquoted user defined text values are permitted, the specification will list `<custom-ident> | <string>`, meaning quotes are optional, such as is the case with [keyframe animation names]:
+When both quoted and unquoted user-defined text values are permitted, the specification will list `<custom-ident> | <string>`, meaning quotes are optional, such as is the case with [keyframe animation names]:
 
 ```css
 @keyframe validIdent {
@@ -70,7 +70,7 @@ In addition to the pre-defined keywords that are part of the specification for a
 - {{cssxref("unset")}}
   - : Acts as either `inherit` or `initial`, depending on whether the property is inherited or not.
 - {{cssxref("revert")}}
-  - : Resets the property to its inherited value if it inherits from its parent or to the default value established by the user agent's stylesheet (or by user styles, if any exist).
+  - : Resets the property to its inherited value if it inherits from its parent or to the default value established by the user agent's stylesheet (or by user styles if any exist).
 - {{cssxref("revert-layer")}}
   - : Rolls back the value of a property in a [cascade layer](/en-US/docs/Web/CSS/@layer) to the value of the property in a CSS rule matching the element in a previous cascade layer. The value of the property with this keyword is recalculated as if no rules were specified on the target element in the current cascade layer.
 
@@ -88,7 +88,7 @@ A {{cssxref("url_value", "&lt;url&gt;")}} type uses functional notation, which a
 }
 ```
 
-The parameter for `url()` can be either quoted or unquoted. If unquoted, it is parsed as a `<url-token>`, which has extra requirements including the escaping of certain characters. See {{cssxref("url_value", "&lt;url&gt;")}} for more information.
+The parameter for `url()` can be either quoted or unquoted. If unquoted, it is parsed as a `<url-token>`, which has extra requirements including escaping certain characters. See {{cssxref("url_value", "&lt;url&gt;")}} for more information.
 
 ## See also
 
