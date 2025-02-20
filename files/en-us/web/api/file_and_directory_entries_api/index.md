@@ -22,7 +22,7 @@ There are two ways to get access to file systems defined in the current specific
 
 The original File System API was created to let browsers implement support for accessing a sandboxed virtual file system on the user's storage device. Work to standardize the specification was abandoned back in 2012, but by that point, Google Chrome included its own implementation of the API. Over time, a number of popular sites and Web applications came to use it, often without providing any means of falling back to standard APIs or even checking to be sure the API is available before using it. Mozilla instead opted to implement other APIs which can be used to solve many of the same problems, such as [IndexedDB](/en-US/docs/Web/API/IndexedDB_API); see the blog post [Why no FileSystem API in Firefox?](https://hacks.mozilla.org/2012/07/why-no-filesystem-api-in-firefox/) for more insights.
 
-As a result, a number of popular websites did not work properly on browsers other than Chrome. To resolve that, the features of Google's API for which consensus could be reached was standardized as the File and Directory Entries API, and this was then implemented in other browsers.
+As a result, a number of popular websites did not work properly on browsers other than Chrome. To resolve that, the features of Google's API for which consensus could be reached were standardized as the File and Directory Entries API, and this was then implemented in other browsers.
 
 ## Interfaces
 
