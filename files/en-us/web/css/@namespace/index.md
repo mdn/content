@@ -9,7 +9,35 @@ browser-compat: css.at-rules.namespace
 
 **`@namespace`** is an [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule) that defines XML [namespaces](/en-US/docs/Glossary/Namespace) to be used in a [CSS](/en-US/docs/Glossary/CSS) [style sheet](/en-US/docs/Web/API/StyleSheet).
 
-{{EmbedInteractiveExample("pages/tabbed/at-rule-namespace.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: @namespace", "tabbed-shorter")}}
+
+```css interactive-example
+@namespace svg url("http://www.w3.org/2000/svg");
+
+a {
+  color: orangered;
+  text-decoration: underline dashed;
+  font-weight: bold;
+}
+
+svg|a {
+  fill: blueviolet;
+  text-decoration: underline solid;
+  text-transform: uppercase;
+}
+```
+
+```html interactive-example
+<p>
+  <a href="#">This is an ordinary HTML link</a>
+</p>
+
+<svg width="250px" viewBox="0 0 250 20" xmlns="http://www.w3.org/2000/svg">
+  <a href="#">
+    <text x="0" y="15">This is a link created in SVG</text>
+  </a>
+</svg>
+```
 
 ## Syntax
 
