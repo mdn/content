@@ -28,7 +28,7 @@ See also [Firefox 79: The safe return of shared memory, new tooling, and platfor
 
 #### Other tools
 
-- The new [Application panel](https://firefox-source-docs.mozilla.org/devtools-user/application/index.html) is now available, which initially provides inspection and debugging support for [service workers](/en-US/docs/Web/API/Service_Worker_API) and [web app manifests](/en-US/docs/Web/Manifest).
+- The new [Application panel](https://firefox-source-docs.mozilla.org/devtools-user/application/index.html) is now available, which initially provides inspection and debugging support for [service workers](/en-US/docs/Web/API/Service_Worker_API) and [web app manifests](/en-US/docs/Web/Progressive_web_apps/Manifest).
 - The Messages tab of the Network Monitor has been merged with the [Responses tab](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/request_details/index.html#response-tab). ([Firefox bug 1636421](https://bugzil.la/1636421))
 - The Accessibility Inspector is automatically turned on when you access its tab; you no longer need to explicitly enable it. ([Firefox bug 1602075](https://bugzil.la/1602075))
 - In [Responsive Design Mode](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html#controlling-responsive-design-mode), when touch simulation is enabled, mouse-drag events are now interpreted as touch-drag or swipe events. ([Firefox bug 1621781](https://bugzil.la/1621781))
