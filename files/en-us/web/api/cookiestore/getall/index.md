@@ -189,7 +189,7 @@ Note that some logging and other code is omitted for brevity.
 Press **Show cookies** to add and then get all the cookies.
 Note that some browsers will only display the `name` and `value`, while others will display all the properties of each cookie.
 
-{{EmbedLiveSample('Get all cookies for this context', 100, 350)}}
+{{EmbedLiveSample('Get all cookies for this context', 100, 380)}}
 
 ## Specifications
 
