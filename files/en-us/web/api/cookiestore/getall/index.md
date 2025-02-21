@@ -66,14 +66,7 @@ Each object contains the following properties:
 
 - `sameSite`
 
-  - : One of the following [`SameSite`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) values:
-
-    - `"strict"`
-      - : Cookies will only be sent in a first-party context and not be sent with requests initiated by third party websites.
-    - `"lax"`
-      - : Cookies are not sent on normal cross-site subrequests (for example to load images or frames into a third party site), but are sent when a user is navigating within the origin site (i.e. when following a link).
-    - `"none"`
-      - : Cookies will be sent in all contexts.
+  - : One of the following [`SameSite`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) values: [`"strict"`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#strict), [`"lax"`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#lax), or [`"none"`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#none).
 
 - `secure`
 
@@ -96,7 +89,8 @@ Each object contains the following properties:
 
 ### Get all cookies for this context
 
-In this example, we use `getAll()` with no parameters. This returns a {{jsxref("Promise")}} that resolves with all of the cookies for this context as an array of objects, or an empty array if there are no cookies.
+In this example, we use `getAll()` with no parameters.
+This returns a {{jsxref("Promise")}} that resolves with all of the cookies for this context as an array of objects, or an empty array if there are no cookies.
 
 ```html hidden
 <button id="showCookies" type="button">Show cookies</button>
