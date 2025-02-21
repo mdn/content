@@ -353,9 +353,9 @@ The {{cssxref("::backdrop")}} pseudo-element is a full-screen element placed dir
 
 See our [Popover blur background example](https://mdn.github.io/dom-examples/popover-api/blur-background/) ([source](https://github.com/mdn/dom-examples/tree/main/popover-api/blur-background)) for an idea of how this renders.
 
-### Implicit popover anchor associations
+## Implicit popover anchor associations
 
-Associating a popover with its invoker using the [`popovertarget`](/en-US/docs/Web/HTML/Element/button#popovertarget) attribute or the `source` option of the {{domxref("HTMLElement.showPopover()")}} or {{domxref("HTMLElement.togglePopover()")}} methods creates an implicit anchor reference between the two.
+Associating any kind of popover with its invoker using the [`popovertarget`](/en-US/docs/Web/HTML/Element/button#popovertarget) attribute or the `source` option of the {{domxref("HTMLElement.showPopover()")}} or {{domxref("HTMLElement.togglePopover()")}} methods creates an implicit anchor reference between the two.
 
 This makes it very convenient to position a popover relative to its control using [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning). Explicit associations do not need to be made using the {{cssxref("anchor-name")}} and {{cssxref("position-anchor")}} properties. However, you still need to specify the positioning CSS.
 
