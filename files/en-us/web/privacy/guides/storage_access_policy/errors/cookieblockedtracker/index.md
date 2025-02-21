@@ -1,10 +1,11 @@
 ---
 title: "Blocked: Storage access requests from trackers"
-slug: Web/Privacy/Storage_Access_Policy/Errors/CookieBlockedTracker
+slug: Web/Privacy/Guides/Storage_Access_Policy/Errors/CookieBlockedTracker
 page-type: guide
+sidebar: privacy
 ---
 
-{{QuicklinksWithSubPages("Web/Privacy/Storage_Access_Policy/Errors")}}
+A request to access cookies or storage was blocked because the browser identified it as coming from a tracker and content blocking is enabled.
 
 ## Message
 
@@ -14,9 +15,7 @@ Firefox:
 Request to access cookie or storage on “X” was blocked because it came from a tracker and content blocking is enabled.
 ```
 
-## What went wrong?
-
-A request to access cookies or storage was blocked because the browser identified it as coming from a tracker and content blocking is enabled.
+## What can be done
 
 The permission can be changed or removed by:
 

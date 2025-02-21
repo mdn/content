@@ -1,8 +1,10 @@
 ---
 title: Cookies Having Independent Partitioned State (CHIPS)
-slug: Web/Privacy/Privacy_sandbox/Partitioned_cookies
+short-title: CHIPS
+slug: Web/Privacy/Guides/Privacy_sandbox/Partitioned_cookies
 page-type: guide
 browser-compat: http.headers.Set-Cookie.Partitioned
+sidebar: privacy
 ---
 
 **Cookies Having Independent Partitioned State** (**CHIPS**, also known as **Partitioned cookies**) allows developers to opt a cookie into partitioned storage, with a separate cookie jar per top-level site.
@@ -40,7 +42,7 @@ Revisiting our example:
 3. When the user visits `https://site-b.example`, which also embeds `https://3rd-party.example`, this new embedded instance is no longer able to access the cookie because the partition key doesn't match.
 
 > [!NOTE]
-> CHIPS is similar to the [state partitioning mechanism](/en-US/docs/Web/Privacy/State_Partitioning) implemented by Firefox. The difference is that state partitioning partitions cookie storage and retrieval into separate cookie jars for each top-level site, without a mechanism to allow opt-in to third-party cookies if desired. As browsers start to phase out third-party cookie usage, there are still valid, non-tracking uses of third-party cookies that need to be permitted while developers begin to handle this change.
+> CHIPS is similar to the [state partitioning mechanism](/en-US/docs/Web/Privacy/Guides/State_Partitioning) implemented by Firefox. The difference is that state partitioning partitions cookie storage and retrieval into separate cookie jars for each top-level site, without a mechanism to allow opt-in to third-party cookies if desired. As browsers start to phase out third-party cookie usage, there are still valid, non-tracking uses of third-party cookies that need to be permitted while developers begin to handle this change.
 
 ## CHIPS and subdomains
 
@@ -62,7 +64,3 @@ CHIPS still allows third-party content embedded across different subdomains of a
 
 - [Cookies Having Independent Partitioned State (CHIPS)](https://developers.google.com/privacy-sandbox/cookies/chips) on developers.google.com
 - [CHIPS Explainer](https://github.com/privacycg/CHIPS)
-
-<section id="Quick_links">
-{{ListSubpages("/en-US/docs/Web/Privacy", "2", "0", "0")}}
-</section>

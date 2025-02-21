@@ -1,10 +1,11 @@
 ---
 title: "Blocked: All storage access requests"
-slug: Web/Privacy/Storage_Access_Policy/Errors/CookieBlockedAll
+slug: Web/Privacy/Guides/Storage_Access_Policy/Errors/CookieBlockedAll
 page-type: guide
+sidebar: privacy
 ---
 
-{{QuicklinksWithSubPages("Web/Privacy/Storage_Access_Policy/Errors")}}
+A request to access cookies or storage was blocked because the browser is blocking all storage access.
 
 ## Message
 
@@ -14,9 +15,7 @@ Firefox:
 CookieBlockedAll=Request to access cookies or storage on "X" was blocked because we are blocking all storage access requests.
 ```
 
-## What went wrong?
-
-A request to access cookies or storage was blocked because the browser is blocking all storage access.
+## What can be done
 
 The permission can be changed or removed by:
 

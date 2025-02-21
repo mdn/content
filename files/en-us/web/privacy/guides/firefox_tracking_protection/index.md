@@ -1,12 +1,13 @@
 ---
 title: Firefox tracking protection
-slug: Web/Privacy/Firefox_tracking_protection
+slug: Web/Privacy/Guides/Firefox_tracking_protection
 page-type: guide
+sidebar: privacy
 ---
 
 ## What is tracking protection?
 
-Firefox Desktop and Firefox for Android include built-in tracking protection. In Private Browsing windows (tabs, in Firefox for Android), Firefox will block content loaded from domains that track users across sites (i.e. via [third-party cookies](/en-US/docs/Web/Privacy/Third-party_cookies)).
+Firefox Desktop and Firefox for Android include built-in tracking protection. In Private Browsing windows (tabs, in Firefox for Android), Firefox will block content loaded from domains that track users across sites (i.e. via [third-party cookies](/en-US/docs/Web/Privacy/Guides/Third-party_cookies)).
 
 If blocked content is part of the page layout, users may notice layout issues where Firefox blocked these loads. Sometimes users won't notice at all, if the page grid works such that other page elements slide in to fill holes left by blocked elements.
 
@@ -99,7 +100,3 @@ More information about this technique is available at [Google Analytics, Privacy
 
 > [!NOTE]
 > Depending on a third party in this way is not a good practice anyway, because then your site can be broken if the third party is slow or unavailable, or if the tracker has been blocked by an add-on.
-
-<section id="Quick_links">
-{{ListSubpages("/en-US/docs/Web/Privacy", "2", "0", "0")}}
-</section>

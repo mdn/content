@@ -1,10 +1,11 @@
 ---
 title: Redirect tracking protection
-slug: Web/Privacy/Redirect_tracking_protection
+slug: Web/Privacy/Guides/Redirect_tracking_protection
 page-type: guide
+sidebar: privacy
 ---
 
-Since version 79, Firefox has protected users against **redirect tracking** by periodically clearing cookies and site data set by known trackers. This data is only cleared from storage if the user is [blocking tracking cookies](/en-US/docs/Web/Privacy/Storage_Access_Policy) (i.e., the `network.cookie.cookieBehavior` pref is set to `4`).
+Since version 79, Firefox has protected users against **redirect tracking** by periodically clearing cookies and site data set by known trackers. This data is only cleared from storage if the user is [blocking tracking cookies](/en-US/docs/Web/Privacy/Guides/Storage_Access_Policy) (i.e., the `network.cookie.cookieBehavior` pref is set to `4`).
 
 Support for other cookie policies is tracked by [Bug 1643045](https://bugzil.la/1643045).
 
@@ -21,7 +22,7 @@ Redirect trackers work by forcing you to make an imperceptible and momentary sto
 An origin will be cleared if it fulfills the following conditions:
 
 1. It has stored cookies or accessed other site storage (e.g. [localStorage](/en-US/docs/Web/API/Web_Storage_API), [IndexedDB](/en-US/docs/Web/API/IndexedDB_API), or the [Cache API](/en-US/docs/Web/API/CacheStorage)) within the last 72 hours. Since cookies are per-host, we will clear both the `http` and `https` origin variants of a cookie host.
-2. The origin is [classified as a tracker](/en-US/docs/Web/Privacy/Storage_Access_Policy#tracking_protection_explained) in our Tracking Protection list.
+2. The origin is [classified as a tracker](/en-US/docs/Web/Privacy/Guides/Storage_Access_Policy#tracking_protection_explained) in our Tracking Protection list.
 3. No origin with the same base domain ({{Glossary("eTLD", "eTLD+1")}}) has a user-interaction permission.
 
    - This permission is granted to an origin for 45 days once a user interacts with a top-level document from that origin. "Interacting" includes scrolling.
@@ -79,10 +80,6 @@ The time until user interaction permissions expire can be set to a lower amount 
 
 WebKit first shipped redirect tracking protection in [ITP 2.0](https://webkit.org/blog/8311/intelligent-tracking-prevention-2-0/) (they refer to the same attack as bounce tracking). As of July 2020, there are several significant differences between WebKit's implementation and Firefox's implementation:
 
-- The list of origins to be cleared in Firefox is based on our [tracking protection list](/en-US/docs/Web/Privacy/Storage_Access_Policy#tracking_protection_explained); WebKit relies on ITP's classification.
+- The list of origins to be cleared in Firefox is based on our [tracking protection list](/en-US/docs/Web/Privacy/Guides/Storage_Access_Policy#tracking_protection_explained); WebKit relies on ITP's classification.
 - Firefox's definition of "interaction" includes user scrolling when visiting the origin as a first party; WebKit's does not.
 - Firefox will not clear data for an origin if it has received interaction as a first party in the last 45 days of calendar time; WebKit's interaction window is 30 days of browser use (e.g. days in which the user has had at least one interaction with Safari).
-
-<section id="Quick_links">
-{{ListSubpages("/en-US/docs/Web/Privacy", "2", "0", "0")}}
-</section>

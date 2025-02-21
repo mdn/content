@@ -1,10 +1,11 @@
 ---
 title: "Blocked: Custom cookie permission"
-slug: Web/Privacy/Storage_Access_Policy/Errors/CookieBlockedByPermission
+slug: Web/Privacy/Guides/Storage_Access_Policy/Errors/CookieBlockedByPermission
 page-type: guide
+sidebar: privacy
 ---
 
-{{QuicklinksWithSubPages("Web/Privacy/Storage_Access_Policy/Errors")}}
+A request to access cookies or storage was blocked because there's a custom user-defined permission set.
 
 ## Message
 
@@ -14,9 +15,7 @@ Firefox:
 CookieBlockedByPermission=Request to access cookies or storage on "X" was blocked because of custom cookie permission.
 ```
 
-## What went wrong?
-
-A request to access cookies or storage was blocked because there's a custom user-defined permission set.
+## What can be done
 
 The permission can be changed or removed by:
 

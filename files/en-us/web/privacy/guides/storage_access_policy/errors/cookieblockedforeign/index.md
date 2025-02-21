@@ -1,10 +1,11 @@
 ---
 title: "Blocked: All third-party storage access requests"
-slug: Web/Privacy/Storage_Access_Policy/Errors/CookieBlockedForeign
+slug: Web/Privacy/Guides/Storage_Access_Policy/Errors/CookieBlockedForeign
 page-type: guide
+sidebar: privacy
 ---
 
-{{QuicklinksWithSubPages("Web/Privacy/Storage_Access_Policy/Errors")}}
+A request to access cookies or storage was blocked because it came from a third-party (a different origin) and content blocking is enabled.
 
 ## Message
 
@@ -14,9 +15,7 @@ Firefox:
 CookieBlockedForeign=Request to access cookies or storage on "X" was blocked because we are blocking all third-party storage access requests and content blocking is enabled.
 ```
 
-## What went wrong?
-
-A request to access cookies or storage was blocked because it came from a third-party (a different origin) and content blocking is enabled.
+## What can be done
 
 The permission can be changed or removed by:
 
