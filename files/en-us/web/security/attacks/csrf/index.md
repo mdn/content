@@ -137,7 +137,7 @@ The `Lax` value relaxes this restriction: cookies are included in cross-site req
 
 However, `Lax` offers significantly weaker protection than `Strict`:
 
-- An attacker can trigger a top-level navigation that sends the request, for example by setting {{domxref("Document.location", "document.location")}}.
+- An attacker can trigger a top-level navigation, for example by setting {{domxref("Document.location", "document.location")}}, and the resulting `GET` request will still include the session cookie.
 - Even if the server does check that the request was not sent using `GET`, some web frameworks support "method override": this enables an attacker to send a request using `GET` but have it appear to the server as if it used `POST`.
 
 So although `Lax` is a reasonable defense in depth against CSRF, as long as you avoid making state-changing requests that use `GET`, it should not be the only defense. It should be deployed alongside one of the previous defenses.
