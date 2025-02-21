@@ -19,11 +19,6 @@ sidebar:
   - /Web/Performance/Guides/Rum-vs-Synthetic
   - /Web/Performance/Guides/CSS_JavaScript_animation_performance
   - /Web/Performance/Guides/Animation_performance_and_frame_rate
-  - type: listSubPages
-    path: /Web/API/Performance_API
-    includeParent: true
-    title: Performance APIs
-    details: closed
   - type: section
     title: Tutorials
   - type: listSubPages
@@ -31,6 +26,13 @@ sidebar:
     includeParent: true
     title: Learn web performance
     details: closed
+  - type: section
+    title: Reference
+  - type: listSubPages
+    path: /Web/API/Performance_API
+    includeParent: true
+    title: Performance APIs
+    details: open
   - type: section
     title: Related APIs
   - /Web/API/Beacon_API
