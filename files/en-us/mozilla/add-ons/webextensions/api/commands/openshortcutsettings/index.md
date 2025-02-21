@@ -11,9 +11,7 @@ Opens the browser UI that enables users to configure an extension's keyboard sho
 
 In Firefox, this function opens the [Manage Extension Shortcuts](https://support.mozilla.org/en-US/kb/manage-extension-shortcuts-firefox) view.
 
-Chrome doesn't support this function yet. In Chrome, `chrome://extensions/shortcuts` can be opened using the `tabs.create` function.
-
-This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+Chrome doesn't support this function. In Chrome, `chrome://extensions/shortcuts` can be opened using the `tabs.create` function.
 
 ## Syntax
 

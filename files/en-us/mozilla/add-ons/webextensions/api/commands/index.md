@@ -9,6 +9,8 @@ browser-compat: webextensions.api.commands
 
 Listen for the user executing commands that you have registered using the [`commands` manifest.json key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands).
 
+In Firefox, this API provides features to update the shortcut key settings. In Chrome, the user can update shortcut key settings through the extension options UI. Safari doesn't support user modification of extension shortcut keys.
+
 ## Types
 
 - {{WebExtAPIRef("commands.Command")}}
