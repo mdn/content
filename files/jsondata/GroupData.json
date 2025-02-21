@@ -581,6 +581,7 @@
         "FileSystemHandle",
         "FileSystemFileHandle",
         "FileSystemDirectoryHandle",
+        "FileSystemObserver",
         "FileSystemSyncAccessHandle",
         "FileSystemWritableFileStream"
       ],
