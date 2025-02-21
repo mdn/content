@@ -7,7 +7,7 @@ browser-compat: css.properties.custom-property.var
 
 {{CSSRef}}
 
-The **`var()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) can be used to insert the value of a [custom property](/en-US/docs/Web/CSS/--*) (sometimes called a "CSS variable") instead of any part of a value of another property.
+The **`var()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) can be used to insert the value of a [custom property](/en-US/docs/Web/CSS/--*) (sometimes called a "CSS variable") instead of any part of a value of another property.
 
 {{EmbedInteractiveExample("pages/css/var.html")}}
 

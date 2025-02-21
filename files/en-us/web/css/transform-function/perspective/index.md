@@ -7,7 +7,7 @@ browser-compat: css.types.transform-function.perspective
 
 {{CSSRef}}
 
-The **`perspective()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) defines a transformation that sets the distance between the
+The **`perspective()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) defines a transformation that sets the distance between the
 user and the z=0 plane, the perspective from which the viewer would be if the 2-dimensional interface were
 3-dimensional. Its result is a {{cssxref("&lt;transform-function&gt;")}} data type.
 

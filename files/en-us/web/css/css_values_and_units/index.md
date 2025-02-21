@@ -170,22 +170,22 @@ Additional functions, including `calc-mix()`, `crossorigin()`, `first-valid()`, 
 
 ### Key concepts
 
-- {{glossary("advance measure")}}
-- [bracketed range notation](/en-US/docs/Web/CSS/Value_definition_syntax#bracketed_range_notation_minmax)
-- [Component value combinators](/en-US/docs/Web/CSS/Value_definition_syntax#component_value_combinators)
+- {{glossary("Advance measure")}}
+- [Bracketed range notation](/en-US/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax#bracketed_range_notation_minmax)
+- [Component value combinators](/en-US/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax#component_value_combinators)
 - [CSS-wide keywords](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types#css-wide_keywords)
-- {{glossary("device pixel")}}
-- [functional notation](/en-US/docs/Web/CSS/CSS_Functions)
-- {{glossary("identifier")}}
-- {{glossary("interpolation")}}
-- {{glossary("keyword")}}
-- [math function](/en-US/docs/Web/CSS/CSS_Functions/Using_CSS_math_functions)
-- [numeric data types](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types)
-- {{glossary("origin")}}
-- {{glossary("pixel")}}
-- [textual data types](/en-US/docs/Web/CSS/CSS_Values_and_Units/Textual_data_types)
+- {{glossary("Device pixel")}}
+- [Functional notation](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)
+- {{glossary("Identifier")}}
+- {{glossary("Interpolation")}}
+- {{glossary("Keyword")}}
+- [Math function](/en-US/docs/Web/CSS/CSS_Values_and_Units/Using_CSS_math_functions)
+- [Numeric data types](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types)
+- {{glossary("Origin")}}
+- {{glossary("Pixel")}}
+- [Textual data types](/en-US/docs/Web/CSS/CSS_Values_and_Units/Textual_data_types)
 - {{glossary("URL")}}
-- [value definition syntax](/en-US/docs/Web/CSS/Value_definition_syntax)
+- [Value definition syntax](/en-US/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
 
 ## Guides
 
@@ -201,11 +201,15 @@ Additional functions, including `calc-mix()`, `crossorigin()`, `first-valid()`, 
 
   - : Overview of the textual data types, including pre-defined keyword values, global CSS keyword values, and URLs.
 
-- [CSS value functions](/en-US/docs/Web/CSS/CSS_Functions)
+- [CSS value functions](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)
 
   - : Overview of the CSS statements that invoke special data processing or calculations to return a CSS value for a CSS property.
 
-- [Value definition syntax](/en-US/docs/Web/CSS/Value_definition_syntax)
+- [Using CSS math functions](/en-US/docs/Web/CSS/CSS_Values_and_Units/Using_CSS_Math_Functions)
+
+  - : The CSS math functions that allow a property value to be written as a mathematical expression.
+
+- [Value definition syntax](/en-US/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
 
   - : The formal grammar used to define the set of valid values for CSS properties and functions.
 

@@ -7,7 +7,7 @@ browser-compat: css.types.filter-function.invert
 
 {{CSSRef}}
 
-The **`invert()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) inverts the color samples in the input image. Its result is a {{cssxref("&lt;filter-function&gt;")}}.
+The **`invert()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) inverts the color samples in the input image. Its result is a {{cssxref("&lt;filter-function&gt;")}}.
 
 {{EmbedInteractiveExample("pages/css/function-invert.html")}}
 
