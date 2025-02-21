@@ -14550,22 +14550,6 @@
     "modified": "2020-10-15T22:20:45.849Z",
     "contributors": ["rebloor", "irenesmith", "bershanskiy", "pesar81"]
   },
-  "Mozilla/Add-ons/WebExtensions/API/userScripts/RegisteredUserScript/unregister": {
-    "modified": "2020-10-15T22:22:39.367Z",
-    "contributors": ["rebloor", "hellosct1", "bershanskiy"]
-  },
-  "Mozilla/Add-ons/WebExtensions/API/userScripts/UserScriptOptions": {
-    "modified": "2020-06-22T16:28:43.349Z",
-    "contributors": ["hellosct1", "MelchiorIm3Tal", "irenesmith"]
-  },
-  "Mozilla/Add-ons/WebExtensions/API/userScripts/Working_with_userScripts": {
-    "modified": "2020-06-22T16:28:43.959Z",
-    "contributors": ["irenesmith", "hellosct1"]
-  },
-  "Mozilla/Add-ons/WebExtensions/API/userScripts/onBeforeScript": {
-    "modified": "2020-10-15T22:23:14.808Z",
-    "contributors": ["chrisdavidmills", "rebloor", "bershanskiy"]
-  },
   "Mozilla/Add-ons/WebExtensions/API/userScripts/register": {
     "modified": "2020-10-15T22:21:40.204Z",
     "contributors": [
@@ -53901,20 +53885,12 @@
     "modified": "2020-10-15T22:17:14.806Z",
     "contributors": ["Sheppy"]
   },
-  "Web/API/RTCOutboundRtpStreamStats/averageRtcpInterval": {
-    "modified": "2020-10-15T22:17:15.805Z",
-    "contributors": ["Sheppy"]
-  },
   "Web/API/RTCOutboundRtpStreamStats/framesEncoded": {
     "modified": "2020-10-15T22:17:15.823Z",
     "contributors": ["Sheppy"]
   },
   "Web/API/RTCOutboundRtpStreamStats/nackCount": {
     "modified": "2020-10-15T22:17:14.809Z",
-    "contributors": ["Sheppy"]
-  },
-  "Web/API/RTCOutboundRtpStreamStats/perDscpPacketsSent": {
-    "modified": "2020-10-15T22:17:15.897Z",
     "contributors": ["Sheppy"]
   },
   "Web/API/RTCOutboundRtpStreamStats/qpSum": {
@@ -53927,14 +53903,6 @@
   },
   "Web/API/RTCOutboundRtpStreamStats/remoteId": {
     "modified": "2020-10-15T22:17:16.621Z",
-    "contributors": ["Sheppy"]
-  },
-  "Web/API/RTCOutboundRtpStreamStats/sliCount": {
-    "modified": "2020-10-15T22:17:16.518Z",
-    "contributors": ["Sheppy"]
-  },
-  "Web/API/RTCOutboundRtpStreamStats/trackId": {
-    "modified": "2020-10-15T22:17:16.946Z",
     "contributors": ["Sheppy"]
   },
   "Web/API/RTCPeerConnection": {
@@ -66287,10 +66255,6 @@
       "JesseW"
     ]
   },
-  "Web/API/Window/console": {
-    "modified": "2020-01-26T11:16:36.044Z",
-    "contributors": ["alattalatta", "Zearin_Galaurum", "tjcrowder", "Sheppy"]
-  },
   "Web/API/Window/copy_event": {
     "modified": "2020-10-15T22:16:13.286Z",
     "contributors": ["mfuji09", "wbamberg"]
@@ -76813,58 +76777,6 @@
       "mattbrundageMDN",
       "rachelandrew",
       "chrisdavidmills"
-    ]
-  },
-  "Web/CSS/CSS_flow_layout": {
-    "modified": "2020-06-24T00:31:39.254Z",
-    "contributors": [
-      "mfuji09",
-      "chuanqisun",
-      "ExE-Boss",
-      "estelle",
-      "rachelandrew"
-    ]
-  },
-  "Web/CSS/CSS_flow_layout/Block_and_inline_layout_in_normal_flow": {
-    "modified": "2020-06-24T00:31:42.747Z",
-    "contributors": [
-      "mfuji09",
-      "haond10adp",
-      "mikemorr",
-      "segmentationfaulter",
-      "alattalatta",
-      "FranklinYu",
-      "ExE-Boss",
-      "beautifulcoder",
-      "estelle",
-      "rachelandrew"
-    ]
-  },
-  "Web/CSS/CSS_flow_layout/Flow_layout_and_overflow": {
-    "modified": "2020-06-24T00:31:43.651Z",
-    "contributors": ["mfuji09", "estelle", "rachelandrew"]
-  },
-  "Web/CSS/CSS_flow_layout/Flow_layout_and_writing_modes": {
-    "modified": "2020-06-24T00:31:47.285Z",
-    "contributors": ["mfuji09", "estelle", "rachelandrew"]
-  },
-  "Web/CSS/CSS_flow_layout/In_flow_and_out_of_flow": {
-    "modified": "2020-06-24T00:31:53.097Z",
-    "contributors": ["ExE-Boss", "mfuji09", "rachelandrew"]
-  },
-  "Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts": {
-    "modified": "2020-08-09T11:05:30.382Z",
-    "contributors": [
-      "mfuji09",
-      "chrisdavidmills",
-      "sanketj",
-      "kvoncode",
-      "Mats.Palmgren",
-      "MerrickClark",
-      "Sheppy",
-      "BruceYuj",
-      "estelle",
-      "rachelandrew"
     ]
   },
   "Web/CSS/CSS_fonts": {
