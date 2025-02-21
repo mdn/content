@@ -190,18 +190,27 @@ function logCookie(name, cookie) {
 
 #### JavaScript
 
-The example code first awaits for the cookie to be set, then waits to get the value and log it (note the logging and other display code is omitted).
+The code first waits for the cookie to be set: as this operation can fail, the operation is performed in a `try...catch` block and any errors are logged.
+The example then gets the new cookie, if it exists, and logs its properties (note the logging and other display code is omitted).
 
 ```js
 async function cookieTest() {
   const day = 24 * 60 * 60 * 1000;
-  await cookieStore.set({
-    name: "cookie2",
-    value: `cookie2-value`,
-    expires: Date.now() + day,
-    partitioned: true,
-  });
 
+  try {
+    // Set cookie
+    await cookieStore.set({
+      name: "cookie2",
+      value: `cookie2-value`,
+      expires: Date.now() + day,
+      partitioned: true,
+    });
+  } catch (error) {
+    log(`Error setting cookie2: ${error}`);
+    console.log(error);
+  }
+
+  // Log the new cookie
   const cookie = await cookieStore.get("cookie2");
   logCookie("cookie2", cookie);
 }
