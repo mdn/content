@@ -1,6 +1,6 @@
 ---
 title: CSSOM view
-slug: Web/CSS/CSSOM_view
+slug: Web/CSS/CSSOM_View
 page-type: css-module
 spec-urls: https://drafts.csswg.org/cssom-view/
 ---
@@ -50,8 +50,10 @@ The following interfaces are not defined by this module but add some extensions.
 
 ## Guides
 
-- [Coordinate systems](/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems)
+- [Coordinate systems](/en-US/docs/Web/CSS/CSSOM_View/Coordinate_Systems)
   - : A guide to the coordinate systems used to specify the position of a location in a display context, whether that context is a window on a monitor, a viewport on a mobile device, or a position on a sheet of paper when printing.
+- [Viewport concepts](/en-US/docs/Web/CSS/CSSOM_View/Viewport_Concepts)
+  - : The concept of the viewport — what it is, its impact in terms of CSS, SVG, and mobile devices — and the difference between the visual viewport and the layout viewport.
 
 ## Related concepts
 
@@ -63,4 +65,4 @@ The following interfaces are not defined by this module but add some extensions.
 
 ## See also
 
-- [CSS Object Model (CSSOM)](/en-US/docs/Web/API/CSS_Object_Model) as Web API
+- [CSS Object Model (CSSOM)](/en-US/docs/Web/API/CSS_Object_Model) API
