@@ -80,7 +80,8 @@ function logCookie(name, cookie) {
 
 #### JavaScript
 
-The example code sets two cookies, the first using `name` and `value` parameters, and the second using an "options" object with `name`, `value`, `expires`, and `partitioned` properties set.
+The example code sets two cookies.
+The first is set with `name` and `value` properties, while the second is set with `name`, `value`, `expires`, and `partitioned` properties.
 
 We then use the {{domxref("CookieStore.get()")}} method to get the cookies, which are then logged.
 
