@@ -27,7 +27,7 @@ None.
 
 ### Return value
 
-A {{JSxRef("Promise")}} fulfilled with no arguments if the Manage Extension Shortcuts page is opened. If the request fails, the promise is rejected with an error message.
+A {{JSxRef("Promise")}} fulfilled with no arguments if the extension shortcut management interface opens. If the request fails, the promise is rejected with an error message.
 
 {{WebExtExamples("h2")}}
 
