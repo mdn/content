@@ -2,9 +2,8 @@
 title: Navigation and resource timings
 slug: Web/Performance/Guides/Navigation_and_resource_timings
 page-type: guide
+sidebar: performancesidebar
 ---
-
-{{QuickLinksWithSubPages("Web/Performance")}}
 
 **Navigation timings** are metrics measuring a browser's document navigation events. **Resource timings** are detailed network timing measurements regarding the loading of an application's resources. Both provide the same read-only properties, but navigation timing measures the main document's timings whereas the resource timing provides the times for all the assets or resources called in by that main document and the resources' requested resources.
 

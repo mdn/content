@@ -2,9 +2,8 @@
 title: Using dns-prefetch
 slug: Web/Performance/Guides/dns-prefetch
 page-type: guide
+sidebar: performancesidebar
 ---
-
-{{QuickLinksWithSubPages("Web/Performance")}}
 
 **`DNS-prefetch`** is an attempt to resolve domain names before resources get requested. This could be a file loaded later or link target a user tries to follow.
 

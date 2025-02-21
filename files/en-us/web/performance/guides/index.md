@@ -1,5 +1,5 @@
 ---
-title: Performance guides
+title: Web performance guides
 short-title: Guides
 slug: Web/Performance/Guides
 page-type: listing-page

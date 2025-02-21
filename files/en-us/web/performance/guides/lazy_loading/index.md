@@ -3,9 +3,8 @@ title: Lazy loading
 slug: Web/Performance/Guides/Lazy_loading
 page-type: guide
 spec-urls: https://html.spec.whatwg.org/multipage/#lazy-loading-attributes
+sidebar: performancesidebar
 ---
-
-{{QuickLinksWithSubPages("Web/Performance")}}
 
 **Lazy loading** is a strategy to identify resources as non-blocking (non-critical) and load these only when needed. It's a way to shorten the length of the [critical rendering path](/en-US/docs/Web/Performance/Guides/Critical_rendering_path), which translates into reduced page load times.
 

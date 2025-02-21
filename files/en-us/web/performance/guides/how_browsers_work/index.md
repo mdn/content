@@ -1,10 +1,10 @@
 ---
 title: "Populating the page: how browsers work"
+short-title: How browsers work
 slug: Web/Performance/Guides/How_browsers_work
 page-type: guide
+sidebar: performancesidebar
 ---
-
-{{QuickLinksWithSubPages("Web/Performance")}}
 
 Users want web experiences with content that is fast to load and smooth to interact with. Therefore, a developer should strive to achieve these two goals.
 

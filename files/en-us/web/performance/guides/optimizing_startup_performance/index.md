@@ -2,9 +2,8 @@
 title: Optimizing startup performance
 slug: Web/Performance/Guides/Optimizing_startup_performance
 page-type: guide
+sidebar: performancesidebar
 ---
-
-{{QuickLinksWithSubPages("Web/Performance")}}
 
 Improving your startup performance is often one of the highest value performance optimizations that can be made. How long does your app take to start up? Does it seem to lock up the device or the user's browser while the app loads? That makes users worry that your application has crashed, or that something else is wrong. Good user experience includes ensuring your app loads quickly. This article provides performance tips and suggestions for both writing new applications and porting applications to the web from other platforms.
 

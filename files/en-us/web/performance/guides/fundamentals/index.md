@@ -2,9 +2,8 @@
 title: Performance fundamentals
 slug: Web/Performance/Guides/Fundamentals
 page-type: guide
+sidebar: performancesidebar
 ---
-
-{{QuickLinksWithSubPages("Web/Performance")}}
 
 Performance means efficiency. In the context of Open Web Apps, this document explains in general what performance is, how the browser platform helps improve it, and what tools and processes you can use to test and improve it.
 
