@@ -281,6 +281,29 @@ async function getCookieNames() {
   }
   return names;
 }
+
+// Delete cookies
+async function deleteAllCookies() {
+  log("deleteAllCookies: in");
+  const cookieNamesToDelete = (await cookieStore.getAll()).map(
+    (cookie) => cookie.name,
+  );
+
+  log(`len: ${cookieNamesToDelete.length}`);
+  for (const name of cookieNamesToDelete) {
+    try {
+      await cookieStore.delete(name);
+      log(` Deleted cookie: ${name}`);
+    } catch (error) {
+      log(` Error deleting cookie ${name}:`, error);
+    }
+  }
+  const cookieNames2 = (await cookieStore.getAll()).map(
+    (cookie) => cookie.name,
+  );
+
+  log(`deleteAllCookies: out: len: ${cookieNames2.length}`);
+}
 ```
 
 #### JavaScript
@@ -316,8 +339,9 @@ async function cookieTest() {
 ```js hidden
 const showCookies = document.querySelector("#showCookies");
 
-showCookies.addEventListener("click", () => {
-  cookieTest();
+showCookies.addEventListener("click", async () => {
+  await deleteAllCookies();
+  await cookieTest();
 });
 ```
 
