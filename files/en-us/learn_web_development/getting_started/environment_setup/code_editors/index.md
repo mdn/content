@@ -55,7 +55,7 @@ In this section, we'll look at some of the most significant functionality that y
 > The sections below only scratch the surface of what a code editor can do. For a more complete feature list, see the [Visual Studio Code documentation](https://code.visualstudio.com/docs) (or search the web for your chosen code editor's documentation if you are using something different).
 
 > [!NOTE]
-> If you are a keyboard-only user, be aware that VS Code has a powerful set of keyboard shortcuts. See the VS Code [Keyboard Shortcuts Reference](https://code.visualstudio.com/docs/getstarted/keybindings#_keyboard-shortcuts-reference).
+> If you are a keyboard-only user, be aware that VS Code has a powerful set of keyboard shortcuts. See the VS Code [Default keyboard shortcuts reference](https://code.visualstudio.com/docs/reference/default-keybindings).
 
 ### Opening and editing files
 
@@ -154,7 +154,7 @@ VS Code has many powerful find and replace features — see [Find and replace](h
 
 Most code editors have an extension or plugin system to allow you to add functionality to the program that is not available to it by default. These can do a variety of tasks, such as:
 
-- Enable code competition, linting, or debugging functionality for languages not supported by default, or provide additional functionality for those that are.
+- Enable code completing, linting, or debugging functionality for languages not supported by default, or provide additional functionality for those that are.
 - Allow you to use the functionality of other tools from right inside the code editor, such as version control tools or local testing servers.
 - Provide additional user interface or code highlighting themes/color schemes.
 - Suggest code snippets to fulfill requirements. These can be generated from static templates, or via AI tools. Using AI to generate code snippets has many of the same advantages and caveats as using it to generate search results (see [Searching for information > Using AI](/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Browsing_the_web#using_ai) for more infomation).

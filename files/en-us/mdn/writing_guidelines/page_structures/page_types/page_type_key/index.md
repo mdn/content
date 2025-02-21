@@ -60,7 +60,7 @@ This section lists `page-type` values for pages under [Web/CSS](/en-US/docs/Web/
 - `css-at-rule`: an [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule), like {{cssxref("@media")}}.
 - `css-at-rule-descriptor`: an at-rule descriptor, like [`@counter-style/prefix`](/en-US/docs/Web/CSS/@counter-style/prefix).
 - `css-combinator`: a combinator, like the [descendant combinator](/en-US/docs/Web/CSS/Descendant_combinator).
-- `css-function`: a [function](/en-US/docs/Web/CSS/CSS_Functions), like {{cssxref("max")}}.
+- `css-function`: a [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions), like {{cssxref("max")}}.
 - `css-keyword`: a keyword, like {{cssxref("inherit")}}.
 - `css-media-feature`: a [media feature](/en-US/docs/Web/CSS/@media#media_features), like [`hover`](/en-US/docs/Web/CSS/@media/hover).
 - `css-module`: a module, like [CSS Animations](/en-US/docs/Web/CSS/CSS_animations).
