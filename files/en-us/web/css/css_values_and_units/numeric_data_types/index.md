@@ -215,7 +215,7 @@ The {{cssxref("&lt;position&gt;")}} type defines 2D positioning of an object ins
 - {{cssxref("toggle", "toggle()")}}
 - {{cssxref("attr", "attr()")}}
 
-[Functional notation](/en-US/docs/Web/CSS/CSS_Functions) is a type of value that can represent more complex types or invoke special processing by CSS. The syntax starts with the name of the function immediately followed by a left parenthesis `(` followed by the argument(s) to the notation followed by a right parenthesis `)`. Functions can take multiple arguments, which are formatted similarly to a CSS property value.
+[Functional notation](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) is a type of value that can represent more complex types or invoke special processing by CSS. The syntax starts with the name of the function immediately followed by a left parenthesis `(` followed by the argument(s) to the notation followed by a right parenthesis `)`. Functions can take multiple arguments, which are formatted similarly to a CSS property value.
 
 White space is allowed, but optional inside the parentheses. (But see notes regarding whitespace within pages for `min()`, `max()`, `minmax()`, and `clamp()` functions.)
 

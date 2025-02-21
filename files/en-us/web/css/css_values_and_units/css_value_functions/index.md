@@ -1,6 +1,6 @@
 ---
 title: CSS value functions
-slug: Web/CSS/CSS_Functions
+slug: Web/CSS/CSS_Values_and_Units/CSS_Value_Functions
 page-type: guide
 ---
 
@@ -91,7 +91,7 @@ The {{CSSxRef("&lt;transform-function&gt;")}} CSS [data type](/en-US/docs/Web/CS
 
 The math functions allow CSS numeric values to be written as mathematical expressions.
 
-Each of the pages below contains detailed information about a math function's syntax, browser compatibility data, examples, and more. For a holistic introduction to CSS math functions, see [Using CSS math functions](/en-US/docs/Web/CSS/CSS_Functions/Using_CSS_math_functions).
+Each of the pages below contains detailed information about a math function's syntax, browser compatibility data, examples, and more. For a holistic introduction to CSS math functions, see [Using CSS math functions](/en-US/docs/Web/CSS/CSS_Values_and_Units/Using_CSS_math_functions).
 
 ### Basic arithmetic
 
