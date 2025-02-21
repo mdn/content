@@ -86,18 +86,6 @@ function log(text) {
 }
 ```
 
-```js hidden
-// List cookies
-async function getCookieNames() {
-  let names = "";
-  const cookies = await cookieStore.getAll();
-  if (cookies.length > 0) {
-    cookies.forEach((cookie) => (names += `${cookie.name} `));
-  }
-  return names;
-}
-```
-
 #### JavaScript
 
 The code first sets two cookies.
@@ -117,13 +105,19 @@ async function cookieTest() {
   });
 
   // Log cookie names
-  log(`Initial cookies: ${await getCookieNames()}`);
+  let cookieNames = (await cookieStore.getAll())
+    .map((cookie) => cookie.name)
+    .join(" ");
+  log(`Initial cookies: ${cookieNames}`);
 
   // Delete cookie1
   await cookieStore.delete("cookie1");
 
   // Log cookie names again (to show cookie1 deleted)
-  log(`Cookies after deleting cookie1: ${await getCookieNames()}`);
+  cookieNames = (await cookieStore.getAll())
+    .map((cookie) => cookie.name)
+    .join(" ");
+  log(`Cookies after deleting cookie1: ${cookieNames}`);
 }
 ```
 
