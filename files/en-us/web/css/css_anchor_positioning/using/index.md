@@ -29,9 +29,9 @@ Historically, associating an element with another element and dynamically changi
 
 ## Associating anchor and positioned elements
 
-To associate an element with an anchor, you need to first declare which element is the anchor, and then specify which positioned element(s) to associate with that anchor. This creates an anchor reference between the two. This association can be created explicitly via CSS or via the HTML [`anchor`](/en-US/docs/Web/HTML/Global_attributes/anchor) attribute, or in some cases, implicitly.
+To associate an element with an anchor, you need to first declare which element is the anchor, and then specify which positioned element(s) to associate with that anchor. This creates an anchor reference between the two. This association can be created explicitly via CSS or implicitly.
 
-### Explicit CSS-only method
+### Explicit CSS anchor association
 
 To declare an element as an anchor with CSS, you need to set an anchor name on it via the {{cssxref("anchor-name")}} property. The anchor name needs to be a {{cssxref("dashed-ident")}}. In this example, we also set the anchor's {{cssxref("width")}} to `fit-content` to get a small square anchor, which better demonstrates the anchoring effect.
 
@@ -90,57 +90,6 @@ This will render as follows:
 
 The anchor and infobox are now associated, but for the moment you'll have to trust us on this. They are not tethered to each other yet — if you were to position the anchor and move it somewhere else on the page, it would move on its own, leaving the infobox in the same place. You'll see the actual tethering in action when we look at [positioning elements based on anchor position](#positioning_elements_relative_to_their_anchor).
 
-### Explicit HTML method
-
-To associate a positioned element with an anchor in HTML, you can use the [`anchor`](/en-US/docs/Web/HTML/Global_attributes/anchor) attribute. You need to give the anchor element an [`id`](/en-US/docs/Web/HTML/Global_attributes/id). The `anchor` attribute is then set on the anchor-positioned element, with a value equal to the `id` of the anchor element you want to associate it with.
-
-We have done this in the HTML below:
-
-```html
-<div class="anchor" id="example-anchor">⚓︎</div>
-
-<div class="infobox" anchor="example-anchor">
-  <p>This is an information box.</p>
-</div>
-```
-
-Elements need to be absolutely or fixed positioned to be associated with anchors, so we give the infobox a `position` value of `fixed`:
-
-```css hidden
-.anchor {
-  font-size: 1.8rem;
-  color: white;
-  text-shadow: 1px 1px 1px black;
-  background-color: hsl(240 100% 75%);
-  width: fit-content;
-  border-radius: 10px;
-  border: 1px solid black;
-  padding: 3px;
-}
-
-.infobox {
-  color: darkblue;
-  background-color: azure;
-  border: 1px solid #ddd;
-  padding: 10px;
-  border-radius: 10px;
-  font-size: 1rem;
-}
-```
-
-```css
-.infobox {
-  position: fixed;
-}
-```
-
-This gives us the same result that we achieved earlier with CSS. We associated a positioned element with an anchor element using the `anchor` attribute on the positioned element rather than the anchor element's `anchor-name` property and the positioned element's `position-anchor` property.
-
-{{ EmbedLiveSample("HTML method", "100%", "120") }}
-
-> [!NOTE]
-> The [`anchor`](/en-US/docs/Web/HTML/Global_attributes/anchor) attribute currently has less support than the CSS equivalent. See the [`anchor` attribute compatibility table](/en-US/docs/Web/HTML/Global_attributes/anchor#browser_compatibility) for more information.
-
 ### Implicit anchor association
 
 In some cases, an implicit anchor reference will be made between two elements, due to the semantic nature of their relationship. For example, when using the [Popover API](/en-US/docs/Web/API/Popover_API) to associate a popover with a control, an implicit anchor reference is made between the two. This can occur when:
@@ -172,9 +121,9 @@ anchor(<anchor-name> <anchor-side>, <fallback>)
 
 - `<anchor-name>`
 
-  - : The [`anchor-name`](/en-US/docs/Web/CSS/anchor-name) property value of the anchor element you want to position the element's side relative to. This is a `<dashed-ident>` value. If omitted, the element's **default anchor** is used. This is the anchor referenced in its [`position-anchor`](/en-US/docs/Web/CSS/position-anchor) property, or associated with the element via the [`anchor`](/en-US/docs/Web/HTML/Global_attributes/anchor) HTML attribute.
+  - : The [`anchor-name`](/en-US/docs/Web/CSS/anchor-name) property value of the anchor element you want to position the element's side relative to. This is a `<dashed-ident>` value. If omitted, the element's **default anchor** is used. This is the anchor referenced in its [`position-anchor`](/en-US/docs/Web/CSS/position-anchor) property, or associated with the element via the non-standard [`anchor`](/en-US/docs/Web/HTML/Global_attributes/anchor) HTML attribute.
     > [!NOTE]
-    > Specifying an `<anchor-name>` positions the element relative to that anchor, but does not provide element association. Only the `position-anchor` property and `anchor` attributes create the association. While you can position an element's sides relative to multiple anchors by specifying [different `<anchor-name>` values](/en-US/docs/Web/CSS/anchor#positioning_an_element_relative_to_multiple_anchors) inside different `anchor()` functions on the same element, the positioned element is only associated with a single anchor.
+    > Specifying an `<anchor-name>` positions the element relative to that anchor, but does not provide element association. While you can position an element's sides relative to multiple anchors by specifying [different `<anchor-name>` values](/en-US/docs/Web/CSS/anchor#positioning_an_element_relative_to_multiple_anchors) inside different `anchor()` functions on the same element, the positioned element is only associated with a single anchor.
 
 - [`<anchor-side>`](/en-US/docs/Web/CSS/anchor#anchor-side)
 
