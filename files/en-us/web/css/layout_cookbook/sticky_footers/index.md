@@ -10,10 +10,10 @@ A sticky footer pattern is one where the footer of your page "sticks" to the bot
 
 ## Requirements
 
-The Sticky footer pattern needs to meet the following requirements:
+The sticky footer pattern needs to meet the following requirements:
 
 - Footer sticks to the bottom of the viewport when content is short.
-- If the content of the page extends past the viewport bottom, the footer then sits below the content as normal.
+- If the content of the page extends past the viewport bottom, the footer gets pushed down, always sitting below the content as normal.
 
 ## The recipe
 
@@ -24,8 +24,8 @@ Click "Play" in the code blocks below to edit the example in the MDN Playground:
   <header class="page-header">This is the header</header>
   <main class="page-body">
     <p contenteditable>
-      Main page content here, add more to this text if you want to see the
-      footer push down.
+      The footer sticks to the bottom even thought this paragraph is short. Add content to this editable area to see the
+      footer push down when needed to fit the content.
     </p>
   </main>
   <footer class="page-footer">Sticky footer</footer>
@@ -69,7 +69,7 @@ body {
 }
 ```
 
-{{EmbedLiveSample("sticky-footer-example", "", "350px")}}
+{{EmbedLiveSample("sticky-footer-example", "", "400px")}}
 
 > [!NOTE]
 > In this example and the following one we are using a wrapper set to `min-height: 100%`. You can also achieve this for a full page by setting a {{cssxref("min-height")}} of `100vh` on the {{htmlelement("body")}} and then using it as your grid container.
@@ -89,8 +89,8 @@ You can also use [flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) to creat
   <header class="page-header">This is the header</header>
   <main class="page-body">
     <p contenteditable>
-      Main page content here, add more to this text if you want to see the
-      footer push down.
+      The footer sticks to the bottom even thought this paragraph is short. Add content to this editable area to see the
+      footer push down when needed to fit the content.
     </p>
   </main>
   <footer class="page-footer">Sticky footer</footer>
@@ -140,7 +140,7 @@ body {
 }
 ```
 
-{{EmbedLiveSample("sticky-footer-flexbox-example", "", "350px")}}
+{{EmbedLiveSample("sticky-footer-flexbox-example", "", "400px")}}
 
 The flexbox example starts out in the same way, but we use `display:flex` rather than `display:grid` on the `.wrapper`; we also set {{cssxref("flex-direction")}} to `column`. Then we set our main content to [`flex-grow: 1`](/en-US/docs/Web/CSS/flex-grow) and the other two elements to [`flex-shrink: 0`](/en-US/docs/Web/CSS/flex-shrink) — this prevents them from shrinking smaller when content fills the main area.
 
