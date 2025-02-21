@@ -182,7 +182,7 @@ However, there's no generic way to store arbitrary data types. Furthermore, the 
 
 ### Responding to storage changes with the StorageEvent
 
-The {{domxref("Window/storage_event", "storage")}} event is fired whenever a change is made to the {{domxref("Storage")}} object of another document that shares the same storage space. This won't work on the same page that is making the changes — it is really a way for other pages on the domain using the storage to sync any changes that are made. Pages on other domains can't access the same storage objects.
+The {{domxref("Window/storage_event", "storage")}} event is fired whenever a change is made to the {{domxref("Storage")}} object of another document that shares the same storage space. This won't work on the same page that is making the changes — it is really a way for other pages on the origin using the storage to sync any changes that are made. Pages on other origins can't access the same storage objects.
 
 For `localStorage`, the storage space is shared between all tabs with the same origin. For `sessionStorage`, the storage space is only shared within the tab, among all iframes from the same origin.
 
@@ -206,8 +206,8 @@ Here we add an event listener to the `window` object that fires when the {{domxr
 
 Web Storage also provides a couple of simple methods to remove data. We don't use these in our demo, but they are very simple to add to your project:
 
-- {{domxref("Storage.removeItem()")}} takes a single argument — the key of the data item you want to remove — and removes it from the storage object for that domain.
-- {{domxref("Storage.clear()")}} takes no arguments, and empties the entire storage object for that domain.
+- {{domxref("Storage.removeItem()")}} takes a single argument — the key of the data item you want to remove — and removes it from the storage object for that origin.
+- {{domxref("Storage.clear()")}} takes no arguments, and empties the entire storage object for that origin.
 
 ## Specifications
 
