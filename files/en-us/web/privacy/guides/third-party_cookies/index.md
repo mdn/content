@@ -1,10 +1,9 @@
 ---
 title: Third-party cookies
-slug: Web/Privacy/Third-party_cookies
+slug: Web/Privacy/Guides/Third-party_cookies
 page-type: guide
+sidebar: privacy
 ---
-
-{{QuicklinksWithSubPages("Web/Privacy")}}
 
 This article explains what third-party cookies are, describes the issues associated with them, and explains how you can work around those issues.
 
@@ -66,7 +65,7 @@ Legislation such as the [General Data Privacy Regulation](https://gdpr.eu/) (GDP
 
 Browser vendors know that users don't like the behavior described above, and as a result have all started to block third-party cookies by default, while also including exceptions and heuristics in their source code to work around long-standing third-party cookie issues with popular websites.
 
-- Mozilla's [Anti-tracking policy](https://wiki.mozilla.org/Security/Anti_tracking_policy) has led to Firefox blocking third-party cookies from known trackers by default (see [Firefox tracking protection](/en-US/docs/Web/Privacy/Firefox_tracking_protection) and [Enhanced Tracking Protection](https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop)). Enhanced Tracking Protection can be set to Standard, Strict, or Custom. [Standard mode](https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop#w_standard-enhanced-tracking-protection) enables [Total Cookie Protection](https://blog.mozilla.org/en/products/firefox/firefox-rolls-out-total-cookie-protection-by-default-to-all-users-worldwide/), which gives third-party cookies a separate cookie jar per site, thereby preventing cross-site tracking. In [Strict mode](https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop#w_strict-enhanced-tracking-protection), Firefox blocks all third-party cookies.
+- Mozilla's [Anti-tracking policy](https://wiki.mozilla.org/Security/Anti_tracking_policy) has led to Firefox blocking third-party cookies from known trackers by default (see [Firefox tracking protection](/en-US/docs/Web/Privacy/Guides/Firefox_tracking_protection) and [Enhanced Tracking Protection](https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop)). Enhanced Tracking Protection can be set to Standard, Strict, or Custom. [Standard mode](https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop#w_standard-enhanced-tracking-protection) enables [Total Cookie Protection](https://blog.mozilla.org/en/products/firefox/firefox-rolls-out-total-cookie-protection-by-default-to-all-users-worldwide/), which gives third-party cookies a separate cookie jar per site, thereby preventing cross-site tracking. In [Strict mode](https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop#w_strict-enhanced-tracking-protection), Firefox blocks all third-party cookies.
 - Apple also has a similar [Tracking prevention policy](https://webkit.org/tracking-prevention-policy/); following this has led to a similar set of third-party cookie protections that are enabled by default; see [Intelligent Tracking Prevention](https://webkit.org/tracking-prevention/#intelligent-tracking-prevention-itp) (ITP) for details.
 - At the time of writing, Google Chrome only blocks third-party cookies in Incognito mode by default, although users can set it to block third-party cookies all the time if they wish via `chrome://settings`. Google has started to disable third-party cookies for a limited percentage of Chrome users to test the impact that will have, while at the same time developing technologies to enable key use cases without requiring third-party cookies. See [Replacing third-party cookies](#replacing_third-party_cookies) for details.
 - Edge blocks trackers from unvisited sites, and blocks known harmful trackers by default. At the time of writing Microsoft are also starting to explore blocking third-party cookies in Edge by default. See [Tracking prevention](https://learn.microsoft.com/en-us/microsoft-edge/web-platform/tracking-prevention) for more information.
@@ -108,13 +107,13 @@ There are multiple strategies to help sites minimize breakage in browsers where 
 6. If your third-party cookies are only used across a small number of related, known websites, you could use the [Storage Access API](/en-US/docs/Web/API/Storage_Access_API) and/or [Related Website Sets](/en-US/docs/Web/API/Storage_Access_API/Related_website_sets) to allow cross-site cookie access only for those specific sites. Storage Access prompts the user to provide permission for a site to use third-party cookies on a per-frame basis.
    - If you've already implemented a solution using the Storage Access API for Firefox or Safari then this is a good time to check your implementation against Chrome's behavior, which was updated to provide full support in version 119.
    - Related Website Sets can be considered a progressive enhancement of the Storage Access API: The API can be used in just the same way, but sites in the set will not prompt users for permission to access third-party cookies.
-7. If your third-party cookies are being used on a 1:1 basis with the top-level sites they are generated on, you could use [Cookies Having Independent Partitioned State](/en-US/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies) (CHIPS, aka partitioned cookies), to opt your cookies into partitioned storage with a separate cookie jar per top-level site. This only requires adding the `partitioned` attribute to your existing cross-site cookies. They can then be used unrestrictedly, but they can't be shared with other sites. Note that CHIPS is currently Chromium-only.
+7. If your third-party cookies are being used on a 1:1 basis with the top-level sites they are generated on, you could use [Cookies Having Independent Partitioned State](/en-US/docs/Web/Privacy/Guides/Privacy_sandbox/Partitioned_cookies) (CHIPS, aka partitioned cookies), to opt your cookies into partitioned storage with a separate cookie jar per top-level site. This only requires adding the `partitioned` attribute to your existing cross-site cookies. They can then be used unrestrictedly, but they can't be shared with other sites. Note that CHIPS is currently Chromium-only.
 
 ## Replacing third-party cookies
 
 Several features are available to developers who wish to stop using third-party cookies to respect user privacy and minimize tracking while continuing to implement related use cases. Some of these features are in an early experimental stage, but they are worth considering as you begin to prepare for the future.
 
-You can start to explore the different features available in Google's [Privacy Sandbox](/en-US/docs/Web/Privacy/Privacy_sandbox) project to see if they fit your use case (these are currently experimental, and Chromium-only):
+You can start to explore the different features available in Google's [Privacy Sandbox](/en-US/docs/Web/Privacy/Guides/Privacy_sandbox) project to see if they fit your use case (these are currently experimental, and Chromium-only):
 
 - [Federated Credential Management](/en-US/docs/Web/API/FedCM_API) (FedCM) API: Enables federated identity services allowing users to sign in to multiple sites and services.
 - [Private State Tokens](https://developers.google.com/privacy-sandbox/protections/private-state-tokens): Enables anti-fraud and anti-spam by exchanging limited, non-identifying information across sites.

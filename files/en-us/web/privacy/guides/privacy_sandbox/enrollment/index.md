@@ -1,7 +1,9 @@
 ---
 title: Privacy sandbox enrollment
-slug: Web/Privacy/Privacy_sandbox/Enrollment
+short-title: Enrollment
+slug: Web/Privacy/Guides/Privacy_sandbox/Enrollment
 page-type: guide
+sidebar: privacy
 ---
 
 To access certain privacy sandbox features, browsers require developers to complete an **enrollment** process.
@@ -32,7 +34,3 @@ The documentation of each feature includes more details on exactly which sub-fea
 ## See also
 
 - [The Privacy Sandbox](https://developers.google.com/privacy-sandbox) on developers.google.com
-
-<section id="Quick_links">
-{{ListSubpages("/en-US/docs/Web/Privacy", "2", "0", "0")}}
-</section>

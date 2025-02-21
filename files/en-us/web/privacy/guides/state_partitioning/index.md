@@ -1,10 +1,11 @@
 ---
 title: State Partitioning
-slug: Web/Privacy/State_Partitioning
+slug: Web/Privacy/Guides/State_Partitioning
 page-type: guide
+sidebar: privacy
 ---
 
-**State Partitioning** is a broad effort by Mozilla to rework how Firefox manages client-side state (i.e., data stored in the browser) to mitigate the ability of websites to abuse state for cross-site tracking, i.e. via [third-party cookies](/en-US/docs/Web/Privacy/Third-party_cookies).
+**State Partitioning** is a broad effort by Mozilla to rework how Firefox manages client-side state (i.e., data stored in the browser) to mitigate the ability of websites to abuse state for cross-site tracking, i.e. via [third-party cookies](/en-US/docs/Web/Privacy/Guides/Third-party_cookies).
 
 This effort aims to achieve that by providing a partitioned storage location to every website a user visits.
 This article gives an overview of the mechanism, lists the affected APIs and explains how to debug affected sites.
@@ -28,7 +29,7 @@ The example below shows how `example.com` can use its cross-site state (in this 
 
 Firefox's past cookie policies attempt to mitigate tracking by blocking access to some storage APIs (e.g., cookies and localStorage) for certain domains under certain conditions.
 For example, our "block all third-party cookies" policy will prevent all domains from accessing certain storage APIs when loaded in a third-party context.
-Our current [default cookie policy](/en-US/docs/Web/Privacy/Storage_Access_Policy) blocks access in a third-party context only for domains classified as trackers.
+Our current [default cookie policy](/en-US/docs/Web/Privacy/Guides/Storage_Access_Policy) blocks access in a third-party context only for domains classified as trackers.
 
 ## State Partitioning
 
@@ -228,7 +229,3 @@ For example, to disable partitioning for `videos.example` on all sites, or to di
 ```plain
 *,https://videos.example;unpartitioned.example,*
 ```
-
-<section id="Quick_links">
-{{ListSubpages("/en-US/docs/Web/Privacy", "2", "0", "0")}}
-</section>
