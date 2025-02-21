@@ -235,7 +235,7 @@ function foo(name) {
 }
 ```
 
-The extra `then()` handler can be merged with the executor passed to the constructor because it's not waiting on any asynchronous operation. However, its existence splits the code into two microtasks. These microtasks are scheduled and executed in an intertwined manner, which can both make your code slower and introduce unnecessary race conditions. Therefore, make sure to use `await` only when necessary (to unwrap promises into their values).
+The extra `then()` handler can be merged with the executor passed to the constructor because it's not waiting on any asynchronous operation. However, its existence splits the code into one additional microtask for each call to `foo`. These microtasks are scheduled and executed in an intertwined manner, which can both make your code slower and introduce unnecessary race conditions. Therefore, make sure to use `await` only when necessary (to unwrap promises into their values).
 
 Microtasks are scheduled not only by promise resolution but by other web APIs as well, and they execute with the same priority. This example uses {{domxref("Window.queueMicrotask()", "queueMicrotask()")}} to demonstrate how the microtask queue is processed when each `await` expression is encountered.
 
