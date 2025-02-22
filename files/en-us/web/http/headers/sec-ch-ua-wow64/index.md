@@ -7,7 +7,7 @@ status:
 browser-compat: http.headers.Sec-CH-UA-WoW64
 ---
 
-{{HTTPSidebar}}{{SecureContext_Header}}
+{{HTTPSidebar}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 The HTTP **`Sec-CH-UA-WoW64`** {{Glossary("request header")}} is a [user agent client hint](/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) indicating if a 32-bit user-agent application is running on a 64-bit Windows machine.
 
