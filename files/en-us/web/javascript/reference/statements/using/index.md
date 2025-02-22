@@ -39,7 +39,7 @@ A `using` declares a disposable resource that's tied to the lifetime of the vari
 
 When the variable is first declared, a _disposer_ is retrieved from the object. If the `[Symbol.dispose]` property doesn't contain a function, a `TypeError` is thrown. This disposer is saved to the scope.
 
-When the variable goes out of scope, the disposer is called. If the scope contains multiple `using` or `await using` declarations, all disposers are run in the reverse order of declaration, regardless of the type of declaration. All disposers are guaranteed to run (much like the `finally` block in `try...catch...finally`). All errors thrown during disposal, including the initial error that caused the scope exit (if applicable), are all aggregated inside one {{jsxref("SuppressedError")}}, with each earlier exception as the `suppressed` property and the later exception as the `error` property. This `SuppressedError` is thrown after disposal is complete.
+When the variable goes out of scope, the disposer is called. If the scope contains multiple `using` or {{jsxref("Statements/await_using", "await using")}} declarations, all disposers are run in the reverse order of declaration, regardless of the type of declaration. All disposers are guaranteed to run (much like the `finally` block in {{jsxref("Statements/try...catch", "try...catch...finally")}}). All errors thrown during disposal, including the initial error that caused the scope exit (if applicable), are all aggregated inside one {{jsxref("SuppressedError")}}, with each earlier exception as the `suppressed` property and the later exception as the `error` property. This `SuppressedError` is thrown after disposal is complete.
 
 `using` ties resource management to lexical scopes, which is both convenient and sometimes confusing. There are many ways to preserve the variable's value when the variable itself is out of scope, so you may hold a reference to an already-disposed resource. See below for some examples where it may not behave how you expect. If you want to hand-manage resource disposal, while maintaining the same error handling guarantees, you can use {{jsxref("DisposableStack")}} instead.
 
@@ -221,11 +221,103 @@ console.log(resource?.getValue());
 
 ### `using` declaration without using the variable
 
+You can achieve automatic resource disposing using `using`, without even using the variable. This is very useful for setting up a context within a block, such as creating a lock:
+
+```js
+{
+  using _ = new Lock();
+  // Perform concurrent operations here
+  // Lock disposed (released) here
+}
+```
+
+Note that `_` is a normal identifier, but it's a convention to use it as a "throwaway" variable. To create multiple unused variables, you need to use distinct names like `__` , `___`, etc., or prefix the variable name with `_`, depending on your code base's conventions.
+
 ### Initialization and temporal dead zones
+
+`using` variables are subject to the same [temporal dead zone](/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz) restriction as `let` and `const` variables. This means that you can't access the variable before the initialization—the valid lifetime of the resource is strictly from its initialization to the end of its scope. This is enables [RAII](https://en.wikipedia.org/wiki/Resource_acquisition_is_initialization)-style resource management.
+
+```js
+let useResource;
+{
+  useResource = () => resource.getValue();
+  useResource(); // Error: Cannot access 'resource' before initialization
+  using resource = new Resource();
+  useResource(); // Valid
+}
+useResource(); // Error: Resource is disposed
+```
 
 ### Error handling
 
-### Implicit work on scope exit
+The `using` declaration is the most useful for managing resource disposal in the presence of errors. If you are not careful, some resources may leak because the error prevents code afterwards from executing.
+
+```js
+function handleResource(resource) {
+  if (resource.getValue() > 0.5) {
+    throw new Error("Resource value too high");
+  }
+}
+
+try {
+  using resource = new Resource();
+  handleResource(resource);
+} catch (e) {
+  console.error(e);
+}
+```
+
+This will successfully catch the error thrown by `handleResource` and log it, and no matter if `handleResource` throws an error or not, the resource is disposed before exiting the `try` block.
+
+Here, if you don't use `using`, you may do something like:
+
+```js example-bad
+try {
+  const resource = new Resource();
+  handleResource(resource);
+  resource[Symbol.dispose]();
+} catch (e) {
+  console.error(e);
+}
+```
+
+But, if `handleResource()` throws an error, then control never reaches `resource[Symbol.dispose]()`, and the resource is leaked. Furthermore, if you have two resources, then errors thrown in earlier disposals may prevent later disposals from running, leading to more leaks.
+
+Consider a more complicated case where the disposer itself throws an error:
+
+```js
+class CantDisposeMe {
+  #name;
+  constructor(name) {
+    this.#name = name;
+  }
+  [Symbol.dispose]() {
+    throw new Error(`Can't dispose ${this.#name}`);
+  }
+}
+
+let error;
+
+try {
+  using resource1 = new CantDisposeMe("resource1");
+  using resource2 = new CantDisposeMe("resource2");
+  throw new Error("Error in main block");
+} catch (e) {
+  error = e;
+}
+```
+
+You can inspect the error thrown in your browser's console. It has the following structure:
+
+```plain
+SuppressedError: An error was suppressed during disposal
+  suppressed: SuppressedError: An error was suppressed during disposal
+    suppressed: Error: Can't dispose resource1
+    error: Error: Error in main block
+  error: Error: Can't dispose resource2
+```
+
+As you can see, `error` contains all the errors that were thrown during disposal, as a {{jsxref("SuppressedError")}}. Each additional error is added as the `error` property, and the original error is added as the `suppressed` property.
 
 ## Specifications
 

@@ -34,7 +34,7 @@ An `await using` declares an async disposable resource that's tied to the lifeti
 
 When the variable is first declared, a _disposer_ is retrieved from the object. The `[Symbol.asyncDispose]` property is tried first, and falls back to `[Symbol.dispose]` if `[Symbol.asyncDispose]` is `undefined`. If neither property contains a function, a `TypeError` is thrown. Notably, the `[Symbol.dispose]()` method is wrapped into a function that looks like `async () => { object[Symbol.dispose](); }`, which means if it returns a promise, that promise is _not_ awaited. This disposer is saved to the scope.
 
-When the variable goes out of scope, the disposer is called and awaited. If the scope contains multiple `using` or `await using` declarations, all disposers are run in sequence in the reverse order of declaration, regardless of the type of declaration. All disposers are guaranteed to run (much like the `finally` block in `try...catch...finally`). All errors thrown during disposal, including the initial error that caused the scope exit (if applicable), are all aggregated inside one {{jsxref("SuppressedError")}}, with each earlier exception as the `suppressed` property and the later exception as the `error` property. This `SuppressedError` is thrown after disposal is complete.
+When the variable goes out of scope, the disposer is called and awaited. If the scope contains multiple {{jsxref("Statements/using", "using")}} or `await using` declarations, all disposers are run in sequence in the reverse order of declaration, regardless of the type of declaration. All disposers are guaranteed to run (much like the `finally` block in {{jsxref("Statements/try...catch", "try...catch...finally")}}). All errors thrown during disposal, including the initial error that caused the scope exit (if applicable), are all aggregated inside one {{jsxref("SuppressedError")}}, with each earlier exception as the `suppressed` property and the later exception as the `error` property. This `SuppressedError` is thrown after disposal is complete.
 
 The variable is allowed to have value `null` or `undefined`, so the resource can be optionally present. As long as one `await using` variable is declared in this scope, at least one `await` is guaranteed to happen on scope exit, even if the variable actually has value `null` or `undefined`. This prevents the disposal to end synchronously, causing timing issues (see [control flow effects of `await`](/en-US/docs/Web/JavaScript/Reference/Operators/await#control_flow_effects_of_await)).
 
@@ -142,6 +142,8 @@ for await (await using file of asyncIterableOfAsyncDisposables) {
 
 As soon as one `await using` is declared in a scope, the scope will always have an `await` on exit, even if the variable is `null` or `undefined`. This ensures stable execution order and error handling. The [Control flow effects of await](/en-US/docs/Web/JavaScript/Reference/Operators/await#control_flow_effects_of_await) examples have more details on this.
 
+In the example below, the `example()` call below doesn't resolve until one tick after, because of an implicit `await` when the function returns.
+
 ```js
 async function example() {
   await using nothing = null;
@@ -156,7 +158,7 @@ Promise.resolve().then(() => console.log("Microtask done"));
 // Example done
 ```
 
-Consider the same code but with a synchronous {{jsxref("Statements/using", "using")}} instead:
+Consider the same code but with a synchronous {{jsxref("Statements/using", "using")}} instead. This time, the `example()` call immediately resolves, so the two `then()` handlers are called in the same tick.
 
 ```js
 async function example() {
