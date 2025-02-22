@@ -51,7 +51,7 @@ browser.action.setPopup(
 
 ### Return value
 
-A [Promise](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) fulfilled when the popup is successfully set. If the request fails, the promise is rejected with an error message.
+A [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) fulfilled when the popup is successfully set. If the request fails, the promise is rejected with an error message.
 
 ## Examples
 
