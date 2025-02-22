@@ -32,10 +32,8 @@ To see the code for this color syntax converter, [view the source on GitHub](htt
 
 ### At-rules and descriptors
 
-- {{cssxref("@color-profile")}}
-  - [`components`](/en-US/docs/Web/CSS/@color-profile#descriptors) descriptor
-  - [`rendering-intent`](/en-US/docs/Web/CSS/@color-profile#descriptors) descriptor
-  - [`src`](/en-US/docs/Web/CSS/@color-profile#descriptors) descriptor
+> [!NOTE]
+> The CSS color module introduces the {{cssxref("@color-profile")}} at-rule that have not been implemented, along with its descriptors: `components`, `rendering-intent` and `src`.
 
 ### Functions
 
@@ -49,8 +47,10 @@ To see the code for this color syntax converter, [view the source on GitHub](htt
   - [`oklch()`](/en-US/docs/Web/CSS/color_value/oklch)
   - [`color()`](/en-US/docs/Web/CSS/color_value/color)
 - [`color-mix()`](/en-US/docs/Web/CSS/color_value/color-mix)
-- [`device-cmyk()`](/en-US/docs/Web/CSS/color_value/device-cmyk)
 - {{CSSXref("color_value/light-dark", "light-dark()")}}
+
+> [!NOTE]
+> The CSS color module introduces the {{CSSXref("color_value/device-cmyk", "device-cmyk()")}} and the `contrast-color(),` functions that have not been implemented.
 
 ### Data types
 
@@ -73,7 +73,8 @@ To see the code for this color syntax converter, [view the source on GitHub](htt
 
 ### Interfaces
 
-- `CSSColorProfileRule`
+> [!NOTE]
+> The CSS color module introduces the `CSSColorProfileRule` interface that have not been implemented.
 
 ## Guides
 
