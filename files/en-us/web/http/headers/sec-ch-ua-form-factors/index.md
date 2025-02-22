@@ -7,9 +7,9 @@ status:
 browser-compat: http.headers.Sec-CH-UA-Form-Factors
 ---
 
-{{HTTPSidebar}}{{SecureContext_Header}}
+{{HTTPSidebar}}{{SecureContext_Header}}{{SeeCompatTable}}
 
-The HTTP **`Sec-CH-UA-Form-Factors`** {{Glossary("request header")}} is a [user agent client hint](/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) which provides information on the user-agent's device form factor.
+The HTTP **`Sec-CH-UA-Form-Factors`** {{Glossary("Request header", "request header")}} is a [user agent client hint](/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) which provides information on the user-agent's device form factor.
 
 <table class="properties">
   <tbody>
