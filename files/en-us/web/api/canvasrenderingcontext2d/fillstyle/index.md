@@ -111,3 +111,4 @@ setFillColor(c, m, y, k, a);
   - {{cssxref("&lt;color&gt;")}} CSS data type
   - {{domxref("CanvasGradient")}} object
   - {{domxref("CanvasPattern")}} object
+Sử dụng Control + Shift + mđể chuyển đổi tabtiêu điểm di chuyển phím. Ngoài ra, sử dụng escthen tabđể di chuyển đến phần tử tương tác tiếp theo trên trang.
