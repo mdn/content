@@ -80,7 +80,7 @@ Before you can start observing file or directory changes, you need to initialize
 const observer = new FileSystemObserver(callback);
 ```
 
-The callback function body can be specified to return and process file change observations in any want you want:
+The callback function body can be specified to return and process file change observations in any way you want:
 
 ```js
 const callback = (records, observer) => {
