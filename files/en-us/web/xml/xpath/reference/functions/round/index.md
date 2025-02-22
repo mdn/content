@@ -20,7 +20,7 @@ round( decimal )
 
 ### Return value
 
-The nearest integer less then, greater than, or equal to `decimal`.
+The nearest integer less than, greater than, or equal to `decimal`.
 
 ## Description
 

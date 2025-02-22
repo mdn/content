@@ -168,7 +168,7 @@ Just like margins and paddings, the inset values are ordered clockwise - top, ri
 
 CSS provides a universal shorthand property, {{cssxref("all")}}, which applies its value to every property in the document. Its purpose is to change the properties' inheritance model.
 
-See [Handling conflicts](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts) or [Introducing the CSS Cascade](/en-US/docs/Web/CSS/Cascade) for more information about how inheritance works in CSS.
+See [Handling conflicts](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts) or [Introducing the CSS Cascade](/en-US/docs/Web/CSS/CSS_cascade/Cascade) for more information about how inheritance works in CSS.
 
 ## Shorthand properties
 
@@ -245,14 +245,14 @@ See [Handling conflicts](/en-US/docs/Learn_web_development/Core/Styling_basics/H
 
 ## See also
 
-- [CSS syntax](/en-US/docs/Web/CSS/Syntax)
-- [At-rules](/en-US/docs/Web/CSS/At-rule)
-- [Specificity](/en-US/docs/Web/CSS/Specificity)
-- [Inheritance](/en-US/docs/Web/CSS/Inheritance)
-- [Introducing the CSS Cascade](/en-US/docs/Web/CSS/Cascade)
+- [CSS syntax](/en-US/docs/Web/CSS/CSS_syntax/Syntax)
+- [At-rules](/en-US/docs/Web/CSS/CSS_syntax/At-rule)
+- [Specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity)
+- [Inheritance](/en-US/docs/Web/CSS/CSS_cascade/Inheritance)
+- [Introducing the CSS Cascade](/en-US/docs/Web/CSS/CSS_cascade/Cascade)
 - [Learn: Handling conflicts](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
 - [Learn: Cascade layers](/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)
 - [CSS cascading and inheritance](/en-US/docs/Web/CSS/CSS_cascade) module
 - [Visual formatting models](/en-US/docs/Web/CSS/Visual_formatting_model)
-- [Initial](/en-US/docs/Web/CSS/initial_value), [computed](/en-US/docs/Web/CSS/computed_value), [used](/en-US/docs/Web/CSS/used_value), and [actual](/en-US/docs/Web/CSS/actual_value) values
-- [Value definition syntax](/en-US/docs/Web/CSS/Value_definition_syntax)
+- [Initial](/en-US/docs/Web/CSS/CSS_cascade/initial_value), [computed](/en-US/docs/Web/CSS/CSS_cascade/computed_value), [used](/en-US/docs/Web/CSS/CSS_cascade/used_value), and [actual](/en-US/docs/Web/CSS/CSS_cascade/actual_value) values
+- [Value definition syntax](/en-US/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)

@@ -74,6 +74,7 @@ To set a request body, pass it as the `body` option:
 
 ```js
 const response = await fetch("https://example.org/post", {
+  method: "POST",
   body: JSON.stringify({ username: "example" }),
   // ...
 });
@@ -95,6 +96,7 @@ Other objects are converted to strings using their `toString()` method. For exam
 
 ```js
 const response = await fetch("https://example.org/post", {
+  method: "POST",
   headers: {
     "Content-Type": "application/x-www-form-urlencoded",
   },
@@ -141,7 +143,7 @@ See [Locked and disturbed streams](#locked_and_disturbed_streams) for more infor
 
 ### Setting headers
 
-Request headers give the server information about the request: for example, the {{httpheader("Content-Type")}} header tells the server the format of the request's body.
+Request headers give the server information about the request: for example, in a `POST` request, the {{httpheader("Content-Type")}} header tells the server the format of the request's body.
 
 To set request headers, assign them to the `headers` option.
 
@@ -149,9 +151,11 @@ You can pass an object literal here containing `header-name: header-value` prope
 
 ```js
 const response = await fetch("https://example.org/post", {
+  method: "POST",
   headers: {
     "Content-Type": "application/json",
   },
+  body: JSON.stringify({ username: "example" }),
   // ...
 });
 ```
@@ -163,26 +167,25 @@ const myHeaders = new Headers();
 myHeaders.append("Content-Type", "application/json");
 
 const response = await fetch("https://example.org/post", {
+  method: "POST",
   headers: myHeaders,
+  body: JSON.stringify({ username: "example" }),
   // ...
 });
 ```
 
-Many headers are set automatically by the browser and can't be set by a script: these are called {{glossary("Forbidden header name", "Forbidden header names")}}. If the {{domxref("Request.mode", "mode")}} option is set to `no-cors`, then the set of permitted headers is further restricted.
+Compared to using plain objects, the `Headers` object provides some additional input sanitization. For example, it normalizes header names to lowercase, strips leading and trailing whitespace from header values, and prevents certain headers from being set. Many headers are set automatically by the browser and can't be set by a script: these are called {{glossary("Forbidden header name", "Forbidden header names")}}. If the {{domxref("Request.mode", "mode")}} option is set to `no-cors`, then the set of permitted headers is further restricted.
 
-### Making POST requests
+### Sending data in a GET request
 
-We can combine the `method`, `body`, and `headers` options to make a POST request:
+`GET` requests don't have a body, but you can still send data to the server by appending it to the URL as a query string. This is a common way to send form data to the server. You can do this by using {{domxref("URLSearchParams")}} to encode the data, and then appending it to the URL:
 
 ```js
-const myHeaders = new Headers();
-myHeaders.append("Content-Type", "application/json");
+const params = new URLSearchParams();
+params.append("username", "example");
 
-const response = await fetch("https://example.org/post", {
-  method: "POST",
-  body: JSON.stringify({ username: "example" }),
-  headers: myHeaders,
-});
+// GET request sent to https://example.org/login?username=example
+const response = await fetch(`https://example.org/login?${params}`);
 ```
 
 ### Making cross-origin requests
