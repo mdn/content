@@ -57,7 +57,7 @@ The callback always includes two parameters:
 
 ### Observe a file or directory
 
-Once a `FileSystemObserver` instance is available, you can start observing changes to a file system entry by running the {{domxref("FileSystemObserver.observe()")}} method, passing it the handle of the entry to observe. This can be a {{domxref("FileSystemFileHandle")}} or {{domxref("FileSystemDirectoryHandle")}} for the user-observable file system:
+Once a `FileSystemObserver` instance is available, you can start observing changes to a file system entry by running the {{domxref("FileSystemObserver.observe()")}} method, passing it the handle of the entry to observe. This can be a {{domxref("FileSystemFileHandle")}} or {{domxref("FileSystemDirectoryHandle")}} for the user-observable file system and the [Origin Private File System](/en-US/docs/Web/API/File_System_API/Origin_private_file_system) (OPFS):
 
 ```js
 // Observe a file
@@ -75,16 +75,16 @@ async function observeDirectory() {
 }
 ```
 
-or a {{domxref("FileSystemSyncAccessHandle")}} for the [Origin Private File System](/en-US/docs/Web/API/File_System_API/Origin_private_file_system) (OPFS):
+or a {{domxref("FileSystemSyncAccessHandle")}} for the OPFS:
 
 ```js
 // Observe an OPFS file system entry
 async function observeOPFSFile() {
   const root = await navigator.storage.getDirectory();
   const draftHandle = await root.getFileHandle("draft.txt", { create: true });
-  const opfsHandle = await draftHandle.createSyncAccessHandle();
+  const syncHandle = await draftHandle.createSyncAccessHandle();
 
-  await observer.observe(opfsHandle);
+  await observer.observe(syncHandle);
 }
 ```
 

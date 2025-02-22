@@ -32,7 +32,7 @@ new FileSystemObserver(callback)
 `FileSystemChangeRecord` objects have the following structure:
 
 - `changedHandle`
-  - : A reference to the file system handle that the change was observed on. This can be a {{domxref("FileSystemFileHandle")}} or {{domxref("FileSystemDirectoryHandle")}} for the user-observable file system, or a {{domxref("FileSystemSyncAccessHandle")}} for the [Origin Private File System](/en-US/docs/Web/API/File_System_API/Origin_private_file_system) (OPFS). This property will be `null` for records with a `"disappeared"`, `"errored"`, or `"unknown"` type.
+  - : A reference to the file system handle that the change was observed on. This can be a {{domxref("FileSystemFileHandle")}} or {{domxref("FileSystemDirectoryHandle")}} for the user-observable file system and the [Origin Private File System](/en-US/docs/Web/API/File_System_API/Origin_private_file_system) (OPFS), or a {{domxref("FileSystemSyncAccessHandle")}} for the OPFS. This property will be `null` for records with a `"disappeared"`, `"errored"`, or `"unknown"` type.
 - `relativePathComponents`
   - : An array containing the path components that make up the relative file path from the `root` to the `changedHandle`, including the `changedHandle` filename.
 - `relativePathMovedFrom`
