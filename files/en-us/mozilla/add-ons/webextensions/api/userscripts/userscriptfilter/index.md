@@ -14,7 +14,7 @@ A list of user scripts to be processed by {{WebExtAPIRef("userScripts.getScripts
 Values of this type are an object containing these properties:
 
 - `ids` {{optional_inline}}
-  - : `array` of `string`. IDs of user scripts to be processed by {{WebExtAPIRef("userScripts.getScripts()")}} and {{WebExtAPIRef("userScripts.unregister()")}}. This matches scripts by the `id` field of {{WebExtAPIRef("userScripts.RegisteredUserScript","RegisteredUserScript")}}.
+  - : `array` of `string`. IDs of user scripts to be processed by {{WebExtAPIRef("userScripts.getScripts()")}} and {{WebExtAPIRef("userScripts.unregister()")}}. This matches scripts by the `id` field of {{WebExtAPIRef("userScripts.RegisteredUserScript","RegisteredUserScript")}}. If not specified, all user scripts are matched.
 
 {{WebExtExamples("h2")}}
 
