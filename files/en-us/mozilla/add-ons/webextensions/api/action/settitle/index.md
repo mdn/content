@@ -50,7 +50,7 @@ browser.action.setTitle(
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that resolves when the title has been set.
+A [Promise](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) fulfilled when the title is successfully set. If the request fails, the promise is rejected with an error message.
 
 ## Examples
 

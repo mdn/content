@@ -48,6 +48,8 @@ browser.action.setBadgeTextColor(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that resolves when the color has been set.
 
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that resolves when the color has been set.
+
 ## Examples
 
 A badge text color that starts off as red, and turns green when the browser action is clicked:
