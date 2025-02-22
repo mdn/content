@@ -11,6 +11,7 @@ Congrès
 contenido
 couleur
 dans
+demeure
 Deutsch
 deutsches
 Dezember
@@ -35,6 +36,7 @@ heure
 hoja
 homme
 ijsland
+İstanbul
 Mais
 Majestatis
 minuto

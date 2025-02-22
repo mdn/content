@@ -10,7 +10,7 @@ browser-compat: svg.global_attributes.stroke-dasharray
 The **`stroke-dasharray`** attribute is a presentation attribute defining the pattern of dashes and gaps used to paint the outline of the shape.
 
 > [!NOTE]
-> As a presentation attribute, `stroke-dasharray` can be used as a CSS property. See {{cssxref('stroke-dasharray')}} for more.
+> As a presentation attribute, `stroke-dasharray` also has a CSS property counterpart: {{cssxref("stroke-dasharray")}}. When both are specified, the CSS property takes priority.
 
 You can use this attribute with the following SVG elements:
 

@@ -24,7 +24,7 @@ evaluate(xpathExpression, contextNode, namespaceResolver, resultType, result)
 - `xpathExpression`
   - : A string representing the _xpath_ to be evaluated.
 - `contextNode`
-  - : The _context node_ for the query (see the [XPath specification](https://www.w3.org/TR/1999/REC-xpath-19991116/)).
+  - : The _context node_ for the query.
     It's common to pass `document` as the context node.
 - `namespaceResolver`
   - : A function that will be passed any namespace prefixes

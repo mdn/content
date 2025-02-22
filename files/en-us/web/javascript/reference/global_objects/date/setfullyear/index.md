@@ -9,7 +9,21 @@ browser-compat: javascript.builtins.Date.setFullYear
 
 The **`setFullYear()`** method of {{jsxref("Date")}} instances changes the year, month, and/or day of month for this date according to local time.
 
-{{EmbedInteractiveExample("pages/js/date-setfullyear.html")}}
+{{InteractiveExample("JavaScript Demo: Date.setFullYear()")}}
+
+```js interactive-example
+const event = new Date("August 19, 1975 23:15:30");
+
+event.setFullYear(1969);
+
+console.log(event.getFullYear());
+// Expected output: 1969
+
+event.setFullYear(0);
+
+console.log(event.getFullYear());
+// Expected output: 0
+```
 
 ## Syntax
 

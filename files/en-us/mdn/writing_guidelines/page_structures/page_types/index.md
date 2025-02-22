@@ -202,7 +202,7 @@ It also provides examples, browser compatibility information, and other importan
 
 A **conceptual page** is a _guide_ page that explains or teaches something.
 Generally, if a page contains primarily prose, and doesn't fall into another page type, it's probably a conceptual page.
-An extended discussion of a topic might be spread across multiple conceptual pages, and linked using [Next](https://github.com/mdn/yari/blob/main/kumascript/macros/Next.ejs) and [Previous](https://github.com/mdn/yari/blob/main/kumascript/macros/Previous.ejs) macros.
+An extended discussion of a topic might be spread across multiple conceptual pages, and linked using [Next](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/previous_menu_next.rs) and [Previous](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/previous_menu_next.rs) macros.
 
 #### Examples
 
@@ -233,7 +233,7 @@ A **landing page** serves as a menu, of sorts, for its subpages, and is therefor
 A landing page layout is typically used for the root page of a tree of pages about a particular topic.
 It opens with a brief summary of the topic, then presents a structured list of links to its subpages, and optionally, additional material that be useful to the reader.
 
-The list of subpages can be generated automatically using the [`SubpagesWithSummaries`](https://github.com/mdn/yari/blob/main/kumascript/macros/SubpagesWithSummaries.ejs) template. However, in more complex cases, the list may need to be created (and maintained) by hand.
+The list of subpages can be generated automatically using the [`SubpagesWithSummaries`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/subpages_with_summaries.rs) template. However, in more complex cases, the list may need to be created (and maintained) by hand.
 
 ### Learn web development pages
 

@@ -46,9 +46,7 @@ browser.action.setBadgeTextColor(
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that resolves when the color has been set.
-
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that resolves when the color has been set.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) fulfilled when the badge text color is successfully set. If the request fails, the promise is rejected with an error message.
 
 ## Examples
 

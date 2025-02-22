@@ -10,7 +10,7 @@ browser-compat: svg.global_attributes.fill-opacity
 The **`fill-opacity`** attribute is a presentation attribute defining the opacity of the paint server (_color_, _gradient_, _pattern_, etc.) applied to a shape.
 
 > [!NOTE]
-> As a presentation attribute `fill-opacity` can be used as a CSS property.
+> As a presentation attribute, `fill-opacity` also has a CSS property counterpart: {{cssxref("fill-opacity")}}. When both are specified, the CSS property takes priority.
 
 You can use this attribute with the following SVG elements:
 
