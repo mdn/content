@@ -90,7 +90,7 @@ You can also use [flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) to creat
   <header class="page-header">This is the header</header>
   <main class="page-body">
     <p contenteditable>
-      The footer sticks to the bottom even thought this paragraph is short. Add
+      The footer sticks to the bottom even though this paragraph is short. Add
       content to this editable area to see the footer push down when needed to
       fit the content.
     </p>
