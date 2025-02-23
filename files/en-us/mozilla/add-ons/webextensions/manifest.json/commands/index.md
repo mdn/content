@@ -193,7 +193,7 @@ If a key combination is already used by the browser (like `"Ctrl+P"`) or by an e
 
 ### Media keys
 
-Alternatively, the shortcut may be specified as one of the following media keys:
+Alternatively, the shortcut can be specified as one of these media keys:
 
 - `"MediaNextTrack"`
 - `"MediaPlayPause"`
@@ -202,11 +202,15 @@ Alternatively, the shortcut may be specified as one of the following media keys:
 
 ## Updating shortcuts
 
-Shortcuts can be updated via {{WebExtAPIRef("commands.update()")}}. Users can also update shortcuts via the "Manage Extension Shortcuts" option at `about:addons` in Firefox, as shown in [this video](https://bug1303384.bmoattachments.org/attachment.cgi?id=9051647). In Chrome, users can change shortcuts at `chrome://extensions/shortcuts`.
+In Firefox, your extension can update shortcut key settings using {{WebExtAPIRef("commands.update()")}}. Users can update shortcuts using the [Manage Extension Shortcuts](https://support.mozilla.org/en-US/kb/manage-extension-shortcuts-firefox) option at `about:addons`, as shown in [this video](https://bug1303384.bmoattachments.org/attachment.cgi?id=9051647). Your extension can open this option using {{WebExtAPIRef("commands.openShortcutSettings()")}}.
+
+In Chrome, extensions can't programmatically update shortcut keys. Users can change shortcuts at `chrome://extensions/shortcuts`, which can be opened using {{WebExtAPIRef("tabs.create()")}}.
+
+Safari doesn't support programmatic or user modification of extension shortcut keys.
 
 ## Example
 
-Define a single keyboard shortcut, using only the default key combination:
+Define a keyboard shortcut using only the default key combination:
 
 ```json
 "commands": {
