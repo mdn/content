@@ -2,9 +2,8 @@
 title: Writing guidelines
 slug: MDN/Writing_guidelines
 page-type: mdn-writing-guide
+sidebar: mdnsidebar
 ---
-
-{{MDNSidebar}}
 
 MDN Web Docs is an open-source project. The sections outlined below describe our guidelines for _what_ we document and _how_ we do it on MDN Web Docs. To learn about _how to contribute_, see our [contribution guidelines](/en-US/docs/MDN/Community).
 
@@ -19,6 +18,10 @@ MDN Web Docs is an open-source project. The sections outlined below describe our
 - [Our writing style guide](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide)
 
   - : The writing style guide covers the language and style we use to write on MDN Web Docs. It also covers how to [format code examples](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide).
+
+- [Learn web development writing guidelines](/en-US/docs/MDN/Writing_guidelines/Learning_content)
+
+  - : The [Learn web development](/en-US/docs/Learn_web_development) section of MDN is aimed specifically at folks learning the basic fundamentals of web development, and as such, requires a different approach to the rest of MDN's content. This articles provides guidelines for writing learning content.
 
 - [How to write for MDN Web Docs](/en-US/docs/MDN/Writing_guidelines/Howto)
 

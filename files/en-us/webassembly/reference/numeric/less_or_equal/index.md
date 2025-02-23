@@ -2,9 +2,8 @@
 title: Less or equal
 slug: WebAssembly/Reference/Numeric/Less_or_equal
 page-type: webassembly-instruction
+sidebar: webassemblysidebar
 ---
-
-{{WebAssemblySidebar}}
 
 The **`le`** instructions, short for _less or equal_, check if a number is less than or equal to another number. If the first number is less than or equal to the second number equal `1` will be pushed on to the stack, otherwise `0` will be pushed on to the stack.
 
@@ -19,7 +18,7 @@ The integer types have separate less or equal instructions for signed (**`le_s`*
 local.get $num
 i32.const 2
 
-;; check if $num is less then or equal to '2'
+;; check if $num is less than or equal to '2'
 i32.le_u
 
 ;; if $num is less than or equal to the `2`, `1` will be pushed on to the stack,

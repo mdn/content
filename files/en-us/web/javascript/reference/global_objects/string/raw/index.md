@@ -9,7 +9,16 @@ browser-compat: javascript.builtins.String.raw
 
 The **`String.raw()`** static method is a tag function of [template literals](/en-US/docs/Web/JavaScript/Reference/Template_literals). This is similar to the `r` prefix in Python, or the `@` prefix in C# for string literals. It's used to get the raw string form of template literals — that is, substitutions (e.g. `${foo}`) are processed, but escape sequences (e.g. `\n`) are not.
 
-{{EmbedInteractiveExample("pages/js/string-raw.html")}}
+{{InteractiveExample("JavaScript Demo: String.raw()")}}
+
+```js interactive-example
+// Create a variable that uses a Windows
+// path without escaping the backslashes:
+const filePath = String.raw`C:\Development\profile\about.html`;
+
+console.log(`The file was uploaded from: ${filePath}`);
+// Expected output: "The file was uploaded from: C:\Development\profile\about.html"
+```
 
 ## Syntax
 

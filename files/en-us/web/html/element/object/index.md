@@ -32,7 +32,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 - `form`
   - : The form element, if any, that the object element is associated with (its _form owner_). The value of the attribute must be an ID of a {{HTMLElement("form")}} element in the same document.
 - `height`
-  - : The height of the displayed resource, in [CSS pixels](https://drafts.csswg.org/css-values/#px). — (Absolute values only. [NO percentages](https://html.spec.whatwg.org/multipage/embedded-content.html#dimension-attributes))
+  - : The height of the displayed resource, as in {{cssxref("&lt;integer&gt;")}} in {{glossary("CSS pixel", "CSS pixels")}}.
 - `name`
   - : The name of valid browsing context (HTML5), or the name of the control (HTML 4).
 - `standby` {{deprecated_inline}}
@@ -42,7 +42,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 - `usemap` {{deprecated_inline}}
   - : A hash-name reference to a {{HTMLElement("map")}} element; that is a '#' followed by the value of a [`name`](/en-US/docs/Web/HTML/Element/map#name) of a map element.
 - `width`
-  - : The width of the display resource, in [CSS pixels](https://drafts.csswg.org/css-values/#px). — (Absolute values only. [NO percentages](https://html.spec.whatwg.org/multipage/embedded-content.html#dimension-attributes))
+  - : The width of the display resource, as in {{cssxref("&lt;integer&gt;")}} in {{glossary("CSS pixel", "CSS pixels")}}.
 
 ## Examples
 

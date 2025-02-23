@@ -153,7 +153,7 @@ function handleCommand(event) {
   // Handles both mouse clicks and keyboard
   // activate with Enter or Space
 
-  // Keypresses other then Enter and Space should not trigger a command
+  // Keypresses other than Enter and Space should not trigger a command
   if (
     event instanceof KeyboardEvent &&
     event.key !== "Enter" &&

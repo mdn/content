@@ -101,7 +101,10 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
     > [!WARNING]
     > Many web browsers have a _session restore_ feature that will save all tabs and restore them the next time the browser is used. Session cookies will also be restored, as if the browser was never closed.
 
-    When an `Expires` date is set, the deadline is relative to the _client_ the cookie is being set on, not the server.
+    The `Expires` attribute is set by the server with a value relative to its own internal clock, which may differ from that of the client browser.
+    Firefox and Chromium-based browsers internally use an expiry (max-age) value that is adjusted to compensate for clock difference, storing and expiring cookies based on the time intended by the server.
+    The adjustment for clock skew is calculated from the value of the {{httpheader("DATE")}} header.
+    Note that the specification explains how the attribute should be parsed, but does not indicate if/how the value should be corrected by the recipient.
 
 - `HttpOnly` {{optional_inline}}
 
@@ -117,7 +120,7 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
 
   - : Indicates that the cookie should be stored using partitioned storage.
     Note that if this is set, the [`Secure` directive](#secure) must also be set.
-    See [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies) for more details.
+    See [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Guides/Privacy_sandbox/Partitioned_cookies) for more details.
 
 - `Path=<path-value>` {{optional_inline}}
 
@@ -164,7 +167,7 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
         > A [`Secure`](#secure) cookie is only sent to the server with an encrypted request over the HTTPS protocol. Note that insecure sites (`http:`) can't set cookies with the `Secure` directive, and therefore can't use `SameSite=None`.
 
         > [!WARNING]
-        > Cookies with the `SameSite=None; Secure` that do not also have the [`Partitioned`](#partitioned) attribute may be blocked in cross-site contexts on future browser versions. This behavior protects user data from cross-site tracking. See [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies) and [Third-party cookies](/en-US/docs/Web/Privacy/Third-party_cookies).
+        > Cookies with the `SameSite=None; Secure` that do not also have the [`Partitioned`](#partitioned) attribute may be blocked in cross-site contexts on future browser versions. This behavior protects user data from cross-site tracking. See [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Guides/Privacy_sandbox/Partitioned_cookies) and [Third-party cookies](/en-US/docs/Web/Privacy/Guides/Third-party_cookies).
 
 - `Secure` {{optional_inline}}
 

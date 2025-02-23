@@ -9,7 +9,21 @@ browser-compat: javascript.operators.grouping
 
 The **grouping `( )`** operator controls the precedence of evaluation in expressions. It also acts as a container for arbitrary expressions in certain syntactic constructs, where ambiguity or syntax errors would otherwise occur.
 
-{{EmbedInteractiveExample("pages/js/expressions-groupingoperator.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Grouping operator")}}
+
+```js interactive-example
+console.log(1 + 2 * 3); // 1 + 6
+// Expected output: 7
+
+console.log(1 + 2 * 3); // 1 + 6
+// Expected output: 7
+
+console.log((1 + 2) * 3); // 3 * 3
+// Expected output: 9
+
+console.log(1 * 3 + 2 * 3); // 3 + 6
+// Expected output: 9
+```
 
 ## Syntax
 

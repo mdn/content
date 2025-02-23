@@ -17,7 +17,7 @@ over the full surface area of the app window, turning the control buttons (maxim
 
 Before using this feature, the following conditions must be true:
 
-- The Web App Manifest's [`display_override`](/en-US/docs/Web/Manifest/display_override) member must be set to `window-controls-overlay`.
+- The Web App Manifest's [`display_override`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/display_override) member must be set to `window-controls-overlay`.
 - The Progressive Web App must be installed on a desktop operating system.
 
 ## Main concepts

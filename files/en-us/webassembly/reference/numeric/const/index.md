@@ -2,9 +2,8 @@
 title: Const
 slug: WebAssembly/Reference/Numeric/Const
 page-type: webassembly-instruction
+sidebar: webassemblysidebar
 ---
-
-{{WebAssemblySidebar}}
 
 The **`const`** instructions, are used to declare numbers.
 

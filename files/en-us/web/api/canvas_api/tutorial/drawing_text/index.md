@@ -76,16 +76,9 @@ In the examples above we are already making use of the `font` property to make t
 
 These properties might be familiar to you, if you have worked with CSS before.
 
-The following diagram from the [WHATWG](https://whatwg.org/) demonstrates the various baselines supported by the `textBaseline` property.![The top of the em square is
-roughly at the top of the glyphs in a font, the hanging baseline is
-where some glyphs like आ are anchored, the middle is half-way
-between the top of the em square and the bottom of the em square,
-the alphabetic baseline is where characters like Á, ÿ,
-f, and Ω are anchored, the ideographic baseline is
-where glyphs like 私 and 達 are anchored, and the bottom
-of the em square is roughly at the bottom of the glyphs in a
-font. The top and bottom of the bounding box can be far from these
-baselines, due to glyphs extending far outside the em square.](baselines.png)
+The following diagram from the [HTML spec](https://html.spec.whatwg.org/multipage/canvas.html#text-styles) demonstrates the various baselines supported by the `textBaseline` property.
+
+![The em-over baseline is roughly at the top of the glyphs in a font, the hanging baseline is where some glyphs like आ are anchored, the middle is half-way between the em-over and em-under baselines, the alphabetic baseline is where characters like Á, ÿ, f, and Ω are anchored, the ideographic-under baseline is where glyphs like 私 and 達 are anchored, and the em-under baseline is roughly at the bottom of the glyphs in a font. The top and bottom of the bounding box can be far from these baselines, due to glyphs extending far outside em-over and em-under baselines.](baselines.png)
 
 ### A textBaseline example
 

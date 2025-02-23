@@ -25,7 +25,7 @@ since(other, options)
 - `other`
   - : A string, an object, or a {{jsxref("Temporal.PlainYearMonth")}} instance representing a year-month to subtract from this year-month. It is converted to a `Temporal.PlainYearMonth` object using the same algorithm as {{jsxref("Temporal/PlainYearMonth/from", "Temporal.PlainYearMonth.from()")}}. It must have the same calendar as `this`.
 - `options` {{optional_inline}}
-  - : An object containing the options for {{jsxref("Temporal/Duration/round", "Temporal.Duration.prototype.round()")}}, which includes `largestUnit`, `roundingIncrement`, `roundingMode`, and `smallestUnit`. `largestUnit` and `smallestUnit` only accept the units: `"year"`, `"month"`, or their plural forms. For `largestUnit`, the default value `"auto"` means `"year"`. For `smallestUnit`, the default value is `"month"`. The current date is used as the `relativeTo` option.
+  - : An object containing the options for {{jsxref("Temporal/Duration/round", "Temporal.Duration.prototype.round()")}}, which includes `largestUnit`, `roundingIncrement`, `roundingMode`, and `smallestUnit`. `largestUnit` and `smallestUnit` only accept the units: `"years"`, `"months"`, or their singular forms. For `largestUnit`, the default value `"auto"` means `"years"`. For `smallestUnit`, the default value is `"months"`. The current date is used as the `relativeTo` option.
 
 ### Return value
 
@@ -49,11 +49,11 @@ const duration = now.since(lastUpdated);
 console.log(`Last updated ${duration.toLocaleString("en-US")} ago`);
 // Expected output: "Last updated [number] years, [number] months ago"
 
-const duration2 = now.since(lastUpdated, { largestUnit: "month" });
+const duration2 = now.since(lastUpdated, { largestUnit: "months" });
 console.log(`Last updated ${duration2.toLocaleString("en-US")} ago`);
 // Expected output: "Last updated [number] months ago"
 
-const duration3 = now.since(lastUpdated, { smallestUnit: "year" });
+const duration3 = now.since(lastUpdated, { smallestUnit: "years" });
 console.log(`Last updated ${duration3.toLocaleString("en-US")} ago`);
 // Expected output: "Last updated [number] years ago"
 ```
@@ -66,7 +66,7 @@ By default the fractional part of the `smallestUnit` is truncated. You can round
 const ym1 = Temporal.PlainYearMonth.from("2022-01");
 const ym2 = Temporal.PlainYearMonth.from("2022-11");
 const duration = ym2.since(ym1, {
-  smallestUnit: "year",
+  smallestUnit: "years",
   roundingMode: "ceil",
 });
 console.log(duration.toString()); // "P1Y"

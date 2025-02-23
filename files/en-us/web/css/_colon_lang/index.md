@@ -1,5 +1,5 @@
 ---
-title: ":lang()"
+title: :lang()
 slug: Web/CSS/:lang
 page-type: css-pseudo-class
 browser-compat: css.selectors.lang

@@ -9,7 +9,34 @@ browser-compat: javascript.builtins.Intl.NumberFormat.NumberFormat
 
 The **`Intl.NumberFormat()`** constructor creates {{jsxref("Intl.NumberFormat")}} objects.
 
-{{EmbedInteractiveExample("pages/js/intl-numberformat.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Intl.NumberFormat", "taller")}}
+
+```js interactive-example
+const number = 123456.789;
+
+console.log(
+  new Intl.NumberFormat("de-DE", { style: "currency", currency: "EUR" }).format(
+    number,
+  ),
+);
+// Expected output: "123.456,79 €"
+
+// The Japanese yen doesn't use a minor unit
+console.log(
+  new Intl.NumberFormat("ja-JP", { style: "currency", currency: "JPY" }).format(
+    number,
+  ),
+);
+// Expected output: "￥123,457"
+
+// Limit to three significant digits
+console.log(
+  new Intl.NumberFormat("en-IN", { maximumSignificantDigits: 3 }).format(
+    number,
+  ),
+);
+// Expected output: "1,23,000"
+```
 
 ## Syntax
 
@@ -526,7 +553,7 @@ console.log(
 > [!WARNING]
 > Watch out for default values as they may affect formatting.
 > If only one `SignificantDigits` property is used, then its counterpart will automatically be applied with the default value.
-> The default maximum and minimum significant digit values are 20 and 1, respectively.
+> The default maximum and minimum significant digit values are 21 and 1, respectively.
 
 #### Specifying significant and fractional digits at the same time
 

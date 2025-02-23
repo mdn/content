@@ -1,6 +1,6 @@
 ---
 title: "DOMRect: y property"
-short-title: "y"
+short-title: y
 slug: Web/API/DOMRect/y
 page-type: web-api-instance-property
 browser-compat: api.DOMRect.y

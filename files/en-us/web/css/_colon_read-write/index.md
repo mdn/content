@@ -1,5 +1,5 @@
 ---
-title: ":read-write"
+title: :read-write
 slug: Web/CSS/:read-write
 page-type: css-pseudo-class
 browser-compat: css.selectors.read-write

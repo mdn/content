@@ -8,9 +8,11 @@ browser-compat: api.URL.hash
 
 {{ APIRef("URL API") }} {{AvailableInWorkers}}
 
-The **`hash`** property of the {{domxref("URL")}} interface is a string containing a `'#'` followed by the fragment identifier of the URL.
+The **`hash`** property of the {{domxref("URL")}} interface is a string containing a `"#"` followed by the fragment identifier of the URL. If the URL does not have a fragment identifier, this property contains an empty string, `""`.
 
-The fragment is not {{Glossary("Percent-encoding", "percent-encoded")}}. If the URL does not have a fragment identifier, this property contains an empty string — `""`.
+This property can be set to change the fragment identifier of the URL. When setting, a single `"#"` prefix is added to the provided value, if not already present. Setting it to `""` removes the fragment identifier.
+
+The fragment is {{Glossary("Percent-encoding", "percent-encoded")}} when setting but not percent-decoded when reading.
 
 ## Value
 

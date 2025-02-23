@@ -55,49 +55,112 @@ The following video provides a nice visual explanation of using CSS grid:
 
 ### Defining a grid
 
-Let's try out grid layouts with the help of an example. Download and open [the starting point file](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/0-starting-point.html) in your text editor and browser (you can also [see it live here](https://mdn.github.io/learning-area/css/css-layout/grids/0-starting-point.html)). You will see an example with a container, which has some child items. By default, these items are displayed in a normal flow, causing them to appear one below the other. For the initial part of this lesson, we'll be using this file to see how its grid behaves.
+Let's try out grid layouts, here is an example with a container, which has some child items. By default, these items are displayed in a normal flow, causing them to appear one below the other.
 
-Similar to how you define flexbox, you define a grid layout by setting the value of the {{cssxref("display")}} property to `grid`. As in the case of flexbox, the `display: grid` property transforms all the direct children of the container into grid items. Add the following CSS to your file:
+```html live-sample___simple-grid_0
+<div class="container">
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+  <div>Five</div>
+  <div>Six</div>
+  <div>Seven</div>
+</div>
+```
 
-```css
+```css live-sample___simple-grid_0
+body {
+  font: sans-serif;
+}
+.container > div {
+  border-radius: 5px;
+  padding: 10px;
+  background-color: rgb(207 232 220);
+  border: 2px solid rgb(79 185 227);
+}
+```
+
+{{EmbedLiveSample('simple-grid_0', '100%', "310") }}
+
+Similar to how you define flexbox, you define a grid layout by setting the value of the {{cssxref("display")}} property to `grid`. As in the case of flexbox, the `display: grid` property transforms all the direct children of the container into grid items. We have added the following CSS to the file:
+
+```html hidden live-sample___simple-grid_1
+<div class="container">
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+  <div>Five</div>
+  <div>Six</div>
+  <div>Seven</div>
+</div>
+```
+
+```css hidden live-sample___simple-grid_1
+body {
+  font: sans-serif;
+}
+.container > div {
+  border-radius: 5px;
+  padding: 10px;
+  background-color: rgb(207 232 220);
+  border: 2px solid rgb(79 185 227);
+}
+```
+
+```css live-sample___simple-grid_1
 .container {
   display: grid;
 }
 ```
 
+{{EmbedLiveSample('simple-grid_1', '100%', "310") }}
+
 Unlike flexbox, the items will not immediately look any different. Declaring `display: grid` gives you a one column grid, so your items will continue to display one below the other as they do in normal flow.
 
 To see something that looks more grid-like, we'll need to add some columns to the grid. Let's add three 200-pixel columns. You can use any length unit or percentage to create these column tracks.
 
-```css
+```html hidden live-sample___simple-grid_2
+<div class="container">
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+  <div>Five</div>
+  <div>Six</div>
+  <div>Seven</div>
+</div>
+```
+
+```css hidden live-sample___simple-grid_2
+body {
+  font: sans-serif;
+}
+.container > div {
+  border-radius: 5px;
+  padding: 10px;
+  background-color: rgb(207 232 220);
+  border: 2px solid rgb(79 185 227);
+}
+```
+
+```css live-sample___simple-grid_2
 .container {
   display: grid;
   grid-template-columns: 200px 200px 200px;
 }
 ```
 
-Add the second declaration to your CSS rule, then reload the page. You should see that the items have rearranged themselves such that there's one in each cell of the grid.
+You should see that the items have rearranged themselves such that there's one in each cell of the grid.
 
-```css hidden
-body {
-  width: 90%;
-  max-width: 900px;
-  margin: 2em auto;
-  font:
-    0.9em/1.2 Arial,
-    Helvetica,
-    sans-serif;
-}
+{{EmbedLiveSample('simple-grid_2', '100%', "130") }}
 
-.container > div {
-  border-radius: 5px;
-  padding: 10px;
-  background-color: rgb(207 232 220);
-  border: 2px solid rgb(79 185 227);
-}
-```
+### Flexible grids with the fr unit
 
-```html hidden
+In addition to creating grids using lengths and percentages, we can use [`fr`](/en-US/docs/Web/CSS/flex_value). The `fr` unit represents one fraction of the available space in the grid container to flexibly size grid rows and columns.
+
+```html hidden live-sample___grid-fr-unit_0
 <div class="container">
   <div>One</div>
   <div>Two</div>
@@ -109,52 +172,32 @@ body {
 </div>
 ```
 
-{{ EmbedLiveSample('Defining_a_grid', '100%', 200) }}
+```css hidden live-sample___grid-fr-unit_0
+body {
+  font: sans-serif;
+}
+.container > div {
+  border-radius: 5px;
+  padding: 10px;
+  background-color: rgb(207 232 220);
+  border: 2px solid rgb(79 185 227);
+}
+```
 
-### Flexible grids with the fr unit
+Here we change the track listing to the following definition, creating three `1fr` tracks:
 
-In addition to creating grids using lengths and percentages, we can use [`fr`](/en-US/docs/Web/CSS/flex_value). The `fr` unit represents one fraction of the available space in the grid container to flexibly size grid rows and columns.
-
-Change your track listing to the following definition, creating three `1fr` tracks:
-
-```css
+```css live-sample___grid-fr-unit_0
 .container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
 ```
 
+{{EmbedLiveSample('grid-fr-unit_0', '100%', "130") }}
+
 You now have flexible tracks. The `fr` unit distributes space proportionally. You can specify different positive values for your tracks like so:
 
-```css
-.container {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-}
-```
-
-The first track gets `2fr` of the available space and the other two tracks get `1fr`, making the first track larger. You can mix `fr` units with fixed length units. In this case, the space needed for the fixed tracks is used up first before the remaining space is distributed to the other tracks.
-
-```css hidden
-body {
-  width: 90%;
-  max-width: 900px;
-  margin: 2em auto;
-  font:
-    0.9em/1.2 Arial,
-    Helvetica,
-    sans-serif;
-}
-
-.container > div {
-  border-radius: 5px;
-  padding: 10px;
-  background-color: rgb(207 232 220);
-  border: 2px solid rgb(79 185 227);
-}
-```
-
-```html hidden
+```html hidden live-sample___grid-fr-unit_1
 <div class="container">
   <div>One</div>
   <div>Two</div>
@@ -166,7 +209,30 @@ body {
 </div>
 ```
 
-{{ EmbedLiveSample('Flexible_grids_with_the_fr_unit', '100%', 200) }}
+```css hidden live-sample___grid-fr-unit_1
+body {
+  font: sans-serif;
+}
+.container > div {
+  border-radius: 5px;
+  padding: 10px;
+  background-color: rgb(207 232 220);
+  border: 2px solid rgb(79 185 227);
+}
+```
+
+Now change your track listing to the following definition, creating one `2fr` two `1fr` tracks:
+
+```css live-sample___grid-fr-unit_1
+.container {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+}
+```
+
+{{EmbedLiveSample('grid-fr-unit_1', '100%', "130") }}
+
+The first track gets `2fr` of the available space and the other two tracks get `1fr`, making the first track larger. You can mix `fr` units with fixed length units. In this case, the space needed for the fixed tracks is used up first before the remaining space is distributed to the other tracks.
 
 > [!NOTE]
 > The `fr` unit distributes _available_ space, not _all_ space. Therefore, if one of your tracks has something large inside it, there will be less free space to share.
@@ -179,36 +245,7 @@ To create gaps between tracks, we use the properties:
 - {{cssxref("row-gap")}} for gaps between rows
 - {{cssxref("gap")}} as a shorthand for both
 
-```css
-.container {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  gap: 20px;
-}
-```
-
-These gaps can be any length unit or percentage, but not an `fr` unit.
-
-```css hidden
-body {
-  width: 90%;
-  max-width: 900px;
-  margin: 2em auto;
-  font:
-    0.9em/1.2 Arial,
-    Helvetica,
-    sans-serif;
-}
-
-.container > div {
-  border-radius: 5px;
-  padding: 10px;
-  background-color: rgb(207 232 220);
-  border: 2px solid rgb(79 185 227);
-}
-```
-
-```html hidden
+```html hidden live-sample___grid-gap
 <div class="container">
   <div>One</div>
   <div>Two</div>
@@ -220,20 +257,70 @@ body {
 </div>
 ```
 
-{{ EmbedLiveSample('Gaps_between_tracks', '100%', 250) }}
+```css hidden live-sample___grid-gap
+body {
+  font: sans-serif;
+}
+.container > div {
+  border-radius: 5px;
+  padding: 10px;
+  background-color: rgb(207 232 220);
+  border: 2px solid rgb(79 185 227);
+}
+```
+
+Here we add the `gap` property to create gaps between the tracks with a value of `20px:
+
+```css live-sample___grid-gap
+.container {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 20px;
+}
+```
+
+{{EmbedLiveSample('grid-gap', '100%', "180") }}
+
+These gaps can be any length unit or percentage, but not an `fr` unit.
 
 ### Repeating track listings
 
 You can repeat all or merely a section of your track listing using the CSS `repeat()` function.
-Change your track listing to the following:
+Here we change the track listing to the following:
 
-```css
+```html hidden live-sample___grid-repeat
+<div class="container">
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+  <div>Five</div>
+  <div>Six</div>
+  <div>Seven</div>
+</div>
+```
+
+```css hidden live-sample___grid-repeat
+body {
+  font: sans-serif;
+}
+.container > div {
+  border-radius: 5px;
+  padding: 10px;
+  background-color: rgb(207 232 220);
+  border: 2px solid rgb(79 185 227);
+}
+```
+
+```css live-sample___grid-repeat
 .container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
 ```
+
+{{EmbedLiveSample('grid-repeat', '100%', "180") }}
 
 You'll now get three `1fr` tracks just as before. The first value passed to the `repeat()` function specifies the number of times you want the listing to repeat, while the second value is a track listing, which may be one or more tracks that you want to repeat.
 
@@ -247,26 +334,7 @@ Here's a bit more about the difference between the two types of grids:
 
 By default, tracks created in the implicit grid are `auto` sized, which in general means that they're large enough to contain their content. If you wish to give implicit grid tracks a size, you can use the {{cssxref("grid-auto-rows")}} and {{cssxref("grid-auto-columns")}} properties. If you add `grid-auto-rows` with a value of `100px` to your CSS, you'll see that those created rows are now 100 pixels tall.
 
-```css hidden
-body {
-  width: 90%;
-  max-width: 900px;
-  margin: 2em auto;
-  font:
-    0.9em/1.2 Arial,
-    Helvetica,
-    sans-serif;
-}
-
-.container > div {
-  border-radius: 5px;
-  padding: 10px;
-  background-color: rgb(207 232 220);
-  border: 2px solid rgb(79 185 227);
-}
-```
-
-```html hidden
+```html hidden live-sample___grid-auto
 <div class="container">
   <div>One</div>
   <div>Two</div>
@@ -278,7 +346,19 @@ body {
 </div>
 ```
 
-```css
+```css hidden live-sample___grid-auto
+body {
+  font: sans-serif;
+}
+.container > div {
+  border-radius: 5px;
+  padding: 10px;
+  background-color: rgb(207 232 220);
+  border: 2px solid rgb(79 185 227);
+}
+```
+
+```css live-sample___grid-auto
 .container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -287,42 +367,30 @@ body {
 }
 ```
 
-{{ EmbedLiveSample('Implicit_and_explicit_grids', '100%', 400) }}
+{{EmbedLiveSample('grid-auto', '100%', "350") }}
 
 ### The minmax() function
 
 Our 100-pixel tall tracks won't be very useful if we add content into those tracks that is taller than 100 pixels, in which case it would cause an overflow. It might be better to have tracks that are _at least_ 100 pixels tall and can still expand if more content becomes added. A fairly basic fact about the web is that you never really know how tall something is going to be — additional content or larger font sizes can cause problems with designs that attempt to be pixel perfect in every dimension.
 
-The {{cssxref("minmax", "minmax()")}} function lets us set a minimum and maximum size for a track, for example, `minmax(100px, auto)`. The minimum size is 100 pixels, but the maximum is `auto`, which will expand to accommodate more content. Try changing `grid-auto-rows` to use a minmax value:
+The {{cssxref("minmax", "minmax()")}} function lets us set a minimum and maximum size for a track, for example, `minmax(100px, auto)`. The minimum size is 100 pixels, but the maximum is `auto`, which will expand to accommodate more content. Here we change the `grid-auto-rows` to use a `minmax()` value:
 
-```css
-.container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: minmax(100px, auto);
-  gap: 20px;
-}
+```html hidden live-sample___grid-minmax_0
+<div class="container">
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four<br />More content</div>
+  <div>Five</div>
+  <div>Six</div>
+  <div>Seven</div>
+</div>
 ```
 
-If you add extra content, you'll see that the track expands to allow it to fit. Note that the expansion happens right along the row.
-
-### As many columns as will fit
-
-We can combine some of the lessons we've learned about track listing, repeat notation, and {{cssxref("minmax", "minmax()")}} to create a useful pattern. Sometimes it's helpful to be able to ask grid to create as many columns as will fit into the container. We do this by setting the value of `grid-template-columns` using the {{cssxref("repeat", "repeat()")}} function, but instead of passing in a number, pass in the keyword `auto-fit`. For the second parameter of the function we use `minmax()` with a minimum value equal to the minimum track size that we would like to have and a maximum of `1fr`.
-
-Try this in your file now using the CSS below:
-
-```css hidden
+```css hidden live-sample___grid-minmax_0
 body {
-  width: 90%;
-  max-width: 900px;
-  margin: 2em auto;
-  font:
-    0.9em/1.2 Arial,
-    Helvetica,
-    sans-serif;
+  font: sans-serif;
 }
-
 .container > div {
   border-radius: 5px;
   padding: 10px;
@@ -331,30 +399,59 @@ body {
 }
 ```
 
-```html hidden
+```css live-sample___grid-minmax_0
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(50px, auto);
+  gap: 20px;
+}
+```
+
+{{EmbedLiveSample('grid-minmax_0', '100%', "210") }}
+
+If you add extra content, you'll see that the track expands to allow it to fit. Note that the expansion happens right along the row.
+
+### As many columns as will fit
+
+We can combine some of the lessons we've learned about track listing, repeat notation, and {{cssxref("minmax", "minmax()")}} to create a useful pattern. Sometimes it's helpful to be able to ask grid to create as many columns as will fit into the container. We do this by setting the value of `grid-template-columns` using the {{cssxref("repeat", "repeat()")}} function, but instead of passing in a number, pass in the keyword [`auto-fit`](/en-US/docs/Web/CSS/repeat#auto-fit). For the second parameter of the function we use `minmax()` with a minimum value equal to the minimum track size that we would like to have and a maximum of `1fr`.
+
+```html hidden live-sample___grid-minmax_1
 <div class="container">
   <div>One</div>
   <div>Two</div>
   <div>Three</div>
-  <div>Four</div>
+  <div>Four<br />More content</div>
   <div>Five</div>
   <div>Six</div>
   <div>Seven</div>
 </div>
 ```
 
-```css
+```css hidden live-sample___grid-minmax_1
+body {
+  font: sans-serif;
+}
+.container > div {
+  border-radius: 5px;
+  padding: 10px;
+  background-color: rgb(207 232 220);
+  border: 2px solid rgb(79 185 227);
+}
+```
+
+```css live-sample___grid-minmax_1
 .container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-auto-rows: minmax(100px, auto);
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  grid-auto-rows: minmax(50px, auto);
   gap: 20px;
 }
 ```
 
-{{ EmbedLiveSample('As_many_columns_as_will_fit', '100%', 400) }}
+{{EmbedLiveSample('grid-minmax_1', '100%', "210") }}
 
-This works because grid is creating as many 200-pixel columns as will fit into the container, then sharing whatever space is leftover among all the columns. The maximum is `1fr` which, as we already know, distributes space evenly between tracks.
+This works because grid is creating as many 230-pixel columns as will fit into the container, then sharing whatever space is leftover among all the columns. The maximum is `1fr` which, as we already know, distributes space evenly between tracks.
 
 ## Line-based placement
 
@@ -373,101 +470,104 @@ Alternatively, you can also use shorthand properties that let you specify the st
 - {{cssxref("grid-column")}} shorthand for `grid-column-start` and `grid-column-end`
 - {{cssxref("grid-row")}} shorthand for `grid-row-start` and `grid-row-end`
 
-To see this in action, download the [line-based placement starting point file](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/8-placement-starting-point.html) or [see it live here](https://mdn.github.io/learning-area/css/css-layout/grids/8-placement-starting-point.html). It has a defined grid and an article outlined. You can see that _auto-placement_ is placing each item into its own cell in the grid.
+```html live-sample___grid-placement_0
+<div class="container">
+  <header>Header</header>
+  <main>
+    <h1>Main</h1>
+    <p>Main content…</p>
+  </main>
+  <aside>
+    <h2>Aside</h2>
+    <p>Related content</p>
+  </aside>
+  <footer>footer</footer>
+</div>
+```
+
+```css live-sample___grid-placement_0
+.container {
+  font-family: sans-serif;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 20px;
+}
+header,
+footer {
+  border-radius: 5px;
+  padding: 10px;
+  background-color: rebeccapurple;
+  color: whitesmoke;
+  text-align: center;
+}
+aside {
+  border-right: 1px solid rebeccapurple;
+}
+```
+
+With out the placement defined, you can see that _auto-placement_ is placing each item into its own cell in the grid. The {{htmlelement("header")}} is taking up `1fr` (one quarter) and the {{htmlelement("main")}} is taking up `3fr` (three quarters).
+
+{{EmbedLiveSample('grid-placement_0', '100%', "230") }}
 
 Let's arrange all of the elements for our site by using the grid lines. Add the following rules to the bottom of your CSS:
 
-```css
+```html hidden live-sample___grid-placement_1
+<div class="container">
+  <header>Header</header>
+  <main>
+    <h1>Main</h1>
+    <p>Main content…</p>
+  </main>
+  <aside>
+    <h2>Aside</h2>
+    <p>Related content</p>
+  </aside>
+  <footer>footer</footer>
+</div>
+```
+
+```css hidden live-sample___grid-placement_1
+.container {
+  font-family: sans-serif;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 20px;
+}
+header,
+footer {
+  border-radius: 5px;
+  padding: 10px;
+  background-color: rebeccapurple;
+  color: whitesmoke;
+  text-align: center;
+}
+aside {
+  border-right: 1px solid rebeccapurple;
+}
+```
+
+```css live-sample___grid-placement_1
 header {
   grid-column: 1 / 3;
   grid-row: 1;
 }
-
-article {
+main {
   grid-column: 2;
   grid-row: 2;
 }
-
 aside {
   grid-column: 1;
   grid-row: 2;
 }
-
 footer {
   grid-column: 1 / 3;
   grid-row: 3;
 }
 ```
 
-```css hidden
-body {
-  width: 90%;
-  max-width: 900px;
-  margin: 2em auto;
-  font:
-    0.9em/1.2 Arial,
-    Helvetica,
-    sans-serif;
-}
+Now the {{htmlelement("header")}} and {{htmlelement("footer")}} are set to `1 / 3`, which means to start at line `1` and ends at line `3`.
 
-.container {
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  gap: 20px;
-}
-
-header,
-footer {
-  border-radius: 5px;
-  padding: 10px;
-  background-color: rgb(207 232 220);
-  border: 2px solid rgb(79 185 227);
-}
-
-aside {
-  border-right: 1px solid #999;
-}
-```
-
-```html hidden
-<div class="container">
-  <header>This is my lovely blog</header>
-  <article>
-    <h1>My article</h1>
-    <p>
-      Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor
-      imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus
-      massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra
-      egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada
-      et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac
-      imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis
-      ornare egestas augue ut luctus. Proin blandit quam nec lacus varius
-      commodo et a urna. Ut id ornare felis, eget fermentum sapien.
-    </p>
-
-    <p>
-      Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
-      ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
-      est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
-      tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies
-      lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra
-      quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis
-      natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-    </p>
-  </article>
-  <aside>
-    <h2>Other things</h2>
-    <p>
-      Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
-      ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
-      est.
-    </p>
-  </aside>
-  <footer>Contact me@example.com</footer>
-</div>
-```
-
-{{ EmbedLiveSample('Line-based_placement', '100%', 550) }}
+{{EmbedLiveSample('grid-placement_1', '100%', "230") }}
 
 > [!NOTE]
 > You can also use the value `-1` to target the end column or row line, then count inwards from the end using negative values. Note also that lines count always from the edges of the explicit grid, not the [implicit grid](/en-US/docs/Glossary/Grid).
@@ -476,9 +576,42 @@ aside {
 
 An alternative way to arrange items on your grid is to use the {{cssxref("grid-template-areas")}} property and give the various elements of your design a name.
 
-Remove the line-based positioning from the last example (or re-download the file to have a fresh starting point) and add the following CSS.
+```html hidden live-sample___grid-placement_2
+<div class="container">
+  <header>Header</header>
+  <main>
+    <h1>Main</h1>
+    <p>Main content…</p>
+  </main>
+  <aside>
+    <h2>Aside</h2>
+    <p>Related content</p>
+  </aside>
+  <footer>footer</footer>
+</div>
+```
 
-```css
+```css hidden live-sample___grid-placement_2
+.container {
+  font-family: sans-serif;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 20px;
+}
+header,
+footer {
+  border-radius: 5px;
+  padding: 10px;
+  background-color: rebeccapurple;
+  color: whitesmoke;
+  text-align: center;
+}
+aside {
+  border-right: 1px solid rebeccapurple;
+}
+```
+
+```css live-sample___grid-placement_2
 .container {
   display: grid;
   grid-template-areas:
@@ -488,89 +621,23 @@ Remove the line-based positioning from the last example (or re-download the file
   grid-template-columns: 1fr 3fr;
   gap: 20px;
 }
-
 header {
   grid-area: header;
 }
-
-article {
+main {
   grid-area: content;
 }
-
 aside {
   grid-area: sidebar;
 }
-
 footer {
   grid-area: footer;
 }
 ```
 
-Reload the page and you will see that your items have been placed just as before without us needing to use any line numbers!
+Here we are using the {{CSSXRef("grid-template-areas")}} property to define how the 3 rows are laid out. The first row has a value of `header header`, the second `sidebar content` and the third `footer footer`. We are then using the {{CSSXRef("grid-area")}} property to define where elements are placed in the `grid-template-areas`.
 
-```css hidden
-body {
-  width: 90%;
-  max-width: 900px;
-  margin: 2em auto;
-  font:
-    0.9em/1.2 Arial,
-    Helvetica,
-    sans-serif;
-}
-
-header,
-footer {
-  border-radius: 5px;
-  padding: 10px;
-  background-color: rgb(207 232 220);
-  border: 2px solid rgb(79 185 227);
-}
-
-aside {
-  border-right: 1px solid #999;
-}
-```
-
-```html hidden
-<div class="container">
-  <header>This is my lovely blog</header>
-  <article>
-    <h1>My article</h1>
-    <p>
-      Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor
-      imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus
-      massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra
-      egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada
-      et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac
-      imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis
-      ornare egestas augue ut luctus. Proin blandit quam nec lacus varius
-      commodo et a urna. Ut id ornare felis, eget fermentum sapien.
-    </p>
-
-    <p>
-      Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
-      ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
-      est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
-      tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies
-      lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra
-      quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis
-      natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-    </p>
-  </article>
-  <aside>
-    <h2>Other things</h2>
-    <p>
-      Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
-      ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
-      est.
-    </p>
-  </aside>
-  <footer>Contact me@example.com</footer>
-</div>
-```
-
-{{ EmbedLiveSample('Positioning_with_grid-template-areas', '100%', 550) }}
+{{EmbedLiveSample('grid-placement_2', '100%', "230") }}
 
 The rules for `grid-template-areas` are as follows:
 
@@ -585,96 +652,59 @@ You can play around with our layout, changing the footer to only sit underneath 
 ## Nesting grids and subgrid
 
 It's possible to nest a grid within another grid, creating a ["subgrid"](/en-US/docs/Web/CSS/CSS_grid_layout/Subgrid).
-You can do this by setting the `display: grid` property on a grid item.
+You can do this by setting the `display: grid` property on an item in the parent grid.
 
 Let's expand on the previous example by adding a container for articles and using a nested grid to control the layout of multiple articles.
-While we're using only one column in the nested grid, we can define the rows to be split in a 2:1:1 ratio by using the `grid-template-rows` property.
+While we're using only one column in the nested grid, we can define the rows to be split in a 4:3:3 ratio by using the `grid-template-rows` property.
 This approach allows us to create a layout where one article at the top of the page has a large display, while the others have a smaller, preview-like layout.
 
 ```html hidden live-sample___nesting-grids
 <div class="container">
-  <header>This is my lovely blog</header>
-  <div class="articles">
+  <header>Header</header>
+  <main>
     <article>
-      <h1>Darmok and Jalad had a picnic at Tanagra</h1>
-
-      <p>
-        Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras
-        porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed
-        auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet
-        orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac
-        ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat.
-        Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros
-        pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam
-        nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum
-        sapien.
-      </p>
-
-      <button>Read more</button>
+      <h1>Article one</h1>
+      <p>Content…</p>
     </article>
     <article>
-      <h1>Temba held his arms wide</h1>
-      <p>
-        Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras
-        porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed
-        auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet
-        orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac
-        ornare ex malesuada et ...
-      </p>
-      <button>Read more</button>
+      <h1>Article two</h1>
+      <p>Content…</p>
     </article>
     <article>
-      <h1>Gilgamesh, a king, at Uruk</h1>
-      <p>
-        Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras
-        porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed
-        auctor cursus massa at porta ...
-      </p>
-      <button>Read more</button>
+      <h1>Article three</h1>
+      <p>Content…</p>
     </article>
-  </div>
+  </main>
   <aside>
-    <h2>Other things</h2>
-    <p>
-      Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
-      ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
-      est.
-    </p>
-    <button>Read more</button>
+    <h2>Aside</h2>
+    <p>Related content</p>
   </aside>
-  <footer>Contact me@example.com</footer>
+  <footer>footer</footer>
 </div>
 ```
 
 ```css hidden live-sample___nesting-grids
-body {
-  width: 90%;
-  max-width: 900px;
-  margin: 2em auto;
-  font:
-    0.9em/1.2 Arial,
-    Helvetica,
-    sans-serif;
+.container {
+  font-family: sans-serif;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 20px;
 }
-
 header,
 footer {
   border-radius: 5px;
   padding: 10px;
-  background-color: rgb(207 232 220);
-  border: 2px solid rgb(79 185 227);
+  background-color: rebeccapurple;
+  color: whitesmoke;
+  text-align: center;
 }
 header {
   grid-area: header;
 }
-
 aside {
-  border-right: 1px solid #999;
+  border-right: 1px solid rebeccapurple;
   grid-area: sidebar;
-  padding-right: 10px;
-  font-size: 0.8em;
 }
-
 footer {
   grid-area: footer;
 }
@@ -690,52 +720,33 @@ footer {
 ```
 
 ```css live-sample___nesting-grids
-.articles {
+main {
+  grid-area: content;
   display: grid;
-  grid-template-rows: 2fr 1fr 1fr;
+  grid-template-rows: 4fr 3fr 3fr;
   gap: inherit;
 }
-
 article {
   padding: 10px;
-  border: 2px solid rgb(79 185 227);
+  border: 2px solid rebeccapurple;
   border-radius: 5px;
 }
 ```
 
-{{EmbedLiveSample('nesting-grids', '100%', 1100)}}
+{{EmbedLiveSample('nesting-grids', '100%', 560)}}
 
 To make it easier to work with layouts in nested grids, you can use `subgrid` on `grid-template-rows` and `grid-template-columns` properties. This allows you to leverage the tracks defined in the parent grid.
 
 In the following example, we're using [line-based placement](#line-based_placement), enabling the nested grid to span multiple columns and rows of the parent grid.
 We've added `subgrid` to inherit the parent grid's column tracks while adding a different layout for the rows within the nested grid.
 
-```css hidden live-sample___subgrid
-body {
-  width: 90%;
-  max-width: 900px;
-  margin: 2em auto;
-  font:
-    0.9em/1.2 Arial,
-    Helvetica,
-    sans-serif;
-}
-
-.container div {
-  border-radius: 5px;
-  padding: 10px;
-  background-color: rgb(207 232 220);
-  border: 2px solid rgb(79 185 227);
-}
-```
-
-```html live-sample___subgrid
+```html hidden live-sample___subgrid
 <div class="container">
   <div>One</div>
   <div>Two</div>
   <div>Three</div>
   <div>Four</div>
-  <div id="subgrid">
+  <div class="subgrid">
     <div>Five</div>
     <div>Six</div>
     <div>Seven</div>
@@ -746,6 +757,19 @@ body {
 </div>
 ```
 
+```css hidden live-sample___subgrid
+.container {
+  font-family: sans-serif;
+}
+.container div {
+  border-radius: 5px;
+  padding: 10px;
+  background-color: rebeccapurple;
+  border: 1px solid white;
+  color: white;
+}
+```
+
 ```css live-sample___subgrid
 .container {
   display: grid;
@@ -753,8 +777,7 @@ body {
   grid-template-rows: repeat(1, 1fr);
   gap: 10px;
 }
-
-#subgrid {
+.subgrid {
   grid-column: 1 / 4;
   grid-row: 2 / 4;
   display: grid;
@@ -764,109 +787,74 @@ body {
 }
 ```
 
-{{ EmbedLiveSample('subgrid', '100%', 300) }}
+{{ EmbedLiveSample('subgrid', '100%', 200) }}
 
-## Grid systems
+## Grid frameworks
 
-When you work on a production-grade website, it will probably be laid out using a predefined grid system (12 or 16-column grids are common). This might be created by one of the senior developers in your team, or defined in a third-party CSS framework of some kind. The following example shows what a simple grid system might look like.
+Numerous grid frameworks are available, offering a 12 or 16-column grid, to help with laying out your content.
+The good news is that you probably won't need any third-party frameworks to help you create grid-based layouts — grid functionality is already included in the specification and is supported by most modern browsers.
 
-[Download the starting point file](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/11-grid-system-starting-point.html). This has a container with a 12-column grid defined and the same markup we used in the previous two examples. The grid is defined using the following rule:
+This has a container with a 12-column grid defined, using `grid-template-columns: repeat(12, 1fr);`, and the same markup we used in the previous two examples. We can now use line-based placement to place our content on the 12-column grid.
 
-```css
+```html hidden live-sample___grid-frameworks
+<div class="container">
+  <header>Header</header>
+  <main>
+    <h1>Main</h1>
+    <p>Main content…</p>
+  </main>
+  <aside>
+    <h2>Aside</h2>
+    <p>Related content</p>
+  </aside>
+  <footer>footer</footer>
+</div>
+```
+
+```css hidden live-sample___grid-frameworks
 .container {
-  display: grid;
-  grid-template-columns: repeat(12, minmax(0, 1fr));
-  gap: 20px;
-}
-```
-
-We can now use line-based placement to place our content on the 12-column grid.
-
-```css
-header {
-  grid-column: 1 / 13;
-  grid-row: 1;
-}
-
-article {
-  grid-column: 4 / 13;
-  grid-row: 2;
-}
-
-aside {
-  grid-column: 1 / 4;
-  grid-row: 2;
-}
-
-footer {
-  grid-column: 1 / 13;
-  grid-row: 3;
-}
-```
-
-```css hidden
-body {
-  width: 90%;
-  max-width: 900px;
-  margin: 2em auto;
-  font:
-    0.9em/1.2 Arial,
-    Helvetica,
-    sans-serif;
+  font-family: sans-serif;
 }
 
 header,
 footer {
   border-radius: 5px;
   padding: 10px;
-  background-color: rgb(207 232 220);
-  border: 2px solid rgb(79 185 227);
+  background-color: rebeccapurple;
+  color: whitesmoke;
+  text-align: center;
 }
-
 aside {
-  border-right: 1px solid #999;
+  border-right: 1px solid rebeccapurple;
 }
 ```
 
-```html hidden
-<div class="container">
-  <header>This is my lovely blog</header>
-  <article>
-    <h1>My article</h1>
-    <p>
-      Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor
-      imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus
-      massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra
-      egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada
-      et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac
-      imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis
-      ornare egestas augue ut luctus. Proin blandit quam nec lacus varius
-      commodo et a urna. Ut id ornare felis, eget fermentum sapien.
-    </p>
-
-    <p>
-      Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
-      ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
-      est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
-      tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies
-      lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra
-      quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis
-      natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-    </p>
-  </article>
-  <aside>
-    <h2>Other things</h2>
-    <p>
-      Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
-      ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
-      est.
-    </p>
-  </aside>
-  <footer>Contact me@example.com</footer>
-</div>
+```css live-sample___grid-frameworks
+.container {
+  font-family: sans-serif;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 20px;
+}
+header {
+  grid-column: 1 / 13;
+  grid-row: 1;
+}
+main {
+  grid-column: 4 / 13;
+  grid-row: 2;
+}
+aside {
+  grid-column: 1 / 4;
+  grid-row: 2;
+}
+footer {
+  grid-column: 1 / 13;
+  grid-row: 3;
+}
 ```
 
-{{ EmbedLiveSample('Grid frameworks in CSS grid', '100%', 600) }}
+{{EmbedLiveSample('grid-frameworks', '100%', "230") }}
 
 If you use the [Firefox grid inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html) to overlay the grid lines on your design, you can see how our 12-column grid works.
 

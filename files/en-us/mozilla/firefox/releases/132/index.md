@@ -29,6 +29,9 @@ No notable changes
 
 ### HTTP
 
+- The [default/document value](/en-US/docs/Web/HTTP/Content_negotiation/List_of_default_Accept_values#default_values) of the HTTP {{httpheader("Accept")}} header was changed to `text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8`.
+  This removes image MIME types that sometimes caused compatibility issues, and aligns with the fetch specification and Safari. ([Firefox bug 1917177](https://bugzil.la/1917177)).
+
 #### Removals
 
 - HTTP/2 Server Push is deactivated by default with the preference `network.http.http2.allow-push` now set to `false`.
@@ -36,7 +39,7 @@ No notable changes
 
 ### Privacy
 
-- All [third-party cookies](/en-US/docs/Web/Privacy/Third-party_cookies) are now blocked in [Strict Enhanced Tracking Protection](https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop#w_strict-enhanced-tracking-protection). ([Firefox bug 1918037](https://bugzil.la/1918037)).
+- All [third-party cookies](/en-US/docs/Web/Privacy/Guides/Third-party_cookies) are now blocked in [Strict Enhanced Tracking Protection](https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop#w_strict-enhanced-tracking-protection). ([Firefox bug 1918037](https://bugzil.la/1918037)).
 
 ### APIs
 

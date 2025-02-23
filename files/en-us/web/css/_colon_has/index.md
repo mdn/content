@@ -1,5 +1,5 @@
 ---
-title: ":has()"
+title: :has()
 slug: Web/CSS/:has
 page-type: css-pseudo-class
 browser-compat: css.selectors.has
@@ -18,7 +18,7 @@ h1:has(+ p) {
 }
 ```
 
-The `:has()` pseudo-class takes on the [specificity](/en-US/docs/Web/CSS/Specificity) of the most specific selector in its arguments the same way as {{CSSxRef(":is", ":is()")}} and {{CSSxRef(":not", ":not()")}} do.
+The `:has()` pseudo-class takes on the [specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity) of the most specific selector in its arguments the same way as {{CSSxRef(":is", ":is()")}} and {{CSSxRef(":not", ":not()")}} do.
 
 ## Syntax
 
