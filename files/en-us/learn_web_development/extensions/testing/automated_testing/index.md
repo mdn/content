@@ -147,6 +147,8 @@ Let's look at setting up Gulp and using it to automate some testing tools.
    gulp
    ```
 
+### Adding some real tasks to Gulp
+
 Now we are ready to add more tasks to our Gulp file. Each addition may require you to modify the `gulpfile.mjs` file in the following way:
 
 - If we ask you to add some `import` statements, add them below the existing `import` statement.
@@ -166,8 +168,6 @@ import gulp from "gulp";
 // export function ...
 // export function ...
 ```
-
-### Adding some real tasks to Gulp
 
 To add some real tasks to Gulp, we need to think about what we want to do. A reasonable set of basic functionalities to run on our project is as follows:
 
