@@ -7,7 +7,7 @@ browser-compat: css.types.image.cross-fade
 
 {{CSSRef}}
 
-The **`cross-fade()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) can be used to blend two or more images at a defined transparency.
+The **`cross-fade()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) can be used to blend two or more images at a defined transparency.
 It can be used for many simple image manipulations, such as tinting an image with a solid color or highlighting a particular area of the page by combining an image with a radial gradient.
 
 ## Syntax
