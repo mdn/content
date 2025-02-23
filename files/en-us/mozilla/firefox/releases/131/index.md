@@ -52,7 +52,7 @@ This article provides information about the changes in Firefox 131 that affect d
 
 ## Changes for add-on developers
 
-- The 10 MB quota for data stored by the {{WebExtAPIRef("storage.session")}} API is now enforced in Firefox Nightly 131. Previously, Firefox didn't implement this quota. This enforcement rolls out to release versions of Firefox from version 134 ([Firefox bug 1915688](https://bugzil.la/1915688)). This enables extensions that rely on the previous behavior to correct any issues. ([Firefox bug 1908925](https://bugzil.la/1908925))
+- The 10 MB quota for data stored by the {{WebExtAPIRef("storage.session")}} API is now enforced in Firefox Nightly 131. Previously, Firefox didn't implement this quota. This enforcement rolls out to release versions of Firefox from version 137 ([Firefox bug 1915688](https://bugzil.la/1915688)). This enables extensions that rely on the previous behavior to correct any issues. ([Firefox bug 1908925](https://bugzil.la/1908925))
 - {{WebExtAPIRef("storage.session")}} now supports the {{WebExtAPIRef("storage.StorageArea.getBytesInUse()")}} API and the {{WebExtAPIRef("storage.session.QUOTA_BYTES")}} property. ([Firefox bug 1908925](https://bugzil.la/1908925))
 - {{WebExtAPIRef("tabs.onUpdated")}} is now triggered when `openerTabId` is changed through `tabs.update()` ([Firefox bug 1409262](https://bugzil.la/1409262)).
 - {{WebExtAPIRef("tabs.update")}} now accepts `openerTabId` set to `-1` to clear `openerTabId` ([Firefox bug 1409262](https://bugzil.la/1409262)).
