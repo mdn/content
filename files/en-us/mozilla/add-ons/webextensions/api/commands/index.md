@@ -14,18 +14,18 @@ Also provides features to update the shortcut key settings. See [Updating shortc
 ## Types
 
 - {{WebExtAPIRef("commands.Command")}}
-  - : Object representing a command. This contains the information specified for the command in the [`commands` manifest.json key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands).
+  - : Object containing a command's settings.
 
 ## Functions
 
 - {{WebExtAPIRef("commands.getAll")}}
-  - : Gets all registered commands for this extension.
+  - : Gets all registered commands for the extension.
 - {{WebExtAPIRef("commands.openShortcutSettings")}}
   - : Opens the Manage Extension Shortcuts page, highlighting the extension's shortcut options, if it has any.
 - {{WebExtAPIRef("commands.reset")}}
-  - : Resets the given command's description and shortcut to the values given in the manifest key.
+  - : Resets a command's description and shortcut to the values given in the manifest key.
 - {{WebExtAPIRef("commands.update")}}
-  - : Changes the description or shortcut for the given command.
+  - : Changes the description or shortcut for a command.
 
 ## Events
 
