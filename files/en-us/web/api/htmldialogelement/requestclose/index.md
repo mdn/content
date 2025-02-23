@@ -3,10 +3,12 @@ title: "HTMLDialogElement: requestClose() method"
 short-title: requestClose()
 slug: Web/API/HTMLDialogElement/requestClose
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.HTMLDialogElement.requestClose
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ APIRef("HTML DOM") }}{{SeeCompatTable}}
 
 The **`requestClose()`** method of the {{domxref("HTMLDialogElement")}} interface requests to close the {{htmlelement("dialog")}}.
 An optional string may be passed as an argument, updating the `returnValue` of the dialog.

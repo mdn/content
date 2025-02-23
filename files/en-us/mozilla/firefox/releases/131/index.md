@@ -21,7 +21,7 @@ This article provides information about the changes in Firefox 131 that affect d
 ### HTTP
 
 - A {{httpheader("Set-Cookie")}} HTTP header with the attribute value of [`SameSite=None`](/en-US/docs/Web/HTTP/Headers/Set-Cookie#none) must now also include the [`Secure`](/en-US/docs/Web/HTTP/Headers/Set-Cookie#secure) attribute. This ensures that cookies set with `SameSite=None` are only ever sent over HTTPS channels. In addition, since Firefox interprets an unspecified `SameSite` value as `SameSite=None`, cookies that don't specify `SameSite` will have the same restriction. ([Firefox bug 1909673](https://bugzil.la/1909673)).
-- [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies), or "partitioned cookies", are now supported.
+- [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Guides/Privacy_sandbox/Partitioned_cookies), or "partitioned cookies", are now supported.
   This feature allows developers to opt a cookie into partitioned storage using the [`partitioned`](/en-US/docs/Web/HTTP/Headers/Set-Cookie#partitioned) directive of the {{HTTPHeader("Set-Cookie")}} HTTP header. When set, cookies have separate storage for each top-level site and can only be read within the same top-level site they were set on and its subdomains. This blocks cross-site tracking while still enabling legitimate uses of third-party cookies, such as persisting state of embedded maps or chat widgets across different subdomains of a site. ([Firefox bug 1908160](https://bugzil.la/1908160)).
 
 ### APIs
@@ -52,7 +52,7 @@ This article provides information about the changes in Firefox 131 that affect d
 
 ## Changes for add-on developers
 
-- The 10 MB quota for data stored by the {{WebExtAPIRef("storage.session")}} API is now enforced in Firefox Nightly 131. Previously, Firefox didn't implement this quota. This enforcement rolls out to release versions of Firefox from version 134 ([Firefox bug 1915688](https://bugzil.la/1915688)). This enables extensions that rely on the previous behavior to correct any issues. ([Firefox bug 1908925](https://bugzil.la/1908925))
+- The 10 MB quota for data stored by the {{WebExtAPIRef("storage.session")}} API is now enforced in Firefox Nightly 131. Previously, Firefox didn't implement this quota. This enforcement rolls out to release versions of Firefox from version 137 ([Firefox bug 1915688](https://bugzil.la/1915688)). This enables extensions that rely on the previous behavior to correct any issues. ([Firefox bug 1908925](https://bugzil.la/1908925))
 - {{WebExtAPIRef("storage.session")}} now supports the {{WebExtAPIRef("storage.StorageArea.getBytesInUse()")}} API and the {{WebExtAPIRef("storage.session.QUOTA_BYTES")}} property. ([Firefox bug 1908925](https://bugzil.la/1908925))
 - {{WebExtAPIRef("tabs.onUpdated")}} is now triggered when `openerTabId` is changed through `tabs.update()` ([Firefox bug 1409262](https://bugzil.la/1409262)).
 - {{WebExtAPIRef("tabs.update")}} now accepts `openerTabId` set to `-1` to clear `openerTabId` ([Firefox bug 1409262](https://bugzil.la/1409262)).

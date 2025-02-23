@@ -83,7 +83,7 @@ This example provides different resolution images for different screen resolutio
   alt="Family portrait" />
 ```
 
-`1.5x`, `2x`, etc. are relative resolution indicators. If the image is styled to be 320px-wide (for example with `width: 320px` in CSS), the browser will load `320w.jpg` if the device is low resolution (one device pixel per CSS pixel), or `640x.jpg` if the device is high resolution (two device pixels per CSS pixel or more).
+`1.5x`, `2x`, etc. are relative resolution indicators. If the image is styled to be 320px-wide (for example with `width: 320px` in CSS), the browser will load `320w.jpg` if the device is low resolution (one {{glossary("device pixel")}} per CSS pixel), or `640x.jpg` if the device is high resolution (two device pixels per CSS pixel or more).
 
 In both cases, the `src` attribute provides a default image to load if the browser does not support `src`/`srcset`.
 
