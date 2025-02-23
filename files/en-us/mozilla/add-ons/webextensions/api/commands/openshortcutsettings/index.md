@@ -9,7 +9,7 @@ browser-compat: webextensions.api.commands.openShortcutSettings
 
 Opens the browser UI that enables users to configure an extension's keyboard shortcuts.
 
-In Firefox, this function opens the [Manage Extension Shortcuts](https://support.mozilla.org/en-US/kb/manage-extension-shortcuts-firefox) view.
+In Firefox, this function opens the [Manage Extension Shortcuts](https://support.mozilla.org/en-US/kb/manage-extension-shortcuts-firefox) option.
 
 Chrome doesn't support this function. In Chrome, `chrome://extensions/shortcuts` can be opened using the `tabs.create` function.
 

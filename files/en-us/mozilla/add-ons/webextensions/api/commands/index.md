@@ -7,9 +7,9 @@ browser-compat: webextensions.api.commands
 
 {{AddonSidebar}}
 
-Listen for the user executing commands that you have registered using the [`commands` manifest.json key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands).
+Listens for the user executing commands registered using the [`commands` manifest.json key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands).
 
-In Firefox, this API provides features to update the shortcut key settings. In Chrome, the user can update shortcut key settings through the extension options UI. Safari doesn't support user modification of extension shortcut keys.
+Also provides features to update the shortcut key settings. See [Updating shortcuts](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands#updating_shortcuts) in the [`commands` manifest.json key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands) guide for more information.
 
 ## Types
 
