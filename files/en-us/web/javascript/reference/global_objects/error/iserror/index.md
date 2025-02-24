@@ -26,10 +26,12 @@ Error.isError(value)
 
 ## Description
 
-`Error.isError()` checks if the passed value is an {{jsxref("Error")}}. It uses the same mechanism as {{jsxref("Array.isArray()")}}: it performs a _branded check_, similar to the [`in`](/en-US/docs/Web/JavaScript/Reference/Operators/in) operator, for a private property initialized by the {{jsxref("Error/Error", "Error()")}} constructor. It is a more robust alternative to [`instanceof Error`](/en-US/docs/Web/JavaScript/Reference/Operators/instanceof) because it avoids false positives and false negatives:
+`Error.isError()` checks if the passed value is an {{jsxref("Error")}}. It uses the same mechanism as {{jsxref("Array.isArray()")}}: it performs a _branded check_, similar to the [`in`](/en-US/docs/Web/JavaScript/Reference/Operators/in) operator, for a private property initialized by the {{jsxref("Error/Error", "Error()")}} constructor. 
 
-- It does not check the value's prototype chain—`Error.isError()` rejects objects with `Error.prototype` in its prototype chain but aren't actual errors, which `instanceof Error` would accept.
-- For `Error` objects constructed in another realm, the identity of the `Error` constructor is different and would therefore cause `instanceof Error` to return `false` in this realm.
+It is a more robust alternative to [`instanceof Error`](/en-US/docs/Web/JavaScript/Reference/Operators/instanceof) because it avoids false positives and false negatives:
+
+- `Error.isError()` rejects values that aren't actual `Error` instances, even if they have `Error.prototype` their prototype chain — `instanceof Error` would accept these as it does check the prototype chain.
+- `Error.isError()` accepts `Error` objects constructed in another realm — `instanceof Error` returns `false` for these because the identity of the `Error` constructor is different across realms.
 
 `Error.isError()` returns `true` for {{domxref("DOMException")}} instances. This is because, although `DOMException` is not specified as a real subclass of `Error` (the `Error` constructor is not the prototype of the `DOMException` constructor), `DOMException` still behaves like `Error` for all branded checking purposes.
 
