@@ -48,7 +48,7 @@ The `text-box-trim` property value may be specified as one of the following keyw
 
 ## Description
 
-An amount of space, termed leading, is included above and below text to provide spacing between lines. The amount of leading included varies between fonts, as does the space within the font (the height of the capital letter, ascenders, descenders, etc.), making it difficult to consistently set block-level text spacing.
+An amount of space, termed [leading](/en-US/docs/Glossary/Leading), is included above and below text to provide spacing between lines. The amount of leading included varies between fonts, as does the space within the font (the height of the capital letter, ascenders, descenders, etc.), making it difficult to consistently set block-level text spacing.
 
 The `text-box-trim` property allows you to trim the over and under edge of the text's block container, making it easier to control text spacing in the block direction.
 

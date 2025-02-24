@@ -19,6 +19,9 @@ The `<text-edge>` values are used in the {{cssxref("text-box-edge")}} property t
   [ text | ideographic | ideographic-ink | cap | ex ] [ text | ideographic | ideographic-ink | alphabetic ]
 ```
 
+> [!NOTE]
+> The `ideographic` and `ideographic-ink` keywords are intended to specify over and under edge positions specific to [CJK language characters](https://en.wikipedia.org/wiki/CJK_characters). Currently their exact behavior is being debated and they are are not supported by any browser.
+
 ## Values
 
 The `<text-edge>` data type is composed of one or two keywords representing specific regions on a font's block-start (over) edge and/or block-end (under) edge:
@@ -29,10 +32,11 @@ The `<text-edge>` data type is composed of one or two keywords representing spec
 ### Single keyword values
 
 - `text`
-  - : The font's over and under edges are its start and end boundaries: this includes the font's ascenders and decenders but excludes the half-leading set on the text.
 
-> [!NOTE]
-> The specification also defines the `ideographic` and `ideographic-ink` keywords, which are intended to specify over and under edge positions specific to [CJK language characters](https://en.wikipedia.org/wiki/CJK_characters). Currently their exact behavior is being debated and they are are not supported by any browser.
+  - : The font's over and under edges are its start and end boundaries: this includes the font's ascenders and decenders but excludes the [half-leading](/en-US/docs/Glossary/Leading) set on the text.
+
+    > [!NOTE]
+    > The amount of half-leading included on a text element can be controlled using the {{cssxref("line-height")}} property.
 
 ### Two keyword values
 

@@ -42,7 +42,7 @@ text-box-edge: unset;
 The `text-box-edge` property value is specified as `auto` or a {{cssxref("&lt;text-edge&gt;")}} value:
 
 - `auto`
-  - : The default value. Equivalent to the `text-edge` value `text`.
+  - : The default value. Equivalent to the `text-edge` value `text`, which causes the half-leading to be trimmed from the edges specified by the `text-box-trim` property.
 - {{cssxref("&lt;text-edge&gt;")}}
   - : One or two separate keywords representing over and under edge positions to trim the text element's block container to.
     - If two values are specified, the first value specifies the trimming behavior to apply to the block-start (over) edge of the text, and the second value specifies the trimming behavior to apply to the block-end (under) edge of the text.
@@ -52,7 +52,7 @@ The `text-box-edge` property value is specified as `auto` or a {{cssxref("&lt;te
 
 ## Description
 
-An amount of space, termed leading, is included above and below text to provide spacing between lines. The amount of leading included varies between fonts, as does the space within the font (the height of the capital letter, ascenders, descenders, etc.), making it difficult to consistently set block-level text spacing.
+An amount of space, termed [leading](/en-US/docs/Glossary/Leading), is included above and below text to provide spacing between lines. The amount of leading included varies between fonts, as does the space within the font (the height of the capital letter, ascenders, descenders, etc.), making it difficult to consistently set block-level text spacing.
 
 The `text-box-edge` property allows you to trim space from the start and/or end edge of the text's block container. It does this by specifying a {{cssxref("&lt;text-edge&gt;")}} value that indicates the over edge and under edge to trim the space to.
 
