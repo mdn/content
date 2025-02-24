@@ -3566,6 +3566,7 @@
 /en-US/docs/Glossary/Empty_element	/en-US/docs/Glossary/Void_element
 /en-US/docs/Glossary/Error	/en-US/docs/Glossary/Exception
 /en-US/docs/Glossary/First_interactive	/en-US/docs/Glossary/First_CPU_idle
+/en-US/docs/Glossary/Forbidden_header_name	/en-US/docs/Glossary/Forbidden_request_header
 /en-US/docs/Glossary/GZip	/en-US/docs/Glossary/gzip_compression
 /en-US/docs/Glossary/Global_attribute	/en-US/docs/Web/HTML/Global_attributes
 /en-US/docs/Glossary/Grid_Rows	/en-US/docs/Glossary/Grid_Row

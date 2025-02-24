@@ -18,7 +18,7 @@ The HTTP **`Supports-Loading-Mode`** {{Glossary("response header")}} allows a re
       <td>{{Glossary("Response header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>No</td>
     </tr>
     <tr>
