@@ -32,9 +32,10 @@ The CPG outlines several categories of violations. These are summarized below al
 
 ### Level 2: Warning
 
-- **Description:** Repeated minor violations or a single moderate violation of the CPG.
+- **Description:** Moderate violation of the CPG, or repeated minor violations.
 - **Actions:**
   - A private, written warning from project leadership, with clarity of the violation and consequences of continued behavior.
+  - Guidance on rectification of aggrieving situation, if applicable.
   - Communication of next-level consequences if behaviors are repeated.
 
 ### Level 3: Warning + Mandatory Cooling Off Period (Tool Access Revoked - GH & Discord)
