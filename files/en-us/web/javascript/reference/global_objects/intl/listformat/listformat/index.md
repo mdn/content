@@ -64,7 +64,7 @@ new Intl.ListFormat(locales, options)
         - `"long"` (default)
           - : The typical list format. For example, "A, B, and C"
         - `"short"`
-          - : The spacing, the length or presence or a conjunction, and the separators may change. Usually, you would want the input elements to be abbreviated too. For example, "A, B, & C"
+          - : The spacing, the length or presence of a conjunction, and the separators may change. Usually, you would want the input elements to be abbreviated too. For example, "A, B, & C"
         - `"narrow"`
           - : Where possible, the list format is further abbreviated, so that the output is as short as possible. For example, "A, B, C"
 
@@ -146,7 +146,7 @@ console.log(new Intl.ListFormat("en-GB", { style: "narrow" }).format(list));
 // Motorcycle, Bus, Car
 ```
 
-The input elements are not transformed, but you often want to abbreviate them too.
+The input elements are not transformed, but you will often want to abbreviate them too.
 
 ```js
 const marathon = [

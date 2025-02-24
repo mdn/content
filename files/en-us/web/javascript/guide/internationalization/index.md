@@ -10,7 +10,7 @@ The {{jsxref("Intl")}} object is the namespace for the ECMAScript Internationali
 
 ## Overview
 
-The `Intl` object is very use-case driven. It provides a separate object for each use case that requires locale-specific logic. Currently, it supports doing the following:
+The `Intl` object is very use-case driven. It provides a separate object for each use case that requires locale-specific logic. Currently, it provides the following functionalities:
 
 - [Getting information about a locale](#locale_information) using {{jsxref("Intl.Locale")}}.
 - [Formatting data](#formatting_data) using {{jsxref("Intl.DateTimeFormat")}}, {{jsxref("Intl.DurationFormat")}}, {{jsxref("Intl.ListFormat")}}, {{jsxref("Intl.NumberFormat")}}, and {{jsxref("Intl.RelativeTimeFormat")}}.
@@ -19,7 +19,7 @@ The `Intl` object is very use-case driven. It provides a separate object for eac
 - [Segmenting text](#segmentation) into units such as words, sentences, or graphemes using {{jsxref("Intl.Segmenter")}}.
 - [Getting the displayed name](#display_names) for currencies, languages, scripts, regions, and time zones using {{jsxref("Intl.DisplayNames")}}.
 
-Most `Intl` APIs share a similar design ({{jsxref("Intl.Locale")}} is the only exception). You start by constructing an instance with the desired locale and options. This fixes a set of rules for the desired operation (formatting, collation, segmentation, etc.). Then, when you call the method on the instance, such as `format()`, `compare()`, or `segment()`, you just need to pass the data and the object applies the fixed rule.
+Most `Intl` APIs share a similar design ({{jsxref("Intl.Locale")}} is the only exception). You start by constructing an instance with the desired locale and options. This defines a set of rules for the desired operation (formatting, collation, segmentation, etc.). Then, when you call the method on the instance, such as `format()`, `compare()`, or `segment()`, the object applies the specified rule to the passed data.
 
 ```js
 // 1. Construct a formatter object, specifying the locale and formatting options:
@@ -41,17 +41,17 @@ new Intl.SomeObject(locales, options)
 - `locales` {{optional_inline}}
   - : A string with a BCP 47 language tag or an {{jsxref("Intl.Locale")}} instance, or an array of such locale identifiers. The runtime's default locale is used when `undefined` is passed or when none of the specified locale identifiers is supported. For the general form and interpretation of the `locales` argument, see [the parameter description on the `Intl` main page](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_argument).
 - `options` {{optional_inline}}
-  - : An object containing some properties that customize specific aspects of the operation. It's the key part to understanding how to use each `Intl` object.
+  - : An object containing properties that customize specific aspects of the operation, which is key to understanding how to use each `Intl` object.
 
 ## Locale information
 
-Locales underlie all behaviors of `Intl`. A _locale_ is a set of conventions, represented in the `Intl` API by the {{jsxref("Intl.Locale")}} object. All `Intl` constructors that accept language tags (as discussed above) also accept `Intl.Locale` objects.
+Locales underlie all behaviors of `Intl`. A _locale_ is a set of conventions, represented in the `Intl` API by the {{jsxref("Intl.Locale")}} object. All `Intl` constructors that accept language tags also accept `Intl.Locale` objects.
 
-Each locale is primarily defined by three things: a {{jsxref("Intl/Locale/language", "language")}}, a {{jsxref("Intl/Locale/script", "script")}}, and a {{jsxref("Intl/Locale/region", "region")}}. Together, they form a {{RFC(5646, "BCP 47 language tag")}}.
+Each locale is primarily defined by three things: a {{jsxref("Intl/Locale/language", "language")}}, a {{jsxref("Intl/Locale/script", "script")}}, and a {{jsxref("Intl/Locale/region", "region")}}. When connected together by `-` in that order, they form a [BCP 47 language tag](https://datatracker.ietf.org/doc/html/rfc5646).
 
 - The language is the most important part of the locale and is mandatory. When given a single language, like `en` or `fr`, there are algorithms to infer the rest of the information (see {{jsxref("Intl/Locale/maximize", "Intl.Locale.prototype.maximize()")}}).
 - However, you often want to specify the region as well, because conventions can differ drastically between regions that speak the same language. For example, the date format in the U.S. is MM/DD/YYYY, but in the U.K. it is DD/MM/YYYY, so specifying `en-US` or `en-GB` is important.
-- You can also specify a script. The script is the writing system, or what characters are used to transcribe the language. In practice, the script is often unnecessary, because the language as used in a certain region is only written in one script. However, there are exceptions, such as the Serbian language, which can be written in both the Latin and Cyrillic scripts (`sr-Latn` and `sr-Cyrl`), or the Chinese language, which can be written in both the Simplified and Traditional scripts (`zh-Hans` and `zh-Hant`).
+- You can also specify a script. The script is the writing system, or the characters used to transcribe the language. In practice, the script is often unnecessary, because the language used in a certain region is only written in one script. However, there are exceptions such as the Serbian language, which can be written in both the Latin and Cyrillic scripts (`sr-Latn` and `sr-Cyrl`), or the Chinese language, which can be written in both the Simplified and Traditional scripts (`zh-Hans` and `zh-Hant`).
 
 ```js
 // These two are equivalent when passed to other Intl APIs
@@ -62,7 +62,7 @@ console.log(locale1.language, locale1.script, locale1.region); // "en", undefine
 console.log(locale2.language, locale2.script, locale2.region); // "en", "Latn", "US"
 ```
 
-A locale also contains a handful of conventions as used by that particular culture:
+A locale also contains a set of conventions used by that particular culture:
 
 <table>
 <thead><tr><th>Use case</th><th>Property</th><th>Description</th><th>Extension subtag</th></tr></thead>
@@ -79,9 +79,9 @@ A locale also contains a handful of conventions as used by that particular cultu
 <td><code>hc</code></td>
 </tr>
 <tr>
-<td>Number formatting (including numbers used in date/time, durations, etc.)</td>
+<td>Number formatting, including dates, times, durations, etc.</td>
 <td>{{jsxref("Intl/Locale/numberingSystem", "numberingSystem")}}</td>
-<td>Transforms numbers into a locale-specific notation. The usual system using <code>0123456789</code> is called <code>latn</code> (Latin). Often, each script has a numbering system that is just a digit-by-digit translation, but some scripts have more than one numbering system, others may not typically write numbers in that script (for example, Chinese has its own <code>hanidec</code> numbering system, but most texts use the standard <code>latn</code> system), and yet others may require special conversion algorithms (for example, the Roman numerals <code>roman</code>).</td>
+<td>Transforms numbers into a locale-specific notation. The regular <code>0123456789</code> system is called <code>latn</code> (Latin). Often, each script has a numbering system that is just a digit-by-digit translation, but some scripts have more than one numbering system, some may not typically write numbers in that script (for example, Chinese has its own <code>hanidec</code> numbering system, but most texts use the standard <code>latn</code> system), and others may require special conversion algorithms (for example, Roman numerals — <code>roman</code>).</td>
 <td><code>nu</code></td>
 </tr>
 <tr>
@@ -103,12 +103,12 @@ A locale also contains a handful of conventions as used by that particular cultu
 </tbody>
 </table>
 
-When constructing the `Intl.Locale`, or when passing language tags to other `Intl` constructors, you can explicitly specify these properties. There are two ways: you can append them to the language tag, or you can specify them as options.
+You can explicitly specify these properties when constructing the `Intl.Locale` or passing language tags to other `Intl` constructors. There are two ways to do this — append them to the language tag or specify them as options.
 
 - To append them to the language tag, you first append the string `-u` (meaning "Unicode extension"), then the extension subtag as given above, then the value.
 - To specify them as options, you just add the property name as given above, together with its value, to the `options` object.
 
-For example, using `Intl.DateTimeFormat` as an example, both of the following create a formatter that formats dates in the Hebrew calendar:
+Using `Intl.DateTimeFormat` as an example, both of the following lines create a formatter that formats dates in the Hebrew calendar:
 
 ```js
 const df1 = new Intl.DateTimeFormat("en-US-u-ca-hebrew");
@@ -117,7 +117,7 @@ const df2 = new Intl.DateTimeFormat("en-US", { calendar: "hebrew" });
 
 Unrecognized properties are ignored, so you can use the same syntax as above with `Intl.NumberFormat`, but it won't do anything different than just passing `en-US`, because number formatting doesn't use the `calendar` property.
 
-It is perhaps tricky to get the default values of these locale conventions. If you try to access `new Intl.Locale("en-US").calendar`, you will get `undefined` because the `Locale` object just contains the information you passed to it. In fact, the default calendar is theoretically dependent on what API you are using the calendar with, so to get the default calendar of `en-US` as used by `Intl.DateTimeFormat`, you can use its {{jsxref("Intl/DateTimeFormat/resolvedOptions", "resolvedOptions()")}} method. The same goes for other properties.
+It is tricky to get the default values of these locale conventions. `new Intl.Locale("en-US").calendar` returns `undefined`, because the `Locale` object only contains the information you passed to it. The default calendar is theoretically dependent on what API you are using the calendar with, so to get the default calendar of `en-US` as used by `Intl.DateTimeFormat`, you can use its {{jsxref("Intl/DateTimeFormat/resolvedOptions", "resolvedOptions()")}} method. The same goes for other properties.
 
 ```js
 const locale = new Intl.Locale("en-US");
@@ -132,13 +132,13 @@ const locale = new Intl.Locale("ar-EG");
 console.log(locale.getCalendars()); // ['gregory', 'coptic', 'islamic', 'islamic-civil', 'islamic-tbla']
 ```
 
-There are other methods exposing interesting information, such as {{jsxref("Intl/Locale/getTextInfo", "getTextInfo()")}}, {{jsxref("Intl/Locale/getTimeZones", "getTimeZones()")}}, and {{jsxref("Intl/Locale/getWeekInfo", "getWeekInfo()")}}.
+`Intl.Locale` instances also contain other methods that expose useful information, such as {{jsxref("Intl/Locale/getTextInfo", "getTextInfo()")}}, {{jsxref("Intl/Locale/getTimeZones", "getTimeZones()")}}, and {{jsxref("Intl/Locale/getWeekInfo", "getWeekInfo()")}}.
 
 ## Figuring out the locale
 
 A shared concern for internationalization is: how do I know what locale to use?
 
-The most obvious answer is, what the user prefers. Browsers expose the user's language preference through the {{domxref("Navigator/languages", "navigator.languages")}} property. This is an array of language identifiers that can be directly passed to the formatter constructor—more on this later. The user can configure this list in their browser settings. You can also pass an empty array or `undefined`, which both cause the browser's default locale to be used.
+The most obvious answer is "what the user prefers." Browsers expose the user's language preferences through the {{domxref("Navigator/languages", "navigator.languages")}} property. This is an array of language identifiers that can be directly passed to the formatter constructor—more on this later. The user can configure this list in their browser settings. You can also pass an empty array or `undefined`, which both cause the browser's default locale to be used.
 
 ```js
 const numberFormatter = new Intl.NumberFormat(navigator.languages);
@@ -147,9 +147,9 @@ console.log(numberFormatter.format(1234567.89));
 const numberFormatter2 = new Intl.NumberFormat([]);
 ```
 
-However, this may not always be the most desirable. Strings formatted by `Intl` formatters represent a tiny fraction of text displayed on your site; most localized content is provided by you, the site developer. For example, suppose your site is only offered in two languages: English and French. If a Japanese user visits your site and expects to use your site in English, they will be baffled when they see the English text interleaved with numbers and dates in Japanese!
+However, this may not always provide the most desirable result. Strings formatted by `Intl` formatters represent a tiny fraction of text displayed on your site; most localized content is provided by you, the site developer. For example, suppose your site is only offered in two languages: English and French. If a Japanese user visits your site and expects to use your site in English, they will be baffled when they see the English text interleaved with numbers and dates in Japanese!
 
-Usually, you actually don't want to use the browser's default language. Rather, you want to use the language that the rest of your site is offered in. Suppose your site has a language switcher that stores the user's choice somewhere, then you could directly use that.
+Usually, you don't want to use the browser's default language. Rather, you want to use the same language that the rest of your site is offered in. Suppose your site has a language switcher that stores the user's choice somewhere — you could directly use that.
 
 ```js
 // Suppose this can be changed by some site-wide control
@@ -161,9 +161,9 @@ const numberFormatter = new Intl.NumberFormat(userSettings.locale);
 console.log(numberFormatter.format(1234567.89));
 ```
 
-If your site has a backend that dynamically selects the language based on the user's {{httpheader("Accept-Language")}} header, and sends back different HTML based on that, you can also use the HTML element's {{domxref("HTMLElement.lang")}} property, like `new Intl.NumberFormat(document.documentElement.lang)`.
+If your site has a backend that dynamically selects the language based on the user's {{httpheader("Accept-Language")}} header and sends back different HTML based on that, you could also use the HTML element's {{domxref("HTMLElement.lang")}} property: `new Intl.NumberFormat(document.documentElement.lang)`.
 
-If your site is only offered in one language, you can also hardcode the locale in your code, like `new Intl.NumberFormat("en-US")`.
+If your site is only offered in one language, you could also hardcode the locale in your code: `new Intl.NumberFormat("en-US")`.
 
 As previously mentioned, you can also pass an array of locales to the constructor, representing a list of fallback choices. The first example using `navigator.languages` is an example of this: if the first user-configured locale is not supported for the particular operation, the next one is tried, and so on, until we find a requested locale for which the runtime has data. You can do this manually as well. In the example below, we specify a list of locales in decreasing order of specificity which all represent languages likely to be understood by a Hong Kong Chinese speaker, so the formatter picks the most specific one that it supports.
 
@@ -178,24 +178,27 @@ const numberFormatter = new Intl.NumberFormat([
 
 There is no API for listing all supported locales, but there are a few methods for handling the locale list:
 
-- {{jsxref("Intl.getCanonicalLocales()")}}: This function takes a list of locale identifiers and returns a list of canonicalized locale identifiers. This is useful for understanding the canonicalization process that each `Intl` constructor does.
-- The `supportedLocalesOf()` static method on each `Intl` object (like {{jsxref("Intl.DateTimeFormat.supportedLocalesOf()")}}): This method takes the same arguments as the constructor (`locales` and `options`) and returns a subset of the given locale tags that match successfully to some data. This is useful for understanding which locales are supported by the runtime for a particular operation, for example to show a language switcher with only the supported languages.
+- {{jsxref("Intl.getCanonicalLocales()")}}: This function takes a list of locale identifiers and returns a list of canonicalized locale identifiers. This is useful for understanding the canonicalization process for each `Intl` constructor.
+- The `supportedLocalesOf()` static method on each `Intl` object (like {{jsxref("Intl.DateTimeFormat.supportedLocalesOf()")}}): This method takes the same arguments as the constructor (`locales` and `options`) and returns a subset of the given locale tags that match the given data. This is useful for understanding which locales are supported by the runtime for a particular operation, for example, to show a language switcher containing only the supported languages.
 
 ## Understanding the return value
 
-The second shared concern for all objects is: what does the method return? This is a hard question to answer beyond the structure or type of the returned value, because there's no normative specification saying what _exactly_ should be returned. Most of the time, the result of a method is consistent. However, the output may vary between implementations, even within the same locale — output variations are by design and allowed by the specification. It may also not be what you expect. For example, the string returned by `format()` may use non-breaking spaces or be surrounded by bidirectional control characters. You should not compare the results of any `Intl` method to hardcoded constants; they should only be displayed to users.
+The second shared concern for all objects is "what does the method return?" This is a hard question to answer beyond the structure or type of the returned value because there's no normative specification saying what _exactly_ should be returned. Most of the time, the result of a method is consistent. However, the output may vary between implementations, even within the same locale — output variations are by design and allowed by the specification. It may also not be what you expect. For example, the string returned by `format()` may use non-breaking spaces or be surrounded by bidirectional control characters. You should not compare the results of any `Intl` method to hardcoded constants; they should only be displayed to users.
 
 Of course, this answer seems unsatisfactory, because most developers do wish to control what the output looks like—at least, you don't want your user to be confused by nonsensical output. Here are some guidelines if you do want to conduct testing, whether automated or manual:
 
-- Test all locales that your user may use. This is the easiest if you have a fixed set of supported locales (such as via a language switcher). If you are using whatever the user prefers, you may pick a few common ones for your users, but keep in mind that the user may see anything. You can usually mock user preference via the test runner's configuration or mocking the `Intl` constructors.
-- Test on multiple JavaScript engines. The `Intl` API is directly implemented by the JavaScript engine, so for example you should expect Node.js and Chrome, which both use V8, to have the same output, while Firefox, which uses SpiderMonkey, may have different output. Although all engines likely use the CLDR data, they usually postprocess it in different ways. Some build settings of the browser, for purposes such as reducing the install size, may also affect what locales and options are supported.
+- Test all locales that your user may use. This is easier if you have a fixed set of supported locales (for example via a language switcher). If you are using whatever the user prefers, you may pick a few common ones for your users, but bear in mind that what the user sees could vary. You can usually mock user preference via the test runner's configuration or mocking the `Intl` constructors.
+- Test on multiple JavaScript engines. The `Intl` API is directly implemented by the JavaScript engine, so for example you should expect Node.js and Chrome (which both use V8) to have the same output, while Firefox (which uses SpiderMonkey) may have a different output. Although all engines likely use the CLDR data, they usually postprocess it in different ways. Some browser build settings (for reducing the install size, for example) may also affect what locales and options are supported.
 - Don't assume the output. This means you shouldn't write the output by hand, such as `expect(result).toBe("foo")`. Instead, use snapshot testing or copy the string value from the output of a test run.
 
 ## Formatting data
 
-A major use case of `Intl` is to output locale-specific texts representing some structured data. This is like a translation software, but instead of letting you translate arbitrary text, it takes some data such as dates, numbers, and lists, and formats them according to locale-specific formatting rules.
+A major use case of `Intl` is to output locale-specific texts representing structured data. This is similar to translation software, but instead of letting you translate arbitrary text, it takes data such as dates, numbers, and lists, and formats them according to locale-specific rules.
 
-The {{jsxref("Intl.DateTimeFormat")}}, {{jsxref("Intl.DurationFormat")}}, {{jsxref("Intl.ListFormat")}}, {{jsxref("Intl.NumberFormat")}}, and {{jsxref("Intl.RelativeTimeFormat")}} objects each format one kind of data. Each instance provides two methods: one called `format()` that takes a piece of data and returns a string using the formatting rule as determined by the locale and options; one called `formatToParts()` that takes the same data and returns the same string, but broken down into parts, each part being an object with a `type` and a `value`. This is useful for more advanced use cases, such as interleaving the formatted text with other texts.
+The {{jsxref("Intl.DateTimeFormat")}}, {{jsxref("Intl.DurationFormat")}}, {{jsxref("Intl.ListFormat")}}, {{jsxref("Intl.NumberFormat")}}, and {{jsxref("Intl.RelativeTimeFormat")}} objects each format one kind of data. Each instance provides two methods:
+
+- `format()`: Takes a piece of data and returns a string using the formatting rule as determined by the locale and options.
+- `formatToParts()`: Takes the same data and returns the same string, but broken down into parts, each part being an object with a `type` and a `value`. This is useful for more advanced use cases, such as interleaving the formatted text with other texts.
 
 For example, here's a typical use of the {{jsxref("Intl.NumberFormat")}} object:
 
@@ -234,9 +237,12 @@ Note that `toLocaleString()` is potentially less efficient than using a formatte
 
 ### Date and time formatting
 
-{{jsxref("Intl.DateTimeFormat")}} formats dates and times, as well as ranges of dates and times. The `DateTimeFormat` object takes date/time inputs in one of the following forms: {{jsxref("Date")}}, {{jsxref("Temporal.PlainDateTime")}}, {{jsxref("Temporal.PlainTime")}}, {{jsxref("Temporal.PlainDate")}}, {{jsxref("Temporal.PlainYearMonth")}}, or {{jsxref("Temporal.PlainMonthDay")}}. Note that you can't pass a {{jsxref("Temporal.ZonedDateTime")}} object directly, because the time zone is already fixed in the object. You should use {{jsxref("Temporal/ZonedDateTime/toLocaleString", "Temporal.ZonedDateTime.prototype.toLocaleString()")}} or convert it to a {{jsxref("Temporal.PlainDateTime")}} object first.
+{{jsxref("Intl.DateTimeFormat")}} formats dates and times, as well as ranges of dates and times. The `DateTimeFormat` object takes date/time inputs in one of the following forms: {{jsxref("Date")}}, {{jsxref("Temporal.PlainDateTime")}}, {{jsxref("Temporal.PlainTime")}}, {{jsxref("Temporal.PlainDate")}}, {{jsxref("Temporal.PlainYearMonth")}}, or {{jsxref("Temporal.PlainMonthDay")}}.
 
-The following are some use cases of localized date and time formatting:
+> [!NOTE]
+> You can't pass a {{jsxref("Temporal.ZonedDateTime")}} object directly, because the time zone is already fixed in the object. You should use {{jsxref("Temporal/ZonedDateTime/toLocaleString", "Temporal.ZonedDateTime.prototype.toLocaleString()")}} or convert it to a {{jsxref("Temporal.PlainDateTime")}} object first.
+
+Common use cases of localized date and time formatting are as follows:
 
 - Output the same date and time in another calendar system, such as the Islamic, Hebrew, or Chinese calendar.
 - Output the same real-world time (instant) but in another time zone.
@@ -246,8 +252,10 @@ The following are some use cases of localized date and time formatting:
 
 To decide what the formatted string looks like, you first choose the calendar (which affects the year, month, week, and day calculation) and time zone (which affects the exact time as well as possibly the date). This is done using the aforementioned `calendar` option (or the `-ca-` extension key in the locale identifier), and the `timeZone` option.
 
-- `Date` objects represent a unique instant in the user's time zone and in the ISO 8601 calendar (as reported by methods like {{jsxref("Date.prototype.getHours()")}} and {{jsxref("Date.prototype.getMonth()")}}). They are converted to given `calendar` and `timeZone` by preserving the instant, so the date and time components may change.
+- `Date` objects represent a unique instant in the user's time zone and in the ISO 8601 calendar (as reported by methods like {{jsxref("Date.prototype.getHours()")}} and {{jsxref("Date.prototype.getMonth()")}}). They are converted to the given `calendar` and `timeZone` by preserving the instant, so the date and time components may change.
 - The various {{jsxref("Temporal")}} objects already have a calendar built-in, so the `calendar` option must be consistent with the calendar of the object—unless the date's calendar is `"iso8601"`, in which case it is converted to the requested `calendar`. These objects don't have a time zone, so they are directly displayed in the given `timeZone` without conversion.
+
+Here we demonstrate how the combination of `calendar` and `timeZone` configurations result in different representations of the same instant.
 
 ```js
 // Assume that the local time zone is UTC
@@ -270,7 +278,7 @@ for (const calendar of ["gregory", "hebrew"]) {
 console.table(results);
 ```
 
-The output looks like:
+The output looks like this:
 
 | calendar  | timeZone           | output                                                          |
 | --------- | ------------------ | --------------------------------------------------------------- |
@@ -279,7 +287,7 @@ The output looks like:
 | 'hebrew'  | 'America/New_York' | 'Friday, 27 Tevet 5782 at 7:00:00 PM Eastern Standard Time'     |
 | 'hebrew'  | 'Asia/Tokyo'       | 'Saturday, 28 Tevet 5782 at 9:00:00 AM Japan Standard Time'     |
 
-A date/time is comprised of the following components: `weekday`, `era`, `year`, `month`, `day`, `dayPeriod`, `hour`, `minute`, `second`, `fractionalSecondDigits`, `timeZoneName`. We next decide what components we want to include in the output, and what forms them should take. You have two choices:
+A date/time is comprised of the following components: `weekday`, `era`, `year`, `month`, `day`, `dayPeriod`, `hour`, `minute`, `second`, `fractionalSecondDigits`, and `timeZoneName`. Your next decision is what components to include in the output, and what forms they should take. You have two choices:
 
 - You can manually configure each component, using options with the same name as the component. Only the components you specify will be included in the output, with the specified form.
 - You can use the shortcuts `dateStyle` and `timeStyle`, which are predefined sets of components. They expand to a set of component options depending on the locale.
@@ -288,7 +296,7 @@ You should pick one of these two methods, because they are mutually exclusive. U
 
 Underlyingly, after requesting a combination of components, the `DateTimeFormat` object looks for a "template" that matches the requested components, so it only needs to fill in the values one by one. Obviously, not every combination of components has a predefined template. In this case, there's a `formatMatcher` option that decides how to negotiate, by making components longer or shorter than requested, or by omitting or adding components. It gets quite technical, so you should read the [`Intl.DateTimeFormat()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#date-time_component_options) reference to understand better.
 
-Here, we just demonstrate a few common ways to format the components:
+Here, we demonstrate a few common ways to format the components:
 
 ```js
 const df1 = new Intl.DateTimeFormat("en-US", {
@@ -320,7 +328,7 @@ console.log(df1.format(targetDate));
 // 12:34:56 PM GMT
 ```
 
-There are some other things you can customize. For example, you can use the `hourCycle` option to display the time in 12-hour or 24-hour and making the midnight/noon be shown as 12:00 or 0:00. You can also use the `numberingSystem` option to display any numbers in another numbering system.
+There are other customization options. For example, you can use the `hourCycle` option to display the time in 12-hour or 24-hour and show midnight/noon as 12:00 or 0:00. You can also use the `numberingSystem` option to display any numbers in another numbering system.
 
 There's a second important method, {{jsxref("Intl/DateTimeFormat/formatRange", "formatRange()")}}, which formats a range of dates or times. It takes two date-times of the same type, formats each one, joins them with a range separator (like the en-dash), and deduplicates the common parts.
 
@@ -337,9 +345,9 @@ console.log(df.formatRange(springBreak.start, springBreak.end));
 
 ### Number formatting
 
-Number formatting is done with the {{jsxref("Intl.NumberFormat")}} object. The `NumberFormat` object takes number inputs in the form of a number, a string, or a `BigInt`. Passing a string or `BigInt` instead of a number allows you to format numbers that are too large or too small to be represented precisely as a JavaScript number.
+Number formatting is done with the {{jsxref("Intl.NumberFormat")}} object. The `NumberFormat` object accepts inputs in the form of numbers, strings, or `BigInt`  values. Passing a string or `BigInt` instead of a number allows you to format numbers that are too large or too small to be represented precisely as a JavaScript number.
 
-The following are some use cases of localized number formatting:
+Common use cases of localized number formatting are as follows:
 
 - Output the number in another numbering system (script), such as Chinese, Arabic, or Roman.
 - Output the number with locale-specific conventions, such as the decimal symbol ("." in English, but "," in many European cultures), or digit grouping (3 digits in English, but may be 4 or 2 in other cultures, and may use ",", " ", or ".").
@@ -403,7 +411,7 @@ The output looks like:
 | 'compact-short' | '12K'         |
 | 'compact-long'  | '12 thousand' |
 
-Then, you may want to round the number (if you specified `notation`, then just the mantissa part), so you don't display a number that's too long. These are the [digit options](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#digit_options), which includes:
+Then, you may want to round the number (if you specified `notation`, then just the mantissa part), so you don't display a number that's too long. These are the digit options, which include:
 
 - `minimumIntegerDigits`
 - `minimumFractionDigits`
@@ -414,7 +422,7 @@ Then, you may want to round the number (if you specified `notation`, then just t
 - `roundingIncrement`
 - `roundingMode`
 
-The exact interaction of these options turns out to be quite complex and is not worth covering here. You should read the linked reference to understand them better. Nevertheless, the general idea is straightforward: we first find the number of decimal places we want to keep, then we round excess decimal places off, either rounding down or up, depending on the value of the last digit.
+The exact interaction of these options is quite complex and not worth covering here. You should read the [digit options](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#digit_options) reference for more detail. Nevertheless, the general idea is straightforward: we first find the number of decimal places we want to keep, then we round excess decimal places off, either rounding down or up, depending on the value of the last digit.
 
 ```js
 const results = [];
@@ -438,7 +446,7 @@ for (const options of [
 console.table(results);
 ```
 
-The output looks like:
+The output looks like this:
 
 | options                                                                                                | output       |
 | ------------------------------------------------------------------------------------------------------ | ------------ |
@@ -447,7 +455,7 @@ The output looks like:
 | `{ minimumFractionDigits: 0, maximumFractionDigits: 0, roundingMode: "floor" }`                        | '1,234'      |
 | `{ minimumFractionDigits: 0, maximumFractionDigits: 0, roundingMode: "floor", roundingIncrement: 10 }` | '1,230'      |
 
-There are some other things you can customize. For example, you can use the `useGrouping` and `signDisplay` options to customize whether and how to show the group separators (like "," in "1,234,567.89") and the sign. However, note that the characters used for the group separator, decimal point, and the sign are locale-specific, so you can't customize them directly.
+There are other customization options. For example, you can use the `useGrouping` and `signDisplay` options to customize whether and how to show the group separators (like "," in "1,234,567.89") and the sign. However, note that the characters used for the group separator, decimal point, and sign are locale-specific, so you can't customize them directly.
 
 There's a second important method, {{jsxref("Intl/NumberFormat/formatRange", "formatRange()")}}, which formats a range of numbers. It takes two number representations, formats each one, joins them with a range separator (like the en-dash), and potentially deduplicates the common parts.
 
@@ -464,7 +472,7 @@ console.log(nf.formatRange(heightRange.min, heightRange.max));
 
 ### List formatting
 
-You may already have code that does this:
+You may already have written code that does this:
 
 ```js example-bad
 const fruits = ["apple", "banana", "cherry"];
@@ -495,7 +503,7 @@ Check {{jsxref("Intl/ListFormat/ListFormat", "Intl.ListFormat()")}} for more exa
 
 It does several things at once:
 
-- It localizes and pluralizes the time unit, such as "1 day" vs. "2 days", like number formatting.
+- It localizes and pluralizes the time unit, such as "1 day" vs. "2 days", like in number formatting.
 - It chooses the appropriate phrase for past and future times, such as "in 1 day" vs. "1 day ago".
 - It may select a special phrase for some time units, such as "1 day ago" vs. "yesterday".
 
@@ -529,17 +537,17 @@ Check {{jsxref("Intl/DurationFormat/DurationFormat", "Intl.DurationFormat()")}} 
 
 The {{jsxref("Intl.Collator")}} object is useful for comparing and sorting strings. It takes two strings and returns a number indicating their relative order, in the same way as the `compareFn` argument of the {{jsxref("Array.prototype.sort")}} method.
 
-There are many reasons why you should not use JavaScript operators like `===` or `>` to compare user-facing strings.
+There are many reasons why you should not use JavaScript operators like `===` or `>` to compare user-facing strings:
 
-- Irrelevant orthographic variants: for example, in English, "naïve" and "naive" are just alternative spellings of the same word and should be treated as equal.
-- Ignoring case: often, you want to ignore case when comparing strings. For example, "apple" and "Apple" should be treated as equal.
-- Unicode code point order doesn't make sense: comparison operators like `>` compare by Unicode code point order, which is not the same as the order of characters in a dictionary. For example, "ï" comes after "z" in code point order, but you would want it to be ordered next to "i" in a dictionary.
-- Unicode normalization: the same character may have multiple representations in Unicode. For example, "ñ" can be represented as a single character or as "n" followed by a combining tilde. (See {{jsxref("String.prototype.normalize()")}}.) These should be treated as equal.
-- Number comparison: numbers in strings should be compared as numbers, not as strings. For example, you would want "test-10" to come after "test-2".
+- Irrelevant orthographic variants: For example, in English, "naïve" and "naive" are just alternative spellings of the same word and should be treated as equal.
+- Ignoring case: Often, you want to ignore case when comparing strings. For example, "apple" and "Apple" should be treated as equal.
+- Unicode code point order doesn't make sense: Comparison operators like `>` compare by Unicode code point order, which is not the same as the order of characters in a dictionary. For example, "ï" comes after "z" in code point order, but you would want it to be ordered next to "i" in a dictionary.
+- Unicode normalization: The same character may have multiple representations in Unicode. For example, "ñ" can be represented as a single character or as "n" followed by a combining tilde. (See {{jsxref("String.prototype.normalize()")}}.) These should be treated as equal.
+- Number comparison: Numbers in strings should be compared as numbers, not as strings. For example, you would want "test-10" to come after "test-2".
 
 There are two distinct use cases for collation: **sorting** and **searching**. Sorting is when you have a list of strings and you want to order them according to some rule. Searching is when you have a list of strings and you want to find a string that matches a query. When searching, you should only pay attention to whether the comparison result is zero (equal) or not, not the sign of the result.
 
-For sorting, there are many different ways to sort, even within the same locale. For example, there are actually two different sort orders in German, _phonebook_ and _dictionary_. Phonebook sort emphasizes sound, and it's as if "ä", "ö", and so on were expanded to "ae", "oe", and so on prior to sorting.
+There are many different ways to sort, even within the same locale. For example, there are two different sort orders in German, _phonebook_ and _dictionary_. Phonebook sort emphasizes sound — as if "ä", "ö", and so on were expanded to "ae", "oe", and so on before sorting.
 
 ```js
 const names = ["Hochberg", "Hönigswald", "Holzman"];
@@ -609,7 +617,7 @@ console.log([...str]);
 // Array(10) ['🇺', '🇸', '🇨', '🇳', '🇷', '🇺', '🇬', '🇧', '🇫', '🇷']
 ```
 
-But as you can see, Unicode code points are not the same as what human users perceive as discrete characters. This often happens with emojis, where a single emoji can be represented by multiple code points. When the user interacts with text, a grapheme is the smallest unit of text they could manipulate, such as delete or select. The `Segmenter` object enables grapheme-level segmentation, which is useful for counting characters, measuring text width, and so on. It takes a string and returns an iterable [segments](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments), each of which has a `segment` property representing the text of the segment.
+But as you can see, Unicode code points are not the same as what human users perceive as discrete characters. This often happens with emojis, where a single emoji can be represented by multiple code points. When the user interacts with text, a grapheme is the smallest unit of text they can manipulate, such as delete or select. The `Segmenter` object enables grapheme-level segmentation, which is useful for counting characters, measuring text width, and so on. It takes a string and returns an iterable [segments](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments) object, each element of which has a `segment` property representing the text of the segment.
 
 ```js
 const segmenter = new Intl.Segmenter("en-US", { granularity: "grapheme" });
@@ -624,7 +632,7 @@ const wordCount = (str) => str.split(/\s+/).length;
 console.log(wordCount("Hello, world!")); // 2
 ```
 
-The problem is that: (1) not all languages use spaces to separate words; (2) not all spaces are word-separating; (3) not all words are separated by spaces. To solve this, use `Segmenter` with `granularity: "word"`. The result is the input string, split into segments of words and non-words. If you are counting words, you should filter out the non-words, by checking the `isWordLike` property of each segment.
+There are several problems with this: not all languages use spaces to separate words, not all spaces are word-separating, and not all words are separated by spaces. To solve this, use `Segmenter` with `granularity: "word"`. The result is the input string, split into segments of words and non-words. If you are counting words, you should filter out the non-words by checking each segment's `isWordLike` property.
 
 ```js
 const segmenter = new Intl.Segmenter("en-US", { granularity: "word" });
@@ -680,9 +688,9 @@ Note that the segmenter doesn't remove any characters. It just splits the string
 
 ## Display names
 
-After introducing so many options and behaviors, you may wonder how to present them to the user. `Intl` comes with two useful APIs for building user interfaces: {{jsxref("Intl.DisplayNames")}} and {{jsxref("Intl.supportedValuesOf()")}}.
+After introducing so many options and behaviors, you may wonder how to present them to the user. `Intl` comes with two useful APIs for building user interfaces: {{jsxref("Intl.supportedValuesOf()")}} and {{jsxref("Intl.DisplayNames")}}.
 
-First, the {{jsxref("Intl.supportedValuesOf()")}} function returns an array of supported values for a given option. For example, you can use it to populate a dropdown list of supported calendars, from which users can select to display dates.
+The {{jsxref("Intl.supportedValuesOf()")}} function returns an array of supported values for a given option. For example, you can use it to populate a dropdown list of supported calendars, from which users can select to display dates.
 
 ```js
 const supportedCal = Intl.supportedValuesOf("calendar");
