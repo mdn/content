@@ -101,6 +101,8 @@ The [Dependency Descriptor (DD) RTP Header Extension](https://aomediacodec.githu
 These can be used by an SFM to select and forward packets associated with the layers intended for a recipient.
 As the header is a true extension it is not part of the payload, and hence is still available to the SFM in end-to-end encryption (E2EE) scenarios.
 
+Chrome and Firefox (136+) support the DD header.
+
 ### Codecs supported by WebRTC
 
 This information is provided in [Codecs used by WebRTC](/en-US/docs/Web/Media/Guides/Formats/WebRTC_codecs)
