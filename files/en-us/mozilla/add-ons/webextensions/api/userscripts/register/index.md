@@ -9,8 +9,6 @@ browser-compat: webextensions.api.userScripts.register
 
 Registers user scripts for the extension.
 
-This is an asynchronous method that returns a {{JSxRef("Promise")}}.
-
 ## Syntax
 
 ```js-nolint
@@ -29,7 +27,7 @@ let registeredUserScript = browser.userScripts.register(
 
 ### Return value
 
-A {{JSxRef("Promise")}} fulfilled with no arguments if all the requested user scripts are registered. If any user scripts fail to register or the request fails for another reason, none of the scripts are registered and the promise is rejected with an error message.
+A {{JSxRef("Promise")}} fulfilled with no arguments if all the requested user scripts are registered. If any user scripts fail to register or the request fails for another reason, none of the scripts are registered, and the promise is rejected with an error message.
 
 ## Examples
 

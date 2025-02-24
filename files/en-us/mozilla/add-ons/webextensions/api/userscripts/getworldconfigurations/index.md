@@ -9,8 +9,6 @@ browser-compat: webextensions.api.userScripts.getWorldConfigurations
 
 Returns all the `USER_SCRIPT` world configurations registered by the extension with {{WebExtAPIRef("userScripts.configureWorld()")}}.
 
-This is an asynchronous method that returns a {{JSxRef("Promise")}}.
-
 ## Syntax
 
 ```js-nolint

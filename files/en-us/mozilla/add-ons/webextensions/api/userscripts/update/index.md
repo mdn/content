@@ -9,8 +9,6 @@ browser-compat: webextensions.api.userScripts.update
 
 Updates user scripts registered by the extension.
 
-This is an asynchronous method that returns a {{JSxRef("Promise")}}.
-
 ## Syntax
 
 ```js-nolint
@@ -25,11 +23,11 @@ let updatingUserScript = browser.userScripts.update(
 
   - : `array` of {{WebExtAPIRef("userScripts.RegisteredUserScript")}}. Details of user scripts to update.
 
-    Properties that are `null` or omitted are not changed. Passing an empty array to `matches`, `excludeMatches`, `globs` and `excludeGlobs` clears these properties.
+    Properties that are `null` or omitted are not changed. Passing an empty array to `matches`, `excludeMatches`, `globs`, and `excludeGlobs` clears these properties.
 
 ### Return value
 
-A {{JSxRef("Promise")}} fulfilled with no arguments if all the requested user scripts are updated. If any user scripts fail to update or the request fails for another reason, none of the scripts are updated and the promise is rejected with an error message.
+A {{JSxRef("Promise")}} fulfilled with no arguments if all the requested user scripts are updated. If any user scripts fail to update or the request fails for another reason, none of the scripts are updated, and the promise is rejected with an error message.
 
 ## Examples
 

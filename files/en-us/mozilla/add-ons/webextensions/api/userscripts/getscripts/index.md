@@ -9,8 +9,6 @@ browser-compat: webextensions.api.userScripts.getScripts
 
 Returns user scripts registered by the extension.
 
-This is an asynchronous method that returns a {{JSxRef("Promise")}}.
-
 ## Syntax
 
 ```js-nolint

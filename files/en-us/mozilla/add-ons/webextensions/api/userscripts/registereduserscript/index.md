@@ -24,13 +24,13 @@ Values of this type are an object containing these properties:
 - `excludeMatches` {{optional_inline}}
   - : `array` of `string`. [Match patterns](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) for pages that the script must not be run in.
 - `includeGlobs` {{optional_inline}}
-  - : `string`. Glob patterns for the pages to run the script in. `matches` or `includeGlobs` must be specified {{WebExtAPIRef("userScripts.register()")}} calls.
+  - : `string`. Glob patterns for the pages to run the script in. `matches` or `includeGlobs` must be specified in {{WebExtAPIRef("userScripts.register()")}} calls.
 - `excludeGlobs` {{optional_inline}}
   - : `string`. Glob patterns for pages that the script must not be run in.
 - `runAt` {{optional_inline}}
-  - : {{WebExtAPIRef("extensionTypes.RunAt")}}. The earliest the script is injected into a tab. Defaults to "document_idle".
+  - : {{WebExtAPIRef("extensionTypes.RunAt")}}. The earliest the script is injected into a tab. Defaults to `"document_idle"`.
 - `world` {{optional_inline}}
-  - : {{WebExtAPIRef("userScripts.ExecutionWorld")}}. The execution environment to use to run the scripts. Defaults to "USER_SCRIPT".
+  - : {{WebExtAPIRef("userScripts.ExecutionWorld")}}. The execution environment to use to run the scripts. Defaults to `"USER_SCRIPT"`.
 - `worldId` {{optional_inline}}
   - : `string`. ID of a user script world the script executes in. Only valid if `world` is `USER_SCRIPT` or omitted. If `worldId` is omitted, the script is executed in the default `USER_SCRIPT` world (""). Values with leading underscores (`_`) are reserved. The maximum length is 256 characters. A world can be used by several scripts as their execution environment. To configure the behavior of a world, pass its `worldId` to {{WebExtAPIRef("userScripts.configureWorld")}} before the first script executes in that world.
 

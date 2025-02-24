@@ -25,7 +25,7 @@ To use this API, you need the `userScripts` permission and [`host_permissions`](
 
 When a user script is registered or updated (using {{WebExtAPIRef("userScripts.register()")}} or {{WebExtAPIRef("userScripts.update()")}}), your extension can set it to run in an isolated `USER_SCRIPT` world or the `MAIN` world.
 
-The isolated `USER_SCRIPT` world provides an execution environment that isn't accessible to a host page or other extensions. This means a user script can change its JavaScript environment without affecting the host page or other extensions' user and content scripts. In this environment, user scripts aren't visible to the host page or other extensions' user and content scripts. The API also enables an extension to configure a content security policy (CSP) for the `USER_SCRIPT` world using {{WebExtAPIRef("userScripts.configureWorld()")}}.
+A `USER_SCRIPT` world provides an isolated execution environment that isn't accessible to a host page or other extensions. This means a user script can change its JavaScript environment without affecting the host page or other extensions' user and content scripts. In this environment, user scripts aren't visible to the host page or other extensions' user and content scripts. The API also enables an extension to configure a content security policy (CSP) for the `USER_SCRIPT` world using {{WebExtAPIRef("userScripts.configureWorld()")}}.
 
 In the `MAIN` world, host pages and other extensions can see and access running user scripts.
 
@@ -33,7 +33,7 @@ These execution world values are defined in {{WebExtAPIRef("userScripts.Executio
 
 ## Messaging
 
-Like content scripts and other extension scripts, user scripts communicate with other parts of an extension with messages using {{WebExtAPIRef("runtime.sendMessage()")}} and {{WebExtAPIRef("runtime.connect()")}}. However, user scripts receive messages using the dedicated {{WebExtAPIRef("runtime.onUserScriptMessage")}} and {{WebExtAPIRef("runtime.onUserScriptConnect")}}. Dedicated handlers are used as they make it easier to identify messages from user scripts, which are a less-trusted context.
+Like content scripts and other extension scripts, user scripts communicate with other parts of an extension with messages using {{WebExtAPIRef("runtime.sendMessage()")}} and {{WebExtAPIRef("runtime.connect()")}}. However, extensions receive messages using the dedicated {{WebExtAPIRef("runtime.onUserScriptMessage")}} and {{WebExtAPIRef("runtime.onUserScriptConnect")}}. Dedicated handlers are used as they make it easier to identify messages from user scripts, which are a less-trusted context.
 
 To enable messaging APIs, call {{WebExtAPIRef("userScripts.configureWorld()")}} with the `messaging` argument set to `true` before registering a user script.
 
@@ -45,7 +45,7 @@ browser.userScripts.configureWorld({
 
 ## Extension updates
 
-When an extension updates, user scripts are cleared. To restore scripts, add code to the extension's {{WebExtAPIRef("runtime.onInstalled")}} event handler that respond to the `"update"` reason.
+When an extension updates, user scripts are cleared. To restore scripts, add code to the extension's {{WebExtAPIRef("runtime.onInstalled")}} event handler that responds to the `"update"` reason.
 
 > [!NOTE]
 > User scripts are unregistered when the related extension page (from which the user scripts were registered) is unloaded, so register user scripts from an extension page that persists as long as you want the user scripts to stay registered.

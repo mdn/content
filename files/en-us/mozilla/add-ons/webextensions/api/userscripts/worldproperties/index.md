@@ -14,9 +14,9 @@ The configuration of a `USER_SCRIPT` execution environment. Used in {{WebExtAPIR
 Values of this type are an object containing these properties:
 
 - `worldId` {{optional_inline}}
-  - : `string`. The identifier for the world. Values with leading underscores (`_`) are reserved. The maximum length is 256. Defaults to the default `USER_SCRIPT` world ("").
+  - : `string`. The identifier for the world. Values with leading underscores (`_`) are reserved. The maximum length is 256 characters. Defaults to the default `USER_SCRIPT` world ("").
 - `csp` {{optional_inline}}
-  - : string`. The world's Content Security Policy (CSP). Defaults to the [default CSP for content scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy#csp_for_content_scripts), which prohibits dynamic code execution, such as` eval()`.
+  - : `string`. The world's Content Security Policy (CSP). Defaults to the [default CSP for content scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy#csp_for_content_scripts), which prohibits dynamic code execution, such as `eval()`.
 - `messaging` {{optional_inline}}
   - : `boolean`. Whether the {{WebExtAPIRef("runtime.sendMessage")}} and {{WebExtAPIRef("runtime.connect")}} methods are exposed to the user script world. Defaults to hiding these messaging APIs. The {{WebExtAPIRef("runtime.onUserScriptMessage")}} and {{WebExtAPIRef("runtime.onUserScriptConnect")}} event handlers are triggered when these methods are called.
 

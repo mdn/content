@@ -13,8 +13,6 @@ Changes to world configurations only apply to new instances of the world: A conf
 
 World configurations persist until the extension is updated or the configuration is reset by {{WebExtAPIRef("userScripts.resetWorldConfiguration()")}}.
 
-This is an asynchronous method that returns a {{JSxRef("Promise")}}.
-
 ## Syntax
 
 ```js-nolint
