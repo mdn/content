@@ -91,6 +91,9 @@ For the AV1 codec the information is sent in the [Dependency Descriptor (DD) RTP
 
 As for simulcast, recent browser implementations commonly use the DD header for all codecs that support SVC, in order to simply the SFM implementation, and because it supports end-to-end encryption scenarios.
 
+Chrome 111 and later supports SVC.
+Firefox does not support SVC at the time of writing (around FF136).
+
 ### Dependency Descriptor RTP Header Extension
 
 The [Dependency Descriptor (DD) RTP Header Extension](https://aomediacodec.github.io/av1-rtp-spec/#43-dependency-descriptor-rtp-header-extension), defined in the specification _RTP Payload Format For AV1 (v1.0)_, provides a codec-agnostic, flexible, efficient, and extensible way to describe the relationships between frames in a multi-layered video stream.
