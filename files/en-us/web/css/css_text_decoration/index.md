@@ -30,7 +30,7 @@ The **CSS text decoration** module defines features relating to text decoration,
 - {{cssxref("text-underline-offset")}}
 - {{cssxref("text-underline-position")}}
 
-The specification also defines the `text-decoration-skip-box`, `text-decoration-skip-self`, `text-decoration-skip-spaces`, `text-decoration-trim`, `text-emphasis-skip` properties, which are not yet supported by any browser.
+The specification also defines the `text-decoration-skip-box`, `text-decoration-skip-self`, `text-decoration-skip-spaces`, `text-decoration-trim`, and `text-emphasis-skip` properties, which are not yet supported by any browser.
 
 ## Examples
 
