@@ -7,7 +7,7 @@ sidebar: mdnsidebar
 
 ### Purpose
 
-The Community Participation Guidelines (CPG) exist to foster a welcoming, inclusive, and safe community. This document outlines clear processes for reporting violations and the actions that will be taken by the enforcement team. Our focus is to ensure that every community member feels valued, heard, and protected.
+MDN is governed by the [Mozilla Community Participation Guidelines](https://www.mozilla.org/en-US/about/governance/policies/participation/). The Community Participation Guidelines (CPG) exist to foster a welcoming, inclusive, and safe community. This document outlines clear processes for reporting violations and the actions that will be taken by the enforcement team. Our focus is to ensure that every community member feels valued, heard, and protected.
 
 ### Guiding Principles
 
