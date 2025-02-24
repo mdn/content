@@ -9,7 +9,73 @@ browser-compat: html.elements.th
 
 The **`<th>`** [HTML](/en-US/docs/Web/HTML) element defines a cell as the header of a group of table cells and may be used as a child of the {{HTMLElement("tr")}} element. The exact nature of this group is defined by the [`scope`](#scope) and [`headers`](#headers) attributes.
 
-{{EmbedInteractiveExample("pages/tabbed/th.html","tabbed-taller")}}
+{{InteractiveExample("HTML Demo: &lt;th&gt;", "tabbed-taller")}}
+
+```html interactive-example
+<table>
+  <caption>
+    Alien football stars
+  </caption>
+  <tr>
+    <th scope="col">Player</th>
+    <th scope="col">Gloobles</th>
+    <th scope="col">Za'taak</th>
+  </tr>
+  <tr>
+    <th scope="row">TR-7</th>
+    <td>7</td>
+    <td>4,569</td>
+  </tr>
+  <tr>
+    <th scope="row">Khiresh Odo</th>
+    <td>7</td>
+    <td>7,223</td>
+  </tr>
+  <tr>
+    <th scope="row">Mia Oolong</th>
+    <td>9</td>
+    <td>6,219</td>
+  </tr>
+</table>
+```
+
+```css interactive-example
+th,
+td {
+  border: 1px solid rgb(160 160 160);
+  padding: 8px 10px;
+}
+
+th[scope="col"] {
+  background-color: #505050;
+  color: #fff;
+}
+
+th[scope="row"] {
+  background-color: #d6ecd4;
+}
+
+td {
+  text-align: center;
+}
+
+tr:nth-of-type(even) {
+  background-color: #eee;
+}
+
+table {
+  border-collapse: collapse;
+  border: 2px solid rgb(140 140 140);
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+caption {
+  caption-side: bottom;
+  padding: 10px;
+}
+```
 
 ## Attributes
 
