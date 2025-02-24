@@ -9,7 +9,37 @@ browser-compat: html.global_attributes.tabindex
 
 The **`tabindex`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) allows developers to make HTML elements focusable, allow or prevent them from being sequentially focusable (usually with the <kbd>Tab</kbd> key, hence the name) and determine their relative ordering for sequential focus navigation.
 
-{{EmbedInteractiveExample("pages/tabbed/attribute-tabindex.html","tabbed-standard")}}
+{{InteractiveExample("HTML Demo: tabindex", "tabbed-standard")}}
+
+```html interactive-example
+<p>Click anywhere in this pane, then try tabbing through the elements.</p>
+
+<label>First in tab order:<input type="text" /></label>
+
+<div tabindex="0">Tabbable due to tabindex.</div>
+
+<div>Not tabbable: no tabindex.</div>
+
+<label>Third in tab order:<input type="text" /></label>
+```
+
+```css interactive-example
+p {
+  font-style: italic;
+  font-weight: bold;
+}
+
+div,
+label {
+  display: block;
+  letter-spacing: 0.5px;
+  margin-bottom: 1rem;
+}
+
+div:focus {
+  font-weight: bold;
+}
+```
 
 It accepts an integer as a value, with different results depending on the integer's value:
 
