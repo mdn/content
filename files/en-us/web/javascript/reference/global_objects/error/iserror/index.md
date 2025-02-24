@@ -31,7 +31,7 @@ Error.isError(value)
 - It does not check the value's prototype chain—`Error.isError()` rejects objects with `Error.prototype` in its prototype chain but aren't actual errors, which `instanceof Error` would accept.
 - For `Error` objects constructed in another realm, the identity of the `Error` constructor is different and would therefore cause `instanceof Error` to return `false` in this realm.
 
-Although {{domxref("DOMException")}} is not specified as a real subclass of `Error` (the `Error` constructor is not the prototype of the `DOMException` constructor), `DOMException` still behaves like `Error` for all branded checking purposes, so `Error.isError()` returns `true` for `DOMException` instances.
+`Error.isError()` returns `true` for {{domxref("DOMException")}} instances. This is because, although `DOMException` is not specified as a real subclass of `Error` (the `Error` constructor is not the prototype of the `DOMException` constructor), `DOMException` still behaves like `Error` for all branded checking purposes.
 
 ## Examples
 
