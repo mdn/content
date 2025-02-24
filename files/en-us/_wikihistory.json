@@ -126000,111 +126000,111 @@
       "kjb"
     ]
   },
-  "Web/WebDriver/Capabilities": {
+  "Web/WebDriver/Reference/Capabilities": {
     "modified": "2019-10-09T08:06:42.769Z",
     "contributors": ["ato", "arobins", "fscholz"]
   },
-  "Web/WebDriver/Capabilities/acceptInsecureCerts": {
+  "Web/WebDriver/Reference/Capabilities/acceptInsecureCerts": {
     "modified": "2019-03-18T21:37:56.893Z",
     "contributors": ["ato"]
   },
-  "Web/WebDriver/Capabilities/firefoxOptions": {
+  "Web/WebDriver/Reference/Capabilities/firefoxOptions": {
     "modified": "2020-09-16T13:59:35.618Z",
     "contributors": ["Whimboo", "nalexander", "ato", "dfrase"]
   },
-  "Web/WebDriver/Commands": {
+  "Web/WebDriver/Reference/Commands": {
     "modified": "2020-10-15T22:03:17.012Z",
     "contributors": ["ExE-Boss", "chrisdavidmills"]
   },
-  "Web/WebDriver/Commands/CloseWindow": {
+  "Web/WebDriver/Reference/Commands/CloseWindow": {
     "modified": "2020-10-15T22:03:12.142Z",
     "contributors": ["ato", "MichaelTimbes", "fscholz"]
   },
-  "Web/WebDriver/Commands/GetElementAttribute": {
+  "Web/WebDriver/Reference/Commands/GetElementAttribute": {
     "modified": "2020-10-15T22:04:39.835Z",
     "contributors": ["ato", "fscholz", "automatedtester"]
   },
-  "Web/WebDriver/Commands/GetElementProperty": {
+  "Web/WebDriver/Reference/Commands/GetElementProperty": {
     "modified": "2020-10-15T22:04:39.942Z",
     "contributors": ["ato", "fscholz", "automatedtester"]
   },
-  "Web/WebDriver/Commands/GetElementTagName": {
+  "Web/WebDriver/Reference/Commands/GetElementTagName": {
     "modified": "2020-10-15T22:03:52.069Z",
     "contributors": ["fscholz", "ato"]
   },
-  "Web/WebDriver/Commands/GetTimeouts": {
+  "Web/WebDriver/Reference/Commands/GetTimeouts": {
     "modified": "2020-10-15T22:04:22.850Z",
     "contributors": ["fscholz", "ato", "automatedtester"]
   },
-  "Web/WebDriver/Commands/GetWindowHandles": {
+  "Web/WebDriver/Reference/Commands/GetWindowHandles": {
     "modified": "2020-10-15T22:03:22.509Z",
     "contributors": ["MichaelTimbes", "fscholz", "ato"]
   },
-  "Web/WebDriver/Commands/GetWindowRect": {
+  "Web/WebDriver/Reference/Commands/GetWindowRect": {
     "modified": "2020-10-15T22:03:22.611Z",
     "contributors": ["fscholz", "ato"]
   },
-  "Web/WebDriver/Commands/NewWindow": {
+  "Web/WebDriver/Reference/Commands/NewWindow": {
     "modified": "2020-10-15T22:14:19.358Z",
     "contributors": ["Whimboo"]
   },
-  "Web/WebDriver/Commands/SetTimeouts": {
+  "Web/WebDriver/Reference/Commands/SetTimeouts": {
     "modified": "2020-10-15T22:04:38.713Z",
     "contributors": ["ato", "PushpitaPikuDey", "fscholz", "automatedtester"]
   },
-  "Web/WebDriver/Commands/SetWindowRect": {
+  "Web/WebDriver/Reference/Commands/SetWindowRect": {
     "modified": "2020-10-15T22:03:22.535Z",
     "contributors": ["ato", "ExE-Boss", "fscholz"]
   },
-  "Web/WebDriver/Errors": {
+  "Web/WebDriver/Reference/Errors": {
     "modified": "2019-03-18T21:37:51.907Z",
     "contributors": ["ato"]
   },
-  "Web/WebDriver/Errors/InsecureCertificate": {
+  "Web/WebDriver/Reference/Errors/InsecureCertificate": {
     "modified": "2019-03-18T21:38:03.943Z",
     "contributors": ["ato"]
   },
-  "Web/WebDriver/Errors/InvalidArgument": {
+  "Web/WebDriver/Reference/Errors/InvalidArgument": {
     "modified": "2019-03-18T21:37:04.346Z",
     "contributors": ["ato"]
   },
-  "Web/WebDriver/Errors/InvalidCookieDomain": {
+  "Web/WebDriver/Reference/Errors/InvalidCookieDomain": {
     "modified": "2019-03-18T21:37:06.158Z",
     "contributors": ["ato"]
   },
-  "Web/WebDriver/Errors/InvalidSelector": {
+  "Web/WebDriver/Reference/Errors/InvalidSelector": {
     "modified": "2019-03-18T21:37:07.934Z",
     "contributors": ["ato"]
   },
-  "Web/WebDriver/Errors/InvalidSessionID": {
+  "Web/WebDriver/Reference/Errors/InvalidSessionID": {
     "modified": "2019-03-18T21:38:02.239Z",
     "contributors": ["ato"]
   },
-  "Web/WebDriver/Errors/JavaScriptError": {
+  "Web/WebDriver/Reference/Errors/JavaScriptError": {
     "modified": "2019-03-18T21:36:36.448Z",
     "contributors": ["kaveh", "ato"]
   },
-  "Web/WebDriver/Errors/ScriptTimeout": {
+  "Web/WebDriver/Reference/Errors/ScriptTimeout": {
     "modified": "2019-03-18T21:36:24.796Z",
     "contributors": ["ato"]
   },
-  "Web/WebDriver/Errors/StaleElementReference": {
+  "Web/WebDriver/Reference/Errors/StaleElementReference": {
     "modified": "2019-03-18T21:36:58.660Z",
     "contributors": ["ato"]
   },
-  "Web/WebDriver/Errors/UnknownCommand": {
+  "Web/WebDriver/Reference/Errors/UnknownCommand": {
     "modified": "2019-03-18T21:37:08.267Z",
     "contributors": ["ato"]
   },
-  "Web/WebDriver/Errors/UnknownError": {
+  "Web/WebDriver/Reference/Errors/UnknownError": {
     "modified": "2019-03-18T21:37:03.216Z",
     "contributors": ["ato"]
   },
-  "Web/WebDriver/Errors/UnknownMethod": {
+  "Web/WebDriver/Reference/Errors/UnknownMethod": {
     "modified": "2019-03-18T21:32:58.905Z",
     "contributors": ["ato"]
   },
-  "Web/WebDriver/Timeouts": {
+  "Web/WebDriver/Reference/Timeouts": {
     "modified": "2019-04-29T05:32:47.095Z",
     "contributors": ["chrisdavidmills", "evertones", "ato"]
   },

@@ -135,7 +135,7 @@ _No changes._
 
 #### New features
 
-- Marionette now returns a `setWindowRect` [capability](/en-US/docs/Web/WebDriver/Capabilities) in the `WebDriver:NewSession` response that is true if the browser window can be repositioned and resized, which e.g. is the case for Firefox but not any mobile applications ([Firefox bug 1470659](https://bugzil.la/1470659)).
+- Marionette now returns a `setWindowRect` [capability](/en-US/docs/Web/WebDriver/Reference/Capabilities) in the `WebDriver:NewSession` response that is true if the browser window can be repositioned and resized, which e.g. is the case for Firefox but not any mobile applications ([Firefox bug 1470659](https://bugzil.la/1470659)).
 - Added support for the `unhandledPromptBehavior` capability, which allows to define a specific [prompt behavior](https://w3c.github.io/webdriver/#dfn-user-prompt-handler) of the WebDriver specification ([Firefox bug 1264259](https://bugzil.la/1264259)).
 - Handling of user prompts has been added to the `WebDriver:ExecuteScript` and `WebDriver:ExecuteAsyncScript` commands ([Firefox bug 1439995](https://bugzil.la/1439995)).
 

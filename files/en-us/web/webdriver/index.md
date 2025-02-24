@@ -49,30 +49,30 @@ This might produce output akin to this:
 
 ### Commands
 
-[Commands](/en-US/docs/Web/WebDriver/Commands)
+[Commands](/en-US/docs/Web/WebDriver/Reference/Commands)
 
-{{ListSubpages("/en-US/docs/Web/WebDriver/Commands")}}
+{{ListSubpages("/en-US/docs/Web/WebDriver/Reference/Commands")}}
 
 ### Types
 
 [Types](/en-US/docs/Web/WebDriver/Types)
 
-- [Error object](/en-US/docs/Web/WebDriver/Errors#payload)
-- [Timeouts object](/en-US/docs/Web/WebDriver/Timeouts)
+- [Error object](/en-US/docs/Web/WebDriver/Reference/Errors#payload)
+- [Timeouts object](/en-US/docs/Web/WebDriver/Reference/Timeouts)
 - [WebElement](/en-US/docs/Web/WebDriver/WebElement)
 - [WebWindow](/en-US/docs/Web/WebDriver/WebWindow)
 
 ### Capabilities
 
-[Capabilities](/en-US/docs/Web/WebDriver/Capabilities)
+[Capabilities](/en-US/docs/Web/WebDriver/Reference/Capabilities)
 
-{{ListSubpages("/en-US/docs/Web/WebDriver/Capabilities")}}
+{{ListSubpages("/en-US/docs/Web/WebDriver/Reference/Capabilities")}}
 
 ### Errors
 
-[Errors](/en-US/docs/Web/WebDriver/Errors)
+[Errors](/en-US/docs/Web/WebDriver/Reference/Errors)
 
-{{ListSubpages("/en-US/docs/Web/WebDriver/Errors")}}
+{{ListSubpages("/en-US/docs/Web/WebDriver/Reference/Errors")}}
 
 ## Specifications
 
