@@ -19,7 +19,7 @@ This allows servers to determine whether to service a request based on whether i
       <td>{{Glossary("Fetch Metadata Request Header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>Yes (<code>Sec-</code> prefix)</td>
     </tr>
     <tr>

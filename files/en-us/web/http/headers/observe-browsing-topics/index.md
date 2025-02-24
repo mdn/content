@@ -27,7 +27,7 @@ See [Using the Topics API](/en-US/docs/Web/API/Topics_API/Using) for more detail
       </td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>No</td>
     </tr>
   </tbody>

@@ -14,7 +14,7 @@ with a given name. If the requested header doesn't exist in the `Headers`
 object, it returns `null`.
 
 For security reasons, some headers can only be controlled by the user agent. These
-headers include the {{Glossary("Forbidden_header_name", "forbidden header names")}}
+headers include the {{Glossary("Forbidden_request_header", "forbidden request headers")}}
 and {{Glossary("Forbidden_response_header_name", "forbidden response header names")}}.
 
 ## Syntax

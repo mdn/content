@@ -174,7 +174,7 @@ const response = await fetch("https://example.org/post", {
 });
 ```
 
-Compared to using plain objects, the `Headers` object provides some additional input sanitization. For example, it normalizes header names to lowercase, strips leading and trailing whitespace from header values, and prevents certain headers from being set. Many headers are set automatically by the browser and can't be set by a script: these are called {{glossary("Forbidden header name", "Forbidden header names")}}. If the {{domxref("Request.mode", "mode")}} option is set to `no-cors`, then the set of permitted headers is further restricted.
+Compared to using plain objects, the `Headers` object provides some additional input sanitization. For example, it normalizes header names to lowercase, strips leading and trailing whitespace from header values, and prevents certain headers from being set. Many headers are set automatically by the browser and can't be set by a script: these are called {{glossary("Forbidden request header", "Forbidden request headers")}}. If the {{domxref("Request.mode", "mode")}} option is set to `no-cors`, then the set of permitted headers is further restricted.
 
 ### Sending data in a GET request
 
