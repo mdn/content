@@ -11,7 +11,7 @@ The **`<calc-keyword>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/
 
 ## Syntax
 
-The `<calc-keyword>` type defines numeric constants that can be used in [CSS math functions](/en-US/docs/Web/CSS/CSS_Functions#math_functions).
+The `<calc-keyword>` type defines numeric constants that can be used in [CSS math functions](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions#math_functions).
 
 ### Values
 
@@ -59,7 +59,7 @@ Examples of how these rules apply are shown in the [Infinity, NaN, and division 
 
 ## Description
 
-Mathematical constants can only be used inside [CSS math functions](/en-US/docs/Web/CSS/CSS_Functions#math_functions) for calculations. Math constants are not CSS keywords, but if they are used outside of a calculation, they're treated like any other keyword.
+Mathematical constants can only be used inside [CSS math functions](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions#math_functions) for calculations. Math constants are not CSS keywords, but if they are used outside of a calculation, they're treated like any other keyword.
 For example:
 
 - `animation-name: pi;` refers to an animation named "pi", not the `pi` numeric constant.

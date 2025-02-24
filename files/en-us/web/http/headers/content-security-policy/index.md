@@ -20,7 +20,7 @@ See the [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP) guide for deta
       <td>{{Glossary("Response header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>no</td>
     </tr>
   </tbody>

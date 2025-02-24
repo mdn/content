@@ -18,7 +18,7 @@ The integer types have separate less or equal instructions for signed (**`le_s`*
 local.get $num
 i32.const 2
 
-;; check if $num is less then or equal to '2'
+;; check if $num is less than or equal to '2'
 i32.le_u
 
 ;; if $num is less than or equal to the `2`, `1` will be pushed on to the stack,

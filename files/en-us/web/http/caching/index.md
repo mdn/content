@@ -447,7 +447,7 @@ Note that, instead of implementing that directive, [Chrome has changed its imple
 
 ## Deleting stored responses
 
-There is basically no way to delete responses that have already been stored with a long `max-age`.
+There is no way to delete responses on an intermediate server that have been stored with a long `max-age`.
 
 Imagine that the following response from `https://example.com/` was stored.
 
@@ -463,11 +463,10 @@ Cache-Control: max-age=31536000
 
 You may want to overwrite that response once it expired on the server, but there is nothing the server can do once the response is stored — since no more requests reach the server due to caching.
 
-One of the methods mentioned in the specification is to send a request for the same URL with an unsafe method such as `POST`, but that is usually difficult to intentionally do for many clients.
+One of the methods mentioned in the specification is to send a request for the same URL with an unsafe method such as `POST`, but for many clients that is difficult to do.
 
-There is also a specification for a `Clear-Site-Data: cache` header and value, but [not all browsers support it](https://groups.google.com/a/mozilla.org/g/dev-platform/c/I939w1yrTp4) — and even when it's used, it only affects browser caches and has no effect on intermediate caches.
-
-Therefore, it should be assumed that any stored response will remain for its `max-age` period unless the user manually performs a reload, force-reload, or clear-history action.
+The [`Clear-Site-Data: cache`](/en-US/docs/Web/HTTP/Headers/Clear-Site-Data#cache) header and directive value can be used to clear browser caches — but has no effect on intermediate caches.
+Otherwise responses will remain in the browser cache until `max-age` expires, unless the user manually performs a reload, force-reload, or clear-history action.
 
 Caching reduces access to the server, which means that the server loses control of that URL. If the server does not want to lose control of a URL — for example, in the case that a resource is frequently updated — you should add `no-cache` so that the server will always receive requests and send the intended responses.
 

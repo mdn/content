@@ -27,12 +27,12 @@ You can use this attribute with the following SVG elements:
     <tr>
       <th scope="row">Value</th>
       <td>
-        <a href="/en-US/docs/Web/CSS/Value_definition_syntax#brackets">[</a>
+        <a href="/en-US/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax#brackets">[</a>
         <code>&#x3C;character></code>
-        <a href="/en-US/docs/Web/CSS/Value_definition_syntax#single_bar">|</a>
+        <a href="/en-US/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax#single_bar">|</a>
         <code>&#x3C;urange></code>
-        <a href="/en-US/docs/Web/CSS/Value_definition_syntax#brackets">]</a
-        ><a href="/en-US/docs/Web/CSS/Value_definition_syntax#hash_mark"
+        <a href="/en-US/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax#brackets">]</a
+        ><a href="/en-US/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax#hash_mark"
           >#</a
         >
       </td>

@@ -7,7 +7,7 @@ browser-compat: css.types.gradient.repeating-conic-gradient
 
 {{CSSRef}}
 
-The **`repeating-conic-gradient()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) creates an image consisting of a repeating gradient (rather than a [single gradient](/en-US/docs/Web/CSS/gradient/conic-gradient)) with color transitions rotated around a center point (rather than [radiating from the center](/en-US/docs/Web/CSS/gradient/repeating-radial-gradient)).
+The **`repeating-conic-gradient()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) creates an image consisting of a repeating gradient (rather than a [single gradient](/en-US/docs/Web/CSS/gradient/conic-gradient)) with color transitions rotated around a center point (rather than [radiating from the center](/en-US/docs/Web/CSS/gradient/repeating-radial-gradient)).
 
 {{EmbedInteractiveExample("pages/css/function-repeating-conic-gradient.html")}}
 
