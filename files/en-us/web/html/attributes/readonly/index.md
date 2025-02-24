@@ -12,7 +12,30 @@ browser-compat:
 
 The Boolean **`readonly`** attribute, when present, makes the element not mutable, meaning the user can not edit the control.
 
-{{EmbedInteractiveExample("pages/tabbed/attribute-readonly.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: readonly", "tabbed-shorter")}}
+
+```html interactive-example
+<label for="firstName">First Name:</label>
+<input id="firstName" name="firstName" type="text" value="Adam" />
+
+<label for="age">Age:</label>
+<input id="age" name="age" type="number" value="42" readonly />
+
+<label for="hobbies">Hobbies:</label>
+<textarea id="hobbies" name="hobbies" readonly>Baseball</textarea>
+```
+
+```css interactive-example
+label {
+  display: block;
+  margin-top: 1em;
+}
+
+input:read-only,
+textarea:read-only {
+  background-color: silver;
+}
+```
 
 ## Overview
 
