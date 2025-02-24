@@ -345,7 +345,7 @@ console.log(df.formatRange(springBreak.start, springBreak.end));
 
 ### Number formatting
 
-Number formatting is done with the {{jsxref("Intl.NumberFormat")}} object. The `NumberFormat` object accepts inputs in the form of numbers, strings, or `BigInt`  values. Passing a string or `BigInt` instead of a number allows you to format numbers that are too large or too small to be represented precisely as a JavaScript number.
+Number formatting is done with the {{jsxref("Intl.NumberFormat")}} object. The `NumberFormat` object accepts inputs in the form of numbers, strings, or `BigInt` values. Passing a string or `BigInt` instead of a number allows you to format numbers that are too large or too small to be represented precisely as a JavaScript number.
 
 Common use cases of localized number formatting are as follows:
 
