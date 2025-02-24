@@ -50,7 +50,7 @@ This article provides information about the changes in Firefox 136 that affect d
 - WebRTC simulcast of screen-shared video with the [H264 codec](/en-US/docs/Web/Media/Guides/Formats/WebRTC_codecs#supported_video_codecs) is also supported (AV1, H264, and [VP8](/en-US/docs/Web/Media/Guides/Formats/WebRTC_codecs#supported_video_codecs) can now be used for simulcast).
   Note that the H264 codec is hardware-enabled on Android.
   ([Firefox bug 1210175](https://bugzil.la/1210175)).
-- WebRTC support for the [Dependency Descriptor (DD) RTP Header Extension](/en-US/docs/Web/Media/Guides/Formats/WebRTC_codecs#dependency_descriptor_rtp_header_extension), and its use with AV1, VP8, and VP9 codecs.
+- WebRTC support for the [Dependency Descriptor (DD) RTP Header Extension](/en-US/docs/Web/API/WebRTC_API/Protocols#dependency_descriptor_rtp_header_extension), and its use with AV1, VP8, and VP9 codecs.
   The DD header extension enables codec-independent forwarding of simulcast streams, including in scenarios where the payload is end-to-end encrypted (E2EE).
   ([Firefox bug 1945261](https://bugzil.la/1945261)).
 
