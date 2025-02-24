@@ -167,6 +167,7 @@ import gulp from "gulp";
 // Add any new task exports here
 // export function ...
 // export function ...
+```
 
 To add some real tasks to Gulp, we need to think about what we want to do. A reasonable set of basic functionalities to run on our project is as follows:
 
