@@ -11,19 +11,19 @@ MDN is governed by the [Mozilla Community Participation Guidelines](https://www.
 
 ### Guiding Principles
 
-- **Transparency:** Every report is addressed clearly and consistently.
-- **Confidentiality:** Reporters' privacy will be protected unless explicit consent is given to share information.
-- **Proportionality:** The response to violations will be proportionate to the harm caused.
-- **Restorative Justice:** Where possible, the process aims to repair harm and foster learning.
+- **Transparency:** Address every report clearly and consistently.
+- **Confidentiality:** Protect reporter privacy unless explicit consent is given to share information.
+- **Proportionality:** Responses to violations are proportionate to the harm caused.
+- **Restorative Justice:** Repair harm and foster learning.
 
 ## Code of Conduct Violations and Enforcement Ladder
 
-The CPG outlines several categories of violations. These are summarized below along with appropriate enforcement actions. The enforcement process follows an escalation ladder, where individuals are made aware of future consequences each time an action is taken. The ladder is not strictly linear—depending on the severity of the violation, escalation may skip levels or result in an immediate ban.
+The CPG outlines several categories of violations. These are summarized below along with appropriate enforcement actions. The enforcement process follows an escalation ladder, where individuals are made aware of future consequences each time an action is taken. The ladder may not be strictly linear— depending on the severity of the violation, escalation may skip levels up to and including immediate, permanent bans.
 
 ### Level 0: No Action
 
 - **Description:** Recommendations do not indicate a violation of the CPG.
-- **Actions:** No formal action taken, but feedback may be provided to promote positive behavior.
+- **Actions:** No formal action taken. Feedback may be provided to the reporter, reportee, or both, to promote good behavior and positive interactions.
 
 ### Level 1: Simple Warning Issued
 
@@ -64,7 +64,7 @@ The CPG outlines several categories of violations. These are summarized below al
 
 ### How to Report
 
-Reports can be submitted via mdn-cpg-report@mozilla.com. The report should include all relevant details (e.g., date, time, description, screenshots).
+Violations of community participation guidelines should be sent to mdn-cpg-report@mozilla.com. Please include all relevant details, including the date, time, and description of the violation. Include identifying information of the offender and screenshots, if possible.
 
 ### Investigation
 
