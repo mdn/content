@@ -951,10 +951,10 @@
     proxy-from-env "^1.1.0"
     tar "^7.4.3"
 
-"@mdn/yari@4.5.0":
-  version "4.5.0"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-4.5.0.tgz#b08a017caec69191d3fa9efdda12ca19c8d37791"
-  integrity sha512-7te9xBeFrPbf052aJ2myYwu8cyjU777QYqlJHmbWGyCkq14fNRbsbEDAUx4X/dzJ3TPgsohefng6VGPZV7lVig==
+"@mdn/yari@4.5.1":
+  version "4.5.1"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-4.5.1.tgz#1d872293291a83352f99c36dedd48d011d3f7815"
+  integrity sha512-st6iQg5QFJ5raVx3i+caRHkj/0xdcG2Yr8NxBj4l7YtqS5KTIR0iRxSJy6KjXTLYBwKeArl/0SvNxhLr0N5wPw==
   dependencies:
     "@caporal/core" "^2.0.7"
     "@codemirror/lang-css" "^6.3.1"
@@ -1019,12 +1019,12 @@
     mdn-data "^2.15.0"
     open "^10.1.0"
     open-editor "^5.1.0"
-    openai "^4.85.2"
+    openai "^4.85.3"
     pg "^8.13.3"
     pgvector "^0.2.0"
     prism-svelte "^0.5.0"
     prismjs "^1.29.0"
-    react-markdown "^9.1.0"
+    react-markdown "^10.0.0"
     react-modal "^3.16.3"
     read-chunk "^5.0.0"
     rehype-format "^5.0.1"
@@ -1046,7 +1046,7 @@
     unist-builder "^4.0.0"
     unist-util-visit "^5.0.0"
     web-features "^2.23.0"
-    web-specs "^3.40.0"
+    web-specs "^3.41.0"
 
 "@mozilla/glean@5.0.3":
   version "5.0.3"
@@ -6775,10 +6775,10 @@ open@^10.1.0:
     is-inside-container "^1.0.0"
     is-wsl "^3.1.0"
 
-openai@^4.85.2:
-  version "4.85.2"
-  resolved "https://registry.yarnpkg.com/openai/-/openai-4.85.2.tgz#370702c56cd61c17c44c8c02c6a48229d5299903"
-  integrity sha512-ZQg3Q+K4A6M9dLFh5W36paZkZBQO+VbxMNJ1gUSyHsGiEWuXahdn02ermqNV68LhWQxdJQaWUFRAYpW/suTPWQ==
+openai@^4.85.3:
+  version "4.85.4"
+  resolved "https://registry.yarnpkg.com/openai/-/openai-4.85.4.tgz#fdf9d3228967b87221a112993501fa33a98f5d18"
+  integrity sha512-Nki51PBSu+Aryo7WKbdXvfm0X/iKkQS2fq3O0Uqb/O3b4exOZFid2te1BZ52bbO5UwxQZ5eeHJDCTqtrJLPw0w==
   dependencies:
     "@types/node" "^18.11.18"
     "@types/node-fetch" "^2.6.4"
@@ -7410,10 +7410,10 @@ react-lifecycles-compat@^3.0.0:
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
 
-react-markdown@^9.1.0:
-  version "9.1.0"
-  resolved "https://registry.yarnpkg.com/react-markdown/-/react-markdown-9.1.0.tgz#606bd74c6af131ba382a7c1282ff506708ed2e26"
-  integrity sha512-xaijuJB0kzGiUdG7nc2MOMDUDBWPyGAjZtUrow9XxUeua8IqeP+VlIfAZ3bphpcLTnSZXz6z9jcVC/TCwbfgdw==
+react-markdown@^10.0.0:
+  version "10.0.0"
+  resolved "https://registry.yarnpkg.com/react-markdown/-/react-markdown-10.0.0.tgz#dc4e4c0d2b1ca79616fd0d6a88b1f3ef683b096c"
+  integrity sha512-4mTz7Sya/YQ1jYOrkwO73VcFdkFJ8L8I9ehCxdcV0XrClHyOJGKbBk5FR4OOOG+HnyKw5u+C/Aby9TwinCteYA==
   dependencies:
     "@types/hast" "^3.0.0"
     "@types/mdast" "^4.0.0"
@@ -8861,10 +8861,10 @@ web-namespaces@^2.0.0:
   resolved "https://registry.yarnpkg.com/web-namespaces/-/web-namespaces-2.0.1.tgz#1010ff7c650eccb2592cebeeaf9a1b253fd40692"
   integrity sha512-bKr1DkiNa2krS7qxNtdrtHAmzuYGFQLiQ13TsorsdT6ULTkPLKuu5+GsFpDlg6JFjUTwX2DyhMPG2be8uPrqsQ==
 
-web-specs@^3.40.0:
-  version "3.40.0"
-  resolved "https://registry.yarnpkg.com/web-specs/-/web-specs-3.40.0.tgz#b11dac29d95e65702334e29b25394bf63297727c"
-  integrity sha512-i1gYzpl+0figtsR6910kgtl/2gsP9MejX0IsGk0YAKFvqS4llZsE2prxNiSGzmzP6IxP8cA7oBflMeiXTQp1wQ==
+web-specs@^3.41.0:
+  version "3.41.0"
+  resolved "https://registry.yarnpkg.com/web-specs/-/web-specs-3.41.0.tgz#e6da229a27c3eec9ba38a53af5325fa4c24456a7"
+  integrity sha512-NH+tJ4K7RfWbOy8jik05IYjmuPXSjICv8YXTpWzJzXb1Eyyuut6wrW2OUMztjE1eQ8zfCxFKue+qh5babwTbyQ==
 
 web-streams-polyfill@4.0.0-beta.3:
   version "4.0.0-beta.3"
