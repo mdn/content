@@ -21,7 +21,7 @@ It should only be included in {{HTTPStatus("206", "206 Partial Content")}} or {{
       </td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>No</td>
     </tr>
     <tr>

@@ -199,7 +199,7 @@ All image types are potentially dangerous, however, animated GIFs deserve specia
 
 #### Detect if a GIF is animated
 
-- [npm's animated-gif-detector](https://www.npmjs.com/package/animated-gif-detector) allows for the ability to determine animate _as early as possible_ in a given HTTP request.
+- The [animated-gif-detector](https://www.npmjs.com/package/animated-gif-detector) npm package allows for the ability to determine animate _as early as possible_ in a given HTTP request.
 - Zakirt provides a gist for [animated-gif-detect.js](https://gist.github.com/zakirt/faa4a58cec5a7505b10e3686a226f285)
 
 With animated GIFs, ensure animation is inactive until the user chooses to activate it. For example, the user must push a button or check a box in order to start the animation.
