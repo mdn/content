@@ -278,7 +278,8 @@ In this example, we create an interface element for choosing time using the nati
     min="12:00"
     max="18:00"
     required />
-  <span class="validity"></span
+  <span class="validity"></span>
+</form>
 ```
 
 ### CSS
