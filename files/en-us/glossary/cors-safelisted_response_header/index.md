@@ -40,5 +40,5 @@ Access-Control-Expose-Headers: X-Custom-Header, Content-Encoding
 - Related glossary terms:
   - {{Glossary("CORS")}}
   - {{Glossary("CORS-safelisted_request_header", "CORS-safelisted request header")}}
-  - {{Glossary("Forbidden header name")}}
+  - {{Glossary("Forbidden request header")}}
   - {{Glossary("Request header")}}

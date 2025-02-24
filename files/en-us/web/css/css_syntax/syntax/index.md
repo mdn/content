@@ -59,7 +59,7 @@ Rulesets are the main building blocks of a style sheet, which often consists of 
 
 A **statement** is a building block that begins with any non-space characters and ends at the first closing brace or semicolon (outside a string, non-escaped and not included into another {}, () or \[] pair).
 
-![A Venn diagram of statements noting all rulesets are nested statements, while some at-rules are nested statements but most aren't. Anthing that is not an at-rule or nested is invalid.](css_syntax_-_statements_venn_diag.png)
+![A Venn diagram of statements noting all rulesets are nested statements, while some at-rules are nested statements but most aren't. Anything that is not an at-rule or nested is invalid.](css_syntax_-_statements_venn_diag.png)
 
 There are two kinds of statements:
 
@@ -81,7 +81,7 @@ There is another group of statements – the **nested statements**. These are st
 - [Specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity)
 - [Inheritance](/en-US/docs/Web/CSS/CSS_cascade/Inheritance)
 - [Cascade](/en-US/docs/Web/CSS/CSS_cascade/Cascade)
-- [Value definition syntax](/en-US/docs/Web/CSS/Value_definition_syntax)
+- [Value definition syntax](/en-US/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
 - Values
   - [Initial values](/en-US/docs/Web/CSS/CSS_cascade/initial_value)
   - [Computed values](/en-US/docs/Web/CSS/CSS_cascade/computed_value)

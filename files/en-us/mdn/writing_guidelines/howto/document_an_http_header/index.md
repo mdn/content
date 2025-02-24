@@ -35,7 +35,7 @@ This article explains how to create a new reference page for an HTTP header.
 - Make sure you have these sections:
 
   - Introductory text where the first sentence mentions the header name (bold) and summarizes its purpose.
-  - Information box containing at least the header type and if the header is a {{Glossary("Forbidden header name")}}.
+  - Information box containing at least the header type and if the header is a {{Glossary("Forbidden request header")}}.
   - A syntax box containing all possible directives/parameters/values of the HTTP header.
   - A section that explains these directives/values.
   - An example section that contains a practical use case for this header or shows where and how it occurs usually.
