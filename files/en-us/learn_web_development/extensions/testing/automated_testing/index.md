@@ -151,9 +151,9 @@ Let's look at setting up Gulp and using it to automate some testing tools.
 
 Now we are ready to add more tasks to our Gulp file. Each addition may require you to modify the `gulpfile.mjs` file in the following way:
 
-- If we ask you to add some `import` statements, add them below the existing `import` statement.
-- If we ask you to add a new `export function ...` statement, add it to the end of the file.
-- If we ask you to change the default export, change the `export default` statement in the way we specify.
+- When we ask you to add some `import` statements, add them below the existing `import` statement.
+- When we ask you to add a new `export function ...` statement, add it to the end of the file.
+- When we ask you to change the default export, change the `export default` statement in the way we specify.
 
 So your `gulpfile.mjs` file will grow like this:
 
@@ -167,7 +167,6 @@ import gulp from "gulp";
 // Add any new task exports here
 // export function ...
 // export function ...
-```
 
 To add some real tasks to Gulp, we need to think about what we want to do. A reasonable set of basic functionalities to run on our project is as follows:
 
