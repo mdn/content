@@ -46,7 +46,7 @@ Below are the video codecs which are _required_ in any fully WebRTC-compliant br
       <td>—</td>
       <td><p>Chrome, Edge, Firefox, Safari (12.1+)</p>
         <p>
-          Firefox 134 supports VP8 for simulcast.
+          Firefox 134 supports VP8 for <a href="/en-US/docs/Web/API/WebRTC_API/Protocols#simulcast">simulcast</a>.
           Firefox 136+ supports the <a href="/en-US/docs/Web/API/WebRTC_API/Protocols#dependency_descriptor_rtp_header_extension">DD RTP header extension</a> with VP8.
         </p>
       </td>
