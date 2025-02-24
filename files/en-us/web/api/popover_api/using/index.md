@@ -70,7 +70,7 @@ When a relationship is established between a popover and its control (invoker) v
 - When the popover is shown, the keyboard focus navigation order is updated so that the popover is next in the sequence: for example, when a button is pressed to show a popover, any buttons inside the popover will be next in the tabbing order (will be focused by pressing the <kbd>Tab</kbd> key). Conversely, when closing the popover via the keyboard (usually via via the <kbd>Esc</kbd> key), focus is shifted back to the invoker.
 - To allow AT such as screen readers to make sense of the relationship between the invoker and the popover, an implicit [`aria-details`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-details) and [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded) relationship is set up between them.
 
-Setting up a relationship between a popover and its control in this manner also creates an [Implicit popover anchor association](/en-US/docs/Web/API/Popover_API/Using#implicit_popover_anchor_associations).
+Setting up a relationship between a popover and its control in this manner also creates an implicit anchor reference between the two — see [Popover anchor positioning](#popover_anchor_positioning) for more details.
 
 > [!NOTE]
 > You can also set up a popover-invoker relationship using the `source` option of the {{domxref("HTMLElement.showPopover()")}} and {{domxref("HTMLElement.togglePopover()")}} methods, but bear in mind that in this case, only the focus navigation order changes are made, not the implicit ARIA relationship. This because the `source` option can be set to any kind of element, not just `<button>` elements, and it cannot be guaranteed that the relationship would make sense.
@@ -306,11 +306,49 @@ for (let i = 0; i < btns.length; i++) {
 
 ## Styling popovers
 
-The popover API has some related CSS features available that are worth looking at.
+The Popover API has some related CSS techniques available that are worth looking at.
 
-In terms of styling the actual popover, you can select all popovers with a simple attribute selector (`[popover]`), or you select popovers that are showing using a new pseudo-class — {{cssxref(":popover-open")}}.
+### Selecting popovers
 
-When looking at the first couple of examples linked at the start of the article, you may have noticed that the popovers appear in the middle of the viewport. This is the default styling, achieved like this in the UA stylesheet:
+You can select all popovers with a simple attribute selector:
+
+```css
+[popover] {
+  /* Declarations here */
+}
+```
+
+Alternatively, you can select a specific popover type by including a value in the attribute selector:
+
+```css
+[popover="auto"] {
+  /* Declarations here */
+}
+```
+
+You can select only popovers that are showing using the {{cssxref(":popover-open")}} pseudo-class:
+
+```css
+:popover-open {
+  /* Declarations here */
+}
+```
+
+### Styling the popover backdrop
+
+The {{cssxref("::backdrop")}} pseudo-element is a full-screen element placed directly behind showing popover elements in the {{glossary("top layer")}}, allowing effects to be added to the page content behind the popover(s) if desired. You might for example want to blur out the content behind the popover to help focus the user's attention on it:
+
+```css
+::backdrop {
+  backdrop-filter: blur(3px);
+}
+```
+
+See our [Popover blur background example](https://mdn.github.io/dom-examples/popover-api/blur-background/) ([source](https://github.com/mdn/dom-examples/tree/main/popover-api/blur-background)) for an idea of how this renders.
+
+### Positioning popovers
+
+When looking at the first couple of examples linked at the start of the article, you may have noticed that the popovers appear in the middle of the viewport, wrap their content, and have a black border. This is the default styling, achieved using the following rule in the UA stylesheet:
 
 ```css
 [popover] {
@@ -327,7 +365,7 @@ When looking at the first couple of examples linked at the start of the article,
 }
 ```
 
-To override the default styles and get the popover to appear somewhere else on your viewport, you would need to override the above styles with something like this:
+To apply custom sizing and position the popover somewhere else, you could override the above styles with something like this:
 
 ```css
 :popover-open {
@@ -343,21 +381,13 @@ To override the default styles and get the popover to appear somewhere else on y
 
 You can see an isolated example of this in our [Popover positioning example](https://mdn.github.io/dom-examples/popover-api/popover-positioning/) ([source](https://github.com/mdn/dom-examples/tree/main/popover-api/popover-positioning)).
 
-The {{cssxref("::backdrop")}} pseudo-element is a full-screen element placed directly behind showing popover elements in the {{glossary("top layer")}}, allowing effects to be added to the page content behind the popover(s) if desired. You might for example want to blur out the content behind the popover to help focus the user's attention on it:
+### Popover anchor positioning
 
-```css
-::backdrop {
-  backdrop-filter: blur(3px);
-}
-```
+There is another useful positioning option that the Popover API provides. If you want to position a popover relative to its invoker rather than the viewport or a positioned ancestor, you can take advantage of the fact that popovers and their invokers have an **implicit anchor reference**.
 
-See our [Popover blur background example](https://mdn.github.io/dom-examples/popover-api/blur-background/) ([source](https://github.com/mdn/dom-examples/tree/main/popover-api/blur-background)) for an idea of how this renders.
+Associating any kind of popover with its invoker using the [`popovertarget`](/en-US/docs/Web/HTML/Element/button#popovertarget) attribute or the `source` option of the {{domxref("HTMLElement.showPopover()")}} or {{domxref("HTMLElement.togglePopover()")}} methods creates an implicit anchor reference between the two. This causes the invoker to become the popover's **anchor element**, meaning that you can position the popover relative to it via [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning).
 
-## Implicit popover anchor associations
-
-Associating any kind of popover with its invoker using the [`popovertarget`](/en-US/docs/Web/HTML/Element/button#popovertarget) attribute or the `source` option of the {{domxref("HTMLElement.showPopover()")}} or {{domxref("HTMLElement.togglePopover()")}} methods creates an implicit anchor reference between the two.
-
-This makes it very convenient to position a popover relative to its control using [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning). Explicit associations do not need to be made using the {{cssxref("anchor-name")}} and {{cssxref("position-anchor")}} properties. However, you still need to specify the positioning CSS.
+Because the association between the popover and the invoker is implicit, an explicit association does not need to be made using the {{cssxref("anchor-name")}} and {{cssxref("position-anchor")}} properties. However, you still need to specify the positioning CSS.
 
 For example, you could use a combination of {{cssxref("anchor()")}} function values set on {{glossary("inset properties")}}, and `anchor-center` values set on alignment properties:
 
@@ -376,7 +406,7 @@ Or you could use a {{cssxref("position-area")}} property:
 }
 ```
 
-See [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#positioning_elements_relative_to_their_anchor) for more details on associating anchor and positioned elements and positioning elements relative to their anchor.
+See [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#positioning_elements_relative_to_their_anchor) for more details on associating anchor and positioned elements, and positioning elements relative to their anchor.
 
 > [!NOTE]
 > For an example that uses this implicit association, see our [popover hint demo](https://mdn.github.io/dom-examples/popover-api/popover-hint/) ([source](https://github.com/mdn/dom-examples/tree/main/popover-api/popover-hint)). If you check out the CSS code, you'll see that no explicit anchor associations are made using the {{cssxref("anchor-name")}} and {{cssxref("position-anchor")}} properties.
