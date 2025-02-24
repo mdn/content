@@ -188,7 +188,7 @@ console.log(formatter.format(words.toReversed()));
 // indomable y fuerte
 ```
 
-The algorithm used to determine the conjunction is not going to be perfect (for example, it can't always tell a word's pronunciation from its spelling), but should work in the general case.
+The algorithm used to determine the conjunction is not perfect (for example, it can't always tell a word's pronunciation from its spelling), but it should work in the general case.
 
 ## Specifications
 
