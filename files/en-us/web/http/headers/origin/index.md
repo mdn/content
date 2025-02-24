@@ -7,7 +7,7 @@ browser-compat: http.headers.Origin
 
 {{HTTPSidebar}}
 
-The HTTP **`Origin`** {{Glossary("request header")}} indicates the {{glossary("origin")}} ([scheme](/en-US/docs/Web/URI/Schemes), hostname, and port) that _caused_ the request.
+The HTTP **`Origin`** {{Glossary("request header")}} indicates the {{glossary("origin")}} ([scheme](/en-US/docs/Web/URI/Reference/Schemes), hostname, and port) that _caused_ the request.
 For example, if a user agent needs to request resources included in a page, or fetched by scripts that it executes, then the origin of the page may be included in the request.
 
 <table class="properties">
@@ -17,7 +17,7 @@ For example, if a user agent needs to request resources included in a page, or f
       <td>{{Glossary("Request header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>Yes</td>
     </tr>
   </tbody>
@@ -58,7 +58,7 @@ There are some exceptions to the above rules; for example, if a cross-origin {{H
 
 The `Origin` header value may be `null` in a number of cases, including (non-exhaustively):
 
-- Origins whose [scheme](/en-US/docs/Web/URI/Schemes) is not one of `http`, `https`, `ftp`, `ws`, `wss`, or `gopher` (including `blob`, `file` and `data`).
+- Origins whose [scheme](/en-US/docs/Web/URI/Reference/Schemes) is not one of `http`, `https`, `ftp`, `ws`, `wss`, or `gopher` (including `blob`, `file` and `data`).
 - Cross-origin images and media data, including that in {{HTMLElement("img")}}, {{HTMLElement("video")}} and {{HTMLElement("audio")}} elements.
 - Documents created programmatically using {{domxref("DOMImplementation.createDocument", "createDocument()")}}, generated from a `data:` URL, or that do not have a creator browsing context.
 - Redirects across origins.

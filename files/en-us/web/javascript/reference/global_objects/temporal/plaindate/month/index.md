@@ -51,8 +51,11 @@ for (
 ) {
   console.log(month.month);
 }
+```
 
-// Alternatively, this is also a safe way (unlike the day example):
+Alternatively, this is also a safe way (unlike the [day example](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainDate/day#looping_through_all_days_in_a_month)):
+
+```js
 for (let month = 1; month <= year.monthsInYear; month++) {
   const monthDate = year.with({ month });
 }

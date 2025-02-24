@@ -21,7 +21,7 @@ This article provides information about the changes in Firefox 69 that will affe
 
 #### Console
 
-- [Browser Console](https://firefox-source-docs.mozilla.org/devtools-user/browser_console/index.html) messages from [tracking protection errors](/en-US/docs/Web/Privacy/Firefox_tracking_protection), [CSP errors](/en-US/docs/Web/HTTP/CSP), and [CORS errors](/en-US/docs/Web/HTTP/CORS/Errors) are grouped automatically to reduce noise from repeated blocked resources and storage access ([Firefox bug 1522396](https://bugzil.la/1522396)).
+- [Browser Console](https://firefox-source-docs.mozilla.org/devtools-user/browser_console/index.html) messages from [tracking protection errors](/en-US/docs/Web/Privacy/Guides/Firefox_tracking_protection), [CSP errors](/en-US/docs/Web/HTTP/CSP), and [CORS errors](/en-US/docs/Web/HTTP/CORS/Errors) are grouped automatically to reduce noise from repeated blocked resources and storage access ([Firefox bug 1522396](https://bugzil.la/1522396)).
 - All visible logs in the console can shared by saving to a file or copying to clipboard via a new _Export visible messages to_ context menu item ([Firefox bug 1517728](https://bugzil.la/1517728)).
 - The console's toolbar now responsively reduces its height into a single row to save vertical space ([Firefox bug 972530](https://bugzil.la/972530)).
 - Messages from content can now be hidden in the console to focus on logs from the Firefox UI ([Firefox bug 1523842](https://bugzil.la/1523842)).

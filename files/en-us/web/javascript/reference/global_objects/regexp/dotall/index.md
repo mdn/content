@@ -9,7 +9,19 @@ browser-compat: javascript.builtins.RegExp.dotAll
 
 The **`dotAll`** accessor property of {{jsxref("RegExp")}} instances returns whether or not the `s` flag is used with this regular expression.
 
-{{EmbedInteractiveExample("pages/js/regexp-prototype-dotall.html")}}
+{{InteractiveExample("JavaScript Demo: RegExp.prototype.dotAll")}}
+
+```js interactive-example
+const regex1 = new RegExp("foo", "s");
+
+console.log(regex1.dotAll);
+// Expected output: true
+
+const regex2 = new RegExp("bar");
+
+console.log(regex2.dotAll);
+// Expected output: false
+```
 
 ## Description
 

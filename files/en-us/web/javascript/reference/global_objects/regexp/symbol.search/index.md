@@ -9,7 +9,22 @@ browser-compat: javascript.builtins.RegExp.@@search
 
 The **`[Symbol.search]()`** method of {{jsxref("RegExp")}} instances specifies how [`String.prototype.search`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/search) should behave.
 
-{{EmbedInteractiveExample("pages/js/regexp-prototype-@@search.html")}}
+{{InteractiveExample("JavaScript Demo: RegExp.prototype[Symbol.search]()")}}
+
+```js interactive-example
+class RegExp1 extends RegExp {
+  constructor(str) {
+    super(str);
+    this.pattern = str;
+  }
+  [Symbol.search](str) {
+    return str.indexOf(this.pattern);
+  }
+}
+
+console.log("table football".search(new RegExp1("foo")));
+// Expected output: 6
+```
 
 ## Syntax
 

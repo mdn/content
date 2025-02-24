@@ -89,7 +89,9 @@ Let's look at a simple example that explains all of this:
   line. Overflowing inline elements will
   <span>wrap onto a new line if possible (like this one containing text)</span>,
   or just go on to a new line if not, much like this image will do:
-  <img src="long.jpg" alt="snippet of cloth" />
+  <img
+    src="https://mdn.github.io/shared-assets/images/examples/long.jpg"
+    alt="snippet of cloth" />
 </p>
 ```
 

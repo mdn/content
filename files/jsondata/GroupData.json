@@ -220,7 +220,7 @@
       "overview": ["Console API"],
       "interfaces": ["console"],
       "methods": [],
-      "properties": ["Window.console"],
+      "properties": [],
       "events": []
     },
     "Cookie Store API": {
@@ -558,10 +558,7 @@
     },
     "File and Directory Entries API": {
       "overview": ["File and Directory Entries API"],
-      "guides": [
-        "/docs/Web/API/File_and_Directory_Entries_API/Introduction",
-        "/docs/Web/API/File_and_Directory_Entries_API/Firefox_support"
-      ],
+      "guides": [],
       "interfaces": [
         "FileSystemDirectoryEntry",
         "FileSystemDirectoryReader",
@@ -569,8 +566,12 @@
         "FileSystemFileEntry",
         "FileSystem"
       ],
-      "methods": [],
-      "properties": [],
+      "methods": ["DataTransferItem.webkitGetAsEntry()"],
+      "properties": [
+        "File.webkitRelativePath",
+        "HTMLInputElement.webkitdirectory",
+        "HTMLinputElement.webkitEntries"
+      ],
       "events": []
     },
     "File System API": {

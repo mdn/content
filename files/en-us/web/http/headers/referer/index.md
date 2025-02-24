@@ -14,8 +14,10 @@ This data can be used for analytics, logging, optimized caching, and more.
 When you click a link, the `Referer` contains the address of the page that includes the link.
 When you make resource requests to another domain, the `Referer` contains the address of the page that uses the requested resource.
 
-The `Referer` header can contain an _origin_, _path_, and _querystring_, and may not contain [URL fragments](/en-US/docs/Web/URI/Fragment) (i.e., `#section`) or `username:password` information.
+The `Referer` header can contain an _origin_, _path_, and _querystring_, and may not contain [URL fragments](/en-US/docs/Web/URI/Reference/Fragment) (i.e., `#section`) or `username:password` information.
 The request's _referrer policy_ defines the data that can be included. See {{HTTPHeader("Referrer-Policy")}} for more [information](/en-US/docs/Web/HTTP/Headers/Referrer-Policy#directives) and [examples](/en-US/docs/Web/HTTP/Headers/Referrer-Policy#examples).
+
+The `Referer` should also be sent in requests following a {{httpheader("Refresh")}} response (or equivalent [`<meta http-equiv="refresh" content="...">`](/en-US/docs/Web/HTML/Element/meta#http-equiv)) that causes a navigation to a new page, if permitted by the referrer policy.
 
 > [!NOTE]
 > The header name "referer" is actually a misspelling of the word "referrer".
@@ -32,7 +34,7 @@ The request's _referrer policy_ defines the data that can be included. See {{HTT
       <td>{{Glossary("Request header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>Yes</td>
     </tr>
   </tbody>

@@ -7,7 +7,7 @@ browser-compat: css.at-rules.media
 
 {{CSSRef}}
 
-The **`@media`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rule) can be used to apply part of a style sheet based on the result of one or more [media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries). With it, you specify a media query and a block of CSS to apply to the document if and only if the media query matches the device on which the content is being used.
+The **`@media`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule) can be used to apply part of a style sheet based on the result of one or more [media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries). With it, you specify a media query and a block of CSS to apply to the document if and only if the media query matches the device on which the content is being used.
 
 > [!NOTE]
 > In JavaScript, the rules created using `@media` can be accessed with the {{domxref("CSSMediaRule")}} CSS object model interface.
@@ -179,9 +179,9 @@ They include {{HTTPHeader("Sec-CH-Prefers-Color-Scheme")}} and {{HTTPHeader("Sec
 
 ## Accessibility
 
-To best accommodate people who adjust a site's text size, use [`em`](/en-US/docs/Web/CSS/CSS_Values_and_Units#numeric_data_types)s when you need a {{cssxref("&lt;length&gt;")}} for your [media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries).
+To best accommodate people who adjust a site's text size, use [`em`](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types)s when you need a {{cssxref("&lt;length&gt;")}} for your [media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries).
 
-Both [`em`](/en-US/docs/Web/CSS/CSS_Values_and_Units#numeric_data_types) and [`px`](/en-US/docs/Web/CSS/CSS_Values_and_Units#numeric_data_types) are valid units, but [`em`](/en-US/docs/Web/CSS/CSS_Values_and_Units#numeric_data_types) works better if the user changes the browser text size.
+Both [`em`](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types) and [`px`](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types) are valid units, but [`em`](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types) works better if the user changes the browser text size.
 
 Also consider media queries or [HTTP user agent client hints](/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) to improve the user's experience.
 For example, the media query [`prefers-reduced-motion`](/en-US/docs/Web/CSS/@media/prefers-reduced-motion) or the equivalent HTTP header {{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}}) can be used to minimize the amount of animation or motion used based on user preferences.
