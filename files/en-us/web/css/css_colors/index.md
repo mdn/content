@@ -33,7 +33,7 @@ To see the code for this color syntax converter, [view the source on GitHub](htt
 ### At-rules and descriptors
 
 > [!NOTE]
-> The CSS color module introduces the {{cssxref("@color-profile")}} at-rule that have not been implemented, along with its descriptors: `components`, `rendering-intent` and `src`.
+> The CSS color module introduces the {{cssxref("@color-profile")}} at-rule, along with its `components`, `rendering-intent` and `src` descriptors. These features have not yet been implemented in any browser.
 
 ### Functions
 
@@ -50,7 +50,7 @@ To see the code for this color syntax converter, [view the source on GitHub](htt
 - {{CSSXref("color_value/light-dark", "light-dark()")}}
 
 > [!NOTE]
-> The CSS color module introduces the {{CSSXref("color_value/device-cmyk", "device-cmyk()")}} and the `contrast-color(),` functions that have not been implemented.
+> The CSS color module introduces the {{CSSXref("color_value/device-cmyk", "device-cmyk()")}} and `contrast-color()` functions, which have not yet been implemented in any browser.
 
 ### Data types
 
@@ -74,7 +74,7 @@ To see the code for this color syntax converter, [view the source on GitHub](htt
 ### Interfaces
 
 > [!NOTE]
-> The CSS color module introduces the `CSSColorProfileRule` interface that have not been implemented.
+> The CSS color module introduces the `CSSColorProfileRule` interface, which has not been implemented in any browser.
 
 ## Guides
 
