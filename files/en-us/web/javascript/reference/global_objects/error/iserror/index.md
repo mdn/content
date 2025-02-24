@@ -48,7 +48,7 @@ Error.isError(new DOMException());
 try {
   1 + 1n;
 } catch (e) {
-  console.log(Error.isError(e)); // Throws a TypeError
+  console.log(Error.isError(e)); // The operation threw a TypeError, so this returns true
 }
 
 // all following calls return false
