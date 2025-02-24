@@ -39,7 +39,7 @@ No notable changes
 
 ### Privacy
 
-- All [third-party cookies](/en-US/docs/Web/Privacy/Third-party_cookies) are now blocked in [Strict Enhanced Tracking Protection](https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop#w_strict-enhanced-tracking-protection). ([Firefox bug 1918037](https://bugzil.la/1918037)).
+- All [third-party cookies](/en-US/docs/Web/Privacy/Guides/Third-party_cookies) are now blocked in [Strict Enhanced Tracking Protection](https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop#w_strict-enhanced-tracking-protection). ([Firefox bug 1918037](https://bugzil.la/1918037)).
 
 ### APIs
 

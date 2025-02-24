@@ -15,10 +15,14 @@ This article provides information about the changes in Firefox 136 that affect d
 ### HTML
 
 - The [`autocorrect`](/en-US/docs/Web/HTML/Global_attributes/autocorrect) global attribute allows autocorrection in editable text elements including: most kinds of text {{htmlelement("input")}} elements, {{htmlelement("textarea")}} elements, and elements that have the [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) attribute set. The specific autocorrection behavior depends on the user agent and underlying OS. ([Firefox bug 1927977](https://bugzil.la/1927977)).
+- The `plaintext-only` value of the [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) global attribute indicates that the element is editable; rich text formatting is disabled and any formatting in pasted text is automatically stripped ([Firefox bug 1922724](https://bugzil.la/1922724)).
 
 #### Removals
 
 ### CSS
+
+- The {{CSSXRef(":has-slotted")}} [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) is used to style elements in {{HTMLElement("template")}} that have content added to a {{HTMLElement("slot")}} element when rendering a [web component](/en-US/docs/Web/API/Web_components) ([Firefox bug 1940691](https://bugzil.la/1940691)).
+- The [`:open`](/en-US/docs/Web/CSS/:open) pseudo-class is now supported and allows you to select any element that is currently in an open state, this applies to the {{htmlelement("details")}}, {{htmlelement("dialog")}}, {{htmlelement("input")}} elements with a picker and {{htmlelement("select")}} elements which present a drop-down box. ([Firefox bug 1936113](https://bugzil.la/1936113)).
 
 #### Removals
 

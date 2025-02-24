@@ -10,7 +10,7 @@ A **fetch metadata request header** is an {{Glossary("Request header", "HTTP req
 
 With this information a server can implement a resource isolation policy, allowing external sites to request only those resources that are intended for sharing, and that are used appropriately. This approach can help mitigate common cross-site web vulnerabilities such as {{Glossary("CSRF")}}, Cross-site Script Inclusion (XSSI), timing attacks, and cross-origin information leaks.
 
-These headers are prefixed with `Sec-`, and hence have {{Glossary("Forbidden header name", "forbidden header names")}}. As such, they cannot be modified from JavaScript.
+These headers are prefixed with `Sec-`, and hence are {{Glossary("Forbidden request header", "forbidden request headers")}}. As such, they cannot be modified from JavaScript.
 
 The fetch metadata request headers are:
 

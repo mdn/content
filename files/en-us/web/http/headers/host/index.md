@@ -21,7 +21,7 @@ A {{HTTPStatus("400", "400 Bad Request")}} status code may be sent to any HTTP/1
       <td>{{Glossary("Request header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>Yes</td>
     </tr>
   </tbody>

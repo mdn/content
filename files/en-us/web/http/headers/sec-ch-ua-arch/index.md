@@ -23,7 +23,7 @@ This might be used by a server, for example, to select and offer the correct bin
       </td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>Yes (<code>Sec-</code> prefix)</td>
     </tr>
   </tbody>
