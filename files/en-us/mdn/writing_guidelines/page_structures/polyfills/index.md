@@ -25,17 +25,25 @@ Sources are selected by the MDN maintainers based on the following criteria:
 - Conformance to the specification for the feature for which they are providing an implementation.
 - Adoption by the web development community, as seen in metrics such as the number of [npm](https://www.npmjs.com/) downloads.
 
-Anyone can propose that MDN should recognize an additional source of polyfills by [filing an issue in the mdn/content repository](https://github.com/mdn/content/issues). However, the MDN maintainers expect the number of recognized polyfills linked from MDN to remain very small, to reduce the risk of recommending polyfills that cause problems for web developers.
+Anyone can propose that MDN should recognize an additional source of polyfills by [starting a discussion in the MDN discussion forum](https://github.com/orgs/mdn/discussions). However, the MDN maintainers expect the number of recognized polyfills linked from MDN to remain very small, to reduce the risk of recommending polyfills that cause problems for web developers.
 
 ### Integration of polyfills into pages
 
 When a page in the JavaScript reference documentation links to a polyfill, it adds the link in the "See also" section at the end of the page.
+
+The link is placed at the start of the "See also" list, in the following format:
+
+```md
+- [Polyfill for `featureName` in `project-name`](link)
+```
 
 ## Polyfills in the Web API reference
 
 ### Selected polyfills
 
 The [Web API reference documentation](/en-US/docs/Web/API) can link to polyfills that are maintained alongside the specification for the feature itself.
+
+For example, the [Trusted Types API](/en-US/docs/Web/API/Trusted_Types_API) has a polyfill which is [maintained in the same repository as the specification](https://github.com/w3c/trusted-types?tab=readme-ov-file#polyfill). Accordingly, the Trusted Types API reference documentation on MDN can link to that polyfill.
 
 ### Integration of polyfills into pages
 
