@@ -28,7 +28,7 @@ observe(handle, options)
 
     - `recursive`
 
-      - : A boolean specifying whether you want to observe changes to a directory recursively. If set to `true`, changes are observed in the directory itself and all contained subdirectories and files. If set to `false`, changes are only observed in the directory itself and directly contained files (that is, not files in subdirectories). Defaults to `false`.
+      - : A boolean specifying whether you want to observe changes to a directory recursively. If set to `true`, changes are observed in the directory itself and all contained subdirectories and files. If set to `false`, changes are only observed in the directory itself and directly contained files (that is, files in subdirectories are excluded). Defaults to `false`.
 
         This property has no effect if `handle` represents a file.
 
