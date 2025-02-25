@@ -28,10 +28,10 @@ The `controlsList` property returns a {{domxref("DOMTokenList")}} object contain
 
 ```js
 let video = document.createElement("video");
-console.log(video.controlsList.value) // ""
+console.log(video.controlsList.value); // ""
 
 video.controlsList = "nodownload nofullscreen";
-console.log(video.controlsList.value) // "nodownload nofullscreen"
+console.log(video.controlsList.value); // "nodownload nofullscreen"
 ```
 
 ### Setting the controlsList property
