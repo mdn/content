@@ -4,7 +4,7 @@ slug: Web/CSS/CSS_images
 page-type: css-module
 spec-urls:
   - https://drafts.csswg.org/css-images/
-  - https://compat.spec.whatwg.org/#css-gradient-fns
+https://drafts.csswg.org/css-images-4/
 ---
 
 {{CSSRef}}
