@@ -18,6 +18,31 @@ its own set of controls. The DOMTokenList takes one or more of three possible va
 
 A {{domxref("DOMTokenList")}}.
 
+The value of `controlsList` can be set by passing a string containing the `controlsList` attribute; for example `"nodownload"`.
+
+## Examples
+
+### Getting the controlsList property
+
+The `controlsList` property returns a {{domxref("DOMTokenList")}} object containing the current set value.
+
+```js
+let video = document.createElement("video");
+console.log(video.controlsList.value) // ""
+
+video.controlsList = "nodownload nofullscreen";
+console.log(video.controlsList.value) // "nodownload nofullscreen"
+```
+
+### Setting the controlsList property
+
+To change the `controlsList` property of the element, set the value of `controlsList` to a string containing the new value.
+
+```js
+let audio = document.createElement("audio");
+audio.controlsList = "nodownload";
+```
+
 ## Specifications
 
 {{Specifications}}
