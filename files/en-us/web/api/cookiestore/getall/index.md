@@ -100,7 +100,7 @@ This returns a {{jsxref("Promise")}} that resolves with all of the cookies for t
 
 ```css hidden
 #log {
-  height: 300px;
+  height: 330px;
   overflow: scroll;
   padding: 0.5rem;
   border: 1px solid black;
@@ -115,6 +115,10 @@ reload.addEventListener("click", () => {
 });
 
 const logElement = document.querySelector("#log");
+
+function clearLog() {
+  logElement.innerText = "";
+}
 
 function log(text) {
   logElement.innerText = `${logElement.innerText}${text}\n`;
@@ -137,23 +141,14 @@ function logCookie(name, cookie) {
 
 #### JavaScript
 
-The code first sets two cookies (which we then use to demonstrate `getAll()`).
-
-We then await on `getAll()`, without specifying any parameters.
+The `cookieTest()` method is called when the **Show cookies** button is clicked.
+It first waits on `setTestCookies()` to set some cookies, then waits on `getAll()` to fetch all cookies defined in the current context.
 If the returned promise resolves with an object we iterate the array, logging the properties of each cookie.
 
 ```js
 async function cookieTest() {
-  // Set two cookies
-  await cookieStore.set({
-    name: "cookie1",
-    value: `cookie1-value`,
-  });
-
-  await cookieStore.set({
-    name: "cookie2",
-    value: `cookie2-value`,
-  });
+  // Set our test cookies
+  await setTestCookies();
 
   // Get all cookies
   const cookies = await cookieStore.getAll();
@@ -168,10 +163,31 @@ async function cookieTest() {
 }
 ```
 
+The code for `setTestCookies()` is shown here just "for your interest".
+Note that some logging and other code is omitted for brevity.
+
+```js
+async function setTestCookies() {
+  // Set two cookies
+  try {
+    await cookieStore.set("cookie1", "cookie1-value");
+  } catch (error) {
+    log(`Error setting cookie1: ${error}`);
+  }
+
+  try {
+    await cookieStore.set("cookie1", "cookie1-value");
+  } catch (error) {
+    log(`Error setting cookie2: ${error}`);
+  }
+}
+```
+
 ```js hidden
 const showCookies = document.querySelector("#showCookies");
 
 showCookies.addEventListener("click", () => {
+  clearLog();
   cookieTest();
 });
 ```
@@ -183,7 +199,7 @@ Note that some logging and other code is omitted for brevity.
 Press **Show cookies** to add and then get all the cookies.
 Note that some browsers will only display the `name` and `value`, while others will display all the properties of each cookie.
 
-{{EmbedLiveSample('Get all cookies for this context', 100, 380)}}
+{{EmbedLiveSample('Get all cookies for this context', 100, 410)}}
 
 ## Specifications
 
