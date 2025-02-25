@@ -9,7 +9,7 @@ browser-compat: api.FileSystemObserver.disconnect
 {{securecontext_header}}{{APIRef("File System API")}}
 
 The **`disconnect()`** method of the
-{{domxref("FileSystemObserver")}} interface stops the observer observing the filesystem.
+{{domxref("FileSystemObserver")}} interface stops the observer observing the file system.
 
 ## Syntax
 
