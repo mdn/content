@@ -44,7 +44,7 @@ speak-as: spell-out digits no-punctuation;
   - : Content is pronounced normally without any punctuation. For example, "Hello, world!" would be pronounced as "Hello" "world".
 
 > [!NOTE]
-> The support of `speak-as` property is very limited or inconsistently implemented across different assistive technologies (such as screen readers or speech synthesizers). It's often recommended not to fully rely on it solely to deliver your critical information, to ensure it remains user friendly and accessible to a wide audience.
+> Support of the `speak-as` property is limited and inconsistently implemented across different assistive technologies, such as screen readers or speech synthesizers. To ensure any pronunciation-dependent critical information remains user-friendly and accessible to a wide audience, do not rely solely on this CSS property to define how this information content is presented aurally.
 
 ## Formal definition
 
