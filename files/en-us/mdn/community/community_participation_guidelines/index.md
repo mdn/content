@@ -104,6 +104,7 @@ Behavior that's inappropriate but is not explicitly described by the project's C
 The enforcement team will make a judgment based on the context and the principles of fairness, transparency, and proportionality.
 
 Examples include:
+
 - **Anonymous Reports:** These reports are investigated with extra care to validate the claims while maintaining fairness.
 - **Reports Involving Leadership Members:** A separate impartial panel will handle these cases to avoid conflicts of interest.
 - **Interactions During Cooling-Off Periods:** Violations during a cooling-off period, such as unintentional online interactions, may be considered differently, with an emphasis on intent and harm caused.
