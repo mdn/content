@@ -6,13 +6,11 @@ page-type: mdn-community-guide
 sidebar: mdnsidebar
 ---
 
-### Purpose
-
 Participating in MDN Web Docs projects means adhering to the [Mozilla Community Participation Guidelines (CPG)](https://www.mozilla.org/en-US/about/governance/policies/participation/). These guidelines exist to foster a welcoming, inclusive, and safe environment, and to ensure that every community member feels valued, heard, and protected.
 
 This document describes how to report violations and what happens depending on the severity of a violation.
 
-### Guiding Principles
+## Guiding principles
 
 - **Transparency:** Address every report clearly and consistently.
 - **Confidentiality:** Protect reporter privacy unless explicit consent is given to share information.
