@@ -1,10 +1,10 @@
 ---
 title: CSS and JavaScript animation performance
-slug: Web/Performance/CSS_JavaScript_animation_performance
+short-title: CSS and JavaScript animations
+slug: Web/Performance/Guides/CSS_JavaScript_animation_performance
 page-type: guide
+sidebar: performancesidebar
 ---
-
-{{QuickLinksWithSubPages("Web/Performance")}}
 
 Animations are critical for a pleasurable user experience on many applications. There are many ways to implement web animations, such as CSS {{cssxref("transition","transitions")}}/{{cssxref("animation","animations")}} or JavaScript-based animations (using {{domxref("Window.requestAnimationFrame","requestAnimationFrame()")}}). In this article, we analyze the performance differences between CSS-based and JavaScript-based animation.
 

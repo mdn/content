@@ -1,10 +1,10 @@
 ---
 title: "Performance Monitoring: RUM vs. synthetic monitoring"
-slug: Web/Performance/Rum-vs-Synthetic
+short-title: RUM vs. synthetic monitoring
+slug: Web/Performance/Guides/Rum-vs-Synthetic
 page-type: guide
+sidebar: performancesidebar
 ---
-
-{{QuickLinksWithSubPages("Web/Performance")}}
 
 **Synthetic monitoring** and **real user monitoring (RUM)** are two approaches for monitoring and providing insight into web performance. RUM and synthetic monitoring provide for different views of performance and have benefits, good use cases and shortfalls. RUM is generally best suited for understanding long-term trends whereas synthetic monitoring is very well suited to regression testing and mitigating shorter-term performance issues during development. In this article we define and compare these two performance monitoring approaches.
 

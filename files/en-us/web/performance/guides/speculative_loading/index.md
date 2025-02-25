@@ -1,10 +1,9 @@
 ---
 title: Speculative loading
-slug: Web/Performance/Speculative_loading
+slug: Web/Performance/Guides/Speculative_loading
 page-type: guide
+sidebar: performancesidebar
 ---
-
-{{QuickLinksWithSubPages("Web/Performance")}}
 
 **Speculative loading** refers to the practice of performing navigation actions (such as DNS fetching, fetching resources, or rendering documents) before the associated pages are actually visited, based on predictions as to what pages the user is most likely to visit next.
 
@@ -66,7 +65,7 @@ For example:
 ```
 
 > [!NOTE]
-> See [Using dns-prefetch](/en-US/docs/Web/Performance/dns-prefetch) for more details.
+> See [Using dns-prefetch](/en-US/docs/Web/Performance/Guides/dns-prefetch) for more details.
 
 ### `<link rel="preload">`
 
