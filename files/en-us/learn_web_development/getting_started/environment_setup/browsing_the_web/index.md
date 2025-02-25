@@ -47,7 +47,7 @@ We will start by describing various web-related concepts: web pages, websites, w
 - **Web server**
   - : A computer that hosts a website on the Internet.
 - **Web service**
-  - : A software that responds to requests over the Internet to carry out some business task. A web service is backed by a web server, and typically (though not always) provides some web pages for the user to interact with. Many websites are also web services, though some websites (such as MDN) comprise of static content only and are not web services.
+  - : A software that responds to requests over the Internet to perform a function or provide data. A web service is typically backed by a web server, and may provide web pages for users to interact with. Many websites are also web services, though some websites (such as MDN) comprise of static content only. Examples of web services would be something that resizes images, provides a weather report, or handles user login.
 - **Search engine**
   - : A web service that helps you find other web pages, such as Google, Bing, Yahoo, or DuckDuckGo. Search engines are normally accessed through a web browser (for example, you can perform search engine searches directly in the address bar of Firefox, Chrome, etc.) or through a web page (for example, [bing.com](https://www.bing.com/) or [duckduckgo.com](https://duckduckgo.com/)).
 
