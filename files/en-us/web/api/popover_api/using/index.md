@@ -306,7 +306,7 @@ for (let i = 0; i < btns.length; i++) {
 
 ## Styling popovers
 
-The Popover API has some related CSS techniques available that are worth looking at.
+This section covers some CSS selection and positioning techniques relevant to popovers.
 
 ### Selecting popovers
 
