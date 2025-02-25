@@ -43,7 +43,7 @@ The following example sets cookies by passing a `name` and `value` and then by s
 
 ```css hidden
 #log {
-  height: 280px;
+  height: 300px;
   overflow: scroll;
   padding: 0.5rem;
   border: 1px solid black;
@@ -91,14 +91,9 @@ We then use the {{domxref("CookieStore.get()")}} method to get each of the cooki
 
 ```js
 async function cookieTest() {
-  clearLog();
-
   // Set cookie: passing name and value
   try {
-    await cookieStore.set({
-      name: "cookie1",
-      value: `cookie1-value`,
-    });
+    await cookieStore.set("cookie1", "cookie1-value");
   } catch (error) {
     log(`Error setting cookie1: ${error}`);
   }
@@ -109,7 +104,7 @@ async function cookieTest() {
   try {
     await cookieStore.set({
       name: "cookie2",
-      value: `cookie2-value`,
+      value: "cookie2-value",
       expires: Date.now() + day,
     });
   } catch (error) {
@@ -131,6 +126,7 @@ Note that some logging and other code is omitted for brevity.
 const showCookies = document.querySelector("#showCookies");
 
 showCookies.addEventListener("click", () => {
+  clearLog();
   cookieTest();
 });
 ```
@@ -141,7 +137,7 @@ Press **Show cookies** to set the cookies and then display them in the log below
 Note that some browsers will only display the `name` and `value`, while others will display all the properties of the cookie.
 Even if the values are not displayed, they are still set.
 
-{{EmbedLiveSample('Setting cookies', 100, 350)}}
+{{EmbedLiveSample('Setting cookies', 100, 390)}}
 
 ### Getting cookies
 
@@ -155,7 +151,7 @@ This example shows how you can get a particular cookie using {{domxref("CookieSt
 
 ```css hidden
 #log {
-  height: 550px;
+  height: 600px;
   overflow: scroll;
   padding: 0.5rem;
   border: 1px solid black;
@@ -170,6 +166,10 @@ reload.addEventListener("click", () => {
 });
 
 const logElement = document.querySelector("#log");
+
+function clearLog() {
+  logElement.innerText = "";
+}
 
 function log(text) {
   logElement.innerText = `${logElement.innerText}${text}\n`;
@@ -202,10 +202,7 @@ The code then uses {{domxref("CookieStore.get()")}} to fetch "cookie1" and log i
 ```js
 async function cookieTest() {
   // Set a cookie passing name and value
-  await cookieStore.set({
-    name: "cookie1",
-    value: `cookie1-value`,
-  });
+  await cookieStore.set("cookie1", "cookie1-value");
 
   // Set a cookie passing an options object
   const day = 24 * 60 * 60 * 1000;
@@ -241,6 +238,7 @@ Note that some logging and other code is omitted for brevity.
 const showCookies = document.querySelector("#showCookies");
 
 showCookies.addEventListener("click", () => {
+  clearLog();
   cookieTest();
 });
 ```
@@ -249,7 +247,9 @@ showCookies.addEventListener("click", () => {
 
 Press **Show cookies** to set the cookies and then display them in the log below.
 
-{{EmbedLiveSample('Getting cookies', 100, 640)}}
+One thing to note is that the cookie created using {{domxref("Document.cookie")}} has a different default path than those created using `set()`.
+
+{{EmbedLiveSample('Getting cookies', 100, 670)}}
 
 ### Delete a named cookie
 
@@ -279,6 +279,10 @@ reload.addEventListener("click", () => {
 
 const logElement = document.querySelector("#log");
 
+function clearLog() {
+  logElement.innerText = "";
+}
+
 function log(text) {
   logElement.innerText = `${logElement.innerText}${text}\n`;
   logElement.scrollTop = logElement.scrollHeight;
@@ -296,27 +300,31 @@ async function getCookieNames() {
   return names;
 }
 
-// Delete cookies
+// Delete cookies. Cleans up cookies from other examples.
 async function deleteAllCookies() {
-  log("deleteAllCookies: in");
   const cookieNamesToDelete = (await cookieStore.getAll()).map(
     (cookie) => cookie.name,
   );
 
-  log(`len: ${cookieNamesToDelete.length}`);
   for (const name of cookieNamesToDelete) {
     try {
       await cookieStore.delete(name);
-      log(` Deleted cookie: ${name}`);
+      //log(` Deleted cookie: ${name}`);
     } catch (error) {
-      log(` Error deleting cookie ${name}:`, error);
+      //log(` Error deleting cookie ${name}:`, error);
     }
   }
-  const cookieNames2 = (await cookieStore.getAll()).map(
-    (cookie) => cookie.name,
-  );
 
-  log(`deleteAllCookies: out: len: ${cookieNames2.length}`);
+  //This deletes cookies that don't have default settings.
+  try {
+    await cookieStore.delete({ name: "cookie2", partitioned: true });
+    await cookieStore.delete({
+      name: "favorite_food",
+      path: "/en-US/docs/Web/API/CookieStore",
+    });
+  } catch (error) {
+    //log(` Error deleting cookie ${name}:`, error);
+  }
 }
 ```
 
@@ -329,15 +337,17 @@ We then list the names of both cookies (code for getting the cookie names not sh
 ```js
 async function cookieTest() {
   // Set two cookies
-  await cookieStore.set({
-    name: "cookie1",
-    value: `cookie1-value`,
-  });
+  try {
+    await cookieStore.set("cookie1", "cookie1-value");
+  } catch (error) {
+    log(`Error setting cookie1: ${error}`);
+  }
 
-  await cookieStore.set({
-    name: "cookie2",
-    value: `cookie2-value`,
-  });
+  try {
+    await cookieStore.set("cookie2", "cookie2-value");
+  } catch (error) {
+    log(`Error setting cookie2: ${error}`);
+  }
 
   // Log cookie names
   log(`Initial cookies: ${await getCookieNames()}`);
@@ -354,6 +364,7 @@ async function cookieTest() {
 const showCookies = document.querySelector("#showCookies");
 
 showCookies.addEventListener("click", async () => {
+  clearLog();
   await deleteAllCookies();
   await cookieTest();
 });
