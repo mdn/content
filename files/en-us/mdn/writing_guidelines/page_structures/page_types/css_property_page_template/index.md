@@ -20,8 +20,8 @@ sidebar: mdnsidebar
 > slug: Web/CSS/NameOfTheProperty
 > page-type: css-property OR css-shorthand-property
 > status:
->   - experimental
 >   - deprecated
+>   - experimental
 >   - non-standard
 > browser-compat: css.properties.NameOfTheProperty
 > ---
@@ -106,6 +106,9 @@ Include one term and definition for each subvalue.
   - : Include a description of the subvalue, its data type, and what it represents.
 - `subvalue2`
   - : Include a description of the subvalue, its data type, and what it represents.
+
+> [!WARNING]
+> Do not add [inline status macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status#feature_status_icons_in_definition_lists) on CSS pages.
 
 ## Description
 

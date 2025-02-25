@@ -20,8 +20,8 @@ sidebar: mdnsidebar
 > slug: Web/CSS/NameOfTheFunction
 > page-type: css-function
 > status:
->   - experimental
 >   - deprecated
+>   - experimental
 >   - non-standard
 > browser-compat: css.types.NameOfTheFunction
 > ---
@@ -123,6 +123,9 @@ Include one term and definition for each parameter.
   - : Include a description of the parameter, its data type, and its default value if any.
 - `<declaration-value>` {{optional_inline}}
   - : Include a description of the parameter, its data type, and its default value if any.
+
+> [!WARNING]
+> Do not add [inline status macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status#feature_status_icons_in_definition_lists) on CSS pages.
 
 ### Return value
 

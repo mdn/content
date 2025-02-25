@@ -20,8 +20,8 @@ sidebar: mdnsidebar
 > slug: Web/HTML/Element/NameOfTheElement
 > page-type: html-element
 > status:
->   - experimental
 >   - deprecated
+>   - experimental
 >   - non-standard
 > browser-compat: html.elements.NameOfTheElement
 > ---

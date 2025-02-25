@@ -7,9 +7,9 @@ sidebar: mdnsidebar
 
 A feature status provides developers with information about the implementation stage of the feature among browser vendors and is one of the following:
 
+- [`deprecated`](https://github.com/mdn/browser-compat-data/blob/main/docs/data-guidelines/index.md#setting-deprecated)
 - [`experimental`](https://github.com/mdn/browser-compat-data/blob/main/docs/data-guidelines/index.md#setting-experimental)
 - [`non-standard`](https://github.com/mdn/browser-compat-data/blob/main/schemas/compat-data-schema.md#status-information)
-- [`deprecated`](https://github.com/mdn/browser-compat-data/blob/main/docs/data-guidelines/index.md#setting-deprecated)
 
 If none of the above statuses apply, then the feature is considered a stable and standard feature. We don't explicitly add this status to content pages.
 For more information on these terms, see the ["Experimental, deprecated, and obsolete"](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete) page.
@@ -37,9 +37,9 @@ To show status icons for a feature listed in sidebars, the [front-matter](/en-US
 ---
 title: Feature name
 status:
+  - deprecated
   - experimental
   - non-standard
-  - deprecated
 browser-compat: api.feature
 ---
 ```
@@ -49,6 +49,11 @@ When sidebars are rendered, the code looks for the statuses in each page's front
 ### Feature status page banners
 
 The following macros are used to render the status banners in page headers:
+
+- `\{{Deprecated_Header}}`
+
+  - : For `deprecated` status. It generates a **Deprecated status** banner:
+    {{deprecated_header}}
 
 - `\{{SeeCompatTable}}`
 
@@ -60,10 +65,6 @@ The following macros are used to render the status banners in page headers:
   - : For `non-standard` status. It generates a **Non-Standard status** banner:
     {{Non-standard_Header}}
 
-- `\{{Deprecated_Header}}`
-  - : For `deprecated` status. It generates a **Deprecated status** banner:
-    {{deprecated_header}}
-
 ### Feature status icons in definition lists
 
 The following macros are used to render inline status icons next to definition list items:
@@ -71,6 +72,9 @@ The following macros are used to render inline status icons next to definition l
 - [`\{{Experimental_Inline}}`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/badges.rs) icon: {{Experimental_Inline}}
 - [`\{{Non-standard_Inline}}`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/badges.rs) icon: {{Non-standard_Inline}}
 - [`\{{Deprecated_Inline}}`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/badges.rs) icon: {{Deprecated_Inline}}
+
+If a web feature page has status banners then the inline macros of same statuses are used explicitly for each member/value of the feature in the definition list.
+For example, if a page is marked experimental using `\{{SeeCompatTable}}` then each member/value of the feature is explicitly marked experimental using `\{{Experimental_Inline}}` macro in the defintion list.
 
 ## See also
 

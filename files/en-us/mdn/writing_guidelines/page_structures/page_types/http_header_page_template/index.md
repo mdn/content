@@ -20,8 +20,8 @@ sidebar: mdnsidebar
 > slug: Web/HTTP/Headers/NameOfTheHeader
 > page-type: http-header
 > status:
->   - experimental
 >   - deprecated
+>   - experimental
 >   - non-standard
 > browser-compat: path.to.feature.NameOfTheHeader
 > ---
@@ -75,7 +75,7 @@ The first sentence of the page must follow this format:
 
 > The HTTP **`header-name`** (header type) is used for X in Y circumstances.
 
-The 'header type' should say if it's a {{Glossary("request header")}}, a {{Glossary("response header")}}, or if it may be either.
+The 'header type' should say if it's a {{Glossary("Request_header", "request header")}}, a {{Glossary("Response_header", "response header")}}, or if it may be either.
 The summary paragraph should ideally be one or two short sentences.
 
 You can mention notable gotchas or common pitfalls in this section, linking to examples or more detailed documentation (guides, etc.) in this section.
