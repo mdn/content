@@ -8,7 +8,7 @@ status:
 browser-compat: api.FileSystemObserver.FileSystemObserver
 ---
 
-{{APIRef("Navigation API")}}{{SeeCompatTable}}
+{{APIRef("File System API")}}{{SeeCompatTable}}
 
 The **`FileSystemObserver()`** constructor creates a new {{domxref("FileSystemObserver")}} object instance.
 
