@@ -47,9 +47,8 @@ Or
     - `value`
       - : A string with the value of the cookie.
 
-> [!WARNING]
-> Note while you can set any of the options and these will be used by browsers internally, but some browsers will only return `name` and `value` from {{domxref("CookieStore.get()")}} and {{domxref("CookieStore.getAll()")}}.
-> What this means is that if you want to use these properties for matching a particular cookie later, for example in {{domxref("CookieStore.delete()")}}, you will need to store the information for later use on those browsers.
+> [!NOTE]
+> While the values can be set here and will be used internally, some browsers will only return `name` and `value` options from {{domxref("CookieStore.get()")}} and {{domxref("CookieStore.getAll()")}}.
 
 ### Return value
 
