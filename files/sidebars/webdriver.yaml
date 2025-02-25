@@ -1,0 +1,17 @@
+# Do not add comments to this file. They will be lost.
+
+sidebar:
+  - type: section
+    link: /Web/WebDriver
+    title: WebDriver
+  - type: section
+    link: /Web/WebDriver/Reference
+  - type: listSubPages
+    path: /Web/WebDriver/Reference/Commands
+    link: /Web/WebDriver/Reference/Commands
+  - type: listSubPages
+    path: /Web/WebDriver/Reference/Capabilities
+    link: /Web/WebDriver/Reference/Capabilities
+  - type: listSubPages
+    path: /Web/WebDriver/Reference/Errors
+    link: /Web/WebDriver/Reference/Errors
