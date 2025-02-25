@@ -91,7 +91,7 @@ Certain HTML elements, when parsed, will trigger more HTTP requests:
 
 ## Parsing CSS and rendering the page
 
-Next, let's look at the CSS is handled.
+Next, let's look at how the CSS is handled.
 
 1. The browser parses the CSS found on the page (either included in the HTML file, or fetched from external stylesheets), and sorts the different CSS styling rules into different "buckets" based on which HTML elements (represented in the DOM as items called **nodes**) they will be applied to. The browser then attaches styles to different elements as required (this intermediate step is called a render tree).
 2. The render tree is laid out in the structure it should appear in after the rules have been applied. This includes any images and other media files that are to be embedded in the page.
