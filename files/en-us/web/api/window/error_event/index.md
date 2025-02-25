@@ -10,6 +10,10 @@ browser-compat: api.Window.error_event
 
 The `error` event is fired on a {{domxref("Window")}} object when a resource failed to load or couldn't be used — for example if a script has an execution error.
 
+> [!WARNING]
+>
+> For `asynchronous` functions, the {{domxref("Window/unhandledrejection_event", "unhandledrejection")}} event is fired when a promise is rejected and there are no handlers attached.
+
 ## Syntax
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
@@ -182,3 +186,4 @@ scriptError.addEventListener("click", () => {
 ## See also
 
 - This event on `Element` targets: {{domxref("HTMLElement/error_event", "error")}} event
+- Asynchronous function errors: {{domxref("Window/unhandledrejection_event", "unhandledrejection")}} event
