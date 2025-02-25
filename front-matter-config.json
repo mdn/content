@@ -35,13 +35,12 @@
         "items": {
           "type": "string",
           "enum": [
-            "exsltsidebar",
             "mediasidebar",
-            "performancesidebar",
             "urlsidebar",
             "xmlsidebar",
             "xpathsidebar",
-            "xsltsidebar"
+            "xsltsidebar",
+            "exsltsidebar"
           ]
         }
       },
