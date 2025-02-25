@@ -29,14 +29,17 @@ The `controlsList` property returns a {{domxref("DOMTokenList")}} object contain
 ```js
 const video = document.createElement("video");
 console.log(video.controlsList.value); // ""
+
+video.controlsList.add("noremoteplayback");
+console.log(video.controlsList.value); // "noremoteplayback"
 ```
 
 ### Setting the controlsList property
 
-To change the `controlsList` property of the element, set the value of `controlsList` to a string containing the new value.
+You can also modify `controlsList` by directly setting it to a string containing the new value.
 
 ```js
-let audio = document.createElement("audio");
+const audio = document.createElement("audio");
 audio.controlsList = "nodownload";
 ```
 
