@@ -61,7 +61,7 @@ new FileSystemObserver(callback)
 
 Depending on the operating system, not all observations will be reported with the same level of detail, for example, when the contents of a directory change recursively. At best, the website will receive a detailed change record containing the type of change and a handle to the affected path. At worst, the website will receive a more generic change record (that is, an `"unknown"` type) that still requires it to enumerate the directory to figure out which handle changed.
 
-This is still an improvement over polling, since the directory enumeration can be kicked off on-demand from the callback function, rather than needing to poll for changes in intervals.
+This is still an improvement over polling, since the directory enumeration can be kicked off on-demand from the callback function, rather than needing to poll for changes periodically.
 
 ### Return value
 
