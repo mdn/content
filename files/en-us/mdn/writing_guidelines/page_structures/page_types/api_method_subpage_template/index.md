@@ -20,8 +20,8 @@ sidebar: mdnsidebar
 > slug: Web/API/NameOfTheParentInterface/NameOfTheMethod
 > page-type: web-api-instance-method OR web-api-static-method
 > status:
->   - experimental
 >   - deprecated
+>   - experimental
 >   - non-standard
 > browser-compat: path.to.feature.NameOfTheMethod
 > ---

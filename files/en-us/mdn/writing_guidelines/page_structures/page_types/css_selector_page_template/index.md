@@ -20,8 +20,8 @@ sidebar: mdnsidebar
 > slug: Web/CSS/:NameOfTheSelector
 > page-type: css-selector OR css-pseudo-class OR css-pseudo-element OR css-combinator
 > status:
->   - experimental
 >   - deprecated
+>   - experimental
 >   - non-standard
 > browser-compat: css.selectors.NameOfTheSelector
 > ---

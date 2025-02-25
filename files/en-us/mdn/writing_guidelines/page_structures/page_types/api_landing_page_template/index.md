@@ -20,8 +20,8 @@ sidebar: mdnsidebar
 > slug: Web/API/NameOfTheAPI_API
 > page-type: web-api-overview
 > status:
->   - experimental
 >   - deprecated
+>   - experimental
 >   - non-standard
 > ---
 > ```

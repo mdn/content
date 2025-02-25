@@ -20,8 +20,8 @@ sidebar: mdnsidebar
 > slug: Web/SVG/Element/NameOfTheElement
 > page-type: svg-element
 > status:
->   - experimental
 >   - deprecated
+>   - experimental
 >   - non-standard
 > browser-compat: svg.elements.NameOfTheElement
 > ---

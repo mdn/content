@@ -20,8 +20,8 @@ sidebar: mdnsidebar
 > slug: Web/API/NameOfTheParentInterface/NameOfTheConstructor
 > page-type: web-api-constructor
 > status:
->   - experimental
 >   - deprecated
+>   - experimental
 >   - non-standard
 > browser-compat: path.to.feature.NameOfTheConstructor
 > ---
