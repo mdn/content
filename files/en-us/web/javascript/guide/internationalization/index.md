@@ -4,7 +4,7 @@ slug: Web/JavaScript/Guide/Internationalization
 page-type: guide
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Iterators_and_generators", "Web/JavaScript/Guide/Meta_programming")}}
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Resource_management", "Web/JavaScript/Guide/Meta_programming")}}
 
 The {{jsxref("Intl")}} object is the namespace for the ECMAScript Internationalization API, which provides a wide range of locale- and culture-sensitive data and operations.
 
@@ -81,4 +81,4 @@ console.log(names.sort(germanDictionary.compare).join(", "));
 
 For more information about the {{jsxref("Intl")}} API, see also [Introducing the JavaScript Internationalization API](https://hacks.mozilla.org/2014/12/introducing-the-javascript-internationalization-api/).
 
-{{PreviousNext("Web/JavaScript/Guide/Iterators_and_generators", "Web/JavaScript/Guide/Meta_programming")}}
+{{PreviousNext("Web/JavaScript/Guide/Resource_management", "Web/JavaScript/Guide/Meta_programming")}}
