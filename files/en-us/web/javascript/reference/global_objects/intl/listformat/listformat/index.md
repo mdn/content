@@ -176,7 +176,7 @@ console.log(formatDistance("en-US", marathon, "narrow"));
 
 ### Selection of conjunction
 
-The choice of the conjunction may be dependent on the string value of the list items. For example, in Spanish, the conjunction is `"y"` for most words, but `"e"` for words starting with the vowel `"i"`.
+The conjunction word used may depend on the list items' string values. For example, in Spanish, the conjunction is `"y"` for most words, but `"e"` for words starting with the vowel `"i"`.
 
 ```js
 const words = ["fuerte", "indomable"];

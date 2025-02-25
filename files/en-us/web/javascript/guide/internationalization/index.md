@@ -50,7 +50,7 @@ Locales underlie all behaviors of `Intl`. A _locale_ is a set of conventions, re
 Each locale is primarily defined by three things: a {{jsxref("Intl/Locale/language", "language")}}, a {{jsxref("Intl/Locale/script", "script")}}, and a {{jsxref("Intl/Locale/region", "region")}}. When connected together by `-` in that order, they form a [BCP 47 language tag](https://datatracker.ietf.org/doc/html/rfc5646).
 
 - The language is the most important part of the locale and is mandatory. When given a single language, like `en` or `fr`, there are algorithms to infer the rest of the information (see {{jsxref("Intl/Locale/maximize", "Intl.Locale.prototype.maximize()")}}).
-- However, you often want to specify the region as well, because conventions can differ drastically between regions that speak the same language. For example, the date format in the U.S. is MM/DD/YYYY, but in the U.K. it is DD/MM/YYYY, so specifying `en-US` or `en-GB` is important.
+- However, you often want to specify the region as well, because conventions can differ drastically between regions that speak the same language. For example, the date format in the US is MM/DD/YYYY, whereas in the UK it is DD/MM/YYYY, so specifying `en-US` or `en-GB` is important.
 - You can also specify a script. The script is the writing system, or the characters used to transcribe the language. In practice, the script is often unnecessary, because the language used in a certain region is only written in one script. However, there are exceptions such as the Serbian language, which can be written in both the Latin and Cyrillic scripts (`sr-Latn` and `sr-Cyrl`), or the Chinese language, which can be written in both the Simplified and Traditional scripts (`zh-Hans` and `zh-Hant`).
 
 ```js
@@ -294,7 +294,7 @@ A date/time is comprised of the following components: `weekday`, `era`, `year`, 
 
 You should pick one of these two methods, because they are mutually exclusive. Using both methods simultaneously will result in an error.
 
-Underlyingly, after requesting a combination of components, the `DateTimeFormat` object looks for a "template" that matches the requested components, so it only needs to fill in the values one by one. Obviously, not every combination of components has a predefined template. In this case, there's a `formatMatcher` option that decides how to negotiate, by making components longer or shorter than requested, or by omitting or adding components. It gets quite technical, so you should read the [`Intl.DateTimeFormat()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#date-time_component_options) reference to understand better.
+Underlyingly, after requesting a combination of components, the `DateTimeFormat` object looks for a "template" that matches the requested components, so it only needs to fill in the values one by one. Not every combination of components has a predefined template. `DateTimeFormat` has a `formatMatcher` option that decides how to negotiate, by making components longer or shorter than requested, or by omitting or adding components. It gets quite technical, so you should read the [`Intl.DateTimeFormat()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#date-time_component_options) reference to better understand how it handles this.
 
 Here, we demonstrate a few common ways to format the components:
 
@@ -330,7 +330,7 @@ console.log(df1.format(targetDate));
 
 There are other customization options. For example, you can use the `hourCycle` option to display the time in 12-hour or 24-hour and show midnight/noon as 12:00 or 0:00. You can also use the `numberingSystem` option to display any numbers in another numbering system.
 
-There's a second important method, {{jsxref("Intl/DateTimeFormat/formatRange", "formatRange()")}}, which formats a range of dates or times. It takes two date-times of the same type, formats each one, joins them with a range separator (like the en-dash), and deduplicates the common parts.
+Apart from `format()`, there's a second important method, {{jsxref("Intl/DateTimeFormat/formatRange", "formatRange()")}}, which formats a range of dates or times. It takes two date-times of the same type, formats each one, joins them with a range separator (like the en-dash), and deduplicates the common parts.
 
 ```js
 const springBreak = {
@@ -381,7 +381,7 @@ The output looks like:
 | 'currency' | '$1,234,567.89'  |
 | 'unit'     | '1,234,567.89 m' |
 
-The next group of options all specify what the numeric part should look like. First, you may want to represent extremely large values in a more readable way. You can set the `notation` option to `"scientific"` or `"engineering"`, which both use the `1.23e+6` notation. The difference is that the latter uses multiples of 3 for the exponent, keeping the mantissa between 1 and 1000, while the former can use any integer for the exponent, keeping the mantissa between 1 and 10. You can also set `notation` to `"compact"` to use a more human-readable notation.
+The next group of options all specify what the numeric part should look like. First, you may want to represent extremely large values in a more readable way. You can set the `notation` option to `"scientific"` or `"engineering"`, which both use the `1.23e+6` notation. The difference is that the latter uses multiples of 3 for the exponent, keeping the [mantissa](https://en.wikipedia.org/wiki/Scientific_notation) (the part before the `e` symbol) between 1 and 1000, while the former can use any integer for the exponent, keeping the mantissa between 1 and 10. You can also set `notation` to `"compact"` to use a more human-readable notation.
 
 ```js
 const results = [];
@@ -457,7 +457,7 @@ The output looks like this:
 
 There are other customization options. For example, you can use the `useGrouping` and `signDisplay` options to customize whether and how to show the group separators (like "," in "1,234,567.89") and the sign. However, note that the characters used for the group separator, decimal point, and sign are locale-specific, so you can't customize them directly.
 
-There's a second important method, {{jsxref("Intl/NumberFormat/formatRange", "formatRange()")}}, which formats a range of numbers. It takes two number representations, formats each one, joins them with a range separator (like the en-dash), and potentially deduplicates the common parts.
+Apart from `format()`, there's a second important method, {{jsxref("Intl/NumberFormat/formatRange", "formatRange()")}}, which formats a range of numbers. It takes two number representations, formats each one, joins them with a range separator (like the en-dash), and potentially deduplicates the common parts.
 
 ```js
 const heightRange = {
@@ -518,7 +518,7 @@ Check {{jsxref("Intl/RelativeTimeFormat/RelativeTimeFormat", "Intl.RelativeTimeF
 
 ### Duration formatting
 
-{{jsxref("Intl.DurationFormat")}} provides duration formatting, such as "3 hours, 4 minutes, 5 seconds". In fact, it is not a primitive operation with its own formatter. It uses {{jsxref("Intl.NumberFormat")}} and {{jsxref("Intl.ListFormat")}} internally to format each duration component, then joins them with a list separator. The `DurationFormat` object takes durations in the form of a {{jsxref("Temporal.Duration")}} object, or an object with the same properties.
+{{jsxref("Intl.DurationFormat")}} provides duration formatting, such as "3 hours, 4 minutes, 5 seconds". It is not a primitive operation with its own formatter: it uses {{jsxref("Intl.NumberFormat")}} and {{jsxref("Intl.ListFormat")}} internally to format each duration component, then joins them with a list separator. The `DurationFormat` object takes durations in the form of a {{jsxref("Temporal.Duration")}} object, or a plain object with the same properties.
 
 Apart from customizing the numbering system, the duration formatting options decides whether or not to show each component, and how long they should be.
 
