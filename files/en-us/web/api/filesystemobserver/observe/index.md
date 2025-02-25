@@ -21,7 +21,12 @@ observe(handle, options)
 ### Parameters
 
 - `handle`
-  - : The handle of the file system entry representing the file or directory to observe. This can be a {{domxref("FileSystemFileHandle")}} or {{domxref("FileSystemDirectoryHandle")}} for the user-observable file system and the [Origin Private File System](/en-US/docs/Web/API/File_System_API/Origin_private_file_system) (OPFS), or a {{domxref("FileSystemSyncAccessHandle")}} for the OPFS.
+
+  - : The handle of the file system entry representing the file or directory to observe.
+
+    - For the user-observable file system, this can be a {{domxref("FileSystemFileHandle")}} or a {{domxref("FileSystemDirectoryHandle")}}.
+    - For the [Origin Private File System](/en-US/docs/Web/API/File_System_API/Origin_private_file_system) (OPFS), it can be a {{domxref("FileSystemFileHandle")}}, a {{domxref("FileSystemDirectoryHandle")}}, or a {{domxref("FileSystemSyncAccessHandle")}}.
+
 - `options` {{optional_inline}}
 
   - : An object specifying options for the `observe()` call. This can contain the following properties:
@@ -45,7 +50,9 @@ A {{jsxref("Promise")}} that resolves to {{jsxref('undefined')}}.
 
 ### Observe a file or directory
 
-Assuming a `FileSystemObserver` instance is available, you can start observing changes to a file system entry by calling the `observe()` method on it, passing it the handle of the entry to observe. This can be a {{domxref("FileSystemFileHandle")}} or {{domxref("FileSystemDirectoryHandle")}} for the user-observable file system and the [Origin Private File System](/en-US/docs/Web/API/File_System_API/Origin_private_file_system) (OPFS):
+Assuming a `FileSystemObserver` instance is available, you can start observing changes to a file system entry by calling `observe()`.
+
+You can observe a file or directory in the user-observable file system or the [Origin Private File System](/en-US/docs/Web/API/File_System_API/Origin_private_file_system) (OPFS) by passing a {{domxref("FileSystemFileHandle")}} or {{domxref("FileSystemDirectoryHandle")}} to `observe()`. Instances of these objects can be returned, for example, when asking the user to select a file or directory using {{domxref("Window.showSaveFilePicker()")}} or {{domxref("Window.showDirectoryPicker()")}}:
 
 ```js
 // Observe a file
@@ -63,7 +70,7 @@ async function observeDirectory() {
 }
 ```
 
-or a {{domxref("FileSystemSyncAccessHandle")}} for the OPFS:
+You can also observe changes to the OPFS by passing a {{domxref("FileSystemSyncAccessHandle")}} to `observe()`:
 
 ```js
 // Observe an OPFS file system entry

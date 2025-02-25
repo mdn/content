@@ -24,7 +24,7 @@ The **`FileSystemObserver`** interface of the {{domxref("File System API", "File
 ## Examples
 
 > [!NOTE]
-> For a complete working example, check out [File System Observer Demo](https://file-system-observer.glitch.me/).
+> For a complete working example, check out [File System Observer Demo](https://file-system-observer.glitch.me/) ([source code](https://glitch.com/edit/#!/file-system-observer)).
 
 ### Initialize a `FileSystemObserver`
 
@@ -48,16 +48,11 @@ const callback = (records, observer) => {
 };
 ```
 
-The callback always includes two parameters:
-
-- `records`
-  - : An array of [`FileSystemChangeRecord`](/en-US/docs/Web/API/FileSystemObserver/FileSystemObserver#filesystemchangerecord_structure) objects that contain details of all the observed changes.
-- `observer`
-  - : A reference to the current `FileSystemObserver` object, which is made available in case, for example, you want to stop observations after the current records have been received using the {{domxref('FileSystemObserver.disconnect', 'disconnect()')}} method, as shown above.
-
 ### Observe a file or directory
 
-Once a `FileSystemObserver` instance is available, you can start observing changes to a file system entry by running the {{domxref("FileSystemObserver.observe()")}} method, passing it the handle of the entry to observe. This can be a {{domxref("FileSystemFileHandle")}} or {{domxref("FileSystemDirectoryHandle")}} for the user-observable file system and the [Origin Private File System](/en-US/docs/Web/API/File_System_API/Origin_private_file_system) (OPFS):
+Once a `FileSystemObserver` instance is available, you can start observing changes to a file system entry by calling the {{domxref("FileSystemObserver.observe()")}} method.
+
+You can observe a file or directory in the user-observable file system or the [Origin Private File System](/en-US/docs/Web/API/File_System_API/Origin_private_file_system) (OPFS) by passing a {{domxref("FileSystemFileHandle")}} or {{domxref("FileSystemDirectoryHandle")}} to `observe()`. Instances of these objects can be returned, for example, when asking the user to select a file or directory using {{domxref("Window.showSaveFilePicker()")}} or {{domxref("Window.showDirectoryPicker()")}}:
 
 ```js
 // Observe a file
@@ -75,7 +70,7 @@ async function observeDirectory() {
 }
 ```
 
-or a {{domxref("FileSystemSyncAccessHandle")}} for the OPFS:
+You can also observe changes to the OPFS by passing a {{domxref("FileSystemSyncAccessHandle")}} to `observe()`:
 
 ```js
 // Observe an OPFS file system entry
