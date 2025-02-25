@@ -89,6 +89,9 @@ speak-as: spell-out digits no-punctuation;
   .digits {
     speak-as: digits;
   }
+ .multi {
+    speak-as: literal-punctuation digits;
+ }
 ```
 
 ## Specifications
