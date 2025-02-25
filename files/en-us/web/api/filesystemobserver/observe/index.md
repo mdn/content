@@ -9,7 +9,7 @@ browser-compat: api.FileSystemObserver.observe
 {{securecontext_header}}{{APIRef("File System API")}}
 
 The **`observe()`** method of the
-{{domxref("FileSystemObserver")}} interface starts the observer observing changes to a given file or directory.
+{{domxref("FileSystemObserver")}} interface asks the observer to start observing changes to a given file or directory.
 
 ## Syntax
 
