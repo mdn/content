@@ -90,10 +90,10 @@ The object returned for a match contains the following properties:
 
 ### Getting a cookie by name
 
-In this example we get a particular cookie named `cookie1`, awaiting the returned Promise, and logging the resolved object.
+In this example we get a particular cookie named `cookie1`, awaiting the returned promise, and logging the resolved object.
 
 ```html hidden
-<button id="showCookies" type="button">Show cookies</button>
+<button id="showCookies" type="button">Show cookie</button>
 <button id="reset" type="button">Reset</button>
 <pre id="log"></pre>
 ```
@@ -116,6 +116,10 @@ reload.addEventListener("click", () => {
 
 const logElement = document.querySelector("#log");
 
+function clearLog() {
+  logElement.innerText = "";
+}
+
 function log(text) {
   logElement.innerText = `${logElement.innerText}${text}\n`;
   logElement.scrollTop = logElement.scrollHeight;
@@ -124,23 +128,19 @@ function log(text) {
 
 #### JavaScript
 
-The code first sets a cookie.
-
-We then await on `get()`, specifying the name of the cookie.
+The `cookieTest()` method is called when the **Show cookies** button is clicked.
+It first calls `setTestCookie()` to define a cookie, then waits on `get()` to retrieve information about that same cookie.
 If the returned promise resolves with an object we log the properties of the cookie: otherwise we log that no matching cookie was found.
 
 ```js
 async function cookieTest() {
-  // await on setting the cookie
-  await cookieStore.set({
-    name: "cookie1",
-    value: `cookie1-value`,
-  });
+  // Set test cookie
+  await setTestCookie();
 
-  // await on getting the cookie
+  // Get cookie, specifying name
   const cookie = await cookieStore.get("cookie1");
 
-  // log the cookie object keys and values.
+  // Log the cookie object keys and values.
   if (cookie) {
     log("cookie1:");
     for (const [key, value] of Object.entries(cookie)) {
@@ -152,22 +152,41 @@ async function cookieTest() {
 }
 ```
 
+The code for `setTestCookie()` is shown here just "for your interest".
+Note that some logging and other code is omitted for brevity.
+
+```js
+async function setTestCookie() {
+  // Set two cookies
+  try {
+    await cookieStore.set("cookie1", "cookie1-value");
+  } catch (error) {
+    log(`Error setting cookie1: ${error}`);
+  }
+
+  try {
+    await cookieStore.set("cookie2", "cookie2-value");
+  } catch (error) {
+    log(`Error setting cookie2: ${error}`);
+  }
+}
+```
+
 ```js hidden
 const showCookies = document.querySelector("#showCookies");
 
 showCookies.addEventListener("click", () => {
+  clearLog();
   cookieTest();
 });
 ```
 
-Note that some logging and other code is omitted for brevity.
-
 #### Result
 
-Press **Show cookies** to set the cookie and then display it.
+Press **Show cookie** to set the cookie and then display it.
 Note that some browsers will only display the `name` and `value`, while others will display all the properties of the cookie.
 
-{{EmbedLiveSample('Setting a cookie with name and value', 100, 250)}}
+{{EmbedLiveSample('Getting a cookie by name', 100, 260)}}
 
 ## Specifications
 
