@@ -9,7 +9,48 @@ browser-compat: css.properties.grid-template-columns.minmax
 
 The **`minmax()`** [CSS function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) defines a size range greater than or equal to _min_ and less than or equal to _max_. It is used with [CSS grids](/en-US/docs/Web/CSS/CSS_grid_layout).
 
-{{EmbedInteractiveExample("pages/css/function-minmax.html")}}
+{{InteractiveExample("CSS Demo: minmax()")}}
+
+```css interactive-example-choice
+grid-template-columns: minmax(20px, auto) 1fr 1fr;
+```
+
+```css interactive-example-choice
+grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+```
+
+```css interactive-example-choice
+grid-template-columns: minmax(2ch, 10ch) 1fr 1fr;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">
+      <div>One. This column has more text in it.</div>
+      <div>Two</div>
+      <div>Three</div>
+      <div>Four</div>
+      <div>Five</div>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  grid-gap: 10px;
+  width: 250px;
+}
+
+#example-element > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+  text-align: left;
+}
+```
 
 ## Syntax
 

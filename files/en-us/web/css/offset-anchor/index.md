@@ -9,7 +9,93 @@ browser-compat: css.properties.offset-anchor
 
 The **`offset-anchor`** [CSS](/en-US/docs/Web/CSS) property specifies the point inside the box of an element traveling along an {{cssxref("offset-path")}} that is actually moving along the path.
 
-{{EmbedInteractiveExample("pages/css/offset-anchor.html")}}
+{{InteractiveExample("CSS Demo: offset-anchor")}}
+
+```css interactive-example-choice
+offset-anchor: auto;
+```
+
+```css interactive-example-choice
+offset-anchor: right top;
+```
+
+```css interactive-example-choice
+offset-anchor: left bottom;
+```
+
+```css interactive-example-choice
+offset-anchor: 20% 80%;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="wrapper">
+    <div id="example-element"></div>
+  </div>
+  <button id="playback" type="button">Play</button>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  offset-path: path("M 0,20 L 200,20");
+  animation: distance 3000ms infinite alternate ease-in-out;
+  width: 40px;
+  height: 40px;
+  background: cyan;
+  animation-play-state: paused;
+}
+
+#example-element.running {
+  animation-play-state: running;
+}
+
+.wrapper {
+  background-image: linear-gradient(
+    to bottom,
+    transparent,
+    transparent 49%,
+    #000 50%,
+    #000 51%,
+    transparent 52%
+  );
+  border: 1px solid #ccc;
+  width: 90%;
+}
+
+@keyframes distance {
+  0% {
+    offset-distance: 0%;
+  }
+  100% {
+    offset-distance: 100%;
+  }
+}
+
+#playback {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 1em;
+}
+```
+
+```js interactive-example
+window.addEventListener("load", () => {
+  const example = document.getElementById("example-element");
+  const button = document.getElementById("playback");
+
+  button.addEventListener("click", () => {
+    if (example.classList.contains("running")) {
+      example.classList.remove("running");
+      button.textContent = "Play";
+    } else {
+      example.classList.add("running");
+      button.textContent = "Pause";
+    }
+  });
+});
+```
 
 ## Syntax
 

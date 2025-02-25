@@ -9,7 +9,43 @@ browser-compat: css.properties.min-height
 
 The **`min-height`** [CSS](/en-US/docs/Web/CSS) property sets the minimum height of an element. It prevents the [used value](/en-US/docs/Web/CSS/CSS_cascade/used_value) of the {{cssxref("height")}} property from becoming smaller than the value specified for `min-height`.
 
-{{EmbedInteractiveExample("pages/css/min-height.html")}}
+{{InteractiveExample("CSS Demo: min-height")}}
+
+```css interactive-example-choice
+min-height: 150px;
+```
+
+```css interactive-example-choice
+min-height: 7em;
+```
+
+```css interactive-example-choice
+min-height: 75%;
+```
+
+```css interactive-example-choice
+min-height: 10px;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box where you can change the minimum height. <br />If there is
+    more content than the minimum the box will grow to the height needed by the
+    content.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  display: flex;
+  flex-direction: column;
+  background-color: #5b6dcd;
+  justify-content: center;
+  color: #ffffff;
+}
+```
 
 The element's height is set to the value of `min-height` whenever `min-height` is larger than {{cssxref("max-height")}} or {{cssxref("height")}}.
 

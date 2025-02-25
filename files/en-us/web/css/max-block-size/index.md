@@ -15,7 +15,46 @@ This is useful because the `max-width` is always used for horizontal sizes and `
 
 Any time you would normally use `max-height` or `max-width`, you should instead use `max-block-size` to set the maximum "height" of the content (even though this may not be a vertical value) and `max-inline-size` to set the maximum "width" of the content (although this may instead be vertical rather than horizontal). See [`writing-mode` examples](/en-US/docs/Web/CSS/writing-mode#examples), which show the different writing modes in action.
 
-{{EmbedInteractiveExample("pages/css/max-block-size.html")}}
+{{InteractiveExample("CSS Demo: max-block-size")}}
+
+```css interactive-example-choice
+max-block-size: 150px;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+max-block-size: 150px;
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+max-block-size: 20px;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+max-block-size: 75%;
+writing-mode: vertical-lr;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box where you can change the maximum block size. <br />This will
+    limit the size in the block dimension, potentially causing an overflow.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  display: flex;
+  flex-direction: column;
+  background-color: #5b6dcd;
+  justify-content: center;
+  color: #ffffff;
+}
+```
 
 ## Syntax
 

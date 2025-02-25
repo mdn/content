@@ -11,7 +11,42 @@ The **`path()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_V
 
 There are some limitations to using the `path()` function. The path has to be defined as a single string, so a custom path can't be created using variables ([`var()`](/en-US/docs/Web/CSS/var) functions). Also, all the lengths in the path are implicitly defined in [pixel](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#absolute_length_units) (`px`) units; other units can't be used. The [`shape()`](/en-US/docs/Web/CSS/basic-shape/shape) function offers more flexibility than the `path()` function.
 
-{{EmbedInteractiveExample("pages/css/function-path.html")}}
+{{InteractiveExample("CSS Demo: path()")}}
+
+```css interactive-example-choice
+clip-path: path(
+  "M  20  240 \
+ L  20  80 L 160  80 \
+ L 160  20 L 280 100 \
+ L 160 180 L 160 120 \
+ L  60 120 L  60 240 Z"
+);
+```
+
+```css interactive-example-choice
+clip-path: path(
+  "M 20 240 \
+ C 20 0 300 0 300 240 Z"
+);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#default-example {
+  background: #fe9;
+}
+
+#example-element {
+  background: linear-gradient(to bottom right, #f52, #05f);
+  width: 100%;
+  height: 100%;
+}
+```
 
 ## Syntax
 

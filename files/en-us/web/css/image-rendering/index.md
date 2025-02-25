@@ -9,7 +9,39 @@ browser-compat: css.properties.image-rendering
 
 The **`image-rendering`** [CSS](/en-US/docs/Web/CSS) property sets an image scaling algorithm. The property applies to an element itself, to any images set in its other properties, and to its descendants.
 
-{{EmbedInteractiveExample("pages/css/image-rendering.html")}}
+{{InteractiveExample("CSS Demo: image-rendering")}}
+
+```css interactive-example-choice
+image-rendering: auto;
+```
+
+```css interactive-example-choice
+image-rendering: smooth;
+```
+
+```css interactive-example-choice
+image-rendering: crisp-edges;
+```
+
+```css interactive-example-choice
+image-rendering: pixelated;
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    id="example-element"
+    src="/shared-assets/images/examples/lizard.png" />
+</section>
+```
+
+```css interactive-example
+#example-element {
+  height: 480px;
+  object-fit: cover;
+}
+```
 
 The {{Glossary("user agent")}} will scale an image when the page author specifies dimensions other than its natural size. Scaling may also occur due to user interaction (zooming). For example, if the natural size of an image is `100×100px`_,_ but its actual dimensions are `200×200px` (or `50×50px`), then the image will be upscaled (or downscaled) using the algorithm specified by `image-rendering`. This property has no effect on non-scaled images.
 
