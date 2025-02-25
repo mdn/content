@@ -63,5 +63,5 @@ Supports-Loading-Mode: fenced-frame
 
 - [Fenced Frame API](/en-US/docs/Web/API/Fenced_frame_API)
 - [Speculation Rules API](/en-US/docs/Web/API/Speculation_Rules_API)
-- [Speculative loading](/en-US/docs/Web/Performance/Speculative_loading)
+- [Speculative loading](/en-US/docs/Web/Performance/Guides/Speculative_loading)
 - [Prerender pages in Chrome for instant page navigations](https://developer.chrome.com/docs/web-platform/prerender-pages) on developer.chrome.com
