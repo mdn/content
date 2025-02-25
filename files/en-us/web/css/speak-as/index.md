@@ -33,15 +33,15 @@ speak-as: spell-out digits no-punctuation;
 ### Values
 
 - `normal`
-  - : Default value, which uses normal pronunciation rules, but punctuation is replaced by pauses. For example, instead of "Hello, world!" it would be pronounced as "Hello (pause) world (pause)"
+  - : Normal pronunciation rules with punctuation replaced by pauses. For example, "Hello, world!" would be pronounced as "Hello (pause) world (pause)". This is the default value.
 - `spell-out`
-  - : Content is spelled out letter by letter. For example, "role" would be pronounced "r" "o" "l" "e".
+  - : Content is spelled out letter by letter. For example, "role" would be pronounced as "r" "o" "l" "e".
 - `literal-punctuation`
-  - : Punctuation marks are spelled out literally. For example, instead of "Hello, world!" it would be pronounced as "Hello comma world exclamation mark.".
+  - : Punctuation marks are spelled out literally. For example, "Hello, world!" would be pronounced as "Hello comma world exclamation mark."
 - `digits`
-  - : Numbers are pronounced as individual digits. For example, 31 is pronounced as "three one".
+  - : Numbers are pronounced as individual digits. For example, "31" would be pronounced as "three one".
 - `no-punctuation`
-  - : The content is pronounced normally without any punctuation. For example, instead of "Hello, world!" it would be pronounced as "Hello world".
+  - : Content is pronounced normally without any punctuation. For example, "Hello, world!" would be pronounced as "Hello" "world".
 
 > [!NOTE]
 > The support of `speak-as` property is very limited or inconsistently implemented across different assistive technologies (such as screen readers or speech synthesizers). It's often recommended not to fully rely on it solely to deliver your critical information, to ensure it remains user friendly and accessible to a wide audience.
