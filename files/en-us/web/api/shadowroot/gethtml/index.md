@@ -18,7 +18,7 @@ Without arguments, child nodes that are shadow roots are not serialized, and thi
 ## Syntax
 
 ```js-nolint
-const html = shadowRoot.getHTML(options)
+getHTML(options)
 ```
 
 ### Parameters

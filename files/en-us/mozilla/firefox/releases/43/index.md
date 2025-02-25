@@ -75,7 +75,7 @@ _No change._
 #### Miscellaneous
 
 - The [Battery Status API](/en-US/docs/Web/API/Battery_Status_API) now uses the new promise syntax for {{domxref("Navigator.getBattery()")}}, as specified in the recent evolution of the specification ([Firefox bug 1050749](https://bugzil.la/1050749)).
-- The `User-Agent` header is no longer in the list of {{Glossary("Forbidden_header_name", "forbidden header names")}} so it can now be set in a [Fetch](/en-US/docs/Web/API/Fetch_API) {{domxref("Headers")}} object, via XHR {{domxref("XMLHttpRequest.setRequestHeader()")}},… ([Firefox bug 1188932](https://bugzil.la/1188932)).
+- The `User-Agent` header is no longer in the list of {{Glossary("Forbidden_request_header", "forbidden request headers")}} so it can now be set in a [Fetch](/en-US/docs/Web/API/Fetch_API) {{domxref("Headers")}} object, via XHR {{domxref("XMLHttpRequest.setRequestHeader()")}},… ([Firefox bug 1188932](https://bugzil.la/1188932)).
 - The {{domxref("MediaRecorder.MediaRecorder", "MediaRecorder()")}} constructor can now accept an options dictionary as a parameter, which allows you to set custom bitrates for the audio/video to be recorded ([Firefox bug 1161276](https://bugzil.la/1161276)).
 - The {{domxref("PerformanceObserver")}} interface, belonging to the [Performance APIs](/en-US/docs/Web/API/Performance_API) has been implemented ([Firefox bug 1165796](https://bugzil.la/1165796)).
 - The Frame Timing API has been added: the `PerformanceRenderTiming` and `PerformanceCompositeTiming` interfaces are now available ([Firefox bug 1191178](https://bugzil.la/1191178)).

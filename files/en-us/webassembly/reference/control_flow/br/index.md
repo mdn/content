@@ -2,9 +2,8 @@
 title: br
 slug: WebAssembly/Reference/Control_flow/br
 page-type: webassembly-instruction
+sidebar: webassemblysidebar
 ---
-
-{{WebAssemblySidebar}}
 
 The **`br`** statement branches to a loop, block, or if.
 

@@ -278,6 +278,7 @@ HPKE
 HPKP
 HTCPCP
 HVXC
+IACVT
 ICANN
 ICNS
 iconset
@@ -447,6 +448,7 @@ overscript
 overscripts
 overscrolling
 packetizer
+packetizing
 pageload
 paintable
 pantherina
@@ -521,6 +523,7 @@ QCIF
 QCMS
 QPACK
 QTFF
+qtrs
 quantizer
 quarternion
 querysets
@@ -632,6 +635,7 @@ snapport
 snapshotted
 snapshotting
 SNES
+spammy
 spatialization
 spatializations
 spatialize
@@ -679,6 +683,7 @@ sublocality
 submatch
 submatches
 subminor
+subminute
 subpage
 subpages
 subpanels

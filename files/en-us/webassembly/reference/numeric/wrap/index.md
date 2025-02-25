@@ -2,9 +2,8 @@
 title: Wrap
 slug: WebAssembly/Reference/Numeric/Wrap
 page-type: webassembly-instruction
+sidebar: webassemblysidebar
 ---
-
-{{WebAssemblySidebar}}
 
 The **`wrap`** instruction, is used to convert numbers of type `i64` to type `i32`. If the number is larger than what an `i32` can hold this operation will wrap, resulting in a different number.
 

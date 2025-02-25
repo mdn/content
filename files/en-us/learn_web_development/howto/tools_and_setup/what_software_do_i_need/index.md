@@ -45,7 +45,7 @@ Nearly all operating systems by default include a text editor and a browser, whi
 
 ## Active Learning
 
-_There is no active learning available yet. [Please, consider contributing](/en-US/docs/MDN/Community/Contributing/Getting_started)._
+_There is no active learning available yet. [Please, consider contributing](/en-US/docs/MDN/Community/Getting_started)._
 
 ## Dig deeper
 
@@ -122,7 +122,7 @@ All desktop operating systems come with a basic text editor. These editors are a
       <td>
         <ul>
           <li>
-            <a href="https://en.wikipedia.org/wiki/Vi" rel="external">Vi</a>
+            <a href="https://en.wikipedia.org/wiki/Vi_(text_editor)" rel="external">Vi</a>
             (All UNIX)
           </li>
           <li>
@@ -162,7 +162,11 @@ All desktop operating systems come with a basic text editor. These editors are a
     </tr>
     <tr>
       <td>ChromeOS</td>
-      <td></td>
+      <td>
+        <ul>
+          <li><a href="https://en.wikipedia.org/wiki/Text_(Chrome_app)">Text</a></li>
+        </ul>
+      </td>
       <td>
         <ul>
           <li><a href="https://shiftedit.net/">ShiftEdit</a></li>

@@ -21,7 +21,7 @@ The **`getInstalledRelatedApps()`** method returns a promise that resolves with 
 
 To associate the invoking web app with a platform-specific app or PWA, two things must be done:
 
-1. The invoking web app must be specified in the [`related_applications`](/en-US/docs/Web/Manifest/related_applications) member of its [manifest file](/en-US/docs/Web/Manifest).
+1. The invoking web app must be specified in the [`related_applications`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/related_applications) member of its [manifest file](/en-US/docs/Web/Progressive_web_apps/Manifest).
 2. The platform-specific app or PWA must have its relationship with the invoking app defined.
 
 Defining the relationship is done in a different way depending on the type of app:
@@ -67,7 +67,7 @@ A {{JSxRef("Promise")}} that fulfills with an array of objects representing any 
 - `version` {{optional_inline}}
   - : A string representing the related app's version.
 
-The related app information must have been previously specified in the [`related_applications`](/en-US/docs/Web/Manifest/related_applications) member of the invoking web app's [manifest file](/en-US/docs/Web/Manifest).
+The related app information must have been previously specified in the [`related_applications`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/related_applications) member of the invoking web app's [manifest file](/en-US/docs/Web/Progressive_web_apps/Manifest).
 
 ### Exceptions
 

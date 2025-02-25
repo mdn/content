@@ -10,7 +10,7 @@ browser-compat: svg.global_attributes.mask
 The **`mask`** attribute is a presentation attribute mainly used to bind a given {{ SVGElement("mask") }} element with the element the attribute belongs to.
 
 > [!NOTE]
-> As a presentation attribute {{cssxref('mask')}} can be used as a CSS property.
+> As a presentation attribute, `mask` also has a CSS property counterpart: {{cssxref("mask")}}. When both are specified, the CSS property takes priority.
 
 You can use this attribute with the following SVG elements:
 
@@ -92,3 +92,7 @@ Since SVG2, the {{cssxref('mask')}} attribute is defined as a CSS property and i
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- CSS {{cssxref("mask")}} property

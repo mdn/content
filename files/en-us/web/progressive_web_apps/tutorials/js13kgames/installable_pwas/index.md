@@ -75,7 +75,7 @@ Most of the members are self-explanatory. Here is a description of the members s
 - `theme_color`: A primary color for the UI, used by operating system.
 - `background_color`: A color used as the app's default background, used during install and on the splash screen.
 
-There are even more members you can use than listed above — be sure to check the [Web App Manifest reference](/en-US/docs/Web/Manifest) for details.
+There are even more members you can use than listed above — be sure to check the [Web App Manifest reference](/en-US/docs/Web/Progressive_web_apps/Manifest) for details.
 
 ## Installing the PWA
 

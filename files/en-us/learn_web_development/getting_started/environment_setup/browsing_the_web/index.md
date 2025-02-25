@@ -43,7 +43,7 @@ We will start by describing various web-related concepts: web pages, websites, w
 - **Web page**
   - : A document that can be displayed in a web {{Glossary("browser")}}. These are also often called just "pages". Such documents are written in the {{Glossary("HTML")}} language (which we look at in more detail later on).
 - **Website**
-  - : A collection of web pages grouped together into a single resourse, with links connecting them together. Often called a "site".
+  - : A collection of web pages grouped together into a single resource, with links connecting them together. Often called a "site".
 - **Web server**
   - : A computer that hosts a website on the Internet.
 - **Search engine**
@@ -144,7 +144,7 @@ When you access the web, quite a lot happens between your first interaction (for
    2. When that file is received by the browser, it will start to parse it, and will probably find instructions to make more requests. As discussed above, these might be for files to embed such as images, style information, scripts, and so on.
 4. When all of the resources have been requested, the web browser parses and renders them as required, before displaying the result to the user.
 
-This description of how the web works is heavily simplified, but it is all you really need to know at this point. You will find a more detailed account of how web pages and requested and rendered by a web browser in our [Web standards](/en-US/docs/Learn_web_development/Getting_started/Web_standards) module, slightly later on.
+This description of how the web works is heavily simplified, but it is all you really need to know at this point. You will find a more detailed account of how web pages are requested and rendered by a web browser in our [Web standards](/en-US/docs/Learn_web_development/Getting_started/Web_standards) module, slightly later on.
 
 For now, try opening a web browser and loading up a couple of your favorite sites, thinking about the above steps as you do so.
 
@@ -152,7 +152,7 @@ For now, try opening a web browser and loading up a couple of your favorite site
 
 As a web developer, you will spend a lot of time searching for information, from syntax you can't remember to solutions to specific problems. It is therefore a good idea to learn how to effectively search the web.
 
-If you are looking for general information about a specific web technology feature, you should type the name of the feature into the MDN search box. For example, try typing `box model`, `fetch()` or `video element` into the the search box and see what comes up. If you don't find the information you need, try expanding your search — try your search term in a search engine.
+If you are looking for general information about a specific web technology feature, you should type the name of the feature into the MDN search box. For example, try typing `box model`, `fetch()` or `video element` into the search box and see what comes up. If you don't find the information you need, try expanding your search — try your search term in a search engine.
 
 If you are looking for a solution to a specific problem, such as `how to print out the fibonacci sequence with JavaScript` or `how to calculate whether a number is a prime number with JavaScript`, it is a good idea to search on a website such as [StackOverflow](https://stackoverflow.com), which is a community dedicated to answering programming problems. Again, try using a general search engine if a specific site doesn't give you a helpful answer.
 

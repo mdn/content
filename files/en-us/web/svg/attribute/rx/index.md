@@ -121,3 +121,7 @@ The way the value of the `rx` attribute is interpreted depend on both the {{SVGA
 ## Specifications
 
 {{Specifications}}
+
+## See also
+
+- CSS {{cssxref("rx")}} property

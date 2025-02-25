@@ -48,7 +48,7 @@ The HTTP headers are used in the [WebSocket handshake](/en-US/docs/Web/API/WebSo
     In responses, it is sent only if the requested protocol version is not supported by the server, and lists the versions that the server supports.
 - {{HTTPHeader("Sec-WebSocket-Protocol")}}
   - : An HTTP header that in requests indicates the sub-protocols supported by the client in preferred order.
-    In responses, it indicates the the sub-protocol selected by the server from the client's preferences.
+    In responses, it indicates the sub-protocol selected by the server from the client's preferences.
 - {{HTTPHeader("Sec-WebSocket-Extensions")}}
   - : An HTTP header that in requests indicates the WebSocket extensions supported by the client in preferred order.
     In responses, it indicates the extension selected by the server from the client's preferences.

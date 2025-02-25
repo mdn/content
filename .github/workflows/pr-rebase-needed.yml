@@ -5,6 +5,10 @@ on:
   pull_request_target:
     types: [synchronize]
 
+permissions:
+  # Label pull requests.
+  pull-requests: write
+
 jobs:
   label-rebase-needed:
     uses: mdn/workflows/.github/workflows/pr-rebase-needed.yml@main
