@@ -148,7 +148,7 @@ Additional functions, including `calc-mix()`, `crossorigin()`, `first-valid()`, 
 - [`vw`](/en-US/docs/Web/CSS/length#vw)
 - [`x`](/en-US/docs/Web/CSS/length#x)
 
-[Flex units](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#flex_units) (`fr`) and [container units](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#container_units) (`cqb`,`cqh`,`cqi`,`cqmax`,`cqmin`,`cqw`) are defined in the [CSS flexible box layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout) and [CSS conditional rules](/en-US/docs/Web/CSS/CSS_conditional_rules) modules, respectively.
+[Flex units](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#flex_units) (`fr`) and [container units](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#container_units) (`cqb`,`cqh`,`cqi`,`cqmax`,`cqmin`,`cqw`) are defined in the [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) and [CSS conditional rules](/en-US/docs/Web/CSS/CSS_conditional_rules) modules, respectively.
 
 #### Unit categorizations
 
@@ -228,7 +228,7 @@ Additional functions, including `calc-mix()`, `crossorigin()`, `first-valid()`, 
   - {{cssxref("unset")}}
   - {{cssxref("all")}}
 
-- [CSS flexible box layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout) module
+- [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) module
 
   - {{cssxref("&lt;flex&gt;")}}
   - [Flex units](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#flex_units) (`fr`)
