@@ -202,16 +202,24 @@ The code then uses {{domxref("CookieStore.get()")}} to fetch "cookie1" and log i
 ```js
 async function cookieTest() {
   // Set a cookie passing name and value
-  await cookieStore.set("cookie1", "cookie1-value");
+  try {
+    await cookieStore.set("cookie1", "cookie1-value");
+  } catch (error) {
+    log(`Error setting cookie1: ${error}`);
+  }
 
   // Set a cookie passing an options object
   const day = 24 * 60 * 60 * 1000;
-  await cookieStore.set({
-    name: "cookie2",
-    value: `cookie2-value`,
-    expires: Date.now() + day,
-    partitioned: true,
-  });
+  try {
+    await cookieStore.set({
+      name: "cookie2",
+      value: `cookie2-value`,
+      expires: Date.now() + day,
+      partitioned: true,
+    });
+  } catch (error) {
+    log(`Error setting cookie2: ${error}`);
+  }
 
   // Set cookie using document.cookie
   // (to demonstrate these are are fetched too)
