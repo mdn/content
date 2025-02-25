@@ -87,7 +87,7 @@ footer {
 }
 ```
 
-Along with the above CSS, also include the [`<meta name="color-scheme">`](/en-US/docs/Web/HTML/Element/meta/name#color-scheme) HTML {{HTMLElement("meta")}} tag in the {{htmlelement("head")}}, before any CSS style information, to inform user agents about the preferred color scheme,  helping prevent unwanted screen flashes during the page load.
+Along with the above CSS, also include the [`<meta name="color-scheme">`](/en-US/docs/Web/HTML/Element/meta/name#color-scheme) HTML {{HTMLElement("meta")}} tag in the {{htmlelement("head")}}, before any CSS style information, to inform user agents about the preferred color scheme, helping prevent unwanted screen flashes during the page load.
 
 ### Styling based on color schemes
 
