@@ -59,11 +59,12 @@ speak-as: spell-out digits no-punctuation;
 ### HTML
 
 ```HTML
-  <p class="normal">Hello, world!</p>
-  <p class="spell-out">Hello, world!</p>
-  <p class="literal-punctuation">Hello, world!</p>
-  <p class="no-punctuation">Hello, world!</p>
-  <p class="digits">25</p>
+  <p class="normal">Hello, world! I'm 25.</p>
+  <p class="spell-out">Hello, world! I'm 25.</p>
+  <p class="literal-punctuation">Hello, world! I'm 25.</p>
+  <p class="no-punctuation">Hello, world! I'm 25.</p>
+  <p class="digits">Hello, world! I'm 25.</p>
+  <p class="multi">Hello, world! I'm 25.</p>
 ```
 
 ### CSS
