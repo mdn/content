@@ -1,10 +1,9 @@
 ---
 title: Optimizing startup performance
-slug: Web/Performance/Optimizing_startup_performance
+slug: Web/Performance/Guides/Optimizing_startup_performance
 page-type: guide
+sidebar: performancesidebar
 ---
-
-{{QuickLinksWithSubPages("Web/Performance")}}
 
 Improving your startup performance is often one of the highest value performance optimizations that can be made. How long does your app take to start up? Does it seem to lock up the device or the user's browser while the app loads? That makes users worry that your application has crashed, or that something else is wrong. Good user experience includes ensuring your app loads quickly. This article provides performance tips and suggestions for both writing new applications and porting applications to the web from other platforms.
 
@@ -36,7 +35,7 @@ Here are some suggestions for how to build your startup process to be as asynchr
 - If you need to decode asset files (for example, decoding JPEG files and turning them into raw texture data for later use by WebGL), that's great to do in workers.
 - When dealing with data supported by the browser (for example, decoding image data), use the decoders built into the browser or device rather than rolling your own or using one from the original codebase. The provided one is almost certainly significantly faster, and will reduce your app size to boot. In addition, the browser may automatically parallelize these decoders.
 - Any data processing that can be done in parallel should be. Don't do one chunk of data after another; do them all at once when possible!
-- Don't include scripts or stylesheets that don't participate in the [critical rendering path](/en-US/docs/Web/Performance/Critical_rendering_path) in your startup HTML file. Load them only when needed.
+- Don't include scripts or stylesheets that don't participate in the [critical rendering path](/en-US/docs/Web/Performance/Guides/Critical_rendering_path) in your startup HTML file. Load them only when needed.
 - Reduce the size of your JavaScript files. Try to send the minified version of the file to the browser and use compression like Gzip or Brotli.
 - Utilize resource hints (like preconnect or preload) whenever possible to indicate to the browser which files are more critical for your application.
 

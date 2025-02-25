@@ -1,10 +1,10 @@
 ---
 title: "Populating the page: how browsers work"
-slug: Web/Performance/How_browsers_work
+short-title: How browsers work
+slug: Web/Performance/Guides/How_browsers_work
 page-type: guide
+sidebar: performancesidebar
 ---
-
-{{QuickLinksWithSubPages("Web/Performance")}}
 
 Users want web experiences with content that is fast to load and smooth to interact with. Therefore, a developer should strive to achieve these two goals.
 
@@ -106,7 +106,7 @@ Even if the requested page's HTML is larger than the initial 14KB packet, the br
 
 ### Building the DOM tree
 
-We describe five steps in the [critical rendering path](/en-US/docs/Web/Performance/Critical_rendering_path).
+We describe five steps in the [critical rendering path](/en-US/docs/Web/Performance/Guides/Critical_rendering_path).
 
 The first step is processing the HTML markup and building the DOM tree. HTML parsing involves [tokenization](/en-US/docs/Web/API/DOMTokenList) and tree construction. HTML tokens include start and end tags, as well as attribute names and values. If the document is well-formed, parsing it is straightforward and faster. The parser parses tokenized input into the document, building up the document tree.
 
