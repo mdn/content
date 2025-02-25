@@ -12160,7 +12160,6 @@
 /en-US/docs/Web/CSS/sign()	/en-US/docs/Web/CSS/sign
 /en-US/docs/Web/CSS/sign_function	/en-US/docs/Web/CSS/sign
 /en-US/docs/Web/CSS/single-transition-timing-function	/en-US/docs/Web/CSS/easing-function
-/en-US/docs/Web/CSS/speak-as	/en-US/docs/Web/CSS/@counter-style/speak-as
 /en-US/docs/Web/CSS/specified_value	/en-US/docs/Web/CSS/CSS_cascade/specified_value
 /en-US/docs/Web/CSS/static	/en-US/docs/Web/CSS/position
 /en-US/docs/Web/CSS/suffix	/en-US/docs/Web/CSS/@counter-style/suffix
