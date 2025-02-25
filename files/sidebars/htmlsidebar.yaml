@@ -202,13 +202,15 @@ l10n:
     Viewport_meta_tag: Viewport meta tag
     Allowing_cross-origin_images_and_canvas: Разрешение использования изображений из разных источников и canvas
   zh-CN:
-    Beginners: 教程
-    Reference: 参考：
+    Beginners: 初学者教程
+    Creating_the_content: 你的第一个网站：创建内容
+    Structuring_content_with_HTML: 使用 HTML 构建内容
+    Reference: 参考
     HTML_Elements: HTML 元素
     Global_attributes: 全局属性
     Attributes: 属性
     Input_types: <code>&lt;input&gt;</code> 类型
-    Guides: 指南：
+    Guides: 指南
     Content_categories: 内容分类
     Block-level_elements: 块级元素
     Inline_elements: 行级元素

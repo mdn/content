@@ -9,7 +9,25 @@ browser-compat: html.elements.wbr
 
 The **`<wbr>`** [HTML](/en-US/docs/Web/HTML) element represents a word break opportunity—a position within text where the browser may optionally break a line, though its line-breaking rules would not otherwise create a break at that location.
 
-{{EmbedInteractiveExample("pages/tabbed/wbr.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;wbr&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<div id="example-paragraphs">
+  <p>Fernstraßenbauprivatfinanzierungsgesetz</p>
+  <p>Fernstraßen<wbr />bau<wbr />privat<wbr />finanzierungs<wbr />gesetz</p>
+  <p>Fernstraßen&shy;bau&shy;privat&shy;finanzierungs&shy;gesetz</p>
+</div>
+```
+
+```css interactive-example
+#example-paragraphs {
+  background-color: white;
+  overflow: hidden;
+  resize: horizontal;
+  width: 9rem;
+  border: 2px dashed #999;
+}
+```
 
 ## Attributes
 

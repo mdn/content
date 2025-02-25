@@ -106,7 +106,7 @@ We can style the backdrop of the dialog by using the {{cssxref('::backdrop')}} p
 
 #### JavaScript
 
-The dialog is opened modally using the `.showModal()` method and closed using the `.close()` method.
+The dialog is opened modally using the `.showModal()` method and closed using the `.close()` or `.requestClose()` methods.
 
 ```js
 const dialog = document.querySelector("dialog");

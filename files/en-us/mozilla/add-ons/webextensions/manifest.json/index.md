@@ -8,7 +8,7 @@ browser-compat: webextensions.manifest
 {{AddonSidebar}}
 
 > [!NOTE]
-> This article describes manifest.json for web extensions. If you are looking for information about the manifest.json in PWAs, check out the [Web App Manifest](/en-US/docs/Web/Manifest) article.
+> This article describes manifest.json for web extensions. If you are looking for information about the manifest.json in PWAs, check out the [Web App Manifest](/en-US/docs/Web/Progressive_web_apps/Manifest) article.
 
 The `manifest.json` file is the only file that every extension using WebExtension APIs must contain.
 

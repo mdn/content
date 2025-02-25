@@ -11,8 +11,6 @@ Gets all commands for the extension that you have registered using the [`command
 
 The commands are returned as an array of {{WebExtAPIRef('commands.Command')}} objects. Alternately, if you are using the promise-based version of the API, `browser.commands.getAll()`, the commands are passed into the `onFulfilled` argument to [`Promise.then()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then).
 
-This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
-
 ## Syntax
 
 ```js-nolint

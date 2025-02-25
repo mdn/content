@@ -100,46 +100,6 @@ HTML password input elements ([`<input type="password">`](/en-US/docs/Web/HTML/E
   </tbody>
 </table>
 
-### Plaintext-only contenteditable mode
-
-The `plaintext-only` value of the [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) global attribute indicates that the element is editable; rich text formatting is disabled and any formatting in pasted text is automatically stripped. (See [Firefox bug 1922723](https://bugzil.la/1922723) for more details.)
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>133</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>135</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>135</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>133</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>dom.element.contenteditable.plaintext-only.enabled</code></td>
-    </tr>
-  </tbody>
-</table>
-
 ## CSS
 
 ### Hex boxes to display stray control characters
@@ -818,46 +778,6 @@ The parts that have been implemented include:
     <tr>
       <th>Preference name</th>
       <td colspan="2"><code>layout.css.anchor-positioning.enabled</code></td>
-    </tr>
-  </tbody>
-</table>
-
-### :has-slotted pseudo-class
-
-The {{CSSXRef(":has-slotted")}} [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) is used to style elements in {{HTMLElement("template")}} that have content added to a {{HTMLElement("slot")}} element when rendering a [web component](/en-US/docs/Web/API/Web_components) ([Firefox bug 1921747](https://bugzil.la/1921747)).
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>133</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>133</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>133</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>133</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>layout.css.has-slotted-selector.enabled</code></td>
     </tr>
   </tbody>
 </table>
@@ -2062,6 +1982,47 @@ For more details see [Firefox bug 1687364](https://bugzil.la/1687364).
     <tr>
       <th>Preference name</th>
       <td colspan="2"><code>network.cors_preflight.authorization_covered_by_wildcard</code></td>
+    </tr>
+  </tbody>
+</table>
+
+### Clear-Site-Data: cache can clear the browser cache
+
+The [`Clear-Site-Data`](/en-US/docs/Web/HTTP/Headers/Clear-Site-Data) can be used with the [`cache`](/en-US/docs/Web/HTTP/Headers/Clear-Site-Data#cache) or `*` directives to clear the local browser cache.
+For more details see [Firefox bug 1942272](https://bugzil.la/1942272).
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>136</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>136</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>136</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>136</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>privacy.clearSiteDataHeader.cache.enabled</code></td>
     </tr>
   </tbody>
 </table>

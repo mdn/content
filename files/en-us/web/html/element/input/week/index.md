@@ -9,7 +9,33 @@ browser-compat: html.elements.input.type_week
 
 {{HTMLElement("input")}} elements of type **`week`** create input fields allowing easy entry of a year plus the [ISO 8601 week number](https://en.wikipedia.org/wiki/ISO_8601#Week_dates) during that year (i.e., week 1 to [52 or 53](https://en.wikipedia.org/wiki/ISO_8601#Week_dates)).
 
-{{EmbedInteractiveExample("pages/tabbed/input-week.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;week&quot;&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<label for="camp-week">Choose a week in May or June:</label>
+
+<input
+  type="week"
+  name="week"
+  id="camp-week"
+  min="2018-W18"
+  max="2018-W26"
+  required />
+```
+
+```css interactive-example
+label {
+  display: block;
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+```
 
 The control's user interface varies from browser to browser; cross-browser support is currently a bit limited, with only Chrome/Opera and Microsoft Edge supporting it at this time. In non-supporting browsers, the control degrades gracefully to function identically to [`<input type="text">`](/en-US/docs/Web/HTML/Element/input/text).
 

@@ -111,7 +111,7 @@ To style elements based on color scheme preferences, use the [`prefers-color-sch
 }
 ```
 
-Alternatively, use the [`light-dark()`](/en-US/docs/Web/CSS/color_value/light-dark) [`<color>` function](/en-US/docs/Web/CSS/CSS_Functions#color_functions) to set the foreground and background colors for the different color schemes using a more compact code structure:
+Alternatively, use the [`light-dark()`](/en-US/docs/Web/CSS/color_value/light-dark) [`<color>` function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions#color_functions) to set the foreground and background colors for the different color schemes using a more compact code structure:
 
 ```css
 :root {

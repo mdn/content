@@ -9,7 +9,38 @@ browser-compat: html.elements.dl
 
 The **`<dl>`** [HTML](/en-US/docs/Web/HTML) element represents a description list. The element encloses a list of groups of terms (specified using the {{HTMLElement("dt")}} element) and descriptions (provided by {{HTMLElement("dd")}} elements). Common uses for this element are to implement a glossary or to display metadata (a list of key-value pairs).
 
-{{EmbedInteractiveExample("pages/tabbed/dl.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;dl&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<p>Cryptids of Cornwall:</p>
+
+<dl>
+  <dt>Beast of Bodmin</dt>
+  <dd>A large feline inhabiting Bodmin Moor.</dd>
+
+  <dt>Morgawr</dt>
+  <dd>A sea serpent.</dd>
+
+  <dt>Owlman</dt>
+  <dd>A giant owl-like creature.</dd>
+</dl>
+```
+
+```css interactive-example
+p,
+dt {
+  font-weight: bold;
+}
+
+dl,
+dd {
+  font-size: 0.9rem;
+}
+
+dd {
+  margin-bottom: 1em;
+}
+```
 
 ## Attributes
 

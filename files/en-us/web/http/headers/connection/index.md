@@ -38,7 +38,7 @@ Therefore, to ensure backwards compatibility, browsers often send `Connection: k
       </td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>Yes</td>
     </tr>
   </tbody>

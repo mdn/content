@@ -74,6 +74,6 @@ Set-Cookie: __Host-BMOSESSIONID=YnVnemlsbGE=; Max-Age=2592000; Path=/; Secure; H
 ## See also
 
 - [Using HTTP cookies](/en-US/docs/Web/HTTP/Cookies)
-- [Third-party cookies](/en-US/docs/Web/Privacy/Third-party_cookies)
+- [Third-party cookies](/en-US/docs/Web/Privacy/Guides/Third-party_cookies)
 - [`Document.cookie`: Security](/en-US/docs/Web/API/Document/cookie#security)
 - [RFC 6265 (HTTP Cookies)](https://datatracker.ietf.org/doc/html/rfc6265) (2011)

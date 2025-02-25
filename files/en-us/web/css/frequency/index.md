@@ -54,4 +54,4 @@ No browser currently supports this feature.
 ## See also
 
 - {{cssxref("&lt;frequency-percentage&gt;")}}
-- [CSS Values and Units](/en-US/docs/Web/CSS/CSS_Values_and_Units)
+- [CSS values and units](/en-US/docs/Web/CSS/CSS_Values_and_Units) module
