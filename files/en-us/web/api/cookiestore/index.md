@@ -59,6 +59,10 @@ reload.addEventListener("click", () => {
 
 const logElement = document.querySelector("#log");
 
+function clearLog() {
+  logElement.innerText = "";
+}
+
 function log(text) {
   logElement.innerText = `${logElement.innerText}${text}\n`;
   logElement.scrollTop = logElement.scrollHeight;
@@ -81,26 +85,36 @@ function logCookie(name, cookie) {
 #### JavaScript
 
 The example code sets two cookies.
-The first is set with `name` and `value` properties, while the second is set with `name`, `value`, `expires`, and `partitioned` properties.
+The first is set with `name` and `value` properties, while the second is set with `name`, `value`, and `expires` properties.
 
-We then use the {{domxref("CookieStore.get()")}} method to get the cookies, which are then logged.
+We then use the {{domxref("CookieStore.get()")}} method to get each of the cookies, which are then logged.
 
 ```js
 async function cookieTest() {
-  // Set a cookie passing name and value
-  await cookieStore.set({
-    name: "cookie1",
-    value: `cookie1-value`,
-  });
+  clearLog();
 
-  // Set a cookie passing an options object
+  // Set cookie: passing name and value
+  try {
+    await cookieStore.set({
+      name: "cookie1",
+      value: `cookie1-value`,
+    });
+  } catch (error) {
+    log(`Error setting cookie1: ${error}`);
+  }
+
+  // Set cookie: passing options
   const day = 24 * 60 * 60 * 1000;
-  await cookieStore.set({
-    name: "cookie2",
-    value: `cookie2-value`,
-    expires: Date.now() + day,
-    partitioned: true,
-  });
+
+  try {
+    await cookieStore.set({
+      name: "cookie2",
+      value: `cookie2-value`,
+      expires: Date.now() + day,
+    });
+  } catch (error) {
+    log(`Error setting cookie2: ${error}`);
+  }
 
   // Get named cookies and log their properties
   const cookie1 = await cookieStore.get("cookie1");
@@ -131,7 +145,7 @@ Even if the values are not displayed, they are still set.
 
 ### Getting cookies
 
-The following example shows how you can get a particular cookie using {{domxref("CookieStore.get()")}} or all cookies using {{domxref("CookieStore.getAll()")}}.
+This example shows how you can get a particular cookie using {{domxref("CookieStore.get()")}} or all cookies using {{domxref("CookieStore.getAll()")}}.
 
 ```html hidden
 <button id="showCookies" type="button">Show cookies</button>
