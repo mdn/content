@@ -49,6 +49,10 @@ Or
     - `value`
       - : A string with the value of the cookie.
 
+> [!WARNING]
+> Note while you can set any of the options and these will be used by browsers internally, but some browsers will only return `name` and `value` from {{domxref("CookieStore.get()")}} and {{domxref("CookieStore.getAll()")}}.
+> What this means is that if you want to use these properties for matching a particular cookie later, for example in {{domxref("CookieStore.delete()")}}, you will need to store the information for later use on those browsers.
+
 ### Return value
 
 A {{jsxref("Promise")}} that resolves with {{jsxref("undefined")}} when setting the cookie completes.
@@ -65,10 +69,10 @@ A {{jsxref("Promise")}} that resolves with {{jsxref("undefined")}} when setting 
 ### Setting a cookie with name and value
 
 The following example sets a cookie by passing a `name` and `value` of "cookie1" and "cookie1-value", respectively.
-This approach can be used when you only want to set a name and value.
+The other properties of the cookie are set with default values, as defined in the [`options`](#options) parameter.
 
 ```html hidden
-<button id="showCookies" type="button">Show cookies</button>
+<button id="showCookies" type="button">Show cookie</button>
 <button id="reset" type="button">Reset</button>
 <pre id="log"></pre>
 ```
@@ -91,6 +95,10 @@ reload.addEventListener("click", () => {
 
 const logElement = document.querySelector("#log");
 
+function clearLog() {
+  logElement.innerText = "";
+}
+
 function log(text) {
   logElement.innerText = `${logElement.innerText}${text}\n`;
   logElement.scrollTop = logElement.scrollHeight;
@@ -99,6 +107,7 @@ function log(text) {
 
 ```js hidden
 function logCookie(name, cookie) {
+  clearLog();
   if (cookie) {
     log(`${name}:`);
     for (const [key, value] of Object.entries(cookie)) {
@@ -112,17 +121,19 @@ function logCookie(name, cookie) {
 
 #### JavaScript
 
-The example code first waits for the cookie to be set, then waits to get the value, then logs the value (note that the logging and other display code is omitted).
+The code first waits for the cookie to be set within a `try...catch` block, as setting a cookie can throw an exception.
+It then gets the same cookie and displays its properties (note that some logging and other display code is omitted).
 
 ```js
 async function cookieTest() {
-  // await on setting the cookie
-  await cookieStore.set({
-    name: "cookie1",
-    value: `cookie1-value`,
-  });
+  // Set cookie: passing name and value
+  try {
+    await cookieStore.set("cookie1", "cookie1-value");
+  } catch (error) {
+    log(`Error setting cookie1: ${error}`);
+  }
 
-  // await on getting the cookie and then log its values
+  // Get the cookie and log its values
   const cookie = await cookieStore.get("cookie1");
   logCookie("cookie1", cookie);
 }
@@ -138,7 +149,7 @@ showCookies.addEventListener("click", () => {
 
 #### Result
 
-Press **Show cookies** to set the cookie and then display it.
+Press **Show cookie** to set the cookie and then display it.
 Note that some browsers will only display the `name` and `value`, while others will display all the properties of the cookie.
 
 {{EmbedLiveSample('Setting a cookie with name and value', 100, 250)}}
@@ -148,7 +159,7 @@ Note that some browsers will only display the `name` and `value`, while others w
 The following example sets a cookie by passing an `options` object with `name`, `value`, `expires`, and `partitioned`.
 
 ```html hidden
-<button id="showCookies" type="button">Show cookies</button>
+<button id="showCookies" type="button">Show cookie</button>
 <button id="reset" type="button">Reset</button>
 <pre id="log"></pre>
 ```
@@ -174,6 +185,10 @@ const logElement = document.querySelector("#log");
 function log(text) {
   logElement.innerText = `${logElement.innerText}${text}\n`;
   logElement.scrollTop = logElement.scrollHeight;
+}
+
+function clearLog() {
+  logElement.innerText = "";
 }
 ```
 
@@ -197,24 +212,25 @@ The example then gets the new cookie, if it exists, and logs its properties (not
 
 ```js
 async function cookieTest() {
-  const day = 24 * 60 * 60 * 1000;
+  clearLog();
 
+  const day = 24 * 60 * 60 * 1000;
+  const cookieName = "cookie2";
   try {
-    // Set cookie
+    // Set cookie: passing options
     await cookieStore.set({
-      name: "cookie2",
-      value: `cookie2-value`,
+      name: cookieName,
+      value: `${cookieName}-value`,
       expires: Date.now() + day,
-      partitioned: true,
     });
   } catch (error) {
-    log(`Error setting cookie2: ${error}`);
+    log(`Error setting ${cookieName}: ${error}`);
     console.log(error);
   }
 
   // Log the new cookie
-  const cookie = await cookieStore.get("cookie2");
-  logCookie("cookie2", cookie);
+  const cookie = await cookieStore.get(cookieName);
+  logCookie(cookieName, cookie);
 }
 ```
 
@@ -230,7 +246,7 @@ showCookies.addEventListener("click", () => {
 
 #### Result
 
-Press **Show cookies** to set the cookie and then display it.
+Press **Show cookie** to set the cookie and then display it.
 Note that some browsers will only display the `name` and `value`, while others will display all the properties of the cookie.
 Even if the values are not displayed, they are still set.
 
