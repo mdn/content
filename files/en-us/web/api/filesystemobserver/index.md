@@ -7,7 +7,7 @@ browser-compat: api.FileSystemObserver
 
 {{securecontext_header}}{{APIRef("File System API")}}
 
-The **`FileSystemObserver`** interface of the {{domxref("File System API", "File System API", "", "nocode")}} provides a mechanism to observe changes to the underlying file systems behind the File API, both the user-observable file system and the [Origin Private File System](/en-US/docs/Web/API/File_System_API/Origin_private_file_system) (OPFS). Previous to this, sites had to recursively poll the file system to find changes in the files or folder structure. This can be time-consuming and wasteful, especially for large directories.
+The **`FileSystemObserver`** interface of the {{domxref("File System API", "File System API", "", "nocode")}} provides a mechanism to observe changes to the user-observable file system and the [Origin Private File System](/en-US/docs/Web/API/File_System_API/Origin_private_file_system) (OPFS). This means web applications don't have to poll the file system to find changes in the files or folder structure, which can be time-consuming and wasteful.
 
 ## Constructor
 
