@@ -159,4 +159,4 @@ In this case, the parent element with a `color-scheme` CSS property is a `<div>`
 - [Video tutorial: Coding a Dark Mode for your Website](https://www.youtube.com/watch?v=jmepqJ5UbuM)
 - [Redesigning your product and website for dark mode](https://stuffandnonsense.co.uk/blog/redesigning-your-product-and-website-for-dark-mode)
 - Changing color schemes in [Windows](https://blogs.windows.com/windowsexperience/2019/04/01/windows-10-tip-dark-theme-in-file-explorer/), [macOS](https://developer.apple.com/design/human-interface-guidelines/dark-mode), [Android](https://www.theverge.com/2019/5/7/18530599/google-android-q-features-hands-on-dark-mode-gestures-accessibility-io-2019), or [other platforms](https://support.mozilla.org/en-US/questions/1271928).
-- [`<meta name="color-scheme">`](/en-US/docs/Web/HTML/Element/meta/name#color-scheme) HTML {{HTMLElement("meta")}} tag informs user agents about the desired color scheme of the page immediately before CSS in the page is loaded. The meta tag helps prevent unwanted screen flashes during the page load.
+- [`<meta name="color-scheme">`](/en-US/docs/Web/HTML/Element/meta/name#color-scheme)
