@@ -55,7 +55,7 @@ Below is a summary of severity levels and enforcement actions.
   - This includes avoiding any interactions in Mozilla channels, spaces/offices, and external channels like social media (e.g., following/liking/retweeting).
 
 > Mandatory cooling-off period.
-> 
+>
 > Mandatory CPG onboarding process.
 
 ### Level 4: Ban across MDN and Mozilla Spaces, All Areas Permanent Ban
