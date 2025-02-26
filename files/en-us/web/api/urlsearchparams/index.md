@@ -98,7 +98,7 @@ console.log(searchParams.get("foo")); // "bar"
 
 ### Parsing window.location
 
-The {{domxref("Location")}} interface does not provide a readily-available `searchParams` property, like {{domxref("URL")}} does. We can parse `location.search` with `URLSearchParams`.
+Unlike {{domxref("URL")}}, the {{domxref("Location")}} interface does not provide a readily-available `searchParams` property. We can parse `location.search` with `URLSearchParams`.
 
 ```js
 // Assume page has location:
