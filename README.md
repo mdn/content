@@ -7,7 +7,8 @@ The following is a set of guidelines for contributing to the
 [content of MDN Web Docs](https://github.com/mdn/content), which is
 hosted within the [MDN Organization](https://github.com/mdn) on GitHub.
 
-> **Note:** Just want to find a task and jump in?
+> [!Note]
+> Just want to find a task and jump in?
   See [Getting started on MDN](https://developer.mozilla.org/en-US/docs/MDN/Contribute/Getting_started)
   for an overview of how to join, and [Contributing to MDN](https://developer.mozilla.org/en-US/docs/MDN/Contribute)
   for a filtered list of tasks.
@@ -131,7 +132,8 @@ you can sign in to GitHub, go to <https://github.com/mdn/content>,
 navigate to the source file `files/en-us/web/javascript/index.md`,
 and then click on the edit (pencil) button.
 
-> **Tip:** Click the **Source on GitHub** link in the footer of any MDN page
+> [!Tip]
+> Click the **Source on GitHub** link in the footer of any MDN page
   to jump to its source file on GitHub.
 
 From there the GitHub UI will take your hand and
@@ -143,7 +145,7 @@ ultimate goal, a [pull request](https://docs.github.com/en/pull-requests/collabo
 Your pull request represents the work you want to be reviewed,
 hopefully approved, and then merged into the `main` branch of this repository.
 
-> **Note:** See the [pull request etiquette section](#pull-request-etiquette)
+> [!Note] See the [pull request etiquette section](#pull-request-etiquette)
   for more details on creating and handling pull requests successfully.
 
 If you're not certain of the changes that you want to make, get in touch
