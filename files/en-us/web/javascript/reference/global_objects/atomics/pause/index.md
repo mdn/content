@@ -7,7 +7,9 @@ browser-compat: javascript.builtins.Atomics.pause
 
 {{JSRef}}
 
-The **`Atomics.pause()`** static method provides a micro-wait primitive, by hinting the CPU that it is spinning while waiting on a value. This releases shared CPU resources to other cores, without yielding the current thread. It has no observable behavior other than timing. The exact behavior is dependent on the CPU architecture and the operating system; for example, in Intel x86, it may be a `pause` instruction as per [Intel's optimization manual](https://www.intel.com/content/www/us/en/content-details/671488/intel-64-and-ia-32-architectures-optimization-reference-manual-volume-1.html). It could be a no-op in certain platforms.
+The **`Atomics.pause()`** static method provides a micro-wait primitive by hinting to the CPU that it is spinning while waiting on a value. This releases shared CPU resources to other cores without yielding the current thread. 
+
+`pause()` has no observable behavior other than timing. The exact behavior is dependent on the CPU architecture and the operating system. For example, in Intel x86, it may be a `pause` instruction as per [Intel's optimization manual](https://www.intel.com/content/www/us/en/content-details/671488/intel-64-and-ia-32-architectures-optimization-reference-manual-volume-1.html). It could be a no-op in certain platforms.
 
 ## Syntax
 
@@ -19,7 +21,7 @@ Atomics.pause(durationHint)
 ### Parameters
 
 - `durationHint` {{optional_inline}}
-  - : An integer that is positively correlated with the wait duration. Larger values result in longer waits (and more `pause` instructions sent), but the exact number has no physical meaning. There may be internal upper bound on the maximum amount of time paused on the order of tens to hundreds of nanoseconds. The hint may be ignored.
+  - : An integer that is positively correlated with the wait duration. Larger values result in longer waits (and more `pause` instructions sent), but the exact number has no physical meaning. There may be an internal upper bound on the maximum amount of time paused, to the order of tens to hundreds of nanoseconds. The hint may be ignored.
 
 ### Return value
 
@@ -28,7 +30,7 @@ None ({{jsxref("undefined")}}).
 ### Exceptions
 
 - {{jsxref("TypeError")}}
-  - : Thrown if `duration` is not an integer or `undefined`.
+  - : Thrown if `durationHint` is not an integer or `undefined`.
 
 ## Examples
 
@@ -59,7 +61,7 @@ Atomics.wait(i32, 0, 1);
 
 ### Backoff strategies
 
-The `durationHint` parameter can be used to implement backoff strategies. For example, a thread can start with a small hint and increase it exponentially on each iteration. This is preferable to calling `pause` many times, because in un-JITed code, function calls themselves have a high overhead.
+The `durationHint` parameter can be used to implement backoff strategies. For example, a thread can start with a small hint and increase it exponentially on each iteration. This is preferable to calling `pause()` many times because in un-JITed code, function calls themselves have a high overhead.
 
 ```js
 // Exponential backoff

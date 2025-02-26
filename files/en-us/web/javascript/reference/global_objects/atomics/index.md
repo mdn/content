@@ -45,7 +45,7 @@ The `wait()` and `notify()` methods are modeled on Linux futexes ("fast user-spa
 - {{jsxref("Atomics.or()")}}
   - : Computes a bitwise OR on the value at the specified index of the array with the provided value. Returns the old value at that index.
 - {{jsxref("Atomics.pause()")}}
-  - : Provides a micro-wait primitive, by hinting the CPU that it is spinning while waiting on a value. This releases shared CPU resources to other cores, without yielding the current thread.
+  - : Provides a micro-wait primitive by hinting to the CPU that it is spinning while waiting on a value. This releases shared CPU resources to other cores without yielding the current thread.
 - {{jsxref("Atomics.store()")}}
   - : Stores a value at the specified index of the array. Returns the value.
 - {{jsxref("Atomics.sub()")}}
