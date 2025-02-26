@@ -71388,7 +71388,33 @@
       "Aaronlev"
     ]
   },
-  "Web/Accessibility/ARIA/ARIA_Techniques": {
+  "Web/Accessibility/ARIA/Guides": {
+    "modified": "2019-03-24T00:13:12.236Z",
+    "contributors": ["SphinxKnight", "sidgan", "Sheppy", "hhillen"]
+  },
+  "Web/Accessibility/ARIA/Guides/Live_regions": {
+    "modified": "2020-08-04T14:52:30.693Z",
+    "contributors": [
+      "chrisdavidmills",
+      "kwangdosa",
+      "gaurav5430",
+      "PickensC",
+      "estelle",
+      "pradn",
+      "patrickhlauke",
+      "rishabhsrao",
+      "headquarters",
+      "ajjusto",
+      "dcondrey",
+      "mike-nelson",
+      "mrenty",
+      "Hywan",
+      "integritydc",
+      "Sheppy",
+      "Aaronlev"
+    ]
+  },
+  "Web/Accessibility/ARIA/Guides/Techniques": {
     "modified": "2020-12-08T23:20:53.939Z",
     "contributors": [
       "skkiennhtg2327",
@@ -71421,32 +71447,6 @@
       "anastasia",
       "hhillen",
       "SteveLee"
-    ]
-  },
-  "Web/Accessibility/ARIA/Guides": {
-    "modified": "2019-03-24T00:13:12.236Z",
-    "contributors": ["SphinxKnight", "sidgan", "Sheppy", "hhillen"]
-  },
-  "Web/Accessibility/ARIA/Guides/Live_regions": {
-    "modified": "2020-08-04T14:52:30.693Z",
-    "contributors": [
-      "chrisdavidmills",
-      "kwangdosa",
-      "gaurav5430",
-      "PickensC",
-      "estelle",
-      "pradn",
-      "patrickhlauke",
-      "rishabhsrao",
-      "headquarters",
-      "ajjusto",
-      "dcondrey",
-      "mike-nelson",
-      "mrenty",
-      "Hywan",
-      "integritydc",
-      "Sheppy",
-      "Aaronlev"
     ]
   },
   "Web/Accessibility/ARIA/How_to_file_ARIA-related_bugs": {

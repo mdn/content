@@ -51,7 +51,7 @@ The content of a `<main>` element should be unique to the document. Content that
 
 ### Landmark
 
-The `<main>` element behaves like a [`main` landmark](/en-US/docs/Web/Accessibility/ARIA/Roles/main_role) role. [Landmarks](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques#landmark_roles) can be used by assistive technology to quickly identify and navigate to large sections of the document. Prefer using the `<main>` element over declaring `role="main"`, unless there are [legacy browser support concerns](#browser_compatibility).
+The `<main>` element behaves like a [`main` landmark](/en-US/docs/Web/Accessibility/ARIA/Roles/main_role) role. [Landmarks](/en-US/docs/Web/Accessibility/ARIA/Guides/Techniques#landmark_roles) can be used by assistive technology to quickly identify and navigate to large sections of the document. Prefer using the `<main>` element over declaring `role="main"`, unless there are [legacy browser support concerns](#browser_compatibility).
 
 ### Skip navigation
 

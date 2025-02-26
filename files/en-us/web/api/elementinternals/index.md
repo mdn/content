@@ -95,7 +95,7 @@ The `ElementInternals` interface also includes the following properties.
 - {{domxref("ElementInternals.ariaRequired")}}
   - : A string reflecting the [`aria-required`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-required) attribute, which indicates that user input is required on the element before a form may be submitted.
 - {{domxref("ElementInternals.role")}}
-  - : A string which contains an ARIA role. A full list of ARIA roles can be found on the [ARIA techniques page](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques).
+  - : A string which contains an ARIA role. A full list of ARIA roles can be found on the [ARIA techniques page](/en-US/docs/Web/Accessibility/ARIA/Guides/Techniques).
 - {{domxref("ElementInternals.ariaRoleDescription")}}
   - : A string reflecting the [`aria-roledescription`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-roledescription) attribute, which defines a human-readable, author-localized description for the role of an Element.
 - {{domxref("ElementInternals.ariaRowCount")}}

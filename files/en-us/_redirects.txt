@@ -34,7 +34,7 @@
 /en-US/docs/ARIA/ARIA_Guides	/en-US/docs/Web/Accessibility/ARIA/Guides
 /en-US/docs/ARIA/ARIA_Live_Regions	/en-US/docs/Web/Accessibility/ARIA/Guides/Live_regions
 /en-US/docs/ARIA/ARIA_Screen_Reader_Implementors_Guide	/en-US/docs/Web/Accessibility/ARIA/ARIA_Screen_Reader_Implementors_Guide
-/en-US/docs/ARIA/ARIA_Techniques	/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques
+/en-US/docs/ARIA/ARIA_Techniques	/en-US/docs/Web/Accessibility/ARIA/Guides/Techniques
 /en-US/docs/ARIA/ARIA_Techniques/Using_the_alert_role	/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/alert_role
 /en-US/docs/ARIA/ARIA_Techniques/Using_the_alertdialog_role	/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/alertdialog_role
 /en-US/docs/ARIA/ARIA_Techniques/Using_the_aria-activedescendant_attribute	/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-activedescendant
@@ -69,7 +69,7 @@
 /en-US/docs/Accessibility/ARIA/ARIA_Guides	/en-US/docs/Web/Accessibility/ARIA/Guides
 /en-US/docs/Accessibility/ARIA/ARIA_Live_Regions	/en-US/docs/Web/Accessibility/ARIA/Guides/Live_regions
 /en-US/docs/Accessibility/ARIA/ARIA_Screen_Reader_Implementors_Guide	/en-US/docs/Web/Accessibility/ARIA/ARIA_Screen_Reader_Implementors_Guide
-/en-US/docs/Accessibility/ARIA/ARIA_Techniques	/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques
+/en-US/docs/Accessibility/ARIA/ARIA_Techniques	/en-US/docs/Web/Accessibility/ARIA/Guides/Techniques
 /en-US/docs/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role	/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/alert_role
 /en-US/docs/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role	/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/alertdialog_role
 /en-US/docs/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-activedescendant_attribute	/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-activedescendant
@@ -11380,6 +11380,7 @@
 /en-US/docs/Web/Accessibility/ARIA/ARIA_Examples	/en-US/docs/Web/Accessibility/ARIA
 /en-US/docs/Web/Accessibility/ARIA/ARIA_Guides	/en-US/docs/Web/Accessibility/ARIA/Guides
 /en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions	/en-US/docs/Web/Accessibility/ARIA/Guides/Live_regions
+/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques	/en-US/docs/Web/Accessibility/ARIA/Guides/Techniques
 /en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Complementary_role	/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/complementary_role
 /en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role	/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/alert_role
 /en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role	/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/alertdialog_role

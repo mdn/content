@@ -97,6 +97,6 @@ If there is a content area with `tabindex="0"`, add `role="region"` to convey to
 - [ARIA: `contentinfo` role](/en-US/docs/Web/Accessibility/ARIA/Roles/contentinfo_role)
 - [ARIA: `complementary` role](/en-US/docs/Web/Accessibility/ARIA/Roles/complementary_role)
 - [ARIA: `navigation` role](/en-US/docs/Web/Accessibility/ARIA/Roles/navigation_role)
-- [Landmark roles: Using ARIA: Roles, States, and Properties](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques#landmark_roles)
+- [Landmark roles: Using ARIA: Roles, States, and Properties](/en-US/docs/Web/Accessibility/ARIA/Guides/Techniques#landmark_roles)
 - [Using WAI-ARIA Landmarks – 2013 | The Paciello Group](https://www.tpgi.com/using-wai-aria-landmarks-2013/)
 - [Accessible Landmarks | scottohara.me](https://www.scottohara.me/blog/2018/03/03/landmarks.html)

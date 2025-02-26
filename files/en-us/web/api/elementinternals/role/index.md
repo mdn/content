@@ -12,7 +12,7 @@ The **`role`** read-only property of the {{domxref("ElementInternals")}} interfa
 
 ## Value
 
-A string which contains an ARIA role. A full list of ARIA roles can be found on the [ARIA techniques page](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques).
+A string which contains an ARIA role. A full list of ARIA roles can be found on the [ARIA techniques page](/en-US/docs/Web/Accessibility/ARIA/Guides/Techniques).
 
 ## Examples
 

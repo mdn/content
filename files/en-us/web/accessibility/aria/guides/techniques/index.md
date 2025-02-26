@@ -1,6 +1,6 @@
 ---
 title: "Using ARIA: Roles, states, and properties"
-slug: Web/Accessibility/ARIA/ARIA_Techniques
+slug: Web/Accessibility/ARIA/Guides/Techniques
 page-type: guide
 ---
 

@@ -115,4 +115,4 @@ The following are the reference pages covering the <abbr>WAI-ARIA</abbr> states 
 
 ## See also
 
-- [Using ARIA: roles, states, and properties](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques)
+- [Using ARIA: roles, states, and properties](/en-US/docs/Web/Accessibility/ARIA/Guides/Techniques)

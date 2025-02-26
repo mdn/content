@@ -22,7 +22,7 @@ This is a sidebar containing links to project sponsors.
 
 ## Description
 
-The `complementary` role is [a landmark](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques#landmark_roles) role. Landmarks can be used by assistive technology to quickly identify and navigate to large sections of the document. Content listed within a container with the `complementary` landmark role should make sense if separated from the main content of the document.
+The `complementary` role is [a landmark](/en-US/docs/Web/Accessibility/ARIA/Guides/Techniques#landmark_roles) role. Landmarks can be used by assistive technology to quickly identify and navigate to large sections of the document. Content listed within a container with the `complementary` landmark role should make sense if separated from the main content of the document.
 
 > [!NOTE]
 > Using the {{HTMLElement('aside')}} element will automatically communicate a section has a role of `complementary`. Developers should always prefer using the correct semantic HTML element over using ARIA.
@@ -48,7 +48,7 @@ The `complementary` role is [a landmark](/en-US/docs/Web/Accessibility/ARIA/ARIA
 
 ## Accessibility concerns
 
-[Landmark roles](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques#landmark_roles) are intended to be used sparingly, to identify larger overall sections of the document. Using too many landmark roles can create "noise" in screen readers, making it difficult to understand the overall layout of the page.
+[Landmark roles](/en-US/docs/Web/Accessibility/ARIA/Guides/Techniques#landmark_roles) are intended to be used sparingly, to identify larger overall sections of the document. Using too many landmark roles can create "noise" in screen readers, making it difficult to understand the overall layout of the page.
 
 ## Best practices
 
@@ -93,7 +93,7 @@ Certain technologies such as browser extensions can generate lists of all landma
 - [\<aside>: The Aside element](/en-US/docs/Web/HTML/Element/aside)
 - [complementary (role): Accessible Rich Internet Applications (WAI-ARIA) 1.1](https://www.w3.org/TR/wai-aria/#complementary)
 - [Using HTML sections and outlines](/en-US/docs/Web/HTML/Element/Heading_Elements)
-- [Landmark roles: Using ARIA: Roles, States, and Properties](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques#landmark_roles)
+- [Landmark roles: Using ARIA: Roles, States, and Properties](/en-US/docs/Web/Accessibility/ARIA/Guides/Techniques#landmark_roles)
 - [Using WAI-ARIA Landmarks – 2013 | The Paciello Group](https://www.tpgi.com/using-wai-aria-landmarks-2013/)
 - [Accessible Landmarks | scottohara.me](https://www.scottohara.me/blog/2018/03/03/landmarks.html)
 - [Aside Revisited | HTML5 Doctor](https://html5doctor.com/aside-revisited/)
