@@ -109,9 +109,9 @@
 /en-US/docs/Accessibility/ARIA/forms/alerts	/en-US/docs/Web/Accessibility/ARIA
 /en-US/docs/Accessibility/ARIA/widgets	/en-US/docs/Web/Accessibility/ARIA
 /en-US/docs/Accessibility/ARIA/widgets/overview	/en-US/docs/Web/Accessibility/ARIA
-/en-US/docs/Accessibility/Accessible_dynamic_content	/en-US/docs/Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets
+/en-US/docs/Accessibility/Accessible_dynamic_content	/en-US/docs/Web/Accessibility/Guides/Accessible_web_applications_and_widgets
 /en-US/docs/Accessibility/Accessible_forms/alerts	/en-US/docs/Web/Accessibility/ARIA
-/en-US/docs/Accessibility/An_overview_of_accessible_web_applications_and_widgets	/en-US/docs/Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets
+/en-US/docs/Accessibility/An_overview_of_accessible_web_applications_and_widgets	/en-US/docs/Web/Accessibility/Guides/Accessible_web_applications_and_widgets
 /en-US/docs/Accessibility/Community	/en-US/docs/Web/Accessibility
 /en-US/docs/Accessibility/FAQ	/en-US/docs/Web/Accessibility
 /en-US/docs/Accessibility/HTML_To_MSAA	/en-US/docs/Web/Accessibility
@@ -135,7 +135,7 @@
 /en-US/docs/Addons/Working_with_AMO	/en-US/docs/Mozilla/Add-ons
 /en-US/docs/Advanced_styling_for_HTML_forms	/en-US/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling
 /en-US/docs/Alternative_style_sheets	/en-US/docs/Web/HTML/Attributes/rel/alternate_stylesheet
-/en-US/docs/An_Overview_of_Accessible_Web_Applications_and_Widgets	/en-US/docs/Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets
+/en-US/docs/An_Overview_of_Accessible_Web_Applications_and_Widgets	/en-US/docs/Web/Accessibility/Guides/Accessible_web_applications_and_widgets
 /en-US/docs/An_overview_of_NSS_Internals	https://firefox-source-docs.mozilla.org/security/nss/index.html
 /en-US/docs/Animation	/en-US/docs/Web/API/Animation
 /en-US/docs/Animation/currentTime	/en-US/docs/Web/API/Animation/currentTime
@@ -11579,8 +11579,9 @@
 /en-US/docs/Web/Accessibility/ARIA/widgets/overview	/en-US/docs/Web/Accessibility/ARIA
 /en-US/docs/Web/Accessibility/Accessibility:_What_users_can_to_to_browse_safely	/en-US/docs/Web/Accessibility/Guides/Browsing_safely
 /en-US/docs/Web/Accessibility/Accessibility_and_Spacial_Patterns	/en-US/docs/Web/Accessibility/Guides/Accessibility_and_Spacial_Patterns
-/en-US/docs/Web/Accessibility/Accessible_dynamic_content	/en-US/docs/Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets
+/en-US/docs/Web/Accessibility/Accessible_dynamic_content	/en-US/docs/Web/Accessibility/Guides/Accessible_web_applications_and_widgets
 /en-US/docs/Web/Accessibility/Accessible_forms/alerts	/en-US/docs/Web/Accessibility/ARIA
+/en-US/docs/Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets	/en-US/docs/Web/Accessibility/Guides/Accessible_web_applications_and_widgets
 /en-US/docs/Web/Accessibility/Community	/en-US/docs/Web/Accessibility
 /en-US/docs/Web/Accessibility/FAQ	/en-US/docs/Web/Accessibility
 /en-US/docs/Web/Accessibility/HTML_To_MSAA	/en-US/docs/Web/Accessibility

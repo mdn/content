@@ -119,7 +119,7 @@ Here's an example of a [WAI-ARIA tree view](https://files.paciellogroup.com/trai
 
 ### Technique 2: `aria-activedescendant`
 
-This technique involves binding a single event handler to the container widget and using the `aria-activedescendant` to track a "virtual" focus. (For more information about ARIA, see this [overview of accessible web applications and widgets](/en-US/docs/Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets).)
+This technique involves binding a single event handler to the container widget and using the `aria-activedescendant` to track a "virtual" focus. (For more information about ARIA, see this [overview of accessible web applications and widgets](/en-US/docs/Web/Accessibility/Guides/Accessible_web_applications_and_widgets).)
 
 The `aria-activedescendant` property identifies the ID of the descendant element that currently has the virtual focus. The event handler on the container must respond to key and mouse events by updating the value of `aria-activedescendant` and ensuring that the current item is styled appropriately (for example, with a border or background color).
 

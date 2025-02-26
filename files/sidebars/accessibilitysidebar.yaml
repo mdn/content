@@ -21,7 +21,7 @@ sidebar:
     children:
       - /Web/Accessibility/Information_for_Web_authors
       - /Web/Accessibility/Guides/Browsing_safely
-      - /Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets
+      - /Web/Accessibility/Guides/Accessible_web_applications_and_widgets
       - /Web/Accessibility/Keyboard-navigable_JavaScript_widgets
       - /Web/Accessibility/Mobile_accessibility_checklist
       - /Web/Accessibility/Understanding_WCAG

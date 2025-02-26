@@ -71888,7 +71888,15 @@
       "hhillen"
     ]
   },
-  "Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets": {
+  "Web/Accessibility/Cognitive_accessibility": {
+    "modified": "2019-11-18T16:53:41.344Z",
+    "contributors": ["Igor-Sangin", "ericwbailey", "estelle", "jswisher"]
+  },
+  "Web/Accessibility/Guides/Accessibility_and_Spacial_Patterns": {
+    "modified": "2019-11-07T11:39:44.805Z",
+    "contributors": ["austin-2019", "estelle"]
+  },
+  "Web/Accessibility/Guides/Accessible_web_applications_and_widgets": {
     "modified": "2019-06-19T20:00:17.673Z",
     "contributors": [
       "RubyDo",
@@ -71911,14 +71919,6 @@
       "colinbdclark",
       "peterbraden"
     ]
-  },
-  "Web/Accessibility/Cognitive_accessibility": {
-    "modified": "2019-11-18T16:53:41.344Z",
-    "contributors": ["Igor-Sangin", "ericwbailey", "estelle", "jswisher"]
-  },
-  "Web/Accessibility/Guides/Accessibility_and_Spacial_Patterns": {
-    "modified": "2019-11-07T11:39:44.805Z",
-    "contributors": ["austin-2019", "estelle"]
   },
   "Web/Accessibility/Guides/Browsing_safely": {
     "modified": "2019-12-31T18:58:55.559Z",
