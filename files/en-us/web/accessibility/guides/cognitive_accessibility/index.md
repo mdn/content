@@ -1,6 +1,6 @@
 ---
 title: Cognitive accessibility
-slug: Web/Accessibility/Cognitive_accessibility
+slug: Web/Accessibility/Guides/Cognitive_accessibility
 page-type: guide
 ---
 

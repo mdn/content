@@ -11582,6 +11582,7 @@
 /en-US/docs/Web/Accessibility/Accessible_dynamic_content	/en-US/docs/Web/Accessibility/Guides/Accessible_web_applications_and_widgets
 /en-US/docs/Web/Accessibility/Accessible_forms/alerts	/en-US/docs/Web/Accessibility/ARIA
 /en-US/docs/Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets	/en-US/docs/Web/Accessibility/Guides/Accessible_web_applications_and_widgets
+/en-US/docs/Web/Accessibility/Cognitive_accessibility	/en-US/docs/Web/Accessibility/Guides/Cognitive_accessibility
 /en-US/docs/Web/Accessibility/Community	/en-US/docs/Web/Accessibility
 /en-US/docs/Web/Accessibility/FAQ	/en-US/docs/Web/Accessibility
 /en-US/docs/Web/Accessibility/HTML_To_MSAA	/en-US/docs/Web/Accessibility
