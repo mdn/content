@@ -32,7 +32,7 @@ The origin server expects that requests must be made in [HTTP/3](/en-US/docs/Glo
 
 ```http
 HTTP/1.1 426 Upgrade Required
-Upgrade: HTTP/2.0
+Upgrade: HTTP/3.0
 Connection: Upgrade
 Content-Length: 53
 Content-Type: text/plain
