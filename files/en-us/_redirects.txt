@@ -122,7 +122,7 @@
 /en-US/docs/Accessibility/Web_applications_and_ARIA_FAQ	/en-US/docs/Web/Accessibility/ARIA
 /en-US/docs/Accessibility:Community	/en-US/docs/Web/Accessibility
 /en-US/docs/Accessibility_FAQ	/en-US/docs/Web/Accessibility
-/en-US/docs/Accessibility_Information_for_Web_Authors	/en-US/docs/Web/Accessibility/Information_for_Web_authors
+/en-US/docs/Accessibility_Information_for_Web_Authors	/en-US/docs/Web/Accessibility/Guides/Information_for_Web_authors
 /en-US/docs/Accessible_DHTML	/en-US/docs/Web/Accessibility/ARIA
 /en-US/docs/Adapting_XUL_Applications_for_Firefox_1.5	/en-US/docs/Mozilla/Firefox/Releases/1.5
 /en-US/docs/Adding_2D_content_to_a_WebGL_context	/en-US/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
@@ -11589,6 +11589,7 @@
 /en-US/docs/Web/Accessibility/Implementing_MSAA_server	/en-US/docs/Web/Accessibility
 /en-US/docs/Web/Accessibility/Implementing_an_MSAA_Server	/en-US/docs/Web/Accessibility
 /en-US/docs/Web/Accessibility/Index	/en-US/docs/Web/Accessibility
+/en-US/docs/Web/Accessibility/Information_for_Web_authors	/en-US/docs/Web/Accessibility/Guides/Information_for_Web_authors
 /en-US/docs/Web/Accessibility/Seizure_disorders/Accessibility_and_Spacial_Patterns	/en-US/docs/Web/Accessibility/Guides/Accessibility_and_Spacial_Patterns
 /en-US/docs/Web/Accessibility/Understanding_WCAG/Understandable/Text_labels_and_names	/en-US/docs/Web/Accessibility/Understanding_WCAG/Text_labels_and_names
 /en-US/docs/Web/Accessibility/Web_Development	/en-US/docs/Web/Accessibility

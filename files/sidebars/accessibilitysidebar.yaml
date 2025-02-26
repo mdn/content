@@ -19,7 +19,7 @@ sidebar:
   - title: Guides
     details: closed
     children:
-      - /Web/Accessibility/Information_for_Web_authors
+      - /Web/Accessibility/Guides/Information_for_Web_authors
       - /Web/Accessibility/Guides/Browsing_safely
       - /Web/Accessibility/Guides/Accessible_web_applications_and_widgets
       - /Web/Accessibility/Keyboard-navigable_JavaScript_widgets

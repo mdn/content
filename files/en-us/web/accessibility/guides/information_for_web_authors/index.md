@@ -1,6 +1,6 @@
 ---
 title: Accessibility information for web authors
-slug: Web/Accessibility/Information_for_Web_authors
+slug: Web/Accessibility/Guides/Information_for_Web_authors
 page-type: guide
 ---
 
