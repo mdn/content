@@ -44,7 +44,7 @@ sidebar:
       - /Web/Accessibility/ARIA/Guides/Screen_Reader_Implementors
       - /Web/Accessibility/ARIA/Guides/Techniques
       - /Web/Accessibility/ARIA/Guides/Multipart_labels
-      - /Web/Accessibility/ARIA/How_to_file_ARIA-related_bugs
+      - /Web/Accessibility/Aria/How_to/File_ARIA-related_bugs
   - type: listSubPages
     path: /Web/Accessibility/ARIA/Reference/Attributes
     title: ARIA states and properties
