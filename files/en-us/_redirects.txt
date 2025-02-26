@@ -11577,6 +11577,7 @@
 /en-US/docs/Web/Accessibility/ARIA/forms/alerts	/en-US/docs/Web/Accessibility/ARIA
 /en-US/docs/Web/Accessibility/ARIA/widgets	/en-US/docs/Web/Accessibility/ARIA
 /en-US/docs/Web/Accessibility/ARIA/widgets/overview	/en-US/docs/Web/Accessibility/ARIA
+/en-US/docs/Web/Accessibility/Accessibility_and_Spacial_Patterns	/en-US/docs/Web/Accessibility/Guides/Accessibility_and_Spacial_Patterns
 /en-US/docs/Web/Accessibility/Accessible_dynamic_content	/en-US/docs/Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets
 /en-US/docs/Web/Accessibility/Accessible_forms/alerts	/en-US/docs/Web/Accessibility/ARIA
 /en-US/docs/Web/Accessibility/Community	/en-US/docs/Web/Accessibility
@@ -11585,7 +11586,7 @@
 /en-US/docs/Web/Accessibility/Implementing_MSAA_server	/en-US/docs/Web/Accessibility
 /en-US/docs/Web/Accessibility/Implementing_an_MSAA_Server	/en-US/docs/Web/Accessibility
 /en-US/docs/Web/Accessibility/Index	/en-US/docs/Web/Accessibility
-/en-US/docs/Web/Accessibility/Seizure_disorders/Accessibility_and_Spacial_Patterns	/en-US/docs/Web/Accessibility/Accessibility_and_Spacial_Patterns
+/en-US/docs/Web/Accessibility/Seizure_disorders/Accessibility_and_Spacial_Patterns	/en-US/docs/Web/Accessibility/Guides/Accessibility_and_Spacial_Patterns
 /en-US/docs/Web/Accessibility/Understanding_WCAG/Understandable/Text_labels_and_names	/en-US/docs/Web/Accessibility/Understanding_WCAG/Text_labels_and_names
 /en-US/docs/Web/Accessibility/Web_Development	/en-US/docs/Web/Accessibility
 /en-US/docs/Web/Accessibility/Web_applications_and_ARIA_FAQ	/en-US/docs/Web/Accessibility/ARIA

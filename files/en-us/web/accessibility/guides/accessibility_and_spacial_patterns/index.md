@@ -1,6 +1,6 @@
 ---
 title: Accessibility and Spacial Patterns
-slug: Web/Accessibility/Accessibility_and_Spacial_Patterns
+slug: Web/Accessibility/Guides/Accessibility_and_Spacial_Patterns
 page-type: guide
 ---
 
