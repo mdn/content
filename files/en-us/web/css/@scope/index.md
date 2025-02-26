@@ -35,6 +35,8 @@ The `@scope` at-rule contains one or more rulesets (termed **scoped style rules*
    </parent-element>
    ```
 
+   It is also possible to combine an inline `@scope` with a scope limit selector, as in `@scope to (scope limit) { ... }`.
+
 ## Description
 
 A complex web document might include components such as headers, footers, news articles, maps, media players, ads, and others. As complexity increases, effectively managing the styling for these components becomes more of a concern, and effective scoping of styles helps us manage this complexity. Let's consider the following DOM tree:
@@ -80,6 +82,8 @@ The `.article-body` scope root selector defines the upper bound of the DOM tree 
 
 > [!NOTE]
 > This kind of scoping — with an upper and lower bound — is commonly referred to as a **donut scope**.
+
+The scope's upper bound is inclusive and its lower bound is exclusive. To change this behavior, you can combine either selector with a universal child selector. For example, `@scope (scope root) to (scope limit > *)` would make both bounds inclusive, `@scope (scope root > *) to (scope limit)` would make both bounds exclusive, while `@scope (scope root > *) to (scope limit > *)` would give an exclusive upper bound and an inclusive lower bound.
 
 If you want to select all images inside a `<section>` with a class of `article-body`, you can omit the scope limit:
 
