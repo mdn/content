@@ -1,27 +1,16 @@
 ---
-title: BaseAudioContext.createBuffer()
+title: "BaseAudioContext: createBuffer() method"
+short-title: createBuffer()
 slug: Web/API/BaseAudioContext/createBuffer
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - AudioContext
-  - BaseAudioContext
-  - Buffer
-  - Media
-  - Method
-  - Reference
-  - Web Audio
-  - Web Audio API
-  - createBuffer
 browser-compat: api.BaseAudioContext.createBuffer
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `createBuffer()` method of the {{ domxref("BaseAudioContext") }}
 Interface is used to create a new, empty {{ domxref("AudioBuffer") }} object, which
-can then be populated by data, and played via an {{ domxref("AudioBufferSourceNode")
-  }}
+can then be populated by data, and played via an {{ domxref("AudioBufferSourceNode")}}.
 
 For more details about audio buffers, check out the {{ domxref("AudioBuffer") }}
 reference page.
@@ -35,16 +24,15 @@ reference page.
 > then play via an {{ domxref("AudioBufferSourceNode") }}. For simple use cases
 > like playing an MP3, `decodeAudioData()` is what you should be using.
 
+For an in-depth explanation of how audio buffers work, including what the parameters do, read [Audio buffers: frames, samples and channels](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#audio_buffers_frames_samples_and_channels) from our Basic concepts guide.
+
 ## Syntax
 
-```js
+```js-nolint
 createBuffer(numOfChannels, length, sampleRate)
 ```
 
 ### Parameters
-
-> **Note:** For an in-depth explanation of how audio buffers work, and
-> what these parameters mean, read [Audio buffers: frames, samples and channels](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#audio_buffers.3a_frames.2c_samples_and_channels) from our Basic concepts guide.
 
 - `numOfChannels`
   - : An integer representing the number of channels this buffer should have. The default
@@ -91,11 +79,12 @@ const buffer = audioCtx.createBuffer(1, 22050, 22050);
 ```
 
 If you use this call, you will get a mono buffer (one channel), that, when played back
-on an `AudioContext` running at 44100Hz, will be automatically \*resampled\* to
+on an `AudioContext` running at 44100Hz, will be automatically _resampled_ to
 44100Hz (and therefore yield 44100 frames), and last for 1.0 second: 44100 frames /
 44100Hz = 1 second.
 
-> **Note:** audio resampling is very similar to image resizing: say you've
+> [!NOTE]
+> Audio resampling is very similar to image resizing: say you've
 > got a 16 x 16 image, but you want it to fill a 32x32 area: you resize (resample) it.
 > the result has less quality (it can be blurry or edgy, depending on the resizing
 > algorithm), but it works, and the resized image takes up less space. Resampled audio
@@ -103,15 +92,18 @@ on an `AudioContext` running at 44100Hz, will be automatically \*resampled\* to
 > reproduce high frequency content (treble sound).
 
 Now let's look at a more complex `createBuffer()` example, in which we
-create a three-second buffer, fill it with white noise, and then play it via an {{
-  domxref("AudioBufferSourceNode") }}. The comment should clearly explain what is going
-on. You can also [run the code live](https://mdn.github.io/webaudio-examples/audio-buffer/), or [view the source](https://github.com/mdn/webaudio-examples/blob/master/audio-buffer/index.html).
+create a three-second buffer, fill it with white noise, and then play it via an {{domxref("AudioBufferSourceNode")}}. The comment should clearly explain what is going on.
+You can also [run the code live](https://mdn.github.io/webaudio-examples/audio-buffer/), or [view the source](https://github.com/mdn/webaudio-examples/blob/main/audio-buffer/index.html).
 
 ```js
-const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+const audioCtx = new AudioContext();
 
 // Create an empty three-second stereo buffer at the sample rate of the AudioContext
-const myArrayBuffer = audioCtx.createBuffer(2, audioCtx.sampleRate * 3, audioCtx.sampleRate);
+const myArrayBuffer = audioCtx.createBuffer(
+  2,
+  audioCtx.sampleRate * 3,
+  audioCtx.sampleRate,
+);
 
 // Fill the buffer with white noise;
 // just random values between -1.0 and 1.0

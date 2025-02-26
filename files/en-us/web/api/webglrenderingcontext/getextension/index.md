@@ -1,23 +1,19 @@
 ---
-title: WebGLRenderingContext.getExtension()
+title: "WebGLRenderingContext: getExtension() method"
+short-title: getExtension()
 slug: Web/API/WebGLRenderingContext/getExtension
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.getExtension
 ---
-{{APIRef("WebGL")}}
+
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGLRenderingContext.getExtension()`** method enables a
 [WebGL](/en-US/docs/Web/API/WebGL_API) extension.
 
 ## Syntax
 
-```js
+```js-nolint
 getExtension(name)
 ```
 
@@ -38,15 +34,15 @@ Once a WebGL extension is enabled, you are able to use the methods, properties o
 constants that this extension object provides.
 
 ```js
-const canvas = document.getElementById('canvas');
-gl = canvas.getContext('webgl');
+const canvas = document.getElementById("canvas");
+gl = canvas.getContext("webgl");
 
-gl.getExtension('WEBGL_lose_context').loseContext();
+gl.getExtension("WEBGL_lose_context").loseContext();
 ```
 
 ## WebGL extensions
 
-Extensions for the WebGL API are registered in the [WebGL Extension Registry](https://www.khronos.org/registry/webgl/extensions/). They are also
+Extensions for the WebGL API are registered in the [WebGL Extension Registry](https://registry.khronos.org/webgl/extensions/). They are also
 listed [here](/en-US/docs/Web/API/WebGL_API#extensions).
 
 ## Specifications
@@ -60,4 +56,4 @@ listed [here](/en-US/docs/Web/API/WebGL_API#extensions).
 ## See also
 
 - {{domxref("WebGLRenderingContext.getSupportedExtensions()")}}
-- [webglreport.com](https://webglreport.com)
+- [webglreport.com](https://webglreport.com/)

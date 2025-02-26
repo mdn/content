@@ -1,23 +1,19 @@
 ---
-title: CSS Masking
-slug: Web/CSS/CSS_Masking
-tags:
-  - CSS
-  - CSS Masking
-  - Guide
-  - Overview
-  - Reference
+title: CSS masking
+slug: Web/CSS/CSS_masking
+page-type: css-module
 spec-urls: https://drafts.fxtf.org/css-masking/
 ---
+
 {{CSSRef}}
 
-**CSS Masking** is a [CSS](/en-US/docs/Web/CSS) module that defines means, including masking and clipping, for partially or fully hiding portions of visual elements.
+The **CSS masking** module that defines masking and clipping for partially or fully hiding portions of visual elements.
 
 ## Reference
 
 ### Properties
 
-- {{cssxref("clip")}} {{deprecated_inline}}
+- {{cssxref("clip")}}
 - {{cssxref("clip-path")}}
 - {{cssxref("clip-rule")}}
 - {{cssxref("mask")}}

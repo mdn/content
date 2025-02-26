@@ -2,28 +2,24 @@
 title: Serial
 slug: Web/API/Serial
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - Serial
+status:
+  - experimental
 browser-compat: api.Serial
 ---
-{{securecontext_header}}{{APIRef("Serial API")}}
 
-The `Serial` interface of the {{domxref("Web_Serial_API", "Web Serial API")}} provides attributes and methods for finding and connecting to serial ports from a web page.
+{{securecontext_header}}{{APIRef("Web Serial API")}}{{SeeCompatTable}}{{AvailableInWorkers("window_and_dedicated")}}
+
+The `Serial` interface of the [Web Serial API](/en-US/docs/Web/API/Web_Serial_API) provides attributes and methods for finding and connecting to serial ports from a web page.
 
 {{InheritanceDiagram}}
 
-## Methods
+## Instance methods
 
-- {{domxref("Serial.requestPort()")}}
+- {{domxref("Serial.requestPort()")}} {{Experimental_Inline}}
 
-  - : Returns a {{jsxref("Promise")}} that resolves with an instance of {{domxref("SerialPort")}} representing the device chosen by the user or rejects if no device was selected.
+  - : Returns a {{jsxref("Promise")}} that resolves with an instance of {{domxref("SerialPort")}} representing the device chosen by the user. This method must be called via [transient activation](/en-US/docs/Glossary/Transient_activation).
 
-    This method must be called with user activation.
-
-- {{domxref("Serial.getPorts()")}}
+- {{domxref("Serial.getPorts()")}} {{Experimental_Inline}}
   - : Returns a {{jsxref("Promise")}} that resolves with an array of {{domxref("SerialPort")}} objects representing serial ports connected to
     the host which the origin has permission to access.
 
@@ -45,11 +41,11 @@ On load event listeners are added for the {{domxref("SerialPort.connect_event", 
 If the site doesn't have access to any connected ports it has to wait until it has user activation to proceed. In this example we use a {{domxref("Element.click_event", "click")}} event handler on a button for this task. A filter is passed to {{domxref("Serial.requestPort()","requestPort()")}} with a USB vendor ID in order to limit the set of devices shown to the user to only USB devices built by a particular manufacturer.
 
 ```js
-navigator.serial.addEventListener('connect', (e) => {
+navigator.serial.addEventListener("connect", (e) => {
   // Connect to `e.target` or add it to a list of available ports.
 });
 
-navigator.serial.addEventListener('disconnect', (e) => {
+navigator.serial.addEventListener("disconnect", (e) => {
   // Remove `e.target` from the list of available ports.
 });
 
@@ -57,13 +53,16 @@ navigator.serial.getPorts().then((ports) => {
   // Initialize the list of available ports with `ports` on page load.
 });
 
-button.addEventListener('click', () => {
-  const usbVendorId = 0xABCD;
-  navigator.serial.requestPort({ filters: [{ usbVendorId }]}).then((port) => {
-    // Connect to `port` or add it to the list of available ports.
-  }).catch((e) => {
-    // The user didn't select a port.
-  });
+button.addEventListener("click", () => {
+  const usbVendorId = 0xabcd;
+  navigator.serial
+    .requestPort({ filters: [{ usbVendorId }] })
+    .then((port) => {
+      // Connect to `port` or add it to the list of available ports.
+    })
+    .catch((e) => {
+      // The user didn't select a port.
+    });
 });
 ```
 

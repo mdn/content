@@ -1,22 +1,18 @@
 ---
 title: contentScripts.RegisteredContentScript
 slug: Mozilla/Add-ons/WebExtensions/API/contentScripts/RegisteredContentScript
-tags:
-  - API
-  - Extensions
-  - Reference
-  - RegisteredContentScript
-  - Type
-  - contentScripts
+page-type: webextension-api-type
 browser-compat: webextensions.api.contentScripts.RegisteredContentScript
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 A `RegisteredContentScript` is returned by a call to {{WebExtAPIRef("contentScripts.register()")}} and represents the content scripts registered in that call.
 
 It defines a single function {{WebExtAPIRef("contentScripts.RegisteredContentScript.unregister", "unregister()")}}, which can be used to unregister the content scripts.
 
-> **Note:** If this object is destroyed (for example because it goes out of scope) then the content scripts will be unregistered automatically, so you should keep a reference to this object for as long as you want the content scripts to stay registered.
+> [!NOTE]
+> If this object is destroyed (for example because it goes out of scope) then the content scripts will be unregistered automatically, so you should keep a reference to this object for as long as you want the content scripts to stay registered.
 
 ## Methods
 
@@ -35,15 +31,15 @@ This code toggles a registered content script on a browser action click:
 let registered = null;
 
 async function register() {
-
   registered = await browser.contentScripts.register({
     matches: ["*://*.org/*"],
-    js: [{
-      code: "document.body.innerHTML = '<h1>This page has been eaten<h1>'"
-    }],
-    runAt: "document_idle"
+    js: [
+      {
+        code: "document.body.innerHTML = '<h1>This page has been eaten<h1>'",
+      },
+    ],
+    runAt: "document_idle",
   });
-
 }
 
 function toggle() {

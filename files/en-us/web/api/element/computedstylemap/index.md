@@ -1,20 +1,12 @@
 ---
-title: Element.computedStyleMap()
+title: "Element: computedStyleMap() method"
+short-title: computedStyleMap()
 slug: Web/API/Element/computedStyleMap
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSS Typed Object Model API
-  - Element
-  - Experimental
-  - Houdini
-  - Method
-  - Reference
-  - StylePropertyMapReadOnly
-  - computedStyleMap()
 browser-compat: api.Element.computedStyleMap
 ---
-{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
+
+{{APIRef("CSS Typed Object Model API")}}
 
 The **`computedStyleMap()`** method of
 the {{domxref("Element")}} interface returns a {{domxref("StylePropertyMapReadOnly")}}
@@ -23,7 +15,7 @@ an alternative to {{domxref("CSSStyleDeclaration")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 computedStyleMap()
 ```
 
@@ -42,7 +34,7 @@ we will add all the CSS Property / Value pairs.
 
 ```html
 <p>
-   <a href="https://example.com">Link</a>
+  <a href="https://example.com">Link</a>
 </p>
 <dl id="regurgitation"></dl>
 ```
@@ -61,23 +53,23 @@ property values using `computedStyleMap().`
 
 ```js
 // get the element
-const myElement = document.querySelector('a');
+const myElement = document.querySelector("a");
 
 // get the <dl> we'll be populating
-const stylesList = document.querySelector('#regurgitation');
+const stylesList = document.querySelector("#regurgitation");
 
 // Retrieve all computed styles with computedStyleMap()
 const allComputedStyles = myElement.computedStyleMap();
 
-// iterate thru the map of all the properties and values, adding a <dt> and <dd> for each
+// iterate through the map of all the properties and values, adding a <dt> and <dd> for each
 for (const [prop, val] of allComputedStyles) {
   // properties
-  const cssProperty = document.createElement('dt');
+  const cssProperty = document.createElement("dt");
   cssProperty.appendChild(document.createTextNode(prop));
   stylesList.appendChild(cssProperty);
 
   // values
-  const cssValue = document.createElement('dd');
+  const cssValue = document.createElement("dd");
   cssValue.appendChild(document.createTextNode(val));
   stylesList.appendChild(cssValue);
 }
@@ -89,8 +81,8 @@ In other browsers you'll just see a link.
 
 {{EmbedLiveSample("Examples", 300, 300)}}
 
-Did you realize how many default CSS properties a link had? Update the '`a`'
-to the '`p`', and you'll notice a difference in the `margin-top`
+Did you realize how many default CSS properties a link had? Update the `document.querySelector("a")`
+to `document.querySelector("p")`, and you'll notice a difference in the `margin-top`
 and `margin-bottom` default computed values.
 
 ## Specifications

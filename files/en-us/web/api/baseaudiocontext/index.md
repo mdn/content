@@ -2,17 +2,9 @@
 title: BaseAudioContext
 slug: Web/API/BaseAudioContext
 page-type: web-api-interface
-tags:
-  - API
-  - Audio
-  - BaseAudioContext
-  - Context
-  - Interface
-  - Reference
-  - Web Audio API
-  - sound
 browser-compat: api.BaseAudioContext
 ---
+
 {{APIRef("Web Audio API")}}
 
 The `BaseAudioContext` interface of the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) acts as a base definition for online and offline audio-processing graphs, as represented by {{domxref("AudioContext")}} and {{domxref("OfflineAudioContext")}} respectively. You wouldn't use `BaseAudioContext` directly — you'd use its features via one of these two inheriting interfaces.
@@ -21,27 +13,22 @@ A `BaseAudioContext` can be a target of events, therefore it implements the {{do
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
-- {{domxref("BaseAudioContext.audioWorklet")}} {{experimental_inline}} {{readonlyInline}} {{securecontext_inline}}
+- {{domxref("BaseAudioContext.audioWorklet")}} {{ReadOnlyInline}} {{securecontext_inline}}
   - : Returns the {{domxref("AudioWorklet")}} object, which can be used to create and manage {{domxref("AudioNode")}}s in which JavaScript code implementing the {{domxref("AudioWorkletProcessor")}} interface are run in the background to process audio data.
-- {{domxref("BaseAudioContext.currentTime")}} {{readonlyInline}}
+- {{domxref("BaseAudioContext.currentTime")}} {{ReadOnlyInline}}
   - : Returns a double representing an ever-increasing hardware time in seconds used for scheduling. It starts at `0`.
-- {{domxref("BaseAudioContext.destination")}} {{readonlyInline}}
+- {{domxref("BaseAudioContext.destination")}} {{ReadOnlyInline}}
   - : Returns an {{domxref("AudioDestinationNode")}} representing the final destination of all audio in the context. It can be thought of as the audio-rendering device.
-- {{domxref("BaseAudioContext.listener")}} {{readonlyInline}}
+- {{domxref("BaseAudioContext.listener")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("AudioListener")}} object, used for 3D spatialization.
-- {{domxref("BaseAudioContext.sampleRate")}} {{readonlyInline}}
+- {{domxref("BaseAudioContext.sampleRate")}} {{ReadOnlyInline}}
   - : Returns a float representing the sample rate (in samples per second) used by all nodes in this context. The sample-rate of an {{domxref("AudioContext")}} cannot be changed.
-- {{domxref("BaseAudioContext.state")}} {{readonlyInline}}
+- {{domxref("BaseAudioContext.state")}} {{ReadOnlyInline}}
   - : Returns the current state of the `AudioContext`.
 
-### Events
-
-- {{domxref("BaseAudioContext.statechange_event", "statechange")}}
-  - : Fired when the `AudioContext`'s state changes due to the calling of one of the state change methods ({{domxref("AudioContext.suspend")}}, {{domxref("AudioContext.resume")}}, or {{domxref("AudioContext.close")}}).
-
-## Methods
+## Instance methods
 
 _Also implements methods from the interface_ {{domxref("EventTarget")}}.
 
@@ -84,18 +71,14 @@ _Also implements methods from the interface_ {{domxref("EventTarget")}}.
 - {{domxref("BaseAudioContext.decodeAudioData()")}}
   - : Asynchronously decodes audio file data contained in an {{jsxref("ArrayBuffer")}}. In this case, the `ArrayBuffer` is usually loaded from an {{domxref("XMLHttpRequest")}}'s `response` attribute after setting the `responseType` to `arraybuffer`. This method only works on complete files, not fragments of audio files.
 
+## Events
+
+- {{domxref("BaseAudioContext.statechange_event", "statechange")}}
+  - : Fired when the `AudioContext`'s state changes due to the calling of one of the state change methods ({{domxref("AudioContext.suspend")}}, {{domxref("AudioContext.resume")}}, or {{domxref("AudioContext.close")}}).
+
 ## Examples
 
-Basic audio context declaration:
-
 ```js
-const audioContext = new AudioContext();
-```
-
-Cross browser variant:
-
-```js
-const AudioContext = window.AudioContext || window.webkitAudioContext;
 const audioContext = new AudioContext();
 
 const oscillatorNode = audioContext.createOscillator();

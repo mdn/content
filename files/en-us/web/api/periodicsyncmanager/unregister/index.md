@@ -1,18 +1,14 @@
 ---
-title: PeriodicSyncManager.unregister()
+title: "PeriodicSyncManager: unregister() method"
+short-title: unregister()
 slug: Web/API/PeriodicSyncManager/unregister
 page-type: web-api-instance-method
-tags:
-  - Background Sync
-  - Method
-  - Offline
-  - PWA
-  - PeriodicSyncManager
-  - Service Worker
-  - Web Periodic Background Synchronization API
+status:
+  - experimental
 browser-compat: api.PeriodicSyncManager.unregister
 ---
-{{DefaultAPISidebar("Periodic Background Sync")}}
+
+{{APIRef("Periodic Background Sync")}}{{SeeCompatTable}}{{AvailableInWorkers}}
 
 The **`unregister()`** method of the
 {{domxref("PeriodicSyncManager")}} interface unregisters the periodic sync request
@@ -21,7 +17,7 @@ when unregistration completes.
 
 ## Syntax
 
-```js
+```js-nolint
 unregister(tag)
 ```
 
@@ -32,7 +28,7 @@ unregister(tag)
 
 ### Return value
 
-A resolved {{jsxref("Promise")}}.
+Returns a {{jsxref("Promise")}} that resolves with {{jsxref('undefined')}}.
 
 ### Exceptions
 
@@ -45,7 +41,7 @@ background.
 
 ```js
 navigator.serviceWorker.ready.then((registration) => {
-  registration.periodicSync.unregister('get-latest-news');
+  registration.periodicSync.unregister("get-latest-news");
 });
 ```
 
@@ -59,5 +55,5 @@ navigator.serviceWorker.ready.then((registration) => {
 
 ## See also
 
-- [Richer offline experiences with the Periodic Background Sync API](https://web.dev/periodic-background-sync/)
+- [Richer offline experiences with the Periodic Background Sync API](https://developer.chrome.com/docs/capabilities/periodic-background-sync)
 - [A Periodic Background Sync demo app](https://webplatformapis.com/periodic_sync/periodicSync_improved.html)

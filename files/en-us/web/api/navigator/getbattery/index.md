@@ -1,30 +1,25 @@
 ---
-title: Navigator.getBattery()
+title: "Navigator: getBattery() method"
+short-title: getBattery()
 slug: Web/API/Navigator/getBattery
 page-type: web-api-instance-method
-tags:
-  - API
-  - Battery API
-  - Device API
-  - Method
-  - Navigator
-  - Reference
-  - getBattery
 browser-compat: api.Navigator.getBattery
 ---
-{{ ApiRef("Battery API") }}
 
-The **`getBattery()`** method provides information about the
-system's battery. It returns a battery promise, which is resolved in a
-{{domxref("BatteryManager")}} object providing also some new events you can handle to
-monitor the battery status. This implements the [Battery Status API](/en-US/docs/Web/API/Battery_Status_API); see that
-documentation for additional details, a guide to using the API, and sample code.
+{{ApiRef("Battery API")}}{{securecontext_header}}
 
-> **Note:** In some browsers access to this feature is controlled by the {{HTTPHeader("Feature-Policy")}} directive {{HTTPHeader("Feature-Policy/battery","battery")}}.
+The **`getBattery()`** method provides information about the system's battery.
+It returns a battery promise, which resolves with a {{domxref("BatteryManager")}} object providing some properties to get the battery status also some events you can handle to monitor the battery status.
+This implements the {{domxref("Battery Status API", "", "", "nocode")}}; see that documentation for additional details, a guide to using the API, and sample code.
+
+Since Chrome 103, the `Navigator.getBattery()` method of {{domxref("Battery Status API", "", "", "nocode")}} only expose to secure context.
+
+> [!NOTE]
+> Access to this feature may be controlled by the {{HTTPHeader("Permissions-Policy")}} directive {{HTTPHeader("Permissions-Policy/battery", "battery")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 getBattery()
 ```
 
@@ -34,45 +29,34 @@ None.
 
 ### Return value
 
-A {{JSxRef("Promise")}} which, when resolved, calls its fulfillment handler with a
-single parameter: a {{DOMxRef("BatteryManager")}} object which you can use to get
-information about the battery's state.
+A {{JSxRef("Promise")}} that fulfills with a {{DOMxRef("BatteryManager")}} object which you can use to get information about the battery's state.
 
 ### Exceptions
 
-This method doesn't throw true exceptions; instead, it rejects the returned promise, passing into it a {{domxref("DOMException")}} whose `name` is one of the following:
+- `NotAllowedError` {{domxref("DOMException")}}
 
-- `SecurityError`
+  - : Use of this feature was blocked by a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
 
-  - : The User Agent does not expose battery information to insecure contexts and this method was called from insecure context.
-
-    > **Note:** Old versions of some User Agents might allow use of this feature in insecure contexts.
-
-- `NotAllowedError`
-
-  - : No User Agent currently throws this exception, but the specification describes the following behaviors:
-    > This document is not allowed to use this feature.
-    > For example, it might not be explicitly allowed or restricted via {{HTTPHeader("Feature-Policy")}} {{HTTPHeader("Feature-Policy/battery", "battery")}} feature.
+- `SecurityError` {{domxref("DOMException")}}
+  - : The User Agent does not expose battery information to insecure contexts and this method was called from an insecure context.
 
 ## Examples
 
-This example fetches the current charging state of the battery and establishes a
-handler for the {{domxref("BatteryManager/chargingchange_event", "chargingchange")}} event, so that the charging state is
-recorded whenever it changes.
+This example fetches the current charging state of the battery and establishes a handler for the {{domxref("BatteryManager/chargingchange_event", "chargingchange")}} event, so that the charging state is recorded whenever it changes.
 
 ```js
 let batteryIsCharging = false;
 
-navigator.getBattery().then(function(battery) {
+navigator.getBattery().then((battery) => {
   batteryIsCharging = battery.charging;
 
-  battery.addEventListener('chargingchange', function() {
+  battery.addEventListener("chargingchange", () => {
     batteryIsCharging = battery.charging;
   });
 });
 ```
 
-For more examples and details, see [Battery Status API](/en-US/docs/Web/API/Battery_Status_API).
+For more examples and details, see {{domxref("Battery Status API", "", "", "nocode")}}.
 
 ## Specifications
 
@@ -84,6 +68,5 @@ For more examples and details, see [Battery Status API](/en-US/docs/Web/API/Batt
 
 ## See also
 
-- [Battery Status API](/en-US/docs/Web/API/Battery_Status_API)
-- `Feature-Policy` {{HTTPHeader("Feature-Policy/battery", "battery")}}
-  feature
+- {{domxref("Battery Status API", "", "", "nocode")}}
+- {{HTTPHeader("Permissions-Policy")}} {{HTTPHeader("Permissions-Policy/battery", "battery")}} directive

@@ -3,12 +3,16 @@ on:
   issues:
     types: [opened]
 
+permissions:
+  # Label issues.
+  issues: write
+
 jobs:
-  triage:
+  issue-labeler:
     runs-on: ubuntu-latest
     steps:
-    - uses: github/issue-labeler@v2.5
-      with:
-        repo-token: "${{ secrets.GITHUB_TOKEN }}"
-        configuration-path: .github/issue-regex-labeler.yml
-        enable-versioned-regex: 0
+      - uses: github/issue-labeler@v3.4
+        with:
+          repo-token: "${{ secrets.GITHUB_TOKEN }}"
+          configuration-path: .github/issue-regex-labeler.yml
+          enable-versioned-regex: 0

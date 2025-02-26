@@ -1,15 +1,11 @@
 ---
-title: 'aria-hidden'
+title: aria-hidden
 slug: Web/Accessibility/ARIA/Attributes/aria-hidden
-tags:
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - ARIA property
-  - aria-hidden
-  - Reference
+page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-hidden
 ---
+
+{{AccessibilitySidebar}}
 
 The `aria-hidden` state indicates whether the element is exposed to an accessibility API.
 
@@ -27,13 +23,15 @@ The presence of the `aria-hidden` attribute hides content from assistive technol
 
 `aria-hidden="true"` should not be used on elements that can receive focus. Additionally, since this attribute is inherited by an element's children, it should not be added onto the parent or ancestor of a focusable element.
 
-> **Warning:** Do not use `aria-hidden="true"` on focusable elements.
+> [!WARNING]
+> Do not use `aria-hidden="true"` on focusable elements.
 
 An element's hidden status is based on whether it is rendered. Rendering is usually controlled by CSS. For example, an element whose `display` property is set to `none` via CSS is not rendered. An element is considered hidden if it, or any of its ancestors are not rendered or have their `aria-hidden` attribute value set to true. Note that an element and its children that has `aria-hidden="true"` declared on it will still be visible, unless also hidden by CSS.
 
 Use caution when using `aria-hidden` to hide visibly rendered content from assistive technologies. You should not be hiding visible content unless doing so improves the experience for users of assistive technologies by removing redundant or extraneous content. Only when identical or equivalent meaning and functionality is exposed to assistive technologies can removing visible content from the accessibility API be considered.
 
-> **Note:** Consider all disabilities when hiding visibly rendered content from assistive technologies. Not all users of assistive technology are visually impaired. If visible content doesn't match text content in the accessibility API, the user experience will be negatively impacted for sighted users.
+> [!NOTE]
+> Consider all disabilities when hiding visibly rendered content from assistive technologies. Not all users of assistive technology are visually impaired. If visible content doesn't match text content in the accessibility API, the user experience will be negatively impacted for sighted users.
 
 On the surface, the `aria-hidden="true"` and the `role="presentation"` and its synonym `role="none"` seem similar, but the intent behind each is different.
 
@@ -57,9 +55,7 @@ Adding `aria-hidden="true"` to the icon hides the icon character from being incl
 ```html
 <button>
   <span class="fa fa-tweet" aria-hidden="true"></span>
-  <span class="label">
-    Tweet
-  </span>
+  <span class="label"> Tweet </span>
 </button>
 ```
 
@@ -74,7 +70,7 @@ We have a button with [a Font Awesome icon](https://fontawesome.com/). We hide t
 - `undefined` (default)
   - : The element's hidden state is determined by the user agent based on whether it is rendered.
 
-## ARIAMixin API
+## Associated interfaces
 
 - {{domxref("Element.ariaHidden")}}
   - : The [`ariaHidden`](/en-US/docs/Web/API/Element/ariaHidden) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-hidden` attribute, which Indicates whether the element is exposed to an accessibility API.
@@ -89,7 +85,7 @@ Used in **ALL** roles
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [`aria-disabled`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-disabled)
 - [`aria-modal`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-modal)
@@ -97,8 +93,3 @@ Used in **ALL** roles
 - HTML [`hidden`](/en-US/docs/Web/HTML/Global_attributes/hidden) attribute
 - CSS {{CSSXref('display')}} property
 - CSS {{CSSXref('visibility')}} property
-
-<section id="Quick_links">
-<strong><a href="/en-US/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA states and properties</a></strong>
-{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/aria/Attributes")}}
-</section>

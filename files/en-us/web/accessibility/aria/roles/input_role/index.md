@@ -1,18 +1,16 @@
 ---
-title: 'ARIA: input role'
+title: "ARIA: input role"
 slug: Web/Accessibility/ARIA/Roles/input_role
-tags:
-  - Accessibility
-  - ARIA
-  - roles
-  - Reference
-  - ARIA roles
-  - ARIA input role
+page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#input
 ---
+
+{{AccessibilitySidebar}}
+
 The `input` abstract role is a generic type of widget that allows user input.
 
-> **Note:**  The `input` role is an [abstract role](/en-US/docs/Web/Accessibility/ARIA/Roles#abstract_roles). It is included here for completeness of documentation. It is not to be used by web authors.
+> [!NOTE]
+> The `input` role is an [abstract role](/en-US/docs/Web/Accessibility/ARIA/Roles#6._abstract_roles). It is included here for completeness of documentation. It is not to be used by web authors.
 
 ## Description
 
@@ -26,7 +24,7 @@ Do not use.
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [ARIA: `widget` role](/en-US/docs/Web/Accessibility/ARIA/Roles/widget_role)
 - [ARIA: `checkbox` role](/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role)
@@ -36,12 +34,4 @@ Do not use.
 - [ARIA: `slider` role](/en-US/docs/Web/Accessibility/ARIA/Roles/slider_role)
 - [ARIA: `spinbutton` role](/en-US/docs/Web/Accessibility/ARIA/Roles/spinbutton_role)
 - [ARIA: `textbox` role](/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role)
-- [HTML: the `input` element](/en-US/docs/Web/HTML/Element/input/)
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
-
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
-
-</section>
+- [HTML: the `input` element](/en-US/docs/Web/HTML/Element/input)

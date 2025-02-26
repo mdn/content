@@ -1,14 +1,11 @@
 ---
-title: Document.createComment()
+title: "Document: createComment() method"
+short-title: createComment()
 slug: Web/API/Document/createComment
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Method
-  - Reference
 browser-compat: api.Document.createComment
 ---
+
 {{APIRef("DOM")}}
 
 **`createComment()`** creates a new comment node, and returns
@@ -16,7 +13,7 @@ it.
 
 ## Syntax
 
-```js
+```js-nolint
 createComment(data)
 ```
 
@@ -32,12 +29,14 @@ A new {{domxref("Comment")}} object.
 ## Examples
 
 ```js
-const docu = new DOMParser().parseFromString('<xml></xml>',  'application/xml');
-const comment = docu.createComment('This is a not-so-secret comment in your document');
+const doc = new DOMParser().parseFromString("<xml></xml>", "application/xml");
+const comment = doc.createComment(
+  "This is a not-so-secret comment in your document",
+);
 
-docu.getElementsByTagName('xml')[0].appendChild(comment);
+doc.querySelector("xml").appendChild(comment);
 
-alert(new XMLSerializer().serializeToString(docu));
+console.log(new XMLSerializer().serializeToString(doc));
 // Displays: <xml><!--This is a not-so-secret comment in your document--></xml>
 ```
 

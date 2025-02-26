@@ -1,22 +1,16 @@
 ---
-title: XRDepthInformation.rawValueToMeters
+title: "XRDepthInformation: rawValueToMeters property"
+short-title: rawValueToMeters
 slug: Web/API/XRDepthInformation/rawValueToMeters
 page-type: web-api-instance-property
-tags:
-  - API
-  - AR
-  - Augmented Reality
-  - Experimental
-  - Property
-  - Reference
-  - VR
-  - WebXR
-  - WebXR Device API
+status:
+  - experimental
 browser-compat: api.XRDepthInformation.rawValueToMeters
 ---
-{{APIRef("WebXR Device API")}}
 
-The *read-only* **`rawValueToMeters`** property of the {{DOMxRef("XRDepthInformation")}} interface contains the scale factor by which the raw depth values must be multiplied in order to get the depths in meters.
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+
+The _read-only_ **`rawValueToMeters`** property of the {{DOMxRef("XRDepthInformation")}} interface contains the scale factor by which the raw depth values must be multiplied in order to get the depths in meters.
 
 For CPU depth information, see also the {{domxref("XRCPUDepthInformation.getDepthInMeters()")}} method.
 

@@ -1,16 +1,15 @@
 ---
 title: symbols()
 slug: Web/CSS/symbols
-tags:
-  - CSS
-  - CSS Counter Styles
-  - Function
-  - Reference
+page-type: css-function
 browser-compat: css.properties.list-style-type.symbols
 ---
+
 {{CSSRef}}
 
-The **`symbols()`** CSS function lets you define counter styles inline, directly as the value of a property such as {{cssxref("list-style")}}. Unlike {{cssxref("@counter-style")}}, `symbols()` is _anonymous_ (i.e., it can only be used once). Although less powerful, it is shorter and easier to write than {{cssxref("@counter-style")}}.
+The **`symbols()`** CSS function enables defining counter styles inline, directly as a value of properties such as {{cssxref("list-style")}}, providing a less powerful but simpler alternative to the {{cssxref("@counter-style")}} method of defining a counter style.
+
+Unlike {{cssxref("@counter-style")}}, which defines a reusable counter style, `symbols()` is _anonymous_ (i.e., it can only be used once). This function accepts strings and images as values. In comparison, the {{cssxref("@counter-style")}}'s [`symbols`](/en-US/docs/Web/CSS/@counter-style/symbols) descriptor also accepts identifiers.
 
 ## Syntax
 
@@ -25,6 +24,10 @@ symbols() = symbols( <symbols-type>? [ <string> | <image> ]+ );
 - `alphabetic`: The system interprets the given values as the digits of an alphabetic numbering system, like a place-value numbering system but without `0`.
 - `symbolic`: The system cycles through the values, printing them an additional time at each cycle (one time for the first cycle, two times for the second, etc.).
 - `fixed`: The system cycles through the given values once, then falls back to Arabic numerals.
+
+## Formal syntax
+
+{{CSSSyntax}}
 
 ## Examples
 
@@ -62,5 +65,7 @@ ol {
 
 ## See also
 
-- {{cssxref("@counter-style")}}
-- {{cssxref("list-style-type")}} and the corresponding shorthand {{cssxref("list-style")}}.
+- {{cssxref("@counter-style")}} descriptors: {{cssxref("@counter-style/system","system")}}, {{cssxref("@counter-style/symbols", "symbols")}}, {{cssxref("@counter-style/additive-symbols", "additive-symbols")}}, {{cssxref("@counter-style/prefix", "prefix")}}, {{cssxref("@counter-style/suffix", "suffix")}}, {{cssxref("@counter-style/range", "range")}}, {{cssxref("@counter-style/pad", "pad")}}, {{cssxref("@counter-style/speak-as", "speak-as")}}, {{cssxref("@counter-style/fallback", "fallback")}}
+- List style properties: {{cssxref("list-style")}}, {{cssxref("list-style-type")}}
+- [CSS counter styles](/en-US/docs/Web/CSS/CSS_counter_styles) module
+- [CSS lists and counters](/en-US/docs/Web/CSS/CSS_lists) module

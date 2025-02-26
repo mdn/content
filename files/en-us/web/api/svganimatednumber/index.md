@@ -2,14 +2,9 @@
 title: SVGAnimatedNumber
 slug: Web/API/SVGAnimatedNumber
 page-type: web-api-interface
-tags:
-  - API
-  - HTML
-  - NeedsExample
-  - SVG
-  - SVG DOM
 browser-compat: api.SVGAnimatedNumber
 ---
+
 {{APIRef("SVG")}}
 
 ## SVG animated number interface
@@ -49,7 +44,7 @@ The `SVGAnimatedNumber` interface is used for attributes of basic type [\<Number
   </tbody>
 </table>
 
-## Properties
+## Instance properties
 
 <table class="no-markdown">
   <thead>
@@ -61,14 +56,14 @@ The `SVGAnimatedNumber` interface is used for attributes of basic type [\<Number
   </thead>
   <tbody>
     <tr>
-      <td><code>baseVal</code></td>
+      <td><code>{{domxref("SVGAnimatedNumber.baseVal")}}</code></td>
       <td>float</td>
       <td>
         The base value of the given attribute before applying any animations.
       </td>
     </tr>
     <tr>
-      <td><code>animVal</code></td>
+      <td><code>{{domxref("SVGAnimatedNumber.animVal")}}</code></td>
       <td>float</td>
       <td>
         If the given attribute or property is being animated, contains the
@@ -80,9 +75,13 @@ The `SVGAnimatedNumber` interface is used for attributes of basic type [\<Number
   </tbody>
 </table>
 
-## Methods
+## Instance methods
 
 The `SVGAnimatedNumber` interface do not provide any specific methods.
+
+## Specifications
+
+{{Specifications}}
 
 ## Browser compatibility
 

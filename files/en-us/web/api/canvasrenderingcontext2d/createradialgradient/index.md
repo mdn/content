@@ -1,16 +1,11 @@
 ---
-title: CanvasRenderingContext2D.createRadialGradient()
+title: "CanvasRenderingContext2D: createRadialGradient() method"
+short-title: createRadialGradient()
 slug: Web/API/CanvasRenderingContext2D/createRadialGradient
 page-type: web-api-instance-method
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Gradients
-  - Method
-  - Reference
 browser-compat: api.CanvasRenderingContext2D.createRadialGradient
 ---
+
 {{APIRef}}
 
 The
@@ -19,17 +14,16 @@ method of the Canvas 2D API creates a radial gradient using the size and coordin
 two circles.
 
 This method returns a {{domxref("CanvasGradient")}}. To be applied to a shape, the
-gradient must first be assigned to the {{domxref("CanvasRenderingContext2D.fillStyle",
-  "fillStyle")}} or {{domxref("CanvasRenderingContext2D.strokeStyle", "strokeStyle")}}
-properties.
+gradient must first be assigned to the {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}} or {{domxref("CanvasRenderingContext2D.strokeStyle", "strokeStyle")}} properties.
 
-> **Note:** Gradient coordinates are global, i.e., relative to the current
+> [!NOTE]
+> Gradient coordinates are global, i.e., relative to the current
 > coordinate space. When applied to a shape, the coordinates are NOT relative to the
 > shape's coordinates.
 
 ## Syntax
 
-```js
+```js-nolint
 createRadialGradient(x0, y0, r0, x1, y1, r1)
 ```
 
@@ -53,8 +47,14 @@ defining the gradient's start circle, and three defining the end circle.
 
 ### Return value
 
-- {{domxref("CanvasGradient")}}
-  - : A radial `CanvasGradient` initialized with the two specified circles.
+A radial {{domxref("CanvasGradient")}} initialized with the two specified circles.
+
+### Exceptions
+
+- `NotSupportedError` {{domxref("DOMException")}}
+  - : Thrown when non-finite values are passed in parameter.
+- `IndexSizeError` {{domxref("DOMException")}}
+  - : Thrown when a negative radius is passed in parameter.
 
 ## Examples
 
@@ -74,18 +74,18 @@ is rendered to a filled rectangle.
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 // Create a radial gradient
 // The inner circle is at x=110, y=90, with radius=30
 // The outer circle is at x=100, y=100, with radius=70
-const gradient = ctx.createRadialGradient(110,90,30, 100,100,70);
+const gradient = ctx.createRadialGradient(110, 90, 30, 100, 100, 70);
 
 // Add three color stops
-gradient.addColorStop(0, 'pink');
-gradient.addColorStop(.9, 'white');
-gradient.addColorStop(1, 'green');
+gradient.addColorStop(0, "pink");
+gradient.addColorStop(0.9, "white");
+gradient.addColorStop(1, "green");
 
 // Set the fill style and draw a rectangle
 ctx.fillStyle = gradient;
@@ -103,13 +103,6 @@ ctx.fillRect(20, 20, 160, 160);
 ## Browser compatibility
 
 {{Compat}}
-
-### Gecko-specific notes
-
-- Starting with Gecko 2.0 {{geckoRelease("2.0")}}, specifying non-finite values now
-  throws `NOT_SUPPORTED_ERR` instead of `SYNTAX_ERR`.
-- Starting with Gecko 5.0 {{geckoRelease("5.0")}}, specifying a negative radius
-  correctly throws `INDEX_SIZE_ERR`.
 
 ## See also
 

@@ -1,9 +1,11 @@
 ---
-title: RTCInboundRtpStreamStats.fecPacketsReceived
+title: "RTCInboundRtpStreamStats: fecPacketsReceived property"
+short-title: fecPacketsReceived
 slug: Web/API/RTCInboundRtpStreamStats/fecPacketsReceived
 page-type: web-api-instance-property
-browser-compat: api.RTCInboundRtpStreamStats.fecPacketsReceived
+browser-compat: api.RTCStatsReport.type_inbound-rtp.fecPacketsReceived
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`fecPacketsReceived`** property
@@ -15,13 +17,7 @@ An FEC packet provides parity information which can
 be used to attempt to reconstruct RTP data packets which have been corrupted in
 transit.
 
-## Syntax
-
-```js
-const fecPacketsReceived = rtcInboundRtpStreamStats.fecPacketsReceived;
-```
-
-### Value
+## Value
 
 An unsigned integer value which indicates the total number of FEC packets which have
 been received from the remote peer during this RTP session. Forward Error Correction
@@ -31,7 +27,8 @@ By using the FEC parity information to attempt to reconstruct damaged packets, i
 possible to avoid the need to retransmit damaged packets, which in turn helps to
 reduce lag, or the need to skip damaged frames entirely.
 
-> **Note:** This counter may also be incremented when FEC packets arrive
+> [!NOTE]
+> This counter may also be incremented when FEC packets arrive
 > in-band along with media content; this can happen with Opus, for example.
 
 ## Usage notes
@@ -43,8 +40,7 @@ previously-received FEC packet. This may also happen if the FEC packet arrives o
 the window of time in which the client will attempt to use it.
 
 If you wish to know how many of the received packets were discarded, you can examine
-the value of {{domxref("RTCInboundRtpStreamStats.fecPacketsDiscarded",
-    "fecPacketsDiscarded")}}.
+the value of {{domxref("RTCInboundRtpStreamStats.fecPacketsDiscarded", "fecPacketsDiscarded")}}.
 
 ## Specifications
 

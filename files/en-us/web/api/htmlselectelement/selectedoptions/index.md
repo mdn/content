@@ -1,20 +1,11 @@
 ---
-title: HTMLSelectElement.selectedOptions
+title: "HTMLSelectElement: selectedOptions property"
+short-title: selectedOptions
 slug: Web/API/HTMLSelectElement/selectedOptions
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLSelectElement
-  - Options
-  - Property
-  - Read-only
-  - Reference
-  - Select
-  - Web
-  - selectedOptions
 browser-compat: api.HTMLSelectElement.selectedOptions
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **read-only** {{domxref("HTMLSelectElement")}} property
@@ -50,7 +41,7 @@ The HTML that creates the selection box and the {{HTMLElement("option")}} elemen
 representing each of the food choices looks like this:
 
 ```html
-<label for="foods">What do you want to eat?</label><br>
+<label for="foods">What do you want to eat?</label><br />
 <select id="foods" name="foods" size="7" multiple>
   <option value="1">Burrito</option>
   <option value="2">Cheeseburger</option>
@@ -58,12 +49,9 @@ representing each of the food choices looks like this:
   <option value="4">Pepperoni Pizza</option>
   <option value="5">Taco</option>
 </select>
-<br>
-<button name="order" id="order">
-  Order Now
-</button>
-<p id="output">
-</p>
+<br />
+<button name="order" id="order">Order Now</button>
+<p id="output"></p>
 ```
 
 The `<select>` element is set to allow multiple items to be selected,
@@ -81,31 +69,35 @@ let orderButton = document.getElementById("order");
 let itemList = document.getElementById("foods");
 let outputBox = document.getElementById("output");
 
-orderButton.addEventListener("click", function() {
-  let collection = itemList.selectedOptions;
-  let output = "";
+orderButton.addEventListener(
+  "click",
+  () => {
+    let collection = itemList.selectedOptions;
+    let output = "";
 
-  for (let i=0; i<collection.length; i++) {
+    for (let i = 0; i < collection.length; i++) {
+      if (output === "") {
+        output = "Your order for the following items has been placed: ";
+      }
+      output += collection[i].label;
+
+      if (i === collection.length - 2 && collection.length < 3) {
+        output += " and ";
+      } else if (i < collection.length - 2) {
+        output += ", ";
+      } else if (i === collection.length - 2) {
+        output += ", and ";
+      }
+    }
+
     if (output === "") {
-      output = "Your order for the following items has been placed: ";
+      output = "You didn't order anything!";
     }
-    output += collection[i].label;
 
-    if (i === (collection.length - 2) && (collection.length < 3)) {
-      output +=  " and ";
-    } else if (i < (collection.length - 2)) {
-      output += ", ";
-    } else if (i === (collection.length - 2)) {
-      output += ", and ";
-    }
-  }
-
-  if (output === "") {
-    output = "You didn't order anything!";
-  }
-
-  outputBox.innerHTML = output;
-}, false);
+    outputBox.textContent = output;
+  },
+  false,
+);
 ```
 
 This script sets up a {{domxref("Element/click_event", "click")}} event listener on the "Order Now" button. When
@@ -130,4 +122,4 @@ The resulting content looks like this in action:
 
 ## See also
 
-- {{SectionOnPage("/en-US/docs/Learn/Forms/Other_form_controls", "Drop-down controls")}}
+- [Drop-down controls](/en-US/docs/Learn_web_development/Extensions/Forms/Other_form_controls#drop-down_controls)

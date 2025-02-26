@@ -1,14 +1,10 @@
 ---
 title: justify-items
 slug: Web/CSS/justify-items
-tags:
-  - CSS
-  - CSS Box Alignment
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.justify-items
 ---
+
 {{CSSRef}}
 
 The [CSS](/en-US/docs/Web/CSS) **`justify-items`** property defines the default {{CSSxRef("justify-self")}} for all items of the box, giving them all a default way of justifying each box along the appropriate axis.
@@ -19,9 +15,9 @@ The effect of this property is dependent of the layout mode we are in:
 
 - In block-level layouts, it aligns the items inside their containing block on the inline axis.
 - For absolutely-positioned elements, it aligns the items inside their containing block on the inline axis, accounting for the offset values of top, left, bottom, and right.
-- In table cell layouts, this property is _ignored_ ([more](/en-US/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Block_Abspos_Tables) about alignment in block, absolute positioned and table layout)
-- In flexbox layouts, this property is _ignored_ ([more](/en-US/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox) about alignment in Flexbox)
-- In grid layouts, it aligns the items inside their grid areas on the inline axis ([more](/en-US/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Grid_Layout) about alignment in grid layouts)
+- In table cell layouts, this property is _ignored_ ([more](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_block_abspos_tables) about alignment in block, absolute positioned and table layout)
+- In flexbox layouts, this property is _ignored_ ([more](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox) about alignment in flexbox)
+- In grid layouts, it aligns the items inside their grid areas on the inline axis ([more](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_grid_layout) about alignment in grid layouts)
 
 ## Syntax
 
@@ -31,15 +27,16 @@ justify-items: normal;
 justify-items: stretch;
 
 /* Positional alignment */
-justify-items: center;     /* Pack items around the center */
-justify-items: start;      /* Pack items from the start */
-justify-items: end;        /* Pack items from the end */
-justify-items: flex-start; /* Equivalent to 'start'. Note that justify-items is ignored in Flexbox layouts. */
-justify-items: flex-end;   /* Equivalent to 'end'. Note that justify-items is ignored in Flexbox layouts. */
+justify-items: center; /* Pack items around the center */
+justify-items: start; /* Pack items from the start */
+justify-items: end; /* Pack items from the end */
+justify-items: flex-start; /* Equivalent to 'start'. Note that justify-items is ignored in flexbox layouts. */
+justify-items: flex-end; /* Equivalent to 'end'. Note that justify-items is ignored in flexbox layouts. */
 justify-items: self-start;
 justify-items: self-end;
-justify-items: left;       /* Pack items from the left */
-justify-items: right;      /* Pack items from the right */
+justify-items: left; /* Pack items from the left */
+justify-items: right; /* Pack items from the right */
+justify-items: anchor-center;
 
 /* Baseline alignment */
 justify-items: baseline;
@@ -78,7 +75,7 @@ This property can take one of four different forms:
     - In absolutely-positioned layouts, the keyword behaved like `start` on _replaced_ absolutely-positioned boxes, and as `stretch` on _all other_ absolutely-positioned boxes.
     - In table cell layouts, this keyword has no meaning as this property is _ignored_.
     - In flexbox layouts, this keyword has no meaning as this property is _ignored._
-    - In grid layouts, this keyword leads to a behavior similar to the one of `stretch`, except for boxes with an aspect ratio or an intrinsic sizes where it behaves like `start`.
+    - In grid layouts, this keyword leads to a behavior similar to the one of `stretch`, except for boxes with an aspect ratio or an intrinsic size where it behaves like `start`.
 - `start`
   - : The item is packed flush to each other toward the start edge of the alignment container in the appropriate axis.
 - `end`
@@ -102,6 +99,8 @@ This property can take one of four different forms:
     The fallback alignment for `first baseline` is `start`, the one for `last baseline` is `end`.
 - `stretch`
   - : If the combined size of the items is less than the size of the alignment container, any `auto`-sized items have their size increased equally (not proportionally), while still respecting the constraints imposed by {{CSSxRef("max-height")}}/{{CSSxRef("max-width")}} (or equivalent functionality), so that the combined size exactly fills the alignment container.
+- `anchor-center`
+  - : In the case of [anchor-positioned](/en-US/docs/Web/CSS/CSS_anchor_positioning) elements, aligns the items to the center of the associated anchor element in the inline direction. See [Centering on the anchor using `anchor-center`](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#centering_on_the_anchor_using_anchor-center).
 - `safe`
   - : If the size of the item overflows the alignment container, the item is instead aligned as if the alignment mode were `start`.
 - `unsafe`
@@ -119,9 +118,9 @@ This property can take one of four different forms:
 
 ## Examples
 
-### Simple demonstration
+### Basic demonstration
 
-In the following example we have a simple 2 x 2 grid layout. Initially the grid container is given a `justify-items` value of `stretch` (the default), which causes the grid items to stretch across the entire width of their cells.
+In the following example, we have a simple 2 x 2 grid layout. Initially the grid container is given a `justify-items` value of `stretch` (the default), which causes the grid items to stretch across the entire width of their cells.
 
 If you hover or tab onto the grid container however, it is given a `justify-items` value of `center`, which causes the grid items to span only as wide as their content width, and align in the center of their cells.
 
@@ -150,11 +149,13 @@ article {
   grid-template-columns: 1fr 1fr;
   grid-auto-rows: 40px;
   grid-gap: 10px;
+  margin: 20px;
   width: 300px;
   justify-items: stretch;
 }
 
-article:hover, article:focus {
+article:hover,
+article:focus {
   justify-items: center;
 }
 
@@ -165,19 +166,16 @@ article span {
   text-align: center;
 }
 
-article, span {
+article,
+span {
   padding: 10px;
   border-radius: 7px;
-}
-
-article {
-  margin: 20px;
 }
 ```
 
 #### Result
 
-{{EmbedLiveSample('Simple_demonstration', '100%', 200)}}
+{{EmbedLiveSample('Basic_demonstration', '100%', 200)}}
 
 ## Specifications
 
@@ -189,8 +187,8 @@ article {
 
 ## See also
 
-- CSS Grid Guide: _[Box alignment in CSS Grid layouts](/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)_
-- [CSS Box Alignment](/en-US/docs/Web/CSS/CSS_Box_Alignment)
-- The {{CSSxRef("place-items")}} shorthand property
-- The {{CSSxRef("justify-self")}} property
-- The {{CSSxRef("align-items")}} property
+- {{CSSxRef("justify-self")}}
+- {{CSSxRef("align-items")}}
+- {{CSSxRef("place-items")}} shorthand
+- [Box alignment in grid layout](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_grid_layout)
+- [CSS box alignment](/en-US/docs/Web/CSS/CSS_box_alignment) module

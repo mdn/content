@@ -1,20 +1,11 @@
 ---
-title: StaticRange.collapsed
+title: "StaticRange: collapsed property"
+short-title: collapsed
 slug: Web/API/StaticRange/collapsed
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - DOM API
-  - Empty
-  - Property
-  - Range
-  - Reference
-  - Static Range API
-  - StaticRange
-  - collapsed
 browser-compat: api.StaticRange.collapsed
 ---
+
 {{APIRef("DOM WHATWG")}}
 
 The **`collapsed`** read-only property

@@ -1,30 +1,18 @@
 ---
-title: RTCPeerConnection.getTransceivers()
+title: "RTCPeerConnection: getTransceivers() method"
+short-title: getTransceivers()
 slug: Web/API/RTCPeerConnection/getTransceivers
 page-type: web-api-instance-method
-tags:
-  - API
-  - Media
-  - Method
-  - RTCPeerConnection
-  - RTCRtpTransceiver
-  - RTP
-  - Reference
-  - Transceiver
-  - WebRTC
-  - getTransceivers
 browser-compat: api.RTCPeerConnection.getTransceivers
 ---
+
 {{APIRef("WebRTC")}}
 
-The {{domxref("RTCPeerConnection")}} interface's
-**`getTransceivers()`** method returns a list of the
-{{domxref("RTCRtpTransceiver")}} objects being used to send and receive data on the
-connection.
+The **`getTransceivers()`** method of the {{domxref("RTCPeerConnection")}} interface returns a list of the {{domxref("RTCRtpTransceiver")}} objects being used to send and receive data on the connection.
 
 ## Syntax
 
-```js
+```js-nolint
 getTransceivers()
 ```
 
@@ -34,14 +22,13 @@ None.
 
 ### Return value
 
-An array of the {{domxref("RTCRtpTransceiver")}} objects representing the transceivers
-handling sending and receiving all media on the `RTCPeerConnection`. The list
-is in the order in which the transceivers were added to the connection.
+An array of the {{domxref("RTCRtpTransceiver")}} objects representing the transceivers handling sending and receiving all media on the `RTCPeerConnection`.
+The array is in the order in which the transceivers were added to the connection.
+The array does not include transceivers that have already been [stopped](/en-US/docs/Web/API/RTCRtpTransceiver/currentDirection) (following offer/answer).
 
 ## Examples
 
-The following snippet of code stops all transceivers associated with an
-`RTCPeerConnection`.
+The following snippet of code stops all transceivers associated with an `RTCPeerConnection`.
 
 ```js
 pc.getTransceivers().forEach((transceiver) => {

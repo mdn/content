@@ -1,18 +1,14 @@
 ---
-title: PasswordCredential.name
+title: "PasswordCredential: name property"
+short-title: name
 slug: Web/API/PasswordCredential/name
 page-type: web-api-instance-property
-tags:
-  - API
-  - Credential Management API
-  - NeedsExample
-  - PasswordCredential
-  - Property
-  - Reference
-  - credential management
+status:
+  - experimental
 browser-compat: api.PasswordCredential.name
 ---
-{{SeeCompatTable}}{{APIRef("Credential Management API")}}
+
+{{SeeCompatTable}}{{APIRef("Credential Management API")}}{{SecureContext_Header}}
 
 The **`name`** read-only property of
 the {{domxref("PasswordCredential")}} interface returns a string

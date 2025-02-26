@@ -1,18 +1,17 @@
 ---
-title: '-webkit-mask-position-x'
+title: -webkit-mask-position-x
 slug: Web/CSS/-webkit-mask-position-x
-tags:
-  - CSS
-  - CSS Masking
-  - CSS Property
-  - Non-standard
-  - Reference
-  - recipe:css-property
+page-type: css-property
+status:
+  - non-standard
 browser-compat: css.properties.-webkit-mask-position-x
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 The `-webkit-mask-position-x` CSS property sets the initial horizontal position of a mask image.
+
+## Syntax
 
 ```css
 /* Keyword values */
@@ -29,27 +28,28 @@ The `-webkit-mask-position-x` CSS property sets the initial horizontal position 
 -webkit-mask-position-x: -1cm;
 
 /* Multiple values */
--webkit-mask-position-x: 50px, 25%, -3em;
+-webkit-mask-position-x:
+  50px,
+  25%,
+  -3em;
 
 /* Global values */
 -webkit-mask-position-x: inherit;
 -webkit-mask-position-x: initial;
+-webkit-mask-position-x: revert;
+-webkit-mask-position-x: revert-layer;
 -webkit-mask-position-x: unset;
 ```
-
-{{cssinfo}}
-
-## Syntax
 
 ### Values
 
 - `<length-percentage>`
   - : A length indicating the position of the left edge of the image relative to the box's left padding edge. Percentages are calculated against the horizontal dimension of the box padding area. That means, a value of `0%` means the left edge of the image is aligned with the box's left padding edge and a value of `100%` means the right edge of the image is aligned with the box's right padding edge.
-- **`left`**
+- `left`
   - : Equivalent to `0%`.
-- **`center`**
+- `center`
   - : Equivalent to `50%`.
-- **`right`**
+- `right`
   - : Equivalent to `100%`.
 
 ## Formal definition
@@ -58,7 +58,10 @@ The `-webkit-mask-position-x` CSS property sets the initial horizontal position 
 
 ## Formal syntax
 
-{{csssyntax}}
+```plain
+-webkit-mask-position-x =
+  [ <length-percentage> | left | center | right ]#
+```
 
 ## Examples
 
@@ -86,4 +89,4 @@ Not part of any standard.
 
 ## See also
 
-{{cssxref("-webkit-mask-position")}}, {{cssxref("-webkit-mask-position-y")}}, {{cssxref("-webkit-mask-origin")}}, {{cssxref("-webkit-mask-attachment")}}
+{{cssxref("mask-position", "-webkit-mask-position")}}, {{cssxref("-webkit-mask-position-y")}}, {{cssxref("mask-origin", "-webkit-mask-origin")}}

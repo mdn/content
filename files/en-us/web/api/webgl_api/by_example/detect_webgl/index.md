@@ -2,15 +2,9 @@
 title: Detect WebGL
 slug: Web/API/WebGL_API/By_example/Detect_WebGL
 page-type: guide
-tags:
-  - Beginner
-  - Example
-  - Graphics
-  - Learn
-  - Tutorial
-  - WebGL
 ---
-{{PreviousNext("Learn/WebGL/By_example","Learn/WebGL/By_example/Clearing_with_colors")}}
+
+{{DefaultAPISidebar("WebGL")}}{{PreviousNext("Web/API/WebGL_API/By_example","Web/API/WebGL_API/By_example/Clearing_with_colors")}}
 
 This example demonstrates how to detect a {{Glossary("WebGL")}} rendering context and reports the result to the user.
 
@@ -29,44 +23,48 @@ Saving the state of the graphics machine within a single context interface is no
 
 ```css
 body {
-  text-align : center;
+  text-align: center;
 }
 button {
-  display : block;
-  font-size : inherit;
-  margin : auto;
-  padding : 0.6em;
+  display: block;
+  font-size: inherit;
+  margin: auto;
+  padding: 0.6em;
 }
 ```
 
 ```js
 // Run everything inside window load event handler, to make sure
 // DOM is fully loaded and styled before trying to manipulate it.
-window.addEventListener("load", function() {
-  const paragraph = document.querySelector("p"),
-    button = document.querySelector("button");
-  // Adding click event handler to button.
-  button.addEventListener("click", detectWebGLContext, false);
-  function detectWebGLContext () {
-    // Create canvas element. The canvas is not added to the
-    // document itself, so it is never displayed in the
-    // browser window.
-    const canvas = document.createElement("canvas");
-    // Get WebGLRenderingContext from canvas element.
-    const gl = canvas.getContext("webgl")
-      || canvas.getContext("experimental-webgl");
-    // Report the result.
-    if (gl && gl instanceof WebGLRenderingContext) {
+window.addEventListener(
+  "load",
+  () => {
+    const paragraph = document.querySelector("p");
+    const button = document.querySelector("button");
+
+    // Adding click event handler to button.
+    button.addEventListener("click", detectWebGLContext, false);
+    function detectWebGLContext() {
+      // Create canvas element. The canvas is not added to the
+      // document itself, so it is never displayed in the
+      // browser window.
+      const canvas = document.createElement("canvas");
+
+      // Get WebGLRenderingContext from canvas element.
+      const gl =
+        canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
+
+      // Report the result.
       paragraph.textContent =
-        "Congratulations! Your browser supports WebGL.";
-    } else {
-      paragraph.textContent = "Failed to get WebGL context. "
-        + "Your browser or device may not support WebGL.";
+        gl instanceof WebGLRenderingContext
+          ? "Congratulations! Your browser supports WebGL."
+          : "Failed. Your browser or device may not support WebGL.";
     }
-  }
-}, false);
+  },
+  false,
+);
 ```
 
 The source code of this example is also available on [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/detect-webgl).
 
-{{PreviousNext("Learn/WebGL/By_example","Learn/WebGL/By_example/Clearing_with_colors")}}
+{{PreviousNext("Web/API/WebGL_API/By_example","Web/API/WebGL_API/By_example/Clearing_with_colors")}}

@@ -2,24 +2,9 @@
 title: Inputs and input sources
 slug: Web/API/WebXR_Device_API/Inputs
 page-type: guide
-tags:
-  - API
-  - AR
-  - Controls
-  - Graphics
-  - Guide
-  - Input
-  - Input Sources
-  - Inputs
-  - Sources
-  - VR
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - controllers
 ---
-{{APIRef("WebXR Device API")}}{{SecureContext_Header}}
+
+{{DefaultAPISidebar("WebXR Device API")}}{{SecureContext_Header}}
 
 A full WebXR experience isn't just about showing the user a wholly virtual scene or augmenting reality by adding to or altering the world around them. In order to make an experience that's fulfilling and engaging, the user needs to be able to interact with it. To that end, WebXR provides support for a variety of kinds of input devices.
 
@@ -60,7 +45,7 @@ The fundamental capabilities of an input source are:
 
 Any additional capabilities a WebXR controller may have are accessed through the input source's {{domxref("XRInputSource.gamepad", "gamepad")}} object. This object provides access to all of the buttons, axes, trackpads, and so forth that may be a part of the controller. See [Advanced controllers using the gamepad object](#advanced_controllers_using_the_gamepad_object) to learn how to use these controllers.
 
-### Properties of input sources
+### Instance properties of input sources
 
 Each individual `XRInputSource` has a set of properties that describe the input's available axes and buttons, which hand the user's holding it in, and how the input source is used to handle targeting within the 3D space.
 
@@ -87,8 +72,7 @@ The {{domxref("XRSpace")}} used to describe the position and orientation of the 
 You can easily obtain the target ray corresponding to the `targetRaySpace` from within the drawing handler for a given frame using {{domxref("XRFrame")}}'s {{domxref("XRFrame.getPose", "getPose()")}} method. The returned {{domxref("XRPose")}}'s {{domxref("XRPose.transform", "transform")}} is the transform corresponding to the target ray. Thus, for an input controller `primaryInput`:
 
 ```js
-let targetRayPose = frame.getPose(primaryInput.targetRaySpace,
-                       viewerRefSpace);
+let targetRayPose = frame.getPose(primaryInput.targetRaySpace, viewerRefSpace);
 let targetRayOrigin = targetRayPose.transform.position;
 let targetRayVector = targetRayPose.transform.orientation;
 ```
@@ -104,18 +88,18 @@ The input source's {{domxref("XRInputSource.gripSpace", "gripSpace")}} property 
 **Figure: The coordinate system for the right hand's grip space.**
 ![A diagram showing how the grip space indicates the local coordinate system for the player's hand relative to the world.](dark_right.svg)
 
-The grip space's native origin, located around the center of the player's fist, is (0, 0, 0) within the input source's local coordinate system, while the {{domxref("XRSpace")}} specified by `gripSpace` can be used at any time to convert coordinates or vectors from the input source's space into world coordinates (or vice-versa).
+The grip space's native origin, located around the center of the player's fist, is (0, 0, 0) within the input source's local coordinate system, while the {{domxref("XRSpace")}} specified by `gripSpace` can be used at any time to convert coordinates or vectors from the input source's space into world coordinates (or vice versa).
 
 This means that if you use a 3D model to represent your controller, your player's avatar's hands, or anything else representative of the controller's position in space, the `gripSpace` can be used as the transform matrix that correctly positions and orients the object's model for rendering. To do this, it's necessary to use the transform to convert the grip space to the world coordinate system used by WebGL for rendering purposes.
 
 **Figure: Mapping the grip space to the world coordinate system. The distances _x_, _y_, and _z_ together make up the world coordinates (_x_, _y_, z) corresponding to the origin of the grip space _G_.**
 ![A diagram showing the relationship between the grip space and the world space](gripspace-on-worldspace.svg)
 
-In the diagram above, we see the grip space, whose origin is located at *G*, at the midpoint of the user's grip on the controller, which is pointing directly away from the user, parallel to the *z* axis. Relative to the origin of the world space, *W*, the grip space's origin is located _x_ units to the right, _y_ units above, and _z_ units farther away. Given the directionality of the axes, the coordinates of the grip space can be expressed in world coordinates as (_x_, _y_, -_z_); _z_ is negative since the grip space is farther away along the _z_ axis, and is thus in the negative direction.
+In the diagram above, we see the grip space, whose origin is located at _G_, at the midpoint of the user's grip on the controller, which is pointing directly away from the user, parallel to the _z_ axis. Relative to the origin of the world space, _W_, the grip space's origin is located _x_ units to the right, _y_ units above, and _z_ units farther away. Given the directionality of the axes, the coordinates of the grip space can be expressed in world coordinates as (_x_, _y_, -_z_); _z_ is negative since the grip space is farther away along the _z_ axis, and is thus in the negative direction.
 
 If the controller were instead positioned to the left of and closer to the user than the world space origin (or possibly behind the user, if the user is located at the origin, although that's an uncomfortable way to hold a controller), the coordinates would have a negative value for _x_, but a positive value for _z_. The value of _y_ would still be positive unless the controller was moved below the world space origin.
 
-This is shown in the diagram below, in which the controller is located down and to the left of the world space's origin, with the controller also moved to be closer to us than the origin. As a result, the values of *x* and *y* are both negative, while *z* is positive.
+This is shown in the diagram below, in which the controller is located down and to the left of the world space's origin, with the controller also moved to be closer to us than the origin. As a result, the values of _x_ and _y_ are both negative, while _z_ is positive.
 
 **Figure Mapping a grip space to the world origin when the controller is positioned below and to the left of the world origin, and closer to us than the world origin is.**
 ![The relationship between another grip space and the world space](gripspace-on-worldspace-diag.svg)
@@ -163,13 +147,13 @@ xrSession.addEventListener("inputsourceschange", (event) => {
   inputSourceList = event.session.inputSources;
 
   inputSourceList.forEach((source) => {
-    switch(source) {
+    switch (source) {
       case "left":
         leftHandSource = source;
         break;
       case "right":
-       rightHandSource = source;
-       break;
+        rightHandSource = source;
+        break;
     }
   });
 });
@@ -196,7 +180,8 @@ See [Input profiles](#input_profiles) for more specific details on working with 
 
 In order to avoid having problems introduced by multiple controllers trying to inadvertently manipulate the UI at the same time, your app may need to have a "primary" controller. Not only would this controller then take the responsibility of clicking through the user interface of your app, but it would also be considered the "main hand," while other controllers would then be off-hand or additional controllers.
 
-> **Note:** This doesn't mean your app *needs* to decide upon a primary controller. But if it does, these strategies may help.
+> [!NOTE]
+> This doesn't mean your app _needs_ to decide upon a primary controller. But if it does, these strategies may help.
 
 There are a few ways you can decide upon a primary controller. We'll look at three.
 
@@ -205,14 +190,9 @@ There are a few ways you can decide upon a primary controller. We'll look at thr
 The most direct way to decide which controller is primary is to have a user-definable "Handedness" preference that the user sets to indicate which of their hands is dominant. You would then look at each input source and find one matching this, if available, falling back to another controller if no controller is in that hand.
 
 ```js
-let primaryInputSource = xrSession.inputSources[0];
-
-for (let i=0; i < xrSession.inputSources.length; i++) {
-  if (xrSession.inputSources[i].handedness === user.handedness) {
-    primaryInputSource = inputSources[i];
-    break;
-  }
-}
+const primaryInputSource =
+  xrSession.inputSources.find((src) => src.handedness === user.handedness) ??
+  xrSession.inputSources[0];
 ```
 
 This snippet of code starts by assuming that the first input source is the primary, but then looks for one whose {{domxref("XRInputSource.handedness", "handedness")}} matches the one specified in the `user` object. If it matches, that input source is selected as the primary.
@@ -224,7 +204,7 @@ Another option is to use the first input the user triggers the select action on.
 ```js
 let primaryInputSource = xrSession.inputSources[0];
 
-xrSession.onselect = function(event) {
+xrSession.onselect = (event) => {
   primaryInputSource = event.inputSource;
   xrSession.onselect = realSelectHandler;
   return realSelectHandler(event);
@@ -247,30 +227,30 @@ For example, the `generic-trigger-squeeze-touchpad` profile name can be used to 
 
 ```json
 {
-    "profileId": "generic-trigger-squeeze-touchpad",
-    "fallbackProfileIds": [],
-    "layouts" : {
-        "left-right-none" : {
-            "selectComponentId": "xr-standard-trigger",
-            "components": {
-                "xr-standard-trigger": { "type": "trigger" },
-                "xr-standard-squeeze": { "type": "squeeze" },
-                "xr-standard-touchpad": { "type": "touchpad" }
-            },
-            "gamepad": {
-                "mapping": "xr-standard",
-                "buttons": [
-                    "xr-standard-trigger",
-                    "xr-standard-squeeze",
-                    "xr-standard-touchpad"
-                ],
-                "axes":[
-                    { "componentId": "xr-standard-touchpad", "axis": "x-axis"},
-                    { "componentId": "xr-standard-touchpad", "axis": "y-axis"}
-                ]
-            }
-        }
+  "profileId": "generic-trigger-squeeze-touchpad",
+  "fallbackProfileIds": [],
+  "layouts": {
+    "left-right-none": {
+      "selectComponentId": "xr-standard-trigger",
+      "components": {
+        "xr-standard-trigger": { "type": "trigger" },
+        "xr-standard-squeeze": { "type": "squeeze" },
+        "xr-standard-touchpad": { "type": "touchpad" }
+      },
+      "gamepad": {
+        "mapping": "xr-standard",
+        "buttons": [
+          "xr-standard-trigger",
+          "xr-standard-squeeze",
+          "xr-standard-touchpad"
+        ],
+        "axes": [
+          { "componentId": "xr-standard-touchpad", "axis": "x-axis" },
+          { "componentId": "xr-standard-touchpad", "axis": "y-axis" }
+        ]
+      }
     }
+  }
 }
 ```
 
@@ -299,7 +279,8 @@ These types of input actions are described in more detail below.
 
 Each input source should define a **primary action**. A primary action (which will sometimes be shortened to "select action") is a platform-specific action which responds to the user manipulating it by delivering, in order, the events {{domxref("XRSession.selectstart_event", "selectstart")}}, {{domxref("XRSession.select_event", "select")}}, and {{domxref("XRSession.selectend_event", "selectend")}}. Each of these events is of type {{domxref("XRInputSourceEvent")}}.
 
-> **Note:** If an input source doesn't have a primary action, the input source is considered to be an **auxiliary input source**.
+> [!NOTE]
+> If an input source doesn't have a primary action, the input source is considered to be an **auxiliary input source**.
 
 When the user points a device along a target ray in your 3D space and then triggers a select action, the following events are sent to the active {{domxref("XRSession")}}:
 
@@ -433,10 +414,10 @@ If an XR device uses the mouse to simulate a controller when in the `inline` mod
 1. The user presses the mouse button while inside the {{HTMLElement("canvas")}} presenting the WebXR scene.
 2. The mouse event is captured by the XR device's driver.
 3. The device creates a new `XRInputSource` to represent the simulated XR input source. The {{domxref("XRInputSource.targetRayMode", "targetRayMode")}} is set to `screen`, and the other information is filled out as appropriate. This new input source is temporarily added to the list that's returned by the {{domxref("XRSession")}} property {{domxref("XRSession.inputSources", "inputSources")}}.
-4. The browser delivers {{domxref("HTMLElement/pointerdown_event", "pointerdown")}} events corresponding to the action.
+4. The browser delivers {{domxref("Element/pointerdown_event", "pointerdown")}} events corresponding to the action.
 5. A primary action is generated and sent to the app in the form of a {{domxref("XRSession.selectstart_event", "selectstart")}} event, with its source set to the new `XRInputSource`. Or, if the mouse is being used as an off-hand or secondary controller, an auxiliary action is sent instead.
 6. When the user releases the mouse button, the {{domxref("XRSession.select_event", "select")}} event is sent to the `XRSession`, then the DOM receives a {{domxref("Element.click_event", "click")}} event. The session then receives the {{domxref("XRSession.selectend_event", "selectend")}} event indicating the completion of the action.
-7. When the action is completed, the browser deletes the transient input source, and any appropriate {{domxref("HTMLElement/pointerup_event", "pointerup")}} events are sent.
+7. When the action is completed, the browser deletes the transient input source, and any appropriate {{domxref("Element/pointerup_event", "pointerup")}} events are sent.
 
 Thus, the transient input source is indeed transient—it exists only for the duration of handling the input and will as such not be listed in the input source list.
 
@@ -505,7 +486,8 @@ Since the origin of the grip space is located at the center of the hand's grip, 
 
 An {{domxref("XRInputSource")}} has a {{domxref("XRInputSource.gamepad", "gamepad")}} property whose value, if not `null`, is a {{domxref("Gamepad")}} object which provides access to gamepad-style buttons, axis controllers (such as joysticks or thumbpads), and so forth. This may include the same buttons that trigger the standard {{domxref("XRInputSource")}} actions, but may include any number of additional buttons and controls.
 
-> **Note:** While `Gamepad` is defined by the [Gamepad API](/en-US/docs/Web/API/Gamepad_API), it is not managed by the Gamepad API, so you must not attempt to use any Gamepad API methods with it. The object type is reused as a convenience.
+> [!NOTE]
+> While `Gamepad` is defined by the [Gamepad API](/en-US/docs/Web/API/Gamepad_API), it is not managed by the Gamepad API, so you must not attempt to use any Gamepad API methods with it. The object type is reused as a convenience.
 
 If the value of `gamepad` is `null`, the input source doesn't define any controls using the `Gamepad` record, either because it doesn't support it or because it doesn't have any added controls on it.
 
@@ -515,7 +497,7 @@ Because this use of the `Gamepad` interface is a convenience rather than a true 
 
 ## Incorporating input from non-WebXR sources
 
-Sometimes, you need to have a way to let the user provide input using controllers which are external to WebXR.  Most commonly, these inputs are from keyboards and mice, but you could also use non-XR gamepad devices, network inputs, or other sources of data to simulate user controls. While WebXR offers no support for directly interfacing these input devices with the XR scene, you can collect the input data yourself and apply it yourself.
+Sometimes, you need to have a way to let the user provide input using controllers which are external to WebXR. Most commonly, these inputs are from keyboards and mice, but you could also use non-XR gamepad devices, network inputs, or other sources of data to simulate user controls. While WebXR offers no support for directly interfacing these input devices with the XR scene, you can collect the input data yourself and apply it yourself.
 
 Assuming inputs are used to control an avatar within the simulation, which is the most common use case, WebXR inputs are used to affect the avatar in the following ways, using data collected from the non-XR input device:
 
@@ -540,7 +522,7 @@ The corresponding code for keyboard input might look something like this:
 
 ```js
 document.addEventListener("keydown", (event) => {
-  switch(event.key) {
+  switch (event.key) {
     case "a":
     case "A":
       avatar.posDelta.x -= ACCEL_X;
@@ -589,13 +571,16 @@ The `applyExternalInputs()` method takes the `avatar` object replaces its `refer
 ```js
 function applyExternalInputs(avatar) {
   if (!avatar.posDelta.x && !avatar.posDelta.y && !avatar.posDelta.z) {
-    return;  // Player hasn't moved with keyboard
+    return; // Player hasn't moved with keyboard
   }
 
-  let newTransform = new XRRigidTransform(
-        { x: avatar.posDelta.x, y: avatar.posDelta.y, z: avatar.posDelta.z }
-  );
-  avatar.referenceSpace = avatar.referenceSpace.getOffsetReferenceSpace(newTransform);
+  let newTransform = new XRRigidTransform({
+    x: avatar.posDelta.x,
+    y: avatar.posDelta.y,
+    z: avatar.posDelta.z,
+  });
+  avatar.referenceSpace =
+    avatar.referenceSpace.getOffsetReferenceSpace(newTransform);
 }
 ```
 

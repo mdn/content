@@ -1,11 +1,11 @@
 ---
-title: 'HTMLCanvasElement: webglcontextcreationerror event'
+title: "HTMLCanvasElement: webglcontextcreationerror event"
+short-title: webglcontextcreationerror
 slug: Web/API/HTMLCanvasElement/webglcontextcreationerror_event
 page-type: web-api-event
-tags:
-  - WebGL
 browser-compat: api.HTMLCanvasElement.webglcontextcreationerror_event
 ---
+
 {{APIRef}}
 
 The **`webglcontextcreationerror`** event of the [WebGL API](/en-US/docs/Web/API/WebGL_API) is fired if the user agent is unable to create a {{domxref("WebGLRenderingContext")}} context.
@@ -19,9 +19,9 @@ This event does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('webglcontextcreationerror', (event) => {});
+addEventListener("webglcontextcreationerror", (event) => {});
 
-onwebglcontextcreationerror = (event) => { };
+onwebglcontextcreationerror = (event) => {};
 ```
 
 ## Event type
@@ -40,13 +40,17 @@ _This interface inherits properties from its parent interface, {{domxref("Event"
 ## Example
 
 ```js
-const canvas = document.getElementById('canvas');
+const canvas = document.getElementById("canvas");
 
-canvas.addEventListener('webglcontextcreationerror', function(e) {
-  console.log(e.statusMessage || 'Unknown error');
-}, false);
+canvas.addEventListener(
+  "webglcontextcreationerror",
+  (e) => {
+    console.log(e.statusMessage || "Unknown error");
+  },
+  false,
+);
 
-const gl = canvas.getContext('webgl');
+const gl = canvas.getContext("webgl");
 // logs statusMessage or "Unknown error" if unable to create WebGL context
 ```
 

@@ -1,118 +1,120 @@
 ---
 title: Math
 slug: Web/JavaScript/Reference/Global_Objects/Math
-tags:
-  - JavaScript
-  - Math
-  - Namespace
-  - Reference
+page-type: javascript-namespace
 browser-compat: javascript.builtins.Math
 ---
+
 {{JSRef}}
 
-**`Math`** is a built-in object that has properties and methods for mathematical constants and functions. It's not a function object.
+The **`Math`** namespace object contains static properties and methods for mathematical constants and functions.
 
 `Math` works with the {{jsxref("Number")}} type. It doesn't work with {{jsxref("BigInt")}}.
 
 ## Description
 
-Unlike many other global objects, `Math` is not a constructor. All properties and methods of `Math` are static. You refer to the constant pi as `Math.PI` and you call the sine function as `Math.sin(x)`, where `x` is the method's argument. Constants are defined with the full precision of real numbers in JavaScript.
+Unlike most global objects, `Math` is not a constructor. You cannot use it with the [`new` operator](/en-US/docs/Web/JavaScript/Reference/Operators/new) or invoke the `Math` object as a function. All properties and methods of `Math` are static.
 
-> **Note:** Many `Math` functions have a precision that's _implementation-dependent._
+> [!NOTE]
+> Many `Math` functions have a precision that's _implementation-dependent_.
 >
 > This means that different browsers can give a different result. Even the same JavaScript engine on a different OS or architecture can give different results!
 
 ## Static properties
 
 - {{jsxref("Math.E")}}
-  - : Euler's constant and the base of natural logarithms; approximately `2.718`.
-- {{jsxref("Math.LN2")}}
-  - : Natural logarithm of `2`; approximately `0.693`.
+  - : Euler's number and the base of natural logarithms; approximately `2.718`.
 - {{jsxref("Math.LN10")}}
   - : Natural logarithm of `10`; approximately `2.303`.
-- {{jsxref("Math.LOG2E")}}
-  - : Base-2 logarithm of `E`; approximately `1.443`.
+- {{jsxref("Math.LN2")}}
+  - : Natural logarithm of `2`; approximately `0.693`.
 - {{jsxref("Math.LOG10E")}}
   - : Base-10 logarithm of `E`; approximately `0.434`.
+- {{jsxref("Math.LOG2E")}}
+  - : Base-2 logarithm of `E`; approximately `1.443`.
 - {{jsxref("Math.PI")}}
   - : Ratio of a circle's circumference to its diameter; approximately `3.14159`.
 - {{jsxref("Math.SQRT1_2")}}
   - : Square root of ½; approximately `0.707`.
 - {{jsxref("Math.SQRT2")}}
   - : Square root of `2`; approximately `1.414`.
+- `Math[Symbol.toStringTag]`
+  - : The initial value of the [`[Symbol.toStringTag]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Math"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 
 ## Static methods
 
-- {{jsxref("Global_Objects/Math/abs", "Math.abs(<var>x</var>)")}}
-  - : Returns the absolute value of `x`.
-- {{jsxref("Global_Objects/Math/acos", "Math.acos(<var>x</var>)")}}
-  - : Returns the arccosine of `x`.
-- {{jsxref("Global_Objects/Math/acosh", "Math.acosh(<var>x</var>)")}}
-  - : Returns the hyperbolic arccosine of `x`.
-- {{jsxref("Global_Objects/Math/asin", "Math.asin(<var>x</var>)")}}
-  - : Returns the arcsine of `x`.
-- {{jsxref("Global_Objects/Math/asinh", "Math.asinh(<var>x</var>)")}}
+- {{jsxref("Math.abs()")}}
+  - : Returns the absolute value of the input.
+- {{jsxref("Math.acos()")}}
+  - : Returns the arccosine of the input.
+- {{jsxref("Math.acosh()")}}
+  - : Returns the hyperbolic arccosine of the input.
+- {{jsxref("Math.asin()")}}
+  - : Returns the arcsine of the input.
+- {{jsxref("Math.asinh()")}}
   - : Returns the hyperbolic arcsine of a number.
-- {{jsxref("Global_Objects/Math/atan", "Math.atan(<var>x</var>)")}}
-  - : Returns the arctangent of `x`.
-- {{jsxref("Global_Objects/Math/atanh", "Math.atanh(<var>x</var>)")}}
-  - : Returns the hyperbolic arctangent of `x`.
-- {{jsxref("Global_Objects/Math/atan2", "Math.atan2(<var>y</var>, <var>x</var>)")}}
+- {{jsxref("Math.atan()")}}
+  - : Returns the arctangent of the input.
+- {{jsxref("Math.atan2()")}}
   - : Returns the arctangent of the quotient of its arguments.
-- {{jsxref("Global_Objects/Math/cbrt", "Math.cbrt(<var>x</var>)")}}
-  - : Returns the cube root of `x`.
-- {{jsxref("Global_Objects/Math/ceil", "Math.ceil(<var>x</var>)")}}
-  - : Returns the smallest integer greater than or equal to `x`.
-- {{jsxref("Global_Objects/Math/clz32", "Math.clz32(<var>x</var>)")}}
-  - : Returns the number of leading zero bits of the 32-bit integer `x`.
-- {{jsxref("Global_Objects/Math/cos", "Math.cos(<var>x</var>)")}}
-  - : Returns the cosine of `x`.
-- {{jsxref("Global_Objects/Math/cosh", "Math.cosh(<var>x</var>)")}}
-  - : Returns the hyperbolic cosine of `x`.
-- {{jsxref("Global_Objects/Math/exp", "Math.exp(<var>x</var>)")}}
-  - : Returns e<sup>x</sup>, where x is the argument, and e is Euler's constant (`2.718`…, the base of the natural logarithm).
-- {{jsxref("Global_Objects/Math/expm1", "Math.expm1(<var>x</var>)")}}
+- {{jsxref("Math.atanh()")}}
+  - : Returns the hyperbolic arctangent of the input.
+- {{jsxref("Math.cbrt()")}}
+  - : Returns the cube root of the input.
+- {{jsxref("Math.ceil()")}}
+  - : Returns the smallest integer greater than or equal to the input.
+- {{jsxref("Math.clz32()")}}
+  - : Returns the number of leading zero bits of the 32-bit integer input.
+- {{jsxref("Math.cos()")}}
+  - : Returns the cosine of the input.
+- {{jsxref("Math.cosh()")}}
+  - : Returns the hyperbolic cosine of the input.
+- {{jsxref("Math.exp()")}}
+  - : Returns e<sup>x</sup>, where x is the argument, and e is Euler's number (`2.718`…, the base of the natural logarithm).
+- {{jsxref("Math.expm1()")}}
   - : Returns subtracting `1` from `exp(x)`.
-- {{jsxref("Global_Objects/Math/floor", "Math.floor(<var>x</var>)")}}
-  - : Returns the largest integer less than or equal to `x`.
-- {{jsxref("Global_Objects/Math/fround", "Math.fround(<var>x</var>)")}}
-  - : Returns the nearest [single precision](https://en.wikipedia.org/wiki/Single-precision_floating-point_format "link to the wikipedia page on single precision") float representation of `x`.
-- {{jsxref("Global_Objects/Math/hypot", "Math.hypot([<var>x</var>[, <var>y</var>[, …]]])")}}
+- {{jsxref("Math.floor()")}}
+  - : Returns the largest integer less than or equal to the input.
+- {{jsxref("Math.f16round()")}}
+  - : Returns the nearest [half precision](https://en.wikipedia.org/wiki/Half-precision_floating-point_format) float representation of the input.
+- {{jsxref("Math.fround()")}}
+  - : Returns the nearest [single precision](https://en.wikipedia.org/wiki/Single-precision_floating-point_format) float representation of the input.
+- {{jsxref("Math.hypot()")}}
   - : Returns the square root of the sum of squares of its arguments.
-- {{jsxref("Global_Objects/Math/imul", "Math.imul(<var>x</var>, <var>y</var>)")}}
-  - : Returns the result of the 32-bit integer multiplication of `x` and `y`.
-- {{jsxref("Global_Objects/Math/log", "Math.log(<var>x</var>)")}}
-  - : Returns the natural logarithm (㏒<sub>e</sub>; also, ㏑) of `x`.
-- {{jsxref("Global_Objects/Math/log1p", "Math.log1p(<var>x</var>)")}}
+- {{jsxref("Math.imul()")}}
+  - : Returns the result of the 32-bit integer multiplication of the inputs.
+- {{jsxref("Math.log()")}}
+  - : Returns the natural logarithm (㏒<sub>e</sub>; also, ㏑) of the input.
+- {{jsxref("Math.log10()")}}
+  - : Returns the base-10 logarithm of the input.
+- {{jsxref("Math.log1p()")}}
   - : Returns the natural logarithm (㏒<sub>e</sub>; also ㏑) of `1 + x` for the number `x`.
-- {{jsxref("Global_Objects/Math/log10", "Math.log10(<var>x</var>)")}}
-  - : Returns the base-10 logarithm of `x`.
-- {{jsxref("Global_Objects/Math/log2", "Math.log2(<var>x</var>)")}}
-  - : Returns the base-2 logarithm of `x`.
-- {{jsxref("Global_Objects/Math/max", "Math.max([<var>x</var>[, <var>y</var>[, …]]])")}}
+- {{jsxref("Math.log2()")}}
+  - : Returns the base-2 logarithm of the input.
+- {{jsxref("Math.max()")}}
   - : Returns the largest of zero or more numbers.
-- {{jsxref("Global_Objects/Math/min", "Math.min([<var>x</var>[, <var>y</var>[, …]]])")}}
+- {{jsxref("Math.min()")}}
   - : Returns the smallest of zero or more numbers.
-- {{jsxref("Global_Objects/Math/pow", "Math.pow(<var>x</var>, <var>y</var>)")}}
+- {{jsxref("Math.pow()")}}
   - : Returns base `x` to the exponent power `y` (that is, `x`<sup><code>y</code></sup>).
-- {{jsxref("Global_Objects/Math/random", "Math.random()")}}
+- {{jsxref("Math.random()")}}
   - : Returns a pseudo-random number between `0` and `1`.
-- {{jsxref("Global_Objects/Math/round", "Math.round(<var>x</var>)")}}
-  - : Returns the value of the number `x` rounded to the nearest integer.
-- {{jsxref("Global_Objects/Math/sign", "Math.sign(<var>x</var>)")}}
-  - : Returns the sign of the `x`, indicating whether `x` is positive, negative, or zero.
-- {{jsxref("Global_Objects/Math/sin", "Math.sin(<var>x</var>)")}}
-  - : Returns the sine of `x`.
-- {{jsxref("Global_Objects/Math/sinh", "Math.sinh(<var>x</var>)")}}
-  - : Returns the hyperbolic sine of `x`.
-- {{jsxref("Global_Objects/Math/sqrt", "Math.sqrt(<var>x</var>)")}}
-  - : Returns the positive square root of `x`.
-- {{jsxref("Global_Objects/Math/tan", "Math.tan(<var>x</var>)")}}
-  - : Returns the tangent of `x`.
-- {{jsxref("Global_Objects/Math/tanh", "Math.tanh(<var>x</var>)")}}
-  - : Returns the hyperbolic tangent of `x`.
-- {{jsxref("Global_Objects/Math/trunc", "Math.trunc(<var>x</var>)")}}
-  - : Returns the integer portion of `x`, removing any fractional digits.
+- {{jsxref("Math.round()")}}
+  - : Returns the value of the input rounded to the nearest integer.
+- {{jsxref("Math.sign()")}}
+  - : Returns the sign of the input, indicating whether it is positive, negative, or zero.
+- {{jsxref("Math.sin()")}}
+  - : Returns the sine of the input.
+- {{jsxref("Math.sinh()")}}
+  - : Returns the hyperbolic sine of the input.
+- {{jsxref("Math.sqrt()")}}
+  - : Returns the positive square root of the input.
+- {{jsxref("Math.tan()")}}
+  - : Returns the tangent of the input.
+- {{jsxref("Math.tanh()")}}
+  - : Returns the hyperbolic tangent of the input.
+- {{jsxref("Math.trunc()")}}
+  - : Returns the integer portion of the input, removing any fractional digits.
 
 ## Examples
 
@@ -125,23 +127,23 @@ Since humans tend to think in degrees, and some functions (such as CSS transform
 ```js
 function degToRad(degrees) {
   return degrees * (Math.PI / 180);
-};
+}
 
 function radToDeg(rad) {
   return rad / (Math.PI / 180);
-};
+}
 ```
 
 ### Calculating the height of an equilateral triangle
 
 If we want to calculate the height of an equilateral triangle, and we know its side length is 100, we can use the formulae _length of the adjacent multiplied by the tangent of the angle is equal to the opposite._
 
-![](trigonometry.png)
+![An equilateral triangle where a perpendicular of one edge is drawn from the opposite vertex, forming a right triangle with three sides marked as "adjacent", "opposite", and "hypotenuse". The angle between the "adjacent" and "hypotenuse" sides is 60 degrees.](trigonometry.png)
 
 In JavaScript, we can do this with the following:
 
 ```js
-50 * Math.tan(degToRad(60)).
+50 * Math.tan(degToRad(60));
 ```
 
 We use our `degToRad()` function to convert 60 degrees to radians, as {{jsxref("Math.tan()")}} expects an input value in radians.

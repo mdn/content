@@ -1,15 +1,14 @@
 ---
-title: IdleDetector()
+title: "IdleDetector: IdleDetector() constructor"
+short-title: IdleDetector()
 slug: Web/API/IdleDetector/IdleDetector
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Reference
-  - IdleDetector
+status:
+  - experimental
 browser-compat: api.IdleDetector.IdleDetector
 ---
-{{securecontext_header}}{{DefaultAPISidebar("Idle Detection API")}}
+
+{{securecontext_header}}{{APIRef("Idle Detection API")}}{{SeeCompatTable}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`IdleDetector()`** constructor creates a new {{domxref("IdleDetector")}}
 object which provides events indicating when the user is no longer interacting
@@ -17,7 +16,7 @@ with their device or the screen has locked.
 
 ## Syntax
 
-```js
+```js-nolint
 new IdleDetector()
 ```
 

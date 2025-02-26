@@ -1,40 +1,27 @@
 ---
-title: 'XRSession: selectstart event'
+title: "XRSession: selectstart event"
+short-title: selectstart
 slug: Web/API/XRSession/selectstart_event
 page-type: web-api-event
-tags:
-  - API
-  - AR
-  - Event
-  - Input Sources
-  - Inputs
-  - Mixed
-  - Reality
-  - Reference
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRSession
-  - augmented
-  - controllers
-  - selectstart
+status:
+  - experimental
 browser-compat: api.XRSession.selectstart_event
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The [WebXR](/en-US/docs/Web/API/WebXR_Device_API) **`selectstart`** event is sent to an {{domxref("XRSession")}} when the user begins a [primary action](/en-US/docs/Web/API/WebXR_Device_API/Inputs#primary_action) on one of its input sources.
+
+The {{domxref("Element.beforexrselect_event", "beforexrselect")}} is fired before this event and can prevent this event from being raised.
 
 ## Syntax
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('selectstart', (event) => { })
+addEventListener("selectstart", (event) => {});
 
-onselectstart = (event) => { }
+onselectstart = (event) => {};
 ```
 
 ## Event type
@@ -77,7 +64,7 @@ After checking to ensure that the received event is a `tracked-pointer` event (t
 If the target ray pose was fetched successfully, the code then uses the value of {{domxref("Event")}} property {{domxref("Event.type", "type")}} to route control to an appropriate function to handle the event which arrived:
 
 - For `selectstart` events, a `myBeginTracking()` function is called with the target ray pose's {{domxref("XRRigidTransform.matrix", "matrix")}}. The `myBeginTracking()` function would presumably start the presentation of the object-dragging process, using the transform to perform a hit test, determining which object to pick up. `myBeginTracking()` returns an object representing the object the user has begun to drag.
-- Upon receiving a `select` event, the `myDropObject()` function is called with the target object and the current target ray pose transform as inputs. This places the object into its new position in the world and triggers any effects that may arise from doing so (like scheduling an animation of a splash if dropped in water, etc).
+- Upon receiving a `select` event, the `myDropObject()` function is called with the target object, and the current target ray pose transform as inputs. This places the object into its new position in the world and triggers any effects that may arise, like scheduling an animation of a splash if dropped in water, etc.
 - The `selectend` event results in a `myStopTracking()` function being called with the object being dragged and the final target ray pose's transform.
 
 ```js
@@ -98,7 +85,7 @@ function onSelectionEvent(event) {
     return;
   }
 
-  switch(event.type) {
+  switch (event.type) {
     case "selectstart":
       targetObj = myBeginTracking(targetRayPose.matrix);
       break;
@@ -131,3 +118,4 @@ xrSession.onselectend = onSelectionEvent;
 ## See also
 
 - {{domxref("XRSession.select_event", "select")}} and {{domxref("XRSession.selectend_event", "selectend")}}
+- {{domxref("Element.beforexrselect_event", "beforexrselect")}}

@@ -2,23 +2,14 @@
 title: Clients
 slug: Web/API/Clients
 page-type: web-api-interface
-tags:
-  - API
-  - Clients
-  - Experimental
-  - Interface
-  - Reference
-  - Service Workers
-  - Service worker API
-  - ServiceWorker
-  - Workers
 browser-compat: api.Clients
 ---
-{{APIRef("Service Workers API")}}
+
+{{APIRef("Service Workers API")}}{{AvailableInWorkers("service")}}
 
 The `Clients` interface provides access to {{domxref("Client")}} objects. Access it via `{{domxref("ServiceWorkerGlobalScope", "self")}}.clients` within a [service worker](/en-US/docs/Web/API/Service_Worker_API).
 
-## Methods
+## Instance methods
 
 - {{domxref("Clients.get()")}}
   - : Returns a {{jsxref("Promise")}} for a {{domxref("Client")}} matching a given {{domxref("Client.id", "id")}}.
@@ -34,35 +25,37 @@ The `Clients` interface provides access to {{domxref("Client")}} objects. Access
 The following example shows an existing chat window or creates a new one when the user clicks a notification.
 
 ```js
-addEventListener('notificationclick', (event) => {
-  event.waitUntil(async function() {
-    const allClients = await clients.matchAll({
-      includeUncontrolled: true
-    });
+addEventListener("notificationclick", (event) => {
+  event.waitUntil(
+    (async () => {
+      const allClients = await clients.matchAll({
+        includeUncontrolled: true,
+      });
 
-    let chatClient;
+      let chatClient;
 
-    // Let's see if we already have a chat window open:
-    for (const client of allClients) {
-      const url = new URL(client.url);
+      // Let's see if we already have a chat window open:
+      for (const client of allClients) {
+        const url = new URL(client.url);
 
-      if (url.pathname === '/chat/') {
-        // Excellent, let's use it!
-        client.focus();
-        chatClient = client;
-        break;
+        if (url.pathname === "/chat/") {
+          // Excellent, let's use it!
+          client.focus();
+          chatClient = client;
+          break;
+        }
       }
-    }
 
-    // If we didn't find an existing chat window,
-    // open a new one:
-    if (!chatClient) {
-      chatClient = await clients.openWindow('/chat/');
-    }
+      // If we didn't find an existing chat window,
+      // open a new one:
+      if (!chatClient) {
+        chatClient = await clients.openWindow("/chat/");
+      }
 
-    // Message the client:
-    chatClient.postMessage("New chat messages!");
-  }());
+      // Message the client:
+      chatClient.postMessage("New chat messages!");
+    })(),
+  );
 });
 ```
 
@@ -77,5 +70,3 @@ addEventListener('notificationclick', (event) => {
 ## See also
 
 - [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
-- {{jsxref("Promise")}}

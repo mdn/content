@@ -1,27 +1,33 @@
 ---
 title: String.prototype.substr()
 slug: Web/JavaScript/Reference/Global_Objects/String/substr
-tags:
-  - Deprecated
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
-  - Polyfill
+page-type: javascript-instance-method
+status:
+  - deprecated
 browser-compat: javascript.builtins.String.substr
 ---
-{{JSRef}} {{deprecated_header}}
 
-The **`substr()`** method returns a portion of the string, starting at the specified index and extending for a given number of characters afterwards.
+{{JSRef}} {{Deprecated_Header}}
 
-> **Note:** `substr()` is not part of the main ECMAScript specification — it's defined in [Annex B: Additional ECMAScript Features for Web Browsers](https://tc39.es/ecma262/#sec-additional-ecmascript-features-for-web-browsers), which is normative optional for non-browser runtimes. Therefore, people are advised to use the standard [`String.prototype.substring()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/substring) and [`String.prototype.slice()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/slice) methods instead to make their code maximally cross-platform friendly. The [`String.prototype.substring()` page](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/substring#the_difference_between_substring_and_substr) has some comparisons between the three methods.
+The **`substr()`** method of {{jsxref("String")}} values returns a portion of this string, starting at the specified index and extending for a given number of characters afterwards.
 
-{{EmbedInteractiveExample("pages/js/string-substr.html")}}
+> **Note:** `substr()` is not part of the main ECMAScript specification — it's defined in [Annex B: Additional ECMAScript Features for Web Browsers](https://tc39.es/ecma262/multipage/additional-ecmascript-features-for-web-browsers.html), which is normative optional for non-browser runtimes. Therefore, people are advised to use the standard [`String.prototype.substring()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/substring) and [`String.prototype.slice()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/slice) methods instead to make their code maximally cross-platform friendly. The [`String.prototype.substring()` page](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/substring#the_difference_between_substring_and_substr) has some comparisons between the three methods.
+
+{{InteractiveExample("JavaScript Demo: String.substr()")}}
+
+```js interactive-example
+const str = "Mozilla";
+
+console.log(str.substr(1, 2));
+// Expected output: "oz"
+
+console.log(str.substr(2));
+// Expected output: "zilla"
+```
 
 ## Syntax
 
-```js
+```js-nolint
 substr(start)
 substr(start, length)
 ```
@@ -54,17 +60,19 @@ Although you are encouraged to avoid using `substr()`, there is no trivial way t
 
 ### Using substr()
 
-```js
-const aString = 'Mozilla';
+<!-- cSpell:ignore ozilla -->
 
-console.log(aString.substr(0, 1));   // 'M'
-console.log(aString.substr(1, 0));   // ''
-console.log(aString.substr(-1, 1));  // 'a'
-console.log(aString.substr(1, -1));  // ''
-console.log(aString.substr(-3));     // 'lla'
-console.log(aString.substr(1));      // 'ozilla'
+```js
+const aString = "Mozilla";
+
+console.log(aString.substr(0, 1)); // 'M'
+console.log(aString.substr(1, 0)); // ''
+console.log(aString.substr(-1, 1)); // 'a'
+console.log(aString.substr(1, -1)); // ''
+console.log(aString.substr(-3)); // 'lla'
+console.log(aString.substr(1)); // 'ozilla'
 console.log(aString.substr(-20, 2)); // 'Mo'
-console.log(aString.substr(20, 2));  // ''
+console.log(aString.substr(20, 2)); // ''
 ```
 
 ## Specifications

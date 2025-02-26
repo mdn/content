@@ -2,21 +2,15 @@
 title: Checking when a deadline is due
 slug: Web/API/IndexedDB_API/Checking_when_a_deadline_is_due
 page-type: guide
-tags:
-  - Apps
-  - Date
-  - Example
-  - Guide
-  - IndexedDB
-  - deadline
 ---
+
 {{DefaultAPISidebar("IndexedDB")}}
 
 In this article we look at a complex example involving checking the current time and date against a deadline stored via IndexedDB. The main complication here is checking the stored deadline info (month, hour, day, etc.) against the current time and date taken from a [Date](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) object.
 
 ![A screenshot of the sample app. A red main title saying To do app, a test to-do item, and a red form for users to enter new tasks](to-do-app.png)
 
-The main example application we will be referring to in this article is **To-do list notifications**, a simple to-do list application that stores task titles and deadline times and dates via [IndexedDB](/en-US/docs/Web/API/IndexedDB_API), and then provides users with notifications when deadline dates are reached, via the [Notification](/en-US/docs/Web/API/Notification), and [Vibration](/en-US/docs/Web/API/Vibration_API) APIs. You can [download the To-do list notifications app from GitHub](https://github.com/mdn/to-do-notifications/tree/gh-pages) and play around with the source code, or [view the app running live](https://mdn.github.io/to-do-notifications/).
+The main example application we will be referring to in this article is **To-do list notifications**, a simple to-do list application that stores task titles and deadline times and dates via [IndexedDB](/en-US/docs/Web/API/IndexedDB_API), and then provides users with notifications when deadline dates are reached, via the [Notification](/en-US/docs/Web/API/Notification), and [Vibration](/en-US/docs/Web/API/Vibration_API) APIs. You can [download the To-do list notifications app from GitHub](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) and play around with the source code, or [view the app running live](https://mdn.github.io/dom-examples/to-do-notifications/).
 
 ## The basic problem
 
@@ -41,7 +35,7 @@ function addData(e) {
   e.preventDefault();
 
   if (!title.value || !hours.value || !minutes.value || !day.value || !month.value || !year.value) {
-    note.innerHTML += '<li>Data not submitted — form incomplete.</li>';
+    note.appendChild(document.createElement("li")).textContent = "Data not submitted — form incomplete.";
     return;
   }
 ```
@@ -67,11 +61,13 @@ In this segment, we check to see if the form fields have all been filled in. If 
 
     // report on the success of opening the transaction
     transaction.oncomplete = (event) => {
-      note.innerHTML += '<li>Transaction opened for task addition.</li>';
+      note.appendChild(document.createElement("li")).textContent =
+        "Transaction opened for task addition.";
     };
 
     transaction.onerror = (event) => {
-      note.innerHTML += '<li>Transaction not opened due to error. Duplicate items not allowed.</li>';
+      note.appendChild(document.createElement("li")).textContent =
+        "Transaction not opened due to error. Duplicate items not allowed.";
     };
 
     // create an object store on the transaction
@@ -83,18 +79,19 @@ In this segment, we check to see if the form fields have all been filled in. If 
 
 In this section we create an object called `newItem` that stores the data in the format required to insert it into the database. The next few lines open the database transaction and provide messages to notify the user if this was successful or failed. Then an `objectStore` is created into which the new item is added. The `notified` property of the data object indicates that the to-do list item's deadline has not yet come up and been notified - more on this later!
 
-> **Note:** The `db` variable stores a reference to the IndexedDB database instance; we can then use various properties of this variable to manipulate the data.
+> [!NOTE]
+> The `db` variable stores a reference to the IndexedDB database instance; we can then use various properties of this variable to manipulate the data.
 
 ```js
     request.onsuccess = (event) => {
 
-      note.innerHTML += '<li>New item added to database.</li>';
+      note.appendChild(document.createElement("li")).textContent = "New item added to database.";
 
-      title.value = '';
+      title.value = "";
       hours.value = null;
       minutes.value = null;
-      day.value = 01;
-      month.value = 'January';
+      day.value = "01";
+      month.value = "January";
       year.value = 2020;
     };
   }
@@ -122,59 +119,61 @@ function checkDeadlines() {
 First we grab the current date and time by creating a blank `Date` object. Easy huh? It's about to get a bit more complex.
 
 ```js
-  const minuteCheck  = now.getMinutes();
-  const hourCheck    = now.getHours();
-  const dayCheck     = now.getDate();
-  const monthCheck   = now.getMonth();
-  const yearCheck    = now.getFullYear();
+const minuteCheck = now.getMinutes();
+const hourCheck = now.getHours();
+const dayCheck = now.getDate();
+const monthCheck = now.getMonth();
+const yearCheck = now.getFullYear();
 ```
 
 The `Date` object has a number of methods to extract various parts of the date and time inside it. Here we fetch the current minutes (gives an easy numerical value), hours (gives an easy numerical value), day of the month (`getDate()` is needed for this, as `getDay()` returns the day of the week, 1-7), month (returns a number from 0-11, see below), and year (`getFullYear()` is needed; `getYear()` is deprecated, and returns a weird value that is not much use to anyone!)
 
 ```js
-   const objectStore = db.transaction(['toDoList'], "readwrite").objectStore('toDoList');
+  const objectStore = db.transaction(['toDoList'], "readwrite").objectStore('toDoList');
 
   objectStore.openCursor().onsuccess = (event) => {
     const cursor = event.target.result;
+    let monthNumber;
 
-    if(cursor) {
+    if (cursor) {
 ```
 
 Next we create another IndexedDB `objectStore`, and use the `openCursor()` method to open a cursor, which is basically a way in IndexedDB to iterate through all the items in the store. We then loop through all the items in the cursor for as long as there is a valid item left in the cursor.
 
 ```js
-      switch(cursor.value.month) {
-        case "January":
-          let monthNumber = 0;
-          break;
-        case "February":
-          let monthNumber = 1;
-          break;
+switch (cursor.value.month) {
+  case "January":
+    monthNumber = 0;
+    break;
+  case "February":
+    monthNumber = 1;
+    break;
 
-        // other lines removed from listing for brevity
+  // other lines removed from listing for brevity
 
-        case "December":
-          let monthNumber = 11;
-          break;
-        default:
-          alert('Incorrect month entered in database.');
-      }
+  case "December":
+    monthNumber = 11;
+    break;
+  default:
+    alert("Incorrect month entered in database.");
+}
 ```
 
 The first thing we do is convert the month names we have stored in the database into a month number that JavaScript will understand. As we saw before, the JavaScript `Date` object creates month values as a number between 0 and 11.
 
 ```js
-      if(+(cursor.value.hours) == hourCheck &&
-         +(cursor.value.minutes) == minuteCheck &&
-         +(cursor.value.day) == dayCheck &&
-         monthNumber == monthCheck &&
-         cursor.value.year == yearCheck &&
-         notified === "no") {
-
-        // If the numbers all do match, run the createNotification()
-        // function to create a system notification
-        createNotification(cursor.value.taskTitle);
-      }
+if (
+  Number(cursor.value.hours) === hourCheck &&
+  Number(cursor.value.minutes) === minuteCheck &&
+  Number(cursor.value.day) === dayCheck &&
+  monthNumber === monthCheck &&
+  cursor.value.year === yearCheck &&
+  notified === "no"
+) {
+  // If the numbers all do match, run the createNotification()
+  // function to create a system notification
+  createNotification(cursor.value.taskTitle);
+}
 ```
 
 With the current time and date segments that we want to check against the IndexedDB stored values all assembled, it is time to perform the checks. We want all the values to match before we show the user some kind of notification to tell them their deadline is up.
@@ -190,7 +189,7 @@ The `notified === "no"` check is designed to make sure you will only get one not
     // first open up a transaction as usual
     const objectStore = db.transaction(['toDoList'], "readwrite").objectStore('toDoList');
 
-    // get the to-do list object that has this title as it's title
+    // get the to-do list object that has this title as its title
     const request = objectStore.get(title);
 
     request.onsuccess = () => {
@@ -212,7 +211,7 @@ The `notified === "no"` check is designed to make sure you will only get one not
 If the checks all match, we then run the `createNotification()` function to provide a notification to the user.
 
 ```js
-       cursor.continue();
+      cursor.continue();
     }
   }
 }

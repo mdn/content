@@ -1,17 +1,12 @@
 ---
-title: 'ARIA: application role'
+title: "ARIA: application role"
 slug: Web/Accessibility/ARIA/Roles/application_role
-tags:
-  - ARIA
-  - ARIA Role
-  - ARIA widget
-  - Reference
-  - Role application
-  - document structure role
-spec-urls:
-  - https://w3c.github.io/aria/#application
-  - https://w3c.github.io/aria-practices/#application
+page-type: aria-role
+spec-urls: https://w3c.github.io/aria/#application
 ---
+
+{{AccessibilitySidebar}}
+
 The `application` role indicates to assistive technologies that an element _and all of its children_ should be treated similar to a desktop application, and no traditional HTML interpretation techniques should be used. This role should only be used to define very dynamic and desktop-like web applications. Most mobile and desktop web apps _are not_ considered applications for this purpose.
 
 ```html
@@ -22,7 +17,7 @@ By specifying the `application` role, it indicates this `div` element and all of
 
 ## Description
 
-The `application` [document structure role](/en-US/docs/Web/Accessibility/ARIA/Roles#document_structure_roles), indicates to assistive technologies that this part of the web content contains elements that do not conform to any other known HTML element or WAI-ARIA widget. Any sort of special interpretation of HTML structures and widgets should be suspended, and control should be completely handed over to the browser and web application to handle mouse, keyboard, or touch interaction.
+The `application` [document structure role](/en-US/docs/Web/Accessibility/ARIA/Roles#1._document_structure_roles), indicates to assistive technologies that this part of the web content contains elements that do not conform to any other known HTML element or WAI-ARIA widget. Any sort of special interpretation of HTML structures and widgets should be suspended, and control should be completely handed over to the browser and web application to handle mouse, keyboard, or touch interaction.
 
 In this mode, the web author is completely responsible for handling any and all keyboard input, focus management, and other interactions and cannot assume assistive technologies would do any processing on their end.
 
@@ -53,7 +48,7 @@ The `application` role is designed to provide a means for widgets that are not p
 - [`aria-disabled`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-disabled)
   - : Indicates that an element is visible but disabled
 - [`aria-errormessage`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-errormessage)
-  - : A reference to the element that provides the error message for an the element on which it is set
+  - : A reference to the element that provides the error message for the element on which it is set
 - [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded)
   - : If set to `true`, the grouping element owned or controlled by this element is expanded, or `false` if collapsed.
 - [`aria-haspopup`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-haspopup)
@@ -74,7 +69,8 @@ The <kbd>Tab</kbd>, <kbd>Space</kbd> and <kbd>Enter</kbd> keys, as well as <kbd>
 - Changing attribute values
   - : [`aria-activedescendant`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-activedescendant) is used to manage the focus inside the application container. Set in response to keyboard or other application events that change focus or point of interaction.
 
->**Note** The `application` role does not have a related HTML widget and thus is completely free form. The author of the application must take full responsibility for not letting users get stuck in a focus trap inside something the user cannot exit from. All aspects of interaction, including returning to the regular web content on other parts of the page, must be handled. Use wisely, and cautiously, and remember to test!
+> [!NOTE]
+> The `application` role does not have a related HTML widget and thus is completely free form. The author of the application must take full responsibility for not letting users get stuck in a focus trap inside something the user cannot exit from. All aspects of interaction, including returning to the regular web content on other parts of the page, must be handled. Use wisely, and cautiously, and remember to test!
 
 ## Examples
 
@@ -102,11 +98,3 @@ Applying the `application` role will cause this and all of the descendant elemen
 
 - [If you use the WAI-ARIA role `application`, please do so wisely](https://www.marcozehe.de/if-you-use-the-wai-aria-role-application-please-do-so-wisely/) - blog post by Marco Zehe
 - [Using the ARIA `application` role](https://tink.uk/using-the-aria-application-role/) - by Léonie Watson
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
-
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
-
-</section>

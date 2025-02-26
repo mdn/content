@@ -1,62 +1,41 @@
 ---
-title: MediaTrackSupportedConstraints.latency
+title: "MediaTrackSupportedConstraints: latency property"
+short-title: latency
 slug: Web/API/MediaTrackSupportedConstraints/latency
 page-type: web-api-instance-property
-tags:
-  - API
-  - Constraints
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaTrackSupportedConstraints
-  - Property
-  - Reference
-  - Web
-  - WebRTC
-  - latency
-browser-compat: api.MediaTrackSupportedConstraints.latency
+browser-compat: api.MediaStreamTrack.applyConstraints.latency_constraint
 ---
-{{DefaultAPISidebar("Media Capture and Streams")}}
 
-The {{domxref("MediaTrackSupportedConstraints")}} dictionary's
-**`latency`** property is a read-only Boolean value which is
-present (and set to `true`) in the object returned by
-{{domxref("MediaDevices.getSupportedConstraints()")}} if and only if the
-{{Glossary("user agent")}} supports the `latency` constraint. If the
-constraint isn't supported, it's not included in the list, so this value will never be
-`false`.
+{{APIRef("Media Capture and Streams")}}
 
-You can access the supported constraints dictionary by calling
-`navigator.mediaDevices.getSupportedConstraints()`.
+The {{domxref("MediaTrackSupportedConstraints")}} dictionary's **`latency`** property is a read-only Boolean value which is present (and set to `true`) in the object returned by {{domxref("MediaDevices.getSupportedConstraints()")}} if and only if the {{Glossary("user agent")}} supports the `latency` constraint.
+If the constraint isn't supported, it's not included in the list, so this value will never be `false`.
+
+You can access the supported constraints dictionary by calling `navigator.mediaDevices.getSupportedConstraints()`.
 
 ## Value
 
-This property is present in the dictionary (and its value is always `true`)
-if the user agent supports the `latency` constraint. If the property isn't
-present, this property is missing from the supported constraints dictionary, and you'll
-get {{jsxref("undefined")}} if you try to look at its value.
+This property is present in the dictionary (and its value is always `true`) if the user agent supports the `latency` constraint.
+If the property isn't present, this property is missing from the supported constraints dictionary, and you'll get {{jsxref("undefined")}} if you try to look at its value.
 
 ## Examples
 
 ```html hidden
-<div id="result">
-</div>
+<div id="result"></div>
 ```
 
 ```css hidden
 #result {
-  font: 14px "Arial", sans-serif;
+  font:
+    14px "Arial",
+    sans-serif;
 }
 ```
 
 ```js
-let result = document.getElementById("result");
-
-if (navigator.mediaDevices.getSupportedConstraints().latency) {
-  result.textContent = "Supported!";
-} else {
-  result.textContent = "Not supported!";
-}
+const result = document.getElementById("result");
+const supported = navigator.mediaDevices.getSupportedConstraints().latency;
+result.textContent = supported ? "Supported!" : "Not supported!";
 ```
 
 ### Result
@@ -73,7 +52,7 @@ if (navigator.mediaDevices.getSupportedConstraints().latency) {
 
 ## See also
 
-- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Streams_API)
+- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API)
 - {{domxref("MediaDevices.getSupportedConstraints()")}}
 - {{domxref("MediaTrackSupportedConstraints")}}
 - {{domxref("MediaStreamTrack")}}

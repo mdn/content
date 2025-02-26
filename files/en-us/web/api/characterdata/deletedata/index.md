@@ -1,12 +1,11 @@
 ---
-title: CharacterData.deleteData()
+title: "CharacterData: deleteData() method"
+short-title: deleteData()
 slug: Web/API/CharacterData/deleteData
 page-type: web-api-instance-method
-tags:
-  - Method
-  - Reference
 browser-compat: api.CharacterData.deleteData
 ---
+
 {{APIRef("DOM")}}
 
 The **`deleteData()`** method of the {{domxref("CharacterData")}} interface
@@ -14,8 +13,8 @@ removes all or part of the data from this `CharacterData` node.
 
 ## Syntax
 
-```js
-characterData.deleteData(offset, count)
+```js-nolint
+deleteData(offset, count)
 ```
 
 ### Parameters
@@ -30,7 +29,7 @@ characterData.deleteData(offset, count)
 
 None.
 
-## Exceptions
+### Exceptions
 
 - `IndexSizeError` {{domxref("DOMException")}}
   - : Thrown if `offset` is greater than the length of the contained data.
@@ -42,10 +41,10 @@ None.
 ```
 
 ```js
-let span = document.getElementsByTagName("span")[0];
-let textnode = span.nextSibling;
+const span = document.querySelector("span");
+const textNode = span.nextSibling;
 
-textnode.deleteData(1, 5);
+textNode.deleteData(1, 5);
 ```
 
 {{EmbedLiveSample("Example", "100%", 50)}}

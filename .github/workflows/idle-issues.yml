@@ -1,7 +1,13 @@
-name: 'Mark issues and pull requests as idle'
+name: "Mark issues and pull requests as idle"
 on:
   schedule:
-    - cron: '49 11,23 * * *'
+    - cron: "49 11,23 * * *"
+
+permissions:
+  # Label issues.
+  issues: write
+  # Label pull requests.
+  pull-requests: write
 
 jobs:
   idle:

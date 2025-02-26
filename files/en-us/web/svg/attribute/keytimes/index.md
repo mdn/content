@@ -1,11 +1,10 @@
 ---
 title: keyTimes
 slug: Web/SVG/Attribute/keyTimes
-tags:
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 spec-urls: https://svgwg.org/specs/animations/#KeyTimesAttribute
 ---
+
 {{SVGRef}}
 
 The **`keyTimes`** attribute represents a list of time values used to control the pacing of the animation.
@@ -15,14 +14,15 @@ Each time in the list corresponds to a value in the {{SVGAttr("values")}} attrib
 You can use this attribute with the following SVG elements:
 
 - {{SVGElement("animate")}}
-- {{SVGElement("animateColor")}}
 - {{SVGElement("animateMotion")}}
 - {{SVGElement("animateTransform")}}
 
 ## Example
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 ```
@@ -30,10 +30,18 @@ html, body, svg {
 ```html
 <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
   <circle cx="60" cy="10" r="10">
-    <animate attributeName="cx" dur="4s" repeatCount="indefinite"
-        values="60; 110; 60; 10; 60" keyTimes="0; 0.25; 0.5; 0.75; 1"/>
-    <animate attributeName="cy" dur="4s" repeatCount="indefinite"
-        values="10; 60; 110; 60; 10" keyTimes="0; 0.25; 0.5; 0.75; 1"/>
+    <animate
+      attributeName="cx"
+      dur="4s"
+      repeatCount="indefinite"
+      values="60; 110; 60; 10; 60"
+      keyTimes="0; 0.25; 0.5; 0.75; 1" />
+    <animate
+      attributeName="cy"
+      dur="4s"
+      repeatCount="indefinite"
+      values="10; 60; 110; 60; 10"
+      keyTimes="0; 0.25; 0.5; 0.75; 1" />
   </circle>
 </svg>
 ```

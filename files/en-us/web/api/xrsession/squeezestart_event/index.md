@@ -1,33 +1,16 @@
 ---
-title: 'XRSession: squeezestart event'
+title: "XRSession: squeezestart event"
+short-title: squeezestart
 slug: Web/API/XRSession/squeezestart_event
 page-type: web-api-event
-tags:
-  - API
-  - AR
-  - Event
-  - Input Sources
-  - Inputs
-  - Mixed
-  - Primary Squeeze Actions
-  - Reality
-  - Reference
-  - Squeeze Actions
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRSession
-  - augmented
-  - controllers
-  - squeezestart
+status:
+  - experimental
 browser-compat: api.XRSession.squeezestart_event
 ---
-{{APIRef("WebXR Device API")}}
 
-The [WebXR](/en-US/docs/Web/API/WebXR_Device_API) event **`squeezestart`** is sent to an {{domxref("XRSession")}} when the user begins a [primary squeeze action](/en-US/docs/Web/API/WebXR_Device_API/Inputs#primary_squeeze_actions) on one of its input sources.
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+
+The [WebXR](/en-US/docs/Web/API/WebXR_Device_API) event **`squeezestart`** is sent to an {{domxref("XRSession")}} when the user begins a [primary squeeze action](/en-US/docs/Web/API/WebXR_Device_API/Inputs#primary_squeeze_action) on one of its input sources.
 
 Primary squeeze actions are actions which are meant to represent gripping or squeezing using your hands, and may be simulated using triggers on hand controllers.
 
@@ -36,9 +19,9 @@ Primary squeeze actions are actions which are meant to represent gripping or squ
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('squeezestart', (event) => { })
+addEventListener("squeezestart", (event) => {});
 
-onsqueezestart = (event) => { }
+onsqueezestart = (event) => {};
 ```
 
 ## Event type
@@ -81,7 +64,7 @@ After checking to ensure that the received event is a `tracked-pointer` event (t
 If the target ray pose was fetched successfully, the code then uses the value of {{domxref("Event")}} property {{domxref("Event.type", "type")}} to route control to an appropriate function to handle the event which arrived:
 
 - For `squeezestart` events, a `myBeginTracking()` function is called with the target ray pose's {{domxref("XRRigidTransform.matrix", "matrix")}}. The `myBeginTracking()` function would presumably start the presentation of the object-dragging process, using the transform to perform a hit test, determining which object to pick up. `myBeginTracking()` returns an object representing the object the user has begun to drag.
-- Upon receiving a `squeeze` event, the `myDropObject()` function is called with the target object and the current target ray pose transform as inputs. This places the object into its new position in the world and triggers any effects that may arise from doing so (like scheduling an animation of a splash if dropped in water, etc).
+- Upon receiving a `squeeze` event, the `myDropObject()` function is called with the target object, and the current target ray pose transform as inputs. This places the object into its new position in the world and triggers any effects that may arise, like scheduling an animation of a splash if dropped in water, etc.
 - The `squeezeend` event results in a `myStopTracking()` function being called with the object being dragged and the final target ray pose's transform.
 
 ```js
@@ -102,7 +85,7 @@ function onSqueezeEvent(event) {
     return;
   }
 
-  switch(event.type) {
+  switch (event.type) {
     case "squeezestart":
       targetObj = myBeginTracking(targetRayPose.matrix);
       break;

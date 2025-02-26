@@ -2,25 +2,27 @@
 title: DirectoryReaderSync
 slug: Web/API/DirectoryReaderSync
 page-type: web-api-interface
-tags:
-  - API
-  - Reference
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.DirectoryReaderSync
 ---
-{{APIRef("File and Directory Entries API")}}{{Non-standard_header}}
+
+{{APIRef("File and Directory Entries API")}}{{Non-standard_Header}}{{Deprecated_Header}}
 
 The `DirectoryReaderSync` interface lets you read the entries in a directory.
 
-> **Warning:** This interface is deprecated and is no more on the standard track.
+> [!WARNING]
+> This interface is deprecated and is no more on the standard track.
 > _Do not use it anymore._ Use the [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API) instead.
 
 ## Basic concepts
 
 Before you call the only method in this interface, [`readEntries()`](#readentries), create the [`DirectoryEntrySync`](/en-US/docs/Web/API/DirectoryEntrySync) object. But DirectoryEntrySync (as well as [`FileEntrySync`](/en-US/docs/Web/API/FileEntrySync)) is not a data type that you can pass between a calling app and Web Worker thread. It's not a big deal, because you don't really need to have the main app and the worker thread see the same JavaScript object; you just need them to access the same files. You can do that by passing a list of `filesystem:` URLs—which are just strings—instead of a list of entries. You can also use the `filesystem:` URL to look up the entry with `resolveLocalFileSystemURL()`. That gets you back to a DirectoryEntrySync (as well as FileEntrySync) object.
 
-#### Example
+### Example
 
-In the following code snippet from [HTML5Rocks (web.dev)](https://web.dev/filesystem-sync/), we create Web Workers and pass data from it to the main app.
+In the following code snippet from [HTML5Rocks (web.dev)](https://web.dev/articles/filesystem-sync), we create Web Workers and pass data from it to the main app.
 
 ```js
 // Taking care of the browser-specific prefixes.
@@ -39,7 +41,7 @@ worker.onmessage = (e) => {
   });
 };
 
-worker.postMessage({cmd: "list"});
+worker.postMessage({ cmd: "list" });
 ```
 
 The following is `worker.js` code that gets the contents of the directory.
@@ -86,16 +88,12 @@ self.onmessage = (e) => {
 
     getAllEntries(fs.root.createReader());
 
-    self.postMessage({entries: paths});
+    self.postMessage({ entries: paths });
   } catch (e) {
     onError(e);
   }
 };
 ```
-
-## Method overview
-
-- <a href="#createreader()" title="#readEntries">readEntries()</a>
 
 ## Method
 
@@ -105,17 +103,17 @@ Returns a list of entries from a specific directory. Call this method until an e
 
 #### Syntax
 
-```
+```js-nolint
 readEntries()
 ```
 
+##### Parameters
+
+None.
+
 ##### Return value
 
-Array containing [`FileEntrySync`](/en-US/docs/Web/API/FileEntrySync) and [`DirectoryEntrySync`](/en-US/docs/Web/API/DirectoryEntrySync)
-
-##### Parameter
-
-None
+Array containing [`FileEntrySync`](/en-US/docs/Web/API/FileEntrySync) and [`DirectoryEntrySync`](/en-US/docs/Web/API/DirectoryEntrySync).
 
 ##### Exceptions
 
@@ -138,4 +136,3 @@ This feature is not part of any specification anymore. It is no longer on track 
 ## See also
 
 - [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
-- [Introduction to the File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)

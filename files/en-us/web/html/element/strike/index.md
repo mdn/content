@@ -1,20 +1,35 @@
 ---
 title: <strike>
 slug: Web/HTML/Element/strike
-tags:
-  - Element
-  - HTML
-  - Deprecated
-  - Reference
-  - Web
+page-type: html-element
+status:
+  - deprecated
 browser-compat: html.elements.strike
 ---
 
-{{HTMLRef}}{{deprecated_header}}
+{{HTMLSidebar}}{{deprecated_header}}
 
 The **`<strike>`** [HTML](/en-US/docs/Web/HTML) element places a strikethrough (horizontal line) over text.
 
-> **Warning:** This element is deprecated in HTML 4 and XHTML 1, and obsoleted in HTML5. If semantically appropriate, i.e., if it represents _deleted_ content, use {{HTMLElement("del")}} instead. In all other cases use {{HTMLElement("s")}}.
+> [!WARNING]
+> This element is deprecated in HTML 4 and XHTML 1, and obsoleted in the [HTML Living Standard](https://html.spec.whatwg.org/multipage/obsolete.html#strike). If semantically appropriate, i.e., if it represents _deleted_ content, use {{HTMLElement("del")}} instead. In all other cases use {{HTMLElement("s")}}.
+
+## Attributes
+
+This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+
+## Examples
+
+```html
+&lt;strike&gt;: <strike>Today's Special: Salmon</strike> SOLD OUT<br />
+&lt;s&gt;: <s>Today's Special: Salmon</s> SOLD OUT
+```
+
+### Result
+
+{{EmbedLiveSample("Example")}}
+
+## Technical summary
 
 <table class="properties">
   <tbody>
@@ -24,21 +39,6 @@ The **`<strike>`** [HTML](/en-US/docs/Web/HTML) element places a strikethrough (
     </tr>
   </tbody>
 </table>
-
-## Attributes
-
-This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
-
-## Example
-
-```html
-&lt;strike&gt;: <strike>Today's Special: Salmon</strike> SOLD OUT<br />
-&lt;s&gt;: <s>Today's Special: Salmon</s> SOLD OUT
-```
-
-The result of this code is:
-
-{{EmbedLiveSample("Example")}}
 
 ## Specifications
 

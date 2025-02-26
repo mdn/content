@@ -1,10 +1,9 @@
 ---
 title: Firefox 11 for developers
 slug: Mozilla/Firefox/Releases/11
-tags:
-  - Firefox
-  - Firefox 11
+page-type: firefox-release-notes
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 11 shipped on March 13, 2012. This article provides information about the new features and key bugs fixed in this release, as well as links to more detailed documentation for both web developers and add-on developers.
@@ -18,14 +17,14 @@ Firefox 11 shipped on March 13, 2012. This article provides information about th
 ### DOM
 
 - The {{domxref("element.outerHTML")}} property is now supported on HTML elements.
-- [`XMLHttpRequest` supports HTML parsing](/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest).
+- [`XMLHttpRequest` supports HTML parsing](/en-US/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest).
 - Removed support for using the {{domxref("XMLHttpRequest")}} `responseType` and `withCredentials` attributes when performing synchronous requests. Attempting to do so throws an `NS_ERROR_DOM_INVALID_ACCESS_ERR` exception. This change has been proposed to the W3C for standardization.
-- The new {{domxref("window.navigator.mozVibrate()")}} method lets you vibrate the device where supported; this is implemented as `mozVibrate()` on Gecko.
-- {{domxref("window.navigator.mozApps")}} returns an [`Apps`](/en-US/docs/DOM/Apps) object you can use to install and manage [open web applications](/en-US/docs/Web/Progressive_web_apps).
+- The new {{domxref("Navigator/vibrate", "navigator.mozVibrate()")}} method lets you vibrate the device where supported; this is implemented as `mozVibrate()` on Gecko.
+- `navigator.mozApps` returns an [`Apps`](/en-US/docs/DOM/Apps) object you can use to install and manage [open web applications](/en-US/docs/Web/Progressive_web_apps).
 - `MozBeforePaint` events are no longer fired. {{domxref("window.requestAnimationFrame", "mozRequestAnimationFrame()")}} consumers who used these should pass a callback function instead.
 - Support for canceling animation frame requests has been added; {{domxref("window.requestAnimationFrame", "window.mozRequestAnimationFrame()")}} now returns a request ID value, which you can pass to {{domxref("window.cancelAnimationFrame", "window.mozCancelAnimationFrame()")}} to cancel the request.
 - Several {{domxref("Event")}} constructors (`Event`, HTML events, `UIEvent`, and `MouseEvent`) introduced in DOM4 specifications are now supported.
-- The {{domxref("window.navigator.mozBattery", "Battery API")}} is now enabled by default.
+- The [Battery API](/en-US/docs/Web/API/Battery_Status_API) is now enabled by default.
 - Support for the [`defaultMuted`](/en-US/docs/Web/API/HTMLMediaElement), [`loop`](/en-US/docs/Web/API/HTMLMediaElement) and [`muted`](/en-US/docs/Web/API/HTMLMediaElement) properties on [`HTMLMediaElement`](/en-US/docs/Web/API/HTMLMediaElement) has been added.
 - Calling {{domxref("Document/exitFullscreen")}} now restores the previously fullscreen element if some other element was in fullscreen mode when the current element's {{domxref("Element/requestFullScreen")}} method was called.
 - The {{domxref("window.requestAnimationFrame", "window.mozRequestAnimationFrame()")}} method no longer supports a no-argument form. This form was not used much and is unlikely to become part of the standard.
@@ -37,7 +36,7 @@ Firefox 11 shipped on March 13, 2012. This article provides information about th
 ### CSS
 
 - the [`text-size-adjust`](/en-US/docs/Web/CSS/text-size-adjust) property is now supported
-- [CSS3](/en-US/docs/CSS/CSS3) [Conditional Rules](/en-US/docs/CSS/CSS3#conditional_rules) are now better supported: nested statements can now be added to [@media](/en-US/docs/Web/CSS/@media), [@-moz-document](/en-US/docs/Web/CSS/@document). (See [CSS Syntax](/en-US/docs/Web/CSS/Syntax) and [CSS at-rules](/en-US/docs/Web/CSS/At-rule)).
+- [CSS3](/en-US/docs/CSS/CSS3) [Conditional Rules](/en-US/docs/CSS/CSS3#conditional_rules) are now better supported: nested statements can now be added to [@media](/en-US/docs/Web/CSS/@media), [@-moz-document](/en-US/docs/Web/CSS/@document). (See [CSS Syntax](/en-US/docs/Web/CSS/CSS_syntax/Syntax) and [CSS at-rules](/en-US/docs/Web/CSS/CSS_syntax/At-rule)).
 
 ### JavaScript
 
@@ -49,8 +48,8 @@ _No change._
 
 ### WebSocket
 
-- [WebSocket](/en-US/docs/Web/API/WebSockets_API) API now supports binary messages (see {{bug("676439")}}).
-- Both the protocol and the API has been updated to the latest draft of the specification and the API has been unprefixed (see {{bug("666349")}} and {{bug("695635")}}).
+- [WebSocket](/en-US/docs/Web/API/WebSockets_API) API now supports binary messages (see [Firefox bug 676439](https://bugzil.la/676439)).
+- Both the protocol and the API has been updated to the latest draft of the specification and the API has been unprefixed (see [Firefox bug 666349](https://bugzil.la/666349) and [Firefox bug 695635](https://bugzil.la/695635)).
 - Previously, messages sent and received using WebSockets in Firefox were limited to 16 MB in size; they may now be up to 2 GB (although memory capacity limitations may prevent them from being that large, Firefox supports it).
 
 ### IndexedDB
@@ -70,12 +69,12 @@ _No change._
   After the code is executed the object store should contain the value "2", since `trans2` should run after `trans1`.
 
 - Previous to Firefox 11, object store {{domxref("IDBObjectStore.autoIncrement","autoIncrement")}} counters were shared across all object stores for a given database, whereas per spec each object store should have a separate counter. This is now fixed.
-- It is now possible to {{domxref("IDBObjectStore.createIndex","create an index")}} with an empty `keyPath`.
+- It is now possible to [create an index](/en-US/docs/Web/API/IDBObjectStore/createIndex) with an empty `keyPath`.
 - It is now possible to create a multi-entry index (see [`IDBObjectStore.createIndex` parameters](/en-US/docs/Web/API/IDBObjectStore/createIndex#parameters).)
-- The {{domxref("IDBTransaction/abort_event", "abort")}} event now bubbles; in addition, an {{domxref("IDBDatabase.onabort")}} handler has been added.
+- The {{domxref("IDBTransaction/abort_event", "abort")}} event now bubbles; in addition, an `onabort` handler has been added.
 - IndexedDB can now be used to store files/blobs.
 - IndexedDB now supports complex key paths, e.g. `foo.bar` to access property `bar` of property `foo`.
-- IndexedDB can now accept an array as a `keyPath` when creating an {{domxref("IDBDatabase.createObjectStore()","object store")}} or an {{domxref("IDBObjectStore.createIndex()","index")}} ({{bug("694138")}}.)
+- IndexedDB can now accept an array as a `keyPath` when creating an [object store](/en-US/docs/Web/API/IDBDatabase/createObjectStore) or an [index](/en-US/docs/Web/API/IDBObjectStore/createIndex) ([Firefox bug 694138](https://bugzil.la/694138).)
 
 ### Network
 
@@ -94,7 +93,7 @@ _No change._
 
 #### NetUtil.jsm
 
-- [`readInputStreamToString()`](https://contest-server.cs.uchicago.edu/ref/JavaScript/developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/NetUtil.html) has a new, optional, parameter to configure the character set interpretation while reading the input stream.
+- `readInputStreamToString()` has a new, optional, parameter to configure the character set interpretation while reading the input stream.
 
 #### New JavaScript code modules
 
@@ -113,7 +112,7 @@ _No change._
 The following interfaces were implementation details that are no longer needed:
 
 - `nsICharsetResolver`
-- `nsIDOMNSElement`, see [bug707576](https://bugzilla.mozilla.org/show_bug.cgi?id=707576), use `nsIDOMElement` instead.
+- `nsIDOMNSElement`, see [bug707576](https://bugzil.la/707576), use `nsIDOMElement` instead.
 
 ### Theme-related changes
 
@@ -134,4 +133,4 @@ The following interfaces were implementation details that are no longer needed:
 
 ## See also
 
-{{Firefox_for_developers('10')}}
+{{Firefox_for_developers}}

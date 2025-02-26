@@ -1,0 +1,80 @@
+# Do not add comments to this file. They will be lost.
+
+sidebar:
+  - type: section
+    link: /Web/MathML
+  - children:
+      - link: /Web/MathML/Guides
+        title: Beginners
+        details: closed
+        children:
+          - /Web/MathML/Guides/Getting_started
+          - /Web/MathML/Guides/Text_containers
+          - /Web/MathML/Guides/Fractions_and_roots
+          - /Web/MathML/Guides/Scripts
+          - /Web/MathML/Guides/Tables
+          - /Web/MathML/Guides/Three_famous_mathematical_formulas
+      - title: Guides
+        details: closed
+        children:
+          - /Web/MathML/Authoring
+          - /Web/MathML/Fonts
+  - type: section
+    title: Reference
+  - type: listSubPages
+    path: /Web/MathML/Element
+    title: Elements
+    details: closed
+    code: true
+  - type: listSubPages
+    path: /Web/MathML/Global_attributes
+    title: Global attributes
+    details: closed
+    code: true
+  - /Web/MathML/Attribute
+  - /Web/MathML/Values
+  - type: section
+    title: Examples
+  - children:
+      - link: /Web/MathML/Examples/Deriving_the_Quadratic_Formula
+      - link: /Web/MathML/Examples/MathML_Pythagorean_Theorem
+l10n:
+  de:
+    Reference: Referenz
+    Elements: Elemente
+    Global attributes: Globale Attribute
+    Guides: Anleitungen
+    Examples: Beispiele
+    Beginners: Einsteiger-Tutorials
+  en-US:
+    Reference: Reference
+    Elements: Elements
+    Global attributes: Global attributes
+    Guides: Guides
+    Examples: Examples
+    Beginners: Beginner's tutorials
+  fr:
+    Reference: Références
+    Elements: Éléments
+    Guides: Guides
+  ja:
+    Reference: リファレンス
+    Elements: 要素
+  ko:
+    Reference: "참고서:"
+    Elements: 요소
+    Guides: "안내서:"
+  pt-BR:
+    Reference: Referências
+    Elements: Elementos
+    Guides: Guides
+  ru:
+    Reference: Справочники
+    Elements: Элементы
+    Guides: Путеводитель
+  zh-CN:
+    Reference: 参考
+    Elements: 元素
+    Global attributes: 全局属性
+    Guides: 指南
+    Examples: 示例

@@ -2,28 +2,25 @@
 title: EyeDropper
 slug: Web/API/EyeDropper
 page-type: web-api-interface
-tags:
-  - API
-  - DOM
-  - EyeDropper
-  - Interface
-  - Reference
+status:
+  - experimental
 browser-compat: api.EyeDropper
 ---
+
 {{securecontext_header}}{{APIRef("EyeDropper API")}}{{SeeCompatTable}}
 
 The **`EyeDropper`** interface represents an instance of an eyedropper tool that can be opened and used by the user to select colors from the screen.
 
 ## Constructor
 
-- {{DOMxRef("EyeDropper.EyeDropper", "EyeDropper()")}}
+- {{DOMxRef("EyeDropper.EyeDropper", "EyeDropper()")}} {{Experimental_Inline}}
   - : Returns a new `EyeDropper` instance.
 
-## Methods
+## Instance methods
 
 _The `EyeDropper` interface doesn't inherit any methods_.
 
-- {{DOMxRef("EyeDropper.open()")}}
+- {{DOMxRef("EyeDropper.open()")}} {{Experimental_Inline}}
   - : Returns a promise that resolves to an object that gives access to the selected color.
 
 ## Examples
@@ -35,29 +32,32 @@ This example shows how to open an eyedropper tool and wait for the user to eithe
 #### HTML
 
 ```html
-<button id="start-button">Open the eyedropper</button>
-<span id="result"></span>
+<button id="start-button">Open the eyedropper</button> <span id="result"></span>
 ```
 
 #### JavaScript
 
 ```js
-document.getElementById('start-button').addEventListener('click', () => {
-  const resultElement = document.getElementById('result');
+document.getElementById("start-button").addEventListener("click", () => {
+  const resultElement = document.getElementById("result");
 
   if (!window.EyeDropper) {
-    resultElement.textContent = 'Your browser does not support the EyeDropper API';
+    resultElement.textContent =
+      "Your browser does not support the EyeDropper API";
     return;
   }
 
   const eyeDropper = new EyeDropper();
 
-  eyeDropper.open().then((result) => {
-    resultElement.textContent = result.sRGBHex;
-    resultElement.style.backgroundColor = result.sRGBHex;
-  }).catch((e) => {
-    resultElement.textContent = e;
-  });
+  eyeDropper
+    .open()
+    .then((result) => {
+      resultElement.textContent = result.sRGBHex;
+      resultElement.style.backgroundColor = result.sRGBHex;
+    })
+    .catch((e) => {
+      resultElement.textContent = e;
+    });
 });
 ```
 
@@ -72,30 +72,33 @@ This example shows that the eyedropper mode can also be aborted before the user 
 #### HTML
 
 ```html
-<button id="start-button">Open the eyedropper</button>
-<span id="result"></span>
+<button id="start-button">Open the eyedropper</button> <span id="result"></span>
 ```
 
 #### JavaScript
 
 ```js
-document.getElementById('start-button').addEventListener('click', () => {
-  const resultElement = document.getElementById('result');
+document.getElementById("start-button").addEventListener("click", () => {
+  const resultElement = document.getElementById("result");
 
   if (!window.EyeDropper) {
-    resultElement.textContent = 'Your browser does not support the EyeDropper API';
+    resultElement.textContent =
+      "Your browser does not support the EyeDropper API";
     return;
   }
 
   const eyeDropper = new EyeDropper();
   const abortController = new AbortController();
 
-  eyeDropper.open({ signal: abortController.signal }).then((result) => {
-    resultElement.textContent = result.sRGBHex;
-    resultElement.style.backgroundColor = result.sRGBHex;
-  }).catch((e) => {
-    resultElement.textContent = e;
-  });
+  eyeDropper
+    .open({ signal: abortController.signal })
+    .then((result) => {
+      resultElement.textContent = result.sRGBHex;
+      resultElement.style.backgroundColor = result.sRGBHex;
+    })
+    .catch((e) => {
+      resultElement.textContent = e;
+    });
 
   setTimeout(() => {
     abortController.abort();

@@ -1,16 +1,11 @@
 ---
 title: Truncate (float to float)
 slug: WebAssembly/Reference/Numeric/Truncate_float_to_float
-tags:
-  - WebAssembly
-  - wasm
-  - Reference
-  - Numeric
-  - Something
+page-type: webassembly-instruction
+sidebar: webassemblysidebar
 ---
-{{WebAssemblySidebar}}
 
-The **`trunc`** instructions, short for *truncate*, are used for getting the value of a number without it's fractional part.
+The **`trunc`** instructions, short for _truncate_, are used for getting the value of a number without its fractional part.
 
 **`trunc`** differs from **`floor`** when used on negative numbers, **`floor`** will round down in those cases while **`trunc`** will round up.
 

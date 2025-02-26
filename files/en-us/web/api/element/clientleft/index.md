@@ -1,16 +1,11 @@
 ---
-title: Element.clientLeft
+title: "Element: clientLeft property"
+short-title: clientLeft
 slug: Web/API/Element/clientLeft
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM View
-  - NeedsAgnostify
-  - NeedsMarkupWork
-  - Property
-  - Reference
 browser-compat: api.Element.clientLeft
 ---
+
 {{ APIRef("DOM") }}
 
 The width of the left border of an element in pixels. It includes the width of the
@@ -19,10 +14,12 @@ is an overflow causing a left vertical scrollbar to be rendered.
 `clientLeft` does not include the left margin or the left padding.
 `clientLeft` is read-only.
 
-> **Note:** This property will round the value to an integer. If you
+> [!NOTE]
+> This property will round the value to an integer. If you
 > need a fractional value, use {{ domxref("element.getBoundingClientRect()") }}.
 
-> **Note:** When an element has
+> [!NOTE]
+> When an element has
 > `display: inline`, `clientLeft` returns `0`
 > regardless of the element's border.
 
@@ -39,9 +36,12 @@ In the following example, the client area has a white background and a 24px blac
 ```html
 <div id="container">
   <div id="contained">
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat.
+    </p>
   </div>
 </div>
 ```
@@ -49,10 +49,9 @@ In the following example, the client area has a white background and a 24px blac
 ### CSS
 
 ```css
-
 #container {
   margin: 3rem;
-  background-color: rgb(255, 255, 204);
+  background-color: rgb(255 255 204);
   border: 4px dashed black;
 }
 

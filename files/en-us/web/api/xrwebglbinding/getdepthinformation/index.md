@@ -1,23 +1,20 @@
 ---
-title: XRWebGLBinding.getDepthInformation()
+title: "XRWebGLBinding: getDepthInformation() method"
+short-title: getDepthInformation()
 slug: Web/API/XRWebGLBinding/getDepthInformation
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - AR
-  - XR
-  - WebXR
+status:
+  - experimental
 browser-compat: api.XRWebGLBinding.getDepthInformation
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`getDepthInformation()`** method of the {{domxref("XRWebGLBinding")}} interface returns an {{domxref("XRWebGLDepthInformation")}} object containing WebGL depth information.
 
 ## Syntax
 
-```js
+```js-nolint
 getDepthInformation(view)
 ```
 
@@ -53,8 +50,8 @@ const session = navigator.xr.requestSession("immersive-ar", {
   requiredFeatures: ["depth-sensing"],
   depthSensing: {
     usagePreference: ["gpu-optimized"],
-    formatPreference: ["luminance-alpha"]
-  }
+    formatPreference: ["luminance-alpha"],
+  },
 });
 
 const glBinding = new XRWebGLBinding(session, gl);

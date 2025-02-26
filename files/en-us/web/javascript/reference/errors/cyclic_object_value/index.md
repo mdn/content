@@ -1,12 +1,9 @@
 ---
-title: 'TypeError: cyclic object value'
+title: "TypeError: cyclic object value"
 slug: Web/JavaScript/Reference/Errors/Cyclic_object_value
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - TypeError
+page-type: javascript-error
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "cyclic object value" occurs when object references were found
@@ -15,7 +12,7 @@ to solve them and fails accordingly.
 
 ## Message
 
-```
+```plain
 TypeError: Converting circular structure to JSON (V8-based)
 TypeError: cyclic object value (Firefox)
 TypeError: JSON.stringify cannot serialize cyclic structures. (Safari)
@@ -35,10 +32,10 @@ hence {{jsxref("JSON.stringify()")}} doesn't try to solve them and fails accordi
 
 ### Circular references
 
-In a circular structure like the following
+In a circular structure like the following:
 
 ```js
-const circularReference = {otherData: 123};
+const circularReference = { otherData: 123 };
 circularReference.myself = circularReference;
 ```
 
@@ -58,27 +55,35 @@ reference by using the `replacer` parameter of
 {{jsxref("JSON.stringify()")}}:
 
 ```js
-const getCircularReplacer = () => {
-  const seen = new WeakSet();
-  return (key, value) => {
-    if (typeof value === "object" && value !== null) {
-      if (seen.has(value)) {
-        return;
-      }
-      seen.add(value);
+function getCircularReplacer() {
+  const ancestors = [];
+  return function (key, value) {
+    if (typeof value !== "object" || value === null) {
+      return value;
     }
+    // `this` is the object that value is contained in,
+    // i.e., its direct parent.
+    while (ancestors.length > 0 && ancestors.at(-1) !== this) {
+      ancestors.pop();
+    }
+    if (ancestors.includes(value)) {
+      return "[Circular]";
+    }
+    ancestors.push(value);
     return value;
   };
-};
+}
 
 JSON.stringify(circularReference, getCircularReplacer());
-// {"otherData":123}
+// {"otherData":123,"myself":"[Circular]"}
+
+const o = {};
+const notCircularReference = [o, o];
+JSON.stringify(notCircularReference, getCircularReplacer());
+// [{},{}]
 ```
 
 ## See also
 
-- {{jsxref("JSON.stringify")}}
-- [cycle.js](https://github.com/douglascrockford/JSON-js/blob/master/cycle.js)
-  – Introduces two functions, `JSON.decycle` and
-  `JSON.retrocycle`, which makes it possible to encode and decode cyclical
-  structures and dags into an extended and retrocompatible JSON format.
+- {{jsxref("JSON.stringify()")}}
+- [cycle.js](https://github.com/douglascrockford/JSON-js/blob/master/cycle.js) on GitHub

@@ -1,17 +1,12 @@
 ---
-title: Request.json()
+title: "Request: json() method"
+short-title: json()
 slug: Web/API/Request/json
 page-type: web-api-instance-method
-tags:
-  - API
-  - Fetch
-  - JSON
-  - Method
-  - Reference
-  - Request
 browser-compat: api.Request.json
 ---
-{{APIRef("Fetch API")}}
+
+{{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
 The **`json()`** method of the {{domxref("Request")}} interface
 reads the request body and returns it as a promise that resolves with the result of parsing the body text as {{JSxRef("JSON")}}.
@@ -20,7 +15,7 @@ Note that despite the method being named `json()`, the result is not JSON but is
 
 ## Syntax
 
-```js
+```js-nolint
 json()
 ```
 
@@ -36,14 +31,14 @@ anything that can be represented by JSON — an object, an array, a string, a nu
 ## Examples
 
 ```js
-const obj = {hello: 'world'};
+const obj = { hello: "world" };
 
-const request = new Request('/myEndpoint', {
-  method: 'POST',
-  body: JSON.stringify(obj)
- });
+const request = new Request("/myEndpoint", {
+  method: "POST",
+  body: JSON.stringify(obj),
+});
 
-request.json().then(function(data) {
+request.json().then((data) => {
   // do something with the data sent in the request
 });
 ```

@@ -1,16 +1,12 @@
 ---
-title: WebGLRenderingContext.getProgramInfoLog()
+title: "WebGLRenderingContext: getProgramInfoLog() method"
+short-title: getProgramInfoLog()
 slug: Web/API/WebGLRenderingContext/getProgramInfoLog
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.getProgramInfoLog
 ---
-{{APIRef("WebGL")}}
+
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **WebGLRenderingContext.getProgramInfoLog** returns the information
 log for the specified {{domxref("WebGLProgram")}} object. It contains errors that
@@ -18,7 +14,7 @@ occurred during failed linking or validation of `WebGLProgram` objects.
 
 ## Syntax
 
-```js
+```js-nolint
 getProgramInfoLog(program)
 ```
 

@@ -1,24 +1,36 @@
 ---
 title: Number.parseInt()
 slug: Web/JavaScript/Reference/Global_Objects/Number/parseInt
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Number
-  - Polyfill
+page-type: javascript-static-method
 browser-compat: javascript.builtins.Number.parseInt
 ---
+
 {{JSRef}}
 
-The **`Number.parseInt()`** method parses a string argument and
+The **`Number.parseInt()`** static method parses a string argument and
 returns an integer of the specified radix or base.
 
-{{EmbedInteractiveExample("pages/js/number-parseint.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Number.parseInt()", "taller")}}
+
+```js interactive-example
+function roughScale(x, base) {
+  const parsed = Number.parseInt(x, base);
+  if (Number.isNaN(parsed)) {
+    return 0;
+  }
+  return parsed * 100;
+}
+
+console.log(roughScale(" 0xF", 16));
+// Expected output: 1500
+
+console.log(roughScale("321", 2));
+// Expected output: 0
+```
 
 ## Syntax
 
-```js
+```js-nolint
 Number.parseInt(string)
 Number.parseInt(string, radix)
 ```
@@ -26,9 +38,7 @@ Number.parseInt(string, radix)
 ### Parameters
 
 - `string`
-  - : The value to parse. If this argument is not a string, then it is converted to one
-    using the [`ToString`](https://tc39.es/ecma262/#sec-tostring)
-    abstract operation. Leading whitespace in this argument is ignored.
+  - : The value to parse, [coerced to a string](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion). Leading whitespace in this argument is ignored.
 - `radix` {{optional_inline}}
 
   - : An integer between `2` and `36` that represents the
@@ -47,17 +57,16 @@ If the `radix` is smaller than `2` or bigger than
 
 ## Examples
 
-### Number.parseInt vs parseInt
+### Number.parseInt vs. parseInt
 
-This method has the same functionality as the global {{jsxref("parseInt",
-  "parseInt()")}} function:
+This method has the same functionality as the global {{jsxref("parseInt()")}} function:
 
 ```js
-Number.parseInt === parseInt // true
+Number.parseInt === parseInt; // true
 ```
 
-and is part of ECMAScript 2015 (its purpose is modularization of globals). Please see
-{{jsxref("parseInt", "parseInt()")}} for more detail and examples.
+Its purpose is modularization of globals. Please see
+{{jsxref("parseInt()")}} for more detail and examples.
 
 ## Specifications
 
@@ -70,5 +79,5 @@ and is part of ECMAScript 2015 (its purpose is modularization of globals). Pleas
 ## See also
 
 - [Polyfill of `Number.parseInt` in `core-js`](https://github.com/zloirock/core-js#ecmascript-number)
-- The {{jsxref("Number")}} object it belongs to.
-- The global {{jsxref("parseInt", "parseInt()")}} method.
+- {{jsxref("Number")}}
+- {{jsxref("parseInt()")}}

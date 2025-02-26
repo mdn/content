@@ -1,23 +1,15 @@
 ---
-title: 'PaymentRequest: shippingaddresschange event'
+title: "PaymentRequest: shippingaddresschange event"
+short-title: shippingaddresschange
 slug: Web/API/PaymentRequest/shippingaddresschange_event
 page-type: web-api-event
-tags:
-  - API
-  - Address
-  - Commerce
-  - Payment Request
-  - Payment Request API
-  - PaymentRequest
-  - PaymentRequestUpdateEvent
-  - Reference
-  - Shipping
-  - Event
-  - payment
-  - shippingaddresschange
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.PaymentRequest.shippingaddresschange_event
 ---
-{{securecontext_header}}{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}
+
+{{APIRef("Payment Request API")}}{{SecureContext_Header}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`shippingaddresschange`** event is sent to the {{domxref("PaymentRequest")}} object when the user selects a shipping address or changes details of their shipping address.
 
@@ -28,14 +20,14 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('shippingaddresschange', (event) => { });
+addEventListener("shippingaddresschange", (event) => {});
 
-onshippingaddresschange = (event) => { };
+onshippingaddresschange = (event) => {};
 ```
 
 ## Event type
 
-An {{domxref("PaymentRequestUpdateEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("PaymentRequestUpdateEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("PaymentRequestUpdateEvent")}}
 
@@ -54,10 +46,14 @@ In this example, a handler for the `shippingaddresschange` event is set up to va
 ```js
 const paymentRequest = new PaymentRequest(methodData, details, options);
 
-paymentRequest.addEventListener("shippingaddresschange", (event) => {
-  let detailsUpdate = checkAddress(paymentRequest.shippingAddress);
-  event.updateWith(detailsUpdate);
-}, false);
+paymentRequest.addEventListener(
+  "shippingaddresschange",
+  (event) => {
+    let detailsUpdate = checkAddress(paymentRequest.shippingAddress);
+    event.updateWith(detailsUpdate);
+  },
+  false,
+);
 
 const checkAddress = (theAddress) => {
   let detailsUpdate = {};

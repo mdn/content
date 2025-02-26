@@ -1,4 +1,4 @@
-# Things to do and run after a "PR Test" workflow has finished successfully.
+# Things to do and run after a "tests" job in "PR Test" workflow has completed successfully.
 # Note, as of right now, this workflow does a bunch of things. It might be
 # worth considering to break it up so there's a dedicated post-PR
 # workflow just to posting PR comments about flaws, for example.
@@ -7,70 +7,52 @@ name: PR review companion
 
 on:
   workflow_run:
-    workflows: ["PR Test"]
+    workflows: ["PR Test", "PR Test Legacy"]
     types:
       - completed
+
+permissions:
+  # Download artifact.
+  actions: read
+  # Post comment in pull request.
+  pull-requests: write
 
 jobs:
   review:
     runs-on: ubuntu-latest
-
-    if: >
-      ${{ github.event.workflow_run.event == 'pull_request' &&
-      github.event.workflow_run.conclusion == 'success' }}
-
+    if: github.event.workflow_run.conclusion == 'success'
     steps:
       - name: "Download artifact"
-        uses: actions/github-script@v6
+        uses: actions/download-artifact@v4
         with:
-          script: |
-            var artifacts = await github.rest.actions.listWorkflowRunArtifacts({
-               owner: context.repo.owner,
-               repo: context.repo.repo,
-               run_id: ${{github.event.workflow_run.id }},
-            });
-            var matchArtifacts = artifacts.data.artifacts.filter((artifact) => {
-              return artifact.name == "build"
-            });
-            if (matchArtifacts.length === 0) {
-              console.warn(
-                'No artifacts to download probably just means nothing ' +
-                'was built in the "PR test" workflow. That\'s OK. ' +
-                'This is actually not a genuine CI error.'
-              );
-              throw new Error(
-                'No matched build artifacts. ' +
-                'Perhaps nothing built in the "PR test" workflow'
-              );
-            }
-            var matchArtifact = matchArtifacts[0];
-            var download = await github.rest.actions.downloadArtifact({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                artifact_id: matchArtifact.id,
-                archive_format: 'zip',
-            });
-            var fs = require('fs');
-            fs.writeFileSync('${{github.workspace}}/build.zip', Buffer.from(download.data));
+          pattern: build
+          path: build
+          merge-multiple: true
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          run-id: ${{ github.event.workflow_run.id }}
 
-      - name: Unzip what was downloaded
+      - name: Check for artifacts
+        if: hashFiles('build/') != ''
         run: |
-          unzip build.zip -d build
+          echo "HAS_ARTIFACT=true" >> "$GITHUB_ENV"
 
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
+        if: env.HAS_ARTIFACT
         with:
           repository: mdn/yari
           path: yari
 
       - name: Install Python
+        if: env.HAS_ARTIFACT
         id: setup-python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
-          python-version: "3.8"
+          python-version: "3.10"
 
       # See https://www.peterbe.com/plog/install-python-poetry-github-actions-faster
       - name: Load cached ~/.local
-        uses: actions/cache@v3
+        if: env.HAS_ARTIFACT
+        uses: actions/cache@v4
         with:
           path: ~/.local
           # the trailing number is used to increase for getting
@@ -78,14 +60,16 @@ jobs:
           key: dotlocal-${{ runner.os }}-${{ steps.setup-python.outputs.python-version }}-0
 
       - name: Install Python poetry
-        uses: snok/install-poetry@v1.3
+        if: env.HAS_ARTIFACT
+        uses: snok/install-poetry@76e04a911780d5b312d89783f7b1cd627778900a # v1.4.1
         with:
           virtualenvs-create: true
           virtualenvs-in-project: true
 
       - name: Load cached venv
+        if: env.HAS_ARTIFACT
         id: cached-poetry-dependencies
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: yari/deployer/.venv
           # the trailing number is used to increase for getting
@@ -93,17 +77,19 @@ jobs:
           key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}-${{ steps.setup-python.outputs.python-version }}-0
 
       - name: Install poetry dependencies
-        if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
+        if: env.HAS_ARTIFACT && steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
         run: |
           cd yari/deployer
           poetry install --no-interaction --no-root
 
       - name: Install Deployer
+        if: env.HAS_ARTIFACT
         run: |
           cd yari/deployer
           poetry install --no-interaction
 
       - name: Deploy and analyze built content
+        if: env.HAS_ARTIFACT
         env:
           BUILD_OUT_ROOT: ${{ github.workspace }}/build
 

@@ -1,23 +1,13 @@
 ---
 title: max-width
 slug: Web/CSS/max-width
-tags:
-  - CSS
-  - CSS Property
-  - Layout
-  - Limits
-  - Maximum
-  - Reference
-  - dimensions
-  - max-width
-  - recipe:css-property
-  - size
-  - width
+page-type: css-property
 browser-compat: css.properties.max-width
 ---
+
 {{CSSRef}}
 
-The **`max-width`** [CSS](/en-US/docs/Web/CSS) property sets the maximum width of an element. It prevents the [used value](/en-US/docs/Web/CSS/used_value) of the {{cssxref("width")}} property from becoming larger than the value specified by `max-width`.
+The **`max-width`** [CSS](/en-US/docs/Web/CSS) property sets the maximum width of an element. It prevents the [used value](/en-US/docs/Web/CSS/CSS_cascade/used_value) of the {{cssxref("width")}} property from becoming larger than the value specified by `max-width`.
 
 {{EmbedInteractiveExample("pages/css/max-width.html")}}
 
@@ -28,6 +18,8 @@ The **`max-width`** [CSS](/en-US/docs/Web/CSS) property sets the maximum width o
 ```css
 /* <length> value */
 max-width: 3.5em;
+max-width: anchor-size(--myAnchor inline, 245px);
+max-width: calc(anchor-size(width) + 4em);
 
 /* <percentage> value */
 max-width: 75%;
@@ -36,7 +28,9 @@ max-width: 75%;
 max-width: none;
 max-width: max-content;
 max-width: min-content;
+max-width: fit-content;
 max-width: fit-content(20em);
+max-width: stretch;
 
 /* Global values */
 max-width: inherit;
@@ -58,10 +52,18 @@ max-width: unset;
   - : The intrinsic preferred `max-width`.
 - `min-content`
   - : The intrinsic minimum `max-width`.
+- `fit-content`
+  - : Use the available space, but not more than [max-content](/en-US/docs/Web/CSS/max-content), i.e. `min(max-content, max(min-content, stretch))`.
 - `fit-content({{cssxref("&lt;length-percentage&gt;")}})`
   - : Uses the `fit-content` formula with the available space replaced by the specified argument, i.e. `min(max-content, max(min-content, argument))`.
+- `stretch`
 
-## Accessibility concerns
+  - : Limits the maximum width of the element's [margin box](/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model#parts_of_a_box) to the width of its [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block#identifying_the_containing_block). It attempts to make the margin box fill the available space in the containing block, so in a way behaving similar to `100%` but applying the resulting size to the margin box rather than the box determined by [box-sizing](/en-US/docs/Web/CSS/box-sizing).
+
+    > [!NOTE]
+    > To check aliases used by browsers for the `stretch` value and its implementation status, see the [Browser compatibility](#browser_compatibility) section.
+
+## Accessibility
 
 Ensure that elements set with a `max-width` are not truncated and/or do not obscure other content when the page is zoomed to increase text size.
 
@@ -121,6 +123,10 @@ In this example, the "child" will be either 150 pixels wide or the width of the 
 
 ## See also
 
-- [The box model](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model), {{cssxref("box-sizing")}}
-- {{cssxref("width")}}, {{cssxref("min-width")}}
-- The mapped logical properties: {{cssxref("max-inline-size")}}, {{cssxref("max-block-size")}}
+- {{Cssxref("min-width")}}
+- {{Cssxref("width")}}
+- {{cssxref("max-inline-size")}}
+- {{cssxref("max-block-size")}}
+- {{cssxref("box-sizing")}}
+- [Introduction to the CSS basic box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
+- [CSS box model](/en-US/docs/Web/CSS/CSS_box_model) module

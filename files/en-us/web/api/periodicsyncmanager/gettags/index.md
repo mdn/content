@@ -1,19 +1,14 @@
 ---
-title: PeriodicSyncManager.getTags()
+title: "PeriodicSyncManager: getTags() method"
+short-title: getTags()
 slug: Web/API/PeriodicSyncManager/getTags
 page-type: web-api-instance-method
-tags:
-  - Background Sync
-  - Method
-  - Offline
-  - PWA
-  - PeriodicSyncManager
-  - Service Worker
-  - Web Periodic Background Synchronization API
-  - periodic sync
+status:
+  - experimental
 browser-compat: api.PeriodicSyncManager.getTags
 ---
-{{DefaultAPISidebar("Periodic Background Sync")}}
+
+{{APIRef("Periodic Background Sync")}}{{SeeCompatTable}}{{AvailableInWorkers}}
 
 The **`getTags()`** method of the
 {{domxref("PeriodicSyncManager")}} interface returns a {{jsxref('Promise')}} that
@@ -22,7 +17,7 @@ currently registered for periodic syncing.
 
 ## Syntax
 
-```js
+```js-nolint
 getTags()
 ```
 
@@ -47,8 +42,7 @@ sync task with a given tag is registered.
 ```js
 navigator.serviceWorker.ready.then((registration) => {
   registration.periodicSync.getTags().then((tags) => {
-    if (tags.includes('get-latest-news'))
-      skipDownloadingLatestNewsOnPageLoad();
+    if (tags.includes("get-latest-news")) skipDownloadingLatestNewsOnPageLoad();
   });
 });
 ```
@@ -65,5 +59,5 @@ navigator.serviceWorker.ready.then((registration) => {
 
 ## See also
 
-- [Richer offline experiences with the Periodic Background Sync API](https://web.dev/periodic-background-sync/)
+- [Richer offline experiences with the Periodic Background Sync API](https://developer.chrome.com/docs/capabilities/periodic-background-sync)
 - [A Periodic Background Sync demo app](https://webplatformapis.com/periodic_sync/periodicSync_improved.html)

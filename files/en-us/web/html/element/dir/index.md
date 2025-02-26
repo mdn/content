@@ -1,24 +1,18 @@
 ---
-title: '<dir>: The Directory element'
+title: "<dir>: The Directory element"
 slug: Web/HTML/Element/dir
-tags:
-  - Directory
-  - Element
-  - HTML
-  - HTML Lists
-  - Deprecated
-  - Reference
-  - Web
-  - dir
-  - lists
+page-type: html-element
+status:
+  - deprecated
 browser-compat: html.elements.dir
 ---
 
-{{HTMLRef}}{{deprecated_header}}
+{{HTMLSidebar}}{{Deprecated_Header}}
 
 The **`<dir>`** [HTML](/en-US/docs/Web/HTML) element is used as a container for a directory of files and/or folders, potentially with styles and icons applied by the {{Glossary("user agent")}}. Do not use this obsolete element; instead, you should use the {{HTMLElement("ul")}} element for lists, including lists of files.
 
-> **Warning:** Do not use this element. Though present in early HTML specifications, it has been deprecated in HTML 4, and has since been removed entirely. **No major browsers support this element.**
+> [!WARNING]
+> Do not use this element. Though present in early HTML specifications, it has been deprecated in HTML 4, and has since been removed entirely.
 
 ## DOM interface
 
@@ -28,12 +22,14 @@ This element implements the {{domxref("HTMLDirectoryElement")}} interface.
 
 Like all other HTML elements, this element supports the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("compact")}}
+- `compact` {{Deprecated_Inline}}
   - : This Boolean attribute hints that the list should be rendered in a compact style. The interpretation of this attribute depends on the user agent and it doesn't work in all browsers.
+
+<!-- ## Technical summary -->
 
 ## Specifications
 
-Not part of any current specifications.
+{{Specifications}}
 
 ## Browser compatibility
 
@@ -45,6 +41,6 @@ Not part of any current specifications.
 - CSS properties that may be specially useful to style the `<dir>` element:
 
   - The {{cssxref('list-style')}} property, useful to choose the way the ordinal is displayed.
-  - [CSS counters](/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters), useful to handle complex nested lists.
-  - The {{Cssxref('line-height')}} property, useful to simulate the deprecated {{htmlattrxref("compact", "dir")}} attribute.
+  - [CSS counters](/en-US/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters), useful to handle complex nested lists.
+  - The {{Cssxref('line-height')}} property, useful to simulate the deprecated [`compact`](#compact) attribute.
   - The {{cssxref('margin')}} property, useful to control the indent of the list.

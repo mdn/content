@@ -1,26 +1,20 @@
 ---
-title: Element.hasPointerCapture()
+title: "Element: hasPointerCapture() method"
+short-title: hasPointerCapture()
 slug: Web/API/Element/hasPointerCapture
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Element
-  - Method
-  - PointerEvent
-  - Reference
-  - hasPointerCapture
 browser-compat: api.Element.hasPointerCapture
 ---
+
 {{APIRef("DOM")}}
 
 The **`hasPointerCapture()`** method of the
 {{domxref("Element")}} interface checks whether the element on which it is invoked has
-pointer capture for the pointer identified by the given pointer ID.
+[pointer capture](/en-US/docs/Web/API/Pointer_events#pointer_capture) for the pointer identified by the given pointer ID.
 
 ## Syntax
 
-```js
+```js-nolint
 hasPointerCapture(pointerId)
 ```
 
@@ -32,13 +26,12 @@ hasPointerCapture(pointerId)
 
 ### Return value
 
-A boolean value — `true` if the element does have pointer
-capture, `false` if it doesn't.
+A boolean value — `true` if the element does have pointer capture for the pointer identified by the given pointer ID, `false` if it doesn't.
 
 ## Examples
 
 ```html
-<html>
+<html lang="en">
   <script>
     function downHandler(ev) {
       const el = document.getElementById("target");
@@ -49,7 +42,7 @@ capture, `false` if it doesn't.
 
       // Check whether element still has pointer capture
       let pointerCap = el.hasPointerCapture(ev.pointerId);
-      if(pointerCap) {
+      if (pointerCap) {
         // We've still got pointer capture
       } else {
         // oops, we've lost pointer capture!
@@ -79,4 +72,4 @@ capture, `false` if it doesn't.
 
 - {{ domxref("Element.setPointerCapture()")}}
 - {{ domxref("Element.releasePointerCapture()")}}
-- {{ domxref("Pointer_events","Pointer Events") }}
+- {{ domxref("Pointer_events","Pointer Events", "", 1) }}

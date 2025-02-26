@@ -1,15 +1,9 @@
 ---
 title: Build the brick field
 slug: Games/Tutorials/2D_breakout_game_Phaser/Build_the_brick_field
-tags:
-  - 2D
-  - Beginner
-  - Canvas
-  - Games
-  - JavaScript
-  - Phaser
-  - Tutorial
+page-type: guide
 ---
+
 {{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Game_over", "Games/Workflows/2D_Breakout_game_Phaser/Collision_detection")}}
@@ -23,9 +17,9 @@ Building the brick field is a little bit more complicated than adding a single o
 First, let's define the needed variables — add the following below your previous variable definitions:
 
 ```js
-var bricks;
-var newBrick;
-var brickInfo;
+let bricks;
+let newBrick;
+let brickInfo;
 ```
 
 The `bricks` variable will be used to create a group, `newBrick` will be a new object added to the group on every iteration of the loop, and `brickInfo` will store all the data we need.
@@ -36,8 +30,8 @@ Next, let's load the image of the brick — add the following `load.image()` cal
 
 ```js
 function preload() {
-    // …
-    game.load.image('brick', 'img/brick.png');
+  // …
+  game.load.image("brick", "img/brick.png");
 }
 ```
 
@@ -48,29 +42,29 @@ You also need to [grab the brick image from GitHub](https://github.com/end3r/Gam
 We will place all the code for drawing the bricks inside an `initBricks` function to keep it separated from the rest of the code. Add a call to `initBricks` at the end of the `create()` function:
 
 ```js
-function create(){
-    // …
-    initBricks();
+function create() {
+  // …
+  initBricks();
 }
 ```
 
-Now onto the function itself. Add the `initBricks()` function at the end of our games code, just before the closing \</script> tag, as shown below. To begin with we've included the  `brickInfo` object, as this will come in handy very soon:
+Now onto the function itself. Add the `initBricks()` function at the end of our games code, just before the closing \</script> tag, as shown below. To begin with we've included the `brickInfo` object, as this will come in handy very soon:
 
 ```js
 function initBricks() {
-    brickInfo = {
-        width: 50,
-        height: 20,
-        count: {
-            row: 3,
-            col: 7
-        },
-        offset: {
-            top: 50,
-            left: 60
-        },
-        padding: 10
-    };
+  brickInfo = {
+    width: 50,
+    height: 20,
+    count: {
+      row: 3,
+      col: 7,
+    },
+    offset: {
+      top: 50,
+      left: 60,
+    },
+    padding: 10,
+  };
 }
 ```
 
@@ -85,36 +79,38 @@ bricks = game.add.group();
 We can loop through the rows and columns to create new brick on each iteration — add the following nested loop below the previous line of code:
 
 ```js
-for(c=0; c<brickInfo.count.col; c++) {
-    for(r=0; r<brickInfo.count.row; r++) {
-        // create new brick and add it to the group
-    }
+for (let c = 0; c < brickInfo.count.col; c++) {
+  for (let r = 0; r < brickInfo.count.row; r++) {
+    // create new brick and add it to the group
+  }
 }
 ```
 
 This way we will create the exact number of bricks we need and have them all contained in a group. Now we need to add some code inside the nested loop structure to draw each brick. Fill in the contents as shown below:
 
 ```js
-for(c=0; c<brickInfo.count.col; c++) {
-    for(r=0; r<brickInfo.count.row; r++) {
-        var brickX = 0;
-        var brickY = 0;
-        newBrick = game.add.sprite(brickX, brickY, 'brick');
-        game.physics.enable(newBrick, Phaser.Physics.ARCADE);
-        newBrick.body.immovable = true;
-        newBrick.anchor.set(0.5);
-        bricks.add(newBrick);
-    }
+for (let c = 0; c < brickInfo.count.col; c++) {
+  for (let r = 0; r < brickInfo.count.row; r++) {
+    let brickX = 0;
+    let brickY = 0;
+    newBrick = game.add.sprite(brickX, brickY, "brick");
+    game.physics.enable(newBrick, Phaser.Physics.ARCADE);
+    newBrick.body.immovable = true;
+    newBrick.anchor.set(0.5);
+    bricks.add(newBrick);
+  }
 }
 ```
 
-Here we're looping through the rows and columns to create the new bricks and place them on the screen. The newly created brick is enabled for the Arcade physics engine, it's body is set to be immovable (so it won't move when hit by the ball), and we're also setting the anchor to be in the middle and adding the brick to the group.
+Here we're looping through the rows and columns to create the new bricks and place them on the screen. The newly created brick is enabled for the Arcade physics engine, its body is set to be immovable (so it won't move when hit by the ball), and we're also setting the anchor to be in the middle and adding the brick to the group.
 
 The problem currently is that we're painting all the bricks in one place, at coordinates (0,0). What we need to do is draw each brick at its own x and y position. Update the `brickX` and `brickY` lines as follows:
 
 ```js
-var brickX = (c*(brickInfo.width+brickInfo.padding))+brickInfo.offset.left;
-var brickY = (r*(brickInfo.height+brickInfo.padding))+brickInfo.offset.top;
+const brickX =
+  c * (brickInfo.width + brickInfo.padding) + brickInfo.offset.left;
+const brickY =
+  r * (brickInfo.height + brickInfo.padding) + brickInfo.offset.top;
 ```
 
 Each `brickX` position is worked out as `brickInfo.width` plus `brickInfo.padding`, multiplied by the column number, `c`, plus the `brickInfo.offset.left`; the logic for the `brickY` is identical except that it uses the values for row number, `r`, `brickInfo.height`, and `brickInfo.offset.top`. Now every single brick can be placed in its correct place, with padding between each brick, and drawn at an offset from the left and top Canvas edges.
@@ -125,31 +121,33 @@ Here is the complete code for the `initBricks()` function:
 
 ```js
 function initBricks() {
-    brickInfo = {
-        width: 50,
-        height: 20,
-        count: {
-            row: 3,
-            col: 7
-        },
-        offset: {
-            top: 50,
-            left: 60
-        },
-        padding: 10
+  brickInfo = {
+    width: 50,
+    height: 20,
+    count: {
+      row: 3,
+      col: 7,
+    },
+    offset: {
+      top: 50,
+      left: 60,
+    },
+    padding: 10,
+  };
+  bricks = game.add.group();
+  for (let c = 0; c < brickInfo.count.col; c++) {
+    for (let r = 0; r < brickInfo.count.row; r++) {
+      const brickX =
+        c * (brickInfo.width + brickInfo.padding) + brickInfo.offset.left;
+      const brickY =
+        r * (brickInfo.height + brickInfo.padding) + brickInfo.offset.top;
+      newBrick = game.add.sprite(brickX, brickY, "brick");
+      game.physics.enable(newBrick, Phaser.Physics.ARCADE);
+      newBrick.body.immovable = true;
+      newBrick.anchor.set(0.5);
+      bricks.add(newBrick);
     }
-    bricks = game.add.group();
-    for(c=0; c<brickInfo.count.col; c++) {
-        for(r=0; r<brickInfo.count.row; r++) {
-            var brickX = (c*(brickInfo.width+brickInfo.padding))+brickInfo.offset.left;
-            var brickY = (r*(brickInfo.height+brickInfo.padding))+brickInfo.offset.top;
-            newBrick = game.add.sprite(brickX, brickY, 'brick');
-            game.physics.enable(newBrick, Phaser.Physics.ARCADE);
-            newBrick.body.immovable = true;
-            newBrick.anchor.set(0.5);
-            bricks.add(newBrick);
-        }
-    }
+  }
 }
 ```
 

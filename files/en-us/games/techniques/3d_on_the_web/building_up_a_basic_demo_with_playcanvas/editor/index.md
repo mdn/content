@@ -1,21 +1,11 @@
 ---
 title: Building up a basic demo with PlayCanvas editor
 slug: Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas/editor
-tags:
-  - 3D
-  - Animation
-  - Beginner
-  - Canvas
-  - Games
-  - Lightning
-  - Online
-  - PlayCanvas
-  - Tutorial
-  - WebGL
-  - camera
-  - editor
-  - rendering
+page-type: guide
 ---
+
+{{GamesSidebar}}
+
 Instead of coding everything from scratch you can also use the online **PlayCanvas editor**. This can be a more pleasant working environment if you are not someone who likes to code.
 
 ## Creating an account
@@ -50,7 +40,7 @@ Here's how the scene looks initially in the editor. Even though it's a blank new
 
 ![PlayCanvas Editor - Scene](playcanvas-editor-scene.png)
 
-Now onto the creative part. To add an entity to the scene you have to click on the big plus button located in the top left area of the editor, next to the Hierarchy text. When hovering over that button with your mouse the label will say 'Add Entity' — that's exactly what we want to do. An Entity is any object used in the scene — it cna be an object like a box, cylinder or cone, but it can also be a camera, light or sound source. After clicking the button you'll see a dropdown list containing a lot of various entities to choose from. Go ahead and click _Box_ — it will be added to the scene.
+Now onto the creative part. To add an entity to the scene you have to click on the big plus button located in the top left area of the editor, next to the Hierarchy text. When hovering over that button with your mouse the label will say 'Add Entity' — that's exactly what we want to do. An Entity is any object used in the scene — it can be an object like a box, cylinder or cone, but it can also be a camera, light or sound source. After clicking the button you'll see a dropdown list containing a lot of various entities to choose from. Go ahead and click _Box_ — it will be added to the scene.
 
 ![PlayCanvas Editor - New box](playcanvas-editor-newbox.png)
 
@@ -68,7 +58,8 @@ Click on your new material in the assets tab and its entity inspector will appea
 
 To change its color we'll use the _Diffuse_ option in the entity inspector. Click _Diffuse_, then select the colored box next to the Color label — it will open a {{glossary("color wheel")}}. From here you can click your desired color or enter it in the bottom text field as a hex value. We've chosen a blue color with a hex value of `0095DD` — enter this code in the text field and press return for it to be accepted.
 
-> **Note:** Yes, you read that right — you need to enter the hex value without the hash/pound symbol.
+> [!NOTE]
+> Yes, you read that right — you need to enter the hex value without the hash/pound symbol.
 
 ![PlayCanvas Editor - Diffuse color](playcanvas-editor-diffusecolor.png)
 
@@ -86,7 +77,7 @@ Now click on the play arrow in the top right corner of the scene to launch and r
 
 This looks great! Let's add more shapes to the scene to make it look more interesting.
 
-![PlayCanvas Editor - Boxrender](playcanvas-editor-boxrender.png)
+![PlayCanvas Editor - Box render](playcanvas-editor-boxrender.png)
 
 ## Adding more shapes
 
@@ -94,7 +85,9 @@ To make way for more shapes, move the box to the left to make some room for the 
 
 Adding other shapes involves a very similar process to adding the box. Click on the Root folder in the hierarchy panel (to make sure that the new shape appears in the root, and not as a child of the Box) then Click on the big _Add Entity_ (plus) button and select cylinder from the dropdown list — it will add a new cylinder shape to the scene.
 
-![PlayCanvas Editor - Cylinder](playcanvas-editor-cylinder.png)Now follow the same steps as we did before when coloring the cube:
+![PlayCanvas Editor - Cylinder](playcanvas-editor-cylinder.png)
+
+Now follow the same steps as we did before when coloring the cube:
 
 - Create a new material using the _Add Asset_ (plus) button.
 - Make sure the New Material in the Assets panel is selected, to bring up the entity inspector.
@@ -104,7 +97,7 @@ Adding other shapes involves a very similar process to adding the box. Click on 
 
 ![PlayCanvas Editor - Cylinder material](playcanvas-editor-cylindermaterial.png)
 
-Follow the same approach again to add a cone to the scene, giving it a grayish color (we used EAEFF2.) You should now have three shapes on your scene, something like the below screenshot.
+Follow the same approach again to add a cone to the scene, giving it a grayish color (we used `#EAEFF2`.) You should now have three shapes on your scene, something like the below screenshot.
 
 ![PlayCanvas Editor - Cone](playcanvas-editor-cone.png)
 
@@ -117,30 +110,27 @@ Animating 3D models might be considered an [advanced](https://developer.playcanv
 If you double click on it, you'll be moved to a code editor. As you can see, the file contains some boilerplate code already:
 
 ```js
-pc.script.create('boxAnimation', function (app) {
-    // Creates a new BoxAnimation instance
-    var BoxAnimation = function (entity) {
-        this.entity = entity;
-    };
+pc.script.create("boxAnimation", function (app) {
+  class BoxAnimation {
+    constructor(entity) {
+      this.entity = entity;
+    }
 
-    BoxAnimation.prototype = {
-        // Called once after all resources are loaded and before the first update
-        initialize() {
-        },
+    // Called once after all resources are loaded and before the first update
+    initialize() {}
 
-        // Called every frame, dt is time in seconds since last update
-        update(dt) {
-        }
-    };
+    // Called every frame, dt is time in seconds since last update
+    update(dt) {}
+  }
 
-    return BoxAnimation;
+  return BoxAnimation;
 });
 ```
 
 The most interesting part is the `update()` function, which is where we can put any code that we want repeated on every frame. Add the following line inside this function, to rotate the cube on every frame:
 
 ```js
-this.entity.rotate(dt*10, dt*20, dt*30);
+this.entity.rotate(dt * 10, dt * 20, dt * 30);
 ```
 
 In the line above `this.entity` refers to the object to which the script will be attached (the box); using the `dt` variable, which contains the delta time passed since the previous frame, we can rotate the box by a different amount around all three axes.
@@ -191,7 +181,7 @@ To move the cone up and down we will use the `setPosition()` method — add the 
 
 ```js
 this.timer += dt;
-this.entity.setPosition(2, Math.sin(this.timer*2), 0);
+this.entity.setPosition(2, Math.sin(this.timer * 2), 0);
 ```
 
 The position of the cone will be animated on each frame by being passed the `Math.sin()` value of the `timer` at each point in time — we have doubled the `this.timer` value to make it move higher.

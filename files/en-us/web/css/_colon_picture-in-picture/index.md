@@ -1,25 +1,20 @@
 ---
-title: ':picture-in-picture'
+title: :picture-in-picture
 slug: Web/CSS/:picture-in-picture
-tags:
-  - CSS
-  - Picture-in-Picture
-  - Picture-in-Picture API
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Video
-  - pip
+page-type: css-pseudo-class
 browser-compat: css.selectors.picture-in-picture
 ---
+
 {{CSSRef}}
 
 The **`:picture-in-picture`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches the element which is currently in picture-in-picture mode.
 
 ## Syntax
 
-```
-:picture-in-picture
+```css
+:picture-in-picture {
+  /* ... */
+}
 ```
 
 ## Usage notes
@@ -37,8 +32,10 @@ The page's HTML looks like this:
 ```html
 <h1>MDN Web Docs Demo: :picture-in-picture pseudo-class</h1>
 
-<p>This demo uses the <code>:picture-in-picture</code> pseudo-class to automatically
-  change the style of a video entirely using CSS.</p>
+<p>
+  This demo uses the <code>:picture-in-picture</code> pseudo-class to
+  automatically change the style of a video entirely using CSS.
+</p>
 
 <video id="pip-video"></video>
 ```
@@ -67,7 +64,6 @@ The magic happens in the CSS.
 
 - [Picture-in-picture API](/en-US/docs/Web/API/Picture-in-Picture_API)
 - {{DOMxRef("HTMLVideoElement.requestPictureInPicture()")}}
-- {{DOMxRef("HTMLVideoElement.autoPictureInPicture")}}
 - {{DOMxRef("HTMLVideoElement.disablePictureInPicture")}}
 - {{DOMxRef("Document.pictureInPictureEnabled")}}
 - {{DOMxRef("Document.exitPictureInPicture()")}}

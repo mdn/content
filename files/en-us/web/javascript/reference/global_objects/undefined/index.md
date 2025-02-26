@@ -1,62 +1,63 @@
 ---
 title: undefined
 slug: Web/JavaScript/Reference/Global_Objects/undefined
-tags:
-  - JavaScript
-  - Language feature
-  - Reference
+page-type: javascript-global-property
 browser-compat: javascript.builtins.undefined
 ---
+
 {{jsSidebar("Objects")}}
 
-The global **`undefined`** property represents the primitive
-value `{{Glossary("Undefined", "undefined")}}`. It is one of JavaScript's
+The **`undefined`** global property represents the primitive
+value [`undefined`](/en-US/docs/Web/JavaScript/Data_structures#undefined_type). It is one of JavaScript's
 {{Glossary("Primitive", "primitive types")}}.
 
-{{js_property_attributes(0,0,0)}}
+{{InteractiveExample("JavaScript Demo: Standard built-in objects - undefined")}}
 
-{{EmbedInteractiveExample("pages/js/globalprops-undefined.html")}}
+```js interactive-example
+function test(t) {
+  if (t === undefined) {
+    return "Undefined value!";
+  }
+  return t;
+}
 
-## Syntax
+let x;
 
-```js
-undefined
+console.log(test(x));
+// Expected output: "Undefined value!"
 ```
+
+## Value
+
+The primitive value [`undefined`](/en-US/docs/Web/JavaScript/Data_structures#undefined_type).
+
+{{js_property_attributes(0, 0, 0)}}
 
 ## Description
 
-`undefined` is a property of the _global object_. That is, it is a
-variable in global scope. The initial value of `undefined` is the primitive
-value `{{Glossary("Undefined", "undefined")}}`.
+`undefined` is a property of the _global object_. That is, it is a variable in global scope.
 
-In modern browsers (JavaScript 1.8.5 / Firefox 4+), `undefined` is a
-non-configurable, non-writable property, per the ECMAScript 5 specification. (Even when
-this is not the case, avoid overriding it.)
+In all non-legacy browsers, `undefined` is a non-configurable, non-writable property. Even when this is not the case, avoid overriding it.
 
 A variable that has not been assigned a value is of type `undefined`. A
 method or statement also returns `undefined` if the variable that is being
 evaluated does not have an assigned value. A function returns `undefined` if
 a value was not {{jsxref("Statements/return", "returned")}}.
 
-> **Note:** While you can use `undefined` as an
-> {{Glossary("identifier")}} (variable name) in any scope other than the global scope
-> (because `undefined` is not a {{jsxref("Reserved_Words", "reserved word",
-    "", 1)}}), doing so is a very bad idea that will make your code difficult to maintain
-> and debug.
+> [!NOTE]
+> While you can use `undefined` as an {{Glossary("identifier")}} (variable name) in any scope other than the global scope (because `undefined` is not a [reserved word](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#reserved_words)), doing so is a very bad idea that will make your code difficult to maintain and debug.
 >
 > ```js example-bad
-> //  DON'T DO THIS
+> // DON'T DO THIS
 >
-> //  logs "foo string"
-> (function() {
->   const undefined = 'foo';
->   console.log(undefined, typeof undefined);
+> (() => {
+>   const undefined = "foo";
+>   console.log(undefined, typeof undefined); // foo string
 > })();
 >
-> //  logs "foo string"
-> (function(undefined) {
->   console.log(undefined, typeof undefined);
-> })('foo');
+> ((undefined) => {
+>   console.log(undefined, typeof undefined); // foo string
+> })("foo");
 > ```
 
 ## Examples
@@ -71,20 +72,19 @@ determine whether a variable has a value. In the following code, the variable
 let x;
 if (x === undefined) {
   // these statements execute
-}
-else {
+} else {
   // these statements do not execute
 }
 ```
 
-> **Note:** The _strict equality_ operator (as opposed to the
+> [!NOTE]
+> The _strict equality_ operator (as opposed to the
 > _standard equality_ operator) must be used here, because
 > `x == undefined` also checks whether `x` is `null`,
 > while strict equality doesn't. This is because `null` is not equivalent to
 > `undefined`.
 >
-> See {{jsxref("Operators/Comparison_Operators", "comparison operators", "", 1)}} for
-> details.
+> See [Equality comparison and sameness](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness) for details.
 
 ### typeof operator and undefined
 
@@ -92,8 +92,8 @@ Alternatively, {{jsxref("Operators/typeof", "typeof")}} can be used:
 
 ```js
 let x;
-if (typeof x === 'undefined') {
-   // these statements execute
+if (typeof x === "undefined") {
+  // these statements execute
 }
 ```
 
@@ -101,13 +101,14 @@ One reason to use {{jsxref("Operators/typeof", "typeof")}} is that it does not t
 error if the variable has not been declared.
 
 ```js
-//  x has not been declared before
-if (typeof x === 'undefined') { //  evaluates to true without errors
-   //  these statements execute
+// x has not been declared before
+// evaluates to true without errors
+if (typeof x === "undefined") {
+  // these statements execute
 }
 
-if (x === undefined) { //  throws a ReferenceError
-
+// Throws a ReferenceError
+if (x === undefined) {
 }
 ```
 
@@ -121,8 +122,8 @@ existence of a property on the _global object_, using the
 {{jsxref("Operators/in", "in")}} operator, for instance:
 
 ```js
-if ('x' in window) {
-  //  these statements execute only if x is defined globally
+if ("x" in window) {
+  // These statements execute only if x is defined globally
 }
 ```
 
@@ -133,12 +134,12 @@ The {{jsxref("Operators/void", "void")}} operator is a third alternative.
 ```js
 let x;
 if (x === void 0) {
-  //  these statements execute
+  // these statements execute
 }
 
-//  y has not been declared before
+// y has not been declared before
 if (y === void 0) {
-  //  throws Uncaught ReferenceError: y is not defined
+  // throws Uncaught ReferenceError: y is not defined
 }
 ```
 
@@ -152,5 +153,5 @@ if (y === void 0) {
 
 ## See also
 
-- JavaScript's {{Glossary("Primitive", "primitive types")}}
+- [JavaScript data types and data structures](/en-US/docs/Web/JavaScript/Data_structures)
 - [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null)

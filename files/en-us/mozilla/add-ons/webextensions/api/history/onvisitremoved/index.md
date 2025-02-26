@@ -1,19 +1,11 @@
 ---
 title: history.onVisitRemoved
 slug: Mozilla/Add-ons/WebExtensions/API/history/onVisitRemoved
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - History
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onVisitRemoved
+page-type: webextension-api-event
 browser-compat: webextensions.api.history.onVisitRemoved
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 Fired when a page is removed completely from the browser history.
 
@@ -23,7 +15,7 @@ Fired when a page is removed completely from the browser history.
 
 ## Syntax
 
-```js
+```js-nolint
 browser.history.onVisitRemoved.addListener(listener)
 browser.history.onVisitRemoved.removeListener(listener)
 browser.history.onVisitRemoved.hasListener(listener)
@@ -31,7 +23,7 @@ browser.history.onVisitRemoved.hasListener(listener)
 
 Events have three functions:
 
-- `addListener(callback)`
+- `addListener(listener)`
   - : Adds a listener to this event.
 - `removeListener(listener)`
   - : Stop listening to this event. The `listener` argument is the listener to remove.
@@ -42,16 +34,16 @@ Events have three functions:
 
 ### Parameters
 
-- `callback`
+- `listener`
 
-  - : Function that will be called when this event occurs. The function will be passed the following argument:
+  - : The function called when this event occurs. The function is passed this argument:
 
     - `removed`
 
       - : `object`. Details of the removal. This is an object containing two properties: a boolean `allHistory` and an array `urls`.
 
         - If this event is firing because all history was cleared, `allHistory` will be `true` and `urls` will be an empty array.
-        - Otherwise,  `allHistory` will be `false` and `urls` will contain one item, which is the URL of the removed page.
+        - Otherwise, `allHistory` will be `false` and `urls` will contain one item, which is the URL of the removed page.
 
 ## Browser compatibility
 
@@ -64,7 +56,7 @@ function onRemoved(removed) {
   if (removed.allHistory) {
     console.log("All history removed");
   } else if (removed.urls.length) {
-    console.log("URL removed: " + removed.urls[0]);
+    console.log(`URL removed: ${removed.urls[0]}`);
   }
 }
 
@@ -73,11 +65,11 @@ browser.history.onVisitRemoved.addListener(onRemoved);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.history`](https://developer.chrome.com/docs/extensions/reference/history/#event-onVisitRemoved) API. This documentation is derived from [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.history`](https://developer.chrome.com/docs/extensions/reference/api/history#event-onVisitRemoved) API. This documentation is derived from [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) in the Chromium code.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -104,4 +96,4 @@ browser.history.onVisitRemoved.addListener(onRemoved);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

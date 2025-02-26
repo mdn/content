@@ -1,17 +1,11 @@
 ---
-title: 'Document: cut event'
+title: "Document: cut event"
+short-title: cut
 slug: Web/API/Document/cut_event
 page-type: web-api-event
-tags:
-  - API
-  - Clipboard API
-  - Document
-  - Event
-  - Reference
-  - Web
-  - cut
 browser-compat: api.Element.cut_event
 ---
+
 {{APIRef}}
 
 The **`cut`** event fires when the user initiates a cut action through the browser's user interface.
@@ -23,9 +17,9 @@ The original target for this event is the {{domxref("Element")}} that was the in
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('cut', (event) => { });
+addEventListener("cut", (event) => {});
 
-oncut = (event) => { };
+oncut = (event) => {};
 ```
 
 ## Event type
@@ -39,7 +33,7 @@ A {{domxref("ClipboardEvent")}}. Inherits from {{domxref("Event")}}.
 To be informed when a user cuts data from the webpage to their clipboard, you can add a handler to your {{domxref("Document")}} instance using {{domxref("EventTarget.addEventListener", "addEventListener()")}}, like this:
 
 ```js
-document.addEventListener("cut", function(event) {
+document.addEventListener("cut", (event) => {
   /* the session has shut down */
 });
 ```
@@ -47,9 +41,9 @@ document.addEventListener("cut", function(event) {
 Alternatively, you can use the `Document.oncut` event handler property to establish a handler for the `cut` event:
 
 ```js
-document.oncut = function(event) {
- /* the session has shut down */
-}
+document.oncut = (event) => {
+  /* the session has shut down */
+};
 ```
 
 ## Specifications

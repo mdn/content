@@ -1,28 +1,24 @@
 ---
-title: ReadableByteStreamController.close()
+title: "ReadableByteStreamController: close() method"
+short-title: close()
 slug: Web/API/ReadableByteStreamController/close
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - ReadableByteStreamController
-  - Reference
-  - Streams
-  - close
 browser-compat: api.ReadableByteStreamController.close
 ---
-{{APIRef("Streams")}}
+
+{{APIRef("Streams")}}{{AvailableInWorkers}}
 
 The **`close()`** method of the {{domxref("ReadableByteStreamController")}} interface closes the associated stream.
 
 This might be called by the underlying source when its data source has been exhausted/completed.
 
-> **Note:** Readers will still be able to read any previously-enqueued chunks from the stream, but once those are read, the stream will become closed.
+> [!NOTE]
+> Readers will still be able to read any previously-enqueued chunks from the stream, but once those are read, the stream will become closed.
 > However if there is an outstanding and partially written {{domxref("ReadableByteStreamController.byobRequest","byobRequest")}} when `close()` is called, the stream will be errored.
 
 ## Syntax
 
-```js
+```js-nolint
 close()
 ```
 
@@ -67,3 +63,4 @@ For example if using a {{domxref("ReadableStreamBYOBReader")}} any {{domxref("Re
 ## See also
 
 - [Using readable byte streams](/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams)
+- {{domxref("ReadableByteStreamController")}}

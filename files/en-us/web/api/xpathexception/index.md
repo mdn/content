@@ -2,23 +2,17 @@
 title: XPathException
 slug: Web/API/XPathException
 page-type: web-api-interface
-tags:
-  - API
-  - DOM
-  - DOM XPath API
-  - Exception
-  - Reference
-  - XPath
 browser-compat: api.XPathException
 ---
+
 {{APIRef("DOM XPath")}}{{Deprecated_Header}}
 
-In the [DOM XPath API](/en-US/docs/Web/XPath) the **`XPathException`** interface represents exception conditions that can be encountered while performing XPath operations.
+In the [DOM XPath API](/en-US/docs/Web/XML/XPath) the **`XPathException`** interface represents exception conditions that can be encountered while performing XPath operations.
 
-## Properties
+## Instance properties
 
-- {{domxref("XPathException.code")}} {{readOnlyInline}}
-  - : Returns a `short` that contains one of the [error code constants](#error_codes).
+- {{domxref("XPathException.code")}} {{ReadOnlyInline}}
+  - : Returns a `short` that contains one of the [error code constants](#constants).
 
 ## Constants
 

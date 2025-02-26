@@ -1,25 +1,23 @@
 ---
 title: dynamic-range
 slug: Web/CSS/@media/dynamic-range
-tags:
-  - '@media'
-  - CSS
-  - Media Queries
-  - Reference
-  - media feature
+page-type: css-media-feature
 browser-compat: css.at-rules.media.dynamic-range
 ---
+
 {{CSSRef}}
 
-The **`dynamic-range`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) can be used to test the combination of brightness, contrast ratio, and color depth that are supported by the {{glossary("user agent")}} and the output device.
+The **`dynamic-range`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/@media#media_features) can be used to test the combination of brightness, contrast ratio, and color depth that are supported by the {{glossary("user agent")}} and the output device.
 
-> **Note:** Some devices have high dynamic range capabilities that are not always 'on' and need to be activated (sometimes programmatically, sometimes by the user, sometimes based on the content). This media feature does not test whether the dynamic range capability is active; it only tests whether the device is capable of high dynamic range visuals.
+> [!NOTE]
+> Some devices have high dynamic range capabilities that are not always 'on' and need to be activated (sometimes programmatically, sometimes by the user, sometimes based on the content). This media feature does not test whether the dynamic range capability is active; it only tests whether the device is capable of high dynamic range visuals.
 
 ## Syntax
 
 The `dynamic-range` feature is specified as a keyword value chosen from the list below.
 
 - `standard`
+
   - : This value matches any visual device and excludes devices lacking visual capabilities. A user agent or an output device that matches `high` will also match the `standard` value.
 
 - `high`
@@ -29,15 +27,15 @@ The `dynamic-range` feature is specified as a keyword value chosen from the list
 
 ```css
 @media (dynamic-range: standard) {
-    p {
-        color: red;
-    }
+  p {
+    color: red;
+  }
 }
 
 @media (dynamic-range: high) {
-    p {
-        color: green;
-    }
+  p {
+    color: green;
+  }
 }
 ```
 
@@ -51,5 +49,5 @@ The `dynamic-range` feature is specified as a keyword value chosen from the list
 
 ## See also
 
-- [Using Media Queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [Using Media Queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
 - [@media](/en-US/docs/Web/CSS/@media)

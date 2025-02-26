@@ -1,52 +1,50 @@
 ---
 title: commands
 slug: Mozilla/Add-ons/WebExtensions/API/commands
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - commands
+page-type: webextension-api
 browser-compat: webextensions.api.commands
 ---
+
 {{AddonSidebar}}
 
-Listen for the user executing commands that you have registered using the [`commands` manifest.json key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands).
+Listens for the user executing commands registered using the [`commands` manifest.json key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands).
+
+Also provides features to update the shortcut key settings. See [Updating shortcuts](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands#updating_shortcuts) in the [`commands` manifest.json key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands) guide for more information.
 
 ## Types
 
 - {{WebExtAPIRef("commands.Command")}}
-  - : Object representing a command. This contains the information specified for the command in the [`commands` manifest.json key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands).
+  - : Object containing a command's settings.
 
 ## Functions
 
 - {{WebExtAPIRef("commands.getAll")}}
-  - : Gets all registered commands for this extension.
+  - : Gets all registered commands for the extension.
+- {{WebExtAPIRef("commands.openShortcutSettings")}}
+  - : Opens the Manage Extension Shortcuts page, highlighting the extension's shortcut options, if it has any.
 - {{WebExtAPIRef("commands.reset")}}
-  - : Reset the given command's description and shortcut to the values given in the manifest key.
+  - : Resets a command's description and shortcut to the values given in the manifest key.
 - {{WebExtAPIRef("commands.update")}}
-  - : Change the description or shortcut for the given command.
+  - : Changes the description or shortcut for a command.
 
 ## Events
 
+- {{WebExtAPIRef("commands.onChanged")}}
+  - : Fired when the keyboard shortcut for a command is changed.
 - {{WebExtAPIRef("commands.onCommand")}}
   - : Fired when a command is executed using its associated keyboard shortcut.
 
-## Browser compatibility
-
 {{WebExtExamples("h2")}}
+
+## Browser compatibility
 
 {{Compat}}
 
-> **Note:**
->
-> This API is based on Chromium's [`chrome.commands`](https://developer.chrome.com/docs/extensions/reference/commands/) API.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.commands`](https://developer.chrome.com/docs/extensions/reference/api/commands) API.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -73,4 +71,4 @@ Listen for the user executing commands that you have registered using the [`comm
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

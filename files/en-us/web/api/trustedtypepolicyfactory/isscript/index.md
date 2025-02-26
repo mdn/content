@@ -1,24 +1,21 @@
 ---
-title: TrustedTypePolicyFactory.isScript()
+title: "TrustedTypePolicyFactory: isScript() method"
+short-title: isScript()
 slug: Web/API/TrustedTypePolicyFactory/isScript
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - isScript
-  - TrustedTypePolicyFactory
 browser-compat: api.TrustedTypePolicyFactory.isScript
 ---
-{{DefaultAPISidebar("Trusted Types API")}}
+
+{{APIRef("Trusted Types API")}}{{AvailableInWorkers}}
 
 The **`isScript()`** method of the {{domxref("TrustedTypePolicyFactory")}} interface returns true if it is passed a valid {{domxref("TrustedScript")}} object.
 
-> **Note:** The purpose of the functions `isScript()`, {{domxref("TrustedTypePolicyFactory.isHTML","isHTML()")}}, and {{domxref("TrustedTypePolicyFactory.isScriptURL","isScriptURL()")}} is to check if the object is a valid TrustedType object, created by a configured policy.
+> [!NOTE]
+> The purpose of the functions `isScript()`, {{domxref("TrustedTypePolicyFactory.isHTML","isHTML()")}}, and {{domxref("TrustedTypePolicyFactory.isScriptURL","isScriptURL()")}} is to check if the object is a valid TrustedType object, created by a configured policy.
 
 ## Syntax
 
-```js
+```js-nolint
 isScript(value)
 ```
 
@@ -37,7 +34,7 @@ In the below example the constant `url` was created by a policy, and therefore `
 
 ```js
 const myScript = policy.createScript("eval('2 + 2')");
-console.log(trustedTypes.isScript(myScript)) // true;
+console.log(trustedTypes.isScript(myScript)); // true;
 
 const fake = Object.create(TrustedScript.prototype);
 console.log(trustedTypes.isScript(fake)); // false

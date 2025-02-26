@@ -1,17 +1,10 @@
 ---
 title: margin-inline-end
 slug: Web/CSS/margin-inline-end
-tags:
-  - CSS
-  - CSS Logical Property
-  - CSS Property
-  - NeedsContent
-  - Reference
-  - margin-inline
-  - margin-inline-end
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.margin-inline-end
 ---
+
 {{CSSRef}}
 
 The **`margin-inline-end`** [CSS](/en-US/docs/Web/CSS) property defines the logical inline end margin of an element, which maps to a physical margin depending on the element's writing mode, directionality, and text orientation. In other words, it corresponds to the {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}} or {{cssxref("margin-left")}} property depending on the values defined for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}.
@@ -22,9 +15,11 @@ The **`margin-inline-end`** [CSS](/en-US/docs/Web/CSS) property defines the logi
 
 ```css
 /* <length> values */
-margin-inline-end: 10px;   /* An absolute length */
-margin-inline-end: 1em;    /* relative to the text size */
-margin-inline-end: 5%;     /* relative to the nearest block container's width */
+margin-inline-end: 10px; /* An absolute length */
+margin-inline-end: 1em; /* relative to the text size */
+margin-inline-end: 5%; /* relative to the nearest block container's width */
+margin-inline-end: anchor-size(height);
+margin-inline-end: calc(anchor-size(--myAnchor self-inline, 25px) / 5);
 
 /* Keyword values */
 margin-inline-end: auto;
@@ -93,6 +88,7 @@ div {
 
 ## See also
 
+- [CSS Logical Properties and Values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values)
 - {{cssxref("margin-inline-start")}}
 - The mapped physical properties: {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, and {{cssxref("margin-left")}}
 - {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

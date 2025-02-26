@@ -1,18 +1,12 @@
 ---
-title: WorkerNavigator.languages
+title: "WorkerNavigator: languages property"
+short-title: languages
 slug: Web/API/WorkerNavigator/languages
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - WorkerNavigator
-  - Property
-  - Read-only
-  - Reference
-  - languages
 browser-compat: api.WorkerNavigator.languages
 ---
-{{APIRef("HTML DOM")}}{{SeeCompatTable}}
+
+{{APIRef("HTML DOM")}}{{AvailableInWorkers("worker")}}
 
 The **`WorkerNavigator.languages`** read-only property
 returns an array of strings representing the user's preferred
@@ -39,8 +33,8 @@ An array or strings.
 You can run this insert a web worker:
 
 ```js
-navigator.language   //"en-US"
-navigator.languages  //["en-US", "zh-CN", "ja-JP"]
+navigator.language; //"en-US"
+navigator.languages; //["en-US", "zh-CN", "ja-JP"]
 ```
 
 ## Specifications

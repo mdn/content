@@ -1,19 +1,23 @@
 ---
 title: Sec-CH-UA-Full-Version-List
 slug: Web/HTTP/Headers/Sec-CH-UA-Full-Version-List
-tags:
-  - Sec-CH-UA-Full-Version-List
-  - Client hint
-  - HTTP
-  - HTTP Header
-  - Reference
-  - Request header
-  -  Experimental
+page-type: http-header
+status:
+  - experimental
 browser-compat: http.headers.Sec-CH-UA-Full-Version-List
 ---
-{{HTTPSidebar}} {{SeeCompatTable}} {{securecontext_header}}
 
-The **`Sec-CH-UA-Full-Version-List`** [user agent client hint](/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) request header provides the user-agent's branding and full version information.
+{{HTTPSidebar}}{{SeeCompatTable}}{{SecureContext_Header}}
+
+The HTTP **`Sec-CH-UA-Full-Version-List`** {{Glossary("request header")}} is a [user agent client hint](/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) which provides the user-agent's branding and full version information.
+
+The **`Sec-CH-UA-Full-Version-List`** header provides the brand and full version information for each brand associated with the browser, in a comma-separated list.
+
+The header may include "fake" brands in any position and with any name.
+This is a feature designed to prevent servers from rejecting unknown user agents outright, forcing user agents to lie about their brand identity.
+
+> [!NOTE]
+> This is similar to {{HTTPHeader("Sec-CH-UA")}}, but includes the full version number instead of the significant version number for each brand.
 
 <table class="properties">
   <tbody>
@@ -25,24 +29,11 @@ The **`Sec-CH-UA-Full-Version-List`** [user agent client hint](/en-US/docs/Web/H
       </td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>yes</td>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
+      <td>Yes (<code>Sec-</code> prefix)</td>
     </tr>
   </tbody>
 </table>
-
-The **`Sec-CH-UA-Full-Version-List`** header provides the brand and full version information for each brand associated with the browser, in a comma-separated list.
-
-A brand is a commercial name for the user agent like: Chromium, Opera, Google Chrome, Microsoft Edge, Firefox, and Safari.
-A user agent might have several associated brands.
-For example, Opera, Chrome, and Edge are all based on Chromium, and will provide both brands in the **`Sec-CH-UA-Full-Version-List`** header.
-
-The header therefore allows the server to customize its response based on both shared brands and on particular customizations in their specific respective builds.
-
-The header may include "fake" brands in any position and with any name.
-This is a feature designed to prevent servers from rejecting unknown user agents outright, forcing user agents to lie about their brand identity.
-
-> **Note:** This is similar to {{HTTPHeader("Sec-CH-UA")}}, but includes the full version number instead of the significant version number for each brand.
 
 ## Syntax
 
@@ -57,11 +48,21 @@ Sec-CH-UA-Full-Version-List: "<brand>";v="<full version>", ...
 
 - `<brand>`
   - : A brand associated with the user agent, like "Chromium", "Google Chrome".
-     This may be an intentionally incorrect brand like `" Not A;Brand"` or `"(Not(A:Brand"` (the actual value is expected change over time and be unpredictable).
+    This may be an intentionally incorrect brand like `" Not A;Brand"` or `"(Not(A:Brand"` (the actual value is expected change over time and be unpredictable).
 - `<full version>`
   - : A full version number, such as 98.0.4750.0.
 
+## Description
+
+A brand is a commercial name for the user agent like: Chromium, Opera, Google Chrome, Microsoft Edge, Firefox, and Safari.
+A user agent might have several associated brands.
+For example, Opera, Chrome, and Edge are all based on Chromium, and will provide both brands in the `Sec-CH-UA-Full-Version-List` header.
+
+The header allows the server to customize its response based on both shared brands and on particular customizations in their specific respective builds.
+
 ## Examples
+
+### Using Sec-CH-UA-Full-Version-List
 
 A server requests the `Sec-CH-UA-Full-Version-List` header by including the {{HTTPHeader("Accept-CH")}} in a _response_ to any request from the client, using the name of the desired header as a token:
 
@@ -94,6 +95,6 @@ Sec-CH-UA-Platform: "Linux"
 
 - [Client hints](/en-US/docs/Web/HTTP/Client_hints)
 - [User-Agent Client Hints API](/en-US/docs/Web/API/User-Agent_Client_Hints_API)
-- [Improving user privacy and developer experience with User-Agent Client Hints](https://web.dev/user-agent-client-hints/) (web.dev)
 - {{HTTPHeader("Accept-CH")}}
-- [HTTP Caching > Varying responses](/en-US/docs/Web/HTTP/Caching#varying_responses) and {{HTTPHeader("Vary")}}
+- [HTTP Caching: Vary](/en-US/docs/Web/HTTP/Caching#vary) and {{HTTPHeader("Vary")}} header
+- [Improving user privacy and developer experience with User-Agent Client Hints](https://developer.chrome.com/docs/privacy-security/user-agent-client-hints) (developer.chrome.com)

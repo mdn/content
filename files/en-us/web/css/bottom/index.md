@@ -1,23 +1,19 @@
 ---
 title: bottom
 slug: Web/CSS/bottom
-tags:
-  - CSS
-  - CSS Positioning
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.bottom
 ---
+
 {{CSSRef}}
 
-The **`bottom`** [CSS](/en-US/docs/Web/CSS) property participates in setting the vertical position of a [positioned element](/en-US/docs/Web/CSS/position). It has no effect on non-positioned elements.
+The **`bottom`** [CSS](/en-US/docs/Web/CSS) property participates in setting the vertical position of a [positioned element](/en-US/docs/Web/CSS/position). This {{glossary("inset properties", "inset property")}} has no effect on non-positioned elements.
 
 {{EmbedInteractiveExample("pages/css/bottom.html")}}
 
 The effect of `bottom` depends on how the element is positioned (i.e., the value of the {{cssxref("position")}} property):
 
-- When `position` is set to `absolute` or `fixed`, the `bottom` property specifies the distance between the element's outer margin of bottom edge and the inner border of the bottom edge of its containing block.
+- When `position` is set to `absolute` or `fixed`, the `bottom` property specifies the distance between the outer edge of the element's [bottom margin](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model) and the outer edge of the containing block's bottom padding, or, in the case of [anchor positioned elements](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using) when the {{cssxref("anchor()")}} function is used within the value, relative to the position of the specified [`<anchor-side>`](/en-US/docs/Web/CSS/anchor#anchor-side) edge. The `bottom` property is [compatible](/en-US/docs/Web/CSS/anchor#compatibility_of_inset_properties_and_anchor-side_values) with the `top`, `bottom`, `start`, `end`, `self-start`, `self-end`, `center`, and `<percentage>` values.
 - When `position` is set to `relative`, the `bottom` property specifies the distance the element's bottom edge is moved above its normal position.
 - When `position` is set to `sticky`, the `bottom` property is used to compute the sticky-constraint rectangle.
 - When `position` is set to `static`, the `bottom` property has _no effect_.
@@ -30,6 +26,8 @@ When both {{cssxref("top")}} and `bottom` are specified, `position` is set to `a
 /* <length> values */
 bottom: 3px;
 bottom: 2.4em;
+bottom: calc(anchor(--myAnchor 50%) + 5px);
+bottom: anchor-size(width);
 
 /* <percentage>s of the height of the containing block */
 bottom: 10%;
@@ -49,10 +47,11 @@ bottom: unset;
 
 - {{cssxref("&lt;length&gt;")}}
 
-  - : A negative, null, or positive {{cssxref("&lt;length&gt;")}} that represents:
+  - : A negative, null, or positive {{cssxref("&lt;length&gt;")}}:
 
-    - for _absolutely positioned elements_, the distance to the bottom edge of the containing block.
-    - for _relatively positioned elements_, the distance that the element is moved above its normal position.
+    - for _absolutely positioned elements_, it represents the distance to the bottom edge of the containing block.
+    - for _relatively positioned elements_, it represents the distance that the element is moved above its normal position.
+    - for _anchor-positioned elements_, the {{cssxref("anchor()")}} function resolves to a {{cssxref("&lt;length&gt;")}} value relative to the position of the associated _anchor element_'s top or bottom edge (see [Using inset properties with `anchor()` function values](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#using_inset_properties_with_anchor_function_values)), and the {{cssxref("anchor-size()")}} function resolves to a {{cssxref("&lt;length&gt;")}} value relative to the associated anchor element's width or height (see [Setting element position based on anchor size](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#setting_element_position_based_on_anchor_size)).
 
 - {{cssxref("&lt;percentage&gt;")}}
   - : A {{cssxref("&lt;percentage&gt;")}} of the containing block's height.
@@ -83,7 +82,9 @@ This example demonstrates the difference in behavior of the `bottom` property, w
 #### HTML
 
 ```html
-<p>This<br>is<br>some<br>tall,<br>tall,<br>tall,<br>tall,<br>tall<br>content.</p>
+<p>
+  This<br />is<br />some<br />tall,<br />tall,<br />tall,<br />tall,<br />tall<br />content.
+</p>
 <div class="fixed"><p>Fixed</p></div>
 <div class="absolute"><p>Absolute</p></div>
 ```
@@ -99,7 +100,7 @@ p {
 div {
   width: 48%;
   text-align: center;
-  background: rgba(55,55,55,.2);
+  background: rgb(55 55 55 / 20%);
   border: 1px solid blue;
 }
 
@@ -130,6 +131,9 @@ div {
 
 ## See also
 
-- {{cssxref("inset")}}, the shorthand for all related properties: {{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("left")}}, and {{cssxref("right")}}
-- The mapped logical properties: {{cssxref("inset-block-start")}}, {{cssxref("inset-block-end")}}, {{cssxref("inset-inline-start")}}, and {{cssxref("inset-inline-end")}} and the shorthands {{cssxref("inset-block")}} and {{cssxref("inset-inline")}}
+- {{cssxref("top")}}, {{cssxref("left")}}, and {{cssxref("right")}}
+- {{cssxref("inset")}} shorthand
+- {{cssxref("inset-block-start")}}, {{cssxref("inset-block-end")}}, {{cssxref("inset-inline-start")}}, and {{cssxref("inset-inline-end")}}
+- {{cssxref("inset-block")}} and {{cssxref("inset-inline")}} shorthands
 - {{cssxref("position")}}
+- [CSS positioned layout](/en-US/docs/Web/CSS/CSS_positioned_layout) module

@@ -1,19 +1,14 @@
 ---
-title: BluetoothRemoteGATTCharacteristic.value
+title: "BluetoothRemoteGATTCharacteristic: value property"
+short-title: value
 slug: Web/API/BluetoothRemoteGATTCharacteristic/value
 page-type: web-api-instance-property
-tags:
-  - API
-  - Bluetooth
-  - BluetoothRemoteGATTCharacteristic
-  - Experimental
-  - Property
-  - Reference
-  - Web Bluetooth API
-  - value
+status:
+  - experimental
 browser-compat: api.BluetoothRemoteGATTCharacteristic.value
 ---
-{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
+
+{{APIRef("Bluetooth API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`BluetoothRemoteGATTCharacteristic.value`** read-only
 property returns currently cached characteristic value. This value gets updated when the
@@ -30,5 +25,3 @@ The currently cached characteristic value.
 ## Browser compatibility
 
 {{Compat}}
-
-{{APIRef("Web Bluetooth")}}

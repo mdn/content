@@ -1,23 +1,14 @@
 ---
-title: Navigator.xr
+title: "Navigator: xr property"
+short-title: xr
 slug: Web/API/Navigator/xr
 page-type: web-api-instance-property
-tags:
-  - API
-  - AR
-  - Augmented Reality
-  - Getter
-  - Graphics
-  - Navigator
-  - Property
-  - Reference
-  - VR
-  - Virtual Reality
-  - WebXR
-  - XR
+status:
+  - experimental
 browser-compat: api.Navigator.xr
 ---
-{{APIRef("WebXR Device API")}} {{SecureContext_Header}}
+
+{{APIRef("WebXR Device API")}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 The read-only **`xr`** property
 provided by the {{domxref("Navigator")}} interface returns an {{domxref("XRSystem")}} object
@@ -35,7 +26,7 @@ Each {{domxref("Window")}} has its own instance of {{domxref("Navigator")}}, whi
 be accessed as {{domxref("Window.navigator","window.navigator")}} or as
 {{domxref("Window.navigator", "navigator")}}. At the same time, a new
 {{domxref("XRSystem")}} instance is also created and attached to
-the `navigator` instance as {{domxref("Navigator.xr", "navigator.xr")}}. If
+the `navigator` instance as `navigator.xr`. If
 the `xr` property exists, you can use it to access the [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API).
 
 To determine if WebXR is available, you can do something like this:

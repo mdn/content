@@ -1,12 +1,11 @@
 ---
-title: CharacterData.after()
+title: "CharacterData: after() method"
+short-title: after()
 slug: Web/API/CharacterData/after
 page-type: web-api-instance-method
-tags:
-  - Method
-  - Reference
 browser-compat: api.CharacterData.after
 ---
+
 {{APIRef("DOM")}}
 
 The **`after()`** method of the {{domxref("CharacterData")}} interface
@@ -17,14 +16,14 @@ Strings are inserted as {{domxref("Text")}} nodes; the string is being passed as
 
 ## Syntax
 
-```js
+```js-nolint
 after(...nodes)
 ```
 
 ### Parameters
 
 - `nodes`
-  - : A set of {{domxref("Node")}} or strings to insert.
+  - : A set of {{domxref("Node")}} objects or strings to insert.
 
 ### Exceptions
 
@@ -41,17 +40,18 @@ after(...nodes)
 The `after()` method allows you to insert new nodes after a `CharacterData` node.
 
 ```js
-const h1TextNode = document.getElementsByTagName('h1')[0].firstChild;
+const h1TextNode = document.querySelector("h1").firstChild;
 h1TextNode.after(" #h1");
 
-h1TextNode.parentElement.childNodes
+h1TextNode.parentElement.childNodes;
 // NodeList [#text "CharacterData.after()", #text " #h1"]
 
 h1TextNode.data;
 // "CharacterData.after()"
 ```
 
-> **Note:** If you rather want to append text to the current node,
+> [!NOTE]
+> If you rather want to append text to the current node,
 > the [`appendData()`](/en-US/docs/Web/API/CharacterData/appendData) method lets you append to the current node's data.
 
 ## Specifications
@@ -66,6 +66,8 @@ h1TextNode.data;
 
 - {{domxref("CharacterData.appendData()")}}
 - {{domxref("CharacterData.before()")}}
+- {{domxref("DocumentType.after()")}}
+- {{domxref("Element.after()")}}
 - {{domxref("Element.append()")}}
 - {{domxref("Node.appendChild()")}}
 - {{domxref("Element.insertAdjacentElement()")}}

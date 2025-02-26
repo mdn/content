@@ -1,25 +1,30 @@
 ---
 title: DataView.prototype.setUint32()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/setUint32
-tags:
-  - DataView
-  - JavaScript
-  - Method
-  - Prototype
-  - TypedArrays
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.DataView.setUint32
 ---
+
 {{JSRef}}
 
-The **`setUint32()`** method stores an unsigned 32-bit integer
-(unsigned long) value at the specified byte offset from the start of the
-{{jsxref("DataView")}}.
+The **`setUint32()`** method of {{jsxref("DataView")}} instances takes a number and stores it as a 32-bit unsigned integer in the 4 bytes starting at the specified byte offset of this `DataView`. There is no alignment constraint; multi-byte values may be stored at any offset within bounds.
 
-{{EmbedInteractiveExample("pages/js/dataview-setuint32.html")}}
+{{InteractiveExample("JavaScript Demo: DataView.setUint32()")}}
+
+```js interactive-example
+// Create an ArrayBuffer with a size in bytes
+const buffer = new ArrayBuffer(16);
+
+const view = new DataView(buffer);
+view.setUint32(1, 4294967295); // Max unsigned 32-bit integer
+
+console.log(view.getUint32(1));
+// Expected output: 4294967295
+```
 
 ## Syntax
 
-```js
+```js-nolint
 setUint32(byteOffset, value)
 setUint32(byteOffset, value, littleEndian)
 ```
@@ -27,33 +32,30 @@ setUint32(byteOffset, value, littleEndian)
 ### Parameters
 
 - `byteOffset`
-  - : The offset, in byte, from the start of the view where to store the data.
+  - : The offset, in bytes, from the start of the view to store the data in.
 - `value`
-  - : The value to set.
-- `littleEndian`
-  - : {{optional_inline}} Indicates whether the 32-bit int is stored in
-    {{Glossary("Endianness", "little- or big-endian")}} format. If `false` or
-    `undefined`, a big-endian value is written.
+  - : The value to set. For how the value is encoded in bytes, see [Value encoding and normalization](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#value_encoding_and_normalization).
+- `littleEndian` {{optional_inline}}
+  - : Indicates whether the data is stored in [little- or big-endian](/en-US/docs/Glossary/Endianness) format. If `false` or `undefined`, a big-endian value is written.
 
 ### Return value
 
 {{jsxref("undefined")}}.
 
-### Errors thrown
+### Exceptions
 
 - {{jsxref("RangeError")}}
-  - : Thrown if the `byteOffset` is set such as it would store beyond the end
-    of the view.
+  - : Thrown if the `byteOffset` is set such that it would store beyond the end of the view.
 
 ## Examples
 
-### Using the setUint32 method
+### Using setUint32()
 
 ```js
-const buffer = new ArrayBuffer(8);
+const buffer = new ArrayBuffer(10);
 const dataview = new DataView(buffer);
-dataview.setUint32(1, 3);
-dataview.getUint32(1); // 3
+dataview.setUint32(0, 3);
+dataview.getUint32(1); // 768
 ```
 
 ## Specifications
@@ -66,5 +68,7 @@ dataview.getUint32(1); // 3
 
 ## See also
 
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide
 - {{jsxref("DataView")}}
 - {{jsxref("ArrayBuffer")}}
+- {{jsxref("Uint32Array")}}

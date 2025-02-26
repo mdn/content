@@ -1,12 +1,10 @@
 ---
 title: homepage_url
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/homepage_url
-tags:
-  - Add-ons
-  - Extensions
-  - WebExtensions
+page-type: webextension-manifest-key
 browser-compat: webextensions.manifest.homepage_url
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
@@ -44,7 +42,7 @@ This is a [localizable property](/en-US/docs/Mozilla/Add-ons/WebExtensions/Inter
 ## Example
 
 ```json
-"homepage_url": "https://github.com/mdn/webextensions-examples/tree/master/beastify"
+"homepage_url": "https://github.com/mdn/webextensions-examples/tree/main/beastify"
 ```
 
 ## Browser compatibility

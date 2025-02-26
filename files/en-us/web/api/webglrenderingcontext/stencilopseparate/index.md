@@ -1,16 +1,12 @@
 ---
-title: WebGLRenderingContext.stencilOpSeparate()
+title: "WebGLRenderingContext: stencilOpSeparate() method"
+short-title: stencilOpSeparate()
 slug: Web/API/WebGLRenderingContext/stencilOpSeparate
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.stencilOpSeparate
 ---
-{{APIRef("WebGL")}}
+
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGLRenderingContext.stencilOpSeparate()`** method of
 the [WebGL API](/en-US/docs/Web/API/WebGL_API) sets the front and/or
@@ -18,14 +14,11 @@ back-facing stencil test actions.
 
 ## Syntax
 
-```js
+```js-nolint
 stencilOpSeparate(face, fail, zfail, zpass)
 ```
 
 ### Parameters
-
-The `fail`, `zfail` and `zpass` parameters accept all
-constants listed below.
 
 - `face`
 
@@ -87,8 +80,7 @@ gl.stencilOpSeparate(gl.FRONT, gl.INCR, gl.DECR, gl.INVERT);
 ```
 
 To get the current information about stencil and depth pass or fail, query the
-following constants with {{domxref("WebGLRenderingContext.getParameter",
-  "getParameter()")}}.
+following constants with {{domxref("WebGLRenderingContext.getParameter", "getParameter()")}}.
 
 ```js
 gl.getParameter(gl.STENCIL_FAIL);

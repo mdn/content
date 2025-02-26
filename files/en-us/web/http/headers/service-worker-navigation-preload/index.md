@@ -1,20 +1,16 @@
 ---
 title: Service-Worker-Navigation-Preload
 slug: Web/HTTP/Headers/Service-Worker-Navigation-Preload
-tags:
-  - HTTP
-  - Reference
-  - Request header
-  - header
-  - NavigationPreloadManager
+page-type: http-header
 browser-compat: http.headers.Service-Worker-Navigation-Preload
 ---
+
 {{HTTPSidebar}}
 
-The **`Service-Worker-Navigation-Preload`** request header indicates that the request was the result of a {{domxref("fetch()")}} operation made during service worker navigation preloading.
+The HTTP **`Service-Worker-Navigation-Preload`** {{Glossary("request header")}} indicates that the request was the result of a {{domxref("Window/fetch", "fetch()")}} operation made during service worker navigation preloading.
 It allows a server to respond with a different resource than for a normal `fetch()`.
 
-If a different response may result from setting this header, the server must set `Vary: Service-Worker-Navigation-Preload` to ensure that the different responses are cached.
+If a different response may result from setting this header, the server must include a {{HTTPHeader("Vary", "Vary: Service-Worker-Navigation-Preload")}} header in responses to ensure that different responses are cached.
 
 For more information see {{domxref("NavigationPreloadManager.setHeaderValue()")}} (and {{domxref("NavigationPreloadManager")}}).
 
@@ -25,15 +21,15 @@ For more information see {{domxref("NavigationPreloadManager.setHeaderValue()")}
       <td>{{Glossary("Request header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>no</td>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
+      <td>No</td>
     </tr>
   </tbody>
 </table>
 
 ## Syntax
 
-```
+```http
 Service-Worker-Navigation-Preload: <value>
 ```
 
@@ -46,7 +42,9 @@ Service-Worker-Navigation-Preload: <value>
 
 ## Examples
 
-The header below is sent by default.
+### Service worker navigation preloading headers
+
+The following request header is sent by default in navigation preload requests:
 
 ```http
 Service-Worker-Navigation-Preload: true
@@ -66,3 +64,8 @@ Service-Worker-Navigation-Preload: json_fragment1
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [HTTP Caching: Vary](/en-US/docs/Web/HTTP/Caching#vary) and {{HTTPHeader("Vary")}} header
+- [Service Worker API](/en-US/docs/Web/API/Service_Worker_API)

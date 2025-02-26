@@ -1,93 +1,83 @@
 ---
-title: Document.execCommand()
+title: "Document: execCommand() method"
+short-title: execCommand()
 slug: Web/API/Document/execCommand
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Method
-  - NeedsExample
-  - Reference
-  - editor
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.Document.execCommand
 ---
+
 {{ApiRef("DOM")}}{{deprecated_header}}
 
-When an HTML document has been switched to
-[`designMode`](/en-US/docs/Web/API/Document/designMode), its
-`document` object exposes an **`execCommand`**
-method to run commands that manipulate the current editable region, such as [form inputs](/en-US/docs/Web/HTML/Element/input) or
-[`contentEditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable)
-elements.
+The **`execCommand`** method implements multiple different commands. Some of them provide access to the clipboard, while others are for editing [form inputs](/en-US/docs/Web/HTML/Element/input), [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) elements or entire documents (when switched to [design mode](/en-US/docs/Web/API/Document/designMode)).
 
-Most commands affect the document's [selection](/en-US/docs/Web/API/Selection) (bold, italics, etc.), while others
-insert new elements (adding a link), or affect an entire line (indenting). When using
-`contentEditable`, `execCommand()` affects the currently active
-editable element.
+To access the clipboard, the newer [Clipboard API](/en-US/docs/Web/API/Clipboard_API) is recommended over `execCommand()`. However, there is no replacement for the editing commands: unlike direct DOM manipulation, modifications performed by `execCommand()` preserve the undo buffer (edit history).
 
-The [Clipboard API](/en-US/docs/Web/API/Clipboard_API) can be used instead of `execCommand` in many cases, but `execCommand` is still sometimes useful. In particular, the Clipboard API doesn't replace the `insertText` command, which you can use to programmatically replace text at the cursor while preserving the undo buffer (edit history) in plain `textarea` and `input` elements.
+Most commands affect the document's [selection](/en-US/docs/Web/API/Selection). For example, some commands (bold, italics, etc.) format the currently selected text, while others delete the selection, insert new elements (replacing the selection) or affect an entire line (indenting). Only the currently active editable element can be modified, but some commands (e.g. `copy`) can work without an editable element.
+
+> [!NOTE]
+> Modifications performed by `execCommand()` may or may not trigger {{domxref("Element/beforeinput_event", "beforeinput")}} and {{domxref("Element/input_event", "input")}} events, depending on the browser and configuration. If triggered, the handlers for the events will run before `execCommand()` returns. Authors need to be careful about such recursive calls, especially if they call `execCommand()` in response to these events. From Firefox 82, nested `execCommand()` calls will always fail, see [bug 1634262](https://bugzil.la/1634262).
 
 ## Syntax
 
-```js
+```js-nolint
 execCommand(aCommandName, aShowDefaultUI, aValueArgument)
 ```
 
 ### Parameters
 
 - `aCommandName`
+
   - : A string specifying the name of the command to execute. The following commands are specified:
     - `backColor`
-      - : Changes the document background color. In `styleWithCss` mode, it affects the background color of the containing block instead. This requires a {{cssxref("&lt;color&gt;")}} value string to be passed in as a value argument. Note that Internet Explorer uses this to set the text background color.
+      - : Changes the document background color. In `styleWithCss` mode, it affects the background color of the containing block instead. This requires a {{cssxref("&lt;color&gt;")}} value string to be passed in as a value argument.
     - `bold`
-      - : Toggles bold on/off for the selection or at the insertion point. Internet Explorer uses the {{HTMLElement("strong")}} tag instead of {{HTMLElement("b")}}.
-    - `ClearAuthenticationCache`
-      - : Clears all authentication credentials from the cache.
+      - : Toggles bold on/off for the selection or at the insertion point.
     - `contentReadOnly`
-      - : Makes the content document either read-only or editable. This requires a boolean true/false as the value argument. (Not supported by Internet Explorer.)
+      - : Makes the content document either read-only or editable. This requires a boolean true/false as the value argument.
     - `copy`
       - : Copies the current selection to the clipboard. Conditions of having this behavior enabled vary from one browser to another, and have evolved over time. Check the compatibility table to determine if you can use it in your case.
     - `createLink`
-      - : Creates an hyperlink from the selection, but only if there is a selection. Requires a {{Glossary("URI")}} string as a value argument for the hyperlink's `href`. The URI must contain at least a single character, which may be whitespace. (Internet Explorer will create a link with a `null` value.)
+      - : Creates an hyperlink from the selection, but only if there is a selection. Requires a {{Glossary("URI")}} string as a value argument for the hyperlink's `href`. The URI must contain at least a single character, which may be whitespace.
     - `cut`
       - : Removes the current selection and copies it to the clipboard. When this behavior is enabled varies between browsers, and its conditions have evolved over time. Check [the compatibility table](#browser_compatibility) for usage details.
     - `decreaseFontSize`
-      - : Adds a {{HTMLElement("small")}} tag around the selection or at the insertion point. (Not supported by Internet Explorer.)
+      - : Adds a {{HTMLElement("small")}} tag around the selection or at the insertion point.
     - `defaultParagraphSeparator`
-      - : Changes the paragraph separator used when new paragraphs are created in editable text regions. See [Differences in markup generation](/en-US/docs/Web/Guide/HTML/Editable_content#differences_in_markup_generation) for more details.
+      - : Changes the paragraph separator used when new paragraphs are created in editable text regions.
     - `delete`
       - : Deletes the current selection.
     - `enableAbsolutePositionEditor`
-      - : Enables or disables the grabber that allows absolutely-positioned elements to be moved around. The grabber is disabled by default since Firefox 64 ({{bug(1490641)}}).
+      - : Enables or disables the grabber that allows absolutely-positioned elements to be moved around. The grabber is disabled by default since Firefox 64 ([Firefox bug 1490641](https://bugzil.la/1490641)).
     - `enableInlineTableEditing`
-      - : Enables or disables the table row/column insertion and deletion controls. The controls are disabled by default since Firefox 64 ({{bug(1490641)}}).
+      - : Enables or disables the table row/column insertion and deletion controls. The controls are disabled by default since Firefox 64 ([Firefox bug 1490641](https://bugzil.la/1490641)).
     - `enableObjectResizing`
-      - : Enables or disables the resize handles on images, tables, and absolutely-positioned elements and other resizable objects. The handles are disabled by default since Firefox 64 ({{bug(1490641)}}).
+      - : Enables or disables the resize handles on images, tables, and absolutely-positioned elements and other resizable objects. The handles are disabled by default since Firefox 64 ([Firefox bug 1490641](https://bugzil.la/1490641)).
     - `fontName`
       - : Changes the font name for the selection or at the insertion point. This requires a font name string (like `"Arial"`) as a value argument.
     - `fontSize`
-      - : Changes the font size for the selection or at the insertion point. This requires an integer from `1`-`7` as a value argument.
+      - : Changes the font size for the selection or at the insertion point. This requires an integer from `1` - `7` as a value argument.
     - `foreColor`
       - : Changes a font color for the selection or at the insertion point. This requires a hexadecimal color value string as a value argument.
     - `formatBlock`
-      - : Adds an HTML block-level element around the line containing the current selection, replacing the block element containing the line if one exists (in Firefox, {{HTMLElement("blockquote")}} is the exception — it will wrap any containing block element). Requires a tag-name string as a value argument. Virtually all block-level elements can be used. (Internet Explorer and Edge support only heading tags `H1`–`H6`, `ADDRESS`, and `PRE`, which must be wrapped in angle brackets, such as `"<H1>"`.)
+      - : Adds an HTML block-level element around the line containing the current selection, replacing the block element containing the line if one exists (in Firefox, {{HTMLElement("blockquote")}} is the exception — it will wrap any containing block element). Requires a tag-name string as a value argument. Virtually all block-level elements can be used. (Legacy Edge only supports heading tags `H1` – `H6`, `ADDRESS`, and `PRE`, which must be wrapped in angle brackets, such as `"<H1>"`.)
     - `forwardDelete`
       - : Deletes the character ahead of the [cursor](https://en.wikipedia.org/wiki/Cursor_%28computers%29)'s position, identical to hitting the Delete key on a Windows keyboard.
     - `heading`
-      - : Adds a heading element around a selection or insertion point line. Requires the tag-name string as a value argument (i.e. `"H1"`, `"H6"`). (Not supported by Internet Explorer and Safari.)
-    - `hiliteColor`
-      - : Changes the background color for the selection or at the insertion point. Requires a color value string as a value argument. `useCSS` must be `true` for this to function. (Not supported by Internet Explorer.)
+      - : Adds a heading element around a selection or insertion point line. Requires the tag-name string as a value argument (i.e., `"H1"`, `"H6"`). (Not supported by Safari.)
+    - `highlightColor`
+      - : Changes the background color for the selection or at the insertion point. Requires a color value string as a value argument. `useCSS` must be `true` for this to function.
     - `increaseFontSize`
-      - : Adds a {{HTMLElement("big")}} tag around the selection or at the insertion point. (Not supported by Internet Explorer.)
+      - : Adds a {{HTMLElement("big")}} tag around the selection or at the insertion point.
     - `indent`
       - : Indents the line containing the selection or insertion point. In Firefox, if the selection spans multiple lines at different levels of indentation, only the least indented lines in the selection will be indented.
     - `insertBrOnReturn`
-      - : Controls whether the Enter key inserts a {{HTMLElement("br")}} element, or splits the current block element into two. (Not supported by Internet Explorer.)
+      - : Controls whether the Enter key inserts a {{HTMLElement("br")}} element, or splits the current block element into two.
     - `insertHorizontalRule`
       - : Inserts a {{HTMLElement("hr")}} element at the insertion point, or replaces the selection with it.
     - `insertHTML`
-      - : Inserts an HTML string at the insertion point (deletes selection). Requires a valid HTML string as a value argument. (Not supported by Internet Explorer.)
+      - : Inserts an HTML string at the insertion point (deletes selection). Requires a valid HTML string as a value argument.
     - `insertImage`
       - : Inserts an image at the insertion point (deletes selection). Requires a URL string for the image's `src` as a value argument. The requirements for this string are the same as `createLink`.
     - `insertOrderedList`
@@ -95,11 +85,11 @@ execCommand(aCommandName, aShowDefaultUI, aValueArgument)
     - `insertUnorderedList`
       - : Creates a [bulleted unordered list](/en-US/docs/Web/HTML/Element/ul) for the selection or at the insertion point.
     - `insertParagraph`
-      - : Inserts a [paragraph](/en-US/docs/Web/HTML/Element/p) around the selection or the current line. (Internet Explorer inserts a paragraph at the insertion point and deletes the selection.)
+      - : Inserts a [paragraph](/en-US/docs/Web/HTML/Element/p) around the selection or the current line.
     - `insertText`
       - : Inserts the given plain text at the insertion point (deletes selection).
     - `italic`
-      - : Toggles italics on/off for the selection or at the insertion point. (Internet Explorer uses the {{HTMLElement("em")}} element instead of {{HTMLElement("i")}}.)
+      - : Toggles italics on/off for the selection or at the insertion point.
     - `justifyCenter`
       - : Centers the selection or insertion point.
     - `justifyFull`
@@ -132,13 +122,13 @@ execCommand(aCommandName, aShowDefaultUI, aValueArgument)
       - : Removes the [anchor element](/en-US/docs/Web/HTML/Element/a) from a selected hyperlink.
     - `useCSS` {{Deprecated_inline}}
       - : Toggles the use of HTML tags or CSS for the generated markup. Requires a boolean true/false as a value argument.
-        > **Note:** This argument is logically backwards (i.e. use `false` to use CSS,
-        > `true` to use HTML) and unsupported by Internet Explorer. This has been
-        > deprecated in favor of `styleWithCSS`.
+        > [!NOTE]
+        > This argument is logically backwards (i.e., use `false` to use CSS,
+        > `true` to use HTML). This has been deprecated in favor of `styleWithCSS`.
     - `styleWithCSS`
       - : Replaces the `useCSS` command. `true` modifies/generates `style` attributes in markup, false generates presentational elements.
     - `AutoUrlDetect`
-      - : Changes the browser auto-link behavior (Internet Explorer only).
+      - : Changes the browser auto-link behavior.
 
 - `aShowDefaultUI`
   - : A boolean value indicating whether the default user interface should be shown. This is not implemented in Mozilla.
@@ -151,8 +141,7 @@ A boolean value that is `false` if the command is unsupported or disabled.
 
 > **Note:** `document.execCommand()` only returns
 > `true` if it is invoked as part of a user interaction. You can't use it to
-> verify browser support before calling a command. From Firefox 82, nested
-> `document.execCommand()` calls will always return `false`.
+> verify browser support before calling a command.
 
 ## Examples
 
@@ -160,7 +149,7 @@ An example of [how to use execCommand with contentEditable elements](https://cod
 
 ### Using insertText
 
-This example shows two very basic HTML editors, one using a {{HTMLElement("textarea")}} element and one using a {{HTMLElement("pre")}} element with the {{htmlattrxref("contenteditable")}} attribute set.
+This example shows two very basic HTML editors, one using a {{HTMLElement("textarea")}} element and one using a {{HTMLElement("pre")}} element with the [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) attribute set.
 
 Clicking the "Bold" or "Italic" buttons inserts the appropriate tags in the element, using `insertText` to preserve the edit history, so the user can undo the action.
 
@@ -190,16 +179,17 @@ Clicking the "Bold" or "Italic" buttons inserts the appropriate tags in the elem
 
 ```js
 // Prepare action buttons
-const buttonContainers = document.querySelectorAll('.actions');
+const buttonContainers = document.querySelectorAll(".actions");
 
 for (const buttonContainer of buttonContainers) {
-  const buttons = buttonContainer.querySelectorAll('button');
-  const pasteTarget = buttonContainer.getAttribute('data-for');
+  const buttons = buttonContainer.querySelectorAll("button");
+  const pasteTarget = buttonContainer.getAttribute("data-for");
 
   for (const button of buttons) {
-    const elementName = button.getAttribute('data-el');
-    button.addEventListener('click',
-      () => insertText(`<${elementName}></${elementName}>`, pasteTarget) )
+    const elementName = button.getAttribute("data-el");
+    button.addEventListener("click", () =>
+      insertText(`<${elementName}></${elementName}>`, pasteTarget),
+    );
   }
 }
 
@@ -214,12 +204,12 @@ function insertText(newText, selector) {
       pasted = false;
     }
   } catch (e) {
-    console.error('error caught:', e);
+    console.error("error caught:", e);
     pasted = false;
   }
 
   if (!pasted) {
-      console.error('paste unsuccessful, execCommand not supported');
+    console.error("paste unsuccessful, execCommand not supported");
   }
 }
 ```
@@ -230,7 +220,7 @@ function insertText(newText, selector) {
 
 ## Specifications
 
-This feature is not part of any current specification. It is no longer on track to become a standard.
+{{Specifications}}
 
 ## Browser compatibility
 

@@ -1,24 +1,30 @@
 ---
 title: String.prototype.lastIndexOf()
 slug: Web/JavaScript/Reference/Global_Objects/String/lastIndexOf
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
-  - lastIndexOf
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.lastIndexOf
 ---
+
 {{JSRef}}
 
-The **`lastIndexOf()`** method, given one argument: a substring to search for, searches the entire calling string, and returns the index of the last occurrence of the specified substring. Given a second argument: a number, the method returns the last occurrence of the specified substring at an index less than or equal to the specified number.
+The **`lastIndexOf()`** method of {{jsxref("String")}} values searches this string and returns the index of the last occurrence of the specified substring. It takes an optional starting position and returns the last occurrence of the specified substring at an index less than or equal to the specified number.
 
-{{EmbedInteractiveExample("pages/js/string-lastindexof.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: String.lastIndexOf()")}}
+
+```js interactive-example
+const paragraph = "I think Ruth's dog is cuter than your dog!";
+
+const searchTerm = "dog";
+
+console.log(
+  `Index of the last ${searchTerm} is ${paragraph.lastIndexOf(searchTerm)}`,
+);
+// Expected output: "Index of the last "dog" is 38"
+```
 
 ## Syntax
 
-```js
+```js-nolint
 lastIndexOf(searchString)
 lastIndexOf(searchString, position)
 ```
@@ -27,9 +33,7 @@ lastIndexOf(searchString, position)
 
 - `searchString`
 
-  - : Substring to search for.
-
-    If the method is called with no arguments, `searchString` [is coerced](https://tc39.es/ecma262/#sec-tostring) to "`undefined`". Therefore,`'undefined'.lastIndexOf()` returns `0` — because the substring `undefined` is found at position `0` in the string `undefined`. But `'undefine'.lastIndexOf()`, returns `-1` — because the substring `undefined` is not found in the string `undefine`.
+  - : Substring to search for. All values are [coerced to strings](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion), so omitting it or passing `undefined` causes `lastIndexOf()` to search for the string `"undefined"`, which is rarely what you want.
 
 - `position` {{optional_inline}}
 
@@ -50,14 +54,14 @@ The index of the last occurrence of `searchString` found, or `-1` if not found.
 Strings are zero-indexed: The index of a string's first character is `0`, and the index of a string's last character is the length of the string minus 1.
 
 ```js
-'canal'.lastIndexOf('a');     // returns 3
-'canal'.lastIndexOf('a', 2);  // returns 1
-'canal'.lastIndexOf('a', 0);  // returns -1
-'canal'.lastIndexOf('x');     // returns -1
-'canal'.lastIndexOf('c', -5); // returns 0
-'canal'.lastIndexOf('c', 0);  // returns 0
-'canal'.lastIndexOf('');      // returns 5
-'canal'.lastIndexOf('', 2);   // returns 2
+"canal".lastIndexOf("a"); // returns 3
+"canal".lastIndexOf("a", 2); // returns 1
+"canal".lastIndexOf("a", 0); // returns -1
+"canal".lastIndexOf("x"); // returns -1
+"canal".lastIndexOf("c", -5); // returns 0
+"canal".lastIndexOf("c", 0); // returns 0
+"canal".lastIndexOf(""); // returns 5
+"canal".lastIndexOf("", 2); // returns 2
 ```
 
 ### Case-sensitivity
@@ -66,24 +70,22 @@ The `lastIndexOf()` method is case sensitive. For example, the following
 expression returns `-1`:
 
 ```js
-'Blue Whale, Killer Whale'.lastIndexOf('blue'); // returns -1
+"Blue Whale, Killer Whale".lastIndexOf("blue"); // returns -1
 ```
 
 ## Examples
 
 ### Using indexOf() and lastIndexOf()
 
-The following example uses {{jsxref("String.prototype.indexOf()", "indexOf()")}} and
+The following example uses {{jsxref("String/indexOf", "indexOf()")}} and
 `lastIndexOf()` to locate values in the string
-"`Brave, Brave New World`".
+`"Brave, Brave New World"`.
 
 ```js
-let anyString = 'Brave, Brave New World';
+const anyString = "Brave, Brave New World";
 
-console.log('The index of the first "Brave" is ' + anyString.indexOf('Brave'));
-// logs 0
-console.log('The index of the last "Brave" is ' + anyString.lastIndexOf('Brave'));
-// logs 7
+console.log(anyString.indexOf("Brave")); // 0
+console.log(anyString.lastIndexOf("Brave")); // 7
 ```
 
 ## Specifications

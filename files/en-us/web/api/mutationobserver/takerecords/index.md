@@ -1,23 +1,11 @@
 ---
-title: MutationObserver.takeRecords()
+title: "MutationObserver: takeRecords() method"
+short-title: takeRecords()
 slug: Web/API/MutationObserver/takeRecords
 page-type: web-api-instance-method
-tags:
-  - API
-  - Attribute Changes
-  - Changes
-  - DOM Changes
-  - DOM WHATWG
-  - Method
-  - Mutation Observer
-  - Mutation Observer API
-  - MutationObserver
-  - MutationObserver API
-  - Observer
-  - mutation
-  - takeRecords
 browser-compat: api.MutationObserver.takeRecords
 ---
+
 {{APIRef("DOM WHATWG")}}
 
 The {{domxref("MutationObserver")}} method
@@ -32,7 +20,7 @@ observer.
 
 ## Syntax
 
-```js
+```js-nolint
 takeRecords()
 ```
 
@@ -45,7 +33,8 @@ None.
 An array of {{domxref("MutationRecord")}} objects, each describing one change applied to
 the observed portion of the document's DOM tree.
 
-> **Note:** The queue of mutations which have occurred, but not been
+> [!NOTE]
+> The queue of mutations which have occurred, but not been
 > delivered to the observer's callback is left empty after calling
 > `takeRecords()`.
 
@@ -59,8 +48,8 @@ disconnecting the observer.
 const targetNode = document.querySelector("#someElement");
 const observerOptions = {
   childList: true,
-  attributes: true
-}
+  attributes: true,
+};
 
 const observer = new MutationObserver(callback);
 observer.observe(targetNode, observerOptions);
@@ -73,12 +62,12 @@ let mutations = observer.takeRecords();
 
 observer.disconnect();
 
-if (mutations) {
+if (mutations.length > 0) {
   callback(mutations);
 }
 ```
 
-The code in lines 12–17 fetches any unprocessed mutation records, then invokes the
+The code fetches any unprocessed mutation records, then invokes the
 callback with the records so that they can be processed. This is done immediately prior
 to calling {{domxref("MutationObserver.disconnect", "disconnect()")}} to stop observing
 the DOM.

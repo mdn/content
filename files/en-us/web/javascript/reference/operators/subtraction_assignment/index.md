@@ -1,37 +1,58 @@
 ---
 title: Subtraction assignment (-=)
 slug: Web/JavaScript/Reference/Operators/Subtraction_assignment
-tags:
-  - Assignment operator
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
+page-type: javascript-operator
 browser-compat: javascript.operators.subtraction_assignment
 ---
+
 {{jsSidebar("Operators")}}
 
-The subtraction assignment operator (`-=`) subtracts the value of the right
-operand from a variable and assigns the result to the variable.
+The **subtraction assignment (`-=`)** operator performs [subtraction](/en-US/docs/Web/JavaScript/Reference/Operators/Subtraction) on the two operands and assigns the result to the left operand.
 
-{{EmbedInteractiveExample("pages/js/expressions-subtraction-assignment.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Subtraction assignment operator")}}
+
+```js interactive-example
+let a = 2;
+
+console.log((a -= 3));
+// Expected output: -1
+
+console.log((a -= "Hello"));
+// Expected output: NaN
+```
 
 ## Syntax
 
-```js
-x -= y // x = x - y
+```js-nolint
+x -= y
 ```
+
+## Description
+
+`x -= y` is equivalent to `x = x - y`, except that the expression `x` is only evaluated once.
 
 ## Examples
 
-### Using subtraction assignment
+### Subtraction assignment using numbers
 
 ```js
-// Assuming the following variable
-//  bar = 5
+let bar = 5;
 
-bar -= 2     // 3
-bar -= 'foo' // NaN
+bar -= 2; // 3
+```
+
+Other non-BigInt values are coerced to numbers:
+
+```js
+bar -= "foo"; // NaN
+```
+
+### Subtraction assignment using BigInts
+
+```js
+let foo = 3n;
+foo -= 2n; // 1n
+foo -= 1; // TypeError: Cannot mix BigInt and other types, use explicit conversions
 ```
 
 ## Specifications
@@ -44,5 +65,5 @@ bar -= 'foo' // NaN
 
 ## See also
 
-- [Assignment operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#assignment)
-- [Subtraction operator](/en-US/docs/Web/JavaScript/Reference/Operators/Subtraction)
+- [Assignment operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#assignment_operators)
+- [Subtraction (`-`)](/en-US/docs/Web/JavaScript/Reference/Operators/Subtraction)

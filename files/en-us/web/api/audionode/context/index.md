@@ -1,16 +1,11 @@
 ---
-title: AudioNode.context
+title: "AudioNode: context property"
+short-title: context
 slug: Web/API/AudioNode/context
 page-type: web-api-instance-property
-tags:
-  - API
-  - AudioNode
-  - Context
-  - Property
-  - Reference
-  - Web Audio API
 browser-compat: api.AudioNode.context
 ---
+
 {{APIRef("Web Audio API")}}
 
 The read-only `context` property of the
@@ -26,7 +21,6 @@ used to construct this `AudioNode`.
 ## Examples
 
 ```js
-const AudioContext = window.AudioContext || window.webkitAudioContext;
 const audioCtx = new AudioContext();
 
 const oscillator = audioCtx.createOscillator();

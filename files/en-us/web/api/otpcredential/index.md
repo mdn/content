@@ -2,49 +2,49 @@
 title: OTPCredential
 slug: Web/API/OTPCredential
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - OTPCredential
+status:
+  - experimental
 browser-compat: api.OTPCredential
 ---
-{{securecontext_header}}{{DefaultAPISidebar("WebOTP API")}}
 
-The **`OTPCredential`** interface of the {{domxref('WebOTP API','','',' ')}} contains the attributes that are returned when a new one-time password is retrieved.
+{{APIRef("WebOTP API")}}{{SecureContext_Header}}{{SeeCompatTable}}
+
+The **`OTPCredential`** interface of the {{domxref('WebOTP API','','',' ')}} is returned when a WebOTP {{domxref("CredentialsContainer.get", "navigator.credentials.get()")}} call (i.e. invoked with an `otp` option) fulfills. It includes a `code` property that contains the retrieved one-time password (OTP).
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties from {{domxref("Credential")}}._
 
-- {{domxref("OTPCredential.code")}}
-  - : The one-time password.
+- {{domxref("OTPCredential.code")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : The one-time password (OTP).
 
-### Event handlers
-
-None.
-
-## Methods
+## Instance methods
 
 None.
 
 ## Examples
 
-The below code triggers the browser's permission flow when an SMS message arrives. If permission is granted then the promise resolves with an `OTPCredential` object. [See this code as part of a simple demo](https://glitch.com/edit/#!/web-otp?path=views%2Findex.html%3A55%3A8).
+The below code triggers the browser's permission flow when an SMS message arrives. If permission is granted, then the promise resolves with an `OTPCredential` object. The contained `code` value is then set as the value of an {{htmlelement("input")}} form element, which is then submitted.
 
 ```js
-navigator.credentials.get({
-  otp: { transport:['sms'] },
-  signal: ac.signal
-}).then((otp) => {
-  input.value = otp.code;
-  if (form) form.submit();
-}).catch((err) => {
-  console.error(err);
-});
+navigator.credentials
+  .get({
+    otp: { transport: ["sms"] },
+    signal: ac.signal,
+  })
+  .then((otp) => {
+    input.value = otp.code;
+    if (form) form.submit();
+  })
+  .catch((err) => {
+    console.error(err);
+  });
 ```
+
+> [!NOTE]
+> For a full explanation of the code, see the {{domxref('WebOTP API','','',' ')}} landing page. You can also [see this code as part of a full working demo](https://web-otp.glitch.me/).
 
 ## Specifications
 

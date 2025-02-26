@@ -1,32 +1,30 @@
 ---
-title: 'Animation: finish event'
+title: "Animation: finish event"
+short-title: finish
 slug: Web/API/Animation/finish_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - Reference
 browser-compat: api.Animation.finish_event
 ---
+
 {{ APIRef("Web Animations") }}
 
 The **`finish`** event of the {{domxref("Animation")}} interface is fired when the animation finishes playing, either when the animation completes naturally, or
 when the {{domxref("Animation.finish()")}} method is called to immediately cause the
 animation to finish up.
 
-> **Note:** The `"paused"` play state supersedes the `"finished"` play
+> [!NOTE]
+> The `"paused"` play state supersedes the `"finished"` play
 > state; if the animation is both paused and finished, the `"paused"` state
 > is the one that will be reported. You can force the animation into the
-> `"finished"` state by setting its {{domxref("Animation.startTime",
-    "startTime")}} to
+> `"finished"` state by setting its {{domxref("Animation.startTime", "startTime")}} to
 > `document.timeline.currentTime - (Animation.currentTime * Animation.playbackRate)`.
 
 ## Syntax
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener('finish', (event) => { })
+```js-nolint
+addEventListener("finish", (event) => { })
 onfinish = (event) => { }
 ```
 
@@ -40,9 +38,9 @@ An {{domxref("AnimationPlaybackEvent")}}. Inherits from {{domxref("Event")}}.
 
 _In addition to the properties listed below, properties from the parent interface, {{domxref("Event")}}, are available._
 
-- {{domxref("AnimationPlaybackEvent.currentTime")}} {{readonlyinline}}
+- {{domxref("AnimationPlaybackEvent.currentTime")}} {{ReadOnlyInline}}
   - : The current time of the animation that generated the event.
-- {{domxref("AnimationPlaybackEvent.timelineTime")}} {{readonlyinline}}
+- {{domxref("AnimationPlaybackEvent.timelineTime")}} {{ReadOnlyInline}}
   - : The time value of the timeline of the animation that generated the event.
 
 ## Examples
@@ -65,7 +63,9 @@ hide(endingUI);
 
 // When the credits are later faded in,
 // we re-add the pointer events when they're done
-bringUI.onfinish = (event) => {endingUI.style.pointerEvents = 'auto';};
+bringUI.onfinish = (event) => {
+  endingUI.style.pointerEvents = "auto";
+};
 ```
 
 ## Specifications

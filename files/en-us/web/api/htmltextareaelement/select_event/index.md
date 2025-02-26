@@ -1,16 +1,11 @@
 ---
-title: 'HTMLTextAreaElement: select event'
+title: "HTMLTextAreaElement: select event"
+short-title: select
 slug: Web/API/HTMLTextAreaElement/select_event
-tags:
-  - Element
-  - Event
-  - Event Handler
-  - NeedsCompatTable
-  - Reference
-  - UIEvent
-browser-compat: api.HTMLTextAreaElement.select_event
 page-type: web-api-event
+browser-compat: api.HTMLTextAreaElement.select_event
 ---
+
 {{APIRef}}
 
 The **`select`** event fires when some text has been selected.
@@ -20,9 +15,9 @@ The **`select`** event fires when some text has been selected.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('select', (event) => {});
+addEventListener("select", (event) => {});
 
-onselect = (event) => { };
+onselect = (event) => {};
 ```
 
 ## Event type
@@ -40,13 +35,16 @@ A generic {{domxref("Event")}}.
 
 ```js
 function logSelection(event) {
-  const log = document.getElementById('log');
-  const selection = event.target.value.substring(event.target.selectionStart, event.target.selectionEnd);
+  const log = document.getElementById("log");
+  const selection = event.target.value.substring(
+    event.target.selectionStart,
+    event.target.selectionEnd,
+  );
   log.textContent = `You selected: ${selection}`;
 }
 
-const textarea = document.querySelector('textarea');
-textarea.addEventListener('select', logSelection);
+const textarea = document.querySelector("textarea");
+textarea.addEventListener("select", logSelection);
 ```
 
 {{EmbedLiveSample("Selection_logger")}}
@@ -66,3 +64,7 @@ textarea.onselect = logSelection;
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("HTMLTextAreaElement.select()")}}

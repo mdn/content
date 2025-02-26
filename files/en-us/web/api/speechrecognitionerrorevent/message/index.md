@@ -1,20 +1,12 @@
 ---
-title: SpeechRecognitionErrorEvent.message
+title: "SpeechRecognitionErrorEvent: message property"
+short-title: message
 slug: Web/API/SpeechRecognitionErrorEvent/message
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - Property
-  - Reference
-  - SpeechRecognitionErrorEvent
-  - Web Speech API
-  - message
-  - recognition
-  - speech
 browser-compat: api.SpeechRecognitionErrorEvent.message
 ---
-{{APIRef("Web Speech API")}}{{SeeCompatTable}}
+
+{{APIRef("Web Speech API")}}
 
 The **`message`** read-only property of the
 {{domxref("SpeechRecognitionErrorEvent")}} interface returns a message describing the
@@ -31,10 +23,10 @@ the implementors to decide upon.
 ```js
 const recognition = new SpeechRecognition();
 
-recognition.onerror = function(event) {
+recognition.onerror = (event) => {
   console.log(`Speech recognition error detected: ${event.error}`);
   console.log(`Additional information: ${event.message}`);
-}
+};
 ```
 
 ## Specifications

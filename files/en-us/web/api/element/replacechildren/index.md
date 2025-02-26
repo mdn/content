@@ -1,17 +1,11 @@
 ---
-title: Element.replaceChildren()
+title: "Element: replaceChildren() method"
+short-title: replaceChildren()
 slug: Web/API/Element/replaceChildren
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Method
-  - Node
-  - Element
-  - Reference
-  - replaceChildren
 browser-compat: api.Element.replaceChildren
 ---
+
 {{APIRef("DOM")}}
 
 The **`Element.replaceChildren()`** method replaces the
@@ -20,16 +14,16 @@ can be string or {{domxref("Node")}} objects.
 
 ## Syntax
 
-```js
+```js-nolint
 replaceChildren(param1)
 replaceChildren(param1, param2)
-replaceChildren(param1, param2, /* … ,*/ paramN)
+replaceChildren(param1, param2, /* …, */ paramN)
 ```
 
 ### Parameters
 
 - `param1`, …, `paramN`
-  - : A set of {{domxref("Node")}} or string objects to replace the
+  - : A set of {{domxref("Node")}} objects or strings to replace the
     `Element`'s existing children with. If no replacement objects are
     specified, then the `Element` is emptied of all child nodes.
 
@@ -96,9 +90,7 @@ look something like this:
   <div>
     <label for="yes">Yes please!</label>
 
-    <select id="yes" multiple size="10">
-
-    </select>
+    <select id="yes" multiple size="10"></select>
   </div>
 </main>
 ```
@@ -115,7 +107,8 @@ div {
   margin-right: 20px;
 }
 
-label, button {
+label,
+button {
   display: block;
 }
 
@@ -141,20 +134,23 @@ the list you are transferring to in another constant. It then calls
 operator to pass in all the options contained in both constants.
 
 ```js
-const noSelect = document.getElementById('no');
-const yesSelect = document.getElementById('yes');
-const noBtn = document.getElementById('to-no');
-const yesBtn = document.getElementById('to-yes');
+const noSelect = document.getElementById("no");
+const yesSelect = document.getElementById("yes");
+const noBtn = document.getElementById("to-no");
+const yesBtn = document.getElementById("to-yes");
 
-yesBtn.addEventListener('click', () => {
-  const selectedTransferOptions = document.querySelectorAll('#no option:checked');
-  const existingYesOptions = document.querySelectorAll('#yes option');
+yesBtn.addEventListener("click", () => {
+  const selectedTransferOptions =
+    document.querySelectorAll("#no option:checked");
+  const existingYesOptions = document.querySelectorAll("#yes option");
   yesSelect.replaceChildren(...selectedTransferOptions, ...existingYesOptions);
 });
 
-noBtn.addEventListener('click', () => {
-  const selectedTransferOptions = document.querySelectorAll('#yes option:checked');
-  const existingNoOptions = document.querySelectorAll('#no option');
+noBtn.addEventListener("click", () => {
+  const selectedTransferOptions = document.querySelectorAll(
+    "#yes option:checked",
+  );
+  const existingNoOptions = document.querySelectorAll("#no option");
   noSelect.replaceChildren(...selectedTransferOptions, ...existingNoOptions);
 });
 ```

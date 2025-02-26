@@ -1,11 +1,9 @@
 ---
 title: 'ReferenceError: "x" is not defined'
 slug: Web/JavaScript/Reference/Errors/Not_defined
-tags:
-  - Error
-  - JavaScript
-  - ReferenceError
+page-type: javascript-error
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "_variable_ is not defined" occurs when there is a
@@ -13,7 +11,7 @@ non-existent variable referenced somewhere.
 
 ## Message
 
-```
+```plain
 ReferenceError: "x" is not defined (V8-based & Firefox)
 ReferenceError: Can't find variable: x (Safari)
 ```
@@ -27,7 +25,8 @@ ReferenceError: Can't find variable: x (Safari)
 There is a non-existent variable referenced somewhere. This variable needs to be
 declared, or you need to make sure it is available in your current script or [scope](/en-US/docs/Glossary/Scope).
 
-> **Note:** When loading a library (such as jQuery), make sure it is
+> [!NOTE]
+> When loading a library (such as jQuery), make sure it is
 > loaded before you access library variables, such as "$". Put the
 > {{HTMLElement("script")}} element that loads the library before your code that uses
 > it.
@@ -44,7 +43,7 @@ The "foo" variable isn't defined anywhere. It needs to be some string, so that t
 {{jsxref("String.prototype.substring()")}} method will work.
 
 ```js example-good
-const foo = 'bar';
+const foo = "bar";
 foo.substring(1); // "ar"
 ```
 
@@ -57,8 +56,8 @@ scope of the function
 
 ```js example-bad
 function numbers() {
-  const num1 = 2,
-      num2 = 3;
+  const num1 = 2;
+  const num2 = 3;
   return num1 + num2;
 }
 
@@ -70,8 +69,8 @@ which it is defined. In other words, a function defined in the global scope can 
 all variables defined in the global scope.
 
 ```js example-good
-const num1 = 2,
-    num2 = 3;
+const num1 = 2;
+const num2 = 3;
 
 function numbers() {
   return num1 + num2;
@@ -84,4 +83,4 @@ console.log(numbers()); // 5
 
 - [Scope](/en-US/docs/Glossary/Scope)
 - [Declaring variables in the JavaScript Guide](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#declaring_variables)
-- [Function scope in the JavaScript Guide](/en-US/docs/Web/JavaScript/Guide/Functions#function_scope)
+- [Function scope in the JavaScript Guide](/en-US/docs/Web/JavaScript/Guide/Functions#function_scopes_and_closures)

@@ -2,27 +2,22 @@
 title: EcdsaParams
 slug: Web/API/EcdsaParams
 page-type: web-api-interface
-tags:
-  - API
-  - Dictionary
-  - EcdsaParams
-  - Reference
-  - Web Crypto API
 browser-compat:
   - api.SubtleCrypto.sign
   - api.SubtleCrypto.verify
 ---
+
 {{ APIRef("Web Crypto API") }}
 
 The **`EcdsaParams`** dictionary of the [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API) represents the object that should be passed as the `algorithm` parameter into {{domxref("SubtleCrypto.sign()")}} or {{domxref("SubtleCrypto.verify()")}} when using the [ECDSA](/en-US/docs/Web/API/SubtleCrypto/sign#ecdsa) algorithm.
 
-## Properties
+## Instance properties
 
 - `name`
   - : A string. This should be set to `ECDSA`.
 - `hash`
 
-  - : A string. An identifier for the [digest algorithm](/en-US/docs/Web/API/SubtleCrypto/digest) to use. This should be one of the following:
+  - : A string or an object containing a single property called `name` with a string value. It is an identifier for the [digest algorithm](/en-US/docs/Web/API/SubtleCrypto/digest) to use. This should be one of the following:
 
     - `SHA-256`: selects the [SHA-256](/en-US/docs/Web/API/SubtleCrypto/digest#supported_algorithms) algorithm.
     - `SHA-384`: selects the [SHA-384](/en-US/docs/Web/API/SubtleCrypto/digest#supported_algorithms) algorithm.

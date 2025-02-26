@@ -1,28 +1,28 @@
 ---
 title: Intl.RelativeTimeFormat.supportedLocalesOf()
-slug: >-
-  Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/supportedLocalesOf
-tags:
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Localization
-  - Method
-  - Reference
-  - RelativeTimeFormat
+slug: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/supportedLocalesOf
+page-type: javascript-static-method
 browser-compat: javascript.builtins.Intl.RelativeTimeFormat.supportedLocalesOf
 ---
+
 {{JSRef}}
 
-The **`Intl.RelativeTimeFormat.supportedLocalesOf()`** method returns an array containing those of the provided locales that are supported in date and time formatting without having to fall back to the runtime's default locale.
+The **`Intl.RelativeTimeFormat.supportedLocalesOf()`** static method returns an array containing those of the provided locales that are supported in relative time formatting without having to fall back to the runtime's default locale.
 
-{{EmbedInteractiveExample("pages/js/intl-relativetimeformat-prototype-supportedlocalesof.html","shorter")}}
+{{InteractiveExample("JavaScript Demo: Intl.RelativeTimeFormat.supportedLocalesOf", "shorter")}}
 
-<!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
+```js interactive-example
+const locales1 = ["ban", "id-u-co-pinyin", "de-ID"];
+const options1 = { localeMatcher: "lookup" };
+
+console.log(Intl.RelativeTimeFormat.supportedLocalesOf(locales1, options1));
+// Expected output: Array ["id-u-co-pinyin", "de-ID"]
+// (Note: the exact output may be browser-dependent)
+```
 
 ## Syntax
 
-```js
+```js-nolint
 Intl.RelativeTimeFormat.supportedLocalesOf(locales)
 Intl.RelativeTimeFormat.supportedLocalesOf(locales, options)
 ```
@@ -30,33 +30,27 @@ Intl.RelativeTimeFormat.supportedLocalesOf(locales, options)
 ### Parameters
 
 - `locales`
-  - : A string with a BCP 47 language tag, or an array of such strings. For the general form of the `locales` argument, see the {{jsxref("Intl", "Intl", "#Locale_identification_and_negotiation", 1)}} page.
+  - : A string with a BCP 47 language tag, or an array of such strings. For the general form and interpretation of the `locales` argument, see [the parameter description on the `Intl` main page](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_argument).
 - `options` {{optional_inline}}
-
   - : An object that may have the following property:
-
     - `localeMatcher`
-      - : The locale matching algorithm to use. Possible values are "`lookup`" and "`best fit`"; the default is "`best fit`". For information about this option, see the {{jsxref("Intl", "Intl", "#Locale_negotiation", 1)}} page.
+      - : The locale matching algorithm to use. Possible values are `"lookup"` and `"best fit"`; the default is `"best fit"`. For information about this option, see the {{jsxref("Intl", "Intl", "#locale_identification_and_negotiation", 1)}} page.
 
 ### Return value
 
-An array of strings representing a subset of the given locale tags that are supported in date and time formatting without having to fall back to the runtime's default locale.
-
-## Description
-
-Returns an array with a subset of the language tags provided in `locales`. The language tags returned are those for which the runtime supports a locale in date and time formatting that the locale matching algorithm used considers a match, so that it wouldn't have to fall back to the default locale.
+An array of strings representing a subset of the given locale tags that are supported in relative time formatting without having to fall back to the runtime's default locale.
 
 ## Examples
 
 ### Using supportedLocalesOf()
 
-Assuming a runtime that supports Indonesian and German but not Balinese in date and time formatting, `supportedLocalesOf` returns the Indonesian and German language tags unchanged, even though `pinyin` collation is neither relevant to date and time formatting nor used with Indonesian, and a specialized German for Indonesia is unlikely to be supported. Note the specification of the "`lookup`" algorithm here — a "`best fit`" matcher might decide that Indonesian is an adequate match for Balinese since most Balinese speakers also understand Indonesian, and therefore return the Balinese language tag as well.
+Assuming a runtime that supports Indonesian and German but not Balinese in relative time formatting, `supportedLocalesOf` returns the Indonesian and German language tags unchanged, even though `pinyin` collation is neither relevant to relative time formatting nor used with Indonesian, and a specialized German for Indonesia is unlikely to be supported. Note the specification of the `"lookup"` algorithm here — a `"best fit"` matcher might decide that Indonesian is an adequate match for Balinese since most Balinese speakers also understand Indonesian, and therefore return the Balinese language tag as well.
 
 ```js
-const locales = ['ban', 'id-u-co-pinyin', 'de-ID'];
-const options = { localeMatcher: 'lookup' };
-console.log(Intl.RelativeTimeFormat.supportedLocalesOf(locales, options).join(', '));
-// → "id-u-co-pinyin, de-ID"
+const locales = ["ban", "id-u-co-pinyin", "de-ID"];
+const options = { localeMatcher: "lookup" };
+console.log(Intl.RelativeTimeFormat.supportedLocalesOf(locales, options));
+// ["id-u-co-pinyin", "de-ID"]
 ```
 
 ## Specifications

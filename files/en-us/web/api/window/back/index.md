@@ -1,29 +1,25 @@
 ---
-title: Window.back()
+title: "Window: back() method"
+short-title: back()
 slug: Web/API/Window/back
 page-type: web-api-instance-method
-tags:
-  - API
-  - Firefox
-  - Gecko
-  - HTML DOM
-  - Method
-  - Non-standard
-  - Deprecated
-  - Window
-  - back
+status:
+  - deprecated
+  - non-standard
 ---
+
 {{APIRef}}{{ Non-standard_header() }}{{deprecated_header}}
 
 The obsolete and non-standard method `back()` on the {{domxref("window")}}
 interface returns the window to the previous item in the history. This was a
 Firefox-specific method and was removed in Firefox 31.
 
-> **Note:** Use the standard {{domxref("history.back")}} method instead.
+> [!NOTE]
+> Use the standard {{domxref("history.back")}} method instead.
 
 ## Syntax
 
-```js
+```js-nolint
 back()
 ```
 

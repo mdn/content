@@ -2,25 +2,22 @@
 title: WebGL2RenderingContext
 slug: Web/API/WebGL2RenderingContext
 page-type: web-api-interface
-tags:
-  - API
-  - Reference
-  - WebGL
-  - WebGL2
 browser-compat: api.WebGL2RenderingContext
 ---
-{{APIRef("WebGL")}}
+
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **WebGL2RenderingContext** interface provides the OpenGL ES 3.0 rendering context for the drawing surface of an HTML {{HTMLElement("canvas")}} element.
 
 To get an object of this interface, call {{domxref("HTMLCanvasElement.getContext()", "getContext()")}} on a `<canvas>` element, supplying "webgl2" as the argument:
 
 ```js
-const canvas = document.getElementById('myCanvas');
-const gl = canvas.getContext('webgl2');
+const canvas = document.getElementById("myCanvas");
+const gl = canvas.getContext("webgl2");
 ```
 
-> **Note:** WebGL 2 is an extension to WebGL 1. The `WebGL2RenderingContext` interface implements all members of the {{domxref("WebGLRenderingContext")}} interface. Some methods of the WebGL 1 context can accept additional values when used in a WebGL 2 context. You will find this info noted on the WebGL 1 reference pages.
+> [!NOTE]
+> WebGL 2 is an extension to WebGL 1. The `WebGL2RenderingContext` interface implements all members of the {{domxref("WebGLRenderingContext")}} interface. Some methods of the WebGL 1 context can accept additional values when used in a WebGL 2 context. You will find this info noted on the WebGL 1 reference pages.
 
 The [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial) has more information, examples, and resources on how to get started with WebGL.
 
@@ -76,7 +73,7 @@ See the [WebGL constants](/en-US/docs/Web/API/WebGL_API/Constants) page.
   - : Specifies a sub-rectangle of the current 3D texture.
 - {{domxref("WebGL2RenderingContext.copyTexSubImage3D()")}}
   - : Copies pixels from the current [`WebGLFramebuffer`](/en-US/docs/Web/API/WebGLFramebuffer) into an existing 3D texture sub-image.
-- {{domxref("WebGL2RenderingContext.compressedTexImage3D()")}}
+- {{domxref("WebGL2RenderingContext.compressedTexImage3D")}}
   - : Specifies a three-dimensional texture image in a compressed format.
 - {{domxref("WebGL2RenderingContext.compressedTexSubImage3D()")}}
   - : Specifies a three-dimensional sub-rectangle for a texture image in a compressed format.
@@ -88,7 +85,7 @@ See the [WebGL constants](/en-US/docs/Web/API/WebGL_API/Constants) page.
 
 ## Uniforms and attributes
 
-- {{domxref("WebGL2RenderingContext.uniform()", "WebGL2RenderingContext.uniform[1234][uif][v]()")}}
+- [`WebGL2RenderingContext.uniform[1234][uif][v]()`](/en-US/docs/Web/API/WebGL2RenderingContext/uniform)
   - : Methods specifying values of uniform variables.
 - {{domxref("WebGL2RenderingContext.uniformMatrix()", "WebGL2RenderingContext.uniformMatrix[234]x[234]fv()")}}
   - : Methods specifying matrix values for uniform variables.
@@ -96,6 +93,13 @@ See the [WebGL constants](/en-US/docs/Web/API/WebGL_API/Constants) page.
   - : Methods specifying integer values for generic vertex attributes.
 - {{domxref("WebGL2RenderingContext.vertexAttribIPointer()")}}
   - : Specifies integer data formats and locations of vertex attributes in a vertex attributes array.
+
+## Color spaces
+
+- {{domxref("WebGL2RenderingContext.drawingBufferColorSpace")}}
+  - : Specifies the color space of the WebGL drawing buffer.
+- {{domxref("WebGL2RenderingContext.unpackColorSpace")}}
+  - : Specifies the color space to convert to when importing textures.
 
 ## Drawing buffers
 

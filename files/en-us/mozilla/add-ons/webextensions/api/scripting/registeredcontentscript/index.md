@@ -1,18 +1,11 @@
 ---
 title: scripting.RegisteredContentScript
 slug: Mozilla/Add-ons/WebExtensions/API/scripting/RegisteredContentScript
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - RegisteredContentScript
-  - Reference
-  - Type
-  - WebExtensions
-  - scripting
+page-type: webextension-api-type
 browser-compat: webextensions.api.scripting.RegisteredContentScript
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 This object contains details of a script to be registered or that is registered.
 
@@ -32,10 +25,14 @@ Values of this type are objects. They contain these properties:
   - : `array` of `string`. Array of path to JavaScript files in the extension package to inject into matching pages. Scripts are injected in the order they appear in this array.
 - `matches` {{optional_inline}}
   - : `array` of `string`. Array of the pages this content script is injected into. Must be specified for {{WebExtAPIRef("scripting.registerContentScripts()")}}.
+- `matchOriginAsFallback` {{optional_inline}}
+  - : `boolean`. Whether code is injected into `about:`, `data:`, and `blob:` pages when their origin matches the pattern in `matches`, even if the document origin is opaque (due to the use of CSP or iframe sandbox). Match patterns in `matches` must specify a wildcard path glob. Defaults to `false`.
 - `persistAcrossSessions` {{optional_inline}}
-  - : `boolean`. Specifies if this content script persists into future sessions. Defaults to `true`. Firefox does not support registering persistent scripts, see ({{bug("1751436")}}), so this flag must be set to `false` to register non-persistent scripts.
+  - : `boolean`. Specifies if this content script persists across browser restarts and updates and extension restarts. Defaults to `true`.
 - `runAt` {{optional_inline}}
   - : {{WebExtAPIRef("extensionTypes.RunAt")}}. Specifies when JavaScript files are injected into the web page. The default value is `document_idle`. In Firefox, `runAt` also affects the point where the CSS is inserted. In Chrome, `runAt` does not affect the CSS insertion point.
+- `world` {{optional_inline}}
+  - : {{WebExtAPIRef("scripting.ExecutionWorld")}}. The execution environment for a script to execute in. The default value is `ISOLATED`.
 
 ## Browser compatibility
 
@@ -43,6 +40,5 @@ Values of this type are objects. They contain these properties:
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.scripting`](https://developer.chrome.com/docs/extensions/reference/scripting/#type-RegisteredContentScript) API.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.scripting`](https://developer.chrome.com/docs/extensions/reference/api/scripting#type-RegisteredContentScript) API.

@@ -1,12 +1,11 @@
 ---
-title: NamedNodeMap.setNamedItem()
+title: "NamedNodeMap: setNamedItem() method"
+short-title: setNamedItem()
 slug: Web/API/NamedNodeMap/setNamedItem
 page-type: web-api-instance-method
-tags:
-  - Method
-  - Reference
 browser-compat: api.NamedNodeMap.setNamedItem
 ---
+
 {{APIRef("DOM")}}
 
 The **`setNamedItem()`** method of the {{domxref("NamedNodeMap")}} interface
@@ -16,8 +15,8 @@ it is _replaced_.
 
 ## Syntax
 
-```js
-setNamedItem(attr);
+```js-nolint
+setNamedItem(attr)
 ```
 
 ### Parameters
@@ -42,8 +41,8 @@ Returns the old attribute if replaced, or `null` if the attribute is new.
 ```
 
 ```js
-const span = document.getElementsByTagName("span")[0];
-const pre = document.getElementsByTagName("pre")[0];
+const span = document.querySelector("span");
+const pre = document.querySelector("pre");
 const attrMap = pre.attributes;
 
 let result = `The '<pre>' element initially contains ${attrMap.length} attributes.\n\n`;
@@ -57,9 +56,8 @@ result += "We get 'two' from '<span>' and try to adds it to '<pre>'.\n";
 const two = span.attributes.getNamedItem("two");
 try {
   attrMap.setNamedItem(two);
-}
-catch (e) {
-  result += `An exception has been raised: ${e.name}.\n`;
+} catch (error) {
+  result += `An exception has been raised: ${error.name}.\n`;
 }
 
 pre.textContent = result;
@@ -67,7 +65,7 @@ pre.textContent = result;
 
 {{EmbedLiveSample("Example", "100%", 160)}}
 
-## Specification
+## Specifications
 
 {{Specifications}}
 

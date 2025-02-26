@@ -2,21 +2,14 @@
 title: WebRTC connectivity
 slug: Web/API/WebRTC_API/Connectivity
 page-type: guide
-tags:
-  - API
-  - Advanced
-  - Audio
-  - Draft
-  - Guide
-  - Media
-  - Video
-  - WebRTC
 ---
-{{WebRTCSidebar}}
+
+{{DefaultAPISidebar("WebRTC")}}
 
 This article describes how the various WebRTC-related protocols interact with one another in order to create a connection and transfer data and/or media among peers.
 
-> **Note:** This page needs heavy rewriting for structural integrity and content completeness. Lots of info here is good but the organization is a mess since this is sort of a dumping ground right now.
+> [!NOTE]
+> This page needs heavy rewriting for structural integrity and content completeness. Lots of info here is good but the organization is a mess since this is sort of a dumping ground right now.
 
 ## Signaling
 
@@ -28,7 +21,7 @@ Peer A who will be the initiator of the connection, will create an Offer. They w
 
 ### Session descriptions
 
-The configuration of an endpoint on a WebRTC connection is called a **session description**. The description includes information about the kind of media being sent, its format, the transfer protocol being used, the endpoint's IP address and port, and other information needed to describe a media transfer endpoint. This information is exchanged and stored using **Session Description Protocol** ({{Glossary("SDP")}}); if you want details on the format of SDP data, you can find it in {{RFC(2327)}}.
+The configuration of an endpoint on a WebRTC connection is called a **session description**. The description includes information about the kind of media being sent, its format, the transfer protocol being used, the endpoint's IP address and port, and other information needed to describe a media transfer endpoint. This information is exchanged and stored using **Session Description Protocol** ({{Glossary("SDP")}}); if you want details on the format of SDP data, you can find it in {{RFC(8866)}}.
 
 When a user starts a WebRTC call to another user, a special description is created called an **offer**. This description includes all the information about the caller's proposed configuration for the call. The recipient then responds with an **answer**, which is a description of their end of the call. In this way, both devices share with one another the information needed in order to exchange media data. This exchange is handled using Interactive Connectivity Establishment ({{Glossary("ICE")}}), a protocol which lets two devices use an intermediary to exchange offers and answers even if the two devices are separated by Network Address Translation ({{Glossary("NAT")}}).
 
@@ -62,15 +55,17 @@ When reading the description (returned by {{domxref("RTCPeerConnection.localDesc
 
 When changing the description by calling `setLocalDescription()` or `setRemoteDescription()`, the specified description is set as the pending description, and the WebRTC layer begins to evaluate whether or not it's acceptable. Once the proposed description has been agreed upon, the value of `currentLocalDescription` or `currentRemoteDescription` is changed to the pending description, and the pending description is set to null again, indicating that there isn't a pending description.
 
-> **Note:** The `pendingLocalDescription` contains not just the offer or answer under consideration, but any local ICE candidates which have already been gathered since the offer or answer was created. Similarly, `pendingRemoteDescription` includes any remote ICE candidates which have been provided by calls to {{domxref("RTCPeerConnection.addIceCandidate()")}}.
+> [!NOTE]
+> The `pendingLocalDescription` contains not just the offer or answer under consideration, but any local ICE candidates which have already been gathered since the offer or answer was created. Similarly, `pendingRemoteDescription` includes any remote ICE candidates which have been provided by calls to {{domxref("RTCPeerConnection.addIceCandidate()")}}.
 
-See the individual articles on these properties and methods for more specifics, and [Codecs used by WebRTC](/en-US/docs/Web/Media/Formats/WebRTC_codecs) for information about codecs supported by WebRTC and which are compatible with which browsers. The codecs guide also offers guidance to help you choose the best codecs for your needs.
+See the individual articles on these properties and methods for more specifics, and [Codecs used by WebRTC](/en-US/docs/Web/Media/Guides/Formats/WebRTC_codecs) for information about codecs supported by WebRTC and which are compatible with which browsers. The codecs guide also offers guidance to help you choose the best codecs for your needs.
 
 ## ICE candidates
 
 As well as exchanging information about the media (discussed above in Offer/Answer and SDP), peers must exchange information about the network connection. This is known as an **ICE candidate** and details the available methods the peer is able to communicate (directly or through a TURN server). Typically, each peer will propose its best candidates first, making their way down the line toward their worse candidates. Ideally, candidates are UDP (since it's faster, and media streams are able to recover from interruptions relatively easily), but the ICE standard does allow TCP candidates as well.
 
-> **Note:** Generally, ICE candidates using TCP are only going to be used when UDP is not available or is restricted in ways that make it not suitable for media streaming. Not all browsers support ICE over TCP, however.
+> [!NOTE]
+> Generally, ICE candidates using TCP are only going to be used when UDP is not available or is restricted in ways that make it not suitable for media streaming. Not all browsers support ICE over TCP, however.
 
 ICE allows candidates to represent connections over either {{Glossary("TCP")}} or {{Glossary("UDP")}}, with UDP generally being preferred (and being more widely supported). Each protocol supports a few types of candidate, with the candidate types defining how the data makes its way from peer to peer.
 
@@ -124,12 +119,14 @@ Instead, you can initiate an **ICE rollback**. A rollback restores the SDP offer
 
 To programmatically initiate a rollback, send a description whose {{domxref("RTCSessionDescription.type", "type")}} is `rollback`. Any other properties in the description object are ignored.
 
-In addition, the ICE agent will automatically initiate a rollback when a peer that had previously created an offer receives an offer from the remote peer. In other words, if the local peer is in the state `have-local-offer`, indicating that the local peer had previously *sent* an offer, calling `setRemoteDescription()` with a *received* offer triggers rollback so that the negotiation switches from the remote peer being the caller to the local peer being the caller.
+In addition, the ICE agent will automatically initiate a rollback when a peer that had previously created an offer receives an offer from the remote peer. In other words, if the local peer is in the state `have-local-offer`, indicating that the local peer had previously _sent_ an offer, calling `setRemoteDescription()` with a _received_ offer triggers rollback so that the negotiation switches from the remote peer being the caller to the local peer being the caller.
 
 ### ICE restarts
 
-For now, see {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Session_lifetime", "ICE restart")}}.
+Learn about the [ICE restart](/en-US/docs/Web/API/WebRTC_API/Session_lifetime#ice_restart) process.
 
 ## The entire exchange in a complicated diagram
 
-[![A complete architectural diagram showing the whole WebRTC process.](webrtc-complete-diagram.png)](https://hacks.mozilla.org/2013/07/webrtc-and-the-ocean-of-acronyms/)
+![A complete architectural diagram showing the whole WebRTC process.](webrtc-complete-diagram.png)
+
+[Original source](https://hacks.mozilla.org/2013/07/webrtc-and-the-ocean-of-acronyms/)

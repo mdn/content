@@ -1,19 +1,14 @@
 ---
-title: XRQuadLayer.width
+title: "XRQuadLayer: width property"
+short-title: width
 slug: Web/API/XRQuadLayer/width
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - VR
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
+status:
+  - experimental
 browser-compat: api.XRQuadLayer.width
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`width`** property of the {{domxref("XRQuadLayer")}} interface represents the width of the layer in meters.
 
@@ -31,10 +26,10 @@ This example code positions the layer two meters away from the origin of `xrRefe
 const quadLayer = xrGlBinding.createQuadLayer({
   space: xrReferenceSpace,
   viewPixelWidth: 512,
-  viewPixelHeight: 512
+  viewPixelHeight: 512,
 });
 
-quadLayer.transform = new XRRigidTransform({z: -2});
+quadLayer.transform = new XRRigidTransform({ z: -2 });
 quadLayer.width = 1.5;
 quadLayer.height = 1.5;
 ```

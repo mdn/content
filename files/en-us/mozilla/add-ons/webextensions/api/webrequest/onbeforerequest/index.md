@@ -1,19 +1,11 @@
 ---
 title: webRequest.onBeforeRequest
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/onBeforeRequest
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onBeforeRequest
-  - webRequest
+page-type: webextension-api-event
 browser-compat: webextensions.api.webRequest.onBeforeRequest
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 This event is triggered when a request is about to be made, and before headers are available. This is a good place to listen if you want to cancel or redirect the request.
 
@@ -24,7 +16,7 @@ To cancel or redirect the request, first include `"blocking"` in the `extraInfoS
 
 If an extension wants to redirect a public (e.g. HTTPS) URL to an [extension page](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages), the extension's manifest.json file must contain a [web_accessible_resources](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources) key that lists the URL for the extension page.
 
-When multiple blocking handlers modify a request, only one set of modifications take effect. Redirects and cancellations have the same precedence. So if you canceled a request, you might see another request with the same  `requestId` again if another blocking handler redirected the request.
+When multiple blocking handlers modify a request, only one set of modifications take effect. Redirects and cancellations have the same precedence. So if you canceled a request, you might see another request with the same `requestId` again if another blocking handler redirected the request.
 
 From Firefox 52 onwards, instead of returning `BlockingResponse`, the listener can return a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) which is resolved with a `BlockingResponse`. This enables the listener to process the request asynchronously.
 
@@ -32,7 +24,7 @@ If you use `"blocking"`, you must have the ["webRequestBlocking" API permission]
 
 ## Syntax
 
-```js
+```js-nolint
 browser.webRequest.onBeforeRequest.addListener(
   listener,             // function
   filter,               //  object
@@ -44,7 +36,7 @@ browser.webRequest.onBeforeRequest.hasListener(listener)
 
 Events have three functions:
 
-- `addListener(callback, filter, extraInfoSpec)`
+- `addListener(listener, filter, extraInfoSpec)`
   - : Adds a listener to this event.
 - `removeListener(listener)`
   - : Stop listening to this event. The `listener` argument is the listener to remove.
@@ -55,17 +47,17 @@ Events have three functions:
 
 ### Parameters
 
-- `callback`
+- `listener`
 
-  - : Function that will be called when this event occurs. The function will be passed the following arguments:
+  - : The function called when this event occurs. The function is passed this argument:
 
     - `details`
-      - : [`object`](#details). Details about the request. See [`details`](#details_2) below.
+      - : `object`. Details about the request. See the [details](#details_2) section for more information.
 
     Returns: {{WebExtAPIRef('webRequest.BlockingResponse')}}. If `"blocking"` is specified in the `extraInfoSpec` parameter, the event listener should return a `BlockingResponse` object, and can set either its `cancel` or its `redirectUrl` properties. From Firefox 52 onwards, instead of returning `BlockingResponse`, the listener can return a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) which is resolved with a `BlockingResponse`. This enables the listener to process the request asynchronously.
 
 - `filter`
-  - : {{WebExtAPIRef('webRequest.RequestFilter')}}. A filter that restricts the events that will be sent to this listener.
+  - : {{WebExtAPIRef('webRequest.RequestFilter')}}. A filter that restricts the events that is sent to this listener.
 - `extraInfoSpec` {{optional_inline}}
 
   - : `array` of `string`. Extra options for the event. You can pass any of the following values:
@@ -78,7 +70,7 @@ Events have three functions:
 ### details
 
 - `cookieStoreId`
-  - : `string`. If the request is from a tab open in a contextual identity, the cookie store ID of the contextual identity.
+  - : `string`. If the request is from a tab open in a contextual identity, the cookie store ID of the contextual identity. See [Work with contextual identities](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities) for more information.
 - `documentUrl`
   - : `string`. URL of the document in which the resource will be loaded. For example, if the web page at "https\://example.com" contains an image or an iframe, then the `documentUrl` for the image or iframe will be "https\://example.com". For a top-level document, `documentUrl` is undefined.
 - `frameAncestors`
@@ -159,7 +151,7 @@ Events have three functions:
   - : `string`. Target of the request.
 - `urlClassification`
 
-  - : `object`. The type of tracking associated with the request, if with the request has been classified by [Firefox Tracking Protection](https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop). This is an object with the following properties:
+  - : `object`. The type of tracking associated with the request, if the request is classified by [Firefox Tracking Protection](https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop). This is an object with these properties:
 
     - `firstParty`
       - : `array` of `strings`. Classification flags for the request's first party.
@@ -168,12 +160,17 @@ Events have three functions:
 
     The classification flags include:
 
-    - `fingerprinting` and `fingerprinting_content`: indicates the request is involved in fingerprinting. `fingerprinting_content` indicates the request is loaded from an origin that has been found to fingerprint but is not considered to participate in tracking, such as a payment provider.
+    - `fingerprinting` and `fingerprinting_content`: indicates the request is involved in fingerprinting ("an origin found to fingerprint").
+      - `fingerprinting` indicates the domain is in the fingerprinting and tracking category. Examples of this type of domain include advertisers who want to associate a profile with the visiting user.
+      - `fingerprinting_content` indicates the domain is in the fingerprinting category but not the tracking category. Examples of this type of domain include payment providers who use fingerprinting techniques to identify the visiting user for anti-fraud purposes.
     - `cryptomining` and `cryptomining_content`: similar to the fingerprinting category but for cryptomining resources.
-    - `tracking`, `tracking_ad`, `tracking_analytics`, `tracking_social`,  and `tracking_content`: indicates the request is involved in tracking. `tracking` is any generic tracking request, the `ad`, `analytics`, `social`, and `content` suffixes identify the type of tracker.
-    - `any_basic_tracking`: a meta flag that combines any tracking and fingerprinting flags, excluding `tracking_content` and `fingerprinting_content`.
-    - `any_strict_tracking`: a meta flag that combines any tracking and fingerprinting flags, including `tracking_content` and `fingerprinting_content`.
-    - `any_social_tracking`: a meta flag that combines any social tracking flags.
+    - `tracking`, `tracking_ad`, `tracking_analytics`, `tracking_social`, and `tracking_content`: indicates the request is involved in tracking. `tracking` is any generic tracking request, the `ad`, `analytics`, `social`, and `content` suffixes identify the type of tracker.
+    - `emailtracking` and `emailtracking_content`: indicates the request is involved in tracking emails.
+    - `any_basic_tracking`: a meta flag that combines tracking and fingerprinting flags, excluding `tracking_content` and `fingerprinting_content`.
+    - `any_strict_tracking`: a meta flag that combines all tracking and fingerprinting flags.
+    - `any_social_tracking`: a meta flag that combines all social tracking flags.
+
+    You can find more information on tracker types on the [disconnect.me](https://disconnect.me/trackerprotection#categories_of_trackers) website. The `content` suffix indicates trackers that track and serve content. Blocking them protects users but can lead to sites breaking or elements not being displayed.
 
 ## Browser compatibility
 
@@ -181,7 +178,7 @@ Events have three functions:
 
 ### DNS resolution ordering when BlockingResponse is used
 
-Regarding DNS resolution when BlockingResponse is used with OnBeforeRequest: In HTTP Channel, onBeforeRequest with blocking response does happen prior to DNS resolution and also prior to speculative connect. For other channels, speculative connect may cause DNS requests to happen before onBeforeRequest. This ordering is not something an extension developer ought to rely on as it may vary across browsers, and from one browser version to another, let alone one request channel to another. Refer [BugZilla issue clarification provided by Mozilla developers on DNS resolution ordering](https://bugzilla.mozilla.org/show_bug.cgi?id=1466099)
+Regarding DNS resolution when BlockingResponse is used with OnBeforeRequest: In HTTP Channel, onBeforeRequest with blocking response does happen prior to DNS resolution and also prior to speculative connect. For other channels, speculative connect may cause DNS requests to happen before onBeforeRequest. This ordering is not something an extension developer ought to rely on as it may vary across browsers, and from one browser version to another, let alone one request channel to another. Refer [BugZilla issue clarification provided by Mozilla developers on DNS resolution ordering](https://bugzil.la/1466099)
 
 ## Examples
 
@@ -189,50 +186,50 @@ This code logs the URL for every resource requested which matches the [\<all_url
 
 ```js
 function logURL(requestDetails) {
-  console.log("Loading: " + requestDetails.url);
+  console.log(`Loading: ${requestDetails.url}`);
 }
 
-browser.webRequest.onBeforeRequest.addListener(
-  logURL,
-  {urls: ["<all_urls>"]}
-);
+browser.webRequest.onBeforeRequest.addListener(logURL, {
+  urls: ["<all_urls>"],
+});
 ```
 
-This code cancels requests for images that are made to URLs under "https\://mdn.mozillademos.org/" (to see the effect, visit any page on MDN that contains images, such as [webRequest](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest)):
+This code cancels requests for images that are made to URLs under "https\://developer.mozilla.org/" (to see the effect, visit any page on MDN that contains images, such as [webRequest](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest)):
 
 ```js
 // match pattern for the URLs to redirect
-let pattern = "https://mdn.mozillademos.org/*";
+let pattern = "https://developer.mozilla.org/*";
 
 // cancel function returns an object
 // which contains a property `cancel` set to `true`
 function cancel(requestDetails) {
-  console.log("Canceling: " + requestDetails.url);
-  return {cancel: true};
+  console.log(`Canceling: ${requestDetails.url}`);
+  return { cancel: true };
 }
 
 // add the listener,
 // passing the filter argument and "blocking"
 browser.webRequest.onBeforeRequest.addListener(
   cancel,
-  {urls: [pattern], types: ["image"]},
-  ["blocking"]
+  { urls: [pattern], types: ["image"] },
+  ["blocking"],
 );
 ```
 
-This code replaces, by redirection, all network requests for images that are made to URLs under "https\://mdn.mozillademos.org/" (to see the effect, visit any page on MDN that contains images, such as [webRequest](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest)):
+This code replaces, by redirection, all network requests for images that are made to URLs under "https\://developer.mozilla.org/" (to see the effect, visit any page on MDN that contains images, such as [webRequest](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest)):
 
 ```js
 // match pattern for the URLs to redirect
-let pattern = "https://mdn.mozillademos.org/*";
+let pattern = "https://developer.mozilla.org/*";
 
 // redirect function
 // returns an object with a property `redirectURL`
 // set to the new URL
 function redirect(requestDetails) {
-  console.log("Redirecting: " + requestDetails.url);
+  console.log(`Redirecting: ${requestDetails.url}`);
   return {
-    redirectUrl: "https://38.media.tumblr.com/tumblr_ldbj01lZiP1qe0eclo1_500.gif"
+    redirectUrl:
+      "https://38.media.tumblr.com/tumblr_ldbj01lZiP1qe0eclo1_500.gif",
   };
 }
 
@@ -240,8 +237,8 @@ function redirect(requestDetails) {
 // passing the filter argument and "blocking"
 browser.webRequest.onBeforeRequest.addListener(
   redirect,
-  {urls:[pattern], types:["image"]},
-  ["blocking"]
+  { urls: [pattern], types: ["image"] },
+  ["blocking"],
 );
 ```
 
@@ -249,18 +246,19 @@ This code is exactly like the previous example, except that the listener handles
 
 ```js
 // match pattern for the URLs to redirect
-let pattern = "https://mdn.mozillademos.org/*";
+let pattern = "https://developer.mozilla.org/*";
 
 // URL we will redirect to
-let redirectUrl = "https://38.media.tumblr.com/tumblr_ldbj01lZiP1qe0eclo1_500.gif";
+let redirectUrl =
+  "https://38.media.tumblr.com/tumblr_ldbj01lZiP1qe0eclo1_500.gif";
 
 // redirect function returns a Promise
 // which is resolved with the redirect URL when a timer expires
 function redirectAsync(requestDetails) {
-  console.log("Redirecting async: " + requestDetails.url);
+  console.log(`Redirecting async: ${requestDetails.url}`);
   return new Promise((resolve, reject) => {
-    window.setTimeout(() => {
-      resolve({redirectUrl});
+    setTimeout(() => {
+      resolve({ redirectUrl });
     }, 2000);
   });
 }
@@ -269,15 +267,15 @@ function redirectAsync(requestDetails) {
 // passing the filter argument and "blocking"
 browser.webRequest.onBeforeRequest.addListener(
   redirectAsync,
-  {urls: [pattern], types: ["image"]},
-  ["blocking"]
+  { urls: [pattern], types: ["image"] },
+  ["blocking"],
 );
 ```
 
 Another example, that redirects all images to a data URL:
 
 ```js
-let pattern = "https://mdn.mozillademos.org/*";
+let pattern = "https://developer.mozilla.org/*";
 
 let image = `
   <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
@@ -287,14 +285,14 @@ let image = `
 `;
 
 function listener(details) {
-  let redirectUrl = "data:image/svg+xml," + encodeURIComponent(image);
-  return {redirectUrl};
+  const redirectUrl = `data:image/svg+xml,${encodeURIComponent(image)}`;
+  return { redirectUrl };
 }
 
 browser.webRequest.onBeforeRequest.addListener(
   listener,
-  {urls: [pattern], types: ["image"]},
-  ["blocking"]
+  { urls: [pattern], types: ["image"] },
+  ["blocking"],
 );
 ```
 
@@ -302,10 +300,10 @@ Here's another version:
 
 ```js
 function randomColor() {
-  return "#" + Math.floor(Math.random()*16777215).toString(16);
+  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 }
 
-let pattern = "https://mdn.mozillademos.org/*";
+const pattern = "https://developer.mozilla.org/*";
 
 let image = `
   <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
@@ -314,24 +312,24 @@ let image = `
 `;
 
 function listener(details) {
-  let redirectUrl = "data:image/svg+xml," + encodeURIComponent(image);
-  return {redirectUrl};
+  const redirectUrl = `data:image/svg+xml,${encodeURIComponent(image)}`;
+  return { redirectUrl };
 }
 
 browser.webRequest.onBeforeRequest.addListener(
   listener,
-  {urls: [pattern], types: ["image"]},
-  ["blocking"]
+  { urls: [pattern], types: ["image"] },
+  ["blocking"],
 );
 ```
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/webRequest/#event-onBeforeRequest) API. This documentation is derived from [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/api/webRequest#event-onBeforeRequest) API. This documentation is derived from [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) in the Chromium code.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -358,4 +356,4 @@ browser.webRequest.onBeforeRequest.addListener(
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

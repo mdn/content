@@ -1,25 +1,20 @@
 ---
-title: PresentationConnection.close()
+title: "PresentationConnection: close() method"
+short-title: close()
 slug: Web/API/PresentationConnection/close
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - NeedsBrowserCompatibility
-  - NeedsContent
-  - NeedsMarkupWork
-  - Presentation
-  - PresentationConnection
-  - Reference
+status:
+  - experimental
 browser-compat: api.PresentationConnection.close
 ---
-{{DefaultAPISidebar("Presentation API")}}
+
+{{APIRef("Presentation API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 When the `close()` method is called on a {{domxref("PresentationConnection")}}, the {{Glossary("user agent")}} begins the process of closing the connection by sending an empty `closeMessage` with the `closeReason` set to `closed`.
 
 ## Syntax
 
-```js
+```js-nolint
 close()
 ```
 
@@ -30,6 +25,10 @@ None.
 ### Return value
 
 None ({{jsxref("undefined")}}).
+
+## Specifications
+
+{{Specifications}}
 
 ## Browser compatibility
 

@@ -1,17 +1,12 @@
 ---
-title: ReadableByteStreamController.error()
+title: "ReadableByteStreamController: error() method"
+short-title: error()
 slug: Web/API/ReadableByteStreamController/error
 page-type: web-api-instance-method
-tags:
-  - API
-  - Error
-  - Method
-  - ReadableByteStreamController
-  - Reference
-  - Streams
 browser-compat: api.ReadableByteStreamController.error
 ---
-{{APIRef("Streams")}}
+
+{{APIRef("Streams")}}{{AvailableInWorkers}}
 
 The **`error()`** method of the {{domxref("ReadableByteStreamController")}} interface causes any future interactions with the associated stream to error with the specified reason.
 
@@ -20,7 +15,7 @@ It can also be called from elsewhere to trigger a stream error, for example if a
 
 ## Syntax
 
-```js
+```js-nolint
 error(errorObject)
 ```
 
@@ -48,14 +43,14 @@ If there are any errors thrown when reading the data they will be caught by the 
 In `catch()` we then call `error()` on the controller, passing the reason from the underlying source.
 
 ```js
-start(controller) {
+function start(controller) {
   readRepeatedly().catch((e) => controller.error(e));
 }
 
 function readRepeatedly() {
   return socket.select2().then(() => {
-          // ...
-  }
+    // …
+  });
 }
 ```
 

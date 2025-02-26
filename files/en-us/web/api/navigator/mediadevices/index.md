@@ -1,36 +1,18 @@
 ---
-title: Navigator.mediaDevices
+title: "Navigator: mediaDevices property"
+short-title: mediaDevices
 slug: Web/API/Navigator/mediaDevices
 page-type: web-api-instance-property
-tags:
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaDevices
-  - Navigator
-  - Property
-  - Read-only
-  - Reference
-  - Web
 browser-compat: api.Navigator.mediaDevices
 ---
-{{securecontext_header}}{{DefaultAPISidebar("Media Capture and Streams")}}
 
-The **`Navigator.mediaDevices`** read-only property returns a
-{{domxref("MediaDevices")}} object, which provides access to connected media input
-devices like cameras and microphones, as well as screen sharing.
+{{securecontext_header}}{{APIRef("Media Capture and Streams")}}
 
-## Syntax
+The **`mediaDevices`** read-only property of the {{domxref("Navigator")}} interface returns a {{domxref("MediaDevices")}} object, which provides access to connected media input devices like cameras and microphones, as well as screen sharing.
 
-```js
-const mediaDevices = navigator.mediaDevices;
-```
+## Value
 
-### Return value
-
-The {{domxref("MediaDevices")}} singleton object. Usually, you just use this object's
-members directly, such as by calling
-{{domxref("MediaDevices.getUserMedia", "navigator.mediaDevices.getUserMedia()")}}.
+The {{domxref("MediaDevices")}} singleton object. Usually, you just use this object's members directly, such as by calling {{domxref("MediaDevices.getUserMedia", "navigator.mediaDevices.getUserMedia()")}}.
 
 ## Specifications
 
@@ -42,7 +24,5 @@ members directly, such as by calling
 
 ## See also
 
-- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Streams_API):
-  The entry point to the documentation about the entire media stream API.
-- [WebRTC API](/en-US/docs/Web/API/WebRTC_API): Documentation about the
-  WebRTC API, which is closely related.
+- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API): The entry point to the documentation about the entire Media Capture and Streams API.
+- [WebRTC API](/en-US/docs/Web/API/WebRTC_API): Documentation about the WebRTC API, which is closely related.

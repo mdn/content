@@ -1,16 +1,14 @@
 ---
-title: BackgroundFetchRegistration.result
+title: "BackgroundFetchRegistration: result property"
+short-title: result
 slug: Web/API/BackgroundFetchRegistration/result
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - result
-  - BackgroundFetchRegistration
+status:
+  - experimental
 browser-compat: api.BackgroundFetchRegistration.result
 ---
-{{APIRef("Background Fetch API")}}
+
+{{APIRef("Background Fetch API")}}{{SeeCompatTable}}{{AvailableInWorkers}}
 
 The **`result`** read-only property of the {{domxref("BackgroundFetchRegistration")}} interface returns a string indicating whether the background fetch was successful or failed.
 

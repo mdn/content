@@ -1,0 +1,429 @@
+{
+  "experimental_badge_title": {
+    "de": "Experimentell. Das Verhalten könnte sich in Zukunft ändern.",
+    "en-US": "Experimental. Expect behavior to change in the future.",
+    "es": "Experimental. Espere que el comportamiento cambie en el futuro.",
+    "fr": "Expérimental. Le comportement attendu pourrait évoluer à l'avenir.",
+    "ja": "Experimental. Expect behavior to change in the future.",
+    "ko": "Experimental. 예상되는 동작은 향후 변경될 수 있습니다.",
+    "pt-BR": "Experimental. Expect behavior to change in the future.",
+    "ru": "Экспериментальная возможность. Её поведение в будущем может измениться",
+    "zh-CN": "实验性。预期行为可能会在未来发生变更。",
+    "zh-TW": "實驗性質。行為可能會在未來發生變動。"
+  },
+
+  "experimental_badge_abbreviation": {
+    "de": "Experimentell",
+    "en-US": "Experimental",
+    "es": "Experimental",
+    "fr": "Expérimental",
+    "ja": "Experimental",
+    "ko": "Experimental",
+    "pt-BR": "Experimental",
+    "ru": "Экспериментальная возможность",
+    "zh-CN": "实验性",
+    "zh-TW": "實驗性質"
+  },
+
+  "deprecated_badge_title": {
+    "de": "Veraltet. Nicht empfohlen für neue Webseiten.",
+    "en-US": "Deprecated. Not for use in new websites.",
+    "ko": "지원이 중단되었습니다. 새로운 웹사이트에서 사용하지 마세요.",
+    "zh-CN": "已弃用。请不要在新的网站中使用。",
+    "zh-TW": "已棄用。請不要在新的網站中使用。"
+  },
+
+  "deprecated_badge_abbreviation": {
+    "de": "Veraltet",
+    "en-US": "Deprecated",
+    "es": "Obsoleto",
+    "fr": "Obsolète",
+    "ja": "非推奨;",
+    "ko": "지원이 중단되었습니다",
+    "ru": "Устарело",
+    "zh-CN": "已弃用",
+    "zh-TW": "已棄用"
+  },
+
+  "deprecated_header_copy": {
+    "de": "Diese Funktion wird nicht mehr empfohlen. Obwohl einige Browser sie möglicherweise noch unterstützen, könnte sie bereits aus den relevanten Webstandards entfernt worden sein, in Kürze entfernt werden oder nur noch aus Kompatibilitätsgründen bestehen. Vermeiden Sie die Verwendung und aktualisieren Sie vorhandenen Code, falls möglich; siehe die <a href='#browser-kompatibilität'>Kompatibilitätstabelle</a> am Ende dieser Seite, um Ihre Entscheidung zu unterstützen. Beachten Sie, dass diese Funktion jederzeit aufhören könnte zu funktionieren.",
+    "en-US": "This feature is no longer recommended. Though some browsers might still support it, it may have already been removed from the relevant web standards, may be in the process of being dropped, or may only be kept for compatibility purposes. Avoid using it, and update existing code if possible; see the <a href='#browser_compatibility'>compatibility table</a> at the bottom of this page to guide your decision. Be aware that this feature may cease to work at any time.",
+    "es": "Esta característica ya no se recomienda. Aunque es posible que algunos navegadores aún lo admitan, probablemente ya se ha eliminado de los estándares web relevantes, está en proceso de eliminación o solo se conserva por motivos de compatibilidad. Evite usarlo y actualice el código existente si es posible; consulte la <a href='#browser_compatibility'>tabla de compatibilidad</a> en la parte inferior de esta página para orientar su decisión. Tenga en cuenta que esta característica puede dejar de funcionar en cualquier momento.",
+    "fr": "Cette fonctionnalité a été supprimée des standards du Web. Bien que quelques navigateurs puissent encore la supporter, elle est en cours d'éradication. Ne l'utilisez ni dans d'anciens projets, ni dans de nouveaux. Les pages et applications Web l'utilisant peuvent cesser de fonctionner à tout moment.",
+    "ja": "この機能は非推奨になりました。まだ対応しているブラウザーがあるかもしれませんが、すでに関連するウェブ標準から削除されているか、削除の手続き中であるか、互換性のためだけに残されている可能性があります。使用を避け、できれば既存のコードは更新してください。このページの下部にある<a href='#browser_compatibility'>互換性一覧表</a>を見て判断してください。この機能は突然動作しなくなる可能性があることに注意してください。",
+    "ko": "이 기능은 더 이상 권장되지 않습니다. 일부 브라우저에서는 아직 지원할 수 있지만 관련 웹 표준에서 이미 제거되었거나 제거 과정에 있는 경우가 있으며, 호환성을 위해 유지되고 있을 수 있습니다. 사용을 피하고 가능하다면 기존 코드를 업데이트하세요. 결정을 지원할 <a href='#browser_compatibility'>하단의 호환성 표</a>를 확인하세요. 이 기능은 언제든지 작동을 중단할 수 있음을 유의하세요.",
+    "ru": "Эта возможность была удалена из веб-стандартов. Хотя некоторые браузеры по-прежнему могут поддерживать её, она находится в процессе удаления. Не используйте её ни в старых, ни в новых проектах. Страницы или веб-приложения, использующие её, могут в любой момент сломаться.",
+    "zh-CN": "不再推荐使用该特性。虽然一些浏览器仍然支持它，但也许已从相关的 web 标准中移除，也许正准备移除或出于兼容性而保留。请尽量不要使用该特性，并更新现有的代码；参见本页面底部的<a href='#浏览器兼容性'>兼容性表格</a>以指导你作出决定。请注意，该特性随时可能无法正常工作。",
+    "zh-TW": "不推薦使用此功能。雖可能有一些瀏覽器仍然支援它，但也許已自相關的網頁標準中移除、正準備移除、或僅為了維持相容性而保留。避免使用此功能，盡可能更新現有程式；請參考頁面底部的<a href='#瀏覽器相容性'>相容性表格</a>來下決定。請注意：本功能可能隨時停止運作。"
+  },
+
+  "non_standard_badge_title": {
+    "de": "Nicht standardisiert. Überprüfen Sie vor der Verwendung die Browser-Kompatibilität.",
+    "en-US": "Non-standard. Check cross-browser support before using.",
+    "ko": "비표준. 사용하기전에 다른 브라우저에서도 사용 가능한지 확인 해주세요.",
+    "zh-CN": "非标准。请在使用前检查跨浏览器支持。",
+    "zh-TW": "非標準。請在使用前檢查跨瀏覽器支援。"
+  },
+
+  "non_standard_badge_abbreviation": {
+    "de": "Nicht standardisiert",
+    "en-US": "Non-standard",
+    "es": "No estándar",
+    "fr": "Non standard",
+    "ja": "非標準",
+    "ko": "비표준",
+    "ru": "Не стандартно",
+    "zh-CN": "非标准"
+  },
+
+  "non_standard_header_copy": {
+    "de": "Diese Funktion ist nicht standardisiert und befindet sich nicht auf dem Weg zur Standardisierung. Verwenden Sie sie nicht auf Produktionsseiten, die dem Web ausgesetzt sind: Sie funktioniert nicht für alle Benutzer. Es kann auch große Inkompatibilitäten zwischen Implementierungen geben, und das Verhalten kann sich in Zukunft ändern.",
+    "en-US": "This feature is non-standard and is not on a standards track. Do not use it on production sites facing the Web: it will not work for every user. There may also be large incompatibilities between implementations and the behavior may change in the future.",
+    "es": "Esta característica no es parte de los estándares. No la uses en sitios Web en producción: no funcionará para todos los usuarios. Podrían haber también incompatibilidades considerables entre distintas implementaciones y el comportamiento podría cambiar en el futuro.",
+    "fr": "Cette fonctionnalité n'est ni standard, ni en voie de standardisation. Ne l'utilisez pas pour des sites accessibles sur le Web : elle ne fonctionnera pas pour tout utilisateur. Il peut également y avoir d'importantes incompatibilités entre les implémentations et son comportement peut être modifié dans le futur.",
+    "ja": "この機能は標準ではなく、標準化の予定もありません。公開されているウェブサイトには使用しないでください。ユーザーによっては使用できないことがあります。実装ごとに大きな差があることもあり、将来は振る舞いが変わるかもしれません。",
+    "ko": "이 기능은 비표준이므로 실제 프로덕션에서 사용하지 마세요. 모든 사용자 환경에서 작동하지 않을 수 도 있으며, 미래에 호환성 문제가 생길 수 있습니다.",
+    "ru": "Эта возможность не является стандартной и стандартизировать её пока никто не собирается. Не используйте её на сайтах, смотрящих во внешний мир: она будет работать не у всех пользователей. Также могут присутствовать большие несовместимости между реализациями и её поведение может в будущем измениться.",
+    "zh-CN": "该特性是非标准的，请尽量不要在生产环境中使用它！"
+  },
+
+  "secure_context_label": {
+    "de": "Sicherer Kontext",
+    "en-US": "Secure context",
+    "es": "Contexto seguro",
+    "fr": "Contexte sécurisé",
+    "ko": "보안 컨텍스트",
+    "ja": "安全なコンテキスト用",
+    "ko": "보안 컨텍스트",
+    "zh-CN": "安全上下文"
+  },
+
+  "secure_context_inline_copy": {
+    "de": "Diese Funktion ist nur in sicheren Kontexten (HTTPS) verfügbar.",
+    "en-US": "This feature is available only in secure contexts (HTTPS)",
+    "es": "Esta función está disponible solo en contextos seguros (HTTPS)",
+    "fr": "Cette fonctionnalité est uniquement disponible dans des contextes sécurisés (HTTPS)",
+    "ko": "이 기능은 보안 컨텍스트 (HTTPS)에서만 사용할 수 있습니다",
+    "ja": "この機能は安全なコンテキスト (HTTPS) でのみ利用できます",
+    "ko": "이 기능은 보안 컨텍스트 (HTTPS)에서만 사용할 수 있습니다",
+    "zh-CN": "此功能仅在安全上下文（HTTPS）中可用"
+  },
+
+  "secure_context_header_copy": {
+    "de": "Diese Funktion ist nur in <a href='/de/docs/Web/Security/Secure_Contexts'>sicheren Kontexten</a> (HTTPS) in einigen oder allen <a href='#browser-kompatibilität'>unterstützenden Browsern</a> verfügbar.",
+    "en-US": "This feature is available only in <a href='/en-US/docs/Web/Security/Secure_Contexts'>secure contexts</a> (HTTPS), in some or all <a href='#browser_compatibility'>supporting browsers</a>.",
+    "es": "Esta función está disponible solo en <a href='/es/docs/Web/Security/Secure_Contexts'>contextos seguros</a> (HTTPS), en algunos o todos los <a href='#browser_compatibility'>navegadores que lo soportan</a>.",
+    "fr": "Cette fonctionnalité est uniquement disponible dans des <a href='/fr/docs/Web/Security/Secure_Contexts'>contextes sécurisés</a> (HTTPS), pour certains <a href='#compatibilité_des_navigateurs'>navigateurs qui la prennent en charge</a>.",
+    "ko": "이 기능은 일부 또는 모든 <a href='#브라우저_호환성'>지원 브라우저</a>의 <a href='/ko/docs/Web/Security/Secure_Contexts'>보안 컨텍스트</a> (HTTPS)에서만 사용할 수 있습니다.",
+    "ja": "この機能は一部またはすべての<a href='#browser_compatibility'>対応しているブラウザー</a>において、<a href='/ja/docs/Web/Security/Secure_Contexts'>安全なコンテキスト</a> (HTTPS) でのみ利用できます。",
+    "ko": "이 기능은 일부 또는 모든 <a href='#브라우저_호환성'>지원 브라우저</a>의 <a href='/ko/docs/Web/Security/Secure_Contexts'>보안 컨텍스트</a> (HTTPS)에서만 사용할 수 있습니다.",
+    "zh-CN": "此项功能仅在一些<a href='#浏览器兼容性'>支持的浏览器</a>的<a href='/zh-CN/docs/Web/Security/Secure_Contexts'>安全上下文</a>（HTTPS）中可用。"
+  },
+
+  "interactive_example_cta": {
+    "de": "Probieren Sie es aus",
+    "en-US": "Try it",
+    "fr": "Exemple interactif",
+    "ja": "試してみましょう",
+    "ko": "시도해보기",
+    "ru": "Интерактивный пример",
+    "pt-BR": "Experimente",
+    "es": "Pruébalo",
+    "zh-CN": "尝试一下",
+    "zh-TW": "嘗試一下"
+  },
+
+  "optional": {
+    "de": "Optional",
+    "en-US": "Optional",
+    "fr": "Facultatif",
+    "ja": "省略可",
+    "ru": "Необязательный",
+    "zh-CN": "可选",
+    "zh-TW": "選擇性",
+    "es": "Opcional"
+  },
+
+  "xref_csscomputed": {
+    "de": "Berechneter Wert",
+    "en-US": "Computed value",
+    "es": "Valor calculado",
+    "fr": "Valeur calculée",
+    "ja": "計算値",
+    "ko": "계산 값",
+    "ru": "Обработка значения",
+    "zh-CN": "计算值"
+  },
+
+  "xref_cssinherited": {
+    "de": "Vererbt",
+    "en-US": "Inherited",
+    "es": "Heredable",
+    "fr": "Héritée",
+    "ja": "継承",
+    "ko": "상속",
+    "ru": "Наследуется",
+    "zh-CN": "是否是继承属性",
+    "zh-TW": "繼承與否"
+  },
+
+  "xref_cssinitial": {
+    "de": "Anfangswert",
+    "en-US": "Initial value",
+    "es": "Valor inicial",
+    "fr": "Valeur initiale",
+    "ja": "初期値",
+    "ko": "초기값",
+    "ru": "Начальное значение",
+    "zh-CN": "初始值",
+    "zh-TW": "預設值"
+  },
+
+  "readonly_badge_abbreviation": {
+    "de": "Schreibgeschützt",
+    "en-US": "Read only",
+    "fr": "Lecture seule",
+    "ja": "読取専用",
+    "ko": "읽기 전용",
+    "pt-BR": "Somente leitura ",
+    "ru": "Только для чтения ",
+    "zh-CN": "只读 "
+  },
+
+  "readonly_badge_title": {
+    "de": "Dieser Wert kann nicht geändert werden.",
+    "en-US": "This value may not be changed.",
+    "fr": "Cette valeur ne peut pas être changée.",
+    "ko": "이 값은 변경 할 수 없습니다.",
+    "pt-BR": "Este valor não pode ser alterado.",
+    "ru": "Это значение изменять нельзя.",
+    "zh-CN": "该属性的值无法更改"
+  },
+
+  "see_compat_table_copy": {
+    "de": "<strong>Dies ist eine <a href='/de/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimentell'>experimentelle Technologie</a></strong><br />Überprüfen Sie die <a href='#browser-kompatibilität'>Browser-Kompatibilitätstabelle</a> sorgfältig vor der Verwendung auf produktiven Webseiten.",
+    "es": "<strong>Esta es una <a href='/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental'>tecnología experimental</a></strong><br />Comprueba la <a href='#browser_compatibility'>Tabla de compabilidad de navegadores</a> cuidadosamente antes de usarla en producción.",
+    "fr": "<strong>Cette fonction est expérimentale</strong><br />Puisque cette fonction est toujours en développement dans certains navigateurs, veuillez consulter le <a href='#compatibilité_des_navigateurs'>tableau de compatibilité</a> pour les préfixes à utiliser selon les navigateurs.<br />Il convient de noter qu'une fonctionnalité expérimentale peut voir sa syntaxe ou son comportement modifié dans le futur en fonction des évolutions de la spécification.",
+    "ja": "<strong>これは<a href='/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#実験的'>実験的な機能</a>です。</strong><br />本番で使用する前に<a href='#ブラウザーの互換性'>ブラウザー互換性一覧表</a>をチェックしてください。",
+    "ko": "<strong>이 기능은 <a href='/ko/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#실험적'>실험적인 기능</a>입니다.</strong><br />프로덕션 환경에서 사용하기 전에 <a href='#브라우저_호환성'>브라우저 호환성 표</a>를 주의 깊게 확인하세요.",
+    "zh-CN": "<strong>这是一项<a href='/zh-CN/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#实验性'>实验性技术</a></strong><br />在将其用于生产之前，请仔细检查<a href='#浏览器兼容性'>浏览器兼容性表格</a>。",
+    "zh-TW": "<strong>這是一個<a href='/zh-TW/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#實驗性質'>實驗中的功能</a></strong><br />此功能在某些瀏覽器尚在開發中，請參考<a href='#瀏覽器相容性'>兼容表格</a>以得到不同瀏覽器用的前輟。",
+    "en-US": "<strong>This is an <a href='/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental'>experimental technology</a></strong><br />Check the <a href='#browser_compatibility'>Browser compatibility table</a> carefully before using this in production.",
+    "pt-BR": "<strong>Esta é uma <a href='/pt-BR/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental'>tecnologia experimental</a></strong><br />Verifique a <a href='#browser_compatibility'>tabela de compatibilidade entre Navegadores</a> cuidadosamente antes de usar essa funcionalidade em produção.",
+    "ru": "<strong>Это экспериментальная технология</strong><br />Так как спецификация этой технологии ещё не стабилизировалась, смотрите <a href='#browser_compatibility'>таблицу совместимости</a> по поводу использования в различных браузерах. Также заметьте, что синтаксис и поведение экспериментальной технологии может измениться в будущих версиях браузеров, вслед за изменениями спецификации."
+  },
+
+  "available_in_worker__default": {
+    "de": "Diese Funktion ist in <a href=\"/de/docs/Web/API/Web_Workers_API\">Web Workers</a> verfügbar.",
+    "en-US": "This feature is available in <a href=\"/en-US/docs/Web/API/Web_Workers_API\">Web Workers</a>.",
+    "zh-CN": "此特性在 <a href=\"/zh-CN/docs/Web/API/Web_Workers_API\">Web Worker</a> 中可用。",
+    "zh-TW": "此功能可在 <a href=\"/zh-TW/docs/Web/API/Web_Workers_API\">Web Worker</a> 中使用。",
+    "es": "Esta característica está disponible en <a href=\"/es/docs/Web/API/Web_Workers_API\">Web Workers</a>.",
+    "fr": "Cette fonctionnalité est disponible via les <a href=\"/fr/docs/Web/API/Web_Workers_API\">Web Workers</a>.",
+    "ja": "この機能は<a href=\"/ja/docs/Web/API/Web_Workers_API\">ウェブワーカー</a>内で利用可能です。",
+    "ko": "이 기능은 <a href=\"/ko/docs/Web/API/Web_Workers_API\">Web Worker</a>에서 사용할 수 있습니다.",
+    "ru": "Эта возможность доступна в <a href=\"/ru/docs/Web/API/Web_Workers_API\">Web Workers</a>."
+  },
+
+  "available_in_worker__worker": {
+    "de": "Diese Funktion ist nur in <a href=\"/de/docs/Web/API/Web_Workers_API\">Web Workers</a> verfügbar.",
+    "en-US": "This feature is only available in <a href=\"/en-US/docs/Web/API/Web_Workers_API\">Web Workers</a>.",
+    "ja": "この機能は<a href=\"/ja/docs/Web/API/Web_Workers_API\">ウェブワーカー</a>内でのみ利用可能です。",
+    "zh-CN": "此特性仅在 <a href=\"/zh-CN/docs/Web/API/Web_Workers_API\">Web Worker</a> 中可用。"
+  },
+
+  "available_in_worker__window_and_worker_except_service": {
+    "de": "Diese Funktion ist in <a href=\"/de/docs/Web/API/Web_Workers_API\">Web Workers</a> verfügbar, mit Ausnahme von <a href=\"/de/docs/Web/API/Service_Worker_API\">Service Workers</a>.",
+    "en-US": "This feature is available in <a href=\"/en-US/docs/Web/API/Web_Workers_API\">Web Workers</a>, except for <a href=\"/en-US/docs/Web/API/Service_Worker_API\">Service Workers</a>.",
+    "ja": "この機能は<a href=\"/ja/docs/Web/API/Web_Workers_API\">ウェブワーカー</a>内で利用可能ですが、<a href=\"/ja/docs/Web/API/Service_Worker_API\">サービスワーカー</a>では使用できません。",
+    "zh-CN": "此特性在 <a href=\"/zh-CN/docs/Web/API/Web_Workers_API\">Web Worker</a>（不包括 <a href=\"/zh-CN/docs/Web/API/Service_Worker_API\">Service Worker</a>）中可用。",
+    "zh-TW": "此功能可在 <a href=\"/zh-TW/docs/Web/API/Web_Workers_API\">Web Worker</a>（不包括 <a href=\"/zh-TW/docs/Web/API/Service_Worker_API\">Service Worker</a>）中使用。"
+  },
+
+  "available_in_worker__window_and_worker_except_shared": {
+    "en-US": "This feature is available in <a href=\"/en-US/docs/Web/API/Web_Workers_API\">Web Workers</a>, except for <a href=\"/en-US/docs/Web/API/SharedWorkerGlobalScope\">Shared Web Workers</a>.",
+    "zh-CN": "此特性在 <a href=\"/zh-CN/docs/Web/API/Web_Workers_API\">Web Worker</a>（不包括<a href=\"/zh-CN/docs/Web/API/SharedWorkerGlobalScope\">共享 Web Worker</a>）中可用。"
+  },
+
+  "available_in_worker__worker_except_service": {
+    "de": "Diese Funktion ist nur in <a href=\"/de/docs/Web/API/Web_Workers_API\">Web Workers</a> verfügbar, mit Ausnahme von <a href=\"/de/docs/Web/API/Service_Worker_API\">Service Workers</a>.",
+    "en-US": "This feature is only available in <a href=\"/en-US/docs/Web/API/Web_Workers_API\">Web Workers</a>, except for <a href=\"/en-US/docs/Web/API/Service_Worker_API\">Service Workers</a>.",
+    "ja": "この機能は<a href=\"/ja/docs/Web/API/Web_Workers_API\">ウェブワーカー</a>内でのみ利用可能ですが、<a href=\"/ja/docs/Web/API/Service_Worker_API\">サービスワーカー</a>では使用できません。",
+    "zh-CN": "此特性仅在 <a href=\"/zh-CN/docs/Web/API/Web_Workers_API\">Web Worker</a>（不包括 <a href=\"/zh-CN/docs/Web/API/Service_Worker_API\">Service Worker</a>）中可用。"
+  },
+
+  "available_in_worker__window_and_dedicated": {
+    "de": "Diese Funktion ist in <a href=\"/en-US/docs/Web/API/DedicatedWorkerGlobalScope\">Dedicated Web Workers</a> verfügbar.",
+    "en-US": "This feature is available in <a href=\"/en-US/docs/Web/API/DedicatedWorkerGlobalScope\">Dedicated Web Workers</a>.",
+    "ja": "この機能は<a href=\"/ja/docs/Web/API/DedicatedWorkerGlobalScope\">専用ウェブワーカー</a>内で利用可能です。",
+    "zh-CN": "此特性在<a href=\"/zh-CN/docs/Web/API/DedicatedWorkerGlobalScope\">专用 Web Worker</a>中可用。"
+  },
+
+  "available_in_worker__dedicated": {
+    "de": "Diese Funktion ist nur in <a href=\"/de/docs/Web/API/DedicatedWorkerGlobalScope\">Dedicated Web Workers</a> verfügbar.",
+    "en-US": "This feature is only available in <a href=\"/en-US/docs/Web/API/DedicatedWorkerGlobalScope\">Dedicated Web Workers</a>.",
+    "ja": "この機能は<a href=\"/ja/docs/Web/API/DedicatedWorkerGlobalScope\">専用ウェブワーカー</a>内でのみ利用可能です。",
+    "zh-CN": "此特性仅在<a href=\"/zh-CN/docs/Web/API/DedicatedWorkerGlobalScope\">专用 Web Worker</a> 中可用。"
+  },
+
+  "available_in_worker__window_and_service": {
+    "de": "Diese Funktion ist in <a href=\"/de/docs/Web/API/Service_Worker_API\">Service Workers</a> verfügbar.",
+    "en-US": "This feature is available in <a href=\"/en-US/docs/Web/API/Service_Worker_API\">Service Workers</a>.",
+    "ja": "この機能は<a href=\"/ja/docs/Web/API/Service_Worker_API\">サービスワーカー</a>内で利用可能です。",
+    "zh-CN": "此特性在 <a href=\"/zh-CN/docs/Web/API/Service_Worker_API\">Service Worker</a> 中可用。"
+  },
+
+  "available_in_worker__service": {
+    "de": "Diese Funktion ist nur in <a href=\"/de/docs/Web/API/Service_Worker_API\">Service Workers</a> verfügbar.",
+    "en-US": "This feature is only available in <a href=\"/en-US/docs/Web/API/Service_Worker_API\">Service Workers</a>.",
+    "ja": "この機能は<a href=\"/ja/docs/Web/API/Service_Worker_API\">サービスワーカー</a>内でのみ利用可能です。",
+    "zh-CN": "此特性仅在 <a href=\"/zh-CN/docs/Web/API/Service_Worker_API\">Service Worker</a> 中可用。"
+  },
+
+  "example_extensions_heading": {
+    "de": "Beispielerweiterungen",
+    "en-US": "Example extensions",
+    "zh-CN": "示例扩展",
+    "zh-TW": "範例擴充套件"
+  },
+
+  "previous": {
+    "de": " Zurück ",
+    "en-US": " Previous ",
+    "es": " Anterior ",
+    "fr": " Précédent ",
+    "ja": " 前のページ ",
+    "ko": " 이전 ",
+    "pt-BR": " Anterior ",
+    "ru": " Назад ",
+    "zh-CN": " 上一页 ",
+    "zh-TW": " 前頁 "
+  },
+
+  "next": {
+    "de": " Weiter ",
+    "en-US": " Next  ",
+    "es": " Siguiente  ",
+    "fr": " Suivant  ",
+    "ja": " 次のページ  ",
+    "ko": " 다음  ",
+    "pt-BR": " Próxima  ",
+    "ru": " Далее  ",
+    "zh-CN": " 下一页  ",
+    "zh-TW": " 次頁  "
+  },
+
+  "prev_next_menu": {
+    "de": " Übersicht: ",
+    "en-US": " Overview: ",
+    "pt-BR": " Menu: ",
+    "fr": " Aperçu&nbsp;: ",
+    "ru": " Обзор: ",
+    "zh-CN": " 概述：",
+    "zh-TW": " 概述："
+  },
+
+  "for_developers": {
+    "de": " für Entwickler",
+    "en-US": " for developers",
+    "fr": " pour les développeurs",
+    "ko": "릴리즈노트",
+    "ru": " для разработчиков",
+    "zh-CN": " 的开发者说明"
+  },
+
+  "js_property_attributes_header_prefix": {
+    "de": "Eigenschaften von ",
+    "en-US": "Property attributes of ",
+    "es": "Atributos de la propiedad ",
+    "fr": "Attributs de ",
+    "ja": "",
+    "ko": "Property attributes of ",
+    "pt-BR": "Property attributes of ",
+    "ru": "Атрибуты свойства ",
+    "zh-CN": ""
+  },
+  "js_property_attributes_header_suffix": {
+    "de": "",
+    "en-US": "",
+    "es": "",
+    "fr": "",
+    "ja": " のプロパティ属性",
+    "ko": "",
+    "pt-BR": "",
+    "ru": "",
+    "zh-CN": " 的属性特性",
+    "zh-TW": " 的屬性特性"
+  },
+  "writable": {
+    "de": "Schreibbar",
+    "en-US": "Writable",
+    "es": "Sobrescribir",
+    "fr": "Écrivable",
+    "ja": "書込可能",
+    "ko": "쓰기 가능",
+    "pt-BR": "Writable",
+    "ru": "Записываемое",
+    "zh-CN": "可写",
+    "zh-TW": "可寫"
+  },
+  "enumerable": {
+    "de": "Aufzählbar",
+    "en-US": "Enumerable",
+    "es": "Numerable",
+    "fr": "Énumérable",
+    "ja": "列挙可能",
+    "ko": "열거 가능",
+    "pt-BR": "Enumerable",
+    "ru": "Перечисляемое",
+    "zh-CN": "可枚举",
+    "zh-TW": "可列舉"
+  },
+  "configurable": {
+    "de": "Konfigurierbar",
+    "en-US": "Configurable",
+    "es": "Configurable",
+    "fr": "Configurable",
+    "ja": "設定可能",
+    "ko": "설정 가능",
+    "pt-BR": "Configurable",
+    "ru": "Настраиваемое",
+    "zh-CN": "可配置",
+    "zh-TW": "可配置"
+  },
+  "yes": {
+    "de": "ja",
+    "en-US": "yes",
+    "es": "Sí",
+    "fr": "Oui",
+    "ja": "可",
+    "ko": "가능",
+    "pt-BR": "yes",
+    "ru": "да",
+    "zh-CN": "是",
+    "zh-TW": "是"
+  },
+  "no": {
+    "de": "nein",
+    "en-US": "no",
+    "es": "No",
+    "fr": "Non",
+    "ja": "不可",
+    "ko": "불가능",
+    "pt-BR": "no",
+    "ru": "нет",
+    "zh-CN": "否",
+    "zh-TW": "否"
+  },
+  "overview": {
+    "de": "Übersicht",
+    "en-US": "Overview",
+    "es": "Generalidades",
+    "fr": "Aperçu",
+    "ja": "の概要",
+    "ko": "개요",
+    "ru": "Обзор",
+    "zh-CN": "概述",
+    "zh-TW": "概述"
+  }
+}

@@ -2,24 +2,16 @@
 title: AudioParamDescriptor
 slug: Web/API/AudioParamDescriptor
 page-type: web-api-interface
-tags:
-  - API
-  - Audio
-  - AudioParamDescriptor
-  - AudioWorkletProcessor
-  - Dictionary
-  - Reference
-  - Web Audio API
-  - parameterDescriptors
 browser-compat: api.AudioParamDescriptor
 ---
+
 {{APIRef("Web Audio API")}}
 
 The **`AudioParamDescriptor`** dictionary of the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) specifies properties for {{domxref("AudioParam")}} objects.
 
 It is used to create custom `AudioParam`s on an {{domxref("AudioWorkletNode")}}. If the underlying {{domxref("AudioWorkletProcessor")}} has a {{domxref("AudioWorkletProcessor.parameterDescriptors", "parameterDescriptors")}} static getter, then the returned array of objects based on this dictionary is used internally by `AudioWorkletNode` constructor to populate its {{domxref("AudioWorkletNode.parameters", "parameters")}} property accordingly.
 
-## Properties
+## Instance properties
 
 - `name`
   - : The string which represents the name of the `AudioParam`. Under this name the `AudioParam` will be available in the {{domxref("AudioWorkletNode.parameters", "parameters")}} property of the node, and under this name the {{domxref("AudioWorkletProcessor.process")}} method will acquire the calculated values of this `AudioParam`.
@@ -39,17 +31,19 @@ The code fragment below shows a descriptor of this type being returned by a stat
 ```js
 // white-noise-processor.js
 class WhiteNoiseProcessor extends AudioWorkletProcessor {
-  static get parameterDescriptors () {
-    return [{
-      name: 'customGain',
-      defaultValue: 1,
-      minValue: 0,
-      maxValue: 1,
-      automationRate: 'a-rate'
-    }]
+  static get parameterDescriptors() {
+    return [
+      {
+        name: "customGain",
+        defaultValue: 1,
+        minValue: 0,
+        maxValue: 1,
+        automationRate: "a-rate",
+      },
+    ];
   }
 
-// …
+  // …
 }
 ```
 

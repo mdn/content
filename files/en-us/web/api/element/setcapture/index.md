@@ -1,30 +1,27 @@
 ---
-title: Element.setCapture()
+title: "Element: setCapture() method"
+short-title: setCapture()
 slug: Web/API/Element/setCapture
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Element
-  - Method
-  - Non-standard
-  - Reference
-  - Deprecated
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.Element.setCapture
 ---
+
 {{Deprecated_Header}}{{non-standard_header}}{{ APIRef("DOM") }}
 
 Call this method during the handling of a mousedown event to retarget all mouse events
-to this element until the mouse button is released or {{
-  domxref("document.releaseCapture()") }} is called.
+to this element until the mouse button is released or {{domxref("document.releaseCapture()")}} is called.
 
-> **Warning:** This interface never had much cross-browser
+> [!WARNING]
+> This interface never had much cross-browser
 > support and you probably looking for {{domxref("element.setPointerCapture")}} instead,
 > from the Pointer Events API.
 
 ## Syntax
 
-```js
+```js-nolint
 setCapture(retargetToElement)
 ```
 
@@ -44,54 +41,59 @@ In this example, the current mouse coordinates are drawn while you mouse around 
 clicking and holding down on an element.
 
 ```html
-<html>
-<head>
-  <title>Mouse Capture Example</title>
-  <style type="text/css">
-    #myButton {
-      border: solid black 1px;
-      color: black;
-      padding: 2px;
-      box-shadow: black 2px 2px;
-    }
-  </style>
-
-  <script type="text/javascript">
-    function init() {
-      const btn = document.getElementById("myButton");
-      if (btn.setCapture) {
-        btn.addEventListener("mousedown", mouseDown, false);
-        btn.addEventListener("mouseup", mouseUp, false);
-      } else {
-        document.getElementById("output").textContent
-          = "Sorry, there appears to be no setCapture support on this browser";
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Mouse Capture Example</title>
+    <style>
+      #myButton {
+        border: solid black 1px;
+        color: black;
+        padding: 2px;
+        box-shadow: black 2px 2px;
       }
-    }
+    </style>
 
-    function mouseDown(e) {
-      e.target.setCapture();
-      e.target.addEventListener("mousemove", mouseMoved, false);
-    }
+    <script>
+      function init() {
+        const btn = document.getElementById("myButton");
+        if (btn.setCapture) {
+          btn.addEventListener("mousedown", mouseDown, false);
+          btn.addEventListener("mouseup", mouseUp, false);
+        } else {
+          document.getElementById("output").textContent =
+            "Sorry, there appears to be no setCapture support on this browser";
+        }
+      }
 
-    function mouseUp(e) {
-      e.target.removeEventListener("mousemove", mouseMoved, false);
-    }
+      function mouseDown(e) {
+        e.target.setCapture();
+        e.target.addEventListener("mousemove", mouseMoved, false);
+      }
 
-    function mouseMoved(e) {
-      const output = document.getElementById("output");
-      output.textContent = `Position: ${e.clientX}, ${e.clientY}`;
-    }
-  </script>
-</head>
-<body onload="init()">
-  <p>This is an example of how to use mouse capture on elements in Gecko 2.0.</p>
-  <p><a id="myButton" href="#">Test Me</a></p>
-  <div id="output">No events yet</div>
-</body>
+      function mouseUp(e) {
+        e.target.removeEventListener("mousemove", mouseMoved, false);
+      }
+
+      function mouseMoved(e) {
+        const output = document.getElementById("output");
+        output.textContent = `Position: ${e.clientX}, ${e.clientY}`;
+      }
+    </script>
+  </head>
+  <body onload="init()">
+    <p>
+      This is an example of how to use mouse capture on elements in Gecko 2.0.
+    </p>
+    <p><a id="myButton" href="#">Test Me</a></p>
+    <div id="output">No events yet</div>
+  </body>
 </html>
 ```
 
-[View Live Examples](https://media.prod.mdn.mozit.cloud/samples/domref/mousecapture.html)
+[View Live Examples](https://mdn.dev/archives/media/samples/domref/mousecapture.html)
 
 ## Notes
 
@@ -100,7 +102,7 @@ layout of other elements.
 
 ## Specifications
 
-Based on Internet Explorer's implementation.
+Not part of any specification.
 
 ## Browser compatibility
 

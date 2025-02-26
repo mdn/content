@@ -1,32 +1,20 @@
 ---
-title: HTMLMediaElement.captureStream()
+title: "HTMLMediaElement: captureStream() method"
+short-title: captureStream()
 slug: Web/API/HTMLMediaElement/captureStream
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - HTML DOM
-  - HTMLMediaElement
-  - Media
-  - Media Capture DOM Elements
-  - Method
-  - Reference
-  - Video
-  - captureStream
 browser-compat: api.HTMLMediaElement.captureStream
 ---
-{{APIRef("HTML Media Capture")}}
 
-The **`captureStream()`** property of the
-{{domxref("HTMLMediaElement")}} interface returns a {{domxref('MediaStream')}} object
-which is streaming a real-time capture of the content being rendered in the media
-element.
+{{APIRef("Media Capture and Streams")}}
+
+The **`captureStream()`** method of the {{domxref("HTMLMediaElement")}} interface returns a {{domxref('MediaStream')}} object which is streaming a real-time capture of the content being rendered in the media element.
 
 This can be used, for example, as a source for a [WebRTC](/en-US/docs/Web/API/WebRTC_API) {{domxref("RTCPeerConnection")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 captureStream()
 ```
 
@@ -48,7 +36,7 @@ for streaming over WebRTC, to allow sharing prerecorded videos with another pers
 during a video call.
 
 ```js
-document.querySelector('.playAndRecord').addEventListener('click', function() {
+document.querySelector(".playAndRecord").addEventListener("click", () => {
   const playbackElement = document.getElementById("playback");
   const captureStream = playbackElement.captureStream();
   playbackElement.play();
@@ -72,7 +60,7 @@ whose source is, itself, a {{domxref("MediaStream")}} (like a {{HTMLElement("vid
 element which is presenting a stream being received over a
 {{domxref("RTCPeerConnection")}}). Beginning in Firefox 51, this works. This means you
 can capture a stream from the video element and use {{domxref("MediaRecorder")}} to
-record it. See {{bug(1259788)}} for details.
+record it. See [Firefox bug 1259788](https://bugzil.la/1259788) for details.
 
 However, `captureStream()` is still prefixed as
 `mozCaptureStream()` on Firefox for good reason: there are some quirks in the
@@ -97,7 +85,7 @@ present implementation which are worth noting:
   with MediaStream sources from then on.
 - This special behavior will be removed once the non-`MediaStream` source
   support is brought up to specification and the method is unprefixed. See
-  {{bug(1259788, "bug", 160)}} for details.
+  [Firefox bug 1259788](https://bugzil.la/1259788) for details.
 
 ## See also
 

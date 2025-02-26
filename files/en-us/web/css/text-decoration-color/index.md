@@ -1,22 +1,11 @@
 ---
 title: text-decoration-color
 slug: Web/CSS/text-decoration-color
-tags:
-  - CSS
-  - CSS Property
-  - CSS Text
-  - CSS Text Decoration
-  - HTML Colors
-  - HTML Styles
-  - Reference
-  - Styling HTML
-  - Styling text
-  - color
-  - colors
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.text-decoration-color
 ---
-{{ CSSRef }}
+
+{{CSSRef}}
 
 The **`text-decoration-color`** [CSS](/en-US/docs/Web/CSS) property sets the color of decorations added to text by {{ cssxref("text-decoration-line") }}.
 
@@ -33,7 +22,7 @@ CSS does not provide a direct mechanism for specifying a unique color for each l
 text-decoration-color: currentcolor;
 text-decoration-color: red;
 text-decoration-color: #00ff00;
-text-decoration-color: rgba(255, 128, 128, 0.5);
+text-decoration-color: rgb(255 128 128 / 50%);
 text-decoration-color: transparent;
 
 /* Global values */
@@ -49,7 +38,7 @@ text-decoration-color: unset;
 - {{cssxref("&lt;color&gt;")}}
   - : The color of the line decoration.
 
-## Accessibility concerns
+## Accessibility
 
 It is important to ensure that the contrast ratio between the color of the text, the background the text is placed over, and the text decoration line is high enough that people experiencing low vision conditions will be able to read the content of the page. Color contrast ratio is determined by comparing the luminosity of the text and background color values.
 
@@ -72,8 +61,10 @@ Color alone should not be used to convey meaning. For example, change of text an
 ### Basic example
 
 ```html
-<p>This paragraph has <s>some erroneous text</s>
-    inside it that I want to call attention to.</p>
+<p>
+  This paragraph has <s>some erroneous text</s> inside it that I want to call
+  attention to.
+</p>
 ```
 
 ```css
@@ -103,5 +94,4 @@ s {
 
 - When setting multiple line-decoration properties at once, it may be more convenient to use the {{cssxref("text-decoration")}} shorthand property instead.
 - The {{cssxref("&lt;color&gt;")}} data type
-- Other color-related properties: {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, and {{cssxref("column-rule-color")}}
-- [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_Colors/Applying_color)
+- Other color-related properties: {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, and {{cssxref("column-rule-color")}}

@@ -1,51 +1,55 @@
 ---
-title: PasswordCredential()
+title: "PasswordCredential: PasswordCredential() constructor"
+short-title: PasswordCredential()
 slug: Web/API/PasswordCredential/PasswordCredential
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Credential Management API
-  - PasswordCredential
-  - Reference
-  - credential management
+status:
+  - experimental
 browser-compat: api.PasswordCredential.PasswordCredential
 ---
-{{APIRef("Credential Management API")}}{{Non-standard_header}}
+
+{{APIRef("Credential Management API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`PasswordCredential()`**
 constructor creates a new {{domxref("PasswordCredential")}} object. In
 supporting browsers, an instance of this class may be passed the `credential`
-from the `init` object for global {{domxref('fetch()')}}.
+from the `init` object for global {{domxref("Window/fetch", "fetch()")}}.
 
 ## Syntax
 
-```js
-new PasswordCredential(passwordCredentialData)
-new PasswordCredential(htmlFormElement)
+```js-nolint
+new PasswordCredential(data)
+new PasswordCredential(form)
 ```
 
 ### Parameters
 
 Either of the following:
 
-- `passwordCredentialData`
+- `data`
 
   - : An object with the following properties:
 
     - `iconURL` {{optional_inline}}
-      - : The URL of a user's avatar image.
+      - : A string representing the URL of an icon or avatar to be associated with the credential.
     - `id`
-      - : The ID of the user signing in.
+      - : A string representing a unique ID for the credential.
     - `name` {{optional_inline}}
-      - : The name of the user signing in.
+      - : A string representing the credential username.
+    - `origin`
+      - : A string representing the credential's origin. {{domxref("PasswordCredential")}} objects are origin-bound, which means that they will only be usable on the specified origin they were intended to be used on.
     - `password`
-      - : The password of the user signing in.
+      - : A string representing the credential password.
 
-- `htmlFormElement`
+- `form`
   - : A reference to an {{domxref("HTMLFormElement")}} with appropriate input fields. The
     form should, at the very least, contain an id and password. It could also require a
     CSRF token.
+
+### Exceptions
+
+- {{jsxref("TypeError")}}
+  - : Thrown if one of the `id`, `origin` or `password` option is empty.
 
 ## Examples
 
@@ -56,7 +60,9 @@ Starting with the form element.
 
 ```html
 <form id="form" method="post">
+  <label for="id">Username:</label>
   <input type="text" name="id" autocomplete="username" />
+  <label for="password">Password:</label>
   <input type="password" name="password" autocomplete="current-password" />
   <input type="hidden" name="csrf_token" value="*****" />
 </form>
@@ -67,11 +73,10 @@ a {{domxref("PasswordCredential")}} object, and storing it in the browser's pass
 system.
 
 ```js
-const form = document.querySelector('#form');
+const form = document.querySelector("#form");
 const creds = new PasswordCredential(form);
 // Store the credentials.
-navigator.credentials.store(creds)
-  .then(function(creds) {
+navigator.credentials.store(creds).then((creds) => {
   // Do something with the credentials if you need to.
 });
 ```

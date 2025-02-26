@@ -1,21 +1,18 @@
 ---
-title: ProgressEvent()
+title: "ProgressEvent: ProgressEvent() constructor"
+short-title: ProgressEvent()
 slug: Web/API/ProgressEvent/ProgressEvent
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - DOM Events
-  - ProgressEvent
 browser-compat: api.ProgressEvent.ProgressEvent
 ---
-{{APIRef("XMLHttpRequest")}}
+
+{{APIRef("XMLHttpRequest API")}}{{AvailableInWorkers}}
 
 The **`ProgressEvent()`** constructor returns a new {{domxref("ProgressEvent")}} object, representing the current completion of a long process.
 
 ## Syntax
 
-```js
+```js-nolint
 new ProgressEvent(type)
 new ProgressEvent(type, options)
 ```
@@ -46,6 +43,28 @@ new ProgressEvent(type, options)
 ### Return value
 
 A new {{domxref("ProgressEvent")}} object.
+
+## Example
+
+The example demonstrates how a `ProgressEvent` is built using a constructor. This is particularly useful for tracking the progress of processes like file uploads, downloads, or any long-running tasks.
+
+```js
+function updateProgress(loaded, total) {
+  const progressEvent = new ProgressEvent("progress", {
+    lengthComputable: true,
+    loaded: loaded,
+    total: total,
+  });
+
+  document.dispatchEvent(progressEvent);
+}
+
+document.addEventListener("progress", (event) => {
+  console.log(`Progress: ${event.loaded}/${event.total}`);
+});
+
+updateProgress(50, 100);
+```
 
 ## Specifications
 

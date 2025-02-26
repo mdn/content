@@ -1,31 +1,25 @@
 ---
-title: BaseAudioContext.createStereoPanner()
+title: "BaseAudioContext: createStereoPanner() method"
+short-title: createStereoPanner()
 slug: Web/API/BaseAudioContext/createStereoPanner
 page-type: web-api-instance-method
-tags:
-  - API
-  - AudioContext
-  - BaseAudioContext
-  - Media
-  - Method
-  - Reference
-  - Web Audio API
-  - createStereoPanner
 browser-compat: api.BaseAudioContext.createStereoPanner
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `createStereoPanner()` method of the {{ domxref("BaseAudioContext") }} interface creates a {{ domxref("StereoPannerNode") }}, which can be used to apply
 stereo panning to an audio source.
 It positions an incoming audio stream in a stereo image using a [low-cost panning algorithm](https://webaudio.github.io/web-audio-api/#stereopanner-algorithm).
 
-> **Note:** The {{domxref("StereoPannerNode.StereoPannerNode", "StereoPannerNode()")}}
+> [!NOTE]
+> The {{domxref("StereoPannerNode.StereoPannerNode", "StereoPannerNode()")}}
 > constructor is the recommended way to create a {{domxref("StereoPannerNode")}}; see
 > [Creating an AudioNode](/en-US/docs/Web/API/AudioNode#creating_an_audionode).
 
 ## Syntax
 
-```js
+```js-nolint
 createStereoPanner()
 ```
 
@@ -39,7 +33,7 @@ A {{domxref("StereoPannerNode")}}.
 
 ## Examples
 
-In our [StereoPannerNode example](https://mdn.github.io/webaudio-examples/stereo-panner-node/) ([see source code](https://github.com/mdn/webaudio-examples/tree/master/stereo-panner-node)) HTML we have a simple {{htmlelement("audio")}} element along with a
+In our [StereoPannerNode example](https://mdn.github.io/webaudio-examples/stereo-panner-node/) ([see source code](https://github.com/mdn/webaudio-examples/tree/main/stereo-panner-node)) HTML we have a simple {{htmlelement("audio")}} element along with a
 slider {{HTMLElement("input")}} to increase and decrease pan value. In the JavaScript we
 create a {{domxref("MediaElementAudioSourceNode")}} and a
 {{domxref("StereoPannerNode")}}, and connect the two together using the
@@ -52,10 +46,10 @@ the left and right speakers of the output, respectively.
 
 ```js
 const audioCtx = new AudioContext();
-const myAudio = document.querySelector('audio');
+const myAudio = document.querySelector("audio");
 
-const panControl = document.querySelector('.panning-control');
-const panValue = document.querySelector('.panning-value');
+const panControl = document.querySelector(".panning-control");
+const panValue = document.querySelector(".panning-value");
 
 // Create a MediaElementAudioSourceNode
 // Feed the HTMLMediaElement into it
@@ -67,10 +61,10 @@ const panNode = audioCtx.createStereoPanner();
 // Event handler function to increase panning to the right and left
 // when the slider is moved
 
-panControl.oninput = function() {
+panControl.oninput = () => {
   panNode.pan.setValueAtTime(panControl.value, audioCtx.currentTime);
-  panValue.innerHTML = panControl.value;
-}
+  panValue.textContent = panControl.value;
+};
 
 // connect the MediaElementAudioSourceNode to the panNode
 // and the panNode to the destination, so we can play the

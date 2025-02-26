@@ -1,16 +1,14 @@
 ---
-title: BackgroundFetchRegistration.failureReason
+title: "BackgroundFetchRegistration: failureReason property"
+short-title: failureReason
 slug: Web/API/BackgroundFetchRegistration/failureReason
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - failureReason
-  - BackgroundFetchRegistration
+status:
+  - experimental
 browser-compat: api.BackgroundFetchRegistration.failureReason
 ---
-{{APIRef("Background Fetch API")}}
+
+{{APIRef("Background Fetch API")}}{{SeeCompatTable}}{{AvailableInWorkers}}
 
 The **`failureReason`** read-only property of the {{domxref("BackgroundFetchRegistration")}} interface returns a string with a value that indicates a reason for a background fetch failure.
 

@@ -1,35 +1,29 @@
 ---
-title: Window.convertPointFromPageToNode()
+title: "Window: webkitConvertPointFromPageToNode() method"
+short-title: webkitConvertPointFromPageToNode()
 slug: Web/API/Window/webkitConvertPointFromPageToNode
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Non-standard
-  - Point
-  - Reference
-  - Safari
-  - WebKit
-  - Window
-  - convertPointFromPageToNode
-browser-compat: api.Window.convertPointFromPageToNode
+status:
+  - deprecated
+  - non-standard
+browser-compat: api.Window.webkitConvertPointFromPageToNode
 ---
-{{APIRef}}
 
-{{Non-standard_header}}
+{{APIRef}}{{Deprecated_Header}}{{Non-standard_header}}
 
 Given a {{domxref("WebKitPoint")}} specified in the page's coordinate system, the
-{{domxref("Window")}} method **`convertPointFromPageToNode()`**
+{{domxref("Window")}} method **`webkitConvertPointFromPageToNode()`**
 returns a `Point` object specifying the same location in the coordinate
 system of the specified DOM {{domxref("Node")}}.
 
-> **Warning:** Please review the [Browser compatibility](#browser_compatibility) section before using this method,
+> [!WARNING]
+> Please review the [Browser compatibility](#browser_compatibility) section before using this method,
 > as it's not widely supported (nor is the {{domxref("WebKitPoint")}} object it uses).
 
 ## Syntax
 
-```js
-convertPointFromPageToNode(node, pagePoint)
+```js-nolint
+webkitConvertPointFromPageToNode(node, pagePoint)
 ```
 
 ### Parameters
@@ -57,5 +51,4 @@ current CSS Transforms Module Level 1 Working Draft.
 ## See also
 
 - {{domxref("Window.webkitConvertPointFromNodeToPage")}}
-- Mozilla implementation bug: {{bug(850808)}}
-- [`webkitConvertPointFromPageToNode` documentation at IE Dev Center](<https://msdn.microsoft.com/library/ie/dn760735(v=vs.85).aspx>)
+- Mozilla implementation bug: [Firefox bug 850808](https://bugzil.la/850808)

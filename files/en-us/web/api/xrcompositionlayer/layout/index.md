@@ -1,20 +1,14 @@
 ---
-title: XRCompositionLayer.layout
+title: "XRCompositionLayer: layout property"
+short-title: layout
 slug: Web/API/XRCompositionLayer/layout
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - VR
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-
+status:
+  - experimental
 browser-compat: api.XRCompositionLayer.layout
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The read-only **`layout`** property of the {{domxref("XRCompositionLayer")}} interface is the layout type of the layer.
 
@@ -48,9 +42,9 @@ To specify a layer's layout, use a layer creation method (like {{domxref("XRWebG
 
 ```js
 const layer = xrGlBinding.createQuadLayer({
-   pixelWidth: 1024,
-   pixelHeight: 768,
-   layout: "stereo"
+  pixelWidth: 1024,
+  pixelHeight: 768,
+  layout: "stereo",
 });
 
 layer.layout; // "stereo"

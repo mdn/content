@@ -1,29 +1,23 @@
 ---
-title: Document.hasFocus()
+title: "Document: hasFocus() method"
+short-title: hasFocus()
 slug: Web/API/Document/hasFocus
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Focus
-  - Method
-  - Reference
 browser-compat: api.Document.hasFocus
 ---
+
 {{APIRef}}
 
-The **`hasFocus()`** method of the {{domxref("Document")}}
-interface returns a boolean value indicating whether the document or any
-element inside the document has focus. This method can be used to determine whether the
-active element in a document has focus.
+The **`hasFocus()`** method of the {{domxref("Document")}} interface returns a boolean value indicating whether the document or any element inside the document has focus.
+This method can be used to determine whether the active element in a document has focus.
 
-> **Note:** When viewing a document, an element with focus is always the [active element](/en-US/docs/Web/API/Document/activeElement) in
-> the document, but an active element does not necessarily have focus. For example, an
-> active element within a popup window that is not the foreground doesn't have focus.
+> [!NOTE]
+> When viewing a document, an element with focus is always the [active element](/en-US/docs/Web/API/Document/activeElement) in the document, but an active element does not necessarily have focus.
+> For example, an active element within a popup window that is not the foreground doesn't have focus.
 
 ## Syntax
 
-```js
+```js-nolint
 hasFocus()
 ```
 
@@ -38,45 +32,53 @@ None.
 
 ## Examples
 
-This example checks whether the document has focus every 300 milliseconds. To test the
-functionality of `hasFocus()`, click on the button to open a new window, and
-try switching between the two pages.
+### Checking if the document has focus
 
-### HTML
+The following example checks whether the document has focus or not.
+A function called `checkPageFocus()` updates a paragraph element depending on the result of `document.hasFocus()`.
+Opening a new window will cause the document to lose focus and switching back to the original window will cause the document to regain focus.
 
-```html
-<p id="log">Awaiting focus check.</p>
-<button onclick="openWindow()">Open a new window</button>
+```html live-sample___has-focus
+<p id="log">Focus check results are shown here.</p>
+<button id="newWindow">Open new window</button>
 ```
 
-### JavaScript
+```css hidden live-sample___has-focus
+body {
+  padding: 1rem;
+  background: gray;
+  text-align: center;
+  font: 1.5rem sans-serif;
+}
+```
 
-```js
-function checkPageFocus() {
-  let body = document.querySelector('body');
-  let log = document.getElementById('log');
+```js live-sample___has-focus
+const body = document.querySelector("body");
+const log = document.getElementById("log");
 
+function checkDocumentFocus() {
   if (document.hasFocus()) {
-    log.textContent = 'This document has the focus.';
-    body.style.background = '#fff';
-  }
-  else {
-    log.textContent = 'This document does not have the focus.';
-    body.style.background = '#ccc';
+    log.textContent = "This document has focus.";
+    body.style.background = "white";
+  } else {
+    log.textContent = "This document does not have focus.";
+    body.style.background = "gray";
   }
 }
 
 function openWindow() {
-  window.open('https://developer.mozilla.org/', 'MDN', 'width=640,height=320,left=150,top=150');
+  window.open(
+    "https://developer.mozilla.org/",
+    "MDN",
+    "width=640,height=320,left=150,top=150",
+  );
 }
 
-// Check page focus every 300 milliseconds
-setInterval(checkPageFocus, 300);
+document.getElementById("newWindow").addEventListener("click", openWindow);
+setInterval(checkDocumentFocus, 300);
 ```
 
-### Result
-
-{{EmbedLiveSample("Examples")}}
+{{EmbedLiveSample('has-focus', , , , , , , 'allow-popups')}}
 
 ## Specifications
 
@@ -88,4 +90,5 @@ setInterval(checkPageFocus, 300);
 
 ## See also
 
+- {{domxref("Document.activeElement")}}
 - [Using the Page Visibility API](/en-US/docs/Web/API/Page_Visibility_API)

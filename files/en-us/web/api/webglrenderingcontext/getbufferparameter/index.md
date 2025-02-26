@@ -1,16 +1,12 @@
 ---
-title: WebGLRenderingContext.getBufferParameter()
+title: "WebGLRenderingContext: getBufferParameter() method"
+short-title: getBufferParameter()
 slug: Web/API/WebGLRenderingContext/getBufferParameter
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.getBufferParameter
 ---
-{{APIRef("WebGL")}}
+
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGLRenderingContext.getBufferParameter()`** method of
 the [WebGL API](/en-US/docs/Web/API/WebGL_API) returns information about the
@@ -18,7 +14,7 @@ buffer.
 
 ## Syntax
 
-```js
+```js-nolint
 getBufferParameter(target, pname)
 ```
 
@@ -32,22 +28,24 @@ getBufferParameter(target, pname)
       - : Buffer containing vertex attributes, such as
         vertex coordinates, texture coordinate data, or vertex color data.
     - `gl.ELEMENT_ARRAY_BUFFER`
-      - : Buffer used for element indices.
-    When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
-      the following values are available additionally:
 
-      - `gl.COPY_READ_BUFFER`
-        - : Buffer for copying from one buffer object to another.
-      - `gl.COPY_WRITE_BUFFER`
-        - : Buffer for copying from one buffer object to another.
-      - `gl.TRANSFORM_FEEDBACK_BUFFER`
-        - : Buffer for transform feedback operations.
-      - `gl.UNIFORM_BUFFER`
-        - : Buffer used for storing uniform blocks.
-      - `gl.PIXEL_PACK_BUFFER`
-        - : Buffer used for pixel transfer operations.
-      - `gl.PIXEL_UNPACK_BUFFER`
-        - : Buffer used for pixel transfer operations.
+      - : Buffer used for element indices.
+
+    When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
+    the following values are available additionally:
+
+    - `gl.COPY_READ_BUFFER`
+      - : Buffer for copying from one buffer object to another.
+    - `gl.COPY_WRITE_BUFFER`
+      - : Buffer for copying from one buffer object to another.
+    - `gl.TRANSFORM_FEEDBACK_BUFFER`
+      - : Buffer for transform feedback operations.
+    - `gl.UNIFORM_BUFFER`
+      - : Buffer used for storing uniform blocks.
+    - `gl.PIXEL_PACK_BUFFER`
+      - : Buffer used for pixel transfer operations.
+    - `gl.PIXEL_UNPACK_BUFFER`
+      - : Buffer used for pixel transfer operations.
 
 - `pname`
 
@@ -57,13 +55,17 @@ getBufferParameter(target, pname)
       - : Returns a {{domxref("WebGL_API/Types", "GLint")}} indicating the size
         of the buffer in bytes.
     - `gl.BUFFER_USAGE`
+
       - : Returns a {{domxref("WebGL_API/Types", "GLenum")}} indicating the
-        usage pattern of the buffer. One of the followings:
+        usage pattern of the buffer. One of the following:
+
         - `gl.STATIC_DRAW`
         - `gl.DYNAMIC_DRAW`
         - `gl.STREAM_DRAW`
-        When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "",
-              1)}}, the following values are available additionally:
+
+        When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
+        the following values are available additionally:
+
         - `gl.STATIC_READ`
         - `gl.DYNAMIC_READ`
         - `gl.STREAM_READ`

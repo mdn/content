@@ -1,24 +1,22 @@
 ---
-title: RTCDataChannel.reliable
+title: "RTCDataChannel: reliable property"
+short-title: reliable
 slug: Web/API/RTCDataChannel/reliable
 page-type: web-api-instance-property
-tags:
-  - Deprecated
-  - Non-standard
-  - Property
-  - RTCDataChannel
-  - Read-only
-  - WebRTC
-  - reliable
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.RTCDataChannel.reliable
 ---
-{{APIRef("WebRTC")}}{{deprecated_header}}
+
+{{APIRef("WebRTC")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The read-only `RTCDataChannel` property
 **`reliable`** indicates whether or not the data channel is
 reliable.
 
-> **Warning:** This property is obsolete. Use {{domxref("RTCDataChannel.ordered")}} instead in any
+> [!WARNING]
+> This property is obsolete. Use {{domxref("RTCDataChannel.ordered")}} instead in any
 > new code, and update existing code as soon as possible.
 
 ## Value

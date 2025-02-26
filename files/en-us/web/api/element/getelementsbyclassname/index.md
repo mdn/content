@@ -1,16 +1,11 @@
 ---
-title: Element.getElementsByClassName()
+title: "Element: getElementsByClassName() method"
+short-title: getElementsByClassName()
 slug: Web/API/Element/getElementsByClassName
 page-type: web-api-instance-method
-tags:
-  - API
-  - Classes
-  - Element
-  - Method
-  - Reference
-  - getElementsByClassName
 browser-compat: api.Element.getElementsByClassName
 ---
+
 {{APIRef("DOM")}}
 
 The {{domxref("Element")}} method
@@ -24,7 +19,7 @@ on the entire document, starting at the document root.
 
 ## Syntax
 
-```js
+```js-nolint
 getElementsByClassName(names)
 ```
 
@@ -51,7 +46,8 @@ immediately appears in the collection.
 The opposite is also true; as elements no longer match the set of names, they are
 immediately removed from the collection.
 
-> **Note:** In [quirks mode](/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode), the
+> [!NOTE]
+> In [quirks mode](/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode), the
 > class names are compared in a case-insensitive fashion. Otherwise, they're case
 > sensitive.
 
@@ -63,14 +59,14 @@ To look for elements that include among their classes a single specified class, 
 provide that class name when calling `getElementsByClassName()`:
 
 ```js
-element.getElementsByClassName('test');
+element.getElementsByClassName("test");
 ```
 
 This example finds all elements that have a class of `test`, which are also
 a descendant of the element that has the `id` of `main`:
 
 ```js
-document.getElementById('main').getElementsByClassName('test');
+document.getElementById("main").getElementsByClassName("test");
 ```
 
 ### Matching multiple classes
@@ -79,7 +75,7 @@ To find elements whose class lists include both the `red` and
 `test` classes:
 
 ```js
-element.getElementsByClassName('red test');
+element.getElementsByClassName("red test");
 ```
 
 ### Examining the results
@@ -88,45 +84,43 @@ You can use either the {{domxref("HTMLCollection.item", "item()")}} method on th
 returned `HTMLCollection` or standard array syntax to examine individual
 elements in the collection. However, the following code will not
 work as one might expect because `"matches"` will change as
-soon as any `"colorbox"` class is removed.
+soon as any `"color-box"` class is removed.
 
 ```js
-const matches = element.getElementsByClassName('colorbox');
+const matches = element.getElementsByClassName("color-box");
 
 for (let i = 0; i < matches.length; i++) {
-  matches[i].classList.remove('colorbox');
-  matches.item(i).classList.add('hueframe');
+  matches[i].classList.remove("color-box");
+  matches.item(i).classList.add("hue-frame");
 }
 ```
 
 Instead, use another method, such as:
 
 ```js
-const matches = element.getElementsByClassName('colorbox');
+const matches = element.getElementsByClassName("color-box");
 
 while (matches.length > 0) {
-  matches.item(0).classList.add('hueframe');
-  matches[0].classList.remove('colorbox');
+  matches.item(0).classList.add("hue-frame");
+  matches[0].classList.remove("color-box");
 }
 ```
 
-This code finds descendant elements with the `"colorbox"` class, adds the
-class `"hueframe"`, by calling `item(0)`, then removes
-`"colorbox"` (using array notation). Another element (if any are left) will
+This code finds descendant elements with the `"color-box"` class, adds the
+class `"hue-frame"`, by calling `item(0)`, then removes
+`"color-box"` (using array notation). Another element (if any are left) will
 then become `item(0)`.
 
 ### Filtering the results using array methods
 
-We can also use methods of {{jsxref("Array.prototype")}} on any {{
-  domxref("HTMLCollection") }} by passing the {{domxref("HTMLCollection")}} as the
-method's `this` value. Here we'll find all {{HTMLElement("div")}} elements
-that have a class of `test`:
+We can also use {{jsxref("Array")}} methods on any {{domxref("HTMLCollection")}} by passing the {{domxref("HTMLCollection")}} as the method's `this` value. Here we'll find all {{HTMLElement("div")}} elements that have a class of `test`:
 
 ```js
-const testElements = document.getElementsByClassName('test');
-const testDivs = Array.prototype.filter.call(testElements, function(testElement) {
-  return testElement.nodeName === 'DIV';
-});
+const testElements = document.getElementsByClassName("test");
+const testDivs = Array.prototype.filter.call(
+  testElements,
+  (testElement) => testElement.nodeName === "DIV",
+);
 ```
 
 ## Specifications

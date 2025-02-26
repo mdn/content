@@ -1,16 +1,12 @@
 ---
-title: WebGLRenderingContext.getActiveUniform()
+title: "WebGLRenderingContext: getActiveUniform() method"
+short-title: getActiveUniform()
 slug: Web/API/WebGLRenderingContext/getActiveUniform
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.getActiveUniform
 ---
-{{APIRef("WebGL")}}
+
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGLRenderingContext.getActiveUniform()`** method of
 the [WebGL API](/en-US/docs/Web/API/WebGL_API) returns a
@@ -20,7 +16,7 @@ generic library creation.
 
 ## Syntax
 
-```js
+```js-nolint
 getActiveUniform(program, index)
 ```
 
@@ -32,8 +28,7 @@ getActiveUniform(program, index)
 - `index`
   - : A {{domxref("WebGL_API/Types", "GLuint")}} specifying the index of the uniform attribute to get. This
     value is an index 0 to N - 1 as returned
-    by {{domxref("WebGLRenderingContext.getProgramParameter",
-    "gl.getProgramParameter(program, gl.ACTIVE_UNIFORMS)")}}.
+    by {{domxref("WebGLRenderingContext.getProgramParameter", "gl.getProgramParameter(program, gl.ACTIVE_UNIFORMS)")}}.
 
 ### Return value
 
@@ -87,12 +82,12 @@ The `type` attribute of the return value will be one of the following:
 
 When `gl.linkProgram` is called, WebGL creates a list of active uniforms.
 These are possible values of the `name` attribute of return values of
-{{domxref("WebGLRenderingContext.getActiveUniform()", "getActiveUniform")}}. WebGL
+`getActiveUniform`. WebGL
 generates one or more entries in the list depending on the declared type of the uniform
 in the shader:
 
 - Single basic type: one entry with the name of the uniform. E.g.
-  `uniform vec4 a;` will result in  `a`.
+  `uniform vec4 a;` will result in `a`.
 - Array of basic type: one entry with the name of the uniform suffixed with
   `[0]`. E.g. `uniform vec4 b[];` will result in
   `b[0]`.
@@ -129,7 +124,7 @@ blocks instanced with arrays).
 const numUniforms = gl.getProgramParameter(program, gl.ACTIVE_UNIFORMS);
 for (let i = 0; i < numUniforms; ++i) {
   const info = gl.getActiveUniform(program, i);
-  console.log('name:', info.name, 'type:', info.type, 'size:', info.size);
+  console.log("name:", info.name, "type:", info.type, "size:", info.size);
 }
 ```
 

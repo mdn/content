@@ -1,36 +1,20 @@
 ---
-title: RTCIceCandidatePairStats.packetsReceived
+title: "RTCIceCandidatePairStats: packetsReceived property"
+short-title: packetsReceived
 slug: Web/API/RTCIceCandidatePairStats/packetsReceived
 page-type: web-api-instance-property
-tags:
-  - API
-  - Communication
-  - ICE
-  - Networking
-  - Property
-  - RTCIceCandidatePairStats
-  - Reference
-  - Statistics
-  - Stats
-  - WebRTC
-  - WebRTC API
-  - packetsReceived
-browser-compat: api.RTCIceCandidatePairStats.packetsReceived
+status:
+  - experimental
+browser-compat: api.RTCStatsReport.type_candidate-pair.packetsReceived
 ---
-{{APIRef("WebRTC")}}
 
-The {{domxref("RTCIceCandidatePairStats")}} dictionary's
-**`packetsReceived`** property indicates the total number of
-packets of any kind that have been received on the connection described by the pair of
-candidates.
+{{APIRef("WebRTC")}}{{SeeCompatTable}}
 
-The number of packets sent to date on the connection can be obtained using
-{{domxref("RTCIceCandidatePairStats.packetsSent", "packetsSent")}}.
+The **`packetsReceived`** property of the {{domxref("RTCIceCandidatePairStats")}} dictionary indicates the total number of packets received on the candidate pair.
 
-## Value
+### Value
 
-An integer value indicating the total number of packets, of any kind, which have been
-received on the connection described by the two candidates comprising this pair.
+An integer value indicating the total number of packets received on the pair.
 
 ## Specifications
 
@@ -39,3 +23,7 @@ received on the connection described by the two candidates comprising this pair.
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("RTCIceCandidatePairStats.bytesReceived")}}

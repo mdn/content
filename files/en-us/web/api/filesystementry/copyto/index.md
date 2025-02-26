@@ -1,20 +1,15 @@
 ---
-title: FileSystemEntry.copyTo()
+title: "FileSystemEntry: copyTo() method"
+short-title: copyTo()
 slug: Web/API/FileSystemEntry/copyTo
 page-type: web-api-instance-method
-tags:
-  - API
-  - File and Directory Entries APIs
-  - FileSystemEntry
-  - Files
-  - Method
-  - Non-standard
-  - Reference
-  - copyTo
-  - Deprecated
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.FileSystemEntry.copyTo
 ---
-{{APIRef("File and Directory Entries API")}}{{deprecated_header}}
+
+{{APIRef("File and Directory Entries API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The {{domxref("FileSystemEntry")}} interface's method
 **`copyTo()`** copies the file
@@ -30,7 +25,7 @@ typical restrictions on what you can do:
 
 ## Syntax
 
-```js
+```js-nolint
 copyTo(newParent)
 copyTo(newParent, newName)
 copyTo(newParent, newName, successCallback)
@@ -57,7 +52,7 @@ copyTo(newParent, newName, successCallback, errorCallback)
 
 None ({{jsxref("undefined")}}).
 
-### Errors
+### Exceptions
 
 - `FileError.INVALID_MODIFICATION_ERR`
   - : The requested operation involves an impossible change, such as moving a directory
@@ -73,11 +68,21 @@ This example shows how a temporary log file might be moved into a more permanent
 directory.
 
 ```js
-workingDirectory.getFile("tmp/log.txt", {}, function(fileEntry) {
-  workingDirectory.getDirectory("log", {}, function(dirEntry) {
-    fileEntry.copyTo(dirEntry);
-  }, handleError);
-}, handleError);
+workingDirectory.getFile(
+  "tmp/log.txt",
+  {},
+  (fileEntry) => {
+    workingDirectory.getDirectory(
+      "log",
+      {},
+      (dirEntry) => {
+        fileEntry.copyTo(dirEntry);
+      },
+      handleError,
+    );
+  },
+  handleError,
+);
 ```
 
 ## Browser compatibility
@@ -87,4 +92,3 @@ workingDirectory.getFile("tmp/log.txt", {}, function(fileEntry) {
 ## See also
 
 - [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
-- [Introduction to the File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)

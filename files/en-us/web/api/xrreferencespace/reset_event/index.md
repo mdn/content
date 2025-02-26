@@ -1,26 +1,12 @@
 ---
-title: 'XRReferenceSpace: reset event'
+title: "XRReferenceSpace: reset event"
+short-title: reset
 slug: Web/API/XRReferenceSpace/reset_event
 page-type: web-api-event
-tags:
-  - API
-  - AR
-  - Event
-  - Graphics
-  - Reality
-  - Reference
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRReferenceSpace
-  - augmented
-  - reset
 browser-compat: api.XRReferenceSpace.reset_event
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SecureContext_Header}}
 
 The **`reset`** event is sent to an {{domxref("XRReferenceSpace")}} object when a discontinuity is detected in either the native origin or the effective origin, causing a jump in the position or orientation of objects oriented using the reference space. This is common when the user calibrates or recalibrates an XR device, or if the device automatically changes its origin after losing tracking of the user, then re-gaining it.
 
@@ -35,9 +21,9 @@ This event is not cancelable.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('reset', (event) => { })
+addEventListener("reset", (event) => {});
 
-onreset = (event) => { }
+onreset = (event) => {};
 ```
 
 ## Event type
@@ -65,7 +51,8 @@ There are a number of reasons why a reset might occur. Most common among them ar
 - The user is in an `unbounded` reference space and has moved far enough from the starting position (the reference space's origin) that floating-point or other forms of error or drift are problematic. The coordinate system is thus reset with its new origin at or near the user's current position.
 - The WebXR infrastructure or hardware drivers detected that the device had temporarily lost tracking, causing the hardware and software to be out of sync on position and orientation.
 
-> **Note:** A `reset` event will _not_ occur if the reference space is able to regain tracking of its previous origin, since that means the origin has not been forced to be relocated. This event is only fired when the origin has to be relocated to recover from the tracking loss.
+> [!NOTE]
+> A `reset` event will _not_ occur if the reference space is able to regain tracking of its previous origin, since that means the origin has not been forced to be relocated. This event is only fired when the origin has to be relocated to recover from the tracking loss.
 
 ### Manual resets
 

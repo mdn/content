@@ -1,16 +1,11 @@
 ---
-title: HTMLElement.offsetHeight
+title: "HTMLElement: offsetHeight property"
+short-title: offsetHeight
 slug: Web/API/HTMLElement/offsetHeight
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM View
-  - NeedsMarkupWork
-  - NeedsNonDHMLImage
-  - Property
-  - Reference
 browser-compat: api.HTMLElement.offsetHeight
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLElement.offsetHeight`** read-only property returns
@@ -27,7 +22,8 @@ If the element is hidden (for example, by setting `style.display` on the
 element or one of its ancestors to `"none"`), then `0` is
 returned.
 
-> **Note:** This property will round the value to an integer. If you need a fractional value, use
+> [!NOTE]
+> This property will round the value to an integer. If you need a fractional value, use
 > {{ domxref("element.getBoundingClientRect()") }}.
 
 ## Value
@@ -36,7 +32,7 @@ A number.
 
 ## Examples
 
-![](dimensions-offset.png)
+![An example element with large padding, border and margin. `offsetHeight` is the layout height of the element including its padding and border, and excluding its margin.](dimensions-offset.png)
 
 The example image above shows a scrollbar and an `offsetHeight` which fits
 on the window. However, non-scrollable elements may have large `offsetHeight`
@@ -49,12 +45,6 @@ scrollable container.
 
 {{Specifications}}
 
-### Notes
-
-`offsetHeight` is a property of the DHTML object model which was first
-introduced by MSIE. It is sometimes referred to as an element's physical/graphical
-dimensions, or an element's border-box height.
-
 ## Browser compatibility
 
 {{Compat}}
@@ -65,4 +55,3 @@ dimensions, or an element's border-box height.
 - {{domxref("Element.scrollHeight")}}
 - {{domxref("HTMLElement.offsetWidth")}}
 - [Determining the dimensions of elements](/en-US/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)
-- [MSDN Measuring Element Dimension and Location](<https://docs.microsoft.com/previous-versions/hh781509(v=vs.85)>)

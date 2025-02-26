@@ -2,23 +2,14 @@
 title: Writing WebSocket client applications
 slug: Web/API/WebSockets_API/Writing_WebSocket_client_applications
 page-type: guide
-tags:
-  - Client
-  - Example
-  - Guide
-  - Networking
-  - Web Sockets API
-  - WebSocket
-  - WebSocket API
-  - WebSockets
 ---
-{{APIRef("Websockets API")}}
+
+{{DefaultAPISidebar("WebSockets API")}} {{AvailableInWorkers}}
 
 WebSocket client applications use the [WebSocket API](/en-US/docs/Web/API/WebSockets_API) to communicate with [WebSocket servers](/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_servers) using the WebSocket protocol.
 
-{{AvailableInWorkers}}
-
-> **Note:** The example snippets in this article are taken from our WebSocket chat client/server sample.
+> [!NOTE]
+> The example snippets in this article are taken from our WebSocket chat client/server sample.
 > [See the code](https://github.com/mdn/samples-server/tree/master/s/websocket-chat).
 
 ## Creating a WebSocket object
@@ -33,8 +24,9 @@ webSocket = new WebSocket(url, protocols);
 
 - `url`
   - : The URL to which to connect; this should be the URL to which the WebSocket server will respond.
-    This should use the URL scheme `wss://`, although some software may allow you to use the insecure `ws://` for local connections.
-- `protocols` {{ optional_inline() }}
+    This should use the URL scheme `wss://`, although some software may allow you to use the insecure `ws://` for a local connection.
+    Relative URL values and `https://` and `http://` schemes are also allowed in [most recent browser versions](/en-US/docs/Web/API/WebSocket/WebSocket#browser_compatibility).
+- `protocols` {{optional_inline}}
   - : Either a single protocol string or an array of protocol strings.
     These strings are used to indicate sub-protocols, so that a single server can implement multiple WebSocket sub-protocols (for example, you might want one server to be able to handle different types of interactions depending on the specified `protocol`).
     If you don't specify a protocol string, an empty string is assumed.
@@ -44,7 +36,7 @@ This may happen if you attempt to use an insecure connection (most {{Glossary("u
 
 ### Connection errors
 
-If an error occurs while attempting to connect, first a simple event with the name `error` is sent to the {{domxref("WebSocket")}} object (thereby invoking its {{domxref("WebSocket.onerror", "onerror")}} handler), and then the {{domxref("CloseEvent")}} is sent to the `WebSocket` object (thereby invoking its {{domxref("WebSocket.onclose", "onclose")}} handler) to indicate the reason for the connection's closing.
+If an error occurs while attempting to connect, an [`error` event](/en-US/docs/Web/API/WebSocket/error_event) is first sent to the {{domxref("WebSocket")}} object (thereby invoking any handlers), followed by a [`close` event](/en-US/docs/Web/API/WebSocket/close_event) that indicates the reason for the connection's closing.
 
 The browser may also output to its console a more descriptive error message as well as a closing code as defined in [RFC 6455, Section 7.4](https://datatracker.ietf.org/doc/html/rfc6455#section-7.4) through the {{domxref("CloseEvent")}}.
 
@@ -54,16 +46,22 @@ This simple example creates a new WebSocket, connecting to the server at `wss://
 A custom protocol of "protocolOne" is named in the request for the socket in this example, though this can be omitted.
 
 ```js
-const exampleSocket = new WebSocket("wss://www.example.com/socketserver", "protocolOne");
+const exampleSocket = new WebSocket(
+  "wss://www.example.com/socketserver",
+  "protocolOne",
+);
 ```
 
-On return, {{domxref("WebSocket.readyState", "exampleSocket.readyState")}} is `CONNECTING`. The `readyState` will become `OPEN` once
-the connection is ready to transfer data.
+On return, {{domxref("WebSocket.readyState", "exampleSocket.readyState")}} is `CONNECTING`.
+The `readyState` will become `OPEN` once the connection is ready to transfer data.
 
 If you want to open a connection and are flexible about the protocols you support, you can specify an array of protocols:
 
 ```js
-const exampleSocket = new WebSocket("wss://www.example.com/socketserver", ["protocolOne", "protocolTwo"]);
+const exampleSocket = new WebSocket("wss://www.example.com/socketserver", [
+  "protocolOne",
+  "protocolTwo",
+]);
 ```
 
 Once the connection is established (that is, `readyState` is `OPEN`), {{domxref("WebSocket.protocol", "exampleSocket.protocol")}} will tell you which protocol the server selected.
@@ -82,19 +80,18 @@ exampleSocket.send("Here's some text that the server is urgently awaiting!");
 You can send data as a string, {{ domxref("Blob") }}, or {{jsxref("ArrayBuffer")}}.
 
 As establishing a connection is asynchronous and prone to failure there is no guarantee that calling the `send()` method immediately after creating a WebSocket object will be successful.
-We can at least be sure that attempting to send data only takes place once a connection is established by defining an {{domxref("WebSocket.onopen", "onopen")}} event handler to do the work:
+We can at least be sure that attempting to send data only takes place once a connection is established by defining an {{domxref("WebSocket/open_event", "onopen")}} event handler to do the work:
 
 ```js
-exampleSocket.onopen = function (event) {
+exampleSocket.onopen = (event) => {
   exampleSocket.send("Here's some text that the server is urgently awaiting!");
 };
 ```
 
 ### Using JSON to transmit objects
 
-One handy thing you can do is use {{glossary("JSON")}} to send reasonably complex data
-to the server. For example, a chat program can interact with a server using a protocol
-implemented using packets of JSON-encapsulated data:
+One handy thing you can do is use {{glossary("JSON")}} to send reasonably complex data to the server.
+For example, a chat program can interact with a server using a protocol implemented using packets of JSON-encapsulated data:
 
 ```js
 // Send text to all users through the server
@@ -103,8 +100,8 @@ function sendText() {
   const msg = {
     type: "message",
     text: document.getElementById("text").value,
-    id:   clientID,
-    date: Date.now()
+    id: clientID,
+    date: Date.now(),
   };
 
   // Send the msg object as a JSON-formatted string.
@@ -119,14 +116,13 @@ function sendText() {
 
 WebSockets is an event-driven API; when messages are received, a `message`
 event is sent to the `WebSocket` object. To handle it, add an event listener
-for the `message` event, or use the {{domxref("WebSocket.onmessage",
-  "onmessage")}} event handler. To begin listening for incoming data, you can do something
-like this:
+for the `message` event, or use the {{domxref("WebSocket/message_event", "onmessage")}} event handler.
+To begin listening for incoming data, you can do something like this:
 
 ```js
-exampleSocket.onmessage = function (event) {
+exampleSocket.onmessage = (event) => {
   console.log(event.data);
-}
+};
 ```
 
 ### Receiving and interpreting JSON objects
@@ -140,14 +136,14 @@ Let's consider the chat client application first alluded to in [Using JSON to tr
 The code that interprets these incoming messages might look like this:
 
 ```js
-exampleSocket.onmessage = function(event) {
-  const f = document.getElementById("chatbox").contentDocument;
+exampleSocket.onmessage = (event) => {
+  const f = document.getElementById("chat-box").contentDocument;
   let text = "";
   const msg = JSON.parse(event.data);
   const time = new Date(msg.date);
   const timeStr = time.toLocaleTimeString();
 
-  switch(msg.type) {
+  switch (msg.type) {
     case "id":
       clientID = msg.id;
       setUsername();
@@ -158,21 +154,17 @@ exampleSocket.onmessage = function(event) {
     case "message":
       text = `(${timeStr}) ${msg.name} : ${msg.text} <br>`;
       break;
-    case "rejectusername":
-      text = `Your username has been set to <em>${msg.name}</em> because the name you chose is in use.<br>`
+    case "reject-username":
+      text = `Your username has been set to <em>${msg.name}</em> because the name you chose is in use.<br>`;
       break;
-    case "userlist":
-      let ul = "";
-      for (let i=0; i < msg.users.length; i++) {
-        ul += `${msg.users[i]}<br>`;
-      }
-      document.getElementById("userlistbox").innerHTML = ul;
+    case "user-list":
+      document.getElementById("user-list-box").innerText = msg.users.join("\n");
       break;
   }
 
   if (text.length) {
     f.write(text);
-    document.getElementById("chatbox").contentWindow.scrollByPages(1);
+    document.getElementById("chat-box").contentWindow.scrollByPages(1);
   }
 };
 ```
@@ -196,5 +188,5 @@ If this value isn't 0, there's pending data still, so you may wish to wait befor
 
 ## Security considerations
 
-WebSockets should not be used in a mixed content environment; that is, you shouldn't open a non-secure WebSocket connection from a page loaded using HTTPS or vice-versa.
+WebSockets should not be used in a mixed content environment; that is, you shouldn't open a non-secure WebSocket connection from a page loaded using HTTPS or vice versa.
 Most browsers now only allow secure WebSocket connections, and no longer support using them in insecure contexts.

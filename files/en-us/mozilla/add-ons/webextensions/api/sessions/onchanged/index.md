@@ -1,25 +1,17 @@
 ---
 title: sessions.onChanged
 slug: Mozilla/Add-ons/WebExtensions/API/sessions/onChanged
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onChanged
-  - sessions
+page-type: webextension-api-event
 browser-compat: webextensions.api.sessions.onChanged
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 Fired whenever the list of closed tabs or windows changes.
 
 ## Syntax
 
-```js
+```js-nolint
 browser.sessions.onChanged.addListener(listener)
 browser.sessions.onChanged.removeListener(listener)
 browser.sessions.onChanged.hasListener(listener)
@@ -27,7 +19,7 @@ browser.sessions.onChanged.hasListener(listener)
 
 Events have three functions:
 
-- `addListener(callback)`
+- `addListener(listener)`
   - : Adds a listener to this event.
 - `removeListener(listener)`
   - : Stop listening to this event. The `listener` argument is the listener to remove.
@@ -38,8 +30,8 @@ Events have three functions:
 
 ### Parameters
 
-- `callback`
-  - : Function that will be called when this event occurs. It's passed no parameters.
+- `listener`
+  - : The function called when this event occurs. It's passed no parameters.
 
 ## Browser compatibility
 
@@ -52,7 +44,7 @@ This very annoying extension listens for `onChanged`, then immediately restores 
 ```js
 function restoreSession(sessionInfos) {
   if (!sessionInfos.length) {
-    console.log("No sessions found")
+    console.log("No sessions found");
     return;
   }
   let sessionInfo = sessionInfos[0];
@@ -69,7 +61,7 @@ function onError(error) {
 
 function restoreMostRecent() {
   let gettingSessions = browser.sessions.getRecentlyClosed({
-    maxResults: 1
+    maxResults: 1,
   });
   gettingSessions.then(restoreSession, onError);
 }
@@ -79,11 +71,11 @@ browser.sessions.onChanged.addListener(restoreMostRecent);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.sessions`](https://developer.chrome.com/docs/extensions/reference/sessions/) API.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.sessions`](https://developer.chrome.com/docs/extensions/reference/api/sessions) API.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -110,4 +102,4 @@ browser.sessions.onChanged.addListener(restoreMostRecent);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

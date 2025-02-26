@@ -1,16 +1,11 @@
 ---
-title: HTMLElement.offsetWidth
+title: "HTMLElement: offsetWidth property"
+short-title: offsetWidth
 slug: Web/API/HTMLElement/offsetWidth
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM View
-  - NeedsMarkupWork
-  - Property
-  - Read-only
-  - Reference
 browser-compat: api.HTMLElement.offsetWidth
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLElement.offsetWidth`** read-only property returns
@@ -29,22 +24,17 @@ returned.
 
 An integer corresponding to the `offsetWidth` pixel value of the element. The `offsetWidth` property is a read-only.
 
-> **Note:** This property will round the value to an integer. If you need a fractional value, use
+> [!NOTE]
+> This property will round the value to an integer. If you need a fractional value, use
 > {{ domxref("element.getBoundingClientRect()") }}.
 
 ## Examples
 
-![](dimensions-offset.png)
+![An example element with large padding, border and margin. `offsetWidth` is the layout width of the element including its padding and border, and excluding its margin.](dimensions-offset.png)
 
 ## Specifications
 
 {{Specifications}}
-
-### Notes
-
-`offsetWidth` is a property of the DHTML object model which was first
-introduced by MSIE. It is sometimes referred to as an element's physical/graphical
-dimensions, or an element's border-box width.
 
 ## Browser compatibility
 

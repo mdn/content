@@ -1,18 +1,11 @@
 ---
-title: SpeechSynthesisEvent.utterance
+title: "SpeechSynthesisEvent: utterance property"
+short-title: utterance
 slug: Web/API/SpeechSynthesisEvent/utterance
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - SpeechSynthesisEvent
-  - Web Speech API
-  - speech
-  - synthesis
-  - utterance
 browser-compat: api.SpeechSynthesisEvent.utterance
 ---
+
 {{APIRef("Web Speech API")}}
 
 The **`utterance`** read-only property of the {{domxref("SpeechSynthesisUtterance")}} interface returns the {{domxref("SpeechSynthesisUtterance")}} instance that the event was triggered on.
@@ -24,10 +17,12 @@ A {{domxref("SpeechSynthesisUtterance")}} object.
 ## Examples
 
 ```js
-utterThis.onpause = function(event) {
+utterThis.onpause = (event) => {
   const char = event.utterance.text.charAt(event.charIndex);
-  console.log(`Speech paused at character ${event.charIndex} of "${event.utterance.text}", which is "${char}".`);
-}
+  console.log(
+    `Speech paused at character ${event.charIndex} of "${event.utterance.text}", which is "${char}".`,
+  );
+};
 ```
 
 ## Specifications

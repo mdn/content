@@ -1,17 +1,17 @@
 ---
 title: alphabetic
 slug: Web/SVG/Attribute/alphabetic
-tags:
-  - Deprecated
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
+status:
+  - deprecated
 browser-compat: svg.elements.font-face.alphabetic
 ---
+
 {{SVGRef}}{{deprecated_header}}
 
 The **`alphabetic`** attribute defines the lower baseline of a font. It has the same syntax and semantics as the {{cssxref("@font-face/baseline", "baseline")}} descriptor within an {{cssxref("@font-face")}}.
 
-For horizontally oriented glyph layouts, it indicates the alignment coordinate for glyphs to achieve alphabetic baseline alignment. The value is an offset in the font coordinate system.
+For horizontally oriented glyph layouts, it indicates the alignment coordinate for glyphs to achieve {{glossary("/Baseline/Typography", "alphabetic baseline")}} alignment. The value is an offset in the font coordinate system.
 
 You can use this attribute with the following SVG elements:
 

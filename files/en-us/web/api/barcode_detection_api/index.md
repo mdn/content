@@ -2,17 +2,12 @@
 title: Barcode Detection API
 slug: Web/API/Barcode_Detection_API
 page-type: web-api-overview
-tags:
-  - API
-  - Landing
-  - Overview
-  - barcode
-  - barcode detection
-  - shape detection
-  - Experimental
+status:
+  - experimental
 browser-compat: api.BarcodeDetector
 ---
-{{securecontext_header}}{{DefaultAPISidebar("Barcode Detection API")}} {{AvailableInWorkers}} {{SeeCompatTable}}
+
+{{securecontext_header}}{{DefaultAPISidebar("Barcode Detection API")}}{{AvailableInWorkers}}{{SeeCompatTable}}
 
 The Barcode Detection API detects linear and two-dimensional barcodes in images.
 
@@ -21,9 +16,10 @@ The Barcode Detection API detects linear and two-dimensional barcodes in images.
 Support for barcode recognition within web apps unlocks a variety of use cases through supported barcode formats. QR codes can be used for online payments, web navigation or establishing social media connections, Aztec codes can be used to scan boarding passes and shopping apps can use EAN or UPC barcodes to compare prices of physical items.
 
 Detection is achieved through the {{domxref('BarcodeDetector.detect()','detect()')}} method, which takes an image object; it can be one of these objects:
-an {{domxref("SVGImageElement")}},
-an {{domxref("HTMLVideoElement")}},
-an {{domxref("HTMLCanvasElement")}},
+a {{domxref("HTMLImageElement")}},
+a {{domxref("SVGImageElement")}},
+a {{domxref("HTMLVideoElement")}},
+a {{domxref("HTMLCanvasElement")}},
 an {{domxref("ImageBitmap")}},
 an {{domxref("OffscreenCanvas")}},
 a {{domxref("VideoFrame")}},
@@ -63,7 +59,7 @@ The Barcode Detection API supports the following barcode formats:
       <td>
         A linear (one-dimensional), bidirectionally-decodable, self-checking
         barcode following iso15417 and able to encode all 128 characters of
-        ASCII (hence the naming).
+        {{Glossary("ASCII")}} (hence the naming).
       </td>
       <td>
         <img
@@ -230,12 +226,12 @@ The Barcode Detection API supports the following barcode formats:
   </tbody>
 </table>
 
-You can check for formats supported by the user agent via the {{domxref('BarcodeDetector.getSupportedFormats()','getSupportedFormats()')}} method.
+You can check for formats supported by the user agent via the {{domxref('BarcodeDetector/getSupportedFormats_static','getSupportedFormats()')}} method.
 
 ## Interfaces
 
-- {{domxref("BarcodeDetector")}}
-  - : The **`BarcodeDetector`** interface of the Barcode Detection API allows detection of linear and two dimensional barcodes in images.
+- {{domxref("BarcodeDetector")}} {{Experimental_Inline}}
+  - : The `BarcodeDetector` interface of the Barcode Detection API allows detection of linear and two dimensional barcodes in images.
 
 ## Examples
 
@@ -245,26 +241,27 @@ This example tests for browser compatibility and creates a new barcode detector 
 
 ```js
 // check compatibility
-if (!('BarcodeDetector' in window)) {
-  console.log('Barcode Detector is not supported by this browser.');
+if (!("BarcodeDetector" in globalThis)) {
+  console.log("Barcode Detector is not supported by this browser.");
 } else {
-  console.log('Barcode Detector supported!');
+  console.log("Barcode Detector supported!");
 
   // create new detector
-  const barcodeDetector = new BarcodeDetector({formats: ['code_39', 'codabar', 'ean_13']});
+  const barcodeDetector = new BarcodeDetector({
+    formats: ["code_39", "codabar", "ean_13"],
+  });
 }
 ```
 
 ### Getting Supported Formats
 
-The following example calls the `getSupportFormat()` method and logs the results to the console.
+The following example calls the `getSupportedFormats()` method and logs the results to the console.
 
 ```js
 // check supported types
-BarcodeDetector.getSupportedFormats()
-  .then((supportedFormats) => {
-    supportedFormats.forEach((format) => console.log(format));
-  });
+BarcodeDetector.getSupportedFormats().then((supportedFormats) => {
+  supportedFormats.forEach((format) => console.log(format));
+});
 ```
 
 ### Detect Barcodes
@@ -272,13 +269,14 @@ BarcodeDetector.getSupportedFormats()
 This example uses the `detect()` method to detect the barcodes within the given image. These are iterated over and the barcode data is logged to the console.
 
 ```js
-  barcodeDetector.detect(imageEl)
-    .then((barcodes) => {
-      barcodes.forEach((barcode) => console.log(barcode.rawData));
-    })
-    .catch((err) => {
-      console.log(err);
-    })
+barcodeDetector
+  .detect(imageEl)
+  .then((barcodes) => {
+    barcodes.forEach((barcode) => console.log(barcode.rawValue));
+  })
+  .catch((err) => {
+    console.log(err);
+  });
 ```
 
 ## Specifications
@@ -292,4 +290,4 @@ This example uses the `detect()` method to detect the barcodes within the given 
 ## See also
 
 - [barcodefaq.com: A website with information about different barcodes and examples of the different types.](https://www.barcodefaq.com/)
-- [The Shape Detection API: a picture is worth a thousand words, faces, and barcodes](https://web.dev/shape-detection/#barcodedetector)
+- [The Shape Detection API: a picture is worth a thousand words, faces, and barcodes](https://developer.chrome.com/docs/capabilities/shape-detection#barcodedetector)

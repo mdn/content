@@ -1,19 +1,10 @@
 ---
 title: object-position
 slug: Web/CSS/object-position
-tags:
-  - CSS
-  - CSS Images
-  - CSS Property
-  - Layout
-  - Position
-  - Reference
-  - Replaced Elements
-  - css layout
-  - object-position
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.object-position
 ---
+
 {{CSSRef}}
 
 The **`object-position`** [CSS](/en-US/docs/Web/CSS) property specifies the alignment of the selected [replaced element](/en-US/docs/Web/CSS/Replaced_element)'s contents within the element's box. Areas of the box which aren't covered by the replaced element's object will show the element's background.
@@ -58,7 +49,8 @@ object-position: unset;
 - {{cssxref("&lt;position&gt;")}}
   - : From one to four values that define the 2D position of the element. Relative or absolute offsets can be used.
 
-> **Note:** The position can be set so that the replaced element is drawn outside its box.
+> [!NOTE]
+> The position can be set so that the replaced element is drawn outside its box.
 
 ## Formal definition
 
@@ -77,8 +69,8 @@ object-position: unset;
 Here we see HTML that includes two {{HTMLElement("img")}} elements, each displaying the MDN logo.
 
 ```html
-<img id="object-position-1" src="mdn.svg" alt="MDN Logo"/>
-<img id="object-position-2" src="mdn.svg" alt="MDN Logo"/>
+<img id="object-position-1" src="mdn.svg" alt="MDN Logo" />
+<img id="object-position-2" src="mdn.svg" alt="MDN Logo" />
 ```
 
 #### CSS

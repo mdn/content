@@ -1,18 +1,13 @@
 ---
 title: align-self
 slug: Web/CSS/align-self
-tags:
-  - CSS
-  - CSS Box Alignment
-  - CSS Flexible Boxes
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.align-self
 ---
+
 {{CSSRef}}
 
-The **`align-self`** [CSS](/en-US/docs/Web/CSS) property overrides a grid or flex item's {{cssxref("align-items")}} value. In Grid, it aligns the item inside the {{glossary("Grid Areas", "grid area")}}. In Flexbox, it aligns the item on the {{glossary("cross axis")}}.
+The **`align-self`** [CSS](/en-US/docs/Web/CSS) property overrides a grid or flex item's {{cssxref("align-items")}} value. In grid, it aligns the item inside the {{glossary("Grid Areas", "grid area")}}. In flexbox, it aligns the item on the {{glossary("cross axis")}}.
 
 {{EmbedInteractiveExample("pages/css/align-self.html")}}
 
@@ -34,6 +29,7 @@ align-self: self-start; /* Align the item flush at the start */
 align-self: self-end; /* Align the item flush at the end */
 align-self: flex-start; /* Put the flex item at the start */
 align-self: flex-end; /* Put the flex item at the end */
+align-self: anchor-center;
 
 /* Baseline alignment */
 align-self: baseline;
@@ -64,7 +60,7 @@ align-self: unset;
     - In absolutely-positioned layouts, the keyword behaves like `start` on _replaced_ absolutely-positioned boxes, and as `stretch` on _all other_ absolutely-positioned boxes.
     - In static position of absolutely-positioned layouts, the keyword behaves as `stretch`.
     - For flex items, the keyword behaves as `stretch`.
-    - For grid items, this keyword leads to a behavior similar to the one of `stretch`, except for boxes with an aspect ratio or an intrinsic sizes where it behaves like `start`.
+    - For grid items, this keyword leads to a behavior similar to the one of `stretch`, except for boxes with an {{glossary("aspect ratio")}} or an intrinsic size where it behaves like `start`.
     - The property doesn't apply to block-level boxes, and to table cells.
 
 - `self-start`
@@ -82,6 +78,8 @@ align-self: unset;
     The fallback alignment for `first baseline` is `start`, the one for `last baseline` is `end`.
 - `stretch`
   - : If the combined size of the items along the cross axis is less than the size of the alignment container and the item is `auto`-sized, its size is increased equally (not proportionally), while still respecting the constraints imposed by {{cssxref("max-height")}}/{{cssxref("max-width")}} (or equivalent functionality), so that the combined size of all `auto`-sized items exactly fills the alignment container along the cross axis.
+- `anchor-center`
+  - : In the case of [anchor-positioned](/en-US/docs/Web/CSS/CSS_anchor_positioning) elements, aligns the item to the center of the associated anchor element in the block direction. See [Centering on the anchor using `anchor-center`](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#centering_on_the_anchor_using_anchor-center).
 - `safe`
   - : If the size of the item overflows the alignment container, the item is instead aligned as if the alignment mode were `start`.
 - `unsafe`
@@ -143,8 +141,10 @@ div:nth-child(3) {
 
 ## See also
 
-- CSS Flexbox Guide: _[Basic Concepts of Flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
-- CSS Flexbox Guide: _[Aligning items in a flex container](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)_
-- CSS Grid Guide: _[Box alignment in CSS Grid layouts](/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)_
-- [CSS Box Alignment](/en-US/docs/Web/CSS/CSS_Box_Alignment)
-- The {{cssxref("align-items")}} property
+- [Basic concepts of flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
+- [Aligning items in a flex container](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
+- [Box alignment in grid layout](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_grid_layout)
+- [CSS box alignment](/en-US/docs/Web/CSS/CSS_box_alignment)
+- {{cssxref("align-items")}}
+- {{cssxref("justify-self")}}
+- {{cssxref("place-self")}}

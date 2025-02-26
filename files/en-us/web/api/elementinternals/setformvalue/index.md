@@ -1,22 +1,18 @@
 ---
-title: ElementInternals.setFormValue()
+title: "ElementInternals: setFormValue() method"
+short-title: setFormValue()
 slug: Web/API/ElementInternals/setFormValue
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - setFormValue
-  - ElementInternals
 browser-compat: api.ElementInternals.setFormValue
 ---
-{{DefaultAPISidebar("DOM")}}
+
+{{APIRef("Web Components")}}
 
 The **`setFormValue()`** method of the {{domxref("ElementInternals")}} interface sets the element's submission value and state, communicating these to the user agent.
 
 ## Syntax
 
-```js
+```js-nolint
 setFormValue(value)
 setFormValue(value, state)
 ```
@@ -29,7 +25,8 @@ setFormValue(value, state)
   - : A {{domxref("File")}}, a string, or a {{domxref("FormData")}} representing the input made by the user.
     This allows the application to re-display the information that the user submitted, in the form that they submitted it, if required.
 
-> **Note:** In general, `state` is used to pass information specified by a user, the `value` is suitable for submission to a server, post sanitization.
+> [!NOTE]
+> In general, `state` is used to pass information specified by a user, the `value` is suitable for submission to a server, post sanitization.
 > For example, if a custom element asked a user to submit a date, the user might enter "3/15/2019".
 > This would be the `state`.
 > The server expects a date format of `2019-03-15`, the date in this format would be passed as the `value`.
@@ -48,7 +45,7 @@ Undefined.
 In the following example, a checkbox custom element sets `on` as the value to send to the server, and `checked` as the state.
 
 ```js
-this.internals_.setFormValue("on","checked");
+this.internals_.setFormValue("on", "checked");
 ```
 
 ## Specifications

@@ -1,44 +1,44 @@
 ---
 title: Date.prototype.getUTCMilliseconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCMilliseconds
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.getUTCMilliseconds
 ---
+
 {{JSRef}}
 
-The **`getUTCMilliseconds()`** method returns the milliseconds
-portion of the time object's value according to universal time.
+The **`getUTCMilliseconds()`** method of {{jsxref("Date")}} instances returns the milliseconds for this date according to universal time.
 
-{{EmbedInteractiveExample("pages/js/date-getutcmilliseconds.html","shorter")}}
+{{InteractiveExample("JavaScript Demo: Date.getUTCMilliseconds()", "shorter")}}
+
+```js interactive-example
+const exampleDate = new Date("2018-01-02T03:04:05.678Z"); // 2 January 2018, 03:04:05.678 (UTC)
+
+console.log(exampleDate.getUTCMilliseconds());
+// Expected output: 678
+```
 
 ## Syntax
 
-```js
+```js-nolint
 getUTCMilliseconds()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
-A `number`.
-If the `Date` object represents a valid date, an integer between 0 and 999, representing
-the milliseconds portion of the given `Date` object according to universal time.
-Otherwise, [`NaN`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/NaN)
-if the `Date` object doesn't represent a valid date.
+An integer, between 0 and 999, representing the milliseconds for the given date according to universal time. Returns `NaN` if the date is [invalid](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date).
 
-Not to be confused with Unix epoch time. To get the total milliseconds since 1970/01/01,
-use the [`Date.getTime()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getTime) method.
+Not to be confused with the timestamp. To get the total milliseconds since the epoch, use the [`getTime()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getTime) method.
 
 ## Examples
 
 ### Using getUTCMilliseconds()
 
-The following example assigns the milliseconds portion of the current time to the
-variable `milliseconds`.
+The following example assigns the milliseconds portion of the current time to the variable `milliseconds`.
 
 ```js
 const today = new Date();

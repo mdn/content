@@ -2,16 +2,13 @@
 title: Touch events
 slug: Web/API/Touch_events
 page-type: web-api-overview
-tags:
-  - Advanced
-  - DOM
-  - Event
-  - Guide
-  - Mobile
-  - Overview
-  - touch
-browser-compat: api.Touch
+browser-compat:
+  - api.Touch
+  - api.TouchEvent
+  - api.TouchList
+spec-urls: https://w3c.github.io/touch-events/
 ---
+
 {{DefaultAPISidebar("Touch Events")}}
 
 To provide quality support for touch-based user interfaces, touch events offer the ability to interpret finger (or stylus) activity on touch screens or trackpads.
@@ -40,7 +37,8 @@ Touch events are similar to mouse events except they support simultaneous touche
 
 This example tracks multiple touchpoints at a time, allowing the user to draw in a {{HTMLElement("canvas")}} with more than one finger at a time. It will only work on a browser that supports touch events.
 
-> **Note:** The text below uses the term "finger" when describing the contact with the surface, but it could, of course, also be a stylus or other contact method.
+> [!NOTE]
+> The text below uses the term "finger" when describing the contact with the surface, but it could, of course, also be a stylus or other contact method.
 
 ### Create a canvas
 
@@ -48,8 +46,9 @@ This example tracks multiple touchpoints at a time, allowing the user to draw in
 <canvas id="canvas" width="600" height="600" style="border:solid black 1px;">
   Your browser does not support canvas element.
 </canvas>
-<br>
-Log: <pre id="log" style="border: 1px solid #ccc;"></pre>
+<br />
+Log:
+<pre id="log" style="border: 1px solid #ccc;"></pre>
 ```
 
 ```css
@@ -67,12 +66,12 @@ This sets up all the event listeners for our {{HTMLElement("canvas")}} element s
 
 ```js
 function startup() {
-  const el = document.getElementById('canvas');
-  el.addEventListener('touchstart', handleStart);
-  el.addEventListener('touchend', handleEnd);
-  el.addEventListener('touchcancel', handleCancel);
-  el.addEventListener('touchmove', handleMove);
-  log('Initialized.');
+  const el = document.getElementById("canvas");
+  el.addEventListener("touchstart", handleStart);
+  el.addEventListener("touchend", handleEnd);
+  el.addEventListener("touchcancel", handleCancel);
+  el.addEventListener("touchmove", handleMove);
+  log("Initialized.");
 }
 
 document.addEventListener("DOMContentLoaded", startup);
@@ -91,9 +90,9 @@ When a {{domxref("Element/touchstart_event", "touchstart")}} event occurs, indic
 ```js
 function handleStart(evt) {
   evt.preventDefault();
-  log('touchstart.');
-  const el = document.getElementById('canvas');
-  const ctx = el.getContext('2d');
+  log("touchstart.");
+  const el = document.getElementById("canvas");
+  const ctx = el.getContext("2d");
   const touches = evt.changedTouches;
 
   for (let i = 0; i < touches.length; i++) {
@@ -102,7 +101,7 @@ function handleStart(evt) {
     const color = colorForTouch(touches[i]);
     log(`color of touch with id ${touches[i].identifier} = ${color}`);
     ctx.beginPath();
-    ctx.arc(touches[i].pageX, touches[i].pageY, 4, 0, 2 * Math.PI, false);  // a circle at the start
+    ctx.arc(touches[i].pageX, touches[i].pageY, 4, 0, 2 * Math.PI, false); // a circle at the start
     ctx.fillStyle = color;
     ctx.fill();
   }
@@ -120,8 +119,8 @@ Each time one or more fingers move, a {{domxref("Element/touchmove_event", "touc
 ```js
 function handleMove(evt) {
   evt.preventDefault();
-  const el = document.getElementById('canvas');
-  const ctx = el.getContext('2d');
+  const el = document.getElementById("canvas");
+  const ctx = el.getContext("2d");
   const touches = evt.changedTouches;
 
   for (let i = 0; i < touches.length; i++) {
@@ -131,7 +130,9 @@ function handleMove(evt) {
     if (idx >= 0) {
       log(`continuing touch ${idx}`);
       ctx.beginPath();
-      log(`ctx.moveTo( ${ongoingTouches[idx].pageX}, ${ongoingTouches[idx].pageY} );`);
+      log(
+        `ctx.moveTo( ${ongoingTouches[idx].pageX}, ${ongoingTouches[idx].pageY} );`,
+      );
       ctx.moveTo(ongoingTouches[idx].pageX, ongoingTouches[idx].pageY);
       log(`ctx.lineTo( ${touches[i].pageX}, ${touches[i].pageY} );`);
       ctx.lineTo(touches[i].pageX, touches[i].pageY);
@@ -139,9 +140,9 @@ function handleMove(evt) {
       ctx.strokeStyle = color;
       ctx.stroke();
 
-      ongoingTouches.splice(idx, 1, copyTouch(touches[i]));  // swap in the new touch record
+      ongoingTouches.splice(idx, 1, copyTouch(touches[i])); // swap in the new touch record
     } else {
-      log('can\'t figure out which touch to continue');
+      log("can't figure out which touch to continue");
     }
   }
 }
@@ -161,8 +162,8 @@ When the user lifts a finger off the surface, a {{domxref("Element/touchend_even
 function handleEnd(evt) {
   evt.preventDefault();
   log("touchend");
-  const el = document.getElementById('canvas');
-  const ctx = el.getContext('2d');
+  const el = document.getElementById("canvas");
+  const ctx = el.getContext("2d");
   const touches = evt.changedTouches;
 
   for (let i = 0; i < touches.length; i++) {
@@ -175,10 +176,10 @@ function handleEnd(evt) {
       ctx.beginPath();
       ctx.moveTo(ongoingTouches[idx].pageX, ongoingTouches[idx].pageY);
       ctx.lineTo(touches[i].pageX, touches[i].pageY);
-      ctx.fillRect(touches[i].pageX - 4, touches[i].pageY - 4, 8, 8);  // and a square at the end
-      ongoingTouches.splice(idx, 1);  // remove it; we're done
+      ctx.fillRect(touches[i].pageX - 4, touches[i].pageY - 4, 8, 8); // and a square at the end
+      ongoingTouches.splice(idx, 1); // remove it; we're done
     } else {
-      log('can\'t figure out which touch to end');
+      log("can't figure out which touch to end");
     }
   }
 }
@@ -193,12 +194,12 @@ If the user's finger wanders into browser UI, or the touch otherwise needs to be
 ```js
 function handleCancel(evt) {
   evt.preventDefault();
-  log('touchcancel.');
+  log("touchcancel.");
   const touches = evt.changedTouches;
 
   for (let i = 0; i < touches.length; i++) {
     let idx = ongoingTouchIndexById(touches[i].identifier);
-    ongoingTouches.splice(idx, 1);  // remove it; we're done
+    ongoingTouches.splice(idx, 1); // remove it; we're done
   }
 }
 ```
@@ -249,11 +250,11 @@ function ongoingTouchIndexById(idToFind) {
   for (let i = 0; i < ongoingTouches.length; i++) {
     const id = ongoingTouches[i].identifier;
 
-    if (id == idToFind) {
+    if (id === idToFind) {
       return i;
     }
   }
-  return -1;    // not found
+  return -1; // not found
 }
 ```
 
@@ -261,11 +262,9 @@ function ongoingTouchIndexById(idToFind) {
 
 ```js
 function log(msg) {
-  const container = document.getElementById('log');
+  const container = document.getElementById("log");
   container.textContent = `${msg} \n${container.textContent}`;
 }
-
-
 ```
 
 ### Result
@@ -274,7 +273,8 @@ You can test this example on mobile devices by touching the box below.
 
 {{EmbedLiveSample('Example','100%', 900)}}
 
-> **Note:** More generally, the example will work on platforms that provide touch events.
+> [!NOTE]
+> More generally, the example will work on platforms that provide touch events.
 > You can test this on desktop platforms that can simulate such events:
 >
 > - On Firefox enable "touch simulation" in [Responsive Design Mode](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html#toggling-responsive-design-mode) (you may need to reload the page).
@@ -291,7 +291,10 @@ Since calling `preventDefault()` on a {{domxref("Element/touchstart_event", "tou
 ```js
 function onTouch(evt) {
   evt.preventDefault();
-  if (evt.touches.length > 1 || (evt.type === "touchend" && evt.touches.length > 0))
+  if (
+    evt.touches.length > 1 ||
+    (evt.type === "touchend" && evt.touches.length > 0)
+  )
     return;
 
   const newEvt = document.createEvent("MouseEvents");
@@ -313,9 +316,23 @@ function onTouch(evt) {
       break;
   }
 
-  newEvt.initMouseEvent(type, true, true, evt.originalTarget.ownerDocument.defaultView, 0,
-    touch.screenX, touch.screenY, touch.clientX, touch.clientY,
-    evt.ctrlKey, evt.altKey, evt.shiftKey, evt.metaKey, 0, null);
+  newEvt.initMouseEvent(
+    type,
+    true,
+    true,
+    evt.originalTarget.ownerDocument.defaultView,
+    0,
+    touch.screenX,
+    touch.screenY,
+    touch.clientX,
+    touch.clientY,
+    evt.ctrlKey,
+    evt.altKey,
+    evt.shiftKey,
+    evt.metaKey,
+    0,
+    null,
+  );
   evt.originalTarget.dispatchEvent(newEvt);
 }
 ```

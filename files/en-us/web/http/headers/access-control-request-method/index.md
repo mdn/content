@@ -1,20 +1,14 @@
 ---
 title: Access-Control-Request-Method
 slug: Web/HTTP/Headers/Access-Control-Request-Method
-tags:
-  - CORS
-  - HTTP
-  - Reference
-  - header
+page-type: http-header
 browser-compat: http.headers.Access-Control-Request-Method
 ---
+
 {{HTTPSidebar}}
 
-The **`Access-Control-Request-Method`** request header is used
-by browsers when issuing a {{glossary("preflight request")}}, to let the server know
-which [HTTP method](/en-US/docs/Web/HTTP/Methods) will be used when the
-actual request is made. This header is necessary as the preflight request is always an
-{{HTTPMethod("OPTIONS")}} and doesn't use the same method as the actual request.
+The HTTP **`Access-Control-Request-Method`** {{Glossary("request header")}} is used by browsers when issuing a {{glossary("preflight request")}} to let the server know which [HTTP method](/en-US/docs/Web/HTTP/Methods) will be used when the actual request is made.
+This header is necessary because the preflight request is always an {{HTTPMethod("OPTIONS")}} and doesn't use the same method as the actual request.
 
 <table class="properties">
   <tbody>
@@ -23,27 +17,26 @@ actual request is made. This header is necessary as the preflight request is alw
       <td>{{Glossary("Request header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>yes</td>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
+      <td>Yes</td>
     </tr>
   </tbody>
 </table>
 
 ## Syntax
 
-```
+```http
 Access-Control-Request-Method: <method>
 ```
 
 ## Directives
 
-- \<method>
-  - : One of the [HTTP request methods](/en-US/docs/Web/HTTP/Methods), for
-    example {{HTTPMethod("GET")}}, {{HTTPMethod("POST")}}, or {{HTTPMethod("DELETE")}}.
+- `<method>`
+  - : An [HTTP request method](/en-US/docs/Web/HTTP/Methods); for example, {{HTTPMethod("GET")}}, {{HTTPMethod("POST")}}, or {{HTTPMethod("DELETE")}}.
 
 ## Examples
 
-```
+```http
 Access-Control-Request-Method: POST
 ```
 

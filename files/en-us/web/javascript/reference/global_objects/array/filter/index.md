@@ -1,93 +1,69 @@
 ---
 title: Array.prototype.filter()
 slug: Web/JavaScript/Reference/Global_Objects/Array/filter
-tags:
-  - Array
-  - ECMAScript 5
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - Polyfill
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.filter
 ---
+
 {{JSRef}}
 
-The **`filter()`** method creates a [shallow copy](/en-US/docs/Glossary/Shallow_copy) of a portion of a given array, filtered down to just the elements from the given array that pass the test implemented by the provided function.
+The **`filter()`** method of {{jsxref("Array")}} instances creates a [shallow copy](/en-US/docs/Glossary/Shallow_copy) of a portion of a given array, filtered down to just the elements from the given array that pass the test implemented by the provided function.
 
-{{EmbedInteractiveExample("pages/js/array-filter.html","shorter")}}
+{{InteractiveExample("JavaScript Demo: Array.filter()", "shorter")}}
+
+```js interactive-example
+const words = ["spray", "elite", "exuberant", "destruction", "present"];
+
+const result = words.filter((word) => word.length > 6);
+
+console.log(result);
+// Expected output: Array ["exuberant", "destruction", "present"]
+```
 
 ## Syntax
 
-```js
-// Arrow function
-filter((element) => { /* … */ } )
-filter((element, index) => { /* … */ } )
-filter((element, index, array) => { /* … */ } )
-
-// Callback function
+```js-nolint
 filter(callbackFn)
 filter(callbackFn, thisArg)
-
-// Inline callback function
-filter(function(element) { /* … */ })
-filter(function(element, index) { /* … */ })
-filter(function(element, index, array){ /* … */ })
-filter(function(element, index, array) { /* … */ }, thisArg)
 ```
 
 ### Parameters
 
 - `callbackFn`
-
-  - : Function is a predicate, to test each element of the array. Return a value that coerces to `true` to keep the element, or to `false` otherwise.
-
-    The function is called with the following arguments:
-
+  - : A function to execute for each element in the array. It should return a [truthy](/en-US/docs/Glossary/Truthy) value to keep the element in the resulting array, and a [falsy](/en-US/docs/Glossary/Falsy) value otherwise. The function is called with the following arguments:
     - `element`
       - : The current element being processed in the array.
     - `index`
       - : The index of the current element being processed in the array.
     - `array`
-      - : The array on which `filter()` was called.
-
+      - : The array `filter()` was called upon.
 - `thisArg` {{optional_inline}}
-  - : Value to use as `this` when executing `callbackFn`.
+  - : A value to use as `this` when executing `callbackFn`. See [iterative methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods).
 
 ### Return value
 
-A [shallow copy](/en-US/docs/Glossary/Shallow_copy) of a portion of the given array, filtered down to just the elements from the given array that pass the test implemented by the provided function. If no elements pass the test, an empty array will be returned.
+A [shallow copy](/en-US/docs/Glossary/Shallow_copy) of the given array containing just the elements that pass the test. If no elements pass the test, an empty array is returned.
 
 ## Description
 
-`filter()` calls a provided `callbackFn` function once for each element in an array, and constructs a new array of all the values for which `callbackFn` returns [a value that coerces to `true`](/en-US/docs/Glossary/Truthy). `callbackFn` is invoked only for indexes of the array which have assigned values; it is not invoked for indexes which have been deleted or which have never been assigned values. Array elements which do not pass the `callbackFn` test are skipped, and are not included in the new array.
+The `filter()` method is an [iterative method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods). It calls a provided `callbackFn` function once for each element in an array, and constructs a new array of all the values for which `callbackFn` returns a [truthy](/en-US/docs/Glossary/Truthy) value. Array elements which do not pass the `callbackFn` test are not included in the new array. Read the [iterative methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods) section for more information about how these methods work in general.
 
-`callbackFn` is invoked with three arguments:
+`callbackFn` is invoked only for array indexes which have assigned values. It is not invoked for empty slots in [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays).
 
-1. the value of the element
-2. the index of the element
-3. the Array object being traversed
-
-If a `thisArg` parameter is provided to `filter`, it will be used as the callback's `this` value. Otherwise, the value `undefined` will be used as its `this` value. The `this` value ultimately observable by `callbackFn` is determined according to [the usual rules for determining the `this` seen by a function](/en-US/docs/Web/JavaScript/Reference/Operators/this).
-
-`filter()` does not mutate the array on which it is called.
-
-The range of elements processed by `filter()` is set before the first invocation of `callbackFn`. Elements which are assigned to indexes already visited, or to indexes outside the range, will not be visited by `callbackFn`. If existing elements of the array are deleted in the same way they will not be visited.
-
-> **Warning:** Concurrent modification of the kind described in the previous paragraph frequently leads to hard-to-understand code and is generally to be avoided (except in special cases).
+The `filter()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods). It only expects the `this` value to have a `length` property and integer-keyed properties.
 
 ## Examples
 
 ### Filtering out all small values
 
-The following example uses `filter()` to create a filtered array that has all elements with values less than `10` removed.
+The following example uses `filter()` to create a filtered array that has all elements with values less than 10 removed.
 
 ```js
 function isBigEnough(value) {
-  return value >= 10
+  return value >= 10;
 }
 
-let filtered = [12, 5, 8, 130, 44].filter(isBigEnough)
+const filtered = [12, 5, 8, 130, 44].filter(isBigEnough);
 // filtered is [12, 130, 44]
 ```
 
@@ -115,35 +91,35 @@ console.log(array.filter(isPrime)); // [2, 3, 5, 7, 11, 13]
 The following example uses `filter()` to create a filtered JSON of all elements with non-zero, numeric `id`.
 
 ```js
-let arr = [
+const arr = [
   { id: 15 },
   { id: -1 },
   { id: 0 },
   { id: 3 },
   { id: 12.2 },
-  { },
+  {},
   { id: null },
   { id: NaN },
-  { id: 'undefined' }
-]
+  { id: "undefined" },
+];
 
-let invalidEntries = 0
+let invalidEntries = 0;
 
 function filterByID(item) {
   if (Number.isFinite(item.id) && item.id !== 0) {
-    return true
+    return true;
   }
-  invalidEntries++
+  invalidEntries++;
   return false;
 }
 
-let arrByID = arr.filter(filterByID)
+const arrByID = arr.filter(filterByID);
 
-console.log('Filtered Array\n', arrByID)
+console.log("Filtered Array\n", arrByID);
 // Filtered Array
 // [{ id: 15 }, { id: -1 }, { id: 3 }, { id: 12.2 }]
 
-console.log('Number of Invalid Entries = ', invalidEntries)
+console.log("Number of Invalid Entries =", invalidEntries);
 // Number of Invalid Entries = 5
 ```
 
@@ -152,75 +128,62 @@ console.log('Number of Invalid Entries = ', invalidEntries)
 Following example uses `filter()` to filter array content based on search criteria.
 
 ```js
-let fruits = ['apple', 'banana', 'grapes', 'mango', 'orange']
+const fruits = ["apple", "banana", "grapes", "mango", "orange"];
 
 /**
  * Filter array items based on search criteria (query)
  */
 function filterItems(arr, query) {
-  return arr.filter(function(el) {
-    return el.toLowerCase().includes(query.toLowerCase());
-  })
-}
-
-console.log(filterItems(fruits, 'ap'))  // ['apple', 'grapes']
-console.log(filterItems(fruits, 'an'))  // ['banana', 'mango', 'orange']
-```
-
-#### ES2015 Implementation
-
-```js
-const fruits = ['apple', 'banana', 'grapes', 'mango', 'orange']
-
-/**
- * Filter array items based on search criteria (query)
- */
-const filterItems = (arr, query) => {
   return arr.filter((el) => el.toLowerCase().includes(query.toLowerCase()));
 }
 
-console.log(filterItems(fruits, 'ap'))  // ['apple', 'grapes']
-console.log(filterItems(fruits, 'an'))  // ['banana', 'mango', 'orange']
+console.log(filterItems(fruits, "ap")); // ['apple', 'grapes']
+console.log(filterItems(fruits, "an")); // ['banana', 'mango', 'orange']
 ```
 
-### Affecting Initial Array (modifying, appending and deleting)
+### Using the third argument of callbackFn
 
-The following example tests the behavior of the `filter` method when the array is modified.
+The `array` argument is useful if you want to access another element in the array, especially when you don't have an existing variable that refers to the array. The following example first uses `map()` to extract the numerical ID from each name and then uses `filter()` to select the ones that are greater than its neighbors.
 
 ```js
-// Modifying each word
-let words = ['spray', 'limit', 'exuberant', 'destruction', 'elite', 'present']
+const names = ["JC63", "Bob132", "Ursula89", "Ben96"];
+const greatIDs = names
+  .map((name) => parseInt(name.match(/[0-9]+/)[0], 10))
+  .filter((id, idx, arr) => {
+    // Without the arr argument, there's no way to easily access the
+    // intermediate array without saving it to a variable.
+    if (idx > 0 && id <= arr[idx - 1]) return false;
+    if (idx < arr.length - 1 && id <= arr[idx + 1]) return false;
+    return true;
+  });
+console.log(greatIDs); // [132, 96]
+```
 
-const modifiedWords = words.filter((word, index, arr) => {
-  arr[index+1] +=' extra'
-  return word.length < 6
-})
+The `array` argument is _not_ the array that is being built — there is no way to access the array being built from the callback function.
 
-console.log(modifiedWords)
-// Notice there are three words below length 6, but since they've been modified one is returned
-// ["spray"]
+### Using filter() on sparse arrays
 
-// Appending new words
-words = ['spray', 'limit', 'exuberant', 'destruction', 'elite', 'present']
-const appendedWords = words.filter((word, index, arr) => {
-  arr.push('new')
-  return word.length < 6
-})
+`filter()` will skip empty slots.
 
-console.log(appendedWords)
-// Only three fits the condition even though the `words` itself now has a lot more words with character length less than 6
-// ["spray" ,"limit" ,"elite"]
+```js
+console.log([1, , undefined].filter((x) => x === undefined)); // [undefined]
+console.log([1, , undefined].filter((x) => x !== 2)); // [1, undefined]
+```
 
-// Deleting words
-words = ['spray', 'limit', 'exuberant', 'destruction', 'elite', 'present']
-const deleteWords = words.filter((word, index, arr) => {
-  arr.pop()
-  return word.length < 6
-})
+### Calling filter() on non-array objects
 
-console.log(deleteWords)
-// Notice 'elite' is not even obtained as it’s been popped off 'words' before filter can even get there
-// ["spray" ,"limit"]
+The `filter()` method reads the `length` property of `this` and then accesses each property whose key is a nonnegative integer less than `length`.
+
+```js
+const arrayLike = {
+  length: 3,
+  0: "a",
+  1: "b",
+  2: "c",
+  3: "a", // ignored by filter() since length is 3
+};
+console.log(Array.prototype.filter.call(arrayLike, (x) => x <= "b"));
+// [ 'a', 'b' ]
 ```
 
 ## Specifications
@@ -234,8 +197,11 @@ console.log(deleteWords)
 ## See also
 
 - [Polyfill of `Array.prototype.filter` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
+- {{jsxref("Array")}}
 - {{jsxref("Array.prototype.forEach()")}}
 - {{jsxref("Array.prototype.every()")}}
+- {{jsxref("Array.prototype.map()")}}
 - {{jsxref("Array.prototype.some()")}}
 - {{jsxref("Array.prototype.reduce()")}}
-- {{jsxref("Array.prototype.find()")}}
+- {{jsxref("TypedArray.prototype.filter()")}}

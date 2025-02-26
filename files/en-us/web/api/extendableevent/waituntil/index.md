@@ -1,16 +1,12 @@
 ---
-title: ExtendableEvent.waitUntil()
+title: "ExtendableEvent: waitUntil() method"
+short-title: waitUntil()
 slug: Web/API/ExtendableEvent/waitUntil
 page-type: web-api-instance-method
-tags:
-  - API
-  - ExtendableEvent
-  - Method
-  - Reference
-  - waitUntil
 browser-compat: api.ExtendableEvent.waitUntil
 ---
-{{APIRef("Service Workers API")}}
+
+{{APIRef("Service Workers API")}}{{AvailableInWorkers("service")}}
 
 The **`ExtendableEvent.waitUntil()`**
 method tells the event dispatcher that work is ongoing. It can also be used to detect
@@ -36,18 +32,16 @@ The `waitUntil()` method must be initially called within the event callback,
 but after that it can be called multiple times, until all the promises passed to it
 settle.
 
-> **Note:** The behavior described in the above paragraph was fixed in
-> Firefox 43 (see {{bug(1180274)}}).
-
 ## Syntax
 
-```js
+```js-nolint
 waitUntil(promise)
 ```
 
 ### Parameters
 
-A {{jsxref("Promise")}}.
+- `promise`
+  - : A {{jsxref("Promise")}} that extends the lifetime of the event.
 
 ### Return value
 
@@ -58,14 +52,10 @@ None ({{jsxref("undefined")}}).
 Using `waitUntil()` within a service worker's `install` event:
 
 ```js
-addEventListener('install', (event) => {
+addEventListener("install", (event) => {
   const preCache = async () => {
-    const cache = await caches.open('static-v1');
-    return cache.addAll([
-      '/',
-      '/about/',
-      '/static/styles.css'
-    ]);
+    const cache = await caches.open("static-v1");
+    return cache.addAll(["/", "/about/", "/static/styles.css"]);
   };
   event.waitUntil(preCache());
 });
@@ -82,5 +72,3 @@ addEventListener('install', (event) => {
 ## See also
 
 - [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
-- {{jsxref("Promise")}}

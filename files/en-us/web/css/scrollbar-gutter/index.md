@@ -1,11 +1,7 @@
 ---
 title: scrollbar-gutter
 slug: Web/CSS/scrollbar-gutter
-tags:
-  - CSS
-  - Property
-  - Reference
-  - scrollbar-gutter
+page-type: css-property
 browser-compat: css.properties.scrollbar-gutter
 ---
 
@@ -59,7 +55,8 @@ scrollbar-gutter: unset;
 
 The examples below show how the different values for the `scrollbar-gutter` property would affect a scrollable `div` element (`.container`) with one or more paragraphs contained within.
 
-> **Note:** In the images for the examples, the user's system settings are set to classic scrollbars (always shown).
+> [!NOTE]
+> In the images for the examples, the user's system settings are set to classic scrollbars (always shown).
 
 ### Example 1
 
@@ -119,5 +116,8 @@ For reference, this image shows the same div as above, but with the user's syste
 
 ## See also
 
-- {{CSSxRef("scrollbar-width")}}
+- [CSS overflow](/en-US/docs/Web/CSS/CSS_overflow) module
+- [CSS scrollbars styling](/en-US/docs/Web/CSS/CSS_scrollbars_styling) module
 - {{CSSxRef("overflow")}}
+- {{CSSxRef("scrollbar-width")}}
+- {{CSSxRef("scrollbar-color")}}

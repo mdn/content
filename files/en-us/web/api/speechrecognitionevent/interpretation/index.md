@@ -1,20 +1,15 @@
 ---
-title: SpeechRecognitionEvent.interpretation
+title: "SpeechRecognitionEvent: interpretation property"
+short-title: interpretation
 slug: Web/API/SpeechRecognitionEvent/interpretation
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - Property
-  - Reference
-  - SpeechRecognitionEvent
-  - Web Speech API
-  - interpretation
-  - recognition
-  - speech
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.SpeechRecognitionEvent.interpretation
 ---
-{{APIRef("Web Speech API")}}{{deprecated_header}}
+
+{{APIRef("Web Speech API")}}{{deprecated_header}}{{Non-standard_header}}
 
 The **`interpretation`** read-only property of the
 {{domxref("SpeechRecognitionEvent")}} interface returns the semantic meaning of what the
@@ -33,12 +28,12 @@ by the speech recognition system, `null` will be returned.
 ## Examples
 
 ```js
-recognition.onresult = function(event) {
+recognition.onresult = (event) => {
   const color = event.results[0][0].transcript;
   diagnostic.textContent = `Result received: ${color}.`;
   bg.style.backgroundColor = color;
   console.log(event.interpretation);
-}
+};
 ```
 
 ## Browser compatibility

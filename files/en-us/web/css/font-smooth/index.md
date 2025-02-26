@@ -1,15 +1,13 @@
 ---
 title: font-smooth
 slug: Web/CSS/font-smooth
-tags:
-  - CSS
-  - CSS Property
-  - Non-standard
-  - Reference
-  - recipe:css-property
+page-type: css-property
+status:
+  - non-standard
 browser-compat: css.properties.font-smooth
 ---
-{{ CSSRef }} {{ Non-standard_header }}
+
+{{CSSRef}} {{ Non-standard_header }}
 
 The **`font-smooth`** [CSS](/en-US/docs/Web/CSS) property controls the application of anti-aliasing when fonts are rendered.
 
@@ -32,17 +30,19 @@ font-smooth: revert-layer;
 font-smooth: unset;
 ```
 
-> **Note:** WebKit implements a similar property, but with different values: **`-webkit-font-smoothing`**. It only works on macOS.
+> [!NOTE]
+> WebKit implements a similar property, but with different values: **`-webkit-font-smoothing`**. It only works on macOS.
 >
 > - `auto` - Let the browser decide (Uses subpixel anti-aliasing when available; this is the default)
 > - `none` - Turn font smoothing off; display text with jagged sharp edges.
-> - `antialiased` - Smooth the font on the level of the pixel, as opposed to the subpixel. Switching from subpixel rendering to antialiasing for light text on dark backgrounds makes it look lighter.
+> - `antialiased` - Smooth the font on the level of the pixel, as opposed to the subpixel. Switching from subpixel rendering to anti-aliasing for light text on dark backgrounds makes it look lighter.
 > - `subpixel-antialiased` - On most non-retina displays, this will give the sharpest text.
 
-> **Note:** Firefox implements a similar property, but with different values: **`-moz-osx-font-smoothing`**. It only works on macOS.
+> [!NOTE]
+> Firefox implements a similar property, but with different values: **`-moz-osx-font-smoothing`**. It only works on macOS.
 >
 > - `auto` - Allow the browser to select an optimization for font smoothing, typically `grayscale`.
-> - `grayscale` - Render text with grayscale antialiasing, as opposed to the subpixel. Switching from subpixel rendering to antialiasing for light text on dark backgrounds makes it look lighter.
+> - `grayscale` - Render text with grayscale anti-aliasing, as opposed to the subpixel. Switching from subpixel rendering to anti-aliasing for light text on dark backgrounds makes it look lighter.
 
 ## Formal definition
 
@@ -50,7 +50,10 @@ font-smooth: unset;
 
 ## Formal syntax
 
-{{csssyntax}}
+```plain
+font-smooth =
+  auto | never | always | <absolute-size> | <length>
+```
 
 ## Examples
 
@@ -60,7 +63,7 @@ The following example shows the Safari/Chromium and Firefox equivalents that tur
 
 For those of you not on a macOS system, here is a screenshot (the live version appears later on):
 
-![](smoothing.png)
+![Two texts examples one with the font-smooth property and another one without](smoothing.png)
 
 #### HTML
 

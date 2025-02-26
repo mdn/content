@@ -1,28 +1,24 @@
 ---
 title: Mobile touch controls
 slug: Games/Techniques/Control_mechanisms/Mobile_touch
-tags:
-  - Controls
-  - Games
-  - JavaScript
-  - Mobile
-  - pointer
-  - touch
+page-type: guide
 ---
+
 {{GamesSidebar}}
 
 {{NextMenu("Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard", "Games/Techniques/Control_mechanisms")}}
 
-The future of mobile gaming is definitely web, and many developers choose the [mobile first](/en-US/docs/Web/Apps/Mobile_First) approach in their game development process — in the modern world, this generally also involves implementing touch controls. In this tutorial, we will see how easy it is to implement mobile controls in an HTML5 game, and enjoy playing on a mobile touch-enabled device.
+The future of mobile gaming is definitely web, and many developers choose the [mobile first](/en-US/docs/Glossary/Mobile_First) approach in their game development process — in the modern world, this generally also involves implementing touch controls. In this tutorial, we will see how easy it is to implement mobile controls in an HTML game, and enjoy playing on a mobile touch-enabled device.
 
-> **Note:** The game [Captain Rogers: Battle at Andromeda](https://rogers2.enclavegames.com/demo/) is built with Phaser and managing the controls is Phaser-based, but it could also be done in pure JavaScript. The good thing about using Phaser is that it offers helper variables and functions for easier and faster development, but it's entirely up to you which approach you to choose.
+> [!NOTE]
+> The game [Captain Rogers: Battle at Andromeda](https://rogers2.enclavegames.com/demo/) is built with Phaser and managing the controls is Phaser-based, but it could also be done in pure JavaScript. The good thing about using Phaser is that it offers helper variables and functions for easier and faster development, but it's entirely up to you which approach you to choose.
 
 ## Pure JavaScript approach
 
 We could implement touch events on our own — setting up event listeners and assigning relevant functions to them would be quite straightforward:
 
 ```js
-var el = document.getElementsByTagName("canvas")[0];
+const el = document.querySelector("canvas");
 el.addEventListener("touchstart", handleStart);
 el.addEventListener("touchmove", handleMove);
 el.addEventListener("touchend", handleEnd);
@@ -31,18 +27,19 @@ el.addEventListener("touchcancel", handleCancel);
 
 This way, touching the game's {{htmlelement("canvas")}} on the mobile screen would emit events, and thus we could manipulate the game in any way we want (for example, moving the spaceship around). The events are as follows:
 
-- [touchstart](/en-US/docs/Web/API/GlobalEventHandlers/ontouchstart) is fired when the user puts a finger on the screen.
-- [touchmove](/en-US/docs/Web/API/GlobalEventHandlers/ontouchmove) is fired when they move the finger on the screen while touching it
-- [touchend](/en-US/docs/Web/API/GlobalEventHandlers/ontouchend) is fired when the user stops touching the screen
-- [touchcancel](/en-US/docs/Web/API/GlobalEventHandlers/ontouchcancel) is fired when a touch is cancelled, for example when the user moves their finger out of the screen.
+- [touchstart](/en-US/docs/Web/API/Element/touchstart_event) is fired when the user puts a finger on the screen.
+- [touchmove](/en-US/docs/Web/API/Element/touchmove_event) is fired when they move the finger on the screen while touching it
+- [touchend](/en-US/docs/Web/API/Element/touchend_event) is fired when the user stops touching the screen
+- [touchcancel](/en-US/docs/Web/API/Element/touchcancel_event) is fired when a touch is cancelled, for example when the user moves their finger out of the screen.
 
-> **Note:** The [touch events](/en-US/docs/Web/API/Touch_events) reference article provides more examples and information.
+> [!NOTE]
+> The [touch events](/en-US/docs/Web/API/Touch_events) reference article provides more examples and information.
 
 ### Pure JavaScript demo
 
 Let's implement the mobile support in a [little demo](https://github.com/end3r/JavaScript-Game-Controls/) available on GitHub, so we can move the player's ship by touching the screen on a mobile device.
 
-We will use two events: `touchstart` and,`touchmove` both handled by one function. Why? The function `touchHandler` will assign proper variables to the ship's position so that we can use it for both cases: when the player touches the screen but doesn't move it (`touchstart`), and when the finger is moved on the screen (`touchmove`):
+We will use two events: `touchstart` and `touchmove`, both handled by one function. Why? The function `touchHandler` will assign proper variables to the ship's position so that we can use it for both cases: when the player touches the screen but doesn't move it (`touchstart`), and when the finger is moved on the screen (`touchmove`):
 
 ```js
 document.addEventListener("touchstart", touchHandler);
@@ -53,12 +50,12 @@ The `touchHandler` function looks like this:
 
 ```js
 function touchHandler(e) {
-    if(e.touches) {
-        playerX = e.touches[0].pageX - canvas.offsetLeft - playerWidth / 2;
-        playerY = e.touches[0].pageY - canvas.offsetTop - playerHeight / 2;
-        output.textContent = `Touch:  x: ${playerX}, y: ${playerY}`;
-        e.preventDefault();
-    }
+  if (e.touches) {
+    playerX = e.touches[0].pageX - canvas.offsetLeft - playerWidth / 2;
+    playerY = e.touches[0].pageY - canvas.offsetTop - playerHeight / 2;
+    output.textContent = `Touch:\nx: ${playerX}, y: ${playerY}`;
+    e.preventDefault();
+  }
 }
 ```
 
@@ -90,7 +87,7 @@ Instead of using the pointers directly it is also possible to listen for `this.g
 this.game.input.onDown.add(itemTouched, this);
 
 function itemTouched(pointer) {
-    // do something
+  // Do something
 }
 ```
 
@@ -102,7 +99,7 @@ This approach uses the generally available `this.game.input` object, but you can
 this.button.events.onInputOver.add(itemTouched, this);
 
 function itemTouched(button, pointer) {
-    // do something
+  // Do something
 }
 ```
 
@@ -115,7 +112,13 @@ An additional advantage of using Phaser is that the buttons you create will take
 The easiest way to add an interactive object that will listen for user input is to create a button:
 
 ```js
-var buttonEnclave = this.add.button(10, 10, 'logo-enclave', this.clickEnclave, this);
+const buttonEnclave = this.add.button(
+  10,
+  10,
+  "logo-enclave",
+  this.clickEnclave,
+  this,
+);
 ```
 
 This one is formed in the `MainMenu` state — it will be placed ten pixels from the top left corner of the screen, use the `logo-enclave` image, and execute the `clickEnclave()` function when it is touched. This will work on mobile and desktop out of the box. There are a few buttons in the main menu, including the one that will start the game.
@@ -123,7 +126,13 @@ This one is formed in the `MainMenu` state — it will be placed ten pixels from
 For the actual gameplay, instead of creating more buttons and covering the small mobile screen with them, we can use something a little different: we'll create invisible areas which respond to the given action. From a design point of view, it is better to make the field of activity bigger without covering half of the screen with button images. For example, tapping on the right side of the screen will fire the weapon:
 
 ```js
-this.buttonShoot = this.add.button(this.world.width*0.5, 0, 'button-alpha', null, this);
+this.buttonShoot = this.add.button(
+  this.world.width * 0.5,
+  0,
+  "button-alpha",
+  null,
+  this,
+);
 this.buttonShoot.onInputDown.add(this.goShootPressed, this);
 this.buttonShoot.onInputUp.add(this.goShootReleased, this);
 ```
@@ -133,14 +142,14 @@ The code above will create a new button using a transparent image that covers th
 Moving the player could be managed by creating the four directional buttons, but we can take the advantage of touch screens and drag the player's ship around:
 
 ```js
-var player = this.game.add.sprite(30, 30, 'ship');
+const player = this.game.add.sprite(30, 30, "ship");
 player.inputEnabled = true;
 player.input.enableDrag();
 player.events.onDragStart.add(onDragStart, this);
 player.events.onDragStop.add(onDragStop, this);
 
 function onDragStart(sprite, pointer) {
-    // do something when dragging
+  // Do something when dragging
 }
 ```
 
@@ -148,24 +157,32 @@ We can pull the ship around and do something in the meantime, and react when the
 
 ### Dedicated plugins
 
-You could go even further and use dedicated plugins like [Virtual Joystick](https://phaser.io/shop/plugins/virtualjoystick) — this is a paid, official Phaser plugin, but you can find free and [open source alternatives](https://github.com/Gamegur-us/phaser-touch-control-plugin). The initialization of Virtual Joystick looks like this:
+You can use dedicated plugins that handle touch events in different ways, render UI controls, and more.
+Here are some plugin examples that use a virtual gamepad and joystick:
 
-```js
-this.pad = this.game.plugins.add(Phaser.VirtualJoystick);
-this.stick = this.pad.addStick(30, 30, 80, 'generic');
+- [phaser-plugin-virtual-gamepad](https://github.com/ShawnHymel/phaser-plugin-virtual-gamepad) (Phaser 2)
+- [Virtual joystick](https://rexrainbow.github.io/phaser3-rex-notes/docs/site/virtualjoystick/) (Phaser 3)
+
+For basic plugins like the virtual gamepad, you can download the script and make it available in your page:
+
+```html
+<script src="js/phaser.min.js"></script>
+<!-- https://github.com/ShawnHymel/phaser-plugin-virtual-gamepad -->
+<script src="js/phaser-plugin-virtual-gamepad.js"></script>
 ```
 
-In the `create()` function of the `Game` state we're creating a virtual pad and a generic stick that has four directional virtual buttons by default. This is placed 30 pixels from the top and left edges of the screen and is 80 pixels wide.
-
-The stick being pressed can be handled during the gameplay in the `update` function like so:
+Then include them in your script and use them similar to the following snippet:
 
 ```js
-if(this.stick.isDown) {
-    // move the player
-}
+// Add the VirtualGamepad plugin to a Phaser 2 game
+this.gamepad = this.game.plugins.add(Phaser.Plugin.VirtualGamepad);
+// Add a joystick to the game
+this.joystick = this.gamepad.addJoystick(100, 420, 1.2, "gamepad");
+// Add a button to the game
+this.button = this.gamepad.addButton(400, 420, 1.0, "gamepad");
 ```
 
-We can adjust the player's velocity based on the current angle of the stick and move him appropriately.
+For more information, have a look through then [unofficial catalog of Phaser plugins](https://phaserplugins.com/) to see if something fits your needs.
 
 ## Summary
 

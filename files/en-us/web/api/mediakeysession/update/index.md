@@ -1,26 +1,18 @@
 ---
-title: MediaKeySession.update()
+title: "MediaKeySession: update() method"
+short-title: update()
 slug: Web/API/MediaKeySession/update
 page-type: web-api-instance-method
-tags:
-  - API
-  - EncryptedMediaExtensions
-  - Experimental
-  - MediaKeySession
-  - Method
-  - NeedsExample
-  - Reference
-  - Update
 browser-compat: api.MediaKeySession.update
 ---
-{{APIRef("EncryptedMediaExtensions")}}
 
-The `MediaKeySession.update()` method loads messages and licenses to the
-CDM, and then returns a {{jsxref('Promise')}} .
+{{APIRef("Encrypted Media Extensions")}}{{SecureContext_Header}}
+
+The `update()` method of the {{domxref('MediaKeySession')}} interface loads messages and licenses to the CDM, and then returns a {{jsxref('Promise')}}.
 
 ## Syntax
 
-```js
+```js-nolint
 update(response)
 ```
 
@@ -31,7 +23,7 @@ update(response)
 
 ### Return value
 
-A {{jsxref('Promise')}}.
+A {{jsxref('Promise')}} that resolves to `undefined`.
 
 ## Specifications
 

@@ -1,22 +1,18 @@
 ---
-title: CSSCounterStyleRule.suffix
+title: "CSSCounterStyleRule: suffix property"
+short-title: suffix
 slug: Web/API/CSSCounterStyleRule/suffix
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - suffix
-  - CSSCounterStyleRule
 browser-compat: api.CSSCounterStyleRule.suffix
 ---
-{{DefaultAPISidebar("CSS Counter Styles")}}
+
+{{APIRef("CSSOM")}}
 
 The **`suffix`** property of the {{domxref("CSSCounterStyleRule")}} interface gets and sets the value of the {{cssxref("@counter-style/suffix","suffix")}} descriptor. If the descriptor does not have a value set, this attribute returns an empty string.
 
 ## Value
 
-A string
+A string.
 
 ## Examples
 
@@ -26,7 +22,7 @@ The following example shows a {{cssxref("@counter-style")}} rule. In JavaScript,
 @counter-style box-corner {
   system: fixed;
   symbols: ◰ ◳ ◲ ◱;
-  suffix: ': ';
+  suffix: ": ";
   negative: "-";
 }
 ```

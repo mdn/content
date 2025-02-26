@@ -1,14 +1,10 @@
 ---
 title: transform
 slug: Web/CSS/transform
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-  - Transforms
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.transform
 ---
+
 {{CSSRef}}
 
 The **`transform`** [CSS](/en-US/docs/Web/CSS) property lets you rotate, scale, skew, or translate an element.
@@ -16,11 +12,12 @@ It modifies the coordinate space of the CSS [visual formatting model](/en-US/doc
 
 {{EmbedInteractiveExample("pages/css/transform.html")}}
 
-If the property has a value different than `none`, a [stacking context](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context) will be created.
-In that case, the element will act as a [containing block](/en-US/docs/Web/CSS/Containing_block) for any `position: fixed;` or `position: absolute;` elements that it contains.
+If the property has a value different from `none`, a [stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context) will be created.
+In that case, the element will act as a [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block) for any `position: fixed;` or `position: absolute;` elements that it contains.
 
-> **Warning:** Only transformable elements can be `transform`ed.
-> That is, all elements whose layout is governed by the CSS box model except for: [non-replaced inline boxes](/en-US/docs/Web/CSS/Visual_formatting_model#inline-level_elements_and_inline_boxes), [table-column boxes](/en-US/docs/Web/HTML/Element/col), and [table-column-group boxes](/en-US/docs/Web/HTML/Element/colgroup).
+> [!WARNING]
+> Only transformable elements can be `transform`ed.
+> That is, all elements whose layout is governed by the CSS box model except for: [non-replaced inline boxes](/en-US/docs/Glossary/Inline-level_content), [table-column boxes](/en-US/docs/Web/HTML/Element/col), and [table-column-group boxes](/en-US/docs/Web/HTML/Element/colgroup).
 
 ## Syntax
 
@@ -29,11 +26,11 @@ In that case, the element will act as a [containing block](/en-US/docs/Web/CSS/C
 transform: none;
 
 /* Function values */
-transform: matrix(1.0, 2.0, 3.0, 4.0, 5.0, 6.0);
+transform: matrix(1, 2, 3, 4, 5, 6);
 transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
 transform: perspective(17px);
 transform: rotate(0.5turn);
-transform: rotate3d(1, 2.0, 3.0, 10deg);
+transform: rotate3d(1, 2, 3, 10deg);
 transform: rotateX(10deg);
 transform: rotateY(10deg);
 transform: rotateZ(10deg);
@@ -53,7 +50,7 @@ transform: skewY(1.07rad);
 
 /* Multiple function values */
 transform: translateX(10px) rotate(10deg) translateY(5px);
-transform: perspective(500px) translate(10px, 0, 20px) rotateY(3deg);
+transform: perspective(500px) translate3d(10px, 0, 20px) rotateY(30deg);
 
 /* Global values */
 transform: inherit;
@@ -65,22 +62,20 @@ transform: unset;
 
 The `transform` property may be specified as either the keyword value `none` or as one or more `<transform-function>` values.
 
-If {{cssxref("transform-function/perspective", "perspective()")}} is one of multiple function values, it must be listed first.
-
 ### Values
 
 - {{cssxref("&lt;transform-function&gt;")}}
   - : One or more of the [CSS transform functions](/en-US/docs/Web/CSS/transform-function) to be applied.
-    The transform functions are multiplied in order from left to right, meaning that composite transforms are effectively applied in order from right to left.
+    The transform functions are multiplied in order from left to right, meaning that composite transforms are effectively [applied in order from right to left](#transform_order).
 - `none`
   - : Specifies that no transform should be applied.
 
-## Accessibility concerns
+## Accessibility
 
 Scaling/zooming animations are problematic for accessibility, as they are a common trigger for certain types of migraine.
 If you need to include such animations on your website, you should provide a control to allow users to turn off animations, preferably site-wide.
 
-Also, consider making use of the {{cssxref("@media/prefers-reduced-motion", "prefers-reduced-motion")}} media feature — use it to write a [media query](/en-US/docs/Web/CSS/Media_Queries) that will turn off animations if the user has reduced animation specified in their system preferences.
+Also, consider making use of the {{cssxref("@media/prefers-reduced-motion", "prefers-reduced-motion")}} media feature — use it to write a [media query](/en-US/docs/Web/CSS/CSS_media_queries) that will turn off animations if the user has reduced animation specified in their system preferences.
 
 Find out more:
 
@@ -120,9 +115,73 @@ div {
 
 {{EmbedLiveSample("Translating_and_rotating_an_element", "400", "160")}}
 
+### Transform order
+
+The order of transform functions matters. In this example, two boxes are rotated and translated by the same values; only the transform function order is different.
+
+#### HTML
+
+```html
+<div class="original"></div>
+<div class="one">1</div>
+<div class="two">2</div>
+```
+
+#### CSS
+
+```css hidden
+div {
+  height: 200px;
+  width: 200px;
+  position: absolute;
+  left: 200px;
+  top: 50px;
+  font-size: 4rem;
+  line-height: 200px;
+  text-align: center;
+}
+.original {
+  border: 1px dashed;
+}
+.original:before,
+.original:after {
+  content: "";
+  position: absolute;
+  top: 100px;
+  width: 500px;
+  left: -150px;
+  height: 1px;
+  border-top: 2px dotted;
+}
+.original:after {
+  transform: rotate(135deg);
+}
+.one {
+  background-color: #ccc;
+}
+.two {
+  background-color: #d6bb72;
+}
+```
+
+```css
+.one {
+  transform: translateX(200px) rotate(135deg);
+}
+.two {
+  transform: rotate(135deg) translateX(200px);
+}
+```
+
+#### Result
+
+{{EmbedLiveSample("Transform_order", "400", "460")}}
+
+When an element is rotated before being translated, the translate direction is on the rotated axis. The axis as indicated with the dotted lines.
+
 ### More examples
 
-Please see [Using CSS transforms](/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms) and {{cssxref("&lt;transform-function&gt;")}} for more examples.
+Please see [Using CSS transforms](/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms) and {{cssxref("&lt;transform-function&gt;")}} for more examples.
 
 ## Specifications
 
@@ -134,6 +193,8 @@ Please see [Using CSS transforms](/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_t
 
 ## See also
 
-- [Using CSS transforms](/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)
+- [Using CSS transforms](/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
 - {{cssxref("&lt;transform-function&gt;")}} data type with all the transform functions explained.
+- Individual CSS properties: {{cssxref('translate')}}, {{cssxref('rotate')}}, and {{cssxref('scale')}} (there is no `skew` property).
+- SVG {{SVGAttr("transform")}} attribute
 - Online tool to visualize CSS Transform functions: [CSS Transform Playground](https://css-transform.moro.es/)

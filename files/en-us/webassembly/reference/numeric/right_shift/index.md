@@ -1,16 +1,11 @@
 ---
 title: Right shift
 slug: WebAssembly/Reference/Numeric/Right_shift
-tags:
-  - WebAssembly
-  - wasm
-  - Reference
-  - Numeric
-  - Bitwise
+page-type: webassembly-instruction
+sidebar: webassemblysidebar
 ---
-{{WebAssemblySidebar}}
 
-The **`shr`** instructions, short for *shift-right*, are used for performing a bitwise right-shift, similar to the **`>>>`** operator in other languages.
+The **`shr`** instructions, short for _shift-right_, are used for performing a bitwise right-shift, similar to the **`>>>`** operator in other languages.
 
 {{EmbedInteractiveExample("pages/wat/shr.html", "tabbed-taller")}}
 

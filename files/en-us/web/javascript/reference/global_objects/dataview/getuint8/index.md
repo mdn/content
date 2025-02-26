@@ -1,55 +1,55 @@
 ---
 title: DataView.prototype.getUint8()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/getUint8
-tags:
-  - DataView
-  - JavaScript
-  - Method
-  - Prototype
-  - TypedArrays
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.DataView.getUint8
 ---
+
 {{JSRef}}
 
-The **`getUint8()`** method gets an unsigned 8-bit integer
-(unsigned byte) at the specified byte offset from the start of the
-{{jsxref("DataView")}}.
+The **`getUint8()`** method of {{jsxref("DataView")}} instances reads 1 byte at the specified byte offset of this `DataView` and interprets it as an 8-bit unsigned integer.
 
-{{EmbedInteractiveExample("pages/js/dataview-getuint8.html")}}
+{{InteractiveExample("JavaScript Demo: DataView.getUint8()")}}
+
+```js interactive-example
+// Create an ArrayBuffer with a size in bytes
+const buffer = new ArrayBuffer(16);
+
+const view = new DataView(buffer);
+view.setUint8(1, 255); // Max unsigned 8-bit integer
+
+console.log(view.getUint8(1));
+// Expected output: 255
+```
 
 ## Syntax
 
-```js
+```js-nolint
 getUint8(byteOffset)
 ```
 
 ### Parameters
 
 - `byteOffset`
-  - : The offset, in byte, from the start of the view where to read the data.
+  - : The offset, in bytes, from the start of the view to read the data from.
 
 ### Return value
 
-An unsigned 8-bit integer number.
+An integer from 0 to 255, inclusive.
 
-### Errors thrown
+### Exceptions
 
 - {{jsxref("RangeError")}}
-  - : Thrown if the `byteOffset` is set such as it would read beyond the end of
-    the view.
-
-## Description
-
-There is no alignment constraint; multi-byte values may be fetched from any offset.
+  - : Thrown if the `byteOffset` is set such that it would read beyond the end of the view.
 
 ## Examples
 
-### Using the getUint8 method
+### Using getUint8()
 
 ```js
-const buffer = new ArrayBuffer(8);
+const { buffer } = new Uint8Array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]);
 const dataview = new DataView(buffer);
-dataview.getUint8(1); // 0
+console.log(dataview.getUint8(1)); // 1
 ```
 
 ## Specifications
@@ -62,5 +62,7 @@ dataview.getUint8(1); // 0
 
 ## See also
 
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide
 - {{jsxref("DataView")}}
 - {{jsxref("ArrayBuffer")}}
+- {{jsxref("Uint8Array")}}

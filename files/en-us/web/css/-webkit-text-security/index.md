@@ -1,16 +1,13 @@
 ---
-title: '-webkit-text-security'
+title: -webkit-text-security
 slug: Web/CSS/-webkit-text-security
-tags:
-  - CSS
-  - CSS Property
-  - NeedsCompatTable
-  - Non-standard
-  - Reference
-  - recipe:css-property
+page-type: css-property
+status:
+  - non-standard
 browser-compat: css.properties.-webkit-text-security
 ---
-{{ CSSRef() }} {{ Non-standard_header() }}
+
+{{CSSRef}}{{Non-standard_Header}}
 
 **`-webkit-text-security`** is a non-standard CSS property that obfuscates characters in a {{HtmlElement("form")}} field (such as {{HtmlElement("input")}} or {{HtmlElement("textarea")}}) by replacing them with a shape. It only affects fields that are _not_ of `type=password`.
 
@@ -21,15 +18,20 @@ browser-compat: css.properties.-webkit-text-security
 -webkit-text-security: disc;
 -webkit-text-security: square;
 -webkit-text-security: none;
+
+/* Global values */
+-webkit-text-security: inherit;
+-webkit-text-security: initial;
+-webkit-text-security: revert;
+-webkit-text-security: revert-layer;
+-webkit-text-security: unset;
 ```
-
-## Formal definition
-
-{{CSSInfo}}
 
 ## Formal syntax
 
-{{CSSSyntax}}
+```plain
+-webkit-text-security = circle | disc | square | none
+```
 
 ## Examples
 
@@ -40,8 +42,7 @@ Try typing in the field below. If your browser supports this property, the chara
 #### HTML
 
 ```html
-<label for="name">Name:</label>
-<input type="text" name="name" id="name" />
+<label for="name">Name:</label> <input type="text" name="name" id="name" />
 ```
 
 #### CSS

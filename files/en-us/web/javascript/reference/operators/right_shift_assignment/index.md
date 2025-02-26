@@ -1,26 +1,39 @@
 ---
 title: Right shift assignment (>>=)
 slug: Web/JavaScript/Reference/Operators/Right_shift_assignment
-tags:
-  - Assignment operator
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
+page-type: javascript-operator
 browser-compat: javascript.operators.right_shift_assignment
 ---
+
 {{jsSidebar("Operators")}}
 
-The right shift assignment operator (`>>=`) moves the specified amount
-of bits to the right and assigns the result to the variable.
+The **right shift assignment (`>>=`)** operator performs [right shift](/en-US/docs/Web/JavaScript/Reference/Operators/Right_shift) on the two operands and assigns the result to the left operand.
 
-{{EmbedInteractiveExample("pages/js/expressions-right-shift-assignment.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Right shift assignment operator")}}
+
+```js interactive-example
+let a = 5; //  00000000000000000000000000000101
+
+a >>= 2; //  00000000000000000000000000000001
+console.log(a);
+// Expected output: 1
+
+let b = -5; //  11111111111111111111111111111011
+
+b >>= 2; //  11111111111111111111111111111110
+console.log(b);
+// Expected output: -2
+```
 
 ## Syntax
 
-```js
-x >>= y // x = x >> y
+```js-nolint
+x >>= y
 ```
+
+## Description
+
+`x >>= y` is equivalent to `x = x >> y`, except that the expression `x` is only evaluated once.
 
 ## Examples
 
@@ -28,10 +41,13 @@ x >>= y // x = x >> y
 
 ```js
 let a = 5; //   (00000000000000000000000000000101)
-a >>= 2;   // 1 (00000000000000000000000000000001)
+a >>= 2; //   1 (00000000000000000000000000000001)
 
 let b = -5; //  (-00000000000000000000000000000101)
-b >>= 2;  // -2 (-00000000000000000000000000000010)
+b >>= 2; //  -2 (-00000000000000000000000000000010)
+
+let c = 5n;
+c >>= 2n; // 1n
 ```
 
 ## Specifications
@@ -44,5 +60,5 @@ b >>= 2;  // -2 (-00000000000000000000000000000010)
 
 ## See also
 
-- [Assignment operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#assignment)
-- [Right shift operator](/en-US/docs/Web/JavaScript/Reference/Operators/Right_shift)
+- [Assignment operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#assignment_operators)
+- [Right shift (`>>`)](/en-US/docs/Web/JavaScript/Reference/Operators/Right_shift)

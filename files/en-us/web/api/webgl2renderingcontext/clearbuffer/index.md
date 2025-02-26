@@ -1,16 +1,12 @@
 ---
-title: WebGL2RenderingContext.clearBuffer[fiuv]()
+title: "WebGL2RenderingContext: clearBuffer[fiuv]() method"
+short-title: clearBuffer[fiuv]()
 slug: Web/API/WebGL2RenderingContext/clearBuffer
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL2
 browser-compat: api.WebGL2RenderingContext.clearBufferiv
 ---
-{{APIRef("WebGL")}}
+
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGL2RenderingContext.clearBuffer[fiuv]()`** methods of
 the [WebGL 2 API](/en-US/docs/Web/API/WebGL_API) clear buffers from the
@@ -18,7 +14,7 @@ currently bound framebuffer.
 
 ## Syntax
 
-```js
+```js-nolint
 clearBufferfv(buffer, drawbuffer, values)
 clearBufferfv(buffer, drawbuffer, values, srcOffset)
 

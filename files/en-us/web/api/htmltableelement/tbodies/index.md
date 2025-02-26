@@ -1,16 +1,11 @@
 ---
-title: HTMLTableElement.tBodies
+title: "HTMLTableElement: tBodies property"
+short-title: tBodies
 slug: Web/API/HTMLTableElement/tBodies
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLTableElement
-  - Property
-  - Read-only
-  - Reference
 browser-compat: api.HTMLTableElement.tBodies
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLTableElement.tBodies`** read-only property returns a
@@ -42,7 +37,7 @@ A live {{domxref("HTMLCollection")}}.
 This snippet gets the number of bodies in a table.
 
 ```js
-mytable.tBodies.length;
+myTable.tBodies.length;
 ```
 
 ## Specifications

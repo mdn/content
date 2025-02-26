@@ -1,48 +1,53 @@
 ---
 title: String.prototype.trim()
-slug: Web/JavaScript/Reference/Global_Objects/String/Trim
-tags:
-  - ECMAScript 5
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
-  - Polyfill
+slug: Web/JavaScript/Reference/Global_Objects/String/trim
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.trim
 ---
+
 {{JSRef}}
 
-The **`trim()`** method removes whitespace from both ends of a
-string and returns a new string, without modifying the original string.
-Whitespace in this context is all the whitespace characters (space, tab,
-no-break space, etc.) and all the line terminator characters (LF, CR, etc.).
+The **`trim()`** method of {{jsxref("String")}} values removes whitespace from both ends of this string and returns a new string, without modifying the original string.
 
-{{EmbedInteractiveExample("pages/js/string-trim.html")}}
+To return a new string with whitespace trimmed from just one end, use {{jsxref("String/trimStart", "trimStart()")}} or {{jsxref("String/trimEnd", "trimEnd()")}}.
+
+{{InteractiveExample("JavaScript Demo: String.trim()")}}
+
+```js interactive-example
+const greeting = "   Hello world!   ";
+
+console.log(greeting);
+// Expected output: "   Hello world!   ";
+
+console.log(greeting.trim());
+// Expected output: "Hello world!";
+```
 
 ## Syntax
 
-```js
+```js-nolint
 trim()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
-A new string representing `str` stripped of whitespace from both its beginning and end.
+A new string representing `str` stripped of whitespace from both its beginning and end. Whitespace is defined as [white space](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#white_space) characters plus [line terminators](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#line_terminators).
 
-If neither the beginning or end of `str` has any whitespace, a new string is still returned (essentially a copy of `str`), with no exception being thrown.
-
-To return a new string with whitespace trimmed from just one end, use {{jsxref("String.prototype.trimStart()", "trimStart()")}} or {{jsxref("String.prototype.trimEnd()", "trimEnd()")}}.
+If neither the beginning or end of `str` has any whitespace, a new string is still returned (essentially a copy of `str`).
 
 ## Examples
 
-### Using `trim()`
+### Using trim()
 
-The following example displays the lowercase string `'foo'`:
+The following example trims whitespace from both ends of `str`.
 
 ```js
-const orig = '   foo  ';
-console.log(orig.trim()); // 'foo'
+const str = "   foo  ";
+console.log(str.trim()); // 'foo'
 ```
 
 ## Specifications

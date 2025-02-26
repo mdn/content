@@ -2,22 +2,24 @@
 title: User-Agent Client Hints API
 slug: Web/API/User-Agent_Client_Hints_API
 page-type: web-api-overview
-tags:
-  - API
-  - User-Agent Client Hints API
-  - Overview
-  - Reference
-browser-compat: api.NavigatorUAData
+status:
+  - experimental
+browser-compat:
+  - api.NavigatorUAData
+  - api.Navigator.userAgentData
+  - api.WorkerNavigator.userAgentData
+spec-urls: https://wicg.github.io/ua-client-hints/
 ---
-{{DefaultAPISidebar("User-Agent Client Hints API")}}
 
-The User-Agent Client Hints API extends [Client Hints](/en-US/docs/Web/HTTP/Client_hints) to provide a way of exposing browser and platform information via User-Agent response and request headers, and a JavaScript API.
+{{DefaultAPISidebar("User-Agent Client Hints API")}}{{SeeCompatTable}}
+
+The **User-Agent Client Hints API** extends [Client Hints](/en-US/docs/Web/HTTP/Client_hints) to provide a way of exposing browser and platform information via User-Agent response and request headers, and a JavaScript API.
 
 ## Concepts and Usage
 
 Parsing the User-Agent string has historically been the way to get information about the user's browser or device. A typical user agent string looks like the following example, identifying Chrome 92 on Windows:
 
-```
+```plain
 Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36
 ```
 
@@ -45,6 +47,13 @@ Potential use cases include:
 - {{domxref("NavigatorUAData")}}
   - : Provides properties and methods to access data about the user's browser and operating system.
 
+### Extensions to other interfaces
+
+- {{domxref("Navigator.userAgentData")}} {{ReadOnlyInline}}
+  - : Returns a {{domxref("NavigatorUAData")}} object, which gives access to information about the browser and operating system of the user.
+- {{domxref("WorkerNavigator.userAgentData")}} {{ReadOnlyInline}}
+  - : Returns a {{domxref("NavigatorUAData")}} object, which gives access to information about the browser and operating system of the user.
+
 ## Examples
 
 ### Getting the brands
@@ -60,13 +69,17 @@ console.log(navigator.userAgentData.brands);
 In the following example a number of hints are requested using the {{domxref("NavigatorUAData.getHighEntropyValues()")}} method. When the promise resolves, this information is printed to the console.
 
 ```js
-navigator.userAgentData.getHighEntropyValues(
-  ["architecture",
-  "model",
-  "platform",
-  "platformVersion",
-  "fullVersionList"])
-  .then((ua) => { console.log(ua) });
+navigator.userAgentData
+  .getHighEntropyValues([
+    "architecture",
+    "model",
+    "platform",
+    "platformVersion",
+    "fullVersionList",
+  ])
+  .then((ua) => {
+    console.log(ua);
+  });
 ```
 
 ## Specifications
@@ -79,5 +92,5 @@ navigator.userAgentData.getHighEntropyValues(
 
 ## See also
 
-- [Improving user privacy and developer experience with User-Agent Client Hints](https://web.dev/user-agent-client-hints/)
-- [Migrate to User-Agent Client Hints](https://web.dev/migrate-to-ua-ch/)
+- [Improving user privacy and developer experience with User-Agent Client Hints](https://developer.chrome.com/docs/privacy-security/user-agent-client-hints)
+- [Migrate to User-Agent Client Hints](https://web.dev/articles/migrate-to-ua-ch)

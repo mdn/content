@@ -1,31 +1,18 @@
 ---
-title: CanvasRenderingContext2D.fillText()
+title: "CanvasRenderingContext2D: fillText() method"
+short-title: fillText()
 slug: Web/API/CanvasRenderingContext2D/fillText
 page-type: web-api-instance-method
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Draw String
-  - Draw Text
-  - Drawing Strings
-  - Drawing Text
-  - Fill Text
-  - Filling Text
-  - Method
-  - Reference
-  - Text
-  - fillText
 browser-compat: api.CanvasRenderingContext2D.fillText
 ---
+
 {{APIRef("HTML DOM")}}
 
 The {{domxref("CanvasRenderingContext2D")}} method
 **`fillText()`**, part of the Canvas 2D API, draws a text string
 at the specified coordinates, filling the string's characters with the current
 {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}}. An optional parameter
-allows specifying a maximum width for the rendered text, which the {{Glossary("user
-  agent")}} will achieve by condensing the text or by using a lower font size.
+allows specifying a maximum width for the rendered text, which the {{Glossary("user agent")}} will achieve by condensing the text or by using a lower font size.
 
 This method draws directly to the canvas without modifying the current path, so any
 subsequent {{domxref("CanvasRenderingContext2D.fill()", "fill()")}} or
@@ -38,12 +25,13 @@ The text is rendered using the font and text layout configuration as defined by 
 {{domxref("CanvasRenderingContext2D.textBaseline","textBaseline")}}, and
 {{domxref("CanvasRenderingContext2D.direction","direction")}} properties.
 
-> **Note:** To draw the outlines of the characters in a string, call the context's
+> [!NOTE]
+> To draw the outlines of the characters in a string, call the context's
 > {{domxref("CanvasRenderingContext2D.strokeText", "strokeText()")}} method.
 
 ## Syntax
 
-```js
+```js-nolint
 fillText(text, x, y)
 fillText(text, x, y, maxWidth)
 ```
@@ -92,11 +80,11 @@ First, we need a canvas to draw into. This code creates a context 400 pixels wid
 The JavaScript code for this example follows.
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
-ctx.font = '50px serif';
-ctx.fillText('Hello world', 50, 90);
+ctx.font = "50px serif";
+ctx.fillText("Hello world", 50, 90);
 ```
 
 This code obtains a reference to the {{HTMLElement("canvas")}}, then gets a reference
@@ -124,11 +112,11 @@ This example writes the words "Hello world," restricting its width to 140 pixels
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
-ctx.font = '50px serif';
-ctx.fillText('Hello world', 50, 90, 140);
+ctx.font = "50px serif";
+ctx.fillText("Hello world", 50, 90, 140);
 ```
 
 #### Result

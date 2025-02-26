@@ -1,19 +1,19 @@
 ---
-title: 'ScriptProcessorNode: audioprocess event'
+title: "ScriptProcessorNode: audioprocess event"
+short-title: audioprocess
 slug: Web/API/ScriptProcessorNode/audioprocess_event
 page-type: web-api-event
-tags:
-  - ScriptProcessorNode
-  - Web Audio API
-  - audioprocess
-  - event
+status:
+  - deprecated
 browser-compat: api.ScriptProcessorNode.audioprocess_event
 ---
-{{APIRef("Web Audio API")}}{{deprecated_header}}
+
+{{APIRef("Web Audio API")}}{{Deprecated_Header}}
 
 The `audioprocess` event of the {{domxref("ScriptProcessorNode")}} interface is fired when an input buffer of a script processor is ready to be processed.
 
-> **Note:** This feature was replaced by [AudioWorklets](/en-US/docs/Web/API/AudioWorklet) and the {{domxref("AudioWorkletNode")}} interface.
+> [!NOTE]
+> This feature was replaced by [AudioWorklets](/en-US/docs/Web/API/AudioWorklet) and the {{domxref("AudioWorkletNode")}} interface.
 
 This event is not cancelable and does not bubble.
 
@@ -29,7 +29,7 @@ _Also implements the properties inherited from its parent, {{domxref("Event")}}.
 
 - `playbackTime` {{ReadOnlyInline}}
   - : A double representing the time when the audio will be played,
-     as defined by the time of {{domxref("BaseAudioContext/currentTime", "AudioContext.currentTime")}}.
+    as defined by the time of {{domxref("BaseAudioContext/currentTime", "AudioContext.currentTime")}}.
 - `inputBuffer` {{ReadOnlyInline}}
   - : An {{domxref("AudioBuffer")}} that is the buffer containing the input audio data to be processed.
     The number of channels is defined as a parameter `numberOfInputChannels`,
@@ -44,7 +44,7 @@ _Also implements the properties inherited from its parent, {{domxref("Event")}}.
 ## Examples
 
 ```js
-scriptNode.addEventListener('audioprocess', function(audioProcessingEvent) {
+scriptNode.addEventListener("audioprocess", (audioProcessingEvent) => {
   // The input buffer is a song we loaded earlier
   const inputBuffer = audioProcessingEvent.inputBuffer;
 
@@ -62,10 +62,10 @@ scriptNode.addEventListener('audioprocess', function(audioProcessingEvent) {
       outputData[sample] = inputData[sample];
 
       // add noise to each output sample
-      outputData[sample] += ((Math.random() * 2) - 1) * 0.2;
+      outputData[sample] += (Math.random() * 2 - 1) * 0.2;
     }
   }
-})
+});
 ```
 
 You could also set up the event handler using the `onaudioprocess` property:
@@ -73,7 +73,7 @@ You could also set up the event handler using the `onaudioprocess` property:
 ```js
 scriptNode.onaudioprocess = (audioProcessingEvent) => {
   // ...
-}
+};
 ```
 
 ## Specifications

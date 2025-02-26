@@ -1,0 +1,152 @@
+{
+  "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
+  "version": "0.2",
+  "language": "en-US",
+  "languageId": "*",
+  "useGitignore": true,
+  "dictionaries": [
+    "terms-abbreviations",
+    "cultural-words",
+    "proper-names",
+    "non-english",
+    "code-entities",
+    "ignore-list",
+    "bash",
+    "css",
+    "cpp",
+    "django",
+    "filetypes",
+    "fonts",
+    "fullstack",
+    "html",
+    "latex",
+    "lorem-ipsum",
+    "markdown",
+    "node",
+    "npm",
+    "python",
+    "softwareTerms",
+    "svelte",
+    "typescript"
+  ],
+  "ignorePaths": [
+    ".vscode/cspell.json",
+    ".vscode/extensions.json",
+    ".markdownlint-cli2.jsonc"
+  ],
+  "ignoreRegExpList": [
+    // macros
+    "{{\\s?\\w*",
+    "{{\\s*EmbedInteractiveExample\\(.*\\)\\s*}}",
+    "{{\\s*EmbedLiveSample\\(.*\\)\\s*}}",
+    "{{\\s*EmbedYouTube\\(.*\\)\\s*}}",
+    "{{\\s*EmbedGHLiveSample\\(.*\\)\\s*}}",
+    // Markdown links
+    "\\]\\(\\S*\\)",
+    // Website references
+    "[\\w\\-.]+\\.(com|net|org|ac\\.uk)\\b",
+    // Things like "**J**ava**S**cript"
+    "\\*\\*\\w+\\*\\*\\w*",
+    "\\*\\w+\\*\\w*",
+    "#[À-ž\\w-]*",
+    // Old Firefox interfaces
+    "nsIDOM\\w+",
+    // Don't check other scripts
+    "[\\u0370-\\u03FF]+", // Greek
+    "[\\u0400-\\u04FF]+", // Cyrillic
+    "[\\u0590-\\u05FF]+", // Hebrew
+    "[\\u0600-\\u06FF]+", // Arabic
+    "(\\uD835[\\uDC00-\\uDFFF])+", // Mathematical Alphanumeric Symbols
+    "(\\uD83A[\\uDD00-\\uDD5F])+", // Adlam script
+    // Percent-encoding
+    "[A-Za-z]*%[A-F0-9]{2}[A-Za-z]*",
+    // Various HTML attributes that often have non-word values
+    "aria-activedescendant=\"(?:[^\\\"]+|\\.)*\"",
+    "aria-controls=\"(?:[^\\\"]+|\\.)*\"",
+    "aria-describedby=\"(?:[^\\\"]+|\\.)*\"",
+    "aria-details=\"(?:[^\\\"]+|\\.)*\"",
+    "aria-errormessage=\"(?:[^\\\"]+|\\.)*\"",
+    "aria-flowto=\"(?:[^\\\"]+|\\.)*\"",
+    "aria-labelledby=\"(?:[^\\\"]+|\\.)*\"",
+    "aria-owns=\"(?:[^\\\"]+|\\.)*\"",
+    "class=\"(?:[^\\\"]+|\\.)*\"",
+    "data-test-id=\"(?:[^\\\"]+|\\.)*\"",
+    "for=\"(?:[^\\\"]+|\\.)*\"",
+    "pattern=\"(?:[^\\\"]+|\\.)*\"",
+    "href=\"(?:[^\\\"]+|\\.)*\"",
+    "(?<!\\w)id=\"(?:[^\\\"]+|\\.)*\"",
+    "lang=\".*\">.*</",
+    "src=\"(?:[^\\\"]+|\\.)*\"",
+    "HexValues",
+    "Base64",
+    // Any base64 in data URLs, even those shorter than 40 chars (which don't match Base64 regex)
+    "data:[^\\s;]+;base64,[a-zA-Z0-9/+=…]*",
+    "[Ee][Tt]ag: ([\\w-]+|\"[\\w-]+\")",
+    // Note: we don't add other headers that may contain base64 data, becase
+    // they often contain other meaningful directives that we want to spell
+    // check too
+    "url\\(\"data\\:image/svg\\+xml.*\"\\)[,;]",
+    "nonce-\\w+",
+    "sessionid=\\w+",
+    "csrftoken=\\w+",
+    "csrfmiddlewaretoken=\\w+",
+    "widget_session=\\w+",
+    "ucaf:.*\""
+  ],
+  "dictionaryDefinitions": [
+    // Note: when adding words to these lists, be as specific and contextualized
+    // as possible, to avoid typos being masked elsewhere. For example, all FF
+    // preferences should include prefixes: `dom.abortablepromise` instead of
+    // just `abortablepromise`, which may be missing a space in other contexts.
+    {
+      "name": "terms-abbreviations",
+      "path": "./dictionaries/terms-abbreviations.txt",
+      "description": "Anything that may be used throughout the content: compound words, abbreviations, etc. They are considered as real words and will be suggested.",
+      "addWords": true
+    },
+    {
+      "name": "cultural-words",
+      "path": "./dictionaries/cultural-words.txt",
+      "description": "Culture-specific names: currencies, calendars, languages, big cities, countries, etc.",
+      "addWords": true
+    },
+    // Dictionaries below will not be suggested.
+    // We are not dogmatic about where to put a word: for example,
+    // sometimes proper names are in terms-abbreviations dictionary because you
+    // are likely to use them.
+    // There's no difference between these dictionaries; they only provide rough
+    // divisions for easier management. For example, a proper name can be
+    // non-English, and non-English words may be code entities.
+    // We recommend assessing applicability in the order in which the
+    // dictionaries are listed.
+    {
+      "name": "proper-names",
+      "path": "./dictionaries/proper-names.txt",
+      "description": "Proper names: people, small towns, companies, products, fonts, online platform handles.",
+      "addWords": false,
+      "noSuggest": true
+    },
+    {
+      "name": "non-english",
+      "path": "./dictionaries/non-english.txt",
+      "description": "Non-English words. Note that some non-English words denote well-known concepts, such as \"Adlam script\" or \"Adis Ababa\", in which case they should be placed in cultural-words. This dictionary is intended for entire scripts for demonstrating non-English languages.",
+      "addWords": false,
+      "noSuggest": true
+    },
+    {
+      "name": "code-entities",
+      "path": "./dictionaries/code-entities.txt",
+      "description": "This list contains compound words that aren't properly capitalized or obscure abbreviations that are only utilized by particular web APIs (e.g. HTML attributes, language codes, event names, etc.). Only include entities defined by standards or libraries here; variable names, strings, etc. that are created by MDN code examples should be added to ignore-list.",
+      "addWords": false,
+      "noSuggest": true
+    },
+    {
+      "name": "ignore-list",
+      "path": "./dictionaries/ignore-list.txt",
+      "description": "Other gibberish words that are used for specific purposes. For example, placeholder identifiers, random strings, URLs (all lowercase), hashes, filler texts, etc. For purposefully misspelled words and/or words that are likely typos in other contexts, consider using cSpell:ignore instead.",
+      "addWords": false,
+      "noSuggest": true
+    }
+  ],
+  "enableFiletypes": ["xml"]
+}

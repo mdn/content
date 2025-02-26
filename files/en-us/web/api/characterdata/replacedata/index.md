@@ -1,20 +1,19 @@
 ---
-title: CharacterData.replaceData()
+title: "CharacterData: replaceData() method"
+short-title: replaceData()
 slug: Web/API/CharacterData/replaceData
 page-type: web-api-instance-method
-tags:
-  - Method
-  - Reference
 browser-compat: api.CharacterData.replaceData
 ---
+
 {{APIRef("DOM")}}
 
 The **`replaceData()`** method of the {{domxref("CharacterData")}} interface removes a certain number of characters of the existing text in a given `CharacterData` node and replaces those characters with the text provided.
 
 ## Syntax
 
-```js
-characterData.replaceData(offset, count, data)
+```js-nolint
+replaceData(offset, count, data)
 ```
 
 ### Parameters
@@ -31,7 +30,7 @@ characterData.replaceData(offset, count, data)
 
 None.
 
-## Exceptions
+### Exceptions
 
 - `IndexSizeError` {{domxref("DOMException")}}
   - : Thrown if `offset` or `count` is negative or `offset` is greater than the length of the contained data.
@@ -43,10 +42,10 @@ None.
 ```
 
 ```js
-let span = document.getElementsByTagName("span")[0];
-let textnode = span.nextSibling;
+const span = document.querySelector("span");
+const textNode = span.nextSibling;
 
-textnode.replaceData(2, 4, "replaced");
+textNode.replaceData(2, 4, "replaced");
 ```
 
 {{EmbedLiveSample("Example", "100%", 50)}}

@@ -1,40 +1,28 @@
 ---
-title: ':is() (:matches(), :any())'
+title: :is()
 slug: Web/CSS/:is
-tags:
-  - ':is'
-  - CSS
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Selectors
-  - Web
+page-type: css-pseudo-class
 browser-compat: css.selectors.is
 ---
-{{CSSRef}}
 
-> **Note:** `:matches()` was renamed to `:is()` in [CSSWG issue #3258](https://github.com/w3c/csswg-drafts/issues/3258).
+{{CSSRef}}
 
 The **`:is()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) function takes a selector list as its argument, and selects any element that can be selected by one of the selectors in that list. This is useful for writing large selectors in a more compact form.
 
-```css
-/* Selects any paragraph inside a header, main
-   or footer element that is being hovered */
-:is(header, main, footer) p:hover {
-  color: red;
-  cursor: pointer;
-}
+> [!NOTE]
+> Originally named `:matches()` (and `:any()`), this selector was renamed to `:is()` in [CSSWG issue #3258](https://github.com/w3c/csswg-drafts/issues/3258).
 
-/* The above is equivalent to the following */
-header p:hover,
-main p:hover,
-footer p:hover {
-  color: red;
-  cursor: pointer;
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-is.html", "tabbed-shorter")}}
+
+## Syntax
+
+The `:is()` pseudo-class requires a [selector list](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#selector_list), a comma-separated list of one or more selectors as its argument. The list must not contain a [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements), but any other simple, compound, and complex selectors are allowed.
+
+```css-nolint
+:is(<forgiving-selector-list>) {
+  /* ... */
 }
 ```
-
-Pseudo-elements are not valid in the selector list for `:is()`.
 
 ### Difference between :is() and :where()
 
@@ -55,7 +43,8 @@ In CSS when using a selector list, if any of the selectors are invalid then the 
 Will still parse correctly and match `:valid` even in browsers which don't support `:unsupported`, whereas:
 
 ```css
-:valid, :unsupported {
+:valid,
+:unsupported {
   /* … */
 }
 ```
@@ -64,97 +53,60 @@ Will be ignored in browsers which don't support `:unsupported` even if they supp
 
 ## Examples
 
-### Cross-browser example
-
-```html
-<header>
-  <p>This is my header paragraph</p>
-</header>
-
-<main>
-  <ul>
-    <li><p>This is my first</p><p>list item</p></li>
-    <li><p>This is my second</p><p>list item</p></li>
-  </ul>
-</main>
-
-<footer>
-  <p>This is my footer paragraph</p>
-</footer>
-```
-
-```css
-:-webkit-any(header, main, footer) p:hover {
-  color: red;
-  cursor: pointer;
-}
-
-:-moz-any(header, main, footer) p:hover {
-  color: red;
-  cursor: pointer;
-}
-
-:matches(header, main, footer) p:hover {
-  color: red;
-  cursor: pointer;
-}
-
-:is(header, main, footer) p:hover {
-  color: red;
-  cursor: pointer;
-}
-```
-
-```js
-let matchedItems;
-
-try {
-  matchedItems = document.querySelectorAll(':is(header, main, footer) p');
-} catch(e) {
-  try {
-    matchedItems = document.querySelectorAll(':matches(header, main, footer) p');
-  } catch(e) {
-    try {
-      matchedItems = document.querySelectorAll(':-webkit-any(header, main, footer) p');
-    } catch(e) {
-      try {
-        matchedItems = document.querySelectorAll(':-moz-any(header, main, footer) p');
-      } catch(e) {
-        console.log('Your browser doesn\'t support :is(), :matches(), or :any()');
-      }
-    }
-  }
-}
-
-matchedItems.forEach(applyHandler);
-
-function applyHandler(elem) {
-  elem.addEventListener('click', function(e) {
-    alert('This paragraph is inside a ' + e.target.parentNode.nodeName);
-  });
-}
-```
-
-{{EmbedLiveSample("Cross-browser_example", "100%", 300)}}
-
 ### Simplifying list selectors
 
 The `:is()` pseudo-class can greatly simplify your CSS selectors. For example, take the following CSS:
 
 ```css
 /* 3-deep (or more) unordered lists use a square */
-ol ol ul,     ol ul ul,     ol menu ul,     ol dir ul,
-ol ol menu,   ol ul menu,   ol menu menu,   ol dir menu,
-ol ol dir,    ol ul dir,    ol menu dir,    ol dir dir,
-ul ol ul,     ul ul ul,     ul menu ul,     ul dir ul,
-ul ol menu,   ul ul menu,   ul menu menu,   ul dir menu,
-ul ol dir,    ul ul dir,    ul menu dir,    ul dir dir,
-menu ol ul,   menu ul ul,   menu menu ul,   menu dir ul,
-menu ol menu, menu ul menu, menu menu menu, menu dir menu,
-menu ol dir,  menu ul dir,  menu menu dir,  menu dir dir,
-dir ol ul,    dir ul ul,    dir menu ul,    dir dir ul,
-dir ol menu,  dir ul menu,  dir menu menu,  dir dir menu,
-dir ol dir,   dir ul dir,   dir menu dir,   dir dir dir {
+ol ol ul,
+ol ul ul,
+ol menu ul,
+ol dir ul,
+ol ol menu,
+ol ul menu,
+ol menu menu,
+ol dir menu,
+ol ol dir,
+ol ul dir,
+ol menu dir,
+ol dir dir,
+ul ol ul,
+ul ul ul,
+ul menu ul,
+ul dir ul,
+ul ol menu,
+ul ul menu,
+ul menu menu,
+ul dir menu,
+ul ol dir,
+ul ul dir,
+ul menu dir,
+ul dir dir,
+menu ol ul,
+menu ul ul,
+menu menu ul,
+menu dir ul,
+menu ol menu,
+menu ul menu,
+menu menu menu,
+menu dir menu,
+menu ol dir,
+menu ul dir,
+menu menu dir,
+menu dir dir,
+dir ol ul,
+dir ul ul,
+dir menu ul,
+dir dir ul,
+dir ol menu,
+dir ul menu,
+dir menu menu,
+dir dir menu,
+dir ol dir,
+dir ul dir,
+dir menu dir,
+dir dir dir {
   list-style-type: square;
 }
 ```
@@ -170,9 +122,9 @@ You can replace it with:
 
 ### Simplifying section selectors
 
-The `:is()` pseudo-class is particularly useful when dealing with HTML5 [sections and headings](/en-US/docs/Web/HTML/Element/Heading_Elements). Since {{HTMLElement("section")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, and {{HTMLElement("nav")}} are commonly nested together, without `:is()`, styling them to match one another can be tricky.
+The `:is()` pseudo-class is particularly useful when dealing with HTML [sections and headings](/en-US/docs/Web/HTML/Element/Heading_Elements). Since {{HTMLElement("section")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, and {{HTMLElement("nav")}} are commonly nested together, without `:is()`, styling them to match one another can be tricky.
 
-For example, without `:is()`, styling all the {{HTMLElement("h1")}} elements at different depths could be very complicated:
+For example, without `:is()`, styling all the {{HTMLElement("Heading_Elements", "h1")}} elements at different depths could be very complicated:
 
 ```css
 /* Level 0 */
@@ -181,15 +133,30 @@ h1 {
 }
 
 /* Level 1 */
-section h1, article h1, aside h1, nav h1 {
+section h1,
+article h1,
+aside h1,
+nav h1 {
   font-size: 25px;
 }
 
 /* Level 2 */
-section section h1, section article h1, section aside h1, section nav h1,
-article section h1, article article h1, article aside h1, article nav h1,
-aside section h1, aside article h1, aside aside h1, aside nav h1,
-nav section h1, nav article h1, nav aside h1, nav nav h1 {
+section section h1,
+section article h1,
+section aside h1,
+section nav h1,
+article section h1,
+article article h1,
+article aside h1,
+article nav h1,
+aside section h1,
+aside article h1,
+aside aside h1,
+aside nav h1,
+nav section h1,
+nav article h1,
+nav aside h1,
+nav nav h1 {
   font-size: 20px;
 }
 
@@ -209,14 +176,14 @@ h1 {
   font-size: 25px;
 }
 /* Level 2 */
-:is(section, article, aside, nav)
-:is(section, article, aside, nav) h1 {
+:is(section, article, aside, nav) :is(section, article, aside, nav) h1 {
   font-size: 20px;
 }
 /* Level 3 */
 :is(section, article, aside, nav)
-:is(section, article, aside, nav)
-:is(section, article, aside, nav) h1 {
+  :is(section, article, aside, nav)
+  :is(section, article, aside, nav)
+  h1 {
   font-size: 15px;
 }
 ```
@@ -231,6 +198,14 @@ some-element:is(::before, ::after) {
 }
 ```
 
+or this:
+
+```css example-bad
+:is(some-element::before, some-element::after) {
+  display: block;
+}
+```
+
 instead do:
 
 ```css example-good
@@ -238,12 +213,6 @@ some-element::before,
 some-element::after {
   display: block;
 }
-```
-
-## Syntax
-
-```
-:is( <forgiving-selector-list> )
 ```
 
 ## Specifications
@@ -256,6 +225,6 @@ some-element::after {
 
 ## See also
 
-- {{CSSxRef(":where", ":where()")}} - Like `:is()`, but with 0 [specificity](/en-US/docs/Web/CSS/Specificity).
+- {{CSSxRef(":where", ":where()")}} - Like `:is()`, but with 0 [specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity).
 - [Selector list](/en-US/docs/Web/CSS/Selector_list)
-- [Web components](/en-US/docs/Web/Web_Components)
+- [Web components](/en-US/docs/Web/API/Web_components)

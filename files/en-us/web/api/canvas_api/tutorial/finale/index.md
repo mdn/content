@@ -2,12 +2,9 @@
 title: Finale
 slug: Web/API/Canvas_API/Tutorial/Finale
 page-type: guide
-tags:
-  - Canvas
-  - Graphics
-  - Tutorial
 ---
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Optimizing_canvas")}}
+
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Optimizing_canvas")}}
 
 Congratulations! You finished the [Canvas tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial)! This knowledge will help you to make great 2D graphics on the web.
 
@@ -15,9 +12,9 @@ Congratulations! You finished the [Canvas tutorial](/en-US/docs/Web/API/Canvas_A
 
 There are a variety of demos and further explanations about canvas on these sites:
 
-- [Codepen.io](https://codepen.io/search/pens?q=canvas)
+- [Canvas Codepens](https://codepen.io/search/pens?q=canvas)
   - : Front End Developer Playground & Code Editor in the Browser.
-- [HTML5 Canvas Tutorials](https://www.html5canvastutorials.com/)
+- [Canvas Tutorials](https://www.html5canvastutorials.com/)
   - : Examples for most canvas APIs.
 - [Game development](/en-US/docs/Games)
   - : Gaming is one of the most popular computer activities. New technologies are constantly arriving to make it possible to develop better and more powerful games that can be run in any standards-compliant web browser.
@@ -35,8 +32,8 @@ These APIs might be useful when working further with canvas and graphics:
 
 ## Questions
 
-- [Stack Overflow](https://stackoverflow.com/questions/tagged/html5-canvas)
-  - : Questions tagged with "html5-canvas".
+- [Stack Overflow](https://stackoverflow.com/questions/tagged/canvas)
+  - : Questions tagged with "canvas".
 - [Comments about this tutorial – the MDN documentation community](/en-US/docs/MDN)
   - : If you have any comments about this tutorial or want to thank us, feel free to reach out to us!
 

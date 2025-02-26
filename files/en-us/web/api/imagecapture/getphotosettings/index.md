@@ -1,30 +1,21 @@
 ---
-title: ImageCapture.getPhotoSettings()
+title: "ImageCapture: getPhotoSettings() method"
+short-title: getPhotoSettings()
 slug: Web/API/ImageCapture/getPhotoSettings
 page-type: web-api-instance-method
-tags:
-  - API
-  - Experimental
-  - Image
-  - Image Capture
-  - ImageCapture
-  - Media
-  - MediaStream Image Capture API
-  - Method
-  - Reference
-  - getPhotoSettings
 browser-compat: api.ImageCapture.getPhotoSettings
 ---
-{{APIRef("MediaStream Image")}}
+
+{{APIRef("Image Capture API")}}
 
 The **`getPhotoSettings()`** method of
 the {{domxref("ImageCapture")}} interface returns a {{jsxref("Promise")}} that
-resolves with a {{domxref("PhotoSettings")}} object containing the current photo
+resolves with an object containing the current photo
 configuration settings.
 
 ## Syntax
 
-```js
+```js-nolint
 getPhotoSettings()
 ```
 
@@ -34,17 +25,23 @@ None.
 
 ### Return value
 
-A {{jsxref("Promise")}} that resolves with a {{domxref("PhotoSettings")}} object
-containing the following properties:
+A {{jsxref("Promise")}} that resolves with an object containing the following properties:
 
-- `fillLightMode`:  The flash setting of the capture device, one of
-  `"auto"`, `"off"`, or `"on"`.
-- `imageHeight`: The desired image height as an integer. The user agent
-  selects the closest width value to this setting if it only supports discrete heights.
-- `imageWidth`: The desired image width as an integer. The user agent
-  selects the closest width value to this setting if it only supports discrete widths.
-- `redEyeReduction`: A boolean indicating whether the red-eye reduction
-  should be used if it is available.
+- `fillLightMode`
+  - : The flash setting of the capture device, one of `"auto"`, `"off"`, or `"flash"`.
+- `imageHeight`
+  - : The desired image height as an integer. The browser selects the closest width value to this setting if it only supports discrete heights.
+- `imageWidth`
+  - : The desired image width as an integer. The browser selects the closest width value to this setting if it only supports discrete widths.
+- `redEyeReduction`
+  - : A boolean indicating whether the red-eye reduction should be used if it is available.
+
+### Exceptions
+
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if `readyState` property of the `MediaStreamTrack` passing in the constructor is not `live`.
+- `OperationError` {{domxref("DOMException")}}
+  - : Thrown if the operation can't complete for any reason.
 
 ## Examples
 
@@ -58,28 +55,29 @@ const input = document.querySelector('input[type="range"]');
 
 let imageCapture;
 
-navigator.mediaDevices.getUserMedia({video: true})
-.then((mediaStream) => {
-  document.querySelector('video').srcObject = mediaStream;
+navigator.mediaDevices
+  .getUserMedia({ video: true })
+  .then((mediaStream) => {
+    document.querySelector("video").srcObject = mediaStream;
 
-  const track = mediaStream.getVideoTracks()[0];
-  imageCapture = new ImageCapture(track);
+    const track = mediaStream.getVideoTracks()[0];
+    imageCapture = new ImageCapture(track);
 
-  return imageCapture.getPhotoCapabilities();
-})
-.then((photoCapabilities) => {
-  const settings = imageCapture.track.getSettings();
+    return imageCapture.getPhotoCapabilities();
+  })
+  .then((photoCapabilities) => {
+    const settings = imageCapture.track.getSettings();
 
-  input.min = photoCapabilities.imageWidth.min;
-  input.max = photoCapabilities.imageWidth.max;
-  input.step = photoCapabilities.imageWidth.step;
+    input.min = photoCapabilities.imageWidth.min;
+    input.max = photoCapabilities.imageWidth.max;
+    input.step = photoCapabilities.imageWidth.step;
 
-  return imageCapture.getPhotoSettings();
-})
-.then((photoSettings) => {
-  input.value = photoSettings.imageWidth;
-})
-.catch((error) => console.error('Argh!', error.name || error));
+    return imageCapture.getPhotoSettings();
+  })
+  .then((photoSettings) => {
+    input.value = photoSettings.imageWidth;
+  })
+  .catch((error) => console.error("Argh!", error.name || error));
 ```
 
 ## Specifications

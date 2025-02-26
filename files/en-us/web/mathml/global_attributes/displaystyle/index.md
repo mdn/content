@@ -1,19 +1,30 @@
 ---
 title: displaystyle
 slug: Web/MathML/Global_attributes/displaystyle
-tags:
-  - Global attributes
-  - MathML
-  - Reference
+page-type: mathml-attribute
 browser-compat: mathml.global_attributes.displaystyle
 ---
-{{MathMLRef("Global_attributes")}}
+
+{{MathMLRef}}
 
 The **`displaystyle`** [global attribute](/en-US/docs/Web/MathML/Global_attributes) is a boolean setting the [math-style](/en-US/docs/Web/CSS/math-style) of a MathML element.
 
 ## Example
 
 In this example, an [munder](/en-US/docs/Web/MathML/Element/munder) element is used to attach a script "A" to a base "∑". By default, the summation symbol is rendered with the [font-size](/en-US/docs/Web/CSS/font-size) inherited from its parent and the A as a scaled down subscript. With the explicit `displaystyle="true"` attribute, the summation symbol is instead drawn bigger and the "A" becomes an underscript.
+
+```css hidden
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  font-size: 1.5rem;
+}
+```
 
 ```html
 <math>
@@ -28,9 +39,11 @@ In this example, an [munder](/en-US/docs/Web/MathML/Element/munder) element is u
 </math>
 ```
 
+{{ EmbedLiveSample("Example", "", 150) }}
+
 ## Syntax
 
-```html
+```html-nolint
 <math displaystyle="true">
 <math displaystyle="false">
 ```

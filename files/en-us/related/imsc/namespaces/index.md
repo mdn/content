@@ -1,19 +1,16 @@
 ---
 title: Namespaces in IMSC
 slug: Related/IMSC/Namespaces
-tags:
-  - IMSC
-  - Namespaces
-  - TTML
-  - XML
+page-type: guide
 ---
+
 This article covers the subject of XML namespaces, giving you enough information to recognize their usage in IMSC, and be able to use it effectively.
 
 ## What are XML namespaces?
 
 Namespaces are basically the mechanism that you use in XML to differentiate different families of markup (which may have features with the same name), and allow them to be used in the same document.
 
-To help you understand what we mean by this, let's use a real world example — human family names. There are many people in the world called Mary. One way to tell them apart is by their full names — there can be a Mary Smith and a Mary Jones.
+To help you understand what we mean by this, let's use a real-world example — human family names. There are many people in the world called Mary. One way to tell them apart is by their full names — there can be a Mary Smith and a Mary Jones.
 
 In XML you can also give elements and attributes a "family name", which is their namespace. Namespaces define what family an XML vocabulary belongs to, and generally consist of an identifying string of characters. The `<p>` element is available in both HTML and IMSC, so perhaps you could use the namespace `html` to specify HTML's `<p>`, and `imsc` to specify IMSC's `<p>`?
 
@@ -132,7 +129,8 @@ By defining `xmlns:tts="http://www.w3.org/ns/ttml#styling` on the `<tt>` element
 
 Much more readable, isn't it?
 
-> **Note:** The namespace/prefix match is only a document-wide agreement. Theoretically you can use another prefix than `tts` to bind the styling namespace. It is completely legal to define `xmlns:foo="http://www.w3.org/ns/ttml#styling"` and then write `<p foo:color="yellow">`. But it makes your IMSC document much more readable if you use the official prefixes listed in [namespace section](https://www.w3.org/TR/ttml-imsc1.0.1/#namespaces) of the IMSC standard.
+> [!NOTE]
+> The namespace/prefix match is only a document-wide agreement. Theoretically you can use another prefix than `tts` to bind the styling namespace. It is completely legal to define `xmlns:foo="http://www.w3.org/ns/ttml#styling"` and then write `<p foo:color="yellow">`. But it makes your IMSC document much more readable if you use the official prefixes listed in [namespace section](https://www.w3.org/TR/ttml-imsc1.0.1/#namespaces) of the IMSC standard.
 
 <section id="Quick_links">
   <ol>

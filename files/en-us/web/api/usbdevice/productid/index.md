@@ -1,20 +1,14 @@
 ---
-title: USBDevice.productId
-slug: Web/API/USBDevice/productID
+title: "USBDevice: productId property"
+short-title: productId
+slug: Web/API/USBDevice/productId
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - USB
-  - USBDevice
-  - WebUSB
-  - WebUSB API
-  - productID
-  - Experimental
+status:
+  - experimental
 browser-compat: api.USBDevice.productId
 ---
-{{SeeCompatTable}}{{APIRef("WebUSB API")}}
+
+{{APIRef("WebUSB API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`productId`** read only property of the
 {{domxref("USBDevice")}} interface the manufacturer-defined code that identifies a USB

@@ -1,15 +1,11 @@
 ---
-title: 'aria-posinset'
+title: aria-posinset
 slug: Web/Accessibility/ARIA/Attributes/aria-posinset
-tags:
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - ARIA property
-  - aria-posinset
-  - Reference
+page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-posinset
 ---
+
+{{AccessibilitySidebar}}
 
 The `aria-posinset` attribute defines an element's number or position in the current set of listitems or treeitems when not all items are present in the DOM.
 
@@ -22,8 +18,8 @@ If all the items in a list are present in the DOM, the browser can calculate the
 The following example shows a listbox with four element options out of the 118 in the periodic table of chemical elements.
 
 ```html
-<h2 id="periodictable">Periodic table of chemical elements</h2>
-<ul role="listbox" aria-labelledby="periodictable">
+<h2 id="periodic-table">Periodic table of chemical elements</h2>
+<ul role="listbox" aria-labelledby="periodic-table">
   <li role="option" aria-setsize="118" aria-posinset="1">Hydrogen</li>
   <li role="option" aria-setsize="118" aria-posinset="3">Lithium</li>
   <li role="option" aria-setsize="118" aria-posinset="11">Sodium</li>
@@ -33,7 +29,8 @@ The following example shows a listbox with four element options out of the 118 i
 
 The value of each `aria-posinset` is an integer greater than or equal to `1`, and less than or equal to the size of the set when that size is known.
 
-> **Note:** When using `aria-posinset` you must also include value for [`aria-setsize`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-setsize), which is the size of the entire set. If the size of the entire set is unknown, set `aria-setsize="-1"`.
+> [!NOTE]
+> When using `aria-posinset` you must also include value for [`aria-setsize`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-setsize), which is the size of the entire set. If the size of the entire set is unknown, set `aria-setsize="-1"`.
 
 For [`menuitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role), [`menuitemcheckbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role), or [`menuitemradio`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role), set the value of `aria-posinset` with respect to the total number of items in the menu, excluding any separators.
 
@@ -44,7 +41,7 @@ In a [`feed`](/en-US/docs/Web/Accessibility/ARIA/Roles/feed_role), each {{HTMLEl
 - `<integer>`
   - : Integer greater than or equal to 1, and less than or equal to the value of `aria-setsize`.
 
-## ARIAMixin API
+## Associated interfaces
 
 - {{domxref("Element.ariaPosInSet")}}
   - : The [`ariaPosInSet`](/en-US/docs/Web/API/Element/ariaPosInSet) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-posinset` attribute.
@@ -56,8 +53,8 @@ In a [`feed`](/en-US/docs/Web/Accessibility/ARIA/Roles/feed_role), each {{HTMLEl
 Used in roles:
 
 - [`article`](/en-US/docs/Web/Accessibility/ARIA/Roles/article_role)
-- [`associationlistitemkey`](/en-US/docs/Web/Accessibility/ARIA/Roles/associationlistitemkey_role)
-- [`associationlistitemvalue`](/en-US/docs/Web/Accessibility/ARIA/Roles/associationlistitemvalue_role)
+- [`associationlistitemkey`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles)
+- [`associationlistitemvalue`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles)
 - [`comment`](/en-US/docs/Web/Accessibility/ARIA/Roles/comment_role)
 - [`listitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/listitem_role)
 - [`menuitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role)
@@ -77,11 +74,6 @@ Inherits into roles:
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [`aria-setsize`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-setsize)
-
-<section id="Quick_links">
-<strong><a href="/en-US/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA states and properties</a></strong>
-{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/aria/Attributes")}}
-</section>

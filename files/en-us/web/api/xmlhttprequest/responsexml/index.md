@@ -1,42 +1,30 @@
 ---
-title: XMLHttpRequest.responseXML
+title: "XMLHttpRequest: responseXML property"
+short-title: responseXML
 slug: Web/API/XMLHttpRequest/responseXML
 page-type: web-api-instance-property
-tags:
-  - AJAX
-  - API
-  - Fetching XML
-  - Loading XML
-  - Property
-  - Read-only
-  - Reading XML
-  - Reference
-  - Transfer
-  - XML
-  - XMLHttpRequest
-  - download
-  - responseXML
-  - upload
 browser-compat: api.XMLHttpRequest.responseXML
 ---
-{{APIRef('XMLHttpRequest')}}
+
+{{APIRef("XMLHttpRequest API")}} {{AvailableInWorkers("window_and_worker_except_service")}}
 
 The **`XMLHttpRequest.responseXML`** read-only property returns
 a {{domxref("Document")}} containing the HTML or XML retrieved by the request; or
 `null` if the request was unsuccessful, has not yet been sent, or if the data
 can't be parsed as XML or HTML.
 
-> **Note:** The name `responseXML` is an artifact of this
+> [!NOTE]
+> The name `responseXML` is an artifact of this
 > property's history; it works for both HTML and XML.
 
-Usually, the response is parsed as "`text/xml`". If the
+Usually, the response is parsed as `"text/xml"`. If the
 {{domxref("XMLHttpRequest.responseType", "responseType")}} is set to
-"`document`" and the request was made asynchronously, instead the response is
-parsed as "`text/html`". `responseXML` is `null` for
-any other types of data, as well as for [`data:` URLs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs).
+`"document"` and the request was made asynchronously, instead the response is
+parsed as `"text/html"`. `responseXML` is `null` for
+any other types of data, as well as for [`data:` URLs](/en-US/docs/Web/URI/Reference/Schemes/data).
 
 If the server doesn't specify the {{HTTPHeader("Content-Type")}} as
-"`text/xml`" or "`application/xml`", you can use
+`"text/xml"` or `"application/xml"`, you can use
 {{domxref("XMLHttpRequest.overrideMimeType()")}} to parse it as XML anyway.
 
 This property isn't available to workers.
@@ -56,16 +44,16 @@ data is not XML/HTML.
 ## Examples
 
 ```js
-const xhr = new XMLHttpRequest;
-xhr.open('GET', '/server');
+const xhr = new XMLHttpRequest();
+xhr.open("GET", "/server");
 
 // If specified, responseType must be empty string or "document"
-xhr.responseType = 'document';
+xhr.responseType = "document";
 
 // Force the response to be parsed as XML
-xhr.overrideMimeType('text/xml');
+xhr.overrideMimeType("text/xml");
 
-xhr.onload = function () {
+xhr.onload = () => {
   if (xhr.readyState === xhr.DONE && xhr.status === 200) {
     console.log(xhr.response, xhr.responseXML);
   }
@@ -87,7 +75,7 @@ xhr.send();
 - {{domxref("XMLHttpRequest")}}
 - {{domxref("XMLHttpRequest.response")}}
 - {{domxref("XMLHttpRequest.responseType")}}
-- [Parsing and serializing XML](/en-US/docs/Web/Guide/Parsing_and_serializing_XML)
+- [Parsing and serializing XML](/en-US/docs/Web/XML/Guides/Parsing_and_serializing_XML)
 - Parsing XML into a DOM tree: {{domxref("DOMParser")}}
 - Serializing a DOM tree into XML: {{domxref("XMLSerializer")}} (specifically, the
   {{domxref("XMLSerializer.serializeToString", "serializeToString()")}} method)

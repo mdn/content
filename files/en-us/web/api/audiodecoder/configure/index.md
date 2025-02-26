@@ -1,22 +1,18 @@
 ---
-title: AudioDecoder.configure()
+title: "AudioDecoder: configure() method"
+short-title: configure()
 slug: Web/API/AudioDecoder/configure
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - configure
-  - AudioDecoder
 browser-compat: api.AudioDecoder.configure
 ---
-{{securecontext_header}}{{DefaultAPISidebar("WebCodecs API")}}
+
+{{securecontext_header}}{{APIRef("WebCodecs API")}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`configure()`** method of the {{domxref("AudioDecoder")}} interface enqueues a control message to configure the audio decoder for decoding chunks.
 
 ## Syntax
 
-```js
+```js-nolint
 configure(config)
 ```
 
@@ -25,15 +21,16 @@ configure(config)
 - `config`
   - : A dictionary object containing the following members:
     - `codec`
-      - : A string containing a [valid codec string](https://www.w3.org/TR/webcodecs-codec-registry/#audio-codec-registry).
+      - : A string containing a [valid codec string](https://www.w3.org/TR/webcodecs-codec-registry/#audio-codec-registry). See ["codecs" parameter](/en-US/docs/Web/Media/Guides/Formats/codecs_parameter#codec_options_by_container) for details on codec string construction.
     - `sampleRate`
       - : An integer representing the number of frame samples per second.
     - `numberOfChannels`
       - : An integer representing the number of audio channels.
     - `description` {{optional_inline}}
-      - : Aa {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}} containing a sequence of codec specific bytes, commonly known as extradata.
+      - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}} containing a sequence of codec specific bytes, commonly known as extradata.
 
-> **Note:** The registrations in the [WebCodecs Codec Registry](https://www.w3.org/TR/webcodecs-codec-registry/#audio-codec-registry) link to a specification detailing whether and how to populate the optional `description` member.
+> [!NOTE]
+> The registrations in the [WebCodecs Codec Registry](https://www.w3.org/TR/webcodecs-codec-registry/#audio-codec-registry) link to a specification detailing whether and how to populate the optional `description` member.
 
 ### Return value
 
@@ -50,10 +47,14 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
-The following example configures the `AudioDecoder` with the `opus` codec.
+The following example configures the `audioDecoder` with the `opus` codec.
 
 ```js
-AudioDecoder.configure({ codec: 'opus', sampleRate: 44100, numberOfChannels: 2 });
+audioDecoder.configure({
+  codec: "opus",
+  sampleRate: 44100,
+  numberOfChannels: 2,
+});
 ```
 
 ## Specifications

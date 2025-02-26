@@ -1,27 +1,27 @@
 ---
-title: PannerNode.setOrientation()
+title: "PannerNode: setOrientation() method"
+short-title: setOrientation()
 slug: Web/API/PannerNode/setOrientation
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - PannerNode
-  - Reference
-  - Web Audio API
-  - setOrientation
+status:
+  - deprecated
 browser-compat: api.PannerNode.setOrientation
 ---
-{{ APIRef("Web Audio API") }} {{Deprecated_Header}}
+
+{{APIRef("Web Audio API")}}{{Deprecated_Header}}
+
+> [!NOTE]
+> The suggested replacement for this deprecated method is to instead set the [`orientationX`](/en-US/docs/Web/API/PannerNode/orientationX), [`orientationY`](/en-US/docs/Web/API/PannerNode/orientationY), and [`orientationZ`](/en-US/docs/Web/API/PannerNode/orientationZ) attributes directly.
 
 The `setOrientation()` method of the {{ domxref("PannerNode") }} Interface defines the direction the audio source is playing in.
 
 This can have a big effect if the sound is very directional — controlled by the three cone-related attributes {{domxref("PannerNode.coneInnerAngle")}}, {{domxref("PannerNode.coneOuterAngle")}}, and {{domxref("PannerNode.coneOuterGain")}}. In such a case, a sound pointing away from the listener can be very quiet or even silent.
 
-The three parameters `x`, `y` and `z` are unitless and describe a direction vector in 3D space using the right-hand Cartesian coordinate system. The default value of the direction vector is `(1,` `0,` `0)`.
+The three parameters `x`, `y` and `z` are unitless and describe a direction vector in 3D space using the right-hand Cartesian coordinate system. The default value of the direction vector is `(1, 0, 0)`.
 
 ## Syntax
 
-```js
+```js-nolint
 setOrientation(x, y, z)
 ```
 
@@ -40,7 +40,7 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
-See [`BaseAudioContext.createPanner()`](/en-US/docs/Web/API/BaseAudioContext/createPanner#example) for example code.
+See [`BaseAudioContext.createPanner()`](/en-US/docs/Web/API/BaseAudioContext/createPanner#examples) for example code.
 
 ## Specifications
 

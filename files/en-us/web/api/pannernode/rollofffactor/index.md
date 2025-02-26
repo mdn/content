@@ -1,16 +1,11 @@
 ---
-title: PannerNode.rolloffFactor
+title: "PannerNode: rolloffFactor property"
+short-title: rolloffFactor
 slug: Web/API/PannerNode/rolloffFactor
 page-type: web-api-instance-property
-tags:
-  - API
-  - PannerNode
-  - Property
-  - Reference
-  - Web Audio API
-  - rollOffFactor
 browser-compat: api.PannerNode.rolloffFactor
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `rolloffFactor` property of the {{ domxref("PannerNode") }} interface is a double value describing how quickly the volume is reduced as the source moves away from the listener. This value is used by all distance models. The `rolloffFactor` property's default value is `1`.
@@ -19,11 +14,11 @@ The `rolloffFactor` property of the {{ domxref("PannerNode") }} interface is a d
 
 A number whose range depends on the {{ domxref("PannerNode.distanceModel", "distanceModel") }} of the panner as follows (negative values are not allowed):
 
-- "`linear`"
+- `"linear"`
   - : The range is 0 to 1.
-- "`inverse`"
+- `"inverse"`
   - : The range is 0 to `Infinity`.
-- "`exponential`"
+- `"exponential"`
   - : The range is 0 to `Infinity`.
 
 ### Exceptions
@@ -33,7 +28,7 @@ A number whose range depends on the {{ domxref("PannerNode.distanceModel", "dist
 
 ## Examples
 
-This example demonstrates how different {{ domxref("PannerNode.rolloffFactor", "rolloffFactor") }} values affect how the volume of the test tone decreases with increasing distance from the listener:
+This example demonstrates how different `rolloffFactor` values affect how the volume of the test tone decreases with increasing distance from the listener:
 
 ```js
 const context = new AudioContext();
@@ -55,8 +50,7 @@ const scheduleTestTone = (rolloffFactor, startTime) => {
   panner.positionZ.setValueAtTime(0, startTime);
   panner.positionZ.linearRampToValueAtTime(Z_DISTANCE, startTime + NOTE_LENGTH);
 
-  osc.connect(panner)
-     .connect(context.destination);
+  osc.connect(panner).connect(context.destination);
 
   osc.start(startTime);
   osc.stop(startTime + NOTE_LENGTH);

@@ -1,22 +1,18 @@
 ---
-title: HTMLFontElement.face
+title: "HTMLFontElement: face property"
+short-title: face
 slug: Web/API/HTMLFontElement/face
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLFontElement
-  - Property
-  - Reference
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.HTMLFontElement.face
 ---
+
 {{deprecated_header}}{{ APIRef("HTML DOM") }}
 
 The obsolete
 **`HTMLFontElement.face`**
-property is a string that reflects the {{ htmlattrxref("face",
-    "font") }} HTML attribute, containing a comma-separated list of one or more font
+property is a string that reflects the [`face`](/en-US/docs/Web/HTML/Element/font#face) HTML attribute, containing a comma-separated list of one or more font
 names.
 
 The document text, in the default style, is rendered as the first font face that the
@@ -44,8 +40,7 @@ f.face = "arial";
 
 ## Specifications
 
-The \<font> tag is not supported in HTML5 and as a result neither is
-`<font>.face`.
+{{Specifications}}
 
 ## Browser compatibility
 

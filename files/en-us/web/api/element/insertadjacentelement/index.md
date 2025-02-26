@@ -1,17 +1,11 @@
 ---
-title: Element.insertAdjacentElement()
+title: "Element: insertAdjacentElement() method"
+short-title: insertAdjacentElement()
 slug: Web/API/Element/insertAdjacentElement
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Element
-  - Gecko
-  - Method
-  - Reference
-  - insertAdjacentElement
 browser-compat: api.Element.insertAdjacentElement
 ---
+
 {{APIRef("DOM")}}
 
 The **`insertAdjacentElement()`** method of the
@@ -20,7 +14,7 @@ relative to the element it is invoked upon.
 
 ## Syntax
 
-```js
+```js-nolint
 insertAdjacentElement(position, element)
 ```
 
@@ -51,9 +45,9 @@ The element that was inserted, or `null`, if the insertion failed.
 ### Exceptions
 
 - `SyntaxError` {{domxref("DOMException")}}
-  - Thrown if the `position` specified is not a recognized value.
+  - : Thrown if the `position` specified is not a recognized value.
 - {{jsxref("TypeError")}}
-  - Thrown if the `element` specified is not a valid element.
+  - : Thrown if the `element` specified is not a valid element.
 
 ### Visualization of position names
 
@@ -67,34 +61,35 @@ The element that was inserted, or `null`, if the insertion failed.
 <!-- afterend -->
 ```
 
-> **Note:** The `beforebegin` and
+> [!NOTE]
+> The `beforebegin` and
 > `afterend` positions work only if the node is in a tree and has an element
 > parent.
 
 ## Examples
 
 ```js
-beforeBtn.addEventListener('click', function() {
-  const tempDiv = document.createElement('div');
+beforeBtn.addEventListener("click", () => {
+  const tempDiv = document.createElement("div");
   tempDiv.style.backgroundColor = randomColor();
   if (activeElem) {
-    activeElem.insertAdjacentElement('beforebegin', tempDiv);
+    activeElem.insertAdjacentElement("beforebegin", tempDiv);
   }
   setListener(tempDiv);
 });
 
-afterBtn.addEventListener('click', function() {
-  const tempDiv = document.createElement('div');
+afterBtn.addEventListener("click", () => {
+  const tempDiv = document.createElement("div");
   tempDiv.style.backgroundColor = randomColor();
   if (activeElem) {
-    activeElem.insertAdjacentElement('afterend', tempDiv);
+    activeElem.insertAdjacentElement("afterend", tempDiv);
   }
   setListener(tempDiv);
 });
 ```
 
 Have a look at our [insertAdjacentElement.html](https://mdn.github.io/dom-examples/insert-adjacent/insertAdjacentElement.html)
-demo on GitHub (see the [source code](https://github.com/mdn/dom-examples/blob/master/insert-adjacent/insertAdjacentElement.html) too.) Here, we have a sequence of {{htmlelement("div")}} elements inside a
+demo on GitHub (see the [source code](https://github.com/mdn/dom-examples/blob/main/insert-adjacent/insertAdjacentElement.html) too.) Here, we have a sequence of {{htmlelement("div")}} elements inside a
 container. When one is clicked, it becomes selected and you can then press the
 _Insert before_ and _Insert after_ buttons to insert new divs before or
 after the selected element using `insertAdjacentElement()`.

@@ -1,25 +1,20 @@
 ---
 title: runtime.getFrameId()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/getFrameId
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - getBrowserInfo
-  - runtime
+page-type: webextension-api-function
 browser-compat: webextensions.api.runtime.getFrameId
 ---
+
 {{AddonSidebar}}
 
 Returns the frame ID of any window global or frame element when called from a content script or extension page, including background pages.
 
 ## Syntax
 
-```js
-var gettingInfo = browser.runtime.getFrameId()
+```js-nolint
+let gettingInfo = browser.runtime.getFrameId(
+  target               // object
+)
 ```
 
 ### Parameters
@@ -36,22 +31,22 @@ Returns the frame ID of the target frame, or -1 if the frame doesn't exist.
 This code recursively walks descendant frames and gets parent frame IDs.
 
 ```js
-let parents = {};
+const parents = {};
 
 function visit(win) {
-  let frameId = browser.runtime.getFrameId(win);
-  let parentId = browser.runtime.getFrameId(win.parent);
-  parents[frameId] = (win.parent != win) ? parentId : -1;
+  const frameId = browser.runtime.getFrameId(win);
+  const parentId = browser.runtime.getFrameId(win.parent);
+  parents[frameId] = win.parent !== win ? parentId : -1;
 
   try {
-    let frameEl = browser.runtime.getFrameId(win.frameElement);
+    const frameEl = browser.runtime.getFrameId(win.frameElement);
     browser.test.assertEq(frameId, frameEl, "frameElement id correct");
   } catch (e) {
     // Can't access a cross-origin .frameElement.
   }
 
-  for (let i = 0; i < win.frames.length; i++) {
-    visit(win.frames[i]);
+  for (const frame of win.frames) {
+    visit(frame);
   }
 }
 visit(window);
@@ -62,5 +57,3 @@ visit(window);
 ## Browser compatibility
 
 {{Compat}}
-
-> **Note:** Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.

@@ -1,18 +1,12 @@
 ---
-title: PaymentRequest.abort()
+title: "PaymentRequest: abort() method"
+short-title: abort()
 slug: Web/API/PaymentRequest/abort
 page-type: web-api-instance-method
-tags:
-  - API
-  - Experimental
-  - Payment Request API
-  - PaymentRequest
-  - Reference
-  - Secure context
-  - abort
 browser-compat: api.PaymentRequest.abort
 ---
-{{securecontext_header}}{{SeeCompatTable}}{{APIRef("Payment Request API")}}
+
+{{securecontext_header}}{{APIRef("Payment Request API")}}
 
 The `PaymentRequest.abort()` method of the {{domxref('PaymentRequest')}}
 interface causes the user agent to end the payment request and to remove any user
@@ -20,7 +14,7 @@ interface that might be shown.
 
 ## Syntax
 
-```js
+```js-nolint
 abort()
 ```
 
@@ -40,15 +34,23 @@ been abandoned or neglected.
 ```js
 const request = new PaymentRequest(supportedInstruments, details, options);
 
-const paymentTimeout = window.setTimeout(() => {
-  window.clearTimeout(paymentTimeout);
-  request.abort().then(() => {
-    print('Payment timed out after 20 minutes.');
-  }).catch(() => {
-    print('Unable to abort, because the user is currently in the process ' +
-          'of paying.');
-  });
-}, 20 * 60 * 1000);  /* 20 minutes */
+const paymentTimeout = setTimeout(
+  () => {
+    clearTimeout(paymentTimeout);
+    request
+      .abort()
+      .then(() => {
+        print("Payment timed out after 20 minutes.");
+      })
+      .catch(() => {
+        print(
+          "Unable to abort, because the user is currently in the process " +
+            "of paying.",
+        );
+      });
+  },
+  20 * 60 * 1000,
+); /* 20 minutes */
 ```
 
 ## Specifications
@@ -58,7 +60,3 @@ const paymentTimeout = window.setTimeout(() => {
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- {{domxref('PaymentRequest.abort','PaymentRequest.abort()')}}

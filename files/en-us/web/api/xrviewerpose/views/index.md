@@ -1,33 +1,20 @@
 ---
-title: XRViewerPose.views
+title: "XRViewerPose: views property"
+short-title: views
 slug: Web/API/XRViewerPose/views
 page-type: web-api-instance-property
-tags:
-  - 3D
-  - API
-  - AR
-  - Property
-  - Read-only
-  - Reality
-  - Reference
-  - VR
-  - Virtual
-  - WebXR Device API
-  - XR
-  - XRViewerPose
-  - augmented
-  - pose
-  - views
 browser-compat: api.XRViewerPose.views
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SecureContext_Header}}
 
 The read-only {{domxref("XRViewerPose")}} property **`views`**
 returns an array which contains every {{domxref("XRView")}} which must be rendered in
 order to fully represent the scene from the viewpoint defined by the viewer pose. For
 monoscopic devices, this array contains a single view.
 
-> **Warning:** There is no guarantee that the number of views will
+> [!WARNING]
+> There is no guarantee that the number of views will
 > remain constant over the lifetime of an {{domxref("XRSession")}}. For each frame, you
 > should always use the current length of this array rather than caching the value.
 

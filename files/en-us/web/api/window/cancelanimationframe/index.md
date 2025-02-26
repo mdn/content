@@ -1,18 +1,11 @@
 ---
-title: window.cancelAnimationFrame()
+title: "Window: cancelAnimationFrame() method"
+short-title: cancelAnimationFrame()
 slug: Web/API/Window/cancelAnimationFrame
 page-type: web-api-instance-method
-tags:
-  - API
-  - Animation
-  - DOM
-  - Experimental
-  - Method
-  - Reference
-  - Window
-  - Polyfill
 browser-compat: api.Window.cancelAnimationFrame
 ---
+
 {{APIRef}}
 
 The **`window.cancelAnimationFrame()`** method cancels an
@@ -21,7 +14,7 @@ animation frame request previously scheduled through a call to
 
 ## Syntax
 
-```js
+```js-nolint
 cancelAnimationFrame(requestID)
 ```
 
@@ -38,12 +31,7 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-const requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
-                            window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
-
-const cancelAnimationFrame = window.cancelAnimationFrame || window.mozCancelAnimationFrame;
-
-const start = Date.now();
+const start = document.timeline.currentTime;
 
 let myReq;
 
@@ -70,5 +58,5 @@ cancelAnimationFrame(myReq);
 
 ## See also
 
-- {{domxref("window.requestAnimationFrame()")}}
-- [A polyfill](https://github.com/behnammodi/polyfill/blob/master/window.polyfill.js)
+- {{domxref("Window.requestAnimationFrame()")}}
+- {{domxref("DedicatedWorkerGlobalScope.cancelAnimationFrame()")}}

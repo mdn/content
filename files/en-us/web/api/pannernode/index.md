@@ -2,14 +2,9 @@
 title: PannerNode
 slug: Web/API/PannerNode
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - PannerNode
-  - Reference
-  - Web Audio API
 browser-compat: api.PannerNode
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `PannerNode` interface defines an audio-processing object that represents the location, direction, and behavior of an audio source signal in a simulated physical space. This {{domxref("AudioNode")}} uses right-hand Cartesian coordinates to describe the source's _position_ as a vector and its _orientation_ as a 3D directional cone.
@@ -50,11 +45,12 @@ A `PannerNode` always has exactly one input and one output: the input can be _mo
 - {{domxref("PannerNode.PannerNode", "PannerNode()")}}
   - : Creates a new `PannerNode` object instance.
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("AudioNode")}}_.
 
-> **Note:** The orientation and position value are set and retrieved using different syntaxes, since they're stored as {{domxref("AudioParam")}} values. Retrieval is done by accessing, for example, `PannerNode.positionX`. While setting the same property is done with `PannerNode.positionX.value`. This is why these values are not marked read only, which is how they appear in the WebIDL.
+> [!NOTE]
+> The orientation and position value are set and retrieved using different syntaxes, since they're stored as {{domxref("AudioParam")}} values. Retrieval is done by accessing, for example, `PannerNode.positionX`. While setting the same property is done with `PannerNode.positionX.value`. This is why these values are not marked read only, which is how they appear in the WebIDL.
 
 - {{domxref("PannerNode.coneInnerAngle")}}
   - : A double value describing the angle, in degrees, of a cone inside of which there will be no volume reduction.
@@ -85,7 +81,7 @@ _Inherits properties from its parent, {{domxref("AudioNode")}}_.
 - {{domxref("PannerNode.rolloffFactor")}}
   - : A double value describing how quickly the volume is reduced as the source moves away from the listener. This value is used by all distance models.
 
-## Methods
+## Instance methods
 
 _Inherits methods from its parent, {{domxref("AudioNode")}}_.
 
@@ -93,12 +89,10 @@ _Inherits methods from its parent, {{domxref("AudioNode")}}_.
   - : Defines the position of the audio source relative to the listener (represented by an {{domxref("AudioListener")}} object stored in the {{domxref("BaseAudioContext.listener")}} attribute.)
 - {{domxref("PannerNode.setOrientation()")}} {{deprecated_inline}}
   - : Defines the direction the audio source is playing in.
-- {{domxref("PannerNode.setVelocity()")}} {{deprecated_inline}}
-  - : Defines the velocity vector of the audio source — how fast it is moving and in what direction. In a previous version of the specification, the {{domxref("PannerNode")}} had a velocity vector that could pitch up or down {{domxref("AudioBufferSourceNode")}} objects connected downstream. This feature was not clearly specified and had a number of issues, so it was removed from the specification.
 
 ## Examples
 
-See [`BaseAudioContext.createPanner()`](/en-US/docs/Web/API/BaseAudioContext/createPanner#example) for example code.
+See [`BaseAudioContext.createPanner()`](/en-US/docs/Web/API/BaseAudioContext/createPanner#examples) for example code.
 
 ## Specifications
 

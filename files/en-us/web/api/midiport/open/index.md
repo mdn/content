@@ -1,26 +1,22 @@
 ---
-title: MIDIPort.open()
+title: "MIDIPort: open() method"
+short-title: open()
 slug: Web/API/MIDIPort/open
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - open
-  - MIDIPort
 browser-compat: api.MIDIPort.open
 ---
-{{securecontext_header}}{{DefaultAPISidebar("Web MIDI API")}}
+
+{{securecontext_header}}{{APIRef("Web MIDI API")}}
 
 The **`open()`** method of the {{domxref("MIDIPort")}} interface makes the MIDI device connected to this `MIDIPort` explicitly available.
 
-If the port is successfully opened a new {{domxref("MIDIConnectionEvent")}} is queued to the {{domxref("MIDIPort.onstatechange")}} and {{domxref("MIDIAccess.onstatechange")}} event handlers, and the {{domxref("MIDIPort.connection")}} property is changed to `"open"`.
+If the port is successfully opened a new {{domxref("MIDIConnectionEvent")}} is queued to the `MIDIPort` {{domxref("MIDIPort.statechange_event", "statechange")}} and `MIDIAccess` {{domxref("MIDIAccess.statechange_event", "statechange")}} events, and the {{domxref("MIDIPort.connection")}} property is changed to `"open"`.
 
 If the port is already open when this method is called, then the promise will resolve successfully.
 
 ## Syntax
 
-```js
+```js-nolint
 open()
 ```
 

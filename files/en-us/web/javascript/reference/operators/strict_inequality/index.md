@@ -1,25 +1,36 @@
 ---
 title: Strict inequality (!==)
 slug: Web/JavaScript/Reference/Operators/Strict_inequality
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
+page-type: javascript-operator
 browser-compat: javascript.operators.strict_inequality
 ---
+
 {{jsSidebar("Operators")}}
 
-The strict inequality operator (`!==`) checks whether its two operands are
+The **strict inequality (`!==`)** operator checks whether its two operands are
 not equal, returning a Boolean result. Unlike the [inequality](/en-US/docs/Web/JavaScript/Reference/Operators/Inequality)
 operator, the strict inequality operator always considers operands of different types to
 be different.
 
-{{EmbedInteractiveExample("pages/js/expressions-strict-inequality.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Strict inequality operator")}}
+
+```js interactive-example
+console.log(1 !== 1);
+// Expected output: false
+
+console.log("hello" !== "hello");
+// Expected output: false
+
+console.log("1" !== 1);
+// Expected output: true
+
+console.log(0 !== false);
+// Expected output: true
+```
 
 ## Syntax
 
-```js
+```js-nolint
 x !== y
 ```
 
@@ -31,9 +42,9 @@ It is the negation of the
 so the following two lines will always give the same result:
 
 ```js
-x !== y
+x !== y;
 
-!(x === y)
+!(x === y);
 ```
 
 For details of the comparison algorithm, see the page for the
@@ -51,41 +62,39 @@ operands of different types to be different:
 ### Comparing operands of the same type
 
 ```js
-console.log("hello" !== "hello");   // false
-console.log("hello" !== "hola");    // true
+"hello" !== "hello"; // false
+"hello" !== "hola"; // true
 
-console.log(3 !== 3);               // false
-console.log(3 !== 4);               // true
+3 !== 3; // false
+3 !== 4; // true
 
-console.log(true !== true);         // false
-console.log(true !== false);        // true
+true !== true; // false
+true !== false; // true
 
-console.log(null !== null);         // false
+null !== null; // false
 ```
 
 ### Comparing operands of different types
 
 ```js
-console.log("3" !== 3);           // true
-
-console.log(true !== 1);          // true
-
-console.log(null !== undefined);  // true
+"3" !== 3; // true
+true !== 1; // true
+null !== undefined; // true
 ```
 
 ### Comparing objects
 
 ```js
 const object1 = {
-  name: "hello"
-}
+  key: "value",
+};
 
 const object2 = {
-  name: "hello"
-}
+  key: "value",
+};
 
-console.log(object1 !== object2);  // true
-console.log(object1 !== object1);  // false
+console.log(object1 !== object2); // true
+console.log(object1 !== object1); // false
 ```
 
 ## Specifications
@@ -98,6 +107,6 @@ console.log(object1 !== object1);  // false
 
 ## See also
 
-- [Equality operator](/en-US/docs/Web/JavaScript/Reference/Operators/Equality)
-- [Inequality operator](/en-US/docs/Web/JavaScript/Reference/Operators/Inequality)
-- [Strict equality operator](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality)
+- [Equality (`==`)](/en-US/docs/Web/JavaScript/Reference/Operators/Equality)
+- [Inequality (`!=`)](/en-US/docs/Web/JavaScript/Reference/Operators/Inequality)
+- [Strict equality (`===`)](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality)

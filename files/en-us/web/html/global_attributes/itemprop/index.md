@@ -1,18 +1,13 @@
 ---
 title: itemprop
 slug: Web/HTML/Global_attributes/itemprop
-tags:
-  - Attribute
-  - Global attribute
-  - HTML
-  - HTML Microdata
-  - Microdata
-  - Reference
-browser-compat: html.global_attributes.itemprop
+page-type: html-attribute
+spec-urls: https://html.spec.whatwg.org/multipage/microdata.html#names:-the-itemprop-attribute
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
-The **`itemprop`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) is used to add properties to an item. Every HTML element can have an `itemprop` attribute specified, and an `itemprop` consists of a name-value pair. Each name-value pair is called a **property**, and a group of one or more properties forms an **item**. Property values are either a string or a URL and can be associated with a very wide range of elements including {{HTMLElement("audio")}}, {{HTMLElement("embed")}}, {{HTMLElement("iframe")}}, {{HTMLElement("img")}}, {{HTMLElement("link")}}, {{HTMLElement("object")}}, {{HTMLElement("source")}} , {{HTMLElement("track")}}, and {{HTMLElement("video")}}.
+The **`itemprop`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) is used to add properties to an item. Every HTML element can have an `itemprop` attribute specified, and an `itemprop` consists of a name-value pair. Each name-value pair is called a **property**, and a group of one or more properties forms an **item**. Property values are either a string or a URL and can be associated with a very wide range of elements including {{HTMLElement("audio")}}, {{HTMLElement("embed")}}, {{HTMLElement("iframe")}}, {{HTMLElement("img")}}, {{HTMLElement("link")}}, {{HTMLElement("object")}}, {{HTMLElement("source")}}, {{HTMLElement("track")}}, and {{HTMLElement("video")}}.
 
 ## Examples
 
@@ -23,12 +18,15 @@ The example below shows the source for a set of elements marked up with `itempro
 ```html
 <div itemscope itemtype="http://schema.org/Movie">
   <h1 itemprop="name">Avatar</h1>
-  <span>Director:
+  <span>
+    Director:
     <span itemprop="director">James Cameron</span>
-    (born August 16, 1954)</span>
+    (born August 16, 1954)
+  </span>
   <span itemprop="genre">Science fiction</span>
-  <a href="../movies/avatar-theatrical-trailer.html"
-    itemprop="trailer">Trailer</a>
+  <a href="../movies/avatar-theatrical-trailer.html" itemprop="trailer">
+    Trailer
+  </a>
 </div>
 ```
 
@@ -69,18 +67,15 @@ The example below shows the source for a set of elements marked up with `itempro
 
 ## Properties
 
-Properties have values that are either a string or a URL. When a string value is a URL, it is expressed using the {{HTMLElement("a")}} element and its {{htmlattrxref("href", "a")}} attribute, the {{HTMLElement("img")}} element and its {{htmlattrxref("src", "img")}} attribute, or other elements that link to or embed external resources.
+Properties have values that are either a string or a URL. When a string value is a URL, it is expressed using the {{HTMLElement("a")}} element and its [`href`](/en-US/docs/Web/HTML/Element/a#href) attribute, the {{HTMLElement("img")}} element and its [`src`](/en-US/docs/Web/HTML/Element/img#src) attribute, or other elements that link to or embed external resources.
 
 ### Three properties with values that are strings
 
 ```html
 <div itemscope>
- <p>My name is
-   <span itemprop="name">Neil</span>.</p>
- <p>My band is called
-   <span itemprop="band">Four Parts Water</span>.</p>
- <p>I am
-   <span itemprop="nationality">British</span>.</p>
+  <p>My name is <span itemprop="name">Neil</span>.</p>
+  <p>My band is called <span itemprop="band">Four Parts Water</span>.</p>
+  <p>I am <span itemprop="nationality">British</span>.</p>
 </div>
 ```
 
@@ -88,8 +83,7 @@ Properties have values that are either a string or a URL. When a string value is
 
 ```html
 <div itemscope>
- <img itemprop="image"
-   src="google-logo.png" alt="Google">
+  <img itemprop="image" src="google-logo.png" alt="Google" />
 </div>
 ```
 
@@ -97,12 +91,11 @@ When a string value can't be easily read and understood by a person (e.g., a lon
 
 ### An item with a property whose value is a product ID
 
-The ID is not human-friendly, so the product's name is used the human-visible text instead of the ID.
+The ID is not human-friendly, so the product's name is used instead.
 
 ```html
 <h1 itemscope>
- <data itemprop="product-id"
-   value="9678AOU879">The Instigator 2000</data>
+  <data itemprop="product-id" value="9678AOU879">The Instigator 2000</data>
 </h1>
 ```
 
@@ -112,17 +105,17 @@ For numeric data, the meter element and its value attribute can be used.
 
 ```html
 <div itemscope itemtype="http://schema.org/Product">
- <span itemprop="name">Panasonic White
-   60L Refrigerator</span>
- <img src="panasonic-fridge-60l-white.jpg" alt="">
-  <div itemprop="aggregateRating"
-       itemscope
-       itemtype="http://schema.org/AggregateRating">
-   <meter itemprop="ratingValue"
-     min=0 value=3.5 max=5>Rated 3.5/5</meter>
-   (based on <span
-     itemprop="reviewCount">11</span>
-     customer reviews)
+  <span itemprop="name">Panasonic White 60L Refrigerator</span>
+  <img src="panasonic-fridge-60l-white.jpg" alt="" />
+  <div
+    itemprop="aggregateRating"
+    itemscope
+    itemtype="http://schema.org/AggregateRating">
+    <meter itemprop="ratingValue" min="0" value="3.5" max="5">
+      Rated 3.5/5
+    </meter>
+    (based on <span itemprop="reviewCount">11</span>
+    customer reviews)
   </div>
 </div>
 ```
@@ -133,9 +126,8 @@ Similarly, for date- and time-related data, the time element and its datetime at
 
 ```html
 <div itemscope>
- I was born on <time
-   itemprop="birthday"
-   datetime="2009-05-10">May 10th 2009</time>.
+  I was born on
+  <time itemprop="birthday" datetime="1984-05-10">May 10th 1984</time>.
 </div>
 ```
 
@@ -145,13 +137,14 @@ Properties can also be groups of name-value pairs, by putting the itemscope attr
 
 ```html
 <div itemscope>
- <p>Name:
-   <span itemprop="name">Amanda</span></p>
- <p>Band:
-   <span itemprop="band" itemscope>
-     <span itemprop="name">Jazz Band</span>
-     (<span itemprop="size">12</span>
-     players)</span></p>
+  <p>Name: <span itemprop="name">Amanda</span></p>
+  <p>
+    Band:
+    <span itemprop="band" itemscope>
+      <span itemprop="name">Jazz Band</span>
+      (<span itemprop="size">12</span> players)
+    </span>
+  </p>
 </div>
 ```
 
@@ -159,20 +152,15 @@ The outer item above has two properties, "name" and "band". The "name" is "Amand
 
 ### All the properties separated from their items
 
-This example is the same as the previous one, but all the properties are separated from their items
+This example is the same as the previous one, but all the properties are separated from their items.
 
 ```html
 <div itemscope id="amanda" itemref="a b"></div>
-<p id="a">Name:
-  <span itemprop="name">Amanda</span></p>
-<div id="b"
-  itemprop="band"
-  itemscope itemref="c"></div>
+<p id="a">Name: <span itemprop="name">Amanda</span></p>
+<div id="b" itemprop="band" itemscope itemref="c"></div>
 <div id="c">
- <p>Band:
-   <span itemprop="name">Jazz Band</span></p>
- <p>Size:
-   <span itemprop="size">12</span> players</p>
+  <p>Band: <span itemprop="name">Jazz Band</span></p>
+  <p>Size: <span itemprop="size">12</span> players</p>
 </div>
 ```
 
@@ -184,11 +172,11 @@ An item can have multiple properties with the same name and different values.
 
 ```html
 <div itemscope>
- <p>Flavors in my favorite ice cream:</p>
- <ul>
-  <li itemprop="flavor">Lemon sorbet</li>
-  <li itemprop="flavor">Apricot sorbet</li>
- </ul>
+  <p>Flavors in my favorite ice cream:</p>
+  <ul>
+    <li itemprop="flavor">Lemon sorbet</li>
+    <li itemprop="flavor">Apricot sorbet</li>
+  </ul>
 </div>
 ```
 
@@ -200,13 +188,16 @@ An element introducing a property can also introduce multiple properties at once
 
 ```html
 <div itemscope>
- <span
-  itemprop="favorite-color
-    favorite-fruit">orange</span>
+  <span
+    itemprop="favorite-color
+    favorite-fruit"
+    >orange
+  </span>
 </div>
 ```
 
-> **Note:** There is no relationship between the microdata and the content of the document where the microdata is marked up.
+> [!NOTE]
+> There is no relationship between the microdata and the content of the document where the microdata is marked up.
 
 ### Same structured data marked up in two different ways
 
@@ -214,22 +205,18 @@ There is no semantic difference between the following two examples
 
 ```html
 <figure>
- <img src="castle.jpeg">
- <figcaption><span
-   itemscope><span
-   itemprop="name">The Castle</span></span>
-     (1986)</figcaption>
+  <img src="castle.jpeg" />
+  <figcaption>
+    <span itemscope><span itemprop="name">The Castle</span></span> (1986)
+  </figcaption>
 </figure>
 ```
 
 ```html
-<span itemscope><meta
-  itemprop="name"
-  content="The Castle"></span>
+<span itemscope><meta itemprop="name" content="The Castle" /></span>
 <figure>
- <img src="castle.jpeg">
- <figcaption>The Castle
-  (1986)</figcaption>
+  <img src="castle.jpeg" />
+  <figcaption>The Castle (1986)</figcaption>
 </figure>
 ```
 
@@ -290,15 +277,16 @@ A property is an unordered set of unique tokens that are case-sensitive and repr
 
 1. If the item is a typed item it must be either:
 
-    1. A defined property name, or
-    2. A valid URL, which refers to the vocabulary definition, or
-    3. A valid URL that is used as a proprietary item property name (i.e. one not defined in a public specification), or
+   1. A defined property name, or
+   2. A valid URL, which refers to the vocabulary definition, or
+   3. A valid URL that is used as a proprietary item property name (i.e. one not defined in a public specification), or
 
 2. If the item is not a typed item it must be:
 
-    1. A string that contains no "`.`" (U+002E FULL STOP) characters and no "`:`" characters (U+003A COLON) and is used as a proprietary item property name (again, one not defined in a public specification).
+   1. A string that contains no `.` (U+002E FULL STOP) characters and no `:` characters (U+003A COLON) and is used as a proprietary item property name (again, one not defined in a public specification).
 
-> **Note:** The rules above disallow ":" characters in non-URL values because otherwise they could not be distinguished from URLs. Values with "." characters are reserved for future extensions. Space characters are disallowed because otherwise the values would be parsed as multiple tokens.
+> [!NOTE]
+> The rules above disallow ":" characters in non-URL values because otherwise they could not be distinguished from URLs. Values with "." characters are reserved for future extensions. Space characters are disallowed because otherwise the values would be parsed as multiple tokens.
 
 ## Values
 
@@ -306,7 +294,7 @@ The property value of a name-value pair is as given for the first matching case 
 
 - If the element has an `itemscope` attribute
 
-  - The value is the **item** created by the element.
+  - The value is the **item** created by the element
 
 - If the element is a `meta` element
 
@@ -346,45 +334,41 @@ If a property's value is a `URL`, the property must be specified using a URL pro
 
 Names are unordered relative to each other, but if a particular name has multiple values, they do have a relative order.
 
-In the following example, the "a" property has the values "1" and "2", _in that order_, but whether the "a" property comes before the "b" property or not is not important
+In the following example, the "a" property has the values "1" and "2", _in that order_, but whether the "a" property comes before the "b" property or not is not important.
 
 ```html
 <div itemscope>
- <p itemprop="a">1</p>
- <p itemprop="a">2</p>
- <p itemprop="b">test</p>
+  <p itemprop="a">1</p>
+  <p itemprop="a">2</p>
+  <p itemprop="b">test</p>
 </div>
 ```
 
-The following is equivalent
+Here are several equivalent examples:
 
 ```html
 <div itemscope>
- <p itemprop="b">test</p>
- <p itemprop="a">1</p>
- <p itemprop="a">2</p>
+  <p itemprop="b">test</p>
+  <p itemprop="a">1</p>
+  <p itemprop="a">2</p>
 </div>
 ```
-
-As is the following
 
 ```html
 <div itemscope>
- <p itemprop="a">1</p>
- <p itemprop="b">test</p>
- <p itemprop="a">2</p>
+  <p itemprop="a">1</p>
+  <p itemprop="b">test</p>
+  <p itemprop="a">2</p>
 </div>
 ```
-
-And the following
 
 ```html
 <div id="x">
- <p itemprop="a">1</p>
+  <p itemprop="a">1</p>
 </div>
 <div itemscope itemref="x">
- <p itemprop="b">test</p>
- <p itemprop="a">2</p>
+  <p itemprop="b">test</p>
+  <p itemprop="a">2</p>
 </div>
 ```
 
@@ -420,19 +404,18 @@ This example uses microdata attributes to represent the following structured dat
 #### HTML
 
 ```html
-<dl itemscope
+<dl
+  itemscope
   itemtype="https://schema.org/Book"
   itemid="urn:isbn:0-374-22848-5<">
- <dt>Title
-   <dd
-    itemprop="title">Owls of the Eastern Ice
- <dt>Author
-   <dd
-     itemprop="author">Jonathan C Slaght
- <dt>Publication date
- <dd><time
-   itemprop="datePublished"
-   datetime="2020-08-04">August 4 2020</time>
+  <dt>Title</dt>
+  <dd itemprop="title">Owls of the Eastern Ice</dd>
+  <dt>Author</dt>
+  <dd itemprop="author">Jonathan C Slaght</dd>
+  <dt>Publication date</dt>
+  <dd>
+    <time itemprop="datePublished" datetime="2020-08-04">August 4 2020</time>
+  </dd>
 </dl>
 ```
 
@@ -443,10 +426,6 @@ This example uses microdata attributes to represent the following structured dat
 ## Specifications
 
 {{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}
 
 ## See also
 

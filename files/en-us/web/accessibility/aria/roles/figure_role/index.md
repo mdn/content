@@ -1,19 +1,12 @@
 ---
-title: 'ARIA: figure role'
+title: "ARIA: figure role"
 slug: Web/Accessibility/ARIA/Roles/figure_role
-tags:
-  - ARIA
-  - ARIA Role
-  - ARIA figure
-  - Accessibility
-  - Reference
-  - Role
-  - document structure role
-  - figure
-spec-urls:
-  - https://w3c.github.io/aria/#figure
-  - https://w3c.github.io/aria-practices/#describing_with_captions
+page-type: aria-role
+spec-urls: https://w3c.github.io/aria/#figure
 ---
+
+{{AccessibilitySidebar}}
+
 The ARIA `figure` role can be used to identify a figure inside page content where appropriate semantics do not already exist. A figure is generally considered to be one or more images, code snippets, or other content that puts across information in a different way to a regular flow of text.
 
 ## Description
@@ -22,15 +15,14 @@ A `figure` is a perceivable section of content that typically contains a graphic
 
 ```html
 <div role="figure" aria-labelledby="caption">
-  <img src="image.png"
-      alt="put image description here">
+  <img src="image.png" alt="put image description here" />
   <p id="caption">Figure 1: The caption</p>
 </div>
 ```
 
 In the above example, we have a figure that consists of two separate content items — an image and a caption. This is wrapped by a {{htmlelement("div")}} element that identifies the content as a figure using `role="figure"`.
 
-For HTML, use the {{HTMLElement('figure')}} and {{HTMLElement('figcaption')}} elements. The figcaption will serve as the accessible name for the figure.  When not using HTML, or when retrofitting legacy HTML, use the [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) on the figure, pointing to the figure's caption.
+For HTML, use the {{HTMLElement('figure')}} and {{HTMLElement('figcaption')}} elements. The figcaption will serve as the accessible name for the figure. When not using HTML, or when retrofitting legacy HTML, use the [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) on the figure, pointing to the figure's caption.
 If there is no visible caption, [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) can be used.
 
 ```html
@@ -48,13 +40,13 @@ This can be done semantically, without ARIA, with HTML's {{HTMLElement('figure')
 
 ```html
 <figure>
-  <img src="image.png"
-      alt="put image description here">
+  <img src="image.png" alt="put image description here" />
   <figcaption>Figure 1: The caption</figcaption>
 </figure>
 ```
 
-> **Note:** If at all possible in your work, you should use the appropriate semantic HTML elements to mark up a figure and its caption — {{htmlelement("figure")}} and {{htmlelement("figcaption")}}.
+> [!NOTE]
+> If at all possible in your work, you should use the appropriate semantic HTML elements to mark up a figure and its caption — {{htmlelement("figure")}} and {{htmlelement("figcaption")}}.
 
 ### Associated WAI-ARIA roles, states, and properties
 
@@ -78,15 +70,18 @@ No role specific JavaScript requirements. If you don't have control over the HTM
 We could extend the initial example on the page to also identify a paragraph that provides a descriptive label for the figure by referencing its ID in `aria-labelledby`:
 
 ```html
-    <div role="figure" aria-labelledby="figure-1">
-      <img src="diagram.png"
-           alt="diagram showing the four layers of awesome and their relative priority order —
-                music, cats, nature, and ice cream">
-      <pre>`
+<div role="figure" aria-labelledby="figure-1">
+  <img
+    src="diagram.png"
+    alt="diagram showing the four layers of awesome and their relative priority order —
+        music, cats, nature, and ice cream" />
+  <pre>
+`
         let awesome = ['music', 'cats', 'nature', 'ice cream'];
-      `</pre>
-      <p id="figure-1">Figure 1: The four layers of awesome.</p>
-    </div>
+      `</pre
+  >
+  <p id="figure-1">Figure 1: The four layers of awesome.</p>
+</div>
 ```
 
 ## Best practices
@@ -97,12 +92,15 @@ If at all possible, you should use the appropriate semantic HTML elements to mar
 
 ```html
 <figure>
-  <img src="diagram.png"
-       alt="diagram showing the four layers of awesome and their relative priority order —
-       music, cats, nature, and ice cream">
-  <pre>`
+  <img
+    src="diagram.png"
+    alt="diagram showing the four layers of awesome and their relative priority order —
+         music, cats, nature, and ice cream" />
+  <pre>
+`
     let awesome = ['music', 'cats', 'nature', 'ice cream'];
-  `</pre>
+  `</pre
+  >
   <figcaption>Figure 1: The four layers of awesome.</figcaption>
 </figure>
 ```
@@ -117,11 +115,3 @@ If at all possible, you should use the appropriate semantic HTML elements to mar
 - [ARIA in HTML](https://w3c.github.io/html-aria/)
 - [HTML `<figure>` element](/en-US/docs/Web/HTML/Element/figure)
 - [HTML `<figcaption>` element](/en-US/docs/Web/HTML/Element/figcaption)
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
-
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
-
-</section>

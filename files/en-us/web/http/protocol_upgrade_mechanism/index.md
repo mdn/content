@@ -1,16 +1,13 @@
 ---
 title: Protocol upgrade mechanism
 slug: Web/HTTP/Protocol_upgrade_mechanism
-tags:
-  - Guide
-  - HTTP
-  - HTTP/2
-  - Networking
-  - Protocols
-  - Upgrade
-  - WebSocket
-  - WebSockets
+page-type: guide
+spec-urls:
+  - https://www.rfc-editor.org/rfc/rfc6455
+  - https://www.rfc-editor.org/rfc/rfc7230
+  - https://www.rfc-editor.org/rfc/rfc7540
 ---
+
 {{HTTPSidebar}}
 
 The [HTTP/1.1 protocol](/en-US/docs/Web/HTTP) provides a special mechanism that can be used to upgrade an already established connection to a different protocol, using the {{HTTPHeader("Upgrade")}} header field.
@@ -25,7 +22,7 @@ The {{HTTPHeader("Upgrade")}} header field is used by clients to invite the serv
 
 Because `Upgrade` is a hop-by-hop header, it also needs to be listed in the {{HTTPHeader("Connection")}} header field. This means that a typical request that includes Upgrade would look something like:
 
-```
+```http
 GET /index.html HTTP/1.1
 Host: www.example.com
 Connection: upgrade
@@ -52,11 +49,12 @@ webSocket = new WebSocket("ws://destination.server.ext", "optionalProtocol");
 
 The {{domxref("WebSocket.WebSocket", "WebSocket()")}} constructor does all the work of creating an initial HTTP/1.1 connection then handling the handshaking and upgrade process for you.
 
-> **Note:** You can also use the `"wss://"` URL scheme to open a secure WebSocket connection.
+> [!NOTE]
+> You can also use the `"wss://"` URL scheme to open a secure WebSocket connection.
 
 If you need to create a WebSocket connection from scratch, you'll have to handle the handshaking process yourself. After creating the initial HTTP/1.1 session, you need to request the upgrade by adding to a standard request the {{HTTPHeader("Upgrade")}} and {{HTTPHeader("Connection")}} headers, as follows:
 
-```
+```http
 Connection: Upgrade
 Upgrade: websocket
 ```
@@ -69,7 +67,7 @@ The following headers are involved in the WebSocket upgrade process. Other than 
 
 Specifies one or more protocol-level WebSocket extensions to ask the server to use. Using more than one `Sec-WebSocket-Extension` header in a request is permitted; the result is the same as if you included all of the listed extensions in one such header.
 
-```
+```http
 Sec-WebSocket-Extensions: extensions
 ```
 
@@ -78,7 +76,7 @@ Sec-WebSocket-Extensions: extensions
 
 For example:
 
-```
+```http
 Sec-WebSocket-Extensions: superspeed, colormode; depth=16
 ```
 
@@ -86,9 +84,9 @@ Sec-WebSocket-Extensions: superspeed, colormode; depth=16
 
 Provides information to the server which is needed in order to confirm that the client is entitled to request an upgrade to WebSocket. This header can be used when insecure (HTTP) clients wish to upgrade, in order to offer some degree of protection against abuse. The value of the key is computed using an algorithm defined in the WebSocket specification, so this _does not provide security_. Instead, it helps to prevent non-WebSocket clients from inadvertently, or through misuse, requesting a WebSocket connection. In essence, then, this key confirms that "Yes, I really mean to open a WebSocket connection."
 
-This header is automatically added by clients that choose to use it; it cannot be added using the {{domxref("XMLHttpRequest.setRequestHeader()")}} method.
+This header is automatically added by clients that choose to use it; it cannot be added using the {{domxref("Window/fetch", "fetch()")}} or {{domxref("XMLHttpRequest.setRequestHeader()")}} methods.
 
-```
+```http
 Sec-WebSocket-Key: key
 ```
 
@@ -101,7 +99,7 @@ The server's response's {{HTTPHeader("Sec-WebSocket-Accept")}} header will have 
 
 The `Sec-WebSocket-Protocol` header specifies one or more WebSocket protocols that you wish to use, in order of preference. The first one that is supported by the server will be selected and returned by the server in a `Sec-WebSocket-Protocol` header included in the response. You can use this more than once in the header, as well; the result is the same as if you used a comma-delineated list of subprotocol identifiers in a single header.
 
-```
+```http
 Sec-WebSocket-Protocol: subprotocols
 ```
 
@@ -114,7 +112,7 @@ Sec-WebSocket-Protocol: subprotocols
 
 Specifies the WebSocket protocol version the client wishes to use, so the server can confirm whether or not that version is supported on its end.
 
-```
+```http
 Sec-WebSocket-Version: version
 ```
 
@@ -125,7 +123,7 @@ Sec-WebSocket-Version: version
 
 If the server can't communicate using the specified version of the WebSocket protocol, it will respond with an error (such as 426 Upgrade Required) that includes in its headers a `Sec-WebSocket-Version` header with a comma-separated list of the supported protocol versions. If the server does support the requested protocol version, no `Sec-WebSocket-Version` header is included in the response.
 
-```
+```http
 Sec-WebSocket-Version: supportedVersions
 ```
 
@@ -140,19 +138,22 @@ The response from the server may include these.
 
 Included in the response message from the server during the opening handshake process when the server is willing to initiate a WebSocket connection. It will appear no more than once in the response headers.
 
-```
+```http
 Sec-WebSocket-Accept: hash
 ```
 
 - `hash`
   - : If a {{HTTPHeader("Sec-WebSocket-Key")}} header was provided, the value of this header is computed by taking the value of the key, concatenating the string "258EAFA5-E914-47DA-95CA-C5AB0DC85B11" to it, taking the [SHA-1](https://en.wikipedia.org/wiki/SHA-1) hash of that concatenated string, resulting in a 20-byte value. That value is then [base64](/en-US/docs/Glossary/Base64) encoded to obtain the value of this property.
 
-## References
+## Specifications
+
+{{specifications}}
+
+## See also
 
 - [WebSocket API](/en-US/docs/Web/API/WebSocket)
-- [HTTP](/en-US/docs/Web/HTTP)
-- Specifications and RFCs:
-
-  - {{RFC(7230)}}
-  - {{RFC(6455)}}
-  - {{RFC(7540)}}
+- [Evolution of HTTP](/en-US/docs/Web/HTTP/Evolution_of_HTTP)
+- Glossary terms:
+  - {{glossary('HTTP')}}
+  - {{glossary('HTTP_2', 'HTTP/2')}}
+  - {{glossary('QUIC')}}

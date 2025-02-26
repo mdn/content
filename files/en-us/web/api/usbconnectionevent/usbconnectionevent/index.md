@@ -1,16 +1,14 @@
 ---
-title: USBConnectionEvent()
+title: "USBConnectionEvent: USBConnectionEvent() constructor"
+short-title: USBConnectionEvent()
 slug: Web/API/USBConnectionEvent/USBConnectionEvent
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Reference
-  - USBConnectionEvent
-  - Experimental
+status:
+  - experimental
 browser-compat: api.USBConnectionEvent.USBConnectionEvent
 ---
-{{securecontext_header}}{{APIRef("WebUSB API")}}{{SeeCompatTable}}
+
+{{APIRef("WebUSB API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`USBConnectionEvent()`** constructor creates a new {{domxref("USBConnectionEvent")}} object.
 This constructor is not typically used,
@@ -18,7 +16,7 @@ it is created by the browser in response to the connection and disconnection of 
 
 ## Syntax
 
-```js
+```js-nolint
 new USBConnectionEvent(type, options)
 ```
 

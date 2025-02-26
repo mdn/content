@@ -1,18 +1,11 @@
 ---
 title: tabs.warmup()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/warmup
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - tabs
-  - warmup
+page-type: webextension-api-function
 browser-compat: webextensions.api.tabs.warmup
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 To optimize system resource usage, browsers may drop GPU resources associated with tabs that the user has not accessed for a certain amount of time. If a browser has done this for a tab, then reactivating the tab (for example, when the user switches to it) may take longer than it normally would.
 
@@ -26,7 +19,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let warming = browser.tabs.warmup(
   tabId               // integer
 )
@@ -56,17 +49,15 @@ function onFailure(error) {
 }
 
 async function warmupMDN() {
-
   const mdnTabs = await browser.tabs.query({
     currentWindow: true,
-    url: "https://developer.mozilla.org/*"
+    url: "https://developer.mozilla.org/*",
   });
 
   if (mdnTabs.length > 0) {
     const warming = browser.tabs.warmup(mdnTabs[0].id);
     warming.then(onSuccess, onFailure);
   }
-
 }
 
 browser.browserAction.onClicked.addListener(warmupMDN);

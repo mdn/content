@@ -1,14 +1,9 @@
 ---
 title: Scaling of SVG backgrounds
 slug: Web/CSS/Scaling_of_SVG_backgrounds
-tags:
-  - CSS
-  - CSS Background
-  - Guide
-  - Images
-  - Reference
-  - SVG
+page-type: guide
 ---
+
 {{CSSRef}}
 
 Given the flexibility of SVG images, there's a lot to keep in mind when using them as background images with the {{ cssxref("background-image") }} property, and even more to keep in mind when also scaling them using the {{ cssxref("background-size") }} property. This article describes how scaling of SVG images is handled when using these properties.
@@ -24,7 +19,8 @@ The algorithm can for the most part be summarized by these four rules. There are
 
 It's worth noting that the sizing algorithm only cares about the image's dimensions and proportions, or lack thereof. An SVG image with fixed dimensions will be treated just like a raster image of the same size.
 
-> **Note:** If you are trying to stretch your SVG to a different aspect ratio with CSS—for example in order to stretch it over the page background—make sure your SVG includes `preserveAspectRatio="none"`. Find out more about {{svgattr("preserveAspectRatio")}}.
+> [!NOTE]
+> If you are trying to stretch your SVG to a different {{glossary("aspect ratio")}} with CSS—for example in order to stretch it over the page background—make sure your SVG includes `preserveAspectRatio="none"`. Find out more about {{svgattr("preserveAspectRatio")}}.
 
 ## Source image examples
 
@@ -38,7 +34,7 @@ This image is both dimensionless and proportionless. It doesn't care what size i
 
 ![no-dimensions-or-ratio.png](no-dimensions-or-ratio.png)
 
-[SVG source](https://media.prod.mdn.mozit.cloud/attachments/2012/07/09/3469/6587a382ffb2c944462a6b110b079496/no-dimensions-or-ratio.svg "no-dimensions-or-ratio.svg")
+[SVG source](https://mdn.dev/archives/media/attachments/2012/07/09/3469/6587a382ffb2c944462a6b110b079496/no-dimensions-or-ratio.svg)
 
 ### One specified dimension and proportionless
 
@@ -46,7 +42,7 @@ This image specifies a width of 100 pixels but no height or intrinsic ratio. Thi
 
 ![100px-wide-no-height-or-ratio.png](100px-wide-no-height-or-ratio.png)
 
-[SVG source](https://media.prod.mdn.mozit.cloud/attachments/2012/07/09/3468/af73bea307a10ffe2559df42fad199e3/100px-wide-no-height-or-ratio.svg "100px-wide-no-height-or-ratio.svg")
+[SVG source](https://mdn.dev/archives/media/attachments/2012/07/09/3468/af73bea307a10ffe2559df42fad199e3/100px-wide-no-height-or-ratio.svg)
 
 ### One specified dimension with intrinsic ratio
 
@@ -56,7 +52,7 @@ This is very much like specifying a specific width and height, since once you ha
 
 ![100px-height-3x4-ratio.png](100px-height-3x4-ratio.png)
 
-[SVG source](https://media.prod.mdn.mozit.cloud/attachments/2012/07/09/3467/fd0c534c506be06d52f0a954a59863a6/100px-height-3x4-ratio.svg "100px-height-3x4-ratio.svg")
+[SVG source](https://mdn.dev/archives/media/attachments/2012/07/09/3467/fd0c534c506be06d52f0a954a59863a6/100px-height-3x4-ratio.svg)
 
 ### No width or height with intrinsic ratio
 
@@ -64,13 +60,14 @@ This image doesn't specify either a width or a height; instead, it specifies an 
 
 ![no-dimensions-1x1-ratio.png](no-dimensions-1x1-ratio.png)
 
-[SVG source](https://media.prod.mdn.mozit.cloud/attachments/2012/07/09/3466/a3398e03c058d99fb2b7837167cdbc26/no-dimensions-1x1-ratio.svg "no-dimensions-1x1-ratio.svg")
+[SVG source](https://mdn.dev/archives/media/attachments/2012/07/09/3466/a3398e03c058d99fb2b7837167cdbc26/no-dimensions-1x1-ratio.svg)
 
 ## Scaling examples
 
 Now let's see some examples of what happens as we apply different scaling to these images. In each of the examples below, the enclosing rectangles are 300 pixels wide and 200 pixels tall. In addition, the backgrounds have {{ cssxref("background-repeat") }} set to no-repeat for clarity.
 
-> **Note:** The screenshots below show the **expected** rendering. Not all browsers currently render these correctly.
+> [!NOTE]
+> The screenshots below show the **expected** rendering. Not all browsers currently render these correctly.
 
 ### Specifying fixed lengths for both dimensions
 

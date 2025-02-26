@@ -1,30 +1,30 @@
 ---
-title: Node.removeChild()
+title: "Node: removeChild() method"
+short-title: removeChild()
 slug: Web/API/Node/removeChild
 page-type: web-api-instance-method
-tags:
-  - Method
-  - Reference
 browser-compat: api.Node.removeChild
 ---
+
 {{APIRef("DOM")}}
 
 The **`removeChild()`** method of the {{domxref("Node")}} interface
 removes a child node from the DOM and returns the removed node.
 
-> **Note:** As long as a reference is kept on the removed child,
+> [!NOTE]
+> As long as a reference is kept on the removed child,
 > it still exists in memory, but is no longer part of the DOM.
 > It can still be reused later in the code.
 >
 > If the return value of `removeChild()` is not stored, and no other reference is kept,
-> it will be [automatically deleted](/en-US/docs/Web/JavaScript/Memory_Management) from memory after a short time.
+> it will be [automatically deleted](/en-US/docs/Web/JavaScript/Memory_management) from memory after a short time.
 
-Unlike {{domxref("Node.cloneNode()")}} the return value preserves the {{domxref("EventListener")}} objects associated with it.
+Unlike {{domxref("Node.cloneNode()")}} the return value preserves the `EventListener` objects associated with it.
 
 ## Syntax
 
-```js
-removeChild(child);
+```js-nolint
+removeChild(child)
 ```
 
 ### Parameters
@@ -32,7 +32,7 @@ removeChild(child);
 - `child`
   - : A {{domxref("Node")}} that is the child node to be removed from the DOM.
 
-### Exception
+### Exceptions
 
 - `NotFoundError` {{domxref("DOMException")}}
   - : Thrown if the `child` is not a child of the node.
@@ -46,23 +46,23 @@ removeChild(child);
 Given this HTML:
 
 ```html
-<div id="top">
-  <div id="nested"></div>
+<div id="parent">
+  <div id="child"></div>
 </div>
 ```
 
 To remove a specified element when knowing its parent node:
 
 ```js
-let d = document.getElementById("top");
-let d_nested = document.getElementById("nested");
-let throwawayNode = d.removeChild(d_nested);
+const parent = document.getElementById("parent");
+const child = document.getElementById("child");
+const throwawayNode = parent.removeChild(child);
 ```
 
 To remove a specified element without having to specify its parent node:
 
 ```js
-let node = document.getElementById("nested");
+const node = document.getElementById("child");
 if (node.parentNode) {
   node.parentNode.removeChild(node);
 }
@@ -71,7 +71,7 @@ if (node.parentNode) {
 To remove all children from an element:
 
 ```js
-let element = document.getElementById("top");
+const element = document.getElementById("idOfParent");
 while (element.firstChild) {
   element.removeChild(element.firstChild);
 }
@@ -81,35 +81,35 @@ while (element.firstChild) {
 
 ```html
 <!--Sample HTML code-->
-<div id="top"> </div>
+<div id="parent"></div>
 ```
 
 ```js
-let top = document.getElementById("top");
-let nested = document.getElementById("nested");
+const parent = document.getElementById("parent");
+const child = document.getElementById("child");
 
 // Throws Uncaught TypeError
-let garbage = top.removeChild(nested);
+const garbage = parent.removeChild(child);
 ```
 
 ### Causing a NotFoundError
 
 ```html
 <!--Sample HTML code-->
-<div id="top">
-  <div id="nested"></div>
+<div id="parent">
+  <div id="child"></div>
 </div>
 ```
 
 ```js
-let top = document.getElementById("top");
-let nested = document.getElementById("nested");
+const parent = document.getElementById("parent");
+const child = document.getElementById("child");
 
 // This first call correctly removes the node
-let garbage = top.removeChild(nested);
+const garbage = parent.removeChild(child);
 
 // Throws NotFoundError
-garbage = top.removeChild(nested);
+garbage = parent.removeChild(child);
 ```
 
 ## Specifications

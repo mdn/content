@@ -1,23 +1,23 @@
 ---
 title: overflow-clip-margin
 slug: Web/CSS/overflow-clip-margin
-tags:
-  - CSS
-  - CSS Overflow
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.overflow-clip-margin
 ---
+
 {{CSSRef}}
 
-The **`overflow-clip-margin`** [CSS](/en-US/docs/Web/CSS) property determines how far outside its bounds an element with [`overflow: clip`](/en-US/docs/Web/CSS/overflow) may be painted before being clipped.
+The **`overflow-clip-margin`** [CSS](/en-US/docs/Web/CSS) property determines how far outside its bounds an element with [`overflow: clip`](/en-US/docs/Web/CSS/overflow) may be painted before being clipped. The bound defined by this property is called the _overflow clip edge_ of the box.
 
 ## Syntax
 
 ```css
+/* <length> values */
 overflow-clip-margin: 20px;
 overflow-clip-margin: 1em;
+
+/* <visual-box> | <length> */
+overflow-clip-margin: content-box 5px;
 
 /* Global values */
 overflow-clip-margin: inherit;
@@ -27,9 +27,10 @@ overflow-clip-margin: revert-layer;
 overflow-clip-margin: unset;
 ```
 
-The `overflow-clip-margin` property is specified as a length, negative values are not allowed.
+The `<visual-box>` value, which defaults to `padding-box`, specifies the box edge to use as the overflow clip edge origin. The {{cssxref("&lt;length&gt;")}} value specified in `overflow-clip-margin` must be nonnegative.
 
-> **Note:** If the element does not have `overflow: clip` then this property will be ignored.
+> [!NOTE]
+> If the element does not have `overflow: clip` then this property will be ignored.
 
 ## Formal definition
 
@@ -45,7 +46,11 @@ The `overflow-clip-margin` property is specified as a length, negative values ar
 
 ```html
 <div class="box">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+  cillum dolore eu fugiat nulla pariatur.
 </div>
 ```
 
@@ -54,7 +59,7 @@ The `overflow-clip-margin` property is specified as a length, negative values ar
 ```css
 .box {
   border: 3px solid black;
-  width:  250px;
+  width: 250px;
   height: 100px;
   overflow: clip;
   overflow-clip-margin: 20px;

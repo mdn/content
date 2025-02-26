@@ -1,25 +1,25 @@
 ---
-title: PushManager.register()
+title: "PushManager: register() method"
+short-title: register()
 slug: Web/API/PushManager/register
 page-type: web-api-instance-method
-tags:
-  - API
-  - Deprecated
-  - Method
-  - Reference
-  - Simple Push API
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.PushManager.register
 ---
-{{deprecated_header}}{{ApiRef("Push API")}}
+
+{{ApiRef("Push API")}}{{deprecated_header}}{{non-standard_header}}{{AvailableInWorkers}}
 
 The **`register`** method is used to ask the system to request
 a new endpoint for notifications.
 
-> **Note:** This method has been superseded by {{domxref("PushManager.subscribe()")}}.
+> [!NOTE]
+> This method has been superseded by {{domxref("PushManager.subscribe()")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 register()
 ```
 
@@ -34,7 +34,8 @@ A `DOMRequest` object to handle the success or failure of the method call.
 If the method call is successful, the request's `result` will be a string,
 which is the endpoint URL.
 
-> **Note:** if you do not need the URL any more, please use
+> [!NOTE]
+> If you do not need the URL any more, please use
 > {{domxref("PushManager.unregister()")}} to clean up after yourself.
 
 ## Examples
@@ -42,14 +43,14 @@ which is the endpoint URL.
 ```js
 const req = navigator.push.register();
 
-req.onsuccess = function(e) {
+req.onsuccess = (e) => {
   const endpoint = req.result;
-  debug(`New endpoint: ${endpoint}` );
-}
+  console.log(`New endpoint: ${endpoint}`);
+};
 
-req.onerror = function(e) {
-  debug(`Error getting a new endpoint: ${JSON.stringify(e)}`);
-}
+req.onerror = (e) => {
+  console.error(`Error getting a new endpoint: ${e.error}`);
+};
 ```
 
 ## Specifications

@@ -1,14 +1,11 @@
 ---
-title: Document.createAttribute()
+title: "Document: createAttribute() method"
+short-title: createAttribute()
 slug: Web/API/Document/createAttribute
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Method
-  - Reference
 browser-compat: api.Document.createAttribute
 ---
+
 {{ ApiRef("DOM") }}
 
 The **`Document.createAttribute()`** method creates a new
@@ -16,17 +13,19 @@ attribute node, and returns it. The object created is a node implementing the
 {{domxref("Attr")}} interface. The DOM does not enforce what sort of attributes can be
 added to a particular element in this manner.
 
-> **Note:** The string given in parameter is converted to lowercase.
+> [!NOTE]
+> The string given in parameter is converted to lowercase.
 
 ## Syntax
 
-```js
+```js-nolint
 createAttribute(name)
 ```
 
 ### Parameters
 
-- `name` is a string containing the name of the attribute.
+- `name`
+  - : A string containing the name of the attribute.
 
 ### Return value
 

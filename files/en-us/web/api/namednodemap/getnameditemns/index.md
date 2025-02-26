@@ -1,20 +1,19 @@
 ---
-title: NamedNodeMap.getNamedItemNS()
+title: "NamedNodeMap: getNamedItemNS() method"
+short-title: getNamedItemNS()
 slug: Web/API/NamedNodeMap/getNamedItemNS
 page-type: web-api-instance-method
-tags:
-  - Method
-  - Reference
 browser-compat: api.NamedNodeMap.getNamedItemNS
 ---
+
 {{APIRef("DOM")}}
 
 The **`getNamedItemNS()`** method of the {{domxref("NamedNodeMap")}} interface returns the {{domxref("Attr")}} corresponding to the given local name in the given namespace, or `null` if there is no corresponding attribute.
 
 ## Syntax
 
-```js
-getNamedItemNS(namespace, localName);
+```js-nolint
+getNamedItemNS(namespace, localName)
 ```
 
 ### Parameters
@@ -37,21 +36,24 @@ An {{domxref("Attr")}} corresponding to the namespace and local name given in pa
 
 ```js
 const parser = new DOMParser();
-const xmlString = '<warning ob:one="test" xmlns:ob="http://www.example.com/ob">Beware!</warning>';
+const xmlString =
+  '<warning ob:one="test" xmlns:ob="http://www.example.com/ob">Beware!</warning>';
 const doc = parser.parseFromString(xmlString, "application/xml");
 
-const pre = document.getElementsByTagName("pre")[0];
-const warning = doc.getElementsByTagName("warning")[0];
+const pre = document.querySelector("pre");
+const warning = doc.querySelector("warning");
 
-const attrMap = warning.attributes;
+const value = warning.attributes.getNamedItemNS(
+  "http://www.example.com/ob",
+  "one",
+).value;
 
-pre.textContent = `The 'ob:one' attribute contains: ${attrMap.getNamedItemNS("http://www.example.com/ob", "one").value}.`;
-
+pre.textContent = `The 'ob:one' attribute contains: ${value}.`;
 ```
 
 {{EmbedLiveSample("Example", "100%", 80)}}
 
-## Specification
+## Specifications
 
 {{Specifications}}
 

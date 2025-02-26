@@ -1,9 +1,9 @@
 ---
 title: Anatomy of an extension
 slug: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
-tags:
-  - WebExtensions
+page-type: guide
 ---
+
 {{AddonSidebar}}
 
 An extension consists of a collection of files, packaged for distribution and installation. In this article, we will quickly go through the files that might be present in an extension.
@@ -18,14 +18,14 @@ The manifest can also contain pointers to several other types of files:
   - : Scripts that respond to browser events.
 - Icons
   - : For the extension and any buttons it might define.
-- [Sidebars, popups, and options pages](#sidebars_popups_and_options_pages)
+- [Sidebars, popups, and options pages](#sidebars_popups_and_options_pages_2)
   - : HTML documents that provide content for various user interface components.
-- [Content scripts](#content_scripts)
+- [Content scripts](#content_scripts_2)
   - : JavaScript included with your extension, that you will inject into web pages.
 - [Web-accessible resources](#web_accessible_resources)
   - : Make packaged content accessible to web pages and content scripts.
 
-![](webextension-anatomy.png)
+![The components of a web extension. The manifest.JSON must be present in all extensions. It provides pointers to background pages, content scripts, browser actions, page actions, options pages, and web accessible resources. Background pages consist of HTML and JS. Content scripts consist of JS and CSS. The user clicks on an icon to trigger browser actions and page actions and the resulting pop-up consists of HTML, CSS, and JS. Options pages consist of HTML, CSS, and JS.](webextension-anatomy.png)
 
 See the [`manifest.json`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) reference page for all the details.
 
@@ -48,7 +48,7 @@ Your extension can include various user interface components whose content is de
 - [Sidebar](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars)
   - : A pane that is displayed at the left-hand side of the browser window, next to the web page.
 - [Popup](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups)
-  - : A dialog that you can display when the user clicks on a [toolbar button](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action) or [address bar button](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions)
+  - : A dialog that you can display when the user clicks on a [toolbar button](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button) or [address bar button](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions)
 - [Options](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages)
   - : A page that's shown when the user accesses your add-on's preferences in the browser's native add-ons manager.
 
@@ -74,7 +74,6 @@ Content scripts can see and manipulate the page's DOM, just like normal scripts 
 
 Unlike normal page scripts, content scripts can:
 
-- Make cross-domain XHR requests.
 - Use a small subset of the [WebExtension APIs](/en-US/docs/Mozilla/Add-ons/WebExtensions/API).
 - [Exchange messages with their background scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#communicating_with_background_scripts) and can in this way indirectly access all the WebExtension APIs.
 

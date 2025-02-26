@@ -1,15 +1,15 @@
 ---
 title: ideographic
 slug: Web/SVG/Attribute/ideographic
-tags:
-  - Deprecated
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
+status:
+  - deprecated
 browser-compat: svg.elements.font-face.ideographic
 ---
+
 {{SVGRef}}{{Deprecated_Header}}
 
-The **`ideographic`** attribute indicates the alignment coordinate for {{Glossary("glyphs")}} to achieve ideographic {{Glossary("baseline")}} alignment for horizontally oriented glyph layouts. The value is an offset in the font coordinate system.
+The **`ideographic`** attribute indicates the alignment coordinate for {{Glossary("glyph", "glyphs")}} to achieve ideographic {{Glossary("baseline/typography", "baseline")}} alignment for horizontally oriented glyph layouts. The value is an offset in the font coordinate system.
 
 You can use this attribute with the following SVG elements:
 
@@ -23,7 +23,7 @@ You can use this attribute with the following SVG elements:
       <th scope="row">Value</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/SVG/Content_type#Number"
+          ><a href="/en-US/docs/Web/SVG/Content_type#number"
             >&#x3C;number></a
           ></code
         >

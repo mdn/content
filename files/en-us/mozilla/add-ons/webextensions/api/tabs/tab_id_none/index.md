@@ -1,21 +1,15 @@
 ---
 title: tabs.TAB_ID_NONE
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/TAB_ID_NONE
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Property
-  - Reference
-  - TAB_ID_NONE
-  - WebExtensions
-  - tabs
+page-type: webextension-api-property
 browser-compat: webextensions.api.tabs.TAB_ID_NONE
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 A special ID value given to tabs that are not browser tabs (for example, tabs in devtools windows).
+
+Its value is `-1`.
 
 ## Browser compatibility
 
@@ -23,11 +17,11 @@ A special ID value given to tabs that are not browser tabs (for example, tabs in
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/tabs/#property-TAB_ID_NONE) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#property-TAB_ID_NONE) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -54,4 +48,4 @@ A special ID value given to tabs that are not browser tabs (for example, tabs in
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

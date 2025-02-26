@@ -1,12 +1,9 @@
 ---
 title: Updating add-ons for Firefox 8
 slug: Mozilla/Firefox/Releases/8/Updating_add-ons
-tags:
-  - Add-ons
-  - Extensions
-  - Firefox 8
-  - Guide
+page-type: guide
 ---
+
 {{FirefoxSidebar}}
 
 This article provides information on steps you need to take in order to update your existing add-on for compatibility with Firefox 8. See [Firefox 8 for developers](/en-US/docs/Mozilla/Firefox/Releases/8) for a complete list of everything that changed in Firefox 8.
@@ -17,7 +14,8 @@ If your add-on is distributed on [addons.mozilla.org](https://addons.mozilla.org
 
 So you should start by visiting AMO and looking to see if your add-on needs any work done at all.
 
-> **Note:** You should still test your add-on on Firefox 8, even if it's been automatically upgraded. There are edge cases that may not be automatically detected.
+> [!NOTE]
+> You should still test your add-on on Firefox 8, even if it's been automatically upgraded. There are edge cases that may not be automatically detected.
 
 Once you've confirmed that you need to make changes, come on back to this page and read on.
 
@@ -50,7 +48,7 @@ In the past, {{ domxref("Document.getSelection()") }} was returning a stringifie
 
 When the DOM File API was added, a new global called {{ domxref("File") }} was added; this can conflict with objects in your scripts. If you have any globals called `File`, you should rename them.
 
-Similarly, a new global, {{ domxref("ChromeWorker") }}, was introduced to support allowing Workers to be used from chrome code. If by some chance you have any globals with this name, you should rename them.
+Similarly, a new global, `ChromeWorker`, was introduced to support allowing Workers to be used from chrome code. If by some chance you have any globals with this name, you should rename them.
 
 ## Security changes
 

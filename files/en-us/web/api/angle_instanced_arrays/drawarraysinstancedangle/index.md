@@ -1,25 +1,21 @@
 ---
-title: ANGLE_instanced_arrays.drawArraysInstancedANGLE()
+title: "ANGLE_instanced_arrays: drawArraysInstancedANGLE() method"
+short-title: drawArraysInstancedANGLE()
 slug: Web/API/ANGLE_instanced_arrays/drawArraysInstancedANGLE
 page-type: web-api-instance-method
-tags:
-  - ANGLE_instanced_arrays
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL extension
 browser-compat: api.ANGLE_instanced_arrays.drawArraysInstancedANGLE
 ---
+
 {{APIRef("WebGL")}}
 
 The **`ANGLE_instanced_arrays.drawArraysInstancedANGLE()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) renders primitives from array data like the {{domxref("WebGLRenderingContext.drawArrays()", "gl.drawArrays()")}} method. In addition, it can execute multiple instances of the range of elements.
 
-> **Note:** When using {{domxref("WebGL2RenderingContext", "WebGL2")}}, this method is available as {{domxref("WebGL2RenderingContext.drawArraysInstanced()", "gl.drawArraysInstanced()")}} by default.
+> [!NOTE]
+> When using {{domxref("WebGL2RenderingContext", "WebGL2")}}, this method is available as {{domxref("WebGL2RenderingContext.drawArraysInstanced()", "gl.drawArraysInstanced()")}} by default.
 
 ## Syntax
 
-```js
+```js-nolint
 drawArraysInstancedANGLE(mode, first, count, primcount)
 ```
 
@@ -57,7 +53,7 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-const ext = gl.getExtension('ANGLE_instanced_arrays');
+const ext = gl.getExtension("ANGLE_instanced_arrays");
 ext.drawArraysInstancedANGLE(gl.POINTS, 0, 8, 4);
 ```
 

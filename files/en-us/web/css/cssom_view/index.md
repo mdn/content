@@ -1,35 +1,66 @@
 ---
-title: CSSOM View
-slug: Web/CSS/CSSOM_View
-tags:
-  - CSS
-  - CSSOM
-  - CSSOM View
-  - Guide
-  - Layout
-  - Overview
-  - Reference
-browser-compat: css.properties.scroll-behavior
+title: CSSOM view
+slug: Web/CSS/CSSOM_view
+page-type: css-module
+spec-urls: https://drafts.csswg.org/cssom-view/
 ---
+
 {{CSSRef}}
 
-**CSSOM View** is a module of CSS that lets you manipulate the visual view of a document, in particular its scrolling behavior.
+The **CSSOM view** module lets you manipulate the visual view of a document, including getting the position of element layout boxes, obtaining the width or height of the viewport through script, and also scrolling an element.
 
 ## Reference
 
-### Properties
+### Events
 
-- {{cssxref("scroll-behavior")}}
+- {{domxref("Window")}} events:
+  - {{domxref("Window/resize_event", "resize")}}
+- {{domxref("VisualViewport")}} events:
+  - {{domxref("VisualViewport/resize_event", "resize")}}
+  - {{domxref("VisualViewport/scroll_event", "scroll")}}
+  - {{domxref("VisualViewport/scrollend_event", "scrollend")}}
+- {{domxref("Document")}} events
+  - {{domxref("Document/scroll_event", "scroll")}}
+  - {{domxref("Document/scrollend_event", "scrollend")}}
+- {{domxref("Element")}} events
+  - {{domxref("Element/scroll_event", "scroll")}}
+  - {{domxref("Element/scrollend_event", "scrollend")}}
+- {{domxref("MediaQueryList")}} events
+  - {{domxref("MediaQueryList/change_event", "change")}}
+
+### Interfaces
+
+- {{domxref("MediaQueryList")}}
+- {{domxref("MediaQueryListEvent")}}
+- {{domxref("Screen")}}
+- {{domxref("CaretPosition")}}
+- {{domxref("VisualViewport")}}
+
+The following interfaces are not defined by this module but add some extensions.
+
+- {{domxref("Window")}}
+- {{domxref("Document")}}
+- {{domxref("Element")}}
+- {{domxref("HTMLElement")}}
+- {{domxref("HTMLImageElement")}}
+- {{domxref("Range")}}
+- {{domxref("MouseEvent")}}
+- {{domxref("Text")}}
+- {{domxref("CSSPseudoElement")}}
 
 ## Guides
 
-- [Coordinate systems](/en-US/docs/Web/CSS/CSSOM_View/Coordinate_systems)
+- [Coordinate systems](/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems)
   - : A guide to the coordinate systems used to specify the position of a location in a display context, whether that context is a window on a monitor, a viewport on a mobile device, or a position on a sheet of paper when printing.
+
+## Related concepts
+
+- {{glossary("CSSOM")}} glossary term
 
 ## Specifications
 
 {{Specifications}}
 
-## Browser compatibility
+## See also
 
-{{Compat}}
+- [CSS Object Model (CSSOM)](/en-US/docs/Web/API/CSS_Object_Model) as Web API

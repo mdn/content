@@ -1,19 +1,14 @@
 ---
-title: AbortSignal.aborted
+title: "AbortSignal: aborted property"
+short-title: aborted
 slug: Web/API/AbortSignal/aborted
 page-type: web-api-instance-property
-tags:
-  - API
-  - AbortSignal
-  - Experimental
-  - Property
-  - Reference
-  - aborted
 browser-compat: api.AbortSignal.aborted
 ---
-{{APIRef("DOM")}}
 
-The **`aborted`** read-only property returns a value that indicates whether the DOM requests the signal is communicating with are aborted (`true`) or not (`false`).
+{{APIRef("DOM")}}{{AvailableInWorkers}}
+
+The **`aborted`** read-only property returns a value that indicates whether the asynchronous operations the signal is communicating with are aborted (`true`) or not (`false`).
 
 ## Value
 
@@ -31,9 +26,9 @@ const signal = controller.signal;
 // …
 
 if (signal.aborted) {
-  console.log('Request has been aborted');
+  console.log("Request has been aborted");
 } else {
-  console.log('Request not aborted');
+  console.log("Request not aborted");
 }
 ```
 

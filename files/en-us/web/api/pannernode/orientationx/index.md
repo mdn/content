@@ -1,26 +1,21 @@
 ---
-title: PannerNode.orientationX
+title: "PannerNode: orientationX property"
+short-title: orientationX
 slug: Web/API/PannerNode/orientationX
 page-type: web-api-instance-property
-tags:
-  - PannerNode
-  - Property
-  - Reference
-  - Web Audio API
-  - orientationX
 browser-compat: api.PannerNode.orientationX
 ---
+
 {{ APIRef("Web Audio API") }}
 
-The **`orientationX`** property of the {{
-    domxref("PannerNode") }} interface indicates the X (horizontal) component of the
+The **`orientationX`** property of the {{domxref("PannerNode")}} interface indicates the X (horizontal) component of the
 direction in which the audio source is facing, in a 3D Cartesian coordinate space.
 
 The complete vector is defined by the position of the audio source, given as
-({{domxref("PannerNode.positionX", "positionX")}}, {{domxref("PannerNode.positionY",
-    "positionY")}}, {{domxref("PannerNode.positionZ", "positionZ")}}), and the orientation
+({{domxref("PannerNode.positionX", "positionX")}}, {{domxref("PannerNode.positionY", "positionY")}},
+{{domxref("PannerNode.positionZ", "positionZ")}}), and the orientation
 of the audio source (that is, the direction in which it's facing), given as
-({{domxref("PannerNode.orientationX", "orientationX")}},
+(`orientationX`,
 {{domxref("PannerNode.orientationY", "orientationY")}},
 {{domxref("PannerNode.orientationZ", "orientationZ")}}).
 
@@ -43,10 +38,9 @@ direction in which the audio source is facing, in 3D Cartesian coordinate space.
 
 ## Example
 
-In this example, we'll demonstrate how changing the orientation parameters of a {{
-  domxref("PannerNode") }} in combination with {{domxref("PannerNode.coneInnerAngle",
-  "coneInnerAngle")}} and {{domxref("PannerNode.coneOuterAngle",
-  "coneOuterAngle")}} affects volume. To help us visualize how the orientation vector
+In this example, we'll demonstrate how changing the orientation parameters of a
+{{domxref("PannerNode")}} in combination with {{domxref("PannerNode.coneInnerAngle", "coneInnerAngle")}} and
+{{domxref("PannerNode.coneOuterAngle", "coneOuterAngle")}} affects volume. To help us visualize how the orientation vector
 affects, we can use the [Right-hand rule](https://en.wikipedia.org/wiki/Right-hand_rule):
 
 ![This chart visualizes how the PannerNode orientation vectors affect the direction of the sound cone.](pannernode-orientation.png)
@@ -74,20 +68,20 @@ const yRotationToVector = (degrees) => {
 };
 ```
 
-Now we can create our {{ domxref("AudioContext") }}, an oscillator and a {{
-  domxref("PannerNode") }}:
+Now we can create our {{ domxref("AudioContext") }}, an oscillator and a
+{{domxref("PannerNode")}}:
 
 ```js
 const context = new AudioContext();
 
 const osc = new OscillatorNode(context);
-osc.type = 'sawtooth';
+osc.type = "sawtooth";
 
 const panner = new PannerNode(context);
-panner.panningModel = 'HRTF';
+panner.panningModel = "HRTF";
 ```
 
-Next, we set up the *cone* of our spatialized sound, determining the area in
+Next, we set up the _cone_ of our spatialized sound, determining the area in
 which it can be heard:
 
 ```js
@@ -133,8 +127,7 @@ panner.orientationZ.setValueAtTime(z2, context.currentTime + 2);
 Finally, let's connect all our nodes and start the oscillator!
 
 ```js
-osc.connect(panner)
-   .connect(context.destination);
+osc.connect(panner).connect(context.destination);
 
 osc.start(0);
 ```

@@ -1,15 +1,11 @@
 ---
-title: HTMLSelectElement.item()
+title: "HTMLSelectElement: item() method"
+short-title: item()
 slug: Web/API/HTMLSelectElement/item
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - HTMLSelectElement
-  - Method
-  - Reference
 browser-compat: api.HTMLSelectElement.item
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLSelectElement.item()`** method returns the
@@ -23,18 +19,19 @@ In JavaScript, using the array bracket syntax with an `unsigned long`, like
 
 ## Syntax
 
-```js
+```js-nolint
 item(index)
 // or collection[index]
 ```
 
 ### Parameters
 
-- `index` is an `unsigned long`.
+- `index`
+  - : A non-negative integer representing the position of the option in the list.
 
 ### Return value
 
-- `item` is a {{domxref("HTMLOptionElement")}}.
+An {{domxref("HTMLOptionElement")}} or `null`.
 
 ## Examples
 
@@ -51,9 +48,9 @@ item(index)
 
 ### JavaScript
 
-```css
+```js
 // Returns the HTMLOptionElement representing #o2
-elem1 = document.forms[0]['myFormControl'][1];
+elem1 = document.forms[0]["myFormControl"][1];
 ```
 
 ## Specifications

@@ -1,15 +1,11 @@
 ---
-title: 'ARIA: timer role'
+title: "ARIA: timer role"
 slug: Web/Accessibility/ARIA/Roles/timer_role
-tags:
-  - ARIA
-  - ARIA Role
-  - ARIA widget
-  - Reference
-  - Role Timer
-  - timer
+page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#timer
 ---
+
+{{AccessibilitySidebar}}
 
 The **`timer`** role indicates to assistive technologies that an element is a numerical counter listing the amount of elapsed time from a starting point or the remaining time until an end point. Assistive technologies will not announce updates to a timer as it has an implicit [aria-live](https://www.w3.org/TR/wai-aria/#aria-live) value of `off`.
 
@@ -28,6 +24,7 @@ Along with [`alert`](/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role), [`log
 ### Associated WAI-ARIA roles, states, and properties
 
 - [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) or [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
+
   - : Some screen readers announce the name of a timer element before announcing its contents. If a name is visible, reference it using `aria-labelledby`. Including an `aria-label` provides a method for prefacing the visible content of a timer element with text that is not displayed when a screen reader reads the content. Naming a timer is not required so if nothing is appropriate both these attributes can be omitted.
 
 - [`aria-live`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-live)
@@ -36,7 +33,7 @@ Along with [`alert`](/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role), [`log
 
 ## Accessibility concerns
 
- If a time limit needs to be in place, for example, for security reasons, the user should have the option to turn it off or extend it. This restriction does not apply if the time limit is due to a live event, such as an auction or a game, or if the time to complete the form is essential for a valid submission.
+If a time limit needs to be in place, for example, for security reasons, the user should have the option to turn it off or extend it. This restriction does not apply if the time limit is due to a live event, such as an auction or a game, or if the time to complete the form is essential for a valid submission.
 
 ## Specifications
 
@@ -47,14 +44,6 @@ Along with [`alert`](/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role), [`log
 - [ARIA: `alert` role](/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role)
 - [ARIA: `log` role](/en-US/docs/Web/Accessibility/ARIA/Roles/log_role)
 - [ARIA: `marquee` role](/en-US/docs/Web/Accessibility/ARIA/Roles/marquee_role)
-- [ARIA: `status` role](/en-US/docs/Web/Accessibility/ARIA/Roles/status_role)t
+- [ARIA: `status` role](/en-US/docs/Web/Accessibility/ARIA/Roles/status_role)
 - [ARIA live regions](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)
-- [`timer` example on Codepen](https://codepen.io/heydon/pres/NGgNjZ) by Heydon Pickering
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
-
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
-
-</section>
+- [`timer` example on CodePen](https://codepen.io/heydon/pres/NGgNjZ) by Heydon Pickering

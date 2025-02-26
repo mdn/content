@@ -1,28 +1,23 @@
 ---
-title: SecurityPolicyViolationEvent.disposition
+title: "SecurityPolicyViolationEvent: disposition property"
+short-title: disposition
 slug: Web/API/SecurityPolicyViolationEvent/disposition
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSP
-  - Disposition
-  - HTTP
-  - Property
-  - Reference
-  - Security
-  - SecurityPolicyViolationEvent
 browser-compat: api.SecurityPolicyViolationEvent.disposition
 ---
-{{HTTPSidebar}}")}}
 
-The **`disposition`** read-only property of the
-{{domxref("SecurityPolicyViolationEvent")}} interface indicates how the violated policy
-is configured to be treated by the user agent.
+{{APIRef("Reporting API")}}{{AvailableInWorkers}}
+
+The **`disposition`** read-only property of the {{domxref("SecurityPolicyViolationEvent")}} interface indicates how the violated [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP) is configured to be treated by the user agent.
 
 ## Value
 
-A value defined in the [SecurityPolicyViolationEventDisposition enum](https://w3c.github.io/webappsec-csp/#enumdef-securitypolicyviolationeventdisposition)
-representing the URI of the blocked resource. Possible values are `"enforce"` or `"report"`
+Possible values are:
+
+- `"enforce"`
+  - : The policy is enforced and the resource request is blocked.
+- `"report"`
+  - : The violation is reported but the resource request is not blocked.
 
 ## Examples
 
@@ -42,4 +37,4 @@ document.addEventListener("securitypolicyviolation", (e) => {
 
 ## See also
 
-- [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP)
+- {{domxref("CSPViolationReportBody.disposition")}}

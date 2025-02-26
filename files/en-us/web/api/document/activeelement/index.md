@@ -1,43 +1,29 @@
 ---
-title: Document.activeElement
+title: "Document: activeElement property"
+short-title: activeElement
 slug: Web/API/Document/activeElement
 page-type: web-api-instance-property
-tags:
-  - API
-  - Document
-  - Focus
-  - Property
-  - Reference
-  - ShadowRoot
-  - activeElement
 browser-compat: api.Document.activeElement
 ---
-{{APIRef("Shadow DOM")}}
 
-The **`activeElement`** read-only property
-of the {{domxref("Document")}} interface returns the {{domxref("Element")}} within the DOM that currently has focus.
+{{APIRef("DOM")}}
 
-Often `activeElement` will return a {{domxref("HTMLInputElement")}} or
-{{domxref("HTMLTextAreaElement")}} object if it has the text selection at the time. If
-so, you can get more detail by using the object's `selectionStart` and `selectionEnd` properties.
-Other times the focused element might be a {{HTMLElement("select")}} element (menu) or
-an {{HTMLElement("input")}} element, of `type` `"button"`,
-`"checkbox"`, or `"radio"`.
+The **`activeElement`** read-only property of the {{domxref("Document")}} interface returns the {{domxref("Element")}} within the DOM that is receiving keyboard events such as {{domxref("Element/keydown_event", "keydown")}} and {{domxref("Element/keyup_event", "keyup")}}. This is usually analogous to the focused element.
 
-Typically a user can press the tab key to move the focus around the page among
-focusable elements, and use the space bar to activate one (that is, to press a button or
-toggle a radio button). Which elements are focusable varies depending on the platform
-and the browser's current configuration. For example, on macOS systems, elements that
-aren't text input elements are not typically focusable by default.
+Which elements are focusable varies depending on the platform and the browser's current configuration. For example, on Safari, following the behavior of macOS, elements that aren't text input elements are not focusable by default, unless the "Full Keyboard Access" setting is enabled in System Preferences.
 
-> **Note:** Focus (which element is receiving user input events) is not
-> the same thing as selection (the currently highlighted part of the document). You can
-> get the current selection using {{domxref("window.getSelection()")}}.
+Typically a user can press the <kbd>Tab</kbd> key to move the focus around the page among focusable elements, and use keyboard gestures such as <kbd>Space</kbd> or <kbd>Enter</kbd> to simulate clicks on the focused element.
+
+> [!NOTE]
+> Focus (which element is receiving user input events) is not the same thing as selection (the currently highlighted part of the document). You can get the current selection using {{domxref("window.getSelection()")}}.
 
 ## Value
 
-The {{domxref('Element')}} which currently has focus, {{HTMLElement("body")}} or
-`null` if there is no focused element.
+The deepest {{domxref('Element')}} which currently has focus.
+
+- If the focused element is within a shadow tree within the current document (for example, the focused element is inside an `iframe`, and the invoking `document` contains that iframe), then this will be the root element of that tree (in this example, that `iframe`).
+- If the focused element is within a document tree that's not descended from the current document (for example, the focused element is in the main document, and the invoking `document` is an embedded iframe), then this will be `null`.
+- If there's no focused element, this is the {{domxref("Document.body")}} or {{domxref("Document.documentElement")}}.
 
 ## Examples
 
@@ -47,8 +33,12 @@ The {{domxref('Element')}} which currently has focus, {{HTMLElement("body")}} or
 <p>Select some text from one of the text areas below:</p>
 
 <form>
-  <textarea name="ta-example-one" id="ta-example-one" rows="7" cols="40">This is Text Area One. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt, lorem a porttitor molestie, odio nibh iaculis libero, et accumsan nunc orci eu dui.</textarea>
-  <textarea name="ta-example-two" id="ta-example-two" rows="7" cols="40">This is Text Area Two. Fusce ullamcorper, nisl ac porttitor adipiscing, urna orci egestas libero, ut accumsan orci lacus laoreet diam. Morbi sed euismod diam.</textarea>
+  <textarea name="ta-example-one" id="ta-example-one" rows="7" cols="40">
+This is Text Area One. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt, lorem a porttitor molestie, odio nibh iaculis libero, et accumsan nunc orci eu dui.</textarea
+  >
+  <textarea name="ta-example-two" id="ta-example-two" rows="7" cols="40">
+This is Text Area Two. Fusce ullamcorper, nisl ac porttitor adipiscing, urna orci egestas libero, ut accumsan orci lacus laoreet diam. Morbi sed euismod diam.</textarea
+  >
 </form>
 
 <p>Active element ID: <em id="output-element"></em></p>
@@ -61,19 +51,20 @@ The {{domxref('Element')}} which currently has focus, {{HTMLElement("body")}} or
 function onMouseUp(e) {
   const activeTextarea = document.activeElement;
   const selection = activeTextarea.value.substring(
-    activeTextarea.selectionStart, activeTextarea.selectionEnd
+    activeTextarea.selectionStart,
+    activeTextarea.selectionEnd,
   );
 
-  const outputElement = document.getElementById('output-element');
-  const outputText = document.getElementById('output-text');
-  outputElement.innerHTML = activeTextarea.id;
-  outputText.innerHTML = selection;
+  const outputElement = document.getElementById("output-element");
+  const outputText = document.getElementById("output-text");
+  outputElement.textContent = activeTextarea.id;
+  outputText.textContent = selection;
 }
 
-const textarea1 = document.getElementById('ta-example-one');
-const textarea2 = document.getElementById('ta-example-two');
-textarea1.addEventListener('mouseup', onMouseUp, false);
-textarea2.addEventListener('mouseup', onMouseUp, false);
+const textarea1 = document.getElementById("ta-example-one");
+const textarea2 = document.getElementById("ta-example-two");
+textarea1.addEventListener("mouseup", onMouseUp, false);
+textarea2.addEventListener("mouseup", onMouseUp, false);
 ```
 
 ### Result
@@ -87,3 +78,7 @@ textarea2.addEventListener('mouseup', onMouseUp, false);
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("Document.hasFocus")}}

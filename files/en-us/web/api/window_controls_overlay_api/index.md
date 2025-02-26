@@ -2,14 +2,12 @@
 title: Window Controls Overlay API
 slug: Web/API/Window_Controls_Overlay_API
 page-type: web-api-overview
-tags:
-  - API
-  - Window Controls Overlay
-  - Overview
-  - Reference
-  - Progressive Web Apps
+status:
+  - experimental
 browser-compat: api.WindowControlsOverlay
+spec-urls: https://wicg.github.io/window-controls-overlay/
 ---
+
 {{DefaultAPISidebar("Window Controls Overlay API")}}{{SeeCompatTable}}
 
 The Window Controls Overlay API gives Progressive Web Apps installed on desktop operating systems the ability to hide the default window title bar and display their own content
@@ -19,7 +17,7 @@ over the full surface area of the app window, turning the control buttons (maxim
 
 Before using this feature, the following conditions must be true:
 
-- The Web App Manifest's [`display_override`](/en-US/docs/Web/Manifest/display_override) member must be set to `window-controls-overlay`.
+- The Web App Manifest's [`display_override`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/display_override) member must be set to `window-controls-overlay`.
 - The Progressive Web App must be installed on a desktop operating system.
 
 ## Main concepts
@@ -50,8 +48,15 @@ See [Using env() to ensure content is not obscured by window control buttons in 
 
 ## Interfaces
 
-- {{domxref("WindowControlsOverlay")}}
+- {{domxref("WindowControlsOverlay")}} {{Experimental_Inline}}
   - : Provides information about the visibility and geometry of the title bar and an event to know whenever it changes.
+- {{domxref("WindowControlsOverlayGeometryChangeEvent")}} {{Experimental_Inline}}
+  - : Represents events providing information related to the desktop Progress Web App's title var region when its size or visibility changes.
+
+### Extensions to other interfaces
+
+- {{domxref("Navigator.windowControlsOverlay")}}
+  - : Returns the {{domxref("WindowControlsOverlay")}} interface, which exposes information about the title bar geometry in desktop Progressive Web Apps.
 
 ## Specifications
 
@@ -63,6 +68,6 @@ See [Using env() to ensure content is not obscured by window control buttons in 
 
 ## See also
 
-- [Customize the window controls overlay of your PWA's title bar](https://web.dev/window-controls-overlay/)
+- [Customize the window controls overlay of your PWA's title bar](https://web.dev/articles/window-controls-overlay)
 - [Breaking Out of the Box](https://alistapart.com/article/breaking-out-of-the-box/)
-- [Display content in the title bar](https://docs.microsoft.com/en-us/microsoft-edge/progressive-web-apps-chromium/how-to/window-controls-overlay)
+- [Display content in the title bar](https://learn.microsoft.com/en-us/microsoft-edge/progressive-web-apps-chromium/how-to/window-controls-overlay)

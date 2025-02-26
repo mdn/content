@@ -1,13 +1,10 @@
 ---
 title: calcMode
 slug: Web/SVG/Attribute/calcMode
-tags:
-  - NeedsCompatTable
-  - NeedsExample
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 spec-urls: https://svgwg.org/specs/animations/#CalcModeAttribute
 ---
+
 {{SVGRef}}
 
 The **`calcMode`** attribute specifies the {{Glossary("interpolation")}} mode for the animation.
@@ -17,7 +14,6 @@ The default mode is `linear`, however if the attribute does not support linear i
 You can use this attribute with the following SVG elements:
 
 - {{SVGElement("animate")}}
-- {{SVGElement("animateColor")}}
 - {{SVGElement("animateMotion")}}
 - {{SVGElement("animateTransform")}}
 
@@ -58,4 +54,4 @@ You can use this attribute with the following SVG elements:
 
 ## See also
 
-- [SMIL Animation specification](https://www.w3.org/TR/2001/REC-smil-animation-20010904/#AccumulateAttribute)
+- [SVG animation with SMIL](/en-US/docs/Web/SVG/SVG_animation_with_SMIL)

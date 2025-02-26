@@ -2,39 +2,34 @@
 title: MathMLElement
 slug: Web/API/MathMLElement
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - MathML
-  - MathMLElement
-  - Reference
 browser-compat: api.MathMLElement
 ---
+
 {{APIRef("MathML")}}
 
 The **`MathMLElement`** interface represents any [MathML](/en-US/docs/Web/MathML) element.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
-_Also inherits properties from: {{DOMxRef("DocumentAndElementEventHandlers")}}, {{DOMxRef("Element")}}, {{DOMxRef("GlobalEventHandlers")}}_
+_Also inherits properties from its parent, {{DOMxRef("Element")}}_.
 
 - {{DOMxRef("MathMLElement.attributeStyleMap")}} {{ReadOnlyInline}}
   - : A {{DOMxRef("StylePropertyMap")}} representing the declarations of the element's `style` attribute.
 - {{DOMxRef("MathMLElement.style")}}
   - : A {{DOMxRef("CSSStyleDeclaration")}} representing the declarations of the element's `style` attribute.
 
-## Methods
+## Instance methods
 
-_This interface has no methods, but inherits methods from: {{DOMxRef("DocumentAndElementEventHandlers")}}, {{DOMxRef("Element")}}, {{DOMxRef("GlobalEventHandlers")}}_
+_This interface has no methods, but inherits methods from its parent, {{DOMxRef("Element")}}_.
 
 ## Examples
 
 ### MathML
 
 ```html
-<math xmlns="http://www.w3.org/1998/Math/MathML">
+<math>
   <msqrt>
     <mi>x</mi>
   </msqrt>
@@ -44,7 +39,7 @@ _This interface has no methods, but inherits methods from: {{DOMxRef("DocumentAn
 ### JavaScript
 
 ```js
-document.querySelector('msqrt').constructor.name; // MathMLElement
+document.querySelector("msqrt").constructor.name; // MathMLElement
 ```
 
 ## Specifications

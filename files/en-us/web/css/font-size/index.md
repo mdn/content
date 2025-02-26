@@ -1,12 +1,7 @@
 ---
 title: font-size
 slug: Web/CSS/font-size
-tags:
-  - CSS
-  - CSS Fonts
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.font-size
 ---
 
@@ -51,17 +46,16 @@ font-size: revert-layer;
 font-size: unset;
 ```
 
-The `font-size` property is specified in one of the following ways:
-
-- As one of the absolute-size, relative-size or `math` keywords
-- As a `<length>` or a `<percentage>`, relative to the element's font size.
-
 ### Values
 
 - `xx-small`, `x-small`, `small`, `medium`, `large`, `x-large`, `xx-large`, `xxx-large`
-  - : Absolute-size keywords, based on the user's default font size (which is `medium`).
+
+  - : [Absolute-size](/en-US/docs/Web/CSS/absolute-size) keywords, based on the user's default font size (which is `medium`).
+
 - `larger`, `smaller`
-  - : Relative-size keywords. The font will be larger or smaller relative to the parent element's font size, roughly by the ratio used to separate the absolute-size keywords above.
+
+  - : [Relative-size](/en-US/docs/Web/CSS/relative-size) keywords. The font will be larger or smaller relative to the parent element's font size, roughly by the ratio used to separate the absolute-size keywords above.
+
 - {{cssxref("&lt;length&gt;")}}
 
   - : A positive {{cssxref("&lt;length&gt;")}} value. For most font-relative units (such as `em` and `ex`), the font size is relative to the parent element's font size.
@@ -69,12 +63,14 @@ The `font-size` property is specified in one of the following ways:
     For font-relative units that are root-based (such as `rem`), the font size is relative to the size of the font used by the {{HTMLElement("html")}} (root) element.
 
 - {{cssxref("&lt;percentage&gt;")}}
-  - : A positive {{cssxref("&lt;percentage&gt;")}} value, relative to the parent element's font size.
 
-> **Note:** To maximize accessibility, it is generally best to use values that are relative to the user's default font size.
+  - : A positive {{cssxref("&lt;percentage&gt;")}} value, relative to the parent element's font size.
+    > [!NOTE]
+    > To maximize accessibility, it is generally best to use values that are relative to the user's default font size.
 
 - `math`
-    Special [mathematical scaling rules](https://w3c.github.io/mathml-core/#the-math-script-level-property) must be applied when determining the computed value of the `font-size` property.
+  - : [Scaling rules](https://w3c.github.io/mathml-core/#the-math-script-level-property) are applied when determining the computed value of the `font-size` property for math elements relative to the `font-size` of the containing parent.
+    See the [math-depth](/en-US/docs/Web/CSS/math-depth) property for more information.
 
 ## Description
 
@@ -90,7 +86,8 @@ Setting the font size in pixel values (`px`) is a good choice when you need pixe
 
 Font sizing settings can also be used in combination. For example, if a parent element is set to `16px` and its child element is set to `larger`, the child element displays larger than the parent element on the page.
 
-> **Note:** Defining font sizes in `px` is _[not accessible](https://en.wikipedia.org/wiki/Web_accessibility)_, because the user cannot change the font size in some browsers. For example, users with limited vision may wish to set the font size much larger than the size chosen by a web designer. Avoid using them for font sizes if you wish to create an inclusive design.
+> [!NOTE]
+> Defining font sizes in `px` is _[not accessible](https://en.wikipedia.org/wiki/Web_accessibility)_, because the user cannot change the font size in some browsers. For example, users with limited vision may wish to set the font size much larger than the size chosen by a web designer. Avoid using them for font sizes if you wish to create an inclusive design.
 
 ### Ems
 
@@ -227,4 +224,5 @@ See the W3C Editor's Draft for a more detailed description of [font-relative len
 - {{cssxref("font-weight")}}
 - {{cssxref("math-depth")}}
 - {{cssxref("math-style")}}
-- [Fundamental text and font styling](/en-US/docs/Learn/CSS/Styling_text/Fundamentals)
+- SVG {{SVGAttr("font-size")}} attribute
+- [Learn: Fundamental text and font styling](/en-US/docs/Learn_web_development/Core/Text_styling/Fundamentals)

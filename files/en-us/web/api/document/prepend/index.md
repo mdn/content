@@ -1,37 +1,32 @@
 ---
-title: Document.prepend()
+title: "Document: prepend() method"
+short-title: prepend()
 slug: Web/API/Document/prepend
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Method
-  - Node
-  - Document
-  - Reference
 browser-compat: api.Document.prepend
 ---
+
 {{APIRef("DOM")}}
 
 The **`Document.prepend()`** method
-inserts a set of {{domxref("Node")}} objects or string objects before
-the first child of the document. String objects
+inserts a set of {{domxref("Node")}} objects or strings before
+the first child of the document. Strings
 are inserted as equivalent {{domxref("Text")}} nodes.
 
 This method prepends a child to a `Document`. To prepend to an arbitrary element in the tree, see {{domxref("Element.prepend()")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 prepend(param1)
 prepend(param1, param2)
-prepend(param1, param2, /* … ,*/ paramN)
+prepend(param1, param2, /* …, */ paramN)
 ```
 
 ### Parameters
 
 - `param1`, …, `paramN`
-  - : A set of {{domxref("Node")}} or string objects to insert.
+  - : A set of {{domxref("Node")}} objects or strings to insert.
 
 ### Return value
 

@@ -1,26 +1,17 @@
 ---
 title: commands.update()
 slug: Mozilla/Add-ons/WebExtensions/API/commands/update
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - Update
-  - WebExtensions
-  - commands
+page-type: webextension-api-function
 browser-compat: webextensions.api.commands.update
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 Change the description or keyboard shortcut for the given command.
 
-This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
-
 ## Syntax
 
-```js
+```js-nolint
 browser.commands.update(
   details // object
 );
@@ -42,6 +33,8 @@ browser.commands.update(
 
         - an empty string to clear the shortcut.
         - a string matching the format of the [`commands` manifest.json key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands) to set a new shortcut key. If the string does not match this format, the function throws an error.
+          > [!NOTE]
+          > From Firefox 135, extensions can use this method to assign the `F13` to `F19` keys in addition to the keys supported by `commands`.
 
 ### Return value
 
@@ -56,16 +49,16 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 Updates the command named "my-command" with the given shortcut value, when the user clicks "update":
 
 ```js
-const commandName = 'my-command';
+const commandName = "my-command";
 
 function updateShortcut() {
   browser.commands.update({
     name: commandName,
-    shortcut: document.querySelector('#shortcut').value
+    shortcut: document.querySelector("#shortcut").value,
   });
 }
 
-document.querySelector('#update').addEventListener('click', updateShortcut);
+document.querySelector("#update").addEventListener("click", updateShortcut);
 ```
 
 {{WebExtExamples}}

@@ -1,36 +1,25 @@
 ---
-title: SVGGeometryElement.isPointInStroke()
+title: "SVGGeometryElement: isPointInStroke() method"
+short-title: isPointInStroke()
 slug: Web/API/SVGGeometryElement/isPointInStroke
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Method
-  - Reference
-  - SVG
-  - SVG DOM
 browser-compat: api.SVGGeometryElement.isPointInStroke
 ---
+
 {{APIRef("SVG")}}
 
-The **`SVGGeometryElement.isPointInStroke()`** method
-determines whether a given point is within the stroke shape of an element. Normal hit
-testing rules apply; the value of the {{cssxref("pointer-events")}} property on the
-element determines whether a point is considered to be within the stroke. The
-`point` argument is interpreted as a point in the local coordinate system of
-the element.
+The **`isPointInStroke()`** method of the {{domxref("SVGGeometryElement")}} interface determines whether a given point is within the stroke shape of an element. The `point` argument is interpreted as a point in the local coordinate system of the element.
 
 ## Syntax
 
-```js
+```js-nolint
 isPointInStroke(point)
 ```
 
 ### Parameters
 
 - `point`
-  - : An object interpreted as a point in the local coordinate system
-    of the element.
+  - : An object representing a point interpreted in the local coordinate system of the element. It is converted to a {{domxref("DOMPoint")}} object using the same algorithm as [`DOMPoint.fromPoint()`](/en-US/docs/Web/API/DOMPoint/fromPoint_static).
 
 ### Return value
 
@@ -41,50 +30,71 @@ A boolean indicating whether the given point is within the stroke or not.
 ### SVG
 
 ```html
-<svg viewBox="0 0 100 100" width="150" height="150"
-    xmlns="http://www.w3.org/2000/svg">
-  <circle id="circle" cx="50" cy="50" r="45"
-      fill="white" stroke="black" stroke-width="10"/>
-
-  <circle cx="10" cy="10" r="5" fill="seagreen"/>
-  <circle cx="40" cy="30" r="5" fill="seagreen"/>
-  <circle cx="83" cy="17" r="5" fill="seagreen"/>
+<svg
+  viewBox="0 0 100 100"
+  width="150"
+  height="150"
+  xmlns="http://www.w3.org/2000/svg">
+  <circle
+    id="circle"
+    cx="50"
+    cy="50"
+    r="45"
+    fill="rgb(0 0 0 / 25%)"
+    stroke="rgb(0 0 0 / 50%)"
+    stroke-width="10" />
 </svg>
 ```
 
 ### JavaScript
 
 ```js
-const circle = document.getElementById('circle');
+const svg = document.getElementsByTagName("svg")[0];
+const circle = document.getElementById("circle");
+const points = [
+  [10, 10],
+  [40, 30],
+  [70, 40],
+  [15, 75],
+  [83, 83],
+];
 
-try {
-  // Point not in circle
-  console.log('Point at 10,10:', circle.isPointInStroke(new DOMPoint(10, 10)));
+for (const point of points) {
+  let isPointInStroke;
 
-  // Point in circle but not stroke
-  console.log('Point at 40,30:', circle.isPointInStroke(new DOMPoint(40, 30)));
+  try {
+    const pointObj = { x: point[0], y: point[1] };
+    isPointInStroke = circle.isPointInStroke(pointObj);
+  } catch {
+    // Fallback for browsers that don't support DOMPoint as an argument
+    const pointObj = svg.createSVGPoint();
+    pointObj.x = point[0];
+    pointObj.y = point[1];
+    isPointInStroke = circle.isPointInStroke(pointObj);
+  }
 
-  // Point in circle stroke
-  console.log('Point at 83,17:', circle.isPointInStroke(new DOMPoint(83, 17)));
-} catch (e) {
-  // for the browsers that still support the deprecated interface SVGPoint
-  const svg = document.getElementsByTagName('svg')[0];
-  const point = svg.createSVGPoint();
+  console.log(`Point at ${point[0]},${point[1]}: ${isPointInStroke}`);
 
-  // Point not in circle
-  point.x = 10;
-  point.y = 10;
-  console.log('Point at 10,10:', circle.isPointInStroke(point));
-
-  // Point in circle but not stroke
-  point.x = 40;
-  point.y = 30;
-  console.log('Point at 40,30:', circle.isPointInStroke(point));
-
-  // Point in circle stroke
-  point.x = 83;
-  point.y = 17;
-  console.log('Point at 83,17:', circle.isPointInStroke(point));
+  const pointEl = document.createElementNS(
+    "http://www.w3.org/2000/svg",
+    "circle",
+  );
+  pointEl.cx.baseVal.value = point[0];
+  pointEl.cy.baseVal.value = point[1];
+  pointEl.r.baseVal.value = 5;
+  const pathEl = document.createElementNS("http://www.w3.org/2000/svg", "path");
+  if (isPointInStroke) {
+    pointEl.setAttribute("fill", "rgb(0 170 0 / 50%)");
+    pointEl.setAttribute("stroke", "rgb(0 170 0)");
+    pathEl.setAttribute("stroke", "rgb(0 170 0)");
+    pathEl.setAttribute("d", `M ${point[0] - 5} ${point[1]} h 10 m -5 -5 v 10`);
+  } else {
+    pointEl.setAttribute("fill", "rgb(170 0 0 / 50%)");
+    pointEl.setAttribute("stroke", "rgb(170 0 0)");
+    pathEl.setAttribute("stroke", "rgb(170 0 0)");
+    pathEl.setAttribute("d", `M ${point[0] - 5} ${point[1]} h 10`);
+  }
+  svg.append(pointEl, pathEl);
 }
 ```
 

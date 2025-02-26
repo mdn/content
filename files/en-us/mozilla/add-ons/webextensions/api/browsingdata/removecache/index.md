@@ -1,28 +1,21 @@
 ---
 title: browsingData.removeCache()
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/removeCache
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - browsingData
-  - removeCache
+page-type: webextension-api-function
 browser-compat: webextensions.api.browsingData.removeCache
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 Clears the browser's cache.
 
-Note that although this function can take a {{WebExtAPIRef("browsingData.RemovalOptions")}} object, it will be ignored. The entire cache is always cleared when using this function.
+Note that this function requires a {{WebExtAPIRef("browsingData.RemovalOptions")}} object, but all options are ignored. The entire cache is always cleared when using this function.
 
 This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntax
 
-```js
+```js-nolint
 let removing = browser.browsingData.removeCache(
   removalOptions            // RemovalOptions object
 )
@@ -30,8 +23,8 @@ let removing = browser.browsingData.removeCache(
 
 ### Parameters
 
-- `removalOptions` {{optional_inline}}
-  - : `object`. A {{WebExtAPIRef("browsingData.RemovalOptions")}} object. This parameter has no effect.
+- `removalOptions`
+  - : `object`. A {{WebExtAPIRef("browsingData.RemovalOptions")}} object. This parameter must be set but has no effect.
 
 ### Return value
 
@@ -50,8 +43,7 @@ function onError(error) {
   console.error(error);
 }
 
-browser.browsingData.removeCache({}).
-then(onRemoved, onError);
+browser.browsingData.removeCache({}).then(onRemoved, onError);
 ```
 
 ## Browser compatibility
@@ -60,11 +52,11 @@ then(onRemoved, onError);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.browsingData`](https://developer.chrome.com/docs/extensions/reference/browsingData/) API.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.browsingData`](https://developer.chrome.com/docs/extensions/reference/api/browsingData) API.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -91,4 +83,4 @@ then(onRemoved, onError);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

@@ -1,24 +1,20 @@
 ---
 title: Forwarded
 slug: Web/HTTP/Headers/Forwarded
-tags:
-  - HTTP
-  - HTTP Header
-  - Reference
-  - Request header
-  - header
-browser-compat: http.headers.Forwarded
+page-type: http-header
+spec-urls: https://datatracker.ietf.org/doc/html/rfc7239
 ---
+
 {{HTTPSidebar}}
 
-The **`Forwarded`** request header contains information that may be added by [reverse proxy servers](/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling) (load balancers, CDNs, and so on) that would otherwise be altered or lost when proxy servers are involved in the path of the request.
+The HTTP **`Forwarded`** {{Glossary("request header")}} contains information that may be added by [reverse proxy servers](/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling) (load balancers, CDNs, etc.) that would otherwise be altered or lost when proxy servers are involved in the path of the request.
 
 For example, if a client is connecting to a web server through an HTTP proxy (or load balancer), server logs will only contain the IP address, host address, and protocol of the proxy; this header can be used to identify the IP address, host, and protocol, of the original request.
 The header is optional and may be added to, modified, or removed, by any of the proxy servers on the path to the server.
 
 This header is used for debugging, statistics, and generating location-dependent content.
 By design, it exposes privacy sensitive information, such as the IP address of the client.
-Therefore, the user's privacy must be kept in mind when deploying this header.
+Therefore, the user's privacy must be kept in mind when using this header.
 
 The alternative and de-facto standard versions of this header are the {{HTTPHeader("X-Forwarded-For")}}, {{HTTPHeader("X-Forwarded-Host")}} and {{HTTPHeader("X-Forwarded-Proto")}} headers.
 
@@ -29,8 +25,8 @@ The alternative and de-facto standard versions of this header are the {{HTTPHead
       <td>{{Glossary("Request header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>no</td>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
+      <td>No</td>
     </tr>
   </tbody>
 </table>
@@ -50,6 +46,7 @@ This can be done by adding a new `Forwarded` header to the end of the header blo
 ## Directives
 
 - `by` {{optional_inline}}
+
   - : The interface where the request came in to the proxy server.
     The identifier can be:
 
@@ -86,13 +83,13 @@ Forwarded: for=192.0.2.43, for=198.51.100.17
 ### Transitioning from `X-Forwarded-For` to `Forwarded`
 
 If your application, server, or proxy supports the standardized `Forwarded` header, the {{HTTPHeader("X-Forwarded-For")}} header can be replaced.
-Note that IPv6 address is quoted and enclosed in square brackets in `Forwarded`.
+Note that an IPv6 address is quoted and enclosed in square brackets in `Forwarded` (unlike in the {{HTTPHeader("X-Forwarded-For")}} header).
 
 ```http
-X-Forwarded-For: 123.34.567.89
-Forwarded: for=123.34.567.89
+X-Forwarded-For: 192.0.2.172
+Forwarded: for=192.0.2.172
 
-X-Forwarded-For: 192.0.2.43, "[2001:db8:cafe::17]"
+X-Forwarded-For: 192.0.2.43, 2001:db8:cafe::17
 Forwarded: for=192.0.2.43, for="[2001:db8:cafe::17]"
 ```
 

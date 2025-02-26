@@ -1,27 +1,32 @@
 ---
 title: String.prototype.matchAll()
 slug: Web/JavaScript/Reference/Global_Objects/String/matchAll
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - Regular Expressions
-  - String
-  - Polyfill
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.matchAll
 ---
+
 {{JSRef}}
 
-The **`matchAll()`** method returns an iterator of all results
-matching a _string_ against a _[regular expression](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)_,
-including [capturing groups](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences).
+The **`matchAll()`** method of {{jsxref("String")}} values returns an iterator of all results matching this string against a [regular expression](/en-US/docs/Web/JavaScript/Guide/Regular_expressions), including [capturing groups](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences).
 
-{{EmbedInteractiveExample("pages/js/string-matchall.html")}}
+{{InteractiveExample("JavaScript Demo: String.matchAll()")}}
+
+```js interactive-example
+const regexp = /t(e)(st(\d?))/g;
+const str = "test1test2";
+
+const array = [...str.matchAll(regexp)];
+
+console.log(array[0]);
+// Expected output: Array ["test1", "e", "st1", "1"]
+
+console.log(array[1]);
+// Expected output: Array ["test2", "e", "st2", "2"]
+```
 
 ## Syntax
 
-```js
+```js-nolint
 matchAll(regexp)
 ```
 
@@ -33,108 +38,102 @@ matchAll(regexp)
 
     If `regexp` is not a `RegExp` object and does not have a `Symbol.matchAll` method, it is implicitly converted to a {{jsxref("RegExp")}} by using `new RegExp(regexp, 'g')`.
 
-    If `regexp` is a `RegExp`, it must have the `g` flag, otherwise a {{jsxref("TypeError")}} will be thrown.
+    If `regexp` [is a regex](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp#special_handling_for_regexes), then it must have the global (`g`) flag set, or a {{jsxref("TypeError")}} is thrown.
 
 ### Return value
 
-An [iterator](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators)
-(which is not a restartable iterable) of matches.
+An [iterable iterator object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator) (which is not restartable) of matches or an empty iterator if no matches are found. Each value yielded by the iterator is an array with the same shape as the return value of {{jsxref("RegExp.prototype.exec()")}}.
 
-Each match is an array (with extra properties `index` and
-`input`; see the return value for {{jsxref("RegExp.exec")}}). The match
-array has the matched text as the first item, and then one item for each
-parenthetical capture group of the matched text.
+### Exceptions
+
+- {{jsxref("TypeError")}}
+  - : Thrown if the `regexp` [is a regex](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp#special_handling_for_regexes) that does not have the global (`g`) flag set (its [`flags`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/flags) property does not contain `"g"`).
 
 ## Description
 
-The implementation of `String.prototype.matchAll` itself is very simple — it simply calls the `Symbol.matchAll` method of the argument with the string as the first parameter. The actual implementation comes from [`RegExp.prototype[@@matchAll]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@matchAll).
+The implementation of `String.prototype.matchAll` doesn't do much other than calling the `Symbol.matchAll` method of the argument with the string as the first parameter (apart from the extra input validation that the regex is global). The actual implementation comes from [`RegExp.prototype[Symbol.matchAll]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.matchAll).
 
 ## Examples
 
-### Regexp.exec() and matchAll()
+### Regexp.prototype.exec() and matchAll()
 
-Prior to the addition of `matchAll` to JavaScript, it was possible to use
-calls to [regexp.exec](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec)
-(and regexes with the `g` flag) in a loop to obtain all the matches:
+Without `matchAll()`, it's possible to use calls to [`regexp.exec()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) (and regexes with the `g` flag) in a loop to obtain all the matches:
 
 ```js
-const regexp = new RegExp('foo[a-z]*','g');
-const str = 'table football, foosball';
+const regexp = /foo[a-z]*/g;
+const str = "table football, foosball";
 let match;
 
 while ((match = regexp.exec(str)) !== null) {
-  console.log(`Found ${match[0]} start=${match.index} end=${regexp.lastIndex}.`);
-  // expected output: "Found football start=6 end=14."
-  // expected output: "Found foosball start=16 end=24."
+  console.log(
+    `Found ${match[0]} start=${match.index} end=${regexp.lastIndex}.`,
+  );
 }
+// Found football start=6 end=14.
+// Found foosball start=16 end=24.
 ```
 
-With `matchAll` available, you can avoid the {{jsxref("Statements/while",
-  "while")}} loop and `exec` with `g`.
-
-Instead, by using `matchAll`, you get an iterator to use with the more
-convenient {{jsxref("Statements/for...of", "for...of")}},
-{{jsxref("Operators/Spread_syntax", "array spread")}}, or {{jsxref("Array.from()")}}
-constructs:
+With `matchAll()` available, you can avoid the {{jsxref("Statements/while", "while")}} loop and `exec` with `g`. Instead, you get an iterator to use with the more convenient {{jsxref("Statements/for...of", "for...of")}}, [array spreading](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax), or {{jsxref("Array.from()")}} constructs:
 
 ```js
-const regexp = new RegExp('foo[a-z]*','g');
-const str = 'table football, foosball';
+const regexp = /foo[a-z]*/g;
+const str = "table football, foosball";
 const matches = str.matchAll(regexp);
 
 for (const match of matches) {
-  console.log(`Found ${match[0]} start=${match.index} end=${match.index + match[0].length}.`);
+  console.log(
+    `Found ${match[0]} start=${match.index} end=${
+      match.index + match[0].length
+    }.`,
+  );
 }
-// expected output: "Found football start=6 end=14."
-// expected output: "Found foosball start=16 end=24."
+// Found football start=6 end=14.
+// Found foosball start=16 end=24.
 
-// matches iterator is exhausted after the for..of iteration
+// matches iterator is exhausted after the for...of iteration
 // Call matchAll again to create a new iterator
 Array.from(str.matchAll(regexp), (m) => m[0]);
-// Array [ "football", "foosball" ]
+// [ "football", "foosball" ]
 ```
 
 `matchAll` will throw an exception if the `g` flag is missing.
 
 ```js
-const regexp = new RegExp('[a-c]','');
-const str = 'abc';
+const regexp = /[a-c]/;
+const str = "abc";
 str.matchAll(regexp);
 // TypeError
 ```
 
-`matchAll` internally makes a clone of the
-`regexp`—so, unlike {{jsxref("Global_Objects/RegExp/exec",
-  "regexp.exec()")}}, `lastIndex` does not change as the string is scanned.
+`matchAll` internally makes a clone of the `regexp` — so, unlike {{jsxref("RegExp/exec", "regexp.exec()")}}, `lastIndex` does not change as the string is scanned.
 
 ```js
-const regexp = new RegExp('[a-c]','g');
+const regexp = /[a-c]/g;
 regexp.lastIndex = 1;
-const str = 'abc';
+const str = "abc";
 Array.from(str.matchAll(regexp), (m) => `${regexp.lastIndex} ${m[0]}`);
-// Array [ "1 b", "1 c" ]
+// [ "1 b", "1 c" ]
 ```
+
+However, this means that unlike using [`regexp.exec()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) in a loop, you can't mutate `lastIndex` to make the regex advance or rewind.
 
 ### Better access to capturing groups (than String.prototype.match())
 
-Another compelling reason for `matchAll` is the improved access to capture
-groups.
+Another compelling reason for `matchAll` is the improved access to capture groups.
 
-Capture groups are ignored when using {{jsxref("Global_Objects/String/match",
-  "match()")}} with the global `g` flag:
+Capture groups are ignored when using {{jsxref("String/match", "match()")}} with the global `g` flag:
 
 ```js
-let regexp = /t(e)(st(\d?))/g;
-let str = 'test1test2';
+const regexp = /t(e)(st(\d?))/g;
+const str = "test1test2";
 
-str.match(regexp);
-// Array ['test1', 'test2']
+str.match(regexp); // ['test1', 'test2']
 ```
 
 Using `matchAll`, you can access capture groups easily:
 
 ```js
-let array = [...str.matchAll(regexp)];
+const array = [...str.matchAll(regexp)];
 
 array[0];
 // ['test1', 'e', 'st1', '1', index: 0, input: 'test1test2', length: 4]
@@ -142,7 +141,7 @@ array[1];
 // ['test2', 'e', 'st2', '2', index: 5, input: 'test1test2', length: 4]
 ```
 
-### Using matchAll() with a non-RegExp implementing @@matchAll
+### Using matchAll() with a non-RegExp implementing `[Symbol.matchAll]()`
 
 If an object has a `Symbol.matchAll` method, it can be used as a custom matcher. The return value of `Symbol.matchAll` becomes the return value of `matchAll()`.
 
@@ -152,7 +151,7 @@ const str = "Hmm, this is interesting.";
 str.matchAll({
   [Symbol.matchAll](str) {
     return [["Yes, it's interesting."]];
-  }
+  },
 }); // returns [["Yes, it's interesting."]]
 ```
 
@@ -167,9 +166,10 @@ str.matchAll({
 ## See also
 
 - [Polyfill of `String.prototype.matchAll` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [Regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions) guide
+- [Groups and backreferences](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences) guide
 - {{jsxref("String.prototype.match()")}}
-- [Using regular expressions in JavaScript](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)
-- [Capturing groups](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences)
 - {{jsxref("RegExp")}}
 - {{jsxref("RegExp.prototype.exec()")}}
 - {{jsxref("RegExp.prototype.test()")}}
+- [`RegExp.prototype[Symbol.matchAll]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.matchAll)

@@ -1,14 +1,11 @@
 ---
-title: WEBGL_compressed_texture_etc
+title: WEBGL_compressed_texture_etc extension
+short-title: WEBGL_compressed_texture_etc
 slug: Web/API/WEBGL_compressed_texture_etc
 page-type: webgl-extension
-tags:
-  - API
-  - Reference
-  - WebGL
-  - WebGL extension
 browser-compat: api.WEBGL_compressed_texture_etc
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WEBGL_compressed_texture_etc`** extension is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and exposes 10 [ETC/EAC compressed texture formats](https://en.wikipedia.org/wiki/Ericsson_Texture_Compression).
@@ -17,7 +14,8 @@ Compressed textures reduce the amount of memory needed to store a texture on the
 
 WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method. For more information, see also [Using Extensions](/en-US/docs/Web/API/WebGL_API/Using_Extensions) in the [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial).
 
-> **Note:** This extension is available to both, {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} and {{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}} contexts.
+> [!NOTE]
+> This extension is available to both, {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} and {{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}} contexts.
 
 ## Constants
 
@@ -47,12 +45,20 @@ The compressed texture formats are exposed by 10 constants and can be used in tw
 ## Examples
 
 ```js
-const ext = gl.getExtension('WEBGL_compressed_texture_etc');
+const ext = gl.getExtension("WEBGL_compressed_texture_etc");
 
 const texture = gl.createTexture();
 gl.bindTexture(gl.TEXTURE_2D, texture);
 
-gl.compressedTexImage2D(gl.TEXTURE_2D, 0, ext.COMPRESSED_RGBA8_ETC2_EAC, 512, 512, 0, textureData);
+gl.compressedTexImage2D(
+  gl.TEXTURE_2D,
+  0,
+  ext.COMPRESSED_RGBA8_ETC2_EAC,
+  512,
+  512,
+  0,
+  textureData,
+);
 ```
 
 ## Specifications

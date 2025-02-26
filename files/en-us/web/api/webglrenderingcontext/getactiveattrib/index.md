@@ -1,16 +1,12 @@
 ---
-title: WebGLRenderingContext.getActiveAttrib()
+title: "WebGLRenderingContext: getActiveAttrib() method"
+short-title: getActiveAttrib()
 slug: Web/API/WebGLRenderingContext/getActiveAttrib
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.getActiveAttrib
 ---
-{{APIRef("WebGL")}}
+
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGLRenderingContext.getActiveAttrib()`** method of the
 [WebGL API](/en-US/docs/Web/API/WebGL_API) returns a
@@ -20,7 +16,7 @@ generic library creation.
 
 ## Syntax
 
-```js
+```js-nolint
 getActiveAttrib(program, index)
 ```
 
@@ -31,8 +27,7 @@ getActiveAttrib(program, index)
 - `index`
   - : A {{domxref("WebGL_API/Types", "GLuint")}} specifying the index of the vertex attribute to get. This
     value is an index 0 to N - 1 as returned
-    by {{domxref("WebGLRenderingContext.getProgramParameter",
-    "gl.getProgramParameter(program, gl.ACTIVE_ATTRIBUTES)")}}.
+    by {{domxref("WebGLRenderingContext.getProgramParameter", "gl.getProgramParameter(program, gl.ACTIVE_ATTRIBUTES)")}}.
 
 ### Return value
 
@@ -44,7 +39,7 @@ A {{domxref("WebGLActiveInfo")}} object.
 const numAttribs = gl.getProgramParameter(program, gl.ACTIVE_ATTRIBUTES);
 for (let i = 0; i < numAttribs; ++i) {
   const info = gl.getActiveAttrib(program, i);
-  console.log('name:', info.name, 'type:', info.type, 'size:', info.size);
+  console.log("name:", info.name, "type:", info.type, "size:", info.size);
 }
 ```
 

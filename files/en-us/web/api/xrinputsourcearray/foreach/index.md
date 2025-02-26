@@ -1,28 +1,14 @@
 ---
-title: XRInputSourceArray.forEach()
+title: "XRInputSourceArray: forEach() method"
+short-title: forEach()
 slug: Web/API/XRInputSourceArray/forEach
 page-type: web-api-instance-method
-tags:
-  - API
-  - AR
-  - Input Sources
-  - Inputs
-  - Method
-  - Mixed
-  - Reality
-  - Reference
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRInputSourceArray
-  - augmented
-  - forEach
+status:
+  - experimental
 browser-compat: api.XRInputSourceArray.forEach
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The {{domxref("XRInputSourceArray")}}
 method **`forEach()`** executes the specified callback once for
@@ -31,7 +17,7 @@ list.
 
 ## Syntax
 
-```js
+```js-nolint
 forEach(callback)
 forEach(callback, thisArg)
 ```
@@ -46,15 +32,15 @@ forEach(callback, thisArg)
     - `currentValue`
       - : A {{domxref("XRInputSource")}} object which is the value of the item from within
         the `xrInputSourceArray` which is currently being processed.
-    - `currentIndex` {{optional_inline}}
+    - `currentIndex` {{Optional_Inline}}
       - : An integer value providing the index into the array at which the element given
         by `currentValue` is located. If you don't need to know the index
         number, you can omit this.
-    - `sourceList` {{optional_inline}}
+    - `sourceList` {{Optional_Inline}}
       - : The {{domxref("XRInputSourceArray")}} object which is being processed. If you
         don't need this information, you may omit this.
 
-- `thisArg` {{optional_inline}}
+- `thisArg` {{Optional_Inline}}
   - : The value to be used for
     [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this)
     while executing the callback. Note that if you use [arrow function notation](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) (`=>`) to provide the callback, you can

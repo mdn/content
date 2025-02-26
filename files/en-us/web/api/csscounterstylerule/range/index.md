@@ -1,22 +1,18 @@
 ---
-title: CSSCounterStyleRule.range
+title: "CSSCounterStyleRule: range property"
+short-title: range
 slug: Web/API/CSSCounterStyleRule/range
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - range
-  - CSSCounterStyleRule
 browser-compat: api.CSSCounterStyleRule.range
 ---
-{{DefaultAPISidebar("CSS Counter Styles")}}
+
+{{APIRef("CSSOM")}}
 
 The **`range`** property of the {{domxref("CSSCounterStyleRule")}} interface gets and sets the value of the {{cssxref("@counter-style/range","range")}} descriptor. If the descriptor does not have a value set, this attribute returns an empty string.
 
 ## Value
 
-A string
+A string.
 
 ## Examples
 
@@ -26,7 +22,9 @@ The following example shows a {{cssxref("@counter-style")}} rule. In JavaScript,
 @counter-style range-multi-example {
   system: cyclic;
   symbols: "\25A0" "\25A1";
-  range: 2 4, 7 9;
+  range:
+    2 4,
+    7 9;
 }
 ```
 

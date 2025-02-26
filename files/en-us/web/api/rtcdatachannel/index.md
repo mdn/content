@@ -2,31 +2,20 @@
 title: RTCDataChannel
 slug: Web/API/RTCDataChannel
 page-type: web-api-interface
-tags:
-  - API
-  - Communication
-  - Data Transfer
-  - Experimental
-  - Interface
-  - Media
-  - Networking
-  - RTCDataChannel
-  - Reference
-  - WebRTC
-  - WebRTC API
 browser-compat: api.RTCDataChannel
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`RTCDataChannel`** interface represents a network channel which can be used for bidirectional peer-to-peer transfers of arbitrary data. Every data channel is associated with an {{DOMxRef("RTCPeerConnection")}}, and each peer connection can have up to a theoretical maximum of 65,534 data channels (the actual limit may vary from browser to browser).
 
 To create a data channel and ask a remote peer to join you, call the {{DOMxRef("RTCPeerConnection")}}'s {{DOMxRef("RTCPeerConnection.createDataChannel", "createDataChannel()")}} method. The peer being invited to exchange data receives a {{DOMxRef("RTCPeerConnection.datachannel_event", "datachannel")}} event (which has type {{DOMxRef("RTCDataChannelEvent")}}) to let it know the data channel has been added to the connection.
 
-`RTCDataChannel` is a {{glossary("Transferable objects","transferable object")}}.
+`RTCDataChannel` is a [transferable object](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects).
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Also inherits properties from {{DOMxRef("EventTarget")}}._
 
@@ -36,7 +25,7 @@ _Also inherits properties from {{DOMxRef("EventTarget")}}._
     Values are the same as allowed on the {{DOMxRef("WebSocket.binaryType")}} property:
     `blob` if {{DOMxRef("Blob")}} objects are being used,
     or `arraybuffer` if {{jsxref("ArrayBuffer")}} objects are being used.
-    The default is `blob`.
+    The default is `arraybuffer`.
 - {{DOMxRef("RTCDataChannel.bufferedAmount", "bufferedAmount")}} {{ReadOnlyInline}}
   - : Returns the number of bytes of data
     currently queued to be sent over the data channel.
@@ -82,18 +71,15 @@ _Also inherits properties from {{DOMxRef("EventTarget")}}._
 
 ### Obsolete properties
 
-- {{DOMxRef("RTCDataChannel.reliable", "reliable")}} {{ReadOnlyInline}} {{deprecated_inline}}
+- {{DOMxRef("RTCDataChannel.reliable", "reliable")}} {{ReadOnlyInline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Indicates whether or not the data channel is _reliable_.
-- {{DOMxRef("RTCDataChannel.stream", "stream")}} {{ReadOnlyInline}} {{deprecated_inline}}
-  - : Returns an ID number (between 0 and 65,535)
-    which uniquely identifies the data channel.
 
-## Methods
+## Instance methods
 
 _Also inherits methods from {{DOMxRef("EventTarget")}}._
 
 - {{DOMxRef("RTCDataChannel.close", "close()")}}
-  - : Closes the {{domxref("RTCDataChannel")}}.
+  - : Closes the `RTCDataChannel`.
     Either peer is permitted to call this method
     to initiate closure of the channel.
 - {{DOMxRef("RTCDataChannel.send", "send()")}}
@@ -107,7 +93,7 @@ _Also inherits methods from {{DOMxRef("EventTarget")}}._
     falls below the value specified by {{domxref("RTCDataChannel.bufferedAmountLowThreshold", "bufferedAmountLowThreshold")}}.
 - {{domxref("RTCDataChannel.close_event", "close")}}
   - : Sent when the underlying data transport closes.
-- {{domxref("RTCDataChannel.closing_event", "closing")}} {{Experimental_inline}}
+- {{domxref("RTCDataChannel.closing_event", "closing")}}
   - : Sent when the underlying data transport is about to start closing.
 - {{domxref("RTCDataChannel.error_event", "error")}}
   - : Sent when an error occurs on the data channel.
@@ -129,15 +115,15 @@ The underlying data format is defined by the IEEE specification [SDP Offer/Answe
 const pc = new RTCPeerConnection();
 const dc = pc.createDataChannel("my channel");
 
-dc.onmessage = function (event) {
+dc.onmessage = (event) => {
   console.log(`received: ${event.data}`);
 };
 
-dc.onopen = function () {
+dc.onopen = () => {
   console.log("datachannel open");
 };
 
-dc.onclose = function () {
+dc.onclose = () => {
   console.log("datachannel close");
 };
 ```

@@ -1,29 +1,30 @@
-# Contributing to the content of MDN Web Docs
+# Welcome to MDN Web Docs
 
-:tada: First of all, thanks for taking the time to contribute to
-[MDN Web Docs](https://developer.mozilla.org)! :tada:
+![github-profile](https://user-images.githubusercontent.com/10350960/166113119-629295f6-c282-42c9-9379-af2de5ad4338.png)
 
-The following is a set of guidelines for contributing to the
-[content of MDN Web Docs](https://github.com/mdn/content), which is
-hosted within the [MDN Organization](https://github.com/mdn) on GitHub.
+[MDN Web Docs][] is an open-source, collaborative project that documents web technologies including CSS, HTML, JavaScript, and Web APIs.
+Alongside detailed reference documentation, we provide extensive learning resources for students and beginners getting started with web development.
 
 > [!Note]
 > Just want to find a task and jump in?
   See [Getting started on MDN](https://developer.mozilla.org/en-US/docs/MDN/Contribute/Getting_started)
   for an overview of how to join, and [Contributing to MDN](https://developer.mozilla.org/en-US/docs/MDN/Contribute)
   for a filtered list of tasks.
+=======
+## MDN's mission
 
-## Code of Conduct
+MDN's mission is to provide a blueprint for a better internet and empower a new generation of developers and content creators to build it.
 
-Everyone participating in this project is expected to follow our
-[Code of Conduct](CODE_OF_CONDUCT.md).
+The strength of MDN Web Docs lies in its vast community of active readers and contributors.
+Since 2005, approximately 45,000 contributors have created the documentation we know and love.
+Together, contributors have created over 45,000 documents that make up an up-to-date, comprehensive, and free resource for web developers worldwide.
 
-## License
+In addition to English-language articles, over 35 volunteers lead translation and localization efforts for Chinese, French, Japanese, Korean, Portuguese, Russian, and Spanish.
 
-When contributing to the content you agree to license your contributions
-according to [our license](LICENSE.md).
+## Build the site
 
-## Making contributions
+To set up the site locally, you need to have [Node.js](https://nodejs.org/) and [Yarn](https://classic.yarnpkg.com/) installed.
+You can check if these are installed by running the following commands:
 
 A good place to learn about general guidelines for contributing to
 [MDN Web Docs](https://developer.mozilla.org) is the
@@ -468,95 +469,32 @@ details for you:
 
 ```sh
 yarn content delete <document-slug> [locale]
+=======
+```bash
+node -v
+yarn -v
 ```
 
-You just have to specify the slug of the existing document that you'd like
-to delete (e.g., `Learn/Accessibility`), optionally followed by the locale
-of the existing document (defaults to `en-US`). If the existing document
-that you'd like to delete has child documents (i.e. it represents a
-document tree), you must also specify the `-r, --recursive` option, or
-the command will fail.
+After you have installed Node.js and Yarn, you can install the dependencies using `yarn` and start the local preview:
 
-**Important: you need to use the `delete` command to delete MDN documents. Don't
-just delete their directories from the repo, as `delete` also handles other
-necessary changes such as updating the `_wikihistory.json` file.**
-
-For example, let's say you want to delete the
-entire `/en-US/Learn/Accessibility` tree:
-
-1. First, as we've outlined above, you'll start a fresh branch to work in:
-
-    ```sh
-    cd ~/repos/mdn/content
-    git checkout main
-    git pull mdn main
-    # Run "yarn" again just to ensure you've
-    # installed the latest Yari dependency.
-    yarn
-    git checkout -b my-delete
-    ```
-
-1. Perform the delete:
-
-    ```sh
-    yarn content delete Learn/Accessibility --recursive
-    ```
-
-1. [Add a redirect](#redirecting-a-document) (if needed).
-1. Add and commit all of the deleted files, as well as
-push your branch to your fork:
-
-    ```sh
-    git commit -a
-    git push -u origin my-delete
-    ```
-
-1. Now you're ready to create your [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request).
-
-> **Note:** If the slug of the page you wish to delete contain special
-  characters, include it in quotes:
-
-```sh
-yarn content delete "Mozilla/Add-ons/WebExtensions/Debugging_(before_Firefox_50)"
+```bash
+yarn
+yarn start
 ```
 
-### Redirecting a document
+Once started, a live preview is available at `http://localhost:5042/`.
 
-If you are [moving a document](#moving-one-or-more-documents) as shown
-above you don't need to create a redirect. However, you may need to when
-[deleting a document](#deleting-a-document) or otherwise fixing up a broken link.
+## Contribute to MDN Web Docs
 
-The best way to do this is to use the `yarn content add-redirect` command:
+You can contribute to MDN Web Docs and be a part of our community through content contributions, engineering, or translation work.
+The MDN Web Docs project welcomes contributions from everyone who shares our goals and wants to contribute constructively and respectfully within our community.
 
-1. Start a fresh branch to work in:
+To find out how to get started, see the [CONTRIBUTING.md](CONTRIBUTING.md) document in this repository.
+By participating in and contributing to our projects and discussions, you acknowledge that you have read and agree to our [Code of Conduct](CODE_OF_CONDUCT.md), which means adhering to [Mozilla's Community Participation Guidelines](https://www.mozilla.org/en-US/about/governance/policies/participation/).
 
-    ```sh
-    cd ~/repos/mdn/content
-    git checkout main
-    git pull mdn main
-    # Run "yarn" again just to ensure you've
-    # installed the latest Yari dependency.
-    yarn
-    git checkout -b my-delete
-    ```
+## Get in touch
 
-1. Perform the redirect:
+You can communicate with the MDN Web Docs team and community using the [communication channels][].
 
-    ```sh
-    yarn content add-redirect /en-US/path/of/deleted/page /en-US/path/of/target/page
-    ```
-
-    Note that the target page can be an external URL or another page.
-
-1. Commit all of the changed files, as well as
-pushing your branch to your fork:
-
-    ```sh
-    git commit -a
-    git push -u origin my-delete
-    ```
-
-## Learn more
-
-You can learn more about contributing to MDN on
-[the MDN Web Docs for Contributors site](https://mdn-contributor-docs.mozilla.org/).
+[communication channels]: https://developer.mozilla.org/en-US/docs/MDN/Community/Communication_channels
+[MDN Web Docs]: https://developer.mozilla.org/

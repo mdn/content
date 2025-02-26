@@ -11,9 +11,7 @@
           "structuralElements",
           "gradientElements",
           "&lt;a&gt;",
-          "&lt;altGlyphDef&gt;",
           "&lt;clipPath&gt;",
-          "&lt;color-profile&gt;",
           "&lt;cursor&gt;",
           "&lt;filter&gt;",
           "&lt;font&gt;",
@@ -31,72 +29,21 @@
         ]
       },
       "attributes": [
-        "conditionalProccessingAttributes",
+        "ariaAttributes",
+        "conditionalProcessingAttributes",
         "coreAttributes",
-        "graphicalEventAttributes",
         "presentationAttributes",
         "xLinkAttributes",
-        "'class'",
-        "'style'",
-        "'externalResourcesRequired'",
-        "'transform'",
-        "'xlink:show'",
-        "'xlink:actuate'",
-        "'xlink:href'",
-        "'target'"
+        "'href'",
+        "'target'",
+        "'download'",
+        "'ping'",
+        "'rel'",
+        "'hreflang'",
+        "'type'",
+        "'referrerpolicy'"
       ],
       "interfaces": ["SVGAElement"]
-    },
-    "altGlyph": {
-      "categories": ["textContentElement", "textContentChildElement"],
-      "content": {
-        "description": "anyElementsOrCharacterData"
-      },
-      "attributes": [
-        "conditionalProccessingAttributes",
-        "coreAttributes",
-        "graphicalEventAttributes",
-        "presentationAttributes",
-        "xLinkAttributes",
-        "'class'",
-        "'style'",
-        "'externalResourcesRequired'",
-        "'x'",
-        "'y'",
-        "'dx'",
-        "'dy'",
-        "'rotate'",
-        "'glyphRef'",
-        "'format'",
-        "'xlink:href'"
-      ],
-      "interfaces": ["SVGAltGlyphElement"]
-    },
-    "altGlyphDef": {
-      "categories": ["textContentElement"],
-      "content": {
-        "description": {
-          "en-US": "Either:<br>\n    one or more <a href=\"/en-US/docs/Web/SVG/Element/glyphRef\" title=\"The glyphRef element provides a single possible glyph to the referencing &lt;altGlyph> substitution.\"><code>&lt;glyphRef&gt;</code></a> elements, or<br>\n    one or more <a href=\"/en-US/docs/Web/SVG/Element/altGlyphItem\" title=\"The altGlyphItem element provides a set of candidates for glyph substitution by the &lt;altglyph> element.\"><code>&lt;altGlyphItem&gt;</code></a> elements",
-          "fr": "L'un ou l'autre:<br>\n    un \u00e9l\u00e9ments ou plus <a href=\"/fr/docs/Web/SVG/Element/glyphRef\" title=\"The glyphRef element provides a single possible glyph to the referencing &lt;altGlyph> substitution.\"><code>&lt;glyphRef&gt;</code></a>, ou<br>\n    un \u00e9l\u00e9ments ou plus <a href=\"/fr/docs/Web/SVG/Element/altGlyphItem\" title=\"The altGlyphItem element provides a set of candidates for glyph substitution by the &lt;altglyph> element.\"><code>&lt;altGlyphItem&gt;</code></a>",
-          "pt-BR": "Ambos:<br>\n    um ou mais elementos <a href=\"/pt-BR/docs/Web/SVG/Element/glyphRef\" title=\"The glyphRef element provides a single possible glyph to the referencing &lt;altGlyph> substitution.\"><code>&lt;glyphRef&gt;</code></a>, ou<br>\n    um ou mais elementos <a href=\"/pt-BR/docs/Web/SVG/Element/altGlyphItem\" title=\"The altGlyphItem element provides a set of candidates for glyph substitution by the &lt;altglyph> element.\"><code>&lt;altGlyphItem&gt;</code></a>",
-          "zh-CN": "\u4e24\u8005\u4e4b\u4e00\uff1a<br>\n    \u4e00\u4e2a\u6216\u591a\u4e2a<a href=\"/zh-CN/docs/Web/SVG/Element/glyphRef\" title=\"glyphRef\u5143\u7d20\u4e3a\u5f15\u7528\u7684&lt;altGlyph>\u00a0\u66ff\u4ee3\u7269\u63d0\u4f9b\u4e86\u4e00\u4e2a\u552f\u4e00\u53ef\u80fd\u7684\u5b57\u5f62\u3002\"><code>&lt;glyphRef&gt;</code></a>\u5143\u7d20\uff0c\u6216\u8005\u4e00\u4e2a\u6216\u591a\u4e2a<a href=\"/zh-CN/docs/Web/SVG/Element/altGlyphItem\" title=\"\u6b64\u9875\u9762\u4ecd\u672a\u88ab\u672c\u5730\u5316, \u671f\u5f85\u60a8\u7684\u7ffb\u8bd1!\"><code>&lt;altGlyphItem&gt;</code></a>\u5143\u7d20"
-        }
-      },
-      "attributes": ["coreAttributes"],
-      "interfaces": ["SVGAltGlyphDefElement"]
-    },
-    "altGlyphItem": {
-      "categories": ["textContentElement"],
-      "content": {
-        "description": {
-          "en-US": "One or more <a href=\"/en-US/docs/Web/SVG/Element/glyphRef\" title=\"The glyphRef element provides a single possible glyph to the referencing &lt;altGlyph> substitution.\"><code>&lt;glyphRef&gt;</code></a> elements",
-          "fr": "un \u00e9l\u00e9ments ou plus <a href=\"/fr/docs/Web/SVG/Element/glyphRef\" title=\"The glyphRef element provides a single possible glyph to the referencing &lt;altGlyph> substitution.\"><code>&lt;glyphRef&gt;</code></a>",
-          "pt-BR": "Um ou mais elementos <a href=\"/pt-BR/docs/Web/SVG/Element/glyphRef\" title=\"The glyphRef element provides a single possible glyph to the referencing &lt;altGlyph> substitution.\"><code>&lt;glyphRef&gt;</code></a>",
-          "zh-CN": "\u4e00\u4e2a\u6216\u591a\u4e2a<a href=\"/zh-CN/docs/Web/SVG/Element/glyphRef\" title=\"glyphRef\u5143\u7d20\u4e3a\u5f15\u7528\u7684&lt;altGlyph>\u00a0\u66ff\u4ee3\u7269\u63d0\u4f9b\u4e86\u4e00\u4e2a\u552f\u4e00\u53ef\u80fd\u7684\u5b57\u5f62\u3002\"><code>&lt;glyphRef&gt;</code></a>\u5143\u7d20"
-        }
-      },
-      "attributes": ["coreAttributes"],
-      "interfaces": ["SVGAltGlyphItemElement"]
     },
     "animate": {
       "categories": ["animationElement"],
@@ -105,7 +52,7 @@
         "elements": ["descriptiveElements"]
       },
       "attributes": [
-        "conditionalProccessingAttributes",
+        "conditionalProcessingAttributes",
         "coreAttributes",
         "animationEventAttributes",
         "xLinkAttributes",
@@ -123,28 +70,6 @@
       ],
       "interfaces": ["SVGAnimateElement"]
     },
-    "animateColor": {
-      "categories": ["basicShapeElement", "graphicsElement", "shapeElement"],
-      "content": {
-        "description": "anyNumberOfElementsAnyOrder",
-        "elements": ["descriptiveElements"]
-      },
-      "attributes": [
-        "conditionalProccessingAttributes",
-        "coreAttributes",
-        "animationEventAttributes",
-        "xLinkAttributes",
-        "animationAttributeTargetAttributes",
-        "animationTimingAttributes",
-        "animationValueAttributes",
-        "animationAdditionAttributes",
-        "'externalResourcesRequired'",
-        "'by'",
-        "'from'",
-        "'to'"
-      ],
-      "interfaces": ["SVGAnimateColorElement"]
-    },
     "animateMotion": {
       "categories": ["animationElement"],
       "content": {
@@ -152,7 +77,7 @@
         "elements": ["descriptiveElements", "&lt;mpath&gt;"]
       },
       "attributes": [
-        "conditionalProccessingAttributes",
+        "conditionalProcessingAttributes",
         "coreAttributes",
         "animationEventAttributes",
         "xLinkAttributes",
@@ -225,7 +150,7 @@
         ]
       },
       "attributes": [
-        "conditionalProccessingAttributes",
+        "conditionalProcessingAttributes",
         "coreAttributes",
         "presentationAttributes",
         "'class'",
@@ -236,22 +161,6 @@
       ],
       "interfaces": ["SVGClipPathElement"]
     },
-    "color-profile": {
-      "categories": ["noCategory"],
-      "content": {
-        "description": "anyNumberOfElementsAnyOrder",
-        "elements": ["descriptiveElements"]
-      },
-      "attributes": [
-        "coreAttributes",
-        "xLinkAttributes",
-        "'local'",
-        "'name'",
-        "'rendering-intent'",
-        "'xlink:href'"
-      ],
-      "interfaces": ["SVGColorProfileElement"]
-    },
     "cursor": {
       "categories": ["noCategory"],
       "content": {
@@ -259,7 +168,7 @@
         "elements": ["descriptiveElements"]
       },
       "attributes": [
-        "conditionalProccessingAttributes",
+        "conditionalProcessingAttributes",
         "coreAttributes",
         "xLinkAttributes",
         "'externalResourcesRequired'",
@@ -280,9 +189,7 @@
           "structuralElements",
           "gradientElements",
           "&lt;a&gt;",
-          "&lt;altGlyphDef&gt;",
           "&lt;clipPath&gt;",
-          "&lt;color-profile&gt;",
           "&lt;cursor&gt;",
           "&lt;filter&gt;",
           "&lt;font&gt;",
@@ -300,7 +207,7 @@
         ]
       },
       "attributes": [
-        "conditionalProccessingAttributes",
+        "conditionalProcessingAttributes",
         "coreAttributes",
         "graphicalEventAttributes",
         "presentationAttributes",
@@ -319,19 +226,6 @@
       "attributes": ["coreAttributes", "'class'", "'style'"],
       "interfaces": ["SVGDescElement"]
     },
-    "discard": {
-      "categories": ["animationElement"],
-      "content": {
-        "description": "anyNumberOfElementsAnyOrder",
-        "elements": ["descriptiveElements", "&lt;script&gt;"]
-      },
-      "attributes": [
-        "conditionalProccessingAttributes",
-        "coreAttributes",
-        "'begin'",
-        "'href'"
-      ]
-    },
     "ellipse": {
       "categories": ["basicShapeElement", "graphicsElement", "shapeElement"],
       "content": {
@@ -339,7 +233,7 @@
         "elements": ["animationElements", "descriptiveElements"]
       },
       "attributes": [
-        "conditionalProccessingAttributes",
+        "conditionalProcessingAttributes",
         "coreAttributes",
         "graphicalEventAttributes",
         "presentationAttributes",
@@ -462,8 +356,9 @@
       "categories": ["filterPrimitiveElement"],
       "content": {
         "description": {
-          "en-US": "Any number of <a href=\"/en-US/SVG/Element#descriptive\">descriptive elements</a> and exactly one <a href=\"/en-US/SVG/Element#lightsource\">light source element</a>, in any order.",
-          "zh-CN": "\u4efb\u610f\u6570\u91cf\u7684<a href=\"/zh-CN/SVG/Element#descriptive\">\u63cf\u8ff0\u6027\u5143\u7d20</a>\u4ee5\u53ca\u4e0d\u591a\u4e0d\u5c11\u4e00\u4e2a<a href=\"/en-US/SVG/Element#lightsource\">\u5149\u6e90\u5143\u7d20</a>\uff0c\u987a\u5e8f\u4e0d\u9650\u3002"
+          "en-US": "Any number of <a href=\"/en-US/docs/Web/SVG/Element#descriptive\">descriptive elements</a> and exactly one <a href=\"/en-US/docs/Web/SVG/Element#lightsource\">light source element</a>, in any order.",
+          "zh-CN": "\u4efb\u610f\u6570\u91cf\u7684<a href=\"/zh-CN/docs/Web/SVG/Element#descriptive\">\u63cf\u8ff0\u6027\u5143\u7d20</a>\u4ee5\u53ca\u4e0d\u591a\u4e0d\u5c11\u4e00\u4e2a<a href=\"/zh-CN/docs/Web/SVG/Element#lightsource\">\u5149\u6e90\u5143\u7d20</a>\uff0c\u987a\u5e8f\u4e0d\u9650\u3002",
+          "pt-BR": "Qualquer número de <a href=\"/pt-BR/docs/Web/SVG/Element#descriptive\">elementos descritivos</a> e exatamente um <a href=\"/pt-BR/docs/Web/SVG/Element#lightsource\">elemento de fonte de luz</a>, em qualquer ordem."
         }
       },
       "attributes": [
@@ -531,7 +426,7 @@
       "categories": ["filterPrimitiveElement"],
       "content": {
         "description": "anyNumberOfElementsAnyOrder",
-        "elements": ["&lt;animate&gt;", "&lt;animateColor&gt;", "&lt;set&gt;"]
+        "elements": ["&lt;animate&gt;", "&lt;set&gt;"]
       },
       "attributes": [
         "coreAttributes",
@@ -693,8 +588,9 @@
       "categories": ["filterPrimitiveElement"],
       "content": {
         "description": {
-          "en-US": "Exactly one\u00a0<a href=\"/en-US/SVG/Element#lightsource\">light source element</a>\u00a0first and any number of <a href=\"/en-US/SVG/Element#descriptive\">descriptive elements</a>\u00a0in any order.",
-          "zh-CN": "\u6709\u4e14\u53ea\u6709\u4e00\u4e2a<a href=\"/zh-CN/SVG/Element#lightsource\">\u5149\u6e90\u5143\u7d20</a>\u5728\u5148\uff0c\u4efb\u610f\u6570\u91cf\u7684<a href=\"/zh-CN/SVG/Element#descriptive\">\u63cf\u8ff0\u6027\u5143\u7d20</a>\u987a\u5e8f\u4e0d\u9650\u3002"
+          "en-US": "Exactly one\u00a0<a href=\"/en-US/docs/Web/SVG/Element#lightsource\">light source element</a>\u00a0first and any number of <a href=\"/en-US/docs/Web/SVG/Element#descriptive\">descriptive elements</a>\u00a0in any order.",
+          "zh-CN": "\u6709\u4e14\u53ea\u6709\u4e00\u4e2a<a href=\"/zh-CN/docs/Web/SVG/Element#lightsource\">\u5149\u6e90\u5143\u7d20</a>\u5728\u5148\uff0c\u4efb\u610f\u6570\u91cf\u7684<a href=\"/zh-CN/docs/Web/SVG/Element#descriptive\">\u63cf\u8ff0\u6027\u5143\u7d20</a>\u987a\u5e8f\u4e0d\u9650\u3002",
+          "pt-BR": "Exatamente um primeiro\u00a0<a href=\"/pt-BR/docs/Web/SVG/Element#lightsource\">elemento de fonte de luz</a>\u00a0e qualquer número de <a href=\"/pt-BR/docs/Web/SVG/Element#descriptive\">elementos descritivos</a>\u00a0em qualquer ordem."
         }
       },
       "attributes": [
@@ -788,7 +684,6 @@
         "'y'",
         "'width'",
         "'height'",
-        "'filterRes'",
         "'filterUnits'",
         "'primitiveUnits'",
         "'xlink:href'"
@@ -827,7 +722,8 @@
       "categories": ["fontElement"],
       "content": {
         "description": {
-          "en-US": "Any number of <a href=\"/en-US/SVG/Element#descriptive\">descriptive elements</a>\u00a0\u00bb and at most one <a href=\"/en-US/docs/Web/SVG/Element/font-face\" title=\"The font-face element corresponds to the CSS @font-face declaration. It defines a font's outer properties.\"><code>&lt;font-face&gt;</code></a> element, in any order."
+          "en-US": "Any number of <a href=\"/en-US/docs/Web/SVG/Element#descriptive\">descriptive elements</a>\u00a0\u00bb and at most one <a href=\"/en-US/docs/Web/SVG/Element/font-face\" title=\"The font-face element corresponds to the CSS @font-face declaration. It defines a font's outer properties.\"><code>&lt;font-face&gt;</code></a> element, in any order.",
+          "pt-BR": "Qualquer número de <a href=\"/pt-BR/docs/Web/SVG/Element#descriptive\">elementos descritivos</a>\u00a0\u00bb e pelo menos um <a href=\"/pt-BR/docs/Web/SVG/Element/font-face\" title=\"O elemento font-face element corresponde à declaração CSS @font-face. Ele define as propriedades externas da fonte.\"><code>&lt;font-face&gt;</code></a>, em qualquer ordem."
         }
       },
       "attributes": [
@@ -889,7 +785,8 @@
       "content": {
         "description": {
           "en-US": "One or more of the following elements, in any order:",
-          "zh-CN": "\u4e00\u4e2a\u6216\u591a\u4e2a\u4e0b\u5217\u5143\u7d20\uff0c\u987a\u5e8f\u4e0d\u9650\uff1a"
+          "zh-CN": "\u4e00\u4e2a\u6216\u591a\u4e2a\u4e0b\u5217\u5143\u7d20\uff0c\u987a\u5e8f\u4e0d\u9650\uff1a",
+          "pt-BR": "Um ou mais dos seguintes elementos, em qualquer ordem:"
         },
         "elements": ["&lt;font-face-name&gt;", "&lt;font-face-uri&gt;"]
       },
@@ -906,19 +803,15 @@
       "interfaces": ["SVGFontFaceUriElement"]
     },
     "foreignObject": {
-      "categories": ["noCategory"],
+      "categories": ["graphicsElement", "renderableElement"],
       "content": {
         "description": "anyElementsOrCharacterData"
       },
       "attributes": [
-        "conditionalProccessingAttributes",
+        "ariaAttributes",
+        "conditionalProcessingAttributes",
         "coreAttributes",
-        "graphicalEventAttributes",
         "presentationAttributes",
-        "'class'",
-        "'style'",
-        "'externalResourcesRequired'",
-        "'transform'",
         "'x'",
         "'y'",
         "'width'",
@@ -937,9 +830,7 @@
           "structuralElements",
           "gradientElements",
           "&lt;a&gt;",
-          "&lt;altGlyphDef&gt;",
           "&lt;clipPath&gt;",
-          "&lt;color-profile&gt;",
           "&lt;cursor&gt;",
           "&lt;filter&gt;",
           "&lt;font&gt;",
@@ -957,7 +848,7 @@
         ]
       },
       "attributes": [
-        "conditionalProccessingAttributes",
+        "conditionalProcessingAttributes",
         "coreAttributes",
         "graphicalEventAttributes",
         "presentationAttributes",
@@ -979,9 +870,7 @@
           "structuralElements",
           "gradientElements",
           "&lt;a&gt;",
-          "&lt;altGlyphDef&gt;",
           "&lt;clipPath&gt;",
-          "&lt;color-profile&gt;",
           "&lt;cursor&gt;",
           "&lt;filter&gt;",
           "&lt;font&gt;",
@@ -1037,55 +926,6 @@
       ],
       "interfaces": ["SVGGlyphRefElement"]
     },
-    "hatch": {
-      "categories": ["neverRenderedElement", "paintServerElement"],
-      "content": {
-        "description": "anyNumberOfElementsAnyOrder",
-        "elements": [
-          "animationElements",
-          "descriptiveElements",
-          "&lt;hatchpath&gt;",
-          "&lt;script&gt;",
-          "&lt;style&gt;"
-        ]
-      },
-      "attributes": [
-        "coreAttributes",
-        "globalEventAttributes",
-        "presentationAttributes",
-        "styleAttributes",
-        "'x'",
-        "'y'",
-        "'pitch'",
-        "'rotate'",
-        "'hatchUnits'",
-        "'hatchContentUnits'",
-        "'transform'",
-        "'href'"
-      ],
-      "interfaces": ["SVGHatchElement"]
-    },
-    "hatchpath": {
-      "categories": ["noCategory"],
-      "content": {
-        "description": "anyNumberOfElementsAnyOrder",
-        "elements": [
-          "animationElements",
-          "descriptiveElements",
-          "&lt;script&gt;",
-          "&lt;style&gt;"
-        ]
-      },
-      "attributes": [
-        "coreAttributes",
-        "globalEventAttributes",
-        "presentationAttributes",
-        "styleAttributes",
-        "'d'",
-        "'offset'"
-      ],
-      "interfaces": ["SVGHatchpathElement"]
-    },
     "hkern": {
       "categories": ["fontElement"],
       "content": {
@@ -1095,26 +935,37 @@
       "interfaces": ["SVGHKernElement"]
     },
     "image": {
-      "categories": ["graphicsElement", "graphicsReferencingElement"],
+      "categories": [
+        "graphicsElement",
+        "graphicsReferencingElement",
+        "renderableElement"
+      ],
       "content": {
         "description": "anyNumberOfElementsAnyOrder",
-        "elements": ["animationElements", "descriptiveElements"]
+        "elements": [
+          "animationElements",
+          "descriptiveElements",
+          "&lt;animate&gt;",
+          "&lt;animateMotion&gt;",
+          "&lt;animateTransform&gt;",
+          "&lt;discard&gt;",
+          "&lt;script&gt;",
+          "&lt;set&gt;",
+          "&lt;style&gt;"
+        ]
       },
       "attributes": [
-        "conditionalProccessingAttributes",
+        "ariaAttributes",
+        "conditionalProcessingAttributes",
         "coreAttributes",
-        "graphicalEventAttributes",
         "xLinkAttributes",
         "presentationAttributes",
-        "'class'",
-        "'style'",
-        "'externalResourcesRequired'",
-        "'transform'",
         "'x'",
         "'y'",
         "'width'",
         "'height'",
-        "'xlink:href'",
+        "'crossorigin'",
+        "'href'",
         "'preserveAspectRatio'"
       ],
       "interfaces": ["SVGImageElement"]
@@ -1126,7 +977,7 @@
         "elements": ["animationElements", "descriptiveElements"]
       },
       "attributes": [
-        "conditionalProccessingAttributes",
+        "conditionalProcessingAttributes",
         "coreAttributes",
         "graphicalEventAttributes",
         "presentationAttributes",
@@ -1149,25 +1000,24 @@
           "descriptiveElements",
           "&lt;animate&gt;",
           "&lt;animateTransform&gt;",
+          "&lt;script&gt;",
           "&lt;set&gt;",
-          "&lt;stop&gt;"
+          "&lt;stop&gt;",
+          "&lt;style&gt;"
         ]
       },
       "attributes": [
         "coreAttributes",
         "presentationAttributes",
         "xLinkAttributes",
-        "'class'",
-        "'style'",
-        "'externalResourcesRequired'",
         "'gradientUnits'",
         "'gradientTransform'",
+        "'href'",
         "'x1'",
         "'y1'",
         "'x2'",
         "'y2'",
-        "'spreadMethod'",
-        "'xlink:href'"
+        "'spreadMethod'"
       ],
       "interfaces": ["SVGLinearGradientElement"]
     },
@@ -1182,9 +1032,7 @@
           "structuralElements",
           "gradientElements",
           "&lt;a&gt;",
-          "&lt;altGlyphDef&gt;",
           "&lt;clipPath&gt;",
-          "&lt;color-profile&gt;",
           "&lt;cursor&gt;",
           "&lt;filter&gt;",
           "&lt;font&gt;",
@@ -1230,9 +1078,7 @@
           "structuralElements",
           "gradientElements",
           "&lt;a&gt;",
-          "&lt;altGlyphDef&gt;",
           "&lt;clipPath&gt;",
-          "&lt;color-profile&gt;",
           "&lt;cursor&gt;",
           "&lt;filter&gt;",
           "&lt;font&gt;",
@@ -1250,7 +1096,7 @@
         ]
       },
       "attributes": [
-        "conditionalProccessingAttributes",
+        "conditionalProcessingAttributes",
         "coreAttributes",
         "presentationAttributes",
         "'class'",
@@ -1284,9 +1130,7 @@
           "structuralElements",
           "gradientElements",
           "&lt;a&gt;",
-          "&lt;altGlyphDef&gt;",
           "&lt;clipPath&gt;",
-          "&lt;color-profile&gt;",
           "&lt;cursor&gt;",
           "&lt;filter&gt;",
           "&lt;font&gt;",
@@ -1337,7 +1181,7 @@
         "elements": ["animationElements", "descriptiveElements"]
       },
       "attributes": [
-        "conditionalProccessingAttributes",
+        "conditionalProcessingAttributes",
         "coreAttributes",
         "graphicalEventAttributes",
         "presentationAttributes",
@@ -1357,22 +1201,16 @@
         "elements": [
           "animationElements",
           "descriptiveElements",
+          "gradientElements",
           "shapeElements",
           "structuralElements",
-          "gradientElements",
           "&lt;a&gt;",
-          "&lt;altGlyphDef&gt;",
           "&lt;clipPath&gt;",
-          "&lt;color-profile&gt;",
-          "&lt;cursor&gt;",
           "&lt;filter&gt;",
-          "&lt;font&gt;",
-          "&lt;font-face&gt;",
           "&lt;foreignObject&gt;",
           "&lt;image&gt;",
           "&lt;marker&gt;",
           "&lt;mask&gt;",
-          "&lt;pattern&gt;",
           "&lt;script&gt;",
           "&lt;style&gt;",
           "&lt;switch&gt;",
@@ -1381,23 +1219,19 @@
         ]
       },
       "attributes": [
-        "conditionalProccessingAttributes",
         "coreAttributes",
         "presentationAttributes",
         "xLinkAttributes",
-        "'class'",
-        "'style'",
-        "'externalResourcesRequired'",
         "'viewBox'",
-        "'patternUnits'",
-        "'patternContentUnits'",
-        "'patternTransform'",
+        "'preserveAspectRatio'",
         "'x'",
         "'y'",
         "'width'",
         "'height'",
-        "'xlink:href'",
-        "'preserveAspectRatio'"
+        "'patternUnits'",
+        "'patternContentUnits'",
+        "'patternTransform'",
+        "'href'"
       ],
       "interfaces": ["SVGPatternElement"]
     },
@@ -1408,7 +1242,7 @@
         "elements": ["animationElements", "descriptiveElements"]
       },
       "attributes": [
-        "conditionalProccessingAttributes",
+        "conditionalProcessingAttributes",
         "coreAttributes",
         "graphicalEventAttributes",
         "presentationAttributes",
@@ -1427,7 +1261,7 @@
         "elements": ["animationElements", "descriptiveElements"]
       },
       "attributes": [
-        "conditionalProccessingAttributes",
+        "conditionalProcessingAttributes",
         "coreAttributes",
         "graphicalEventAttributes",
         "presentationAttributes",
@@ -1447,26 +1281,26 @@
           "descriptiveElements",
           "&lt;animate&gt;",
           "&lt;animateTransform&gt;",
+          "&lt;script&gt;",
           "&lt;set&gt;",
-          "&lt;stop&gt;"
+          "&lt;stop&gt;",
+          "&lt;style&gt;"
         ]
       },
       "attributes": [
         "coreAttributes",
         "presentationAttributes",
         "xLinkAttributes",
-        "'class'",
-        "'style'",
-        "'externalResourcesRequired'",
-        "'gradientUnits'",
-        "'gradientTransform'",
         "'cx'",
         "'cy'",
-        "'r'",
         "'fx'",
         "'fy'",
-        "'spreadMethod'",
-        "'xlink:href'"
+        "'fr'",
+        "'gradientUnits'",
+        "'gradientTransform'",
+        "'href'",
+        "'r'",
+        "'spreadMethod'"
       ],
       "interfaces": ["SVGRadialGradientElement"]
     },
@@ -1477,7 +1311,7 @@
         "elements": ["animationElements", "descriptiveElements"]
       },
       "attributes": [
-        "conditionalProccessingAttributes",
+        "conditionalProcessingAttributes",
         "coreAttributes",
         "graphicalEventAttributes",
         "presentationAttributes",
@@ -1502,9 +1336,9 @@
       "attributes": [
         "coreAttributes",
         "xLinkAttributes",
-        "'externalResourcesRequired'",
         "'type'",
-        "'xlink:href'"
+        "'href'",
+        "'crossorigin'"
       ],
       "interfaces": ["SVGScriptElement"]
     },
@@ -1515,7 +1349,7 @@
         "elements": ["descriptiveElements"]
       },
       "attributes": [
-        "conditionalProccessingAttributes",
+        "conditionalProcessingAttributes",
         "coreAttributes",
         "animationEventAttributes",
         "xLinkAttributes",
@@ -1530,13 +1364,16 @@
       "categories": ["gradientElement"],
       "content": {
         "description": "anyNumberOfElementsAnyOrder",
-        "elements": ["&lt;animate&gt;", "&lt;animateColor&gt;", "&lt;set&gt;"]
+        "elements": [
+          "&lt;animate&gt;",
+          "&lt;script&gt;",
+          "&lt;set&gt;",
+          "&lt;style&gt;"
+        ]
       },
       "attributes": [
         "coreAttributes",
         "presentationAttributes",
-        "'class'",
-        "'style'",
         "'offset'",
         "'stop-color'",
         "'stop-opacity'"
@@ -1562,9 +1399,7 @@
           "structuralElements",
           "gradientElements",
           "&lt;a&gt;",
-          "&lt;altGlyphDef&gt;",
           "&lt;clipPath&gt;",
-          "&lt;color-profile&gt;",
           "&lt;cursor&gt;",
           "&lt;filter&gt;",
           "&lt;font&gt;",
@@ -1582,7 +1417,7 @@
         ]
       },
       "attributes": [
-        "conditionalProccessingAttributes",
+        "conditionalProcessingAttributes",
         "coreAttributes",
         "documentEventAttributes",
         "graphicalEventAttributes",
@@ -1597,8 +1432,6 @@
         "'width'",
         "'height'",
         "'preserveAspectRatio'",
-        "'contentScriptType'",
-        "'contentStyleType'",
         "'viewBox'"
       ],
       "interfaces": ["SVGSVGElement"]
@@ -1622,7 +1455,7 @@
         ]
       },
       "attributes": [
-        "conditionalProccessingAttributes",
+        "conditionalProcessingAttributes",
         "coreAttributes",
         "graphicalEventAttributes",
         "presentationAttributes",
@@ -1645,9 +1478,7 @@
           "structuralElements",
           "gradientElements",
           "&lt;a&gt;",
-          "&lt;altGlyphDef&gt;",
           "&lt;clipPath&gt;",
-          "&lt;color-profile&gt;",
           "&lt;cursor&gt;",
           "&lt;filter&gt;",
           "&lt;font&gt;",
@@ -1688,7 +1519,7 @@
         ]
       },
       "attributes": [
-        "conditionalProccessingAttributes",
+        "conditionalProcessingAttributes",
         "coreAttributes",
         "graphicalEventAttributes",
         "presentationAttributes",
@@ -1714,16 +1545,14 @@
         "elements": [
           "descriptiveElements",
           "&lt;a&gt;",
-          "&lt;altGlyph&gt;",
           "&lt;animate&gt;",
-          "&lt;animateColor&gt;",
           "&lt;set&gt;",
           "&lt;tref&gt;",
           "&lt;tspan&gt;"
         ]
       },
       "attributes": [
-        "conditionalProccessingAttributes",
+        "conditionalProcessingAttributes",
         "coreAttributes",
         "graphicalEventAttributes",
         "presentationAttributes",
@@ -1750,15 +1579,10 @@
       "categories": ["textContentElement", "textContentChildElement"],
       "content": {
         "description": "anyNumberOfElementsAnyOrder",
-        "elements": [
-          "descriptiveElements",
-          "&lt;animate&gt;",
-          "&lt;animateColor&gt;",
-          "&lt;set&gt;"
-        ]
+        "elements": ["descriptiveElements", "&lt;animate&gt;", "&lt;set&gt;"]
       },
       "attributes": [
-        "conditionalProccessingAttributes",
+        "conditionalProcessingAttributes",
         "coreAttributes",
         "graphicalEventAttributes",
         "presentationAttributes",
@@ -1777,16 +1601,14 @@
         "elements": [
           "descriptiveElements",
           "&lt;a&gt;",
-          "&lt;altGlyph&gt;",
           "&lt;animate&gt;",
-          "&lt;animateColor&gt;",
           "&lt;set&gt;",
           "&lt;tref&gt;",
           "&lt;tspan&gt;"
         ]
       },
       "attributes": [
-        "conditionalProccessingAttributes",
+        "conditionalProcessingAttributes",
         "coreAttributes",
         "graphicalEventAttributes",
         "presentationAttributes",
@@ -1814,7 +1636,7 @@
         "elements": ["animationElements", "descriptiveElements"]
       },
       "attributes": [
-        "conditionalProccessingAttributes",
+        "conditionalProcessingAttributes",
         "coreAttributes",
         "graphicalEventAttributes",
         "presentationAttributes",
@@ -1842,8 +1664,7 @@
         "'externalResourcesRequired'",
         "'viewBox'",
         "'preserveAspectRatio'",
-        "'zoomAndPan'",
-        "'viewTarget'"
+        "'zoomAndPan'"
       ],
       "interfaces": ["SVGViewElement"]
     },

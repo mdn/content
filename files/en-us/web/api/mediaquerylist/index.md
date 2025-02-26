@@ -2,21 +2,12 @@
 title: MediaQueryList
 slug: Web/API/MediaQueryList
 page-type: web-api-interface
-tags:
-  - API
-  - Adaptive Design
-  - CSSOM View
-  - DOM
-  - Interface
-  - Media Queries
-  - MediaQueryList
-  - Reference
-  - query
 browser-compat: api.MediaQueryList
 ---
+
 {{APIRef("CSSOM")}}
 
-A **`MediaQueryList`** object stores information on a [media query](/en-US/docs/Web/CSS/Media_Queries) applied to a document, with support for both immediate and event-driven matching against the state of the document.
+A **`MediaQueryList`** object stores information on a [media query](/en-US/docs/Web/CSS/CSS_media_queries) applied to a document, with support for both immediate and event-driven matching against the state of the document.
 
 You can create a `MediaQueryList` by calling {{DOMxRef("Window.matchMedia", "matchMedia()")}} on the {{DOMxRef("window")}} object. The resulting object handles sending notifications to listeners when the media query state changes (i.e. when the media query test starts or stops evaluating to `true`).
 
@@ -24,7 +15,7 @@ This is very useful for adaptive design, since this makes it possible to observe
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _The `MediaQueryList` interface inherits properties from its parent interface, {{DOMxRef("EventTarget")}}._
 
@@ -33,7 +24,7 @@ _The `MediaQueryList` interface inherits properties from its parent interface, {
 - {{DOMxRef("MediaQueryList.media", "media")}} {{ReadOnlyInline}}
   - : A string representing a serialized media query.
 
-## Methods
+## Instance methods
 
 _The `MediaQueryList` interface inherits methods from its parent interface, {{DOMxRef("EventTarget")}}._
 
@@ -51,28 +42,29 @@ _The following events are delivered to `MediaQueryList` objects:_
 
 ## Examples
 
-This simple example creates a `MediaQueryList` and then sets up a listener to detect when the media query status changes, running a custom function when it does to change the appearance of the page.
+This example creates a `MediaQueryList` and then sets up a listener to detect when the media query status changes, running a custom function when it does to change the appearance of the page.
 
 ```js
-const para = document.querySelector('p');
-const mql = window.matchMedia('(max-width: 600px)');
+const para = document.querySelector("p");
+const mql = window.matchMedia("(max-width: 600px)");
 
 function screenTest(e) {
   if (e.matches) {
     /* the viewport is 600 pixels wide or less */
-    para.textContent = 'This is a narrow screen — less than 600px wide.';
-    document.body.style.backgroundColor = 'red';
+    para.textContent = "This is a narrow screen — less than 600px wide.";
+    document.body.style.backgroundColor = "red";
   } else {
     /* the viewport is more than 600 pixels wide */
-    para.textContent = 'This is a wide screen — more than 600px wide.';
-    document.body.style.backgroundColor = 'blue';
+    para.textContent = "This is a wide screen — more than 600px wide.";
+    document.body.style.backgroundColor = "blue";
   }
 }
 
-mql.addEventListener('change', screenTest);
+mql.addEventListener("change", screenTest);
 ```
 
-> **Note:** You can find this example on GitHub (see the [source code](https://github.com/mdn/dom-examples/blob/master/mediaquerylist/index.html), and also see it [running live](https://mdn.github.io/dom-examples/mediaquerylist/index.html)).
+> [!NOTE]
+> You can find this example on GitHub (see the [source code](https://github.com/mdn/dom-examples/blob/main/mediaquerylist/index.html), and also see it [running live](https://mdn.github.io/dom-examples/mediaquerylist/index.html)).
 
 You can find other examples on the individual property and method pages.
 
@@ -86,8 +78,8 @@ You can find other examples on the individual property and method pages.
 
 ## See also
 
-- [Media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
-- [Using media queries from code](/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries)
+- [Media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [Using media queries from code](/en-US/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
 - {{DOMxRef("window.matchMedia()")}}
 - {{DOMxRef("MediaQueryListEvent")}}
 - The article {{DOMxRef("Window.devicePixelRatio")}} also has a useful example

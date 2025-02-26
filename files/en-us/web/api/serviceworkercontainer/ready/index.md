@@ -1,17 +1,12 @@
 ---
-title: ServiceWorkerContainer.ready
+title: "ServiceWorkerContainer: ready property"
+short-title: ready
 slug: Web/API/ServiceWorkerContainer/ready
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Service worker API
-  - ServiceWorker
-  - ServiceWorkerContainer
 browser-compat: api.ServiceWorkerContainer.ready
 ---
-{{APIRef("Service Workers API")}}
+
+{{APIRef("Service Workers API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`ready`** read-only property of
 the {{domxref("ServiceWorkerContainer")}} interface provides a way of delaying code
@@ -30,16 +25,15 @@ A {{jsxref("Promise")}} that will never reject, and which may eventually resolve
 ## Examples
 
 ```js
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.ready
-  .then(function(registration) {
-    console.log('A service worker is active:', registration.active);
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.ready.then((registration) => {
+    console.log(`A service worker is active: ${registration.active}`);
 
     // At this point, you can call methods that require an active
     // service worker, like registration.pushManager.subscribe()
   });
 } else {
-  console.log('Service workers are not supported.');
+  console.error("Service workers are not supported.");
 }
 ```
 

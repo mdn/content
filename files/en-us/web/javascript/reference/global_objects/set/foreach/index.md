@@ -1,61 +1,52 @@
 ---
 title: Set.prototype.forEach()
 slug: Web/JavaScript/Reference/Global_Objects/Set/forEach
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - set
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Set.forEach
 ---
+
 {{JSRef}}
 
-The **`forEach()`** method executes a provided function once
-for each value in the `Set` object, in insertion order.
+The **`forEach()`** method of {{jsxref("Set")}} instances executes a provided function once
+for each value in this set, in insertion order.
 
-{{EmbedInteractiveExample("pages/js/set-prototype-foreach.html")}}
+{{InteractiveExample("JavaScript Demo: Set.prototype.forEach()")}}
+
+```js interactive-example
+function logSetElements(value1, value2, set) {
+  console.log(`s[${value1}] = ${value2}`);
+}
+
+new Set(["foo", "bar", undefined]).forEach(logSetElements);
+
+// Expected output: "s[foo] = foo"
+// Expected output: "s[bar] = bar"
+// Expected output: "s[undefined] = undefined"
+```
 
 ## Syntax
 
-```js
-// Arrow function
-forEach(() => { /* ... */ } )
-forEach((value) => { /* ... */ } )
-forEach((value, key) => { /* ... */ } )
-forEach((value, key, set) => { /* ... */ } )
-
-// Callback function
+```js-nolint
 forEach(callbackFn)
 forEach(callbackFn, thisArg)
-
-// Inline callback function
-forEach(function() { /* ... */ })
-forEach(function(value) { /* ... */ })
-forEach(function(value, key) { /* ... */ })
-forEach(function(value, key, set) { /* ... */ })
-forEach(function(value, key, set) { /* ... */ }, thisArg)
 ```
 
 ### Parameters
 
 - `callback`
-
-  - : Function to execute for each element, taking three arguments:
-
-    - `value`, `key`
-      - : The current element being processed in the `Set`. As there are no
-        keys in `Set`, the value is passed for both arguments.
+  - : A function to execute for each entry in the set. The function is called with the following arguments:
+    - `value`
+      - : Value of each iteration.
+    - `key`
+      - : Key of each iteration. This is always the same as `value`.
     - `set`
-      - : The `Set` object which `forEach()` was called upon.
-
-- `thisArg`
-  - : Value to use as `this` when executing `callbackFn`.
+      - : The set being iterated.
+- `thisArg` {{optional_inline}}
+  - : A value to use as `this` when executing `callbackFn`.
 
 ### Return value
 
-{{jsxref("undefined")}}.
+None ({{jsxref("undefined")}}).
 
 ## Description
 
@@ -72,8 +63,7 @@ it is executed for values which are present but have the value `undefined`.
 
 There are no keys in `Set` objects, however, so the first two arguments are
 both **values** contained in the {{jsxref("Set")}}. This is to make it
-consistent with other `forEach()` methods for {{jsxref("Map.foreach",
-  "Map")}} and {{jsxref("Array.forEach","Array")}}.
+consistent with other `forEach()` methods for {{jsxref("Map/foreach", "Map")}} and {{jsxref("Array/forEach", "Array")}}.
 
 If a `thisArg` parameter is provided to `forEach()`,
 it will be passed to `callback` when invoked, for use as its
@@ -98,12 +88,12 @@ The following code logs a line for each element in a `Set` object:
 
 ```js
 function logSetElements(value1, value2, set) {
-    console.log('s[' + value1 + '] = ' + value2);
+  console.log(`s[${value1}] = ${value2}`);
 }
 
-new Set(['foo', 'bar', undefined]).forEach(logSetElements);
+new Set(["foo", "bar", undefined]).forEach(logSetElements);
 
-// logs:
+// Logs:
 // "s[foo] = foo"
 // "s[bar] = bar"
 // "s[undefined] = undefined"

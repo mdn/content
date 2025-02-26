@@ -1,17 +1,8 @@
 ---
-title: 'AudioTrackList: change event'
+title: "AudioTrackList: change event"
+short-title: change
 slug: Web/API/AudioTrackList/change_event
 page-type: web-api-event
-tags:
-  - API
-  - Audio Tracks
-  - Audio
-  - AudioTrackList
-  - Change
-  - Event
-  - Reference
-  - HTML API
-  - Media
 browser-compat: api.AudioTrackList.change_event
 ---
 
@@ -25,8 +16,8 @@ This event is not cancelable and does not bubble.
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener('change', (event) => { })
+```js-nolint
+addEventListener("change", (event) => { })
 
 onchange = (event) => { }
 ```
@@ -40,14 +31,14 @@ A generic {{domxref("Event")}}.
 Using `addEventListener()`:
 
 ```js
-const videoElement = document.querySelector('video');
-videoElement.audioTracks.addEventListener('change', (event) => {
-    console.log(`'${event.type}' event fired`);
+const videoElement = document.querySelector("video");
+videoElement.audioTracks.addEventListener("change", (event) => {
+  console.log(`'${event.type}' event fired`);
 });
 
 // changing the value of `enabled` will trigger the `change` event
-const toggleTrackButton = document.querySelector('.toggle-track');
-toggleTrackButton.addEventListener('click', () => {
+const toggleTrackButton = document.querySelector(".toggle-track");
+toggleTrackButton.addEventListener("click", () => {
   const track = videoElement.audioTracks[0];
   track.enabled = !track.enabled;
 });
@@ -56,14 +47,14 @@ toggleTrackButton.addEventListener('click', () => {
 Using the `onchange` event handler property:
 
 ```js
-const videoElement = document.querySelector('video');
+const videoElement = document.querySelector("video");
 videoElement.audioTracks.onchange = (event) => {
-    console.log(`'${event.type}' event fired`);
+  console.log(`'${event.type}' event fired`);
 };
 
 // changing the value of `enabled` will trigger the `change` event
-const toggleTrackButton = document.querySelector('.toggle-track');
-toggleTrackButton.addEventListener('click', () => {
+const toggleTrackButton = document.querySelector(".toggle-track");
+toggleTrackButton.addEventListener("click", () => {
   const track = videoElement.audioTracks[0];
   track.enabled = !track.enabled;
 });
@@ -81,5 +72,5 @@ toggleTrackButton.addEventListener('click', () => {
 
 - Related events: [`addtrack`](/en-US/docs/Web/API/AudioTrackList/addtrack_event), [`removetrack`](/en-US/docs/Web/API/AudioTrackList/removetrack_event)
 - This event on [`VideoTrackList`](/en-US/docs/Web/API/VideoTrackList) targets: [`change`](/en-US/docs/Web/API/VideoTrackList/change_event)
-- [Media Streams API](/en-US/docs/Web/API/Media_Streams_API)
+- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API)
 - [WebRTC API](/en-US/docs/Web/API/WebRTC_API)

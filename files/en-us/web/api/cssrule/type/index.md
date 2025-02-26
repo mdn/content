@@ -1,16 +1,13 @@
 ---
-title: CSSRule.type
+title: "CSSRule: type property"
+short-title: type
 slug: Web/API/CSSRule/type
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM
-  - Property
-  - Reference
-  - Read-only
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.CSSRule.type
 ---
+
 {{APIRef("CSSOM")}}{{Deprecated_header}}
 
 The read-only **`type`** property of the
@@ -50,22 +47,16 @@ for (const rule of rules) {
   - : The rule is a {{domxref("CSSCounterStyleRule")}}.
 - `CSSRule.SUPPORTS_RULE` (`12`)
   - : The rule is a {{domxref("CSSSupportsRule")}}.
-- `CSSRule.DOCUMENT_RULE` (`13`)
-  - : The rule is a {{domxref("CSSDocumentRule")}}.
 - `CSSRule.FONT_FEATURE_VALUES_RULE` (`14`)
   - : The rule is a {{domxref("CSSFontFeatureValuesRule")}}.
-- `CSSRule.VIEWPORT_RULE` (`15`)
-  - : The rule is a {{domxref("CSSViewportRule")}}.
-- `CSSRule.REGION_STYLE_RULE` (`16`)
-  - : The rule is a {{domxref("CSSRegionStyleRule")}}.
-  
-Both `CSSRule.UNKNOWN_RULE` (`0`) and `CSSRule.CHARSET_RULE` (`2`) are deprecated and cannot be obtained any more
+
+The values `CSSRule.UNKNOWN_RULE` (`0`), `CSSRule.CHARSET_RULE` (`2`), `CSSRule.DOCUMENT_RULE` (`13`), `CSSRule.VIEWPORT_RULE` (`14`), and `CSSRule.REGION_STYLE_RULE` (`16`) cannot be obtained anymore.
 
 ## Examples
 
 ```js
-let myRules = document.styleSheets[0].cssRules;
-console.log(myRules[0].type);
+const rules = document.styleSheets[0].cssRules;
+console.log(rules[0].type);
 ```
 
 ## Specifications

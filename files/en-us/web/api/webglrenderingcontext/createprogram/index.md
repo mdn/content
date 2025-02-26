@@ -1,16 +1,12 @@
 ---
-title: WebGLRenderingContext.createProgram()
+title: "WebGLRenderingContext: createProgram() method"
+short-title: createProgram()
 slug: Web/API/WebGLRenderingContext/createProgram
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.createProgram
 ---
-{{APIRef("WebGL")}}
+
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGLRenderingContext.createProgram()`** method of the
 [WebGL API](/en-US/docs/Web/API/WebGL_API) creates and initializes a
@@ -18,7 +14,7 @@ The **`WebGLRenderingContext.createProgram()`** method of the
 
 ## Syntax
 
-```js
+```js-nolint
 createProgram()
 ```
 

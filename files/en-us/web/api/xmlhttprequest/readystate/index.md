@@ -1,15 +1,12 @@
 ---
-title: XMLHttpRequest.readyState
+title: "XMLHttpRequest: readyState property"
+short-title: readyState
 slug: Web/API/XMLHttpRequest/readyState
 page-type: web-api-instance-property
-tags:
-  - AJAX
-  - Property
-  - Reference
-  - XMLHttpRequest
 browser-compat: api.XMLHttpRequest.readyState
 ---
-{{APIRef('XMLHttpRequest')}}
+
+{{APIRef("XMLHttpRequest API")}} {{AvailableInWorkers("window_and_worker_except_service")}}
 
 The **XMLHttpRequest.readyState** property returns the state an XMLHttpRequest client is in. An XHR client exists in one of the following states:
 
@@ -26,29 +23,27 @@ The **XMLHttpRequest.readyState** property returns the state an XMLHttpRequest c
 - OPENED
   - : open() method has been invoked. During this state, the request headers can be set using the [setRequestHeader()](/en-US/docs/Web/API/XMLHttpRequest/setRequestHeader) method and the [send()](/en-US/docs/Web/API/XMLHttpRequest/send) method can be called which will initiate the fetch.
 - HEADERS_RECEIVED
-  - : send() has been called and the response headers have been received.
+  - : send() has been called, all redirects (if any) have been followed and the response headers have been received.
 - LOADING
   - : Response's body is being received. If [`responseType`](/en-US/docs/Web/API/XMLHttpRequest/responseType) is "text" or empty string, [`responseText`](/en-US/docs/Web/API/XMLHttpRequest/responseText) will have the partial text response as it loads.
 - DONE
   - : The fetch operation is complete. This could mean that either the data transfer has been completed successfully or failed.
 
-> **Note:** The state names are different in versions of Internet Explorer earlier than 11. Instead of `UNSENT`, `OPENED`, `HEADERS_RECEIVED`, `LOADING` and `DONE`, the names `READYSTATE_UNINITIALIZED` (0), `READYSTATE_LOADING` (1), `READYSTATE_LOADED` (2), `READYSTATE_INTERACTIVE` (3) and `READYSTATE_COMPLETE` (4) are used.
-
 ## Example
 
 ```js
 const xhr = new XMLHttpRequest();
-console.log('UNSENT', xhr.readyState); // readyState will be 0
+console.log("UNSENT", xhr.readyState); // readyState will be 0
 
-xhr.open('GET', '/api', true);
-console.log('OPENED', xhr.readyState); // readyState will be 1
+xhr.open("GET", "/api", true);
+console.log("OPENED", xhr.readyState); // readyState will be 1
 
-xhr.onprogress = function () {
-    console.log('LOADING', xhr.readyState); // readyState will be 3
+xhr.onprogress = () => {
+  console.log("LOADING", xhr.readyState); // readyState will be 3
 };
 
-xhr.onload = function () {
-    console.log('DONE', xhr.readyState); // readyState will be 4
+xhr.onload = () => {
+  console.log("DONE", xhr.readyState); // readyState will be 4
 };
 
 xhr.send(null);

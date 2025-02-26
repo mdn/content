@@ -1,17 +1,14 @@
 ---
-title: HIDDevice.sendFeatureReport()
+title: "HIDDevice: sendFeatureReport() method"
+short-title: sendFeatureReport()
 slug: Web/API/HIDDevice/sendFeatureReport
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - sendFeatureReport
-  - HIDDevice
-  - Experimental
+status:
+  - experimental
 browser-compat: api.HIDDevice.sendFeatureReport
 ---
-{{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}
+
+{{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}{{AvailableInWorkers("window_and_worker_except_shared")}}
 
 The **`sendFeatureReport()`** method of the {{domxref("HIDDevice")}} interface sends a feature report to the HID device. Feature reports are a way for HID devices and applications to exchange non-standardized HID data.
 
@@ -19,7 +16,7 @@ The `reportId` for each of the report formats that this device supports can be r
 
 ## Syntax
 
-```js
+```js-nolint
 sendFeatureReport(reportId, data)
 ```
 
@@ -41,17 +38,17 @@ A {{jsxref("Promise")}} that resolves with `undefined` once the report has been 
 
 ## Examples
 
-In the following example `sendFeatureReport()` makes a device blink. You can see more examples and live demos in the article [Connecting to uncommon HID devices](https://web.dev/hid/).
+In the following example `sendFeatureReport()` makes a device blink. You can see more examples and live demos in the article [Connecting to uncommon HID devices](https://developer.chrome.com/docs/capabilities/hid).
 
 ```js
 const reportId = 1;
 for (let i = 0; i < 10; i++) {
   // Turn off
   await device.sendFeatureReport(reportId, Uint32Array.from([0, 0]));
-  await waitFor(100);
+  await new Promise((resolve) => setTimeout(resolve, 100));
   // Turn on
   await device.sendFeatureReport(reportId, Uint32Array.from([512, 0]));
-  await waitFor(100);
+  await new Promise((resolve) => setTimeout(resolve, 100));
 }
 ```
 

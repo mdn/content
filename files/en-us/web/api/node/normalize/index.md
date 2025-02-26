@@ -1,12 +1,11 @@
 ---
-title: Node.normalize()
+title: "Node: normalize() method"
+short-title: normalize()
 slug: Web/API/Node/normalize
 page-type: web-api-instance-method
-tags:
-  - Method
-  - Reference
 browser-compat: api.Node.normalize
 ---
+
 {{APIRef("DOM")}}
 
 The **`normalize()`** method of the {{domxref("Node")}} interface puts the specified node
@@ -15,8 +14,8 @@ In a normalized sub-tree, no text nodes in the sub-tree are empty and there are 
 
 ## Syntax
 
-```js
-normalize();
+```js-nolint
+normalize()
 ```
 
 ### Parameters
@@ -40,23 +39,23 @@ wrapper.appendChild(document.createTextNode("Part 1 "));
 wrapper.appendChild(document.createTextNode("Part 2 "));
 
 let node = wrapper.firstChild;
-let result = "Before normalization:<br/>";
+let result = "Before normalization:\n";
 while (node) {
-  result += ` ${node.nodeName}: ${node.nodeValue}<br/>`;
+  result += ` ${node.nodeName}: ${node.nodeValue}\n`;
   node = node.nextSibling;
 }
 
 wrapper.normalize();
 
 node = wrapper.firstChild;
-result += "<br/><br/>After normalization:<br/>";
+result += "\n\nAfter normalization:\n";
 while (node) {
-  result += ` ${node.nodeName}: ${node.nodeValue}<br/>`;
+  result += ` ${node.nodeName}: ${node.nodeValue}\n`;
   node = node.nextSibling;
 }
 
 const output = document.getElementById("result");
-output.innerHTML = result;
+output.innerText = result;
 ```
 
 {{ EmbedLiveSample("Example", "100%", "170")}}

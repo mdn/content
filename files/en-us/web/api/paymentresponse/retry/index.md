@@ -1,20 +1,11 @@
 ---
-title: PaymentResponse.retry()
+title: "PaymentResponse: retry() method"
+short-title: retry()
 slug: Web/API/PaymentResponse/retry
 page-type: web-api-instance-method
-tags:
-  - API
-  - Commerce
-  - Method
-  - Payment Request
-  - Payment Request API
-  - PaymentResponse
-  - Reference
-  - Web Payments
-  - payment
-  - retry
 browser-compat: api.PaymentResponse.retry
 ---
+
 {{securecontext_header}}{{APIRef("Payment Request API")}}
 
 The {{domxref("PaymentResponse")}} interface's
@@ -27,7 +18,7 @@ cards.
 
 ## Syntax
 
-```js
+```js-nolint
 retry(errorFields)
 ```
 
@@ -57,22 +48,21 @@ See the [example](#examples) below for a thorough example, but the basic
 concept, in outline form, is:
 
 1. Create a new {{domxref("PaymentRequest")}}
-    (`new` {{domxref("PaymentRequest.PaymentRequest", "PaymentRequest()")}})
+   (`new` {{domxref("PaymentRequest.PaymentRequest", "PaymentRequest()")}})
 2. Display the payment request ({{domxref("PaymentRequest.show()")}}
 3. If `show()` resolves, the returned {{domxref("PaymentResponse")}}
-    describes the requested payment and the options chosen by the user. Continue with the following steps:
+   describes the requested payment and the options chosen by the user. Continue with the following steps:
 
-    1. Validate the returned response; if there are any fields whose values are not
-        acceptable, call the response's {{domxref("PaymentResponse.complete",
-        "complete()")}} method with a value of `"fail"` to indicate failure.
-    2. If the response's data is valid and acceptable, call
-        `complete("success")` to finalize the payment and process it.
+   1. Validate the returned response; if there are any fields whose values are not
+      acceptable, call the response's {{domxref("PaymentResponse.complete", "complete()")}} method with a value of `"fail"` to indicate failure.
+   2. If the response's data is valid and acceptable, call
+      `complete("success")` to finalize the payment and process it.
 
 4. If `show()` is rejected, the payment request failed, usually because
-    either there's already one being processed, because the {{Glossary("user agent")}}
-    doesn't support any of the specified payment methods, or because of a security issue.
-    See the [list of exceptions](/en-US/docs/Web/API/PaymentRequest/show#exceptions) for `show()` for further details. Call
-    `complete("fail")` to close the payment request.
+   either there's already one being processed, because the {{Glossary("user agent")}}
+   doesn't support any of the specified payment methods, or because of a security issue.
+   See the [list of exceptions](/en-US/docs/Web/API/PaymentRequest/show#exceptions) for `show()` for further details. Call
+   `complete("fail")` to close the payment request.
 
 ```js
 async function handlePayment() {
@@ -87,7 +77,7 @@ async function handlePayment() {
       await response.retry();
     }
     await payResponse.complete("success");
-  } catch(err) {
+  } catch (err) {
     /* handle the exception */
   }
 }
@@ -112,7 +102,11 @@ async function recursiveValidate(request, response) {
   }
   if (errors.shippingAddress) {
     // "shippingaddresschange" fired at request object
-    const promise = fixField(request, "shippingaddresschange", shippingValidator);
+    const promise = fixField(
+      request,
+      "shippingaddresschange",
+      shippingValidator,
+    );
     promisesToFixThings.push(promise);
   }
   if (errors.payer) {
@@ -131,7 +125,8 @@ function fixField(requestOrResponse, event, validator) {
       const promiseToValidate = validator(requestOrResponse);
       ev.updateWith(promiseToValidate);
       const errors = await promiseToValidate;
-      if (!errors) { // yay! fixed!
+      if (!errors) {
+        // yay! fixed!
         event.removeEventListener(event, listener);
         resolve();
       }

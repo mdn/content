@@ -1,17 +1,14 @@
 ---
-title: WEBGL_multi_draw.multiDrawElementsInstancedWEBGL()
+title: "WEBGL_multi_draw: multiDrawElementsInstancedWEBGL() method"
+short-title: multiDrawElementsInstancedWEBGL()
 slug: Web/API/WEBGL_multi_draw/multiDrawElementsInstancedWEBGL
 page-type: webgl-extension-method
-tags:
-  - Method
-  - Reference
-  - WebGL
-  - WebGL extension
 browser-compat: api.WEBGL_multi_draw.multiDrawElementsInstancedWEBGL
 ---
+
 {{APIRef("WebGL")}}
 
-The **`WEBGL_multi_draw.multiDrawElementsWEBGL()`** method of
+The **`WEBGL_multi_draw.multiDrawElementsInstancedWEBGL()`** method of
 the
 [WebGL API](/en-US/docs/Web/API/WebGL_API) renders multiple primitives from
 array data. It is
@@ -21,13 +18,13 @@ method.
 
 ## Syntax
 
-```js
-void ext.multiDrawElementsInstancedWEBGL(mode,
+```js-nolint
+multiDrawElementsInstancedWEBGL(mode,
     countsList, countsOffset,
     type,
     firstsList, firstsOffset,
     instanceCountsList, instanceCountsOffset,
-    drawCount);
+    drawCount)
 ```
 
 ### Parameters
@@ -79,7 +76,7 @@ void ext.multiDrawElementsInstancedWEBGL(mode,
   - : An [`Int32Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int32Array)
     or [`Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
     (of [`GLsizei`](/en-US/docs/Web/API/WebGL_API/Types))
-    specifying a list of number sof instances of the range of elements to execute.
+    specifying a list of numbers of instances of the range of elements to execute.
 - `instanceCountsOffset`
   - : A [`GLuint`](/en-US/docs/Web/API/WebGL_API/Types)
     defining the starting point into the `instanceCountsList` array.
@@ -105,7 +102,17 @@ None.
 const counts = new Int32Array(/* … */);
 const offsets = new Int32Array(/* … */);
 const instanceCounts = new Int32Array(/* … */);
-ext.multiDrawElementsInstancedWEBGL(gl.TRIANGLES, counts, 0, gl.UNSIGNED_SHORT, offsets, 0, instanceCounts, 0, counts.length);
+ext.multiDrawElementsInstancedWEBGL(
+  gl.TRIANGLES,
+  counts,
+  0,
+  gl.UNSIGNED_SHORT,
+  offsets,
+  0,
+  instanceCounts,
+  0,
+  counts.length,
+);
 ```
 
 ## Specifications

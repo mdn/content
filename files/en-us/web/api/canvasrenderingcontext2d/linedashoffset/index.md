@@ -1,22 +1,19 @@
 ---
-title: CanvasRenderingContext2D.lineDashOffset
+title: "CanvasRenderingContext2D: lineDashOffset property"
+short-title: lineDashOffset
 slug: Web/API/CanvasRenderingContext2D/lineDashOffset
 page-type: web-api-instance-property
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Property
-  - Reference
 browser-compat: api.CanvasRenderingContext2D.lineDashOffset
 ---
+
 {{APIRef}}
 
 The
 **`CanvasRenderingContext2D.lineDashOffset`**
 property of the Canvas 2D API sets the line dash offset, or "phase."
 
-> **Note:** Lines are drawn by calling the
+> [!NOTE]
+> Lines are drawn by calling the
 > {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}} method.
 
 ## Value
@@ -39,8 +36,8 @@ dash offset of 4.
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 ctx.setLineDash([4, 16]);
 
@@ -52,7 +49,7 @@ ctx.stroke();
 
 // Dashed line with offset of 4
 ctx.beginPath();
-ctx.strokeStyle = 'red';
+ctx.strokeStyle = "red";
 ctx.lineDashOffset = 4;
 ctx.moveTo(0, 100);
 ctx.lineTo(300, 100);
@@ -77,20 +74,20 @@ animating the border.
 ```
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 let offset = 0;
 
 function draw() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   ctx.setLineDash([4, 2]);
-  ctx.lineDashOffset = -offset;
+  ctx.lineDashOffset = offset;
   ctx.strokeRect(10, 10, 100, 100);
 }
 
 function march() {
   offset++;
-  if (offset > 16) {
+  if (offset > 5) {
     offset = 0;
   }
   draw();

@@ -1,14 +1,11 @@
 ---
-title: RadioNodeList.value
+title: "RadioNodeList: value property"
+short-title: value
 slug: Web/API/RadioNodeList/value
 page-type: web-api-instance-property
-tags:
-  - HTML DOM
-  - Property
-  - RadioNodeList
-  - Reference
 browser-compat: api.RadioNodeList.value
 ---
+
 {{ APIRef("HTML DOM") }}
 
 If the underlying element collection contains radio buttons, the
@@ -21,21 +18,14 @@ does not contain any radio buttons or none of the radio buttons in the collectio
 `value` property is equal to the new value will be set to
 `checked`.
 
-## Syntax
-
-```js
-value = radioNodeList.value;
-radioNodeList.value = string;
-```
-
 ## Example
 
 ### HTML
 
 ```html
 <form>
-  <label><input type="radio" name="color" value="blue">Blue</label>
-  <label><input type="radio" name="color" value="red">Red</label>
+  <label><input type="radio" name="color" value="blue" />Blue</label>
+  <label><input type="radio" name="color" value="red" />Red</label>
 </form>
 ```
 
@@ -46,10 +36,10 @@ radioNodeList.value = string;
 const form = document.forms[0];
 
 // Get the form's radio buttons
-const radios = form.elements['color'];
+const radios = form.elements["color"];
 
 // Choose the "red" option
-radios.value = 'red';
+radios.value = "red";
 ```
 
 ### Result

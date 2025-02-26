@@ -1,29 +1,14 @@
 ---
-title: RTCIceTransport.component
+title: "RTCIceTransport: component property"
+short-title: component
 slug: Web/API/RTCIceTransport/component
 page-type: web-api-instance-property
-tags:
-  - API
-  - ICE
-  - Media
-  - Property
-  - RTCIceTransport
-  - RTCP
-  - RTP
-  - Read-only
-  - Reference
-  - Transport
-  - Video
-  - WebRTC
-  - WebRTC API
-  - component
 browser-compat: api.RTCIceTransport.component
 ---
+
 {{APIRef("WebRTC")}}
 
-The read-only **{{domxref("RTCIceTransport")}}**
-property **`component`** specifies whether the object is
-serving to transport {{Glossary("RTP")}} or {{Glossary("RTCP")}}.
+The **`component`** read-only property of the {{domxref("RTCIceTransport")}} interface specifies whether the object is serving to transport {{Glossary("RTP")}} or {{Glossary("RTCP")}}.
 
 ## Value
 

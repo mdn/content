@@ -1,13 +1,12 @@
 ---
 title: Get Element Attribute
 slug: Web/WebDriver/Commands/GetElementAttribute
-tags:
-  - Command
-  - Get Element Tag Name
-  - Reference
-  - WebDriver
+page-type: webdriver-command
 browser-compat: webdriver.commands.GetElementAttribute
 ---
+
+{{QuickLinksWithSubpages("/en-US/docs/Web/WebDriver/Commands")}}
+
 The _Get Element Attribute_ [command](/en-US/docs/Web/WebDriver/Command) of the [WebDriver](/en-US/docs/Web/WebDriver) API returns the attribute of the referenced [web element](/en-US/docs/Web/WebDriver/WebElement). If for example the element is an {{HTMLElement("img")}}, the returned attribute is `"//TODO"`, which is equivalent to calling {{domxref("Element.getAttribute")}} on the element. For XML/XHTML documents it may be cased differently.
 
 ## Syntax
@@ -50,7 +49,7 @@ print(search_box.get_attribute("id"))
 
 Output:
 
-```
+```plain
 q
 ```
 

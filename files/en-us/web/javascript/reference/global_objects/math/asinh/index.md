@@ -1,46 +1,39 @@
 ---
 title: Math.asinh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/asinh
-tags:
-  - JavaScript
-  - Math
-  - Method
-  - Reference
-  - Polyfill
+page-type: javascript-static-method
 browser-compat: javascript.builtins.Math.asinh
 ---
+
 {{JSRef}}
 
-The **`Math.asinh()`** function returns the hyperbolic arcsine
-of a number, that is
+The **`Math.asinh()`** static method returns the inverse hyperbolic sine of a number. That is,
 
-<math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.asinh</mo>
-<mo stretchy="false">(</mo>
-<mi>x</mi>
-<mo stretchy="false">)</mo>
-</mrow></mstyle><mo>=</mo>
-<mo lspace="0em" rspace="thinmathspace">arsinh</mo>
-<mo stretchy="false">(</mo>
-<mi>x</mi>
-<mo stretchy="false">)</mo>
-<mo>=</mo>
-<mtext>the unique </mtext><mspace width="thickmathspace"></mspace><mi>y</mi>
-<mspace width="thickmathspace"></mspace><mtext>such that</mtext>
-<mspace width="thickmathspace"></mspace><mo lspace="0em" rspace="0em">sinh</mo>
-<mo stretchy="false">(</mo>
-<mi>y</mi>
-<mo stretchy="false">)</mo>
-<mo>=</mo>
-<mi>x</mi>
-</mrow><annotation encoding="TeX">\mathtt{\operatorname{Math.asinh}(x)} =
-\operatorname{arsinh}(x) = \text{ the unique } \; y \; \text{such that} \;
-\sinh(y) = x</annotation></semantics></math>
+<!-- prettier-ignore-start -->
+<math display="block">
+  <semantics><mtable columnalign="right left right left right left right left right left" columnspacing="0em" displaystyle="true"><mtr><mtd><mrow><mo lspace="0em" rspace="0.16666666666666666em">𝙼𝚊𝚝𝚑.𝚊𝚜𝚒𝚗𝚑</mo><mo stretchy="false">(</mo><mi>𝚡</mi><mo stretchy="false">)</mo></mrow></mtd><mtd><mo>=</mo><mo lspace="0em" rspace="0.16666666666666666em">arsinh</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mtext>the unique&nbsp;</mtext><mi>y</mi><mtext>&nbsp;such that&nbsp;</mtext><mo lspace="0em" rspace="0em">sinh</mo><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo><mi>x</mi></mtd></mtr><mtr><mtd></mtd><mtd><mo>=</mo><mo lspace="0em" rspace="0em">ln</mo><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><msqrt><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>1</mn></mrow></msqrt></mrow><mo>)</mo></mrow></mtd></mtr></mtable><annotation encoding="TeX">\begin{aligned}\mathtt{\operatorname{Math.asinh}(x)} &= \operatorname{arsinh}(x) = \text{the unique } y \text{ such that } \sinh(y) = x \\&= \ln\left(x + \sqrt{x^2 + 1}\right)\end{aligned}</annotation></semantics>
+</math>
+<!-- prettier-ignore-end -->
 
-{{EmbedInteractiveExample("pages/js/math-asinh.html")}}
+{{InteractiveExample("JavaScript Demo: Math.asinh()")}}
+
+```js interactive-example
+console.log(Math.asinh(1));
+// Expected output: 0.881373587019543
+
+console.log(Math.asinh(0));
+// Expected output: 0
+
+console.log(Math.asinh(-1));
+// Expected output: -0.881373587019543
+
+console.log(Math.asinh(2));
+// Expected output: 1.4436354751788103
+```
 
 ## Syntax
 
-```js
+```js-nolint
 Math.asinh(x)
 ```
 
@@ -51,21 +44,23 @@ Math.asinh(x)
 
 ### Return value
 
-The hyperbolic arcsine of the given number.
+The inverse hyperbolic sine of `x`.
 
 ## Description
 
-Because `asinh()` is a static method of `Math`, you always use it
-as `Math.asinh()`, rather than as a method of a `Math` object
-you created (`Math` is not a constructor).
+Because `asinh()` is a static method of `Math`, you always use it as `Math.asinh()`, rather than as a method of a `Math` object you created (`Math` is not a constructor).
 
 ## Examples
 
 ### Using Math.asinh()
 
 ```js
-Math.asinh(1);  // 0.881373587019543
-Math.asinh(0);  // 0
+Math.asinh(-Infinity); // -Infinity
+Math.asinh(-1); // -0.881373587019543
+Math.asinh(-0); // -0
+Math.asinh(0); // 0
+Math.asinh(1); // 0.881373587019543
+Math.asinh(Infinity); // Infinity
 ```
 
 ## Specifications

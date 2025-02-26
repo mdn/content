@@ -1,22 +1,18 @@
 ---
-title: SVGPointList.clear()
+title: "SVGPointList: clear() method"
+short-title: clear()
 slug: Web/API/SVGPointList/clear
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - clear
-  - SVGPointList
 browser-compat: api.SVGPointList.clear
 ---
+
 {{APIRef("SVG")}}
 
 The **`clear()`** method of the {{domxref("SVGPointList")}} interface removes all items from the list.
 
 ## Syntax
 
-```js
+```js-nolint
 clear()
 ```
 
@@ -39,8 +35,12 @@ The following example shows an SVG which contains a {{SVGElement("polyline")}} w
 
 ```html
 <svg id="svg" viewBox="-10 -10 120 120" xmlns="http://www.w3.org/2000/svg">
-  <polyline id="example" stroke="black" fill="none"
-   points="50,0 21,90 98,35 2,35 79,90"/>
+  <polyline
+    id="example"
+    stroke="black"
+    fill="none"
+    points="50,0 21,90 98,35 2,35 79,90" />
+</svg>
 ```
 
 ```js

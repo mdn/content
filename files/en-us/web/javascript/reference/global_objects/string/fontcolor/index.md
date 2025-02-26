@@ -1,70 +1,63 @@
 ---
 title: String.prototype.fontcolor()
 slug: Web/JavaScript/Reference/Global_Objects/String/fontcolor
-tags:
-  - Deprecated
-  - HTML wrapper methods
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
-  - Polyfill
+page-type: javascript-instance-method
+status:
+  - deprecated
 browser-compat: javascript.builtins.String.fontcolor
 ---
-{{JSRef}} {{deprecated_header}}
 
-The **`fontcolor()`** method creates a {{HTMLElement("font")}}
-HTML element that causes a string to be displayed in the specified font color.
+{{JSRef}} {{Deprecated_Header}}
 
-> **Note:** The \<font> element has been removed in [HTML5](/en-US/docs/Glossary/HTML5) and shouldn't be used anymore.
-> Instead web developers should use [CSS](/en-US/docs/Web/CSS) properties.
+The **`fontcolor()`** method of {{jsxref("String")}} values creates a string that embeds this string in a {{HTMLElement("font")}} element (`<font color="...">str</font>`), which causes this string to be displayed in the specified font color.
+
+> [!NOTE]
+> All [HTML wrapper methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#html_wrapper_methods) are deprecated and only standardized for compatibility purposes. For the case of `fontcolor()`, the `<font>` element itself has been removed from the HTML specification and shouldn't be used anymore. Web developers should use [CSS](/en-US/docs/Web/CSS) properties instead.
 
 ## Syntax
 
-```js
+```js-nolint
 fontcolor(color)
 ```
 
 ### Parameters
 
 - `color`
-  - : A string expressing the color as a hexadecimal RGB triplet or as a string literal.
-    String literals for color names are listed in the [CSS color reference](/en-US/docs/Web/CSS/color_value).
+  - : A string expressing the color as a hexadecimal RGB triplet or as a string literal. String literals for color names are listed in the [CSS color reference](/en-US/docs/Web/CSS/color_value).
 
 ### Return value
 
-A string containing a {{HTMLElement("font")}} HTML element.
+A string beginning with a `<font color="color">` start tag (double quotes in `color` are replaced with `&quot;`), then the text `str`, and then a `</font>` end tag.
 
 ## Description
 
-If you express color as a hexadecimal RGB triplet, you must use the format
-`rrggbb`. For example, the hexadecimal RGB values for salmon are red=FA,
-green=80, and blue=72, so the RGB triplet for salmon is "`FA8072`".
+The `fontcolor()` method itself simply joins the string parts together without any validation or normalization. However, to create valid {{HTMLElement("font")}} elements, if you express color as a hexadecimal RGB triplet, you must use the format `rrggbb`. For example, the hexadecimal RGB values for salmon are red=FA, green=80, and blue=72, so the RGB triplet for salmon is `"FA8072"`.
 
 ## Examples
 
 ### Using fontcolor()
 
-The following example uses the `fontcolor()` method to change the color of a
-string by producing a string with the HTML `<font>` element.
+The code below creates an HTML string and then replaces the document's body with it:
 
 ```js
-const worldString = 'Hello, world';
+const contentString = "Hello, world";
 
-console.log(worldString.fontcolor('red') +  ' is red in this line');
-// '<font color="red">Hello, world</font> is red in this line'
-
-console.log(worldString.fontcolor('FF00') + ' is red in hexadecimal in this line');
-// '<font color="FF00">Hello, world</font> is red in hexadecimal in this line'
+document.body.innerHTML = contentString.fontcolor("red");
 ```
 
-With the {{domxref("HTMLElement/style", "element.style")}} object you can get
-the element's `style` attribute and manipulate it more generically, for
-example:
+This will create the following HTML:
+
+```html
+<font color="red">Hello, world</font>
+```
+
+> [!WARNING]
+> This markup is invalid, because `font` is no longer a valid element.
+
+Instead of using `fontcolor()` and creating HTML text directly, you should use CSS to manipulate fonts. For example, you can manipulate {{cssxref("color")}} through the {{domxref("HTMLElement/style", "element.style")}} attribute:
 
 ```js
-document.getElementById('yourElemId').style.color = 'red';
+document.getElementById("yourElemId").style.color = "red";
 ```
 
 ## Specifications
@@ -78,4 +71,5 @@ document.getElementById('yourElemId').style.color = 'red';
 ## See also
 
 - [Polyfill of `String.prototype.fontcolor` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
-- {{jsxref("String.prototype.fontsize()")}}
+- [HTML wrapper methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#html_wrapper_methods)
+- {{HTMLElement("font")}}

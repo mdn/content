@@ -1,20 +1,13 @@
 ---
-title: ':focus-within'
+title: :focus-within
 slug: Web/CSS/:focus-within
-tags:
-  - ':focus'
-  - ':focus-within'
-  - CSS
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Web
+page-type: css-pseudo-class
 browser-compat: css.selectors.focus-within
 ---
+
 {{CSSRef}}
 
-The **`:focus-within`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches an element if the element or any of its descendants are focused. In other words, it represents an element that is itself matched by the {{CSSxRef(":focus")}} pseudo-class or has a descendant that is matched by `:focus`. (This includes descendants in [shadow trees](/en-US/docs/Web/Web_Components/Using_shadow_DOM).)
+The **`:focus-within`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches an element if the element or any of its descendants are focused. In other words, it represents an element that is itself matched by the {{CSSxRef(":focus")}} pseudo-class or has a descendant that is matched by `:focus`. (This includes descendants in [shadow trees](/en-US/docs/Web/API/Web_components/Using_shadow_DOM).)
 
 {{EmbedInteractiveExample("pages/tabbed/pseudo-class-focus-within.html", "tabbed-shorter")}}
 
@@ -22,8 +15,10 @@ This selector is useful, to take a common example, for highlighting an entire {{
 
 ## Syntax
 
-```
-:focus-within
+```css
+:focus-within {
+  /* ... */
+}
 ```
 
 ## Examples
@@ -37,10 +32,10 @@ In this example, the form will receive special coloring styles when either text 
 
 <form>
   <label for="given_name">Given Name:</label>
-  <input id="given_name" type="text">
-  <br>
+  <input id="given_name" type="text" />
+  <br />
   <label for="family_name">Family Name:</label>
-  <input id="family_name" type="text">
+  <input id="family_name" type="text" />
 </form>
 ```
 

@@ -1,17 +1,16 @@
 ---
 title: <cursor>
 slug: Web/SVG/Element/cursor
-tags:
-  - Deprecated
-  - Element
-  - NeedsExample
-  - Reference
-  - SVG
+page-type: svg-element
+status:
+  - deprecated
 browser-compat: svg.elements.cursor
 ---
+
 {{SVGRef}}{{Deprecated_Header}}
 
-> **Note:** The CSS {{cssxref("cursor")}} property should be used instead of this element.
+> [!NOTE]
+> The CSS {{cssxref("cursor")}} property should be used instead of this element.
 
 The **`<cursor>`** [SVG](/en-US/docs/Web/SVG) element can be used to define a platform-independent custom cursor. A recommended approach for defining a platform-independent custom cursor is to create a PNG image and define a `cursor` element that references the PNG image and identifies the exact position within the image which is the pointer position (i.e., the hot spot).
 
@@ -23,17 +22,9 @@ The PNG format is recommended because it supports the ability to define a transp
 
 ## Attributes
 
-### Global attributes
-
-- [Conditional processing attributes](/en-US/docs/Web/SVG/Attribute#conditional_processing_attributes)
-- [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
-- [Xlink attributes](/en-US/docs/Web/SVG/Attribute#xlink_attributes)
-
-### Specific attributes
-
-- {{SVGAttr("x")}}
-- {{SVGAttr("y")}}
-- {{SVGAttr("xlink:href")}}
+- {{SVGAttr("x")}} {{Deprecated_Inline}}
+- {{SVGAttr("y")}} {{Deprecated_Inline}}
+- {{SVGAttr("xlink:href")}} {{deprecated_inline}}
 
 ## DOM Interface
 

@@ -1,14 +1,10 @@
 ---
-title: Safely inserting external content into a page
+title: Safely insert external content into a page
+short-title: Insert external content
 slug: Mozilla/Add-ons/WebExtensions/Safely_inserting_external_content_into_a_page
-tags:
-  - Add-ons
-  - Beginner
-  - Extensions
-  - How-to
-  - Security
-  - WebExtensions
+page-type: guide
 ---
+
 {{AddonSidebar}}
 
 There are times when you might want or need to include content from an external source in your extension. But, there is the risk that the source may have malicious scripts embedded in it—added by either the developer of the source or by a malicious third-party.
@@ -31,7 +27,7 @@ A lightweight approach to inserting strings into a page is to use the native DOM
 let data = JSON.parse(responseText);
 let div = document.createElement("div");
 div.className = data.className;
-div.textContent = "Your favorite color is now " + data.color;
+div.textContent = `Your favorite color is now ${data.color}`;
 addonElement.appendChild(div);
 ```
 
@@ -41,9 +37,7 @@ However, beware, you can use native methods that aren't safe. Take the following
 
 ```js example-bad
 let data = JSON.parse(responseText);
-addonElement.innerHTML = "<div class='" + data.className + "'>" +
-                         "Your favorite color is now " + data.color +
-                         "</div>";
+addonElement.innerHTML = `<div class='${data.className}'>Your favorite color is now ${data.color}</div>`;
 ```
 
 Here, the contents of `data.className` or `data.color` could contain HTML that can close the tag early, insert arbitrary further HTML content, then open another tag.
@@ -55,7 +49,7 @@ When using jQuery, functions such as `attr()` and `text()` escape content as it'
 ```js example-good
 let node = $("</div>");
 node.addClass(data.className);
-node.text("Your favorite color is now " + data.color);
+node.text(`Your favorite color is now ${data.color}`);
 ```
 
 ## Working with HTML content
@@ -72,12 +66,12 @@ For production use, [DOMPurify](https://github.com/cure53/DOMPurify) comes as a 
 "content_scripts": [
   {
     "matches" : ["<all_urls>"],
-    "js": ["purify.min.js", "myinjectionscript.js"]
+    "js": ["purify.min.js", "my-injection-script.js"]
   }
 ]
 ```
 
-Then, in myinjectionscript.js you can read the external HTML, sanitize it, and add it to a page's DOM:
+Then, in `my-injection-script.js` you can read the external HTML, sanitize it, and add it to a page's DOM:
 
 ```js
 let elem = document.createElement("div");

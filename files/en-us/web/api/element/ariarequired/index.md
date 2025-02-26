@@ -1,22 +1,17 @@
 ---
-title: Element.ariaRequired
+title: "Element: ariaRequired property"
+short-title: ariaRequired
 slug: Web/API/Element/ariaRequired
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaRequired
-  - AriaAttributes
-  - AriaMixin
-  - Element
 browser-compat: api.Element.ariaRequired
 ---
-{{DefaultAPISidebar("DOM")}}
+
+{{APIRef("DOM")}}
 
 The **`ariaRequired`** property of the {{domxref("Element")}} interface reflects the value of the `aria-required` attribute, which indicates that user input is required on the element before a form may be submitted.
 
-> **Note:** Where possible use an HTML {{htmlelement("input")}} element with `type="text"` or a {{htmlelement("textarea")}} as these have built in semantics and do not require ARIA attributes.
+> [!NOTE]
+> Where possible use an HTML {{htmlelement("input")}} element with `type="text"` or a {{htmlelement("textarea")}} as these have built in semantics and do not require ARIA attributes.
 
 ## Value
 
@@ -33,14 +28,19 @@ In this example the `aria-required` attribute on the element with an ID of `txtB
 
 ```html
 <div id="txtboxMultilineLabel">Enter the tags for the article</div>
-<div role="textbox" id="txtBoxInput" contenteditable="true" aria-multiline="true"
-  aria-labelledby="txtboxMultilineLabel" aria-required="true"></div>
+<div
+  role="textbox"
+  id="txtBoxInput"
+  contenteditable="true"
+  aria-multiline="true"
+  aria-labelledby="txtboxMultilineLabel"
+  aria-required="true"></div>
 ```
 
 ```js
-let el = document.getElementById('txtBoxInput');
+let el = document.getElementById("txtBoxInput");
 console.log(el.ariaRequired); // "true"
-el.ariaRequired = "false"
+el.ariaRequired = "false";
 console.log(el.ariaRequired); // "false"
 ```
 

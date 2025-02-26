@@ -1,14 +1,9 @@
 ---
 title: AND
 slug: WebAssembly/Reference/Numeric/AND
-tags:
-  - WebAssembly
-  - wasm
-  - Reference
-  - Numeric
-  - Bitwise
+page-type: webassembly-instruction
+sidebar: webassemblysidebar
 ---
-{{WebAssemblySidebar}}
 
 The **`and`** instructions, are used for performing a bitwise AND, similar to the **`&`** operator in other languages.
 

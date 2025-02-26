@@ -2,21 +2,16 @@
 title: SVGFEDropShadowElement
 slug: Web/API/SVGFEDropShadowElement
 page-type: web-api-interface
-tags:
-  - API
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG DOM
 browser-compat: api.SVGFEDropShadowElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGFEDropShadowElement`** interface corresponds to the {{SVGElement("feDropShadow")}} element.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties from its parent interface, {{domxref("SVGElement")}}._
 
@@ -31,9 +26,9 @@ _This interface also inherits properties from its parent interface, {{domxref("S
 - {{domxref("SVGFEDropShadowElement.result")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedString")}} corresponding to the {{SVGAttr("result")}} attribute of the given element.
 - {{domxref("SVGFEDropShadowElement.stdDeviationX")}} {{ReadOnlyInline}}
-  - : An {{domxref("SVGAnimatedNumber")}} corresponding to the (possibly automatically computed) X component of the {{SVGAttr("stdDeviationX")}} attribute of the given element.
+  - : An {{domxref("SVGAnimatedNumber")}} corresponding to the (possibly automatically computed) X component of the {{SVGAttr("stdDeviation")}} attribute of the given element.
 - {{domxref("SVGFEDropShadowElement.stdDeviationY")}} {{ReadOnlyInline}}
-  - : An {{domxref("SVGAnimatedNumber")}} corresponding to the (possibly automatically computed) Y component of the {{SVGAttr("stdDeviationY")}} attribute of the given element.
+  - : An {{domxref("SVGAnimatedNumber")}} corresponding to the (possibly automatically computed) Y component of the {{SVGAttr("stdDeviation")}} attribute of the given element.
 - {{domxref("SVGFEDropShadowElement.width")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("width")}} attribute of the given element.
 - {{domxref("SVGFEDropShadowElement.x")}} {{ReadOnlyInline}}
@@ -41,7 +36,7 @@ _This interface also inherits properties from its parent interface, {{domxref("S
 - {{domxref("SVGFEDropShadowElement.y")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("y")}} attribute of the given element.
 
-## Methods
+## Instance methods
 
 _This interface also inherits methods of its parent, {{domxref("SVGElement")}}._
 

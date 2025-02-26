@@ -2,16 +2,10 @@
 title: CountQueuingStrategy
 slug: Web/API/CountQueuingStrategy
 page-type: web-api-interface
-tags:
-  - API
-  - CountQueuingStrategy
-  - Experimental
-  - Interface
-  - Reference
-  - Streams
 browser-compat: api.CountQueuingStrategy
 ---
-{{SeeCompatTable}}{{APIRef("Streams")}}
+
+{{APIRef("Streams")}}{{AvailableInWorkers}}
 
 The **`CountQueuingStrategy`** interface of the [Streams API](/en-US/docs/Web/API/Streams_API) provides a built-in chunk counting queuing strategy that can be used when constructing streams.
 
@@ -20,32 +14,36 @@ The **`CountQueuingStrategy`** interface of the [Streams API](/en-US/docs/Web/AP
 - {{domxref("CountQueuingStrategy.CountQueuingStrategy", "CountQueuingStrategy()")}}
   - : Creates a new `CountQueuingStrategy` object instance.
 
-## Properties
+## Instance properties
 
-None.
+- {{domxref("CountQueuingStrategy.highWaterMark")}} {{ReadOnlyInline}}
+  - : The total number of chunks that can be contained in the internal queue before [backpressure](/en-US/docs/Web/API/Streams_API/Concepts#backpressure) is applied.
 
-## Methods
+## Instance methods
 
 - {{domxref("CountQueuingStrategy.size()")}}
-  - : Returns `1`.
+  - : Always returns `1`.
 
 ## Examples
 
 ```js
 const queueingStrategy = new CountQueuingStrategy({ highWaterMark: 1 });
 
-const writableStream = new WritableStream({
-  // Implement the sink
-  write(chunk) {
-    // …
+const writableStream = new WritableStream(
+  {
+    // Implement the sink
+    write(chunk) {
+      // …
+    },
+    close() {
+      // …
+    },
+    abort(err) {
+      console.log("Sink error:", err);
+    },
   },
-  close() {
-    // …
-  },
-  abort(err) {
-    console.log("Sink error:", err);
-  }
-}, queueingStrategy);
+  queueingStrategy,
+);
 
 const size = queueingStrategy.size();
 ```
@@ -57,3 +55,9 @@ const size = queueingStrategy.size();
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("Streams API", "Streams API", "", "nocode")}}
+- {{domxref("CountQueuingStrategy.CountQueuingStrategy", "CountQueuingStrategy()")}} constructor
+- [Internal queues and queuing strategies](/en-US/docs/Web/API/Streams_API/Concepts#internal_queues_and_queuing_strategies)

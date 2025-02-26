@@ -1,41 +1,34 @@
 ---
 title: runtime.getBackgroundPage()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/getBackgroundPage
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - getBackgroundPage
-  - runtime
+page-type: webextension-api-function
 browser-compat: webextensions.api.runtime.getBackgroundPage
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 Retrieves the {{DOMxRef("Window")}} object for the background page running inside the current extension. If the background page is non-persistent (an event page) and it is not running, the background page is started.
 
-This provides a convenient way for other privileged extension scripts to get direct access to the background script's scope. This enables them to access variables or call functions defined in that scope. "Privileged script" here includes scripts running in [options pages](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#options_pages), or scripts running in [browser action](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#browser_actions_2) or [page action](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#page_actions) popups, but does _not_ include [content scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#content_scripts).
+This provides a convenient way for other privileged extension scripts to get direct access to the background script's scope. This enables them to access variables or call functions defined in that scope. "Privileged script" here includes scripts running in [options pages](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages), or scripts running in [browser action](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button) or [page action](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions) popups, but does _not_ include [content scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts).
 
 Note that variables that were declared using [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const) or [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let) do not appear in the `Window` object returned by this function.
 
-**Also note that this method cannot be used in a private window in Firefox**—it always returns `null`. For more info see [related bug at bugzilla](https://bugzilla.mozilla.org/show_bug.cgi?id=1329304).
+**Also note that this method cannot be used in a private window in Firefox**—it always returns `null`. For more info see [related bug at bugzilla](https://bugzil.la/1329304).
 
 If the background page is an event page, the system will ensure it is loaded before resolving the promise.
 
 This is an asynchronous function that returns a {{JSxRef("Promise")}}.
 
-> **Note:** In Firefox, this method cannot be used in Private Browsing mode — it always returns `null`. For more info see {{bug(1329304)}}.
+> [!NOTE]
+> In Firefox, this method cannot be used in Private Browsing mode — it always returns `null`. For more info see [Firefox bug 1329304](https://bugzil.la/1329304).
 >
-> In Chrome, this method is available only with persistent background pages, which are not available in Manifest V3, so consider using Manifest V2. See the [this](https://developer.chrome.com/docs/extensions/mv3/migrating_to_service_workers/) for details.
+> In Chrome, this method is available only with persistent background pages, which are not available in Manifest V3, so consider using Manifest V2. See the [this](https://developer.chrome.com/docs/extensions/develop/migrate/to-service-workers) for details.
 >
 > Consider using {{WebExtAPIRef("runtime.sendMessage","runtime.sendMessage()")}} or {{WebExtAPIRef("runtime.connect","runtime.connect()")}}, which work correctly in both scenarios above.
 
 ## Syntax
 
-```js
+```js-nolint
 let gettingPage = browser.runtime.getBackgroundPage()
 ```
 
@@ -63,7 +56,7 @@ function foo() {
 }
 ```
 
-A script running in a [popup](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#browser_actions_2) can call this function directly like this:
+A script running in a [popup](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups) can call this function directly like this:
 
 ```js
 // popup.js
@@ -82,11 +75,11 @@ getting.then(onGot, onError);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/runtime/#method-getBackgroundPage) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#method-getBackgroundPage) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -113,4 +106,4 @@ getting.then(onGot, onError);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

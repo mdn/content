@@ -1,30 +1,28 @@
 ---
-title: UIEvent.which
+title: "UIEvent: which property"
+short-title: which
 slug: Web/API/UIEvent/which
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - UIEvent
-  - Property
-  - Read-only
-  - Reference
+status:
+  - deprecated
 browser-compat: api.UIEvent.which
 ---
-{{APIRef("UI Events")}} {{Non-standard_header}}
+
+{{APIRef("UI Events")}}{{Deprecated_Header}}
 
 The **`UIEvent.which`** read-only property of the {{domxref("UIEvent")}} interface returns a number that indicates which button was pressed on the mouse, or the numeric `keyCode` or the character code (`charCode`) of the key pressed on the keyboard.
 
 ## Value
 
-### Value for KeyboardEvent {{non-standard_inline}}
+### Value for KeyboardEvent {{Non-standard_Inline}}
 
 For {{domxref("KeyboardEvent")}}, `event.which` contains the numeric code for a particular key pressed, depending on whether an alphanumeric or non-alphanumeric key was pressed.
 Please see deprecated {{domxref("KeyboardEvent.charCode")}} and {{domxref("KeyboardEvent.keyCode")}} for more details.
 
-> **Note:** Consider {{domxref("KeyboardEvent.key")}} or {{domxref("KeyboardEvent.code")}} for new code.
+> [!NOTE]
+> Consider {{domxref("KeyboardEvent.key")}} or {{domxref("KeyboardEvent.code")}} for new code.
 
-### Value for MouseEvent {{non-standard_inline}}
+### Value for MouseEvent {{Non-standard_Inline}}
 
 For {{domxref("MouseEvent")}}, `event.which` is a number representing a given button:
 
@@ -36,45 +34,40 @@ For {{domxref("MouseEvent")}}, `event.which` is a number representing a given bu
 For a mouse configured for left-handed use, the button actions are reversed.
 In this case, the values are read from right to left.
 
-> **Note:** Consider {{domxref("MouseEvent.button")}} for new code.
+> [!NOTE]
+> Consider {{domxref("MouseEvent.button")}} for new code.
 
 ## Examples
 
 ```html
-<html>
-<head>
-<title>charCode/keyCode/which example</title>
+<html lang="en">
+  <head>
+    <title>charCode/keyCode/which example</title>
 
-<script type="text/javascript">
+    <script>
+      function showKeyPress(evt) {
+        alert(
+          `onkeypress handler:\n` +
+            `keyCode property: ${evt.keyCode}\n` +
+            `which property: ${evt.which}\n` +
+            `charCode property: ${evt.charCode}\n` +
+            `Character Key Pressed: ${String.fromCharCode(evt.charCode)}\n`,
+        );
+      }
 
-function showKeyPress(evt) {
-alert("onkeypress handler: \n"
-      + "keyCode property: " + evt.keyCode + "\n"
-      + "which property: " + evt.which + "\n"
-      + "charCode property: " + evt.charCode + "\n"
-      + "Character Key Pressed: "
-      + String.fromCharCode(evt.charCode) + "\n"
-     );
-}
+      function keyDown(evt) {
+        alert(
+          `onkeydown handler:\n` +
+            `keyCode property: ${evt.keyCode}\n` +
+            `which property: ${evt.which}\n`,
+        );
+      }
+    </script>
+  </head>
 
-function keyDown(evt) {
-alert("onkeydown handler: \n"
-      + "keyCode property: " + evt.keyCode + "\n"
-      + "which property: " + evt.which + "\n"
-     );
-}
-
-</script>
-</head>
-
-<body
- onkeypress="showKeyPress(event);"
- onkeydown="keyDown(event);"
->
-
-<p>Please press any key.</p>
-
-</body>
+  <body onkeypress="showKeyPress(event);" onkeydown="keyDown(event);">
+    <p>Please press any key.</p>
+  </body>
 </html>
 ```
 

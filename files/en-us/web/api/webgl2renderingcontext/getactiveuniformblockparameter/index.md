@@ -1,16 +1,12 @@
 ---
-title: WebGL2RenderingContext.getActiveUniformBlockParameter()
+title: "WebGL2RenderingContext: getActiveUniformBlockParameter() method"
+short-title: getActiveUniformBlockParameter()
 slug: Web/API/WebGL2RenderingContext/getActiveUniformBlockParameter
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL2
 browser-compat: api.WebGL2RenderingContext.getActiveUniformBlockParameter
 ---
-{{APIRef("WebGL")}}
+
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The
 **`WebGL2RenderingContext.getActiveUniformBlockParameter()`**
@@ -19,7 +15,7 @@ information about an active uniform block within a {{domxref("WebGLProgram")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 getActiveUniformBlockParameter(program, uniformBlockIndex, pname)
 ```
 
@@ -67,7 +63,7 @@ error occurs, [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) is r
 const blockSize = gl.getActiveUniformBlockParameter(
   program,
   blockIndex,
-  gl.UNIFORM_BLOCK_DATA_SIZE
+  gl.UNIFORM_BLOCK_DATA_SIZE,
 );
 ```
 

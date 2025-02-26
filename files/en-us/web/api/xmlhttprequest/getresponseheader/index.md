@@ -1,23 +1,12 @@
 ---
-title: XMLHttpRequest.getResponseHeader()
+title: "XMLHttpRequest: getResponseHeader() method"
+short-title: getResponseHeader()
 slug: Web/API/XMLHttpRequest/getResponseHeader
 page-type: web-api-instance-method
-tags:
-  - API
-  - Examine Header
-  - Get Header
-  - HTTP
-  - HTTP Header
-  - Headers
-  - Method
-  - Reference
-  - XHR
-  - XHR Header
-  - XMLHttpRequest
-  - getResponseHeader
 browser-compat: api.XMLHttpRequest.getResponseHeader
 ---
-{{APIRef('XMLHttpRequest')}}
+
+{{APIRef("XMLHttpRequest API")}} {{AvailableInWorkers("window_and_worker_except_service")}}
 
 The {{DOMxRef("XMLHttpRequest")}} method
 **`getResponseHeader()`** returns the string containing the
@@ -28,7 +17,8 @@ with the same name, then their values are returned as a single concatenated stri
 where each value is separated from the previous one by a pair of comma and space. The
 `getResponseHeader()` method returns the value as a UTF byte sequence.
 
-> **Note:** The search for the header name is case-insensitive.
+> [!NOTE]
+> The search for the header name is case-insensitive.
 
 If you need to get the raw string of all of the headers, use the
 {{DOMxRef("XMLHttpRequest.getAllResponseHeaders", "getAllResponseHeaders()")}} method,
@@ -36,7 +26,7 @@ which returns the entire raw header string.
 
 ## Syntax
 
-```js
+```js-nolint
 getResponseHeader(headerName)
 ```
 
@@ -55,25 +45,25 @@ response.
 ## Examples
 
 In this example, a request is created and sent, and a {{domxref("XMLHttpRequest/readystatechange_event", "readystatechange")}}
-handler is established to look for the {{DOMxRef("XMLHttpRequest.readyState",
-  "readyState")}} to indicate that the headers have been received; when that is the case,
+handler is established to look for the {{DOMxRef("XMLHttpRequest.readyState", "readyState")}}
+to indicate that the headers have been received; when that is the case,
 the value of the {{httpheader("Content-Type")}} header is fetched. If the
 `Content-Type` isn't the desired value, the {{DOMxRef("XMLHttpRequest")}} is
 canceled by calling {{DOMxRef("XMLHttpRequest.abort", "abort()")}}.
 
 ```js
 const client = new XMLHttpRequest();
-client.open("GET", "unicorns-are-teh-awesome.txt", true);
+client.open("GET", "unicorns-are-awesome.txt", true);
 client.send();
 
-client.onreadystatechange = function() {
-  if(this.readyState == this.HEADERS_RECEIVED) {
+client.onreadystatechange = () => {
+  if (client.readyState === client.HEADERS_RECEIVED) {
     const contentType = client.getResponseHeader("Content-Type");
     if (contentType !== my_expected_type) {
       client.abort();
     }
   }
-}
+};
 ```
 
 ## Specifications
@@ -86,9 +76,8 @@ client.onreadystatechange = function() {
 
 ## See also
 
-- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
 - [HTTP headers](/en-US/docs/Web/HTTP/Headers)
 - {{DOMxRef("XMLHttpRequest.getAllResponseHeaders", "getAllResponseHeaders()")}}
 - {{DOMxRef("XMLHttpRequest.response", "response")}}
-- Setting request headers: {{DOMxRef("XMLHttpRequest.setRequestHeader",
-    "setRequestHeader()")}}
+- Setting request headers: {{DOMxRef("XMLHttpRequest.setRequestHeader", "setRequestHeader()")}}

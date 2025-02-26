@@ -1,24 +1,23 @@
 ---
 title: text-anchor
 slug: Web/SVG/Attribute/text-anchor
-tags:
-  - SVG
-  - SVG Attribute
-browser-compat: svg.attributes.presentation.text-anchor
+page-type: svg-attribute
+browser-compat: svg.global_attributes.text-anchor
 ---
+
 {{SVGRef}}
 
 The **`text-anchor`** attribute is used to align (start-, middle- or end-alignment) a string of pre-formatted text or auto-wrapped text where the wrapping area is determined from the {{cssxref("inline-size")}} property relative to a given point.
 
 This attribute is not applicable to other types of auto-wrapped text. For those cases you should use {{cssxref("text-align")}}. For multi-line text, the alignment takes place for each line.
 
-The `text-anchor` attribute is applied to each individual text chunk within a given {{SVGElement("text")}} element. Each text chunk has an initial current text position, which represents the point in the user coordinate system resulting from (depending on context) application of the {{SVGAttr("x")}} and {{SVGAttr("y")}} attributes on the `<text>` element, any `x` or `y` attribute values on a {{SVGElement("tspan")}}, {{SVGElement("tref")}} or {{SVGElement("altGlyph")}} element assigned explicitly to the first rendered character in a text chunk, or determination of the initial current text position for a {{SVGElement("textPath")}} element.
+The `text-anchor` attribute is applied to each individual text chunk within a given {{SVGElement("text")}} element. Each text chunk has an initial current text position, which represents the point in the user coordinate system resulting from (depending on context) application of the {{SVGAttr("x")}} and {{SVGAttr("y")}} attributes on the `<text>` element, any `x` or `y` attribute values on a {{SVGElement("tspan")}} or {{SVGElement("tref")}} element assigned explicitly to the first rendered character in a text chunk, or determination of the initial current text position for a {{SVGElement("textPath")}} element.
 
-> **Note:** As a presentation attribute, `text-anchor` can be used as a CSS property.
+> [!NOTE]
+> As a presentation attribute, `text-anchor` also has a CSS property counterpart: {{cssxref("text-anchor")}}. When both are specified, the CSS property takes priority.
 
 You can use this attribute with the following SVG elements:
 
-- {{SVGElement("altGlyph")}}
 - {{SVGElement("text")}}
 - {{SVGElement("textPath")}}
 - {{SVGElement("tref")}}
@@ -27,7 +26,9 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 ```
@@ -35,7 +36,9 @@ html, body, svg {
 ```html
 <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
   <!-- Materialization of anchors -->
-  <path d="M60,15 L60,110 M30,40 L90,40 M30,75 L90,75 M30,110 L90,110" stroke="grey" />
+  <path
+    d="M60,15 L60,110 M30,40 L90,40 M30,75 L90,75 M30,110 L90,110"
+    stroke="grey" />
 
   <!-- Anchors in action -->
   <text text-anchor="start" x="60" y="40">A</text>
@@ -47,11 +50,13 @@ html, body, svg {
   <circle cx="60" cy="75" r="3" fill="red" />
   <circle cx="60" cy="110" r="3" fill="red" />
 
-  <style><![CDATA[
-  text {
-    font: bold 36px Verdana, Helvetica, Arial, sans-serif;
-  }
-  ]]></style>
+  <style>
+    <![CDATA[
+      text {
+        font: bold 36px Verdana, Helvetica, Arial, sans-serif;
+      }
+      ]]>
+  </style>
 </svg>
 ```
 
@@ -90,3 +95,8 @@ html, body, svg {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- SVG {{SVGElement("text")}} element
+- CSS {{cssxref('text-anchor')}} property

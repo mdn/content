@@ -1,34 +1,30 @@
 ---
-title: HTMLElement.accessKeyLabel
+title: "HTMLElement: accessKeyLabel property"
+short-title: accessKeyLabel
 slug: Web/API/HTMLElement/accessKeyLabel
 page-type: web-api-instance-property
 browser-compat: api.HTMLElement.accessKeyLabel
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLElement.accessKeyLabel`**
 read-only property returns a string containing the element's
 browser-assigned access key (if any); otherwise it returns an empty string.
 
-## Syntax
-
-```js
-label = element.accessKeyLabel
-```
-
 ## Example
 
 ### JavaScript
 
 ```js
-const btn = document.getElementById('btn1');
+const btn = document.getElementById("btn1");
 const shortcutLabel = btn.accessKeyLabel || btn.accessKey;
 btn.title += ` [${shortcutLabel.toUpperCase()}]`;
 
-btn.onclick = function () {
-  const feedback = document.createElement('output');
-  feedback.textContent = 'Pressed!';
-  btn.insertAdjacentElement('afterend', feedback);
+btn.onclick = () => {
+  const feedback = document.createElement("output");
+  feedback.textContent = "Pressed!";
+  btn.insertAdjacentElement("afterend", feedback);
 };
 ```
 

@@ -1,15 +1,11 @@
 ---
-title: 'HTMLMediaElement: timeupdate event'
+title: "HTMLMediaElement: timeupdate event"
+short-title: timeupdate
 slug: Web/API/HTMLMediaElement/timeupdate_event
 page-type: web-api-event
-tags:
-  - Audio
-  - Event
-  - HTMLMediaElement
-  - Reference
-  - Video
 browser-compat: api.HTMLMediaElement.timeupdate_event
 ---
+
 {{APIRef("HTMLMediaElement")}}
 
 The `timeupdate` event is fired when the time indicated by the `currentTime` attribute has been updated.
@@ -23,9 +19,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('timeupdate', (event) => {});
+addEventListener("timeupdate", (event) => {});
 
-ontimeupdate = (event) => { };
+ontimeupdate = (event) => {};
 ```
 
 ## Event type
@@ -39,20 +35,20 @@ These examples add an event listener for the HTMLMediaElement's `timeupdate` eve
 Using `addEventListener()`:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
-video.addEventListener('timeupdate', (event) => {
-  console.log('The currentTime attribute has been updated. Again.');
+video.addEventListener("timeupdate", (event) => {
+  console.log("The currentTime attribute has been updated. Again.");
 });
 ```
 
 Using the `ontimeupdate` event handler property:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
 video.ontimeupdate = (event) => {
-  console.log('The currentTime attribute has been updated. Again.');
+  console.log("The currentTime attribute has been updated. Again.");
 };
 ```
 
@@ -76,7 +72,6 @@ video.ontimeupdate = (event) => {
 - The HTMLMediaElement {{domxref("HTMLMediaElement.canplay_event", 'canplay')}} event
 - The HTMLMediaElement {{domxref("HTMLMediaElement.canplaythrough_event", 'canplaythrough')}} event
 - The HTMLMediaElement {{domxref("HTMLMediaElement.durationchange_event", 'durationchange')}} event
-- The HTMLMediaElement {{domxref("HTMLMediaElement.timeupdate_event", 'timeupdate')}} event
 - The HTMLMediaElement {{domxref("HTMLMediaElement.play_event", 'play')}} event
 - The HTMLMediaElement {{domxref("HTMLMediaElement.pause_event", 'pause')}} event
 - The HTMLMediaElement {{domxref("HTMLMediaElement.ratechange_event", 'ratechange')}} event

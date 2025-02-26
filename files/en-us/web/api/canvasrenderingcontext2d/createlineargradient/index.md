@@ -1,16 +1,11 @@
 ---
-title: CanvasRenderingContext2D.createLinearGradient()
+title: "CanvasRenderingContext2D: createLinearGradient() method"
+short-title: createLinearGradient()
 slug: Web/API/CanvasRenderingContext2D/createLinearGradient
 page-type: web-api-instance-method
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Gradients
-  - Method
-  - Reference
 browser-compat: api.CanvasRenderingContext2D.createLinearGradient
 ---
+
 {{APIRef}}
 
 The
@@ -18,20 +13,21 @@ The
 method of the Canvas 2D API creates a gradient along the line connecting two given
 coordinates.
 
-![](mdn-canvas-lineargradient.png)
+![The gradient transitions colors along the gradient line, starting at point x0, y0 and going to x1, y1, even if those points extend the gradient line beyond the edges of the element on which the gradient is drawn.](mdn-canvas-lineargradient.png)
 
 This method returns a linear {{domxref("CanvasGradient")}}. To be applied to a shape,
 the gradient must first be assigned to the
 {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}} or
 {{domxref("CanvasRenderingContext2D.strokeStyle", "strokeStyle")}} properties.
 
-> **Note:** Gradient coordinates are global, i.e., relative to the current
+> [!NOTE]
+> Gradient coordinates are global, i.e., relative to the current
 > coordinate space. When applied to a shape, the coordinates are NOT relative to the
 > shape's coordinates.
 
 ## Syntax
 
-```js
+```js-nolint
 createLinearGradient(x0, y0, x1, y1)
 ```
 
@@ -51,8 +47,12 @@ the start and end points of the gradient line.
 
 ### Return value
 
-- {{domxref("CanvasGradient")}}
-  - : A linear `CanvasGradient` initialized with the specified line.
+A linear {{domxref("CanvasGradient")}} initialized with the specified line.
+
+### Exceptions
+
+- `NotSupportedError` {{domxref("DOMException")}}
+  - : Thrown when non-finite values are passed as parameters.
 
 ## Examples
 
@@ -72,18 +72,18 @@ context, and is rendered to a filled rectangle.
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 // Create a linear gradient
 // The start gradient point is at x=20, y=0
 // The end gradient point is at x=220, y=0
-const gradient = ctx.createLinearGradient(20,0, 220,0);
+const gradient = ctx.createLinearGradient(20, 0, 220, 0);
 
 // Add three color stops
-gradient.addColorStop(0, 'green');
-gradient.addColorStop(.5, 'cyan');
-gradient.addColorStop(1, 'green');
+gradient.addColorStop(0, "green");
+gradient.addColorStop(0.5, "cyan");
+gradient.addColorStop(1, "green");
 
 // Set the fill style and draw a rectangle
 ctx.fillStyle = gradient;
@@ -101,11 +101,6 @@ ctx.fillRect(20, 20, 200, 100);
 ## Browser compatibility
 
 {{Compat}}
-
-### Gecko-specific notes
-
-- Starting with Gecko 2.0 {{geckoRelease("2.0")}}, specifying non-finite values now
-  throws `NOT_SUPPORTED_ERR` instead of `SYNTAX_ERR`.
 
 ## See also
 

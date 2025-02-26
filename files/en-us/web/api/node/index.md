@@ -2,11 +2,9 @@
 title: Node
 slug: Web/API/Node
 page-type: web-api-interface
-tags:
-  - Interface
-  - Reference
 browser-compat: api.Node
 ---
+
 {{APIRef("DOM")}}
 
 The {{Glossary("DOM")}} **`Node`** interface is an abstract base
@@ -29,10 +27,9 @@ exception.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
-_In addition to the properties below, `Node` inherits properties from its
-parent, {{DOMxRef("EventTarget")}}_.
+_In addition to the properties below, `Node` inherits properties from its parent, {{DOMxRef("EventTarget")}}_.
 
 - {{DOMxRef("Node.baseURI")}} {{ReadOnlyInline}}
   - : Returns a string representing the base URL of the document
@@ -59,24 +56,25 @@ parent, {{DOMxRef("EventTarget")}}_.
   - : Returns a string containing the name of the `Node`. The
     structure of the name will differ with the node type. E.g. An
     {{DOMxRef("HTMLElement")}} will contain the name of the corresponding tag, like
-    `'audio'` for an {{DOMxRef("HTMLAudioElement")}}, a {{DOMxRef("Text")}}
+    `'AUDIO'` for an {{DOMxRef("HTMLAudioElement")}}, a {{DOMxRef("Text")}}
     node will have the `'#text'` string, or a {{DOMxRef("Document")}} node will
     have the `'#document'` string.
 - {{DOMxRef("Node.nodeType")}} {{ReadOnlyInline}}
+
   - : Returns an `unsigned short` representing the type of the node. Possible
     values are:
 
-    | Name                                                 | Value |
-    | ---------------------------------------------------- | ----- |
-    | `ELEMENT_NODE`                                       | `1`   |
-    | `ATTRIBUTE_NODE`                                     | `2`   |
-    | `TEXT_NODE`                                          | `3`   |
-    | `CDATA_SECTION_NODE`                                 | `4`   |
-    | `PROCESSING_INSTRUCTION_NODE`                        | `7`   |
-    | `COMMENT_NODE`                                       | `8`   |
-    | `DOCUMENT_NODE`                                      | `9`   |
-    | `DOCUMENT_TYPE_NODE`                                 | `10`  |
-    | `DOCUMENT_FRAGMENT_NODE`                             | `11`  |
+    | Name                          | Value |
+    | ----------------------------- | ----- |
+    | `ELEMENT_NODE`                | `1`   |
+    | `ATTRIBUTE_NODE`              | `2`   |
+    | `TEXT_NODE`                   | `3`   |
+    | `CDATA_SECTION_NODE`          | `4`   |
+    | `PROCESSING_INSTRUCTION_NODE` | `7`   |
+    | `COMMENT_NODE`                | `8`   |
+    | `DOCUMENT_NODE`               | `9`   |
+    | `DOCUMENT_TYPE_NODE`          | `10`  |
+    | `DOCUMENT_FRAGMENT_NODE`      | `11`  |
 
 - {{DOMxRef("Node.nodeValue")}}
   - : Returns / Sets the value of the current node.
@@ -97,31 +95,26 @@ parent, {{DOMxRef("EventTarget")}}_.
 - {{DOMxRef("Node.textContent")}}
   - : Returns / Sets the textual content of an element and all its descendants.
 
-## Methods
+## Instance methods
 
-_In addition to the methods below, `Node` inherits methods from its
-parent, {{DOMxRef("EventTarget")}}._
+_In addition to the methods below, `Node` inherits methods from its parent, {{DOMxRef("EventTarget")}}._
 
 - {{DOMxRef("Node.appendChild()")}}
-  - : Adds the specified `childNode` argument as the last child to
-    the current node.
+  - : Adds the specified `childNode` argument as the last child to the current node.
     If the argument referenced an existing node on the DOM tree, the node will be detached
     from its current position and attached at the new position.
 - {{DOMxRef("Node.cloneNode()")}}
   - : Clone a `Node`, and optionally, all of its contents. By default, it
     clones the content of the node.
 - {{DOMxRef("Node.compareDocumentPosition()")}}
-  - : Compares the position of the current node against another node in any other
-    document.
+  - : Compares the position of the current node against another node in any other document.
 - {{DOMxRef("Node.contains()")}}
   - : Returns `true` or `false` value indicating whether or not a node is a
     descendant of the calling node.
 - {{DOMxRef("Node.getRootNode()")}}
-  - : Returns the context object's root which optionally includes the shadow root if it is
-    available.
+  - : Returns the context object's root which optionally includes the shadow root if it is available.
 - {{DOMxRef("Node.hasChildNodes()")}}
-  - : Returns a boolean value indicating whether or not the element has any child
-    nodes.
+  - : Returns a boolean value indicating whether or not the element has any child nodes.
 - {{DOMxRef("Node.insertBefore()")}}
   - : Inserts a `Node` before the reference node as a child of a specified
     parent node.
@@ -152,13 +145,6 @@ parent, {{DOMxRef("EventTarget")}}._
   - : Replaces one child `Node` of the current one with the second one given
     in parameter.
 
-### Obsolete methods
-
-- {{DOMxRef("Node.isSupported()")}} {{deprecated_inline}}
-  - : Returns `true` or `false` containing the result of a test whether the DOM
-    implementation implements a specific feature and this feature is supported by the
-    specific node.
-
 ## Examples
 
 ### Remove all children nested within a node
@@ -168,7 +154,7 @@ This function remove each first child of an element, until there are none left.
 ```js
 function removeAllChildren(element) {
   while (element.firstChild) {
-    element.removeChild(element.firstChild)
+    element.removeChild(element.firstChild);
   }
 }
 ```
@@ -176,7 +162,7 @@ function removeAllChildren(element) {
 Using this function is a single call. Here we empty the body of the document:
 
 ```js
-removeAllChildren(document.body)
+removeAllChildren(document.body);
 ```
 
 An alternative could be to set the textContent to the empty string: `document.body.textContent = ""`.
@@ -189,22 +175,21 @@ a root node (including the root itself):
 ```js
 function eachNode(rootNode, callback) {
   if (!callback) {
-    const nodes = []
-    eachNode(rootNode, function(node) {
-      nodes.push(node)
-    })
-    return nodes
+    const nodes = [];
+    eachNode(rootNode, (node) => {
+      nodes.push(node);
+    });
+    return nodes;
   }
 
-  if (false === callback(rootNode)) {
-    return false
+  if (callback(rootNode) === false) {
+    return false;
   }
 
   if (rootNode.hasChildNodes()) {
-    const nodes = rootNode.childNodes
-    for (let i = 0, l = nodes.length; i < l; ++i) {
-      if (false === eachNode(nodes[i], callback)) {
-        return
+    for (const node of rootNode.childNodes) {
+      if (eachNode(node, callback) === false) {
+        return;
       }
     }
   }
@@ -240,36 +225,32 @@ We use a wrapper function named `grep` to do the searching:
 
 ```js
 function grep(parentNode, pattern) {
-  let matches = []
-  let endScan = false
+  let matches = [];
+  let endScan = false;
 
-  eachNode(parentNode, function(node){
+  eachNode(parentNode, (node) => {
     if (endScan) {
-      return false
+      return false;
     }
 
     // Ignore anything which isn't a text node
     if (node.nodeType !== Node.TEXT_NODE) {
-      return
+      return;
     }
 
-    if (typeof pattern === "string") {
-      if (-1 !== node.textContent.indexOf(pattern)) {
-        matches.push(node)
-      }
-    }
-    else if (pattern.test(node.textContent)) {
+    if (typeof pattern === "string" && node.textContent.includes(pattern)) {
+      matches.push(node);
+    } else if (pattern.test(node.textContent)) {
       if (!pattern.global) {
-        endScan = true
-        matches = node
-      }
-      else {
-        matches.push(node)
+        endScan = true;
+        matches = node;
+      } else {
+        matches.push(node);
       }
     }
-  })
+  });
 
-  return matches
+  return matches;
 }
 ```
 

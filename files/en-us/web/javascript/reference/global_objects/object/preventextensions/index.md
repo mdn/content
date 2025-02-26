@@ -1,25 +1,36 @@
 ---
 title: Object.preventExtensions()
 slug: Web/JavaScript/Reference/Global_Objects/Object/preventExtensions
-tags:
-  - ECMAScript 5
-  - JavaScript
-  - JavaScript 1.8.5
-  - Method
-  - Object
+page-type: javascript-static-method
 browser-compat: javascript.builtins.Object.preventExtensions
 ---
+
 {{JSRef}}
 
-The **`Object.preventExtensions()`** method prevents new
+The **`Object.preventExtensions()`** static method prevents new
 properties from ever being added to an object (i.e. prevents future extensions to the
 object). It also prevents the object's prototype from being re-assigned.
 
-{{EmbedInteractiveExample("pages/js/object-preventextensions.html")}}
+{{InteractiveExample("JavaScript Demo: Object.preventExtensions()")}}
+
+```js interactive-example
+const object1 = {};
+
+Object.preventExtensions(object1);
+
+try {
+  Object.defineProperty(object1, "property1", {
+    value: 42,
+  });
+} catch (e) {
+  console.log(e);
+  // Expected output: TypeError: Cannot define property property1, object is not extensible
+}
+```
 
 ## Syntax
 
-```js
+```js-nolint
 Object.preventExtensions(obj)
 ```
 
@@ -62,26 +73,26 @@ obj === obj2; // true
 
 // Objects are extensible by default.
 const empty = {};
-Object.isExtensible(empty); // === true
+Object.isExtensible(empty); // true
 
 // They can be made un-extensible
 Object.preventExtensions(empty);
-Object.isExtensible(empty); // === false
+Object.isExtensible(empty); // false
 
 // Object.defineProperty throws when adding
 // a new property to a non-extensible object.
 const nonExtensible = { removable: true };
 Object.preventExtensions(nonExtensible);
-Object.defineProperty(nonExtensible, 'new', {
-  value: 8675309
+Object.defineProperty(nonExtensible, "new", {
+  value: 8675309,
 }); // throws a TypeError
 
 // In strict mode, attempting to add new properties
 // to a non-extensible object throws a TypeError.
 function fail() {
-  'use strict';
+  "use strict";
   // throws a TypeError
-  nonExtensible.newProperty = 'FAIL';
+  nonExtensible.newProperty = "FAIL";
 }
 fail();
 ```
@@ -91,14 +102,12 @@ A non-extensible object's prototype is immutable:
 ```js
 const fixed = Object.preventExtensions({});
 // throws a 'TypeError'.
-fixed.__proto__ = { oh: 'hai' };
+fixed.__proto__ = { oh: "hai" };
 ```
 
-### Non-object coercion
+### Non-object argument
 
-In ES5, if the argument to this method is not an object (a primitive), then it will
-cause a {{jsxref("TypeError")}}. In ES2015, a non-object argument will be treated as if
-it was a non-extensible ordinary object, return it.
+In ES5, if the argument to this method is not an object (a primitive), then it will cause a {{jsxref("TypeError")}}. In ES2015, a non-object argument will be returned as-is without any errors, since primitives are already, by definition, immutable.
 
 ```js
 Object.preventExtensions(1);

@@ -1,16 +1,10 @@
 ---
 title: mask-border-repeat
 slug: Web/CSS/mask-border-repeat
-tags:
-  - CSS
-  - CSS Masking
-  - CSS Property
-  - NeedsCompatTable
-  - NeedsExample
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.mask-border-repeat
 ---
+
 {{CSSRef}}
 
 The **`mask-border-repeat`** [CSS](/en-US/docs/Web/CSS) property sets how the [edge regions](/en-US/docs/Web/CSS/border-image-slice#edge-regions) of a source image are adjusted to fit the dimensions of an element's [mask border](/en-US/docs/Web/CSS/mask-border).
@@ -24,7 +18,7 @@ mask-border-repeat: repeat;
 mask-border-repeat: round;
 mask-border-repeat: space;
 
-/* vertical | horizontal */
+/* top and bottom | left and right */
 mask-border-repeat: round stretch;
 
 /* Global values */
@@ -75,7 +69,8 @@ Chromium-based browsers support an outdated version of this property — `mask-b
 -webkit-mask-box-image-repeat: round;
 ```
 
-> **Note:** The [`mask-border`](/en-US/docs/Web/CSS/mask-border) page features a working example (using the out-of-date prefixed border mask properties supported in Chromium), so you can get an idea of the effect.
+> [!NOTE]
+> The [`mask-border`](/en-US/docs/Web/CSS/mask-border) page features a working example (using the out-of-date prefixed border mask properties supported in Chromium), so you can get an idea of the effect.
 
 ## Specifications
 

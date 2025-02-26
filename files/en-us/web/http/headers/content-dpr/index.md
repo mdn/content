@@ -1,20 +1,25 @@
 ---
 title: Content-DPR
 slug: Web/HTTP/Headers/Content-DPR
-tags:
-  - Content-DPR
-  - Client hints
-  - HTTP
-  - HTTP Header
-  - Response header
-  - Deprecated
-  - Non-standard
-  - Experimental
+page-type: http-header
+status:
+  - deprecated
+  - non-standard
 browser-compat: http.headers.Content-DPR
 ---
-{{HTTPSidebar}} {{deprecated_header}}{{securecontext_header}}
 
-The **`Content-DPR`** response header is used to confirm the _image_ device to pixel ratio in requests where the screen {{HTTPHeader("DPR")}} [client hint](/en-US/docs/Web/HTTP/Client_hints) was used to select an image resource.
+{{HTTPSidebar}}{{deprecated_header}}{{securecontext_header}}{{Non-standard_header}}
+
+The HTTP **`Content-DPR`** {{Glossary("response header")}} is used to confirm the _image_ device to pixel ratio (DPR) in requests where the screen {{HTTPHeader("DPR")}} client hint was used to select an image resource.
+
+> [!NOTE]
+> The `Content-DPR` header was removed from the client hints specification in [draft-ietf-httpbis-client-hints-07](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-client-hints-07).
+> The [Responsive Image Client Hints](https://wicg.github.io/responsive-image-client-hints/) specification proposes to replace this header by specifying intrinsic resolution/dimensions in EXIF metadata.
+
+If the `DPR` client hint is used to select an image, the server must specify `Content-DPR` in the response.
+If the value in `Content-DPR` is different from the {{HTTPHeader("DPR")}} value in the request (i.e., image DPR is not the same as screen DPR), the client must use the `Content-DPR` for determining intrinsic image size and scaling the image.
+
+If the `Content-DPR` header appears more than once in a message, the last occurrence is used.
 
 <table class="properties">
   <tbody>
@@ -26,29 +31,21 @@ The **`Content-DPR`** response header is used to confirm the _image_ device to p
       </td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>no</td>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
+      <td>No</td>
     </tr>
     <tr>
       <th scope="row">
         {{Glossary("CORS-safelisted response header")}}
       </th>
-      <td>no</td>
+      <td>No</td>
     </tr>
   </tbody>
 </table>
 
-If the {{HTTPHeader("DPR")}} client hint is used to select an image the server must specify `Content-DPR` in the response. If the value in `Content-DPR` is different from the {{HTTPHeader("DPR")}} value in the request (i.e. image DPR is not the same as screen DPR) then the client must use the `Content-DPR` for determining intrinsic image size and scaling the image.
-
-If the `Content-DPR` header appears more than once in a message the last occurrence is used.
-
-> **Note:**
->
-> - `Content-DPR` was removed from the client hints specification in [draft-ietf-httpbis-client-hints-07](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-client-hints-07). The [Responsive Image Client Hints](https://wicg.github.io/responsive-image-client-hints/) spec proposes to replace this header by specifying intrinsic resolution/dimensions in EXIF metadata.
-
 ## Syntax
 
-```
+```http
 Content-DPR: <number>
 ```
 
@@ -68,13 +65,11 @@ See the [`DPR`](/en-US/docs/Web/HTTP/Headers/DPR#examples) header example.
 
 ## See also
 
-- [Improving user privacy and developer experience with User-Agent Client Hints](https://web.dev/user-agent-client-hints/) (web.dev)
 - Device client hints
-
   - {{HTTPHeader("Device-Memory")}}
   - {{HTTPHeader("DPR")}}
   - {{HTTPHeader("Viewport-Width")}}
   - {{HTTPHeader("Width")}}
-
 - {{HTTPHeader("Accept-CH")}}
-- [HTTP Caching > Varying responses](/en-US/docs/Web/HTTP/Caching#varying_responses) and {{HTTPHeader("Vary")}}
+- [HTTP Caching: Vary](/en-US/docs/Web/HTTP/Caching#vary) and {{HTTPHeader("Vary")}}
+- [Improving user privacy and developer experience with User-Agent Client Hints](https://developer.chrome.com/docs/privacy-security/user-agent-client-hints) on developer.chrome.com (2020)

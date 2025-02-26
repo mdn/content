@@ -2,16 +2,6 @@
 title: Basic concepts behind Web Audio API
 slug: Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API
 page-type: guide
-tags:
-  - Audio
-  - Beginner
-  - Guide
-  - Introduction
-  - Media
-  - Web Audio
-  - Web Audio API
-  - concepts
-  - sound
 ---
 
 {{DefaultAPISidebar("Web Audio API")}}
@@ -30,7 +20,8 @@ Audio nodes are linked via their inputs and outputs, forming a chain that starts
 4. Choose the final destination for the audio (such as the user's computer speakers).
 5. Connect the source nodes to zero or more effect nodes and then to the chosen destination.
 
-> **Note:** The [channel notation](https://en.wikipedia.org/wiki/Surround_sound#Channel_notation) is a numeric value, such as _2.0_ or _5.1_, representing the number of audio channels available on a signal. The first number is the number of full frequency range audio channels the signal includes. The number appearing after the period indicates the number of those channels reserved for low-frequency effect (LFE) outputs; these are often called **subwoofers**.
+> [!NOTE]
+> The [channel notation](https://en.wikipedia.org/wiki/Surround_sound#Channel_notation) is a numeric value, such as _2.0_ or _5.1_, representing the number of audio channels available on a signal. The first number is the number of full frequency range audio channels the signal includes. The number appearing after the period indicates the number of those channels reserved for low-frequency effect (LFE) outputs; these are often called **subwoofers**.
 
 ![A simple box diagram with an outer box labeled Audio context and three inner boxes labeled Sources, Effects, and Destination. The three inner boxes have arrows between them pointing from left to right, indicating the flow of audio information.](webaudioapi_en.svg)
 
@@ -72,7 +63,8 @@ Let's look at a _mono_ and a _stereo_ audio buffer, each one second long at a ra
 
 When a buffer plays, you will first hear the leftmost sample frame, then the one right next to it, then the next, _and so on_, until the end of the buffer. In the case of stereo, you will hear both channels simultaneously. Sample frames are handy because they are independent of the number of channels and represent time in an ideal way for precise audio manipulation.
 
-> **Note:** To get a time in seconds from a frame count, divide the number of frames by the sample rate. To get the number of frames from the number of samples, you only need to divide the latter value by the channel count.
+> [!NOTE]
+> To get a time in seconds from a frame count, divide the number of frames by the sample rate. To get the number of frames from the number of samples, you only need to divide the latter value by the channel count.
 
 Here are a couple of simple examples:
 
@@ -81,15 +73,16 @@ const context = new AudioContext();
 const buffer = new AudioBuffer(context, {
   numberOfChannels: 2,
   length: 22050,
-  sampleRate: 44100
+  sampleRate: 44100,
 });
 ```
 
-> **Note:** In [digital audio](https://en.wikipedia.org/wiki/Digital_audio), **44,100 [Hz](https://en.wikipedia.org/wiki/Hertz)** (alternately represented as **44.1 kHz**) is a common [sampling frequency](https://en.wikipedia.org/wiki/Sampling_frequency). Why 44.1 kHz?
+> [!NOTE]
+> In [digital audio](https://en.wikipedia.org/wiki/Digital_audio), **44,100 [Hz](https://en.wikipedia.org/wiki/Hertz)** (alternately represented as **44.1 kHz**) is a common [sampling frequency](https://en.wikipedia.org/wiki/Sampling_frequency). Why 44.1 kHz?
 >
 > Firstly, because the [hearing range](https://en.wikipedia.org/wiki/Hearing_range) of human ears is roughly 20 Hz to 20,000 Hz. Via the [Nyquist–Shannon sampling theorem](https://en.wikipedia.org/wiki/Nyquist%E2%80%93Shannon_sampling_theorem), the sampling frequency must be greater than twice the maximum frequency one wishes to reproduce. Therefore, the sampling rate has to be _greater_ than 40,000 Hz.
 >
-> Secondly, signals must be [low-pass filtered](https://en.wikipedia.org/wiki/Low-pass_filter "Low-pass filter") before sampling, otherwise [aliasing](https://en.wikipedia.org/wiki/Aliasing) occurs. While an ideal low-pass filter would perfectly pass frequencies below 20 kHz (without attenuating them) and perfectly cut off frequencies above 20 kHz, in practice, a [transition band](https://en.wikipedia.org/wiki/Transition_band) is necessary, where frequencies are partly attenuated. The wider this transition band is, the easier and more economical it is to make an [anti-aliasing filter](https://en.wikipedia.org/wiki/Anti-aliasing_filter). The 44.1 kHz sampling frequency allows for a 2.05 kHz transition band.
+> Secondly, signals must be [low-pass filtered](https://en.wikipedia.org/wiki/Low-pass_filter) before sampling, otherwise [aliasing](https://en.wikipedia.org/wiki/Aliasing) occurs. While an ideal low-pass filter would perfectly pass frequencies below 20 kHz (without attenuating them) and perfectly cut off frequencies above 20 kHz, in practice, a [transition band](https://en.wikipedia.org/wiki/Transition_band) is necessary, where frequencies are partly attenuated. The wider this transition band is, the easier and more economical it is to make an [anti-aliasing filter](https://en.wikipedia.org/wiki/Anti-aliasing_filter). The 44.1 kHz sampling frequency allows for a 2.05 kHz transition band.
 
 If you use this call above, you will get a stereo buffer with two channels that, when played back on an {{domxref("AudioContext")}} running at 44100 Hz (very common, most normal sound cards run at this rate), will last for 0.5 seconds: 22,050 frames/44,100 Hz = 0.5 seconds.
 
@@ -104,13 +97,14 @@ const buffer = new AudioBuffer(context, {
 
 If you use this call, you will get a mono buffer (single-channel buffer) that, when played back on an {{domxref("AudioContext")}} running at 44,100 Hz, will be automatically _resampled_ to 44,100 Hz (and therefore yield 44,100 frames), and last for 1.0 second: 44,100 frames/44,100 Hz = 1 second.
 
-> **Note:** Audio resampling is very similar to image resizing. Say you've got a 16 x 16 image but want it to fill a 32 x 32 area. You resize (or resample) it. The result has less quality (it can be blurry or edgy, depending on the resizing algorithm), but it works, with the resized image taking up less space. Resampled audio is the same: you save space, but, in practice, you cannot correctly reproduce high-frequency content or treble sound.
+> [!NOTE]
+> Audio resampling is very similar to image resizing. Say you've got a 16 x 16 image but want it to fill a 32 x 32 area. You resize (or resample) it. The result has less quality (it can be blurry or edgy, depending on the resizing algorithm), but it works, with the resized image taking up less space. Resampled audio is the same: you save space, but, in practice, you cannot correctly reproduce high-frequency content or treble sound.
 
 ### Planar versus interleaved buffers
 
 The Web Audio API uses a planar buffer format. The left and right channels are stored like this:
 
-```
+```plain
 LLLLLLLLLLLLLLLLRRRRRRRRRRRRRRRR (for a buffer of 16 frames)
 ```
 
@@ -118,7 +112,7 @@ This structure is widespread in audio processing, making it easy to process each
 
 The alternative is to use an interleaved buffer format:
 
-```
+```plain
 LRLRLRLRLRLRLRLRLRLRLRLRLRLRLRLR (for a buffer of 16 frames)
 ```
 
@@ -209,7 +203,7 @@ When the numbers of channels of the input and the output don't match, up-mixing,
       <td><code>4</code> <em>(Quad)</em></td>
       <td>
         <em>Up-mix from stereo to quad.</em><br />The <code>L</code> and
-        <code>R </code>input channels are used for their non-surround respective
+        <code>R</code> input channels are used for their non-surround respective
         output channels (<code>L</code> and <code>R</code>). Surround output
         channels (<code>SL</code> and <code>SR</code>) are silent.<br /><code
           >output.L = input.L<br />output.R = input.R<br />output.SL = 0<br />output.SR
@@ -222,7 +216,7 @@ When the numbers of channels of the input and the output don't match, up-mixing,
       <td><code>6</code> <em>(5.1)</em></td>
       <td>
         <em>Up-mix from stereo to 5.1.</em><br />The <code>L</code> and
-        <code>R </code>input channels are used for their non-surround respective
+        <code>R</code> input channels are used for their non-surround respective
         output channels (<code>L</code> and <code>R</code>). Surround output
         channels (<code>SL</code> and <code>SR</code>), as well as the center
         (<code>C</code>) and subwoofer (<code>LFE</code>) channels, are left
@@ -239,9 +233,8 @@ When the numbers of channels of the input and the output don't match, up-mixing,
         <em>Down-mix from quad to mono</em>.<br />All four input channels
         (<code>L</code>, <code>R</code>, <code>SL</code>, and <code>SR</code>)
         are equally combined to produce the unique output channel
-        (<code>M</code>).<br /><code
-          >output.M = 0.25 * (input.L + input.R + </code
-        ><code>input.SL + input.SR</code><code>)</code>
+        (<code>M</code>).<br />
+        <code>output.M = 0.25 * (input.L + input.R + input.SL + input.SR)</code>
       </td>
     </tr>
     <tr>
@@ -252,10 +245,9 @@ When the numbers of channels of the input and the output don't match, up-mixing,
         (<code>L</code> and <code>SL</code>) are equally combined to produce the
         unique left output channel (<code>L</code>). And similarly, both right
         input channels (<code>R</code> and <code>SR</code>) are equally combined
-        to produce the unique right output channel (<code>R</code>).<br /><code
-          >output.L = 0.5 * (input.L + input.SL</code
-        ><code>)</code><br /><code>output.R = 0.5 * (input.R + input.SR</code
-        ><code>)</code>
+        to produce the unique right output channel (<code>R</code>).<br />
+        <code>output.L = 0.5 * (input.L + input.SL)</code><br />
+        <code>output.R = 0.5 * (input.R + input.SR)</code>
       </td>
     </tr>
     <tr>
@@ -266,10 +258,13 @@ When the numbers of channels of the input and the output don't match, up-mixing,
         <code>R</code>, <code>SL</code>, and <code>SR</code> input channels are
         used for their respective output channels (<code>L</code> and
         <code>R</code>). Center (<code>C</code>) and subwoofer
-        (<code>LFE</code>) channels are left silent.<br /><code
-          >output.L = input.L<br />output.R = input.R<br />output.C = 0<br />output.LFE
-          = 0<br />output.SL = input.SL<br />output.SR = input.SR</code
-        >
+        (<code>LFE</code>) channels are left silent.<br />
+        <code>output.L = input.L</code><br />
+        <code>output.R = input.R</code><br />
+        <code>output.C = 0</code><br />
+        <code>output.LFE = 0</code><br />
+        <code>output.SL = input.SL</code><br />
+        <code>output.SR = input.SR</code>
       </td>
     </tr>
     <tr>
@@ -281,10 +276,8 @@ When the numbers of channels of the input and the output don't match, up-mixing,
         channels are all mixed together. The surround channels are slightly
         attenuated, and the regular lateral channels are power-compensated to
         make them count as a single channel by multiplying by <code>√2/2</code>.
-        The subwoofer (<code>LFE</code>) channel is lost.<br /><code
-          >output.M = 0.7071 * (input.L + input.R) + input.C + 0.5 * (input.SL +
-          input.SR)</code
-        >
+        The subwoofer (<code>LFE</code>) channel is lost.<br />
+        <code>output.M = 0.7071 * (input.L + input.R) + input.C + 0.5 * (input.SL + input.SR)</code>
       </td>
     </tr>
     <tr>
@@ -298,10 +291,9 @@ When the numbers of channels of the input and the output don't match, up-mixing,
         or <code>SR</code>) and mixed to each lateral channel. As it is mixed
         down to two channels, it is mixed at a lower power: in each case, it is
         multiplied by <code>√2/2</code>. The subwoofer (<code>LFE</code>)
-        channel is lost.<br /><code
-          >output.L = input.L + 0.7071 * (input.C + input.SL)<br />output.R =
-          input.R </code
-        ><code>+ 0.7071 * (input.C + input.SR)</code>
+        channel is lost.<br />
+        <code>output.L = input.L + 0.7071 * (input.C + input.SL)</code><br />
+        <code>output.R = input.R + 0.7071 * (input.C + input.SR)</code>
       </td>
     </tr>
     <tr>
@@ -313,11 +305,11 @@ When the numbers of channels of the input and the output don't match, up-mixing,
         <code>R</code>). As it is mixed down to two channels, it is mixed at a
         lower power: in each case, it is multiplied by <code>√2/2</code>. The
         surround channels are passed unchanged. The subwoofer (<code>LFE</code>)
-        channel is lost.<br /><code
-          >output.L = input.L + 0.7071 * input.C<br />output.R = input.R +
-          0.7071 * input.C<br />output.SL = input.SL<br />output.SR =
-          input.SR</code
-        >
+        channel is lost.<br />
+        <code>output.L = input.L + 0.7071 * input.C</code><br />
+        <code>output.R = input.R + 0.7071 * input.C</code><br />
+        <code>output.SL = input.SL</code><br />
+        <code>output.SR = input.SR</code>
       </td>
     </tr>
     <tr>
@@ -367,7 +359,8 @@ You can grab data using the following methods:
 - {{domxref("AnalyserNode.getByteTimeDomainData()")}}
   - : Copies the current waveform, or time-domain, data into a {{jsxref("Uint8Array")}} (unsigned byte array) passed into it.
 
-> **Note:** For more information, see our [Visualizations with Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API) article.
+> [!NOTE]
+> For more information, see our [Visualizations with Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API) article.
 
 ## Spatializations
 
@@ -381,14 +374,15 @@ Similarly, the Web Audio API describes the listener using right-hand Cartesian c
 
 ![We see the position, up, and front vectors of an AudioListener, with the up and front vectors at 90° from the other.](webaudiolistenerreduced.png)
 
-> **Note:** For more information, see our [Web audio spatialization basics](/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics) article.
+> [!NOTE]
+> For more information, see our [Web audio spatialization basics](/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics) article.
 
 ## Fan-in and Fan-out
 
 In audio terms, **fan-in** describes the process by which a {{domxref("ChannelMergerNode")}} takes a series of _mono_ input sources and outputs a single multi-channel signal:
 
-![](fanin.svg)
+![Fan-in process diagram. Multiple point-less arrows representing mono-input sources combine to output a single pointed arrow representing a single multi-channel signal](fanin.svg)
 
 **Fan-out** describes the opposite process, whereby a {{domxref("ChannelSplitterNode")}} takes a multi-channel input source and outputs multiple _mono_ output signals:
 
-![](fanout.svg)
+![Fan-out process diagram. A single point-less arrow representing a multi-channel input source splits to output multiple pointed arrows representing multiple mono output signals](fanout.svg)

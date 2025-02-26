@@ -1,35 +1,23 @@
 ---
 title: <feSpecularLighting>
 slug: Web/SVG/Element/feSpecularLighting
-tags:
-  - Element
-  - NeedsBrowserCompatibility
-  - NeedsMobileBrowserCompatibility
-  - SVG
-  - SVG Filter
+page-type: svg-element
 browser-compat: svg.elements.feSpecularLighting
 ---
+
 {{SVGRef}}
 
 The **`<feSpecularLighting>`** [SVG](/en-US/docs/Web/SVG) filter primitive lights a source graphic using the alpha channel as a bump map. The resulting image is an RGBA image based on the light color. The lighting calculation follows the standard specular component of [the Phong lighting model](https://en.wikipedia.org/wiki/Phong_reflection_model). The resulting image depends on the light color, light position and surface geometry of the input bump map. The result of the lighting calculation is added. The filter primitive assumes that the viewer is at infinity in the z direction.
 
 This filter primitive produces an image which contains the specular reflection part of the lighting calculation. Such a map is intended to be combined with a texture using the `add` term of the arithmetic {{SVGElement("feComposite")}} method. Multiple light sources can be simulated by adding several of these light maps before applying it to the texture image.
 
+Like other filter primitives, it handles color components in the `linearRGB` {{glossary("color space")}} by default. You can use {{svgattr("color-interpolation-filters")}} to use `sRGB` instead.
+
 ## Usage context
 
 {{svginfo}}
 
 ## Attributes
-
-### Global attributes
-
-- [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
-- [Presentation attributes](/en-US/docs/Web/SVG/Attribute#presentation_attributes)
-- [Filter primitive attributes](/en-US/docs/Web/SVG/Attribute#filter_primitive_attributes)
-- {{SVGAttr("class")}}
-- {{SVGAttr("style")}}
-
-### Specific attributes
 
 - {{SVGAttr("in")}}
 - {{SVGAttr("surfaceScale")}}
@@ -44,17 +32,28 @@ This element implements the {{domxref("SVGFESpecularLightingElement")}} interfac
 ## Example
 
 ```html
-<svg height="200" width="200" viewBox="0 0 220 220"
-    xmlns="http://www.w3.org/2000/svg">
-  <filter id = "filter">
-    <feSpecularLighting result="specOut"
-        specularExponent="20" lighting-color="#bbbbbb">
-      <fePointLight x="50" y="75" z="200"/>
+<svg
+  height="200"
+  width="200"
+  viewBox="0 0 220 220"
+  xmlns="http://www.w3.org/2000/svg">
+  <filter id="filter">
+    <feSpecularLighting
+      result="specOut"
+      specularExponent="20"
+      lighting-color="#bbbbbb">
+      <fePointLight x="50" y="75" z="200" />
     </feSpecularLighting>
-    <feComposite in="SourceGraphic" in2="specOut"
-        operator="arithmetic" k1="0" k2="1" k3="1" k4="0"/>
+    <feComposite
+      in="SourceGraphic"
+      in2="specOut"
+      operator="arithmetic"
+      k1="0"
+      k2="1"
+      k3="1"
+      k4="0" />
   </filter>
-  <circle cx="110" cy="110" r="100" style="filter:url(#filter)"/>
+  <circle cx="110" cy="110" r="100" style="filter:url(#filter)" />
 </svg>
 ```
 

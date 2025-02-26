@@ -1,19 +1,13 @@
 ---
 title: webRequest.handlerBehaviorChanged()
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/handlerBehaviorChanged
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - handlerBehaviorChanged
-  - webRequest
+page-type: webextension-api-function
 browser-compat: webextensions.api.webRequest.handlerBehaviorChanged
 ---
-{{AddonSidebar()}}This function can be used to ensure that event listeners are applied correctly when pages are in the browser's in-memory cache. If the browser has loaded a page, and the page is reloaded, the browser may reload the page from its in-memory cache, and in this case, events will not be triggered for the request.
+
+{{AddonSidebar}}
+
+This function can be used to ensure that event listeners are applied correctly when pages are in the browser's in-memory cache. If the browser has loaded a page, and the page is reloaded, the browser may reload the page from its in-memory cache, and in this case, events will not be triggered for the request.
 
 Suppose an extension's job is to block web requests against a pattern, and the following scenario happens:
 
@@ -34,7 +28,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let flushingCache = browser.webRequest.handlerBehaviorChanged()
 ```
 
@@ -52,7 +46,7 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 
 ## Examples
 
-In the following snippet, we flush the in-memory cache via a call to `handlerBehaviorChanged()`,  and report this action by logging an appropriate message to the console.
+In the following snippet, we flush the in-memory cache via a call to `handlerBehaviorChanged()`, and report this action by logging an appropriate message to the console.
 
 ```js
 function onFlushed() {
@@ -69,11 +63,11 @@ flushingCache.then(onFlushed, onError);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/webRequest/#method-handlerBehaviorChanged) API. This documentation is derived from [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/api/webRequest#method-handlerBehaviorChanged) API. This documentation is derived from [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) in the Chromium code.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -100,4 +94,4 @@ flushingCache.then(onFlushed, onError);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

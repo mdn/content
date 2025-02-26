@@ -1,22 +1,25 @@
 ---
-title: '-moz-user-focus'
+title: -moz-user-focus
 slug: Web/CSS/-moz-user-focus
-tags:
-  - '-moz-user-focus'
-  - CSS
-  - CSS:Mozilla Extensions
-  - NeedsContent
-  - Non-standard
-  - Reference
-  - recipe:css-property
+page-type: css-property
+status:
+  - deprecated
+  - non-standard
 browser-compat: css.properties.-moz-user-focus
 ---
-{{CSSRef}} {{Non-standard_header}}
+
+{{CSSRef}} {{deprecated_header}}{{non-standard_header}}
 
 The **`-moz-user-focus`** [CSS](/en-US/docs/Web/CSS) property is used to indicate whether an element can have the focus.
 
+By setting its value to `ignore`, you can disable focusing the element, which means that the user will not be able to activate the element, and the element will be skipped in the tab sequence.
+The default is `none`, which disables focussing on the element and removes focus on other elements if there is an attempt to select the element.
+
+## Syntax
+
 ```css
 /* Keyword values */
+-moz-user-focus: none;
 -moz-user-focus: normal;
 -moz-user-focus: ignore;
 
@@ -26,30 +29,15 @@ The **`-moz-user-focus`** [CSS](/en-US/docs/Web/CSS) property is used to indicat
 -moz-user-focus: unset;
 ```
 
-By setting its value to `ignore`, you can disable focusing the element, which means that the user will not be able to activate the element. The element will be skipped in the tab sequence.
-
-{{cssinfo}}
-
-## Syntax
-
 ### Values
 
 - `ignore`
-  - : The element does not accept the keyboard focus and will be skipped in the tab order.
+  - : The element does not accept keyboard focus and will be skipped in the tab order.
 - `normal`
-  - : The element can accept the keyboard focus.
-- `select-after`
-  - : ?
-- `select-before`
-  - : ?
-- `select-menu`
-  - : ?
-- `select-same`
-  - : ?
-- `select-all`
-  - : ?
+  - : The element can accept keyboard focus.
 - `none`
-  - : ?
+  - : The element does not accept keyboard focus.
+    Attempting to select the element removes focus from any other element.
 
 ## Formal definition
 
@@ -57,14 +45,17 @@ By setting its value to `ignore`, you can disable focusing the element, which me
 
 ## Formal syntax
 
-{{csssyntax}}
+```plain
+-moz-user-focus =
+  ignore | normal | none
+```
 
 ## Examples
 
 ### HTML
 
 ```html
-<input class="ignored" value="The user cannot focus on this element.">
+<input class="ignored" value="The user cannot focus on this element." />
 ```
 
 ### CSS
@@ -77,7 +68,7 @@ By setting its value to `ignore`, you can disable focusing the element, which me
 
 ## Specifications
 
-Not part of any standard. A similar property, `user-focus`, was proposed in [early drafts of a predecessor of the CSS3 UI specification](https://www.w3.org/TR/2000/WD-css3-userint-20000216), but was rejected by the working group.
+Not part of any standard.
 
 ## Browser compatibility
 
@@ -86,5 +77,5 @@ Not part of any standard. A similar property, `user-focus`, was proposed in [ear
 ## See also
 
 - {{cssxref("-moz-user-input")}}
-- {{cssxref("-moz-user-modify")}}
-- {{cssxref("-moz-user-select")}}
+- {{cssxref("user-modify")}}
+- {{cssxref("user-select", "-moz-user-select")}}

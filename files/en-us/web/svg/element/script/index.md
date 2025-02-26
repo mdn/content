@@ -1,38 +1,51 @@
 ---
 title: <script>
 slug: Web/SVG/Element/script
-tags:
-  - Element
-  - Reference
-  - SVG
+page-type: svg-element
 browser-compat: svg.elements.script
 ---
-The SVG `script` element allows to add scripts to an SVG document.
 
-> **Note:** While SVG's `script` element is equivalent to the HTML {{HTMLElement('script')}} element, it has some discrepancies, like it uses the {{SVGAttr('href')}} attribute instead of {{htmlattrxref('src','script')}} and it doesn't support ECMAScript modules so far (See browser compatibility below for details)
+{{SVGRef}}
+
+The **`<script>`** [SVG](/en-US/docs/Web/SVG) element allows to add scripts to an SVG document.
+
+> [!NOTE]
+> While SVG's `script` element is equivalent to the HTML {{HTMLElement('script')}} element, it has some discrepancies, like it uses the {{SVGAttr('href')}} attribute instead of [`src`](/en-US/docs/Web/HTML/Element/script#src) and it doesn't support ECMAScript modules so far (See browser compatibility below for details)
 
 ## Example
 
 ```html
-<svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+Click the circle to change colors.
+<svg
+  viewBox="0 0 10 10"
+  height="120px"
+  width="120px"
+  xmlns="http://www.w3.org/2000/svg">
+  <circle cx="5" cy="5" r="4" />
+
   <script>
-  // <![CDATA[
-  window.addEventListener('DOMContentLoaded', () => {
-    function getColor () {
-      const R = Math.round(Math.random() * 255).toString(16).padStart(2,'0')
-      const G = Math.round(Math.random() * 255).toString(16).padStart(2,'0')
-      const B = Math.round(Math.random() * 255).toString(16).padStart(2,'0')
-      return `#${R}${G}${B}`
+    // <![CDATA[
+    function getColor() {
+      const R = Math.round(Math.random() * 255)
+        .toString(16)
+        .padStart(2, "0");
+
+      const G = Math.round(Math.random() * 255)
+        .toString(16)
+        .padStart(2, "0");
+
+      const B = Math.round(Math.random() * 255)
+        .toString(16)
+        .padStart(2, "0");
+
+      return `#${R}${G}${B}`;
     }
 
-    document.querySelector('circle').addEventListener('click', (e) => {
-      e.target.style.fill = getColor()
-    })
-  })
-  // ]]>
+    document.querySelector("circle").addEventListener("click", (e) => {
+      e.target.style.fill = getColor();
+    });
+    // ]]>
   </script>
-
-  <circle cx="5" cy="5" r="4" />
 </svg>
 ```
 
@@ -40,29 +53,20 @@ The SVG `script` element allows to add scripts to an SVG document.
 
 ## Attributes
 
-- {{htmlattrxref("crossorigin", "script")}}
+- [`crossorigin`](/en-US/docs/Web/HTML/Element/script#crossorigin)
   - : This attribute defines [CORS settings](/en-US/docs/Web/HTML/Attributes/crossorigin) as define for the HTML {{HTMLElement('script')}} element.
-    *Value type*: [**\<string>**](/en-US/docs/Web/SVG/Content_type#string); *Default value*: `?`; *Animatable*: **yes**
+    _Value type_: [**[ anonymous | use-credentials ]?**](/en-US/docs/Web/CSS/string); _Default value_: `?`; _Animatable_: **yes**
 - {{SVGAttr("href")}}
   - : The {{Glossary("URL")}} to the script to load.
-    *Value type*: **[\<URL>](/en-US/docs/Web/SVG/Content_type#url)** ; *Default value*: *none*; *Animatable*: **no**
+    _Value type_: **[\<URL>](/en-US/docs/Web/SVG/Content_type#url)** ; _Default value_: _none_; _Animatable_: **no**
 - {{SVGAttr("type")}}
   - : This attribute defines type of the script language to use.
-    *Value type*: [**\<string>**](/en-US/docs/Web/SVG/Content_type#string); *Default value*: `application/ecmascript`; *Animatable*: **no**
+    _Value type_: [**`<media-type>`**](/en-US/docs/Glossary/MIME_type); _Default value_: `application/ecmascript`; _Animatable_: **no**
 - {{SVGAttr("xlink:href")}} {{deprecated_inline}}
   - : The {{Glossary("URL")}} to the script to load.
-    *Value type*: **[\<URL>](/en-US/docs/Web/SVG/Content_type#url)** ; *Default value*: *none*; *Animatable*: **no**
+    _Value type_: **[\<URL>](/en-US/docs/Web/SVG/Content_type#url)** ; _Default value_: _none_; _Animatable_: **no**
 
-### Global attributes
-
-- [Core Attributes](/en-US/docs/Web/SVG/Attribute/Core)
-  - : Most notably: {{SVGAttr('id')}}
-- [Styling Attributes](/en-US/docs/Web/SVG/Attribute/Styling)
-  - : {{SVGAttr('class')}}, {{SVGAttr('style')}}
-- Event Attributes
-  - : [Global event attributes](/en-US/docs/Web/SVG/Attribute/Events#global_event_attributes), [Document element event attributes](/en-US/docs/Web/SVG/Attribute/Events#document_element_event_attributes)
-
-## Usage notes
+## Usage context
 
 {{svginfo}}
 
@@ -77,5 +81,3 @@ The SVG `script` element allows to add scripts to an SVG document.
 ## See also
 
 - [`script` element in HTML](/en-US/docs/Web/HTML/Element/script)
-
-{{SVGRef}}

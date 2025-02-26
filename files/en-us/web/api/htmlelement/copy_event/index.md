@@ -1,17 +1,11 @@
 ---
-title: 'HTMLElement: copy event'
+title: "HTMLElement: copy event"
+short-title: copy
 slug: Web/API/HTMLElement/copy_event
 page-type: web-api-event
-tags:
-  - API
-  - Clipboard API
-  - HTMLElement
-  - Event
-  - Reference
-  - Web
-  - copy
 browser-compat: api.Element.copy_event
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`copy`** event fires when the user initiates a copy action through the browser's user interface.
@@ -21,9 +15,9 @@ The **`copy`** event fires when the user initiates a copy action through the bro
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('copy', (event) => { });
+addEventListener("copy", (event) => {});
 
-oncopy = (event) => { };
+oncopy = (event) => {};
 ```
 
 ## Event type
@@ -36,8 +30,8 @@ A {{domxref("ClipboardEvent")}}. Inherits from {{domxref("Event")}}.
 
 _Also inherits properties from its parent {{domxref("Event")}}_.
 
-- {{domxref("ClipboardEvent.clipboardData")}} {{readonlyInline}}
-  - : A {{domxref("DataTransfer")}} object containing the data affected by the user-initiated {{domxref("HTMLElement/cut_event", "cut")}}, {{domxref("HTMLElement/copy_event", "copy")}}, or {{domxref("HTMLElement/paste_event", "paste")}} operation, along with its MIME type.
+- {{domxref("ClipboardEvent.clipboardData")}} {{ReadOnlyInline}}
+  - : A {{domxref("DataTransfer")}} object containing the data affected by the user-initiated {{domxref("HTMLElement/cut_event", "cut")}}, `copy`, or {{domxref("HTMLElement/paste_event", "paste")}} operation, along with its MIME type.
 
 ## Example
 
@@ -47,7 +41,9 @@ This example blocks every copy and paste attempt from the {{htmlElement("textare
 
 ```html
 <h3>Play with this text area:</h3>
-<textarea id="editor" rows="3">Try copying and pasting text into this field!</textarea>
+<textarea id="editor" rows="3">
+Try copying and pasting text into this field!
+</textarea>
 
 <h3>Log:</h3>
 <p id="log"></p>
@@ -56,7 +52,7 @@ This example blocks every copy and paste attempt from the {{htmlElement("textare
 ### JavaScript
 
 ```js
-const log = document.getElementById('log');
+const log = document.getElementById("log");
 
 function logCopy(event) {
   log.innerText = `Copy blocked!\n${log.innerText}`;
@@ -68,7 +64,7 @@ function logPaste(event) {
   event.preventDefault();
 }
 
-const editor = document.getElementById('editor');
+const editor = document.getElementById("editor");
 
 editor.oncopy = logCopy;
 editor.onpaste = logPaste;
@@ -89,5 +85,5 @@ editor.onpaste = logPaste;
 ## See also
 
 - Related events
-  - {{domxref("HTMLElement.cut_event")}}
-  - {{domxref("HTMLElement.paste_event")}}
+  - {{domxref("HTMLElement.cut_event", "cut")}} event
+  - {{domxref("HTMLElement.paste_event", "paste")}} event

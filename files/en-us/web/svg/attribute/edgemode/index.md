@@ -1,14 +1,10 @@
 ---
 title: edgeMode
 slug: Web/SVG/Attribute/edgeMode
-tags:
-  - Filters
-  - NeedsCompatTable
-  - NeedsExample
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 spec-urls: https://drafts.fxtf.org/filter-effects/#element-attrdef-feconvolvematrix-edgemode
 ---
+
 {{SVGRef}}
 
 The **`edgeMode`** attribute determines how to extend the input image as necessary with color values so that the matrix operations can be applied when the kernel is positioned at or near the edge of the input image.

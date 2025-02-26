@@ -1,30 +1,21 @@
 ---
-title: IDBCursor.continue()
+title: "IDBCursor: continue() method"
+short-title: continue()
 slug: Web/API/IDBCursor/continue
 page-type: web-api-instance-method
-tags:
-  - API
-  - Database
-  - IDBCursor
-  - IndexedDB
-  - Method
-  - Reference
-  - Storage
-  - continue
 browser-compat: api.IDBCursor.continue
 ---
-{{APIRef("IndexedDB")}}
+
+{{APIRef("IndexedDB")}} {{AvailableInWorkers}}
 
 The **`continue()`** method of the {{domxref("IDBCursor")}}
 interface advances the cursor to the next position along its direction, to the item
 whose key matches the optional key parameter. If no key is specified, the cursor
 advances to the immediate next position, based on its direction.
 
-{{AvailableInWorkers}}
-
 ## Syntax
 
-```js
+```js-nolint
 continue()
 continue(key)
 ```
@@ -43,7 +34,7 @@ None ({{jsxref("undefined")}}).
 This method may raise a {{domxref("DOMException")}} of one of the following types:
 
 - `TransactionInactiveError` {{domxref("DOMException")}}
-  - : Thrown if this IDBCursor's transaction is inactive.
+  - : Thrown if this `IDBCursor`'s transaction is inactive.
 - `DataError` {{domxref("DOMException")}}
   - : Thrown if the key parameter has any of the following conditions:
     - The key is not a valid key.
@@ -59,26 +50,26 @@ cursor to iterate through all the records in the object store. The cursor does n
 require us to select the data based on a key; we can just grab all of it. Also note that
 in each iteration of the loop, you can grab data from the current record under the
 cursor object using `cursor.value.foo`. For a complete working example, see
-our [IDBCursor example](https://github.com/mdn/dom-examples/tree/master/indexeddb-examples/idbcursor) ([View the example live](https://mdn.github.io/dom-examples/indexeddb-examples/idbcursor/)).
+our [IDBCursor example](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbcursor) ([View the example live](https://mdn.github.io/dom-examples/indexeddb-examples/idbcursor/)).
 
 ```js
 function displayData() {
-  const transaction = db.transaction(['rushAlbumList'], "readonly");
-  const objectStore = transaction.objectStore('rushAlbumList');
+  const transaction = db.transaction(["rushAlbumList"], "readonly");
+  const objectStore = transaction.objectStore("rushAlbumList");
 
-  objectStore.openCursor().onsuccess = function(event) {
+  objectStore.openCursor().onsuccess = (event) => {
     const cursor = event.target.result;
-    if(cursor) {
-      const listItem = document.createElement('li');
+    if (cursor) {
+      const listItem = document.createElement("li");
       listItem.textContent = `${cursor.value.albumTitle}, ${cursor.value.year}`;
       list.appendChild(listItem);
 
       cursor.continue();
     } else {
-      console.log('Entries all displayed.');
+      console.log("Entries all displayed.");
     }
   };
-};
+}
 ```
 
 ## Specifications
@@ -97,4 +88,4 @@ function displayData() {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([View the example live](https://mdn.github.io/to-do-notifications/)).
+- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([View the example live](https://mdn.github.io/dom-examples/to-do-notifications/)).

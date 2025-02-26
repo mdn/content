@@ -1,20 +1,19 @@
 ---
 title: stroke-dashoffset
 slug: Web/SVG/Attribute/stroke-dashoffset
-tags:
-  - SVG
-  - SVG Attribute
-browser-compat: svg.attributes.presentation.stroke-dashoffset
+page-type: svg-attribute
+browser-compat: svg.global_attributes.stroke-dashoffset
 ---
+
 {{SVGRef}}
 
 The **`stroke-dashoffset`** attribute is a presentation attribute defining an offset on the rendering of the associated dash array.
 
-> **Note:** As a presentation attribute `stroke-dashoffset` can be used as a CSS property.
+> [!NOTE]
+> As a presentation attribute, `stroke-dashoffset` also has a CSS property counterpart: {{cssxref("stroke-dashoffset")}}. When both are specified, the CSS property takes priority.
 
 You can use this attribute with the following SVG elements:
 
-- {{SVGElement('altGlyph')}}
 - {{SVGElement('circle')}}
 - {{SVGElement('ellipse')}}
 - {{SVGElement('path')}}
@@ -30,7 +29,11 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -39,39 +42,53 @@ html,body,svg { height:100% }
   <line x1="0" y1="1" x2="30" y2="1" stroke="black" />
 
   <!-- No dash offset -->
-  <line x1="0" y1="3" x2="30" y2="3" stroke="black"
-        stroke-dasharray="3 1" />
+  <line x1="0" y1="3" x2="30" y2="3" stroke="black" stroke-dasharray="3 1" />
 
   <!--
   The start of the dash array computation
   is pulled by 3 user units
   -->
-  <line x1="0" y1="5" x2="30" y2="5" stroke="black"
-        stroke-dasharray="3 1"
-        stroke-dashoffset="3" />
+  <line
+    x1="0"
+    y1="5"
+    x2="30"
+    y2="5"
+    stroke="black"
+    stroke-dasharray="3 1"
+    stroke-dashoffset="3" />
 
   <!--
   The start of the dash array computation
   is pushed by 3 user units
   -->
-  <line x1="0" y1="7" x2="30" y2="7" stroke="black"
-        stroke-dasharray="3 1"
-        stroke-dashoffset="-3" />
+  <line
+    x1="0"
+    y1="7"
+    x2="30"
+    y2="7"
+    stroke="black"
+    stroke-dasharray="3 1"
+    stroke-dashoffset="-3" />
 
   <!--
   The start of the dash array computation
   is pulled by 1 user units which ends up
   in the same rendering as the previous example
   -->
-  <line x1="0" y1="9" x2="30" y2="9" stroke="black"
-        stroke-dasharray="3 1"
-        stroke-dashoffset="1" />
+  <line
+    x1="0"
+    y1="9"
+    x2="30"
+    y2="9"
+    stroke="black"
+    stroke-dasharray="3 1"
+    stroke-dashoffset="1" />
 
   <!--
   the following red lines highlight the
   offset of the dash array for each line
   -->
-  <path d="M0,5 h-3 M0,7 h3 M0,9 h-1" stroke="rgba(255,0,0,.5)" />
+  <path d="M0,5 h-3 M0,7 h3 M0,9 h-1" stroke="rgb(255 0 0 / 50%)" />
 </svg>
 ```
 
@@ -117,3 +134,7 @@ The offset is usually expressed in user units resolved against the {{SVGAttr('pa
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- CSS {{cssxref("stroke-dashoffset")}} property

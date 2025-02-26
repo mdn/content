@@ -1,18 +1,21 @@
 ---
 title: box-direction
 slug: Web/CSS/box-direction
-tags:
-  - CSS
-  - Non-standard
-  - Reference
-  - recipe:css-property
+page-type: css-property
+status:
+  - deprecated
+  - non-standard
 browser-compat: css.properties.box-direction
 ---
-{{CSSRef}}{{Non-standard_header}}
 
-> **Warning:** This is a property of the original CSS Flexible Box Layout Module draft, and has been replaced by a newer standard. The `-moz-box-direction` will only be used for XUL while the previous standard `box-direction` has been replaced by `flex-direction`. See [flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox) for information about the current standard.
+{{CSSRef}}{{Non-standard_header}}{{Deprecated_Header}}
+
+> [!WARNING]
+> This is a property of the original CSS flexible box layout Module draft, and has been replaced by a newer standard. The `-moz-box-direction` will only be used for XUL while the previous standard `box-direction` has been replaced by `flex-direction`. See [flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) for information about the current standard.
 
 The **`box-direction`** [CSS](/en-US/docs/Web/CSS) property specifies whether a box lays out its contents normally (from the top or left edge), or in reverse (from the bottom or right edge).
+
+## Syntax
 
 ```css
 /* Keyword values */
@@ -26,8 +29,6 @@ box-direction: revert;
 box-direction: revert-layer;
 box-direction: unset;
 ```
-
-## Syntax
 
 The `box-direction` property is specified as one of the keyword values listed below.
 
@@ -55,7 +56,10 @@ If the direction is set using the element's `dir` attribute, then the style is i
 
 ## Formal syntax
 
-{{csssyntax}}
+```plain
+box-direction =
+  normal | reverse | inherit
+```
 
 ## Examples
 
@@ -64,9 +68,9 @@ If the direction is set using the element's `dir` attribute, then the style is i
 ```css
 .example {
   /* bottom-to-top layout */
-  -moz-box-direction: reverse;      /* Mozilla */
-  -webkit-box-direction: reverse;   /* WebKit */
-  box-direction: reverse;           /* As specified */
+  -moz-box-direction: reverse; /* Mozilla */
+  -webkit-box-direction: reverse; /* WebKit */
+  box-direction: reverse; /* As specified */
 }
 ```
 

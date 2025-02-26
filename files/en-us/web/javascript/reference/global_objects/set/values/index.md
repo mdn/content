@@ -1,37 +1,43 @@
 ---
 title: Set.prototype.values()
 slug: Web/JavaScript/Reference/Global_Objects/Set/values
-tags:
-  - ECMAScript 2015
-  - Iterator
-  - JavaScript
-  - Method
-  - Prototype
-  - set
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Set.values
 ---
+
 {{JSRef}}
 
-The **`values()`** method returns a new [Iterator](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators) object that
-contains the values for each element in the `Set` object in insertion order.
+The **`values()`** method of {{jsxref("Set")}} instances returns a new _[set iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator)_ object that contains the values for each element in this set in insertion order.
 
-> **Note:** The **`keys()`** method is an alias
-> for this method (for similarity with {{jsxref("Map")}} objects), hence the
-> `keys()` page redirecting here. It behaves exactly the same and returns
-> **values** of `Set` elements.
+{{InteractiveExample("JavaScript Demo: Set.prototype.values")}}
 
-{{EmbedInteractiveExample("pages/js/set-prototype-values.html")}}
+```js interactive-example
+const set1 = new Set();
+set1.add(42);
+set1.add("forty two");
+
+const iterator1 = set1.values();
+
+console.log(iterator1.next().value);
+// Expected output: 42
+
+console.log(iterator1.next().value);
+// Expected output: "forty two"
+```
 
 ## Syntax
 
-```js
+```js-nolint
 values()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
-A new iterator object containing the values for each element in the given
-`Set`, in insertion order.
+A new [iterable iterator object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator).
 
 ## Examples
 
@@ -39,9 +45,9 @@ A new iterator object containing the values for each element in the given
 
 ```js
 const mySet = new Set();
-mySet.add('foo');
-mySet.add('bar');
-mySet.add('baz');
+mySet.add("foo");
+mySet.add("bar");
+mySet.add("baz");
 
 const setIter = mySet.values();
 

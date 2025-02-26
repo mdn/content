@@ -1,18 +1,13 @@
 ---
 title: line-gap-override
 slug: Web/CSS/@font-face/line-gap-override
-tags:
-  - '@font-face'
-  - At-rule descriptor
-  - CSS
-  - Reference
-  - descriptor
-  - line-gap-override
+page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.font-face.line-gap-override
 ---
+
 {{CSSRef}}
 
-The **`line-gap-override`** CSS descriptor defines the line-gap metric for the font. The line-gap metric is the font recommended line-gap or external leading.
+The **`line-gap-override`** CSS descriptor for the {{cssxref("@font-face")}} at-rule defines the line-gap metric for the font. The line-gap metric is the font recommended line-gap or external leading.
 
 ## Syntax
 
@@ -34,9 +29,7 @@ line-gap-override: 90%;
 
 ## Formal syntax
 
-```
-normal | <percentage>
-```
+{{csssyntax}}
 
 ## Examples
 
@@ -73,10 +66,8 @@ The `line-gap-override` property can help when overriding the metrics of a fallb
 - {{cssxref("@font-face/font-weight", "font-weight")}}
 - {{cssxref("@font-face/font-style", "font-style")}}
 - {{cssxref("@font-face/font-stretch", "font-stretch")}}
-- {{cssxref("@font-face/font-variant", "font-variant")}}
 - {{cssxref("font-feature-settings", "font-feature-settings")}}
 - {{cssxref("@font-face/font-variation-settings", "font-variation-settings")}}
-- {{cssxref("@font-face/line-gap-override", "line-gap-override")}}
 - {{cssxref("@font-face/src", "src")}}
 - {{cssxref("@font-face/size-adjust", "size-adjust")}}
-- {{cssxref("@font-face/unicode-range", "unicode-range descriptor")}}
+- {{cssxref("@font-face/unicode-range", "unicode-range")}} descriptor

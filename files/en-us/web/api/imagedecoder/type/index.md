@@ -1,22 +1,18 @@
 ---
-title: ImageDecoder.type
+title: "ImageDecoder: type property"
+short-title: type
 slug: Web/API/ImageDecoder/type
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - type
-  - ImageDecoder
 browser-compat: api.ImageDecoder.type
 ---
-{{securecontext_header}}{{APIRef("WebCodecs API")}}
 
-The **`type`** read-only property of the {{domxref("ImageDecoder")}} interface reflects the [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) configured during construction.
+{{securecontext_header}}{{APIRef("WebCodecs API")}}{{AvailableInWorkers("window_and_dedicated")}}
+
+The **`type`** read-only property of the {{domxref("ImageDecoder")}} interface reflects the [MIME type](/en-US/docs/Web/HTTP/MIME_types) configured during construction.
 
 ## Value
 
-A string containing the configured [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types).
+A string containing the configured [MIME type](/en-US/docs/Web/HTTP/MIME_types).
 
 ## Examples
 

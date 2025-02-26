@@ -1,30 +1,19 @@
 ---
 title: box-lines
 slug: Web/CSS/box-lines
-tags:
-  - CSS
-  - CSS Property
-  - Non-standard
-  - Reference
-  - recipe:css-property
+page-type: css-property
+status:
+  - deprecated
+  - non-standard
 browser-compat: css.properties.box-lines
 ---
-{{CSSRef}}{{Non-standard_header}}
 
-> **Warning:** This is a property of the original CSS Flexible Box Layout Module draft, and has been replaced by a newer standard. See [flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox) for information about the current standard.
+{{CSSRef}}{{Non-standard_header}}{{Deprecated_Header}}
+
+> [!WARNING]
+> This is a property of the original CSS flexible box layout Module draft. It has been replaced in the specification. See [flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) for information about the current standard.
 
 The **`box-lines`** [CSS](/en-US/docs/Web/CSS) property determines whether the box may have a single or multiple lines (rows for horizontally oriented boxes, columns for vertically oriented boxes).
-
-```css
-/* Keyword values */
-box-lines: single;
-box-lines: multiple;
-
-/* Global values */
-box-lines: inherit;
-box-lines: initial;
-box-lines: unset;
-```
 
 By default a horizontal box will lay out its children in a single row, and a vertical box will lay out its children in a single column. This behavior can be changed using the `box-lines` property. The default value is `single`, which means that all elements will be placed in a single row or column, and any elements that don't fit will be considered overflow.
 
@@ -38,6 +27,17 @@ Once the number of lines has been determined, elements with a computed value for
 
 ## Syntax
 
+```css
+/* Keyword values */
+box-lines: single;
+box-lines: multiple;
+
+/* Global values */
+box-lines: inherit;
+box-lines: initial;
+box-lines: unset;
+```
+
 The `box-lines` property is specified as one of the keyword values listed below.
 
 ### Values
@@ -49,11 +49,14 @@ The `box-lines` property is specified as one of the keyword values listed below.
 
 ## Formal definition
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## Formal syntax
 
-{{CSSSyntax}}
+```plain
+box-lines =
+  single | multiple
+```
 
 ## Examples
 
@@ -81,6 +84,7 @@ Not part of any standard.
 
 ## See also
 
-- {{CSSxRef("box-flex")}}
-- {{CSSxRef("box-flex-group")}}
-- {{CSSxRef("box-pack")}}
+- {{CSSxRef("flex")}}
+- {{CSSxRef("flex-basis")}}
+- {{CSSxRef("flex-grow")}}
+- {{CSSxRef("flex-shrink")}}

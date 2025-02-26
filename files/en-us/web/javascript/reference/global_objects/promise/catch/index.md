@@ -1,181 +1,181 @@
 ---
 title: Promise.prototype.catch()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/catch
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Promise
-  - Prototype
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Promise.catch
 ---
+
 {{JSRef}}
 
-The **`catch()`** method returns a {{jsxref("Promise")}} and
-deals with rejected cases only. It behaves the same as calling {{jsxref("Promise.then",
-  "Promise.prototype.then(undefined, onRejected)")}} (in fact, calling
-`obj.catch(onRejected)` internally calls
-`obj.then(undefined, onRejected)`). This means that you have to provide an
-`onRejected` function even if you want to fall back to an
-`undefined` result value - for example `obj.catch(() => {})`.
+The **`catch()`** method of {{jsxref("Promise")}} instances schedules a function to be called when the promise is rejected. It immediately returns another {{jsxref("Promise")}} object, allowing you to [chain](/en-US/docs/Web/JavaScript/Guide/Using_promises#chaining) calls to other promise methods. It is a shortcut for {{jsxref("Promise/then", "then(undefined, onRejected)")}}.
 
-{{EmbedInteractiveExample("pages/js/promise-catch.html")}}
+{{InteractiveExample("JavaScript Demo: Promise.catch()")}}
+
+```js interactive-example
+const promise1 = new Promise((resolve, reject) => {
+  throw new Error("Uh-oh!");
+});
+
+promise1.catch((error) => {
+  console.error(error);
+});
+// Expected output: Error: Uh-oh!
+```
 
 ## Syntax
 
-```js
-p.catch(onRejected);
-
-p.catch(function(reason) {
-   // rejection
-});
+```js-nolint
+promiseInstance.catch(onRejected)
 ```
 
 ### Parameters
 
 - `onRejected`
-
-  - : A {{jsxref("Function")}} called when the `Promise` is rejected. This
-    function has one argument:
-
+  - : A function to asynchronously execute when this promise becomes rejected. Its return value becomes the fulfillment value of the promise returned by `catch()`. The function is called with the following arguments:
     - `reason`
-      - : The rejection reason.
-
-    The Promise returned by `catch()` is rejected if
-    `onRejected` throws an error or returns a Promise which is
-    itself rejected; otherwise, it is fulfilled.
+      - : The value that the promise was rejected with.
 
 ### Return value
 
-Internally calls `Promise.prototype.then` on the object upon which it was
-called, passing the parameters `undefined` and the received
-`onRejected` handler. Returns the value of that call, which is a
-{{jsxref("Promise")}}.
-
-> **Warning:** The examples below are throwing instances of [Error](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error). This is
-> considered good practice in contrast to throwing Strings; otherwise, the part doing
-> the catching would have to perform checks to see if the argument was a string or an
-> error, and you might lose valuable information like stack traces.
-
-**Demonstration of the internal call:**
-
-```js
-// overriding original Promise.prototype.then/catch just to add some logs
-(function(Promise){
-    const originalThen = Promise.prototype.then;
-    const originalCatch = Promise.prototype.catch;
-
-    Promise.prototype.then = function(){
-        console.log('> > > > > > called .then on %o with arguments: %o', this, arguments);
-        return originalThen.apply(this, arguments);
-    };
-    Promise.prototype.catch = function(){
-        console.error('> > > > > > called .catch on %o with arguments: %o', this, arguments);
-        return originalCatch.apply(this, arguments);
-    };
-
-})(this.Promise);
-
-// calling catch on an already resolved promise
-Promise.resolve().catch(function XXX(){});
-
-// logs:
-// > > > > > > called .catch on Promise{} with arguments: Arguments{1} [0: function XXX()]
-// > > > > > > called .then on Promise{} with arguments: Arguments{2} [0: undefined, 1: function XXX()]
-```
+Returns a new {{jsxref("Promise")}}. This new promise is always pending when returned, regardless of the current promise's status. If `onRejected` is called, the returned promise will resolve based on the return value of this call, or reject with the thrown error from this call. If the current promise fulfills, `onRejected` is not called and the returned promise fulfills to the same value.
 
 ## Description
 
-The `catch` method is used for error handling in promise composition. Since
-it returns a {{jsxref("Promise")}}, it [can be chained](/en-US/docs/Web/JavaScript/Guide/Using_promises#chaining_after_a_catch)
-in the same way as its sister method, {{jsxref("Promise.then", "then()")}}.
+The `catch` method is used for error handling in promise composition. Since it returns a {{jsxref("Promise")}}, it [can be chained](/en-US/docs/Web/JavaScript/Guide/Using_promises#chaining_after_a_catch) in the same way as its sister method, {{jsxref("Promise/then", "then()")}}.
+
+If a promise becomes rejected, and there are no rejection handlers to call (a handler can be attached through any of {{jsxref("Promise/then", "then()")}}, `catch()`, or {{jsxref("Promise/finally", "finally()")}}), then the rejection event is surfaced by the host. In the browser, this results in an [`unhandledrejection`](/en-US/docs/Web/API/Window/unhandledrejection_event) event. If a handler is attached to a rejected promise whose rejection has already caused an unhandled rejection event, then another [`rejectionhandled`](/en-US/docs/Web/API/Window/rejectionhandled_event) event is fired.
+
+`catch()` internally calls `then()` on the object upon which it was called, passing `undefined` and `onRejected` as arguments. The value of that call is directly returned. This is observable if you wrap the methods.
+
+```js
+// overriding original Promise.prototype.then/catch just to add some logs
+((Promise) => {
+  const originalThen = Promise.prototype.then;
+  const originalCatch = Promise.prototype.catch;
+
+  Promise.prototype.then = function (...args) {
+    console.log("Called .then on %o with arguments: %o", this, args);
+    return originalThen.apply(this, args);
+  };
+  Promise.prototype.catch = function (...args) {
+    console.error("Called .catch on %o with arguments: %o", this, args);
+    return originalCatch.apply(this, args);
+  };
+})(Promise);
+
+// calling catch on an already resolved promise
+Promise.resolve().catch(function XXX() {});
+
+// Logs:
+// Called .catch on Promise{} with arguments: Arguments{1} [0: function XXX()]
+// Called .then on Promise{} with arguments: Arguments{2} [0: undefined, 1: function XXX()]
+```
+
+This means that passing `undefined` still causes the returned promise to be rejected, and you have to pass a function to prevent the final promise from being rejected.
+
+Because `catch()` just calls `then()`, it supports subclassing.
+
+> [!NOTE]
+> The examples below are throwing instances of [`Error`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error). As with synchronous [`throw`](/en-US/docs/Web/JavaScript/Reference/Statements/throw) statements, this is considered a good practice; otherwise, the part doing the catching would have to perform checks to see if the argument was a string or an error, and you might lose valuable information such as stack traces.
 
 ## Examples
 
-### Using and chaining the catch method
+### Using and chaining the catch() method
 
 ```js
-const p1 = new Promise(function(resolve, reject) {
-  resolve('Success');
+const p1 = new Promise((resolve, reject) => {
+  resolve("Success");
 });
 
-p1.then(function(value) {
+p1.then((value) => {
   console.log(value); // "Success!"
-  throw new Error('oh, no!');
-}).catch(function(e) {
-  console.error(e.message); // "oh, no!"
-}).then(function(){
-  console.log('after a catch the chain is restored');
-}, function () {
-  console.log('Not fired due to the catch');
-});
+  throw new Error("oh, no!");
+})
+  .catch((e) => {
+    console.error(e.message); // "oh, no!"
+  })
+  .then(
+    () => console.log("after a catch the chain is restored"), // "after a catch the chain is restored"
+    () => console.log("Not fired due to the catch"),
+  );
 
 // The following behaves the same as above
-p1.then(function(value) {
+p1.then((value) => {
   console.log(value); // "Success!"
-  return Promise.reject('oh, no!');
-}).catch(function(e) {
-  console.error(e); // "oh, no!"
-}).then(function(){
-  console.log('after a catch the chain is restored');
-}, function () {
-  console.log('Not fired due to the catch');
-});
+  return Promise.reject("oh, no!");
+})
+  .catch((e) => {
+    console.error(e); // "oh, no!"
+  })
+  .then(
+    () => console.log("after a catch the chain is restored"), // "after a catch the chain is restored"
+    () => console.log("Not fired due to the catch"),
+  );
 ```
 
 ### Gotchas when throwing errors
 
+Throwing an error will call the `catch()` method most of the time:
+
 ```js
-// Throwing an error will call the catch method most of the time
-const p1 = new Promise(function(resolve, reject) {
-  throw new Error('Uh-oh!');
+const p1 = new Promise((resolve, reject) => {
+  throw new Error("Uh-oh!");
 });
 
-p1.catch(function(e) {
+p1.catch((e) => {
   console.error(e); // "Uh-oh!"
-});
-
-// Errors thrown inside asynchronous functions will act like uncaught errors
-const p2 = new Promise(function(resolve, reject) {
-  setTimeout(function() {
-    throw new Error('Uncaught Exception!');
-  }, 1000);
-});
-
-p2.catch(function(e) {
-  console.error(e); // This is never called
-});
-
-// Errors thrown after resolve is called will be silenced
-const p3 = new Promise(function(resolve, reject) {
-  resolve();
-  throw new Error('Silenced Exception!');
-});
-
-p3.catch(function(e) {
-   console.error(e); // This is never called
 });
 ```
 
-### If it is resolved
+Errors thrown inside asynchronous functions will act like uncaught errors:
 
 ```js
-//Create a promise which would not call onReject
+const p2 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    throw new Error("Uncaught Exception!");
+  }, 1000);
+});
+
+p2.catch((e) => {
+  console.error(e); // This is never called
+});
+```
+
+Errors thrown after `resolve` is called will be silenced:
+
+```js
+const p3 = new Promise((resolve, reject) => {
+  resolve();
+  throw new Error("Silenced Exception!");
+});
+
+p3.catch((e) => {
+  console.error(e); // This is never called
+});
+```
+
+### catch() is not called if the promise is fulfilled
+
+```js
+// Create a promise which would not call onReject
 const p1 = Promise.resolve("calling next");
 
-const p2 = p1.catch(function (reason) {
-    //This is never called
-    console.error("catch p1!");
-    console.error(reason);
+const p2 = p1.catch((reason) => {
+  // This is never called
+  console.error("catch p1!");
+  console.error(reason);
 });
 
-p2.then(function (value) {
-    console.log("next promise's onFulfilled"); /* next promise's onFulfilled */
-    console.log(value); /* calling next */
-}, function (reason) {
+p2.then(
+  (value) => {
+    console.log("next promise's onFulfilled");
+    console.log(value); // calling next
+  },
+  (reason) => {
     console.log("next promise's onRejected");
     console.log(reason);
-});
+  },
+);
 ```
 
 ## Specifications
@@ -190,3 +190,4 @@ p2.then(function (value) {
 
 - {{jsxref("Promise")}}
 - {{jsxref("Promise.prototype.then()")}}
+- {{jsxref("Promise.prototype.finally()")}}

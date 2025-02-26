@@ -1,25 +1,29 @@
 ---
 title: patternContentUnits
 slug: Web/SVG/Attribute/patternContentUnits
-tags:
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.elements.pattern.patternContentUnits
 ---
+
 {{SVGRef}}
 
 The **`patternContentUnits`** attribute indicates which coordinate system to use for the contents of the {{ SVGElement("pattern") }} element.
 
-> **Note:** That this attribute has no effect if attribute {{ SVGAttr("viewBox") }} is specified on the {{ SVGElement("pattern") }} element.
+> [!NOTE]
+> That this attribute has no effect if attribute {{ SVGAttr("viewBox") }} is specified on the {{ SVGElement("pattern") }} element.
 
 You can use this attribute with the following SVG elements:
 
 - {{SVGElement('pattern')}}
 
-## Example
+## Examples
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -30,8 +34,11 @@ html,body,svg { height:100% }
   Note that the size of the tile is computed against
   the bounding box of the target element
   -->
-  <pattern id="p1" width="20%" height="20%"
-           patternContentUnits="userSpaceOnUse">
+  <pattern
+    id="p1"
+    width="20%"
+    height="20%"
+    patternContentUnits="userSpaceOnUse">
     <circle cx="10" cy="10" r="10" />
   </pattern>
 
@@ -41,24 +48,29 @@ html,body,svg { height:100% }
   Note that the size of the tile is also computed against
   the bounding box of the target element
   -->
-  <pattern id="p2" width="20%" height="20%"
-           patternContentUnits="objectBoundingBox">
+  <pattern
+    id="p2"
+    width="20%"
+    height="20%"
+    patternContentUnits="objectBoundingBox">
     <circle cx=".1" cy=".1" r=".1" />
   </pattern>
 
   <!-- Left square with user space tiles -->
-  <rect x="10"  y="10" width="80" height="80"
-        fill="url(#p1)" />
+  <rect x="10" y="10" width="80" height="80" fill="url(#p1)" />
 
   <!-- Right square with bounding box tiles -->
-  <rect x="110" y="10" width="80" height="80"
-        fill="url(#p2)" />
+  <rect x="110" y="10" width="80" height="80" fill="url(#p2)" />
 </svg>
 ```
 
-{{EmbedLiveSample('Example', 150, '100%')}}
+{{EmbedLiveSample('Examples', 150, '100%')}}
 
-## pattern
+## Elements
+
+You can use this attribute with the SVG elements described in the sections below.
+
+### `<pattern>`
 
 For {{SVGElement('pattern')}}, `patternContentUnits` defines the coordinate system in use for the content of the element.
 
@@ -82,7 +94,7 @@ For {{SVGElement('pattern')}}, `patternContentUnits` defines the coordinate syst
 - `userSpaceOnUse`
   - : This value indicates that all coordinates inside the {{SVGElement('pattern')}} element refer to the user coordinate system as defined when the pattern tile was created.
 - `objectBoundingBox`
-  - : This value indicates that all coordinates inside the {{SVGElement('pattern')}} element are relative to the bounding box of the element the pattern is applied to. A bounding box could be considered the same as if the content of the {{ SVGElement("pattern") }} were bound to a "`0 0 1 1`" {{ SVGAttr("viewbox") }} for a pattern tile of width and height of 100%.
+  - : This value indicates that all coordinates inside the {{SVGElement('pattern')}} element are relative to the bounding box of the element the pattern is applied to. A bounding box could be considered the same as if the content of the {{ SVGElement("pattern") }} were bound to a `"0 0 1 1"` {{ SVGAttr("viewBox") }} for a pattern tile of width and height of 100%.
 
 ## Specifications
 

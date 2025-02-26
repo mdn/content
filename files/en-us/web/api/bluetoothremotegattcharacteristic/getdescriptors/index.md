@@ -1,19 +1,14 @@
 ---
-title: BluetoothRemoteGATTCharacteristic.getDescriptors()
+title: "BluetoothRemoteGATTCharacteristic: getDescriptors() method"
+short-title: getDescriptors()
 slug: Web/API/BluetoothRemoteGATTCharacteristic/getDescriptors
 page-type: web-api-instance-method
-tags:
-  - API
-  - Bluetooth
-  - BluetoothRemoteGATTCharacteristic
-  - Experimental
-  - Method
-  - Reference
-  - Web Bluetooth API
-  - getDescriptors()
+status:
+  - experimental
 browser-compat: api.BluetoothRemoteGATTCharacteristic.getDescriptors
 ---
-{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
+
+{{APIRef("Bluetooth API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`BluetoothRemoteGATTCharacteristic.getDescriptors()`** method
 returns a {{jsxref("Promise")}} that resolves to an {{jsxref("Array")}} of all
@@ -21,7 +16,7 @@ returns a {{jsxref("Promise")}} that resolves to an {{jsxref("Array")}} of all
 
 ## Syntax
 
-```js
+```js-nolint
 getDescriptors(bluetoothDescriptorUUID)
 ```
 
@@ -41,5 +36,3 @@ of {{domxref("BluetoothRemoteGATTDescriptor")}} objects.
 ## Browser compatibility
 
 {{Compat}}
-
-{{APIRef("Web Bluetooth")}}

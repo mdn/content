@@ -1,24 +1,21 @@
 ---
-title: CanvasRenderingContext2D.lineWidth
+title: "CanvasRenderingContext2D: lineWidth property"
+short-title: lineWidth
 slug: Web/API/CanvasRenderingContext2D/lineWidth
 page-type: web-api-instance-property
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Property
-  - Reference
 browser-compat: api.CanvasRenderingContext2D.lineWidth
 ---
+
 {{APIRef}}
 
 The
 **`CanvasRenderingContext2D.lineWidth`**
 property of the Canvas 2D API sets the thickness of lines.
 
-> **Note:** Lines can be drawn with the
-> {{domxref("CanvasRenderingContext2D.stroke()",
-    "stroke()")}}, {{domxref("CanvasRenderingContext2D.strokeRect()", "strokeRect()")}},
+> [!NOTE]
+> Lines can be drawn with the
+> {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}},
+> {{domxref("CanvasRenderingContext2D.strokeRect()", "strokeRect()")}},
 > and {{domxref("CanvasRenderingContext2D.strokeText()", "strokeText()")}} methods.
 
 ## Value
@@ -40,8 +37,8 @@ This example draws a line and a rectangle, using a line width of 15 units.
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 ctx.lineWidth = 15;
 
@@ -67,17 +64,6 @@ For more examples and explanation about this property, see [Applying styles and 
 ## Browser compatibility
 
 {{Compat}}
-
-### WebKit/Blink-specific notes
-
-- In WebKit- and Blink-based Browsers, a non-standard and deprecated method
-  `ctx.setLineWidth()` is implemented in addition to this property.
-
-### Gecko-specific notes
-
-- Starting Gecko 2.0 {{geckoRelease("2.0")}}, setting `lineWidth` to a
-  negative value no longer throws an exception; instead, it properly ignores
-  non-positive values.
 
 ## See also
 

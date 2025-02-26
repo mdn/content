@@ -1,31 +1,27 @@
 ---
 title: WeakSet() constructor
 slug: Web/JavaScript/Reference/Global_Objects/WeakSet/WeakSet
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - WeakSet
-  - Polyfill
+page-type: javascript-constructor
 browser-compat: javascript.builtins.WeakSet.WeakSet
 ---
+
 {{JSRef}}
 
-The **`WeakSet`** constructor lets you create
-`WeakSet` objects that store weakly held _objects_ in a collection.
+The **`WeakSet()`** constructor creates {{jsxref("WeakSet")}} objects.
 
 ## Syntax
 
-```js
+```js-nolint
 new WeakSet()
 new WeakSet(iterable)
 ```
 
+> **Note:** `WeakSet()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
+
 ### Parameters
 
 - `iterable` {{optional_inline}}
-  - : If an [iterable object](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) is passed, all of its elements will be added to the new
-    `WeakSet`. null is treated as undefined.
+  - : If an [iterable object](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) is passed, all of its elements will be added to the new `WeakSet`. `null` is treated as `undefined`.
 
 ## Examples
 
@@ -39,12 +35,12 @@ const bar = {};
 ws.add(foo);
 ws.add(bar);
 
-ws.has(foo);    // true
-ws.has(bar);    // true
+ws.has(foo); // true
+ws.has(bar); // true
 
 ws.delete(foo); // removes foo from the set
-ws.has(foo);    // false, foo has been removed
-ws.has(bar);    // true, bar is retained
+ws.has(foo); // false, foo has been removed
+ws.has(bar); // true, bar is retained
 ```
 
 Note that `foo !== bar`. While they are similar objects, _they are not

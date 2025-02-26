@@ -1,18 +1,28 @@
 ---
-title: The MDN project
+title: MDN Web Docs
 slug: MDN
-tags:
-  - Landing
-  - MDN Meta
+page-type: landing-page
+sidebar: mdnsidebar
 ---
-{{MDNSidebar}}
 
-**MDN Web Docs** is free-to-use resource on which we document the open web platform. Our mission is to provide _developers_ with the _information_ they need to _easily_ build projects on the _web platform_.
+**MDN Web Docs** is a free-to-use resource that documents open web technologies.
+Our mission is to provide developers with the information they need to easily build projects on the web platform.
+The resources below describe how the site works, how we write documentation, the guidelines and conventions we follow, and how you can get involved.
 
-This is the landing page for the MDN project itself. Here you'll find guides on how the site works, how we do our documentation, what guidelines and conventions we adhere to, and how you can help.
-
-And we invite anyone to help! If you are interested in improving this essential web developer resource, you are welcome to add and edit content. You don't need to be a programmer or know a lot about technology; there are many different tasks that need to be performed, from the simple (proof-reading and correcting typos) to the complex (writing API documentation).
-
-To find out how to help, visit our [Contributing to MDN](/en-US/docs/MDN/Contribute) page. If you want to talk to us and ask questions, join the discussion on the [MDN Web Docs chat room](https://chat.mozilla.org/#/room/#mdn:mozilla.org) on [Matrix](https://wiki.mozilla.org/Matrix).
-
-{{LandingPageListSubPages()}}
+- [Web development tutorials](/en-US/docs/MDN/Tutorials)
+  - : A curated list of tutorials on MDN Web Docs and learning materials for beginners, intermediate-level, or expert web developers.
+    Explore detailed tutorials for web technologies like CSS, JavaScript, HTML, and more.
+- [Developer guides](/en-US/docs/MDN/Guides)
+  - : A collection of focused, goal-oriented guides that teach you how to use features or APIs through practical examples.
+    These guides provide hands-on explanations to help you understand and apply new concepts.
+- [MDN Web Docs Community](/en-US/docs/MDN/Community)
+  - : These pages describe how to get started contributing to MDN Web Docs.
+    You can find out where to look for answers, how to work on GitHub issues, open discussions, or suggest new content.
+    If you need help or want to get in touch with us, you'll find all the information here.
+- [Writing guidelines](/en-US/docs/MDN/Writing_guidelines)
+  - : These guides describe how to write for MDN Web Docs.
+    They contain the editorial policies defining the types of content we write and the types of content we don't write.
+    You'll find our writing style guide, how-to guides for specific tasks, and information about the structure of different types of pages.
+- [About MDN Web Docs](/en-US/about)
+  - : MDN Web Docs serves millions of readers every month and connects developers with the tools and information they need to easily build projects on the open web.
+    Learn about the history of MDN, the team working on MDN Web Docs, our values, and our partners.

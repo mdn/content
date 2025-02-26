@@ -1,17 +1,15 @@
 ---
 title: mask-composite
 slug: Web/CSS/mask-composite
-tags:
-  - CSS
-  - CSS Masking
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.mask-composite
 ---
+
 {{CSSRef}}
 
 The **`mask-composite`** [CSS](/en-US/docs/Web/CSS) property represents a compositing operation used on the current mask layer with the mask layers below it.
+
+## Syntax
 
 ```css
 /* Keyword values */
@@ -27,8 +25,6 @@ mask-composite: revert;
 mask-composite: revert-layer;
 mask-composite: unset;
 ```
-
-## Syntax
 
 One or more of the keyword values listed below, separated by commas.
 
@@ -57,7 +53,25 @@ For the composition the current mask layer is referred to as _source_, while all
 
 ### Compositing mask layers with addition
 
-{{EmbedGHLiveSample("css-examples/masking/mask-composite.html", '100%', 550)}}
+```html live-sample___mask-composite-example
+<div class="masked"></div>
+```
+
+```css live-sample___mask-composite-example
+.masked {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+
+  mask-image:
+    url(https://mdn.github.io/shared-assets/images/examples/mdn.svg),
+    url(https://mdn.github.io/shared-assets/images/examples/mask-star.svg);
+  mask-size: 100% 100%;
+  mask-composite: subtract;
+}
+```
+
+{{EmbedLiveSample("mask-composite-example", "", "150px")}}
 
 ## Specifications
 

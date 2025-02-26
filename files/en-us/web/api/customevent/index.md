@@ -2,16 +2,15 @@
 title: CustomEvent
 slug: Web/API/CustomEvent
 page-type: web-api-interface
-tags:
-  - Interface
-  - Reference
 browser-compat: api.CustomEvent
 ---
-{{APIRef("DOM")}}
+
+{{APIRef("DOM")}}{{AvailableInWorkers}}
 
 The **`CustomEvent`** interface represents events initialized by an application for any purpose.
 
-{{AvailableInWorkers}}
+> [!NOTE]
+> If used to attempt to communicate between a web extension content script and a web page script, a non-string `detail` property throws with "Permission denied to access property" in Firefox. To avoid this issue clone the object. See [Share objects with page scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts) for more information.
 
 {{InheritanceDiagram}}
 
@@ -20,19 +19,19 @@ The **`CustomEvent`** interface represents events initialized by an application 
 - {{domxref("CustomEvent.CustomEvent", "CustomEvent()")}}
   - : Creates a new `CustomEvent`.
 
-## Properties
+## Instance properties
 
 _This interface inherits properties from its parent, {{domxref("Event")}}._
 
-- {{domxref("CustomEvent.detail")}} {{readonlyinline}}
+- {{domxref("CustomEvent.detail")}} {{ReadOnlyInline}}
   - : Returns any data passed when initializing the event.
 
-## Methods
+## Instance methods
 
 _This interface inherits methods from its parent, {{domxref("Event")}}._
 
 - {{domxref("CustomEvent.initCustomEvent()")}} {{deprecated_inline}}
-  - : Initializes a `CustomEvent` object. If the event has already being dispatched, this method does nothing.
+  - : Initializes a `CustomEvent` object. If the event has already been dispatched, this method does nothing.
 
 ## Specifications
 

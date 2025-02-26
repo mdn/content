@@ -1,17 +1,11 @@
 ---
-title: 'Element: auxclick event'
+title: "Element: auxclick event"
+short-title: auxclick
 slug: Web/API/Element/auxclick_event
 page-type: web-api-event
-tags:
-  - Element
-  - Event
-  - MouseEvent
-  - Reference
-  - UI
-  - auxclick
-  - mouse
 browser-compat: api.Element.auxclick_event
 ---
+
 {{APIRef}}
 
 The **`auxclick`** event is fired at an {{domxref("Element")}} when a non-primary pointing device button (any mouse button other than the primary—usually leftmost—button) has been pressed and released both within the same element.
@@ -23,110 +17,87 @@ The **`auxclick`** event is fired at an {{domxref("Element")}} when a non-primar
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('auxclick', (event) => {});
+addEventListener("auxclick", (event) => {});
 
-onauxclick = (event) => { };
+onauxclick = (event) => {};
 ```
 
 ## Event type
 
-An {{domxref("MouseEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("PointerEvent")}}. Inherits from {{domxref("MouseEvent")}}.
 
-{{InheritanceDiagram("MouseEvent")}}
+{{InheritanceDiagram("PointerEvent")}}
+
+> [!NOTE]
+> In earlier versions of the specification, the event type for this event was a {{domxref("MouseEvent")}}. Check [browser compatibility](#browser_compatibility) for more information.
 
 ## Event properties
 
-_This interface also inherits properties of its parents, {{domxref("UIEvent")}} and {{domxref("Event")}}._
+_This interface inherits properties from {{domxref("MouseEvent")}} and {{domxref("Event")}}._
 
-- {{domxref("MouseEvent.altKey")}} {{readonlyinline}}
-  - : Returns `true` if the <kbd>alt</kbd> key was down when the mouse event was fired.
-- {{domxref("MouseEvent.button")}} {{readonlyinline}}
-  - : The button number that was pressed (if applicable) when the mouse event was fired.
-- {{domxref("MouseEvent.buttons")}} {{readonlyinline}}
-  - : The buttons being pressed (if any) when the mouse event was fired.
-- {{domxref("MouseEvent.clientX")}} {{readonlyinline}}
-  - : The X coordinate of the mouse pointer in local (DOM content) coordinates.
-- {{domxref("MouseEvent.clientY")}} {{readonlyinline}}
-  - : The Y coordinate of the mouse pointer in local (DOM content) coordinates.
-- {{domxref("MouseEvent.ctrlKey")}} {{readonlyinline}}
-  - : Returns `true` if the <kbd>control</kbd> key was down when the mouse event was fired.
-- {{domxref("MouseEvent.layerX")}} {{Non-standard_inline}} {{readonlyinline}}
-  - : Returns the horizontal coordinate of the event relative to the current layer.
-- {{domxref("MouseEvent.layerY")}} {{Non-standard_inline}} {{readonlyinline}}
-  - : Returns the vertical coordinate of the event relative to the current layer.
-- {{domxref("MouseEvent.metaKey")}} {{readonlyinline}}
-  - : Returns `true` if the <kbd>meta</kbd> key was down when the mouse event was fired.
-- {{domxref("MouseEvent.movementX")}} {{readonlyinline}}
-  - : The X coordinate of the mouse pointer relative to the position of the last {{domxref("Element/mousemove_event", "mousemove")}} event.
-- {{domxref("MouseEvent.movementY")}} {{readonlyinline}}
-  - : The Y coordinate of the mouse pointer relative to the position of the last {{domxref("Element/mousemove_event", "mousemove")}} event.
-- {{domxref("MouseEvent.offsetX")}} {{readonlyinline}}
-  - : The X coordinate of the mouse pointer relative to the position of the padding edge of the target node.
-- {{domxref("MouseEvent.offsetY")}} {{readonlyinline}}
-  - : The Y coordinate of the mouse pointer relative to the position of the padding edge of the target node.
-- {{domxref("MouseEvent.pageX")}} {{readonlyinline}}
-  - : The X coordinate of the mouse pointer relative to the whole document.
-- {{domxref("MouseEvent.pageY")}} {{readonlyinline}}
-  - : The Y coordinate of the mouse pointer relative to the whole document.
-- {{domxref("MouseEvent.relatedTarget")}} {{readonlyinline}}
-  - : The secondary target for the event, if there is one.
-- {{domxref("MouseEvent.screenX")}} {{readonlyinline}}
-  - : The X coordinate of the mouse pointer in global (screen) coordinates.
-- {{domxref("MouseEvent.screenY")}} {{readonlyinline}}
-  - : The Y coordinate of the mouse pointer in global (screen) coordinates.
-- {{domxref("MouseEvent.shiftKey")}} {{readonlyinline}}
-  - : Returns `true` if the <kbd>shift</kbd> key was down when the mouse event was fired.
-- {{domxref("MouseEvent.mozPressure")}} {{non-standard_inline()}} {{deprecated_inline}} {{readonlyinline}}
-  - : The amount of pressure applied to a touch or tablet device when generating the event; this value ranges between `0.0` (minimum pressure) and `1.0` (maximum pressure).
-    Instead of using this deprecated (and non-standard) property, you should use {{domxref("PointerEvent")}} and look at its {{domxref("PointerEvent.pressure", "pressure")}} property.
-- {{domxref("MouseEvent.mozInputSource")}} {{non-standard_inline()}} {{readonlyinline}}
-  - : The type of device that generated the event (one of the `MOZ_SOURCE_*` constants).
-    This lets you, for example, determine whether a mouse event was generated by an actual mouse or by a touch event (which might affect the degree of accuracy with which you interpret the coordinates associated with the event).
-- {{domxref("MouseEvent.webkitForce")}} {{non-standard_inline()}} {{readonlyinline}}
-  - : The amount of pressure applied when clicking
-- {{domxref("MouseEvent.x")}} {{readonlyinline}}
-  - : Alias for {{domxref("MouseEvent.clientX")}}.
-- {{domxref("MouseEvent.y")}} {{readonlyinline}}
-  - : Alias for {{domxref("MouseEvent.clientY")}}
+- {{domxref('PointerEvent.altitudeAngle')}} {{ReadOnlyInline}} {{experimental_inline}}
+  - : Represents the angle between a transducer (a pointer or stylus) axis and the X-Y plane of a device screen.
+- {{domxref('PointerEvent.azimuthAngle')}} {{ReadOnlyInline}} {{experimental_inline}}
+  - : Represents the angle between the Y-Z plane and the plane containing both the transducer (a pointer or stylus) axis and the Y axis.
+- {{domxref('PointerEvent.pointerId')}} {{ReadOnlyInline}}
+  - : A unique identifier for the pointer causing the event.
+- {{domxref('PointerEvent.width')}} {{ReadOnlyInline}}
+  - : The width (magnitude on the X axis), in CSS pixels, of the contact geometry of the pointer.
+- {{domxref('PointerEvent.height')}} {{ReadOnlyInline}}
+  - : The height (magnitude on the Y axis), in CSS pixels, of the contact geometry of the pointer.
+- {{domxref('PointerEvent.pressure')}} {{ReadOnlyInline}}
+  - : The normalized pressure of the pointer input in the range `0` to `1`, where `0` and `1` represent the minimum and maximum pressure the hardware is capable of detecting, respectively.
+- {{domxref('PointerEvent.tangentialPressure')}} {{ReadOnlyInline}}
+  - : The normalized tangential pressure of the pointer input (also known as barrel pressure or [cylinder stress](https://en.wikipedia.org/wiki/Cylinder_stress)) in the range `-1` to `1`, where `0` is the neutral position of the control.
+- {{domxref('PointerEvent.tiltX')}} {{ReadOnlyInline}}
+  - : The plane angle (in degrees, in the range of `-90` to `90`) between the Y–Z plane and the plane containing both the pointer (e.g. pen stylus) axis and the Y axis.
+- {{domxref('PointerEvent.tiltY')}} {{ReadOnlyInline}}
+  - : The plane angle (in degrees, in the range of `-90` to `90`) between the X–Z plane and the plane containing both the pointer (e.g. pen stylus) axis and the X axis.
+- {{domxref('PointerEvent.twist')}} {{ReadOnlyInline}}
+  - : The clockwise rotation of the pointer (e.g. pen stylus) around its major axis in degrees, with a value in the range `0` to `359`.
+- {{domxref('PointerEvent.pointerType')}} {{ReadOnlyInline}}
+  - : Indicates the device type that caused the event (mouse, pen, touch, etc.).
+- {{domxref('PointerEvent.isPrimary')}} {{ReadOnlyInline}}
+  - : Indicates if the pointer represents the primary pointer of this pointer type.
 
 ## Preventing default actions
 
 For the vast majority of browsers that map middle click to opening a link in a new tab, including Firefox, it is possible to cancel this behavior by calling {{domxref("Event.preventDefault()", "preventDefault()")}} from within an `auxclick` event handler.
 
-When listening for `auxclick` events originating on elements that do not support input or navigation, you will often want to explicitly prevent other default actions mapped to the down action of the middle mouse button. On Windows this is usually autoscroll, and on macOS and Linux this is usually clipboard paste. This can be done by preventing the default behavior of the {{domxref("Element/mousedown_event", "mousedown")}} or {{domxref("HTMLElement/pointerdown_event", "pointerdown")}} event.
+When listening for `auxclick` events originating on elements that do not support input or navigation, you will often want to explicitly prevent other default actions mapped to the down action of the middle mouse button. On Windows this is usually autoscroll, and on macOS and Linux this is usually clipboard paste. This can be done by preventing the default behavior of the {{domxref("Element/mousedown_event", "mousedown")}} or {{domxref("Element/pointerdown_event", "pointerdown")}} event.
 
 Additionally, you may need to avoid opening a system context menu after a right click. Due to timing differences between operating systems, this too is not a preventable default behavior of `auxclick`. Instead, this can be done by preventing the default behavior of the {{domxref("Element/contextmenu_event", "contextmenu")}} event.
 
 ## Examples
 
-In this example we define functions for two event handlers — {{domxref("Element.click_event", "onclick")}} and `onauxclick`. The former changes the color of the button background, while the latter changes the button foreground (text) color. You also can see the two functions in action by trying the demo out with a multi-button mouse ([see it live on GitHub](https://mdn.github.io/dom-examples/auxclick/); also [see the source code](https://github.com/mdn/dom-examples/blob/master/auxclick/index.html)).
+In this example we define functions for two event handlers — {{domxref("Element.click_event", "onclick")}} and `onauxclick`. The former changes the color of the button background, while the latter changes the button foreground (text) color. You also can see the two functions in action by trying the demo out with a multi-button mouse ([see it live on GitHub](https://mdn.github.io/dom-examples/auxclick/); also [see the source code](https://github.com/mdn/dom-examples/blob/main/auxclick/index.html)).
 
 ### JavaScript
 
 ```js
-let button = document.querySelector('button');
-let html = document.querySelector('html');
+let button = document.querySelector("button");
+let html = document.querySelector("html");
 
 function random(number) {
   return Math.floor(Math.random() * number);
 }
 
 function randomColor() {
-    return `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
+  return `rgb(${random(255)} ${random(255)} ${random(255)})`;
 }
 
-button.onclick = function() {
+button.onclick = () => {
   button.style.backgroundColor = randomColor();
 };
 
-button.onauxclick = function(e) {
+button.onauxclick = (e) => {
   e.preventDefault();
   button.style.color = randomColor();
-}
+};
 
-button.oncontextmenu = function(e) {
+button.oncontextmenu = (e) => {
   e.preventDefault();
-}
+};
 ```
 
 Notice that in addition to capturing the `auxclick` event using `onauxclick`, the {{domxref("Element.contextmenu_event", "contextmenu")}} event is also captured, and {{domxref("Event.preventDefault", "preventDefault()")}} called on that event, in order to prevent the context menu from popping up after the color change is applied.
@@ -167,7 +138,8 @@ h1 {
 
 {{EmbedLiveSample("Examples", 640, 300)}}
 
-> **Note:** If you are using a three-button mouse, you'll notice that the `onauxclick` handler is run when any of the non-left mouse buttons are clicked (usually including any "special" buttons on gaming mice).
+> [!NOTE]
+> If you are using a three-button mouse, you'll notice that the `onauxclick` handler is run when any of the non-left mouse buttons are clicked (usually including any "special" buttons on gaming mice).
 
 ## Specifications
 
@@ -179,11 +151,11 @@ h1 {
 
 ## See also
 
-- [Introduction to events](/en-US/docs/Learn/JavaScript/Building_blocks/Events)
+- [Learn: Introduction to events](/en-US/docs/Learn_web_development/Core/Scripting/Events)
 - {{domxref("Element/click_event", "click")}}
 - {{domxref("Element/contextmenu_event", "contextmenu")}}
 - {{domxref("Element/dblclick_event", "dblclick")}}
 - {{domxref("Element/mousedown_event", "mousedown")}}
 - {{domxref("Element/mouseup_event", "mouseup")}}
-- {{domxref("HTMLElement/pointerdown_event", "pointerdown")}}
-- {{domxref("HTMLElement/pointerup_event", "pointerup")}}
+- {{domxref("Element/pointerdown_event", "pointerdown")}}
+- {{domxref("Element/pointerup_event", "pointerup")}}

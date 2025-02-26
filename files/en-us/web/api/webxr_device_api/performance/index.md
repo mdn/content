@@ -2,25 +2,8 @@
 title: WebXR performance guide
 slug: Web/API/WebXR_Device_API/Performance
 page-type: guide
-tags:
-  - API
-  - Guide
-  - Performance
-  - Quality
-  - Scale
-  - Scaling
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - detail
-  - effects
-  - frame rate
-  - frameRate
-  - rendering
-  - resolution
-  - size
-  - speed
 ---
+
 {{DefaultAPISidebar("WebXR Device API")}}
 
 WebXR applications involve multiple technologies which can be highly sensitive to performance constraints. As such, you may find yourself needing to make adjustments or compromises to optimize the performance of your WebXR application to be as usable as possible on the broadest assortment of target devices. In this guide, we'll examine a variety of suggestions and recommendations that will help you make your WebXR app as performant as possible.
@@ -29,11 +12,11 @@ WebXR applications involve multiple technologies which can be highly sensitive t
 
 Talk about general stuff like limiting how many different loops there are during rendering, avoiding unnecessary drawing, etc.
 
-Can probably also include stuff from https\://github.com/immersive-web/webxr/blob/master/explainer.md#changing-the-field-of-view-for-inline-sessions
+Can probably also include stuff from this [explainer in the spec repo](https://github.com/immersive-web/webxr/blob/master/explainer.md#changing-the-field-of-view-for-inline-sessions)
 
 ## Managing rendering quality
 
-This section will come in part from https\://github.com/immersive-web/webxr/blob/master/explainer.md#controlling-rendering-quality
+This section will come in part from this [explainer in the spec repo](https://github.com/immersive-web/webxr/blob/master/explainer.md#controlling-rendering-quality)
 
 ## Managing frame rate
 
@@ -41,7 +24,7 @@ Content about frame rate management.
 
 ## Managing use of depth
 
-This section will combine information from https\://github.com/immersive-web/webxr/blob/master/explainer.md#controlling-depth-precision and https\://github.com/immersive-web/webxr/blob/master/explainer.md#preventing-the-compositor-from-using-the-depth-buffer
+This section will combine information from this [explainer](https://github.com/immersive-web/webxr/blob/master/explainer.md#controlling-depth-precision) and this [one](https://github.com/immersive-web/webxr/blob/master/explainer.md#preventing-the-compositor-from-using-the-depth-buffer), in the spec repository.
 
 ## Optimizing memory use
 
@@ -49,16 +32,18 @@ When using libraries that perform things such as matrix mathematics, you typical
 
 While an individual vector or matrix doesn't occupy an inordinate amount of memory, the sheer number of vectors and matrices and other structures that are used to build each frame of a 3D scene means the memory management becomes a problem eventually if you keep allocating and de-allocating memory objects.
 
-Consider the following
+Consider the following:
 
 ```js
 function drawScene(gl, view, programInfo, buffers, texture, deltaTime) {
   // …
-  for (object in scene) {
-    let vertexList = [/* … */];
-    let normalMatrix = mat4.create();
-    let modelViewMatrix = mat4.create();
-    let objectMatrix = mat4.create();
+  for (const object in scene) {
+    const vertexList = [
+      /* … */
+    ];
+    const normalMatrix = mat4.create();
+    const modelViewMatrix = mat4.create();
+    const objectMatrix = mat4.create();
 
     // Apply rotation updates to the object if needed
 
@@ -72,13 +57,15 @@ This renders a scene. But it's inefficient, because it allocates as local variab
 A simple change can optimize this significantly:
 
 ```js
-const vertexList = [/* … */];
+const vertexList = [
+  /* … */
+];
 const normalMatrix = mat4.create();
 const modelViewMatrix = mat4.create();
 
 function drawScene(gl, view, programInfo, buffers, texture, deltaTime) {
   // …
-  for (object in scene) {
+  for (const object in scene) {
     // …
   }
 }
@@ -88,10 +75,6 @@ Now, instead of allocating variables every loop iteration, we're using global co
 
 - The memory allocated for each value or structure will not need to be reallocated every frame. This reduces the potential for triggering garbage collection, and optimizes memory use.
 - You can't accidentally delete the objects that contain your vectors and matrices, since they're constants.
-- You can, however, still replace the *contents* of each of these objects, so they're reusable.
+- You can, however, still replace the _contents_ of each of these objects, so they're reusable.
 
 You're now protected from several possible coding mistakes, and your entire animation will be smoother and more performant as well.
-
-## See also
-
-Some helpful links.

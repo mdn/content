@@ -1,36 +1,30 @@
 ---
-title: Element.prepend()
+title: "Element: prepend() method"
+short-title: prepend()
 slug: Web/API/Element/prepend
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Method
-  - Node
-  - Element
-  - Reference
-  - prepend
 browser-compat: api.Element.prepend
 ---
+
 {{APIRef("DOM")}}
 
 The **`Element.prepend()`** method inserts a set of
-{{domxref("Node")}} objects or string objects before the first child
-of the {{domxref("Element")}}. String objects are inserted as
+{{domxref("Node")}} objects or strings before the first child
+of the {{domxref("Element")}}. Strings are inserted as
 equivalent {{domxref("Text")}} nodes.
 
 ## Syntax
 
-```js
+```js-nolint
 prepend(param1)
 prepend(param1, param2)
-prepend(param1, param2, /* … ,*/ paramN)
+prepend(param1, param2, /* …, */ paramN)
 ```
 
 ### Parameters
 
 - `param1`, …, `paramN`
-  - : A set of {{domxref("Node")}} or string objects to insert.
+  - : A set of {{domxref("Node")}} objects or strings to insert.
 
 ### Return value
 
@@ -83,7 +77,7 @@ See {{jsxref("Symbol.unscopables")}} for more information.
 ```js
 let div = document.createElement("div");
 
-with(div) {
+with (div) {
   prepend("foo");
 }
 // ReferenceError: prepend is not defined

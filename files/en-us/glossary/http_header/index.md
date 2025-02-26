@@ -1,11 +1,11 @@
 ---
 title: HTTP header
 slug: Glossary/HTTP_header
-tags:
-  - Glossary
-  - HTTP Header
-  - WebMechanics
+page-type: glossary-definition
 ---
+
+{{GlossarySidebar}}
+
 An **HTTP header** is a field of an HTTP request or response that passes additional context and metadata about the request or response. For example, a request message can use headers to indicate it's preferred media formats, while a response can use header to indicate the media format of the returned body. Headers are case-insensitive, begin at the start of a line and are immediately followed by a `':'` and a header-dependent value. The value finishes at the next CRLF or at the end of the message.
 
 The HTTP and Fetch specifications refer to a number of header categories, including:
@@ -17,21 +17,21 @@ The HTTP and Fetch specifications refer to a number of header categories, includ
 
 A basic request with one header:
 
-```plain
-GET /example.http HTTP/1.1
+```http
+GET /example.html HTTP/1.1
 Host: example.com
 ```
 
 Redirects have mandatory headers ({{HTTPHeader("Location")}}):
 
-```plain
+```http
 302 Found
 Location: /NewPage.html
 ```
 
 A typical set of headers:
 
-```plain
+```http
 304 Not Modified
 Access-Control-Allow-Origin: *
 Age: 2318192
@@ -47,7 +47,8 @@ X-Cache: Hit from cloudfront
 X-Cache-Info: cached
 ```
 
-> **Note:** Older versions of the specification referred to:
+> [!NOTE]
+> Older versions of the specification referred to:
 >
 > - {{Glossary("General header")}}: Headers applying to both requests and responses but with no relation to the data eventually transmitted in the body.
 > - {{Glossary("Entity header")}}: Headers containing more information about the body of the entity, like its content length or its MIME-type (this is a superset of what are now referred to as the Representation metadata headers)
@@ -56,14 +57,12 @@ X-Cache-Info: cached
 
 - [List of all HTTP headers](/en-US/docs/Web/HTTP/Headers)
 - Syntax of [headers](https://datatracker.ietf.org/doc/html/rfc7230#section-3.2) in the HTTP specification
-- [Glossary](/en-US/docs/Glossary)
-
-  - {{Glossary("HTTP header")}}
+- Related glossary terms:
   - {{Glossary("Request header")}}
   - {{Glossary("Response header")}}
   - {{Glossary("Representation header")}}
   - {{Glossary("Fetch metadata request header")}}
-  - {{Glossary("Forbidden header name")}}
+  - {{Glossary("Forbidden request header")}}
   - {{Glossary("Forbidden response header name")}}
   - {{Glossary("CORS-safelisted request header")}}
   - {{Glossary("CORS-safelisted response header")}}

@@ -2,21 +2,17 @@
 title: WebSocket
 slug: Web/API/WebSocket
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - NeedsContent
-  - WebSocket
-  - WebSockets
 browser-compat: api.WebSocket
 ---
-{{APIRef("Web Sockets API")}}
+
+{{APIRef("WebSockets API")}}{{AvailableInWorkers}}
 
 The `WebSocket` object provides the API for creating and managing a [WebSocket](/en-US/docs/Web/API/WebSockets_API) connection to a server, as well as for sending and receiving data on the connection.
 
 To construct a `WebSocket`, use the [`WebSocket()`](/en-US/docs/Web/API/WebSocket/WebSocket) constructor.
 
-{{AvailableInWorkers}}
+> [!NOTE]
+> The `WebSocket` API has no way to apply [backpressure](/en-US/docs/Web/API/Streams_API/Concepts#backpressure), therefore when messages arrive faster than the application can process them, the application will either fill up the device's memory by buffering those messages, become unresponsive due to 100% CPU usage, or both. For an alternative that provides backpressure automatically, see {{domxref("WebSocketStream")}}.
 
 {{InheritanceDiagram}}
 
@@ -25,22 +21,22 @@ To construct a `WebSocket`, use the [`WebSocket()`](/en-US/docs/Web/API/WebSocke
 - {{domxref("WebSocket.WebSocket", "WebSocket()")}}
   - : Returns a newly created `WebSocket` object.
 
-## Properties
+## Instance properties
 
 - {{domxref("WebSocket.binaryType")}}
   - : The binary data type used by the connection.
-- {{domxref("WebSocket.bufferedAmount")}} {{readonlyinline}}
+- {{domxref("WebSocket.bufferedAmount")}} {{ReadOnlyInline}}
   - : The number of bytes of queued data.
-- {{domxref("WebSocket.extensions")}} {{readonlyinline}}
+- {{domxref("WebSocket.extensions")}} {{ReadOnlyInline}}
   - : The extensions selected by the server.
-- {{domxref("WebSocket.protocol")}} {{readonlyinline}}
+- {{domxref("WebSocket.protocol")}} {{ReadOnlyInline}}
   - : The sub-protocol selected by the server.
-- {{domxref("WebSocket.readyState")}} {{readonlyinline}}
+- {{domxref("WebSocket.readyState")}} {{ReadOnlyInline}}
   - : The current state of the connection.
-- {{domxref("WebSocket.url")}} {{readonlyinline}}
+- {{domxref("WebSocket.url")}} {{ReadOnlyInline}}
   - : The absolute URL of the WebSocket.
 
-## Methods
+## Instance methods
 
 - {{domxref("WebSocket.close()")}}
   - : Closes the connection.
@@ -68,16 +64,16 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 
 ```js
 // Create WebSocket connection.
-const socket = new WebSocket('ws://localhost:8080');
+const socket = new WebSocket("ws://localhost:8080");
 
 // Connection opened
-socket.addEventListener('open', function (event) {
-    socket.send('Hello Server!');
+socket.addEventListener("open", (event) => {
+  socket.send("Hello Server!");
 });
 
 // Listen for messages
-socket.addEventListener('message', function (event) {
-    console.log('Message from server ', event.data);
+socket.addEventListener("message", (event) => {
+  console.log("Message from server ", event.data);
 });
 ```
 

@@ -1,24 +1,19 @@
 ---
-title: 'CSP: frame-src'
+title: "CSP: frame-src"
 slug: Web/HTTP/Headers/Content-Security-Policy/frame-src
-tags:
-  - CSP
-  - Content-Security-Policy
-  - Directive
-  - Frame
-  - HTTP
-  - Reference
-  - Security
-  - frame-src
-  - source
+page-type: http-csp-directive
 browser-compat: http.headers.Content-Security-Policy.frame-src
 ---
+
 {{HTTPSidebar}}
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP)
 **`frame-src`** directive specifies valid sources for nested
 browsing contexts loading using elements such as {{HTMLElement("frame")}} and
 {{HTMLElement("iframe")}}.
+
+> **Note:** **`frame-src`** allows you to specify where iframes in a page may be loaded from.
+> This differs from **`frame-ancestors`**, which allows you to specify what parent source may embed a page.
 
 <table class="properties">
   <tbody>
@@ -43,18 +38,22 @@ browsing contexts loading using elements such as {{HTMLElement("frame")}} and
 
 ## Syntax
 
-One or more sources can be allowed for the `frame-src` policy:
-
 ```http
-Content-Security-Policy: frame-src <source>;
-Content-Security-Policy: frame-src <source> <source>;
+Content-Security-Policy: frame-src 'none';
+Content-Security-Policy: frame-src <source-expression-list>;
 ```
 
-### Sources
+This directive may have one of the following values:
 
-`<source>` can be any one of the values listed in [CSP Source Values](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#sources).
+- `'none'`
+  - : No resources of this type may be loaded. The single quotes are mandatory.
+- `<source-expression-list>`
 
-Note that this same set of values can be used in all {{Glossary("fetch directive", "fetch directives")}} (and a [number of other directives](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#relevant_directives)).
+  - : A space-separated list of _source expression_ values. Resources of this type may be loaded if they match any of the given source expressions. For this directive, the following source expression values are applicable:
+
+    - [`<host-source>`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#host-source)
+    - [`<scheme-source>`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#scheme-source)
+    - [`'self'`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#self)
 
 ## Examples
 
@@ -84,3 +83,4 @@ The following {{HTMLElement("iframe")}} is blocked and won't load:
 
 - {{HTTPHeader("Content-Security-Policy")}}
 - {{HTMLElement("frame")}} and {{HTMLElement("iframe")}}
+- {{CSP("frame-ancestors")}}

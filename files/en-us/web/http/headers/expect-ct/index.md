@@ -1,27 +1,37 @@
 ---
 title: Expect-CT
 slug: Web/HTTP/Headers/Expect-CT
-tags:
-  - HTTP
-  - Reference
-  - header
+page-type: http-header
+status:
+  - deprecated
 browser-compat: http.headers.Expect-CT
 ---
-{{HTTPSidebar}}
 
-The `Expect-CT` header lets sites opt in to reporting and/or enforcement of [Certificate Transparency](/en-US/docs/Web/Security/Certificate_Transparency) requirements, to prevent the use of misissued certificates for that site from going unnoticed.
+{{HTTPSidebar}}{{Deprecated_Header}}
+
+The `Expect-CT` {{Glossary("response header")}} lets sites opt in to reporting and/or enforcement of [Certificate Transparency](/en-US/docs/Web/Security/Certificate_Transparency) requirements.
+Certificate Transparency (CT) aims to prevent the use of misissued certificates for that site from going unnoticed.
+
+Only Google Chrome and other Chromium-based browsers implemented `Expect-CT`, and Chromium has deprecated the header from version 107, because Chromium now enforces CT by default.
+See the [Chrome Platform Status](https://chromestatus.com/feature/6244547273687040) update.
 
 CT requirements can be satisfied via any one of the following mechanisms:
 
-- X.509v3 certificate extension to allow embedding of signed certificate timestamps issued by individual logs
+- X.509v3 certificate extension to allow embedding of signed certificate timestamps issued by individual logs. Most TLS certificates issued by publicly-trusted CAs and used online contain embedded CT.
 - A TLS extension of type `signed_certificate_timestamp` sent during the handshake
 - Supporting OCSP stapling (that is, the `status_request` TLS extension) and providing a `SignedCertificateTimestampList`
 
-> **Note:** When a site enables the `Expect-CT` header, they are requesting that the browser check that any certificate for that site appears in **[public CT logs](https://github.com/google/certificate-transparency-community-site/blob/master/docs/google/known-logs.md)**.
+> [!NOTE]
+> When a site enables the `Expect-CT` header, they are requesting that the browser check that any certificate for that site appears in **[public CT logs](https://github.com/google/certificate-transparency-community-site/blob/master/docs/google/known-logs.md)**.
 
-> **Note:** Browsers **ignore** the `Expect-CT` header over HTTP; the header only has effect on HTTPS connections.
+> [!NOTE]
+> Browsers **ignore** the `Expect-CT` header over HTTP; the header only has effect on HTTPS connections.
 
-> **Note:** The `Expect-CT` will likely become obsolete in June 2021. Since May 2018 new certificates are expected to support SCTs by default. Certificates before March 2018 were allowed to have a lifetime of 39 months, those will all be expired in June 2021.
+> [!NOTE]
+> The `Expect-CT` is mostly obsolete since June 2021.
+> Since May 2018, all new TLS certificates are expected to support SCTs by default.
+> Certificates issued before March 2018 were allowed to have a lifetime of 39 months, so they had expired in June 2021.
+> Chromium plans to deprecate `Expect-CT` header and to eventually remove it.
 
 <table class="properties">
   <tbody>
@@ -30,15 +40,15 @@ CT requirements can be satisfied via any one of the following mechanisms:
       <td>{{Glossary("Response header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>yes</td>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
+      <td>Yes</td>
     </tr>
   </tbody>
 </table>
 
 ## Syntax
 
-```
+```http
 Expect-CT: report-uri="<uri>",
            enforce,
            max-age=<age>
@@ -68,7 +78,7 @@ Expect-CT: report-uri="<uri>",
 
 The following example specifies enforcement of Certificate Transparency for 24 hours and reports violations to `foo.example.com`.
 
-```
+```http
 Expect-CT: max-age=86400, enforce, report-uri="https://foo.example.com/report"
 ```
 
@@ -87,3 +97,11 @@ Builds of Chrome are designed to stop enforcing the `Expect-CT` policy 10 weeks 
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [Secure Contexts](/en-US/docs/Web/Security/Secure_Contexts)
+- Glossary terms:
+  - {{glossary('TLS', 'Transport Layer Security (TLS)')}}
+  - {{glossary('SSL', 'Secure Sockets Layer (SSL)')}}
+  - {{glossary('HTTPS')}}

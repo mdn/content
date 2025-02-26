@@ -1,46 +1,44 @@
 ---
-title: 'ARIA: row role'
+title: "ARIA: row role"
 slug: Web/Accessibility/ARIA/Roles/row_role
-tags:
-  - ARIA
-  - ARIA Role
-  - ARIA Row
-  - ARIA Row Role
-  - Accessibility
-  - Reference
-  - Row Role
-  - document structure role
+page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#row
-  - https://w3c.github.io/aria-practices/#row
+  - https://www.w3.org/WAI/ARIA/apg/patterns/table/examples/table/
 ---
-An element with `role="row"` is a row of cells within a tabular structure. A row contains one or more cells,  grid cells or column headers, and possibly a row header, within a [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role), [`table`](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role) or [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role), and optionally within a [`rowgroup`](/en-US/docs/Web/Accessibility/ARIA/Roles/rowgroup_role).
+
+{{AccessibilitySidebar}}
+
+An element with `role="row"` is a row of cells within a tabular structure. A row contains one or more cells, grid cells or column headers, and possibly a row header, within a [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role), [`table`](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role) or [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role), and optionally within a [`rowgroup`](/en-US/docs/Web/Accessibility/ARIA/Roles/rowgroup_role).
 
 ```html
-<div role="table" aria-label="Populations" aria-describedby="country_population_desc">
-   <div id="country_population_desc">World Populations by Country</div>
-   <div role="rowgroup">
-      <div role="row">
-         <span role="columnheader" aria-sort="descending">Country</span>
-         <span role="columnheader"aria-sort="none">Population</span>
-      </div>
-   </div>
-   <div role="rowgroup">
-     <div role="row">
-        <span role="cell">Finland</span>
-        <span role="cell">5.5 million</span>
-     </div>
-     <div role="row">
-        <span role="cell">France</span>
-        <span role="cell">67 million</span>
-     </div>
+<div
+  role="table"
+  aria-label="Populations"
+  aria-describedby="country_population_desc">
+  <div id="country_population_desc">World Populations by Country</div>
+  <div role="rowgroup">
+    <div role="row">
+      <span role="columnheader" aria-sort="descending">Country</span>
+      <span role="columnheader" aria-sort="none">Population</span>
+    </div>
+  </div>
+  <div role="rowgroup">
+    <div role="row">
+      <span role="cell">Finland</span>
+      <span role="cell">5.5 million</span>
+    </div>
+    <div role="row">
+      <span role="cell">France</span>
+      <span role="cell">67 million</span>
+    </div>
   </div>
 </div>
 ```
 
 ## Description
 
-The element `role="row"` is a row within a [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role), [`table`](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role) or [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role), and optionally within a [`rowgroup`](/en-US/docs/Web/Accessibility/ARIA/Roles/rowgroup_role), that is a container for one or more [`cells`](/en-US/docs/Web/Accessibility/ARIA/Roles/cell_role), [`gridcells`](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role), [`columnheaders`](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role), or [`rowheaders`](/en-US/docs/Web/Accessibility/ARIA/Roles/rowheader_role) within a static tabular structure. Using native [HTML `<tr>`](/en-US/docs/Web/HTML/Element/tr) elements, whenever possible, is strongly encouraged.
+The element with `role="row"` is a row within a [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role), [`table`](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role), or [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role), and optionally within a [`rowgroup`](/en-US/docs/Web/Accessibility/ARIA/Roles/rowgroup_role) that contains one or more [`cell`](/en-US/docs/Web/Accessibility/ARIA/Roles/cell_role), [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role), [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role), or [`rowheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/rowheader_role) elements within a static tabular structure. Using native [HTML `<tr>`](/en-US/docs/Web/HTML/Element/tr) elements, whenever possible, is strongly encouraged.
 
 To create an ARIA row, add `role="row"` to the container element. That row should be nested within a grid, table or treegrid. A group of rows can be nested within a grid, table or treegrid directly, or within a rowgroup in one of those containers. Each row contains child cells. These cells can be of different types, depending on whether they are column or row headers, or grid or regular cells.
 
@@ -50,7 +48,8 @@ If the row is within a treegrid, rows can include the [`aria-expanded`](/en-US/d
 
 To create an interactive widget that has a tabular structure, use the grid pattern instead. If the interaction provides for the selection state of individual cells, if left to right and top to bottom navigation is provided, or if the user interface allows the rearranging of cell order or otherwise changing individual cell order such as through drag and drop, use [grid](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role) or [treegrid](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role) instead.
 
-> **Note:** Using the native HTML table element ({{HTMLElement('table')}}) along with the table row element ({{HTMLElement('tr')}}) whenever possible is strongly encouraged.
+> [!NOTE]
+> Using the native HTML table element ({{HTMLElement('table')}}) along with the table row element ({{HTMLElement('tr')}}) whenever possible is strongly encouraged.
 
 ### Associated WAI-ARIA roles, states, and properties
 
@@ -72,9 +71,9 @@ To create an interactive widget that has a tabular structure, use the grid patte
 - [role="gridcell"](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role)
   - : A cell in a row within a grid or treegrid.
 - [role="columnheader"](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role)
-  - : A header cell that is the structural equivalent of the HTML {{HTMLElement('th')}} element with a column scope ({{HTMLElement('tr', '<code>&lt;tr  scope="col"&gt;</code>')}}). Unlike a plain cell, the columnheader role establishes a relationship between it and all cells in the corresponding column.
+  - : A header cell that is the structural equivalent of the HTML {{HTMLElement('th')}} element with a column scope ({{HTMLElement('tr', '<code>&lt;tr scope="col"&gt;</code>')}}). Unlike a plain cell, the columnheader role establishes a relationship between it and all cells in the corresponding column.
 - [role="rowheader"](/en-US/docs/Web/Accessibility/ARIA/Roles/rowheader_role)
-  - : A header cell that is the structural equivalent of the HTML {{HTMLElement('th')}} element with a row scope ({{HTMLElement('tr', '<code>&lt;tr  scope="row"&gt;</code>')}}). Unlike a plain cell, the rowheader role establishes a relationship between it and all cells in the corresponding row.
+  - : A header cell that is the structural equivalent of the HTML {{HTMLElement('th')}} element with a row scope ({{HTMLElement('tr', '<code>&lt;tr scope="row"&gt;</code>')}}). Unlike a plain cell, the rowheader role establishes a relationship between it and all cells in the corresponding row.
 
 #### States and properties
 
@@ -82,7 +81,7 @@ To create an interactive widget that has a tabular structure, use the grid patte
 
   - : The `aria-expanded` attribute, which defines the state of the row, can take one of three values, or be omitted:
 
-    - `aria-expanded="true`: Row is currently expanded.
+    - `aria-expanded="true"`: Row is currently expanded.
     - `aria-expanded="false"`: Row is currently collapsed.
     - `aria-expanded="undefined"` or the attribute is missing: The row is neither expandable nor collapsible.
 
@@ -92,7 +91,7 @@ To create an interactive widget that has a tabular structure, use the grid patte
 
   - : Only relevant if the row is in an interactive container, such as a grid or treegrid, but not relevant if the row is in a table. The `aria-selected` attribute can take one of three values, or be omitted:
 
-    - `aria-selected="true`: Row is currently selected
+    - `aria-selected="true"`: Row is currently selected
     - `aria-selected="false"`: Row is not currently selected.
     - `aria-selected="undefined"` or the attribute is missing: The row is not selectable.
 
@@ -120,33 +119,40 @@ None
 
 None. For sortable columns, see the [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role) aria role.
 
-> **Note:** The first rule of ARIA use is you can use a native feature with the semantics and behavior you require already built in, instead of re-purposing an element and **adding** an ARIA role, state or property to make it accessible, then do so. Employ the HTML {{HTMLElement('table')}} element instead of the ARIA role of table whenever possible.
+> [!NOTE]
+> The first rule of ARIA use is you can use a native feature with the semantics and behavior you require already built in, instead of re-purposing an element and **adding** an ARIA role, state or property to make it accessible, then do so. Employ the HTML {{HTMLElement('table')}} element instead of the ARIA role of table whenever possible.
 
 ## Examples
 
 ```html
-<div role="table" aria-label="Semantic Elements" aria-describedby="semantic_elements_table_desc" aria-rowcount="81">
-  <div id="semantic_elements_table_desc">Semantic Elements to use instead of ARIA's roles</div>
+<div
+  role="table"
+  aria-label="Semantic Elements"
+  aria-describedby="semantic_elements_table_desc"
+  aria-rowcount="81">
+  <div id="semantic_elements_table_desc">
+    Semantic Elements to use instead of ARIA's roles
+  </div>
   <div role="rowgroup">
-     <div role="row">
-       <span role="columnheader" aria-sort="none">ARIA Role</span>
-       <span role="columnheader" aria-sort="none">Semantic Element</span>
-     </div>
-   </div>
-   <div role="rowgroup">
-    <div role="row" aria-rowindex="11">
-       <span role="cell">header</span>
-       <span role="cell">h1</span>
+    <div role="row">
+      <span role="columnheader" aria-sort="none">ARIA Role</span>
+      <span role="columnheader" aria-sort="none">Semantic Element</span>
     </div>
-    <div role="row"  aria-rowindex="16">
+  </div>
+  <div role="rowgroup">
+    <div role="row" aria-rowindex="11">
+      <span role="cell">header</span>
+      <span role="cell">h1</span>
+    </div>
+    <div role="row" aria-rowindex="16">
       <span role="cell">header</span>
       <span role="cell">h6</span>
     </div>
-    <div role="row"  aria-rowindex="18">
+    <div role="row" aria-rowindex="18">
       <span role="cell">rowgroup</span>
       <span role="cell">thead</span>
     </div>
-    <div role="row"  aria-rowindex="24">
+    <div role="row" aria-rowindex="24">
       <span role="cell">term</span>
       <span role="cell">dt</span>
     </div>
@@ -161,36 +167,42 @@ The above is a non-semantic ARIA table with five of 81 rows present in the DOM: 
 Only use {{HTMLElement('table')}}, {{HTMLElement('tbody')}}, {{HTMLElement('thead')}}, {{HTMLElement('tr')}}, {{HTMLElement('th')}}, {{HTMLElement('td')}}, etc., for data table structure. You can add these ARIA roles to ensure accessibility should the native semantics of the table be removed, such as with CSS. A relevant use case for the ARIA table role is when the native semantics of a table are overridden by CSS's display property, such as by display: grid. In this case, you can use the ARIA table roles to add the semantics back in.
 
 ```html
-<table role="table" aria-label="Semantic Elements" aria-describedby="semantic_elements_table_desc" aria-rowcount="81">
-  <caption id="semantic_elements_table_desc">Semantic Elements to use instead of ARIA's roles</caption>
+<table
+  role="table"
+  aria-label="Semantic Elements"
+  aria-describedby="semantic_elements_table_desc"
+  aria-rowcount="81">
+  <caption id="semantic_elements_table_desc">
+    Semantic Elements to use instead of ARIA's roles
+  </caption>
   <thead role="rowgroup">
-     <tr role="row">
-       <th role="columnheader" aria-sort="none">ARIA Role</th>
-       <th role="columnheader" aria-sort="none">Semantic Element</th>
-     </tr>
+    <tr role="row">
+      <th role="columnheader" aria-sort="none">ARIA Role</th>
+      <th role="columnheader" aria-sort="none">Semantic Element</th>
+    </tr>
   </thead>
   <tbody role="rowgroup">
-     <tr role="row" aria-rowindex="11">
-       <td role="cell">header</td>
-       <td role="cell">h1</td>
-     </tr>
-     <tr role="row" aria-rowindex="16">
-       <td role="cell">header</td>
-       <td role="cell">h6</td>
-     </tr>
-     <tr role="row" aria-rowindex="18">
-       <td role="cell">rowgroup</td>
-       <td role="cell">thead</td>
-     </tr>
-     <tr role="row" aria-rowindex="24">
-       <td role="cell">term</td>
-       <td role="cell">dt</td>
-     </tr>
-   </tbody>
- </table>
+    <tr role="row" aria-rowindex="11">
+      <td role="cell">header</td>
+      <td role="cell">h1</td>
+    </tr>
+    <tr role="row" aria-rowindex="16">
+      <td role="cell">header</td>
+      <td role="cell">h6</td>
+    </tr>
+    <tr role="row" aria-rowindex="18">
+      <td role="cell">rowgroup</td>
+      <td role="cell">thead</td>
+    </tr>
+    <tr role="row" aria-rowindex="24">
+      <td role="cell">term</td>
+      <td role="cell">dt</td>
+    </tr>
+  </tbody>
+</table>
 ```
 
-Above is the semantic way of writing a table. The ARIA roles are only necessary if the native semantics of the table, and therefore the table rows, are obliterated, such as via setting the [display property to flex or grid](/en-US/docs/Web/CSS/display#accessibility_concerns).
+Above is the semantic way of writing a table. The ARIA roles are only necessary if the native semantics of the table, and therefore the table rows, are obliterated, such as via setting the [display property to flex or grid](/en-US/docs/Web/CSS/display#accessibility).
 
 ### Added benefits
 
@@ -212,11 +224,3 @@ none
 - [The `gridcell` role](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role)
 - [The `columnheader` role](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role)
 - [The `rowheader` role](/en-US/docs/Web/Accessibility/ARIA/Roles/rowheader_role)
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
-
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
-
-</section>

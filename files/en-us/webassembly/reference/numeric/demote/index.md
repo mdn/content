@@ -1,14 +1,9 @@
 ---
 title: Demote
 slug: WebAssembly/Reference/Numeric/Demote
-tags:
-  - WebAssembly
-  - wasm
-  - Reference
-  - Numeric
-  - Conversion
+page-type: webassembly-instruction
+sidebar: webassemblysidebar
 ---
-{{WebAssemblySidebar}}
 
 The **`demote`** instruction, is used to convert (demote) numbers of type `f64` to type `f32`.
 

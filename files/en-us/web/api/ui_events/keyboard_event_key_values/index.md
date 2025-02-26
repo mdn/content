@@ -2,25 +2,8 @@
 title: Key values for keyboard events
 slug: Web/API/UI_Events/Keyboard_event_key_values
 page-type: guide
-tags:
-  - Characters
-  - DOM
-  - Key Codes
-  - Key Values
-  - KeyboardEvent
-  - Keycodes
-  - Keypad
-  - Keystrokes
-  - Meta
-  - Meta Keys
-  - Modifier Keys
-  - Modifiers
-  - Reference
-  - UI Events
-  - events
-  - keyboard
-  - keys
 ---
+
 {{DefaultAPISidebar("UI Events")}}
 
 The tables below list the standard values for the [`KeyboardEvent.key`](/en-US/docs/Web/API/KeyboardEvent/key) property, with an explanation of what the key is typically used for. Corresponding virtual keycodes for common platforms are included where available.
@@ -84,7 +67,7 @@ _Modifiers_ are special keys which are used to generate special characters or ca
   </thead>
   <tbody>
     <tr>
-      <td><code>"Alt"</code> [5]</td>
+      <td><code>"Alt"</code> [4]</td>
       <td>The <kbd>Alt</kbd> (Alternative) key.</td>
       <td>
         <code>VK_MENU</code> (0x12)<br /><code>VK_LMENU</code> (0xA4)<br /><code
@@ -105,7 +88,7 @@ _Modifiers_ are special keys which are used to generate special characters or ca
       </td>
     </tr>
     <tr>
-      <td><code>"AltGraph"</code> [5]</td>
+      <td><code>"AltGraph"</code> [4]</td>
       <td>
         The <kbd>AltGr</kbd> or <kbd>AltGraph</kbd> (Alternate Graphics) key.
         Enables the ISO Level 3 shift modifier (where <kbd>Shift</kbd> is the
@@ -199,7 +182,7 @@ _Modifiers_ are special keys which are used to generate special characters or ca
       <td></td>
     </tr>
     <tr>
-      <td><code>"Hyper"</code> [4]</td>
+      <td><code>"Hyper"</code> [3]</td>
       <td>The <kbd>Hyper</kbd> key.</td>
       <td></td>
       <td></td>
@@ -291,7 +274,7 @@ _Modifiers_ are special keys which are used to generate special characters or ca
       </td>
     </tr>
     <tr>
-      <td><code>"Super"</code> [4]</td>
+      <td><code>"Super"</code> [3]</td>
       <td>The <kbd>Super</kbd> key.</td>
       <td></td>
       <td></td>
@@ -312,7 +295,7 @@ _Modifiers_ are special keys which are used to generate special characters or ca
       <td></td>
       <td></td>
       <td></td>
-      <td><code>KEYCODE_SYM</code> (63) [3]</td>
+      <td><code>KEYCODE_SYM</code> (63) [2]</td>
     </tr>
     <tr>
       <td><code>"SymbolLock"</code></td>
@@ -325,15 +308,13 @@ _Modifiers_ are special keys which are used to generate special characters or ca
   </tbody>
 </table>
 
-\[1] In Internet Explorer (tested on release 9 and 11), as well as in all versions of Firefox, the <kbd>Windows</kbd> key is reported as `"OS"` instead of as `"Meta"`. This will be changed in Firefox per {{bug(1232918)}}. Until that's fixed, these keys are returned as `"OS"` by Firefox: `VK_LWIN` (0x5B) and `VK_RWIN` (0x5C) on Windows, and `GDK_KEY_Super_L` (0xFFEB), `GDK_KEY_Super_R` (0xFFEC), `GDK_KEY_Hyper_L` (0xFFED), and `GDK_KEY_Hyper_R` (0xFFEE) on Linux.
+\[1] In Firefox, the <kbd>Windows</kbd> key is reported as `"OS"` instead of as `"Meta"`. This will be changed in Firefox per [Firefox bug 1232918](https://bugzil.la/1232918). Until that's fixed, these keys are returned as `"OS"` by Firefox: `VK_LWIN` (0x5B) and `VK_RWIN` (0x5C) on Windows, and `GDK_KEY_Super_L` (0xFFEB), `GDK_KEY_Super_R` (0xFFEC), `GDK_KEY_Hyper_L` (0xFFED), and `GDK_KEY_Hyper_R` (0xFFEE) on Linux.
 
-\[2] Internet Explorer (tested on release 9 and 11) reports `"Scroll"` instead of `"ScrollLock"` for the <kbd>Scroll Lock</kbd> key.
+\[2] Firefox did not add support for the <kbd>Symbol</kbd> key until Firefox 37.
 
-\[3] Firefox did not add support for the <kbd>Symbol</kbd> key until Firefox 37.
+\[3] Firefox generates the key value `"OS"` for the <kbd>Super</kbd> and <kbd>Hyper</kbd> keys, instead of `"Super"` and `"Hyper"`.
 
-\[4] Firefox generates the key value `"OS`" for the <kbd>Super</kbd> and <kbd>Hyper</kbd> keys, instead of `"Super"` and `"Hyper"`.
-
-\[5] Chrome 67 and Firefox 63 now correctly interpret the right <kbd>Alt</kbd> key for keyboard layouts which map that key to <kbd>AltGr</kbd>. See Firefox bug {{bug(900750)}} and [Chrome bug 25503](https://bugs.chromium.org/p/chromium/issues/detail?id=25503) for further details.
+\[4] Chrome 67 and Firefox 63 now correctly interpret the right <kbd>Alt</kbd> key for keyboard layouts which map that key to <kbd>AltGr</kbd>. See Firefox bug [Firefox bug 900750](https://bugzil.la/900750) and [Chrome bug 25503](https://crbug.com/25503) for further details.
 
 ## Whitespace keys
 
@@ -408,7 +389,7 @@ _Modifiers_ are special keys which are used to generate special characters or ca
   </tbody>
 </table>
 
-\[1] Older browsers may return `"Spacebar"` instead of `" "` for the <kbd>Space Bar</kbd> key. Firefox did so until version 37, as did Internet Explorer 9, 10, and 11.
+\[1] Older browsers may return `"Spacebar"` instead of `" "` for the <kbd>Space Bar</kbd> key. Firefox did so until version 37.
 
 ## Navigation keys
 
@@ -463,7 +444,7 @@ _Modifiers_ are special keys which are used to generate special characters or ca
     <tr>
       <td><code>"ArrowUp"</code> [1]</td>
       <td>The up arrow key.</td>
-      <td><code>VK_UP</code><code> (0x26)</code></td>
+      <td><code>VK_UP</code> (0x26)</td>
       <td><code>kVK_UpArrow</code> (0x7E)</td>
       <td>
         <code>GDK_KEY_Up</code> (0xFF52)<br /><code>GDK_KEY_KP_Up</code>
@@ -500,7 +481,7 @@ _Modifiers_ are special keys which are used to generate special characters or ca
         displays the next page of content.
       </td>
       <td><code>VK_NEXT</code> (0x22)</td>
-      <td><code>kVK_PageDown</code><code> (0x79)</code></td>
+      <td><code>kVK_PageDown</code> (0x79)</td>
       <td>
         <code>GDK_KEY_Page_Down</code> (0xFF56)<br /><code
           >GDK_KEY_KP_Page_Down</code
@@ -528,7 +509,7 @@ _Modifiers_ are special keys which are used to generate special characters or ca
   </tbody>
 </table>
 
-\[1] Internet Explorer, Edge (16 and earlier), and Firefox (36 and earlier) use `"Left"`, `"Right"`, `"Up"`, and `"Down"` instead of `"ArrowLeft"`, `"ArrowRight"`, `"ArrowUp"`, and `"ArrowDown"`.
+\[1] Edge (16 and earlier) and Firefox (36 and earlier) use `"Left"`, `"Right"`, `"Up"`, and `"Down"` instead of `"ArrowLeft"`, `"ArrowRight"`, `"ArrowUp"`, and `"ArrowDown"`.
 
 ## Editing keys
 
@@ -682,11 +663,11 @@ _Modifiers_ are special keys which are used to generate special characters or ca
 
 \[1] On keyboards without a dedicated <kbd>Del</kbd> key, the Mac generates the `"Delete"` value when <kbd>Fn</kbd> is pressed in tandem with <kbd>Delete</kbd> (which is <kbd>Backspace</kbd> on other platforms).
 
-\[2] Internet Explorer (tested on release 9 and 11) and Firefox 36 and earlier use `"Del"` instead of `"Delete"` for the <kbd>Del</kbd> key.
+\[2] Firefox 36 and earlier uses `"Del"` instead of `"Delete"` for the <kbd>Del</kbd> key.
 
-\[3] Internet Explorer (tested on release 9 and 11) and Firefox 36 and earlier generate the value `"Crsel"` instead of `"CrSel"` when the <kbd>CrSel</kbd> key is pressed.
+\[3] Firefox 36 and earlier generates the value `"Crsel"` instead of `"CrSel"` when the <kbd>CrSel</kbd> key is pressed.
 
-\[4] Internet Explorer (tested on release 9 and 11) and Firefox 36 and earlier generate the value `"Exsel"` instead of `"ExSel"` when the <kbd>ExSel</kbd> key is pressed.
+\[4] Firefox 36 and earlier generates the value `"Exsel"` instead of `"ExSel"` when the <kbd>ExSel</kbd> key is pressed.
 
 ## UI keys
 
@@ -900,15 +881,15 @@ _Modifiers_ are special keys which are used to generate special characters or ca
   </tbody>
 </table>
 
-\[1] In Google Chrome 52, the <kbd>Cancel</kbd> key incorrectly returns the key code `"Pause"`. This is fixed in Chrome 53. (See [Chrome bug 612749](https://bugs.chromium.org/p/chromium/issues/detail?id=612749) for details.)
+\[1] In Google Chrome 52, the <kbd>Cancel</kbd> key incorrectly returns the key code `"Pause"`. This is fixed in Chrome 53. (See [Chrome bug 612749](https://crbug.com/612749) for details.)
 
-\[2] In Internet Explorer (tested on release 9 and 11) and Firefox 36 and earlier, the <kbd>Esc</kbd> key returns `"Esc"` instead of `"Escape"`.
+\[2] In Firefox 36 and earlier, the <kbd>Esc</kbd> key returns `"Esc"` instead of `"Escape"`.
 
-\[3] Internet Explorer (tested on release 9 and 11) and Firefox 36 and earlier report `"Apps"` instead of `"ContextMenu"` for the context menu key.
+\[3] Firefox 36 and earlier reports `"Apps"` instead of `"ContextMenu"` for the context menu key.
 
-\[4] The <kbd>Attn</kbd> key generates the key code `"Unidentified"` on Internet Explorer (tested on release 9 and 11). Firefox and Google Chrome report the same, unless the Japanese keyboard layout is in effect, in which case it generates `"KanaMode"` instead.
+\[4] The <kbd>Attn</kbd> key generates the key code `"Unidentified"` on Firefox and Google Chrome, unless the Japanese keyboard layout is in effect, in which case it generates `"KanaMode"` instead.
 
-\[5] The <kbd>Finish</kbd> key generates the key code `"Unidentified"` on Internet Explorer (tested on release 9 and 11). Firefox reports the same, unless the Japanese keyboard layout is in effect, in which case it generates `"Katakana"` instead.
+\[5] The <kbd>Finish</kbd> key generates the key code `"Unidentified"` on Firefox, unless the Japanese keyboard layout is in effect, in which case it generates `"Katakana"` instead.
 
 \[6] Firefox didn't support the `"ZoomIn"` and `"ZoomOut"` keys until Firefox 37.
 
@@ -1102,17 +1083,17 @@ _Modifiers_ are special keys which are used to generate special characters or ca
   </tbody>
 </table>
 
-\[1] The <kbd>Standby</kbd> key is not supported by Internet Explorer (tested on release 9 and 11) and Firefox 36 and earlier, so it is reported as `"Unidentified"`.
+\[1] The <kbd>Standby</kbd> key is not supported by Firefox 36 and earlier, so it is reported as `"Unidentified"`.
 
 \[2] Prior to Firefox 37, this key generated the value `"Unidentified"`.
 
 ## IME and composition keys
 
-Keys used when using an Input Method Editor (IME) to input text which can't readily be entered by simple keypresses, such as text in languages such as those which have more graphemes than there are character entry keys on the keyboard. Common examples include Chinese, Japanese, Korean, and Hindi.
+Keys used when using an {{glossary("Input Method Editor")}} (IME) to input text which can't readily be entered by simple keypresses, such as text in languages such as those which have more graphemes than there are character entry keys on the keyboard. Common examples include Chinese, Japanese, Korean, and Hindi.
 
 Some keys are common across multiple languages, while others exist only on keyboards targeting specific languages. In addition, not all keyboards have all of these keys.
 
-#### Common IME keys
+### Common IME keys
 
 <table class="no-markdown">
   <thead>
@@ -1380,9 +1361,11 @@ Some keys are common across multiple languages, while others exist only on keybo
 
 \[1] On the _X Window System_, the <kbd>Compose</kbd> key is called the <kbd>Multi</kbd> key.
 
-\[2] The <kbd>NonConvert</kbd> key is reported as `"Nonconvert"` instead of the correct `"NonConvert"` by Internet Explorer (tested on release 9 and 11) and Firefox versions 36 and earlier.
+<!-- cSpell:ignore Nonconvert -->
 
-\[3] The <kbd>Process</kbd> key currently returns `"Unidentified"` in Firefox and Internet Explorer. Google Chrome returns the value of the key as if IME were not in use.
+\[2] The <kbd>NonConvert</kbd> key is reported as `"Nonconvert"` instead of the correct `"NonConvert"` by Firefox versions 36 and earlier.
+
+\[3] The <kbd>Process</kbd> key currently returns `"Unidentified"` in Firefox. Google Chrome returns the value of the key as if IME were not in use.
 
 \[4] Prior to Firefox 37, these keys were `"Unidentified"`.
 
@@ -1596,7 +1579,7 @@ These keys are only available on Japanese keyboards.
       <td></td>
     </tr>
     <tr>
-      <td><code>"ZenkakuHanaku"</code> [6]</td>
+      <td><code>"ZenkakuHankaku"</code> [6]</td>
       <td>
         The <kbd>Zenkaku/Hankaku</kbd> (full width/half width) toggle key.
       </td>
@@ -1619,17 +1602,17 @@ These keys are only available on Japanese keyboards.
 
 \[2] `VK_HANGUL` and `VK_KANA` share the same numeric key value on Windows, as do `VK_HANJA` and `VK_KANJI`.
 
-\[3] Prior to Firefox 37, the <kbd>Hankaku</kbd> (half-width) key generated the key value `"HalfWidth"` on Firefox. Also, this key generates the value `"Unidentified"` on Internet Explorer (tested on release 9 and 11).
+\[3] Prior to Firefox 37, the <kbd>Hankaku</kbd> (half-width) key generated the key value `"HalfWidth"` on Firefox.
 
-\[4] Internet Explorer (tested on release 9 and 11) reports `"Unidentified"` for the <kbd>Zenkaku</kbd> key; Firefox 36 and earlier identify this key as `"FullWidth"` on Japanese keyboard layouts and `"Unidentified"` on all other keyboard layouts. Firefox 37 and later, and all versions of Google Chrome, correctly return `"Zenkaku"`.
+\[4] Firefox 36 and earlier identifies this key as `"FullWidth"` on Japanese keyboard layouts and `"Unidentified"` on all other keyboard layouts. Firefox 37 and later, and all versions of Google Chrome, correctly return `"Zenkaku"`.
 
-\[5] `"Unidentified"` in Internet Explorer (tested on release 9 and 11). Firefox 36 and earlier identify the <kbd>Romaji</kbd> key as `"RomanCharacters"` on Japanese keyboards and `"Unidentified"` for other keyboards; this is corrected to return `"Romaji"` in Firefox 37 and later.
+\[5] Firefox 36 and earlier identifies the <kbd>Romaji</kbd> key as `"RomanCharacters"` on Japanese keyboards and `"Unidentified"` for other keyboards; this is corrected to return `"Romaji"` in Firefox 37 and later.
 
 \[6] This key is reported as `"Unidentified"` prior to Firefox 37.
 
 ### Dead keycodes for Linux
 
-Linux generates accented characters using special **dead keys**. _Dead keys_ are keys which are pressed in combination with character keys to generate accented forms of those characters. You can identify which specific dead key was used (if more than one exists) by examining the {{domxref("KeyboardEvent")}}'s associated {{domxref("Element/compositionupdate_event", "compositionupdate")}}} event's {{domxref("CompositionEvent.data", "data")}} property.
+Linux generates accented characters using special **dead keys**. _Dead keys_ are keys which are pressed in combination with character keys to generate accented forms of those characters. You can identify which specific dead key was used (if more than one exists) by examining the {{domxref("KeyboardEvent")}}'s associated {{domxref("Element/compositionupdate_event", "compositionupdate")}} event's {{domxref("CompositionEvent.data", "data")}} property.
 
 You can find a table of the dead keys and the characters they can be used with to generate accented or otherwise special characters on Linux using GTK.
 
@@ -2154,7 +2137,7 @@ If more function keys are available, their names continue the pattern here by co
       <td><code>VK_F14</code> (0x7D)</td>
       <td><code>kVK_F14</code> (0x6B)</td>
       <td>
-        <code>GDK_KEY_F14</code> (0xFFCB)<br /><code>Qt::Key_F1</code>4
+        <code>GDK_KEY_F14</code> (0xFFCB)<br /><code>Qt::Key_F14</code>
         (0x0100003D)
       </td>
       <td><code>KEYCODE_F14</code></td>
@@ -2165,7 +2148,7 @@ If more function keys are available, their names continue the pattern here by co
       <td><code>VK_F15</code> (0x7E)</td>
       <td><code>kVK_F15</code> (0x71)</td>
       <td>
-        <code>GDK_KEY_F15</code> (0xFFCC)<br /><code>Qt::Key_F1</code>5
+        <code>GDK_KEY_F15</code> (0xFFCC)<br /><code>Qt::Key_F15</code>
         (0x0100003E)
       </td>
       <td><code>KEYCODE_F15</code></td>
@@ -2176,7 +2159,7 @@ If more function keys are available, their names continue the pattern here by co
       <td><code>VK_F16</code> (0x7F)</td>
       <td><code>kVK_F16</code> (0x6A)</td>
       <td>
-        <code>GDK_KEY_F16</code> (0xFFCD)<br /><code>Qt::Key_F1</code>6
+        <code>GDK_KEY_F16</code> (0xFFCD)<br /><code>Qt::Key_F16</code>
         (0x0100003F)
       </td>
       <td><code>KEYCODE_F16</code></td>
@@ -2187,7 +2170,7 @@ If more function keys are available, their names continue the pattern here by co
       <td><code>VK_F17</code> (0x80)</td>
       <td><code>kVK_F17</code> (0x40)</td>
       <td>
-        <code>GDK_KEY_F17</code> (0xFFCE)<br /><code>Qt::Key_F1</code>7
+        <code>GDK_KEY_F17</code> (0xFFCE)<br /><code>Qt::Key_F17</code>
         (0x01000040)
       </td>
       <td><code>KEYCODE_F17</code></td>
@@ -2198,7 +2181,7 @@ If more function keys are available, their names continue the pattern here by co
       <td><code>VK_F18</code> (0x81)</td>
       <td><code>kVK_F18</code> (0x4F)</td>
       <td>
-        <code>GDK_KEY_F18</code> (0xFFCF)<br /><code>Qt::Key_F1</code>8
+        <code>GDK_KEY_F18</code> (0xFFCF)<br /><code>Qt::Key_F18</code>
         (0x01000041)
       </td>
       <td><code>KEYCODE_F18</code></td>
@@ -2209,7 +2192,7 @@ If more function keys are available, their names continue the pattern here by co
       <td><code>VK_F19</code> (0x82)</td>
       <td><code>kVK_F19</code> (0x50)</td>
       <td>
-        <code>GDK_KEY_F19</code> (0xFFD0)<br /><code>Qt::Key_F1</code>9
+        <code>GDK_KEY_F19</code> (0xFFD0)<br /><code>Qt::Key_F19</code>
         (0x01000042)
       </td>
       <td><code>KEYCODE_F19</code></td>
@@ -2470,7 +2453,7 @@ The multimedia keys are extra buttons or keys for controlling media devices, fou
       <td><code>APPCOMMAND_MEDIA_PLAY</code></td>
       <td></td>
       <td><code>GDK_KEY_AudioPlay</code> (0x1008FF14)</td>
-      <td><code>KEYCODE_MEDIA_PLAY</code><code> (126)</code></td>
+      <td><code>KEYCODE_MEDIA_PLAY</code> (126)</td>
     </tr>
     <tr>
       <td><code>"MediaPlayPause"</code></td>
@@ -2495,7 +2478,7 @@ The multimedia keys are extra buttons or keys for controlling media devices, fou
         >
         (0x01000084)
       </td>
-      <td><code>KEYCODE_MEDIA_RECORD</code><code> (130)</code></td>
+      <td><code>KEYCODE_MEDIA_RECORD</code> (130)</td>
     </tr>
     <tr>
       <td><code>"MediaRewind"</code></td>
@@ -2508,7 +2491,7 @@ The multimedia keys are extra buttons or keys for controlling media devices, fou
         >
         (0x010000C5)
       </td>
-      <td><code>KEYCODE_MEDIA_REWIND</code><code> (89)</code></td>
+      <td><code>KEYCODE_MEDIA_REWIND</code> (89)</td>
     </tr>
     <tr>
       <td><code>"MediaStop"</code></td>
@@ -2568,7 +2551,7 @@ The multimedia keys are extra buttons or keys for controlling media devices, fou
   </tbody>
 </table>
 
-\[1] Internet Explorer, Edge, and Firefox (36 and earlier) use `"MediaNextTrack"` and `"MediaPreviousTrack"` instead of `"MediaTrackNext"` and `"MediaTrackPrevious"`.
+\[1] Legacy Edge and Firefox (36 and earlier) use `"MediaNextTrack"` and `"MediaPreviousTrack"` instead of `"MediaTrackNext"` and `"MediaTrackPrevious"`.
 
 \[2] Prior to Firefox 37, Firefox generated the key code `"FastFwd"` on some platforms and `"Unidentified"` on others instead of `"MediaFastForward"`.
 
@@ -2782,7 +2765,7 @@ These media keys are used specifically for controlling audio.
   </tbody>
 </table>
 
-\[1] Internet Explorer, Edge, and Firefox (48 and earlier) use `"VolumeUp"`, `"VolumeDown"`, and `"VolumeMute"` instead of `"AudioVolumeUp"`, `"AudioVolumeDown"`, and `"AudioVolumeMute"`. In Firefox 49 they were updated to match the latest specification.
+\[1] Legacy Edge and Firefox (48 and earlier) use `"VolumeUp"`, `"VolumeDown"`, and `"VolumeMute"` instead of `"AudioVolumeUp"`, `"AudioVolumeDown"`, and `"AudioVolumeMute"`. In Firefox 49 they were updated to match the latest specification.
 
 ## TV control keys
 
@@ -3070,14 +3053,15 @@ These key values represent buttons or keys present on television devices, or com
 
 Because modern remote controls for media devices often include buttons beyond the basic controls covered elsewhere in this document, key values are defined for a broad array of these additional buttons.
 
-The values below are derived in part form a number of consumer electronics technical specifications:
+The values below are derived in part from a number of consumer electronics technical specifications:
 
 - [DTV Application Software Environment](https://www.atsc.org/atsc-documents/a100-dtv-application-software-environment-level-1-dase-1/) (part of the [ATSC](https://en.wikipedia.org/wiki/ATSC) specification)
 - [Open Cable Application Platform](https://en.wikipedia.org/wiki/OpenCable_Application_Platform)
 - [ANSI/CEA-2014-B](https://shop.cta.tech/products/web-based-protocol-and-framework-for-remote-user-interface-on-upnp-networks-and-the-internet): Web-based Protocol and Framework for Remote User Interface on UPnP™ Networks and the Internet
 - [Android KeyEvent key code values](https://developer.android.com/reference/android/view/KeyEvent.html)
 
-> **Note:** Remote controls typically include keys whose values are already defined elsewhere, such as under [Multimedia keys](#multimedia_keys) or [Audio control keys](#audio_control_keys). Those keys' values will match what's documented in those tables.
+> [!NOTE]
+> Remote controls typically include keys whose values are already defined elsewhere, such as under [Multimedia keys](#multimedia_keys) or [Audio control keys](#audio_control_keys). Those keys' values will match what's documented in those tables.
 
 <table class="no-markdown">
   <thead>
@@ -3432,7 +3416,7 @@ The values below are derived in part form a number of consumer electronics techn
     </tr>
     <tr>
       <td><code>"Lock"</code></td>
-      <td>Locks or unlocks the currently selected content or pgoram.</td>
+      <td>Locks or unlocks the currently selected content or program.</td>
       <td><code>VK_LOCK</code></td>
       <td></td>
       <td></td>
@@ -3713,7 +3697,7 @@ The values below are derived in part form a number of consumer electronics techn
       <td><code>VK_SPLIT_SCREEN_TOGGLE</code></td>
       <td></td>
       <td>
-        <code>GDK_KEY_SplitScreen (</code>0x1008FF7D)<br /><code
+        <code>GDK_KEY_SplitScreen</code> (0x1008FF7D)<br /><code
           >Qt::Key_SplitScreen</code
         >
         (0x010000ED)
@@ -3747,7 +3731,7 @@ The values below are derived in part form a number of consumer electronics techn
     <tr>
       <td><code>"Teletext"</code></td>
       <td>
-        Toggles display of [teletext](https://en.wikipedia.org/wiki/Teletext),
+        Toggles display of <a href="https://en.wikipedia.org/wiki/Teletext">teletext</a>,
         if available.
       </td>
       <td><code>VK_TELETEXT</code></td>
@@ -3791,7 +3775,7 @@ The values below are derived in part form a number of consumer electronics techn
 
 \[1] Don't confuse the media controller `VK_APPS` key with the Windows `VK_APPS` key, which is also known as `VK_CONTEXT_MENU`. That key is encoded as `"ContextMenu"`.
 
-\[2] Internet Explorer (tested on release 9 and 11) and Firefox 36 and earlier identify the zoom toggle button as `"Zoom"`. Firefox 37 corrects this to `"ZoomToggle"`.
+\[2] Firefox 36 and earlier identifies the zoom toggle button as `"Zoom"`. Firefox 37 corrects this to `"ZoomToggle"`.
 
 \[3] These keys were `"Unidentified"` until Firefox 37.
 
@@ -4387,13 +4371,13 @@ Some keyboards offer special keys for launching or switching to certain common a
   </tbody>
 </table>
 
-\[1] Internet Explorer, Edge, and Firefox (36 and earlier) use `"SelectMedia"` instead of `"LaunchMediaPlayer"`. Firefox 37 through Firefox 48 use `"MediaSelect"`. Firefox 49 has been updated to match the latest specification, and to return `"LaunchMediaPlayer"`.
+\[1] Legacy Edge and Firefox (36 and earlier) use `"SelectMedia"` instead of `"LaunchMediaPlayer"`. Firefox 37 through Firefox 48 use `"MediaSelect"`. Firefox 49 has been updated to match the latest specification, and to return `"LaunchMediaPlayer"`.
 
-\[2] Google Chrome 57 and earlier returned `"LaunchMyComputer"` instead of `"LaunchApplication1"`. See [Chrome Bug 612743](https://bugs.chromium.org/p/chromium/issues/detail?id=612743) for more information.
+\[2] Google Chrome 57 and earlier returned `"LaunchMyComputer"` instead of `"LaunchApplication1"`. See [Chrome Bug 612743](https://crbug.com/612743) for more information.
 
-\[3] Google Chrome 57 and earlier returned `"LaunchCalculator"` instead of `"LaunchApplication2"`. See [Chrome Bug 612743](https://bugs.chromium.org/p/chromium/issues/detail?id=612743) for more information.
+\[3] Google Chrome 57 and earlier returned `"LaunchCalculator"` instead of `"LaunchApplication2"`. See [Chrome Bug 612743](https://crbug.com/612743) for more information.
 
-\[4] Prior to Firefox 37, Firefox returned the key code `"LaunchApplication1"` instead of "`LaunchWebBrowser"` for the Web browser key.
+\[4] Prior to Firefox 37, Firefox returned the key code `"LaunchApplication1"` instead of `"LaunchWebBrowser"` for the Web browser key.
 
 \[5] Firefox introduced support for this key in Firefox 37. Prior to that, this key was reported as `"Unidentified"`.
 
@@ -4548,7 +4532,8 @@ Some keyboards include special keys for controlling Web browsers. Those keys fol
 
 These keys are found on the keyboard's numeric keypad. However, not all are present on every keyboard. Although typical numeric keypads have numeric keys from <kbd>0</kbd> to <kbd>9</kbd> (encoded as `"0"` through `"9"`), some multimedia keyboards include additional number keys for higher numbers.
 
-> **Note:** The <kbd>10</kbd> key, if present, generates events with the `key` value of `"0"`.
+> [!NOTE]
+> The <kbd>10</kbd> key, if present, generates events with the `key` value of `"0"`.
 
 <table class="no-markdown">
   <thead>

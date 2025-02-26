@@ -2,20 +2,16 @@
 title: ImageTrack
 slug: Web/API/ImageTrack
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - ImageTrack
 browser-compat: api.ImageTrack
 ---
-{{DefaultAPISidebar("WebCodecs API")}}
+
+{{APIRef("WebCodecs API")}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`ImageTrack`** interface of the {{domxref('WebCodecs API','','','true')}} represents an individual image track.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 - {{domxref("ImageTrack.animated")}} {{ReadOnlyInline}}
   - : Returns a {{jsxref("boolean")}} indicating whether the track is animated and therefore has multiple frames.
@@ -25,11 +21,6 @@ The **`ImageTrack`** interface of the {{domxref('WebCodecs API','','','true')}} 
   - : Returns an integer indicating the number of times that the animation repeats.
 - {{domxref("ImageTrack.selected")}} {{ReadOnlyInline}}
   - : Returns a {{jsxref("boolean")}} indicating whether the track is selected for decoding.
-
-### Event handlers
-
-- {{domxref("ImageTrack.onchange")}}
-  - : An event handler fired at the `ImageTrack` when the {{domxref("ImageTrack.frameCount","frameCount")}} is altered.
 
 ## Specifications
 

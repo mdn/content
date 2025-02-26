@@ -1,25 +1,18 @@
 ---
-title: GamepadHapticActuator.pulse()
+title: "GamepadHapticActuator: pulse() method"
+short-title: pulse()
 slug: Web/API/GamepadHapticActuator/pulse
 page-type: web-api-instance-method
-tags:
-  - API
-  - Experimental
-  - Gamepad
-  - Gamepad API
-  - GamepadHapticActuator
-  - Method
-  - Reference
-  - pulse
 browser-compat: api.GamepadHapticActuator.pulse
 ---
-{{APIRef("Gamepad")}}{{SeeCompatTable}}
+
+{{APIRef("Gamepad API")}}
 
 The **`pulse()`** method of the {{domxref("GamepadHapticActuator")}} interface makes the hardware pulse at a certain intensity for a specified duration.
 
 ## Syntax
 
-```js
+```js-nolint
 pulse(value, duration)
 ```
 
@@ -30,7 +23,8 @@ pulse(value, duration)
 - `duration`
   - : A double representing the duration of the pulse, in milliseconds.
 
-> **Note:** Repeated calls to `pulse()` override the previous calls if they are still ongoing.
+> [!NOTE]
+> Repeated calls to `pulse()` override the previous calls if they are still ongoing.
 
 ### Return value
 

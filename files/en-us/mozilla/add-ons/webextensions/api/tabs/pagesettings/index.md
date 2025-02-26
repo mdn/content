@@ -1,17 +1,10 @@
 ---
 title: tabs.PageSettings
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/PageSettings
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - PageSettings
-  - Reference
-  - Type
-  - WebExtensions
-  - tabs
+page-type: webextension-api-type
 browser-compat: webextensions.api.tabs.PageSettings
 ---
+
 {{AddonSidebar}}
 
 The type **`tabs.PageSettings`** is used to control how a tab is rendered as a PDF by the {{WebExtAPIRef("tabs.saveAsPDF()")}} method.

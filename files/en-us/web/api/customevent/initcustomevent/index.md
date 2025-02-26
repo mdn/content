@@ -1,14 +1,14 @@
 ---
-title: CustomEvent.initCustomEvent()
+title: "CustomEvent: initCustomEvent() method"
+short-title: initCustomEvent()
 slug: Web/API/CustomEvent/initCustomEvent
 page-type: web-api-instance-method
-tags:
-  - Deprecated
-  - Method
-  - Reference
+status:
+  - deprecated
 browser-compat: api.CustomEvent.initCustomEvent
 ---
-{{APIRef("DOM")}}{{Deprecated_header}}
+
+{{APIRef("DOM")}}{{Deprecated_header}}{{AvailableInWorkers}}
 
 The **`CustomEvent.initCustomEvent()`** method initializes a {{domxref("CustomEvent")}} object.
 If the event has already been dispatched, this method does nothing.
@@ -24,8 +24,8 @@ Once dispatched, it doesn't do anything anymore.
 
 ## Syntax
 
-```js
-event.initCustomEvent(type, canBubble, cancelable, detail);
+```js-nolint
+initCustomEvent(type, canBubble, cancelable, detail)
 ```
 
 ### Parameters

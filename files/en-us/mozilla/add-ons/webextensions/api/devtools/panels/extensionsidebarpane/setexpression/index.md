@@ -1,19 +1,11 @@
 ---
 title: devtools.panels.ElementsPanel.setExpression()
-slug: >-
-  Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane/setExpression
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - devtools.panels
-  - setExpression
+slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane/setExpression
+page-type: webextension-api-function
 browser-compat: webextensions.api.devtools.panels.ExtensionSidebarPane.setExpression
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 Evaluates an expression in the context of the inspected page, and displays the result in the extension sidebar pane.
 
@@ -25,7 +17,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let evaluating = browser.devtools.panels.setExpression(
   expression,       // string
   rootTitle         // string
@@ -53,13 +45,11 @@ This code creates a sidebar pane that displays the [`tagName`](/en-US/docs/Web/A
 
 ```js
 function onCreated(sidebarPane) {
-
   browser.devtools.panels.elements.onSelectionChanged.addListener(() => {
     const exp = "$0 && $0.tagName";
     const title = "Selected Element tagName";
     sidebarPane.setExpression(exp, title);
   });
-
 }
 
 browser.devtools.panels.elements.createSidebarPane("My pane").then(onCreated);
@@ -67,9 +57,11 @@ browser.devtools.panels.elements.createSidebarPane("My pane").then(onCreated);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.devtools.panels`](https://developer.chrome.com/docs/extensions/reference/devtools_panels/) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.devtools.panels`](https://developer.chrome.com/docs/extensions/reference/api/devtools/panels) API.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -96,4 +88,4 @@ browser.devtools.panels.elements.createSidebarPane("My pane").then(onCreated);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

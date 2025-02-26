@@ -2,16 +2,9 @@
 title: Canvas tutorial
 slug: Web/API/Canvas_API/Tutorial
 page-type: guide
-tags:
-  - Canvas
-  - Graphics
-  - Guide
-  - HTML
-  - HTML5
-  - Intermediate
-  - Web
 ---
-{{CanvasSidebar}}
+
+{{DefaultAPISidebar("Canvas API")}}
 
 This tutorial describes how to use the [**`<canvas>`**](/en-US/docs/Web/HTML/Element/canvas) element to draw 2D graphics, starting with the basics. The examples provided should give you some clear ideas about what you can do with canvas, and will provide code snippets that may get you started in building your own content.
 
@@ -41,7 +34,6 @@ Using the `<canvas>` element is not very difficult, but you do need a basic unde
 ## See also
 
 - [Canvas topic page](/en-US/docs/Web/API/Canvas_API)
-- [HTML5CanvasTutorials](https://www.html5canvastutorials.com/)
 
 ## A note to contributors
 

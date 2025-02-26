@@ -1,13 +1,9 @@
 ---
 title: type
 slug: Web/SVG/Attribute/type
-tags:
-  - NeedsCompatTable
-  - NeedsExample
-  - SVG
-  - SVG Attribute
-  - filter
+page-type: svg-attribute
 ---
+
 {{SVGRef}}
 
 The `type` attribute is a generic attribute and it has different meaning based on the context in which it's used.
@@ -178,7 +174,7 @@ SVG elements: {{SVGElement("style")}}, {{SVGElement("script")}}
     </tr>
     <tr>
       <th scope="row">Value</th>
-      <td>&#x3C;content-type></td>
+      <td>&#x3C;media-type></td>
     </tr>
     <tr>
       <th scope="row">Animatable</th>

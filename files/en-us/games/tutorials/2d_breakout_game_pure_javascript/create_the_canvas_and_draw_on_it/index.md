@@ -1,16 +1,9 @@
 ---
 title: Create the Canvas and draw on it
-slug: >-
-  Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it
-tags:
-  - 2D
-  - Beginner
-  - Canvas
-  - Games
-  - HTML
-  - JavaScript
-  - Tutorial
+slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it
+page-type: guide
 ---
+
 {{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Move_the_ball")}}
@@ -21,28 +14,33 @@ Before we can start writing the game's functionality, we need to create a basic 
 
 ## The game's HTML
 
-The HTML document structure is quite simple, as the game will be rendered entirely on the {{htmlelement("canvas")}} element. Using your favorite text editor, create a new HTML document, save it as `index.html`, in a sensible location, and add the following code to it:
+The HTML document structure is quite minimal, as the game will be rendered entirely on the {{htmlelement("canvas")}} element. Using your favorite text editor, create a new HTML document, save it as `index.html`, in a sensible location, and add the following code to it:
 
 ```html
-<!DOCTYPE html>
-<html>
-<head>
+<!doctype html>
+<html lang="en-US">
+  <head>
     <meta charset="utf-8" />
     <title>Gamedev Canvas Workshop</title>
     <style>
-      * { padding: 0; margin: 0; }
-      canvas { background: #eee; display: block; margin: 0 auto; }
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      canvas {
+        background: #eee;
+        display: block;
+        margin: 0 auto;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
+    <canvas id="myCanvas" width="480" height="320"></canvas>
 
-<canvas id="myCanvas" width="480" height="320"></canvas>
-
-<script>
-  // JavaScript code goes here
-</script>
-
-</body>
+    <script>
+      // JavaScript code goes here
+    </script>
+  </body>
 </html>
 ```
 
@@ -53,8 +51,8 @@ We have a `charset` defined, {{htmlelement("title")}} and some basic CSS in the 
 To actually be able to render graphics on the {{htmlelement("canvas")}} element, first we have to grab a reference to it in JavaScript. Add the following below your opening `<script>` tag.
 
 ```js
-var canvas = document.getElementById("myCanvas");
-var ctx = canvas.getContext("2d");
+const canvas = document.getElementById("myCanvas");
+const ctx = canvas.getContext("2d");
 ```
 
 Here we're storing a reference to the {{htmlelement("canvas")}} element to the `canvas` variable. Then we're creating the `ctx` variable to store the 2D rendering context — the actual tool we can use to paint on the Canvas.
@@ -75,7 +73,7 @@ We're not limited to rectangles — here's a piece of code for printing out a gr
 
 ```js
 ctx.beginPath();
-ctx.arc(240, 160, 20, 0, Math.PI*2, false);
+ctx.arc(240, 160, 20, 0, Math.PI * 2, false);
 ctx.fillStyle = "green";
 ctx.fill();
 ctx.closePath();
@@ -88,27 +86,61 @@ As you can see we're using the {{domxref("CanvasRenderingContext2D.beginPath()",
 - start angle and end angle (what angle to start and finish drawing the circle, in radians)
 - direction of drawing (`false` for clockwise, the default, or `true` for anti-clockwise.) This last parameter is optional.
 
-The {{domxref("CanvasRenderingContext2D.fillStyle","fillStyle")}} property looks different than before. This is because, just as with CSS, color can be specified as a hexadecimal value, a color keyword, the `rgba()` function, or any of the other available color methods.
+The {{domxref("CanvasRenderingContext2D.fillStyle","fillStyle")}} property looks different than before. This is because, just as with CSS, color can be specified as a hexadecimal value, a color keyword, the `rgb()` function, or any of the other available color methods.
 
 Instead of using {{domxref("CanvasRenderingContext2D.fill()","fill()")}} and filling the shapes with colors, we can use {{domxref("CanvasRenderingContext2D.stroke()","stroke()")}} to only color the outer stroke. Try adding this code to your JavaScript too:
 
 ```js
 ctx.beginPath();
 ctx.rect(160, 10, 100, 40);
-ctx.strokeStyle = "rgba(0, 0, 255, 0.5)";
+ctx.strokeStyle = "rgb(0 0 255 / 50%)";
 ctx.stroke();
 ctx.closePath();
 ```
 
-The code above prints a blue-stroked empty rectangle. Thanks to the alpha channel in the `rgba()` function, the blue color is semi transparent.
+The code above prints a blue-stroked empty rectangle. Thanks to the alpha channel in the `rgb()` function, the blue color is semi transparent.
 
 ## Compare your code
 
-Here's the full source code of the first lesson, running live in a JSFiddle:
+Here's the full source code of the first lesson, running live:
 
-{{JSFiddleEmbed("https://jsfiddle.net/end3r/x62h15e2/","","395")}}
+```html
+<canvas id="myCanvas" width="480" height="320"></canvas>
+```
 
-> **Note:** Try changing the size and color of the given shapes.
+```css
+canvas {
+  background: #eee;
+}
+```
+
+```js
+const canvas = document.getElementById("myCanvas");
+const ctx = canvas.getContext("2d");
+
+ctx.beginPath();
+ctx.rect(20, 40, 50, 50);
+ctx.fillStyle = "#FF0000";
+ctx.fill();
+ctx.closePath();
+
+ctx.beginPath();
+ctx.arc(240, 160, 20, 0, Math.PI * 2, false);
+ctx.fillStyle = "green";
+ctx.fill();
+ctx.closePath();
+
+ctx.beginPath();
+ctx.rect(160, 10, 100, 40);
+ctx.strokeStyle = "rgb(0 0 255 / 0.5)";
+ctx.stroke();
+ctx.closePath();
+```
+
+{{embedlivesample("compare_your_code", 600, 340)}}
+
+> [!NOTE]
+> Try changing the size and color of the given shapes.
 
 ## Next steps
 

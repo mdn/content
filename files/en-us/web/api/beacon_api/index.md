@@ -2,12 +2,9 @@
 title: Beacon API
 slug: Web/API/Beacon_API
 page-type: web-api-overview
-tags:
-  - Guide
-  - Overview
-  - Web Performance
 browser-compat: api.Navigator.sendBeacon
 ---
+
 {{DefaultAPISidebar("Beacon")}}
 
 The **`Beacon`** API is used to send an asynchronous and non-blocking request to a web server. The request does not expect a response. Unlike requests made using {{domxref("XMLHttpRequest")}} or the [Fetch API](/en-US/docs/Web/API/Fetch_API), the browser guarantees to initiate beacon requests before the page is unloaded and to run them to completion.
@@ -16,13 +13,14 @@ The main use case for the Beacon API is to send analytics such as client-side ev
 
 For more details about the motivation for and usage of this API, see the documentation for the {{domxref("navigator.sendBeacon()")}} method.
 
-> **Note:** This API is _not available_ in [Web Workers](/en-US/docs/Web/API/Web_Workers_API) (not exposed via {{domxref("WorkerNavigator")}}).
+> [!NOTE]
+> This API is _not available_ in [Web Workers](/en-US/docs/Web/API/Web_Workers_API) (not exposed via {{domxref("WorkerNavigator")}}).
 
 ## Interfaces
 
 This API defines a single method: {{domxref("navigator.sendBeacon()")}}.
 
-The method takes two arguments, the URL and the data to send in the request. The data argument is optional and its type may be a {{jsxref("TypedArray")}}, a {{jsxref("DataView")}}, a {{domxref("Blob")}}, a string literal or object, or a {{domxref("FormData")}} object. If the browser successfully queues the request for delivery, the method returns "`true`"; otherwise, it returns "`false`".
+The method takes two arguments, the URL and the data to send in the request. The data argument is optional and its type may be a string, an {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, a {{jsxref("DataView")}}, a {{domxref("ReadableStream")}}, a {{domxref("Blob")}}, a {{domxref("FormData")}} object, or a {{domxref("URLSearchParams")}} object. If the browser successfully queues the request for delivery, the method returns `true`; otherwise, it returns `false`.
 
 ## Specifications
 

@@ -1,16 +1,11 @@
 ---
-title: OfflineAudioCompletionEvent.renderedBuffer
+title: "OfflineAudioCompletionEvent: renderedBuffer property"
+short-title: renderedBuffer
 slug: Web/API/OfflineAudioCompletionEvent/renderedBuffer
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - OfflineAudioCompletionEvent
-  - Property
-  - Reference
-  - Web Audio API
 browser-compat: api.OfflineAudioCompletionEvent.renderedBuffer
 ---
+
 {{APIRef("Web Audio API")}}
 
 The **`renderedBuffer`** read-only property of the

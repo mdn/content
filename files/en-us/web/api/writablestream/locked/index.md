@@ -1,17 +1,12 @@
 ---
-title: WritableStream.locked
+title: "WritableStream: locked property"
+short-title: locked
 slug: Web/API/WritableStream/locked
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Streams
-  - WritableStream
-  - locked
 browser-compat: api.WritableStream.locked
 ---
-{{APIRef("Streams")}}
+
+{{APIRef("Streams")}}{{AvailableInWorkers}}
 
 The **`locked`** read-only property of the {{domxref("WritableStream")}} interface returns a boolean indicating whether the `WritableStream` is locked to a writer.
 
@@ -22,23 +17,26 @@ A boolean value indicating whether or not the writable stream is locked.
 ## Examples
 
 ```js
-const writableStream = new WritableStream({
-  write(chunk) {
-    // ...
+const writableStream = new WritableStream(
+  {
+    write(chunk) {
+      // ...
+    },
+    close() {
+      // ...
+    },
+    abort(err) {
+      // ...
+    },
   },
-  close() {
-    // ...
-  },
-  abort(err) {
-    // ...
-  }
-}, queuingStrategy);
+  queuingStrategy,
+);
 
 // ...
 
 const writer = writableStream.getWriter();
 
-writableStream.locked
+writableStream.locked;
 // should return true, as the stream has been locked to a writer
 ```
 

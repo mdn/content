@@ -1,17 +1,15 @@
 ---
 title: ruby-align
 slug: Web/CSS/ruby-align
-tags:
-  - CSS
-  - CSS Property
-  - CSS Ruby
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.ruby-align
 ---
+
 {{CSSRef}}
 
-The **`ruby-align`** CSS property defines the distribution of the different ruby elements over the base.
+The **`ruby-align`** [CSS](/en-US/docs/Web/CSS) property defines the distribution of the different ruby elements over the base.
+
+## Syntax
 
 ```css
 /* Keyword values */
@@ -27,8 +25,6 @@ ruby-align: revert;
 ruby-align: revert-layer;
 ruby-align: unset;
 ```
-
-## Syntax
 
 ### Values
 

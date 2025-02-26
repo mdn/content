@@ -1,21 +1,15 @@
 ---
-title: PaymentAddress.addressLine
+title: "PaymentAddress: addressLine property"
+short-title: addressLine
 slug: Web/API/PaymentAddress/addressLine
 page-type: web-api-instance-property
-tags:
-  - API
-  - Address
-  - Payment Request
-  - Payment Request API
-  - PaymentRequest
-  - Property
-  - Read-only
-  - Reference
-  - payment
-  - paymentAddress
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.PaymentAddress.addressLine
 ---
-{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}
+
+{{APIRef("Payment Request API")}}{{SecureContext_Header}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`addressLine`** read-only
 property of the {{domxref('PaymentAddress')}} interface is an array of

@@ -1,15 +1,10 @@
 ---
 title: find
 slug: Mozilla/Add-ons/WebExtensions/API/find
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - WebExtensions
-  - find
+page-type: webextension-api
 browser-compat: webextensions.api.find
 ---
+
 {{AddonSidebar}}
 
 Finds text in a web page, and highlights matches.

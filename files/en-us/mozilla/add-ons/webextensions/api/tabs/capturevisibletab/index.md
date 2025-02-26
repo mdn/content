@@ -1,27 +1,24 @@
 ---
 title: tabs.captureVisibleTab()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/captureVisibleTab
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - captureVisibleTab
-  - tabs
+page-type: webextension-api-function
 browser-compat: webextensions.api.tabs.captureVisibleTab
 ---
-{{AddonSidebar()}}
 
-Creates a data URL encoding the image of an area of the currently active tab in the specified window. You must have the `<all_urls>` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) to use this method. (Alternately, Chrome allows use of this method with the `activeTab` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) and a qualifying user gesture).
+{{AddonSidebar}}
+
+Creates a data URL encoding the image of an area of the active tab in the specified window. You must have the `<all_urls>` or `activeTab` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).
+
+> [!NOTE]
+> In Firefox 125 and earlier, this method was only available with the `<all_urls>` permission.
+
+In addition to sites that extensions can normally access, this method allows extensions to capture sensitive sites that are otherwise restricted, including browser UI pages and other extensions' pages. These sensitive sites can only be captured with the `activeTab` permission. Chrome also permits file URLs to be captured when the extension has been granted file access.
 
 This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntax
 
-```js
+```js-nolint
 let capturing = browser.tabs.captureVisibleTab(
   windowId,               // optional integer
   options                 // optional extensionTypes.ImageDetails
@@ -37,11 +34,11 @@ let capturing = browser.tabs.captureVisibleTab(
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a data URL which encodes the captured image. May be assigned to the 'src' property of an HTML Image element for display. If any error occurs the promise will be rejected with an error message.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that is fulfilled with a data URL that encodes the captured image. It can be assigned to the 'src' property of an HTML image element for display. If any error occurs, the promise is rejected with an error message.
 
 ## Examples
 
-Capture an image of the active tab in the current window, with default settings:
+Capture an image of the active tab in the current window with default image settings:
 
 ```js
 function onCaptured(imageUri) {
@@ -52,7 +49,7 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-browser.browserAction.onClicked.addListener(function() {
+browser.browserAction.onClicked.addListener(() => {
   let capturing = browser.tabs.captureVisibleTab();
   capturing.then(onCaptured, onError);
 });
@@ -64,11 +61,11 @@ browser.browserAction.onClicked.addListener(function() {
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/tabs/#method-captureVisibleTab) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-captureVisibleTab) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -95,4 +92,4 @@ browser.browserAction.onClicked.addListener(function() {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

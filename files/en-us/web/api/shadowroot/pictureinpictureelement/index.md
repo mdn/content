@@ -1,17 +1,12 @@
 ---
-title: ShadowRoot.pictureInPictureElement
+title: "ShadowRoot: pictureInPictureElement property"
+short-title: pictureInPictureElement
 slug: Web/API/ShadowRoot/pictureInPictureElement
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ShadowRoot
-  - Web Components
-  - shadow dom
 browser-compat: api.ShadowRoot.pictureInPictureElement
 ---
-{{APIRef("Shadow DOM")}}
+
+{{APIRef("Picture-in-Picture API")}}
 
 The **`pictureInPictureElement`** read-only property of the
 {{domxref("ShadowRoot")}} interface returns the {{domxref("Element")}} that is currently being
@@ -20,14 +15,14 @@ picture-in-picture mode is not currently in use.
 
 ## Value
 
-A reference to the {{domxref("Element")}} object that's currently in
-picture-in-picture mode, or, if picture-in-picture mode isn't currently in use by the
-shadow tree, the returned value is `null`.
+A reference to the {{domxref("Element")}} object that's currently in picture-in-picture mode.
+
+Returns `null` if the shadow tree has no associated element in picture-in-picture mode. For example, there's no picture-in-picture element, or the element is not in the shadow tree.
 
 ## Examples
 
 ```js
-let customElem = document.querySelector('my-shadow-dom-element');
+let customElem = document.querySelector("my-shadow-dom-element");
 let shadow = customElem.shadowRoot;
 let pipElem = shadow.pictureInPictureElement;
 ```

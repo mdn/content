@@ -1,16 +1,12 @@
 ---
-title: WebGLRenderingContext.getSupportedExtensions()
+title: "WebGLRenderingContext: getSupportedExtensions() method"
+short-title: getSupportedExtensions()
 slug: Web/API/WebGLRenderingContext/getSupportedExtensions
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.getSupportedExtensions
 ---
-{{APIRef("WebGL")}}
+
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGLRenderingContext.getSupportedExtensions()`** method
 returns a list of all the supported [WebGL](/en-US/docs/Web/API/WebGL_API)
@@ -18,7 +14,7 @@ extensions.
 
 ## Syntax
 
-```js
+```js-nolint
 getSupportedExtensions()
 ```
 
@@ -33,8 +29,8 @@ An {{jsxref("Array")}} of strings with all the supported WebGL extensions.
 ## Examples
 
 ```js
-const canvas = document.getElementById('canvas');
-gl = canvas.getContext('webgl');
+const canvas = document.getElementById("canvas");
+gl = canvas.getContext("webgl");
 
 const extensions = gl.getSupportedExtensions();
 // Array [ 'ANGLE_instanced_arrays', 'EXT_blend_minmax', … ]
@@ -45,7 +41,7 @@ specific extension object.
 
 ## WebGL extensions
 
-Extensions for the WebGL API are registered in the [WebGL Extension Registry](https://www.khronos.org/registry/webgl/extensions/). They are also listed [here](/en-US/docs/Web/API/WebGL_API#extensions).
+Extensions for the WebGL API are registered in the [WebGL Extension Registry](https://registry.khronos.org/webgl/extensions/). They are also listed [here](/en-US/docs/Web/API/WebGL_API#extensions).
 
 ## Specifications
 
@@ -58,4 +54,4 @@ Extensions for the WebGL API are registered in the [WebGL Extension Registry](ht
 ## See also
 
 - {{domxref("WebGLRenderingContext.getExtension()")}}
-- [webglreport.com](https://webglreport.com)
+- [webglreport.com](https://webglreport.com/)

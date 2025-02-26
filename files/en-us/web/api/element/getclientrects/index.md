@@ -1,32 +1,23 @@
 ---
-title: Element.getClientRects()
+title: "Element: getClientRects() method"
+short-title: getClientRects()
 slug: Web/API/Element/getClientRects
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSSOM View
-  - Element
-  - Method
-  - Reference
-  - clientHeight
-  - getBoundingClientRect
-  - getClientRects
-  - offsetHeight
-  - scrollHeight
 browser-compat: api.Element.getClientRects
 ---
+
 {{APIRef("DOM")}}
 
 The **`getClientRects()`** method of the {{domxref("Element")}}
 interface returns a collection of {{DOMxRef("DOMRect")}} objects that indicate the
-bounding rectangles for each [CSS border box](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model) in a client.
+bounding rectangles for each [CSS border box](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model) in a client.
 
-Most elements only have one border box each, but a multiline [inline element](/en-US/docs/Web/HTML/Inline_elements) (such as a multiline
+Most elements only have one border box each, but a multiline [inline-level element](/en-US/docs/Glossary/Inline-level_content) (such as a multiline
 {{HTMLElement("span")}} element, by default) has a border box around each line.
 
 ## Syntax
 
-```js
+```js-nolint
 getClientRects()
 ```
 
@@ -37,9 +28,7 @@ None.
 ### Return value
 
 The returned value is a collection of {{DOMxRef("DOMRect")}} objects, one for each CSS
-border box associated with the element. Each {{DOMxRef("DOMRect")}} object contains
-read-only `left`, `top`, `right` and
-`bottom` properties describing the border box, in pixels, with the top-left
+border box associated with the element. Each {{DOMxRef("DOMRect")}} object describes the border box, in pixels, with the top-left
 relative to the top-left of the viewport. For tables with captions, the caption is
 included even though it's outside the border box of the table. When called on SVG
 elements other than an outer-`<svg>`, the "viewport" that the resulting
@@ -47,15 +36,6 @@ rectangles are relative to is the viewport that the element's
 outer-`<svg>` establishes (and to be clear, the rectangles are also
 transformed by the outer-`<svg>`'s `viewBox` transform, if
 any).
-
-Originally, Microsoft intended this method to return a `TextRectangle`
-object for each _line_ of text. However, the CSSOM working draft specifies that
-it returns a {{DOMxRef("DOMRect")}} for each _border box_. For an inline element,
-the two definitions are the same. But for a block element, Mozilla will return only a
-single rectangle.
-
-{{Fx_MinVersion_Note(3.5, "Firefox 3.5 adds <code>width</code> and <code>height</code>
-  properties to the <code>TextRectangle</code> object.")}}
 
 The amount of scrolling that has been done of the viewport area (or any other
 scrollable element) is taken into account when computing the rectangles.
@@ -88,9 +68,11 @@ third block.
 
 ```html
 <h3>A paragraph with a span inside</h3>
-<p>Both the span and the paragraph have a border set. The
-  client rects are in red. Note that the p has only one border
-  box, while the span has multiple border boxes.</p>
+<p>
+  Both the span and the paragraph have a border set. The client rects are in
+  red. Note that the p has only one border box, while the span has multiple
+  border boxes.
+</p>
 
 <div>
   <strong>Original</strong>
@@ -109,7 +91,9 @@ third block.
 <div>
   <strong>span's rect</strong>
   <p>
-    <span class="withClientRectsOverlay">Paragraph that spans multiple lines</span>
+    <span class="withClientRectsOverlay"
+      >Paragraph that spans multiple lines</span
+    >
   </p>
 </div>
 ```
@@ -120,8 +104,10 @@ element in the third block.
 
 ```html
 <h3>A list</h3>
-<p>Note that the border box doesn't include the number, so
-  neither do the client rects.</p>
+<p>
+  Note that the border box doesn't include the number, so neither do the client
+  rects.
+</p>
 
 <div>
   <strong>Original</strong>
@@ -153,18 +139,26 @@ Example 3: This HTML creates two tables with captions. Client rects are painted 
 
 ```html
 <h3>A table with a caption</h3>
-<p>Although the table's border box doesn't include the
-  caption, the client rects do include the caption.</p>
+<p>
+  Although the table's border box doesn't include the caption, the client rects
+  do include the caption.
+</p>
 
 <div>
   <strong>Original</strong>
   <table>
-    <caption>caption</caption>
+    <caption>
+      caption
+    </caption>
     <thead>
-      <tr><th>thead</th></tr>
+      <tr>
+        <th>thead</th>
+      </tr>
     </thead>
     <tbody>
-      <tr><td>tbody</td></tr>
+      <tr>
+        <td>tbody</td>
+      </tr>
     </tbody>
   </table>
 </div>
@@ -172,12 +166,18 @@ Example 3: This HTML creates two tables with captions. Client rects are painted 
 <div>
   <strong>table's rect</strong>
   <table class="withClientRectsOverlay">
-    <caption>caption</caption>
+    <caption>
+      caption
+    </caption>
     <thead>
-      <tr><th>thead</th></tr>
+      <tr>
+        <th>thead</th>
+      </tr>
     </thead>
     <tbody>
-      <tr><td>tbody</td></tr>
+      <tr>
+        <td>tbody</td>
+      </tr>
     </tbody>
   </table>
 </div>
@@ -199,10 +199,15 @@ div {
   display: inline-block;
   width: 150px;
 }
-div p, ol, table {
+div p,
+ol,
+table {
   border: 1px solid blue;
 }
-span, li, th, td {
+span,
+li,
+th,
+td {
   border: 1px solid green;
 }
 ```
@@ -219,12 +224,14 @@ function addClientRectsOverlay(elt) {
      Note: the overlays will be out of place if the user resizes or zooms. */
   const rects = elt.getClientRects();
   for (const rect of rects) {
-    const tableRectDiv = document.createElement('div');
-    tableRectDiv.style.position = 'absolute';
-    tableRectDiv.style.border = '1px solid red';
-    const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-    const scrollLeft = document.documentElement.scrollLeft || document.body.scrollLeft;
-    tableRectDiv.style.margin = tableRectDiv.style.padding = '0';
+    const tableRectDiv = document.createElement("div");
+    tableRectDiv.style.position = "absolute";
+    tableRectDiv.style.border = "1px solid red";
+    const scrollTop =
+      document.documentElement.scrollTop || document.body.scrollTop;
+    const scrollLeft =
+      document.documentElement.scrollLeft || document.body.scrollLeft;
+    tableRectDiv.style.margin = tableRectDiv.style.padding = "0";
     tableRectDiv.style.top = `${rect.top + scrollTop}px`;
     tableRectDiv.style.left = `${rect.left + scrollLeft}px`;
     // We want rect.width to be the border width, so content width is 2px less.
@@ -234,12 +241,12 @@ function addClientRectsOverlay(elt) {
   }
 }
 
-(function() {
+(() => {
   /* Call function addClientRectsOverlay(elt) for all elements with
      assigned class "withClientRectsOverlay" */
-  const elt = document.getElementsByClassName('withClientRectsOverlay');
-  for (let i = 0; i < elt.length; i++) {
-    addClientRectsOverlay(elt[i]);
+  const elts = document.getElementsByClassName("withClientRectsOverlay");
+  for (const elt of elts) {
+    addClientRectsOverlay(elt);
   }
 })();
 ```
@@ -251,10 +258,6 @@ function addClientRectsOverlay(elt) {
 ## Specifications
 
 {{Specifications}}
-
-### Notes
-
-`getClientRects()` was first introduced in the MS IE DHTML object model.
 
 ## Browser compatibility
 

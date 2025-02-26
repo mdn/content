@@ -1,24 +1,31 @@
 ---
 title: Date.prototype.setUTCMinutes()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCMinutes
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.setUTCMinutes
 ---
+
 {{JSRef}}
 
-The **`setUTCMinutes()`** method sets the minutes for a
-specified date according to universal time.
+The **`setUTCMinutes()`** method of {{jsxref("Date")}} instances changes the minutes for this date according to universal time.
 
-{{EmbedInteractiveExample("pages/js/date-setutcminutes.html")}}
+{{InteractiveExample("JavaScript Demo: Date.setUTCMinutes()")}}
+
+```js interactive-example
+const date1 = new Date("December 31, 1975, 23:15:30 GMT+11:00");
+
+console.log(date1.getUTCMinutes());
+// Expected output: 15
+
+date1.setUTCMinutes(25);
+
+console.log(date1.getUTCMinutes());
+// Expected output: 25
+```
 
 ## Syntax
 
-```js
+```js-nolint
 setUTCMinutes(minutesValue)
 setUTCMinutes(minutesValue, secondsValue)
 setUTCMinutes(minutesValue, secondsValue, msValue)
@@ -27,26 +34,22 @@ setUTCMinutes(minutesValue, secondsValue, msValue)
 ### Parameters
 
 - `minutesValue`
-  - : An integer between 0 and 59, representing the minutes.
-- `secondsValue`
-  - : Optional. An integer between 0 and 59, representing the seconds. If you specify the
-    `secondsValue` parameter, you must also specify the
-    `minutesValue`.
-- `msValue`
-  - : Optional. A number between 0 and 999, representing the milliseconds. If you specify
-    the `msValue` parameter, you must also specify the
-    `minutesValue` and `secondsValue`.
+  - : An integer between 0 and 59 representing the minutes.
+- `secondsValue` {{optional_inline}}
+  - : An integer between 0 and 59 representing the seconds. If you specify `secondsValue`, you must also specify `minutesValue`.
+- `msValue` {{optional_inline}}
+  - : An integer between 0 and 999 representing the milliseconds. If you specify `msValue`, you must also specify `minutesValue` and `secondsValue`.
 
 ### Return value
 
-The number of milliseconds between 1 January 1970 00:00:00 UTC and the updated date.
+Changes the {{jsxref("Date")}} object in place, and returns its new [timestamp](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date). If a parameter is `NaN` (or other values that get [coerced](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion) to `NaN`, such as `undefined`), the date is set to [Invalid Date](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date) and `NaN` is returned.
 
 ## Description
 
 If you do not specify the `secondsValue` and
 `msValue` parameters, the values returned from
-{{jsxref("Date.prototype.getUTCSeconds()", "getUTCSeconds()")}} and
-{{jsxref("Date.prototype.getUTCMilliseconds()", "getUTCMilliseconds()")}} methods are
+{{jsxref("Date/getUTCSeconds", "getUTCSeconds()")}} and
+{{jsxref("Date/getUTCMilliseconds", "getUTCMilliseconds()")}} methods are
 used.
 
 If a parameter you specify is outside of the expected range,

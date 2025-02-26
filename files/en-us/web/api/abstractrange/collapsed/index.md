@@ -1,13 +1,11 @@
 ---
-title: AbstractRange.collapsed
+title: "AbstractRange: collapsed property"
+short-title: collapsed
 slug: Web/API/AbstractRange/collapsed
 page-type: web-api-instance-property
-tags:
-  - Property
-  - Reference
-  - Read-only
 browser-compat: api.AbstractRange.collapsed
 ---
+
 {{APIRef("DOM")}}
 
 The read-only **`collapsed`** property of the {{domxref("AbstractRange")}} interface returns `true` if the range's start position and end position are the same.

@@ -1,25 +1,19 @@
 ---
-title: URLSearchParams.get()
+title: "URLSearchParams: get() method"
+short-title: get()
 slug: Web/API/URLSearchParams/get
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - URL API
-  - URLSearchParams
-  - get
 browser-compat: api.URLSearchParams.get
 ---
-{{ApiRef("URL API")}}
+
+{{ApiRef("URL API")}} {{AvailableInWorkers}}
 
 The **`get()`** method of the {{domxref("URLSearchParams")}}
 interface returns the first value associated to the given search parameter.
 
-{{availableinworkers}}
-
 ## Syntax
 
-```js
+```js-nolint
 get(name)
 ```
 

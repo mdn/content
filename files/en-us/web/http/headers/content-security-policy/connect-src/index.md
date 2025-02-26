@@ -1,29 +1,22 @@
 ---
-title: 'CSP: connect-src'
+title: "CSP: connect-src"
 slug: Web/HTTP/Headers/Content-Security-Policy/connect-src
-tags:
-  - CSP
-  - Content-Security-Policy
-  - Directive
-  - HTTP
-  - Reference
-  - Security
-  - connect-src
-  - source
+page-type: http-csp-directive
 browser-compat: http.headers.Content-Security-Policy.connect-src
 ---
+
 {{HTTPSidebar}}
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP)
 **`connect-src`** directive restricts the URLs which can be
-loaded using script interfaces. The APIs that are restricted are:
+loaded using script interfaces. The following APIs are controlled by this directive:
 
-- {{HTMLElement("a")}} {{htmlattrxref("ping", "a")}},
-- {{domxref("fetch()")}},
-- {{domxref("XMLHttpRequest")}},
-- {{domxref("WebSocket")}},
-- {{domxref("EventSource")}}, and
-- {{domxref("Navigator.sendBeacon()")}}.
+- The [`ping`](/en-US/docs/Web/HTML/Element/a#ping) attribute in {{htmlelement("a")}} elements
+- {{domxref("Window/fetch", "fetch()")}}
+- {{domxref("XMLHttpRequest")}}
+- {{domxref("WebSocket")}}
+- {{domxref("EventSource")}}
+- {{domxref("Navigator.sendBeacon()")}}
 
 > **Note:** `connect-src 'self'` does not resolve to websocket
 > schemes in all browsers, more info in this [issue](https://github.com/w3c/webappsec-csp/issues/7).
@@ -50,18 +43,22 @@ loaded using script interfaces. The APIs that are restricted are:
 
 ## Syntax
 
-One or more sources can be allowed for the connect-src policy:
-
 ```http
-Content-Security-Policy: connect-src <source>;
-Content-Security-Policy: connect-src <source> <source>;
+Content-Security-Policy: connect-src 'none';
+Content-Security-Policy: connect-src <source-expression-list>;
 ```
 
-### Sources
+This directive may have one of the following values:
 
-`<source>` can be any one of the values listed in [CSP Source Values](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#sources).
+- `'none'`
+  - : No resources of this type may be loaded. The single quotes are mandatory.
+- `<source-expression-list>`
 
-Note that this same set of values can be used in all {{Glossary("fetch directive", "fetch directives")}} (and a [number of other directives](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#relevant_directives)).
+  - : A space-separated list of _source expression_ values. Resources of this type may be loaded if they match any of the given source expressions. For this directive, the following source expression values are applicable:
+
+    - [`<host-source>`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#host-source)
+    - [`<scheme-source>`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#scheme-source)
+    - [`'self'`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#self)
 
 ## Examples
 
@@ -77,18 +74,22 @@ The following connections are blocked and won't load:
 
 ```html
 <a ping="https://not-example.com">
+  <script>
+    const response = fetch("https://not-example.com/");
 
-<script>
-  var xhr = new XMLHttpRequest();
-  xhr.open('GET', 'https://not-example.com/');
-  xhr.send();
+    const xhr = new XMLHttpRequest();
+    xhr.open("GET", "https://not-example.com/");
+    xhr.send();
 
-  var ws = new WebSocket("https://not-example.com/");
+    const ws = new WebSocket("wss://not-example.com/");
 
-  var es = new EventSource("https://not-example.com/");
+    const es = new EventSource("https://not-example.com/");
 
-  navigator.sendBeacon("https://not-example.com/", { /* … */ });
-</script>
+    navigator.sendBeacon("https://not-example.com/", {
+      /* … */
+    });
+  </script></a
+>
 ```
 
 ## Specifications
@@ -99,17 +100,11 @@ The following connections are blocked and won't load:
 
 {{Compat}}
 
-### Compatibility notes
-
-- Prior to Firefox 23, `xhr-src` was used in place of the
-  `connect-src` directive and only restricted the use of
-  {{domxref("XMLHttpRequest")}}.
-
 ## See also
 
 - {{HTTPHeader("Content-Security-Policy")}}
-- {{HTMLElement("a")}} {{htmlattrxref("ping", "a")}}
-- {{domxref("fetch()")}}
+- {{HTMLElement("a")}} [`ping`](/en-US/docs/Web/HTML/Element/a#ping)
+- {{domxref("Window/fetch", "fetch()")}}
 - {{domxref("XMLHttpRequest")}}
 - {{domxref("WebSocket")}}
 - {{domxref("EventSource")}}

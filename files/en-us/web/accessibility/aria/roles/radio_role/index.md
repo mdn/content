@@ -1,32 +1,45 @@
 ---
-title: 'ARIA: radio role'
+title: "ARIA: radio role"
 slug: Web/Accessibility/ARIA/Roles/radio_role
-tags:
-  - ARIA
-  - Accessibility
-  - Role
-  - ARIA widget
-  - Reference
+page-type: aria-role
 ---
+
+{{AccessibilitySidebar}}
+
 The `radio` role is one of a group of checkable radio buttons, in a `radiogroup`, where no more than a single radio button can be checked at a time.
 
 ## Description
 
-A radio button is a checkable input that when associated with other radio buttons, only one of which can be checked at a time. The radio buttons must be grouped together in a ['radiogroup`](/en-US/docs/web/accessibility/aria/roles/radiogroup_role) to indicate which ones affect the same value.
+A radio button is a checkable input that when associated with other radio buttons, only one of which can be checked at a time. The radio buttons must be grouped together in a [`radiogroup`](/en-US/docs/Web/Accessibility/ARIA/Roles/radiogroup_role) to indicate which ones affect the same value.
 
 ```html
 <div role="radiogroup" aria-labelledby="legend25" id="radiogroup25">
   <p id="legend25">Ipsum and lorem?</p>
   <div>
-    <span role="radio" aria-checked="false" tabindex="0" aria-labelledby="q25_radio1-label" data-value="True"></span>
+    <span
+      role="radio"
+      aria-checked="false"
+      tabindex="0"
+      aria-labelledby="q25_radio1-label"
+      data-value="True"></span>
     <label id="q25_radio1-label">True</label>
   </div>
   <div>
-    <span role="radio" aria-checked="false" tabindex="0" aria-labelledby="q25_radio2-label" data-value="False"></span>
+    <span
+      role="radio"
+      aria-checked="false"
+      tabindex="0"
+      aria-labelledby="q25_radio2-label"
+      data-value="False"></span>
     <label id="q25_radio2-label">False</label>
   </div>
   <div>
-    <span role="radio" aria-checked="true" tabindex="0" aria-labelledby="q25_radio3-label" data-value="huh?"></span>
+    <span
+      role="radio"
+      aria-checked="true"
+      tabindex="0"
+      aria-labelledby="q25_radio3-label"
+      data-value="huh?"></span>
     <label id="q25_radio3-label">What is the question?</label>
   </div>
 </div>
@@ -34,21 +47,22 @@ A radio button is a checkable input that when associated with other radio button
 
 The `role` attribute only adds semantics; all of the functionality that comes natively with the [HTML radio](/en-US/docs/Web/HTML/Element/input/radio) needs to be added with JavaScript and the HTML [`tabindex`](/en-US/docs/Web/HTML/Global_attributes/tabindex) attribute.
 
-> **Note:** The first rule of ARIA is if a native HTML element or attribute has the semantics and behavior you require, use it instead of re-purposing an element and adding ARIA. Instead use the native [HTML `<input type="radio">`](/en-US/docs/Web/HTML/Element/input/radio) (with an associated {{HTMLElement('label')}}, which natively provides all the functionality required:
+> [!NOTE]
+> The first rule of ARIA is if a native HTML element or attribute has the semantics and behavior you require, use it instead of re-purposing an element and adding ARIA. Instead use the native [HTML `<input type="radio">`](/en-US/docs/Web/HTML/Element/input/radio) (with an associated {{HTMLElement('label')}}), which natively provides all the functionality required:
 
 ```html
 <fieldset>
   <legend>Ipsum and lorem?</legend>
   <div>
-    <input type="radio" value="True" id="q25_radio1" name="q25">
+    <input type="radio" value="True" id="q25_radio1" name="q25" />
     <label for="q25_radio1">True</label>
   </div>
   <div>
-    <input type="radio" value="False" id="q25_radio2" name="q25">
+    <input type="radio" value="False" id="q25_radio2" name="q25" />
     <label for="q25_radio2">False</label>
   </div>
   <div>
-    <input type="radio" value="huh?" id="q25_radio3"  name="q25" checked>
+    <input type="radio" value="huh?" id="q25_radio3" name="q25" checked />
     <label for="q25_radio3">What is the question?</label>
   </div>
 </fieldset>
@@ -90,7 +104,8 @@ From the assistive technology user's perspective, the heading does not exist sin
 
 ## Associated WAI-ARIA Roles, States, and Properties
 
-- ['radiogroup`](/en-US/docs/web/accessibility/aria/roles/radiogroup_role) role
+- [`radiogroup`](/en-US/docs/Web/Accessibility/ARIA/Roles/radiogroup_role) role
+
   - : The radio buttons are contained in or owned by an element with role `radiogroup`. If unable to be nested within a `radiogroup` within the markup, the `aria-owns` attribute of the `radiogroup` contains the `id` values of the non-nested radio buttons in the group.
 
 - [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-checked)
@@ -102,17 +117,21 @@ From the assistive technology user's perspective, the heading does not exist sin
     - `false`
       - : The radio is not checked.
 
-> **Note:** use the [`tabindex` attribute](/en-US/docs/Web/HTML/Global_attributes/tabindex) if the `role="radio"` is used on an element that does not natively accept keyboard focus. E.g., a `<div>` or `<span>`.
+> [!NOTE]
+> Use the [`tabindex` attribute](/en-US/docs/Web/HTML/Global_attributes/tabindex) if the `role="radio"` is used on an element that does not natively accept keyboard focus. E.g., a `<div>` or `<span>`.
 
 ## Keyboard interactions
 
 - <kbd>Tab</kbd> + <kbd>Shift</kbd>
+
   - : Move focus into and out of the radio group. When focus moves into a radio group, and a radio button is already checked, focus is set on the checked button. If none of the radio buttons are checked, focus is set on the first radio button in the group.
 
 - <kbd>Space</kbd>
+
   - : Checks the radio if not already checked. Unchecks a previously checked radio button in the radio group.
 
 - <kbd>Right Arrow</kbd> and <kbd>Down Arrow</kbd>
+
   - : Move focus to and checks the next radio button in the group, unchecking the previously focused radio button. If focus is on the last radio button, focus moves to the first radio button.
 
 - <kbd>Left Arrow</kbd> and <kbd>Up Arrow</kbd>
@@ -120,7 +139,7 @@ From the assistive technology user's perspective, the heading does not exist sin
 
 ### Radios in a toolbar
 
-Because arrow keys are used to navigate among elements of a toolbar and the <kbd>Tab</kbd> key moves focus in and out of a toolbar, when a radio group is nested inside a toolbar, the keyboard interaction of the radio group is slightly different from that of a radio group that is not inside of a toolbar. See [`radiogroup` keyboard interactions](/en-US/docs/web/accessibility/aria/roles/radiogroup_role#keyboard_interactions) for more information
+Because arrow keys are used to navigate among elements of a toolbar and the <kbd>Tab</kbd> key moves focus in and out of a toolbar, when a radio group is nested inside a toolbar, the keyboard interaction of the radio group is slightly different from that of a radio group that is not inside of a toolbar. See [`radiogroup` keyboard interactions](/en-US/docs/Web/Accessibility/ARIA/Roles/radiogroup_role#keyboard_interactions) for more information
 
 ## Required JavaScript
 
@@ -137,13 +156,26 @@ The following example uses ARIA to modify otherwise generic elements to be expos
 
 ```html
 <div role="radiogroup" aria-labelledby="legend" id="radiogroup">
-  <p id="legend">Should you be using the <code>radio</code> role or <code>&lt;input type="radio"></code>?</p>
+  <p id="legend">
+    Should you be using the <code>radio</code> role or
+    <code>&lt;input type="radio"></code>?
+  </p>
   <div>
-    <span role="radio" aria-checked="true" tabindex="0" aria-labelledby="ariaLabel" data-value="True"></span>
+    <span
+      role="radio"
+      aria-checked="true"
+      tabindex="0"
+      aria-labelledby="ariaLabel"
+      data-value="True"></span>
     <label id="ariaLabel">ARIA role</label>
   </div>
   <div>
-    <span role="radio" aria-checked="false" tabindex="0" aria-labelledby="htmllabel" data-value="False"></span>
+    <span
+      role="radio"
+      aria-checked="false"
+      tabindex="0"
+      aria-labelledby="htmllabel"
+      data-value="False"></span>
     <label id="htmllabel">HTML <code>&lt;input type="radio"></code></label>
   </div>
 </div>
@@ -153,17 +185,17 @@ The following example uses ARIA to modify otherwise generic elements to be expos
 
 ```css
 [role="radio"] {
-    padding: 5px;
+  padding: 5px;
 }
 
 [role="radio"][aria-checked="true"]::before {
-    content: "(x)";
-    font-family: monospace;
+  content: "(x)";
+  font-family: monospace;
 }
 
 [role="radio"][aria-checked="false"]::before {
-    content: "( )";
-    font-family: monospace;
+  content: "( )";
+  font-family: monospace;
 }
 ```
 
@@ -174,15 +206,15 @@ A lot of JavaScript is required to make radio buttons out of non-semantic HTML.
 ```js
 // initialize all the radio role elements
 
-let radioGroups = document.querySelectorAll('[role="radiogroup"]');
+const radioGroups = document.querySelectorAll('[role="radiogroup"]');
 
-for (let i = 0, groups = radioGroups.length; i < groups; i++) {
-  let radios = radioGroups[i].querySelectorAll('[role=radio]');
-  for (let j = 0, radiobuttons = radios.length; j < radios; j++) {
-    radios[j].addEventListener('keydown', function() {
-      handleKeydown(); }
-    );
-    radios[j].addEventListener('click', function() {
+for (let i = 0; i < radioGroups.length; i++) {
+  const radios = radioGroups[i].querySelectorAll("[role=radio]");
+  for (let j = 0; j < radios.length; j++) {
+    radios[j].addEventListener("keydown", function () {
+      handleKeydown();
+    });
+    radios[j].addEventListener("click", function () {
       handleClick();
     });
   }
@@ -197,19 +229,19 @@ let handleClick = function (event) {
 
 // handle key presses
 let handleKeydown = function (event) {
-  switch (event.keyCode) {
-    case 32: // space
-    case 12: // return
+  switch (event.code) {
+    case "Space":
+    case "Enter":
       currentChecked();
       break;
 
-    case 38: // up
-    case 37: // left
+    case "ArrowUp":
+    case "ArrowLeft":
       previousRadioChecked();
       break;
 
-    case 40: // down
-    case 39: // right
+    case "ArrowDown":
+    case "ArrowRight":
       nextItemChecked();
       break;
 
@@ -218,25 +250,22 @@ let handleKeydown = function (event) {
   }
   event.stopPropagation();
   event.preventDefault();
-
 };
 
 // when a radio is selected, give it focus, set checked to true;
 // ensure all other radios in radio group are not checked
 
-setChecked  = function () {
+setChecked = function () {
   // uncheck all the radios in group
-  // iterated thru all the radios in radio group
-    // eachRadio.tabIndex = -1;
-    // eachRadio.setAttribute('aria-checked', 'false');
-
+  // iterated through all the radios in radio group
+  // eachRadio.tabIndex = -1;
+  // eachRadio.setAttribute('aria-checked', 'false');
   // set the selected radio to checked
-    // thisRadio.setAttribute('aria-checked', 'true');
-    // thisRadio.tabIndex = 0;
-    // thisRadio.focus();
-    // set the value of the radioGroup to the value of the currently selected radio
+  // thisRadio.setAttribute('aria-checked', 'true');
+  // thisRadio.tabIndex = 0;
+  // thisRadio.focus();
+  // set the value of the radioGroup to the value of the currently selected radio
 };
-
 ```
 
 <!-- {{EmbedLiveSample("Examples", 230, 250)}} -->
@@ -245,7 +274,10 @@ No JavaScript (or even CSS) would be needed had we used semantic HTML element wi
 
 ```html
 <fieldset>
-  <legend>Should you be using the <code>radio</code> role or <code>&lt;input type="radio"></code>?</legend>
+  <legend>
+    Should you be using the <code>radio</code> role or
+    <code>&lt;input type="radio"></code>?
+  </legend>
   <div>
     <input type="radio" name="bestPractices" id="ariaLabel" value="True" />
     <label for="ariaLabel">ARIA role</label>
@@ -265,17 +297,9 @@ The first rule of ARIA is: if a native HTML element or attribute has the semanti
 
 - [HTML `<input type="radio">` radio button](/en-US/docs/Web/HTML/Element/input/radio)
 - [HTML `tabindex` attribute](/en-US/docs/Web/HTML/Global_attributes/tabindex)
-- [ARIA: `radiogroup` role](/en-US/docs/web/accessibility/aria/roles/radiogroup_role)
+- [ARIA: `radiogroup` role](/en-US/docs/Web/Accessibility/ARIA/Roles/radiogroup_role)
 - [ARIA: `checkbox` role](/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role)
 - [ARIA: `menuitem` role](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role)
 - [ARIA: `menuitemradio` role](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role)
 - [ARIA: `menuitemradio` role](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role)
 - [ARIA: `option` role](/en-US/docs/Web/Accessibility/ARIA/Roles/option_role)
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
-
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
-
-</section>

@@ -1,25 +1,17 @@
 ---
 title: alarms.onAlarm
 slug: Mozilla/Add-ons/WebExtensions/API/alarms/onAlarm
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - alarms
-  - onAlarm
+page-type: webextension-api-event
 browser-compat: webextensions.api.alarms.onAlarm
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 Fired when any alarm set by the extension goes off.
 
 ## Syntax
 
-```js
+```js-nolint
 browser.alarms.onAlarm.addListener(listener)
 browser.alarms.onAlarm.removeListener(listener)
 browser.alarms.onAlarm.hasListener(listener)
@@ -40,7 +32,7 @@ Events have three functions:
 
 - `listener`
 
-  - : Function that will be called when this event occurs. The function will be passed the following arguments:
+  - : The function called when this event occurs. The function is passed this argument:
 
     - `alarm`
       - : {{WebExtAPIRef('alarms.Alarm')}}. The alarm that fired. Use `Alarm.name` to figure out which alarm fired.
@@ -51,7 +43,7 @@ Handle an alarm going off:
 
 ```js
 function handleAlarm(alarmInfo) {
-  console.log("on alarm: " + alarmInfo.name);
+  console.log(`on alarm: ${alarmInfo.name}`);
 }
 
 browser.alarms.onAlarm.addListener(handleAlarm);
@@ -63,6 +55,5 @@ browser.alarms.onAlarm.addListener(handleAlarm);
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.alarms`](https://developer.chrome.com/docs/extensions/reference/alarms/) API.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.alarms`](https://developer.chrome.com/docs/extensions/reference/api/alarms) API.

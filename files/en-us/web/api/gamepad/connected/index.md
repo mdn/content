@@ -1,18 +1,12 @@
 ---
-title: Gamepad.connected
+title: "Gamepad: connected property"
+short-title: connected
 slug: Web/API/Gamepad/connected
 page-type: web-api-instance-property
-tags:
-  - API
-  - Gamepad API
-  - Games
-  - NeedsBetterSpecLink
-  - NeedsMarkupWork
-  - Property
-  - Reference
 browser-compat: api.Gamepad.connected
 ---
-{{APIRef("Gamepad API")}}
+
+{{APIRef("Gamepad API")}}{{SecureContext_Header}}
 
 The **`Gamepad.connected`** property of the
 {{domxref("Gamepad") }} interface returns a boolean indicating whether the gamepad is
@@ -31,10 +25,6 @@ A boolean.
 const gp = navigator.getGamepads()[0];
 console.log(gp.connected);
 ```
-
-## Value
-
-A boolean value.
 
 ## Specifications
 

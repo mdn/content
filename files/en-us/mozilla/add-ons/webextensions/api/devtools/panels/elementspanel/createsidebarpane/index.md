@@ -1,20 +1,11 @@
 ---
 title: devtools.panels.ElementsPanel.createSidebarPane()
-slug: >-
-  Mozilla/Add-ons/WebExtensions/API/devtools/panels/ElementsPanel/createSidebarPane
-tags:
-  - API
-  - Add-ons
-  - DevTools
-  - Method
-  - Extensions
-  - Reference
-  - WebExtensions
-  - createSidebarPane
-  - devtools.panels
+slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels/ElementsPanel/createSidebarPane
+page-type: webextension-api-function
 browser-compat: webextensions.api.devtools.panels.ElementsPanel.createSidebarPane
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 Adds a new pane to the sidebar in the HTML/CSS inspector.
 
@@ -22,13 +13,13 @@ The HTML/CSS inspector, called the [Page Inspector](https://firefox-source-docs.
 
 The `createSidebarPane()` function adds a new pane to the sidebar. For example, the screenshot below shows a new pane titled "My pane", that displays a JSON object:
 
-![](inspector-sidebar.png)
+![Image showing a new pane titled "My pane", that displays a JSON object](inspector-sidebar.png)
 
 This function takes one argument, which is a string representing the pane's title. It returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that resolves to an [`ExtensionSidebarPane`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane) object representing the new pane. You can use that object to define the pane's content and behavior.
 
 ## Syntax
 
-```js
+```js-nolint
 let creating = browser.devtools.panels.elements.createSidebarPane(
   title       // string
 )
@@ -58,8 +49,8 @@ function onCreated(sidebarPane) {
     someString: "hello there",
     someObject: {
       someNumber: 42,
-      someOtherString: "this is my pane's content"
-    }
+      someOtherString: "this is my pane's content",
+    },
   });
 }
 
@@ -68,9 +59,11 @@ browser.devtools.panels.elements.createSidebarPane("My pane").then(onCreated);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.devtools.panels`](https://developer.chrome.com/docs/extensions/reference/devtools_panels/) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.devtools.panels`](https://developer.chrome.com/docs/extensions/reference/api/devtools/panels) API.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -97,4 +90,4 @@ browser.devtools.panels.elements.createSidebarPane("My pane").then(onCreated);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

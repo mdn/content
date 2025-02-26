@@ -1,29 +1,31 @@
 ---
 title: Asynchronous
 slug: Glossary/Asynchronous
-tags:
-  - Glossary
-  - Web
-  - WebMechanics
-  - asynchronous
+page-type: glossary-definition
 ---
-The term **asynchronous** refers to two or more objects or events **not** existing or happening at the same time (or multiple related things happening without waiting for the previous one to complete). In computing, the word "asynchronous" is used in two major contexts.
 
-- Networking and communications
+{{GlossarySidebar}}
 
-  - : Asynchronous communication is a method of exchanging messages between two or more parties in which each party receives and processes messages whenever it's convenient or possible to do so, rather than doing so immediately upon receipt. Additionally, messages may be sent without waiting for acknowledgement, with the understanding that if a problem occurs, the recipient will request corrections or otherwise handle the situation.
+The term **asynchronous** refers to two or more objects or events that do not exist or happen at the same time, that is, they are **not** {{glossary("synchronous")}}. When multiple related things happen without any being dependent on the completion of previous happenings, they are asynchronous.
 
-    For humans, e-mail is an asynchronous communication method; the sender sends an email and the recipient will read and reply to the message when it's convenient to do so, rather than doing so at once. And both sides can continue to send and receive messages whenever they wish, instead of having to schedule them around each other.
+In computing, the word "asynchronous" is used in two major contexts, as explained below.
 
-    When software communicates asynchronously, a program may make a request for information from another piece of software (such as a server), and continue to do other things while waiting for a reply. For example, the [AJAX](/en-US/docs/Web/Guide/AJAX) (Asynchronous JavaScript and {{Glossary("XML")}}) programming technique—now usually "Ajax", even though {{Glossary("JSON")}} is usually used rather than XML in modern applications—is a mechanism that requests relatively small amounts of data from the server using {{Glossary("HTTP")}}, with the result being returned when available rather than immediately.
+## In networking and communications
 
-- Software design
+Asynchronous communication is a method of exchanging messages in which the sending, receiving, and processing of each message is not dependent on the sending, receipt, or processing of other messages. In asynchronous communication, each party receives and processes messages when convenient or possible to do so, rather than doing so immediately upon receipt. Additionally, messages may be sent without waiting for acknowledgement, with the understanding that if a problem occurs, the recipient will request corrections or otherwise handle the situation.
 
-  - : Asynchronous software design expands upon the concept by building code that allows a program to ask that a task be performed alongside the original task (or tasks), without stopping to wait for the task to complete. When the secondary task is completed, the original task is notified using an agreed-upon mechanism so that it knows the work is done, and that the result, if any, is available.
+Email is a type of asynchronous human communication. A sender sends an email. The recipient reads the email and responds to it (or not) at their convenience, not necessarily right away. All parties can continue to send and receive messages at any time. Emails don't have to be scheduled in a particular sequence.
 
-    There are a number of programming techniques for implementing asynchronous software. See the article [Asynchronous JavaScript](/en-US/docs/Learn/JavaScript/Asynchronous) for an introduction to them.
+In asynchronous software, making a request, such as to a server, does not block other processes while waiting for the response. The software can continue performing other tasks. For example, in [promise-based APIs](/en-US/docs/Learn_web_development/Extensions/Async_JS/Implementing_a_promise-based_API), {{JSxRef("Promise")}} objects are created for long operations. After the operation is complete, the promise is handled. With promises, the software doesn't have to wait for the operation to finish.
+
+## In software design
+
+Asynchronous software design expands upon the concept by building code that allows a program to ask that a task be performed alongside the original task (or tasks), without stopping to wait for the task to complete. When the secondary task is completed, the original task is notified using an agreed-upon mechanism so that it knows the work is done, and that the result, if any, is available.
+
+There are a number of programming techniques for implementing asynchronous software. See the article [Asynchronous JavaScript](/en-US/docs/Learn_web_development/Extensions/Async_JS) for an introduction to them.
 
 ## See also
 
-- [Fetching data from the server](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data) (Learning Area)
-- {{glossary("Synchronous")}}
+- [Learn: Making network requests with JavaScript](/en-US/docs/Learn_web_development/Core/Scripting/Network_requests) (Learning Area)
+- Related glossary terms:
+  - {{glossary("Synchronous")}}

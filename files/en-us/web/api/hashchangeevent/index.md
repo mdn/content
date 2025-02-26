@@ -2,16 +2,9 @@
 title: HashChangeEvent
 slug: Web/API/HashChangeEvent
 page-type: web-api-interface
-tags:
-  - API
-  - Event
-  - HTML5
-  - HashChange
-  - Interface
-  - Reference
-  - events
 browser-compat: api.HashChangeEvent
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HashChangeEvent`** interface represents events that fire when the fragment identifier of the URL has changed.
@@ -20,16 +13,21 @@ The fragment identifier is the part of the URL that follows (and includes) the `
 
 {{InheritanceDiagram}}
 
-## Properties
+## Constructor
+
+- {{domxref("HashChangeEvent.HashChangeEvent", "HashChangeEvent()")}}
+  - : Creates a new `HashChangeEvent` object.
+
+## Instance properties
 
 _This interface also inherits the properties of its parent, {{domxref("Event")}}._
 
-- {{domxref("HashChangeEvent.newURL")}} {{readonlyInline}}
+- {{domxref("HashChangeEvent.newURL")}} {{ReadOnlyInline}}
   - : The new URL to which the window is navigating.
-- {{domxref("HashChangeEvent.oldURL")}} {{readonlyInline}}
+- {{domxref("HashChangeEvent.oldURL")}} {{ReadOnlyInline}}
   - : The previous URL from which the window was navigated.
 
-## Methods
+## Instance methods
 
 _This interface has no methods of its own, but inherits the methods of its parent, {{domxref("Event")}}._
 
@@ -39,12 +37,12 @@ _This interface has no methods of its own, but inherits the methods of its paren
 
 ```js
 function locationHashChanged() {
-  if (location.hash === '#somecoolfeature') {
-    somecoolfeature();
+  if (location.hash === "#some-cool-feature") {
+    someCoolFeature();
   }
 }
 
-window.addEventListener('hashchange', locationHashChanged);
+window.addEventListener("hashchange", locationHashChanged);
 ```
 
 ## Specifications

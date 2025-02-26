@@ -1,11 +1,7 @@
 ---
 title: autofocus
 slug: Web/HTML/Global_attributes/autofocus
-tags:
-  - Autofocus
-  - Global attributes
-  - HTML
-  - Reference
+page-type: html-attribute
 browser-compat: html.global_attributes.autofocus
 ---
 
@@ -14,14 +10,15 @@ browser-compat: html.global_attributes.autofocus
 The **`autofocus`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) is a Boolean attribute indicating that an element should be focused on page load, or when the {{HTMLElement("dialog")}} that it is part of is displayed.
 
 ```html
-<input name="q" autofocus>
+<input name="q" autofocus />
 ```
 
 No more than one element in the document or dialog may have the autofocus attribute. If applied to multiple elements the first one will receive focus.
 
-> **Note:** The `autofocus` attribute applies to all elements, not just form controls. For example, it might be used on a [contenteditable](/en-US/docs/Web/HTML/Global_attributes/contenteditable) area.
+> [!NOTE]
+> The `autofocus` attribute applies to all elements, not just form controls. For example, it might be used on a [contenteditable](/en-US/docs/Web/HTML/Global_attributes/contenteditable) area.
 
-## Accessibility considerations
+## Accessibility concerns
 
 Automatically focusing a form control can confuse visually-impaired people using screen-reading technology and people with cognitive impairments. When `autofocus` is assigned, screen-readers "teleport" their user to the form control without warning them beforehand.
 

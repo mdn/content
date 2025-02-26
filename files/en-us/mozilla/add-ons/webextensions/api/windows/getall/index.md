@@ -1,19 +1,11 @@
 ---
 title: windows.getAll()
 slug: Mozilla/Add-ons/WebExtensions/API/windows/getAll
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - Windows
-  - getAll
+page-type: webextension-api-function
 browser-compat: webextensions.api.windows.getAll
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 Gets information about all open windows, passing them into a callback.
 
@@ -21,7 +13,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let gettingAll = browser.windows.getAll(
   getInfo                // optional object
 )
@@ -52,32 +44,33 @@ Log the URLs for the tabs across all "normal" browser windows. Note that you'll 
 
 ```js
 function logTabsForWindows(windowInfoArray) {
-  for (windowInfo of windowInfoArray) {
+  for (const windowInfo of windowInfoArray) {
     console.log(`Window: ${windowInfo.id}`);
     console.log(windowInfo.tabs.map((tab) => tab.url));
   }
 }
 
 function onError(error) {
-  console.log(`Error: ${error}`);
+  console.error(`Error: ${error}`);
 }
 
 browser.browserAction.onClicked.addListener((tab) => {
-  let getting = browser.windows.getAll({
-    populate: true,
-    windowTypes: ["normal"]
-  });
-  getting.then(logTabsForWindows, onError);
+  browser.windows
+    .getAll({
+      populate: true,
+      windowTypes: ["normal"],
+    })
+    .then(logTabsForWindows, onError);
 });
 ```
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.windows`](https://developer.chrome.com/docs/extensions/reference/windows/#method-getAll) API. This documentation is derived from [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.windows`](https://developer.chrome.com/docs/extensions/reference/api/windows#method-getAll) API. This documentation is derived from [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) in the Chromium code.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -104,4 +97,4 @@ browser.browserAction.onClicked.addListener((tab) => {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

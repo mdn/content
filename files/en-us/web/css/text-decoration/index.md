@@ -1,14 +1,10 @@
 ---
 title: text-decoration
 slug: Web/CSS/text-decoration
-tags:
-  - CSS
-  - CSS Property
-  - CSS Text Decoration
-  - Reference
-  - recipe:css-shorthand-property
+page-type: css-shorthand-property
 browser-compat: css.properties.text-decoration
 ---
+
 {{CSSRef}}
 
 The **`text-decoration`** [shorthand](/en-US/docs/Web/CSS/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets the appearance of decorative lines on text. It is a shorthand for {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-decoration-style")}}, and the newer {{cssxref("text-decoration-thickness")}} property.
@@ -100,17 +96,23 @@ The `text-decoration` property is specified as one or more space-separated value
 <p class="under">This text has a line underneath it.</p>
 <p class="over">This text has a line over it.</p>
 <p class="line">This text has a line going through it.</p>
-<p>This <a class="plain" href="#">link will not be underlined</a>,
-    as links generally are by default. Be careful when removing
-    the text decoration on anchors since users often depend on
-    the underline to denote hyperlinks.</p>
+<p>
+  This <a class="plain" href="#">link will not be underlined</a>, as links
+  generally are by default. Be careful when removing the text decoration on
+  anchors since users often depend on the underline to denote hyperlinks.
+</p>
 <p class="underover">This text has lines above <em>and</em> below it.</p>
-<p class="thick">This text has a really thick purple underline in supporting browsers.</p>
-<p class="blink">This text might blink for you,
-    depending on the browser you use.</p>
+<p class="thick">
+  This text has a really thick purple underline in supporting browsers.
+</p>
+<p class="blink">
+  This text might blink for you, depending on the browser you use.
+</p>
 ```
 
-{{EmbedLiveSample('Examples','auto','320')}}
+#### Result
+
+{{EmbedLiveSample('Examples','auto','520')}}
 
 ## Specifications
 
@@ -124,4 +126,5 @@ The `text-decoration` property is specified as one or more space-separated value
 
 - The individual text-decoration properties are {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-decoration-style")}}, and {{cssxref("text-decoration-thickness")}}.
 - The {{cssxref("text-decoration-skip-ink")}}, {{cssxref("text-underline-offset")}}, and {{cssxref("text-underline-position")}} properties also affect text-decoration, but are not included in the shorthand.
-- The {{cssxref("list-style")}} attribute controls the appearance of items in HTML {{HTMLElement("ol")}} and {{HTMLElement("ul")}} lists.
+- The {{cssxref("list-style")}} property controls the appearance of items in HTML {{HTMLElement("ol")}} and {{HTMLElement("ul")}} lists.
+- SVG {{SVGAttr("text-decoration")}} attribute

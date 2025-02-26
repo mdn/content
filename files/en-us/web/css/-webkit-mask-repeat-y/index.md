@@ -1,18 +1,17 @@
 ---
-title: '-webkit-mask-repeat-y'
+title: -webkit-mask-repeat-y
 slug: Web/CSS/-webkit-mask-repeat-y
-tags:
-  - CSS
-  - CSS Masking
-  - CSS Property
-  - Non-standard
-  - Reference
-  - recipe:css-property
+page-type: css-property
+status:
+  - non-standard
 browser-compat: css.properties.-webkit-mask-repeat-y
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 The `-webkit-mask-repeat-y` property sets whether and how a mask image is repeated (tiled) vertically.
+
+## Syntax
 
 ```css
 /* Keyword values */
@@ -27,10 +26,10 @@ The `-webkit-mask-repeat-y` property sets whether and how a mask image is repeat
 /* Global values */
 -webkit-mask-repeat-y: inherit;
 -webkit-mask-repeat-y: initial;
+-webkit-mask-repeat-y: revert;
+-webkit-mask-repeat-y: revert-layer;
 -webkit-mask-repeat-y: unset;
 ```
-
-## Syntax
 
 ### Values
 
@@ -51,20 +50,23 @@ The `-webkit-mask-repeat-y` property sets whether and how a mask image is repeat
 
 ## Formal syntax
 
-{{csssyntax}}
+```plain
+-webkit-mask-repeat-y =
+  repeat | no-repeat | space | round
+```
 
 ## Examples
 
 ### Using a repeating or non-repeating mask image
 
 ```css
-.exampleone {
-  -webkit-mask-image: url('mask.png');
+.example-one {
+  -webkit-mask-image: url("mask.png");
   -webkit-mask-repeat-y: repeat;
 }
 
-.exampletwo {
-  -webkit-mask-image: url('mask.png');
+.example-two {
+  -webkit-mask-image: url("mask.png");
   -webkit-mask-repeat-y: no-repeat;
 }
 ```
@@ -74,8 +76,8 @@ The `-webkit-mask-repeat-y` property sets whether and how a mask image is repeat
 You can specify a different `<repeat-style>` for each mask image, separated by commas:
 
 ```css
-.examplethree {
-  -webkit-mask-image: url('mask1.png'), url('mask2.png');
+.example-three {
+  -webkit-mask-image: url("mask1.png"), url("mask2.png");
   -webkit-mask-repeat-y: repeat, space;
 }
 ```
@@ -92,4 +94,4 @@ Not part of any standard.
 
 ## See also
 
-{{cssxref("-webkit-mask-repeat")}}, {{cssxref("-webkit-mask-repeat-x")}}
+{{cssxref("mask-repeat", "-webkit-mask-repeat")}}, {{cssxref("-webkit-mask-repeat-x")}}

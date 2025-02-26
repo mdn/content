@@ -1,24 +1,19 @@
 ---
-title: FileSystemHandle.isSameEntry()
+title: "FileSystemHandle: isSameEntry() method"
+short-title: isSameEntry()
 slug: Web/API/FileSystemHandle/isSameEntry
 page-type: web-api-instance-method
-tags:
-  - Directory
-  - File
-  - File System Access API
-  - FileSystemHandle
-  - Method
 browser-compat: api.FileSystemHandle.isSameEntry
 ---
-{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
+
+{{securecontext_header}}{{APIRef("File System API")}}{{AvailableInWorkers}}
 
 The **`isSameEntry()`** method of the
-{{domxref("FileSystemHandle")}} interface compares two {{domxref("FileSystemHandle",
-  "handles")}} to see if the associated entries (either a file or directory) match.
+{{domxref("FileSystemHandle")}} interface compares two {{domxref("FileSystemHandle", "handles")}} to see if the associated entries (either a file or directory) match.
 
 ## Syntax
 
-```js
+```js-nolint
 isSameEntry(fileSystemHandle)
 ```
 
@@ -30,22 +25,21 @@ isSameEntry(fileSystemHandle)
 
 ### Return value
 
-Returns a {{jsxref('Boolean')}} which is `true` is the entries match.
-
-### Exceptions
-
-No exceptions are thrown.
+A Promise that fulfills with a {{jsxref('Boolean')}}.
 
 ## Examples
 
 The following function compares a single entry with an array of entries, and returns a
-new array with any matching entries removed.
+{{jsxref("Promise")}} that fulfils with a new array with any matching entries removed.
 
 ```js
-function removeMatches(fileEntry, entriesArr) {
-
-  let newArr = entriesArr.filter((entry) => !fileEntry.isSameEntry(entry))
-
+async function removeMatches(fileEntry, entriesArr) {
+  const newArr = [];
+  for (const entry of entriesArr) {
+    if (!(await fileEntry.isSameEntry(entry))) {
+      newArr.push(entry);
+    }
+  }
   return newArr;
 }
 ```
@@ -60,5 +54,5 @@ function removeMatches(fileEntry, entriesArr) {
 
 ## See also
 
-- [File System Access API](/en-US/docs/Web/API/File_System_Access_API)
-- [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)
+- [File System API](/en-US/docs/Web/API/File_System_API)
+- [The File System Access API: simplifying access to local files](https://developer.chrome.com/docs/capabilities/web-apis/file-system-access)

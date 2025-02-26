@@ -1,17 +1,22 @@
 ---
 title: <display-internal>
 slug: Web/CSS/display-internal
-tags:
-  - CSS
-  - CSS Data Type
-  - CSS Display
-  - Data Type
-  - Reference
-  - display-internal
+page-type: css-type
 browser-compat:
-  - css.properties.display.table_values
-  - css.properties.display.ruby_values
+  - css.properties.display.table-row-group
+  - css.properties.display.table-header-group
+  - css.properties.display.table-footer-group
+  - css.properties.display.table-row
+  - css.properties.display.table-cell
+  - css.properties.display.table-column-group
+  - css.properties.display.table-column
+  - css.properties.display.table-caption
+  - css.properties.display.ruby-base
+  - css.properties.display.ruby-text
+  - css.properties.display.ruby-base-container
+  - css.properties.display.ruby-text-container
 ---
+
 {{CSSRef}}
 
 Some layout models such as `table` and `ruby` have a complex internal structure, with several different roles that their children and descendants can fill. This page defines those "internal" display values, which only have meaning within that particular layout mode.
@@ -36,14 +41,18 @@ Valid `<display-internal>` values:
   - : These elements behave like {{HTMLElement("col")}} HTML elements.
 - `table-caption`
   - : These elements behave like {{HTMLElement("caption")}} HTML elements.
-- `ruby-base` {{Experimental_Inline}}
+- `ruby-base`
   - : These elements behave like {{HTMLElement("rb")}} HTML elements.
-- `ruby-text` {{Experimental_Inline}}
+- `ruby-text`
   - : These elements behave like {{HTMLElement("rt")}} HTML elements.
-- `ruby-base-container` {{Experimental_Inline}}
-  - : These elements behave like {{HTMLElement("rbc")}} HTML elements generated as anonymous boxes.
-- `ruby-text-container` {{Experimental_Inline}}
+- `ruby-base-container`
+  - : These elements are generated as anonymous boxes.
+- `ruby-text-container`
   - : These elements behave like {{HTMLElement("rtc")}} HTML elements.
+
+## Formal syntax
+
+{{csssyntax}}
 
 ## Examples
 
@@ -57,11 +66,11 @@ The following example demonstrates laying out a simple form using CSS table layo
 <main>
   <div>
     <label for="name">Name</label>
-    <input type="text" id="name" name="name">
+    <input type="text" id="name" name="name" />
   </div>
   <div>
     <label for="age">Age</label>
-    <input type="text" id="age" name="age">
+    <input type="text" id="age" name="age" />
   </div>
 </main>
 ```
@@ -77,7 +86,8 @@ div {
   display: table-row;
 }
 
-label, input {
+label,
+input {
   display: table-cell;
   margin: 5px;
 }

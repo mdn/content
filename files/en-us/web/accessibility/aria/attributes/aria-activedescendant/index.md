@@ -1,17 +1,13 @@
 ---
-title: 'aria-activedescendant'
+title: aria-activedescendant
 slug: Web/Accessibility/ARIA/Attributes/aria-activedescendant
-tags:
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - ARIA property
-  - aria-activedescendant
-  - NeedsExample
+page-type: aria-attribute
 spec-urls:
   - https://w3c.github.io/aria/#aria-activedescendant
-  - https://w3c.github.io/aria-practices/#kbd_focus_activedescendant
+  - https://www.w3.org/TR/wai-aria-1.2/#aria-activedescendant
 ---
+
+{{AccessibilitySidebar}}
 
 The `aria-activedescendant` attribute identifies the currently active element when focus is on a [`composite`](/en-US/docs/Web/Accessibility/ARIA/Roles/composite_role) widget, [`combobox`](/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role), [`textbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role), [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role), or [`application`](/en-US/docs/Web/Accessibility/ARIA/Roles/application_role).
 
@@ -31,9 +27,11 @@ When the element with DOM focus is a combobox, textbox, or searchbox, include [`
 
 The value of `aria-activedescendant` refers to an owned element of the controlled element. For example, in a combobox, focus may remain on the combobox while the value of `aria-activedescendant` on the combobox element refers to a descendant of a popup listbox that is controlled by the combobox.
 
-> **Note:** The attribute is supported only on a few roles. For example, `dialog`s do not support `aria-activedescendant`. When a combobox opens a dialog, DOM focus moves into the dialog from the combobox as it is not referenceable with this attribute.
+> [!NOTE]
+> The attribute is supported only on a few roles. For example, `dialog`s do not support `aria-activedescendant`. When a combobox opens a dialog, DOM focus moves into the dialog from the combobox as it is not referenceable with this attribute.
 
-> **Note:** When a descendant of a `listbox`, `grid`, or `tree` popup is focused, DOM focus remains on the combobox and the combobox has `aria-activedescendant` set to a value that refers to the focused element within the popup.
+> [!NOTE]
+> When a descendant of a `listbox`, `grid`, or `tree` popup is focused, DOM focus remains on the combobox and the combobox has `aria-activedescendant` set to a value that refers to the focused element within the popup.
 
 ## Values
 
@@ -53,13 +51,3 @@ Relevant only as an attribute on elements with the following roles:
 ## Specifications
 
 {{Specifications}}
-
-## See Also
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA states and properties**](/en-US/docs/Web/Accessibility/ARIA/Attributes)
-
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/aria/Attributes")}}
-
-</section>

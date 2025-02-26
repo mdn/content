@@ -1,24 +1,23 @@
 ---
-title: Document.queryCommandEnabled()
+title: "Document: queryCommandEnabled() method"
+short-title: queryCommandEnabled()
 slug: Web/API/Document/queryCommandEnabled
 page-type: web-api-instance-method
-tags:
-  - CSS
-  - Document
-  - Method
-  - Reference
-  - Deprecated
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.Document.queryCommandEnabled
 ---
-{{ApiRef("DOM")}}{{deprecated_header}}
+
+{{ApiRef("DOM")}}{{deprecated_header}}{{Non-standard_header}}
 
 The **`Document.queryCommandEnabled()`** method reports whether
 or not the specified editor command is enabled by the browser.
 
 ## Syntax
 
-```js
-isEnabled = document.queryCommandEnabled(command);
+```js-nolint
+queryCommandEnabled(command)
 ```
 
 ### Parameters
@@ -29,13 +28,13 @@ isEnabled = document.queryCommandEnabled(command);
 ### Return value
 
 Returns a boolean value which is `true` if the command is enabled
-and `false` if the command isn't`.`
+and `false` if the command isn't.
 
 ## Notes
 
-- For '`cut`' and '`copy`' commands the method only returns true
+- For `"cut"` and `"copy"` commands the method only returns true
   when called from a user-initiated thread.
-- The `'paste'` command return `false` not only if the feature
+- The `"paste"` command return `false` not only if the feature
   is unavailable, but also if the script calling it has insufficient privileges to
   perform the action.
 
@@ -44,7 +43,7 @@ and `false` if the command isn't`.`
 ```js
 const flg = document.queryCommandEnabled("SelectAll");
 
-if(flg) {
+if (flg) {
   document.execCommand("SelectAll", false, null); // command is enabled, run it
 }
 ```

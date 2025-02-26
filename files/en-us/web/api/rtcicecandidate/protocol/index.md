@@ -1,20 +1,11 @@
 ---
-title: RTCIceCandidate.protocol
+title: "RTCIceCandidate: protocol property"
+short-title: protocol
 slug: Web/API/RTCIceCandidate/protocol
 page-type: web-api-instance-property
-tags:
-  - API
-  - ICE
-  - Property
-  - Protocol
-  - RTCIceCandidate
-  - Read-only
-  - Reference
-  - SDP
-  - WebRTC
-  - WebRTC API
 browser-compat: api.RTCIceCandidate.protocol
 ---
+
 {{APIRef("WebRTC")}}
 
 The **{{domxref("RTCIceCandidate")}}** interface's read-only **`protocol`** property is a string
@@ -34,15 +25,16 @@ A string that indicates what network protocol the candidate uses:
 - `udp`
   - : The candidate will use the {{Glossary("UDP")}} transport protocol for its data. This is the preferred protocol for media interactions because of its better performance profile.
 
-> **Note:** If `protocol` is `null` — and `protocol` is supported by the {{Glossary("user agent")}} — passing the
+> [!NOTE]
+> If `protocol` is `null` — and `protocol` is supported by the {{Glossary("user agent")}} — passing the
 > candidate to {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}} will fail, throwing an `OperationError` exception.
 
 ## Usage notes
 
 Here's an example candidate a-line from an ICE transaction:
 
-```
-a=candidate:4234997325 1 udp 2043278322 192.168.0.56 44323 typ host
+```plain
+a=candidate:4234997325 1 udp 2043278322 192.0.2.172 44323 typ host
 ```
 
 The third field, `"udp"`, is the protocol type, indicating that the

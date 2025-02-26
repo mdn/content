@@ -1,22 +1,18 @@
 ---
-title: VideoDecoder.configure()
+title: "VideoDecoder: configure() method"
+short-title: configure()
 slug: Web/API/VideoDecoder/configure
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - configure
-  - VideoDecoder
 browser-compat: api.VideoDecoder.configure
 ---
-{{securecontext_header}}{{DefaultAPISidebar("WebCodecs API")}}
+
+{{APIRef("WebCodecs API")}}{{SecureContext_Header}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`configure()`** method of the {{domxref("VideoDecoder")}} interface enqueues a control message to configure the video decoder for decoding chunks.
 
 ## Syntax
 
-```js
+```js-nolint
 configure(config)
 ```
 
@@ -25,7 +21,7 @@ configure(config)
 - `config`
   - : An object containing the following members:
     - `codec`
-      - : A string containing a [valid codec string](https://www.w3.org/TR/webcodecs-codec-registry/#video-codec-registry).
+      - : A string containing a [valid codec string](https://www.w3.org/TR/webcodecs-codec-registry/#video-codec-registry). See ["codecs" parameter](/en-US/docs/Web/Media/Guides/Formats/codecs_parameter#codec_options_by_container) for details on codec string construction.
     - `description` {{optional_inline}}
       - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}} containing a sequence of codec specific bytes, commonly known as extradata.
     - `codedWidth` {{optional_inline}}
@@ -36,8 +32,8 @@ configure(config)
       - : An integer representing the horizontal dimension of the {{domxref("VideoFrame")}} in pixels when displayed.
     - `displayAspectHeight` {{optional_inline}}
       - : An integer representing the vertical dimension of the {{domxref("VideoFrame")}} in pixels when displayed.
-    - `colorSpace`
-      - : An object. representing a {{domxref("VideoColorSpace")}}, containing the following members:
+    - `colorSpace` {{optional_inline}}
+      - : An object representing a {{domxref("VideoColorSpace")}}, containing the following members:
         - `primaries`
           - : A string representing the color {{glossary("gamut")}} of the video sample. One of:
             - `"bt709"`
@@ -54,15 +50,16 @@ configure(config)
             - `"bt709"`
             - `"bt470bg"`
             - `"smpte170m"`
-    - `hardwareAcceleration`
+    - `hardwareAcceleration` {{optional_inline}}
       - : A hint as to the hardware acceleration method to use. One of:
         - `"no-preference"`
         - `"prefer-hardware"`
         - `"prefer-software"`
-    - `optimizeForLatency`
+    - `optimizeForLatency` {{optional_inline}}
       - : A boolean. If `true` this is a hint that the selected decoder should be optimized to minimize the number of {{domxref("EncodedVideoChunk")}} objects that have to be decoded before a {{domxref("VideoFrame")}} is output.
 
-> **Note:** The registrations in the [WebCodecs Codec Registry](https://www.w3.org/TR/webcodecs-codec-registry/#audio-codec-registry) link to a specification detailing whether and how to populate the optional `description` member.
+> [!NOTE]
+> The registrations in the [WebCodecs Codec Registry](https://www.w3.org/TR/webcodecs-codec-registry/#audio-codec-registry) link to a specification detailing whether and how to populate the optional `description` member.
 
 ### Return value
 
@@ -86,13 +83,13 @@ const init = {
   output: handleFrame,
   error: (e) => {
     console.log(e.message);
-  }
+  },
 };
 
 const config = {
-  codec: 'vp8',
+  codec: "vp8",
   codedWidth: 640,
-  codedHeight: 480
+  codedHeight: 480,
 };
 
 let decoder = new VideoDecoder(init);

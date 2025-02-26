@@ -1,16 +1,11 @@
 ---
-title: Navigator.storage
+title: "Navigator: storage property"
+short-title: storage
 slug: Web/API/Navigator/storage
 page-type: web-api-instance-property
-tags:
-  - API
-  - Navigator
-  - Property
-  - Reference
-  - Secure context
-  - Storage
 browser-compat: api.Navigator.storage
 ---
+
 {{securecontext_header}}{{APIRef("Storage")}}
 
 The **`Navigator.storage`**

@@ -1,21 +1,11 @@
 ---
-title: Window.innerHeight
+title: "Window: innerHeight property"
+short-title: innerHeight
 slug: Web/API/Window/innerHeight
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM
-  - CSSOM View
-  - HTML DOM
-  - NeedsInteractiveExample
-  - Property
-  - Reference
-  - View
-  - Window
-  - height
-  - innerHeight
 browser-compat: api.Window.innerHeight
 ---
+
 {{APIRef}}
 
 The read-only **`innerHeight`** property of the
@@ -31,15 +21,13 @@ The value of `innerHeight` is taken from the height of the window's
 An integer value indicating the window's layout viewport height in pixels. The property
 is read only and has no default value.
 
-To change the width of the window, call one of its resize methods, such as
-{{domxref("Window.resizeTo", "resizeTo()")}} or {{domxref("Window.resizeBy",
-  "resizeBy()")}}.
+To change the height of the window, call one of its resize methods, such as
+{{domxref("Window.resizeTo", "resizeTo()")}} or {{domxref("Window.resizeBy", "resizeBy()")}}.
 
 ## Usage notes
 
 To obtain the height of the window minus its horizontal scroll bar and any borders, use
-the root {{HTMLElement("html")}} element's {{domxref("Element.clientHeight",
-  "clientHeight")}} property instead.
+the root {{HTMLElement("html")}} element's {{domxref("Element.clientHeight", "clientHeight")}} property instead.
 
 Both `innerHeight` and `innerWidth` are available on any window
 or any object that behaves like a window, such as a tab or frame.
@@ -72,7 +60,7 @@ To get the outer height of a window, i.e. the height of the whole browser window
 The following figure shows the difference between `outerHeight` and
 `innerHeight`.
 
-![innerHeight vs outerHeight illustration](firefoxinnervsouterheight2.png)
+![innerHeight vs. outerHeight illustration](firefoxinnervsouterheight2.png)
 
 ## Demo
 
@@ -90,12 +78,13 @@ The following figure shows the difference between `outerHeight` and
 const heightOutput = document.querySelector("#height");
 const widthOutput = document.querySelector("#width");
 
-function resizeListener() {
+function updateSize() {
   heightOutput.textContent = window.innerHeight;
   widthOutput.textContent = window.innerWidth;
 }
 
-window.addEventListener("resize", resizeListener);
+updateSize();
+window.addEventListener("resize", updateSize);
 ```
 
 ### Result

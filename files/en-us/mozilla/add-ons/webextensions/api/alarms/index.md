@@ -1,21 +1,15 @@
 ---
 title: alarms
 slug: Mozilla/Add-ons/WebExtensions/API/alarms
-tags:
-  - API
-  - Extensions
-  - Interface
-  - Needs Privileges
-  - Reference
-  - WebExtensions
-  - alarms
+page-type: webextension-api
 browser-compat: webextensions.api.alarms
 ---
+
 {{AddonSidebar}}
 
-Schedule code to run at a specific time in the future. This is like [`setTimeout()`](/en-US/docs/Web/API/setTimeout) and [`setInterval()`](/en-US/docs/Web/API/setInterval), except that those functions don't work with background pages that are loaded on demand.
+Schedule code to run at a specific time in the future. This is like {{domxref("Window.setTimeout()")}} and {{domxref("Window.setInterval()")}}, except that those functions don't work with background pages that are loaded on demand.
 
-Alarms do not persist across browser sessions. They are created globally across all contexts of a single extension. E.g. alarm created in background script will fire [`onAlarm`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/alarms/onAlarm) event in background script, options page, popup page and extension tabs (and vice versa). Alarms API is not available in [`Content scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#webextension_apis).
+Alarms do not persist across browser sessions. They are created globally across all contexts of a single extension. E.g. alarm created in background script will fire [`onAlarm`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/alarms/onAlarm) event in background script, options page, popup page and extension tabs (and vice versa). Alarms API is not available in [Content scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#webextension_apis).
 
 To use this API you need to have the "alarms" [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).
 
@@ -48,6 +42,5 @@ To use this API you need to have the "alarms" [permission](/en-US/docs/Mozilla/A
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.alarms`](https://developer.chrome.com/docs/extensions/reference/alarms/) API.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.alarms`](https://developer.chrome.com/docs/extensions/reference/api/alarms) API.

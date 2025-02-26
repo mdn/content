@@ -1,22 +1,18 @@
 ---
-title: VideoEncoder.close()
+title: "VideoEncoder: close() method"
+short-title: close()
 slug: Web/API/VideoEncoder/close
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - close
-  - VideoEncoder
 browser-compat: api.VideoEncoder.close
 ---
-{{securecontext_header}}{{DefaultAPISidebar("WebCodecs API")}}
+
+{{APIRef("WebCodecs API")}}{{SecureContext_Header}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`close()`** method of the {{domxref("VideoEncoder")}} interface ends all pending work and releases system resources.
 
 ## Syntax
 
-```js
+```js-nolint
 close()
 ```
 

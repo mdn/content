@@ -1,17 +1,11 @@
 ---
 title: border
 slug: Web/CSS/border
-tags:
-  - CSS
-  - CSS Borders
-  - CSS Property
-  - CSS Shorthand property
-  - Layout
-  - Reference
-  - recipe:css-shorthand-property
+page-type: css-shorthand-property
 browser-compat: css.properties.border
 ---
-{{CSSRef("CSS Borders")}}
+
+{{CSSRef}}
 
 The **`border`** [shorthand](/en-US/docs/Web/CSS/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets an element's border. It sets the values of {{Cssxref("border-width")}}, {{Cssxref("border-style")}}, and {{Cssxref("border-color")}}.
 
@@ -21,9 +15,9 @@ The **`border`** [shorthand](/en-US/docs/Web/CSS/Shorthand_properties) [CSS](/en
 
 This property is a shorthand for the following CSS properties:
 
-- [`border-color`](/en-US/docs/Web/CSS/border-color)
-- [`border-style`](/en-US/docs/Web/CSS/border-style)
 - [`border-width`](/en-US/docs/Web/CSS/border-width)
+- [`border-style`](/en-US/docs/Web/CSS/border-style)
+- [`border-color`](/en-US/docs/Web/CSS/border-color)
 
 ## Syntax
 
@@ -50,20 +44,21 @@ border: unset;
 
 The `border` property may be specified using one, two, or three of the values listed below. The order of the values does not matter.
 
-> **Note:** The border will be invisible if its style is not defined. This is because the style defaults to `none`.
+> [!NOTE]
+> The border will be invisible if its style is not defined. This is because the style defaults to `none`.
 
 ### Values
 
 - `<line-width>`
   - : Sets the thickness of the border. Defaults to `medium` if absent. See {{Cssxref("border-width")}}.
-- `<line-style>`
+- {{cssxref("&lt;line-style&gt;")}}
   - : Sets the style of the border. Defaults to `none` if absent. See {{Cssxref("border-style")}}.
 - {{cssxref("&lt;color&gt;")}}
   - : Sets the color of the border. Defaults to `currentcolor` if absent. See {{Cssxref("border-color")}}.
 
 ## Description
 
-As with all shorthand properties, any omitted sub-values will be set to their [initial value](/en-US/docs/Web/CSS/initial_value). Importantly, `border` cannot be used to specify a custom value for {{cssxref("border-image")}}, but instead sets it to its initial value, i.e., `none`.
+As with all shorthand properties, any omitted sub-values will be set to their [initial value](/en-US/docs/Web/CSS/CSS_cascade/initial_value). Importantly, `border` cannot be used to specify a custom value for {{cssxref("border-image")}}, but instead sets it to its initial value, i.e., `none`.
 
 The `border` shorthand is especially useful when you want all four borders to be the same. To make them different from each other, however, you can use the longhand {{Cssxref("border-width")}}, {{Cssxref("border-style")}}, and {{Cssxref("border-color")}} properties, which accept different values for each side. Alternatively, you can target one border at a time with the physical (e.g., {{Cssxref("border-top")}} ) and logical (e.g., {{Cssxref("border-block-start")}}) border properties.
 
@@ -125,5 +120,5 @@ div {
 - {{Cssxref("border-style")}}
 - {{Cssxref("border-color")}}
 - {{Cssxref("outline")}}
-- [Backgrounds and borders](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders)
-- [Learn CSS: Backgrounds and borders](/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
+- [Backgrounds and borders](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders)
+- [Learn CSS: Backgrounds and borders](/en-US/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)

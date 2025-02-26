@@ -1,28 +1,22 @@
 ---
 title: action.isEnabled()
 slug: Mozilla/Add-ons/WebExtensions/API/action/isEnabled
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - action
-  - isEnabled
+page-type: webextension-api-function
 browser-compat: webextensions.api.action.isEnabled
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 Returns `true` if the browser action is enabled.
 
-> **Note:** This API is available in Manifest V3 or higher.
+> [!NOTE]
+> This API is available in Manifest V3 or higher.
 
 This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntax
 
-```js
+```js-nolint
 let gettingIsEnabled = browser.action.isEnabled(
   details // object
 )
@@ -63,11 +57,11 @@ Check the state of the currently active tab:
 ```js
 async function enabledInActiveTab() {
   let tabs = await browser.tabs.query({
-    currentWindow:true,
-    active: true
+    currentWindow: true,
+    active: true,
   });
   let enabled = await browser.action.isEnabled({
-    tabId: tabs[0].id
+    tabId: tabs[0].id,
   });
   console.log(enabled);
 }

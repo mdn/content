@@ -1,18 +1,11 @@
 ---
-title: Document.importNode()
+title: "Document: importNode() method"
+short-title: importNode()
 slug: Web/API/Document/importNode
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Document
-  - Method
-  - Node
-  - Reference
-  - copy
-  - importNode
 browser-compat: api.Document.importNode
 ---
+
 {{APIRef("DOM")}}
 
 The {{domxref("Document")}} object's **`importNode()`** method creates a copy of a
@@ -29,7 +22,7 @@ original document. The imported node is a clone of the original.
 
 ## Syntax
 
-```js
+```js-nolint
 importNode(externalNode)
 importNode(externalNode, deep)
 ```
@@ -59,7 +52,7 @@ The copied `importedNode` in the scope of the importing document.
 ## Examples
 
 ```js
-const iframe  = document.querySelector("iframe");
+const iframe = document.querySelector("iframe");
 const oldNode = iframe.contentWindow.document.getElementById("myNode");
 const newNode = document.importNode(oldNode, true);
 document.getElementById("container").appendChild(newNode);
@@ -69,10 +62,11 @@ document.getElementById("container").appendChild(newNode);
 
 Before they can be inserted into the current document, nodes from external documents should either be:
 
-- cloned using {{domXref("document.importNode()")}}; or
+- cloned using `document.importNode()`; or
 - adopted using {{domXref("document.adoptNode()")}}.
 
-> **Note:** Although Firefox doesn't currently enforce this rule, we encourage you to follow this rule for improved future compatibility.
+> [!NOTE]
+> Although Firefox doesn't currently enforce this rule, we encourage you to follow this rule for improved future compatibility.
 
 For more on the {{domXref("Node.ownerDocument")}} issues, see the W3C DOM FAQ.
 

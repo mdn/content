@@ -1,28 +1,14 @@
 ---
-title: XRWebGLLayer.getViewport()
+title: "XRWebGLLayer: getViewport() method"
+short-title: getViewport()
 slug: Web/API/XRWebGLLayer/getViewport
 page-type: web-api-instance-method
-tags:
-  - API
-  - AR
-  - Layer
-  - Method
-  - Reality
-  - Reference
-  - VR
-  - Virtual
-  - WebGL
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRWebGLLayer
-  - augmented
-  - getViewport
-  - viewport
+status:
+  - experimental
 browser-compat: api.XRWebGLLayer.getViewport
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The {{domxref("XRWebGLLayer")}} interface's
 **`getViewport()`** method returns the
@@ -34,7 +20,7 @@ represented by the view.
 
 ## Syntax
 
-```js
+```js-nolint
 getViewport(view)
 ```
 
@@ -70,25 +56,22 @@ one half for each eye, setting the WebGL viewport to match the WebXR layer's vie
 will ensure that when rendering the scene for the current eye's pose, it is rendered
 into the correct half of the framebuffer.
 
-**<<<--- add link to appropriate section in the Cameras and views
-article --->>>**
-
 ```js
 function drawFrame(time, frame) {
-  let session = frame.session;
+  const session = frame.session;
 
-  let pose = frame.getViewerPose(mainReferenceSpace);
+  const pose = frame.getViewerPose(mainReferenceSpace);
 
   if (pose) {
-    let glLayer = session.renderState.baseLayer;
+    const glLayer = session.renderState.baseLayer;
     gl.bindFramebuffer(gl.FRAMEBUFFER, glLayer.framebuffer);
 
     gl.clearColor(0, 0, 0, 1.0);
     gl.clearDepth(1.0);
     gl.clear(gl.COLOR_BUFFER_BIT, gl.DEPTH_COLOR_BIT);
 
-    for (let view of pose.views) {
-      let viewport = glLayer.getViewport(view);
+    for (const view of pose.views) {
+      const viewport = glLayer.getViewport(view);
       gl.viewport(viewport.x, viewport.y, viewport.width, viewport.height);
 
       /* Render the scene now */
@@ -108,4 +91,3 @@ function drawFrame(time, frame) {
 ## See also
 
 - [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API)
-- {{domxref("WebGLLayerInit")}}

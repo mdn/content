@@ -1,9 +1,9 @@
 ---
 title: Updating extensions for Firefox 3
 slug: Mozilla/Firefox/Releases/3/Updating_extensions
-tags:
-  - Firefox 3
+page-type: guide
 ---
+
 {{FirefoxSidebar}}
 
 This article provides information that will be useful to developers that wish to update their extensions to work properly under Firefox 3.
@@ -28,11 +28,12 @@ Change it to indicate compatibility with Firefox 3:
 
 Then reinstall your extension.
 
-Note that Firefox 3 does away with the extra ".0" in the version number, so instead of using "3.0.0.\*, you only need to use "3.0.\*".
+Note that Firefox 3 does away with the extra ".0" in the version number, so instead of using `3.0.0.*`, you only need to use `3.0.*`.
 
 There have been (and will continue to be) a number of API changes that will likely break some extensions. We're still working on compiling a complete list of these changes.
 
-> **Note:** If your extension still uses an [`Install.js`](/en-US/docs/Install.js) script instead of an [install manifest](/en-US/docs/Install_Manifests), you need to make the transition to an install manifest now. Firefox 3 no longer supports `install.js` scripts in XPI files.
+> [!NOTE]
+> If your extension still uses an [`Install.js`](/en-US/docs/Install.js) script instead of an [install manifest](/en-US/docs/Install_Manifests), you need to make the transition to an install manifest now. Firefox 3 no longer supports `install.js` scripts in XPI files.
 
 ### Add localizations to the install manifest
 
@@ -105,7 +106,7 @@ The following interfaces were removed from Gecko 1.9, which drives Firefox 3. If
 - `nsIDOMScrollListener`
 - `nsIDOMMutationListener`
 - `nsIDOMPageTransitionListener`
-- `nsICloseAllWindows` (see {{ Bug(386200) }})
+- `nsICloseAllWindows` (see [Firefox bug 386200](https://bugzil.la/386200))
 
 ## Step 4: Check for relevant chrome changes
 
@@ -150,16 +151,16 @@ Extensions that attempt to overlay onto the "appcontent" box try to float chrome
 _Add simple changes you had to make while updating your extension to work with Firefox 3 here._
 
 - `chrome://browser/base/utilityOverlay.js` is no longer supported for security reasons. If you were previously using this, you should switch to `chrome://browser/content/utilityOverlay.js`.
-- `nsIAboutModule` implementations are now required to support the `getURIFlags` method. See [nsIAboutModule.idl](https://dxr.mozilla.org/mozilla-central/source/netwerk/protocol/about/nsIAboutModule.idl) for documentation. This affects extensions that provide new `about:` URIs. ({{ Bug(337746) }})
-- The [`<xul:tabbrowser>`](/en-US/docs/Mozilla/Tech/XUL/tabbrowser) element is no longer part of "toolkit" ({{ Bug(339964) }}). This means this element is no longer available to XUL applications and extensions. It continues to be used in the main Firefox window (browser.xul).
+- `nsIAboutModule` implementations are now required to support the `getURIFlags` method. See [nsIAboutModule.idl](https://searchfox.org/mozilla-central/source/netwerk/protocol/about/nsIAboutModule.idl) for documentation. This affects extensions that provide new `about:` URIs. ([Firefox bug 337746](https://bugzil.la/337746))
+- The [`<xul:tabbrowser>`](/en-US/docs/Mozilla/Tech/XUL/tabbrowser) element is no longer part of "toolkit" ([Firefox bug 339964](https://bugzil.la/339964)). This means this element is no longer available to XUL applications and extensions. It continues to be used in the main Firefox window (browser.xul).
 - Changes to `nsISupports_proxies` and possibly to threading-related interfaces need to be documented.
-- If you use XML processing instructions, such as `<?xml-stylesheet ?>` in your XUL files, be aware of the changes made in {{ Bug(319654) }}:
+- If you use XML processing instructions, such as `<?xml-stylesheet ?>` in your XUL files, be aware of the changes made in [Firefox bug 319654](https://bugzil.la/319654):
 
-  1. XML PIs are now added to a XUL document's DOM. This means {{ Domxref("document.firstChild") }} is no longer guaranteed to be the root element. If you need to get the root document in your script, use {{ Domxref("document.documentElement") }} instead.
+  1. XML PIs are now added to a XUL document's DOM. This means {{ Domxref("Node.firstChild", "document.firstChild") }} is no longer guaranteed to be the root element. If you need to get the root document in your script, use {{ Domxref("document.documentElement") }} instead.
   2. `<?xml-stylesheet ?>` and `<?xul-overlay ?>` processing instructions now have no effect outside the document prolog.
 
-- `window.addEventListener("load", myFunc, true)` is not fired when loading web content (browser page loads). This is due to {{ Bug(296639) }} which changes the way inner and outer windows communicate. The simple fix here is to use `gBrowser.addEventListener("load", myFunc, true)` as described [here](/en-US/docs/Code_snippets/Tabbed_browser#detecting_page_load) and works in Firefox 2 as well.
+- `window.addEventListener("load", myFunc, true)` is not fired when loading web content (browser page loads). This is due to [Firefox bug 296639](https://bugzil.la/296639) which changes the way inner and outer windows communicate. The simple fix here is to use `gBrowser.addEventListener("load", myFunc, true)` as described [here](/en-US/docs/Code_snippets/Tabbed_browser#detecting_page_load) and works in Firefox 2 as well.
 - `content.window.getSelection()` gives an object (which can be converted to a string by `toString()`), unlike the now deprecated `content.document.getSelection()` which returns a string
 - `event.preventBubble()` was deprecated in Firefox 2 and has been removed in Firefox 3. Use [`event.stopPropagation()`](/en-US/docs/Web/API/Event/stopPropagation), which works in Firefox 2 as well.
-- Timers that are initiated using `setTimeout()` are now blocked by modal windows due to the fix made for {{ Bug(52209) }}. You may use `nsITimer` instead.
-- If your extension needs to allow an untrusted source (e.g., a web site) to access the extension's chrome, then you must use the new [`contentaccessible` flag](/en-US/docs/Chrome_Registration#contentaccessible).
+- Timers that are initiated using {{domxref("Window.setTimeout", "setTimeout()")}} and {{domxref("WorkerGlobalScope.setTimeout", "setTimeout()")}} are now blocked by modal windows due to the fix made for [Firefox bug 52209](https://bugzil.la/52209). You may use `nsITimer` instead.
+- If your extension needs to allow an untrusted source (e.g., a website) to access the extension's chrome, then you must use the new [`contentaccessible` flag](/en-US/docs/Chrome_Registration#contentaccessible).

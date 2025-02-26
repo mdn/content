@@ -1,31 +1,27 @@
 ---
-title: 'HTML attribute: crossorigin'
+title: "HTML attribute: crossorigin"
+short-title: crossorigin
 slug: Web/HTML/Attributes/crossorigin
-tags:
-  - Advanced
-  - Attribute
-  - CORS
-  - HTML
-  - NeedsContent
-  - Reference
-  - Security
-spec-urls: https://html.spec.whatwg.org/multipage/infrastructure.html#cors-settings-attributes
+page-type: html-attribute
 browser-compat:
+  - html.elements.audio.crossorigin
   - html.elements.img.crossorigin
   - html.elements.link.crossorigin
   - html.elements.script.crossorigin
   - html.elements.video.crossorigin
+spec-urls: https://html.spec.whatwg.org/multipage/urls-and-fetching.html#cors-settings-attributes
 ---
+
 {{HTMLSidebar}}
 
 The **`crossorigin`** attribute, valid on the {{HTMLElement("audio")}}, {{HTMLElement("img")}}, {{HTMLElement("link")}}, {{HTMLElement("script")}}, and {{HTMLElement("video")}} elements, provides support for [CORS](/en-US/docs/Web/HTTP/CORS), defining how the element handles cross-origin requests, thereby enabling the configuration of the CORS requests for the element's fetched data. Depending on the element, the attribute can be a CORS settings attribute.
 
 The `crossorigin` content attribute on media elements is a CORS settings attribute.
 
-These attributes are enumerated, and have the following possible values:
+These attributes are [enumerated](/en-US/docs/Glossary/Enumerated), and have the following possible values:
 
 - `anonymous`
-  - : Request uses CORS headers and credentials flag is set to `'same-origin'`. There is no exchange of **user credentials** via cookies, client-side SSL certificates or HTTP authentication, unless destination is the same origin.
+  - : Request uses CORS headers and credentials flag is set to `'same-origin'`. There is no exchange of **user credentials** via cookies, client-side TLS certificates or HTTP authentication, unless destination is the same origin.
 - `use-credentials`
   - : Request uses CORS headers, credentials flag is set to `'include'` and **user credentials** are always included.
 - `""`
@@ -62,22 +58,25 @@ By default (that is, when the attribute is not specified), CORS is not used at a
   </tbody>
 </table>
 
-> **Note:** Prior to Firefox 83 the `crossorigin` attribute was not supported for `rel="icon"`. There is also [an open issue for Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=1121645).
+> [!NOTE]
+> The `crossorigin` attribute is not supported for [`rel="icon"`](/en-US/docs/Web/HTML/Attributes/rel#icon) in Chromium-based browsers. See the [open Chromium issue](https://crbug.com/1121645).
 
 ### Example: `crossorigin` with the `<script>` element
 
 You can use the following {{HTMLElement("script")}} element to tell a browser to execute the `https://example.com/example-framework.js` script without sending user-credentials.
 
 ```html
-<script src="https://example.com/example-framework.js" crossorigin="anonymous"></script>
+<script
+  src="https://example.com/example-framework.js"
+  crossorigin="anonymous"></script>
 ```
 
 ### Example: Web manifest with credentials
 
-The `use-credentials` value must be used when fetching a [manifest](/en-US/docs/Web/Manifest) that requires credentials, even if the file is from the same origin.
+The `use-credentials` value must be used when fetching a [manifest](/en-US/docs/Web/Progressive_web_apps/Manifest) that requires credentials, even if the file is from the same origin.
 
 ```html
-<link rel="manifest" href="/app.webmanifest" crossorigin="use-credentials">
+<link rel="manifest" href="/app.webmanifest" crossorigin="use-credentials" />
 ```
 
 ## Specifications

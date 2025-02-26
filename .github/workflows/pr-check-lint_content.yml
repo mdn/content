@@ -1,0 +1,203 @@
+name: Lint and review content files
+
+on:
+  pull_request_target:
+    branches:
+      - main
+    paths:
+      - .nvmrc
+      - "*.md"
+      - "files/**/*.md"
+
+permissions:
+  # Compare commits and add reviewdog comments.
+  pull-requests: write
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  lint-and-review-docs:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout BASE
+        uses: actions/checkout@v4
+
+      - name: Get changed files
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          # Use the GitHub API to get the list of changed files
+          # documentation: https://docs.github.com/rest/commits/commits#compare-two-commits
+          DIFF_DOCUMENTS=$(gh api repos/{owner}/{repo}/compare/${BASE_SHA}...${HEAD_SHA} \
+            --jq '.files | .[] | select(.status|IN("added", "modified", "renamed", "copied", "changed")) | .filename')
+          # filter out files that are not markdown
+          DIFF_DOCUMENTS=$(echo "${DIFF_DOCUMENTS}" | egrep -i "^files/.*\.md$" | xargs)
+          echo "DIFF_DOCUMENTS=${DIFF_DOCUMENTS}" >> $GITHUB_ENV
+
+      - name: Checkout HEAD
+        if: env.DIFF_DOCUMENTS
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          path: pr_head
+
+      - name: Get changed content from HEAD
+        if: env.DIFF_DOCUMENTS
+        run: |
+          git config --global user.email "108879845+mdn-bot@users.noreply.github.com"
+          git config --global user.name "mdn-bot"
+
+          rm -r files *.md
+          mv pr_head/files pr_head/*.md .
+          rm -r pr_head
+
+          # To avoid contents of PR getting into the diff that we are going to generate
+          # after running the linters, here we make a dummy commit.
+          # Note, this commit is not getting pushed.
+          git add .
+          git commit -m "Code from PR head"
+
+      - name: Setup Node.js environment
+        if: env.DIFF_DOCUMENTS
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: ".nvmrc"
+          cache: yarn
+
+      - name: Install all yarn packages
+        if: env.DIFF_DOCUMENTS
+        run: yarn --frozen-lockfile
+        env:
+          # https://github.com/microsoft/vscode-ripgrep#github-api-limit-note
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Lint and format markdown files
+        if: env.DIFF_DOCUMENTS
+        run: |
+          # Generate random delimiter
+          # https://docs.github.com/en/actions/using-workflows/workflow-commands-for-github-actions#multiline-strings
+          EOF="$(openssl rand -hex 8)"
+
+          files_to_lint="$DIFF_DOCUMENTS"
+
+          echo "crlf line ending check"
+          CRLF_FAILED=true
+          CRLF_LOG=$(git ls-files --eol ${files_to_lint} | grep -E 'w/(mixed|crlf)') || CRLF_FAILED=false
+          echo "CRLF_LOG<<${EOF}" >> $GITHUB_ENV
+          echo "${CRLF_LOG}" >> $GITHUB_ENV
+          echo "${EOF}" >> $GITHUB_ENV
+          echo "CRLF_FAILED=${CRLF_FAILED}" >> $GITHUB_ENV
+
+          echo "Running markdownlint --fix"
+          MD_LINT_FAILED=false
+          MD_LINT_LOG=$(yarn markdownlint-cli2 --fix ${files_to_lint} 2>&1) || MD_LINT_FAILED=true
+          echo "MD_LINT_LOG<<${EOF}" >> $GITHUB_ENV
+          echo "${MD_LINT_LOG}" >> $GITHUB_ENV
+          echo "${EOF}" >> $GITHUB_ENV
+          echo "MD_LINT_FAILED=${MD_LINT_FAILED}" >> $GITHUB_ENV
+
+          echo "Linting front-matter"
+          FM_LINT_FAILED=false
+          FM_LINT_LOG=$(node scripts/front-matter_linter.js --fix true ${files_to_lint} 2>&1) || FM_LINT_FAILED=true
+          echo "FM_LINT_LOG<<${EOF}" >> $GITHUB_ENV
+          echo "${FM_LINT_LOG}" >> $GITHUB_ENV
+          echo "${EOF}" >> $GITHUB_ENV
+          echo "FM_LINT_FAILED=${FM_LINT_FAILED}" >> $GITHUB_ENV
+
+          echo "Running Prettier"
+          PRETTIER_FAILED=false
+          PRETTIER_LOG=$(yarn prettier --check ${files_to_lint} 2>&1) || PRETTIER_FAILED=true
+          echo "PRETTIER_LOG<<${EOF}" >> $GITHUB_ENV
+          echo "${PRETTIER_LOG}" >> $GITHUB_ENV
+          echo "${EOF}" >> $GITHUB_ENV
+          echo "PRETTIER_FAILED=${PRETTIER_FAILED}" >> $GITHUB_ENV
+          yarn prettier -w ${files_to_lint}
+
+          if [[ -n $(git diff) ]]; then
+            echo "FILES_MODIFIED=true" >> $GITHUB_ENV
+          fi
+
+          # info for troubleshooting
+          echo CRLF_FAILED=${CRLF_FAILED}
+          echo MD_LINT_FAILED=${MD_LINT_FAILED}
+          echo FM_LINT_FAILED=${FM_LINT_FAILED}
+          echo PRETTIER_FAILED=${PRETTIER_FAILED}
+          git diff
+
+      - name: Setup reviewdog
+        if: env.FILES_MODIFIED == 'true' || env.MD_LINT_FAILED == 'true'
+        uses: reviewdog/action-setup@3f401fe1d58fe77e10d665ab713057375e39b887 # v1.3.0
+        with:
+          reviewdog_version: latest
+
+      - name: Suggest changes using diff
+        if: env.FILES_MODIFIED == 'true'
+        env:
+          REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          TMPFILE=$(mktemp)
+          git diff >"${TMPFILE}"
+          git stash -u && git stash drop
+          reviewdog \
+            -name="mdn-linter" \
+            -f=diff \
+            -f.diff.strip=1 \
+            -filter-mode=diff_context \
+            -reporter=github-pr-review < "${TMPFILE}"
+
+      - name: Add reviews for markdownlint errors
+        if: env.MD_LINT_FAILED == 'true'
+        env:
+          REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo "${MD_LINT_LOG}" | \
+            reviewdog \
+            -efm="%f:%l:%c %m" \
+            -efm="%f:%l %m" \
+            -name="markdownlint" \
+            -diff="git diff" \
+            -reporter="github-pr-review"
+
+      - name: Fail if any issues pending
+        if: env.FILES_MODIFIED == 'true' || env.CRLF_FAILED == 'true' || env.MD_LINT_FAILED == 'true' || env.FM_LINT_FAILED == 'true'
+        env:
+          CRLF_FAILED: ${{ env.CRLF_FAILED }}
+          MD_LINT_FAILED: ${{ env.MD_LINT_FAILED }}
+          FM_LINT_FAILED: ${{ env.FM_LINT_FAILED }}
+          PRETTIER_FAILED: ${{ env.PRETTIER_FAILED }}
+          CRLF_LOG: ${{ env.CRLF_LOG }}
+          MD_LINT_LOG: ${{ env.MD_LINT_LOG }}
+          FM_LINT_LOG: ${{ env.FM_LINT_LOG }}
+          PRETTIER_LOG: ${{ env.PRETTIER_LOG }}
+        run: |
+          echo -e "\nPlease fix all the linting issues mentioned in the following logs and in the PR review comments."
+
+          if [[ ${CRLF_FAILED} == 'true' ]]; then
+            echo -e "\n\n🪵 In the following files make sure all the lines end with only Line Feed (LF) character and not with Carriage Return Line Feed (CRLF) characters:"
+            echo "${CRLF_LOG}"
+            echo "For more information refer https://gist.github.com/LunarLambda/3df0840b336a5e314e4ffdac03cbf619 ."
+            echo "You may use https://app.execeratics.com/LFandCRLFonline/?l=en online tool to convert line endings from CRLF to LF."
+          fi
+
+          if [[ ${MD_LINT_FAILED} == 'true' ]]; then
+            echo -e "\n\n🪵 Logs from markdownlint:"
+            echo "${MD_LINT_LOG}"
+          fi
+
+          if [[ ${FM_LINT_FAILED} == 'true' ]]; then
+            echo -e "\n\n🪵 Logs from front-matter linter:"
+            echo "${FM_LINT_LOG}"
+          fi
+
+          if [[ ${PRETTIER_FAILED} == 'true' ]]; then
+            echo -e "\n\n🪵 Logs from Prettier formatter:"
+            echo "${PRETTIER_LOG}"
+            echo -e "\nYou can use Prettier playground to format the files online (configuration pre-filled): https://prettier.io/playground/#N4Igxg9gdgLgprEAuEBiABABwIYGd7owAWc6CMAlgE6kBmFANqSTSADQgSaXS7KjYqVCAHcACoIR8U2BiOwBPPhwBGVbGADWcGAGVsAWzgAZClDjIYVAK5xV6rTt04wZgOaWbdkLjgGKnrYccAAemHBUFEawsgAqEVCCFHDStLK+HLjuTACK1hDwyGkMGSAAVrghutlweQUWSMWlAI758GLCmNIgeAC05nAAJkPsIFbYjO4AwhAGBtjIPQwMo1lQbkwAgjBWFCrW7RGm5kXp3kQwBgwA6kQU8LgucLpS9xQAbvcKi2C4yiDvWwASSgw1gujAkW4m1BuhgCiYpxK3kwwl813UmEWqJSEXeFg4Zl8VBgHWwbnmSNKOCoxMW8yomkGoigo1RZhg1wog2IyAAHAAGDg0VrUOBkikLRpnDgwbAqLk8ojIABMHGsvli8tSMpAfhUQ2Gg2M2HW1nJcAAYhAqPMdu5FtgDhAQABfV1AA \n"
+          fi
+
+          exit 1

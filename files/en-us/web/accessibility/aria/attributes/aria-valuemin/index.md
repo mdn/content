@@ -1,15 +1,11 @@
 ---
-title: 'aria-valuemin'
+title: aria-valuemin
 slug: Web/Accessibility/ARIA/Attributes/aria-valuemin
-tags:
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - ARIA property
-  - aria-valuemin
-  - Reference
+page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-valuemin
 ---
+
+{{AccessibilitySidebar}}
 
 The `aria-valuemin` attribute defines the minimum allowed value for a range widget.
 
@@ -23,14 +19,15 @@ Declaring the minimum and maximum values allows assistive technologies to convey
 
 The maximum value is defined with [`aria-valuemax`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemax).
 
-> **Warning:** The [`range`](/en-US/docs/Web/Accessibility/ARIA/Roles/range_role) role itself should **NOT** be used as it is an ["abstract"](/en-US/docs/Web/Accessibility/ARIA/Roles#6._abstract_roles). The `aria-valuemin` attribute is used on all of the range roles subtypes.
+> [!WARNING]
+> The [`range`](/en-US/docs/Web/Accessibility/ARIA/Roles/range_role) role itself should **NOT** be used as it is an ["abstract"](/en-US/docs/Web/Accessibility/ARIA/Roles#6._abstract_roles). The `aria-valuemin` attribute is used on all of the range roles subtypes.
 
 ## Values
 
 - `<number>`
   - : A decimal number, below the maximum value.
 
-## ARIAMixin API
+## Associated interfaces
 
 - {{domxref("Element.ariaValueMin")}}
   - : The [`ariaValueMin`](/en-US/docs/Web/API/Element/ariaValueMin) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-valuemin` attribute.
@@ -59,14 +56,9 @@ Inherited into roles:
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [`range` role](/en-US/docs/Web/Accessibility/ARIA/Roles/range_role)
 - [`<input type="range>` element `min` attribute](/en-US/docs/Web/HTML/Element/input/range#min)
 - [`aria-valuemax`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemax)
-- [`aria-aria-valuenow`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-aria-valuenow).
-
-<section id="Quick_links">
-<strong><a href="/en-US/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA states and properties</a></strong>
-{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/aria/Attributes")}}
-</section>
+- [`aria-valuenow`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuenow)

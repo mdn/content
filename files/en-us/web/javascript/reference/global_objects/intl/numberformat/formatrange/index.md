@@ -1,40 +1,35 @@
 ---
 title: Intl.NumberFormat.prototype.formatRange()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/formatRange
-tags:
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Localization
-  - Method
-  - NumberFormat
-  - Experimental
-  - Prototype
-  - Reference
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.NumberFormat.formatRange
 ---
-{{JSRef}} {{SeeCompatTable}}
 
-The **`Intl.NumberFormat.prototype.formatRange()`** method formats a range of numbers according to the locale and formatting options of the {{jsxref("Intl.NumberFormat")}} object from which the method is called.
+{{JSRef}}
+
+The **`formatRange()`** method of {{jsxref("Intl.NumberFormat")}} instances formats a range of numbers according to the locale and formatting options of this `Intl.NumberFormat` object.
 
 ## Syntax
 
-```js
+```js-nolint
 formatRange(startRange, endRange)
 ```
 
 ### Parameters
 
 - `startRange`
-  - : A {{jsxref("Number")}} or {{jsxref("BigInt")}}.
-
+  - : A {{jsxref("Number")}}, {{jsxref("BigInt")}}, or string, to format. Strings are parsed in the same way as in [number conversion](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion), except that `formatRange()` will use the exact value that the string represents, avoiding loss of precision during implicitly conversion to a number.
 - `endRange`
-  - : A {{jsxref("Number")}} or {{jsxref("BigInt")}}.
+  - : A {{jsxref("Number")}}, {{jsxref("BigInt")}}, or string, to format.
+
+### Return value
+
+A string representing the given range of numbers formatted according to the locale and formatting options of this {{jsxref("Intl.NumberFormat")}} object.
 
 ### Exceptions
 
 - {{jsxref("RangeError")}}
-  - : Thrown if `startRange` is less than `endRange`, or either value is `NaN`.
+  - : Thrown if either `startRange` or `endRange` is `NaN` or an inconvertible string.
 - {{jsxref("TypeError")}}
   - : Thrown if either `startRange` or `endRange` is undefined.
 
@@ -55,11 +50,11 @@ const nf = new Intl.NumberFormat("en-US", {
   maximumFractionDigits: 0,
 });
 
-console.log(nf.formatRange(3, 5)); // → "€3 – €5"
+console.log(nf.formatRange(3, 5)); // "$3 – $5"
 
 // Note: the "approximately equals" symbol is added if
-//   startRange and endRange round to the same values.
-console.log(nf.formatRange(2.9, 3.1)); // → "~€3"
+// startRange and endRange round to the same values.
+console.log(nf.formatRange(2.9, 3.1)); // "~$3"
 ```
 
 ```js
@@ -69,8 +64,8 @@ const nf = new Intl.NumberFormat("es-ES", {
   maximumFractionDigits: 0,
 });
 
-console.log(nf.formatRange(3, 5)); // → "3-5 €"
-console.log(nf.formatRange(2.9, 3.1)); // → "~3 €"
+console.log(nf.formatRange(3, 5)); // "3-5 €"
+console.log(nf.formatRange(2.9, 3.1)); // "~3 €"
 ```
 
 ## Specifications
@@ -83,5 +78,5 @@ console.log(nf.formatRange(2.9, 3.1)); // → "~3 €"
 
 ## See also
 
-- {{jsxref("Intl/NumberFormat", "Intl.NumberFormat")}}
+- {{jsxref("Intl.NumberFormat")}}
 - {{jsxref("Number.prototype.toLocaleString()")}}

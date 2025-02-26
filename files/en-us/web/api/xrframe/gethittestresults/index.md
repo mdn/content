@@ -1,23 +1,20 @@
 ---
-title: XRFrame.getHitTestResults()
+title: "XRFrame: getHitTestResults() method"
+short-title: getHitTestResults()
 slug: Web/API/XRFrame/getHitTestResults
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - AR
-  - XR
-  - WebXR
+status:
+  - experimental
 browser-compat: api.XRFrame.getHitTestResults
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`getHitTestResults()`** method of the {{domxref("XRFrame")}} interface returns an array of {{domxref("XRHitTestResult")}} objects containing hit test results for a given {{domxref("XRHitTestSource")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 getHitTestResults(hitTestSource)
 ```
 
@@ -36,23 +33,25 @@ An array of {{domxref("XRHitTestResult")}} objects.
 
 To request a hit test source, start an {{domxref("XRSession")}} with the `hit-test` session feature enabled. Next, request a the hit test source with {{domxref("XRSession.requestHitTestSource()")}} and store it for later use in the frame loop. Finally, call `getHitTestResults()` to obtain the result.
 
- ```js
- const xrSession = navigator.xr.requestSession("immersive-ar", {
-    requiredFeatures: ["local", "hit-test"]
- });
- let hitTestSource = null;
- xrSession.requestHitTestSource({
-   space : viewerSpace, // obtained from xrSession.requestReferenceSpace("viewer");
-   offsetRay : new XRRay({y: 0.5})
- }).then((viewerHitTestSource) => {
-   hitTestSource = viewerHitTestSource;
- });
- // frame loop
- function onXRFrame(time, xrFrame) {
-   let hitTestResults = xrFrame.getHitTestResults(hitTestSource);
-   // do things with the hit test results
- }
- ```
+```js
+const xrSession = navigator.xr.requestSession("immersive-ar", {
+  requiredFeatures: ["local", "hit-test"],
+});
+let hitTestSource = null;
+xrSession
+  .requestHitTestSource({
+    space: viewerSpace, // obtained from xrSession.requestReferenceSpace("viewer");
+    offsetRay: new XRRay({ y: 0.5 }),
+  })
+  .then((viewerHitTestSource) => {
+    hitTestSource = viewerHitTestSource;
+  });
+// frame loop
+function onXRFrame(time, xrFrame) {
+  let hitTestResults = xrFrame.getHitTestResults(hitTestSource);
+  // do things with the hit test results
+}
+```
 
 ## Specifications
 

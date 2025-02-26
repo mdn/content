@@ -2,33 +2,30 @@
 title: PluginArray
 slug: Web/API/PluginArray
 page-type: web-api-interface
-tags:
-  - API
-  - Add-ons
-  - DOM
-  - Experimental
-  - NeedsContent
-  - Plugins
+status:
+  - deprecated
 browser-compat: api.PluginArray
 ---
+
 {{APIRef("HTML DOM")}}{{deprecated_header}}
 
-The `PluginArray` interface is used to store a list of {{DOMxRef("Plugin")}} objects describing the available [plugins](/en-US/docs/Mozilla/Add-ons/Plugins); it's returned by the {{DOMxRef("Navigator.plugins", "navigator.plugins")}} property. The `PluginArray` is not a JavaScript array, but has the `length` property and supports accessing individual items using bracket notation (`plugins[2]`), as well as via `item(index)` and `namedItem("name")` methods.
+The `PluginArray` interface is used to store a list of {{DOMxRef("Plugin")}} objects; it's returned by the {{DOMxRef("Navigator.plugins", "navigator.plugins")}} property. The `PluginArray` is not a JavaScript array, but has the `length` property and supports accessing individual items using bracket notation (`plugins[2]`), as well as via `item(index)` and `namedItem("name")` methods.
 
-> **Note:** Own properties of `PluginArray` objects are no longer enumerable in the latest browser versions.
+> [!NOTE]
+> Own properties of `PluginArray` objects are no longer enumerable in the latest browser versions.
 
-## Properties
+## Instance properties
 
-- {{DOMxRef("PluginArray.length")}} {{ReadOnlyInline}}
+- {{DOMxRef("PluginArray.length")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
   - : The number of plugins in the array.
 
-## Methods
+## Instance methods
 
-- {{DOMxRef("PluginArray.item")}}
+- {{DOMxRef("PluginArray.item")}} {{Deprecated_Inline}}
   - : Returns the {{DOMxRef("Plugin")}} at the specified index into the array.
-- {{DOMxRef("PluginArray.namedItem")}}
+- {{DOMxRef("PluginArray.namedItem")}} {{Deprecated_Inline}}
   - : Returns the {{DOMxRef("Plugin")}} with the specified name.
-- {{DOMxRef("PluginArray.refresh")}}
+- {{DOMxRef("PluginArray.refresh")}} {{Deprecated_Inline}}
   - : Refreshes all plugins on the current page, optionally reloading documents.
 
 ## Examples
@@ -38,19 +35,20 @@ The following example function returns the version of the Shockwave Flash plugin
 ```js
 const pluginsLength = navigator.plugins.length;
 
-document.body.innerHTML = `${pluginsLength} Plugin(s)<br>`
-  + `<table id="pluginTable"><thead>`
-  + `<tr><th>Name</th><th>Filename</th><th>description</th><th>version</th></tr>`
-  + `</thead><tbody></tbody></table>`;
+document.body.innerHTML =
+  `${pluginsLength} Plugin(s)<br>` +
+  `<table id="pluginTable"><thead>` +
+  `<tr><th>Name</th><th>Filename</th><th>description</th><th>version</th></tr>` +
+  `</thead><tbody></tbody></table>`;
 
-const table = document.getElementById('pluginTable');
+const table = document.getElementById("pluginTable");
 
 for (let i = 0; i < pluginsLength; i++) {
   let newRow = table.insertRow();
   newRow.insertCell().textContent = navigator.plugins[i].name;
   newRow.insertCell().textContent = navigator.plugins[i].filename;
   newRow.insertCell().textContent = navigator.plugins[i].description;
-  newRow.insertCell().textContent = navigator.plugins[i].version?navigator.plugins[i].version:"";
+  newRow.insertCell().textContent = navigator.plugins[i].version ?? "";
 }
 ```
 
@@ -61,12 +59,12 @@ const pluginsLength = navigator.plugins.length;
 
 document.write(
   `${pluginsLength.toString()} Plugin(s)<br>` +
-  `Name | Filename | description<br>`
+    `Name | Filename | description<br>`,
 );
 
 for (let i = 0; i < pluginsLength; i++) {
   document.write(
-    `${navigator.plugins[i].name} | ${navigator.plugins[i].filename} | ${navigator.plugins[i].description} | ${navigator.plugins[i].version}<br>`
+    `${navigator.plugins[i].name} | ${navigator.plugins[i].filename} | ${navigator.plugins[i].description} | ${navigator.plugins[i].version}<br>`,
   );
 }
 ```

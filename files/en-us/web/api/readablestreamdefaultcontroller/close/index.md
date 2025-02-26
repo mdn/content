@@ -1,30 +1,20 @@
 ---
-title: ReadableStreamDefaultController.close()
+title: "ReadableStreamDefaultController: close() method"
+short-title: close()
 slug: Web/API/ReadableStreamDefaultController/close
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - ReadableStreamDefaultController
-  - Reference
-  - Streams
-  - close
 browser-compat: api.ReadableStreamDefaultController.close
 ---
-{{APIRef("Streams")}}
 
-The **`close()`** method of the
-{{domxref("ReadableStreamDefaultController")}} interface closes the associated stream.
+{{APIRef("Streams")}}{{AvailableInWorkers}}
 
-Readers will still be able to read any previously-enqueued chunks from the stream,
-but once those are read, the stream will become closed. If you want to completely get
-rid of the stream and discard any enqueued chunks, you'd use
-{{domxref("ReadableStream.cancel()")}} or
-{{domxref("ReadableStreamDefaultReader.cancel()")}}.
+The **`close()`** method of the {{domxref("ReadableStreamDefaultController")}} interface closes the associated stream.
+
+Readers will still be able to read any previously-enqueued chunks from the stream, but once those are read, the stream will become closed. If you want to completely get rid of the stream and discard any enqueued chunks, you'd use {{domxref("ReadableStream.cancel()")}} or {{domxref("ReadableStreamDefaultReader.cancel()")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 close()
 ```
 
@@ -39,21 +29,18 @@ None ({{jsxref("undefined")}}).
 ### Exceptions
 
 - {{jsxref("TypeError")}}
-  - : Thrown if the source object is not a `ReadableStreamDefaultController`.
+
+  - : Thrown if `close()` is called when the stream is not readable — because it is already closed, cancelled, or errored — or because it has been requested to close by the underlying source but it has not yet done so because there are still enqueued chunks to read.
 
 ## Examples
 
-In the following simple example, a custom `ReadableStream` is created using
-a constructor (see our [Simple random stream example](https://mdn.github.io/dom-examples/streams/simple-random-stream/) for the full code). The `start()` function generates a
-random string of text every second and enqueues it into the stream. A
-`cancel()` function is also provided to stop the generation if
-{{domxref("ReadableStream.cancel()")}} is called for any reason.
+In the following simple example, a custom `ReadableStream` is created using a constructor (see our [Simple random stream example](https://mdn.github.io/dom-examples/streams/simple-random-stream/) for the full code). The `start()` function generates a random string of text every second and enqueues it into the stream.
+A `cancel()` function is also provided to stop the generation if {{domxref("ReadableStream.cancel()")}} is called for any reason.
 
-When a button is pressed, the generation is stopped, the stream is closed using
-{{domxref("ReadableStreamDefaultController.close()")}}, and another function is run,
-which reads the data back out of the stream.
+When a button is pressed, the generation is stopped, the stream is closed using `close()`, and another function is run, which reads the data back out of the stream.
 
 ```js
+let interval;
 const stream = new ReadableStream({
   start(controller) {
     interval = setInterval(() => {
@@ -63,16 +50,16 @@ const stream = new ReadableStream({
       controller.enqueue(string);
 
       // show it on the screen
-      let listItem = document.createElement('li');
+      let listItem = document.createElement("li");
       listItem.textContent = string;
       list1.appendChild(listItem);
     }, 1000);
 
-    button.addEventListener('click', function() {
+    button.addEventListener("click", () => {
       clearInterval(interval);
       fetchStream();
       controller.close();
-    })
+    });
   },
   pull(controller) {
     // We don't really need a pull in this example
@@ -81,7 +68,7 @@ const stream = new ReadableStream({
     // This is called if the reader cancels,
     // so we should stop generating strings
     clearInterval(interval);
-  }
+  },
 });
 ```
 
@@ -92,3 +79,8 @@ const stream = new ReadableStream({
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [Using readable streams](/en-US/docs/Web/API/Streams_API/Using_readable_streams)
+- {{domxref("ReadableStreamDefaultController")}}

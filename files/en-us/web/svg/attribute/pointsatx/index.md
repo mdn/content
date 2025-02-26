@@ -1,12 +1,10 @@
 ---
 title: pointsAtX
 slug: Web/SVG/Attribute/pointsAtX
-tags:
-  - Filters
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.elements.feSpotLight.pointsAtX
 ---
+
 {{SVGRef}}
 
 The **`pointsAtX`** attribute represents the x location in the coordinate system established by attribute {{SVGAttr("primitiveUnits")}} on the {{SVGElement("filter")}} element of the point at which the light source is pointing.
@@ -18,14 +16,15 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 ```
 
 ```html
 <svg viewBox="0 0 420 200" xmlns="http://www.w3.org/2000/svg">
-
   <filter id="lighting1" x="0" y="0" width="100%" height="100%">
     <feDiffuseLighting in="SourceGraphic">
       <feSpotLight x="60" y="60" z="50" pointsAtX="0" />
@@ -38,7 +37,12 @@ html, body, svg {
   </filter>
 
   <rect x="0" y="0" width="200" height="200" style="filter: url(#lighting1);" />
-  <rect x="0" y="0" width="200" height="200" style="filter: url(#lighting2); transform: translateX(220px);" />
+  <rect
+    x="0"
+    y="0"
+    width="200"
+    height="200"
+    style="filter: url(#lighting2); transform: translateX(220px);" />
 </svg>
 ```
 

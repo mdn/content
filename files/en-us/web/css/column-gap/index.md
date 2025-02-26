@@ -1,24 +1,19 @@
 ---
-title: column-gap (grid-column-gap)
+title: column-gap
 slug: Web/CSS/column-gap
-tags:
-  - CSS
-  - CSS Flexible Boxes
-  - CSS Grid
-  - CSS Multi-column Layout
-  - CSS Property
-  - Reference
-  - column-gap
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.column-gap
 ---
+
 {{CSSRef}}
 
 The **`column-gap`** [CSS](/en-US/docs/Web/CSS) property sets the size of the gap ({{glossary("Gutters","gutter")}}) between an element's columns.
 
-{{EmbedInteractiveExample("pages/css/column-gap.html")}}
+Initially a part of [Multi-column Layout](/en-US/docs/Web/CSS/CSS_multicol_layout), the definition of `column-gap` has been broadened to include multiple layout methods. Now specified in [CSS box alignment](/en-US/docs/Web/CSS/CSS_box_alignment), it may be used in multi-column, flexible box, and grid layouts.
 
-Initially a part of [Multi-column Layout](/en-US/docs/Web/CSS/CSS_Columns), the definition of `column-gap` has been broadened to include multiple layout methods. Now specified in [Box Alignment](/en-US/docs/Web/CSS/CSS_Box_Alignment), it may be used in Multi-column, Flexible Box, and Grid layouts.
+Early versions of the specification called this property `grid-column-gap`, and to maintain compatibility with legacy websites, browsers will still accept `grid-column-gap` as an alias for `column-gap`.
+
+{{EmbedInteractiveExample("pages/css/column-gap.html")}}
 
 ## Syntax
 
@@ -64,10 +59,15 @@ The `column-gap` property is specified as one of the values listed below.
 
 ### Flex layout
 
+In this example, a flex container contains six flex items of two different widths (`200px` and `300px`), creating flex items that are not laid out as a grid. The `column-gap` property is used to add horizontal space between the adjacent flex items.
+
 #### HTML
 
 ```html
-<div id="flexbox">
+<div class="flexbox">
+  <div></div>
+  <div></div>
+  <div></div>
   <div></div>
   <div></div>
   <div></div>
@@ -76,23 +76,36 @@ The `column-gap` property is specified as one of the values listed below.
 
 #### CSS
 
+To create a flex container, we set its {{cssxref("display")}} property value to `flex`. We then use the {{cssxref("flex-flow")}} shorthand property to set the {{cssxref("flex-direction")}} to row (the default) and {{cssxref("flex-wrap")}} to `wrap`, allowing the flex items to flow onto new lines if needed. By default, flex items stretch to be as tall as their container. By setting a {{cssxref("height")}}, even the empty flex items will be `100px` tall.
+
+To better demonstrate the `column-gap` property, the flex items in this example have two different width values. The width of the flex items is set within the `<div>` flex items. We use the {{cssxref("flex-basis")}} component of the {{cssxref("flex")}} shorthand property to make all the flex items `200px` wide. We then target every third flex item by using the {{cssxref(":nth-of-type", ":nth-of-type(3n)")}} selector, widening them to `300px`.
+
+The `column-gap` value is set as `20px` on the flex container to create a `20px` gap between the adjacent flex items in each row.
+
 ```css
-#flexbox {
+.flexbox {
   display: flex;
+  flex-flow: row wrap;
   height: 100px;
   column-gap: 20px;
 }
 
-#flexbox > div {
+.flexbox > div {
   border: 1px solid green;
   background-color: lime;
-  flex: auto;
+  flex: 200px;
+}
+div:nth-of-type(3n) {
+  flex: 300px;
 }
 ```
 
 #### Result
 
-{{EmbedLiveSample("Flex_layout", "auto", "120px")}}
+{{EmbedLiveSample("Flex_layout", "auto", "220px")}}
+
+> [!NOTE]
+> While there is horizontal space between adjacent flex items in each flex row, there is no space between the rows. To set vertical space between flex rows, you can specify a non-zero value for the {{cssxref("row-gap")}} property. The {{cssxref("gap")}} shorthand property is also available to set both the `row-gap` and `column-gap` in one declaration, in that order.
 
 ### Grid layout
 
@@ -100,6 +113,9 @@ The `column-gap` property is specified as one of the values listed below.
 
 ```html
 <div id="grid">
+  <div></div>
+  <div></div>
+  <div></div>
   <div></div>
   <div></div>
   <div></div>
@@ -125,7 +141,7 @@ The `column-gap` property is specified as one of the values listed below.
 
 #### Result
 
-{{EmbedLiveSample("Grid_layout", "auto", "120px")}}
+{{EmbedLiveSample("Grid_layout", "auto", "220px")}}
 
 ### Multi-column layout
 
@@ -133,9 +149,8 @@ The `column-gap` property is specified as one of the values listed below.
 
 ```html
 <p class="content-box">
-  This is some multi-column text with a 40px column
-  gap created with the CSS `column-gap` property.
-  Don't you think that's fun and exciting? I sure do!
+  This is some multi-column text with a 40px column gap created with the CSS
+  `column-gap` property. Don't you think that's fun and exciting? I sure do!
 </p>
 ```
 
@@ -162,6 +177,7 @@ The `column-gap` property is specified as one of the values listed below.
 
 ## See also
 
-- Related CSS properties: {{CSSxRef("row-gap")}}, {{CSSxRef("gap")}}
-- Grid Layout Guide: _[Basic concepts of grid layout - Gutters](/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#gutters)_
-- Multi-column Layout Guide: _[Styling Columns](/en-US/docs/Web/CSS/CSS_Columns/Styling_Columns)_
+- {{CSSxRef("row-gap")}}
+- {{CSSxRef("gap")}}
+- [Basic concepts of grid layout: gutters](/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#gutters)
+- [Styling Columns](/en-US/docs/Web/CSS/CSS_multicol_layout/Styling_columns)

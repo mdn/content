@@ -1,30 +1,24 @@
 ---
-title: Cache.add()
+title: "Cache: add() method"
+short-title: add()
 slug: Web/API/Cache/add
 page-type: web-api-instance-method
-tags:
-  - API
-  - Cache
-  - Method
-  - Reference
-  - Service Workers
-  - Service worker API
-  - ServiceWorker
 browser-compat: api.Cache.add
 ---
-{{APIRef("Service Workers API")}}
+
+{{APIRef("Service Workers API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`add()`** method of the {{domxref("Cache")}} interface takes a URL, retrieves it, and adds the resulting response object to the given cache.
 
 The `add()` method is functionally equivalent to the following:
 
 ```js
-fetch(url).then(function(response) {
+fetch(url).then((response) => {
   if (!response.ok) {
-    throw new TypeError('bad response status');
+    throw new TypeError("bad response status");
   }
   return cache.put(url, response);
-})
+});
 ```
 
 For more complex operations, you'll need to use {{domxref("Cache.put","Cache.put()")}} directly.
@@ -33,14 +27,17 @@ For more complex operations, you'll need to use {{domxref("Cache.put","Cache.put
 
 ## Syntax
 
-```js
+```js-nolint
 add(request)
 ```
 
 ### Parameters
 
 - `request`
-  - : The request you want to add to the cache. This can be a {{domxref("Request")}} object or a URL.
+
+  - : A request for the resource you want to add to the cache. This can be a {{domxref("Request")}} object or a URL.
+
+    This parameter is used as a parameter to the {{domxref("Request.Request()", "Request()")}} constructor, so URLs follow the same rules as for that constructor. In particular, URLs may be relative to the base URL, which is the document's {{domxref("Node.baseURI", "baseURI")}} in a window context, or {{domxref("WorkerGlobalScope.location")}} in a worker context.
 
 ### Return value
 
@@ -56,15 +53,11 @@ A {{jsxref("Promise")}} that resolves with `undefined`.
 
 ## Examples
 
-This code block waits for an {{domxref("InstallEvent")}} to fire, then calls {{domxref("ExtendableEvent.waitUntil","waitUntil()")}} to handle the install process for the app. This consists of calling {{domxref("CacheStorage.open")}} to create a new cache, then using {{domxref("Cache.add")}} to add an asset to it.
+This code block waits for an {{domxref("InstallEvent")}} to fire, then calls {{domxref("ExtendableEvent.waitUntil","waitUntil()")}} to handle the install process for the app. This consists of calling {{domxref("CacheStorage.open")}} to create a new cache, then using `Cache.add` to add an asset to it.
 
 ```js
-this.addEventListener('install', function(event) {
-  event.waitUntil(
-    caches.open('v1').then(function(cache) {
-      return cache.add('/sw-test/index.html');
-    })
-  );
+this.addEventListener("install", (event) => {
+  event.waitUntil(caches.open("v1").then((cache) => cache.add("/index.html")));
 });
 ```
 
@@ -80,4 +73,4 @@ this.addEventListener('install', function(event) {
 
 - [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - {{domxref("Cache")}}
-- {{domxref("caches")}}
+- {{domxref("Window.caches")}} and {{domxref("WorkerGlobalScope.caches")}}

@@ -1,16 +1,13 @@
 ---
-title: 'aria-keyshortcuts'
+title: aria-keyshortcuts
 slug: Web/Accessibility/ARIA/Attributes/aria-keyshortcuts
-tags:
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - ARIA property
-  - aria-keyshortcuts
+page-type: aria-attribute
 spec-urls:
   - https://w3c.github.io/aria/#aria-keyshortcuts
-  - https://w3c.github.io/aria-practices/#kbd_shortcuts
+  - https://www.w3.org/WAI/ARIA/apg/practices/keyboard-interface/
 ---
+
+{{AccessibilitySidebar}}
 
 The global `aria-keyshortcuts` attribute indicates keyboard shortcuts that an author has implemented to activate or give focus to an element.
 
@@ -22,7 +19,7 @@ The `aria-keyshortcuts` attribute exposes the existence of the shortcut to assis
 
 Keyboard shortcuts applied to disabled elements should also be disabled. For example, when disabling an element for mouse users, remember to disable it for keyboard shortcut users.
 
-Ensure all keyboard shortcuts are both visible to sighted users and made available to assistive technology. If your application is complex enough to need keyboard shortcuts, also known as "hot keys", include a guided tour of your application, an accessibility page documenting shortcuts and other accessibility features, a shortcut cheat sheet page or dialog pop up, or other method of making the availability of keyboard short cuts known.  In addition, show the shortcut in menus and tooltips.
+Ensure all keyboard shortcuts are both visible to sighted users and made available to assistive technology. If your application is complex enough to need keyboard shortcuts, also known as "hot keys", include a guided tour of your application, an accessibility page documenting shortcuts and other accessibility features, a shortcut cheat sheet page or dialog pop up, or other method of making the availability of keyboard short cuts known. In addition, show the shortcut in menus and tooltips.
 
 ### Property value rules
 
@@ -30,7 +27,7 @@ The value of the `aria-keyshortcuts` attribute is a space-separated list of key 
 
 Examples of valid keyboard shortcuts include:
 
-```html
+```plain
 aria-keyshortcuts="A"
 aria-keyshortcuts="Shift+Space"
 aria-keyshortcuts="Control+Alt+."
@@ -47,11 +44,11 @@ Since the plus sign is used in writing key combinations, it is written as `plus`
 
 If you want to use a character that might cause problems, like a double quote character within double quotes, escape the character: `Control+&#39;`.
 
-Modifier keys must be listed first in each key combination. Possible key combinations include `Control+P` or `Shift+Space` and `Q`. If the full shortcut requires all three of these combinations in order, it would be written as `aria-keyshortcuts="Control+P Shift+Space Q"`.  When a key combination includes more than one modifier key, the order of the modifiers doesn't matter, but they all must come first, before the non-modifier.
+Modifier keys must be listed first in each key combination. Possible key combinations include `Control+P` or `Shift+Space` and `Q`. If the full shortcut requires all three of these combinations in order, it would be written as `aria-keyshortcuts="Control+P Shift+Space Q"`. When a key combination includes more than one modifier key, the order of the modifiers doesn't matter, but they all must come first, before the non-modifier.
 
 These two attribute declarations are equivalent.
 
-```html example-good
+```plain example-good
 aria-keyshortcuts="Shift+Control+V"
 aria-keyshortcuts="control+shift+v"
 ```
@@ -60,7 +57,7 @@ Note that text case doesn't matter. But order of non-modifier does.
 
 These two attribute declarations are invalid because the non-modifier must be last.
 
-```html example-bad
+```plain example-bad
 aria-keyshortcuts="V+Shift+Control"
 aria-keyshortcuts="V+Control+Shift"
 ```
@@ -69,31 +66,34 @@ The key combination listed must be the keys the user needs to press, not the out
 
 ### Best practices
 
-In trying to improve the accessibility of your sites and applications, there are so best practices to follow to ensure your "enhancements" don't negatively impact user experience. Remember, no ARIA is better than bad ARIA.
+In trying to improve the accessibility of your sites and applications, there are some best practices to follow to ensure your "enhancements" don't negatively impact user experience. Remember, no ARIA is better than bad ARIA.
 
 #### Don't override browser, assistive technology, or operating system shortcuts
 
-When implementing keyboard shortcuts, make sure you don't create shortcuts that are already being used by the browser, assistive technology, or operating system, unless they are used for the same thing. For example, `"Control+P"` is used by most user-agents to initiate print functionality. Generally a web application should not create a "Control+P" shortcut as it will usurp browser functionality. There are exceptions. Web applications where printing is common, like email applications or Google Docs, usurping the browser's `"Control+P"` printing functionality for an application specific print flow would be expected.
+When implementing keyboard shortcuts, make sure you don't create shortcuts that are already being used by the browser, assistive technology, or operating system, unless they are used for the same thing. For example, `"Control+P"` is used by most user-agents to initiate print functionality. Generally a web application should not create a "Control+P" shortcut as it will usurp browser functionality. There are exceptions. Web applications where printing is common, like email applications or document editors, usurping the browser's `"Control+P"` printing functionality for an application specific print flow would be expected.
 
-Unless you're creating an HTML version of a productivity application, you should likely avoid implementing keyboard shortcut.  While overriding an operating system or browser keyboard shortcut can be annoying for non-assistive technology users, if you override a screen reader's keyboard functionality you can completely shut down access for the assistive technology user. If you must create keyboard shortcuts, avoid single letter keyboard shortcuts and common screen reader keyboard shortcuts.
+Unless you're creating an HTML version of a productivity application, you should likely avoid implementing keyboard shortcut. While overriding an operating system or browser keyboard shortcut can be annoying for non-assistive technology users, if you override a screen reader's keyboard functionality you can completely shut down access for the assistive technology user. If you must create keyboard shortcuts, avoid single letter keyboard shortcuts and common screen reader keyboard shortcuts.
 
 #### Consider language and keyboard differences
 
 Take into account the diversity of available keyboards and the various keyboard language preferences. Modifier keys are often used to create language specific common punctuation symbols and number characters. For example, numbers, when the keyboard language preference is set to French (France), use the Shift key.
 
-#### **Don't** use HTML instead
+#### Don't use HTML instead
 
-The `aria-keyshortcuts` attribute is very similar to the [problematic](https://webaim.org/techniques/keyboard/accesskey#spec) HTML {{htmlattrxref('accesskey')}}, which generates a keyboard shortcut for the current element. When an `accesskey` is defined for an element, the browser defines the modifiers and does all the work of handling the shortcut with no scripting required. Every browser and operating system combination has their own modifier keys for the non-modifier set in the `accesskey` attribute. What may work for one combination of operating system, assistive technology, and browser may not work with other combinations. With `aria-keyshortcuts`, the modifier keys are included in the attribute value list of key combinations and the functionality has to be scripted in.
+The `aria-keyshortcuts` attribute is very similar to the [problematic](https://webaim.org/techniques/keyboard/accesskey#spec) HTML [`accesskey`](/en-US/docs/Web/HTML/Global_attributes/accesskey), which generates a keyboard shortcut for the current element. When an `accesskey` is defined for an element, the browser defines the modifiers and does all the work of handling the shortcut with no scripting required. Every browser and operating system combination has their own modifier keys for the non-modifier set in the `accesskey` attribute. What may work for one combination of operating system, assistive technology, and browser may not work with other combinations. With `aria-keyshortcuts`, the modifier keys are included in the attribute value list of key combinations and the functionality has to be scripted in.
 
 ```html
-<p>If you need to relax, press the
-<strong><u>S</u></strong>tress reliever!</p>
+<p>
+  Press the
+  <strong><u>S</u></strong
+  >tress reliever to relax!
+</p>
 <button accesskey="s">Stress reliever</button>
 ```
 
-In this example, we ensured the presence of the shortcut was known to sited users a well by highlighting the non-modifier character.
+In this example, we ensured the presence of the shortcut was known to sighted users a well by highlighting the non-modifier character.
 
-While the goal of the `accesskey` attribute matches the intention of `aria-keyshortcuts` and to do so natively, `accesskey` is rife with issues. Because of these issues, it is generally advised not to use accesskeys for most general-purpose websites and web apps.
+While the goal of the `accesskey` attribute matches the intention of `aria-keyshortcuts` and to do so natively, `accesskey` is rife with issues. Because of these issues, it is generally advised not to use access keys for most general-purpose websites and web apps.
 
 In addition to poor browser support, the same concerns arise for `accesskey` as exist for `aria-keyshortcuts`:
 
@@ -115,7 +115,7 @@ In this example, the `aria-keyshortcuts` attribute on the element is set to "Alt
 <a href="#content" aria-keyshortcuts="Alt+Shift+A">Skip to content</a>
 ```
 
-## ARIAMixin API
+## Associated interfaces
 
 - {{domxref("Element.ariaKeyShortcuts")}}
   - : The [`ariaKeyShortcuts`](/en-US/docs/Web/API/Element/ariaKeyShortcuts) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-keyshortcuts` attribute.
@@ -130,13 +130,8 @@ Used in **ALL** roles.
 
 {{Specifications}}
 
-## See Also
+## See also
 
-- [`aria-keyshortcuts` best practices](https://www.w3.org/TR/wai-aria-practices-1.2/#kbd_shortcuts)
-- HTML {{htmlattrxref('accesskey')}} attribute
+- [Keyboard Shortcuts](https://www.w3.org/WAI/ARIA/apg/practices/keyboard-interface/#keyboardshortcuts) section in ARIA Authoring Practices
+- HTML [`accesskey`](/en-US/docs/Web/HTML/Global_attributes/accesskey) attribute
 - [Issues with `accesskey`](https://webaim.org/techniques/keyboard/accesskey#spec)
-
-<section id="Quick_links">
-<strong><a href="/en-US/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA states and properties</a></strong>
-{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/aria/Attributes")}}
-</section>

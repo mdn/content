@@ -1,41 +1,46 @@
 ---
 title: Date.prototype.getUTCDate()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCDate
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.getUTCDate
 ---
+
 {{JSRef}}
 
-The **`getUTCDate()`** method returns the day of the month(from
-1 to 31) in the specified date according to universal time.
+The **`getUTCDate()`** method of {{jsxref("Date")}} instances returns the day of the month for this date according to universal time.
 
-{{EmbedInteractiveExample("pages/js/date-getutcdate.html")}}
+{{InteractiveExample("JavaScript Demo: Date.getUTCDate()")}}
+
+```js interactive-example
+const date1 = new Date("August 19, 1975 23:15:30 GMT+11:00");
+const date2 = new Date("August 19, 1975 23:15:30 GMT-11:00");
+
+console.log(date1.getUTCDate());
+// Expected output: 19
+
+console.log(date2.getUTCDate());
+// Expected output: 20
+```
 
 ## Syntax
 
-```js
+```js-nolint
 getUTCDate()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
-A `number`.
-If the `Date` object represents a valid date, an integer number ranging from 1 to 31
-representing day of month for the given date, according to universal time.
-Otherwise, [`NaN`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/NaN)
-if the `Date` object doesn't represent a valid date.
+An integer, between 1 and 31, representing day of month for the given date according to universal time. Returns `NaN` if the date is [invalid](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date).
 
 ## Examples
 
 ### Using getUTCDate()
 
-The following example assigns the day of month of the current date to the variable
-`dayOfMonth`.
+The following example assigns the day of month of the current date to the variable `dayOfMonth`.
 
 ```js
 const today = new Date();
@@ -52,6 +57,6 @@ const dayOfMonth = today.getUTCDate();
 
 ## See also
 
-- {{jsxref("Date.prototype.getUTCDate()")}}
+- {{jsxref("Date.prototype.getUTCDay()")}}
 - {{jsxref("Date.prototype.getDay()")}}
 - {{jsxref("Date.prototype.setUTCDate()")}}

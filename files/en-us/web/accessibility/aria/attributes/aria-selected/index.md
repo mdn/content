@@ -1,15 +1,12 @@
 ---
 title: aria-selected
 slug: Web/Accessibility/ARIA/Attributes/aria-selected
-tags:
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - ARIA property
-  - aria-selected
-  - Reference
+page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-selected
 ---
+
+{{AccessibilitySidebar}}
+
 The `aria-selected` attribute indicates the current "selected" state of various widgets.
 
 ## Description
@@ -42,7 +39,7 @@ If the grid supports column selection and a column is selected, all cells in the
 
 In a tablist, `aria-selected` is used on a tab to indicate the currently-displayed [`tabpanel`](/en-US/docs/Web/Accessibility/ARIA/Roles/tabpanel_role).
 
-The selected [`tab`](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role) in a [`tablist`](/en-US/docs/Web/Accessibility/ARIA/Roles/tablist_role) should have has its `aria-selected="true"` set. All inactive tabs in the tablist should have `aria-selected="false"` set. Setting the state only impacts the accessibility tree: make sure to style the active tab in a way that visual indicates it's selected state. The default value for `aria-selected` on a `tab` role is `false`.
+The selected [`tab`](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role) in a [`tablist`](/en-US/docs/Web/Accessibility/ARIA/Roles/tablist_role) should have the attribute `aria-selected="true"` set. All inactive tabs in the tablist should have `aria-selected="false"` set. Setting the state only impacts the accessibility tree: make sure to style the active tab in a way that visual indicates it's selected state. The default value for `aria-selected` on a `tab` role is `false`.
 
 If more than one tab is selectable at a time, include `aria-multiselectable` on the `tablist`.
 
@@ -53,18 +50,30 @@ In this `tablist` example, the first `tab` is selected:
 ```html
 <div class="tab-interface">
   <div role="tablist" aria-label="Sample Tabs">
-    <span role="tab" aria-selected="true" aria-controls="panel-1"
-      id="tab-1" tabindex="0">
-          First Tab
-        </span>
-    <span role="tab" aria-selected="false" aria-controls="panel-2"
-      id="tab-2" tabindex="-1">
-          Second Tab
-        </span>
-    <span role="tab" aria-selected="false" aria-controls="panel-3"
-      id="tab-3" tabindex="-1">
-          Third Tab
-        </span>
+    <span
+      role="tab"
+      aria-selected="true"
+      aria-controls="panel-1"
+      id="tab-1"
+      tabindex="0">
+      First Tab
+    </span>
+    <span
+      role="tab"
+      aria-selected="false"
+      aria-controls="panel-2"
+      id="tab-2"
+      tabindex="-1">
+      Second Tab
+    </span>
+    <span
+      role="tab"
+      aria-selected="false"
+      aria-controls="panel-3"
+      id="tab-3"
+      tabindex="-1">
+      Third Tab
+    </span>
   </div>
   <div id="panel-1" role="tabpanel" tabindex="0" aria-labelledby="tab-1">
     <p>Content for the first panel</p>
@@ -78,7 +87,8 @@ In this `tablist` example, the first `tab` is selected:
 </div>
 ```
 
-> **Note:** ARIA only modifies the accessibility tree for an element and how assistive technology presents the content to users. ARIA doesn't change anything about an element's function or behavior.
+> [!NOTE]
+> ARIA only modifies the accessibility tree for an element and how assistive technology presents the content to users. ARIA doesn't change anything about an element's function or behavior.
 
 ## Values
 
@@ -89,7 +99,7 @@ In this `tablist` example, the first `tab` is selected:
 - `undefined` (default)
   - : The element is not selectable.
 
-## ARIAMixin API
+## Associated interfaces
 
 - {{domxref("Element.ariaSelected")}}
   - : The [`ariaSelected`](/en-US/docs/Web/API/Element/ariaSelected) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-selected` attribute.
@@ -115,12 +125,7 @@ Inherited into roles:
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [`aria-pressed`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-pressed)
 - [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-checked)
-
-<section id="Quick_links">
-<strong><a href="/en-US/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA states and properties</a></strong>
-{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/aria/Attributes")}}
-</section>

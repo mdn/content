@@ -1,16 +1,9 @@
 ---
 title: Tiles and tilemaps overview
 slug: Games/Techniques/Tilemaps
-tags:
-  - 2D
-  - Canvas
-  - Games
-  - JavaScript
-  - Static
-  - WebGL
-  - tilemap
-  - tiles
+page-type: guide
 ---
+
 {{GamesSidebar}}
 
 Tilemaps are a very popular technique in 2D game development, consisting of building the game world or level map out of small, regular-shaped images called **tiles**. This results in performance and memory usage gains — big image files containing entire level maps are not needed, as they are constructed by small images or image fragments multiple times. This set of articles covers the basics of creating tile maps using [JavaScript](/en-US/docs/Web/JavaScript) and [Canvas](/en-US/docs/Web/API/Canvas_API) (although the same high level techniques could be used in any programming language.)
@@ -37,7 +30,8 @@ It is common to group all the information needed to handle tilemaps into the sam
 - **Visual grid**: Includes indices showing what type of tile should be placed on each position in the grid.
 - **Logic grid**: This can be a collision grid, a path-finding grid, etc., depending on the type of game.
 
-> **Note:** For the visual grid, a special value (usually a negative number, `0` or `null`) is needed to represent empty tiles.
+> [!NOTE]
+> For the visual grid, a special value (usually a negative number, `0` or `null`) is needed to represent empty tiles.
 
 ## Square tiles
 
@@ -53,11 +47,11 @@ A tilemap can either fit into the visible screen area screen or be larger. In th
 Rendering static tilemaps is easy, and can be done with a nested loop iterating over columns and rows. A high-level algorithm could be:
 
 ```js
-for (var column = 0; column < map.columns; column++) {
-  for (var row = 0; row < map.rows; row++) {
-    var tile = map.getTile(column, row);
-    var x = column * map.tileSize;
-    var y = row * map.tileSize;
+for (let column = 0; column < map.columns; column++) {
+  for (let row = 0; row < map.rows; row++) {
+    const tile = map.getTile(column, row);
+    const x = column * map.tileSize;
+    const y = row * map.tileSize;
     drawTile(tile, x, y);
   }
 }
@@ -79,11 +73,11 @@ Here are examples showing how to translate from world coordinates to screen coor
 // these functions assume that the camera points to the top left corner
 
 function worldToScreen(x, y) {
-  return {x: x - camera.x, y: y - camera.y};
+  return { x: x - camera.x, y: y - camera.y };
 }
 
-function screenToWorld(x,y) {
-  return {x: x + camera.x, y: y + camera.y};
+function screenToWorld(x, y) {
+  return { x: x + camera.x, y: y + camera.y };
 }
 ```
 
@@ -101,19 +95,20 @@ If characters or other game sprites are drawn in the middle of the layer stack, 
 
 The following screenshot shows an example of both points: a character appearing _behind_ a tile (the knight appearing behind the top of a tree) and a tile (the bush) being rendered over different terrain types.
 
-![](screen_shot_2015-10-06_at_15.56.05.png)
+![A grid of layered background terrains. A bush tile is rendered at the top, over a large grass terrain, and again over a layered rectangular terrain with brown sand at the bottom. A tree tile is rendered over the grass terrain at the bottom left and again at the bottom right. A knight tile appears behind the tree tile that is rendered at the bottom left.](screen_shot_2015-10-06_at_15.56.05.png)
 
 ### The logic grid
 
 Since tilemaps are an actual grid of visual tiles, it is common to create a mapping between this visual grid and a logic grid. The most common case is to use this logic grid to handle collisions, but other uses are possible as well: character spawning points, detecting whether some elements are placed together in the right way to trigger a certain action (like in _Tetris_ or _Bejeweled_), path-finding algorithms, etc.
 
-> **Note:** You can take a look at our demo that shows [how to use a logic grid to handle collisions](https://mozdevs.github.io/gamedev-js-tiles/square/logic-grid.html).
+> [!NOTE]
+> You can take a look at our demo that shows [how to use a logic grid to handle collisions](https://mozdevs.github.io/gamedev-js-tiles/square/logic-grid.html).
 
 ## Isometric tilemaps
 
 Isometric tilemaps create the illusion of a 3D environment, and are extremely popular in 2D simulation, strategy, or RPG games. Some of these games include _SimCity 2000_, _Pharaoh_, or _Final Fantasy Tactics_. The below image shows an example of an atlas for an isometric tileset.
 
-![](iso_tiles.png)
+![A 3x4 map of variously colored tiles in isometric projection](iso_tiles.png)
 
 ## Performance
 
@@ -125,7 +120,7 @@ One way consists of [drawing the section that will be visible off-canvas](https:
 
 A caveat of that approach is that when there _is_ a scrolling, that technique is not very efficient. A better way would be to create a canvas that is 2x2 tiles bigger than the visible area, so there is one tile of "bleeding" around the edges. That means that the map only needs to be redrawn on the canvas when the scrolling has advanced one full tile — instead of every frame — while scrolling.
 
-In fast games that might still not be enough.  An alternative method would be to split the tilemap into big sections (like a full map split into 10 x 10 chunks of tiles), pre-render each one off-canvas and then treat each rendered section as a "big tile" in combination with one of the algorithms discussed above.
+In fast games that might still not be enough. An alternative method would be to split the tilemap into big sections (like a full map split into 10 x 10 chunks of tiles), pre-render each one off-canvas and then treat each rendered section as a "big tile" in combination with one of the algorithms discussed above.
 
 ## See also
 
@@ -137,5 +132,5 @@ In fast games that might still not be enough.  An alternative method would be to
 - External resources:
 
   - [Demos and source code](https://mozdevs.github.io/gamedev-js-tiles/)
-  - [Amit's thoughts on grids](http://www-cs-students.stanford.edu/~amitp/game-programming/grids/)
-  - [Isometric graphics in videogames](https://en.wikipedia.org/wiki/Isometric_graphics_in_video_games_and_pixel_art) (Wikipedia)
+  - [Grid parts and relationships](https://www.redblobgames.com/grids/parts/) by Amit Patel (May 2021)
+  - [Isometric graphics in video games](https://en.wikipedia.org/wiki/Isometric_graphics_in_video_games_and_pixel_art) (Wikipedia)

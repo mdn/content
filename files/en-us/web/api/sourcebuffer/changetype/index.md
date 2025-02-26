@@ -1,22 +1,12 @@
 ---
-title: SourceBuffer.changeType()
+title: "SourceBuffer: changeType() method"
+short-title: changeType()
 slug: Web/API/SourceBuffer/changeType
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - MSE
-  - Media
-  - Media Source
-  - Media Source Extensions
-  - Method
-  - Non-standard
-  - SourceBuffer
-  - Video
-  - changeType
 browser-compat: api.SourceBuffer.changeType
 ---
-{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}{{Non-standard_Header}}
+
+{{APIRef("Media Source Extensions")}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`changeType()`** method of the
 {{domxref("SourceBuffer")}} interface sets the MIME type that future calls to
@@ -30,7 +20,7 @@ constraints change.
 
 ## Syntax
 
-```js
+```js-nolint
 changeType(type)
 ```
 
@@ -61,10 +51,13 @@ None ({{jsxref("undefined")}}).
 
 ## Usage notes
 
-If the parent {{domxref("MediaSource")}} is in its `"ended"`
-{{domxref("MediaSource.readyState", "readyState")}}, calling `changeType()`
-will transition the media source to the `"open"` `readyState` and
-fire a simple event named {{domxref("MediaSource.sourceopen_event", "sourceopen")}} at the parent media source.
+If the {{domxref("MediaSource.readyState", "readyState")}} property of the parent {{domxref("MediaSource")}} is set to `"ended"`, calling `changeType()`
+will set the `readyState` property to `"open"` and
+fire an event named {{domxref("MediaSource.sourceopen_event", "sourceopen")}} at the parent media source.
+
+## Specifications
+
+{{Specifications}}
 
 ## Browser compatibility
 

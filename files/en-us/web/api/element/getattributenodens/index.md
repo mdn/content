@@ -1,28 +1,32 @@
 ---
-title: Element.getAttributeNodeNS()
+title: "Element: getAttributeNodeNS() method"
+short-title: getAttributeNodeNS()
 slug: Web/API/Element/getAttributeNodeNS
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Method
-  - Reference
 browser-compat: api.Element.getAttributeNodeNS
 ---
+
 {{ APIRef("DOM") }}
 
-Returns the `Attr` node for the attribute with the given namespace and name.
+The **`getAttributeNodeNS()`** method of the {{domxref("Element")}} interface returns the namespaced {{domxref("Attr")}} node of an element.
+
+This method is useful if you need the namespaced attribute's [instance properties](/en-US/docs/Web/API/Attr#instance_properties).
+If you only need the namespaced attribute's value, you can use the {{domxref("Element.getAttributeNS()", "getAttributeNS()")}} method instead.
+
+If you need the {{domxref("Attr")}} node of an element in HTML documents and the attribute is not namespaced, use the {{domxref("Element.getAttributeNode()", "getAttributeNode()")}} method instead.
 
 ## Syntax
 
-```js
+```js-nolint
 getAttributeNodeNS(namespace, nodeName)
 ```
 
 ### Parameters
 
-- `namespace` is a string specifying the namespace of the attribute.
-- `nodeName` is a string specifying the name of the attribute.
+- `namespace`
+  - : A string specifying the namespace of the attribute.
+- `nodeName`
+  - : A string specifying the name of the attribute.
 
 ### Return value
 
@@ -30,9 +34,7 @@ The node for specified attribute.
 
 ## Notes
 
-`getAttributeNodeNS` is more specific than [getAttributeNode](getAttributeNode) in that it allows you to specify attributes that are part of a particular namespace. The corresponding setter method is [setAttributeNodeNS](/en-US/docs/Web/API/Element/setAttributeNodeNS).
-
-{{ DOMAttributeMethods() }}
+`getAttributeNodeNS` is more specific than [getAttributeNode](/en-US/docs/Web/API/Element/getAttributeNode) in that it allows you to specify attributes that are part of a particular namespace. The corresponding setter method is [setAttributeNodeNS](/en-US/docs/Web/API/Element/setAttributeNodeNS).
 
 ## Specifications
 
@@ -41,3 +43,9 @@ The node for specified attribute.
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("Document.createAttribute()")}}
+- {{domxref("Document.createAttributeNS()")}}
+- {{domxref("Element.setAttributeNodeNS()")}}

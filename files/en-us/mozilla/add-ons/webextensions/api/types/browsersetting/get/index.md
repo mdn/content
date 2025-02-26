@@ -1,17 +1,10 @@
 ---
 title: get()
 slug: Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/get
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - Types
-  - WebExtensions
-  - get
+page-type: webextension-api-function
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 The `BrowserSetting.get()` method gets the current value of the browser setting, and an enumeration indicating how the setting's value is currently controlled.
 
@@ -19,7 +12,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let getting = setting.get(
   details     // object
 )
@@ -80,13 +73,11 @@ getting.then((got) => {
 
 {{WebExtExamples}}
 
-> **Note:**
->
-> This API is based on Chromium's [`chrome.types`](https://developer.chrome.com/docs/extensions/reference/types/) API.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.types`](https://developer.chrome.com/docs/extensions/reference/api/types) API.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -113,4 +104,4 @@ getting.then((got) => {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

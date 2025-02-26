@@ -1,18 +1,11 @@
 ---
 title: sidebarAction.setIcon()
 slug: Mozilla/Add-ons/WebExtensions/API/sidebarAction/setIcon
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - setIcon
-  - sidebarAction
+page-type: webextension-api-function
 browser-compat: webextensions.api.sidebarAction.setIcon
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 Sets the icon for the sidebar.
 
@@ -24,9 +17,9 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Types of icon
 
-Your extension should specify an icon for the sidebar in the [sidebar_action](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action) manifest key. This is called the _"manifest icon"_.
+Your extension should specify an icon for the sidebar in the [`sidebar_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action) manifest key. This is called the _"manifest icon"_.
 
-If you don't specify an icon in the sidebar_action key, you get the browser's default icon. This is called the _"default icon"_.
+If you don't specify an icon in the `sidebar_action` key, you get the browser's default icon. This is called the _"default icon"_.
 
 If you set a new icon using `setIcon()`, and include the `tabId` option, then the icon is set only for the given tab. This icon is called the _"tab-specific icon"_.
 
@@ -36,7 +29,7 @@ If you set a new icon using `setIcon()`, and omit both the `tabId` and `windowId
 
 ## Syntax
 
-```js
+```js-nolint
 let settingIcon = browser.sidebarAction.setIcon(
   details         // object
 )
@@ -50,15 +43,17 @@ let settingIcon = browser.sidebarAction.setIcon(
 
     - `imageData` {{optional_inline}}
 
-      - : `{{WebExtAPIRef('sidebarAction.ImageDataType')}}` or `object`. This is either a single `ImageData` object or a dictionary object.
+      - : {{WebExtAPIRef('sidebarAction.ImageDataType')}} or `object`. This is either a single `ImageData` object or a dictionary object.
 
         Use a dictionary object to specify multiple `ImageData` objects in different sizes, so the icon does not have to be scaled for a device with a different pixel density. If `imageData` is a dictionary, the value of each property is an `ImageData` object, and its name is its size, like this:
 
-        ```json
-        {
+        ```js
+        let settingIcon = browser.sidebarAction.setIcon({
+          imageData: {
             16: image16,
-            32: image32
-          }
+            32: image32,
+          },
+        });
         ```
 
         The browser will choose the image to use depending on the screen's pixel density. See [Choosing icon sizes](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#choosing_icon_sizes) for more information on this.
@@ -69,11 +64,13 @@ let settingIcon = browser.sidebarAction.setIcon(
 
         Use a dictionary object to specify multiple icon files in different sizes, so the icon does not have to be scaled for a device with a different pixel density. If `path` is a dictionary, the value of each property is a relative path, and its name is its size, like this:
 
-        ```json
-        {
+        ```js
+        let settingIcon = browser.sidebarAction.setIcon({
+          path: {
             16: "path/to/image16.jpg",
-            32: "path/to/image32.jpg"
-          }
+            32: "path/to/image32.jpg",
+          },
+        });
         ```
 
         The browser will choose the image to use depending on the screen's pixel density. See [Choosing icon sizes](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#choosing_icon_sizes) for more information on this.
@@ -115,13 +112,13 @@ function toggle(tab) {
   if (on) {
     browser.sidebarAction.setIcon({
       path: "off.svg",
-      tabId: tab.id
+      tabId: tab.id,
     });
     on = false;
   } else {
     browser.sidebarAction.setIcon({
       path: "on.svg",
-      tabId: tab.id
+      tabId: tab.id,
     });
     on = true;
   }
@@ -132,4 +129,5 @@ browser.browserAction.onClicked.addListener(toggle);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Opera's [`chrome.sidebarAction`](https://dev.opera.com/extensions/sidebar-action-api/) API.
+> [!NOTE]
+> This API is based on Opera's [`chrome.sidebarAction`](https://help.opera.com/en/extensions/sidebar-action-api/) API.

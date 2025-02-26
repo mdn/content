@@ -1,24 +1,18 @@
 ---
-title: Blob.stream()
+title: "Blob: stream() method"
+short-title: stream()
 slug: Web/API/Blob/stream
 page-type: web-api-instance-method
-tags:
-  - API
-  - Blob
-  - File API
-  - Method
-  - Reference
 browser-compat: api.Blob.stream
 ---
-{{APIRef("File API")}}
 
-The {{domxref("Blob")}} interface's
-**`stream()`** method returns a {{domxref("ReadableStream")}}
-which upon reading returns the data contained within the `Blob`.
+{{APIRef("File API")}}{{AvailableInWorkers}}
+
+The **`stream()`** method of the {{domxref("Blob")}} interface returns a {{domxref("ReadableStream")}} which upon reading returns the data contained within the `Blob`.
 
 ## Syntax
 
-```js
+```js-nolint
 stream()
 ```
 
@@ -46,9 +40,7 @@ several interesting capabilities:
   **tee** the readable stream. This returns an array containing two new
   `ReadableStream` objects, each of which returns the contents of the
   `Blob`.
-- Call the returned stream's {{domxref("ReadableStream.pipeThrough",
-    "pipeThrough()")}} method to pipe the stream through a {{domxref("TransformStream")}}
-  or any other readable and writable pair.
+- Call the returned stream's {{domxref("ReadableStream.pipeThrough", "pipeThrough()")}} method to pipe the stream through a {{domxref("TransformStream")}} or any other readable and writable pair.
 
 ## Specifications
 

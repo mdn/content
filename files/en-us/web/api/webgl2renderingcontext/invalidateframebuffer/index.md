@@ -1,16 +1,12 @@
 ---
-title: WebGL2RenderingContext.invalidateFramebuffer()
+title: "WebGL2RenderingContext: invalidateFramebuffer() method"
+short-title: invalidateFramebuffer()
 slug: Web/API/WebGL2RenderingContext/invalidateFramebuffer
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL2
 browser-compat: api.WebGL2RenderingContext.invalidateFramebuffer
 ---
-{{APIRef("WebGL")}}
+
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGL2RenderingContext.invalidateFramebuffer()`** method
 of the [WebGL 2 API](/en-US/docs/Web/API/WebGL_API) invalidates the contents
@@ -18,7 +14,7 @@ of attachments in a framebuffer.
 
 ## Syntax
 
-```js
+```js-nolint
 invalidateFramebuffer(target, attachments)
 ```
 
@@ -60,8 +56,10 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-gl.invalidateFramebuffer(gl.READ_FRAMEBUFFER,
-                         [gl.COLOR_ATTACHMENT0, gl.COLOR_ATTACHMENT1]);
+gl.invalidateFramebuffer(gl.READ_FRAMEBUFFER, [
+  gl.COLOR_ATTACHMENT0,
+  gl.COLOR_ATTACHMENT1,
+]);
 ```
 
 ## Specifications

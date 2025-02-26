@@ -1,31 +1,27 @@
 ---
 title: Generator.prototype.next()
 slug: Web/JavaScript/Reference/Global_Objects/Generator/next
-tags:
-  - ECMAScript 2015
-  - Generator
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Generator.next
 ---
+
 {{JSRef}}
 
-The **`next()`** method returns an
+The **`next()`** method of {{jsxref("Generator")}} instances returns an
 object with two properties `done` and `value`. You can also
 provide a parameter to the `next` method to send a value to the
 generator.
 
 ## Syntax
 
-```js
-generatorObject.next(value)
+```js-nolint
+next()
+next(value)
 ```
 
 ### Parameters
 
-- `value`
+- `value` {{optional_inline}}
 
   - : The value to send to the generator.
 
@@ -49,7 +45,7 @@ An {{jsxref("Object")}} with two properties:
 
 ### Using next()
 
-The following example shows a simple generator and the object that the
+The following example shows a generator and the object that the
 `next` method returns:
 
 ```js
@@ -59,11 +55,11 @@ function* gen() {
   yield 3;
 }
 
-const g = gen(); // "Generator { }"
-g.next();      // "Object { value: 1, done: false }"
-g.next();      // "Object { value: 2, done: false }"
-g.next();      // "Object { value: 3, done: false }"
-g.next();      // "Object { value: undefined, done: true }"
+const g = gen(); // Generator { }
+g.next(); // { value: 1, done: false }
+g.next(); // { value: 2, done: false }
+g.next(); // { value: 3, done: false }
+g.next(); // { value: undefined, done: true }
 ```
 
 ### Using next() with a list
@@ -73,24 +69,25 @@ In this example, `getPage` takes a list and "paginates" it into chunks of size `
 ```js
 function* getPage(list, pageSize = 1) {
   for (let index = 0; index < list.length; index += pageSize) {
-    yield list.slice(index, pageSize);
+    yield list.slice(index, index + pageSize);
   }
 }
 
-const list = [1, 2, 3, 4, 5, 6, 7, 8]
-const page = getPage(list, 3);            // Generator { }
+const list = [1, 2, 3, 4, 5, 6, 7, 8];
+const page = getPage(list, 3); // Generator { }
 
-page.next();                              // Object {value: (3) [1, 2, 3], done: false}
-page.next();                              // Object {value: (3) [4, 5, 6], done: false}
-page.next();                              // Object {value: (2) [7, 8], done: false}
-page.next();                              // Object {value: undefined, done: true}
+page.next(); // { value: [1, 2, 3], done: false }
+page.next(); // { value: [4, 5, 6], done: false }
+page.next(); // { value: [7, 8], done: false }
+page.next(); // { value: undefined, done: true }
 ```
 
 ### Sending values to the generator
 
 In this example, `next` is called with a value.
 
-> **Note:** The first call does not log anything, because the generator was not yielding anything initially.
+> [!NOTE]
+> The first call does not log anything, because the generator was not yielding anything initially.
 
 ```js
 function* gen() {
@@ -101,12 +98,10 @@ function* gen() {
 }
 
 const g = gen();
-g.next(1);
+g.next(1); // Returns { value: undefined, done: false }
 // No log at this step: the first value sent through `next` is lost
-// "{ value: null, done: false }"
-g.next(2);
-// 2
-// "{ value: null, done: false }"
+g.next(2); // Returns { value: undefined, done: false }
+// Logs 2
 ```
 
 ## Specifications
@@ -120,4 +115,4 @@ g.next(2);
 ## See also
 
 - {{jsxref("Statements/function*", "function*")}}
-- [Iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators)
+- [Iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators) guide

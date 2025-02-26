@@ -1,29 +1,27 @@
 ---
 title: Column combinator
 slug: Web/CSS/Column_combinator
-tags:
-  - CSS
-  - Experimental
-  - Reference
-  - Selector
-  - Selectors
-  - Tables
-browser-compat: css.selectors.column
+page-type: css-combinator
+status:
+  - experimental
+spec-urls: https://drafts.csswg.org/selectors/#selectordef-column
 ---
-{{CSSRef("Selectors")}}{{SeeCompatTable}}
+
+{{CSSRef}} {{SeeCompatTable}}
 
 The **column combinator** (`||`) is placed between two CSS selectors. It matches only those elements matched by the second selector that belong to the column elements matched by the first.
 
 ```css
 /* Table cells that belong to the "selected" column */
-col.selected || td {
+col.selected||td {
   background: gray;
 }
 ```
 
 ## Syntax
 
-```css
+```css-nolint
+/* The white space around the || combinator is optional but recommended. */
 column-selector || cell-selector {
   /* style properties */
 }
@@ -36,15 +34,16 @@ column-selector || cell-selector {
 ```html
 <table border="1">
   <colgroup>
-    <col span="2"/>
-    <col class="selected"/>
+    <col span="2" />
+    <col class="selected" />
   </colgroup>
   <tbody>
     <tr>
-      <td>A
-      <td>B
-      <td>C
+      <td>A</td>
+      <td>B</td>
+      <td>C</td>
     </tr>
+
     <tr>
       <td colspan="2">D</td>
       <td>E</td>
@@ -60,7 +59,7 @@ column-selector || cell-selector {
 ### CSS
 
 ```css
-col.selected || td {
+col.selected||td {
   background: gray;
   color: white;
   font-weight: bold;
@@ -77,12 +76,12 @@ col.selected || td {
 
 ## Browser compatibility
 
-{{Compat}}
+Currently, no browsers have implemented this feature.
 
 ## See also
 
 - {{HTMLElement("col")}}
 - {{HTMLElement("colgroup")}}
 - {{CSSxRef("grid")}}
-- {{CSSxRef(":nth-col")}}
-- {{CSSxRef(":nth-last-col")}}
+- {{CSSxRef(":nth-of-type")}}
+- {{CSSxRef(":nth-last-of-type")}}

@@ -1,12 +1,12 @@
 ---
 title: Updating web applications for Firefox 3
 slug: Mozilla/Firefox/Releases/3/Updating_web_applications
-tags:
-  - Firefox 3
+page-type: guide
 ---
+
 {{FirefoxSidebar}}
 
-There are a number of changes in the upcoming Firefox 3 that may affect your web site or web application, as well as new features you may wish to take advantage of. This article will serve as a starting point as you work on updating your content to take the fullest possible advantage of Firefox 3.
+There are a number of changes in the upcoming Firefox 3 that may affect your website or web application, as well as new features you may wish to take advantage of. This article will serve as a starting point as you work on updating your content to take the fullest possible advantage of Firefox 3.
 
 ## DOM changes
 
@@ -45,7 +45,7 @@ font-size values in em and ex units used to be affected by the user's minimum fo
 
 font-size values in em and ex units are now based on an "intended font size" that is not affected by the user's minimum font size. In other words, font sizes are always calculated according to the designer's intention and are adjusted for minimum font size afterwards.
 
-See {{Bug(434718)}}, especially its NOT A CASE FOR THE BUG TEMPLATE - The following link points to a Bugzilla attachment, not a Bugzilla bug; if you use the attachment number as a bug number, it becomes nonsense [attachment 322943](https://bug434718.bmoattachments.org/attachment.cgi?id=322943) NOT A CASE FOR THE BUG TEMPLATE for a demonstration (must be watched with a minimum font size >= 6 to see the difference: the two box cascades behave differently in Firefox 2, because the em-based font-size "bounces" off the minimum font size).
+See [Firefox bug 434718](https://bugzil.la/434718), especially its NOT A CASE FOR THE BUG TEMPLATE - The following link points to a Bugzilla attachment, not a Bugzilla bug; if you use the attachment number as a bug number, it becomes nonsense [attachment 322943](https://bug434718.bmoattachments.org/attachment.cgi?id=322943) NOT A CASE FOR THE BUG TEMPLATE for a demonstration (must be watched with a minimum font size >= 6 to see the difference: the two box cascades behave differently in Firefox 2, because the em-based font-size "bounces" off the minimum font size).
 
 ## Security changes
 
@@ -57,17 +57,18 @@ Firefox 3 only allows web content to access items in the `chrome://browser/` and
 
 There is, however, a way for extensions to make their content web-accessible. They can specify a special flag in their `chrome.manifest` file, like this:
 
-```
-content mypackage location/ contentaccessible=yes
+```plain
+content my-package location/ contentaccessible=yes
 ```
 
 This shouldn't be something you need to do very often, but it's available for those rare cases in which it's needed. Note that it's possible that Firefox may alert the user that your extension uses the `contentaccessible` flag in this way, as it does constitute a potential security risk.
 
-> **Note:** Because Firefox 2 doesn't understand the `contentaccessible` flag (it will ignore the entire line containing the flag), if you want your add-on to be compatible with both Firefox 2 and Firefox 3, you should do something like this:
+> [!NOTE]
+> Because Firefox 2 doesn't understand the `contentaccessible` flag (it will ignore the entire line containing the flag), if you want your add-on to be compatible with both Firefox 2 and Firefox 3, you should do something like this:
 >
 > ```bash
-> content mypackage location/
-> content mypackage location/ contentaccessible=yes
+> content my-package location/
+> content my-package location/ contentaccessible=yes
 >
 > ```
 
@@ -81,11 +82,11 @@ Using code in JAR files loaded from other domains is no longer allowed in frames
 
 ### Changes to same-origin policy for file: URIs
 
-The same-origin policy for file: URIs has changed in Firefox 3. This may affect your content; please see [Same-origin policy for file: URIs](/en-US/docs/Same-origin_policy_for_file:_URIs) for details.
+The same-origin policy for file: URIs has changed in Firefox 3. This may affect your content; please see [Same-origin policy for file: URIs](/en-US/docs/Web/Security/Same-origin_policy#file_origins) for details.
 
 ## JavaScript changes
 
-Firefox 3 supports [JavaScript 1.8](/en-US/docs/New_in_JavaScript_1.8). One important change that may require updates to your web site or application is that the obsolete and non-standard `Script` object is no longer supported. This is not the `<script>` tag, but a JavaScript object that was never standardized. It is unlikely this is something you ever used anyway, so you're probably fine.
+Firefox 3 supports [JavaScript 1.8](/en-US/docs/New_in_JavaScript_1.8). One important change that may require updates to your website or application is that the obsolete and non-standard `Script` object is no longer supported. This is not the `<script>` tag, but a JavaScript object that was never standardized. It is unlikely this is something you ever used anyway, so you're probably fine.
 
 ## See also
 

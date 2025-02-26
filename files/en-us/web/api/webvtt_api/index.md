@@ -1,792 +1,379 @@
 ---
-title: Web Video Text Tracks Format (WebVTT)
+title: WebVTT API
 slug: Web/API/WebVTT_API
 page-type: web-api-overview
-tags:
-  - API
-  - Intermediate
-  - Media
-  - NeedsMarkupWork
-  - NeedsUpdate
-  - Reference
-  - Video
-  - Web Video Text Tracks
-  - WebVTT
-  - captions
-  - subtitles
-  - text tracks
 browser-compat:
   - api.VTTCue
   - api.TextTrack
+  - api.VTTRegion
 ---
+
 {{DefaultAPISidebar("WebVTT")}}
 
-**Web Video Text Tracks Format** (**WebVTT**) is a format for displaying timed text tracks (such as subtitles or captions) using the {{HTMLElement("track")}} element. The primary purpose of WebVTT files is to add text overlays to a {{HTMLElement("video")}}. WebVTT is a text based format, which must be encoded using {{Glossary("UTF-8")}}. Where you can use spaces you can also use tabs. There is also a small API available to represent and manage these tracks and the data needed to perform the playback of the text at the correct times.
+**Web Video Text Tracks** (**WebVTT**) are text tracks providing specific text "cues" that are time-aligned with other media, such as video or audio tracks. The **WebVTT API** provides functionality to define and manipulate these text tracks.
+The WebVTT API is primarily used for displaying subtitles or captions that overlay with video content, but it has other uses: providing chapter information for easier navigation and generic metadata that needs to be time-aligned with audio or video content.
 
-## WebVTT files
+## Concepts and usage
 
-The MIME type of WebVTT is `text/vtt`.
+A text track is a container for time-aligned text data that can be played in parallel with a video or audio track to provide a translation, transcription, or overview of the content.
+A video or audio media element may define tracks of different kinds or in different languages, allowing users to display appropriate tracks based on their preferences or needs.
 
-A WebVTT file (`.vtt`) contains cues, which can be either a single line or multiple lines, as shown below:
+The different kinds of text data that can be specified are listed below.
+Note that browsers do not necessarily support all kinds of text tracks.
 
-```plain
-WEBVTT
+- `subtitles` provide a textual translation of spoken dialog.
+  This is the default type of text track, and if used, the source language must be specified.
+- `captions` provide a transcription of spoken text, and may include information about other audio such as music or background noise.
+  They are intended for hearing impaired users.
+- `chapters` provide high level navigation information, allowing users to more easily switch to relevant content.
+- `metadata` is used for any other kinds of time-aligned information.
 
-00:01.000 --> 00:04.000
-- Never drink liquid nitrogen.
+The individual time-aligned units of text data within a track are referred to as "cues".
+Each cue has a start time, end time, and textual payload.
+It may also have "cue settings", which affect its display region, position, alignment, and/or size.
+Lastly, a cue may have a label, which can be used to select it for CSS styling.
 
-00:05.000 --> 00:09.000
-- It will perforate your stomach.
-- You could die.
-```
+A text track and cues can be defined in a file using the [WebVTT File Format](/en-US/docs/Web/API/WebVTT_API/Web_Video_Text_Tracks_Format), and then associated with a particular {{HTMLElement("video")}} element using the {{HTMLElement("track")}} element.
 
-## WebVTT body
+Alternatively you can add a {{domxref("TextTrack")}} to a media element in JavaScript using [`HTMLMediaElement.addTextTrack()`](/en-US/docs/Web/API/HTMLMediaElement/addTextTrack), and then add individual {{domxref("VTTCue")}} objects to the track with {{domxref("TextTrack.addCue()")}}.
 
-The structure of a WebVTT consists of the following components, some of them optional, in this order:
+The {{cssxref("::cue")}} [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) can be used both in HTML and in a WebVTT file to style the cues for a particular element, for a particular tag within a cue, for a VTT class, or for a cue with a particular label.
+The `::cue-region` pseudo-element is intended for styling cues in a particular region, but is not supported in any browser.
 
-- An optional byte order mark (BOM).
-- The string "`WEBVTT`".
-- An optional text header to the right of `WEBVTT`.
+Most important WebVTT features can be accessed using either the file format or Web API.
 
-  - There must be at least one space after `WEBVTT`.
-  - You could use this to add a description to the file.
-  - You may use anything in the text header except newlines or the string "`-->`".
+## Interfaces
 
-- A blank line, which is equivalent to two consecutive newlines.
-- Zero or more cues or comments.
-- Zero or more blank lines.
+- {{domxref("VTTCue")}}
+  - : Represents a cue, the text displayed in a particular timeslice of the text track associated with a media element.
+- {{domxref("VTTRegion")}}
+  - : Represents a portion of a video element onto which a {{domxref("VTTCue")}} can be rendered.
+- {{domxref("TextTrack")}}
+  - : Represents a text track, which holds the list of cues to display along with an associated media element at various points while it plays.
+- {{domxref("TextTrackCue")}}
+  - : An abstract base class for various cue types, such as {{domxref("VTTCue")}}.
+- {{domxref("TextTrackCueList")}}
+  - : An array-like object that represents a dynamically updating list of {{domxref("TextTrackCue")}} objects.
+    An instance of this type is obtained from {{domxref('TextTrack.cues')}} in order to get all the cues in the {{domxref("TextTrack")}} object.
+- {{domxref("TextTrackList")}}
+  - : Represents a list of the text tracks defined for a media element, with each track represented by a separate {{domxref("TextTrack")}} instance in the list.
 
-##### Example 1 - Simplest possible WebVTT file
+### Related interfaces
 
-```plain
-WEBVTT
-```
+- {{domxref("TrackEvent")}}
+  - : Part of the HTML DOM API, this is the interface for the `addtrack` and `removetrack` events that are fired when a track is added or removed from {{domxref("TextTrackList")}} (or more generally, when a track is added/removed from an HTML media element).
 
-##### Example 2 - Very simple WebVTT file with a text header
+### Related CSS extensions
 
-```plain
-WEBVTT - This file has no cues.
-```
+These [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) are used to style cues in media with VTT tracks.
 
-##### Example 3 - Common WebVTT example with a header and cues
+- {{CSSxRef("::cue")}}
+  - : Matches cues within a selected element in media with VTT tracks.
 
-```plain
-WEBVTT - This file has cues.
+> [!NOTE]
+> The specification defines another pseudo-element, `::cue-region`, but this is not supported by any browsers.
 
-14
-00:01:14.815 --> 00:01:18.114
-- What?
-- Where are we now?
+## Examples
 
-15
-00:01:18.171 --> 00:01:20.991
-- This is big bat country.
+### Using the WebVTT API to add captions
 
-16
-00:01:21.058 --> 00:01:23.868
-- [ Bats Screeching ]
-- They won't get in your hair. They're after the bugs.
-```
+#### HTML
 
-### Inner structure of a WebVTT file
-
-Let's re-examine one of our previous examples, and look at the cue structure in a bit more detail.
-
-```plain
-WEBVTT
-
-00:01.000 --> 00:04.000
-- Never drink liquid nitrogen.
-
-00:05.000 --> 00:09.000
-- It will perforate your stomach.
-- You could die.
-```
-
-In the case of each cue:
-
-- The first line is started with a time, which is the starting time for showing the text that appears underneath.
-- On the same line, we then have a string of "`-->`".
-- We finish the first line with a second time, which is the ending time for showing the associated text.
-- We can then have one or more lines that start with a hyphen (-), each containing part of the text track to be shown.
-
-We can also place comments in our `.vtt` file, to help us remember important information about the parts of our file. These should be on separate lines, starting with the string `NOTE`. You'll find more about these in the below section.
-
-It is important to not use "extra" blank lines within a cue, for example between the timings line and the cue payload. WebVTT is line based; a blank line will close the cue.
-
-## WebVTT comments
-
-Comments are an optional component that can be used to add information to a WebVTT file. Comments are intended for those reading the file and are not seen by users. Comments may contain newlines but cannot contain a blank line, which is equivalent to two consecutive newlines. A blank line signifies the end of a comment.
-
-A comment cannot contain the string "`-->`", the ampersand character (&), or the less-than sign (<). If you wish to use such characters, you need to escape them using for example `&amp;` for ampersand and `&lt;` for less-than. It is also recommended that you use the greater-than escape sequence (`&gt;`) instead of the greater-than character (`>`) to avoid confusion with tags.
-
-A comment consists of three parts:
-
-- The string `NOTE`.
-- A space or a newline.
-- Zero or more characters other than those noted above.
-
-##### Example 4 - Common WebVTT example
-
-```plain
-NOTE This is a comment
-```
-
-##### Example 5 - Multi-line comment
-
-```plain
-NOTE
-One comment that is spanning
-more than one line.
-
-NOTE You can also make a comment
-across more than one line this way.
-```
-
-##### Example 6 - Common comment usage
-
-```plain
-WEBVTT - Translation of that film I like
-
-NOTE
-This translation was done by Kyle so that
-some friends can watch it with their parents.
-
-1
-00:02:15.000 --> 00:02:20.000
-- Ta en kopp varmt te.
-- Det är inte varmt.
-
-2
-00:02:20.000 --> 00:02:25.000
-- Har en kopp te.
-- Det smakar som te.
-
-NOTE This last line may not translate well.
-
-3
-00:02:25.000 --> 00:02:30.000
-- Ta en kopp
-```
-
-## Styling WebVTT cues
-
-You can style WebVTT cues by looking for elements which match the {{cssxref("::cue")}} pseudo-element.
-
-### Within site CSS
-
-```css
-video::cue {
-  background-image: linear-gradient(to bottom, dimgray, lightgray);
-  color: papayawhip;
-}
-
-video::cue(b) {
-  color: peachpuff;
-}
-```
-
-Here, all video elements are styled to use a gray linear gradient as their backgrounds, with a foreground color of `"papayawhip"`. In addition, text boldfaced using the {{HTMLElement("b")}} element are colored `"peachpuff"`.
-
-The HTML snippet below actually handles displaying the media itself.
+The following example adds a new {{domxref("TextTrack")}} to the video, then adds cues using {{domxref("TextTrack.addCue()")}} method calls, with constructed `VTTCue` objects as arguments.
 
 ```html
-<video controls autoplay src="video.webm">
- <track default src="track.vtt">
+<video
+  controls
+  src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/friday.mp4"></video>
+```
+
+#### CSS
+
+```css
+video {
+  width: 420px;
+  height: 300px;
+}
+```
+
+#### JavaScript
+
+```js
+let video = document.querySelector("video");
+let track = video.addTextTrack("captions", "Captions", "en");
+track.mode = "showing";
+track.addCue(new VTTCue(0, 0.9, "Hildy!"));
+track.addCue(new VTTCue(1, 1.4, "How are you?"));
+track.addCue(new VTTCue(1.5, 2.9, "Tell me, is the lord of the universe in?"));
+track.addCue(new VTTCue(3, 4.2, "Yes, he's in - in a bad humor"));
+track.addCue(new VTTCue(4.3, 6, "Somebody must've stolen the crown jewels"));
+console.log(track.cues);
+```
+
+#### Result
+
+{{EmbedLiveSample('Using the WebVTT API to add captions','400','330')}}
+
+### Displaying VTT content defined in a file
+
+This example demonstrates how to add the same set of captions to the video seen in the above [Using the WebVTT API to add captions](#using_the_webvtt_api_to_add_captions) example. This time, however, we will do it declaratively using a {{htmlelement("track")}} element.
+
+First, let's define the captions inside a "captions.vtt" file:
+
+```plain
+WEBVTT
+
+00:00.000 --> 00:00.900
+Hildy!
+
+00:01.000 --> 00:01.400
+How are you?
+
+00:01.500 --> 00:02.900
+Tell me, is the lord of the universe in?
+
+00:03.000 --> 00:04.200
+Yes, he's in - in a bad humor
+
+00:04.300 --> 00:06.000
+Somebody must've stolen the crown jewels
+```
+
+We can then add this to a {{HTMLElement("video")}} element using the {{HTMLElement("track")}} element.
+The following HTML would result in the same text track as the previous example:
+
+```html
+<video controls src="video.webm">
+  <track default kind="captions" src="captions.vtt" srclang="en" />
 </video>
 ```
 
-### Within the WebVTT file itself
+We can add multiple {{HTMLElement("track")}} elements to specify different kinds of tracks in multiple languages, using the `kind` and `srclang` attributes. Note that, if `kind` is specified, `srclang` _must_ be set too.
+The `default` attribute may be added to just one `<track>`: this is the one that will be played if user preferences don't specify a particular language or kind.
 
-You can also define the style directly in the WebVTT file. In this case, you insert your CSS rules into the file with each rule preceded by the string `"STYLE"` all by itself on a line of text, as shown below:
-
-```plain
-WEBVTT
-
-STYLE
-::cue {
-  background-image: linear-gradient(to bottom, dimgray, lightgray);
-  color: papayawhip;
-}
-/* Style blocks cannot use blank lines nor "dash dash greater than" */
-
-NOTE comment blocks can be used between style blocks.
-
-STYLE
-::cue(b) {
-  color: peachpuff;
-}
-
-00:00:00.000 --> 00:00:10.000
-- Hello <b>world</b>.
-
-NOTE style blocks cannot appear after the first cue.
+```html
+<video controls src="video.webm">
+  <track default kind="captions" src="captions.vtt" srclang="en" />
+  <track kind="subtitles" src="subtitles.vtt" srclang="en" />
+  <track kind="descriptions" src="descriptions.vtt" srclang="en" />
+  <track kind="chapters" src="chapters_de.vtt" srclang="de" />
+  <track kind="subtitles" src="subtitles_en.vtt" srclang="en" />
+</video>
 ```
 
-We can also use identifiers inside WebVTT file, which can be used for defining a new style for some particular cues in the file. The example where we wanted the transcription text to be red highlighted and the other part to remain normal, we can define it as follows using CSS. Where it must be noted that the CSS uses escape sequences the way they are used in HTML pages:
+### Styling WebVTT in HTML or a stylesheet
 
-```plain
-WEBVTT
+You can style WebVTT cues by matching elements using the {{cssxref("::cue")}} pseudo-element.
+This allows you to modify the appearance of all cue text, or just specific elements. In this example, we'll add some styling to the [first example above](#using_the_webvtt_api_to_add_captions).
 
-1
-00:00.000 --> 00:02.000
-That's an, an, that's an L!
+> [!NOTE]
+> It is also possible to define styles in the [WebVTT File Format](/en-US/docs/Web/API/WebVTT_API/Web_Video_Text_Tracks_Format).
 
-crédit de transcription
-00:04.000 --> 00:05.000
-Transcrit par Célestes™
+#### HTML
+
+The HTML for the video itself is the same as we saw previously:
+
+```css hidden
+video {
+  width: 420px;
+  height: 300px;
+}
 ```
+
+```html
+<video
+  controls
+  src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/friday.mp4"></video>
+```
+
+#### CSS
+
+First, we use the {{cssxref("::cue")}} pseudo-element to select all video text cues, giving them larger red and a gradient background.
 
 ```css
-::cue(#\31) { color: lime; }
-::cue(#crédit\ de\ transcription) { color: red; }
+video::cue {
+  font-size: 1.5rem;
+  background-image: linear-gradient(to bottom, yellow, lightyellow);
+  color: red;
+}
 ```
 
-Positioning of text tracks is also supported, by including positioning information after the timings in a cue, as seen below (see [Cue settings](#cue_settings) for more information):
+We then use {{cssxref("::cue")}} to select text that has been marked up using the `u` and `b` elements and style them green and yellow, respectively.
 
-```plain
-WEBVTT
+```css
+video::cue(u) {
+  color: green;
+}
 
-00:00:00.000 --> 00:00:04.000 position:10%,line-left align:left size:35%
-Where did he go?
-
-00:00:03.000 --> 00:00:06.500 position:90% align:right size:35%
-I think he went down this lane.
-
-00:00:04.000 --> 00:00:06.500 position:45%,line-right align:center size:35%
-What are you waiting for?
+video::cue(b) {
+  color: purple;
+}
 ```
 
-## WebVTT cues
+#### JavaScript
 
-A cue is a single subtitle block that has a single start time, end time, and textual payload. Example 6 consists of the header, a blank line, and then five cues separated by blank lines. A cue consists of five components:
+The JavaScript is the same as in the first example, except that we have marked up some of the cue text using `<b>` (bold) and `<u>` (underline) tags.
+By default the marked text would be displayed as bold or underlined (depending on the tag) but we have used the {{cssxref("::cue")}} in the previous section to also style the text to be green and purple, respectively.
 
-- An optional cue identifier followed by a newline.
-- Cue timings.
-- Optional cue settings with at least one space before the first and between each setting.
-- A single newline.
-- The cue payload text.
-
-##### Example 7 - Example of a cue
-
-```plain
-1 - Title Crawl
-00:00:05.000 --> 00:00:10.000 line:0 position:20% size:60% align:start
-Some time ago in a place rather distant....
+```js
+let video = document.querySelector("video");
+let track = video.addTextTrack("captions", "Captions", "en");
+track.mode = "showing";
+track.addCue(new VTTCue(0, 0.9, "Hildy!"));
+track.addCue(new VTTCue(1, 1.4, "How are you?"));
+track.addCue(
+  new VTTCue(1.5, 2.9, "Tell me, is the <u>lord of the universe</u> in?"),
+);
+track.addCue(new VTTCue(3, 4.2, "Yes, he's in - in a bad humor"));
+track.addCue(
+  new VTTCue(4.3, 6, "Somebody must've <b>stolen</b> the crown jewels"),
+);
+console.log(track.cues);
 ```
 
-### Cue identifier
+#### Result
 
-The identifier is a name that identifies the cue. It can be used to reference the cue from a script. It must not contain a newline and cannot contain the string "`-->"`. It must end with a single new line. They do not have to be unique, although it is common to number them (e.g., 1, 2, 3).
+{{EmbedLiveSample('Styling WebVTT in HTML or a stylesheet','400','330')}}
 
-##### Example 8 - Cue identifier from Example 7
+### More cue styling examples
 
-```plain
-1 - Title Crawl
+This example shows more examples of how you can mark up cue text with tags and then style them.
+The same markup and styles can be used in the [WebVTT File Format](/en-US/docs/Web/API/WebVTT_API/Web_Video_Text_Tracks_Format).
+
+The HTML and CSS for displaying the video itself is the same as for the [first example above](#using_the_webvtt_api_to_add_captions) so here we only show the specific code for marking up and styling the text.
+
+```css hidden
+video {
+  width: 420px;
+  height: 300px;
+}
 ```
 
-##### Example 9 - Common usage of identifiers
-
-```plain
-WEBVTT
-
-1
-00:00:22.230 --> 00:00:24.606
-This is the first subtitle.
-
-2
-00:00:30.739 --> 00:00:34.074
-This is the second.
-
-3
-00:00:34.159 --> 00:00:35.743
-Third
+```html hidden
+<video
+  controls
+  src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/friday.mp4"></video>
 ```
 
-### Cue timings
+#### Styling by tag type
 
-A cue timing indicates when the cue is shown. It has a start and end time which are represented by timestamps. The end time must be greater than the start time, and the start time must be greater than or equal to all previous start times. Cues may have overlapping timings.
+The first cue we create will be displayed for all 6 seconds of the video and display text marked up with `b`, `u`, `i` and `c` tags.
 
-If the WebVTT file is being used for chapters ({{HTMLElement("track")}} {{htmlattrxref("kind")}} is `chapters`) then the file cannot have overlapping timings.
+```js
+let video = document.querySelector("video");
 
-Each cue timing contains five components:
+let track = video.addTextTrack("captions", "Captions", "en");
+track.mode = "showing";
 
-- Timestamp for start time.
-- At least one space.
-- The string "`-->`".
-- At least one space.
-- Timestamp for end time.
-
-  - Which must be greater than the start time.
-
-The timestamps must be in one of two formats:
-
-- `mm:ss.ttt`
-- `hh:mm:ss.ttt`
-
-Where the components are defined as follows:
-
-- `hh` is hours.
-
-  - Must be at least two digits.
-  - Hours can be greater than two digits (e.g., 9999:00:00.000).
-
-- `mm` is minutes.
-
-  - Must be between 00 and 59 inclusive.
-
-- `ss` is seconds.
-
-  - Must be between 00 and 59 inclusive.
-
-- `ttt` is milliseconds.
-
-  - Must be between 000 and 999 inclusive.
-
-##### Example 10 - Basic cue timing examples
-
-```plain
-00:00:22.230 --> 00:00:24.606
-00:00:30.739 --> 00:00:34.074
-00:00:34.159 --> 00:00:35.743
-00:00:35.827 --> 00:00:40.122
+track.addCue(
+  new VTTCue(
+    0,
+    6,
+    "Styles: Normal <b>bold</b> <u>underlined</u> <i>italic</i> <c>class</c>",
+  ),
+);
 ```
 
-##### Example 11 - Overlapping cue timing examples
+First, we'll add a rule to make all cues 1.2 times bigger than normal.
 
-```plain
-00:00:00.000 --> 00:00:10.000
-00:00:05.000 --> 00:01:00.000
-00:00:30.000 --> 00:00:50.000
+```css
+video::cue {
+  font-size: 1.2rem;
+}
 ```
 
-##### Example 12 - Non-overlapping cue timing examples
+Then we style each of the tags above with a different color.
 
-```plain
-00:00:00.000 --> 00:00:10.000
-00:00:10.000 --> 00:01:00.581
-00:01:00.581 --> 00:02:00.100
-00:02:01.000 --> 00:02:01.000
+```css
+video::cue(u) {
+  color: green;
+}
+
+video::cue(b) {
+  color: purple;
+}
+
+video::cue(i) {
+  color: red;
+}
+
+video::cue(c) {
+  color: lavender;
+}
 ```
 
-### Cue settings
+#### Styling by class
 
-Cue settings are optional components used to position where the cue payload text will be displayed over the video. This includes whether the text is displayed horizontally or vertically. There can be zero or more of them, and they can be used in any order so long as each setting is used no more than once.
+The second cue is displayed right after the first one and includes the same tags. However, they all have a class of `myclass` applied to them.
 
-The cue settings are added to the right of the cue timings. There must be one or more spaces between the cue timing and the first setting and between each setting. A setting's name and value are separated by a colon. The settings are case sensitive so use lower case as shown. There are five cue settings:
-
-- **vertical**
-
-  - Indicates that the text will be displayed vertically rather than horizontally, such as in some Asian languages.
-
-  <table>
-    <thead>
-      <tr>
-        <th colspan="2">Table 1 - vertical values</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th><code>vertical:rl</code></th>
-        <td>writing direction is right to left</td>
-      </tr>
-      <tr>
-        <th><code>vertical:lr</code></th>
-        <td>writing direction is left to right</td>
-      </tr>
-    </tbody>
-  </table>
-
-- **line**
-
-  - Specifies where text appears vertically. If vertical is set, line specifies where text appears horizontally.
-  - Value can be a line number.
-
-    - The line height is the height of the first line of the cue as it appears on the video.
-    - Positive numbers indicate top down.
-    - Negative numbers indicate bottom up.
-
-  - Or value can be a percentage.
-
-    - Must be an integer (i.e., no decimals) between 0 and 100 inclusive.
-    - Must be followed by a percent sign (%).
-
-  <table>
-    <thead>
-      <tr>
-        <th colspan="4">Table 2 - line examples</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th></th>
-        <th><code>vertical</code> omitted</th>
-        <th><code>vertical:rl</code></th>
-        <th><code>vertical:lr</code></th>
-      </tr>
-      <tr>
-        <th><code>line:0</code></th>
-        <td>top</td>
-        <td>right</td>
-        <td>left</td>
-      </tr>
-      <tr>
-        <th><code>line:-1</code></th>
-        <td>bottom</td>
-        <td>left</td>
-        <td>right</td>
-      </tr>
-      <tr>
-        <th><code>line:0%</code></th>
-        <td>top</td>
-        <td>right</td>
-        <td>left</td>
-      </tr>
-      <tr>
-        <th><code>line:100%</code></th>
-        <td>bottom</td>
-        <td>left</td>
-        <td>right</td>
-      </tr>
-    </tbody>
-  </table>
-
-- **position**
-
-  - Specifies where the text will appear horizontally. If vertical is set, position specifies where the text will appear vertically.
-  - Value is a percentage.
-  - Must be an integer (no decimals) between 0 and 100 inclusive.
-  - Must be followed by a percent sign (%).
-
-  <table>
-    <thead>
-      <tr>
-        <th colspan="4">Table 3 - position examples</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th></th>
-        <th><code>vertical</code> omitted</th>
-        <th><code>vertical:rl</code></th>
-        <th><code>vertical:lr</code></th>
-      </tr>
-      <tr>
-        <th><code>position:0%</code></th>
-        <td>left</td>
-        <td>top</td>
-        <td>top</td>
-      </tr>
-      <tr>
-        <th><code>position:100%</code></th>
-        <td>right</td>
-        <td>bottom</td>
-        <td>bottom</td>
-      </tr>
-    </tbody>
-  </table>
-
-- **size**
-
-  - Specifies the width of the text area. If vertical is set, size specifies the height of the text area.
-  - Value is a percentage.
-  - Must be an integer (i.e., no decimals) between 0 and 100 inclusive.
-  - Must be followed by a percent sign (%).
-
-  <table>
-    <thead>
-      <tr>
-        <th colspan="4">Table 4 - size examples</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th></th>
-        <th><code>vertical</code> omitted</th>
-        <th><code>vertical:rl</code></th>
-        <th><code>vertical:lr</code></th>
-      </tr>
-      <tr>
-        <th><code>size:100%</code></th>
-        <td>full width</td>
-        <td>full height</td>
-        <td>full height</td>
-      </tr>
-      <tr>
-        <th><code>size:50%</code></th>
-        <td>half width</td>
-        <td>half height</td>
-        <td>half height</td>
-      </tr>
-    </tbody>
-  </table>
-
-- **align**
-
-  - Specifies the alignment of the text. Text is aligned within the space given by the size cue setting if it is set.
-
-  <table>
-    <thead>
-      <tr>
-        <th colspan="4">Table 5 - align values</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th></th>
-        <th><code>vertical</code> omitted</th>
-        <th><code>vertical:rl</code></th>
-        <th><code>vertical:lr</code></th>
-      </tr>
-      <tr>
-        <th><code>align:start</code></th>
-        <td>left</td>
-        <td>top</td>
-        <td>top</td>
-      </tr>
-      <tr>
-        <th><code>align:center</code></th>
-        <td>centred horizontally</td>
-        <td>centred vertically</td>
-        <td>centred vertically</td>
-      </tr>
-      <tr>
-        <th><code>align:end</code></th>
-        <td>right</td>
-        <td>bottom</td>
-        <td>bottom</td>
-      </tr>
-    </tbody>
-  </table>
-
-##### Example 13 - Cue setting examples
-
-The first line demonstrates no settings. The second line might be used to overlay text on a sign or label. The third line might be used for a title. The last line might be used for an Asian language.
-
-```plain
-00:00:05.000 --> 00:00:10.000
-00:00:05.000 --> 00:00:10.000 line:63% position:72% align:start
-00:00:05.000 --> 00:00:10.000 line:0 position:20% size:60% align:start
-00:00:05.000 --> 00:00:10.000 vertical:rt line:-1 align:end
+```js
+track.addCue(
+  new VTTCue(
+    1,
+    6,
+    "Styles: Class markup: <b.myclass>bold</b> <u.myclass>underlined</u> <i.myclass>italic</i> <c.myclass>class</c>",
+  ),
+);
 ```
 
-### Cue payload
+We style all items with the `.myclass` class with a light blue text color, except for the specific case of `c.myclass`, which is given a blue text color.
 
-The payload is where the main information or content is located. In normal usage the payload contains the subtitles to be displayed. The payload text may contain newlines but it cannot contain a blank line, which is equivalent to two consecutive newlines. A blank line signifies the end of a cue.
+```css
+video::cue(.myclass) {
+  color: lightblue;
+}
 
-A cue text payload cannot contain the string "`-->"`, the ampersand character (&), or the less-than sign (<). Instead use the escape sequence "\&amp;" for ampersand and "\&lt;" for less-than. It is also recommended that you use the greater-than escape sequence "\&gt;" instead of the greater-than character (>) to avoid confusion with tags. If you are using the WebVTT file for metadata these restrictions do not apply.
-
-In addition to the three escape sequences mentioned above, there are fours others. They are listed in the table below.
-
-<table>
-  <thead>
-    <tr>
-      <th colspan="3">Table 6 - Escape sequences</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Name</th>
-      <th>Character</th>
-      <th>Escape Sequence</th>
-    </tr>
-    <tr>
-      <td>Ampersand</td>
-      <td>&#x26;</td>
-      <td><code>&#x26;amp;</code></td>
-    </tr>
-    <tr>
-      <td>Less-than</td>
-      <td>&#x3C;</td>
-      <td><code>&#x26;lt;</code></td>
-    </tr>
-    <tr>
-      <td>Greater-than</td>
-      <td>></td>
-      <td><code>&#x26;gt;</code></td>
-    </tr>
-    <tr>
-      <td>Left-to-right mark</td>
-      <td></td>
-      <td><code>&#x26;lrm;</code></td>
-    </tr>
-    <tr>
-      <td>Right-to-left mark</td>
-      <td></td>
-      <td><code>&#x26;rlm;</code></td>
-    </tr>
-    <tr>
-      <td>Non-breaking space</td>
-      <td><code>&nbsp;</code></td>
-      <td><code>&#x26;nbsp;</code></td>
-    </tr>
-  </tbody>
-</table>
-
-### Cue payload text tags
-
-There are a number of tags, such as `<bold>`, that can be used. However, if the WebVTT file is used in a {{HTMLElement("track")}} element where the attribute {{htmlattrxref("kind")}} is `chapters` then you cannot use tags.
-
-- **Timestamp tag**
-
-  - The timestamp must be greater that the cue's start timestamp, greater than any previous timestamp in the cue payload, and less than the cue's end timestamp. The *active text* is the text between the timestamp and the next timestamp or to the end of the payload if there is not another timestamp in the payload. Any text before the *active text* in the payload is *previous text* . Any text beyond the *active text* is *future text* . This enables karaoke style captions.
-
-  ##### Example 14 - Karaoke style text
-
-  ```plain
-  1
-  00:16.500 --> 00:18.500
-  When the moon <00:17.500>hits your eye
-
-  1
-  00:00:18.500 --> 00:00:20.500
-  Like a <00:19.000>big-a <00:19.500>pizza <00:20.000>pie
-
-  1
-  00:00:20.500 --> 00:00:21.500
-  That's <00:00:21.000>amore
-  ```
-
-The following tags are the HTML tags allowed in a cue and require opening and closing tags (e.g., `<b>text</b>`).
-
-- **Class tag** (`<c></c>`)
-
-  - Style the contained text using a CSS class.
-
-  ##### Example 15 - Class tag
-
-  ```html
-  <c.classname>text</c>
-  ```
-
-- **Italics tag** (`<i></i>`)
-
-  - Italicize the contained text.
-
-  ##### Example 16 - Italics tag
-
-  ```html
-  <i>text</i>
-  ```
-
-- **Bold tag** (`<b></b>`)
-
-  - Bold the contained text.
-
-  ##### Example 17 - Bold tag
-
-  ```html
-  <b>text</b>
-  ```
-
-- **Underline tag** (`<u></u>`)
-
-  - Underline the contained text.
-
-  ##### Example 18 - Underline tag
-
-  ```html
-  <u>text</u>
-  ```
-
-- **Ruby tag** (`<ruby></ruby>`)
-
-  - Used with ruby text tags to display [ruby characters](https://en.wikipedia.org/wiki/Ruby_character) (i.e., small annotative characters above other characters).
-
-  ##### Example 19 - Ruby tag
-
-  ```html
-  <ruby>WWW<rt>World Wide Web</rt>oui<rt>yes</rt></ruby>
-  ```
-
-- **Ruby text tag** (`<rt></rt>`)
-
-  - Used with ruby tags to display [ruby characters](https://en.wikipedia.org/wiki/Ruby_character) (i.e., small annotative characters above other characters).
-
-  ##### Example 20 - Ruby text tag
-
-  ```html
-  <ruby>WWW<rt>World Wide Web</rt>oui<rt>yes</rt></ruby>
-  ```
-
-- **Voice tag** (`<v></v>`)
-
-  - Similar to class tag, also used to style the contained text using CSS.
-
-  ##### Example 21 - Voice tag
-
-  ```html
-  <v Bob>text</v>
-  ```
-
-## Methods and properties
-
-The methods used in WebVTT are those which are used to alter the cue or region as the attributes for both interfaces are different. We can categorize them for better understanding relating to each interface in WebVTT:
-
-### VTTCue
-
-- The methods which are available in this interface are:
-
-  - GetCueAsHTML to get the HTML of that Cue.
-  - VTT Constructor for creating new objects of Cues.
-  - Autokeyword.
-  - DirectionSetting: to set the direction of caption or text in a file.
-  - LineAlignment: to adjust the line alignment.
-  - PositionAlignSetting: to adjust the position of text.
-
-### VTTRegion
-
-- The methods used for region are listed below along with description of their functionality:
-
-  - ScrollSetting: For adjusting the scrolling setting of all nodes present in given region.
-  - VTT Region Constructor: for construction of new VTT Regions.
-
-## Tutorial on how to write a WebVTT file
-
-There are few steps that can be followed to write a simple webVTT file. Before start, it must be noted that you can make use of a notepad and then save the file as '.vtt' file. Steps are given below:
-
-1. Open a notepad.
-2. The first line of WebVTT is standardized similar to the way some other languages require you to put headers as the file starts to indicate the file type. On the very first line you have to write:
-
-    ```plain
-    WEBVTT
-    ```
-
-3. Leave the second line blank, and on the third line the time for first cue is to be specified. For example, for a first cue starting at time 1 second and ending at 5 seconds, it is written as:
-
-```plain
-00:01.000 --> 00:05.000
+video::cue(c.myclass) {
+  color: blue;
+}
 ```
 
-1. On the next line you can write the caption for this cue which will run from the first second to the fifth second, inclusive.
-2. Following the similar steps, a complete WebVTT file for specific video or audio file can be made.
+#### Styling using attributes
 
-## CSS pseudo-classes
+The next two cues are displayed after two and then three seconds.
+The first displays text marked up with the `lang` tag for three locales of English, while the second displays a `<v>` (voice) tag with the "Bob" attribute.
 
-CSS pseudo classes allow us to classify the type of object which we want to differentiate from other types of objects. It works in similar manner in WebVTT files as it works in HTML file.
+```js
+track.addCue(
+  new VTTCue(
+    2,
+    6,
+    "<lang en>Lang markup: 'en'</lang>  <lang en-GB>Text: 'en-GB'</lang> <lang en-US>Text: 'en-US'</lang>",
+  ),
+);
 
-It is one of the good features supported by WebVTT is the localization and use of class elements which can be used in same way they are used in HTML and CSS to classify the style for particular type of objects, but here these are used for styling and classifying the Cues as shown below:
-
-```plain
-WEBVTT
-
-04:02.500 --> 04:05.000
-J'ai commencé le basket à l'âge de 13, 14 ans
-
-04:05.001 --> 04:07.800
-Sur les <i.foreignphrase><lang en>playground</lang></i>, ici à Montpellier
+track.addCue(new VTTCue(3, 6, "<v Bob>Bob's voice</v>"));
 ```
 
-In the above example it can be observed that we can use the identifier and pseudo class name for defining the language of caption, where `<i>` tag is for italics.
+We use the `lang` attribute selector to give each language variant a different text color.
 
-The type of pseudo class is determined by the selector it is using and working is similar in nature as it works in HTML. Following CSS pseudo classes can be used:
+```css
+video::cue([lang="en"]) {
+  color: lightgreen;
+}
 
-- Lang (Language): e.g., p:lang(it).
-- Link: e.g., a:link.
-- Nth-last-child: e.g., p:nth-last-child(2).
-- Nth-child(n): e.g., p:nth-child(2).
+video::cue([lang="en-GB"]) {
+  color: darkgreen;
+}
 
-Where p and a are the tags which are used in HTML for paragraph and link, respectively and they can be replaced by identifiers which are used for Cues in WebVTT file.
+video::cue(:lang(en-US)) {
+  color: #6082b6;
+}
+```
+
+Then we use the `v` tag and attribute selector for `voice` to color text in "Bob's voice" orange.
+
+```css
+video::cue(v[voice="Bob"]) {
+  color: orange;
+}
+```
+
+#### Result
+
+The example should the cues with colour coding that matches the styling above (if the text is not colored, then `::cue` is not supported on your browser).
+
+{{EmbedLiveSample('More cue styling examples','400','330')}}
 
 ## Specifications
 
@@ -796,14 +383,6 @@ Where p and a are the tags which are used in HTML for paragraph and link, respec
 
 {{Compat}}
 
-### Notes
+## See also
 
-Prior to Firefox 50, the `AlignSetting` enum (representing possible values for {{domxref("VTTCue.align")}}) incorrectly included the value `"middle"` instead of `"center"`. This has been corrected.
-
-WebVTT was implemented in Firefox 24 behind the preference `media.webvtt.enabled`, which is disabled by default; you can enable it by setting this preference to `true`. WebVTT is enabled by default starting in Firefox 31 and can be disabled by setting the preference to `false`.
-
-Prior to Firefox 58, the `REGION` keyword was creating {{domxref("VTTRegion")}} objects, but they were not being used. Firefox 58 now fully supports `VTTRegion` and its use; however, this feature is disabled by default behind the preference `media.webvtt.regions.enabled`; set it to `true` to enable region support in Firefox 58. Regions are enabled by default starting in Firefox 59 (see bugs {{bug(1338030)}} and {{bug(1415805)}}).
-
-## See Also
-
-- The CSS [`::cue` and `::cue()`](/en-US/docs/Web/CSS/::cue) pseudo-element
+- The CSS [`::cue` and `::cue()`](/en-US/docs/Web/CSS/::cue) pseudo-elements

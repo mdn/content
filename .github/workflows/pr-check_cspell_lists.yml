@@ -1,0 +1,33 @@
+name: Check cSpell lists
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - .vscode/dictionaries/*
+
+# No GITHUB_TOKEN permissions, as we don't use it.
+permissions: {}
+
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            .vscode/dictionaries/*
+            .nvmrc
+            package.json
+            scripts/sort_and_unique_file_lines.js
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: ".nvmrc"
+
+      - name: Check if cSpell word lists are in correct order
+        run: |
+          node scripts/sort_and_unique_file_lines.js --check .vscode/dictionaries

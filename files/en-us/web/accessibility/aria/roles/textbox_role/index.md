@@ -1,14 +1,11 @@
 ---
-title: 'ARIA: textbox role'
+title: "ARIA: textbox role"
 slug: Web/Accessibility/ARIA/Roles/textbox_role
-tags:
-  - ARIA
-  - ARIA role
-  - Accessibility
-  - Reference
-  - textbox role
-  - NeedsContent
+page-type: aria-role
 ---
+
+{{AccessibilitySidebar}}
+
 The `textbox` role is used to identify an element that allows the input of free-form text. Whenever possible, rather than using this role, use an {{HTMLElement("input")}} element with [type="text"](/en-US/docs/Web/HTML/Element/input/text), for single-line input, or a {{HTMLElement("textarea")}} element for multi-line input.
 
 ## Description
@@ -19,21 +16,28 @@ The default is a single line input, in which <kbd>Return</kbd> or <kbd>Enter</kb
 
 ```html
 <!-- Simple text input field -->
-<div id="txtboxLabel">Enter your five-digit zipcode</div>
-<div role="textbox" contenteditable="true" aria-placeholder="5-digit zipcode"
-    aria-labelledby="txtboxLabel"></div>
+<div id="txtboxLabel">Enter your five-digit zip code</div>
+<div
+  role="textbox"
+  contenteditable="true"
+  aria-placeholder="5-digit zip code"
+  aria-labelledby="txtboxLabel"></div>
 
 <!-- Multi-line text area -->
 <div id="txtboxMultilineLabel">Enter the tags for the article</div>
-<div role="textbox" contenteditable="true" aria-multiline="true"
-   aria-labelledby="txtboxMultilineLabel" aria-required="true"></div>
+<div
+  role="textbox"
+  contenteditable="true"
+  aria-multiline="true"
+  aria-labelledby="txtboxMultilineLabel"
+  aria-required="true"></div>
 ```
 
 Semantic elements are more concise and require no JavaScript to support textbox features.
 
 ```html
-<label for="txtbox">Enter your five-digit zipcode</label>
-<input type="text" placeholder="5-digit zipcode" id="txtbox"/>
+<label for="txtbox">Enter your five-digit zip code</label>
+<input type="text" placeholder="5-digit zip code" id="txtbox" />
 
 <!-- Multi-line text area -->
 <label for="txtboxMultiline">Enter the tags for the article</label>
@@ -59,23 +63,7 @@ Where a text field is read-only, indicated this by setting `aria-readonly="true"
 
 - [`aria-multiline`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-multiline) attribute
 
-  - : If `aria-multiline="true`" is set, the AT informs the user that the textbox supports multi-line input, with the expectation that
-
-    <kbd>Enter</kbd>
-
-    or
-
-    <kbd>Return</kbd>
-
-    will create a line break rather than submitting the form. ARIA does not alter the behavior of the element; rather this feature must be controlled by the developer. If false is set, or the attribute is omitted and defaults to false, the user expectation is that the control is a single line text box, and
-
-    <kbd>Enter</kbd>
-
-    or
-
-    <kbd>Return</kbd>
-
-    submits the form.
+  - : If `aria-multiline="true"` is set, the AT informs the user that the textbox supports multi-line input, with the expectation that <kbd>Enter</kbd> or <kbd>Return</kbd> will create a line break rather than submitting the form. ARIA does not alter the behavior of the element; rather this feature must be controlled by the developer. If false is set, or the attribute is omitted and defaults to false, the user expectation is that the control is a single line text box, and <kbd>Enter</kbd> or <kbd>Return</kbd> submits the form.
 
 - [`aria-placeholder`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-placeholder) attribute
   - : Represents a hint (word or phrase) to the user about what to enter into the text field. The hint should be a sample value or a brief description of the expected format. This information should not be used as a substitute for a label: a label is focusable, permanent, indicates what kind of information is expected, and increases the hit area for setting focus on the control, whereas placeholder text is only temporary hint about the expected value, which if implemented incorrectly can decrease accessibility. The placeholder should be visible when the control's value is the empty string such as when the control first receives focus and when users remove a previously-entered value. Instead of using `aria-placeholder`, use the semantic `<input type="text">` or `<textarea>` with a `placeholder` attribute.
@@ -93,9 +81,10 @@ In a single-line use (when `aria-multiline` is `false` or not used), the Return 
 All features associated with any and all properties and states must be maintained, and forms submission on enter or return on a single line textbox needs to be handled.
 
 - Focus event handler and aria-activedescendant attribute
-  - : If you are implementing a composite widget, such as a combobox composed of a text box and a listbox, you need to manage the `aria-activedescendant` attribute using a handler. Before using this technique, ensure that the browsers you need to target currently support it. See the [specification of aria-descendent](https://www.w3.org/TR/wai-aria-1.1/#aria-activedescendant) for further information.
+  - : If you are implementing a composite widget, such as a combobox composed of a text box and a listbox, you need to manage the `aria-activedescendant` attribute using a handler. Before using this technique, ensure that the browsers you need to target currently support it. See the [specification of aria-descendant](https://www.w3.org/TR/wai-aria-1.1/#aria-activedescendant) for further information.
 
-> **Note:**It is a better practice to use an {{HTMLElement("input")}} element with type="text", or a {{HTMLElement("textarea")}} element instead of the ARIA textbox role. When using either semantic element, the ARIA textbox role is not necessary. See [Notes on Using ARIA in HTML](https://www.w3.org/TR/aria-in-html/).
+> [!NOTE]
+> It is a better practice to use an {{HTMLElement("input")}} element with type="text", or a {{HTMLElement("textarea")}} element instead of the ARIA textbox role. When using either semantic element, the ARIA textbox role is not necessary. See [Notes on Using ARIA in HTML](https://www.w3.org/TR/aria-in-html/).
 
 ## Possible effects on user agents and assistive technology
 
@@ -109,7 +98,8 @@ Assistive technology products should listen for such an event and notify the use
 - Screen readers should announce its label and role when focus first lands on a textbox. If it also contains content, this should be announced as with a regular textbox.
 - Screen magnifiers may enlarge the textbox.
 
-> **Note:** Opinions may differ on how assistive technology should handle this technique. The information provided above is one of those opinions and may be experienced differently.
+> [!NOTE]
+> Opinions may differ on how assistive technology should handle this technique. The information provided above is one of those opinions and may be experienced differently.
 
 ## Examples
 
@@ -136,11 +126,3 @@ The snippet below shows how the textbox role is added directly into the HTML sou
 ## See also
 
 - [ARIA: search role](/en-US/docs/Web/Accessibility/ARIA/Roles/search_role)
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
-
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
-
-</section>

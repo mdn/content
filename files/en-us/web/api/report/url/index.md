@@ -1,18 +1,12 @@
 ---
-title: Report.url
+title: "Report: url property"
+short-title: url
 slug: Web/API/Report/url
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - Property
-  - Reference
-  - Report
-  - Reporting API
-  - URL
-spec-urls: https://w3c.github.io/reporting/#dom-report-url
+browser-compat: api.Report.url
 ---
-{{APIRef("Reporting API")}}{{SeeCompatTable}}
+
+{{APIRef("Reporting API")}}{{AvailableInWorkers}}
 
 The **`url`** read-only property of the {{domxref("Report")}}
 interface returns the URL of the document that generated the report.
@@ -24,13 +18,12 @@ A string representing the URL of the document that generated the report.
 ## Examples
 
 ```js
-let options = {
-  types: ['deprecation'],
-  buffered: true
-}
+const options = {
+  types: ["deprecation"],
+  buffered: true,
+};
 
-let observer = new ReportingObserver(function(reports, observer) {
-  let firstReport = reports[0];
+const observer = new ReportingObserver(([firstReport], observer) => {
   // Log the URL of the document that generated the first report
   // e.g. "https://www.example.com/cats.html"
   console.log(firstReport.url);
@@ -43,7 +36,7 @@ let observer = new ReportingObserver(function(reports, observer) {
 
 ## Browser compatibility
 
-This feature is not yet available by default in any released browser. It can be activated in Firefox by setting `dom_reporting_enabled` to `true` and in Chrome if you [enable this experimental feature](https://web.dev/reporting-api/#use-devtools).
+{{Compat}}
 
 ## See also
 

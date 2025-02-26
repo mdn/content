@@ -1,21 +1,18 @@
 ---
-title: HTMLFontElement.size
+title: "HTMLFontElement: size property"
+short-title: size
 slug: Web/API/HTMLFontElement/size
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLFontElement
-  - Property
-  - Reference
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.HTMLFontElement.size
 ---
+
 {{deprecated_header}}{{ APIRef("HTML DOM") }}
 
 The obsolete
 **`HTMLFontElement.size`** property is a
-string that reflects the {{ htmlattrxref("size", "font") }} HTML
+string that reflects the [`size`](/en-US/docs/Web/HTML/Element/font#size) HTML
 attribute. It contains either a font size ranging from 1 to 7 or a
 number relative to the default value 3, for example -2 or +1.
 
@@ -62,8 +59,7 @@ f.size = "6";
 
 ## Specifications
 
-The \<font> tag is not supported in HTML5 and as a result neither is
-`<font>.size`.
+{{Specifications}}
 
 ## Browser compatibility
 

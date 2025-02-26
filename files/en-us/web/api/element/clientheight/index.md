@@ -1,15 +1,11 @@
 ---
-title: Element.clientHeight
+title: "Element: clientHeight property"
+short-title: clientHeight
 slug: Web/API/Element/clientHeight
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM View
-  - NeedsMarkupWork
-  - Property
-  - Reference
 browser-compat: api.Element.clientHeight
 ---
+
 {{APIRef("DOM")}}
 
 The **`Element.clientHeight`** read-only property is zero for
@@ -22,9 +18,10 @@ scrollbars (if present).
 
 When `clientHeight` is used on the root element (the
 `<html>` element), (or on `<body>` if the document is
-in quirks mode), the viewport's height (excluding any scrollbar) is returned. [This is a special case of `clientHeight`](https://www.w3.org/TR/2016/WD-cssom-view-1-20160317/#dom-element-clientheight).
+in quirks mode), the viewport's height (excluding any scrollbar) is returned.
 
-> **Note:** This property will round the value to an integer. If you need
+> [!NOTE]
+> This property will round the value to an integer. If you need
 > a fractional value, use {{ domxref("element.getBoundingClientRect()") }}.
 
 ## Value
@@ -33,16 +30,11 @@ A number.
 
 ## Examples
 
-![](dimensions-client.png)
+![How clientHeight property determines the inner height of an element considering the height and padding](dimensions-client.png)
 
 ## Specifications
 
 {{Specifications}}
-
-### Notes
-
-`clientHeight` is a property introduced in the Internet Explorer object
-model.
 
 ## Browser compatibility
 

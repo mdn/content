@@ -1,17 +1,12 @@
 ---
-title: ReadableStreamDefaultReader.closed
+title: "ReadableStreamDefaultReader: closed property"
+short-title: closed
 slug: Web/API/ReadableStreamDefaultReader/closed
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - ReadableStreamDefaultReader
-  - Reference
-  - Streams
-  - closed
 browser-compat: api.ReadableStreamDefaultReader.closed
 ---
-{{APIRef("Streams")}}
+
+{{APIRef("Streams")}}{{AvailableInWorkers}}
 
 The **`closed`** read-only property of the
 {{domxref("ReadableStreamDefaultReader")}} interface returns a
@@ -31,8 +26,8 @@ console.
 
 ```js
 reader.closed.then(() => {
-  console.log('reader closed');
-})
+  console.log("reader closed");
+});
 ```
 
 ## Specifications
@@ -42,3 +37,8 @@ reader.closed.then(() => {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("ReadableStreamDefaultReader.ReadableStreamDefaultReader", "ReadableStreamDefaultReader()")}} constructor
+- [Using readable streams](/en-US/docs/Web/API/Streams_API/Using_readable_streams)

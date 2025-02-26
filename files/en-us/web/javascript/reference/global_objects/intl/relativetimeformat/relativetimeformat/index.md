@@ -1,53 +1,60 @@
 ---
 title: Intl.RelativeTimeFormat() constructor
-slug: >-
-  Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat
-tags:
-  - Constructor
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Localization
-  - Reference
-  - RelativeTimeFormat
+slug: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat
+page-type: javascript-constructor
 browser-compat: javascript.builtins.Intl.RelativeTimeFormat.RelativeTimeFormat
 ---
+
 {{JSRef}}
 
-The **`Intl.RelativeTimeFormat()`** constructor creates {{jsxref("Intl/RelativeTimeFormat", "Intl.RelativeTimeFormat")}} objects.
+The **`Intl.RelativeTimeFormat()`** constructor creates {{jsxref("Intl.RelativeTimeFormat")}} objects.
 
 ## Syntax
 
-```js
+```js-nolint
 new Intl.RelativeTimeFormat()
 new Intl.RelativeTimeFormat(locales)
 new Intl.RelativeTimeFormat(locales, options)
 ```
 
+> **Note:** `Intl.RelativeTimeFormat()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
+
 ### Parameters
 
 - `locales` {{optional_inline}}
-  - : A string with a BCP 47 language tag, or an array of such strings. For the general form and interpretation of the `locales` argument, see the {{jsxref("Global_Objects/Intl", "Intl", "#Locale_identification_and_negotiation", 1)}} page.
+
+  - : A string with a BCP 47 language tag or an {{jsxref("Intl.Locale")}} instance, or an array of such locale identifiers. The runtime's default locale is used when `undefined` is passed or when none of the specified locale identifiers is supported. For the general form and interpretation of the `locales` argument, see [the parameter description on the `Intl` main page](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_argument).
+
+    The following Unicode extension key is allowed:
+
+    - `nu`
+      - : See [`numberingSystem`](#numberingsystem).
+
+    This key can also be set with `options` (as listed below). When both are set, the `options` property takes precedence.
+
 - `options` {{optional_inline}}
 
-  - : An object with some or all of the following properties:
+  - : An object containing the following properties, in the order they are retrieved (all of them are optional):
 
     - `localeMatcher`
-      - : The locale matching algorithm to use. Possible values are "`lookup`" and "`best fit`"; the default is "`best fit`". For information about this option, see the {{jsxref("Global_Objects/Intl", "Intl", "#Locale_negotiation", 1)}} page.
-    - `numeric`
-
-      - : The format of output message. Possible values are:
-
-        - "`always`" (default, e.g., `1 day ago`),
-        - or "`auto`" (e.g., `yesterday`). The "`auto`" value allows to not always have to use numeric values in the output.
-
+      - : The locale matching algorithm to use. Possible values are `"lookup"` and `"best fit"`; the default is `"best fit"`. For information about this option, see [Locale identification and negotiation](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation).
+    - `numberingSystem`
+      - : The numbering system to use for number formatting, such as `"arab"`, `"hans"`, `"mathsans"`, and so on. For a list of supported numbering system types, see [`Intl.supportedValuesOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#supported_numbering_system_types). This option can also be set through the `nu` Unicode extension key; if both are provided, this `options` property takes precedence.
     - `style`
+      - : The style of the formatted relative time. Possible values are:
+        - `"long"` (default)
+          - : E.g., "in 1 month"
+        - `"short"`
+          - : E.g., "in 1 mo."
+        - `"narrow"`
+          - : E.g., "in 1 mo.". The narrow style could be similar to the short style for some locales.
+    - `numeric`
+      - : Whether to use numeric values in the output. Possible values are `"always"` and `"auto"`; the default is `"always"`. When set to `"auto"`, the output may use more idiomatic phrasing such as `"yesterday"` instead of `"1 day ago"`.
 
-      - : The length of the internationalized message. Possible values are:
+### Exceptions
 
-        - "`long`" (default, e.g., `in 1 month`)
-        - "`short`" (e.g., `in 1 mo.`),
-        - or "`narrow`" (e.g., `in 1 mo.`). The narrow style could be similar to the short style for some locales.
+- {{jsxref("RangeError")}}
+  - : Thrown if `locales` or `options` contain invalid values.
 
 ## Examples
 
@@ -58,37 +65,40 @@ The following example shows how to create a relative time formatter using the En
 ```js
 // Create a relative time formatter in your locale
 // with default values explicitly passed in.
-const rtf = new Intl.RelativeTimeFormat("en", {
-    localeMatcher: "best fit", // other values: "lookup"
-    numeric: "always", // other values: "auto"
-    style: "long", // other values: "short" or "narrow"
+const rtf = new Intl.RelativeTimeFormat("en-US", {
+  numeric: "always", // other values: "auto"
+  style: "long", // other values: "short" or "narrow"
 });
 
 // Format relative time using negative value (-1).
-rtf.format(-1, "day");
-// > "1 day ago"
+rtf.format(-1, "day"); // "1 day ago"
 
 // Format relative time using positive value (1).
-rtf.format(1, "day");
-// > "in 1 day"
+rtf.format(1, "day"); // "in 1 day"
 ```
 
 ### Using the auto option
 
-If `numeric:auto` option is passed, it will produce the string `yesterday` or `tomorrow` instead of `1 day ago` or `in 1 day`. This allows to not always have to use numeric values in the output.
+If the `numeric: "auto"` option is passed, it will produce the string `yesterday` or `tomorrow` instead of `1 day ago` or `in 1 day`. This is useful when you don't want to use numeric values in the output.
 
 ```js
 // Create a relative time formatter in your locale
 // with numeric: "auto" option value passed in.
-const rtf = new Intl.RelativeTimeFormat("en", { numeric: "auto" });
+const rtf = new Intl.RelativeTimeFormat("en-US", { numeric: "auto" });
 
 // Format relative time using negative value (-1).
-rtf.format(-1, "day");
-// > "yesterday"
+rtf.format(-1, "day"); // "yesterday"
 
 // Format relative time using positive day unit (1).
-rtf.format(1, "day");
-// > "tomorrow"
+rtf.format(1, "day"); // "tomorrow"
+```
+
+When the value is `0`, the output may be dependent on the unit. "0 seconds" is represented by the localized version of "now".
+
+```js
+rtf.format(0, "second"); // "now"
+rtf.format(0, "day"); // "today"
+rtf.format(0, "minute"); // "this minute"
 ```
 
 ## Specifications
@@ -102,5 +112,5 @@ rtf.format(1, "day");
 ## See also
 
 - {{jsxref("Intl.RelativeTimeFormat")}}
-- {{jsxref("Global_Objects/Intl", "Intl")}}
-- [The Intl.RelativeTimeFormat API](https://v8.dev/features/intl-relativetimeformat)
+- {{jsxref("Intl")}}
+- [`Intl.RelativeTimeFormat`](https://v8.dev/features/intl-relativetimeformat) on v8.dev (2018)

@@ -2,15 +2,9 @@
 title: DelayNode
 slug: Web/API/DelayNode
 page-type: web-api-interface
-tags:
-  - API
-  - Audio
-  - DelayNode
-  - Interface
-  - Reference
-  - Web Audio API
 browser-compat: api.DelayNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 The **`DelayNode`** interface represents a [delay-line](https://en.wikipedia.org/wiki/Digital_delay_line); an {{domxref("AudioNode")}} audio-processing module that causes a delay between the arrival of an input data and its propagation to the output.
@@ -53,20 +47,20 @@ When creating a graph that has a cycle, it is mandatory to have at least one `De
 - {{domxref("DelayNode.DelayNode", "DelayNode()")}}
   - : Creates a new instance of an DelayNode object instance. As an alternative, you can use the {{domxref("BaseAudioContext.createDelay()")}} factory method; see [Creating an AudioNode](/en-US/docs/Web/API/AudioNode#creating_an_audionode).
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("AudioNode")}}._
 
-- {{domxref("DelayNode.delayTime")}} {{readonlyInline}}
+- {{domxref("DelayNode.delayTime")}} {{ReadOnlyInline}}
   - : An [a-rate](/en-US/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}} representing the amount of delay to apply, specified in seconds.
 
-## Methods
+## Instance methods
 
 _No specific methods; inherits methods from its parent, {{domxref("AudioNode")}}._
 
 ## Example
 
-See [`BaseAudioContext.createDelay()`](/en-US/docs/Web/API/BaseAudioContext/createDelay#example) for example code.
+See [`BaseAudioContext.createDelay()`](/en-US/docs/Web/API/BaseAudioContext/createDelay#examples) for example code.
 
 ## Specifications
 

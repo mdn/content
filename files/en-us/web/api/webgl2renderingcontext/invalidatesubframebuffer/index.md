@@ -1,16 +1,12 @@
 ---
-title: WebGL2RenderingContext.invalidateSubFramebuffer()
+title: "WebGL2RenderingContext: invalidateSubFramebuffer() method"
+short-title: invalidateSubFramebuffer()
 slug: Web/API/WebGL2RenderingContext/invalidateSubFramebuffer
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL2
 browser-compat: api.WebGL2RenderingContext.invalidateSubFramebuffer
 ---
-{{APIRef("WebGL")}}
+
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGL2RenderingContext.invalidateSubFramebuffer()`**
 method of the [WebGL 2 API](/en-US/docs/Web/API/WebGL_API) invalidates
@@ -18,7 +14,7 @@ portions of the contents of attachments in a framebuffer.
 
 ## Syntax
 
-```js
+```js-nolint
 invalidateSubFramebuffer(target, attachments, x, y, width, height)
 ```
 
@@ -71,9 +67,14 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-gl.invalidateSubFramebuffer(gl.READ_FRAMEBUFFER,
-                            [gl.COLOR_ATTACHMENT0, gl.COLOR_ATTACHMENT1],
-                            0, 0, 256, 256);
+gl.invalidateSubFramebuffer(
+  gl.READ_FRAMEBUFFER,
+  [gl.COLOR_ATTACHMENT0, gl.COLOR_ATTACHMENT1],
+  0,
+  0,
+  256,
+  256,
+);
 ```
 
 ## Specifications

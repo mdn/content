@@ -2,15 +2,12 @@
 title: SVGPoint
 slug: Web/API/SVGPoint
 page-type: web-api-interface
-tags:
-  - API
-  - DOM
-  - NeedsContent
-  - SVG
+status:
   - deprecated
 browser-compat: api.SVGPoint
 ---
-{{APIRef("SVG")}}{{Deprecated_header}}
+
+{{APIRef("SVG")}}{{Deprecated_Header}}
 
 > **Warning:** `SVGPoint` is deprecated.
 > Use {{domxref("DOMPoint")}} or {{domxref("DOMPointReadOnly")}} instead.
@@ -19,8 +16,8 @@ An `SVGPoint` represents a 2D or 3D point in the SVG coordinate system.
 
 ## Syntax
 
-```js
-retObject = SVGSVGElement.createSVGPoint()
+```js-nolint
+createSVGPoint()
 ```
 
 ### Value
@@ -38,6 +35,10 @@ let s = document.getElementById("SVG-ElementID").createSVGPoint();
 s.y = 10;
 s.x = 10;
 ```
+
+## Specifications
+
+{{Specifications}}
 
 ## Browser compatibility
 

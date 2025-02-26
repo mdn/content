@@ -1,20 +1,14 @@
 ---
-title: USBDevice.deviceVersionMajor
+title: "USBDevice: deviceVersionMajor property"
+short-title: deviceVersionMajor
 slug: Web/API/USBDevice/deviceVersionMajor
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - USB
-  - USBDevice
-  - WebUSB
-  - WebUSB API
-  - deviceVersionMajor
-  - Experimental
+status:
+  - experimental
 browser-compat: api.USBDevice.deviceVersionMajor
 ---
-{{SeeCompatTable}}{{APIRef("WebUSB API")}}
+
+{{APIRef("WebUSB API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`deviceVersionMajor`** read only property of the
 {{domxref("USBDevice")}} interface he major version number of the device in a semantic

@@ -1,30 +1,16 @@
 ---
-title: 'RTCIceTransport: gatheringstatechange event'
+title: "RTCIceTransport: gatheringstatechange event"
+short-title: gatheringstatechange
 slug: Web/API/RTCIceTransport/gatheringstatechange_event
 page-type: web-api-event
-tags:
-  - Connection
-  - Connectivity
-  - Gathering
-  - ICE
-  - Negotiation
-  - RTCIceTransport
-  - Reference
-  - Transport
-  - WebRTC
-  - WebRTC API
-  - events
-  - gatheringState
-  - gatheringstatechange
 browser-compat: api.RTCIceTransport.gatheringstatechange_event
 ---
+
 {{APIRef("WebRTC")}}
 
 A **`gatheringstatechange`** event is sent to an {{domxref("RTCIceTransport")}} when its {{Glossary("ICE")}} candidate gathering state changes.
 
-The gathering state, whose actual status can be found in the transport object's {{domxref("RTCIceTransport.gatheringState", "gatheringState")}} property, indicates whether or not the ICE agent has begun gathering candidates, and if so, if it has finished doing so.
-
-The key difference between `gatheringstatechange` and {{domxref("RTCPeerConnection.icegatheringstatechange_event", "icegatheringstatechange")}} is that the latter represents the overall state of the connection including every {{domxref("RTCIceTransport")}} used by every {{domxref("RTCRtpSender")}} and every {{domxref("RTCRtpReceiver")}} on the entire connection. In contrast, `gatheringstatechange` represents changes to the candidate gathering state for a single transport.
+The gathering state, whose actual status can be found in the transport object's {{domxref("RTCIceTransport.gatheringState", "gatheringState")}} property, indicates whether or not the ICE agent has begun gathering candidates on this transport, and if so, if it has finished doing so.
 
 This event is not cancelable and does not bubble.
 
@@ -33,9 +19,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('gatheringstatechange', (event) => { });
+addEventListener("gatheringstatechange", (event) => {});
 
-ongatheringstatechange = (event) => { };
+ongatheringstatechange = (event) => {};
 ```
 
 ## Event type
@@ -48,14 +34,18 @@ This example creates a handler for `gatheringstatechange` events on each {{domxr
 
 ```js
 pc.getSenders().forEach((sender) => {
-  sender.transport.iceTransport.addEventListener("gatheringstatechange", (ev) => {
-    let transport = ev.target;
+  sender.transport.iceTransport.addEventListener(
+    "gatheringstatechange",
+    (ev) => {
+      let transport = ev.target;
 
-    if (transport.gatheringState === "complete") {
-      /* this transport has finished gathering candidates,
+      if (transport.gatheringState === "complete") {
+        /* this transport has finished gathering candidates,
         but others may still be working on it */
-    }
-  }, false);
+      }
+    },
+    false,
+  );
 });
 ```
 

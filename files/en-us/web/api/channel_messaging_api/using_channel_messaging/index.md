@@ -2,24 +2,16 @@
 title: Using channel messaging
 slug: Web/API/Channel_Messaging_API/Using_channel_messaging
 page-type: guide
-tags:
-  - API
-  - Channel messaging
-  - HTML5
-  - MessageChannel
-  - MessagePort
-  - Tutorial
 browser-compat:
   - api.MessageChannel
   - api.MessagePort
 ---
-{{DefaultAPISidebar("Channel Messaging API")}}
+
+{{DefaultAPISidebar("Channel Messaging API")}} {{AvailableInWorkers}}
 
 The [Channel Messaging API](/en-US/docs/Web/API/Channel_Messaging_API) allows two separate scripts running in different browsing contexts attached to the same document (e.g., two {{HTMLElement("iframe")}} elements, the main document and a single {{HTMLElement("iframe")}}, or two documents via a {{domxref("SharedWorker")}}) to communicate directly, passing messages between each other through two-way channels (or pipes) with a port at each end.
 
 In this article we'll explore the basics of using this technology.
-
-{{AvailableInWorkers}}
 
 ## Use cases
 
@@ -27,27 +19,28 @@ Channel messaging is mainly useful in cases where you've got a social site that 
 
 Message channels on the other hand can provide a secure channel that allows you to pass data between different browsing contexts.
 
-> **Note:** For more information and ideas, the [Ports as the basis of an object-capability model on the Web](https://html.spec.whatwg.org/multipage/comms.html#ports-as-the-basis-of-an-object-capability-model-on-the-web) section of the spec is a useful read.
+> [!NOTE]
+> For more information and ideas, the [Ports as the basis of an object-capability model on the Web](https://html.spec.whatwg.org/multipage/comms.html#ports-as-the-basis-of-an-object-capability-model-on-the-web) section of the spec is a useful read.
 
 ## Simple examples
 
-To get you started, we have published a couple of demos on GitHub. First, check our [channel messaging basic demo](https://github.com/mdn/dom-examples/tree/master/channel-messaging-basic) ([run it live too](https://mdn.github.io/dom-examples/channel-messaging-basic/)), which shows a really simple single message transfer between a page and an embedded {{htmlelement("iframe")}}.
+To get you started, we have published a couple of demos on GitHub. First, check our [channel messaging basic demo](https://github.com/mdn/dom-examples/tree/main/channel-messaging-basic) ([run it live too](https://mdn.github.io/dom-examples/channel-messaging-basic/)), which shows a really simple single message transfer between a page and an embedded {{htmlelement("iframe")}}.
 
-Second, have a look at our [multimessaging demo](https://github.com/mdn/dom-examples/tree/master/channel-messaging-multimessage) ([run this live](https://mdn.github.io/dom-examples/channel-messaging-multimessage/)), which shows a slightly more complex setup that can send multiple messages between the main page and an IFrame.
+Second, have a look at our [multimessaging demo](https://github.com/mdn/dom-examples/tree/main/channel-messaging-multimessage) ([run this live](https://mdn.github.io/dom-examples/channel-messaging-multimessage/)), which shows a slightly more complex setup that can send multiple messages between the main page and an IFrame.
 
 We'll be focusing on the latter example in this article, which looks like:
 
-![](channel-messaging-demo.png)
+![Demo with "Hello this is my demo" sent as five separate messages. The messages are displayed as a bulleted list.](channel-messaging-demo.png)
 
 ## Creating the channel
 
 In the main page of the demo, we have a simple form with a text input for entering messages to be sent to an {{htmlelement("iframe")}}. We also have a paragraph which we will use later on to display confirmation messages that we will receive back from the {{htmlelement("iframe")}}.
 
 ```js
-const input = document.getElementById('message-input');
-const output = document.getElementById('message-output');
-const button = document.querySelector('button');
-const iframe = document.querySelector('iframe');
+const input = document.getElementById("message-input");
+const output = document.getElementById("message-output");
+const button = document.querySelector("button");
+const iframe = document.querySelector("iframe");
 
 const channel = new MessageChannel();
 const port1 = channel.port1;
@@ -57,13 +50,13 @@ iframe.addEventListener("load", onLoad);
 
 function onLoad() {
   // Listen for button clicks
-  button.addEventListener('click', onClick);
+  button.addEventListener("click", onClick);
 
   // Listen for messages on port1
   port1.onmessage = onMessage;
 
   // Transfer port2 to the iframe
-  iframe.contentWindow.postMessage('init', '*', [channel.port2]);
+  iframe.contentWindow.postMessage("init", "*", [channel.port2]);
 }
 
 // Post a message on port1 when the button is clicked
@@ -75,7 +68,7 @@ function onClick(e) {
 // Handle messages received on port1
 function onMessage(e) {
   output.innerHTML = e.data;
-  input.value = '';
+  input.value = "";
 }
 ```
 
@@ -96,11 +89,11 @@ When our button is clicked, we prevent the form from submitting as normal and th
 In the {{HTMLElement("iframe")}} elements, we have the following JavaScript:
 
 ```js
-const list = document.querySelector('ul');
+const list = document.querySelector("ul");
 let port2;
 
 // Listen for the initial port transfer message
-window.addEventListener('message', initPort);
+window.addEventListener("message", initPort);
 
 // Setup the transferred port
 function initPort(e) {
@@ -110,7 +103,7 @@ function initPort(e) {
 
 // Handle messages received on port2
 function onMessage(e) {
-  const listItem = document.createElement('li');
+  const listItem = document.createElement("li");
   listItem.textContent = e.data;
   list.appendChild(listItem);
   port2.postMessage(`Message received by IFrame: "${e.data}"`);
@@ -131,7 +124,7 @@ Returning to the main page, let's now look at the `onmessage` handler function.
 // Handle messages received on port1
 function onMessage(e) {
   output.innerHTML = e.data;
-  input.value = '';
+  input.value = "";
 }
 ```
 

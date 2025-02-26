@@ -1,24 +1,20 @@
 ---
-title: WebGL2RenderingContext.drawBuffers()
+title: "WebGL2RenderingContext: drawBuffers() method"
+short-title: drawBuffers()
 slug: Web/API/WebGL2RenderingContext/drawBuffers
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL2
 browser-compat: api.WebGL2RenderingContext.drawBuffers
 ---
-{{APIRef("WebGL")}}
+
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGL2RenderingContext.drawBuffers()`** method of the [WebGL 2 API](/en-US/docs/Web/API/WebGL_API) defines draw buffers to which
 fragment colors are written into. The draw buffer settings are part of the state of the
-currently bound framebuffer or the drawingbuffer if no framebuffer is bound.
+currently bound framebuffer or the drawing buffer if no framebuffer is bound.
 
 ## Syntax
 
-```js
+```js-nolint
 drawBuffers(buffers)
 ```
 
@@ -64,5 +60,4 @@ gl.drawBuffers([gl.NONE, gl.COLOR_ATTACHMENT1]);
 
 ## See also
 
-- {{domxref("WebGL2RenderingContext.clearBuffer",
-    "WebGL2RenderingContext.clearBuffer[fiuv]()")}}
+- {{domxref("WebGL2RenderingContext.clearBuffer", "WebGL2RenderingContext.clearBuffer[fiuv]()")}}

@@ -1,0 +1,33 @@
+name: Check URL issues
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - "files/**/*.md"
+
+# No GITHUB_TOKEN permissions, as we don't use it.
+permissions: {}
+
+jobs:
+  check_url_issues:
+    #if: github.repository == 'mdn/content'
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: ".nvmrc"
+          cache: yarn
+
+      - name: Check URL deletions and broken fragments
+        run: |
+          echo "::add-matcher::.github/workflows/url-issues-problem-matcher.json"
+          git fetch origin main
+          node scripts/log-url-issues.js --workflow

@@ -1,13 +1,12 @@
 ---
 title: Script timeout
 slug: Web/WebDriver/Errors/ScriptTimeout
-tags:
-  - Error
-  - Reference
-  - Script timeout
-  - WebDriver
+page-type: webdriver-error
 ---
-The **script timeout** error is a [WebDriver error](/en-US/docs/Web/WebDriver/Errors) that occurs when a script the user has provided did not complete before the session's [script timeout](/en-US/docs/Web/WebDriver/Capabilities#script-timeout) duration expired.
+
+{{QuickLinksWithSubpages("/en-US/docs/Web/WebDriver/Errors")}}
+
+The **script timeout** error is a [WebDriver error](/en-US/docs/Web/WebDriver/Errors) that occurs when a script the user has provided did not complete before the session's script timeout duration expired.
 
 The script timeout duration is a configurable capability, which means you can change how long it will take before the driver interrupts an injected script. The driver will by default wait 30 seconds before interrupting the script and returning with a script timeout error, but this can be both extended, limited, and be set to indefinite.
 
@@ -25,7 +24,7 @@ session = webdriver.Firefox()
 try:
     session.execute_script("""
         let [resolve] = arguments;
-        window.setTimeout(resolve, 35000);
+        setTimeout(resolve, 35000);
         """)
 except exceptions.ScriptTimeoutException as e:
     print(e.message)
@@ -33,7 +32,7 @@ except exceptions.ScriptTimeoutException as e:
 
 Output:
 
-```
+```plain
 ScriptTimeoutException: Timed out after 35000 ms
 ```
 
@@ -46,14 +45,14 @@ from selenium.common import exceptions
 session = webdriver.Firefox(capabilities={"alwaysMatch": {"timeouts": {"script": 150000}}})
 session.execute_script("""
     let [resolve] = arguments;
-    window.setTimeout(resolve, 35000);
+    setTimeout(resolve, 35000);
     """)
 print("finished successfully")
 ```
 
 Output:
 
-```
+```plain
 finished successfully
 ```
 

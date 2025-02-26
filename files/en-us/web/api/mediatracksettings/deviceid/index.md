@@ -1,21 +1,12 @@
 ---
-title: MediaTrackSettings.deviceId
+title: "MediaTrackSettings: deviceId property"
+short-title: deviceId
 slug: Web/API/MediaTrackSettings/deviceId
 page-type: web-api-instance-property
-tags:
-  - API
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaTrackSettings
-  - Property
-  - Reference
-  - Settings
-  - WebRTC
-  - deviceId
-browser-compat: api.MediaTrackSettings.deviceId
+browser-compat: api.MediaStreamTrack.applyConstraints.deviceId_constraint
 ---
-{{DefaultAPISidebar("Media Capture and Streams")}}
+
+{{APIRef("Media Capture and Streams")}}
 
 The {{domxref("MediaTrackSettings")}} dictionary's
 **`deviceId`** property is a string which
@@ -51,14 +42,14 @@ source will share the same ID for any given origin, so
 for `deviceId`. That makes the device ID not useful for any changes to
 constraints when calling {{domxref("MediaStreamTrack.applyConstraints()")}}.
 
-> **Note:** An exception to the rule that device IDs are the same across browsing sessions:
+> [!NOTE]
+> An exception to the rule that device IDs are the same across browsing sessions:
 > private browsing mode will use a different ID, and will change it each browsing
 > session.
 
 ## Examples
 
-See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Example:
-  Constraint exerciser")}} for an example.
+See the [Constraint exerciser](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints#example_constraint_exerciser) example.
 
 ## Specifications
 
@@ -70,8 +61,8 @@ See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Exampl
 
 ## See also
 
-- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Streams_API)
-- [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints)
+- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API)
+- [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints)
 - {{domxref("MediaTrackSettings.groupId")}}
 - {{domxref("MediaTrackConstraints.deviceId")}}
 - {{domxref("MediaTrackSettings")}}

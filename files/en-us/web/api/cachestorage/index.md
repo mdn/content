@@ -2,16 +2,10 @@
 title: CacheStorage
 slug: Web/API/CacheStorage
 page-type: web-api-interface
-tags:
-  - API
-  - CacheStorage
-  - Interface
-  - Reference
-  - Service Workers
-  - ServiceWorker
 browser-compat: api.CacheStorage
 ---
-{{APIRef("Service Workers API")}}
+
+{{APIRef("Service Workers API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`CacheStorage`** interface represents the storage for {{domxref("Cache")}} objects.
 
@@ -24,20 +18,16 @@ Use {{domxref("CacheStorage.open()")}} to obtain a {{domxref("Cache")}} instance
 
 Use {{domxref("CacheStorage.match()")}} to check if a given {{domxref("Request")}} is a key in any of the {{domxref("Cache")}} objects that the `CacheStorage` object tracks.
 
-You can access `CacheStorage` through the global {{domxref("caches")}} property.
+You can access `CacheStorage` through the {{domxref("Window.caches")}} property in windows or through the {{domxref("WorkerGlobalScope.caches")}} property in workers.
 
-> **Note:** `CacheStorage` always rejects with a `SecurityError` on untrusted origins (i.e. those that aren't using HTTPS, although this definition will likely become more complex in the future.) When testing on Firefox, you can get around this by checking the **Enable Service Workers over HTTP (when toolbox is open)** option in the Firefox Devtools options/gear menu. Furthermore, because `CacheStorage` requires file-system access, it may be unavailable in private mode in Firefox.
+> **Note:** `CacheStorage` always rejects with a `SecurityError` on untrusted origins (i.e. those that aren't using HTTPS, although this definition will likely become more complex in the future.) When testing on Firefox, you can get around this by checking the **Enable Service Workers over HTTP (when toolbox is open)** option in the Firefox DevTools options/gear menu. Furthermore, because `CacheStorage` requires file-system access, it may be unavailable in private mode in Firefox.
 
 > **Note:** {{domxref("CacheStorage.match()")}} is a convenience method. Equivalent functionality to match a cache entry can be implemented by returning an array of cache names from {{domxref("CacheStorage.keys()")}}, opening each cache with {{domxref("CacheStorage.open()")}}, and matching the one you want with {{domxref("Cache.match()")}}.
 
-{{AvailableInWorkers}}
-
-{{securecontext_header}}
-
-## Methods
+## Instance methods
 
 - {{domxref("CacheStorage.match()")}}
-  - : Checks if a given {{domxref("Request")}} is a key in any of the {{domxref("Cache")}} objects that the {{domxref("CacheStorage")}} object tracks, and returns a {{jsxref("Promise")}} that resolves to that match.
+  - : Checks if a given {{domxref("Request")}} is a key in any of the {{domxref("Cache")}} objects that the `CacheStorage` object tracks, and returns a {{jsxref("Promise")}} that resolves to that match.
 - {{domxref("CacheStorage.has()")}}
   - : Returns a {{jsxref("Promise")}} that resolves to `true` if a {{domxref("Cache")}} object matching the `cacheName` exists.
 - {{domxref("CacheStorage.open()")}}
@@ -45,12 +35,12 @@ You can access `CacheStorage` through the global {{domxref("caches")}} property.
 - {{domxref("CacheStorage.delete()")}}
   - : Finds the {{domxref("Cache")}} object matching the `cacheName`, and if found, deletes the {{domxref("Cache")}} object and returns a {{jsxref("Promise")}} that resolves to `true`. If no {{domxref("Cache")}} object is found, it resolves to `false`.
 - {{domxref("CacheStorage.keys()")}}
-  - : Returns a {{jsxref("Promise")}} that will resolve with an array containing strings corresponding to all of the named {{domxref("Cache")}} objects tracked by the {{domxref("CacheStorage")}}. Use this method to iterate over a list of all the {{domxref("Cache")}} objects.
+  - : Returns a {{jsxref("Promise")}} that will resolve with an array containing strings corresponding to all of the named {{domxref("Cache")}} objects tracked by the `CacheStorage`. Use this method to iterate over a list of all the {{domxref("Cache")}} objects.
 
 ## Examples
 
-This code snippet is from the MDN [sw-test example](https://github.com/mdn/sw-test/) (see [sw-test running live](https://mdn.github.io/sw-test/).)
-This service worker script waits for an {{domxref("InstallEvent")}} to fire, then runs {{domxref("ExtendableEvent.waitUntil","waitUntil")}} to handle the install process for the app. This consists of calling {{domxref("CacheStorage.open")}} to create a new cache, then using {{domxref("Cache.addAll")}} to add a series of assets to it.
+This code snippet is from the MDN [simple service worker example](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker) (see [simple service worker running live](https://bncb2v.csb.app/).)
+This service worker script waits for an {{domxref("ServiceWorkerGlobalScope/install_event", "install")}} event to fire, then runs {{domxref("ExtendableEvent.waitUntil","waitUntil")}} to handle the install process for the app. This consists of calling {{domxref("CacheStorage.open")}} to create a new cache, then using {{domxref("Cache.addAll")}} to add a series of assets to it.
 
 In the second code block, we wait for a {{domxref("FetchEvent")}} to fire. We construct a custom response like so:
 
@@ -61,46 +51,50 @@ In the second code block, we wait for a {{domxref("FetchEvent")}} to fire. We co
 Finally, return whatever the custom response ended up being equal to, using {{domxref("FetchEvent.respondWith")}}.
 
 ```js
-self.addEventListener('install', function(event) {
+self.addEventListener("install", (event) => {
   event.waitUntil(
-    caches.open('v1').then(function(cache) {
-      return cache.addAll([
-        '/sw-test/',
-        '/sw-test/index.html',
-        '/sw-test/style.css',
-        '/sw-test/app.js',
-        '/sw-test/image-list.js',
-        '/sw-test/star-wars-logo.jpg',
-        '/sw-test/gallery/bountyHunters.jpg',
-        '/sw-test/gallery/myLittleVader.jpg',
-        '/sw-test/gallery/snowTroopers.jpg'
-      ]);
-    })
+    caches
+      .open("v1")
+      .then((cache) =>
+        cache.addAll([
+          "/",
+          "/index.html",
+          "/style.css",
+          "/app.js",
+          "/image-list.js",
+          "/star-wars-logo.jpg",
+          "/gallery/bountyHunters.jpg",
+          "/gallery/myLittleVader.jpg",
+          "/gallery/snowTroopers.jpg",
+        ]),
+      ),
   );
 });
 
-self.addEventListener('fetch', function(event) {
-  event.respondWith(caches.match(event.request).then(function(response) {
-    // caches.match() always resolves
-    // but in case of success response will have value
-    if (response !== undefined) {
-      return response;
-    } else {
-      return fetch(event.request).then(function (response) {
-        // response may be used only once
-        // we need to save clone to put one copy in cache
-        // and serve second one
-        let responseClone = response.clone();
-
-        caches.open('v1').then(function (cache) {
-          cache.put(event.request, responseClone);
-        });
+self.addEventListener("fetch", (event) => {
+  event.respondWith(
+    caches.match(event.request).then((response) => {
+      // caches.match() always resolves
+      // but in case of success response will have value
+      if (response !== undefined) {
         return response;
-      }).catch(function () {
-        return caches.match('/sw-test/gallery/myLittleVader.jpg');
-      });
-    }
-  }));
+      } else {
+        return fetch(event.request)
+          .then((response) => {
+            // response may be used only once
+            // we need to save clone to put one copy in cache
+            // and serve second one
+            let responseClone = response.clone();
+
+            caches.open("v1").then((cache) => {
+              cache.put(event.request, responseClone);
+            });
+            return response;
+          })
+          .catch(() => caches.match("/gallery/myLittleVader.jpg"));
+      }
+    }),
+  );
 });
 ```
 
@@ -109,56 +103,56 @@ This snippet shows how the API can be used outside of a service worker context, 
 ```js
 // Try to get data from the cache, but fall back to fetching it live.
 async function getData() {
-   const cacheVersion = 1;
-   const cacheName = `myapp-${cacheVersion}`;
-   const url = 'https://jsonplaceholder.typicode.com/todos/1';
-   let cachedData = await getCachedData(cacheName, url);
+  const cacheVersion = 1;
+  const cacheName = `myapp-${cacheVersion}`;
+  const url = "https://jsonplaceholder.typicode.com/todos/1";
+  let cachedData = await getCachedData(cacheName, url);
 
-   if (cachedData) {
-      console.log('Retrieved cached data');
-      return cachedData;
-   }
+  if (cachedData) {
+    console.log("Retrieved cached data");
+    return cachedData;
+  }
 
-   console.log('Fetching fresh data');
+  console.log("Fetching fresh data");
 
-   const cacheStorage = await caches.open(cacheName);
-   await cacheStorage.add(url);
-   cachedData = await getCachedData(cacheName, url);
-   await deleteOldCaches(cacheName);
+  const cacheStorage = await caches.open(cacheName);
+  await cacheStorage.add(url);
+  cachedData = await getCachedData(cacheName, url);
+  await deleteOldCaches(cacheName);
 
-   return cachedData;
+  return cachedData;
 }
 
 // Get data from the cache.
 async function getCachedData(cacheName, url) {
-   const cacheStorage = await caches.open(cacheName);
-   const cachedResponse = await cacheStorage.match(url);
+  const cacheStorage = await caches.open(cacheName);
+  const cachedResponse = await cacheStorage.match(url);
 
-   if (!cachedResponse || !cachedResponse.ok) {
-      return false;
-   }
+  if (!cachedResponse || !cachedResponse.ok) {
+    return false;
+  }
 
-   return await cachedResponse.json();
+  return await cachedResponse.json();
 }
 
 // Delete any old caches to respect user's disk space.
 async function deleteOldCaches(currentCache) {
-   const keys = await caches.keys();
+  const keys = await caches.keys();
 
-   for (const key of keys) {
-      const isOurCache = key.startsWith('myapp-');
-      if (currentCache === key || !isOurCache) {
-        continue;
-      }
-      caches.delete(key);
-   }
+  for (const key of keys) {
+    const isOurCache = key.startsWith("myapp-");
+    if (currentCache === key || !isOurCache) {
+      continue;
+    }
+    caches.delete(key);
+  }
 }
 
 try {
-   const data = await getData();
-   console.log({ data });
+  const data = await getData();
+  console.log({ data });
 } catch (error) {
-   console.error({ error });
+  console.error({ error });
 }
 ```
 
@@ -174,5 +168,5 @@ try {
 
 - [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - {{domxref("Cache")}}
-- {{domxref("caches")}}
+- {{domxref("Window.caches")}} and {{domxref("WorkerGlobalScope.caches")}}
 - [Private Browsing / Incognito modes](/en-US/docs/Web/API/Web_Storage_API#private_browsing_incognito_modes)

@@ -1,22 +1,11 @@
 ---
-title: VideoTrack.id
+title: "VideoTrack: id property"
+short-title: id
 slug: Web/API/VideoTrack/id
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - Media
-  - Property
-  - Read-only
-  - Reference
-  - Video
-  - Video Track
-  - VideoTrack
-  - id
-  - track
 browser-compat: api.VideoTrack.id
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`id`** property contains a

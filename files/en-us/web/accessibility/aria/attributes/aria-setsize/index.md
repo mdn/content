@@ -1,20 +1,17 @@
 ---
 title: aria-setsize
 slug: Web/Accessibility/ARIA/Attributes/aria-setsize
-tags:
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - ARIA property
-  - aria-setsize
-  - Reference
+page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-setsize
 ---
+
+{{AccessibilitySidebar}}
+
 The `aria-setsize` attribute defines the number of items in the current set of listitems or treeitems when not all items in the set are present in the DOM.
 
 ## Description
 
-Browsers automatically calculate the set size and position for each item in a group of items, like the number of {{HTMLelement('li')}}s in a list, buttons in a same-named group of [radio buttons](/en-US/docs/Web/HTML/Element/input/radio), and {{HTMLelement('option')}}}s in a {{HTMLelement('select')}}. Assistive technologies, like screen readers, take advantage of this state management to report set sizes to the user.
+Browsers automatically calculate the set size and position for each item in a group of items, like the number of {{HTMLelement('li')}}s in a list, buttons in a same-named group of [radio buttons](/en-US/docs/Web/HTML/Element/input/radio), and {{HTMLelement('option')}}s in a {{HTMLelement('select')}}. Assistive technologies, like screen readers, take advantage of this state management to report set sizes to the user.
 
 When the DOM is not complete, the browser calculation of the number of items in a set can be incorrect. When only a subset of items, such as list items, are loaded into the DOM, the browser calculates the number of items based only on those present. The `aria-setsize` attribute should be used to override the browser's incorrect count. It defines the number of items in the current set of listitems or treeitems had the entire set been loaded.
 
@@ -22,7 +19,7 @@ When the DOM is not complete, the browser calculation of the number of items in 
 
 Elements with the `aria-setsize` generally have the [`aria-posinset`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-posinset) attribute included as well to indicate the position of that item within the set. The `aria-posinset` value is between `1` and the positive value of `aria-setsize`.
 
-For example, in a page's comments section, When comments in are not all in the DOM, such as when comments are paginated, the level, total number of comments, and position of each comment should be set with ARIA. The hierarchical level of comments can be indicated with [`aria-level`](/en-US/docs/Web/Accessibility/aria/Attributes/aria-level). Group positional information is indicated with `aria-posinset` and `aria-setsize`.
+For example, in a page's comments section, When comments in are not all in the DOM, such as when comments are paginated, the level, total number of comments, and position of each comment should be set with ARIA. The hierarchical level of comments can be indicated with [`aria-level`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-level). Group positional information is indicated with `aria-posinset` and `aria-setsize`.
 
 When a feed has a static number of articles, `aria-setsize` can be added to each article element with the value being either the total number of articles loaded or the total number in the feed. The value chosen depends on which value is most helpful to users. If the number of articles is extremely large, indefinite, or changes often, `aria-setsize="-1"` can be set to communicate the size of the set is unknown.
 
@@ -37,7 +34,7 @@ In a menu, `aria-setsize` is set on all [`menuitem`](/en-US/docs/Web/Accessibili
 The following example shows items 5 through 8 in a set of 16.
 
 ```html
-<h2 id="label_fruit"> Available Fruit </h2>
+<h2 id="label_fruit">Available Fruit</h2>
 <ul role="listbox" aria-labelledby="label_fruit">
   <li role="option" aria-setsize="16" aria-posinset="5">apples</li>
   <li role="option" aria-setsize="16" aria-posinset="6">bananas</li>
@@ -53,7 +50,7 @@ To orient the user, assistive technologies would list the bananas above as "item
 - `<integer>`
   - : The number of items in the full set or `-1` is the set size is unknown.
 
-## ARIAMixin API
+## Associated interfaces
 
 - {{domxref("Element.ariaSetSize")}}
   - : The [`ariaSetSize`](/en-US/docs/Web/API/Element/ariaSetSize) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-setsize` attribute.
@@ -65,8 +62,8 @@ To orient the user, assistive technologies would list the bananas above as "item
 Used in roles:
 
 - [`article`](/en-US/docs/Web/Accessibility/ARIA/Roles/article_role)
-- [`associationlistitemkey`](/en-US/docs/Web/Accessibility/ARIA/Roles/associationlistitemkey_role)
-- [`associationlistitemvalue`](/en-US/docs/Web/Accessibility/ARIA/Roles/associationlistitemvalue_role)
+- [`associationlistitemkey`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles)
+- [`associationlistitemvalue`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles)
 - [`comment`](/en-US/docs/Web/Accessibility/ARIA/Roles/comment_role)
 - [`listitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/listitem_role)
 - [`menuitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role)
@@ -86,13 +83,10 @@ Inherits into roles:
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [`aria-posinset`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-posinset)
-- [Treegrid Email Inbox](https://www.w3.org/TR/2019/WD-wai-aria-practices-1.2-20191218/examples/treegrid/treegrid-1.html) example
-- [Navigation Treeview Using Declared Properties](https://www.w3.org/TR/2019/WD-wai-aria-practices-1.2-20191218/examples/treeview/treeview-2/treeview-2b.html) example
-
-<section id="Quick_links">
-<strong><a href="/en-US/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA states and properties</a></strong>
-{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/aria/Attributes")}}
-</section>
+- W3C WAI-ARIA practices:
+  - [Treegrid Email Inbox example](https://www.w3.org/WAI/ARIA/apg/patterns/treegrid/examples/treegrid-1/)
+  - [Navigation Treeview example](https://www.w3.org/WAI/ARIA/apg/patterns/treeview/examples/treeview-navigation/)
+  - [File Directory Treeview Example Using Declared Properties](https://www.w3.org/WAI/ARIA/apg/patterns/treeview/examples/treeview-1b/)

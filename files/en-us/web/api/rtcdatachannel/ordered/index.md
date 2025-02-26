@@ -1,16 +1,11 @@
 ---
-title: RTCDataChannel.ordered
+title: "RTCDataChannel: ordered property"
+short-title: ordered
 slug: Web/API/RTCDataChannel/ordered
 page-type: web-api-instance-property
-tags:
-  - Property
-  - RTCDataChannel
-  - Read-only
-  - Reference
-  - WebRTC
-  - ordered
 browser-compat: api.RTCDataChannel.ordered
 ---
+
 {{APIRef("WebRTC")}}
 
 The read-only `RTCDataChannel` property **`ordered`** indicates

@@ -2,35 +2,34 @@
 title: AbstractRange
 slug: Web/API/AbstractRange
 page-type: web-api-interface
-tags:
-  - Interface
-  - Reference
 browser-compat: api.AbstractRange
 ---
+
 {{APIRef("DOM")}}
 
 The **`AbstractRange`** abstract interface is the base class upon which all {{Glossary("DOM")}} range types are defined. A **range** is an object that indicates the start and end points of a section of content within the document.
 
-> **Note:** As an abstract interface, you will not directly instantiate an object of type `AbstractRange`. Instead, you will use the {{domxref("Range")}} or {{domxref("StaticRange")}} interfaces. To understand the difference between those two interfaces, and how to choose which is appropriate for your needs.
+> [!NOTE]
+> As an abstract interface, you will not directly instantiate an object of type `AbstractRange`. Instead, you will use the {{domxref("Range")}} or {{domxref("StaticRange")}} interfaces. To understand the difference between those two interfaces, and how to choose which is appropriate for your needs, consult each interface's documentation.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 - {{domxref("AbstractRange.collapsed", "collapsed")}} {{ReadOnlyInline}}
   - : A Boolean value which is `true` if the range is _collapsed_. A collapsed range is a range whose start position and end position are the same, resulting in a zero-character-long range.
 - {{domxref("AbstractRange.endContainer", "endContainer")}} {{ReadOnlyInline}}
   - : The {{domxref("Node")}} object in which the end of the range, as specified by the `endOffset` property, is located.
 - {{domxref("AbstractRange.endOffset", "endOffset")}} {{ReadOnlyInline}}
-  - : An integer value indicating the offset, in characters, from the beginning of the node's contents to the beginning of the range represented by the range object. This value must be less than the length of the `endContainer` node.
+  - : An integer value indicating the offset, in characters, from the beginning of the node's contents to the last character of the range represented by the range object. This value must be less than the length of the `endContainer` node.
 - {{domxref("AbstractRange.startContainer", "startContainer")}} {{ReadOnlyInline}}
   - : The DOM {{domxref("Node")}} in which the beginning of the range, as specified by the `startOffset` property, is located.
 - {{domxref("AbstractRange.startOffset", "startOffset")}} {{ReadOnlyInline}}
-  - : An integer value indicating the offset, in characters, from the beginning of the node's contents to the last character of the contents referred to by the range object. This value must be less than the length of the node indicated in `startContainer`.
+  - : An integer value indicating the offset, in characters, from the beginning of the node's contents to the first character of the contents referred to by the range object. This value must be less than the length of the node indicated in `startContainer`.
 
-## Methods
+## Instance methods
 
-_The `AbstractRange` interface does provide any methods._
+_The `AbstractRange` interface doesn't provide any methods._
 
 ## Usage notes
 
@@ -48,18 +47,18 @@ All ranges of content within a {{domxref("Document", "document")}} are described
 When trying to access the contents of an element, keep in mind that the element itself is a node, but so is any text inside it. In order to set a range endpoint within the text of an element, be sure to find the text node inside the element:
 
 ```js
-let startElem = document.querySelector("p");
-let endElem = startElem.querySelector("span");
-let range = document.createRange();
+const startElem = document.querySelector("p");
+const endElem = startElem.querySelector("span");
+const range = document.createRange();
 
 range.setStart(startElem, 0);
-range.setEnd(endElem, endElem.childNodes[0].length/2);
-let contents = range.cloneContents();
+range.setEnd(endElem, endElem.childNodes[0].length / 2);
+const contents = range.cloneContents();
 
 document.body.appendChild(contents);
 ```
 
-This example creates a new range, `range`, and sets its starting point to the third child node of the first element whose class is `elementclass`. The end point is set to be the middle of the first child of the span, and then the range is used to copy the contents of the range.
+This example creates a new range, `range`, and sets its starting point to the third child node of the first element. The end point is set to be the middle of the first child of the span, and then the range is used to copy the contents of the range.
 
 ### Ranges and the hierarchy of the DOM
 
@@ -76,7 +75,7 @@ To illustrate this, consider the HTML below:
 ```html
 <div class="container">
   <div class="header">
-    <img src="" class="sitelogo">
+    <img src="" class="sitelogo" />
     <h1>The Ultimate Website</h1>
   </div>
   <article>
@@ -95,14 +94,14 @@ To illustrate this, consider the HTML below:
 
 After loading the HTML and constructing the DOM representation of the document, the resulting DOM tree looks like this:
 
-[![Diagram of the DOM for a simple web page](simpledom.svg)](simpledom.svg)
+![Diagram of the DOM for a simple web page](simpledom.svg)
 
-In this diagram, the nodes representing HTML elements are shown in green. Eah row beneath them shows the next layer of depth into the DOM tree. Blue nodes are text nodes, containing the text that gets shown onscreen. Each element's contents are linked below it in the tree, potentially spawning a series of branches below as elements include other elements and text nodes.
+In this diagram, the nodes representing HTML elements are shown in green. Each row beneath them shows the next layer of depth into the DOM tree. Blue nodes are text nodes, containing the text that gets shown onscreen. Each element's contents are linked below it in the tree, potentially spawning a series of branches below as elements include other elements and text nodes.
 
 If you want to create a range that incorporates the contents of the {{HTMLElement("p")}} element whose contents are `"A <em>very</em> interesting thing happened on the way to the forum…"`, you can do so like this:
 
 ```js
-let pRange = document.createRange();
+const pRange = document.createRange();
 pRange.selectNodeContents(document.querySelector("#entry1 p"));
 ```
 
@@ -110,15 +109,15 @@ Since we wish to select the entire contents of the `<p>` element, including its 
 
 If we wish to instead copy the text "An interesting thing…" from the {{HTMLElement("section")}}'s heading (an {{HTMLElement("Heading_Elements", "h2")}} element) through the end of the letters "ve" in the {{HTMLElement("em")}} within the paragraph below it, the following code would work:
 
-```html
-let r = document.createRange();
-let startNode = document.querySelector("section h2").childNodes[0];
-r.setStart(startNode, 11);
+```js
+const range = document.createRange();
+const startNode = document.querySelector("section h2").childNodes[0];
+range.setStart(startNode, 11);
 
-let endNode = document.querySelector("#entry1 p em").childNodes[0];
-r.setEnd(endNode, 2);
+const endNode = document.querySelector("#entry1 p em").childNodes[0];
+range.setEnd(endNode, 2);
 
-let fragment = r.cloneContents();
+const fragment = range.cloneContents();
 ```
 
 Here an interesting problem arises—we are capturing content from multiple nodes located at different levels of the DOM hierarchy, and then only part of one of them. What should the result look like?
@@ -135,7 +134,7 @@ The resulting document fragment looks like this:
 
 ![A DocumentFragment representing the cloned content](dom-fragment.svg)
 
-Notice especially that the contents of this fragment are all *below* the shared common parent of the topmost nodes within it. The parent `<section>` is not needed to replicate the cloned content, so it isn't included.
+Notice especially that the contents of this fragment are all _below_ the shared common parent of the topmost nodes within it. The parent `<section>` is not needed to replicate the cloned content, so it isn't included.
 
 ## Example
 
@@ -148,14 +147,14 @@ Consider this simple HTML fragment of HTML.
 Imagine using a {{domxref("Range")}} to extract the word "paragraph" from this. The code to do that looks like the following:
 
 ```js
-let paraNode = document.querySelector("p");
-let paraTextNode = paraNode.childNodes[1];
+const paraNode = document.querySelector("p");
+const paraTextNode = paraNode.childNodes[1];
 
-let range = document.createRange();
+const range = document.createRange();
 range.setStart(paraTextNode, 6);
-range.setEnd(paraTextNode, paraTextNode.length-1);
+range.setEnd(paraTextNode, paraTextNode.length - 1);
 
-let fragment = range.cloneContents();
+const fragment = range.cloneContents();
 document.body.appendChild(fragment);
 ```
 

@@ -1,23 +1,16 @@
 ---
-title: HTMLAnchorElement.hash
+title: "HTMLAnchorElement: hash property"
+short-title: hash
 slug: Web/API/HTMLAnchorElement/hash
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTMLAnchorElement
-  - Property
-  - Reference
 browser-compat: api.HTMLAnchorElement.hash
 ---
+
 {{ APIRef("HTML DOM") }}
 
-The
-**`HTMLAnchorElement.hash`** property returns a
-string containing a `'#'` followed by the fragment
-identifier of the URL.
+The **`hash`** property of the {{domxref("HTMLAnchorElement")}} interface is a string containing a `"#"` followed by the fragment identifier of the `<a>` element's `href`. If the URL does not have a fragment identifier, this property contains an empty string, `""`.
 
-The fragment is not [percent-decoded](/en-US/docs/Glossary/percent-encoding). If the URL does not
-have a fragment identifier, this property contains an empty string, `""`.
+See {{domxref("URL.hash")}} for more information.
 
 ## Value
 
@@ -30,14 +23,16 @@ A string.
 Given this HTML
 
 ```html
-<a id="myAnchor" href="/en-US/docs/HTMLAnchorElement#Examples">Examples</a>
+<a id="myAnchor" href="/en-US/docs/Web/API/HTMLAnchorElement/hash#examples">
+  Examples
+</a>
 ```
 
 you can get the hash of the anchor like this:
 
 ```js
 const anchor = document.getElementById("myAnchor");
-anchor.hash; // returns '#Examples'
+anchor.hash; // '#examples'
 ```
 
 ## Specifications

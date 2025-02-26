@@ -1,25 +1,12 @@
 ---
-title: RTCRtpReceiver.transport
+title: "RTCRtpReceiver: transport property"
+short-title: transport
 slug: Web/API/RTCRtpReceiver/transport
 page-type: web-api-instance-property
-tags:
-  - API
-  - Communications
-  - DTLS
-  - Media
-  - Networking
-  - RTCP
-  - RTCRtpReceiver
-  - RTP
-  - Reference
-  - Transport
-  - WebRTC
-  - WebRTC API
-  - WebRTC Device API
-  - receiver
 browser-compat: api.RTCRtpReceiver.transport
 ---
-{{DefaultAPISidebar("WebRTC")}}
+
+{{APIRef("WebRTC")}}
 
 The read-only **`transport`** property of an
 {{domxref("RTCRtpReceiver")}} object provides the {{domxref("RTCDtlsTransport")}} object
@@ -29,13 +16,7 @@ Real-time Transport Control Protocol ({{Glossary("RTCP")}}) packets.
 This transport is responsible for receiving the data for the media on the receiver's
 {{domxref("RTCRtpReceiver.track", "track")}}.
 
-## Syntax
-
-```js
-let transport = rtcRtpReceiver.transport;
-```
-
-### Value
+## Value
 
 An {{domxref("RTCDtlsTransport")}} object representing the underlying transport being
 used by the receiver to exchange packets with the remote peer, or `null` if

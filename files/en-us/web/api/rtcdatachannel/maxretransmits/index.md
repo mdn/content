@@ -1,16 +1,11 @@
 ---
-title: RTCDataChannel.maxRetransmits
+title: "RTCDataChannel: maxRetransmits property"
+short-title: maxRetransmits
 slug: Web/API/RTCDataChannel/maxRetransmits
 page-type: web-api-instance-property
-tags:
-  - Property
-  - RTCDataChannel
-  - Read-only
-  - Reference
-  - WebRTC
-  - maxRetransmits
 browser-compat: api.RTCDataChannel.maxRetransmits
 ---
+
 {{APIRef("WebRTC")}}
 
 The read-only `RTCDataChannel` property

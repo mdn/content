@@ -1,18 +1,14 @@
 ---
 title: Using the imscJS polyfill
 slug: Related/IMSC/Using_the_imscJS_polyfill
-tags:
-  - IMSC
-  - captions
-  - imscJS
-  - rendering
-  - subtitles
+page-type: guide
 ---
+
 You currently need a polyfill to render IMSC on the web. imscJS is a good choice as it is actively maintained and has almost complete coverage of the IMSC features. This article shows you how to make use of imscJS and how to integrate it on your own website.
 
 ## Introducing imscJS
 
-[imscJS](https://github.com/sandflow/imscJS) is a JavaScript library for rendering IMSC documents to HTML. Below we will first go through a simple example how to use imscJS, then we'll look at a more complex example that actually renders subtitles on top of video at appropriate times. You can find the source code of the [first sample on GitHub](https://github.com/mdn/imsc/blob/master/imscjs-simple-sample/imscjs-simple-sample.html).
+[imscJS](https://github.com/sandflow/imscJS) is a JavaScript library for rendering IMSC documents to HTML. Below we will first go through an example how to use imscJS, then we'll look at a more complex example that actually renders subtitles on top of video at appropriate times. You can find the source code of the [first sample on GitHub](https://github.com/mdn/imsc-examples/blob/main/imscjs-simple-sample/imscjs-simple-sample.html).
 
 ## Embedding imscJS
 
@@ -26,16 +22,16 @@ Once the imscJS library is loaded, it can be used to render an IMSC document in 
 
 ## Parsing the IMSC document
 
-First of all, the IMSC document is parsed into an immutable Javascript object (`doc`, in our case):
+First of all, the IMSC document is parsed into an immutable JavaScript object (`doc`, in our case):
 
 ```js
-var doc = imsc.fromXML(source);
+const doc = imsc.fromXML(source);
 ```
 
 This step needs to happen only once for every IMSC document. The `doc` object has a single method, `getMediaTimeEvents()`, which returns an array of time offsets (in seconds) indicating where the visual representation of the IMSC document changes.
 
 ```js
-var t = doc.getMediaTimeEvents();
+const t = doc.getMediaTimeEvents();
 ```
 
 ## Generating an IMSC snapshot
@@ -43,7 +39,7 @@ var t = doc.getMediaTimeEvents();
 In the second step, a snapshot of the IMSC document at a particular point in time (`isd`) is created using `imsc.generateISD()`.
 
 ```js
-var isd = imsc.generateISD(doc, t[1]);
+const isd = imsc.generateISD(doc, t[1]);
 ```
 
 This point in time does not have to be one of the values returned by `getMediaTimeEvents()`, but it usually is. In the example above, the snapshot is created at the second point in time that the IMSC document changes (`t[1]`). In a typical scenario, an application would, prior to media playback and for every offset returned by `getMediaTimeEvents()`, create a snapshot and schedule its presentation at the specified offset.
@@ -53,17 +49,17 @@ This point in time does not have to be one of the values returned by `getMediaTi
 In the third and final step, a snapshot is rendered into an HTML {{htmlelement("div")}} using `imsc.renderHTML()`:
 
 ```js
-var vdiv = document.getElementById('render-div');
-imsc.renderHTML(isd, vdiv);
+const renderDiv = document.getElementById("render-div");
+imsc.renderHTML(isd, renderDiv);
 ```
 
 ## Building an IMSC player
 
 Lets look at a more expanded example and show you how can render subtitles with imscJS on an embedded HTML video. As an example we use the below video with subtitles.
 
-{{EmbedGHLiveSample("imsc/imscjs-demo/imscjs-demo.html", '100%', 320)}}
+{{EmbedGHLiveSample("imsc-examples/imscjs-demo/imscjs-demo.html", '100%', 320)}}
 
-You can find the [HTML markup](https://github.com/mdn/imsc/blob/master/imscjs-demo/imscjs-demo.html) and the [JavaScript source code](https://github.com/mdn/imsc/blob/master/imscjs-demo/js/index.js) on the [MDN repository for IMSC samples](https://github.com/mdn/imsc).
+You can find the [HTML markup](https://github.com/mdn/imsc-examples/blob/main/imscjs-demo/imscjs-demo.html) and the [JavaScript source code](https://github.com/mdn/imsc-examples/blob/main/imscjs-demo/js/index.js) on the [MDN repository for IMSC samples](https://github.com/mdn/imsc-examples).
 
 ## Accessing the DOM
 
@@ -72,35 +68,29 @@ An IMSC subtitle is rendered by HTML markup with inline CSS. It represents the I
 For convenience we assign this DOM element to a variable.
 
 ```js
-var renderDiv = document.getElementById("render-div");
+const renderDiv = document.getElementById("render-div");
 ```
 
 We use HTML cues associated with HTML text tracks to throw events whenever an IMSC subtitle should appear or disappear. In this example we use a {{htmlelement("track")}} element that we declared in the HTML markup, but we could also create a text track on the fly and add it to the {{htmlelement("video")}}.
 
 ```js
-var myVideo = document.getElementById("imscVideo");
-var myTrack = myVideo.textTracks[0];
+const myVideo = document.getElementById("imscVideo");
+const myTrack = myVideo.textTracks[0];
 ```
 
 We use the `src` attribute of the `<track>` element as a pointer to the IMSC document that contains our subtitle:
 
 ```js
-var ttmlUrl = myVideo.getElementsByTagName("track")[0].src;
+const ttmlUrl = myVideo.getElementsByTagName("track")[0].src;
 ```
 
 ## Retrieving the IMSC file
 
-The browser will not retrieve the document automatically for us. In most browsers only [WebVTT](/en-US/docs/Web/API/WebVTT_API) is implemented at the moment. Therefore, these browsers expect that the value of the `src` attribute points to a WebVTT file. If it doesn't, they don't use it, and we also have no direct access to the file the `src` attribute is pointing to. We use the `src` attribute therefore just to store the URL of the IMSC file. We need to do the work to retrieve the file and read it into a JavaScript string. In the example we use the `XMLHttpRequest` method for this task:
+The browser will not retrieve the document automatically for us. In most browsers only [WebVTT](/en-US/docs/Web/API/WebVTT_API) is implemented at the moment. Therefore, these browsers expect that the value of the `src` attribute points to a WebVTT file. If it doesn't, they don't use it, and we also have no direct access to the file the `src` attribute is pointing to. We use the `src` attribute therefore just to store the URL of the IMSC file. We need to do the work to retrieve the file and read it into a JavaScript string. In the example we use the {{domxref("Window/fetch", "fetch()")}} API for this task:
 
 ```js
-var client = new XMLHttpRequest();
-
-client.open('GET', ttmlUrl);
-client.onreadystatechange = function () {
-  initTrack(client.responseText);
-}
-
-client.send()
+const response = await fetch(ttmlUrl);
+initTrack(await response.text());
 ```
 
 ## Setting the text track mode
@@ -122,7 +112,7 @@ Above we explained that we need to generate IMSC snapshots. In the following sec
 As we learned in [Parsing the IMSC document](#parsing_the_imsc_document), the first step is to parse the IMSC document into an imscJS object.
 
 ```js
-var imscDoc = imsc.fromXML(text);
+const imscDoc = imsc.fromXML(text);
 ```
 
 We want to use cues for rendering the IMSC subtitles. Each cue has properties representing its start time and end time. The browser engine fires events whenever the timeline of the media hits the start and the end time of a cue. We can register function calls for these events. We use them to render the HTML generated from imscJS and remove it again when required.
@@ -160,7 +150,7 @@ So how can we get the times when the ISD changes?
 This is easy: we just call the `getMediaTimeEvents()` method on the imscJS document object (see also [Parsing the IMSC document](#parsing_the_imsc_document)):
 
 ```js
-var timeEvents = imscDoc.getMediaTimeEvents(); // timeEvents = [0,1,2,3]
+const timeEvents = imscDoc.getMediaTimeEvents(); // timeEvents = [0,1,2,3]
 ```
 
 To get an ISD document that corresponds to a time event we need to call the imscJS method `generateISD()`. We explained this briefly in [Generating an IMSC snapshot](#generating_an_imsc_snapshot). So for the ISD at second 2 we need to do the following:
@@ -181,22 +171,26 @@ With two methods we can now generate all necessary states of the IMSC rendering 
   - Use an `onexit` event to remove the rendering layer again.
 
 ```js
-for (var i = 0; i < timeEvents.length; i++) {
-    var Cue = window.VTTCue || window.TextTrackCue;
-    if (i < timeEvents.length - 1) {
-    } else {
-      var myCue = new Cue(timeEvents[i], myVideo.duration, "");
-    }
-    myCue.onenter = function () {
-      clearSubFromScreen();
-      var myIsd = imsc.generateISD(imscDoc, this.startTime);
-      imsc.renderHTML(myIsd, renderDiv);
-    };
-    myCue.onexit = function () {
-      clearSubFromScreen();
-    };
-    var r = myTrack.addCue(myCue);
+for (let i = 0; i < timeEvents.length; i++) {
+  const Cue = window.VTTCue || window.TextTrackCue;
+
+  let myCue;
+  if (i < timeEvents.length - 1) {
+    myCue = new Cue(timeEvents[i], timeEvents[i + 1], "");
+  } else {
+    myCue = new Cue(timeEvents[i], myVideo.duration, "");
   }
+
+  myCue.onenter = function () {
+    clearSubFromScreen();
+    const myIsd = imsc.generateISD(imscDoc, this.startTime);
+    imsc.renderHTML(myIsd, renderDiv);
+  };
+  myCue.onexit = function () {
+    clearSubFromScreen();
+  };
+
+  myTrack.addCue(myCue);
 }
 ```
 
@@ -205,26 +199,27 @@ Let's look at it into more detail.
 While we loop through the `timeEvents` we can take the value of the time event as the start time of the cue. We can then use the value of the next time event for the end time of the cue, because this indicates that the rendering layer needs to change:
 
 ```js
-var myCue = new Cue(timeEvents[i], timeEvents[i + 1], "");
+myCue = new Cue(timeEvents[i], timeEvents[i + 1], "");
 ```
 
-> **Note:** In most browsers text track cues are currently only implemented for the WebVTT format. So usually you create a cue with all WebVTT properties including the WebVTT text property. We never use these properties but it is important to remember that they are still there. In the constructor we also have to add the VTTCue text as a third parameter.
+> [!NOTE]
+> In most browsers text track cues are currently only implemented for the WebVTT format. So usually you create a cue with all WebVTT properties including the WebVTT text property. We never use these properties but it is important to remember that they are still there. In the constructor we also have to add the VTTCue text as a third parameter.
 
 But how should we calculate the end time of the last time event? It does not have a "next" time event we can take the end time from.
 
 If there is no further time event this actually means that the rendering layer is active until the end of the playtime of the media. So we can set the end time to the duration of the associated media:
 
 ```js
-var myCue = new Cue(timeEvents[i], myVideo.duration, "");
+myCue = new Cue(timeEvents[i], myVideo.duration, "");
 ```
 
 Once we construct the cue object we can register the function that is called "on entering" the cue:
 
 ```js
- myCue.onenter = function () {
-        clearSubFromScreen();
-        var myIsd = imsc.generateISD(imscDoc, this.startTime);
-        imsc.renderHTML(myIsd, renderDiv);
+myCue.onenter = function () {
+  clearSubFromScreen();
+  const myIsd = imsc.generateISD(imscDoc, this.startTime);
+  imsc.renderHTML(myIsd, renderDiv);
 };
 ```
 
@@ -234,10 +229,10 @@ To be sure there is no remaining subtitle layer we first remove the subtitle lay
 
 ```js
 function clearSubFromScreen() {
-    var subtitleActive = renderDiv.getElementsByTagName("div")[0];
-    if (subtitleActive) {
-      renderDiv.removeChild(subtitleActive);
-    }
+  const subtitleActive = renderDiv.getElementsByTagName("div")[0];
+  if (subtitleActive) {
+    renderDiv.removeChild(subtitleActive);
+  }
 }
 ```
 
@@ -245,14 +240,14 @@ We call this function again once the `onexit` event of the cue is thrown:
 
 ```js
 myCue.onexit = function () {
- clearSubFromScreen();
+  clearSubFromScreen();
 };
 ```
 
 At the end we just need to add the generated cue to the text track:
 
 ```js
-var r = myTrack.addCue(myCue);
+myTrack.addCue(myCue);
 ```
 
 ## Using native video player controls
@@ -266,7 +261,7 @@ This causes two problems when using imscJS:
 1. The IMSC HTML overlay covers the complete video. It sits on top of the `<video>` element. Although you can see the player controls (because most of the overlay has a transparent background), pointer events like mouse clicks are not coming through to the controls. Because they can't be accessed by standard CSS you can also not change the z-index of the controls to solve this problem. So, if you always have a subtitle overlay, you will not able be able to stop the video once it has started. This would be a very bad user experience.
 2. Usually the native video player controls have a caption user interface. You can select a text track or to switch off the rendering of subtitles. Unfortunately, the caption interface only controls the rendering of WebVTT subtitles. The browser does not know that we are rendering subtitles with imscJS, so these controls will have no effect.
 
-For the first problem there is a straightforward CSS solution. We need to set the CSS property `pointer-events` to `none` (see the [sample code](https://github.com/mdn/imsc/blob/master/imscjs-demo/css/style.css) on GitHub for the complete CSS).
+For the first problem there is a straightforward CSS solution. We need to set the CSS property `pointer-events` to `none` (see the [sample code](https://github.com/mdn/imsc-examples/blob/main/imscjs-demo/css/style.css) on GitHub for the complete CSS).
 
 ```css
 #render-div {
@@ -276,9 +271,9 @@ For the first problem there is a straightforward CSS solution. We need to set th
 
 This has the effect that pointer events are going "through" the overlay (see [reference documentation for point events](/en-US/docs/Web/CSS/pointer-events) for more details).
 
-The caption user interface problem is a bit harder to solve. Although we can listen to events, activating a track using the caption user interface will also activate the rendering of corresponding WebVTT. As we are using VTTCues for IMSC rendering, this can course undesired presentation behavior. The text property of the VTTCue has always the empty string as value but in some browser this may lead nonetheless to the rendering of artefacts.
+The caption user interface problem is a bit harder to solve. Although we can listen to events, activating a track using the caption user interface will also activate the rendering of corresponding WebVTT. As we are using VTTCues for IMSC rendering, this can course undesired presentation behavior. The text property of the VTTCue has always the empty string as value but in some browser this may lead nonetheless to the rendering of artifacts.
 
-the best solution is to building your own custom controls. Find out how in our [Creating a cross-browser video player](/en-US/docs/Web/Guide/Audio_and_video_delivery/cross_browser_video_player) tutorial.
+the best solution is to building your own custom controls. Find out how in our [Creating a cross-browser video player](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery/cross_browser_video_player) tutorial.
 
 <section id="Quick_links">
   <ol>

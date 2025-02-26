@@ -1,44 +1,45 @@
 ---
-title: TextDecoder()
+title: "TextDecoder: TextDecoder() constructor"
+short-title: TextDecoder()
 slug: Web/API/TextDecoder/TextDecoder
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Encoding
-  - Experimental
-  - Reference
-  - TextDecoder
 browser-compat: api.TextDecoder.TextDecoder
 ---
-{{APIRef("Encoding API")}}
 
-The **`TextDecoder()`** constructor returns a newly created
-{{DOMxRef("TextDecoder")}} object for the encoding specified in parameter.
+{{APIRef("Encoding API")}}{{AvailableInWorkers}}
 
-If the value for _utfLabel_ is unknown, or is one of the two values leading to a `'replacement'` decoding algorithm (`"iso-2022-cn"` or `"iso-2022-cn-ext"`), a {{jsxref("RangeError")}} is thrown.
+The **`TextDecoder()`** constructor returns a newly created {{DOMxRef("TextDecoder")}} object for the encoding specified in parameter.
 
 ## Syntax
 
-```js
+```js-nolint
 new TextDecoder()
-new TextDecoder(utfLabel)
-new TextDecoder(utfLabel, options)
+new TextDecoder(label)
+new TextDecoder(label, options)
 ```
 
 ### Parameters
 
-- `utfLabel` {{optional_inline}}
-  - : A string, defaulting to `"utf-8"`, containing the
-    _label_ of the encoder. This may be [any valid label](/en-US/docs/Web/API/Encoding_API/Encodings).
+- `label` {{optional_inline}}
+  - : A string, defaulting to `"utf-8"`.
+    This may be [any valid label](/en-US/docs/Web/API/Encoding_API/Encodings).
 - `options` {{optional_inline}}
 
-  - : A `TextDecoderOptions` dictionary with the property:
+  - : An object with the following properties:
 
-    - `fatal`
-      - : A [`Boolean`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)
-        flag indicating if the {{DOMxRef("TextDecoder.decode()")}} method must throw a
-        {{jsxref("TypeError")}} when an coding error is found. It defaults to `false`.
+    - `fatal` {{optional_inline}}
+
+      - : A boolean value indicating if the {{DOMxRef("TextDecoder.decode()")}} method must throw a {{jsxref("TypeError")}} when decoding invalid data.
+        It defaults to `false`, which means that the decoder will substitute malformed data with a replacement character.
+
+    - `ignoreBOM` {{optional_inline}}
+      - : A boolean value indicating whether the [byte order mark](https://www.w3.org/International/questions/qa-byte-order-mark) will be included in the output or skipped over.
+        It defaults to `false`, which means that the byte order mark will be skipped over when decoding and will not be included in the decoded text.
+
+### Exceptions
+
+- {{jsxref("RangeError")}}
+  - : Thrown if the value of `label` is unknown, or is one of the values leading to a `'replacement'` decoding algorithm (`"iso-2022-cn"` or `"iso-2022-cn-ext"`).
 
 ## Examples
 

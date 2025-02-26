@@ -1,13 +1,11 @@
 ---
-title: Attr.namespaceURI
+title: "Attr: namespaceURI property"
+short-title: namespaceURI
 slug: Web/API/Attr/namespaceURI
 page-type: web-api-instance-property
-tags:
-  - Property
-  - Reference
-  - Read-only
 browser-compat: api.Attr.namespaceURI
 ---
+
 {{APIRef("DOM")}}
 
 The read-only **`namespaceURI`** property of the {{domxref("Attr")}} interface returns the namespace URI of the attribute,
@@ -16,7 +14,8 @@ or `null` if the element is not in a namespace.
 The namespace URI is set at the {{domxref("Attr")}} creation and cannot be changed.
 An attribute with a namespace can be created using {{domxref("Element.setAttributeNS()")}}.
 
-> **Note:** an attribute does not inherit its namespace from the element it is attached to.
+> [!NOTE]
+> An attribute does not inherit its namespace from the element it is attached to.
 > If an attribute is not explicitly given a namespace, it has no namespace.
 
 The browser does not handle or enforce namespace validation per se. It is up to the JavaScript
@@ -33,7 +32,7 @@ The following example shows the results for a prefixed attribute in a case of an
 As HTML doesn't handle namespaces, it will always return `null` in that case.
 In the case of the SVG element, it will return the URI of the XML namespace, `http://www.w3.org/XML/1998/namespace`.
 
-### HTML Content
+### HTML
 
 ```html
 <svg xml:lang="en-US" class="struct" height="1" width="1">Click me</svg>
@@ -50,7 +49,7 @@ In the case of the SVG element, it will return the URI of the XML namespace, `ht
 </p>
 ```
 
-### JavaScript Content
+### JavaScript
 
 ```js
 const elements = document.querySelectorAll(".struct");

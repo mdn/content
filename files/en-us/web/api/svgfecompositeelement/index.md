@@ -2,14 +2,9 @@
 title: SVGFECompositeElement
 slug: Web/API/SVGFECompositeElement
 page-type: web-api-interface
-tags:
-  - API
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG DOM
 browser-compat: api.SVGFECompositeElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGFECompositeElement`** interface corresponds to the {{SVGElement("feComposite")}} element.
@@ -67,7 +62,7 @@ The **`SVGFECompositeElement`** interface corresponds to the {{SVGElement("feCom
   </tbody>
 </table>
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties from its parent interface, {{domxref("SVGElement")}}._
 
@@ -75,6 +70,18 @@ _This interface also inherits properties from its parent interface, {{domxref("S
   - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("height")}} attribute of the given element.
 - {{domxref("SVGFECompositeElement.in1")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedString")}} corresponding to the {{SVGAttr("in")}} attribute of the given element.
+- {{domxref("SVGFECompositeElement.in2")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedString")}} corresponding to the {{SVGAttr("in2")}} attribute of the given element.
+- {{domxref("SVGFECompositeElement.operator")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedEnumeration")}} corresponding to the {{SVGAttr("operator")}} attribute of the given element.
+- {{domxref("SVGFECompositeElement.k1")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedNumber")}} corresponding to the {{SVGAttr("k1")}} attribute of the given element.
+- {{domxref("SVGFECompositeElement.k2")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedNumber")}} corresponding to the {{SVGAttr("k2")}} attribute of the given element.
+- {{domxref("SVGFECompositeElement.k3")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedNumber")}} corresponding to the {{SVGAttr("k3")}} attribute of the given element.
+- {{domxref("SVGFECompositeElement.k4")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedNumber")}} corresponding to the {{SVGAttr("k4")}} attribute of the given element.
 - {{domxref("SVGFECompositeElement.result")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedString")}} corresponding to the {{SVGAttr("result")}} attribute of the given element.
 - {{domxref("SVGFECompositeElement.type")}} {{ReadOnlyInline}}
@@ -88,7 +95,7 @@ _This interface also inherits properties from its parent interface, {{domxref("S
 - {{domxref("SVGFECompositeElement.y")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("y")}} attribute of the given element.
 
-## Methods
+## Instance methods
 
 _This interface does not provide any specific methods, but implements those of its parent, {{domxref("SVGElement")}}._
 

@@ -1,18 +1,12 @@
 ---
-title: Range.comparePoint()
+title: "Range: comparePoint() method"
+short-title: comparePoint()
 slug: Web/API/Range/comparePoint
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - DOM Reference
-  - Experimental
-  - Method
-  - Range
-  - Reference
 browser-compat: api.Range.comparePoint
 ---
-{{ApiRef("DOM")}} {{SeeCompatTable}}
+
+{{ApiRef("DOM")}}
 
 The **`Range.comparePoint()`** method returns `-1`,
 `0`, or `1` depending on whether the `referenceNode` is
@@ -26,7 +20,7 @@ node_.
 
 ## Syntax
 
-```js
+```js-nolint
 comparePoint(referenceNode, offset)
 ```
 
@@ -40,14 +34,14 @@ comparePoint(referenceNode, offset)
 
 ### Return value
 
-Returns `-1`,`0`, or `1`.
+Returns `-1`, `0`, or `1`.
 
 ## Examples
 
 ```js
 range = document.createRange();
-range.selectNode(document.getElementsByTagName('div').item(0));
-returnValue = range.comparePoint(document.getElementsByTagName('p').item(0), 1);
+range.selectNode(document.getElementsByTagName("div").item(0));
+returnValue = range.comparePoint(document.getElementsByTagName("p").item(0), 1);
 ```
 
 ## Specifications

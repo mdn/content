@@ -1,14 +1,10 @@
 ---
 title: border-radius
 slug: Web/CSS/border-radius
-tags:
-  - CSS
-  - CSS Borders
-  - CSS Property
-  - Reference
-  - recipe:css-shorthand-property
+page-type: css-shorthand-property
 browser-compat: css.properties.border-radius
 ---
+
 {{CSSRef}}
 
 The **`border-radius`** [CSS](/en-US/docs/Web/CSS) property rounds the corners of an element's outer border edge. You can set a single radius to make circular corners, or two radii to make elliptical corners.
@@ -19,7 +15,8 @@ The radius applies to the whole {{cssxref("background")}}, even if the element h
 
 The `border-radius` property does not apply to table elements when {{cssxref("border-collapse")}} is `collapse`.
 
-> **Note:** As with any shorthand property, individual sub-properties cannot inherit, such as in `border-radius:0 0 inherit inherit`, which would partially override existing definitions. Instead, the individual longhand properties have to be used.
+> [!NOTE]
+> As with any shorthand property, individual sub-properties cannot inherit, such as in `border-radius:0 0 inherit inherit`, which would partially override existing definitions. Instead, the individual longhand properties have to be used.
 
 ## Constituent properties
 
@@ -78,7 +75,7 @@ The `border-radius` property is specified as:
   <tbody>
     <tr>
       <td><em>radius</em></td>
-      <td><img alt="all-corner.png" src="all-corner.png" /></td>
+      <td><img alt="A light blue rectangle with a light gray border. All 4 corners are rounded." src="all-corner.png" /></td>
       <td>
         Is a {{cssxref("&lt;length&gt;")}} or a
         {{cssxref("&lt;percentage&gt;")}} denoting a radius to use
@@ -89,7 +86,7 @@ The `border-radius` property is specified as:
     <tr>
       <td><em>top-left-and-bottom-right</em></td>
       <td>
-        <img alt="top-left-bottom-right.png" src="top-left-bottom-right.png" />
+        <img alt="A light blue rectangle with a light gray border. The 2 corners on the top left and the bottom right have are rounded." src="top-left-bottom-right.png" />
       </td>
       <td>
         Is a {{cssxref("&lt;length&gt;")}} or a
@@ -101,7 +98,7 @@ The `border-radius` property is specified as:
     <tr>
       <td><em>top-right-and-bottom-left</em></td>
       <td>
-        <img alt="top-right-bottom-left.png" src="top-right-bottom-left.png" />
+        <img alt="A light blue rectangle with a light gray border. The 2 corners on the top right and the bottom left are rounded." src="top-right-bottom-left.png" />
       </td>
       <td>
         Is a {{cssxref("&lt;length&gt;")}} or a
@@ -112,7 +109,7 @@ The `border-radius` property is specified as:
     </tr>
     <tr>
       <td><em>top-left</em></td>
-      <td><img alt="top-left.png" src="top-left.png" /></td>
+      <td><img alt="A light blue rectangle with a light gray border. The corner on the top left is rounded." src="top-left.png" /></td>
       <td>
         Is a {{cssxref("&lt;length&gt;")}} or a
         {{cssxref("&lt;percentage&gt;")}} denoting a radius to use
@@ -122,7 +119,7 @@ The `border-radius` property is specified as:
     </tr>
     <tr>
       <td><em>top-right</em></td>
-      <td><img alt="top-right.png" src="top-right.png" /></td>
+      <td><img alt="A light blue rectangle with a light gray border. The corner on the top right is rounded." src="top-right.png" /></td>
       <td>
         Is a {{cssxref("&lt;length&gt;")}} or a
         {{cssxref("&lt;percentage&gt;")}} denoting a radius to use
@@ -132,7 +129,7 @@ The `border-radius` property is specified as:
     </tr>
     <tr>
       <td><em>bottom-right</em></td>
-      <td><img alt="bottom-right.png" src="bottom-right.png" /></td>
+      <td><img alt="A light blue rectangle with a light gray border. The bottom right corner is rounded." src="bottom-right.png" /></td>
       <td>
         Is a {{cssxref("&lt;length&gt;")}} or a
         {{cssxref("&lt;percentage&gt;")}} denoting a radius to use
@@ -142,7 +139,7 @@ The `border-radius` property is specified as:
     </tr>
     <tr>
       <td><em>bottom-left</em></td>
-      <td><img alt="bottom-left.png" src="bottom-left.png" /></td>
+      <td><img alt="A light blue rectangle with a light gray border. The bottom left corner is rounded." src="bottom-left.png" /></td>
       <td>
         Is a {{cssxref("&lt;length&gt;")}} or a
         {{cssxref("&lt;percentage&gt;")}} denoting a radius to use
@@ -164,20 +161,20 @@ For example:
 border-radius: 1em/5em;
 
 /* It is equivalent to: */
-border-top-left-radius:     1em 5em;
-border-top-right-radius:    1em 5em;
+border-top-left-radius: 1em 5em;
+border-top-right-radius: 1em 5em;
 border-bottom-right-radius: 1em 5em;
-border-bottom-left-radius:  1em 5em;
+border-bottom-left-radius: 1em 5em;
 ```
 
 ```css
 border-radius: 4px 3px 6px / 2px 4px;
 
 /* It is equivalent to: */
-border-top-left-radius:     4px 2px;
-border-top-right-radius:    3px 4px;
+border-top-left-radius: 4px 2px;
+border-top-right-radius: 3px 4px;
 border-bottom-right-radius: 6px 2px;
-border-bottom-left-radius:  3px 4px;
+border-bottom-left-radius: 3px 4px;
 ```
 
 ## Formal definition
@@ -191,39 +188,45 @@ border-bottom-left-radius:  3px 4px;
 ## Examples
 
 ```html hidden
-  <pre id="example-1">
-border: solid 10px;
-border-radius: 10px 40px 40px 10px;
-  </pre>
-  <pre id="example-2">
-border: groove 1em red;
-border-radius: 2em;
-  </pre>
-  <pre id="example-3">
-background: gold;
-border: ridge gold;
-border-radius: 13em/3em;
-  </pre>
-  <pre id="example-4">
-border: none;
-border-radius: 40px 10px;
-background: gold;
-  </pre>
-  <pre id="example-5">
-border: none;
-border-radius: 50%;
-background: burlywood;
-  </pre>
-  <pre id="example-6">
-border: dotted;
-border-width: 10px 4px;
-border-radius: 10px 40px;
-  </pre>
-  <pre id="example-7">
-border: dashed;
-border-width: 2px 4px;
-border-radius: 40px;
-  </pre>
+<pre id="example-1">
+  border: solid 10px;
+  border-radius: 10px 40px 40px 10px;
+</pre>
+
+<pre id="example-2">
+  border: groove 1em red;
+  border-radius: 2em;
+</pre>
+
+<pre id="example-3">
+  background: gold;
+  border: ridge gold;
+  border-radius: 13em/3em;
+</pre>
+
+<pre id="example-4">
+  border: none;
+  border-radius: 40px 10px;
+  background: gold;
+</pre>
+
+<pre id="example-5">
+  border: none;
+  border-radius: 50%;
+  background: burlywood;
+</pre>
+
+<pre id="example-6">
+  border: dotted;
+  border-width: 10px 4px;
+  border-radius: 10px 40px;
+</pre>
+
+<pre id="example-7">
+  border: dashed;
+  border-width: 2px 4px;
+  border-radius: 40px;
+</pre>
 ```
 
 ```css hidden

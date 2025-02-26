@@ -2,20 +2,12 @@
 title: CSSMatrixComponent
 slug: Web/API/CSSMatrixComponent
 page-type: web-api-interface
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSMatrixComponent
-  - CSSTransformComponent
-  - CSSTransformValue
-  - Experimental
-  - Houdini
-  - Interface
 browser-compat: api.CSSMatrixComponent
 ---
-{{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}
 
-The **`CSSMatrixComponent`** interface of the {{domxref('CSS_Object_Model#css_typed_object_model','','',' ')}} represents the [matrix()](/en-US/docs/Web/CSS/transform-function/matrix) and [matrix3d()](/en-US/docs/Web/CSS/transform-function/matrix) values of the individual {{CSSXRef('transform')}} property in CSS. It inherits properties and methods from its parent {{domxref('CSSTransformValue')}}.
+{{APIRef("CSS Typed Object Model API")}}
+
+The **`CSSMatrixComponent`** interface of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Object_Model) represents the [matrix()](/en-US/docs/Web/CSS/transform-function/matrix) and [matrix3d()](/en-US/docs/Web/CSS/transform-function/matrix3d) values of the individual {{CSSXRef('transform')}} property in CSS. It inherits properties and methods from its parent {{domxref('CSSTransformValue')}}.
 
 {{InheritanceDiagram}}
 
@@ -24,10 +16,10 @@ The **`CSSMatrixComponent`** interface of the {{domxref('CSS_Object_Model#css_ty
 - {{domxref("CSSMatrixComponent.CSSMatrixComponent", "CSSMatrixComponent()")}}
   - : Creates a new `CSSMatrixComponent` object.
 
-## Properties
+## Instance properties
 
 - {{domxref('CSSMatrixComponent.matrix','matrix')}}
-  - : A matrix.
+  - : A {{domxref("DOMMatrix")}} object.
 
 ## Examples
 

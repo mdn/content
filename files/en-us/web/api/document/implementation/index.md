@@ -1,16 +1,11 @@
 ---
-title: Document.implementation
+title: "Document: implementation property"
+short-title: implementation
 slug: Web/API/Document/implementation
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Document
-  - NeedsContent
-  - Property
-  - Reference
 browser-compat: api.Document.implementation
 ---
+
 {{ ApiRef("DOM") }}
 
 The **`Document.implementation`** property returns a
@@ -29,10 +24,11 @@ const conformTest = document.implementation.hasFeature(modName, modVer);
 
 console.log(`DOM ${modName} ${modVer} supported?: ${conformTest}`);
 
-// Log: "DOM HTML 2.0 supported?: true" if DOM Level 2 HTML module is supported.
+// Log: "DOM HTML 2.0 supported?: true" (hasFeature always returns true)
 ```
 
-A list of module names (e.g., Core, HTML, XML, etc.) is available in the DOM Level 2 [Conformance Section](https://www.w3.org/TR/DOM-Level-2-Core/introduction.html#ID-Conformance-h2).
+> [!WARNING]
+> Do not use this for feature detection. The `hasFeature()` method always returns true.
 
 ## Notes
 
@@ -51,9 +47,3 @@ documents managed by the implementation.
 ## Browser compatibility
 
 {{Compat}}
-
-### Gecko-specific notes
-
-- Starting with Gecko 19.0 {{geckoRelease("19.0")}} the
-  {{domxref("DOMImplementation.hasFeature","hasFeature")}} method will always return
-  true.

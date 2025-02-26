@@ -1,16 +1,11 @@
 ---
-title: AudioParam.setTargetAtTime()
+title: "AudioParam: setTargetAtTime() method"
+short-title: setTargetAtTime()
 slug: Web/API/AudioParam/setTargetAtTime
 page-type: web-api-instance-method
-tags:
-  - API
-  - AudioParam
-  - Method
-  - Reference
-  - Web Audio API
-  - setTargetAtTime
 browser-compat: api.AudioParam.setTargetAtTime
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `setTargetAtTime()` method of the
@@ -20,7 +15,7 @@ envelopes.
 
 ## Syntax
 
-```js
+```js-nolint
 setTargetAtTime(target, startTime, timeConstant)
 ```
 
@@ -48,17 +43,7 @@ moves towards the value given by the `target` parameter. The decay rate as
 defined by the `timeConstant` parameter is exponential; therefore the value
 will never reach `target` completely, but after each timestep of length
 `timeConstant`, the value will have approached `target` by
-another <math>
-<semantics><mrow><mn>1</mn>
-<mo>-</mo>
-<msup><mi>e</mi>
-<mrow><mo>-</mo>
-<mn>1</mn>
-</mrow></msup><mo>≈</mo>
-<mn>63.2</mn>
-<mtext>%</mtext>
-</mrow><annotation encoding="TeX">1 - e^{-1} \approx 63.2%</annotation>
-</semantics></math>. For the complete formula (which uses a first-order linear continuous
+another <math><semantics><mrow><mn>1</mn><mo>-</mo><msup><mi>e</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>≈</mo><mn>63.2</mn><mtext>%</mtext></mrow><annotation encoding="TeX">1 - e^{-1} \approx 63.2%</annotation></semantics></math>. For the complete formula (which uses a first-order linear continuous
 time-invariant system), check the [Web Audio specification](https://webaudio.github.io/web-audio-api/#dom-audioparam-settargetattime).
 
 If you absolutely need to reach the target value by a specific time, you can use
@@ -80,27 +65,26 @@ duration.
 For more details, check the following table on how the value changes from 0% to 100% as
 the time progresses.
 
-| Time since `startTime` | Value                             |
-| ---------------------- | --------------------------------- |
-| `0 * timeConstant`     | 0%                                |
-| `0.5 * timeConstant`   | 39.3%                             |
-| `1 * timeConstant`     | 63.2%                             |
-| `2 * timeConstant`     | 86.5%                             |
-| `3 * timeConstant`     | 95.0%                             |
-| `4 * timeConstant`     | 98.2%                             |
-| `5 * timeConstant`     | 99.3%                             |
-| `n * timeConstant`     | <math><semantics><mrow><mn>1</mn> |
+| Time since `startTime` | Value                                                       |
+| ---------------------- | ----------------------------------------------------------- |
+| `0 * timeConstant`     | 0%                                                          |
+| `0.5 * timeConstant`   | 39.3%                                                       |
+| `1 * timeConstant`     | 63.2%                                                       |
+| `2 * timeConstant`     | 86.5%                                                       |
+| `3 * timeConstant`     | 95.0%                                                       |
+| `4 * timeConstant`     | 98.2%                                                       |
+| `5 * timeConstant`     | 99.3%                                                       |
+| `n * timeConstant`     | <math><semantics><mrow><mn>1</mn></mrow></semantics></math> |
 
-<math><semantics><mrow><mn>1</mn>
-<mo>-</mo>
-<msup><mi>e</mi>
-<mrow><mo>-</mo>
-<mi>n</mi>
-</mrow></msup></mrow><annotation encoding="TeX">1 - e^{-n}</annotation></semantics></math>
+<!-- prettier-ignore-start -->
+<math display="block">
+  <semantics><mrow><mn>1</mn><mo>-</mo><msup><mi>e</mi><mrow><mo>-</mo><mi>n</mi></mrow></msup></mrow><annotation encoding="TeX">1 - e^{-n}</annotation></semantics>
+</math>
+<!-- prettier-ignore-end -->
 
 ## Examples
 
-In this example, we have a media source with two control buttons (see the [webaudio-examples repo](https://github.com/mdn/webaudio-examples/blob/master/audio-param/index.html) for the source code, or [view the example live](https://mdn.github.io/webaudio-examples/audio-param/).) When these buttons are pressed, `setTargetAtTime()` is used to
+In this example, we have a media source with two control buttons (see the [webaudio-examples repo](https://github.com/mdn/webaudio-examples/blob/main/audio-param/index.html) for the source code, or [view the example live](https://mdn.github.io/webaudio-examples/audio-param/).) When these buttons are pressed, `setTargetAtTime()` is used to
 fade the gain value up to 1.0, and down to 0, respectively, with the effect starting
 after 1 second, and the length of time the effect lasts being controlled by the
 timeConstant.
@@ -110,16 +94,16 @@ timeConstant.
 const audioCtx = new AudioContext();
 
 // set basic variables for example
-const myAudio = document.querySelector('audio');
+const myAudio = document.querySelector("audio");
 
-const atTimePlus = document.querySelector('.at-time-plus');
-const atTimeMinus = document.querySelector('.at-time-minus');
+const atTimePlus = document.querySelector(".at-time-plus");
+const atTimeMinus = document.querySelector(".at-time-minus");
 
 // Create a MediaElementAudioSourceNode
 // Feed the HTMLMediaElement into it
 const source = audioCtx.createMediaElementSource(myAudio);
 
-// Create a gain node and set it's gain value to 0.5
+// Create a gain node and set its gain value to 0.5
 const gainNode = audioCtx.createGain();
 gainNode.gain.value = 0.5;
 let currGain = gainNode.gain.value;
@@ -130,15 +114,15 @@ source.connect(gainNode);
 gainNode.connect(audioCtx.destination);
 
 // set buttons to do something onclick
-atTimePlus.onclick = function() {
+atTimePlus.onclick = () => {
   currGain = 1.0;
   gainNode.gain.setTargetAtTime(1.0, audioCtx.currentTime + 1, 0.5);
-}
+};
 
-atTimeMinus.onclick = function() {
+atTimeMinus.onclick = () => {
   currGain = 0;
   gainNode.gain.setTargetAtTime(0, audioCtx.currentTime + 1, 0.5);
-}
+};
 ```
 
 ## Specifications

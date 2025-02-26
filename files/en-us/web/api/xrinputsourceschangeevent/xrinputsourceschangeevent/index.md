@@ -1,28 +1,12 @@
 ---
-title: XRInputSourcesChangeEvent()
+title: "XRInputSourcesChangeEvent: XRInputSourcesChangeEvent() constructor"
+short-title: XRInputSourcesChangeEvent()
 slug: Web/API/XRInputSourcesChangeEvent/XRInputSourcesChangeEvent
 page-type: web-api-constructor
-tags:
-  - API
-  - AR
-  - Change
-  - Constructor
-  - Input Sources
-  - Inputs
-  - Mixed
-  - Reality
-  - Reference
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRInputSourcesChangeEvent
-  - augmented
 browser-compat: api.XRInputSourcesChangeEvent.XRInputSourcesChangeEvent
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SecureContext_Header}}
 
 The **`XRInputSourcesChangeEvent()`**
 constructor creates and returns a new {{domxref("XRInputSourcesChangeEvent")}} object,
@@ -32,14 +16,14 @@ you by the WebXR system.
 
 ## Syntax
 
-```js
+```js-nolint
 new XRInputSourcesChangeEvent(type, options)
 ```
 
 ### Parameters
 
 - `type`
-  - :  A string with the name of the event.
+  - : A string with the name of the event.
     It is case-sensitive and browsers always set it to `inputsourceschange`.
 - `options`
   - : An object that, _in addition of the properties defined in {{domxref("Event/Event", "Event()")}}_, can have the following properties:
@@ -63,10 +47,11 @@ object indicating that a single new input source, described by an
 the system.
 
 ```js
-let iscEvent = new XRInputSourcesChangeEvent("inputsourceschange",
-                                             { session: xrSession,
-                                               added: [newInputSource],
-                                               removed: [] });
+let iscEvent = new XRInputSourcesChangeEvent("inputsourceschange", {
+  session: xrSession,
+  added: [newInputSource],
+  removed: [],
+});
 ```
 
 ## Specifications

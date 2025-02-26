@@ -1,28 +1,18 @@
 ---
-title: PerformanceObserver.disconnect()
+title: "PerformanceObserver: disconnect() method"
+short-title: disconnect()
 slug: Web/API/PerformanceObserver/disconnect
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Performance Observer API
-  - PerformanceObserver
-  - Reference
-  - Web Performance
-  - disconnect()
-  - observers
 browser-compat: api.PerformanceObserver.disconnect
 ---
-{{APIRef("Performance Timeline API")}}
 
-The **`disconnect()`** method of the
-{{domxref('PerformanceObserver')}} interface is used to stop the performance observer
-from receiving any {{domxref("PerformanceEntry","performance entry", '', 'true')}}
-events.
+{{APIRef("Performance API")}}{{AvailableInWorkers}}
+
+The **`disconnect()`** method of the {{domxref('PerformanceObserver')}} interface is used to stop the performance observer from receiving any {{domxref("PerformanceEntry","performance entry", '', 'true')}} events.
 
 ## Syntax
 
-```js
+```js-nolint
 disconnect()
 ```
 
@@ -36,23 +26,20 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
-```js
-const observer = new PerformanceObserver(function(list, obj) {
-  const entries = list.getEntries();
-  for (let i=0; i < entries.length; i++) {
-    // Process "mark" and "frame" events
-  }
-});
-observer.observe({entryTypes: ["mark", "frame"]});
+### Stopping a performance observer
 
-function perf_observer(list, observer) {
-  // Process the "measure" event
-  // …
-  // Disable additional performance events
-  observer.disconnect();
-}
-const observer2 = new PerformanceObserver(perf_observer);
-observer2.observe({entryTypes: ["measure"]});
+The following example disconnects the performance observer to disable receiving any more performance entry events.
+
+```js
+const observer = new PerformanceObserver((list, obj) => {
+  list.getEntries().forEach((entry) => {
+    // Process "measure" events
+    // …
+    // Disable additional performance events
+    observer.disconnect();
+  });
+});
+observer.observe({ entryTypes: ["mark", "measure"] });
 ```
 
 ## Specifications

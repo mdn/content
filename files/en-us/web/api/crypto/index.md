@@ -2,50 +2,31 @@
 title: Crypto
 slug: Web/API/Crypto
 page-type: web-api-interface
-tags:
-  - API
-  - Code
-  - Crypto
-  - Encoding
-  - Encryption
-  - Interface
-  - Privacy
-  - Reference
-  - Security
-  - Web Crypto API
 browser-compat: api.Crypto
 ---
-{{APIRef("Web Crypto API")}}
+
+{{APIRef("Web Crypto API")}}{{AvailableInWorkers}}
 
 The **`Crypto`** interface represents basic cryptography features available in the current context.
 It allows access to a cryptographically strong random number generator and to cryptographic primitives.
 
-{{AvailableInWorkers}}
+The `Crypto` is available in windows using the {{domxref("Window.crypto")}} property and in workers using the {{domxref("WorkerGlobalScope.crypto")}} property.
 
-The [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API) is accessed through the global {{domxref("crypto_property", "crypto")}} property, which is a `Crypto` object.
-
-## Properties
+## Instance properties
 
 _This interface implements properties defined on {{domxref("Crypto/getRandomValues", "RandomSource")}}._
 
-- {{domxref("Crypto.subtle")}} {{readOnlyInline}} {{SecureContext_inline}}
+- {{domxref("Crypto.subtle")}} {{ReadOnlyInline}} {{SecureContext_inline}}
   - : Returns a {{domxref("SubtleCrypto")}} object providing access to common cryptographic primitives, like hashing, signing, encryption, or decryption.
 
-## Methods
+## Instance methods
 
 _This interface implements methods defined on {{domxref("Crypto/getRandomValues", "RandomSource")}}._
 
 - {{domxref("Crypto.getRandomValues()")}}
   - : Fills the passed {{ jsxref("TypedArray") }} with cryptographically sound random values.
-- {{domxref("Crypto.randomUUID()")}}
+- {{domxref("Crypto.randomUUID()")}} {{SecureContext_inline}}
   - : Returns a randomly generated, 36 character long v4 UUID.
-
-## Usage notes
-
-You should avoid using the Web Crypto API on insecure contexts, even though the `Crypto` interface is present on insecure contexts, as is the {{domxref("crypto_property", "crypto")}} property.
-In addition, the `Crypto` method {{domxref("Crypto.getRandomValues", "getRandomValues()")}} is available on insecure contexts, but the {{domxref("Crypto.subtle", "subtle")}} property is not.
-
-In general, you probably should just treat `Crypto` as available only on secure contexts.
 
 ## Specifications
 

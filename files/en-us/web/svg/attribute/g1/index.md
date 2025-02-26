@@ -1,12 +1,12 @@
 ---
 title: g1
 slug: Web/SVG/Attribute/g1
-tags:
-  - Deprecated
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
+status:
+  - deprecated
 browser-compat: svg.elements.hkern.g1
 ---
+
 {{SVGRef}}{{Deprecated_Header}}
 
 The **`g1`** attribute specifies a list of glyph names which identify a set of possible first glyphs in the kerning pair.
@@ -27,7 +27,7 @@ You can use this attribute with the following SVG elements:
       <td>
         <code
           >&#x3C;name><a
-            href="/en-US/docs/Web/CSS/Value_definition_syntax#Hash_mark_()"
+            href="/en-US/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax#hash_mark"
             >#</a
           ></code
         >

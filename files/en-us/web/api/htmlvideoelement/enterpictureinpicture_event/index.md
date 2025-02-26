@@ -1,19 +1,12 @@
 ---
-title: 'HTMLVideoElement: enterpictureinpicture event'
+title: "HTMLVideoElement: enterpictureinpicture event"
+short-title: enterpictureinpicture
 slug: Web/API/HTMLVideoElement/enterpictureinpicture_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - Interface
-  - Media
-  - Picture-in-Picture
-  - Picture-in-Picture API
-  - Video
-  - pip
 browser-compat: api.HTMLVideoElement.enterpictureinpicture_event
 ---
-{{APIRef("HTMLVideoElement")}}
+
+{{APIRef("Picture-in-Picture API")}}
 
 The `enterpictureinpicture` event is fired when the {{DOMxRef("HTMLVideoElement")}} enters picture-in-picture mode successfully.
 
@@ -24,14 +17,14 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('enterpictureinpicture', (event) => { });
+addEventListener("enterpictureinpicture", (event) => {});
 
-onenterpictureinpicture = (event) => { };
+onenterpictureinpicture = (event) => {};
 ```
 
 ## Event type
 
-An {{domxref("PictureInPictureEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("PictureInPictureEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("PictureInPictureEvent")}}
 
@@ -46,25 +39,25 @@ These examples add an event listener for the HTMLVideoElement's `enterpictureinp
 Using `addEventListener()`:
 
 ```js
-const video = document.querySelector('#video');
-const button = document.querySelector('#button');
+const video = document.querySelector("#video");
+const button = document.querySelector("#button");
 
 function onEnterPip() {
   console.log("Picture-in-Picture mode activated!");
 }
 
-video.addEventListener('enterpictureinpicture', onEnterPip, false);
+video.addEventListener("enterpictureinpicture", onEnterPip, false);
 
 button.onclick = () => {
   video.requestPictureInPicture();
-}
+};
 ```
 
 Using the `onenterpictureinpicture` event handler property:
 
 ```js
-const video = document.querySelector('#video');
-const button = document.querySelector('#button');
+const video = document.querySelector("#video");
+const button = document.querySelector("#button");
 
 function onEnterPip() {
   console.log("Picture-in-Picture mode activated!");
@@ -74,7 +67,7 @@ video.onenterpictureinpicture = onEnterPip;
 
 button.onclick = () => {
   video.requestPictureInPicture();
-}
+};
 ```
 
 ## Specifications
@@ -88,4 +81,4 @@ button.onclick = () => {
 ## See also
 
 - {{domxref("HTMLVideoElement")}}
-- {{domxref("Picture-in-Picture_API")}}
+- [Picture-in-Picture API](/en-US/docs/Web/API/Picture-in-Picture_API)

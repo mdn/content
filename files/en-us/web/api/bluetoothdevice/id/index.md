@@ -1,18 +1,14 @@
 ---
-title: BluetoothDevice.id
+title: "BluetoothDevice: id property"
+short-title: id
 slug: Web/API/BluetoothDevice/id
 page-type: web-api-instance-property
-tags:
-  - API
-  - BluetoothDevice
-  - Experimental
-  - Property
-  - Reference
-  - Web Bluetooth API
-  - id
+status:
+  - experimental
 browser-compat: api.BluetoothDevice.id
 ---
-{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
+
+{{APIRef("Bluetooth API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`BluetoothDevice.id`** read-only property returns a
 string that uniquely identifies a device.

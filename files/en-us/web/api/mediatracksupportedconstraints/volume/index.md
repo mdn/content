@@ -1,21 +1,15 @@
 ---
-title: MediaTrackSupportedConstraints.volume
+title: "MediaTrackSupportedConstraints: volume property"
+short-title: volume
 slug: Web/API/MediaTrackSupportedConstraints/volume
 page-type: web-api-instance-property
-tags:
-  - API
-  - Constraints
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaTrackSupportedConstraints
-  - Property
-  - Reference
-  - Volume
-  - WebRTC
-browser-compat: api.MediaTrackSupportedConstraints.volume
+status:
+  - deprecated
+  - non-standard
+browser-compat: api.MediaStreamTrack.applyConstraints.volume_constraint
 ---
-{{DefaultAPISidebar("Media Capture and Streams")}}{{deprecated_header}}
+
+{{APIRef("Media Capture and Streams")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The {{domxref("MediaTrackSupportedConstraints")}} dictionary's
 **`volume`** property is a read-only Boolean value which is
@@ -38,29 +32,26 @@ get {{jsxref("undefined")}} if you try to look at its value.
 ## Examples
 
 ```html hidden
-<div id="result">
-</div>
+<div id="result"></div>
 ```
 
 ```css hidden
 #result {
-  font: 14px "Arial", sans-serif;
+  font:
+    14px "Arial",
+    sans-serif;
 }
 ```
 
 ```js
-let result = document.getElementById("result");
-
-if (navigator.mediaDevices.getSupportedConstraints().volume) {
-  result.textContent = "Supported!";
-} else {
-  result.textContent = "Not supported!";
-}
+const result = document.getElementById("result");
+const supported = navigator.mediaDevices.getSupportedConstraints().volume;
+result.textContent = supported ? "Supported!" : "Not supported!";
 ```
 
 ### Result
 
-{{ EmbedLiveSample('Examples', 600, 80) }}
+{{EmbedLiveSample('Examples', 600, 80)}}
 
 ## Browser compatibility
 
@@ -68,7 +59,7 @@ if (navigator.mediaDevices.getSupportedConstraints().volume) {
 
 ## See also
 
-- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Streams_API)
+- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API)
 - {{domxref("MediaDevices.getSupportedConstraints()")}}
 - {{domxref("MediaTrackSupportedConstraints")}}
 - {{domxref("MediaStreamTrack")}}

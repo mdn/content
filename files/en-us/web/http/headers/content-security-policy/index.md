@@ -1,24 +1,17 @@
 ---
-title: Content-Security-Policy
+title: Content-Security-Policy (CSP)
+short-title: Content-Security-Policy
 slug: Web/HTTP/Headers/Content-Security-Policy
-tags:
-  - CSP
-  - Content Security Policy
-  - HTTP
-  - Reference
-  - Security
-  - header
+page-type: http-header
 browser-compat: http.headers.Content-Security-Policy
 ---
+
 {{HTTPSidebar}}
 
-The HTTP **`Content-Security-Policy`** response header allows
-web site administrators to control resources the user agent is allowed to load for a
-given page. With a few exceptions, policies mostly involve specifying server origins and
-script endpoints. This helps guard against cross-site scripting attacks
-({{Glossary("Cross-site_scripting")}}).
+The HTTP **`Content-Security-Policy`** response header allows website administrators to control resources the user agent is allowed to load for a given page. With a few exceptions, policies mostly involve specifying server origins and script endpoints.
+This helps guard against {{Glossary("cross-site scripting")}} attacks.
 
-For more information, see the introductory article on [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP).
+See the [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP) guide for details about how a CSP is delivered to the browser, what it looks like, along with use cases and deployment strategies.
 
 <table class="properties">
   <tbody>
@@ -27,7 +20,7 @@ For more information, see the introductory article on [Content Security Policy (
       <td>{{Glossary("Response header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>no</td>
     </tr>
   </tbody>
@@ -35,7 +28,7 @@ For more information, see the introductory article on [Content Security Policy (
 
 ## Syntax
 
-```
+```http
 Content-Security-Policy: <policy-directive>; <policy-directive>
 ```
 
@@ -46,64 +39,82 @@ where `<policy-directive>` consists of:
 
 ### Fetch directives
 
-{{Glossary("Fetch directive","Fetch directives")}} control the locations from which certain resource types may be loaded.
+Fetch directives control the locations from which certain resource types may be loaded.
 
 - {{CSP("child-src")}}
 
   - : Defines the valid sources for [web workers](/en-US/docs/Web/API/Web_Workers_API) and nested browsing contexts loaded using elements such as
     {{HTMLElement("frame")}} and {{HTMLElement("iframe")}}.
 
-    > **Warning:** Instead of **`child-src`**,
-    > if you want to regulate nested browsing contexts and workers,
-    > you should use the {{CSP("frame-src")}} and {{CSP("worker-src")}} directives, respectively.
+    [Fallback](#fallbacks) for `frame-src` and `worker-src`.
 
 - {{CSP("connect-src")}}
-  - : Restricts the URLs which can be loaded using script interfaces
+  - : Restricts the URLs which can be loaded using script interfaces.
 - {{CSP("default-src")}}
-  - : Serves as a fallback for the other {{Glossary("Fetch directive", "fetch
-    directives")}}.
+
+  - : Serves as a fallback for the other {{Glossary("Fetch directive", "fetch directives")}}.
+
+    [Fallback](#fallbacks) for all other fetch directives.
+
+- {{CSP("fenced-frame-src")}} {{experimental_inline}}
+  - : Specifies valid sources for nested browsing contexts loaded into {{HTMLElement("fencedframe")}} elements.
 - {{CSP("font-src")}}
   - : Specifies valid sources for fonts loaded using {{cssxref("@font-face")}}.
 - {{CSP("frame-src")}}
-  - : Specifies valid sources for nested browsing contexts loading using elements such as
+  - : Specifies valid sources for nested browsing contexts loaded into elements such as
     {{HTMLElement("frame")}} and {{HTMLElement("iframe")}}.
 - {{CSP("img-src")}}
   - : Specifies valid sources of images and favicons.
 - {{CSP("manifest-src")}}
   - : Specifies valid sources of application manifest files.
 - {{CSP("media-src")}}
-  - : Specifies valid sources for loading media using the {{HTMLElement("audio")}} ,
+  - : Specifies valid sources for loading media using the {{HTMLElement("audio")}},
     {{HTMLElement("video")}} and {{HTMLElement("track")}} elements.
 - {{CSP("object-src")}}
-
-  - : Specifies valid sources for the {{HTMLElement("object")}}, {{HTMLElement("embed")}},
-    and {{HTMLElement("applet")}} elements.
-
-    > **Note:** Elements controlled by `object-src` are perhaps
-    > coincidentally considered legacy HTML elements and are not receiving new standardized
-    > features (such as the security attributes `sandbox` or `allow`
-    > for `<iframe>`). Therefore it is **recommended** to
-    > restrict this fetch-directive (e.g., explicitly set `object-src 'none'` if
-    > possible).
-
-- {{CSP("prefetch-src")}} {{experimental_inline}}
+  - : Specifies valid sources for the {{HTMLElement("object")}} and {{HTMLElement("embed")}} elements.
+- {{CSP("prefetch-src")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Specifies valid sources to be prefetched or prerendered.
 - {{CSP("script-src")}}
-  - : Specifies valid sources for JavaScript.
-- {{CSP("script-src-elem")}} {{experimental_inline}}
+
+  - : Specifies valid sources for JavaScript and WebAssembly resources.
+
+    [Fallback](#fallbacks) for `script-src-elem` and `script-src-attr`.
+
+- {{CSP("script-src-elem")}}
   - : Specifies valid sources for JavaScript {{HTMLElement("script")}} elements.
-- {{CSP("script-src-attr")}} {{experimental_inline}}
+- {{CSP("script-src-attr")}}
   - : Specifies valid sources for JavaScript inline event handlers.
 - {{CSP("style-src")}}
+
   - : Specifies valid sources for stylesheets.
-- {{CSP("style-src-elem")}} {{experimental_inline}}
+
+    [Fallback](#fallbacks) for `style-src-elem` and `style-src-attr`.
+
+- {{CSP("style-src-elem")}}
   - : Specifies valid sources for stylesheets {{HTMLElement("style")}} elements and
     {{HTMLElement("link")}} elements with `rel="stylesheet"`.
-- {{CSP("style-src-attr")}} {{experimental_inline}}
+- {{CSP("style-src-attr")}}
   - : Specifies valid sources for inline styles applied to individual DOM elements.
-- {{CSP("worker-src")}} {{experimental_inline}}
+- {{CSP("worker-src")}}
   - : Specifies valid sources for {{domxref("Worker")}}, {{domxref("SharedWorker")}}, or
     {{domxref("ServiceWorker")}} scripts.
+
+All fetch directives may be specified the single value `'none'`, indicating that the specific resource type should be completely blocked, or as one or more _source expression_ values, indicating valid sources for that resource type. See [Fetch directive syntax](#fetch_directive_syntax) for more details.
+
+#### Fallbacks
+
+Some fetch directives function as fallbacks for other more granular directives. This means that if the more granular directive is not specified, then the fallback is used to provide a policy for that resource type.
+
+- `default-src` is a fallback for all other fetch directives.
+- `script-src` is a fallback for `script-src-attr` and `script-src-elem`.
+- `style-src` is a fallback for `style-src-attr` and `style-src-elem`.
+- `child-src` is a fallback for `frame-src` and `worker-src`.
+
+For example:
+
+- If `img-src` is omitted but `default-src` is included, then the policy defined by `default-src` will be applied to images.
+- If `script-src-elem` is omitted but `script-src` is included, then the policy defined by `script-src` will be applied to `<script>` elements.
+- If `script-src-elem` and `script-src` are both omitted, but `default-src` is included, then the policy defined by `default-src` will be applied to `<script>` elements.
 
 ### Document directives
 
@@ -115,7 +126,7 @@ applies.
     element.
 - {{CSP("sandbox")}}
   - : Enables a sandbox for the requested resource similar to the
-    {{HTMLElement("iframe")}} {{htmlattrxref("sandbox", "iframe")}} attribute.
+    {{HTMLElement("iframe")}} [`sandbox`](/en-US/docs/Web/HTML/Element/iframe#sandbox) attribute.
 
 ### Navigation directives
 
@@ -127,51 +138,32 @@ for example.
     given context.
 - {{CSP("frame-ancestors")}}
   - : Specifies valid parents that may embed a page using {{HTMLElement("frame")}},
-    {{HTMLElement("iframe")}}, {{HTMLElement("object")}}, {{HTMLElement("embed")}}, or
-    {{HTMLElement("applet")}}.
-- {{CSP("navigate-to")}} {{experimental_inline}}
-  - : Restricts the URLs to which a document can initiate navigation by any means,
-    including {{HTMLElement("form")}} (if {{CSP("form-action")}} is not specified),
-    {{HTMLElement("a")}}, {{DOMxRef("window.location")}}, {{DOMxRef("window.open")}}, etc.
+    {{HTMLElement("iframe")}}, {{HTMLElement("object")}}, or {{HTMLElement("embed")}}.
 
 ### Reporting directives
 
-Reporting directives control the reporting process of CSP violations. See also the
-{{HTTPHeader("Content-Security-Policy-Report-Only")}} header.
+Reporting directives control the destination URL for CSP violation reports in `Content-Security-Policy` and {{HTTPHeader("Content-Security-Policy-Report-Only")}}.
 
-- {{CSP("report-uri")}} {{deprecated_inline}}
+- {{CSP("report-to")}}
 
-  - : Instructs the user agent to report attempts to violate the Content Security Policy.
-    These violation reports consist of {{Glossary("JSON")}} documents sent via an HTTP
-    `POST` request to the specified URI.
+  - : Provides the browser with a token identifying the reporting endpoint or group of endpoints to send CSP violation information to.
+    The endpoints that the token represents are provided through other HTTP headers, such as {{HTTPHeader("Reporting-Endpoints")}} and {{HTTPHeader("Report-To")}} {{deprecated_inline}}.
 
-    > **Warning:** Though the {{CSP("report-to")}} directive is intended
-    > to replace the deprecated **`report-uri`** directive,
-    > {{CSP("report-to")}} is not supported in most browsers yet.
-    > So for compatibility with current browsers
-    > while also adding forward compatibility when browsers get {{CSP("report-to")}} support,
-    > you can specify both **`report-uri`** and {{CSP("report-to")}}:
+    > [!WARNING]
+    > This directive is intended to replace [`report-uri`](#report-uri); in browsers that support `report-to`, the `report-uri` directive is ignored.
+    > However until `report-to` is broadly supported you should specify both headers as shown (where `endpoint_name` is the name of a separately provided endpoint):
     >
-    > ```html
-    > Content-Security-Policy: …; report-uri https://endpoint.example.com; report-to groupname
+    > ```http
+    > Content-Security-Policy: …; report-uri https://endpoint.example.com; report-to endpoint_name
     > ```
-    >
-    > In browsers that support {{CSP("report-to")}},
-    > the **`report-uri`** directive will be ignored.
-
-- {{CSP("report-to")}} {{experimental_inline}}
-  - : Fires a `SecurityPolicyViolationEvent`.
 
 ### Other directives
 
-- {{CSP("require-sri-for")}} {{experimental_inline}}
-  - : Requires the use of {{Glossary("SRI")}} for scripts or styles on the page.
 - {{CSP("require-trusted-types-for")}} {{experimental_inline}}
-  - : Enforces [Trusted Types](https://w3c.github.io/webappsec-trusted-types/dist/spec/) at the DOM XSS injection sinks.
+  - : Enforces [Trusted Types](/en-US/docs/Web/API/Trusted_Types_API) at the DOM XSS injection sinks.
 - {{CSP("trusted-types")}} {{experimental_inline}}
-  - : Used to specify an allow-list of [Trusted Types](https://w3c.github.io/webappsec-trusted-types/dist/spec/)
-    policies. Trusted Types allows applications to lock down DOM XSS injection sinks to
-    only accept non-spoofable, typed values in place of strings.
+  - : Used to specify an allowlist of [Trusted Types](/en-US/docs/Web/API/Trusted_Types_API) policies.
+    Trusted Types allows applications to lock down DOM XSS injection sinks to only accept non-spoofable, typed values in place of strings.
 - {{CSP("upgrade-insecure-requests")}}
   - : Instructs user agents to treat all of a site's insecure URLs (those served over
     HTTP) as though they have been replaced with secure URLs (those served over HTTPS).
@@ -181,57 +173,194 @@ Reporting directives control the reporting process of CSP violations. See also t
 ### Deprecated directives
 
 - {{CSP("block-all-mixed-content")}} {{deprecated_inline}}
+
   - : Prevents loading any assets using HTTP when the page is loaded using HTTPS.
-- {{CSP("plugin-types")}} {{deprecated_inline}}
-  - : Restricts the set of plugins that can be embedded into a document by limiting the
-    types of resources which can be loaded.
-- {{CSP("referrer")}} {{deprecated_inline}} {{non-standard_inline}}
-  - : Used to specify information in the [Referer](/en-US/docs/Web/HTTP/Headers/Referer) (sic) header for links away
-    from a page. Use the {{HTTPHeader("Referrer-Policy")}} header instead.
 
-## Values
+- {{CSP("report-uri")}} {{deprecated_inline}}
+  - : Provides the browser with a URL where CSP violation reports should be sent.
+    This has been superseded by the [`report-to`](#report-to) directive.
 
-An overview of the allowed values are listed below.
-For detailed reference see [CSP Source Values](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#sources) and the documentation for individual directives.
+## Fetch directive syntax
 
-### Keyword values
+All fetch directives may be specified as one of the following:
 
-- `none`
-  - : Won't allow loading of any resources.
-- `self`
-  - : Only allow resources from the current origin.
-- `strict-dynamic` {{experimental_inline}}
-  - : The trust granted to a script in the page due to an accompanying nonce or hash is extended to the scripts it loads.
-- `report-sample` {{experimental_inline}}
-  - : Require a sample of the violating code to be included in the violation report.
+- the single value `'none'`, indicating that the specific resource type should be completely blocked
+- one or more _source expression_ values, indicating valid sources for that resource type.
 
-### Unsafe keyword values
+Each source expression takes one of the forms listed below. Note that not all forms are applicable to all fetch directives: see the documentation for each fetch directive to find out which forms are applicable to it.
 
-- `unsafe-inline`
-  - : Allow use of inline resources.
-- `unsafe-eval`
-  - : Allow use of dynamic code evaluation such as {{jsxref("Global_Objects/eval", "eval")}}, {{domxref("Window.setImmediate", "setImmediate")}} {{non-standard_inline}}, and `window.execScript` {{non-standard_inline}}.
-- `unsafe-hashes` {{experimental_inline}}
-  - : Allows enabling specific inline event handlers.
-- `unsafe-allow-redirects` {{experimental_inline}}
-  - : TBD
+The `<host-source>` and `<scheme-source>` formats must be unquoted, and all other formats must be enclosed in single quotes.
 
-### Hosts values
+### 'nonce-\<nonce_value>'
 
-- Host
-  - Only allow loading of resources from a specific host, with optional scheme, port, and path. e.g. `example.com`, `*.example.com`, `https://*.example.com:12/path/to/file.js`
-  - Path parts in the CSP that end in `/` match any path they are a prefix of. e.g. `example.com/api/` will match URLs like `example.com/api/users/new`.
-  - Other path parts in the CSP are matched exactly e.g. `example.com/file.js` will match `http://example.com/file.js` and `https://example.com/file.js`, but not `https://example.com/file.js/file2.js`
+This value consists of the string `nonce-` followed by a {{glossary("Base64", "base64-encoded")}} string. This string is a random value that the server generates for every HTTP response. For example:
 
-- Scheme
-  - Only allow loading of resources over a specific scheme, should always end with "`:`". e.g. `https:`, `http:`, `data:` etc.
+```plain
+'nonce-416d1177-4d12-4e3b-b7c9-f6c409789fb8'
+```
 
-### Other values
+The server can then include the same value as the value of the `nonce` attribute of any {{htmlelement("script")}} or {{htmlelement("style")}} resources that they intend to load from the document.
 
-- nonce-\*
-  - : A cryptographic nonce (only used once) to allow scripts. The server must generate a unique nonce value each time it transmits a policy. It is critical to provide a nonce that cannot be guessed as bypassing a resource's policy is otherwise trivial. This is used in conjunction with the [script tag nonce attribute](/en-US/docs/Web/HTML/Element/script#attr-nonce). e.g. `nonce-DhcnhD3khTMePgXwdayK9BsMqXjhguVV`
-- sha\*-\*
-  - : sha256, sha384, or sha512. followed by a dash and then the sha\* value. e.g. `sha256-jzgBGA4UWFFmpOBq0JpdsySukE1FrEN5bUpoK8Z29fY=`
+The browser compares the value from the CSP directive against the value in the element attribute, and loads the resource only if they match.
+
+If a directive contains a nonce and `unsafe-inline`, then the browser ignores `unsafe-inline`.
+
+See [Nonces](/en-US/docs/Web/HTTP/CSP#nonces) in the CSP guide for more usage information.
+
+> [!NOTE]
+> Nonce source expressions are only applicable to {{htmlelement("script")}} and {{htmlelement("style")}} elements.
+
+### '\<hash_algorithm>-<hash_value>'
+
+This value consists of a string identifying a hash algorithm, followed by `-`, followed by a {{glossary("Base64", "base64-encoded")}} string representing the hash value.
+
+- The hash algorithm identifier must be one of `sha256`, `sha384`, or `sha512`.
+- The hash value is the base64-encoded {{glossary("Cryptographic_hash_function", "hash")}} of a `<script>` or `<style>` resource, calculated using one of the following hash functions: SHA-256, SHA-384, or SHA-512.
+
+For example:
+
+```plain
+'sha256-cd9827ad...'
+```
+
+When the browser receives the document, it hashes the contents of any `<script>` and `<style>` elements, compares the result with any hashes in the CSP directive, and loads the resource only if there is a match.
+
+If the element loads an external resource (for example, using the [`src`](/en-US/docs/Web/HTML/Element/script#src) attribute), then the element must also have the [`integrity`](/en-US/docs/Web/HTML/Element/script#integrity) attribute set.
+
+If a directive contains a hash and `unsafe-inline`, then the browser ignores `unsafe-inline`.
+
+See [Hashes](/en-US/docs/Web/HTTP/CSP#hashes) in the CSP guide for more usage information.
+
+> [!NOTE]
+> Hash source expressions are only applicable to {{htmlelement("script")}} and {{htmlelement("style")}} elements.
+
+### \<host-source>
+
+The [URL](/en-US/docs/Web/URI) or IP address of a {{glossary("host")}} that is a valid source for the resource.
+
+The scheme, port number, and path are optional.
+
+If the scheme is omitted, the scheme of the document's origin is used.
+
+When matching schemes, secure upgrades are allowed. For example:
+
+- `http://example.com` will also permit resources from `https://example.com`
+- `ws://example.org` will also permit resources from `wss://example.org`.
+
+Wildcards (`'*'`) can be used for subdomains, host address, and port number, indicating that all legal values of each are valid. For example:
+
+- `http://*.example.com` permits resources from any subdomain of `example.com`, over HTTP or HTTPS.
+
+Paths that end in `/` match any path they are a prefix of. For example:
+
+- `example.com/api/` will permit resources from `example.com/api/users/new`.
+
+Paths that do not end in `/` are matched exactly. For example:
+
+- `https://example.com/file.js` permits resources from `https://example.com/file.js` but not `https://example.com/file.js/file2.js`.
+
+### \<scheme-source>
+
+A [scheme](/en-US/docs/Web/URI/Reference/Schemes), such as `https:`. The colon is required.
+
+Secure upgrades are allowed, so:
+
+- `http:` will also permit resources loaded using HTTPS
+- `ws:` will also permit resources loaded using WSS.
+
+### 'self'
+
+Resources of the given type may only be loaded from the same {{glossary("origin")}} as the document.
+
+Secure upgrades are allowed. For example:
+
+- If the document is served from `http://example.com`, then a CSP of `'self'` will also permit resources from `https://example.com`.
+- If the document is served from `ws://example.org`, then a CSP of `'self'` will also permit resources from `wss://example.org`.
+
+### 'unsafe-eval'
+
+By default, if a CSP contains a `default-src` or a `script-src` directive, then JavaScript functions which evaluate their arguments as JavaScript are disabled. This includes [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval), the [`code`](/en-US/docs/Web/API/Window/setTimeout#code) argument to {{domxref("Window.setTimeout()", "setTimeout()")}}, or the {{jsxref("Function/Function()", "Function()")}} constructor.
+
+The `unsafe-eval` keyword can be used to undo this protection, allowing dynamic evaluation of strings as JavaScript.
+
+> [!WARNING]
+> Developers should avoid `'unsafe-eval'`, because it defeats much of the purpose of having a CSP.
+
+See [`eval()` and similar APIs](/en-US/docs/Web/HTTP/CSP#eval_and_similar_apis) in the CSP guide for more usage information.
+
+### 'wasm-unsafe-eval'
+
+By default, if a CSP contains a `default-src` or a `script-src` directive, then a page won't be allowed to compile WebAssembly using functions like [`WebAssembly.compileStreaming()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/compileStreaming_static).
+
+The `wasm-unsafe-eval` keyword can be used to undo this protection. This is a much safer alternative to `'unsafe-eval'`, since it does not enable general evaluation of JavaScript.
+
+### 'unsafe-inline'
+
+By default, if a CSP contains a `default-src` or a `script-src` directive, then inline JavaScript is not allowed to execute. This includes:
+
+- inline `<script>` tags
+- inline event handler attributes
+- `javascript:` URLs.
+
+Similarly, if a CSP contains `default-src` or a `style-src` directive, then inline CSS will not be loaded, including:
+
+- inline `<style>` tags
+- {{domxref("HTMLElement.style", "style")}} attributes.
+
+The `unsafe-inline` keyword can be used to undo this protection, allowing all these forms to be loaded.
+
+> [!WARNING]
+> Developers should avoid `'unsafe-inline'`, because it defeats much of the purpose of having a CSP.
+
+See [Inline JavaScript](/en-US/docs/Web/HTTP/CSP#inline_javascript) in the CSP guide for more usage information.
+
+### 'unsafe-hashes'
+
+By default, if a CSP contains a `default-src` or a `script-src` directive, then inline event handler attributes like `onclick` and inline `style` attributes are not allowed to execute.
+
+The `'unsafe-hashes'` expression allows the browser to use [hash expressions](#hash_algorithm-hash_value) for inline event handlers and `style` attributes. For example, a CSP might contain a directive like this:
+
+```http
+script-src 'unsafe-hashes' 'sha256-cd9827ad...'
+```
+
+If the hash value matches the hash of an inline event handler attribute value or of a `style` attribute value, then the code will be allowed to execute.
+
+> [!WARNING]
+> The `'unsafe-hashes'` value is unsafe.
+>
+> In particular, it enables an attack in which the content of the inline event handler attribute is injected into the document as an inline `<script>` element. Suppose the inline event handler is:
+>
+> ```html
+> <button onclick="transferAllMyMoney()">Transfer all my money</button>
+> ```
+>
+> If an attacker can inject an inline `<script>` element containing this code, the CSP will allow it to execute automatically.
+>
+> However, `'unsafe-hashes'` is much safer than `'unsafe-inline'`.
+
+### 'inline-speculation-rules'
+
+By default, if a CSP contains a `default-src` or a `script-src` directive, then inline JavaScript is not allowed to execute. The `'inline-speculation-rules'` allows the browser to load inline `<script>` elements that have a [`type`](/en-US/docs/Web/HTML/Element/script/type) attribute of [`speculationrules`](/en-US/docs/Web/HTML/Element/script/type/speculationrules).
+
+See the [Speculation Rules API](/en-US/docs/Web/API/Speculation_Rules_API) for more information.
+
+### 'strict-dynamic'
+
+The `'strict-dynamic'` keyword makes the trust conferred on a script by a [nonce](#nonce-nonce_value) or a [hash](#hash_algorithm-hash_value) extend to scripts that this script dynamically loads, for example by creating new `<script>` tags using {{domxref("Document.createElement()")}} and then inserting them into the document using {{domxref("Node.appendChild()")}}.
+
+If this keyword is present in a directive, then the following source expression values are all ignored:
+
+- [\<host-source>](#host-source)
+- [\<scheme-source>](#scheme-source)
+- [`'self'`](#self)
+- [`'unsafe-inline'`](#unsafe-inline)
+
+See [The `strict-dynamic` keyword](/en-US/docs/Web/HTTP/CSP#the_strict-dynamic_keyword) in the CSP guide for more usage information.
+
+### 'report-sample'
+
+If this expression is included in a directive controlling scripts or styles, and the directive causes the browser to block any inline scripts, inline styles, or event handler attributes, then the [violation report](/en-US/docs/Web/HTTP/CSP#violation_reporting) that the browser generates will contain a {{domxref("CSPViolationReportBody.sample", "sample")}} property containing the first 40 characters of the blocked resource.
 
 ## CSP in workers
 
@@ -260,7 +389,7 @@ restrict_ the capabilities of the protected resource, which means that there wil
 be no connection allowed and, as the strictest policy, `connect-src 'none'`
 is enforced.
 
-```
+```http
 Content-Security-Policy: default-src 'self' http://example.com;
                           connect-src 'none';
 Content-Security-Policy: connect-src http://example.com/;
@@ -269,36 +398,49 @@ Content-Security-Policy: connect-src http://example.com/;
 
 ## Examples
 
-Example: Disable unsafe inline/eval, only allow loading of resources (images, fonts,
-scripts, etc.) over https:
+### Disable unsafe inline code and only allow HTTPS resources
 
-### Using the HTTP header
+This HTTP header sets the default policy to only allow resource loading (images, fonts, scripts, etc.) over HTTPS.
+Because the `unsafe-inline` and `unsafe-eval` directives are not set, inline scripts will be blocked.
 
-```
+```http
 Content-Security-Policy: default-src https:
 ```
 
-### Using the HTML meta element
+The same restrictions can be applied using the HTML {{htmlelement("meta")}} element.
 
-```
-<meta http-equiv="Content-Security-Policy" content="default-src https:">
+```html
+<meta http-equiv="Content-Security-Policy" content="default-src https:" />
 ```
 
-Example: Pre-existing site that uses too much inline code to fix but wants to ensure
-resources are loaded only over HTTPS and to disable plugins:
+### Allow inline code and HTTPS resources, but disable plugins
 
-```
+This policy could be used on a pre-existing site that uses too much inline code to fix, to ensure resources are loaded only over HTTPS and disable plugins:
+
+```http
 Content-Security-Policy: default-src https: 'unsafe-eval' 'unsafe-inline'; object-src 'none'
 ```
 
-Example: Do not implement the above policy yet; instead just report violations that
-would have occurred:
+### Report but don't enforce violations when testing
 
-```
-Content-Security-Policy-Report-Only: default-src https:; report-uri /csp-violation-report-endpoint/
+This example sets the same restrictions as the previous example, but using the {{httpheader("Content-Security-Policy-Report-Only")}} header and the {{CSP("report-to")}} directive.
+This approach is used during testing to report violations but not block code from executing.
+
+Endpoints (URLs) to send reports to are defined using the {{HTTPHeader("Reporting-Endpoints")}} HTTP response header.
+
+```http
+Reporting-Endpoints: csp-endpoint="https://example.com/csp-reports"
 ```
 
-See [Mozilla Web Security Guidelines](https://infosec.mozilla.org/guidelines/web_security#Examples_5) for more examples.
+A particular endpoint is then selected as the report target in the CSP policy using the {{CSP("report-to")}} directive.
+
+```http
+Content-Security-Policy-Report-Only: default-src https:; report-uri /csp-violation-report-url/; report-to csp-endpoint
+```
+
+Note that the {{CSP("report-uri")}} {{deprecated_inline}} directive is also specified above because `report-to` is not yet broadly supported by browsers.
+
+See [Content Security Policy (CSP) implementation](/en-US/docs/Web/Security/Practical_implementation_guides/CSP) for more examples.
 
 ## Specifications
 

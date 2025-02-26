@@ -1,30 +1,23 @@
 ---
-title: URLPattern.exec()
+title: "URLPattern: exec() method"
+short-title: exec()
 slug: Web/API/URLPattern/exec
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - URLPattern
-  - URL Pattern API
-  - Polyfill
-  - Experimental
+status:
+  - experimental
 browser-compat: api.URLPattern.exec
 ---
 
-{{APIRef("URL Pattern API")}}
+{{APIRef("URL Pattern API")}}{{SeeCompatTable}} {{AvailableInWorkers}}
 
 The **`exec()`** method of the {{domxref("URLPattern")}} interface takes a URL or
 object of URL parts, and returns either an object containing the results of
 matching the URL to the pattern, or `null` if the URL does not match the
 pattern.
 
-{{AvailableInWorkers}}
-
 ## Syntax
 
-```js
+```js-nolint
 exec(input)
 exec(input, baseURL)
 ```
@@ -56,11 +49,11 @@ This example shows how to use the `exec()` method to match a URL against a
 pattern. The example prints the result of the `exec()` calls to the console.
 
 ```js
-const pattern = new URLPattern('http{s}?://*.example.com/books/:id');
+const pattern = new URLPattern("http{s}?://*.example.com/books/:id");
 
 // Absolute URL strings
-console.log(pattern.exec('https://example.com/books/123')); // null
-let match = pattern.exec('https://store.example.com/books/123');
+console.log(pattern.exec("https://example.com/books/123")); // null
+let match = pattern.exec("https://store.example.com/books/123");
 console.log(match.inputs); // ['https://store.example.com/books/123']
 console.log(match.protocol); // { input: "https", groups: {} }
 console.log(match.username); // { input: "", groups: {} }
@@ -72,24 +65,24 @@ console.log(match.search); // { input: "", groups: {} }
 console.log(match.hash); // { input: "", groups: {} }
 
 // Relative URL strings
-pattern.exec('/books/123', 'http://store.example.com'); // returns object
-pattern.exec('/books/123', 'data:text/plain,hello world!'); // returns object
-pattern.exec('/books/123'); // returns null
+pattern.exec("/books/123", "http://store.example.com"); // returns object
+pattern.exec("/books/123", "data:text/plain,hello world!"); // returns object
+pattern.exec("/books/123"); // returns null
 
 // Structured objects
 pattern.exec({
-  pathname: '/books/123',
-  baseURL: 'http://store.example.com',
+  pathname: "/books/123",
+  baseURL: "http://store.example.com",
 }); // returns object
 pattern.exec({
-  protocol: 'https',
-  hostname: 'store.example.com',
-  pathname: '/books/123',
+  protocol: "https",
+  hostname: "store.example.com",
+  pathname: "/books/123",
 }); // returns object
 pattern.exec({
-  protocol: 'file',
-  hostname: 'store.example.com',
-  pathname: '/books/123',
+  protocol: "file",
+  hostname: "store.example.com",
+  pathname: "/books/123",
 }); // returns null
 ```
 

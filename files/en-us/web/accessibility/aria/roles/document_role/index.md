@@ -1,29 +1,26 @@
 ---
-title: 'ARIA: document role'
+title: "ARIA: document role"
 slug: Web/Accessibility/ARIA/Roles/document_role
-tags:
-  - ARIA
-  - ARIA Role
-  - Document
-  - document structure role
-  - Reference
+page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#document
 ---
+
+{{AccessibilitySidebar}}
 
 The `document` role is for focusable content within complex composite [widgets](/en-US/docs/Web/Accessibility/ARIA/Roles/widget_role) or [applications](/en-US/docs/Web/Accessibility/ARIA/Roles/application_role) for which assistive technologies can switch reading context back to a reading mode.
 
 ## Description
 
-The `document` role is for the top container containing content that assistive technology users may want to browse in a reading mode. Only useful on focusable sections within complex composite [widgets](/en-US/docs/Web/Accessibility/ARIA/Roles/widget_role) or [applications](/en-US/docs/Web/Accessibility/ARIA/Roles/application_role), the `document` role inform assistive technologies to the reading context back to a reading mode: The `document` role tells assistive technologies with reading or browse modes to use the document mode to read the content contained within this element.
+The `document` role is for the top container containing content that assistive technology users may want to browse in a reading mode. Only useful on focusable sections within complex composite [widgets](/en-US/docs/Web/Accessibility/ARIA/Roles/widget_role) or [applications](/en-US/docs/Web/Accessibility/ARIA/Roles/application_role), the `document` role informs assistive technologies to the reading context back to a reading mode: The `document` role tells assistive technologies with reading or browse modes to use the document mode to read the content contained within this element.
 
 ```html
 <div role="dialog">
- …
- <div id="InfoText" role="document" tabindex="0">
-  <p>Some informational text goes here.</p>
- </div>
- …
- <button>Close</button>
+  …
+  <div id="InfoText" role="document" tabindex="0">
+    <p>Some informational text goes here.</p>
+  </div>
+  …
+  <button>Close</button>
 </div>
 ```
 
@@ -42,6 +39,7 @@ In contrast to the [`article`](/en-US/docs/Web/Accessibility/ARIA/Roles/article_
 ### Associated WAI-ARIA roles, states, and properties
 
 - [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded)
+
   - : Include with a value of `true` or `false` if the document element is collapsible, to indicate if the document is currently expanded or collapsed. Other values include the default `undefined` which means the document is not collapsible.
 
 - tabindex="0"
@@ -75,11 +73,3 @@ The document role is an easy way to indirectly control assistive technology beha
 
 - [ARIA: `widget` role](/en-US/docs/Web/Accessibility/ARIA/Roles/widget_role)
 - [ARIA: `application` role](/en-US/docs/Web/Accessibility/ARIA/Roles/application_role)
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
-
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
-
-</section>

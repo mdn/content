@@ -1,16 +1,11 @@
 ---
-title: RTCDataChannel.bufferedAmount
+title: "RTCDataChannel: bufferedAmount property"
+short-title: bufferedAmount
 slug: Web/API/RTCDataChannel/bufferedAmount
 page-type: web-api-instance-property
-tags:
-  - Property
-  - RTCDataChannel
-  - Read-only
-  - Reference
-  - WebRTC
-  - bufferedAmount
 browser-compat: api.RTCDataChannel.bufferedAmount
 ---
+
 {{APIRef("WebRTC")}}
 
 The read-only `RTCDataChannel` property
@@ -24,7 +19,8 @@ The user agent may implement the process of actually sending data in any way it
 chooses; this may be done periodically during the event loop or truly asynchronously. As
 messages are actually sent, this value is reduced accordingly.
 
-> **Note:** Closing the data channel doesn't reset this count, even though the user agent purges
+> [!NOTE]
+> Closing the data channel doesn't reset this count, even though the user agent purges
 > the queued messages. However, even after closing the channel, attempts to send
 > messages continue to add to the `bufferedAmount` value, even though the
 > messages are neither sent nor buffered.

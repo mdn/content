@@ -1,19 +1,12 @@
 ---
-title: CSSUnitValue.unit
+title: "CSSUnitValue: unit property"
+short-title: unit
 slug: Web/API/CSSUnitValue/unit
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSUnitValue
-  - Experimental
-  - Houdini
-  - Property
-  - Reference
-  - unit
 browser-compat: api.CSSUnitValue.unit
 ---
-{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
+
+{{APIRef("CSS Typed Object Model API")}}
 
 The **`CSSUnitValue.unit`** read-only property
 of the {{domxref("CSSUnitValue")}} interface returns a string
@@ -50,5 +43,6 @@ console.log(pos.y.unit); // "em"
 ## See also
 
 - {{domxref('CSSUnitValue.value')}}
+- [Dimensions in CSS values and units](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#dimensions)
 - [Using the CSS Typed OM](/en-US/docs/Web/API/CSS_Typed_OM_API/Guide)
 - [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API)

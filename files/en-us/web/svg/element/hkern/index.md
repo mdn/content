@@ -1,15 +1,12 @@
 ---
 title: <hkern>
 slug: Web/SVG/Element/hkern
-tags:
-  - Deprecated
-  - Element
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG Font
+page-type: svg-element
+status:
+  - deprecated
 browser-compat: svg.elements.hkern
 ---
+
 {{SVGRef}}{{deprecated_header}}
 
 The **`<hkern>`** [SVG](/en-US/docs/Web/SVG) element allows to fine-tweak the horizontal distance between two glyphs. This process is known as [kerning](https://en.wikipedia.org/wiki/Kerning).
@@ -20,17 +17,11 @@ The **`<hkern>`** [SVG](/en-US/docs/Web/SVG) element allows to fine-tweak the ho
 
 ## Attributes
 
-### Global attributes
-
-- [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
-
-### Specific attributes
-
-- {{SVGAttr("u1")}}
-- {{SVGAttr("g1")}}
-- {{SVGAttr("u2")}}
-- {{SVGAttr("g2")}}
-- {{SVGAttr("k")}}
+- {{SVGAttr("u1")}} {{Deprecated_Inline}}
+- {{SVGAttr("g1")}} {{Deprecated_Inline}}
+- {{SVGAttr("u2")}} {{Deprecated_Inline}}
+- {{SVGAttr("g2")}} {{Deprecated_Inline}}
+- {{SVGAttr("k")}} {{Deprecated_Inline}}
 
 ## DOM Interface
 

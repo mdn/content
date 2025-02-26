@@ -1,19 +1,14 @@
 ---
-title: 'Element: fullscreenerror event'
+title: "Element: fullscreenerror event"
+short-title: fullscreenerror
 slug: Web/API/Element/fullscreenerror_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - Fullscreen API
-  - Reference
-  - fullscreen
-  - fullscreenerror
 browser-compat: api.Element.fullscreenerror_event
 ---
-{{APIRef}}
 
-The `fullscreenerror` event is fired when the browser cannot switch to fullscreen mode.
+{{APIRef("Fullscreen API")}}
+
+The **`fullscreenerror`** event is fired when the browser cannot switch to fullscreen mode.
 
 As with the [`fullscreenchange` event](/en-US/docs/Web/API/Element/fullscreenchange_event), two `fullscreenerror` events are fired; the first is sent to the {{domxref("Element")}} which failed to change modes, and the second is sent to the {{domxref("Document")}} which owns that element.
 
@@ -26,9 +21,9 @@ This event is not cancelable.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('fullscreenchange', (event) => { });
+addEventListener("fullscreenchange", (event) => {});
 
-onfullscreenchange = (event) => { };
+onfullscreenchange = (event) => {};
 ```
 
 ## Event type
@@ -38,14 +33,14 @@ A generic {{domxref("Event")}}.
 ## Examples
 
 ```js
-const requestor = document.querySelector('div');
+const requestor = document.querySelector("div");
 
 function handleError(event) {
-  console.error('an error occurred changing into fullscreen');
+  console.error("an error occurred changing into fullscreen");
   console.log(event);
-};
+}
 
-requestor.addEventListener('fullscreenerror', handleError);
+requestor.addEventListener("fullscreenerror", handleError);
 // or
 requestor.onfullscreenerror = handleError;
 

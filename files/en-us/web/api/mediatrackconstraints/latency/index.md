@@ -1,22 +1,12 @@
 ---
-title: MediaTrackConstraints.latency
+title: "MediaTrackConstraints: latency property"
+short-title: latency
 slug: Web/API/MediaTrackConstraints/latency
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaTrackConstraints
-  - Property
-  - Reference
-  - WebRTC
-  - getusermedia
-  - latency
-browser-compat: api.MediaTrackConstraints.latency
+browser-compat: api.MediaStreamTrack.applyConstraints.latency_constraint
 ---
-{{DefaultAPISidebar("Media Capture and Streams")}}
+
+{{APIRef("Media Capture and Streams")}}
 
 The {{domxref("MediaTrackConstraints")}} dictionary's
 **`latency`** property is a [`ConstrainDouble`](/en-US/docs/Web/API/MediaTrackConstraints#constraindouble)
@@ -50,14 +40,14 @@ exact match to the required latency (if `exact` is specified or both
 `min` and `max` are provided and have the same value) or to a
 best-possible value.
 
-> **Note:** Latency is always prone to some variation due to hardware usage demands, network
+> [!NOTE]
+> Latency is always prone to some variation due to hardware usage demands, network
 > constraints, and so forth, so even in an "exact" match, some variation should be
 > expected.
 
 ## Examples
 
-See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Example:
-  Constraint exerciser")}} for an example.
+See the [Constraint exerciser](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints#example_constraint_exerciser) example.
 
 ## Specifications
 
@@ -69,8 +59,8 @@ See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Exampl
 
 ## See also
 
-- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Streams_API)
-- [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints)
+- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API)
+- [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints)
 - {{domxref("MediaTrackConstraints")}}
 - {{domxref("MediaDevices.getSupportedConstraints()")}}
 - {{domxref("MediaTrackSupportedConstraints")}}

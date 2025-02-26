@@ -1,16 +1,11 @@
 ---
-title: ResizeObserverEntry.devicePixelContentBoxSize
+title: "ResizeObserverEntry: devicePixelContentBoxSize property"
+short-title: devicePixelContentBoxSize
 slug: Web/API/ResizeObserverEntry/devicePixelContentBoxSize
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Resize Observer API
-  - ResizeObserverEntry
-  - devicePixelContentBoxSize
 browser-compat: api.ResizeObserverEntry.devicePixelContentBoxSize
 ---
+
 {{APIRef("Resize Observer API")}}
 
 The **`devicePixelContentBoxSize`** read-only property of
@@ -31,12 +26,13 @@ multi-column scenarios. Each object in the array contains two properties:
     with a horizontal {{cssxref("writing-mode")}}, this is the horizontal dimension, or
     width; if the writing-mode is vertical, this is the vertical dimension, or height.
 
-> **Note:** For more information about writing modes and block and inline
-> dimensions, read [Handling different text directions](/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions).
+> [!NOTE]
+> For more information about writing modes and block and inline
+> dimensions, read [Handling different text directions](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_different_text_directions).
 
 ## Examples
 
-The following example is taken from the article [Pixel-perfect rendering with devicePixelContentBox](https://web.dev/device-pixel-content-box/). As the callback function of a {{domxref("ResizeObserver")}}
+The following example is taken from the article [Pixel-perfect rendering with devicePixelContentBox](https://web.dev/articles/device-pixel-content-box). As the callback function of a {{domxref("ResizeObserver")}}
 is called after layout but before paint.
 This provides an opportunity to log the exact size in physical pixels to
 ensure a one-to-one mapping of canvas pixels to physical pixels.
@@ -49,7 +45,7 @@ const observer = new ResizeObserver((entries) => {
 
   /* … render to canvas … */
 });
-observer.observe(canvas, {box: 'device-pixel-content-box'});
+observer.observe(canvas, { box: "device-pixel-content-box" });
 ```
 
 ## Specifications

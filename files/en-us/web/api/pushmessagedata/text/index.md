@@ -1,26 +1,18 @@
 ---
-title: PushMessageData.text()
+title: "PushMessageData: text() method"
+short-title: text()
 slug: Web/API/PushMessageData/text
 page-type: web-api-instance-method
-tags:
-  - API
-  - Experimental
-  - Method
-  - Plain text
-  - Push
-  - PushMessageData
-  - Reference
-  - Service Workers
-  - Text
 browser-compat: api.PushMessageData.text
 ---
-{{APIRef("Push API")}}{{SeeCompatTable()}}
+
+{{APIRef("Push API")}}{{SecureContext_Header}}{{AvailableInWorkers("service")}}
 
 The **`text()`** method of the {{domxref("PushMessageData")}} interface extracts push message data as a plain text string.
 
 ## Syntax
 
-```js
+```js-nolint
 text()
 ```
 
@@ -35,7 +27,7 @@ A string.
 ## Examples
 
 ```js
-self.addEventListener('push', function(event) {
+self.addEventListener("push", (event) => {
   const textObj = event.data.text();
 
   // do something with your text

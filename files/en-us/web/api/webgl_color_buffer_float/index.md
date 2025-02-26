@@ -1,21 +1,19 @@
 ---
-title: WEBGL_color_buffer_float
+title: WEBGL_color_buffer_float extension
+short-title: WEBGL_color_buffer_float
 slug: Web/API/WEBGL_color_buffer_float
 page-type: webgl-extension
-tags:
-  - API
-  - Reference
-  - WebGL
-  - WebGL extension
 browser-compat: api.WEBGL_color_buffer_float
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WEBGL_color_buffer_float`** extension is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and adds the ability to render to 32-bit floating-point color buffers.
 
 WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method. For more information, see also [Using Extensions](/en-US/docs/Web/API/WebGL_API/Using_Extensions) in the [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial).
 
-> **Note:** This extension is available to {{domxref("WebGLRenderingContext", "WebGL 1", "", 1)}} contexts only. For {{domxref("WebGL2RenderingContext", "WebGL 2", "", 1)}}, use the {{domxref("EXT_color_buffer_float")}} extension.
+> [!NOTE]
+> This extension is available to {{domxref("WebGLRenderingContext", "WebGL 1", "", 1)}} contexts only. For {{domxref("WebGL2RenderingContext", "WebGL 2", "", 1)}}, use the {{domxref("EXT_color_buffer_float")}} extension.
 >
 > The {{domxref("OES_texture_float")}} extension implicitly enables this extension.
 
@@ -39,7 +37,7 @@ This extension extends {{domxref("WebGLRenderingContext.renderbufferStorage()")}
 ## Examples
 
 ```js
-const ext = gl.getExtension('WEBGL_color_buffer_float');
+const ext = gl.getExtension("WEBGL_color_buffer_float");
 
 gl.renderbufferStorage(gl.RENDERBUFFER, ext.RGBA32F_EXT, 256, 256);
 ```

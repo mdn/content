@@ -1,11 +1,9 @@
 ---
-title: 'IMSC: subtitles and captioning for the Web'
+title: "IMSC: subtitles and captioning for the Web"
 slug: Related/IMSC
-tags:
-  - IMSC
-  - captions
-  - subtitles
+page-type: guide
 ---
+
 IMSC (TTML Profiles for Internet Media Subtitles and Captions) is a file format for representing subtitles and captions. It uses XML to describe content, timing, layout, and styling. IMSC is very similar to HTML and CSS in concept — in fact, most IMSC styles have a direct equivalent in CSS.
 
 ## Concepts and usage
@@ -14,7 +12,7 @@ IMSC is standardized by the W3C, and used around the world by content producers 
 
 IMSC supports a wide range of world languages and scripts, and rich styling. In addition to text-based subtitles, IMSC also supports PNG subtitles.
 
-Each IMSC document is self-contained and combines content, timing, layout and styling information.  The content of the document is structured using tags similar to those used in HTML such as `<body>`, `<div>`, `<p>`, `<span>`, and `<br>`. Timing and styling are expressed using attributes such as `begin`, `end`, `color`, `tts:backgroundColor`, `tts:fontSize`, `tts:fontFamily` — these are mostly familiar concepts to anyone familiar with CSS.
+Each IMSC document is self-contained and combines content, timing, layout and styling information. The content of the document is structured using tags similar to those used in HTML such as `<body>`, `<div>`, `<p>`, `<span>`, and `<br>`. Timing and styling are expressed using attributes such as `begin`, `end`, `color`, `tts:backgroundColor`, `tts:fontSize`, `tts:fontFamily` — these are mostly familiar concepts to anyone familiar with CSS.
 
 ### Differences between IMSC, HTML, and CSS
 
@@ -26,7 +24,7 @@ IMSC differs from HTML in a number of ways:
 
 While attributes names and syntax are similar, styling differs from CSS in a couple of ways:
 
-- Whereas CSS properties use hyphens, like `font-size`, IMSC uses camelCase, like `tts:fontSize`.
+- Whereas CSS properties use hyphens, like `font-size`, IMSC uses {{Glossary("camel_case", "camel case")}}, like `tts:fontSize`.
 - IMSC does not use external stylesheets.
 
 ### Differences between IMSC and WebVTT
@@ -85,11 +83,11 @@ Below is an example that uses `tts:fillLineGap`:
 </tt>
 ```
 
-{{EmbedGHLiveSample("imsc/fillLineGap/fillLineGap.html", '100%', '256px')}}
+{{EmbedGHLiveSample("imsc-examples/fillLineGap/fillLineGap.html", '100%', '256px')}}
 
 … and an example that uses `ebutts:linePadding`:
 
-{{EmbedGHLiveSample("imsc/linePadding/linePadding.html", '100%', '256px')}}
+{{EmbedGHLiveSample("imsc-examples/linePadding/linePadding.html", '100%', '256px')}}
 
 Last but not least, IMSC is compatible with SMPTE-TT and EBU-TT-D, which are widely used in the USA and in Europe. IMSC is also actively used in the authoring of TV and movie content. Implementing IMSC support therefore removes the need for conversion to WebVTT.
 
@@ -102,7 +100,7 @@ In contrast to IMSC, which uses markup, WebVTT uses a combination of CSS and pla
 - [Using the imscJS polyfill](/en-US/docs/Related/IMSC/Using_the_imscJS_polyfill)
   - : You currently need a polyfill to render IMSC on the web. imscJS is a good choice as it is actively maintained and has almost complete coverage of the IMSC features. This article hows you how to make use of imscJS and how to integrate it on your own website.
 - [Styling IMSC documents](/en-US/docs/Related/IMSC/Styling)
-  - : IMSC offers many options for styling documents, and most of the IMSC styling properties have direct CSS equivalents, making them familiar to web developers.  In this guide you'll learn a bit more about IMSC styling including the difference between inline and referential styling, and efficient styling using inheritance and region styling.
+  - : IMSC offers many options for styling documents, and most of the IMSC styling properties have direct CSS equivalents, making them familiar to web developers. In this guide you'll learn a bit more about IMSC styling including the difference between inline and referential styling, and efficient styling using inheritance and region styling.
 - [Subtitle placement in IMSC](/en-US/docs/Related/IMSC/Subtitle_placement)
   - : IMSC allows the author to precisely control the position of subtitles, such that the text is positioned next to the speaker or to avoid obscuring an important content in your video. Learn how to define a subtitle region and how to define its width and height.
 - [Namespaces in IMSC](/en-US/docs/Related/IMSC/Namespaces)
@@ -112,7 +110,7 @@ In contrast to IMSC, which uses markup, WebVTT uses a combination of CSS and pla
 - [Mapping video time codes to IMSC](/en-US/docs/Related/IMSC/Mapping_video_time_codes_to_IMSC)
   - : Mapping the time or time code value that is seen within a video track or video editor timeline to an IMSC document can be a little tricky. There are a few different issues that you'll need to be aware of, which we'll cover in this article.
 - [IMSC and other standards](/en-US/docs/Related/IMSC/IMSC_and_other_standards)
-  - : IMSC is the result of an international effort to bring together popular profiles of [TTML](https://www.w3.org/TR/ttml/), like [EBU-TT-D](https://tech.ebu.ch/publications/tech3380) and [SMPTE-TT](https://ieeexplore.ieee.org/document/7291854/). This article provides an overview how IMSC is related to these other subtitle standards, and explains the differences between the versions of IMSC.
+  - : IMSC is the result of an international effort to bring together popular profiles of [TTML](https://www.w3.org/TR/ttml/), like [EBU-TT-D](https://tech.ebu.ch/publications/tech3380) and [SMPTE-TT](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=7291854). This article provides an overview how IMSC is related to these other subtitle standards, and explains the differences between the versions of IMSC.
 
 ## Reference
 

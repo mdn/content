@@ -1,19 +1,25 @@
 ---
 title: Shadow tree
 slug: Glossary/Shadow_tree
-tags:
-  - DOM
-  - Glossary
-  - Shadow Tree
-  - shadow DOM
+page-type: glossary-definition
 ---
-A **shadow tree** is a tree of DOM [nodes](/en-US/docs/Glossary/Node/DOM) whose topmost node is a **shadow root**; that is, the topmost node within a **shadow DOM**. A shadow tree is a hidden set of standard DOM nodes which is attached to a standard DOM node that serves as a host. The hidden nodes are not directly visible using regular DOM functionality, but require the use of a special [Shadow DOM API](/en-US/docs/Web/Web_Components/Using_shadow_DOM) to access.
 
-Nodes within the shadow tree are not affected by anything applied outside the shadow tree, and vice versa. This provides a way to encapsulate implementation details, which is especially useful for custom elements and other advanced design paradigms.
+{{GlossarySidebar}}
+
+A **shadow tree** is a hidden set of {{Glossary("DOM")}} nodes whose topmost {{Glossary("node/dom", "node")}} is a **shadow root**. The shadow root is the topmost node of a **shadow DOM** and not part of the regular document's DOM tree.
+
+The shadow root is attached to another node tree through a specific DOM node referred to as its **host**. This host may be part of another shadow tree or part of the regular DOM tree. The node tree of a shadow root's host is sometimes referred to as the **light tree**.
+
+The hidden DOM nodes of a shadow tree are generally not affected by anything applied outside the shadow tree, and vice versa. The **shadow boundary**, where the shadow DOM ends and the regular DOM begins, can be traversed, but only very intentionally:
+
+- Scripting shadow tree nodes from outside requires the use of a special [Shadow DOM API](/en-US/docs/Web/API/Web_components/Using_shadow_DOM) to be accessed.
+- Styling a shadow tree from outside can be achieved via [CSS scoping](/en-US/docs/Web/CSS/CSS_scoping) and [CSS shadow parts](/en-US/docs/Web/CSS/CSS_shadow_parts).
 
 ## See also
 
-- [Using shadow DOM](/en-US/docs/Web/Web_Components/Using_shadow_DOM)
+- [Using shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM)
 - {{domxref("Element.shadowRoot")}} and {{domxref("Element.attachShadow()")}}
 - {{domxref("ShadowRoot")}}
 - {{HTMLElement("slot")}}
+- Related glossary terms:
+  - {{Glossary("Accessibility tree")}}

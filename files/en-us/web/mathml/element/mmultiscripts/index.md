@@ -1,93 +1,159 @@
 ---
 title: <mmultiscripts>
 slug: Web/MathML/Element/mmultiscripts
-tags:
-  - MathML
-  - MathML Reference
-  - MathML:Element
-  - MathML:Script and Limit Schemata
+page-type: mathml-element
 browser-compat: mathml.elements.mmultiscripts
 ---
+
 {{MathMLRef}}
 
-The MathML `<mmultiscripts>` element allows you to create tensor-like objects. In a descriptive way [tensors](https://en.wikipedia.org/wiki/Tensor) are multidimensional matrices (mathematical imprecise but exemplified). The degree of a tensor depends on the dimensionality of a representative array. For example, a number is a 0-dimensional array, or a 0th-order tensor. A 1-dimensional array (e.g. vectors) is a 1st-order tensor and so 2nd-order tensors are needed to represent square matrices. To learn more about the mathematical background of tensors refer to the [entry on Wikipedia](https://en.wikipedia.org/wiki/Tensor).
+The **`<mmultiscripts>`** [MathML](/en-US/docs/Web/MathML) element is used to attach an arbitrary number of subscripts and superscripts to an expression at once, generalizing the {{ MathMLElement("msubsup") }} element. Scripts can be either pre-scripts (placed **before** the expression) or post-scripts (placed **after** it).
 
-MathML uses a special syntax to describe subscripts and superscripts for both, postscripts and prescripts, attached to a base expression:
+MathML uses the syntax below, that is a base expression, followed by an arbitrary number of post-subscript and post-superscript pairs (attached in the given order) optionally followed by an {{ MathMLElement("mprescripts") }} element and an arbitrary number of pre-subscript and pre-superscript pairs (attached in the given order). In addition, empty {{ MathMLElement("mrow") }} elements can be used to represent absent scripts.
 
-```html
+```html-nolint
 <mmultiscripts>
-    base
-     (subscript superscript)*
-     [ <mprescripts/> (presubscript presuperscript)* ]
+  base
+  post-sub-script-1 post-sup-script-1
+  post-sub-script-2 post-sup-script-2
+  post-sub-script-3 post-sup-script-3
+  ...
+  post-sub-script-N post-sup-script-N
+  <mprescripts />                    ⎫
+  pre-sub-script-1 pre-sup-script-1  ⎪
+  pre-sub-script-2 pre-sup-script-2  ⎬ Optional
+  pre-sub-script-3 pre-sup-script-3  ⎪
+  ...                                ⎪
+  pre-sub-script-M pre-sup-script-N  ⎭
 </mmultiscripts>
 ```
 
-After the base expression you can specify a postsubscript and a postsuperscript. Prescripts are optional and are separated by the empty tag `<mprescripts/>` (only one \<mprescripts /> element is allowed, otherwise you will get an `DuplicateMprescripts` error in the [Error Console](/en-US/docs/Error_Console) and "invalid-markup" in your rendering). In addition you are able to use `<none/>` as a placeholder for empty scripts (not for the base). See the examples section for a correct usage.
-
 ## Attributes
 
-This element's attributes include the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes).
+This element's attributes include the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes) as well as the following deprecated attributes:
 
-- `subscriptshift` {{deprecated_inline}}
-  - : The minimum space by which to shift the subscript below the baseline of the expression, as a [CSS length](/en-US/docs/Web/CSS/length).
-    This property is deprecated and will be removed in the future.
-- `superscriptshift` {{deprecated_inline}}
-  - : The minimum space by which to shift the superscript above the baseline of the expression, as a [CSS length](/en-US/docs/Web/CSS/length).
-    This property is deprecated and will be removed in the future.
+- `subscriptshift` {{deprecated_inline}} {{Non-standard_Inline}}
+  - : A {{cssxref("length-percentage")}} indicating the minimum amount to shift the baseline of the subscript down.
+- `superscriptshift` {{deprecated_inline}} {{Non-standard_Inline}}
+  - : A {{cssxref("length-percentage")}} indicating the minimum amount to shift the baseline of the superscript up.
+
+> [!NOTE]
+> For the `subscriptshift` and `superscriptshift` attributes, some browsers may also accept [legacy MathML lengths](/en-US/docs/Web/MathML/Values#legacy_mathml_lengths).
 
 ## Examples
 
-### Using `<mprescripts/>`
+### Using `<mprescripts>`
 
-Sample rendering: ![](mmultiscripts_prescripts.png)
+Children after the `<mprescripts>` element are placed as pre-scripts (before the base expression):
 
-Rendering in your browser: <math><mmultiscripts><mi>X</mi> <mi>d</mi> <mi>c</mi> <mprescripts></mprescripts><mi>b</mi> <mi>a</mi></mmultiscripts></math>
+```css hidden
+html,
+body {
+  height: 100%;
+}
 
-```html
-<math>
+body {
+  display: grid;
+  place-items: center;
+  font-size: 2rem;
+}
+```
 
-    <mmultiscripts>
-
-        <mi>X</mi>      <!-- base expression -->
-
-        <mi>d</mi>      <!-- postsubscript -->
-        <mi>c</mi>      <!-- postsuperscript -->
-
-        <mprescripts />
-        <mi>b</mi>      <!-- presubscript -->
-        <mi>a</mi>      <!-- presuperscript -->
-
-    </mmultiscripts>
-
+```html-nolint
+<math display="block">
+  <mmultiscripts>
+    <mi>X</mi> <!-- base expression -->
+    <mi>a</mi> <!-- post-sub-script -->
+    <mi>b</mi> <!-- post-sup-script -->
+    <mprescripts />
+    <mi>c</mi> <!-- pre-sub-script -->
+    <mi>d</mi> <!-- pre-sup-script -->
+  </mmultiscripts>
 </math>
 ```
 
-### Using `<none/>`
+{{ EmbedLiveSample('using_mprescripts', 700, 200, "", "") }}
 
-Sample rendering: ![](mmultiscripts_none.png)
+### Empty scripts
 
-Rendering in your browser: <math><mmultiscripts><mi>X</mi>
-<none></none><mi>c</mi>
-<mprescripts></mprescripts><mi>b</mi><none></none></mmultiscripts></math>
+Empty `<mrow>` elements can be used to represent absent scripts:
 
-```html
-<math>
+```css hidden
+html,
+body {
+  height: 100%;
+}
 
-    <mmultiscripts>
+body {
+  display: grid;
+  place-items: center;
+  font-size: 2rem;
+}
+```
 
-        <mi>X</mi>      <!-- base expression -->
-
-        <none />        <!-- postsubscript -->
-        <mi>c</mi>      <!-- postsuperscript -->
-
-        <mprescripts />
-        <mi>b</mi>      <!-- presubscript -->
-        <none />        <!-- presuperscript -->
-
-    </mmultiscripts>
-
+```html-nolint
+<math display="block">
+  <mmultiscripts>
+    <mi>X</mi>    <!-- base expression -->
+    <mrow></mrow> <!-- post-sub-script -->
+    <mi>b</mi>    <!-- post-sup-script -->
+    <mprescripts />
+    <mi>c</mi>    <!-- pre-sub-script -->
+    <mrow></mrow> <!-- pre-sup-script -->
+  </mmultiscripts>
 </math>
 ```
+
+{{ EmbedLiveSample('empty_scripts', 700, 200, "", "") }}
+
+### Order of scripts
+
+Here is a more complex example with many scripts, so you can see in which order they are attached to the base:
+
+```css hidden
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  font-size: 2rem;
+}
+```
+
+```html-nolint
+<math display="block">
+  <mmultiscripts>
+    <mi>X</mi> <!-- base expression -->
+    <mn>1</mn> <!-- post-sub-script-1 -->
+    <mn>2</mn> <!-- post-sup-script-1 -->
+    <mn>3</mn> <!-- post-sub-script-2 -->
+    <mn>4</mn> <!-- post-sup-script-2 -->
+    <mprescripts />
+    <mn>5</mn> <!-- pre-sub-script-1 -->
+    <mn>6</mn> <!-- pre-sup-script-1 -->
+    <mn>7</mn> <!-- pre-sub-script-2 -->
+    <mn>8</mn> <!-- pre-sup-script-2 -->
+  </mmultiscripts>
+</math>
+```
+
+{{ EmbedLiveSample('order_of_scripts', 700, 200, "", "") }}
+
+## Technical summary
+
+<table class="properties">
+  <tr>
+    <th scope="row">
+      <a href="/en-US/docs/Web/Accessibility/ARIA/Roles">Implicit ARIA role</a>
+    </th>
+    <td>
+      None
+    </td>
+  </tr>
+</table>
 
 ## Specifications
 

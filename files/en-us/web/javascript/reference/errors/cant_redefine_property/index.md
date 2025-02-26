@@ -1,12 +1,9 @@
 ---
 title: 'TypeError: can''t redefine non-configurable property "x"'
 slug: Web/JavaScript/Reference/Errors/Cant_redefine_property
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - TypeError
+page-type: javascript-error
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "can't redefine non-configurable property" occurs when it was
@@ -14,7 +11,7 @@ attempted to redefine a property, but that property is [non-configurable](/en-US
 
 ## Message
 
-```
+```plain
 TypeError: Cannot redefine property: "x" (V8-based)
 TypeError: can't redefine non-configurable property "x" (Firefox)
 TypeError: Attempting to change value of a readonly property. (Safari)
@@ -42,9 +39,9 @@ haven't specified them as configurable.
 
 ```js example-bad
 const obj = Object.create({});
-Object.defineProperty(obj, "foo", {value: "bar"});
+Object.defineProperty(obj, "foo", { value: "bar" });
 
-Object.defineProperty(obj, "foo", {value: "baz"});
+Object.defineProperty(obj, "foo", { value: "baz" });
 // TypeError: can't redefine non-configurable property "foo"
 ```
 
@@ -53,8 +50,8 @@ later in the code.
 
 ```js example-good
 const obj = Object.create({});
-Object.defineProperty(obj, "foo", {value: "bar", configurable: true});
-Object.defineProperty(obj, "foo", {value: "baz", configurable: true});
+Object.defineProperty(obj, "foo", { value: "bar", configurable: true });
+Object.defineProperty(obj, "foo", { value: "baz", configurable: true });
 ```
 
 ## See also

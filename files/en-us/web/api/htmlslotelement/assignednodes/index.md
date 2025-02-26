@@ -1,16 +1,11 @@
 ---
-title: HTMLSlotElement.assignedNodes()
+title: "HTMLSlotElement: assignedNodes() method"
+short-title: assignedNodes()
 slug: Web/API/HTMLSlotElement/assignedNodes
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTMLSlotElement
-  - Method
-  - Reference
-  - assignedNodes
-  - shadow dom
 browser-compat: api.HTMLSlotElement.assignedNodes
 ---
+
 {{APIRef("Shadow DOM API")}}
 
 The **`assignedNodes()`** method of the {{domxref("HTMLSlotElement")}} interface returns a sequence of the nodes assigned to this slot.
@@ -19,7 +14,7 @@ If the `flatten` option is set to `true`, it returns a sequence of both the node
 
 ## Syntax
 
-```js
+```js-nolint
 assignedNodes()
 assignedNodes(options)
 ```
@@ -42,10 +37,12 @@ An array of nodes.
 The following snippet is taken from our [slotchange example](https://github.com/mdn/web-components-examples/tree/main/slotchange) ([See it live](https://mdn.github.io/web-components-examples/slotchange/)).
 
 ```js
-let slots = this.shadowRoot.querySelectorAll('slot');
-slots[1].addEventListener('slotchange', function(e) {
+let slots = this.shadowRoot.querySelectorAll("slot");
+slots[1].addEventListener("slotchange", (e) => {
   let nodes = slots[1].assignedNodes();
-  console.log(`Element in Slot "${slots[1].name}" changed to "${nodes[0].outerHTML}".`);
+  console.log(
+    `Element in Slot "${slots[1].name}" changed to "${nodes[0].outerHTML}".`,
+  );
 });
 ```
 

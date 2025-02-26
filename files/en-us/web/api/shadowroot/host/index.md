@@ -1,16 +1,11 @@
 ---
-title: ShadowRoot.host
+title: "ShadowRoot: host property"
+short-title: host
 slug: Web/API/ShadowRoot/host
 page-type: web-api-instance-property
-tags:
-  - API
-  - Host
-  - Property
-  - Reference
-  - ShadowRoot
-  - shadow dom
 browser-compat: api.ShadowRoot.host
 ---
+
 {{APIRef("Shadow DOM")}}
 
 The **`host`** read-only property of
@@ -24,7 +19,7 @@ A DOM {{domxref('Element')}}.
 ## Examples
 
 ```js
-let customElem = document.querySelector('my-shadow-dom-element');
+let customElem = document.querySelector("my-shadow-dom-element");
 let shadow = customElem.shadowRoot;
 
 // ...
@@ -40,3 +35,10 @@ let hostElem = shadow.host;
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [`part`](/en-US/docs/Web/HTML/Global_attributes/part) and [`exportparts`](/en-US/docs/Web/HTML/Global_attributes/exportparts) HTML attributes
+- {{HTMLelement("template")}} and {{HTMLElement("slot")}} HTML elements
+- {{CSSXref(":host")}}, {{CSSXref(":host_function", ":host()")}}, and {{CSSXref(":host-context", ":host-context()")}} CSS pseudo-classes
+- {{CSSXref("::part")}} and {{CSSXref("::slotted")}} CSS pseudo-elements

@@ -1,19 +1,12 @@
 ---
-title: PaymentResponse.requestId
+title: "PaymentResponse: requestId property"
+short-title: requestId
 slug: Web/API/PaymentResponse/requestId
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - Payment Request
-  - Payment Request API
-  - PaymentResponse
-  - Property
-  - Secure context
-  - requestId
 browser-compat: api.PaymentResponse.requestId
 ---
-{{SeeCompatTable}}{{APIRef("Payment Request API")}}
+
+{{securecontext_header}}{{APIRef("Payment Request API")}}
 
 The **`requestId`** read-only property of the
 {{domxref("PaymentResponse")}} interface returns the free-form identifier supplied by

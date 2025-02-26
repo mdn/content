@@ -1,15 +1,11 @@
 ---
-title: Selection.addRange()
+title: "Selection: addRange() method"
+short-title: addRange()
 slug: Web/API/Selection/addRange
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML Editing
-  - Method
-  - Reference
-  - Selection
 browser-compat: api.Selection.addRange
 ---
+
 {{ ApiRef("DOM") }}
 
 The **`Selection.addRange()`** method adds a
@@ -17,15 +13,14 @@ The **`Selection.addRange()`** method adds a
 
 ## Syntax
 
-```js
+```js-nolint
 addRange(range)
 ```
 
 ### Parameters
 
 - `range`
-  - : A {{ domxref("Range") }} object that will be added to the {{ domxref("Selection")
-    }}.
+  - : A {{ domxref("Range") }} object that will be added to the {{domxref("Selection")}}.
 
 ### Return value
 
@@ -33,32 +28,36 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
-> **Note:** Currently only Firefox supports multiple selection ranges, other browsers will not
+> [!NOTE]
+> Currently only Firefox supports multiple selection ranges, other browsers will not
 > add new ranges to the selection if it already contains one.
 
 ### HTML
 
 ```html
-<p>I <strong>insist</strong> that you <strong>try</strong> selecting the <strong>strong words</strong>.</p>
+<p>
+  I <strong>insist</strong> that you <strong>try</strong> selecting the
+  <strong>strong words</strong>.
+</p>
 <button>Select strong words</button>
 ```
 
 ### JavaScript
 
 ```js
-let button = document.querySelector('button');
+let button = document.querySelector("button");
 
-button.addEventListener('click', function () {
-  let selection = window.getSelection();
-  let strongs = document.getElementsByTagName('strong');
+button.addEventListener("click", () => {
+  const selection = window.getSelection();
+  const strongElems = document.getElementsByTagName("strong");
 
   if (selection.rangeCount > 0) {
     selection.removeAllRanges();
   }
 
-  for (let i = 0; i < strongs.length; i++) {
-    let range = document.createRange();
-    range.selectNode(strongs[i]);
+  for (const node of strongElems) {
+    const range = document.createRange();
+    range.selectNode(node);
     selection.addRange(range);
   }
 });

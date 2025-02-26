@@ -1,26 +1,14 @@
 ---
-title: MediaTrackConstraints.aspectRatio
+title: "MediaTrackConstraints: aspectRatio property"
+short-title: aspectRatio
 slug: Web/API/MediaTrackConstraints/aspectRatio
 page-type: web-api-instance-property
-tags:
-  - API
-  - Constraints
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaTrackConstraints
-  - Property
-  - Reference
-  - WebRTC
-  - aspectRatio
-  - getusermedia
-browser-compat: api.MediaTrackConstraints.aspectRatio
+browser-compat: api.MediaStreamTrack.applyConstraints.aspectRatio_constraint
 ---
-{{DefaultAPISidebar("Media Capture and Streams")}}
 
-The {{domxref("MediaTrackConstraints")}} dictionary's
-**`aspectRatio`** property is a [`ConstrainDouble`](/en-US/docs/Web/API/MediaTrackConstraints#constraindouble)
-describing the requested or mandatory constraints placed upon the value of the
+{{APIRef("Media Capture and Streams")}}
+
+The {{domxref("MediaTrackConstraints")}} dictionary's **`aspectRatio`** property is a [`ConstrainDouble`](/en-US/docs/Web/API/MediaTrackConstraints#constraindouble) describing the requested or mandatory constraints placed upon the value of the
 {{domxref("MediaTrackSettings.aspectRatio", "aspectRatio")}} constrainable property.
 
 If needed, you can determine whether or not this constraint is supported by checking
@@ -31,7 +19,7 @@ is unnecessary since browsers will ignore any constraints they're unfamiliar wit
 ## Value
 
 A [`ConstrainDouble`](/en-US/docs/Web/API/MediaTrackConstraints#constraindouble) describing the acceptable or required value(s) for a
-video track's aspect ratio. The value is the width divided by the height and is rounded
+video track's {{glossary("aspect ratio")}}. The value is the width divided by the height and is rounded
 to ten decimal places. For example, the standard high-definition video aspect ratio of
 16:9 can be computed as 1920/1080, or 1.7777777778.
 
@@ -45,8 +33,7 @@ best-possible value.
 
 ## Examples
 
-See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Example:
-  Constraint exerciser")}} for an example.
+See the [Constraint exerciser](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints#example_constraint_exerciser) example.
 
 ## Specifications
 
@@ -58,8 +45,8 @@ See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Exampl
 
 ## See also
 
-- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Streams_API)
-- [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints)
+- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API)
+- [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints)
 - {{domxref("MediaTrackConstraints")}}
 - {{domxref("MediaDevices.getSupportedConstraints()")}}
 - {{domxref("MediaTrackSupportedConstraints")}}

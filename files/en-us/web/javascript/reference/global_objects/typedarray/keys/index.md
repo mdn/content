@@ -1,34 +1,44 @@
 ---
 title: TypedArray.prototype.keys()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/keys
-tags:
-  - ECMAScript 2015
-  - Iterator
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - TypedArray
-  - TypedArrays
-  - Polyfill
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.TypedArray.keys
 ---
+
 {{JSRef}}
 
-The **`keys()`** method returns a new _array iterator_ object
-that contains the keys for each index in the array.
+The **`keys()`** method of {{jsxref("TypedArray")}} instances returns a new _[array iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator)_ object that contains the keys for each index in the typed array. This method has the same algorithm as {{jsxref("Array.prototype.keys()")}}.
 
-{{EmbedInteractiveExample("pages/js/typedarray-keys.html")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.keys()")}}
+
+```js interactive-example
+const uint8 = new Uint8Array([10, 20, 30, 40, 50]);
+const keys = uint8.keys();
+
+keys.next();
+keys.next();
+
+console.log(keys.next().value);
+// Expected output: 2
+```
 
 ## Syntax
 
-```js
+```js-nolint
 keys()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
-A new _array iterator_ object.
+A new [iterable iterator object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator).
+
+## Description
+
+See {{jsxref("Array.prototype.keys()")}} for more details. This method is not generic and can only be called on typed array instances.
 
 ## Examples
 
@@ -36,10 +46,8 @@ A new _array iterator_ object.
 
 ```js
 const arr = new Uint8Array([10, 20, 30, 40, 50]);
-const eArray = arr.keys();
-// your browser must support for..of loop
-// and let-scoped variables in for loops
-for (const n of eArray) {
+const arrKeys = arr.keys();
+for (const n of arrKeys) {
   console.log(n);
 }
 ```
@@ -48,12 +56,12 @@ for (const n of eArray) {
 
 ```js
 const arr = new Uint8Array([10, 20, 30, 40, 50]);
-const eArr = arr.keys();
-console.log(eArr.next().value); // 0
-console.log(eArr.next().value); // 1
-console.log(eArr.next().value); // 2
-console.log(eArr.next().value); // 3
-console.log(eArr.next().value); // 4
+const arrKeys = arr.keys();
+console.log(arrKeys.next().value); // 0
+console.log(arrKeys.next().value); // 1
+console.log(arrKeys.next().value); // 2
+console.log(arrKeys.next().value); // 3
+console.log(arrKeys.next().value); // 4
 ```
 
 ## Specifications
@@ -67,10 +75,10 @@ console.log(eArr.next().value); // 4
 ## See also
 
 - [Polyfill of `TypedArray.prototype.keys` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide
 - {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.prototype.entries()")}}
 - {{jsxref("TypedArray.prototype.values()")}}
-- {{jsxref("TypedArray.prototype.@@iterator()", "TypedArray.prototype[@@iterator]()")}}
-- [for...of](/en-US/docs/Web/JavaScript/Reference/Statements/for...of)
+- [`TypedArray.prototype[Symbol.iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/Symbol.iterator)
+- {{jsxref("Array.prototype.keys()")}}
 - [Iteration protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)

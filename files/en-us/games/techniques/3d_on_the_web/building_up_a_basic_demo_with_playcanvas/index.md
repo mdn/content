@@ -1,19 +1,9 @@
 ---
 title: Building up a basic demo with PlayCanvas
 slug: Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas
-tags:
-  - 3D
-  - Animation
-  - Beginner
-  - Canvas
-  - Games
-  - PlayCanvas
-  - Tutorial
-  - WebGL
-  - camera
-  - lighting
-  - rendering
+page-type: guide
 ---
+
 {{GamesSidebar}}
 
 **PlayCanvas** is a popular 3D WebGL game engine, originally created by Will Eastcott and Dave Evans. It is [open sourced on GitHub](https://github.com/playcanvas/engine), with an [editor](https://developer.playcanvas.com/en/user-manual/designer/) available online and good [documentation](https://developer.playcanvas.com/en/). The online editor is free for public projects with up to two team members, but there are also [paid plans](https://playcanvas.com/plans) if you'd like to run a commercial private project with more developers.
@@ -30,9 +20,10 @@ PlayCanvas has a few well-known demos published that showcase its possibilities.
 
 ![A list of PlayCanvas demos: Tanx, Swooop, Star Lord, BMW i8.](playcanvas-demos.png)
 
-> **Note:** Check out the list of [featured demos](https://playcanvas.com/explore) to find more examples.
+> [!NOTE]
+> Check out the list of [featured demos](https://playcanvas.com/explore) to find more examples.
 
-## Engine vs editor
+## Engine vs. editor
 
 The engine itself can be used as a standard library by including its JavaScript file directly in your HTML, so you can start coding right away; in addition the PlayCanvas toolset comes with an online editor that you can use to drag and drop components onto the scene — a great way to create games and other apps requiring scenes if you're more of a designer than a coder. Those approaches are different but work equally well regarding achieving end goals.
 

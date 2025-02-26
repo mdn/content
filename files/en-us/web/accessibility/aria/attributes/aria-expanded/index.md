@@ -1,15 +1,13 @@
 ---
 title: aria-expanded
 slug: Web/Accessibility/ARIA/Attributes/aria-expanded
-tags:
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - ARIA property
-  - aria-expanded
+page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-expanded
 ---
-The `aria-expanded` attribute is set on an element to indicate if a control is expanded or collapsed, and whether or not its child elements are displayed or hidden.
+
+{{AccessibilitySidebar}}
+
+The `aria-expanded` attribute is set on an element to indicate if a control is expanded or collapsed, and whether or not the controlled elements are displayed or hidden.
 
 ## Description
 
@@ -23,16 +21,16 @@ Use the `aria-owns` property on the elements that own expandable grouping contai
 
 ### Buttons
 
-A button that opens a widget should have `aria-controls` set to the {{htmlattrxref("id")}} of the expandable widget and `aria-expanded` set to the current state of the widget.
+A button that toggles a widget should have `aria-controls` set to the [`id`](/en-US/docs/Web/HTML/Global_attributes/id) of the toggled widget and `aria-expanded` set to the current state of the widget.
 
 ```html
-<button aria-expanded="false" aria-controls="widget1">Show widget</button>
+<button aria-expanded="false" aria-controls="widget1">Toggle widget</button>
 ```
 
 When the widget is visible, the controlling object relays that information via having `aria-expanded="true"` set on it. The accessible name of the controlling object should reflect this change.
 
 ```html
-<button aria-expanded="true" aria-controls="widget1">Hide widget</button>
+<button aria-expanded="true" aria-controls="widget1">Toggle widget</button>
 ```
 
 ### Menu
@@ -45,8 +43,12 @@ By default, some roles are hidden or collapsed and other roles are open or expan
 
 ```html
 <label for="username">Username</label>
-<input id="username" name="username" aria-describedby="username-desc">
-<button aria-expanded="false" aria-controls="username-desc" aria-label="Help about username" type="button">
+<input id="username" name="username" aria-describedby="username-desc" />
+<button
+  aria-expanded="false"
+  aria-controls="username-desc"
+  aria-label="Help about username"
+  type="button">
   <span aria-hidden="true">?</span>
 </button>
 <p id="username-desc" hidden>
@@ -54,11 +56,12 @@ By default, some roles are hidden or collapsed and other roles are open or expan
 </p>
 ```
 
-> **Note:** The presence of the `aria-expanded` attribute indicates control. Avoid including it on elements that do not control the expanded state of other elements.
+> [!NOTE]
+> The presence of the `aria-expanded` attribute indicates control. Avoid including it on elements that do not control the expanded state of other elements.
 
 ### Treeitems
 
-Each element with role [`treeitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/treeitem_role) that serves as a parent node has `aria-expanded="false"` when the node is in a closed state and `aria-expanded="true"`when the node is in an open state. End nodes, nodes with no descendant nodes, should not have the `aria-expanded` attribute because, if they were to have it, they would be incorrectly described to assistive technologies as parent nodes.
+Each element with role [`treeitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/treeitem_role) that serves as a parent node has `aria-expanded="false"` when the node is in a closed state and `aria-expanded="true"` when the node is in an open state. End nodes, nodes with no descendant nodes, should not have the `aria-expanded` attribute because, if they were to have it, they would be incorrectly described to assistive technologies as parent nodes.
 
 ### Rows
 
@@ -67,15 +70,17 @@ A parent row in a [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid
 ## Values
 
 - `false`
+
   - : The grouping element this element owns or controls is collapsed.
 
 - `true`
+
   - : The grouping element this element owns or controls is expanded.
 
 - `undefined` (default)
   - : The element does not own or control a grouping element that is expandable.
 
-## ARIAMixin API
+## Associated interfaces
 
 - {{domxref("Element.ariaExpanded")}}
   - : The [`ariaExpanded`](/en-US/docs/Web/API/Element/ariaExpanded) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-expanded` attribute.
@@ -111,14 +116,9 @@ Inherits into roles:
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [`aria-controls`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-controls)
 - [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-owns)
 - [`aria-hidden`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-hidden)
-- HTML {{htmlattrxref("hidden")}} attribute
-
-<section id="Quick_links">
-<strong><a href="/en-US/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA states and properties</a></strong>
-{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/aria/Attributes")}}
-</section>
+- HTML [`hidden`](/en-US/docs/Web/HTML/Global_attributes/hidden) attribute

@@ -1,38 +1,52 @@
 ---
 title: Remainder assignment (%=)
 slug: Web/JavaScript/Reference/Operators/Remainder_assignment
-tags:
-  - Assignment operator
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
+page-type: javascript-operator
 browser-compat: javascript.operators.remainder_assignment
 ---
+
 {{jsSidebar("Operators")}}
 
-The remainder assignment operator (`%=`) divides a variable by the value of
-the right operand and assigns the remainder to the variable.
+The **remainder assignment (`%=`)** operator performs [remainder](/en-US/docs/Web/JavaScript/Reference/Operators/Remainder) on the two operands and assigns the result to the left operand.
 
-{{EmbedInteractiveExample("pages/js/expressions-remainder-assignment.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Remainder assignment operator")}}
+
+```js interactive-example
+let a = 3;
+
+console.log((a %= 2));
+// Expected output: 1
+
+console.log((a %= 0));
+// Expected output: NaN
+
+console.log((a %= "hello"));
+// Expected output: NaN
+```
 
 ## Syntax
 
-```js
-x %= y // x = x % y
+```js-nolint
+x %= y
 ```
+
+## Description
+
+`x %= y` is equivalent to `x = x % y`, except that the expression `x` is only evaluated once.
 
 ## Examples
 
 ### Using remainder assignment
 
 ```js
-// Assuming the following variable
-//  bar = 5
+let bar = 5;
 
-bar %= 2     // 1
-bar %= 'foo' // NaN
-bar %= 0     // NaN
+bar %= 2; // 1
+bar %= "foo"; // NaN
+bar %= 0; // NaN
+
+let foo = 3n;
+foo %= 2n; // 1n
 ```
 
 ## Specifications
@@ -45,5 +59,5 @@ bar %= 0     // NaN
 
 ## See also
 
-- [Assignment operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#assignment)
-- [Remainder operator](/en-US/docs/Web/JavaScript/Reference/Operators/Remainder)
+- [Assignment operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#assignment_operators)
+- [Remainder (`%`)](/en-US/docs/Web/JavaScript/Reference/Operators/Remainder)

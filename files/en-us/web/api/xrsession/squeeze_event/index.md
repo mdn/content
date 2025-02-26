@@ -1,44 +1,27 @@
 ---
-title: 'XRSession: squeeze event'
+title: "XRSession: squeeze event"
+short-title: squeeze
 slug: Web/API/XRSession/squeeze_event
 page-type: web-api-event
-tags:
-  - API
-  - AR
-  - Event
-  - Input Sources
-  - Inputs
-  - Mixed
-  - Primary Squeeze Action
-  - Reality
-  - Reference
-  - Squeeze Action
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRSession
-  - augmented
-  - controllers
-  - squeeze
+status:
+  - experimental
 browser-compat: api.XRSession.squeeze_event
 ---
-{{APIRef("WebXR Device API")}}
 
-The WebXR **`squeeze`** event is sent to an {{domxref("XRSession")}} when one of the session's input sources has completed a [primary squeeze action](/en-US/docs/Web/API/WebXR_Device_API/Inputs#primary_squeeze_actions). Examples of common kinds of primary action are users pressing triggers or buttons, tapping a touchpad, speaking a command, or performing a recognizable gesture when using a video tracking system or handheld controller with an accelerometer.
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
-For details on how the {{domxref("XRSession.squeezestart_event", "squeezestart")}}, `squeeze`, and {{domxref("XRSession.squeezeend_event", "squeezeend")}} events work, and how you should react to them, see {{SectionOnPage("/en-US/docs/Web/API/WebXR_Device_API/Inputs", "Primary squeeze actions")}}.
+The WebXR **`squeeze`** event is sent to an {{domxref("XRSession")}} when one of the session's input sources has completed a [primary squeeze action](/en-US/docs/Web/API/WebXR_Device_API/Inputs#primary_squeeze_action). Examples of common kinds of primary action are users pressing triggers or buttons, tapping a touchpad, speaking a command, or performing a recognizable gesture when using a video tracking system or handheld controller with an accelerometer.
+
+For details on how the {{domxref("XRSession.squeezestart_event", "squeezestart")}}, `squeeze`, and {{domxref("XRSession.squeezeend_event", "squeezeend")}} events work, and how you should react to them, see [Inputs and input sources](/en-US/docs/Web/API/WebXR_Device_API/Inputs#input_sources).
 
 ## Syntax
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('squeeze', (event) => { })
+addEventListener("squeeze", (event) => {});
 
-onsqueeze = (event) => { }
+onsqueeze = (event) => {};
 ```
 
 ## Event type
@@ -79,8 +62,10 @@ This code treats the squeeze as an instantaneous action that doesn't involve tra
 ```js
 xrSession.addEventListener("squeeze", (event) => {
   if (event.inputSource.targetRayMode === "tracked-pointer") {
-    let targetRayPose = event.frame.getPose(event.inputSource.targetRaySpace,
-                              myRefSpace);
+    let targetRayPose = event.frame.getPose(
+      event.inputSource.targetRaySpace,
+      myRefSpace,
+    );
     if (targetRayPose) {
       myHandleSqueezeWithRay(targetRayPose.transform);
     }
@@ -93,8 +78,10 @@ You can also set up a handler for `squeeze` events by setting the {{domxref("XRS
 ```js
 xrSession.onsqueeze = (event) => {
   if (event.inputSource.targetRayMode === "tracked-pointer") {
-    let targetRayPose = event.frame.getPose(event.inputSource.targetRaySpace,
-                              myRefSpace);
+    let targetRayPose = event.frame.getPose(
+      event.inputSource.targetRaySpace,
+      myRefSpace,
+    );
     if (targetRayPose) {
       myHandleSqueezeWithRay(targetRayPose.transform);
     }

@@ -1,21 +1,17 @@
 ---
 title: font-kerning
 slug: Web/CSS/font-kerning
-tags:
-  - CSS
-  - CSS Fonts
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.font-kerning
 ---
+
 {{CSSRef}}
 
-The **`font-kerning`** CSS property sets the use of the kerning information stored in a font.
+The **`font-kerning`** [CSS](/en-US/docs/Web/CSS) property sets the use of the kerning information stored in a font.
 
 {{EmbedInteractiveExample("pages/css/font-kerning.html")}}
 
-_Kerning_ defines how letters are spaced. In _well-kerned_ fonts, this feature makes character spacing more uniform and pleasant to read than it would otherwise be.
+_Kerning_ affects how letters are spaced. In _well-kerned_ fonts, this feature makes character spacing more uniform and pleasant to read by reducing white space between certain character combinations.
 
 In the image below, for instance, the examples on the left do not use kerning, while the ones on the right do:
 
@@ -61,7 +57,7 @@ font-kerning: unset;
 
 ```html
 <div id="kern"></div>
-<div id="nokern"></div>
+<div id="no-kern"></div>
 <textarea id="input">AV T. ij</textarea>
 ```
 
@@ -73,7 +69,7 @@ div {
   font-family: serif;
 }
 
-#nokern {
+#no-kern {
   font-kerning: none;
 }
 
@@ -85,17 +81,17 @@ div {
 #### JavaScript
 
 ```js
-let input  = document.getElementById('input');
-let kern   = document.getElementById('kern');
-let nokern = document.getElementById('nokern');
+const input = document.getElementById("input");
+const kern = document.getElementById("kern");
+const noKern = document.getElementById("no-kern");
 
-input.addEventListener('keyup', function() {
+input.addEventListener("keyup", () => {
   kern.textContent = input.value; /* Update content */
-  nokern.textContent = input.value;
+  noKern.textContent = input.value;
 });
 
 kern.textContent = input.value; /* Initialize content */
-nokern.textContent = input.value;
+noKern.textContent = input.value;
 ```
 
 {{ EmbedLiveSample('Enabling_and_disabling_kerning') }}

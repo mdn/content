@@ -1,23 +1,12 @@
 ---
-title: DOMPointReadOnly.y
+title: "DOMPointReadOnly: y property"
+short-title: y
 slug: Web/API/DOMPointReadOnly/y
 page-type: web-api-instance-property
-tags:
-  - API
-  - Coordinates
-  - DOM
-  - DOMPointReadOnly
-  - Geometry
-  - Geometry Interfaces
-  - Point
-  - Property
-  - Read-only
-  - Reference
-  - Vertical
-  - 'y'
 browser-compat: api.DOMPointReadOnly.y
 ---
-{{APIRef("DOM")}}
+
+{{APIRef("Geometry Interfaces")}}{{AvailableInWorkers}}
 
 The **`DOMPointReadOnly`** interface's
 **`y`** property holds the vertical coordinate, y, for a
@@ -33,8 +22,7 @@ In general, positive values of `y` mean downward, and negative values of
 
 A double-precision floating-point value indicating the y coordinate's value for the
 point. This value is **unrestricted**, meaning that it is allowed to be
-infinite or invalid (that is, its value may be {{jsxref("NaN")}} or {{jsxref("Infinity",
-  "±Infinity")}}).
+infinite or invalid (that is, its value may be {{jsxref("NaN")}} or {{jsxref("Infinity", "±Infinity")}}).
 
 ## Specifications
 

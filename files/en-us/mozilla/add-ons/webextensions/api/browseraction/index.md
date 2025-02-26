@@ -1,33 +1,26 @@
 ---
 title: browserAction
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Interface
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - browserAction
+page-type: webextension-api
 browser-compat: webextensions.api.browserAction
 ---
+
 {{AddonSidebar}}
 
-Adds a button to the browser's toolbar.
+Read and modify attributes of and listen to clicks on the browser toolbar button defined with the [`browser_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) manifest key.
 
-A [browser action](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action) is a button in the browser's toolbar.
+A [browser action](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button) is a button in the browser's toolbar.
 
-You can associate a popup with the button. The popup is specified using HTML, CSS and JavaScript, just like a normal web page. JavaScript running in the popup gets access to all the same WebExtension APIs as your background scripts, but its global context is the popup, not the current page displayed in the browser. To affect web pages you need to communicate with them via [messages](/en-US/docs/Mozilla/Add-ons/WebExtensions/Modify_a_web_page#messaging).
+You can associate a popup with the button. Like a web page, the popup is specified using HTML, CSS, and JavaScript. JavaScript running in the popup gets access to the same WebExtension APIs as your background scripts, but its global context is the popup, not the current page displayed in the browser. To affect web pages, you need to communicate with them via [messages](/en-US/docs/Mozilla/Add-ons/WebExtensions/Modify_a_web_page#messaging).
 
-If you specify a popup, it will be shown — and the content will be loaded — when the user clicks the icon. If you do not specify a popup, then when the user clicks the icon an event is dispatched to your extension.
+If you specify a popup, it is shown — and the content loaded — when the user clicks the icon. If you do not specify a popup, an event is dispatched to your extension when the user clicks the icon.
 
-You can define most of a browser action's properties declaratively using the [`browser_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) key in the manifest.json.
+The button also has a context menu, and you can add items to this menu with the {{WebExtAPIRef("menus")}} API using the `browser_action` {{WebExtAPIRef("menus.ContextType")}}.
 
 With the `browserAction` API, you can:
 
 - use {{WebExtAPIRef("browserAction.onClicked")}} to listen for clicks on the icon.
-- get and set the icon's properties — icon, title, popup, and so on. You can get and set these globally across all tabs, or for a specific tab by passing the tab ID as an additional argument.
+- get and set the icon's properties — icon, title, popup, and so on. You can get and set these globally across all tabs or for a tab by passing the tab ID as an additional argument.
 
 ## Types
 
@@ -62,6 +55,8 @@ With the `browserAction` API, you can:
   - : Sets the badge's text color.
 - {{WebExtAPIRef("browserAction.getBadgeTextColor()")}}
   - : Gets the badge's text color.
+- {{WebExtAPIRef("browserAction.getUserSettings()")}}
+  - : Gets the user-specified settings for the browser action.
 - {{WebExtAPIRef("browserAction.enable()")}}
   - : Enables the browser action for a tab. By default, browser actions are enabled for all tabs.
 - {{WebExtAPIRef("browserAction.disable()")}}
@@ -80,11 +75,11 @@ With the `browserAction` API, you can:
 
 {{WebExtExamples("h2")}}
 
-> **Note:** This API is based on Chromium's [`chrome.browserAction`](https://developer.chrome.com/docs/extensions/reference/browserAction/) API. This documentation is derived from [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.browserAction`](https://developer.chrome.com/docs/extensions/mv2/reference/browserAction) API. This documentation is derived from [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) in the Chromium code.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -111,4 +106,4 @@ With the `browserAction` API, you can:
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

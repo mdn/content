@@ -1,20 +1,13 @@
 ---
 title: offset-distance
 slug: Web/CSS/offset-distance
-tags:
-  - CSS
-  - CSS Motion Path
-  - CSS Property
-  - Motion Path
-  - Reference
-  - motion-offset
-  - offset-distance
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.offset-distance
 ---
+
 {{CSSRef}}
 
-The **`offset-distance`** CSS property specifies a position along an {{CSSxRef("offset-path")}} for an element to be placed.
+The **`offset-distance`** [CSS](/en-US/docs/Web/CSS) property specifies a position along an {{CSSxRef("offset-path")}} for an element to be placed.
 
 {{EmbedInteractiveExample("pages/css/offset-distance.html")}}
 
@@ -38,7 +31,7 @@ offset-distance: revert-layer;
 offset-distance: unset;
 ```
 
-- `{{cssxref('&lt;length-percentage&gt;')}}`
+- {{cssxref('&lt;length-percentage&gt;')}}
 
   - : A length that specifies how far the element is along the path (defined with {{cssxref('offset-path')}}).
 
@@ -68,7 +61,7 @@ The motion aspect in CSS Motion Path typically comes from animating the `offset-
 
 ```css
 #motion-demo {
-  offset-path: path('M20,20 C20,100 200,0 200,100');
+  offset-path: path("M20,20 C20,100 200,0 200,100");
   animation: move 3000ms infinite alternate ease-in-out;
   width: 40px;
   height: 40px;

@@ -1,29 +1,23 @@
 ---
 title: tabs.insertCSS()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - insertCSS
-  - tabs
+page-type: webextension-api-function
 browser-compat: webextensions.api.tabs.insertCSS
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 Injects CSS into a page.
 
-> **Note:** When using Manifest V3 or higher, use {{WebExtAPIRef("scripting.insertCSS()")}} and {{WebExtAPIRef("scripting.removeCSS()")}} to insert and remove CSS.
+> [!NOTE]
+> When using Manifest V3 or higher, use {{WebExtAPIRef("scripting.insertCSS()")}} and {{WebExtAPIRef("scripting.removeCSS()")}} to insert and remove CSS.
 
 To use this API you must have the permission for the page's URL, either explicitly as a [host permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions), or using the [activeTab permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission).
 
 You can only inject CSS into pages whose URL can be expressed using a [match pattern](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns): meaning, its scheme must be one of "http", "https", or "file". This means that you can't inject CSS into any of the browser's built-in pages, such as about:debugging, about:addons, or the page that opens when you open a new empty tab.
 
-> **Note:** Firefox resolves URLs in injected CSS files relative to the CSS file itself, rather than to the page it's injected into.
+> [!NOTE]
+> Firefox resolves URLs in injected CSS files relative to the CSS file itself, rather than to the page it's injected into.
 
 The inserted CSS may be removed again by calling {{WebExtAPIRef("tabs.removeCSS()")}}.
 
@@ -31,7 +25,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let inserting = browser.tabs.insertCSS(
   tabId,           // optional integer
   details          // object
@@ -54,7 +48,7 @@ let inserting = browser.tabs.insertCSS(
 
       - : `string`. This can take one of two values: "user", to add the CSS as a user stylesheet or "author" to add it as an author stylesheet. If this option is omitted, the CSS is added as an author stylesheet.
 
-        - "user" enables you to prevent websites from overriding the CSS you insert: see [Cascading order](/en-US/docs/Web/CSS/Cascade#cascading_order).
+        - "user" enables you to prevent websites from overriding the CSS you insert: see [Cascading order](/en-US/docs/Web/CSS/CSS_cascade/Cascade#cascading_order).
         - "author" stylesheets behave as if they appear after all author rules specified by the web page. This behavior includes any author stylesheets added dynamically by the page's scripts, even if that addition happens after the `insertCSS` call completes.
 
     - `file` {{optional_inline}}
@@ -78,12 +72,11 @@ This example inserts into the currently active tab CSS which is taken from a str
 let css = "body { border: 20px dotted pink; }";
 
 browser.browserAction.onClicked.addListener(() => {
-
   function onError(error) {
     console.log(`Error: ${error}`);
   }
 
-  let insertingCSS = browser.tabs.insertCSS({code: css});
+  let insertingCSS = browser.tabs.insertCSS({ code: css });
   insertingCSS.then(null, onError);
 });
 ```
@@ -92,12 +85,11 @@ This example inserts CSS which is loaded from a file packaged with the extension
 
 ```js
 browser.browserAction.onClicked.addListener(() => {
-
   function onError(error) {
     console.log(`Error: ${error}`);
   }
 
-  let insertingCSS = browser.tabs.insertCSS(2, {file: "content-style.css"});
+  let insertingCSS = browser.tabs.insertCSS(2, { file: "content-style.css" });
   insertingCSS.then(null, onError);
 });
 ```
@@ -108,11 +100,11 @@ browser.browserAction.onClicked.addListener(() => {
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/tabs/#method-insertCSS) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-insertCSS) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -139,4 +131,4 @@ browser.browserAction.onClicked.addListener(() => {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

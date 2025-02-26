@@ -1,13 +1,9 @@
 ---
 title: Updating add-ons for Firefox 10
 slug: Mozilla/Firefox/Releases/10/Updating_add-ons
-tags:
-  - Add-ons
-  - Extensions
-  - Firefox
-  - Firefox 10
-  - Gecko 10
+page-type: guide
 ---
+
 {{FirefoxSidebar}}
 
 Although a lot of things have changed in Firefox 10 that, in theory, can cause add-on compatibility breakage, most of them are relatively obscure, so they're not very likely to affect you. This article will help guide you as you update your add-on.
@@ -16,7 +12,8 @@ Although a lot of things have changed in Firefox 10 that, in theory, can cause a
 
 The first and most important thing to note is that starting in Firefox 10, add-ons are assumed to be compatible by default. Unless you use the [`<em:strictCompatibility>`](/en-US/docs/Install_Manifests#strictcompatibility) flag in your manifest, Firefox will no longer mark your add-on as incompatible after an upgrade to Firefox 10 or later. You can use that flag to ensure that an add-on that is likely to break will not try to run in updated copies of Firefox. It's worth noting that add-ons that have binary components will always be strictly checked for compatibility, since binary components always need to be recompiled for each major Firefox release.
 
-> **Note:** You should still test your add-on on Firefox 10, even in the world of compatibility by default. Read over the rest of this article to see if there's anything you need to change.
+> [!NOTE]
+> You should still test your add-on on Firefox 10, even in the world of compatibility by default. Read over the rest of this article to see if there's anything you need to change.
 
 ## DOM changes
 
@@ -24,17 +21,11 @@ Some obsolete APIs have been removed from the DOM:
 
 - {{ domxref("Node.isSameNode()") }}
   - : This is the removal that has the most likelihood to affect add-on developers, as it was fairly commonly used. You can now use the JavaScript `===` operator to compare nodes instead of this obsolete method. This method was made obsolete by the DOM4 specification.
-- {{ domxref("text.isElementContentWhitespace") }}
-
-  `text.replaceWholeText()`
+- `text.isElementContentWhitespace`, `text.replaceWholeText()`
 
   - : These APIs were rendered obsolete by the DOM4 specification.
 
-- {{ domxref("Document.xmlEncoding") }}
-
-  {{ domxref("Document.xmlStandalone") }}
-
-  {{ domxref("Document.xmlVersion") }}
+- {{ domxref("Document.xmlEncoding") }}, {{ domxref("Document.xmlStandalone") }}, {{ domxref("Document.xmlVersion") }}
 
   - : All of these APIs were rendered obsolete by the DOM4 specification. They were most frequently being used to detect whether the document being displayed was HTML or XML. See the article for {{ domxref("Document.xmlVersion") }} for a recommended way to test for this going forward.
 
@@ -55,7 +46,7 @@ The following interfaces have been removed:
 
 ### Other interface changes
 
-- `nsNavHistory` no longer implements the `nsICharsetResolver` interface. **Note that `nsICharsetResolver` is no longer used and is being removed in Gecko 11.0 {{ geckoRelease("11.0") }}**.
+- `nsNavHistory` no longer implements the `nsICharsetResolver` interface. **Note that `nsICharsetResolver` is no longer used and is being removed in Firefox 11.0**.
 - The `mozISpellCheckingEngine` and `nsIEditorSpellCheck` interfaces have been updated to let restartless add-ons add dictionaries to the spell checker. See [Using an external spell checker](/en-US/Using_an_External_Spell-checker) for details (note this article has not yet been updated, but will be soon).
 - The `nsIBrowserHistory.lastPageVisited` attribute has been removed, as it hasn't been supported for some time.
 - Several [IndexedDB](/en-US/docs/Web/API/IndexedDB_API) internal interfaces have changed to support revised APIs. This shouldn't affect you but is worth noting on the off chance you were doing something unusual.

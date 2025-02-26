@@ -1,27 +1,22 @@
 ---
-title: FileSystemDirectoryHandle.values()
+title: "FileSystemDirectoryHandle: values() method"
+short-title: values()
 slug: Web/API/FileSystemDirectoryHandle/values
 page-type: web-api-instance-method
-tags:
-  - Directory
-  - File
-  - File System Access API
-  - FileSystemDirectoryHandle
-  - Iterable
-  - Method
 browser-compat: api.FileSystemDirectoryHandle.values
 ---
-{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
+
+{{securecontext_header}}{{APIRef("File System API")}}{{AvailableInWorkers}}
 
 The **`values()`** method of the
-{{domxref("FileSystemDirectoryHandle")}} interface returns a new _array iterator_
-containing the values for each index in the `FileSystemDirectoryHandle`
-object.
+{{domxref("FileSystemDirectoryHandle")}} interface returns a new asynchronous iterator
+for the iteration of the value of the entries within the `FileSystemDirectoryHandle`
+on which this method is called.
 
 ## Syntax
 
-```js
-FileSystemDirectoryHandle.values();
+```js-nolint
+values()
 ```
 
 ### Parameters
@@ -30,11 +25,26 @@ None.
 
 ### Return value
 
-A new {{jsxref('Array')}}
+A new asynchronous iterator containing the handles of each entry within the `FileSystemDirectoryHandle`.
+
+### Exceptions
+
+- `NotAllowedError` {{domxref("DOMException")}}
+  - : Thrown if the {{domxref('PermissionStatus.state')}} for the handle is not `'granted'` in `read` mode.
+- `NotFoundError` {{domxref("DOMException")}}
+  - : Thrown if the current entry is not found.
 
 ## Examples
 
-Todo
+Use the `for await...of` loop can simplify the iteration process.
+
+```js
+const dirHandle = await window.showDirectoryPicker();
+
+for await (const value of dirHandle.values()) {
+  console.log(value);
+}
+```
 
 ## Specifications
 
@@ -46,5 +56,5 @@ Todo
 
 ## See also
 
-- [File System Access API](/en-US/docs/Web/API/File_System_Access_API)
-- [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)
+- [File System API](/en-US/docs/Web/API/File_System_API)
+- [The File System Access API: simplifying access to local files](https://developer.chrome.com/docs/capabilities/web-apis/file-system-access)

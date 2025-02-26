@@ -1,15 +1,11 @@
 ---
-title: CanvasRenderingContext2D.lineJoin
+title: "CanvasRenderingContext2D: lineJoin property"
+short-title: lineJoin
 slug: Web/API/CanvasRenderingContext2D/lineJoin
 page-type: web-api-instance-property
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Property
-  - Reference
 browser-compat: api.CanvasRenderingContext2D.lineJoin
 ---
+
 {{APIRef}}
 
 The
@@ -22,16 +18,17 @@ because no joining area will be added in this case. Degenerate segments with a l
 zero (i.e., with all endpoints and control points at the exact same position) are also
 ignored.
 
-> **Note:** Lines can be drawn with the
-> {{domxref("CanvasRenderingContext2D.stroke()",
-    "stroke()")}}, {{domxref("CanvasRenderingContext2D.strokeRect()", "strokeRect()")}},
+> [!NOTE]
+> Lines can be drawn with the
+> {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}},
+> {{domxref("CanvasRenderingContext2D.strokeRect()", "strokeRect()")}},
 > and {{domxref("CanvasRenderingContext2D.strokeText()", "strokeText()")}} methods.
 
 ## Value
 
 There are three possible values for this property: `"round"`, `"bevel"`, and `"miter"`. The default is `"miter"`.
 
-![](canvas_linejoin.png)
+![Three horizontal zigzag lines with round, bevel, and miter values, shown from top to bottom respectively.](canvas_linejoin.png)
 
 - `"round"`
   - : Rounds off the corners of a shape by filling an additional sector of disc centered
@@ -43,8 +40,7 @@ There are three possible values for this property: `"round"`, `"bevel"`, and `"m
 - `"miter"`
   - : Connected segments are joined by extending their outside edges to connect at a
     single point, with the effect of filling an additional lozenge-shaped area. This
-    setting is affected by the {{domxref("CanvasRenderingContext2D.miterLimit",
-    "miterLimit")}} property. Default value.
+    setting is affected by the {{domxref("CanvasRenderingContext2D.miterLimit", "miterLimit")}} property. Default value.
 
 ## Examples
 
@@ -61,11 +57,11 @@ This example applies rounded line joins to a path.
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 ctx.lineWidth = 20;
-ctx.lineJoin = 'round';
+ctx.lineJoin = "round";
 ctx.beginPath();
 ctx.moveTo(20, 20);
 ctx.lineTo(190, 100);
@@ -88,12 +84,11 @@ The example below draws three different paths, demonstrating each of the three
 ```
 
 ```js
-const ctx = document.getElementById('canvas').getContext('2d');
-const lineJoin = ['round', 'bevel', 'miter'];
+const ctx = document.getElementById("canvas").getContext("2d");
 ctx.lineWidth = 10;
 
-for (let i = 0; i < lineJoin.length; i++) {
-  ctx.lineJoin = lineJoin[i];
+["round", "bevel", "miter"].forEach((join, i) => {
+  ctx.lineJoin = join;
   ctx.beginPath();
   ctx.moveTo(-5, 5 + i * 40);
   ctx.lineTo(35, 45 + i * 40);
@@ -101,11 +96,10 @@ for (let i = 0; i < lineJoin.length; i++) {
   ctx.lineTo(115, 45 + i * 40);
   ctx.lineTo(155, 5 + i * 40);
   ctx.stroke();
-}
+});
 ```
 
-{{EmbedLiveSample("Comparison_of_line_joins", "180", "180",
-  "canvas_linejoin.png")}}
+{{EmbedLiveSample("Comparison_of_line_joins", "", "180")}}
 
 ## Specifications
 

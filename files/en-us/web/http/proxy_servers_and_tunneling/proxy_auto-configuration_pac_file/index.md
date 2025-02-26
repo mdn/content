@@ -1,26 +1,19 @@
 ---
 title: Proxy Auto-Configuration (PAC) file
 slug: Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file
-tags:
-  - Necko
-  - Networking
-  - PAC
-  - Proxy
+page-type: guide
 ---
+
 {{HTTPSidebar}}
 
 A **Proxy Auto-Configuration (PAC)** file is a JavaScript function that determines whether web browser requests (HTTP, HTTPS, and FTP) go directly to the destination or are forwarded to a web proxy server. The JavaScript function contained in the PAC file defines the function:
+
+## Syntax
 
 ```js
 function FindProxyForURL(url, host) {
   // …
 }
-```
-
-## Syntax
-
-```js
-function FindProxyForURL(url, host)
 ```
 
 ### Parameters
@@ -73,21 +66,13 @@ If all proxies are down, and there was no DIRECT option specified, the browser w
 - `PROXY w3proxy.netscape.com:8080; SOCKS socks:1080`
   - : Use SOCKS if the primary proxy goes down.
 
-The auto-config file should be saved to a file with a .pac filename extension:
+The auto-config file should be saved to a file with a .pac filename extension: `proxy.pac`.
 
-```html
-proxy.pac
-```
-
-And the MIME type should be set to:
-
-```html
-application/x-ns-proxy-autoconfig
-```
+And the MIME type should be set to `application/x-ns-proxy-autoconfig`.
 
 Next, you should configure your server to map the .pac filename extension to the MIME type.
 
-> **Note:**
+> [!NOTE]
 >
 > - The JavaScript function should always be saved to a file by itself but not be embedded in a HTML file or any other file.
 > - The examples at the end of this document are complete. There is no additional syntax needed to save it into a file and use it. (Of course, the JavaScripts must be edited to reflect your site's domain name and/or subnets.)
@@ -129,16 +114,17 @@ These functions can be used in building the PAC file:
 
   - `ProxyConfig.bindings` {{deprecated_inline}}
 
-> **Note:** pactester (part of the [pacparser](https://github.com/manugarg/pacparser) package) was used to test the following syntax examples.
+> [!NOTE]
+> pactester (part of the [pacparser](https://github.com/manugarg/pacparser) package) was used to test the following syntax examples.
 >
 > - The PAC file is named `proxy.pac`
-> - Command line: `pactester -p ~/pacparser-master/tests/proxy.pac -u http://www.mozilla.org` (passes the `host` parameter `www.mozilla.org` and the `url` parameter `http://www.mozilla.org`)
+> - Command line: `pactester -p ~/pacparser-master/tests/proxy.pac -u https://www.mozilla.org` (passes the `host` parameter `www.mozilla.org` and the `url` parameter `https://www.mozilla.org`)
 
 ### isPlainHostName()
 
 #### Syntax
 
-```js
+```js-nolint
 isPlainHostName(host)
 ```
 
@@ -154,15 +140,15 @@ True if and only if there is no domain name in the hostname (no dots).
 #### Examples
 
 ```js
-isPlainHostName("www.mozilla.org") // false
-isPlainHostName("www") // true
+isPlainHostName("www.mozilla.org"); // false
+isPlainHostName("www"); // true
 ```
 
 ### `dnsDomainIs()`
 
 #### Syntax
 
-```js
+```js-nolint
 dnsDomainIs(host, domain)
 ```
 
@@ -179,7 +165,7 @@ Returns true if and only if the domain of hostname matches.
 
 #### Examples
 
-```js
+```js-nolint
 dnsDomainIs("www.mozilla.org", ".mozilla.org") // true
 dnsDomainIs("www", ".mozilla.org") // false
 ```
@@ -188,15 +174,15 @@ dnsDomainIs("www", ".mozilla.org") // false
 
 #### Syntax
 
-```js
-localHostOrDomainIs(host, hostdom)
+```js-nolint
+localHostOrDomainIs(host, hostDom)
 ```
 
 #### Parameters
 
 - host
   - : The hostname from the URL.
-- hostdom
+- hostDom
   - : Fully qualified hostname to match against.
 
 #### Description
@@ -205,10 +191,10 @@ Is true if the hostname matches _exactly_ the specified hostname, or if there is
 
 #### Examples
 
-```js
-localHostOrDomainIs("www.mozilla.org" , "www.mozilla.org") // true (exact match)
-localHostOrDomainIs("www"             , "www.mozilla.org") // true (hostname match, domain not specified)
-localHostOrDomainIs("www.google.com"  , "www.mozilla.org") // false (domain name mismatch)
+```js-nolint
+localHostOrDomainIs("www.mozilla.org", "www.mozilla.org") // true (exact match)
+localHostOrDomainIs("www", "www.mozilla.org") // true (hostname match, domain not specified)
+localHostOrDomainIs("www.google.com", "www.mozilla.org") // false (domain name mismatch)
 localHostOrDomainIs("home.mozilla.org", "www.mozilla.org") // false (hostname mismatch)
 ```
 
@@ -216,7 +202,7 @@ localHostOrDomainIs("home.mozilla.org", "www.mozilla.org") // false (hostname mi
 
 #### Syntax
 
-```js
+```js-nolint
 isResolvable(host)
 ```
 
@@ -229,7 +215,7 @@ Tries to resolve the hostname. Returns true if succeeds.
 
 #### Examples
 
-```js
+```js-nolint
 isResolvable("www.mozilla.org") // true
 ```
 
@@ -237,7 +223,7 @@ isResolvable("www.mozilla.org") // true
 
 #### Syntax
 
-```js
+```js-nolint
 isInNet(host, pattern, mask)
 ```
 
@@ -257,16 +243,18 @@ Pattern and mask specification is done the same way as for SOCKS configuration.
 #### Examples
 
 ```js
-function alert_eval(str) { alert(str + ' is ' + eval(str)) }
+function alertEval(str) {
+  alert(`${str} is ${eval(str)}`);
+}
 function FindProxyForURL(url, host) {
-  alert_eval('isInNet(host, "63.245.213.24", "255.255.255.255")')
-  // "PAC-alert: isInNet(host, "63.245.213.24", "255.255.255.255") is true"
+  alertEval('isInNet(host, "192.0.2.172", "255.255.255.255")');
+  // "PAC-alert: isInNet(host, "192.0.2.172", "255.255.255.255") is true"
 }
 ```
 
 ### dnsResolve()
 
-```js
+```js-nolint
 dnsResolve(host)
 ```
 
@@ -287,7 +275,7 @@ dnsResolve("www.mozilla.org"); // returns the string "104.16.41.2"
 
 #### Syntax
 
-```js
+```js-nolint
 convert_addr(ipaddr)
 ```
 
@@ -301,14 +289,14 @@ Concatenates the four dot-separated bytes into one 4-byte word and converts it t
 #### Example
 
 ```js
-convert_addr("104.16.41.2"); // returns the decimal number 1745889538
+convert_addr("192.0.2.172"); // returns the decimal number 1745889538
 ```
 
 ### myIpAddress()
 
 #### Syntax
 
-```js
+```js-nolint
 myIpAddress()
 ```
 
@@ -320,11 +308,11 @@ myIpAddress()
 
 Returns the server IP address of the machine Firefox is running on, as a string in the dot-separated integer format.
 
-> **Warning:** myIpAddress() returns the same IP address as the server address returned by **`nslookup localhost`** on a Linux machine. It does not return the public IP address.
+> **Warning:** `myIpAddress()` returns the same IP address as the server address returned by **`nslookup localhost`** on a Linux machine. It does not return the public IP address.
 
 #### Example
 
-```js
+```js-nolint
 myIpAddress() //returns the string "127.0.1.1" if you were running Firefox on that localhost
 ```
 
@@ -332,7 +320,7 @@ myIpAddress() //returns the string "127.0.1.1" if you were running Firefox on th
 
 #### Syntax
 
-```js
+```js-nolint
 dnsDomainLevels(host)
 ```
 
@@ -345,9 +333,9 @@ Returns the number (integer) of DNS domain levels (number of dots) in the hostna
 
 #### Examples
 
-```js
-dnsDomainLevels("www");             // 0
-dnsDomainLevels("mozilla.org");     // 1
+```js-nolint
+dnsDomainLevels("www") // 0
+dnsDomainLevels("mozilla.org") // 1
 dnsDomainLevels("www.mozilla.org"); // 2
 ```
 
@@ -355,15 +343,15 @@ dnsDomainLevels("www.mozilla.org"); // 2
 
 #### Syntax
 
-```js
-shExpMatch(str, shexp)
+```js-nolint
+shExpMatch(str, shExp)
 ```
 
 #### Parameters
 
 - str
   - : is any string to compare (e.g. the URL, or the hostname).
-- shexp
+- shExp
   - : is a shell expression to compare against.
 
 Returns `true` if the string matches the specified shell glob expression.
@@ -372,7 +360,8 @@ Support for particular glob expression syntax varies across browsers:
 `*` (match any number of characters) and `?` (match one character) are always supported,
 while `[characters]` and `[^characters]` are additionally supported by some implementations (including Firefox).
 
-> **Note:** If supported by the client, JavaScript regular expressions typically provide a more powerful and consistent way to pattern-match URLs (and other strings).
+> [!NOTE]
+> If supported by the client, JavaScript regular expressions typically provide a more powerful and consistent way to pattern-match URLs (and other strings).
 
 #### Examples
 
@@ -385,11 +374,12 @@ shExpMatch("http://home.netscape.com/people/montulli/index.html", "*/ari/*"); //
 
 #### Syntax
 
-```js
+```js-nolint
 weekdayRange(wd1, wd2, [gmt])
 ```
 
-> **Note:** (Before Firefox 49) wd1 must be less than wd2 if you want the function to evaluate these parameters as a range. See the warning below.
+> [!NOTE]
+> (Before Firefox 49) wd1 must be less than wd2 if you want the function to evaluate these parameters as a range. See the warning below.
 
 #### Parameters
 
@@ -402,7 +392,7 @@ Only the first parameter is mandatory. Either the second, the third, or both may
 
 If only one parameter is present, the function returns a value of true on the weekday that the parameter represents. If the string "GMT" is specified as a second parameter, times are taken to be in GMT. Otherwise, they are assumed to be in the local timezone.
 
-If both **wd1** and **wd1** are defined, the condition is true if the current weekday is in between those two _ordered_ weekdays. Bounds are inclusive, _but the bounds are ordered_. If the "GMT" parameter is specified, times are taken to be in GMT. Otherwise, the local timezone is used.
+If both **wd1** and **wd2** are defined, the condition is true if the current weekday is in between those two _ordered_ weekdays. Bounds are inclusive, _but the bounds are ordered_. If the "GMT" parameter is specified, times are taken to be in GMT. Otherwise, the local timezone is used.
 
 > **Warning:** _The order of the days matters_.
 > Before Firefox 49, `weekdayRange("SUN", "SAT")` will always evaluate to `true`.
@@ -411,19 +401,19 @@ If both **wd1** and **wd1** are defined, the condition is true if the current we
 
 #### Examples
 
-```js
-weekdayRange("MON", "FRI");        // returns true Monday through Friday (local timezone)
-weekdayRange("MON", "FRI", "GMT"); // returns true Monday through Friday (GMT timezone)
-weekdayRange("SAT");               // returns true on Saturdays local time
-weekdayRange("SAT", "GMT");        // returns true on Saturdays GMT time
-weekdayRange("FRI", "MON");        // returns true Friday and Monday only (note, order does matter!)
+```js-nolint
+weekdayRange("MON", "FRI") // returns true Monday through Friday (local timezone)
+weekdayRange("MON", "FRI", "GMT") // returns true Monday through Friday (GMT timezone)
+weekdayRange("SAT") // returns true on Saturdays local time
+weekdayRange("SAT", "GMT") // returns true on Saturdays GMT time
+weekdayRange("FRI", "MON") // returns true Friday and Monday only (note, the order does matter!)
 ```
 
 ### dateRange()
 
 #### Syntax
 
-```
+```js-nolint
 dateRange(<day> | <month> | <year>, [gmt])  // ambiguity is resolved by assuming year is greater than 31
 dateRange(<day1>, <day2>, [gmt])
 dateRange(<month1>, <month2>, [gmt])
@@ -433,21 +423,22 @@ dateRange(<month1>, <year1>, <month2>, <year2>, [gmt])
 dateRange(<day1>, <month1>, <year1>, <day2>, <month2>, <year2>, [gmt])
 ```
 
-> **Note:** (Before Firefox 49) day1 must be less than day2, month1 must be less than month2, and year1 must be less than year2 if you want the function to evaluate these parameters as a range. See the warning below.
+> [!NOTE]
+> (Before Firefox 49) day1 must be less than day2, month1 must be less than month2, and year1 must be less than year2 if you want the function to evaluate these parameters as a range. See the warning below.
 
 #### Parameters
 
 - day
   - : Is the ordered day of the month between 1 and 31 (as an integer).
 
-```html
+```plain
 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31
 ```
 
 - month
   - : Is one of the ordered month strings below.
 
-```html
+```plain
 "JAN"|"FEB"|"MAR"|"APR"|"MAY"|"JUN"|"JUL"|"AUG"|"SEP"|"OCT"|"NOV"|"DEC"
 ```
 
@@ -462,11 +453,11 @@ If only a single value is specified (from each category: day, month, year), the 
 
 #### Examples
 
-```js
-dateRange(1);            // returns true on the first day of each month, local timezone
-dateRange(1, "GMT")      // returns true on the first day of each month, GMT timezone
-dateRange(1, 15);        // returns true on the first half of each month
-dateRange(24, "DEC");    // returns true on 24th of December each year
+```js-nolint
+dateRange(1) // returns true on the first day of each month, local timezone
+dateRange(1, "GMT") // returns true on the first day of each month, GMT timezone
+dateRange(1, 15) // returns true on the first half of each month
+dateRange(24, "DEC");// returns true on 24th of December each year
 dateRange("JAN", "MAR"); // returns true on the first quarter of the year
 
 dateRange(1, "JUN", 15, "AUG");
@@ -491,12 +482,13 @@ dateRange(1995, 1997);
 
 #### Syntax
 
-```html
+```js-nolint
 // The full range of expansions is analogous to dateRange.
 timeRange(<hour1>, <min1>, <sec1>, <hour2>, <min2>, <sec2>, [gmt])
 ```
 
-> **Note:** (Before Firefox 49) the category hour1, min1, sec1 must be less than the category hour2, min2, sec2 if you want the function to evaluate these parameters as a range. See the warning below.
+> [!NOTE]
+> (Before Firefox 49) the category hour1, min1, sec1 must be less than the category hour2, min2, sec2 if you want the function to evaluate these parameters as a range. See the warning below.
 
 #### Parameters
 
@@ -515,20 +507,20 @@ If only a single value is specified (from each category: hour, minute, second), 
 
 #### Examples
 
-```js
-timerange(12);                // returns true from noon to 1pm
-timerange(12, 13);            // returns true from noon to 1pm
-timerange(12, "GMT");         // returns true from noon to 1pm, in GMT timezone
-timerange(9, 17);             // returns true from 9am to 5pm
-timerange(8, 30, 17, 0);      // returns true from 8:30am to 5:00pm
-timerange(0, 0, 0, 0, 0, 30); // returns true between midnight and 30 seconds past midnight
+```js-nolint
+timerange(12); // returns true from noon to 1pm
+timerange(12, 13) // returns true from noon to 1pm
+timerange(12, "GMT") // returns true from noon to 1pm, in the GMT timezone
+timerange(9, 17) // returns true from 9am to 5pm
+timerange(8, 30, 17, 0) // returns true from 8:30am to 5:00pm
+timerange(0, 0, 0, 0, 0, 30) // returns true between midnight and 30 seconds past midnight
 ```
 
 ### alert()
 
 #### Syntax
 
-```html
+```js-nolint
 alert(message)
 ```
 
@@ -541,16 +533,17 @@ Logs the message in the browser console.
 
 #### Examples
 
-```js
-alert(host + " = " + dnsResolve(host));            // logs the host name and its IP address
-alert("Error: shouldn't reach this clause.");      // log a simple message
+```js-nolint
+alert(`${host} = ${dnsResolve(host)}`) // logs the host name and its IP address
+alert("Error: shouldn't reach this clause.") // log a simple message
 ```
 
 ## Example 1
 
 ### Use proxy for everything except local hosts
 
-> **Note:** Since all of the examples that follow are very specific, they have not been tested.
+> [!NOTE]
+> Since all of the examples that follow are very specific, they have not been tested.
 
 All hosts which aren't fully qualified, or the ones that are in local domain, will be connected to directly. Everything else will go through `w3proxy.mozilla.org:8080`. If the proxy goes down, connections become direct automatically:
 
@@ -564,7 +557,8 @@ function FindProxyForURL(url, host) {
 }
 ```
 
-> **Note:** This is the simplest and most efficient autoconfig file for cases where there's only one proxy.
+> [!NOTE]
+> This is the simplest and most efficient autoconfig file for cases where there's only one proxy.
 
 ## Example 2
 
@@ -588,7 +582,8 @@ function FindProxyForURL(url, host) {
 
 The above example will use the proxy for everything except local hosts in the mozilla.org domain, with the further exception that hosts `www.mozilla.org` and `merchant.mozilla.org` will go through the proxy.
 
-> **Note:** The order of the above exceptions for efficiency: `localHostOrDomainIs()` functions only get executed for URLs that are in local domain, not for every URL. Be careful to note the parentheses around the _or_ expression before the _and_ expression to achieve the above-mentioned efficient behavior.
+> [!NOTE]
+> The order of the above exceptions for efficiency: `localHostOrDomainIs()` functions only get executed for URLs that are in local domain, not for every URL. Be careful to note the parentheses around the _or_ expression before the _and_ expression to achieve the above-mentioned efficient behavior.
 
 ## Example 3
 
@@ -598,10 +593,10 @@ This example will work in an environment where the internal DNS server is set up
 
 ```js
 function FindProxyForURL(url, host) {
-  if (isResolvable(host))
+  if (isResolvable(host)) {
     return "DIRECT";
-  else
-    return "PROXY proxy.mydomain.com:8080";
+  }
+  return "PROXY proxy.mydomain.com:8080";
 }
 ```
 
@@ -615,9 +610,8 @@ function FindProxyForURL(url, host) {
     isResolvable(host)
   ) {
     return "DIRECT";
-  } else {
-    return "PROXY proxy.mydomain.com:8080";
   }
+  return "PROXY proxy.mydomain.com:8080";
 }
 ```
 
@@ -629,10 +623,10 @@ In this example all of the hosts in a given subnet are connected-to directly, ot
 
 ```js
 function FindProxyForURL(url, host) {
-  if (isInNet(host, "198.95.0.0", "255.255.0.0"))
+  if (isInNet(host, "192.0.2.172", "255.255.0.0")) {
     return "DIRECT";
-  else
-    return "PROXY proxy.mydomain.com:8080";
+  }
+  return "PROXY proxy.mydomain.com:8080";
 }
 ```
 
@@ -643,7 +637,7 @@ function FindProxyForURL(url, host) {
   if (
     isPlainHostName(host) ||
     dnsDomainIs(host, ".mydomain.com") ||
-    isInNet(host, "198.95.0.0", "255.255.0.0")
+    isInNet(host, "192.0.2.0", "255.255.0.0")
   ) {
     return "DIRECT";
   } else {
@@ -669,21 +663,15 @@ All local accesses are desired to be direct. All proxy servers run on the port 8
 
 ```js
 function FindProxyForURL(url, host) {
-
-  if (isPlainHostName(host) || dnsDomainIs(host, ".mydomain.com"))
+  if (isPlainHostName(host) || dnsDomainIs(host, ".mydomain.com")) {
     return "DIRECT";
-
-  else if (shExpMatch(host, "*.com"))
-    return "PROXY proxy1.mydomain.com:8080; " +
-           "PROXY proxy4.mydomain.com:8080";
-
-  else if (shExpMatch(host, "*.edu"))
-    return "PROXY proxy2.mydomain.com:8080; " +
-           "PROXY proxy4.mydomain.com:8080";
-
-  else
-    return "PROXY proxy3.mydomain.com:8080; " +
-           "PROXY proxy4.mydomain.com:8080";
+  } else if (shExpMatch(host, "*.com")) {
+    return "PROXY proxy1.mydomain.com:8080; PROXY proxy4.mydomain.com:8080";
+  } else if (shExpMatch(host, "*.edu")) {
+    return "PROXY proxy2.mydomain.com:8080; PROXY proxy4.mydomain.com:8080";
+  } else {
+    return "PROXY proxy3.mydomain.com:8080; PROXY proxy4.mydomain.com:8080";
+  }
 }
 ```
 
@@ -695,26 +683,21 @@ Most of the standard JavaScript functionality is available for use in the `FindP
 
 ```js
 function FindProxyForURL(url, host) {
-
-  if (url.startsWith("http:"))
+  if (url.startsWith("http:")) {
     return "PROXY http-proxy.mydomain.com:8080";
-
-  else if (url.startsWith("ftp:"))
+  } else if (url.startsWith("ftp:")) {
     return "PROXY ftp-proxy.mydomain.com:8080";
-
-  else if (url.startsWith("gopher:"))
+  } else if (url.startsWith("gopher:")) {
     return "PROXY gopher-proxy.mydomain.com:8080";
-
-  else if (url.startsWith("https:") || url.startsWith("snews:"))
+  } else if (url.startsWith("https:") || url.startsWith("snews:")) {
     return "PROXY security-proxy.mydomain.com:8080";
-
-  else
-    return "DIRECT";
-
+  }
+  return "DIRECT";
 }
 ```
 
-> **Note:** The same can be accomplished using the [`shExpMatch()`](#shexpmatch) function described earlier.
+> [!NOTE]
+> The same can be accomplished using the [`shExpMatch()`](#shexpmatch) function described earlier.
 
 For example:
 
@@ -724,7 +707,8 @@ if (shExpMatch(url, "http:*")) {
 }
 ```
 
-> **Note:** The autoconfig file can be output by a CGI script. This is useful, for example, when making the autoconfig file act differently based on the client IP address (the `REMOTE_ADDR` environment variable in CGI).
+> [!NOTE]
+> The autoconfig file can be output by a CGI script. This is useful, for example, when making the autoconfig file act differently based on the client IP address (the `REMOTE_ADDR` environment variable in CGI).
 >
 > Usage of `isInNet()`, `isResolvable()` and `dnsResolve()` functions should be carefully considered, as they require the DNS server to be consulted. All the other autoconfig-related functions are mere string-matching functions that don't require the use of a DNS server. If a proxy is used, the proxy will perform its DNS lookup which would double the impact on the DNS server. Most of the time these functions are not necessary to achieve the desired result.
 
@@ -734,4 +718,10 @@ Proxy auto-config was introduced into Netscape Navigator 2.0 in the late 1990s, 
 
 The most "original" implementation of PAC and its JavaScript libraries is, therefore, `nsProxyAutoConfig.js` found in early versions of Firefox. These utilities are found in many other open-source systems including [Chromium](https://source.chromium.org/chromium/chromium/src/+/main:services/proxy_resolver/pac_js_library.h). Firefox later integrated the file into [`ProxyAutoConfig.cpp`](https://searchfox.org/mozilla-central/source/netwerk/base/ProxyAutoConfig.cpp) as a C++ string literal. To extract it into its own file, it suffices to copy the chunk into JavaScript with a `console.log` directive to print it.
 
-Microsoft in general made its own implementation. There used to be [some problems with their libraries](https://en.wikipedia.org/wiki/Proxy_auto-config#Old_Microsoft_problems), but most are resolved by now. They have defined [some new "Ex" suffixed functions](https://docs.microsoft.com/en-us/windows/win32/winhttp/ipv6-extensions-to-navigator-auto-config-file-format) around the address handling parts to support IPv6. The feature is supported by Chromium, but not yet by Firefox ([bugzilla #558253](https://bugzilla.mozilla.org/show_bug.cgi?id=558253)).
+Microsoft in general made its own implementation. There used to be [some problems with their libraries](https://en.wikipedia.org/wiki/Proxy_auto-config#Old_Microsoft_problems), but most are resolved by now. They have defined [some new "Ex" suffixed functions](https://learn.microsoft.com/en-us/windows/win32/winhttp/ipv6-extensions-to-navigator-auto-config-file-format) around the address handling parts to support IPv6. The feature is supported by Chromium, but not yet by Firefox ([bugzilla #558253](https://bugzil.la/558253)).
+
+## See also
+
+- {{glossary("Proxy server")}}
+- [MIME types (IANA media types)](/en-US/docs/Web/HTTP/MIME_types)
+- [Automatic proxy HTTP server configuration in web browsers](https://jdebp.uk/FGA/web-browser-auto-proxy-configuration.html)

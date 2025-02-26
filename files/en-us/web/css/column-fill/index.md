@@ -1,14 +1,10 @@
 ---
 title: column-fill
 slug: Web/CSS/column-fill
-tags:
-  - CSS
-  - CSS Multi-column Layout
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.column-fill
 ---
+
 {{CSSRef}}
 
 The **`column-fill`** [CSS](/en-US/docs/Web/CSS) property controls how an element's contents are balanced when broken into columns.
@@ -21,7 +17,6 @@ The **`column-fill`** [CSS](/en-US/docs/Web/CSS) property controls how an elemen
 /* Keyword values */
 column-fill: auto;
 column-fill: balance;
-column-fill: balance-all;
 
 /* Global values */
 column-fill: inherit;
@@ -38,9 +33,9 @@ The `column-fill` property is specified as one of the keyword values listed belo
 - `auto`
   - : Columns are filled sequentially. Content takes up only the room it needs, possibly resulting in some columns remaining empty.
 - `balance`
-  - : Content is equally divided between columns. In fragmented contexts, such as [paged media](/en-US/docs/Web/CSS/Paged_Media), only the last fragment is balanced. Therefore in paged media, only the last page would be balanced.
-- `balance-all`
-  - : Content is equally divided between columns. In fragmented contexts, such as [paged media](/en-US/docs/Web/CSS/Paged_Media), all fragments are balanced.
+  - : Content is equally divided between columns. In fragmented contexts, such as [paged media](/en-US/docs/Web/CSS/CSS_paged_media), only the last fragment is balanced. Therefore in paged media, only the last page would be balanced.
+
+The specification defines a `balance-all` value, in which content is equally divided between columns in fragmented contexts, such as [paged media](/en-US/docs/Web/CSS/CSS_paged_media). This value is not yet supported in any browser.
 
 ## Formal definition
 
@@ -50,7 +45,7 @@ The `column-fill` property is specified as one of the keyword values listed belo
 
 {{csssyntax}}
 
-## Example
+## Examples
 
 ### Balancing column content
 
@@ -58,7 +53,8 @@ The `column-fill` property is specified as one of the keyword values listed belo
 
 ```html
 <p class="fill-auto">
-  This paragraph fills columns one at a time. Since all of the text can fit in the first column, the others are empty.
+  This paragraph fills columns one at a time. Since all of the text can fit in
+  the first column, the others are empty.
 </p>
 
 <p class="fill-balance">
@@ -97,12 +93,13 @@ p.fill-balance {
 
 {{Compat}}
 
-> **Warning:** There are some interoperability issues and bugs with `column-fill` across browsers, due to unresolved issues in the specification.
+> [!WARNING]
+> There are some interoperability issues and bugs with `column-fill` across browsers, due to unresolved issues in the specification.
 >
 > In particular, when using `column-fill: auto` to fill columns sequentially, Chrome will only consult this property if the multicol container has a size in the block dimension (e.g., height in a horizontal writing mode). Firefox will always consult this property, therefore filling the first column with all of the content in cases where there is no size.
 
 ## See also
 
-- [Multiple-column Layout](/en-US/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
+- [Learn: Multiple-column Layout](/en-US/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout)
 - {{CSSXref("column-count")}}
 - {{CSSXref("column-width")}}

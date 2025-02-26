@@ -1,18 +1,12 @@
 ---
-title: Report.type
+title: "Report: type property"
+short-title: type
 slug: Web/API/Report/type
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - Property
-  - Reference
-  - Report
-  - Reporting API
-  - Type
-spec-urls: https://w3c.github.io/reporting/#dom-report-type
+browser-compat: api.Report.type
 ---
-{{APIRef("Reporting API")}}{{SeeCompatTable}}
+
+{{APIRef("Reporting API")}}{{AvailableInWorkers}}
 
 The **`type`** read-only property of the {{domxref("Report")}}
 interface returns the type of report generated, e.g. `deprecation` or
@@ -26,13 +20,12 @@ A string representing the type of the report. Currently the available types are
 ## Examples
 
 ```js
-let options = {
-  types: ['deprecation'],
-  buffered: true
-}
+const options = {
+  types: ["deprecation"],
+  buffered: true,
+};
 
-let observer = new ReportingObserver(function(reports, observer) {
-  let firstReport = reports[0];
+const observer = new ReportingObserver(([firstReport], observer) => {
   // Log the first report's report type, i.e. "deprecation"
   console.log(firstReport.type);
 }, options);
@@ -44,7 +37,7 @@ let observer = new ReportingObserver(function(reports, observer) {
 
 ## Browser compatibility
 
-This feature is not yet available by default in any released browser. It can be activated in Firefox by setting `dom_reporting_enabled` to `true` and in Chrome if you [enable this experimental feature](https://web.dev/reporting-api/#use-devtools).
+{{Compat}}
 
 ## See also
 

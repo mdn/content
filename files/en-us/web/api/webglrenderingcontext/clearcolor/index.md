@@ -1,16 +1,12 @@
 ---
-title: WebGLRenderingContext.clearColor()
+title: "WebGLRenderingContext: clearColor() method"
+short-title: clearColor()
 slug: Web/API/WebGLRenderingContext/clearColor
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.clearColor
 ---
-{{APIRef("WebGL")}}
+
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGLRenderingContext.clearColor()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) specifies the color values used
 when clearing color buffers.
@@ -21,7 +17,7 @@ between 0 and 1.
 
 ## Syntax
 
-```js
+```js-nolint
 clearColor(red, green, blue, alpha)
 ```
 
@@ -47,7 +43,7 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-gl.clearColor(1, 0.5, 0.5, 3);
+gl.clearColor(1, 0.5, 0.5, 1);
 ```
 
 To get the current clear color, query the `COLOR_CLEAR_VALUE` constant which

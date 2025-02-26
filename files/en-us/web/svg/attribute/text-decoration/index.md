@@ -1,11 +1,10 @@
 ---
 title: text-decoration
 slug: Web/SVG/Attribute/text-decoration
-tags:
-  - SVG
-  - SVG Attribute
-browser-compat: svg.attributes.presentation.text-decoration
+page-type: svg-attribute
+browser-compat: svg.global_attributes.text-decoration
 ---
+
 {{SVGRef}}
 
 The **`text-decoration`** attribute defines whether text is decorated with an underline, overline and/or strike-through. It is a shorthand for the {{cssxref("text-decoration-line")}} and {{cssxref("text-decoration-style")}} properties.
@@ -14,11 +13,11 @@ The fill and stroke of the text decoration are given by the fill and stroke of t
 
 The paint order of the text decoration, i.e. the fill and stroke, is determined by the value of the {{SVGAttr("paint-order")}} attribute at the point where the text decoration is declared.
 
-> **Note:** As a presentation attribute, `text-decoration` can be used as a CSS property. See the {{cssxref("text-decoration", "CSS text-decoration")}} property for more information.
+> [!NOTE]
+> As a presentation attribute, `text-decoration` also has a CSS property counterpart: {{cssxref("text-decoration")}}. When both are specified, the CSS property takes priority.
 
 You can use this attribute with the following SVG elements:
 
-- {{SVGElement("altGlyph")}}
 - {{SVGElement("text")}}
 - {{SVGElement("textPath")}}
 - {{SVGElement("tref")}}
@@ -27,7 +26,9 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 ```
@@ -90,4 +91,4 @@ For a description of the values, please refer to the [CSS `text-decoration`](/en
 
 ## See also
 
-- {{cssxref("text-decoration", "CSS text-decoration")}}
+- CSS {{cssxref("text-decoration")}} property

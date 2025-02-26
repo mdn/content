@@ -1,35 +1,53 @@
 ---
 title: WeakSet.prototype.add()
 slug: Web/JavaScript/Reference/Global_Objects/WeakSet/add
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - WeakSet
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.WeakSet.add
 ---
+
 {{JSRef}}
 
-The **`add()`** method appends a new object to the end of a
-`WeakSet` object.
+The **`add()`** method of {{jsxref("WeakSet")}} instances appends a new object to the end of this `WeakSet`.
 
-{{EmbedInteractiveExample("pages/js/weakset-prototype-add.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: WeakSet.Prototype.add()", "taller")}}
+
+```js interactive-example
+const weakset1 = new WeakSet();
+const object1 = {};
+
+weakset1.add(object1);
+console.log(weakset1.has(object1));
+// Expected output: true
+
+try {
+  weakset1.add(1);
+} catch (error) {
+  console.log(error);
+  // Expected output (Chrome): TypeError: Invalid value used in weak set
+  // Expected output (Firefox): TypeError: WeakSet value must be an object, got 1
+  // Expected output (Safari): TypeError: Attempted to add a non-object key to a WeakSet
+}
+```
 
 ## Syntax
 
-```js
+```js-nolint
 add(value)
 ```
 
 ### Parameters
 
-- value
-  - : Required. The object to add to the `WeakSet` collection.
+- `value`
+  - : Must be either an object or a [non-registered symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#shared_symbols_in_the_global_symbol_registry). The value to add to the `WeakSet` collection.
 
 ### Return value
 
 The `WeakSet` object.
+
+### Exceptions
+
+- {{jsxref("TypeError")}}
+  - : Thrown if `value` is not an object or a [non-registered symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#shared_symbols_in_the_global_symbol_registry).
 
 ## Examples
 

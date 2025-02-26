@@ -1,10 +1,11 @@
 ---
 title: Quality values
 slug: Glossary/Quality_values
-tags:
-  - Glossary
-  - WebMechanics
+page-type: glossary-definition
 ---
+
+{{GlossarySidebar}}
+
 **Quality values**, or _q-values_ and _q-factors_, are used to describe the order of priority of values in a comma-separated list. It is a special syntax allowed in some [HTTP headers](/en-US/docs/Web/HTTP/Headers) and in HTML.
 
 The importance of a value is marked by the suffix `';q='` immediately followed by a value between `0` and `1` included, with up to three decimal digits, the highest value denoting the highest priority. When not present, the default value is `1`.
@@ -13,7 +14,7 @@ The importance of a value is marked by the suffix `';q='` immediately followed b
 
 The following syntax
 
-```plain
+```http
 text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
 ```
 
@@ -27,7 +28,7 @@ indicates the order of priority:
 
 If there is no priority defined for the first two values, the order in the list is irrelevant. Nevertheless, with the same quality, more specific values have priority over less specific ones:
 
-```plain
+```http
 text/html;q=0.8,text/*;q=0.8,*/*;q=0.8
 ```
 
@@ -39,13 +40,7 @@ text/html;q=0.8,text/*;q=0.8,*/*;q=0.8
 
 Some syntax, like the one of {{HTTPHeader("Accept")}}, allow additional specifiers like `text/html;level=1`. These increase the specificity of the value. Their use is extremely rare.
 
-## Browser-specific information
-
-### Firefox
-
-Starting with Firefox 18, the quality factor values are clamped to 2 decimal places. They used to be clamped to only 1 decimal place in earlier versions ({{bug(672448)}}).
-
 ## More information
 
-- [HTTP headers](/en-US/docs/Web/HTTP/Headers) using q-values in their syntax: {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Language")}}, {{HTTPHeader("TE")}}.
+- [HTTP headers](/en-US/docs/Web/HTTP/Headers) using q-values in their syntax: {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Encoding")}}, {{HTTPHeader("Accept-Language")}}, {{HTTPHeader("TE")}}.
 - [Header field definitions.](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html)

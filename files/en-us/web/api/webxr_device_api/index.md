@@ -2,25 +2,16 @@
 title: WebXR Device API
 slug: Web/API/WebXR_Device_API
 page-type: web-api-overview
-tags:
-  - API
-  - AR
-  - Augmented Reality
-  - Graphics
-  - Overview
-  - VR
-  - Virtual Reality
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
+status:
+  - experimental
 browser-compat: api.Navigator.xr
 ---
-{{DefaultAPISidebar("WebXR Device API")}} {{SecureContext_Header}}
+
+{{DefaultAPISidebar("WebXR Device API")}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 **WebXR** is a group of standards which are used together to support rendering 3D scenes to hardware designed for presenting virtual worlds (**virtual reality**, or **VR**), or for adding graphical imagery to the real world, (**augmented reality**, or **AR**). The **WebXR Device API** implements the core of the WebXR feature set, managing the selection of output devices, render the 3D scene to the chosen device at the appropriate frame rate, and manage motion vectors created using input controllers.
 
-WebXR-compatible devices include fully-immersive 3D headsets with motion and orientation tracking, eyeglasses which overlay graphics atop the real world scene passing through the frames, and handheld mobile phones which augment reality by capturing the world with a camera and augment that scene with computer-generated imagery.
+WebXR-compatible devices include fully-immersive 3D headsets with motion and orientation tracking, eyeglasses which overlay graphics atop the real-world scene passing through the frames, and handheld mobile phones which augment reality by capturing the world with a camera and augment that scene with computer-generated imagery.
 
 To accomplish these things, the WebXR Device API provides the following key capabilities:
 
@@ -46,7 +37,7 @@ The equipment may also include an accelerometer, barometer, or other sensors whi
 - {{domxref("navigator.xr")}}
 - {{domxref("XRSystem")}}
 - {{domxref("XRPermissionStatus")}}
-- `Feature-Policy`: [`xr-spatial-tracking`](/en-US/docs/Web/HTTP/Headers/Feature-Policy/xr-spatial-tracking)
+- `Permissions-Policy`: [`xr-spatial-tracking`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/xr-spatial-tracking)
 
 ### Session
 
@@ -202,10 +193,10 @@ The following guides and tutorials are a great resource to learn how to comprehe
       <td><a href="https://immersive-web.github.io/depth-sensing/"><strong>WebXR Depth Sensing Module</strong></a>
       (<a href="https://github.com/immersive-web/depth-sensing">Source</a>,
        <a href="https://github.com/immersive-web/depth-sensing/issues">Issues</a>,
-       <a href="https://github.com/immersive-web/depth-sensing/blob/master/explainer.md">Explainer</a>)</td>
+       <a href="https://github.com/immersive-web/depth-sensing/blob/main/explainer.md">Explainer</a>)</td>
     </tr>
     <tr>
-      <td><a href="https://immersive-web.github.io/dom-overlays"><strong>WebXR DOM Overlays Module</strong></a>
+      <td><a href="https://immersive-web.github.io/dom-overlays/"><strong>WebXR DOM Overlays Module</strong></a>
       (<a href="https://github.com/immersive-web/dom-overlays">Source</a>,
        <a href="https://github.com/immersive-web/dom-overlays/issues">Issues</a>,
        <a href="https://github.com/immersive-web/dom-overlays/blob/master/explainer.md">Explainer</a>)</td>
@@ -223,7 +214,7 @@ The following guides and tutorials are a great resource to learn how to comprehe
        <a href="https://github.com/immersive-web/webxr-hand-input/blob/master/explainer.md">Explainer</a>)</td>
     </tr>
     <tr>
-      <td><a href="https://immersive-web.github.io/hit-test"><strong>WebXR Hit Test Module</strong></a>
+      <td><a href="https://immersive-web.github.io/hit-test/"><strong>WebXR Hit Test Module</strong></a>
       (<a href="https://github.com/immersive-web/hit-test">Source</a>,
        <a href="https://github.com/immersive-web/hit-test/issues">Issues</a>,
        <a href="https://github.com/immersive-web/hit-test/blob/master/hit-testing-explainer.md">Explainer</a>)</td>
@@ -238,7 +229,7 @@ The following guides and tutorials are a great resource to learn how to comprehe
       <td><a href="https://immersive-web.github.io/lighting-estimation/"><strong>WebXR Lighting Estimation API</strong></a>
       (<a href="https://github.com/immersive-web/lighting-estimation">Source</a>,
        <a href="https://github.com/immersive-web/lighting-estimation/issues">Issues</a>,
-       <a href="https://github.com/immersive-web/lighting-estimation/blob/master/lighting-estimation-explainer.md">Explainer</a>)</td>
+       <a href="https://github.com/immersive-web/lighting-estimation/blob/main/lighting-estimation-explainer.md">Explainer</a>)</td>
     </tr>
   </tbody>
 </table>
@@ -249,8 +240,7 @@ The following guides and tutorials are a great resource to learn how to comprehe
 
 ## See also
 
-- [Graphics on the web](/en-US/docs/Web/Guide/Graphics)
-- [Drawing graphics](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
+- [Drawing graphics](/en-US/docs/Learn_web_development/Extensions/Client-side_APIs/Drawing_graphics)
 - [WebGL API](/en-US/docs/Web/API/WebGL_API): Accelerated 2D and 3D graphics on the web
 - [Canvas API](/en-US/docs/Web/API/Canvas_API): 2D drawing for the web
 - [Canvas tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial)

@@ -1,16 +1,12 @@
 ---
-title: WebGL2RenderingContext.getFragDataLocation()
+title: "WebGL2RenderingContext: getFragDataLocation() method"
+short-title: getFragDataLocation()
 slug: Web/API/WebGL2RenderingContext/getFragDataLocation
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL2
 browser-compat: api.WebGL2RenderingContext.getFragDataLocation
 ---
-{{APIRef("WebGL")}}
+
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGL2RenderingContext.getFragDataLocation()`** method
 of the [WebGL 2 API](/en-US/docs/Web/API/WebGL_API) returns the binding of
@@ -18,7 +14,7 @@ color numbers to user-defined varying out variables.
 
 ## Syntax
 
-```js
+```js-nolint
 getFragDataLocation(program, name)
 ```
 
@@ -40,7 +36,7 @@ otherwise.
 ```js
 // program is a linked WebGLProgram
 
-gl.getFragDataLocation(program, 'fragColor');
+gl.getFragDataLocation(program, "fragColor");
 ```
 
 ## Specifications

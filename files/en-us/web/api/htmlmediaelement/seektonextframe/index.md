@@ -1,24 +1,21 @@
 ---
-title: HTMLMediaElement.seekToNextFrame()
+title: "HTMLMediaElement: seekToNextFrame() method"
+short-title: seekToNextFrame()
 slug: Web/API/HTMLMediaElement/seekToNextFrame
 page-type: web-api-instance-method
-tags:
-  - API
-  - Experimental
-  - HTMLMediaElement
-  - Method
-  - Non-standard
-  - Reference
-  - Web
-  - seekToNextFrame
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.HTMLMediaElement.seekToNextFrame
 ---
-{{APIRef("HTML DOM")}} {{non-standard_header}} {{SeeCompatTable}}
+
+{{APIRef("HTML DOM")}}{{Deprecated_Header}}{{non-standard_header}}
 
 The **`HTMLMediaElement.seekToNextFrame()`** method
 asynchronously advances the current play position to the next frame in the media.
 
-> **Warning:** This non-standard method is part of an experimentation process around support for
+> [!WARNING]
+> This non-standard method is part of an experimentation process around support for
 > non-real-time access to media for tasks including filtering, editing, and so forth.
 > You should _not_ use this method in production code, because its implementation
 > may change—or be removed outright—without notice. You are, however, invited to
@@ -40,7 +37,7 @@ happens.
 
 ## Syntax
 
-```js
+```js-nolint
 seekToNextFrame()
 ```
 

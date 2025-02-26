@@ -1,14 +1,11 @@
 ---
-title: Document.childElementCount
+title: "Document: childElementCount property"
+short-title: childElementCount
 slug: Web/API/Document/childElementCount
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Property
-  - Reference
 browser-compat: api.Document.childElementCount
 ---
+
 {{ APIRef("DOM") }}
 
 The **`Document.childElementCount`** read-only property

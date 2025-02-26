@@ -1,23 +1,18 @@
 ---
-title: Worker.terminate()
+title: "Worker: terminate() method"
+short-title: terminate()
 slug: Web/API/Worker/terminate
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - Web Workers
-  - Worker
-  - terminate
 browser-compat: api.Worker.terminate
 ---
-{{APIRef("Web Workers API")}}
+
+{{APIRef("Web Workers API")}}{{AvailableInWorkers("window_and_worker_except_service")}}
 
 The **`terminate()`** method of the {{domxref("Worker")}} interface immediately terminates the {{domxref("Worker")}}. This does not offer the worker an opportunity to finish its operations; it is stopped at once.
 
 ## Syntax
 
-```js
+```js-nolint
 terminate()
 ```
 
@@ -34,10 +29,13 @@ None ({{jsxref("undefined")}}).
 The following code snippet shows creation of a {{domxref("Worker")}} object using the {{domxref("Worker.Worker", "Worker()")}} constructor, which is then immediately terminated.
 
 ```js
-const myWorker = new Worker('worker.js');
+const myWorker = new Worker("worker.js");
 
 myWorker.terminate();
 ```
+
+> [!NOTE]
+> DedicatedWorkers and SharedWorkers can also be stopped from the {{domxref("Worker")}} instance using the {{domxref("DedicatedWorkerGlobalScope.close()")}} or {{domxref("SharedWorkerGlobalScope.close()")}} methods.
 
 ## Specifications
 
@@ -49,4 +47,6 @@ myWorker.terminate();
 
 ## See also
 
-The {{domxref("Worker")}} interface it belongs to.
+- {{domxref("Worker")}} interface
+- {{domxref("DedicatedWorkerGlobalScope.close()")}}
+- {{domxref("SharedWorkerGlobalScope.close()")}}

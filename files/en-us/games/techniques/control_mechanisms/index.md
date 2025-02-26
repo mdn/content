@@ -1,18 +1,9 @@
 ---
 title: Implementing game control mechanisms
 slug: Games/Techniques/Control_mechanisms
-tags:
-  - Controls
-  - Desktop
-  - Gamepad
-  - Games
-  - JavaScript
-  - Laptop
-  - Mobile
-  - keyboard
-  - mouse
-  - touch
+page-type: guide
 ---
+
 {{GamesSidebar}}
 
 One of HTML5's main advantages as a game development platform is the ability to run on various platforms and devices. Streamlining cross device differences creates multiple challenges, not least when providing appropriate controls for different contexts. In this series of articles we will show you how you can approach building a game that can be played using touchscreen smartphones, mouse and keyboard, and also less common mechanisms such as gamepads.
@@ -52,7 +43,7 @@ It will be created once at the start of the game, and will execute `this.clickEn
 ```js
 update() {
   // …
-  if(this.game.input.mousePointer.isDown) {
+  if (this.game.input.mousePointer.isDown) {
       // do something
   }
   // …
@@ -69,7 +60,7 @@ There's also a [small online demo](https://end3r.github.io/JavaScript-Game-Contr
 
 ## The articles
 
-JavaScript is the perfect choice for mobile gaming because of HTML5 being truly multiplatform; all of the following articles focus on the APIs provided for interfacing with different control mechanisms:
+JavaScript is the perfect choice for mobile gaming because of HTML being truly multiplatform; all of the following articles focus on the APIs provided for interfacing with different control mechanisms:
 
 1. [Mobile touch controls](/en-US/docs/Games/Techniques/Control_mechanisms/Mobile_touch) — The first article will kick off with touch, as the mobile first approach is very popular.
 2. [Desktop mouse and keyboard controls](/en-US/docs/Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard) — When playing on a desktop/laptop computer, providing keyboard and mouse controls is essential to provide an acceptable level of accessibility for the game.

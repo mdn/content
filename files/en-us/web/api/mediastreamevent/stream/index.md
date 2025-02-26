@@ -1,31 +1,23 @@
 ---
-title: MediaStreamEvent.stream
+title: "MediaStreamEvent: stream property"
+short-title: stream
 slug: Web/API/MediaStreamEvent/stream
 page-type: web-api-instance-property
-tags:
-  - Experimental
-  - MediaStreamEvent
-  - Property
-  - Read-only
-  - Reference
-  - WebRTC
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.MediaStreamEvent.stream
 ---
-{{APIRef("WebRTC")}}{{deprecated_header}}
+
+{{APIRef("WebRTC")}}{{deprecated_header}}{{Non-standard_header}}
 
 The read-only property **`MediaStreamEvent.stream`** returns
 the {{domxref("MediaStream")}} associated with the event.
 
-## Syntax
-
-```js
- const stream = event.stream;
-```
-
 ## Example
 
 ```js
-pc.onaddstream = function(ev) {
+pc.onaddstream = (ev) => {
   alert(`A stream (id: '${ev.stream.id}') has been added to this connection.`);
 };
 ```

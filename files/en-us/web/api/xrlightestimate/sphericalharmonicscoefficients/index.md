@@ -1,20 +1,14 @@
 ---
-title: XRLightEstimate.sphericalHarmonicsCoefficients
+title: "XRLightEstimate: sphericalHarmonicsCoefficients property"
+short-title: sphericalHarmonicsCoefficients
 slug: Web/API/XRLightEstimate/sphericalHarmonicsCoefficients
 page-type: web-api-instance-property
-tags:
-  - API
-  - AR
-  - Augmented Reality
-  - Experimental
-  - Property
-  - Reference
-  - VR
-  - WebXR
-  - WebXR Device API
+status:
+  - experimental
 browser-compat: api.XRLightEstimate.sphericalHarmonicsCoefficients
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The _read-only_ **`sphericalHarmonicsCoefficients`** property of the {{DOMxRef("XRLightEstimate")}} interface returns a {{jsxref("Float32Array")}} containing 9 spherical harmonics coefficients.
 

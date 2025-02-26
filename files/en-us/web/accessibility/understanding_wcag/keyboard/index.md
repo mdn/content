@@ -1,25 +1,27 @@
 ---
 title: Keyboard
 slug: Web/Accessibility/Understanding_WCAG/Keyboard
-tags:
-  - Accessibility
-  - keyboard
+page-type: guide
 ---
+
+{{AccessibilitySidebar}}
+
 To be fully accessible, a web page must be operable by someone using only a keyboard to access and control it. This includes users of screen readers, but can also include users who have trouble operating a pointing device such as a mouse or trackball, or whose mouse is not working at the moment, or who prefer to use a keyboard for input whenever possible.
 
 ## Focusable elements should have interactive semantics
 
 If an element can be focused using the keyboard, then it should be interactive; that is, the user should be able to do something to it and produce a change of some kind (for example, activating a link or changing an option).
 
-> **Note:** One important exception to this rule is if the element has `role="document"` applied to it, **inside** an interactive context (such as `role="application"`). In such a case, focusing the nested document is the only way of returning assistive technology to a non-interactive state (often called "browse mode").
+> [!NOTE]
+> One important exception to this rule is if the element has `role="document"` applied to it, **inside** an interactive context (such as `role="application"`). In such a case, focusing the nested document is the only way of returning assistive technology to a non-interactive state (often called "browse mode").
 
 Most interactive elements are focusable by default; you can make an element focusable by adding a `tabindex=0` attribute value to it. However, you should only add `tabindex` if you have also made the element interactive, for example, by defining appropriate event handlers keyboard events.
 
 ### See also
 
 - [tabindex](/en-US/docs/Web/HTML/Global_attributes/tabindex) global HTML attribute
-- Global event handlers: [onkeydown](/en-US/docs/Web/API/GlobalEventHandlers/onkeydown)
-- Global event handlers: [onkeyup](/en-US/docs/Web/API/GlobalEventHandlers/onkeyup)
+- Element: [keydown event](/en-US/docs/Web/API/Element/keydown_event)
+- Element: [keyup event](/en-US/docs/Web/API/Element/keyup_event)
 
 ## Avoid using `tabindex` attribute greater than zero
 
@@ -42,8 +44,8 @@ An element is clickable if it has an `onclick` event handler defined. You can ma
 ### See also
 
 - [tabindex](/en-US/docs/Web/HTML/Global_attributes/tabindex) global HTML attribute
-- Global event handlers: [onkeydown](/en-US/docs/Web/API/GlobalEventHandlers/onkeydown)
-- Global event handlers: [onkeyup](/en-US/docs/Web/API/GlobalEventHandlers/onkeyup)
+- Element: [keydown event](/en-US/docs/Web/API/Element/keydown_event)
+- Element: [keyup event](/en-US/docs/Web/API/Element/keyup_event)
 
 ## Interactive elements must be able to be activated using a keyboard
 
@@ -51,8 +53,8 @@ If the user can interact with an element using touch or a pointing device, then 
 
 ### See also
 
-- Global event handlers: [onkeydown](/en-US/docs/Web/API/GlobalEventHandlers/onkeydown)
-- Global event handlers: [onkeyup](/en-US/docs/Web/API/GlobalEventHandlers/onkeyup)
+- Element: [keydown event](/en-US/docs/Web/API/Element/keydown_event)
+- Element: [keyup event](/en-US/docs/Web/API/Element/keyup_event)
 
 ## Interactive elements must be focusable
 

@@ -1,23 +1,21 @@
 ---
-title: WEBGL_lose_context
+title: WEBGL_lose_context extension
+short-title: WEBGL_lose_context
 slug: Web/API/WEBGL_lose_context
 page-type: webgl-extension
-tags:
-  - API
-  - Reference
-  - WebGL
-  - WebGL extension
 browser-compat: api.WEBGL_lose_context
 ---
+
 {{APIRef("WebGL")}}
 
 The **WEBGL_lose_context** extension is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and exposes functions to simulate losing and restoring a {{domxref("WebGLRenderingContext")}}.
 
 WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method. For more information, see also [Using Extensions](/en-US/docs/Web/API/WebGL_API/Using_Extensions) in the [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial).
 
-> **Note:** This extension is available to both, {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} and {{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}} contexts.
+> [!NOTE]
+> This extension is available to both, {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} and {{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}} contexts.
 
-## Methods
+## Instance methods
 
 - {{domxref("WEBGL_lose_context.loseContext()")}}
   - : Simulates losing the context.
@@ -29,14 +27,14 @@ WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExt
 With this extension, you can simulate the [`webglcontextlost`](/en-US/docs/Web/API/HTMLCanvasElement/webglcontextlost_event) and [`webglcontextrestored`](/en-US/docs/Web/API/HTMLCanvasElement/webglcontextrestored_event) events:
 
 ```js
-const canvas = document.getElementById('canvas');
-const gl = canvas.getContext('webgl');
+const canvas = document.getElementById("canvas");
+const gl = canvas.getContext("webgl");
 
-canvas.addEventListener('webglcontextlost', (event) => {
+canvas.addEventListener("webglcontextlost", (event) => {
   console.log(event);
 });
 
-gl.getExtension('WEBGL_lose_context').loseContext();
+gl.getExtension("WEBGL_lose_context").loseContext();
 
 // WebGLContextEvent event with type "webglcontextlost" is logged.
 ```

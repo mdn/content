@@ -1,23 +1,24 @@
 ---
-title: FileReaderSync.readAsBinaryString()
+title: "FileReaderSync: readAsBinaryString() method"
+short-title: readAsBinaryString()
 slug: Web/API/FileReaderSync/readAsBinaryString
 page-type: web-api-instance-method
-tags:
-  - Reference
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.FileReaderSync.readAsBinaryString
 ---
-{{APIRef("File API")}}{{deprecated_header}}
 
-> **Note:** This method is deprecated in favor of {{DOMxRef("FileReaderSync.readAsArrayBuffer","readAsArrayBuffer()")}}.
+{{APIRef("File API")}}{{deprecated_header}} {{AvailableInWorkers("worker_except_service")}}
 
-The `readAsBinaryString()` method of the {{DOMxRef("FileReaderSync")}} interface allows to read {{DOMxRef("File")}} or {{DOMxRef("Blob")}} objects in a synchronous way into a string. This interface is [only available](/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers) in [workers](/en-US/docs/Web/API/Worker) as it enables synchronous I/O that could potentially block.
+> [!NOTE]
+> This method is deprecated in favor of {{DOMxRef("FileReaderSync.readAsArrayBuffer","readAsArrayBuffer()")}}.
+
+The **`readAsBinaryString()`** method of the {{DOMxRef("FileReaderSync")}} interface allows to read {{DOMxRef("File")}} or {{DOMxRef("Blob")}} objects in a synchronous way into a string. This interface is [only available](/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers) in [workers](/en-US/docs/Web/API/Worker) as it enables synchronous I/O that could potentially block.
 
 ## Syntax
 
-```js
-readAsBinaryString(File);
-readAsBinaryString(Blob);
+```js-nolint
+readAsBinaryString(blob)
 ```
 
 ### Parameters
@@ -29,7 +30,7 @@ readAsBinaryString(Blob);
 
 A string representing the input data.
 
-## Exceptions
+### Exceptions
 
 - `NotFoundError` {{domxref("DOMException")}}
   - : Thrown if the resource represented by the DOM {{DOMxRef("File")}} or {{DOMxRef("Blob")}} cannot be found, e.g. because it has been erased.
@@ -53,8 +54,8 @@ A string representing the input data.
 
 ## See also
 
-- [File API](/en-US/docs/API/File_API)
+- [File API](/en-US/docs/Web/API/File_API)
 - {{DOMxRef("File")}}
 - {{DOMxRef("FileReaderSync")}}
 - {{DOMxRef("FileReader")}}
-- {{DOMxRef("BlobBuilder")}}, {{ domxref("Blob") }}
+- {{ domxref("Blob") }}

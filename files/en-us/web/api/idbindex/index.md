@@ -2,17 +2,10 @@
 title: IDBIndex
 slug: Web/API/IDBIndex
 page-type: web-api-interface
-tags:
-  - API
-  - Database
-  - IDBIndex
-  - IndexedDB
-  - Interface
-  - Reference
-  - Storage
 browser-compat: api.IDBIndex
 ---
-{{APIRef("IndexedDB")}}
+
+{{APIRef("IndexedDB")}} {{AvailableInWorkers}}
 
 `IDBIndex` interface of the [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API) provides asynchronous access to an [index](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#index) in a database. An index is a kind of object store for looking up records in another object store, called the referenced object store. You use this interface to retrieve data.
 
@@ -22,26 +15,24 @@ The index is a persistent key-value storage where the value part of its records 
 
 You can grab a set of keys within a range. To learn more, see {{domxref("IDBKeyRange")}}.
 
-{{AvailableInWorkers}}
+## Instance properties
 
-## Properties
-
-- {{domxref("IDBIndex.isAutoLocale")}} {{readonlyInline}} {{ Non-Standard_inline() }}
-  - : Returns a boolean value indicating whether the index had a `locale` value of `auto` specified upon its creation (see [`createIndex()`'s optionalParameters](/en-US/docs/Web/API/IDBObjectStore/createIndex#parameters).)
-- {{domxref("IDBIndex.locale")}} {{readonlyInline}} {{ Non-Standard_inline() }}
-  - : Returns the locale of the index (for example `en-US`, or `pl`) if it had a `locale` value specified upon its creation (see [`createIndex()`'s optionalParameters](/en-US/docs/Web/API/IDBObjectStore/createIndex#parameters).)
+- {{domxref("IDBIndex.isAutoLocale")}} {{ReadOnlyInline}} {{ non-standard_inline }} {{deprecated_inline}}
+  - : Returns a boolean value indicating whether the index had a `locale` value of `auto` specified upon its creation (see the [`options`](/en-US/docs/Web/API/IDBObjectStore/createIndex#options) parameter to [`IDBObjectStore.createIndex()`](/en-US/docs/Web/API/IDBObjectStore/createIndex).)
+- {{domxref("IDBIndex.locale")}} {{ReadOnlyInline}} {{ non-standard_inline }} {{deprecated_inline}}
+  - : Returns the locale of the index (for example `en-US`, or `pl`) if it had a `locale` value specified upon its creation (see the [`options`](/en-US/docs/Web/API/IDBObjectStore/createIndex#options) parameter to [`IDBObjectStore.createIndex()`](/en-US/docs/Web/API/IDBObjectStore/createIndex).)
 - {{domxref("IDBIndex.name")}}
   - : The name of this index.
-- {{domxref("IDBIndex.objectStore")}} {{readonlyInline}}
+- {{domxref("IDBIndex.objectStore")}} {{ReadOnlyInline}}
   - : The name of the object store referenced by this index.
-- {{domxref("IDBIndex.keyPath")}} {{readonlyInline}}
+- {{domxref("IDBIndex.keyPath")}} {{ReadOnlyInline}}
   - : The [key path](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#key_path) of this index. If null, this index is not auto-populated.
-- {{domxref("IDBIndex.multiEntry")}} {{readonlyInline}}
+- {{domxref("IDBIndex.multiEntry")}} {{ReadOnlyInline}}
   - : Affects how the index behaves when the result of evaluating the index's key path yields an array. If `true`, there is one record in the index for each item in an array of keys. If `false`, then there is one record for each key that is an array.
-- {{domxref("IDBIndex.unique")}} {{readonlyInline}}
+- {{domxref("IDBIndex.unique")}} {{ReadOnlyInline}}
   - : If `true`, this index does not allow duplicate values for a key.
 
-## Methods
+## Instance methods
 
 Inherits from: [EventTarget](/en-US/docs/Web/API/EventTarget)
 
@@ -64,35 +55,41 @@ Inherits from: [EventTarget](/en-US/docs/Web/API/EventTarget)
 
 In the following example we open a transaction and an object store, then get the index `lName` from a simple contacts database. We then open a basic cursor on the index using {{domxref("IDBIndex.openCursor")}} — this works the same as opening a cursor directly on an `ObjectStore` using {{domxref("IDBObjectStore.openCursor")}} except that the returned records are sorted based on the index, not the primary key.
 
-Finally, we iterate through each record, and insert the data into an HTML table. For a complete working example, see our [IndexedDB-examples demo repo](https://github.com/mdn/dom-examples/tree/master/indexeddb-examples/idbindex) ([View the example live](https://mdn.github.io/dom-examples/indexeddb-examples/idbindex/).)
+Finally, we iterate through each record, and insert the data into an HTML table. For a complete working example, see our [IndexedDB-examples demo repo](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbindex) ([View the example live](https://mdn.github.io/dom-examples/indexeddb-examples/idbindex/).)
 
 ```js
 function displayDataByIndex() {
-  tableEntry.innerHTML = '';
-  const transaction = db.transaction(['contactsList'], 'readonly');
-  const objectStore = transaction.objectStore('contactsList');
+  tableEntry.textContent = "";
+  const transaction = db.transaction(["contactsList"], "readonly");
+  const objectStore = transaction.objectStore("contactsList");
 
-  const myIndex = objectStore.index('lName');
-  myIndex.openCursor().onsuccess = function(event) {
-   const cursor = event.target.result;
-    if(cursor) {
-      const tableRow = document.createElement('tr');
-      tableRow.innerHTML = `<td>${cursor.value.id}</td>`
-                         + `<td>${cursor.value.lName}</td>`
-                         + `<td>${cursor.value.fName}</td>`
-                         + `<td>${cursor.value.jTitle}</td>`
-                         + `<td>${cursor.value.company}</td>`
-                         + `<td>${cursor.value.eMail}</td>`
-                         + `<td>${cursor.value.phone}</td>`
-                         + `<td>${cursor.value.age}</td>`;
+  const myIndex = objectStore.index("lName");
+  myIndex.openCursor().onsuccess = (event) => {
+    const cursor = event.target.result;
+    if (cursor) {
+      const tableRow = document.createElement("tr");
+      for (const cell of [
+        cursor.value.id,
+        cursor.value.lName,
+        cursor.value.fName,
+        cursor.value.jTitle,
+        cursor.value.company,
+        cursor.value.eMail,
+        cursor.value.phone,
+        cursor.value.age,
+      ]) {
+        const tableCell = document.createElement("td");
+        tableCell.textContent = cell;
+        tableRow.appendChild(tableCell);
+      }
       tableEntry.appendChild(tableRow);
 
       cursor.continue();
     } else {
-      console.log('Entries all displayed.');
+      console.log("Entries all displayed.");
     }
   };
-};
+}
 ```
 
 ## Specifications
@@ -111,4 +108,4 @@ function displayDataByIndex() {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([View the example live](https://mdn.github.io/dom-examples/to-do-notifications/)).

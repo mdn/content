@@ -1,18 +1,18 @@
 ---
 title: marker-end
 slug: Web/SVG/Attribute/marker-end
-tags:
-  - SVG
-  - SVG Attribute
-browser-compat: svg.attributes.presentation.marker-end
+page-type: svg-attribute
+browser-compat: svg.global_attributes.marker-end
 ---
+
 {{SVGRef}}
 
 The **`marker-end`** attribute defines the arrowhead or polymarker that will be drawn at the final vertex of the given [shape](/en-US/docs/Web/SVG/Element#shape_elements).
 
 For all shape elements, except {{SVGElement("polyline")}} and {{SVGElement("path")}}, the last vertex is the same as the first vertex. In this case, if the value of {{SVGAttr("marker-start")}} and `marker-end` are both not `none`, then two markers will be rendered on that final vertex. For `<path>` elements, for each closed subpath, the last vertex is the same as the first vertex. `marker-end` is only rendered on the final vertex of the [path data](/en-US/docs/Web/SVG/Attribute/d#path_commands).
 
-> **Note:** As a presentation attribute, `marker-end` can be used as a CSS property.
+> [!NOTE]
+> As a presentation attribute, `marker-end` also has a CSS property counterpart: {{cssxref("marker-end")}}. When both are specified, the CSS property takes priority.
 
 You can use this attribute with the following SVG elements:
 
@@ -27,7 +27,9 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 ```
@@ -35,16 +37,23 @@ html, body, svg {
 ```html
 <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <marker id="triangle" viewBox="0 0 10 10"
-          refX="1" refY="5"
-          markerUnits="strokeWidth"
-          markerWidth="10" markerHeight="10"
-          orient="auto">
-      <path d="M 0 0 L 10 5 L 0 10 z" fill="#f00"/>
+    <marker
+      id="triangle"
+      viewBox="0 0 10 10"
+      refX="1"
+      refY="5"
+      markerUnits="strokeWidth"
+      markerWidth="10"
+      markerHeight="10"
+      orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#f00" />
     </marker>
   </defs>
-  <polyline fill="none" stroke="black"
-      points="20,100 40,60 70,80 100,20" marker-end="url(#triangle)"/>
+  <polyline
+    fill="none"
+    stroke="black"
+    points="20,100 40,60 70,80 100,20"
+    marker-end="url(#triangle)" />
 </svg>
 ```
 
@@ -87,3 +96,4 @@ html, body, svg {
 - {{SVGElement("marker")}}
 - {{SVGAttr("marker-start")}}
 - {{SVGAttr("marker-mid")}}
+- CSS {{cssxref('marker-end')}} property

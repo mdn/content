@@ -1,100 +1,67 @@
 ---
 title: Array.prototype.findLast()
 slug: Web/JavaScript/Reference/Global_Objects/Array/findLast
-tags:
-  - Array
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - findLast
-  - Polyfill
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.findLast
 ---
+
 {{JSRef}}
 
-The **`findLast()`** method returns the value of the last element in an array that satisfies the provided testing function.
+The **`findLast()`** method of {{jsxref("Array")}} instances iterates the array in reverse order and returns the value of the first element that satisfies the provided testing function.
 If no elements satisfy the testing function, {{jsxref("undefined")}} is returned.
-
-{{EmbedInteractiveExample("pages/js/array-findlast.html","shorter")}}
 
 If you need to find:
 
-- the _first_ element that matches, use {{jsxref("Array.findIndex", "find()")}}.
-- the _index_ of the last matching element in the array, use {{jsxref("Array.findLastIndex", "findLastIndex()")}}.
-- the _index of a value_, use {{jsxref("Array.prototype.indexOf()")}}.
-  (It's similar to {{jsxref("Array.findIndex", "findIndex()")}}, but checks each element for equality with the value instead of using a testing function.)
-- whether a value _exists_ in an array, use {{jsxref("Array.prototype.includes()")}}.
+- the _first_ element that matches, use {{jsxref("Array/find", "find()")}}.
+- the _index_ of the last matching element in the array, use {{jsxref("Array/findLastIndex", "findLastIndex()")}}.
+- the _index of a value_, use {{jsxref("Array/indexOf", "indexOf()")}}.
+  (It's similar to {{jsxref("Array/findIndex", "findIndex()")}}, but checks each element for equality with the value instead of using a testing function.)
+- whether a value _exists_ in an array, use {{jsxref("Array/includes", "includes()")}}.
   Again, it checks each element for equality with the value instead of using a testing function.
-- if any element satisfies the provided testing function, use {{jsxref("Array.prototype.some()")}}.
+- if any element satisfies the provided testing function, use {{jsxref("Array/some", "some()")}}.
+
+{{InteractiveExample("JavaScript Demo: Array.findLast()", "shorter")}}
+
+```js interactive-example
+const array1 = [5, 12, 50, 130, 44];
+
+const found = array1.findLast((element) => element > 45);
+
+console.log(found);
+// Expected output: 130
+```
 
 ## Syntax
 
-```js
-// Arrow function
-findLast((element) => { /* … */ } )
-findLast((element, index) => { /* … */ } )
-findLast((element, index, array) => { /* … */ } )
-
-// Callback function
+```js-nolint
 findLast(callbackFn)
 findLast(callbackFn, thisArg)
-
-// Inline callback function
-findLast(function(element) { /* … */ })
-findLast(function(element, index) { /* … */ })
-findLast(function(element, index, array){ /* … */ })
-findLast(function(element, index, array) { /* … */ }, thisArg)
 ```
 
 ### Parameters
 
 - `callbackFn`
-
-  - : A function used to test elements in the array.
-
-    The function is called with the following arguments:
-
+  - : A function to execute for each element in the array. It should return a [truthy](/en-US/docs/Glossary/Truthy) value to indicate a matching element has been found, and a [falsy](/en-US/docs/Glossary/Falsy) value otherwise. The function is called with the following arguments:
     - `element`
-      - : The current element in the array.
+      - : The current element being processed in the array.
     - `index`
-      - : The index (position) of the current element in the array.
+      - : The index of the current element being processed in the array.
     - `array`
-      - : The array that `findLast()` was called on.
-
-    The callback must return a [truthy](/en-US/docs/Glossary/Truthy) value to indicate an appropriate element has been found.
-    The value of this element is returned by `findLast()`.
-
+      - : The array `findLast()` was called upon.
 - `thisArg` {{optional_inline}}
-  - : Object to use as {{jsxref("Operators/this", "this")}} when executing `callbackFn`.
+  - : A value to use as `this` when executing `callbackFn`. See [iterative methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods).
 
 ### Return value
 
-The value of the element in the array with the highest index value that satisfies the provided testing function; {{jsxref("undefined")}} if no matching element is found.
+The last (highest-index) element in the array that satisfies the provided testing function; {{jsxref("undefined")}} if no matching element is found.
 
 ## Description
 
-The `findLast()` method executes the `callbackFn` function once for each element of the array in descending-index order until `callbackFn` returns a [truthy](/en-US/docs/Glossary/Truthy) value.
-`findLast()` then returns the value of that element and stops iterating through the array.
-If `callbackFn` never returns a truthy value, `findLast()` returns {{jsxref("undefined")}}.
+The `findLast()` method is an [iterative method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods). It calls a provided `callbackFn` function once for each element in an array in descending-index order, until `callbackFn` returns a [truthy](/en-US/docs/Glossary/Truthy) value. `findLast()` then returns that element and stops iterating through the array. If `callbackFn` never returns a truthy value, `findLast()` returns {{jsxref("undefined")}}. Read the [iterative methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods) section for more information about how these methods work in general.
 
-`callbackFn` is invoked for _every_ index of the array, not just those with assigned values.
-This means it may be less efficient for sparse arrays, compared to methods that only visit assigned values.
+`callbackFn` is invoked for _every_ index of the array, not just those with assigned values. Empty slots in [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays) behave the same as `undefined`.
 
-If a `thisArg` parameter is provided to `findLast()`, it will be used as the `this` value inside each invocation of the `callbackFn`.
-If it is not provided, then {{jsxref("undefined")}} is used.
-
-The `findLast()` method does not mutate the array on which it is called, but the function provided to `callbackFn` can.
-The elements processed by `findLast()` are set _before_ the first invocation of `callbackFn`.
-Therefore:
-
-- `callbackFn` will not visit any elements added to the array after the call to `findLast()` begins.
-- Elements that are assigned to indexes that have already been visited will not be revisited by `callbackFn`.
-- Elements that are assigned to indexes outside the range, will not be visited by `callbackFn`.
-- If an existing, yet-unvisited element of the array is changed by `callbackFn`, its value passed to the `callbackFn` will be the value at the time `findLast()` visits that element's index.
-- Elements that are {{jsxref("Operators/delete", "deleted")}} are still visited.
-
-> **Warning:** Concurrent modification of the kind described in the previous paragraph frequently leads to hard-to-understand code and is generally to be avoided (except in special cases).
+The `findLast()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods). It only expects the `this` value to have a `length` property and integer-keyed properties.
 
 ## Examples
 
@@ -104,10 +71,10 @@ This example shows how you might create a test based on the properties of array 
 
 ```js
 const inventory = [
-  {name: 'apples', quantity: 2},
-  {name: 'bananas', quantity: 0},
-  {name: 'fish', quantity: 1},
-  {name: 'cherries', quantity: 5}
+  { name: "apples", quantity: 2 },
+  { name: "bananas", quantity: 0 },
+  { name: "fish", quantity: 1 },
+  { name: "cherries", quantity: 5 },
 ];
 
 // return true inventory stock is low
@@ -125,10 +92,10 @@ The previous example might be written using an arrow function and [object destru
 
 ```js
 const inventory = [
-  {name: 'apples', quantity: 2},
-  {name: 'bananas', quantity: 0},
-  {name: 'fish', quantity: 1},
-  {name: 'cherries', quantity: 5},
+  { name: "apples", quantity: 2 },
+  { name: "bananas", quantity: 0 },
+  { name: "fish", quantity: 1 },
+  { name: "cherries", quantity: 5 },
 ];
 
 const result = inventory.findLast(({ quantity }) => quantity < 2);
@@ -137,9 +104,9 @@ console.log(result);
 // { name: "fish", quantity: 1 }
 ```
 
-### Find last prime number in an array
+### Find the last prime number in an array
 
-The following example finds the last element in the array that is a prime number (or returns {{jsxref("undefined")}} if there is no prime number):
+The following example returns the last element in the array that is a prime number, or {{jsxref("undefined")}} if there is no prime number.
 
 ```js
 function isPrime(element) {
@@ -158,21 +125,46 @@ console.log([4, 6, 8, 12].findLast(isPrime)); // undefined, not found
 console.log([4, 5, 7, 8, 9, 11, 12].findLast(isPrime)); // 11
 ```
 
-### Nonexistent and deleted elements are visited
+### Using the third argument of callbackFn
 
-The following examples show that nonexistent and deleted elements _are_ visited, and that the value passed to the callback is their value when visited:
+The `array` argument is useful if you want to access another element in the array, especially when you don't have an existing variable that refers to the array. The following example first uses `filter()` to extract the positive values and then uses `findLast()` to find the last element that is less than its neighbors.
+
+```js
+const numbers = [3, -1, 1, 4, 1, 5, 9, 2, 6];
+const lastTrough = numbers
+  .filter((num) => num > 0)
+  .findLast((num, idx, arr) => {
+    // Without the arr argument, there's no way to easily access the
+    // intermediate array without saving it to a variable.
+    if (idx > 0 && num >= arr[idx - 1]) return false;
+    if (idx < arr.length - 1 && num >= arr[idx + 1]) return false;
+    return true;
+  });
+console.log(lastTrough); // 2
+```
+
+### Using findLast() on sparse arrays
+
+Empty slots in sparse arrays _are_ visited, and are treated the same as `undefined`.
 
 ```js
 // Declare array with no elements at indexes 2, 3, and 4
-const array = [0,1,,,,5,6];
+const array = [0, 1, , , , 5, 6];
 
 // Shows all indexes, not just those with assigned values
-array.findLast(function(value, index) {
+array.findLast((value, index) => {
   console.log(`Visited index ${index} with value ${value}`);
 });
+// Visited index 6 with value 6
+// Visited index 5 with value 5
+// Visited index 4 with value undefined
+// Visited index 3 with value undefined
+// Visited index 2 with value undefined
+// Visited index 1 with value 1
+// Visited index 0 with value 0
 
 // Shows all indexes, including deleted
-array.findLast(function(value, index) {
+array.findLast((value, index) => {
   // Delete element 5 on first iteration
   if (index === 6) {
     console.log(`Deleting array[5] with value ${array[5]}`);
@@ -181,22 +173,31 @@ array.findLast(function(value, index) {
   // Element 5 is still visited even though deleted
   console.log(`Visited index ${index} with value ${value}`);
 });
-// expected output:
-// > "Visited index 6 with value 6"
-// > "Visited index 5 with value 5"
-// > "Visited index 4 with value undefined"
-// > "Visited index 3 with value undefined"
-// > "Visited index 2 with value undefined"
-// > "Visited index 1 with value 1"
-// > "Visited index 0 with value 0"
-// > "Deleting array[5] with value 5"
-// > "Visited index 6 with value 6"
-// > "Visited index 5 with value undefined"
-// > "Visited index 4 with value undefined"
-// > "Visited index 3 with value undefined"
-// > "Visited index 2 with value undefined"
-// > "Visited index 1 with value 1"
-// > "Visited index 0 with value 0"
+// Deleting array[5] with value 5
+// Visited index 6 with value 6
+// Visited index 5 with value undefined
+// Visited index 4 with value undefined
+// Visited index 3 with value undefined
+// Visited index 2 with value undefined
+// Visited index 1 with value 1
+// Visited index 0 with value 0
+```
+
+### Calling findLast() on non-array objects
+
+The `findLast()` method reads the `length` property of `this` and then accesses each property whose key is a nonnegative integer less than `length`.
+
+```js
+const arrayLike = {
+  length: 3,
+  0: 2,
+  1: 7.3,
+  2: 4,
+  3: 3, // ignored by findLast() since length is 3
+};
+console.log(
+  Array.prototype.findLast.call(arrayLike, (x) => Number.isInteger(x)),
+); // 4
 ```
 
 ## Specifications
@@ -209,9 +210,14 @@ array.findLast(function(value, index) {
 
 ## See also
 
-- [Polyfill of `Array.prototype.findLast` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
-- {{jsxref("Array.prototype.findLastIndex()")}} – find last element and return its index
-- {{jsxref("Array.prototype.includes()")}} – test whether a value exists in the array
-- {{jsxref("Array.prototype.filter()")}} – remove all non-matching elements
-- {{jsxref("Array.prototype.every()")}} – test all elements
-- {{jsxref("Array.prototype.some()")}} – test until one element matches
+- [Polyfill of `Array.prototype.findLast` in `core-js`](https://github.com/zloirock/core-js#array-find-from-last)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
+- {{jsxref("Array")}}
+- {{jsxref("Array.prototype.find()")}}
+- {{jsxref("Array.prototype.findIndex()")}}
+- {{jsxref("Array.prototype.findLastIndex()")}}
+- {{jsxref("Array.prototype.includes()")}}
+- {{jsxref("Array.prototype.filter()")}}
+- {{jsxref("Array.prototype.every()")}}
+- {{jsxref("Array.prototype.some()")}}
+- {{jsxref("TypedArray.prototype.findLast()")}}

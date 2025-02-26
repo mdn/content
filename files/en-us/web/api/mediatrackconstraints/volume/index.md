@@ -1,23 +1,15 @@
 ---
-title: MediaTrackConstraints.volume
+title: "MediaTrackConstraints: volume property"
+short-title: volume
 slug: Web/API/MediaTrackConstraints/volume
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - Constraints
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaTrackConstraints
-  - Property
-  - Reference
-  - Volume
-  - WebRTC
-  - getusermedia
-browser-compat: api.MediaTrackConstraints.volume
+status:
+  - deprecated
+  - non-standard
+browser-compat: api.MediaStreamTrack.applyConstraints.volume_constraint
 ---
-{{DefaultAPISidebar("Media Capture and Streams")}}{{deprecated_header}}
+
+{{APIRef("Media Capture and Streams")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The {{domxref("MediaTrackConstraints")}} dictionary's
 **`volume`** property is a [`ConstrainDouble`](/en-US/docs/Web/API/MediaTrackConstraints#constraindouble)
@@ -47,8 +39,7 @@ satisfied and will result in failure.
 
 ## Examples
 
-See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Example:
-  Constraint exerciser")}} for an example.
+See the [Constraint exerciser](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints#example_constraint_exerciser) example.
 
 ## Browser compatibility
 
@@ -56,8 +47,8 @@ See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Exampl
 
 ## See also
 
-- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Streams_API)
-- [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints)
+- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API)
+- [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints)
 - {{domxref("MediaTrackConstraints")}}
 - {{domxref("MediaDevices.getSupportedConstraints()")}}
 - {{domxref("MediaTrackSupportedConstraints")}}

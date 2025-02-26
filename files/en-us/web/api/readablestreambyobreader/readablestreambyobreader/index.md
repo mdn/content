@@ -1,25 +1,22 @@
 ---
-title: ReadableStreamBYOBReader()
+title: "ReadableStreamBYOBReader: ReadableStreamBYOBReader() constructor"
+short-title: ReadableStreamBYOBReader()
 slug: Web/API/ReadableStreamBYOBReader/ReadableStreamBYOBReader
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - ReadableStreamBYOBReader
-  - Reference
-  - Streams
 browser-compat: api.ReadableStreamBYOBReader.ReadableStreamBYOBReader
 ---
-{{APIRef("Streams")}}
+
+{{APIRef("Streams")}}{{AvailableInWorkers}}
 
 The **`ReadableStreamBYOBReader()`** constructor creates and returns a `ReadableStreamBYOBReader` object instance.
 
-> **Note:** You generally wouldn't use this constructor manually;
+> [!NOTE]
+> You generally wouldn't use this constructor manually;
 > instead, you'd use the {{domxref("ReadableStream.getReader()")}} method with the argument `"byob"`.
 
 ## Syntax
 
-```js
+```js-nolint
 new ReadableStreamBYOBReader(stream)
 ```
 
@@ -43,7 +40,7 @@ The constructor is rarely called directly.
 Instead call {{domxref("ReadableStream.getReader()")}} as shown:
 
 ```js
-const reader = stream.getReader({mode: "byob"});
+const reader = stream.getReader({ mode: "byob" });
 ```
 
 ## Specifications
@@ -53,3 +50,8 @@ const reader = stream.getReader({mode: "byob"});
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("ReadableStreamBYOBReader")}}
+- [Using readable byte stream](/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams)

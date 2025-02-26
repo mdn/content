@@ -1,28 +1,20 @@
 ---
-title: URLSearchParams.values()
+title: "URLSearchParams: values() method"
+short-title: values()
 slug: Web/API/URLSearchParams/values
 page-type: web-api-instance-method
-tags:
-  - API
-  - Iterator
-  - Method
-  - Reference
-  - URL API
-  - URLSearchParams
 browser-compat: api.URLSearchParams.values
 ---
-{{APIRef("URL API")}}
+
+{{APIRef("URL API")}} {{AvailableInWorkers}}
 
 The **`values()`** method of the {{domxref("URLsearchParams")}}
 interface returns an {{jsxref("Iteration_protocols",'iterator')}} allowing iteration
-through all values contained in this object. The values are string
-objects.
-
-{{availableinworkers}}
+through all values contained in this object. The values are strings.
 
 ## Syntax
 
-```js
+```js-nolint
 values()
 ```
 
@@ -48,7 +40,7 @@ for (const value of searchParams.values()) {
 
 The result is:
 
-```
+```plain
 value1
 value2
 ```
@@ -63,7 +55,7 @@ console.log(Array.from(searchParams.values()));
 
 The result is:
 
-```
+```plain
 ['value1', 'value2']
 ```
 

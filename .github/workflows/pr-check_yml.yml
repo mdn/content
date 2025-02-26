@@ -1,0 +1,36 @@
+name: Lint YAML
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - .nvmrc
+      - yarn.lock
+      - "**/*.yml"
+      - .github/workflows/pr-check_yml.yml
+
+# No GITHUB_TOKEN permissions, as we only use it to increase API limit.
+permissions: {}
+
+jobs:
+  lint-yml:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: ".nvmrc"
+          cache: yarn
+
+      - name: Install all yarn packages
+        run: yarn --frozen-lockfile
+        env:
+          # https://github.com/microsoft/vscode-ripgrep#github-api-limit-note
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Lint markdown files
+        run: yarn lint:yml

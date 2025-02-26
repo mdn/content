@@ -1,23 +1,19 @@
 ---
-title: DOMException()
+title: "DOMException: DOMException() constructor"
+short-title: DOMException()
 slug: Web/API/DOMException/DOMException
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - DOMException
-  - Reference
-  - Polyfill
 browser-compat: api.DOMException.DOMException
 ---
-{{ APIRef("DOM") }}
+
+{{APIRef("DOM")}}{{AvailableInWorkers}}
 
 The **`DOMException()`** constructor returns a
 {{domxref("DOMException")}} object with a specified message and name.
 
 ## Syntax
 
-```js
+```js-nolint
 new DOMException()
 new DOMException(message)
 new DOMException(message, name)
@@ -26,10 +22,9 @@ new DOMException(message, name)
 ### Parameters
 
 - `message` {{optional_inline}}
-  - : A description of the exception. If not present, the empty string `''` is
-    used.
+  - : A description of the exception. If not present, the empty string `''` is used.
 - `name` {{optional_inline}}
-  - : A string. If the specified name is a [standard error name](/en-US/docs/Web/API/DOMException#error_names), then getting the [`code`](/en-US/docs/Web/API/DOMException/code) property of the `DOMException` object will return the code number corresponding to the specified name.
+  - : A string. If the specified name is a [standard error name](/en-US/docs/Web/API/DOMException#error_names), then getting the [`code`](/en-US/docs/Web/API/DOMException/code) property of the `DOMException` object will return the code number corresponding to the specified name. If not present, the string `'Error'` is used.
 
 ### Return value
 
@@ -50,15 +45,15 @@ In this example, pressing the button causes a custom `DOMException` to be thrown
 ### JavaScript
 
 ```js
-const button = document.querySelector('button');
+const button = document.querySelector("button");
 
-button.onclick = function() {
-    try {
-        throw new DOMException("Custom DOM Exception Triggered.");
-    } catch(error) {
-        document.querySelector("#output").textContent = `Error: ${error.message}`;
-    }
-}
+button.onclick = () => {
+  try {
+    throw new DOMException("Custom DOM Exception Triggered.");
+  } catch (error) {
+    document.querySelector("#output").textContent = `Error: ${error.message}`;
+  }
+};
 ```
 
 ### Result

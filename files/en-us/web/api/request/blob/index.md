@@ -1,24 +1,19 @@
 ---
-title: Request.blob()
+title: "Request: blob() method"
+short-title: blob()
 slug: Web/API/Request/blob
 page-type: web-api-instance-method
-tags:
-  - API
-  - Blob
-  - Fetch
-  - Method
-  - Reference
-  - Request
 browser-compat: api.Request.blob
 ---
-{{APIRef("Fetch")}}
+
+{{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
 The **`blob()`** method of the {{domxref("Request")}} interface
 reads the request body and returns it as a promise that resolves with a {{domxref("Blob")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 blob()
 ```
 
@@ -33,15 +28,17 @@ A promise that resolves with a {{domxref("Blob")}}.
 ## Examples
 
 ```js
-const obj = {hello: 'world'};
-const myBlob = new Blob([JSON.stringify(obj, null, 2)], {type : 'application/json'});
+const obj = { hello: "world" };
+const myBlob = new Blob([JSON.stringify(obj, null, 2)], {
+  type: "application/json",
+});
 
-const request = new Request('/myEndpoint', {
-  method: 'POST',
-  body: myBlob
- });
+const request = new Request("/myEndpoint", {
+  method: "POST",
+  body: myBlob,
+});
 
-request.blob().then(function(myBlob) {
+request.blob().then((myBlob) => {
   // do something with the blob sent in the request
 });
 ```

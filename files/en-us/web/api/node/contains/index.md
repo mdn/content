@@ -1,12 +1,11 @@
 ---
-title: Node.contains()
+title: "Node: contains() method"
+short-title: contains()
 slug: Web/API/Node/contains
 page-type: web-api-instance-method
-tags:
-  - Method
-  - Reference
 browser-compat: api.Node.contains
 ---
+
 {{APIRef("DOM")}}
 
 The **`contains()`** method of the {{domxref("Node")}} interface
@@ -15,12 +14,13 @@ whether a node is a descendant of a given node, that is the node itself,
 one of its direct children ({{domxref("Node.childNodes", "childNodes")}}),
 one of the children's direct children, and so on.
 
-> **Note:** A node is _contained_ inside itself.
+> [!NOTE]
+> A node is _contained_ inside itself.
 
 ## Syntax
 
-```js
-contains(otherNode);
+```js-nolint
+contains(otherNode)
 ```
 
 ### Parameters
@@ -45,7 +45,7 @@ intention of `isInPage` this case explicitly returns `false`.
 
 ```js
 function isInPage(node) {
-  return (node === document.body) ? false : document.body.contains(node);
+  return node === document.body ? false : document.body.contains(node);
 }
 ```
 

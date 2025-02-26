@@ -1,22 +1,18 @@
 ---
-title: AudioEncoder.close()
+title: "AudioEncoder: close() method"
+short-title: close()
 slug: Web/API/AudioEncoder/close
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - close
-  - AudioEncoder
 browser-compat: api.AudioEncoder.close
 ---
-{{securecontext_header}}{{DefaultAPISidebar("WebCodecs API")}}
+
+{{securecontext_header}}{{APIRef("WebCodecs API")}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`close()`** method of the {{domxref("AudioEncoder")}} interface ends all pending work and releases system resources.
 
 ## Syntax
 
-```js
+```js-nolint
 close()
 ```
 

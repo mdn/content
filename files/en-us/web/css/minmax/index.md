@@ -1,20 +1,13 @@
 ---
 title: minmax()
 slug: Web/CSS/minmax
-tags:
-  - CSS
-  - CSS Function
-  - CSS Grid
-  - Experimental
-  - Function
-  - Layout
-  - Reference
-  - Web
+page-type: css-function
 browser-compat: css.properties.grid-template-columns.minmax
 ---
+
 {{CSSRef}}
 
-The **`minmax()`** [CSS function](/en-US/docs/Web/CSS/CSS_Functions) defines a size range greater than or equal to _min_ and less than or equal to _max_. It is used with [CSS Grids](/en-US/docs/Web/CSS/CSS_Grid_Layout).
+The **`minmax()`** [CSS function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) defines a size range greater than or equal to _min_ and less than or equal to _max_. It is used with [CSS grids](/en-US/docs/Web/CSS/CSS_grid_layout).
 
 {{EmbedInteractiveExample("pages/css/function-minmax.html")}}
 
@@ -66,11 +59,12 @@ If _max_ < _min_, then _max_ is ignored and `minmax(min,max)` is treated as _min
 - `min-content`
   - : Represents the largest min-content contribution of the grid items occupying the grid track.
 - `auto`
-  - : As a maximum, identical to `max-content`. As a minimum it represents the largest minimum size (as specified by {{cssxref("min-width")}}/{{cssxref("min-height")}}) of the grid items occupying the grid track.
+  - : As `min`, it represents the largest minimum size (as specified by {{cssxref("min-width")}}/{{cssxref("min-height")}}) of the grid items occupying the grid track.
+    As `max`, it is identical to `max-content`. However, unlike `max-content`, it allows expansion of the track by the {{cssxref("align-content")}} and {{cssxref("justify-content")}} property values like `normal` and `stretch`.
 
-### Formal syntax
+## Formal syntax
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ### CSS properties
 
@@ -107,15 +101,9 @@ If _max_ < _min_, then _max_ is ignored and `minmax(min,max)` is treated as _min
 
 ```html
 <div id="container">
-  <div>
-    Item as wide as the content, but at most 300 pixels.
-  </div>
-  <div>
-    Item with flexible width but a minimum of 200 pixels.
-  </div>
-  <div>
-    Inflexible item of 150 pixels width.
-  </div>
+  <div>Item as wide as the content, but at most 300 pixels.</div>
+  <div>Item with flexible width but a minimum of 200 pixels.</div>
+  <div>Inflexible item of 150 pixels width.</div>
 </div>
 ```
 
@@ -133,6 +121,6 @@ If _max_ < _min_, then _max_ is ignored and `minmax(min,max)` is treated as _min
 
 ## See also
 
-- Grid Layout Guide: _[Basic concepts of grid layout - track sizing with minmax()](/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#track_sizing_and_minmax)_
-- [CSS grids, logical values and writing modes](/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Logical_Values_and_Writing_Modes)
-- Video tutorial: _[Introducing minmax()](https://gridbyexample.com/video/series-minmax/)_
+- [Basic concepts of grid layout: track sizing with minmax()](/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#track_sizing_and_minmax)
+- [CSS grids, logical values and writing modes](/en-US/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)
+- Video: [Introducing minmax()](https://gridbyexample.com/video/series-minmax/)

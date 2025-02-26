@@ -1,26 +1,18 @@
 ---
 title: Interact with the clipboard
 slug: Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard
-tags:
-  - Add-ons
-  - Clip
-  - Clipboard
-  - Cut
-  - Editing
-  - Extensions
-  - Text
-  - WebExtensions
-  - copy
-  - paste
+page-type: guide
 browser-compat:
   - api.Clipboard
   - webextensions.api.clipboard
 ---
+
 {{AddonSidebar}}
 
 Working with the clipboard in extensions is transitioning from the Web API {{domxref("Document.execCommand()","document.execCommand")}} method (which is deprecated) to the {{domxref("Clipboard", "navigator.clipboard")}} method.
 
-> **Note:** The {{domxref("Clipboard", "navigator.clipboard")}} API is a recent addition to the specification and may not be fully implemented in all browsers. This article describes some limitations, but be sure to review the compatibility tables for each method before using them to ensure that the API supports your needs.
+> [!NOTE]
+> The {{domxref("Clipboard", "navigator.clipboard")}} API is a recent addition to the specification and may not be fully implemented in all browsers. This article describes some limitations, but be sure to review the compatibility tables for each method before using them to ensure that the API supports your needs.
 
 The difference between the two APIs is that {{domxref("Document.execCommand()","document.execCommand")}} this is analogous to the keyboard copy, cut, and paste actions – exchanging data between a webpage and clipboard – whereas {{domxref("Clipboard", "navigator.clipboard")}} writes and reads arbitrary data to and from the clipboard.
 
@@ -45,24 +37,28 @@ The Clipboard API writes arbitrary data to the clipboard from your extension. Us
 For page scripts, the `"clipboard-write"` permission needs to be requested using the Web API {{domxref("Permissions", "navigator.permissions")}}. You can check for that permission using {{domxref("Permissions.query", "navigator.permissions.query()")}}:
 
 ```js
-navigator.permissions.query({name: "clipboard-write"}).then((result) => {
-  if (result.state == "granted" || result.state == "prompt") {
+navigator.permissions.query({ name: "clipboard-write" }).then((result) => {
+  if (result.state === "granted" || result.state === "prompt") {
     /* write to the clipboard now */
   }
 });
 ```
 
-> **Note:** The `clipboard-write` permission name is not supported in Firefox, only Chromium browsers.
+> [!NOTE]
+> The `clipboard-write` permission name is not supported in Firefox, only Chromium browsers.
 
 This function takes a string and writes it to the clipboard:
 
 ```js
 function updateClipboard(newClip) {
-  navigator.clipboard.writeText(newClip).then(function() {
-    /* clipboard successfully set */
-  }, function() {
-    /* clipboard write failed */
-  });
+  navigator.clipboard.writeText(newClip).then(
+    () => {
+      /* clipboard successfully set */
+    },
+    () => {
+      /* clipboard write failed */
+    },
+  );
 }
 ```
 
@@ -73,8 +69,7 @@ The `"cut"` and `"copy"` commands of the {{domxref("Document.execCommand", "docu
 For example, suppose you've got a popup that includes the following HTML:
 
 ```html
-<input id="input" type="text"/>
-<button id="copy">Copy</button>
+<input id="input" type="text" /> <button id="copy">Copy</button>
 ```
 
 To make the `"copy"` button copy the contents of the {{HTMLElement("input")}} element, you can use code like this:
@@ -101,7 +96,7 @@ function copy() {
 }
 
 browser.alarms.create({
-  delayInMinutes: 0.1
+  delayInMinutes: 0.1,
 });
 
 browser.alarms.onAlarm.addListener(copy);
@@ -113,7 +108,7 @@ Depending on the browser, this may not work. On Firefox, it will not work, and y
 
 To enable this use case, you need to ask for the `"clipboardWrite"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions). So: `"clipboardWrite"` enables you to write to the clipboard outside a short-lived event handler for a user action.
 
-> **Note:**{{domxref("Document.execCommand", "document.execCommand()")}} does not work on input fields of `type="hidden"`, with the HTML5 attribute `"hidden"`, or any matching CSS rule using `"display: none;"`. So, to add a "copy to clipboard" button to a `span`, `div`, or `p` tag, you need to use a workaround, such as setting the input's position to absolute and moving it out of the viewport.
+> **Note:** {{domxref("Document.execCommand", "document.execCommand()")}} does not work on input fields of `type="hidden"`, with the HTML5 attribute `"hidden"`, or any matching CSS rule using `"display: none;"`. So, to add a "copy to clipboard" button to a `span`, `div`, or `p` tag, you need to use a workaround, such as setting the input's position to absolute and moving it out of the viewport.
 
 ### Browser-specific considerations
 
@@ -140,8 +135,9 @@ The Clipboard API's {{domxref("Clipboard.readText", "navigator.clipboard.readTex
 Once you have the `"clipboard-read"` permission from the [Permissions API](/en-US/docs/Web/API/Permissions_API), you can read from the clipboard easily. For example, this snippet of code fetches the text from the clipboard and replaces the contents of the element with the ID `"outbox"` with that text.
 
 ```js
-navigator.clipboard.readText().then((clipText) =>
-  document.getElementById("outbox").innerText = clipText);
+navigator.clipboard
+  .readText()
+  .then((clipText) => (document.getElementById("outbox").innerText = clipText));
 ```
 
 ### Using execCommand()
@@ -151,8 +147,7 @@ To use {{domxref("Document.execCommand()","document.execCommand(&#34;paste&#34;)
 Consider HTML that includes something like this:
 
 ```html
-<textarea id="output"></textarea>
-<button id="paste">Paste</button>
+<textarea id="output"></textarea> <button id="paste">Paste</button>
 ```
 
 To set the content of the {{HTMLElement("textarea")}} element with the ID `"output"` from the clipboard when the user clicks the `"paste"` {{HTMLElement("button")}}, you can use code like this:
@@ -170,7 +165,7 @@ document.querySelector("#paste").addEventListener("click", paste);
 
 ### Browser-specific considerations
 
-Firefox supports the `"clipboardRead"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) from version 54 but only supports pasting into elements in [content editable mode](/en-US/docs/Web/Guide/HTML/Editable_content), which for content scripts only works with a {{HTMLElement("textarea")}}. For background scripts, any element can be set to content editable mode.
+Firefox supports the `"clipboardRead"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) from version 54 but only supports pasting into elements in [content editable mode](/en-US/docs/Web/HTML/Global_attributes/contenteditable), which for content scripts only works with a {{HTMLElement("textarea")}}. For background scripts, any element can be set to content editable mode.
 
 ## Browser compatibility
 
@@ -180,5 +175,4 @@ Firefox supports the `"clipboardRead"` [permission](/en-US/docs/Mozilla/Add-ons/
 
 - [Clipboard API](/en-US/docs/Web/API/Clipboard_API)
 - [Permissions API](/en-US/docs/Web/API/Permissions_API)
-- [Making content editable](/en-US/docs/Web/Guide/HTML/Editable_content)
-- {{htmlattrxref("contenteditable")}}
+- [Make content editable](/en-US/docs/Web/HTML/Global_attributes/contenteditable)

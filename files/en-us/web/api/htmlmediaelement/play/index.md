@@ -1,19 +1,11 @@
 ---
-title: HTMLMediaElement.play()
+title: "HTMLMediaElement: play() method"
+short-title: play()
 slug: Web/API/HTMLMediaElement/play
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - HTMLMediaElement
-  - Interface
-  - Media
-  - Method
-  - Reference
-  - Video
-  - play
 browser-compat: api.HTMLMediaElement.play
 ---
+
 {{APIRef("HTML DOM")}}
 
 The {{domxref("HTMLMediaElement")}}
@@ -26,7 +18,7 @@ permission issues, result in the promise being rejected.
 
 ## Syntax
 
-```js
+```js-nolint
 play()
 ```
 
@@ -39,19 +31,20 @@ None.
 A {{jsxref("Promise")}} which is resolved when playback has been started, or is
 rejected if for any reason playback cannot be started.
 
-> **Note:** Browsers released before 2019 may not return a value from
+> [!NOTE]
+> Browsers released before 2019 may not return a value from
 > `play()`.
 
 ### Exceptions
 
-The promise's **rejection handler** is called with an exception name
+The promise's **rejection handler** is called with a {{domxref("DOMException")}} object
 passed in as its sole input parameter (as opposed to a traditional exception being
 thrown). Possible errors include:
 
 - `NotAllowedError` {{domxref("DOMException")}}
   - : Provided if the user agent (browser) or operating system doesn't allow playback of media in the
-    current context or situation. This may happen, for example, if the browser requires
-    the user to explicitly start media playback by clicking a "play" button.
+    current context or situation. The browser may require the user to explicitly start
+    media playback by clicking a "play" button, for example because of a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
 - `NotSupportedError` {{domxref("DOMException")}}
   - : Provided if the media source (which may be specified as a {{domxref("MediaStream")}},
     {{domxref("MediaSource")}}, {{domxref("Blob")}}, or {{domxref("File")}}, for example)
@@ -68,18 +61,19 @@ apply to any script-initiated playback of media, including calls to `play()`.
 
 If the {{Glossary("user agent")}} is configured not to allow automatic or
 script-initiated playback of media, calling `play()` will cause the returned
-promise to be immediately rejected with a `NotAllowedError`. Web sites should
+promise to be immediately rejected with a `NotAllowedError`. Websites should
 be prepared to handle this situation. For example, a site should not present a user
 interface that assumes playback has begun automatically, but should instead update their
 UI based on whether the returned promise is fulfilled or rejected. See the
 [example](#examples) below for more information.
 
-> **Note:** The `play()` method may cause the user to be asked
+> [!NOTE]
+> The `play()` method may cause the user to be asked
 > to grant permission to play the media, resulting in a possible delay before the
 > returned promise is resolved. Be sure your code doesn't expect an immediate response.
 
 For even more in-depth information about autoplay and autoplay blocking, see our
-article [Autoplay guide for media and Web Audio APIs](/en-US/docs/Web/Media/Autoplay_guide).
+article [Autoplay guide for media and Web Audio APIs](/en-US/docs/Web/Media/Guides/Autoplay).
 
 ## Examples
 
@@ -88,7 +82,7 @@ handle blocked automatic playback:
 
 ```js
 let videoElem = document.getElementById("video");
-let playButton = document.getElementById("playbutton");
+let playButton = document.getElementById("play-button");
 
 playButton.addEventListener("click", handlePlayButton, false);
 playVideo();
@@ -97,7 +91,7 @@ async function playVideo() {
   try {
     await videoElem.play();
     playButton.classList.add("playing");
-  } catch(err) {
+  } catch (err) {
     playButton.classList.remove("playing");
   }
 }
@@ -140,6 +134,6 @@ You can [try out or remix this example in real time on Glitch](https://media-pla
 ## See also
 
 - [Web media technologies](/en-US/docs/Web/Media)
-- Learning: [Video and audio content](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
-- [Autoplay guide for media and Web Audio APIs](/en-US/docs/Web/Media/Autoplay_guide)
+- Learning: [HTML video and audio](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
+- [Autoplay guide for media and Web Audio APIs](/en-US/docs/Web/Media/Guides/Autoplay)
 - [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

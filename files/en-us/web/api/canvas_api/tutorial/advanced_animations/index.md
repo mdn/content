@@ -2,12 +2,9 @@
 title: Advanced animations
 slug: Web/API/Canvas_API/Tutorial/Advanced_animations
 page-type: guide
-tags:
-  - Canvas
-  - Graphics
-  - Tutorial
 ---
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_animations", "Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas")}}
+
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_animations", "Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas")}}
 
 In the last chapter we made some [basic animations](/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations) and got to know ways to get things moving. In this part we will have a closer look at the motion itself and are going to add some physics to make our animations more advanced.
 
@@ -22,21 +19,21 @@ We are going to use a ball for our animation studies, so let's first draw that b
 As usual, we need a drawing context first. To draw the ball, we will create a `ball` object which contains properties and a `draw()` method to paint it on the canvas.
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 const ball = {
   x: 100,
   y: 100,
   radius: 25,
-  color: 'blue',
+  color: "blue",
   draw() {
     ctx.beginPath();
     ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, true);
     ctx.closePath();
     ctx.fillStyle = this.color;
     ctx.fill();
-  }
+  },
 };
 
 ball.draw();
@@ -49,8 +46,8 @@ Nothing special here, the ball is actually a simple circle and gets drawn with t
 Now that we have a ball, we are ready to add a basic animation like we have learned in the [last chapter](/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations) of this tutorial. Again, {{domxref("window.requestAnimationFrame()")}} helps us to control the animation. The ball gets moving by adding a velocity vector to the position. For each frame, we also {{domxref("CanvasRenderingContext2D.clearRect", "clear", "", 1)}} the canvas to remove old circles from prior frames.
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 let raf;
 
 const ball = {
@@ -59,29 +56,29 @@ const ball = {
   vx: 5,
   vy: 2,
   radius: 25,
-  color: 'blue',
+  color: "blue",
   draw() {
     ctx.beginPath();
     ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, true);
     ctx.closePath();
     ctx.fillStyle = this.color;
     ctx.fill();
-  }
+  },
 };
 
 function draw() {
-  ctx.clearRect(0,0, canvas.width, canvas.height);
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
   ball.draw();
   ball.x += ball.vx;
   ball.y += ball.vy;
   raf = window.requestAnimationFrame(draw);
 }
 
-canvas.addEventListener('mouseover', function(e) {
+canvas.addEventListener("mouseover", (e) => {
   raf = window.requestAnimationFrame(draw);
 });
 
-canvas.addEventListener('mouseout', function(e) {
+canvas.addEventListener("mouseout", (e) => {
   window.cancelAnimationFrame(raf);
 });
 
@@ -93,10 +90,16 @@ ball.draw();
 Without any boundary collision testing our ball runs out of the canvas quickly. We need to check if the `x` and `y` position of the ball is out of the canvas dimensions and invert the direction of the velocity vectors. To do so, we add the following checks to the `draw` method:
 
 ```js
-if (ball.y + ball.vy > canvas.height || ball.y + ball.vy < 0) {
+if (
+  ball.y + ball.vy > canvas.height - ball.radius ||
+  ball.y + ball.vy < ball.radius
+) {
   ball.vy = -ball.vy;
 }
-if (ball.x + ball.vx > canvas.width || ball.x + ball.vx < 0) {
+if (
+  ball.x + ball.vx > canvas.width - ball.radius ||
+  ball.x + ball.vx < ball.radius
+) {
   ball.vx = -ball.vx;
 }
 ```
@@ -114,8 +117,8 @@ Let's see how it looks in action so far.
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 let raf;
 
 const ball = {
@@ -124,39 +127,43 @@ const ball = {
   vx: 5,
   vy: 2,
   radius: 25,
-  color: 'blue',
+  color: "blue",
   draw() {
     ctx.beginPath();
     ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, true);
     ctx.closePath();
     ctx.fillStyle = this.color;
     ctx.fill();
-  }
+  },
 };
 
 function draw() {
-  ctx.clearRect(0,0, canvas.width, canvas.height);
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
   ball.draw();
   ball.x += ball.vx;
   ball.y += ball.vy;
 
-  if (ball.y + ball.vy > canvas.height ||
-      ball.y + ball.vy < 0) {
+  if (
+    ball.y + ball.vy > canvas.height - ball.radius ||
+    ball.y + ball.vy < ball.radius
+  ) {
     ball.vy = -ball.vy;
   }
-  if (ball.x + ball.vx > canvas.width ||
-      ball.x + ball.vx < 0) {
+  if (
+    ball.x + ball.vx > canvas.width - ball.radius ||
+    ball.x + ball.vx < ball.radius
+  ) {
     ball.vx = -ball.vx;
   }
 
   raf = window.requestAnimationFrame(draw);
 }
 
-canvas.addEventListener('mouseover', function(e) {
+canvas.addEventListener("mouseover", (e) => {
   raf = window.requestAnimationFrame(draw);
 });
 
-canvas.addEventListener('mouseout', function(e) {
+canvas.addEventListener("mouseout", (e) => {
   window.cancelAnimationFrame(raf);
 });
 
@@ -174,8 +181,8 @@ Move your mouse into the canvas to start the animation.
 To make the motion more real, you can play with the velocity like this, for example:
 
 ```js
-ball.vy *= .99;
-ball.vy += .25;
+ball.vy *= 0.99;
+ball.vy += 0.25;
 ```
 
 This slows down the vertical velocity each frame, so that the ball will just bounce on the floor in the end.
@@ -191,8 +198,8 @@ This slows down the vertical velocity each frame, so that the ball will just bou
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 let raf;
 
 const ball = {
@@ -201,41 +208,45 @@ const ball = {
   vx: 5,
   vy: 2,
   radius: 25,
-  color: 'blue',
+  color: "blue",
   draw() {
     ctx.beginPath();
     ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, true);
     ctx.closePath();
     ctx.fillStyle = this.color;
     ctx.fill();
-  }
+  },
 };
 
 function draw() {
-  ctx.clearRect(0,0, canvas.width, canvas.height);
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
   ball.draw();
   ball.x += ball.vx;
   ball.y += ball.vy;
-  ball.vy *= .99;
-  ball.vy += .25;
+  ball.vy *= 0.99;
+  ball.vy += 0.25;
 
-  if (ball.y + ball.vy > canvas.height ||
-      ball.y + ball.vy < 0) {
+  if (
+    ball.y + ball.vy > canvas.height - ball.radius ||
+    ball.y + ball.vy < ball.radius
+  ) {
     ball.vy = -ball.vy;
   }
-  if (ball.x + ball.vx > canvas.width ||
-      ball.x + ball.vx < 0) {
+  if (
+    ball.x + ball.vx > canvas.width - ball.radius ||
+    ball.x + ball.vx < ball.radius
+  ) {
     ball.vx = -ball.vx;
   }
 
   raf = window.requestAnimationFrame(draw);
 }
 
-canvas.addEventListener('mouseover', function(e) {
+canvas.addEventListener("mouseover", (e) => {
   raf = window.requestAnimationFrame(draw);
 });
 
-canvas.addEventListener('mouseout', function(e) {
+canvas.addEventListener("mouseout", (e) => {
   window.cancelAnimationFrame(raf);
 });
 
@@ -251,7 +262,7 @@ ball.draw();
 Until now we have made use of the {{domxref("CanvasRenderingContext2D.clearRect", "clearRect")}} method when clearing prior frames. If you replace this method with a semi-transparent {{domxref("CanvasRenderingContext2D.fillRect", "fillRect")}}, you can easily create a trailing effect.
 
 ```js
-ctx.fillStyle = 'rgba(255, 255, 255, 0.3)';
+ctx.fillStyle = "rgb(255 255 255 / 30%)";
 ctx.fillRect(0, 0, canvas.width, canvas.height);
 ```
 
@@ -266,8 +277,8 @@ ctx.fillRect(0, 0, canvas.width, canvas.height);
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 let raf;
 
 const ball = {
@@ -276,42 +287,46 @@ const ball = {
   vx: 5,
   vy: 2,
   radius: 25,
-  color: 'blue',
+  color: "blue",
   draw() {
     ctx.beginPath();
     ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, true);
     ctx.closePath();
     ctx.fillStyle = this.color;
     ctx.fill();
-  }
+  },
 };
 
 function draw() {
-  ctx.fillStyle = 'rgba(255, 255, 255, 0.3)';
+  ctx.fillStyle = "rgb(255 255 255 / 30%)";
   ctx.fillRect(0, 0, canvas.width, canvas.height);
   ball.draw();
   ball.x += ball.vx;
   ball.y += ball.vy;
-  ball.vy *= .99;
-  ball.vy += .25;
+  ball.vy *= 0.99;
+  ball.vy += 0.25;
 
-  if (ball.y + ball.vy > canvas.height ||
-      ball.y + ball.vy < 0) {
+  if (
+    ball.y + ball.vy > canvas.height - ball.radius ||
+    ball.y + ball.vy < ball.radius
+  ) {
     ball.vy = -ball.vy;
   }
-  if (ball.x + ball.vx > canvas.width ||
-      ball.x + ball.vx < 0) {
+  if (
+    ball.x + ball.vx > canvas.width - ball.radius ||
+    ball.x + ball.vx < ball.radius
+  ) {
     ball.vx = -ball.vx;
   }
 
   raf = window.requestAnimationFrame(draw);
 }
 
-canvas.addEventListener('mouseover', function(e) {
+canvas.addEventListener("mouseover", (e) => {
   raf = window.requestAnimationFrame(draw);
 });
 
-canvas.addEventListener('mouseout', function(e) {
+canvas.addEventListener("mouseout", (e) => {
   window.cancelAnimationFrame(raf);
 });
 
@@ -337,8 +352,8 @@ To get some control over the ball, we can make it follow our mouse using the [`m
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 let raf;
 let running = false;
 
@@ -348,19 +363,19 @@ const ball = {
   vx: 5,
   vy: 1,
   radius: 25,
-  color: 'blue',
+  color: "blue",
   draw() {
     ctx.beginPath();
     ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, true);
     ctx.closePath();
     ctx.fillStyle = this.color;
     ctx.fill();
-  }
+  },
 };
 
 function clear() {
-  ctx.fillStyle = 'rgba(255, 255, 255, 0.3)';
-  ctx.fillRect(0,0,canvas.width,canvas.height);
+  ctx.fillStyle = "rgb(255 255 255 / 30%)";
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
 }
 
 function draw() {
@@ -369,17 +384,23 @@ function draw() {
   ball.x += ball.vx;
   ball.y += ball.vy;
 
-  if (ball.y + ball.vy > canvas.height || ball.y + ball.vy < 0) {
+  if (
+    ball.y + ball.vy > canvas.height - ball.radius ||
+    ball.y + ball.vy < ball.radius
+  ) {
     ball.vy = -ball.vy;
   }
-  if (ball.x + ball.vx > canvas.width || ball.x + ball.vx < 0) {
+  if (
+    ball.x + ball.vx > canvas.width - ball.radius ||
+    ball.x + ball.vx < ball.radius
+  ) {
     ball.vx = -ball.vx;
   }
 
   raf = window.requestAnimationFrame(draw);
 }
 
-canvas.addEventListener('mousemove', function(e) {
+canvas.addEventListener("mousemove", (e) => {
   if (!running) {
     clear();
     ball.x = e.clientX;
@@ -388,14 +409,14 @@ canvas.addEventListener('mousemove', function(e) {
   }
 });
 
-canvas.addEventListener('click', function(e) {
+canvas.addEventListener("click", (e) => {
   if (!running) {
     raf = window.requestAnimationFrame(draw);
     running = true;
   }
 });
 
-canvas.addEventListener('mouseout', function(e) {
+canvas.addEventListener("mouseout", (e) => {
   window.cancelAnimationFrame(raf);
   running = false;
 });
@@ -416,6 +437,5 @@ This short chapter only explains some techniques to create more advanced animati
 ## See also
 
 - {{domxref("window.requestAnimationFrame()")}}
-- [Efficient animation for web games](/en-US/docs/Games/Techniques/Efficient_animation_for_web_games)
 
 {{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_animations", "Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas")}}

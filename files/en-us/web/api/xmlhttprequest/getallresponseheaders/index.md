@@ -1,22 +1,12 @@
 ---
-title: XMLHttpRequest.getAllResponseHeaders()
+title: "XMLHttpRequest: getAllResponseHeaders() method"
+short-title: getAllResponseHeaders()
 slug: Web/API/XMLHttpRequest/getAllResponseHeaders
 page-type: web-api-instance-method
-tags:
-  - API
-  - Fetch Headers
-  - Get Headers
-  - HTTP
-  - HTTP Header
-  - Method
-  - Reference
-  - Response Header
-  - XHR
-  - XMLHttpRequest
-  - getAllResponseHeaders
 browser-compat: api.XMLHttpRequest.getAllResponseHeaders
 ---
-{{APIRef('XMLHttpRequest')}}
+
+{{APIRef("XMLHttpRequest API")}} {{AvailableInWorkers("window_and_worker_except_service")}}
 
 The {{domxref("XMLHttpRequest")}} method
 **`getAllResponseHeaders()`** returns all the response
@@ -26,12 +16,13 @@ if no response has been received.
 If a network error happened, an empty string
 is returned.
 
-> **Note:** For multipart requests, this returns the headers from the
+> [!NOTE]
+> For multipart requests, this returns the headers from the
 > _current_ part of the request, not from the original channel.
 
 ## Syntax
 
-```js
+```js-nolint
 getAllResponseHeaders()
 ```
 
@@ -48,7 +39,7 @@ happened, an empty string is returned.
 
 An example of what a raw header string looks like:
 
-```
+```http
 date: Fri, 08 Dec 2017 21:04:30 GMT\r\n
 content-encoding: gzip\r\n
 x-content-type-options: nosniff\r\n
@@ -65,7 +56,8 @@ x-xss-protection: 1; mode=block\r\n
 Each line is terminated by both carriage return and line feed characters
 (`\r\n`). These are essentially delimiters separating each of the headers.
 
-> **Note:** In modern browsers, the header names are returned in all lower
+> [!NOTE]
+> In modern browsers, the header names are returned in all lower
 > case, as per the latest spec.
 
 ## Examples
@@ -79,9 +71,8 @@ const request = new XMLHttpRequest();
 request.open("GET", "foo.txt", true);
 request.send();
 
-request.onreadystatechange = function() {
-  if(this.readyState == this.HEADERS_RECEIVED) {
-
+request.onreadystatechange = () => {
+  if (request.readyState === this.HEADERS_RECEIVED) {
     // Get the raw header string
     const headers = request.getAllResponseHeaders();
 
@@ -91,14 +82,14 @@ request.onreadystatechange = function() {
 
     // Create a map of header names to values
     const headerMap = {};
-    arr.forEach(function (line) {
-      const parts = line.split(': ');
+    arr.forEach((line) => {
+      const parts = line.split(": ");
       const header = parts.shift();
-      const value = parts.join(': ');
+      const value = parts.join(": ");
       headerMap[header] = value;
     });
   }
-}
+};
 ```
 
 Once this is done, you can, for example:
@@ -120,6 +111,5 @@ This obtains the value of the {{httpheader("Content-Type")}} header into the var
 
 ## See also
 
-- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
-- Setting request headers: {{domxref("XMLHttpRequest.setRequestHeader",
-    "setRequestHeader()")}}
+- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
+- Setting request headers: {{domxref("XMLHttpRequest.setRequestHeader", "setRequestHeader()")}}

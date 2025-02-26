@@ -1,17 +1,10 @@
 ---
 title: column-count
 slug: Web/CSS/column-count
-tags:
-  - CSS
-  - CSS Multi-column Layout
-  - CSS Property
-  - Layout
-  - Reference
-  - column-count
-  - columns
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.column-count
 ---
+
 {{CSSRef}}
 
 The **`column-count`** [CSS](/en-US/docs/Web/CSS) property breaks an element's content into the specified number of columns.
@@ -58,9 +51,9 @@ column-count: unset;
 
 ```html
 <p class="content-box">
-  This is a bunch of text split into three columns
-  using the CSS `column-count` property. The text
-  is equally distributed over the columns.
+  This is a bunch of text split into three columns using the CSS
+  <code>column-count</code>
+  property. The text is equally distributed over the columns.
 </p>
 ```
 
@@ -86,5 +79,7 @@ column-count: unset;
 
 ## See also
 
-- [Multiple-column Layout](/en-US/docs/Learn/CSS/CSS_layout/Multiple-column_Layout) (Learn Layout)
-- [Basic Concepts of Multicol](/en-US/docs/Web/CSS/CSS_Columns/Basic_Concepts_of_Multicol)
+- {{CSSXref("column-width")}}, {{CSSXref("columns")}} shorthand
+- {{CSSXref("column-rule-color")}}, {{CSSXref("column-rule-style")}}, {{CSSXref("column-rule-width")}}, {{CSSXref("column-rule")}} shorthand
+- [Learn: Multiple-column Layout](/en-US/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout) (Learn Layout)
+- [Basic Concepts of Multicol](/en-US/docs/Web/CSS/CSS_multicol_layout/Basic_concepts)

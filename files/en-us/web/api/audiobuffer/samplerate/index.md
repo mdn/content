@@ -1,21 +1,14 @@
 ---
-title: AudioBuffer.sampleRate
+title: "AudioBuffer: sampleRate property"
+short-title: sampleRate
 slug: Web/API/AudioBuffer/sampleRate
 page-type: web-api-instance-property
-tags:
-  - API
-  - AudioBuffer
-  - Property
-  - Reference
-  - Web Audio API
-  - sampleRate
 browser-compat: api.AudioBuffer.sampleRate
 ---
+
 {{ APIRef("Web Audio API") }}
 
-The **`sampleRate`** property of the {{
-  domxref("AudioBuffer") }} interface returns a float representing the sample rate, in
-samples per second, of the PCM data stored in the buffer.
+The **`sampleRate`** property of the {{domxref("AudioBuffer")}} interface returns a float representing the sample rate, in samples per second, of the PCM data stored in the buffer.
 
 ## Value
 
@@ -33,7 +26,7 @@ const channels = 2;
 const frameCount = audioCtx.sampleRate * 2.0;
 const myArrayBuffer = audioCtx.createBuffer(2, frameCount, audioCtx.sampleRate);
 
-button.onclick = function() {
+button.onclick = () => {
   // Fill the buffer with white noise;
   // just random values between -1.0 and 1.0
   for (let channel = 0; channel < channels; channel++) {
@@ -47,7 +40,7 @@ button.onclick = function() {
   }
 
   console.log(myArrayBuffer.sampleRate);
-}
+};
 ```
 
 ## Specifications

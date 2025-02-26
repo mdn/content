@@ -1,18 +1,10 @@
 ---
 title: theme
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/theme
-tags:
-  - Add-ons
-  - Browser
-  - Customization
-  - Customize
-  - Design
-  - Look and Feel
-  - Themes
-  - colors
-  - theme manifest
+page-type: webextension-manifest-key
 browser-compat: webextensions.manifest.theme
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
@@ -50,11 +42,14 @@ browser-compat: webextensions.manifest.theme
 
 Use the theme key to define a static theme to apply to Firefox.
 
-> **Note:** If you want to include a theme with an extension, please see the {{WebExtAPIRef("theme")}} API.
+> [!NOTE]
+> If you want to include a theme with an extension, please see the {{WebExtAPIRef("theme")}} API.
 
-> **Note:** Since May 2019, themes need to be signed to be installed ({{bug(1545109)}}).  See [Signing and distributing your add-on](https://extensionworkshop.com/documentation/publish/signing-and-distribution-overview/#distributing-your-addon) for more details.
+> [!NOTE]
+> Since May 2019, themes need to be signed to be installed ([Firefox bug 1545109](https://bugzil.la/1545109)). See [Signing and distributing your add-on](https://extensionworkshop.com/documentation/publish/signing-and-distribution-overview/#distributing-your-addon) for more details.
 
-> **Note:** A new version of Firefox for Android, based on GeckoView, is under development. A [pre-release version](https://play.google.com/store/apps/details?id=org.mozilla.fenix) is available. The pre-release version does not support themes.
+> [!NOTE]
+> A new version of Firefox for Android, based on GeckoView, is under development. A [pre-release version](https://play.google.com/store/apps/details?id=org.mozilla.fenix) is available. The pre-release version does not support themes.
 
 ## Image formats
 
@@ -135,36 +130,6 @@ Images should be 200 pixels high to ensure they always fill the header space ver
   </thead>
   <tbody>
     <tr>
-      <td><code>headerURL </code>{{Deprecated_Inline}}</td>
-      <td><code>String</code></td>
-      <td>
-        <div class="notecard warning">
-          <p>
-            <strong>Warning:</strong> <code>headerURL</code> has been removed in
-            Firefox 70. You will begin to get warnings in Firefox 65 and later
-            if you load a theme that uses this property. Use
-            <code>theme_frame</code> instead.
-          </p>
-        </div>
-        <p>
-          The URL of a foreground image to be added to the header area and
-          anchored to the upper right corner of the header area.
-        </p>
-        <p>
-          Optional in desktop Firefox from Firefox 60 onwards. One of
-          <code>theme_frame</code> or <code>headerURL</code> had to be specified
-          before Firefox 60. Note also that in Firefox 60 onwards, any
-          {{cssxref("text-shadow")}} applied to the header text is
-          removed if no <code>headerURL</code> is specified (see
-          {{bug(1404688)}}).
-        </p>
-        <p>
-          In Firefox for Android, <code>headerURL</code> or
-          <code>theme_frame</code>  must be specified.
-        </p>
-      </td>
-    </tr>
-    <tr>
       <td><code>theme_frame</code></td>
       <td><code>String</code></td>
       <td>
@@ -180,13 +145,7 @@ Images should be 200 pixels high to ensure they always fill the header space ver
           </p>
         </div>
         <p>
-          Optional in desktop Firefox 60 onwards. One of
-          <code>theme_frame</code> or <code>headerURL</code> had to be specified
-          before Firefox 60.
-        </p>
-        <p>
-          In Firefox for Android, <code>headerURL</code> or
-          <code>theme_frame</code>  must be specified.
+          Optional in desktop Firefox 60 onwards. Required in Firefox for Android.
         </p>
       </td>
     </tr>
@@ -221,7 +180,7 @@ Images should be 200 pixels high to ensure they always fill the header space ver
 
 ### colors
 
-These properties define the colors used for different parts of the browser. They are all optional (but note that `"accentcolor"` and `"textcolor"` were mandatory in Firefox before version 63).  How these properties affect the Firefox UI is shown here:
+These properties define the colors used for different parts of the browser. They are all optional. How these properties affect the Firefox UI is shown here:
 
 <table class="fullwidth-table standard-table">
   <tbody>
@@ -238,7 +197,8 @@ These properties define the colors used for different parts of the browser. They
   </tbody>
 </table>
 
-> **Note:** Where a component is affected by multiple color properties, the properties are listed in order of precedence.
+> [!NOTE]
+> Where a component is affected by multiple color properties, the properties are listed in order of precedence.
 
 All these properties can be specified as either a string containing any valid [CSS color string](/en-US/docs/Web/CSS/color_value) (including hexadecimal), or an RGB array, such as `"tab_background_text": [ 107 , 99 , 23 ]`.
 
@@ -247,7 +207,7 @@ All these properties can be specified as either a string containing any valid [C
 > In Firefox for Android colors can be specified using:
 >
 > - full hexadecimal notation, that is #RRGGBB only. _alpha_ and shortened syntax, as in #RGB\[A], are not supported.
-> - [Functional notation](/en-US/docs/Web/CSS/color_value#syntax_2) (RGB arrays) for themes targeting Firefox 68.2 or later.
+> - [Functional notation](/en-US/docs/Web/CSS/color_value#rgb_syntax_variations) (RGB arrays) for themes targeting Firefox 68.2 or later.
 >
 > Colors for Firefox for Android themes cannot be specified using color names.
 
@@ -259,38 +219,6 @@ All these properties can be specified as either a string containing any valid [C
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td>
-        <p><code>accentcolor</code> {{Deprecated_Inline}}</p>
-      </td>
-      <td>
-        <div class="notecard warning">
-          <p>
-            <strong>Warning:</strong> <code>accentcolor</code> has been removed
-            in Firefox 70. You will begin to get warnings in Firefox 65 and
-            later if you load a theme that uses this property. Use the
-            <code>frame</code> property instead.
-          </p>
-        </div>
-        <p>
-          The color of the header area background, displayed in the part of the
-          header not covered or visible through the images specified in
-          <code>"headerURL"</code> and <code>"additional_backgrounds"</code>.
-        </p>
-        <details open>
-          <summary>See example</summary>
-          <pre class="brush: json">
-"theme": {
-  "colors": {
-     "accentcolor": "red",
-     "tab_background_text": "white"
-  }
-}</pre
-          >
-        </details>
-        <p><img alt="" src="theme-accentcolor.png" /></p>
-      </td>
-    </tr>
     <tr>
       <td><code>bookmark_text</code></td>
       <td>
@@ -329,7 +257,7 @@ All these properties can be specified as either a string containing any valid [C
         </details>
         <p>
           <img
-            alt="Example use of the bookmark_text color property"
+            alt="Browser Firefox is black. Browser's tab is black with white text. URL bar and the find in page bar are white with black text but all the browser and the find in page bar icons are red."
             src="theme-bookmark_text.png"
           />
         </p>
@@ -351,7 +279,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="" src="theme-button_background_active.png" /></p>
+        <p><img alt="Browser firefox is black. Browser's tabs and URL bar are grey with white text. The customize toolbar icon in the url bar in white with a red background is pressed and a popup is open displaying a short list of thing to add to the toolbar such as the browser's library and the sidebars." src="theme-button_background_active.png" /></p>
       </td>
     </tr>
     <tr>
@@ -370,7 +298,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="" src="theme-button_background_hover.png" /></p>
+        <p><img alt="Browser firefox is black. Browser's tabs and URL bar are grey with white text. The go back one page icon is white with a red circle background." src="theme-button_background_hover.png" /></p>
       </td>
     </tr>
     <tr>
@@ -380,7 +308,7 @@ All these properties can be specified as either a string containing any valid [C
         <div class="notecard note">
           <p>
             <strong>Note:</strong> Ensure the color used contrasts well with
-            those used in <code>frame</code>,  <code>frame_inactive</code>,
+            those used in <code>frame</code>, <code>frame_inactive</code>,
             <code>button_background_active</code>, and
             <code>button_background_hover</code>.
           </p>
@@ -397,7 +325,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="" src="theme-icons.png" /></p>
+        <p><img alt="Browser firefox is black. Browser's tabs and URL bar are grey with white text. The URL bar and open a new tab icons are red. The red icons contrast well with the black background color of the header area." src="theme-icons.png" /></p>
       </td>
     </tr>
     <tr>
@@ -410,7 +338,7 @@ All these properties can be specified as either a string containing any valid [C
         <div class="notecard note">
           <p>
             <strong>Note:</strong> Ensure the color used contrasts well with
-            those used in <code>frame</code>,  <code>frame_inactive</code>,
+            those used in <code>frame</code>, <code>frame_inactive</code>,
             <code>button_background_active</code>, and
             <code>button_background_hover</code>.
           </p>
@@ -427,7 +355,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="" src="theme-icons_attention.png" /></p>
+        <p><img alt="Browser firefox is black. Browser's tabs and URL bar are grey with white text. The bookmark this page icon is red and pressed, an open popup name edit this bookmark is displayed. While in attention state, the toolbar icons contrast well with the black background of the header area." src="theme-icons_attention.png" /></p>
       </td>
     </tr>
     <tr>
@@ -449,7 +377,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="" src="theme-accentcolor.png" /></p>
+        <p><img alt="Browser firefox is red with white text. Browsers tabs are lighter red, also with white text. URL bar is very light red with black text" src="theme-frame.png" /></p>
       </td>
     </tr>
     <tr>
@@ -475,7 +403,7 @@ All these properties can be specified as either a string containing any valid [C
         </details>
         <p>
           <img
-            alt="Example use of the frame_inactive color property"
+            alt="Browser firefox is grey. Browser's tabs and URL bar are lighter grey. The tab text is white and the URL bar icon are darker grey."
             src="theme-frame_inactive.png"
           />
         </p>
@@ -490,13 +418,29 @@ All these properties can be specified as either a string containing any valid [C
           <pre class="brush: json">
 "theme": {
   "colors": {
-     "ntp_background": "red",
-     "ntp_text": "white"
+     "ntp_background": "red"
   }
 }</pre
           >
         </details>
-        <p><img alt="" src="ntp_colors.png" /></p>
+        <p><img alt="Firefox showing a new tab page. The background of the page is red." src="ntp-background.png" /></p>
+      </td>
+    </tr>
+    <tr>
+      <td><code>ntp_card_background</code></td>
+      <td>
+        <p>The new tab page card background color.</p>
+        <details open>
+          <summary>See example</summary>
+          <pre class="brush: json">
+"theme": {
+  "colors": {
+     "ntp_card_background": "red"
+  }
+}</pre
+          >
+        </details>
+        <p><img alt="Firefox showing a new tab page. On the page, the background to the search bar and shortcut buttons is red." src="ntp-card-background.png" /></p>
       </td>
     </tr>
     <tr>
@@ -506,7 +450,7 @@ All these properties can be specified as either a string containing any valid [C
         <div class="notecard note">
           <p>
             <strong>Note:</strong> Ensure the color used contrasts well with
-            that used in <code>ntp_background</code>.
+            that used in <code>ntp_background</code> and <code>ntp_card_background</code>.
           </p>
         </div>
         <details open>
@@ -514,13 +458,12 @@ All these properties can be specified as either a string containing any valid [C
           <pre class="brush: json">
 "theme": {
   "colors": {
-     "ntp_background": "red",
-     "ntp_text": "white"
+     "ntp_text": "red"
   }
 }</pre
           >
         </details>
-        <p><img alt="" src="ntp_colors.png" /></p>
+        <p><img alt="Firefox showing a new tab page. On the page, the text is in red." src="ntp-text.png" /></p>
       </td>
     </tr>
     <tr>
@@ -542,7 +485,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="" src="theme-popup.png" /></p>
+        <p><img alt="Browser firefox is black. Browser's tabs and URL bar are lighter grey with icons and text in white. The bookmark this page icon is blue and pressed, an open popup name 'edit this bookmark' is displayed with a red background. The background color of the popup is red." src="theme-popup.png" /></p>
       </td>
     </tr>
     <tr>
@@ -563,7 +506,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="" src="theme-popup_border.png" /></p>
+        <p><img alt="Browser firefox is black. Browser's tabs and URL bar are lighter grey with icons and text in white. The bookmark this page icon is blue and pressed, an open popup name 'edit this bookmark' is displayed with a red outline and black background. The popup's border is red." src="theme-popup_border.png" /></p>
       </td>
     </tr>
     <tr>
@@ -593,7 +536,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="" src="theme-popup_highlight.png" /></p>
+        <p><img alt="screenshot of firefox is black. Browser's tabs and URL bar are lighter grey with icons and text in white. A search results popup is displayed with a highlighted item's background in red. The background color of the highlighted item inside the popup is red." src="theme-popup_highlight.png" /></p>
       </td>
     </tr>
     <tr>
@@ -619,7 +562,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="" src="theme-popup_highlight_text.png" /></p>
+        <p><img alt="Browser firefox is black. Browser's tabs and URL bar are lighter grey with icons and text in white. A search results popup is displayed with a highlighted item's text in red with a black background. The text color of the highlighted item contrasts well with the black background color of this item." src="theme-popup_highlight_text.png" /></p>
       </td>
     </tr>
     <tr>
@@ -645,7 +588,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="" src="popup_text.png" /></p>
+        <p><img alt="Browser firefox is black. Browser's tabs and URL bar are lighter grey with icons and text in white. A search results popup is displayed with items texts in red. The text color contrasts well with the black background color of the popup." src="popup_text.png" /></p>
       </td>
     </tr>
     <tr>
@@ -665,7 +608,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="" src="sidebar_colors.png" /></p>
+        <p><img alt="A close-up screenshot of a browser windows's open sidebar. The background color of the sidebar is red." src="sidebar-colors.png" /></p>
       </td>
     </tr>
     <tr>
@@ -682,7 +625,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="" src="screen_shot_2018-09-16_at_6.13.31_pm.png" /></p>
+        <p><img alt="A closeup of the firefox browser bookmarks sidebar with a red horizontal separator between the sidebar title and the sidebar menu. The border and splitter color of the sidebar is red." src="sidebar-border.png" /></p>
       </td>
     </tr>
     <tr>
@@ -700,7 +643,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="" src="screen_shot_2018-10-04_at_11.15.46_am.png" /></p>
+        <p><img alt="A closeup of the firefox browser bookmarks sidebar with a highlighted item. The background color of a highlighted row in the sidebar is red with white text." src="sidebar-highlight.png" /></p>
       </td>
     </tr>
     <tr>
@@ -724,7 +667,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="" src="screen_shot_2018-10-04_at_11.22.41_am.png" /></p>
+        <p><img alt="A closeup of the firefox browser bookmarks sidebar with a highlighted item. The color of the text of a highlighted row in the sidebar is red. The text color contrasts well with the pink background color of the highlighted row." src="sidebar-highlight-text.png" /></p>
       </td>
     </tr>
     <tr>
@@ -750,7 +693,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="" src="sidebar_colors.png" /></p>
+        <p><img alt="A close-up screenshot of a browser windows's open sidebar. The color of the text inside the sidebar is white. The text color contrasts well with the red background of the sidebar." src="sidebar-colors.png" /></p>
       </td>
     </tr>
     <tr>
@@ -812,7 +755,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="" src="theme-textcolor.png" /></p>
+        <p><img alt="A screenshot of a browser window with one open tab. Browser is black. Browser's tabs and URL bar are white with red icons and red text. The color of the text in the open tab is red. The text color contrasts well with the black background color of the tab." src="theme-tab_background_text.png" /></p>
       </td>
     </tr>
     <tr>
@@ -831,7 +774,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="" src="theme-tab_line.png" /></p>
+        <p><img alt="Browser firefox is black. Browser's tabs and URL bar are darker grey with lighter grey icons and white text. The selected tab has a red outline." src="theme-tab_line.png" /></p>
       </td>
     </tr>
     <tr>
@@ -850,7 +793,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="" src="theme-tab_loading.gif" /></p>
+        <p><img alt="A screenshot of a browser window with one open tab. Browser is black. Browser's tabs and URL bar are darker grey with icons and text in white. Inside the selected tab an animated loading indicator is red." src="theme-tab_loading.gif" /></p>
       </td>
     </tr>
     <tr>
@@ -876,7 +819,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="" src="theme-tab_selected.png" /></p>
+        <p><img alt="A screenshot of a browser window with one open tab. Browser is black. Browser's tabs and URL bar are darker grey with icons and text in white. The selected tab has red background and white text." src="theme-tab_selected.png" /></p>
       </td>
     </tr>
     <tr>
@@ -894,10 +837,6 @@ All these properties can be specified as either a string containing any valid [C
             <code>frame_inactive</code>.
           </p>
         </div>
-        <p>
-          From Firefox 55 to 58, it is incorrectly implemented as alias for
-          <code>"textcolor"</code>
-        </p>
         <details open>
           <summary>See example</summary>
           <pre class="brush: json">
@@ -914,34 +853,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="" src="theme-tab_text.png" /></p>
-      </td>
-    </tr>
-    <tr>
-      <td><code>textcolor</code> {{Deprecated_Inline}}</td>
-      <td>
-        <div class="notecard warning">
-          <p>
-            <strong>Warning:</strong> <code>textcolor</code> has been removed in
-            Firefox 70. You will begin to get warnings in Firefox 65 and later
-            if you load a theme that uses this property. Use
-            <code>tab_background_text</code> instead.
-          </p>
-        </div>
-        <p>The color of the text displayed in the header area.</p>
-        <details open>
-          <summary>See example</summary>
-          <pre class="brush: json">
-"theme": {
-  "colors": {
-    "frame": "black",
-    "toolbar": "white",
-    "textcolor": "red"
-  }
-}</pre
-          >
-        </details>
-        <p><img alt="" src="theme-textcolor.png" /></p>
+        <p><img alt="Browser firefox has a picture of an insect theme. URL bar is lighter grey with white icons. The selected tab text is red with white background." src="theme-tab_text.png" /></p>
       </td>
     </tr>
     <tr>
@@ -964,7 +876,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="" src="toolbar.png" /></p>
+        <p><img alt="Browser firefox is black. Browser's tab, find in page bar and URL bar are red with white text and icons, except for the find in page bar where the text and icon are black." src="toolbar.png" /></p>
       </td>
     </tr>
     <tr>
@@ -986,7 +898,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="" src="theme-toolbar_bottom_separator.png" /></p>
+        <p><img alt="Browser firefox is black. Browser's tab and URL bar are lighter grey with white text and icons. A horizontal red line separates the bottom of the toolbar and the beginning of the display of the web page." src="theme-toolbar_bottom_separator.png" /></p>
       </td>
     </tr>
     <tr>
@@ -1011,7 +923,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="" src="toolbar-field.png" /></p>
+        <p><img alt="Browser firefox is black. Browser's tab, find in page bar and URL bar are lighter grey with white text and icons. The background color of the URL bar is red. The find in page bar is white with black text. The find in page field is red with black text." src="toolbar-field.png" /></p>
       </td>
     </tr>
     <tr>
@@ -1037,7 +949,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="" src="toolbar-field-border.png" /></p>
+        <p><img alt="Browser firefox is black. Browser's tab, find in page and URL bar are black with white text and icons. The URL bar and find in page fields are outlined in red." src="toolbar-field-border.png" /></p>
       </td>
     </tr>
     <tr>
@@ -1059,7 +971,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="" src="theme-toolbar_field_border_focus.png" /></p>
+        <p><img alt="Browser firefox is black. Browser's tab and URL bar are black with white text and icons. The url bar field is focused and outlined in red." src="theme-toolbar_field_border_focus.png" /></p>
       </td>
     </tr>
     <tr>
@@ -1084,7 +996,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="" src="theme-toolbar_field_focus.png" /></p>
+        <p><img alt="Browser firefox is black. Browser's tab, find in page and URL bar are black with white text and icons. The background color of the focused URL bar is red and the text is white." src="theme-toolbar_field_focus.png" /></p>
       </td>
     </tr>
     <tr>
@@ -1097,17 +1009,17 @@ All these properties can be specified as either a string containing any valid [C
           <pre class="brush: json">
 "theme": {
   "colors": {
-    "toolbar_field": "rgba(255, 255, 255, 0.91)",
-    "toolbar_field_text": "rgb(0, 100, 0)",
-    "toolbar_field_highlight": "rgb(180, 240, 180, 0.9)",
-    "toolbar_field_highlight_text": "rgb(0, 80, 0)"
+    "toolbar_field": "rgb(255 255 255 / 91%)",
+    "toolbar_field_text": "rgb(0 100 0)",
+    "toolbar_field_highlight": "rgb(180 240 180 / 90%)",
+    "toolbar_field_highlight_text": "rgb(0 80 0)"
   }
 }</pre
           >
         </details>
         <p>
           <img
-            alt="Example showing customized text and highlight colors in the URL bar"
+            alt="Browser firefox is white. Browser's tab and URL bar are white with text and icons in black. The URL bar field is focused and outlined in blue and URL bar text is selected."
             src="toolbar_field_highlight.png"
           />
         </p>
@@ -1136,17 +1048,17 @@ All these properties can be specified as either a string containing any valid [C
           <pre class="brush: json">
 "theme": {
   "colors": {
-    "toolbar_field": "rgba(255, 255, 255, 0.91)",
-    "toolbar_field_text": "rgb(0, 100, 0)",
-    "toolbar_field_highlight": "rgb(180, 240, 180, 0.9)",
-    "toolbar_field_highlight_text": "rgb(0, 80, 0)"
+    "toolbar_field": "rgb(255 255 255 / 91%)",
+    "toolbar_field_text": "rgb(0 100 0)",
+    "toolbar_field_highlight": "rgb(180 240 180 / 90%)",
+    "toolbar_field_highlight_text": "rgb(0 80 0)"
   }
 }</pre
           >
         </details>
         <p>
           <img
-            alt="Example showing customized text and highlight colors in the URL bar"
+            alt="Browser firefox is white. Browser's tab and URL bar are white with text and icons in black. The URL bar field is focused and outlined in blue and URL bar text is selected."
             src="toolbar_field_highlight.png"
           />
         </p>
@@ -1183,10 +1095,10 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="" src="theme-toolbar_field_separator.png" /></p>
+        <p><img alt="A screenshot of a browser window with one open tab. Browser firefox is black. Browser's tab and URL bar are black with text and icons in white. Inside the white URL bar field, after the reader mode icon a red vertical line separating the rest of URL bar icons. The color of the vertical separator line inside the URL bar is red." src="theme-toolbar_field_separator.png" /></p>
         <p>
           In this screenshot, <code>"toolbar_vertical_separator"</code> is the
-          white vertical line in the URL bar dividing the Reader Mode icon from
+          red vertical line in the URL bar dividing the Reader Mode icon from
           the other icons.
         </p>
       </td>
@@ -1219,7 +1131,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="" src="toolbar-field-text.png" /></p>
+        <p><img alt="A screenshot of a browser window with one open tab. Browser is black. Browser's tab and URL bar are black with white text and icons. The text inside the URL bar is red. The icons and find in page field have red text with black background." src="toolbar-field-text.png" /></p>
       </td>
     </tr>
     <tr>
@@ -1250,7 +1162,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="" src="theme-toolbar_field_text_focus.png" /></p>
+        <p><img alt="A screenshot of a browser window with two open tabs. Browser is black. Browser's tab and URL bar are black with text and icons in white. The URL bar has focus; the bar's text and icons are red with black background." src="theme-toolbar_field_text_focus.png" /></p>
       </td>
     </tr>
     <tr>
@@ -1279,7 +1191,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="" src="toolbar-text.png" /></p>
+        <p><img alt="A screenshot of a browser window with one open tab. Browser is black. Browser's tab, find in page bar, and URL bar are black with red text and icons. The text inside the active tab, the navigator bar and the find bar is red." src="toolbar-text.png" /></p>
       </td>
     </tr>
     <tr>
@@ -1302,7 +1214,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="" src="theme-toolbar_top_separator.png" /></p>
+        <p><img alt="A screenshot of a browser window with one open tab. Browser is black. Browser's tab and URL bar are black with white text and icons. A red line separates the top of the URL bar from the browser." src="theme-toolbar_top_separator.png" /></p>
       </td>
     </tr>
     <tr>
@@ -1325,7 +1237,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="" src="theme-toolbar_vertical_separator.png" /></p>
+        <p><img alt="A screenshot of a browser window with one open tab. Browser is black. Browser's tab and URL bar are black with text and icons in white. The color of the vertical line separating the bookmarks toolbar from the content to the right is red." src="theme-toolbar_vertical_separator.png" /></p>
       </td>
     </tr>
   </tbody>
@@ -1334,8 +1246,6 @@ All these properties can be specified as either a string containing any valid [C
 #### Aliases
 
 Additionally, this key accepts various properties that are aliases for one of the properties above. These are provided for compatibility with Chrome. If an alias is given, and the non-alias version is also given, then the value will be taken from the non-alias version.
-
-> **Warning:** Beginning Firefox 70, the following properties are removed: `accentcolor` and `textcolor`. Use `frame` and `tab_background_text` instead. Using these values in themes loaded into Firefox 65 or later will raise warnings.
 
 <table class="fullwidth-table standard-table">
   <thead>
@@ -1348,18 +1258,6 @@ Additionally, this key accepts various properties that are aliases for one of th
     <tr>
       <td><code>bookmark_text</code></td>
       <td><code>toolbar_text</code></td>
-    </tr>
-    <tr>
-      <td><code>frame</code></td>
-      <td><code>accentcolor</code> {{Deprecated_Inline}}</td>
-    </tr>
-    <tr>
-      <td><code>frame_inactive</code></td>
-      <td><code>accentcolor</code> {{Deprecated_Inline}}</td>
-    </tr>
-    <tr>
-      <td><code>tab_background_text</code></td>
-      <td><code>textcolor</code> {{Deprecated_Inline}}</td>
     </tr>
   </tbody>
 </table>
@@ -1493,10 +1391,10 @@ Multiple images can be used to fill the header. Before Firefox version 60, use a
 ```json
  "theme": {
    "images": {
-     "additional_backgrounds": [ "images/left.png" , "images/middle.png", "images/right.png"]
+     "additional_backgrounds": [ "images/left.png", "images/middle.png", "images/right.png"]
    },
    "properties": {
-     "additional_backgrounds_alignment": [ "left top" , "top", "right top"]
+     "additional_backgrounds_alignment": [ "left top", "top", "right top"]
    },
    "colors": {
      "frame": "blue",
@@ -1548,7 +1446,7 @@ The following example uses most of the different values for `theme.colors`:
 
 It will give you a browser that looks like this:
 
-![](theme.png)
+![A browser window with two open tabs and dark green background color in the header area. The inactive tab has a white text color. The active tab and the toolbar have a blue background color with cyan-colored text. The URL bar has an orange background with white borders, a green text color and a white-colored vertical line separator. A red-colored line is used to separate the tabs on the top and a white line to separate the tabs from the content bellow them.](theme.png)
 
 In this screenshot, `"toolbar_vertical_separator"` is the white vertical line in the URL bar dividing the Reader Mode icon from the other icons.
 

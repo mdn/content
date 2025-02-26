@@ -1,18 +1,12 @@
 ---
-title: Gamepad.axes
+title: "Gamepad: axes property"
+short-title: axes
 slug: Web/API/Gamepad/axes
 page-type: web-api-instance-property
-tags:
-  - API
-  - Gamepad API
-  - Games
-  - NeedsBetterSpecLink
-  - NeedsMarkupWork
-  - Property
-  - Reference
 browser-compat: api.Gamepad.axes
 ---
-{{APIRef("Gamepad API")}}
+
+{{APIRef("Gamepad API")}}{{SecureContext_Header}}
 
 The **`Gamepad.axes`** property of the {{domxref("Gamepad") }}
 interface returns an array representing the controls with axes present on the device
@@ -23,19 +17,14 @@ the axis position from the lowest value (-1.0) to the highest value (1.0).
 
 ## Value
 
-An array.
+An array of numbers.
 
 ## Examples
 
 ```js
 function gameLoop() {
-  let gp;
-  if (navigator.webkitGetGamepads) {
-    gp = navigator.webkitGetGamepads()[0];
-  } else {
-    gp = navigator.getGamepads()[0];
-  }
-  
+  const [gp] = navigator.getGamepads();
+
   let a = 0;
   let b = 0;
   if (gp.axes[0] !== 0) {
@@ -52,12 +41,8 @@ function gameLoop() {
   ball.style.top = `${b * 2}px`;
 
   const start = requestAnimationFrame(gameLoop);
-};
+}
 ```
-
-## Value
-
-An array of {{domxref("double") }} values.
 
 ## Specifications
 

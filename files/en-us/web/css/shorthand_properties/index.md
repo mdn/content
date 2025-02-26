@@ -1,15 +1,9 @@
 ---
 title: Shorthand properties
 slug: Web/CSS/Shorthand_properties
-tags:
-  - CSS
-  - Guide
-  - Layout
-  - Reference
-  - Shorthand Properties
-  - properties
-  - shorthand
+page-type: guide
 ---
+
 {{CSSRef}}
 
 **_Shorthand properties_** are CSS properties that let you set the values of multiple other CSS properties simultaneously. Using a shorthand property, you can write more concise (and often more readable) style sheets, saving time and energy.
@@ -54,7 +48,7 @@ Shorthands handling properties related to edges of a box, like {{cssxref("border
 
 - **3-value syntax:** `border-width: 1em 2em 3em` — The first value represents the top edge, the second, the horizontal, that is left and right, ones, and the third value the bottom edge: ![Box edges with three-value syntax](border3.png)
 
-- **4-value syntax:** border-width: 1em 2em 3em 4em — The four values represent the top, right, bottom and left edges respectively, always in that order, that is clock-wise starting at the top: ![Box edges with four-value syntax](border4.png) The initial letter of Top-Right-Bottom-Left matches the order of the consonant of the word _trouble_: TRBL. You can also remember it as the order that the hands would rotate on a clock: `1em` starts in the 12 o'clock position, then `2em` in the 3 o'clock position, then `3em` in the 6 o'clock position, and `4em` in the 9 o'clock position.
+- **4-value syntax:** `border-width: 1em 2em 3em 4em` — The four values represent the top, right, bottom and left edges respectively, always in that order, that is clock-wise starting at the top: ![Box edges with four-value syntax](border4.png) The initial letter of Top-Right-Bottom-Left matches the order of the consonant of the word _trouble_: TRBL. You can also remember it as the order that the hands would rotate on a clock: `1em` starts in the 12 o'clock position, then `2em` in the 3 o'clock position, then `3em` in the 6 o'clock position, and `4em` in the 9 o'clock position.
 
 #### Corners of a box
 
@@ -96,18 +90,20 @@ Consider the following declarations:
 ```css
 font-style: italic;
 font-weight: bold;
-font-size: .8em;
+font-size: 0.8em;
 line-height: 1.2;
 font-family: Arial, sans-serif;
 ```
 
-This 5 statements can be shortened to the following:
+These 5 statements can be shortened to the following:
 
 ```css
-font: italic bold .8em/1.2 Arial, sans-serif;
+font:
+  italic bold 0.8em/1.2 Arial,
+  sans-serif;
 ```
 
-This shorthand declaration is actually equivalent to the longhand declarations above plus `font-variant: normal` and `font-size-adjust: none` (CSS2.0 / CSS3), `font-stretch: normal` (CSS3).
+This shorthand declaration is actually equivalent to the longhand declarations above plus `font-variant: normal`, `font-size-adjust: none`, and `font-stretch: normal`.
 
 ## Border properties
 
@@ -149,13 +145,114 @@ Margin shorthand rules for one, two, three and four value declarations are:
 - When **three** values are specified, the first margin applies to the **top**, the second to the **left and right**, the third to the **bottom**.
 - When **four** values are specified, the margins apply to the **top**, **right**, **bottom**, and **left** in that order (clockwise).
 
+## Position properties
+
+With position, the shorthand versions of top, right, bottom and left can be simplified into one declaration. For example, consider the following CSS:
+
+```css
+top: 0;
+right: 20px;
+bottom: 0;
+left: 20px;
+```
+
+It can be simplified as:
+
+```css
+inset: 0 20px 0 20px;
+```
+
+Just like margins and paddings, the inset values are ordered clockwise - top, right, bottom, then left (TRBL).
+
 ## The universal shorthand property
 
 CSS provides a universal shorthand property, {{cssxref("all")}}, which applies its value to every property in the document. Its purpose is to change the properties' inheritance model.
 
-See [Cascade and inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance) or [Introducing the CSS Cascade](/en-US/docs/Web/CSS/Cascade) for more information about how inheritance works in CSS.
+See [Handling conflicts](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts) or [Introducing the CSS Cascade](/en-US/docs/Web/CSS/CSS_cascade/Cascade) for more information about how inheritance works in CSS.
+
+## Shorthand properties
+
+- {{cssxref("all")}}
+- {{cssxref("animation")}}
+- {{cssxref("animation-range")}}
+- {{cssxref("background")}}
+- {{cssxref("border")}}
+- {{cssxref("border-block")}}
+- {{cssxref("border-block-end")}}
+- {{cssxref("border-block-start")}}
+- {{cssxref("border-bottom")}}
+- {{cssxref("border-color")}}
+- {{cssxref("border-image")}}
+- {{cssxref("border-inline")}}
+- {{cssxref("border-inline-end")}}
+- {{cssxref("border-inline-start")}}
+- {{cssxref("border-left")}}
+- {{cssxref("border-radius")}}
+- {{cssxref("border-right")}}
+- {{cssxref("border-style")}}
+- {{cssxref("border-top")}}
+- {{cssxref("border-width")}}
+- {{cssxref("column-rule")}}
+- {{cssxref("columns")}}
+- {{cssxref("contain-intrinsic-size")}}
+- {{cssxref("container")}}
+- {{cssxref("flex")}}
+- {{cssxref("flex-flow")}}
+- {{cssxref("font")}}
+- {{cssxref("font-synthesis")}}
+- {{cssxref("font-variant")}}
+- {{cssxref("gap")}}
+- {{cssxref("grid")}}
+- {{cssxref("grid-area")}}
+- {{cssxref("grid-column")}}
+- {{cssxref("grid-row")}}
+- {{cssxref("grid-template")}}
+- {{cssxref("inset")}}
+- {{cssxref("inset-block")}}
+- {{cssxref("inset-inline")}}
+- {{cssxref("list-style")}}
+- {{cssxref("margin")}}
+- {{cssxref("margin-block")}}
+- {{cssxref("margin-inline")}}
+- {{cssxref("mask")}}
+- {{cssxref("mask-border")}}
+- {{cssxref("offset")}}
+- {{cssxref("outline")}}
+- {{cssxref("overflow")}}
+- {{cssxref("overscroll-behavior")}}
+- {{cssxref("padding")}}
+- {{cssxref("padding-block")}}
+- {{cssxref("padding-inline")}}
+- {{cssxref("place-content")}}
+- {{cssxref("place-items")}}
+- {{cssxref("place-self")}}
+- {{cssxref("position-try")}}
+- {{cssxref("scroll-margin")}}
+- {{cssxref("scroll-margin-block")}}
+- {{cssxref("scroll-margin-inline")}}
+- {{cssxref("scroll-padding")}}
+- {{cssxref("scroll-padding-block")}}
+- {{cssxref("scroll-padding-inline")}}
+- {{cssxref("scroll-timeline")}}
+- {{cssxref("text-decoration")}}
+- {{cssxref("text-emphasis")}}
+- {{cssxref("text-wrap")}}
+- {{cssxref("transition")}}
+- {{cssxref("view-timeline")}}
+- {{cssxref("-webkit-text-stroke")}}
+- {{cssxref("-webkit-border-before")}}
+- {{cssxref("-webkit-mask-box-image")}}
 
 ## See also
 
-- {{css_key_concepts}}
-- Shorthand properties: {{cssxref("all")}}, {{cssxref("animation")}}, {{cssxref("background")}}, {{cssxref("border")}}, {{cssxref("border-block-end")}}, {{cssxref("border-block-start")}}, {{cssxref("border-bottom")}}, {{cssxref("border-color")}}, {{cssxref("border-image")}}, {{cssxref("border-inline-end")}}, {{cssxref("border-inline-start")}}, {{cssxref("border-left")}}, {{cssxref("border-radius")}}, {{cssxref("border-right")}}, {{cssxref("border-style")}}, {{cssxref("border-top")}}, {{cssxref("border-width")}}, {{cssxref("column-rule")}}, {{cssxref("columns")}}, {{cssxref("flex")}}, {{cssxref("flex-flow")}}, {{cssxref("font")}}, {{cssxref("gap")}}, {{cssxref("grid")}}, {{cssxref("grid-area")}}, {{cssxref("grid-column")}}, {{cssxref("grid-row")}}, {{cssxref("grid-template")}}, {{cssxref("list-style")}}, {{cssxref("margin")}}, {{cssxref("mask")}}, {{cssxref("offset")}}, {{cssxref("outline")}}, {{cssxref("overflow")}}, {{cssxref("padding")}}, {{cssxref("place-content")}}, {{cssxref("place-items")}}, {{cssxref("place-self")}}, {{cssxref("scroll-margin")}}, {{cssxref("scroll-padding")}}, {{cssxref("text-decoration")}}, {{cssxref("text-emphasis")}}, {{cssxref("transition")}}
+- [CSS syntax](/en-US/docs/Web/CSS/CSS_syntax/Syntax)
+- [At-rules](/en-US/docs/Web/CSS/CSS_syntax/At-rule)
+- [Specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity)
+- [Inheritance](/en-US/docs/Web/CSS/CSS_cascade/Inheritance)
+- [Introducing the CSS Cascade](/en-US/docs/Web/CSS/CSS_cascade/Cascade)
+- [Learn: Handling conflicts](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
+- [Learn: Cascade layers](/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)
+- [CSS cascading and inheritance](/en-US/docs/Web/CSS/CSS_cascade) module
+- [Visual formatting models](/en-US/docs/Web/CSS/Visual_formatting_model)
+- [Initial](/en-US/docs/Web/CSS/CSS_cascade/initial_value), [computed](/en-US/docs/Web/CSS/CSS_cascade/computed_value), [used](/en-US/docs/Web/CSS/CSS_cascade/used_value), and [actual](/en-US/docs/Web/CSS/CSS_cascade/actual_value) values
+- [Value definition syntax](/en-US/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)

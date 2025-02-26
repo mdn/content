@@ -1,16 +1,11 @@
 ---
-title: Document.createProcessingInstruction()
+title: "Document: createProcessingInstruction() method"
+short-title: createProcessingInstruction()
 slug: Web/API/Document/createProcessingInstruction
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Document
-  - Method
-  - Reference
-  - createProcessInstruction
 browser-compat: api.Document.createProcessingInstruction
 ---
+
 {{APIRef("DOM")}}
 
 `createProcessingInstruction()` generates a new [processing instruction](/en-US/docs/Web/API/ProcessingInstruction) node and returns it.
@@ -19,15 +14,18 @@ The new node usually will be inserted into an XML document in order to accomplis
 
 ## Syntax
 
-```js
+```js-nolint
 createProcessingInstruction(target, data)
 ```
 
 ### Parameters
 
-- `piNode` is the resulting {{ domxref("ProcessingInstruction") }} node.
-- `target` is a string containing the first part of the processing instruction (i.e., `<?target … ?>`)
-- `data` is a string containing any information the processing instruction should carry, after the target. The data is up to you, but it can't contain `?>`, since that closes the processing instruction.
+- `piNode`
+  - : The resulting {{ domxref("ProcessingInstruction") }} node.
+- `target`
+  - : A string containing the first part of the processing instruction (i.e., `<?target … ?>`)
+- `data`
+  - : A string containing any information the processing instruction should carry, after the target. The data is up to you, but it can't contain `?>`, since that closes the processing instruction.
 
 ### Return value
 
@@ -45,8 +43,11 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-const doc = new DOMParser().parseFromString('<foo />', 'application/xml');
-const pi = doc.createProcessingInstruction('xml-stylesheet', 'href="mycss.css" type="text/css"');
+const doc = new DOMParser().parseFromString("<foo />", "application/xml");
+const pi = doc.createProcessingInstruction(
+  "xml-stylesheet",
+  'href="mycss.css"',
+);
 
 doc.insertBefore(pi, doc.firstChild);
 

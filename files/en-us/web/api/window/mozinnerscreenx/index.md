@@ -1,26 +1,20 @@
 ---
-title: Window.mozInnerScreenX
+title: "Window: mozInnerScreenX property"
+short-title: mozInnerScreenX
 slug: Web/API/Window/mozInnerScreenX
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - NeedsExample
-  - NeedsMarkupWork
-  - NeedsSpecTable
-  - Property
-  - Reference
-  - Window
+status:
+  - non-standard
 browser-compat: api.Window.mozInnerScreenX
 ---
-{{APIRef}}
 
-## Summary
+{{APIRef}}{{Non-standard_Header}}
 
 Gets the X coordinate of the top-left corner of the window's viewport, in screen
 coordinates.
 
-> **Note:** This coordinate is reported in CSS pixels, not in hardware pixels. That means it can be affected by the zoom level; to compute the actual number of physical screen pixels, you should use the `nsIDOMWindowUtils.screenPixelsPerCSSPixel` property.
+> [!NOTE]
+> This coordinate is reported in CSS pixels, not in hardware pixels. That means it can be affected by the zoom level; to compute the actual number of physical screen pixels, you should use the `nsIDOMWindowUtils.screenPixelsPerCSSPixel` property.
 
 ## Value
 

@@ -1,24 +1,31 @@
 ---
 title: Date.prototype.setUTCSeconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCSeconds
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.setUTCSeconds
 ---
+
 {{JSRef}}
 
-The **`setUTCSeconds()`** method sets the seconds for a
-specified date according to universal time.
+The **`setUTCSeconds()`** method of {{jsxref("Date")}} instances changes the seconds and/or milliseconds for this date according to universal time.
 
-{{EmbedInteractiveExample("pages/js/date-setutcseconds.html")}}
+{{InteractiveExample("JavaScript Demo: Date.setUTCSeconds()")}}
+
+```js interactive-example
+const date1 = new Date("December 31, 1975, 23:15:30 GMT+11:00");
+
+console.log(date1.getUTCSeconds());
+// Expected output: 30
+
+date1.setUTCSeconds(39);
+
+console.log(date1.getUTCSeconds());
+// Expected output: 39
+```
 
 ## Syntax
 
-```js
+```js-nolint
 setUTCSeconds(secondsValue)
 setUTCSeconds(secondsValue, msValue)
 ```
@@ -26,18 +33,18 @@ setUTCSeconds(secondsValue, msValue)
 ### Parameters
 
 - `secondsValue`
-  - : An integer between 0 and 59, representing the seconds.
-- `msValue`
-  - : Optional. A number between 0 and 999, representing the milliseconds.
+  - : An integer between 0 and 59 representing the seconds.
+- `msValue` {{optional_inline}}
+  - : An integer between 0 and 999 representing the milliseconds.
 
 ### Return value
 
-The number of milliseconds between 1 January 1970 00:00:00 UTC and the updated date.
+Changes the {{jsxref("Date")}} object in place, and returns its new [timestamp](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date). If a parameter is `NaN` (or other values that get [coerced](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion) to `NaN`, such as `undefined`), the date is set to [Invalid Date](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date) and `NaN` is returned.
 
 ## Description
 
 If you do not specify the `msValue` parameter, the value returned from the
-{{jsxref("Date.prototype.getUTCMilliseconds()", "getUTCMilliseconds()")}} method is
+{{jsxref("Date/getUTCMilliseconds", "getUTCMilliseconds()")}} method is
 used.
 
 If a parameter you specify is outside of the expected range,

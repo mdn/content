@@ -2,28 +2,28 @@
 title: WebGLContextEvent
 slug: Web/API/WebGLContextEvent
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - WebGL
-  - WebGLContextEvent
 browser-compat: api.WebGLContextEvent
 ---
-{{APIRef("WebGL")}}
 
-The **WebContextEvent** interface is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and is an interface for an event that is generated in response to a status change to the WebGL rendering context.
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
+
+The **WebGLContextEvent** interface is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and is an interface for an event that is generated in response to a status change to the WebGL rendering context.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Constructor
+
+- {{domxref("WebGLContextEvent.WebGLContextEvent", "WebGLContextEvent()")}}
+  - : Creates a new `WebGLContextEvent` object.
+
+## Instance properties
 
 _This interface inherits properties from its parent interface, {{domxref("Event")}}._
 
 - {{domxref("WebGLContextEvent.statusMessage")}}
   - : A read-only property containing additional information about the event.
 
-## Methods
+## Instance methods
 
 _This interface doesn't define any own methods, but inherits methods from its parent interface, {{domxref("Event")}}._
 
@@ -32,14 +32,18 @@ _This interface doesn't define any own methods, but inherits methods from its pa
 With the help of the {{domxref("WEBGL_lose_context")}} extension, you can simulate the {{domxref("HTMLCanvasElement/webglcontextlost_event", "webglcontextlost")}} and {{domxref("HTMLCanvasElement/webglcontextrestored_event", "webglcontextrestored")}} events:
 
 ```js
-const canvas = document.getElementById('canvas');
-const gl = canvas.getContext('webgl');
+const canvas = document.getElementById("canvas");
+const gl = canvas.getContext("webgl");
 
-canvas.addEventListener('webglcontextlost', function(e) {
-  console.log(e);
-}, false);
+canvas.addEventListener(
+  "webglcontextlost",
+  (e) => {
+    console.log(e);
+  },
+  false,
+);
 
-gl.getExtension('WEBGL_lose_context').loseContext();
+gl.getExtension("WEBGL_lose_context").loseContext();
 
 // WebGLContextEvent event with type "webglcontextlost" is logged.
 ```

@@ -1,20 +1,12 @@
 ---
-title: Cache.addAll()
+title: "Cache: addAll() method"
+short-title: addAll()
 slug: Web/API/Cache/addAll
 page-type: web-api-instance-method
-tags:
-  - API
-  - Cache
-  - Method
-  - NeedsExample
-  - Reference
-  - Service Workers
-  - Service worker API
-  - ServiceWorker
-  - addAll
 browser-compat: api.Cache.addAll
 ---
-{{APIRef("Service Workers API")}}
+
+{{APIRef("Service Workers API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`addAll()`** method of the {{domxref("Cache")}} interface takes an array of URLs, retrieves them, and adds the resulting response objects to the given cache. The request objects created during retrieval become keys to the stored response operations.
 
@@ -24,15 +16,17 @@ The **`addAll()`** method of the {{domxref("Cache")}} interface takes an array o
 
 ## Syntax
 
-```js
+```js-nolint
 addAll(requests)
 ```
 
 ### Parameters
 
 - `requests`
-  - : An array of string URLs that you want to be fetched and added to the cache. You can
-    specify the {{domxref("Request")}} object instead of the URL.
+
+  - : An array of requests for the resources you want to add to the cache. These can be {{domxref("Request")}} objects or URLs.
+
+    These requests are used as parameters to the {{domxref("Request.Request()", "Request()")}} constructor, so URLs follow the same rules as for that constructor. In particular, URLs may be relative to the base URL, which is the document's {{domxref("Node.baseURI", "baseURI")}} in a window context, or {{domxref("WorkerGlobalScope.location")}} in a worker context.
 
 ### Return value
 
@@ -54,22 +48,24 @@ the app. This consists of calling {{domxref("CacheStorage.open")}} to create a n
 cache, then using `addAll()` to add a series of assets to it.
 
 ```js
-this.addEventListener('install', function(event) {
+this.addEventListener("install", (event) => {
   event.waitUntil(
-    caches.open('v1').then(function(cache) {
-      return cache.addAll([
-        '/sw-test/',
-        '/sw-test/index.html',
-        '/sw-test/style.css',
-        '/sw-test/app.js',
-        '/sw-test/image-list.js',
-        '/sw-test/star-wars-logo.jpg',
-        '/sw-test/gallery/',
-        '/sw-test/gallery/bountyHunters.jpg',
-        '/sw-test/gallery/myLittleVader.jpg',
-        '/sw-test/gallery/snowTroopers.jpg'
-      ]);
-    })
+    caches
+      .open("v1")
+      .then((cache) =>
+        cache.addAll([
+          "/",
+          "/index.html",
+          "/style.css",
+          "/app.js",
+          "/image-list.js",
+          "/star-wars-logo.jpg",
+          "/gallery/",
+          "/gallery/bountyHunters.jpg",
+          "/gallery/myLittleVader.jpg",
+          "/gallery/snowTroopers.jpg",
+        ]),
+      ),
   );
 });
 ```
@@ -86,4 +82,4 @@ this.addEventListener('install', function(event) {
 
 - [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - {{domxref("Cache")}}
-- {{domxref("caches")}}
+- {{domxref("Window.caches")}} and {{domxref("WorkerGlobalScope.caches")}}

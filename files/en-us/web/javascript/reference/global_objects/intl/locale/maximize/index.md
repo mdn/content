@@ -1,36 +1,46 @@
 ---
 title: Intl.Locale.prototype.maximize()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/maximize
-tags:
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Locale
-  - Method
-  - Prototype
-  - Reference
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.Locale.maximize
 ---
+
 {{JSRef}}
 
-The
-**`Intl.Locale.prototype.maximize()`** method gets the
-most likely values for the language, script, and region of the locale based on
+The **`maximize()`** method of {{jsxref("Intl.Locale")}} instances gets the
+most likely values for the language, script, and region of this locale based on
 existing values.
 
-{{EmbedInteractiveExample("pages/js/intl-locale-prototype-maximize.html")}}
+{{InteractiveExample("JavaScript Demo: Intl.Locale.prototype.maximize()")}}
 
-<!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
+```js interactive-example
+const english = new Intl.Locale("en");
+const korean = new Intl.Locale("ko");
+const arabic = new Intl.Locale("ar");
+
+console.log(english.maximize().baseName);
+// Expected output: "en-Latn-US"
+
+console.log(korean.maximize().baseName);
+// Expected output: "ko-Kore-KR"
+
+console.log(arabic.maximize().baseName);
+// Expected output: "ar-Arab-EG"
+```
 
 ## Syntax
 
-```js
+```js-nolint
 maximize()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
-A {{jsxref("Intl/Locale", "Locale")}} instance whose `baseName` property returns
+A {{jsxref("Intl.Locale")}} instance whose `baseName` property returns
 the result of the [Add Likely Subtags](https://www.unicode.org/reports/tr35/#Likely_Subtags) algorithm executed against _{{jsxref("Intl/Locale/baseName", "locale.baseName")}}_.
 
 ## Description
@@ -45,25 +55,27 @@ programmers via the `maximize()` method. `maximize()` only
 affects the main subtags that comprise the [language identifier](https://www.unicode.org/reports/tr35/#Language_Locale_Field_Definitions): language, script, and region subtags.
 Other subtags after the "-u" in the locale identifier are called extension subtags and
 are not affected by the `maximize()` method. Examples of these subtags
-include {{jsxref("Intl/Locale/hourCycle", "Locale.hourCycle")}},
-{{jsxref("Intl/Locale/calendar", "Locale.calendar")}}, and {{jsxref("Intl/Locale/numeric",
-  "Locale.numeric")}}.
+include {{jsxref("Intl/Locale/hourCycle", "hourCycle")}},
+{{jsxref("Intl/Locale/calendar", "calendar")}}, and {{jsxref("Intl/Locale/numeric", "numeric")}}.
 
 ## Examples
 
 ### Using maximize
 
 ```js
-let myLocale = new Intl.Locale("fr", {hourCycle: "h24", calendar: "gregory"});
+const myLocale = new Intl.Locale("fr", {
+  hourCycle: "h12",
+  calendar: "gregory",
+});
 console.log(myLocale.baseName); // Prints "fr"
-console.log(myLocale.toString()); // Prints "fr-u-ca-gregory-hc-h24"
-let myLocMaximized = myLocale.maximize();
+console.log(myLocale.toString()); // Prints "fr-u-ca-gregory-hc-h12"
+const myLocMaximized = myLocale.maximize();
 
 // Prints "fr-Latn-FR". The "Latn" and "FR" tags are added,
 // since French is only written in the Latin script and is most likely to be spoken in France.
 console.log(myLocMaximized.baseName);
 
-// Prints "fr-Latn-FR-u-ca-gregory-hc-h24".
+// Prints "fr-Latn-FR-u-ca-gregory-hc-h12".
 // Note that the extension tags (after "-u") remain unchanged.
 console.log(myLocMaximized.toString());
 ```
@@ -79,5 +91,5 @@ console.log(myLocMaximized.toString());
 ## See also
 
 - {{jsxref("Intl.Locale")}}
-- {{jsxref("Intl/Locale/baseName", "Intl.Locale.baseName")}}
-- [Unicode's Likely Subtags spec](https://www.unicode.org/reports/tr35/#Likely_Subtags)
+- {{jsxref("Intl/Locale/baseName", "baseName")}}
+- [Likely Subtags](https://www.unicode.org/reports/tr35/#Likely_Subtags) in the Unicode locale data markup language spec

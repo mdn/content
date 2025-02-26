@@ -1,11 +1,9 @@
 ---
-title: Browser Extensions
+title: Browser extensions
 slug: Mozilla/Add-ons/WebExtensions
-tags:
-  - Add-ons
-  - Landing
-  - WebExtensions
+page-type: landing-page
 ---
+
 {{AddonSidebar}}
 
 Extensions, or add-ons, can modify and enhance the capability of a browser. Extensions for Firefox are built using the WebExtensions API cross-browser technology.
@@ -21,11 +19,12 @@ The technology for extensions in Firefox is, to a large extent, compatible with 
 - Firefox workflow
   - : Discover how to build and publish extensions for Firefox: get the lowdown on developer tools, publication and distribution, and porting on [Extension Workshop](https://extensionworkshop.com/).
 
-> **Note:** If you have ideas or questions or need help, you can reach us on the [community forum](https://discourse.mozilla.org/c/add-ons/35) or in the [Add-ons Room](https://matrix.to/#/!CuzZVoCbeoDHsxMCVJ:mozilla.org?via=mozilla.org&via=matrix.org&via=humanoids.be) on [Matrix](https://wiki.mozilla.org/Matrix).
+> [!NOTE]
+> If you have ideas or questions or need help, you can reach us on the [community forum](https://discourse.mozilla.org/c/add-ons/35) or in the [Add-ons Room](https://matrix.to/#/!CuzZVoCbeoDHsxMCVJ:mozilla.org?via=mozilla.org&via=matrix.org&via=humanoids.be) on [Matrix](https://wiki.mozilla.org/Matrix).
 
 ## Get started
 
-Discover [what extensions can do](/en-US/docs/Mozilla/Add-ons/WebExtensions/What_are_WebExtensions) before building [your first extension.](/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension) Learn about the [anatomy of an extension](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension) and get an overview of the [extension development and publication workflow, Firefox style](/en-US/docs/Mozilla/Add-ons/WebExtensions/Firefox_workflow_overview). Explore a little deeper with a comprehensive selection of [example extensions](/en-US/docs/Mozilla/Add-ons/WebExtensions/Examples) that you can run right in Firefox.
+Discover [what extensions can do](/en-US/docs/Mozilla/Add-ons/WebExtensions/What_are_WebExtensions) before building [your first extension.](/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension) Learn about the [anatomy of an extension](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension) and get an overview of the [extension development and publication workflow, Firefox style](https://extensionworkshop.com/documentation/develop/firefox-workflow-overview/). Explore a little deeper with a comprehensive selection of [example extensions](/en-US/docs/Mozilla/Add-ons/WebExtensions/Examples) that you can run right in Firefox.
 
 ## Concepts
 

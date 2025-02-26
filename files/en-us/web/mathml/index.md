@@ -1,23 +1,44 @@
 ---
 title: MathML
 slug: Web/MathML
-tags:
-  - Landing
-  - MathML
-  - Reference
-  - Web
-  - XML
+page-type: landing-page
 browser-compat: mathml.elements.math
 ---
+
 {{MathMLRef}}
 
 **Mathematical Markup Language (MathML)** is an [XML](/en-US/docs/Web/XML)-based language for describing mathematical notation.
 
-[MathML](https://w3c.github.io/mathml/) was originally designed as a general-purpose specification for browsers, office suites, [computer algebra systems](https://en.wikipedia.org/wiki/Computer_algebra_system), [EPUB](https://www.w3.org/publishing/epub32/) readers, [LaTeX](https://en.wikipedia.org/wiki/LaTeX)-based generators. However, this approach was not very adapted to the Web: the [subset focusing on semantics](https://w3c.github.io/mathml/#contm) has never been implemented in browsers while the [subset focusing on math layout](https://w3c.github.io/mathml/#presm) led to incomplete and inconsistent browser implementations.
+[MathML](https://w3c.github.io/mathml/) was originally designed as a general-purpose specification for browsers, office suites, [computer algebra systems](https://en.wikipedia.org/wiki/Computer_algebra_system), [EPUB](https://www.w3.org/publishing/epub33/) readers, [LaTeX](https://en.wikipedia.org/wiki/LaTeX)-based generators. However, this approach was not very adapted to the Web: the [subset focusing on semantics](https://w3c.github.io/mathml/#contm) has never been implemented in browsers while the [subset focusing on math layout](https://w3c.github.io/mathml/#presm) led to incomplete and inconsistent browser implementations.
 
-[MathML Core](https://w3c.github.io/mathml-core/) is a subset with increased implementation details based on rules from [LaTeX](https://en.wikipedia.org/wiki/LaTeX) and the [Open Font Format](https://docs.microsoft.com/en-us/typography/opentype/spec/math). It is tailored for browsers and designed specifically to work well with other web standards including [HTML](/en-US/docs/Web/HTML), [CSS](/en-US/docs/Web/CSS), [DOM](/en-US/docs/Web/API/Document_Object_Model), [JavaScript](/en-US/docs/Web/JavaScript).
+[MathML Core](https://w3c.github.io/mathml-core/) is a subset with increased implementation details based on rules from [LaTeX](https://en.wikipedia.org/wiki/LaTeX) and the [Open Font Format](https://learn.microsoft.com/en-us/typography/opentype/spec/math). It is tailored for browsers and designed specifically to work well with other web standards including [HTML](/en-US/docs/Web/HTML), [CSS](/en-US/docs/Web/CSS), [DOM](/en-US/docs/Web/API/Document_Object_Model), [JavaScript](/en-US/docs/Web/JavaScript).
 
-Below you will find links to documentation, examples, and tools to work with MathML. Although many of these still use the [MathML Full](https://w3c.github.io/mathml/) specification as a reference, transition towards [MathML Core](https://w3c.github.io/mathml-core/) is in progress. It is highly recommended that developers and authors switch to that specification, perhaps relying on other web technologies to cover missing use cases from the legacy specification.
+Below you will find links to documentation, examples, and tools to work with MathML. MDN uses [MathML Core](https://w3c.github.io/mathml-core/) as a reference specification but, due to an erratic standardization history, legacy MathML features may still show up in existing implementations and web content.
+
+> [!NOTE]
+> It is highly recommended that developers and authors switch to MathML Core, perhaps relying on other web technologies to cover missing use cases. The Math WG is maintaining a set of [MathML polyfills](https://github.com/w3c/mathml-polyfills) to facilitate that transition.
+
+## Beginner's tutorials
+
+- [Getting started with MathML](/en-US/docs/Web/MathML/Guides/Getting_started)
+  - : In this article, we will take a simple HTML document and see how to add MathML formulas into it, introducing a few elements along the way.
+- [Text containers](/en-US/docs/Web/MathML/Guides/Text_containers)
+  - : Now that you get a better idea of MathML, we move on to text containers (variables, numbers, operators, ...) which are used as building blocks of MathML formulas.
+- [Fractions and roots](/en-US/docs/Web/MathML/Guides/Fractions_and_roots)
+  - : Relying on text containers, this article describes how to build more complex MathML expressions by nesting fractions and roots.
+- [Scripts](/en-US/docs/Web/MathML/Guides/Scripts)
+  - : We continue the review of basic math notations and focuses on building MathML elements with scripts.
+- [Tables](/en-US/docs/Web/MathML/Guides/Tables)
+  - : Once all basic math notations are known, it remains to consider tabular layout which can be used for matrix-like expressions and other advanced math layout.
+- [Three famous mathematical formulas](/en-US/docs/Web/MathML/Guides/Three_famous_mathematical_formulas) <sup>Challenge</sup>
+  - : With the things you have learned in the last few articles, you should already be able to write relatively sophisticated MathML formulas. This challenge gives you a chance to do that.
+
+## Guides
+
+- [Authoring MathML](/en-US/docs/Web/MathML/Authoring)
+  - : Suggestions and tips for writing MathML, including suggested MathML editors and how to integrate their output into Web content.
+- [Fonts for MathML](/en-US/docs/Web/MathML/Fonts)
+  - : How users can install such math fonts to properly display MathML in browsers.
 
 ## MathML reference
 
@@ -25,10 +46,10 @@ Below you will find links to documentation, examples, and tools to work with Mat
   - : Details about each MathML element and compatibility information for desktop and mobile browsers.
 - [MathML attribute reference](/en-US/docs/Web/MathML/Attribute)
   - : Information about MathML attributes that modify the appearance or behavior of elements.
+- [MathML attribute values](/en-US/docs/Web/MathML/Attribute)
+  - : Further information about MathML attribute values.
 - [MathML examples](/en-US/docs/Web/MathML/Examples)
   - : MathML samples and examples to help you understand how it works.
-- [Authoring MathML](/en-US/docs/Web/MathML/Authoring)
-  - : Suggestions and tips for writing MathML, including suggested MathML editors and how to integrate their output into Web content.
 
 ## Getting help from the community
 
@@ -38,11 +59,8 @@ Below you will find links to documentation, examples, and tools to work with Mat
 
 ## Tools
 
-- [W3C Validator](https://validator.w3.org)
-- [Mathzilla Firefox add-on collection](https://addons.mozilla.org/en-US/firefox/collections/5509895/mathzilla/)
-- [TeXZilla](https://github.com/fred-wang/TeXZilla) — Javascript LaTeX to MathML converter ([live demo](https://fred-wang.github.io/TeXZilla/), [Firefox add-on](https://addons.mozilla.org/en-US/firefox/addon/texzilla/), [using in a Web Page, JS program etc](https://github.com/fred-wang/TeXZilla/wiki/Using-TeXZilla))
-- [LaTeXML](https://math.nist.gov/~BMiller/LaTeXML/) - Convert LaTeX documents into HTML+MathML Web pages
-- [MathJax](https://www.mathjax.org/) - Cross-browser JavaScript display engine for mathematics. To force MathJax to use native MathML, try [this Mozilla add-on](https://addons.mozilla.org/en-US/firefox/addon/native-mathml/), this [Safari extension](https://fred-wang.github.io/mathjax-native-mathml-safari/mathjax-native-mathml.safariextz) or this [GreaseMonkey script](https://openuserjs.org/scripts/fred.wang/MathJax_Native_MathML/).
+- [W3C Validator](https://validator.w3.org/)
+- [W3C's wiki page](https://www.w3.org/wiki/Math_Tools)
 
 ## Related topics
 

@@ -1,21 +1,14 @@
 ---
-title: AudioBuffer.duration
+title: "AudioBuffer: duration property"
+short-title: duration
 slug: Web/API/AudioBuffer/duration
 page-type: web-api-instance-property
-tags:
-  - API
-  - AudioBuffer
-  - Property
-  - Reference
-  - Web Audio API
-  - duration
 browser-compat: api.AudioBuffer.duration
 ---
+
 {{ APIRef("Web Audio API") }}
 
-The **`duration`** property of the {{ domxref("AudioBuffer")
-    }} interface returns a double representing the duration, in seconds, of the PCM data
-stored in the buffer.
+The **`duration`** property of the {{ domxref("AudioBuffer")}} interface returns a double representing the duration, in seconds, of the PCM data stored in the buffer.
 
 ## Value
 
@@ -32,7 +25,7 @@ const channels = 2;
 const frameCount = audioCtx.sampleRate * 2.0;
 const myArrayBuffer = audioCtx.createBuffer(2, frameCount, audioCtx.sampleRate);
 
-button.onclick = function() {
+button.onclick = () => {
   // Fill the buffer with white noise;
   // just random values between -1.0 and 1.0
   for (let channel = 0; channel < channels; channel++) {
@@ -46,7 +39,7 @@ button.onclick = function() {
   }
 
   console.log(myArrayBuffer.duration);
-}
+};
 ```
 
 ## Specifications

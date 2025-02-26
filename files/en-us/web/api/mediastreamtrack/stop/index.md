@@ -1,27 +1,18 @@
 ---
-title: MediaStreamTrack.stop()
+title: "MediaStreamTrack: stop() method"
+short-title: stop()
 slug: Web/API/MediaStreamTrack/stop
 page-type: web-api-instance-method
-tags:
-  - API
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaStreamTrack
-  - Method
-  - Reference
-  - Streams
-  - WebRTC
-  - stop
 browser-compat: api.MediaStreamTrack.stop
 ---
-{{DefaultAPISidebar("Media Capture and Streams")}}
 
-The **`MediaStreamTrack.stop()`** method stops the track.
+{{APIRef("Media Capture and Streams")}}
+
+The **`stop()`** method of the {{domxref("MediaStreamTrack")}} interface stops the track.
 
 ## Syntax
 
-```js
+```js-nolint
 stop()
 ```
 
@@ -59,7 +50,7 @@ function stopStreamedVideo(videoElem) {
   const stream = videoElem.srcObject;
   const tracks = stream.getTracks();
 
-  tracks.forEach(function(track) {
+  tracks.forEach((track) => {
     track.stop();
   });
 

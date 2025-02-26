@@ -1,22 +1,14 @@
 ---
-title: NotificationEvent.action
+title: "NotificationEvent: action property"
+short-title: action
 slug: Web/API/NotificationEvent/action
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - NotificationEvent
-  - Notifications
-  - Property
-  - Reference
-  - Service Workers
-  - ServiceWorker
-  - action
 browser-compat: api.NotificationEvent.action
 ---
-{{APIRef("Web Notifications")}}
 
-Returns the string ID of the notification button the user clicked. This value returns an empty string if the user clicked the notification somewhere other than an action button, or the notification does not have a button. The notification id is set during the creation of the Notification via the actions array attribute and can't be modified unless the notification is replaced.
+{{APIRef("Web Notifications")}}{{AvailableInWorkers("service")}}
+
+The **`action`** read-only property of the {{domxref("NotificationEvent")}} interface returns the string ID of the notification button the user clicked. This value returns an empty string if the user clicked the notification somewhere other than an action button, or the notification does not have a button. The notification id is set during the creation of the Notification via the actions array attribute and can't be modified unless the notification is replaced.
 
 ## Value
 
@@ -26,17 +18,21 @@ A string.
 
 ```js
 self.registration.showNotification("New articles available", {
-  actions: [{action: "get", title: "Get now."}]
+  actions: [{ action: "get", title: "Get now." }],
 });
 
-self.addEventListener('notificationclick', function(event) {
-  event.notification.close();
-  if (event.action === 'get') {
-    synchronizeReader();
-  } else {
-    clients.openWindow("/reader");
-  }
-}, false);
+self.addEventListener(
+  "notificationclick",
+  (event) => {
+    event.notification.close();
+    if (event.action === "get") {
+      synchronizeReader();
+    } else {
+      clients.openWindow("/reader");
+    }
+  },
+  false,
+);
 ```
 
 ## Specifications

@@ -1,37 +1,74 @@
 ---
-title: 'HTML attribute: pattern'
+title: "HTML attribute: pattern"
+short-title: pattern
 slug: Web/HTML/Attributes/pattern
-tags:
-  - Attribute
-  - Attributes
-  - Constraint Validation API
-  - HTML
-  - Reference
+page-type: html-attribute
 browser-compat: html.elements.input.pattern
 ---
 
 {{HTMLSidebar}}
 
-The **`pattern`** attribute specifies a [regular expression](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) the form control's value should match. If a non-`null` value doesn't conform to the constraints set by the `pattern` value, the {{domxref('ValidityState')}} object's read-only {{domxref('ValidityState.patternMismatch','patternMismatch')}} property will be true.
+The **`pattern`** attribute specifies a [regular expression](/en-US/docs/Web/JavaScript/Guide/Regular_expressions) the form control's value should match. If a non-`null` value doesn't conform to the constraints set by the `pattern` value, the {{domxref('ValidityState')}} object's read-only {{domxref('ValidityState.patternMismatch','patternMismatch')}} property will be true.
+
+{{InteractiveExample("HTML Demo: pattern", "tabbed-shorter")}}
+
+```html interactive-example
+<label for="username">Username: (3-16 characters)</label>
+<input
+  id="username"
+  name="username"
+  type="text"
+  value="Sasha"
+  pattern="\w{3,16}"
+  required />
+
+<label for="pin">PIN: (4 digits)</label>
+<input id="pin" name="pin" type="password" pattern="\d{4,4}" required />
+```
+
+```css interactive-example
+label {
+  display: block;
+  margin-top: 1em;
+}
+
+input:valid {
+  background-color: palegreen;
+}
+
+input:invalid {
+  background-color: lightpink;
+}
+```
+
+## Overview
 
 The `pattern` attribute is an attribute of the {{HTMLElement("input/text", "text")}}, {{HTMLElement("input/tel", "tel")}}, {{HTMLElement("input/email", "email")}}, {{HTMLElement("input/url", "url")}}, {{HTMLElement("input/password", "password")}}, and {{HTMLElement("input/search", "search")}} input types.
 
-The `pattern` attribute, when specified, is a regular expression which the input's {{htmlattrxref("value")}} must match in order for the value to pass [constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation). It must be a valid JavaScript regular expression, as used by the {{jsxref("RegExp")}} type, and as documented in our [guide on regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions); the `'u'` flag is specified when compiling the regular expression, so that the pattern is treated as a sequence of Unicode code points, instead of as ASCII. No forward slashes should be specified around the pattern text.
+The `pattern` attribute, when specified, is a regular expression which the input's [`value`](/en-US/docs/Web/HTML/Element/input#value) must match for the value to pass [constraint validation](/en-US/docs/Web/HTML/Constraint_validation). It must be a valid JavaScript regular expression, as used by the {{jsxref("RegExp")}} type, and as documented in our [guide on regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions).
 
-If the specified pattern is not specified or is invalid, no regular expression is applied and this attribute is ignored.
+The pattern's regular expression is compiled with the [`'v'` flag](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class#v-mode_character_class). This makes the regular expression [unicode-aware](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_mode), and also changes how character classes are interpreted. This allows character class set intersection and subtraction operations, and in addition to `]` and `\`, the following characters must be escaped using a `\` backslash if they represent literal characters: `(`, `)`, `[`, `{`, `}`, `/`, `-`, `|`. Before mid-2023, the `'u'` flag was specified instead; If you're updating older code, [this document outlines the differences](https://github.com/tc39/proposal-regexp-v-flag#how-is-the-v-flag-different-from-the-u-flag).
 
-> **Note:** Use the {{htmlattrxref("title", "input")}} attribute to specify text that most browsers will display as a tooltip to explain what the requirements are to match the pattern. You **must not** rely on the tooltip alone for an explanation. See below for more information on usability.
+The pattern's regular expression must match the entire input's `value`, rather than matching a substring - as if a `^(?:` were implied at the start of the pattern and `)$` at the end.
+
+No forward slashes should be specified around the pattern text. No regular expression is applied if the attribute value is absent, an empty string, or invalid.
 
 Some of the input types supporting the pattern attribute, notably the {{HTMLElement("input/email", "email")}} and {{HTMLElement("input/url", "url")}} input types, have expected value syntaxes that must be matched. If the pattern attribute isn't present, and the value doesn't match the expected syntax for that value type, the {{domxref('ValidityState')}} object's read-only {{domxref('ValidityState.typeMismatch','typeMismatch')}} property will be true.
-
-### Usability
-
-When including a `pattern`, provide a description of the pattern in visible text near the control. Additionally, include a [`title`](/en-US/docs/Web/HTML/Global_attributes/title) attribute which gives a description of the pattern. User agents may use the title contents during constraint validation to tell the user that the pattern is not matched. Some browsers show a tooltip with title contents, improving usability for sighted users. Additionally, assistive technology may read the title aloud when the control gains focus, but this should not be relied upon for accessibility.
 
 ### Constraint validation
 
 If the input's value is not the empty string and the value does not match the entire regular expression, there is a constraint violation reported by the {{domxref('ValidityState')}} object's {{domxref('ValidityState.patternMismatch','patternMismatch')}} property being `true`.
-The pattern's regular expression, when matched against the value, must have its start anchored to the start of the string and its end anchored to the end of the string, which is slightly different from JavaScript regular expressions: in the case of pattern attribute, we are matching against the entire value, not just any subset, as if a `^(?:` were implied at the start of the pattern and `)$` at the end.
+
+> [!NOTE]
+> If the `pattern` attribute is specified with no value, its value is implicitly the empty string. Thus, **any non-empty** input `value` will result in constraint violation.
+
+### Usability and accessibility considerations
+
+When including a `pattern`, provide a description of the pattern in visible text near the control. Additionally, include a [`title`](/en-US/docs/Web/HTML/Element/input#title) attribute which gives a description of the pattern. User agents may use the title contents during constraint validation to tell the user that the pattern is not matched. Some browsers show a tooltip with title contents, improving usability for sighted users. Additionally, assistive technology may read the title aloud when the control gains focus, but this should not be relied upon for accessibility.
+
+Only relying on the `title` attribute for the visual display of text content is discouraged, as many user agents do not expose the attribute in an accessible manner. Although some browsers show a tooltip when an element with a title is hovered, that leaves out keyboard-only and touch-only users. This is one of the several reasons you must include information informing users how to fill out the control to match the requirements.
+
+While `title`s are used by some browsers to populate error messaging, because browsers sometimes also show the title as text on hover, it therefore shows in non-error situations, so be careful not to word titles as if an error has occurred.
 
 ## Examples
 
@@ -41,17 +78,36 @@ Given the following:
 
 ```html
 <p>
- <label>Enter your phone number in the format (123) - 456 - 7890
-  (<input name="tel1" type="tel" pattern="[0-9]{3}" placeholder="###" aria-label="3-digit area code" size="2"/>) -
-   <input name="tel2" type="tel" pattern="[0-9]{3}" placeholder="###" aria-label="3-digit prefix" size="2"/> -
-   <input name="tel3" type="tel" pattern="[0-9]{4}" placeholder="####" aria-label="4-digit number" size="3"/>
- </label>
+  <label>
+    Enter your phone number in the format (123) - 456 - 7890 (<input
+      name="tel1"
+      type="tel"
+      pattern="[0-9]{3}"
+      placeholder="###"
+      aria-label="3-digit area code"
+      size="2" />) -
+    <input
+      name="tel2"
+      type="tel"
+      pattern="[0-9]{3}"
+      placeholder="###"
+      aria-label="3-digit prefix"
+      size="2" />
+    -
+    <input
+      name="tel3"
+      type="tel"
+      pattern="[0-9]{4}"
+      placeholder="####"
+      aria-label="4-digit number"
+      size="3" />
+  </label>
 </p>
 ```
 
-Here we have 3 sections for a north American phone number with an implicit label encompassing all three components of the phone number, expecting 3-digits, 3-digits and 4-digits respectively, as defined by the [`pattern`](/en-US/docs/Web/HTML/Attributes/pattern) attribute set on each.
+Here we have 3 sections for a north American phone number with an implicit label encompassing all three components of the phone number, expecting 3-digits, 3-digits and 4-digits respectively, as defined by the `pattern` attribute set on each.
 
-If the values are too long or too short, or contain characters that aren't digits, the patternMismatch will be true. When `true`, the element matches the {{cssxref(":invalid")}} CSS pseudo-classes.
+If the values are too long or too short, or contain characters that aren't digits, the `patternMismatch` will be true. When `true`, the element matches the {{cssxref(":invalid")}} CSS pseudo-classes.
 
 ```css
 input:invalid {
@@ -65,7 +121,7 @@ If we had used [`minlength`](/en-US/docs/Web/HTML/Attributes/minlength) and [`ma
 
 ### Specifying a pattern
 
-You can use the {{htmlattrxref("pattern","input")}} attribute to specify a regular expression that the inputted value must match in order to be considered valid (see [Validating against a regular expression](/en-US/docs/Learn/Forms/Form_validation#validating_against_a_regular_expression) for a simple crash course on using regular expressions to validate inputs).
+You can use the [`pattern`](/en-US/docs/Web/HTML/Element/input#pattern) attribute to specify a regular expression that the inputted value must match in order to be considered valid (see [Validating against a regular expression](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation#validating_against_a_regular_expression) for a crash course on using regular expressions to validate inputs).
 
 The example below restricts the value to 4-8 characters and requires that it contain only lower-case letters.
 
@@ -73,8 +129,14 @@ The example below restricts the value to 4-8 characters and requires that it con
 <form>
   <div>
     <label for="uname">Choose a username: </label>
-    <input type="text" id="uname" name="name" required size="45"
-           pattern="[a-z]{4,8}" title="4 to 8 lowercase letters">
+    <input
+      type="text"
+      id="uname"
+      name="name"
+      required
+      size="45"
+      pattern="[a-z]{4,8}"
+      title="4 to 8 lowercase letters" />
     <span class="validity"></span>
     <p>Usernames must be lowercase and 4-8 characters in length.</p>
   </div>
@@ -99,15 +161,15 @@ input + span {
   padding-right: 30px;
 }
 
-input:invalid+span:after {
+input:invalid + span::after {
   position: absolute;
-  content: '✖';
+  content: "✖";
   padding-left: 5px;
 }
 
-input:valid+span:after {
+input:valid + span::after {
   position: absolute;
-  content: '✓';
+  content: "✓";
   padding-left: 5px;
 }
 ```
@@ -115,12 +177,6 @@ input:valid+span:after {
 This renders like so:
 
 {{ EmbedLiveSample('Specifying_a_pattern', 600, 110) }}
-
-### Accessibility Concerns
-
-When a control has a `pattern` attribute, the `title` attribute, if used, must describe the pattern. Relying on the `title` attribute for the visual display of text content is generally discouraged as many user agents do not expose the attribute in an accessible manner. Some browsers show a tooltip when an element with a title is hovered, but that leaves out keyboard-only and touch-only users. This is one of the several reasons you must include information informing users how to fill out the control to match the requirements.
-
-While `title`s are used by some browsers to populate error messaging, because browsers sometimes also show the title as text on hover, it therefore shows in non-error situations, so be careful not to word titles as if an error has occurred.
 
 ## Specifications
 
@@ -132,6 +188,6 @@ While `title`s are used by some browsers to populate error messaging, because br
 
 ## See also
 
-- [Constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation)
-- [Forms: Data form validation](/en-US/docs/Learn/Forms/Form_validation)
-- [Regular Expressions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)
+- [Constraint validation](/en-US/docs/Web/HTML/Constraint_validation)
+- [Forms: Data form validation](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation)
+- [Regular Expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions)

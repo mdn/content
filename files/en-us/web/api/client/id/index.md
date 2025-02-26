@@ -1,32 +1,18 @@
 ---
-title: Client.id
+title: "Client: id property"
+short-title: id
 slug: Web/API/Client/id
 page-type: web-api-instance-property
-tags:
-  - API
-  - Client
-  - Experimental
-  - NeedsExample
-  - Property
-  - Reference
-  - Service Workers
-  - ServiceWorker
-  - id
 browser-compat: api.Client.id
 ---
-{{APIRef("Service Workers API")}}
+
+{{APIRef("Service Workers API")}}{{AvailableInWorkers("service")}}
 
 The **`id`** read-only property of the {{domxref("Client")}} interface returns the universally unique identifier of the {{domxref("Client")}} object.
 
 ## Value
 
 A string uniquely identifying the object.
-
-## Examples
-
-```js
-TBD
-```
 
 ## Specifications
 

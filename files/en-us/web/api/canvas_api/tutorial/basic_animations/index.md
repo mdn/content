@@ -2,15 +2,9 @@
 title: Basic animations
 slug: Web/API/Canvas_API/Tutorial/Basic_animations
 page-type: guide
-tags:
-  - Canvas
-  - Graphics
-  - HTML
-  - HTML5
-  - Intermediate
-  - Tutorial
 ---
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Compositing", "Web/API/Canvas_API/Tutorial/Advanced_animations")}}
+
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Compositing", "Web/API/Canvas_API/Tutorial/Advanced_animations")}}
 
 Since we're using JavaScript to control {{HTMLElement("canvas")}} elements, it's also very easy to make (interactive) animations. In this chapter we will take a look at how to do some basic animations.
 
@@ -21,13 +15,13 @@ Probably the biggest limitation is, that once a shape gets drawn, it stays that 
 These are the steps you need to take to draw a frame:
 
 1. **Clear the canvas**
-    Unless the shapes you'll be drawing fill the complete canvas (for instance a backdrop image), you need to clear any shapes that have been drawn previously. The easiest way to do this is using the {{domxref("CanvasRenderingContext2D.clearRect", "clearRect()")}} method.
+   Unless the shapes you'll be drawing fill the complete canvas (for instance a backdrop image), you need to clear any shapes that have been drawn previously. The easiest way to do this is using the {{domxref("CanvasRenderingContext2D.clearRect", "clearRect()")}} method.
 2. **Save the canvas state**
-    If you're changing any setting (such as styles, transformations, etc.) which affect the canvas state and you want to make sure the original state is used each time a frame is drawn, you need to save that original state.
+   If you're changing any setting (such as styles, transformations, etc.) which affect the canvas state and you want to make sure the original state is used each time a frame is drawn, you need to save that original state.
 3. **Draw animated shapes**
-    The step where you do the actual frame rendering.
+   The step where you do the actual frame rendering.
 4. **Restore the canvas state**
-    If you've saved the state, restore it before drawing a new frame.
+   If you've saved the state, restore it before drawing a new frame.
 
 ## Controlling an animation
 
@@ -37,18 +31,19 @@ That means we need a way to execute our drawing functions over a period of time.
 
 ### Scheduled updates
 
-First there's the {{domxref("setInterval()")}}, {{domxref("setTimeout()")}}, and {{domxref("window.requestAnimationFrame()")}} functions, which can be used to call a specific function over a set period of time.
+First there's the {{domxref("Window.setInterval", "setInterval()")}}, {{domxref("Window.setTimeout", "setTimeout()")}}, and {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}} functions, which can be used to call a specific function over a set period of time.
 
-- {{domxref("setInterval()")}}
+- {{domxref("Window.setInterval", "setInterval()")}}
   - : Starts repeatedly executing the function specified by `function` every `delay` milliseconds.
-- {{domxref("setTimeout()")}}
+- {{domxref("Window.setTimeout", "setTimeout()")}}
   - : Executes the function specified by `function` in `delay` milliseconds.
-- {{domxref("Window.requestAnimationFrame()", "requestAnimationFrame(callback)")}}
+- {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}}
   - : Tells the browser that you wish to perform an animation and requests that the browser call a specified function to update an animation before the next repaint.
 
-If you don't want any user interaction you can use the `setInterval()` function which repeatedly executes the supplied code. If we wanted to make a game, we could use keyboard or mouse events to control the animation and use `setTimeout()`. By setting {{domxref("EventListener")}}s, we catch any user interaction and execute our animation functions.
+If you don't want any user interaction you can use the `setInterval()` function, which repeatedly executes the supplied code. If we wanted to make a game, we could use keyboard or mouse events to control the animation and use `setTimeout()`. By setting listeners using {{domxref("EventTarget.addEventListener", "addEventListener()")}}, we catch any user interaction and execute our animation functions.
 
-> **Note:** In the examples below, we'll use the {{domxref("window.requestAnimationFrame()")}} method to control the animation. The `requestAnimationFrame` method provides a smoother and more efficient way for animating by calling the animation frame when the system is ready to paint the frame. The number of callbacks is usually 60 times per second and may be reduced to a lower rate when running in background tabs. For more information about the animation loop, especially for games, see the article [Anatomy of a video game](/en-US/docs/Games/Anatomy) in our [Game development zone](/en-US/docs/Games).
+> [!NOTE]
+> In the examples below, we'll use the {{domxref("Window.requestAnimationFrame()")}} method to control the animation. The `requestAnimationFrame` method provides a smoother and more efficient way for animating by calling the animation frame when the system is ready to paint the frame. The number of callbacks is usually 60 times per second and may be reduced to a lower rate when running in background tabs. For more information about the animation loop, especially for games, see the article [Anatomy of a video game](/en-US/docs/Games/Anatomy) in our [Game development zone](/en-US/docs/Games).
 
 ## An animated solar system
 
@@ -66,34 +61,40 @@ This example animates a small model of our solar system.
 const sun = new Image();
 const moon = new Image();
 const earth = new Image();
+const ctx = document.getElementById("canvas").getContext("2d");
+
 function init() {
-  sun.src = 'canvas_sun.png';
-  moon.src = 'canvas_moon.png';
-  earth.src = 'canvas_earth.png';
+  sun.src = "canvas_sun.png";
+  moon.src = "canvas_moon.png";
+  earth.src = "canvas_earth.png";
   window.requestAnimationFrame(draw);
 }
 
 function draw() {
-  const ctx = document.getElementById('canvas').getContext('2d');
-
-  ctx.globalCompositeOperation = 'destination-over';
+  ctx.globalCompositeOperation = "destination-over";
   ctx.clearRect(0, 0, 300, 300); // clear canvas
 
-  ctx.fillStyle = 'rgba(0, 0, 0, 0.4)';
-  ctx.strokeStyle = 'rgba(0, 153, 255, 0.4)';
+  ctx.fillStyle = "rgb(0 0 0 / 40%)";
+  ctx.strokeStyle = "rgb(0 153 255 / 40%)";
   ctx.save();
   ctx.translate(150, 150);
 
   // Earth
   const time = new Date();
-  ctx.rotate(((2 * Math.PI) / 60) * time.getSeconds() + ((2 * Math.PI) / 60000) * time.getMilliseconds());
+  ctx.rotate(
+    ((2 * Math.PI) / 60) * time.getSeconds() +
+      ((2 * Math.PI) / 60000) * time.getMilliseconds(),
+  );
   ctx.translate(105, 0);
   ctx.fillRect(0, -12, 40, 24); // Shadow
   ctx.drawImage(earth, -12, -12);
 
   // Moon
   ctx.save();
-  ctx.rotate(((2 * Math.PI) / 6) * time.getSeconds() + ((2 * Math.PI) / 6000) * time.getMilliseconds());
+  ctx.rotate(
+    ((2 * Math.PI) / 6) * time.getSeconds() +
+      ((2 * Math.PI) / 6000) * time.getMilliseconds(),
+  );
   ctx.translate(0, 28.5);
   ctx.drawImage(moon, -3.5, -3.5);
   ctx.restore();
@@ -123,7 +124,7 @@ This example draws an animated clock, showing your current time.
 ### HTML
 
 ```html
-<canvas id="canvas" width="150" height="150"></canvas>
+<canvas id="canvas" width="150" height="150">The current time</canvas>
 ```
 
 ### JavaScript
@@ -131,16 +132,17 @@ This example draws an animated clock, showing your current time.
 ```js
 function clock() {
   const now = new Date();
-  const ctx = document.getElementById('canvas').getContext('2d');
+  const canvas = document.getElementById("canvas");
+  const ctx = canvas.getContext("2d");
   ctx.save();
   ctx.clearRect(0, 0, 150, 150);
   ctx.translate(75, 75);
   ctx.scale(0.4, 0.4);
   ctx.rotate(-Math.PI / 2);
-  ctx.strokeStyle = 'black';
-  ctx.fillStyle = 'white';
+  ctx.strokeStyle = "black";
+  ctx.fillStyle = "white";
   ctx.lineWidth = 8;
-  ctx.lineCap = 'round';
+  ctx.lineCap = "round";
 
   // Hour marks
   ctx.save();
@@ -156,7 +158,7 @@ function clock() {
   // Minute marks
   ctx.save();
   ctx.lineWidth = 5;
-  for (i = 0; i < 60; i++) {
+  for (let i = 0; i < 60; i++) {
     if (i % 5 !== 0) {
       ctx.beginPath();
       ctx.moveTo(117, 0);
@@ -168,14 +170,21 @@ function clock() {
   ctx.restore();
 
   const sec = now.getSeconds();
+  // To display a clock with a sweeping second hand, use:
+  // const sec = now.getSeconds() + now.getMilliseconds() / 1000;
   const min = now.getMinutes();
-  const hr  = now.getHours() % 12;
+  const hr = now.getHours() % 12;
 
-  ctx.fillStyle = 'black';
+  ctx.fillStyle = "black";
 
-  // write Hours
+  // Write image description
+  canvas.innerText = `The time is: ${hr}:${min}`;
+
+  // Write Hours
   ctx.save();
-  ctx.rotate((Math.PI / 6) * hr + (Math.PI / 360) * min + (Math.PI / 21600) * sec);
+  ctx.rotate(
+    (Math.PI / 6) * hr + (Math.PI / 360) * min + (Math.PI / 21600) * sec,
+  );
   ctx.lineWidth = 14;
   ctx.beginPath();
   ctx.moveTo(-20, 0);
@@ -183,7 +192,7 @@ function clock() {
   ctx.stroke();
   ctx.restore();
 
-  // write Minutes
+  // Write Minutes
   ctx.save();
   ctx.rotate((Math.PI / 30) * min + (Math.PI / 1800) * sec);
   ctx.lineWidth = 10;
@@ -195,9 +204,9 @@ function clock() {
 
   // Write seconds
   ctx.save();
-  ctx.rotate(sec * Math.PI / 30);
-  ctx.strokeStyle = '#D40000';
-  ctx.fillStyle = '#D40000';
+  ctx.rotate((sec * Math.PI) / 30);
+  ctx.strokeStyle = "#D40000";
+  ctx.fillStyle = "#D40000";
   ctx.lineWidth = 6;
   ctx.beginPath();
   ctx.moveTo(-30, 0);
@@ -209,14 +218,14 @@ function clock() {
   ctx.beginPath();
   ctx.arc(95, 0, 10, 0, Math.PI * 2, true);
   ctx.stroke();
-  ctx.fillStyle = 'rgba(0, 0, 0, 0)';
+  ctx.fillStyle = "rgb(0 0 0 / 0%)";
   ctx.arc(0, 0, 3, 0, Math.PI * 2, true);
   ctx.fill();
   ctx.restore();
 
   ctx.beginPath();
   ctx.lineWidth = 14;
-  ctx.strokeStyle = '#325FA2';
+  ctx.strokeStyle = "#325FA2";
   ctx.arc(0, 0, 142, 0, Math.PI * 2, true);
   ctx.stroke();
 
@@ -230,6 +239,10 @@ window.requestAnimationFrame(clock);
 
 ### Result
 
+> [!NOTE]
+> Although the clock updates only once every second, the animated image is updated at 60 frames per second (or at the display refresh rate of your web browser).
+> To display the clock with a sweeping second hand, replace the definition of `const sec` above with the version that has been commented out.
+
 {{EmbedLiveSample("An_animated_clock", "180", "200")}}
 
 ## A looping panorama
@@ -238,10 +251,12 @@ In this example, a panorama is scrolled left-to-right. We're using [an image of 
 
 ### HTML
 
-The HTML includes the {{HTMLElement("canvas")}} in which the image is scrolled. Note that the width and height specified here must match the values of the `CanvasXZSize` and `CanvasYSize` variables in the JavaScript code.
+The HTML includes the {{HTMLElement("canvas")}} in which the image is scrolled. Note that the width and height specified here must match the values of the `canvasXSize` and `canvasYSize` variables in the JavaScript code.
 
 ```html
-<canvas id="canvas" width="800" height="200"></canvas>
+<canvas id="canvas" width="800" height="200"
+  >Yosemite National Park, meadow at the base of El Capitan</canvas
+>
 ```
 
 ### JavaScript
@@ -251,16 +266,14 @@ const img = new Image();
 
 // User Variables - customize these to change the image being scrolled, its
 // direction, and the speed.
-
-img.src = 'capitan_meadows_yosemite_national_park.jpg';
-const CanvasXSize = 800;
-const CanvasYSize = 200;
+img.src = "capitan_meadows_yosemite_national_park.jpg";
+const canvasXSize = 800;
+const canvasYSize = 200;
 const speed = 30; // lower is faster
 const scale = 1.05;
 const y = -4.5; // vertical offset
 
 // Main program
-
 const dx = 0.75;
 let imgW;
 let imgH;
@@ -269,68 +282,63 @@ let clearX;
 let clearY;
 let ctx;
 
-img.onload = function() {
-    imgW = img.width * scale;
-    imgH = img.height * scale;
+img.onload = () => {
+  imgW = img.width * scale;
+  imgH = img.height * scale;
 
-    if (imgW > CanvasXSize) {
-        // image larger than canvas
-        x = CanvasXSize - imgW;
-    }
-    if (imgW > CanvasXSize) {
-        // image width larger than canvas
-        clearX = imgW;
-    } else {
-        clearX = CanvasXSize;
-    }
-    if (imgH > CanvasYSize) {
-        // image height larger than canvas
-        clearY = imgH;
-    } else {
-        clearY = CanvasYSize;
-    }
+  if (imgW > canvasXSize) {
+    // Image larger than canvas
+    x = canvasXSize - imgW;
+  }
 
-    // get canvas context
-    ctx = document.getElementById('canvas').getContext('2d');
+  // Check if image dimension is larger than canvas
+  clearX = Math.max(imgW, canvasXSize);
+  clearY = Math.max(imgH, canvasYSize);
 
-    // set refresh rate
-    return setInterval(draw, speed);
-}
+  // Get canvas context
+  ctx = document.getElementById("canvas").getContext("2d");
+
+  // Set refresh rate
+  return setInterval(draw, speed);
+};
 
 function draw() {
-    ctx.clearRect(0, 0, clearX, clearY); // clear the canvas
+  ctx.clearRect(0, 0, clearX, clearY); // clear the canvas
 
-    // if image is <= Canvas Size
-    if (imgW <= CanvasXSize) {
-        // reset, start from beginning
-        if (x > CanvasXSize) {
-            x = -imgW + x;
-        }
-        // draw additional image1
-        if (x > 0) {
-            ctx.drawImage(img, -imgW + x, y, imgW, imgH);
-        }
-        // draw additional image2
-        if (x - imgW > 0) {
-            ctx.drawImage(img, -imgW * 2 + x, y, imgW, imgH);
-        }
+  // If image is <= canvas size
+  if (imgW <= canvasXSize) {
+    // Reset, start from beginning
+    if (x > canvasXSize) {
+      x = -imgW + x;
     }
 
-    // image is > Canvas Size
-    else {
-        // reset, start from beginning
-        if (x > (CanvasXSize)) {
-            x = CanvasXSize - imgW;
-        }
-        // draw additional image
-        if (x > (CanvasXSize-imgW)) {
-            ctx.drawImage(img, x - imgW + 1, y, imgW, imgH);
-        }
+    // Draw additional image1
+    if (x > 0) {
+      ctx.drawImage(img, -imgW + x, y, imgW, imgH);
     }
-    // draw image
-    ctx.drawImage(img, x, y,imgW, imgH);
-    // amount to move
-    x += dx;
+
+    // Draw additional image2
+    if (x - imgW > 0) {
+      ctx.drawImage(img, -imgW * 2 + x, y, imgW, imgH);
+    }
+  } else {
+    // Image is > canvas size
+    // Reset, start from beginning
+    if (x > canvasXSize) {
+      x = canvasXSize - imgW;
+    }
+
+    // Draw additional image
+    if (x > canvasXSize - imgW) {
+      ctx.drawImage(img, x - imgW + 1, y, imgW, imgH);
+    }
+  }
+
+  // Draw image
+  ctx.drawImage(img, x, y, imgW, imgH);
+
+  // Amount to move
+  x += dx;
 }
 ```
 
@@ -343,7 +351,10 @@ function draw() {
 ### HTML
 
 ```html
-<canvas id="cw"></canvas>
+<canvas id="cw"
+  >Animation creating multi-colored disappearing stream of light that follow the
+  cursor as it moves over the image
+</canvas>
 ```
 
 ### CSS
@@ -357,7 +368,7 @@ function draw() {
 body {
   margin: 0;
   padding: 0;
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: rgb(0 0 0 / 5%);
 }
 ```
 
@@ -391,7 +402,7 @@ addEventListener(
     cursor.x = e.touches[0].clientX;
     cursor.y = e.touches[0].clientY;
   },
-  { passive: false }
+  { passive: false },
 );
 
 addEventListener("resize", () => setSize());
@@ -403,7 +414,7 @@ function generateParticles(amount) {
       innerHeight / 2,
       4,
       generateColor(),
-      0.02
+      0.02,
     );
   }
 }
@@ -451,7 +462,7 @@ function Particle(x, y, particleTrailWidth, strokeColor, rotateSpeed) {
 function anim() {
   requestAnimationFrame(anim);
 
-  context.fillStyle = "rgba(0,0,0,0.05)";
+  context.fillStyle = "rgb(0 0 0 / 5%)";
   context.fillRect(0, 0, canvas.width, canvas.height);
 
   particlesArray.forEach((particle) => particle.rotate());

@@ -2,20 +2,16 @@
 title: TrustedScript
 slug: Web/API/TrustedScript
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - TrustedScript
 browser-compat: api.TrustedScript
 ---
-{{DefaultAPISidebar("Trusted Types API")}}
 
-The **`TrustedScript`** interface of the {{domxref('Trusted Types API')}} represents a string with an uncompiled script body that a developer can insert into an [injection sink](/en-US/docs/Web/API/Trusted_Types_API#injection_sinks) that might execute the script. These objects are created via {{domxref("TrustedTypePolicy.createScript","TrustedTypePolicy.createScript()")}} and therefore have no constructor.
+{{APIRef("Trusted Types API")}}{{AvailableInWorkers}}
+
+The **`TrustedScript`** interface of the {{domxref("Trusted Types API", "", "", "nocode")}} represents a string with an uncompiled script body that a developer can insert into an [injection sink](/en-US/docs/Web/API/Trusted_Types_API#injection_sinks) that might execute the script. These objects are created via {{domxref("TrustedTypePolicy.createScript","TrustedTypePolicy.createScript()")}} and therefore have no constructor.
 
 The value of a **TrustedScript** object is set when the object is created and cannot be changed by JavaScript as there is no setter exposed.
 
-## Methods
+## Instance methods
 
 - {{domxref("TrustedScript.toJSON()")}}
   - : Returns a JSON representation of the stored data.
@@ -41,4 +37,4 @@ console.log(sanitized); /* a TrustedScript object */
 
 ## See also
 
-- [Prevent DOM-based cross-site scripting vulnerabilities with Trusted Types](https://web.dev/trusted-types/)
+- [Prevent DOM-based cross-site scripting vulnerabilities with Trusted Types](https://web.dev/articles/trusted-types)

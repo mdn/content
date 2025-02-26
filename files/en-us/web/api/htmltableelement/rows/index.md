@@ -1,20 +1,11 @@
 ---
-title: HTMLTableElement.rows
+title: "HTMLTableElement: rows property"
+short-title: rows
 slug: Web/API/HTMLTableElement/rows
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLTableElement
-  - NeedsBrowserCompatibility
-  - NeedsSpecTable
-  - Property
-  - Read-only
-  - Reference
-  - Table Rows
-  - rows
 browser-compat: api.HTMLTableElement.rows
 ---
+
 {{APIRef("HTML DOM")}}
 
 The read-only {{domxref("HTMLTableElement")}}
@@ -36,13 +27,13 @@ without having to manually search for them.
 ## Examples
 
 ```js
-myrows = mytable.rows;
-firstRow = mytable.rows[0];
-lastRow = mytable.rows.item(mytable.rows.length-1);
+myRows = myTable.rows;
+firstRow = myTable.rows[0];
+lastRow = myTable.rows.item(myTable.rows.length - 1);
 ```
 
-This demonstrates how you can use both array syntax (line 2) and the
-{{domxref("HTMLCollection.item()")}} method (line 3) to obtain individual rows in the
+This demonstrates how you can use both indexed access and the
+{{domxref("HTMLCollection.item()")}} method to obtain individual rows in the
 table.
 
 ## Specifications

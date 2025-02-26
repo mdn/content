@@ -1,19 +1,14 @@
 ---
-title: XRLayerEvent.layer
+title: "XRLayerEvent: layer property"
+short-title: layer
 slug: Web/API/XRLayerEvent/layer
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - VR
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
+status:
+  - experimental
 browser-compat: api.XRLayerEvent.layer
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`layer`** property of the {{domxref("XRLayerEvent")}} interface is a reference to the {{domxref("XRLayer")}} which generated the event.
 

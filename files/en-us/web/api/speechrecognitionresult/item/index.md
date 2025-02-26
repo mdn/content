@@ -1,21 +1,12 @@
 ---
-title: SpeechRecognitionResult.item()
+title: "SpeechRecognitionResult: item() method"
+short-title: item()
 slug: Web/API/SpeechRecognitionResult/item
 page-type: web-api-instance-method
-tags:
-  - API
-  - Experimental
-  - Getter
-  - Method
-  - Reference
-  - SpeechRecognitionResult
-  - Web Speech API
-  - item
-  - recognition
-  - speech
 browser-compat: api.SpeechRecognitionResult.item
 ---
-{{APIRef("Web Speech API")}}{{ SeeCompatTable() }}
+
+{{APIRef("Web Speech API")}}
 
 The **`item`** getter of the
 {{domxref("SpeechRecognitionResult")}} interface is a standard getter that allows
@@ -24,7 +15,7 @@ array syntax.
 
 ## Syntax
 
-```js
+```js-nolint
 item(index)
 ```
 
@@ -39,10 +30,10 @@ A {{domxref("SpeechRecognitionAlternative")}} object.
 
 ## Examples
 
-This code is excerpted from our [Speech color changer](https://github.com/mdn/dom-examples/blob/master/web-speech-api/speech-color-changer/script.js) example.
+This code is excerpted from our [Speech color changer](https://github.com/mdn/dom-examples/blob/main/web-speech-api/speech-color-changer/script.js) example.
 
 ```js
-recognition.onresult = function(event) {
+recognition.onresult = (event) => {
   // The SpeechRecognitionEvent results property returns a SpeechRecognitionResultList object
   // The SpeechRecognitionResultList object contains SpeechRecognitionResult objects.
   // It has a getter so it can be accessed like an array
@@ -55,7 +46,7 @@ recognition.onresult = function(event) {
   const color = event.results[0][0].transcript;
   diagnostic.textContent = `Result received: ${color}.`;
   bg.style.backgroundColor = color;
-}
+};
 ```
 
 ## Specifications

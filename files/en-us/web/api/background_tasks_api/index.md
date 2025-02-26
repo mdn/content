@@ -2,21 +2,15 @@
 title: Background Tasks API
 slug: Web/API/Background_Tasks_API
 page-type: web-api-overview
-tags:
-  - API
-  - Background Tasks API
-  - Guide
-  - IdleDeadline
-  - Overview
-  - cancelIdleCallback
-  - requestIdleCallback
 browser-compat: api.Window.requestIdleCallback
 ---
+
 {{DefaultAPISidebar("Background Tasks")}}
 
 The **Cooperative Scheduling of Background Tasks API** (also referred to as the Background Tasks API or the `requestIdleCallback()` API) provides the ability to queue tasks to be executed automatically by the user agent when it determines that there is free time to do so.
 
-> **Note:** This API is _not available_ in [Web Workers](/en-US/docs/Web/API/Web_Workers_API).
+> [!NOTE]
+> This API is _not available_ in [Web Workers](/en-US/docs/Web/API/Web_Workers_API).
 
 ## Concepts and usage
 
@@ -34,43 +28,6 @@ Because idle callbacks are intended to give your code a way to cooperate with th
 - **Avoid tasks whose run time can't be predicted.** Your idle callback should avoid doing anything that could take an unpredictable amount of time. For example, anything which might affect layout should be avoided. You should also avoid resolving or rejecting {{jsxref("Promise")}}s, since that would invoke the handler for that promise's resolution or rejection as soon as your callback returns.
 - **Use timeouts when you need to, but only when you need to.** Using timeouts can ensure that your code runs in a timely manner, but it can also allow you to cause lag or animation stutters by mandating that the browser call you when there's not enough time left for you to run without disrupting performance.
 
-### Falling back to setTimeout
-
-Because the Background Tasks API is fairly new, your code may need to be able to work on browsers that don't yet support it. You can do so with a simple shim that uses {{domxref("setTimeout()")}} as a fallback option. This isn't a {{Glossary("polyfill")}}, since it's not functionally identical; `setTimeout()` doesn't let you make use of idle periods, but instead runs your code when possible, leaving us to do the best we can to avoid causing the user to experience performance lag.
-
-```js
-window.requestIdleCallback = window.requestIdleCallback || function(handler) {
-  let startTime = Date.now();
-
-  return setTimeout(function() {
-    handler({
-      didTimeout: false,
-      timeRemaining() {
-        return Math.max(0, 50.0 - (Date.now() - startTime));
-      }
-    });
-  }, 1);
-}
-```
-
-If {{domxref("Window.requestIdleCallback", "window.requestIdleCallback")}} is undefined, we create it here. The function begins by recording the time at which our implementation was called. We'll be using that to compute the value returned by our shim for {{domxref("IdleDeadline.timeRemaining()", "timeRemaining()")}}.
-
-Then we call {{domxref("setTimeout()")}}, passing into it a function which runs the callback passed into our implementation of `requestIdleCallback()`. The callback is passed an object which conforms to {{domxref("IdleDeadline")}}, with {{domxref("IdleDeadline.didTimeout", "didTimeout")}} set to `false` and a {{domxref("IdleDeadline.timeRemaining", "timeRemaining()")}} method which is implemented to give the callback 50 milliseconds of time to begin with. Each time `timeRemaining()` is called, it subtracts the elapsed time from the original 50 milliseconds to determine the amount of time left.
-
-As a result, while our shim doesn't constrain itself to the amount of idle time left in the current event loop pass like the true `requestIdleCallback()`, it does at least limit the callback to no more than 50 milliseconds of run time per pass.
-
-The implementation of our shim for {{domxref("Window.cancelIdleCallback", "cancelIdleCallback()")}} is much simpler:
-
-```js
-window.cancelIdleCallback = window.cancelIdleCallback || function(id) {
-  clearTimeout(id);
-}
-```
-
-If `cancelIdleCallback()` isn't defined, this creates one which passes the specified callback ID through to {{domxref("clearTimeout()")}}.
-
-Now your code will work even on browsers that don't support the Background Tasks API, albeit not as efficiently.
-
 ## Interfaces
 
 The Background Tasks API adds only one new interface:
@@ -86,7 +43,7 @@ In this example, we'll take a look at how you can use {{domxref("window.requestI
 
 Below you'll find only the HTML and JavaScript for this example. The CSS is not shown, since it's not particularly crucial to understanding this functionality.
 
-### HTML content
+### HTML
 
 In order to be oriented about what we're trying to accomplish, let's have a look at the HTML. This establishes a box (`id="container"`) that's used to present the progress of an operation (because you never know how long decoding "quantum filament tachyon emissions" will take, after all) as well as a second main box (`id="logBox"`), which is used to display textual output.
 
@@ -104,7 +61,8 @@ In order to be oriented about what we're trying to accomplish, let's have a look
   <button class="button" id="startButton">Start</button>
 
   <div class="label counter">
-    Task <span id="currentTaskNumber">0</span> of <span id="totalTaskCount">0</span>
+    Task <span id="currentTaskNumber">0</span> of
+    <span id="totalTaskCount">0</span>
   </div>
 </div>
 
@@ -125,7 +83,7 @@ body {
 #logBox {
   margin-top: 16px;
   width: 400px;
-  height:500px;
+  height: 500px;
   border-radius: 6px;
   border: 1px solid black;
   box-shadow: 4px 4px 2px black;
@@ -141,7 +99,9 @@ body {
 }
 
 #log {
-  font: 12px "Courier", monospace;
+  font:
+    12px "Courier",
+    monospace;
   padding: 6px;
   overflow: auto;
   overflow-y: scroll;
@@ -189,14 +149,14 @@ body {
 }
 ```
 
-### JavaScript content
+### JavaScript
 
 Now that the document structure is defined, construct the JavaScript code that will do the work. The goal: to be able to add requests to call functions to a queue, with an idle callback that runs those functions whenever the system is idle for long enough a time to make progress.
 
 #### Variable declarations
 
 ```js
-let taskList = [];
+const taskList = [];
 let totalTaskCount = 0;
 let currentTaskNumber = 0;
 let taskHandle = null;
@@ -210,11 +170,11 @@ These variables are used to manage the list of tasks that are waiting to be perf
 - `taskHandle` is a reference to the task currently being processed.
 
 ```js
-let totalTaskCountElem = document.getElementById("totalTaskCount");
-let currentTaskNumberElem = document.getElementById("currentTaskNumber");
-let progressBarElem = document.getElementById("progress");
-let startButtonElem = document.getElementById("startButton");
-let logElem = document.getElementById("log");
+const totalTaskCountElem = document.getElementById("totalTaskCount");
+const currentTaskNumberElem = document.getElementById("currentTaskNumber");
+const progressBarElem = document.getElementById("progress");
+const startButtonElem = document.getElementById("startButton");
+const logElem = document.getElementById("log");
 ```
 
 Next we have variables which reference the DOM elements we need to interact with. These elements are:
@@ -236,22 +196,26 @@ Finally, we set up a couple of variables for other items:
 - `statusRefreshScheduled` is used to track whether or not we've already scheduled an update of the status display box for the upcoming frame, so that we only do it once per frame
 
 ```js hidden
-window.requestIdleCallback = window.requestIdleCallback || function(handler) {
-  let startTime = Date.now();
+requestIdleCallback =
+  requestIdleCallback ||
+  ((handler) => {
+    const startTime = Date.now();
 
-  return setTimeout(function() {
-    handler({
-      didTimeout: false,
-      timeRemaining() {
-        return Math.max(0, 50.0 - (Date.now() - startTime));
-      }
-    });
-  }, 1);
-};
+    return setTimeout(() => {
+      handler({
+        didTimeout: false,
+        timeRemaining() {
+          return Math.max(0, 50.0 - (Date.now() - startTime));
+        },
+      });
+    }, 1);
+  });
 
-window.cancelIdleCallback = window.cancelIdleCallback || function(id) {
-  clearTimeout(id);
-};
+cancelIdleCallback =
+  cancelIdleCallback ||
+  ((id) => {
+    clearTimeout(id);
+  });
 ```
 
 #### Managing the task queue
@@ -266,7 +230,7 @@ First, we need a function that enqueues tasks for future execution. That functio
 function enqueueTask(taskHandler, taskData) {
   taskList.push({
     handler: taskHandler,
-    data: taskData
+    data: taskData,
   });
 
   totalTaskCount++;
@@ -294,8 +258,11 @@ Our idle callback handler, `runTaskQueue()`, gets called when the browser determ
 
 ```js
 function runTaskQueue(deadline) {
-  while ((deadline.timeRemaining() > 0 || deadline.didTimeout) && taskList.length) {
-    let task = taskList.shift();
+  while (
+    (deadline.timeRemaining() > 0 || deadline.didTimeout) &&
+    taskList.length
+  ) {
+    const task = taskList.shift();
     currentTaskNumber++;
 
     task.handler(task.data);
@@ -303,7 +270,7 @@ function runTaskQueue(deadline) {
   }
 
   if (taskList.length) {
-    taskHandle = requestIdleCallback(runTaskQueue, { timeout: 1000} );
+    taskHandle = requestIdleCallback(runTaskQueue, { timeout: 1000 });
   } else {
     taskHandle = 0;
   }
@@ -331,9 +298,9 @@ DOM changes are scheduled by calling the `scheduleStatusRefresh()` function.
 
 ```js
 function scheduleStatusRefresh() {
-    if (!statusRefreshScheduled) {
-      requestAnimationFrame(updateDisplay);
-      statusRefreshScheduled = true;
+  if (!statusRefreshScheduled) {
+    requestAnimationFrame(updateDisplay);
+    statusRefreshScheduled = true;
   }
 }
 ```
@@ -346,7 +313,8 @@ The `updateDisplay()` function is responsible for drawing the contents of the pr
 
 ```js
 function updateDisplay() {
-  let scrolledToEnd = logElem.scrollHeight - logElem.clientHeight <= logElem.scrollTop + 1;
+  const scrolledToEnd =
+    logElem.scrollHeight - logElem.clientHeight <= logElem.scrollTop + 1;
 
   if (totalTaskCount) {
     if (progressBarElem.max !== totalTaskCount) {
@@ -366,7 +334,7 @@ function updateDisplay() {
   }
 
   if (scrolledToEnd) {
-      logElem.scrollTop = logElem.scrollHeight - logElem.clientHeight;
+    logElem.scrollTop = logElem.scrollHeight - logElem.clientHeight;
   }
 
   statusRefreshScheduled = false;
@@ -391,7 +359,7 @@ The `log()` function adds the specified text to the log. Since we don't know at 
 ```js
 function log(text) {
   if (!logFragment) {
-      logFragment = document.createDocumentFragment();
+    logFragment = document.createDocumentFragment();
   }
 
   const el = document.createElement("div");
@@ -402,7 +370,9 @@ function log(text) {
 
 First, we create a {{domxref("DocumentFragment")}} object named `logFragment` if one doesn't currently exist. This element is a pseudo-DOM into which we can insert elements without immediately changing the main DOM itself.
 
-We then create a new {{HTMLElement("div")}} element and set its contents to match the input `text`. Then we append the new element to the end of the pseudo-DOM in `logFragment`. `logFragment` will accumulate log entries until the next time `updateDisplay()` is called because the DOM for the changes.
+We then create a new {{HTMLElement("div")}} element and set its contents to match the input `text`.
+Then we append the new element to the end of the pseudo-DOM in `logFragment`.
+`logFragment` will accumulate log entries until the next time `updateDisplay()` is called, once the DOM is ready for the changes.
 
 ### Running tasks
 
@@ -410,14 +380,14 @@ Now that we've got the task management and display maintenance code done, we can
 
 #### The task handler
 
-The function we'll be using as our task handler—that is, the function that will be used as the value of the task object's `handler` property—is `logTaskHandler`(). It's a simple function that outputs a bunch of stuff to the log for each task. In your own application, you'd replace this code with whatever task it is you wish to perform during idle time. Just remember that anything you want to do that changes the DOM needs to be handled through {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}}.
+The function we'll be using as our task handler—that is, the function that will be used as the value of the task object's `handler` property—is `logTaskHandler()`. It's a simple function that outputs a bunch of stuff to the log for each task. In your own application, you'd replace this code with whatever task it is you wish to perform during idle time. Just remember that anything you want to do that changes the DOM needs to be handled through {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}}.
 
 ```js
 function logTaskHandler(data) {
   log(`Running task #${currentTaskNumber}`);
 
-  for (i=0; i<data.count; i+=1) {
-    log(`${(i+1).toString()}. ${data.text}`);
+  for (let i = 0; i < data.count; i += 1) {
+    log(`${(i + 1).toString()}. ${data.text}`);
   }
 }
 ```
@@ -440,19 +410,21 @@ function decodeTechnoStuff() {
   currentTaskNumber = 0;
   updateDisplay();
 
-  let n = getRandomIntInclusive(100, 200);
+  const n = getRandomIntInclusive(100, 200);
 
-  for (i=0; i<n; i++) {
-    let taskData = {
+  for (let i = 0; i < n; i++) {
+    const taskData = {
       count: getRandomIntInclusive(75, 150),
-      text: `This text is from task number ${(i+1).toString()} of ${n}`
+      text: `This text is from task number ${i + 1} of ${n}`,
     };
 
     enqueueTask(logTaskHandler, taskData);
   }
 }
 
-document.getElementById("startButton").addEventListener("click", decodeTechnoStuff, false);
+document
+  .getElementById("startButton")
+  .addEventListener("click", decodeTechnoStuff, false);
 ```
 
 `decodeTechnoStuff()` starts by zeroing the values of totalTaskCount (the number of tasks added to the queue so far) and currentTaskNumber (the task currently being run), and then calls `updateDisplay()` to reset the display to its "nothing's happened yet" state.

@@ -1,17 +1,11 @@
 ---
-title: NodeList.prototype.forEach()
+title: "NodeList: forEach() method"
+short-title: forEach()
 slug: Web/API/NodeList/forEach
 page-type: web-api-instance-method
-tags:
-  - DOM
-  - Iterable
-  - Method
-  - NodeList
-  - Reference
-  - Web
-  - Polyfill
 browser-compat: api.NodeList.forEach
 ---
+
 {{APIRef("DOM")}}
 
 The **`forEach()`** method of the {{domxref("NodeList")}}
@@ -20,9 +14,9 @@ insertion order.
 
 ## Syntax
 
-```js
-someNodeList.forEach(callback);
-someNodeList.forEach(callback, thisArg);
+```js-nolint
+forEach(callback)
+forEach(callback, thisArg)
 ```
 
 ### Parameters
@@ -64,48 +58,18 @@ node.appendChild(kid3);
 
 const list = node.childNodes;
 
-list.forEach(
-  function(currentValue, currentIndex, listObj) {
-    console.log(`${currentValue}, ${currentIndex}, ${this}`);
-  },
-  'myThisArg'
-);
+list.forEach(function (currentValue, currentIndex, listObj) {
+  console.log(`${currentValue}, ${currentIndex}, ${this}`);
+}, "myThisArg");
 ```
 
 The above code results in the following:
 
-```
+```plain
 [object HTMLParagraphElement], 0, myThisArg
 [object Text], 1, myThisArg
 [object HTMLSpanElement], 2, myThisArg
 ```
-
-## Polyfill
-
-This {{Glossary("Polyfill","polyfill")}} adds compatibility to all Browsers supporting
-[ES5](https://caniuse.com/#search=es5):
-
-```js
-if (window.NodeList && !NodeList.prototype.forEach) {
-    NodeList.prototype.forEach = function (callback, thisArg) {
-        thisArg = thisArg || window;
-        for (let i = 0; i < this.length; i++) {
-            callback.call(thisArg, this[i], i, this);
-        }
-    };
-}
-```
-
-OR
-
-```js
-if (window.NodeList && !NodeList.prototype.forEach) {
-   NodeList.prototype.forEach = Array.prototype.forEach;
-}
-```
-
-The above behavior is how many browsers actually implement
-`NodeList.prototype.forEach()` (Chrome, for example).
 
 ## Specifications
 

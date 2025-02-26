@@ -1,21 +1,20 @@
 ---
-title: Event.explicitOriginalTarget
+title: "Event: explicitOriginalTarget property"
+short-title: explicitOriginalTarget
 slug: Web/API/Event/explicitOriginalTarget
 page-type: web-api-instance-property
-tags:
-  - Non-standard
-  - Property
-  - Read-only
-  - Reference
+status:
+  - non-standard
 browser-compat: api.Event.explicitOriginalTarget
 ---
-{{APIRef("DOM")}}{{Non-standard_Header}}
+
+{{APIRef("DOM")}}{{Non-standard_Header}}{{AvailableInWorkers}}
 
 The read-only **`explicitOriginalTarget`** property of the {{domxref("Event")}} interface returns the non-anonymous original target of the event.
 
 If the event was retargeted for some reason other than an anonymous boundary crossing, this will be set to the target before the retargeting occurs.
 
-For example, mouse events are retargeted to their parent node when they happen over text nodes (see {{Bug(185889)}}), and in that case [`currentTarget`](/en-US/docs/Web/API/Event/currentTarget) will show the parent while this property will show the text node.
+For example, mouse events are retargeted to their parent node when they happen over text nodes (see [Firefox bug 185889](https://bugzil.la/185889)), and in that case [`currentTarget`](/en-US/docs/Web/API/Event/currentTarget) will show the parent while this property will show the text node.
 
 This property also differs from [`originalTarget`](/en-US/docs/Web/API/Event/originalTarget) in that it will never contain anonymous content.
 
@@ -50,7 +49,3 @@ _This is a Mozilla-specific property and is not part of any current specificatio
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- [Comparison of Event Targets](/en-US/docs/Web/API/Event/Comparison_of_Event_Targets)

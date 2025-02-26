@@ -1,31 +1,25 @@
 ---
-title: Element.matches()
+title: "Element: matches() method"
+short-title: matches()
 slug: Web/API/Element/matches
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSS Selector
-  - DOM
-  - Element
-  - Method
-  - Reference
-  - Selector
 browser-compat: api.Element.matches
 ---
+
 {{APIRef("DOM")}}
 
-The **`matches()`** method of the {{domxref("Element")}} interface tests whether the element would be selected by the specified [CSS selector](/en-US/docs/Learn/CSS/Building_blocks/Selectors).
+The **`matches()`** method of the {{domxref("Element")}} interface tests whether the element would be selected by the specified [CSS selector](/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors).
 
 ## Syntax
 
-```js
+```js-nolint
 matches(selectors)
 ```
 
 ### Parameters
 
 - `selectors`
-  - : A string containing valid [CSS selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors) to test the {{domxref("Element")}} against.
+  - : A string containing valid [CSS selectors](/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors) to test the {{domxref("Element")}} against.
 
 ### Return value
 
@@ -51,10 +45,10 @@ matches(selectors)
 ### JavaScript
 
 ```js
-const birds = document.querySelectorAll('li');
+const birds = document.querySelectorAll("li");
 
 for (const bird of birds) {
-  if (bird.matches('.endangered')) {
+  if (bird.matches(".endangered")) {
     console.log(`The ${bird.textContent} is endangered!`);
   }
 }
@@ -73,5 +67,5 @@ has indeed a `class` attribute with value `endangered`.
 
 ## See also
 
-- [CSS selectors reference](/en-US/docs/Web/CSS/CSS_Selectors)
+- [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors) module
 - Other {{domxref("Element")}} methods that take selectors: {{domxref("Element.querySelector()")}}, {{domxref("Element.querySelectorAll()")}}, and {{domxref("element.closest()")}}.

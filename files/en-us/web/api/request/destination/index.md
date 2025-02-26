@@ -1,31 +1,20 @@
 ---
-title: Request.destination
+title: "Request: destination property"
+short-title: destination
 slug: Web/API/Request/destination
 page-type: web-api-instance-property
-tags:
-  - API
-  - Fetch
-  - Fetch API
-  - Files
-  - Loading
-  - Networking
-  - Property
-  - Read-only
-  - Reference
-  - data
-  - destination
-  - request
 browser-compat: api.Request.destination
 ---
-{{APIRef("Fetch")}}
+
+{{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
 The **`destination`** read-only
 property of the **{{domxref("Request")}}** interface returns a string
 describing the type of content being requested.
 
 The string must be one of the `audio`, `audioworklet`,
-`document`, `embed`, `font`, `frame`,
-`iframe`, `image`, `manifest`, `object`,
+`document`, `embed`, `fencedframe`, `font`, `frame`,
+`iframe`, `image`, `json`, `manifest`, `object`,
 `paintworklet`, `report`, `script`, `sharedworker`,
 `style`, `track`, `video`, `worker`
 or `xslt` strings, or the empty string, which is the default value.
@@ -39,7 +28,7 @@ where the received data is stored for processing later. Others are script-based,
 which case the received data is delivered to a script by calling it and passing the data
 along. Script-based destinations include {{HTMLElement("script")}} elements, as well as
 any of the {{domxref("Worklet")}}-based destinations
-(including {{domxref("AudioWorklet")}} and {{domxref("PaintWorklet")}}), and the
+(including subclasses like {{domxref("AudioWorklet")}}), and the
 {{domxref("Worker")}}-based destinations, including {{domxref("ServiceWorker")}}
 and {{domxref("SharedWorker")}}.
 
@@ -50,7 +39,17 @@ A string which indicates the type of content the request is asking for. This typ
 Possible values are:
 
 - `""`
-  - : The default value of `destination` is used for destinations that do not have their own value. [navigator.sendBeacon()](/en-US/docs/Web/API/Navigator/sendBeacon), [EventSource](/en-US/docs/Web/API/EventSource), [\<a ping>](/en-US/docs/Web/HTML/Element/a#attr-ping), [\<area ping>](/en-US/docs/Web/HTML/Element/area#attr-ping), [fetch()](/en-US/docs/Web/API/fetch), [XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest), [WebSocket](/en-US/docs/Web/API/WebSocket), [Cache](/en-US/docs/Web/API/Cache) and more.
+
+  - : The empty string is the default value, and is used for destinations that do not have their own value. This is the value when requests are made using the following APIs (among others):
+    - [`<a ping>`](/en-US/docs/Web/HTML/Element/a#ping)
+    - [`<area ping>`](/en-US/docs/Web/HTML/Element/area#ping)
+    - {{domxref("Cache")}}
+    - {{domxref("EventSource")}}
+    - {{domxref("Window/fetch", "fetch()")}}
+    - {{domxref("navigator.sendBeacon()")}}
+    - {{domxref("WebSocket")}}
+    - {{domxref("XMLHttpRequest")}}
+
 - `"audio"`
   - : The target is audio data.
 - `"audioworklet"`
@@ -59,10 +58,14 @@ Possible values are:
   - : The target is a document (HTML or XML).
 - `"embed"`
   - : The target is embedded content.
+- `"fencedframe"`
+  - : The target is a [fenced frame](/en-US/docs/Web/API/Fenced_frame_API).
 - `"font"`
   - : The target is a font.
 - `"image"`
   - : The target is an image.
+- `"json"`
+  - : The target is a JSON file.
 - `"manifest"`
   - : The target is a manifest.
 - `"object"`
@@ -95,7 +98,7 @@ In the following snippet, we create a new request using the
 directory as the script), then save the request's destination:
 
 ```js
-const myRequest = new Request('flowers.jpg');
+const myRequest = new Request("flowers.jpg");
 const myDestination = myRequest.destination; // returns the empty string by default
 ```
 

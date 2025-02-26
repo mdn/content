@@ -1,21 +1,17 @@
 ---
-title: File.webkitRelativePath
+title: "File: webkitRelativePath property"
+short-title: webkitRelativePath
 slug: Web/API/File/webkitRelativePath
 page-type: web-api-instance-property
-tags:
-  - API
-  - File API
-  - Property
-  - Read-only
-  - Reference
 browser-compat: api.File.webkitRelativePath
 ---
-{{APIRef("File API")}}
 
-The **`File.webkitRelativePath`** is a read-only property that
+{{APIRef("File and Directory Entries API")}}{{AvailableInWorkers}}
+
+The **`webkitRelativePath`** read-only property of the {{domxref("File")}} interface
 contains a string which specifies the file's path relative to the
 directory selected by the user in an {{HTMLElement("input")}} element with its
-{{htmlattrxref("webkitdirectory", "input")}} attribute set.
+[`webkitdirectory`](/en-US/docs/Web/HTML/Element/input#webkitdirectory) attribute set.
 
 ## Value
 
@@ -31,7 +27,7 @@ within the selected directory hierarchies is generated and displayed.
 ### HTML
 
 ```html
-<input type="file" id="filepicker" name="fileList" webkitdirectory multiple />
+<input type="file" id="file-picker" name="fileList" webkitdirectory multiple />
 <output id="output"></output>
 ```
 
@@ -45,10 +41,10 @@ output {
 ### JavaScript
 
 ```js
-const output = document.getElementById('output');
-const filepicker = document.getElementById('filepicker');
+const output = document.getElementById("output");
+const filePicker = document.getElementById("file-picker");
 
-filepicker.addEventListener('change', (event) => {
+filePicker.addEventListener("change", (event) => {
   const files = event.target.files;
 
   for (const file of files) {

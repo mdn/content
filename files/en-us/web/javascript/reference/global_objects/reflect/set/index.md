@@ -1,25 +1,33 @@
 ---
 title: Reflect.set()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/set
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Reference
-  - Reflect
-  - Polyfill
+page-type: javascript-static-method
 browser-compat: javascript.builtins.Reflect.set
 ---
+
 {{JSRef}}
 
-The static **`Reflect.set()`** method works like setting a
-property on an object.
+The **`Reflect.set()`** static method is like the [property accessor](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors) and [assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Assignment) syntax, but as a function.
 
-{{EmbedInteractiveExample("pages/js/reflect-set.html")}}
+{{InteractiveExample("JavaScript Demo: Reflect.set()")}}
+
+```js interactive-example
+const object1 = {};
+Reflect.set(object1, "property1", 42);
+
+console.log(object1.property1);
+// Expected output: 42
+
+const array1 = ["duck", "duck", "duck"];
+Reflect.set(array1, 2, "goose");
+
+console.log(array1[2]);
+// Expected output: "goose"
+```
 
 ## Syntax
 
-```js
+```js-nolint
 Reflect.set(target, propertyKey, value)
 Reflect.set(target, propertyKey, value, receiver)
 ```
@@ -41,14 +49,20 @@ A {{jsxref("Boolean")}} indicating whether or not setting the property was succe
 
 ### Exceptions
 
-A {{jsxref("TypeError")}}, if `target` is not an
-{{jsxref("Object")}}.
+- {{jsxref("TypeError")}}
+  - : Thrown if `target` is not an object.
 
 ## Description
 
-The `Reflect.set` method allows you to set a property on an object. It does
-property assignment and is like the
-[property accessor](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors) syntax as a function.
+`Reflect.set()` provides the reflective semantic of a [property access](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors). That is, `Reflect.set(target, propertyKey, value, receiver)` is semantically equivalent to:
+
+```js
+target[propertyKey] = value;
+```
+
+Note that in a normal property access, `target` and `receiver` would observably be the same object.
+
+`Reflect.set()` invokes the `[[Set]]` [object internal method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy#object_internal_methods) of `target`.
 
 ## Examples
 
@@ -56,23 +70,22 @@ property assignment and is like the
 
 ```js
 // Object
-let obj = {}
-Reflect.set(obj, 'prop', 'value')  // true
-obj.prop  // "value"
+const obj = {};
+Reflect.set(obj, "prop", "value"); // true
+obj.prop; // "value"
 
 // Array
-let arr = ['duck', 'duck', 'duck']
-Reflect.set(arr, 2, 'goose')  // true
-arr[2]  // "goose"
+const arr = ["duck", "duck", "duck"];
+Reflect.set(arr, 2, "goose"); // true
+arr[2]; // "goose"
 
 // It can truncate an array.
-Reflect.set(arr, 'length', 1)  // true
-arr  // ["duck"]
+Reflect.set(arr, "length", 1); // true
+arr; // ["duck"]
 
 // With just one argument, propertyKey and value are "undefined".
-let obj = {}
-Reflect.set(obj)  // true
-Reflect.getOwnPropertyDescriptor(obj, 'undefined')
+Reflect.set(obj); // true
+Reflect.getOwnPropertyDescriptor(obj, "undefined");
 // { value: undefined, writable: true, enumerable: true, configurable: true }
 ```
 
@@ -91,7 +104,11 @@ const receiver = {};
 Reflect.set(target, "a", 2, receiver); // true
 // target is { a: 1 }; receiver is { a: 2 }
 
-const target = { set a(v) { this.b = v; } };
+const target = {
+  set a(v) {
+    this.b = v;
+  },
+};
 const receiver = {};
 Reflect.set(target, "a", 2, receiver); // true
 // target is { a: [Setter] }; receiver is { b: 2 }
@@ -109,4 +126,5 @@ Reflect.set(target, "a", 2, receiver); // true
 
 - [Polyfill of `Reflect.set` in `core-js`](https://github.com/zloirock/core-js#ecmascript-reflect)
 - {{jsxref("Reflect")}}
-- [Property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors)
+- [Property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors)
+- [`handler.set()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set)

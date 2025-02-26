@@ -1,18 +1,12 @@
 ---
-title: Cache.matchAll()
+title: "Cache: matchAll() method"
+short-title: matchAll()
 slug: Web/API/Cache/matchAll
 page-type: web-api-instance-method
-tags:
-  - API
-  - Cache
-  - Method
-  - Reference
-  - Service Workers
-  - ServiceWorker
-  - matchAll
 browser-compat: api.Cache.matchAll
 ---
-{{APIRef("Service Workers API")}}
+
+{{APIRef("Service Workers API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`matchAll()`** method of the {{domxref("Cache")}}
 interface returns a {{jsxref("Promise")}} that resolves to an array of all matching
@@ -20,7 +14,7 @@ responses in the {{domxref("Cache")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 matchAll()
 matchAll(request)
 matchAll(request, options)
@@ -39,7 +33,7 @@ matchAll(request, options)
 
     - `ignoreSearch`
       - : A boolean value that specifies whether the
-        matching process should ignore the query string in the URL.  If set to
+        matching process should ignore the query string in the URL. If set to
         `true`, the `?value=bar` part of
         `http://foo.com/?value=bar` would be ignored when performing a match.
         It defaults to `false`.
@@ -67,14 +61,16 @@ A {{jsxref("Promise")}} that resolves to an array of all matching responses in t
 
 ## Examples
 
+The following example retrieves all responses in the `v1` cache matching the URL `/`, even including potential query parameters. By using `{ ignoreSearch: true }`, using `matchAll` would retrieve `/` as well as `/?value=bar`.
+
+It then logs the number of matching responses.
+
 ```js
-caches.open('v1').then(function(cache) {
-  cache.matchAll('/images/').then(function(response) {
-    response.forEach(function(element, index, array) {
-      cache.delete(element);
-    });
+caches.open("v1").then((cache) => {
+  cache.matchAll("/", { ignoreSearch: true }).then((responses) => {
+    console.log(`Found ${responses.length} matching responses`);
   });
-})
+});
 ```
 
 ## Specifications
@@ -89,4 +85,4 @@ caches.open('v1').then(function(cache) {
 
 - [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - {{domxref("Cache")}}
-- {{domxref("caches")}}
+- {{domxref("Window.caches")}} and {{domxref("WorkerGlobalScope.caches")}}

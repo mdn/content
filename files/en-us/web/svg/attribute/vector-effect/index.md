@@ -1,16 +1,18 @@
 ---
 title: vector-effect
 slug: Web/SVG/Attribute/vector-effect
-tags:
-  - SVG
-  - SVG Attribute
-browser-compat: svg.attributes.presentation.vector-effect
+page-type: svg-attribute
+browser-compat: svg.global_attributes.vector-effect
 ---
+
 {{SVGRef}}
 
 The **`vector-effect`** property specifies the vector effect to use when drawing an object. Vector effects are applied before any of the other compositing operations, i.e. filters, masks and clips.
 
-> **Note:** As a presentation attribute, `vector-effect` can be used as a CSS property.
+> [!NOTE]
+> As a presentation attribute, `vector-effect` also has a CSS property counterpart: {{cssxref("vector-effect")}}. When both are specified, the CSS property takes priority.
+
+## Elements
 
 You can use this attribute with the following SVG elements:
 
@@ -62,28 +64,41 @@ You can use this attribute with the following SVG elements:
 - `fixed-position`
   - : This value specifies a special user coordinate system used by the element and its descendants. The position of user coordinate system is fixed in spite of any transformation changes from a host coordinate space. However, it does not specify the suppression of rotation, skew and scaling. When this vector effect and the {{SVGAttr("transform")}} property are defined at the same time, that property is consumed for this effect.
 
-## Example
+## Examples
 
-### Example: vector-effect="non-scaling-stroke"
+### Setting `vector-effect` as `non-scaling-stroke`
 
 ```html
 <svg viewBox="0 0 500 240">
   <!-- normal -->
-  <path d="M10,20 L40,100 L39,200 z" stroke="black" stroke-width="2px" fill="none"></path>
+  <path
+    d="M10,20 L40,100 L39,200 z"
+    stroke="black"
+    stroke-width="2px"
+    fill="none"></path>
 
   <!-- scaled -->
-  <path transform="translate(100,0) scale(4,1)" d="M10,20 L40,100 L39,200 z" stroke="black"
-      stroke-width="2px" fill="none"></path>
+  <path
+    transform="translate(100,0) scale(4,1)"
+    d="M10,20 L40,100 L39,200 z"
+    stroke="black"
+    stroke-width="2px"
+    fill="none"></path>
 
   <!-- fixed-->
-  <path vector-effect="non-scaling-stroke" transform="translate(300,0) scale(4,1)" d="M10,20 L40,100 L39,200 z"
-      stroke="black" stroke-width="2px" fill="none"></path>
+  <path
+    vector-effect="non-scaling-stroke"
+    transform="translate(300, 0) scale(4, 1)"
+    d="M10,20 L40,100 L39,200 z"
+    stroke="black"
+    stroke-width="2px"
+    fill="none"></path>
 </svg>
 ```
 
 #### Result
 
-{{EmbedLiveSample("Example_vector-effectnon-scaling-stroke", 550, 300)}}
+{{EmbedLiveSample("Setting vector-effect as non-scaling-stroke", 550, 330)}}
 
 ## Specifications
 
@@ -92,3 +107,7 @@ You can use this attribute with the following SVG elements:
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- CSS {{cssxref("vector-effect")}} property

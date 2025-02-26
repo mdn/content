@@ -1,20 +1,15 @@
 ---
-title: FileSystemEntry.moveTo()
+title: "FileSystemEntry: moveTo() method"
+short-title: moveTo()
 slug: Web/API/FileSystemEntry/moveTo
 page-type: web-api-instance-method
-tags:
-  - API
-  - File and Directory Entries API
-  - FileSystemEntry
-  - Files
-  - Method
-  - Non-standard
-  - Reference
-  - moveTo
-  - Deprecated
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.FileSystemEntry.moveTo
 ---
-{{APIRef("File and Directory Entries API")}}{{deprecated_header}}
+
+{{APIRef("File and Directory Entries API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The {{domxref("FileSystemEntry")}} interface's method
 **`moveTo()`** moves the file
@@ -36,7 +31,7 @@ restrictions on what you can do:
 
 ## Syntax
 
-```js
+```js-nolint
 moveTo(newParent, newName)
 moveTo(newParent, newName, successCallback)
 moveTo(newParent, newName, successCallback, errorCallback)
@@ -62,7 +57,7 @@ moveTo(newParent, newName, successCallback, errorCallback)
 
 None ({{jsxref("undefined")}}).
 
-### Errors
+### Exceptions
 
 - `FileError.INVALID_MODIFICATION_ERR`
   - : The requested operation involves an impossible change, such as moving a directory
@@ -78,15 +73,25 @@ This example shows how a temporary log file might be moved into a more permanent
 directory when it exceeds a megabyte in size.
 
 ```js
-workingDirectory.getFile("tmp/log.txt", {}, function(fileEntry) {
-  fileEntry.getMetadata(function(metadata) {
-    if (metadata.size > 1048576) {
-      workingDirectory.getDirectory("log", {}, function(dirEntry) {
-        fileEntry.moveTo(dirEntry);
-      }, handleError);
-    }
-  });
-}, handleError);
+workingDirectory.getFile(
+  "tmp/log.txt",
+  {},
+  (fileEntry) => {
+    fileEntry.getMetadata((metadata) => {
+      if (metadata.size > 1048576) {
+        workingDirectory.getDirectory(
+          "log",
+          {},
+          (dirEntry) => {
+            fileEntry.moveTo(dirEntry);
+          },
+          handleError,
+        );
+      }
+    });
+  },
+  handleError,
+);
 ```
 
 ## Browser compatibility
@@ -96,5 +101,4 @@ workingDirectory.getFile("tmp/log.txt", {}, function(fileEntry) {
 ## See also
 
 - [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
-- [Introduction to the File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
 - {{domxref("FileSystemEntry.copyTo()")}}

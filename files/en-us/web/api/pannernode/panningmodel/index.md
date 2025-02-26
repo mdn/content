@@ -1,16 +1,11 @@
 ---
-title: PannerNode.panningModel
+title: "PannerNode: panningModel property"
+short-title: panningModel
 slug: Web/API/PannerNode/panningModel
 page-type: web-api-instance-property
-tags:
-  - API
-  - PannerNode
-  - Property
-  - Reference
-  - Web Audio API
-  - panningModel
 browser-compat: api.PannerNode.panningModel
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `panningModel` property of the {{ domxref("PannerNode") }} interface is an enumerated value determining which spatialization algorithm to use to position the audio in 3D space.
@@ -22,11 +17,11 @@ The possible values are:
 
 ## Value
 
-A enum — see [`PanningModelType`](https://webaudio.github.io/web-audio-api/#idl-def-PanningModelType).
+An enum — see [`PanningModelType`](https://webaudio.github.io/web-audio-api/#idl-def-PanningModelType).
 
 ## Examples
 
-See [`BaseAudioContext.createPanner()`](/en-US/docs/Web/API/BaseAudioContext/createPanner#example) for example code.
+See [`BaseAudioContext.createPanner()`](/en-US/docs/Web/API/BaseAudioContext/createPanner#examples) for example code.
 
 ## Specifications
 

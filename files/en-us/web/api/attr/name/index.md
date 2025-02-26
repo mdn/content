@@ -1,13 +1,11 @@
 ---
-title: Attr.name
+title: "Attr: name property"
+short-title: name
 slug: Web/API/Attr/name
 page-type: web-api-instance-property
-tags:
-  - Property
-  - Reference
-  - Read-only
 browser-compat: api.Attr.name
 ---
+
 {{APIRef("DOM")}}
 
 The read-only **`name`** property of the {{domxref("Attr")}} interface returns the _qualified name_ of an attribute, that is the name of the attribute, with the namespace prefix, if any, in front of it. For example, if the local name is `lang` and the namespace prefix is `xml`, the returned qualified name is `xml:lang`.
@@ -22,7 +20,7 @@ A string representing the attribute's qualified name.
 
 The following example displays the qualified name of the first attribute of the two first elements, when we click on the appropriate button.
 
-### HTML Content
+### HTML
 
 ```html
 <svg xml:lang="en-US" class="struct" height="1" width="1">Click me</svg>
@@ -39,7 +37,7 @@ The following example displays the qualified name of the first attribute of the 
 </p>
 ```
 
-### JavaScript Content
+### JavaScript
 
 ```js
 const elements = document.querySelectorAll(".struct");

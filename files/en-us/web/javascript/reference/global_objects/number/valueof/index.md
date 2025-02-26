@@ -1,26 +1,38 @@
 ---
 title: Number.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/Number/valueOf
-tags:
-  - JavaScript
-  - Method
-  - Number
-  - Prototype
-  - Reference
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Number.valueOf
 ---
+
 {{JSRef}}
 
-The **`valueOf()`** method returns the wrapped primitive value
-of a {{jsxref("Number")}} object.
+The **`valueOf()`** method of {{jsxref("Number")}} values returns the value of this number.
 
-{{EmbedInteractiveExample("pages/js/number-valueof.html")}}
+{{InteractiveExample("JavaScript Demo: Number.valueOf()")}}
+
+```js interactive-example
+const numObj = new Number(42);
+console.log(typeof numObj);
+// Expected output: "object"
+
+const num = numObj.valueOf();
+console.log(num);
+// Expected output: 42
+
+console.log(typeof num);
+// Expected output: "number"
+```
 
 ## Syntax
 
-```js
+```js-nolint
 valueOf()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 
@@ -35,12 +47,12 @@ This method is usually called internally by JavaScript and not explicitly in web
 ### Using valueOf
 
 ```js
-let numObj = new Number(10)
-console.log(typeof numObj)  // object
+const numObj = new Number(10);
+console.log(typeof numObj); // object
 
-let num = numObj.valueOf()
-console.log(num)            // 10
-console.log(typeof num)     // number
+const num = numObj.valueOf();
+console.log(num); // 10
+console.log(typeof num); // number
 ```
 
 ## Specifications

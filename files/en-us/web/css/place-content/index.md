@@ -1,18 +1,13 @@
 ---
 title: place-content
 slug: Web/CSS/place-content
-tags:
-  - CSS
-  - CSS Box Alignment
-  - CSS Property
-  - Reference
-  - place-content
-  - recipe:css-shorthand-property
+page-type: css-shorthand-property
 browser-compat: css.properties.place-content
 ---
+
 {{CSSRef}}
 
-The **`place-content`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) allows you to align content along both the block and inline directions at once (i.e. the {{CSSxRef("align-content")}} and {{CSSxRef("justify-content")}} properties) in a relevant layout system such as [Grid](/en-US/docs/Web/CSS/CSS_Grid_Layout) or [Flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout).
+The **`place-content`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) allows you to align content along both the block and inline directions at once (i.e. the {{CSSxRef("align-content")}} and {{CSSxRef("justify-content")}} properties) in a relevant layout system such as [Grid](/en-US/docs/Web/CSS/CSS_grid_layout) or [Flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout).
 
 {{EmbedInteractiveExample("pages/css/place-content.html")}}
 
@@ -56,7 +51,8 @@ place-content: unset;
 
 The first value is the {{CSSxRef("align-content")}} property value, the second the {{CSSxRef("justify-content")}} one.
 
-> **Note:** If the second value is not present, the first value is used for both, provided it is a valid value for both. If it is invalid for one or the other, the whole value will be invalid.
+> [!NOTE]
+> If the second value is not present, the first value is used for both, provided it is a valid value for both. If it is invalid for one or the other, the whole value will be invalid.
 
 ### Values
 
@@ -109,27 +105,32 @@ The first value is the {{CSSxRef("align-content")}} property value, the second t
 ```html
 <div id="container">
   <div class="small">Lorem</div>
-  <div class="small">Lorem<br/>ipsum</div>
+  <div class="small">Lorem<br />ipsum</div>
   <div class="large">Lorem</div>
-  <div class="large">Lorem<br/>ipsum</div>
+  <div class="large">Lorem<br />ipsum</div>
   <div class="large"></div>
   <div class="large"></div>
 </div>
 ```
 
 ```html hidden
-<code>writing-mode:</code><select id="writingMode">
+<code>writing-mode:</code
+><select id="writingMode">
   <option value="horizontal-tb" selected>horizontal-tb</option>
   <option value="vertical-rl">vertical-rl</option>
   <option value="vertical-lr">vertical-lr</option>
   <option value="sideways-rl">sideways-rl</option>
-  <option value="sideways-lr">sideways-lr</option>
-</select><code>;</code><br/>
-<code>direction:</code><select id="direction">
+  <option value="sideways-lr">sideways-lr</option></select
+><code>;</code><br />
+
+<code>direction:</code
+><select id="direction">
   <option value="ltr" selected>ltr</option>
-  <option value="rtl">rtl</option>
-</select><code>;</code><br/>
-<code>place-content:</code><select id="alignContentAlignment">
+  <option value="rtl">rtl</option></select
+><code>;</code><br />
+
+<code>place-content:</code
+><select id="alignContentAlignment">
   <option value="normal">normal</option>
   <option value="first baseline">first baseline</option>
   <option value="last baseline">last baseline</option>
@@ -146,7 +147,7 @@ The first value is the {{CSSxRef("align-content")}} property value, the second t
   <option value="safe">safe</option>
   <option value="unsafe">unsafe</option>
 </select>
-  <select id="justifyContentAlignment">
+<select id="justifyContentAlignment">
   <option value="normal">normal</option>
   <option value="space-between">space-between</option>
   <option value="space-around">space-around</option>
@@ -160,28 +161,33 @@ The first value is the {{CSSxRef("align-content")}} property value, the second t
   <option value="left">left</option>
   <option value="right">right</option>
   <option value="safe">safe</option>
-  <option value="unsafe">unsafe</option>
-</select><code>;</code>
+  <option value="unsafe">unsafe</option></select
+><code>;</code>
 ```
 
 ```js hidden
-var update = function () {
-   document.getElementById("container").style.placeContent = document.getElementById("alignContentAlignment").value + " " + document.getElementById("justifyContentAlignment").value;
+function update() {
+  document.getElementById("container").style.placeContent =
+    `${document.getElementById("alignContentAlignment").value} ` +
+    `${document.getElementById("justifyContentAlignment").value}`;
 }
 
-var alignContentAlignment = document.getElementById("alignContentAlignment");
-alignContentAlignment.addEventListener("change",  update);
+const alignContentAlignment = document.getElementById("alignContentAlignment");
+alignContentAlignment.addEventListener("change", update);
 
-var justifyContentAlignment = document.getElementById("justifyContentAlignment");
+const justifyContentAlignment = document.getElementById(
+  "justifyContentAlignment",
+);
 justifyContentAlignment.addEventListener("change", update);
 
-var writingM = document.getElementById("writingMode");
-writingM.addEventListener("change", function (evt) {
-   document.getElementById("container").style.writingMode = evt.target.value;
+const writingM = document.getElementById("writingMode");
+writingM.addEventListener("change", (evt) => {
+  document.getElementById("container").style.writingMode = evt.target.value;
 });
-var direction = document.getElementById("direction");
-direction.addEventListener("change", function (evt) {
-   document.getElementById("container").style.direction = evt.target.value;
+
+const direction = document.getElementById("direction");
+direction.addEventListener("change", (evt) => {
+  document.getElementById("container").style.direction = evt.target.value;
 });
 ```
 
@@ -190,7 +196,7 @@ direction.addEventListener("change", function (evt) {
 ```css
 #container {
   display: flex;
-  height:240px;
+  height: 240px;
   width: 240px;
   flex-wrap: wrap;
   background-color: #8c8c8c;
@@ -230,9 +236,9 @@ div > div {
 
 ## See also
 
-- CSS Flexbox Guide: _[Basic Concepts of Flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
-- CSS Flexbox Guide: _[Aligning items in a flex container](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)_
-- CSS Grid Guide: _[Box alignment in CSS Grid layouts](/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)_
-- [CSS Box Alignment](/en-US/docs/Web/CSS/CSS_Box_Alignment)
-- The {{CSSxRef("align-content")}} property
-- The {{CSSxRef("justify-content")}} property
+- {{cssxref("align-content")}}
+- {{cssxref("justify-content")}}
+- [Basic concepts of flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
+- [Aligning items in a flex container](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
+- [Box alignment in grid layout](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_grid_layout)
+- [CSS box alignment](/en-US/docs/Web/CSS/CSS_box_alignment) module

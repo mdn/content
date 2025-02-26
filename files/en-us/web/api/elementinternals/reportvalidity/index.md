@@ -1,18 +1,14 @@
 ---
-title: ElementInternals.reportValidity()
+title: "ElementInternals: reportValidity() method"
+short-title: reportValidity()
 slug: Web/API/ElementInternals/reportValidity
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - reportValidity
-  - ElementInternals
 browser-compat: api.ElementInternals.reportValidity
 ---
-{{DefaultAPISidebar("DOM")}}
 
-The **`reportValidity()`** method of the {{domxref("ElementInternals")}} interface checks if the element meets any [constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation) rules applied to it.
+{{APIRef("Web Components")}}
+
+The **`reportValidity()`** method of the {{domxref("ElementInternals")}} interface checks if the element meets any [constraint validation](/en-US/docs/Web/HTML/Constraint_validation) rules applied to it.
 
 If `reportValidity` returns `false` then a cancelable [invalid event](/en-US/docs/Web/API/HTMLInputElement/invalid_event) is fired on the element.
 
@@ -20,7 +16,7 @@ This method behaves in a similar way to {{domxref("ElementInternals.checkValidit
 
 ## Syntax
 
-```js
+```js-nolint
 reportValidity()
 ```
 
@@ -45,7 +41,7 @@ After calling `setValidity` again, this time indicating that all rules are marke
 
 ```js
 let element = document.getElementById("join-checkbox");
-element.internals_.setValidity({'valueMissing':true},"my message");
+element.internals_.setValidity({ valueMissing: true }, "my message");
 console.log(element.internals_.reportValidity()); // false
 element.internals_.setValidity({});
 console.log(element.internals_.reportValidity()); // true

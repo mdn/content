@@ -2,15 +2,9 @@
 title: Optimizing canvas
 slug: Web/API/Canvas_API/Tutorial/Optimizing_canvas
 page-type: guide
-tags:
-  - Advanced
-  - Canvas
-  - Graphics
-  - HTML
-  - HTML5
-  - Tutorial
 ---
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas", "Web/API/Canvas_API/Tutorial/Finale")}}
+
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas", "Web/API/Canvas_API/Tutorial/Finale")}}
 
 The {{HTMLElement("canvas")}} element is one of the most widely used tools for rendering 2D graphics on the web. However, when websites and apps push the Canvas API to its limits, performance begins to suffer. This article provides suggestions for optimizing your use of the canvas element to ensure that your graphics perform well.
 
@@ -23,11 +17,11 @@ The following is a collection of tips to improve canvas performance.
 If you find yourself repeating some of the same drawing operations on each animation frame, consider offloading them to an offscreen canvas. You can then render the offscreen image to your primary canvas as often as needed, without unnecessarily repeating the steps needed to generate it in the first place.
 
 ```js
-myCanvas.offscreenCanvas = document.createElement('canvas');
+myCanvas.offscreenCanvas = document.createElement("canvas");
 myCanvas.offscreenCanvas.width = myCanvas.width;
 myCanvas.offscreenCanvas.height = myCanvas.height;
 
-myCanvas.getContext('2d').drawImage(myCanvas.offScreenCanvas, 0, 0);
+myCanvas.getContext("2d").drawImage(myCanvas.offScreenCanvas, 0, 0);
 ```
 
 ### Avoid floating-point coordinates and use integers instead
@@ -65,10 +59,18 @@ For example, let's say you have a game with a UI on top, the gameplay action in 
     border: 2px solid black;
   }
 
-  canvas { position: absolute; }
-  #ui-layer { z-index: 3; }
-  #game-layer { z-index: 2; }
-  #background-layer { z-index: 1; }
+  canvas {
+    position: absolute;
+  }
+  #ui-layer {
+    z-index: 3;
+  }
+  #game-layer {
+    z-index: 2;
+  }
+  #background-layer {
+    z-index: 1;
+  }
 </style>
 ```
 
@@ -78,7 +80,7 @@ If you have a static background image, you can draw it onto a plain {{HTMLElemen
 
 ### Scaling canvas using CSS transforms
 
-[CSS transforms](/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms) are faster since they use the GPU. The best case is to not scale the canvas, or have a smaller canvas and scale up rather than a bigger canvas and scale down.
+[CSS transforms](/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms) are faster since they use the GPU. The best case is to not scale the canvas, or have a smaller canvas and scale up rather than a bigger canvas and scale down.
 
 ```js
 const scaleX = window.innerWidth / canvas.width;
@@ -87,7 +89,7 @@ const scaleY = window.innerHeight / canvas.height;
 const scaleToFit = Math.min(scaleX, scaleY);
 const scaleToCover = Math.max(scaleX, scaleY);
 
-stage.style.transformOrigin = '0 0'; //scale from top left
+stage.style.transformOrigin = "0 0"; //scale from top left
 stage.style.transform = `scale(${scaleToFit})`;
 ```
 
@@ -96,7 +98,7 @@ stage.style.transform = `scale(${scaleToFit})`;
 If your application uses canvas and doesn't need a transparent backdrop, set the `alpha` option to `false` when creating a drawing context with {{domxref("HTMLCanvasElement.getContext()")}}. This information can be used internally by the browser to optimize rendering.
 
 ```js
-const ctx = canvas.getContext('2d', { alpha: false });
+const ctx = canvas.getContext("2d", { alpha: false });
 ```
 
 ### Scaling for high resolution displays
@@ -128,12 +130,11 @@ canvas.style.height = `${rect.height}px`;
 - Avoid the {{domxref("CanvasRenderingContext2D.shadowBlur", "shadowBlur")}} property whenever possible.
 - Avoid [text rendering](/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_text) whenever possible.
 - Try different ways to clear the canvas ({{domxref("CanvasRenderingContext2D.clearRect", "clearRect()")}} vs. {{domxref("CanvasRenderingContext2D.fillRect", "fillRect()")}} vs. resizing the canvas).
-- With animations, use {{domxref("window.requestAnimationFrame()")}} instead of {{domxref("setInterval()")}} .
+- With animations, use {{domxref("Window.requestAnimationFrame()")}} instead of {{domxref("Window.setInterval", "setInterval()")}}.
 - Be careful with heavy physics libraries.
 
 ## See also
 
-- [Improving HTML5 Canvas Performance – HTML5 Rocks](https://www.html5rocks.com/en/tutorials/canvas/performance/#toc-ref)
 - [Optimizing your JavaScript game for Firefox OS – Mozilla Hacks](https://hacks.mozilla.org/2013/05/optimizing-your-javascript-game-for-firefox-os/)
 
 {{PreviousNext("Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas", "Web/API/Canvas_API/Tutorial/Finale")}}

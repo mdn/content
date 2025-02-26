@@ -1,25 +1,11 @@
 ---
-title: 'HTMLMediaElement: pause event'
+title: "HTMLMediaElement: pause event"
+short-title: pause
 slug: Web/API/HTMLMediaElement/pause_event
 page-type: web-api-event
-tags:
-  - Audio
-  - Event
-  - HTML
-  - HTMLMediaElement
-  - Media
-  - Media Events
-  - Pausing
-  - Pausing Media
-  - Pausing Speech
-  - Speech Events
-  - Video
-  - Web Speech API
-  - Web Speech Events
-  - pause
-  - speech
 browser-compat: api.HTMLMediaElement.pause_event
 ---
+
 {{APIRef("HTMLMediaElement")}}
 
 The `pause` event is sent when a request to pause an activity is handled and the activity has entered its paused state, most commonly after the media has been paused through a call to the element's {{domxref("HTMLMediaElement.pause", "pause()")}} method.
@@ -33,9 +19,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('pause', (event) => {});
+addEventListener("pause", (event) => {});
 
-onpause = (event) => { };
+onpause = (event) => {};
 ```
 
 ## Event type
@@ -49,22 +35,24 @@ These examples add an event listener for the HTMLMediaElement's `pause` event, t
 Using `addEventListener()`:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
-video.addEventListener('pause', (event) => {
-  console.log('The Boolean paused property is now true. Either the ' +
-  'pause() method was called or the autoplay attribute was toggled.');
+video.addEventListener("pause", (event) => {
+  console.log(
+    "The Boolean paused property is now 'true'. Either the pause() method was called or the autoplay attribute was toggled.",
+  );
 });
 ```
 
 Using the `onpause` event handler property:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
 video.onpause = (event) => {
-  console.log('The Boolean paused property is now true. Either the ' +
-  'pause() method was called or the autoplay attribute was toggled.');
+  console.log(
+    "The Boolean paused property is now 'true'. Either the pause() method was called or the autoplay attribute was toggled.",
+  );
 };
 ```
 
@@ -90,7 +78,6 @@ video.onpause = (event) => {
 - The HTMLMediaElement {{domxref("HTMLMediaElement.durationchange_event", 'durationchange')}} event
 - The HTMLMediaElement {{domxref("HTMLMediaElement.timeupdate_event", 'timeupdate')}} event
 - The HTMLMediaElement {{domxref("HTMLMediaElement.play_event", 'play')}} event
-- The HTMLMediaElement {{domxref("HTMLMediaElement.pause_event", 'pause')}} event
 - The HTMLMediaElement {{domxref("HTMLMediaElement.ratechange_event", 'ratechange')}} event
 - The HTMLMediaElement {{domxref("HTMLMediaElement.volumechange_event", 'volumechange')}} event
 - The HTMLMediaElement {{domxref("HTMLMediaElement.suspend_event", 'suspend')}} event

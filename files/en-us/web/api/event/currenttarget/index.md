@@ -1,20 +1,18 @@
 ---
-title: Event.currentTarget
+title: "Event: currentTarget property"
+short-title: currentTarget
 slug: Web/API/Event/currentTarget
 page-type: web-api-instance-property
-tags:
-  - Property
-  - Read-only
-  - Reference
 browser-compat: api.Event.currentTarget
 ---
-{{APIRef("DOM")}}
 
-The **`currentTarget`** read-only property of the
-{{domxref("Event")}} interface identifies the current target for the event, as the event
-traverses the DOM. It always refers to the element to which the event handler has been
-attached, as opposed to {{domxref("Event.target")}}, which identifies the element on
-which the event occurred and which may be its descendant.
+{{APIRef("DOM")}}{{AvailableInWorkers}}
+
+The **`currentTarget`** read-only property of the {{domxref("Event")}} interface identifies the element to which the event handler has been attached.
+
+This will not always be the same as the element on which the event was fired, because the event may have fired on a descendant of the element with the handler, and then [bubbled](/en-US/docs/Learn_web_development/Core/Scripting/Event_bubbling) up to the element with the handler. The element on which the event was fired is given by {{domxref("Event.target")}}.
+
+Note that the value of `currentTarget` is only available in a handler for the event. Outside an event handler it will be `null`. This means that, for example, if you take a reference to the `Event` object inside an event handler and then access its `currentTarget` property outside the event handler, its value will be `null`.
 
 ## Value
 
@@ -22,34 +20,64 @@ An {{domxref("EventTarget")}} representing the object to which the current event
 
 ## Examples
 
-`Event.currentTarget` is interesting to use when attaching the same event
-handler to several elements.
+### currentTarget versus target
 
-```js
-function hide(e){
-  e.currentTarget.style.visibility = 'hidden';
-  console.log(e.currentTarget);
-  // When this function is used as an event handler: this === e.currentTarget
-}
+This example illustrates the difference between `currentTarget` and `target`.
 
-const ps = document.getElementsByTagName('p');
+#### HTML
 
-for (let i = 0; i < ps.length; i++){
-  // console: print the clicked <p> element
-  ps[i].addEventListener('click', hide, false);
-}
-// console: print <body>
-document.body.addEventListener('click', hide, false);
+The page has a "parent" {{htmlelement("div")}} containing a "child" `<div>`.
 
-// Click around and make paragraphs disappear
+```html
+<div id="parent">
+  Click parent
+  <div id="child">Click child</div>
+</div>
+
+<button id="reset">Reset</button>
+<pre id="output"></pre>
 ```
 
-> **Note:** The value of `event.currentTarget` is **only** available while the event is being handled.
-> If you {{DOMxRef("console.log()")}} the `event` object, storing it in a variable,
-> and _then_ look for the `currentTarget` key in the console, its value will be `null`.<br/>
-> Instead, you should either use `console.log(event.currentTarget)` to be
-> able to view it in the console or use the [`debugger`](/en-US/docs/Web/JavaScript/Reference/Statements/debugger) statement,
-> which will pause the execution of your code thus showing you the value of `event.currentTarget`.
+```css hidden
+button,
+div,
+pre {
+  margin: 0.5rem;
+}
+
+div {
+  padding: 1rem;
+  border: 1px solid black;
+}
+```
+
+#### JavaScript
+
+The event handler is attached to the parent. It logs the value of `event.currentTarget` and `event.target`.
+
+We also have a "Reset" button that just reloads the example.
+
+```js
+const output = document.querySelector("#output");
+const parent = document.querySelector("#parent");
+parent.addEventListener("click", (event) => {
+  const currentTarget = event.currentTarget.getAttribute("id");
+  const target = event.target.getAttribute("id");
+  output.textContent = `Current target: ${currentTarget}\n`;
+  output.textContent += `Target: ${target}`;
+});
+
+const reset = document.querySelector("#reset");
+reset.addEventListener("click", () => document.location.reload());
+```
+
+#### Result
+
+If you click inside the child `<div>`, then `target` identifies the child. If you click inside the parent `<div>`, then `target` identifies the parent.
+
+In both cases, `currentTarget` identifies the parent, because that's the element that the handler is attached to.
+
+{{EmbedLiveSample("currentTarget versus target", 100, 250)}}
 
 ## Specifications
 
@@ -61,4 +89,4 @@ document.body.addEventListener('click', hide, false);
 
 ## See also
 
-- [Comparison of Event Targets](/en-US/docs/Web/API/Event/Comparison_of_Event_Targets)
+- [Learn: Event bubbling](/en-US/docs/Learn_web_development/Core/Scripting/Event_bubbling)

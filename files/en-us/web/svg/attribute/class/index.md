@@ -1,13 +1,11 @@
 ---
 title: class
 slug: Web/SVG/Attribute/class
-tags:
-  - Reference
-  - SVG
-  - SVG Attribute
-browser-compat: svg.attributes.style.class
+page-type: svg-attribute
+browser-compat: svg.global_attributes.class
 ---
-« [SVG Attribute reference home](/en-US/docs/Web/SVG/Attribute)
+
+{{SVGRef}}
 
 Assigns a class name or set of class names to an element. You may assign the same class name or names to any number of elements, however, multiple class names must be separated by whitespace characters.
 
@@ -52,29 +50,31 @@ You can use this class to style SVG content using CSS.
 ## Example
 
 ```html
-<html>
-    <body>
-        <svg width="120" height="220"
-            viewPort="0 0 120 120" version="1.1"
-            xmlns="http://www.w3.org/2000/svg">
+<html lang="en">
+  <body>
+    <svg
+      width="120"
+      height="220"
+      viewPort="0 0 120 120"
+      version="1.1"
+      xmlns="http://www.w3.org/2000/svg">
+      <style>
+        <![CDATA[
+            rect.rectClass {
+                stroke: #000066;
+                fill:   #00cc00;
+            }
+            circle.circleClass {
+                stroke: #006600;
+                fill:   #cc0000;
+            }
+        ]]>
+      </style>
 
-            <style type="text/css" >
-                <![CDATA[
-                    rect.rectClass {
-                        stroke: #000066;
-                        fill:   #00cc00;
-                    }
-                    circle.circleClass {
-                        stroke: #006600;
-                        fill:   #cc0000;
-                    }
-                ]]>
-            </style>
-
-            <rect class="rectClass" x="10" y="10" width="100" height="100"/>
-            <circle class="circleClass" cx="40" cy="50" r="26"/>
-        </svg>
-    </body>
+      <rect class="rectClass" x="10" y="10" width="100" height="100" />
+      <circle class="circleClass" cx="40" cy="50" r="26" />
+    </svg>
+  </body>
 </html>
 ```
 
@@ -83,7 +83,6 @@ You can use this class to style SVG content using CSS.
 The following elements can use the `class` attribute:
 
 - {{ SVGElement("a") }}
-- {{ SVGElement("altGlyph") }}
 - {{ SVGElement("circle") }}
 - {{ SVGElement("clipPath") }}
 - {{ SVGElement("defs") }}
@@ -133,6 +132,10 @@ The following elements can use the `class` attribute:
 - {{ SVGElement("tref") }}
 - {{ SVGElement("tspan") }}
 - {{ SVGElement("use") }}
+
+## Specifications
+
+{{Specifications}}
 
 ## Browser compatibility
 

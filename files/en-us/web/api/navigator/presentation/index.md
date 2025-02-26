@@ -1,22 +1,18 @@
 ---
-title: Navigator.presentation
+title: "Navigator: presentation property"
+short-title: presentation
 slug: Web/API/Navigator/presentation
 page-type: web-api-instance-property
 browser-compat: api.Navigator.presentation
 ---
-{{SeeCompatTable}}{{securecontext_header}}{{DefaultAPISidebar("Presentation API")}}
 
-The `presentation` property of {{DOMxRef("Navigator")}} serves as the entry
+{{securecontext_header}}{{APIRef("Presentation API")}}
+
+The `presentation` read-only property of {{DOMxRef("Navigator")}} serves as the entry
 point for the [Presentation API](/en-US/docs/Web/API/Presentation_API) and
 returns a reference to {{DOMxRef("Presentation")}} object.
 
-## Syntax
-
-```js
-const presentation = navigator.presentation
-```
-
-### Value
+## Value
 
 A reference to {{DOMxRef("Presentation")}} object.
 

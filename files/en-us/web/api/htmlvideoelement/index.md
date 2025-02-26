@@ -2,43 +2,35 @@
 title: HTMLVideoElement
 slug: Web/API/HTMLVideoElement
 page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - HTMLVideoElement
-  - Interface
-  - Reference
-  - Video
 browser-compat: api.HTMLVideoElement
 ---
+
 {{APIRef("HTML DOM")}}
 
-The **`HTMLVideoElement`** interface provides special properties and methods for manipulating video objects. It also inherits properties and methods of {{domxref("HTMLMediaElement")}} and {{domxref("HTMLElement")}}.
+Implemented by the {{HTMLElement("video")}} element, the **`HTMLVideoElement`** interface provides special properties and methods for manipulating video objects. It also inherits properties and methods of {{domxref("HTMLMediaElement")}} and {{domxref("HTMLElement")}}.
 
-The list of [supported media formats](/en-US/docs/Web/Media/Formats) varies from one browser to the other. You should either provide your video in a single format that all the relevant browsers supports, or provide multiple video sources in enough different formats that all the browsers you need to support are covered.
+The list of [supported media formats](/en-US/docs/Web/Media/Guides/Formats) varies from one browser to the other. You should either provide your video in a single format that all the relevant browsers supports, or provide multiple video sources in enough different formats that all the browsers you need to support are covered.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
-_Inherits properties from its ancestor interfaces, {{domxref("HTMLMediaElement")}}, and {{domxref("HTMLElement")}}._
+_Inherits properties from its parent interface, {{domxref("HTMLMediaElement")}}, and {{domxref("HTMLElement")}}._
 
+- {{DOMxRef("HTMLVideoElement.disablePictureInPicture")}}
+  - : Indicates if the user agent should suggest the picture-in-picture to users, or not.
 - {{domxref("HTMLVideoElement.height")}}
-  - : A string that reflects the {{htmlattrxref("height", "video")}} HTML attribute, which specifies the height of the display area, in CSS pixels.
+  - : A string that reflects the [`height`](/en-US/docs/Web/HTML/Element/video#height) HTML attribute, which specifies the height of the display area, in CSS pixels.
 - {{domxref("HTMLVideoElement.poster")}}
-  - : A string that reflects the {{htmlattrxref("poster", "video")}} HTML attribute, which specifies an image to show while no video data is available.
-- {{domxref("HTMLVideoElement.videoHeight")}} {{readonlyInline}}
+  - : A string that reflects the [`poster`](/en-US/docs/Web/HTML/Element/video#poster) HTML attribute, which specifies an image to show while no video data is available.
+- {{domxref("HTMLVideoElement.videoHeight")}} {{ReadOnlyInline}}
   - : Returns an unsigned integer value indicating the intrinsic height of the resource in CSS pixels, or 0 if no media is available yet.
-- {{domxref("HTMLVideoElement.videoWidth")}} {{readonlyInline}}
+- {{domxref("HTMLVideoElement.videoWidth")}} {{ReadOnlyInline}}
   - : Returns an unsigned integer value indicating the intrinsic width of the resource in CSS pixels, or 0 if no media is available yet.
 - {{domxref("HTMLVideoElement.width")}}
-  - : A string that reflects the {{htmlattrxref("width", "video")}} HTML attribute, which specifies the width of the display area, in CSS pixels.
-- {{DOMxRef("HTMLVideoElement.autoPictureInPicture")}}
-  - : The `autoPictureInPicture` attribute will automatically enter and leave the picture-in-picture mode for a video element when the user switches tab and/or applications
-- {{DOMxRef("HTMLVideoElement.disablePictureInPicture")}}
-  - : The `disablePictureInPicture` property will hint the user agent to not suggest the picture-in-picture to users or to request it automatically
+  - : A string that reflects the [`width`](/en-US/docs/Web/HTML/Element/video#width) HTML attribute, which specifies the width of the display area, in CSS pixels.
 
-### Gecko-specific properties
+### Firefox-specific properties
 
 - {{domxref("HTMLVideoElement.mozParsedFrames")}} {{Non-standard_Inline}} {{ReadOnlyInline}} {{deprecated_inline}}
   - : Returns an `unsigned long` with the count of video frames that have been parsed from the media resource.
@@ -53,38 +45,31 @@ _Inherits properties from its ancestor interfaces, {{domxref("HTMLMediaElement")
 - {{domxref("HTMLVideoElement.mozHasAudio")}} {{Non-standard_Inline}} {{ReadOnlyInline}} {{deprecated_inline}}
   - : Returns a boolean indicating if there is some audio associated with the video.
 
-### Microsoft Extensions
+## Instance methods
 
-- {{DOMxRef("HTMLVideoElement.msFrameStep()")}} {{Non-standard_Inline}}
-  - : Steps the video by one frame forward or one frame backward.
-- {{DOMxRef("HTMLVideoElement.msHorizontalMirror")}} {{Non-standard_Inline}}
-  - : Gets or sets whether a video element is flipped horizontally in the display.
-- {{DOMxRef("HTMLVideoElement.msInsertVideoEffect()")}} {{Non-standard_Inline}}
-  - : Inserts the specified video effect into the media pipeline.
-- {{DOMxRef("HTMLVideoElement.msIsLayoutOptimalForPlayback")}} {{Non-standard_Inline}} {{ReadOnlyInline}}
-  - : Indicates whether the video can be rendered more efficiently.
-- {{DOMxRef("HTMLVideoElement.msIsStereo3D")}} {{Non-standard_Inline}} {{ReadOnlyInline}}
-  - : Determines whether the system considers the loaded video source to be stereo 3-D or not. Value set to true indicates source is stereo 3D.
-- {{DOMxRef("HTMLVideoElement.msZoom")}} {{Non-standard_Inline}}
-  - : Controls whether the video frame is trimmed to fit the video display.
+_Inherits methods from its parent interface, {{domxref("HTMLMediaElement")}}, and {{domxref("HTMLElement")}}._
 
-## Methods
-
-_Inherits methods from its parent, {{domxref("HTMLMediaElement")}}, and from its ancestor {{domxref("HTMLElement")}}._
-
-- {{domxref("HTMLVideoElement.getVideoPlaybackQuality()")}} {{experimental_inline}}
+- {{DOMxRef("HTMLVideoElement.cancelVideoFrameCallback()")}}
+  - : Cancels a previously-registered video frame callback (see {{DOMxRef("HTMLVideoElement.requestVideoFrameCallback", "requestVideoFrameCallback()")}}).
+- {{domxref("HTMLVideoElement.getVideoPlaybackQuality()")}}
   - : Returns a {{domxref("VideoPlaybackQuality")}} object that contains the current playback metrics. This information includes things like the number of dropped or corrupted frames, as well as the total number of frames.
 - {{DOMxRef("HTMLVideoElement.requestPictureInPicture()")}}
-  - : Requests that the user agent make video enters picture-in-picture mode
+  - : Requests that the user agent enters the video into picture-in-picture mode.
+- {{DOMxRef("HTMLVideoElement.requestVideoFrameCallback()")}}
+  - : Registers a callback function that runs when a new video frame is sent to the compositor. This enables developers to perform efficient operations on each video frame.
 
 ## Events
 
-_Inherits events from its parent, {{domxref("HTMLMediaElement")}}, and from its ancestor {{domxref("HTMLElement")}}._ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) or by assigning an event listener to the `oneventname` property of this interface.
+_Inherits events from its parent interface, {{domxref("HTMLMediaElement")}}, and {{domxref("HTMLElement")}}._
+
+Listen to these events using {{domxref("EventTarget.addEventListener", "addEventListener()")}} or by assigning an event listener to the `oneventname` property of this interface.
 
 - {{DOMxRef("HTMLVideoElement.enterpictureinpicture_event", "enterpictureinpicture")}}
-  - : Sent to a {{DOMxRef("HTMLVideoElement")}} when it enters Picture-in-Picture mode.
+  - : Fired when the `HTMLVideoElement` enters picture-in-picture mode successfully.
 - {{DOMxRef("HTMLVideoElement.leavepictureinpicture_event", "leavepictureinpicture")}}
-  - : Sent to a {{DOMxRef("HTMLVideoElement")}} when it leaves Picture-in-Picture mode.
+  - : Fired when the `HTMLVideoElement` leaves picture-in-picture mode successfully.
+- {{DOMxRef("HTMLVideoElement.resize_event", "resize")}}
+  - : Fires when one or both of the {{domxref("HTMLVideoElement.videoWidth", "videoWidth")}} and {{domxref("HTMLVideoElement.videoHeight", "videoHeight")}} properties have just been updated.
 
 ## Specifications
 
@@ -97,4 +82,4 @@ _Inherits events from its parent, {{domxref("HTMLMediaElement")}}, and from its 
 ## See also
 
 - HTML element implementing this interface: {{HTMLElement("video")}}.
-- [Supported media formats](/en-US/docs/Web/Media/Formats)
+- [Supported media formats](/en-US/docs/Web/Media/Guides/Formats)

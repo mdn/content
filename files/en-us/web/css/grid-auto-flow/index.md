@@ -1,19 +1,19 @@
 ---
 title: grid-auto-flow
 slug: Web/CSS/grid-auto-flow
-tags:
-  - CSS
-  - CSS Grid
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.grid-auto-flow
 ---
+
 {{CSSRef}}
 
-The **`grid-auto-flow`** CSS property controls how the auto-placement algorithm works, specifying exactly how auto-placed items get flowed into the grid.
+The **`grid-auto-flow`** [CSS](/en-US/docs/Web/CSS) property controls how the auto-placement algorithm works, specifying exactly how auto-placed items get flowed into the grid.
 
 {{EmbedInteractiveExample("pages/css/grid-auto-flow.html")}}
+
+> [!NOTE]
+> The `masonry-auto-flow` property was dropped from CSS [Masonry layout](/en-US/docs/Web/CSS/CSS_grid_layout/Masonry_layout) in favor of `grid-auto-flow`.
+> See [csswg-drafts #10231](https://github.com/w3c/csswg-drafts/issues/10231) for details.
 
 ## Syntax
 
@@ -76,7 +76,7 @@ This property may take one of two forms:
   <option value="column">column</option>
   <option value="row">row</option>
 </select>
-<input id="dense" type="checkbox">
+<input id="dense" type="checkbox" />
 <label for="dense">dense</label>
 ```
 
@@ -89,7 +89,7 @@ This property may take one of two forms:
   display: grid;
   gap: 10px;
   grid-template: repeat(4, 1fr) / repeat(2, 1fr);
-  grid-auto-flow: column;  /* or 'row', 'row dense', 'column dense' */
+  grid-auto-flow: column; /* or 'row', 'row dense', 'column dense' */
 }
 
 #item1 {
@@ -117,10 +117,10 @@ This property may take one of two forms:
 
 ```js hidden
 function changeGridAutoFlow() {
-  var grid = document.getElementById("grid");
-  var direction = document.getElementById("direction");
-  var dense = document.getElementById("dense");
-  var gridAutoFlow = direction.value === "row" ? "row" : "column";
+  const grid = document.getElementById("grid");
+  const direction = document.getElementById("direction");
+  const dense = document.getElementById("dense");
+  let gridAutoFlow = direction.value === "row" ? "row" : "column";
 
   if (dense.checked) {
     gridAutoFlow += " dense";
@@ -129,10 +129,10 @@ function changeGridAutoFlow() {
   grid.style.gridAutoFlow = gridAutoFlow;
 }
 
-const selectElem = document.querySelector('select');
-const inputElem = document.querySelector('input');
-selectElem.addEventListener('change', changeGridAutoFlow);
-inputElem.addEventListener('change', changeGridAutoFlow);
+const selectElem = document.querySelector("select");
+const inputElem = document.querySelector("input");
+selectElem.addEventListener("change", changeGridAutoFlow);
+inputElem.addEventListener("change", changeGridAutoFlow);
 ```
 
 #### Result
@@ -149,6 +149,8 @@ inputElem.addEventListener('change', changeGridAutoFlow);
 
 ## See also
 
-- Related CSS properties: {{cssxref("grid-auto-rows")}}, {{cssxref("grid-auto-columns")}}, {{cssxref("grid")}}
-- Grid Layout Guide: _[Auto-placement in grid layout](/en-US/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout)_
-- Video tutorial: _[Introducing Grid auto-placement and order](https://gridbyexample.com/video/series-auto-placement-order/)_
+- {{cssxref("grid-auto-rows")}}
+- {{cssxref("grid-auto-columns")}}
+- {{cssxref("grid")}}
+- [Auto-placement in grid layout](/en-US/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout)
+- Video: [Introducing grid auto-placement and order](https://gridbyexample.com/video/series-auto-placement-order/)

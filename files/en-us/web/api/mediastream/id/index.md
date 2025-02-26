@@ -1,18 +1,14 @@
 ---
-title: MediaStream.id
+title: "MediaStream: id property"
+short-title: id
 slug: Web/API/MediaStream/id
 page-type: web-api-instance-property
-tags:
-  - MediaStream
-  - Property
-  - Read-only
-  - Reference
-  - Web
 browser-compat: api.MediaStream.id
 ---
-{{DefaultAPISidebar("Media Capture and Streams")}}
 
-The **`MediaStream.id`** read-only property is a
+{{APIRef("Media Capture and Streams")}}
+
+The **`id`** read-only property of the {{domxref("MediaStream")}} interface is a
 string containing 36 characters denoting a unique identifier (GUID)
 for the object.
 
@@ -23,11 +19,14 @@ A string.
 ## Examples
 
 ```js
-const promise = navigator.mediaDevices.getUserMedia({ audio: true, video: true });
+const promise = navigator.mediaDevices.getUserMedia({
+  audio: true,
+  video: true,
+});
 
-promise.then(function(stream) {
-   console.log(stream.id);
-})
+promise.then((stream) => {
+  console.log(stream.id);
+});
 ```
 
 ## Specifications

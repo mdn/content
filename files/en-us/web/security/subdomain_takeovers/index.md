@@ -1,10 +1,11 @@
 ---
 title: Subdomain takeovers
 slug: Web/Security/Subdomain_takeovers
-tags:
-  - Guide
-  - Security
+page-type: guide
 ---
+
+{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
+
 A subdomain takeover occurs when an attacker gains control over a subdomain of a target domain. Typically, this happens when the subdomain has a canonical name ([CNAME](https://en.wikipedia.org/wiki/CNAME_record)) in the Domain Name System ([DNS](/en-US/docs/Glossary/DNS)), but no host is providing content for it. This can happen because either a virtual host hasn't been published yet or a virtual host has been removed. An attacker can take over that subdomain by providing their own virtual host and then hosting their own content for it.
 
 If an attacker can do this, they can potentially read [cookies](/en-US/docs/Web/HTTP/Cookies) set from the main domain, perform [cross-site scripting](/en-US/docs/Web/Security/Types_of_attacks#cross-site_scripting_xss), or circumvent [content security policies](/en-US/docs/Web/HTTP/CSP), thereby enabling them to capture protected information (including logins) or send malicious content to unsuspecting users.
@@ -51,5 +52,5 @@ If you discover that a subdomain of your domain has been taken over, the first s
 
 ## Learn more
 
-- ['Deep Thoughts' on Subdomain Takeover Vulnerabilities](http://claudijd.github.io/2017/02/03/deep-thoughts-on-subdomain-takeovers/)
+- ['Deep Thoughts' on Subdomain Takeover Vulnerabilities](https://claudijd.github.io/2017/02/03/deep-thoughts-on-subdomain-takeovers/)
 - [Subdomain Takeover: Basics](https://0xpatrik.com/subdomain-takeover-basics/)

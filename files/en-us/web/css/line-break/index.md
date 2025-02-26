@@ -1,21 +1,13 @@
 ---
 title: line-break
 slug: Web/CSS/line-break
-tags:
-  - Asian
-  - CSS
-  - CSS Property
-  - CSS Text
-  - NeedsExample
-  - Reference
-  - i18n
-  - l10n
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.line-break
 ---
+
 {{CSSRef}}
 
-The **`line-break`** CSS property sets how to break lines of Chinese, Japanese, or Korean (CJK) text when working with punctuation and symbols.
+The **`line-break`** [CSS](/en-US/docs/Web/CSS) property sets how to break lines of Chinese, Japanese, or Korean (CJK) text when working with punctuation and symbols.
 
 {{EmbedInteractiveExample("pages/css/line-break.html")}}
 
@@ -68,23 +60,49 @@ See whether the text is wrapped before "々", "ぁ" and "。".
 
 ```html
 <div lang="ja">
-  <p class="wrapbox auto">auto:<br>そこは湖のほとりで木々が輝いていた。<br>その景色に、美しいなぁと思わずつぶやいた。</p>
-  <p class="wrapbox loose">loose:<br>そこは湖のほとりで木々が輝いていた。<br>その景色に、美しいなぁと思わずつぶやいた。</p>
-  <p class="wrapbox normal">normal:<br>そこは湖のほとりで木々が輝いていた。<br>その景色に、美しいなぁと思わずつぶやいた。</p>
-  <p class="wrapbox strict">strict:<br>そこは湖のほとりで木々が輝いていた。<br>その景色に、美しいなぁと思わずつぶやいた。</p>
-  <p class="wrapbox anywhere">anywhere:<br>そこは湖のほとりで木々が輝いていた。<br>その景色に、美しいなぁと思わずつぶやいた。</p>
+  <p class="wrap-box auto">
+    auto:<br />そこは湖のほとりで木々が輝いていた。<br />その景色に、美しいなぁと思わずつぶやいた。
+  </p>
+  <p class="wrap-box loose">
+    loose:<br />そこは湖のほとりで木々が輝いていた。<br />その景色に、美しいなぁと思わずつぶやいた。
+  </p>
+  <p class="wrap-box normal">
+    normal:<br />そこは湖のほとりで木々が輝いていた。<br />その景色に、美しいなぁと思わずつぶやいた。
+  </p>
+  <p class="wrap-box strict">
+    strict:<br />そこは湖のほとりで木々が輝いていた。<br />その景色に、美しいなぁと思わずつぶやいた。
+  </p>
+  <p class="wrap-box anywhere">
+    anywhere:<br />そこは湖のほとりで木々が輝いていた。<br />その景色に、美しいなぁと思わずつぶやいた。
+  </p>
 </div>
 ```
 
 #### CSS
 
 ```css
-.wrapbox { width: 10em; margin: 0.5em; white-space: normal; vertical-align: top; display: inline-block; }
-.auto { line-break: auto; }
-.loose { line-break: loose; }
-.normal { line-break: normal; }
-.strict { line-break: strict; }
-.anywhere { line-break: anywhere; }
+.wrap-box {
+  width: 10em;
+  margin: 0.5em;
+  white-space: normal;
+  vertical-align: top;
+  display: inline-block;
+}
+.auto {
+  line-break: auto;
+}
+.loose {
+  line-break: loose;
+}
+.normal {
+  line-break: normal;
+}
+.strict {
+  line-break: strict;
+}
+.anywhere {
+  line-break: anywhere;
+}
 ```
 
 #### Result
@@ -99,4 +117,6 @@ See whether the text is wrapped before "々", "ぁ" and "。".
 
 {{Compat}}
 
-- [CSS and International text](https://www.w3.org/International/articles/css3-text/)
+## See also
+
+- [CSS and international text](https://www.w3.org/International/articles/css3-text/) on W3C

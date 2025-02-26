@@ -1,49 +1,76 @@
 ---
 title: Intl.Locale() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/Locale
-tags:
-  - Constructor
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Locale
-  - Reference
+page-type: javascript-constructor
 browser-compat: javascript.builtins.Intl.Locale.Locale
 ---
+
 {{JSRef}}
 
-The **`Intl.Locale`** constructor is a
-standard built-in property of the Intl object that represents a Unicode locale
-identifier.
+The **`Intl.Locale()`** constructor creates {{jsxref("Intl.Locale")}} objects.
 
-{{EmbedInteractiveExample("pages/js/intl-locale.html")}}
+{{InteractiveExample("JavaScript Demo: Intl.Locale")}}
 
-<!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
+```js interactive-example
+const korean = new Intl.Locale("ko", {
+  script: "Kore",
+  region: "KR",
+  hourCycle: "h23",
+  calendar: "gregory",
+});
+
+const japanese = new Intl.Locale("ja-Jpan-JP-u-ca-japanese-hc-h12");
+
+console.log(korean.baseName, japanese.baseName);
+// Expected output: "ko-Kore-KR" "ja-Jpan-JP"
+
+console.log(korean.hourCycle, japanese.hourCycle);
+// Expected output: "h23" "h12"
+```
 
 ## Syntax
 
-```js
+```js-nolint
 new Intl.Locale(tag)
 new Intl.Locale(tag, options)
 ```
 
+> **Note:** `Intl.Locale()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
+
 ### Parameters
 
 - `tag`
-  - : The Unicode locale identifier string.
+  - : The Unicode locale identifier string. For the syntax of locale identifier strings, see the [Intl main page](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_argument). Note that the `Intl.Locale` constructor, unlike most other `Intl` constructors, does not accept an array of locales or `undefined`.
 - `options`
-  - : An object that contains configuration for the Locale. Keys are Unicode locale tags,
-    values are valid Unicode tag values.
+  - : An object that contains configuration for the Locale. Option values here take priority over extension keys in the locale identifier. Possible properties are:
+    - `language`
+      - : The language. Any syntactically valid string following the [`unicode_language_subtag`](https://unicode.org/reports/tr35/#unicode_language_subtag) grammar (2–3 or 5–8 letters) is accepted, but the implementation only recognizes certain kinds.
+    - `script`
+      - : The script. Any syntactically valid string following the [`unicode_script_subtag`](https://unicode.org/reports/tr35/#unicode_script_subtag) grammar (4 letters) is accepted, but the implementation only recognizes certain kinds.
+    - `region`
+      - : The region. Any syntactically valid string following the [`unicode_region_subtag`](https://unicode.org/reports/tr35/#unicode_region_subtag) grammar (either 2 letters or 3 digits) is accepted, but the implementation only recognizes certain kinds.
+    - `calendar`
+      - : The calendar. Any syntactically valid string following the [`type`](https://unicode.org/reports/tr35/#Unicode_locale_identifier) grammar (one or more segments of 3–8 alphanumerals, joined by hyphens) is accepted, but the implementation only recognizes certain kinds, which are listed in [`Intl.supportedValuesOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#supported_calendar_types).
+    - `collation`
+      - : The collation. Any syntactically valid string following the `type` grammar is accepted, but the implementation only recognizes certain kinds, which are listed in [`Intl.supportedValuesOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#supported_collation_types).
+    - `numberingSystem`
+      - : The numbering system. Any syntactically valid string following the `type` grammar is accepted, but the implementation only recognizes certain kinds, which are listed in [`Intl.supportedValuesOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#supported_numbering_system_types).
+    - `caseFirst`
+      - : The case-first sort option. Possible values are `"upper"`, `"lower"`, or `"false"`.
+    - `hourCycle`
+      - : The hour cycle. Possible values are `"h23"`, `"h12"`, `"h11"`, or the practically unused `"h24"`, which are explained in [`Intl.Locale.prototype.getHourCycles`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/getHourCycles#supported_hour_cycle_types)
+    - `numeric`
+      - : The numeric sort option. A boolean.
 
 ## Examples
 
 ### Basic usage
 
-At its very simplest, the {{jsxref("Intl/Locale/Locale", "Intl.Locale()")}} constructor takes
+At its very simplest, the `Intl.Locale()` constructor takes
 a locale identifier string as its argument:
 
 ```js
-let us = new Intl.Locale('en-US');
+const us = new Intl.Locale("en-US");
 ```
 
 ### Using the Locale constructor with an options object
@@ -55,8 +82,8 @@ property of the configuration object to your desired hour cycle type, and then p
 into the constructor:
 
 ```js
-let locale = new Intl.Locale("en-US", { hourCycle: "h12" });
-console.log(locale.hourCycle); // Prints "h12"
+const locale = new Intl.Locale("en-US", { hourCycle: "h12" });
+console.log(locale.hourCycle); // "h12"
 ```
 
 ## Specifications
@@ -70,5 +97,4 @@ console.log(locale.hourCycle); // Prints "h12"
 ## See also
 
 - {{jsxref("Intl.Collator")}}
-- [Unicode locale identifiers spec](https://www.unicode.org/reports/tr35/#Canonical_Unicode_Locale_Identifiers)
-- [A polyfill of `Intl.Locale` in FormatJS](https://formatjs.io/docs/polyfills/intl-locale/)
+- [Canonical Unicode Locale Identifiers](https://www.unicode.org/reports/tr35/#Canonical_Unicode_Locale_Identifiers) in the Unicode locale data markup language spec

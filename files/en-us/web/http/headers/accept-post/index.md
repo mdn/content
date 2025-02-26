@@ -1,22 +1,21 @@
 ---
 title: Accept-Post
 slug: Web/HTTP/Headers/Accept-Post
-tags:
-  - Accept-Post
-  - HTTP
-  - HTTP Header
-  - Response Header
+page-type: http-header
 spec-urls: https://www.w3.org/TR/ldp/#header-accept-post
 ---
+
 {{HTTPSidebar}}
 
-The **`Accept-Post`** response HTTP header advertises which [media types](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) are accepted by the server for HTTP post requests.
+The HTTP **`Accept-Post`** {{Glossary("response header")}} advertises which [media types](/en-US/docs/Web/HTTP/MIME_types) are accepted by the server in a {{HTTPMethod("POST")}} request.
+For example, a server receiving a `POST` request with an unsupported media type could reply with {{HTTPStatus("415", "415 Unsupported Media Type")}} and an `Accept-Post` header referencing one or more supported media types.
 
-**`Accept-Post`** in response to any method means that `POST` is allowed on the requested resource (any document/media format in the header further indicates that the document format is allowed).
+The header should appear in {{HTTPMethod("OPTIONS")}} requests to a resource that supports the `POST` method.
+An `Accept-Post` header in a response to any request method implicitly means that a `POST` is allowed on the target resource in the request.
 
-For example, a server receiving a `POST` request with an unsupported media type could reply with {{HTTPStatus("415")}} `Unsupported Media Type` and an **`Accept-Post`** header referencing one or more supported media types.
-
-> **Note:** An IANA registry maintains [a complete list of official content encodings](https://www.iana.org/assignments/http-parameters/http-parameters.xml#http-parameters-1).
+> [!NOTE]
+> IANA maintains [a list of official content encodings](https://www.iana.org/assignments/http-parameters/http-parameters.xhtml#content-coding).
+> The `bzip` and `bzip2` encodings are non-standard but may be used in some cases, particularly for legacy support.
 
 <table class="properties">
   <tbody>
@@ -25,30 +24,41 @@ For example, a server receiving a `POST` request with an unsupported media type 
       <td>{{Glossary("Response header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>yes</td>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
+      <td>Yes</td>
     </tr>
   </tbody>
 </table>
 
 ## Syntax
 
-```
-Accept-Post: <MIME_type>/<MIME_subtype>
-Accept-Post: <MIME_type>/*
+```http
+Accept-Post: <media-type>/<subtype>
+Accept-Post: <media-type>/*
 Accept-Post: */*
+
+// Comma-separated list of media types
+Accept-Post: <media-type>/<subtype>, <media-type>/<subtype>
 ```
 
-> **Note:** The `Accept-Post` header specifies a media range in the same way as {{HTTPHeader("Accept-Language")}}, except that it has no notion of preference (i.e. "accept-params" or "q" arguments are not significant).
+> [!NOTE]
+> The `Accept-Post` header specifies a media range in the same way as {{HTTPHeader("Accept")}}, except that it has no notion of preference via `q` ({{Glossary("quality values")}}) arguments.
+> This is because `Accept-Post` is a response header while `Accept` is a request header.
 
 ## Directives
 
-None.
+- `<media-type>/<subtype>`
+  - : A single, precise [media type](/en-US/docs/Web/HTTP/MIME_types), like `text/html`.
+- `<media-type>/*`
+  - : A media type without a subtype.
+    For example, `image/*` corresponds to `image/png`, `image/svg`, `image/gif`, and other image types.
+- `*/*`
+  - : Any media type.
 
 ## Examples
 
-```
-Accept-Post: application/example, text/example
+```http
+Accept-Post: application/json, text/plain
 Accept-Post: image/webp
 Accept-Post: */*
 ```
@@ -59,9 +69,10 @@ Accept-Post: */*
 
 ## Browser compatibility
 
-Browser compatibility is not relevant for this header (header is sent by server, and the specification does not define client behavior).
+Browser compatibility is not relevant for this header.
+The header is sent by the server and the specification does not define client behavior.
 
 ## See also
 
-- Http method {{HTTPMethod("POST")}}
-- HTTP Semantic and context {{RFC("7231", "POST", "4.3.3")}}
+- {{HTTPHeader("Accept-Patch")}}
+- {{HTTPMethod("POST")}} request method

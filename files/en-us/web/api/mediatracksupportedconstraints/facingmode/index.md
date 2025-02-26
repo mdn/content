@@ -1,21 +1,12 @@
 ---
-title: MediaTrackSupportedConstraints.facingMode
+title: "MediaTrackSupportedConstraints: facingMode property"
+short-title: facingMode
 slug: Web/API/MediaTrackSupportedConstraints/facingMode
 page-type: web-api-instance-property
-tags:
-  - API
-  - Constraints
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaTrackSupportedConstraints
-  - Property
-  - Web
-  - WebRTC
-  - facingMode
-browser-compat: api.MediaTrackSupportedConstraints.facingMode
+browser-compat: api.MediaStreamTrack.applyConstraints.facingMode_constraint
 ---
-{{DefaultAPISidebar("Media Capture and Streams")}}
+
+{{APIRef("Media Capture and Streams")}}
 
 The {{domxref("MediaTrackSupportedConstraints")}} dictionary's
 **`facingMode`** property is a read-only Boolean value which is
@@ -38,24 +29,21 @@ get {{jsxref("undefined")}} if you try to look at its value.
 ## Examples
 
 ```html hidden
-<div id="result">
-</div>
+<div id="result"></div>
 ```
 
 ```css hidden
 #result {
-  font: 14px "Arial", sans-serif;
+  font:
+    14px "Arial",
+    sans-serif;
 }
 ```
 
 ```js
-let result = document.getElementById("result");
-
-if (navigator.mediaDevices.getSupportedConstraints().facingMode) {
-    result.textContent = "Supported!";
-} else {
-    result.textContent = "Not supported!";
-}
+const result = document.getElementById("result");
+const supported = navigator.mediaDevices.getSupportedConstraints().facingMode;
+result.textContent = supported ? "Supported!" : "Not supported!";
 ```
 
 ### Result
@@ -72,7 +60,7 @@ if (navigator.mediaDevices.getSupportedConstraints().facingMode) {
 
 ## See also
 
-- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Streams_API)
+- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API)
 - {{domxref("MediaDevices.getSupportedConstraints()")}}
 - {{domxref("MediaTrackSupportedConstraints")}}
 - {{domxref("MediaStreamTrack")}}

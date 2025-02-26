@@ -1,33 +1,44 @@
 ---
 title: Map.prototype.values()
 slug: Web/JavaScript/Reference/Global_Objects/Map/values
-tags:
-  - ECMAScript 2015
-  - Iterator
-  - JavaScript
-  - Map
-  - Method
-  - Prototype
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Map.values
 ---
+
 {{JSRef}}
 
-The **`values()`** method returns a new
-_[iterator](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators)_ object
-that contains the values for each element in the `Map` object in insertion
-order.
+The **`values()`** method of {{jsxref("Map")}} instances returns a new _[map iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator)_ object that contains the values for each element in this map in insertion order.
 
-{{EmbedInteractiveExample("pages/js/map-prototype-values.html")}}
+{{InteractiveExample("JavaScript Demo: Map.prototype.values")}}
+
+```js interactive-example
+const map1 = new Map();
+
+map1.set("0", "foo");
+map1.set(1, "bar");
+
+const iterator1 = map1.values();
+
+console.log(iterator1.next().value);
+// Expected output: "foo"
+
+console.log(iterator1.next().value);
+// Expected output: "bar"
+```
 
 ## Syntax
 
-```js
+```js-nolint
 values()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
-A new {{jsxref("Map")}} iterator object.
+A new [iterable iterator object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator).
 
 ## Examples
 
@@ -35,9 +46,9 @@ A new {{jsxref("Map")}} iterator object.
 
 ```js
 const myMap = new Map();
-myMap.set('0', 'foo');
-myMap.set(1, 'bar');
-myMap.set({}, 'baz');
+myMap.set("0", "foo");
+myMap.set(1, "bar");
+myMap.set({}, "baz");
 
 const mapIter = myMap.values();
 

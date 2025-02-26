@@ -1,25 +1,17 @@
 ---
 title: max()
 slug: Web/CSS/max
-tags:
-  - CSS
-  - CSS Function
-  - Calculate
-  - Compute
-  - Function
-  - Layout
-  - Reference
-  - Web
-  - max
+page-type: css-function
 browser-compat: css.types.max
 ---
+
 {{CSSRef}}
 
-The **`max()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) lets you set the largest (most positive) value from a list of comma-separated expressions as the value of a CSS property value. The `max()` function can be used anywhere a {{CSSxRef("&lt;length&gt;")}}, {{CSSxRef("&lt;frequency&gt;")}}, {{CSSxRef("&lt;angle&gt;")}}, {{CSSxRef("&lt;time&gt;")}}, {{CSSxRef("&lt;percentage&gt;")}}, {{CSSxRef("&lt;number&gt;")}}, or {{CSSxRef("&lt;integer&gt;")}} is allowed.
+The **`max()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) lets you set the largest (most positive) value from a list of comma-separated expressions as the value of a CSS property value. The `max()` function can be used anywhere a {{CSSxRef("&lt;length&gt;")}}, {{CSSxRef("&lt;frequency&gt;")}}, {{CSSxRef("&lt;angle&gt;")}}, {{CSSxRef("&lt;time&gt;")}}, {{CSSxRef("&lt;percentage&gt;")}}, {{CSSxRef("&lt;number&gt;")}}, or {{CSSxRef("&lt;integer&gt;")}} is allowed.
 
 {{EmbedInteractiveExample("pages/css/function-max.html")}}
 
-In the first above example, the width will be at least 400px, but will be wider if the viewport is more than 2000px wide (in which case 1vw would be 20px, so 20vw would be 400px). Think of the `max()` value as providing the _minimum_ value a property can have.
+In the first example shown above, the width will be at least 400px, but will be wider if the viewport is more than 2000px wide (in which case 1vw would be 20px, so 20vw would be 400px). This technique uses an absolute unit to specify a fixed minimum value for the property, and a relative unit to allow the value to grow to suit larger viewports.
 
 ## Syntax
 
@@ -36,39 +28,11 @@ You can use different units for each value in your expression. You may also use 
 - The expression can be values combining the addition ( + ), subtraction ( - ), multiplication ( \* ) and division ( / ) operators, using standard operator precedence rules. Make sure to put a space on each side of the + and - operands. The operands in the expression may be any \<length> syntax value.
 - You can (and often need to) combine `min()` and `max()` values, or use `max()` within a `clamp()` or `calc()` function.
 
-### Formal syntax
+## Formal syntax
 
 {{CSSSyntax}}
 
-## Examples
-
-### Setting a minimum size for a font
-
-Another use case for CSS functions is allow a font size to grow while ensuring it is at least a minimum size, enabling responsive font sizes while ensuring legibility.
-
-Let's look at some CSS:
-
-```css
-h1 {
-  font-size: 2rem;
-}
-h1.responsive {
-  font-size: max(4vw, 2em, 2rem);
-}
-```
-
-The font-size will at minimum be 2rems, or twice the default size of font for the page. This ensure it is legible and ensures accessibility
-
-```html
-<h1>This text is always legible, but doesn't change size</h1>
-<h1 class="responsive">This text is always legible, and is responsive, to a point</h1>
-```
-
-{{EmbedLiveSample("Setting_a_minimum_size_for_a_font", "100%", "300")}}
-
-Think of the `max()` function as finding the minimum value allowed for a property.
-
-## Accessibility concerns
+## Accessibility
 
 When `max()` is used for controlling text size, make sure the text is always large enough to read. A suggestion is to use the {{CSSxRef("min", "min()")}} function nested within a `max()` that has as its second value a [relative length unit](/en-US/docs/Web/CSS/length#relative_length_units) that is always large enough to read. For example:
 
@@ -83,6 +47,36 @@ This ensures a minimum size of _1rem_, with a text size that scales if the page 
 - [MDN Understanding WCAG, Guideline 1.4 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
 - [Understanding Success Criterion 1.4.4 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
 
+## Examples
+
+### Setting a minimum size for a font
+
+Another use case for `max()` is to allow a font size to grow while ensuring it is at least a minimum size, enabling responsive font sizes while ensuring legibility.
+
+Let's look at some CSS:
+
+```css
+h1 {
+  font-size: 2rem;
+}
+h1.responsive {
+  font-size: max(4vw, 2em, 2rem);
+}
+```
+
+The font-size will at minimum be 2rems, or twice the default size of font for the page. This ensures that it is legible and accessible.
+
+```html
+<h1>This text is always legible, but doesn't change size</h1>
+<h1 class="responsive">
+  This text is always legible, and is responsive, to a point
+</h1>
+```
+
+{{EmbedLiveSample("Setting_a_minimum_size_for_a_font", "100%", "300")}}
+
+Think of the `max()` function as finding the minimum value allowed for a property.
+
 ## Specifications
 
 {{Specifications}}
@@ -96,4 +90,4 @@ This ensures a minimum size of _1rem_, with a text size that scales if the page 
 - {{CSSxRef("calc", "calc()")}}
 - {{CSSxRef("clamp", "clamp()")}}
 - {{CSSxRef("min", "min()")}}
-- [CSS Values](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)
+- [Learn: Values and units](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units)

@@ -2,23 +2,17 @@
 title: ReadableByteStreamController
 slug: Web/API/ReadableByteStreamController
 page-type: web-api-interface
-tags:
-  - API
-  - Fetch
-  - Interface
-  - ReadableByteStreamController
-  - Reference
-  - Streams
 browser-compat: api.ReadableByteStreamController
 ---
-{{APIRef("Streams")}}
+
+{{APIRef("Streams")}}{{AvailableInWorkers}}
 
 The **`ReadableByteStreamController`** interface of the [Streams API](/en-US/docs/Web/API/Streams_API) represents a controller for a [readable byte stream](/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams).
 It allows control of the state and internal queue of a {{domxref("ReadableStream")}} with an underlying byte source, and enables efficient zero-copy transfer of data from the underlying source to a consumer when the stream's internal queue is empty.
 
 An instance of this controller type is created if an `underlyingSource` object with the property `type="bytes"` is passed as an argument to the [`ReadableStream()` constructor](/en-US/docs/Web/API/ReadableStream/ReadableStream#type).
 The `underlyingSource` object may also define [`start()`](/en-US/docs/Web/API/ReadableStream/ReadableStream#start) and [`pull()`](/en-US/docs/Web/API/ReadableStream/ReadableStream#pull) callback functions.
-These are called with the controller as a parameter, in order to setup the underlying source, and request data when needed.
+These are called with the controller as a parameter, in order to set up the underlying source, and request data when needed.
 
 The underlying source uses the controller to supply data to the stream via its [`byobRequest`](#readablebytestreamcontroller.byobrequest) property or [`enqueue()`](#readablebytestreamcontroller.enqueue) method.
 [`byobRequest`](#readablebytestreamcontroller.byobrequest) is a {{domxref("ReadableStreamBYOBRequest")}} object that represents a pending request from a consumer to make a zero-copy transfer of data direct to a consumer.
@@ -38,14 +32,14 @@ Note that even though the controller is primarily used by the underlying byte so
 
 None. `ReadableByteStreamController` instances are automatically created if an `underlyingSource` with the property `type="bytes"` is passed to the [`ReadableStream()` constructor](/en-US/docs/Web/API/ReadableStream/ReadableStream#type).
 
-## Properties
+## Instance properties
 
-- {{domxref("ReadableByteStreamController.byobRequest")}} {{readonlyInline}}
+- {{domxref("ReadableByteStreamController.byobRequest")}} {{ReadOnlyInline}}
   - : Returns the current BYOB pull request, or `null` if there no outstanding request.
-- {{domxref("ReadableByteStreamController.desiredSize")}} {{readonlyInline}}
+- {{domxref("ReadableByteStreamController.desiredSize")}} {{ReadOnlyInline}}
   - : Returns the desired size required to fill the stream's internal queue.
 
-## Methods
+## Instance methods
 
 - {{domxref("ReadableByteStreamController.close()")}}
   - : Closes the associated stream.
@@ -70,4 +64,8 @@ The example in [Using readable byte streams](/en-US/docs/Web/API/Streams_API/Usi
 
 ## See also
 
+- [Streams API concepts](/en-US/docs/Web/API/Streams_API)
 - [Using readable byte streams](/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams)
+- {{domxref("ReadableStream")}}
+- [WHATWG Stream Visualizer](https://whatwg-stream-visualizer.glitch.me/), for a basic visualization of readable, writable, and transform streams.
+- [Web-streams-polyfill](https://github.com/MattiasBuelens/web-streams-polyfill) or [sd-streams](https://github.com/stardazed/sd-streams) - polyfills

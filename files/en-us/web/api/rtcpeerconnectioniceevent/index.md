@@ -2,13 +2,6 @@
 title: RTCPeerConnectionIceEvent
 slug: Web/API/RTCPeerConnectionIceEvent
 page-type: web-api-interface
-tags:
-  - API
-  - Experimental
-  - Interface
-  - RTCIceCandidateEvent
-  - Reference
-  - WebRTC
 browser-compat: api.RTCPeerConnectionIceEvent
 ---
 
@@ -20,11 +13,11 @@ Only one event is of this type: {{domxref("RTCPeerConnection.icecandidate_event"
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
-_A {{domxref("RTCPeerConnectionIceEvent")}} being an {{domxref("Event")}}, this event also implements these properties_.
+_A `RTCPeerConnectionIceEvent` being an {{domxref("Event")}}, this event also implements these properties_.
 
-- {{domxref("RTCPeerConnectionIceEvent.candidate")}} {{readOnlyInline}}
+- {{domxref("RTCPeerConnectionIceEvent.candidate")}} {{ReadOnlyInline}}
   - : Contains the {{domxref("RTCIceCandidate")}} containing the candidate associated with the event, or `null` if this event indicates that there are no further candidates to come.
 
 ## Constructors
@@ -32,16 +25,16 @@ _A {{domxref("RTCPeerConnectionIceEvent")}} being an {{domxref("Event")}}, this 
 - {{domxref("RTCPeerConnectionIceEvent.RTCPeerConnectionIceEvent()", "RTCPeerConnectionIceEvent()")}}
   - : Returns a new `RTCPeerConnectionIceEvent`. It takes two parameters, the first being a string representing the type of the event; the second a dictionary containing the {{domxref("RTCIceCandidate")}} it refers to.
 
-## Methods
+## Instance methods
 
-_A {{domxref("RTCPeerConnectionIceEvent")}} being an {{domxref("Event")}}, this event also implements these properties. There is no specific {{domxref("RTCDataChannelEvent")}} method._
+_A `RTCPeerConnectionIceEvent` being an {{domxref("Event")}}, this event also implements these properties. There is no specific {{domxref("RTCDataChannelEvent")}} method._
 
 ## Examples
 
 ```js
-pc.onicecandidate = function (ev) {
-  alert(
-    `The ICE candidate (transport address: '${ev.candidate.candidate}') has been added to this connection.`
+pc.onicecandidate = (ev) => {
+  console.log(
+    `The ICE candidate ('${ev.candidate.candidate}') added to connection.`,
   );
 };
 ```

@@ -1,143 +1,99 @@
 ---
-title: CSS Containment
-slug: Web/CSS/CSS_Containment
-tags:
-  - CSS
-  - CSS Containment
-  - Guide
-  - Paint
-  - Performance
-browser-compat:
-  - css.properties.contain
-  - css.properties.content-visibility
+title: CSS containment
+slug: Web/CSS/CSS_containment
+page-type: css-module
+spec-urls:
+  - https://drafts.csswg.org/css-contain-2/
+  - https://drafts.csswg.org/css-contain-3/
 ---
+
 {{CSSRef}}
-The aim of the CSS Containment specification is to improve performance of web pages by allowing developers to isolate a subtree of the page from the rest of the page. If the browser knows that a part of the page is independent, rendering can be optimized and performance improved. The specification defines a single CSS property {{cssxref("contain")}}. This document describes the basic aims of the specification.
 
-## Basic example
+The **CSS containment** module defines containment and container queries.
 
-Many webpages contain a number of sections which are independent of each other. For example a listing of article headlines and content, as in the mark-up below.
+Containment enables the isolation of page subtrees from the rest of the DOM. The browser can then improve performance by optimizing the rendering of these independent parts.
 
-```html
-<h1>My blog</h1>
-<article>
-  <h2>Heading of a nice article</h2>
-  <p>Content here.</p>
-</article>
-<article>
-  <h2>Another heading of another article</h2>
-  <p>More content here.</p>
-</article>
-```
-
-Each article has the {{cssxref("contain")}} property with a value of `content` applied in the CSS.
-
-```css
-article {
-  contain: content;
-}
-```
-
-Each article is independent of the other articles on the page, and so they have been given `contain: content` in order to indicate to the browser that this is the case. The browser can then use this information to make decisions about how to render the content. For example, it might not render articles that are outside the viewable area.
-
-If we give each `<article>` the `contain` property with a value of `content`, when new elements are inserted the browser understands it does not need to relayout or repaint any area outside of the containing element's subtree, although if the `<article>` is styled such that its size depends on its contents (e.g. with `height: auto`), then the browser may need to account for its size changing.
-
-We have told it by way of the `contain` property that each article is independent.
-
-The `content` value is shorthand for `contain: layout paint`. It tells the browser that the internal layout of the element is totally separate from the rest of the page, and that everything about the element is painted inside its bounds. Nothing can visibly overflow.
-
-This information is something that is usually known, and in fact quite obvious, to the web developer creating the page. However browsers cannot guess at your intent and cannot assume that an article will be entirely self-contained. Therefore this property gives you a nice way to explain to the browser this fact, and allow it to make performance optimizations based on that knowledge.
-
-## Key concepts and terminology
-
-This specification defines only one property, the {{cssxref("contain")}} property. The values for this property indicate the type of containment that you want to apply to that element.
-
-### Layout containment
-
-```css
-article {
-  contain: layout;
-}
-```
-
-Layout is normally scoped to the entire document, which means that if you move one element the entire document needs to be treated as if things could have moved anywhere. By using `contain: layout` you can tell the browser it only needs to check this element — everything inside the element is scoped to that element and does not affect the rest of the page, and the containing box establishes an independent formatting context.
-
-In addition:
-
-- `float` layout will be performed independently.
-- Margins won't collapse across a layout containment boundary
-- The layout container will be a containing block for `absolute`/`fixed` position descendants.
-- The containing box creates a stacking context, therefore {{cssxref("z-index")}} can be used.
-
-### Paint containment
-
-```css
-article {
-  contain: paint;
-}
-```
-
-Paint containment essentially clips the box to the padding edge of the principal box. There can be no visible overflow. The same things are true for `paint` containment as `layout` containment (see above).
-
-Another advantage is that if the containing box is offscreen, the browser does not need to paint its contained elements — these must also be offscreen as they are contained completely by that box.
-
-### Size containment
-
-```css
-article {
-  contain: size;
-}
-```
-
-Size containment does not offer much in the way of performance optimizations when used on its own. However, it means that the size of the element's children cannot affect the size of the element itself — its size is computed as if it had no children.
-
-If you turn on `contain: size` you need to also specify the size of the element you have applied this to. It will end up being zero-sized in most cases, if you don't manually give it a size.
-
-### Style containment
-
-```css
-article {
-  contain: style;
-}
-```
-
-Despite the name, style containment does not provide scoped styles such as you would get with the [Shadow DOM](/en-US/docs/Web/Web_Components/Using_shadow_DOM). The main use case is to prevent situations where a [CSS Counter](/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters) could be changed in an element, which could then affect the rest of the tree.
-
-Using `contain: style` would ensure that the {{cssxref("counter-increment")}} and {{cssxref("counter-set")}} properties created new counters scoped to that subtree only.
-
-> **Note:** `style` containment is "at-risk" in the spec and may not be supported everywhere (it's not currently supported in Firefox).
-
-### Special values
-
-There are two special values of contain:
-
-- `content`
-- `strict`
-
-We encountered the first in the example above. Using `contain: content` turns on `layout` and `paint` containment. The specification describes this value as being "reasonably safe to apply widely". It does not apply `size` containment, so you would not be at risk of a box ending up zero-sized due to a reliance on the size of its children.
-
-To gain as much containment as possible use `contain: strict`, which behaves the same as `contain: size layout paint`, or perhaps the following to also add `style` containment in browsers that support it:
-
-```css
-contain: strict;
-contain: strict style;
-```
+Container queries are similar to dimension [media queries](/en-US/docs/Web/CSS/CSS_media_queries), except that the queries are based on the dimensions of a specific container element defined as a _containment context_, rather than on the dimensions of the viewport. Container queries enable querying a container's size, properties, and property values to conditionally apply CSS styles. When applying these conditional styles, you can use container query length units, which specify lengths relative to the dimensions of the query container. Additional properties are defined to enable establishing a specific element as a query container and giving it a specific name.
 
 ## Reference
 
-### CSS Properties
+### Properties
 
 - {{cssxref("contain")}}
 - {{cssxref("content-visibility")}}
+
+### Events
+
+- {{domxref("Element.contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}}
+
+### Interfaces
+
+- {{domxref("ContentVisibilityAutoStateChangeEvent")}}
+  - {{domxref("ContentVisibilityAutoStateChangeEvent.skipped", "skipped")}} property
+- {{domxref("CSSContainerRule")}}
+  - {{domxref("CSSContainerRule.containerName")}}
+  - {{domxref("CSSContainerRule.containerQuery")}}
+
+## Guides
+
+- [CSS container queries](/en-US/docs/Web/CSS/CSS_containment/Container_queries)
+
+  - : A guide to using container queries with `@container`, including naming containment contexts.
+
+- [Using CSS containment](/en-US/docs/Web/CSS/CSS_containment/Using_CSS_containment)
+
+  - : Describes the basic aims of CSS containment and how to leverage `contain` and `content-visibility` for a better user experience.
+
+- [Using container size and style queries](/en-US/docs/Web/CSS/CSS_containment/Container_size_and_style_queries)
+
+  - : A guide to writing container size and style queries with `@container`, including style queries for custom properties, query syntax and names, and nesting container queries.
+
+## Related concepts
+
+- [Layout and the containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block)
+- [Block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context)
+
+- [CSS conditional rules](/en-US/docs/Web/CSS/CSS_conditional_rules) module
+
+  - {{cssxref("@container")}} at-rule
+  - {{CSSxRef("container")}} property
+  - {{CSSxRef("container-name")}} property
+  - {{CSSxRef("container-type")}} property
+
+- [CSS media queries](/en-US/docs/Web/CSS/CSS_media_queries) module
+
+  - {{cssxref("@media")}} at-rule
+  - [CSS logical operators](/en-US/docs/Web/CSS/@media#logical_operators) (`not`, `or`, and `and`)
+
+- [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions) module
+
+  - {{cssxref("@starting-style")}} at-rule
+  - {{cssxref("transition-behavior")}} property
+
+- [CSS box sizing](/en-US/docs/Web/CSS/CSS_box_sizing) module
+
+  - {{CSSxRef("aspect-ratio")}} property
+  - {{cssxref("contain-intrinsic-size")}} shorthand property
+  - {{CSSxRef("contain-intrinsic-inline-size")}} property
+  - {{CSSxRef("contain-intrinsic-size")}} property
+  - {{CSSxRef("contain-intrinsic-width")}} property
+  - {{CSSxRef("contain-intrinsic-height")}} property
+
+- [CSS counter styles](/en-US/docs/Web/CSS/CSS_counter_styles) module
+
+  - [Using CSS counters](/en-US/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters) guide
+
+- [CSS nesting](/en-US/docs/Web/CSS/CSS_nesting) module
+
+  - [CSS nesting at-rules](/en-US/docs/Web/CSS/CSS_nesting/Nesting_at-rules) guide
 
 ## Specifications
 
 {{Specifications}}
 
-## Browser compatibility
+## See also
 
-{{Compat}}
-
-## External resources
-
-- [An Introduction to CSS Containment](https://blogs.igalia.com/mrego/2019/01/11/an-introduction-to-css-containment/)
+- [Using feature queries](/en-US/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries)
+- [Using CSS media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [Understanding aspect ratios](/en-US/docs/Web/CSS/CSS_box_sizing/Understanding_aspect-ratio)
+- {{cssxref("@supports")}} at-rule

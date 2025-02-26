@@ -1,21 +1,13 @@
 ---
 title: repeating-conic-gradient()
 slug: Web/CSS/gradient/repeating-conic-gradient
-tags:
-  - CSS
-  - CSS Function
-  - CSS Images
-  - Function
-  - Graphics
-  - Layout
-  - Reference
-  - Web
-  - gradient
-browser-compat: css.types.image.gradient.repeating-conic-gradient
+page-type: css-function
+browser-compat: css.types.gradient.repeating-conic-gradient
 ---
+
 {{CSSRef}}
 
-The **`repeating-conic-gradient()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) creates an image consisting of a repeating gradient (rather than a {{cssxref("gradient/conic-gradient","single gradient")}}) with color transitions rotated around a center point (rather than {{cssxref("gradient/repeating-radial-gradient","radiating from the center")}}).
+The **`repeating-conic-gradient()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) creates an image consisting of a repeating gradient (rather than a [single gradient](/en-US/docs/Web/CSS/gradient/conic-gradient)) with color transitions rotated around a center point (rather than [radiating from the center](/en-US/docs/Web/CSS/gradient/repeating-radial-gradient)).
 
 {{EmbedInteractiveExample("pages/css/function-repeating-conic-gradient.html")}}
 
@@ -26,11 +18,15 @@ The **`repeating-conic-gradient()`** [CSS](/en-US/docs/Web/CSS) [function](/en-U
    is a starburst of lighter and darker blue,
    centered in the upper left quadrant,
    offset by 3degrees so there is no up/down straight line */
-background: repeating-conic-gradient(
-    from 3deg at 25% 25%,
-    hsl(200, 100%, 50%) 0deg 15deg,
-    hsl(200, 100%, 60%) 10deg 30deg
-);
+repeating-conic-gradient(
+  from 3deg at 25% 25%,
+  hsl(200 100% 50%) 0deg 15deg,
+  hsl(200 100% 60%) 10deg 30deg
+)
+
+/* Interpolation in polar color space
+  with longer hue interpolation method */
+repeating-conic-gradient(in hsl shorter hue, red, blue 90deg, green 180deg)
 ```
 
 ### Values
@@ -38,13 +34,14 @@ background: repeating-conic-gradient(
 - {{CSSxRef("&lt;angle&gt;")}}
   - : Preceded by the `from` keyterm, and taking an angle as its value, defines the gradient rotation in clockwise direction.
 - `<position>`
-  - : Using the same length, order and keyterm values as the [background-position](/en-US/docs/Web/CSS/background-position) property, the position defines center of the gradient. If omitted, the default value is `center`, meaning the gradient will be centered, .
+  - : Using the same length, order and keyterm values as the [background-position](/en-US/docs/Web/CSS/background-position) property, the position defines center of the gradient. If omitted, the default value is `center`, meaning the gradient will be centered.
 - `<angular-color-stop>`
   - : A color-stop's {{CSSxRef("&lt;color&gt;")}} value, followed by one or two optional stop positions, (an {{CSSxRef("&lt;angle&gt;")}} along the gradient's circumference axis). The last color stop minus the first color-stop angle defines the size of the repeating gradient.
 - `<color-hint>`
   - : An {{Glossary("interpolation")}} hint defining how the gradient progresses between adjacent color stops. The length defines at which point between two color stops the gradient color should reach the midpoint of the color transition. If omitted, the midpoint of the color transition is the midpoint between two color stops.
 
-> **Note:** Rendering of [color stops in CSS gradients](#gradient_with_multiple_color_stops) follows the same rules as color stops in [SVG gradients](/en-US/docs/Web/SVG/Tutorial/Gradients).
+> [!NOTE]
+> Rendering of color stops in repeating conic gradients follows the same rules as [color stops in linear gradients](/en-US/docs/Web/CSS/gradient/linear-gradient#composition_of_a_linear_gradient).
 
 ## Description
 
@@ -56,7 +53,8 @@ As with any gradient, a repeating-conic gradient has [no intrinsic dimensions](/
 
 Because `<gradient>`s belong to the `<image>` data type, they can only be used where `<image>`s can be used. For this reason, `repeating-conic-gradient()` won't work on {{CSSxRef("background-color")}} and other properties that use the {{CSSxRef("&lt;color&gt;")}} data type.
 
-> **Note:** To create a conic gradient that does not repeat, make the gradient a full 360 degree rotation, or use the {{cssxref("gradient/conic-gradient", "conic-gradient()")}} function instead.
+> [!NOTE]
+> To create a conic gradient that does not repeat, make the gradient a full 360 degree rotation, or use the {{cssxref("gradient/conic-gradient", "conic-gradient()")}} function instead.
 
 ### Understanding repeating conic gradients
 
@@ -88,7 +86,7 @@ The gradient arc is part of the circumference of the gradient. 0 degrees is nort
 
 #### Customizing gradients
 
-By adding more angled color-stop points on the gradient arc, you can create a highly customized transition between multiple colors. A color-stop's position can be explicitly defined by using an {{CSSxRef("&lt;angle&gt;")}}. If you don't specify the location of a color stop, it is placed halfway between the one that precedes it and the one that follows it. Like the non-repeating gradient counterpart, If you don't specify an angle for the first or last color stop, the values are will be 0deg and 360deg. If you don't declare an angle for either, you'll get a non-repeating conic gradient. If you declare a non 0 or 360degree for the first or last respectively, the gradient will repeat based on that value. For example, if you don't declare an angle for the first color, and declare 10% on the last color stop, the arc will repeat 10 times. Rather, the starting point is the first color stop declared, and the last color stop is the last color stop angle declared. The following two gradients are equivalent:
+By adding more angled color-stop points on the gradient arc, you can create a highly customized transition between multiple colors. A color-stop's position can be explicitly defined by using an {{CSSxRef("&lt;angle&gt;")}}. If you don't specify the location of a color stop, it is placed halfway between the one that precedes it and the one that follows it. Like the non-repeating gradient counterpart, if you don't specify an angle for the first or last color stop, the values will be 0deg and 360deg. If you don't declare an angle for either, you'll get a non-repeating conic gradient. If you declare a non 0 or 360degree for the first or last respectively, the gradient will repeat based on that value. For example, if you don't declare an angle for the first color, and declare 10% on the last color stop, the arc will repeat 10 times. Rather, the starting point is the first color stop declared, and the last color stop is the last color stop angle declared. The following two gradients are equivalent:
 
 ```css
 repeating-conic-gradient(red, orange, yellow, green, blue 50%);
@@ -101,16 +99,16 @@ If two or more color stops are at the same location, the transition will be a ha
 
 While you can mix and match different angle units, don't. It makes CSS hard to read.
 
-### Formal syntax
+## Formal syntax
 
-{{csssyntax}}
+{{CSSSyntax}}
 
-## Accessibility concerns
+## Accessibility
 
 Browsers do not provide any special information on background images to assistive technology. This is important primarily for screen readers, as a screen reader will not announce its presence and therefore convey nothing to its users. While it is possible to create pie charts, checkerboards, and other effects with conic gradients, CSS images provide no native way to assign alternative text, and therefore the image represented by the conic gradient will not be accessible to screen reader users. If the image contains information critical to understanding the page's overall purpose, it is better to describe it semantically in the document.
 
-- [MDN Understanding WCAG, Guideline 1.1 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_%e2%80%94_providing_text_alternatives_for_non-text_content)
-- [Understanding Success Criterion 1.1.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
+- [MDN Understanding WCAG, Guideline 1.1 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
+- [Understanding Success Criterion 1.1.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv-all.html)
 
 ## Examples
 
@@ -129,8 +127,7 @@ div {
 
 ```css
 div {
-  background-image:
-     repeating-conic-gradient(#fff 0 9deg, #000 9deg 18deg);
+  background-image: repeating-conic-gradient(#fff 0 9deg, #000 9deg 18deg);
 }
 ```
 
@@ -155,15 +152,72 @@ div {
 div {
   background: repeating-conic-gradient(
     from 3deg at 25% 25%,
-    green, blue 2deg 5deg, green, yellow 15deg 18deg, green 20deg);
+    green,
+    blue 2deg 5deg,
+    green,
+    yellow 15deg 18deg,
+    green 20deg
+  );
 }
 ```
 
 {{EmbedLiveSample("Off-centered_gradient", 220, 220)}}
 
+### Interpolating with hue
+
+```html hidden
+<div class="shorter"></div>
+<div class="longer"></div>
+```
+
+```css hidden
+div {
+  display: inline-block;
+  margin-top: 1rem;
+  width: 45vw;
+  height: 80vh;
+}
+
+.shorter::before {
+  content: "shorter hue";
+  display: block;
+  margin-top: -1rem;
+}
+
+.longer::before {
+  content: "longer hue";
+  display: block;
+  margin-top: -1rem;
+}
+```
+
+In this example for interpolation, [hsl](/en-US/docs/Web/CSS/color_value/hsl) color system is being used and [hue](/en-US/docs/Web/CSS/hue) is being interpolated.
+
+```css
+.shorter {
+  background-image: repeating-conic-gradient(
+    in hsl shorter hue,
+    red,
+    blue 180deg
+  );
+}
+
+.longer {
+  background-image: repeating-conic-gradient(
+    in hsl longer hue,
+    red,
+    blue 180deg
+  );
+}
+```
+
+The box on the left uses [shorter interpolation](/en-US/docs/Web/CSS/hue-interpolation-method#shorter), meaning color goes straight from red to blue using the shorter arc on the [color wheel](/en-US/docs/Glossary/Color_wheel). The box on the right uses [longer interpolation](/en-US/docs/Web/CSS/hue-interpolation-method#longer), meaning the color goes from red to blue using the longer arc, traversing through greens, yellows, and oranges.
+
+{{EmbedLiveSample("Interpolating with hue", 240, 200)}}
+
 ### More repeating-conic-gradient examples
 
-Please see [Using CSS gradients](/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients) for more examples.
+Please see [Using CSS gradients](/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradients) for more examples.
 
 ## Specifications
 
@@ -175,8 +229,10 @@ Please see [Using CSS gradients](/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradie
 
 ## See also
 
-- [Using CSS gradients](/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients)
+- [Using CSS gradients](/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradients)
 - Other gradient functions: {{cssxref("gradient/conic-gradient", "conic-gradient()")}}, {{cssxref("gradient/linear-gradient", "linear-gradient()")}}, {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("gradient/radial-gradient", "radial-gradient()")}}, {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}
+- [`<hue-interpolation-method>`](/en-US/docs/Web/CSS/hue-interpolation-method)
+- [`<color-interpolation-method>`](/en-US/docs/Web/CSS/color-interpolation-method)
 - {{cssxref("&lt;image&gt;")}}
 - {{cssxref("image/image","image()")}}
 - {{cssxref("element", "element()")}}

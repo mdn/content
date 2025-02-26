@@ -3,7 +3,8 @@ title: Building an Internet-Connected Phone with PeerJS
 slug: Web/API/WebRTC_API/Build_a_phone_with_peerjs
 page-type: guide
 ---
-{{WebRTCSidebar}}
+
+{{DefaultAPISidebar("WebRTC")}}
 
 {{NextMenu("Web/API/WebRTC_API/Build_a_phone_with_peerjs/Setup")}}
 
@@ -16,26 +17,27 @@ In this series of articles we will create a simple phone application using PeerJ
 This is an intermediate level tutorial; before attempting it you should already be comfortable with:
 
 - [Vanilla JavaScript](/en-US/docs/Web/JavaScript)
-- [Node](https://nodejs.org/en/docs/)
-- [Express](/en-US/docs/Learn/Server-side/Express_Nodejs)
+- [Node](https://nodejs.org/en)
+- [Express](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs)
 - [HTML](/en-US/docs/Web/HTML)
 
-Before you get started, you'll want to make sure you've [installed node](https://nodejs.org/en/download/) and [Yarn](https://classic.yarnpkg.com/en/docs/install) (the instructions in later articles assume Yarn, but you can feel free to use [npm](https://docs.npmjs.com/getting-started/) or another manager if you'd prefer).
+Before you get started, you'll want to make sure you've [installed node](https://nodejs.org/en/download/package-manager) and [Yarn](https://classic.yarnpkg.com/en/docs/install) (the instructions in later articles assume Yarn, but you can feel free to use [npm](https://docs.npmjs.com/getting-started/) or another manager if you'd prefer).
 
-> **Note:** If you learn better by following step-by-step code, we've also provided this [tutorial in code](https://github.com/SamsungInternet/WebPhone/tree/master/tutorial), which you can use instead.
+> [!NOTE]
+> If you learn better by following step-by-step code, we've also provided this [tutorial in code](https://github.com/SamsungInternet/WebPhone/tree/master/tutorial), which you can use instead.
 
 ### Table of Contents
 
-1. [Setup](Build_a_phone_with_peerjs/Setup)
-2. [Connect Peers](Build_a_phone_with_peerjs/Connect_peers)
+1. [Setup](/en-US/docs/Web/API/WebRTC_API/Build_a_phone_with_peerjs/Setup)
+2. [Connect Peers](/en-US/docs/Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers)
 
-    1. [Get Microphone Permission](Build_a_phone_with_peerjs/Connect_peers/Get_microphone_permission)
-    2. [Showing and hiding HTML](Build_a_phone_with_peerjs/Connect_peers/Show_hide_html)
-    3. [Create a Peer Connection](Build_a_phone_with_peerjs/Connect_peers/Create_a_peer_connection)
-    4. [Creating a Call](Build_a_phone_with_peerjs/Connect_peers/Creating_a_call)
-    5. [Answer a Call](Build_a_phone_with_peerjs/Connect_peers/Answer_a_call)
-    6. [End a Call](Build_a_phone_with_peerjs/Connect_peers/End_a_call)
+   1. [Get Microphone Permission](/en-US/docs/Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Get_microphone_permission)
+   2. [Showing and hiding HTML](/en-US/docs/Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Show_hide_html)
+   3. [Create a Peer Connection](/en-US/docs/Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Create_a_peer_connection)
+   4. [Creating a Call](/en-US/docs/Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Creating_a_call)
+   5. [Answer a Call](/en-US/docs/Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Answer_a_call)
+   6. [End a Call](/en-US/docs/Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/End_a_call)
 
-3. [Deployment and Further Reading](Build_a_phone_with_peerjs/Deployment_and_further_reading)
+3. [Deployment and Further Reading](/en-US/docs/Web/API/WebRTC_API/Build_a_phone_with_peerjs/Deployment_and_further_reading)
 
 {{NextMenu("Web/API/WebRTC_API/Build_a_phone_with_peerjs/Setup")}}

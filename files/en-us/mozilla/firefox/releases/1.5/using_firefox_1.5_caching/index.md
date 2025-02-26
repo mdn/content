@@ -1,17 +1,10 @@
 ---
 title: Using Firefox 1.5 caching
 slug: Mozilla/Firefox/Releases/1.5/Using_Firefox_1.5_caching
-tags:
-  - Add-ons
-  - DOM
-  - Extensions
-  - HTML
-  - JavaScript
-  - Web Development
+page-type: guide
 ---
-{{FirefoxSidebar}}
 
-## Introduction
+{{FirefoxSidebar}}
 
 [Firefox 1.5](/en-US/docs/Mozilla/Firefox/Releases/1.5) uses in-memory caching for entire Web pages, including their JavaScript states, for a single browser session. Going backward and forward between visited pages requires no page loading and the JavaScript states are preserved. This feature, referred to by some as **bfcache** (for "Back-Forward Cache"), makes page navigation very fast. This caching state is preserved until the user closes the browser.
 
@@ -41,7 +34,7 @@ Two new browser events enable Web authors to do both.
 
 If you use these new events, your pages will continue to display properly in other browsers (we've tested earlier versions of Firefox, Internet Explorer, Opera, and Safari), and will use this new caching functionality when loaded in Firefox 1.5.
 
-Note: as of 10-2009 development versions of Safari added support for these new events (see [the WebKit bug](https://bugs.webkit.org/show_bug.cgi?id=28758)).
+Note: as of 10-2009 development versions of Safari added support for these new events (see [the WebKit bug](https://webkit.org/b/28758)).
 
 Standard behavior for Web pages is:
 
@@ -89,58 +82,73 @@ In this example:
 - The cursor is placed in the Name field of the form the first time the page is loaded. In Firefox 1.5, when the user navigates back to the page, the cursor remains in the field it was when the user navigated away from the page. In other browsers, the cursor moves back to the Name field.
 
 ```html
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-   "http://www.w3.org/TR/html4/loose.dtd">
-<HTML>
-<head>
-<title>Order query Firefox 1.5 Example</title>
-<style type="text/css">
-body, p {
-  font-family: Verdana, sans-serif;
-  font-size: 12px;
-     }
-</style>
-<script type="text/javascript">
-function onLoad() {
-  loadOnlyFirst();
-  onPageShow();
-}
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <title>Order query Firefox 1.5 Example</title>
+    <style type="text/css">
+      body,
+      p {
+        font-family: Verdana, sans-serif;
+        font-size: 12px;
+      }
+    </style>
+    <script>
+      function onLoad() {
+        loadOnlyFirst();
+        onPageShow();
+      }
 
-function onPageShow() {
-//calculate current time
-  var currentTime= new Date();
-  var year=currentTime.getFullYear();
-  var month=currentTime.getMonth()+1;
-  var day=currentTime.getDate();
-  var hour=currentTime.getHours();
-  var min=currentTime.getMinutes();
-  var sec=currentTime.getSeconds();
-  var mil=currentTime.getMilliseconds();
-  var displayTime = (month + "/" + day + "/" + year + " " +
-    hour + ":" + min + ":" + sec + ":" + mil);
-  document.getElementById("timefield").value=displayTime;
-}
+      function onPageShow() {
+        //calculate current time
+        var currentTime = new Date();
+        var year = currentTime.getFullYear();
+        var month = currentTime.getMonth() + 1;
+        var day = currentTime.getDate();
+        var hour = currentTime.getHours();
+        var min = currentTime.getMinutes();
+        var sec = currentTime.getSeconds();
+        var mil = currentTime.getMilliseconds();
+        var displayTime =
+          month +
+          "/" +
+          day +
+          "/" +
+          year +
+          " " +
+          hour +
+          ":" +
+          min +
+          ":" +
+          sec +
+          ":" +
+          mil;
+        document.getElementById("timefield").value = displayTime;
+      }
 
-function loadOnlyFirst() {
-  document.zipForm.name.focus();
-}
-</script>
-</head>
-<body onload="onLoad();" onpageshow="if (event.persisted) onPageShow();">
-<h2>Order query</h2>
+      function loadOnlyFirst() {
+        document.zipForm.name.focus();
+      }
+    </script>
+  </head>
+  <body onload="onLoad();" onpageshow="if (event.persisted) onPageShow();">
+    <h2>Order query</h2>
 
-<form name="zipForm" action="http://www.example.com/formresult.html" method="get">
-<label for="timefield">Date and time:</label>
-<input type="text" id="timefield"><br>
-<label for="name">Name:</label>
-<input type="text" id="name"><br>
-<label for="address">Email address:</label>
-<input type="text" id="address"><br>
-<label for="order">Order number:</label>
-<input type="text" id="order"><br>
-<input type="submit" name="submit" value="Submit Query">
-</form>
-</body>
+    <form
+      name="zipForm"
+      action="http://www.example.com/formresult.html"
+      method="get">
+      <label for="timefield">Date and time:</label>
+      <input type="text" id="timefield" /><br />
+      <label for="name">Name:</label>
+      <input type="text" id="name" /><br />
+      <label for="address">Email address:</label>
+      <input type="text" id="address" /><br />
+      <label for="order">Order number:</label>
+      <input type="text" id="order" /><br />
+      <input type="submit" name="submit" value="Submit Query" />
+    </form>
+  </body>
 </html>
 ```
 

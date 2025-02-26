@@ -1,21 +1,12 @@
 ---
-title: PromiseRejectionEvent.promise
+title: "PromiseRejectionEvent: promise property"
+short-title: promise
 slug: Web/API/PromiseRejectionEvent/promise
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - JavaScript
-  - Promise
-  - Promise Rejection Events
-  - PromiseRejectionEvent
-  - Promises
-  - Property
-  - Reference
-  - events
 browser-compat: api.PromiseRejectionEvent.promise
 ---
-{{APIRef("HTML DOM") }}
+
+{{APIRef("HTML DOM")}}{{AvailableInWorkers}}
 
 The {{domxref("PromiseRejectionEvent")}} interface's
 **`promise`** read-only property indicates the JavaScript
@@ -39,15 +30,14 @@ callback that will retry the task that failed to execute correctly.
 been handled.
 
 ```js
-window.onunhandledrejection = function(event) {
-  if (event.reason.code && event.reason.code === "Module not ready") {
-    window.requestIdleCallback(function(deadline) {
-      loadModule(event.reason.moduleName)
-        .then(performStartup);
+window.onunhandledrejection = (event) => {
+  if (event.reason?.code === "Module not ready") {
+    requestIdleCallback((deadline) => {
+      loadModule(event.reason.moduleName).then(performStartup);
     });
     event.preventDefault();
   }
-}
+};
 ```
 
 ## Specifications
@@ -60,8 +50,7 @@ window.onunhandledrejection = function(event) {
 
 ## See also
 
-- {{SectionOnPage("/en-US/docs/Web/JavaScript/Guide/Using_promises", "Promise
-    rejection events")}}
+- [Promise rejection events](/en-US/docs/Web/JavaScript/Guide/Using_promises#promise_rejection_events)
 - {{jsxref("Promise")}}
 - {{domxref("PromiseRejectionEvent")}}
 - {{domxref("Window.rejectionhandled_event", "rejectionhandled")}}

@@ -1,16 +1,9 @@
 ---
 title: Win the game
 slug: Games/Tutorials/2D_breakout_game_Phaser/Win_the_game
-tags:
-  - 2D
-  - Beginner
-  - Canvas
-  - Games
-  - JavaScript
-  - Phaser
-  - Tutorial
-  - winning
+page-type: guide
 ---
+
 {{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/The_score", "Games/Workflows/2D_Breakout_game_Phaser/Extra_lives")}}
@@ -25,20 +18,20 @@ Add the following new code into your `ballHitBrick()` function:
 
 ```js
 function ballHitBrick(ball, brick) {
-    brick.kill();
-    score += 10;
-    scoreText.setText('Points: '+score);
+  brick.kill();
+  score += 10;
+  scoreText.setText(`Points: ${score}`);
 
-    var count_alive = 0;
-    for (i = 0; i < bricks.children.length; i++) {
-      if (bricks.children[i].alive) {
-        count_alive++;
-      }
+  let count_alive = 0;
+  for (let i = 0; i < bricks.children.length; i++) {
+    if (bricks.children[i].alive) {
+      count_alive++;
     }
-    if (count_alive === 0) {
-      alert('You won the game, congratulations!');
-      location.reload();
-    }
+  }
+  if (count_alive === 0) {
+    alert("You won the game, congratulations!");
+    location.reload();
+  }
 }
 ```
 

@@ -1,13 +1,9 @@
 ---
 title: Timing in IMSC
 slug: Related/IMSC/Timing_in_IMSC
-tags:
-  - Guide
-  - IMSC
-  - Timing
-  - captions
-  - subtitles
+page-type: guide
 ---
+
 When building an IMSC document, each defined piece of text must include timing information to specify when it should appear. There are multiple ways to describe when a subtitle should start and stop displaying, with pros and cons to each method. This article explains those different methods.
 
 If you have not already read the [IMSC document with timing](/en-US/docs/Related/IMSC/Basics#timing) section in the [IMSC basics](/en-US/docs/Related/IMSC/Basics) article, you should do so now and then return here — it contains an initial overview of how to describe timing events.
@@ -80,7 +76,8 @@ Now that a frame rate of 23.98 is declared, you are able to describe time expres
 
 The advantage of using this method is that the time expression frame number is the same as the frame number of the media asset. A value of 86400f is frame number 86400 in the video file.
 
-> **Note:** You can find an additional explanation of these values in [Mapping video time codes to IMSC](/en-US/docs/Related/IMSC/Mapping_video_time_codes_to_IMSC).
+> [!NOTE]
+> You can find an additional explanation of these values in [Mapping video time codes to IMSC](/en-US/docs/Related/IMSC/Mapping_video_time_codes_to_IMSC).
 
 <section id="Quick_links">
   <ol>

@@ -1,38 +1,45 @@
 ---
 title: WeakMap.prototype.has()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/has
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - WeakMap
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.WeakMap.has
 ---
+
 {{JSRef}}
 
-The **`has()`** method returns a boolean indicating whether an
-element with the specified key exists in the `WeakMap` object or not.
+The **`has()`** method of {{jsxref("WeakMap")}} instances returns a boolean indicating whether an
+element with the specified key exists in this `WeakMap` or not.
 
-{{EmbedInteractiveExample("pages/js/weakmap-prototype-has.html")}}
+{{InteractiveExample("JavaScript Demo: WeakMap.prototype.has()")}}
+
+```js interactive-example
+const weakmap1 = new WeakMap();
+const object1 = {};
+const object2 = {};
+
+weakmap1.set(object1, "foo");
+
+console.log(weakmap1.has(object1));
+// Expected output: true
+
+console.log(weakmap1.has(object2));
+// Expected output: false
+```
 
 ## Syntax
 
-```js
+```js-nolint
 has(key)
 ```
 
 ### Parameters
 
 - `key`
-  - : Required. The key of the element to test for presence in the `WeakMap`
-    object.
+  - : The key of the element to test for presence in the `WeakMap` object.
 
 ### Return value
 
-- Boolean
-  - : Returns `true` if an element with the specified key exists in the
-    `WeakMap` object; otherwise `false`.
+Returns `true` if an element with the specified key exists in the `WeakMap` object; otherwise `false`. Always returns `false` if `key` is not an object or a [non-registered symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#shared_symbols_in_the_global_symbol_registry).
 
 ## Examples
 
@@ -40,10 +47,10 @@ has(key)
 
 ```js
 const wm = new WeakMap();
-wm.set(window, 'foo');
+wm.set(window, "foo");
 
 wm.has(window); // returns true
-wm.has('baz');  // returns false
+wm.has("baz"); // returns false
 ```
 
 ## Specifications

@@ -1,24 +1,14 @@
 ---
-title: CanvasCaptureMediaStreamTrack.requestFrame()
+title: "CanvasCaptureMediaStreamTrack: requestFrame() method"
+short-title: requestFrame()
 slug: Web/API/CanvasCaptureMediaStreamTrack/requestFrame
 page-type: web-api-instance-method
-tags:
-  - Canvas
-  - CanvasCaptureMediaStream
-  - DOM
-  - Experimental
-  - Frame Capture
-  - Media
-  - Method
-  - Reference
-  - requestFrame
 browser-compat: api.CanvasCaptureMediaStreamTrack.requestFrame
 ---
-{{DefaultAPISidebar("Media Capture and Streams")}}
 
-The {{domxref("CanvasCaptureMediaStreamTrack")}} method
-**`requestFrame()`** requests that a frame be captured from
-the canvas and sent to the stream.
+{{APIRef("Media Capture and Streams")}}
+
+The **`requestFrame()`** method of the {{domxref("CanvasCaptureMediaStreamTrack")}} interface requests that a frame be captured from the canvas and sent to the stream.
 
 Applications that need to carefully control
 the timing of rendering and frame capture can use `requestFrame()` to
@@ -31,13 +21,13 @@ the stream.
 
 ## Syntax
 
-```js
-stream.requestFrame();
+```js-nolint
+requestFrame()
 ```
 
 ### Return value
 
-`undefined`
+None ({{jsxref("undefined")}}).
 
 ## Usage notes
 

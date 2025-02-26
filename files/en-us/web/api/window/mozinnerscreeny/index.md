@@ -1,24 +1,20 @@
 ---
-title: Window.mozInnerScreenY
+title: "Window: mozInnerScreenY property"
+short-title: mozInnerScreenY
 slug: Web/API/Window/mozInnerScreenY
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - NeedsExample
-  - NeedsMarkupWork
-  - NeedsSpecTable
-  - Property
-  - Reference
-  - Window
+status:
+  - non-standard
 browser-compat: api.Window.mozInnerScreenY
 ---
-{{APIRef}}
+
+{{APIRef}}{{Non-standard_Header}}
 
 The `mozInnerScreenY` property of the {{domxref("Window")}} interface returns the Y coordinate of the top-left corner of the window's viewport, in screen
 coordinates.
 
-> **Note:** This coordinate is reported in CSS pixels, not in hardware pixels.
+> [!NOTE]
+> This coordinate is reported in CSS pixels, not in hardware pixels.
 
 ## Value
 

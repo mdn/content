@@ -1,26 +1,21 @@
 ---
 title: theme.reset()
 slug: Mozilla/Add-ons/WebExtensions/API/theme/reset
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - Theme
-  - WebExtensions
-  - reset
+page-type: webextension-api-function
 browser-compat: webextensions.api.theme.reset
 ---
-{{AddonSidebar()}}
 
-Resets any theme that was applied using the {{WebExtAPIRef("theme.update()")}} method.
+{{AddonSidebar}}
 
-Note that this will always reset the theme back to the original default theme, even if the user had selected a different theme before this extension's theme was applied (see [bug 1415267](https://bugzilla.mozilla.org/show_bug.cgi?id=1415267)).
+Resets any theme applied using the {{WebExtAPIRef("theme.update()")}} method.
+
+To use this method, an extension must request the "theme" [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) in its [manifest.json](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) file.
+
+Note that this always reset the theme back to the original default theme, even if the user selected a different theme before this extension's theme was applied (see [bug 1415267](https://bugzil.la/1415267)).
 
 ## Syntax
 
-```js
+```js-nolint
 browser.theme.reset(
   windowId     // integer
 )
@@ -29,11 +24,7 @@ browser.theme.reset(
 ### Parameters
 
 - `windowId` {{optional_inline}}
-  - : `integer`. The ID of a window. If this is provided, the theme applied to that window will be reset. If it is omitted the theme will be reset on all windows.
-
-## Browser compatibility
-
-{{Compat}}
+  - : `integer`. The ID of a window. If this is provided, the theme applied to that window is reset. If it is omitted, the theme is reset on all windows.
 
 ## Examples
 
@@ -49,7 +40,12 @@ browser.browserAction.onClicked.addListener(() => {
 
 {{WebExtExamples}}
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+## Browser compatibility
+
+{{Compat}}
+
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -76,4 +72,4 @@ browser.browserAction.onClicked.addListener(() => {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

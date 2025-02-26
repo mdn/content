@@ -1,18 +1,12 @@
 ---
-title: WritableStreamDefaultWriter.close()
+title: "WritableStreamDefaultWriter: close() method"
+short-title: close()
 slug: Web/API/WritableStreamDefaultWriter/close
 page-type: web-api-instance-method
-tags:
-  - API
-  - Experimental
-  - Method
-  - Reference
-  - Streams
-  - WritableStreamDefaultWriter
-  - close
 browser-compat: api.WritableStreamDefaultWriter.close
 ---
-{{SeeCompatTable}}{{APIRef("Streams")}}
+
+{{APIRef("Streams")}}{{AvailableInWorkers}}
 
 The **`close()`** method of the
 {{domxref("WritableStreamDefaultWriter")}} interface closes the associated writable
@@ -24,7 +18,7 @@ invoking the close behavior. During this time any further attempts to write will
 
 ## Syntax
 
-```js
+```js-nolint
 close()
 ```
 
@@ -49,22 +43,25 @@ The following example shows the creation of a `WritableStream` with a custom
 sink and an API-supplied queuing strategy. It then calls a function called
 `sendMessage()`, passing the newly created stream and a string. Inside this
 function it calls the stream's `getWriter()` method, which returns an
-instance of {{domxref("WritableStreamDefaultWriter")}}. A `forEach()` call is
-used to write each chunk of the string to the stream. Finally, `write()` and
-`close()` return promises that are processed to deal with success or failure
-of chunks and streams.
+instance of {{domxref("WritableStreamDefaultWriter")}}. Each chunk of the
+encoded string is written to the stream using the `write()` method, and the
+`forEach()` method of the encoded `Uint8Array` to process it byte-by-byte.
+Finally, `close()` is called and the Promise it returns is handled to deal
+with success (or any failures) of the chunked write operations.
 
 ```js
-const list = document.querySelector('ul');
+const list = document.querySelector("ul");
 
 function sendMessage(message, writableStream) {
   // defaultWriter is of type WritableStreamDefaultWriter
   const defaultWriter = writableStream.getWriter();
   const encoder = new TextEncoder();
-  const encoded = encoder.encode(message, { stream: true });
+  const encoded = encoder.encode(message);
   encoded.forEach((chunk) => {
     defaultWriter.ready
-      .then(() => defaultWriter.write(chunk))
+      .then(() => {
+        defaultWriter.write(chunk);
+      })
       .then(() => {
         console.log("Chunk written to sink.");
       })
@@ -89,35 +86,38 @@ function sendMessage(message, writableStream) {
 const decoder = new TextDecoder("utf-8");
 const queuingStrategy = new CountQueuingStrategy({ highWaterMark: 1 });
 let result = "";
-const writableStream = new WritableStream({
-  // Implement the sink
-  write(chunk) {
-    return new Promise((resolve, reject) => {
-      const buffer = new ArrayBuffer(1);
-      const view = new Uint8Array(buffer);
-      view[0] = chunk;
-      const decoded = decoder.decode(view, { stream: true });
-      const listItem = document.createElement('li');
-      listItem.textContent = `Chunk decoded: ${decoded}`;
+const writableStream = new WritableStream(
+  {
+    // Implement the sink
+    write(chunk) {
+      return new Promise((resolve, reject) => {
+        const buffer = new ArrayBuffer(1);
+        const view = new Uint8Array(buffer);
+        view[0] = chunk;
+        const decoded = decoder.decode(view, { stream: true });
+        const listItem = document.createElement("li");
+        listItem.textContent = `Chunk decoded: ${decoded}`;
+        list.appendChild(listItem);
+        result += decoded;
+        resolve();
+      });
+    },
+    close() {
+      const listItem = document.createElement("li");
+      listItem.textContent = `[MESSAGE RECEIVED] ${result}`;
       list.appendChild(listItem);
-      result += decoded;
-      resolve();
-    });
+    },
+    abort(err) {
+      console.log("Sink error:", err);
+    },
   },
-  close() {
-    const listItem = document.createElement('li');
-    listItem.textContent = `[MESSAGE RECEIVED] ${result}`;
-    list.appendChild(listItem);
-  },
-  abort(err) {
-    console.log("Sink error:", err);
-  }
-}, queuingStrategy);
+  queuingStrategy,
+);
 
 sendMessage("Hello, world.", writableStream);
 ```
 
-You can find the full code in our [Simple writer example](https://mdn.github.io/dom-examples/streams/simple-writer/).
+You can view a live demonstration of this at our [simple writer example](https://mdn.github.io/dom-examples/streams/simple-writer/).
 
 ## Specifications
 

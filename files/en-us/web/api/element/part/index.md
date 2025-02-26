@@ -1,15 +1,11 @@
 ---
-title: Element.part
+title: "Element: part property"
+short-title: part
 slug: Web/API/Element/part
 page-type: web-api-instance-property
-tags:
-  - API
-  - Element
-  - Property
-  - Reference
-  - part
 browser-compat: api.Element.part
 ---
+
 {{ ApiRef("DOM") }}
 
 The **`part`** property of the {{domxref("Element")}} interface
@@ -29,25 +25,25 @@ example. Here the `part` attribute is used to find the shadow parts, and the
 the correct styling is applied to the active tab when tabs are clicked.
 
 ```js
-let tabs = [];
-let children = this.shadowRoot.children;
+const tabs = [];
+const children = this.shadowRoot.children;
 
-for (let elem of children) {
-  if(elem.getAttribute('part')) {
+for (const elem of children) {
+  if (elem.getAttribute("part")) {
     tabs.push(elem);
   }
 }
 
 tabs.forEach((tab) => {
-  tab.addEventListener('click', (e) => {
+  tab.addEventListener("click", (e) => {
     tabs.forEach((tab) => {
-      tab.part = 'tab';
-    })
-    e.target.part = 'tab active';
-  })
+      tab.part = "tab";
+    });
+    e.target.part = "tab active";
+  });
 
   console.log(tab.part);
-})
+});
 ```
 
 ## Specifications
@@ -61,4 +57,4 @@ tabs.forEach((tab) => {
 ## See also
 
 - {{cssxref("::part")}}
-- {{htmlattrxref("part")}}
+- [part](/en-US/docs/Web/HTML/Global_attributes/part)

@@ -2,14 +2,9 @@
 title: SVGAnimatedBoolean
 slug: Web/API/SVGAnimatedBoolean
 page-type: web-api-interface
-tags:
-  - API
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG DOM
 browser-compat: api.SVGAnimatedBoolean
 ---
+
 {{APIRef("SVG")}}
 
 ## SVG animated boolean interface
@@ -32,7 +27,7 @@ The `SVGAnimatedBoolean` interface is used for attributes of type boolean which 
       <th scope="row">Properties</th>
       <td>
         <ul>
-          <li>readonly boolean <code>baseVal</code></li>
+          <li>boolean <code>baseVal</code></li>
           <li>readonly boolean <code>animVal</code></li>
         </ul>
       </td>
@@ -49,7 +44,7 @@ The `SVGAnimatedBoolean` interface is used for attributes of type boolean which 
   </tbody>
 </table>
 
-## Properties
+## Instance properties
 
 <table class="no-markdown">
   <thead>
@@ -61,14 +56,14 @@ The `SVGAnimatedBoolean` interface is used for attributes of type boolean which 
   </thead>
   <tbody>
     <tr>
-      <td><code>baseVal</code></td>
+      <td><code>{{domxref("SVGAnimatedBoolean.baseVal")}}</code></td>
       <td>boolean</td>
       <td>
         The base value of the given attribute before applying any animations.
       </td>
     </tr>
     <tr>
-      <td><code>animVal</code></td>
+      <td><code>{{domxref("SVGAnimatedBoolean.animVal")}}</code></td>
       <td>boolean</td>
       <td>
         If the given attribute or property is being animated, contains the
@@ -80,9 +75,13 @@ The `SVGAnimatedBoolean` interface is used for attributes of type boolean which 
   </tbody>
 </table>
 
-## Methods
+## Instance methods
 
 The `SVGAnimatedBoolean` interface do not provide any specific methods.
+
+## Specifications
+
+{{Specifications}}
 
 ## Browser compatibility
 

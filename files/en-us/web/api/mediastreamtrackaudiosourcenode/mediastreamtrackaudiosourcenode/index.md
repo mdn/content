@@ -1,24 +1,11 @@
 ---
-title: MediaStreamTrackAudioSourceNode()
+title: "MediaStreamTrackAudioSourceNode: MediaStreamTrackAudioSourceNode() constructor"
+short-title: MediaStreamTrackAudioSourceNode()
 slug: Web/API/MediaStreamTrackAudioSourceNode/MediaStreamTrackAudioSourceNode
 page-type: web-api-constructor
-tags:
-  - API
-  - Audio
-  - AudioSource
-  - Interface
-  - Media
-  - MediaStreamTrack
-  - MediaStreamTrackAudioSourceNode
-  - Node
-  - Reference
-  - Web Audio
-  - Web Audio API
-  - sound
-  - source
-  - track
 browser-compat: api.MediaStreamTrackAudioSourceNode.MediaStreamTrackAudioSourceNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 The [Web Audio API](/en-US/docs/Web/API/Web_Audio_API)'s **`MediaStreamTrackAudioSourceNode()`** constructor creates and returns a new {{domxref("MediaStreamTrackAudioSourceNode")}} object whose audio is taken from the {{domxref("MediaStreamTrack")}} specified in the given options object.
@@ -27,7 +14,7 @@ Another way to create a `MediaStreamTrackAudioSourceNode` is to call the {{domxr
 
 ## Syntax
 
-```js
+```js-nolint
 new MediaStreamTrackAudioSourceNode(context, options)
 ```
 
@@ -58,25 +45,27 @@ A new {{domxref("MediaStreamTrackAudioSourceNode")}} object representing the aud
 This example uses {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} to obtain access to the user's camera, then creates a new {{domxref("MediaStreamAudioSourceNode")}} from the first audio track provided by the device.
 
 ```js
-let audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+const audioCtx = new AudioContext();
 
 if (navigator.mediaDevices.getUserMedia) {
-  navigator.mediaDevices.getUserMedia (
-    {
+  navigator.mediaDevices
+    .getUserMedia({
       audio: true,
-      video: false
-    }).then(function(stream) {
-      let options = {
-        mediaStreamTrack: stream.getAudioTracks()[0]
-      }
+      video: false,
+    })
+    .then((stream) => {
+      const options = {
+        mediaStreamTrack: stream.getAudioTracks()[0],
+      };
 
-      let source = new MediaStreamTrackAudioSourceNode(audioCtx, options);
+      const source = new MediaStreamTrackAudioSourceNode(audioCtx, options);
       source.connect(audioCtx.destination);
-    }).catch(function(err) {
+    })
+    .catch((err) => {
       console.error(`The following gUM error occurred: ${err}`);
     });
 } else {
-  console.log('new getUserMedia not supported on your browser!');
+  console.log("new getUserMedia not supported on your browser!");
 }
 ```
 

@@ -1,45 +1,38 @@
 ---
 title: Array.of()
 slug: Web/JavaScript/Reference/Global_Objects/Array/of
-tags:
-  - Array
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Polyfill
+page-type: javascript-static-method
 browser-compat: javascript.builtins.Array.of
 ---
+
 {{JSRef}}
 
-The **`Array.of()`** method creates a new `Array`
+The **`Array.of()`** static method creates a new `Array`
 instance from a variable number of arguments, regardless of number or type of the
 arguments.
 
-The difference between **`Array.of()`** and the
-**`Array`** constructor is in the handling of integer arguments:
-**`Array.of(7)`** creates an array with a single element,
-`7`, whereas **`Array(7)`** creates an empty array
-with a `length` property of `7`. (That implies an array of `7` empty slots, not slots with actual {{jsxref("undefined")}} values.)
+{{InteractiveExample("JavaScript Demo: Array.of()", "shorter")}}
 
-```js
-Array.of(7); // [7]
-Array(7); // array of 7 empty slots
+```js interactive-example
+console.log(Array.of("foo", 2, "bar", true));
+// Expected output: Array ["foo", 2, "bar", true]
 
-Array.of(1, 2, 3); // [1, 2, 3]
-Array(1, 2, 3);    // [1, 2, 3]
+console.log(Array.of());
+// Expected output: Array []
 ```
 
 ## Syntax
 
-```js
-Array.of(element0)
-Array.of(element0, element1)
-Array.of(element0, element1, /* … ,*/ elementN)
+```js-nolint
+Array.of()
+Array.of(element1)
+Array.of(element1, element2)
+Array.of(element1, element2, /* …, */ elementN)
 ```
 
 ### Parameters
 
-- `elementN`
+- `element1`, …, `elementN`
   - : Elements used to create the array.
 
 ### Return value
@@ -48,22 +41,48 @@ A new {{jsxref("Array")}} instance.
 
 ## Description
 
-This function is part of the ECMAScript 2015 standard.
+The difference between `Array.of()` and the [`Array()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Array) constructor is in the handling of single arguments: `Array.of(7)` creates an array with a single element, `7`, whereas `Array(7)` creates an empty array with a `length` property of `7`. (That implies an array of 7 empty slots, not slots with actual {{jsxref("undefined")}} values.)
 
-For more information, see:
+```js
+Array.of(7); // [7]
+Array(7); // array of 7 empty slots
 
-- [`Array.of()`](https://gist.github.com/rwaldron/1074126)
-- [`Array.from()` proposal](https://gist.github.com/rwaldron/1074126)
-- [`Array.of()` polyfill](https://gist.github.com/rwaldron/3186576)
+Array.of(1, 2, 3); // [1, 2, 3]
+Array(1, 2, 3); // [1, 2, 3]
+```
+
+The `Array.of()` method is a generic factory method. For example, if a subclass of `Array` inherits the `of()` method, the inherited `of()` method will return new instances of the subclass instead of `Array` instances. In fact, the `this` value can be any constructor function that accepts a single argument representing the length of the new array, and the constructor will be called with the number of arguments passed to `of()`. The final `length` will be set again when all elements are assigned. If the `this` value is not a constructor function, the plain `Array` constructor is used instead.
 
 ## Examples
 
-### Using Array.of
+### Using Array.of()
 
 ```js
-Array.of(1);         // [1]
-Array.of(1, 2, 3);   // [1, 2, 3]
+Array.of(1); // [1]
+Array.of(1, 2, 3); // [1, 2, 3]
 Array.of(undefined); // [undefined]
+```
+
+### Calling of() on non-array constructors
+
+The `of()` method can be called on any constructor function that accepts a single argument representing the length of the new array.
+
+```js
+function NotArray(len) {
+  console.log("NotArray called with length", len);
+}
+
+console.log(Array.of.call(NotArray, 1, 2, 3));
+// NotArray called with length 3
+// NotArray { '0': 1, '1': 2, '2': 3, length: 3 }
+
+console.log(Array.of.call(Object)); // [Number: 0] { length: 0 }
+```
+
+When the `this` value is not a constructor, a plain `Array` object is returned.
+
+```js
+console.log(Array.of.call({}, 1)); // [ 1 ]
 ```
 
 ## Specifications
@@ -77,7 +96,8 @@ Array.of(undefined); // [undefined]
 ## See also
 
 - [Polyfill of `Array.of` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
-- [A polyfill](https://github.com/behnammodi/polyfill/blob/master/array.polyfill.js)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
+- {{jsxref("Array/Array", "Array()")}}
 - {{jsxref("Array.from()")}}
 - {{jsxref("TypedArray.of()")}}

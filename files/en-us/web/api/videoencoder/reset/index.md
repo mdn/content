@@ -1,22 +1,22 @@
 ---
-title: VideoEncoder.reset()
+title: "VideoEncoder: reset() method"
+short-title: reset()
 slug: Web/API/VideoEncoder/reset
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - reset
-  - VideoEncoder
 browser-compat: api.VideoEncoder.reset
 ---
-{{securecontext_header}}{{DefaultAPISidebar("WebCodecs API")}}
 
-The **`reset()`** method of the {{domxref("VideoEncoder")}} interface resets all states including configuration, control messages in the control message queue, and all pending callbacks.
+{{APIRef("WebCodecs API")}}{{SecureContext_Header}}{{AvailableInWorkers("window_and_dedicated")}}
+
+The **`reset()`** method of the {{domxref("VideoEncoder")}} interface synchronously cancels all pending encodes and callbacks, frees all underlying resources and sets the {{domxref("VideoEncoder.state", "state")}} to "unconfigured".
+After calling `reset()`, {{domxref("VideoEncoder.configure()", "configure()")}} must be called before resuming {{domxref("VideoEncoder.encode()", "encode()")}} calls.
+
+> [!NOTE]
+> To avoid discarding frames queued via {{domxref("VideoEncoder.encode()", "encode()")}}, {{domxref("VideoEncoder.flush()", "flush()")}} should be called and completed before calling `reset()`.
 
 ## Syntax
 
-```js
+```js-nolint
 reset()
 ```
 
@@ -27,6 +27,11 @@ None.
 ### Return value
 
 None ({{jsxref("undefined")}}).
+
+### Exceptions
+
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if the {{domxref("VideoEncoder.state","state")}} is `"closed"`.
 
 ## Examples
 

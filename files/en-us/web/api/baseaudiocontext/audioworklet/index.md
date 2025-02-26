@@ -1,19 +1,11 @@
 ---
-title: BaseAudioContext.audioWorklet
+title: "BaseAudioContext: audioWorklet property"
+short-title: audioWorklet
 slug: Web/API/BaseAudioContext/audioWorklet
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - AudioContext
-  - AudioWorklet
-  - BaseAudioContext
-  - Property
-  - Reference
-  - Web Audio API
-  - Worklet
 browser-compat: api.BaseAudioContext.audioWorklet
 ---
+
 {{ APIRef("Web Audio API") }}{{securecontext_header}}
 
 The `audioWorklet` read-only property of the

@@ -1,24 +1,16 @@
 ---
-title: scheduler
+title: "Window: scheduler property"
+short-title: scheduler
 slug: Web/API/Window/scheduler
 page-type: web-api-instance-property
-tags:
-  - Property
-  - Reference
-  - scheduler
-  - Window
-  - WorkerGlobalScope
-  - Experimental
 browser-compat: api.scheduler
 ---
-{{APIRef("Prioritized Task Scheduling API")}} {{SeeCompatTable}}
 
-The global read-only **`scheduler`** property is the entry point for using the [Prioritized Task Scheduling API](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API).
+{{APIRef("Prioritized Task Scheduling API")}}
 
-It is implemented by both [`Window`](/en-US/docs/Web/API/Window#scheduler) and [`WorkerGlobalScope`](/en-US/docs/Web/API/WorkerGlobalScope#scheduler).
-The existence of the property indicates that the API is supported in the current context, and can be accessed using `this.scheduler`.
+The **`scheduler`** read-only property of the {{domxref("Window")}} interface is the entry point for using the [Prioritized Task Scheduling API](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API).
 
-The object has a single instance method {{domxref('Scheduler.postTask()')}} that is used to post prioritized tasks for scheduling.
+It returns a {{domxref("Scheduler")}} object instance containing {{domxref('Scheduler.postTask', 'postTask()')}} and {{domxref('Scheduler.yield()', 'yield()')}} methods that can be used to schedule prioritized tasks.
 
 ## Value
 
@@ -31,21 +23,20 @@ It demonstrates how to check that the property exists and then posts a task that
 
 ```js
 // Check if the prioritized task API is supported
-if ('scheduler' in this) {
-
+if ("scheduler" in window) {
   // Callback function - "the task"
-  const myTask = () => 'Task 1: user-visible';
+  const myTask = () => "Task 1: user-visible";
 
   // Post task with default priority: 'user-visible' (no other options)
   // When the task resolves, Promise.then() logs the result.
-  scheduler
+  window.scheduler
     .postTask(myTask)
     // Handle resolved value
     .then((taskResult) => console.log(`${taskResult}`))
     // Handle error or abort
     .catch((error) => console.log(`Error: ${error}`));
 } else {
-  console.log('Feature: NOT Supported');
+  console.log("Feature: NOT Supported");
 }
 ```
 
@@ -63,4 +54,6 @@ For comprehensive example code showing to use the API see [Prioritized Task Sche
 
 - [Prioritized Task Scheduling API](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API)
 - {{domxref('Scheduler.postTask()')}}
+- {{domxref('Scheduler.yield()')}}
 - {{domxref('TaskController')}}
+- {{domxref("WorkerGlobalScope.scheduler")}}

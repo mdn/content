@@ -1,21 +1,16 @@
 ---
-title: PresentationConnection.url
+title: "PresentationConnection: url property"
+short-title: url
 slug: Web/API/PresentationConnection/url
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - Presentation
-  - Presentation API
-  - PresentationConnection
-  - Property
-  - Reference
-  - URL
+status:
+  - experimental
 browser-compat: api.PresentationConnection.url
 ---
-{{SeeCompatTable}}{{DefaultAPISidebar("Presentation API")}}
 
-The **`url`** readonly property of the
+{{SeeCompatTable}}{{APIRef("Presentation API")}}{{SecureContext_Header}}
+
+The **`url`** read-only property of the
 {{domxref("PresentationConnection")}} interface returns the URL used to create or
 reconnect to the presentation.
 

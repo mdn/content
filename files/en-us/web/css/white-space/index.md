@@ -1,38 +1,37 @@
 ---
 title: white-space
 slug: Web/CSS/white-space
-tags:
-  - CSS
-  - CSS Property
-  - CSS Text
-  - Reference
-  - recipe:css-property
-  - white-space
+page-type: css-property
 browser-compat: css.properties.white-space
 ---
+
 {{CSSRef}}
 
-The **`white-space`** CSS property sets how {{Glossary("whitespace", "white space")}} inside an element is handled.
+The **`white-space`** [CSS](/en-US/docs/Web/CSS) property sets how {{Glossary("whitespace", "white space")}} inside an element is handled.
 
 {{EmbedInteractiveExample("pages/css/white-space.html")}}
 
 The property specifies two things:
 
 - Whether and how white space is [collapsed](#collapsing_of_white_space).
-- Whether lines may wrap at soft-wrap opportunities.
+- Whether and how lines wrap.
 
-> **Note:** To make words break _within themselves_, use {{CSSxRef("overflow-wrap")}}, {{CSSxRef("word-break")}}, or {{CSSxRef("hyphens")}} instead.
+> [!NOTE]
+> To make words break _within themselves_, use {{CSSxRef("overflow-wrap")}}, {{CSSxRef("word-break")}}, or {{CSSxRef("hyphens")}} instead.
 
 ## Syntax
 
 ```css
-/* Keyword values */
+/* Single keyword values */
 white-space: normal;
-white-space: nowrap;
 white-space: pre;
 white-space: pre-wrap;
 white-space: pre-line;
-white-space: break-spaces;
+
+/* white-space-collapse and text-wrap-mode shorthand values */
+white-space: wrap;
+white-space: collapse;
+white-space: preserve nowrap;
 
 /* Global values */
 white-space: inherit;
@@ -42,29 +41,20 @@ white-space: revert-layer;
 white-space: unset;
 ```
 
-The `white-space` property is specified as a single keyword chosen from the list of values below.
-
 ### Values
 
+The `white-space` property values can be specified as a single keyword chosen from the list of values below, or two values representing shorthand for the {{CSSxRef("white-space-collapse")}} and {{cssxref("text-wrap-mode")}} properties.
+
 - `normal`
-  - : Sequences of white space are [collapsed](#collapsing_of_white_space). Newline characters in the source are handled the same as other white space. Lines are broken as necessary to fill line boxes.
-- `nowrap`
-  - : [Collapses](#collapsing_of_white_space) white space as for `normal`, but suppresses line breaks (text wrapping) within the source.
+  - : Sequences of white space are [collapsed](#collapsing_of_white_space). Newline characters in the source are handled the same as other white spaces. Lines are broken as necessary to fill line boxes.
 - `pre`
   - : Sequences of white space are preserved. Lines are only broken at newline characters in the source and at {{HTMLElement("br")}} elements.
 - `pre-wrap`
   - : Sequences of white space are preserved. Lines are broken at newline characters, at {{HTMLElement("br")}}, and as necessary to fill line boxes.
 - `pre-line`
   - : Sequences of white space are [collapsed](#collapsing_of_white_space). Lines are broken at newline characters, at {{HTMLElement("br")}}, and as necessary to fill line boxes.
-- `break-spaces`
 
-  - : The behavior is identical to that of `pre-wrap`, except that:
-
-    - Any sequence of preserved white space always takes up space, including at the end of the line.
-    - A line breaking opportunity exists after every preserved white space character, including between white space characters.
-    - Such preserved spaces take up space and do not hang, and thus affect the box's intrinsic sizes (min-content size and max-content size).
-
-The following table summarizes the behavior of the various `white-space` values:
+The following table summarizes the behavior of the various `white-space` keyword values:
 
 <table class="standard-table">
   <thead>
@@ -83,14 +73,6 @@ The following table summarizes the behavior of the various `white-space` values:
       <td>Collapse</td>
       <td>Collapse</td>
       <td>Wrap</td>
-      <td>Remove</td>
-      <td>Hang</td>
-    </tr>
-    <tr>
-      <th><code>nowrap</code></th>
-      <td>Collapse</td>
-      <td>Collapse</td>
-      <td>No wrap</td>
       <td>Remove</td>
       <td>Hang</td>
     </tr>
@@ -118,18 +100,13 @@ The following table summarizes the behavior of the various `white-space` values:
       <td>Remove</td>
       <td>Hang</td>
     </tr>
-    <tr>
-      <th><code>break-spaces</code></th>
-      <td>Preserve</td>
-      <td>Preserve</td>
-      <td>Wrap</td>
-      <td>Wrap</td>
-      <td>Wrap</td>
-    </tr>
   </tbody>
 </table>
 
-> **Note:** There is a distinction made between **spaces** and **other space separators**. These are defined as follows:
+A tab defaults to 8 spaces and can be configured using the [`tab-size`](/en-US/docs/Web/CSS/tab-size) property. In the case of `normal`, `nowrap`, and `pre-line` values, every tab is converted to a space (U+0020) character.
+
+> [!NOTE]
+> There is a distinction made between **spaces** and **other space separators**. These are defined as follows:
 >
 > - spaces
 >   - : Spaces (U+0020), tabs (U+0009), and segment breaks (such as newlines).
@@ -140,7 +117,7 @@ The following table summarizes the behavior of the various `white-space` values:
 
 ## Collapsing of white space
 
-The CSS Text specification contains a [Collapsing and Transformation](https://drafts.csswg.org/css-text-3/#white-space-phase-1) section that precisely defines what "white space is collapsed" means, including an example with an illustration. Usually, it means reducing sequences of multiple white-space characters down to a single space character — though in some cases it means reducing them to no character (the empty string).
+The {{cssxref("white-space-collapse")}} property page explains the [browser algorithm for collapsing white space](/en-US/docs/Web/CSS/white-space-collapse#collapsing_of_white_space).
 
 ## Formal definition
 
@@ -170,8 +147,6 @@ pre {
 
 ### In action
 
-#### HTML
-
 ```html hidden
 <div id="css-code" class="box">
   p { white-space:
@@ -182,60 +157,127 @@ pre {
     <option>pre-wrap</option>
     <option>pre-line</option>
     <option>break-spaces</option>
-  </select> }
+  </select>
+  }
 </div>
 <div id="results" class="box">
-  <p>    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-
-    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-
-    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-
-    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </p>
 </div>
 ```
 
 ```css hidden
 .box {
-  width: 300px;
+  width: 350px;
   padding: 16px;
-  border-radius: 10px;
 }
 
 #css-code {
-  background-color: rgb(220, 220, 220);
+  background-color: rgb(220 220 220);
   font-size: 16px;
   font-family: monospace;
 }
 
 #css-code select {
   font-family: inherit;
+  width: 100px;
 }
 
 #results {
-  background-color: rgb(230, 230, 230);
+  background-color: rgb(230 230 230);
   overflow-x: scroll;
-  height: 400px;
   white-space: normal;
   font-size: 14px;
 }
 ```
 
 ```js hidden
-var select  = document.querySelector("#css-code select");
-var results = document.querySelector("#results p");
-select.addEventListener("change", function(e) {
-  results.setAttribute("style", "white-space: "+e.target.value);
-})
+const select = document.querySelector("#css-code select");
+const results = document.querySelector("#results p");
+select.addEventListener("change", (e) => {
+  results.style.setProperty("white-space", e.target.value);
+});
 ```
 
+{{EmbedLiveSample("In_action", "100%", 450)}}
+
+### Controlling line wrapping in tables
+
+#### HTML
+
 ```html
-<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<table>
+  <tr>
+    <td></td>
+    <td>Very long content that splits</td>
+    <td class="nw">Very long content that don't split</td>
+  </tr>
+  <tr>
+    <td class="nw">white-space:</td>
+    <td>normal</td>
+    <td>nowrap</td>
+  </tr>
+</table>
+```
+
+#### CSS
+
+```css
+table {
+  border-collapse: collapse;
+  border: solid black 1px;
+  width: 250px;
+  height: 150px;
+}
+td {
+  border: solid 1px black;
+  text-align: center;
+}
+.nw {
+  white-space: nowrap;
+}
 ```
 
 #### Result
 
-{{EmbedLiveSample("In_action", "100%", 500)}}
+{{EmbedLiveSample('Controlling line wrapping in tables', "100%", "100%")}}
+
+### Multiple lines in SVG text element
+
+The `white-space` CSS property can be used to create multiple lines in a {{SVGElement("text")}} element, which does not wrap by default.
+
+#### HTML
+
+The text inside the `<text>` element needs to be split into multiple lines for the new lines to be detected. After the first line the rest need to have their whitespace removed.
+
+```html-nolint
+<svg viewBox="0 0 320 150">
+  <text y="20" x="10">Here is an English paragraph
+that is broken into multiple lines
+in the source code so that it can
+be more easily read and edited
+in a text editor.
+  </text>
+</svg>
+```
+
+#### CSS
+
+```css
+text {
+  white-space: break-spaces;
+}
+```
+
+#### Result
+
+{{EmbedLiveSample("multiple_lines_in_svg_text_element", "100%", 350)}}
 
 ## Specifications
 
@@ -248,3 +290,4 @@ select.addEventListener("change", function(e) {
 ## See also
 
 - Properties that define how words break _within themselves_: {{CSSxRef("overflow-wrap")}}, {{CSSxRef("word-break")}}, {{CSSxRef("hyphens")}}
+- [`tab-size`](/en-US/docs/Web/CSS/tab-size)

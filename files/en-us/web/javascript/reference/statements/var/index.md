@@ -1,55 +1,58 @@
 ---
 title: var
 slug: Web/JavaScript/Reference/Statements/var
-tags:
-  - JavaScript
-  - Language feature
-  - Reference
-  - Statement
+page-type: javascript-statement
 browser-compat: javascript.statements.var
 ---
+
 {{jsSidebar("Statements")}}
 
-The **`var` statement** declares a function-scoped or
-globally-scoped variable, optionally initializing it to a value.
+The **`var`** statement declares function-scoped or globally-scoped variables, optionally initializing each to a value.
 
-{{EmbedInteractiveExample("pages/js/statement-var.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - Var")}}
+
+```js interactive-example
+var x = 1;
+
+if (x === 1) {
+  var x = 2;
+
+  console.log(x);
+  // Expected output: 2
+}
+
+console.log(x);
+// Expected output: 2
+```
 
 ## Syntax
 
-```js
-var varname1 [= value1] [, varname2 [= value2] ... [, varnameN [= valueN]]];
+```js-nolint
+var name1;
+var name1 = value1;
+var name1 = value1, name2 = value2;
+var name1, name2 = value2;
+var name1 = value1, name2, /* …, */ nameN = valueN;
 ```
 
-- `varnameN`
-  - : Variable name. It can be any legal identifier.
+- `nameN`
+  - : The name of the variable to declare. Each must be a legal JavaScript [identifier](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#identifiers) or a [destructuring binding pattern](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment).
 - `valueN` {{optional_inline}}
-  - : Initial value of the variable. It can be any legal expression. Default value is
-    `undefined`.
-
-Alternatively, the [Destructuring Assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
-syntax can also be used to declare variables.
-
-```js
-var { bar } = foo; // where foo = { bar:10, baz:12 };
-/* This creates a variable with the name 'bar', which has a value of 10 */
-```
+  - : Initial value of the variable. It can be any legal expression. Default value is `undefined`.
 
 ## Description
 
-`var` declarations, wherever they occur, are processed before any code is
-executed. This is called {{Glossary("Hoisting", "hoisting")}} and is
-discussed further below.
+The scope of a variable declared with `var` is one of the following curly-brace-enclosed syntaxes that most closely contains the `var` statement:
 
-The scope of a variable declared with `var` is its current _execution
-context and closures thereof_, which is either the enclosing function and
-functions declared within it, or, for variables declared outside any function, global.
-Duplicate variable declarations using `var` will not trigger an error, even
-in strict mode, and the variable will not lose its value, unless another assignment is
-performed.
+- Function body
+- [Static initialization block](/en-US/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks)
+
+Or if none of the above applies:
+
+- The current [module](/en-US/docs/Web/JavaScript/Guide/Modules), for code running in module mode
+- The global scope, for code running in script mode.
 
 ```js
-'use strict';
 function foo() {
   var x = 1;
   function bar() {
@@ -59,123 +62,67 @@ function foo() {
   }
   bar();
   console.log(x); // 1 (`x` is in scope)
-  console.log(y); // ReferenceError in strict mode, `y` is scoped to `bar`
+  console.log(y); // ReferenceError, `y` is scoped to `bar`
 }
 
 foo();
 ```
 
-Variables declared using `var` are created before any code is executed in a
-process known as hoisting. Their initial value is `undefined`.
+Importantly, other block constructs, including [block statements](/en-US/docs/Web/JavaScript/Reference/Statements/block), {{jsxref("Statements/try...catch", "try...catch")}}, {{jsxref("Statements/switch", "switch")}}, headers of [one of the `for` statements](/en-US/docs/Web/JavaScript/Reference/Statements#iterations), do not create scopes for `var`, and variables declared with `var` inside such a block can continue to be referenced outside the block.
 
 ```js
-'use strict';
-console.log(x);                // undefined (note: not ReferenceError)
-console.log('still going...'); // still going...
-var x = 1;
-console.log(x);                // 1
-console.log('still going...'); // still going...
+for (var a of [1, 2, 3]);
+console.log(a); // 3
 ```
 
-In the global context, a variable declared using `var` is added as a
-non-configurable property of the global object. This means its property descriptor
-cannot be changed and it cannot be deleted using {{JSxRef("Operators/delete", "delete")}}. The corresponding
-name is also added to a list on the internal `[[VarNames]]` slot on the
-[global environment record](https://tc39.es/ecma262/#sec-global-environment-records)
-(which forms part of the global lexical environment). The list
-of names in `[[VarNames]]` enables the runtime to distinguish between global
-variables and straightforward properties on the global object.
+In a script, a variable declared using `var` is added as a non-configurable property of the global object. This means its property descriptor cannot be changed and it cannot be deleted using {{jsxref("Operators/delete", "delete")}}. JavaScript has automatic memory management, and it would make no sense to be able to use the `delete` operator on a global variable.
 
-The property created on the global object for global variables, is set to be
-non-configurable because the identifier is to be treated as a variable, rather than a
-straightforward property of the global object. JavaScript has automatic memory
-management, and it would make no sense to be able to use the `delete`
-operator on a global variable.
-
-```js
-'use strict';
+```js-nolint example-bad
+"use strict";
 var x = 1;
-Object.hasOwn(globalThis, 'x'); // true
+Object.hasOwn(globalThis, "x"); // true
 delete globalThis.x; // TypeError in strict mode. Fails silently otherwise.
-delete x;  // SyntaxError in strict mode. Fails silently otherwise.
+delete x; // SyntaxError in strict mode. Fails silently otherwise.
 ```
 
-Note that in both NodeJS [CommonJS](https://www.commonjs.org/) modules and
-native [ECMAScript modules](/en-US/docs/Web/JavaScript/Guide/Modules),
-top-level variable declarations are scoped to the module, and are not, therefore added
-as properties to the global object.
+In both NodeJS [CommonJS](https://wiki.commonjs.org/wiki/CommonJS) modules and native [ECMAScript modules](/en-US/docs/Web/JavaScript/Guide/Modules), top-level variable declarations are scoped to the module, and are not added as properties to the global object.
 
-### Unqualified identifier assignments
+The list that follows the `var` keyword is called a _{{Glossary("binding")}} list_ and is separated by commas, where the commas are _not_ [comma operators](/en-US/docs/Web/JavaScript/Reference/Operators/Comma_operator) and the `=` signs are _not_ [assignment operators](/en-US/docs/Web/JavaScript/Reference/Operators/Assignment). Initializers of later variables can refer to earlier variables in the list and get the initialized value.
 
-The global object sits at the top of the scope chain. When attempting to resolve a name
-to a value, the scope chain is searched. This means that properties on the global object
-are conveniently visible from every scope, without having to qualify the names with
-`globalThis.` or `window.` or `global.`.
+### Hoisting
 
-Because the global object has a `String` property (`Object.hasOwn(globalThis, 'String')`), you can use the following code:
+`var` declarations, wherever they occur in a script, are processed before any code within the script is executed. Declaring a variable anywhere in the code is equivalent to declaring it at the top. This also means that a variable can appear to be used before it's declared. This behavior is called [_hoisting_](/en-US/docs/Glossary/Hoisting), as it appears that the variable declaration is moved to the top of the function, static initialization block, or script source in which it occurs.
 
-```js
-function foo() {
-  String('s') // Note the function `String` is implicitly visible
-}
-```
-
-So the global object will ultimately be searched for unqualified identifiers. You don't
-have to type `globalThis.String`, you can just type the unqualified
-`String`. The corollary, in non-strict mode, is that assignment to
-unqualified identifiers will, if there is no variable of the same name declared in the
-scope chain, assume you want to create a property with that name on the global object.
-
-```js
-foo = 'f' // In non-strict mode, assumes you want to create a property named `foo` on the global object
-Object.hasOwn(globalThis, 'foo') // true
-```
-
-In ECMAScript 5, this behavior was changed for [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode).
-Assignment to an unqualified identifier in strict mode will result in a
-`ReferenceError`, to avoid the accidental creation of properties on the
-global object.
-
-Note that the implication of the above, is that, contrary to popular misinformation,
-JavaScript does not have implicit or undeclared variables, it merely has a syntax that
-looks like it does.
-
-### var hoisting
-
-Because `var` declarations are processed before any
-code is executed, declaring a variable anywhere in the code is equivalent to declaring
-it at the top. This also means that a variable can appear to be used before it's
-declared. This behavior is called "_hoisting_", as it appears that the variable
-declaration is moved to the top of the function or global code.
+> **Note:** `var` declarations are only hoisted to the top of the current script. If you have two `<script>` elements within one HTML, the first script cannot access variables declared by the second before the second script has been processed and executed.
 
 ```js
 bla = 2;
 var bla;
+```
 
-// ...is implicitly understood as:
+This is implicitly understood as:
 
+```js
 var bla;
 bla = 2;
 ```
 
-For that reason, it is recommended to always declare variables at the top of their
-scope (the top of global code and the top of function code) so it's clear which
-variables are function scoped (local) and which are resolved on the scope chain.
+For that reason, it is recommended to always declare variables at the top of their scope (the top of global code and the top of function code) so it's clear which variables are scoped to the current function.
 
-It's important to point out that only a variable's declaration is hoisted,
-not its initialization. The initialization happens only when the assignment
-statement is reached. Until then the variable remains `undefined` (but declared):
+Only a variable's declaration is hoisted, not its initialization. The initialization happens only when the assignment statement is reached. Until then the variable remains `undefined` (but declared):
 
 ```js
-function do_something() {
+function doSomething() {
   console.log(bar); // undefined
   var bar = 111;
   console.log(bar); // 111
 }
+```
 
-// ...is implicitly understood as:
+This is implicitly understood as:
 
-function do_something() {
+```js
+function doSomething() {
   var bar;
   console.log(bar); // undefined
   bar = 111;
@@ -183,42 +130,110 @@ function do_something() {
 }
 ```
 
+### Redeclarations
+
+Duplicate variable declarations using `var` will not trigger an error, even in strict mode, and the variable will not lose its value, unless the declaration has an initializer.
+
+```js
+var a = 1;
+var a = 2;
+console.log(a); // 2
+var a;
+console.log(a); // 2; not undefined
+```
+
+`var` declarations can also be in the same scope as a `function` declaration. In this case, the `var` declaration's initializer always overrides the function's value, regardless of their relative position. This is because function declarations are hoisted before any initializer gets evaluated, so the initializer comes later and overrides the value.
+
+```js
+var a = 1;
+function a() {}
+console.log(a); // 1
+```
+
+`var` declarations cannot be in the same scope as a {{jsxref("Statements/let", "let")}}, {{jsxref("Statements/const", "const")}}, {{jsxref("Statements/class", "class")}}, or {{jsxref("Statements/import", "import")}} declaration.
+
+```js-nolint example-bad
+var a = 1;
+let a = 2; // SyntaxError: Identifier 'a' has already been declared
+```
+
+Because `var` declarations are not scoped to blocks, this also applies to the following case:
+
+```js-nolint example-bad
+let a = 1;
+{
+  var a = 1; // SyntaxError: Identifier 'a' has already been declared
+}
+```
+
+It does not apply to the following case, where `let` is in a child scope of `var`, not the same scope:
+
+```js example-good
+var a = 1;
+{
+  let a = 2;
+}
+```
+
+A `var` declaration within a function's body can have the same name as a parameter.
+
+```js
+function foo(a) {
+  var a = 1;
+  console.log(a);
+}
+
+foo(2); // Logs 1
+```
+
+A `var` declaration within a `catch` block can have the same name as the `catch`-bound identifier, but only if the `catch` binding is a simple identifier, not a destructuring pattern. This is a [deprecated syntax](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#statements) and you should not rely on it. In this case, the declaration is hoisted to outside the `catch` block, but any value assigned within the `catch` block is not visible outside.
+
+```js-nolint example-bad
+try {
+  throw 1;
+} catch (e) {
+  var e = 2; // Works
+}
+console.log(e); // undefined
+```
+
 ## Examples
 
 ### Declaring and initializing two variables
 
 ```js
-var a = 0, b = 0;
+var a = 0,
+  b = 0;
 ```
 
 ### Assigning two variables with single string value
 
 ```js
-var a = 'A';
+var a = "A";
 var b = a;
+```
 
-// ...is equivalent to:
+This is equivalent to:
 
-var a, b = a = 'A';
+```js-nolint
+var a, b = a = "A";
 ```
 
 Be mindful of the order:
 
 ```js
-var x = y, y = 'A';
-console.log(x + y); // undefinedA
+var x = y,
+  y = "A";
+console.log(x, y); // undefined A
 ```
 
-Here, `x` and `y` are declared before any code is executed, but
-the assignments occur later. At the time "`x = y`" is evaluated,
-`y` exists so no `ReferenceError` is thrown and its value is
-`undefined`. So, `x` is assigned the undefined value. Then,
-`y` is assigned the value `'A'`. Consequently, after the first
-line, `x === undefined && y === 'A'`, hence the result.
+Here, `x` and `y` are declared before any code is executed, but the assignments occur later. At the time `x = y` is evaluated, `y` exists so no `ReferenceError` is thrown and its value is `undefined`. So, `x` is assigned the undefined value. Then, `y` is assigned the value `"A"`.
 
 ### Initialization of several variables
 
-```js
+Be careful of the `var x = y = 1` syntax — `y` is not actually declared as a variable, so `y = 1` is an [unqualified identifier assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Assignment#unqualified_identifier_assignment), which creates a global variable in non-strict mode.
+
+```js-nolint
 var x = 0;
 function f() {
   var x = y = 1; // Declares x locally; declares y globally.
@@ -234,12 +249,12 @@ console.log(x, y); // 0 1
 
 The same example as above but with a strict mode:
 
-```js
-'use strict';
+```js-nolint
+"use strict";
 
 var x = 0;
 function f() {
-  var x = y = 1; // Throws a ReferenceError in strict mode.
+  var x = y = 1; // ReferenceError: y is not defined
 }
 f();
 
@@ -248,8 +263,7 @@ console.log(x, y);
 
 ### Implicit globals and outer function scope
 
-Variables that appear to be implicit globals may be references to variables in an outer
-function scope:
+Variables that appear to be implicit globals may be references to variables in an outer function scope:
 
 ```js
 var x = 0; // Declares x within file scope, then assigns it a value of 0.
@@ -265,7 +279,7 @@ function a() {
     x = 3; // Assigns 3 to existing file scoped x.
     y = 4; // Assigns 4 to existing outer y.
     z = 5; // Creates a new global variable z, and assigns it a value of 5.
-           // (Throws a ReferenceError in strict mode.)
+    // (Throws a ReferenceError in strict mode.)
   }
 
   b(); // Creates z as a global variable.
@@ -273,9 +287,21 @@ function a() {
 }
 
 a(); // Also calls b.
-console.log(x, z);     // 3 5
+console.log(x, z); // 3 5
 console.log(typeof y); // "undefined", as y is local to function a
 ```
+
+### Declaration with destructuring
+
+The left-hand side of each `=` can also be a binding pattern. This allows creating multiple variables at once.
+
+```js
+const result = /(a+)(b+)(c+)/.exec("aaabcc");
+var [, a, b, c] = result;
+console.log(a, b, c); // "aaa" "b" "cc"
+```
+
+For more information, see [Destructuring assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment).
 
 ## Specifications
 

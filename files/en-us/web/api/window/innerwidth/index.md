@@ -1,29 +1,16 @@
 ---
-title: Window.innerWidth
+title: "Window: innerWidth property"
+short-title: innerWidth
 slug: Web/API/Window/innerWidth
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM View
-  - HTML DOM
-  - Layout
-  - Property
-  - Reference
-  - Window
-  - innerWidth
-  - width
 browser-compat: api.Window.innerWidth
 ---
+
 {{APIRef}}
 
-The read-only {{domxref("Window")}} property
-**`innerWidth`** returns the interior width of the window in
-pixels. This includes the width of the vertical scroll bar, if one is present.
+The read-only {{domxref("Window")}} property **`innerWidth`** returns the interior width of the window in pixels (that is, the width of the window's {{Glossary("layout viewport")}}). That includes the width of the vertical scroll bar, if one is present.
 
-More precisely, `innerWidth` returns the width of the window's
-{{Glossary("layout viewport")}}. The interior height of the window—the height of the
-layout viewport—can be obtained from the {{domxref("Window.innerHeight",
-  "innerHeight")}} property.
+Similarly, the interior height of the window (that is, the height of the layout viewport) can be obtained using the {{domxref("Window.innerHeight", "innerHeight")}} property. That measurement also accounts for the height of the horizontal scroll bar, if it is visible.
 
 ## Value
 
@@ -75,12 +62,13 @@ console.log(top.innerWidth);
 const heightOutput = document.querySelector("#height");
 const widthOutput = document.querySelector("#width");
 
-function resizeListener() {
+function updateSize() {
   heightOutput.textContent = window.innerHeight;
   widthOutput.textContent = window.innerWidth;
 }
 
-window.addEventListener("resize", resizeListener);
+updateSize();
+window.addEventListener("resize", updateSize);
 ```
 
 ### Result

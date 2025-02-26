@@ -1,23 +1,19 @@
 ---
-title: WebGLRenderingContext.finish()
+title: "WebGLRenderingContext: finish() method"
+short-title: finish()
 slug: Web/API/WebGLRenderingContext/finish
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.finish
 ---
-{{APIRef("WebGL")}}
+
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGLRenderingContext.finish()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) blocks execution until all
 previously called commands are finished.
 
 ## Syntax
 
-```js
+```js-nolint
 finish()
 ```
 

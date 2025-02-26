@@ -1,14 +1,10 @@
 ---
 title: border-left-width
 slug: Web/CSS/border-left-width
-tags:
-  - CSS
-  - CSS Borders
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.border-left-width
 ---
+
 {{CSSRef}}
 
 The **`border-left-width`** [CSS](/en-US/docs/Web/CSS) property sets the width of the left border of an element.
@@ -46,7 +42,8 @@ border-left-width: unset;
     - `medium`
     - `thick`
 
-> **Note:** Because the specification doesn't define the exact thickness denoted by each keyword, the precise result when using one of them is implementation-specific. Nevertheless, they always follow the pattern `thin ≤ medium ≤ thick`, and the values are constant within a single document.
+> [!NOTE]
+> Because the specification doesn't define the exact thickness denoted by each keyword, the precise result when using one of them is implementation-specific. Nevertheless, they always follow the pattern `thin ≤ medium ≤ thick`, and the values are constant within a single document.
 
 ## Formal definition
 

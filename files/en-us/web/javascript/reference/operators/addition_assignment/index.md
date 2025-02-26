@@ -1,56 +1,72 @@
 ---
 title: Addition assignment (+=)
 slug: Web/JavaScript/Reference/Operators/Addition_assignment
-tags:
-  - Assignment operator
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
+page-type: javascript-operator
 browser-compat: javascript.operators.addition_assignment
 ---
+
 {{jsSidebar("Operators")}}
 
-The addition assignment operator (`+=`) adds the value of the right operand
-to a variable and assigns the result to the variable. The types of the two operands
-determine the behavior of the addition assignment operator. Addition or concatenation is
-possible.
+The **addition assignment (`+=`)** operator performs [addition](/en-US/docs/Web/JavaScript/Reference/Operators/Addition) (which is either numeric addition or string concatenation) on the two operands and assigns the result to the left operand.
 
-{{EmbedInteractiveExample("pages/js/expressions-addition-assignment.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Addition assignment operator")}}
+
+```js interactive-example
+let a = 2;
+let b = "hello";
+
+console.log((a += 3)); // Addition
+// Expected output: 5
+
+console.log((b += " world")); // Concatenation
+// Expected output: "hello world"
+```
 
 ## Syntax
 
-```js
-x += y // x = x + y
+```js-nolint
+x += y
 ```
+
+## Description
+
+`x += y` is equivalent to `x = x + y`, except that the expression `x` is only evaluated once.
 
 ## Examples
 
-### Using addition assignment
+### Addition assignment using numbers
 
 ```js
-// Assuming the following variables
-//  foo = 'foo'
-//  bar = 5
-//  baz = true
+let bar = 5;
+bar += 2; // 7
+```
 
-// Number + Number -> addition
-bar += 2 // 7
+Other non-string, non-BigInt values are coerced to numbers:
 
-// Boolean + Number -> addition
-baz += 1 // 2
+```js
+let baz = true;
+baz += 1; // 2
+baz += false; // 2
+```
 
-// Boolean + Boolean -> addition
-baz += false // 1
+### Addition assignment using BigInts
 
-// Number + String -> concatenation
-bar += 'foo' // "5foo"
+```js
+let x = 1n;
+x += 2n; // 3n
 
-// String + Boolean -> concatenation
-foo += false // "foofalse"
+x += 1; // TypeError: Cannot mix BigInt and other types, use explicit conversions
+```
 
-// String + String -> concatenation
-foo += 'bar' // "foobar"
+### Addition assignment using strings
+
+```js
+let foo = "foo";
+foo += false; // "foofalse"
+foo += "bar"; // "foofalsebar"
+
+let bar = 5;
+bar += "foo"; // "5foo"
 ```
 
 ## Specifications
@@ -63,5 +79,5 @@ foo += 'bar' // "foobar"
 
 ## See also
 
-- [Assignment operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#assignment)
-- [Addition operator](/en-US/docs/Web/JavaScript/Reference/Operators/Addition)
+- [Assignment operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#assignment_operators)
+- [Addition (`+`)](/en-US/docs/Web/JavaScript/Reference/Operators/Addition)

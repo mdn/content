@@ -1,15 +1,14 @@
 ---
 title: Example
 slug: Web/SVG/Namespaces_Crash_Course/Example
-tags:
-  - SVG
-  - XML
+page-type: guide
 ---
-In this example, we use [XHTML](/en-US/docs/Glossary/XHTML), [SVG](/en-US/docs/Web/SVG), [JavaScript](/en-US/docs/Web/JavaScript), and the [DOM](/en-US/docs/Web/API/Document_Object_Model) to animate a swarm of "motes". These motes are governed by two simple principles. First, each mote tries to move towards the mouse cursor, and second each mote tries to move away from the average mote position. Combined, we get this very natural-looking behavior.
 
-This is done completely in W3C Standards–XHTML, SVG, and JavaScript–no Flash or any vendor-specific extensions. This example should work in Firefox 1.5 and above.
+{{SVGRef}}
 
-[View the example](https://media.prod.mdn.mozit.cloud/samples/svg/swarm-of-motes.xhtml)
+In this example, we use [XHTML](/en-US/docs/Glossary/XHTML), [SVG](/en-US/docs/Web/SVG), [JavaScript](/en-US/docs/Web/JavaScript), and the [DOM](/en-US/docs/Web/API/Document_Object_Model) to animate a swarm of "motes". These motes are governed by two basic principles. First, each mote tries to move towards the mouse cursor, and second each mote tries to move away from the average mote position. Combined, we get this very natural-looking behavior.
+
+[View the example](https://mdn.dev/archives/media/samples/svg/swarm-of-motes.xhtml). The linked example was written with 2006 best practices. The example below has been updated to modern JavaScript best practices. Both work.
 
 ```xml
 <?xml version='1.0'?>
@@ -17,7 +16,7 @@ This is done completely in W3C Standards–XHTML, SVG, and JavaScript–no Flash
   xmlns:svg="http://www.w3.org/2000/svg">
   <head>
   <title>A swarm of motes</title>
-  <style type='text/css'>
+  <style>
   <![CDATA[
     label, input
     {
@@ -45,29 +44,22 @@ This is done completely in W3C Standards–XHTML, SVG, and JavaScript–no Flash
 cy='150' r='7' fill='#0000ff' fill-opacity='0.5'/>
     </svg:svg>
 
-    <p>A swarm of motes, governed by two simple principles.
+    <p>A swarm of motes, governed by two basic principles.
     First, each mote tries to move towards the cursor, and
     second each mote tries to move away from the average
-    mote position.  Combined, we get this very natural
+    mote position. Combined, we get this very natural
     looking behavior.
     </p>
 
-    <p>
-    This is done completely in W3C Standards–XHTML,
-    SVG and JavaScript–no flash or any vendor specific
-    extensions.   Currently, this will work in Mozilla Firefox
-    version 1.5 and above.
-    </p>
-
     <div>
-    (C) 2006 <a id='emailme' href='#'>Nick Johnson</a>
+    (C) 2006 <a id='email-me' href='#'>Nick Johnson</a>
 
     <script type='text/javascript'>
     <![CDATA[
       // foil spam bots
-      var email = '@riovia.net';
+      let email = '@riovia.net';
       email ='nick' + email;
-      document.getElementById('emailme').href = 'mailto:'+email;
+      document.getElementById('email-me').href = 'mailto:'+email;
     ]]>
     </script>
     This software is free for you to use in any way whatsoever,
@@ -98,86 +90,79 @@ cy='150' r='7' fill='#0000ff' fill-opacity='0.5'/>
   <![CDATA[
 
     // Array of motes
-    var motes;
+    let motes;
 
     // Get the display element.
-    function Display()
-    {
+    function Display() {
       return document.getElementById('display');
     }
 
     // Determine dimensions of the display element.
     // Return this as a 2-tuple (x,y) in an array
-    function Dimensions()
-    {
+    function Dimensions() {
       // Our Rendering Element
-      var display = Display();
-      var width = parseInt( display.getAttributeNS(null,'width') );
-      var height = parseInt( display.getAttributeNS(null,'height') );
+      const display = Display();
+      const width = parseInt(display.getAttributeNS(null, 'width'));
+      const height = parseInt(display.getAttributeNS(null, 'height'));
 
-      return [width,height];
+      return [width, height];
     }
 
     // This is called by mouse move events
-    var mouse_x = 200, mouse_y = 150;
-    function OnMouseMove(evt)
-    {
+    const mouse_x = 200;
+    const mouse_y = 150;
+    function OnMouseMove(evt) {
       mouse_x = evt.clientX;
       mouse_y = evt.clientY;
 
-      var widget = document.getElementById('cursor');
+      const widget = document.getElementById('cursor');
       widget.setAttributeNS(null,'cx',mouse_x);
       widget.setAttributeNS(null,'cy',mouse_y);
     }
     document.onmousemove = OnMouseMove;
 
     // Determine (x,y) of the cursor
-    function Cursor()
-    {
+    function Cursor() {
       return [mouse_x, mouse_y];
     }
 
     // Determine average (x,y) of the swarm
-    function AverageMotePosition()
-    {
-      if( !motes )
-        return [0,0];
-
-      if( motes.length === 0 )
-        return [0,0];
-
-      var i;
-      var sum_x=0, sum_y=0;
-      for (i = 0; i < motes.length; i++)
-      {
-        sum_x += motes[i].x;
-        sum_y += motes[i].y;
+    function AverageMotePosition() {
+      if (!motes || motes.length === 0) {
+        return [0, 0];
       }
 
-      return [sum_x/motes.length, sum_y/motes.length];
+      const sum_x = 0;
+      const sum_y = 0;
+      for (const mote of motes) {
+        sum_x += mote.x;
+        sum_y += mote.y;
+      }
+
+      return [sum_x / motes.length, sum_y / motes.length];
     }
 
     // A nicer, integer random
     function Rand(modulo)
     {
-      return Math.round( Math.random() * (modulo-1));
+      return Math.round(Math.random() * (modulo - 1));
     }
 
     // Class Mote
-    function Mote()
-    {
+    function Mote() {
       // Dimensions of drawing area.
-      var dims = Dimensions();
-      var width = dims[0], height = dims[1];
+      const dims = Dimensions();
+      const width = dims[0];
+      const height = dims[1];
 
       // Choose a random coordinate to start at.
-      this.x = Rand( width );
-      this.y = Rand( height );
+      this.x = Rand(width);
+      this.y = Rand(height);
 
       // Nil initial velocity.
       this.vx = this.vy = 0;
 
-      // A visual element---initially none
+      // A visual element, initially none
       this.elt = null;
     }
 
@@ -188,121 +173,127 @@ cy='150' r='7' fill='#0000ff' fill-opacity='0.5'/>
     // towards the given position.
     // Warning: Pseudo-physics — not really
     // governed by any /real/ physical principles.
-    Mote.prototype.applyForce = function(pos, mag)
-    {
-      if( pos[0] > this.x )
+    Mote.prototype.applyForce = function (pos, mag) {
+      if (pos[0] > this.x) {
         this.vx += mag;
-      else if( pos[0] < this.x )
+      } else if (pos[0] < this.x) {
         this.vx -= mag;
+      }
 
-      if( pos[1] > this.y )
+      if (pos[1] > this.y) {
         this.vy += mag;
-      else if( pos[1] < this.y )
+      } else if (pos[1] < this.y) {
         this.vy -= mag;
+      }
     }
 
     // Mote::capVelocity() — Apply an upper limit
     // on mote velocity.
-    Mote.prototype.capVelocity = function()
-    {
-      var max = parseInt( document.getElementById('max_velocity').value );
+    Mote.prototype.capVelocity = function () {
+      const max = parseInt(document.getElementById('max_velocity').value);
 
-      if( max < this.vx )
+      if (max < this.vx) {
         this.vx = max;
-      else if( -max > this.vx )
+      } else if (-max > this.vx) {
         this.vx = -max;
+      }
 
-      if( max < this.vy )
+      if (max < this.vy) {
         this.vy = max;
-      else if( -max > this.vy )
+      } else if (-max > this.vy) {
         this.vy = -max;
+      }
     }
 
     // Mote::capPosition() — Apply an upper/lower limit
     // on mote position.
-    Mote.prototype.capPosition = function()
-    {
-      var dims = Dimensions();
-      if( this.x < 0 )
+    Mote.prototype.capPosition = function () {
+      const dims = Dimensions();
+      if (this.x < 0) {
         this.x = 0;
-      else if( this.x >= dims[0] )
-        this.x = dims[0]-1;
+      } else if (this.x >= dims[0]) {
+        this.x = dims[0] - 1;
+      }
 
-      if( this.y < 0 )
+      if (this.y < 0) {
         this.y = 0;
-      else if( this.y >= dims[1] )
-        this.y = dims[1]-1;
+      } else if (this.y >= dims[1]) {
+        this.y = dims[1] - 1;
+      }
     }
 
     // Mote::move() — move a mote, update the screen.
-    Mote.prototype.move = function()
-    {
+    Mote.prototype.move = function () {
       // Apply attraction to cursor.
-      var attract = parseInt( document.getElementById('attract_cursor').value );
-      var cursor = Cursor();
+      const attract = parseInt(document.getElementById('attract_cursor').value);
+      const cursor = Cursor();
       this.applyForce(cursor, attract);
 
       // Apply repulsion from average mote position.
-      var repel = parseInt( document.getElementById('repel_peer').value );
-      var average = AverageMotePosition();
+      const repel = parseInt(document.getElementById('repel_peer').value);
+      const average = AverageMotePosition();
       this.applyForce(average, -repel);
 
       // Add some randomness to the velocity.
-      this.vx += Rand(3)-1;
-      this.vy += Rand(3)-1;
+      this.vx += Rand(3) - 1;
+      this.vy += Rand(3) - 1;
 
       // Put an upper limit on velocity.
       this.capVelocity();
 
       // Apply velocity.
-      var old_x = this.x, old_y = this.y;
+      const old_x = this.x;
+      const old_y = this.y;
       this.x += this.vx;
       this.y += this.vy;
       this.capPosition();
 
       // Draw it.
-
-      if( this.elt === null )
-      {
-        var svg = 'http://www.w3.org/2000/svg';
-        this.elt = document.createElementNS(svg,'line');
-        this.elt.setAttributeNS(null,'stroke','green');
-        this.elt.setAttributeNS(null,'stroke-width','3');
-        this.elt.setAttributeNS(null,'stroke-opacity','0.5');
-        Display().appendChild( this.elt );
+      if (this.elt === null) {
+        const svg = 'http://www.w3.org/2000/svg';
+        this.elt = document.createElementNS(svg, 'line');
+        this.elt.setAttributeNS(null, 'stroke', 'green');
+        this.elt.setAttributeNS(null, 'stroke-width', '3');
+        this.elt.setAttributeNS(null, 'stroke-opacity', '0.5');
+        Display().appendChild(this.elt);
       }
 
-      this.elt.setAttributeNS(null,'x1',old_x);
-      this.elt.setAttributeNS(null,'y1',old_y);
+      this.elt.setAttributeNS(null, 'x1', old_x);
+      this.elt.setAttributeNS(null, 'y1', old_y);
 
-      this.elt.setAttributeNS(null,'x2',this.x);
-      this.elt.setAttributeNS(null,'y2',this.y);
+      this.elt.setAttributeNS(null, 'x2', this.x);
+      this.elt.setAttributeNS(null, 'y2', this.y);
     }
 
-    function update()
-    {
+    function update() {
       // First call?
-      if( !motes )
+      if (!motes) {
         motes = [];
+      }
 
       // How many motes should there be?
-      var num = parseInt( document.getElementById('num_motes').value );
-      if( num < 0 )
+      let num = parseInt( document.getElementById('num_motes').value );
+      if ( num < 0 ) {
         num = 0;
+      }
 
       // Make sure we have exactly that many...
       // Too few?
-      while( motes.length < num )
-        motes.push( new Mote() );
+      while (motes.length < num) {
+        motes.push(new Mote());
+      }
+
       // Or too many?
-      if( num === 0 )
+      if (num === 0) {
         motes = [];
-      else if( motes.length > num )
-        motes = motes.slice(0,num-1);
+      } else if (motes.length > num) {
+        motes = motes.slice(0, num - 1);
+      }
 
       // Move a random mote
-      if( motes.length > 0 )
-        motes[ Rand( motes.length ) ].move();
+      if (motes.length > 0) {
+        motes[Rand(motes.length)].move();
+      }
 
       // And do this again in 1/100 sec
       setTimeout('update()', 10);

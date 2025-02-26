@@ -1,27 +1,26 @@
 ---
 title: RegExp.lastParen ($+)
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/lastParen
-tags:
-  - JavaScript
-  - Non-standard
-  - Property
-  - Read-only
-  - Reference
-  - RegExp
-  - Regular Expressions
+page-type: javascript-static-accessor-property
+status:
+  - deprecated
 browser-compat: javascript.builtins.RegExp.lastParen
 ---
-{{JSRef}} {{non-standard_header}}
 
-The non-standard **`lastParen`** property is a static and read-only property of regular expressions that contains the last parenthesized substring match, if any. `RegExp.$+` is an alias for this property.
+{{JSRef}} {{Deprecated_Header}}
+
+> [!NOTE]
+> All `RegExp` static properties that expose the last match state globally are deprecated. See [deprecated RegExp features](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp) for more information.
+
+The **`RegExp.lastParen`** static accessor property returns the last parenthesized substring match, if any. `RegExp["$+"]` is an alias for this property.
 
 ## Description
 
-The `lastParen` property is static, it is not a property of an individual regular expression object. Instead, you always use it as `RegExp.lastParen` or `RegExp['$+']`.
+Because `lastParen` is a static property of {{jsxref("RegExp")}}, you always use it as `RegExp.lastParen` or `RegExp["$+"]`, rather than as a property of a `RegExp` object you created.
 
-The value of the `lastParen` property is read-only and modified whenever a successful match is made.
+The value of `lastParen` updates whenever a `RegExp` (but not a `RegExp` subclass) instance makes a successful match. If no matches have been made, or if the most recent regex execution contains no capturing groups, `lastParen` is an empty string. The set accessor of `lastParen` is `undefined`, so you cannot change this property directly.
 
-You can not use the shorthand alias with the dot property accessor (`RegExp.$+`), because the parser expects an expression with "+" in that case and a {{jsxref("SyntaxError")}} is thrown. Use the [bracket notation for property access](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors).
+You cannot use the shorthand alias with the dot property accessor (`RegExp.$+`), because `+` is not a valid identifier part, so this causes a {{jsxref("SyntaxError")}}. Use the [bracket notation](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors) instead.
 
 ## Examples
 
@@ -29,9 +28,9 @@ You can not use the shorthand alias with the dot property accessor (`RegExp.$+`)
 
 ```js
 const re = /(hi)/g;
-re.test('hi there!');
+re.test("hi there!");
 RegExp.lastParen; // "hi"
-RegExp['$+'];     // "hi"
+RegExp["$+"]; // "hi"
 ```
 
 ## Specifications
@@ -44,8 +43,8 @@ RegExp['$+'];     // "hi"
 
 ## See also
 
-- {{jsxref("RegExp.input", "RegExp.input ($_)")}}
-- {{jsxref("RegExp.lastMatch", "RegExp.lastMatch ($&amp;)")}}
-- {{jsxref("RegExp.leftContext", "RegExp.leftContext ($`)")}}
-- {{jsxref("RegExp.rightContext", "RegExp.rightContext ($')")}}
-- {{jsxref("RegExp.n", "RegExp.$1-$9")}}
+- [`RegExp.input` (`$_`)](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/input)
+- [`RegExp.lastMatch` (`$&`)](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastMatch)
+- [`RegExp.leftContext` (`` $` ``)](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/leftContext)
+- [`RegExp.rightContext` (`$'`)](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/rightContext)
+- [`RegExp.$1`, …, `RegExp.$9`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/n)

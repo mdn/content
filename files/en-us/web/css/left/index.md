@@ -1,17 +1,13 @@
 ---
 title: left
 slug: Web/CSS/left
-tags:
-  - CSS
-  - CSS Positioning
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.left
 ---
+
 {{CSSRef}}
 
-The **`left`** [CSS](/en-US/docs/Web/CSS) property participates in specifying the horizontal position of a [positioned element](/en-US/docs/Web/CSS/position). It has no effect on non-positioned elements.
+The **`left`** [CSS](/en-US/docs/Web/CSS) property participates in specifying the horizontal position of a [positioned element](/en-US/docs/Web/CSS/position). This {{glossary("inset properties", "inset property")}} has no effect on non-positioned elements.
 
 {{EmbedInteractiveExample("pages/css/left.html")}}
 
@@ -21,6 +17,8 @@ The **`left`** [CSS](/en-US/docs/Web/CSS) property participates in specifying th
 /* <length> values */
 left: 3px;
 left: 2.4em;
+left: anchor(--myAnchor 50%);
+left: calc(anchor-size(--myAnchor inline, 100px) * 2);
 
 /* <percentage>s of the width of the containing block */
 left: 10%;
@@ -40,10 +38,11 @@ left: unset;
 
 - {{cssxref("&lt;length&gt;")}}
 
-  - : A negative, null, or positive {{cssxref("&lt;length&gt;")}} that represents:
+  - : A negative, null, or positive {{cssxref("&lt;length&gt;")}}:
 
-    - for _absolutely positioned elements_, the distance to the left edge of the containing block.
-    - for _relatively positioned elements_, the distance that the element is moved to the right of its normal position.
+    - for _absolutely positioned elements_, it represents the distance to the left edge of the containing block.
+    - for _anchor-positioned elements_, the {{cssxref("anchor()")}} function resolves to a {{cssxref("&lt;length&gt;")}} value relative to the position of the associated _anchor element_'s left or right edge (see [Using inset properties with `anchor()` function values](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#using_inset_properties_with_anchor_function_values)), and the {{cssxref("anchor-size()")}} function resolves to a {{cssxref("&lt;length&gt;")}} value relative to the associated anchor element's width or height (see [Setting element position based on anchor size](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#setting_element_position_based_on_anchor_size)).
+    - for _relatively positioned elements_, it represents the distance that the element is moved to the right of its normal position.
 
 - {{cssxref("&lt;percentage&gt;")}}
   - : A {{cssxref("&lt;percentage&gt;")}} of the containing block's width.
@@ -61,7 +60,7 @@ left: unset;
 
 The effect of `left` depends on how the element is positioned (i.e., the value of the {{cssxref("position")}} property):
 
-- When `position` is set to `absolute` or `fixed`, the `left` property specifies the distance between the element's left edge and the left edge of its containing block. (The containing block is the ancestor to which the element is relatively positioned.)
+- When `position` is set to `absolute` or `fixed`, the `left` property specifies the distance between the element's outer margin of left edge and the inner border of left edge of its containing block. (The containing block is the ancestor to which the element is relatively positioned.) If the positioned element has an associated [_anchor element_](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using), and the property value includes an {{cssxref("anchor()")}} function, `left` positions the left edge of the positioned element relative to the position of the specified [`<anchor-side>`](/en-US/docs/Web/CSS/anchor#anchor-side) edge. The `left` property is [compatible](/en-US/docs/Web/CSS/anchor#compatibility_of_inset_properties_and_anchor-side_values) with the `left`, `right`, `start`, `end`, `self-start`, `self-end`, `center`, and `<percentage>` values.
 - When `position` is set to `relative`, the `left` property specifies the distance the element's left edge is moved to the right from its normal position.
 - When `position` is set to `sticky`, the `left` property is used to compute the sticky-constraint rectangle.
 - When `position` is set to `static`, the `left` property has _no effect_.
@@ -90,7 +89,10 @@ When both `left` and {{cssxref("right")}} are defined, and width constraints don
       left: 20px;
       top: 20px;
     </pre>
-    <p>The only containing element for this div is the main window, so it positions itself in relation to it.</p>
+    <p>
+      The only containing element for this div is the main window, so it
+      positions itself in relation to it.
+    </p>
   </div>
 
   <div id="example_2">
@@ -127,7 +129,8 @@ When both `left` and {{cssxref("right")}} are defined, and width constraints don
         left: 0;
         top: 200px;
       </pre>
-      <p>Absolute position with both left and right declared</p> </div>
+      <p>Absolute position with both left and right declared</p>
+    </div>
   </div>
 </div>
 ```
@@ -138,7 +141,7 @@ When both `left` and {{cssxref("right")}} are defined, and width constraints don
 #wrap {
   width: 700px;
   margin: 0 auto;
-  background: #5C5C5C;
+  background: #5c5c5c;
 }
 
 pre {
@@ -154,7 +157,7 @@ pre {
   position: absolute;
   left: 20px;
   top: 20px;
-  background-color: #D8F5FF;
+  background-color: #d8f5ff;
 }
 
 #example_2 {
@@ -163,8 +166,7 @@ pre {
   position: relative;
   top: 0;
   right: 0;
-  background-color: #C1FFDB;
-
+  background-color: #c1ffdb;
 }
 #example_3 {
   width: 600px;
@@ -172,23 +174,23 @@ pre {
   position: relative;
   top: 20px;
   left: 20px;
-  background-color: #FFD7C2;
+  background-color: #ffd7c2;
 }
 
 #example_4 {
-  width:200px;
-  height:200px;
-  position:absolute;
-  bottom:10px;
-  right:20px;
-  background-color:#FFC7E4;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  background-color: #ffc7e4;
 }
 #example_5 {
   position: absolute;
   right: 0;
   left: 0;
   top: 100px;
-  background-color: #D7FFC2;
+  background-color: #d7ffc2;
 }
 ```
 
@@ -206,6 +208,9 @@ pre {
 
 ## See also
 
-- {{cssxref("inset")}}, the shorthand for all related properties: {{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("left")}}, and {{cssxref("right")}}
-- The mapped logical properties: {{cssxref("inset-block-start")}}, {{cssxref("inset-block-end")}}, {{cssxref("inset-inline-start")}}, and {{cssxref("inset-inline-end")}} and the shorthands {{cssxref("inset-block")}} and {{cssxref("inset-inline")}}
+- {{cssxref("top")}}, {{cssxref("bottom")}}, and {{cssxref("right")}}
+- {{cssxref("inset")}} shorthand
+- {{cssxref("inset-block-start")}}, {{cssxref("inset-block-end")}}, {{cssxref("inset-inline-start")}}, and {{cssxref("inset-inline-end")}}
+- {{cssxref("inset-block")}} and {{cssxref("inset-inline")}} shorthands
 - {{cssxref("position")}}
+- [CSS positioned layout](/en-US/docs/Web/CSS/CSS_positioned_layout) module

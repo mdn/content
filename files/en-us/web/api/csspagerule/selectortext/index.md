@@ -1,15 +1,11 @@
 ---
-title: CSSPageRule.selectorText
+title: "CSSPageRule: selectorText property"
+short-title: selectorText
 slug: Web/API/CSSPageRule/selectorText
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM
-  - Property
-  - Reference
-  - CSSPageRule
 browser-compat: api.CSSPageRule.selectorText
 ---
+
 {{APIRef("CSSOM")}}
 
 The **`selectorText`** property of the {{domxref("CSSPageRule")}} interface gets and sets the selectors associated with the `CSSPageRule`.

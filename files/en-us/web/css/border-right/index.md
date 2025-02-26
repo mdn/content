@@ -1,14 +1,10 @@
 ---
 title: border-right
 slug: Web/CSS/border-right
-tags:
-  - CSS
-  - CSS Borders
-  - CSS Property
-  - Reference
-  - recipe:css-shorthand-property
+page-type: css-shorthand-property
 browser-compat: css.properties.border-right
 ---
+
 {{CSSRef}}
 
 The **`border-right`** [shorthand](/en-US/docs/Web/CSS/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets all the properties of an element's right [border](/en-US/docs/Web/CSS/border).
@@ -80,9 +76,7 @@ The three values of the shorthand property can be specified in any order, and on
 #### HTML
 
 ```html
-<div>
-  This box has a border on the right side.
-</div>
+<div>This box has a border on the right side.</div>
 ```
 
 #### CSS

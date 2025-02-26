@@ -1,22 +1,18 @@
 ---
-title: SVGMarkerElement.setOrientToAngle()
+title: "SVGMarkerElement: setOrientToAngle() method"
+short-title: setOrientToAngle()
 slug: Web/API/SVGMarkerElement/setOrientToAngle
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - setOrientToAngle
-  - SVGMarkerElement
 browser-compat: api.SVGMarkerElement.setOrientToAngle
 ---
+
 {{APIRef("SVG")}}
 
 The **`setOrientToAngle()`** method of the {{domxref("SVGMarkerElement")}} interface sets the value of the `orient` attribute to the value in the {{domxref("SVGAngle")}} passed in.
 
 ## Syntax
 
-```js
+```js-nolint
 setOrientToAngle(angle)
 ```
 
@@ -36,9 +32,14 @@ In the following example the value of the `orient` attribute is updated using `s
 ```html
 <svg id="svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5"
-        markerWidth="6" markerHeight="6"
-        orient="90">
+    <marker
+      id="arrow"
+      viewBox="0 0 10 10"
+      refX="5"
+      refY="5"
+      markerWidth="6"
+      markerHeight="6"
+      orient="90">
       <path d="M 0 0 L 10 5 L 0 10 z" />
     </marker>
   </defs>

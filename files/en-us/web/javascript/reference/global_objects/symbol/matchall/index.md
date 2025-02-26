@@ -1,53 +1,49 @@
 ---
 title: Symbol.matchAll
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/matchAll
-tags:
-  - JavaScript
-  - Property
-  - Reference
-  - Symbol
-  - Polyfill
+page-type: javascript-static-data-property
 browser-compat: javascript.builtins.Symbol.matchAll
 ---
+
 {{JSRef}}
 
-The **`Symbol.matchAll`** well-known symbol returns an iterator, that yields matches of the regular expression against a string. This function is called by the {{jsxref("String.prototype.matchAll()")}} method.
+The **`Symbol.matchAll`** static data property represents the [well-known symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#well-known_symbols) `Symbol.matchAll`. The {{jsxref("String.prototype.matchAll()")}} method looks up this symbol on its first argument for the method that returns an iterator, that yields matches of the current object against a string.
 
-{{EmbedInteractiveExample("pages/js/symbol-matchall.html","shorter")}}
+For more information, see [`RegExp.prototype[Symbol.matchAll]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.matchAll) and {{jsxref("String.prototype.matchAll()")}}.
 
-## Description
+{{InteractiveExample("JavaScript Demo: Symbol.matchAll")}}
 
-This Symbol is used for {{jsxref("String.prototype.matchAll()")}} and specifically in {{jsxref("RegExp.@@matchAll", "RegExp.prototype[@@matchAll]()")}}. The following two examples return same result:
+```js interactive-example
+const re = /[0-9]+/g;
+const str = "2016-01-02|2019-03-07";
+const result = re[Symbol.matchAll](str);
 
-```js
-'abc'.matchAll(/a/);
-
-/a/[Symbol.matchAll]('abc');
+console.log(Array.from(result, (x) => x[0]));
+// Expected output: Array ["2016", "01", "02", "2019", "03", "07"]
 ```
 
-This method exists for customizing match behavior within {{jsxref("RegExp")}} subclasses.
+## Value
 
-{{js_property_attributes(0,0,0)}}
+The well-known symbol `Symbol.matchAll`.
+
+{{js_property_attributes(0, 0, 0)}}
 
 ## Examples
 
 ### Using Symbol.matchAll
 
 ```js
-const str = '2016-01-02|2019-03-07';
+const str = "2016-01-02|2019-03-07";
 
 const numbers = {
   *[Symbol.matchAll](str) {
-    for (const n of str.matchAll(/[0-9]+/g))
-      yield n[0];
-  }
+    for (const n of str.matchAll(/[0-9]+/g)) yield n[0];
+  },
 };
 
 console.log(Array.from(str.matchAll(numbers)));
-//  Array ["2016", "01", "02", "2019", "03", "07"]
+// ["2016", "01", "02", "2019", "03", "07"]
 ```
-
-See {{jsxref("String.prototype.matchAll()")}} and {{jsxref("RegExp.@@matchAll", "RegExp.prototype[@@matchAll]()")}} for more examples.
 
 ## Specifications
 
@@ -60,5 +56,9 @@ See {{jsxref("String.prototype.matchAll()")}} and {{jsxref("RegExp.@@matchAll", 
 ## See also
 
 - [Polyfill of `Symbol.matchAll` in `core-js`](https://github.com/zloirock/core-js#ecmascript-symbol)
+- {{jsxref("Symbol.match")}}
+- {{jsxref("Symbol.replace")}}
+- {{jsxref("Symbol.search")}}
+- {{jsxref("Symbol.split")}}
 - {{jsxref("String.prototype.matchAll()")}}
-- {{jsxref("RegExp.@@matchAll", "RegExp.prototype[@@matchAll]()")}}
+- [`RegExp.prototype[Symbol.matchAll]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.matchAll)

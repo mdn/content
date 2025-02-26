@@ -1,19 +1,11 @@
 ---
 title: BrowserSetting.onChange
 slug: Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/onChange
-tags:
-  - API
-  - Add-ons
-  - BrowserSetting
-  - Event
-  - Extensions
-  - Privacy
-  - Reference
-  - WebExtensions
-  - onchange
+page-type: webextension-api-event
 browser-compat: webextensions.api.types.BrowserSetting.onChange
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 The `BrowserSetting.onChange` event is fired when the setting is changed.
 
@@ -21,7 +13,7 @@ On Firefox, it doesn't fire if the change has been made through `about:config`.
 
 ## Syntax
 
-```js
+```js-nolint
 BrowserSetting.onChange.addListener(listener)
 BrowserSetting.onChange.removeListener(listener)
 BrowserSetting.onChange.hasListener(listener)
@@ -40,9 +32,9 @@ Events have three functions:
 
 ### Parameters
 
-- `callback`
+- `listener`
 
-  - : A callback function that will be called when this event occurs. The function will be passed the following arguments:
+  - : The function called when this event occurs. The function is passed these arguments:
 
     - `details`
 
@@ -83,11 +75,11 @@ Events have three functions:
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.types`](https://developer.chrome.com/docs/extensions/reference/types/) API.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.types`](https://developer.chrome.com/docs/extensions/reference/api/types) API.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -114,4 +106,4 @@ Events have three functions:
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

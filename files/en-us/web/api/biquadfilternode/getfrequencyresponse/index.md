@@ -1,23 +1,14 @@
 ---
-title: BiquadFilterNode.getFrequencyResponse()
+title: "BiquadFilterNode: getFrequencyResponse() method"
+short-title: getFrequencyResponse()
 slug: Web/API/BiquadFilterNode/getFrequencyResponse
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - BiquadFilterNode
-  - Method
-  - Reference
-  - Web Audio API
-  - filter
-  - getFrequencyResponse
 browser-compat: api.BiquadFilterNode.getFrequencyResponse
 ---
+
 {{ APIRef("Web Audio API") }}
 
-The `getFrequencyResponse()` method of the {{ domxref("BiquadFilterNode")
-    }} interface takes the current filtering algorithm's settings and calculates the
-frequency response for frequencies specified in a specified array of frequencies.
+The `getFrequencyResponse()` method of the {{ domxref("BiquadFilterNode")}} interface takes the current filtering algorithm's settings and calculates the frequency response for frequencies specified in a specified array of frequencies.
 
 The two output arrays, `magResponseOutput` and
 `phaseResponseOutput`, must be created before calling this method; they
@@ -26,7 +17,7 @@ must be the same size as the array of input frequency values
 
 ## Syntax
 
-```js
+```js-nolint
 getFrequencyResponse(frequencyArray, magResponseOutput, phaseResponseOutput)
 ```
 
@@ -62,7 +53,7 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 In the following example we are using a biquad filter on a media stream (for the full
-demo, see our [stream-source-buffer demo](https://mdn.github.io/webaudio-examples/stream-source-buffer/) live, or [read the source](https://github.com/mdn/webaudio-examples/blob/master/stream-source-buffer/index.html).) As part of this demo, we get the frequency responses for this biquad
+demo, see our [stream-source-buffer demo](https://mdn.github.io/webaudio-examples/stream-source-buffer/) live, or [read the source](https://github.com/mdn/webaudio-examples/blob/main/stream-source-buffer/index.html).) As part of this demo, we get the frequency responses for this biquad
 filter, for five sample frequencies. We first create the {{jsxref("Float32Array")}}s we
 need, one containing the input frequencies, and two to receive the output magnitude and
 phase values:
@@ -83,13 +74,12 @@ Next we create a {{ htmlelement("ul") }} element in our HTML to contain our resu
 and grab a reference to it in our JavaScript:
 
 ```html
-<p>Biquad filter frequency response for: </p>
-<ul class="freq-response-output">
-</ul>
+<p>Biquad filter frequency response for:</p>
+<ul class="freq-response-output"></ul>
 ```
 
 ```js
-const freqResponseOutput = document.querySelector('.freq-response-output');
+const freqResponseOutput = document.querySelector(".freq-response-output");
 ```
 
 Finally, after creating our biquad filter, we use `getFrequencyResponse()`
@@ -105,11 +95,19 @@ biquadFilter.gain.value = range.value;
 // …
 
 function calcFrequencyResponse() {
-  biquadFilter.getFrequencyResponse(myFrequencyArray,magResponseOutput,phaseResponseOutput);
+  biquadFilter.getFrequencyResponse(
+    myFrequencyArray,
+    magResponseOutput,
+    phaseResponseOutput,
+  );
 
-  for (i = 0; i <= myFrequencyArray.length-1;i++){
-    const listItem = document.createElement('li');
-    listItem.innerHTML = `<strong>${myFrequencyArray[i]}Hz</strong>: Magnitude ${magResponseOutput[i]}, Phase ${phaseResponseOutput[i]} radians.`;
+  for (let i = 0; i <= myFrequencyArray.length - 1; i++) {
+    const listItem = document.createElement("li");
+    listItem.textContent = `: Magnitude ${magResponseOutput[i]}, Phase ${phaseResponseOutput[i]} radians.`;
+    listItem.insertBefore(
+      document.createElement("strong"),
+      listItem.firstChild,
+    ).textContent = `${myFrequencyArray[i]}Hz`;
     freqResponseOutput.appendChild(listItem);
   }
 }

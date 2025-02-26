@@ -1,23 +1,21 @@
 ---
 title: Your first extension
 slug: Mozilla/Add-ons/WebExtensions/Your_first_WebExtension
-tags:
-  - Add-ons
-  - Extensions
-  - Guide
-  - WebExtensions
+page-type: guide
 ---
+
 {{AddonSidebar}}
 
-> **Note:** If you're familiar with the basic concepts of browser extensions, skip this section to [see how extension files are put together](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension). Then, use the [reference documentation](/en-US/docs/Mozilla/Add-ons/WebExtensions#reference) to start building your extension. Visit [Firefox Extension Workshop](https://extensionworkshop.com/?utm_source=developer.mozilla.org&utm_medium=documentation&utm_campaign=your-first-extension) to learn more about the workflow for testing, publishing, and extensions for Firefox.
+> [!NOTE]
+> If you're familiar with the basic concepts of browser extensions, skip this section to [see how extension files are put together](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension). Then, use the [reference documentation](/en-US/docs/Mozilla/Add-ons/WebExtensions#reference) to start building your extension. Visit [Firefox Extension Workshop](https://extensionworkshop.com/?utm_source=developer.mozilla.org&utm_medium=documentation&utm_campaign=your-first-extension) to learn more about the workflow for testing, publishing, and extensions for Firefox.
 
 This article walks through creating an extension for Firefox, from start to finish. The extension adds a red border to any pages loaded from "`mozilla.org`" or any of its subdomains.
 
-The source code for this example is on GitHub: <https://github.com/mdn/webextensions-examples/tree/master/borderify>.
+The source code for this example is on GitHub: <https://github.com/mdn/webextensions-examples/tree/main/borderify>.
 
 ## Writing the extension
 
-Create a new directory and navigate to it. For example, in your command line/terminal you do it like this:
+In a suitable location, such as in the `Documents` directory, create a new directory called `borderify` and navigate to it. You can do this using your computer's file explorer or [command line terminal](/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Command_line). Understanding how to use the command line terminal is a handy skill, as it helps with your more advanced extension development. Using the terminal, you create the directory like this:
 
 ```bash
 mkdir borderify
@@ -26,11 +24,10 @@ cd borderify
 
 ### manifest.json
 
-Now create a new file called "manifest.json" directly under the "borderify" directory. Give it the following contents:
+Using a suitable [text editor](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/Available_text_editors), create a new file called "manifest.json" directly under the "borderify" directory. Give it the following contents:
 
 ```json
 {
-
   "manifest_version": 2,
   "name": "Borderify",
   "version": "1.0",
@@ -47,7 +44,6 @@ Now create a new file called "manifest.json" directly under the "borderify" dire
       "js": ["borderify.js"]
     }
   ]
-
 }
 ```
 
@@ -74,7 +70,7 @@ The most interesting key here is [`content_scripts`](/en-US/docs/Mozilla/Add-ons
 
 The extension should have an icon. This will be shown next to the extension's listing in the Add-ons Manager. Our manifest.json promised that we would have an icon at "icons/border-48.png".
 
-Create the "icons" directory directly under the "borderify" directory. Save an icon there named "border-48.png". You could use [the one from our example](https://raw.githubusercontent.com/mdn/webextensions-examples/master/borderify/icons/border-48.png), which is taken from the Google Material Design iconset, and is used under the terms of the [Creative Commons Attribution-ShareAlike](https://creativecommons.org/licenses/by-sa/3.0/) license.
+Create the "icons" directory directly under the "borderify" directory. Save an icon there named "border-48.png". You could use [the one from our example](https://raw.githubusercontent.com/mdn/webextensions-examples/main/borderify/icons/border-48.png), which is taken from the Google Material Design iconset, and is used under the terms of the [Creative Commons Attribution-ShareAlike](https://creativecommons.org/licenses/by-sa/3.0/) license.
 
 If you choose to supply your own icon, It should be 48x48 pixels. You could also supply a 96x96 pixel icon, for high-resolution displays, and if you do this it will be specified as the `96` property of the `icons` object in manifest.json:
 
@@ -105,7 +101,7 @@ This script will be loaded into the pages that match the pattern given in the `c
 
 First, double check that you have the right files in the right places:
 
-```
+```plain
 borderify/
     icons/
         border-48.png
@@ -123,13 +119,15 @@ Alternatively, you can run the extension from the command line using the [web-ex
 
 ### Testing
 
-> **Note:** By default [extensions don't work in private browsing](https://support.mozilla.org/en-US/kb/extensions-private-browsing). If you want to test this extension in private browsing open "`about:addons`", click on the extension, and select the Allow radio button for Run in Private Windows.
+> [!NOTE]
+> By default [extensions don't work in private browsing](https://support.mozilla.org/en-US/kb/extensions-private-browsing). If you want to test this extension in private browsing open "`about:addons`", click on the extension, and select the Allow radio button for Run in Private Windows.
 
-Now visit a page under "`mozilla.org`", and you should see the red border round the page.
+Now visit a page under "`https://www.mozilla.org/en-US/`", and you should see the red border round the page.
 
 ![Border displayed on mozilla.org](border_on_mozilla_org.png)
 
-> **Note:** Don't try it on "`addons.mozilla.org`", though! Content scripts are currently blocked on that domain.
+> [!NOTE]
+> Don't try it on "`addons.mozilla.org`", though! Content scripts are currently blocked on that domain.
 
 Try experimenting a bit. Edit the content script to change the color of the border, or do something else to the page content. Save the content script, then reload the extension's files by clicking the Reload button in "`about:debugging`". You can see the changes right away.
 
@@ -146,5 +144,5 @@ Now you've had an introduction to the process of developing a WebExtension for F
 - [write a more complex extension](/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension)
 - [read more about the anatomy of an extension](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)
 - [explore the extension examples](/en-US/docs/Mozilla/Add-ons/WebExtensions/Examples)
-- [find out what you need to develop, test, and publish your extension](/en-US/docs/Mozilla/Add-ons/WebExtensions/What_next_)
-- [take your learning further](/en-US/docs/Mozilla/Add-ons/WebExtensions/What_next_#continue_your_learning_experience).
+- [find out what you need to develop, test, and publish your extension](/en-US/docs/Mozilla/Add-ons/WebExtensions/What_next)
+- [take your learning further](/en-US/docs/Mozilla/Add-ons/WebExtensions/What_next#continue_your_learning_experience).

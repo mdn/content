@@ -1,18 +1,16 @@
 ---
 title: Cognitive accessibility
 slug: Web/Accessibility/Cognitive_accessibility
-tags:
-  - Accessibility
-  - Best practices
-  - Forms
-  - WCAG
-  - cognitive accessibility
+page-type: guide
 ---
+
+{{AccessibilitySidebar}}
+
 Cognitive accessibility covers accessibility considerations for people with cognition and learning disabilities. This document introduces cognitive accessibility and improving accessibility of the web for people with cognitive and learning differences.
 
 Cognitive impairment refers to a broad range of disabilities, from people with intellectual disabilities who may have the most-limited capabilities, to age-related issues with thinking and remembering. The range includes people with mental illnesses, such as depression and schizophrenia. It also includes people with learning disabilities, such as dyslexia and attention deficit hyperactivity disorder (ADHD).
 
-Though there is a lot of diversity within clinical definitions of cognitive impairments, people with them experience a common set of functional problems. These problems include difficulty with understanding content, remembering how to complete tasks, and confusion caused by inconsistent or non-traditional web page layouts. In this document, we focus on steps developers should take to improve the cognitive accessibility of their web sites and applications.
+Though there is a lot of diversity within clinical definitions of cognitive impairments, people with them experience a common set of functional problems. These problems include difficulty with understanding content, remembering how to complete tasks, and confusion caused by inconsistent or non-traditional web page layouts. In this document, we focus on steps developers should take to improve the cognitive accessibility of their websites and applications.
 
 ## Overview
 
@@ -58,13 +56,13 @@ All of the following guidelines help more than just people with cognitive disabi
 
 ## Adaptability
 
-[Guideline 1.3](https://www.w3.org/WAI/WCAG21/Understanding/adaptable) states "content should be **adaptable**." Create content that can be presented in different ways without losing information or structure. For example, provide {{glossary('responsive web design', 'responsive')}} layouts, with a single column mobile design.
+[Guideline 1.3](https://www.w3.org/WAI/WCAG21/Understanding/adaptable) states "content should be **adaptable**". Create content that can be presented in different ways without losing information or structure. For example, provide {{glossary('responsive web design', 'responsive')}} layouts, with a single column mobile design.
 
 All information, including structure and relationships conveyed through the presentation, should be available in a form that can be perceived by all users to achieve this goal. For example, the information could be spoken aloud via a narration tool. Making your content capable of being understood by the software is a good way to help ensure it can be used by alternate presentational modes.
 
 ## Time
 
-It is important to allow users the time they require to complete tasks. [Guideline 2.2](https://www.w3.org/WAI/WCAG21/Understanding/enough-time) states "provide users enough **time** to read and use content."
+It is important to allow users the time they require to complete tasks. [Guideline 2.2](https://www.w3.org/WAI/WCAG21/Understanding/enough-time) states "provide users enough **time** to read and use content".
 
 A **time limit** is any process that happens without user initiation after a set time or on a periodic basis, such as being logged out after 30 minutes or having 15 minutes to make a purchase. People with cognitive disabilities may require more time to read content, or to perform functions such as filling out forms. Solutions include providing users enough additional time to complete tasks or eliminate time constraints altogether.
 
@@ -73,7 +71,7 @@ A **time limit** is any process that happens without user initiation after a set
 Options for adjusting time requirements include:
 
 - Allowing the user to turn off or adjust the time to at least 10 times the original limit before encountering it.
-- Alerting the user and providing a buffer of at least 20 seconds to extend the timeout duration by a factor of 10 with a simple action, such as hitting the space bar.
+- Alerting the user and providing a buffer of at least 20 seconds to extend the timeout duration by a factor of 10 with an action, such as hitting the space bar.
 
 Provide a toggle on content that allows users to enable a longer session time limit, or no session time limit at all. Examples of timed content include forms, timed reading exercises, and training materials. If the time limit is longer than 20 hours, accommodations are not required.
 
@@ -81,12 +79,12 @@ Provide a toggle on content that allows users to enable a longer session time li
 
 It is important not to distract users, especially ones with cognitive disabilities.
 
-If moving, blinking, scrolling, or auto-updating information starts automatically, lasts more than five seconds, and is presented in parallel with other content, the user must able to pause, stop, hide or control it, unless it's an essential functionality. "Essential" means that removing the moving, blinking, scrolling, or auto-updating information would fundamentally change the meaning of the content and/or functionality, **and** information and functionality cannot be achieved in another way that would conform. This includes animated gifs, if the gif animates for more than 5 seconds.
+If moving, blinking, scrolling, or auto-updating information starts automatically, lasts more than five seconds, and is presented in parallel with other content, the user must able to pause, stop, hide or control it, unless it's an essential functionality. "Essential" means that removing the moving, blinking, scrolling, or auto-updating information would fundamentally change the meaning of the content and/or functionality, **and** information and functionality cannot be achieved in another way that would conform. This includes animated GIFs, if the gif animates for more than 5 seconds.
 
 Additional timing criteria to consider are:
 
 - People who have cognitive or language limitations may need more time to read and to understand. For improved usability remove any time limit. Timed content should also be avoided, with exceptions for non-interactive synchronized media and real-time events.
-- People with attention deficit disorders should be able to focus on content without distractions. The user should be able to postpone or suppress interruptions, except situations involving altering a person to an emergency. This provides access to people with cognitive disabilities by enabling them to focus on the main purpose of the content. Enable the user to postpone content updates by providing a way to request content updates rather than updating automatically. Also, enable a way to make nonessential alerts optional.
+- People with attention deficit disorders should be able to focus on content without distractions. The user should be able to postpone or suppress interruptions, except situations involving alerting a person to an emergency. This provides access to people with cognitive disabilities by enabling them to focus on the main purpose of the content. Enable the user to postpone content updates by providing a way to request content updates rather than updating automatically. Also, enable a way to make nonessential alerts optional.
 - Ensure that people can continue an activity without loss of data after re-authenticating an expired session, for example, saving the state of a questionnaire. Make sure to save data in such a way that it can be modified after a user re-authenticates. Before re-authenticating, encode the data as hidden or encrypted.
 - Providing warnings about inactivity that could result in data loss. When a timeout is used, tell people exactly how much time will cause the session to time out and result in lost data. The exception to this is preserving data for more than 20 hours when no actions are taken.
 
@@ -130,7 +128,7 @@ When a user navigates using a keyboard, the UI should make it obvious which elem
 
 The link's text should clearly and concisely communicate what the user should expect to be navigated to next if they choose to activate it. Poorly phrased link text may confuse users as to its purpose or destination.
 
-Some forms of assistive technology allow users to navigate by lists of all the links present on the page. Links will be removed from the context of their surrounding non-link content, making the need for understandable link text even more important. An example of a poor experience is a page full of links whose text reads, "Click here." Without indicating where "here" will take you, the link's purpose is unclear.
+Some forms of assistive technology allow users to navigate by lists of all the links present on the page. Links will be removed from the context of their surrounding non-link content, making the need for understandable link text even more important. An example of a poor experience is a page full of links whose text reads, "Click here". Without indicating where "here" will take you, the link's purpose is unclear.
 
 For screen readers, it is vital that linked text describes the purpose of each link. If you have added content to links for screen readers, and that content is verbose and potentially confusing to sighted readers, consider clipping the added text to visually hide it from those not using assistive technologies.
 
@@ -142,7 +140,7 @@ All users benefit from information about where they are in a site's hierarchy, e
 
 ## Readability
 
-[Guideline 3.1](https://www.w3.org/WAI/WCAG21/Understanding/readable) states "make text content readable and understandable." For some users, it is difficult to infer the meaning of a word or phrase from context, especially when the word or phrase is used in an unusual way, or has been given a specialized meaning.
+[Guideline 3.1](https://www.w3.org/WAI/WCAG21/Understanding/readable) states "make text content readable and understandable". For some users, it is difficult to infer the meaning of a word or phrase from context, especially when the word or phrase is used in an unusual way, or has been given a specialized meaning.
 
 For these users, the ability to read and understand may depend on the availability of specific definitions or the expanded forms of acronyms or abbreviations. Some users may experience great difficulty in recognizing written words yet they understand extremely complex and sophisticated documents when the text is read aloud, or when key processes and ideas are illustrated visually.
 
@@ -169,14 +167,14 @@ Provide an expanded form of the abbreviation the first time it is used, followed
 
 ### Reading level
 
-Content should be written as clearly and as possible. A good rule to go by is to make content simple enough that it can be understood the first time. Methods to achieve this include:
+Content should be written as clearly as possible. A good rule to go by is to make content simple enough that it can be understood the first time. Methods to achieve this include:
 
 - Using short, simple words.
 - Writing short sentences.
 - Using active voice in the present tense.
 - Using correct grammar and spelling.
 
-It helps users with cognitive disabilities to provide a text summary (sometimes referred to as a TL;DR; , or "too long, didn't read") at a low reading level. Another technique you can use is providing accompanying visuals to help explain ideas, events, and processes.
+It helps users with cognitive disabilities to provide a text summary (sometimes referred to as a TL;DR, or "too long; didn't read") at a low reading level. Another technique you can use is providing accompanying visuals to help explain ideas, events, and processes.
 
 There are tools that can rate the level of your content. For example, this document has an average grade level of about 11. This means it should be easily understood by a native English speaker aged 16 to 17. Some tools can even provide suggestions to help simplify it.
 
@@ -189,13 +187,13 @@ There are multiple techniques that can help teach people how to pronounce words:
 - Provide a glossary with pronunciation.
 - Use the {{HTMLElement('ruby')}} element to illustrate how a word is pronounced.
 
-Providing guidance on how to pronounce words helps many different kinds of people, including those who prefer to read aloud, non-native language speakers, and people who may unfamiliar with the meaning of a term in context.
+Providing guidance on how to pronounce words helps many different kinds of people, including those who prefer to read aloud, non-native language speakers, and people who are unfamiliar with the meaning of a term in context.
 
 Another solution is to use glyphs or diacritical marks to illustrate pronunciation. However, if this technique is used, there must be a mechanism to turn it off. Further, it is helpful to link to a guide to the marks being used, as their meaning may not be obvious.
 
 ## Predictability
 
-WCAG [Guideline 3.2](https://www.w3.org/WAI/WCAG21/Understanding/predictable) states "make web pages appear and operate in predictable ways." This is a tenet of good user experience design. Consistency is especially important for people with cognitive difficulties. This includes consistency in page layout and predictable interactive components.
+WCAG [Guideline 3.2](https://www.w3.org/WAI/WCAG21/Understanding/predictable) states "make web pages appear and operate in predictable ways". This is a tenet of good user experience design. Consistency is especially important for people with cognitive difficulties. This includes consistency in page layout and predictable interactive components.
 
 ### Use activation, not focus to change context
 
@@ -221,7 +219,7 @@ While unlabeled iconography is not the most effective method of conveying inform
 
 ## Input Assistance
 
-[Guideline 3.3](https://www.w3.org/WAI/WCAG21/Understanding/input-assistance) helps to ensure accurate data entry, stating "help users avoid and correct mistakes." While we all make mistakes, some people are more likely to make mistakes, less likely to notice a mistake, or have a harder time correcting a mistake once they make one.
+[Guideline 3.3](https://www.w3.org/WAI/WCAG21/Understanding/input-assistance) helps to ensure accurate data entry, stating "help users avoid and correct mistakes". While we all make mistakes, some people are more likely to make mistakes, less likely to notice a mistake, or have a harder time correcting a mistake once they make one.
 
 Input Assistance guidelines aim to reduce the likelihood that users, especially those with disabilities, make a mistake, and, if they do make a mistake, increase the likelihood that they see and comprehend the error message and can successfully fix any errors.
 
@@ -268,17 +266,17 @@ The above are good design practices. They will benefit everyone.
 - Many people with cognitive impairments also have physical disabilities. Websites must conform with the W3C's [Web Content Accessibility Guidelines](https://www.w3.org/WAI/standards-guidelines/wcag/).
 - The W3C's [Cognitive and Learning Disabilities Accessibility Task Force](https://www.w3.org/WAI/GL/task-forces/coga/) produces web accessibility guidelines for people with cognitive impairments.
 - WebAIM has a [Cognitive page](https://webaim.org/articles/cognitive/) of relevant information and resources.
-- The United States Centers for Disease Control estimate that, as of 2018, 1 in 4 U.S. citizens have a disability and, of them, [cognitive impairment is the most common for young people](https://www.cdc.gov/media/releases/2018/p0816-disability.html).
-- In the U.S., "intellectual disabilities" used to be called "mental retardation." In the U.K., "intellectual disabilities" is commonly called "learning disabilities" or "learning difficulties".
+- The United States Centers for Disease Control estimate that, as of 2018, 1 in 4 U.S. citizens have a disability and, of them, [cognitive impairment is the most common for young people](https://archive.cdc.gov/www_cdc_gov/media/releases/2018/p0816-disability.html).
+- In the U.S., "intellectual disabilities" used to be called "mental retardation". In the U.K., "intellectual disabilities" is commonly called "learning disabilities" or "learning difficulties".
 
 ## See also
 
 - [Accessibility Guidelines](https://extensionworkshop.com/documentation/develop/build-an-accessible-extension/)
-- [What is accessibility](/en-US/docs/Learn/Accessibility/What_is_accessibility)
+- [What is accessibility](/en-US/docs/Learn_web_development/Core/Accessibility/What_is_accessibility)
 - [Accessibility for seizure disorders](/en-US/docs/Web/Accessibility/Seizure_disorders)
 - [Understanding WCAG Guidelines](/en-US/docs/Web/Accessibility/Understanding_WCAG)
-- [Accessibility overview](/en-US/docs/Learn/Accessibility)
-- [Web Content Accessibility Guidelines](https://www.w3.org/WAI/standards-guidelines/wcag/), including [cognitive accessibility guidelines](#wcag_guidelines).
-- [CThe W3Cs cognitive and Learning Disabilities Accessibility Task Force](https://www.w3.org/WAI/GL/task-forces/coga/)
+- [Accessibility overview](/en-US/docs/Learn_web_development/Core/Accessibility)
+- [Web Content Accessibility Guidelines](https://www.w3.org/WAI/standards-guidelines/wcag/), including [cognitive accessibility guidelines](#wcag_guidelines)
+- [The W3C's Cognitive and Learning Disabilities Accessibility Task Force](https://www.w3.org/WAI/GL/task-forces/coga/)
 - [WebAIM Cognitive information](https://webaim.org/articles/cognitive/)
-- [CDC information on disabilities.](https://www.cdc.gov/media/releases/2018/p0816-disability.html)
+- [CDC information on disabilities](https://www.cdc.gov/ncbddd/disabilityandhealth/)

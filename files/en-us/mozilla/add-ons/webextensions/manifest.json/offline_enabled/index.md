@@ -1,16 +1,12 @@
 ---
 title: offline_enabled
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/offline_enabled
-tags:
-  - Add-ons
-  - Deprecated
-  - Extensions
-  - Non-standard
-  - Offline
-  - WebExtensions
-  - google chrome
+page-type: webextension-manifest-key
+status:
+  - deprecated
 browser-compat: webextensions.manifest.offline_enabled
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
@@ -40,7 +36,7 @@ Whether the app or extension is expected to work offline. When Chrome detects th
 
 As of Chrome 35, apps (ChromeOS only from 2018) are assumed to be offline enabled and the default value of `"offline_enabled"` is `true` unless `"webview"` permission is requested. In this case, network connectivity is assumed to be required and `"offline_enabled"` defaults to `false`.
 
-The `"offline_enabled"` value is also used to determine whether a network connectivity check will be performed when launching an app in [Chrome OS kiosk mode](https://developer.chrome.com/docs/apps/manifest/kiosk_enabled/). A network connectivity check will be performed when apps are not offline enabled, and app launching put on hold until the device obtains connectivity to the Internet.
+The `"offline_enabled"` value is also used to determine whether a network connectivity check will be performed when launching an app in [ChromeOS kiosk mode](https://developer.chrome.com/docs/apps/manifest/kiosk_enabled/). A network connectivity check will be performed when apps are not offline enabled, and app launching put on hold until the device obtains connectivity to the Internet.
 
 ## Browser compatibility
 

@@ -1,25 +1,22 @@
 ---
 title: text-rendering
 slug: Web/CSS/text-rendering
-tags:
-  - CSS
-  - CSS Property
-  - Legibility
-  - Ligatures
-  - Precision
-  - Reference
-  - SVG
-  - Text
-  - Text Features
-  - Text Rendering
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.text-rendering
 ---
+
 {{CSSRef}}
 
-The **`text-rendering`** CSS property provides information to the rendering engine about what to optimize for when rendering text.
+The **`text-rendering`** [CSS](/en-US/docs/Web/CSS) property provides information to the rendering engine about what to optimize for when rendering text.
 
 The browser makes trade-offs among speed, legibility, and geometric precision.
+
+> [!NOTE]
+> The `text-rendering` property is an SVG property that is not defined in any CSS standard. However, Gecko and WebKit browsers let you apply this property to HTML and XML content on Windows, macOS, and Linux.
+
+One very visible effect is `optimizeLegibility`, which enables ligatures (ff, fi, fl, etc.) in text smaller than 20px for some fonts (for example, Microsoft's _Calibri_, _Candara_, _Constantia_, and _Corbel_, or the _DejaVu_ font family).
+
+## Syntax
 
 ```css
 /* Keyword values */
@@ -35,12 +32,6 @@ text-rendering: revert;
 text-rendering: revert-layer;
 text-rendering: unset;
 ```
-
-> **Note:** The `text-rendering` property is an SVG property that is not defined in any CSS standard. However, Gecko and WebKit browsers let you apply this property to HTML and XML content on Windows, macOS, and Linux.
-
-One very visible effect is `optimizeLegibility`, which enables ligatures (ff, fi, fl, etc.) in text smaller than 20px for some fonts (for example, Microsoft's _Calibri_, _Candara_, _Constantia_, and _Corbel_, or the _DejaVu_ font family).
-
-## Syntax
 
 ### Values
 
@@ -58,7 +49,8 @@ One very visible effect is `optimizeLegibility`, which enables ligatures (ff, fi
 
     But the `geometricPrecision` property — when fully supported by the rendering engine — lets you scale your text fluidly. For large scale factors, you might see less-than-beautiful text rendering, but the size is what you would expect—neither rounded up nor down to the nearest font size supported by Windows or Linux.
 
-    > **Note:** WebKit precisely applies the specified value, but Gecko treats the value the same as `optimizeLegibility`.
+    > [!NOTE]
+    > WebKit precisely applies the specified value, but Gecko treats the value the same as `optimizeLegibility`.
 
 ## Formal definition
 
@@ -84,15 +76,29 @@ This demonstrates how `optimizeLegibility` is used by browsers automatically whe
 #### CSS
 
 ```css
-.small { font: 19.9px "Constantia", "Times New Roman", "Georgia", "Palatino", serif; }
-.big   { font: 20px "Constantia", "Times New Roman", "Georgia", "Palatino", serif; }
+.small {
+  font:
+    19.9px "Constantia",
+    "Times New Roman",
+    "Georgia",
+    "Palatino",
+    serif;
+}
+.big {
+  font:
+    20px "Constantia",
+    "Times New Roman",
+    "Georgia",
+    "Palatino",
+    serif;
+}
 ```
 
 #### Result
 
 {{ EmbedLiveSample('Automatic_application_of_optimizeLegibility') }}
 
-### optimizeSpeed vs optimizeLegibility
+### optimizeSpeed vs. optimizeLegibility
 
 This example shows the difference between the appearance of `optimizeSpeed` and `optimizeLegibility` (in your browser; other browsers may vary).
 
@@ -106,10 +112,21 @@ This example shows the difference between the appearance of `optimizeSpeed` and 
 #### CSS
 
 ```css
-p { font: 1.5em "Constantia", "Times New Roman", "Georgia", "Palatino", serif }
+p {
+  font:
+    1.5em "Constantia",
+    "Times New Roman",
+    "Georgia",
+    "Palatino",
+    serif;
+}
 
-.speed       { text-rendering: optimizeSpeed; }
-.legibility  { text-rendering: optimizeLegibility; }
+.speed {
+  text-rendering: optimizeSpeed;
+}
+.legibility {
+  text-rendering: optimizeLegibility;
+}
 ```
 
 #### Result
@@ -127,7 +144,7 @@ p { font: 1.5em "Constantia", "Times New Roman", "Georgia", "Palatino", serif }
 ## See also
 
 - [Drawing text in a `<canvas>`](/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_text)
-- [CSS Text Decoration](/en-US/docs/Web/CSS/CSS_Text_Decoration) CSS module
+- [CSS Text Decoration](/en-US/docs/Web/CSS/CSS_text_decoration) CSS module
 - Related CSS properties
 
   - [`text-decoration`](/en-US/docs/Web/CSS/text-decoration) (and its longhand properties, such as [`text-decoration-line`](/en-US/docs/Web/CSS/text-decoration-line), [`text-decoration-style`](/en-US/docs/Web/CSS/text-decoration-style), and [`text-decoration-thickness`](/en-US/docs/Web/CSS/text-decoration-thickness))

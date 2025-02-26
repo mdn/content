@@ -1,16 +1,12 @@
 ---
-title: 'ServiceWorkerGlobalScope: activate event'
+title: "ServiceWorkerGlobalScope: activate event"
+short-title: activate
 slug: Web/API/ServiceWorkerGlobalScope/activate_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - Reference
-  - Service Workers
-  - ServiceWorkerGlobalScope
 browser-compat: api.ServiceWorkerGlobalScope.activate_event
 ---
-{{APIRef("Service Workers API")}}
+
+{{APIRef("Service Workers API")}}{{SecureContext_Header}}{{AvailableInWorkers("service")}}
 
 The **`activate`** event of the {{domxref("ServiceWorkerGlobalScope")}} interface is fired when a {{domxref("ServiceWorkerRegistration")}} acquires a new {{domxref("ServiceWorkerRegistration.active")}} worker.
 
@@ -21,9 +17,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('activate', (event) => { });
+addEventListener("activate", (event) => {});
 
-onactivate = (event) => { };
+onactivate = (event) => {};
 ```
 
 ## Event type
@@ -41,15 +37,19 @@ _Doesn't implement any specific properties, but inherits properties from its par
 The following snippet shows how you could use an `activate` event handler to upgrade a cache.
 
 ```js
-globalScope.addEventListener('activate', function(event) {
-  const cacheAllowlist = ['v2'];
+self.addEventListener("activate", (event) => {
+  const cacheAllowlist = ["v2"];
 
   event.waitUntil(
-    caches.forEach(function(cache, cacheName) {
-      if (cacheAllowlist.indexOf(cacheName) === -1) {
-        return caches.delete(cacheName);
-      }
-    })
+    caches.keys().then((cacheNames) => {
+      return Promise.all(
+        cacheNames.map((cacheName) => {
+          if (!cacheAllowlist.includes(cacheName)) {
+            return caches.delete(cacheName);
+          }
+        }),
+      );
+    }),
   );
 });
 ```
@@ -57,7 +57,7 @@ globalScope.addEventListener('activate', function(event) {
 You can also set up the event handler using the `onactivate` property:
 
 ```js
-globalScope.onactivate = function(event) {
+self.onactivate = (event) => {
   // ...
 };
 ```

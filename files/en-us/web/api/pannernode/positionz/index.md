@@ -1,24 +1,20 @@
 ---
-title: PannerNode.positionZ
+title: "PannerNode: positionZ property"
+short-title: positionZ
 slug: Web/API/PannerNode/positionZ
 page-type: web-api-instance-property
-tags:
-  - API
-  - PannerNode
-  - Property
-  - Reference
-  - Web Audio API
-  - positionZ
 browser-compat: api.PannerNode.positionZ
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The **`positionZ`** property of the {{ domxref("PannerNode") }} interface specifies the Z coordinate of the audio source's position in 3D Cartesian
 coordinates, corresponding to the _depth_ axis (behind-in front of the
 listener). The complete vector is defined by the position of the audio source, given
 as ({{domxref("PannerNode.positionX", "positionX")}},
-{{domxref("PannerNode.positionY", "positionY")}}, {{domxref("PannerNode.positionZ",
-    "positionZ")}}), and the orientation of the audio source (that is, the direction in
+{{domxref("PannerNode.positionY", "positionY")}},
+`positionZ`),
+and the orientation of the audio source (that is, the direction in
 which it's facing), given as ({{domxref("PannerNode.orientationX", "orientationX")}},
 {{domxref("PannerNode.orientationY", "orientationY")}},
 {{domxref("PannerNode.orientationZ", "orientationZ")}}).
@@ -52,14 +48,13 @@ const context = new AudioContext();
 
 const osc = new OscillatorNode(context);
 const panner = new PannerNode(context);
-panner.panningModel = 'HRTF';
+panner.panningModel = "HRTF";
 
 panner.positionZ.setValueAtTime(1, context.currentTime + 1);
 panner.positionZ.setValueAtTime(-1, context.currentTime + 2);
 panner.positionZ.setValueAtTime(0, context.currentTime + 3);
 
-osc.connect(panner)
-   .connect(context.destination);
+osc.connect(panner).connect(context.destination);
 
 osc.start(0);
 ```

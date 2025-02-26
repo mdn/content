@@ -1,31 +1,12 @@
 ---
-title: XRReferenceSpace.getOffsetReferenceSpace()
+title: "XRReferenceSpace: getOffsetReferenceSpace() method"
+short-title: getOffsetReferenceSpace()
 slug: Web/API/XRReferenceSpace/getOffsetReferenceSpace
 page-type: web-api-instance-method
-tags:
-  - API
-  - AR
-  - Mixed
-  - Orientation
-  - Position
-  - Reality
-  - Reference
-  - Rotate
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRReferenceSpace
-  - augmented
-  - getOffsetReferenceSpace
-  - move
-  - movement
-  - Method
 browser-compat: api.XRReferenceSpace.getOffsetReferenceSpace
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SecureContext_Header}}
 
 The {{domxref("XRReferenceSpace")}}
 interface's **`getOffsetReferenceSpace()`** method returns a
@@ -37,9 +18,8 @@ object returned by `getOffsetReferenceSpace()` is an
 
 In other words, when you have an object in 3D space and need to position another object
 relative to that one, you can call `getOffsetReferenceSpace()`, passing into
-it the position and orientation you want the second object to have *relative to the
-position and orientation of the object on which you
-call `getOffsetReferenceSpace()`*.
+it the position and orientation you want the second object to have
+_relative to the position and orientation of the object on which you call `getOffsetReferenceSpace()`_.
 
 Then, when drawing the scene, you can use the offset reference space to not only
 position objects relative to one another, but to apply the needed transforms to render
@@ -49,7 +29,7 @@ use this method to let the user use their mouse to pitch and yaw their viewing a
 
 ## Syntax
 
-```js
+```js-nolint
 getOffsetReferenceSpace(originOffset)
 ```
 
@@ -84,11 +64,11 @@ Upon first creating a scene, you may need to set the user's position within the 
 world. You can do that using `getOffsetReferenceSpace()`.
 
 ```js
-xrSession.requestReferenceSpace("local")
-.then((refSpace) => {
+xrSession.requestReferenceSpace("local").then((refSpace) => {
   xrReferenceSpace = refSpace;
   xrReferenceSpace = xrReferenceSpace.getOffsetReferenceSpace(
-        new XRRigidTransform(startPosition, {x:0, y:0, z:1.0, w: 1.0}));
+    new XRRigidTransform(startPosition, { x: 0, y: 0, z: 1.0, w: 1.0 }),
+  );
   xrSession.requestAnimationFrame(drawFrame);
 });
 ```
@@ -97,8 +77,7 @@ In this code, we obtain a local reference space, then
 use `getOffsetReferenceSpace()` to create a new space whose origin is
 adjusted to a position given by `startPosition` and whose orientation is
 looking directly along the Z axis. Then the first animation frame is requested using
-{{domxref("XRSession")}}'s {{domxref("XRSession.requestAnimationFrame",
-  "requestAnimationFrame()")}}.
+{{domxref("XRSession")}}'s {{domxref("XRSession.requestAnimationFrame", "requestAnimationFrame()")}}.
 
 ### Implementing rotation based on non-XR inputs
 
@@ -113,13 +92,15 @@ mouse to change the viewing angle.
 
 First, we add an event handler for {{domxref("Element.mousemove_event", "mousemove")}}
 events, which calls our code to perform the rotation if the right mouse button is down.
-Note also that we set {{domxref("Element.oncontextmenu", "oncontextmenu")}} up to be
+Note also that we set {{domxref("Element.contextmenu_event", "oncontextmenu")}} up to be
 ignored by calling {{domxref("Event.preventDefault", "preventDefault()")}} on those
 events. This prevents the right-clicks from causing the context menu from appearing in
 the browser.
 
 ```js
-canvas.oncontextmenu = (event) => { event.preventDefault(); };
+canvas.oncontextmenu = (event) => {
+  event.preventDefault();
+};
 canvas.addEventListener("mousemove", (event) => {
   if (event.buttons & 2) {
     rotateViewBy(event.movementX, event.movementY);
@@ -164,9 +145,15 @@ function applyMouseMovement(refSpace) {
   quat.rotateX(inverseOrientation, inverseOrientation, -mousePitch);
   quat.rotateY(inverseOrientation, inverseOrientation, -mouseYaw);
 
-  let newTransform = new XRRigidTransform({x: 0, y:  0, z: 0},
-                         {x: inverseOrientation[0], y: inverseOrientation[1],
-                          z: inverseOrientation[2], w: inverseOrientation[3]});
+  let newTransform = new XRRigidTransform(
+    { x: 0, y: 0, z: 0 },
+    {
+      x: inverseOrientation[0],
+      y: inverseOrientation[1],
+      z: inverseOrientation[2],
+      w: inverseOrientation[3],
+    },
+  );
 
   return refSpace.getOffsetReferenceSpace(newTransform);
 }
@@ -174,7 +161,7 @@ function applyMouseMovement(refSpace) {
 
 This function creates an inverse orientation matrix—used to orient the viewer—from the
 current pitch and yaw values, then uses that matrix as the source of the orientation
-when calling {{domxref("XRRigidTransform.XRRigidTransform", "new XRRigidTransform()")}}.
+when calling {{domxref("XRRigidTransform.XRRigidTransform", "XRRigidTransform()")}}.
 The new {{domxref("XRRigidTransform")}}'s reference space is then fetched and returned
 to the caller.
 

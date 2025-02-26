@@ -2,16 +2,12 @@
 title: InterventionReportBody
 slug: Web/API/InterventionReportBody
 page-type: web-api-interface
-tags:
-  - API
-  - Experimental
-  - Interface
-  - InterventionReportBody
-  - Reference
-  - Reporting API
-spec-urls: https://wicg.github.io/intervention-reporting/#interventionreportbody
+status:
+  - experimental
+browser-compat: api.InterventionReportBody
 ---
-{{APIRef("Reporting API")}}{{SeeCompatTable}}
+
+{{APIRef("Reporting API")}}{{AvailableInWorkers}}{{SeeCompatTable}}
 
 The `InterventionReportBody` interface of the [Reporting API](/en-US/docs/Web/API/Reporting_API) represents the body of an intervention report.
 
@@ -25,7 +21,7 @@ A deprecation report is generated when a deprecated feature (for example a depre
 
 An instance of `InterventionReportBody` is returned as the value of {{domxref("Report.body")}} when {{domxref("Report.Type")}} is `intervention`. The interface has no constructor.
 
-## Properties
+## Instance properties
 
 This interface also inherits properties from {{domxref("ReportBody")}}.
 
@@ -40,7 +36,7 @@ This interface also inherits properties from {{domxref("ReportBody")}}.
 - {{domxref("InterventionReportBody.columnNumber")}} {{experimental_inline}} {{ReadOnlyInline}}
   - : A string representing the column in the source file in which the intervention occurred, if known, or `null` otherwise.
 
-## Methods
+## Instance methods
 
 This interface also inherits methods from {{domxref("ReportBody")}}.
 
@@ -52,13 +48,13 @@ This interface also inherits methods from {{domxref("ReportBody")}}.
 In this example we create a new {{domxref("ReportingObserver")}} to observe intervention reports, then print details of each property of the first report to the console.
 
 ```js
-let options = {
-  types: ['intervention'],
-  buffered: true
-}
+const options = {
+  types: ["intervention"],
+  buffered: true,
+};
 
-let observer = new ReportingObserver(function(reports, observer) {
-  let firstReport = reports[0];
+const observer = new ReportingObserver((reports, observer) => {
+  const firstReport = reports[0];
   console.log(firstReport.type); // intervention
   console.log(firstReport.body.id);
   console.log(firstReport.body.message);
@@ -74,9 +70,9 @@ let observer = new ReportingObserver(function(reports, observer) {
 
 ## Browser compatibility
 
-This feature is not yet available by default in any released browser. It can be activated in Firefox by setting `dom_reporting_enabled` to `true` and in Chrome if you [enable this experimental feature](https://web.dev/reporting-api/#use-devtools).
+{{Compat}}
 
 ## See also
 
 - [Reporting API](/en-US/docs/Web/API/Reporting_API)
-- [The Reporting API](https://web.dev/reporting-api/)
+- [The Reporting API](https://developer.chrome.com/docs/capabilities/web-apis/reporting-api)

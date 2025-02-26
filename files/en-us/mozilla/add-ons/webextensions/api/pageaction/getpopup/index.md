@@ -1,19 +1,11 @@
 ---
 title: pageAction.getPopup()
 slug: Mozilla/Add-ons/WebExtensions/API/pageAction/getPopup
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - getPopup
-  - pageAction
+page-type: webextension-api-function
 browser-compat: webextensions.api.pageAction.getPopup
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 Gets the URL for the HTML document set as the popup for this page action.
 
@@ -21,7 +13,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let gettingPopup = browser.pageAction.getPopup(
   details               // object
 )
@@ -55,12 +47,12 @@ function gotPopup(popupURL) {
 
 browser.contextMenus.create({
   id: "get-popup",
-  title: "Get popup URL"
+  title: "Get popup URL",
 });
 
-browser.contextMenus.onClicked.addListener(function(info, tab) {
-  if (info.menuItemId == "get-popup") {
-    let gettingPopup = browser.pageAction.getPopup({tabId: tab.id});
+browser.contextMenus.onClicked.addListener((info, tab) => {
+  if (info.menuItemId === "get-popup") {
+    let gettingPopup = browser.pageAction.getPopup({ tabId: tab.id });
     gettingPopup.then(gotPopup);
   }
 });
@@ -68,11 +60,11 @@ browser.contextMenus.onClicked.addListener(function(info, tab) {
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.pageAction`](https://developer.chrome.com/docs/extensions/reference/pageAction/#method-getPopup) API. This documentation is derived from [`page_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/page_action.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.pageAction`](https://developer.chrome.com/docs/extensions/mv2/reference/pageAction#method-getPopup) API. This documentation is derived from [`page_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/page_action.json) in the Chromium code.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -99,4 +91,4 @@ browser.contextMenus.onClicked.addListener(function(info, tab) {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

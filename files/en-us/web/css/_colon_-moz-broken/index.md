@@ -1,26 +1,26 @@
 ---
-title: ':-moz-broken'
+title: :-moz-broken
 slug: Web/CSS/:-moz-broken
-tags:
-  - CSS
-  - CSS:Mozilla Extensions
-  - NeedsCompatTable
-  - Non-standard
-  - Pseudo-class
-  - Reference
-  - Selector
+page-type: css-pseudo-class
+status:
+  - deprecated
+  - non-standard
 browser-compat: css.selectors.-moz-broken
 ---
-{{CSSRef}}{{Non-standard_header}}
+
+{{CSSRef}}{{Non-standard_header}}{{deprecated_header}}
 
 The **`:-moz-broken`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) is a [Mozilla extension](/en-US/docs/Web/CSS/Mozilla_Extensions) that matches elements representing broken image links.
 
-> **Note:** This selector is mainly intended to be used by theme developers.
+> [!NOTE]
+> This selector is mainly intended to be used by theme developers.
 
 ## Syntax
 
 ```css
-:-moz-broken
+:-moz-broken {
+  /* ... */
+}
 ```
 
 ## Examples
@@ -28,7 +28,7 @@ The **`:-moz-broken`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web
 ### HTML
 
 ```html
-<img src="broken.jpg" alt="This image is broken. :-(">
+<img src="broken.jpg" alt="This image is broken. :-(" />
 ```
 
 ### CSS
@@ -55,4 +55,4 @@ Not part of any standard.
 ## See also
 
 - {{cssxref(":-moz-loading")}}, {{cssxref(":-moz-suppressed")}}, {{cssxref(":-moz-user-disabled")}}
-- {{bug("11011")}}
+- [Firefox bug 11011](https://bugzil.la/11011)

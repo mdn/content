@@ -1,17 +1,12 @@
 ---
-title: ReadableStream.tee()
+title: "ReadableStream: tee() method"
+short-title: tee()
 slug: Web/API/ReadableStream/tee
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - ReadableStream
-  - Reference
-  - Streams
-  - tee
 browser-compat: api.ReadableStream.tee
 ---
-{{APIRef("Streams")}}
+
+{{APIRef("Streams")}}{{AvailableInWorkers}}
 
 The **`tee()`** method of the
 {{domxref("ReadableStream")}} interface [tees](https://streams.spec.whatwg.org/#tee-a-readable-stream) the current readable stream, returning a
@@ -34,7 +29,7 @@ then the original `ReadableStream`'s controller's internal queue will start to f
 and once its {{domxref("ReadableStreamDefaultController.desiredSize", "desiredSize")}} ≤ 0
 or byte stream controller {{domxref("ReadableByteStreamController.desiredSize", "desiredSize")}} ≤ 0,
 then the controller will stop calling `pull(controller)` on the
-underlying source passed to {{domxref("ReadableStream.ReadableStream", "new ReadableStream()")}}.
+underlying source passed to {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}}.
 If only one branch is consumed, then the entire body will be enqueued in memory.
 Therefore, you should not use the built-in `tee()` to read very large streams
 in parallel at different speeds.
@@ -46,7 +41,7 @@ will generally lock it for the duration, preventing other readers from locking i
 
 ## Syntax
 
-```js
+```js-nolint
 tee()
 ```
 
@@ -95,7 +90,7 @@ function fetchStream(stream, list) {
     // value for fetch streams is a Uint8Array
     charsReceived += value.length;
     const chunk = value;
-    let listItem = document.createElement('li');
+    let listItem = document.createElement("li");
     listItem.textContent = `Read ${charsReceived} characters so far. Current chunk = ${chunk}`;
     list.appendChild(listItem);
 
@@ -112,3 +107,8 @@ function fetchStream(stream, list) {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}} constructor
+- [Teeing a stream](/en-US/docs/Web/API/Streams_API/Using_readable_streams#teeing_a_stream)

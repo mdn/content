@@ -1,17 +1,11 @@
 ---
-title: MediaQueryListEvent.media
+title: "MediaQueryListEvent: media property"
+short-title: media
 slug: Web/API/MediaQueryListEvent/media
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM View
-  - Media
-  - Media Queries
-  - MediaQueryListEvent
-  - Property
-  - Reference
 browser-compat: api.MediaQueryListEvent.media
 ---
+
 {{APIRef("CSSOM")}}
 
 The **`media`** read-only property of the
@@ -25,23 +19,22 @@ A string representing a serialized media query.
 ## Examples
 
 ```js
-const mql = window.matchMedia('(max-width: 600px)');
+const para = document.querySelector("p"); // This is the UI element where to display the text
+const mql = window.matchMedia("(max-width: 600px)");
 
-function screenTest(e) {
-  if (e.matches) {
-    /* the viewport is 600 pixels wide or less */
-    para.textContent = 'This is a narrow screen — less than 600px wide.';
-    document.body.style.backgroundColor = 'red';
+mql.addEventListener("change", (event) => {
+  if (event.matches) {
+    // The viewport is 600 pixels wide or less
+    para.textContent = "This is a narrow screen — less than 600px wide.";
+    document.body.style.backgroundColor = "red";
   } else {
-    /* the viewport is more than 600 pixels wide */
-    para.textContent = 'This is a wide screen — more than 600px wide.';
-    document.body.style.backgroundColor = 'blue';
+    // The viewport is more than 600 pixels wide
+    para.textContent = "This is a wide screen — more than 600px wide.";
+    document.body.style.backgroundColor = "blue";
   }
 
-  console.log(e.media);
-}
-
-mql.addListener(screenTest);
+  console.log(event.media);
+});
 ```
 
 ## Specifications
@@ -54,8 +47,8 @@ mql.addListener(screenTest);
 
 ## See also
 
-- [Media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
-- [Using media queries from code](/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries)
+- [Media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [Using media queries from code](/en-US/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
 - {{DOMxRef("window.matchMedia()")}}
 - {{DOMxRef("MediaQueryList")}}
 - {{DOMxRef("MediaQueryListEvent")}}

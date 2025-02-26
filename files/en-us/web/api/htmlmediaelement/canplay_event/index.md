@@ -1,15 +1,11 @@
 ---
-title: 'HTMLMediaElement: canplay event'
+title: "HTMLMediaElement: canplay event"
+short-title: canplay
 slug: Web/API/HTMLMediaElement/canplay_event
 page-type: web-api-event
-tags:
-  - Audio
-  - Event
-  - HTMLMediaElement
-  - Reference
-  - Video
 browser-compat: api.HTMLMediaElement.canplay_event
 ---
+
 {{APIRef("HTMLMediaElement")}}
 
 The `canplay` event is fired when the user agent can play the media, but estimates that not enough data has been loaded to play the media up to its end without having to stop for further buffering of content.
@@ -21,9 +17,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('canplay', (event) => { });
+addEventListener("canplay", (event) => {});
 
-oncanplay = (event) => { };
+oncanplay = (event) => {};
 ```
 
 ## Event type
@@ -37,20 +33,20 @@ These examples add an event listener for the HTMLMediaElement's `canplay` event,
 Using `addEventListener()`:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
-video.addEventListener('canplay', (event) => {
-  console.log('Video can start, but not sure it will play through.');
+video.addEventListener("canplay", (event) => {
+  console.log("Video can start, but not sure it will play through.");
 });
 ```
 
 Using the `oncanplay` event handler property:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
 video.oncanplay = (event) => {
-  console.log('Video can start, but not sure it will play through.');
+  console.log("Video can start, but not sure it will play through.");
 };
 ```
 
@@ -71,7 +67,6 @@ video.oncanplay = (event) => {
 - The HTMLMediaElement {{domxref("HTMLMediaElement.ended_event", 'ended')}} event
 - The HTMLMediaElement {{domxref("HTMLMediaElement.loadedmetadata_event", 'loadedmetadata')}} event
 - The HTMLMediaElement {{domxref("HTMLMediaElement.loadeddata_event", 'loadeddata')}} event
-- The HTMLMediaElement {{domxref("HTMLMediaElement.canplay_event", 'canplay')}} event
 - The HTMLMediaElement {{domxref("HTMLMediaElement.canplaythrough_event", 'canplaythrough')}} event
 - The HTMLMediaElement {{domxref("HTMLMediaElement.durationchange_event", 'durationchange')}} event
 - The HTMLMediaElement {{domxref("HTMLMediaElement.timeupdate_event", 'timeupdate')}} event

@@ -1,29 +1,22 @@
 ---
 title: bookmarks.update()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/update
-tags:
-  - API
-  - Add-ons
-  - Bookmarks
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - Update
-  - WebExtensions
+page-type: webextension-api-function
 browser-compat: webextensions.api.bookmarks.update
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 **`bookmarks.update()`** updates the title and/or URL of a bookmark, or the name of a bookmark folder.
 
-> **Warning:** If your extension attempts to update a bookmark in the bookmarks tree root node, the call will raise an error with the message: "The bookmark root cannot be modified" and the bookmark won't be updated.
+> [!WARNING]
+> If your extension attempts to update a bookmark in the bookmarks tree root node, the call will raise an error with the message: "The bookmark root cannot be modified" and the bookmark won't be updated.
 
 This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntax
 
-```js
+```js-nolint
 let updating = browser.bookmarks.update(
   id,                    // string
   changes                // object
@@ -57,23 +50,23 @@ function onFulfilled(bookmarkItem) {
 }
 
 function onRejected(error) {
-  console.log(`An error: ${error}`);
+  console.error(`Error: ${error}`);
 }
 
 function updateFolders(items) {
-  for (item of items) {
+  for (const item of items) {
     // only folders, so skip items with a `url`
     if (!item.url) {
-      let updating = browser.bookmarks.update(item.id, {
-        title: "Mozilla Developer Network (MDN)"
-      });
-      updating.then(onFulfilled, onRejected);
+      browser.bookmarks
+        .update(item.id, {
+          title: "Mozilla Developer Network (MDN)",
+        })
+        .then(onFulfilled, onRejected);
     }
   }
 }
 
-let searching = browser.bookmarks.search({ title: "MDN" });
-searching.then(updateFolders, onRejected);
+browser.bookmarks.search({ title: "MDN" }).then(updateFolders, onRejected);
 ```
 
 {{WebExtExamples}}
@@ -82,11 +75,11 @@ searching.then(updateFolders, onRejected);
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/bookmarks/#method-update) API. This documentation is derived from [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/api/bookmarks#method-update) API. This documentation is derived from [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) in the Chromium code.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -113,4 +106,4 @@ searching.then(updateFolders, onRejected);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

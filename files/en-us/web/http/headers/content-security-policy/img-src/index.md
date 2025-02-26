@@ -1,18 +1,10 @@
 ---
-title: 'CSP: img-src'
+title: "CSP: img-src"
 slug: Web/HTTP/Headers/Content-Security-Policy/img-src
-tags:
-  - CSP
-  - Content-Security-Policy
-  - Directive
-  - HTTP
-  - Image
-  - Reference
-  - Security
-  - img-src
-  - source
+page-type: http-csp-directive
 browser-compat: http.headers.Content-Security-Policy.img-src
 ---
+
 {{HTTPSidebar}}
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}} **`img-src`** directive specifies valid sources of images and favicons.
@@ -39,18 +31,22 @@ The HTTP {{HTTPHeader("Content-Security-Policy")}} **`img-src`** directive speci
 
 ## Syntax
 
-One or more sources can be allowed for the `img-src` policy:
-
 ```http
-Content-Security-Policy: img-src <source>;
-Content-Security-Policy: img-src <source> <source>;
+Content-Security-Policy: img-src 'none';
+Content-Security-Policy: img-src <source-expression-list>;
 ```
 
-### Sources
+This directive may have one of the following values:
 
-`<source>` can be any one of the values listed in [CSP Source Values](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#sources).
+- `'none'`
+  - : No resources of this type may be loaded. The single quotes are mandatory.
+- `<source-expression-list>`
 
-Note that this same set of values can be used in all {{Glossary("fetch directive", "fetch directives")}} (and a [number of other directives](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#relevant_directives)).
+  - : A space-separated list of _source expression_ values. Resources of this type may be loaded if they match any of the given source expressions. For this directive, the following source expression values are applicable:
+
+    - [`<host-source>`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#host-source)
+    - [`<scheme-source>`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#scheme-source)
+    - [`'self'`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#self)
 
 ## Examples
 
@@ -65,7 +61,7 @@ Content-Security-Policy: img-src https://example.com/
 The following {{HTMLElement("img")}} is blocked and won't load:
 
 ```html
-<img src="https://not-example.com/foo.jpg" alt="example picture">
+<img src="https://not-example.com/foo.jpg" alt="example picture" />
 ```
 
 ## Specifications

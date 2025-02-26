@@ -1,13 +1,11 @@
 ---
 title: Mobile accessibility checklist
 slug: Web/Accessibility/Mobile_accessibility_checklist
-tags:
-  - Accessibility
-  - Firefox OS
-  - Guidelines
-  - Mobile
-  - checklist
+page-type: guide
 ---
+
+{{AccessibilitySidebar}}
+
 This document provides a concise checklist of accessibility requirements for mobile app developers. It is intended to continuously evolve as more patterns arise.
 
 ## Color
@@ -40,7 +38,7 @@ This document provides a concise checklist of accessibility requirements for mob
 
 - Text equivalent must be provided for every non-strictly presentational non-text element within the app.
 
-  - Use _alt_ and _title_ where appropriate (*s*ee Steve Faulkner's post about [Using the HTML title attribute](https://www.tpgi.com/using-the-html-title-attribute-updated/) for a good guide.)
+  - Use _alt_ and _title_ where appropriate (read Steve Faulkner's post about [Using the HTML title attribute](https://www.tpgi.com/using-the-html-title-attribute-updated/) for a good guide.)
   - If the above attributes are not applicable, use appropriate [ARIA States and Properties](https://www.w3.org/TR/wai-aria-1.1/#state_prop_def) such as `aria-label`, `aria-labelledby`, or `aria-describedby`.
 
 - Images of text must be avoided.
@@ -64,19 +62,20 @@ This document provides a concise checklist of accessibility requirements for mob
 
   ```html
   <h1>Top level heading</h1>
-    <h2>Secondary heading</h2>
-    <h2>Another secondary heading</h2>
-      <h3>Low level heading</h3>
+  <h2>Secondary heading</h2>
+  <h2>Another secondary heading</h2>
+  <h3>Low level heading</h3>
   ```
 
-- [ARIA Landmark Roles](https://www.washington.edu/accessibility/websites/regions/) should be used to describe an app or document structure, such as `banner`, `complementary`, `contentinfo`, `main`, `navigation`, `search`.
-- For touch events, at least one of the following must be true ([WCAG 2.1: Pointer Cancellation](https://www.w3.org/WAI/WCAG21/Understanding/pointer-cancellation.html)):
+- [ARIA Landmark Roles](https://www.washington.edu/accesstech/websites/regions/) should be used to describe an app or document structure, such as `banner`, `complementary`, `contentinfo`, `main`, `navigation`, `search`.
+- For touch events, ensure the following ([WCAG 2.1: Pointer Cancellation](https://www.w3.org/WAI/WCAG21/Understanding/pointer-cancellation.html)):
 
-  - The down-event should not be used to trigger any action
-  - The action is triggered on the up event and an option to abort the action before its completion is available or an option to undo the action after its completion
-  - The up-event will undo any action that was triggered on a down event
-  - It is essential to trigger the action on the down event. For example, playing a game or a piano application.
+  - The down-event should not be used to execute any part of the function;
+  - Failing the above, _completion_ of the function should be on the up-event, and a mechanism is available to abort the action before its completion or to undo the action after its completion;
+  - Failing the above, the up-event should be able to undo any action that was triggered on a down event;
+  - All the above may be violated if it is essential to trigger the action on the down event, usually to simulate real-world experiences or to provide real-time feedback. For example, game controls, piano keyboards, or virtual keyboards.
 
 - Touch targets must be large enough for the user to interact with (see the [BBC Mobile Accessibility Guidelines](https://www.bbc.co.uk/accessibility/forproducts/guides/mobile/target-touch-size) for useful touch target size guidelines).
 
-> **Note:** The [original version of this document](https://yzen.github.io/firefoxos/2014/04/30/mobile-accessibility-checklist.html) was written by [Yura Zenevich](https://yzen.github.io/).
+> [!NOTE]
+> The [original version of this document](https://yzen.github.io/firefoxos/2014/04/30/mobile-accessibility-checklist.html) was written by [Yura Zenevich](https://yzen.github.io/).

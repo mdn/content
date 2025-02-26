@@ -1,24 +1,15 @@
 ---
-title: IDBKeyRange.upper
+title: "IDBKeyRange: upper property"
+short-title: upper
 slug: Web/API/IDBKeyRange/upper
 page-type: web-api-instance-property
-tags:
-  - API
-  - Database
-  - IDBKeyRange
-  - IndexedDB
-  - Property
-  - Reference
-  - Storage
-  - upper
 browser-compat: api.IDBKeyRange.upper
 ---
-{{ APIRef("IndexedDB") }}
+
+{{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
 
 The **`upper`** read-only property of the
 {{domxref("IDBKeyRange")}} interface returns the upper bound of the key range.
-
-{{AvailableInWorkers}}
 
 ## Value
 
@@ -37,8 +28,9 @@ its optional key range value.
 After declaring the key range, we log its `upper` property value to the
 console, which should appear as "W".
 
-> **Note:** For a more complete example allowing you to experiment with
-> key range, have a look at our [IDBKeyRange-example](https://github.com/mdn/dom-examples/tree/master/indexeddb-examples/idbkeyrange) repo
+> [!NOTE]
+> For a more complete example allowing you to experiment with
+> key range, have a look at our [IDBKeyRange-example](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbkeyrange) repo
 > ([view the example live too](https://mdn.github.io/dom-examples/indexeddb-examples/idbkeyrange/).)
 
 ```js
@@ -46,22 +38,22 @@ function displayData() {
   const keyRangeValue = IDBKeyRange.bound("F", "W", true, true);
   console.log(keyRangeValue.upper);
 
-  const transaction = db.transaction(['fThings'], 'readonly');
-  const objectStore = transaction.objectStore('fThings');
+  const transaction = db.transaction(["fThings"], "readonly");
+  const objectStore = transaction.objectStore("fThings");
 
-  objectStore.openCursor(keyRangeValue).onsuccess = function(event) {
+  objectStore.openCursor(keyRangeValue).onsuccess = (event) => {
     const cursor = event.target.result;
-      if(cursor) {
-        const listItem = document.createElement('li');
-        listItem.textContent = `${cursor.value.fThing}, ${cursor.value.fRating}`;
-        list.appendChild(listItem);
+    if (cursor) {
+      const listItem = document.createElement("li");
+      listItem.textContent = `${cursor.value.fThing}, ${cursor.value.fRating}`;
+      list.appendChild(listItem);
 
-        cursor.continue();
-      } else {
-        console.log('Entries all displayed.');
-      }
-    };
+      cursor.continue();
+    } else {
+      console.log("Entries all displayed.");
+    }
   };
+}
 ```
 
 ## Specifications
@@ -80,4 +72,4 @@ function displayData() {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([View the example live](https://mdn.github.io/dom-examples/to-do-notifications/)).

@@ -1,36 +1,30 @@
 ---
-title: 'HTMLElement: drag event'
+title: "HTMLElement: drag event"
+short-title: drag
 slug: Web/API/HTMLElement/drag_event
 page-type: web-api-event
-tags:
-  - API
-  - DOM
-  - Element
-  - Drag
-  - DragEvent
-  - Event
-  - Reference
-  - Web
-  - drag and drop
 browser-compat: api.HTMLElement.drag_event
 ---
+
 {{APIRef}}
 
 The `drag` event is fired every few hundred milliseconds as an element or text selection is being dragged by the user.
+
+This event is cancelable and may bubble up to the {{domxref("Document")}} and {{domxref("Window")}} objects.
 
 ## Syntax
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('drag', (event) => {});
+addEventListener("drag", (event) => {});
 
-ondrag = (event) => { };
+ondrag = (event) => {};
 ```
 
 ## Event type
 
-An {{domxref("DragEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("DragEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("DragEvent")}}
 
@@ -38,7 +32,7 @@ An {{domxref("DragEvent")}}. Inherits from {{domxref("Event")}}.
 
 _In addition to the properties listed below, properties from the parent interface, {{domxref("Event")}}, are available._
 
-- {{domxref('DragEvent.dataTransfer')}} {{readonlyInline}}
+- {{domxref('DragEvent.dataTransfer')}} {{ReadOnlyInline}}
   - : The data that is transferred during a drag and drop interaction.
 
 ## Examples
@@ -49,11 +43,9 @@ _In addition to the properties listed below, properties from the parent interfac
 
 ```html
 <div class="dropzone">
-  <div id="draggable" draggable="true">
-    This div is draggable
-  </div>
+  <div id="draggable" draggable="true">This div is draggable</div>
 </div>
-<div class="dropzone" id="droptarget"></div>
+<div class="dropzone" id="drop-target"></div>
 ```
 
 #### CSS
@@ -82,7 +74,7 @@ body {
 }
 
 .dragging {
-  opacity: .5;
+  opacity: 0.5;
 }
 ```
 
@@ -110,11 +102,15 @@ source.addEventListener("dragend", (event) => {
 });
 
 /* events fired on the drop targets */
-const target = document.getElementById("droptarget");
-target.addEventListener("dragover", (event) => {
-  // prevent default to allow drop
-  event.preventDefault();
-}, false);
+const target = document.getElementById("drop-target");
+target.addEventListener(
+  "dragover",
+  (event) => {
+    // prevent default to allow drop
+    event.preventDefault();
+  },
+  false,
+);
 
 target.addEventListener("dragenter", (event) => {
   // highlight potential drop target when the draggable element enters it
@@ -136,7 +132,6 @@ target.addEventListener("drop", (event) => {
   // move dragged element to the selected drop target
   if (event.target.classList.contains("dropzone")) {
     event.target.classList.remove("dragover");
-    dragged.parentNode.removeChild(dragged);
     event.target.appendChild(dragged);
   }
 });
@@ -156,17 +151,9 @@ target.addEventListener("drop", (event) => {
 
 ## See also
 
-- Other drag and drop events:
-
-  - {{domxref("HTMLElement/dragstart_event", "dragstart")}}
-  - {{domxref("HTMLElement/dragend_event", "dragend")}}
-  - {{domxref("HTMLElement/dragover_event", "dragover")}}
-  - {{domxref("HTMLElement/dragenter_event", "dragenter")}}
-  - {{domxref("HTMLElement/dragleave_event", "dragleave")}}
-  - {{domxref("HTMLElement/drop_event", "drop")}}
-
-- This event on other targets:
-
-  - {{domxref("Window")}}: {{domxref("Window/drag_event", "drag")}} event
-  - {{domxref("Document")}}: {{domxref("Document/drag_event", "drag")}} event
-  - {{domxref("SVGElement")}}: {{domxref("SVGElement/drag_event", "drag")}} event
+- {{domxref("HTMLElement/dragstart_event", "dragstart")}}
+- {{domxref("HTMLElement/dragend_event", "dragend")}}
+- {{domxref("HTMLElement/dragover_event", "dragover")}}
+- {{domxref("HTMLElement/dragenter_event", "dragenter")}}
+- {{domxref("HTMLElement/dragleave_event", "dragleave")}}
+- {{domxref("HTMLElement/drop_event", "drop")}}

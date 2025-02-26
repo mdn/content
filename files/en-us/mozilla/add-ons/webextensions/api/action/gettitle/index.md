@@ -1,23 +1,16 @@
 ---
 title: action.getTitle()
 slug: Mozilla/Add-ons/WebExtensions/API/action/getTitle
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - action
-  - getTitle
+page-type: webextension-api-function
 browser-compat: webextensions.api.action.getTitle
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 Gets the browser action's title.
 
-> **Note:** This API is available in Manifest V3 or higher.
+> [!NOTE]
+> This API is available in Manifest V3 or higher.
 
 Just as you can set the title on a per-tab basis using {{WebExtAPIRef("action.setTitle()")}}, so you can retrieve a tab-specific title by passing the tab's ID into this function.
 
@@ -25,7 +18,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let gettingTitle = browser.action.getTitle(
   details               // object
 )
@@ -57,10 +50,10 @@ This code switches the title between "this" and "that" each time the user clicks
 
 ```js
 function toggleTitle(title) {
-  if (title == "this") {
-    browser.action.setTitle({title: "that"});
+  if (title === "this") {
+    browser.action.setTitle({ title: "that" });
   } else {
-    browser.action.setTitle({title: "this"});
+    browser.action.setTitle({ title: "this" });
   }
 }
 
@@ -76,11 +69,11 @@ browser.action.onClicked.addListener(() => {
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.action`](https://developer.chrome.com/docs/extensions/reference/action/#method-getTitle) API. This documentation is derived from [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.action`](https://developer.chrome.com/docs/extensions/reference/api/action#method-getTitle) API. This documentation is derived from [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) in the Chromium code.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -107,4 +100,4 @@ browser.action.onClicked.addListener(() => {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

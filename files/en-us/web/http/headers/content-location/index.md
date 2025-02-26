@@ -1,24 +1,18 @@
 ---
 title: Content-Location
 slug: Web/HTTP/Headers/Content-Location
-tags:
-  - HTTP
-  - Reference
-  - header
+page-type: http-header
 browser-compat: http.headers.Content-Location
 ---
+
 {{HTTPSidebar}}
 
-The **`Content-Location`** header indicates an alternate
-location for the returned data. The principal use is to indicate the URL of a resource
-transmitted as the result of [content negotiation](/en-US/docs/Web/HTTP/Content_negotiation).
+The HTTP **`Content-Location`** {{Glossary("representation header")}} indicates an alternate location for the returned data.
+It's main use is to indicate the URL of a resource transmitted as the result of [content negotiation](/en-US/docs/Web/HTTP/Content_negotiation).
 
-{{HTTPHeader("Location")}} and `Content-Location` are different.
-`Location` indicates the URL of a redirect, while
-`Content-Location` indicates the direct URL to use to access the resource,
-without further content negotiation in the future. `Location` is a header
-associated with the response, while `Content-Location` is associated with the
-data returned. This distinction may seem abstract without [examples](#examples).
+The `Content-Location` header is different from the {{HTTPHeader("Location")}} header.
+`Content-Location` indicates the direct URL to access the resource when [content negotiation](/en-US/docs/Web/HTTP/Content_negotiation) has happened, allowing the client to bypass future content negotiation for this resource.
+`Location`, on the other hand, indicates either the target of a `3XX` redirection or the URL of a newly created resource in a {{HTTPStatus("201", "201 Created")}} response.
 
 <table class="properties">
   <tbody>
@@ -27,31 +21,29 @@ data returned. This distinction may seem abstract without [examples](#examples).
       <td>{{Glossary("Representation header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>no</td>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
+      <td>No</td>
     </tr>
   </tbody>
 </table>
 
 ## Syntax
 
-```
+```http
 Content-Location: <url>
 ```
 
 ## Directives
 
-- \<url>
-  - : A [relative](/en-US/docs/Learn/Common_questions/What_is_a_URL#examples_of_relative_urls)
-    (to the request URL) or [absolute](/en-US/docs/Learn/Common_questions/What_is_a_URL#examples_of_absolute_urls)
-    URL.
+- `<url>`
+  - : A URL that can be [absolute](/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL#absolute_urls_vs._relative_urls) or [relative](/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL#absolute_urls_vs._relative_urls) to the request URL.
 
 ## Examples
 
 ### Requesting data from a server in different formats
 
 Let's say a site's API can return data in {{glossary("JSON")}}, {{glossary("XML")}}, or
-[CSV](https://en.wikipedia.org/wiki/Comma-separated_values "Comma-separated values") formats. If the URL for a particular document
+[CSV](https://en.wikipedia.org/wiki/Comma-separated_values) formats. If the URL for a particular document
 is at `https://example.com/documents/foo`, the site could return different
 URLs for `Content-Location` depending on the request's
 {{HTTPHeader("Accept")}} header:
@@ -72,32 +64,6 @@ URL, skipping content negotiation the next time it requests that document.
 The server could also consider other [content negotiation](/en-US/docs/Web/HTTP/Content_negotiation) headers, such
 as {{HTTPHeader("Accept-Language")}}.
 
-### Pointing to a new document (HTTP 201 Created)
-
-Say you're creating a new blog post through a site's API:
-
-```
-POST /new/post
-Host: example.com
-Content-Type: text/markdown
-
-# My first blog post!
-
-I made this through `example.com`'s API. I hope it worked.
-```
-
-The site returns the published post in the response body. The server specifies  _where_ the new post is with the `Content-Location` header, indicating that this location refers to the content (the body) of this response:
-
-```
-HTTP/1.1 201 Created
-Content-Type: text/markdown
-Content-Location: /my-first-blog-post
-
-# My first blog post
-
-I made this through `example.com`'s API. I hope it worked.
-```
-
 ### Indicating the URL of a transaction's result
 
 Say you have a
@@ -107,14 +73,16 @@ money to another user of a site.
 ```html
 <form action="/send-payment" method="post">
   <p>
-    <label>Who do you want to send the money to?
-      <input type="text" name="recipient">
+    <label>
+      Who do you want to send the money to?
+      <input type="text" name="recipient" />
     </label>
   </p>
 
   <p>
-    <label>How much?
-      <input type="number" name="amount">
+    <label>
+      How much?
+      <input type="number" name="amount" />
     </label>
   </p>
 
@@ -126,7 +94,7 @@ When the form is submitted, the site generates a receipt for the transaction. Th
 server could use `Content-Location` to indicate that receipt's URL for future
 access.
 
-```
+```http
 HTTP/1.1 200 OK
 Content-Type: text/html; charset=utf-8
 Content-Location: /my-receipts/38

@@ -2,21 +2,21 @@
 title: WheelEvent
 slug: Web/API/WheelEvent
 page-type: web-api-interface
-tags:
-  - API
-  - DOM
-  - Interface
-  - Reference
-  - WheelEvent
 browser-compat: api.WheelEvent
 ---
+
 {{APIRef("UI Events")}}
 
 The **`WheelEvent`** interface represents events that occur due to the user moving a mouse wheel or similar input device.
 
-> **Note:** This is the standard wheel event interface to use. Old versions of browsers implemented the non-standard and non-cross-browser-compatible `MouseWheelEvent` and {{DOMxRef("MouseScrollEvent")}} interfaces. Use this interface and avoid the non-standard ones.
+> [!NOTE]
+> This is the standard wheel event interface to use. Old versions of browsers implemented the non-standard and non-cross-browser-compatible `MouseWheelEvent` and {{DOMxRef("MouseScrollEvent")}} interfaces. Use this interface and avoid the non-standard ones.
 
-> **Note:** Do not confuse the {{domxref("Element/wheel_event", "wheel")}} event with the {{domxref("Element/scroll_event", "scroll")}} event. The default action of a `wheel` event is implementation-defined. Thus, a `wheel` event doesn't necessarily dispatch a `scroll` event. Even when it does, that doesn't mean that the `delta*` values in the `wheel` event necessarily reflect the content's scrolling direction. Therefore, do not rely on `delta*` properties to get the content's scrolling direction. Instead, detect value changes to {{DOMxRef("Element.scrollLeft", "scrollLeft")}} and {{DOMxRef("Element.scrollTop", "scrollTop")}} of the target in the `scroll` event.
+Don't confuse the `wheel` event with the {{domxref("Element/scroll_event", "scroll")}} event:
+
+- A `wheel` event doesn't necessarily dispatch a `scroll` event. For example, the element may be unscrollable at all. Zooming actions using the wheel or trackpad also fire `wheel` events.
+- A `scroll` event isn't necessarily triggered by a `wheel` event. Elements can also be scrolled by using the keyboard, dragging a scrollbar, or using JavaScript.
+- Even when the `wheel` event does trigger scrolling, the `delta*` values in the `wheel` event don't necessarily reflect the content's scrolling direction.
 
 {{InheritanceDiagram}}
 
@@ -25,7 +25,7 @@ The **`WheelEvent`** interface represents events that occur due to the user movi
 - {{DOMxRef("WheelEvent.WheelEvent", "WheelEvent()")}}
   - : Creates a `WheelEvent` object.
 
-## Properties
+## Instance properties
 
 _This interface inherits properties from its ancestors, {{DOMxRef("MouseEvent")}}, {{DOMxRef("UIEvent")}}, and {{DOMxRef("Event")}}._
 
@@ -45,16 +45,16 @@ _This interface inherits properties from its ancestors, {{DOMxRef("MouseEvent")}
     | `WheelEvent.DOM_DELTA_LINE`  | `0x01` | The `delta*` values are specified in lines. Each mouse click scrolls a line of content, where the method used to calculate line height is browser dependent. |
     | `WheelEvent.DOM_DELTA_PAGE`  | `0x02` | The `delta*` values are specified in pages. Each mouse click scrolls a page of content.                                                                      |
 
-- {{DOMxRef("WheelEvent.wheelDelta")}} {{ReadOnlyInline}} {{deprecated_inline}}
+- {{DOMxRef("WheelEvent.wheelDelta")}} {{ReadOnlyInline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Returns an integer (32-bit) representing the distance in pixels.
-- {{DOMxRef("WheelEvent.wheelDeltaX")}} {{ReadOnlyInline}} {{deprecated_inline}}
+- {{DOMxRef("WheelEvent.wheelDeltaX")}} {{ReadOnlyInline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Returns an integer representing the horizontal scroll amount.
-- {{DOMxRef("WheelEvent.wheelDeltaY")}} {{ReadOnlyInline}} {{deprecated_inline}}
+- {{DOMxRef("WheelEvent.wheelDeltaY")}} {{ReadOnlyInline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Returns an integer representing the vertical scroll amount.
 
 > **Note:** [Element: mousewheel event](/en-US/docs/Web/API/Element/mousewheel_event) has additional documentation about the deprecated properties `wheelDelta`, `wheelDeltaX`, `wheelDeltaY`.
 
-## Methods
+## Instance methods
 
 _This interface doesn't define any specific methods, but inherits methods from its ancestors, {{DOMxRef("MouseEvent")}}, {{DOMxRef("UIEvent")}}, and {{DOMxRef("Event")}}._
 

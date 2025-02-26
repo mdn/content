@@ -1,15 +1,11 @@
 ---
-title: Document.elementsFromPoint()
+title: "Document: elementsFromPoint() method"
+short-title: elementsFromPoint()
 slug: Web/API/Document/elementsFromPoint
 page-type: web-api-instance-method
-tags:
-  - API
-  - Document
-  - Method
-  - Reference
-  - elementsFromPoint
 browser-compat: api.Document.elementsFromPoint
 ---
+
 {{APIRef("DOM")}}
 
 The **`elementsFromPoint()`** method
@@ -17,12 +13,11 @@ of the {{domxref("Document")}} interface returns an array of all elements
 at the specified coordinates (relative to the viewport).
 The elements are ordered from the topmost to the bottommost box of the viewport.
 
-It operates in a similar way to the {{domxref("Document.elementFromPoint",
-  "elementFromPoint()")}} method.
+It operates in a similar way to the {{domxref("Document.elementFromPoint", "elementFromPoint()")}} method.
 
 ## Syntax
 
-```js
+```js-nolint
 elementsFromPoint(x, y)
 ```
 
@@ -55,16 +50,18 @@ An array of {{domxref('Element')}} objects, ordered from the topmost to the bott
 let output = document.getElementById("output");
 if (document.elementsFromPoint) {
   let elements = document.elementsFromPoint(30, 20);
-  for (let i = 0; i < elements.length; i++) {
-    output.textContent += elements[i].localName;
+  elements.forEach((elt, i) => {
+    output.textContent += elt.localName;
     if (i < elements.length - 1) {
       output.textContent += " < ";
     }
-  }
+  });
 } else {
-  output.innerHTML = "<span style=\"color: red;\">" +
-     "Browser does not support <code>document.elementsFromPoint()</code>" +
-     "</span>";
+  output.innerHTML = `<span style="color: red">
+  Browser does not support
+  <code>document.elementsFromPoint()</code>
+</span>
+`;
 }
 ```
 

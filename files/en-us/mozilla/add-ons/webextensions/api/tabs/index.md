@@ -1,22 +1,16 @@
 ---
 title: tabs
 slug: Mozilla/Add-ons/WebExtensions/API/tabs
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Interface
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - tabs
+page-type: webextension-api
 browser-compat: webextensions.api.tabs
 ---
+
 {{AddonSidebar}}
 
 Interact with the browser's tab system.
 
-> **Note:** When using Manifest V3 or higher, the methods to execute scripts, insert CSS, and remove CSS are provided by the {{WebExtAPIRef("scripting")}} API through the {{WebExtAPIRef("scripting.executeScript()")}}, {{WebExtAPIRef("scripting.insertCSS()")}} and {{WebExtAPIRef("scripting.removeCSS()")}} methods.
+> [!NOTE]
+> When using Manifest V3 or higher, the methods to execute scripts, insert CSS, and remove CSS are provided by the {{WebExtAPIRef("scripting")}} API through the {{WebExtAPIRef("scripting.executeScript()")}}, {{WebExtAPIRef("scripting.insertCSS()")}} and {{WebExtAPIRef("scripting.removeCSS()")}} methods.
 
 You can use this API to get a list of opened tabs, filtered by various criteria, and to open, update, move, reload, and remove tabs. You can't directly access the content hosted by tabs using this API, but you can insert JavaScript and CSS into tabs using the {{WebExtAPIRef("tabs.executeScript()")}} or {{WebExtAPIRef("tabs.insertCSS()")}} APIs.
 
@@ -83,7 +77,7 @@ Many tab operations use a Tab `id`. Tab `id`s are guaranteed to be unique to a s
 - {{WebExtAPIRef("tabs.getCurrent()")}}
   - : Gets information about the tab that this script is running in, as a [`tabs.Tab`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/Tab) object.
 - {{WebExtAPIRef("tabs.getSelected()")}} {{deprecated_inline}}
-  - : Gets the tab that is selected in the specified window. **Deprecated: use [`tabs.query({active: true})`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query) instead.**
+  - : Gets the tab that is selected in the specified window. **Deprecated**: use [`tabs.query({active: true})`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query) instead.
 - {{WebExtAPIRef("tabs.getZoom()")}}
   - : Gets the current zoom factor of the specified tab.
 - {{WebExtAPIRef("tabs.getZoomSettings()")}}
@@ -138,7 +132,7 @@ Many tab operations use a Tab `id`. Tab `id`s are guaranteed to be unique to a s
 - {{WebExtAPIRef("tabs.onActivated")}}
   - : Fires when the active tab in a window changes. Note that the tab's URL may not be set at the time this event fired.
 - {{WebExtAPIRef("tabs.onActiveChanged")}} {{deprecated_inline}}
-  - : Fires when the selected tab in a window changes. **Deprecated:** use {{WebExtAPIRef("tabs.onActivated")}} instead.
+  - : Fires when the selected tab in a window changes. **Deprecated**: use {{WebExtAPIRef("tabs.onActivated")}} instead.
 - {{WebExtAPIRef("tabs.onAttached")}}
   - : Fired when a tab is attached to a window, for example because it was moved between windows.
 - {{WebExtAPIRef("tabs.onCreated")}}
@@ -146,7 +140,7 @@ Many tab operations use a Tab `id`. Tab `id`s are guaranteed to be unique to a s
 - {{WebExtAPIRef("tabs.onDetached")}}
   - : Fired when a tab is detached from a window, for example because it is being moved between windows.
 - {{WebExtAPIRef("tabs.onHighlightChanged")}} {{deprecated_inline}}
-  - : Fired when the highlighted or selected tabs in a window change. **Deprecated:** use {{WebExtAPIRef("tabs.onHighlighted")}} instead.
+  - : Fired when the highlighted or selected tabs in a window change. **Deprecated**: use {{WebExtAPIRef("tabs.onHighlighted")}} instead.
 - {{WebExtAPIRef("tabs.onHighlighted")}}
   - : Fired when the highlighted or selected tabs in a window change.
 - {{WebExtAPIRef("tabs.onMoved")}}
@@ -156,7 +150,7 @@ Many tab operations use a Tab `id`. Tab `id`s are guaranteed to be unique to a s
 - {{WebExtAPIRef("tabs.onReplaced")}}
   - : Fired when a tab is replaced with another tab due to prerendering.
 - {{WebExtAPIRef("tabs.onSelectionChanged")}} {{deprecated_inline}}
-  - : Fires when the selected tab in a window changes. **Deprecated:** use {{WebExtAPIRef("tabs.onActivated")}} instead.
+  - : Fires when the selected tab in a window changes. **Deprecated**: use {{WebExtAPIRef("tabs.onActivated")}} instead.
 - {{WebExtAPIRef("tabs.onUpdated")}}
   - : Fired when a tab is updated.
 - {{WebExtAPIRef("tabs.onZoomChange")}}
@@ -168,11 +162,11 @@ Many tab operations use a Tab `id`. Tab `id`s are guaranteed to be unique to a s
 
 {{WebExtExamples("h2")}}
 
-> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/tabs/) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -199,4 +193,4 @@ Many tab operations use a Tab `id`. Tab `id`s are guaranteed to be unique to a s
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

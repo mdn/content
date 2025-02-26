@@ -1,43 +1,46 @@
 ---
 title: Date.prototype.getMinutes()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getMinutes
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.getMinutes
 ---
+
 {{JSRef}}
 
-The **`getMinutes()`** method returns the minutes in the
-specified date according to local time.
+The **`getMinutes()`** method of {{jsxref("Date")}} instances returns the minutes for this date according to local time.
 
-{{EmbedInteractiveExample("pages/js/date-getminutes.html","shorter")}}
+{{InteractiveExample("JavaScript Demo: Date.getMinutes()", "shorter")}}
+
+```js interactive-example
+const birthday = new Date("March 13, 08 04:20");
+
+console.log(birthday.getMinutes());
+// Expected output: 20
+```
 
 ## Syntax
 
-```js
+```js-nolint
 getMinutes()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
-An integer number, between 0 and 59, representing the minutes in the given date
-according to local time.
+An integer, between 0 and 59, representing the minutes for the given date according to local time. Returns `NaN` if the date is [invalid](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date).
 
 ## Examples
 
 ### Using getMinutes()
 
-The second statement below assigns the value 15 to the variable `minutes`,
-based on the value of the {{jsxref("Global_Objects/Date", "Date")}} object
-`Xmas95`.
+The `minutes` variable has value `15`, based on the value of the {{jsxref("Date")}} object `xmas95`.
 
 ```js
-const Xmas95 = new Date('December 25, 1995 23:15:30');
-const minutes = Xmas95.getMinutes();
+const xmas95 = new Date("1995-12-25T23:15:30");
+const minutes = xmas95.getMinutes();
 
 console.log(minutes); // 15
 ```

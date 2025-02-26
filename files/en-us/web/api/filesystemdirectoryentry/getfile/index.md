@@ -1,17 +1,11 @@
 ---
-title: FileSystemDirectoryEntry.getFile()
+title: "FileSystemDirectoryEntry: getFile() method"
+short-title: getFile()
 slug: Web/API/FileSystemDirectoryEntry/getFile
 page-type: web-api-instance-method
-tags:
-  - API
-  - File and Directory Entries API
-  - FileSystemDirectoryEntry
-  - Files
-  - Method
-  - Reference
-  - getFile
 browser-compat: api.FileSystemDirectoryEntry.getFile
 ---
+
 {{APIRef("File and Directory Entries API")}}
 
 The {{domxref("FileSystemDirectoryEntry")}} interface's method
@@ -21,7 +15,7 @@ within the directory subtree rooted at the directory on which it's called.
 
 ## Syntax
 
-```js
+```js-nolint
 getFile()
 getFile(path)
 getFile(path, options)
@@ -62,14 +56,14 @@ The `options` parameter object accepts the following parameters:
 
 The table below describes the result of each possible combination of these flags depending on whether or not the target file path already exists.
 
-| `create` option | `exclusive` option | Path condition | Result |
-| --- | --- | --- | --- |
-| `false` | _Ignored_ | Path exists and is a file | The `successCallback` is called with a {{domxref("FileSystemFileEntry")}}.
-| `false` | _Ignored_ | Path exists but is a directory | The `errorCallback` is called with an appropriate error code (if the callback was provided).
-| `true` | `false` | Path exists | The existing file is removed and replaced with a new one, then the `successCallback` is called with a {{domxref("FileSystemFileEntry")}}.
-| `true` | `false` | Path doesn't exist | The file is created, then a {{domxref("FileSystemFileEntry")}} is passed to the `successCallback`.
-| `true` | `true` | Path exists | The `errorCallback` is called with an appropriate error, such as `FileError.PATH_EXISTS_ERR`.
-| `true` | `true` | Path doesn't exist | The file is created, then a {{domxref("FileSystemFileEntry")}} is passed to the `successCallback`.
+| `create` option | `exclusive` option | Path condition                 | Result                                                                                                                                    |
+| --------------- | ------------------ | ------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| `false`         | _Ignored_          | Path exists and is a file      | The `successCallback` is called with a {{domxref("FileSystemFileEntry")}}.                                                                |
+| `false`         | _Ignored_          | Path exists but is a directory | The `errorCallback` is called with an appropriate error code (if the callback was provided).                                              |
+| `true`          | `false`            | Path exists                    | The existing file is removed and replaced with a new one, then the `successCallback` is called with a {{domxref("FileSystemFileEntry")}}. |
+| `true`          | `false`            | Path doesn't exist             | The file is created, then a {{domxref("FileSystemFileEntry")}} is passed to the `successCallback`.                                        |
+| `true`          | `true`             | Path exists                    | The `errorCallback` is called with an appropriate error, such as `FileError.PATH_EXISTS_ERR`.                                             |
+| `true`          | `true`             | Path doesn't exist             | The file is created, then a {{domxref("FileSystemFileEntry")}} is passed to the `successCallback`.                                        |
 
 ### Return value
 
@@ -99,12 +93,12 @@ let dictionary = null;
 function loadDictionaryForLanguage(appDataDirEntry, lang) {
   dictionary = null;
 
-  appDataDirEntry.getDirectory("Dictionaries", {}, function(dirEntry) {
-    dirEntry.getFile(`${lang}-dict.json`, {}, function(fileEntry) {
-      fileEntry.file(function(dictFile) {
+  appDataDirEntry.getDirectory("Dictionaries", {}, (dirEntry) => {
+    dirEntry.getFile(`${lang}-dict.json`, {}, (fileEntry) => {
+      fileEntry.file((dictFile) => {
         let reader = new FileReader();
 
-        reader.addEventListener("loadend", function() {
+        reader.addEventListener("loadend", () => {
           dictionary = JSON.parse(reader.result);
         });
 
@@ -119,7 +113,7 @@ The `loadDictionaryForLanguage()` function starts by using
 `getDirectory()` to obtain the {{domxref("FileSystemDirectoryEntry")}} object
 representing a subfolder named "Dictionaries" located inside the specified app data
 directory. The success callback for this takes the resulting directory entry object and
-calls {{domxref("FileSystemDirectoryEntry.getFile", "getFile()")}} to get a
+calls `getFile()` to get a
 {{domxref("FileSystemFileEntry")}} object representing the dictionary file; the success
 callback for this, in turn, creates a new {{domxref("FileReader")}} and uses it to load
 the contents of the file. When that is loaded successfully (as indicated by the
@@ -137,5 +131,4 @@ the contents of the file. When that is loaded successfully (as indicated by the
 ## See also
 
 - [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
-- [Introduction to the File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
 - {{domxref("FileSystemFileEntry")}}

@@ -1,37 +1,36 @@
 ---
 title: runtime.getPackageDirectoryEntry()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/getPackageDirectoryEntry
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - getPackageDirectoryEntry
-  - runtime
+page-type: webextension-api-function
 browser-compat: webextensions.api.runtime.getPackageDirectoryEntry
 ---
-{{AddonSidebar()}}
 
-Returns a `DirectoryEntry` object representing the package directory.
+{{AddonSidebar}}
 
-This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+Gets a `DirectoryEntry` object representing the package directory.
+
+This is an asynchronous function that either takes a callback or returns a promise.
+
+> [!NOTE]
+> The promise-based API is supported in Manifest V3 and later.
 
 ## Syntax
 
-```js
-let gettingEntry = browser.runtime.getPackageDirectoryEntry()
+```js-nolint
+browser.runtime.getPackageDirectoryEntry(
+  callback              // optional callback function
+)
 ```
 
 ### Parameters
 
-None.
+- `callback` {{optional_inline}}
+
+  - : `function`. If provided, the function will be passed a `DirectoryEntry` object. If absent, the function returns a promise instead.
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a `DirectoryEntry` object representing the package directory.
+None (`undefined`) if a `callback` is provided. Otherwise, returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a `DirectoryEntry` object representing the package directory.
 
 ## Browser compatibility
 
@@ -40,21 +39,18 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 ## Examples
 
 ```js
-function gotDirectoryEntry(directoryEntry) {
+browser.runtime.getPackageDirectoryEntry((directoryEntry) => {
   console.log(directoryEntry);
-}
-
-let gettingEntry = browser.runtime.getPackageDirectoryEntry();
-gettingEntry.then(gotDirectoryEntry);
+});
 ```
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/runtime/#method-getPackageDirectoryEntry) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#method-getPackageDirectoryEntry) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -81,4 +77,4 @@ gettingEntry.then(gotDirectoryEntry);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

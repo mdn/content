@@ -1,9 +1,11 @@
 ---
 title: Grid Tracks
 slug: Glossary/Grid_Tracks
-tags:
-  - CSS Grids
+page-type: glossary-definition
 ---
+
+{{GlossarySidebar}}
+
 A **grid track** is the space between two adjacent {{glossary("grid lines")}}. They are defined in the _explicit grid_ by using the {{cssxref("grid-template-columns")}} and {{cssxref("grid-template-rows")}} properties or the shorthand {{cssxref("grid")}} or {{cssxref("grid-template")}} properties. Tracks are also created in the _implicit grid_ by positioning a grid item outside of the tracks created in the explicit grid.
 
 The image below shows the first row track on a grid.
@@ -19,20 +21,22 @@ When defining grid tracks using {{cssxref("grid-template-columns")}} and {{cssxr
 The example below demonstrates a grid with three column tracks, one of 200 pixels, the second of 1fr, the third of 3fr. Once the 200 pixels has been subtracted from the space available in the grid container, the remaining space is divided by 4. One part is given to column 2, 3 parts to column 3.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
@@ -45,11 +49,11 @@ The example below demonstrates a grid with three column tracks, one of 200 pixel
 
 ```html
 <div class="wrapper">
-   <div>One</div>
-   <div>Two</div>
-   <div>Three</div>
-   <div>Four</div>
-   <div>Five</div>
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+  <div>Five</div>
 </div>
 ```
 
@@ -61,8 +65,8 @@ Tracks created in the implicit grid are auto-sized by default, however you can d
 
 ## See also
 
-- [Basic concepts of grid layout](/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)
-- [Definition of Grid Tracks in the CSS Grid Layout specification](https://drafts.csswg.org/css-grid/#grid-track-concept)
+- [Basic concepts of grid layout](/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
+- [Definition of grid tracks in the CSS grid layout specification](https://drafts.csswg.org/css-grid/#grid-track-concept)
 - Property reference
 
   - {{cssxref("grid-template-columns")}}

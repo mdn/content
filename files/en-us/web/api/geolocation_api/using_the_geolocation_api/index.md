@@ -2,11 +2,8 @@
 title: Using the Geolocation API
 slug: Web/API/Geolocation_API/Using_the_Geolocation_API
 page-type: guide
-tags:
-  - Geolocation API
-  - Guide
-  - Tutorial
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("Geolocation API")}}
 
 The Geolocation API is used to retrieve the user's location, so that it can for example be used to display their position using a mapping API. This article explains the basics of how to use it.
@@ -18,7 +15,7 @@ The [Geolocation API](/en-US/docs/Web/API/Geolocation) is available through the 
 If the object exists, geolocation services are available. You can test for the presence of geolocation thusly:
 
 ```js
-if('geolocation' in navigator) {
+if ("geolocation" in navigator) {
   /* geolocation is available */
 } else {
   /* geolocation IS NOT available */
@@ -29,7 +26,8 @@ if('geolocation' in navigator) {
 
 To obtain the user's current location, you can call the {{domxref("Geolocation.getCurrentPosition","getCurrentPosition()")}} method. This initiates an asynchronous request to detect the user's position, and queries the positioning hardware to get up-to-date information. When the position is determined, the defined callback function is executed. You can optionally provide a second callback function to be executed if an error occurs. A third, optional, parameter is an options object where you can set the maximum age of the position returned, the time to wait for a request, and if you want high accuracy for the position.
 
-> **Note:** By default, {{domxref("Geolocation.getCurrentPosition","getCurrentPosition()")}} tries to answer as fast as possible with a low accuracy result. It is useful if you need a quick answer regardless of the accuracy. Devices with a GPS, for example, can take a minute or more to get a GPS fix, so less accurate data (IP location or Wi-Fi) may be returned to `getCurrentPosition()`.
+> [!NOTE]
+> By default, {{domxref("Geolocation.getCurrentPosition","getCurrentPosition()")}} tries to answer as fast as possible with a low accuracy result. It is useful if you need a quick answer regardless of the accuracy. Devices with a GPS, for example, can take a minute or more to get a GPS fix, so less accurate data (IP location or Wi-Fi) may be returned to `getCurrentPosition()`.
 
 ```js
 navigator.geolocation.getCurrentPosition((position) => {
@@ -43,7 +41,8 @@ The above example will cause the `doSomething()` function to execute when the lo
 
 If the position data changes (either by device movement or if more accurate geo information arrives), you can set up a callback function that is called with that updated position information. This is done using the {{domxref("Geolocation.watchPosition","watchPosition()")}} function, which has the same input parameters as {{domxref("Geolocation.getCurrentPosition","getCurrentPosition()")}}. The callback function is called multiple times, allowing the browser to either update your location as you move, or provide a more accurate location as different techniques are used to geolocate you. The error callback function, which is optional just as it is for `getCurrentPosition()`, can be called repeatedly.
 
-> **Note:** You can use {{domxref("Geolocation.watchPosition","watchPosition()")}} without an initial {{domxref("Geolocation.getCurrentPosition","getCurrentPosition()")}} call.
+> [!NOTE]
+> You can use {{domxref("Geolocation.watchPosition","watchPosition()")}} without an initial {{domxref("Geolocation.getCurrentPosition","getCurrentPosition()")}} call.
 
 ```js
 const watchID = navigator.geolocation.watchPosition((position) => {
@@ -71,13 +70,13 @@ function success(position) {
 }
 
 function error() {
-  alert('Sorry, no position available.');
+  alert("Sorry, no position available.");
 }
 
 const options = {
   enableHighAccuracy: true,
   maximumAge: 30000,
-  timeout: 27000
+  timeout: 27000,
 };
 
 const watchID = navigator.geolocation.watchPosition(success, error, options);
@@ -87,13 +86,13 @@ const watchID = navigator.geolocation.watchPosition(success, error, options);
 
 The user's location is described using a {{domxref("GeolocationPosition")}} object instance, which itself contains a {{domxref("GeolocationCoordinates")}} object instance.
 
-The `GeolocationPosition` instance contains only two things, a `coords` property that contains the `GeolocationCoordinates` instance, and a `timestamp` property that contains a {{domxref("DOMTimeStamp")}} instance representing the time at which the position data was retrieved.
+The `GeolocationPosition` instance contains only two things, a `coords` property that contains the `GeolocationCoordinates` instance, and a `timestamp` property that contains a timestamp, given as {{Glossary("Unix time")}} in milliseconds, at which the position data was retrieved.
 
 The `GeolocationCoordinates` instance contains a number of properties, but the two you'll use most commonly are `latitude` and `longitude`, which are what you need to draw your position on a map. Hence many Geolocation success callbacks look fairly simple:
 
 ```js
 function success(position) {
-  const latitude  = position.coords.latitude;
+  const latitude = position.coords.latitude;
   const longitude = position.coords.longitude;
 
   // Do something with your latitude and longitude
@@ -111,7 +110,7 @@ You could use it like so:
 ```js
 function errorCallback(error) {
   alert(`ERROR(${error.code}): ${error.message}`);
-};
+}
 ```
 
 ## Examples
@@ -121,56 +120,54 @@ In the following example the Geolocation API is used to retrieve the user's lati
 ```css hidden
 body {
   padding: 20px;
-  background-color:#ffffc9
+  background-color: #ffffc9;
 }
 
 button {
-  margin: .5rem 0;
+  margin: 0.5rem 0;
 }
 ```
 
 ### HTML
 
 ```html
-<button id = "find-me">Show my location</button><br/>
-<p id = "status"></p>
-<a id = "map-link" target="_blank"></a>
+<button id="find-me">Show my location</button><br />
+<p id="status"></p>
+<a id="map-link" target="_blank"></a>
 ```
 
 ### JavaScript
 
 ```js
 function geoFindMe() {
+  const status = document.querySelector("#status");
+  const mapLink = document.querySelector("#map-link");
 
-  const status = document.querySelector('#status');
-  const mapLink = document.querySelector('#map-link');
-
-  mapLink.href = '';
-  mapLink.textContent = '';
+  mapLink.href = "";
+  mapLink.textContent = "";
 
   function success(position) {
-    const latitude  = position.coords.latitude;
+    const latitude = position.coords.latitude;
     const longitude = position.coords.longitude;
 
-    status.textContent = '';
+    status.textContent = "";
     mapLink.href = `https://www.openstreetmap.org/#map=18/${latitude}/${longitude}`;
     mapLink.textContent = `Latitude: ${latitude} °, Longitude: ${longitude} °`;
   }
 
   function error() {
-    status.textContent = 'Unable to retrieve your location';
+    status.textContent = "Unable to retrieve your location";
   }
 
-  if(!navigator.geolocation) {
-    status.textContent = 'Geolocation is not supported by your browser';
+  if (!navigator.geolocation) {
+    status.textContent = "Geolocation is not supported by your browser";
   } else {
-    status.textContent = 'Locating…';
+    status.textContent = "Locating…";
     navigator.geolocation.getCurrentPosition(success, error);
   }
-
 }
 
-document.querySelector('#find-me').addEventListener('click', geoFindMe);
+document.querySelector("#find-me").addEventListener("click", geoFindMe);
 ```
 
 ### Result

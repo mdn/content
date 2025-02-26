@@ -1,13 +1,11 @@
 ---
-title: AbstractRange.endOffset
+title: "AbstractRange: endOffset property"
+short-title: endOffset
 slug: Web/API/AbstractRange/endOffset
 page-type: web-api-instance-property
-tags:
-  - Property
-  - Read-only
-  - Reference
 browser-compat: api.AbstractRange.endOffset
 ---
+
 {{APIRef("DOM")}}
 
 The **`endOffset`** property of the {{domxref("AbstractRange")}} interface returns the offset into the end node of the range's end position.

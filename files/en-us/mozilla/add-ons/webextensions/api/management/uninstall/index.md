@@ -1,17 +1,11 @@
 ---
 title: management.uninstall()
 slug: Mozilla/Add-ons/WebExtensions/API/management/uninstall
-tags:
-  - API
-  - Add-ons
-  - Method
-  - Reference
-  - WebExtensions
-  - management
-  - uninstall
+page-type: webextension-api-function
 browser-compat: webextensions.api.management.uninstall
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 Uninstalls an add-on, given its ID.
 
@@ -21,7 +15,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let uninstalling = browser.management.uninstall(
   id,                  // string
   options              // object
@@ -38,11 +32,11 @@ let uninstalling = browser.management.uninstall(
 <!---->
 
 - If `id` is the calling add-on's ID, `showConfirmDialog` defaults to `false`.
-- If `id` is a the ID of a different add-on, the `showConfirmDialog` option is ignored and the confirmation dialog is always shown.
+- If `id` is the ID of a different add-on, the `showConfirmDialog` option is ignored and the confirmation dialog is always shown.
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be rejected with an error message if the user canceled uninstall.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be rejected with an error message if the user canceled the uninstallation.
 
 ## Browser compatibility
 
@@ -50,28 +44,30 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 
 ## Examples
 
-Uninstall the add-on whose ID is "my-addon-id", asking the user to confirm. In the callback, check whether the user canceled uninstallation.
-
-Note that we haven't passed a fulfillment handler because if uninstallation succeeds, the add-on is no longer around to handle it.
+Uninstall the add-on whose ID is "addon-id" and ask the user to confirm. In the callback, we check whether the user canceled the uninstallation or if the operation succeeded.
 
 ```js
-let id = "my-addon-id";
+let id = "addon-id";
 
 function onCanceled(error) {
-  console.log(`Uninstall canceled: ${error}`);
+  console.log(`Canceled: ${error}`);
+}
+
+function onUninstalled() {
+  console.log("Uninstalled");
 }
 
 let uninstalling = browser.management.uninstall(id);
-uninstalling.then(null, onCanceled);
+uninstalling.then(onUninstalled, onCanceled);
 ```
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.management`](https://developer.chrome.com/docs/extensions/reference/management/#method-uninstall) API. This documentation is derived from [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.management`](https://developer.chrome.com/docs/extensions/reference/api/management#method-uninstall) API. This documentation is derived from [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json) in the Chromium code.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -98,4 +94,4 @@ uninstalling.then(null, onCanceled);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

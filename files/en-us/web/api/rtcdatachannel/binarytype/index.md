@@ -1,15 +1,11 @@
 ---
-title: RTCDataChannel.binaryType
+title: "RTCDataChannel: binaryType property"
+short-title: binaryType
 slug: Web/API/RTCDataChannel/binaryType
 page-type: web-api-instance-property
-tags:
-  - Property
-  - RTCDataChannel
-  - Reference
-  - WebRTC
-  - binaryType
 browser-compat: api.RTCDataChannel.binaryType
 ---
+
 {{APIRef("WebRTC")}}
 
 The property **`binaryType`** on the
@@ -19,7 +15,7 @@ on the {{domxref("RTCDataChannel")}}. Values allowed by the
 {{domxref("WebSocket.binaryType")}} property are also permitted here:
 `blob` if {{domxref("Blob")}} objects are being used or
 `arraybuffer` if {{jsxref("ArrayBuffer")}} objects are being used. The
-default is `blob`.
+default is `arraybuffer`.
 
 When a binary message is received on the data channel, the resulting
 {{DOMxRef("RTCDataChannel.message_event", "message")}} event's {{domxref("MessageEvent.data")}} property is an object of
@@ -46,11 +42,11 @@ byte values.
 const dc = peerConnection.createDataChannel("Binary");
 dc.binaryType = "arraybuffer";
 
-dc.onmessage = function(event) {
+dc.onmessage = (event) => {
   const byteArray = new Uint8Array(event.data);
   let hexString = "";
 
-  byteArray.forEach(function(byte) {
+  byteArray.forEach((byte) => {
     hexString += `${byte.toString(16)} `;
   });
 };

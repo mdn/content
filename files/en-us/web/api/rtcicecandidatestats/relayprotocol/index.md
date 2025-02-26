@@ -1,24 +1,11 @@
 ---
-title: RTCIceCandidateStats.relayProtocol
+title: "RTCIceCandidateStats: relayProtocol property"
+short-title: relayProtocol
 slug: Web/API/RTCIceCandidateStats/relayProtocol
 page-type: web-api-instance-property
-tags:
-  - API
-  - Candidate
-  - ICE
-  - Media
-  - Property
-  - Protocol
-  - RTCIceCandidate
-  - RTCIceCandidateStats
-  - Statistics
-  - Stats
-  - WebRTC
-  - WebRTC API
-  - relayProtocol
-  - rtc
 browser-compat: api.RTCIceCandidateStats.relayProtocol
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCIceCandidateStats")}} dictionary's
@@ -41,7 +28,8 @@ communicate with the TURN server. The possible values are:
 - `udp`
   - : UDP (User Datagram Protocol) is being used to communicate with the TURN server.
 
-> **Note:** This property is only present on
+> [!NOTE]
+> This property is only present on
 > {{domxref("RTCIceCandidateStats")}} objects that represent local candidates.
 
 ## Specifications

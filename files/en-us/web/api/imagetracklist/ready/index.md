@@ -1,16 +1,12 @@
 ---
-title: ImageTrackList.ready
+title: "ImageTrackList: ready property"
+short-title: ready
 slug: Web/API/ImageTrackList/ready
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ready
-  - ImageTrackList
 browser-compat: api.ImageTrackList.ready
 ---
-{{DefaultAPISidebar("WebCodecs API")}}
+
+{{APIRef("WebCodecs API")}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`ready`** property of the {{domxref("ImageTrackList")}} interface returns a {{jsxref("Promise")}} that resolves when the `ImageTrackList` is populated with {{domxref("ImageTrack","tracks")}}.
 

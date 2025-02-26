@@ -1,17 +1,12 @@
 ---
-title: WebGLRenderingContext.texSubImage2D()
+title: "WebGLRenderingContext: texSubImage2D() method"
+short-title: texSubImage2D()
 slug: Web/API/WebGLRenderingContext/texSubImage2D
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - Textures
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.texSubImage2D
 ---
-{{APIRef("WebGL")}}
+
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGLRenderingContext.texSubImage2D()`** method of the
 [WebGL API](/en-US/docs/Web/API/WebGL_API) specifies a sub-rectangle of the
@@ -19,7 +14,7 @@ current texture.
 
 ## Syntax
 
-```js
+```js-nolint
 // WebGL1
 texSubImage2D(target, level, xoffset, yoffset, width, height, format, type, pixels) // pixels is a TypedArray or a DataView
 texSubImage2D(target, level, xoffset, yoffset, format, type, pixels)
@@ -53,7 +48,7 @@ texSubImage2D(target, level, xoffset, yoffset, width, height, format, type, pixe
 
 - `level`
   - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the level of detail. Level 0 is the base image
-    level and level _n_ is the *n*th mipmap reduction level.
+    level and level _n_ is the n-th mipmap reduction level.
 - `xoffset`
   - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the lower left texel x coordinate of a width-wide
     by height-wide rectangular subregion of the texture array.
@@ -77,13 +72,14 @@ texSubImage2D(target, level, xoffset, yoffset, width, height, format, type, pixe
     - `gl.LUMINANCE`: Each color component is a luminance component, alpha
       is 1.0.
     - `gl.LUMINANCE_ALPHA`: Each component is a luminance/alpha component.
+
     When using the {{domxref("EXT_sRGB")}} extension:
 
-      - `ext.SRGB_EXT`
-      - `ext.SRGB_ALPHA_EXT`
+    - `ext.SRGB_EXT`
+    - `ext.SRGB_ALPHA_EXT`
 
     When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
-      the following values are available additionally:
+    the following values are available additionally:
 
     - `gl.RED`
     - `gl.RG`
@@ -102,16 +98,17 @@ texSubImage2D(target, level, xoffset, yoffset, width, height, format, type, pixe
       alpha bits.
     - `gl.UNSIGNED_SHORT_5_5_5_1`: 5 red bits, 5 green bits, 5 blue bits, 1
       alpha bit.
+
     When using the {{domxref("OES_texture_float")}} extension:
 
-      - `gl.FLOAT`
+    - `gl.FLOAT`
 
     When using the {{domxref("OES_texture_half_float")}} extension:
 
     - `gl.HALF_FLOAT_OES`
 
     When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
-      the following values are available additionally:
+    the following values are available additionally:
 
     - `gl.BYTE`
     - `gl.UNSIGNED_SHORT`
@@ -125,7 +122,7 @@ texSubImage2D(target, level, xoffset, yoffset, width, height, format, type, pixe
     - `gl.UNSIGNED_INT_5_9_9_9_REV`
     - `gl.UNSIGNED_INT_24_8`
     - `gl.FLOAT_32_UNSIGNED_INT_24_8_REV` (pixels must be
-        [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null))
+      [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null))
 
 - `pixels`
 

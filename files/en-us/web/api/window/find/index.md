@@ -1,29 +1,24 @@
 ---
-title: Window.find()
+title: "Window: find() method"
+short-title: find()
 slug: Web/API/Window/find
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - Method
-  - NeedsCompatTable
-  - NeedsContent
-  - Non-standard
-  - Reference
-  - Window
-  - find
+status:
+  - non-standard
 browser-compat: api.Window.find
 ---
+
 {{ApiRef}}{{Non-standard_Header}}
 
-> **Note:** Support for `Window.find()` might change in future
-> versions of Gecko. See {{Bug("672395")}}.
+> [!NOTE]
+> Support for `Window.find()` might change in future
+> versions of Gecko. See [Firefox bug 672395](https://bugzil.la/672395).
 
 The **`Window.find()`** method finds a string in a window sequentially.
 
 ## Syntax
 
-```js
+```js-nolint
 find(aString, aCaseSensitive, aBackwards, aWrapAround, aWholeWord, aSearchInFrames, aShowDialog)
 ```
 
@@ -37,10 +32,12 @@ find(aString, aCaseSensitive, aBackwards, aWrapAround, aWholeWord, aSearchInFram
   - : A boolean value. If `true`, specifies a backward search.
 - `aWrapAround`
   - : A boolean value. If `true`, specifies a wrap around search.
-- `aWholeWord` {{Unimplemented_Inline}}
-  - : A boolean value. If `true`, specifies a whole word search. This is not implemented; see {{bug(481513)}}.
+- `aWholeWord`
+  - : A boolean value. If `true`, specifies a whole word search.
 - `aSearchInFrames`
   - : A boolean value. If `true`, specifies a search in frames.
+- `aShowDialog`
+  - : A boolean value. If `true`, a search dialog is shown.
 
 ### Return value
 
@@ -52,7 +49,9 @@ find(aString, aCaseSensitive, aBackwards, aWrapAround, aWholeWord, aSearchInFram
 
 ```js
 function findString(text) {
-  document.querySelector("#output").textContent=`String found? ${window.find(text)}`;
+  document.querySelector("#output").textContent = `String found? ${window.find(
+    text,
+  )}`;
 }
 ```
 
@@ -61,7 +60,9 @@ function findString(text) {
 ```html
 <p>Apples, Bananas, and Oranges.</p>
 <button type="button" onClick='findString("Apples")'>Search for Apples</button>
-<button type="button" onClick='findString("Bananas")'>Search for Bananas</button>
+<button type="button" onClick='findString("Bananas")'>
+  Search for Bananas
+</button>
 <button type="button" onClick='findString("Orange")'>Search for Orange</button>
 
 <p id="output"></p>

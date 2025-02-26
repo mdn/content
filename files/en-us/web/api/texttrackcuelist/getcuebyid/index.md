@@ -1,24 +1,18 @@
 ---
-title: TextTrackCueList.getCueById()
+title: "TextTrackCueList: getCueById() method"
+short-title: getCueById()
 slug: Web/API/TextTrackCueList/getCueById
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - getCueById()
-  - TextTrackCueList
-  - WebVTT
-  - Media
 browser-compat: api.TextTrackCueList.getCueById
 ---
+
 {{APIRef("WebVTT")}}
 
 The **`getCueById()`** method of the {{domxref("TextTrackCueList")}} interface returns the first {{domxref("VTTCue")}} in the list represented by the `TextTrackCueList` object whose identifier matches the value of `id`.
 
 ## Syntax
 
-```js
+```js-nolint
 getCueById(id)
 ```
 
@@ -35,7 +29,7 @@ A {{domxref("VTTCue")}} object.
 
 The {{domxref("TextTrack.cues")}} property returns a {{domxref("TextTrackCueList")}} containing the current cues for that particular track. Calling `cues.getCueById("second")` returns the {{domxref("VTTCue")}} with an ID of "second".
 
-```
+```plain
 WEBVTT
 
 first
@@ -48,10 +42,10 @@ How are you?
 ```
 
 ```js
-let video = document.getElementById("video");
-video.onplay = function () {
-  console.log(video.textTracks[0].cues.getCueById("second")) // a VTTCue object;
-}
+const video = document.getElementById("video");
+video.onplay = () => {
+  console.log(video.textTracks[0].cues.getCueById("second")); // a VTTCue object;
+};
 ```
 
 ## Specifications

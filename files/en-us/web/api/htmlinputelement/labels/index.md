@@ -1,15 +1,11 @@
 ---
-title: HTMLInputElement.labels
+title: "HTMLInputElement: labels property"
+short-title: labels
 slug: Web/API/HTMLInputElement/labels
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLInputElement
-  - Property
-  - Reference
 browser-compat: api.HTMLInputElement.labels
 ---
+
 {{APIRef("DOM")}}
 
 The **`HTMLInputElement.labels`** read-only property returns a
@@ -28,14 +24,14 @@ with the `<input>` element.
 
 ```html
 <label id="label1" for="test">Label 1</label>
-<input id="test"/>
+<input id="test" />
 <label id="label2" for="test">Label 2</label>
 ```
 
 ### JavaScript
 
 ```js
-window.addEventListener("DOMContentLoaded", function() {
+window.addEventListener("DOMContentLoaded", () => {
   const input = document.getElementById("test");
   for (const label of input.labels) {
     console.log(label.textContent); // "Label 1" and "Label 2"

@@ -1,12 +1,9 @@
 ---
-title: 'SyntaxError: function statement requires a name'
+title: "SyntaxError: function statement requires a name"
 slug: Web/JavaScript/Reference/Errors/Unnamed_function_statement
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - SyntaxError
+page-type: javascript-error
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "function statement requires a name" occurs
@@ -15,7 +12,7 @@ in the code that requires a name.
 
 ## Message
 
-```
+```plain
 SyntaxError: Function statements require a function name (V8-based)
 SyntaxError: function statement requires a name (Firefox)
 SyntaxError: Function statements must have a name. (Safari)
@@ -32,14 +29,14 @@ You'll need to check how functions are defined and if you need to provide a name
 
 ## Examples
 
-### Statements vs expressions
+### Statements vs. expressions
 
 A _[function statement](/en-US/docs/Web/JavaScript/Reference/Statements/function)_ (or _function declaration_) requires a name.
 This won't work:
 
-```js example-bad
+```js-nolint example-bad
 function () {
-  return 'Hello world';
+  return "Hello world";
 }
 // SyntaxError: function statement requires a name
 ```
@@ -48,7 +45,7 @@ You can use a [function expression](/en-US/docs/Web/JavaScript/Reference/Operato
 
 ```js example-good
 const greet = function () {
-  return 'Hello world';
+  return "Hello world";
 };
 ```
 
@@ -56,16 +53,15 @@ If your function is intended to be an [IIFE](https://en.wikipedia.org/wiki/Immed
 
 ```js example-good
 (function () {
-
+  // …
 })();
 ```
 
 ### Labeled functions
 
-If you are using function [labels](/en-US/docs/Web/JavaScript/Reference/Statements/label), you will still need to provide a function name after the `function` keyword.
-This doesn't work:
+[Labels](/en-US/docs/Web/JavaScript/Reference/Statements/label) are an entirely different feature from function names. You can't use a label as a function name.
 
-```js example-bad
+```js-nolint example-bad
 function Greeter() {
   german: function () {
     return "Moin";
@@ -74,11 +70,11 @@ function Greeter() {
 // SyntaxError: function statement requires a name
 ```
 
-This would work, for example:
+In addition, labeled function declarations themselves are a deprecated feature. Use regular function declarations instead.
 
 ```js example-good
 function Greeter() {
-  german: function g() {
+  function german() {
     return "Moin";
   }
 }
@@ -94,19 +90,25 @@ const greeter = {
   german: function () {
     return "Moin";
   },
-  // or
+};
+```
+
+You can also use the [method syntax](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions).
+
+```js
+const greeter = {
   german() {
     return "Moin";
-  }
+  },
 };
 ```
 
 ### Callback syntax
 
 Also, check your syntax when using callbacks.
-Brackets and commas can quickly get confusing.
+Braces and commas can quickly get confusing.
 
-```js example-bad
+```js-nolint example-bad
 promise.then(
   function () {
     console.log("success");
@@ -132,8 +134,8 @@ promise.then(
 
 ## See also
 
-- [Functions in the JavaScript Guide](/en-US/docs/Web/JavaScript/Guide/Functions)
-- [function statement](/en-US/docs/Web/JavaScript/Reference/Statements/function)
-- [function expression](/en-US/docs/Web/JavaScript/Reference/Operators/function)
-- {{glossary("IIFE")}}
-- [label](/en-US/docs/Web/JavaScript/Reference/Statements/label)
+- [Functions](/en-US/docs/Web/JavaScript/Guide/Functions) guide
+- [`function`](/en-US/docs/Web/JavaScript/Reference/Statements/function)
+- [`function` expression](/en-US/docs/Web/JavaScript/Reference/Operators/function)
+- {{Glossary("IIFE")}}
+- [Labeled statement](/en-US/docs/Web/JavaScript/Reference/Statements/label)

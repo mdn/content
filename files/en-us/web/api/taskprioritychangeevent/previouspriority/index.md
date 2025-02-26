@@ -1,17 +1,14 @@
 ---
-title: TaskPriorityChangeEvent.previousPriority
+title: "TaskPriorityChangeEvent: previousPriority property"
+short-title: previousPriority
 slug: Web/API/TaskPriorityChangeEvent/previousPriority
 page-type: web-api-instance-property
-tags:
-  - Property
-  - Reference
-  - TaskPriorityChangeEvent
-  - Experimental
 browser-compat: api.TaskPriorityChangeEvent.previousPriority
 ---
-{{APIRef("Prioritized Task Scheduling API")}} {{SeeCompatTable}}
 
-The readonly **`previousPriority`** property of the {{domxref("TaskPriorityChangeEvent")}} interface returns the priority of the corresponding {{domxref("TaskSignal")}} before it was changed and this [`prioritychange`](/en-US/docs/Web/API/TaskSignal/prioritychange_event) event was emitted.
+{{APIRef("Prioritized Task Scheduling API")}}{{AvailableInWorkers}}
+
+The **`previousPriority`** read-only property of the {{domxref("TaskPriorityChangeEvent")}} interface returns the priority of the corresponding {{domxref("TaskSignal")}} before it was changed and this [`prioritychange`](/en-US/docs/Web/API/TaskSignal/prioritychange_event) event was emitted.
 
 This is the value that was set in the [`TaskPriorityChangeEvent` constructor](/en-US/docs/Web/API/TaskPriorityChangeEvent/TaskPriorityChangeEvent) argument `options.previous`. <!-- link? -->
 
@@ -28,10 +25,12 @@ The code below shows the `previousPriority` being obtained in a handler for a `p
 
 ```js
 // Listen for 'prioritychange' events on the controller's signal.
-controller.signal.addEventListener('prioritychange', (event) => {
+controller.signal.addEventListener("prioritychange", (event) => {
   const previousPriority = event.previousPriority;
   const newPriority = event.target.priority;
-  console.log(`The priority changed from ${previousPriority} to ${newPriority}.`);
+  console.log(
+    `The priority changed from ${previousPriority} to ${newPriority}.`,
+  );
 });
 ```
 

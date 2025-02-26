@@ -1,18 +1,13 @@
 ---
 title: <resolution>
 slug: Web/CSS/resolution
-tags:
-  - CSS
-  - CSS Data Type
-  - Data Type
-  - Layout
-  - Reference
-  - Web
+page-type: css-type
 browser-compat: css.types.resolution
 ---
+
 {{CSSRef}}
 
-The **`<resolution>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types), used for describing [resolutions](/en-US/docs/Web/CSS/@media/resolution) in [media queries](/en-US/docs/Web/CSS/Media_Queries), denotes the pixel density of an output device, i.e., its resolution.
+The **`<resolution>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types), used for describing [resolutions](/en-US/docs/Web/CSS/@media/resolution) in [media queries](/en-US/docs/Web/CSS/CSS_media_queries), denotes the pixel density of an output device, i.e., its resolution.
 
 On screens, the units are related to _CSS_ inches, centimeters, or pixels, not physical values.
 
@@ -31,14 +26,29 @@ The `<resolution>` data type consists of a strictly positive {{cssxref("&lt;numb
 - `x`
   - : Alias for `dppx`.
 
-> **Note:** Although the number `0` is always the same regardless of unit, the unit may not be omitted. In other words, `0` is invalid and does not represent `0dpi`, `0dpcm`, or `0dppx`.
+> [!NOTE]
+> Although the number `0` is always the same regardless of unit, the unit may not be omitted. In other words, `0` is invalid and does not represent `0dpi`, `0dpcm`, or `0dppx`.
 
 ## Examples
 
 ### Use in a media query
 
 ```css
-@media print and (min-resolution: 300dpi) { /* … */ }
+@media print and (min-resolution: 300dpi) {
+  /* … */
+}
+
+@media (resolution: 120dpcm) {
+  /* … */
+}
+
+@media (min-resolution: 2dppx) {
+  /* … */
+}
+
+@media (resolution: 1x) {
+  /* … */
+}
 ```
 
 ### Valid resolutions
@@ -69,4 +79,4 @@ ten dpi    The number must use digits only.
 
 - [resolution](/en-US/docs/Web/CSS/@media/resolution) media feature
 - The {{cssxref("image-resolution")}} property
-- [Using @media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [Using @media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)

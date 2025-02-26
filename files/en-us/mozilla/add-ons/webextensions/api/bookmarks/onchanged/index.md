@@ -1,19 +1,11 @@
 ---
 title: bookmarks.onChanged
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/onChanged
-tags:
-  - API
-  - Add-ons
-  - Bookmarks
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onChanged
+page-type: webextension-api-event
 browser-compat: webextensions.api.bookmarks.onChanged
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 Fired when there is a change to:
 
@@ -22,7 +14,7 @@ Fired when there is a change to:
 
 ## Syntax
 
-```js
+```js-nolint
 browser.bookmarks.onChanged.addListener(listener)
 browser.bookmarks.onChanged.removeListener(listener)
 browser.bookmarks.onChanged.hasListener(listener)
@@ -30,7 +22,7 @@ browser.bookmarks.onChanged.hasListener(listener)
 
 Events have three functions:
 
-- `addListener(callback)`
+- `addListener(listener)`
   - : Adds a listener to this event.
 - `removeListener(listener)`
   - : Stop listening to this event. The `listener` argument is the listener to remove.
@@ -41,27 +33,25 @@ Events have three functions:
 
 ### Parameters
 
-- `callback`
+- `listener`
 
-  - : Function that will be called when this event occurs. The function will be passed the following arguments:
+  - : The function called when this event occurs. The function is passed these arguments:
 
     - `id`
       - : `string`. ID of the item that changed.
-
-    <!---->
-
     - `changeInfo`
       - : [`object`](#changeinfo). Object containing two properties: `title`, a string containing the item's title, and `url`, a string containing the item's URL. If the item is a folder, `url` is omitted.
 
-> **Note:** Multiple events may occur when a bookmark changes, and that changeInfo object may contain only the data that has changed, rather than all the data for the bookmark. In other words, if the `url` for a bookmark changes, the changeInfo may only contain the new `url` information.
+> [!NOTE]
+> Multiple events may occur when a bookmark changes, and that changeInfo object may contain only the data that has changed, rather than all the data for the bookmark. In other words, if the `url` for a bookmark changes, the changeInfo may only contain the new `url` information.
 
 ## Examples
 
 ```js
 function handleChanged(id, changeInfo) {
-  console.log("Item: " + id + " changed");
-  console.log("Title: " + changeInfo.title);
-  console.log("Url: " + changeInfo.url);
+  console.log(`Item: ${id} changed`);
+  console.log(`Title: ${changeInfo.title}`);
+  console.log(`URL: ${changeInfo.url}`);
 }
 
 function handleClick() {
@@ -77,11 +67,11 @@ browser.browserAction.onClicked.addListener(handleClick);
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/bookmarks/#event-onChanged) API. This documentation is derived from [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/api/bookmarks#event-onChanged) API. This documentation is derived from [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) in the Chromium code.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -108,4 +98,4 @@ browser.browserAction.onClicked.addListener(handleClick);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

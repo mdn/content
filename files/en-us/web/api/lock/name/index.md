@@ -1,19 +1,12 @@
 ---
-title: Locks.name
+title: "Lock: name property"
+short-title: name
 slug: Web/API/Lock/name
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - Property
-  - Reference
-  - Web Locks API
-  - lock
-  - mode
-  - name
 browser-compat: api.Lock.name
 ---
-{{SeeCompatTable}}{{APIRef("Web Locks")}}
+
+{{APIRef("Web Locks API")}}{{securecontext_header}} {{AvailableInWorkers}}
 
 The **`name`** read-only property of
 the {{domxref("Lock")}} interface returns the _name_ passed to
@@ -32,7 +25,7 @@ A string.
 ## Examples
 
 The following examples show how the name property passed in the call
-to {{domxref('LockManager.request()')}}. `LockManager` is the object returned
+to {{domxref('LockManager.request()')}}. {{domxref('LockManager')}} is the object returned
 by {{domxref('navigator.locks')}}.
 
 ```js

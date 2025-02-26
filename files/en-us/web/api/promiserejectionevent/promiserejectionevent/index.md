@@ -1,19 +1,12 @@
 ---
-title: PromiseRejectionEvent()
+title: "PromiseRejectionEvent: PromiseRejectionEvent() constructor"
+short-title: PromiseRejectionEvent()
 slug: Web/API/PromiseRejectionEvent/PromiseRejectionEvent
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - HTML DOM
-  - JavaScript
-  - PromiseRejectionEvent
-  - Promises
-  - Reference
-  - events
 browser-compat: api.PromiseRejectionEvent.PromiseRejectionEvent
 ---
-{{APIRef("HTML DOM")}}
+
+{{APIRef("HTML DOM")}}{{AvailableInWorkers}}
 
 The **`PromiseRejectionEvent()`**
 constructor returns a new {{domxref("PromiseRejectionEvent")}} object, which
@@ -25,12 +18,12 @@ for errors.
 
 There are two types of `PromiseRejectionEvent`:
 {{domxref("Window.unhandledrejection_event", "unhandledrejection")}} is sent by the JavaScript runtime when a promise is
-rejected but the rejection goes unhandled. A {{domxref("Window.rejectionhandled_event", "rejectionhandled")}}event is
+rejected but the rejection goes unhandled. A {{domxref("Window.rejectionhandled_event", "rejectionhandled")}} event is
 emitted if a promise is rejected but the rejection is caught by a rejection handler.
 
 ## Syntax
 
-```js
+```js-nolint
 new PromiseRejectionEvent(type, options)
 ```
 
@@ -63,8 +56,8 @@ an emergency contact who should be notified.
 
 ```js
 let myRejectionEvent = new PromiseRejectionEvent("unhandledrejection", {
-  promise : myPromise,
-  reason : "My house is on fire"
+  promise: myPromise,
+  reason: "My house is on fire",
 });
 ```
 

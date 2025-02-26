@@ -1,16 +1,16 @@
 ---
 title: clip-path
 slug: Web/SVG/Attribute/clip-path
-tags:
-  - SVG
-  - SVG Attribute
-browser-compat: svg.attributes.presentation.clip-path
+page-type: svg-attribute
+browser-compat: svg.global_attributes.clip-path
 ---
+
 {{SVGRef}}
 
 The **`clip-path`** presentation attribute defines or associates a clipping path with the element it is related to.
 
-> **Note:** As a presentation attribute `clip-path` can be used as a CSS property.
+> [!NOTE]
+> As a presentation attribute, `clip-path` also has a CSS property counterpart: {{cssxref("clip-path")}}. When both are specified, the CSS property takes priority.
 
 You can use this attribute with the following SVG elements:
 
@@ -37,7 +37,11 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -47,24 +51,44 @@ html,body,svg { height:100% }
   </clipPath>
 
   <!-- Top-left: Apply a custom defined clipping path -->
-  <rect x="1" y="1" width="8" height="8" stroke="green"
-        clip-path="url(#myClip)" />
+  <rect
+    x="1"
+    y="1"
+    width="8"
+    height="8"
+    stroke="green"
+    clip-path="url(#myClip)" />
 
   <!-- Top-right: Apply a CSS basic shape on a fill-box
        geometry. This is the same as having a custom clipping
        path with a clipPathUnits set to objectBoundingBox -->
-  <rect x="11" y="1" width="8" height="8" stroke="green"
-        clip-path="circle() fill-box" />
+  <rect
+    x="11"
+    y="1"
+    width="8"
+    height="8"
+    stroke="green"
+    clip-path="circle() fill-box" />
 
   <!-- Bottom-left -->
-  <rect x="1" y="11" width="8" height="8" stroke="green"
-        clip-path="circle() stroke-box" />
+  <rect
+    x="1"
+    y="11"
+    width="8"
+    height="8"
+    stroke="green"
+    clip-path="circle() stroke-box" />
 
   <!-- Bottom-right: Apply a CSS basic shape on a view-box
        geometry. This is the same as having a custom clipping
        path with a clipPathUnits set to userSpaceOnUse -->
-  <rect x="11" y="11" width="8" height="8" stroke="green"
-        clip-path="circle() view-box" />
+  <rect
+    x="11"
+    y="11"
+    width="8"
+    height="8"
+    stroke="green"
+    clip-path="circle() view-box" />
 </svg>
 ```
 
@@ -77,7 +101,7 @@ html,body,svg { height:100% }
     <tr>
       <th scope="row">Value</th>
       <td>
-        {{cssxref('url')}} | [ {{cssxref('basic-shape')}} ||
+        {{CSSXref("url_value", "&lt;url&gt;")}} | [ {{cssxref('basic-shape')}} ||
         <code>&#x3C;geometry-box></code> ] | <code>none</code>
       </td>
     </tr>
@@ -95,7 +119,8 @@ html,body,svg { height:100% }
 - \<geometry-box>
   - : An extra information to tell how a {{cssxref('basic-shape')}} is applied to an element: `fill-box` indicates to use the object bounding box; `stroke-box` indicates to use the object bounding box extended with the stroke; `view-box` indicates to use the nearest SVG viewport as the reference box.
 
-> **Note:** For more details on the clip-path syntax, see the CSS property {{cssxref('clip-path')}} reference page.
+> [!NOTE]
+> For more details on the clip-path syntax, see the CSS property {{cssxref('clip-path')}} reference page.
 
 ## Specifications
 
@@ -107,4 +132,4 @@ html,body,svg { height:100% }
 
 ## See also
 
-- The CSS {{cssxref("clip-path")}} property
+- CSS {{cssxref("clip-path")}} property

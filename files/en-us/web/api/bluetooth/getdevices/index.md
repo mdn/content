@@ -1,28 +1,20 @@
 ---
-title: Bluetooth.getDevices()
+title: "Bluetooth: getDevices() method"
+short-title: getDevices()
 slug: Web/API/Bluetooth/getDevices
 page-type: web-api-instance-method
-tags:
-  - API
-  - Bluetooth
-  - Reference
-  - Web Bluetooth API
+status:
+  - experimental
 browser-compat: api.Bluetooth.getDevices
 ---
-{{securecontext_header}}{{SeeCompatTable}}{{APIRef("Bluetooth API")}}
 
-The **`getDevices()`** method of
-{{DOMxRef("Bluetooth")}} interface of [Web Bluetooth API](/en-US/docs/Web/API/Web_Bluetooth_API) exposes the
-Bluetooth devices this origin is allowed to access. This method does not display any
-permission prompts.
+{{APIRef("Bluetooth API")}}{{SeeCompatTable}}{{securecontext_header}}
 
-> **Note:** This method returns a {{DOMxRef("BluetoothDevice")}} for each
-> device the origin is currently allowed to access, even the ones that are out of range
-> or powered off.
+The **`getDevices()`** method of the {{DOMxRef("Bluetooth")}} interface returns an array containing the Bluetooth devices that this origin is allowed to access — including those that are out of range and powered off.
 
 ## Syntax
 
-```js
+```js-nolint
 getDevices()
 ```
 
@@ -32,11 +24,12 @@ None.
 
 ### Return value
 
-A {{JSxRef("Promise")}} that resolves with an array of {{DOMxRef("BluetoothDevice")}}s.
+A {{JSxRef("Promise")}} that resolves with an array of {{DOMxRef("BluetoothDevice")}} objects.
 
-## Exceptions
+### Exceptions
 
-This method doesn't throw any exceptions.
+- `SecurityError` {{domxref("DOMException")}}
+  - : Thrown if this operation is not permitted in this context due to [security concerns](/en-US/docs/Web/API/Web_Bluetooth_API#security_considerations), such as being called when access to the current document is blocked by the [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) directive {{HTTPHeader("Permissions-Policy/bluetooth","bluetooth")}}.
 
 ## Specifications
 

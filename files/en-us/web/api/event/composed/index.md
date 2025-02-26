@@ -1,14 +1,12 @@
 ---
-title: Event.composed
+title: "Event: composed property"
+short-title: composed
 slug: Web/API/Event/composed
 page-type: web-api-instance-property
-tags:
-  - Property
-  - Read-only
-  - Reference
 browser-compat: api.Event.composed
 ---
-{{APIRef("Shadow DOM")}}
+
+{{APIRef("Shadow DOM")}}{{AvailableInWorkers}}
 
 The read-only **`composed`** property of the
 {{domxref("Event")}} interface returns a boolean value which indicates whether
@@ -45,38 +43,40 @@ between the two is that their shadow roots are attached with their modes set to
 The two definitions look like this:
 
 ```js
-customElements.define('open-shadow',
+customElements.define(
+  "open-shadow",
   class extends HTMLElement {
     constructor() {
       super();
 
-      const pElem = document.createElement('p');
-      pElem.textContent = this.getAttribute('text');
+      const pElem = document.createElement("p");
+      pElem.textContent = this.getAttribute("text");
 
       const shadowRoot = this.attachShadow({
-        mode: 'open'
+        mode: "open",
       });
 
       shadowRoot.appendChild(pElem);
     }
-  }
+  },
 );
 
-customElements.define('closed-shadow',
+customElements.define(
+  "closed-shadow",
   class extends HTMLElement {
     constructor() {
       super();
 
-      const pElem = document.createElement('p');
-      pElem.textContent = this.getAttribute('text');
+      const pElem = document.createElement("p");
+      pElem.textContent = this.getAttribute("text");
 
       const shadowRoot = this.attachShadow({
-        mode: 'closed'
+        mode: "closed",
       });
 
       shadowRoot.appendChild(pElem);
     }
-  }
+  },
 );
 ```
 
@@ -90,7 +90,7 @@ We then insert one of each element into our page:
 Then include a click event listener on the `<html>` element:
 
 ```js
-document.querySelector('html').addEventListener('click', function(e) {
+document.querySelector("html").addEventListener("click", (e) => {
   console.log(e.composed);
   console.log(e.composedPath());
 });
@@ -100,9 +100,9 @@ When you click on the `<open-shadow>` element and then the
 `<closed-shadow>` element, you'll notice two things.
 
 1. The `composed` property returns `true` because the
-    `click` event is always able to propagate across shadow boundaries.
+   `click` event is always able to propagate across shadow boundaries.
 2. A difference in the value of `composedPath` for the two
-    elements.
+   elements.
 
 The `<open-shadow>` element's composed path is this:
 

@@ -1,22 +1,20 @@
 ---
-title: EyeDropper.open()
+title: "EyeDropper: open() method"
+short-title: open()
 slug: Web/API/EyeDropper/open
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - EyeDropper
-  - open
+status:
+  - experimental
 browser-compat: api.EyeDropper.open
 ---
-{{APIRef("EyeDropper API")}}{{SeeCompatTable}}
 
-The **`EyeDropper.open()`** method starts the eyedropper mode, returning a promise which is fulfilled once the user has either selected a color or dismissed the eyedropper mode.
+{{securecontext_header}}{{APIRef("EyeDropper API")}}{{SeeCompatTable}}
+
+The **`EyeDropper.open()`** method starts the eyedropper mode, returning a promise which is fulfilled once the user has selected a color and exited the eyedropper mode.
 
 ## Syntax
 
-```js
+```js-nolint
 open()
 open(options)
 ```
@@ -27,7 +25,7 @@ open(options)
 
   - : An options object to pass an {{domxref("AbortSignal")}} signal:
 
-    - `signal`
+    - `signal` {{optional_inline}}
       - : An {{domxref("AbortSignal")}}. The eyedropper mode will be aborted when the `AbortSignal`'s {{domxref("AbortController/abort()", "abort()")}} method is called.
 
 ### Return value
@@ -42,10 +40,15 @@ The promise resolves to an object with the following property:
 ### Exceptions
 
 Exceptions are not thrown but returned when the {{jsxref("Promise")}} is rejected.
-The promise is rejected in two cases:
 
-- When the user dismisses the eyedropper mode by pressing the <kbd>Escape</kbd> key.
-- When the eyedropper mode is aborted by the {{domxref("AbortController")}} passed as an argument to `open()`.
+- `NotAllowedError` {{domxref("DOMException")}}
+  - : Thrown if `open()` is not called via a [transient user activation](/en-US/docs/Glossary/Transient_activation).
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if another eye dropper has already opened.
+- `AbortError` {{domxref("DOMException")}}
+  - : Thrown if the user aborts the selection by pressing the <kbd>Esc</kbd> key or if the selection is aborted by an {{domxref("AbortController")}} being passed as an argument to `open()`.
+- `OperationError` {{domxref("DOMException")}}
+  - : Thrown if the selection fails for other reasons.
 
 ## Specifications
 

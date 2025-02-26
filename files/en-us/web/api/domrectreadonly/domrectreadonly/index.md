@@ -1,24 +1,18 @@
 ---
-title: DOMRectReadOnly()
+title: "DOMRectReadOnly: DOMRectReadOnly() constructor"
+short-title: DOMRectReadOnly()
 slug: Web/API/DOMRectReadOnly/DOMRectReadOnly
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - DOM
-  - DOMRectReadOnly
-  - Geometry
-  - Reference
 browser-compat: api.DOMRectReadOnly.DOMRectReadOnly
 ---
-{{APIRef("Geometry Interfaces")}}
 
-The **`DOMRectReadOnly()`** constructor creates a new
-{{domxref("DOMRectReadOnly")}} object.
+{{APIRef("Geometry Interfaces")}}{{AvailableInWorkers}}
+
+The **`DOMRectReadOnly()`** constructor creates a new {{domxref("DOMRectReadOnly")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 new DOMRectReadOnly(x, y, width, height)
 ```
 
@@ -37,12 +31,12 @@ new DOMRectReadOnly(x, y, width, height)
 
 ## Examples
 
-To create a new `DOMPoint`, you could run a line of code like so:
+To create a new `DOMRectReadOnly`, you could run a line of code like so:
 
 ```js
-const myDOMRect = new DOMRectReadOnly(0, 0, 100, 100)
+const myDOMRect = new DOMRectReadOnly(0, 0, 100, 100);
 // running 'myDOMRect' in the console would then return
-// DOMRect { x: 0, y: 0, width: 100, height: 100, top: 0, right: 100, bottom: 100, left: 0 }
+// DOMRectReadOnly { x: 0, y: 0, width: 100, height: 100, top: 0, right: 100, bottom: 100, left: 0 }
 ```
 
 ## Specifications

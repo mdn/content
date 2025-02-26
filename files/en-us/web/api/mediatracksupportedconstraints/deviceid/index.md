@@ -1,22 +1,12 @@
 ---
-title: MediaTrackSupportedConstraints.deviceId
+title: "MediaTrackSupportedConstraints: deviceId property"
+short-title: deviceId
 slug: Web/API/MediaTrackSupportedConstraints/deviceId
 page-type: web-api-instance-property
-tags:
-  - API
-  - Constraints
-  - Media
-  - Media Capture and Streams API
-  - Media Stream API
-  - MediaTrackSupportedConstraints
-  - Property
-  - Reference
-  - Web
-  - WebRTC
-  - deviceId
-browser-compat: api.MediaTrackSupportedConstraints.deviceId
+browser-compat: api.MediaStreamTrack.applyConstraints.deviceId_constraint
 ---
-{{DefaultAPISidebar("Media Capture and Streams")}}
+
+{{APIRef("Media Capture and Streams")}}
 
 The {{domxref("MediaTrackSupportedConstraints")}} dictionary's
 **`deviceId`** property is a read-only Boolean value which is
@@ -39,24 +29,21 @@ get {{jsxref("undefined")}} if you try to look at its value.
 ## Examples
 
 ```html hidden
-<div id="result">
-</div>
+<div id="result"></div>
 ```
 
 ```css hidden
 #result {
-  font: 14px "Arial", sans-serif;
+  font:
+    14px "Arial",
+    sans-serif;
 }
 ```
 
 ```js
-let result = document.getElementById("result");
-
-if (navigator.mediaDevices.getSupportedConstraints().deviceId) {
-  result.textContent = "Supported!";
-} else {
-  result.textContent = "Not supported!";
-}
+const result = document.getElementById("result");
+const supported = navigator.mediaDevices.getSupportedConstraints().deviceId;
+result.textContent = supported ? "Supported!" : "Not supported!";
 ```
 
 ### Result
@@ -73,7 +60,7 @@ if (navigator.mediaDevices.getSupportedConstraints().deviceId) {
 
 ## See also
 
-- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Streams_API)
+- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API)
 - {{domxref("MediaDevices.getSupportedConstraints()")}}
 - {{domxref("MediaTrackSupportedConstraints")}}
 - {{domxref("MediaStreamTrack")}}

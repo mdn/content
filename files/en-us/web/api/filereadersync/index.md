@@ -2,24 +2,23 @@
 title: FileReaderSync
 slug: Web/API/FileReaderSync
 page-type: web-api-interface
-tags:
-  - API
-  - NeedsMarkupWork
 browser-compat: api.FileReaderSync
 ---
-{{APIRef("File API")}}
 
-The `FileReaderSync` interface allows to read {{DOMxRef("File")}} or {{DOMxRef("Blob")}} objects synchronously.
+{{APIRef("File API")}} {{AvailableInWorkers("worker_except_service")}}
 
-{{AvailableInWorkers}}
+The **`FileReaderSync`** interface allows to read {{DOMxRef("File")}} or {{DOMxRef("Blob")}} objects synchronously. This interface is [only available](/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers) in [workers](/en-US/docs/Web/API/Worker) as it enables synchronous I/O that could potentially block.
 
-> **Warning:** This interface is **only available** in [workers](/en-US/docs/Web/API/Worker) as it enables synchronous I/O that could potentially block.
+## Constructor
 
-## Properties
+- {{domxref("FileReaderSync.FileReaderSync", "FileReaderSync()")}}
+  - : Returns a new `FileReaderSync` object.
+
+## Instance properties
 
 This interface does not have any properties.
 
-## Methods
+## Instance methods
 
 - {{DOMxRef("FileReaderSync.readAsArrayBuffer","FileReaderSync.readAsArrayBuffer()")}}
   - : This method converts a specified {{DOMxRef("Blob")}} or a {{DOMxRef("File")}} into an {{jsxref("ArrayBuffer")}} representing the input data as a binary string.
@@ -41,6 +40,5 @@ This interface does not have any properties.
 ## See also
 
 - {{DOMxRef("FileReader")}}
-- {{DOMxRef("BlobBuilder")}}, {{DOMxRef("Blob")}}
+- {{DOMxRef("Blob")}}
 - {{DOMxRef("File")}}
-- {{DOMxRef("FileReader")}}

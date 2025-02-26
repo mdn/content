@@ -1,14 +1,12 @@
 ---
-title: Event.cancelable
+title: "Event: cancelable property"
+short-title: cancelable
 slug: Web/API/Event/cancelable
 page-type: web-api-instance-property
-tags:
-  - Property
-  - Read-only
-  - Reference
 browser-compat: api.Event.cancelable
 ---
-{{ ApiRef("DOM") }}
+
+{{APIRef("DOM")}}{{AvailableInWorkers}}
 
 The **`cancelable`** read-only property of the {{domxref("Event")}} interface indicates whether the event
 can be canceled, and therefore prevented as if the event never happened.
@@ -18,7 +16,7 @@ If the event is _not_ cancelable, then its `cancelable` property will be
 
 Most browser-native events that can be canceled are the ones that result from the user
 interacting with the page. Canceling the {{domxref("Element/click_event", "click")}},
-{{domxref("Document/wheel_event", "wheel")}}, or
+{{domxref("Element/wheel_event", "wheel")}}, or
 {{domxref("Window/beforeunload_event", "beforeunload")}} events would prevent the user
 from clicking on something, scrolling the page with the mouse wheel, or
 navigating away from the page, respectively.
@@ -31,8 +29,7 @@ method on the event. This keeps the implementation from executing the default ac
 that is associated with the event.
 
 Event listeners that handle multiple kinds of events may want to check
-`cancelable` before invoking their {{domxref("event.preventDefault",
-  "preventDefault()")}} methods.
+`cancelable` before invoking their {{domxref("event.preventDefault", "preventDefault()")}} methods.
 
 ## Value
 
@@ -41,13 +38,11 @@ canceled.
 
 ## Example
 
-For example, browser vendors are proposing that the {{domxref("Document/wheel_event",
-  "wheel")}} event can only be canceled [the first time the listener is called](https://github.com/WICG/interventions/issues/33) — any following `wheel` events cannot be
-canceled.
+For example, browser vendors are proposing that the {{domxref("Element/wheel_event", "wheel")}} event can only be canceled [the first time the listener is called](https://github.com/WICG/interventions/issues/33) — any following `wheel` events cannot be canceled.
 
 ```js
 function preventScrollWheel(event) {
-  if (typeof event.cancelable !== 'boolean' || event.cancelable) {
+  if (typeof event.cancelable !== "boolean" || event.cancelable) {
     // The event can be canceled, so we do so.
     event.preventDefault();
   } else {
@@ -58,7 +53,7 @@ function preventScrollWheel(event) {
   }
 }
 
-document.addEventListener('wheel', preventScrollWheel);
+document.addEventListener("wheel", preventScrollWheel);
 ```
 
 ## Specifications

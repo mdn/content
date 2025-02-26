@@ -1,16 +1,12 @@
 ---
-title: WebGLRenderingContext.getShaderParameter()
+title: "WebGLRenderingContext: getShaderParameter() method"
+short-title: getShaderParameter()
 slug: Web/API/WebGLRenderingContext/getShaderParameter
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.getShaderParameter
 ---
-{{APIRef("WebGL")}}
+
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGLRenderingContext.getShaderParameter()`** method of
 the [WebGL API](/en-US/docs/Web/API/WebGL_API) returns information about the
@@ -18,7 +14,7 @@ given shader.
 
 ## Syntax
 
-```js
+```js-nolint
 getShaderParameter(shader, pname)
 ```
 

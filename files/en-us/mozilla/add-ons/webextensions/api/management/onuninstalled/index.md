@@ -1,17 +1,11 @@
 ---
 title: management.onUninstalled()
 slug: Mozilla/Add-ons/WebExtensions/API/management/onUninstalled
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Reference
-  - WebExtensions
-  - management
-  - onUninstalled
+page-type: webextension-api-event
 browser-compat: webextensions.api.management.onUninstalled
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 Fired when an add-on is uninstalled.
 
@@ -19,7 +13,7 @@ This API requires the "management" [API permission](/en-US/docs/Mozilla/Add-ons/
 
 ## Syntax
 
-```js
+```js-nolint
 browser.management.onUninstalled.addListener(listener)
 browser.management.onUninstalled.removeListener(listener)
 browser.management.onUninstalled.hasListener(listener)
@@ -27,7 +21,7 @@ browser.management.onUninstalled.hasListener(listener)
 
 Events have three functions:
 
-- `addListener(callback)`
+- `addListener(listener)`
   - : Adds a listener to this event.
 - `removeListener(listener)`
   - : Stop listening to this event. The `listener` argument is the listener to remove.
@@ -38,9 +32,9 @@ Events have three functions:
 
 ### Parameters
 
-- `function`
+- `listener`
 
-  - : Callback function that will be called when this event occurs. The function will be passed the following argument:
+  - : The function called when this event occurs. The function is passed this argument:
 
     - `info`
       - : [`ExtensionInfo`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/management/ExtensionInfo): info about the add-on that was uninstalled.
@@ -55,17 +49,17 @@ Log the names of add-ons when they are uninstalled:
 
 ```js
 browser.management.onUninstalled.addListener((info) => {
-  console.log(info.name + " was uninstalled");
+  console.log(`${info.name} was uninstalled`);
 });
 ```
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.management`](https://developer.chrome.com/docs/extensions/reference/management/#event-onUninstalled) API. This documentation is derived from [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.management`](https://developer.chrome.com/docs/extensions/reference/api/management#event-onUninstalled) API. This documentation is derived from [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json) in the Chromium code.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -92,4 +86,4 @@ browser.management.onUninstalled.addListener((info) => {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

@@ -1,19 +1,17 @@
 ---
-title: CSSKeyframesRule.cssRules
+title: "CSSKeyframesRule: cssRules property"
+short-title: cssRules
 slug: Web/API/CSSKeyframesRule/cssRules
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM
-  - CSSKeyframesRule
-  - CSS Animations
-  - Property
-  - Reference
 browser-compat: api.CSSKeyframesRule.cssRules
 ---
+
 {{APIRef("CSSOM") }}
 
-The read-only **`cssRules`** property of the {{domxref("CSSKeyframeRule")}} interface returns a {{domxref("CSSRuleList")}} containing the rules in the keyframes [at-rule](/en-US/docs/Web/CSS/At-rule).
+The read-only **`cssRules`** property of the {{domxref("CSSKeyframeRule")}} interface returns a {{domxref("CSSRuleList")}} containing the rules in the keyframes [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule).
+
+> [!NOTE]
+> The `CSSKeyframeRule` itself is indexable like an array, and functions similarly to its `cssRules` property.
 
 ## Value
 
@@ -25,7 +23,7 @@ The CSS includes a keyframes at-rule. This will be the first {{domxref("CSSRule"
 `myRules[0]` returns a {{domxref("CSSKeyframesRule")}} object. The `cssRules` property returns a {{domxref("CSSRuleList")}} containing two rules.
 
 ```css
-@keyframes slidein {
+@keyframes slide-in {
   from {
     transform: translateX(0%);
   }

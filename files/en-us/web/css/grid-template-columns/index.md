@@ -1,17 +1,13 @@
 ---
 title: grid-template-columns
 slug: Web/CSS/grid-template-columns
-tags:
-  - CSS
-  - CSS Grid
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.grid-template-columns
 ---
+
 {{CSSRef}}
 
-The **`grid-template-columns`** CSS property defines the line names and track sizing functions of the {{glossary("grid column", "grid columns")}}.
+The **`grid-template-columns`** [CSS](/en-US/docs/Web/CSS) property defines the line names and track sizing functions of the {{glossary("grid column", "grid columns")}}.
 
 {{EmbedInteractiveExample("pages/css/grid-template-columns.html")}}
 
@@ -23,8 +19,8 @@ grid-template-columns: none;
 
 /* <track-list> values */
 grid-template-columns: 100px 1fr;
-grid-template-columns: [linename] 100px;
-grid-template-columns: [linename1] 100px [linename2 linename3];
+grid-template-columns: [line-name] 100px;
+grid-template-columns: [line-name1] 100px [line-name2 line-name3];
 grid-template-columns: minmax(100px, 1fr);
 grid-template-columns: fit-content(40%);
 grid-template-columns: repeat(3, 200px);
@@ -33,13 +29,16 @@ grid-template-columns: masonry;
 
 /* <auto-track-list> values */
 grid-template-columns: 200px repeat(auto-fill, 100px) 300px;
-grid-template-columns: minmax(100px, max-content)
-                       repeat(auto-fill, 200px) 20%;
-grid-template-columns: [linename1] 100px [linename2]
-                       repeat(auto-fit, [linename3 linename4] 300px)
-                       100px;
-grid-template-columns: [linename1 linename2] 100px
-                       repeat(auto-fit, [linename1] 300px) [linename3];
+grid-template-columns:
+  minmax(100px, max-content)
+  repeat(auto-fill, 200px) 20%;
+grid-template-columns:
+  [line-name1] 100px [line-name2]
+  repeat(auto-fit, [line-name3 line-name4] 300px)
+  100px;
+grid-template-columns:
+  [line-name1 line-name2] 100px
+  repeat(auto-fit, [line-name1] 300px) [line-name3];
 
 /* Global values */
 grid-template-columns: inherit;
@@ -53,7 +52,7 @@ grid-template-columns: unset;
 
 - `none`
   - : Indicates that there is no explicit grid. Any columns will be implicitly generated and their size will be determined by the {{cssxref("grid-auto-columns")}} property.
-- `[linename]`
+- `[line-name]`
   - : A [`<custom-ident>`](/en-US/docs/Web/CSS/custom-ident) specifying a name for the line in that location. The ident may be any valid string other than the reserved words `span` and `auto`. Lines may have multiple names separated by a space inside the square brackets, for example `[line-name-a line-name-b]`.
 - {{cssxref("&lt;length&gt;")}}
   - : A non-negative length, giving the width of the column.
@@ -86,14 +85,10 @@ grid-template-columns: unset;
   - : Represents the formula `max(minimum, min(limit, max-content))`, where _minimum_ represents an `auto` minimum (which is often, but not always, equal to a {{cssxref("min-content")}} minimum), and _limit_ is the track sizing function passed as an argument to fit-content(). This is essentially calculated as the smaller of `minmax(auto, max-content)` and `minmax(auto, limit)`.
 - {{cssxref("repeat", "repeat( [ &lt;positive-integer&gt; | auto-fill | auto-fit ] , &lt;track-list&gt; )")}}
   - : Represents a repeated fragment of the track list, allowing a large number of columns that exhibit a recurring pattern to be written in a more compact form.
-- [`masonry`](/en-US/docs/Web/CSS/CSS_Grid_Layout/Masonry_Layout) {{Experimental_Inline}}
+- [`masonry`](/en-US/docs/Web/CSS/CSS_grid_layout/Masonry_layout)
   - : The masonry value indicates that this axis should be laid out according to the masonry algorithm.
-- [`subgrid`](/en-US/docs/Web/CSS/CSS_Grid_Layout/Subgrid)
+- [`subgrid`](/en-US/docs/Web/CSS/CSS_grid_layout/Subgrid)
   - : The `subgrid` value indicates that the grid will adopt the spanned portion of its parent grid in that axis. Rather than being specified explicitly, the sizes of the grid rows/columns will be taken from the parent grid's definition.
-
-> **Warning:** The `masonry` value is from Level 3 of the Grid specification and currently only has an experimental implementation behind a flag in Firefox.
->
-> The `subgrid` value is from Level 2 of the Grid specification and currently only has implementation in Firefox 71 and onwards.
 
 ## Formal definition
 
@@ -148,7 +143,9 @@ grid-template-columns: unset;
 
 ## See also
 
-- Related CSS properties: {{cssxref("grid-template-rows")}}, {{cssxref("grid-template-areas")}}, {{cssxref("grid-template")}}
-- Grid Layout Guide: _[Basic concepts of grid layout - Grid Tracks](/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#grid_tracks)_
-- Video tutorial: _[Defining a Grid](https://gridbyexample.com/video/series-define-a-grid/)_
-- [Subgrid](/en-US/docs/Web/CSS/CSS_Grid_Layout/Subgrid)
+- {{cssxref("grid-template-rows")}}
+- {{cssxref("grid-template-areas")}}
+- {{cssxref("grid-template")}}
+- [Basic concepts of grid layout: grid tracks](/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#grid_tracks)
+- Video: [Defining a grid](https://gridbyexample.com/video/series-define-a-grid/)
+- [Subgrid](/en-US/docs/Web/CSS/CSS_grid_layout/Subgrid)

@@ -1,33 +1,29 @@
 ---
-title: WebGLRenderingContext.blendFunc()
+title: "WebGLRenderingContext: blendFunc() method"
+short-title: blendFunc()
 slug: Web/API/WebGLRenderingContext/blendFunc
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.blendFunc
 ---
-{{APIRef("WebGL")}}
+
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGLRenderingContext.blendFunc()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) defines which function is used for
 blending pixel arithmetic.
 
 ## Syntax
 
-```js
+```js-nolint
 blendFunc(sfactor, dfactor)
 ```
 
 ### Parameters
 
 - `sfactor`
-  - : A {{domxref("WebGL_API.Types")}} specifying a multiplier for the source blending factors. The
+  - : A {{domxref("WebGL_API.Types", "GLenum")}} specifying a multiplier for the source blending factors. The
     default value is `gl.ONE`. For possible values, see below.
 - `dfactor`
-  - : A {{domxref("WebGL_API.Types")}} specifying a multiplier for the destination blending
+  - : A {{domxref("WebGL_API.Types", "GLenum")}} specifying a multiplier for the destination blending
     factors. The default value is `gl.ZERO`. For possible values, see below.
 
 ### Return value
@@ -46,7 +42,7 @@ None ({{jsxref("undefined")}}).
 The following constants can be used for _sfactor_ and _dfactor_.
 
 The formula for the blending color can be described like this: color(RGBA) =
-(sourceColor \* _sfactor_) + (destinationColor \* _dfactor_). The RBGA
+(sourceColor \* _sfactor_) + (destinationColor \* _dfactor_). The RGBA
 values are between 0 and 1.
 
 In the following table, R<sub>S</sub>, G<sub>S</sub>, B<sub>S</sub>, A<sub>S</sub> represent respectively
@@ -179,7 +175,7 @@ To get the current blend function, query the `BLEND_SRC_RGB`,
 ```js
 gl.enable(gl.BLEND);
 gl.blendFunc(gl.SRC_COLOR, gl.DST_COLOR);
-gl.getParameter(gl.BLEND_SRC_RGB) == gl.SRC_COLOR;
+gl.getParameter(gl.BLEND_SRC_RGB) === gl.SRC_COLOR;
 // true
 ```
 

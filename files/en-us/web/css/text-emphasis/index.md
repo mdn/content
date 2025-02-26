@@ -1,14 +1,10 @@
 ---
 title: text-emphasis
 slug: Web/CSS/text-emphasis
-tags:
-  - CSS
-  - CSS Property
-  - CSS Text Decoration
-  - Reference
-  - recipe:css-shorthand-property
+page-type: css-shorthand-property
 browser-compat: css.properties.text-emphasis
 ---
+
 {{CSSRef}}
 
 The **`text-emphasis`** [CSS](/en-US/docs/Web/CSS) property applies emphasis marks to text (except spaces and control characters). It is a [shorthand](/en-US/docs/Web/CSS/Shorthand_properties) for {{cssxref("text-emphasis-style")}} and {{cssxref("text-emphasis-color")}}.
@@ -35,11 +31,11 @@ This property is a shorthand for the following CSS properties:
 text-emphasis: none; /* No emphasis marks */
 
 /* <string> value */
-text-emphasis: 'x';
-text-emphasis: '点';
-text-emphasis: '\25B2';
-text-emphasis: '*' #555;
-text-emphasis: 'foo'; /* Should NOT use. It may be computed to or rendered as 'f' only */
+text-emphasis: "x";
+text-emphasis: "点";
+text-emphasis: "\25B2";
+text-emphasis: "*" #555;
+text-emphasis: "foo"; /* Should NOT use. It may be computed to or rendered as 'f' only */
 
 /* Keywords value */
 text-emphasis: filled;
@@ -99,7 +95,7 @@ This example draws a heading with triangles used to emphasize each character.
 
 ```css
 h2 {
-  text-emphasis: triangle #D55;
+  text-emphasis: triangle #d55;
 }
 ```
 

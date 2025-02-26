@@ -1,18 +1,12 @@
 ---
-title: SVGAElement.target
+title: "SVGAElement: target property"
+short-title: target
 slug: Web/API/SVGAElement/target
 page-type: web-api-instance-property
-tags:
-  - API
-  - NeedsBrowserCompatibility
-  - Property
-  - Reference
-  - SVG
 browser-compat: api.SVGAElement.target
 ---
-{{APIRef("SVGAElement")}}
 
-{{SeeCompatTable}}
+{{APIRef("SVG")}}
 
 The **`SVGAElement.target`** read-only property of {{domxref("SVGAElement")}} returns an {{domxref("SVGAnimatedString")}} object that specifies the portion of a target window, frame, pane into which a document is to be opened when a link is activated.
 
@@ -20,9 +14,7 @@ This property is used when there are multiple possible targets for the ending re
 
 ## Value
 
-An {{domxref("SVGAnimatedString")}} indicating the ending resource target that opens the document when the link is activated.
-
-Sample values can be found [here](https://www.w3.org/TR/2011/REC-SVG11-20110816/linking.html#AElementTargetAttribute)
+An {{domxref("SVGAnimatedString")}} indicating the ending resource target that opens the document when the link is activated. See {{SVGAttr("target")}} for valid values.
 
 ## Examples
 
@@ -30,8 +22,8 @@ The code is taken from the ["SVGAElement example code"](/en-US/docs/Web/API/SVGA
 
 ```js
 // ...
-const linkRef = document.querySelector('a');
-linkRef.target ='_blank';
+const linkRef = document.querySelector("a");
+linkRef.target = "_blank";
 // ...
 ```
 

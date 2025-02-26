@@ -1,25 +1,23 @@
 ---
 title: storage.session
 slug: Mozilla/Add-ons/WebExtensions/API/storage/session
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Property
-  - Reference
-  - Storage
-  - WebExtensions
-  - session
+page-type: webextension-api-property
 browser-compat: webextensions.api.storage.session
 ---
-{{AddonSidebar()}}
 
-Represents the `session` storage area. Items in `session` storage are stored in memory and are not persisted to disk.
+{{AddonSidebar}}
 
-The browser may restrict the amount of data that an extension can store in the session storage area. For example, in Chrome, an extension is limited to storing 1MB of data in this storage area.
+Represents the `session` storage area. Items in `session` storage are stored in memory for the duration of the browser session and are not persisted to disk.
+By default, it's not exposed to content scripts, but this behavior can be changed through {{WebExtAPIRef("storage.StorageArea.setAccessLevel", "storage.session.setAccessLevel()")}}.
+
+The amount of data that an extension can store in the session storage area is limited to 10 MB, unless stated otherwise in the [browser compatibility table](#browser_compatibility).
 
 When the browser stops, all session storage is cleared. When the extension is uninstalled, its associated session storage is cleared.
+
+## Properties
+
+- {{WebExtAPIRef("storage.session.QUOTA_BYTES")}}
+  - : The maximum amount of data (in bytes) that can be stored in session storage.
 
 ## Methods
 
@@ -31,6 +29,8 @@ The `session` object implements the methods defined on the {{WebExtAPIRef("stora
   - : Gets the amount of storage space (in bytes) used for one or more items in the storage area.
 - {{WebExtAPIRef("storage.StorageArea.set()", "storage.session.set()")}}
   - : Stores one or more items in the storage area. If the item exists, its value is updated.
+- {{WebExtAPIRef("storage.StorageArea.setAccessLevel", "storage.session.setAccessLevel()")}}
+  - : Sets the access level for the storage area.
 - {{WebExtAPIRef("storage.StorageArea.remove()", "storage.session.remove()")}}
   - : Removes one or more items from the storage area.
 - {{WebExtAPIRef("storage.StorageArea.clear()", "storage.session.clear()")}}
@@ -49,11 +49,11 @@ The `session` object implements the events defined on the {{WebExtAPIRef("storag
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/storage/#property-session) API. This documentation is derived from [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/api/storage#property-session) API. This documentation is derived from [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) in the Chromium code.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -80,4 +80,4 @@ The `session` object implements the events defined on the {{WebExtAPIRef("storag
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

@@ -1,16 +1,12 @@
 ---
-title: ImageDecoder.tracks
+title: "ImageDecoder: tracks property"
+short-title: tracks
 slug: Web/API/ImageDecoder/tracks
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - tracks
-  - ImageDecoder
 browser-compat: api.ImageDecoder.tracks
 ---
-{{securecontext_header}}{{APIRef("WebCodecs API")}}
+
+{{securecontext_header}}{{APIRef("WebCodecs API")}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`tracks`** read-only property of the {{domxref("ImageDecoder")}} interface returns a list of the tracks in the encoded image data.
 

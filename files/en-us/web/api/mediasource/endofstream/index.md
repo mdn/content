@@ -1,28 +1,19 @@
 ---
-title: MediaSource.endOfStream()
+title: "MediaSource: endOfStream() method"
+short-title: endOfStream()
 slug: Web/API/MediaSource/endOfStream
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - Experimental
-  - MSE
-  - Media Source Extensions
-  - MediaSource
-  - Method
-  - Reference
-  - Video
-  - endOfStream
 browser-compat: api.MediaSource.endOfStream
 ---
-{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
+
+{{APIRef("Media Source Extensions")}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`endOfStream()`** method of the
 {{domxref("MediaSource")}} interface signals the end of the stream.
 
 ## Syntax
 
-```js
+```js-nolint
 endOfStream()
 endOfStream(endOfStreamError)
 ```
@@ -38,8 +29,8 @@ endOfStream(endOfStreamError)
       - : Terminates playback and signals that a network error has
         occurred. This can be used create a custom error handler related to media streams.
         For example, you might have a function that handles media chunk requests, separate
-        from other network requests. When you make an [XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest) call for a media
-        chunk, and `onabort` or `onerror` triggers, you might want
+        from other network requests. When you make a {{domxref("Window/fetch", "fetch()")}} request for a media
+        chunk and receive a network error, you might want
         to call `endOfStream('network')`, display a descriptive message in the
         UI, and maybe retry the network request immediately or wait until the network is
         back up (via some kind of polling.)
@@ -57,40 +48,41 @@ None ({{jsxref("undefined")}}).
 
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if {{domxref("MediaSource.readyState")}} is not equal to `open`, or one or more of the {{domxref("SourceBuffer")}} objects in {{domxref("MediaSource.sourceBuffers")}} are being updated (i.e. their {{domxref("SourceBuffer.updating")}} property is
-      `true`.)
+    `true`.)
 
 ## Examples
 
-The following snippet is from a simple example written by Nick Desaulniers ([view the full demo live](https://nickdesaulniers.github.io/netfix/demo/bufferAll.html), or [download the source](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html) for further investigation.)
+The following snippet is from an example written by Nick Desaulniers ([view the full demo live](https://nickdesaulniers.github.io/netfix/demo/bufferAll.html), or [download the source](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html) for further investigation). The function `getMediaSource()`, which is not defined here, returns a `MediaSource`.
 
 ```js
-const assetURL = 'frag_bunny.mp4';
+const assetURL = "frag_bunny.mp4";
 // Need to be specific for Blink regarding codecs
 // ./mp4info frag_bunny.mp4 | grep Codec
 const mimeCodec = 'video/mp4; codecs="avc1.42E01E, mp4a.40.2"';
 
-if ('MediaSource' in window && MediaSource.isTypeSupported(mimeCodec)) {
-  const mediaSource = new MediaSource;
-  //console.log(mediaSource.readyState); // closed
+let mediaSource;
+
+if ("MediaSource" in window && MediaSource.isTypeSupported(mimeCodec)) {
+  mediaSource = getMediaSource();
+  console.log(mediaSource.readyState); // closed
   video.src = URL.createObjectURL(mediaSource);
-  mediaSource.addEventListener('sourceopen', sourceOpen);
+  mediaSource.addEventListener("sourceopen", sourceOpen);
 } else {
-  console.error('Unsupported MIME type or codec: ', mimeCodec);
+  console.error("Unsupported MIME type or codec: ", mimeCodec);
 }
 
-function sourceOpen (_) {
-  //console.log(this.readyState); // open
-  const mediaSource = this;
+function sourceOpen() {
+  console.log(this.readyState); // open
   const sourceBuffer = mediaSource.addSourceBuffer(mimeCodec);
-  fetchAB(assetURL, function (buf) {
-    sourceBuffer.addEventListener('updateend', function (_) {
+  fetchAB(assetURL, (buf) => {
+    sourceBuffer.addEventListener("updateend", () => {
       mediaSource.endOfStream();
       video.play();
-      //console.log(mediaSource.readyState); // ended
+      console.log(mediaSource.readyState); // ended
     });
     sourceBuffer.appendBuffer(buf);
   });
-};
+}
 ```
 
 ## Specifications

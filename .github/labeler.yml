@@ -1,52 +1,170 @@
+# This file is used by .github/workflows/pr-labeler.yml to label pull requests based on the files changed in the PR.
+# Object matching syntax: https://github.com/actions/labeler/blob/main/README.md#match-object
+system:
+  - changed-files:
+      - any-glob-to-any-file:
+          - package.json
+          - yarn.lock
+          - .github/**
+          - .husky/**
+          - .vscode/**
+          - .*
+          - scripts/**
+          - tests/**
+          - jest.config.json
+          - front-matter-config.json
+
 Content:Accessibility:
-  - files/en-us/web/accessibility/**/*
+  - changed-files:
+      - any-glob-to-any-file:
+          - files/en-us/web/accessibility/**
 Content:CSS:
-  - files/en-us/web/css/**/*
-Content:DevTools:
-  - files/en-us/tools/**/*
+  - changed-files:
+      - any-glob-to-any-file:
+          - files/en-us/web/css/**
+Content:Events:
+  - changed-files:
+      - any-glob-to-any-file:
+          - files/en-us/web/events/**
+Content:Firefox:
+  - changed-files:
+      - any-glob-to-any-file:
+          - files/en-us/mozilla/firefox/**
+Content:Games:
+  - changed-files:
+      - any-glob-to-any-file:
+          - files/en-us/games/**
 Content:Glossary:
-  - files/en-us/glossary/**/*
+  - changed-files:
+      - any-glob-to-any-file:
+          - files/en-us/glossary/**
+Content:Guide:
+  - changed-files:
+      - any-glob-to-any-file:
+          - files/en-us/web/guide/**
 Content:HTML:
-  - files/en-us/web/html/**/*
+  - changed-files:
+      - any-glob-to-any-file:
+          - files/en-us/web/html/**
 Content:HTTP:
-  - files/en-us/web/http/**/*
+  - changed-files:
+      - any-glob-to-any-file:
+          - files/en-us/web/http/**
 Content:JS:
-  - files/en-us/web/javascript/**/*
-Content:MathML:
-  - files/en-us/web/mathml/**/*
-Content:Media:
-  - files/en-us/web/media/**/*
-Content:SVG:
-  - files/en-us/web/svg/**/*
-Content:wasm:
-  - files/en-us/webassembly/**/*
-Content:WebAPI:
-  - files/en-us/web/api/**/*
-Content:WebDriver:
-  - files/en-us/web/webdriver/**/*
-Content:WebExt:
-  - files/en-us/mozilla/add-ons/webextensions/**/*
+  - changed-files:
+      - any-glob-to-any-file:
+          - files/en-us/web/javascript/**
 Content:Learn:
-  - files/en-us/learn/**/*
-  - files/en-us/web/guide/**/*
-  - files/en-us/web/tutorials/**/*
+  - changed-files:
+      - all-globs-to-any-file:
+          - files/en-us/learn_web_development/**
+  - changed-files:
+      - any-glob-to-any-file:
+          - files/en-us/web/tutorials/**
+# Mapping for old directories, see https://github.com/mdn/content/pull/36967
+#
+# Content:Learn:Accessibility:
+#   - changed-files:
+#       - any-glob-to-any-file:
+#           - files/en-us/learn/accessibility/**
+# Content:Learn:Client-side:
+#   - changed-files:
+#       - any-glob-to-any-file:
+#           - files/en-us/learn/tools_and_testing/client-side_javascript_frameworks/**
+#           - files/en-us/learn/tools_and_testing/understanding_client-side_tools/**
+# Content:Learn:Cross-Browser-Testing:
+#   - changed-files:
+#       - any-glob-to-any-file:
+#           - files/en-us/learn/tools_and_testing/cross_browser_testing/**
+# Content:Learn:CSS:
+#   - changed-files:
+#       - any-glob-to-any-file:
+#           - files/en-us/learn/css/**
+# Content:Learn:Django:
+#   - changed-files:
+#       - any-glob-to-any-file:
+#           - files/en-us/learn/server-side/django/**
+# Content:Learn:Express:
+#   - changed-files:
+#       - any-glob-to-any-file:
+#           - files/en-us/learn/server-side/express_nodejs/**
+# Content:Learn:Forms:
+#   - changed-files:
+#       - any-glob-to-any-file:
+#           - files/en-us/learn/forms/**
+# Content:Learn:GitHub:
+#   - changed-files:
+#       - any-glob-to-any-file:
+#           - files/en-us/learn/tools_and_testing/github/**
+# Content:Learn:HTML:
+#   - changed-files:
+#       - any-glob-to-any-file:
+#           - files/en-us/learn/html/**
+# Content:Learn:JavaScript:
+#   - changed-files:
+#       - any-glob-to-any-file:
+#           - files/en-us/learn/javascript/**
+Content:Manifest:
+  - changed-files:
+      - any-glob-to-any-file:
+          - files/en-us/web/manifest/**
+Content:MathML:
+  - changed-files:
+      - any-glob-to-any-file:
+          - files/en-us/web/mathml/**
+Content:Media:
+  - changed-files:
+      - any-glob-to-any-file:
+          - files/en-us/web/media/**
+Content:Meta:
+  - changed-files:
+      - any-glob-to-any-file:
+          - files/en-us/mdn/**
+Content:Performance:
+  - changed-files:
+      - any-glob-to-any-file:
+          - files/en-us/web/performance/**
+Content:PWA:
+  - changed-files:
+      - any-glob-to-any-file:
+          - files/en-us/web/progressive_web_apps/**
+Content:Security:
+  - changed-files:
+      - any-glob-to-any-file:
+          - files/en-us/web/security/**
+Content:SVG:
+  - changed-files:
+      - any-glob-to-any-file:
+          - files/en-us/web/svg/**
+Content:wasm:
+  - changed-files:
+      - any-glob-to-any-file:
+          - files/en-us/webassembly/**
+Content:WebAPI:
+  - changed-files:
+      - any-glob-to-any-file:
+          - files/en-us/web/api/**
+Content:WebDriver:
+  - changed-files:
+      - any-glob-to-any-file:
+          - files/en-us/web/webdriver/**
+Content:WebExt:
+  - changed-files:
+      - any-glob-to-any-file:
+          - files/en-us/mozilla/add-ons/webextensions/**
 Content:Other:
-  - files/en-us/games/**/*
-  - files/en-us/mdn/**/*
-  - files/en-us/mozilla/**/*
-  - files/en-us/plugins/**/*
-  - files/en-us/related/**/*
-  - files/en-us/tools/**/*
-  - files/en-us/web/demos/**/*
-  - files/en-us/web/events/**/*
-  - files/en-us/web/exslt/**/*
-  - files/en-us/web/manifest/**/*
-  - files/en-us/web/opensearch/**/*
-  - files/en-us/web/performance/**/*
-  - files/en-us/web/privacy/**/*
-  - files/en-us/web/progressive_web_apps/**/*
-  - files/en-us/web/security/**/*
-  - files/en-us/web/web_components/**/*
-  - files/en-us/web/xml/**/*
-  - files/en-us/web/xpath/**/*
-  - files/en-us/web/xslt/**/*
+  - changed-files:
+      - all-globs-to-any-file:
+          - files/en-us/mozilla/**
+          - "!files/en-us/mozilla/add-ons/webextensions/**"
+          - "!files/en-us/mozilla/firefox/**"
+  - changed-files:
+      - any-glob-to-any-file:
+          - files/en-us/related/**
+          - files/en-us/web/exslt/**
+          - files/en-us/web/opensearch/**
+          - files/en-us/web/privacy/**
+          - files/en-us/web/uri/**
+          - files/en-us/web/xml/**
+          - files/en-us/web/xpath/**
+          - files/en-us/web/xslt/**

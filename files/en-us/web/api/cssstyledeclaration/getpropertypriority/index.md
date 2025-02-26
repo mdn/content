@@ -1,14 +1,11 @@
 ---
-title: CSSStyleDeclaration.getPropertyPriority()
+title: "CSSStyleDeclaration: getPropertyPriority() method"
+short-title: getPropertyPriority()
 slug: Web/API/CSSStyleDeclaration/getPropertyPriority
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSSOM
-  - Method
-  - Reference
 browser-compat: api.CSSStyleDeclaration.getPropertyPriority
 ---
+
 {{ APIRef("CSSOM") }}
 
 The **CSSStyleDeclaration.getPropertyPriority()** method interface returns
@@ -17,7 +14,7 @@ property.
 
 ## Syntax
 
-```js
+```js-nolint
 getPropertyPriority(property)
 ```
 
@@ -38,7 +35,7 @@ in a CSS selector rule:
 
 ```js
 const declaration = document.styleSheets[0].cssRules[0].style;
-const isImportant = declaration.getPropertyPriority('margin') === 'important';
+const isImportant = declaration.getPropertyPriority("margin") === "important";
 ```
 
 ## Specifications

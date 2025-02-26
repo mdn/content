@@ -2,15 +2,9 @@
 title: Writing a WebSocket server in C#
 slug: Web/API/WebSockets_API/Writing_WebSocket_server
 page-type: guide
-tags:
-  - HTML5
-  - NeedsMarkupWork
-  - Tutorial
-  - WebSockets
 ---
-{{DefaultAPISidebar("Websockets API")}}
 
-## Introduction
+{{DefaultAPISidebar("WebSockets API")}}
 
 If you would like to use the WebSocket API, it is useful if you have a server. In this article I will show you how to write one in C#. You can do it in any server-side language, but to keep things simple and more understandable, I chose Microsoft's language.
 
@@ -18,27 +12,29 @@ This server conforms to [RFC 6455](https://datatracker.ietf.org/doc/html/rfc6455
 
 ## First steps
 
-WebSockets communicate over a [TCP (Transmission Control Protocol)](https://en.wikipedia.org/wiki/Transmission_Control_Protocol) connection. Luckily, C# has a [TcpListener](https://docs.microsoft.com/en-us/dotnet/api/system.net.sockets.tcplistener?view=net-6.0) class which does as the name suggests. It is in the *System.Net.Sockets* namespace.
+WebSockets communicate over a [TCP (Transmission Control Protocol)](https://en.wikipedia.org/wiki/Transmission_Control_Protocol) connection. Luckily, C# has a [TcpListener](https://learn.microsoft.com/en-us/dotnet/api/system.net.sockets.tcplistener?view=net-6.0) class which does as the name suggests. It is in the `System.Net.Sockets` namespace.
 
-> **Note:** It is a good idea to include the namespace with the `using` keyword in order to write less. It allows usage of a namespace's classes without typing the full namespace every time.
+> [!NOTE]
+> It is a good idea to include the namespace with the `using` keyword in order to write less. It allows usage of a namespace's classes without typing the full namespace every time.
 
 ### TcpListener
 
 Constructor:
 
 ```cs
-TcpListener(System.Net.IPAddress localaddr, int port)
+TcpListener(System.Net.IPAddress localAddr, int port)
 ```
 
-`localaddr` specifies the IP of the listener, and `port` specifies the port.
+`localAddr` specifies the IP of the listener, and `port` specifies the port.
 
-> **Note:** To create an `IPAddress` object from a `string`, use the `Parse` static method of `IPAddress`_._
+> [!NOTE]
+> To create an `IPAddress` object from a `string`, use the `Parse` static method of `IPAddress`.
 
 Methods:
 
 - `Start()`
 - `System.Net.Sockets.TcpClient AcceptTcpClient()`
-  Waits for a Tcp connection, accepts it and returns it as a TcpClient object.
+  Waits for a TCP connection, accepts it and returns it as a TcpClient object.
 
 Here's a barebones server implementation:
 
@@ -77,17 +73,17 @@ Properties:
 
 Methods:
 
-- ```cs
-  Write(Byte[] buffer, int offset, int size)
+- Writes bytes from buffer, offset and size determine length of message.
+
+  ```cs
+  Write(byte[] buffer, int offset, int size)
   ```
 
-  Writes bytes from buffer, offset and size determine length of message.
+- Reads bytes to `buffer`. `offset` and `size` determine the length of the message.
 
-- ```cs
-  Read(Byte[] buffer, int offset, int size)
+  ```cs
+  Read(byte[] buffer, int offset, int size)
   ```
-
-  Reads bytes to `buffer`. `offset` and `size` determine the length of the message.
 
 Let us extend our example.
 
@@ -102,7 +98,7 @@ NetworkStream stream = client.GetStream();
 while (true) {
     while (!stream.DataAvailable);
 
-    Byte[] bytes = new Byte[client.Available];
+    byte[] bytes = new byte[client.Available];
 
     stream.Read(bytes, 0, bytes.Length);
 }
@@ -123,7 +119,7 @@ while(client.Available < 3)
    // wait for enough bytes to be available
 }
 
-Byte[] bytes = new Byte[client.Available];
+byte[] bytes = new byte[client.Available];
 
 stream.Read(bytes, 0, bytes.Length);
 
@@ -144,14 +140,14 @@ You must:
 1. Obtain the value of the "Sec-WebSocket-Key" request header without any leading or trailing whitespace
 2. Concatenate it with "258EAFA5-E914-47DA-95CA-C5AB0DC85B11" (a special GUID specified by RFC 6455)
 3. Compute SHA-1 and Base64 hash of the new value
-4. Write the hash back as the value of "Sec-WebSocket-Accept" response header in an HTTP response
+4. Write the hash back as the value of {{httpheader("Sec-WebSocket-Accept")}} response header in an HTTP response
 
 ```cs
- if (new System.Text.RegularExpressions.Regex("^GET").IsMatch(data))
+if (new System.Text.RegularExpressions.Regex("^GET").IsMatch(data))
 {
     const string eol = "\r\n"; // HTTP/1.1 defines the sequence CR LF as the end-of-line marker
 
-    Byte[] response = Encoding.UTF8.GetBytes("HTTP/1.1 101 Switching Protocols" + eol
+    byte[] response = Encoding.UTF8.GetBytes("HTTP/1.1 101 Switching Protocols" + eol
         + "Connection: Upgrade" + eol
         + "Upgrade: websocket" + eol
         + "Sec-WebSocket-Accept: " + Convert.ToBase64String(
@@ -173,7 +169,7 @@ After a successful handshake, the client will send encoded messages to the serve
 
 If we send "MDN", we get these bytes:
 
-```
+```plain
 129 131 61 84 35 6 112 16 109
 ```
 
@@ -198,7 +194,8 @@ The second byte, which currently has a value of 131, is another bitfield that br
 - MASK bit: Defines whether the "Payload data" is masked. If set to 1, a masking key is present in Masking-Key, and this is used to unmask the "Payload data". All messages from the client to the server have this bit set.
 - Payload Length: If this value is between 0 and 125, then it is the length of message. If it is 126, the following 2 bytes (16-bit unsigned integer) are the length. If it is 127, the following 8 bytes (64-bit unsigned integer) are the length.
 
-> **Note:** Because the first bit is always 1 for client-to-server messages, you can subtract 128 from this byte to get rid of the MASK bit.
+> [!NOTE]
+> Because the first bit is always 1 for client-to-server messages, you can subtract 128 from this byte to get rid of the MASK bit.
 
 Note that the MASK bit is set in our message. This means that the next four bytes (61, 84, 35, and 6) are the mask bytes used to decode the message. These bytes change with every message.
 
@@ -213,23 +210,23 @@ where _D_ is the decoded message array, _E_ is the encoded message array, _M_ is
 Example in C#:
 
 ```cs
-Byte[] decoded = new Byte[3];
-Byte[] encoded = new Byte[3] {112, 16, 109};
-Byte[] mask = new Byte[4] {61, 84, 35, 6};
+byte[] decoded = new byte[3];
+byte[] encoded = new byte[3] {112, 16, 109};
+byte[] mask = new byte[4] {61, 84, 35, 6};
 
 for (int i = 0; i < encoded.Length; i++) {
-    decoded[i] = (Byte)(encoded[i] ^ mask[i % 4]);
+    decoded[i] = (byte)(encoded[i] ^ mask[i % 4]);
 }
 ```
 
 ## Put together
 
-### wsserver.cs
+### ws-server.cs
 
 ```cs
 //
-// csc wsserver.cs
-// wsserver.exe
+// csc ws-server.cs
+// ws-server.exe
 
 using System;
 using System.Net;
@@ -257,7 +254,7 @@ class Server {
             while (client.Available < 3); // match against "get"
 
             byte[] bytes = new byte[client.Available];
-            stream.Read(bytes, 0, client.Available);
+            stream.Read(bytes, 0, bytes.Length);
             string s = Encoding.UTF8.GetString(bytes);
 
             if (Regex.IsMatch(s, "^GET", RegexOptions.IgnoreCase)) {
@@ -268,24 +265,24 @@ class Server {
                 // 3. Compute SHA-1 and Base64 hash of the new value
                 // 4. Write the hash back as the value of "Sec-WebSocket-Accept" response header in an HTTP response
                 string swk = Regex.Match(s, "Sec-WebSocket-Key: (.*)").Groups[1].Value.Trim();
-                string swka = swk + "258EAFA5-E914-47DA-95CA-C5AB0DC85B11";
-                byte[] swkaSha1 = System.Security.Cryptography.SHA1.Create().ComputeHash(Encoding.UTF8.GetBytes(swka));
-                string swkaSha1Base64 = Convert.ToBase64String(swkaSha1);
+                string swkAndSalt = swk + "258EAFA5-E914-47DA-95CA-C5AB0DC85B11";
+                byte[] swkAndSaltSha1 = System.Security.Cryptography.SHA1.Create().ComputeHash(Encoding.UTF8.GetBytes(swkAndSalt));
+                string swkAndSaltSha1Base64 = Convert.ToBase64String(swkAndSaltSha1);
 
                 // HTTP/1.1 defines the sequence CR LF as the end-of-line marker
                 byte[] response = Encoding.UTF8.GetBytes(
                     "HTTP/1.1 101 Switching Protocols\r\n" +
                     "Connection: Upgrade\r\n" +
                     "Upgrade: websocket\r\n" +
-                    "Sec-WebSocket-Accept: " + swkaSha1Base64 + "\r\n\r\n");
+                    "Sec-WebSocket-Accept: " + swkAndSaltSha1Base64 + "\r\n\r\n");
 
                 stream.Write(response, 0, response.Length);
             } else {
                 bool fin = (bytes[0] & 0b10000000) != 0,
                     mask = (bytes[1] & 0b10000000) != 0; // must be true, "All messages from the client to the server have this bit set"
-                int opcode = bytes[0] & 0b00001111, // expecting 1 - text message
-                    offset = 2;
-                ulong msglen = bytes[1] & 0b01111111;
+                int opcode = bytes[0] & 0b00001111; // expecting 1 - text message
+                ulong offset = 2,
+                      msglen = bytes[1] & (ulong)0b01111111;
 
                 if (msglen == 126) {
                     // bytes are reversed because websocket will print them in Big-Endian, whereas
@@ -300,9 +297,9 @@ class Server {
                     offset = 10;
                 }
 
-                if (msglen == 0)
+                if (msglen == 0) {
                     Console.WriteLine("msglen == 0");
-                else if (mask) {
+                } else if (mask) {
                     byte[] decoded = new byte[msglen];
                     byte[] masks = new byte[4] { bytes[offset], bytes[offset + 1], bytes[offset + 2], bytes[offset + 3] };
                     offset += 4;
@@ -326,63 +323,75 @@ class Server {
 
 ```html
 <!doctype html>
-<style>
-    textarea { vertical-align: bottom; }
-    #output { overflow: auto; }
-    #output > p { overflow-wrap: break-word; }
-    #output span { color: blue; }
-    #output span.error { color: red; }
-</style>
-<h2>WebSocket Test</h2>
-<textarea cols=60 rows=6></textarea>
-<button>send</button>
-<div id=output></div>
-<script>
+<html lang="en">
+  <style>
+    textarea {
+      vertical-align: bottom;
+    }
+    #output {
+      overflow: auto;
+    }
+    #output > p {
+      overflow-wrap: break-word;
+    }
+    #output span {
+      color: blue;
+    }
+    #output span.error {
+      color: red;
+    }
+  </style>
+  <body>
+    <h2>WebSocket Test</h2>
+    <textarea cols="60" rows="6"></textarea>
+    <button>send</button>
+    <div id="output"></div>
+  </body>
+  <script>
     // http://www.websocket.org/echo.html
-
     const button = document.querySelector("button");
     const output = document.querySelector("#output");
     const textarea = document.querySelector("textarea");
-        // wsUri = "ws://echo.websocket.org/",
-        wsUri = "ws://127.0.0.1/",
-        websocket = new WebSocket(wsUri);
+    const wsUri = "ws://127.0.0.1/";
+    const websocket = new WebSocket(wsUri);
 
     button.addEventListener("click", onClickButton);
 
-    websocket.onopen = function (e) {
-        writeToScreen("CONNECTED");
-        doSend("WebSocket rocks");
+    websocket.onopen = (e) => {
+      writeToScreen("CONNECTED");
+      doSend("WebSocket rocks");
     };
 
-    websocket.onclose = function (e) {
-        writeToScreen("DISCONNECTED");
+    websocket.onclose = (e) => {
+      writeToScreen("DISCONNECTED");
     };
 
-    websocket.onmessage = function (e) {
-        writeToScreen("<span>RESPONSE: " + e.data + "</span>");
+    websocket.onmessage = (e) => {
+      writeToScreen(`<span>RESPONSE: ${e.data}</span>`);
     };
 
-    websocket.onerror = function (e) {
-        writeToScreen("<span class=error>ERROR:</span> " + e.data);
+    websocket.onerror = (e) => {
+      writeToScreen(`<span class="error">ERROR:</span> ${e.data}`);
     };
 
     function doSend(message) {
-        writeToScreen("SENT: " + message);
-        websocket.send(message);
+      writeToScreen(`SENT: ${message}`);
+      websocket.send(message);
     }
 
     function writeToScreen(message) {
-        output.insertAdjacentHTML("afterbegin", "<p>" + message + "</p>");
+      output.insertAdjacentHTML("afterbegin", `<p>${message}</p>`);
     }
 
     function onClickButton() {
-        const text = textarea.value;
+      const text = textarea.value;
 
-        text && doSend(text);
-        textarea.value = "";
-        textarea.focus();
+      text && doSend(text);
+      textarea.value = "";
+      textarea.focus();
     }
-</script>
+  </script>
+</html>
 ```
 
 ## Related

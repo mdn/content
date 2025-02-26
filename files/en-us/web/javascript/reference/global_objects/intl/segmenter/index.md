@@ -1,37 +1,54 @@
 ---
 title: Intl.Segmenter
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter
-tags:
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Localization
-  - Reference
+page-type: javascript-class
 browser-compat: javascript.builtins.Intl.Segmenter
 ---
+
 {{JSRef}}
 
 The **`Intl.Segmenter`** object enables locale-sensitive text segmentation, enabling you to get meaningful items (graphemes, words or sentences) from a string.
 
-{{EmbedInteractiveExample("pages/js/intl-segmenter.html")}}
+{{InteractiveExample("JavaScript Demo: Intl.Segmenter")}}
+
+```js interactive-example
+const segmenterFr = new Intl.Segmenter("fr", { granularity: "word" });
+const string1 = "Que ma joie demeure";
+
+const iterator1 = segmenterFr.segment(string1)[Symbol.iterator]();
+
+console.log(iterator1.next().value.segment);
+// Expected output: 'Que'
+
+console.log(iterator1.next().value.segment);
+// Expected output: ' '
+```
 
 ## Constructor
 
-- [`Intl.Segmenter()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/Segmenter)
+- {{jsxref("Intl/Segmenter/Segmenter", "Intl.Segmenter()")}}
   - : Creates a new `Intl.Segmenter` object.
 
 ## Static methods
 
-- [`Intl.Segmenter.supportedLocalesOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/supportedLocalesOf)
+- {{jsxref("Intl/Segmenter/supportedLocalesOf", "Intl.Segmenter.supportedLocalesOf()")}}
   - : Returns an array containing those of the provided locales that are supported without having to fall back to the runtime's default locale.
+
+## Instance properties
+
+These properties are defined on `Intl.Segmenter.prototype` and shared by all `Intl.Segmenter` instances.
+
+- {{jsxref("Object/constructor", "Intl.Segmenter.prototype.constructor")}}
+  - : The constructor function that created the instance object. For `Intl.Segmenter` instances, the initial value is the {{jsxref("Intl/Segmenter/Segmenter", "Intl.Segmenter")}} constructor.
+- `Intl.Segmenter.prototype[Symbol.toStringTag]`
+  - : The initial value of the [`[Symbol.toStringTag]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Intl.Segmenter"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 
 ## Instance methods
 
-- [`Intl.Segmenter.prototype.resolvedOptions()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/resolvedOptions)
+- {{jsxref("Intl/Segmenter/resolvedOptions", "Intl.Segmenter.prototype.resolvedOptions()")}}
   - : Returns a new object with properties reflecting the locale and granularity options computed during initialization of this `Intl.Segmenter` object.
-- [`Intl.Segmenter.prototype.segment()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment)
-  - : Returns a new iterable [`Segments`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segments) instance
-    representing the segments of a string according to the locale and granularity of this `Intl.Segmenter` instance.
+- {{jsxref("Intl/Segmenter/segment", "Intl.Segmenter.prototype.segment()")}}
+  - : Returns a new iterable [`Segments`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments) instance representing the segments of a string according to the locale and granularity of this `Intl.Segmenter` instance.
 
 ## Examples
 
@@ -44,12 +61,11 @@ const str = "吾輩は猫である。名前はたぬき。";
 console.table(str.split(" "));
 // ['吾輩は猫である。名前はたぬき。']
 // The two sentences are not correctly segmented.
-
 ```
 
 ```js example-good
 const str = "吾輩は猫である。名前はたぬき。";
-const segmenterJa = new Intl.Segmenter('ja-JP', { granularity: 'word' });
+const segmenterJa = new Intl.Segmenter("ja-JP", { granularity: "word" });
 
 const segments = segmenterJa.segment(str);
 console.table(Array.from(segments));
@@ -65,3 +81,8 @@ console.table(Array.from(segments));
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [Polyfill of `Intl.Segmenter` in FormatJS](https://formatjs.github.io/docs/polyfills/intl-segmenter/)
+- {{jsxref("Intl")}}

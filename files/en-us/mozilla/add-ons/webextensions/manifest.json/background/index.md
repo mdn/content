@@ -1,14 +1,10 @@
 ---
 title: background
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/background
-tags:
-  - Add-ons
-  - Extensions
-  - Manifest
-  - Reference
-  - WebExtensions
+page-type: webextension-manifest-key
 browser-compat: webextensions.manifest.background
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
@@ -38,41 +34,57 @@ browser-compat: webextensions.manifest.background
   </tbody>
 </table>
 
-Use the `background` key to include one or more background scripts, and optionally a background page in your extension.
+Use the `background` key to include one or more background scripts, a background page, or a Service worker in your extension.
 
-Background scripts are the place to put code that needs to maintain long-term state, or perform long-term operations, independently of the lifetime of any particular web pages or browser windows.
+Background scripts are the place to put code that needs to maintain a long-term state or perform long-term operations independently of the lifetime of any particular web pages or browser windows.
 
-Background scripts are loaded as soon as the extension is loaded and stay loaded until the extension is disabled or uninstalled, unless `persistent` is specified as `false`. You can use any of the WebExtension APIs in the script, as long as you have requested the necessary [permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).
+Background scripts are loaded as soon as the extension is loaded and stay loaded until the extension is disabled or uninstalled unless `persistent` is specified as `false`. You can use any WebExtension APIs in the script if you have requested the necessary [permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).
 
 See [Background scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Background_scripts) for some more details.
 
-The `background` key is an object that must have one of these properties:
+The `background` key is an object that must have one of these properties (for more information on how these properties are supported, see [Browser support](#browser_support)):
 
 <table class="standard-table">
   <tbody>
+    <tr>
+      <td><code>page</code></td>
+      <td>
+        <p>
+          If you need specific content in the background page, you can define a
+          page using the <code>page</code> property. This is a
+          <code>String</code> representing a path relative to the manifest.json
+          file to an HTML document included in your extension bundle.
+        </p>
+        <p>
+          If you use this property, you can not specify background scripts using
+          <code>scripts</code>, but you can include scripts from the
+          page, just like a normal web page.
+        </p>
+      </td>
+    </tr>
     <tr>
       <td><code>scripts</code></td>
       <td>
         <p>
           An <code>Array</code> of <code>Strings</code>, each of which is a path
           to a JavaScript source. The path is relative to the manifest.json file
-          itself. These are the scripts which will be executed in the
+          itself. These are the scripts that are executed in the
           extension's background page.
         </p>
         <p>The scripts share the same <code>window</code> global context.</p>
         <p>The scripts are loaded in the order they appear in the array.</p>
         <p>
-          If you specify a value for <code>scripts</code>, then an empty page
-          will be created in which your scripts are run.
+          If you specify <code>scripts</code>, an empty page
+          is created where your scripts run.
         </p>
         <div class="note">
           <p>
             <strong>Note:</strong> If you want to fetch a script from a remote
-            location with the <code>&#x3C;script></code> tag (e.g.
+            location with the <code>&#x3C;script></code> tag (e.g.,
             <code
               >&#x3C;script src =
-              "https://code.jquery.com/jquery-1.7.1.min.js"></code
-            >), you will also have to change the
+              "https://code.jquery.com/jquery-3.6.0.min.js"></code
+            >), you have to change the
             <code
               ><a
                 href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy"
@@ -82,32 +94,13 @@ The `background` key is an object that must have one of these properties:
             key in the manifest.json file of your extension.
           </p>
         </div>
-        <div class="note">
-          <p>
-            <strong>Note:</strong> In Firefox prior to version 50, when the
-            debugger is open, scripts are not always loaded in the order given
-            in the array. To work around this bug, you can use the
-            <code>page</code> property and include background scripts from the
-            page using <code>&#x3C;script></code> tags. This bug is fixed in
-            Firefox 50. From that point on, scripts are always loaded in the
-            order given in the array.
-          </p>
-        </div>
       </td>
     </tr>
     <tr>
-      <td><code>page</code></td>
+      <td><code>service_worker</code></td>
       <td>
         <p>
-          If you need some particular content in the page, you can define your
-          own page using the <code>page</code> property, which is a
-          <code>String</code> representing a path, relative your manifest.json
-          file, to an HTML document included in your extension bundle.
-        </p>
-        <p>
-          If you use this property, you can not specify background scripts using
-          <code>scripts</code>, but you can include your own scripts from the
-          page, just like in a normal web page.
+          Specify a JavaScript file as the extension <a href="/en-US/docs/Web/API/Service_Worker_API">service worker</a>. A service worker is a background script that acts as the extension's main event handler.
         </p>
       </td>
     </tr>
@@ -122,7 +115,7 @@ The `background` key can also contain this optional property:
       <td><code>persistent</code></td>
       <td>
         <p>A <code>Boolean</code> value.</p>
-        <p>If omitted, this property default to <code>true</code> in Manifest V2 and <code>false</code> in Manifest V3. Setting to <code>true</code> in Manifest V3 results in an error.</p>
+        <p>If omitted, this property defaults to <code>true</code> in Manifest V2 and <code>false</code> in Manifest V3. Setting to <code>true</code> in Manifest V3 results in an error.</p>
         <ul>
           <li>
             <code>true</code> indicates the background page is to be kept in
@@ -146,10 +139,73 @@ The `background` key can also contain this optional property:
         </ul>
       </td>
     </tr>
+    <tr>
+      <td><code>type</code></td>
+      <td>
+        <p>A <code>String</code> value.</p>
+        <p>Determines whether the scripts specified in <code>"scripts"</code> are loaded as ES modules.</p>
+        <ul>
+          <li>
+            <code>classic</code> indicates the background scripts or service workers are not included as an ES Module.
+          </li>
+          <li>
+            <code>module</code> indicates the background scripts or service workers are included as an ES Module. This enables the background page or service worker to <code>import</code> code.
+          </li>
+        </ul>
+        <p>If omitted, this property defaults to <code>classic</code>.</p>
+      </td>
+    </tr>
   </tbody>
 </table>
 
-## Example
+## Browser support
+
+Support for the `scripts`, `page`, and `service_worker` properties varies between browsers like this:
+
+- Chrome:
+  - supports `background.service_worker`.
+  - supports `background.scripts` (and `background.page`) in Manifest V2 extensions only.
+  - before Chrome 121, Chrome refuses to load a Manifest V3 extension with `background.scripts` or `background.page` present. From Chrome 121, their presence in a Manifest V3 extension is ignored.
+- Firefox:
+  - `background.service_worker` is not supported (see [Firefox bug 1573659](https://bugzil.la/1573659)).
+  - supports `background.scripts` (or `background.page`) if `service_worker` is not specified or the service worker feature is disabled. Before Firefox 120, Firefox did not start the background page if `service_worker` was present (see [Firefox bug 1860304](https://bugzil.la/1860304)). From Firefox 121, the background page starts as expected, regardless of the presence of `service_worker`.
+- Safari:
+  - supports `background.service_worker`.
+  - supports `background.scripts` (or `background.page`) if `service_worker` is not specified.
+
+To illustrate, this is an example of a cross-browser extension that supports `scripts` and `service_worker`. The example has this manifest.json file:
+
+```json
+{
+  "name": "Demo of service worker + event page",
+  "version": "1",
+  "manifest_version": 3,
+  "background": {
+    "scripts": ["background.js"],
+    "service_worker": "background.js"
+  }
+}
+```
+
+And, background.js contains:
+
+```javascript
+if (typeof browser == "undefined") {
+  // Chrome does not support the browser namespace yet.
+  globalThis.browser = chrome;
+}
+browser.runtime.onInstalled.addListener(() => {
+  browser.tabs.create({ url: "http://example.com/first-run.html" });
+});
+```
+
+When the extension is executed, this happens:
+
+- in Chrome, the `service_worker` property is used, and a service worker starts that opens the tab because, in a Manifest V3 extension, Chrome only supports service workers for background scripts.
+- in Firefox, the `scripts` property is used, and a script starts that opens the tab because Firefox only supports scripts for background scripts.
+- in Safari, the `service_worker` property is used, and a service worker starts that opens the tab because Safari gives priority to using service workers for background scripts.
+
+## Examples
 
 ```json
   "background": {

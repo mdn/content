@@ -1,41 +1,28 @@
 ---
 title: Access-Control-Allow-Credentials
 slug: Web/HTTP/Headers/Access-Control-Allow-Credentials
-tags:
-  - Access-Control-Allow-Credentials
-  - CORS
-  - HTTP
-  - Reference
-  - credentials
-  - header
+page-type: http-header
 browser-compat: http.headers.Access-Control-Allow-Credentials
 ---
+
 {{HTTPSidebar}}
 
-The **`Access-Control-Allow-Credentials`** response header
-tells browsers whether to expose the response to the frontend JavaScript code when the
-request's credentials mode ({{domxref("Request.credentials")}}) is `include`.
+The HTTP **`Access-Control-Allow-Credentials`** {{Glossary("response header")}} tells browsers whether the server allows credentials to be included in cross-origin HTTP requests.
 
-When a request's credentials mode ({{domxref("Request.credentials")}}) is
-`include`, browsers will only expose the response to the frontend JavaScript code
-if the `Access-Control-Allow-Credentials` value is `true`.
+Credentials include cookies, {{glossary("TLS", "Transport Layer Security (TLS)")}} client certificates, or authentication headers containing a username and password.
+By default, these credentials are not sent in cross-origin requests, and doing so can make a site vulnerable to {{Glossary("CSRF", "Cross-Site Request Forgery (CSRF)")}} attacks.
 
-Credentials are cookies, authorization headers, or TLS client certificates.
+A client can ask for credentials to be included in cross-site requests in several ways:
 
-When used as part of a response to a preflight request, this indicates whether or not
-the actual request can be made using credentials. Note that simple {{HTTPMethod("GET")}}
-requests are not preflighted. So, if a request is made for a resource with
-credentials, and if this header is not returned with the resource, the response is ignored
-by the browser and not returned to the web content.
+- Using {{domxref("Window/fetch", "fetch()")}}, by setting the [`credentials`](/en-US/docs/Web/API/RequestInit#credentials) option to `"include"`.
+- Using {{domxref("XMLHttpRequest")}}, by setting the {{domxref("XMLHttpRequest.withCredentials")}} property to `true`.
+- Using {{domxref("EventSource()")}}, by setting the {{domxref("EventSource.withCredentials")}} property to `true`.
 
-The `Access-Control-Allow-Credentials` header works in conjunction with the
-{{domxref("XMLHttpRequest.withCredentials")}} property or with the
-`credentials` option in the {{domxref("Request.Request()", "Request()")}}
-constructor of the Fetch API. For a CORS request with credentials, for browsers
-to expose the response to the frontend JavaScript code, both the server (using the
-`Access-Control-Allow-Credentials` header) and the client (by setting the
-credentials mode for the XHR, Fetch, or Ajax request) must indicate that they're opting
-into including credentials.
+When credentials are included:
+
+- For {{glossary("Preflight_request", "preflighted")}} requests: The preflight request does not include credentials.
+  If the server's response to the preflight request sets the `Access-Control-Allow-Credentials` header to `true`, then the real request will include credentials; otherwise, the browser reports a network error.
+- For non-preflighted requests: The request will include credentials, and if the server's response does not set the `Access-Control-Allow-Credentials` header to `true`, the browser reports a network error.
 
 <table class="properties">
   <tbody>
@@ -44,48 +31,48 @@ into including credentials.
       <td>{{Glossary("Response header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>no</td>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
+      <td>No</td>
     </tr>
   </tbody>
 </table>
 
 ## Syntax
 
-```
+```http
 Access-Control-Allow-Credentials: true
 ```
 
 ## Directives
 
-- true
-  - : The only valid value for this header is `true` (case-sensitive). If you
-    don't need credentials, omit this header entirely (rather than setting its value to
-    `false`).
+- `true`
+  - : The server allows credentials to be included in cross-origin HTTP requests.
+    This is the only valid value for this header and is case-sensitive.
+    If you don't need credentials, omit this header entirely rather than setting its value to `false`.
 
 ## Examples
 
 Allow credentials:
 
-```
+```http
 Access-Control-Allow-Credentials: true
 ```
 
-Using [XHR](/en-US/docs/Web/API/XMLHttpRequest) with credentials:
-
-```js
-var xhr = new XMLHttpRequest();
-xhr.open('GET', 'http://example.com/', true);
-xhr.withCredentials = true;
-xhr.send(null);
-```
-
-Using [Fetch](/en-US/docs/Web/API/Fetch_API) with credentials:
+Using {{domxref("Window/fetch", "fetch()")}} with credentials:
 
 ```js
 fetch(url, {
-  credentials: 'include'
-})
+  credentials: "include",
+});
+```
+
+Using {{domxref("XMLHttpRequest")}} with credentials:
+
+```js
+const xhr = new XMLHttpRequest();
+xhr.open("GET", "http://example.com/", true);
+xhr.withCredentials = true;
+xhr.send(null);
 ```
 
 ## Specifications

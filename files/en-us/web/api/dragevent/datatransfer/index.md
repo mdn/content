@@ -1,25 +1,21 @@
 ---
-title: DragEvent.dataTransfer
+title: "DragEvent: dataTransfer property"
+short-title: dataTransfer
 slug: Web/API/DragEvent/dataTransfer
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Property
-  - Reference
-  - drag and drop
 browser-compat: api.DragEvent.dataTransfer
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
-The **`DragEvent.dataTransfer`** property holds the drag
+The **`DragEvent.dataTransfer`** read-only property holds the drag
 operation's data (as a {{domxref("DataTransfer")}} object).
-
-This property is {{readonlyInline}}.
 
 ## Value
 
-A {{domxref("DataTransfer")}} object which contains the {{domxref("DragEvent","drag event's data")}}.
+A {{domxref("DataTransfer")}} object which contains the {{domxref("DragEvent","drag event's data", "", 1)}}.
+
+The property can be `null` when the event is created using the constructor. It is never `null` when dispatched by the browser.
 
 ## Examples
 
@@ -28,13 +24,17 @@ This example illustrates accessing the drag and drop data within the
 
 ```js
 function processData(d) {
-   // Process the data …
+  // Process the data …
 }
 
-dragTarget.addEventListener("dragend", function(ev) {
-   // Call the drag and drop data processor
-   if (ev.dataTransfer !== null) processData(ev.dataTransfer);
- }, false);
+dragTarget.addEventListener(
+  "dragend",
+  (ev) => {
+    // Call the drag and drop data processor
+    if (ev.dataTransfer !== null) processData(ev.dataTransfer);
+  },
+  false,
+);
 ```
 
 ## Specifications

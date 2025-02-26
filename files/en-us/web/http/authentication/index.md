@@ -1,17 +1,13 @@
 ---
 title: HTTP authentication
 slug: Web/HTTP/Authentication
-tags:
-  - Access Control
-  - Authentication
-  - Guide
-  - HTTP
-  - Security
+page-type: guide
 ---
+
 {{HTTPSidebar}}
 
 HTTP provides a general framework for access control and authentication.
-This page is an introduction to the HTTP framework for authentication, and shows how to restrict access to your server using the HTTP "Basic" schema.
+This page is an introduction to the HTTP framework for authentication, and shows how to restrict access to your server using the HTTP "Basic" scheme.
 
 ## The general HTTP authentication framework
 
@@ -23,12 +19,13 @@ The challenge and response flow works like this:
 2. A client that wants to authenticate itself with the server can then do so by including an {{HTTPHeader("Authorization")}} request header with the credentials.
 3. Usually a client will present a password prompt to the user and will then issue the request including the correct `Authorization` header.
 
-![A sequence diagram illustrating HTTP messages between a client and a server lifeline.](http-auth-sequence-diagram.png)
+![A sequence diagram illustrating HTTP messages between a client and a server lifeline.](https://mdn.github.io/shared-assets/images/diagrams/http/authentication/basic-auth.svg)
 
 The general message flow above is the same for most (if not all) [authentication schemes](#authentication_schemes).
 The actual information in the headers and the way it is encoded does change!
 
-> **Warning:** The "Basic" authentication scheme used in the diagram above sends the credentials encoded but not encrypted.
+> [!WARNING]
+> The "Basic" authentication scheme used in the diagram above sends the credentials encoded but not encrypted.
 > This would be completely insecure unless the exchange was over a secure connection (HTTPS/TLS).
 
 ### Proxy authentication
@@ -47,13 +44,13 @@ In all cases, the server may prefer returning a {{HTTPStatus("404")}} `Not Found
 ### Authentication of cross-origin images
 
 A potential security hole (that has since been fixed in browsers) was authentication of cross-site images.
-From [Firefox 59](/en-US/docs/Mozilla/Firefox/Releases/59) onwards, image resources loaded from different origins to the current document are no longer able to trigger HTTP authentication dialogs ({{bug(1423146)}}), preventing user credentials being stolen if attackers were able to embed an arbitrary image into a third-party page.
+From [Firefox 59](/en-US/docs/Mozilla/Firefox/Releases/59) onwards, image resources loaded from different origins to the current document are no longer able to trigger HTTP authentication dialogs ([Firefox bug 1423146](https://bugzil.la/1423146)), preventing user credentials being stolen if attackers were able to embed an arbitrary image into a third-party page.
 
 ### Character encoding of HTTP authentication
 
 Browsers use `utf-8` encoding for usernames and passwords.
 
-Firefox once used `ISO-8859-1`, but changed to `utf-8` for parity with other browsers and to avoid potential problems as described in {{bug(1419658)}}.
+Firefox once used `ISO-8859-1`, but changed to `utf-8` for parity with other browsers and to avoid potential problems as described in [Firefox bug 1419658](https://bugzil.la/1419658).
 
 ### WWW-Authenticate and Proxy-Authenticate headers
 
@@ -96,7 +93,7 @@ Some common authentication schemes include:
 - **Mutual**
   - : See {{rfc(8120)}}
 - **Negotiate** / **NTLM**
-  - : See [RFC4599](https://www.ietf.org/rfc/rfc4559.txt)
+  - : See [RFC4599](https://datatracker.ietf.org/doc/html/rfc4559)
 - **VAPID**
   - : See {{rfc(8292)}}
 - **SCRAM**
@@ -123,7 +120,7 @@ To password-protect a directory on an Apache server, you will need a `.htaccess`
 
 The `.htaccess` file typically looks like this:
 
-```
+```apacheconf
 AuthType Basic
 AuthName "Access to the staging site"
 AuthUserFile /path/to/.htpasswd
@@ -132,7 +129,7 @@ Require valid-user
 
 The `.htaccess` file references a `.htpasswd` file in which each line consists of a username and a password separated by a colon (`:`). You cannot see the actual passwords as they are [hashed](https://httpd.apache.org/docs/2.4/misc/password_encryptions.html) (using MD5-based hashing, in this case). Note that you can name your `.htpasswd` file differently if you like, but keep in mind this file shouldn't be accessible to anyone. (Apache is usually configured to prevent access to `.ht*` files).
 
-```
+```apacheconf
 aladdin:$apr1$ZjTqBB3f$IF9gdYAGlMrs2fuINjHsz.
 user2:$apr1$O04r.y2H$/vEkesPhVInBByJUkXitA/
 ```
@@ -142,7 +139,7 @@ user2:$apr1$O04r.y2H$/vEkesPhVInBByJUkXitA/
 For Nginx, you will need to specify a location that you are going to protect and the `auth_basic` directive that provides the name to the password-protected area.
 The `auth_basic_user_file` directive then points to a `.htpasswd` file containing the encrypted user credentials, just like in the Apache example above.
 
-```
+```apacheconf
 location /status {
     auth_basic           "Access to the staging site";
     auth_basic_user_file /etc/apache2/.htpasswd;
@@ -158,7 +155,7 @@ https://username:password@www.example.com/
 ```
 
 **The use of these URLs is deprecated**.
-In Chrome, the `username:password@` part in URLs is even [stripped out](https://bugs.chromium.org/p/chromium/issues/detail?id=82250#c7) for security reasons. In Firefox, it is checked if the site actually requires authentication and if not, Firefox will warn the user with a prompt "You are about to log in to the site "www\.example.com" with the username "username", but the website does not require authentication. This may be an attempt to trick you."
+In Chrome, the `username:password@` part in URLs is [removed from subresource URLs](https://codereview.chromium.org/2651943002) for security reasons. In Firefox, it is checked if the site actually requires authentication and if not, Firefox will warn the user with a prompt "You are about to log in to the site `www.example.com` with the username `username`, but the website does not require authentication. This may be an attempt to trick you." In case the site does require authentication, Firefox will still ask for user confirmation "You are about to log in to the site `www.example.com` with the username `username`." before sending the credentials to the site. Note that Firefox sends the request without credentials in both cases before showing the prompt in order to determine whether the site requires authentication.
 
 ## See also
 

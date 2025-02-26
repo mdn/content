@@ -2,19 +2,12 @@
 title: CSSMathNegate
 slug: Web/API/CSSMathNegate
 page-type: web-api-interface
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSMathNegate
-  - CSSNumericValue
-  - Experimental
-  - Houdini
-  - Interface
 browser-compat: api.CSSMathNegate
 ---
-{{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}
 
-The **`CSSMathNegate`** interface of the {{domxref('CSS_Object_Model#css_typed_object_model','','',' ')}} negates the value passed into it. It inherits properties and methods from its parent {{domxref('CSSNumericValue')}}.
+{{APIRef("CSS Typed Object Model API")}}
+
+The **`CSSMathNegate`** interface of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Object_Model) negates the value passed into it. It inherits properties and methods from its parent {{domxref('CSSNumericValue')}}.
 
 {{InheritanceDiagram}}
 
@@ -23,14 +16,18 @@ The **`CSSMathNegate`** interface of the {{domxref('CSS_Object_Model#css_typed_o
 - {{domxref("CSSMathNegate.CSSMathNegate", "CSSMathNegate()")}}
   - : Creates a new `CSSMathNegate` object.
 
-## Properties
+## Instance properties
 
 - {{domxref('CSSMathNegate.value')}} {{ReadOnlyInline}}
   - : Returns a {{domxref('CSSNumericValue')}} object.
 
-## Methods
+## Static methods
 
-None.
+_The interface may also inherit methods from its parent interface, {{domxref("CSSMathValue")}}._
+
+## Instance methods
+
+_The interface may also inherit methods from its parent interface, {{domxref("CSSMathValue")}}._
 
 ## Examples
 

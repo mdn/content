@@ -1,20 +1,15 @@
 ---
-title: WorkerNavigator.storage
+title: "WorkerNavigator: storage property"
+short-title: storage
 slug: Web/API/WorkerNavigator/storage
 page-type: web-api-instance-property
-tags:
-  - API
-  - Navigator
-  - Property
-  - Reference
-  - Secure context
-  - Storage
 browser-compat: api.WorkerNavigator.storage
 ---
-{{securecontext_header}}{{APIRef("Storage")}}
 
-The **`WorkerNavigator.storage`**
-read-only property returns the singleton {{domxref("StorageManager")}} object used to
+{{securecontext_header}}{{APIRef("Storage")}}{{AvailableInWorkers("worker")}}
+
+The **`storage`** read-only property of the {{domxref("WorkerNavigator")}} interface
+returns the singleton {{domxref("StorageManager")}} object used to
 access the overall storage capabilities of the browser for the current site or app.
 The returned object lets you examine and configure persistence of data stores and
 learn approximately how much more space your browser has available for local storage

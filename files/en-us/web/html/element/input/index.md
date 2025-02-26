@@ -1,24 +1,42 @@
 ---
-title: '<input>: The Input (Form Input) element'
+title: "<input>: The HTML Input element"
 slug: Web/HTML/Element/input
-tags:
-  - Data entry
-  - Element
-  - Forms
-  - HTML
-  - HTML forms
-  - HTML input tag
-  - Input
-  - MakeBrowserAgnostic
-  - Reference
-  - Web
+page-type: html-element
 browser-compat: html.elements.input
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 The **`<input>`** [HTML](/en-US/docs/Web/HTML) element is used to create interactive controls for web-based forms in order to accept data from the user; a wide variety of types of input data and control widgets are available, depending on the device and {{Glossary("user agent")}}. The `<input>` element is one of the most powerful and complex in all of HTML due to the sheer number of combinations of input types and attributes.
 
-{{EmbedInteractiveExample("pages/tabbed/input-text.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;text&quot;&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<label for="name">Name (4 to 8 characters):</label>
+
+<input
+  type="text"
+  id="name"
+  name="name"
+  required
+  minlength="4"
+  maxlength="8"
+  size="10" />
+```
+
+```css interactive-example
+label {
+  display: block;
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+```
 
 ## \<input> types
 
@@ -48,7 +66,7 @@ The available types are as follows:
       <td id="examplebutton">
         <pre class="brush: html hidden">
 &#x3C;input type="button" name="button" value="Button" /></pre>
-        {{EmbedLiveSample("examplebutton",200,55,"","", "nobutton")}}
+        {{EmbedLiveSample("examplebutton",200,55)}}
       </td>
     </tr>
     <tr>
@@ -57,7 +75,7 @@ The available types are as follows:
       <td id="examplecheckbox">
         <pre class="brush: html hidden">
 &#x3C;input type="checkbox" name="checkbox"/></pre>
-        {{EmbedLiveSample("examplecheckbox",200,55,"","", "nobutton")}}
+        {{EmbedLiveSample("examplecheckbox",200,55)}}
       </td>
     </tr>
     <tr>
@@ -68,7 +86,7 @@ The available types are as follows:
       <td id="examplecolor">
         <pre class="brush: html hidden">
 &#x3C;input type="color" name="color"/></pre>
-        {{EmbedLiveSample("examplecolor",200,55,"","", "nobutton")}}
+        {{EmbedLiveSample("examplecolor",200,55)}}
       </td>
     </tr>
     <tr>
@@ -81,7 +99,7 @@ The available types are as follows:
       <td id="exampledate">
         <pre class="brush: html hidden">
 &#x3C;input type="date" name="date"/></pre>
-        {{EmbedLiveSample("exampledate",200,55,"","", "nobutton")}}
+        {{EmbedLiveSample("exampledate",200,55)}}
       </td>
     </tr>
     <tr>
@@ -95,7 +113,7 @@ The available types are as follows:
       <td id="exampledtl">
         <pre class="brush: html hidden">
 &#x3C;input type="datetime-local" name="datetime-local"/></pre>
-        {{EmbedLiveSample("exampledtl",200,55,"","", "nobutton")}}
+        {{EmbedLiveSample("exampledtl",200,55)}}
       </td>
     </tr>
     <tr>
@@ -108,7 +126,7 @@ The available types are as follows:
       <td id="exampleemail">
         <pre class="brush: html hidden">
 &#x3C;input type="email" name="email"/></pre>
-        {{EmbedLiveSample("exampleemail",200,55,"","", "nobutton")}}
+        {{EmbedLiveSample("exampleemail",200,55)}}
       </td>
     </tr>
     <tr>
@@ -120,7 +138,7 @@ The available types are as follows:
       <td id="examplefile">
         <pre class="brush: html hidden">
 &#x3C;input type="file" accept="image/*, text/*" name="file"/></pre>
-        {{EmbedLiveSample("examplefile",'100%',55,"","", "nobutton")}}
+        {{EmbedLiveSample("examplefile",'100%',55)}}
       </td>
     </tr>
     <tr>
@@ -133,7 +151,7 @@ The available types are as follows:
         <pre class="brush: html hidden">
 &#x3C;input id="userId" name="userId" type="hidden" value="abc123"></pre
         >
-        {{EmbedLiveSample("examplehidden",200,55,"","", "nobutton")}}
+        {{EmbedLiveSample("examplehidden",200,55)}}
       </td>
     </tr>
     <tr>
@@ -145,7 +163,7 @@ The available types are as follows:
       <td id="exampleimage">
         <pre class="brush: html hidden">
 &#x3C;input type="image" name="image" src="" alt="image input"/></pre>
-        {{EmbedLiveSample("exampleimage",200,55,"","", "nobutton")}}
+        {{EmbedLiveSample("exampleimage",200,55)}}
       </td>
     </tr>
     <tr>
@@ -154,20 +172,20 @@ The available types are as follows:
       <td id="examplemonth">
         <pre class="brush: html hidden">
 &#x3C;input type="month" name="month"/></pre>
-        {{EmbedLiveSample("examplemonth",200,55,"","", "nobutton")}}
+        {{EmbedLiveSample("examplemonth",200,55)}}
       </td>
     </tr>
     <tr>
       <td>{{HTMLElement("input/number", "number")}}</td>
       <td>
         A control for entering a number. Displays a spinner and adds default
-        validation when supported. Displays a numeric keypad in some devices
+        validation. Displays a numeric keypad in some devices
         with dynamic keypads.
       </td>
       <td id="examplenumber">
         <pre class="brush: html hidden">
 &#x3C;input type="number" name="number"/></pre>
-        {{EmbedLiveSample("examplenumber",200,55,"","", "nobutton")}}
+        {{EmbedLiveSample("examplenumber",200,55)}}
       </td>
     </tr>
     <tr>
@@ -179,7 +197,7 @@ The available types are as follows:
       <td id="examplepassword">
         <pre class="brush: html hidden">
 &#x3C;input type="password" name="password"/></pre>
-        {{EmbedLiveSample("examplepassword",200,55,"","", "nobutton")}}
+        {{EmbedLiveSample("examplepassword",200,55)}}
       </td>
     </tr>
     <tr>
@@ -191,7 +209,7 @@ The available types are as follows:
         <pre class="brush: html hidden">
 &#x3C;input type="radio" name="radio"/></pre
         >
-        {{EmbedLiveSample("exampleradio",200,55,"","", "nobutton")}}
+        {{EmbedLiveSample("exampleradio",200,55)}}
       </td>
     </tr>
     <tr>
@@ -204,7 +222,7 @@ The available types are as follows:
       <td id="examplerange">
         <pre class="brush: html hidden">
 &#x3C;input type="range" name="range" min="0" max="25"/></pre>
-        {{EmbedLiveSample("examplerange",200,55,"","", "nobutton")}}
+        {{EmbedLiveSample("examplerange",200,55)}}
       </td>
     </tr>
     <tr>
@@ -216,7 +234,7 @@ The available types are as follows:
         <pre class="brush: html hidden">
 &#x3C;input type="reset" name="reset"/></pre
         >
-        {{EmbedLiveSample("examplereset",200,55,"","", "nobutton")}}
+        {{EmbedLiveSample("examplereset",200,55)}}
       </td>
     </tr>
     <tr>
@@ -230,7 +248,7 @@ The available types are as follows:
       <td id="examplesearch">
         <pre class="brush: html hidden">
 &#x3C;input type="search" name="search"/></pre>
-        {{EmbedLiveSample("examplesearch",200,55,"","", "nobutton")}}
+        {{EmbedLiveSample("examplesearch",200,55)}}
       </td>
     </tr>
     <tr>
@@ -239,7 +257,7 @@ The available types are as follows:
       <td id="examplesubmit">
         <pre class="brush: html hidden">
 &#x3C;input type="submit" name="submit"/></pre>
-        {{EmbedLiveSample("examplesubmit",200,55,"","", "nobutton")}}
+        {{EmbedLiveSample("examplesubmit",200,55)}}
       </td>
     </tr>
     <tr>
@@ -251,7 +269,7 @@ The available types are as follows:
       <td id="exampletel">
         <pre class="brush: html hidden">
 &#x3C;input type="tel" name="tel"/></pre>
-        {{EmbedLiveSample("exampletel",200,55,"","", "nobutton")}}
+        {{EmbedLiveSample("exampletel",200,55)}}
       </td>
     </tr>
     <tr>
@@ -264,7 +282,7 @@ The available types are as follows:
         <pre class="brush: html hidden">
 &#x3C;input type="text" name="text"/></pre
         >
-        {{EmbedLiveSample("exampletext",200,55,"","", "nobutton")}}
+        {{EmbedLiveSample("exampletext",200,55)}}
       </td>
     </tr>
     <tr>
@@ -273,7 +291,7 @@ The available types are as follows:
       <td id="exampletime">
         <pre class="brush: html hidden">
 &#x3C;input type="time" name="time"/></pre>
-        {{EmbedLiveSample("exampletime",200,55,"","", "nobutton")}}
+        {{EmbedLiveSample("exampletime",200,55)}}
       </td>
     </tr>
     <tr>
@@ -287,7 +305,7 @@ The available types are as follows:
         <pre class="brush: html hidden">
 &#x3C;input type="url" name="url"/></pre
         >
-        {{EmbedLiveSample("exampleurl",200,55,"","", "nobutton")}}
+        {{EmbedLiveSample("exampleurl",200,55)}}
       </td>
     </tr>
     <tr>
@@ -298,21 +316,21 @@ The available types are as follows:
       <td id="exampleweek">
         <pre class="brush: html hidden">
 &#x3C;input type="week" name="week"/></pre>
-        {{EmbedLiveSample("exampleweek",200,55,"","", "nobutton")}}
+        {{EmbedLiveSample("exampleweek",200,55)}}
       </td>
     </tr>
     <tr>
       <th colspan="3">Obsolete values</th>
     </tr>
     <tr>
-      <td>{{HTMLElement("input/datetime", "datetime")}}</td>
+      <td><code>datetime</code> {{deprecated_inline}}</td>
       <td>
-        {{deprecated_inline}} A control for entering a date and time (hour, minute, second, and fraction of a second) based on UTC time zone.
+        A control for entering a date and time (hour, minute, second, and fraction of a second) based on UTC time zone.
       </td>
       <td id="exampledatetime">
         <pre class="brush: html hidden">
 &#x3C;input type="datetime" name="datetime"/></pre>
-        {{EmbedLiveSample("exampledatetime",200,75,"","", "nobutton")}}
+        {{EmbedLiveSample("exampledatetime",200,75)}}
       </td>
     </tr>
   </tbody>
@@ -324,47 +342,50 @@ The `<input>` element is so powerful because of its attributes; the [`type`](#ty
 
 This section provides a table listing all the attributes with a brief description. This table is followed by a list describing each attribute in greater detail, along with which input types they are associated with. Those that are common to most or all input types are defined in greater detail below. Attributes that are unique to particular input types—or attributes which are common to all input types but have special behaviors when used on a given input type—are instead documented on those types' pages.
 
-Attributes for the `<input`> element include the [global HTML attributes](/en-US/docs/Web/HTML/Global_attributes) and additionally:
+Attributes for the `<input>` element include the [global HTML attributes](/en-US/docs/Web/HTML/Global_attributes) and additionally:
 
-| Attribute                           | Type or Types                                                           | Description                                                                           |
-| ----------------------------------- | ----------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| [`accept`](#accept)                 | `file`                                                                  | Hint for expected file type in file upload controls                                   |
-| [`alt`](#alt)                       | `image`                                                                 | alt attribute for the image type. Required for accessibility                          |
-| [`autocomplete`](#autocomplete)     | all except `checkbox`, `radio`, and buttons                             | Hint for form autofill feature                                                        |
-| [`capture`](#capture)               | `file`                                                                  | Media capture input method in file upload controls                                    |
-| [`checked`](#checked)               | `checkbox`, `radio`                                                     | Whether the command or control is checked                                             |
-| [`dirname`](#dirname)               | `search`, `text`                                                        | Name of form field to use for sending the element's directionality in form submission |
-| [`disabled`](#disabled)             | all                                                                     | Whether the form control is disabled                                                  |
-| [`form`](#form)                     | all                                                                     | Associates the control with a form element                                            |
-| [`formaction`](#formaction)         | `image`, `submit`                                                       | URL to use for form submission                                                        |
-| [`formenctype`](#formenctype)       | `image`, `submit`                                                       | Form data set encoding type to use for form submission                                |
-| [`formmethod`](#formmethod)         | `image`, `submit`                                                       | HTTP method to use for form submission                                                |
-| [`formnovalidate`](#formnovalidate) | `image`, `submit`                                                       | Bypass form control validation for form submission                                    |
-| [`formtarget`](#formtarget)         | `image`, `submit`                                                       | Browsing context for form submission                                                  |
-| [`height`](#height)                 | `image`                                                                 | Same as height attribute for {{htmlelement('img')}}; vertical dimension               |
-| [`list`](#list)                     | all except `hidden`, `password`, `checkbox`, `radio`, and buttons       | Value of the id attribute of the {{htmlelement('datalist')}} of autocomplete options  |
-| [`max`](#max)                       | `date`, `month`, `week`, `time`, `datetime-local`, `range`              | Maximum value                                                                         |
-| [`maxlength`](#maxlength)           | `text`, `search`, `url`, `tel`, `email`, `password`                     | Maximum length (number of characters) of `value`                                      |
-| [`min`](#min)                       | `date`, `month`, `week`, `time`, `datetime-local`, `range`              | Minimum value                                                                         |
-| [`minlength`](#minlength)           | `text`, `search`, `url`, `tel`, `email`, `password`                     | Minimum length (number of characters) of `value`                                      |
-| [`multiple`](#multiple)             | `email`, `file`                                                         | Boolean. Whether to allow multiple values                                             |
-| [`name`](#name)                     | all                                                                     | Name of the form control. Submitted with the form as part of a name/value pair        |
-| [`pattern`](#pattern)               | `text`, `search`, `url`, `tel`, `email`, `password`                     | Pattern the `value` must match to be valid                                            |
-| [`placeholder`](#placeholder)       | `text`, `search`, `url`, `tel`, `email`, `password`, `number`           | Text that appears in the form control when it has no value set                        |
-| [`readonly`](#readonly)             | all except `hidden`, `range`, `color`, `checkbox`, `radio`, and buttons | Boolean. The value is not editable                                                    |
-| [`required`](#required)             | all except `hidden`, `range`, `color`, and buttons                      | Boolean. A value is required or must be check for the form to be submittable          |
-| [`size`](#size)                     | `text`, `search`, `url`, `tel`, `email`, `password`                     | Size of the control                                                                   |
-| [`src`](#src)                       | `image`                                                                 | Same as `src` attribute for {{htmlelement('img')}}; address of image resource         |
-| [`step`](#step)                     | `date`, `month`, `week`, `time`, `datetime-local`, `range`              | Incremental values that are valid                                                     |
-| [`type`](#type)                     | all                                                                     | Type of form control                                                                  |
-| [`value`](#value)                   | all                                                                     | The initial value of the control                                                      |
-| [`width`](#width)                   | `image`                                                                 | Same as `width` attribute for {{htmlelement('img')}}                                  |
+| Attribute                                     | Type(s)                                                                 | Description                                                                            |
+| --------------------------------------------- | ----------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| [`accept`](#accept)                           | `file`                                                                  | Hint for expected file type in file upload controls                                    |
+| [`alt`](#alt)                                 | `image`                                                                 | alt attribute for the image type. Required for accessibility                           |
+| [`autocapitalize`](#autocapitalize)           | all except `url`, `email`, and `password`                               | Controls automatic capitalization in inputted text.                                    |
+| [`autocomplete`](#autocomplete)               | all except `checkbox`, `radio`, and buttons                             | Hint for form autofill feature                                                         |
+| [`capture`](#capture)                         | `file`                                                                  | Media capture input method in file upload controls                                     |
+| [`checked`](#checked)                         | `checkbox`, `radio`                                                     | Whether the command or control is checked                                              |
+| [`dirname`](#dirname)                         | `hidden`, `text`, `search`, `url`, `tel`, `email`                       | Name of form field to use for sending the element's directionality in form submission  |
+| [`disabled`](#disabled)                       | all                                                                     | Whether the form control is disabled                                                   |
+| [`form`](#form)                               | all                                                                     | Associates the control with a form element                                             |
+| [`formaction`](#formaction)                   | `image`, `submit`                                                       | URL to use for form submission                                                         |
+| [`formenctype`](#formenctype)                 | `image`, `submit`                                                       | Form data set encoding type to use for form submission                                 |
+| [`formmethod`](#formmethod)                   | `image`, `submit`                                                       | HTTP method to use for form submission                                                 |
+| [`formnovalidate`](#formnovalidate)           | `image`, `submit`                                                       | Bypass form control validation for form submission                                     |
+| [`formtarget`](#formtarget)                   | `image`, `submit`                                                       | Browsing context for form submission                                                   |
+| [`height`](#height)                           | `image`                                                                 | Same as height attribute for {{htmlelement('img')}}; vertical dimension                |
+| [`list`](#list)                               | all except `hidden`, `password`, `checkbox`, `radio`, and buttons       | Value of the id attribute of the {{htmlelement('datalist')}} of autocomplete options   |
+| [`max`](#max)                                 | `date`, `month`, `week`, `time`, `datetime-local`, `number`, `range`    | Maximum value                                                                          |
+| [`maxlength`](#maxlength)                     | `text`, `search`, `url`, `tel`, `email`, `password`                     | Maximum length (number of characters) of `value`                                       |
+| [`min`](#min)                                 | `date`, `month`, `week`, `time`, `datetime-local`, `number`, `range`    | Minimum value                                                                          |
+| [`minlength`](#minlength)                     | `text`, `search`, `url`, `tel`, `email`, `password`                     | Minimum length (number of characters) of `value`                                       |
+| [`multiple`](#multiple)                       | `email`, `file`                                                         | Boolean. Whether to allow multiple values                                              |
+| [`name`](#name)                               | all                                                                     | Name of the form control. Submitted with the form as part of a name/value pair         |
+| [`pattern`](#pattern)                         | `text`, `search`, `url`, `tel`, `email`, `password`                     | Pattern the `value` must match to be valid                                             |
+| [`placeholder`](#placeholder)                 | `text`, `search`, `url`, `tel`, `email`, `password`, `number`           | Text that appears in the form control when it has no value set                         |
+| [`popovertarget`](#popovertarget)             | `button`                                                                | Designates an `<input type="button">` as a control for a popover element               |
+| [`popovertargetaction`](#popovertargetaction) | `button`                                                                | Specifies the action that a popover control should perform                             |
+| [`readonly`](#readonly)                       | all except `hidden`, `range`, `color`, `checkbox`, `radio`, and buttons | Boolean. The value is not editable                                                     |
+| [`required`](#required)                       | all except `hidden`, `range`, `color`, and buttons                      | Boolean. A value is required or must be checked for the form to be submittable         |
+| [`size`](#size)                               | `text`, `search`, `url`, `tel`, `email`, `password`                     | Size of the control                                                                    |
+| [`src`](#src)                                 | `image`                                                                 | Same as `src` attribute for {{htmlelement('img')}}; address of image resource          |
+| [`step`](#step)                               | `date`, `month`, `week`, `time`, `datetime-local`, `number`, `range`    | Incremental values that are valid                                                      |
+| [`type`](#type)                               | all                                                                     | Type of form control                                                                   |
+| [`value`](#value)                             | all except `image`                                                      | The value of the control. When specified in the HTML, corresponds to the initial value |
+| [`width`](#width)                             | `image`                                                                 | Same as `width` attribute for {{htmlelement('img')}}                                   |
 
 A few additional non-standard attributes are listed following the descriptions of the standard attributes.
 
 ### Individual attributes
 
-- `accept`
+- [`accept`](/en-US/docs/Web/HTML/Attributes/accept)
 
   - : Valid for the `file` input type only, the `accept` attribute defines which file types are selectable in a `file` upload control. See the {{HTMLElement("input/file", "file")}} input type.
 
@@ -372,59 +393,71 @@ A few additional non-standard attributes are listed following the descriptions o
 
   - : Valid for the `image` button only, the `alt` attribute provides alternative text for the image, displaying the value of the attribute if the image [`src`](#src) is missing or otherwise fails to load. See the {{HTMLElement("input/image", "image")}} input type.
 
+- `autocapitalize`
+
+  - : Controls whether inputted text is automatically capitalized and, if so, in what manner. See the [`autocapitalize`](/en-US/docs/Web/HTML/Global_attributes/autocapitalize) global attribute page for more information.
+
 - [`autocomplete`](/en-US/docs/Web/HTML/Attributes/autocomplete)
 
-  - : (**Not** a Boolean attribute!) The [`autocomplete`](/en-US/docs/Web/HTML/Attributes/autocomplete) attribute takes as its value a space-separated string that describes what, if any, type of autocomplete functionality the input should provide. A typical implementation of autocomplete recalls previous values entered in the same input field, but more complex forms of autocomplete can exist. For instance, a browser could integrate with a device's contacts list to autocomplete `email` addresses in an email input field. See {{SectionOnPage("/en-US/docs/Web/HTML/Attributes/autocomplete", "Values")}} for permitted values.
+  - : (**Not** a Boolean attribute!) The [`autocomplete`](/en-US/docs/Web/HTML/Attributes/autocomplete) attribute takes as its value a space-separated string that describes what, if any, type of autocomplete functionality the input should provide. A typical implementation of autocomplete recalls previous values entered in the same input field, but more complex forms of autocomplete can exist. For instance, a browser could integrate with a device's contacts list to autocomplete `email` addresses in an email input field. See [`autocomplete`](/en-US/docs/Web/HTML/Attributes/autocomplete#values) for permitted values.
 
     The `autocomplete` attribute is valid on `hidden`, `text`, `search`, `url`, `tel`, `email`, `date`, `month`, `week`, `time`, `datetime-local`, `number`, `range`, `color`, and `password`. This attribute has no effect on input types that do not return numeric or text data, being valid for all input types except `checkbox`, `radio`, `file`, or any of the button types.
 
-    See [The HTML autocomplete attribute](/en-US/docs/Web/HTML/Attributes/autocomplete) for additional information, including information on password security and how `autocomplete` is slightly different for `hidden` than for other input types.
+    See the [`autocomplete` attribute](/en-US/docs/Web/HTML/Attributes/autocomplete) for additional information, including information on password security and how `autocomplete` is slightly different for `hidden` than for other input types.
 
 - `autofocus`
 
   - : A Boolean attribute which, if present, indicates that the input should automatically have focus when the page has finished loading (or when the {{HTMLElement("dialog")}} containing the element has been displayed).
 
-    > **Note:** An element with the `autofocus` attribute may gain focus before the {{domxref("Window/DOMContentLoaded_event", "DOMContentLoaded")}} event is fired.
+    > [!NOTE]
+    > An element with the `autofocus` attribute may gain focus before the {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}} event is fired.
 
     No more than one element in the document may have the `autofocus` attribute. If put on more than one element, the first one with the attribute receives focus.
 
     The `autofocus` attribute cannot be used on inputs of type `hidden`, since hidden inputs cannot be focused.
 
-    > **Warning:** Automatically focusing a form control can confuse visually-impaired people using screen-reading technology and people with cognitive impairments. When `autofocus` is assigned, screen-readers "teleport" their user to the form control without warning them beforehand.
+    > [!WARNING]
+    > Automatically focusing a form control can confuse visually-impaired people using screen-reading technology and people with cognitive impairments. When `autofocus` is assigned, screen-readers "teleport" their user to the form control without warning them beforehand.
 
     Use careful consideration for accessibility when applying the `autofocus` attribute. Automatically focusing on a control can cause the page to scroll on load. The focus can also cause dynamic keyboards to display on some touch devices. While a screen reader will announce the label of the form control receiving focus, the screen reader will not announce anything before the label, and the sighted user on a small device will equally miss the context created by the preceding content.
 
-- `capture`
+- [`capture`](/en-US/docs/Web/HTML/Attributes/capture)
   - : Introduced in the HTML Media Capture specification and valid for the `file` input type only, the `capture` attribute defines which media—microphone, video, or camera—should be used to capture a new file for upload with `file` upload control in supporting scenarios. See the {{HTMLElement("input/file", "file")}} input type.
 - `checked`
 
   - : Valid for both `radio` and `checkbox` types, `checked` is a Boolean attribute. If present on a `radio` type, it indicates that the radio button is the currently selected one in the group of same-named radio buttons. If present on a `checkbox` type, it indicates that the checkbox is checked by default (when the page loads). It does _not_ indicate whether this checkbox is currently checked: if the checkbox's state is changed, this content attribute does not reflect the change. (Only the [`HTMLInputElement`'s `checked` IDL attribute](/en-US/docs/Web/API/HTMLInputElement) is updated.)
 
-    > **Note:** Unlike other input controls, a checkboxes and radio buttons value are only included in the submitted data if they are currently `checked`. If they are, the name and the value(s) of the checked controls are submitted.
+    > [!NOTE]
+    > Unlike other input controls, a checkboxes and radio buttons value are only included in the submitted data if they are currently `checked`. If they are, the name and the value(s) of the checked controls are submitted.
     >
     > For example, if a checkbox whose `name` is `fruit` has a `value` of `cherry`, and the checkbox is checked, the form data submitted will include `fruit=cherry`. If the checkbox isn't active, it isn't listed in the form data at all. The default `value` for checkboxes and radio buttons is `on`.
 
-- `dirname`
+- [`dirname`](/en-US/docs/Web/HTML/Attributes/dirname)
 
-  - : Valid for `text` and `search` input types only, the `dirname` attribute enables the submission of the directionality of the element. When included, the form control will submit with two name/value pairs: the first being the [`name`](#name) and [`value`](#value), the second being the value of the `dirname` as the name with the value of `ltr` or `rtl` being set by the browser.
+  - : Valid for `hidden`, `text`, `search`, `url`, `tel`, and `email` input types, the `dirname` attribute enables the submission of the directionality of the element. When included, the form control will submit with two name/value pairs: the first being the [`name`](#name) and [`value`](#value), and the second being the value of the `dirname` attribute as the name, with a value of `ltr` or `rtl` as set by the browser.
 
     ```html
     <form action="page.html" method="post">
-      <label>Fruit: <input type="text" name="fruit" dirname="fruit.dir" value="cherry"></label>
-      <input type="submit"/>
+      <label>
+        Fruit:
+        <input type="text" name="fruit" dirname="fruit-dir" value="cherry" />
+      </label>
+      <input type="submit" />
     </form>
-    <!-- page.html?fruit=cherry&fruit.dir=ltr -->
+    <!-- page.html?fruit=cherry&fruit-dir=ltr -->
     ```
 
-    When the form above is submitted, the input cause both the `name` / `value` pair of `fruit=cherry` and the `dirname` / direction pair of `fruit.dir=ltr` to be sent.
+    When the form above is submitted, the input cause both the `name` / `value` pair of `fruit=cherry` and the `dirname` / direction pair of `fruit-dir=ltr` to be sent.
+    For more information, see the [`dirname` attribute](/en-US/docs/Web/HTML/Attributes/dirname).
 
-- `disabled`
+- [`disabled`](/en-US/docs/Web/HTML/Attributes/disabled)
 
   - : A Boolean attribute which, if present, indicates that the user should not be able to interact with the input. Disabled inputs are typically rendered with a dimmer color or using some other form of indication that the field is not available for use.
 
     Specifically, disabled inputs do not receive the {{domxref("Element/click_event", "click")}} event, and disabled inputs are not submitted with the form.
 
-    > **Note:** Although not required by the specification, Firefox will by default [persist the dynamic disabled state](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of an `<input>` across page loads. Use the [`autocomplete`](#autocomplete) attribute to control this feature.
+    > [!NOTE]
+    > Although not required by the specification, Firefox will by default [persist the dynamic disabled state](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of an `<input>` across page loads. Use the [`autocomplete`](#autocomplete) attribute to control this feature.
 
 - `form`
 
@@ -432,7 +465,8 @@ A few additional non-standard attributes are listed following the descriptions o
 
     The `form` attribute lets you place an input anywhere in the document but have it included with a form elsewhere in the document.
 
-    > **Note:** An input can only be associated with one form.
+    > [!NOTE]
+    > An input can only be associated with one form.
 
 - `formaction`
   - : Valid for the `image` and `submit` input types only. See the {{HTMLElement("input/submit", "submit")}} input type for more information.
@@ -462,33 +496,33 @@ A few additional non-standard attributes are listed following the descriptions o
 
     See the {{htmlelement('datalist')}} element.
 
-- `max`
+- [`max`](/en-US/docs/Web/HTML/Attributes/max)
 
-  - : Valid for `date`, `month`, `week`, `time`, `datetime-local`, `number`, and `range`, it defines the greatest value in the range of permitted values. If the [`value`](#value) entered into the element exceeds this, the element fails [constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation). If the value of the `max` attribute isn't a number, then the element has no maximum value.
+  - : Valid for `date`, `month`, `week`, `time`, `datetime-local`, `number`, and `range`, it defines the greatest value in the range of permitted values. If the [`value`](#value) entered into the element exceeds this, the element fails [constraint validation](/en-US/docs/Web/HTML/Constraint_validation). If the value of the `max` attribute isn't a number, then the element has no maximum value.
 
     There is a special case: if the data type is periodic (such as for dates or times), the value of `max` may be lower than the value of `min`, which indicates that the range may wrap around; for example, this allows you to specify a time range from 10 PM to 4 AM.
 
-- `maxlength`
+- [`maxlength`](/en-US/docs/Web/HTML/Attributes/maxlength)
 
-  - : Valid for `text`, `search`, `url`, `tel`, `email`, and `password`, it defines the maximum number of characters (as UTF-16 code units) the user can enter into the field. This must be an integer value `0` or higher. If no `maxlength` is specified, or an invalid value is specified, the field has no maximum length. This value must also be greater than or equal to the value of `minlength`.
+  - : Valid for `text`, `search`, `url`, `tel`, `email`, and `password`, it defines the maximum string length (measured in UTF-16 code units) that the user can enter into the field. This must be an integer value of 0 or higher. If no `maxlength` is specified, or an invalid value is specified, the field has no maximum length. This value must also be greater than or equal to the value of `minlength`.
 
-    The input will fail [constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation) if the length of the text entered into the field is greater than `maxlength` UTF-16 code units long. By default, browsers prevent users from entering more characters than allowed by the `maxlength` attribute. See [Client-side validation](#client-side_validation) for more information.
+    The input will fail [constraint validation](/en-US/docs/Web/HTML/Constraint_validation) if the length of the text entered into the field is greater than `maxlength` UTF-16 code units long. By default, browsers prevent users from entering more characters than allowed by the `maxlength` attribute. Constraint validation is only applied when the value is changed by the user. See [Client-side validation](#client-side_validation) for more information.
 
-- `min`
+- [`min`](/en-US/docs/Web/HTML/Attributes/min)
 
-  - : Valid for `date`, `month`, `week`, `time`, `datetime-local`, `number`, and `range`, it defines the most negative value in the range of permitted values. If the [`value`](#value) entered into the element is less than this, the element fails [constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation). If the value of the `min` attribute isn't a number, then the element has no minimum value.
+  - : Valid for `date`, `month`, `week`, `time`, `datetime-local`, `number`, and `range`, it defines the most negative value in the range of permitted values. If the [`value`](#value) entered into the element is less than this, the element fails [constraint validation](/en-US/docs/Web/HTML/Constraint_validation). If the value of the `min` attribute isn't a number, then the element has no minimum value.
 
     This value must be less than or equal to the value of the `max` attribute. If the `min` attribute is present but is not specified or is invalid, no `min` value is applied. If the `min` attribute is valid and a non-empty value is less than the minimum allowed by the `min` attribute, constraint validation will prevent form submission. See [Client-side validation](#client-side_validation) for more information.
 
     There is a special case: if the data type is periodic (such as for dates or times), the value of `max` may be lower than the value of `min`, which indicates that the range may wrap around; for example, this allows you to specify a time range from 10 PM to 4 AM.
 
-- `minlength`
+- [`minlength`](/en-US/docs/Web/HTML/Attributes/minlength)
 
-  - : Valid for `text`, `search`, `url`, `tel`, `email`, and `password`, it defines the minimum number of characters (as UTF-16 code units) the user can enter into the entry field. This must be an non-negative integer value smaller than or equal to the value specified by `maxlength`. If no `minlength` is specified, or an invalid value is specified, the input has no minimum length.
+  - : Valid for `text`, `search`, `url`, `tel`, `email`, and `password`, it defines the minimum string length (measured in UTF-16 code units) that the user can enter into the entry field. This must be a non-negative integer value smaller than or equal to the value specified by `maxlength`. If no `minlength` is specified, or an invalid value is specified, the input has no minimum length.
 
-    The input will fail [constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation) if the length of the text entered into the field is fewer than `minlength` UTF-16 code units long, preventing form submission. See [Client-side validation](#client-side_validation) for more information.
+    The input will fail [constraint validation](/en-US/docs/Web/HTML/Constraint_validation) if the length of the text entered into the field is fewer than `minlength` UTF-16 code units long, preventing form submission. Constraint validation is only applied when the value is changed by the user. See [Client-side validation](#client-side_validation) for more information.
 
-- `multiple`
+- [`multiple`](/en-US/docs/Web/HTML/Attributes/multiple)
 
   - : The Boolean `multiple` attribute, if set, means the user can enter comma separated email addresses in the email widget or can choose more than one file with the `file` input. See the {{HTMLElement("input/email", "email")}} and {{HTMLElement("input/file", "file")}} input type.
 
@@ -522,44 +556,69 @@ A few additional non-standard attributes are listed following the descriptions o
 
     When this code has run, `guestName` will be the {{domxref("HTMLInputElement")}} for the `guest` field, and `hatSize` the object for the `hat-size` field.
 
-    > **Warning:** Avoid giving form elements a `name` that corresponds to a built-in property of the form, since you would then override the predefined property or method with this reference to the corresponding input.
+    > [!WARNING]
+    > Avoid giving form elements a `name` that corresponds to a built-in property of the form, since you would then override the predefined property or method with this reference to the corresponding input.
 
-- `pattern`
+- [`pattern`](/en-US/docs/Web/HTML/Attributes/pattern)
 
-  - : Valid for `text`, `search`, `url`, `tel`, `email`, and `password`, the `pattern` attribute defines a regular expression that the input's [`value`](#value) must match in order for the value to pass [constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation). It must be a valid JavaScript regular expression, as used by the {{jsxref("RegExp")}} type, and as documented in our [guide on regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions); the `'u'` flag is specified when compiling the regular expression, so that the pattern is treated as a sequence of Unicode code points, instead of as ASCII. No forward slashes should be specified around the pattern text.
+  - : Valid for `text`, `search`, `url`, `tel`, `email`, and `password`, the `pattern` attribute is used to compile a regular expression that the input's [`value`](#value) must match in order for the value to pass [constraint validation](/en-US/docs/Web/HTML/Constraint_validation). It must be a valid JavaScript regular expression, as used by the {{jsxref("RegExp")}} type, and as documented in our [guide on regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions). No forward slashes should be specified around the pattern text. When compiling the regular expression:
 
-    If the `pattern` attribute is present but is not specified or is invalid, no regular expression is applied and this attribute is ignored completely. If the pattern attribute is valid and a non-empty value does not match the pattern, constraint validation will prevent form submission.
+    1. the pattern will be implicitly wrapped with `^(?:` and `)$`, such that the match is required against the _entire_ input value, i.e., `^(?:<pattern>)$`.
+    2. the `'v'` flag is specified so that the pattern is treated as a sequence of Unicode code points, instead of as {{Glossary("ASCII")}}.
 
-    > **Note:** If using the `pattern` attribute, inform the user about the expected format by including explanatory text nearby. You can also include a [`title`](#title) attribute to explain what the requirements are to match the pattern; most browsers will display this title as a tooltip. The visible explanation is required for accessibility. The tooltip is an enhancement.
+    If the `pattern` attribute is present but is not specified or is invalid, no regular expression is applied and this attribute is ignored completely. If the pattern attribute is valid and a non-empty value does not match the pattern, constraint validation will prevent form submission. If the [`multiple`](/en-US/docs/Web/HTML/Attributes/multiple) is present, the compiled regular expression is matched against each comma separated value.
+
+    > [!NOTE]
+    > If using the `pattern` attribute, inform the user about the expected format by including explanatory text nearby. You can also include a [`title`](#title) attribute to explain what the requirements are to match the pattern; most browsers will display this title as a tooltip. The visible explanation is required for accessibility. The tooltip is an enhancement.
 
     See [Client-side validation](#client-side_validation) for more information.
 
-- `placeholder`
+- [`placeholder`](/en-US/docs/Web/HTML/Attributes/placeholder)
 
   - : Valid for `text`, `search`, `url`, `tel`, `email`, `password`, and `number`, the `placeholder` attribute provides a brief hint to the user as to what kind of information is expected in the field. It should be a word or short phrase that provides a hint as to the expected type of data, rather than an explanation or prompt. The text _must not_ include carriage returns or line feeds. So for example if a field is expected to capture a user's first name, and its label is "First Name", a suitable placeholder might be "e.g. Mustafa".
 
-    > **Note:** The `placeholder` attribute is not as semantically useful as other ways to explain your form, and can cause unexpected technical issues with your content. See [Labels](#labels) for more information.
+    > [!NOTE]
+    > The `placeholder` attribute is not as semantically useful as other ways to explain your form, and can cause unexpected technical issues with your content. See [Labels](#labels) for more information.
 
-- `readonly`
+- `popovertarget`
+
+  - : Turns an `<input type="button">` element into a popover control button; takes the ID of the popover element to control as its value. See the {{domxref("Popover API", "Popover API", "", "nocode")}} landing page for more details. Establishing a relationship between a popover and its invoker button using the `popovertarget` attribute has two additional useful effects:
+
+    - The browser creates an implicit [`aria-details`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-details) and [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded) relationship between popover and invoker, and places the popover in a logical position in the keyboard focus navigation order when shown. This makes the popover more accessible to keyboard and assistive technology (AT) users (see also [Popover accessibility features](/en-US/docs/Web/API/Popover_API/Using#popover_accessibility_features)).
+    - The browser creates an implicit anchor reference between the two, making it very convenient to position popovers relative to their controls using [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning). See [Popover anchor positioning](/en-US/docs/Web/API/Popover_API/Using#popover_anchor_positioning) for more details.
+
+- `popovertargetaction`
+
+  - : Specifies the action to be performed on a popover element being controlled by a control `<input type="button">`. Possible values are:
+
+    - `"hide"`
+      - : The button will hide a shown popover. If you try to hide an already hidden popover, no action will be taken.
+    - `"show"`
+      - : The button will show a hidden popover. If you try to show an already showing popover, no action will be taken.
+    - `"toggle"`
+      - : The button will toggle a popover between showing and hidden. If the popover is hidden, it will be shown; if the popover is showing, it will be hidden. If `popovertargetaction` is omitted, `"toggle"` is the default action that will be performed by the control button.
+
+- [`readonly`](/en-US/docs/Web/HTML/Attributes/readonly)
 
   - : A Boolean attribute which, if present, indicates that the user should not be able to edit the value of the input. The `readonly` attribute is supported by the `text`, `search`, `url`, `tel`, `email`, `date`, `month`, `week`, `time`, `datetime-local`, `number`, and `password` input types.
 
     See the [HTML attribute: `readonly`](/en-US/docs/Web/HTML/Attributes/readonly) for more information.
 
-- `required`
+- [`required`](/en-US/docs/Web/HTML/Attributes/required)
 
   - : `required` is a Boolean attribute which, if present, indicates that the user must specify a value for the input before the owning form can be submitted. The `required` attribute is supported by `text`, `search`, `url`, `tel`, `email`, `date`, `month`, `week`, `time`, `datetime-local`, `number`, `password`, `checkbox`, `radio`, and `file` inputs.
 
     See [Client-side validation](#client-side_validation) and the [HTML attribute: `required`](/en-US/docs/Web/HTML/Attributes/required) for more information.
 
-- `size`
+- [`size`](/en-US/docs/Web/HTML/Attributes/size)
 
-  - : Valid for `email`, `password`, `tel`, `url`, and `text`, the `size` attribute specifies how much of the input is shown. Basically creates same result as setting CSS [`width`](/en-US/docs/Web/CSS/width) property with a few specialities. The actual unit of the value depends on the input type. For `password` and `text`, it is a number of characters (or `em` units) with a default value of `20`, and for others, it is pixels (or `px` units). CSS `width` takes precedence over the `size` attribute.
+  - : Valid for `email`, `password`, `tel`, `url`, and `text`, the `size` attribute specifies how much of the input is shown. Basically creates same result as setting CSS [`width`](/en-US/docs/Web/CSS/width) property with a few specialties. The actual unit of the value depends on the input type. For `password` and `text`, it is a number of characters (or `em` units) with a default value of `20`, and for others, it is pixels (or `px` units). CSS `width` takes precedence over the `size` attribute.
 
 - `src`
+
   - : Valid for the `image` input button only, the `src` is string specifying the URL of the image file to display to represent the graphical submit button. See the {{HTMLElement("input/image", "image")}} input type.
 
-- `step`
+- [`step`](/en-US/docs/Web/HTML/Attributes/step)
 
   - : Valid for `date`, `month`, `week`, `time`, `datetime-local`, `number`, and `range`, the [`step`](/en-US/docs/Web/HTML/Attributes/step) attribute is a number that specifies the granularity that the value must adhere to.
 
@@ -574,7 +633,8 @@ A few additional non-standard attributes are listed following the descriptions o
 
     For example, if you have `<input type="number" min="10" step="2">`, then any even integer, `10` or greater, is valid. If omitted, `<input type="number">`, any integer is valid, but floats (like `4.2`) are not valid, because `step` defaults to `1`. For `4.2` to be valid, `step` would have had to be set to `any`, 0.1, 0.2, or any the `min` value would have had to be a number ending in `.2`, such as `<input type="number" min="-5.2">`
 
-    > **Note:** When the data entered by the user doesn't adhere to the stepping configuration, the value is considered invalid in constraint validation and will match the `:invalid` pseudoclass.
+    > [!NOTE]
+    > When the data entered by the user doesn't adhere to the stepping configuration, the value is considered invalid in constraint validation and will match the `:invalid` pseudoclass.
 
     See [Client-side validation](#client-side_validation) for more information.
 
@@ -613,27 +673,19 @@ The following non-standard attributes are also available on some browsers. As a 
   </thead>
   <tbody>
     <tr>
-      <td><a href="#autocorrect"><code>autocorrect</code></a></td>
-      <td>
-        A string indicating whether or not autocorrect is <code>on</code> or <code>off</code>. <strong>Safari only.</strong>
-      </td>
-    </tr>
-    <tr>
       <td><a href="#incremental"><code>incremental</code></a></td>
       <td>
-        Whether or not to send repeated {{domxref("HTMLInputElement/search_event", "search")}}
-        events to allow updating live search results while the user is still editing the value of the field.
+        Whether or not to send repeated {{domxref("HTMLInputElement/search_event", "search")}} events to allow updating live search results while the user is still editing the value of the field.
         <strong>WebKit and Blink only (Safari, Chrome, Opera, etc.).</strong>
       </td>
     </tr>
     <tr>
-      <td><code>mozactionhint</code></td>
+      <td><code>mozactionhint</code> {{deprecated_inline}}</td>
       <td>
         <p>A string indicating the type of action that will be taken when the user
         presses the <kbd>Enter</kbd> or <kbd>Return</kbd> key while editing the
         field; this is used to determine an appropriate label for that key on a
-        virtual keyboard.</p>
-        <p><strong>Deprecated: use <a href="/en-US/docs/Web/HTML/Global_attributes/enterkeyhint"><code>enterkeyhint</code></a> instead.</strong></p>
+        virtual keyboard. <strong>Since this attribute is deprecated, use <a href="/en-US/docs/Web/HTML/Global_attributes/enterkeyhint"><code>enterkeyhint</code></a> instead.</strong></p>
       </td>
     </tr>
     <tr>
@@ -653,20 +705,11 @@ The following non-standard attributes are also available on some browsers. As a 
         <a href="#webkitdirectory"><code>webkitdirectory</code></a>
       </td>
       <td>
-        A Boolean indicating whether or not to only allow the user to choose a directory (or directories, if <a href="#multiple"><code>multiple</code></a> is also present)
+        A Boolean indicating whether to only allow the user to choose a directory (or directories, if <a href="#multiple"><code>multiple</code></a> is also present)
       </td>
     </tr>
   </tbody>
 </table>
-
-- `autocorrect` {{non-standard_inline}}
-
-  - : (Safari only). A string which indicates whether or not to activate automatic correction while the user is editing this field. Permitted values are:
-
-    - `on`
-      - : Enable automatic correction of typos, as well as processing of text substitutions if any are configured.
-    - `off`
-      - : Disable automatic correction and text substitutions.
 
 - `incremental` {{non-standard_inline}}
 
@@ -677,11 +720,12 @@ The following non-standard attributes are also available on some browsers. As a 
     The `search` event is rate-limited so that it is not sent more frequently than an implementation-defined interval.
 
 - `orient` {{non-standard_inline}}
-  - : Similar to the -moz-orient non-standard CSS property impacting the {{htmlelement('progress')}} and {{htmlelement('meter')}} elements, the `orient` attribute defines the orientation of the range slider. Values include `horizontal`, meaning the range is rendered horizontally, and `vertical`, where the range is rendered vertically.
+
+  - : Similar to the -moz-orient non-standard CSS property impacting the {{htmlelement('progress')}} and {{htmlelement('meter')}} elements, the `orient` attribute defines the orientation of the range slider. Values include `horizontal`, meaning the range is rendered horizontally, and `vertical`, where the range is rendered vertically. See [Creating vertical form controls](/en-US/docs/Web/CSS/CSS_writing_modes/Vertical_controls) for a modern approach to creating vertical form controls.
 
 - `results` {{non-standard_inline}}
 
-  - : The `results` attribute—supported only by Safari—is a numeric value that lets you override the maximum number of entries to be displayed in the {{HTMLElement("input")}} element's natively-provided drop-down menu of previous search queries.
+  - : The `results` attribute—supported only by Safari—is a numeric value that lets you override the maximum number of entries to be displayed in the `<input>` element's natively-provided drop-down menu of previous search queries.
 
     The value must be a non-negative decimal number. If not provided, or an invalid value is given, the browser's default maximum number of entries is used.
 
@@ -707,6 +751,8 @@ The following methods are provided by the {{domxref("HTMLInputElement")}} interf
   - : Sets the contents of the specified range of characters in the input element to a given string. A `selectMode` parameter is available to allow controlling how the existing content is affected.
 - {{domxref("HTMLInputElement.setSelectionRange", "setSelectionRange()")}}
   - : Selects the specified range of characters within a textual input element. Does nothing for inputs which aren't presented as text input fields.
+- {{domxref("HTMLInputElement.showPicker", "showPicker()")}}
+  - : Displays the browser picker for the input element that would normally be displayed when the element is selected, but triggered from a button press or other user interaction.
 - {{domxref("HTMLInputElement.stepDown", "stepDown()")}}
   - : Decrements the value of a numeric input by one, by default, or by the specified number of units.
 - {{domxref("HTMLInputElement.stepUp", "stepUp()")}}
@@ -720,7 +766,7 @@ Inputs, being replaced elements, have a few features not applicable to non form 
 
 <table class="no-markdown">
   <caption>
-    Captions super relevant to the
+    Pseudo-classes relevant to the
     <code>&#x3C;input></code>
     element:
   </caption>
@@ -759,7 +805,7 @@ Inputs, being replaced elements, have a few features not applicable to non form 
       <td>{{Cssxref(":placeholder-shown")}}</td>
       <td>
         Element that is currently displaying <a href="#placeholder"><code>placeholder</code> text</a>,
-        including <code>&#x3C;input></code> and {{HTMLElement("textarea")}} elements with the <a href="#placeholder"><code>placeholder</code></a> attribute present that has, as of yet, no value.
+        including <code>&#x3C;input></code> and {{HTMLElement("textarea")}} elements with the <a href="#placeholder"><code>placeholder</code></a> attribute present that has, as yet, no value.
       </td>
     </tr>
     <tr>
@@ -855,6 +901,12 @@ Inputs, being replaced elements, have a few features not applicable to non form 
         containing the invalid control.
       </td>
     </tr>
+    <tr>
+      <td>{{Cssxref(":open")}}</td>
+      <td>
+        <code>&lt;input&gt;</code> elements that display a picker for the user to choose a value from (for example <a href="/en-US/docs/Web/HTML/Element/input/color"><code>&lt;input type="color"&gt;</code></a>) — but only when the element is in the open state, that is, when the picker is displayed.
+      </td>
+    </tr>
   </tbody>
 </table>
 
@@ -863,7 +915,7 @@ Inputs, being replaced elements, have a few features not applicable to non form 
 We can style a checkbox label based on whether the checkbox is checked or not. In this example, we are styling the {{cssxref('color')}} and {{cssxref('font-weight')}} of the {{htmlelement('label')}} that comes immediately after a checked input. We haven't applied any styles if the `input` is not checked.
 
 ```html hidden
-<input id="checkboxInput" type="checkbox">
+<input id="checkboxInput" type="checkbox" />
 <label for="checkboxInput">Toggle the checkbox on and off</label>
 ```
 
@@ -878,17 +930,20 @@ input:checked + label {
 
 ### Attribute selectors
 
-It is possible to target different types of form controls based on their [`type`](#type) using [attribute selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors). CSS attribute selectors match elements based on either just the presence of a attribute or the value of a given attribute.
+It is possible to target different types of form controls based on their [`type`](#type) using [attribute selectors](/en-US/docs/Learn_web_development/Core/Styling_basics/Attribute_selectors). CSS attribute selectors match elements based on either just the presence of an attribute or the value of a given attribute.
 
 ```css
 /* matches a password input */
-input[type="password"] {}
+input[type="password"] {
+}
 
 /* matches a form control whose valid values are limited to a range of values*/
-input[min][max] {}
+input[min][max] {
+}
 
 /* matches a form control with a pattern attribute */
- input[pattern] {}
+input[pattern] {
+}
 ```
 
 ### ::placeholder
@@ -919,7 +974,7 @@ A property specific to text entry-related elements is the CSS {{cssxref("caret-c
 
 ```html
 <label for="textInput">Note the red caret:</label>
-<input id="textInput" class="custom" size="32">
+<input id="textInput" class="custom" size="32" />
 ```
 
 #### CSS
@@ -927,7 +982,10 @@ A property specific to text entry-related elements is the CSS {{cssxref("caret-c
 ```css
 input.custom {
   caret-color: red;
-  font: 16px "Helvetica", "Arial", "sans-serif"
+  font:
+    16px "Helvetica",
+    "Arial",
+    "sans-serif";
 }
 ```
 
@@ -935,21 +993,26 @@ input.custom {
 
 {{EmbedLiveSample('caret-color', 500, 80)}}
 
+### field-sizing
+
+The {{cssxref("field-sizing")}} property enables you to control the sizing behavior of form inputs (i.e. they are given a default preferred size by default.) This property enables you to override the default behavior, allowing form controls to adjust in size to fit their contents.
+
+This property is typically used to create form fields that shrinkwrap their content and grow as more text is entered. This works with input types that accept direct text input (for example, [`text`](/en-US/docs/Web/HTML/Element/input/text) and [`url`](/en-US/docs/Web/HTML/Element/input/url)), input type [`file`](/en-US/docs/Web/HTML/Element/input/file), and {{htmlelement("textarea")}} elements.
+
 ### object-position and object-fit
 
-In certain cases (typically involving non-textual inputs and specialized interfaces), the `<input>` element is a [replaced element](/en-US/docs/Web/CSS/Replaced_element). When it is, the position and size of the element's size and positioning within its frame can be adjusted using the CSS {{cssxref("object-position")}} and {{cssxref("object-fit")}} properties
+In certain cases (typically involving non-textual inputs and specialized interfaces), the `<input>` element is a [replaced element](/en-US/docs/Web/CSS/Replaced_element). When it is, the position and size of the element's size and positioning within its frame can be adjusted using the CSS {{cssxref("object-position")}} and {{cssxref("object-fit")}} properties.
 
 ### Styling
 
 For more information about adding color to elements in HTML, see:
 
-- [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_Colors/Applying_color).
+- [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_colors/Applying_color).
 
 Also see:
 
-- [Styling HTML forms](/en-US/docs/Learn/Forms/Styling_web_forms)
-- [Advanced styling for HTML forms](/en-US/docs/Learn/Forms/Advanced_form_styling) and
-- the [compatibility table of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls).
+- [Styling HTML forms](/en-US/docs/Learn_web_development/Extensions/Forms/Styling_web_forms)
+- [Advanced styling for HTML forms](/en-US/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling) and
 
 ## Additional features
 
@@ -965,13 +1028,18 @@ It does not suffice to have plain text adjacent to the `<input>` element. Rather
 
 ```html
 <!-- inaccessible -->
-<p>Enter your name: <input id="name" type="text" size="30"></p>
+<p>Enter your name: <input id="name" type="text" size="30" /></p>
 
 <!-- implicit label -->
-<p><label>Enter your name: <input id="name" type="text" size="30"></label></p>
+<p>
+  <label>Enter your name: <input id="name" type="text" size="30" /></label>
+</p>
 
 <!-- explicit label -->
-<p><label for="name">Enter your name: </label><input id="name" type="text" size="30"></p>
+<p>
+  <label for="name">Enter your name: </label>
+  <input id="name" type="text" size="30" />
+</p>
 ```
 
 The first example is inaccessible: no relationship exists between the prompt and the `<input>` element.
@@ -986,11 +1054,13 @@ The [`placeholder`](#placeholder) attribute lets you specify text that appears w
 
 Not only is the placeholder not accessible to screen readers, but once the user enters any text into the form control, or if the form control already has a value, the placeholder disappears. Browsers with automatic page translation features may skip over attributes when translating, meaning the `placeholder` may not get translated.
 
-> **Note:** Don't use the [`placeholder`](#placeholder) attribute if you can avoid it. If you need to label an `<input>` element, use the {{HTMLElement("label")}} element.
+> [!NOTE]
+> Don't use the [`placeholder`](#placeholder) attribute if you can avoid it. If you need to label an `<input>` element, use the {{HTMLElement("label")}} element.
 
 ### Client-side validation
 
-> **Warning:** Client-side validation is useful, but it does _not_ guarantee that the server will receive valid data. If the data must be in a specific format, _always_ verify it also on the server-side, and return a [`400` HTTP response](/en-US/docs/Web/HTTP/Status/400) if the format is invalid.
+> [!WARNING]
+> Client-side validation is useful, but it does _not_ guarantee that the server will receive valid data. If the data must be in a specific format, _always_ verify it also on the server-side, and return a [`400` HTTP response](/en-US/docs/Web/HTTP/Status/400) if the format is invalid.
 
 In addition to using CSS to style inputs based on the {{cssxref(":valid")}} or {{cssxref(":invalid")}} UI states based on the current state of each input, as noted in the [UI pseudo-classes](#ui_pseudo-classes) section above, the browser provides for client-side validation on (attempted) form submission. On form submission, if there is a form control that fails constraint validation, supporting browsers will display an error message on the first invalid form control; displaying a default message based on the error type, or a message set by you.
 
@@ -999,14 +1069,14 @@ Some input types and other attributes place limits on what values are valid for 
 For the input types whose domain of possible values is periodic (that is, at the highest possible value, the values wrap back around to the beginning rather than ending), it's possible for the values of the [`max`](#max) and [`min`](#min) properties to be reversed, which indicates that the range of permitted values starts at `min`, wraps around to the lowest possible value, then continues on until `max` is reached. This is particularly useful for dates and times, such as when you want to allow the range to be from 8 PM to 8 AM:
 
 ```html
-<input type="time" min="20:00" max="08:00" name="overnight">
+<input type="time" min="20:00" max="08:00" name="overnight" />
 ```
 
 Specific attributes and their values can lead to a specific error {{domxref('ValidityState')}}:
 
 <table class="no-markdown">
   <caption>
-    Validity object errors depend on the {{htmlelement('input')}}
+    Validity object errors depend on the <code>&lt;input&gt;</code>
     attributes and their values:
   </caption>
   <thead>
@@ -1064,7 +1134,7 @@ Specific attributes and their values can lead to a specific error {{domxref('Val
       <td><a href="#step"><code>step</code></a></td>
       <td>{{domxref('validityState.stepMismatch')}}</td>
       <td>
-        The value doesn't match the step increment. Increment default is <code>1</code>, so only integers are valid on<code> type="number"</code>
+        The value doesn't match the step increment. Increment default is <code>1</code>, so only integers are valid on <code>type="number"</code>
         is step is not included. <code>step="any"</code> will never throw this error.
       </td>
     </tr>
@@ -1072,13 +1142,13 @@ Specific attributes and their values can lead to a specific error {{domxref('Val
       <td><a href="#type"><code>type</code></a></td>
       <td>{{domxref('validityState.typeMismatch')}}</td>
       <td>
-        Occurs when the value is not of the correct type, for example a email does not contain an <code>@</code> or a url doesn't contain a protocol.
+        Occurs when the value is not of the correct type, for example an email does not contain an <code>@</code> or a url doesn't contain a protocol.
       </td>
     </tr>
   </tbody>
 </table>
 
-If a form control doesn't have the `required` attribute, no value, or an empty string, is not invalid. Even if the above attributes are present, with the exception of `required`, and empty string will not lead to an error.
+If a form control doesn't have the `required` attribute, no value, or an empty string, is not invalid. Even if the above attributes are present, with the exception of `required`, an empty string will not lead to an error.
 
 We can set limits on what values we accept, and supporting browsers will natively validate these form values and alert the user if there is a mistake when the form is submitted.
 
@@ -1093,8 +1163,8 @@ In addition to the errors described in the table above, the `validityState` inte
 - {{domxref('validityState.rangeOverflow')}}
 - {{domxref('validityState.stepMismatch')}}
 - {{domxref('validityState.badInput')}}
-- {{domxref('validityState.valid')}}
-- {{domxref('validityState.customError')}}
+- {{domxref('validityState', 'validityState.valid')}}
+- {{domxref('validityState', 'validityState.customError')}}
 
 For each of these Boolean properties, a value of `true` indicates that the specified reason validation may have failed is true, with the exception of the `valid` property, which is `true` if the element's value obeys all constraints.
 
@@ -1103,28 +1173,28 @@ If there is an error, supporting browsers will both alert the user and prevent t
 ```js
 function validate(input) {
   let validityState_object = input.validity;
-  if(validityState_object.valueMissing) {
-     input.setCustomValidity('A value is required');
+  if (validityState_object.valueMissing) {
+    input.setCustomValidity("A value is required");
   } else if (validityState_object.rangeUnderflow) {
-    input.setCustomValidity('Your value is too low');
+    input.setCustomValidity("Your value is too low");
   } else if (validityState_object.rangeOverflow) {
-    input.setCustomValidity('Your value is too high');
+    input.setCustomValidity("Your value is too high");
   } else {
-    input.setCustomValidity('');
+    input.setCustomValidity("");
   }
 }
 ```
 
-The last line, setting the custom validity message to the empty string is vital. If the user makes an error, and the validity is set, it will fail to submit, even if all of the values are valid, until the message is `null`.
+The last line, setting the custom validity message to the empty string is vital. If the user makes an error, and the validity is set, it will fail to submit, even if all the values are valid, until the message is `null`.
 
 #### Custom validation error example
 
-If you want to present a custom error message when a field fails to validate, you need to use the [Constraint validation features](/en-US/docs/Web/API/Constraint_validation#constraint_validation_interfaces) available on `<input>` (and related) elements. Take the following form:
+If you want to present a custom error message when a field fails to validate, you need to use the [Constraint Validation API](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation#validating_forms_using_javascript) available on `<input>` (and related) elements. Take the following form:
 
 ```html
 <form>
   <label for="name">Enter username (upper and lowercase letters): </label>
-  <input type="text" name="name" id="name" required pattern="[A-Za-z]+">
+  <input type="text" name="name" id="name" required pattern="[A-Za-z]+" />
   <button>Submit</button>
 </form>
 ```
@@ -1134,18 +1204,20 @@ The basic HTML form validation features will cause this to produce a default err
 If you wanted to instead display custom error messages, you could use JavaScript like the following:
 
 ```js
-const nameInput = document.querySelector('input');
+const nameInput = document.querySelector("input");
 
-nameInput.addEventListener('input', () => {
-  nameInput.setCustomValidity('');
+nameInput.addEventListener("input", () => {
+  nameInput.setCustomValidity("");
   nameInput.checkValidity();
 });
 
-nameInput.addEventListener('invalid', () => {
-  if(nameInput.value === '') {
-    nameInput.setCustomValidity('Enter your username!');
+nameInput.addEventListener("invalid", () => {
+  if (nameInput.value === "") {
+    nameInput.setCustomValidity("Enter your username!");
   } else {
-    nameInput.setCustomValidity('Usernames can only contain upper and lowercase letters. Try again!');
+    nameInput.setCustomValidity(
+      "Usernames can only contain upper and lowercase letters. Try again!",
+    );
   }
 });
 ```
@@ -1157,13 +1229,15 @@ The example renders like so:
 In brief:
 
 - We check the valid state of the input element every time its value is changed by running the `checkValidity()` method via the `input` event handler.
-- If the value is invalid, an `invalid` event is raised, and the `invalid` event handler function is run. Inside this function we work out whether the value is invalid because it is empty, or because it doesn't match the pattern, using an `if()` block, and set a custom validity error message.
+- If the value is invalid, an `invalid` event is raised, and the `invalid` event handler function is run. Inside this function we work out whether the value is invalid because it is empty, or because it doesn't match the pattern, using an `if ()` block, and set a custom validity error message.
 - As a result, if the input value is invalid when the submit button is pressed, one of the custom error messages will be shown.
-- If it is valid, it will submit as you'd expect. For this to happen, the custom validity has to be cancelled, by invoking `setCustomValidity()` with an empty string value. We therefore do this every time the `input` event is raised. If you don't do this, and a custom validity was previously set, the input will register as invalid, even if it current contains a valid value on submission.
+- If it is valid, it will submit as you'd expect. For this to happen, the custom validity has to be cancelled, by invoking `setCustomValidity()` with an empty string value. We therefore do this every time the `input` event is raised. If you don't do this, and a custom validity was previously set, the input will register as invalid, even if it currently contains a valid value on submission.
 
-> **Note:** Always validate input constraints both client side and server side. Constraint validation doesn't remove the need for validation on the _server side_. Invalid values can still be sent by older browsers or by bad actors.
+> [!NOTE]
+> Always validate input constraints both client side and server side. Constraint validation doesn't remove the need for validation on the _server side_. Invalid values can still be sent by older browsers or by bad actors.
 
-> **Note:** Firefox supported a proprietary error attribute — `x-moz-errormessage` — for many versions, which allowed you set custom error messages in a similar way. This has been removed as of version 66 (see {{bug(1513890)}}).
+> [!NOTE]
+> Firefox supported a proprietary error attribute — `x-moz-errormessage` — for many versions, which allowed you set custom error messages in a similar way. This has been removed as of version 66 (see [Firefox bug 1513890](https://bugzil.la/1513890)).
 
 ### Localization
 
@@ -1175,23 +1249,44 @@ Firefox uses the following heuristics to determine the locale to validate the us
 - Try the language specified by any `Content-Language` HTTP header. Or,
 - If none specified, use the browser's locale.
 
-### Technical summary
+## Accessibility
+
+### Labels
+
+When including inputs, it is an accessibility requirement to add labels alongside. This is needed so those who use assistive technologies can tell what the input is for. Also, clicking or touching a label gives focus to the label's associated form control. This improves the accessibility and usability for sighted users, increases the area a user can click or touch to activate the form control. This is especially useful (and even needed) for radio buttons and checkboxes, which are tiny. For more information about labels in general see [Labels](#labels).
+
+The following is an example of how to associate the `<label>` with an `<input>` element in the above style. You need to give the `<input>` an `id` attribute. The `<label>` then needs a `for` attribute whose value is the same as the input's `id`.
+
+```html
+<label for="peas">Do you like peas?</label>
+<input type="checkbox" name="peas" id="peas" />
+```
+
+### Size
+
+Interactive elements such as form input should provide an area large enough that it is easy to activate them. This helps a variety of people, including people with motor control issues and people using non-precise forms of input such as a stylus or fingers. A minimum interactive size of 44×44 [CSS pixels](https://www.w3.org/TR/WCAG21/#dfn-css-pixels) is recommended.
+
+- [Understanding Success Criterion 2.5.5: Target Size | W3C Understanding WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/target-size.html)
+- [Target Size and 2.5.5 | Adrian Roselli](https://adrianroselli.com/2019/06/target-size-and-2-5-5.html)
+- [Quick test: Large touch targets - The A11Y Project](https://www.a11yproject.com/posts/large-touch-targets/)
+
+## Technical summary
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a>
+        <a href="/en-US/docs/Web/HTML/Content_categories">Content categories</a>
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">Flow content</a>, listed, submittable, resettable, form-associated element,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">phrasing content</a>. If the <a href="#type"><code>type</code></a> is not
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content">Flow content</a>, listed, submittable, resettable, form-associated element,
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content">phrasing content</a>. If the <a href="#type"><code>type</code></a> is not
         <code>hidden</code>, then labelable element, palpable content.
       </td>
     </tr>
     <tr>
       <th scope="row">Permitted content</th>
-      <td>None, it is an {{Glossary("empty element")}}.</td>
+      <td>None; it is a {{Glossary("void element")}}.</td>
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
@@ -1201,7 +1296,7 @@ Firefox uses the following heuristics to determine the locale to validate the us
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">phrasing content</a>.
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content">phrasing content</a>.
       </td>
     </tr>
     <tr>
@@ -1227,7 +1322,7 @@ Firefox uses the following heuristics to determine the locale to validate the us
                     href="/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role">textbox</a></code>
               </li>
               <li>
-                with <code>list</code> attribute: {{ARIARole("combobox")}}
+                with <code>list</code> attribute: <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role"><code>combobox</code></a>
               </li>
             </ul>
           </li>
@@ -1237,10 +1332,10 @@ Firefox uses the following heuristics to determine the locale to validate the us
               ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/button_role">button</a></code>
           </li>
           <li>
-            <code>type=number</code>: {{ARIARole("spinbutton")}}
+            <code>type=number</code>: <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/spinbutton_role"><code>spinbutton</code></a>
           </li>
-          <li><code>type=radio</code>: {{ARIARole("radio")}}</li>
-          <li><code>type=range</code>: {{ARIARole("slider")}}</li>
+          <li><code>type=radio</code>: <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/radio_role"><code>radio</code></a></li>
+          <li><code>type=range</code>: <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/slider_role"><code>slider</code></a></li>
           <li>
             <code>type=reset</code>:
             <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/button_role">button</a></code>
@@ -1249,10 +1344,10 @@ Firefox uses the following heuristics to determine the locale to validate the us
             <code>type=search</code>
             <ul>
               <li>
-                with no <code>list</code> attribute: {{ARIARole("searchbox")}}
+                with no <code>list</code> attribute: <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/searchbox_role"><code>searchbox</code></a>
               </li>
               <li>
-                with <code>list</code> attribute:{{ARIARole("combobox")}}
+                with <code>list</code> attribute: <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role"><code>combobox</code></a>
               </li>
             </ul>
           </li>
@@ -1269,7 +1364,7 @@ Firefox uses the following heuristics to determine the locale to validate the us
                 <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role">textbox</a></code>
               </li>
               <li>
-                with <code>list</code> attribute: {{ARIARole("combobox")}}
+                with <code>list</code> attribute: <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role"><code>combobox</code></a>
               </li>
             </ul>
           </li>
@@ -1281,7 +1376,7 @@ Firefox uses the following heuristics to determine the locale to validate the us
                 <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role">textbox</a></code>
               </li>
               <li>
-                with <code>list</code> attribute: {{ARIARole("combobox")}}
+                with <code>list</code> attribute: <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role"><code>combobox</code></a>
               </li>
             </ul>
           </li>
@@ -1294,7 +1389,7 @@ Firefox uses the following heuristics to determine the locale to validate the us
                   ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role">textbox</a ></code>
               </li>
               <li>
-                with <code>list</code> attribute: {{ARIARole("combobox")}}
+                with <code>list</code> attribute: <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role"><code>combobox</code></a>
               </li>
             </ul>
           </li>
@@ -1310,33 +1405,35 @@ Firefox uses the following heuristics to determine the locale to validate the us
       <td>
         <ul>
           <li>
-            <code>type=button</code>: {{ARIARole("link")}},
-            {{ARIARole("menuitem")}},
-            {{ARIARole("menuitemcheckbox")}},
-            {{ARIARole("menuitemradio")}},
-            {{ARIARole("option")}}, {{ARIARole("radio")}},
-            {{ARIARole("switch")}}, {{ARIARole("tab")}}
+            <code>type=button</code>: <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role"><code>checkbox</code></a>,
+            <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role"><code>combobox</code></a>,
+            <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/link_role"><code>link</code></a>,
+            <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role"><code>menuitem</code></a>,
+            <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role"><code>menuitemcheckbox</code></a>,
+            <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role"><code>menuitemradio</code></a>,
+            <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/option_role"><code>option</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/radio_role"><code>radio</code></a>,
+            <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/switch_role"><code>switch</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role"><code>tab</code></a>
           </li>
           <li>
-            <code>type=checkbox</code>: {{ARIARole("button")}} when used
+            <code>type=checkbox</code>: <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/button_role"><code>button</code></a> when used
             with <code>aria-pressed</code>,
-            {{ARIARole("menuitemcheckbox")}},
-            {{ARIARole("option")}}, {{ARIARole("switch")}}
+            <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role"><code>menuitemcheckbox</code></a>,
+            <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/option_role"><code>option</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/switch_role"><code>switch</code></a>
           </li>
           <li>
-            <code>type=image</code>: {{ARIARole("link")}},
-            {{ARIARole("menuitem")}},
-            {{ARIARole("menuitemcheckbox")}},
-            {{ARIARole("menuitemradio")}},
-            {{ARIARole("radio")}}, {{ARIARole("switch")}}
+            <code>type=image</code>: <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/link_role"><code>link</code></a>,
+            <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role"><code>menuitem</code></a>,
+            <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role"><code>menuitemcheckbox</code></a>,
+            <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role"><code>menuitemradio</code></a>,
+            <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/radio_role"><code>radio</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/switch_role"><code>switch</code></a>
           </li>
           <li>
-            <code>type=radio</code>: {{ARIARole("menuitemradio")}}
+            <code>type=radio</code>: <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role"><code>menuitemradio</code></a>
           </li>
           <li>
             <code>type=text</code> with no <code>list</code> attribute:
-            {{ARIARole("combobox")}}, {{ARIARole("searchbox")}},
-            {{ARIARole("spinbutton")}}
+            <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role"><code>combobox</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/searchbox_role"><code>searchbox</code></a>,
+            <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/spinbutton_role"><code>spinbutton</code></a>
           </li>
           <li>
             <code>type=color|date|datetime-local|email|file|hidden|</code>
@@ -1354,27 +1451,6 @@ Firefox uses the following heuristics to determine the locale to validate the us
   </tbody>
 </table>
 
-## Accessibility concerns
-
-### Labels
-
-When including inputs, it is an accessibility requirement to add labels along side. This is needed so those who use assistive technologies can tell what the input is for. Also, clicking or touching a label gives focus to the label's associated form control. This improves the accessibility and usability for sighted users, increases the area a user can click or touch to activate the form control. This is especially useful (and even needed) for radio buttons and checkboxes, which are tiny. For more information about labels in general see [Labels](#labels) .
-
-The following is an example of how to associate the `<label>` with an `<input>` element in the above style. You need to give the `<input>` an `id` attribute. The `<label>` then needs a `for` attribute whose value is the same as the input's `id`.
-
-```html
-<label for="peas">Do you like peas?</label>
-<input type="checkbox" name="peas" id="peas">
-```
-
-### Size
-
-Interactive elements such as form input should provide an area large enough that it is easy to activate them. This helps a variety of people, including people with motor control issues and people using non-precise forms of input such as a stylus or fingers. A minimum interactive size of 44×44 [CSS pixels](https://www.w3.org/TR/WCAG21/#dfn-css-pixels) is recommended.
-
-- [Understanding Success Criterion 2.5.5: Target Size | W3C Understanding WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/target-size.html)
-- [Target Size and 2.5.5 | Adrian Roselli](https://adrianroselli.com/2019/06/target-size-and-2-5-5.html)
-- [Quick test: Large touch targets - The A11Y Project](https://www.a11yproject.com/posts/large-touch-targets/)
-
 ## Specifications
 
 {{Specifications}}
@@ -1385,14 +1461,14 @@ Interactive elements such as form input should provide an area large enough that
 
 ## See also
 
-- [Form constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation)
-- [Your first HTML form](/en-US/docs/Learn/Forms/Your_first_form)
-- [How to structure an HTML form](/en-US/docs/Learn/Forms/How_to_structure_a_web_form)
-- [The native form widgets](/en-US/docs/Learn/Forms/Basic_native_form_controls)
-- [Sending form data](/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data)
-- [Form data validation](/en-US/docs/Learn/Forms/Form_validation)
-- [How to build custom form widgets](/en-US/docs/Learn/Forms/How_to_build_custom_form_controls)
-- [HTML forms in legacy browsers](/en-US/docs/Learn/Forms/HTML_forms_in_legacy_browsers)
-- [Styling HTML forms](/en-US/docs/Learn/Forms/Styling_web_forms)
-- [Advanced styling for HTML forms](/en-US/docs/Learn/Forms/Advanced_form_styling)
-- [CSS property compatibility table](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [Form constraint validation](/en-US/docs/Web/HTML/Constraint_validation)
+- [Your first HTML form](/en-US/docs/Learn_web_development/Extensions/Forms/Your_first_form)
+- [How to structure an HTML form](/en-US/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form)
+- [The native form widgets](/en-US/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls)
+- [Sending form data](/en-US/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data)
+- [Form data validation](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation)
+- [How to build custom form widgets](/en-US/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls)
+- [HTML forms in legacy browsers](/en-US/docs/Learn_web_development/Extensions/Forms/HTML_forms_in_legacy_browsers)
+- [Styling HTML forms](/en-US/docs/Learn_web_development/Extensions/Forms/Styling_web_forms)
+- [Advanced styling for HTML forms](/en-US/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling)
+- [Creating vertical form controls](/en-US/docs/Web/CSS/CSS_writing_modes/Vertical_controls)

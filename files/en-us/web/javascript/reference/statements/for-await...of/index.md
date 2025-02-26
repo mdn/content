@@ -1,39 +1,63 @@
 ---
 title: for await...of
 slug: Web/JavaScript/Reference/Statements/for-await...of
-tags:
-  - Iterate
-  - Iteration
-  - JavaScript
-  - Language feature
-  - Reference
-  - Statement
-  - asynchronous
-  - await
+page-type: javascript-statement
 browser-compat: javascript.statements.for_await_of
 ---
+
 {{jsSidebar("Statements")}}
 
-The **`for await...of` statement** creates a loop iterating over async iterable objects as well as on sync iterables, including: built-in {{jsxref("String")}}, {{jsxref("Array")}}, `Array`-like objects (e.g., {{jsxref("Functions/arguments", "arguments")}} or {{DOMxRef("NodeList")}}), {{jsxref("TypedArray")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, and user-defined async/sync iterables. It invokes a custom iteration hook with statements to be executed for the value of each distinct property of the object. This statement can only be used inside an {{jsxref("Statements/async_function", "async function", "", 1)}}.
+The **`for await...of`** statement creates a loop iterating over [async iterable objects](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_async_iterator_and_async_iterable_protocols) as well as [sync iterables](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol). This statement can only be used in contexts where [`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await) can be used, which includes inside an [async function](/en-US/docs/Web/JavaScript/Reference/Statements/async_function) body and in a [module](/en-US/docs/Web/JavaScript/Guide/Modules).
 
-{{EmbedInteractiveExample("pages/js/statement-forawaitof.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Statement - For Await...Of", "taller")}}
 
-> **Note:** `for await...of` doesn't work with async iterators that are not async iterables.
+```js interactive-example
+async function* foo() {
+  yield 1;
+  yield 2;
+}
+
+(async function () {
+  for await (const num of foo()) {
+    console.log(num);
+    // Expected output: 1
+
+    break; // Closes iterator, triggers return
+  }
+})();
+```
 
 ## Syntax
 
-```js
-for await (const variable of iterable) {
+```js-nolint
+for await (variable of iterable)
   statement
-}
 ```
 
 - `variable`
-  - : On each iteration a value of a different property is assigned to
-    `variable`. `variable` may be declared
-    with `const`, `let`, or `var`.
+  - : Receives a value from the sequence on each iteration. May be either a declaration with [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const), [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let), or [`var`](/en-US/docs/Web/JavaScript/Reference/Statements/var), or an [assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Assignment) target (e.g. a previously declared variable, an object property, or a [destructuring assignment pattern](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)). Variables declared with `var` are not local to the loop, i.e. they are in the same scope the `for await...of` loop is in.
 - `iterable`
-  - : Object whose iterable properties are to be iterated over.
+  - : An async iterable or sync iterable. The source of the sequence of values on which the loop operates.
+- `statement`
+  - : A statement to be executed on every iteration. May reference `variable`. You can use a [block statement](/en-US/docs/Web/JavaScript/Reference/Statements/block) to execute multiple statements.
+
+## Description
+
+When a `for await...of` loop iterates over an iterable, it first gets the iterable's [`[Symbol.asyncIterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/asyncIterator) method and calls it, which returns an [async iterator](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_async_iterator_and_async_iterable_protocols). If the `@asyncIterator` method does not exist, it then looks for an [`[Symbol.iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator) method, which returns a [sync iterator](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterator_protocol). The sync iterator returned is then wrapped into an async iterator by wrapping every object returned from the `next()`, `return()`, and `throw()` methods into a resolved or rejected promise, with the `value` property resolved if it's also a promise. The loop then repeatedly calls the final async iterator's [`next()`](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterator_protocol) method and [awaits](/en-US/docs/Web/JavaScript/Reference/Operators/await) the returned promise, producing the sequence of values to be assigned to `variable`.
+
+A `for await...of` loop exits when the iterator has completed (the awaited `next()` result is an object with `done: true`). Like other looping statements, you can use [control flow statements](/en-US/docs/Web/JavaScript/Reference/Statements#control_flow) inside `statement`:
+
+- {{jsxref("Statements/break", "break")}} stops `statement` execution and goes to the first statement after the loop.
+- {{jsxref("Statements/continue", "continue")}} stops `statement` execution and goes to the next iteration of the loop.
+
+If the `for await...of` loop exited early (e.g. a `break` statement is encountered or an error is thrown), the [`return()`](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterator_protocol) method of the iterator is called to perform any cleanup. The returned promise is awaited before the loop exits.
+
+`for await...of` generally functions the same as the [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) loop and shares many of the same syntax and semantics. There are a few differences:
+
+- `for await...of` works on both sync and async iterables, while `for...of` only works on sync iterables.
+- `for await...of` can only be used in contexts where [`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await) can be used, which includes inside an [async function](/en-US/docs/Web/JavaScript/Reference/Statements/async_function) body and in a [module](/en-US/docs/Web/JavaScript/Guide/Modules). Even when the iterable is sync, the loop still awaits the return value for every iteration, leading to slower execution due to repeated promise unwrapping.
+- If the `iterable` is a sync iterable that yields promises, `for await...of` would produce a sequence of resolved values, while `for...of` would produce a sequence of promises. (However, beware of error handling and cleanup — see [Iterating over sync iterables and generators](#iterating_over_sync_iterables_and_generators))
+- For `for await...of`, the `variable` can be the identifier `async` (e.g. `for await (async of foo)`); `for...of` forbids this case.
 
 ## Examples
 
@@ -56,9 +80,9 @@ const asyncIterable = {
       return() {
         // This will be reached if the consumer called 'break' or 'return' early in the loop.
         return { done: true };
-      }
+      },
     };
-  }
+  },
 };
 
 (async () => {
@@ -123,18 +147,15 @@ async function getResponseSize(url) {
     responseSize += chunk.length;
   }
 
-  console.log(`Response Size: ${responseSize} bytes`);
-  // expected output: "Response Size: 1071472"
+  console.log(`Response Size: ${responseSize} bytes`); // "Response Size: 1071472"
   return responseSize;
 }
-getResponseSize('https://jsonplaceholder.typicode.com/photos');
+getResponseSize("https://jsonplaceholder.typicode.com/photos");
 ```
 
 ### Iterating over sync iterables and generators
 
-`for await...of` loop also consumes sync iterables and generators. In that
-case it internally awaits emitted values before assign them to the loop control
-variable.
+`for await...of` loop also consumes sync iterables and generators. In that case it internally awaits emitted values before assign them to the loop control variable.
 
 ```js
 function* generator() {
@@ -168,11 +189,8 @@ for (const numOrPromise of generator()) {
 // 4
 ```
 
-> **Note:** Be aware of yielding rejected promises from sync generator. In
-> such case `for await...of` throws when consuming rejected promise and
-> DOESN'T CALL `finally` blocks within that generator. This can be
-> undesirable if you need to free some allocated resources with
-> `try/finally`.
+> [!NOTE]
+> Be aware of yielding rejected promises from a sync generator. In such case, `for await...of` throws when consuming the rejected promise and DOESN'T CALL `finally` blocks within that generator. This can be undesirable if you need to free some allocated resources with `try/finally`.
 
 ```js
 function* generatorWithRejectedPromises() {
@@ -184,7 +202,7 @@ function* generatorWithRejectedPromises() {
     yield 4;
     throw 5;
   } finally {
-    console.log('called finally');
+    console.log("called finally");
   }
 }
 
@@ -194,7 +212,7 @@ function* generatorWithRejectedPromises() {
       console.log(num);
     }
   } catch (e) {
-    console.log('caught', e);
+    console.log("caught", e);
   }
 })();
 // 0
@@ -209,7 +227,7 @@ try {
     console.log(numOrPromise);
   }
 } catch (e) {
-  console.log('caught', e);
+  console.log("caught", e);
 }
 // 0
 // 1
@@ -220,10 +238,7 @@ try {
 // called finally
 ```
 
-To make  `finally` blocks of a sync generator to be always called use
-the appropriate form of the loop, `for await...of` for the async generator and
-`for...of` for the sync one and await yielded promises explicitly inside the
-loop.
+To make `finally` blocks of a sync generator always called, use the appropriate form of the loop — `for await...of` for the async generator and `for...of` for the sync one — and await yielded promises explicitly inside the loop.
 
 ```js
 (async () => {
@@ -232,7 +247,7 @@ loop.
       console.log(await numOrPromise);
     }
   } catch (e) {
-    console.log('caught', e);
+    console.log("caught", e);
   }
 })();
 // 0
@@ -252,5 +267,5 @@ loop.
 
 ## See also
 
-- {{jsxref("Global_Objects/Symbol/asyncIterator", "Symbol.asyncIterator")}}
+- {{jsxref("Symbol.asyncIterator")}}
 - {{jsxref("Statements/for...of", "for...of")}}

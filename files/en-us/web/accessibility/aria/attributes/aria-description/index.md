@@ -1,15 +1,11 @@
 ---
-title: 'aria-description'
+title: aria-description
 slug: Web/Accessibility/ARIA/Attributes/aria-description
-tags:
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - ARIA property
-  - aria-description
-  - Reference
+page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-description
 ---
+
+{{AccessibilitySidebar}}
 
 The global `aria-description` attribute defines a string value that describes or annotates the current element.
 
@@ -20,12 +16,12 @@ The global `aria-description` attribute defines a string value that describes or
 The global `aria-description` attribute provides a mechanism for the developer to describe or annotate the current element providing greater context for assistive technology users.
 
 ```html
-<div role="application" aria-label="calendar"
-     aria-description="Game schedule for the Boston Red Sox 2021 Season">
-    <h1>Red Sox 2021</h1>
-    <div role="grid">
-      …
-    </div>
+<div
+  role="application"
+  aria-label="calendar"
+  aria-description="Game schedule for the Boston Red Sox 2021 Season">
+  <h1>Red Sox 2021</h1>
+  <div role="grid">…</div>
 </div>
 ```
 
@@ -33,7 +29,7 @@ The `aria-description` attribute is similar to [`aria-label`](/en-US/docs/Web/Ac
 
 The `aria-description` and `aria-describedby` properties have the same purpose; both provide the user with additional descriptive text for the object on which it is set. If descriptive text is available in the DOM, use [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) instead.
 
-The `aria-description` property should only be used when providing a visible description is not the desired user experience. The `aria-describedby` attribute takes as its value a list of `id`s of the elements that contain descriptive text about the object. The `aria-description` is used when there is no appropriate descriptive text that can be associated with the object by `id` reference. If both attributes are present, `aria-describedby` takes precedence in defining the accessible description property.
+The `aria-description` property should only be used when providing a visible description is not the desired user experience. The `aria-describedby` attribute takes as its value a list of `id`s of the elements that contain descriptive text about the object. The `aria-description` is used when there is no appropriate descriptive text that can be associated with the object by `id` reference. If both attributes are present, `aria-describedby` takes precedence in defining the {{glossary("accessible description")}} property.
 
 The content of the description, whether set by `aria-description` or `aria-describedby`, should be flat text. If the content is very long, has semantic meaning requirements, or has a navigational structure, use [`aria-details`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-details) instead.
 
@@ -42,7 +38,7 @@ The content of the description, whether set by `aria-description` or `aria-descr
 - `<string>`
   - : The value is a string, an unconstrained value type, that is intended to be conveyed to the assistive technology user.
 
-## ARIAMixin API
+## Associated interfaces
 
 - {{domxref("Element.ariaDescription")}}
   - : The [`ariaDescription`](/en-US/docs/Web/API/Element/ariaDescription) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-description` attribute, which defines a string value that describes or annotates the current element.
@@ -55,8 +51,8 @@ Used in **ALL** roles.
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [HTML `title` attribute](/en-US/docs/Web/HTML/Global_attributes/title)
-- [`aria-describedby`](../aria-describedby)
+- [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby)
 - [`aria-details`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-details)

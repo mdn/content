@@ -2,14 +2,10 @@
 title: ElementInternals
 slug: Web/API/ElementInternals
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - ElementInternals
 browser-compat: api.ElementInternals
 ---
-{{DefaultAPISidebar("DOM")}}
+
+{{APIRef("Web Components")}}
 
 The **`ElementInternals`** interface of the [Document Object Model](/en-US/docs/Web/API/Document_Object_Model) gives web developers a way to allow custom elements to fully participate in HTML forms. It provides utilities for working with these elements in the same way you would work with any standard HTML form element, and also exposes the [Accessibility Object Model](https://wicg.github.io/aom/explainer.html) to the element.
 
@@ -17,7 +13,7 @@ The **`ElementInternals`** interface of the [Document Object Model](/en-US/docs/
 
 This interface has no constructor. An `ElementInternals` object is returned when calling {{domxref("HTMLElement.attachInternals()")}}.
 
-## Properties
+## Instance properties
 
 - {{domxref("ElementInternals.shadowRoot")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("ShadowRoot")}} object associated with this element.
@@ -27,7 +23,7 @@ This interface has no constructor. An `ElementInternals` object is returned when
   - : Returns the {{domxref("CustomStateSet")}} associated with this element.
 - {{domxref("ElementInternals.willValidate")}} {{ReadOnlyInline}}
   - : A boolean value which returns true if the element is a submittable element that is a candidate for
-    [constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation).
+    [constraint validation](/en-US/docs/Web/HTML/Constraint_validation).
 - {{domxref("ElementInternals.validity")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("ValidityState")}} object which represents the different validity states the element can be in, with respect to constraint validation.
 - {{domxref("ElementInternals.validationMessage")}} {{ReadOnlyInline}}
@@ -35,11 +31,12 @@ This interface has no constructor. An `ElementInternals` object is returned when
 - {{domxref("ElementInternals.labels")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("NodeList")}} of all of the label elements associated with this element.
 
-### Properties included from ARIA
+### Instance properties included from ARIA
 
-The `ElementInternals` interface includes the following properties, defined on the `ARIAMixin` mixin.
+The `ElementInternals` interface also includes the following properties.
 
-> **Note:** These are included in order that default accessibility semantics can be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the [Accessibility Object Model explainer](https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object).
+> [!NOTE]
+> These are included in order that default accessibility semantics can be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the [Accessibility Object Model explainer](https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object).
 
 - {{domxref("ElementInternals.ariaAtomic")}}
   - : A string reflecting the [`aria-atomic`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-atomic) attribute, which indicates whether assistive technologies will present all, or only parts of, the changed region based on the change notifications defined by the [`aria-relevant`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-relevant) attribute.
@@ -93,10 +90,12 @@ The `ElementInternals` interface includes the following properties, defined on t
   - : A string reflecting the [`aria-pressed`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-pressed) attribute, which indicates the current "pressed" state of toggle buttons.
 - {{domxref("ElementInternals.ariaReadOnly")}}
   - : A string reflecting the [`aria-readonly`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-readonly) attribute, which indicates that the element is not editable, but is otherwise operable.
-- {{domxref("ElementInternals.ariaRelevant")}}
+- {{domxref("ElementInternals.ariaRelevant")}} {{Non-standard_Inline}}
   - : A string reflecting the [`aria-relevant`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-relevant) attribute, which indicates what notifications the user agent will trigger when the accessibility tree within a live region is modified. This is used to describe what changes in an `aria-live` region are relevant and should be announced.
 - {{domxref("ElementInternals.ariaRequired")}}
   - : A string reflecting the [`aria-required`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-required) attribute, which indicates that user input is required on the element before a form may be submitted.
+- {{domxref("ElementInternals.role")}}
+  - : A string which contains an ARIA role. A full list of ARIA roles can be found on the [ARIA techniques page](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques).
 - {{domxref("ElementInternals.ariaRoleDescription")}}
   - : A string reflecting the [`aria-roledescription`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-roledescription) attribute, which defines a human-readable, author-localized description for the role of an Element.
 - {{domxref("ElementInternals.ariaRowCount")}}
@@ -120,18 +119,18 @@ The `ElementInternals` interface includes the following properties, defined on t
 - {{domxref("ElementInternals.ariaValueNow")}}
   - : A string reflecting the [`aria-valueNow`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuenow) attribute, which defines the current value for a range widget.
 - {{domxref("ElementInternals.ariaValueText")}}
-  - : A string reflecting the [`aria-valuetext`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuetext) attribute, which defines the human readable text alternative of aria-valuenow for a range widget.
+  - : A string reflecting the [`aria-valuetext`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuetext) attribute, which defines the human-readable text alternative of aria-valuenow for a range widget.
 
-## Methods
+## Instance methods
 
 - {{domxref("ElementInternals.setFormValue()")}}
   - : Sets the element's submission value and state, communicating these to the user agent.
 - {{domxref("ElementInternals.setValidity()")}}
   - : Sets the validity of the element.
 - {{domxref("ElementInternals.checkValidity()")}}
-  - : Checks if an element meets any [constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation) rules applied to it.
+  - : Checks if an element meets any [constraint validation](/en-US/docs/Web/HTML/Constraint_validation) rules applied to it.
 - {{domxref("ElementInternals.reportValidity()")}}
-  - : Checks if an element meets any [constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation) rules applied to it, and also sends a validation message to the user agent.
+  - : Checks if an element meets any [constraint validation](/en-US/docs/Web/HTML/Constraint_validation) rules applied to it, and also sends a validation message to the user agent.
 
 ## Examples
 
@@ -149,10 +148,10 @@ class CustomCheckbox extends HTMLElement {
   // …
 }
 
-window.customElements.define('custom-checkbox', CustomCheckbox);
+window.customElements.define("custom-checkbox", CustomCheckbox);
 
-let element = document.createElement('custom-checkbox');
-let form = document.createElement('form');
+let element = document.createElement("custom-checkbox");
+let form = document.createElement("form");
 
 // Append element to form to associate it
 form.appendChild(element);
@@ -171,6 +170,6 @@ console.log(element.internals_.form);
 
 ## See also
 
-- [More capable form controls](https://web.dev/more-capable-form-controls/)
+- [More capable form controls](https://web.dev/articles/more-capable-form-controls)
 - [Creating custom form controls with ElementInternals](https://css-tricks.com/creating-custom-form-controls-with-elementinternals/)
 - [ElementInternals polyfill](https://www.npmjs.com/package/element-internals-polyfill)

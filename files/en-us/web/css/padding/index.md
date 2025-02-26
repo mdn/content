@@ -1,32 +1,29 @@
 ---
 title: padding
 slug: Web/CSS/padding
-tags:
-  - CSS
-  - CSS Padding
-  - CSS Property
-  - Reference
-  - recipe:css-shorthand-property
+page-type: css-shorthand-property
 browser-compat: css.properties.padding
 ---
+
 {{CSSRef}}
 
-The **`padding`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) sets the [padding area](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#padding_area) on all four sides of an element at once.
+The **`padding`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) sets the [padding area](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#padding_area) on all four sides of an element at once.
 
 {{EmbedInteractiveExample("pages/css/padding.html")}}
 
 An element's padding area is the space between its content and its border.
 
-> **Note:** Padding creates extra space within an element. In contrast, {{cssxref("margin")}} creates extra space _around_ an element.
+> [!NOTE]
+> Padding creates extra space within an element. In contrast, {{cssxref("margin")}} creates extra space _around_ an element.
 
 ## Constituent properties
 
 This property is a shorthand for the following CSS properties:
 
+- {{cssxref("padding-top")}}
+- {{cssxref("padding-right")}}
 - {{cssxref("padding-bottom")}}
 - {{cssxref("padding-left")}}
-- {{cssxref("padding-right")}}
-- {{cssxref("padding-top")}}
 
 ## Syntax
 
@@ -34,10 +31,10 @@ This property is a shorthand for the following CSS properties:
 /* Apply to all four sides */
 padding: 1em;
 
-/* vertical | horizontal */
+/* top and bottom | left and right */
 padding: 5% 10%;
 
-/* top | horizontal | bottom */
+/* top | left and right | bottom */
 padding: 1em 2em 2em;
 
 /* top | right | bottom | left */
@@ -63,7 +60,7 @@ The `padding` property may be specified using one, two, three, or four values. E
 - {{cssxref("&lt;length&gt;")}}
   - : The size of the padding as a fixed value.
 - {{cssxref("&lt;percentage&gt;")}}
-  - : The size of the padding as a percentage, relative to the inline size (_width_ in a horizontal language, defined by {{cssxref("writing-mode")}}) of the [containing block](/en-US/docs/Web/CSS/Containing_block).
+  - : The size of the padding as a percentage, relative to the inline size (_width_ in a horizontal language, defined by {{cssxref("writing-mode")}}) of the [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block).
 
 ## Formal definition
 
@@ -105,21 +102,21 @@ h3 {
 ### Setting padding with pixels and percentages
 
 ```css
-padding: 5%;                /* All sides: 5% padding */
+padding: 5%; /* All sides: 5% padding */
 
-padding: 10px;              /* All sides: 10px padding */
+padding: 10px; /* All sides: 10px padding */
 
-padding: 10px 20px;         /* top and bottom: 10px padding */
-                            /* left and right: 20px padding */
+padding: 10px 20px; /* top and bottom: 10px padding */
+/* left and right: 20px padding */
 
-padding: 10px 3% 20px;      /* top:            10px padding */
-                            /* left and right: 3% padding   */
-                            /* bottom:         20px padding */
+padding: 10px 3% 20px; /* top:            10px padding */
+/* left and right: 3% padding   */
+/* bottom:         20px padding */
 
-padding: 1em 3px 30px 5px;  /* top:    1em padding  */
-                            /* right:  3px padding  */
-                            /* bottom: 30px padding */
-                            /* left:   5px padding  */
+padding: 1em 3px 30px 5px; /* top:    1em padding  */
+/* right:  3px padding  */
+/* bottom: 30px padding */
+/* left:   5px padding  */
 ```
 
 ## Specifications
@@ -132,6 +129,8 @@ padding: 1em 3px 30px 5px;  /* top:    1em padding  */
 
 ## See also
 
-- [Introduction to the CSS basic box model](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
-- {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}, and {{cssxref("padding-left")}}.
-- The mapped logical properties: {{cssxref("padding-block-start")}}, {{cssxref("padding-block-end")}}, {{cssxref("padding-inline-start")}}, and {{cssxref("padding-inline-end")}} and the shorthands {{cssxref("padding-block")}} and {{cssxref("padding-inline")}}
+- {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}, and {{cssxref("padding-left")}}
+- {{cssxref("padding-block-start")}}, {{cssxref("padding-block-end")}}, {{cssxref("padding-inline-start")}}, and {{cssxref("padding-inline-end")}}
+- {{cssxref("padding-block")}} and {{cssxref("padding-inline")}} shorthands
+- [Introduction to the CSS basic box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
+- [CSS box model](/en-US/docs/Web/CSS/CSS_box_model) module

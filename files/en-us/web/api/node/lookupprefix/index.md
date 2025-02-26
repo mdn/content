@@ -1,12 +1,11 @@
 ---
-title: Node.lookupPrefix()
+title: "Node: lookupPrefix() method"
+short-title: lookupPrefix()
 slug: Web/API/Node/lookupPrefix
 page-type: web-api-instance-method
-tags:
-  - Method
-  - Reference
 browser-compat: api.Node.lookupPrefix
 ---
+
 {{APIRef("DOM")}}
 
 The **`lookupPrefix()`** method of the {{domxref("Node")}} interface
@@ -16,15 +15,16 @@ When multiple prefixes are possible, the first prefix is returned.
 
 ## Syntax
 
-```js
-lookupPrefix(namespace);
+```js-nolint
+lookupPrefix(namespace)
 ```
 
 ### Parameters
 
 - `namespace`
   - : A string containing the namespace to look the prefix up.
-    > **Note:** This parameter is not optional but can be set to `null`.
+    > [!NOTE]
+    > This parameter is not optional but can be set to `null`.
 
 ### Return value
 
@@ -37,31 +37,42 @@ If the node is a {{domxref("DocumentType")}} or a {{domxref("DocumentFragment")}
 ## Example
 
 ```html
-Prefix for <code>http://www.w3.org/2000/svg</code> on &lt;output&gt;: <output>Not tested</output>.<br/>
-Prefix for <code>http://www.w3.org/XML/1998/namespace</code> on &lt;output&gt;: <output>Not tested</output>.<br/>
-Prefix for <code>http://www.w3.org/TR/html4/</code> on &lt;output&gt;: <output>Not tested</output>.<br/>
-Prefix for <code>https://www.w3.org/1999/xlink</code> on &lt;output&gt;: <output>Not tested</output>.<br/>
-Prefix for <code>http://www.w3.org/2000/svg</code> on &lt;svg&gt;: <output>Not tested</output>.<br/>
-Prefix for <code>https://www.w3.org/1999/xlink</code> on &lt;svg&gt;: <output>Not tested</output>.<br/>
-Prefix for <code>http://www.w3.org/XML/1998/namespace</code> on &lt;svg&gt;: <output>Not tested</output>.<br/>
+Prefix for <code>http://www.w3.org/2000/svg</code> on &lt;output&gt;:
+<output>Not tested</output>.<br />
+Prefix for <code>http://www.w3.org/XML/1998/namespace</code> on &lt;output&gt;:
+<output>Not tested</output>.<br />
+Prefix for <code>http://www.w3.org/TR/html4/</code> on &lt;output&gt;:
+<output>Not tested</output>.<br />
+Prefix for <code>https://www.w3.org/1999/xlink</code> on &lt;output&gt;:
+<output>Not tested</output>.<br />
+Prefix for <code>http://www.w3.org/2000/svg</code> on &lt;svg&gt;:
+<output>Not tested</output>.<br />
+Prefix for <code>https://www.w3.org/1999/xlink</code> on &lt;svg&gt;:
+<output>Not tested</output>.<br />
+Prefix for <code>http://www.w3.org/XML/1998/namespace</code> on &lt;svg&gt;:
+<output>Not tested</output>.<br />
 <svg xmlns:t="http://www.w3.org/2000/svg" height="1"></svg>
 <button>Click to see the results</button>
 ```
 
 ```js
-const button = document.getElementsByTagName('button')[0];
-button.addEventListener("click", function () {
-  const aHtmlElt = document.getElementsByTagName('output')[0];
-  const aSvgElt = document.getElementsByTagName('svg')[0];
+const button = document.querySelector("button");
+button.addEventListener("click", () => {
+  const aHtmlElt = document.querySelector("output");
+  const aSvgElt = document.querySelector("svg");
 
-  const result = document.getElementsByTagName('output');
+  const result = document.getElementsByTagName("output");
   result[0].value = aHtmlElt.lookupPrefix("http://www.w3.org/2000/svg"); // true
-  result[1].value = aHtmlElt.lookupPrefix("http://www.w3.org/XML/1998/namespace"); // false
+  result[1].value = aHtmlElt.lookupPrefix(
+    "http://www.w3.org/XML/1998/namespace",
+  ); // false
   result[2].value = aHtmlElt.lookupPrefix("http://www.w3.org/TR/html4/"); // true
   result[3].value = aHtmlElt.lookupPrefix("https://www.w3.org/1999/xlink"); // false
   result[4].value = aSvgElt.lookupPrefix("http://www.w3.org/2000/svg"); // true
   result[5].value = aSvgElt.lookupPrefix("https://www.w3.org/1999/xlink"); // true
-  result[6].value = aSvgElt.lookupPrefix("http://www.w3.org/XML/1998/namespace"); // false
+  result[6].value = aSvgElt.lookupPrefix(
+    "http://www.w3.org/XML/1998/namespace",
+  ); // false
 });
 ```
 

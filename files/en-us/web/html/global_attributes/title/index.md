@@ -1,11 +1,7 @@
 ---
 title: title
 slug: Web/HTML/Global_attributes/title
-tags:
-  - Global attributes
-  - HTML
-  - Reference
-  - Title
+page-type: html-attribute
 browser-compat: html.global_attributes.title
 ---
 
@@ -13,7 +9,29 @@ browser-compat: html.global_attributes.title
 
 The **`title`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) contains text representing advisory information related to the element it belongs to.
 
-{{EmbedInteractiveExample("pages/tabbed/attribute-title.html","tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: title", "tabbed-shorter")}}
+
+```html interactive-example
+<p>
+  Use the <code>title</code> attribute on an <code>iframe</code> to clearly
+  identify the content of the <code>iframe</code> to screen readers.
+</p>
+
+<iframe
+  title="Wikipedia page for the HTML language"
+  src="https://en.m.wikipedia.org/wiki/HTML"></iframe>
+<iframe
+  title="Wikipedia page for the CSS language"
+  src="https://en.m.wikipedia.org/wiki/CSS"></iframe>
+```
+
+```css interactive-example
+iframe {
+  height: 200px;
+  margin-bottom: 24px;
+  width: 100%;
+}
+```
 
 The main use of the `title` attribute is to label {{HTMLElement("iframe")}} elements for assistive technology.
 
@@ -32,9 +50,27 @@ The `title` attribute may contain several lines. Each `U+000A LINE FEED` (`LF`) 
 ### HTML
 
 ```html
-<p>Newlines in <code>title</code> should be taken into account,
-like <span title="This is a
-multiline title">example</span>.</p>
+<p>
+  Newlines in <code>title</code> should be taken into account. This
+  <span
+    title="This is a
+multiline title">
+    example span
+  </span>
+  has a title a attribute with a newline.
+</p>
+<hr />
+<pre id="output"></pre>
+```
+
+### JavaScript
+
+We can query the `title` attribute and display it in the empty `<pre>` element as follows:
+
+```js
+const span = document.querySelector("span");
+const output = document.querySelector("#output");
+output.textContent = span.title;
 ```
 
 ### Result

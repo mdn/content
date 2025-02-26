@@ -1,15 +1,13 @@
 ---
-title: CSSPrimitiveValue.getRGBColorValue()
+title: "CSSPrimitiveValue: getRGBColorValue() method"
+short-title: getRGBColorValue()
 slug: Web/API/CSSPrimitiveValue/getRGBColorValue
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSSPrimitiveValue
-  - Method
-  - getRGBColorValue
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.CSSPrimitiveValue.getRGBColorValue
 ---
+
 {{APIRef("CSSOM")}}{{deprecated_header}}
 
 The **`getRGBColorValue()`** method of the
@@ -18,7 +16,8 @@ CSS value doesn't contain a RGB color value, a {{domxref("DOMException")}} is ra
 Modification to the corresponding style property can be achieved using the
 {{domxref("RGBColor")}} interface.
 
-> **Note:** This method was part of an attempt to create a typed CSS Object Model. This attempt has been abandoned, and most browsers do
+> [!NOTE]
+> This method was part of an attempt to create a typed CSS Object Model. This attempt has been abandoned, and most browsers do
 > not implement it.
 >
 > To achieve your purpose, you can use:
@@ -28,7 +27,7 @@ Modification to the corresponding style property can be achieved using the
 
 ## Syntax
 
-```js
+```js-nolint
 getRGBColorValue()
 ```
 

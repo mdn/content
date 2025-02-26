@@ -2,16 +2,10 @@
 title: Report
 slug: Web/API/Report
 page-type: web-api-interface
-tags:
-  - API
-  - Experimental
-  - Interface
-  - Reference
-  - Report
-  - Reporting API
-spec-urls: https://w3c.github.io/reporting/#dom-report
+browser-compat: api.Report
 ---
-{{SeeCompatTable}}{{APIRef("Reporting API")}}
+
+{{APIRef("Reporting API")}}{{AvailableInWorkers}}
 
 The `Report` interface of the [Reporting API](/en-US/docs/Web/API/Reporting_API) represents a single report.
 
@@ -19,18 +13,18 @@ Reports can be accessed in a number of ways:
 
 - Via the {{domxref("ReportingObserver.takeRecords()")}} method — this returns all reports in an observer's report queue, and then empties the queue.
 - Via the `reports` parameter of the callback function passed into the [`ReportingObserver()`](/en-US/docs/Web/API/ReportingObserver/ReportingObserver) constructor upon creation of a new observer instance. This contains the list of reports currently contained in the observer's report queue.
-- By sending requests to the endpoints defined via the {{httpheader("Report-To")}} HTTP header.
+- By sending requests to the endpoints defined via the {{httpheader("Reporting-Endpoints")}} HTTP header.
 
-## Properties
+## Instance properties
 
-- {{domxref("Report.body")}} {{experimental_inline}} {{readonlyinline}}
+- {{domxref("Report.body")}} {{ReadOnlyInline}}
   - : The body of the report, which is a `ReportBody` object containing the detailed report information.
-- {{domxref("Report.type")}} {{experimental_inline}} {{readonlyinline}}
+- {{domxref("Report.type")}} {{ReadOnlyInline}}
   - : The type of report generated, e.g. `deprecation` or `intervention`.
-- {{domxref("Report.url")}} {{experimental_inline}} {{readonlyinline}}
+- {{domxref("Report.url")}} {{ReadOnlyInline}}
   - : The URL of the document that generated the report.
 
-## Methods
+## Instance methods
 
 _This interface has no methods defined on it._
 
@@ -43,12 +37,12 @@ _This interface has no events that fire on it._
 In our [deprecation_report.html](https://mdn.github.io/dom-examples/reporting-api/deprecation_report.html) example, we create a simple reporting observer to observe usage of deprecated features on our web page:
 
 ```js
-let options = {
-  types: ['deprecation'],
-  buffered: true
-}
+const options = {
+  types: ["deprecation"],
+  buffered: true,
+};
 
-let observer = new ReportingObserver(function(reports, observer) {
+const observer = new ReportingObserver((reports, observer) => {
   reportBtn.onclick = () => displayReports(reports);
 }, options);
 ```
@@ -67,29 +61,31 @@ The report details are displayed via the `displayReports()` function, which take
 
 ```js
 function displayReports(reports) {
-  const outputElem = document.querySelector('.output');
-  const list = document.createElement('ul');
+  const outputElem = document.querySelector(".output");
+  const list = document.createElement("ul");
   outputElem.appendChild(list);
 
-  for (let i = 0; i < reports.length; i++) {
-    let listItem = document.createElement('li');
-    let textNode = document.createTextNode(`Report ${i + 1}, type: ${reports[i].type}`);
+  reports.forEach((report, i) => {
+    let listItem = document.createElement("li");
+    let textNode = document.createTextNode(
+      `Report ${i + 1}, type: ${report.type}`,
+    );
     listItem.appendChild(textNode);
-    let innerList = document.createElement('ul');
+    let innerList = document.createElement("ul");
     listItem.appendChild(innerList);
     list.appendChild(listItem);
 
-    for (let key in reports[i].body) {
-      let innerListItem = document.createElement('li');
-      let keyValue = reports[i].body[key];
+    for (const key in report.body) {
+      const innerListItem = document.createElement("li");
+      const keyValue = report.body[key];
       innerListItem.textContent = `${key}: ${keyValue}`;
       innerList.appendChild(innerListItem);
     }
-  }
+  });
 }
 ```
 
-The `reports` parameter contains an array of all the reports in the observer's report queue. We loop over each report using a basic [`for`](/en-US/docs/Web/JavaScript/Reference/Statements/for) loop, then iterate over each entry of in the report's body using a [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) structure, displaying each key/value pair inside a list item.
+The `reports` parameter contains an array of all the reports in the observer's report queue. We loop over each report using a [`forEach()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) loop, then iterate over each entry of in the report's body using a [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) structure, displaying each key/value pair inside a list item.
 
 ## Specifications
 
@@ -97,8 +93,9 @@ The `reports` parameter contains an array of all the reports in the observer's r
 
 ## Browser compatibility
 
-This feature is not yet available by default in any released browser. It can be activated in Firefox by setting `dom_reporting_enabled` to `true` and in Chrome if you [enable this experimental feature](https://web.dev/reporting-api/#use-devtools).
+{{Compat}}
 
 ## See also
 
 - [Reporting API](/en-US/docs/Web/API/Reporting_API)
+- {{httpheader("Report-To")}} HTTP header

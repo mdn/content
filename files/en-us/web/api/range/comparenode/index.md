@@ -1,19 +1,14 @@
 ---
-title: Range.compareNode()
+title: "Range: compareNode() method"
+short-title: compareNode()
 slug: Web/API/Range/compareNode
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - DOM Reference
-  - Method
-  - Non-standard
-  - Deprecated
-  - Range
-  - Reference
-  - compareNode
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.Range.compareNode
 ---
+
 {{APIRef("DOM")}}{{deprecated_header}}{{Non-standard_Header}}
 
 The **`Range.compareNode()`** returns a constant indicating the
@@ -31,7 +26,8 @@ The possible values are:
   - : Node starts after and ends before the Range, i.e. the Node is completely selected by
     the Range.
 
-> **Warning:** This method [has been removed](/en-US/docs/Mozilla/Firefox/Releases/3/Site_compatibility) from [Gecko 1.9](/en-US/docs/Mozilla/Firefox/Releases/3) and
+> [!WARNING]
+> This method [has been removed](/en-US/docs/Mozilla/Firefox/Releases/3/Site_compatibility) from [Gecko 1.9](/en-US/docs/Mozilla/Firefox/Releases/3) and
 > will not exist in future versions of Firefox, which was the only browser implementing
 > it; you should switch to {{DOMxRef("Range.compareBoundaryPoints()")}} as soon as
 > possible.
@@ -43,19 +39,17 @@ function rangeCompareNode(range, node) {
   const nodeRange = node.ownerDocument.createRange();
   try {
     nodeRange.selectNode(node);
-  }
-  catch (e) {
+  } catch (e) {
     nodeRange.selectNodeContents(node);
   }
-  const nodeIsBefore = range.compareBoundaryPoints(Range.START_TO_START, nodeRange) === 1;
-  const nodeIsAfter = range.compareBoundaryPoints(Range.END_TO_END, nodeRange) === -1;
+  const nodeIsBefore =
+    range.compareBoundaryPoints(Range.START_TO_START, nodeRange) === 1;
+  const nodeIsAfter =
+    range.compareBoundaryPoints(Range.END_TO_END, nodeRange) === -1;
 
-  if (nodeIsBefore && !nodeIsAfter)
-    return 0;
-  if (!nodeIsBefore && nodeIsAfter)
-    return 1;
-  if (nodeIsBefore && nodeIsAfter)
-    return 2;
+  if (nodeIsBefore && !nodeIsAfter) return 0;
+  if (!nodeIsBefore && nodeIsAfter) return 1;
+  if (nodeIsBefore && nodeIsAfter) return 2;
 
   return 3;
 }
@@ -63,7 +57,7 @@ function rangeCompareNode(range, node) {
 
 ## Syntax
 
-```js
+```js-nolint
 compareNode(referenceNode)
 ```
 

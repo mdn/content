@@ -1,33 +1,42 @@
 ---
 title: Symbol() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/Symbol
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - Symbol
-  - Polyfill
+page-type: javascript-constructor
 browser-compat: javascript.builtins.Symbol.Symbol
 ---
+
 {{JSRef}}
 
-The `Symbol()` constructor returns a value of type **symbol**,
-but is incomplete as a constructor because it does not support the syntax
-"`new Symbol()`" and it is not intended to be subclassed. It may be used as
-the value of an
-[`extends`](/en-US/docs/Web/JavaScript/Reference/Classes/extends)
-clause of a `class` definition but a
-[`super`](/en-US/docs/Web/JavaScript/Reference/Operators/super)
-call to it will cause an exception.
+The **`Symbol()`** function returns primitive values of type Symbol.
 
-{{EmbedInteractiveExample("pages/js/symbol-constructor.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Symbol - Constructor", "taller")}}
+
+```js interactive-example
+const symbol1 = Symbol();
+const symbol2 = Symbol(42);
+const symbol3 = Symbol("foo");
+
+console.log(typeof symbol1);
+// Expected output: "symbol"
+
+console.log(symbol2 === 42);
+// Expected output: false
+
+console.log(symbol3.toString());
+// Expected output: "Symbol(foo)"
+
+console.log(Symbol("foo") === Symbol("foo"));
+// Expected output: false
+```
 
 ## Syntax
 
-```js
+```js-nolint
 Symbol()
 Symbol(description)
 ```
+
+> **Note:** `Symbol()` can only be called without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to construct it with `new` throws a {{jsxref("TypeError")}}.
 
 ### Parameters
 
@@ -43,16 +52,16 @@ To create a new primitive symbol, you write `Symbol()` with an optional
 string as its description:
 
 ```js
-let sym1 = Symbol()
-let sym2 = Symbol('foo')
-let sym3 = Symbol('foo')
+const sym1 = Symbol();
+const sym2 = Symbol("foo");
+const sym3 = Symbol("foo");
 ```
 
 The above code creates three new symbols. Note that `Symbol("foo")` does not
 coerce the string `"foo"` into a symbol. It creates a new symbol each time:
 
 ```js
-Symbol('foo') === Symbol('foo')  // false
+Symbol("foo") === Symbol("foo"); // false
 ```
 
 ### new Symbol()
@@ -60,8 +69,8 @@ Symbol('foo') === Symbol('foo')  // false
 The following syntax with the {{jsxref("Operators/new", "new")}} operator will throw a
 {{jsxref("TypeError")}}:
 
-```js
-let sym = new Symbol()  // TypeError
+```js example-bad
+const sym = new Symbol(); // TypeError
 ```
 
 This prevents authors from creating an explicit `Symbol` wrapper object
@@ -73,10 +82,10 @@ If you really want to create a `Symbol` wrapper object, you can use the
 `Object()` function:
 
 ```js
-let sym    = Symbol('foo');
-let symObj = Object(sym);
-typeof sym    // => "symbol"
-typeof symObj // => "object"
+const sym = Symbol("foo");
+const symObj = Object(sym);
+typeof sym; // "symbol"
+typeof symObj; // "object"
 ```
 
 ## Specifications

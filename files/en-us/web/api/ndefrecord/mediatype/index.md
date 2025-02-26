@@ -1,25 +1,19 @@
 ---
-title: NDEFRecord.mediaType
+title: "NDEFRecord: mediaType property"
+short-title: mediaType
 slug: Web/API/NDEFRecord/mediaType
 page-type: web-api-instance-property
-tags:
-  - NDEF
-  - Reference
-  - Web NFC
+status:
+  - experimental
 browser-compat: api.NDEFRecord.mediaType
 ---
-{{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}
+
+{{SecureContext_Header}}{{SeeCompatTable}}{{APIRef("Web NFC API")}}
 
 The **`mediaType`**
 property of the {{DOMxRef("NDEFRecord")}} interface returns the {{Glossary("MIME type")}} of the record. This value will be `null` if `recordType` is not equal to `"mime"`.
 
-## Syntax
-
-```js
-NDEFRecord.mediaType
-```
-
-### Value
+## Value
 
 A string, containing the {{Glossary("MIME type")}} of the record
 payload.
@@ -30,17 +24,17 @@ The following example loops over the records in an {{domxref("NDEFMessage")}} ob
 
 ```js
 const ndef = new NDEFReader();
-  await ndef.scan();
-  ndef.onreading = (event) => {
-    const decoder = new TextDecoder();
-    for (const record of event.message.records) {
-      if (record.mediaType === "application/json") {
-        const json = JSON.parse(decoder.decode(record.data));
-        const article =/^[aeio]/i.test(json.title) ? "an" : "a";
-        console.log(`${json.name} is ${article} ${json.title}`);
-      }
+await ndef.scan();
+ndef.onreading = (event) => {
+  const decoder = new TextDecoder();
+  for (const record of event.message.records) {
+    if (record.mediaType === "application/json") {
+      const json = JSON.parse(decoder.decode(record.data));
+      const article = /^[aeio]/i.test(json.title) ? "an" : "a";
+      console.log(`${json.name} is ${article} ${json.title}`);
     }
-  };
+  }
+};
 ```
 
 ## Specifications

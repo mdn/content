@@ -1,24 +1,18 @@
 ---
-title: NotificationEvent()
+title: "NotificationEvent: NotificationEvent() constructor"
+short-title: NotificationEvent()
 slug: Web/API/NotificationEvent/NotificationEvent
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Experimental
-  - NotificationEvent
-  - Reference
-  - Service Workers
-  - ServiceWorker
 browser-compat: api.NotificationEvent.NotificationEvent
 ---
-{{APIRef("Web Notifications")}}
+
+{{APIRef("Web Notifications")}}{{AvailableInWorkers("service")}}
 
 The **`NotificationEvent()`** constructor creates a new {{domxref("NotificationEvent")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 new NotificationEvent(type, options)
 ```
 
@@ -41,7 +35,7 @@ A new {{domxref("NotificationEvent()")}} object.
 ## Examples
 
 ```js
-const n = new Notification('Hello');
+const n = new Notification("Hello");
 const myNotificationEvent = new NotificationEvent(type, { notification: n });
 ```
 

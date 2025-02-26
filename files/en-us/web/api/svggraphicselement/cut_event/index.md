@@ -1,17 +1,12 @@
 ---
-title: 'SVGGraphicsElement: cut event'
+title: "SVGGraphicsElement: cut event"
+short-title: cut
 slug: Web/API/SVGGraphicsElement/cut_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG OM
 browser-compat: api.Element.cut_event
 ---
-{{APIRef}}
+
+{{APIRef("SVG")}}
 
 The **`cut`** event is fired on an {{domxref("SVGGraphicsElement")}} when the user has initiated a "cut" action through the browser's user interface.
 
@@ -32,9 +27,9 @@ It's possible to construct and dispatch a [synthetic](/en-US/docs/Web/Events/Cre
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('cut', (event) => { });
+addEventListener("cut", (event) => {});
 
-oncut = (event) => { };
+oncut = (event) => {};
 ```
 
 ## Event type
@@ -55,5 +50,5 @@ A {{domxref("ClipboardEvent")}}. Inherits from {{domxref("Event")}}.
 
 - Related events: [`copy`](/en-US/docs/Web/API/SVGGraphicsElement/copy_event), [`paste`](/en-US/docs/Web/API/SVGGraphicsElement/paste_event)
 - This event on HTML {{domxref("Element")}} targets: [`cut`](/en-US/docs/Web/API/Element/cut_event)
-- This event on {{domxref("Document")}} targets: [`cut`](Web/API/Document/cut_event)
-- This event on {{domxref("Window")}} targets: [`cut`](Web/API/Window/cut_event)
+- This event on {{domxref("Document")}} targets: [`cut`](/en-US/docs/Web/API/Document/cut_event)
+- This event on {{domxref("Window")}} targets: [`cut`](/en-US/docs/Web/API/Window/cut_event)

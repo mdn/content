@@ -2,35 +2,40 @@
 title: Streams API concepts
 slug: Web/API/Streams_API/Concepts
 page-type: guide
-tags:
-  - API
-  - Streams
-  - concepts
 ---
-{{apiref("Streams")}}
 
-The [Streams API](/en-US/docs/Web/API/Streams_API) adds a very useful set of tools to the web platform, providing objects allowing JavaScript to programmatically access streams of data received over the network and process them as desired by the developer. Some of the concepts and terminology associated with streams might be new to you — this article explains all you need to know.
+{{DefaultAPISidebar("Streams")}}
+
+The [Streams API](/en-US/docs/Web/API/Streams_API) adds a very useful set of tools to the web platform, providing objects that allow JavaScript to programmatically access streams of data received over the network and process them as desired by the developer. Some of the concepts and terminology associated with streams might be new to you — this article explains all you need to know.
 
 ## Readable streams
 
 A readable stream is a data source represented in JavaScript by a {{domxref("ReadableStream")}} object that flows from an **underlying source** — this is a resource somewhere on the network or elsewhere on your domain that you want to get data from.
 
-There are two types of underlying source:
+There are two types of underlying sources:
 
 - **Push sources** constantly push data at you when you've accessed them, and it is up to you to start, pause, or cancel access to the stream. Examples include video streams and TCP/[Web sockets](/en-US/docs/Web/API/WebSockets_API).
-- **Pull sources** require you to explicitly request data from them once connected to. Examples include a file access operation via a [Fetch](/en-US/docs/Web/API/Fetch_API) or [XHR](/en-US/docs/Web/API/XMLHttpRequest/XMLHttpRequest) call.
+- **Pull sources** require you to explicitly request data from them once connected to. Examples include a file access operation via a {{domxref("Window/fetch", "fetch()")}} request.
 
-The data is read sequentially in small pieces called **chunks**. A chunk can be a single byte, or it can be something larger such as a [typed array](/en-US/docs/Web/JavaScript/Typed_arrays) of a certain size. A single stream can contain chunks of different sizes and types.
+### Chunks
 
-![](readable_streams.png)
+The data is read sequentially in small pieces called **chunks**. A chunk can be a single byte, or it can be something larger such as a [typed array](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) of a certain size. A single stream can contain chunks of different sizes and types.
+
+![Readable streams data flow](readable_streams.png)
 
 The chunks placed in a stream are said to be **enqueued** — this means they are waiting in a queue ready to be read. An **internal queue** keeps track of the chunks that have not yet been read (see the Internal queues and queuing strategies section below).
+
+### Readers, consumers, and controllers
 
 The chunks inside the stream are read by a **reader** — this processes the data one chunk at a time, allowing you to do whatever kind of operation you want to do on it. The reader plus the other processing code that goes along with it is called a **consumer**.
 
 There is also a construct you'll use called a **controller** — each reader has an associated controller that allows you to control the stream (for example, to close it if wished).
 
+### Locking
+
 Only one reader can read a stream at a time; when a reader is created and starts reading a stream (an **active reader**), we say it is **locked** to it. If you want another reader to start reading your stream, you typically need to cancel the first reader before you do anything else (although you can **tee** streams, see the Teeing section below)
+
+### Readable streams and byte streams
 
 Note that there are two different types of readable stream. As well as the conventional readable stream there is a type called a byte stream — this is an extended version of a conventional stream for reading underlying byte sources. Compared with the conventional readable stream, byte streams are allowed to be read by BYOB readers (BYOB, "bring your own buffer"). This kind of reader allows streams to be read straight into a buffer supplied by the developer, minimizing the copying required. Which underlying stream (and by extension, reader and controller) your code will use depends on how the stream was created in the first place (see the {{domxref("ReadableStream.ReadableStream","ReadableStream()")}} constructor page).
 
@@ -44,7 +49,7 @@ In JavaScript, this is achieved via the {{domxref("ReadableStream.tee()")}} meth
 
 You might do this for example in a [ServiceWorker](/en-US/docs/Web/API/Service_Worker_API) if you want to fetch a response from the server and stream it to the browser, but also stream it to the ServiceWorker cache. Since a response body cannot be consumed more than once, and a stream can't be read by more than one reader at once, you'd need two copies to do this.
 
-![](tee.png)
+![Teeing data flow](tee.png)
 
 ## Writable streams
 
@@ -73,6 +78,7 @@ There are two methods that facilitate this:
   A transform stream consists of a pair of streams: a readable stream from which data is read and a writable stream into which it is written, along with appropriate mechanisms to ensure that new data is made available to read as soon as data is written.
 
   {{domxref("TransformStream")}} is a concrete implementation of a transform stream, but any object that has the same readable stream and writable stream properties can be passed to `pipeThrough()`.
+
 - {{domxref("ReadableStream.pipeTo()")}} — pipes to a writable stream that acts as the end point of the pipe chain.
 
 The start of the pipe chain is called the **original source**, and the end is called the **ultimate sink**.
@@ -83,7 +89,7 @@ The start of the pipe chain is called the **original source**, and the end is ca
 
 An important concept in streams is **backpressure** — this is the process by which a single stream or a pipe chain regulates the speed of reading/writing. When a stream later in the chain is still busy and isn't yet ready to accept more chunks, it sends a signal backwards through the chain to tell earlier transform streams (or the original source) to slow down delivery so that you don't end up with a bottleneck anywhere.
 
-To use backpressure in a {{domxref("ReadableStream")}} , we can ask the controller for the chunk size desired by the consumer by querying the {{domxref("ReadableStreamDefaultController.desiredSize")}} property on the controller. If it is too low, our `ReadableStream` can tell its underlying source to stop sending data, and we backpressure along the stream chain.
+To use backpressure in a {{domxref("ReadableStream")}}, we can ask the controller for the chunk size desired by the consumer by querying the {{domxref("ReadableStreamDefaultController.desiredSize")}} property on the controller. If it is too low, our `ReadableStream` can tell its underlying source to stop sending data, and we backpressure along the stream chain.
 
 If later on the consumer again wants to receive data, we can use the pull method in the stream creation to tell our underlying source to feed our stream with data.
 

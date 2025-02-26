@@ -1,18 +1,13 @@
 ---
 title: <filter-function>
 slug: Web/CSS/filter-function
-tags:
-  - CSS
-  - CSS Data Type
-  - Data Type
-  - Filter Effects
-  - NeedsCompatTable
-  - Reference
+page-type: css-type
 browser-compat: css.types.filter-function
 ---
+
 {{CSSRef}}
 
-The **`<filter-function>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) represents a graphical effect that can change the appearance of an input image. It is used in the {{cssxref("filter")}} and {{cssxref("backdrop-filter")}} properties.
+The **`<filter-function>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) represents a graphical effect that can change the appearance of an input image. It is used in the {{cssxref("filter")}} and {{cssxref("backdrop-filter")}} properties.
 
 ## Syntax
 
@@ -39,15 +34,30 @@ The `<filter-function>` data type is specified using one of the filter functions
 - {{cssxref("filter-function/sepia", "sepia()")}}
   - : Converts the image to sepia.
 
+## Formal syntax
+
+{{csssyntax}}
+
 ## Examples
 
 ### Filter function comparison
 
 This example provides a simple graphic, along with a select menu to allow you to choose between the different types of filter function, and a slider to allow you to vary the values used inside the filter function. Updating the controls updates the filter effect in real time, allowing you to investigate the effects of different filters.
 
-#### HTML
+```css
+div {
+  width: 100%;
+  height: 512px;
+  background: url(fx-nightly-512.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  filter: <filter-function>(<value>);
+}
+```
 
-```html
+Where the `<filter-function>` is the filter you select from the drop down and the `<value>` is the values you set with the slider:
+
+```html live-sample___filter-functions
 <div></div>
 <ul>
   <li>
@@ -65,22 +75,20 @@ This example provides a simple graphic, along with a select menu to allow you to
       <option>sepia</option>
     </select>
   </li>
-  <li>
-    <input type="range"><output></output>
-  </li>
+  <li><input type="range" /><output></output></li>
   <li>
     <p>Current value: <code></code></p>
   </li>
 </ul>
 ```
 
-#### CSS
-
-```css
+```css live-sample___filter-functions
 div {
-  width: 300px;
-  height: 300px;
-  background: url(https://media.prod.mdn.mozit.cloud/attachments/2020/07/29/17350/3b4892b7e820122ac6dd7678891d4507/firefox.png) no-repeat center;
+  width: 100%;
+  height: 512px;
+  background-image: url(https://mdn.github.io/shared-assets/images/examples/fx-nightly-512.png);
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
 li {
@@ -91,7 +99,7 @@ li {
 }
 
 input {
-  width: 60%
+  width: 60%;
 }
 
 output {
@@ -105,70 +113,83 @@ select {
 }
 ```
 
-#### JavaScript
+```js hidden live-sample___filter-functions
+const selectElem = document.querySelector("select");
+const divElem = document.querySelector("div");
+const slider = document.querySelector("input");
+const output = document.querySelector("output");
+const curValue = document.querySelector("p code");
 
-```js
-const selectElem = document.querySelector('select');
-const divElem = document.querySelector('div');
-const slider = document.querySelector('input');
-const output = document.querySelector('output');
-const curValue = document.querySelector('p code');
-
-selectElem.addEventListener('change', () => {
+selectElem.addEventListener("change", () => {
   setSlider(selectElem.value);
   setDiv(selectElem.value);
 });
 
-slider.addEventListener('input', () => {
+slider.addEventListener("input", () => {
   setDiv(selectElem.value);
 });
 
 function setSlider(filter) {
-  if(filter === 'blur') {
-    slider.value = 0;
-    slider.min = 0;
-    slider.max = 30;
-    slider.step = 1;
-    slider.setAttribute('data-unit', 'px');
-  } else if(filter === 'brightness' || filter === 'contrast' || filter === 'saturate') {
-    slider.value = 1;
-    slider.min = 0;
-    slider.max = 4;
-    slider.step = 0.05;
-    slider.setAttribute('data-unit', '');
-  } else if(filter === 'drop-shadow') {
-    slider.value = 0;
-    slider.min = -20;
-    slider.max = 40;
-    slider.step = 1;
-    slider.setAttribute('data-unit', 'px');
-  } else if(filter === 'opacity') {
-    slider.value = 1;
-    slider.min = 0;
-    slider.max = 1;
-    slider.step = 0.01;
-    slider.setAttribute('data-unit', '');
-  } else if(filter === 'grayscale' || filter === 'invert' || filter === 'sepia') {
-    slider.value = 0;
-    slider.min = 0;
-    slider.max = 1;
-    slider.step = 0.01;
-    slider.setAttribute('data-unit', '');
-  } else if(filter === 'hue-rotate') {
-    slider.value = 0;
-    slider.min = 0;
-    slider.max = 360;
-    slider.step = 1;
-    slider.setAttribute('data-unit', 'deg');
+  switch (filter) {
+    case "blur":
+      slider.value = 0;
+      slider.min = 0;
+      slider.max = 30;
+      slider.step = 1;
+      slider.setAttribute("data-unit", "px");
+      break;
+    case "brightness":
+    case "contrast":
+    case "saturate":
+      slider.value = 1;
+      slider.min = 0;
+      slider.max = 4;
+      slider.step = 0.05;
+      slider.setAttribute("data-unit", "");
+      break;
+    case "drop-shadow":
+      slider.value = 0;
+      slider.min = -20;
+      slider.max = 40;
+      slider.step = 1;
+      slider.setAttribute("data-unit", "px");
+      break;
+    case "opacity":
+      slider.value = 1;
+      slider.min = 0;
+      slider.max = 1;
+      slider.step = 0.01;
+      slider.setAttribute("data-unit", "");
+      break;
+    case "grayscale":
+    case "invert":
+    case "sepia":
+      slider.value = 0;
+      slider.min = 0;
+      slider.max = 1;
+      slider.step = 0.01;
+      slider.setAttribute("data-unit", "");
+      break;
+    case "hue-rotate":
+      slider.value = 0;
+      slider.min = 0;
+      slider.max = 360;
+      slider.step = 1;
+      slider.setAttribute("data-unit", "deg");
+      break;
+    default:
+      console.error("Unknown filter set");
   }
 }
 
 function setDiv(filter) {
-  if(filter === 'drop-shadow') {
-    divElem.style.filter = `${selectElem.value}(${Math.round(slider.value)}${slider.getAttribute('data-unit')} ${Math.round(slider.value)}${slider.getAttribute('data-unit')} ${Math.round(Math.abs(slider.value/2))}${slider.getAttribute('data-unit')})`;
-  } else {
-    divElem.style.filter = `${selectElem.value}(${slider.value}${slider.getAttribute('data-unit')}`;
-  }
+  const unit = slider.getAttribute("data-unit");
+  const offset = `${Math.round(slider.value)}${unit}`;
+  const radius = `${Math.round(Math.abs(slider.value / 2))}${unit}`;
+  divElem.style.filter =
+    filter === "drop-shadow"
+      ? `${selectElem.value}(${offset} ${offset} ${radius})`
+      : `${selectElem.value}(${slider.value}${unit})`;
 
   updateOutput();
   updateCurValue();
@@ -186,9 +207,7 @@ setSlider(selectElem.value);
 setDiv(selectElem.value);
 ```
 
-#### Result
-
-{{EmbedLiveSample('Filter_function_comparison', '100%', 500)}}
+{{EmbedLiveSample("filter-functions", "", "700px")}}
 
 ## Specifications
 

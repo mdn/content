@@ -1,10 +1,11 @@
 ---
 title: Recursion
 slug: Glossary/Recursion
-tags:
-  - CodingScripting
-  - Glossary
+page-type: glossary-definition
 ---
+
+{{GlossarySidebar}}
+
 The act of a function calling itself, recursion is used to solve problems that contain smaller sub-problems. A recursive function can receive two inputs: a base case (ends recursion) or a recursive case (resumes recursion).
 
 ## Examples
@@ -55,8 +56,11 @@ console.log(getMaxCallStackSize(0));
 
 ```js
 const factorial = (n) => {
-  if (n === 0) return 1;
-  else return n * factorial(n - 1);
+  if (n === 0) {
+    return 1;
+  } else {
+    return n * factorial(n - 1);
+  }
 };
 console.log(factorial(10));
 // 3628800
@@ -69,14 +73,13 @@ console.log(fibonacci(10));
 ```
 
 ```js
-const reduce = (fn, acc, [cur, ...rest]) => (
-  cur === undefined ? acc : reduce(fn, fn(acc, cur), rest)
-);
+const reduce = (fn, acc, [cur, ...rest]) =>
+  cur === undefined ? acc : reduce(fn, fn(acc, cur), rest);
 console.log(reduce((a, b) => a + b, 0, [1, 2, 3, 4, 5, 6, 7, 8, 9]));
 // 45
 ```
 
 ## See also
 
-- [Recursion (computer science)](https://en.wikipedia.org/wiki/Recursion_(computer_science)) on Wikipedia
+- [Recursion (computer science)](<https://en.wikipedia.org/wiki/Recursion_(computer_science)>) on Wikipedia
 - [More details about recursion in JavaScript](/en-US/docs/Web/JavaScript/Guide/Functions#recursion)

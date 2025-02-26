@@ -1,26 +1,38 @@
 ---
 title: Array.prototype.flat()
 slug: Web/JavaScript/Reference/Global_Objects/Array/flat
-tags:
-  - Array
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - flat
-  - Polyfill
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.flat
 ---
+
 {{JSRef}}
 
-The **`flat()`** method creates a new array with all sub-array
+The **`flat()`** method of {{jsxref("Array")}} instances creates a new array with all sub-array
 elements concatenated into it recursively up to the specified depth.
 
-{{EmbedInteractiveExample("pages/js/array-flat.html")}}
+{{InteractiveExample("JavaScript Demo: Array.flat()")}}
+
+```js interactive-example
+const arr1 = [0, 1, 2, [3, 4]];
+
+console.log(arr1.flat());
+// expected output: Array [0, 1, 2, 3, 4]
+
+const arr2 = [0, 1, [2, [3, [4, 5]]]];
+
+console.log(arr2.flat());
+// expected output: Array [0, 1, 2, Array [3, Array [4, 5]]]
+
+console.log(arr2.flat(2));
+// expected output: Array [0, 1, 2, 3, Array [4, 5]]
+
+console.log(arr2.flat(Infinity));
+// expected output: Array [0, 1, 2, 3, 4, 5]
+```
 
 ## Syntax
 
-```js
+```js-nolint
 flat()
 flat(depth)
 ```
@@ -35,87 +47,13 @@ flat(depth)
 
 A new array with the sub-array elements concatenated into it.
 
-## Alternatives
+## Description
 
-### reduce and concat
+The `flat()` method is a [copying method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#copying_methods_and_mutating_methods). It does not alter `this` but instead returns a [shallow copy](/en-US/docs/Glossary/Shallow_copy) that contains the same elements as the ones from the original array.
 
-```js
-const arr = [1, 2, [3, 4]];
+The `flat()` method removes empty slots if the array being flattened is [sparse](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays). For example, if `depth` is 1, both empty slots in the root array and in the first level of nested arrays are ignored, but empty slots in further nested arrays are preserved with the arrays themselves.
 
-// To flat single level array
-arr.flat();
-// is equivalent to
-arr.reduce((acc, val) => acc.concat(val), []);
-// [1, 2, 3, 4]
-
-// or with decomposition syntax
-const flattened = (arr) => [].concat(...arr);
-```
-
-### reduce + concat + isArray + recursivity
-
-```js
-const arr = [1, 2, [3, 4, [5, 6]]];
-
-// to enable deep level flatten use recursion with reduce and concat
-function flatDeep(arr, d = 1) {
-   return d > 0 ? arr.reduce((acc, val) => acc.concat(Array.isArray(val) ? flatDeep(val, d - 1) : val), [])
-                : arr.slice();
-};
-
-flatDeep(arr, Infinity);
-// [1, 2, 3, 4, 5, 6]
-```
-
-### Use a stack
-
-```js
-// non recursive flatten deep using a stack
-// note that depth control is hard/inefficient as we will need to tag EACH value with its own depth
-// also possible w/o reversing on shift/unshift, but array OPs on the end tends to be faster
-function flatten(input) {
-  const stack = [...input];
-  const res = [];
-  while (stack.length) {
-    // pop value from stack
-    const next = stack.pop();
-    if (Array.isArray(next)) {
-      // push back array items, won't modify the original input
-      stack.push(...next);
-    } else {
-      res.push(next);
-    }
-  }
-  // reverse to restore input order
-  return res.reverse();
-}
-
-const arr = [1, 2, [3, 4, [5, 6]]];
-flatten(arr);
-// [1, 2, 3, 4, 5, 6]
-```
-
-### Use Generator function
-
-```js
-function* flatten(array, depth) {
-  if (depth === undefined) {
-    depth = 1;
-  }
-
-  for (const item of array) {
-    if (Array.isArray(item) && depth > 0) {
-      yield* flatten(item, depth - 1);
-    } else {
-      yield item;
-    }
-  }
-}
-
-const arr = [1, 2, [3, 4, [5, 6]]];
-const flattened = [...flatten(arr, Infinity)];
-// [1, 2, 3, 4, 5, 6]
-```
+The `flat()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods). It only expects the `this` value to have a `length` property and integer-keyed properties. However, its elements must be arrays if they are to be flattened.
 
 ## Examples
 
@@ -139,14 +77,37 @@ arr4.flat(Infinity);
 // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 ```
 
-### Flattening and array holes
+### Using flat() on sparse arrays
 
-The flat method removes empty slots in arrays:
+The `flat()` method removes [empty slots](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays) in arrays:
 
 ```js
 const arr5 = [1, 2, , 4, 5];
-arr5.flat();
-// [1, 2, 4, 5]
+console.log(arr5.flat()); // [1, 2, 4, 5]
+
+const array = [1, , 3, ["a", , "c"]];
+console.log(array.flat()); // [ 1, 3, "a", "c" ]
+
+const array2 = [1, , 3, undefined, ["a", , ["d", , "e"]], null];
+console.log(array2.flat()); // [ 1, 3, undefined, "a", ["d", empty, "e"], null ]
+console.log(array2.flat(2)); // [ 1, 3, undefined, "a", "d", "e", null ]
+```
+
+### Calling flat() on non-array objects
+
+The `flat()` method reads the `length` property of `this` and then accesses each property whose key is a nonnegative integer less than `length`. If the element is not an array, it's directly appended to the result. If the element is an array, it's flattened according to the `depth` parameter.
+
+```js
+const arrayLike = {
+  length: 3,
+  0: [1, 2],
+  // Array-like objects aren't flattened
+  1: { length: 2, 0: 3, 1: 4 },
+  2: 5,
+  3: 3, // ignored by flat() since length is 3
+};
+console.log(Array.prototype.flat.call(arrayLike));
+// [ 1, 2, { '0': 3, '1': 4, length: 2 }, 5 ]
 ```
 
 ## Specifications
@@ -160,8 +121,9 @@ arr5.flat();
 ## See also
 
 - [Polyfill of `Array.prototype.flat` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
+- {{jsxref("Array")}}
+- {{jsxref("Array.prototype.concat()")}}
 - {{jsxref("Array.prototype.flatMap()")}}
 - {{jsxref("Array.prototype.map()")}}
 - {{jsxref("Array.prototype.reduce()")}}
-- {{jsxref("Array.prototype.concat()")}}
-- [A polyfill](https://github.com/behnammodi/polyfill/blob/master/array.polyfill.js)

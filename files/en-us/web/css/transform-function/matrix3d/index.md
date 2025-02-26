@@ -1,17 +1,13 @@
 ---
 title: matrix3d()
 slug: Web/CSS/transform-function/matrix3d
-tags:
-  - CSS
-  - CSS Function
-  - CSS Transforms
-  - Function
-  - Reference
+page-type: css-function
 browser-compat: css.types.transform-function.matrix3d
 ---
+
 {{CSSRef}}
 
-The **`matrix3d()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) defines a 3D transformation as a 4x4 homogeneous matrix.
+The **`matrix3d()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) defines a 3D transformation as a 4x4 homogeneous matrix.
 Its result is a {{cssxref("&lt;transform-function&gt;")}} data type.
 
 {{EmbedInteractiveExample("pages/css/function-matrix3d.html")}}
@@ -35,50 +31,32 @@ matrix3d(a1, b1, c1, d1, a2, b2, c2, d2, a3, b3, c3, d3, a4, b4, c4, d4)
 <table class="standard-table">
   <thead>
     <tr>
-      <th scope="col">Cartesian coordinates on ℝ^2</th>
-      <th scope="col">Homogeneous coordinates on ℝℙ^2</th>
-      <th scope="col">Cartesian coordinates on ℝ^3</th>
-      <th scope="col">Homogeneous coordinates on ℝℙ^3</th>
+      <th scope="col"><a href="/en-US/docs/Web/CSS/transform-function#cartesian_coordinates">Cartesian coordinates</a> on <a href="https://en.wikipedia.org/wiki/Real_coordinate_space">ℝ^2</a></th>
+      <th scope="col"><a href="https://en.wikipedia.org/wiki/Homogeneous_coordinates">Homogeneous coordinates</a> on <a href="https://en.wikipedia.org/wiki/Real_projective_plane">ℝℙ^2</a></th>
+      <th scope="col">Cartesian coordinates on <a href="https://en.wikipedia.org/wiki/Real_coordinate_space">ℝ^3</a></th>
+      <th scope="col">Homogeneous coordinates on <a href="https://en.wikipedia.org/wiki/Real_projective_space">ℝℙ^3</a></th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td colspan="2">
-        This transformation applies to the 3D space and can't be represented on
-        the plane.
+        This transformation applies to the 3D space and can't be represented on the plane.
       </td>
       <td>
-        A generic 3D
-        <a href="https://en.wikipedia.org/wiki/Affine_transformation"
-          >affine transformation</a
-        >
-        can't be represented using a Cartesian-coordinate matrix, as
-        translations are not linear transformations.
+        A generic 3D <a href="https://en.wikipedia.org/wiki/Affine_transformation">affine transformation</a> can't be represented using a Cartesian-coordinate matrix, as translations are not linear transformations.
       </td>
       <td>
-        <math
-          ><mrow><mo>(</mo
-            ><mtable
-              ><mtr
-                ><mtd><mi>a1</mi> </mtd><mtd><mi>a2</mi> </mtd
-                ><mtd><mi>a3</mi> </mtd><mtd><mi>a4</mi> </mtd></mtr
-              ><mtr
-                ><mtd><mi>b1</mi> </mtd><mtd><mi>b2</mi> </mtd
-                ><mtd><mi>b3</mi> </mtd><mtd><mi>b4</mi> </mtd></mtr
-              ><mtr
-                ><mtd><mi>c1</mi> </mtd><mtd><mi>c2</mi> </mtd
-                ><mtd><mi>c3</mi> </mtd><mtd><mi>c4</mi> </mtd></mtr
-              ><mtr
-                ><mtd><mi>d1</mi> </mtd><mtd><mi>d2</mi> </mtd
-                ><mtd><mi>d3</mi> </mtd><mtd><mi>d4</mi></mtd></mtr
-              ></mtable
-            ><mo>)</mo></mrow
-          ></math
-        >
+        <math display="block">
+          <semantics><mrow><mo>(</mo><mtable><mtr><mtd><mi>a1</mi></mtd><mtd><mi>a2</mi></mtd><mtd><mi>a3</mi></mtd><mtd><mi>a4</mi></mtd></mtr><mtr><mtd><mi>b1</mi></mtd><mtd><mi>b2</mi></mtd><mtd><mi>b3</mi></mtd><mtd><mi>b4</mi></mtd></mtr><mtr><mtd><mi>c1</mi></mtd><mtd><mi>c2</mi></mtd><mtd><mi>c3</mi></mtd><mtd><mi>c4</mi></mtd></mtr><mtr><mtd><mi>d1</mi></mtd><mtd><mi>d2</mi></mtd><mtd><mi>d3</mi></mtd><mtd><mi>d4</mi></mtd></mtr></mtable><mo>)</mo></mrow><annotation encoding="TeX">\left( \begin{array}{cccc} a1 & a2 & a3 & a4 \\ b1 & b2 & b3 & b4 \\ c1 & c2 & c3 & c4 \\ d1 & d2 & d3 & d4 \\ \end{array} \right)</annotation></semantics>
+        </math>
       </td>
     </tr>
   </tbody>
 </table>
+
+## Formal syntax
+
+{{CSSSyntax}}
 
 ## Examples
 
@@ -112,8 +90,10 @@ a `matrix3d()` transform to it.
   margin: 50px auto;
 }
 
-#example-element:hover, #example-element:focus {
-  transform: rotate3d(1, 1, 1, 30deg) matrix3d(1,0,0,0,0,1,6,0,0,0,1,0,50,100,0,1.1);
+#example-element:hover,
+#example-element:focus {
+  transform: rotate3d(1, 1, 1, 30deg)
+    matrix3d(1, 0, 0, 0, 0, 1, 6, 0, 0, 0, 1, 0, 50, 100, 0, 1.1);
 }
 
 .face {
@@ -129,32 +109,32 @@ a `matrix3d()` transform to it.
 }
 
 .front {
-    background: rgba(90,90,90,.7);
-    transform: translateZ(50px);
+  background: rgb(90 90 90 / 70%);
+  transform: translateZ(50px);
 }
 
 .back {
-    background: rgba(0,210,0,.7);
-    transform: rotateY(180deg) translateZ(50px);
+  background: rgb(0 210 0 / 70%);
+  transform: rotateY(180deg) translateZ(50px);
 }
 
 .right {
-  background: rgba(210,0,0,.7);
+  background: rgb(210 0 0 / 70%);
   transform: rotateY(90deg) translateZ(50px);
 }
 
 .left {
-  background: rgba(0,0,210,.7);
+  background: rgb(0 0 210 / 70%);
   transform: rotateY(-90deg) translateZ(50px);
 }
 
 .top {
-  background: rgba(210,210,0,.7);
+  background: rgb(210 210 0 / 70%);
   transform: rotateX(90deg) translateZ(50px);
 }
 
 .bottom {
-  background: rgba(210,0,210,.7);
+  background: rgb(210 0 210 / 70%);
   transform: rotateX(-90deg) translateZ(50px);
 }
 ```
@@ -171,15 +151,15 @@ Another `transform3d()` example, which implements an animated combined translate
 
 ```html
 <div class="foo">
-Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-Quos quaerat sit soluta, quisquam exercitationem delectus qui unde in facere
-necessitatibus aut quia porro dolorem nesciunt enim, at consequuntur aliquam esse?
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos quaerat sit
+  soluta, quisquam exercitationem delectus qui unde in facere necessitatibus aut
+  quia porro dolorem nesciunt enim, at consequuntur aliquam esse?
 </div>
 ```
 
 #### CSS
 
-```css
+```css-nolint
 html {
   width: 100%;
 }
@@ -190,7 +170,6 @@ body {
   flex-flow: row wrap;
   justify-content: center;
   align-content: center;
-
 }
 .foo {
   width: 50%;
@@ -201,7 +180,7 @@ body {
   text-align: center;
   font-family: system-ui, sans-serif;
   font-size: 14px;
-   /* Setting up animation for better demonstration */
+  /* Setting up animation for better demonstration */
   animation: MotionScale 2s alternate linear infinite;
 }
 
@@ -217,27 +196,26 @@ body {
         Scales down by 10%
     */
     transform: matrix3d(
-      1,0,0,0,
-      0,1,0,0,
-      0,0,1,0,
-      -50,-100,0,1.1
+      1, 0, 0, 0,
+      0, 1, 0, 0,
+      0, 0, 1, 0,
+      -50, -100, 0, 1.1
     );
-
   }
   50% {
     transform: matrix3d(
-      1,0,0,0,
-      0,1,0,0,
-      0,0,1,0,
-      0,0,0,0.9
+      1, 0, 0, 0,
+      0, 1, 0, 0,
+      0, 0, 1, 0,
+      0, 0, 0, 0.9
     );
   }
   to {
      transform: matrix3d(
-      1,0,0,0,
-      0,1,0,0,
-      0,0,1,0,
-      50,100,0,1.1
+      1, 0, 0, 0,
+      0, 1, 0, 0,
+      0, 0, 1, 0,
+      50, 100, 0, 1.1
     )
   }
 }
@@ -258,5 +236,8 @@ body {
 ## See also
 
 - {{cssxref("transform")}}
+- Individual transform properties:
+  - {{cssxref("translate")}}
+  - {{cssxref("scale")}}
+  - {{cssxref("rotate")}}
 - {{cssxref("&lt;transform-function&gt;")}}
-- [Understanding the CSS Transforms Matrix](https://dev.opera.com/articles/understanding-the-css-transforms-matrix/)

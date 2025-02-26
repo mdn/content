@@ -1,40 +1,54 @@
 ---
 title: Array.prototype.reverse()
 slug: Web/JavaScript/Reference/Global_Objects/Array/reverse
-tags:
-  - Array
-  - JavaScript
-  - Method
-  - Prototype
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.reverse
 ---
+
 {{JSRef}}
 
-The **`reverse()`** method reverses an array _[in place](https://en.wikipedia.org/wiki/In-place_algorithm)_. The first
-array element becomes the last, and the last array element becomes the first.
+The **`reverse()`** method of {{jsxref("Array")}} instances reverses an array _[in place](https://en.wikipedia.org/wiki/In-place_algorithm)_ and returns the reference to the same array, the first array element now becoming the last, and the last array element becoming the first. In other words, elements order in the array will be turned towards the direction opposite to that previously stated.
 
-{{EmbedInteractiveExample("pages/js/array-reverse.html")}}
+To reverse the elements in an array without mutating the original array, use {{jsxref("Array/toReversed", "toReversed()")}}.
+
+{{InteractiveExample("JavaScript Demo: Array.reverse()")}}
+
+```js interactive-example
+const array1 = ["one", "two", "three"];
+console.log("array1:", array1);
+// Expected output: "array1:" Array ["one", "two", "three"]
+
+const reversed = array1.reverse();
+console.log("reversed:", reversed);
+// Expected output: "reversed:" Array ["three", "two", "one"]
+
+// Careful: reverse is destructive -- it changes the original array.
+console.log("array1:", array1);
+// Expected output: "array1:" Array ["three", "two", "one"]
+```
 
 ## Syntax
 
-```js
+```js-nolint
 reverse()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
-The reversed array.
+The reference to the original array, now reversed. Note that the array is reversed _[in place](https://en.wikipedia.org/wiki/In-place_algorithm)_, and no copy is made.
 
 ## Description
 
-The `reverse` method transposes the elements of the calling array object in
+The `reverse()` method transposes the elements of the calling array object in
 place, mutating the array, and returning a reference to the array.
 
-`reverse` is intentionally generic; this method can be
-{{jsxref("Function.call", "called", "", 1)}} or {{jsxref("Function.apply", "applied",
-  "", 1)}} to objects resembling arrays. Objects which do not contain a
-`length` property reflecting the last in a series of consecutive, zero-based
-numerical properties may not behave in any meaningful manner.
+The `reverse()` method preserves empty slots. If the source array is [sparse](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays), the empty slots' corresponding new indices are [deleted](/en-US/docs/Web/JavaScript/Reference/Operators/delete) and also become empty slots.
+
+The `reverse()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods). It only expects the `this` value to have a `length` property and integer-keyed properties. Although strings are also array-like, this method is not suitable to be applied on them, as strings are immutable.
 
 ## Examples
 
@@ -52,19 +66,52 @@ items.reverse();
 console.log(items); // [3, 2, 1]
 ```
 
-### Reversing the elements in an array-like object
+### The reverse() method returns the reference to the same array
 
-The following example creates an array-like object `obj`, containing three
-elements and a length property, then reverses the array-like object. The call to
-`reverse()` returns a reference to the reversed array-like object
-`obj`.
+The `reverse()` method returns reference to the original array, so mutating the returned array will mutate the original array as well.
 
 ```js
-const obj = {0: 1, 1: 2, 2: 3, length: 3};
-console.log(obj); // {0: 1, 1: 2, 2: 3, length: 3}
+const numbers = [3, 2, 4, 1, 5];
+const reversed = numbers.reverse();
+// numbers and reversed are both in reversed order [5, 1, 4, 2, 3]
+reversed[0] = 5;
+console.log(numbers[0]); // 5
+```
 
-Array.prototype.reverse.call(obj); //same syntax for using apply()
-console.log(obj); // {0: 3, 1: 2, 2: 1, length: 3}
+In case you want `reverse()` to not mutate the original array, but return a [shallow-copied](/en-US/docs/Glossary/Shallow_copy) array like other array methods (e.g. [`map()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)) do, use the {{jsxref("Array/toReversed", "toReversed()")}} method. Alternatively, you can do a shallow copy before calling `reverse()`, using the [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) or [`Array.from()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from).
+
+```js
+const numbers = [3, 2, 4, 1, 5];
+// [...numbers] creates a shallow copy, so reverse() does not mutate the original
+const reverted = [...numbers].reverse();
+reverted[0] = 5;
+console.log(numbers[0]); // 3
+```
+
+### Using reverse() on sparse arrays
+
+Sparse arrays remain sparse after calling `reverse()`. Empty slots are copied over to their respective new indices as empty slots.
+
+```js
+console.log([1, , 3].reverse()); // [3, empty, 1]
+console.log([1, , 3, 4].reverse()); // [4, 3, empty, 1]
+```
+
+### Calling reverse() on non-array objects
+
+The `reverse()` method reads the `length` property of `this`. It then visits each property having an integer key between `0` and `length / 2`, and swaps the two corresponding indices on both ends, [deleting](/en-US/docs/Web/JavaScript/Reference/Operators/delete) any destination property for which the source property did not exist.
+
+```js
+const arrayLike = {
+  length: 3,
+  unrelated: "foo",
+  2: 4,
+  3: 33, // ignored by reverse() since length is 3
+};
+console.log(Array.prototype.reverse.call(arrayLike));
+// { 0: 4, 3: 33, length: 3, unrelated: 'foo' }
+// The index 2 is deleted because there was no index 0 present originally
+// The index 3 is unchanged since the length is 3
 ```
 
 ## Specifications
@@ -77,6 +124,10 @@ console.log(obj); // {0: 3, 1: 2, 2: 1, length: 3}
 
 ## See also
 
+- [Polyfill of `Array.prototype.reverse` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
+- {{jsxref("Array")}}
 - {{jsxref("Array.prototype.join()")}}
 - {{jsxref("Array.prototype.sort()")}}
+- {{jsxref("Array.prototype.toReversed()")}}
 - {{jsxref("TypedArray.prototype.reverse()")}}

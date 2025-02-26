@@ -1,21 +1,13 @@
 ---
 title: revert
 slug: Web/CSS/revert
-tags:
-  - CSS
-  - CSS Cascade
-  - CSS Value
-  - Cascade
-  - Keyword
-  - Layout
-  - Reference
-  - Style
-  - revert
+page-type: css-keyword
 browser-compat: css.types.global_keywords.revert
 ---
+
 {{CSSRef}}
 
-The **`revert`** CSS keyword reverts the cascaded value of the property from its current value to the value the property would have had if no changes had been made by the current **{{Glossary("style origin")}}** to the current element. Thus, it resets the property to its inherited value if it inherits from its parent or to the default value established by the user agent's stylesheet (or by user styles, if any exist). It can be applied to any CSS property, including the CSS shorthand property {{cssxref("all")}}.
+The **`revert`** CSS keyword reverts the cascaded value of the property from its current value to the value the property would have had if no changes had been made by the current **{{Glossary("style origin")}}** to the current element. Thus, it resets the property either to user agent set value, to user set value, to its inherited value (if it is inheritable), or to initial value. It can be applied to any CSS property, including the CSS shorthand property {{cssxref("all")}}.
 
 This keyword removes from the cascade all of the styles that have been overridden until the style being rolled back to is reached.
 
@@ -27,19 +19,21 @@ The `revert` keyword works exactly the same as [`unset`](/en-US/docs/Web/CSS/uns
 
 Revert will not affect rules applied to children of an element you reset (but will remove effects of a parent rule on a child). So if you have a `color: green` for all sections and `all: revert` on a specific section, the color of the section will be black. But if you have a rule to make all paragraphs red, then all paragraphs will still be red in all sections.
 
-> **Note:** Revert is just a value. It is still possible to override the `revert` value using [specificity](/en-US/docs/Web/CSS/Specificity).
+> [!NOTE]
+> Revert is just a value. It is still possible to override the `revert` value using [specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity).
 
-> **Note:** The `revert` keyword is different from and should not be confused with the {{cssxref("initial")}} keyword, which uses the [initial value](/en-US/docs/Web/CSS/initial_value) defined on a per-property basis by the CSS specifications. In contrast, user-agent stylesheets set default values on the basis of CSS selectors.
+> [!NOTE]
+> The `revert` keyword is different from and should not be confused with the {{cssxref("initial")}} keyword, which uses the [initial value](/en-US/docs/Web/CSS/CSS_cascade/initial_value) defined on a per-property basis by the CSS specifications. In contrast, user-agent stylesheets set default values on the basis of CSS selectors.
 >
-> For example, the [initial value](/en-US/docs/Web/CSS/initial_value) for the [`display`](/en-US/docs/Web/CSS/display#formal_definition) property is `inline`, whereas a normal user-agent stylesheet sets the default {{cssxref("display")}} value of {{HTMLElement("div")}}s to `block`, of {{HTMLElement("table")}}s to `table`, etc.
+> For example, the [initial value](/en-US/docs/Web/CSS/CSS_cascade/initial_value) for the [`display`](/en-US/docs/Web/CSS/display#formal_definition) property is `inline`, whereas a normal user-agent stylesheet sets the default {{cssxref("display")}} value of {{HTMLElement("div")}}s to `block`, of {{HTMLElement("table")}}s to `table`, etc.
 
 ## Examples
 
-### Revert vs unset
+### Revert vs. unset
 
 Although `revert` and `unset` are similar, they differ for some properties for some elements.
 
-So in the below example, we set custom [`font-weight`](/en-US/docs/Web/CSS/font-weight#formal_definition), but then try to `revert` and `unset` it inline in the HTML document. The `revert` keyword will revert the text to bold because that is the default value for headers in most browsers. The `unset` keyword will keep the text normal because that is the initial value for the `font-weight` property.
+So in the below example, we set custom [`font-weight`](/en-US/docs/Web/CSS/font-weight#formal_definition), but then try to `revert` and `unset` it inline in the HTML document. The `revert` keyword will revert the text to bold because that is the default value for headers in most browsers. The `unset` keyword will keep the text normal because, as an inherited property, the `font-weight` would then inherit its value from the body.
 
 #### HTML
 
@@ -76,9 +70,7 @@ Reverting all values is useful in a situation where you've made several style ch
 ```html
 <h3>This will have custom styles</h3>
 <p>Just some text</p>
-<h3 style="all: revert">
-  This should be reverted to browser/user defaults.
-</h3>
+<h3 style="all: revert">This should be reverted to browser/user defaults.</h3>
 <p>Just some text</p>
 ```
 
@@ -103,31 +95,55 @@ Reverting effectively removes the value for the element you select with some rul
 #### HTML
 
 ```html
-<section>
-  <h3>This will be dark green</h3>
-  <p>Text in paragraph will be red.</p>
-  This will also be dark green.
-</section>
-<section class="with-revert">
-  <h3>This will be black</h3>
-  <p>Text in paragraph will be red.</p>
-  This will also be black.
-</section>
+<main>
+  <section>
+    <h3>This h3 will be dark green</h3>
+    <p>Text in paragraph will be red.</p>
+    This stray text will also be dark green.
+  </section>
+  <section class="with-revert">
+    <h3>This h3 will be steelblue</h3>
+    <p>Text in paragraph will be red.</p>
+    This stray text will also be steelblue.
+  </section>
+</main>
 ```
 
 #### CSS
 
-```css
-section { color: darkgreen }
-p { color: red }
-section.with-revert { color: revert }
+```css hidden
+main {
+  border: 3px solid steelblue;
+}
+
+section {
+  margin: 0.5rem;
+  border: 2px dashed darkgreen;
+}
 ```
 
-Notice how paragraph still has a red color even though a color property for the section was reverted. Also note that both the header and plain text node are black. This is exactly the same as if `section { color: darkgreen }` would not exist for the second section.
+```css
+main {
+  color: steelblue;
+}
+section {
+  color: darkgreen;
+}
+p {
+  color: red;
+}
+section.with-revert {
+  color: revert;
+}
+```
 
 #### Result
 
-{{EmbedLiveSample('Revert_on_a_parent')}}
+{{EmbedLiveSample('Revert_on_a_parent', '100%', '300px')}}
+
+Notice how the paragraph is still red even though a `color` property for the section was reverted. Also, note that both the header and plain text node are `steelblue`. The result of reverting makes it as if `section { color: darkgreen; }` did not exist for the section with `color: revert` applied.
+
+Also, if neither the user agent nor the user override the `<h3>` or `<section>` color values, then the `steelblue` color is inherited from `<main>`, as the {{cssxref("color")}} property is an inherited property.
 
 ## Specifications
 

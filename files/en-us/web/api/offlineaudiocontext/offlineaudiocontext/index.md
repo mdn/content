@@ -1,17 +1,11 @@
 ---
-title: OfflineAudioContext()
+title: "OfflineAudioContext: OfflineAudioContext() constructor"
+short-title: OfflineAudioContext()
 slug: Web/API/OfflineAudioContext/OfflineAudioContext
 page-type: web-api-constructor
-tags:
-  - API
-  - Audio
-  - Audio Contexts
-  - Constructor
-  - OfflineAudioContext
-  - Reference
-  - Web Audio API
 browser-compat: api.OfflineAudioContext.OfflineAudioContext
 ---
+
 {{APIRef("Web Audio API")}}
 
 The
@@ -21,7 +15,7 @@ audio to an {{domxref("AudioBuffer")}} rather than to an audio output device.
 
 ## Syntax
 
-```js
+```js-nolint
 new OfflineAudioContext(options)
 
 new OfflineAudioContext(numberOfChannels, length, sampleRate)
@@ -50,11 +44,11 @@ as either the same set of parameters as are inputs into the
     by CD audio.
 
 It is important to note that, whereas you can create a new {{domxref("AudioContext")}}
-using the {{domxref("AudioContext.AudioContext()", "new AudioContext()")}} constructor
+using the {{domxref("AudioContext.AudioContext()", "AudioContext()")}} constructor
 with no arguments, the `OfflineAudioContext()` constructor requires three
 arguments, since it needs to create an `AudioBuffer`. This works in exactly
 the same way as when you create a new {{domxref("AudioBuffer")}} with the
-{{domxref("BaseAudioContext.createBuffer")}} method. For more detail, read [Audio buffers: frames, samples and channels](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#audio_buffers.3a_frames.2c_samples_and_channels) from our [Basic concepts](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API) guide.
+{{domxref("BaseAudioContext.createBuffer")}} method. For more detail, read [Audio buffers: frames, samples and channels](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#audio_buffers_frames_samples_and_channels) from our [Basic concepts](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API) guide.
 
 ### Return value
 
@@ -78,7 +72,7 @@ const source = offlineCtx.createBufferSource();
 ```
 
 For a full working example, see our [offline-audio-context-promise](https://mdn.github.io/webaudio-examples/offline-audio-context-promise/)
-GitHub repo (see the [source code](https://github.com/mdn/webaudio-examples/blob/master/offline-audio-context-promise/index.html) too.)
+GitHub repo (see the [source code](https://github.com/mdn/webaudio-examples/blob/main/offline-audio-context-promise/index.html) too.)
 
 ## Specifications
 

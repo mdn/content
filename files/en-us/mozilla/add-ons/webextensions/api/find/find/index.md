@@ -1,17 +1,11 @@
 ---
 title: find.find()
 slug: Mozilla/Add-ons/WebExtensions/API/find/find
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - find
+page-type: webextension-api-function
 browser-compat: webextensions.api.find.find
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 Searches for text in a tab.
 
@@ -27,31 +21,34 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 browser.find.find(
-  queryphrase,       // string
+  queryPhrase,       // string
   options            // optional object
 )
 ```
 
 ### Parameters
 
-- `queryphrase`
-  - : `string`. The text to search for.
 - `options` {{optional_inline}}
 
   - : `object`. An object specifying additional options. It may take any of the following properties, all optional:
 
-    - `tabId`
-      - : `integer`. ID of the tab to search. Defaults to the active tab.
     - `caseSensitive`
-      - : `boolean`. If true, the search is case-sensitive. Defaults to `false`.
+      - : `boolean`. If `true` the, the search is case-sensitive. Defaults to `false`.
     - `entireWord`
       - : `boolean`. Match only entire words: so "Tok" will not be matched inside "Tokyo". Defaults to `false`.
     - `includeRangeData`
       - : `boolean`. Include range data in the response, which describe where in the page DOM the match was found. Defaults to `false`.
     - `includeRectData`
-      - : `boolean`. Include rectangle data in the response, which describes where in the rendered page the match was found. Defaults to `false`.
+      - : `boolean`. Include rectangle data in the response, which describes where in the rendered page the match was found. Defaults to `false`
+    - `matchDiacritics`
+      - : `boolean`. If `true`, the search distinguishes between accented letters and their base letters. For example, when set to `true`, searching for "résumé" does not find a match for "resume". Defaults to `false`.
+    - `tabId`
+      - : `integer`. ID of the tab to search. Defaults to the active tab.
+
+- `queryPhrase`
+  - : `string`. The text to search for.
 
 ### Return value
 
@@ -67,16 +64,16 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 
     Each `RangeData` contains the following properties:
 
-    - `framePos`
-      - : The index of the frame containing the match. 0 corresponds to the parent window. Note that the order of objects in the `rangeData` array will sequentially line up with the order of frame indexes: for example, `framePos` for the first sequence of `rangeData` objects will be 0, `framePos` for the next sequence will be 1, and so on.
-    - `startTextNodePos`
-      - : The ordinal position of the text node in which the match started.
-    - `endTextNodePos`
-      - : The ordinal position of the text node in which the match ended.
-    - `startOffset`
-      - : The ordinal position of the start of the match within its text node.
     - `endOffset`
       - : The ordinal position of the end of the match within its text node.
+    - `endTextNodePos`
+      - : The ordinal position of the text node in which the match ended.
+    - `framePos`
+      - : The index of the frame containing the match. 0 corresponds to the parent window. Note that the order of objects in the `rangeData` array will sequentially line up with the order of frame indexes: for example, `framePos` for the first sequence of `rangeData` objects will be 0, `framePos` for the next sequence will be 1, and so on.
+    - `startOffset`
+      - : The ordinal position of the start of the match within its text node.
+    - `startTextNodePos`
+      - : The ordinal position of the text node in which the match started.
 
 - `rectData` {{optional_inline}}
 
@@ -93,9 +90,13 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 
         For example, consider part of a web page that looks like this:
 
-        ![](rects-1.png)If you search for "You may", the match needs to be described by two rectangles:
+        ![Text reading "this domain is established to be used for illustrative examples in documents. You may use this domain in examples without prior coordination or asking for permission." and a "More information" link.](rects-1.png)
 
-        ![](rects-2.png)In this case, in the `RectData` that describes this match, `rectsAndTexts.rectList` and `rectsAndTexts.textList` will each have 2 items.
+        If you search for "You may", the match needs to be described by two rectangles:
+
+        ![This domain is established to be used for illustrative examples in documents. You may use this domain in examples without prior coordination or asking for permission.". The words "you may" are highlighted.](rects-2.png)
+
+        In this case, in the `RectData` that describes this match, `rectsAndTexts.rectList` and `rectsAndTexts.textList` will each have 2 items.
 
         - `textList[0]` will contain "You ", and `rectList[0]` will contain its bounding rectangle.
         - `textList[1]` will contain "may", and `rectList[1]` will contain _its_ bounding rectangle.
@@ -128,9 +129,9 @@ Search for "banana" across all tabs (note that this requires the "tabs" [permiss
 
 ```js
 async function findInAllTabs(allTabs) {
-  for (let tab of allTabs) {
-    let results = await browser.find.find("banana", {tabId: tab.id});
-    console.log(`In page "${tab.url}": ${results.count} matches.`)
+  for (const tab of allTabs) {
+    const results = await browser.find.find("banana", { tabId: tab.id });
+    console.log(`In page "${tab.url}": ${results.count} matches.`);
   }
 }
 
@@ -149,27 +150,26 @@ The background script:
 // background.js
 
 async function getContexts(matches) {
-
   // get the active tab ID
-  let activeTabArray = await browser.tabs.query({
-    active: true, currentWindow: true
+  const activeTabArray = await browser.tabs.query({
+    active: true,
+    currentWindow: true,
   });
-  let tabId = activeTabArray[0].id;
+  const tabId = activeTabArray[0].id;
 
   // execute the content script in the active tab
-  await browser.tabs.executeScript(tabId, {file: "get-context.js"});
+  await browser.tabs.executeScript(tabId, { file: "get-context.js" });
   // ask the content script to get the contexts for us
-  let contexts = await browser.tabs.sendMessage(tabId, {
-    ranges: matches.rangeData
+  const contexts = await browser.tabs.sendMessage(tabId, {
+    ranges: matches.rangeData,
   });
-  for (let context of contexts) {
+  for (const context of contexts) {
     console.log(context);
   }
-
 }
 
 browser.browserAction.onClicked.addListener((tab) => {
-  browser.find.find("example", {includeRangeData: true}).then(getContexts);
+  browser.find.find("example", { includeRangeData: true }).then(getContexts);
 });
 ```
 
@@ -180,9 +180,14 @@ The content script:
  * Get all the text nodes into a single array
  */
 function getNodes() {
-  let walker = document.createTreeWalker(document, window.NodeFilter.SHOW_TEXT, null, false);
-  let nodes = [];
-  while(node = walker.nextNode()) {
+  const walker = document.createTreeWalker(
+    document,
+    window.NodeFilter.SHOW_TEXT,
+    null,
+    false,
+  );
+  const nodes = [];
+  while ((node = walker.nextNode())) {
     nodes.push(node);
   }
 
@@ -196,11 +201,10 @@ function getNodes() {
  * of each node.
  */
 function getContexts(ranges) {
+  const contexts = [];
+  const nodes = getNodes();
 
-  let contexts = [];
-  let nodes = getNodes();
-
-  for (let range of ranges) {
+  for (const range of ranges) {
     let context = nodes[range.startTextNodePos].textContent;
     let pos = range.startTextNodePos;
     while (pos < range.endTextNodePos) {
@@ -221,7 +225,9 @@ browser.runtime.onMessage.addListener((message, sender, sendResponse) => {
 
 In this example the extension uses `rectData` to "redact" the matches, by adding black DIVs over the top of their bounding rectangles:
 
-![](redacted.png)Note that in many ways this is a poor way to redact pages.
+![Three search results with some texted redacted by black rectangles.](redacted.png)
+
+Note that in many ways this is a poor way to redact pages.
 
 The background script:
 
@@ -229,21 +235,21 @@ The background script:
 // background.js
 
 async function redact(matches) {
-
   // get the active tab ID
-  let activeTabArray = await browser.tabs.query({
-    active: true, currentWindow: true
+  const activeTabArray = await browser.tabs.query({
+    active: true,
+    currentWindow: true,
   });
-  let tabId = activeTabArray[0].id;
+  const tabId = activeTabArray[0].id;
 
   // execute the content script in the active tab
-  await browser.tabs.executeScript(tabId, {file: "redact.js"});
+  await browser.tabs.executeScript(tabId, { file: "redact.js" });
   // ask the content script to redact matches for us
-  await browser.tabs.sendMessage(tabId, {rects: matches.rectData});
+  await browser.tabs.sendMessage(tabId, { rects: matches.rectData });
 }
 
 browser.browserAction.onClicked.addListener((tab) => {
-  browser.find.find("banana", {includeRectData: true}).then(redact);
+  browser.find.find("banana", { includeRectData: true }).then(redact);
 });
 ```
 
@@ -256,13 +262,13 @@ The content script:
  * Add a black DIV where the rect is.
  */
 function redactRect(rect) {
-  let redaction = document.createElement("div");
+  const redaction = document.createElement("div");
   redaction.style.backgroundColor = "black";
   redaction.style.position = "absolute";
   redaction.style.top = `${rect.top}px`;
   redaction.style.left = `${rect.left}px`;
-  redaction.style.width = `${rect.right-rect.left}px`;
-  redaction.style.height = `${rect.bottom-rect.top}px`;
+  redaction.style.width = `${rect.right - rect.left}px`;
+  redaction.style.height = `${rect.bottom - rect.top}px`;
   document.body.appendChild(redaction);
 }
 
@@ -270,8 +276,8 @@ function redactRect(rect) {
  * Go through every rect, redacting them.
  */
 function redactAll(rectData) {
-  for (match of rectData) {
-    for (rect of match.rectsAndTexts.rectList) {
+  for (const match of rectData) {
+    for (const rect of match.rectsAndTexts.rectList) {
       redactRect(rect);
     }
   }

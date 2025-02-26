@@ -2,23 +2,18 @@
 title: SVGSVGElement
 slug: Web/API/SVGSVGElement
 page-type: web-api-interface
-tags:
-  - API
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG DOM
 browser-compat: api.SVGSVGElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGSVGElement`** interface provides access to the properties of {{SVGElement("svg")}} elements, as well as methods to manipulate them. This interface contains also various miscellaneous commonly-used utility methods, such as matrix operations and the ability to control the time of redraw on visual rendering devices.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
-_This interface also inherits properties from its parent, {{domxref("SVGGraphicsElement")}} and also implements the ones from {{domxref("SVGFitToViewBox")}}._
+_This interface also inherits properties from its parent, {{domxref("SVGGraphicsElement")}}._
 
 - {{domxref("SVGSVGElement.x")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("x")}} attribute of the given {{SVGElement("svg")}} element.
@@ -28,52 +23,51 @@ _This interface also inherits properties from its parent, {{domxref("SVGGraphics
   - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("width")}} attribute of the given {{SVGElement("svg")}} element.
 - {{domxref("SVGSVGElement.height")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("height")}} attribute of the given {{SVGElement("svg")}} element.
-- {{domxref("SVGSVGElement.contentScriptType")}}
-  - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("contentScriptType")}} attribute of the given {{SVGElement("svg")}} element.
-- {{domxref("SVGSVGElement.contentStyleType")}}
-  - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("contentStyleType")}} attribute of the given {{SVGElement("svg")}} element.
-- {{domxref("SVGSVGElement.pixelUnitToMillimeterX")}} {{deprecated_inline}}
+- {{domxref("SVGSVGElement.viewBox")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedRect")}} corresponding to the {{SVGAttr("viewBox")}} attribute of the given {{SVGElement("svg")}} element.
+- {{domxref("SVGSVGElement.preserveAspectRatio")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedPreserveAspectRatio")}} corresponding to the {{SVGAttr("preserveAspectRatio")}} attribute of the given {{SVGElement("svg")}} element.
+- {{domxref("SVGSVGElement.pixelUnitToMillimeterX")}} {{Deprecated_Inline}}
   - : A float representing the size of the pixel unit (as defined by CSS2) along the x-axis of the viewport, which represents a unit somewhere in the range of 70dpi to 120dpi, and, on systems that support this, might actually match the characteristics of the target medium. On systems where it is impossible to know the size of a pixel, a suitable default pixel size is provided.
-- {{domxref("SVGSVGElement.pixelUnitToMillimeterY")}} {{deprecated_inline}}
+- {{domxref("SVGSVGElement.pixelUnitToMillimeterY")}} {{Deprecated_Inline}}
   - : A float representing the size of a pixel unit along the y-axis of the viewport.
-- {{domxref("SVGSVGElement.screenPixelToMillimeterX")}} {{deprecated_inline}}
+- {{domxref("SVGSVGElement.screenPixelToMillimeterX")}} {{Deprecated_Inline}}
   - : User interface (UI) events in DOM Level 2 indicate the screen positions at which the given UI event occurred. When the browser actually knows the physical size of a "screen unit", this float attribute will express that information; otherwise, user agents will provide a suitable default value (such as `.28mm`).
-- {{domxref("SVGSVGElement.screenPixelToMillimeterY")}} {{deprecated_inline}}
+- {{domxref("SVGSVGElement.screenPixelToMillimeterY")}} {{Deprecated_Inline}}
   - : Corresponding size of a screen pixel along the y-axis of the viewport.
-- {{domxref("SVGSVGElement.useCurrentView")}}
-  - : The initial view (i.e., before magnification and panning) of the current innermost SVG document fragment can be either the "standard" view, i.e., based on attributes on the {{SVGElement("svg")}} element such as {{SVGAttr("viewBox")}}) or on a "custom" view (i.e., a hyperlink into a particular {{SVGElement("view")}} or other element). If the initial view is the "standard" view, then this attribute is `false`. If the initial view is a "custom" view, then this attribute is `true`.
-- {{domxref("SVGSVGElement.currentView")}}
+- {{domxref("SVGSVGElement.useCurrentView")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
+  - : The initial view (i.e., before magnification and panning) of the current innermost SVG document fragment can be either the "standard" view, i.e., based on attributes on the {{SVGElement("svg")}} element such as {{SVGAttr("viewBox")}} or on a "custom" view (i.e., a hyperlink into a particular {{SVGElement("view")}} or other element). If the initial view is the "standard" view, then this attribute is `false`. If the initial view is a "custom" view, then this attribute is `true`.
+- {{domxref("SVGSVGElement.currentView")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
 
   - : An {{domxref("SVGViewSpec")}} defining the initial view (i.e., before magnification and panning) of the current innermost SVG document fragment. The meaning depends on the situation: If the initial view was a "standard" view, then:
 
     - the values for {{SVGAttr("viewBox")}}, {{SVGAttr("preserveAspectRatio")}} and {{SVGAttr("zoomAndPan")}} within {{SVGAttr("currentView")}} will match the values for the corresponding DOM attributes that are on `SVGSVGElement` directly
-    - the values for {{SVGAttr("transform")}} and {{SVGAttr("viewTarget")}} within {{SVGAttr("currentView")}} will be `null`
+    - the value for {{SVGAttr("transform")}} within {{SVGAttr("currentView")}} will be `null`
 
     If the initial view was a link into a {{SVGElement("view")}} element, then:
 
     - the values for {{SVGAttr("viewBox")}}, {{SVGAttr("preserveAspectRatio")}} and {{SVGAttr("zoomAndPan")}} within {{SVGAttr("currentView")}} will correspond to the corresponding attributes for the given {{SVGElement("view")}} element
-    - the values for {{SVGAttr("transform")}} and {{SVGAttr("viewTarget")}} within {{SVGAttr("currentView")}} will be `null`
+    - the value for {{SVGAttr("transform")}} within {{SVGAttr("currentView")}} will be `null`
 
     If the initial view was a link into another element (i.e., other than a {{SVGElement("view")}}), then:
 
     - the values for {{SVGAttr("viewBox")}}, {{SVGAttr("preserveAspectRatio")}} and {{SVGAttr("zoomAndPan")}} within {{SVGAttr("currentView")}} will match the values for the corresponding DOM attributes that are on `SVGSVGElement` directly for the closest ancestor {{SVGElement("svg")}} element
     - the values for {{SVGAttr("transform")}} within {{SVGAttr("currentView")}} will be `null`
-    - the {{SVGAttr("viewTarget")}} within {{SVGAttr("currentView")}} will represent the target of the link
 
     If the initial view was a link into the SVG document fragment using an SVG view specification fragment identifier (i.e., `#svgView(…)`), then:
 
-    - the values for {{SVGAttr("viewBox")}}, {{SVGAttr("preserveAspectRatio")}}, {{SVGAttr("zoomAndPan")}}, {{SVGAttr("transform")}} and {{SVGAttr("viewTarget")}} within {{SVGAttr("currentView")}} will correspond to the values from the SVG view specification fragment identifier
+    - the values for {{SVGAttr("viewBox")}}, {{SVGAttr("preserveAspectRatio")}}, {{SVGAttr("zoomAndPan")}}, {{SVGAttr("transform")}} within {{SVGAttr("currentView")}} will correspond to the values from the SVG view specification fragment identifier
 
 - {{domxref("SVGSVGElement.currentScale")}}
   - : On an outermost {{SVGElement("svg")}} element, this float attribute indicates the current scale factor relative to the initial view to take into account user magnification and panning operations. DOM attributes `currentScale` and `currentTranslate` are equivalent to the 2×3 matrix `[a b c d e f] = [currentScale 0 0 currentScale currentTranslate.x currentTranslate.y]`. If "magnification" is enabled (i.e., `zoomAndPan="magnify"`), then the effect is as if an extra transformation were placed at the outermost level on the SVG document fragment (i.e., outside the outermost {{SVGElement("svg")}} element).
 - {{domxref("SVGSVGElement.currentTranslate")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGPoint")}} representing the translation factor that takes into account user "magnification" corresponding to an outermost {{SVGElement("svg")}} element. The behavior is undefined for `<svg>` elements that are not at the outermost level.
 
-## Methods
+## Instance methods
 
-_This interface also inherits methods from its parent, {{domxref("SVGGraphicsElement")}} and also implements the ones from {{domxref("SVGFitToViewBox")}}._
+_This interface also inherits methods from its parent, {{domxref("SVGGraphicsElement")}}._
 
-- {{domxref("SVGSVGElement.suspendRedraw()")}} {{deprecated_inline}}
+- {{domxref("SVGSVGElement.suspendRedraw()")}} {{Deprecated_Inline}}
 
   - : Takes a time-out value which indicates that redraw shall not occur until:
 
@@ -84,22 +78,22 @@ _This interface also inherits methods from its parent, {{domxref("SVGGraphicsEle
     To suspend redraw actions as a collection of SVG DOM changes occur, precede the changes to the SVG DOM with a method call similar to:
 
     ```js
-    const suspendHandleID = suspendRedraw(maxWaitMilliseconds)
+    const suspendHandleID = suspendRedraw(maxWaitMilliseconds);
     ```
 
     and follow the changes with a method call similar to:
 
     ```js
-    unsuspendRedraw(suspendHandleID)
+    unsuspendRedraw(suspendHandleID);
     ```
 
     Note that multiple `suspendRedraw()` calls can be used at once, and that each such method call is treated independently of the other `suspendRedraw()` method calls.
 
-- {{domxref("SVGSVGElement.unsuspendRedraw()")}} {{deprecated_inline}}
+- {{domxref("SVGSVGElement.unsuspendRedraw()")}} {{Deprecated_Inline}}
   - : Cancels a specified `suspendRedraw()` by providing a unique suspend handle ID that was returned by a previous `suspendRedraw()` call.
-- {{domxref("SVGSVGElement.unsuspendRedrawAll()")}} {{deprecated_inline}}
+- {{domxref("SVGSVGElement.unsuspendRedrawAll()")}} {{Deprecated_Inline}}
   - : Cancels all currently active `suspendRedraw()` method calls. This method is most useful at the very end of a set of SVG DOM calls to ensure that all pending `suspendRedraw()` method calls have been cancelled.
-- {{domxref("SVGSVGElement.forceRedraw()")}} {{deprecated_inline}}
+- {{domxref("SVGSVGElement.forceRedraw()")}} {{Deprecated_Inline}}
   - : In rendering environments supporting interactivity, forces the user agent to immediately redraw all regions of the viewport that require updating.
 - {{domxref("SVGSVGElement.pauseAnimations()")}}
   - : Suspends (i.e., pauses) all currently running animations that are defined within the SVG document fragment corresponding to this {{SVGElement("svg")}} element, causing the animation clock corresponding to this document fragment to stand still until it is unpaused.
@@ -130,7 +124,7 @@ _This interface also inherits methods from its parent, {{domxref("SVGGraphicsEle
 - {{domxref("SVGSVGElement.createSVGPoint()")}}
   - : Creates an {{domxref("SVGPoint")}} object outside of any document trees. The object is initialized to the point `(0,0)` in the user coordinate system.
 - {{domxref("SVGSVGElement.createSVGMatrix()")}}
-  - : Creates an {{domxref("SVGMatrix")}} object outside of any document trees. The object is initialized to the identity matrix.
+  - : Creates a {{domxref("DOMMatrix")}} object outside of any document trees. The object is initialized to the identity matrix.
 - {{domxref("SVGSVGElement.createSVGRect()")}}
   - : Creates an {{domxref("SVGRect")}} object outside of any document trees. The object is initialized such that all values are set to `0` user units.
 - {{domxref("SVGSVGElement.createSVGTransform()")}}
@@ -144,7 +138,8 @@ _This interface also inherits methods from its parent, {{domxref("SVGGraphicsEle
 
 The following {{domxref("Window")}} `onXYZ` event handler properties are also available as aliases targeting the `window` object. However, it is advised to listen to them on the `window` object directly rather than on `SVGSVGElement`.
 
-> **Note:** Using `addEventListener()` on `SVGSVGElement` will not work for the `onXYZ` event handlers listed below. Listen to the events on the {{domxref("window")}} object instead.
+> [!NOTE]
+> Using `addEventListener()` on `SVGSVGElement` will not work for the `onXYZ` event handlers listed below. Listen to the events on the {{domxref("window")}} object instead.
 
 - {{domxref("window.afterprint_event", "SVGSVGElement.onafterprint")}}
   - : Fired after the associated document has started printing or the print preview has been closed.

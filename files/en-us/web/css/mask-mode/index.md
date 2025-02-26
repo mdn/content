@@ -1,17 +1,15 @@
 ---
 title: mask-mode
 slug: Web/CSS/mask-mode
-tags:
-  - CSS
-  - CSS Masking
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.mask-mode
 ---
+
 {{CSSRef}}
 
 The **`mask-mode`** [CSS](/en-US/docs/Web/CSS) property sets whether the mask reference defined by {{cssxref("mask-image")}} is treated as a luminance or alpha mask.
+
+## Syntax
 
 ```css
 /* Keyword values */
@@ -29,8 +27,6 @@ mask-mode: revert;
 mask-mode: revert-layer;
 mask-mode: unset;
 ```
-
-## Syntax
 
 The `mask-mode` property is specified as one or more of the keyword values listed below, separated by commas.
 
@@ -58,7 +54,22 @@ The `mask-mode` property is specified as one or more of the keyword values liste
 
 ### Using alpha mask mode
 
-{{EmbedGHLiveSample("css-examples/masking/mask-mode.html", '100%', 760)}}
+```html live-sample___mask-mode-example
+<div class="masked"></div>
+```
+
+```css live-sample___mask-mode-example
+.masked {
+  width: 227px;
+  height: 200px;
+  background: blue linear-gradient(red, blue);
+
+  mask-image: url(https://mdn.github.io/shared-assets/images/examples/mdn.svg);
+  mask-mode: alpha;
+}
+```
+
+{{EmbedLiveSample("mask-mode-example", "", "250px")}}
 
 ## Specifications
 

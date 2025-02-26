@@ -1,26 +1,47 @@
 ---
 title: handler.preventExtensions()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/preventExtensions
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Proxy
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Proxy.handler.preventExtensions
 ---
+
 {{JSRef}}
 
-The **`handler.preventExtensions()`** method is a trap for {{jsxref("Object.preventExtensions()")}}.
+The **`handler.preventExtensions()`** method is a trap for the `[[PreventExtensions]]` [object internal method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy#object_internal_methods), which is used by operations such as {{jsxref("Object.preventExtensions()")}}.
 
-{{EmbedInteractiveExample("pages/js/proxyhandler-preventextensions.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: handler.preventExtensions()", "taller")}}
+
+```js interactive-example
+const monster1 = {
+  canEvolve: true,
+};
+
+const handler1 = {
+  preventExtensions(target) {
+    target.canEvolve = false;
+    Object.preventExtensions(target);
+    return true;
+  },
+};
+
+const proxy1 = new Proxy(monster1, handler1);
+
+console.log(monster1.canEvolve);
+// Expected output: true
+
+Object.preventExtensions(proxy1);
+
+console.log(monster1.canEvolve);
+// Expected output: false
+```
 
 ## Syntax
 
-```js
+```js-nolint
 new Proxy(target, {
   preventExtensions(target) {
   }
-});
+})
 ```
 
 ### Parameters
@@ -32,11 +53,11 @@ The following parameter is passed to the `preventExtensions()` method. `this` is
 
 ### Return value
 
-The `preventExtensions()` method must return a boolean value.
+The `preventExtensions()` method must return a {{jsxref("Boolean")}} indicating whether or not the operation was successful. Other values are [coerced to booleans](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean#boolean_coercion).
+
+Many operations, including {{jsxref("Object.preventExtensions()")}}, throw a {{jsxref("TypeError")}} if the `[[PreventExtensions]]` internal method returns `false`.
 
 ## Description
-
-The **`handler.preventExtensions()`** method is a trap for {{jsxref("Object.preventExtensions()")}}.
 
 ### Interceptions
 
@@ -47,11 +68,13 @@ This trap can intercept these operations:
 - {{jsxref("Object.seal()")}}
 - {{jsxref("Object.freeze()")}}
 
+Or any other operation that invokes the `[[PreventExtensions]]` [internal method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy#object_internal_methods).
+
 ### Invariants
 
-If the following invariants are violated, the proxy will throw a {{jsxref("TypeError")}}:
+The proxy's `[[PreventExtensions]]` internal method throws a {{jsxref("TypeError")}} if the handler definition violates one of the following invariants:
 
-- `Object.preventExtensions(proxy)` only returns `true` if `Object.isExtensible(proxy)` is `false`.
+- The result is only `true` if {{jsxref("Reflect.isExtensible()")}} on the target object returns `false` after calling `handler.preventExtensions()`.
 
 ## Examples
 
@@ -60,26 +83,33 @@ If the following invariants are violated, the proxy will throw a {{jsxref("TypeE
 The following code traps {{jsxref("Object.preventExtensions()")}}.
 
 ```js
-const p = new Proxy({}, {
-  preventExtensions(target) {
-    console.log('called');
-    Object.preventExtensions(target);
-    return true;
-  }
-});
+const p = new Proxy(
+  {},
+  {
+    preventExtensions(target) {
+      console.log("called");
+      Object.preventExtensions(target);
+      return true;
+    },
+  },
+);
 
-console.log(Object.preventExtensions(p)); // "called"
-                                          // false
+console.log(Object.preventExtensions(p));
+// "called"
+// false
 ```
 
 The following code violates the invariant.
 
 ```js example-bad
-const p = new Proxy({}, {
-  preventExtensions(target) {
-    return true;
-  }
-});
+const p = new Proxy(
+  {},
+  {
+    preventExtensions(target) {
+      return true;
+    },
+  },
+);
 
 Object.preventExtensions(p); // TypeError is thrown
 ```
@@ -95,6 +125,6 @@ Object.preventExtensions(p); // TypeError is thrown
 ## See also
 
 - {{jsxref("Proxy")}}
-- {{jsxref("Proxy.handler", "handler")}}
+- [`Proxy()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy)
 - {{jsxref("Object.preventExtensions()")}}
 - {{jsxref("Reflect.preventExtensions()")}}

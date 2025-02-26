@@ -1,14 +1,12 @@
 ---
-title: Event.composedPath()
+title: "Event: composedPath() method"
+short-title: composedPath()
 slug: Web/API/Event/composedPath
 page-type: web-api-instance-method
-tags:
-  - Method
-  - Reference
-  - Web Components
 browser-compat: api.Event.composedPath
 ---
-{{APIRef("Shadow DOM")}}
+
+{{APIRef("Shadow DOM")}}{{AvailableInWorkers}}
 
 The **`composedPath()`** method of the {{domxref("Event")}}
 interface returns the event's path which is an array of the objects on which listeners
@@ -17,8 +15,8 @@ created with its {{domxref("ShadowRoot.mode")}} closed.
 
 ## Syntax
 
-```js
-const composed = Event.composedPath();
+```js-nolint
+composedPath()
 ```
 
 ### Parameters
@@ -40,32 +38,34 @@ between the two is that their shadow roots are attached with their modes set to
 `open` and `closed` respectively.
 
 ```js
-customElements.define('open-shadow',
+customElements.define(
+  "open-shadow",
   class extends HTMLElement {
     constructor() {
       super();
 
-      const pElem = document.createElement('p');
-      pElem.textContent = this.getAttribute('text');
+      const pElem = document.createElement("p");
+      pElem.textContent = this.getAttribute("text");
 
-      const shadowRoot = this.attachShadow({mode: 'open'});
+      const shadowRoot = this.attachShadow({ mode: "open" });
       shadowRoot.appendChild(pElem);
     }
-  }
+  },
 );
 
-customElements.define('closed-shadow',
+customElements.define(
+  "closed-shadow",
   class extends HTMLElement {
     constructor() {
       super();
 
-      const pElem = document.createElement('p');
-      pElem.textContent = this.getAttribute('text');
+      const pElem = document.createElement("p");
+      pElem.textContent = this.getAttribute("text");
 
-      const shadowRoot = this.attachShadow({mode: 'closed'});
+      const shadowRoot = this.attachShadow({ mode: "closed" });
       shadowRoot.appendChild(pElem);
     }
-  }
+  },
 );
 ```
 
@@ -79,7 +79,7 @@ We then insert one of each element into our page:
 Then include a click event listener on the `<html>` element:
 
 ```js
-document.querySelector('html').addEventListener('click',function(e) {
+document.querySelector("html").addEventListener("click", (e) => {
   console.log(e.composed);
   console.log(e.composedPath());
 });
@@ -92,13 +92,13 @@ event is always able to propagate across shadow boundaries. Second, you'll notic
 difference in the value of `composedPath` for the two elements. The
 `<open-shadow>` element's composed path is this:
 
-```
+```plain
 Array [ p, ShadowRoot, open-shadow, body, html, HTMLDocument https://mdn.github.io/web-components-examples/composed-composed-path/, Window ]
 ```
 
 Whereas the `<closed-shadow>` element's composed path is a follows:
 
-```
+```plain
 Array [ closed-shadow, body, html, HTMLDocument https://mdn.github.io/web-components-examples/composed-composed-path/, Window ]
 ```
 

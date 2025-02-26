@@ -1,13 +1,12 @@
 ---
-title: Event.preventDefault()
+title: "Event: preventDefault() method"
+short-title: preventDefault()
 slug: Web/API/Event/preventDefault
 page-type: web-api-instance-method
-tags:
-  - Method
-  - Reference
 browser-compat: api.Event.preventDefault
 ---
-{{apiref("DOM")}}
+
+{{APIRef("DOM")}}{{AvailableInWorkers}}
 
 The **`preventDefault()`** method of the {{domxref("Event")}} interface tells the {{Glossary("user agent")}} that if the event does not get explicitly handled, its default action should not be taken as it normally would be.
 
@@ -22,10 +21,12 @@ non-cancelable event, such as one dispatched via
 {{domxref("EventTarget.dispatchEvent()")}}, without specifying
 `cancelable: true` has no effect.
 
+If a passive listener calls `preventDefault()`, nothing will happen and a console warning may be generated.
+
 ## Syntax
 
-```js
-event.preventDefault();
+```js-nolint
+preventDefault()
 ```
 
 ## Examples
@@ -38,10 +39,15 @@ demonstrates how to prevent that from happening:
 #### JavaScript
 
 ```js
-document.querySelector("#id-checkbox").addEventListener("click", function(event) {
-         document.getElementById("output-box").innerHTML += "Sorry! <code>preventDefault()</code> won't let you check this!<br>";
-         event.preventDefault();
-}, false);
+const checkbox = document.querySelector("#id-checkbox");
+
+checkbox.addEventListener("click", checkboxClick, false);
+
+function checkboxClick(event) {
+  const warn = "preventDefault() won't let you check this!\n";
+  document.getElementById("output-box").innerText += warn;
+  event.preventDefault();
+}
 ```
 
 #### HTML
@@ -51,7 +57,7 @@ document.querySelector("#id-checkbox").addEventListener("click", function(event)
 
 <form>
   <label for="id-checkbox">Checkbox:</label>
-  <input type="checkbox" id="id-checkbox"/>
+  <input type="checkbox" id="id-checkbox" />
 </form>
 
 <div id="output-box"></div>
@@ -64,19 +70,20 @@ document.querySelector("#id-checkbox").addEventListener("click", function(event)
 ### Stopping keystrokes from reaching an edit field
 
 The following example demonstrates how invalid text input can be stopped from reaching
-the input field with `preventDefault()`. Nowadays, you should usually use [native HTML form validation](/en-US/docs/Learn/Forms/Form_validation)
+the input field with `preventDefault()`. Nowadays, you should usually use [native HTML form validation](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation)
 instead.
 
 #### HTML
 
-Here's the form:
+The HTML form below captures user input.
+Since we're only interested in keystrokes, we're disabling `autocomplete` to prevent the browser from filling in the input field with cached values.
 
 ```html
 <div class="container">
   <p>Please enter your name using lowercase letters only.</p>
 
   <form>
-    <input type="text" id="my-textbox">
+    <input type="text" id="my-textbox" autocomplete="off" />
   </form>
 </div>
 ```
@@ -100,11 +107,11 @@ invalid key:
 #### JavaScript
 
 And here's the JavaScript code that does the job. First, listen for
-{{domxref("Element/keypress_event", "keypress")}} events:
+{{domxref("Element/keydown_event", "keydown")}} events:
 
 ```js
-const myTextbox = document.getElementById('my-textbox');
-myTextbox.addEventListener('keypress', checkName, false);
+const myTextbox = document.getElementById("my-textbox");
+myTextbox.addEventListener("keydown", checkName, false);
 ```
 
 The `checkName()` function, which looks at the pressed key and decides
@@ -112,15 +119,11 @@ whether to allow it:
 
 ```js
 function checkName(evt) {
-  const charCode = evt.charCode;
-  if (charCode !== 0) {
-    if (charCode < 97 || charCode > 122) {
-      evt.preventDefault();
-      displayWarning(
-        "Please use lowercase letters only.\n" +
-        `charCode: ${charCode}\n`
-      );
-    }
+  const key = evt.key;
+  const lowerCaseAlphabet = "abcdefghijklmnopqrstuvwxyz";
+  if (!lowerCaseAlphabet.includes(key)) {
+    evt.preventDefault();
+    displayWarning(`Please use lowercase letters only.\nKey pressed: ${key}\n`);
   }
 }
 ```
@@ -134,19 +137,19 @@ const warningBox = document.createElement("div");
 warningBox.className = "warning";
 
 function displayWarning(msg) {
-  warningBox.innerHTML = msg;
+  warningBox.innerText = msg;
 
   if (document.body.contains(warningBox)) {
-    window.clearTimeout(warningTimeout);
+    clearTimeout(warningTimeout);
   } else {
     // insert warningBox after myTextbox
     myTextbox.parentNode.insertBefore(warningBox, myTextbox.nextSibling);
   }
 
-  warningTimeout = window.setTimeout(function() {
-      warningBox.parentNode.removeChild(warningBox);
-      warningTimeout = -1;
-    }, 2000);
+  warningTimeout = setTimeout(() => {
+    warningBox.parentNode.removeChild(warningBox);
+    warningTimeout = -1;
+  }, 2000);
 }
 ```
 

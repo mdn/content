@@ -1,15 +1,11 @@
 ---
-title: CharacterData.replaceWith()
+title: "CharacterData: replaceWith() method"
+short-title: replaceWith()
 slug: Web/API/CharacterData/replaceWith
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Method
-  - CharacterData
-  - Reference
 browser-compat: api.CharacterData.replaceWith
 ---
+
 {{APIRef("DOM")}}
 
 The **`replaceWith()`** method of the {{domxref("CharacterData")}} interface
@@ -20,8 +16,8 @@ Strings are inserted as {{domxref("Text")}} nodes; the string is being passed as
 
 ## Syntax
 
-```js
-replaceWith(nodes)
+```js-nolint
+replaceWith(...nodes)
 ```
 
 ### Parameters
@@ -29,7 +25,8 @@ replaceWith(nodes)
 - `nodes` {{optional_inline}}
   - : A comma-separated list of {{domxref("Node")}} objects or strings that will replace the current node.
 
-> **Note:** If there no argument is passed, this method acts just remove the node from the DOM tree.
+> [!NOTE]
+> If no arguments are passed in, this method removes the node from the DOM tree.
 
 ### Return value
 
@@ -47,7 +44,7 @@ None ({{jsxref("undefined")}}).
 ```
 
 ```js
-let text = document.getElementById('myText').firstChild;
+let text = document.getElementById("myText").firstChild;
 let em = document.createElement("em");
 em.textContent = "Italic text";
 
@@ -67,3 +64,5 @@ text.replaceWith(em); // Replace `Some text` by `Italic text`
 ## See also
 
 - {{domxref("CharacterData.replaceData()")}}
+- {{domxref("DocumentType.replaceWith()")}}
+- {{domxref("Element.replaceWith()")}}

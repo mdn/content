@@ -1,17 +1,11 @@
 ---
-title: HTMLInputElement.webkitEntries
+title: "HTMLInputElement: webkitEntries property"
+short-title: webkitEntries
 slug: Web/API/HTMLInputElement/webkitEntries
 page-type: web-api-instance-property
-tags:
-  - API
-  - File and Directory Entries API
-  - Files
-  - HTML DOM
-  - HTMLInputElement
-  - Property
-  - webkitEntries
 browser-compat: api.HTMLInputElement.webkitEntries
 ---
+
 {{APIRef("File and Directory Entries API")}}
 
 The read-only **`webkitEntries`**
@@ -26,7 +20,8 @@ The array can only contain directories if the
 `true`. This means the `<input>` element was configured to
 let the user choose directories.
 
-> **Note:** This property is called `webkitEntries` in the specification due to its
+> [!NOTE]
+> This property is called `webkitEntries` in the specification due to its
 > origins as a Google Chrome-specific API. It's likely to be renamed someday.
 
 ## Value
@@ -44,14 +39,14 @@ and process the selected files.
 ### HTML
 
 ```html
-<input id="files" type="file" multiple>
+<input id="files" type="file" multiple />
 ```
 
 ### JavaScript
 
 ```js
-document.getElementById("files").addEventListener("change", function(event) {
-  event.target.webkitEntries.forEach(function(entry) {
+document.getElementById("files").addEventListener("change", (event) => {
+  event.target.webkitEntries.forEach((entry) => {
     /* do stuff with the entry */
   });
 });
@@ -71,7 +66,6 @@ files, obtaining their {{domxref("FileSystemEntry")}}-based objects and acting o
 ## See also
 
 - [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
-- [Introduction to the File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
 - {{domxref("HTMLInputElement")}}
 - {{domxref("FileSystemEntry")}}
 - {{domxref("FileSystem")}}

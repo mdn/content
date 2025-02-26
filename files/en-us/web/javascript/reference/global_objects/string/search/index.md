@@ -1,26 +1,32 @@
 ---
 title: String.prototype.search()
 slug: Web/JavaScript/Reference/Global_Objects/String/search
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - Regular Expressions
-  - String
-  - Polyfill
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.search
 ---
+
 {{JSRef}}
 
-The **`search()`** method executes a search for a match between
-a regular expression and this {{jsxref("String")}} object.
+The **`search()`** method of {{jsxref("String")}} values executes a search for a match between a regular expression and this string, returning the index of the first match in the string.
 
-{{EmbedInteractiveExample("pages/js/string-search.html")}}
+{{InteractiveExample("JavaScript Demo: String.search()")}}
+
+```js interactive-example
+const paragraph = "I think Ruth's dog is cuter than your dog!";
+
+// Anything not a word character, whitespace or apostrophe
+const regex = /[^\w\s']/g;
+
+console.log(paragraph.search(regex));
+// Expected output: 41
+
+console.log(paragraph[paragraph.search(regex)]);
+// Expected output: "!"
+```
 
 ## Syntax
 
-```js
+```js-nolint
 search(regexp)
 ```
 
@@ -28,40 +34,37 @@ search(regexp)
 
 - `regexp`
 
-  - : A [regular expression](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) object.
+  - : A regular expression object, or any object that has a [`Symbol.search`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/search) method.
 
-    If a non-RegExp object `regexp` is passed, it is implicitly
-    converted to a {{jsxref("RegExp")}} with `new RegExp(regexp)`.
+    If `regexp` is not a `RegExp` object and does not have a `Symbol.search` method, it is implicitly converted to a {{jsxref("RegExp")}} by using `new RegExp(regexp)`.
 
 ### Return value
 
-The index of the first match between the regular expression and the given string, or
-`-1` if no match was found.
+The index of the first match between the regular expression and the given string, or `-1` if no match was found.
 
 ## Description
 
-When you want to know whether a pattern is found, and _also_ know its index
-within a string, use `search()`. (If you only want to know if it exists, use
-the similar {{jsxref("RegExp.prototype.test()", "test()")}} method on the
-`RegExp` prototype, which returns a boolean.)
+The implementation of `String.prototype.search()` doesn't do much other than calling the `Symbol.search` method of the argument with the string as the first parameter. The actual implementation comes from [`RegExp.prototype[Symbol.search]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.search).
 
-For more information (but slower execution) use {{jsxref("String.prototype.match()",
-  "match()")}} (similar to the regular expression {{jsxref("RegExp.prototype.exec()",
-  "exec()")}} method).
+The `g` flag of `regexp` has no effect on the `search()` result, and the search always happens as if the regex's `lastIndex` is 0. For more information on the behavior of `search()`, see [`RegExp.prototype[Symbol.search]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.search).
+
+When you want to know whether a pattern is found, and _also_ know its index within a string, use `search()`.
+
+- If you only want to know if it exists, use the {{jsxref("RegExp.prototype.test()")}} method, which returns a boolean.
+- If you need the content of the matched text, use {{jsxref("String.prototype.match()")}} or {{jsxref("RegExp.prototype.exec()")}}.
 
 ## Examples
 
 ### Using search()
 
-The following example searches a string with two different regex objects to show a
-successful search (positive value) vs. an unsuccessful search (`-1`)
+The following example searches a string with two different regex objects to show a successful search (positive value) vs. an unsuccessful search (`-1`).
 
 ```js
-let str = "hey JudE"
-let re = /[A-Z]/g
-let reDot = /[.]/g
-console.log(str.search(re))    // returns 4, which is the index of the first capital letter "J"
-console.log(str.search(reDot)) // returns -1 cannot find '.' dot punctuation
+const str = "hey JudE";
+const re = /[A-Z]/;
+const reDot = /[.]/;
+console.log(str.search(re)); // returns 4, which is the index of the first capital letter "J"
+console.log(str.search(reDot)); // returns -1 cannot find '.' dot punctuation
 ```
 
 ## Specifications
@@ -75,6 +78,7 @@ console.log(str.search(reDot)) // returns -1 cannot find '.' dot punctuation
 ## See also
 
 - [Polyfill of `String.prototype.search` in `core-js` with fixes and implementation of modern behavior like `Symbol.search` support](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
-- [Using regular expressions in JavaScript](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)
+- [Regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions) guide
 - {{jsxref("String.prototype.match()")}}
 - {{jsxref("RegExp.prototype.exec()")}}
+- [`RegExp.prototype[Symbol.search]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.search)

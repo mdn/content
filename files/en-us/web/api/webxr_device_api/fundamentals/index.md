@@ -2,22 +2,8 @@
 title: Fundamentals of WebXR
 slug: Web/API/WebXR_Device_API/Fundamentals
 page-type: guide
-tags:
-  - API
-  - AR
-  - Getting Started
-  - Guide
-  - Reality
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - augmented
-  - basics
-  - memory
 ---
+
 {{DefaultAPISidebar("WebXR Device API")}}
 
 WebXR, with the [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API) at its core, provides the functionality needed to bring both augmented and virtual reality (AR and VR) to the web. Together, these technologies are referred to as **mixed reality (MR)** or **cross reality (XR)**. Mixed reality is a large and complex subject, with much to learn and many other APIs to bring together to create an engaging experience for users.
@@ -30,7 +16,7 @@ WebXR is an API for web content and apps to use to interface with mixed reality 
 
 WebXR additionally provides support for accepting inputs from control devices such as handheld VR controllers or specialized mixed reality gamepads.
 
-*WebXR is not a rendering technology and does not provide features for managing 3D data or rendering it to the display.* This is an important fact to keep in mind. While WebXR manages the timing, scheduling, and the various points of view relevant when drawing the scene, it does *not* know how to load and manage models, nor how to render and texture them, and so forth. That part is entirely up to you. Fortunately, WebGL and the various WebGL-based frameworks and libraries are available to make it much easier to deal with all of that.
+_WebXR is not a rendering technology and does not provide features for managing 3D data or rendering it to the display._ This is an important fact to keep in mind. While WebXR manages the timing, scheduling, and the various points of view relevant when drawing the scene, it does _not_ know how to load and manage models, nor how to render and texture them, and so forth. That part is entirely up to you. Fortunately, WebGL and the various WebGL-based frameworks and libraries are available to make it much easier to deal with all of that.
 
 ### How is WebXR different from WebVR?
 
@@ -48,7 +34,7 @@ Before getting into too much detail, let's consider some basic concepts that you
 
 The term **field of view** (**FOV**) is one which applies to any visual technology, from old film cameras to modern digital video cameras, including the cameras in computers and mobile devices.
 
-![](binocular-vision.svg)
+![Diagram showing binocular vision.](binocular-vision.svg)
 
 #### What is field of view?
 
@@ -58,7 +44,7 @@ A human eye is able to take in a FOV of around 135°. Assuming a person has two 
 
 The drawing shown here demonstrates the concept of FOV: blue wedge for the left eye, red wedge for the right eye. The light brown overlapping area is where the viewer has binocular vision and can perceive depth. If you look carefully, you'll see that each eye sees the die slightly differently, and the combined view blends the two into a 3D shape.
 
-Generally, applications only define and manage the horizontal FOV. For more details, see {{SectionOnPage("/en-US/docs/Web/API/WebXR_Device_API/Rendering", "The optics of 3D")}}.
+Generally, applications only define and manage the horizontal FOV. For more details, see [The optics of 3D](/en-US/docs/Web/API/WebXR_Device_API/Rendering#the_optics_of_3d).
 
 #### Field of view and mixed reality devices
 
@@ -124,7 +110,7 @@ Simpler and lower-priced XR devices typically use an integrated computer or conn
 
 Most immersive VR experiences take place using goggles or a headset of some kind. A VR headset is worn on the head, with a strap that goes behind the head to fasten it in place, and one or two displays whose screens are focused into the eyes using lenses. By presenting a slightly different image to each eye, the illusion of depth is created, giving the user a simulated 3D experience.
 
-![Drawing of a standard VR headset](publicdomainq-virtual_reality_headset.svg)
+![Drawing of a standard VR headset](publicdomain-virtual_reality_headset.svg)
 
 The vast majority of headsets use a single display whose frame is divided in half, with one half focused onto each of the user's eyes. For example, if a headset uses a 2560x1440 screen, with the left half being used for the left eye's view and the right half for the right eye's view, the framebuffer is used like this:
 
@@ -132,7 +118,7 @@ The vast majority of headsets use a single display whose frame is divided in hal
 
 The simplest headsets have no integrated sensors, and focus each half of the screen into the corresponding eye. A common example of this is [Google Cardboard](https://arvr.google.com/cardboard/), a type of headset first created by Google which can be cheaply created using cardboard or other inexpensive materials. These devices often work by snapping your phone into the headset so that its screen and onboard graphics processor can be used to render and display the XR scene.
 
-More advanced headsets have integrated displays and are strapped to the head using an elastic or strap or a strap with Velcro closure.  These headsets may include integrated speakers and microphone, and/or connectors to attach external ones. Additionally, these headsets may have various sensors for detecting when the headset moves through space. The types and number of sensors included will determine how many [degrees of freedom](#degrees_of_freedom) the user has.
+More advanced headsets have integrated displays and are strapped to the head using an elastic or strap or a strap with Velcro closure. These headsets may include integrated speakers and microphone, and/or connectors to attach external ones. Additionally, these headsets may have various sensors for detecting when the headset moves through space. The types and number of sensors included will determine how many [degrees of freedom](#degrees_of_freedom) the user has.
 
 ### Goggles and glasses
 

@@ -1,25 +1,18 @@
 ---
-title: Document.getSelection()
+title: "Document: getSelection() method"
+short-title: getSelection()
 slug: Web/API/Document/getSelection
 page-type: web-api-instance-method
-tags:
-  - API
-  - Document
-  - Method
-  - Reference
-  - getSelection
 browser-compat: api.Document.getSelection
 ---
+
 {{APIRef("DOM")}}
 
-The **`getSelection()`** property of
-the {{DOMxRef("Document")}} interface returns a {{DOMxRef("Selection")}}
-object representing the range of text selected by the user, or the current position of
-the caret.
+The **`getSelection()`** method of the {{DOMxRef("Document")}} interface returns the {{DOMxRef("Selection")}} object associated with this document, representing the range of text selected by the user, or the current position of the caret.
 
 ## Syntax
 
-```js
+```js-nolint
 getSelection()
 ```
 
@@ -29,15 +22,15 @@ None.
 
 ### Return value
 
-A {{DOMxRef("Selection")}} object.
+A {{DOMxRef("Selection")}} object, or `null` if the document has no [browsing context](/en-US/docs/Glossary/Browsing_context) (for example, it is the document of an {{htmlelement("iframe")}} that is not attached to a document).
 
 ## Examples
 
 ### Getting a Selection object
 
 ```js
-let selection = document.getSelection();
-let selRange = selection.getRangeAt(0);
+const selection = document.getSelection();
+const selRange = selection.getRangeAt(0);
 // do stuff with the range
 
 console.log(selection); // Selection object
@@ -62,8 +55,7 @@ let selectedText = selection.toString();
 
 ## Related objects
 
-You can call {{domxref("Window.getSelection()")}}, which works identically to
-`Document.getSelection()`.
+You can call {{domxref("Window.getSelection()")}}, which is identical to `window.document.getSelection()`.
 
 It is worth noting that currently `getSelection()` doesn't work on the
 content of {{htmlelement("input")}} elements in Firefox.

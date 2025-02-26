@@ -1,16 +1,11 @@
 ---
 title: Negate
 slug: WebAssembly/Reference/Numeric/Negate
-tags:
-  - WebAssembly
-  - wasm
-  - Reference
-  - Numeric
-  - Something
+page-type: webassembly-instruction
+sidebar: webassemblysidebar
 ---
-{{WebAssemblySidebar}}
 
-The **`neg`** instructions, short for *negate*, are used to negate a number. That is, turn a positive number into a negative number and a negative number into a positive number.
+The **`neg`** instructions, short for _negate_, are used to negate a number. That is, turn a positive number into a negative number and a negative number into a positive number.
 
 {{EmbedInteractiveExample("pages/wat/neg.html", "tabbed-standard")}}
 
@@ -20,10 +15,10 @@ The **`neg`** instructions, short for *negate*, are used to negate a number. Tha
 ;; load a number onto the stack
 f32.const 2.7
 
-;; round down
+;; negate
 f32.neg
 
-;; the top item on the stack will now be 2
+;; the top item on the stack will now be -2.7
 ```
 
 | Instruction | Binary opcode |

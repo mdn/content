@@ -1,32 +1,33 @@
 ---
 title: unicode-bidi
 slug: Web/SVG/Attribute/unicode-bidi
-tags:
-  - SVG
-  - SVG Attribute
-browser-compat: svg.attributes.presentation.unicode-bidi
+page-type: svg-attribute
+browser-compat: svg.global_attributes.unicode-bidi
 ---
+
 {{SVGRef}}
 
 The **`unicode-bidi`** attribute specifies how the accumulation of the background image is managed.
 
-> **Note:** As a presentation attribute, `unicode-bidi` can be used as a CSS property. See the [CSS `unicode-bidi`](/en-US/docs/Web/CSS/unicode-bidi) property for more information.
+> [!NOTE]
+> As a presentation attribute, `unicode-bidi` also has a CSS property counterpart: {{cssxref("unicode-bidi")}}. When both are specified, the CSS property takes priority.
+
+## Elements
 
 You can use this attribute with the following SVG elements:
 
-- {{SVGElement("altGlyph")}}
 - {{SVGElement("textPath")}}
 - {{SVGElement("text")}}
 - {{SVGElement("tref")}}
 - {{SVGElement("tspan")}}
 
-## Context notes
+## Usage notes
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Value</th>
-      <td>{{csssyntax("unicode-bidi")}}</td>
+      <td>See {{cssxref("unicode-bidi", "", "#formal_syntax")}}</td>
     </tr>
     <tr>
       <th scope="row">Default value</th>
@@ -48,3 +49,7 @@ For a description of the values, please refer to the CSS {{cssxref("unicode-bidi
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- CSS {{cssxref("unicode-bidi")}} property

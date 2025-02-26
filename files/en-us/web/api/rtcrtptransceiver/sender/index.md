@@ -1,22 +1,14 @@
 ---
-title: RTCRtpTransceiver.sender
+title: "RTCRtpTransceiver: sender property"
+short-title: sender
 slug: Web/API/RTCRtpTransceiver/sender
 page-type: web-api-instance-property
-tags:
-  - API
-  - Media
-  - Property
-  - RTCRtpSender
-  - RTCRtpTransceiver
-  - RTP
-  - Reference
-  - WebRTC
-  - sender
 browser-compat: api.RTCRtpTransceiver.sender
 ---
+
 {{APIRef("WebRTC")}}
 
-The read-only  **`sender`** property
+The read-only **`sender`** property
 of WebRTC's {{domxref("RTCRtpTransceiver")}} interface indicates the
 {{domxref("RTCRtpSender")}} responsible for encoding and sending outgoing media data
 for the transceiver's stream.

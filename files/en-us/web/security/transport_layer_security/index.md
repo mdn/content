@@ -1,16 +1,11 @@
 ---
 title: Transport Layer Security
 slug: Web/Security/Transport_Layer_Security
-tags:
-  - Authentication
-  - Cryptography
-  - Data Integrity
-  - Encryption
-  - Guide
-  - SSL
-  - Security
-  - TLS
+page-type: guide
 ---
+
+{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
+
 The security of any connection using Transport Layer Security (TLS) is heavily dependent upon the cipher suites and security parameters selected. This article's goal is to help you make these decisions to ensure the confidentiality and integrity of communication between client and server. The Mozilla Operations Security (OpSec) team [maintains a wiki entry](https://wiki.mozilla.org/Security/Server_Side_TLS) with reference configurations for servers.
 
 The Transport Layer Security (TLS) protocol is the standard for enabling two networked applications or devices to exchange information privately and robustly. Applications that use TLS can choose their security parameters, which can have a substantial impact on the security and reliability of data. This article provides an overview of TLS and the kinds of decisions you need to make when securing your content.
@@ -90,7 +85,7 @@ The removal of renegotiation in TLS 1.3 might affect some web servers that rely 
 
 To help with working towards a more modern, more secure web, all major browsers began removing support for TLS 1.0 and 1.1 in early 2020. You'll need to make sure your web server supports TLS 1.2 or 1.3 going forward.
 
-From version 74 onwards, Firefox will return a [Secure Connection Failed](https://support.mozilla.org/en-US/kb/secure-connection-failed-firefox-did-not-connect) error when connecting to servers using the older TLS versions ({{bug(1606734)}}).
+From version 74 onwards, Firefox will return a [Secure Connection Failed](https://support.mozilla.org/en-US/kb/secure-connection-failed-firefox-did-not-connect) error when connecting to servers using the older TLS versions ([Firefox bug 1606734](https://bugzil.la/1606734)).
 
 ## TLS handshake timeout values
 
@@ -100,10 +95,8 @@ If the TLS handshake starts to become slow or unresponsive for some reason, the 
 
 ## See also
 
-- The [Mozilla SSL Configuration Generator](https://ssl-config.mozilla.org) and [Cipherlist.eu](https://cipherlist.eu/) can help you generate configuration files for your server to secure your site.
+- The [Mozilla SSL Configuration Generator](https://ssl-config.mozilla.org/) and [Cipherlist.eu](https://cipherlist.eu/) can help you generate configuration files for your server to secure your site.
 - The Mozilla Operations Security (OpSec) team maintains a wiki page with [reference TLS configurations](https://wiki.mozilla.org/Security/Server_Side_TLS).
-- [Mozilla Observatory](https://observatory.mozilla.org/), [SSL Labs](https://www.ssllabs.com/ssltest/), and [Cipherscan](https://github.com/mozilla/cipherscan) can help you test a site to see how secure its TLS configuration is.
+- Use [HTTP Observatory](/en-US/observatory) and [SSL Labs](https://www.ssllabs.com/ssltest/) to test how secure a site's HTTP/TLS configuration is.
 - [Secure Contexts](/en-US/docs/Web/Security/Secure_Contexts)
 - [Strict-Transport-Security](/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security) HTTP header
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}

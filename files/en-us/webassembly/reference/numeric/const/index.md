@@ -1,13 +1,9 @@
 ---
 title: Const
 slug: WebAssembly/Reference/Numeric/Const
-tags:
-  - WebAssembly
-  - wasm
-  - Reference
-  - Numeric
+page-type: webassembly-instruction
+sidebar: webassemblysidebar
 ---
-{{WebAssemblySidebar}}
 
 The **`const`** instructions, are used to declare numbers.
 

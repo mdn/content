@@ -1,22 +1,16 @@
 ---
-title: 'CSP: form-action'
+title: "CSP: form-action"
 slug: Web/HTTP/Headers/Content-Security-Policy/form-action
-tags:
-  - CSP
-  - Content-Security-Policy
-  - Directive
-  - HTTP
-  - Security
-  - action
-  - form
-  - form-action
+page-type: http-csp-directive
 browser-compat: http.headers.Content-Security-Policy.form-action
 ---
+
 {{HTTPSidebar}}
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`form-action`** directive restricts the URLs which can be used as the target of form submissions from a given context.
 
-> **Warning:** Whether `form-action` should block redirects after a form submission is [debated](https://github.com/w3c/webappsec-csp/issues/8) and browser implementations of this aspect are inconsistent (e.g. Firefox 57 doesn't block the redirects whereas Chrome 63 does).
+> [!WARNING]
+> Whether `form-action` should block redirects after a form submission is [debated](https://github.com/w3c/webappsec-csp/issues/8) and browser implementations of this aspect are inconsistent (e.g. Firefox 57 doesn't block the redirects whereas Chrome 63 does).
 
 <table class="properties">
   <tbody>
@@ -37,38 +31,42 @@ The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`form-action`** direc
 
 ## Syntax
 
-One or more sources can be set for the `form-action` policy:
-
 ```http
-Content-Security-Policy: form-action <source>;
-Content-Security-Policy: form-action <source> <source>;
+Content-Security-Policy: form-action 'none';
+Content-Security-Policy: form-action <source-expression-list>;
 ```
 
-### Sources
+This directive may have one of the following values:
 
-`<source>` can be any one of the values listed in [CSP Source Values](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#sources).
+- `'none'`
+  - : No form submissions may be made. The single quotes are mandatory.
+- `<source-expression-list>`
 
-Note that this same set of values can be used in all {{Glossary("fetch directive", "fetch directives")}} (and a [number of other directives](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#relevant_directives)).
+  - : A space-separated list of _source expression_ values. Form submissions may be made to URLs that match any of the given source expressions. For this directive, the following source expression values are applicable:
+
+    - [`<host-source>`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#host-source)
+    - [`<scheme-source>`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#scheme-source)
+    - [`'self'`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#self)
 
 ## Examples
 
 ### Meta tag configuration
 
 ```html
-<meta http-equiv="Content-Security-Policy" content="form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="form-action 'none'" />
 ```
 
 ### Apache configuration
 
-```html
+```apacheconf
 <IfModule mod_headers.c>
-Header set Content-Security-Policy "form-action 'none';"
+  Header set Content-Security-Policy "form-action 'none';"
 </IfModule>
 ```
 
 ### Nginx configuration
 
-```
+```nginx
 add_header Content-Security-Policy "form-action 'none';"
 ```
 
@@ -77,15 +75,17 @@ add_header Content-Security-Policy "form-action 'none';"
 Using a {{HTMLElement("form")}} element with an action set to inline JavaScript will result in a CSP violation.
 
 ```html example-bad
-<meta http-equiv="Content-Security-Policy" content="form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="form-action 'none'" />
 
 <form action="javascript:alert('Foo')" id="form1" method="post">
-  <input type="text" name="fieldName" value="fieldValue">
-  <input type="submit" id="submit" value="submit">
+  <input type="text" name="fieldName" value="fieldValue" />
+  <input type="submit" id="submit" value="submit" />
 </form>
 
+<!--
 // Error: Refused to send form data because it violates the following
 // Content Security Policy directive: "form-action 'none'".
+-->
 ```
 
 ## Specifications

@@ -1,23 +1,19 @@
 ---
-title: WebGLRenderingContext.getParameter()
+title: "WebGLRenderingContext: getParameter() method"
+short-title: getParameter()
 slug: Web/API/WebGLRenderingContext/getParameter
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.getParameter
 ---
-{{APIRef("WebGL")}}
+
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGLRenderingContext.getParameter()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) returns a value for the passed
 parameter name.
 
 ## Syntax
 
-```js
+```js-nolint
 getParameter(pname)
 ```
 
@@ -897,8 +893,7 @@ You can query the following `pname` parameters when using a
       </td>
       <td>
         See
-        {{domxref("WebGL2RenderingContext/bindTransformFeedback",
-        "bindTransformFeedback")}}.
+        {{domxref("WebGL2RenderingContext/bindTransformFeedback", "bindTransformFeedback")}}.
       </td>
     </tr>
     <tr>

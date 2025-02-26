@@ -1,18 +1,12 @@
 ---
-title: Clients.matchAll()
+title: "Clients: matchAll() method"
+short-title: matchAll()
 slug: Web/API/Clients/matchAll
 page-type: web-api-instance-method
-tags:
-  - API
-  - Clients
-  - Experimental
-  - Method
-  - Reference
-  - Service Workers
-  - ServiceWorker
 browser-compat: api.Clients.matchAll
 ---
-{{APIRef("Service Workers API")}}
+
+{{APIRef("Service Workers API")}}{{AvailableInWorkers("service")}}
 
 The **`matchAll()`** method of the {{domxref("Clients")}}
 interface returns a {{jsxref("Promise")}} for a list of service worker
@@ -23,7 +17,7 @@ service worker.
 
 ## Syntax
 
-```js
+```js-nolint
 matchAll()
 matchAll(options)
 ```
@@ -57,7 +51,7 @@ order, correct as per spec.
 ```js
 clients.matchAll(options).then((clientList) => {
   for (const client of clientList) {
-    if (client.url === 'index.html') {
+    if (client.url === "index.html") {
       clients.openWindow(client);
       // or do something else involving the matching client
     }

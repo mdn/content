@@ -1,16 +1,11 @@
 ---
-title: Window.alert()
+title: "Window: alert() method"
+short-title: alert()
 slug: Web/API/Window/alert
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - Method
-  - Reference
-  - Window
-  - alert
 browser-compat: api.Window.alert
 ---
+
 {{ APIRef }}
 
 `window.alert()` instructs the browser to display a dialog with an optional message, and to wait until the user dismisses the dialog.
@@ -19,7 +14,7 @@ Under some conditions — for example, when the user switches tabs — the brows
 
 ## Syntax
 
-```js
+```js-nolint
 alert()
 alert(message)
 ```
@@ -43,7 +38,7 @@ alert("Hello world!");
 
 Both produce:
 
-![](alerthelloworld.png)
+![Black alert dialog box. At the top left small circle icon follow by white open and close square brackets containing this white text: JavaScript application. Below on the left, a Hello world! white text. And on the bottom right a small blue button. The button's text is: ok in black.](alerthelloworld.png)
 
 ## Notes
 

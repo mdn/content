@@ -1,18 +1,11 @@
 ---
-title: TouchList.item()
+title: "TouchList: item() method"
+short-title: item()
 slug: Web/API/TouchList/item
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - DOM Reference
-  - Method
-  - Mobile
-  - Reference
-  - TouchList
-  - touch
 browser-compat: api.TouchList.item
 ---
+
 {{ APIRef("Touch Events") }}
 
 The **`item()`** method returns the {{ domxref("Touch") }}
@@ -20,7 +13,7 @@ object at the specified index in the {{ domxref("TouchList") }}.
 
 ## Syntax
 
-```js
+```js-nolint
 item(index)
 ```
 
@@ -39,24 +32,25 @@ item(index)
 ## Examples
 
 This code example illustrates the use of the {{domxref("TouchList")}} interface's
-{{domxref("TouchList.item()","item")}} method and the
+`item` method and the
 {{domxref("TouchList.length","length")}} property.
 
 ```js
 const target = document.getElementById("target");
 
-target.addEventListener('touchstart', function(ev) {
-
-  // If this touchstart event started on element target,
-  // set touch to the first item in the targetTouches list;
-  // otherwise set touch to the first item in the touches list
-  let touch;
-
-  if (ev.targetTouches.length >= 1)
-     touch = ev.targetTouches.item(0);
-  else
-     touch = ev.touches.item(0);
-}, false);
+target.addEventListener(
+  "touchstart",
+  (ev) => {
+    // If this touchstart event started on element target,
+    // set touch to the first item in the targetTouches list;
+    // otherwise set touch to the first item in the touches list
+    const touch =
+      ev.targetTouches.length >= 1
+        ? ev.targetTouches.item(0)
+        : ev.touches.item(0);
+  },
+  false,
+);
 ```
 
 ## Specifications

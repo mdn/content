@@ -1,25 +1,19 @@
 ---
 title: runtime.connectNative()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/connectNative
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - connectNative
-  - runtime
+page-type: webextension-api-function
 browser-compat: webextensions.api.runtime.connectNative
 ---
-{{AddonSidebar()}}Connects the extension to a native application on the user's computer. This takes the name of a native application as a parameter. It starts the native application and returns a {{WebExtAPIRef("runtime.Port")}} object to the caller. The caller can then use the `Port` to exchange messages with the native application using `Port.postMessage()` and `port.onMessage`. The native application will run until it exits itself, or the caller calls `Port.disconnect()`, or the page that created the `Port` is destroyed. Once the `Port` is disconnected the browser will give the process a few seconds to exit gracefully, and then kill it if it has not exited.
+
+{{AddonSidebar}}
+
+Connects the extension to a native application on the user's computer. This takes the name of a native application as a parameter. It starts the native application and returns a {{WebExtAPIRef("runtime.Port")}} object to the caller. The caller can then use the `Port` to exchange messages with the native application using `Port.postMessage()` and `port.onMessage`. The native application will run until it exits itself, or the caller calls `Port.disconnect()`, or the page that created the `Port` is destroyed. Once the `Port` is disconnected the browser will give the process a few seconds to exit gracefully, and then kill it if it has not exited.
 
 For more information, see [Native messaging](/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_messaging).
 
 ## Syntax
 
-```js
+```js-nolint
 let port = browser.runtime.connectNative(
   application // string
 )
@@ -52,7 +46,7 @@ let port = browser.runtime.connectNative("ping_pong");
 Listen for messages from the app.
 */
 port.onMessage.addListener((response) => {
-  console.log("Received: " + response);
+  console.log(`Received: ${response}`);
 });
 
 /*
@@ -66,11 +60,11 @@ browser.browserAction.onClicked.addListener(() => {
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/runtime/#method-connectNative) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#method-connectNative) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -97,4 +91,4 @@ browser.browserAction.onClicked.addListener(() => {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

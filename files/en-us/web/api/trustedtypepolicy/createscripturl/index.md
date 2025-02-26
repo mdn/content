@@ -1,22 +1,18 @@
 ---
-title: TrustedTypePolicy.createScriptURL()
+title: "TrustedTypePolicy: createScriptURL() method"
+short-title: createScriptURL()
 slug: Web/API/TrustedTypePolicy/createScriptURL
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - createScriptURL
-  - TrustedTypePolicy
 browser-compat: api.TrustedTypePolicy.createScriptURL
 ---
-{{DefaultAPISidebar("Trusted Types API")}}
 
-The **`createScriptURL()`** method of the {{domxref("TrustedTypePolicy")}} interface creates a {{domxref("TrustedScriptURL")}} object using a policy created by {{domxref("TrustedTypePolicyFactory.createPolicy","TrustedTypePolicyFactory.createPolicy()")}}.
+{{APIRef("Trusted Types API")}}{{AvailableInWorkers}}
+
+The **`createScriptURL()`** method of the {{domxref("TrustedTypePolicy")}} interface creates a {{domxref("TrustedScriptURL")}} object using a policy created by {{domxref("TrustedTypePolicyFactory.createPolicy()")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 createScriptURL(input)
 createScriptURL(input, args)
 ```
@@ -42,7 +38,9 @@ A {{domxref("TrustedScriptURL")}} object.
 In the below example a string containing the URL to an external resource is used as the input for `createScriptURL()`. The policy can check that this is an allowed URL before inserting it into an injection sink that could cause this external script to be executed.
 
 ```js
-const escaped = escapeURLPolicy.createScriptURL("https://example.com/my-script.js");
+const escaped = escapeURLPolicy.createScriptURL(
+  "https://example.com/my-script.js",
+);
 ```
 
 ## Specifications

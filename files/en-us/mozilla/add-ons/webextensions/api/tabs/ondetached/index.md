@@ -1,25 +1,17 @@
 ---
 title: tabs.onDetached
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onDetached
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onDetached
-  - tabs
+page-type: webextension-api-event
 browser-compat: webextensions.api.tabs.onDetached
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 Fired when a tab is detached from a window, for example because it is being moved between windows.
 
 ## Syntax
 
-```js
+```js-nolint
 browser.tabs.onDetached.addListener(listener)
 browser.tabs.onDetached.removeListener(listener)
 browser.tabs.onDetached.hasListener(listener)
@@ -27,7 +19,7 @@ browser.tabs.onDetached.hasListener(listener)
 
 Events have three functions:
 
-- `addListener(callback)`
+- `addListener(listener)`
   - : Adds a listener to this event.
 - `removeListener(listener)`
   - : Stop listening to this event. The `listener` argument is the listener to remove.
@@ -38,17 +30,14 @@ Events have three functions:
 
 ### Parameters
 
-- `callback`
+- `listener`
 
-  - : Function that will be called when this event occurs. The function will be passed the following arguments:
+  - : The function called when this event occurs. The function is passed these arguments:
 
     - `tabId`
       - : `integer`. ID of the tab that was detached.
-
-    <!---->
-
     - `detachInfo`
-      - : [`object`](#detachinfo). ID of the previous window, and index of the tab within it.
+      - : `object`. ID of the previous window, and index of the tab within it. See the [detachInfo](#detachinfo_2) section for more details.
 
 ## Additional objects
 
@@ -65,9 +54,9 @@ Listen for detach events, and log the info:
 
 ```js
 function handleDetached(tabId, detachInfo) {
-  console.log("Tab: " + tabId + " moved");
-  console.log("Old window: " + detachInfo.oldWindowId);
-  console.log("Old index: " + detachInfo.oldPosition);
+  console.log(`Tab: ${tabId} moved`);
+  console.log(`Old window: ${detachInfo.oldWindowId}`);
+  console.log(`Old index: ${detachInfo.oldPosition}`);
 }
 
 browser.tabs.onDetached.addListener(handleDetached);
@@ -79,11 +68,11 @@ browser.tabs.onDetached.addListener(handleDetached);
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/tabs/#event-onDetached) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#event-onDetached) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -110,4 +99,4 @@ browser.tabs.onDetached.addListener(handleDetached);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

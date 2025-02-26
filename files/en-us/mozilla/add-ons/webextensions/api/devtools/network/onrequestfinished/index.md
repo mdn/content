@@ -1,18 +1,11 @@
 ---
 title: devtools.network.onRequestFinished
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/network/onRequestFinished
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - Event
-  - WebExtensions
-  - devtools.network
-  - onRequestFinished
+page-type: webextension-api-event
 browser-compat: webextensions.api.devtools.network.onRequestFinished
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 Fired when a network request has finished and its details are available to the extension.
 
@@ -22,7 +15,7 @@ Note that although your extension can add a listener at any time, it will only s
 
 ## Syntax
 
-```js
+```js-nolint
 browser.devtools.network.onRequestFinished.addListener(listener)
 browser.devtools.network.onRequestFinished.removeListener(listener)
 browser.devtools.network.onRequestFinished.hasListener(listener)
@@ -41,9 +34,9 @@ Events have three functions:
 
 ### Parameters
 
-- `callback`
+- `listener`
 
-  - : Function that will be called when this event occurs. The function will be passed the following arguments:
+  - : The function called when this event occurs. The function is passed this argument:
 
     - `request`
       - : `object`. An object representing the request. This object is a single [HAR entry](http://www.softwareishard.com/blog/har-12-spec/#entries) object. It also defines an asynchronous `getContent()` method, which returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that resolves with an array of two elements. The first element is the HTTP response body as a string, while the second element is the [MIME type](/en-US/docs/Glossary/MIME_type) of the HTTP response also as a string.
@@ -70,9 +63,11 @@ browser.devtools.network.onRequestFinished.addListener(handleRequestFinished);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.devtools`](https://developer.chrome.com/docs/extensions/mv3/devtools/) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.devtools`](https://developer.chrome.com/docs/extensions/how-to/devtools/extend-devtools) API.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -99,4 +94,4 @@ browser.devtools.network.onRequestFinished.addListener(handleRequestFinished);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

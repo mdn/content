@@ -1,18 +1,11 @@
 ---
 title: contextualIdentities.create()
 slug: Mozilla/Add-ons/WebExtensions/API/contextualIdentities/create
-tags:
-  - API
-  - Add-ons
-  - Create
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - contextualIdentities
+page-type: webextension-api-function
 browser-compat: webextensions.api.contextualIdentities.create
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 Creates a new contextual identity. Once created, the user will be able to create new tabs belonging to this contextual identity, just as they can with the built-in identities.
 
@@ -20,7 +13,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let createContext = browser.contextualIdentities.create(
   details                  // object
 )
@@ -87,11 +80,13 @@ function onError(e) {
   console.error(e);
 }
 
-browser.contextualIdentities.create({
-  name: "my-thing",
-  color: "purple",
-  icon: "briefcase"
-}).then(onCreated, onError);
+browser.contextualIdentities
+  .create({
+    name: "my-thing",
+    color: "purple",
+    icon: "briefcase",
+  })
+  .then(onCreated, onError);
 ```
 
 {{WebExtExamples}}

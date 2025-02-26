@@ -1,11 +1,11 @@
 ---
 title: Patterns
 slug: Web/SVG/Tutorial/Patterns
-tags:
-  - Advanced
-  - SVG
-  - SVG:Tutorial
+page-type: guide
 ---
+
+{{SVGRef}}
+
 {{ PreviousNext("Web/SVG/Tutorial/Gradients", "Web/SVG/Tutorial/Texts") }}
 
 ## Patterns
@@ -16,22 +16,27 @@ Patterns are arguably one of the more confusing fill types to use in SVG. They'r
 <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="Gradient1">
-      <stop offset="5%" stop-color="white"/>
-      <stop offset="95%" stop-color="blue"/>
+      <stop offset="5%" stop-color="white" />
+      <stop offset="95%" stop-color="blue" />
     </linearGradient>
     <linearGradient id="Gradient2" x1="0" x2="0" y1="0" y2="1">
-      <stop offset="5%" stop-color="red"/>
-      <stop offset="95%" stop-color="orange"/>
+      <stop offset="5%" stop-color="red" />
+      <stop offset="95%" stop-color="orange" />
     </linearGradient>
 
     <pattern id="Pattern" x="0" y="0" width=".25" height=".25">
-      <rect x="0" y="0" width="50" height="50" fill="skyblue"/>
-      <rect x="0" y="0" width="25" height="25" fill="url(#Gradient2)"/>
-      <circle cx="25" cy="25" r="20" fill="url(#Gradient1)" fill-opacity="0.5"/>
+      <rect x="0" y="0" width="50" height="50" fill="skyblue" />
+      <rect x="0" y="0" width="25" height="25" fill="url(#Gradient2)" />
+      <circle
+        cx="25"
+        cy="25"
+        r="20"
+        fill="url(#Gradient1)"
+        fill-opacity="0.5" />
     </pattern>
   </defs>
 
-  <rect fill="url(#Pattern)" stroke="black" width="200" height="200"/>
+  <rect fill="url(#Pattern)" stroke="black" width="200" height="200" />
 </svg>
 ```
 
@@ -73,6 +78,6 @@ Neither of these uses is what one would normally think of when you think of a pa
 
 Of course, this means the pattern won't scale if you change your object size later. All three of the preceding examples are shown below on a rectangle that has been slightly elongated to a `height` of `300px`, but I should note that it's not an exhaustive picture, and there are other options available depending on your application.
 
-![](svg_pattern_comparison_of_units.png)
+![Three examples showing patternUnits values of default and userSpaceOnUse and patternContentUnits values of default and objectBoundingBox. When both are set to default, the aspect ratio is maintained with white space visible. Setting patternContentUnits to objectBoundingBox effects the aspect ratio to remove white space. Setting patternUnits to userSpaceOnUse maintains the aspect ratio while eliminating white space.](svg_pattern_comparison_of_units.png)
 
 {{ PreviousNext("Web/SVG/Tutorial/Gradients", "Web/SVG/Tutorial/Texts") }}

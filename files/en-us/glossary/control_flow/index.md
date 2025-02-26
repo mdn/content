@@ -1,22 +1,22 @@
 ---
 title: Control flow
 slug: Glossary/Control_flow
-tags:
-  - CodingScripting
-  - Glossary
-  - JavaScript
+page-type: glossary-definition
 ---
-The _control flow_ is the order in which the computer executes statements in a script.
+
+{{GlossarySidebar}}
+
+**Control flow** is the order in which the computer executes statements in a script.
 
 Code is run in order from the first line in the file to the last line, unless the computer runs across the (extremely frequent) structures that change the control flow, such as conditionals and loops.
 
 For example, imagine a script used to validate user data from a webpage form. The script submits validated data, but if the user, say, leaves a required field empty, the script prompts them to fill it in. To do this, the script uses a {{Glossary("Conditional", "conditional")}} structure or `if...else`, so that different code executes depending on whether the form is complete or not:
 
 ```js
-if (field==empty) {
-    promptUser();
+if (isEmpty(field)) {
+  promptUser();
 } else {
-    submitForm();
+  submitForm();
 }
 ```
 
@@ -28,6 +28,6 @@ Control flow means that when you read a script, you must not only read from star
 
 ## See also
 
+- [JavaScript Reference - Control flow](/en-US/docs/Web/JavaScript/Reference#control_flow)
+- [Control flow and error handling](/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)
 - [Control flow](https://en.wikipedia.org/wiki/Control_flow) on Wikipedia
-- [JavaScript Reference - Control flow](/en-US/docs/Web/JavaScript/Reference#control_flow) on MDN
-- [Statements (Control flow)](/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling) on MDN

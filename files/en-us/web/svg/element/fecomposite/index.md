@@ -1,16 +1,15 @@
 ---
 title: <feComposite>
 slug: Web/SVG/Element/feComposite
-tags:
-  - Element
-  - NeedsExample
-  - SVG
-  - SVG Filter
+page-type: svg-element
 browser-compat: svg.elements.feComposite
 ---
+
 {{SVGRef}}
 
 The **`<feComposite>`** [SVG](/en-US/docs/Web/SVG) filter primitive performs the combination of two input images pixel-wise in image space using one of the Porter-Duff compositing operations: `over`, `in`, `atop`, `out`, `xor`, `lighter`, or `arithmetic`.
+
+Like other filter primitives, it handles color components in the `linearRGB` {{glossary("color space")}} by default. You can use {{svgattr("color-interpolation-filters")}} to use `sRGB` instead.
 
 The table below shows each of these operations using an image of the MDN logo composited with a red circle:
 
@@ -128,16 +127,6 @@ The table below shows each of these operations using an image of the MDN logo co
 
 ## Attributes
 
-### Global attributes
-
-- [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
-- [Presentation attributes](/en-US/docs/Web/SVG/Attribute#presentation_attributes)
-- [Filter primitive attributes](/en-US/docs/Web/SVG/Attribute#filter_primitive_attributes)
-- {{SVGAttr("class")}}
-- {{SVGAttr("style")}}
-
-### Specific attributes
-
 - {{SVGAttr("in")}}: First input for the given filter primitive.
 - {{SVGAttr("in2")}}: Second input for the given filter primitive (works the same as the `in` attribute).
 - {{SVGAttr("operator")}}: `over` | `in` | `out` | `atop` | `xor` | `lighter` | `arithmetic`
@@ -156,64 +145,107 @@ This example defines filters for each of the supported operations (`over`, `atop
 ### SVG
 
 ```html
-
-<svg style="width:800px; height:400px; display: inline;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg
+  style="width:800px; height:400px; display: inline;"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
     <filter id="imageOver">
-      <feImage xlink:href="mdn_logo_only_color.png" x="10px" y="10px" width="160px" />
-      <feComposite in2="SourceGraphic" operator="over"/>
+      <feImage href="mdn_logo_only_color.png" x="10px" y="10px" width="160px" />
+      <feComposite in2="SourceGraphic" operator="over" />
     </filter>
     <filter id="imageIn">
-      <feImage xlink:href="mdn_logo_only_color.png" x="10px" y="10px" width="160px" />
-      <feComposite in2="SourceGraphic" operator="in"/>
+      <feImage href="mdn_logo_only_color.png" x="10px" y="10px" width="160px" />
+      <feComposite in2="SourceGraphic" operator="in" />
     </filter>
     <filter id="imageOut">
-      <feImage xlink:href="mdn_logo_only_color.png" x="10px" y="10px" width="160px" />
-      <feComposite in2="SourceGraphic" operator="out"/>
+      <feImage href="mdn_logo_only_color.png" x="10px" y="10px" width="160px" />
+      <feComposite in2="SourceGraphic" operator="out" />
     </filter>
     <filter id="imageAtop">
-      <feImage xlink:href="mdn_logo_only_color.png" x="10px" y="10px" width="160px" />
-      <feComposite in2="SourceGraphic" operator="atop"/>
+      <feImage href="mdn_logo_only_color.png" x="10px" y="10px" width="160px" />
+      <feComposite in2="SourceGraphic" operator="atop" />
     </filter>
     <filter id="imageXor">
-      <feImage xlink:href="mdn_logo_only_color.png" x="10px" y="10px" width="160px" />
-      <feComposite in2="SourceGraphic" operator="xor"/>
+      <feImage href="mdn_logo_only_color.png" x="10px" y="10px" width="160px" />
+      <feComposite in2="SourceGraphic" operator="xor" />
     </filter>
     <filter id="imageArithmetic">
-      <feImage xlink:href="mdn_logo_only_color.png" x="10px" y="10px" width="160px" />
-      <feComposite in2="SourceGraphic" operator="arithmetic" k1="0.1" k2="0.2" k3="0.3" k4="0.4" />
+      <feImage href="mdn_logo_only_color.png" x="10px" y="10px" width="160px" />
+      <feComposite
+        in2="SourceGraphic"
+        operator="arithmetic"
+        k1="0.1"
+        k2="0.2"
+        k3="0.3"
+        k4="0.4" />
     </filter>
     <filter id="imageLighter">
-      <feImage xlink:href="mdn_logo_only_color.png" x="10px" y="10px" width="160px" />
-      <feComposite in2="SourceGraphic" operator="lighter"/>
+      <feImage href="mdn_logo_only_color.png" x="10px" y="10px" width="160px" />
+      <feComposite in2="SourceGraphic" operator="lighter" />
     </filter>
   </defs>
   <g transform="translate(0,25)">
-    <circle cx="90px" cy="80px" r="70px" fill="#c00" style="filter:url(#imageOver)"/>
+    <circle
+      cx="90px"
+      cy="80px"
+      r="70px"
+      fill="#c00"
+      style="filter:url(#imageOver)" />
     <text x="80" y="-5">over</text>
   </g>
   <g transform="translate(200,25)">
-    <circle cx="90px" cy="80px" r="70px" fill="#c00" style="filter:url(#imageIn)"/>
+    <circle
+      cx="90px"
+      cy="80px"
+      r="70px"
+      fill="#c00"
+      style="filter:url(#imageIn)" />
     <text x="80" y="-5">in</text>
   </g>
   <g transform="translate(400,25)">
-    <circle cx="90px" cy="80px" r="70px" fill="#c00" style="filter:url(#imageOut)"/>
+    <circle
+      cx="90px"
+      cy="80px"
+      r="70px"
+      fill="#c00"
+      style="filter:url(#imageOut)" />
     <text x="80" y="-5">out</text>
   </g>
   <g transform="translate(600,25)">
-    <circle cx="90px" cy="80px" r="70px" fill="#c00" style="filter:url(#imageAtop)"/>
+    <circle
+      cx="90px"
+      cy="80px"
+      r="70px"
+      fill="#c00"
+      style="filter:url(#imageAtop)" />
     <text x="80" y="-5">atop</text>
   </g>
   <g transform="translate(0,240)">
-    <circle cx="90px" cy="80px" r="70px" fill="#c00" style="filter:url(#imageXor)"/>
+    <circle
+      cx="90px"
+      cy="80px"
+      r="70px"
+      fill="#c00"
+      style="filter:url(#imageXor)" />
     <text x="80" y="-5">xor</text>
   </g>
   <g transform="translate(200,240)">
-    <circle cx="90px" cy="80px" r="70px" fill="#c00" style="filter:url(#imageArithmetic)"/>
+    <circle
+      cx="90px"
+      cy="80px"
+      r="70px"
+      fill="#c00"
+      style="filter:url(#imageArithmetic)" />
     <text x="70" y="-5">arithmetic</text>
   </g>
   <g transform="translate(400,240)">
-    <circle cx="90px" cy="80px" r="70px" fill="#c00" style="filter:url(#imageLighter)"/>
+    <circle
+      cx="90px"
+      cy="80px"
+      r="70px"
+      fill="#c00"
+      style="filter:url(#imageLighter)" />
     <text x="80" y="-5">lighter</text>
   </g>
 </svg>
@@ -233,6 +265,7 @@ This example defines filters for each of the supported operations (`over`, `atop
 
 ## See also
 
+- [SVG filter primitive attributes](/en-US/docs/Web/SVG/Attribute#filter_primitive_attributes)
 - {{SVGElement("filter")}}
 - {{SVGElement("animate")}}
 - {{SVGElement("set")}}

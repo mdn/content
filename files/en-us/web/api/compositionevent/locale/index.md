@@ -1,23 +1,22 @@
 ---
-title: CompositionEvent.locale
+title: "CompositionEvent: locale property"
+short-title: locale
 slug: Web/API/CompositionEvent/locale
 page-type: web-api-instance-property
-tags:
-  - API
-  - CompositionEvent
-  - Deprecated
-  - Locale
-  - Property
-  - Reference
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.CompositionEvent.locale
 ---
-{{deprecated_header}}{{APIRef("UI Events")}}
+
+{{deprecated_header}}{{APIRef("UI Events")}}{{Non-standard_header}}
 
 The **`locale`** read-only property of the
 {{domxref("CompositionEvent")}} interface returns the locale of current input method
-(for example, the keyboard layout locale if the composition is associated with IME).
+(for example, the keyboard layout locale if the composition is associated with an {{glossary("Input method editor")}}).
 
-> **Warning:** Even for browsers supporting it, don't trust the value contained in this property.
+> [!WARNING]
+> Even for browsers supporting it, don't trust the value contained in this property.
 > Even if technically it is accessible, the way to set it up when creating a {{domxref("CompositionEvent")}}
 > is not guaranteed to be coherent.
 

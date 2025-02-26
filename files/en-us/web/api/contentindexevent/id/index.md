@@ -1,21 +1,16 @@
 ---
-title: ContentIndexEvent.id
+title: "ContentIndexEvent: id property"
+short-title: id
 slug: Web/API/ContentIndexEvent/id
 page-type: web-api-instance-property
-tags:
-  - Content
-  - Content Index API
-  - Index
-  - PWA
-  - Property
-  - content indexing
-  - events
-  - Experimental
+status:
+  - experimental
 browser-compat: api.ContentIndexEvent.id
 ---
-{{APIRef("Content Index API")}}{{SeeCompatTable}}
 
-The read-only **`id`** property of the
+{{APIRef("Content Index API")}}{{SeeCompatTable}}{{AvailableInWorkers("service")}}
+
+The **`id`** read-only property of the
 {{domxref("ContentIndexEvent")}} interface is a {{jsxref('String')}} which identifies
 the deleted content index via its `id`.
 
@@ -33,11 +28,10 @@ The {{domxref('ContentIndexEvent')}} is only available to the
 {{domxref('ServiceWorker')}}.
 
 ```js
-self.addEventListener('contentdelete', (event) => {
+self.addEventListener("contentdelete", (event) => {
   console.log(event.id);
 
   // logs content index id, which can then be used to determine what content to delete from your cache
-
 });
 ```
 
@@ -51,6 +45,5 @@ self.addEventListener('contentdelete', (event) => {
 
 ## See also
 
-- [An introductory article on the Content Index API](https://web.dev/content-indexing-api/)
-- [An app which uses the Content Index API to list and remove 'save for later' content](https://contentindex.dev/)
+- [An introductory article on the Content Index API](https://developer.chrome.com/docs/capabilities/web-apis/content-indexing-api)
 - [Service Worker API, along with information about Cache and CacheStorage](/en-US/docs/Web/API/Service_Worker_API)

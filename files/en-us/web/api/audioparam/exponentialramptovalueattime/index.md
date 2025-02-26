@@ -1,32 +1,25 @@
 ---
-title: AudioParam.exponentialRampToValueAtTime()
+title: "AudioParam: exponentialRampToValueAtTime() method"
+short-title: exponentialRampToValueAtTime()
 slug: Web/API/AudioParam/exponentialRampToValueAtTime
 page-type: web-api-instance-method
-tags:
-  - API
-  - AudioParam
-  - Method
-  - Reference
-  - Web Audio API
-  - exponentialRampToValueAtTime
 browser-compat: api.AudioParam.exponentialRampToValueAtTime
 ---
+
 {{ APIRef("Web Audio API") }}
 
-The **`exponentialRampToValueAtTime()`** method of the {{
-    domxref("AudioParam") }} Interface schedules a gradual exponential change in the value
-of the {{domxref("AudioParam")}}. The change starts at the time specified for the
-_previous_ event, follows an exponential ramp to the new value given in the
-`value` parameter, and reaches the new value at the time given in the
+The **`exponentialRampToValueAtTime()`** method of the {{domxref("AudioParam")}} Interface schedules a gradual exponential change in the value of the {{domxref("AudioParam")}}.
+The change starts at the time specified for the _previous_ event, follows an exponential ramp to the new value given in the `value` parameter, and reaches the new value at the time given in the
 `endTime` parameter.
 
-> **Note:** Exponential ramps are considered more useful when changing
+> [!NOTE]
+> Exponential ramps are considered more useful when changing
 > frequencies or playback rates than linear ramps because of the way the human ear
 > works.
 
 ## Syntax
 
-```js
+```js-nolint
 exponentialRampToValueAtTime(value, endTime)
 ```
 
@@ -46,7 +39,7 @@ implementations of this interface return {{jsxref('undefined')}}.
 
 ## Examples
 
-In this example, we have a media source with two control buttons (see the [audio-param repo](https://github.com/mdn/webaudio-examples/tree/master/audio-param) for the source code, or [view the example live](https://mdn.github.io/webaudio-examples/audio-param/).) When these buttons are pressed, `exponentialRampToValueAtTime()`
+In this example, we have a media source with two control buttons (see the [audio-param repo](https://github.com/mdn/webaudio-examples/tree/main/audio-param) for the source code, or [view the example live](https://mdn.github.io/webaudio-examples/audio-param/).) When these buttons are pressed, `exponentialRampToValueAtTime()`
 is used to fade the gain value up to 1.0, and down to 0, respectively. This is pretty
 useful for fade in/fade out effects:
 
@@ -55,10 +48,10 @@ useful for fade in/fade out effects:
 const audioCtx = new AudioContext();
 
 // set basic variables for example
-const myAudio = document.querySelector('audio');
+const myAudio = document.querySelector("audio");
 
-const expRampPlus = document.querySelector('.exp-ramp-plus');
-const expRampMinus = document.querySelector('.exp-ramp-minus');
+const expRampPlus = document.querySelector(".exp-ramp-plus");
+const expRampMinus = document.querySelector(".exp-ramp-minus");
 
 // Create a MediaElementAudioSourceNode
 // Feed the HTMLMediaElement into it
@@ -74,16 +67,17 @@ source.connect(gainNode);
 gainNode.connect(audioCtx.destination);
 
 // set buttons to do something onclick
-expRampPlus.onclick = function() {
+expRampPlus.onclick = () => {
   gainNode.gain.exponentialRampToValueAtTime(1.0, audioCtx.currentTime + 2);
-}
+};
 
-expRampMinus.onclick = function() {
+expRampMinus.onclick = () => {
   gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 2);
-}
+};
 ```
 
-> **Note:** A value of 0.01 was used for the value to ramp down to in the
+> [!NOTE]
+> A value of 0.01 was used for the value to ramp down to in the
 > last function rather than 0, as an _invalid or illegal string_ error is thrown
 > if 0 is used — the value needs to be positive.
 

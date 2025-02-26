@@ -1,25 +1,36 @@
 ---
 title: Atomics.and()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/and
-tags:
-  - Atomics
-  - JavaScript
-  - Method
-  - Shared Memory
+page-type: javascript-static-method
 browser-compat: javascript.builtins.Atomics.and
 ---
+
 {{JSRef}}
 
-The static **`Atomics.and()`**
+The **`Atomics.and()`** static
 method computes a bitwise AND with a given value at a given position in the array, and
 returns the old value at that position. This atomic operation guarantees that no other
 write happens until the modified value is written back.
 
-{{EmbedInteractiveExample("pages/js/atomics-and.html")}}
+{{InteractiveExample("JavaScript Demo: Atomics.and()")}}
+
+```js interactive-example
+// Create a SharedArrayBuffer with a size in bytes
+const buffer = new SharedArrayBuffer(16);
+const uint8 = new Uint8Array(buffer);
+uint8[0] = 7;
+
+// 7 (0111) AND 2 (0010) = 2 (0010)
+console.log(Atomics.and(uint8, 0, 2));
+// Expected output: 7
+
+console.log(Atomics.load(uint8, 0));
+// Expected output: 2
+```
 
 ## Syntax
 
-```js
+```js-nolint
 Atomics.and(typedArray, index, value)
 ```
 
@@ -42,10 +53,10 @@ The old value at the given position
 
 ### Exceptions
 
-- Throws a {{jsxref("TypeError")}}, if `typedArray` is not one
-  of the allowed integer types.
-- Throws a {{jsxref("RangeError")}}, if `index` is out of bounds
-  in the `typedArray`.
+- {{jsxref("TypeError")}}
+  - : Thrown if `typedArray` is not one of the allowed integer types.
+- {{jsxref("RangeError")}}
+  - : Thrown if `index` is out of bounds in the `typedArray`.
 
 ## Description
 
@@ -79,7 +90,7 @@ const ta = new Uint8Array(sab);
 ta[0] = 5;
 
 Atomics.and(ta, 0, 1); // returns 5, the old value
-Atomics.load(ta, 0);  // 1
+Atomics.load(ta, 0); // 1
 ```
 
 ## Specifications

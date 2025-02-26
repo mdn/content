@@ -1,25 +1,19 @@
 ---
-title: StylePropertyMap.set()
+title: "StylePropertyMap: set() method"
+short-title: set()
 slug: Web/API/StylePropertyMap/set
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSS Typed Object Model API
-  - Houdini
-  - Method
-  - Reference
-  - StylePropertyMap
-  - set()
 browser-compat: api.StylePropertyMap.set
 ---
-{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
+
+{{APIRef("CSS Typed Object Model API")}}
 
 The **`set()`** method of the {{domxref("StylePropertyMap")}}
 interface changes the CSS declaration with the given property.
 
 ## Syntax
 
-```js
+```js-nolint
 set(property, value)
 ```
 
@@ -42,10 +36,10 @@ the element's [style attribute](/en-US/docs/Web/HTML/Global_attributes/style).
 
 ```js
 // get the button element
-const buttonEl = document.querySelector('button');
+const buttonEl = document.querySelector("button");
 
 // set padding-top on button style attribute
-buttonEl.attributeStyleMap.set('padding-top', CSS.px(10));
+buttonEl.attributeStyleMap.set("padding-top", CSS.px(10));
 ```
 
 ## Specifications

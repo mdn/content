@@ -2,119 +2,267 @@
 title: Web Authentication API
 slug: Web/API/Web_Authentication_API
 page-type: web-api-overview
-tags:
-  - 2FA
-  - API
-  - Authentication
-  - Landing
-  - Reference
-  - Web Authentication API
-  - WebAuthn
-browser-compat:
-  - api.Credential
-  - api.CredentialsContainer
-  - api.PublicKeyCredential
-  - api.AuthenticatorResponse
-  - api.AuthenticatorAttestationResponse
-  - api.AuthenticatorAssertionResponse
+browser-compat: api.PublicKeyCredential
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("Web Authentication API")}}
 
-The Web Authentication API is an extension of the [Credential Management API](/en-US/docs/Web/API/Credential_Management_API) that enables strong authentication with public key cryptography, enabling passwordless authentication and/or secure second-factor authentication without SMS texts.
+The Web Authentication API (WebAuthn) is an extension of the [Credential Management API](/en-US/docs/Web/API/Credential_Management_API) that enables strong authentication with public key cryptography, enabling passwordless authentication and secure multi-factor authentication (MFA) without SMS texts.
 
-## Web authentication concepts and usage
+## WebAuthn concepts and usage
 
-The Web Authentication API (also referred to as WebAuthn) uses [asymmetric (public-ke](https://en.wikipedia.org/wiki/Public-key_cryptography) instead of passwords or SMS texts for registering, authenticating, and [second-factor authentication](https://en.wikipedia.org/wiki/Multi-factor_authentication) with websites. This has some benefits:
+WebAuthn uses [asymmetric (public-key) cryptography](https://en.wikipedia.org/wiki/Public-key_cryptography) instead of passwords or SMS texts for registering, authenticating, and [multi-factor authentication](https://en.wikipedia.org/wiki/Multi-factor_authentication) with websites. This has some benefits:
 
 - **Protection against phishing:** An attacker who creates a fake login website can't login as the user because the signature changes with the [origin](/en-US/docs/Glossary/Origin) of the website.
 - **Reduced impact of data breaches:** Developers don't need to hash the public key, and if an attacker gets access to the public key used to verify the authentication, it can't authenticate because it needs the private key.
 - **Invulnerable to password attacks:** Some users might reuse passwords, and an attacker may obtain the user's password for another website (e.g. via a data breach). Also, text passwords are much easier to brute-force than a digital signature.
 
-Many websites already have pages that allow users to register new accounts or sign in to an existing account, and the Web Authentication API acts as a replacement or supplement to those on those existing webpages. Similar to the other forms of the [Credential Management API](/en-US/docs/Web/API/Credential_Management_API), the Web Authentication API has two basic methods that correspond to register and login:
+Many websites already have pages that allow users to register new accounts or log into an existing account, and WebAuthn acts as a replacement or enhancement for the authentication part of the system. It extends the [Credential Management API](/en-US/docs/Web/API/Credential_Management_API), abstracting communication between the user agent and an authenticator and providing the following new functionality:
 
-- {{domxref("CredentialsContainer.create()", "navigator.credentials.create()")}} - when used with the publicKey option, creates new credentials, either for registering a new account or for associating a new asymmetric key pair credentials with an existing account.
-- {{domxref("CredentialsContainer.get()", "navigator.credentials.get()")}} - when used with the publicKey option, uses an existing set of credentials to authenticate to a service, either logging a user in or as a form of second-factor authentication.
+- When {{domxref("CredentialsContainer.create()", "navigator.credentials.create()")}} is used with the `publicKey` option, the user agent creates new credentials via an authenticator — either for registering a new account or for associating a new asymmetric key pair with an existing account.
+  - When registering a new account, these credentials are stored on a server (also referred to as a service or a [relying party](https://en.wikipedia.org/wiki/Relying_party)) and can be subsequently used to log a user in.
+  - The asymmetric key pair is stored in the authenticator, which can then be used to authenticate a user with a relying party for example during MFA. The authenticator may be embedded into the user agent, into an operating system, such as Windows Hello, or it may be a physical token, such as a USB or Bluetooth Security Key.
+- When {{domxref("CredentialsContainer.get()", "navigator.credentials.get()")}} is used with the `publicKey` option, the user agent uses an existing set of credentials to authenticate to a relying party (either as the primary login or to provide an additional factor during MFA as described above).
 
-> **Note:** Both `create()` and `get()` require a [secure context](/en-US/docs/Web/Security/Secure_Contexts) (i.e. the server is connected by HTTPS or is the localhost), and will not be available for use if the browser is not operating in a secure context.
+In their most basic forms, both `create()` and `get()` receive a very large random number called the "challenge" from the server and return the challenge signed by the private key back to the server. This proves to the server that a user has the private key required for authentication without revealing any secrets over the network.
 
-In their most basic forms, both `create()` and `get()` receive a very large random number called the "challenge" from the server and they return the challenge signed by the private key back to the server. This proves to the server that a user is in possession of the private key required for authentication without revealing any secrets over the network.
+> [!NOTE]
+> The "challenge" must be a buffer of random information at least 16 bytes in size.
 
-In order to understand how the create() and get() methods fit into the bigger picture, it is important to understand that they sit between two components that are outside the browser:
+### Creating a key pair and registering a user
 
-1. **Server** - the Web Authentication API is intended to register new credentials on a server (also referred to as a service or a [relying party](https://en.wikipedia.org/wiki/Relying_party)) and later use those same credentials on that same server to authenticate a user.
-2. **Authenticator** - the credentials are created and stored in a device called an authenticator. This is a new concept in authentication: when authenticating using passwords, the password is stored in a user's brain and no other device is needed; when authenticating using web authentication, the password is replaced with a key pair that is stored in an authenticator. The authenticator may be embedded into the user agent, into an operating system, such as Windows Hello, or it may be a physical token, such as a USB or Bluetooth Security Key.
+To illustrate how the credential creation process works, let's describe the typical flow that occurs when a user wants to register a credential to a relying party:
 
-### Registration
+1. The relying party server sends user and relying party information to the web app handling the registration process, along with the "challenge", using an appropriate secure mechanism (for example [Fetch](/en-US/docs/Web/API/Fetch_API) or [XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest)).
 
-A typical registration process has six steps, as illustrated in Figure 1 and described further below. This is a simplification of the data required for the registration process that is only intended to provide an overview. The full set of required fields, optional fields, and their meanings for creating a registration request can be found in the {{domxref("PublicKeyCredentialCreationOptions")}} dictionary. Likewise, the full set of response fields can be found in the {{domxref("PublicKeyCredential")}} interface (where {{domxref("PublicKeyCredential.response")}} is the {{domxref("AuthenticatorAttestationResponse")}} interface). Note most JavaScript programmers that are creating an application will only really care about steps 1 and 5 where the create() function is called and subsequently returns; however, steps 2, 3, and 4 are essential to understanding the processing that takes place in the browser and authenticator and what the resulting data means.
+   > [!NOTE]
+   > The format for sharing information between the relying party server and the web app is up to the application.
+   > A recommended approach is to exchange {{glossary("JSON type representation")}} objects for credentials and credential options.
+   > Convenience methods have been created in `PublicKeyCredential` for converting from the JSON representations to the form required by the authentication APIs: {{domxref("PublicKeyCredential.parseCreationOptionsFromJSON_static", "parseCreationOptionsFromJSON()")}}, {{domxref("PublicKeyCredential.parseRequestOptionsFromJSON_static", "parseRequestOptionsFromJSON()")}} and {{domxref("PublicKeyCredential.toJSON()")}}.
 
-![Web Authentication API registration component and dataflow diagram](webauthn_registration_r4.png)
+2. The web app initiates generation of a new credential via the authenticator, on behalf of the relying party, via a {{domxref("CredentialsContainer.create()", "navigator.credentials.create()")}} call. This call is passed a `publicKey` option specifying device capabilities, e.g., whether the device provides its own user authentication (for example with biometrics).
 
-_Figure 1 - a diagram showing the sequence of actions for a web authentication registration and the essential data associated with each action._
+   A typical `create()` call might look like so:
 
-First (labeled step 0 in the diagram), the application makes the initial registration request. The protocol and format of this request are outside the scope of the Web Authentication API.
+   ```js
+   let credential = await navigator.credentials.create({
+     publicKey: {
+       challenge: new Uint8Array([117, 61, 252, 231, 191, 241, ...]),
+       rp: { id: "acme.com", name: "ACME Corporation" },
+       user: {
+         id: new Uint8Array([79, 252, 83, 72, 214, 7, 89, 26]),
+         name: "jamiedoe",
+         displayName: "Jamie Doe"
+       },
+       pubKeyCredParams: [ {type: "public-key", alg: -7} ]
+     }
+   });
+   ```
 
-After this, the registration steps are:
+   The parameters of the `create()` call are passed to the authenticator, along with a SHA-256 hash that is signed to ensure that it isn't tampered with.
 
-1. **Server Sends Challenge, User Info, and Relying Party Info** - The server sends a challenge, user information, and relying party information to the JavaScript program. The protocol for communicating with the server is not specified and is outside of the scope of the Web Authentication API. Typically, server communications would be [REST](/en-US/docs/Glossary/REST) over https (probably using [XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest) or [Fetch](/en-US/docs/Web/API/Fetch_API)), but they could also be [SOAP](/en-US/docs/Glossary/SOAP), [RFC 2549](https://datatracker.ietf.org/doc/html/rfc2549) or nearly any other protocol provided that the protocol is secure. The parameters received from the server will be passed to the [create()](/en-US/docs/Web/API/CredentialsContainer/create) call, typically with little or no modification and returns a [Promise](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will resolve to a {{domxref("PublicKeyCredential")}} containing an {{domxref("AuthenticatorAttestationResponse")}}. **Note that it is absolutely critical that the challenge be a buffer of random information (at least 16 bytes) and it MUST be generated on the server in order to ensure the security of the registration process.**
-2. **Browser Calls authenticatorMakeCredential() on Authenticator** - Internally, the browser will validate the parameters and fill in any defaults, which become the {{domxref("AuthenticatorResponse.clientDataJSON")}}. One of the most important parameters is the origin, which is recorded as part of the clientData so that the origin can be verified by the server later. The parameters to the create() call are passed to the authenticator, along with a SHA-256 hash of the clientDataJSON (only a hash is sent because the link to the authenticator may be a low-bandwidth NFC or Bluetooth link and the authenticator is just going to sign over the hash to ensure that it isn't tampered with).
-3. **Authenticator Creates New Key Pair and Attestation** - Before doing anything, the authenticator will typically ask for some form of user verification. This could be entering a PIN, using a fingerprint, doing an iris scan, etc. to prove that the user is present and consenting to the registration. After the user verification, the authenticator will create a new asymmetric key pair and safely store the private key for future reference. The public key will become part of the attestation, which the authenticator will sign over with a private key that was burned into the authenticator during its manufacturing process and that has a certificate chain that can be validated back to a root of trust.
-4. **Authenticator Returns Data to Browser** - The new public key, a globally unique credential id, and other attestation data are returned to the browser where they become the attestationObject.
-5. **Browser Creates Final Data, Application sends response to Server** - The create() Promise resolves to an {{domxref("PublicKeyCredential")}}, which has a {{domxref("PublicKeyCredential.rawId")}} that is the globally unique credential id along with a response that is the {{domxref("AuthenticatorAttestationResponse")}} containing the {{domxref("AuthenticatorResponse.clientDataJSON")}} and {{domxref("AuthenticatorAttestationResponse.attestationObject")}}. The {{domxref("PublicKeyCredential")}} is sent back to the server using any desired formatting and protocol (note that the ArrayBuffer properties need to be base64 encoded or similar).
-6. **Server Validates and Finalizes Registration** - Finally, the server is required to perform a series of checks to ensure that the registration was complete and not tampered with. These include:
+3. After the authenticator obtains user consent, it generates a key pair and returns the public key and optional signed attestation to the web app. This is provided when the {{jsxref("Promise")}} returned by the `create()` call fulfills, in the form of a {{domxref("PublicKeyCredential")}} object instance (the {{domxref("PublicKeyCredential.response")}} property contains the attestation information).
 
-    1. Verifying that the challenge is the same as the challenge that was sent
-    2. Ensuring that the origin was the origin expected
-    3. Validating that the signature over the clientDataHash and the attestation using the certificate chain for that specific model of the authenticator
+4. The web app forwards the {{domxref("PublicKeyCredential")}} to the relying party server, again using an appropriate mechanism.
 
-    A complete list of validation steps [can be found in the Web Authentication API specification](https://w3c.github.io/webauthn/#registering-a-new-credential). Assuming that the checks pan out, the server will store the new public key associated with the user's account for future use — that is, whenever the user desires to use the public key for authentication.
+5. The relying party server stores the public key, coupled with the user identity, to remember the credential for future authentications. During this process, it performs a series of checks to ensure that the registration was complete and not tampered with. These include:
 
-### Authentication
+   1. Verifying that the challenge is the same as the challenge that was sent.
+   2. Ensuring that the origin was the origin expected.
+   3. Validating that the signature and attestation are using the correct certificate chain for the specific model of the authenticator used to generate the key pair in the first place.
 
-After a user has registered with web authentication, they can subsequently authenticate (a.k.a. - login or sign-in) with the service. The authentication flow looks similar to the registration flow, and the illustration of actions in Figure 2 may be recognizable as being similar to the illustration of registration actions in Figure 1. The primary differences between registration and authentication are that: 1) authentication doesn't require user or relying party information; and 2) authentication creates an assertion using the previously generated key pair for the service rather than creating an attestation with the key pair that was burned into the authenticator during manufacturing. Again, the description of authentication below is a broad overview rather than getting into all the options and features of the Web Authentication API. The specific options for authenticating can be found in the {{domxref("PublicKeyCredentialRequestOptions")}} dictionary, and the resulting data can be found in the {{domxref("PublicKeyCredential")}} interface (where {{domxref("PublicKeyCredential.response")}} is the {{domxref("AuthenticatorAssertionResponse")}} interface) .
+> [!WARNING]
+> Attestation provides a way for a relying party to determine the provenance of an authenticator. Relying parties should not attempt to maintain allowlists of authenticators.
 
-![WebAuthn authentication component and dataflow diagram](<mdn_webauthn_authentication_(r1).png>)
+### Authenticating a user
 
-_Figure 2 - similar to Figure 1, a diagram showing the sequence of actions for a web authentication and the essential data associated with each action._
+After a user has registered with WebAuthn, they can authenticate (login) with the service. The authentication flow looks similar to the registration flow, the main differences being that authentication:
 
-First (labeled step 0 in the diagram), the application makes the initial authentication request. The protocol and format of this request are outside the scope of the Web Authentication API.
+1. Doesn't require user or relying party information
+2. Creates an assertion using the previously-generated key pair for the service, rather than the authenticator's key pair.
 
-After this, the authentication steps are:
+A typical authentication flow is as follows:
 
-1. **Server Sends Challenge** - The server sends a challenge to the JavaScript program. The protocol for communicating with the server is not specified and is outside of the scope of the Web Authentication API. Typically, server communications would be [REST](/en-US/docs/Glossary/REST) over https (probably using [XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest) or [Fetch](/en-US/docs/Web/API/Fetch_API)), but they could also be [SOAP](/en-US/docs/Glossary/SOAP), [RFC 2549](https://datatracker.ietf.org/doc/html/rfc2549) or nearly any other protocol provided that the protocol is secure. The parameters received from the server will be passed to the [get()](/en-US/docs/Web/API/CredentialsContainer/get) call, typically with little or no modification. **Note that it is absolutely critical that the challenge be a buffer of random information (at least 16 bytes) and it MUST be generated on the server in order to ensure the security of the authentication process.**
-2. **Browser Calls authenticatorGetCredential() on Authenticator** - Internally, the browser will validate the parameters and fill in any defaults, which become the {{domxref("AuthenticatorResponse.clientDataJSON")}}. One of the most important parameters is the origin, which recorded as part of the clientData so that the origin can be verified by the server later. The parameters to the get() call are passed to the authenticator, along with a SHA-256 hash of the clientDataJSON (only a hash is sent because the link to the authenticator may be a low-bandwidth NFC or Bluetooth link and the authenticator is just going to sign over the hash to ensure that it isn't tampered with).
-3. **Authenticator Creates an Assertion** - The authenticator finds a credential for this service that matches the Relying Party ID and prompts a user to consent to the authentication. Assuming both of those steps are successful, the authenticator will create a new assertion by signing over the clientDataHash and authenticatorData with the private key generated for this account during the registration call.
-4. **Authenticator Returns Data to Browser** - The authenticator returns the authenticatorData and assertion signature back to the browser.
-5. **Browser Creates Final Data, Application sends response to Server** - The browser resolves the [Promise](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) to a {{domxref("PublicKeyCredential")}} with a {{domxref("PublicKeyCredential.response")}} that contains the {{domxref("AuthenticatorAssertionResponse")}}. It is up to the JavaScript application to transmit this data back to the server using any protocol and format of its choice.
-6. **Server Validates and Finalizes Authentication** - Upon receiving the result of the authentication request, the server performs validation of the response such as:
+1. The relying party generates a "challenge" and sends it to the user agent using an appropriate secure mechanism, along with a list of relying party and user credentials. It can also indicate where to look for the credential, e.g., on a local built-in authenticator, or on an external one over USB, BLE, etc.
 
-    1. Using the public key that was stored during the registration request to validate the signature by the authenticator.
-    2. Ensuring that the challenge that was signed by the authenticator matches the challenge that was generated by the server.
-    3. Checking that the Relying Party ID is the one expected for this service.
+2. The browser asks the authenticator to sign the challenge via a {{domxref("CredentialsContainer.get()", "navigator.credentials.get()")}} call, which is passed the credentials in a `publicKey` option.
 
-    A full list of the [steps for validating an assertion can be found in the Web Authentication API specification](https://w3c.github.io/webauthn/#verifying-assertion). Assuming the validation is successful, the server will note that the user is now authenticated. This is outside the scope of the Web Authentication API specification, but one option would be to drop a new cookie for the user session.
+   A typical `get()` call might look like so:
+
+   ```js
+   let credential = await navigator.credentials.get({
+     publicKey: {
+       challenge: new Uint8Array([139, 66, 181, 87, 7, 203, ...]),
+       rpId: "acme.com",
+       allowCredentials: [{
+         type: "public-key",
+         id: new Uint8Array([64, 66, 25, 78, 168, 226, 174, ...])
+       }],
+       userVerification: "required",
+     }
+   });
+   ```
+
+   The parameters of the `get()` call are passed to the authenticator to handle the authentication.
+
+3. If the authenticator contains one of the given credentials and is able to successfully sign the challenge, it returns a signed assertion to the web app after receiving user consent. This is provided when the {{jsxref("Promise")}} returned by the `get()` call fulfills, in the form of a {{domxref("PublicKeyCredential")}} object instance (the {{domxref("PublicKeyCredential.response")}} property contains the assertion information).
+
+4. The web app forwards the signed assertion to the relying party server for the relying party to validate. The validation checks include:
+
+   1. Using the public key that was stored during the registration request to validate the signature by the authenticator.
+   2. Ensuring that the challenge that was signed by the authenticator matches the challenge that was generated by the server.
+   3. Checking that the Relying Party ID is the one expected for this service.
+
+5. Once verified by the server, the authentication flow is considered successful.
+
+### Discoverable credentials and conditional mediation
+
+**Discoverable credentials** are retrieved from an authenticator — _discovered_ by the browser — to offer as login options when the user is logging in to a relying party web app. In contrast, non-discoverable credentials are provided by the relying party server for the browser to offer as login options.
+
+Discoverable credential IDs and associated metadata such as [user names](/en-US/docs/Web/API/PublicKeyCredentialCreationOptions#name_2) and [display names](/en-US/docs/Web/API/PublicKeyCredentialCreationOptions#displayname) are stored in a client-side authenticator such as a browser password manager, authenticator app, or hardware solution such as a YubiKey. Having this information available in the authenticator means that the user can log in conveniently without having to supply credentials, and the relying party does not have to provide a [`credentialId`](/en-US/docs/Web/API/PublicKeyCredentialRequestOptions#id) when asserting it (although it can do if desired; if the credential is asserted by the RP then the non-discoverable workflow is followed).
+
+A discoverable credential is created via a [`create()`](/en-US/docs/Web/API/CredentialsContainer/create) call with a specified [`residentKey`](/en-US/docs/Web/API/PublicKeyCredentialCreationOptions#residentkey). The `credentialId`, user metadata, and public key for the new credential is stored by the authenticator as discussed above, but also returned to the web app and stored on the RP server.
+
+In order to authenticate, the RP server calls [`get()`](/en-US/docs/Web/API/CredentialsContainer/get) with **conditional mediation** specified, that is [`mediation`](/en-US/docs/Web/API/CredentialsContainer/get#mediation) set to `conditional`, an empty [`allowCredentials`](/en-US/docs/Web/API/PublicKeyCredentialRequestOptions#allowcredentials) list (meaning only discoverable credentials can be shown), and a challenge.
+
+Conditional mediation results in discoverable credentials found in the authenticator being presented to the user in a non-modal UI along with an indication of the origin requesting credentials, rather than a modal dialog. In practice, this means autofilling available credentials in your login forms. The metadata stored in discoverable credentials can be displayed to help users choose a credential when logging in. To display discoverable credentials in your login forms, you also need to include [`autocomplete="webauthn"`](/en-US/docs/Web/HTML/Attributes/autocomplete#webauthn) on your form fields.
+
+To reiterate, the relying party doesn't tell the authenticator what credentials to offer to the user — instead, the authenticator supplies the list it has available. Once the user selects a credential, the authenticator uses it to sign the challenge with the associated private key, and the browser returns the signed challenge and its `credentialId` to the RP server.
+
+The subsequent authentication process on the RP server is the same as for non-discoverable credentials.
+
+> [!NOTE]
+> You can check whether conditional mediation is available on a specific user agent by calling the {{domxref("PublicKeyCredential.isConditionalMediationAvailable()")}} method.
+
+[Passkeys](https://passkeys.dev/) are a significant use case for discoverable credentials; see [Create a passkey for passwordless logins](https://web.dev/articles/passkey-registration) and [Sign in with a passkey through form autofill](https://web.dev/articles/passkey-form-autofill) for implementation details. See also [Discoverable credentials deep dive](https://web.dev/articles/webauthn-discoverable-credentials) for more general information on discoverable credentials.
+
+When conditional mediation is used for authentication, the prevent silent access flag (see {{domxref("CredentialsContainer.preventSilentAccess()")}}) is treated as being `true` regardless of its actual value: the conditional behavior always involves user mediation of some sort if applicable credentials are discovered.
+
+> [!NOTE]
+> If no credentials are discovered, the non-modal dialog will not be visible, and the user agent can prompt the user to take action in a way that depends on the type of credential (for example, to insert a device containing credentials).
+
+#### Discoverable credential synchronization methods
+
+It is possible for the information stored in a user's authenticator about a discoverable credential to go out sync with the relying party's server. This might happen when the user deletes a credential or modifies their user/display name on the RP web app without updating the authenticator.
+
+The API provides methods to allow the relying party server to signal changes to the authenticator, so it can update its stored credentials:
+
+- {{domxref("PublicKeyCredential.signalAllAcceptedCredentials_static", "PublicKeyCredential.signalAllAcceptedCredentials()")}}: Signals to the authenticator all of the valid credential IDs that the RP server still holds for a particular user.
+- {{domxref("PublicKeyCredential.signalCurrentUserDetails_static", "PublicKeyCredential.signalCurrentUserDetails()")}}: Signals to the authenticator that a particular user has updated their user name and/or display name on the RP server.
+- {{domxref("PublicKeyCredential.signalUnknownCredential_static", "PublicKeyCredential.signalUnknownCredential()")}}: Signals to the authenticator that a credential ID was not recognized by the RP server.
+
+It may seem like `signalUnknownCredential()` and `signalAllAcceptedCredentials()` have similar purposes, so what situation should each one be used in?
+
+- `signalAllAcceptedCredentials()` should be called after every successful sign-in, and when the user is logged in and you want to update the state of their credentials. It must only be called when a user is authenticated, as it shares the entire list of `credentialId`s for a given user. This would cause a privacy leak if the user is not authenticated.
+- `signalUnknownCredential()` should be called after an unsuccessful login, to signal to the authenticator that the `credentialId` of the selected credential cannot be validated, and should be removed. The method can safely be called when the user is not authenticated as it passes a single `credentialId` to the authenticator — the one the client just tried to authenticate with — and no user information.
+
+### Customizing workflows based on client capabilities
+
+The signup and login workflows can be customized based on the capabilities of the WebAuthn client (browser). The {{domxref("PublicKeyCredential.getClientCapabilities_static", "PublicKeyCredential.getClientCapabilities()")}} static method can be used to query those capabilities; it returns an object where each key refers to a WebAuthn capability or extension, and each value is a boolean indicating support for that feature.
+
+This can be used, for example, to check:
+
+- Client support for various authenticators such as passkeys or biometric user verification.
+- Whether the client [supports methods to keep relying party and authenticator credentials in sync](/en-US/docs/Web/API/Web_Authentication_API#discoverable_credential_synchronization_methods).
+- Whether the client allows a single passkey to be used on different websites with the same origin.
+
+The code below shows how you might use `getClientCapabilities()` to check if the client supports authenticators that offer biometric user verification.
+Note that the actual actions performed depend on your site.
+For sites that _require_ biometric authentication, you might replace the login UI with a message indicating that biometric authentication is needed, and the user should try a different browser or device.
+
+```js
+async function checkIsUserVerifyingPlatformAuthenticatorAvailable() {
+  const capabilities = await PublicKeyCredential.getClientCapabilities();
+  // Check the capability: userVerifyingPlatformAuthenticator
+  if (capabilities.userVerifyingPlatformAuthenticator) {
+    // Perform actions if biometric support is available
+  } else {
+    // Perform actions if biometric support is not available.
+  }
+}
+```
+
+## Controlling access to the API
+
+The availability of WebAuthn can be controlled using a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy), specifying two directives in particular:
+
+- {{httpheader("Permissions-Policy/publickey-credentials-create", "publickey-credentials-create")}}: Controls the availability of {{domxref("CredentialsContainer.create", "navigator.credentials.create()")}} with the `publicKey` option.
+- {{httpheader("Permissions-Policy/publickey-credentials-get", "publickey-credentials-get")}}: Controls the availability of {{domxref("CredentialsContainer.get", "navigator.credentials.get()")}} with the `publicKey` option.
+
+Both directives have a default allowlist value of `"self"`, meaning that by default these methods can be used in top-level document contexts.
+In addition, `get()` can be used in nested browsing contexts loaded from the same origin as the top-most document.
+`get()` and `create()` can be used in nested browsing contexts loaded from the different origins to the top-most document (i.e. in cross-origin `<iframes>`), if allowed by the [`publickey-credentials-get`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/publickey-credentials-get) and [`publickey-credentials-create`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/publickey-credentials-create) `Permission-Policy` directives, respectively.
+For cross-origin `create()` calls, where the permission was granted by [`allow=` on an iframe](/en-US/docs/Web/HTTP/Headers/Permissions-Policy#iframes), the frame must also have {{glossary("Transient activation")}}.
+
+> [!NOTE]
+> Where a policy forbids use of these methods, the {{jsxref("Promise", "promises", "", 1)}} returned by them will reject with a `NotAllowedError` {{domxref("DOMException")}}.
+
+### Basic access control
+
+If you wish to allow access to a specific subdomain only, you could provide it like this:
+
+```http
+Permissions-Policy: publickey-credentials-get=("https://subdomain.example.com")
+Permissions-Policy: publickey-credentials-create=("https://subdomain.example.com")
+```
+
+### Allowing embedded `create` and `get()` calls in an `<iframe>`
+
+If you wish to authenticate with `get()` or `create()` in an `<iframe>`, there are a couple of steps to follow:
+
+1. The site embedding the relying party site must provide permission via an `allow` attribute:
+
+   - If using `get()`:
+
+     ```html
+     <iframe
+       src="https://auth.provider.com"
+       allow="publickey-credentials-get *">
+     </iframe>
+     ```
+
+   - If using `create()`:
+
+     ```html
+     <iframe
+       src="https://auth.provider.com"
+       allow="publickey-credentials-create 'self' https://a.auth.provider.com https://b.auth.provider.com">
+     </iframe>
+     ```
+
+     The `<iframe>` must also have {{glossary("Transient activation")}} if `create()` is called cross-origin.
+
+2. The relying party site must provide permission for the above access via a `Permissions-Policy` header:
+
+   ```http
+   Permissions-Policy: publickey-credentials-get=*
+   Permissions-Policy: publickey-credentials-create=*
+   ```
+
+   Or to allow only a specific URL to embed the relying party site in an `<iframe>`:
+
+   ```http
+   Permissions-Policy: publickey-credentials-get=("https://subdomain.example.com")
+   Permissions-Policy: publickey-credentials-create=("https://*.auth.provider.com")
+   ```
 
 ## Interfaces
 
-- {{domxref("Credential")}} {{experimental_inline}}
-  - : Provides information about an entity as a prerequisite to a trust decision.
-- {{domxref("CredentialsContainer")}}
-  - : Exposes methods to request credentials and notify the user agent when events such as successful sign in or sign out happen. This interface is accessible from {{domxref('Navigator.credentials')}}. The Web Authentication specification adds a `publicKey` member to the {{domxref('CredentialsContainer.create','create()')}} and {{domxref('CredentialsContainer.get','get()')}} methods to either create a new public key pair or get an authentication for a key pair, respectively.
-- {{domxref("PublicKeyCredential")}}
-  - : Provides information about a public key / private key pair, which is a credential for logging in to a service using an un-phishable and data-breach resistant asymmetric key pair instead of a password.
-- {{domxref("AuthenticatorResponse")}}
-  - : The base interface for {{domxref("AuthenticatorAttestationResponse")}} and {{domxref("AuthenticatorAssertionResponse")}}, which provide a cryptographic root of trust for a key pair. Returned by {{domxref('CredentialsContainer.create()')}} and {{domxref('CredentialsContainer.get()')}}, respectively, the child interfaces include information from the browser such as the challenge origin. Either may be returned from {{domxref("PublicKeyCredential.response")}}.
-- {{domxref("AuthenticatorAttestationResponse")}}
-  - : Returned by {{domxref('CredentialsContainer.create()')}} when a {{domxref('PublicKeyCredential')}} is passed, and provides a cryptographic root of trust for the new key pair that has been generated.
 - {{domxref("AuthenticatorAssertionResponse")}}
-  - : Returned by {{domxref('CredentialsContainer.get()')}} when a {{domxref('PublicKeyCredential')}} is passed, and provides proof to a service that it has a key pair and that the authentication request is valid and approved.
+  - : Provides proof to a service that an authenticator has the necessary key pair to successfully handle an authentication request initiated by a {{domxref("CredentialsContainer.get()")}} call. Available in the {{domxref("PublicKeyCredential.response", "response")}} property of the {{domxref("PublicKeyCredential")}} instance obtained when the `get()` {{jsxref("Promise")}} fulfills.
+- {{domxref("AuthenticatorAttestationResponse")}}
+  - : The result of a WebAuthn credential registration (i.e., a {{domxref("CredentialsContainer.create()")}} call). It contains information about the credential that the server needs to perform WebAuthn assertions, such as its credential ID and public key. Available in the {{domxref("PublicKeyCredential.response", "response")}} property of the {{domxref("PublicKeyCredential")}} instance obtained when the `create()` {{jsxref("Promise")}} fulfills.
+- {{domxref("AuthenticatorResponse")}}
+  - : The base interface for {{domxref("AuthenticatorAttestationResponse")}} and {{domxref("AuthenticatorAssertionResponse")}}.
+- {{domxref("PublicKeyCredential")}}
+  - : Provides information about a public key / private key pair, which is a credential for logging into a service using an un-phishable and data-breach resistant asymmetric key pair instead of a password. Obtained when the {{jsxref("Promise")}} returned via a {{domxref("CredentialsContainer.create", "create()")}} or {{domxref("CredentialsContainer.get", "get()")}} call fulfills.
 
-## Options
+## Extensions to other interfaces
 
-- {{domxref("PublicKeyCredentialCreationOptions")}}
-  - : The options passed to {{domxref('CredentialsContainer.create()')}}.
-- {{domxref("PublicKeyCredentialRequestOptions")}}
-  - : The options passed to {{domxref('CredentialsContainer.get()')}}.
+- {{domxref("CredentialsContainer.create()")}}, the `publicKey` option
+  - : Calling `create()` with a `publicKey` option initiates the creation of new asymmetric key credentials via an authenticator, as explained above.
+- {{domxref("CredentialsContainer.get()")}}, the `publicKey` option
+  - : Calling `get()` with a `publicKey` option instructs the user agent uses an existing set of credentials to authenticate to a relying party.
 
 ## Examples
 
@@ -122,79 +270,82 @@ After this, the authentication steps are:
 
 - [Mozilla Demo](https://webauthn.bin.coffee/) website and its [source code](https://github.com/jcjones/webauthn.bin.coffee).
 - [Google Demo](https://try-webauthn.appspot.com/) website and its [source code](https://github.com/google/webauthndemo).
-- [https://webauthn.io/ Demo](https://github.com/duo-labs/webauthn.io) website and its [source code](https://github.com/duo-labs/webauthn.io).
+- [WebAuthn.io demo](https://webauthn.io/) website and its [source code](https://github.com/duo-labs/webauthn.io).
 - [github.com/webauthn-open-source](https://github.com/webauthn-open-source) and its [client source code](https://github.com/webauthn-open-source/webauthn-simple-app) and [server source code](https://github.com/webauthn-open-source/fido2-lib)
-- [OWASP Single Sign-On](https://owasp.org/www-project-sso/)
 
 ### Usage example
 
-> **Warning:** For security reasons, web authentication calls ({{domxref('CredentialsContainer.create','create()')}} and {{domxref('CredentialsContainer.get','get()')}}) are cancelled if the browser window loses focus while the call is pending.
+> [!NOTE]
+> For security reasons, the Web Authentication API calls ({{domxref("CredentialsContainer.create", "create()")}} and {{domxref("CredentialsContainer.get","get()")}}) are canceled if the browser window loses focus while the call is pending.
 
 ```js
 // sample arguments for registration
 const createCredentialDefaultArgs = {
-    publicKey: {
-        // Relying Party (a.k.a. - Service):
-        rp: {
-            name: "Acme"
-        },
-
-        // User:
-        user: {
-            id: new Uint8Array(16),
-            name: "john.p.smith@example.com",
-            displayName: "John P. Smith"
-        },
-
-        pubKeyCredParams: [{
-            type: "public-key",
-            alg: -7
-        }],
-
-        attestation: "direct",
-
-        timeout: 60000,
-
-        challenge: new Uint8Array([ // must be a cryptographically random number sent from a server
-            0x8C, 0x0A, 0x26, 0xFF, 0x22, 0x91, 0xC1, 0xE9, 0xB9, 0x4E, 0x2E, 0x17, 0x1A, 0x98, 0x6A, 0x73,
-            0x71, 0x9D, 0x43, 0x48, 0xD5, 0xA7, 0x6A, 0x15, 0x7E, 0x38, 0x94, 0x52, 0x77, 0x97, 0x0F, 0xEF
-        ]).buffer
-    }
+  publicKey: {
+    // Relying Party (a.k.a. - Service):
+    rp: {
+      name: "Acme",
+    },
+    // User:
+    user: {
+      id: new Uint8Array(16),
+      name: "carina.p.anand@example.com",
+      displayName: "Carina P. Anand",
+    },
+    pubKeyCredParams: [
+      {
+        type: "public-key",
+        alg: -7,
+      },
+    ],
+    attestation: "direct",
+    timeout: 60000,
+    challenge: new Uint8Array([
+      // must be a cryptographically random number sent from a server
+      0x8c, 0x0a, 0x26, 0xff, 0x22, 0x91, 0xc1, 0xe9, 0xb9, 0x4e, 0x2e, 0x17,
+      0x1a, 0x98, 0x6a, 0x73, 0x71, 0x9d, 0x43, 0x48, 0xd5, 0xa7, 0x6a, 0x15,
+      0x7e, 0x38, 0x94, 0x52, 0x77, 0x97, 0x0f, 0xef,
+    ]).buffer,
+  },
 };
 
 // sample arguments for login
 const getCredentialDefaultArgs = {
-    publicKey: {
-        timeout: 60000,
-        // allowCredentials: [newCredential] // see below
-        challenge: new Uint8Array([ // must be a cryptographically random number sent from a server
-            0x79, 0x50, 0x68, 0x71, 0xDA, 0xEE, 0xEE, 0xB9, 0x94, 0xC3, 0xC2, 0x15, 0x67, 0x65, 0x26, 0x22,
-            0xE3, 0xF3, 0xAB, 0x3B, 0x78, 0x2E, 0xD5, 0x6F, 0x81, 0x26, 0xE2, 0xA6, 0x01, 0x7D, 0x74, 0x50
-        ]).buffer
-    },
+  publicKey: {
+    timeout: 60000,
+    // allowCredentials: [newCredential] // see below
+    challenge: new Uint8Array([
+      // must be a cryptographically random number sent from a server
+      0x79, 0x50, 0x68, 0x71, 0xda, 0xee, 0xee, 0xb9, 0x94, 0xc3, 0xc2, 0x15,
+      0x67, 0x65, 0x26, 0x22, 0xe3, 0xf3, 0xab, 0x3b, 0x78, 0x2e, 0xd5, 0x6f,
+      0x81, 0x26, 0xe2, 0xa6, 0x01, 0x7d, 0x74, 0x50,
+    ]).buffer,
+  },
 };
 
 // register / create a new credential
-navigator.credentials.create(createCredentialDefaultArgs)
-    .then((cred) => {
-        console.log("NEW CREDENTIAL", cred);
-
-        // normally the credential IDs available for an account would come from a server
-        // but we can just copy them from above…
-        const idList = [{
-            id: cred.rawId,
-            transports: ["usb", "nfc", "ble"],
-            type: "public-key"
-        }];
-        getCredentialDefaultArgs.publicKey.allowCredentials = idList;
-        return navigator.credentials.get(getCredentialDefaultArgs);
-    })
-    .then((assertion) => {
-        console.log("ASSERTION", assertion);
-    })
-    .catch((err) => {
-        console.log("ERROR", err);
-    });
+navigator.credentials
+  .create(createCredentialDefaultArgs)
+  .then((cred) => {
+    console.log("NEW CREDENTIAL", cred);
+    // normally the credential IDs available for an account would come from a server
+    // but we can just copy them from above…
+    const idList = [
+      {
+        id: cred.rawId,
+        transports: ["usb", "nfc", "ble"],
+        type: "public-key",
+      },
+    ];
+    getCredentialDefaultArgs.publicKey.allowCredentials = idList;
+    return navigator.credentials.get(getCredentialDefaultArgs);
+  })
+  .then((assertion) => {
+    console.log("ASSERTION", assertion);
+  })
+  .catch((err) => {
+    console.log("ERROR", err);
+  });
 ```
 
 ## Specifications

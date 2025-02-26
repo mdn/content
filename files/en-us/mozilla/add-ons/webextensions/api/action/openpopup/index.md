@@ -1,35 +1,35 @@
 ---
 title: action.openPopup()
 slug: Mozilla/Add-ons/WebExtensions/API/action/openPopup
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - action
-  - openPopup
+page-type: webextension-api-function
 browser-compat: webextensions.api.action.openPopup
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 Open the browser action's popup.
 
-> **Note:** This API is available in Manifest V3 or higher.
+> [!NOTE]
+> This API is available in Manifest V3 or higher.
 
-You can only call this function from inside the handler for a [user action](/en-US/docs/Mozilla/Add-ons/WebExtensions/User_actions).
+In stable versions of Firefox, you can only call this function from inside the handler for a [user action](/en-US/docs/Mozilla/Add-ons/WebExtensions/User_actions). See [Browser compatibility](#browser_compatibility) for details.
 
 ## Syntax
 
-```js
-browser.action.openPopup()
+```js-nolint
+browser.action.openPopup(
+  options // optional object
+)
 ```
 
 ### Parameters
 
-None.
+- `details` {{optional_inline}}
+
+  - : An object with the following properties:
+
+    - `windowId` {{optional_inline}}
+      - : `integer`. Window to open the popup for. Defaults to the current window.
 
 ### Return value
 
@@ -43,7 +43,7 @@ Open the popup when the user selects a context menu item:
 browser.menus.create({
   id: "open-popup",
   title: "open popup",
-  contexts: ["all"]
+  contexts: ["all"],
 });
 
 browser.menus.onClicked.addListener(() => {

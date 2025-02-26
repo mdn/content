@@ -1,20 +1,25 @@
 ---
 title: box-align
 slug: Web/CSS/box-align
-tags:
-  - CSS
-  - CSS Property
-  - NeedsUpdate
-  - Non-standard
-  - Reference
-  - recipe:css-property
+page-type: css-property
+status:
+  - deprecated
+  - non-standard
 browser-compat: css.properties.box-align
 ---
-{{CSSRef}}{{Non-standard_header}}{{warning("This is a property of the original CSS Flexible Box Layout Module draft, and has been replaced by a newer standard.")}}
+
+{{CSSRef}}{{Non-standard_header}}{{Deprecated_Header}}
+
+> [!WARNING]
+> This is a property of the original CSS flexible box layout Module draft, and has been replaced by a newer standard.
 
 The **`box-align`** [CSS](/en-US/docs/Web/CSS) property specifies how an element aligns its contents across its layout in a perpendicular direction. The effect of the property is only visible if there is extra space in the box.
 
-See [flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox) for information about the current standard.
+See [flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) for information about the current standard.
+
+The direction of layout depends on the element's orientation: horizontal or vertical.
+
+## Syntax
 
 ```css
 /* Keyword values */
@@ -29,10 +34,6 @@ box-lines: inherit;
 box-lines: initial;
 box-lines: unset;
 ```
-
-The direction of layout depends on the element's orientation: horizontal or vertical.
-
-## Syntax
 
 The `box-align` property is specified as one of the keyword values listed below.
 
@@ -66,60 +67,66 @@ If the alignment is set using the element's `align` attribute, then the style is
 
 ## Formal syntax
 
-{{csssyntax}}
+```plain
+box-align =
+  start | center | end | baseline | stretch
+```
 
 ## Examples
 
 ### Setting box alignment
 
 ```html
-<!DOCTYPE html>
-<html>
-<head>
-<title>CSS box-align example</title>
-<style>
-div.example {
-  display: box;                   /* As specified */
-  display: -moz-box;              /* Mozilla */
-  display: -webkit-box;           /* WebKit */
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CSS box-align example</title>
+    <style>
+      div.example {
+        display: box; /* As specified */
+        display: -moz-box; /* Mozilla */
+        display: -webkit-box; /* WebKit */
 
-  /* Make this box taller than the children,
+        /* Make this box taller than the children,
      so there is room for the box-pack */
-  height: 400px;
+        height: 400px;
 
-  /* Make this box wider than the children
+        /* Make this box wider than the children
      so there is room for the box-align */
-  width: 300px;
+        width: 300px;
 
-  /* Children should be oriented vertically */
-  box-orient: vertical;           /* As specified */
-  -moz-box-orient: vertical;      /* Mozilla */
-  -webkit-box-orient: vertical;   /* WebKit */
+        /* Children should be oriented vertically */
+        box-orient: vertical; /* As specified */
+        -moz-box-orient: vertical; /* Mozilla */
+        -webkit-box-orient: vertical; /* WebKit */
 
-  /* Align children to the horizontal center of this box */
-  box-align: center;              /* As specified */
-  -moz-box-align: center;         /* Mozilla */
-  -webkit-box-align: center;      /* WebKit */
+        /* Align children to the horizontal center of this box */
+        box-align: center; /* As specified */
+        -moz-box-align: center; /* Mozilla */
+        -webkit-box-align: center; /* WebKit */
 
-  /* Pack children to the bottom of this box */
-  box-pack: end;                  /* As specified */
-  -moz-box-pack: end;             /* Mozilla */
-  -webkit-box-pack: end;          /* WebKit */
-}
+        /* Pack children to the bottom of this box */
+        box-pack: end; /* As specified */
+        -moz-box-pack: end; /* Mozilla */
+        -webkit-box-pack: end; /* WebKit */
+      }
 
-div.example > p {
-  /* Make children narrower than their parent,
+      div.example > p {
+        /* Make children narrower than their parent,
      so there is room for the box-align */
-  width: 200px;
-}
-</style>
-</head>
-<body>
-  <div class="example">
-    <p>I will be second from the bottom of div.example, centered horizontally.</p>
-    <p>I will be on the bottom of div.example, centered horizontally.</p>
-  </div>
-</body>
+        width: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="example">
+      <p>
+        I will be second from the bottom of div.example, centered horizontally.
+      </p>
+      <p>I will be on the bottom of div.example, centered horizontally.</p>
+    </div>
+  </body>
 </html>
 ```
 

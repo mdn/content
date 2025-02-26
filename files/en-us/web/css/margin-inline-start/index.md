@@ -1,16 +1,10 @@
 ---
 title: margin-inline-start
 slug: Web/CSS/margin-inline-start
-tags:
-  - CSS
-  - CSS Logical Property
-  - CSS Property
-  - Reference
-  - margin-inline
-  - margin-inline-start
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.margin-inline-start
 ---
+
 {{CSSRef}}
 
 The **`margin-inline-start`** [CSS](/en-US/docs/Web/CSS) property defines the logical inline start margin of an element, which maps to a physical margin depending on the element's writing mode, directionality, and text orientation. It corresponds to the {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, or {{cssxref("margin-left")}} property depending on the values defined for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}.
@@ -21,9 +15,11 @@ The **`margin-inline-start`** [CSS](/en-US/docs/Web/CSS) property defines the lo
 
 ```css
 /* <length> values */
-margin-inline-start: 10px;  /* An absolute length */
-margin-inline-start: 1em;   /* relative to the text size */
-margin-inline-start: 5%;    /* relative to the nearest block container's width */
+margin-inline-start: 10px; /* An absolute length */
+margin-inline-start: 1em; /* relative to the text size */
+margin-inline-start: 5%; /* relative to the nearest block container's width */
+margin-inline-start: anchor-size(block);
+margin-inline-start: calc(anchor-size(--myAnchor width, 30px) / 4);
 
 /* Keyword values */
 margin-inline-start: auto;
@@ -92,6 +88,7 @@ div {
 
 ## See also
 
+- [CSS Logical Properties and Values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values)
 - {{cssxref("margin-inline-end")}}
 - The mapped physical properties: {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, and {{cssxref("margin-left")}}
 - {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

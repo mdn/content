@@ -1,23 +1,20 @@
 ---
-title: DeprecationReportBody.toJSON()
+title: "DeprecationReportBody: toJSON() method"
+short-title: toJSON()
 slug: Web/API/DeprecationReportBody/toJSON
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - Experimental
-  - toJSON
-  - DeprecationReportBody
-spec-urls: https://wicg.github.io/deprecation-reporting/#dom-deprecationreportbody-tojson
+status:
+  - experimental
+browser-compat: api.DeprecationReportBody.toJSON
 ---
-{{APIRef("Reporting API")}}{{SeeCompatTable}}
+
+{{APIRef("Reporting API")}}{{AvailableInWorkers}}{{SeeCompatTable}}
 
 The **`toJSON()`** method of the {{domxref("DeprecationReportBody")}} interface is a _serializer_, and returns a JSON representation of the `InterventionReportBody` object.
 
 ## Syntax
 
-```js
+```js-nolint
 toJSON()
 ```
 
@@ -35,11 +32,11 @@ In this example we create a new {{domxref("ReportingObserver")}} to observe depr
 
 ```js
 let options = {
-  types: ['deprecation'],
-  buffered: true
-}
+  types: ["deprecation"],
+  buffered: true,
+};
 
-let observer = new ReportingObserver(function(reports, observer) {
+let observer = new ReportingObserver((reports, observer) => {
   let firstReport = reports[0];
   console.log(firstReport.toJSON());
 }, options);
@@ -51,4 +48,4 @@ let observer = new ReportingObserver(function(reports, observer) {
 
 ## Browser compatibility
 
-This feature is not yet available by default in any released browser. It can be activated in Firefox by setting `dom_reporting_enabled` to `true` and in Chrome if you [enable this experimental feature](https://web.dev/reporting-api/#use-devtools).
+{{Compat}}

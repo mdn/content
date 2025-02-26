@@ -1,18 +1,13 @@
 ---
 title: <number>
 slug: Web/CSS/number
-tags:
-  - CSS
-  - CSS Data Type
-  - Data Type
-  - Layout
-  - Reference
-  - Web
+page-type: css-type
 browser-compat: css.types.number
 ---
+
 {{CSSRef}}
 
-The **`<number>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) represents a number, being either an integer or a number with a fractional component.
+The **`<number>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) represents a number, being either an integer or a number with a fractional component.
 
 ## Syntax
 
@@ -20,13 +15,13 @@ The syntax of `<number>` extends the syntax of {{CSSxRef("&lt;integer&gt;")}}. A
 
 ## Interpolation
 
-When animated, values of the `<number>` CSS data type are interpolated as real, floating-point numbers. The speed of the interpolation is determined by the [timing function](/en-US/docs/Web/CSS/easing-function) associated with the animation.
+When animated, values of the `<number>` CSS data type are interpolated as real, floating-point numbers. The speed of the interpolation is determined by the [easing function](/en-US/docs/Web/CSS/easing-function) associated with the animation.
 
 ## Examples
 
 ### Valid numbers
 
-```css example-good
+```plain example-good
 12          A raw <integer> is also a <number>.
 4.01        Positive fraction
 -456.8      Negative fraction
@@ -40,7 +35,7 @@ When animated, values of the `<number>` CSS data type are interpolated as real, 
 
 ### Invalid numbers
 
-```css example-bad
+```plain example-bad
 12.         Decimal points must be followed by at least one digit.
 +-12.2      Only one leading +/- is allowed.
 12.1.1      Only one decimal point is allowed.

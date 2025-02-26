@@ -1,21 +1,17 @@
 ---
 title: history.onTitleChanged
 slug: Mozilla/Add-ons/WebExtensions/API/history/onTitleChanged
-tags:
-  - API
-  - Add-ons
-  - Event
-  - History
-  - Reference
-  - WebExtensions
-  - onTitleChanged
+page-type: webextension-api-event
 browser-compat: webextensions.api.history.onTitleChanged
 ---
-{{AddonSidebar()}}Fired when the title of a page visited by the user is recorded. To listen for visits to a page you use {{WebExtAPIRef("history.onVisited")}}. However, the {{WebExtAPIRef("history.HistoryItem")}} that this event passes to its listener does not include the page title, because the page title is typically not known at the time `history.onVisited` is sent. Instead, the stored {{WebExtAPIRef("history.HistoryItem")}} is updated with the page title after the page has loaded, once the title is known. The `history.onTitleChanged` event is fired at that time. So if you need to know the titles of pages as they are visited, listen for `history.onTitleChanged`.
+
+{{AddonSidebar}}
+
+Fired when the title of a page visited by the user is recorded. To listen for visits to a page you use {{WebExtAPIRef("history.onVisited")}}. However, the {{WebExtAPIRef("history.HistoryItem")}} that this event passes to its listener does not include the page title, because the page title is typically not known at the time `history.onVisited` is sent. Instead, the stored {{WebExtAPIRef("history.HistoryItem")}} is updated with the page title after the page has loaded, once the title is known. The `history.onTitleChanged` event is fired at that time. So if you need to know the titles of pages as they are visited, listen for `history.onTitleChanged`.
 
 ## Syntax
 
-```js
+```js-nolint
 browser.history.onTitleChanged.addListener(listener)
 browser.history.onTitleChanged.removeListener(listener)
 browser.history.onTitleChanged.hasListener(listener)
@@ -34,9 +30,9 @@ Events have three functions:
 
 ### Parameters
 
-- `callback`
+- `listener`
 
-  - : Function that is called when this event occurs. The function is passed an object with these properties:
+  - : The function called when this event occurs. The function is passed an object with these properties:
 
     - `id`
       - : `String`. The unique identifier for the {{WebExtAPIRef("history.HistoryItem")}} associated with this visit.
@@ -65,11 +61,11 @@ browser.history.onTitleChanged.addListener(handleTitleChanged);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.history`](https://developer.chrome.com/docs/extensions/reference/history/#event-onVisited) API. This documentation is derived from [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.history`](https://developer.chrome.com/docs/extensions/reference/api/history#event-onVisited) API. This documentation is derived from [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) in the Chromium code.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -96,4 +92,4 @@ browser.history.onTitleChanged.addListener(handleTitleChanged);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

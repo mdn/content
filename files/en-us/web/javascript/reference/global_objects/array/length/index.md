@@ -1,25 +1,35 @@
 ---
-title: Array.prototype.length
+title: "Array: length"
 slug: Web/JavaScript/Reference/Global_Objects/Array/length
-tags:
-  - Array
-  - JavaScript
-  - Property
-  - Reference
+page-type: javascript-instance-data-property
 browser-compat: javascript.builtins.Array.length
 ---
+
 {{JSRef}}
 
-The **`length`** property of an object which is an instance of type `Array` sets or returns the number of elements in that array. The value is an unsigned, 32-bit integer that is always numerically greater than the highest index in the array.
+The **`length`** data property of an {{jsxref("Array")}} instance represents the number of elements in that array. The value is an unsigned, 32-bit integer that is always numerically greater than the highest index in the array.
 
-{{EmbedInteractiveExample("pages/js/array-length.html","shorter")}}
+{{InteractiveExample("JavaScript Demo: Array.length", "shorter")}}
+
+```js interactive-example
+const clothing = ["shoes", "shirts", "socks", "sweaters"];
+
+console.log(clothing.length);
+// Expected output: 4
+```
+
+## Value
+
+A nonnegative integer less than 2<sup>32</sup>.
+
+{{js_property_attributes(1, 0, 0)}}
 
 ## Description
 
-The value of the `length` property is an integer with a positive sign and a value less than 2 to the 32nd power (2^32).
+The value of the `length` property is a nonnegative integer with a value less than 2<sup>32</sup>.
 
 ```js
-const listA = [1,2,3];
+const listA = [1, 2, 3];
 const listB = new Array(6);
 
 console.log(listA.length);
@@ -28,14 +38,20 @@ console.log(listA.length);
 console.log(listB.length);
 // 6
 
-listB.length = 4294967296; //2 to the 32nd power = 4294967296
+listB.length = 2 ** 32; // 4294967296
 // RangeError: Invalid array length
 
-const listC = new Array(-100) //negative sign
+const listC = new Array(-100); // Negative numbers are not allowed
 // RangeError: Invalid array length
 ```
 
-You can set the `length` property to truncate an array at any time. When you extend an array by changing its `length` property, the number of actual elements increases; for example, if you set `length` to 3 when it is currently 2, the array now contains 3 elements, which causes the third element to be a non-iterable empty slot.
+The array object observes the `length` property, and automatically syncs the `length` value with the array's content. This means:
+
+- Setting `length` to a value smaller than the current length truncates the array — elements beyond the new `length` are deleted.
+- Setting any array index (a nonnegative integer smaller than 2<sup>32</sup>) beyond the current `length` extends the array — the `length` property is increased to reflect the new highest index.
+- Setting `length` to an invalid value (e.g. a negative number or a non-integer) throws a `RangeError` exception.
+
+When `length` is set to a bigger value than the current length, the array is extended by adding [empty slots](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays), not actual `undefined` values. Empty slots have some special interactions with array methods; see [array methods and empty slots](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#array_methods_and_empty_slots).
 
 ```js
 const arr = [1, 2];
@@ -51,13 +67,7 @@ arr.forEach((element) => console.log(element));
 // 2
 ```
 
-As you can see, the `length` property does not necessarily indicate the number of defined values in the array. See also [Relationship between `length` and numerical properties](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#relationship_between_length_and_numerical_properties "Relationship between length and numerical properties").
-
-{{js_property_attributes(1, 0, 0)}}
-
-- `Writable`: If this attribute set to `false`, the value of the property cannot be changed.
-- `Configurable`: If this attribute set to `false`, any attempts to delete the property or change its attributes (`Writable`, `Configurable`, or `Enumerable`) will fail.
-- `Enumerable`: If this attribute set to `true`, the property will be iterated over during [`for`](/en-US/docs/Web/JavaScript/Reference/Statements/for) or [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) loops.
+See also [Relationship between `length` and numerical properties](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#relationship_between_length_and_numerical_properties).
 
 ## Examples
 
@@ -87,14 +97,30 @@ if (numbers.length > 3) {
 
 console.log(numbers); // [1, 2, 3]
 console.log(numbers.length); // 3
+console.log(numbers[3]); // undefined; the extra elements are deleted
 ```
 
 ### Create empty array of fixed length
+
+Setting `length` to a value greater than the current length creates a [sparse array](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays).
 
 ```js
 const numbers = [];
 numbers.length = 3;
 console.log(numbers); // [empty x 3]
+```
+
+### Array with non-writable length
+
+The `length` property is automatically updated by the array when elements are added beyond the current length. If the `length` property is made non-writable, the array will not be able to update it. This causes an error in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode).
+
+```js
+"use strict";
+
+const numbers = [1, 2, 3, 4, 5];
+Object.defineProperty(numbers, "length", { writable: false });
+numbers[5] = 6; // TypeError: Cannot assign to read only property 'length' of object '[object Array]'
+numbers.push(5); // // TypeError: Cannot assign to read only property 'length' of object '[object Array]'
 ```
 
 ## Specifications
@@ -107,5 +133,8 @@ console.log(numbers); // [empty x 3]
 
 ## See also
 
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
+- [`TypedArray.prototype.length`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/length)
+- [`String`: `length`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/length)
 - [RangeError: invalid array length](/en-US/docs/Web/JavaScript/Reference/Errors/Invalid_array_length)

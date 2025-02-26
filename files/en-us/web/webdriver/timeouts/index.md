@@ -1,10 +1,11 @@
 ---
 title: Timeouts
 slug: Web/WebDriver/Timeouts
-tags:
-  - WebDriver
-  - timeouts
+page-type: guide
 ---
+
+{{QuickLinksWithSubpages("/en-US/docs/Web/WebDriver")}}
+
 Associated with a [WebDriver](/en-US/docs/Web/WebDriver) session are various timeout definitions that control behavior for [script injection](#script), [document navigation](#pageload), and [element retrieval](#implicit).
 
 You will find the _[timeouts object](#payload)_ used in a few different contexts. It can be used as configuration when [creating a new session](/en-US/docs/Web/WebDriver/Commands/NewSession) through [capabilities](/en-US/docs/Web/WebDriver/Capabilities), it is returned as part of the matched, effective capabilities after the session has been created, and it is used as input and output for the [Set Timeouts](/en-US/docs/Web/WebDriver/Commands/SetTimeouts) and [Get Timeouts](/en-US/docs/Web/WebDriver/Commands/GetTimeouts) commands.
@@ -45,12 +46,12 @@ session.get(inline("""
     <h1>Example</h1>
 
     <script>
-    // Inserts <p> below <h1> after 2.5 seconds:
-    window.setTimeout(() => {
-      let delayedElement = document.createElement("p");
-      let h1 = document.querySelector("h1");
-      document.body.insertAfter(delayedElement, h1);
-    }, 2500);
+      // Inserts <p> below <h1> after 2.5 seconds:
+      setTimeout(() => {
+        const delayedElement = document.createElement("p");
+        const h1 = document.querySelector("h1");
+        document.body.insertAfter(delayedElement, h1);
+      }, 2500);
     </script>
     """)
 
@@ -74,8 +75,8 @@ print(session.get_timeouts)
 
 The output will be in seconds because this is the idiomatic time unit in Python:
 
-```
-{"implicit": 4.5, "script": 300, "pageLoad": 30000}
+```json
+{ "implicit": 4.5, "script": 300, "pageLoad": 30000 }
 ```
 
 {{QuickLinksWithSubpages}}

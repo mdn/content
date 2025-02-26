@@ -1,16 +1,11 @@
 ---
-title: Element.localName
+title: "Element: localName property"
+short-title: localName
 slug: Web/API/Element/localName
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - NeedsBrowserCompatibility
-  - NeedsMobileBrowserCompatibility
-  - Property
-  - Reference
 browser-compat: api.Element.localName
 ---
+
 {{APIRef("DOM")}}
 
 The **`Element.localName`** read-only property returns the
@@ -68,13 +63,8 @@ particular XML documents. For example, in the qualified name
 </ecomm:business>
 ```
 
-> **Note:** In {{Gecko("1.9.2")}} and earlier, the property returns the
-> upper-cased version of the local name for HTML elements in HTML DOMs (as opposed to
-> XHTML elements in XML DOMs). In later versions, in compliance with HTML5, the property
-> returns in the case of the internal DOM storage, which is lower case for both HTML
-> elements in HTML DOMs and XHTML elements in XML DOMs. The
-> {{domxref("element.tagName","tagName")}} property continues to return in the upper
-> case for HTML elements in HTML DOMs.
+> [!NOTE]
+> While the property returns the case of the internal DOM storage, which is lower case, note that {{domxref("element.tagName","tagName")}} property returns upper case for HTML elements in HTML DOMs.
 
 ## Specifications
 
@@ -86,6 +76,7 @@ particular XML documents. For example, in the qualified name
 
 ## See also
 
+- {{domxref("Element.tagName")}}
 - {{domxref("Element.namespaceURI")}}
 - {{domxref("Element.prefix")}}
 - {{domxref("Attr.localName")}}

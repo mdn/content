@@ -1,11 +1,7 @@
 ---
 title: Global attributes
 slug: Web/HTML/Global_attributes
-tags:
-  - Attribute
-  - HTML
-  - Reference
-  - Web
+page-type: landing-page
 browser-compat: html.global_attributes
 ---
 
@@ -17,7 +13,7 @@ Global attributes may be specified on all [HTML elements](/en-US/docs/Web/HTML/E
 
 In addition to the basic HTML global attributes, the following global attributes also exist:
 
-- {{HTMLAttrDef("xml:lang")}} and {{HTMLAttrDef("xml:base")}} — these are inherited from the XHTML specifications and deprecated, but kept for compatibility purposes.
+- `xml:lang` and `xml:base` — these are inherited from the XHTML specifications and deprecated, but kept for compatibility purposes.
 - The ARIA [`role`](/en-US/docs/Web/Accessibility/ARIA/Roles) attribute and the multiple [`aria-*`](/en-US/docs/Web/Accessibility/ARIA/Attributes) states and properties, used for ensuring accessibility.
 - The [event handler](/en-US/docs/Web/HTML/Attributes#event_handler_attributes) attributes: `onabort`, `onautocomplete`, `onautocompleteerror`, `onblur`, `oncancel`, `oncanplay`, `oncanplaythrough`, `onchange`, `onclick`, `onclose`, `oncontextmenu`, `oncuechange`, `ondblclick`, `ondrag`, `ondragend`, `ondragenter`, `ondragleave`, `ondragover`, `ondragstart`, `ondrop`, `ondurationchange`, `onemptied`, `onended`, `onerror`, `onfocus`, `oninput`, `oninvalid`, `onkeydown`, `onkeypress`, `onkeyup`, `onload`, `onloadeddata`, `onloadedmetadata`, `onloadstart`, `onmousedown`, `onmouseenter`, `onmouseleave`, `onmousemove`, `onmouseout`, `onmouseover`, `onmouseup`, `onmousewheel`, `onpause`, `onplay`, `onplaying`, `onprogress`, `onratechange`, `onreset`, `onresize`, `onscroll`, `onseeked`, `onseeking`, `onselect`, `onshow`, `onsort`, `onstalled`, `onsubmit`, `onsuspend`, `ontimeupdate`, `ontoggle`, `onvolumechange`, `onwaiting`.
 
@@ -25,28 +21,25 @@ In addition to the basic HTML global attributes, the following global attributes
 
 - [`accesskey`](/en-US/docs/Web/HTML/Global_attributes/accesskey)
   - : Provides a hint for generating a keyboard shortcut for the current element. This attribute consists of a space-separated list of characters. The browser should use the first one that exists on the computer keyboard layout.
+- [`anchor`](/en-US/docs/Web/HTML/Global_attributes/anchor) {{non-standard_inline}}
+  - : Associates a positioned element with an anchor element. The attribute's value is the [`id`](/en-US/docs/Web/HTML/Global_attributes/id) value of the element you want to anchor the positioned element to. The element can then be positioned [using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using).
 - [`autocapitalize`](/en-US/docs/Web/HTML/Global_attributes/autocapitalize)
-
-  - : Controls whether and how text input is automatically capitalized as it is entered/edited by the user. It can have the following values:
-
-    - `off` or `none`, no autocapitalization is applied (all letters default to lowercase)
-    - `on` or `sentences`, the first letter of each sentence defaults to a capital letter; all other letters default to lowercase
-    - `words`, the first letter of each word defaults to a capital letter; all other letters default to lowercase
-    - `characters`, all letters should default to uppercase
-
+  - : Controls whether inputted text is automatically capitalized and, if so, in what manner.
+- [`autocorrect`](/en-US/docs/Web/HTML/Global_attributes/autocorrect)
+  - : Controls whether input text is automatically corrected for spelling errors.
+    This can be applied to elements that have editable text except for {{HTMLElement("input")}} elements with the attribute: [`type="password"`](/en-US/docs/Web/HTML/Element/input/password), [`type="email"`](/en-US/docs/Web/HTML/Element/input/email), or [`type="url"`](/en-US/docs/Web/HTML/Element/input/url).
 - [`autofocus`](/en-US/docs/Web/HTML/Global_attributes/autofocus)
   - : Indicates that an element is to be focused on page load, or as soon as the {{HTMLElement("dialog")}} it is part of is displayed. This attribute is a boolean, initially false.
 - [`class`](/en-US/docs/Web/HTML/Global_attributes/class)
-  - : A space-separated list of the classes of the element. Classes allows CSS and JavaScript to select and access specific elements via the [class selectors](/en-US/docs/Web/CSS/Class_selectors) or functions like the method {{DOMxRef("Document.getElementsByClassName()")}}.
+  - : A space-separated list of the classes of the element. Classes allow CSS and JavaScript to select and access specific elements via the [class selectors](/en-US/docs/Web/CSS/Class_selectors) or functions like the method {{DOMxRef("Document.getElementsByClassName()")}}.
 - [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable)
 
-  - : An enumerated attribute indicating if the element should be editable by the user. If so, the browser modifies its widget to allow editing. The attribute must take one of the following values:
+  - : An [enumerated](/en-US/docs/Glossary/Enumerated) attribute indicating if the element should be editable by the user. If so, the browser modifies its widget to allow editing. The attribute must take one of the following values:
 
     - `true` or the _empty string_, which indicates that the element must be editable;
     - `false`, which indicates that the element must not be editable.
+    - `plaintext-only`, which indicates the element's raw text is editable, but rich text formatting is disabled.
 
-- [`contextmenu`](/en-US/docs/Web/HTML/Global_attributes/contextmenu) {{deprecated_inline}}
-  - : The [**`id`**](#id) of a {{HTMLElement("menu")}} to use as the contextual menu for this element.
 - [`data-*`](/en-US/docs/Web/HTML/Global_attributes/data-*)
   - : Forms a class of attributes, called custom data attributes, that allow proprietary information to be exchanged between the [HTML](/en-US/docs/Web/HTML) and its {{glossary("DOM")}} representation that may be used by scripts. All such custom data are available via the {{DOMxRef("HTMLElement")}} interface of the element the attribute is set on. The {{DOMxRef("HTMLElement.dataset")}} property gives access to them.
 - [`dir`](/en-US/docs/Web/HTML/Global_attributes/dir)
@@ -66,18 +59,21 @@ In addition to the basic HTML global attributes, the following global attributes
 
 - [`enterkeyhint`](/en-US/docs/Web/HTML/Global_attributes/enterkeyhint)
   - : Hints what action label (or icon) to present for the enter key on virtual keyboards.
-- [`exportparts`](/en-US/docs/Web/HTML/Global_attributes/exportparts) {{Experimental_Inline}}
+- [`exportparts`](/en-US/docs/Web/HTML/Global_attributes/exportparts)
   - : Used to transitively export shadow parts from a nested shadow tree into a containing light tree.
 - [`hidden`](/en-US/docs/Web/HTML/Global_attributes/hidden)
-  - : A Boolean attribute indicates that the element is not yet, or is no longer, _relevant_. For example, it can be used to hide elements of the page that can't be used until the login process has been completed. The browser won't render such elements. This attribute must not be used to hide content that could legitimately be shown.
+  - : An enumerated attribute indicating that the element is not yet, or is no longer, _relevant_. For example, it can be used to hide elements of the page that can't be used until the login process has been completed. The browser won't render such elements. This attribute must not be used to hide content that could legitimately be shown.
 - [`id`](/en-US/docs/Web/HTML/Global_attributes/id)
   - : Defines a unique identifier (ID) which must be unique in the whole document. Its purpose is to identify the element when linking (using a fragment identifier), scripting, or styling (with CSS).
+- [`inert`](/en-US/docs/Web/HTML/Global_attributes/inert)
+  - : A boolean value that makes the browser disregard user input events for the element. Useful when click events are present.
 - [`inputmode`](/en-US/docs/Web/HTML/Global_attributes/inputmode)
-  - : Provides a hint to browsers as to the type of virtual keyboard configuration to use when editing this element or its contents. Used primarily on {{HTMLElement("input")}} elements, but is usable on any element while in {{HTMLAttrxRef("contenteditable")}} mode.
+  - : Provides a hint to browsers about the type of virtual keyboard configuration to use when editing this element or its contents. Used primarily on {{HTMLElement("input")}} elements, but is usable on any element while in [`contenteditable`](#contenteditable) mode.
 - [`is`](/en-US/docs/Web/HTML/Global_attributes/is)
-  - : Allows you to specify that a standard HTML element should behave like a registered custom built-in element (see [Using custom elements](/en-US/docs/Web/Web_Components/Using_custom_elements) for more details).
+  - : Allows you to specify that a standard HTML element should behave like a registered custom built-in element (see [Using custom elements](/en-US/docs/Web/API/Web_components/Using_custom_elements) for more details).
 
-> **Note:** The `item*` attributes are part of the [WHATWG HTML Microdata feature](https://html.spec.whatwg.org/multipage/microdata.html#microdata).
+> [!NOTE]
+> The `item*` attributes are part of the [WHATWG HTML Microdata feature](https://html.spec.whatwg.org/multipage/microdata.html#microdata).
 
 - [`itemid`](/en-US/docs/Web/HTML/Global_attributes/itemid)
   - : The unique, global identifier of an item.
@@ -90,13 +86,17 @@ In addition to the basic HTML global attributes, the following global attributes
 - [`itemtype`](/en-US/docs/Web/HTML/Global_attributes/itemtype)
   - : Specifies the URL of the vocabulary that will be used to define `itemprop`s (item properties) in the data structure. [`itemscope`](/en-US/docs/Web/HTML/Global_attributes/itemscope) is used to set the scope of where in the data structure the vocabulary set by `itemtype` will be active.
 - [`lang`](/en-US/docs/Web/HTML/Global_attributes/lang)
-  - : Helps define the language of an element: the language that non-editable elements are in, or the language that editable elements should be written in by the user. The attribute contains one "language tag" (made of hyphen-separated "language subtags") in the format defined in {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}. [**xml:lang**](#attr-xml:lang) has priority over it.
+  - : Helps define the language of an element: the language that non-editable elements are in, or the language that editable elements should be written in by the user. The attribute contains one "language tag" (made of hyphen-separated "language subtags") in the format defined in {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}. `xml:lang` has priority over it.
 - [`nonce`](/en-US/docs/Web/HTML/Global_attributes/nonce)
   - : A cryptographic nonce ("number used once") which can be used by [Content Security Policy](/en-US/docs/Web/HTTP/CSP) to determine whether or not a given fetch will be allowed to proceed.
 - [`part`](/en-US/docs/Web/HTML/Global_attributes/part)
   - : A space-separated list of the part names of the element. Part names allows CSS to select and style specific elements in a shadow tree via the {{CSSxRef("::part")}} pseudo-element.
+- [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover)
+  - : Used to designate an element as a popover element (see {{domxref("Popover API", "Popover API", "", "nocode")}}). Popover elements are hidden via `display: none` until opened via an invoking/control element (i.e. a `<button>` or `<input type="button">` with a [`popovertarget`](/en-US/docs/Web/HTML/Element/button#popovertarget) attribute) or a {{domxref("HTMLElement.showPopover()")}} call.
+- [`role`](/en-US/docs/Web/Accessibility/ARIA/Roles)
+  - : Roles define the semantic meaning of content, allowing screen readers and other tools to present and support interaction with an object in a way that is consistent with user expectations of that type of object. `roles` are added to HTML elements using `role="role_type"`, where `role_type` is the name of a role in the ARIA specification.
 - [`slot`](/en-US/docs/Web/HTML/Global_attributes/slot)
-  - : Assigns a slot in a [shadow DOM](/en-US/docs/Web/Web_Components/Using_shadow_DOM) shadow tree to an element: An element with a `slot` attribute is assigned to the slot created by the {{HTMLElement("slot")}} element whose {{HTMLAttrxRef("name", "slot")}} attribute's value matches that `slot` attribute's value.
+  - : Assigns a slot in a [shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM) shadow tree to an element: An element with a `slot` attribute is assigned to the slot created by the {{HTMLElement("slot")}} element whose [`name`](/en-US/docs/Web/HTML/Element/slot#name) attribute's value matches that `slot` attribute's value.
 - [`spellcheck`](/en-US/docs/Web/HTML/Global_attributes/spellcheck)
 
   - : An enumerated attribute defines whether the element may be checked for spelling errors. It may have the following values:
@@ -123,6 +123,20 @@ In addition to the basic HTML global attributes, the following global attributes
     - empty string or `yes`, which indicates that the element will be translated.
     - `no`, which indicates that the element will not be translated.
 
+- [`virtualkeyboardpolicy`](/en-US/docs/Web/HTML/Global_attributes/virtualkeyboardpolicy) {{Experimental_Inline}}
+
+  - : An {{Glossary("enumerated")}} attribute used to control the on-screen virtual keyboard behavior on devices such as tablets, mobile phones, or other devices where a hardware keyboard may not be available for elements that its content is editable (for example, it is an {{htmlelement("input")}} or {{htmlelement("textarea")}} element, or an element with the [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) attribute set).
+
+    - `auto` or an _empty string_, which automatically shows the virtual keyboard when the element is focused or tapped.
+    - `manual`, which decouples focus and tap on the element from the virtual keyboard's state.
+
+- [`writingsuggestions`](/en-US/docs/Web/HTML/Global_attributes/writingsuggestions)
+
+  - : An {{Glossary("enumerated")}} attribute indicating if browser-provided writing suggestions should be enabled under the scope of the element or not.
+
+    - `false`, which disables the browser's writing suggestions.
+    - `true` or an _empty string_, which enables writing suggestions.
+
 ## Specifications
 
 {{Specifications}}
@@ -133,4 +147,4 @@ In addition to the basic HTML global attributes, the following global attributes
 
 ## See also
 
-- {{DOMxRef("Element")}} and {{DOMxRef("GlobalEventHandlers")}} interfaces that allow to query most global attributes.
+- {{DOMxRef("Element")}} interface that allows querying most global attributes.

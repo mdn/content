@@ -1,16 +1,11 @@
 ---
-title: KeyboardEvent.isComposing
+title: "KeyboardEvent: isComposing property"
+short-title: isComposing
 slug: Web/API/KeyboardEvent/isComposing
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - KeyboardEvent
-  - Property
-  - Read-only
-  - Reference
 browser-compat: api.KeyboardEvent.isComposing
 ---
+
 {{APIRef("UI Events")}}
 
 The **`KeyboardEvent.isComposing`** read-only property returns

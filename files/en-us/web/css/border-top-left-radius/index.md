@@ -1,27 +1,24 @@
 ---
 title: border-top-left-radius
 slug: Web/CSS/border-top-left-radius
-tags:
-  - CSS
-  - CSS Borders
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.border-top-left-radius
 ---
+
 {{CSSRef}}
 
 The **`border-top-left-radius`** [CSS](/en-US/docs/Web/CSS) property rounds the top-left corner of an element by specifying the radius (or the radius of the semi-major and semi-minor axes) of the ellipse defining the curvature of the corner.
 
 {{EmbedInteractiveExample("pages/css/border-top-left-radius.html")}}
 
-The rounding can be a circle or an ellipse, or if one of the value is `0,`no rounding is done and the corner is square.
+The rounding can be a circle or an ellipse, or if one of the value is `0`, no rounding is done and the corner is square.
 
 ![border-radius.png](border-radius.png)
 
 A background, being an image or a color, is clipped at the border, even a rounded one; the exact location of the clipping is defined by the value of the {{cssxref("background-clip")}} property.
 
-> **Note:** If the value of this property is not set in a {{cssxref("border-radius")}} shorthand property that is applied to the element after the `border-top-left-radius` CSS property, the value of this property is then reset to its initial value by the [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties).
+> [!NOTE]
+> If the value of this property is not set in a {{cssxref("border-radius")}} shorthand property that is applied to the element after the `border-top-left-radius` CSS property, the value of this property is then reset to its initial value by the [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties).
 
 ## Syntax
 

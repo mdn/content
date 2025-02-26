@@ -1,29 +1,22 @@
 ---
 title: tabs.removeCSS()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/removeCSS
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - removeCSS
-  - tabs
+page-type: webextension-api-function
 browser-compat: webextensions.api.tabs.removeCSS
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 Removes from a page CSS which was previously injected by a call to {{WebExtAPIRef("tabs.insertCSS()")}}.
 
-> **Note:** When using Manifest V3 or higher, use {{WebExtAPIRef("scripting.insertCSS()")}} and {{WebExtAPIRef("scripting.removeCSS()")}} to insert and remove CSS.
+> [!NOTE]
+> When using Manifest V3 or higher, use {{WebExtAPIRef("scripting.insertCSS()")}} and {{WebExtAPIRef("scripting.removeCSS()")}} to insert and remove CSS.
 
 This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntax
 
-```js
+```js-nolint
 let removing = browser.tabs.removeCSS(
   tabId,           // optional integer
   details          // object
@@ -66,11 +59,11 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-let insertingCSS = browser.tabs.insertCSS(2, {code: css});
+let insertingCSS = browser.tabs.insertCSS(2, { code: css });
 insertingCSS.then(null, onError);
 
 browser.browserAction.onClicked.addListener(() => {
-  let removing = browser.tabs.removeCSS(2, {code: css});
+  let removing = browser.tabs.removeCSS(2, { code: css });
   removing.then(null, onError);
 });
 ```
@@ -81,11 +74,11 @@ browser.browserAction.onClicked.addListener(() => {
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/tabs/#method-insertCSS) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-insertCSS) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -112,4 +105,4 @@ browser.browserAction.onClicked.addListener(() => {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

@@ -1,17 +1,13 @@
 ---
 title: ruby-position
 slug: Web/CSS/ruby-position
-tags:
-  - CSS
-  - CSS Property
-  - CSS Ruby
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.ruby-position
 ---
+
 {{CSSRef}}
 
-The **`ruby-position`** CSS property defines the position of a ruby element relatives to its base element. It can be positioned over the element (`over`), under it (`under`), or between the characters on their right side (`inter-character`).
+The **`ruby-position`** [CSS](/en-US/docs/Web/CSS) property defines the position of a ruby element relative to its base element. It can be positioned over the element (`over`), under it (`under`), or between the characters on their right side (`inter-character`).
 
 {{EmbedInteractiveExample("pages/css/ruby-position.html")}}
 
@@ -21,8 +17,10 @@ The **`ruby-position`** CSS property defines the position of a ruby element rela
 /* Keyword values */
 ruby-position: over;
 ruby-position: under;
-ruby-position: inter-character;
 ruby-position: alternate;
+ruby-position: alternate over;
+ruby-position: alternate under;
+ruby-position: inter-character;
 
 /* Global values */
 ruby-position: inherit;
@@ -35,13 +33,15 @@ ruby-position: unset;
 ### Values
 
 - `over`
-  - : ![Over example](screen_shot_2015-03-04_at_13.02.20.png)Is a keyword indicating that the ruby has to be placed over the main text for horizontal scripts and right to it for vertical scripts.
+  - : ![Over example](screen_shot_2015-03-04_at_13.02.20.png)
+    Is a keyword indicating that the ruby has to be placed over the main text for horizontal scripts and right to it for vertical scripts.
 - `under`
-  - : ![Under example](screen_shot_2015-03-04_at_13.02.07.png)Is a keyword indicating that the ruby has to be placed under the main text for horizontal scripts and left to it for vertical scripts.
-- `inter-character`
-  - : Is a keyword indicating that the ruby has to be placed between the different characters.
+  - : ![Under example](screen_shot_2015-03-04_at_13.02.07.png)
+    Is a keyword indicating that the ruby has to be placed under the main text for horizontal scripts and left to it for vertical scripts.
 - `alternate`
   - : Is a keyword indicating that the ruby alternates between over and under, when there are multiple levels of annotation.
+- `inter-character`
+  - : When specified, it behaves as `over` in vertical writing modes. Otherwise, it indicates that the ruby has to be placed between the different characters, appearing on the right of the base in horizontal text and forcing the children of the ruby annotation container to have a `vertical-rl` writing mode.
 
 ## Formal definition
 
@@ -68,7 +68,7 @@ ruby-position: unset;
 
 ```css
 ruby {
-    ruby-position:over;
+  ruby-position: over;
 }
 ```
 
@@ -91,7 +91,7 @@ ruby {
 
 ```css
 ruby {
-    ruby-position:under;
+  ruby-position: under;
 }
 ```
 
@@ -105,7 +105,7 @@ ruby {
 
 ```html
 <ruby>
-  <rb>A<rb>B<rb>C</rb>
+  <rb>A</rb><rb>B</rb><rb>C</rb>
   <rtc>Above</rtc>
   <rtc>Below</rtc>
 </ruby>
@@ -115,7 +115,7 @@ ruby {
 
 ```css
 ruby {
-    ruby-position: alternate; /* this is also the initial value */
+  ruby-position: alternate; /* this is also the initial value */
 }
 ```
 
@@ -133,5 +133,5 @@ ruby {
 
 ## See also
 
-- HTML Ruby elements: {{HTMLElement("ruby")}}, {{HTMLElement("rt")}}, {{HTMLElement("rp")}}, and {{HTMLElement("rtc")}}.
-- CSS Ruby properties: {{cssxref("ruby-align")}}, {{cssxref("ruby-merge")}}.
+- {{HTMLElement("ruby")}}, {{HTMLElement("rt")}}, {{HTMLElement("rp")}}, and {{HTMLElement("rtc")}} HTML elements
+- {{cssxref("ruby-align")}}

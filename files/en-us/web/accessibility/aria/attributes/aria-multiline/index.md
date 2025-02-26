@@ -1,15 +1,11 @@
 ---
-title: 'aria-multiline'
+title: aria-multiline
 slug: Web/Accessibility/ARIA/Attributes/aria-multiline
-tags:
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - ARIA property
-  - aria-multiline
-  - Reference
+page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-multiline
 ---
+
+{{AccessibilitySidebar}}
 
 The `aria-multiline` attribute indicates whether a `textbox` accepts multiple lines of input or only a single line.
 
@@ -19,7 +15,8 @@ The default behavior of the <kbd>Enter</kbd> or <kbd>Return</kbd> key differs be
 
 When user focus is in a multi-line {{HTMLElement('textarea')}}, the keystroke inserts a line break. Only relevant for elements with the [`textbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role) role set, the `aria-multiline` attribute indicates to assistive technologies whether that text box accepts multiple lines of input or only a single line, setting expectations as to what type of data to enter and what those keystroke will do.
 
-> **Note:** Where possible, use the HTML {{HTMLElement('input')}} or the {{HTMLElement('textarea')}}, as these have built in semantics and behaviors, do not require ARIA attributes or scripting, and have keyboard support built in.
+> [!NOTE]
+> Where possible, use the HTML {{HTMLElement('input')}} or the {{HTMLElement('textarea')}}, as these have built in semantics and behaviors, do not require ARIA attributes or scripting, and have keyboard support built in.
 
 If the `aria-multiline="true"` is set, it means the textbox widget will accept line breaks within the input, similar to the HTML {{HTMLElement('textarea')}}. Elements with a role of `textbox` that do not have the attribute, or with the value set to `false`, are simple text box.
 
@@ -28,12 +25,13 @@ Be aware of focus and keystrokes when designing text boxes. ARIA only modifies t
 ## Values
 
 - `true`
+
   - : The text box accepts multiple lines of input.
 
 - `false`
   - : The text box only accepts a single line of input.
 
-## ARIAMixin API
+## Associated interfaces
 
 - {{domxref("Element.ariaMultiLine")}}
   - : The [`ariaMultiLine`](/en-US/docs/Web/API/Element/ariaMultiLine) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-multiline` attribute.
@@ -54,12 +52,7 @@ Inherits into roles:
 
 {{Specifications}}
 
-## See Also
+## See also
 
-- ARIA [`textbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/text_role) role
+- ARIA [`textbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role) role
 - ARIA [`searchbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/searchbox_role) role
-
-<section id="Quick_links">
-<strong><a href="/en-US/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA states and properties</a></strong>
-{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/aria/Attributes")}}
-</section>

@@ -1,16 +1,12 @@
 ---
-title: TaskSignal.priority
+title: "TaskSignal: priority property"
+short-title: priority
 slug: Web/API/TaskSignal/priority
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - priority
-  - Experimental
 browser-compat: api.TaskSignal.priority
 ---
-{{APIRef("Prioritized Task Scheduling API")}} {{SeeCompatTable}}
+
+{{APIRef("Prioritized Task Scheduling API")}}{{AvailableInWorkers}}
 
 The read-only **`priority`** property of the {{domxref("TaskSignal")}} interface indicates the signal [priority](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#task_priorities).
 

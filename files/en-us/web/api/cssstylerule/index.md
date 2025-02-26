@@ -2,39 +2,34 @@
 title: CSSStyleRule
 slug: Web/API/CSSStyleRule
 page-type: web-api-interface
-tags:
-  - API
-  - CSSOM
-  - CSSStyleRule
-  - Interface
-  - Reference
 browser-compat: api.CSSStyleRule
 ---
+
 {{ APIRef("CSSOM") }}
 
 The **`CSSStyleRule`** interface represents a single CSS style rule.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
-_Inherits properties from its ancestor {{domxref("CSSRule")}}._
+_Inherits properties from its ancestors {{domxref("CSSGroupingRule")}} and {{domxref("CSSRule")}}._
 
 - {{domxref("CSSStyleRule.selectorText")}}
-  - : Returns the textual representation of the selector for this rule, e.g. `"h1,h2"`.
-- {{domxref("CSSStyleRule.style")}} {{readonlyinline}}
+  - : Returns the textual representation of the selector for this rule, e.g. `"h1, h2"`.
+- {{domxref("CSSStyleRule.style")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("CSSStyleDeclaration")}} object for the rule.
-- {{domxref("CSSStyleRule.styleMap")}} {{readonlyinline}}
+- {{domxref("CSSStyleRule.styleMap")}} {{ReadOnlyInline}}
   - : Returns a {{domxref('StylePropertyMap')}} object which provides access to the rule's property-value pairs.
 
-## Methods
+## Instance methods
 
-_No specific methods; inherits methods from its ancestor {{domxref("CSSRule")}}._
+_Inherits methods from its ancestors {{domxref("CSSGroupingRule")}} and {{domxref("CSSRule")}}._
 
 ## Examples
 
 The CSS includes one style rule. This will be the first {{domxref("CSSRule")}} returned by `document.styleSheets[0].cssRules`.
-`myRules[0]` therefore returns a {{domxref("CSSStyleRule")}} object representing the rule defined for `h1`.
+`myRules[0]` therefore returns a `CSSStyleRule` object representing the rule defined for `h1`.
 
 ```css
 h1 {

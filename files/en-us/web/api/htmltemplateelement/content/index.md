@@ -1,16 +1,11 @@
 ---
-title: HTMLTemplateElement.content
+title: "HTMLTemplateElement: content property"
+short-title: content
 slug: Web/API/HTMLTemplateElement/content
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLTemplateElement
-  - Property
-  - Reference
-  - Web Components
 browser-compat: api.HTMLTemplateElement.content
 ---
+
 {{APIRef("Web Components")}}
 
 The **`HTMLTemplateElement.content`** property returns a

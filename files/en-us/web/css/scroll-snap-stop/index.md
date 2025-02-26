@@ -1,16 +1,10 @@
 ---
 title: scroll-snap-stop
 slug: Web/CSS/scroll-snap-stop
-tags:
-  - CSS
-  - CSS Scroll Snap
-  - CSS Property
-  - Reference
-  - Web
-  - recipe:css-property
-  - scroll-snap-stop
+page-type: css-property
 browser-compat: css.properties.scroll-snap-stop
 ---
+
 {{CSSRef}}
 
 The **`scroll-snap-stop`** [CSS](/en-US/docs/Web/CSS) property defines whether or not the scroll container is allowed to "pass over" possible snap positions.
@@ -163,11 +157,11 @@ div > div {
 
 /* coloration */
 div > div:nth-child(even) {
-  background-color: #87EA87;
+  background-color: #87ea87;
 }
 
 div > div:nth-child(odd) {
-  background-color: #87CCEA;
+  background-color: #87ccea;
 }
 ```
 
@@ -222,11 +216,5 @@ If required, you can be selective about the items that are `always` stopped at i
 
 ## See also
 
-- [CSS Scroll Snap](/en-US/docs/Web/CSS/CSS_Scroll_Snap)
-- Other related CSS Scroll Snap properties:
-  - [scroll-snap-align](/en-US/docs/Web/CSS/scroll-snap-align)
-  - [scroll-snap-type](/en-US/docs/Web/CSS/scroll-snap-type)
-  - [scroll-behavior](/en-US/docs/Web/CSS/scroll-behavior)
-  - [scroll-margin](/en-US/docs/Web/CSS/scroll-margin)
-  - [scroll-padding](/en-US/docs/Web/CSS/scroll-padding)
-- [Well-controlled scrolling with CSS Scroll Snap](https://web.dev/css-scroll-snap/) on web.dev
+- [CSS scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap)
+- [Well-controlled scrolling with CSS scroll snap](https://web.dev/articles/css-scroll-snap)

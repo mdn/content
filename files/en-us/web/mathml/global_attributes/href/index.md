@@ -1,26 +1,54 @@
 ---
 title: href
 slug: Web/MathML/Global_attributes/href
-tags:
-  - Global attributes
-  - MathML
-  - Reference
+page-type: mathml-attribute
+status:
+  - non-standard
 browser-compat: mathml.global_attributes.href
 ---
-{{MathMLRef("Global_attributes")}}
+
+{{MathMLRef}}{{Non-standard_header}}
 
 The **`href`** [global attribute](/en-US/docs/Web/MathML/Global_attributes) creates a hyperlink on the MathML element pointing to the specified URL.
 
 ## Example
 
+The first equation links to the Wikipedia article about the [mass-energy equivalence](https://en.wikipedia.org/wiki/Mass-energy_equivalence). The square root part of the second equation is a link to the [SageMath](https://sagecell.sagemath.org/?z=eJwrLiwq0TCOM9I2iTPSBAAeqgPO) calculation.
+
+> [!NOTE]
+> You should avoid nesting MathML elements with the `href` attributes, just like {{htmlelement("a")}} elements, as is will lead to user confusion and accessibility issues.
+
+```css hidden
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  font-size: 1.5rem;
+}
+```
+
 ```html
-<!-- Make this math equation a link to Wikipedia's article
-     about the Pythagorean theorem. -->
-<math href="https://en.wikipedia.org/wiki/Pythagorean_theorem">
+<math
+  display="block"
+  href="https://en.wikipedia.org/wiki/Mass-energy_equivalence">
+  <mrow>
+    <mi>E</mi>
+    <mo>=</mo>
+    <mi>m</mi>
+    <msup>
+      <mi>c</mi>
+      <mn>2</mn>
+    </msup>
+  </mrow>
+</math>
+
+<math display="block">
   <mi>c</mi>
   <mo>=</mo>
-  <!-- Make this square root a link to corresponding
-       SageMath's calculation. -->
   <msqrt href="https://sagecell.sagemath.org/?z=eJwrLiwq0TCOM9I2iTPSBAAeqgPO">
     <msup>
       <mn>3</mn>
@@ -37,13 +65,22 @@ The **`href`** [global attribute](/en-US/docs/Web/MathML/Global_attributes) crea
 </math>
 ```
 
+{{ EmbedLiveSample("Example", "", 150) }}
+
+## Syntax
+
+```html-nolint
+<math href="https://example.com/">
+```
+
+### Values
+
+- `URL`
+  - : The URL to which the hyperlink points.
+
 ## Specifications
 
-{{Specifications}}
-
-- `href` is defined in MathML 3 on all elements but is currently not integrated into MathML Core.
-
-- MathML 2 had no direct support for linking, and instead followed the W3C Recommendation ["XML Linking Language"](https://www.w3.org/TR/2010/REC-xlink11-20100506/) in defining links using the `xlink:href` attribute.
+The `href` attribute is not defined in any browser-oriented specification but you can find a description in [MathML 4](https://w3c.github.io/mathml/#interf_link).
 
 ## Browser compatibility
 

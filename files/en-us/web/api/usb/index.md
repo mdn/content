@@ -2,17 +2,12 @@
 title: USB
 slug: Web/API/USB
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - USB
-  - WebUSB
-  - WebUSB API
-  - Experimental
+status:
+  - experimental
 browser-compat: api.USB
 ---
-{{APIRef("WebUSB API")}}{{SeeCompatTable}}{{securecontext_header}}
+
+{{APIRef("WebUSB API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`USB`** interface of the [WebUSB API](/en-US/docs/Web/API/WebUSB_API) provides attributes and methods for finding and connecting USB devices from a web page.
 
@@ -22,22 +17,22 @@ The USB interface inherits from {{domxref("EventTarget")}}.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 None.
 
-## Methods
+## Instance methods
 
-- {{domxref("USB.getDevices()")}}
+- {{domxref("USB.getDevices()")}} {{Experimental_Inline}}
   - : Returns a {{jsxref("Promise")}} that resolves with an array of {{domxref("USBDevice")}} objects for paired attached devices.
-- {{domxref("USB.requestDevice()")}}
+- {{domxref("USB.requestDevice()")}} {{Experimental_Inline}}
   - : Returns a {{jsxref("Promise")}} that resolves with an instance of {{domxref("USBDevice")}} if the specified device is found. Calling this function triggers the user agent's pairing flow.
 
 ## Events
 
-- {{domxref("USB.connect_event", "connect")}}
+- {{domxref("USB.connect_event", "connect")}} {{Experimental_Inline}}
   - : Fired whenever a previously paired device is connected.
-- {{domxref("USB.disconnect_event", "disconnect")}}
+- {{domxref("USB.disconnect_event", "disconnect")}} {{Experimental_Inline}}
   - : Fired whenever a paired device is disconnected.
 
 ## Specifications

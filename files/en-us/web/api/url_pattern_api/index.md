@@ -2,19 +2,15 @@
 title: URL Pattern API
 slug: Web/API/URL_Pattern_API
 page-type: web-api-overview
-tags:
-  - API
-  - Overview
-  - URL
-  - URLPattern
-  - URL Pattern API
-  - Web
+status:
+  - experimental
 browser-compat: api.URLPattern
+spec-urls: https://urlpattern.spec.whatwg.org/
 ---
 
-{{DefaultAPISidebar("URL Pattern API")}}
+{{DefaultAPISidebar("URL Pattern API")}}{{SeeCompatTable}} {{AvailableInWorkers}}
 
-The URL Pattern API defines a syntax that is used to create URL pattern
+The **URL Pattern API** defines a syntax that is used to create URL pattern
 matchers. These patterns can be matched against URLs or individual URL
 components. The URL Pattern API is used by the {{domxref("URLPattern")}}
 interface.
@@ -31,23 +27,25 @@ can contain:
 - Non-capturing groups (`/books{/old}?`) which make parts of a pattern optional
   or be matched multiple times.
 - {{jsxref("RegExp")}} groups (`/books/(\\d+)`) which make arbitrarily complex
-  regex matches with a few [limitations](#regex_matchers_limitations).
+  regex matches with a few [limitations](#regex_matchers_limitations). _Note that the
+  parentheses are not part of the regex but instead define their contents as a regex._
 
 You can find details about the syntax in the [pattern syntax](#pattern_syntax)
 section below.
 
-## URL Pattern API interfaces
+## Interfaces
 
 The URL Pattern API only has a single related interface:
 
-- {{domxref("URLPattern")}}
+- {{domxref("URLPattern")}} {{Experimental_Inline}}
+  - : Represents a pattern that can match URLs or parts of URLs. The pattern can contain capturing groups that extract parts of the matched URL.
 
 ## Pattern syntax
 
 The syntax for patterns is based on the
 [path-to-regexp](https://github.com/pillarjs/path-to-regexp) JavaScript library.
 This syntax is similar to the one used in
-[Ruby on Rails](https://rubyonrails.org), or JavaScript frameworks like
+[Ruby on Rails](https://rubyonrails.org/), or JavaScript frameworks like
 [Express](https://expressjs.com/) or [Next.js](https://nextjs.org/).
 
 ### Fixed text and capture groups
@@ -59,16 +57,16 @@ explained below, but they can be overwritten.
 
 ```js
 // A pattern matching some fixed text
-const pattern = new URLPattern({ pathname: '/books' });
-console.log(pattern.test('https://example.com/books')); // true
-console.log(pattern.exec('https://example.com/books').pathname.groups); // {}
+const pattern = new URLPattern({ pathname: "/books" });
+console.log(pattern.test("https://example.com/books")); // true
+console.log(pattern.exec("https://example.com/books").pathname.groups); // {}
 ```
 
 ```js
 // A pattern matching with a named group
-const pattern = new URLPattern({ pathname: '/books/:id' });
-console.log(pattern.test('https://example.com/books/123')); // true
-console.log(pattern.exec('https://example.com/books/123').pathname.groups); // { id: '123' }
+const pattern = new URLPattern({ pathname: "/books/:id" });
+console.log(pattern.test("https://example.com/books/123")); // true
+console.log(pattern.exec("https://example.com/books/123").pathname.groups); // { id: '123' }
 ```
 
 ### Segment wildcard
@@ -82,15 +80,15 @@ match the shortest possible string.
 ### Regex matchers
 
 Instead of using the default match rules for a group, you can use a regex for
-each group. This regex defines the matching rules for the group. Below is an
-example of a regex matcher on a named group that constrains the group to only
-match if it contains one or more digits:
+each group by including a regex in parentheses. This regex defines the matching
+rules for the group. Below is an example of a regex matcher on a named group
+that constrains the group to only match if it contains one or more digits:
 
 ```js
-const pattern = new URLPattern('/books/:id(\\d+)', 'https://example.com');
-console.log(pattern.test('https://example.com/books/123')); // true
-console.log(pattern.test('https://example.com/books/abc')); // false
-console.log(pattern.test('https://example.com/books/')); // false
+const pattern = new URLPattern("/books/:id(\\d+)", "https://example.com");
+console.log(pattern.test("https://example.com/books/123")); // true
+console.log(pattern.test("https://example.com/books/abc")); // false
+console.log(pattern.test("https://example.com/books/")); // false
 ```
 
 ### Regex matchers limitations
@@ -101,86 +99,86 @@ Some regex patterns do not work as you may expect:
 
   ```js
   // with `^` in pathname
-  const pattern = new URLPattern({ pathname: '(^b)' });
-  console.log(pattern.test('https://example.com/ba')); // false
-  console.log(pattern.test('https://example.com/xa')); // false
+  const pattern = new URLPattern({ pathname: "(^b)" });
+  console.log(pattern.test("https://example.com/ba")); // false
+  console.log(pattern.test("https://example.com/xa")); // false
   ```
 
   ```js
   // with `^` in protocol
-  const pattern = new URLPattern({ protocol: '(^https?)' });
-  console.log(pattern.test('https://example.com/index.html')); // true
-  console.log(pattern.test('xhttps://example.com/index.html')); // false
+  const pattern = new URLPattern({ protocol: "(^https?)" });
+  console.log(pattern.test("https://example.com/index.html")); // true
+  console.log(pattern.test("xhttps://example.com/index.html")); // false
   ```
 
   ```js
   // without `^` in protocol
-  const pattern = new URLPattern({ protocol: '(https?)' });
-  console.log(pattern.test('https://example.com/index.html')); // true
-  console.log(pattern.test('xhttps://example.com/index.html')); // false
+  const pattern = new URLPattern({ protocol: "(https?)" });
+  console.log(pattern.test("https://example.com/index.html")); // true
+  console.log(pattern.test("xhttps://example.com/index.html")); // false
   ```
 
 - Ends with `$` will only match if used at the end of the hash portion of the URLPattern and is redundant if used.
 
   ```js
   // with `$` in pathname
-  const pattern = new URLPattern({ pathname: '(path$)' });
-  console.log(pattern.test('https://example.com/path')); // false
-  console.log(pattern.test('https://example.com/other')); // false
+  const pattern = new URLPattern({ pathname: "(path$)" });
+  console.log(pattern.test("https://example.com/path")); // false
+  console.log(pattern.test("https://example.com/other")); // false
   ```
 
   ```js
-  // with `$` in protocol
-  const pattern = new URLPattern({ hash: '(hash$)' });
-  console.log(pattern.test('https://example.com/#hash')); // true
-  console.log(pattern.test('xhttps://example.com/#otherhash')); // false
+  // with `$` in hash
+  const pattern = new URLPattern({ hash: "(hash$)" });
+  console.log(pattern.test("https://example.com/#hash")); // true
+  console.log(pattern.test("xhttps://example.com/#otherhash")); // false
   ```
 
   ```js
-  // without `$` in protocol
-  const pattern = new URLPattern({ hash: '(hash)' });
-  console.log(pattern.test('https://example.com/#hash')); // true
-  console.log(pattern.test('xhttps://example.com/#otherhash')); // false
+  // without `$` in hash
+  const pattern = new URLPattern({ hash: "(hash)" });
+  console.log(pattern.test("https://example.com/#hash")); // true
+  console.log(pattern.test("xhttps://example.com/#otherhash")); // false
   ```
 
 - Lookaheads, and lookbehinds will never match any portion of the URLPattern.
 
   ```js
   // lookahead
-  const pattern = new URLPattern({ pathname: '(a(?=b))' });
-  console.log(pattern.test('https://example.com/ab')); // false
-  console.log(pattern.test('https://example.com/ax')); // false
+  const pattern = new URLPattern({ pathname: "(a(?=b))" });
+  console.log(pattern.test("https://example.com/ab")); // false
+  console.log(pattern.test("https://example.com/ax")); // false
   ```
 
   ```js
   // negative-lookahead
-  const pattern = new URLPattern({ pathname: '(a(?!b))' });
-  console.log(pattern.test('https://example.com/ab')); // false
-  console.log(pattern.test('https://example.com/ax')); // false
+  const pattern = new URLPattern({ pathname: "(a(?!b))" });
+  console.log(pattern.test("https://example.com/ab")); // false
+  console.log(pattern.test("https://example.com/ax")); // false
   ```
 
   ```js
   // lookbehind
-  const pattern = new URLPattern({ pathname: '((?<=b)a)' });
-  console.log(pattern.test('https://example.com/ba')); // false
-  console.log(pattern.test('https://example.com/xa')); // false
+  const pattern = new URLPattern({ pathname: "((?<=b)a)" });
+  console.log(pattern.test("https://example.com/ba")); // false
+  console.log(pattern.test("https://example.com/xa")); // false
   ```
 
   ```js
   // negative-lookbehind
-  const pattern = new URLPattern({ pathname: '((?<!b)a)' });
-  console.log(pattern.test('https://example.com/ba')); // false
-  console.log(pattern.test('https://example.com/xa')); // false
+  const pattern = new URLPattern({ pathname: "((?<!b)a)" });
+  console.log(pattern.test("https://example.com/ba")); // false
+  console.log(pattern.test("https://example.com/xa")); // false
   ```
 
 - Parentheses need to be escaped in range expressions within URLPattern even though they don't in RegExp.
 
   ```js
-  new URLPattern({ pathname: '([()])' }); // throws
-  new URLPattern({ pathname: '([\\(\\)])' }); // ok
+  new URLPattern({ pathname: "([()])" }); // throws
+  new URLPattern({ pathname: "([\\(\\)])" }); // ok
 
-  new RegExp('[()]'); // ok
-  new RegExp('[\\(\\)]'); // ok
+  new RegExp("[()]"); // ok
+  new RegExp("[\\(\\)]"); // ok
   ```
 
 ### Unnamed and named groups
@@ -192,14 +190,14 @@ result based on their order in the pattern.
 
 ```js
 // A named group
-const pattern = new URLPattern('/books/:id(\\d+)', 'https://example.com');
-console.log(pattern.exec('https://example.com/books/123').pathname.groups); // { id: '123' }
+const pattern = new URLPattern("/books/:id(\\d+)", "https://example.com");
+console.log(pattern.exec("https://example.com/books/123").pathname.groups); // { id: '123' }
 ```
 
 ```js
 // An unnamed group
-const pattern = new URLPattern('/books/(\\d+)', 'https://example.com');
-console.log(pattern.exec('https://example.com/books/123').pathname.groups); // { '0': '123' }
+const pattern = new URLPattern("/books/(\\d+)", "https://example.com");
+console.log(pattern.exec("https://example.com/books/123").pathname.groups); // { '0': '123' }
 ```
 
 ### Group modifiers
@@ -211,32 +209,32 @@ the group repeat zero or more times.
 
 ```js
 // An optional group
-const pattern = new URLPattern('/books/:id?', 'https://example.com');
-console.log(pattern.test('https://example.com/books/123')); // true
-console.log(pattern.test('https://example.com/books')); // true
-console.log(pattern.test('https://example.com/books/')); // false
-console.log(pattern.test('https://example.com/books/123/456')); // false
-console.log(pattern.test('https://example.com/books/123/456/789')); // false
+const pattern = new URLPattern("/books/:id?", "https://example.com");
+console.log(pattern.test("https://example.com/books/123")); // true
+console.log(pattern.test("https://example.com/books")); // true
+console.log(pattern.test("https://example.com/books/")); // false
+console.log(pattern.test("https://example.com/books/123/456")); // false
+console.log(pattern.test("https://example.com/books/123/456/789")); // false
 ```
 
 ```js
 // A repeating group with a minimum of one
-const pattern = new URLPattern('/books/:id+', 'https://example.com');
-console.log(pattern.test('https://example.com/books/123')); // true
-console.log(pattern.test('https://example.com/books')); // false
-console.log(pattern.test('https://example.com/books/')); // false
-console.log(pattern.test('https://example.com/books/123/456')); // true
-console.log(pattern.test('https://example.com/books/123/456/789')); // true
+const pattern = new URLPattern("/books/:id+", "https://example.com");
+console.log(pattern.test("https://example.com/books/123")); // true
+console.log(pattern.test("https://example.com/books")); // false
+console.log(pattern.test("https://example.com/books/")); // false
+console.log(pattern.test("https://example.com/books/123/456")); // true
+console.log(pattern.test("https://example.com/books/123/456/789")); // true
 ```
 
 ```js
 // A repeating group with a minimum of zero
-const pattern = new URLPattern('/books/:id*', 'https://example.com');
-console.log(pattern.test('https://example.com/books/123')); // true
-console.log(pattern.test('https://example.com/books')); // true
-console.log(pattern.test('https://example.com/books/')); // false
-console.log(pattern.test('https://example.com/books/123/456')); // true
-console.log(pattern.test('https://example.com/books/123/456/789')); // true
+const pattern = new URLPattern("/books/:id*", "https://example.com");
+console.log(pattern.test("https://example.com/books/123")); // true
+console.log(pattern.test("https://example.com/books")); // true
+console.log(pattern.test("https://example.com/books/")); // false
+console.log(pattern.test("https://example.com/books/123/456")); // true
+console.log(pattern.test("https://example.com/books/123/456/789")); // true
 ```
 
 ### Group delimiters
@@ -251,26 +249,26 @@ other pattern items (capturing groups, regex, wildcard, or fixed text).
 
 ```js
 // A group delimiter with a ? (optional) modifier
-const pattern = new URLPattern('/book{s}?', 'https://example.com');
-console.log(pattern.test('https://example.com/books')); // true
-console.log(pattern.test('https://example.com/book')); // true
-console.log(pattern.exec('https://example.com/books').pathname.groups); // {}
+const pattern = new URLPattern("/book{s}?", "https://example.com");
+console.log(pattern.test("https://example.com/books")); // true
+console.log(pattern.test("https://example.com/book")); // true
+console.log(pattern.exec("https://example.com/books").pathname.groups); // {}
 ```
 
 ```js
 // A group delimiter without a modifier
-const pattern = new URLPattern('/book{s}', 'https://example.com');
+const pattern = new URLPattern("/book{s}", "https://example.com");
 console.log(pattern.pathname); // /books
-console.log(pattern.test('https://example.com/books')); // true
-console.log(pattern.test('https://example.com/book')); // false
+console.log(pattern.test("https://example.com/books")); // true
+console.log(pattern.test("https://example.com/book")); // false
 ```
 
 ```js
 // A group delimiter containing a capturing group
-const pattern = new URLPattern({ pathname: '/blog/:id(\\d+){-:title}?' });
-console.log(pattern.test('https://example.com/blog/123-my-blog')); // true
-console.log(pattern.test('https://example.com/blog/123')); // true
-console.log(pattern.test('https://example.com/blog/my-blog')); // false
+const pattern = new URLPattern({ pathname: "/blog/:id(\\d+){-:title}?" });
+console.log(pattern.test("https://example.com/blog/123-my-blog")); // true
+console.log(pattern.test("https://example.com/blog/123")); // true
+console.log(pattern.test("https://example.com/blog/my-blog")); // false
 ```
 
 ### Automatic group prefixing in pathnames
@@ -286,35 +284,35 @@ prefixing behavior.
 
 ```js
 // A pattern with an optional group, preceded by a slash
-const pattern = new URLPattern('/books/:id?', 'https://example.com');
-console.log(pattern.test('https://example.com/books/123')); // true
-console.log(pattern.test('https://example.com/books')); // true
-console.log(pattern.test('https://example.com/books/')); // false
+const pattern = new URLPattern("/books/:id?", "https://example.com");
+console.log(pattern.test("https://example.com/books/123")); // true
+console.log(pattern.test("https://example.com/books")); // true
+console.log(pattern.test("https://example.com/books/")); // false
 ```
 
 ```js
 // A pattern with a repeating group, preceded by a slash
-const pattern = new URLPattern('/books/:id+', 'https://example.com');
-console.log(pattern.test('https://example.com/books/123')); // true
-console.log(pattern.test('https://example.com/books/123/456')); // true
-console.log(pattern.test('https://example.com/books/123/')); // false
-console.log(pattern.test('https://example.com/books/123/456/')); // false
+const pattern = new URLPattern("/books/:id+", "https://example.com");
+console.log(pattern.test("https://example.com/books/123")); // true
+console.log(pattern.test("https://example.com/books/123/456")); // true
+console.log(pattern.test("https://example.com/books/123/")); // false
+console.log(pattern.test("https://example.com/books/123/456/")); // false
 ```
 
 ```js
 // Segment prefixing does not occur outside of pathname patterns
-const pattern = new URLPattern({ hash: '/books/:id?' });
-console.log(pattern.test('https://example.com#/books/123')); // true
-console.log(pattern.test('https://example.com#/books')); // false
-console.log(pattern.test('https://example.com#/books/')); // true
+const pattern = new URLPattern({ hash: "/books/:id?" });
+console.log(pattern.test("https://example.com#/books/123")); // true
+console.log(pattern.test("https://example.com#/books")); // false
+console.log(pattern.test("https://example.com#/books/")); // true
 ```
 
 ```js
 // Disabling segment prefixing for a group using a group delimiter
-const pattern = new URLPattern({ pathname: '/books/{:id}?' });
-console.log(pattern.test('https://example.com/books/123')); // true
-console.log(pattern.test('https://example.com/books')); // false
-console.log(pattern.test('https://example.com/books/')); // true
+const pattern = new URLPattern({ pathname: "/books/{:id}?" });
+console.log(pattern.test("https://example.com/books/123")); // true
+console.log(pattern.test("https://example.com/books")); // false
+console.log(pattern.test("https://example.com/books/")); // true
 ```
 
 ### Wildcard tokens
@@ -326,20 +324,20 @@ string.
 
 ```js
 // A wildcard at the end of a pattern
-const pattern = new URLPattern('/books/*', 'https://example.com');
-console.log(pattern.test('https://example.com/books/123')); // true
-console.log(pattern.test('https://example.com/books')); // false
-console.log(pattern.test('https://example.com/books/')); // true
-console.log(pattern.test('https://example.com/books/123/456')); // true
+const pattern = new URLPattern("/books/*", "https://example.com");
+console.log(pattern.test("https://example.com/books/123")); // true
+console.log(pattern.test("https://example.com/books")); // false
+console.log(pattern.test("https://example.com/books/")); // true
+console.log(pattern.test("https://example.com/books/123/456")); // true
 ```
 
 ```js
 // A wildcard in the middle of a pattern
-const pattern = new URLPattern('/*.png', 'https://example.com');
-console.log(pattern.test('https://example.com/image.png')); // true
-console.log(pattern.test('https://example.com/image.png/123')); // false
-console.log(pattern.test('https://example.com/folder/image.png')); // true
-console.log(pattern.test('https://example.com/.png')); // true
+const pattern = new URLPattern("/*.png", "https://example.com");
+console.log(pattern.test("https://example.com/image.png")); // true
+console.log(pattern.test("https://example.com/image.png/123")); // false
+console.log(pattern.test("https://example.com/folder/image.png")); // true
+console.log(pattern.test("https://example.com/.png")); // true
 ```
 
 ### Pattern normalization
@@ -351,6 +349,28 @@ paths like `/foo/./bar/` are collapsed to just `/foo/bar`, etc. In addition,
 there are some pattern representations that parse to the same underlying
 meaning, like `foo` and `{foo}`. Such cases are normalized to the simplest form.
 In this case `{foo}` gets changed to `foo`.
+
+## Case sensitivity
+
+The URL Pattern API treats many parts of the URL as case-sensitive by default when matching. In contrast, many client-side JavaScript frameworks use case-insensitive URL matching. An `ignoreCase` option is available on the {{domxref("URLPattern.URLPattern", "URLPattern()")}} constructor to enable case-insensitive matching if desired.
+
+```js
+// Case-sensitive matching by default
+const pattern = new URLPattern("https://example.com/2022/feb/*");
+console.log(pattern.test("https://example.com/2022/feb/xc44rsz")); // true
+console.log(pattern.test("https://example.com/2022/Feb/xc44rsz")); // false
+```
+
+Setting the `ignoreCase` option to `true` in the constructor switches all matching operations to case-insensitive for the given pattern:
+
+```js
+// Case-insensitive matching
+const pattern = new URLPattern("https://example.com/2022/feb/*", {
+  ignoreCase: true,
+});
+console.log(pattern.test("https://example.com/2022/feb/xc44rsz")); // true
+console.log(pattern.test("https://example.com/2022/Feb/xc44rsz")); // true
+```
 
 ## Examples
 
@@ -364,7 +384,7 @@ component patterns any missing components default to the `*` wildcard value.
 // Construct a URLPattern that matches a specific domain and its subdomains.
 // All other URL components default to the wildcard `*` pattern.
 const pattern = new URLPattern({
-  hostname: '{*.}?example.com',
+  hostname: "{*.}?example.com",
 });
 
 console.log(pattern.hostname); // '{*.}?example.com'
@@ -376,14 +396,14 @@ console.log(pattern.pathname); // '*'
 console.log(pattern.search); // '*'
 console.log(pattern.hash); // '*'
 
-console.log(pattern.test('https://example.com/foo/bar')); // true
+console.log(pattern.test("https://example.com/foo/bar")); // true
 
-console.log(pattern.test({ hostname: 'cdn.example.com' })); // true
+console.log(pattern.test({ hostname: "cdn.example.com" })); // true
 
-console.log(pattern.test('custom-protocol://example.com/other/path?q=1')); // true
+console.log(pattern.test("custom-protocol://example.com/other/path?q=1")); // false
 
 // Prints `false` because the hostname component does not match
-console.log(pattern.test('https://cdn-example.com/foo/bar'));
+console.log(pattern.test("https://cdn-example.com/foo/bar"));
 ```
 
 ### Construct a URLPattern from a full URL string
@@ -398,7 +418,7 @@ the URL syntax or part of the pattern syntax.
 // Construct a URLPattern that matches URLs to CDN servers loading jpg images.
 // URL components not explicitly specified, like search and hash here, result
 // in the empty string similar to the URL() constructor.
-const pattern = new URLPattern('https://cdn-*.example.com/*.jpg');
+const pattern = new URLPattern("https://cdn-*.example.com/*.jpg");
 
 console.log(pattern.protocol); // 'https'
 
@@ -413,11 +433,13 @@ console.log(pattern.hash); // ''
 
 // Prints `true`
 console.log(
-    pattern.test("https://cdn-1234.example.com/product/assets/hero.jpg"));
+  pattern.test("https://cdn-1234.example.com/product/assets/hero.jpg"),
+);
 
 // Prints `false` because the search component does not match
 console.log(
-    pattern.test("https://cdn-1234.example.com/product/assets/hero.jpg?q=1"));
+  pattern.test("https://cdn-1234.example.com/product/assets/hero.jpg?q=1"),
+);
 ```
 
 ### Constructing a URLPattern with an ambiguous URL string
@@ -433,7 +455,7 @@ it throws an error.
 ```js
 // Throws because this is interpreted as a single relative pathname pattern
 // with a ":foo" named group and there is no base URL.
-const pattern = new URLPattern('data:foo*');
+const pattern = new URLPattern("data:foo*");
 ```
 
 ### Escaping characters to disambiguate URLPattern constructor strings
@@ -444,7 +466,7 @@ escaped to be treated as a URL separator instead of a pattern character. Here
 
 ```js
 // Constructs a URLPattern treating the `:` as the protocol suffix.
-const pattern = new URLPattern('data\\:foo*');
+const pattern = new URLPattern("data\\:foo*");
 
 console.log(pattern.protocol); // 'data'
 
@@ -457,7 +479,7 @@ console.log(pattern.port); // ''
 console.log(pattern.search); // ''
 console.log(pattern.hash); // ''
 
-console.log(pattern.test('data:foobar')); // true
+console.log(pattern.test("data:foobar")); // true
 ```
 
 ### Using base URLs for test() and exec()
@@ -465,25 +487,27 @@ console.log(pattern.test('data:foobar')); // true
 The following example shows how `test()` and `exec()` can use base URLs.
 
 ```js
-const pattern = new URLPattern({ hostname: 'example.com', pathname: '/foo/*' });
+const pattern = new URLPattern({ hostname: "example.com", pathname: "/foo/*" });
 
 // Prints `true` as the hostname based in the dictionary `baseURL` property
 // matches.
-console.log(pattern.test({
-  pathname: '/foo/bar',
-  baseURL: 'https://example.com/baz',
-}));
+console.log(
+  pattern.test({
+    pathname: "/foo/bar",
+    baseURL: "https://example.com/baz",
+  }),
+);
 
 // Prints `true` as the hostname in the second argument base URL matches.
-console.log(pattern.test('/foo/bar', 'https://example.com/baz'));
+console.log(pattern.test("/foo/bar", "https://example.com/baz"));
 
 // Throws because the second argument cannot be passed with a dictionary input.
 try {
-  pattern.test({ pathname: '/foo/bar' }, 'https://example.com/baz');
+  pattern.test({ pathname: "/foo/bar" }, "https://example.com/baz");
 } catch (e) {}
 
 // The `exec()` method takes the same arguments as `test()`.
-const result = pattern.exec('/foo/bar', 'https://example.com/baz');
+const result = pattern.exec("/foo/bar", "https://example.com/baz");
 
 console.log(result.pathname.input); // '/foo/bar'
 
@@ -503,8 +527,10 @@ Also, since the base URL provides a value for every component the resulting
 string. This means you do not get the "default to wildcard" behavior.
 
 ```js
-const pattern1 = new URLPattern({ pathname: '/foo/*',
-                                  baseURL: 'https://example.com' });
+const pattern1 = new URLPattern({
+  pathname: "/foo/*",
+  baseURL: "https://example.com",
+});
 
 console.log(pattern1.protocol); // 'https'
 console.log(pattern1.hostname); // 'example.com'
@@ -517,12 +543,12 @@ console.log(pattern1.search); // ''
 console.log(pattern1.hash); // ''
 
 // Equivalent to pattern1
-const pattern2 = new URLPattern('/foo/*', 'https://example.com');
+const pattern2 = new URLPattern("/foo/*", "https://example.com");
 
 // Throws because a relative constructor string must have a base URL to resolve
 // against.
 try {
-  const pattern3 = new URLPattern('/foo/*');
+  const pattern3 = new URLPattern("/foo/*");
 } catch (e) {}
 ```
 
@@ -533,8 +559,8 @@ be accessed from the `exec()` result object. Unnamed groups are assigned index
 numbers sequentially.
 
 ```js
-const pattern = new URLPattern({ hostname: '*.example.com' });
-const result = pattern.exec({ hostname: 'cdn.example.com' });
+const pattern = new URLPattern({ hostname: "*.example.com" });
+const result = pattern.exec({ hostname: "cdn.example.com" });
 
 console.log(result.hostname.groups[0]); // 'cdn'
 
@@ -549,11 +575,11 @@ The following example shows how groups can be given custom names which can be
 used to accessed the matched value in the result object.
 
 ```js
-// Construct a URLPattern using matching groups with custom names.  These
+// Construct a URLPattern using matching groups with custom names. These
 // names can then be later used to access the matched values in the result
 // object.
-const pattern = new URLPattern({ pathname: '/:product/:user/:action' });
-const result = pattern.exec({ pathname: '/store/wanderview/view' });
+const pattern = new URLPattern({ pathname: "/:product/:user/:action" });
+const result = pattern.exec({ pathname: "/store/wanderview/view" });
 
 console.log(result.pathname.groups.product); // 'store'
 console.log(result.pathname.groups.user); // 'wanderview'
@@ -570,13 +596,13 @@ The following example shows how a matching group can use a custom regular
 expression.
 
 ```js
-const pattern = new URLPattern({ pathname: '/(foo|bar)' });
+const pattern = new URLPattern({ pathname: "/(foo|bar)" });
 
-console.log(pattern.test({ pathname: '/foo' })); // true
-console.log(pattern.test({ pathname: '/bar' })); // true
-console.log(pattern.test({ pathname: '/baz' })); // false
+console.log(pattern.test({ pathname: "/foo" })); // true
+console.log(pattern.test({ pathname: "/bar" })); // true
+console.log(pattern.test({ pathname: "/baz" })); // false
 
-const result = pattern.exec({ pathname: '/foo' });
+const result = pattern.exec({ pathname: "/foo" });
 
 console.log(result.pathname.groups[0]); // 'foo'
 ```
@@ -587,8 +613,8 @@ The following example shows how to use a custom regular expression with a named
 group.
 
 ```js
-const pattern = new URLPattern({ pathname: '/:type(foo|bar)' });
-const result = pattern.exec({ pathname: '/foo' });
+const pattern = new URLPattern({ pathname: "/:type(foo|bar)" });
+const result = pattern.exec({ pathname: "/foo" });
 
 console.log(result.pathname.groups.type); // 'foo'
 ```
@@ -600,24 +626,24 @@ The following example shows how to make a matching group optional by placing a
 `/` character to be treated as an optional prefix to the group.
 
 ```js
-const pattern = new URLPattern({ pathname: '/product/(index.html)?' });
+const pattern = new URLPattern({ pathname: "/product/(index.html)?" });
 
-console.log(pattern.test({ pathname: '/product/index.html' })); // true
-console.log(pattern.test({ pathname: '/product' })); // true
+console.log(pattern.test({ pathname: "/product/index.html" })); // true
+console.log(pattern.test({ pathname: "/product" })); // true
 
-const pattern2 = new URLPattern({ pathname: '/product/:action?' });
+const pattern2 = new URLPattern({ pathname: "/product/:action?" });
 
-console.log(pattern2.test({ pathname: '/product/view' })); // true
-console.log(pattern2.test({ pathname: '/product' })); // true
+console.log(pattern2.test({ pathname: "/product/view" })); // true
+console.log(pattern2.test({ pathname: "/product" })); // true
 
-// Wildcards can be made optional as well.  This may not seem to make sense
+// Wildcards can be made optional as well. This may not seem to make sense
 // since they already match the empty string, but it also makes the prefix
 // `/` optional in a pathname pattern.
-const pattern3 = new URLPattern({ pathname: '/product/*?' });
+const pattern3 = new URLPattern({ pathname: "/product/*?" });
 
-console.log(pattern3.test({ pathname: '/product/wanderview/view' })); // true
-console.log(pattern3.test({ pathname: '/product' })); // true
-console.log(pattern3.test({ pathname: '/product/' })); // true
+console.log(pattern3.test({ pathname: "/product/wanderview/view" })); // true
+console.log(pattern3.test({ pathname: "/product" })); // true
+console.log(pattern3.test({ pathname: "/product/" })); // true
 ```
 
 ### Making matching groups repeated
@@ -627,12 +653,12 @@ The following example shows how a matching group can be made repeated by placing
 prefix as special. It is repeated with the group.
 
 ```js
-const pattern = new URLPattern({ pathname: '/product/:action+' });
-const result = pattern.exec({ pathname: '/product/do/some/thing/cool' });
+const pattern = new URLPattern({ pathname: "/product/:action+" });
+const result = pattern.exec({ pathname: "/product/do/some/thing/cool" });
 
 result.pathname.groups.action; // 'do/some/thing/cool'
 
-console.log(pattern.test({ pathname: '/product' })); // false
+console.log(pattern.test({ pathname: "/product" })); // false
 ```
 
 ### Making matching groups optional and repeated
@@ -643,12 +669,12 @@ pathname component treats the `/` prefix as special. It both becomes optional
 and is also repeated with the group.
 
 ```js
-const pattern = new URLPattern({ pathname: '/product/:action*' });
-const result = pattern.exec({ pathname: '/product/do/some/thing/cool' });
+const pattern = new URLPattern({ pathname: "/product/:action*" });
+const result = pattern.exec({ pathname: "/product/do/some/thing/cool" });
 
 console.log(result.pathname.groups.action); // 'do/some/thing/cool'
 
-console.log(pattern.test({ pathname: '/product' })); // true
+console.log(pattern.test({ pathname: "/product" })); // true
 ```
 
 ### Using a custom prefix or suffix for an optional or repeated modifier
@@ -658,13 +684,13 @@ prefix and/or suffix to be operated on by a subsequent `?`, `*`, or `+`
 modifier.
 
 ```js
-const pattern = new URLPattern({ hostname: '{:subdomain.}*example.com' });
+const pattern = new URLPattern({ hostname: "{:subdomain.}*example.com" });
 
-console.log(pattern.test({ hostname: 'example.com' })); // true
-console.log(pattern.test({ hostname: 'foo.bar.example.com' })); // true
-console.log(pattern.test({ hostname: '.example.com' })); // false
+console.log(pattern.test({ hostname: "example.com" })); // true
+console.log(pattern.test({ hostname: "foo.bar.example.com" })); // true
+console.log(pattern.test({ hostname: ".example.com" })); // false
 
-const result = pattern.exec({ hostname: 'foo.bar.example.com' });
+const result = pattern.exec({ hostname: "foo.bar.example.com" });
 
 console.log(result.hostname.groups.subdomain); // 'foo.bar'
 ```
@@ -675,12 +701,12 @@ The following example shows how curly braces can be used to denote fixed text
 values as optional or repeated without using a matching group.
 
 ```js
-const pattern = new URLPattern({ pathname: '/product{/}?' });
+const pattern = new URLPattern({ pathname: "/product{/}?" });
 
-console.log(pattern.test({ pathname: '/product' })); // true
-console.log(pattern.test({ pathname: '/product/' })); // true
+console.log(pattern.test({ pathname: "/product" })); // true
+console.log(pattern.test({ pathname: "/product/" })); // true
 
-const result = pattern.exec({ pathname: '/product/' });
+const result = pattern.exec({ pathname: "/product/" });
 
 console.log(result.pathname.groups); // {}
 ```
@@ -692,15 +718,15 @@ URL components.
 
 ```js
 const pattern = new URLPattern({
-  protocol: 'http{s}?',
-  username: ':user?',
-  password: ':pass?',
-  hostname: '{:subdomain.}*example.com',
-  pathname: '/product/:action*',
+  protocol: "http{s}?",
+  username: ":user?",
+  password: ":pass?",
+  hostname: "{:subdomain.}*example.com",
+  pathname: "/product/:action*",
 });
 
 const result = pattern.exec(
-  'http://foo:bar@sub.example.com/product/view?q=12345',
+  "http://foo:bar@sub.example.com/product/view?q=12345",
 );
 
 console.log(result.username.groups.user); // 'foo'

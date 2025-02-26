@@ -1,18 +1,11 @@
 ---
-title: 'BaseAudioContext: statechange event'
+title: "BaseAudioContext: statechange event"
+short-title: statechange
 slug: Web/API/BaseAudioContext/statechange_event
 page-type: web-api-event
-tags:
-  - API
-  - Audio
-  - AudioContext
-  - BaseAudioContext
-  - Event Handler
-  - Reference
-  - Web Audio API
-  - statechange
 browser-compat: api.BaseAudioContext.statechange_event
 ---
+
 {{APIRef("Web Audio API")}}
 
 A `statechange` event is fired at a {{DOMxRef("BaseAudioContext")}} object when its {{domxref("BaseAudioContext.state", "state")}} member changes.
@@ -21,8 +14,8 @@ A `statechange` event is fired at a {{DOMxRef("BaseAudioContext")}} object when 
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener('statechange', (event) => { })
+```js-nolint
+addEventListener("statechange", (event) => { })
 
 onstatechange = (event) => { }
 ```
@@ -37,9 +30,9 @@ The following snippet is taken from our [AudioContext states demo](https://githu
 {{domxref("BaseAudioContext.state", "state")}} to the console every time it changes.
 
 ```js
-audioCtx.onstatechange = function() {
+audioCtx.onstatechange = () => {
   console.log(audioCtx.state);
-}
+};
 ```
 
 ## Specifications

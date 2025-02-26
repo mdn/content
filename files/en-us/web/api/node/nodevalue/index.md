@@ -1,12 +1,11 @@
 ---
-title: Node.nodeValue
+title: "Node: nodeValue property"
+short-title: nodeValue
 slug: Web/API/Node/nodeValue
 page-type: web-api-instance-property
-tags:
-  - Property
-  - Reference
 browser-compat: api.Node.nodeValue
 ---
+
 {{APIRef("DOM")}}
 
 The **`nodeValue`** property of the {{domxref("Node")}} interface returns or sets the value of the current node.
@@ -32,7 +31,8 @@ The following table shows the return values for different types of nodes.
 | {{domxref("ProcessingInstruction")}} | Entire content excluding the target |
 | {{domxref("Text")}}                  | Content of the text node            |
 
-> **Note:** When `nodeValue` is defined to be `null`, setting it has no effect.
+> [!NOTE]
+> When `nodeValue` is defined to be `null`, setting it has no effect.
 
 ## Example
 
@@ -45,15 +45,15 @@ The following table shows the return values for different types of nodes.
 and the following script:
 
 ```js
-let node = document.getElementsByTagName("body")[0].firstChild;
-let result = "<br/>Node names are:<br/>";
+let node = document.querySelector("body").firstChild;
+let result = "Node names are:\n";
 while (node) {
-  result += `Value of ${node.nodeName}: ${node.nodeValue}<br/>`;
-  node = node.nextSibling
+  result += `Value of ${node.nodeName}: ${node.nodeValue}\n`;
+  node = node.nextSibling;
 }
 
 const output = document.getElementById("result");
-output.innerHTML = result;
+output.innerText = result;
 ```
 
 {{ EmbedLiveSample("Example", "100%", "250")}}

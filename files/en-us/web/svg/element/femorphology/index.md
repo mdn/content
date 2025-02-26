@@ -1,34 +1,21 @@
 ---
 title: <feMorphology>
 slug: Web/SVG/Element/feMorphology
-tags:
-  - Element
-  - NeedsBrowserCompatibility
-  - NeedsContent
-  - NeedsMobileBrowserCompatibility
-  - SVG
-  - SVG Filter
+page-type: svg-element
 browser-compat: svg.elements.feMorphology
 ---
+
 {{SVGRef}}
 
 The **`<feMorphology>`** [SVG](/en-US/docs/Web/SVG) filter primitive is used to erode or dilate the input image. Its usefulness lies especially in fattening or thinning effects.
+
+Like other filter primitives, it handles color components in the `linearRGB` {{glossary("color space")}} by default. You can use {{svgattr("color-interpolation-filters")}} to use `sRGB` instead.
 
 ## Usage context
 
 {{svginfo}}
 
 ## Attributes
-
-### Global attributes
-
-- [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
-- [Presentation attributes](/en-US/docs/Web/SVG/Attribute#presentation_attributes)
-- [Filter primitive attributes](/en-US/docs/Web/SVG/Attribute#filter_primitive_attributes)
-- {{SVGAttr("class")}}
-- {{SVGAttr("style")}}
-
-### Specific attributes
 
 - {{SVGAttr("in")}}
 - {{SVGAttr("operator")}}
@@ -47,10 +34,10 @@ This element implements the {{domxref("SVGFEMorphologyElement")}} interface.
 ```html
 <svg xmlns="http://www.w3.org/2000/svg" width="300" height="180">
   <filter id="erode">
-    <feMorphology operator="erode" radius="1"/>
+    <feMorphology operator="erode" radius="1" />
   </filter>
   <filter id="dilate">
-    <feMorphology operator="dilate" radius="2"/>
+    <feMorphology operator="dilate" radius="2" />
   </filter>
   <text y="1em">Normal text</text>
   <text id="thin" y="2em">Thinned text</text>
@@ -84,10 +71,10 @@ text {
 ```html
 <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0">
   <filter id="erode">
-    <feMorphology operator="erode" radius="1"/>
+    <feMorphology operator="erode" radius="1" />
   </filter>
   <filter id="dilate">
-    <feMorphology operator="dilate" radius="2"/>
+    <feMorphology operator="dilate" radius="2" />
   </filter>
 </svg>
 

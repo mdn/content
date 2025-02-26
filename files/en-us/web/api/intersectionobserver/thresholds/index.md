@@ -1,18 +1,11 @@
 ---
-title: IntersectionObserver.thresholds
+title: "IntersectionObserver: thresholds property"
+short-title: thresholds
 slug: Web/API/IntersectionObserver/thresholds
 page-type: web-api-instance-property
-tags:
-  - API
-  - Draft
-  - Intersection Observer
-  - Intersection Observer API
-  - IntersectionObserver
-  - NeedsExample
-  - Property
-  - Reference
 browser-compat: api.IntersectionObserver.thresholds
 ---
+
 {{APIRef("Intersection Observer API")}}
 
 The {{domxref("IntersectionObserver")}} interface's read-only
@@ -22,7 +15,7 @@ thresholds that was specified when the observer was instantiated with
 only one threshold ratio was provided when instantiating the object, this will be an
 array containing that single value.
 
-See {{SectionOnPage("/en-US/docs/Web/API/Intersection_Observer_API", "Thresholds")}} to
+See the [Intersection Observer](/en-US/docs/Web/API/Intersection_Observer_API#thresholds) page to
 learn how thresholds work.
 
 ## Value
@@ -37,9 +30,10 @@ If no `threshold` option was included when
 `IntersectionObserver()` was used to instantiate the observer, the value of
 `thresholds` is `[0]`.
 
-> **Note:** Although the `options` object you can specify when creating an
+> [!NOTE]
+> Although the `options` object you can specify when creating an
 > {{domxref("IntersectionObserver")}} has a field named
-> {{domxref("IntersectionObserver.threshold", "threshold")}}, this property is called
+> `threshold`, this property is called
 > `thresholds`. Confusing? Yes. If you accidentally use
 > `thresholds` as the name of the field in your `options`, the
 > `thresholds` array will wind up being `[0.0]`, which is likely

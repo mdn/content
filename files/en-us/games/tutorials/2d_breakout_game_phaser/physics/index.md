@@ -1,16 +1,9 @@
 ---
 title: Physics
 slug: Games/Tutorials/2D_breakout_game_Phaser/Physics
-tags:
-  - 2D
-  - Beginner
-  - Canvas
-  - Games
-  - JavaScript
-  - Phaser
-  - Tutorial
-  - physics
+page-type: guide
 ---
+
 {{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Move_the_ball", "Games/Workflows/2D_Breakout_game_Phaser/Bounce_off_the_walls")}}
@@ -47,8 +40,8 @@ Remember to remove our old method of adding values to `x` and `y` from the `upda
 
 ```js
 function update() {
-    ball.x += 1;
-    ball.y += 1;
+  ball.x += 1;
+  ball.y += 1;
 }
 ```
 
@@ -59,25 +52,24 @@ we are now handling this properly, with a physics engine.
 The latest code should look like this:
 
 ```js
-var ball;
+let ball;
 
 function preload() {
-    game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
-    game.scale.pageAlignHorizontally = true;
-    game.scale.pageAlignVertically = true;
-    game.stage.backgroundColor = '#eee';
-    game.load.image('ball', 'img/ball.png');
+  game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
+  game.scale.pageAlignHorizontally = true;
+  game.scale.pageAlignVertically = true;
+  game.stage.backgroundColor = "#eee";
+  game.load.image("ball", "img/ball.png");
 }
 
 function create() {
-    game.physics.startSystem(Phaser.Physics.ARCADE);
-    ball = game.add.sprite(50, 50, 'ball');
-    game.physics.enable(ball, Phaser.Physics.ARCADE);
-    ball.body.velocity.set(150, 150);
+  game.physics.startSystem(Phaser.Physics.ARCADE);
+  ball = game.add.sprite(50, 50, "ball");
+  game.physics.enable(ball, Phaser.Physics.ARCADE);
+  ball.body.velocity.set(150, 150);
 }
 
-function update() {
-}
+function update() {}
 ```
 
 Try reloading `index.html` again — The ball should now be moving constantly in the given direction. At the moment, the physics engine has gravity and friction set to zero. Adding gravity would result in the ball falling down while friction would eventually stop the ball.
@@ -86,7 +78,7 @@ Try reloading `index.html` again — The ball should now be moving constantly in
 
 You can do much more with physics, for example by adding `ball.body.gravity.y = 100;` you will set the vertical gravity of the ball. As a result it will be launched upwards, but then fall due to the effects of gravity pulling it down.
 
-This kind of functionality is just the tip of the iceberg — there are various functions and variables that can help you manipulate the physics objects. Check out the official [physics documentation](https://phaser.io/docs#physics) and see the huge collection of examples using the [Arcade](https://phaser.io/examples/v2/category/arcade-physics) and [P2](https://phaser.io/examples/v2/category/p2-physics) physics systems.
+This kind of functionality is just the tip of the iceberg — there are various functions and variables that can help you manipulate the physics objects. Check out the official [physics documentation](https://phaser.io/docs/#physics) and see the [huge collection of examples](https://samme.github.io/phaser-examples-mirror/) using the Arcade and P2 physics systems.
 
 ## Compare your code
 

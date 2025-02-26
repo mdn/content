@@ -1,19 +1,12 @@
 ---
-title: FetchEvent.resultingClientId
+title: "FetchEvent: resultingClientId property"
+short-title: resultingClientId
 slug: Web/API/FetchEvent/resultingClientId
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - FetchEvent
-  - Property
-  - Reference
-  - Service Workers
-  - Worker
-  - resultingClientId
 browser-compat: api.FetchEvent.resultingClientId
 ---
-{{APIRef("Service Workers API")}}
+
+{{APIRef("Service Workers API")}}{{AvailableInWorkers("service")}}
 
 The **`resultingClientId`** read-only property of the
 {{domxref("FetchEvent")}} interface is the {{domxref("Client.id", "id")}} of the
@@ -34,7 +27,7 @@ A string.
 ## Examples
 
 ```js
-self.addEventListener('fetch', function(event) {
+self.addEventListener("fetch", (event) => {
   console.log(event.resultingClientId);
 });
 ```
@@ -50,7 +43,5 @@ self.addEventListener('fetch', function(event) {
 ## See also
 
 - [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [Service workers basic code example](https://github.com/mdn/sw-test)
-- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
-- {{jsxref("Promise")}}
+- [Service workers basic code example](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)
 - [Using web workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)

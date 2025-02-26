@@ -1,35 +1,36 @@
 ---
 title: Math.min()
 slug: Web/JavaScript/Reference/Global_Objects/Math/min
-tags:
-  - JavaScript
-  - Lowest Number
-  - Lowest Value
-  - Math
-  - Method
-  - Minimum
-  - Reference
-  - Smallest
-  - Smallest Number
-  - Smallest Value
-  - min
+page-type: javascript-static-method
 browser-compat: javascript.builtins.Math.min
 ---
+
 {{JSRef}}
 
-The static function **`Math.min()`**
-returns the lowest-valued number passed into it, or {{jsxref("NaN")}} if any parameter
-isn't a number and can't be converted into one.
+The **`Math.min()`** static method returns the smallest of the numbers given as input parameters, or {{jsxref("Infinity")}} if there are no parameters.
 
-{{EmbedInteractiveExample("pages/js/math-min.html")}}
+{{InteractiveExample("JavaScript Demo: Math.min()")}}
+
+```js interactive-example
+console.log(Math.min(2, 3, 1));
+// Expected output: 1
+
+console.log(Math.min(-2, -3, -1));
+// Expected output: -3
+
+const array1 = [2, 3, 1];
+
+console.log(Math.min(...array1));
+// Expected output: 1
+```
 
 ## Syntax
 
-```js
+```js-nolint
 Math.min()
-Math.min(value0)
-Math.min(value0, value1)
-Math.min(value0, value1, /* … ,*/ valueN)
+Math.min(value1)
+Math.min(value1, value2)
+Math.min(value1, value2, /* …, */ valueN)
 ```
 
 ### Parameters
@@ -39,31 +40,24 @@ Math.min(value0, value1, /* … ,*/ valueN)
 
 ### Return value
 
-The smallest of the given numbers. If any one or more of the parameters cannot be
-converted into a number, {{jsxref("NaN")}} is returned. The result is
-{{jsxref("Infinity")}} if no parameters are provided.
+The smallest of the given numbers. Returns {{jsxref("NaN")}} if any of the parameters is or is converted into `NaN`. Returns {{jsxref("Infinity")}} if no parameters are provided.
 
 ## Description
 
-Because `min()` is a static method of `Math`, you always use it
-as `Math.min()`, rather than as a method of a `Math` object you
-created (`Math` is not a constructor).
+Because `min()` is a static method of `Math`, you always use it as `Math.min()`, rather than as a method of a `Math` object you created (`Math` is not a constructor).
 
-If no arguments are given, the result is {{jsxref("Infinity")}}.
-
-If at least one of arguments cannot be converted to a number, the result is
-{{jsxref("NaN")}}.
+[`Math.min.length`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/length) is 2, which weakly signals that it's designed to handle at least two parameters.
 
 ## Examples
 
 ### Using Math.min()
 
-This finds the min of `x` and `y` and assigns it to
-`z`:
+This finds the min of `x` and `y` and assigns it to `z`:
 
 ```js
-const x = 10, y = -20;
-const z = Math.min(x, y);
+const x = 10;
+const y = -20;
+const z = Math.min(x, y); // -20
 ```
 
 ### Clipping a value with Math.min()

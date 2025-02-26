@@ -1,0 +1,102 @@
+# Do not add comments to this file. They will be lost.
+
+sidebar:
+  - type: section
+    link: /MDN
+  - /MDN/Tutorials
+  - /MDN/Guides
+  - title: community_resources
+    details: closed
+    children:
+      - /MDN/Community
+      - /MDN/Community/Getting_started
+      - /MDN/Community/Our_repositories
+      - /MDN/Community/Open_source_etiquette
+      - /MDN/Community/Issues
+      - /MDN/Community/Pull_requests
+      - /MDN/Community/Discussions
+      - /MDN/Community/Translated_content
+      - /MDN/Community/Roles_teams
+      - /MDN/Community/Communication_channels
+      - /MDN/Community/Learn_forum
+  - title: writing_guide
+    details: closed
+    children:
+      - /MDN/Writing_guidelines
+      - /MDN/Writing_guidelines/What_we_write
+      - /MDN/Writing_guidelines/Writing_style_guide
+      - link: /MDN/Writing_guidelines/Learning_content
+        title: learning_guidelines
+      - /MDN/Writing_guidelines/Experimental_deprecated_obsolete
+      - /MDN/Writing_guidelines/Attrib_copyright_license
+      - type: listSubPages
+        path: /MDN/Writing_guidelines/Howto
+        includeParent: true
+        title: how_to_guides
+        details: closed
+      - type: listSubPages
+        path: /MDN/Writing_guidelines/Page_structures
+        includeParent: true
+        title: page_structures
+        details: closed
+l10n:
+  de:
+    community_resources: Gemeinschaftsrichtlinien
+    writing_guide: Schreibanleitung
+    learning_guidelines: Learning content guidelines
+    how_to_guides: Anleitungen
+    page_structures: Seitenstrukturen
+  en-US:
+    community_resources: Community resources
+    writing_guide: Writing guidelines
+    learning_guidelines: Learning content guidelines
+    how_to_guides: How-to guides
+    page_structures: Page structures
+  es:
+    community_resources: Community resources
+    writing_guide: Writing guidelines
+    learning_guidelines: Learning content guidelines
+    how_to_guides: How-to guides
+    page_structures: Page structures
+  fr:
+    community_resources: Règles de la communauté
+    writing_guide: Writing guidelines
+    learning_guidelines: Learning content guidelines
+    how_to_guides: How-to guides
+    page_structures: Page structures
+  ja:
+    community_resources: Community resources
+    writing_guide: Writing guidelines
+    learning_guidelines: Learning content guidelines
+    how_to_guides: How-to guides
+    page_structures: Page structures
+  ko:
+    community_resources: 커뮤니티 지침
+    writing_guide: Writing guidelines
+    learning_guidelines: Learning content guidelines
+    how_to_guides: How-to guides
+    page_structures: Page structures
+  pt-BR:
+    community_resources: Community resources
+    writing_guide: Writing guidelines
+    learning_guidelines: Learning content guidelines
+    how_to_guides: How-to guides
+    page_structures: Page structures
+  ru:
+    community_resources: Community resources
+    writing_guide: Writing guidelines
+    learning_guidelines: Learning content guidelines
+    how_to_guides: How-to guides
+    page_structures: Page structures
+  zh-CN:
+    community_resources: 社区指南
+    writing_guide: 撰写指南
+    learning_guidelines: Learning content guidelines
+    how_to_guides: MDN 写作指南
+    page_structures: 页面结构
+  zh-TW:
+    community_resources: Community resources
+    writing_guide: Writing guidelines
+    learning_guidelines: Learning content guidelines
+    how_to_guides: How-to guides
+    page_structures: Page structures

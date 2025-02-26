@@ -1,21 +1,17 @@
 ---
 title: overscroll-behavior-block
 slug: Web/CSS/overscroll-behavior-block
-tags:
-  - CSS
-  - CSS Box Model
-  - CSS Logical Properties
-  - CSS Property
-  - Reference
-  - overscroll-behavior-block
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.overscroll-behavior-block
 ---
+
 {{CSSRef}}
 
-The **`overscroll-behavior-block`** CSS property sets the browser's behavior when the block direction boundary of a scrolling area is reached.
+The **`overscroll-behavior-block`** [CSS](/en-US/docs/Web/CSS) property sets the browser's behavior when the block direction boundary of a scrolling area is reached.
 
 See {{cssxref("overscroll-behavior")}} for a full explanation.
+
+## Syntax
 
 ```css
 /* Keyword values */
@@ -31,8 +27,6 @@ overscroll-behavior-block: revert-layer;
 overscroll-behavior-block: unset;
 ```
 
-## Syntax
-
 The `overscroll-behavior-block` property is specified as a keyword chosen from the list of values below.
 
 ### Values
@@ -40,7 +34,7 @@ The `overscroll-behavior-block` property is specified as a keyword chosen from t
 - `auto`
   - : The default scroll overflow behavior occurs as normal.
 - `contain`
-  - : Default scroll overflow behavior is observed inside the element this value is set on (e.g. "bounce" effects or refreshes), but no scroll chaining occurs to neighboring scrolling areas, e.g. underlying elements will not scroll.
+  - : Default scroll overflow behavior (e.g., "bounce" effects) is observed inside the element where this value is set. However, no {{Glossary("Scroll_chaining", "scroll chaining")}} occurs on neighboring scrolling areas; the underlying elements will not scroll. The `contain` value disables native browser navigation, including the vertical pull-to-refresh gesture and horizontal swipe navigation.
 - `none`
   - : No scroll chaining occurs to neighboring scrolling areas, and default scroll overflow behavior is prevented.
 
@@ -66,7 +60,11 @@ By default, when the inner box is scrolled and a scroll boundary is reached, the
 <main>
   <div>
     <div>
-      <p><code>overscroll-behavior-block</code> has been used to make it so that when the scroll boundaries of the yellow inner box are reached, the whole page does not begin to scroll.</p>
+      <p>
+        <code>overscroll-behavior-block</code> has been used to make it so that
+        when the scroll boundaries of the yellow inner box are reached, the
+        whole page does not begin to scroll.
+      </p>
     </div>
   </div>
 </main>
@@ -79,7 +77,12 @@ main {
   height: 3000px;
   width: 500px;
   background-color: white;
-  background-image: repeating-linear-gradient(to bottom, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 19px, rgba(0,0,0,0.5) 20px);
+  background-image: repeating-linear-gradient(
+    to bottom,
+    rgb(0 0 0 / 0%) 0px,
+    rgb(0 0 0 / 0%) 19px,
+    rgb(0 0 0 / 50%) 20px
+  );
 }
 
 main > div {
@@ -96,12 +99,17 @@ div > div {
   height: 1500px;
   width: 100%;
   background-color: yellow;
-  background-image: repeating-linear-gradient(to bottom, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 19px, rgba(0,0,0,0.5) 20px);
+  background-image: repeating-linear-gradient(
+    to bottom,
+    rgb(0 0 0 / 0%) 0px,
+    rgb(0 0 0 / 0%) 19px,
+    rgb(0 0 0 / 50%) 20px
+  );
 }
 
 p {
   padding: 10px;
-  background-color: rgba(255,0,0,0.5);
+  background-color: rgb(255 0 0 / 50%);
   margin: 0;
   width: 340px;
   position: relative;
@@ -124,4 +132,8 @@ p {
 
 ## See also
 
-- [Take control of your scroll: customizing pull-to-refresh and overflow effects](https://developer.chrome.com/blog/overscroll-behavior/#full-demo)
+- {{cssxref("overscroll-behavior")}}
+- {{cssxref("overscroll-behavior-x")}}
+- {{cssxref("overscroll-behavior-y")}}
+- {{cssxref("overscroll-behavior-inline")}}
+- [CSS overscroll behavior](/en-US/docs/Web/CSS/CSS_overscroll_behavior) module

@@ -1,29 +1,22 @@
 ---
 title: action.setBadgeText()
 slug: Mozilla/Add-ons/WebExtensions/API/action/setBadgeText
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - action
-  - setBadgeText
+page-type: webextension-api-function
 browser-compat: webextensions.api.action.setBadgeText
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 Sets the badge text for the browser action. The badge is displayed on top of the icon.
 
-> **Note:** This API is available in Manifest V3 or higher.
+> [!NOTE]
+> This API is available in Manifest V3 or higher.
 
-Tabs without an specific badge text will inherit the global badge text, which is `""` by default.
+Tabs without a specific badge text will inherit the global badge text, which is `""` by default.
 
 ## Syntax
 
-```js
+```js-nolint
 browser.action.setBadgeText(
   details // object
 )
@@ -65,7 +58,7 @@ Add a badge indicating how many times the user clicked the button:
 let clicks = 0;
 
 function increment() {
-  browser.action.setBadgeText({text: (++clicks).toString()});
+  browser.action.setBadgeText({ text: (++clicks).toString() });
 }
 
 browser.action.onClicked.addListener(increment);
@@ -77,11 +70,11 @@ browser.action.onClicked.addListener(increment);
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.action`](https://developer.chrome.com/docs/extensions/reference/action/#method-setBadgeText) API. This documentation is derived from [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.action`](https://developer.chrome.com/docs/extensions/reference/api/action#method-setBadgeText) API. This documentation is derived from [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) in the Chromium code.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -108,4 +101,4 @@ browser.action.onClicked.addListener(increment);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

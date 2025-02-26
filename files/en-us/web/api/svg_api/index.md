@@ -2,15 +2,9 @@
 title: SVG API
 slug: Web/API/SVG_API
 page-type: web-api-overview
-tags:
-  - API
-  - SVG
-  - Guide
-  - Overview
-  - Reference
-  - Web
 spec-urls: https://svgwg.org/svg2-draft/
 ---
+
 {{DefaultAPISidebar("SVG")}}
 
 SVG provides elements for circles, rectangles, and simple and complex curves. The elements' attribute values specify how these must be drawn. The **SVG API** is the subset of the **DOM** connecting these SVG elements and their attribute values to scripts or programming languages by representing them in memory. The SVG API thus provides methods that allow programmatic access to the SVG elements and their attribute values.
@@ -66,14 +60,11 @@ The SVG API is a set of interfaces that have been categorized into the following
 - {{DOMxRef("SVGFETileElement")}}
 - {{DOMxRef("SVGFETurbulenceElement")}}
 - {{DOMxRef("SVGFilterElement")}}
-- {{DOMxRef("SVGFilterPrimitiveStandardAttributes")}}
 - {{DOMxRef("SVGForeignObjectElement")}}
 - {{DOMxRef("SVGGElement")}}
 - {{DOMxRef("SVGGeometryElement")}}
 - {{DOMxRef("SVGGradientElement")}}
 - {{DOMxRef("SVGGraphicsElement")}}
-- {{DOMxRef("SVGHatchElement")}} {{Experimental_Inline}}
-- {{DOMxRef("SVGHatchpathElement")}} {{Experimental_Inline}}
 - {{DOMxRef("SVGImageElement")}}
 - {{DOMxRef("SVGLinearGradientElement")}}
 - {{DOMxRef("SVGLineElement")}}
@@ -110,14 +101,10 @@ Here are the DOM APIs for data types used in the definitions of SVG properties a
 #### Static type
 
 - {{DOMxRef("SVGAngle")}}
-- {{DOMxRef("SVGElementInstance")}}
-- {{DOMxRef("SVGElementInstanceList")}}
 - {{DOMxRef("SVGLength")}}
 - {{DOMxRef("SVGLengthList")}}
-- {{DOMxRef("SVGNameList")}}
 - {{DOMxRef("SVGNumber")}}
 - {{DOMxRef("SVGNumberList")}}
-- {{DOMxRef("SVGPaint")}}
 - {{DOMxRef("SVGPreserveAspectRatio")}}
 - {{DOMxRef("SVGStringList")}}
 - {{DOMxRef("SVGTransform")}}
@@ -133,7 +120,6 @@ Here are the DOM APIs for data types used in the definitions of SVG properties a
 - {{DOMxRef("SVGAnimatedLengthList")}}
 - {{DOMxRef("SVGAnimatedNumber")}}
 - {{DOMxRef("SVGAnimatedNumberList")}}
-- {{DOMxRef("SVGAnimatedPoints")}}
 - {{DOMxRef("SVGAnimatedPreserveAspectRatio")}}
 - {{DOMxRef("SVGAnimatedRect")}}
 - {{DOMxRef("SVGAnimatedString")}}
@@ -146,10 +132,7 @@ Here are the DOM APIs for data types used in the definitions of SVG properties a
 
 ### Other SVG interfaces
 
-- {{DOMxRef("GetSVGDocument")}}
 - {{DOMxRef("ShadowAnimation")}}
-- {{DOMxRef("SVGDocument")}}
-- {{DOMxRef("SVGFitToViewBox")}}
 - {{DOMxRef("SVGUnitTypes")}}
 - {{DOMxRef("SVGUseElementShadowRoot")}}
 

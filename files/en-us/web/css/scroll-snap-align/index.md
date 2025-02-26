@@ -1,29 +1,29 @@
 ---
 title: scroll-snap-align
 slug: Web/CSS/scroll-snap-align
-tags:
-  - CSS
-  - CSS Property
-  - Web
-  - Example
-  - NeedsLiveSample
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.scroll-snap-align
 ---
+
 {{CSSRef}}
 
-The `scroll-snap-align` property specifies the box's snap position as an alignment of its snap area (as the alignment subject) within its snap container's snapport (as the alignment container). The two values specify the snapping alignment in the block axis and inline axis, respectively. If only one value is specified, the second value defaults to the same value.
+The `scroll-snap-align` property specifies the box's snap position as an alignment of its [snap area](/en-US/docs/Glossary/Scroll_snap#snap_area) (as the {{glossary("alignment subject")}}) within its snap container's snap port (as the {{glossary("alignment container")}}).
 
 {{EmbedInteractiveExample("pages/css/scroll-snap-align.html")}}
 
 ## Syntax
 
 ```css
-/* Keyword values */
+/* Single keyword value */
 scroll-snap-align: none;
-scroll-snap-align: start end; /* when two values set first is block, second inline */
 scroll-snap-align: center;
+scroll-snap-align: start;
+scroll-snap-align: end;
+
+/* Two keyword values */
+scroll-snap-align: start end;
+scroll-snap-align: end center;
+scroll-snap-align: center start;
 
 /* Global values */
 scroll-snap-align: inherit;
@@ -35,16 +35,16 @@ scroll-snap-align: unset;
 
 ### Values
 
+One or two values can be specified for the `scroll-snap-align` property. If one value is set, it is applied to both the block and inline axes. If two values are set, the first value controls the block axis and the second value controls the inline axis.
+
 - `none`
   - : The box does not define a snap position in that axis.
 - `start`
-  - : The start alignment of this box's scroll snap area, within the scroll container's snapport is a snap position in this axis.
+  - : The start alignment of this box's scroll [snap area](/en-US/docs/Glossary/Scroll_snap#snap_area), within the scroll container's [snapport](/en-US/docs/Glossary/Scroll_snap#snapport) is a snap position in this axis.
 - `end`
   - : The end alignment of this box's scroll snap area, within the scroll container's snapport is a snap position in this axis.
 - `center`
   - : The center alignment of this box's scroll snap area, within the scroll container's snapport is a snap position in this axis.
-
-Safari had the two value syntax in the wrong order, the first value being inline the second block. See [bug #191865](https://bugs.webkit.org/show_bug.cgi?id=191865).
 
 ## Formal definition
 
@@ -64,5 +64,5 @@ Safari had the two value syntax in the wrong order, the first value being inline
 
 ## See also
 
-- [CSS Scroll Snap](/en-US/docs/Web/CSS/CSS_Scroll_Snap)
-- [Well-Controlled Scrolling with CSS Scroll Snap](https://web.dev/css-scroll-snap/)
+- [CSS scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap)
+- [Well-controlled scrolling with CSS scroll snap](https://web.dev/articles/css-scroll-snap)

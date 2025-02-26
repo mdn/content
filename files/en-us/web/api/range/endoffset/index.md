@@ -1,14 +1,11 @@
 ---
-title: Range.endOffset
+title: "Range: endOffset property"
+short-title: endOffset
 slug: Web/API/Range/endOffset
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Property
-  - Range
 browser-compat: api.Range.endOffset
 ---
+
 {{ApiRef("DOM")}}
 
 The **`Range.endOffset`** read-only property returns a number
@@ -33,8 +30,8 @@ A number.
 ```js
 const range = document.createRange();
 
-range.setStart(startNode,startOffset);
-range.setEnd(endNode,endOffset);
+range.setStart(startNode, startOffset);
+range.setEnd(endNode, endOffset);
 endRangeOffset = range.endOffset;
 ```
 

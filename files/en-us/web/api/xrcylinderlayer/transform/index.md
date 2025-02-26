@@ -1,19 +1,14 @@
 ---
-title: XRCylinderLayer.transform
+title: "XRCylinderLayer: transform property"
+short-title: transform
 slug: Web/API/XRCylinderLayer/transform
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - VR
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
+status:
+  - experimental
 browser-compat: api.XRCylinderLayer.transform
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`transform`** property of the {{domxref("XRCylinderLayer")}} interface represents the offset and orientation relative to the layer's {{domxref("XRCylinderLayer.space", "space")}}.
 
@@ -31,10 +26,10 @@ This example code positions the layer two meters away from the origin of `xrRefe
 const cylinderLayer = xrGlBinding.createCylinderLayer({
   space: xrReferenceSpace,
   viewPixelWidth: 512,
-  viewPixelHeight: 512
+  viewPixelHeight: 512,
 });
 
-cylinderLayer.transform = new XRRigidTransform({z: -2});
+cylinderLayer.transform = new XRRigidTransform({ z: -2 });
 ```
 
 ## Specifications

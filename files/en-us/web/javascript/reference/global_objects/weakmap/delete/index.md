@@ -1,26 +1,33 @@
 ---
 title: WeakMap.prototype.delete()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/delete
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - WeakMap
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.WeakMap.delete
 ---
+
 {{JSRef}}
 
-The **`delete()`** method removes the specified element from a
-{{jsxref("WeakMap")}} object.
+The **`delete()`** method of {{jsxref("WeakMap")}} instances removes the specified element from this `WeakMap`.
 
-{{EmbedInteractiveExample("pages/js/weakmap-prototype-delete.html")}}
+{{InteractiveExample("JavaScript Demo: WeakMap.prototype.delete()")}}
+
+```js interactive-example
+const weakmap1 = new WeakMap();
+const object1 = {};
+
+weakmap1.set(object1, 42);
+
+console.log(weakmap1.delete(object1));
+// Expected output: true
+
+console.log(weakmap1.has(object1));
+// Expected output: false
+```
 
 ## Syntax
 
-```js
-delete(key)
+```js-nolint
+weakMapInstance.delete(key)
 ```
 
 ### Parameters
@@ -30,9 +37,7 @@ delete(key)
 
 ### Return value
 
-`true` if an element in the `WeakMap` object has been removed
-successfully. `false` if the key is not found in the `WeakMap` or
-if the key is not an object.
+`true` if an element in the `WeakMap` object has been removed successfully. `false` if the key is not found in the `WeakMap`. Always returns `false` if `key` is not an object or a [non-registered symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#shared_symbols_in_the_global_symbol_registry).
 
 ## Examples
 
@@ -40,11 +45,11 @@ if the key is not an object.
 
 ```js
 const wm = new WeakMap();
-wm.set(window, 'foo');
+wm.set(window, "foo");
 
 wm.delete(window); // Returns true. Successfully removed.
 
-wm.has(window);    // Returns false. The window object is no longer in the WeakMap.
+wm.has(window); // Returns false. The window object is no longer in the WeakMap.
 ```
 
 ## Specifications

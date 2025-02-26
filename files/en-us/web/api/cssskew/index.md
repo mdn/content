@@ -2,21 +2,12 @@
 title: CSSSkew
 slug: Web/API/CSSSkew
 page-type: web-api-interface
-tags:
-  - API
-  - CSS
-  - CSS Typed Object Model API
-  - CSSSkew
-  - CSSTransformComponent
-  - CSSTransformValue
-  - Experimental
-  - Houdini
-  - Interface
 browser-compat: api.CSSSkew
 ---
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
-The **`CSSSkew`** interface of the {{domxref('CSS_Object_Model#css_typed_object_model','','',' ')}} is part of the {{domxref('CSSTransformValue')}} interface. It represents the [`skew()`](/en-US/docs/Web/CSS/transform-function/skew) value of the individual {{CSSXRef('transform')}} property in CSS.
+{{APIRef("CSS Typed OM")}}
+
+The **`CSSSkew`** interface of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Object_Model) is part of the {{domxref('CSSTransformValue')}} interface. It represents the [`skew()`](/en-US/docs/Web/CSS/transform-function/skew) value of the individual {{CSSXRef('transform')}} property in CSS.
 
 {{InheritanceDiagram}}
 
@@ -25,7 +16,7 @@ The **`CSSSkew`** interface of the {{domxref('CSS_Object_Model#css_typed_object_
 - {{domxref("CSSSkew.CSSSkew", "CSSSkew()")}}
   - : Creates a new `CSSSkew` object.
 
-## Properties
+## Instance properties
 
 - {{domxref('CSSSkew.ax','ax')}}
   - : Returns or sets the x-axis value.

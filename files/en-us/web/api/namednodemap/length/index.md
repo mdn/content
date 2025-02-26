@@ -1,13 +1,11 @@
 ---
-title: NamedNodeMap.length
+title: "NamedNodeMap: length property"
+short-title: length
 slug: Web/API/NamedNodeMap/length
 page-type: web-api-instance-property
-tags:
-  - Property
-  - Reference
-  - Read-only
 browser-compat: api.NamedNodeMap.length
 ---
+
 {{APIRef("DOM")}}
 
 The read-only **`length`** property of the {{domxref("NamedNodeMap")}} interface
@@ -24,12 +22,9 @@ A number containing the number of objects in the map
 ```
 
 ```js
-const pre = document.getElementsByTagName("pre")[0];
+const pre = document.querySelector("pre");
 const attrMap = pre.attributes;
-
-let result = `The 'test' attribute contains ${attrMap.length} attributes.\n`;
-
-pre.textContent = result;
+pre.textContent = `The 'test' attribute contains ${attrMap.length} attributes.\n`;
 ```
 
 {{EmbedLiveSample("Example", "100%", 20)}}

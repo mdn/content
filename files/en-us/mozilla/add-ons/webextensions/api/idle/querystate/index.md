@@ -1,19 +1,11 @@
 ---
 title: idle.queryState()
 slug: Mozilla/Add-ons/WebExtensions/API/idle/queryState
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Idle
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - queryState
+page-type: webextension-api-function
 browser-compat: webextensions.api.idle.queryState
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 Returns `"locked"` if the system is locked, `"idle"` if the user has not generated any input for a specified number of seconds, or `"active"` otherwise.
 
@@ -21,7 +13,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let querying = browser.idle.queryState(
   detectionIntervalInSeconds // integer
 )
@@ -46,10 +38,10 @@ In this simple snippet, we call `queryState()` and then check if the returned `n
 
 ```js
 function onGot(newState) {
-  if (newState === 'idle') {
-    console.log('Please come back — we miss you!');
-  } else if (newState === 'active') {
-    console.log('Glad to still have you with us!');
+  if (newState === "idle") {
+    console.log("Please come back — we miss you!");
+  } else if (newState === "active") {
+    console.log("Glad to still have you with us!");
   }
 }
 
@@ -59,11 +51,11 @@ querying.then(onGot);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.idle`](https://developer.chrome.com/docs/extensions/reference/idle/#method-queryState) API. This documentation is derived from [`idle.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/idle.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.idle`](https://developer.chrome.com/docs/extensions/reference/api/idle#method-queryState) API. This documentation is derived from [`idle.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/idle.json) in the Chromium code.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -90,4 +82,4 @@ querying.then(onGot);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

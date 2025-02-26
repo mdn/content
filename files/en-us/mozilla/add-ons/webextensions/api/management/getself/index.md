@@ -1,17 +1,11 @@
 ---
 title: management.getSelf()
 slug: Mozilla/Add-ons/WebExtensions/API/management/getSelf
-tags:
-  - API
-  - Add-ons
-  - Method
-  - Reference
-  - WebExtensions
-  - getSelf
-  - management
+page-type: webextension-api-function
 browser-compat: webextensions.api.management.getSelf
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 Retrieves an {{WebExtAPIRef("management.ExtensionInfo", "ExtensionInfo")}} object containing information about the calling add-on.
 
@@ -21,7 +15,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let gettingSelf = browser.management.getSelf()
 ```
 
@@ -43,20 +37,20 @@ Log the add-on's name:
 
 ```js
 function gotSelf(info) {
-  console.log("Add-on name: " + info.name);
+  console.log(`Add-on name: ${info.name}`);
 }
 
-let gettingSelf = browser.management.getSelf();
+const gettingSelf = browser.management.getSelf();
 gettingSelf.then(gotSelf);
 ```
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.management`](https://developer.chrome.com/docs/extensions/reference/management/#method-getSelf) API. This documentation is derived from [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.management`](https://developer.chrome.com/docs/extensions/reference/api/management#method-getSelf) API. This documentation is derived from [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json) in the Chromium code.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -83,4 +77,4 @@ gettingSelf.then(gotSelf);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

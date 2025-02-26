@@ -1,49 +1,55 @@
 ---
 title: Date.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/Date/valueOf
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.valueOf
 ---
+
 {{JSRef}}
 
-The **`valueOf()`** method returns the primitive value of a
-{{jsxref("Date")}} object.
+The **`valueOf()`** method of {{jsxref("Date")}} instances returns the number of milliseconds for this date since the [epoch](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date), which is defined as the midnight at the beginning of January 1, 1970, UTC.
 
-{{EmbedInteractiveExample("pages/js/date-valueof.html")}}
+{{InteractiveExample("JavaScript Demo: Date.valueOf()")}}
+
+```js interactive-example
+const date1 = new Date(Date.UTC(96, 1, 2, 3, 4, 5));
+
+console.log(date1.valueOf());
+// Expected output: 823230245000
+
+const date2 = new Date("02 Feb 1996 03:04:05 GMT");
+
+console.log(date2.valueOf());
+// Expected output: 823230245000
+```
 
 ## Syntax
 
-```js
+```js-nolint
 valueOf()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
-The number of milliseconds between 1 January 1970 00:00:00 UTC and the given date, or {{jsxref("NaN")}} in case of an invalid date.
+A number representing the [timestamp](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date), in milliseconds, of this date. Returns `NaN` if the date is [invalid](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date).
 
 ## Description
 
-The `valueOf()` method returns the primitive value of a {{jsxref("Date")}}
-object as a number data type, the number of milliseconds since midnight 01 January, 1970
-UTC.
+The `valueOf()` method is part of the [type coercion protocol](/en-US/docs/Web/JavaScript/Data_structures#type_coercion). Because `Date` has a [`[Symbol.toPrimitive]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/Symbol.toPrimitive) method, that method always takes priority over `valueOf()` when a `Date` object is implicitly [coerced to a number](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion). However, `Date.prototype[Symbol.toPrimitive]()` still calls `this.valueOf()` internally.
 
-This method is functionally equivalent to the {{jsxref("Date.prototype.getTime()")}}
-method.
-
-This method is usually called internally by JavaScript and not explicitly in code.
+The {{jsxref("Date")}} object overrides the {{jsxref("Object/valueOf", "valueOf()")}} method of {{jsxref("Object")}}. `Date.prototype.valueOf()` returns the timestamp of the date, which is functionally equivalent to the {{jsxref("Date.prototype.getTime()")}} method.
 
 ## Examples
 
 ### Using valueOf()
 
 ```js
-const x = new Date(56, 6, 17);
-const myVar = x.valueOf();      // assigns -424713600000 to myVar
+const d = new Date(0); // 1970-01-01T00:00:00.000Z
+console.log(d.valueOf()); // 0
 ```
 
 ## Specifications

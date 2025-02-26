@@ -1,19 +1,13 @@
 ---
 title: <dimension>
 slug: Web/CSS/dimension
-tags:
-  - CSS
-  - CSS Data Type
-  - Data Type
-  - Reference
-  - dimension
-  - unit
-  - value
+page-type: css-type
 browser-compat: css.types.dimension
 ---
+
 {{CSSRef}}
 
-The **`<dimension>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) represents a {{CSSxRef("&lt;number&gt;")}} with a unit attached to it, for example `10px`.
+The **`<dimension>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) represents a {{CSSxRef("&lt;number&gt;")}} with a unit attached to it, for example `10px`.
 
 CSS uses dimensions to specify distances ({{CSSxRef("&lt;length&gt;")}}), durations ({{CSSxRef("&lt;time&gt;")}}), frequencies ({{CSSxRef("&lt;frequency&gt;")}}), resolutions ({{CSSxRef("&lt;resolution&gt;")}}), and other quantities.
 
@@ -25,7 +19,7 @@ The syntax of `<dimension>` is a {{CSSxRef("&lt;number&gt;")}} immediately follo
 
 ### Valid dimensions
 
-```css example-good
+```plain example-good
 12px      12 pixels
 1rem      1 rem
 1.2pt     1.2 points
@@ -37,7 +31,7 @@ The syntax of `<dimension>` is a {{CSSxRef("&lt;number&gt;")}} immediately follo
 
 ### Invalid dimensions
 
-```css example-bad
+```plain example-bad
 12 px       The unit must come immediately after the number.
 12"px"      Units are identifiers and therefore unquoted.
 3sec        The seconds unit is abbreviated "s" not "sec".
@@ -53,6 +47,6 @@ The syntax of `<dimension>` is a {{CSSxRef("&lt;number&gt;")}} immediately follo
 
 ## See also
 
-- [CSS data types](/en-US/docs/Web/CSS/CSS_Types)
-- [Learn to style HTML using CSS](/en-US/docs/Learn/CSS)
+- [CSS data types](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)
+- [Learn to style HTML using CSS](/en-US/docs/Learn_web_development/Core/Styling_basics)
 - CSS distances ({{CSSxRef("&lt;length&gt;")}}), durations ({{CSSxRef("&lt;time&gt;")}}), frequencies ({{CSSxRef("&lt;frequency&gt;")}}), and resolutions ({{CSSxRef("&lt;resolution&gt;")}})

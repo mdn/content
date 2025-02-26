@@ -1,16 +1,11 @@
 ---
-title: CSSKeyframesRule.name
+title: "CSSKeyframesRule: name property"
+short-title: name
 slug: Web/API/CSSKeyframesRule/name
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM
-  - CSSKeyframesRule
-  - CSS Animations
-  - Property
-  - Reference
 browser-compat: api.CSSKeyframesRule.name
 ---
+
 {{APIRef("CSSOM") }}
 
 The **`name`** property of the {{domxref("CSSKeyframeRule")}} interface gets and sets the name of the animation as used by the {{cssxref("animation-name")}} property.
@@ -22,10 +17,10 @@ A string.
 ## Examples
 
 The CSS includes a keyframes at-rule. This will be the first {{domxref("CSSRule")}} returned by `document.styleSheets[0].cssRules`.
-`myRules[0]` returns a {{domxref("CSSKeyframesRule")}} object, with the `name` set to "slidein".
+`myRules[0]` returns a {{domxref("CSSKeyframesRule")}} object, with the `name` set to `"slide-in"`.
 
 ```css
-@keyframes slidein {
+@keyframes slide-in {
   from {
     transform: translateX(0%);
   }
@@ -39,7 +34,7 @@ The CSS includes a keyframes at-rule. This will be the first {{domxref("CSSRule"
 ```js
 let myRules = document.styleSheets[0].cssRules;
 let keyframes = myRules[0]; // a CSSKeyframesRule
-console.log(keyframes.name); // "slidein"
+console.log(keyframes.name); // "slide-in"
 ```
 
 ## Specifications

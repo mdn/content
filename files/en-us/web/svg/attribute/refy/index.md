@@ -1,13 +1,12 @@
 ---
 title: refY
 slug: Web/SVG/Attribute/refY
-tags:
-  - NeedsBrowserCompatibility
-  - NeedsExample
+page-type: svg-attribute
 spec-urls:
   - https://svgwg.org/svg2-draft/painting.html#MarkerElementRefYAttribute
   - https://svgwg.org/svg2-draft/struct.html#SymbolElementRefYAttribute
 ---
+
 {{SVGRef}}
 
 The **`refY`** attribute defines the y coordinate of an element's reference point.
@@ -43,9 +42,11 @@ For {{SVGElement("marker")}}, `refY` defines the y coordinate of the marker's re
 </table>
 
 - `<length-percentage>`
+
   - : Lengths are interpreted as being in the coordinate system of the marker contents, after application of the {{SVGAttr("viewBox")}} and {{SVGAttr("preserveAspectRatio")}} attributes.
 
     Percentage values are interpreted as being a percentage of the {{SVGAttr("viewBox")}} height.
+
 - `<number>`
   - : Numbers are interpreted as being in the coordinate system of the marker contents, after application of the {{SVGAttr("viewBox")}} and {{SVGAttr("preserveAspectRatio")}} attributes.
 - `top`
@@ -61,7 +62,8 @@ For {{SVGElement("symbol")}}, `refY` defines the y coordinate of the symbol, whi
 
 Unlike other positioning attributes, `refY` is interpreted as being in the coordinate system of the symbol contents, after application of the {{SVGAttr("viewBox")}} and {{SVGAttr("preserveAspectRatio")}} attributes. If the attribute is not specified, no vertical adjustment is made, and the top side of the symbol's rectangular viewport region (regardless of the `viewBox` coordinate) is positioned at the y coordinate.
 
-> **Note:** For backwards compatibility, the behavior when `refY` is not specified on a `<symbol>` element is different from when it is specified with a value of `0`, and therefore different from the behavior when an equivalent attribute is not specified on a {{SVGElement("marker")}} element.
+> [!NOTE]
+> For backwards compatibility, the behavior when `refY` is not specified on a `<symbol>` element is different from when it is specified with a value of `0`, and therefore different from the behavior when an equivalent attribute is not specified on a {{SVGElement("marker")}} element.
 
 <table class="properties">
   <tbody>
@@ -84,9 +86,11 @@ Unlike other positioning attributes, `refY` is interpreted as being in the coord
 </table>
 
 - `<length-percentage>`
+
   - : Lengths are interpreted as being in the coordinate system of the marker contents, after application of the {{SVGAttr("viewBox")}} and {{SVGAttr("preserveAspectRatio")}} attributes.
 
     Percentage values are interpreted as being a percentage of the {{SVGAttr("viewBox")}} height.
+
 - `<number>`
   - : Numbers are interpreted as being in the coordinate system of the marker contents, after application of the {{SVGAttr("viewBox")}} and {{SVGAttr("preserveAspectRatio")}} attributes.
 - `top`

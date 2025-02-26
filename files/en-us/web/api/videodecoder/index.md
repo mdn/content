@@ -2,30 +2,45 @@
 title: VideoDecoder
 slug: Web/API/VideoDecoder
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - VideoDecoder
 browser-compat: api.VideoDecoder
 ---
-{{securecontext_header}}{{DefaultAPISidebar("WebCodecs API")}}
+
+{{securecontext_header}}{{APIRef("WebCodecs API")}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`VideoDecoder`** interface of the {{domxref('WebCodecs API','','','true')}} decodes chunks of video.
+
+{{InheritanceDiagram}}
 
 ## Constructor
 
 - {{domxref("VideoDecoder.VideoDecoder", "VideoDecoder()")}}
   - : Creates a new `VideoDecoder` object.
 
-## Properties
+## Instance properties
+
+_Inherits properties from its parent, {{DOMxRef("EventTarget")}}._
 
 - {{domxref("VideoDecoder.decodeQueueSize")}} {{ReadOnlyInline}}
-  - : An integer representing the number of decode queue requests.
+  - : An integer representing the number of queued decode requests.
 - {{domxref("VideoDecoder.state")}} {{ReadOnlyInline}}
-  - : Indicates whether the underlying codec is configured for decoding.
+  - : Indicates the current state of decoder. Possible values are:
+    - `"unconfigured"`
+    - `"configured"`
+    - `"closed"`
 
-## Methods
+### Events
+
+- {{domxref("VideoDecoder.dequeue_event", "dequeue")}}
+  - : Fires to signal a decrease in {{domxref("VideoDecoder.decodeQueueSize")}}.
+
+## Static methods
+
+- {{domxref("VideoDecoder.isConfigSupported_static", "VideoDecoder.isConfigSupported()")}}
+  - : Returns a promise indicating whether the provided `VideoDecoderConfig` is supported.
+
+## Instance methods
+
+_Inherits methods from its parent, {{DOMxRef("EventTarget")}}._
 
 - {{domxref("VideoDecoder.configure()")}}
   - : Enqueues a control message to configure the video decoder for decoding chunks.
@@ -48,4 +63,5 @@ The **`VideoDecoder`** interface of the {{domxref('WebCodecs API','','','true')}
 
 ## See also
 
-[Video processing with WebCodecs](https://web.dev/webcodecs/)
+- [Video processing with WebCodecs](https://developer.chrome.com/docs/web-platform/best-practices/webcodecs)
+- [WebCodecs API Samples](https://w3c.github.io/webcodecs/samples/)

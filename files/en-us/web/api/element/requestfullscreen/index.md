@@ -1,23 +1,11 @@
 ---
-title: Element.requestFullscreen()
+title: "Element: requestFullscreen() method"
+short-title: requestFullscreen()
 slug: Web/API/Element/requestFullscreen
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Element
-  - Full
-  - Fullscreen API
-  - Graphics
-  - Method
-  - Reference
-  - Video
-  - full screen
-  - fullscreen
-  - requestFullscreen
-  - screen
 browser-compat: api.Element.requestFullscreen
 ---
+
 {{APIRef("Fullscreen API")}}
 
 The **`Element.requestFullscreen()`**
@@ -31,12 +19,9 @@ it's now in full screen mode. If permission is denied, the promise is rejected a
 element receives a {{domxref("Element/fullscreenerror_event", "fullscreenerror")}} event instead. If the element has been
 detached from the original document, then the document receives these events instead.
 
-> **Note:** This method must be called while responding to a user
-> interaction or a device orientation change; otherwise it will fail.
-
 ## Syntax
 
-```js
+```js-nolint
 requestFullscreen()
 requestFullscreen(options)
 ```
@@ -58,6 +43,8 @@ requestFullscreen(options)
         - `"auto"`
           - : The browser will choose which of the above settings to apply.
             This is the default value.
+    - `screen` {{optional_inline}} {{experimental_inline}}
+      - : Specifies on which screen you want to put the element in fullscreen mode. This takes a {{domxref("ScreenDetailed")}} object as a value, representing the chosen screen.
 
 ### Return value
 
@@ -78,9 +65,14 @@ returned. The rejection handler receives one of the following exception values:_
     - The document containing the element isn't fully active; that is, it's not the
       current active document.
     - The element is not contained by a document.
-    - The element is not permitted to use the `"fullscreen"` feature,
-      either because of Feature Policy configuration or other access control features.
+    - The element is not permitted to use the `fullscreen` feature,
+      either because of [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) configuration or other access control features.
     - The element and its document are the same node.
+    - The element is a [popover](/en-US/docs/Web/API/Popover_API) that is already being shown via {{domxref("HTMLElement.showPopover()")}}.
+
+## Security
+
+[Transient user activation](/en-US/docs/Web/Security/User_activation) is required. The user has to interact with the page or a UI element in order for this feature to work.
 
 ## Usage notes
 
@@ -93,11 +85,10 @@ simple requirements:
   {{MathMLElement("math")}}.
 - It is _not_ a {{HTMLElement("dialog")}} element.
 - It must either be located within the top-level document or in an
-  {{HTMLElement("iframe")}} which has the {{htmlattrxref("allowfullscreen","iframe")}}
+  {{HTMLElement("iframe")}} which has the [`allowfullscreen`](/en-US/docs/Web/HTML/Element/iframe#allowfullscreen)
   attribute applied to it.
 
-Additionally, of course, the Feature Policy `"fullscreen"` permission must
-be granted.
+Additionally, any set Permissions Policies must allow the use of this feature.
 
 ### Detecting fullscreen activation
 
@@ -124,7 +115,9 @@ function toggleFullscreen() {
 
   if (!document.fullscreenElement) {
     elem.requestFullscreen().catch((err) => {
-      alert(`Error attempting to enable fullscreen mode: ${err.message} (${err.name})`);
+      alert(
+        `Error attempting to enable fullscreen mode: ${err.message} (${err.name})`,
+      );
     });
   } else {
     document.exitFullscreen();
@@ -146,20 +139,42 @@ You can [see this example in action](https://fullscreen-requestfullscreen-demo.g
 ### Using navigationUI
 
 In this example, the entire document is placed into fullscreen mode by calling
-{{DOMxRef("Element.requestFullscreen", "requestFullscreen()")}} on the document's
+`requestFullscreen()` on the document's
 {{DOMxRef("Document.documentElement")}}, which is the document's root
 {{HTMLElement("html")}} element.
 
 ```js
 let elem = document.documentElement;
 
-elem.requestFullscreen({ navigationUI: "show" }).then(() => {}).catch((err) => {
-  alert(`An error occurred while trying to switch into fullscreen mode: ${err.message} (${err.name})`);
-});
+elem
+  .requestFullscreen({ navigationUI: "show" })
+  .then(() => {})
+  .catch((err) => {
+    alert(
+      `An error occurred while trying to switch into fullscreen mode: ${err.message} (${err.name})`,
+    );
+  });
 ```
 
 The promise's resolve handler does nothing, but if the promise is rejected, an error
 message is displayed by calling {{DOMxRef("Window.alert", "alert()")}}.
+
+### Using the screen option
+
+If you wanted to make the element fullscreen on the primary OS screen, you could use code like the following:
+
+```js
+try {
+  const primaryScreen = (await getScreenDetails()).screens.find(
+    (screen) => screen.isPrimary,
+  );
+  await document.body.requestFullscreen({ screen: primaryScreen });
+} catch (err) {
+  console.error(err.name, err.message);
+}
+```
+
+The {{domxref("Window.getScreenDetails()")}} method is used to retrieve the {{domxref("ScreenDetails")}} object for the current device, which contains {{domxref("ScreenDetailed")}} objects representing the different available screens.
 
 ## Specifications
 
@@ -176,4 +191,4 @@ message is displayed by calling {{DOMxRef("Window.alert", "alert()")}}.
 - {{DOMxRef("Document.fullscreen")}}
 - {{DOMxRef("Document.fullscreenElement")}}
 - {{CSSxRef(":fullscreen")}}
-- {{HTMLAttrxRef("allowfullscreen", "iframe")}}
+- [`allowfullscreen`](/en-US/docs/Web/HTML/Element/iframe#allowfullscreen)

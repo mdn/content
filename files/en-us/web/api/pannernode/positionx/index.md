@@ -1,25 +1,19 @@
 ---
-title: PannerNode.positionX
+title: "PannerNode: positionX property"
+short-title: positionX
 slug: Web/API/PannerNode/positionX
 page-type: web-api-instance-property
-tags:
-  - API
-  - PannerNode
-  - Property
-  - Reference
-  - Web Audio API
-  - positionX
 browser-compat: api.PannerNode.positionX
 ---
+
 {{ APIRef("Web Audio API") }}
 
-The **`positionX`** property of the {{ domxref("PannerNode")
-    }} interface specifies the X coordinate of the audio source's position in 3D Cartesian
+The **`positionX`** property of the {{ domxref("PannerNode")}} interface specifies the X coordinate of the audio source's position in 3D Cartesian
 coordinates, corresponding to the _horizontal_ axis (left-right).
 
 The complete vector is defined by the position of the audio source, given as
-({{domxref("PannerNode.positionX", "positionX")}}, {{domxref("PannerNode.positionY",
-    "positionY")}}, {{domxref("PannerNode.positionZ", "positionZ")}}), and the orientation
+(`positionX`, {{domxref("PannerNode.positionY", "positionY")}},
+{{domxref("PannerNode.positionZ", "positionZ")}}), and the orientation
 of the audio source (that is, the direction in which it's facing), given as
 ({{domxref("PannerNode.orientationX", "orientationX")}},
 {{domxref("PannerNode.orientationY", "orientationY")}},
@@ -57,8 +51,7 @@ panner.positionX.setValueAtTime(-1, context.currentTime + 1);
 panner.positionX.setValueAtTime(1, context.currentTime + 2);
 panner.positionX.setValueAtTime(0, context.currentTime + 3);
 
-osc.connect(panner)
-   .connect(context.destination);
+osc.connect(panner).connect(context.destination);
 
 osc.start(0);
 ```

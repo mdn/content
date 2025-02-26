@@ -1,11 +1,10 @@
 ---
 title: clipPathUnits
 slug: Web/SVG/Attribute/clipPathUnits
-tags:
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 spec-urls: https://drafts.fxtf.org/css-masking-1/#element-attrdef-clippath-clippathunits
 ---
+
 {{SVGRef}}
 
 The **`clipPathUnits`** attribute indicates which coordinate system to use for the contents of the {{ SVGElement("clipPath") }} element.
@@ -17,7 +16,11 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -31,18 +34,18 @@ html,body,svg { height:100% }
   </clipPath>
 
   <!-- Some reference rect to materialized to clip path -->
-  <rect id="r1" x="0"  y="0"  width="45" height="45" />
-  <rect id="r2" x="0"  y="55" width="45" height="45" />
+  <rect id="r1" x="0" y="0" width="45" height="45" />
+  <rect id="r2" x="0" y="55" width="45" height="45" />
   <rect id="r3" x="55" y="55" width="45" height="45" />
-  <rect id="r4" x="55" y="0"  width="45" height="45" />
+  <rect id="r4" x="55" y="0" width="45" height="45" />
 
-  <!-- The first 3 rect are clipped with useSpaceOnUse units -->
-  <use clip-path="url(#myClip1)" xlink:href="#r1" fill="red" />
-  <use clip-path="url(#myClip1)" xlink:href="#r2" fill="red" />
-  <use clip-path="url(#myClip1)" xlink:href="#r3" fill="red" />
+  <!-- The first 3 rect are clipped with userSpaceOnUse units -->
+  <use clip-path="url(#myClip1)" href="#r1" fill="red" />
+  <use clip-path="url(#myClip1)" href="#r2" fill="red" />
+  <use clip-path="url(#myClip1)" href="#r3" fill="red" />
 
   <!-- The last rect is clipped with objectBoundingBox units -->
-  <use clip-path="url(#myClip2)" xlink:href="#r4" fill="red" />
+  <use clip-path="url(#myClip2)" href="#r4" fill="red" />
 </svg>
 ```
 

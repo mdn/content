@@ -1,15 +1,12 @@
 ---
-title: WebGLRenderingContext.canvas
+title: "WebGLRenderingContext: canvas property"
+short-title: canvas
 slug: Web/API/WebGLRenderingContext/canvas
 page-type: web-api-instance-property
-tags:
-  - Property
-  - Read-only
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.canvas
 ---
-{{APIRef("WebGL")}}
+
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGLRenderingContext.canvas`** property is a read-only
 reference to the {{domxref("HTMLCanvasElement")}} or {{domxref("OffscreenCanvas")}}
@@ -19,8 +16,8 @@ object.
 
 ## Syntax
 
-```js
-gl.canvas;
+```js-nolint
+gl.canvas
 ```
 
 ### Return value
@@ -42,8 +39,8 @@ You can get back a reference to it from the `WebGLRenderingContext` using
 the `canvas` property:
 
 ```js
-const canvas = document.getElementById('canvas');
-const gl = canvas.getContext('webgl');
+const canvas = document.getElementById("canvas");
+const gl = canvas.getContext("webgl");
 gl.canvas; // HTMLCanvasElement
 ```
 
@@ -53,7 +50,7 @@ Example using the experimental {{domxref("OffscreenCanvas")}} object.
 
 ```js
 const offscreen = new OffscreenCanvas(256, 256);
-const gl = offscreen.getContext('webgl');
+const gl = offscreen.getContext("webgl");
 gl.canvas; // OffscreenCanvas
 ```
 
@@ -68,4 +65,4 @@ gl.canvas; // OffscreenCanvas
 ## See also
 
 - {{domxref("CanvasRenderingContext2D.canvas")}}
-- {{domxref("OffscreenCanvas")}}
+- The {{domxref("OffscreenCanvas")}} interface

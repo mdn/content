@@ -1,12 +1,9 @@
 ---
-title: 'TypeError: cannot use ''in'' operator to search for ''x'' in ''y'''
+title: "TypeError: cannot use 'in' operator to search for 'x' in 'y'"
 slug: Web/JavaScript/Reference/Errors/in_operator_no_object
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - TypeError
+page-type: javascript-error
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "right-hand side of 'in' should be an object" occurs when the
@@ -16,7 +13,7 @@ used to check if a property is in an object.
 
 ## Message
 
-```
+```plain
 TypeError: Cannot use 'in' operator to search for 'x' in 'y' (V8-based & Firefox)
 TypeError: right-hand side of 'in' should be an object, got null (Firefox)
 TypeError: "y" is not an Object. (evaluating '"x" in "y"') (Safari)
@@ -80,11 +77,11 @@ objects. The `in` operator checks the index number, not the value at that
 index.
 
 ```js
-const trees = ['redwood', 'bay', 'cedar', 'oak', 'maple'];
+const trees = ["redwood", "bay", "cedar", "oak", "maple"];
 3 in trees; // true
 "oak" in trees; // false
 ```
 
 ## See also
 
-- [`in` operator](/en-US/docs/Web/JavaScript/Reference/Operators/in)
+- [`in`](/en-US/docs/Web/JavaScript/Reference/Operators/in)

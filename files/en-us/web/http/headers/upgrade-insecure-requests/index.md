@@ -1,16 +1,13 @@
 ---
 title: Upgrade-Insecure-Requests
 slug: Web/HTTP/Headers/Upgrade-Insecure-Requests
-tags:
-  - HTTP
-  - HTTPS
-  - Security
-  - header
+page-type: http-header
 browser-compat: http.headers.Upgrade-Insecure-Requests
 ---
+
 {{HTTPSidebar}}
 
-The HTTP **`Upgrade-Insecure-Requests`** request header sends a signal to the server expressing the client's preference for an encrypted and authenticated response, and that it can successfully handle the {{CSP("upgrade-insecure-requests")}} [CSP](/en-US/docs/Web/HTTP/CSP) directive.
+The HTTP **`Upgrade-Insecure-Requests`** {{Glossary("request header")}} sends a signal to the server indicating the client's preference for an encrypted and authenticated response, and that the client can successfully handle the {{CSP("upgrade-insecure-requests")}} [CSP](/en-US/docs/Web/HTTP/CSP) directive.
 
 <table class="properties">
   <tbody>
@@ -19,23 +16,30 @@ The HTTP **`Upgrade-Insecure-Requests`** request header sends a signal to the se
       <td>{{Glossary("Request header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>no</td>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
+      <td>No</td>
     </tr>
   </tbody>
 </table>
 
 ## Syntax
 
+```http
+Upgrade-Insecure-Requests: <boolean>
 ```
-Upgrade-Insecure-Requests: 1
-```
+
+## Directives
+
+- `<boolean>`
+  - : `1` indicates 'true' and is the only valid value for this field.
 
 ## Examples
 
+### Using Upgrade-Insecure-Requests
+
 A client's request signals to the server that it supports the upgrade mechanisms of {{CSP("upgrade-insecure-requests")}}:
 
-```
+```http
 GET / HTTP/1.1
 Host: example.com
 Upgrade-Insecure-Requests: 1
@@ -43,7 +47,7 @@ Upgrade-Insecure-Requests: 1
 
 The server can now redirect to a secure version of the site. A {{HTTPHeader("Vary")}} header can be used so that the site isn't served by caches to clients that don't support the upgrade mechanism.
 
-```
+```http
 Location: https://example.com/
 Vary: Upgrade-Insecure-Requests
 ```
@@ -60,3 +64,4 @@ Vary: Upgrade-Insecure-Requests
 
 - {{HTTPHeader("Content-Security-Policy")}}
 - CSP {{CSP("upgrade-insecure-requests")}} directive
+- [HTTP Caching: Vary](/en-US/docs/Web/HTTP/Caching#vary) and {{HTTPHeader("Vary")}} header

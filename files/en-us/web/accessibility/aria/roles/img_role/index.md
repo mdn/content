@@ -1,23 +1,18 @@
 ---
-title: 'ARIA: img role'
+title: "ARIA: img role"
 slug: Web/Accessibility/ARIA/Roles/img_role
-tags:
-  - ARIA
-  - ARIA Img
-  - ARIA Role
-  - Accessibility
-  - Reference
-  - document structure role
-  - Role
-  - figure
+page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#img
 ---
+
+{{AccessibilitySidebar}}
+
 The ARIA `img` role can be used to identify multiple elements inside page content that should be considered as a single image. These elements could be images, code snippets, text, emojis, or other content that can be combined to deliver information in a visual manner.
 
 ```html
 <div role="img" aria-label="Description of the overall image">
-  <img src="graphic1.png" alt="">
-  <img src="graphic2.png">
+  <img src="graphic1.png" alt="" />
+  <img src="graphic2.png" />
 </div>
 ```
 
@@ -25,12 +20,12 @@ The ARIA `img` role can be used to identify multiple elements inside page conten
 
 Any set of content that should be consumed as a single image (which could include images, video, audio, code snippets, emojis, or other content) can be identified using `role="img"`.
 
-You shouldn't count on the alt text of individual images for conveying context to assistive technologies; most screenreaders will consider the element with `role="img"` set on it to be like a black box, and not access the individual elements inside it.  Therefore, provide a comprehensive overall descriptive alt text for image, either in the surrounding text, or by using an [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) attribute, with optional alt attributes for search engines or sighted users to be written to the page should an image fail:
+You shouldn't count on the alt text of individual images for conveying context to assistive technologies; most screen readers will consider the element with `role="img"` set on it to be like a black box, and not access the individual elements inside it. Therefore, provide a comprehensive overall descriptive alt text for image, either in the surrounding text, or by using an [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) attribute, with `alt` attributes for search engines or sighted users to be written to the page should an image fail:
 
 ```html
 <div role="img" aria-label="Description of the overall image">
-  <img src="graphic1.png" alt="">
-  <img src="graphic2.png">
+  <img src="graphic1.png" alt="alternative text" />
+  <img src="graphic2.png" alt="in case the images don't load" />
 </div>
 ```
 
@@ -52,7 +47,7 @@ If an image is purely presentational, consider using the [`presentation`](/en-US
 
 ### SVG and role="img"
 
-If you are using embedded SVG images in your page, it is a good idea to set `role="img"` on the outer {{HTMLElement('svg')}} element and give it a label. This will cause screen readers to just consider it as a single entity and describe it using the label, rather than trying to read out all the child nodes:
+If you are using embedded SVG images in your page, it is a good idea to set `role="img"` on the outer {{SVGElement('svg')}} element and give it a label. This will cause screen readers to just consider it as a single entity and describe it using the label, rather than trying to read out all the child nodes:
 
 ```html
 <svg role="img" aria-label="Description of your SVG image">
@@ -64,27 +59,23 @@ If you are using embedded SVG images in your page, it is a good idea to set `rol
 
 In certain cases, assistive technology users won't be able to get the meaning of content expressed in certain ways, through certain media, or implied in certain ways. This is obvious to fix in the case of images (you can use the `alt` attribute), but in the case of mixed or other certain types of content it is not so obvious, and `role="img"` can come into play.
 
-For example, if you use emojis in your text, the meaning might be obvious to a sighted user, but someone using a screenreader might get confused because the emojis might have either no text representation at all, or the alternative text might be confusing and not match the context it is being used in. For example, take the following code:
+For example, if you use emojis in your text, the meaning might be obvious to a sighted user, but someone using a screen reader might get confused because the emojis might have either no text representation at all, or the alternative text might be confusing and not match the context it is being used in. For example, take the following code:
 
 ```html
 <div role="img" aria-label="That cat is so cute">
-  <p>
-    &#x1F408; &#x1F602;
-  </p>
+  <p>&#x1F408; &#x1F602;</p>
 </div>
 ```
 
-`&#x1F408; &#x1F602;`, 🐈 and 😂,  are entity references for emojis read out as "Cat" and "Face with tears of joy", but this doesn't necessarily make sense — the implied meaning is possibly more like "That cat is so cute", so we include that in an `aria-label` along with `role="img"`.
+`&#x1F408; &#x1F602;`, 🐈 and 😂, are entity references for emojis read out as "Cat" and "Face with tears of joy", but this doesn't necessarily make sense — the implied meaning is possibly more like "That cat is so cute", so we include that in an `aria-label` along with `role="img"`.
 
-This seems to work OK across some browser/screenreader combinations, but some of them end up reading the label out twice. Use with caution and test thoroughly.
+This seems to work OK across some browser/screen reader combinations, but some of them end up reading the label out twice. Use with caution and test thoroughly.
 
-Another example where this might be suitable is when using ASCII emoji combinations, like the legendary "Table flip":
+Another example where this might be suitable is when using {{Glossary("ASCII")}} emoji combinations, like the legendary "Table flip":
 
 ```html
 <div role="img" aria-label="Table flip">
-  <p>
-    (╯°□°）╯︵ ┻━┻
-  </p>
+  <p>(╯°□°）╯︵ ┻━┻</p>
 </div>
 ```
 
@@ -121,11 +112,11 @@ From the assistive technology user's perspective, the heading does not exist sin
 
 ```html
 <span role="img" aria-label="Rating: 4 out of 5 stars">
-    <span>★</span>
-    <span>★</span>
-    <span>★</span>
-    <span>★</span>
-    <span>☆</span>
+  <span>★</span>
+  <span>★</span>
+  <span>★</span>
+  <span>★</span>
+  <span>☆</span>
 </span>
 ```
 
@@ -136,18 +127,10 @@ From the assistive technology user's perspective, the heading does not exist sin
 ## See also
 
 - The {{HTMLElement('img')}} element
-- The {{HTMLElement('svg')}} element
+- The {{SVGElement('svg')}} element
 - The {{HTMLElement('picture')}} element
 - The {{HTMLElement('audio')}} element
 - The {{HTMLElement('video')}} element
 - [ARIA: `presentation` role](/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role)
 - [Accessibility Object Model](https://wicg.github.io/aom/spec/)
 - [ARIA in HTML](https://w3c.github.io/html-aria/)
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
-
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
-
-</section>

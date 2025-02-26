@@ -1,23 +1,14 @@
 ---
-title: SecurityPolicyViolationEvent.lineNumber
+title: "SecurityPolicyViolationEvent: lineNumber property"
+short-title: lineNumber
 slug: Web/API/SecurityPolicyViolationEvent/lineNumber
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSP
-  - HTTP
-  - Property
-  - Reference
-  - Security
-  - SecurityPolicyViolationEvent
-  - lineNumber
 browser-compat: api.SecurityPolicyViolationEvent.lineNumber
 ---
-{{HTTPSidebar}}")}}
 
-The **`lineNumber`** read-only property of the
-{{domxref("SecurityPolicyViolationEvent")}} interface is the line number in the document
-or worker at which the violation occurred.
+{{APIRef("Reporting API")}}{{AvailableInWorkers}}
+
+The **`lineNumber`** read-only property of the {{domxref("SecurityPolicyViolationEvent")}} interface is the line number in the document or worker script at which the [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP) violation occurred.
 
 ## Value
 
@@ -41,4 +32,4 @@ document.addEventListener("securitypolicyviolation", (e) => {
 
 ## See also
 
-- [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP)
+- {{domxref("CSPViolationReportBody.lineNumber")}}

@@ -1,21 +1,11 @@
 ---
-title: RTCDTMFSender.toneBuffer
+title: "RTCDTMFSender: toneBuffer property"
+short-title: toneBuffer
 slug: Web/API/RTCDTMFSender/toneBuffer
 page-type: web-api-instance-property
-tags:
-  - Audio
-  - DTMF
-  - Media
-  - Property
-  - RTCDTMFSender
-  - Reference
-  - Telephony
-  - Touch-tone
-  - WebRTC
-  - WebRTC API
-  - toneBuffer
 browser-compat: api.RTCDTMFSender.toneBuffer
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCDTMFSender")}} interface's toneBuffer property returns a string
@@ -33,7 +23,7 @@ there are no tones pending.
 ### Exceptions
 
 - `InvalidCharacterError` {{domxref("DOMException")}}
-  - : Thrown if a character is not a DTMF tone character (0-9, A-D, # or ,).
+  - : Thrown if a character is not a DTMF tone character (`0-9`, `A-D`, `#`, or `,`).
 
 ### Tone buffer format
 
@@ -46,7 +36,7 @@ are permitted by the DTMF standard.
   - : These characters represent the digit keys on a telephone keypad.
 - The letters A-D
   - : These characters represent the "A" through "D" keys which are part of the DTMF
-    standard but not included on most telephones. These are *not* interpreted as
+    standard but not included on most telephones. These are _not_ interpreted as
     digits. Lower-case "a"-"d" automatically gets converted to upper-case.
 - The pound/hash sign ("#") and the asterisk ("\*")
   - : These correspond to the similarly-labeled keys which are typically on the bottom row
@@ -55,14 +45,15 @@ are permitted by the DTMF standard.
   - : This character instructs the dialing process to pause for two seconds before sending
     the next character in the buffer.
 
-> **Note:** All other characters are unrecognized and will cause
+> [!NOTE]
+> All other characters are unrecognized and will cause
 > {{domxref("RTCDTMFSender.insertDTMF", "insertDTMF()")}} to throw an
 > `InvalidCharacterError` {{domxref("DOMException")}}.
 
 #### Using tone buffer strings
 
 For example, if you're writing code to control a voicemail system by sending DTMF
-codes, you might use a string such as "\*,1,5555". In this example, we would send "\*" to
+codes, you might use a string such as `"*,1,5555"`. In this example, we would send `"*"` to
 request access to the VM system, then, after a pause, send a "1" to start playback of
 voicemail messages, then after a pause, dial "5555" as a PIN number to open the
 messages.

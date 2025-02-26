@@ -1,21 +1,16 @@
 ---
-title: HTMLScriptElement.referrerPolicy
+title: "HTMLScriptElement: referrerPolicy property"
+short-title: referrerPolicy
 slug: Web/API/HTMLScriptElement/referrerPolicy
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTMLScriptElement
-  - Property
-  - Reference
-  - referrerPolicy
 browser-compat: api.HTMLScriptElement.referrerPolicy
 ---
-{{APIRef}}
+
+{{APIRef("HTML DOM")}}
 
 The **`referrerPolicy`** property of the
 {{domxref("HTMLScriptElement")}} interface reflects the HTML
-{{htmlattrxref("referrerpolicy","script")}} of the {{HTMLElement("script")}} element and
-fetches made by that script, defining which referrer is sent when fetching the resource.
+[`referrerpolicy`](/en-US/docs/Web/HTML/Element/script#referrerpolicy) of the {{HTMLElement("script")}} element, which defines how the referrer is set when fetching the script and any scripts it imports.
 
 ## Value
 
@@ -51,7 +46,8 @@ A string; one of the following:
     will leak origins and paths from TLS-protected resources to insecure origins.
     Carefully consider the impact of this setting.
 
-> **Note:** An empty string value (`""`) is both the default
+> [!NOTE]
+> An empty string value (`""`) is both the default
 > value, and a fallback value if `referrerpolicy` is not supported. If
 > `referrerpolicy` is not explicitly specified on the
 > `<script>` element, it will adopt a higher-level referrer policy,

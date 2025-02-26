@@ -1,14 +1,11 @@
 ---
-title: Range.setStart()
+title: "Range: setStart() method"
+short-title: setStart()
 slug: Web/API/Range/setStart
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Method
-  - Range
 browser-compat: api.Range.setStart
 ---
+
 {{ApiRef("DOM")}}
 
 The **`Range.setStart()`** method sets the start position of a
@@ -25,7 +22,7 @@ collapsed range with the start and end points both set to the specified start po
 
 ## Syntax
 
-```js
+```js-nolint
 setStart(startNode, startOffset)
 ```
 
@@ -55,13 +52,15 @@ elements.
 #### HTML
 
 ```html
-<p id="address">Wyatt Earp<br>
-101 E. Main St.<br>
-Dodge City, KS<br>
-67801<br>
-USA</p>
+<p id="address">
+  Wyatt Earp<br />
+  101 E. Main St.<br />
+  Dodge City, KS<br />
+  67801<br />
+  USA
+</p>
 
-<hr>
+<hr />
 <p>Nodes in the original address:</p>
 <ol id="log"></ol>
 ```
@@ -69,24 +68,24 @@ USA</p>
 #### JavaScript
 
 ```js
-const address = document.getElementById('address');
-const log = document.getElementById('log');
+const address = document.getElementById("address");
+const log = document.getElementById("log");
 
 // Log info
 address.childNodes.forEach((node) => {
-  const li = document.createElement('li');
+  const li = document.createElement("li");
   li.textContent = `${node.nodeName}, ${node.nodeValue}`;
   log.appendChild(li);
 });
 
 // Highlight the street and city
-const startOffset = 2;  // Start at third node: 101 E. Main St.
-const endOffset = 5;    // End at fifth node: Dodge City, KS
+const startOffset = 2; // Start at third node: 101 E. Main St.
+const endOffset = 5; // End at fifth node: Dodge City, KS
 const range = document.createRange();
 range.setStart(address, startOffset);
 range.setEnd(address, endOffset);
 
-const mark = document.createElement('mark');
+const mark = document.createElement("mark");
 range.surroundContents(mark);
 ```
 
@@ -110,12 +109,12 @@ through fifth characters within a text node.
 #### JavaScript
 
 ```js
-const element = document.getElementById('content');
+const element = document.getElementById("content");
 const textNode = element.childNodes[0];
 const range = document.createRange();
-range.setStart(textNode, 0);  // Start at first character
-range.setEnd(textNode, 5);    // End at fifth character
-document.getElementById('log').textContent = range;
+range.setStart(textNode, 0); // Start at first character
+range.setEnd(textNode, 5); // End at fifth character
+document.getElementById("log").textContent = range;
 ```
 
 #### Result

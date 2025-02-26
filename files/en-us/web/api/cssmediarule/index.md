@@ -2,34 +2,35 @@
 title: CSSMediaRule
 slug: Web/API/CSSMediaRule
 page-type: web-api-interface
-tags:
-  - API
-  - CSSOM
-  - Interface
-  - Reference
 browser-compat: api.CSSMediaRule
 ---
+
 {{ APIRef("CSSOM") }}
 
 The **`CSSMediaRule`** interface represents a single CSS {{cssxref("@media")}} rule.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its ancestors {{domxref("CSSConditionRule")}}, {{domxref("CSSGroupingRule")}}, and {{domxref("CSSRule")}}._
 
-- {{domxref("CSSMediaRule.media")}} {{readonlyinline}}
+- {{domxref("CSSMediaRule.media")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("MediaList")}} representing the intended destination medium for style information.
 
-## Methods
+## Instance methods
 
 _No specific methods; inherits methods from its ancestors {{domxref("CSSConditionRule")}}, {{domxref("CSSGroupingRule")}}, and {{domxref("CSSRule")}}._
 
 ## Examples
 
-The CSS includes a media query with one style rule. This will be the first CSSRule returned by `document.styleSheets[0].cssRules`.
-`myRules[0]` therefore returns a {{domxref("CSSMediaRule")}} object.
+The CSS below includes a media query with one style rule.
+As this rule lives in the last stylesheet added to the document, it will be the first CSSRule returned by the last stylesheet in the document (`document.styleSheets[document.styleSheets.length-1].cssRules`).
+`myRules[0]` returns a `CSSMediaRule` object, from which we can get the `mediaText`.
+
+```html
+<p id="log"></p>
+```
 
 ```css
 @media (min-width: 500px) {
@@ -40,9 +41,13 @@ The CSS includes a media query with one style rule. This will be the first CSSRu
 ```
 
 ```js
-let myRules = document.styleSheets[0].cssRules;
-console.log(myRules[0]); // a CSSMediaRule representing the media query.
+const log = document.getElementById("log");
+const myRules = document.styleSheets[document.styleSheets.length - 1].cssRules;
+const mediaList = myRules[0]; // a CSSMediaRule representing the media query.
+log.textContent += ` ${mediaList.media.mediaText}`;
 ```
+
+{{EmbedLiveSample("Examples","100%","50px")}}
 
 ## Specifications
 

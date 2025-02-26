@@ -1,18 +1,17 @@
 ---
-title: Event.bubbles
+title: "Event: bubbles property"
+short-title: bubbles
 slug: Web/API/Event/bubbles
 page-type: web-api-instance-property
-tags:
-  - Property
-  - Read-only
-  - Reference
 browser-compat: api.Event.bubbles
 ---
-{{ ApiRef("DOM") }}
+
+{{APIRef("DOM")}}{{AvailableInWorkers}}
 
 The **`bubbles`** read-only property of the {{domxref("Event")}} interface indicates whether the event bubbles up through the DOM tree or not.
 
-> **Note:** See [Event bubbling and capture](/en-US/docs/Learn/JavaScript/Building_blocks/Events#event_bubbling_and_capture) for more information on bubbling.
+> [!NOTE]
+> See [Event bubbling](/en-US/docs/Learn_web_development/Core/Scripting/Event_bubbling) for more information on bubbling.
 
 ## Value
 

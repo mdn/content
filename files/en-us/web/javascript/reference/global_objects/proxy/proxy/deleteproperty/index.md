@@ -1,64 +1,83 @@
 ---
 title: handler.deleteProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/deleteProperty
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Proxy
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Proxy.handler.deleteProperty
 ---
+
 {{JSRef}}
 
-The **`handler.deleteProperty()`** method is a trap for the
-{{jsxref("Operators/delete", "delete")}} operator.
+The **`handler.deleteProperty()`** method is a trap for the `[[Delete]]` [object internal method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy#object_internal_methods), which is used by operations such as the {{jsxref("Operators/delete", "delete")}} operator.
 
-{{EmbedInteractiveExample("pages/js/proxyhandler-deleteproperty.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: handler.deleteProperty()", "taller")}}
+
+```js interactive-example
+const monster1 = {
+  texture: "scaly",
+};
+
+const handler1 = {
+  deleteProperty(target, prop) {
+    if (prop in target) {
+      delete target[prop];
+      console.log(`property removed: ${prop}`);
+      // Expected output: "property removed: texture"
+    }
+  },
+};
+
+console.log(monster1.texture);
+// Expected output: "scaly"
+
+const proxy1 = new Proxy(monster1, handler1);
+delete proxy1.texture;
+
+console.log(monster1.texture);
+// Expected output: undefined
+```
 
 ## Syntax
 
-```js
+```js-nolint
 new Proxy(target, {
   deleteProperty(target, property) {
   }
-});
+})
 ```
 
 ### Parameters
 
-The following parameters are passed to the `deleteProperty()` method.
-`this` is bound to the handler.
+The following parameters are passed to the `deleteProperty()` method. `this` is bound to the handler.
 
 - `target`
   - : The target object.
 - `property`
-  - : The name or {{jsxref("Symbol")}} of the property to delete.
+  - : A string or {{jsxref("Symbol")}} representing the property name.
 
 ### Return value
 
-The `deleteProperty()` method must return a {{jsxref("Boolean")}} indicating
-whether or not the property has been successfully deleted.
+The `deleteProperty()` method must return a {{jsxref("Boolean")}} indicating whether or not the property has been successfully deleted. Other values are [coerced to booleans](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean#boolean_coercion).
+
+Many operations, including the {{jsxref("Operators/delete", "delete")}} operator when in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode), throw a {{jsxref("TypeError")}} if the `[[Delete]]` internal method returns `false`.
 
 ## Description
-
-The **`handler.deleteProperty()`** method is a trap for the
-{{jsxref("Operators/delete", "delete")}} operator.
 
 ### Interceptions
 
 This trap can intercept these operations:
 
-- Property deletion: `delete proxy[foo]` and
+- The [`delete`](/en-US/docs/Web/JavaScript/Reference/Operators/delete) operator: `delete proxy[foo]` and
   `delete proxy.foo`
 - {{jsxref("Reflect.deleteProperty()")}}
 
+Or any other operation that invokes the `[[Delete]]` [internal method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy#object_internal_methods).
+
 ### Invariants
 
-If the following invariants are violated, the proxy will throw a
-{{jsxref("TypeError")}}:
+The proxy's `[[Delete]]` internal method throws a {{jsxref("TypeError")}} if the handler definition violates one of the following invariants:
 
-- A property cannot be deleted, if it exists as a non-configurable own property of the
-  target object.
+- A property cannot be reported as deleted, if it exists as a non-configurable own property of the target object. That is, if {{jsxref("Reflect.getOwnPropertyDescriptor()")}} returns `configurable: false` for the property on `target`, then the trap must return a falsy value.
+- A property cannot be reported as deleted, if it exists as an own property of the target object and the target object is non-extensible. That is, if {{jsxref("Reflect.isExtensible()")}} returns `false` on `target`, and {{jsxref("Reflect.getOwnPropertyDescriptor()")}} returns a property descriptor for the property on `target`, then the trap must return a falsy value.
 
 ## Examples
 
@@ -67,31 +86,30 @@ If the following invariants are violated, the proxy will throw a
 The following code traps the {{jsxref("Operators/delete", "delete")}} operator.
 
 ```js
-const p = new Proxy({}, {
-  deleteProperty(target, prop) {
-    if (prop in target){
-      delete target[prop]
-      console.log('property removed: ' + prop)
-      return true
-    }
-    else {
-      console.log('property not found: ' + prop)
-      return false
-    }
-  }
-})
+const p = new Proxy(
+  {},
+  {
+    deleteProperty(target, prop) {
+      if (!(prop in target)) {
+        console.log(`property not found: ${prop}`);
+        return false;
+      }
+      delete target[prop];
+      console.log(`property removed: ${prop}`);
+      return true;
+    },
+  },
+);
 
-let result
+p.a = 10;
+console.log("a" in p); // true
 
-p.a = 10
-console.log('a' in p)  // true
+const result1 = delete p.a; // "property removed: a"
+console.log(result1); // true
+console.log("a" in p); // false
 
-result = delete p.a    // "property removed: a"
-console.log(result)    // true
-console.log('a' in p)  // false
-
-result = delete p.a    // "property not found: a"
-console.log(result)    // false
+const result2 = delete p.a; // "property not found: a"
+console.log(result2); // false
 ```
 
 ## Specifications
@@ -105,6 +123,6 @@ console.log(result)    // false
 ## See also
 
 - {{jsxref("Proxy")}}
-- {{jsxref("Proxy.handler", "handler")}}
-- {{jsxref("Operators/delete", "delete")}} operator
+- [`Proxy()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy)
+- {{jsxref("Operators/delete", "delete")}}
 - {{jsxref("Reflect.deleteProperty()")}}

@@ -2,22 +2,14 @@
 title: CSSUnparsedValue
 slug: Web/API/CSSUnparsedValue
 page-type: web-api-interface
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSUnparsedValue
-  - Experimental
-  - Houdini
-  - Interface
-  - NeedsExample
-  - Reference
 browser-compat: api.CSSUnparsedValue
 ---
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
-The **`CSSUnparsedValue`** interface of the {{domxref('CSS_Object_Model#css_typed_object_model','','',' ')}} represents property values that reference [custom properties](/en-US/docs/Web/CSS/CSS_Variables). It consists of a list of string fragments and variable references.
+{{APIRef("CSS Typed OM")}}
 
-Custom properties are represented by `CSSUnparsedValue` and {{cssxref('var()')}} references are represented using {{domxref('CSSVariableReferenceValue')}}.
+The **`CSSUnparsedValue`** interface of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Object_Model) represents property values that reference [custom properties](/en-US/docs/Web/CSS/CSS_cascading_variables). It consists of a list of string fragments and variable references.
+
+Custom properties are represented by `CSSUnparsedValue` and {{cssxref("var", "var()")}} references are represented using {{domxref('CSSVariableReferenceValue')}}.
 
 {{InheritanceDiagram}}
 
@@ -26,12 +18,12 @@ Custom properties are represented by `CSSUnparsedValue` and {{cssxref('var()')}}
 - {{domxref("CSSUnparsedValue.CSSUnparsedValue", "CSSUnparsedValue()")}}
   - : Creates a new `CSSUnparsedValue` object.
 
-## Properties
+## Instance properties
 
 - {{domxref('CSSUnparsedValue.length')}}
   - : Returns the number of items in the `CSSUnparsedValue` object.
 
-## Methods
+## Instance methods
 
 - {{domxref('CSSUnparsedValue.entries()')}}
   - : Returns an array of a given object's own enumerable property `[key, value]` pairs in the same order as that provided by a {{jsxref("Statements/for...in", "for...in")}} loop (the difference being that a for-in loop enumerates properties in the prototype chain as well).

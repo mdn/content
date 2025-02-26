@@ -1,29 +1,27 @@
 ---
-title: Element.setAttributeNode()
+title: "Element: setAttributeNode() method"
+short-title: setAttributeNode()
 slug: Web/API/Element/setAttributeNode
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Element
-  - Method
-  - Reference
 browser-compat: api.Element.setAttributeNode
 ---
+
 {{ APIRef("DOM") }}
 
-The **`setAttributeNode()`** method adds a new
-`Attr` node to the specified element.
+The **`setAttributeNode()`** method of the {{domxref("Element")}} interface adds a new {{domxref("Attr")}} node to the specified element.
+
+If you don't need to work with the attribute node (such as cloning from another element) before adding it, you can use the {{domxref("Element.setAttribute()", "setAttribute()")}} method instead.
 
 ## Syntax
 
-```js
+```js-nolint
 setAttributeNode(attribute)
 ```
 
 ### Parameters
 
-- `attribute` is the `Attr` node to set on the element.
+- `attribute`
+  - : The {{domxref("Attr")}} node to add to the element.
 
 ### Return value
 
@@ -43,9 +41,9 @@ This example copies the `align` attribute from one element to another.
 ### JavaScript
 
 ```js
-let d1 = document.getElementById('one');
-let d2 = document.getElementById('two');
-let a = d1.getAttributeNode('align');
+let d1 = document.getElementById("one");
+let d2 = document.getElementById("two");
+let a = d1.getAttributeNode("align");
 
 d2.setAttributeNode(a.cloneNode(true));
 
@@ -58,11 +56,6 @@ alert(d2.attributes[1].value);
 If the attribute named already exists on the element, that attribute is replaced with
 the new one and the replaced one is returned.
 
-This method is seldom used, with {{domxref("Element.setAttribute()")}} usually being
-used to change element's attributes.
-
-{{ DOMAttributeMethods() }}
-
 ## Specifications
 
 {{Specifications}}
@@ -74,3 +67,5 @@ used to change element's attributes.
 ## See also
 
 - {{domxref("Document.createAttribute()")}}
+- {{domxref("Element.getAttributeNode()")}}
+- {{domxref("Element.removeAttributeNode()")}}

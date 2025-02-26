@@ -1,32 +1,25 @@
 ---
 title: cookies.onChanged
 slug: Mozilla/Add-ons/WebExtensions/API/cookies/onChanged
-tags:
-  - API
-  - Add-ons
-  - Cookies
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onChanged
+page-type: webextension-api-event
 browser-compat: webextensions.api.cookies.onChanged
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 The `onChanged` event of the {{WebExtAPIRef("cookies")}} API fires when a cookie that the extension can access is set or removed.
 
-> **Note:** When [storage partitioning](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#storage_partitioning) is active, `cookies.Cookie.partitionKey` contains the description of the cookie's storage partition. When modifying cookies, it's important to pass this value to {{WebExtAPIRef("cookies.set()")}} or {{WebExtAPIRef("cookies.remove()")}} to ensure the extension works with the correct cookie.
+> [!NOTE]
+> When [storage partitioning](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#storage_partitioning) is active, `cookies.Cookie.partitionKey` contains the description of the cookie's storage partition. When modifying cookies, it's important to pass this value to {{WebExtAPIRef("cookies.set()")}} or {{WebExtAPIRef("cookies.remove()")}} to ensure the extension works with the correct cookie.
 
 Note that updating a cookie's properties is implemented as a two step process:
 
-1. First, the cookie to be updated is first removed entirely, generating a notification with a {{WebExtAPIRef("cookies.OnChangedCause")}} of `overwrite`.
+1. First, the cookie to be updated is first removed, generating a notification with a {{WebExtAPIRef("cookies.OnChangedCause")}} of `overwrite`.
 2. Next, a new cookie is written with the updated values, generating a second notification with a {{WebExtAPIRef("cookies.OnChangedCause")}} of `explicit`.
 
 ## Syntax
 
-```js
+```js-nolint
 browser.cookies.onChanged.addListener(listener)
 browser.cookies.onChanged.removeListener(listener)
 browser.cookies.onChanged.hasListener(listener)
@@ -36,56 +29,58 @@ This API is also available as `browser.cookies.onChanged.*`.
 
 Events have three functions:
 
-- `addListener(callback)`
+- `addListener(listener)`
   - : Adds a listener to this event.
 - `removeListener(listener)`
-  - : Stop listening to this event. The `listener` argument is the listener to remove.
+  - : Stops listening to this event. The `listener` argument is the listener to remove.
 - `hasListener(listener)`
-  - : Check whether `listener` is registered for this event. Returns `true` if it is listening, `false` otherwise.
+  - : Checks whether `listener` is registered for this event. Returns `true` if it is listening, `false` otherwise.
 
 ## addListener syntax
 
 ### Parameters
 
-- `callback`
+- `listener`
 
-  - : A callback function that will be called when this event occurs. The function will be passed the following arguments:
+  - : The function called when this event occurs. The function is passed these arguments:
 
     - `changeInfo`
 
-      - : An `object` containing details of the change that occurred. Its properties are as follows:
+      - : An `object` containing details of the change that occurred. Its properties are:
 
         - `removed`
-          - : A `boolean` that is set to `true` if a cookie was removed, and false if not.
+          - : A `boolean` set to `true` if a cookie was removed and `false` if not.
         - `cookie`
           - : A {{WebExtAPIRef('cookies.Cookie')}} object containing information about the cookie that was set or removed.
         - `cause`
           - : A {{WebExtAPIRef('cookies.OnChangedCause')}} value representing the underlying reason behind the cookie's change.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
 This example listens for `onChanged` events and logs details from the `changeInfo` argument:
 
 ```js
-browser.cookies.onChanged.addListener(function(changeInfo) {
-  console.log('Cookie changed: ' +
-              '\n * Cookie: ' + JSON.stringify(changeInfo.cookie) +
-              '\n * Cause: ' + changeInfo.cause +
-              '\n * Removed: ' + changeInfo.removed);
+browser.cookies.onChanged.addListener((changeInfo) => {
+  console.log(
+    `Cookie changed: \n` +
+      ` * Cookie: ${JSON.stringify(changeInfo.cookie)}\n` +
+      ` * Cause: ${changeInfo.cause}\n` +
+      ` * Removed: ${changeInfo.removed}`,
+  );
 });
 ```
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.cookies`](https://developer.chrome.com/docs/extensions/reference/cookies/#event-onChanged) API. This documentation is derived from [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+## Browser compatibility
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+{{Compat}}
+
+> [!NOTE]
+> This API is based on Chromium's [`chrome.cookies`](https://developer.chrome.com/docs/extensions/reference/api/cookies#event-onChanged) API. This documentation is derived from [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) in the Chromium code.
+
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -112,4 +107,4 @@ browser.cookies.onChanged.addListener(function(changeInfo) {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

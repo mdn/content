@@ -1,27 +1,19 @@
 ---
 title: bookmarks.getChildren()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/getChildren
-tags:
-  - API
-  - Add-ons
-  - Bookmarks
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - getChildren
+page-type: webextension-api-function
 browser-compat: webextensions.api.bookmarks.getChildren
 ---
-{{AddonSidebar()}}
 
-**`bookmarks.getChildren()`** retrieves all the immediate children of a given bookmark folder, identified as a {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} ID.
+{{AddonSidebar}}
+
+**`bookmarks.getChildren()`** retrieves all the immediate children of a bookmark folder, identified as a {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} ID.
 
 This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntax
 
-```js
+```js-nolint
 let gettingChildren = browser.bookmarks.getChildren(
   id                     // string
 )
@@ -30,11 +22,11 @@ let gettingChildren = browser.bookmarks.getChildren(
 ### Parameters
 
 - `id`
-  - : A {{jsxref("string")}} which specifies the ID of the folder whose children are to be retrieved.
+  - : A {{jsxref("string")}} that specifies the ID of the folder whose children are to be retrieved.
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an array of [`BookmarkTreeNode`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode) objects. Each entry represents a single child node. The list is ordered in the same order in which the bookmarks appear in the user interface. Separators are currently not included in the results. The list includes subfolders, but does not include any children contained in subfolders.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that is fulfilled with an array of [`BookmarkTreeNode`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode) objects. Each entry represents a child node. The list is in the same order as the bookmarks appear in the user interface. Separators are included in the results. The list includes subfolders but does not include any children contained in subfolders.
 
 If the specified node has no children, the array is empty.
 
@@ -63,11 +55,11 @@ gettingChildren.then(onFulfilled, onRejected);
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/bookmarks/#method-getChildren) API. This documentation is derived from [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/api/bookmarks#method-getChildren) API. This documentation is derived from [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) in the Chromium code.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -94,4 +86,4 @@ gettingChildren.then(onFulfilled, onRejected);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

@@ -1,24 +1,23 @@
 ---
 title: mask-origin
 slug: Web/CSS/mask-origin
-tags:
-  - CSS
-  - CSS Masking
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.mask-origin
 ---
+
 {{CSSRef}}
 
 The **`mask-origin`** [CSS](/en-US/docs/Web/CSS) property sets the origin of a mask.
+
+For elements rendered as a single box, this property specifies the mask positioning area. In other words, this property specifies the origin position of an image specified by the {{cssxref("mask-image")}} CSS property. For elements rendered as multiple boxes, such as inline boxes on several lines or boxes on several pages, it specifies which boxes {{cssxref("box-decoration-break")}} operates upon to determine the mask positioning area.
+
+## Syntax
 
 ```css
 /* Keyword values */
 mask-origin: content-box;
 mask-origin: padding-box;
 mask-origin: border-box;
-mask-origin: margin-box;
 mask-origin: fill-box;
 mask-origin: stroke-box;
 mask-origin: view-box;
@@ -40,10 +39,6 @@ mask-origin: revert-layer;
 mask-origin: unset;
 ```
 
-For elements rendered as a single box, this property specifies the mask positioning area. In other words, this property specifies the origin position of an image specified by the {{cssxref("mask-image")}} CSS property. For elements rendered as multiple boxes, such as inline boxes on several lines or boxes on several pages, it specifies which boxes {{cssxref("box-decoration-break")}} operates upon to determine the mask positioning area.
-
-## Syntax
-
 One or more of the keyword values listed below, separated by commas.
 
 ### Values
@@ -54,19 +49,17 @@ One or more of the keyword values listed below, separated by commas.
   - : The position is relative to the padding box. For single boxes `0 0` is the upper left corner of the padding edge, `100% 100%` is the lower right corner.
 - `border-box`
   - : The position is relative to the border box.
-- `margin-box`
-  - : The position is relative to the margin box.
 - `fill-box`
   - : The position is relative to the object bounding box.
 - `stroke-box`
   - : The position is relative to the stroke bounding box.
 - `view-box`
   - : Uses the nearest SVG viewport as reference box. If a {{svgattr("viewBox")}} attribute is specified for the element creating the SVG viewport, the reference box is positioned at the origin of the coordinate system established by the `viewBox` attribute and the dimension of the reference box is set to the width and height values of the `viewBox` attribute.
-- `content` {{non-standard_inline}}
+- `content`
   - : Same as `content-box`.
-- `padding` {{non-standard_inline}}
+- `padding`
   - : Same as `padding-box`.
-- `border` {{non-standard_inline}}
+- `border`
   - : Same as `border-box`.
 
 ## Formal definition
@@ -81,9 +74,27 @@ One or more of the keyword values listed below, separated by commas.
 
 ### Setting mask origin to border-box
 
-Try some of the other possible values by updating the CSS in the box below.
+Click "Play" in the live sample to open the code in the MDN Playground and try some of the other possible `mask-origin` values.
 
-{{EmbedGHLiveSample("css-examples/masking/mask-origin.html", '100%', 600)}}
+```html live-sample___mask-origin-example
+<div class="masked"></div>
+```
+
+```css live-sample___mask-origin-example
+.masked {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  border: 10px solid blue;
+  background-color: #8cffa0;
+  padding: 10px;
+
+  mask-image: url(https://mdn.github.io/shared-assets/images/examples/mask-star.svg);
+  mask-origin: border-box;
+}
+```
+
+{{EmbedLiveSample("mask-origin-example", "", "200px")}}
 
 ## Specifications
 

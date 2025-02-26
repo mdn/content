@@ -1,24 +1,16 @@
 ---
 title: Attribute
 slug: Glossary/Attribute
-tags:
-  - CodingScripting
-  - Glossary
-  - HTML
+page-type: glossary-definition
 ---
-An **attribute** extends an HTML or XML {{Glossary("element")}}, changing its behavior or providing metadata.
 
-An attribute always has the form `name="value"` (the attribute's identifier followed by its associated value).
+{{GlossarySidebar}}
 
-You may see attributes without the equals sign or a value. That is a shorthand for providing the empty string in HTML, or the attribute's name in XML.
+An **attribute** extends an {{Glossary("HTML")}} or {{Glossary("XML")}} {{Glossary("element")}}, changing its behavior or providing metadata.
 
-```html
-<input required>
-<!-- is the same as… -->
-<input required="">
-<!-- or -->
-<input required="required">
-```
+An attribute always has the form `name="value"` (the attribute's identifier followed by its associated value). You may see attributes without an equals sign or a value. That is a shorthand for providing the empty string in HTML. However, this is not valid in XML: XML requires all attributes to have an explicit value.
+
+A number of HTML attributes are {{Glossary("Boolean/HTML", "boolean attributes")}}. These attributes' values are only controlled by the presence or absence of the attribute. See {{Glossary("Boolean/HTML", "boolean attributes")}} for more information.
 
 ## Reflection of an attribute
 
@@ -31,29 +23,31 @@ For example, the `placeholder` below is reflected into {{domxref("HTMLInputEleme
 Considering the following HTML:
 
 ```html
-<input placeholder="Original placeholder">
+<input placeholder="Original placeholder" />
 ```
 
 We can check the reflection between {{domxref("HTMLInputElement.placeholder")}} and the attribute using:
 
 ```js
-let input = document.getElementsByTagName("input")[0];
-let attr = input.getAttributeNode("placeholder")
+const input = document.querySelector("input");
+const attr = input.getAttributeNode("placeholder");
 console.log(attr.value);
-console.log(input.placeholder); //Returns the same value as `attr.value`
-```
+console.log(input.placeholder); // Prints the same value as `attr.value`
 
-and
-
-```js
-let input2 = document.getElementsByTagName("input")[0];
-let attr2 = input.getAttributeNode("placeholder")
-console.log(attr2.value); // Returns `Original placeholder`
-input2.placeholder = "Modified placeholder"; // Also change the value of the reflected attribute.
-console.log(attr2.value); // Returns `Modified placeholder`
+// Changing placeholder value will also change the value of the reflected attribute.
+input.placeholder = "Modified placeholder";
+console.log(attr.value); // Prints `Modified placeholder`
 ```
 
 ## See also
 
 - [HTML attribute reference](/en-US/docs/Web/HTML/Attributes)
 - Information about HTML's [global attributes](/en-US/docs/Web/HTML/Global_attributes)
+- XML StartTag Attribute Recommendation in [W3C XML Recommendation](https://www.w3.org/TR/xml#sec-starttags)
+- Related glossary terms:
+  - {{Glossary("Element")}}
+  - {{Glossary("Tag")}}
+  - {{Glossary("HTML")}}
+  - {{Glossary("XML")}}
+  - {{Glossary("Boolean/HTML", "Boolean attributes")}}
+  - {{Glossary("Enumerated", "Enumerated attributes")}}

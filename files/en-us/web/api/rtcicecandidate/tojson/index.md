@@ -1,21 +1,11 @@
 ---
-title: RTCIceCandidate.toJSON()
+title: "RTCIceCandidate: toJSON() method"
+short-title: toJSON()
 slug: Web/API/RTCIceCandidate/toJSON
 page-type: web-api-instance-method
-tags:
-  - API
-  - Candidate
-  - ICE
-  - JSON
-  - Method
-  - RTCIceCandidate
-  - Reference
-  - SDP
-  - WebRTC
-  - WebRTC API
-  - toJSON
 browser-compat: api.RTCIceCandidate.toJSON
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCIceCandidate")}} method **`toJSON()`** converts the `RTCIceCandidate` on which it's called into JSON.
@@ -24,7 +14,7 @@ A stringified version of the object can then be obtained by calling {{jsxref("JS
 
 ## Syntax
 
-```js
+```js-nolint
 toJSON()
 ```
 
@@ -56,7 +46,8 @@ A JSON object with the following properties, which have been set to the correspo
     This fragment, along with the ICE password ("ice-pwd"), uniquely identifies a single ongoing ICE interaction (including for any communication with the {{Glossary("STUN")}} server).
     Additional information can be found in {{domxref("RTCIceCandidate.usernameFragment")}}.
 
-> **Note:** The returned JSON object has the same form/properties as the `candidateInfo` object that can optionally be passed to the {{domxref("RTCIceCandidate.RTCIceCandidate()","RTCIceCandidate() constructor")}} to configure the candidate.
+> [!NOTE]
+> The returned JSON object has the same form/properties as the `candidateInfo` object that can optionally be passed to the {{domxref("RTCIceCandidate.RTCIceCandidate()","RTCIceCandidate()")}} constructor to configure the candidate.
 
 ## Examples
 

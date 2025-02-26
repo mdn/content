@@ -1,19 +1,11 @@
 ---
 title: downloads.download()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/download
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - download
-  - downloads
+page-type: webextension-api-function
 browser-compat: webextensions.api.downloads.download
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 The **`download()`** function of the {{WebExtAPIRef("downloads")}} API downloads a file, given its URL and other optional preferences.
 
@@ -28,7 +20,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let downloading = browser.downloads.download(
   options                   // object
 )
@@ -52,7 +44,7 @@ let downloading = browser.downloads.download(
     - `conflictAction` {{optional_inline}}
       - : A string representing the action you want taken if there is a filename conflict, as defined in the {{WebExtAPIRef('downloads.FilenameConflictAction')}} type (defaults to "uniquify" when it is not specified).
     - `cookieStoreId` {{optional_inline}}
-      - : The cookie store ID of the [contextual identity](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities) the download is associated with. If omitted, the default cookie store is used. Use requires the "cookies" [API permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions).
+      - : The cookie store ID of the [contextual identity](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities) the download is associated with. If omitted, the default cookie store is used. Use requires the "cookies" [API permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions). See [Work with contextual identities](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities) for more information.
     - `filename` {{optional_inline}}
       - : A `string` representing a file path relative to the default downloads directory — this provides the location where you want the file to be saved, and what filename you want to use. Absolute paths, empty paths, path components that start and/or end with a dot (.), and paths containing back-references (`../`) will cause an error. If omitted, this value will default to the filename already given to the download file, and a location immediately inside the downloads directory.
     - `headers` {{optional_inline}}
@@ -67,7 +59,8 @@ let downloading = browser.downloads.download(
 
         If this option is omitted, the browser will show the file chooser or not based on the general user preference for this behavior (in Firefox this preference is labeled "Always ask you where to save files" in about:preferences, or `browser.download.useDownloadDir` in about:config).
 
-        > **Note:** Firefox for Android raises an error if `saveAs` is set to `true`. The parameter is ignored when `saveAs` is `false` or not included.
+        > [!NOTE]
+        > Firefox for Android raises an error if `saveAs` is set to `true`. The parameter is ignored when `saveAs` is `false` or not included.
 
     - `url`
       - : A `string` representing the URL to download.
@@ -76,7 +69,7 @@ let downloading = browser.downloads.download(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise). If the download started successfully, the promise will be fulfilled with the `id` of the new {{WebExtAPIRef("downloads.DownloadItem")}}. Otherwise, the promise will be rejected with an error message taken from {{WebExtAPIRef("downloads.InterruptReason")}}.
 
-If you use [URL.createObjectURL()](/en-US/docs/Web/API/URL/createObjectURL) to download data created in JavaScript and you want to revoke the object URL (with [revokeObjectURL](/en-US/docs/Web/API/URL/revokeObjectURL)) later (as it is strongly recommended), you need to do that after the download has been completed. To do so, listen to the [downloads.onChanged](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/downloads/onChanged) event.
+If you use [URL.createObjectURL()](/en-US/docs/Web/API/URL/createObjectURL_static) to download data created in JavaScript and you want to revoke the object URL (with [revokeObjectURL](/en-US/docs/Web/API/URL/revokeObjectURL_static)) later (as it is strongly recommended), you need to do that after the download has been completed. To do so, listen to the [downloads.onChanged](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/downloads/onChanged) event.
 
 ## Browser compatibility
 
@@ -84,7 +77,7 @@ If you use [URL.createObjectURL()](/en-US/docs/Web/API/URL/createObjectURL) to d
 
 ## Examples
 
-The following snippet attempts to download an example file, also specifying a filename and location to save it in, and the `uniquify` `conflictAction` option.
+The following snippet attempts to download an example file, also specifying a filename and location to save it in, and `uniquify` as the value of the `conflictAction` option.
 
 ```js
 function onStartedDownload(id) {
@@ -98,9 +91,9 @@ function onFailed(error) {
 let downloadUrl = "https://example.org/image.png";
 
 let downloading = browser.downloads.download({
-  url : downloadUrl,
-  filename : 'my-image-again.png',
-  conflictAction : 'uniquify'
+  url: downloadUrl,
+  filename: "my-image-again.png",
+  conflictAction: "uniquify",
 });
 
 downloading.then(onStartedDownload, onFailed);
@@ -108,9 +101,11 @@ downloading.then(onStartedDownload, onFailed);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/downloads/#method-download) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads#method-download) API.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -137,4 +132,4 @@ downloading.then(onStartedDownload, onFailed);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

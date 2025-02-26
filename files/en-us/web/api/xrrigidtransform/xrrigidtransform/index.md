@@ -1,26 +1,12 @@
 ---
-title: XRRigidTransform()
+title: "XRRigidTransform: XRRigidTransform() constructor"
+short-title: XRRigidTransform()
 slug: Web/API/XRRigidTransform/XRRigidTransform
 page-type: web-api-constructor
-tags:
-  - API
-  - AR
-  - Constructor
-  - Mixed Reality
-  - Orientation
-  - Position
-  - Reality
-  - Reference
-  - VR
-  - Virtual
-  - WebXR
-  - XR
-  - XRRigidTransform
-  - augmented
-  - transform
 browser-compat: api.XRRigidTransform.XRRigidTransform
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SecureContext_Header}}
 
 The
 **`XRRigidTransform()`** constructor creates
@@ -31,7 +17,7 @@ coordinate systems across spaces.
 
 ## Syntax
 
-```js
+```js-nolint
 new XRRigidTransform()
 new XRRigidTransform(position)
 new XRRigidTransform(position, orientation)
@@ -42,7 +28,7 @@ new XRRigidTransform(position, orientation)
 - `position` {{optional_inline}}
   - : An object which specifies the coordinates
     at which the point or object is located. These dimensions are specified in meters. If
-    this parameter is left out or is invalid,  the
+    this parameter is left out or is invalid, the
     position used is assumed to be `{x: 0, y: 0, z: 0, w: 1}`. `w`
     must _always_ be 1.
 - `orientation` {{optional_inline}}
@@ -73,10 +59,10 @@ on a transform before requesting the first animation frame.
 ```js
 let animationFrameRequestID = 0;
 
-xrSession.requestReferenceSpace("local-floor")
-.then((refSpace) => {
+xrSession.requestReferenceSpace("local-floor").then((refSpace) => {
   xrReferenceSpace = refSpace.getOffsetReferenceSpace(
-        new XRRigidTransform(viewerPosition, viewerOrientation));
+    new XRRigidTransform(viewerPosition, viewerOrientation),
+  );
   animationFrameRequestID = xrSession.requestAnimationFrame(drawFrame);
 });
 ```

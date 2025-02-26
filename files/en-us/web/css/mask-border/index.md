@@ -1,14 +1,10 @@
 ---
 title: mask-border
 slug: Web/CSS/mask-border
-tags:
-  - CSS
-  - CSS Masking
-  - CSS Property
-  - Reference
-  - recipe:css-shorthand-property
+page-type: css-shorthand-property
 browser-compat: css.properties.mask-border
 ---
+
 {{CSSRef}}
 
 The **`mask-border`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) lets you create a mask along the edge of an element's border.
@@ -28,16 +24,16 @@ This property is a shorthand for the following CSS properties:
 
 ```css
 /* source | slice */
-mask-border: url('border-mask.png') 25;
+mask-border: url("border-mask.png") 25;
 
 /* source | slice | repeat */
-mask-border: url('border-mask.png') 25 space;
+mask-border: url("border-mask.png") 25 space;
 
 /* source | slice | width */
-mask-border: url('border-mask.png') 25 / 35px;
+mask-border: url("border-mask.png") 25 / 35px;
 
 /* source | slice | width | outset | repeat | mode */
-mask-border: url('border-mask.png') 25 / 35px / 12px space alpha;
+mask-border: url("border-mask.png") 25 / 35px / 12px space alpha;
 
 /* Global values */
 mask-border: inherit;
@@ -76,11 +72,40 @@ mask-border: unset;
 
 In this example, we will mask an element's border with a diamond pattern. The source for the mask is a ".png" file of 90 by 90 pixels, with three diamonds going vertically and horizontally:
 
-![](mask-border-diamonds.png)
+<img src="https://mdn.github.io/shared-assets/images/examples/mask-border-diamonds.png" alt="The image used for the mask examples on this page. The mask is a transparent square with three rows of three diamonds each. The diamonds are a very light, almost white, shade of grey. The middle part between the diamonds is also solid grey. The parts between the outside of the diamonds and the edge of the image are transparent." loading="lazy" style="background-color: black;">
 
 To match the size of a single diamond, we will use a value of 90 divided by 3, or `30`, for slicing the image into corner and edge regions. A repeat value of `round` will make the mask slices fit evenly, i.e., without clipping or gaps.
 
-{{EmbedGHLiveSample("css-examples/masking/mask-border.html", '100%', 800)}}
+```html live-sample___mask-border-example
+<div class="masked">
+  This element is surrounded by a bitmap-based mask border! Pretty neat, isn't
+  it?
+</div>
+```
+
+```css-nolint live-sample___mask-border-example
+.masked {
+  width: 200px;
+  background-color: lavender;
+  border: 18px solid salmon;
+  padding: 10px;
+
+  -webkit-mask-box-image: url("https://mdn.github.io/shared-assets/images/examples/mask-border-diamonds.png")
+    30 fill /          /* slice */
+    20px /             /* width */
+    1px                /* outset */
+    round;             /* repeat */
+
+  mask-border:
+    url("https://mdn.github.io/shared-assets/images/examples/mask-border-diamonds.png")
+    30 fill /        /* slice */
+    20px /           /* width */
+    1px              /* outset */
+    round;           /* repeat */
+}
+```
+
+{{EmbedLiveSample("mask-border-example", "", "170px")}}
 
 ## Specifications
 

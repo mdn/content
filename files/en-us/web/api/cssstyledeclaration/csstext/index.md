@@ -1,14 +1,11 @@
 ---
-title: CSSStyleDeclaration.cssText
+title: "CSSStyleDeclaration: cssText property"
+short-title: cssText
 slug: Web/API/CSSStyleDeclaration/cssText
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM
-  - NeedsSpecTable
-  - Reference
 browser-compat: api.CSSStyleDeclaration.cssText
 ---
+
 {{APIRef("CSSOM")}}
 
 The **`cssText`** property of the {{domxref("CSSStyleDeclaration")}} interface returns or sets the text of the element's **inline** style declaration only.
@@ -24,9 +21,7 @@ A string containing the text of the element's inline style declaration.
 ## Example
 
 ```html
-<span id="s1" style="color: red;">
-  Some text
-</span>
+<span id="s1" style="color: red;"> Some text </span>
 
 <script>
   const elem = document.getElementById("s1");

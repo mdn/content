@@ -1,21 +1,12 @@
 ---
-title: DOMPointReadOnly()
+title: "DOMPointReadOnly: DOMPointReadOnly() constructor"
+short-title: DOMPointReadOnly()
 slug: Web/API/DOMPointReadOnly/DOMPointReadOnly
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Coordinates
-  - DOM
-  - DOMPointReadOnly
-  - Geometry
-  - Geometry Interfaces
-  - Point
-  - Position
-  - Reference
 browser-compat: api.DOMPointReadOnly.DOMPointReadOnly
 ---
-{{APIRef("DOM")}}
+
+{{APIRef("Geometry Interfaces")}}{{AvailableInWorkers}}
 
 The **`DOMPointReadOnly()`**
 constructor returns a new {{domxref("DOMPointReadOnly")}} object representing a point
@@ -24,7 +15,7 @@ script code.
 
 ## Syntax
 
-```js
+```js-nolint
 new DOMPointReadOnly()
 new DOMPointReadOnly(x)
 new DOMPointReadOnly(x, y)
@@ -46,7 +37,8 @@ new DOMPointReadOnly(x, y, z, w)
 - `w` {{optional_inline}}
   - : The value of the perspective, w, as a floating point number. The default is 1.
 
-> **Note:** Each of these values is what's called an _unrestricted_
+> [!NOTE]
+> Each of these values is what's called an _unrestricted_
 > number. In addition to any finite floating-point value, you may use special values
 > such as ±{{jsxref("Infinity")}} and {{jsxref("NaN")}}.
 

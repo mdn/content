@@ -1,21 +1,13 @@
 ---
 title: repeating-radial-gradient()
 slug: Web/CSS/gradient/repeating-radial-gradient
-tags:
-  - CSS
-  - CSS Function
-  - CSS Images
-  - Function
-  - Gradients
-  - Graphics
-  - Layout
-  - Reference
-  - Web
-browser-compat: css.types.image.gradient.repeating-radial-gradient
+page-type: css-function
+browser-compat: css.types.gradient.repeating-radial-gradient
 ---
+
 {{CSSRef}}
 
-The **`repeating-radial-gradient()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) creates an image consisting of repeating gradients that radiate from an origin. It is similar to {{cssxref("gradient/radial-gradient", "radial-gradient()")}} and takes the same arguments, but it repeats the color stops infinitely in all directions so as to cover its entire container, similar to {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}. The function's result is an object of the {{cssxref("&lt;gradient&gt;")}} data type, which is a special kind of {{cssxref("&lt;image&gt;")}}.
+The **`repeating-radial-gradient()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) creates an image consisting of repeating gradients that radiate from an origin. It is similar to {{cssxref("gradient/radial-gradient", "radial-gradient()")}} and takes the same arguments, but it repeats the color stops infinitely in all directions so as to cover its entire container, similar to {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}. The function's result is an object of the {{cssxref("&lt;gradient&gt;")}} data type, which is a special kind of {{cssxref("&lt;image&gt;")}}.
 
 {{EmbedInteractiveExample("pages/css/function-repeating-radial-gradient.html")}}
 
@@ -31,13 +23,13 @@ Because `<gradient>`s belong to the `<image>` data type, they can only be used w
 /* A gradient at the center of its container,
    starting red, changing to blue, and finishing green,
    with the colors repeating every 30px */
-repeating-radial-gradient(circle at center, red 0, blue, green 30px);
+repeating-radial-gradient(circle at center, red 0, blue, green 30px)
 
 /* An elliptical gradient near the top left of its container,
    starting red, changing to green and back again,
    repeating five times between the center and the bottom right corner,
    and only once between the center and the top left corner */
-repeating-radial-gradient(farthest-corner at 20% 20%, red 0, green, red 20%);
+repeating-radial-gradient(farthest-corner at 20% 20%, red 0, green, red 20%)
 ```
 
 ### Values
@@ -57,14 +49,15 @@ repeating-radial-gradient(farthest-corner at 20% 20%, red 0, green, red 20%);
     | `farthest-side`   | Similar to `closest-side`, except the ending shape is sized to meet the side of the box farthest from its center (or vertical and horizontal sides).                            |
     | `farthest-corner` | The gradient's ending shape is sized so that it exactly meets the farthest corner of the box from its center.                                                                   |
 
-    > **Note:** Early implementations of this function included other keywords (`cover` and `contain`) as synonyms of the standard `farthest-corner` and `closest-side`, respectively. Use the standard keywords only, as some implementations have already dropped those older variants.
+    > [!NOTE]
+    > Early implementations of this function included other keywords (`cover` and `contain`) as synonyms of the standard `farthest-corner` and `closest-side`, respectively. Use the standard keywords only, as some implementations have already dropped those older variants.
 
 - `<color-stop>`
   - : A color-stop's {{cssxref("&lt;color&gt;")}} value, followed by an optional stop position (either a {{cssxref("&lt;percentage&gt;")}} or a {{cssxref("&lt;length&gt;")}} along the gradient's axis). A percentage of `0%`, or a length of `0`, represents the center of the gradient; the value `100%` represents the intersection of the ending shape with the virtual gradient ray. Percentage values in between are linearly positioned on the virtual gradient ray.
 
-### Formal syntax
+## Formal syntax
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Examples
 
@@ -83,7 +76,12 @@ repeating-radial-gradient(farthest-corner at 20% 20%, red 0, green, red 20%);
 
 ```css
 .radial-gradient {
-  background: repeating-radial-gradient(black, black 5px, white 5px, white 10px);
+  background: repeating-radial-gradient(
+    black,
+    black 5px,
+    white 5px,
+    white 10px
+  );
 }
 ```
 
@@ -104,10 +102,18 @@ repeating-radial-gradient(farthest-corner at 20% 20%, red 0, green, red 20%);
 
 ```css
 .radial-gradient {
-  background: repeating-radial-gradient(ellipse farthest-corner at 20% 20%,
-      red, black 5%, blue 5%, green 10%);
-  background: repeating-radial-gradient(ellipse farthest-corner at 20% 20%,
-      red 0 5%, green 5% 10%);
+  background: repeating-radial-gradient(
+    ellipse farthest-corner at 20% 20%,
+    red,
+    black 5%,
+    blue 5%,
+    green 10%
+  );
+  background: repeating-radial-gradient(
+    ellipse farthest-corner at 20% 20%,
+    red 0 5%,
+    green 5% 10%
+  );
 }
 ```
 
@@ -115,7 +121,60 @@ repeating-radial-gradient(farthest-corner at 20% 20%, red 0, green, red 20%);
 
 The elliptical gradient will be centered 20% from the top left, and will repeat 10 times between the center and the farthest corner (the bottom right corner). Browsers supporting multi position color stops will display a red and green striped ellipse. Browsers not supporting the syntax yet will see a gradient that goes from red to black and then from blue to green.
 
-> **Note:** Please see [Using CSS gradients](/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients) for more examples.
+### Interpolating with hue
+
+```html hidden
+<div class="shorter"></div>
+<div class="longer"></div>
+```
+
+```css hidden
+div {
+  display: inline-block;
+  margin-top: 1rem;
+  width: 45vw;
+  height: 80vh;
+}
+
+.shorter::before {
+  content: "shorter hue";
+  display: block;
+  margin-top: -1rem;
+}
+
+.longer::before {
+  content: "longer hue";
+  display: block;
+  margin-top: -1rem;
+}
+```
+
+In this example for interpolation, [hsl](/en-US/docs/Web/CSS/color_value/hsl) color system is being used and [hue](/en-US/docs/Web/CSS/hue) is being interpolated.
+
+```css
+.shorter {
+  background-image: repeating-radial-gradient(
+    circle at center in hsl shorter hue,
+    red 30px,
+    blue 60px
+  );
+}
+
+.longer {
+  background-image: repeating-radial-gradient(
+    circle at center in hsl longer hue,
+    red 30px,
+    blue 60px
+  );
+}
+```
+
+The box on the left uses [shorter interpolation](/en-US/docs/Web/CSS/hue-interpolation-method#shorter), meaning the color goes from red to blue using the shorter arc on [color wheel](/en-US/docs/Glossary/Color_wheel). The box on the right uses [longer interpolation](/en-US/docs/Web/CSS/hue-interpolation-method#longer), meaning the color goes from red to blue using the longer arc, traversing through greens, yellows, and oranges.
+
+{{EmbedLiveSample("Interpolating with hue", 240, 200)}}
+
+> [!NOTE]
+> Please see [Using CSS gradients](/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradients) for more examples.
 
 ## Specifications
 
@@ -127,8 +186,10 @@ The elliptical gradient will be centered 20% from the top left, and will repeat 
 
 ## See also
 
-- [Using CSS gradients](/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients)
+- [Using CSS gradients](/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradients)
 - Other gradient functions: {{cssxref("gradient/radial-gradient", "radial-gradient()")}}, {{cssxref("gradient/linear-gradient", "linear-gradient()")}}, {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("gradient/conic-gradient", "conic-gradient()")}}, {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}
+- [`<hue-interpolation-method>`](/en-US/docs/Web/CSS/hue-interpolation-method)
+- [`<color-interpolation-method>`](/en-US/docs/Web/CSS/color-interpolation-method)
 - {{cssxref("&lt;image&gt;")}}
 - {{cssxref("image/image","image()")}}
 - {{cssxref("element", "element()")}}

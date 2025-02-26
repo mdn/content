@@ -1,18 +1,13 @@
 ---
-title: HTMLTableElement.summary
+title: "HTMLTableElement: summary property"
+short-title: summary
 slug: Web/API/HTMLTableElement/summary
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLTableElement
-  - NeedsBrowserCompatibility
-  - NeedsSpecTable
-  - Property
-  - Reference
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.HTMLTableElement.summary
 ---
+
 {{APIRef("HTML DOM")}} {{Deprecated_Header}}
 
 The **`HTMLTableElement.summary`** property represents the
@@ -30,7 +25,7 @@ HTMLTableElement.summary = "Usage statistics";
 
 ## Specifications
 
-- W3C DOM 2 HTML Specification
+{{Specifications}}
 
 ## Browser compatibility
 

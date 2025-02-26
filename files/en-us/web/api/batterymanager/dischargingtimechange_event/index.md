@@ -1,25 +1,23 @@
 ---
-title: 'BatteryManager: dischargingtimechange event'
+title: "BatteryManager: dischargingtimechange event"
+short-title: dischargingtimechange
 slug: Web/API/BatteryManager/dischargingtimechange_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - Reference
 browser-compat: api.BatteryManager.dischargingtimechange_event
 ---
-{{APIRef("Battery API")}}
 
-The **`dischargingtimechange`** event of the [Battery Status API](/en-US/docs/Web/API/Battery_Status_API) is fired when the battery {{domxref("BatteryManager.dischargingTime","dischargingTime")}} is updated.
+{{ApiRef("Battery API")}}{{securecontext_header}}
+
+The **`dischargingtimechange`** event of the {{domxref("BatteryManager")}} interface is fired when the battery {{domxref("BatteryManager.dischargingTime", "dischargingTime")}} property is updated.
 
 ## Syntax
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener('dischargingtimechange', (event) => { });
+```js-nolint
+addEventListener("dischargingtimechange", (event) => { })
 
-ondischargingtimechange = (event) => { };
+ondischargingtimechange = (event) => { }
 ```
 
 ## Event type
@@ -28,22 +26,21 @@ _A generic {{domxref("Event")}}._
 
 ## Example
 
-### HTML Content
+### HTML
 
 ```html
 <div id="level">(battery level unknown)</div>
 <div id="chargingTime">(charging time unknown)</div>
 ```
 
-### JavaScript Content
+### JavaScript
 
 ```js
 navigator.getBattery().then((battery) => {
-    battery.ondischargingtimechange = () => {
-        document.querySelector('#level').textContent = battery.level;
-        document.querySelector('#chargingTime').textContent = battery.chargingTime;
-    }
-
+  battery.ondischargingtimechange = () => {
+    document.querySelector("#level").textContent = battery.level;
+    document.querySelector("#chargingTime").textContent = battery.chargingTime;
+  };
 });
 ```
 
@@ -60,4 +57,4 @@ navigator.getBattery().then((battery) => {
 ## See also
 
 - {{domxref("BatteryManager")}}
-- {{domxref("Navigator.getBattery")}}
+- {{domxref("Navigator.getBattery()")}}

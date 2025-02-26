@@ -1,19 +1,11 @@
 ---
 title: bookmarks.getSubTree()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/getSubTree
-tags:
-  - API
-  - Add-ons
-  - Bookmarks
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - getSubTree
+page-type: webextension-api-function
 browser-compat: webextensions.api.bookmarks.getSubTree
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 The **`bookmarks.getSubTree()`** method asynchronously retrieves a {{WebExtAPIRef("bookmarks.BookmarkTreeNode")}}, given its ID.
 
@@ -23,7 +15,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let gettingSubTree = browser.bookmarks.getSubTree(
   id                     // string
 )
@@ -36,7 +28,7 @@ let gettingSubTree = browser.bookmarks.getSubTree(
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an array containing a single object, a {{WebExtAPIRef('bookmarks.BookmarkTreeNode')}} object, representing the item with the given ID.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that is fulfilled with an array containing an object, a {{WebExtAPIRef('bookmarks.BookmarkTreeNode')}} object, representing the item with the given ID.
 
 If a node corresponding to `id` could not be found, the promise will be rejected with an error message.
 
@@ -53,11 +45,11 @@ function logItems(bookmarkItem, indent) {
   if (bookmarkItem.url) {
     console.log(makeIndent(indent) + bookmarkItem.url);
   } else {
-    console.log(makeIndent(indent) + "Folder: " + bookmarkItem.id);
+    console.log(`${makeIndent(indent)}Folder: ${bookmarkItem.id}`);
     indent++;
   }
   if (bookmarkItem.children) {
-    for (let child of bookmarkItem.children) {
+    for (const child of bookmarkItem.children) {
       logItems(child, indent);
     }
   }
@@ -73,8 +65,7 @@ function onRejected(error) {
 
 let subTreeID = "root_____";
 
-let gettingSubTree = browser.bookmarks.getSubTree(subTreeID);
-gettingSubTree.then(logSubTree, onRejected);
+browser.bookmarks.getSubTree(subTreeID).then(logSubTree, onRejected);
 ```
 
 {{WebExtExamples}}
@@ -83,11 +74,11 @@ gettingSubTree.then(logSubTree, onRejected);
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/bookmarks/#method-getSubTree) API. This documentation is derived from [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/api/bookmarks#method-getSubTree) API. This documentation is derived from [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) in the Chromium code.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -114,4 +105,4 @@ gettingSubTree.then(logSubTree, onRejected);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

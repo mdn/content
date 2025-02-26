@@ -1,16 +1,11 @@
 ---
-title: KeyboardEvent.getModifierState()
+title: "KeyboardEvent: getModifierState() method"
+short-title: getModifierState()
 slug: Web/API/KeyboardEvent/getModifierState
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - KeyboardEvent
-  - Method
-  - Reference
-  - getModifierState
 browser-compat: api.KeyboardEvent.getModifierState
 ---
+
 {{APIRef("UI Events")}}
 
 The **`KeyboardEvent.getModifierState()`** method returns the
@@ -19,7 +14,7 @@ current state of the specified modifier key: `true` if the modifier is active
 
 ## Syntax
 
-```js
+```js-nolint
 getModifierState(key)
 ```
 
@@ -34,14 +29,9 @@ getModifierState(key)
 
 A boolean.
 
-## Modifier keys on Internet Explorer
+## Modifier keys on Firefox
 
-IE9 uses `"Scroll"` for `"ScrollLock"` and `"Win"` for
-`"OS"`.
-
-## Modifier keys on Gecko
-
-When `getModifierState()` returns true on Gecko?
+When `getModifierState()` returns true on Firefox?
 
 <table class="standard-table">
   <thead>
@@ -51,7 +41,7 @@ When `getModifierState()` returns true on Gecko?
       <th scope="col">Linux (GTK)</th>
       <th scope="col">Mac</th>
       <th scope="col">Android 2.3</th>
-      <th scope="col">Android 3.0 or latter</th>
+      <th scope="col">Android 3.0 or later</th>
     </tr>
   </thead>
   <tbody>
@@ -124,7 +114,7 @@ When `getModifierState()` returns true on Gecko?
     </tr>
     <tr>
       <th scope="row"><code>"Meta"</code></th>
-      <td>❌ <em>Not supported</em></td>
+      <td><kbd>⊞ Windows Logo</kbd> key pressed (from Firefox 118)</td>
       <td><kbd>Meta</kbd> key pressed</td>
       <td><kbd>⌘ Command</kbd> key pressed</td>
       <td>❌ <em>Not supported</em></td>
@@ -139,7 +129,7 @@ When `getModifierState()` returns true on Gecko?
     </tr>
     <tr>
       <th scope="row"><code>"OS"</code></th>
-      <td><kbd>⊞ Windows Logo</kbd> key pressed</td>
+      <td><kbd>⊞ Windows Logo</kbd> key pressed (before Firefox 118)</td>
       <td>
         <kbd>Super</kbd> key or <kbd>Hyper</kbd> key pressed (typically, mapped
         to <kbd>⊞ Windows Logo</kbd> key)
@@ -191,14 +181,13 @@ When `getModifierState()` returns true on Gecko?
 </table>
 
 - On the other platforms, "Alt", "Control" and "Shift" may be supported.
-- All modifiers (except `"FnLock"`, `"Hyper"`,
-  `"Super"` and `"Symbol"` which are defined after Gecko
-  implements this) are always supported for untrusted events on Gecko. This doesn't
-  depend on the platform.
+- All modifiers (except `"FnLock"`, `"Hyper"`, `"Super"` and `"Symbol"` which are defined after Firefox implements this) are always supported for untrusted events on Firefox.
+  This doesn't depend on the platform.
 
 ## `"Accel"` virtual modifier
 
-> **Note:** The `"Accel"` virtual modifier has
+> [!NOTE]
+> The `"Accel"` virtual modifier has
 > been effectively **deprecated** in current drafts of the DOM3 Events
 > specification.
 
@@ -220,18 +209,23 @@ user settings. For example, Firefox users can customize this with a pref,
 ```js
 function handleKeyboardEvent(event) {
   // Ignore if following modifier is active.
-  if (event.getModifierState("Fn") ||
-      event.getModifierState("Hyper") ||
-      event.getModifierState("OS") ||
-      event.getModifierState("Super") ||
-      event.getModifierState("Win") /* hack for IE */) {
+  if (
+    event.getModifierState("Fn") ||
+    event.getModifierState("Hyper") ||
+    event.getModifierState("OS") ||
+    event.getModifierState("Super") ||
+    event.getModifierState("Win") /* hack for IE */
+  ) {
     return;
   }
 
   // Also ignore if two or more modifiers except Shift are active.
-  if (event.getModifierState("Control") +
+  if (
+    event.getModifierState("Control") +
       event.getModifierState("Alt") +
-      event.getModifierState("Meta") > 1) {
+      event.getModifierState("Meta") >
+    1
+  ) {
     return;
   }
 
@@ -255,28 +249,30 @@ function handleKeyboardEvent(event) {
   }
 
   // Do something different for arrow keys if ScrollLock is locked.
-  if ((event.getModifierState("ScrollLock") ||
-        event.getModifierState("Scroll") /* hack for IE */) &&
-      !event.getModifierState("Control") &&
-      !event.getModifierState("Alt") &&
-      !event.getModifierState("Meta")) {
+  if (
+    (event.getModifierState("ScrollLock") ||
+      event.getModifierState("Scroll")) /* hack for IE */ &&
+    !event.getModifierState("Control") &&
+    !event.getModifierState("Alt") &&
+    !event.getModifierState("Meta")
+  ) {
     switch (event.key) {
       case "ArrowDown":
-      case "Down": // hack for IE and old Gecko
+      case "Down": // hack for IE and old Firefox
         event.preventDefault(); // consume the key event
         break;
       case "ArrowLeft":
-      case "Left": // hack for IE and old Gecko
+      case "Left": // hack for IE and old Firefox
         // Do something different if ScrollLock is locked.
         event.preventDefault(); // consume the key event
         break;
       case "ArrowRight":
-      case "Right": // hack for IE and old Gecko
+      case "Right": // hack for IE and old Firefox
         // Do something different if ScrollLock is locked.
         event.preventDefault(); // consume the key event
         break;
       case "ArrowUp":
-      case "Up": // hack for IE and old Gecko
+      case "Up": // hack for IE and old Firefox
         // Do something different if ScrollLock is locked.
         event.preventDefault(); // consume the key event
         break;
@@ -285,7 +281,8 @@ function handleKeyboardEvent(event) {
 }
 ```
 
-> **Note:** Although this example uses `.getModifierState()` with `"Alt"`,
+> [!NOTE]
+> Although this example uses `.getModifierState()` with `"Alt"`,
 > `"Control"`, `"Meta"` and `"Shift"`, using
 > `event.altKey`, `event.ctrlKey`, `event.metaKey` and
 > `event.shiftKey` may be more preferable.

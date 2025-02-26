@@ -1,21 +1,22 @@
 ---
 title: counter-set
 slug: Web/CSS/counter-set
-tags:
-  - CSS
-  - CSS Counter
-  - CSS Lists
-  - CSS Property
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.counter-set
 ---
+
 {{CSSRef}}
 
-The **`counter-set`** [CSS](/en-US/docs/Web/CSS) property sets a [CSS counter](/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters) to a given value. It manipulates the value of existing counters, and will only create new counters if there isn't already a counter of the given name on the element.
+The **`counter-set`** [CSS](/en-US/docs/Web/CSS) property sets [CSS counters](/en-US/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters) on the element to the given values.
+
+If the counters don't exist the `counter-set` property creates a new counter for each named counter in the list of space-separated counter and value pairs. However, to create a new counter it is recommended to use the {{cssxref("counter-reset")}} CSS property.
+
+If a named counter in the list is missing a value, the value of the counter will be set to `0`.
 
 {{EmbedInteractiveExample("pages/css/counter-set.html")}}
 
-> **Note:** The counter's value can be incremented or decremented using the {{cssxref("counter-increment")}} CSS property.
+> [!NOTE]
+> The counter's value can be incremented or decremented using the {{cssxref("counter-increment")}} CSS property.
 
 ## Syntax
 
@@ -50,7 +51,7 @@ The `counter-set` property is specified as either one of the following:
 - {{cssxref("custom-ident", "&lt;custom-ident&gt;")}}
   - : The name of the counter to set.
 - {{cssxref("&lt;integer&gt;")}}
-  - : The value to set the counter to on each occurrence of the element. Defaults to `0` if not specified. If there isn't currently a counter of the given name on the element, the element will create a new counter of the given name with a starting value of 0 (though it may then immediately set or increment that value to something different).
+  - : The value to set the counter to on each occurrence of the element. Defaults to `0` if not specified. If there isn't currently a counter of the given name on the element, the element will create a new counter of the given name with a starting value of `0` (though it may then immediately set or increment that value to something different).
 - `none`
   - : No counter set is to be performed. This can be used to override a `counter-set` defined in a less specific rule.
 
@@ -84,9 +85,11 @@ h1 {
 
 ## See also
 
-- [Using CSS Counters](/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters)
+- [Using CSS Counters](/en-US/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)
 - {{cssxref("counter-increment")}}
 - {{cssxref("counter-reset")}}
 - {{cssxref("@counter-style")}}
 - {{cssxref("counter", "counter()")}} and {{cssxref("counters", "counters()")}} functions
 - {{cssxref("content")}} property
+- [CSS lists and counters](/en-US/docs/Web/CSS/CSS_lists) module
+- [CSS counter styles](/en-US/docs/Web/CSS/CSS_counter_styles) module

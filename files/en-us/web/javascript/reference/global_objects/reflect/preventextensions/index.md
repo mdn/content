@@ -1,28 +1,31 @@
 ---
 title: Reflect.preventExtensions()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/preventExtensions
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Reference
-  - Reflect
-  - Polyfill
+page-type: javascript-static-method
 browser-compat: javascript.builtins.Reflect.preventExtensions
 ---
+
 {{JSRef}}
 
-The static
-**`Reflect.preventExtensions()`** method prevents new
-properties from ever being added to an object (i.e., prevents future extensions to the
-object). It is similar to {{jsxref("Object.preventExtensions()")}}, but with
-some [differences](#difference_from_object.preventextensions).
+The **`Reflect.preventExtensions()`** static method is like {{jsxref("Object.preventExtensions()")}}. It prevents new properties from ever being added to an object (i.e., prevents future extensions to the object).
 
-{{EmbedInteractiveExample("pages/js/reflect-preventextensions.html")}}
+{{InteractiveExample("JavaScript Demo: Reflect.preventExtensions()")}}
+
+```js interactive-example
+const object1 = {};
+
+console.log(Reflect.isExtensible(object1));
+// Expected output: true
+
+Reflect.preventExtensions(object1);
+
+console.log(Reflect.isExtensible(object1));
+// Expected output: false
+```
 
 ## Syntax
 
-```js
+```js-nolint
 Reflect.preventExtensions(target)
 ```
 
@@ -33,19 +36,21 @@ Reflect.preventExtensions(target)
 
 ### Return value
 
-A {{jsxref("Boolean")}} indicating whether or not the target was successfully set to
-prevent extensions.
+A {{jsxref("Boolean")}} indicating whether or not the target was successfully set to prevent extensions.
 
 ### Exceptions
 
-A {{jsxref("TypeError")}}, if `target` is not an
-{{jsxref("Object")}}.
+- {{jsxref("TypeError")}}
+  - : Thrown if `target` is not an object.
 
 ## Description
 
-The `Reflect.preventExtensions()` method allows you to prevent new
-properties from ever being added to an object (i.e., prevents future extensions to the
-object). It is similar to {{jsxref("Object.preventExtensions()")}}.
+`Reflect.preventExtensions()` provides the reflective semantic of preventing extensions of an object. The differences with {{jsxref("Object.preventExtensions()")}} are:
+
+- `Reflect.preventExtensions()` throws a {{jsxref("TypeError")}} if the target is not an object, while `Object.preventExtensions()` always returns non-object targets as-is.
+- `Reflect.preventExtensions()` returns a {{jsxref("Boolean")}} indicating whether or not the target was successfully set to prevent extensions, while `Object.preventExtensions()` returns the target object.
+
+`Reflect.preventExtensions()` invokes the `[[PreventExtensions]]` [object internal method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy#object_internal_methods) of `target`.
 
 ## Examples
 
@@ -55,26 +60,23 @@ See also {{jsxref("Object.preventExtensions()")}}.
 
 ```js
 // Objects are extensible by default.
-let empty = {}
-Reflect.isExtensible(empty)  // === true
+const empty = {};
+Reflect.isExtensible(empty); // true
 
 // ...but that can be changed.
-Reflect.preventExtensions(empty)
-Reflect.isExtensible(empty)  // === false
+Reflect.preventExtensions(empty);
+Reflect.isExtensible(empty); // false
 ```
 
-### Difference from Object.preventExtensions()
+### Difference with Object.preventExtensions()
 
-If the `target` argument to this method is not an object (a
-primitive), then it will cause a {{jsxref("TypeError")}}. With
-{{jsxref("Object.preventExtensions()")}}, a non-object `target`
-will be coerced to an object.
+If the `target` argument to this method is not an object (a primitive), then it will cause a {{jsxref("TypeError")}}. With {{jsxref("Object.preventExtensions()")}}, a non-object `target` will be returned as-is without any errors.
 
 ```js
-Reflect.preventExtensions(1)
+Reflect.preventExtensions(1);
 // TypeError: 1 is not an object
 
-Object.preventExtensions(1)
+Object.preventExtensions(1);
 // 1
 ```
 
@@ -90,4 +92,5 @@ Object.preventExtensions(1)
 
 - [Polyfill of `Reflect.preventExtensions` in `core-js`](https://github.com/zloirock/core-js#ecmascript-reflect)
 - {{jsxref("Reflect")}}
-- {{jsxref("Object.isExtensible()")}}
+- {{jsxref("Object.preventExtensions()")}}
+- [`handler.preventExtensions()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/preventExtensions)

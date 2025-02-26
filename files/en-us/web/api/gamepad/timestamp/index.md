@@ -1,18 +1,12 @@
 ---
-title: Gamepad.timestamp
+title: "Gamepad: timestamp property"
+short-title: timestamp
 slug: Web/API/Gamepad/timestamp
 page-type: web-api-instance-property
-tags:
-  - API
-  - Gamepad API
-  - Games
-  - NeedsBetterSpecLink
-  - NeedsMarkupWork
-  - Property
-  - Reference
 browser-compat: api.Gamepad.timestamp
 ---
-{{APIRef("Gamepad API")}}
+
+{{APIRef("Gamepad API")}}{{SecureContext_Header}}
 
 The **`Gamepad.timestamp`** property of the
 {{domxref("Gamepad")}} interface returns a {{domxref("DOMHighResTimeStamp")}}
@@ -25,7 +19,8 @@ relative to the `navigationStart` attribute of the
 increasing, meaning that they can be compared to determine the ordering of updates, as
 newer values will always be greater than or equal to older values.
 
-> **Note:** This property is not currently supported anywhere.
+> [!NOTE]
+> This property is not currently supported anywhere.
 
 ## Value
 
@@ -37,10 +32,6 @@ A {{domxref("DOMHighResTimeStamp")}} object.
 const gp = navigator.getGamepads()[0];
 console.log(gp.timestamp);
 ```
-
-## Value
-
-A {{domxref("DOMHighResTimeStamp")}}.
 
 ## Specifications
 

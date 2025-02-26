@@ -1,12 +1,9 @@
 ---
 title: Proxy servers and tunneling
 slug: Web/HTTP/Proxy_servers_and_tunneling
-tags:
-  - HTTP
-  - HTTP Tunneling
-  - Proxies
-  - Proxy
+page-type: guide
 ---
+
 {{HTTPSidebar}}
 
 When navigating through different networks of the Internet, proxy servers and HTTP tunnels are facilitating access to content on the World Wide Web. A proxy can be on the user's local computer, or anywhere between the user's computer and a destination server on the Internet. This page outlines some basics about proxies and introduces a few configuration options.
@@ -17,7 +14,7 @@ There are two types of proxies: **forward proxies** (or tunnel, or gateway) and 
 
 A forward proxy, or gateway, or just "proxy" provides proxy services to a client or a group of clients. There are likely hundreds of thousands of open forward proxies on the Internet. They store and forward Internet services (like the DNS, or web pages) to reduce and control the bandwidth used by the group.
 
-Forward proxies can also be anonymous proxies and allow users to hide their IP address while browsing the Web or using other Internet services. [TOR](https://www.torproject.org/) (The Onion Router), routes internet traffic through multiple proxies for anonymity.
+Forward proxies can also be anonymous and allow users to hide their IP address while browsing the Web or using other Internet services. For example, [Tor](https://www.torproject.org/) routes internet traffic through multiple proxies for anonymity.
 
 ## Reverse proxies
 
@@ -54,7 +51,7 @@ To provide information about the proxy itself (not about the client connecting t
 
 Tunneling transmits private network data and protocol information through public network by encapsulating the data. HTTP tunneling is using a protocol of higher level (HTTP) to transport a lower level protocol (TCP).
 
-The HTTP protocol specifies a request method called {{HTTPMethod("CONNECT")}}. It starts two-way communications with the requested resource and can be used to open a tunnel. This is how a client behind an HTTP proxy can access websites using SSL (i.e. HTTPS, port 443). Note, however, that not all proxy servers support the `CONNECT` method or limit it to port 443 only.
+The HTTP protocol specifies a request method called {{HTTPMethod("CONNECT")}}. It starts two-way communications with the requested resource and can be used to open a tunnel. This is how a client behind an HTTP proxy can access websites using TLS (i.e. HTTPS, port 443). Note, however, that not all proxy servers support the `CONNECT` method or limit it to port 443 only.
 
 See also the [HTTP tunnel article on Wikipedia](https://en.wikipedia.org/wiki/HTTP_tunnel).
 
@@ -62,32 +59,23 @@ See also the [HTTP tunnel article on Wikipedia](https://en.wikipedia.org/wiki/HT
 
 A [Proxy Auto-Configuration (PAC)](/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file) file is a [JavaScript](/en-US/docs/Web/JavaScript) function that determines whether web browser requests (HTTP, HTTPS, and FTP) go directly to the destination or are forwarded to a web proxy server. The JavaScript function contained in the PAC file defines the function:
 
-The auto-config file should be saved to a file with a `.pac` filename extension:
+The auto-config file should be saved to a file with a `.pac` filename extension: `proxy.pac`.
 
-```html
-proxy.pac
-```
-
-And the MIME type set to:
-
-```html
-application/x-ns-proxy-autoconfig
-```
+And the MIME type set to `application/x-ns-proxy-autoconfig`.
 
 The file consists of a function called `FindProxyForURL`. The example below will work in an environment where the internal DNS server is set up so that it can only resolve internal host names, and the goal is to use a proxy only for hosts that aren't resolvable:
 
 ```js
 function FindProxyForURL(url, host) {
-  if (isResolvable(host))
+  if (isResolvable(host)) {
     return "DIRECT";
-  else
-    return "PROXY proxy.mydomain.com:8080";
+  }
+  return "PROXY proxy.mydomain.com:8080";
 }
 ```
 
-See [Proxy Auto-Configuration (PAC)](/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file) for more examples.
-
 ## See also
 
-- {{HTTPMethod("CONNECT")}}
-- [Proxy server on Wikipedia](https://en.wikipedia.org/wiki/Proxy_server)
+- [Proxy Auto-Configuration (PAC) file](/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file)
+- {{HTTPMethod("CONNECT")}} method
+- {{glossary("Proxy server")}}

@@ -1,15 +1,13 @@
 ---
 title: prefers-contrast
 slug: Web/CSS/@media/prefers-contrast
-tags:
-  - CSS
-  - Reference
-  - media feature
+page-type: css-media-feature
 browser-compat: css.at-rules.media.prefers-contrast
 ---
+
 {{CSSRef}}
 
-The **`prefers-contrast`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) is used to detect whether the user has requested the web content to be presented with a lower or higher contrast.
+The **`prefers-contrast`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/@media#media_features) is used to detect whether the user has requested the web content to be presented with a lower or higher contrast.
 
 ## Syntax
 
@@ -66,7 +64,4 @@ This example has an annoying low contrast by default.
 
 ## See also
 
-- Microsoft [-ms-high-contrast](https://docs.microsoft.com/en-us/previous-versions/hh771830(v=vs.85)) media feature
 - CSS [forced-colors](/en-US/docs/Web/CSS/@media/forced-colors) media query
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/CSS/@media/")}}

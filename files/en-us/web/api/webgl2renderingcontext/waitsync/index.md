@@ -1,16 +1,12 @@
 ---
-title: WebGL2RenderingContext.waitSync()
+title: "WebGL2RenderingContext: waitSync() method"
+short-title: waitSync()
 slug: Web/API/WebGL2RenderingContext/waitSync
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL2
 browser-compat: api.WebGL2RenderingContext.waitSync
 ---
-{{APIRef("WebGL")}}
+
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGL2RenderingContext.waitSync()`** method of the [WebGL 2 API](/en-US/docs/Web/API/WebGL_API) returns immediately, but waits on
 the GL server until the given {{domxref("WebGLSync")}} object is signaled.
@@ -20,7 +16,7 @@ multiple GL contexts.
 
 ## Syntax
 
-```js
+```js-nolint
 waitSync(sync, flags, timeout)
 ```
 

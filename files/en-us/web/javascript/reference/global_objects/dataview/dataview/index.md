@@ -1,29 +1,38 @@
 ---
 title: DataView() constructor
 slug: Web/JavaScript/Reference/Global_Objects/DataView/DataView
-tags:
-  - Constructor
-  - DataView
-  - JavaScript
-  - Reference
-  - TypedArrays
-  - Polyfill
+page-type: javascript-constructor
 browser-compat: javascript.builtins.DataView.DataView
 ---
+
 {{JSRef}}
 
-The **`DataView()`** constructor is used to create
-{{jsxref("DataView")}} objects.
+The **`DataView()`** constructor creates {{jsxref("DataView")}} objects.
 
-{{EmbedInteractiveExample("pages/js/dataview-constructor.html")}}
+{{InteractiveExample("JavaScript Demo: DataView Constructor")}}
+
+```js interactive-example
+// Create an ArrayBuffer with a size in bytes
+const buffer = new ArrayBuffer(16);
+
+// Create a couple of views
+const view1 = new DataView(buffer);
+const view2 = new DataView(buffer, 12, 4); // From byte 12 for the next 4 bytes
+view1.setInt8(12, 42); // Put 42 in slot 12
+
+console.log(view2.getInt8(0));
+// Expected output: 42
+```
 
 ## Syntax
 
-```js
+```js-nolint
 new DataView(buffer)
 new DataView(buffer, byteOffset)
 new DataView(buffer, byteOffset, byteLength)
 ```
+
+> **Note:** `DataView()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
 
 ### Parameters
 
@@ -39,24 +48,12 @@ new DataView(buffer, byteOffset, byteLength)
 
 ### Return value
 
-A new `DataView` object representing the specified data buffer. (That
-probably wasn't a very helpful description.)
-
-You can think of the returned object as an "interpreter" of the array buffer of bytes —
-it knows how to convert numbers to fit within the buffer correctly, both when reading
-and writing to it. This means handling integer and float conversion, endianness, and
-other details of representing numbers in binary form.
+A new {{jsxref("DataView")}} object representing the specified data buffer.
 
 ### Exceptions
 
 - {{jsxref("RangeError")}}
-
-  - : Thrown if the `byteOffset` or `byteLength` parameter values
-    result in the view extending past the end of the buffer.
-
-    For example, if the buffer is 16 bytes long, the `byteOffset` is 8, and
-    the `byteLength` is 10, this error is thrown because the resulting view
-    tries to extend 2 bytes past the total length of the buffer.
+  - : Thrown if the `byteOffset` or `byteLength` parameter values result in the view extending past the end of the buffer. In other words, `byteOffset + byteLength > buffer.byteLength`.
 
 ## Examples
 

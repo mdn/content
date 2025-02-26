@@ -1,27 +1,16 @@
 ---
-title: RTCIceParameters.password
+title: "RTCIceParameters: password property"
+short-title: password
 slug: Web/API/RTCIceParameters/password
 page-type: web-api-instance-property
-tags:
-  - API
-  - Candidates
-  - Connectivity
-  - ICE
-  - Negotiation
-  - Property
-  - RTCIceParameters
-  - Reference
-  - WebRTC
-  - WebRTC API
-  - password
 browser-compat: api.RTCIceParameters.password
 ---
+
 {{APIRef("WebRTC")}}
 
 The **{{domxref("RTCIceParameters")}}**
 dictionary's **`password`** property specifies the ICE
-password that, in tandem with the {{domxref("RTCIceParameters.usernameFragment",
-    "usernameFragment")}}, uniquely identifies an ICE session for its entire
+password that, in tandem with the {{domxref("RTCIceParameters.usernameFragment", "usernameFragment")}}, uniquely identifies an ICE session for its entire
 duration.
 
 ## Value

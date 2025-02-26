@@ -1,22 +1,21 @@
 ---
 title: Updating add-ons for Firefox 6
 slug: Mozilla/Firefox/Releases/6/Updating_add-ons
-tags:
-  - API
-  - Add-ons
-  - Firefox
+page-type: guide
 ---
+
 {{FirefoxSidebar}}
 
 This article provides an overview of the changes you may need to make to your add-ons in order for them to work properly in Firefox 6. You can find a complete list of developer-related changes in Firefox 6 in [Firefox 6 for developers](/en-US/docs/Mozilla/Firefox/Releases/6).
 
 ## Do you need to do anything at all?
 
-If your add-on is distributed on [addons.mozilla.org](https://addons.mozilla.org/en-US/firefox/) (AMO), it's been checked by an automated compatibility verification tool. Add-ons that don't use APIs that changed in Firefox 6, and have no binary components (which [need to be recompiled for every major Firefox release](/en-US/docs/Mozilla/Developer_guide/Interface_Compatibility#binary_interfaces)), have automatically been updated on AMO to indicate that they work in Firefox 6.
+If your add-on is distributed on [addons.mozilla.org](https://addons.mozilla.org/en-US/firefox/) (AMO), it's been checked by an automated compatibility verification tool. Add-ons that don't use APIs that changed in Firefox 6, and have no binary components (which need to be recompiled for every major Firefox release), have automatically been updated on AMO to indicate that they work in Firefox 6.
 
 So you should start by visiting AMO and looking to see if your add-on needs any work done at all.
 
-> **Note:** You should still test your add-on on Firefox 6, even if it's been automatically upgraded. There are edge cases that may not be automatically detected.
+> [!NOTE]
+> You should still test your add-on on Firefox 6, even if it's been automatically upgraded. There are edge cases that may not be automatically detected.
 
 Once you've confirmed that you need to make changes, come on back to this page and read on.
 
@@ -44,7 +43,7 @@ The {{ domxref("window.top") }} property is now read only. This will affect your
 
 `javascript:` and `data:` URLs entered into the location bar no longer inherit the principal of the currently loaded page. This probably won't affect many add-ons but if you run code that uses these URLs you may want to double check that everything is working as expected.
 
-{{ Bug("658949") }} changed how the hash (#) symbol is treated in data Ls which may break CSS stylesheets which contain such symbol if it is not escaped.
+[Firefox bug 658949](https://bugzil.la/658949) changed how the hash (#) symbol is treated in data URLs which may break CSS stylesheets which contain such symbol if it is not escaped.
 
 ## Interfaces
 

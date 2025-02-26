@@ -1,17 +1,12 @@
 ---
-title: ByteLengthQueuingStrategy()
+title: "ByteLengthQueuingStrategy: ByteLengthQueuingStrategy() constructor"
+short-title: ByteLengthQueuingStrategy()
 slug: Web/API/ByteLengthQueuingStrategy/ByteLengthQueuingStrategy
 page-type: web-api-constructor
-tags:
-  - API
-  - ByteLengthQueuingStrategy
-  - Constructor
-  - Experimental
-  - Reference
-  - Streams
 browser-compat: api.ByteLengthQueuingStrategy.ByteLengthQueuingStrategy
 ---
-{{SeeCompatTable}}{{APIRef("Streams")}}
+
+{{APIRef("Streams")}}{{AvailableInWorkers}}
 
 The **`ByteLengthQueuingStrategy()`**
 constructor creates and returns a `ByteLengthQueuingStrategy` object
@@ -19,16 +14,21 @@ instance.
 
 ## Syntax
 
-```js
-new ByteLengthQueuingStrategy(highWaterMark)
+```js-nolint
+new ByteLengthQueuingStrategy(options)
 ```
 
 ### Parameters
 
-- `highWaterMark`
-  - : An object containing a `highWaterMark` property. This is a non-negative
-    integer defining the total number of chunks that can be contained in the internal
-    queue before backpressure is applied.
+- `options`
+
+  - : An object with the following property:
+
+    - `highWaterMark`
+
+      - : The total number of bytes that can be contained in the internal queue before backpressure is applied.
+
+        Unlike [`CountQueuingStrategy()`](/en-US/docs/Web/API/CountQueuingStrategy/CountQueuingStrategy) where `highWaterMark` specifies a simple count of the number of chunks, with `ByteLengthQueuingStrategy()`, `highWaterMark` specifies a number of _bytes_ — specifically, given a stream of chunks, how many bytes worth of those chunks (rather than a count of how many of those chunks) can be contained in the internal queue before backpressure is applied.
 
 ### Return value
 
@@ -41,19 +41,24 @@ None.
 ## Examples
 
 ```js
-const queuingStrategy = new ByteLengthQueuingStrategy({ highWaterMark: 1 });
+const queuingStrategy = new ByteLengthQueuingStrategy({
+  highWaterMark: 1 * 1024,
+});
 
-const readableStream = new ReadableStream({
-  start(controller) {
-    // …
+const readableStream = new ReadableStream(
+  {
+    start(controller) {
+      // …
+    },
+    pull(controller) {
+      // …
+    },
+    cancel(err) {
+      console.log("stream error:", err);
+    },
   },
-  pull(controller) {
-    // …
-  },
-  cancel(err) {
-    console.log("stream error:", err);
-  }
-}, queuingStrategy);
+  queuingStrategy,
+);
 
 const size = queuingStrategy.size(chunk);
 ```
@@ -65,3 +70,7 @@ const size = queuingStrategy.size(chunk);
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("ByteLengthQueuingStrategy")}} interface

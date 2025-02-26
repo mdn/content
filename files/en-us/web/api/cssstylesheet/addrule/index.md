@@ -1,25 +1,13 @@
 ---
-title: CSSStyleSheet.addRule()
+title: "CSSStyleSheet: addRule() method"
+short-title: addRule()
 slug: Web/API/CSSStyleSheet/addRule
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSS
-  - CSSOM
-  - CSSOM API
-  - CSSStyleSheet
-  - Layout
-  - Method
-  - Object Model
-  - Reference
-  - Style
-  - StyleSheet
-  - addRule
-  - legacy
-  - rules
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.CSSStyleSheet.addRule
 ---
+
 {{APIRef("CSSOM")}}{{deprecated_header}}
 
 The obsolete {{domxref("CSSStyleSheet")}} interface's
@@ -29,7 +17,7 @@ stylesheet. You should avoid using this method, and should instead use the more 
 
 ## Syntax
 
-```js
+```js-nolint
 addRule(selector, styleBlock, index)
 ```
 
@@ -52,8 +40,7 @@ addRule(selector, styleBlock, index)
 Always returns -1.
 
 Note that due to somewhat esoteric rules about where you can legally insert rules,
-it's possible that an exception may be thrown. See {{domxref("CSSStyleSheet.insertRule",
-  "insertRule()")}} for more information.
+it's possible that an exception may be thrown. See {{domxref("CSSStyleSheet.insertRule", "insertRule()")}} for more information.
 
 ## Usage notes
 

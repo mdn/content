@@ -1,21 +1,20 @@
 ---
-title: BackgroundFetchUpdateUIEvent()
+title: "BackgroundFetchUpdateUIEvent: BackgroundFetchUpdateUIEvent() constructor"
+short-title: BackgroundFetchUpdateUIEvent()
 slug: Web/API/BackgroundFetchUpdateUIEvent/BackgroundFetchUpdateUIEvent
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Reference
-  - BackgroundFetchUpdateUIEvent
+status:
+  - experimental
 browser-compat: api.BackgroundFetchUpdateUIEvent.BackgroundFetchUpdateUIEvent
 ---
-{{APIRef("Background Fetch API")}}
+
+{{APIRef("Background Fetch API")}}{{SeeCompatTable}}{{AvailableInWorkers("service")}}
 
 The **`BackgroundFetchUpdateUIEvent()`** constructor creates a new {{domxref("BackgroundFetchUpdateUIEvent")}} object. This constructor is not typically used as the browser creates these objects itself and provides them to background fetch event callbacks.
 
 ## Syntax
 
-```js
+```js-nolint
 new BackgroundFetchEvent(type, options)
 ```
 

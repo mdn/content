@@ -1,14 +1,10 @@
 ---
 title: transform-style
 slug: Web/CSS/transform-style
-tags:
-  - CSS
-  - CSS Property
-  - CSS Transforms
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.transform-style
 ---
+
 {{CSSRef}}
 
 The **`transform-style`** [CSS](/en-US/docs/Web/CSS) property sets whether children of an element are positioned in the 3D space or are flattened in the plane of the element.
@@ -41,6 +37,22 @@ transform-style: unset;
 - `preserve-3d`
   - : Indicates that the children of the element should be positioned in the 3D-space.
 
+## Description
+
+The spec lists some [grouping property values](https://drafts.csswg.org/css-transforms-2/#grouping-property-values), which
+require the user agent to create a flattened representation of the descendant elements before they can be applied, and therefore force the element to have a [used value](/en-US/docs/Web/CSS/CSS_cascade/used_value) of `transform-style: flat`, even when `preserve-3d` is specified. These property values include:
+
+- {{cssxref("overflow")}}: any value other than `visible` or `clip`.
+- {{cssxref("opacity")}}: any value less than `1`.
+- {{cssxref("filter")}}: any value other than `none`.
+- {{cssxref("clip")}}: any value other than `auto`.
+- {{cssxref("clip-path")}}: any value other than `none`.
+- {{cssxref("isolation")}}: used value of `isolate`.
+- {{cssxref("mask-image")}}: any value other than `none`.
+- {{cssxref("mask-border-source")}}: any value other than `none`.
+- {{cssxref("mix-blend-mode")}}: any value other than `normal`.
+- {{cssxref("contain")}}: `paint` and any other property/value combination that causes paint containment. This includes any property that affect the used value of the `contain` property, such as `content-visibility: hidden`.
+
 ## Formal definition
 
 {{CSSInfo}}
@@ -71,7 +83,7 @@ We also provide a checkbox allowing you to toggle between this, and `transform-s
 
 <div class="checkbox">
   <label for="preserve"><code>preserve-3d</code></label>
-  <input type="checkbox" id="preserve" checked>
+  <input type="checkbox" id="preserve" checked />
 </div>
 ```
 
@@ -99,32 +111,32 @@ We also provide a checkbox allowing you to toggle between this, and `transform-s
 }
 
 .front {
-    background: rgba(90,90,90,.7);
-    transform: translateZ(50px);
+  background: rgb(90 90 90 / 70%);
+  transform: translateZ(50px);
 }
 
 .back {
-    background: rgba(0,210,0,.7);
-    transform: rotateY(180deg) translateZ(50px);
+  background: rgb(0 210 0 / 70%);
+  transform: rotateY(180deg) translateZ(50px);
 }
 
 .right {
-  background: rgba(210,0,0,.7);
+  background: rgb(210 0 0 / 70%);
   transform: rotateY(90deg) translateZ(50px);
 }
 
 .left {
-  background: rgba(0,0,210,.7);
+  background: rgb(0 0 210 / 70%);
   transform: rotateY(-90deg) translateZ(50px);
 }
 
 .top {
-  background: rgba(210,210,0,.7);
+  background: rgb(210 210 0 / 70%);
   transform: rotateX(90deg) translateZ(50px);
 }
 
 .bottom {
-  background: rgba(210,0,210,.7);
+  background: rgb(210 0 210 / 70%);
   transform: rotateX(-90deg) translateZ(50px);
 }
 ```
@@ -132,16 +144,12 @@ We also provide a checkbox allowing you to toggle between this, and `transform-s
 #### JavaScript
 
 ```js
-const cube = document.getElementById('example-element');
-const checkbox = document.getElementById('preserve');
+const cube = document.getElementById("example-element");
+const checkbox = document.getElementById("preserve");
 
-checkbox.addEventListener('change', () => {
-  if(checkbox.checked) {
-    cube.style.transformStyle = 'preserve-3d';
-  } else {
-    cube.style.transformStyle = 'flat';
-  }
-})
+checkbox.addEventListener("change", () => {
+  cube.style.transformStyle = checkbox.checked ? "preserve-3d" : "flat";
+});
 ```
 
 #### Result
@@ -158,4 +166,4 @@ checkbox.addEventListener('change', () => {
 
 ## See also
 
-- [Using CSS transforms](/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)
+- [Using CSS transforms](/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)

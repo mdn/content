@@ -1,18 +1,11 @@
 ---
-title: SpeechSynthesis.cancel()
+title: "SpeechSynthesis: cancel() method"
+short-title: cancel()
 slug: Web/API/SpeechSynthesis/cancel
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - SpeechSynthesis
-  - Web Speech API
-  - cancel
-  - speech
-  - synthesis
 browser-compat: api.SpeechSynthesis.cancel
 ---
+
 {{APIRef("Web Speech API")}}
 
 The **`cancel()`** method of the {{domxref("SpeechSynthesis")}}
@@ -22,7 +15,7 @@ If an utterance is currently being spoken, speaking will stop immediately.
 
 ## Syntax
 
-```js
+```js-nolint
 cancel()
 ```
 
@@ -39,8 +32,12 @@ None ({{jsxref("undefined")}}).
 ```js
 const synth = window.speechSynthesis;
 
-const utterance1 = new SpeechSynthesisUtterance('How about we say this now? This is quite a long sentence to say.');
-const utterance2 = new SpeechSynthesisUtterance('We should say another sentence too, just to be on the safe side.');
+const utterance1 = new SpeechSynthesisUtterance(
+  "How about we say this now? This is quite a long sentence to say.",
+);
+const utterance2 = new SpeechSynthesisUtterance(
+  "We should say another sentence too, just to be on the safe side.",
+);
 
 synth.speak(utterance1);
 synth.speak(utterance2);

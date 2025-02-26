@@ -1,22 +1,18 @@
 ---
-title: VideoFrame.close()
+title: "VideoFrame: close() method"
+short-title: close()
 slug: Web/API/VideoFrame/close
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - close
-  - VideoFrame
 browser-compat: api.VideoFrame.close
 ---
-{{DefaultAPISidebar("Web Codecs API")}}
+
+{{APIRef("Web Codecs API")}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`close()`** method of the {{domxref("VideoFrame")}} interface clears all states and releases the reference to the media resource.
 
 ## Syntax
 
-```js
+```js-nolint
 close()
 ```
 

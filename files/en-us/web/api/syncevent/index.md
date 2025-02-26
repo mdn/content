@@ -2,21 +2,12 @@
 title: SyncEvent
 slug: Web/API/SyncEvent
 page-type: web-api-interface
-tags:
-  - API
-  - Background Sync
-  - Interface
-  - Non-standard
-  - Offline
-  - Reference
-  - ServiceWorker
-  - SyncEvent
-  - Workers
 browser-compat: api.SyncEvent
 ---
-{{APIRef("Service Workers API")}} {{Non-standard_header}}
 
-The **`SyncEvent`** interface represents a sync action that is dispatched on the {{domxref("ServiceWorkerGlobalScope")}} of a ServiceWorker.
+{{APIRef("Background Sync")}}{{AvailableInWorkers("service")}}
+
+The **`SyncEvent`** interface of the {{domxref("Background Synchronization API", "", "", "nocode")}} represents a sync action that is dispatched on the {{domxref("ServiceWorkerGlobalScope")}} of a ServiceWorker.
 
 This interface inherits from the {{domxref("ExtendableEvent")}} interface.
 
@@ -27,20 +18,24 @@ This interface inherits from the {{domxref("ExtendableEvent")}} interface.
 - {{domxref("SyncEvent.SyncEvent", "SyncEvent()")}}
   - : Creates a new `SyncEvent` object.
 
-## Properties
+## Instance properties
 
-_Inherits properties from its ancestor, {{domxref("Event")}}_.
+_Inherits properties from its parent, {{domxref("ExtendableEvent")}} and {{domxref("Event")}}_.
 
-- {{domxref("SyncEvent.tag")}} {{readonlyinline}}
+- {{domxref("SyncEvent.tag")}} {{ReadOnlyInline}}
   - : Returns the developer-defined identifier for this `SyncEvent`.
-- {{domxref("SyncEvent.lastChance")}} {{readonlyinline}}
+- {{domxref("SyncEvent.lastChance")}} {{ReadOnlyInline}}
   - : Returns `true` if the user agent will not make further synchronization attempts after the current attempt.
 
-## Methods
+## Instance methods
 
-_Inherits methods from its parent, {{domxref("ExtendableEvent")}}_.
+_Inherits methods from its parent, {{domxref("ExtendableEvent")}} and {{domxref("Event")}}_.
 
 None.
+
+## Specifications
+
+{{Specifications}}
 
 ## Browser compatibility
 

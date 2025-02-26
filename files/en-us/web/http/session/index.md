@@ -1,9 +1,9 @@
 ---
 title: A typical HTTP session
 slug: Web/HTTP/Session
-tags:
-  - HTTP
+page-type: guide
 ---
+
 {{HTTPSidebar}}
 
 In client-server protocols, like HTTP, sessions consist of three phases:
@@ -18,9 +18,10 @@ As of HTTP/1.1, the connection is no longer closed after completing the third ph
 
 In client-server protocols, it is the client which establishes the connection. Opening a connection in HTTP means initiating a connection in the underlying transport layer, usually this is TCP.
 
-With TCP the default port, for an HTTP server on a computer, is port 80. Other ports can also be used, like 8000 or 8080. The URL of a page to fetch contains both the domain name, and the port number, though the latter can be omitted if it is 80. See [Identifying resources on the Web](/en-US/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web) for more details.
+With TCP the default port, for an HTTP server on a computer, is port 80. Other ports can also be used, like 8000 or 8080. The URL of a page to fetch contains both the domain name, and the port number, though the latter can be omitted if it is 80. See [the URL reference](/en-US/docs/Web/URI) for more details.
 
-> **Note:** The client-server model does not allow the server to send data to the client without an explicit request for it. To work around this problem, web developers use several techniques: ping the server periodically via the {{domxref("XMLHTTPRequest")}}, {{domxref("fetch()")}} APIs, using the [WebSockets API](/en-US/docs/Web/API/WebSockets_API), or similar protocols.
+> [!NOTE]
+> The client-server model does not allow the server to send data to the client without an explicit request for it. However, various Web APIs enable this use case, including the [Push API](/en-US/docs/Web/API/Push_API), [Server-sent events](/en-US/docs/Web/API/Server-sent_events), and the [WebSockets API](/en-US/docs/Web/API/WebSockets_API).
 
 ## Sending a client request
 
@@ -28,8 +29,8 @@ Once the connection is established, the user-agent can send the request (a user-
 
 1. The first line contains a request method followed by its parameters:
 
-    - the path of the document, as an absolute URL without the protocol or domain name
-    - the HTTP protocol version
+   - the path of the document, as an absolute URL without the protocol or domain name
+   - the HTTP protocol version
 
 2. Subsequent lines represent an HTTP header, giving the server information about what type of data is appropriate (for example, what language, what MIME types), or other data altering its behavior (for example, not sending an answer if it is already cached). These HTTP headers form a block which ends with an empty line.
 3. The final block is an optional data block, which may contain further data mainly used by the POST method.
@@ -38,7 +39,7 @@ Once the connection is established, the user-agent can send the request (a user-
 
 Fetching the root page of developer.mozilla.org, (`https://developer.mozilla.org/`), and telling the server that the user-agent would prefer the page in French, if possible:
 
-```
+```http
 GET / HTTP/1.1
 Host: developer.mozilla.org
 Accept-Language: fr
@@ -48,7 +49,7 @@ Observe that final empty line, this separates the data block from the header blo
 
 For example, sending the result of a form:
 
-```
+```http
 POST /contact_form.php HTTP/1.1
 Host: developer.mozilla.org
 Content-Length: 64
@@ -62,7 +63,7 @@ name=Joe%20User&request=Send%20me%20one%20of%20your%20catalogue
 HTTP defines a set of [request methods](/en-US/docs/Web/HTTP/Methods) indicating the desired action to be performed upon a resource. Although they can also be nouns, these requests methods are sometimes referred as HTTP verbs. The most common requests are `GET` and `POST`:
 
 - The {{HTTPMethod("GET")}} method requests a data representation of the specified resource. Requests using `GET` should only retrieve data.
-- The {{HTTPMethod("POST")}} method sends data to a server so it may change its state. This is the method often used for [HTML Forms](/en-US/docs/Learn/Forms).
+- The {{HTTPMethod("POST")}} method sends data to a server so it may change its state. This is the method often used for [HTML Forms](/en-US/docs/Learn_web_development/Extensions/Forms).
 
 ## Structure of a server response
 
@@ -76,7 +77,7 @@ After the connected agent has sent its request, the web server processes it, and
 
 Successful web page response:
 
-```
+```http
 HTTP/1.1 200 OK
 Content-Type: text/html; charset=utf-8
 Content-Length: 55743
@@ -93,14 +94,14 @@ X-XSS-Protection: 1; mode=block
 Vary: Accept-Encoding,Cookie
 Age: 7
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <title>A simple webpage</title>
 </head>
 <body>
-  <h1>Simple HTML5 webpage</h1>
+  <h1>Simple HTML webpage</h1>
   <p>Hello, world!</p>
 </body>
 </html>
@@ -108,7 +109,7 @@ Age: 7
 
 Notification that the requested resource has permanently moved:
 
-```
+```http
 HTTP/1.1 301 Moved Permanently
 Server: Apache/2.4.37 (Red Hat)
 Content-Type: text/html; charset=utf-8
@@ -120,12 +121,12 @@ Via: Moz-Cache-zlb05
 Connection: Keep-Alive
 Content-Length: 325 (the content contains a default page to display if the user-agent is not able to follow the link)
 
-<!DOCTYPE html>… (contains a site-customized page helping the user to find the missing resource)
+<!doctype html>… (contains a site-customized page helping the user to find the missing resource)
 ```
 
 Notification that the requested resource doesn't exist:
 
-```
+```http
 HTTP/1.1 404 Not Found
 Content-Type: text/html; charset=utf-8
 Content-Length: 38217
@@ -142,12 +143,12 @@ X-XSS-Protection: 1; mode=block
 Vary: Accept-Encoding,Cookie
 X-Cache: Error from cloudfront
 
-<!DOCTYPE html>… (contains a site-customized page helping the user to find the missing resource)
+<!doctype html>… (contains a site-customized page helping the user to find the missing resource)
 ```
 
 ### Response status codes
 
-[HTTP response status codes](/en-US/docs/Web/HTTP/Status) indicate if a specific HTTP request has been successfully completed. Responses are grouped into five classes: informational responses, successful responses, redirects, client errors, and servers errors.
+[HTTP response status codes](/en-US/docs/Web/HTTP/Status) indicate if a specific HTTP request has been successfully completed. Responses are grouped into five classes: informational responses, successful responses, redirects, client errors, and server errors.
 
 - {{HTTPStatus(200)}}: OK. The request has succeeded.
 - {{HTTPStatus(301)}}: Moved Permanently. This response code means that the URI of requested resource has been changed.
@@ -155,7 +156,7 @@ X-Cache: Error from cloudfront
 
 ## See also
 
-- [Identifying resources on the Web](/en-US/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web)
+- [URLs](/en-US/docs/Web/URI)
 - [HTTP headers](/en-US/docs/Web/HTTP/Headers)
 - [HTTP request methods](/en-US/docs/Web/HTTP/Methods)
 - [HTTP response status codes](/en-US/docs/Web/HTTP/Status)

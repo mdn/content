@@ -1,38 +1,30 @@
 ---
-title: 'Element: mouseover event'
+title: "Element: mouseover event"
+short-title: mouseover
 slug: Web/API/Element/mouseover_event
 page-type: web-api-event
-tags:
-  - API
-  - Cursor
-  - DOM
-  - Event
-  - Interface
-  - MouseEvent
-  - Reference
-  - mouse
-  - mouseover
-  - move
-  - pointer
 browser-compat: api.Element.mouseover_event
 ---
+
 {{APIRef}}
 
 The **`mouseover`** event is fired at an {{domxref("Element")}} when a pointing device (such as a mouse or trackpad) is used to move the cursor onto the element or one of its child elements.
+
+If the target element has child elements, `mouseout` and `mouseover` events fire as the mouse moves over the boundaries of these elements too, not just the target element itself. Usually, `mouseenter` and `mouseleave` events' behavior is more sensible, because they are not affected by moving into child elements.
 
 ## Syntax
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('mouseover', (event) => {});
+addEventListener("mouseover", (event) => {});
 
-onmouseover = (event) => { };
+onmouseover = (event) => {};
 ```
 
 ## Event type
 
-An {{domxref("MouseEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("MouseEvent")}}. Inherits from {{domxref("UIEvent")}} and {{domxref("Event")}}.
 
 {{InheritanceDiagram("MouseEvent")}}
 
@@ -40,56 +32,53 @@ An {{domxref("MouseEvent")}}. Inherits from {{domxref("Event")}}.
 
 _This interface also inherits properties of its parents, {{domxref("UIEvent")}} and {{domxref("Event")}}._
 
-- {{domxref("MouseEvent.altKey")}} {{readonlyinline}}
+- {{domxref("MouseEvent.altKey")}} {{ReadOnlyInline}}
   - : Returns `true` if the <kbd>alt</kbd> key was down when the mouse event was fired.
-- {{domxref("MouseEvent.button")}} {{readonlyinline}}
+- {{domxref("MouseEvent.button")}} {{ReadOnlyInline}}
   - : The button number that was pressed (if applicable) when the mouse event was fired.
-- {{domxref("MouseEvent.buttons")}} {{readonlyinline}}
+- {{domxref("MouseEvent.buttons")}} {{ReadOnlyInline}}
   - : The buttons being pressed (if any) when the mouse event was fired.
-- {{domxref("MouseEvent.clientX")}} {{readonlyinline}}
-  - : The X coordinate of the mouse pointer in local (DOM content) coordinates.
-- {{domxref("MouseEvent.clientY")}} {{readonlyinline}}
-  - : The Y coordinate of the mouse pointer in local (DOM content) coordinates.
-- {{domxref("MouseEvent.ctrlKey")}} {{readonlyinline}}
+- {{domxref("MouseEvent.clientX")}} {{ReadOnlyInline}}
+  - : The X coordinate of the mouse pointer in [viewport coordinates](/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems#viewport).
+- {{domxref("MouseEvent.clientY")}} {{ReadOnlyInline}}
+  - : The Y coordinate of the mouse pointer in [viewport coordinates](/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems#viewport).
+- {{domxref("MouseEvent.ctrlKey")}} {{ReadOnlyInline}}
   - : Returns `true` if the <kbd>control</kbd> key was down when the mouse event was fired.
-- {{domxref("MouseEvent.layerX")}} {{Non-standard_inline}} {{readonlyinline}}
+- {{domxref("MouseEvent.layerX")}} {{Non-standard_inline}} {{ReadOnlyInline}}
   - : Returns the horizontal coordinate of the event relative to the current layer.
-- {{domxref("MouseEvent.layerY")}} {{Non-standard_inline}} {{readonlyinline}}
+- {{domxref("MouseEvent.layerY")}} {{Non-standard_inline}} {{ReadOnlyInline}}
   - : Returns the vertical coordinate of the event relative to the current layer.
-- {{domxref("MouseEvent.metaKey")}} {{readonlyinline}}
+- {{domxref("MouseEvent.metaKey")}} {{ReadOnlyInline}}
   - : Returns `true` if the <kbd>meta</kbd> key was down when the mouse event was fired.
-- {{domxref("MouseEvent.movementX")}} {{readonlyinline}}
+- {{domxref("MouseEvent.movementX")}} {{ReadOnlyInline}}
   - : The X coordinate of the mouse pointer relative to the position of the last {{domxref("Element/mousemove_event", "mousemove")}} event.
-- {{domxref("MouseEvent.movementY")}} {{readonlyinline}}
+- {{domxref("MouseEvent.movementY")}} {{ReadOnlyInline}}
   - : The Y coordinate of the mouse pointer relative to the position of the last {{domxref("Element/mousemove_event", "mousemove")}} event.
-- {{domxref("MouseEvent.offsetX")}} {{readonlyinline}}
+- {{domxref("MouseEvent.offsetX")}} {{ReadOnlyInline}}
   - : The X coordinate of the mouse pointer relative to the position of the padding edge of the target node.
-- {{domxref("MouseEvent.offsetY")}} {{readonlyinline}}
+- {{domxref("MouseEvent.offsetY")}} {{ReadOnlyInline}}
   - : The Y coordinate of the mouse pointer relative to the position of the padding edge of the target node.
-- {{domxref("MouseEvent.pageX")}} {{readonlyinline}}
+- {{domxref("MouseEvent.pageX")}} {{ReadOnlyInline}}
   - : The X coordinate of the mouse pointer relative to the whole document.
-- {{domxref("MouseEvent.pageY")}} {{readonlyinline}}
+- {{domxref("MouseEvent.pageY")}} {{ReadOnlyInline}}
   - : The Y coordinate of the mouse pointer relative to the whole document.
-- {{domxref("MouseEvent.relatedTarget")}} {{readonlyinline}}
+- {{domxref("MouseEvent.relatedTarget")}} {{ReadOnlyInline}}
   - : The secondary target for the event, if there is one.
-- {{domxref("MouseEvent.screenX")}} {{readonlyinline}}
-  - : The X coordinate of the mouse pointer in global (screen) coordinates.
-- {{domxref("MouseEvent.screenY")}} {{readonlyinline}}
-  - : The Y coordinate of the mouse pointer in global (screen) coordinates.
-- {{domxref("MouseEvent.shiftKey")}} {{readonlyinline}}
+- {{domxref("MouseEvent.screenX")}} {{ReadOnlyInline}}
+  - : The X coordinate of the mouse pointer in [screen coordinates](/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems#screen).
+- {{domxref("MouseEvent.screenY")}} {{ReadOnlyInline}}
+  - : The Y coordinate of the mouse pointer in [screen coordinates](/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems#screen).
+- {{domxref("MouseEvent.shiftKey")}} {{ReadOnlyInline}}
   - : Returns `true` if the <kbd>shift</kbd> key was down when the mouse event was fired.
-- {{domxref("MouseEvent.mozPressure")}} {{non-standard_inline()}} {{deprecated_inline}} {{readonlyinline}}
-  - : The amount of pressure applied to a touch or tablet device when generating the event; this value ranges between `0.0` (minimum pressure) and `1.0` (maximum pressure).
-    Instead of using this deprecated (and non-standard) property, you should use {{domxref("PointerEvent")}} and look at its {{domxref("PointerEvent.pressure", "pressure")}} property.
-- {{domxref("MouseEvent.mozInputSource")}} {{non-standard_inline()}} {{readonlyinline}}
+- {{domxref("MouseEvent.mozInputSource")}} {{non-standard_inline()}} {{ReadOnlyInline}}
   - : The type of device that generated the event (one of the `MOZ_SOURCE_*` constants).
     This lets you, for example, determine whether a mouse event was generated by an actual mouse or by a touch event (which might affect the degree of accuracy with which you interpret the coordinates associated with the event).
-- {{domxref("MouseEvent.webkitForce")}} {{non-standard_inline()}} {{readonlyinline}}
-  - : The amount of pressure applied when clicking
-- {{domxref("MouseEvent.x")}} {{readonlyinline}}
+- {{domxref("MouseEvent.webkitForce")}} {{non-standard_inline()}} {{ReadOnlyInline}}
+  - : The amount of pressure applied when clicking.
+- {{domxref("MouseEvent.x")}} {{ReadOnlyInline}}
   - : Alias for {{domxref("MouseEvent.clientX")}}.
-- {{domxref("MouseEvent.y")}} {{readonlyinline}}
-  - : Alias for {{domxref("MouseEvent.clientY")}}
+- {{domxref("MouseEvent.y")}} {{ReadOnlyInline}}
+  - : Alias for {{domxref("MouseEvent.clientY")}}.
 
 ## Examples
 
@@ -112,27 +101,35 @@ const test = document.getElementById("test");
 
 // This handler will be executed only once when the cursor
 // moves over the unordered list
-test.addEventListener("mouseenter", (event) => {
-  // highlight the mouseenter target
-  event.target.style.color = "purple";
+test.addEventListener(
+  "mouseenter",
+  (event) => {
+    // highlight the mouseenter target
+    event.target.style.color = "purple";
 
-  // reset the color after a short delay
-  setTimeout(() => {
-    event.target.style.color = "";
-  }, 500);
-}, false);
+    // reset the color after a short delay
+    setTimeout(() => {
+      event.target.style.color = "";
+    }, 500);
+  },
+  false,
+);
 
 // This handler will be executed every time the cursor
 // is moved over a different list item
-test.addEventListener("mouseover", (event) => {
-  // highlight the mouseover target
-  event.target.style.color = "orange";
+test.addEventListener(
+  "mouseover",
+  (event) => {
+    // highlight the mouseover target
+    event.target.style.color = "orange";
 
-  // reset the color after a short delay
-  setTimeout(() => {
-    event.target.style.color = "";
-  }, 500);
-}, false);
+    // reset the color after a short delay
+    setTimeout(() => {
+      event.target.style.color = "";
+    }, 500);
+  },
+  false,
+);
 ```
 
 ### Result
@@ -149,14 +146,14 @@ test.addEventListener("mouseover", (event) => {
 
 ## See also
 
-- [Introduction to events](/en-US/docs/Learn/JavaScript/Building_blocks/Events)
+- [Learn: Introduction to events](/en-US/docs/Learn_web_development/Core/Scripting/Events)
 - {{domxref("Element/mousedown_event", "mousedown")}}
 - {{domxref("Element/mouseup_event", "mouseup")}}
 - {{domxref("Element/mousemove_event", "mousemove")}}
 - {{domxref("Element/click_event", "click")}}
 - {{domxref("Element/dblclick_event", "dblclick")}}
-- {{domxref("Element/mouseover_event", "mouseover")}}
 - {{domxref("Element/mouseout_event", "mouseout")}}
 - {{domxref("Element/mouseenter_event", "mouseenter")}}
 - {{domxref("Element/mouseleave_event", "mouseleave")}}
 - {{domxref("Element/contextmenu_event", "contextmenu")}}
+- {{domxref("Element/pointerover_event", "pointerover")}}

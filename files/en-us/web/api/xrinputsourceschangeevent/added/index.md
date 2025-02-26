@@ -1,29 +1,15 @@
 ---
-title: XRInputSourcesChangeEvent.added
+title: "XRInputSourcesChangeEvent: added property"
+short-title: added
 slug: Web/API/XRInputSourcesChangeEvent/added
 page-type: web-api-instance-property
-tags:
-  - API
-  - AR
-  - Input Sources
-  - Inputs
-  - Mixed
-  - Property
-  - Read-only
-  - Reality
-  - Reference
-  - VR
-  - Virtual
-  - XR
-  - XRInputSource
-  - XRInputSourcesChangeEvent
-  - augmented
 browser-compat: api.XRInputSourcesChangeEvent.added
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SecureContext_Header}}
 
 The read-only {{domxref("XRInputSourcesChangeEvent")}}
-property {{domxref("XRInputSourcesChangeEvent.added", "added")}} is a list of zero or
+property `added` is a list of zero or
 more input sources, each identified using an {{domxref("XRInputSource")}} object,
 which have been newly made available for use.
 
@@ -42,12 +28,12 @@ removed devices whose {{domxref("XRInputSource.targetRayMode", "targetRayMode")}
 
 ```js
 xrSession.oninputsourcescchange = (event) => {
-  for (let input of event.added) {
+  for (const input of event.added) {
     if (input.targetRayMode === "tracked-pointer") {
       addedPointerDevice(input);
     }
   }
-  for (let input of event.removed) {
+  for (const input of event.removed) {
     if (input.targetRayMode === "tracked-pointer") {
       removedPointerDevice(input);
     }

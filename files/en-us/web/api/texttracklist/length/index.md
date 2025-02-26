@@ -1,20 +1,11 @@
 ---
-title: TextTrackList.length
+title: "TextTrackList: length property"
+short-title: length
 slug: Web/API/TextTrackList/length
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - Media
-  - Property
-  - Read-only
-  - Reference
-  - TextTrackList
-  - length
-  - list
-  - track
 browser-compat: api.TextTrackList.length
 ---
+
 {{APIRef("HTML DOM")}}
 
 The read-only **{{domxref("TextTrackList")}}**

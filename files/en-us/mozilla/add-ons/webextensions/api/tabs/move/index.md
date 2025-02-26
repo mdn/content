@@ -1,19 +1,11 @@
 ---
 title: tabs.move()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/move
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - move
-  - tabs
+page-type: webextension-api-function
 browser-compat: webextensions.api.tabs.move
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 Moves one or more tabs to a new position in the same window or to a different window.
 
@@ -23,7 +15,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let moving = browser.tabs.move(
   tabIds,              // integer or integer array
   moveProperties       // object
@@ -69,12 +61,12 @@ function firstToLast(windowInfo) {
   if (windowInfo.tabs.length === 0) {
     return;
   }
-  let moving = browser.tabs.move(windowInfo.tabs[0].id, {index: -1});
+  let moving = browser.tabs.move(windowInfo.tabs[0].id, { index: -1 });
   moving.then(onMoved, onError);
 }
 
-browser.browserAction.onClicked.addListener(function() {
-  let gettingCurrent = browser.windows.getCurrent({populate: true});
+browser.browserAction.onClicked.addListener(() => {
+  let gettingCurrent = browser.windows.getCurrent({ populate: true });
   gettingCurrent.then(firstToLast, onError);
 });
 ```
@@ -92,12 +84,12 @@ function onError(error) {
 
 function moveMoz(tabs) {
   let mozTabIds = tabs.map((tabInfo) => tabInfo.id);
-  let moving = browser.tabs.move(mozTabIds, {index: -1});
+  let moving = browser.tabs.move(mozTabIds, { index: -1 });
   moving.then(onMoved, onError);
 }
 
-browser.browserAction.onClicked.addListener(function() {
-  let gettingMozTabs = browser.tabs.query({url:"*://*.mozilla.org/*"});
+browser.browserAction.onClicked.addListener(() => {
+  let gettingMozTabs = browser.tabs.query({ url: "*://*.mozilla.org/*" });
   gettingMozTabs.then(moveMoz, onError);
 });
 ```
@@ -116,12 +108,15 @@ function onError(error) {
 function moveMoz(tabs) {
   let mozTabIds = tabs.map((tabInfo) => tabInfo.id);
   let targetWindow = tabs[0].windowId;
-  let moving = browser.tabs.move(mozTabIds, {windowId: targetWindow, index: 0});
+  let moving = browser.tabs.move(mozTabIds, {
+    windowId: targetWindow,
+    index: 0,
+  });
   moving.then(onMoved, onError);
 }
 
-browser.browserAction.onClicked.addListener(function() {
-  let gettingMozTabs = browser.tabs.query({url:"*://*.mozilla.org/*"});
+browser.browserAction.onClicked.addListener(() => {
+  let gettingMozTabs = browser.tabs.query({ url: "*://*.mozilla.org/*" });
   gettingMozTabs.then(moveMoz, onError);
 });
 ```
@@ -132,11 +127,11 @@ browser.browserAction.onClicked.addListener(function() {
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/tabs/#method-move) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.getZoom
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-move) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -163,4 +158,4 @@ browser.browserAction.onClicked.addListener(function() {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

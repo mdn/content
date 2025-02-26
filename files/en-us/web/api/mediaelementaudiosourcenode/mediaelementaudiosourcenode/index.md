@@ -1,23 +1,18 @@
 ---
-title: MediaElementAudioSourceNode()
+title: "MediaElementAudioSourceNode: MediaElementAudioSourceNode() constructor"
+short-title: MediaElementAudioSourceNode()
 slug: Web/API/MediaElementAudioSourceNode/MediaElementAudioSourceNode
 page-type: web-api-constructor
-tags:
-  - API
-  - Audio
-  - Constructor
-  - MediaElementAudioSourceNode
-  - Reference
-  - Web Audio API
 browser-compat: api.MediaElementAudioSourceNode.MediaElementAudioSourceNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 The **`MediaElementAudioSourceNode()`** constructor creates a new {{domxref("MediaElementAudioSourceNode")}} object instance.
 
 ## Syntax
 
-```js
+```js-nolint
 new MediaElementAudioSourceNode(context, options)
 ```
 
@@ -41,7 +36,7 @@ new MediaElementAudioSourceNode(context, options)
       - : A string describing the meaning of the channels. This
         interpretation will define how audio [up-mixing and down-mixing](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing) will happen.
         The possible values are `"speakers"` or `"discrete"`. (See
-        {{domxref("AudioNode.channelCountMode")}} for more information including default
+        {{domxref("AudioNode.channelInterpretation")}} for more information including default
         values.)
 
 ### Return value
@@ -52,13 +47,11 @@ A new {{domxref("MediaElementAudioSourceNode")}} object instance.
 
 ```js
 const ac = new AudioContext();
-const mediaElement = document.createElement('audio');
+const mediaElement = document.createElement("audio");
 
-const options = {
-  mediaElement : mediaElement
-}
-
-const myAudioSource = new MediaElementAudioSourceNode(ac, options);
+const myAudioSource = new MediaElementAudioSourceNode(ac, {
+  mediaElement,
+});
 ```
 
 ## Specifications

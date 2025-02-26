@@ -1,24 +1,18 @@
 ---
-title: FormData.getAll()
+title: "FormData: getAll() method"
+short-title: getAll()
 slug: Web/API/FormData/getAll
 page-type: web-api-instance-method
-tags:
-  - API
-  - FormData
-  - Method
-  - Reference
-  - XMLHttpRequest
 browser-compat: api.FormData.getAll
 ---
-{{APIRef("XMLHttpRequest")}}
+
+{{APIRef("XMLHttpRequest API")}} {{AvailableInWorkers}}
 
 The **`getAll()`** method of the {{domxref("FormData")}} interface returns all the values associated with a given key from within a `FormData` object.
 
-> **Note:** This method is available in [Web Workers](/en-US/docs/Web/API/Web_Workers_API).
-
 ## Syntax
 
-```js
+```js-nolint
 getAll(name)
 ```
 
@@ -36,14 +30,14 @@ An array of values whose key matches the specified `name`. Otherwise, an empty l
 If we add two `username` values to a {{domxref("FormData")}} using {{domxref("FormData.append", "append()")}}:
 
 ```js
-formData.append('username', 'Chris');
-formData.append('username', 'Bob');
+formData.append("username", "Chris");
+formData.append("username", "Bob");
 ```
 
 The following `getAll()` method will return both `username` values in an array:
 
 ```js
-formData.getAll('username'); // Returns ["Chris", "Bob"]
+formData.getAll("username"); // Returns ["Chris", "Bob"]
 ```
 
 ## Specifications
@@ -56,5 +50,5 @@ formData.getAll('username'); // Returns ["Chris", "Bob"]
 
 ## See also
 
-- [Using FormData objects](/en-US/docs/Web/API/FormData/Using_FormData_Objects)
+- [Using FormData objects](/en-US/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
 - {{HTMLElement("Form")}}

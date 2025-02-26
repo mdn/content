@@ -1,43 +1,32 @@
 ---
-title: RTCPeerConnection.addStream()
+title: "RTCPeerConnection: addStream() method"
+short-title: addStream()
 slug: Web/API/RTCPeerConnection/addStream
 page-type: web-api-instance-method
-tags:
-  - Deprecated
-  - Method
-  - RTCPeerConnection
-  - Reference
-  - WebRTC
-  - addStream
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.RTCPeerConnection.addStream
 ---
 
-{{APIRef("WebRTC")}}{{deprecated_header}}
+{{APIRef("WebRTC")}}{{Deprecated_Header}}{{non-standard_header}}
 
-The _obsolete_ {{domxref("RTCPeerConnection")}} method
-**`addStream()`** adds a {{domxref("MediaStream")}} as a local
-source of audio or video. Instead of using this obsolete method, you should instead use
-{{domxref("RTCPeerConnection.addTrack", "addTrack()")}} once for each track you wish to
-send to the remote peer.
+The **`addStream()`** method of the {{domxref("RTCPeerConnection")}} interface adds a {{domxref("MediaStream")}} as a local source of audio or video.
+Instead of using this obsolete method, you should instead use {{domxref("RTCPeerConnection.addTrack", "addTrack()")}} once for each track you wish to send to the remote peer.
 
-If the {{domxref("RTCPeerConnection.signalingState", "signalingState")}} is set to
-`closed`, an `InvalidStateError` is raised. If the
-{{domxref("RTCPeerConnection.signalingState", "signalingState")}} is set to
-`stable`, the event {{DOMxRef("RTCPeerConnection/negotiationneeded_event", "negotiationneeded")}} is sent on the
-{{domxref("RTCPeerConnection")}} to indicate that {{Glossary("ICE")}} negotiation must
-be repeated to consider the new stream.
+If the {{domxref("RTCPeerConnection.signalingState", "signalingState")}} is set to `closed`, an `InvalidStateError` is raised.
+If the {{domxref("RTCPeerConnection.signalingState", "signalingState")}} is set to `stable`, the event {{DOMxRef("RTCPeerConnection/negotiationneeded_event", "negotiationneeded")}} is sent on the {{domxref("RTCPeerConnection")}} to indicate that {{Glossary("ICE")}} negotiation must be repeated to consider the new stream.
 
 ## Syntax
 
-```js
-rtcPeerConnection.addStream(mediaStream);
+```js-nolint
+addStream(mediaStream)
 ```
 
 ### Parameters
 
 - `mediaStream`
-  - : A {{domxref("MediaStream")}} object indicating the stream to add to the WebRTC peer
-    connection.
+  - : A {{domxref("MediaStream")}} object indicating the stream to add to the WebRTC peer connection.
 
 ### Return value
 
@@ -45,42 +34,33 @@ None.
 
 ## Example
 
-This simple example adds the audio and video stream coming from the user's camera to
-the connection.
+This simple example adds the audio and video stream coming from the user's camera to the connection.
 
 ```js
-navigator.mediaDevices.getUserMedia(
-  { video: true, audio: true },
-  function (stream) {
-    const pc = new RTCPeerConnection();
-    pc.addStream(stream);
-  }
-);
+navigator.mediaDevices.getUserMedia({ video: true, audio: true }, (stream) => {
+  const pc = new RTCPeerConnection();
+  pc.addStream(stream);
+});
 ```
 
 ## Migrating to addTrack()
 
-[Compatibility allowing](#browser_compatibility), you should update your
-code to instead use the {{domxref("RTCPeerConnection.addTrack", "addTrack()")}} method:
+[Compatibility allowing](#browser_compatibility), you should update your code to instead use the {{domxref("RTCPeerConnection.addTrack", "addTrack()")}} method:
 
 ```js
-navigator.getUserMedia({ video: true, audio: true }, function (stream) {
+navigator.getUserMedia({ video: true, audio: true }, (stream) => {
   const pc = new RTCPeerConnection();
-  stream.getTracks().forEach(function (track) {
+  stream.getTracks().forEach((track) => {
     pc.addTrack(track, stream);
   });
 });
 ```
 
-The newer {{domxref("RTCPeerConnection.addTrack", "addTrack()")}} API avoids confusion
-over whether later changes to the track-makeup of a stream affects a peer connection
-(they do not).
+The newer {{domxref("RTCPeerConnection.addTrack", "addTrack()")}} API avoids confusion over whether later changes to the track-makeup of a stream affects a peer connection (they do not).
 
-The exception is in Chrome, where `addStream()` _does_ make the peer
-connection sensitive to later stream changes (though such changes do not fire the
-{{DOMxRef("RTCPeerConnection/negotiationneeded_event", "negotiationneeded")}} event). If you are relying on the Chrome behavior, note
-that other browsers do not have it. You can write web compatible code using feature
-detection instead:
+The exception is in Chrome, where `addStream()` _does_ make the peer connection sensitive to later stream changes (though such changes do not fire the {{DOMxRef("RTCPeerConnection/negotiationneeded_event", "negotiationneeded")}} event).
+If you are relying on the Chrome behavior, note that other browsers do not have it.
+You can write web compatible code using feature detection instead:
 
 ```js
 // Add a track to a stream and the peer connection said stream was added to:
@@ -97,7 +77,7 @@ if (pc.addTrack) {
 
 stream.removeTrack(track);
 if (pc.removeTrack) {
-  pc.removeTrack(pc.getSenders().find((sender) => sender.track == track));
+  pc.removeTrack(pc.getSenders().find((sender) => sender.track === track));
 } else {
   // If you have code listening for negotiationneeded events:
   setTimeout(() => pc.dispatchEvent(new Event("negotiationneeded")));

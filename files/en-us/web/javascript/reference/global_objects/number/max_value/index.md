@@ -1,24 +1,42 @@
 ---
 title: Number.MAX_VALUE
 slug: Web/JavaScript/Reference/Global_Objects/Number/MAX_VALUE
-tags:
-  - JavaScript
-  - Number
-  - Property
-  - Reference
+page-type: javascript-static-data-property
 browser-compat: javascript.builtins.Number.MAX_VALUE
 ---
+
 {{JSRef}}
 
-The **`Number.MAX_VALUE`** property represents the maximum numeric value representable in JavaScript.
+The **`Number.MAX_VALUE`** static data property represents the maximum numeric value representable in JavaScript.
 
-{{EmbedInteractiveExample("pages/js/number-maxvalue.html")}}{{js_property_attributes(0, 0, 0)}}
+{{InteractiveExample("JavaScript Demo: Number.MAX_VALUE")}}
+
+```js interactive-example
+function multiply(x, y) {
+  if (x * y > Number.MAX_VALUE) {
+    return "Process as Infinity";
+  }
+  return x * y;
+}
+
+console.log(multiply(1.7976931348623157e308, 1));
+// Expected output: 1.7976931348623157e+308
+
+console.log(multiply(1.7976931348623157e308, 2));
+// Expected output: "Process as Infinity"
+```
+
+## Value
+
+2<sup>1024</sup> - 2<sup>971</sup>, or approximately `1.7976931348623157E+308`.
+
+{{js_property_attributes(0, 0, 0)}}
 
 ## Description
 
-The `MAX_VALUE` property has a value of approximately `1.79E+308`, or 1.7976931348623157 × 10<sup>308</sup>. Values larger than `MAX_VALUE` are represented as {{jsxref("Infinity")}}.
+Values larger than `MAX_VALUE` are represented as {{jsxref("Infinity")}} and will lose their actual value.
 
-Because `MAX_VALUE` is a static property of {{jsxref("Number")}}, you always use it as `Number.MAX_VALUE`, rather than as a property of a {{jsxref("Number")}} object you created.
+Because `MAX_VALUE` is a static property of {{jsxref("Number")}}, you always use it as `Number.MAX_VALUE`, rather than as a property of a number value.
 
 ## Examples
 
@@ -45,4 +63,4 @@ if (num1 * num2 <= Number.MAX_VALUE) {
 ## See also
 
 - {{jsxref("Number.MIN_VALUE")}}
-- The {{jsxref("Number")}} object it belongs to
+- {{jsxref("Number")}}

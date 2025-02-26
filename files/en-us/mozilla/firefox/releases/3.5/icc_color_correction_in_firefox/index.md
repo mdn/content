@@ -1,20 +1,18 @@
 ---
 title: ICC color correction in Firefox
 slug: Mozilla/Firefox/Releases/3.5/ICC_color_correction_in_Firefox
-tags:
-  - Firefox
-  - Firefox 3
-  - Firefox 3.5
+page-type: guide
 ---
+
 {{FirefoxSidebar}}
 
-Although support for color correction was introduced in Firefox 3, it was disabled by default, requiring some tinkering about in the about:config window to enable it.  Firefox 3.5 addresses the issues that caused it be disabled by default in the previous version, and now images with [International Color Consortium](https://www.color.org/index.xalter) (ICC) tagging are, by default, color corrected.
+Although support for color correction was introduced in Firefox 3, it was disabled by default, requiring some tinkering about in the about:config window to enable it. Firefox 3.5 addresses the issues that caused it be disabled by default in the previous version, and now images with [International Color Consortium](https://www.color.org/index.xalter) (ICC) tagging are, by default, color corrected.
 
 The image below is split into three sections. The top left corner shows the image as rendered by Firefox 2. The top right corner shows how the image renders in Firefox 3. The bottom shows the image rendered in Photoshop.
 
-![](iccsample.jpg)
+![A purple flower as rendered by Firefox 2, Firefox 3, and Photoshop.](iccsample.jpg)
 
-As you can see, Firefox 3 and Photoshop render the image identically, because both support the embedded color correction profile.  Firefox 2 ignores the profile, resulting in mismatched color.
+As you can see, Firefox 3 and Photoshop render the image identically, because both support the embedded color correction profile. Firefox 2 ignores the profile, resulting in mismatched color.
 
 ## Configuring color correction
 
@@ -56,7 +54,7 @@ If no path is specified for the color profile, Firefox queries the operating sys
 
 ### Specifying a default rendering intent
 
-In addition, you can choose to set the value of the `gfx.color_management.rendering_intent` preference to specify a default rendering intent.  By default, the intent specified by images is ignored, unless you specify -1 for this value.
+In addition, you can choose to set the value of the `gfx.color_management.rendering_intent` preference to specify a default rendering intent. By default, the intent specified by images is ignored, unless you specify -1 for this value.
 
 The following table lists the possible values.
 
@@ -111,11 +109,12 @@ The following table lists the possible values.
   </tbody>
 </table>
 
-> **Note:** In Firefox 3.5, perceptual, media-relative, and saturation intents all render the same way.
+> [!NOTE]
+> In Firefox 3.5, perceptual, media-relative, and saturation intents all render the same way.
 
 ### Caveats
 
-The new QCMS color management system introduced in Firefox 3.5 currently only supports ICC version 2 color profiles, not version 4. This may result in images being too dark. See [bug 488800](https://bugzilla.mozilla.org/show_bug.cgi?id=488800) and the [ICC version 4 profile test](https://www.color.org/version4html.xalter).
+The new QCMS color management system introduced in Firefox 3.5 currently only supports ICC version 2 color profiles, not version 4. This may result in images being too dark. See [bug 488800](https://bugzil.la/488800) and the [ICC version 4 profile test](https://www.color.org/version4html.xalter).
 
 ## See also
 

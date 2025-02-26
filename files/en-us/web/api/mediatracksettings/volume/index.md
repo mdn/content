@@ -1,21 +1,15 @@
 ---
-title: MediaTrackSettings.volume
+title: "MediaTrackSettings: volume property"
+short-title: volume
 slug: Web/API/MediaTrackSettings/volume
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaTrackSettings
-  - Property
-  - Reference
-  - Volume
-  - WebRTC
-browser-compat: api.MediaTrackSettings.volume
+status:
+  - deprecated
+  - non-standard
+browser-compat: api.MediaStreamTrack.applyConstraints.volume_constraint
 ---
-{{DefaultAPISidebar("Media Capture and Streams")}}{{deprecated_header}}
+
+{{APIRef("Media Capture and Streams")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The {{domxref("MediaTrackSettings")}} dictionary's **`volume`**
 property is a double-precision floating-point number indicating the volume of the
@@ -38,8 +32,7 @@ audio track as currently configured.
 
 ## Examples
 
-See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Example:
-  Constraint exerciser")}} for an example.
+See the [Constraint exerciser](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints#example_constraint_exerciser) example.
 
 ## Browser compatibility
 
@@ -47,7 +40,7 @@ See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Exampl
 
 ## See also
 
-- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Streams_API)
-- [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints)
+- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API)
+- [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints)
 - {{domxref("MediaTrackConstraints.volume")}}
 - {{domxref("MediaTrackSettings")}}

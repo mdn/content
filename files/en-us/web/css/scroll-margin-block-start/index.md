@@ -1,19 +1,13 @@
 ---
 title: scroll-margin-block-start
 slug: Web/CSS/scroll-margin-block-start
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-  - Web
-  - recipe:css-property
-  - scroll-margin-block
-  - scroll-margin-block-start
+page-type: css-property
 browser-compat: css.properties.scroll-margin-block-start
 ---
+
 {{CSSRef}}
 
-The `scroll-margin-block-start` property defines the margin of the scroll snap area at the start of the block dimension that is used for snapping this box to the snapport. The scroll snap area is determined by taking the transformed border box, finding its rectangular bounding box (axis-aligned in the scroll container's coordinate space), then adding the specified outsets.
+The `scroll-margin-block-start` property defines the margin of the scroll snap area at the start of the block dimension that is used for snapping this box to the [snapport](/en-US/docs/Glossary/Scroll_snap#snapport). The scroll snap area is determined by taking the transformed border box, finding its rectangular bounding box (axis-aligned in the scroll container's coordinate space), then adding the specified outsets.
 
 {{EmbedInteractiveExample("pages/css/scroll-margin-block-start.html")}}
 
@@ -34,7 +28,7 @@ scroll-margin-block-start: unset;
 
 ### Values
 
-- `<length>`
+- {{CSSXref("&lt;length&gt;")}}
   - : An outset from the block start edge of the scroll container.
 
 ## Formal definition
@@ -55,5 +49,5 @@ scroll-margin-block-start: unset;
 
 ## See also
 
-- [CSS Scroll Snap](/en-US/docs/Web/CSS/CSS_Scroll_Snap)
-- [Well-Controlled Scrolling with CSS Scroll Snap](https://web.dev/css-scroll-snap/)
+- [CSS scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap)
+- [Well-controlled scrolling with CSS scroll snap](https://web.dev/articles/css-scroll-snap)

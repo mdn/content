@@ -1,19 +1,12 @@
 ---
-title: WindowClient.navigate()
+title: "WindowClient: navigate() method"
+short-title: navigate()
 slug: Web/API/WindowClient/navigate
 page-type: web-api-instance-method
-tags:
-  - API
-  - Client
-  - Experimental
-  - Method
-  - Navigate
-  - Reference
-  - Service Workers
-  - WindowClient
 browser-compat: api.WindowClient.navigate
 ---
-{{APIRef("Service Workers API")}}
+
+{{APIRef("Service Workers API")}}{{AvailableInWorkers("service")}}
 
 The **`navigate()`** method of the {{domxref("WindowClient")}}
 interface loads a specified URL into a controlled client page then returns a
@@ -21,7 +14,7 @@ interface loads a specified URL into a controlled client page then returns a
 
 ## Syntax
 
-```js
+```js-nolint
 navigate(url)
 ```
 
@@ -32,7 +25,7 @@ navigate(url)
 
 ### Return value
 
-A {{jsxref("Promise")}} that resolves to the existing {{domxref("WindowClient")}}.
+A {{jsxref("Promise")}} that resolves to the existing {{domxref("WindowClient")}} if the URL is from the same origin as the service worker, or {{jsxref("Operators/null", "null")}} otherwise.
 
 ## Specifications
 

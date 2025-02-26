@@ -1,16 +1,12 @@
 ---
-title: EncodedAudioChunk.type
+title: "EncodedAudioChunk: type property"
+short-title: type
 slug: Web/API/EncodedAudioChunk/type
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - type
-  - EncodedAudioChunk
 browser-compat: api.EncodedAudioChunk.type
 ---
-{{DefaultAPISidebar("WebCodecs API")}}
+
+{{APIRef("WebCodecs API")}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`type`** read-only property of the {{domxref("EncodedAudioChunk")}} interface returns a value indicating whether the audio chunk is a key chunk, which does not relying on other frames for decoding.
 
@@ -29,10 +25,10 @@ In the following example the `type` is printed to the console.
 
 ```js
 const init = {
-  type: 'key',
+  type: "key",
   data: audioBuffer,
   timestamp: 23000000,
-  duration: 2000000
+  duration: 2000000,
 };
 chunk = EncodedAudioChunk(init);
 

@@ -1,15 +1,11 @@
 ---
-title: EXT_disjoint_timer_query.getQueryObjectEXT()
+title: "EXT_disjoint_timer_query: getQueryObjectEXT() method"
+short-title: getQueryObjectEXT()
 slug: Web/API/EXT_disjoint_timer_query/getQueryObjectEXT
 page-type: webgl-extension-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL extension
 browser-compat: api.EXT_disjoint_timer_query.getQueryObjectEXT
 ---
+
 {{APIRef("WebGL")}}
 
 The **`EXT_disjoint_timer_query.getQueryObjectEXT()`** method
@@ -18,7 +14,7 @@ query object.
 
 ## Syntax
 
-```js
+```js-nolint
 getQueryObjectEXT(query, pname)
 ```
 
@@ -42,7 +38,7 @@ Depends on `pname`:
 ## Examples
 
 ```js
-const ext = gl.getExtension('EXT_disjoint_timer_query');
+const ext = gl.getExtension("EXT_disjoint_timer_query");
 const query = ext.createQueryEXT();
 ext.beginQueryEXT(ext.TIME_ELAPSED_EXT, query);
 

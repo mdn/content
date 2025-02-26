@@ -1,18 +1,15 @@
 ---
-title: MediaMetadata.album
+title: "MediaMetadata: album property"
+short-title: album
 slug: Web/API/MediaMetadata/album
 page-type: web-api-instance-property
-tags:
-  - API
-  - MediaMetadata
-  - Property
-  - Reference
 browser-compat: api.MediaMetadata.album
 ---
-{{SeeCompatTable}}{{APIRef("Media Session API")}}
+
+{{APIRef("Media Session API")}}
 
 The **`album`** property of the
-{{domxref("MediaMetaData")}} interface returns or sets the name of the album or
+{{domxref("MediaMetadata")}} interface returns or sets the name of the album or
 collection containing the media to be played.
 
 ## Value
@@ -25,19 +22,43 @@ The following example checks for browser compatibility and sets the current meta
 for the media session.
 
 ```js
-if ('mediaSession' in navigator) {
+if ("mediaSession" in navigator) {
   navigator.mediaSession.metadata = new MediaMetadata({
-    title: 'Unforgettable',
-    artist: 'Nat King Cole',
-    album: 'The Ultimate Collection (Remastered)',
+    title: "Unforgettable",
+    artist: "Nat King Cole",
+    album: "The Ultimate Collection (Remastered)",
     artwork: [
-      { src: 'https://dummyimage.com/96x96',   sizes: '96x96',   type: 'image/png' },
-      { src: 'https://dummyimage.com/128x128', sizes: '128x128', type: 'image/png' },
-      { src: 'https://dummyimage.com/192x192', sizes: '192x192', type: 'image/png' },
-      { src: 'https://dummyimage.com/256x256', sizes: '256x256', type: 'image/png' },
-      { src: 'https://dummyimage.com/384x384', sizes: '384x384', type: 'image/png' },
-      { src: 'https://dummyimage.com/512x512', sizes: '512x512', type: 'image/png' },
-    ]
+      {
+        src: "https://dummyimage.com/96x96",
+        sizes: "96x96",
+        type: "image/png",
+      },
+      {
+        src: "https://dummyimage.com/128x128",
+        sizes: "128x128",
+        type: "image/png",
+      },
+      {
+        src: "https://dummyimage.com/192x192",
+        sizes: "192x192",
+        type: "image/png",
+      },
+      {
+        src: "https://dummyimage.com/256x256",
+        sizes: "256x256",
+        type: "image/png",
+      },
+      {
+        src: "https://dummyimage.com/384x384",
+        sizes: "384x384",
+        type: "image/png",
+      },
+      {
+        src: "https://dummyimage.com/512x512",
+        sizes: "512x512",
+        type: "image/png",
+      },
+    ],
   });
 }
 ```

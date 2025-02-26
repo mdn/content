@@ -1,17 +1,12 @@
 ---
-title: WebGLRenderingContext.getTexParameter()
+title: "WebGLRenderingContext: getTexParameter() method"
+short-title: getTexParameter()
 slug: Web/API/WebGLRenderingContext/getTexParameter
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - Textures
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.getTexParameter
 ---
-{{APIRef("WebGL")}}
+
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGLRenderingContext.getTexParameter()`** method of the
 [WebGL API](/en-US/docs/Web/API/WebGL_API) returns information about the
@@ -19,7 +14,7 @@ given texture.
 
 ## Syntax
 
-```js
+```js-nolint
 getTexParameter(target, pname)
 ```
 
@@ -31,11 +26,12 @@ getTexParameter(target, pname)
 
     - `gl.TEXTURE_2D`: A two-dimensional texture.
     - `gl.TEXTURE_CUBE_MAP`: A cube-mapped texture.
-    When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
-      the following values are available additionally:
 
-      - `gl.TEXTURE_3D`: A three-dimensional texture.
-      - `gl.TEXTURE_2D_ARRAY`: A two-dimensional array texture.
+    When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
+    the following values are available additionally:
+
+    - `gl.TEXTURE_3D`: A three-dimensional texture.
+    - `gl.TEXTURE_2D_ARRAY`: A two-dimensional array texture.
 
 - `pname`
 
@@ -68,7 +64,7 @@ getTexParameter(target, pname)
             <code>gl.LINEAR</code>, <code>gl.NEAREST</code>,
             <code>gl.NEAREST_MIPMAP_NEAREST</code>,
             <code>gl.LINEAR_MIPMAP_NEAREST</code>,
-            <code>gl.NEAREST</code>_MIPMAP_LINEAR (default value),
+            <code>gl.NEAREST_MIPMAP_LINEAR</code> (default value),
             <code>gl.LINEAR_MIPMAP_LINEAR</code>.
           </td>
         </tr>
@@ -193,8 +189,6 @@ gl.getTexParameter(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER);
 
 ## See also
 
-- {{domxref("WebGLRenderingContext.texParameter",
-    "WebGLRenderingContext.texParameterf()")}}
-- {{domxref("WebGLRenderingContext.texParameter",
-    "WebGLRenderingContext.texParameteri()")}}
+- {{domxref("WebGLRenderingContext.texParameter", "WebGLRenderingContext.texParameterf()")}}
+- {{domxref("WebGLRenderingContext.texParameter", "WebGLRenderingContext.texParameteri()")}}
 - {{domxref("EXT_texture_filter_anisotropic")}}

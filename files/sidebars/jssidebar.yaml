@@ -1,0 +1,530 @@
+# Do not add comments to this file. They will be lost.
+
+sidebar:
+  - type: section
+    link: /Web/JavaScript
+    title: JavaScript
+  - type: section
+    title: Tutorials
+  - title: Beginners
+    details: closed
+    children:
+      - link: /Learn_web_development/Getting_started/Your_first_website/Adding_interactivity
+        title: Adding_interactivity
+      - link: /Learn_web_development/Core/Scripting
+        title: Dynamic_scripting_with_JavaScript
+      - link: /Learn_web_development/Core/Frameworks_libraries
+        title: JavaScript_frameworks_and_libraries
+  - title: Guide
+    details: closed
+    children:
+      - link: /Web/JavaScript/Guide/Introduction
+        title: Guide_Introduction
+      - link: /Web/JavaScript/Guide/Grammar_and_types
+        title: Guide_Grammar
+      - link: /Web/JavaScript/Guide/Control_flow_and_error_handling
+        title: Guide_Control_flow
+      - link: /Web/JavaScript/Guide/Loops_and_iteration
+        title: Guide_Loops
+      - link: /Web/JavaScript/Guide/Functions
+        title: Guide_Functions
+      - link: /Web/JavaScript/Guide/Expressions_and_operators
+        title: Guide_Expressions
+      - link: /Web/JavaScript/Guide/Numbers_and_strings
+        title: Guide_Numbers
+      - link: /Web/JavaScript/Guide/Representing_dates_times
+        title: Guide_Dates
+      - link: /Web/JavaScript/Guide/Regular_expressions
+        title: Guide_RegExp
+      - link: /Web/JavaScript/Guide/Indexed_collections
+        title: Guide_Indexed_collections
+      - link: /Web/JavaScript/Guide/Keyed_collections
+        title: Guide_keyed_collections
+      - link: /Web/JavaScript/Guide/Working_with_objects
+        title: Guide_Objects
+      - link: /Web/JavaScript/Guide/Using_classes
+        title: Guide_Classes
+      - link: /Web/JavaScript/Guide/Using_promises
+        title: Guide_Promises
+      - link: /Web/JavaScript/Guide/Typed_arrays
+        title: Guide_Typed_arrays
+      - link: /Web/JavaScript/Guide/Iterators_and_generators
+        title: Guide_Iterators_generators
+      - link: /Web/JavaScript/Guide/Internationalization
+        title: Guide_Internationalization
+      - link: /Web/JavaScript/Guide/Meta_programming
+        title: Guide_Meta
+      - link: /Web/JavaScript/Guide/Modules
+        title: Guide_Modules
+  - title: Intermediate
+    details: closed
+    children:
+      - link: /Learn_web_development/Extensions/Advanced_JavaScript_objects
+        title: Advanced JavaScript objects
+      - link: /Learn_web_development/Extensions/Async_JS
+        title: Asynchronous_JavaScript
+      - link: /Learn_web_development/Extensions/Client-side_APIs
+        title: Client-side_web_APIs
+      - link: /Web/JavaScript/Language_overview
+        title: Language_overview
+      - link: /Web/JavaScript/Data_structures
+        title: Data_structures
+      - link: /Web/JavaScript/Equality_comparisons_and_sameness
+        title: Equality
+      - link: /Web/JavaScript/Enumerability_and_ownership_of_properties
+        title: Enumerability
+      - link: /Web/JavaScript/Closures
+        title: Closures
+  - title: Advanced
+    details: closed
+    children:
+      - link: /Web/JavaScript/Inheritance_and_the_prototype_chain
+        title: Inheritance
+      - link: /Web/JavaScript/Memory_management
+        title: Memory_management
+      - link: /Web/JavaScript/Event_loop
+        title: Event_loop
+  - type: section
+    link: /Web/JavaScript/Reference
+    title: Reference
+  - type: listSubPages
+    path: /Web/JavaScript/Reference/Global_Objects
+    includeParent: true
+    title: Global_Objects
+    details: closed
+  - type: listSubPages
+    path: /Web/JavaScript/Reference/Operators
+    includeParent: true
+    title: Operators
+    details: closed
+  - type: listSubPages
+    path: /Web/JavaScript/Reference/Statements
+    includeParent: true
+    title: Statements
+    details: closed
+  - type: listSubPages
+    path: /Web/JavaScript/Reference/Functions
+    includeParent: true
+    title: Functions
+    details: closed
+  - type: listSubPages
+    path: /Web/JavaScript/Reference/Classes
+    includeParent: true
+    title: Classes
+    details: closed
+  - type: listSubPages
+    path: /Web/JavaScript/Reference/Regular_expressions
+    includeParent: true
+    title: Guide_RegExp
+    details: closed
+  - type: listSubPages
+    path: /Web/JavaScript/Reference/Errors
+    includeParent: true
+    title: Errors
+    details: closed
+  - title: More
+    details: closed
+    children:
+      - link: /Web/JavaScript/JavaScript_technologies_overview
+        title: Overview
+      - link: /Web/JavaScript/Reference/Lexical_grammar
+        title: Lexical_grammar
+      - link: /Web/JavaScript/Reference/Iteration_protocols
+        title: Iteration_protocols
+      - link: /Web/JavaScript/Reference/Strict_mode
+        title: Strict_mode
+      - link: /Web/JavaScript/Reference/Template_literals
+        title: Template_strings
+      - link: /Web/JavaScript/Reference/Trailing_commas
+        title: Trailing_commas
+      - link: /Web/JavaScript/Reference/Deprecated_and_obsolete_features
+        title: Deprecated_features
+l10n:
+  de:
+    Overview: Übersicht über JavaScript-Technologien
+    Tutorials: Tutorials und Anleitungen
+    Guide: JavaScript-Handbuch
+    Guide_Introduction: Einführung
+    Guide_Grammar: Grammatik und Typen
+    Guide_Control_flow: Steuerfluss und Fehlerbehandlung
+    Guide_Loops: Schleifen und Iteration
+    Guide_Functions: Funktionen
+    Guide_Expressions: Ausdrücke und Operatoren
+    Guide_Numbers: Zahlen und Zeichenketten
+    Guide_Dates: Darstellung von Daten und Uhrzeiten
+    Guide_RegExp: Reguläre Ausdrücke
+    Guide_Indexed_collections: Indexierte Sammlungen
+    Guide_keyed_collections: Schlüsselbasierte Sammlungen
+    Guide_Objects: Arbeiten mit Objekten
+    Guide_Classes: Verwendung von Klassen
+    Guide_Promises: Verwendung von Promises
+    Guide_Typed_arrays: Typisierte Arrays in JavaScript
+    Guide_Iterators_generators: Iteratoren und Generatoren
+    Guide_Internationalization: Internationalisierung
+    Guide_Meta: Metaprogrammierung
+    Guide_Modules: JavaScript-Module
+    Beginners: Tutorials für Anfänger
+    Adding_interactivity: "Ihre erste Webseite: Interaktivität hinzufügen"
+    Dynamic_scripting_with_JavaScript: Dynamisches Scripting mit JavaScript
+    JavaScript_frameworks_and_libraries: JavaScript-Frameworks und -Bibliotheken
+    Intermediate: Mittelstufe
+    Asynchronous_JavaScript: Asynchrones JavaScript
+    Client-side_web_APIs: Clientseitige Web-APIs
+    Language_overview: Sprachübersicht
+    Data_structures: JavaScript-Datenstrukturen
+    Equality: Gleichheitsvergleiche und Gleichheit
+    Closures: Closures
+    Advanced: Fortgeschritten
+    Inheritance: Vererbung und die Prototypenkette
+    Strict_mode: Strenger Modus
+    Memory_management: Speicherverwaltung
+    Event_loop: Konkurrenzmodell und Ereignisschleife
+    Reference: Referenzen
+    Global_Objects: Eingebaute Objekte
+    Operators: Ausdrücke und Operatoren
+    Statements: Anweisungen und Deklarationen
+    Functions: Funktionen
+    Classes: Klassen
+    Errors: Fehler
+    More: Sonstiges
+    Lexical_grammar: Lexikalische Grammatik
+    Enumerability: Aufzählbarkeit und Eigentum von Eigenschaften
+    Iteration_protocols: Iterationsprotokolle
+    Template_strings: Template-Literale
+    Trailing_commas: Abschließende Kommas
+    Deprecated_features: Veraltete Funktionen
+  en-US:
+    Overview: JavaScript technologies overview
+    Tutorials: Tutorials and guides
+    Guide: JavaScript Guide
+    Guide_Introduction: Introduction
+    Guide_Grammar: Grammar and types
+    Guide_Control_flow: Control flow and error handling
+    Guide_Loops: Loops and iteration
+    Guide_Functions: Functions
+    Guide_Expressions: Expressions and operators
+    Guide_Numbers: Numbers and strings
+    Guide_Dates: Representing dates & times
+    Guide_RegExp: Regular expressions
+    Guide_Indexed_collections: Indexed collections
+    Guide_keyed_collections: Keyed collections
+    Guide_Objects: Working with objects
+    Guide_Classes: Using classes
+    Guide_Promises: Using promises
+    Guide_Typed_arrays: JavaScript typed arrays
+    Guide_Iterators_generators: Iterators and generators
+    Guide_Internationalization: Internationalization
+    Guide_Meta: Meta programming
+    Guide_Modules: JavaScript modules
+    Beginners: Beginner's tutorials
+    Adding_interactivity: "Your first website: Adding interactivity"
+    Dynamic_scripting_with_JavaScript: Dynamic scripting with JavaScript
+    JavaScript_frameworks_and_libraries: JavaScript frameworks and libraries
+    Intermediate: Intermediate
+    Asynchronous_JavaScript: Asynchronous JavaScript
+    Client-side_web_APIs: Client-side web APIs
+    Language_overview: Language overview
+    Data_structures: JavaScript data structures
+    Equality: Equality comparisons and sameness
+    Closures: Closures
+    Advanced: Advanced
+    Inheritance: Inheritance and the prototype chain
+    Strict_mode: Strict mode
+    Memory_management: Memory Management
+    Event_loop: Concurrency model and Event Loop
+    Reference: References
+    Global_Objects: Built-in objects
+    Operators: Expressions & operators
+    Statements: Statements & declarations
+    Functions: Functions
+    Classes: Classes
+    Errors: Errors
+    More: Misc
+    Lexical_grammar: Lexical grammar
+    Enumerability: Enumerability and ownership of properties
+    Iteration_protocols: Iteration protocols
+    Template_strings: Template literals
+    Trailing_commas: Trailing commas
+    Deprecated_features: Deprecated features
+  ru:
+    Overview: Обзор технологий JavaScript
+    Tutorials: Уроки
+    Guide: Руководство по JavaScript
+    Guide_Introduction: Вступление
+    Guide_Grammar: Грамматика и типы
+    Guide_Control_flow: Порядок выполнения и обработка ошибок
+    Guide_Loops: Циклы и итерации
+    Guide_Functions: Функции
+    Guide_Expressions: Выражения и операторы
+    Guide_Numbers: Numbers and strings
+    Guide_Dates: Representing dates & times
+    Guide_RegExp: Регулярные выражения
+    Guide_Indexed_collections: Упорядоченные наборы данных
+    Guide_keyed_collections: Коллекции
+    Guide_Objects: Работа с объектами
+    Guide_Classes: Using classes
+    Guide_Promises: Использование промисов
+    Guide_Typed_arrays: Типизированные массивы JavaScript
+    Guide_Iterators_generators: Итераторы и генераторы
+    Guide_Internationalization: Internationalization
+    Guide_Meta: Метапрограммирование
+    Guide_Modules: Модули JavaScript
+    Intermediate: Средние
+    Language_overview: Language overview
+    Data_structures: Структуры данных JavaScript
+    Equality: Проверки на равенство и когда их использовать
+    Closures: Замыкания
+    Advanced: Продвинутые
+    Inheritance: Наследование и цепочка прототипов
+    Strict_mode: Строгий режим
+    Memory_management: Управление памятью
+    Event_loop: Цикл событий
+    Reference: Справочники
+    Global_Objects: Встроенные объекты
+    Operators: Выражения и операторы
+    Statements: Инструкции и объявления
+    Functions: Функции
+    Classes: Классы
+    Errors: Ошибки
+    More: Ещё
+    Lexical_grammar: Лексическая грамматика
+    Enumerability: Перечисляемость и принадлежность свойств
+    Iteration_protocols: Протоколы перебора
+    Template_strings: Шаблонные строки
+    Trailing_commas: Висящие запятые
+    Deprecated_features: Устаревшие возможности
+  fr:
+    Overview: Aperçu des technologies JavaScript
+    Tutorials: Tutoriels
+    Guide: Guide JavaScript
+    Guide_Introduction: Introduction
+    Guide_Grammar: Types et grammaire
+    Guide_Control_flow: Contrôle du flux et gestion des erreurs
+    Guide_Loops: Boucles et itération
+    Guide_Functions: Fonctions
+    Guide_Expressions: Expressions et opérateurs
+    Guide_Numbers: Numbers and strings
+    Guide_Dates: Representing dates & times
+    Guide_RegExp: Expressions rationnelles
+    Guide_Indexed_collections: Collections indexées
+    Guide_keyed_collections: Collections avec clés
+    Guide_Objects: Manipuler les objets
+    Guide_Classes: Using classes
+    Guide_Promises: Utiliser les promesses
+    Guide_Typed_arrays: Tableaux typés en JavaScript
+    Guide_Iterators_generators: Itérateurs et générateurs
+    Guide_Internationalization: Internationalization
+    Guide_Meta: Métaprogrammation
+    Guide_Modules: Modules JavaScript
+    Intermediate: Intermédiaire
+    Language_overview: Language overview
+    Data_structures: Structures de données en JavaScript
+    Equality: Différents tests d'égalité
+    Closures: Fermetures (closures)
+    Advanced: Avancé
+    Inheritance: L'héritage et la chaîne de prototypes
+    Strict_mode: Mode strict
+    Memory_management: Gestion de la mémoire
+    Event_loop: Concurrence et boucle des évènements
+    Reference: Références
+    Global_Objects: Objets natifs
+    Operators: Expressions et opérateurs
+    Statements: Instructions et déclarations
+    Functions: Fonctions
+    Classes: Classes
+    Errors: Erreurs
+    More: Divers
+    Lexical_grammar: Grammaire lexicale
+    Enumerability: Rattachement des propriétés
+    Iteration_protocols: Protocoles d'itération
+    Template_strings: Gabarits de chaînes de caractères
+    Trailing_commas: Virgules finales
+    Deprecated_features: Fonctionnalités dépréciées
+  zh-CN:
+    Overview: JavaScript 技术概要
+    Tutorials: 教程
+    Guide: JavaScript 指南
+    Guide_Introduction: 介绍
+    Guide_Grammar: 语法和数据类型
+    Guide_Control_flow: 流程控制与错误处理
+    Guide_Loops: 循环与迭代
+    Guide_Functions: 函数
+    Guide_Expressions: 表达式与运算符
+    Guide_Numbers: 数字与字符串
+    Guide_Dates: 表达日期与时间
+    Guide_RegExp: 正则表达式
+    Guide_Indexed_collections: 索引集合类
+    Guide_keyed_collections: 带键的集合
+    Guide_Objects: 使用对象
+    Guide_Classes: 使用类
+    Guide_Promises: 使用 Promise
+    Guide_Typed_arrays: JavaScript 类型化数组
+    Guide_Iterators_generators: 迭代器和生成器
+    Guide_Internationalization: 国际化
+    Guide_Meta: 元编程
+    Guide_Modules: JavaScript 模块
+    Intermediate: 中级
+    Language_overview: 语言概述
+    Data_structures: JavaScript 数据结构
+    Equality: 如何正确判断相等性
+    Closures: 闭包
+    Advanced: 高级
+    Inheritance: 继承和原型链
+    Strict_mode: 严格模式
+    Memory_management: 内存管理
+    Event_loop: 并发模型与事件循环
+    Reference: 参考
+    Global_Objects: 内置对象
+    Operators: 表达式和运算符
+    Statements: 语句和声明
+    Functions: 函数
+    Classes: 类
+    Errors: 错误
+    More: 更多
+    Lexical_grammar: 词法文法
+    Enumerability: 属性的可枚举性和所有权
+    Iteration_protocols: 迭代协议
+    Template_strings: 模板字符串
+    Trailing_commas: 尾后逗号
+    Deprecated_features: 已废弃的特性
+  ja:
+    Overview: JavaScript 技術概説
+    Tutorials: チュートリアル
+    Guide: JavaScript ガイド
+    Guide_Introduction: 入門編
+    Guide_Grammar: 文法とデータ型
+    Guide_Control_flow: 制御フローとエラー処理
+    Guide_Loops: ループとイテレーター
+    Guide_Functions: 関数
+    Guide_Expressions: 式と演算子
+    Guide_Numbers: Numbers and strings
+    Guide_Dates: Representing dates & times
+    Guide_RegExp: 正規表現
+    Guide_Indexed_collections: インデックス付きコレクション
+    Guide_keyed_collections: キー付きコレクション
+    Guide_Objects: オブジェクトを利用する
+    Guide_Classes: クラスの使用
+    Guide_Promises: プロミスの使用
+    Guide_Typed_arrays: JavaScript 型付き配列
+    Guide_Iterators_generators: イテレーターとジェネレーター
+    Guide_Internationalization: Internationalization
+    Guide_Meta: メタプログラミング
+    Guide_Modules: JavaScript モジュール
+    Intermediate: 中級編
+    Language_overview: 言語概要
+    Data_structures: JavaScript のデータ構造
+    Equality: 等値比較と同一性
+    Closures: クロージャ
+    Advanced: 上級編
+    Inheritance: 継承とプロトタイプチェーン
+    Strict_mode: 厳格モード
+    Memory_management: メモリー管理
+    Event_loop: 並列モデルとイベントループ
+    Reference: リファレンス
+    Global_Objects: 組み込みオブジェクト
+    Operators: 式と演算子
+    Statements: 文と宣言
+    Functions: 関数
+    Classes: クラス
+    Errors: エラー
+    More: その他
+    Lexical_grammar: 字句文法
+    Enumerability: プロパティの列挙可能性と所有権
+    Iteration_protocols: 反復処理プロトコル
+    Template_strings: テンプレート文字列
+    Trailing_commas: 末尾のカンマ
+    Deprecated_features: 廃止予定の機能
+  ko:
+    Overview: JavaScript 소개
+    Tutorials: "자습서:"
+    Guide: JavaScript 안내서
+    Guide_Introduction: 안내서 소개
+    Guide_Grammar: 문법과 자료형
+    Guide_Control_flow: 제어 흐름과 오류 처리
+    Guide_Loops: 루프와 반복
+    Guide_Functions: 함수
+    Guide_Expressions: 표현식과 연산자
+    Guide_Numbers: Numbers and strings
+    Guide_Dates: Representing dates & times
+    Guide_RegExp: 정규 표현식
+    Guide_Indexed_collections: index 기반의 컬렉션
+    Guide_keyed_collections: key 기반의 컬렉션
+    Guide_Objects: 객체로 작업하기
+    Guide_Classes: class 사용하기
+    Guide_Promises: promise 사용하기
+    Guide_Typed_arrays: JavaScript 형식화 배열
+    Guide_Iterators_generators: 반복기와 생성기
+    Guide_Internationalization: Internationalization
+    Guide_Meta: 메타 프로그래밍
+    Guide_Modules: JavaScript 모듈
+    Intermediate: 중급서
+    Language_overview: JavaScript 재입문하기 (JS ​자습서)
+    Data_structures: JavaScript의 타입과 자료구조
+    Equality: 동치 비교 및 동일성
+    Closures: 클로저
+    Advanced: 고급서
+    Inheritance: 상속과 프로토타입
+    Strict_mode: 엄격한 모드
+    Memory_management: JavaScript 메모리 관리
+    Event_loop: 이벤트 루프
+    Reference: "참고서:"
+    Global_Objects: 표준 내장 객체
+    Operators: 표현식 및 연산자
+    Statements: 문과 선언문
+    Functions: 함수
+    Classes: Classes
+    Errors: 오류
+    More: 기타
+    Lexical_grammar: Lexical 문법
+    Enumerability: 열거성과 속성의 소유권
+    Iteration_protocols: Iteration 프로토콜
+    Template_strings: 템플릿 리터럴
+    Trailing_commas: Trailing commas
+    Deprecated_features: 제외 예정 기능과 제외된 기능
+  pt-BR:
+    Overview: Visão geral das Tecnologias JavaScript
+    Tutorials: Tutoriais
+    Guide: Guia de JavaScript
+    Guide_Introduction: Introdução
+    Guide_Grammar: Gramática e tipos
+    Guide_Control_flow: Controle de fluxo e tratamento de erros
+    Guide_Loops: Repetição e iteração
+    Guide_Functions: Funções
+    Guide_Expressions: Expressões e operadores
+    Guide_Numbers: Numbers and strings
+    Guide_Dates: Representing dates & times
+    Guide_RegExp: Expressões Regulares
+    Guide_Indexed_collections: Coleções indexadas
+    Guide_keyed_collections: Coleções com chave (chave-valor)
+    Guide_Objects: Trabalhando com objetos
+    Guide_Classes: Using classes
+    Guide_Promises: Usando "promises"
+    Guide_Typed_arrays: Arranjos tipados em JavaScript
+    Guide_Iterators_generators: Iteradores e geradores
+    Guide_Internationalization: Internationalization
+    Guide_Meta: Metaprogramação
+    Guide_Modules: JavaScript modules
+    Intermediate: Intermediário
+    Language_overview: Language overview
+    Data_structures: Estruturas de dados de JavaScript
+    Equality: Comparadores de igualdade e semelhança
+    Closures: Closures
+    Advanced: Avançado
+    Inheritance: Herança e a cadeia de "prototype"
+    Strict_mode: Strict mode - Modo estrito
+    Memory_management: Gerenciamento de memória
+    Event_loop: Modelo de concorrência e Loop de Eventos
+    Reference: Referências
+    Global_Objects: Objetos pré-definidos
+    Operators: Expressões e operadores
+    Statements: Afirmações e declarações
+    Functions: Funções
+    Classes: Classes
+    Errors: Erros
+    More: Mais conteúdo
+    Lexical_grammar: Gramática léxica
+    Enumerability: Enumerabilidade e domínio de propriedades
+    Iteration_protocols: Protocolos de iteração
+    Template_strings: Template literals
+    Trailing_commas: Trailing commas
+    Deprecated_features: Funcionalidades depreciadas

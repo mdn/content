@@ -1,16 +1,11 @@
 ---
-title: DynamicsCompressorNode.knee
+title: "DynamicsCompressorNode: knee property"
+short-title: knee
 slug: Web/API/DynamicsCompressorNode/knee
 page-type: web-api-instance-property
-tags:
-  - API
-  - DynamicsCompressorNode
-  - Property
-  - Reference
-  - Web Audio API
-  - knee
 browser-compat: api.DynamicsCompressorNode.knee
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `knee` property of the {{ domxref("DynamicsCompressorNode") }} interface is a [k-rate](/en-US/docs/Web/API/AudioParam#k-rate) {{domxref("AudioParam")}} containing a decibel value representing the range above the threshold where the curve smoothly transitions to the compressed portion.
@@ -23,7 +18,8 @@ The `knee` property's default value is `30` and it can be set between `0` and `4
 
 An {{domxref("AudioParam")}}.
 
-> **Note:** Though the {{domxref("AudioParam")}} returned is read-only, the value it represents is not.
+> [!NOTE]
+> Though the {{domxref("AudioParam")}} returned is read-only, the value it represents is not.
 
 ## Examples
 
@@ -33,7 +29,7 @@ const compressor = audioCtx.createDynamicsCompressor();
 compressor.knee.value = 40;
 ```
 
-See [`BaseAudioContext.createDynamicsCompressor()`](/en-US/docs/Web/API/BaseAudioContext/createDynamicsCompressor#example) for more complete example code.
+See [`BaseAudioContext.createDynamicsCompressor()`](/en-US/docs/Web/API/BaseAudioContext/createDynamicsCompressor#examples) for more complete example code.
 
 ## Specifications
 

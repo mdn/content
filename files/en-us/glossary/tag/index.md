@@ -1,18 +1,17 @@
 ---
 title: Tag
 slug: Glossary/Tag
-tags:
-  - CodingScripting
-  - Glossary
-  - HTML
-  - Intro
+page-type: glossary-definition
 ---
+
+{{GlossarySidebar}}
+
 In {{Glossary("HTML")}}, a **tag** is used for creating an {{Glossary("element")}}.
 
-The name of an HTML element is the name used in angle brackets such as `<p>` for paragraph. Note that the end tag's name is preceded by a slash character, `</p>`, and that in {{glossary("empty element", "empty elements")}}, the end tag is neither required nor allowed. If {{Glossary("attribute", "attributes")}} are not mentioned, default values are used in each case.
+The name of an HTML element is the name that appears at the beginning of the element's start tag and at the end of the element's end tag (if the element has an end tag). For example, the `p` in the `<p>` start tag and `</p>` end tag is the name of the HTML paragraph element. Note that an element name in an end tag is preceded by a slash character: `</p>`, and that for {{glossary("void element", "void elements")}}, the end tag is neither required nor allowed.
 
 ## See also
 
 - [HTML element](https://en.wikipedia.org/wiki/HTML_element) on Wikipedia
 - [HTML elements syntax](https://html.spec.whatwg.org/multipage/syntax.html#elements-2) on {{glossary("WHATWG")}}
-- [Introduction to HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML)
+- [Introduction to HTML](/en-US/docs/Learn_web_development/Core/Structuring_content)

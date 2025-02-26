@@ -1,20 +1,18 @@
 ---
-title: 'ARIA: directory role'
+title: "ARIA: directory role"
 slug: Web/Accessibility/ARIA/Roles/directory_role
-tags:
-  - Accessibility
-  - ARIA
-  - roles
-  - Reference
-  - ARIA roles
-  - document structure role
+page-type: aria-role
+status:
   - deprecated
 spec-urls: https://w3c.github.io/aria/#directory
 ---
 
+{{AccessibilitySidebar}}
+
 The `directory` role was for a list of references to members of a group, such as a static table of contents.
 
-> **Warning:** The `directory` role was deprecated in ARIA 1.2
+> [!WARNING]
+> The `directory` role was deprecated in ARIA 1.2
 
 ## Description
 
@@ -27,16 +25,8 @@ Use the [`list`](/en-US/docs/Web/Accessibility/ARIA/Roles/list_role) role instea
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [The `list` role](/en-US/docs/Web/Accessibility/ARIA/Roles/list_role)
 - The {{HTMLElement('ul')}} element
 - The {{HTMLElement('ol')}} element
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
-
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
-
-</section>

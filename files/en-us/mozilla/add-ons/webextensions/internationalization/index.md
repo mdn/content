@@ -1,22 +1,15 @@
 ---
 title: Internationalization
 slug: Mozilla/Add-ons/WebExtensions/Internationalization
-tags:
-  - Article
-  - Guide
-  - Internationalization
-  - Localization
-  - WebExtensions
-  - i18n
-  - messages.json
-  - placeholders
-  - predefined messages
+page-type: guide
 ---
+
 {{AddonSidebar}}
 
 The [WebExtensions](/en-US/docs/Mozilla/Add-ons/WebExtensions) API has a rather handy module available for internationalizing extensions — [i18n](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/i18n). In this article we'll explore its features and provide a practical example of how it works. The i18n system for extensions built using WebExtension APIs is similar to common JavaScript libraries for i18n such as [i18n.js](http://i18njs.com/).
 
-> **Note:** The example extension featured in this article — [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n) — is available on GitHub. Follow along with the source code as you go through the sections below.
+> [!NOTE]
+> The example extension featured in this article — [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/main/notify-link-clicks-i18n) — is available on GitHub. Follow along with the source code as you go through the sections below.
 
 ## Anatomy of an internationalized extension
 
@@ -56,15 +49,16 @@ Let's explore each of the new features in turn — each of the below sections re
 
 ## Providing localized strings in \_locales
 
-> **Note:** You can look up language subtags using the _Find_ tool on the [Language subtag lookup page](https://r12a.github.io/app-subtags/). Note that you need to search for the English name of the language.
+> [!NOTE]
+> You can look up language subtags using the _Find_ tool on the [Language subtag lookup page](https://r12a.github.io/app-subtags/). Note that you need to search for the English name of the language.
 
 Every i18n system requires the provision of strings translated into all the different locales you want to support. In extensions, these are contained within a directory called `_locales`, placed inside the extension root. Each individual locale has its strings (referred to as messages) contained within a file called `messages.json`, which is placed inside a subdirectory of `_locales`, named using the language subtag for that locale's language.
 
 Note that if the subtag includes a basic language plus a regional variant, then the language and variant are conventionally separated using a hyphen: for example, "en-US". However, in the directories under `_locales`, **the separator must be an underscore**: "en_US".
 
-So [for example, in our sample app](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n/_locales) we have directories for "en" (English), "de" (German), "nl" (Dutch), and "ja" (Japanese). Each one of these has a `messages.json` file inside it.
+So [for example, in our sample app](https://github.com/mdn/webextensions-examples/tree/main/notify-link-clicks-i18n/_locales) we have directories for "en" (English), "de" (German), "nl" (Dutch), and "ja" (Japanese). Each one of these has a `messages.json` file inside it.
 
-Let's now look at the structure of one of these files ([\_locales/en/messages.json](https://github.com/mdn/webextensions-examples/blob/master/notify-link-clicks-i18n/_locales/en/messages.json)):
+Let's now look at the structure of one of these files ([\_locales/en/messages.json](https://github.com/mdn/webextensions-examples/blob/main/notify-link-clicks-i18n/_locales/en/messages.json)):
 
 ```json
 {
@@ -87,9 +81,9 @@ Let's now look at the structure of one of these files ([\_locales/en/messages.js
     "message": "You clicked $URL$.",
     "description": "Tells the user which link they clicked.",
     "placeholders": {
-      "url" : {
-        "content" : "$1",
-        "example" : "https://developer.mozilla.org"
+      "url": {
+        "content": "$1",
+        "example": "https://developer.mozilla.org"
       }
     }
   }
@@ -98,7 +92,8 @@ Let's now look at the structure of one of these files ([\_locales/en/messages.js
 
 This file is standard JSON — each one of its members is an object with a name, which contains a `message` and a `description`. All of these items are strings; `$URL$` is a placeholder, which is replaced with a substring at the time the `notificationContent` member is called by the extension. You'll learn how to do this in the [Retrieving message strings from JavaScript](#retrieving_message_strings_from_javascript) section.
 
-> **Note:** You can find much more information about the contents of `messages.json` files in our [Locale-Specific Message reference](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/i18n/Locale-Specific_Message_reference).
+> [!NOTE]
+> You can find much more information about the contents of `messages.json` files in our [Locale-Specific Message reference](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/i18n/Locale-Specific_Message_reference).
 
 ## Internationalizing manifest.json
 
@@ -106,7 +101,7 @@ There are a couple of different tasks to carry out to internationalize your mani
 
 ### Retrieving localized strings in manifests
 
-Your [manifest.json](https://github.com/mdn/webextensions-examples/blob/master/notify-link-clicks-i18n/manifest.json) includes strings that are displayed to the user, such as the extension's name and description. If you internationalize these strings and put the appropriate translations of them in messages.json, then the correct translation of the string will be displayed to the user, based on the current locale, like so.
+Your [manifest.json](https://github.com/mdn/webextensions-examples/blob/main/notify-link-clicks-i18n/manifest.json) includes strings that are displayed to the user, such as the extension's name and description. If you internationalize these strings and put the appropriate translations of them in messages.json, then the correct translation of the string will be displayed to the user, based on the current locale, like so.
 
 To internationalize strings, specify them like this:
 
@@ -125,7 +120,7 @@ To call a message string like this, you need to specify it like this:
 4. The name of the message you want to call as defined in `messages.json`, followed by
 5. Two underscores
 
-```
+```plain
 __MSG_ + messageName + __
 ```
 
@@ -159,7 +154,7 @@ So, you've got your message strings set up, and your manifest. Now you just need
 - The {{WebExtAPIRef("i18n.getAcceptLanguages()")}} and {{WebExtAPIRef("i18n.getUILanguage()")}} methods could be used if you needed to customize the UI depending on the locale — perhaps you might want to show preferences specific to the users' preferred languages higher up in a prefs list, or display cultural information relevant only to a certain language, or format displayed dates appropriately according to the browser locale.
 - The {{WebExtAPIRef("i18n.detectLanguage()")}} method could be used to detect the language of user-submitted content, and format it appropriately.
 
-In our [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n) example, the [background script](https://github.com/mdn/webextensions-examples/blob/master/notify-link-clicks-i18n/background-script.js) contains the following lines:
+In our [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/main/notify-link-clicks-i18n) example, the [background script](https://github.com/mdn/webextensions-examples/blob/main/notify-link-clicks-i18n/background-script.js) contains the following lines:
 
 ```js
 let title = browser.i18n.getMessage("notificationTitle");
@@ -181,17 +176,17 @@ The first one just retrieves the `notificationTitle message` field from the avai
 }
 ```
 
-The `"placeholders"` member defines all the placeholders, and where they are retrieved from. The `"url"` placeholder specifies that its content is taken from $1, which is the first value given inside the second parameter of `getMessage()`. Since the placeholder is called `"url"`, we use `$URL$` to call it inside the actual message string (so for `"name"` you'd use `$NAME$`, etc.) If you have multiple placeholders, you can provide them inside an array that is given to {{WebExtAPIRef("i18n.getMessage()")}} as the second parameter — `[a, b, c]`will be available as`$1`, `$2`, and `$3`, and so on, inside `messages.json`.
+The `"placeholders"` member defines all the placeholders, and where they are retrieved from. The `"url"` placeholder specifies that its content is taken from `$1`, which is the first value given inside the second parameter of `getMessage()`. Since the placeholder is called `"url"`, we use `$URL$` to call it inside the actual message string (so for `"name"` you'd use `$NAME$`, etc.) If you have multiple placeholders, you can provide them inside an array that is given to {{WebExtAPIRef("i18n.getMessage()")}} as the second parameter — `[a, b, c]` will be available as `$1`, `$2`, and `$3`, and so on, inside `messages.json`.
 
 Let's run through an example: the original `notificationContent` message string in the `en/messages.json` file is
 
-```
+```plain
 You clicked $URL$.
 ```
 
 Let's say the link clicked on points to `https://developer.mozilla.org`. After the {{WebExtAPIRef("i18n.getMessage()")}} call, the contents of the second parameter are made available in messages.json as `$1`, which replaces the `$URL$` placeholder as defined in the `"url"` placeholder. So the final message string is
 
-```
+```plain
 You clicked https://developer.mozilla.org.
 ```
 
@@ -206,7 +201,7 @@ It is possible to insert your variables (`$1`, `$2`, `$3`, etc.) directly into t
 }
 ```
 
-This may seem quicker and less complex, but the other way (using `"placeholders"`) is seen as best practice. This is because having the placeholder name (e.g. `"url"`) and example helps you to remember what the placeholder is for — a week after you write your code, you'll probably forget what `$1`–`$8` refer to, but you'll be more likely to know what your placeholder names refer to.
+This may seem quicker and less complex, but the other way (using `"placeholders"`) is seen as best practice. This is because having the placeholder name (e.g. `"url"`) and example helps you to remember what the placeholder is for — a week after you write your code, you'll probably forget what `$1` – `$8` refer to, but you'll be more likely to know what your placeholder names refer to.
 
 ### Hardcoded substitution
 
@@ -270,13 +265,13 @@ Suppose the `default_locale` is set to `fr`, and the browser's current locale is
 
 The i18n module provides us with some predefined messages, which we can call in the same way as we saw earlier in [Retrieving localized strings in manifests](#retrieving_localized_strings_in_manifests) and [Locale-dependent CSS](#locale-dependent_css). For example:
 
-```
+```plain
 __MSG_extensionName__
 ```
 
 Predefined messages use exactly the same syntax, except with `@@` before the message name, for example
 
-```
+```plain
 __MSG_@@ui_locale__
 ```
 
@@ -305,7 +300,7 @@ The following table shows the different available predefined messages:
           the
           <a
             href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings"
-            >applications</a
+            >browser_specific_settings</a
           >
           key in manifest.json. It's the generated UUID that appears in the
           add-on's URL. This means that you can't use this value as the
@@ -406,4 +401,4 @@ Then, for each locale supported in the extension you want to test, follow the in
 
 Once Firefox is running in your test language, [install the extension temporarily](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/). After installing your extension, in `about:debugging`, if you've set up your extension correctly, you see the extension listed with its icon, name, and description in the chosen language. You can also see the localized extension details in `about:addons`. Now exercise the extension's features to ensure the translations you need are in place.
 
-If you'd like to try this process out, you can use the [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n) extension. Set up Firefox to display one of the languages supported in this example (German, Dutch, or Japanese). Load the extension and go to a website. Click a link to see the translated version of the notification reporting the link's URL.
+If you'd like to try this process out, you can use the [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/main/notify-link-clicks-i18n) extension. Set up Firefox to display one of the languages supported in this example (German, Dutch, or Japanese). Load the extension and go to a website. Click a link to see the translated version of the notification reporting the link's URL.

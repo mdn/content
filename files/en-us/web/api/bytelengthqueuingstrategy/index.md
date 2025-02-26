@@ -2,16 +2,10 @@
 title: ByteLengthQueuingStrategy
 slug: Web/API/ByteLengthQueuingStrategy
 page-type: web-api-interface
-tags:
-  - API
-  - ByteLengthQueuingStrategy
-  - Experimental
-  - Interface
-  - Reference
-  - Streams
 browser-compat: api.ByteLengthQueuingStrategy
 ---
-{{SeeCompatTable}}{{APIRef("Streams")}}
+
+{{APIRef("Streams")}}{{AvailableInWorkers}}
 
 The **`ByteLengthQueuingStrategy`** interface of the [Streams API](/en-US/docs/Web/API/Streams_API) provides a built-in byte length queuing strategy that can be used when constructing streams.
 
@@ -20,11 +14,12 @@ The **`ByteLengthQueuingStrategy`** interface of the [Streams API](/en-US/docs/W
 - {{domxref("ByteLengthQueuingStrategy.ByteLengthQueuingStrategy", "ByteLengthQueuingStrategy()")}}
   - : Creates a new `ByteLengthQueuingStrategy` object instance.
 
-## Properties
+## Instance properties
 
-None.
+- {{domxref("ByteLengthQueuingStrategy.highWaterMark")}} {{ReadOnlyInline}}
+  - : The total number of bytes that can be contained in the internal queue before [backpressure](/en-US/docs/Web/API/Streams_API/Concepts#backpressure) is applied.
 
-## Methods
+## Instance methods
 
 - {{domxref("ByteLengthQueuingStrategy.size()")}}
   - : Returns the given chunk's `byteLength` property.
@@ -32,19 +27,22 @@ None.
 ## Examples
 
 ```js
-const queueingStrategy = new ByteLengthQueuingStrategy({ highWaterMark: 1 });
+const queueingStrategy = new ByteLengthQueuingStrategy({ highWaterMark: 1024 });
 
-const readableStream = new ReadableStream({
-  start(controller) {
-    // …
+const readableStream = new ReadableStream(
+  {
+    start(controller) {
+      // …
+    },
+    pull(controller) {
+      // …
+    },
+    cancel(err) {
+      console.log("stream error:", err);
+    },
   },
-  pull(controller) {
-    // …
-  },
-  cancel(err) {
-    console.log("stream error:", err);
-  }
-}, queueingStrategy);
+  queueingStrategy,
+);
 
 const size = queueingStrategy.size(chunk);
 ```
@@ -56,3 +54,9 @@ const size = queueingStrategy.size(chunk);
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("Streams API", "Streams API", "", "nocode")}}
+- [Internal queues and queuing strategies](/en-US/docs/Web/API/Streams_API/Concepts#internal_queues_and_queuing_strategies)
+- {{domxref("ByteLengthQueuingStrategy.ByteLengthQueuingStrategy", "ByteLengthQueuingStrategy()")}} constructor

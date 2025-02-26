@@ -1,15 +1,10 @@
 ---
 title: Type selectors
 slug: Web/CSS/Type_selectors
-tags:
-  - CSS
-  - HTML
-  - Node
-  - Reference
-  - Selector
-  - Selectors
+page-type: css-selector
 browser-compat: css.selectors.type
 ---
+
 {{CSSRef}}
 
 The CSS **type selector** matches elements by node name. In other words, it selects all elements of the given type within a document.
@@ -21,7 +16,7 @@ a {
 }
 ```
 
-Type selectors can be namespaced when using {{CSSXref("@namespace")}}. This is useful when dealing with documents containing multiple namespaces such as HTML5 with inline SVG or MathML, or XML that mixes multiple vocabularies.
+Type selectors can be namespaced when using {{CSSXref("@namespace")}}. This is useful when dealing with documents containing multiple namespaces such as HTML with inline SVG or MathML, or XML that mixes multiple vocabularies.
 
 - `ns|h1` - matches `<h1>` elements in namespace _ns_
 - `*|h1` - matches all `<h1>` elements
@@ -60,8 +55,10 @@ span {
 In this example the selector will only match `<h1>` elements in the example namespace.
 
 ```css
-@namespace example url(http://www.example.com);
-example|h1 { color: blue }
+@namespace example url(http://www.example.com/);
+example|h1 {
+  color: blue;
+}
 ```
 
 ## Specifications
@@ -74,5 +71,5 @@ example|h1 { color: blue }
 
 ## See also
 
-- [CSS Selectors](/en-US/docs/Web/CSS/CSS_Selectors)
-- [Learn CSS: Selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors)
+- [CSS Selectors](/en-US/docs/Web/CSS/CSS_selectors)
+- [Learn CSS: Basic selectors](/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)

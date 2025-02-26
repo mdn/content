@@ -1,34 +1,34 @@
 ---
-title: Node.replaceChild()
+title: "Node: replaceChild() method"
+short-title: replaceChild()
 slug: Web/API/Node/replaceChild
 page-type: web-api-instance-method
-tags:
-  - Method
-  - Reference
 browser-compat: api.Node.replaceChild
 ---
+
 {{APIRef("DOM")}}
 
-The **`replaceChild()`** method of the {{domxref("Node")}} element
-replaces a child node within the given (parent) node.
+The **`replaceChild()`** method of the {{domxref("Node")}} interface replaces a child node within the given (parent) node.
 
 ## Syntax
 
-```js
-replaceChild(newChild, oldChild);
+```js-nolint
+replaceChild(newChild, oldChild)
 ```
 
 ### Parameters
 
 - `newChild`
   - : The new node to replace `oldChild`.
-    > **Warning:** If the new node is already present somewhere else in the DOM, it is first removed from that position.
+    > [!WARNING]
+    > If the new node is already present somewhere else in the DOM, it is first removed from that position.
 - `oldChild`
   - : The child to be replaced.
 
-> **Note:** The parameter order, _new_ before _old_, is unusual.
-[`Element.replaceWith()`](/en-US/docs/Web/API/Element/replaceWith), applying only to nodes that are elements,
-may be easier to read and use.
+> [!NOTE]
+> The parameter order, _new_ before _old_, is unusual.
+> [`Element.replaceWith()`](/en-US/docs/Web/API/Element/replaceWith), applying only to nodes that are elements,
+> may be easier to read and use.
 
 ### Return value
 

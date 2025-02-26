@@ -1,23 +1,14 @@
 ---
-title: BaseAudioContext.createDynamicsCompressor()
+title: "BaseAudioContext: createDynamicsCompressor() method"
+short-title: createDynamicsCompressor()
 slug: Web/API/BaseAudioContext/createDynamicsCompressor
 page-type: web-api-instance-method
-tags:
-  - API
-  - AudioContext
-  - BaseAudioContext
-  - Method
-  - Reference
-  - Web Audio API
-  - createDynamicsCompressor
 browser-compat: api.BaseAudioContext.createDynamicsCompressor
 ---
+
 {{ APIRef("Web Audio API") }}
 
-The `createDynamicsCompressor()` method of the {{
-    domxref("BaseAudioContext") }} Interface is used to create a
-{{domxref("DynamicsCompressorNode")}}, which can be used to apply compression to an
-audio signal.
+The `createDynamicsCompressor()` method of the {{domxref("BaseAudioContext")}} Interface is used to create a {{domxref("DynamicsCompressorNode")}}, which can be used to apply compression to an audio signal.
 
 Compression lowers the volume of the loudest parts of the signal and raises the volume
 of the softest parts. Overall, a louder, richer, and fuller sound can be achieved. It is
@@ -25,13 +16,14 @@ especially important in games and musical applications where large numbers of in
 sounds are played simultaneously, where you want to control the overall signal level and
 help avoid clipping (distorting) of the audio output.
 
-> **Note:** The {{domxref("DynamicsCompressorNode.DynamicsCompressorNode", "DynamicsCompressorNode()")}}
+> [!NOTE]
+> The {{domxref("DynamicsCompressorNode.DynamicsCompressorNode", "DynamicsCompressorNode()")}}
 > constructor is the recommended way to create a {{domxref("DynamicsCompressorNode")}}; see
 > [Creating an AudioNode](/en-US/docs/Web/API/AudioNode#creating_an_audionode).
 
 ## Syntax
 
-```js
+```js-nolint
 createDynamicsCompressor()
 ```
 
@@ -45,8 +37,8 @@ A {{domxref("DynamicsCompressorNode")}}.
 
 ## Examples
 
-The code below demonstrates a simple usage of `createDynamicsCompressor()`
-to add compression to an audio track. For a more complete example, have a look at our [basic Compressor example](https://mdn.github.io/webaudio-examples/compressor-example/) ([view the source code](https://github.com/mdn/webaudio-examples/tree/master/compressor-example)).
+The code below shows how to use `createDynamicsCompressor()`
+to add compression to an audio track. For a more complete example, have a look at our [basic Compressor example](https://mdn.github.io/webaudio-examples/compressor-example/) ([view the source code](https://github.com/mdn/webaudio-examples/tree/main/compressor-example)).
 
 ```js
 // Create a MediaElementAudioSourceNode
@@ -65,23 +57,23 @@ compressor.release.setValueAtTime(0.25, audioCtx.currentTime);
 source.connect(audioCtx.destination);
 
 button.onclick = () => {
-  const active = button.getAttribute('data-active');
-  if (active === 'false') {
-    button.setAttribute('data-active', 'true');
-    button.textContent = 'Remove compression';
+  const active = button.getAttribute("data-active");
+  if (active === "false") {
+    button.setAttribute("data-active", "true");
+    button.textContent = "Remove compression";
 
     source.disconnect(audioCtx.destination);
     source.connect(compressor);
     compressor.connect(audioCtx.destination);
-  } else if (active === 'true') {
-    button.setAttribute('data-active', 'false');
-    button.textContent = 'Add compression';
+  } else if (active === "true") {
+    button.setAttribute("data-active", "false");
+    button.textContent = "Add compression";
 
     source.disconnect(compressor);
     compressor.disconnect(audioCtx.destination);
     source.connect(audioCtx.destination);
   }
-}
+};
 ```
 
 ## Specifications

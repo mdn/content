@@ -1,16 +1,13 @@
 ---
-title: Document.xmlVersion
+title: "Document: xmlVersion property"
+short-title: xmlVersion
 slug: Web/API/Document/xmlVersion
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - DOM Reference
-  - Property
-  - Reference
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.Document.xmlVersion
 ---
+
 {{APIRef("DOM")}}{{deprecated_header}}
 
 Returns the version number as specified in the XML declaration (e.g., `<?xml version="1.0"?>`) or "1.0" if the declaration is absent.
@@ -25,7 +22,7 @@ if (document.createElement("foo").tagName === "FOO") {
 
 ## Specifications
 
-This feature is not part of any specification anymore. It is no more on track to become a standard.
+{{Specifications}}
 
 ## Browser compatibility
 

@@ -1,28 +1,21 @@
 ---
-title: CacheStorage.keys()
+title: "CacheStorage: keys() method"
+short-title: keys()
 slug: Web/API/CacheStorage/keys
 page-type: web-api-instance-method
-tags:
-  - API
-  - CacheStorage
-  - Method
-  - Reference
-  - Service Workers
-  - Service worker API
-  - ServiceWorker
-  - keys
 browser-compat: api.CacheStorage.keys
 ---
-{{APIRef("Service Workers API")}}
+
+{{APIRef("Service Workers API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`keys()`** method of the {{domxref("CacheStorage")}} interface returns a {{jsxref("Promise")}} that will resolve with an array containing strings corresponding to all of the named {{domxref("Cache")}} objects tracked by the {{domxref("CacheStorage")}} object in the order they were created.
 Use this method to iterate over a list of all {{domxref("Cache")}} objects.
 
-You can access `CacheStorage` through the global {{domxref("caches")}} property.
+You can access `CacheStorage` through the {{domxref("Window.caches")}} property in windows or through the {{domxref("WorkerGlobalScope.caches")}} property in workers.
 
 ## Syntax
 
-```js
+```js-nolint
 keys()
 ```
 
@@ -42,17 +35,19 @@ We return the keys of the caches in the {{domxref("CacheStorage")}} object using
 If not, we delete it using {{domxref("CacheStorage.delete()")}}.
 
 ```js
-this.addEventListener('activate', function(event) {
-  const cacheAllowlist = ['v2'];
+this.addEventListener("activate", (event) => {
+  const cacheAllowlist = ["v2"];
 
   event.waitUntil(
-    caches.keys().then(function(keyList) {
-      return Promise.all(keyList.map(function(key) {
-        if (cacheAllowlist.indexOf(key) === -1) {
-          return caches.delete(key);
-        }
-      }));
-    })
+    caches.keys().then((keyList) =>
+      Promise.all(
+        keyList.map((key) => {
+          if (!cacheAllowlist.includes(key)) {
+            return caches.delete(key);
+          }
+        }),
+      ),
+    ),
   );
 });
 ```
@@ -69,4 +64,4 @@ this.addEventListener('activate', function(event) {
 
 - [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - {{domxref("Cache")}}
-- {{domxref("caches")}}
+- {{domxref("Window.caches")}} and {{domxref("WorkerGlobalScope.caches")}}

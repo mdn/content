@@ -2,21 +2,9 @@
 title: The HTML DOM API
 slug: Web/API/HTML_DOM_API
 page-type: web-api-overview
-tags:
-  - API
-  - Beginner
-  - DOM
-  - Documents
-  - Elements
-  - HTML DOM
-  - HTML DOM API
-  - Nodes
-  - Overview
-  - Web
-  - Windows
-  - hierarchy
 browser-compat: api.HTMLElement
 ---
+
 {{DefaultAPISidebar("HTML DOM")}}
 
 The **HTML DOM API** is made up of the interfaces that define the functionality of each of the {{Glossary("element", "elements")}} in {{Glossary("HTML")}}, as well as any supporting types and interfaces they rely upon.
@@ -29,7 +17,7 @@ The functional areas included in the HTML DOM API include:
 - Management of media connected to the HTML media elements ({{HTMLElement("audio")}} and {{HTMLElement("video")}}).
 - Dragging and dropping of content on webpages.
 - Access to the browser navigation history
-- Supporting and connective interfaces for other APIs such as [Web Components](/en-US/docs/Web/Web_Components), {{DOMxRef("Web_Storage_API", "Web Storage", "", "1")}}, {{DOMxRef("Web_Workers_API", "Web Workers", "", "1")}}, {{DOMxRef("WebSockets_API", "WebSocket", "", "1")}}, and {{DOMxRef("Server-sent_events", "Server-sent events", "", "1")}}.
+- Supporting and connective interfaces for other APIs such as [Web Components](/en-US/docs/Web/API/Web_components), {{DOMxRef("Web_Storage_API", "Web Storage", "", "1")}}, {{DOMxRef("Web_Workers_API", "Web Workers", "", "1")}}, {{DOMxRef("WebSockets_API", "WebSocket", "", "1")}}, and {{DOMxRef("Server-sent_events", "Server-sent events", "", "1")}}.
 
 ## HTML DOM concepts and usage
 
@@ -54,12 +42,12 @@ Among the things added to `Document` by the HTML standard are:
 - Support for accessing various information provided by the {{Glossary("HTTP")}} headers when loading the page, such as the {{DOMxRef("Document/location", "location", "", "1")}} from which the document was loaded, {{DOMxRef("Document/cookie", "cookies", "", "1")}}, {{DOMxRef("Document/lastModified", "modification date", "", "1")}}, {{DOMxRef("Document/referrer", "referring site", "", "1")}}, and so forth.
 - Access to lists of elements in the document's {{HTMLElement("head")}} block and {{DOMxRef("Document/body", "body", "", "1")}}, as well as lists of the {{DOMxRef("Document/images", "images", "", "1")}}, {{DOMxRef("Document/links", "links", "", "1")}}, {{DOMxRef("Document/scripts", "scripts", "", "1")}}, etc. contained in the document.
 - Support for interacting with the user by examining {{DOMxRef("Document/hasFocus", "focus", "", "1")}} and by executing commands on [editable content](/en-US/docs/Web/HTML/Global_attributes/contenteditable).
-- Event handlers for document {{DOMxRef("GlobalEventHandlers", "events defined by the HTML standard", "", "1")}} to allow access to {{DOMxRef("MouseEvent", "mouse", "", "1")}} and {{DOMxRef("KeyboardEvent", "keyboard", "", "1")}} events, {{DOMxRef("HTML_Drag_and_Drop_API", "drag and drop", "", "1")}}, {{DOMxRef("HTMLMediaElement", "media control", "", "1")}}, and more.
+- Event handlers for document events defined by the HTML standard to allow access to {{DOMxRef("MouseEvent", "mouse", "", "1")}} and {{DOMxRef("KeyboardEvent", "keyboard", "", "1")}} events, {{DOMxRef("HTML_Drag_and_Drop_API", "drag and drop", "", "1")}}, {{DOMxRef("HTMLMediaElement", "media control", "", "1")}}, and more.
 - Event handlers for events that can be delivered to both elements and documents; these presently include only {{DOMxRef("HTMLElement/copy_event", "copy", "", "1")}}, {{DOMxRef("HTMLElement/cut_event", "cut", "", "1")}}, and {{DOMxRef("HTMLElement/paste_event", "paste", "", "1")}} actions.
 
 ### HTML element interfaces
 
-The `Element` interface has been further adapted to represent HTML elements specifically by introducing the {{domxref("HTMLElement")}} interface, which all more specific HTML element classes inherit from. This expands the `Element` class to add HTML-specific general features to the element nodes. Properties added by `HTMLElement` include for example {{domxref("HTMLElement.hidden", "hidden")}} and {{domxref("HTMLElement.innerText", "innerText")}}. `HTMLElement` also adds all the {{DOMxRef("GlobalEventHandlers", "global event handlers", "", "1")}}.
+The `Element` interface has been further adapted to represent HTML elements specifically by introducing the {{domxref("HTMLElement")}} interface, which all more specific HTML element classes inherit from. This expands the `Element` class to add HTML-specific general features to the element nodes. Properties added by `HTMLElement` include for example {{domxref("HTMLElement.hidden", "hidden")}} and {{domxref("HTMLElement.innerText", "innerText")}}.
 
 An {{Glossary("HTML")}} document is a DOM tree in which each of the nodes is an HTML element, represented by the {{domxref("HTMLElement")}} interface. The `HTMLElement` class, in turn, implements `Node`, so every element is also a node (but not the other way around). This way, the structural features implemented by the {{domxref("Node")}} interface are also available to HTML elements, allowing them to be nested within each other, created and deleted, moved around, and so forth.
 
@@ -81,7 +69,8 @@ These element-specific interfaces make up the majority of the HTML DOM API, and 
 
 ## HTML DOM target audience
 
-The features exposed by the HTML DOM are among the most commonly-used APIs in the web developer's arsenal. All but the most simple web applications will use some features of the HTML DOM.
+The features exposed by the HTML DOM are among the most commonly-used APIs in a web developer's toolkit.
+All but the most simple web applications will use some features of the HTML DOM.
 
 ## HTML DOM API interfaces
 
@@ -167,8 +156,6 @@ These interfaces represent specific HTML elements (or sets of related elements w
 - {{DOMxRef("HTMLFontElement")}} {{deprecated_inline}}
 - {{DOMxRef("HTMLFrameElement")}} {{deprecated_inline}}
 - {{DOMxRef("HTMLFrameSetElement")}} {{deprecated_inline}}
-- {{DOMxRef("HTMLIsIndexElement")}} {{deprecated_inline}}
-- {{DOMxRef("HTMLMenuItemElement")}} {{deprecated_inline}}
 
 ### Web app and browser integration interfaces
 
@@ -184,7 +171,6 @@ These interfaces offer access to the browser window and document that contain th
 
 #### Obsolete web app and browser integration interfaces
 
-- {{DOMxRef("ApplicationCache")}} {{deprecated_inline}}
 - {{DOMxRef("Plugin")}} {{deprecated_inline}}
 - {{DOMxRef("PluginArray")}} {{deprecated_inline}}
 
@@ -231,7 +217,7 @@ The media interfaces provide HTML access to the contents of the media elements: 
 
 ### Drag and drop interfaces
 
-These interfaces are used by the {{DOMxRef("HTML_Drag_and_Drop_API", "", "", "1")}} to represent individual draggable (or dragged) items, groups of dragged or draggable items, and to handle the drag and drop process.
+These interfaces are used by the [HTML Drag and Drop API](/en-US/docs/Web/API/HTML_Drag_and_Drop_API) to represent individual draggable (or dragged) items, groups of dragged or draggable items, and to handle the drag and drop process.
 
 - {{DOMxRef("DataTransfer")}}
 - {{DOMxRef("DataTransferItem")}}
@@ -246,12 +232,14 @@ The History API interfaces let you access information about the browser's histor
 - {{DOMxRef("HashChangeEvent")}}
 - {{DOMxRef("History")}}
 - {{DOMxRef("Location")}}
+- {{DOMxRef("PageRevealEvent")}}
+- {{DOMxRef("PageSwapEvent")}}
 - {{DOMxRef("PageTransitionEvent")}}
 - {{DOMxRef("PopStateEvent")}}
 
 ### Web Components interfaces
 
-These interfaces are used by the [Web Components API](/en-US/docs/Web/Web_Components) to create and manage the available [custom elements](/en-US/docs/Web/Web_Components/Using_custom_elements).
+These interfaces are used by the [Web Components API](/en-US/docs/Web/API/Web_components) to create and manage the available [custom elements](/en-US/docs/Web/API/Web_components/Using_custom_elements).
 
 - {{DOMxRef("CustomElementRegistry")}}
 
@@ -273,14 +261,14 @@ Several interfaces are technically defined in the HTML specification while actua
 
 #### Web storage interfaces
 
-The {{DOMxRef("Web_Storage_API", "", "", "1")}} provides the ability for websites to store data either temporarily or permanently on the user's device for later re-use.
+The {{DOMxRef("Web_Storage_API", "Web Storage API", "", "1")}} provides the ability for websites to store data either temporarily or permanently on the user's device for later re-use.
 
 - {{DOMxRef("Storage")}}
 - {{DOMxRef("StorageEvent")}}
 
 #### Web Workers interfaces
 
-These interfaces are used by the {{DOMxRef("Web_Workers_API", "", "", "1")}} both to establish the ability for workers to interact with an app and its content, but also to support messaging between windows or apps.
+These interfaces are used by the {{DOMxRef("Web_Workers_API", "Web Workers API", "", "1")}} both to establish the ability for workers to interact with an app and its content, but also to support messaging between windows or apps.
 
 - {{DOMxRef("BroadcastChannel")}}
 - {{DOMxRef("DedicatedWorkerGlobalScope")}}
@@ -296,7 +284,7 @@ These interfaces are used by the {{DOMxRef("Web_Workers_API", "", "", "1")}} bot
 
 #### WebSocket interfaces
 
-These interfaces, defined by the HTML specification, are used by the {{DOMxRef("WebSockets_API", "", "", "1")}}.
+These interfaces, defined by the HTML specification, are used by the {{DOMxRef("WebSockets_API", "WebSockets API", "", "1")}}.
 
 - {{DOMxRef("CloseEvent")}}
 - {{DOMxRef("WebSocket")}}
@@ -309,13 +297,13 @@ The {{domxref("EventSource")}} interface represents the source which sent or is 
 
 ## Examples
 
-In this example, an {{HTMLElement("input")}} element's {{domxref("HTMLElement/input_event", "input")}} event is monitored in order to update the state of a form's "submit" button based on whether or not a given field currently has a value.
+In this example, an {{HTMLElement("input")}} element's {{domxref("Element/input_event", "input")}} event is monitored in order to update the state of a form's "submit" button based on whether or not a given field currently has a value.
 
-#### JavaScript
+### JavaScript
 
 ```js
 const nameField = document.getElementById("userName");
-const sendButton = document.getElementById("sendButton")
+const sendButton = document.getElementById("sendButton");
 
 sendButton.disabled = true;
 // [note: this is disabled since it causes this article to always load with this example focused and scrolled into view]
@@ -333,7 +321,7 @@ nameField.addEventListener("input", (event) => {
 });
 ```
 
-This code uses the {{domxref("Document")}} interface's {{domxref("Document.getElementById", "getElementById()")}} method to get the DOM object representing the {{HTMLElement("input")}} elements whose IDs are `userName` and `sendButton`.  With these, we can access the properties and methods that provide information about and grant control over these elements.
+This code uses the {{domxref("Document")}} interface's {{domxref("Document.getElementById", "getElementById()")}} method to get the DOM object representing the {{HTMLElement("input")}} elements whose IDs are `userName` and `sendButton`. With these, we can access the properties and methods that provide information about and grant control over these elements.
 
 The {{domxref("HTMLInputElement")}} object for the "Send" button's {{domxref("HTMLInputElement.disabled", "disabled")}} property is set to `true`, which disables the "Send" button so it can't be clicked. In addition, the user name input field is made the active focus by calling the {{domxref("HTMLElement/focus", "focus()")}} method it inherits from {{domxref("HTMLElement")}}.
 
@@ -341,7 +329,7 @@ Then {{domxref("EventTarget.addEventListener", "addEventListener()")}} is called
 
 With this in place, the "Send" button is always enabled whenever the user name input field has a value, and disabled when it's empty.
 
-#### HTML
+### HTML
 
 The HTML for the form looks like this:
 
@@ -350,17 +338,17 @@ The HTML for the form looks like this:
 <form action="" method="get">
   <p>
     <label for="userName" required>Your name:</label>
-    <input type="text" id="userName"> (*)
+    <input type="text" id="userName" /> (*)
   </p>
   <p>
-    <label for="email">Email:</label>
-    <input type="email" id="userEmail">
+    <label for="userEmail">Email:</label>
+    <input type="email" id="userEmail" />
   </p>
-  <input type="submit" value="Send" id="sendButton">
+  <input type="submit" value="Send" id="sendButton" />
 </form>
 ```
 
-#### Result
+### Result
 
 {{EmbedLiveSample("Examples", 640, 300)}}
 
@@ -382,4 +370,4 @@ The HTML for the form looks like this:
 
 ### Guides
 
-- [Manipulating documents](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents): A beginner's guide to manipulating the DOM.
+- [DOM scripting introduction](/en-US/docs/Learn_web_development/Core/Scripting/DOM_scripting)

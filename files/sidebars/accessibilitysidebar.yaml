@@ -1,0 +1,81 @@
+# Do not add comments to this file. They will be lost.
+
+sidebar:
+  - type: section
+    link: /Web/Accessibility
+    title: Accessibility
+  - link: /Learn_web_development/Core/Accessibility
+    title: Beginners
+    details: closed
+    children:
+      - /Learn_web_development/Core/Accessibility/What_is_accessibility
+      - /Learn_web_development/Core/Accessibility/Tooling
+      - /Learn_web_development/Core/Accessibility/HTML
+      - /Learn_web_development/Core/Accessibility/CSS_and_JavaScript
+      - /Learn_web_development/Core/Accessibility/WAI-ARIA_basics
+      - /Learn_web_development/Core/Accessibility/Multimedia
+      - /Learn_web_development/Core/Accessibility/Mobile
+      - /Learn_web_development/Core/Accessibility/Accessibility_troubleshooting
+  - title: Guides
+    details: closed
+    children:
+      - /Web/Accessibility/Information_for_Web_authors
+      - /Web/Accessibility/Accessibility:_What_users_can_to_to_browse_safely
+      - /Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets
+      - /Web/Accessibility/Keyboard-navigable_JavaScript_widgets
+      - /Web/Accessibility/Mobile_accessibility_checklist
+      - /Web/Accessibility/Understanding_WCAG
+      - /Web/Accessibility/Cognitive_accessibility
+      - /Web/Accessibility/Accessibility_and_Spacial_Patterns
+      - /Web/Accessibility/Understanding_Colors_and_Luminance
+      - /Web/Accessibility/Seizure_disorders
+  - type: listSubPages
+    path: /Web/Accessibility/Understanding_WCAG
+    title: WCAG
+    details: closed
+  - type: section
+    link: /Web/Accessibility/ARIA
+    title: ARIA
+  - title: ARIA_guides
+    details: closed
+    children:
+      - /Web/Accessibility/ARIA/ARIA_Guides
+      - /Web/Accessibility/ARIA/ARIA_Live_Regions
+      - /Web/Accessibility/ARIA/ARIA_Screen_Reader_Implementors_Guide
+      - /Web/Accessibility/ARIA/ARIA_Techniques
+      - /Web/Accessibility/ARIA/Multipart_labels
+      - /Web/Accessibility/ARIA/How_to_file_ARIA-related_bugs
+  - type: listSubPages
+    path: /Web/Accessibility/ARIA/Attributes
+    title: ARIA states and properties
+    details: closed
+  - type: listSubPages
+    path: /Web/Accessibility/ARIA/Roles
+    title: ARIA roles
+    details: closed
+l10n:
+  de:
+    Accessibility: Barrierefreiheit
+    Guides: Anleitungen
+    ARIA: ARIA
+    ARIA_guides: ARIA-Anleitungen
+    ARIA states and properties: ARIA-Zustände und -Eigenschaften
+    ARIA roles: ARIA-Rollen
+    WCAG: WCAG
+  en-US:
+    Accessibility: Accessibility
+    Guides: Guides
+    Beginners: Beginner's tutorials
+    ARIA: ARIA
+    ARIA_guides: ARIA guides
+    ARIA states and properties: ARIA states and properties
+    ARIA roles: ARIA roles
+    WCAG: WCAG
+  zh-CN:
+    Accessibility: 无障碍
+    Guides: 指南
+    ARIA: ARIA
+    ARIA_guides: ARIA 指南
+    ARIA states and properties: ARIA 状态及属性
+    ARIA roles: ARIA 角色
+    WCAG: WCAG

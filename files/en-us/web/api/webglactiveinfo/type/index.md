@@ -1,15 +1,12 @@
 ---
-title: WebGLActiveInfo.type
+title: "WebGLActiveInfo: type property"
+short-title: type
 slug: Web/API/WebGLActiveInfo/type
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - WebGL
 browser-compat: api.WebGLActiveInfo.type
 ---
-{{APIRef("WebGL")}}
+
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The read-only **`WebGLActiveInfo.type`** property represents the type of the requested data returned by calling the {{domxref("WebGLRenderingContext.getActiveAttrib()", "getActiveAttrib()")}} or {{domxref("WebGLRenderingContext.getActiveUniform()", "getActiveUniform()")}} methods.
 

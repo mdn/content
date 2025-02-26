@@ -1,21 +1,17 @@
 ---
-title: PerformanceTiming.connectEnd
+title: "PerformanceTiming: connectEnd property"
+short-title: connectEnd
 slug: Web/API/PerformanceTiming/connectEnd
 page-type: web-api-instance-property
-tags:
-  - API
-  - Backwards compatibility
-  - Deprecated
-  - Navigation Timing
-  - PerformanceTiming
-  - Property
-  - Read-only
-  - legacy
+status:
+  - deprecated
 browser-compat: api.PerformanceTiming.connectEnd
 ---
-{{APIRef("Navigation Timing")}}{{Deprecated_Header}}
 
-> **Warning:** This interface of this property is deprecated in the [Navigation Timing Level 2 specification](https://w3c.github.io/navigation-timing/#obsolete). Please use the {{domxref("PerformanceNavigationTiming")}}
+{{APIRef("Performance API")}}{{Deprecated_Header}}
+
+> [!WARNING]
+> This interface of this property is deprecated in the [Navigation Timing Level 2 specification](https://w3c.github.io/navigation-timing/#obsolete). Please use the {{domxref("PerformanceNavigationTiming")}}
 > interface instead.
 
 The legacy
@@ -34,8 +30,7 @@ An `unsigned long long`.
 
 ## Specifications
 
-This feature is no longer on track to become a standard, as the [Navigation Timing specification](https://w3c.github.io/navigation-timing/#obsolete) has marked it as deprecated.
-Use the {{domxref("PerformanceNavigationTiming")}} interface instead.
+{{Specifications}}
 
 ## Browser compatibility
 

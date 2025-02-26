@@ -2,13 +2,8 @@
 title: How whitespace is handled by HTML, CSS, and in the DOM
 slug: Web/API/Document_Object_Model/Whitespace
 page-type: guide
-tags:
-  - CSS
-  - DOM
-  - HTML
-  - JavaScript
-  - whitespace
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
 The presence of whitespace in the [DOM](/en-US/docs/Web/API/Document_Object_Model) can cause layout problems and make manipulation of the content tree difficult in unexpected ways, depending on where it is located. This article explores when difficulties can occur, and looks at what can be done to mitigate resulting problems.
@@ -21,19 +16,19 @@ Whitespace is any string of text composed only of spaces, tabs or line breaks (t
 
 In the case of HTML, whitespace is largely ignored — whitespace in between words is treated as a single character, and whitespace at the start and end of elements and outside elements is ignored. Take the following minimal example:
 
-```html
-<!DOCTYPE html>
+```html-nolint
+<!doctype html>
 
   <h1>      Hello      World!     </h1>
 ```
 
-This source code contains a couple of line feeds after the `DOCTYPE` and a bunch of space characters before, after, and inside the `<h1>` element, but the browser doesn't seem to care at all and just shows the words "Hello World!" as if these characters didn't exist at all:
+This source code contains a couple of line feeds after the `doctype` and a bunch of space characters before, after, and inside the `<h1>` element, but the browser doesn't seem to care at all and just shows the words "Hello World!" as if these characters didn't exist at all:
 
 {{EmbedLiveSample('HTML_largely_ignores_whitespace')}}
 
 This is so that whitespace characters don't impact the layout of your page. Creating space around and inside elements is the job of CSS.
 
-### What _does_ happen to whitespace?
+### What happens to whitespace?
 
 They don't just disappear, however.
 
@@ -45,23 +40,22 @@ Any whitespace characters that are outside of HTML elements in the original docu
 Take the following document, for example:
 
 ```html
-<!DOCTYPE html>
-<html>
-<head>
-  <title>My Document</title>
-</head>
-<body>
-  <h1>Header</h1>
-  <p>
-    Paragraph
-  </p>
-</body>
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Document</title>
+  </head>
+  <body>
+    <h1>Header</h1>
+    <p>Paragraph</p>
+  </body>
 </html>
 ```
 
 The DOM tree for this looks like so:
 
-![dom tree equivalent of the above HTML example](dom-string.png)
+![The DOM tree representing a simple HTML document](dom-string.png)
 
 Conserving whitespace characters in the DOM is useful in many ways, but there are certain places where this makes certain layouts more difficult to implement, and causes problems for developers who want to iterate through nodes in the DOM. We'll look at these, and some solutions, later on.
 
@@ -71,11 +65,11 @@ Most whitespace characters are ignored, not all of them are. In the earlier exam
 
 #### Example
 
-Let's take another example. To make it easier, we've added a comment that shows all spaces with ◦, all tabs with ⇥ , and all line breaks with ⏎:
+Let's take another example. To make it easier, we've added a comment that shows all spaces with ◦, all tabs with ⇥, and all line breaks with ⏎:
 
 This example:
 
-```html
+```html-nolint
 <h1>   Hello
         <span> World!</span>   </h1>
 
@@ -101,37 +95,44 @@ Because of this, it establishes what is called an [inline formatting context](/e
 
 Inside this context, whitespace character processing can be summarized as follows:
 
-1. First, all spaces and tabs immediately before and after a line break are ignored so, if we take our example markup from before and apply this first rule, we get:
+1. First, all spaces and tabs immediately before and after a line break are ignored so, if we take our example markup from before:
 
-    ```html
-    <h1>◦◦◦Hello⏎
-    <span>◦World!</span>⇥◦◦</h1>
-    ```
+   ```html-nolint
+   <h1>◦◦◦Hello◦⏎
+   ⇥⇥⇥⇥<span>◦World!</span>⇥◦◦</h1>
+   ```
+
+   ...and apply this first rule, we get:
+
+   ```html-nolint
+   <h1>◦◦◦Hello⏎
+   <span>◦World!</span>⇥◦◦</h1>
+   ```
 
 2. Next, all tab characters are handled as space characters, so the example becomes:
 
-    ```html
-    <h1>◦◦◦Hello⏎
-    <span>◦World!</span>◦◦◦</h1>
-    ```
+   ```html-nolint
+   <h1>◦◦◦Hello⏎
+   <span>◦World!</span>◦◦◦</h1>
+   ```
 
 3. Next, line breaks are converted to spaces:
 
-    ```html
-    <h1>◦◦◦Hello◦<span>◦World!</span>◦◦◦</h1>
-    ```
+   ```html-nolint
+   <h1>◦◦◦Hello◦<span>◦World!</span>◦◦◦</h1>
+   ```
 
 4. After that, any space immediately following another space (even across two separate inline elements) is ignored, so we end up with:
 
-    ```html
-    <h1>◦Hello◦<span>World!</span>◦</h1>
-    ```
+   ```html-nolint
+   <h1>◦Hello◦<span>World!</span>◦</h1>
+   ```
 
 5. And finally, sequences of spaces at the beginning and end of an element are removed, so we finally get this:
 
-    ```html
-    <h1>Hello◦<span>World!</span></h1>
-    ```
+   ```html-nolint
+   <h1>Hello◦<span>World!</span></h1>
+   ```
 
 This is why people visiting the web page will see the phrase "Hello World!" nicely written at the top of the page, rather than a weirdly indented "Hello" followed but an even more weirdly indented "World!" on the line below that.
 
@@ -139,7 +140,7 @@ This is why people visiting the web page will see the phrase "Hello World!" nice
 
 ### Whitespace in block formatting contexts
 
-Above we just looked at elements that contain inline elements, and inline formatting contexts. If an element contains at least one block element, then it instead establishes what is called a [block formatting context](/en-US/docs/Web/Guide/CSS/Block_formatting_context).
+Above we just looked at elements that contain inline elements, and inline formatting contexts. If an element contains at least one block element, then it instead establishes what is called a [block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context).
 
 Within this context, whitespace is treated very differently.
 
@@ -147,9 +148,9 @@ Within this context, whitespace is treated very differently.
 
 Let's take a look at an example to explain how. We've marked the whitespace characters as before.
 
-We have 3 text nodes that contain only whitespace, one before the first `<div>`, one between the 2 `<divs>`, and one after the second `<div>`.
+We have 3 text nodes that contain only whitespace, one before the first `<div>`, one between the 2 `<div>`s, and one after the second `<div>`.
 
-```html
+```html-nolint
 <body>
   <div>  Hello  </div>
 
@@ -171,27 +172,37 @@ This renders like so:
 
 #### Explanation
 
-We can summarize how the whitespace here is handled as follows (the may be some slight differences in exact behavior between browsers, but this basically works):
+We can summarize how the whitespace here is handled as follows (there may be some slight differences in exact behavior between browsers, but this basically works):
 
-1. Because we're inside a block formatting context, everything must be a block, so our 3 text nodes also become blocks, just like the 2 `<div>`s. Blocks occupy the full width available and are stacked on top of each other, which means that we end up with a layout composed of this list of blocks:
+1. Because we're inside a block formatting context, everything must be a block, so our 3 text nodes also become blocks, just like the 2 `<div>`s. Blocks occupy the full width available and are stacked on top of each other, which means that, starting from the example above:
 
-    ```html
-    <block>⏎⇥</block>
-    <block>◦◦Hello◦◦</block>
-    <block>⏎◦◦◦</block>
-    <block>◦◦World!◦◦</block>
-    <block>◦◦⏎</block>
-    ```
+   ```html-nolint
+   <body>⏎
+   ⇥<div>◦◦Hello◦◦</div>⏎
+   ⏎
+   ◦◦◦<div>◦◦World!◦◦</div>◦◦⏎
+   </body>
+   ```
+
+   ...we end up with a layout composed of this list of blocks:
+
+   ```html
+   <block>⏎⇥</block>
+   <block>◦◦Hello◦◦</block>
+   <block>⏎⏎◦◦◦</block>
+   <block>◦◦World!◦◦</block>
+   <block>◦◦⏎</block>
+   ```
 
 2. This is then simplified further by applying the processing rules for whitespace in inline formatting contexts to these blocks:
 
-    ```html
-    <block></block>
-    <block>Hello</block>
-    <block></block>
-    <block>World!</block>
-    <block></block>
-    ```
+   ```html
+   <block></block>
+   <block>Hello</block>
+   <block></block>
+   <block>World!</block>
+   <block></block>
+   ```
 
 3. The 3 empty blocks we now have are not going to occupy any space in the final layout, because they don't contain anything, so we'll end up with only 2 blocks taking up space in the page. People viewing the web page see the words "Hello" and "World!" on 2 separate lines as you'd expect 2 `<div>`s to be laid out. The browser engine has essentially ignored all of the whitespace that was added in the source code.
 
@@ -227,32 +238,28 @@ Consider this example (again, we've included an HTML comment that shows the whit
 
 ```html
 <ul class="people-list">
+  <li></li>
 
-    <li></li>
+  <li></li>
 
-    <li></li>
+  <li></li>
 
-    <li></li>
+  <li></li>
 
-    <li></li>
-
-    <li></li>
-
-  </ul>
+  <li></li>
+</ul>
 
 <!--
 <ul class="people-list">⏎
-
 ◦◦<li></li>⏎
-
+⏎
 ◦◦<li></li>⏎
-
+⏎
 ◦◦<li></li>⏎
-
+⏎
 ◦◦<li></li>⏎
-
+⏎
 ◦◦<li></li>⏎
-
 </ul>
 -->
 ```
@@ -265,13 +272,13 @@ You probably don't want the gaps in between the blocks — depending on the use 
 
 The Firefox DevTools HTML Inspector will highlight text nodes, and also show you exactly what area the elements are taking up — useful if you are wondering what is causing the problem, and are maybe thinking you've got some extra margin in there or something!
 
-![](whitespace-devtools.png)
+![Example of displaying whitespaces between blocks in the Firefox DevTools HTML Inspector](whitespace-devtools.png)
 
 ### Solutions
 
 There are a few ways of getting around this problem:
 
-Use [Flexbox](/en-US/docs/Learn/CSS/CSS_layout/Flexbox) to create the horizontal list of items instead of trying an `inline-block` solution. This handles everything for you, and is definitely the preferred solution:
+Use [Flexbox](/en-US/docs/Learn_web_development/Core/CSS_layout/Flexbox) to create the horizontal list of items instead of trying an `inline-block` solution. This handles everything for you, and is definitely the preferred solution:
 
 ```css
 ul {
@@ -311,7 +318,7 @@ li {
 
 You can also solve this problem by putting your list items all on the same line in the source, which causes the whitespace nodes to not be created in the first place:
 
-```html
+```html-nolint
 <li></li><li></li><li></li><li></li><li></li>
 ```
 
@@ -333,53 +340,53 @@ The JavaScript code below defines several functions that make it easier to deal 
  *  "\r" CR  \u000D
  *  " "  SPC \u0020
  *
- * This does not use Javascript's "\s" because that includes non-breaking
+ * This does not use JavaScript's "\s" because that includes non-breaking
  * spaces (and also some other characters).
  */
 
 /**
  * Determine whether a node's text content is entirely whitespace.
  *
- * @param nod  A node implementing the |CharacterData| interface (i.e.,
- *             a |Text|, |Comment|, or |CDATASection| node
- * @return     True if all of the text content of |nod| is whitespace,
- *             otherwise false.
+ * @param nod  A node implementing the `CharacterData` interface (i.e.,
+ *             a `Text`, `Comment`, or `CDATASection` node)
+ * @return     `true` if all of the text content of `nod` is whitespace,
+ *             otherwise `false`.
  */
-function is_all_ws(nod) {
-  return !(/[^\t\n\r ]/.test(nod.textContent));
+function isAllWs(nod) {
+  return !/[^\t\n\r ]/.test(nod.textContent);
 }
 
 /**
  * Determine if a node should be ignored by the iterator functions.
  *
- * @param nod  An object implementing the DOM1 |Node| interface.
- * @return     true if the node is:
- *                1) A |Text| node that is all whitespace
- *                2) A |Comment| node
- *             and otherwise false.
+ * @param nod  An object implementing the `Node` interface.
+ * @return     `true` if the node is:
+ *                1) A `Text` node that is all whitespace
+ *                2) A `Comment` node
+ *             and otherwise `false`.
  */
-
-function is_ignorable(nod) {
-  return (nod.nodeType === 8) || // A comment node
-         (nod.nodeType === 3 && is_all_ws(nod)); // a text node, all ws
+function isIgnorable(nod) {
+  return (
+    nod.nodeType === 8 || // a comment node
+    (nod.nodeType === 3 && isAllWs(nod))
+  ); // a text node, all ws
 }
 
 /**
- * Version of |previousSibling| that skips nodes that are entirely
- * whitespace or comments.  (Normally |previousSibling| is a property
+ * Version of `previousSibling` that skips nodes that are entirely
+ * whitespace or comments. (Normally `previousSibling` is a property
  * of all DOM nodes that gives the sibling node, the node that is
  * a child of the same parent, that occurs immediately before the
  * reference node.)
  *
  * @param sib  The reference node.
- * @return     Either:
- *               1) The closest previous sibling to |sib| that is not
- *                  ignorable according to |is_ignorable|, or
- *               2) null if no such node exists.
+ * @return     The closest previous sibling to `sib` that is not
+ *             ignorable according to `isIgnorable`, or `null` if
+ *             no such node exists.
  */
-function node_before(sib) {
+function nodeBefore(sib) {
   while ((sib = sib.previousSibling)) {
-    if (!is_ignorable(sib)) {
+    if (!isIgnorable(sib)) {
       return sib;
     }
   }
@@ -387,18 +394,17 @@ function node_before(sib) {
 }
 
 /**
- * Version of |nextSibling| that skips nodes that are entirely
+ * Version of `nextSibling` that skips nodes that are entirely
  * whitespace or comments.
  *
  * @param sib  The reference node.
- * @return     Either:
- *               1) The closest next sibling to |sib| that is not
- *                  ignorable according to |is_ignorable|, or
- *               2) null if no such node exists.
+ * @return     The closest next sibling to `sib` that is not
+ *             ignorable according to `isIgnorable`, or `null`
+ *             if no such node exists.
  */
-function node_after(sib) {
+function nodeAfter(sib) {
   while ((sib = sib.nextSibling)) {
-    if (!is_ignorable(sib)) {
+    if (!isIgnorable(sib)) {
       return sib;
     }
   }
@@ -406,21 +412,20 @@ function node_after(sib) {
 }
 
 /**
- * Version of |lastChild| that skips nodes that are entirely
- * whitespace or comments.  (Normally |lastChild| is a property
+ * Version of `lastChild` that skips nodes that are entirely
+ * whitespace or comments. (Normally `lastChild` is a property
  * of all DOM nodes that gives the last of the nodes contained
  * directly in the reference node.)
  *
  * @param sib  The reference node.
- * @return     Either:
- *               1) The last child of |sib| that is not
- *                  ignorable according to |is_ignorable|, or
- *               2) null if no such node exists.
+ * @return     The last child of `sib` that is not ignorable
+ *             according to `isIgnorable`, or `null` if no
+ *             such node exists.
  */
-function last_child(par) {
+function lastChild(par) {
   let res = par.lastChild;
   while (res) {
-    if (!is_ignorable(res)) {
+    if (!isIgnorable(res)) {
       return res;
     }
     res = res.previousSibling;
@@ -429,19 +434,18 @@ function last_child(par) {
 }
 
 /**
- * Version of |firstChild| that skips nodes that are entirely
+ * Version of `firstChild` that skips nodes that are entirely
  * whitespace and comments.
  *
  * @param sib  The reference node.
- * @return     Either:
- *               1) The first child of |sib| that is not
- *                  ignorable according to |is_ignorable|, or
- *               2) null if no such node exists.
+ * @return     The first child of `sib` that is not ignorable
+ *             according to `isIgnorable`, or `null` if no
+ *             such node exists.
  */
-function first_child(par) {
+function firstChild(par) {
   let res = par.firstChild;
   while (res) {
-    if (!is_ignorable(res)) {
+    if (!isIgnorable(res)) {
       return res;
     }
     res = res.nextSibling;
@@ -450,15 +454,15 @@ function first_child(par) {
 }
 
 /**
- * Version of |data| that doesn't include whitespace at the beginning
- * and end and normalizes all whitespace to a single space.  (Normally
- * |data| is a property of text nodes that gives the text of the node.)
+ * Version of `data` that doesn't include whitespace at the beginning
+ * and end and normalizes all whitespace to a single space. (Normally
+ * `data` is a property of text nodes that gives the text of the node.)
  *
  * @param txt  The text node whose data should be returned
  * @return     A string giving the contents of the text node with
  *             whitespace collapsed.
  */
-function data_of(txt) {
+function dataOf(txt) {
   let data = txt.textContent;
   data = data.replace(/[\t\n\r ]+/g, " ");
   if (data[0] === " ") {
@@ -476,12 +480,12 @@ function data_of(txt) {
 The following code demonstrates the use of the functions above. It iterates over the children of an element (whose children are all elements) to find the one whose text is `"This is the third paragraph"`, and then changes the class attribute and the contents of that paragraph.
 
 ```js
-let cur = first_child(document.getElementById("test"));
+let cur = firstChild(document.getElementById("test"));
 while (cur) {
-  if (data_of(cur.firstChild) === "This is the third paragraph.") {
+  if (dataOf(cur.firstChild) === "This is the third paragraph.") {
     cur.className = "magic";
     cur.firstChild.textContent = "This is the magic paragraph.";
   }
-  cur = node_after(cur);
+  cur = nodeAfter(cur);
 }
 ```

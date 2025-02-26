@@ -1,30 +1,24 @@
 ---
-title: StaticRange()
+title: "StaticRange: StaticRange() constructor"
+short-title: StaticRange()
 slug: Web/API/StaticRange/StaticRange
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - DOM
-  - DOM API
-  - Range
-  - Reference
-  - StaticRange
 browser-compat: api.StaticRange.StaticRange
 ---
+
 {{APIRef("DOM")}}
 
 The **`StaticRange()`** constructor
 creates a new {{domxref("StaticRange")}} object representing a span of content within
 the DOM.
 
-This constructor includes properties identifying the standard and end positions of
+This constructor includes properties identifying the start and end positions of
 the range as well as a Boolean indicating whether or not the range is
 **collapsed** (that is, empty).
 
 ## Syntax
 
-```js
+```js-nolint
 new StaticRange(rangeSpec)
 ```
 

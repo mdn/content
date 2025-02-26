@@ -1,22 +1,11 @@
 ---
-title: RTCIceCandidate.port
+title: "RTCIceCandidate: port property"
+short-title: port
 slug: Web/API/RTCIceCandidate/port
 page-type: web-api-instance-property
-tags:
-  - API
-  - Candidate
-  - ICE
-  - Networking
-  - Property
-  - RTCIceCandidate
-  - Read-only
-  - Reference
-  - SDP
-  - WebRTC
-  - WebRTC API
-  - port
 browser-compat: api.RTCIceCandidate.port
 ---
+
 {{APIRef("WebRTC")}}
 
 The **{{domxref("RTCIceCandidate")}}** interface's read-only **`port`** property contains the port
@@ -32,7 +21,8 @@ A 16-bit number indicating the port number on the device at the address indicate
 `port` is initialized to `null` if it is not specified in the
 `candidate`, or if the `candidate` string can't be parsed properly.
 
-> **Note:** If `port` is `null`, passing the candidate to {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}}
+> [!NOTE]
+> If `port` is `null`, passing the candidate to {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}}
 > will fail, throwing an `OperationError` exception.
 > This applies only if the candidate implements `port`.
 
@@ -41,8 +31,8 @@ A 16-bit number indicating the port number on the device at the address indicate
 Consider this {{Glossary("SDP")}} attribute line (a-line) which describes an ICE
 candidate:
 
-```
-a=candidate:4234997325 1 udp 2043278322 192.168.0.56 44323 typ host
+```plain
+a=candidate:4234997325 1 udp 2043278322 192.0.2.172 44323 typ host
 ```
 
 The port number is found in the sixth field, which is `"44323"`. In this case, the value of `port` will be 44323.
@@ -55,8 +45,8 @@ into an object for future use.
 ```js
 const candidateLoc = {
   address: candidate.ip,
-  port: candidate.port
-}
+  port: candidate.port,
+};
 ```
 
 ## Specifications

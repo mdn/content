@@ -1,30 +1,25 @@
 ---
-title: BaseAudioContext.createDelay()
+title: "BaseAudioContext: createDelay() method"
+short-title: createDelay()
 slug: Web/API/BaseAudioContext/createDelay
 page-type: web-api-instance-method
-tags:
-  - API
-  - AudioContext
-  - BaseAudioContext
-  - Method
-  - Reference
-  - Web Audio API
-  - createDelay
 browser-compat: api.BaseAudioContext.createDelay
 ---
+
 {{APIRef("Web Audio API")}}
 
 The `createDelay()` method of the
 {{domxref("BaseAudioContext")}} Interface is used to create a {{domxref("DelayNode")}},
 which is used to delay the incoming audio signal by a certain amount of time.
 
-> **Note:** The {{domxref("DelayNode.DelayNode", "DelayNode()")}}
+> [!NOTE]
+> The {{domxref("DelayNode.DelayNode", "DelayNode()")}}
 > constructor is the recommended way to create a {{domxref("DelayNode")}}; see
 > [Creating an AudioNode](/en-US/docs/Web/API/AudioNode#creating_an_audionode).
 
 ## Syntax
 
-```js
+```js-nolint
 createDelay(maxDelayTime)
 ```
 
@@ -41,7 +36,7 @@ seconds.
 
 ## Examples
 
-We have created a simple example that allows you to play three different samples on a
+We have created an example that allows you to play three different samples on a
 constant loop — see [create-delay](https://chrisdavidmills.github.io/create-delay/) (you can also
 [view the source code](https://github.com/chrisdavidmills/create-delay)). If
 you just press the play buttons, the loops will start immediately; if you slide the
@@ -57,30 +52,30 @@ const synthDelay = audioCtx.createDelay(5.0);
 
 let synthSource;
 
-playSynth.onclick = function() {
+playSynth.onclick = () => {
   synthSource = audioCtx.createBufferSource();
   synthSource.buffer = buffers[2];
   synthSource.loop = true;
   synthSource.start();
   synthSource.connect(synthDelay);
   synthDelay.connect(destination);
-  this.setAttribute('disabled', 'disabled');
-}
+  this.setAttribute("disabled", "disabled");
+};
 
-stopSynth.onclick = function() {
+stopSynth.onclick = () => {
   synthSource.disconnect(synthDelay);
   synthDelay.disconnect(destination);
   synthSource.stop();
-  playSynth.removeAttribute('disabled');
-}
+  playSynth.removeAttribute("disabled");
+};
 
 // …
 
 let delay1;
-rangeSynth.oninput = function() {
+rangeSynth.oninput = () => {
   delay1 = rangeSynth.value;
   synthDelay.delayTime.setValueAtTime(delay1, audioCtx.currentTime);
-}
+};
 ```
 
 ## Specifications

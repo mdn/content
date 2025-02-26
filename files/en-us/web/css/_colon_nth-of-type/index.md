@@ -1,15 +1,10 @@
 ---
-title: ':nth-of-type()'
+title: :nth-of-type()
 slug: Web/CSS/:nth-of-type
-tags:
-  - CSS
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Web
+page-type: css-pseudo-class
 browser-compat: css.selectors.nth-of-type
 ---
+
 {{CSSRef}}
 
 The **`:nth-of-type()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches elements based on their position among siblings of the same type (tag name).
@@ -22,8 +17,10 @@ The `nth-of-type` pseudo-class is specified with a single argument, which repres
 
 See {{Cssxref(":nth-child")}} for a more detailed explanation of its syntax.
 
-```
-:nth-of-type( <an-plus-b> | even | odd )
+```css-nolint
+:nth-of-type(<An+B> | even | odd) {
+  /* ... */
+}
 ```
 
 ## Examples
@@ -47,7 +44,7 @@ See {{Cssxref(":nth-child")}} for a more detailed explanation of its syntax.
 
 ```css
 /* Odd paragraphs */
-p:nth-of-type(2n+1) {
+p:nth-of-type(2n + 1) {
   color: red;
 }
 
@@ -63,7 +60,7 @@ p:nth-of-type(1) {
 
 /* This will match the 3rd paragraph as it will match elements which are 2n+1 AND have a class of fancy.
 The second paragraph has a class of fancy but is not matched as it is not :nth-of-type(2n+1) */
-p.fancy:nth-of-type(2n+1) {
+p.fancy:nth-of-type(2n + 1) {
   text-decoration: underline;
 }
 ```
@@ -72,7 +69,8 @@ p.fancy:nth-of-type(2n+1) {
 
 {{EmbedLiveSample('Basic_example', 250, 250)}}
 
-> **Note:** There is no way to select the nth-of-class using this selector. The selector looks at the type only when creating the list of matches. You can however apply CSS to an element based on `:nth-of-type` location **and** a class, as shown in the example above.
+> [!NOTE]
+> There is no way to select the nth-of-class using this selector. The selector looks at the type only when creating the list of matches. You can however apply CSS to an element based on `:nth-of-type` location **and** a class, as shown in the example above.
 
 ## Specifications
 

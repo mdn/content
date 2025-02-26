@@ -1,19 +1,15 @@
 ---
-title: CSSPositionValue()
+title: "CSSPositionValue: CSSPositionValue() constructor"
+short-title: CSSPositionValue()
 slug: Web/API/CSSPositionValue/CSSPositionValue
 page-type: web-api-constructor
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSPositionValue
-  - Constructor
-  - Experimental
-  - Houdini
-  - Reference
-  - Deprecated
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.CSSPositionValue.CSSPositionValue
 ---
-{{APIRef("CSS Typed Object Model API")}}{{deprecated_header}}
+
+{{APIRef("CSS Typed Object Model API")}}{{deprecated_header}}{{Non-standard_header}}
 
 The **`CSSPositionValue()`** constructor
 creates a new {{domxref("CSSPositionValue")}} object which represents values for
@@ -21,7 +17,7 @@ properties that take a position, for example {{cssxref('object-position')}}.
 
 ## Syntax
 
-```js
+```js-nolint
 new CSSPositionValue(x, y)
 ```
 
@@ -30,7 +26,7 @@ new CSSPositionValue(x, y)
 - `x`
   - : A position along the web page's horizontal axis.
 - `y`
-  - : A position along the web page's vertical axix.
+  - : A position along the web page's vertical axis.
 
 ## Examples
 
@@ -38,11 +34,11 @@ The following example positions a container `<div>` 5 pixels from the
 top and 10 pixels from the left of the page.
 
 ```js
-let someDiv = document.getElementById('container');
+let someDiv = document.getElementById("container");
 let position = new CSSPositionValue(CSS.px(5), CSS.px(10));
 
-someDiv.attributeStyleMap.set('object-position', position);
-console.log(position.x.value, position.y.value);  // 5 10
+someDiv.attributeStyleMap.set("object-position", position);
+console.log(position.x.value, position.y.value); // 5 10
 ```
 
 ## Browser compatibility

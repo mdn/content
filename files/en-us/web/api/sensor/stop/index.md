@@ -1,26 +1,18 @@
 ---
-title: Sensor.stop()
+title: "Sensor: stop() method"
+short-title: stop()
 slug: Web/API/Sensor/stop
 page-type: web-api-instance-method
-tags:
-  - API
-  - Generic Sensor API
-  - Method
-  - Reference
-  - Sensor
-  - Sensor APIs
-  - Sensors
-  - stop()
 browser-compat: api.Sensor.stop
 ---
-{{APIRef("Sensor API")}}
 
-The **`stop`** method of the
-{{domxref("Sensor")}} interface deactivates the current sensor.
+{{securecontext_header}}{{APIRef("Sensor API")}}
+
+The **`stop()`** method of the {{domxref("Sensor")}} interface deactivates the current sensor.
 
 ## Syntax
 
-```js
+```js-nolint
 stop()
 ```
 

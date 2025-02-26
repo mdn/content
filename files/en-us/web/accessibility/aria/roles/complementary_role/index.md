@@ -1,17 +1,15 @@
 ---
-title: 'ARIA: complementary role'
+title: "ARIA: complementary role"
 slug: Web/Accessibility/ARIA/Roles/complementary_role
-tags:
-  - ARIA
-  - ARIA Role
-  - Reference
-  - complementary role
-  - Accessibility
+page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#complementary
-  - https://w3c.github.io/aria-practices/#aria_lh_complementary
+  - https://www.w3.org/WAI/ARIA/apg/patterns/landmarks/examples/complementary.html
 ---
-The `complementary` [landmark role](/en-US/docs/Web/Accessibility/ARIA/Roles#landmark_roles) is used to designate a supporting section that relates to the main content, yet can stand alone when separated. These sections are frequently presented as sidebars or call-out boxes. If possible, use the [HTML \<aside> element](/en-US/docs/Web/HTML/Element/aside) instead.
+
+{{AccessibilitySidebar}}
+
+The `complementary` [landmark role](/en-US/docs/Web/Accessibility/ARIA/Roles#3._landmark_roles) is used to designate a supporting section that relates to the main content, yet can stand alone when separated. These sections are frequently presented as sidebars or call-out boxes. If possible, use the [HTML \<aside> element](/en-US/docs/Web/HTML/Element/aside) instead.
 
 ```html
 <div role="complementary">
@@ -26,7 +24,8 @@ This is a sidebar containing links to project sponsors.
 
 The `complementary` role is [a landmark](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques#landmark_roles) role. Landmarks can be used by assistive technology to quickly identify and navigate to large sections of the document. Content listed within a container with the `complementary` landmark role should make sense if separated from the main content of the document.
 
-> **Note:** Using the {{HTMLElement('aside')}} element will automatically communicate a section has a role of `complementary`. Developers should always prefer using the correct semantic HTML element over using ARIA.
+> [!NOTE]
+> Using the {{HTMLElement('aside')}} element will automatically communicate a section has a role of `complementary`. Developers should always prefer using the correct semantic HTML element over using ARIA.
 
 ## Examples
 
@@ -34,13 +33,17 @@ The `complementary` role is [a landmark](/en-US/docs/Web/Accessibility/ARIA/ARIA
 <div role="complementary">
   <h2>Trending articles</h2>
   <ul>
-     <li><a href="#">18 tweets that will make you feel all the feels</a></li>
-     <li><a href="#">Stop searching for the perfect lunch containers because I've found them</a></li>
-     <li><a href="#">The time has come to finally decide what we should be calling these foods</a></li>
-     <li><a href="#">17 really good posts we saw on Tumblr this week</a></li>
-     <li><a href="#">10 parent hacks we know work because we tried them</a></li>
-   </ul>
- </div>
+    <li><a href="#">18 tweets that will make you feel all the feels</a></li>
+    <li>
+      <a href="#">Stop searching! I've found the perfect lunch containers.</a>
+    </li>
+    <li>
+      <a href="#">The time has come to decide how to call these foods</a>
+    </li>
+    <li><a href="#">17 really good posts we saw on Tumblr this week</a></li>
+    <li><a href="#">10 parent hacks we know work because we tried them</a></li>
+  </ul>
+</div>
 ```
 
 ## Accessibility concerns
@@ -94,11 +97,3 @@ Certain technologies such as browser extensions can generate lists of all landma
 - [Using WAI-ARIA Landmarks – 2013 | The Paciello Group](https://www.tpgi.com/using-wai-aria-landmarks-2013/)
 - [Accessible Landmarks | scottohara.me](https://www.scottohara.me/blog/2018/03/03/landmarks.html)
 - [Aside Revisited | HTML5 Doctor](https://html5doctor.com/aside-revisited/)
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
-
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
-
-</section>

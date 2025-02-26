@@ -1,21 +1,47 @@
 ---
 title: mathbackground
 slug: Web/MathML/Global_attributes/mathbackground
-tags:
-  - Global attributes
-  - MathML
-  - Reference
+page-type: mathml-attribute
+status:
+  - deprecated
 browser-compat: mathml.global_attributes.mathbackground
 ---
-{{MathMLRef("Global_attributes")}}
+
+{{MathMLRef}}{{Deprecated_Header}}
 
 The **`mathbackground`** [global attribute](/en-US/docs/Web/MathML/Global_attributes) sets the [background-color](/en-US/docs/Web/CSS/background-color) of a MathML element.
 
-> **Note:** Use CSS for styling MathML whenever possible. The `mathbackground` attribute should only be included for applications that are not CSS-aware and will be overridden by the CSS `background-color` property value, if set.
+> [!NOTE]
+> Use CSS for styling MathML whenever possible. The `mathbackground` attribute should only be included for applications that are not CSS-aware and will be overridden by the CSS `background-color` property value, if set.
+
+## Example
+
+```css hidden
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: grid;
+  align-items: center;
+  font-size: 1.5rem;
+}
+```
+
+```html
+<math display="block" mathbackground="wheat">
+  <msqrt>
+    <mi>x</mi>
+  </msqrt>
+</math>
+```
+
+{{EmbedLiveSample("Example", "", 150)}}
 
 ## Syntax
 
-```html
+```html-nolint
 <!-- Keyword values -->
 <math mathbackground="red">
 <math mathbackground="indigo">
@@ -24,17 +50,17 @@ The **`mathbackground`** [global attribute](/en-US/docs/Web/MathML/Global_attrib
 <math mathbackground="#bbff00"> <!-- Fully opaque -->
 <math mathbackground="#bf0"> <!-- Fully opaque shorthand -->
 <math mathbackground="#11ffee00"> <!-- Fully transparent -->
-<math mathbackground="#1fe0"> <!-- Fully transparent shorthand  -->
+<math mathbackground="#1fe0"> <!-- Fully transparent shorthand -->
 <math mathbackground="#11ffeeff"> <!-- Fully opaque -->
-<math mathbackground="#1fef"> <!-- Fully opaque shorthand  -->
+<math mathbackground="#1fef"> <!-- Fully opaque shorthand -->
 
 <!-- RGB value -->
-<math mathbackground="rgb(255, 255, 128)"> <!-- Fully opaque -->
-<math mathbackground="rgba(117, 190, 218, 0.5)"> <!-- 50% transparent -->
+<math mathbackground="rgb(255 255 128)"> <!-- Fully opaque -->
+<math mathbackground="rgb(117 190 218 / 50%)"> <!-- 50% transparent -->
 
 <!-- HSL value -->
-<math mathbackground="hsl(50, 33%, 25%)"> <!-- Fully opaque -->
-<math mathbackground="hsla(50, 33%, 25%, 0.75)"> <!-- 75% opaque, i.e. 25% transparent -->
+<math mathbackground="hsl(50 33% 25%)"> <!-- Fully opaque -->
+<math mathbackground="hsl(50 33% 25% / 75%)"> <!-- 75% opaque, i.e. 25% transparent -->
 ```
 
 ### Values

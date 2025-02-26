@@ -1,26 +1,23 @@
 ---
-title: CanvasRenderingContext2D.strokeStyle
+title: "CanvasRenderingContext2D: strokeStyle property"
+short-title: strokeStyle
 slug: Web/API/CanvasRenderingContext2D/strokeStyle
 page-type: web-api-instance-property
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Property
-  - Reference
 browser-compat: api.CanvasRenderingContext2D.strokeStyle
 ---
+
 {{APIRef}}
 
 The **`CanvasRenderingContext2D.strokeStyle`** property of the
 Canvas 2D API specifies the color, gradient, or pattern to use for the strokes
 (outlines) around shapes. The default is `#000` (black).
 
-> **Note:** For more examples of stroke and fill styles, see [Applying styles and color](/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) in the [Canvas tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial).
+> [!NOTE]
+> For more examples of stroke and fill styles, see [Applying styles and color](/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) in the [Canvas tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial).
 
 ## Value
 
-One of the followings:
+One of the following:
 
 - `color`
   - : A string parsed as [CSS](/en-US/docs/Web/CSS)
@@ -45,10 +42,10 @@ This example applies a blue stroke color to a rectangle.
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
-ctx.strokeStyle = 'blue';
+ctx.strokeStyle = "blue";
 ctx.strokeRect(10, 10, 100, 100);
 ```
 
@@ -69,13 +66,13 @@ only modify the green and blue values. (The red channel has a fixed value.)
 ```
 
 ```js
-const ctx = document.getElementById('canvas').getContext('2d');
+const ctx = document.getElementById("canvas").getContext("2d");
 
 for (let i = 0; i < 6; i++) {
   for (let j = 0; j < 6; j++) {
     ctx.strokeStyle = `rgb(
-        0,
-        ${Math.floor(255 - 42.5 * i)},
+        0
+        ${Math.floor(255 - 42.5 * i)}
         ${Math.floor(255 - 42.5 * j)})`;
     ctx.beginPath();
     ctx.arc(12.5 + j * 25, 12.5 + i * 25, 10, 0, Math.PI * 2, true);
@@ -86,8 +83,7 @@ for (let i = 0; i < 6; i++) {
 
 The result looks like this:
 
-{{EmbedLiveSample("Creating_multiple_stroke_colors_using_loops", "180", "180",
-  "canvas_strokestyle.png")}}
+{{EmbedLiveSample("Creating_multiple_stroke_colors_using_loops", "", "180")}}
 
 ## Specifications
 
@@ -104,7 +100,7 @@ In WebKit- and Blink-based browsers, the non-standard and deprecated method
 
 ```js
 setStrokeColor(color);
-setStrokeColor(color,  alpha);
+setStrokeColor(color, alpha);
 setStrokeColor(grayLevel);
 setStrokeColor(grayLevel, alpha);
 setStrokeColor(r, g, b, a);

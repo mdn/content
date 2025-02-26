@@ -2,32 +2,25 @@
 title: USBOutTransferResult
 slug: Web/API/USBOutTransferResult
 page-type: web-api-interface
-tags:
-  - API
-  - CSSUnparsedValue
-  - Experimental
-  - Interface
-  - NeedsExample
-  - Reference
-  - USBOutTransferResult
-  - WebUSB
-  - WebUSB API
+status:
+  - experimental
 browser-compat: api.USBOutTransferResult
 ---
-{{securecontext_header}}{{APIRef("WebUSB API")}}{{SeeCompatTable}}
+
+{{APIRef("WebUSB API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The `USBOutTransferResult` interface of the [WebUSB API](/en-US/docs/Web/API/WebUSB_API) provides the result from a call to the `transferOut()` and `controlTransferOut()` methods of the `USBDevice` interface. It represents the result from requesting a transfer of data from the USB host to the USB device.
 
 ## Constructor
 
-- {{domxref("USBOutTransferResult.USBOutTransferResult", "USBOutTransferResult()")}}
+- {{domxref("USBOutTransferResult.USBOutTransferResult", "USBOutTransferResult()")}} {{Experimental_Inline}}
   - : Creates a new `USBOutTransferResult` object with the provided `status` and `bytesWritten` fields.
 
-## Properties
+## Instance properties
 
-- {{domxref("USBOutTransferResult.bytesWritten")}} {{readonlyInline}}
+- {{domxref("USBOutTransferResult.bytesWritten")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns the number of bytes from the transfer request that were sent to the device.
-- {{domxref("USBOutTransferResult.status")}} {{readonlyInline}}
+- {{domxref("USBOutTransferResult.status")}} {{ReadOnlyInline}} {{Experimental_Inline}}
 
   - : Returns the status of the transfer request, one of:
 

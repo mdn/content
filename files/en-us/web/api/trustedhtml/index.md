@@ -2,20 +2,16 @@
 title: TrustedHTML
 slug: Web/API/TrustedHTML
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - TrustedHTML
 browser-compat: api.TrustedHTML
 ---
-{{DefaultAPISidebar("Trusted Types API")}}
 
-The **`TrustedHTML`** interface of the {{domxref('Trusted Types API')}} represents a string that a developer can insert into an [injection sink](/en-US/docs/Web/API/Trusted_Types_API#injection_sinks) that will render it as HTML. These objects are created via {{domxref("TrustedTypePolicy.createHTML", "TrustedTypePolicy.createHTML()")}} and therefore have no constructor.
+{{APIRef("Trusted Types API")}}{{AvailableInWorkers}}
 
-The value of a **TrustedHTML** object is set when the object is created and cannot be changed by JavaScript as there is no setter exposed.
+The **`TrustedHTML`** interface of the {{domxref("Trusted Types API", "", "", "nocode")}} represents a string that a developer can insert into an [injection sink](/en-US/docs/Web/API/Trusted_Types_API#injection_sinks) that will render it as HTML. These objects are created via {{domxref("TrustedTypePolicy.createHTML()")}} and therefore have no constructor.
 
-## Methods
+The value of a `TrustedHTML` object is set when the object is created and cannot be changed by JavaScript as there is no setter exposed.
+
+## Instance methods
 
 - {{domxref("TrustedHTML.toJSON()")}}
   - : Returns a JSON representation of the stored data.
@@ -24,7 +20,7 @@ The value of a **TrustedHTML** object is set when the object is created and cann
 
 ## Examples
 
-In the below example we create a policy that will create {{domxref("TrustedHTML")}} objects using {{domxref("TrustedTypePolicyFactory.createPolicy()")}}. We can then use {{domxref("TrustedTypePolicy.createHTML")}} to create a sanitized HTML string to be inserted into the document.
+In the below example we create a policy that will create `TrustedHTML` objects using {{domxref("TrustedTypePolicyFactory.createPolicy()")}}. We can then use {{domxref("TrustedTypePolicy.createHTML()")}} to create a sanitized HTML string to be inserted into the document.
 
 The sanitized value can then be used with {{domxref("Element.innerHTML")}} to ensure that no new HTML elements can be injected.
 
@@ -34,7 +30,7 @@ The sanitized value can then be used with {{domxref("Element.innerHTML")}} to en
 
 ```js
 const escapeHTMLPolicy = trustedTypes.createPolicy("myEscapePolicy", {
-  createHTML: (string) => string.replace(/\>/g, "<")
+  createHTML: (string) => string.replace(/</g, "&lt;"),
 });
 
 let el = document.getElementById("myDiv");
@@ -53,4 +49,4 @@ el.innerHTML = escaped;
 
 ## See also
 
-- [Prevent DOM-based cross-site scripting vulnerabilities with Trusted Types](https://web.dev/trusted-types/)
+- [Prevent DOM-based cross-site scripting vulnerabilities with Trusted Types](https://web.dev/articles/trusted-types)

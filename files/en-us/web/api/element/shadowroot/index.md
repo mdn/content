@@ -1,16 +1,11 @@
 ---
-title: Element.shadowRoot
+title: "Element: shadowRoot property"
+short-title: shadowRoot
 slug: Web/API/Element/shadowRoot
 page-type: web-api-instance-property
-tags:
-  - API
-  - Element
-  - Property
-  - Reference
-  - ShadowRoot
-  - shadow DOM
 browser-compat: api.Element.shadowRoot
 ---
+
 {{APIRef("Shadow DOM")}}
 
 The `Element.shadowRoot` read-only property
@@ -23,6 +18,8 @@ Use {{DOMxRef("Element.attachShadow()")}} to add a shadow root to an existing el
 A {{DOMxRef("ShadowRoot")}} object instance, or `null` if the associated
 shadow root was attached with its {{DOMxRef("ShadowRoot.mode", "mode")}} set to
 `closed`. (See {{DOMxRef("Element.attachShadow()")}} for further details).
+
+Some built-in elements, such as {{HTMLElement("input")}} and {{HTMLElement("img")}}, have user-agent shadow roots that are closed to script. Therefore, their `shadowRoot` property is always `null`.
 
 ## Examples
 
@@ -39,19 +36,19 @@ parameter.
 ```js
 class Square extends HTMLElement {
   connectedCallback() {
-    console.log('Custom square element added to page.');
+    console.log("Custom square element added to page.");
     updateStyle(this);
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
-    console.log('Custom square element attributes changed.');
+    console.log("Custom square element attributes changed.");
     updateStyle(this);
   }
 }
 ```
 
 In the `updateStyle()` function itself, we get a reference to the shadow DOM
-using {{domxref("Element.shadowRoot")}}. From here we use standard DOM traversal
+using `Element.shadowRoot`. From here we use standard DOM traversal
 techniques to find the {{htmlelement("style")}} element inside the shadow DOM and then
 update the CSS found inside it:
 
@@ -61,12 +58,12 @@ function updateStyle(elem) {
   const childNodes = Array.from(shadow.childNodes);
 
   childNodes.forEach((childNode) => {
-    if (childNode.nodeName === 'STYLE') {
+    if (childNode.nodeName === "STYLE") {
       childNode.textContent = `
         div {
-          width: ${elem.getAttribute('l')}px;
-          height: ${elem.getAttribute('l')}px;
-          background-color: ${elem.getAttribute('c')};
+          width: ${elem.getAttribute("l")}px;
+          height: ${elem.getAttribute("l")}px;
+          background-color: ${elem.getAttribute("c")};
         }
       `;
     }
@@ -81,7 +78,3 @@ function updateStyle(elem) {
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- {{DOMxRef("Element.openOrClosedShadowRoot")}} {{non-standard_inline}}

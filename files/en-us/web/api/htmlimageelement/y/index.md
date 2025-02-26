@@ -1,11 +1,11 @@
 ---
-title: HTMLImageElement.y
+title: "HTMLImageElement: y property"
+short-title: y
 slug: Web/API/HTMLImageElement/y
 page-type: web-api-instance-property
-tags:
-- Property
 browser-compat: api.HTMLImageElement.y
 ---
+
 {{APIRef("HTML DOM")}}
 
 The read-only {{domxref("HTMLImageElement")}} property
@@ -34,7 +34,8 @@ edge of the content area.
 
 ![Diagram showing the relationships between the various boxes associated with an element](boxmodel-3.png)
 
-> **Note:** The `y` property is only valid if the computed
+> [!NOTE]
+> The `y` property is only valid if the computed
 > value of the image's {{cssxref("display")}} property is either
 > `table-column` or `table-column-group`; in other words,
 > either of those are set directly on the {{HTMLElement("img")}} or they're

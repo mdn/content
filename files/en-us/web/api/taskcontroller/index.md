@@ -2,15 +2,10 @@
 title: TaskController
 slug: Web/API/TaskController
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - TaskController
-  - Experimental
 browser-compat: api.TaskController
 ---
-{{APIRef("Prioritized Task Scheduling API")}} {{SeeCompatTable}}
+
+{{APIRef("Prioritized Task Scheduling API")}}{{AvailableInWorkers}}
 
 The **`TaskController`** interface of the [Prioritized Task Scheduling API](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API) represents a controller object that can be used to both abort and change the [priority](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#task_priorities) of one or more prioritized tasks.
 If there is no need to change task priorities, then {{domxref("AbortController")}} can be used instead.
@@ -31,7 +26,7 @@ Tasks can be aborted by calling {{domxref("AbortController.abort()","abort()")}}
 - {{domxref("TaskController.TaskController", "TaskController()")}}
   - : Creates a new `TaskController` object, optionally specifying the priority of its associated [`signal`](#taskcontroller.signal).
 
-## Methods
+## Instance methods
 
 _This interface also inherits the methods of its parent, {{domxref("AbortController")}}._
 
@@ -39,24 +34,25 @@ _This interface also inherits the methods of its parent, {{domxref("AbortControl
   - : Sets the priority of the controller's [`signal`](#taskcontroller.signal), and hence the priority of any tasks with which it is associated.
     This notifies observers of the priority change by dispatching a [`prioritychange`](/en-US/docs/Web/API/TaskSignal/prioritychange_event) event.
 
-## Properties
+## Instance properties
 
 _This interface also inherits the properties of its parent, {{domxref("AbortController")}}._
 
-- `TaskController.signal` {{readonlyInline}}
+- `TaskController.signal` {{ReadOnlyInline}}
   - : Returns a {{domxref("TaskSignal")}} object instance.
     The signal is passed to tasks so that they can be aborted or re-prioritized by the controller.
     The property is inherited from [`AbortController`](/en-US/docs/Web/API/AbortController#abortcontroller.signal).
 
 ## Examples
 
-> **Note:** Additional "live" examples can be found in:  [Prioritized Task Scheduling API > Examples](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#examples).
+> [!NOTE]
+> Additional "live" examples can be found in: [Prioritized Task Scheduling API Examples](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#examples).
 
 First we create a task controller, setting the priority of its associated signal to `user-blocking`.
 
 ```js
 // Create a TaskController, setting its signal priority to 'user-blocking'
-const controller = new TaskController({priority: 'user-blocking'});
+const controller = new TaskController({ priority: "user-blocking" });
 ```
 
 We then add an event listener for [`prioritychange`](/en-US/docs/Web/API/TaskSignal/prioritychange_event) events (here `addEventListener()` is called, but we could instead assign a handler to `TaskSignal.onprioritychange`).
@@ -64,7 +60,7 @@ The handler uses [previousPolicy](/en-US/docs/Web/API/TaskPriorityChangeEvent/pr
 
 ```js
 // Listen for 'prioritychange' events on the controller's signal.
-controller.signal.addEventListener('prioritychange', (event) => {
+controller.signal.addEventListener("prioritychange", (event) => {
   const previousPriority = event.previousPriority;
   const newPriority = event.target.priority;
   console.log(`Priority changed from ${previousPriority} to ${newPriority}.`);
@@ -75,8 +71,8 @@ We can also listen for [`abort`](/en-US/docs/Web/API/AbortSignal/abort_event) ev
 This same approach would be used if the controller was an `AbortController`.
 
 ```js
-controller.signal.addEventListener('abort', (event) => {
-  console.log('Task aborted');
+controller.signal.addEventListener("abort", (event) => {
+  console.log("Task aborted");
 });
 ```
 
@@ -88,9 +84,14 @@ Note that in a later code block we abort the task, so only the `catch()` block w
 ```js
 // Post task using the controller's signal.
 // The signal priority sets the initial priority of the task
-scheduler.postTask(() => 'Task execute', {signal: controller.signal})
-  .then((taskResult) => { console.log(`${taskResult}`); }) // Aborted (wont run)
-  .catch((error) => { console.log(`Catch error: ${error}`); });  // Log error
+scheduler
+  .postTask(() => "Task execute", { signal: controller.signal })
+  .then((taskResult) => {
+    console.log(`${taskResult}`);
+  }) // Aborted (won't run)
+  .catch((error) => {
+    console.log(`Catch error: ${error}`);
+  }); // Log error
 ```
 
 We can use the controller to manage the task.
@@ -99,7 +100,7 @@ This will trigger the associated `prioritychange` event.
 
 ```js
 // Change the priority to 'background' using the controller
-controller.setPriority('background');
+controller.setPriority("background");
 ```
 
 Finally, the task can be aborted by calling {{domxref("AbortController.abort()","abort()")}} on the controller.
@@ -111,7 +112,7 @@ controller.abort();
 
 The console output of this example would be:
 
-```
+```plain
 The priority changed from user-blocking to background.
 Task aborted
 Catch error: AbortError

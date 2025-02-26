@@ -1,19 +1,13 @@
 ---
 title: scroll-margin-inline-start
 slug: Web/CSS/scroll-margin-inline-start
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-  - Web
-  - recipe:css-property
-  - scroll-margin-inline
-  - scroll-margin-inline-start
+page-type: css-property
 browser-compat: css.properties.scroll-margin-inline-start
 ---
+
 {{CSSRef}}
 
-The `scroll-margin-inline-start` property defines the margin of the scroll snap area at the start of the inline dimension that is used for snapping this box to the snapport. The scroll snap area is determined by taking the transformed border box, finding its rectangular bounding box (axis-aligned in the scroll container's coordinate space), then adding the specified outsets.
+The `scroll-margin-inline-start` property defines the margin of the scroll snap area at the start of the inline dimension that is used for snapping this box to the [snapport](/en-US/docs/Glossary/Scroll_snap#snapport). The scroll snap area is determined by taking the transformed border box, finding its rectangular bounding box (axis-aligned in the scroll container's coordinate space), then adding the specified outsets.
 
 {{EmbedInteractiveExample("pages/css/scroll-margin-inline-start.html")}}
 
@@ -34,7 +28,7 @@ scroll-margin-inline-start: unset;
 
 ### Values
 
-- `<length>`
+- {{CSSXref("&lt;length&gt;")}}
   - : An outset from the inline start edge of the scroll container.
 
 ## Formal definition
@@ -47,7 +41,7 @@ scroll-margin-inline-start: unset;
 
 ## Examples
 
-### Simple demonstration
+### Basic demonstration
 
 This example implements something very similar to the interactive example above, except that here we'll explain to you how it's implemented.
 
@@ -55,7 +49,7 @@ The aim here is to create four horizontally-scrolling blocks, the second and thi
 
 #### HTML
 
-The HTML that represents the blocks is very simple:
+The HTML includes a scroller with four children:
 
 ```html
 <div class="scroller">
@@ -68,7 +62,7 @@ The HTML that represents the blocks is very simple:
 
 #### CSS
 
-Let's walk through the CSS. the outer container is styled like this:
+Let's walk through the CSS. The outer container is styled like this:
 
 ```css
 .scroller {
@@ -126,7 +120,7 @@ This means that when scrolling past the middle child elements, the scrolling wil
 
 Try it for yourself:
 
-{{EmbedLiveSample('Simple_demonstration', '100%', 300)}}
+{{EmbedLiveSample('Basic_demonstration', '100%', 300)}}
 
 ## Specifications
 
@@ -138,5 +132,5 @@ Try it for yourself:
 
 ## See also
 
-- [CSS Scroll Snap](/en-US/docs/Web/CSS/CSS_Scroll_Snap)
-- [Well-Controlled Scrolling with CSS Scroll Snap](https://web.dev/css-scroll-snap/)
+- [CSS scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap)
+- [Well-controlled scrolling with CSS scroll snap](https://web.dev/articles/css-scroll-snap)

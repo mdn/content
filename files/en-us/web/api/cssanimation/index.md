@@ -2,34 +2,25 @@
 title: CSSAnimation
 slug: Web/API/CSSAnimation
 page-type: web-api-interface
-tags:
-  - API
-  - Animation
-  - CSSAnimation
-  - Interface
-  - Reference
 browser-compat: api.CSSAnimation
 ---
-{{APIRef("Web Animations API")}}{{SeeCompatTable}}
+
+{{APIRef("Web Animations")}}
 
 The **`CSSAnimation`** interface of the {{domxref('Web Animations API','','',' ')}} represents an {{domxref("Animation")}} object.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
-Inherits methods from its ancestor {{domxref("Animation")}} and adds {{domxref("animationName")}}.
+_This interface inherits properties from its parent, {{domxref("Animation")}}._
 
-- {{domxref("CSSAnimation.animationName")}} {{readonlyinline}}
+- {{domxref("CSSAnimation.animationName")}} {{ReadOnlyInline}}
   - : Returns the animation name as a string.
 
-### Event handlers
+## Instance methods
 
-No specific event handlers; inherits methods from its ancestor {{domxref("Animation")}}.
-
-## Methods
-
-No specific methods; inherits methods from its ancestor {{domxref("Animation")}}.
+_This interface inherits methods from its parent, {{domxref("Animation")}}._
 
 ## Examples
 

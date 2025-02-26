@@ -1,21 +1,15 @@
 ---
-title: History.length
+title: "History: length property"
+short-title: length
 slug: Web/API/History/length
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - History
-  - History API
-  - Property
-  - Read-only
-  - Reference
 browser-compat: api.History.length
 ---
+
 {{APIRef("History API")}}
 
-The **`History.length`** read-only
-property returns an integer representing the number of elements in the session
+The **`length`** read-only property of the {{DOMxRef("History")}} interface
+returns an integer representing the number of entries in the session
 history, including the currently loaded page.
 
 For example, for a page loaded in a new tab this property returns `1`.

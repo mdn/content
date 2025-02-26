@@ -2,17 +2,9 @@
 title: KeyframeEffect
 slug: Web/API/KeyframeEffect
 page-type: web-api-interface
-tags:
-  - API
-  - Animation
-  - Animations
-  - Interface
-  - KeyframeEffect
-  - Reference
-  - Web Animations
-  - web animations api
 browser-compat: api.KeyframeEffect
 ---
+
 {{ APIRef("Web Animations") }}
 
 The **`KeyframeEffect`** interface of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) lets us create sets of animatable properties and values, called **keyframes.** These can then be played using the {{domxref("Animation.Animation", "Animation()")}} constructor.
@@ -24,18 +16,18 @@ The **`KeyframeEffect`** interface of the [Web Animations API](/en-US/docs/Web/A
 - {{domxref("KeyframeEffect.KeyframeEffect", "KeyframeEffect()")}}
   - : Returns a new `KeyframeEffect` object instance, and also allows you to clone an existing keyframe effect object instance.
 
-## Properties
+## Instance properties
 
 - {{domxref("KeyframeEffect.target")}}
   - : Gets and sets the element, or originating element of the pseudo-element, being animated by this object. This may be `null` for animations that do not target a specific element or pseudo-element.
-- {{domxref("KeyframeEffect.pseudoElement")}} {{Experimental_Inline}}
+- {{domxref("KeyframeEffect.pseudoElement")}}
   - : Gets and sets the selector of the pseudo-element being animated by this object. This may be `null` for animations that do not target a pseudo-element.
 - {{domxref("KeyframeEffect.iterationComposite")}}
   - : Gets and sets the iteration composite operation for resolving the property value changes of this keyframe effect.
 - {{domxref("KeyframeEffect.composite")}}
   - : Gets and sets the composite operation property for resolving the property value changes between this and other keyframe effects.
 
-## Methods
+## Instance methods
 
 _This interface inherits some of its methods from its parent, {{domxref("AnimationEffect")}}._
 
@@ -52,25 +44,51 @@ _This interface inherits some of its methods from its parent, {{domxref("Animati
 
 ## Examples
 
-In the [Follow the White Rabbit example](https://codepen.io/rachelnabors/pen/eJyWzm/?editors=0010), the KeyframeEffect constructor is used to create a set of keyframes that dictate how the White Rabbit should animate down the hole:
+In the following example, the KeyframeEffect constructor is used to create a set of keyframes that dictate how the rofl emoji should roll on the floor:
 
 ```js
-const whiteRabbit = document.getElementById('rabbit');
+const emoji = document.querySelector("div"); // element to animate
 
-const rabbitDownKeyframes = new KeyframeEffect(
-    whiteRabbit, // element to animate
-    [
-      { transform: 'translateY(0%)' }, // keyframe
-      { transform: 'translateY(100%)' } // keyframe
-    ],
-    { duration: 3000, fill: 'forwards' } // keyframe options
-  );
+const rollingKeyframes = new KeyframeEffect(
+  emoji,
+  [
+    { transform: "translateX(0) rotate(0)" }, // keyframe
+    { transform: "translateX(200px) rotate(1.3turn)" }, // keyframe
+  ],
+  {
+    // keyframe options
+    duration: 2000,
+    direction: "alternate",
+    easing: "ease-in-out",
+    iterations: "Infinity",
+  },
+);
 
-const rabbitDownAnimation = new Animation(rabbitDownKeyframes, document.timeline);
+const rollingAnimation = new Animation(rollingKeyframes, document.timeline);
 
-// Play rabbit animation
-rabbitDownAnimation.play();
+// play rofl animation
+rollingAnimation.play();
 ```
+
+```html
+<div>🤣</div>
+```
+
+```css hidden
+body {
+  box-shadow: 0 5px 5px pink;
+}
+
+div {
+  width: fit-content;
+  margin-left: calc(50% - 132px);
+  font-size: 64px;
+  user-select: none;
+  margin-top: 1rem;
+}
+```
+
+{{ EmbedLiveSample("Examples", "100%", "120") }}
 
 ## Specifications
 

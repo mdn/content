@@ -1,16 +1,12 @@
 ---
-title: 'SVGGraphicsElement: paste event'
+title: "SVGGraphicsElement: paste event"
+short-title: paste
 slug: Web/API/SVGGraphicsElement/paste_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - Reference
-  - SVG
-  - SVG OM
 browser-compat: api.Element.paste_event
 ---
-{{APIRef}}
+
+{{APIRef("SVG")}}
 
 The **`paste`** event is fired on an {{domxref("SVGGraphicsElement")}} when the user has initiated a "paste" action through the browser's user interface.
 
@@ -27,9 +23,9 @@ It's possible to construct and dispatch a [synthetic](/en-US/docs/Web/Events/Cre
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('paste', (event) => { });
+addEventListener("paste", (event) => {});
 
-onpaste = (event) => { };
+onpaste = (event) => {};
 ```
 
 ## Event type
@@ -44,11 +40,17 @@ A {{domxref("ClipboardEvent")}}. Inherits from {{domxref("Event")}}.
 
 ```html
 <?xml version="1.0" encoding="UTF-8"?>
-<svg viewBox="0 0 140 30" width="600" height="320" xmlns="http://www.w3.org/2000/svg">
-    <foreignObject x="5" y="-10" width="90" height="20">
-        <input xmlns="http://www.w3.org/1999/xhtml" value="Copy this text"/>
-    </foreignObject>
-    <text x="5" y="30" id="element-to-paste-text" tabindex="1">Paste it here</text>
+<svg
+  viewBox="0 0 140 30"
+  width="600"
+  height="320"
+  xmlns="http://www.w3.org/2000/svg">
+  <foreignObject x="5" y="-10" width="90" height="20">
+    <input xmlns="http://www.w3.org/1999/xhtml" value="Copy this text" />
+  </foreignObject>
+  <text x="5" y="30" id="element-to-paste-text" tabindex="1">
+    Paste it here
+  </text>
 </svg>
 ```
 
@@ -67,10 +69,14 @@ input {
 ### JavaScript
 
 ```js
-document.getElementById("element-to-paste-text").addEventListener("paste", (evt) => {
-  evt.target.textContent = evt.clipboardData.getData("text/plain").toUpperCase();
-  evt.preventDefault();
-});
+document
+  .getElementById("element-to-paste-text")
+  .addEventListener("paste", (evt) => {
+    evt.target.textContent = evt.clipboardData
+      .getData("text/plain")
+      .toUpperCase();
+    evt.preventDefault();
+  });
 ```
 
 ### Result
@@ -89,5 +95,5 @@ document.getElementById("element-to-paste-text").addEventListener("paste", (evt)
 
 - Related events: [`cut`](/en-US/docs/Web/API/SVGGraphicsElement/cut_event), [`copy`](/en-US/docs/Web/API/SVGGraphicsElement/copy_event)
 - This event on HTML {{domxref("Element")}} targets: [`paste`](/en-US/docs/Web/API/Element/paste_event)
-- This event on {{domxref("Document")}} targets: [`paste`](Web/API/Document/paste_event)
-- This event on {{domxref("Window")}} targets: [`paste`](Web/API/Window/paste_event)
+- This event on {{domxref("Document")}} targets: [`paste`](/en-US/docs/Web/API/Document/paste_event)
+- This event on {{domxref("Window")}} targets: [`paste`](/en-US/docs/Web/API/Window/paste_event)

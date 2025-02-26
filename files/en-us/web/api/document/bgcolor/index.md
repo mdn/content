@@ -1,26 +1,23 @@
 ---
-title: Document.bgColor
+title: "Document: bgColor property"
+short-title: bgColor
 slug: Web/API/Document/bgColor
 page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - Document
-  - HTML DOM
-  - NeedsMarkupWork
-  - NeedsSpecTable
-  - Property
-  - Reference
+status:
+  - deprecated
 browser-compat: api.Document.bgColor
 ---
+
 {{APIRef("DOM")}} {{Deprecated_Header}}
 
-The deprecated  `bgColor` property gets or sets the background color of the
+The deprecated `bgColor` property gets or sets the background color of the
 current document.
 
 ## Value
 
-A string representing the color as a word (e.g., "red") or hexadecimal value (e.g., "`#ff0000`").
+A string representing the color as a word (e.g., `"red"`) or hexadecimal value (e.g., `"#ff0000"`).
+
+When set to the `null` value, that `null` value is converted to the empty string (`""`), so `document.bgColor = null` is equivalent to `document.bgColor = ""`.
 
 ## Examples
 
@@ -38,6 +35,10 @@ hexadecimal).
 `document.body.style.backgroundColor`. Another alternative is
 `document.body.bgColor`, although this is also deprecated in HTML 4.01 in
 favor of the CSS alternative.
+
+## Specifications
+
+{{Specifications}}
 
 ## Browser compatibility
 

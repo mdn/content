@@ -2,24 +2,10 @@
 title: MediaTrackConstraints
 slug: Web/API/MediaTrackConstraints
 page-type: web-api-interface
-tags:
-  - API
-  - Constraints
-  - Dictionary
-  - Interface
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaTrackConstraints
-  - Reference
-  - Screen Sharing
-  - Screen Sharing API
-  - Sharing
-  - WebRTC
-  - screen
-browser-compat: api.MediaTrackConstraints
+spec-urls: https://w3c.github.io/mediacapture-main/#dom-mediatrackconstraints
 ---
-{{DefaultAPISidebar("Media Capture and Streams")}}
+
+{{APIRef("Media Capture and Streams")}}
 
 The **`MediaTrackConstraints`** dictionary is used to describe a set of capabilities and the value or values each can take on. A constraints dictionary is passed into {{domxref("MediaStreamTrack.applyConstraints", "applyConstraints()")}} to allow a script to establish a set of exact (required) values or ranges and/or preferred values or ranges of values for the track, and the most recently-requested set of custom constraints can be retrieved by calling {{domxref("MediaStreamTrack.getConstraints", "getConstraints()")}}.
 
@@ -27,7 +13,9 @@ The **`MediaTrackConstraints`** dictionary is used to describe a set of capabili
 
 The following types are used to specify a constraint for a property. They allow you to specify one or more `exact` values from which one must be the parameter's value, or a set of `ideal` values which should be used if possible. You can also specify a single value (or an array of values) which the user agent will do its best to match once all more stringent constraints have been applied.
 
-To learn more about how constraints work, see [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints).
+To learn more about how constraints work, see [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints).
+
+> **Note:** `min` and `exact` values are not permitted in constraints used in {{domxref("MediaDevices.getDisplayMedia()")}} calls — they produce a `TypeError` — but they are allowed in constraints used in {{domxref("MediaStreamTrack.applyConstraints()")}} calls.
 
 ### ConstrainBoolean
 
@@ -73,18 +61,18 @@ The `ConstrainULong` constraint type is used to specify a constraint for a prope
 - `ideal`
   - : An integer specifying an ideal value for the property. If possible, this value will be used, but if it's not possible, the user agent will use the closest possible match.
 
-## Properties
+## Instance properties
 
 Some combination—but not necessarily all—of the following properties will exist on the object. This may be because a given browser doesn't support the property, or because it doesn't apply. For example, because {{Glossary("RTP")}} doesn't provide some of these values during negotiation of a WebRTC connection, a track associated with a {{domxref("RTCPeerConnection")}} will not include certain values, such as {{domxref("MediaTrackConstraints.facingMode", "facingMode")}} or {{domxref("MediaTrackConstraints.groupId", "groupId")}}.
 
-### Properties of all media tracks
+### Instance properties of all media tracks
 
 - {{domxref("MediaTrackConstraints.deviceId", "deviceId")}}
   - : A [`ConstrainDOMString`](#constraindomstring) object specifying a device ID or an array of device IDs which are acceptable and/or required.
 - {{domxref("MediaTrackConstraints.groupId", "groupId")}}
   - : A [`ConstrainDOMString`](#constraindomstring) object specifying a group ID or an array of group IDs which are acceptable and/or required.
 
-### Properties of audio tracks
+### Instance properties of audio tracks
 
 - {{domxref("MediaTrackConstraints.autoGainControl", "autoGainControl")}}
   - : A [`ConstrainBoolean`](#constrainboolean) object which specifies whether automatic gain control is preferred and/or required.
@@ -100,10 +88,10 @@ Some combination—but not necessarily all—of the following properties will ex
   - : A [`ConstrainULong`](#constrainulong) specifying the sample rate or range of sample rates which are acceptable and/or required.
 - {{domxref("MediaTrackConstraints.sampleSize", "sampleSize")}}
   - : A [`ConstrainULong`](#constrainulong) specifying the sample size or range of sample sizes which are acceptable and/or required.
-- {{domxref("MediaTrackConstraints.volume", "volume")}}
+- {{domxref("MediaTrackConstraints.volume", "volume")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : A [`ConstrainDouble`](#constraindouble) specifying the volume or range of volumes which are acceptable and/or required.
 
-### Properties of image tracks
+### Instance properties of image tracks
 
 - whiteBalanceMode
   - : A {{jsxref("String")}} specifying one of `"none"`, `"manual"`, `"single-shot"`, or `"continuous"`.
@@ -112,7 +100,7 @@ Some combination—but not necessarily all—of the following properties will ex
 - focusMode
   - : A {{jsxref("String")}} specifying one of `"none"`, `"manual"`, `"single-shot"`, or `"continuous"`.
 - pointsOfInterest
-  - : The pixel coordinates on the sensor of one or more points of interest. This is either an object in the form { x:_value_, y:*value* } or an array of such objects, where *value* is a double-precision integer.
+  - : The pixel coordinates on the sensor of one or more points of interest. This is either an object in the form { x:_value_, y:_value_ } or an array of such objects, where _value_ is a double-precision integer.
 - exposureCompensation
   - : A [`ConstrainDouble`](#constraindouble) (a double-precision integer) specifying f-stop adjustment by up to ±3.
 - colorTemperature
@@ -134,10 +122,10 @@ Some combination—but not necessarily all—of the following properties will ex
 - torch
   - : A boolean value defining whether the fill light is continuously connected, meaning it stays on as long as the track is active.
 
-### Properties of video tracks
+### Instance properties of video tracks
 
 - {{domxref("MediaTrackConstraints.aspectRatio", "aspectRatio")}}
-  - : A [`ConstrainDouble`](#constraindouble) specifying the video aspect ratio or range of aspect ratios which are acceptable and/or required.
+  - : A [`ConstrainDouble`](#constraindouble) specifying the video {{glossary("aspect ratio")}} or range of aspect ratios which are acceptable and/or required.
 - {{domxref("MediaTrackConstraints.facingMode", "facingMode")}}
   - : A [`ConstrainDOMString`](#constraindomstring) object specifying a facing or an array of facings which are acceptable and/or required.
 - {{domxref("MediaTrackConstraints.frameRate", "frameRate")}}
@@ -149,7 +137,7 @@ Some combination—but not necessarily all—of the following properties will ex
 - resizeMode
   - : A [`ConstrainDOMString`](#constraindomstring) object specifying a mode or an array of modes the UA can use to derive the resolution of a video track. Allowed values are `none` and `crop-and-scale`. `none` means that the user agent uses the resolution provided by the camera, its driver or the OS. `crop-and-scale` means that the user agent can use cropping and downscaling on the camera output in order to satisfy other constraints that affect the resolution.
 
-### Properties of shared screen tracks
+### Instance properties of shared screen tracks
 
 These constraints apply to the `video` property of the object passed into {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} to obtain a stream for screen sharing.
 
@@ -157,8 +145,6 @@ These constraints apply to the `video` property of the object passed into {{domx
 
   - : A [`ConstrainDOMString`](#constraindomstring) which specifies the types of display surface that may be selected by the user. This may be a single one of the following strings, or a list of them to allow multiple source surfaces:
 
-    - `application`
-      - : The stream contains all of the windows of the application chosen by the user rendered into the one video track.
     - `browser`
       - : The stream contains the contents of a single browser tab selected by the user.
     - `monitor`
@@ -167,20 +153,20 @@ These constraints apply to the `video` property of the object passed into {{domx
       - : The stream contains a single window selected by the user for sharing.
 
 - {{domxref("MediaTrackConstraints.logicalSurface", "logicalSurface")}}
+
   - : A [`ConstrainBoolean`](#constrainboolean) value which may contain a single Boolean value or a set of them, indicating whether or not to allow the user to choose source surfaces which do not directly correspond to display areas. These may include backing buffers for windows to allow capture of window contents that are hidden by other windows in front of them, or buffers containing larger documents that need to be scrolled through to see the entire contents in their windows.
+
+- {{domxref("MediaTrackConstraints.suppressLocalAudioPlayback", "suppressLocalAudioPlayback")}} {{Experimental_Inline}}
+  - : A [`ConstrainBoolean`](#constrainboolean) value describing the requested or mandatory constraints placed upon the value of the {{domxref("MediaTrackSettings.suppressLocalAudioPlayback","suppressLocalAudioPlayback")}} constrainable property. This property controls whether the audio playing in a tab will continue to be played out of a user's local speakers when the tab is captured.
 
 ## Specifications
 
 {{Specifications}}
 
-## Browser compatibility
-
-{{Compat}}
-
 ## See also
 
-- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Streams_API)
-- [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints)
+- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API)
+- [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints)
 - [Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API)
 - [Using the Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API/Using_Screen_Capture)
 - {{domxref("MediaDevices.getUserMedia()")}}

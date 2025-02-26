@@ -1,26 +1,27 @@
 ---
-title: 'ARIA: checkbox role'
+title: "ARIA: checkbox role"
 slug: Web/Accessibility/ARIA/Roles/checkbox_role
-tags:
-  - ARIA
-  - Accessibility
-  - NeedsContent
-  - Role
-  - ARIA widget
-  - Reference
-  - checkbox
+page-type: aria-role
 ---
+
+{{AccessibilitySidebar}}
+
 The `checkbox` role is for checkable interactive controls. Elements containing `role="checkbox"` must also include the [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-checked) attribute to expose the checkbox's state to assistive technology.
 
 ```html
-<span role="checkbox" aria-checked="false" tabindex="0" aria-labelledby="chk1-label"></span>
+<span
+  role="checkbox"
+  aria-checked="false"
+  tabindex="0"
+  aria-labelledby="chk1-label"></span>
 <label id="chk1-label">Remember my preferences</label>
 ```
 
-> **Note:** The first rule of ARIA is if a native HTML element or attribute has the semantics and behavior you require, use it instead of re-purposing an element and adding ARIA. Instead use the native [HTML checkbox](/en-US/docs/Web/HTML/Element/input/checkbox) of [`<input type="checkbox">`](/en-US/docs/Web/HTML/Element/input/checkbox) (with an associated {{HTMLElement('label')}}), which natively provides all the functionality required:
+> [!NOTE]
+> The first rule of ARIA is if a native HTML element or attribute has the semantics and behavior you require, use it instead of re-purposing an element and adding ARIA. Instead use the native [HTML checkbox of `<input type="checkbox">`](/en-US/docs/Web/HTML/Element/input/checkbox) (with an associated {{HTMLElement('label')}}), which natively provides all the functionality required:
 
 ```html
-<input type="checkbox" id="chk1-label">
+<input type="checkbox" id="chk1-label" name="RememberPreferences" />
 <label for="chk1-label">Remember my preferences</label>
 ```
 
@@ -90,23 +91,34 @@ From the assistive technology user's perspective, the heading does not exist sin
 
 The following example creates an otherwise non-semantic checkbox element using CSS and JavaScript to handle the checked or unchecked status of the element.
 
-#### HTML
+### HTML
 
 ```html
-<span role="checkbox" id="chkPref" aria-checked="false" onclick="changeCheckbox()" onKeyDown="changeCheckbox(event.keyCode)"
-   tabindex="0" aria-labelledby="chk1-label"></span>
-<label id="chk1-label" onclick="changeCheckbox()" onKeyDown="changeCheckbox(event.keyCode)">Remember my preferences</label>
+<span
+  role="checkbox"
+  id="chkPref"
+  aria-checked="false"
+  onclick="changeCheckbox()"
+  onKeyDown="changeCheckbox(event.code)"
+  tabindex="0"
+  aria-labelledby="chk1-label"></span>
+<label
+  id="chk1-label"
+  onclick="changeCheckbox()"
+  onKeyDown="changeCheckbox(event.code)"
+  >Remember my preferences</label
+>
 ```
 
-#### CSS
+### CSS
 
 ```css
 [role="checkbox"] {
-  padding:5px;
+  padding: 5px;
 }
 
 [role="checkbox"]:focus {
-  border: 2px solid #0198E1;
+  border: 2px solid #0198e1;
 }
 
 [aria-checked="true"]::before {
@@ -118,15 +130,14 @@ The following example creates an otherwise non-semantic checkbox element using C
 }
 ```
 
-#### JavaScript
+### JavaScript
 
 ```js
-function changeCheckbox(keyCode) {
-  const spacebarKeyCode = 32;
+function changeCheckbox(code) {
   const item = document.getElementById("chkPref");
   const checked = item.getAttribute("aria-checked");
 
-  if (keyCode && keyCode !== spacebarKeyCode) {
+  if (code && code !== "Space") {
     return;
   } else if (checked === "true") {
     item.setAttribute("aria-checked", "false");
@@ -155,7 +166,8 @@ People implementing checkboxes should do the following:
 - Keep the `aria-checked` attribute up to date following user interactions
 - Provide styles that indicate when the checkbox has focus
 
-> **Note:** Opinions may differ on how assistive technology should handle this technique. The information provided above is one of those opinions and may change.
+> [!NOTE]
+> Opinions may differ on how assistive technology should handle this technique. The information provided above is one of those opinions and may change.
 
 ## Best practices
 
@@ -170,11 +182,3 @@ The first rule of ARIA is: if a native HTML element or attribute has the semanti
 - [ARIA: `menuitemradio` role](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role)
 - [ARIA: `switch` role](/en-US/docs/Web/Accessibility/ARIA/Roles/switch_role)
 - [ARIA: `option` role](/en-US/docs/Web/Accessibility/ARIA/Roles/option_role)
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
-
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
-
-</section>

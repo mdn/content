@@ -1,17 +1,13 @@
 ---
 title: invert()
 slug: Web/CSS/filter-function/invert
-tags:
-  - CSS
-  - CSS Function
-  - Filter Effects
-  - Function
-  - Reference
+page-type: css-function
 browser-compat: css.types.filter-function.invert
 ---
+
 {{CSSRef}}
 
-The **`invert()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) inverts the color samples in the input image. Its result is a {{cssxref("&lt;filter-function&gt;")}}.
+The **`invert()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) inverts the color samples in the input image. Its result is a {{cssxref("&lt;filter-function&gt;")}}.
 
 {{EmbedInteractiveExample("pages/css/function-invert.html")}}
 
@@ -25,6 +21,10 @@ invert(amount)
 
 - `amount`
   - : The amount of the conversion, specified as a {{cssxref("&lt;number&gt;")}} or a {{cssxref("&lt;percentage&gt;")}}. A value of `100%` is completely inverted, while a value of `0%` leaves the input unchanged. Values between `0%` and `100%` are linear multipliers on the effect. The initial value for {{Glossary("interpolation")}} is `0`.
+
+## Formal syntax
+
+{{CSSSyntax}}
 
 ## Examples
 
@@ -46,7 +46,8 @@ invert(100%)  /* Completely inverted */
 
 ## See also
 
-- {{cssxref("&lt;filter-function&gt;")}}
+The other {{cssxref("&lt;filter-function&gt;")}} functions available to be used in values of the {{cssxref("filter")}} and {{cssxref("backdrop-filter")}} properties include:
+
 - {{cssxref("filter-function/blur", "blur()")}}
 - {{cssxref("filter-function/brightness", "brightness()")}}
 - {{cssxref("filter-function/contrast", "contrast()")}}

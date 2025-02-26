@@ -1,27 +1,42 @@
 ---
 title: Array.prototype.pop()
 slug: Web/JavaScript/Reference/Global_Objects/Array/pop
-tags:
-  - Array
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.pop
 ---
+
 {{JSRef}}
 
-The **`pop()`** method removes the **last**
+The **`pop()`** method of {{jsxref("Array")}} instances removes the **last**
 element from an array and returns that element. This method changes the length of the
 array.
 
-{{EmbedInteractiveExample("pages/js/array-pop.html")}}
+{{InteractiveExample("JavaScript Demo: Array.pop()")}}
+
+```js interactive-example
+const plants = ["broccoli", "cauliflower", "cabbage", "kale", "tomato"];
+
+console.log(plants.pop());
+// Expected output: "tomato"
+
+console.log(plants);
+// Expected output: Array ["broccoli", "cauliflower", "cabbage", "kale"]
+
+plants.pop();
+
+console.log(plants);
+// Expected output: Array ["broccoli", "cauliflower", "cabbage"]
+```
 
 ## Syntax
 
-```js
+```js-nolint
 pop()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 
@@ -35,11 +50,7 @@ The `pop()` method removes the last element from an array and returns that value
 
 The `pop()` method is a mutating method. It changes the length and the content of `this`. In case you want the value of `this` to be the same, but return a new array with the last element removed, you can use [`arr.slice(0, -1)`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice) instead.
 
-`Array.prototype.pop()` is intentionally generic; this method can be {{jsxref("Function.call",
-  "called", "", 1)}} or {{jsxref("Function.apply", "applied", "", 1)}} to objects
-resembling arrays. Objects which do not contain a `length` property
-reflecting the last in a series of consecutive, zero-based numerical properties may not
-behave in any meaningful manner.
+The `pop()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods). It only expects the `this` value to have a `length` property and integer-keyed properties. Although strings are also array-like, this method is not suitable to be applied on them, as strings are immutable.
 
 ## Examples
 
@@ -49,7 +60,7 @@ The following code creates the `myFish` array containing four elements, then
 removes its last element.
 
 ```js
-const myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
+const myFish = ["angel", "clown", "mandarin", "sturgeon"];
 
 const popped = myFish.pop();
 
@@ -58,24 +69,26 @@ console.log(myFish); // ['angel', 'clown', 'mandarin' ]
 console.log(popped); // 'sturgeon'
 ```
 
-### Using apply() or call () on array-like objects
+### Calling pop() on non-array objects
 
-The following code creates the `myFish` array-like object containing four
-elements and a length parameter, then removes its last element and decrements the length
-parameter.
+The `pop()` method reads the `length` property of `this`. If the [normalized length](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#normalization_of_the_length_property) is 0, `length` is set to `0` again (whereas it may be negative or `undefined` before). Otherwise, the property at `length - 1` is returned and [deleted](/en-US/docs/Web/JavaScript/Reference/Operators/delete).
 
 ```js
-const myFish = {
-  0: 'angel',
-  1: 'clown',
-  2: 'mandarin',
-  3: 'sturgeon',
-  length: 4,
+const arrayLike = {
+  length: 3,
+  unrelated: "foo",
+  2: 4,
 };
+console.log(Array.prototype.pop.call(arrayLike));
+// 4
+console.log(arrayLike);
+// { length: 2, unrelated: 'foo' }
 
-const popped = Array.prototype.pop.call(myFish); // same syntax when using apply()
-console.log(myFish); // { 0: 'angel', 1: 'clown', 2: 'mandarin', length: 3 }
-console.log(popped); // 'sturgeon'
+const plainObj = {};
+// There's no length property, so the length is 0
+Array.prototype.pop.call(plainObj);
+console.log(plainObj);
+// { length: 0 }
 ```
 
 ### Using an object in an array-like fashion
@@ -102,13 +115,13 @@ const collection = {
     // Returning what pop returns; that is
     // the removed element.
     return [].pop.call(this);
-  }
-}
+  },
+};
 
 collection.addElements(10, 20, 30);
-console.log(collection.length);  // 3
+console.log(collection.length); // 3
 collection.removeElement();
-console.log(collection.length);  // 2
+console.log(collection.length); // 2
 ```
 
 ## Specifications
@@ -121,6 +134,8 @@ console.log(collection.length);  // 2
 
 ## See also
 
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
+- {{jsxref("Array")}}
 - {{jsxref("Array.prototype.push()")}}
 - {{jsxref("Array.prototype.shift()")}}
 - {{jsxref("Array.prototype.unshift()")}}

@@ -1,18 +1,11 @@
 ---
-title: FileSystemDirectoryReader.readEntries()
+title: "FileSystemDirectoryReader: readEntries() method"
+short-title: readEntries()
 slug: Web/API/FileSystemDirectoryReader/readEntries
 page-type: web-api-instance-method
-tags:
-  - API
-  - File and Directory Entries API
-  - FileSystemDirectoryReader
-  - Files
-  - Interface
-  - Method
-  - Reference
-  - readEntries
 browser-compat: api.FileSystemDirectoryReader.readEntries
 ---
+
 {{APIRef("File and Directory Entries API")}}
 
 The {{domxref("FileSystemDirectoryReader")}} interface's **`readEntries()`** method retrieves the directory entries
@@ -23,7 +16,7 @@ Generally, they are either {{domxref("FileSystemFileEntry")}} objects, which rep
 
 ## Syntax
 
-```js
+```js-nolint
 readEntries(successCallback)
 readEntries(successCallback, errorCallback)
 ```
@@ -49,7 +42,7 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
-See [`DataTransferItem.webkitGetAsEntry()`](/en-US/docs/Web/API/DataTransferItem/webkitGetAsEntry#example) for example code that uses this method.
+See [`DataTransferItem.webkitGetAsEntry()`](/en-US/docs/Web/API/DataTransferItem/webkitGetAsEntry#examples) for example code that uses this method.
 
 ## Specifications
 
@@ -65,6 +58,5 @@ instances, `readEntries()` must be called multiple times.
 ## See also
 
 - [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
-- [Introduction to the File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
 - {{domxref("FileSystemDirectoryEntry")}}
 - {{domxref("FileSystem")}}

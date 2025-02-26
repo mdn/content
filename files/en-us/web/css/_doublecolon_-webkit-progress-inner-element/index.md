@@ -1,24 +1,25 @@
 ---
-title: '::-webkit-progress-inner-element'
+title: ::-webkit-progress-inner-element
 slug: Web/CSS/::-webkit-progress-inner-element
-tags:
-  - CSS
-  - Non-standard
-  - Pseudo-element
-  - Reference
-  - Selector
+page-type: css-pseudo-element
+status:
+  - non-standard
 browser-compat: css.selectors.-webkit-progress-inner-element
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 The **`::-webkit-progress-inner-element`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents the outermost container of the {{HTMLElement("progress")}} element. It is the parent of the {{cssxref("::-webkit-progress-bar")}} pseudo-element.
 
-> **Note:** In order to let `::-webkit-progress-value` take effect, {{cssxref("appearance")}} needs to be set to `none` on the `<progress>` element.
+> [!NOTE]
+> In order to let `::-webkit-progress-value` take effect, {{cssxref("appearance")}} needs to be set to `none` on the `<progress>` element.
 
 ## Syntax
 
 ```css
-::-webkit-progress-inner-element
+::-webkit-progress-inner-element {
+  /* ... */
+}
 ```
 
 ## Examples
@@ -32,7 +33,7 @@ In this example, a 2px black border is added around the progress bar.
 #### HTML
 
 ```html
-<progress value="10" max="50">
+<progress value="10" max="50"></progress>
 ```
 
 #### CSS
@@ -55,7 +56,7 @@ progress {
 
 If you're not using a Blink or WebKit browser, the above code results in a progress bar looking like this:
 
-![](-webkit-progress-inner-element_example.png)
+![Progressbar is a long green and grey box with a black border. The left 20% of the box is green. The right 80% is grey.](-webkit-progress-inner-element_example.png)
 
 ## Specifications
 
@@ -73,4 +74,3 @@ Not part of any standard.
   - {{cssxref("::-webkit-progress-value")}}
 
 - {{cssxref("::-moz-progress-bar")}}
-- {{cssxref("::-ms-fill")}}

@@ -1,22 +1,14 @@
 ---
-title: XRView.isFirstPersonObserver
+title: "XRView: isFirstPersonObserver property"
+short-title: isFirstPersonObserver
 slug: Web/API/XRView/isFirstPersonObserver
 page-type: web-api-instance-property
-tags:
-  - API
-  - AR
-  - Property
-  - Read-only
-  - Reference
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRView
-  - Augmented Reality
+status:
+  - experimental
 browser-compat: api.XRView.isFirstPersonObserver
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The {{domxref("XRView")}} interface's read-only **`isFirstPersonObserver`** property is a boolean indicating if the `XRView` is a first-person observer view.
 
@@ -32,23 +24,25 @@ The `isFirstPersonObserver` property then allows you to check which secondary vi
 
 ```js
 // Make sure to enable "secondary-view"
-navigator.xr.requestSession("immersive-ar", {
-  optionalFeatures: ["secondary-views"]
-});
+navigator.xr
+  .requestSession("immersive-ar", {
+    optionalFeatures: ["secondary-views"],
+  })
+  .then((session) => {
+    // …
 
-// …
-
-session.requestAnimationFrame(function(frame) {
-  let views = frame.getViewerPose(space);
-  // Make sure to iterate over all views
-  for (view of views) {
-    if (view.isFirstPersonObserver) {
-      renderFPO();
-    } else {
-      render();
-    }
-  }
-});
+    session.requestAnimationFrame((frame) => {
+      const views = frame.getViewerPose(space);
+      // Make sure to iterate over all views
+      for (const view of views) {
+        if (view.isFirstPersonObserver) {
+          renderFPO();
+        } else {
+          render();
+        }
+      }
+    });
+  });
 ```
 
 ## Specifications

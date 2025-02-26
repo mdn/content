@@ -1,27 +1,14 @@
 ---
-title: XRWebGLLayer.framebuffer
+title: "XRWebGLLayer: framebuffer property"
+short-title: framebuffer
 slug: Web/API/XRWebGLLayer/framebuffer
 page-type: web-api-instance-property
-tags:
-  - API
-  - AR
-  - Buffer
-  - Property
-  - Read-only
-  - Reality
-  - Reference
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRWebGLLayer
-  - augmented
-  - framebuffer
+status:
+  - experimental
 browser-compat: api.XRWebGLLayer.framebuffer
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The read-only {{domxref("XRWebGLLayer")}} property
 **`framebuffer`** is an opaque {{domxref("WebGLFramebuffer")}}
@@ -49,34 +36,26 @@ framebuffer:
 - Opaque framebuffers' attachments (buffers and the like) can't be inspected or
   changed. Calling functions such as
   {{domxref("WebGLRenderingContext.framebufferTexture2D", "framebufferTexture2D()")}},
-  {{domxref("WebGLRenderingContext.framebufferRenderbuffer",
-    "framebufferRenderbuffer()")}}, {{domxref("WebGLRenderingContext.deleteFramebuffer",
-    "deleteFramebuffer()")}}, or
-  {{domxref("WebGLRenderingContext.getFramebufferAttachmentParameter",
-    "getFramebufferAttachmentParameter()")}} on an opaque framebuffer results in the WebGL
-  error `INVALID_OPERATION` (0x0502).
+  {{domxref("WebGLRenderingContext.framebufferRenderbuffer", "framebufferRenderbuffer()")}},
+  {{domxref("WebGLRenderingContext.deleteFramebuffer","deleteFramebuffer()")}}, or
+  {{domxref("WebGLRenderingContext.getFramebufferAttachmentParameter", "getFramebufferAttachmentParameter()")}}
+  on an opaque framebuffer results in the WebGL error `INVALID_OPERATION` (`0x0502`).
 - Opaque framebuffers are considered incomplete and are not available for rendering
-  other than while executing the {{domxref("XRSession.requestAnimationFrame",
-    "requestAnimationFrame()")}} callback. Attempting to clear, draw to, or read from the
-  framebuffer results in a WebGL `INVALID_FRAMEBUFFER_OPERATION` error
-  (0x0506). Calling {{domxref("WebGLRenderingContext.checkFramebufferStatus",
-    "checkFramebufferStatus()")}} on the WebGL context from outside the animation frame
-  callback causes the WebGL `FRAMEBUFFER_UNSUPPORTED` error (0x8CDD) to be
-  reported.
-- Opaque framebuffers initialized with the {{domxref("WebXRLayerInit.depth",
-    "depth")}} property set to `false` will not have a depth buffer and will
+  other than while executing the {{domxref("XRSession.requestAnimationFrame","requestAnimationFrame()")}} callback.
+  Attempting to clear, draw to, or read from the framebuffer results in a WebGL `INVALID_FRAMEBUFFER_OPERATION` error (`0x0506`).
+  Calling {{domxref("WebGLRenderingContext.checkFramebufferStatus", "checkFramebufferStatus()")}} on the WebGL context from outside the animation frame
+  callback causes the WebGL `FRAMEBUFFER_UNSUPPORTED` error (`0x8CDD`) to be reported.
+- Opaque framebuffers initialized with the `depth` property set to `false` will not have a depth buffer and will
   rely on the coordinates alone to determine distance.
-- Opaque framebuffers initialized without specifying a
-  {{domxref("WebXRLayerInit.stencil", "stencil")}} will not have a stencil buffer.
-- Opaque framebuffers will not have an alpha channel available unless the
-  {{domxref("WebGLLayerInit.alpha", "alpha")}} property is `true` when
+- Opaque framebuffers initialized without specifying a `stencil` property will not have a stencil buffer.
+- Opaque framebuffers will not have an alpha channel available unless the `alpha` property is `true` when
   creating the layer.
 - The XR compositor assumes that opaque framebuffers use colors with premultiplied
-  alpha, regardless of whether or not the WebGL context's
-  {{domxref("WebGLContextAttributes.premultipliedAlpha", "premultipliedAlpha")}} context
+  alpha, regardless of whether or not the WebGL context's [`premultipliedAlpha`](/en-US/docs/Web/API/HTMLCanvasElement/getContext#premultipliedalpha) context
   attribute is set.
 
-> **Note:** The `depth` and `stencil` properties are
+> [!NOTE]
+> The `depth` and `stencil` properties are
 > not required to be supported in order for a browser to be construed as having full
 > WebGL support.
 
@@ -93,11 +72,10 @@ just like the default framebuffer for any WebGL interface:
 ## Examples
 
 This example gets the `XRWebGLLayer` for a session and then passes its
-framebuffer into the WebGL context's {{domxref("WebGLRenderingContext.bindFramebuffer",
-  "bindFramebuffer()")}} function.
+framebuffer into the WebGL context's {{domxref("WebGLRenderingContext.bindFramebuffer", "bindFramebuffer()")}} function.
 
 ```js
-let glLayer = xrSession.renderState.baselayer;
+let glLayer = xrSession.renderState.baseLayer;
 gl.bindFramebuffer(gl.FRAMEBUFFER, glLayer.framebuffer);
 ```
 
@@ -112,5 +90,3 @@ gl.bindFramebuffer(gl.FRAMEBUFFER, glLayer.framebuffer);
 ## See also
 
 - [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API)
-- {{domxref("WebGLLayerInit")}}
-- {{domxref("WebGLContextAttributes")}}

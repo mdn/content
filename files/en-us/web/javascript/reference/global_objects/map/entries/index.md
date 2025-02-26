@@ -1,51 +1,60 @@
 ---
 title: Map.prototype.entries()
 slug: Web/JavaScript/Reference/Global_Objects/Map/entries
-tags:
-  - ECMAScript 2015
-  - Iterator
-  - JavaScript
-  - Map
-  - Method
-  - Prototype
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Map.entries
 ---
+
 {{JSRef}}
 
-The **`entries()`** method returns a new
-_[iterator](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators)_ object
-that contains the `[key, value]` pairs for each element in the `Map` object in
-insertion order. In this particular case, this iterator object is also an
-iterable, so the for-of loop can be used. When the protocol `[Symbol.iterator]`
-is used, it returns a function that, when invoked, returns this iterator itself.
+The **`entries()`** method of {{jsxref("Map")}} instances returns a new _[map iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator)_ object that contains the `[key, value]` pairs for each element in this map in insertion order.
 
-{{EmbedInteractiveExample("pages/js/map-prototype-entries.html")}}
+{{InteractiveExample("JavaScript Demo: Map.prototype.entries()")}}
+
+```js interactive-example
+const map1 = new Map();
+
+map1.set("0", "foo");
+map1.set(1, "bar");
+
+const iterator1 = map1.entries();
+
+console.log(iterator1.next().value);
+// Expected output: Array ["0", "foo"]
+
+console.log(iterator1.next().value);
+// Expected output: Array [1, "bar"]
+```
 
 ## Syntax
 
-```js
+```js-nolint
 entries()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
-A new {{jsxref("Map")}} iterator object.
+A new [iterable iterator object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator).
 
 ## Examples
 
 ### Using entries()
 
 ```js
-let myMap = new Map()
-myMap.set('0', 'foo')
-myMap.set(1, 'bar')
-myMap.set({}, 'baz')
+const myMap = new Map();
+myMap.set("0", "foo");
+myMap.set(1, "bar");
+myMap.set({}, "baz");
 
-let mapIter = myMap.entries()
+const mapIter = myMap.entries();
 
-console.log(mapIter.next().value)  // ["0", "foo"]
-console.log(mapIter.next().value)  // [1, "bar"]
-console.log(mapIter.next().value)  // [Object, "baz"]
+console.log(mapIter.next().value); // ["0", "foo"]
+console.log(mapIter.next().value); // [1, "bar"]
+console.log(mapIter.next().value); // [Object, "baz"]
 ```
 
 ## Specifications

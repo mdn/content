@@ -2,11 +2,8 @@
 title: Insertable Streams for MediaStreamTrack API
 slug: Web/API/Insertable_Streams_for_MediaStreamTrack_API
 page-type: web-api-overview
-tags:
-  - API
-  - Overview
-  - Reference
 ---
+
 {{DefaultAPISidebar("Insertable Streams for MediaStreamTrack API")}}
 
 The **Insertable Streams for MediaStreamTrack API** provides a method of adding new components to a {{domxref("MediaStreamTrack")}}.
@@ -24,14 +21,14 @@ When processing video or audio, you sometimes want to insert additional elements
 
 ## Examples
 
-The following example is from the article [Insertable streams for MediaStreamTrack](https://web.dev/mediastreamtrack-insertable-media-processing/), and demonstrates a barcode scanner application that highlights a barcode in a video stream. This transforms the stream accessed via {{domxref("MediaStreamTrackProcessor.readable")}}.
+The following example is from the article [Insertable streams for MediaStreamTrack](https://developer.chrome.com/docs/capabilities/web-apis/mediastreamtrack-insertable-media-processing), and demonstrates a barcode scanner application that highlights a barcode in a video stream. This transforms the stream accessed via {{domxref("MediaStreamTrackProcessor.readable")}}.
 
 ```js
 const stream = await getUserMedia({ video: true });
 const videoTrack = stream.getVideoTracks()[0];
 
 const trackProcessor = new MediaStreamTrackProcessor({ track: videoTrack });
-const trackGenerator = new MediaStreamTrackGenerator({ kind: 'video' });
+const trackGenerator = new MediaStreamTrackGenerator({ kind: "video" });
 
 const transformer = new TransformStream({
   async transform(videoFrame, controller) {
@@ -42,5 +39,7 @@ const transformer = new TransformStream({
   },
 });
 
-trackProcessor.readable.pipeThrough(transformer).pipeTo(trackGenerator.writable);
+trackProcessor.readable
+  .pipeThrough(transformer)
+  .pipeTo(trackGenerator.writable);
 ```

@@ -1,21 +1,20 @@
 ---
-title: '-webkit-mask-composite'
+title: -webkit-mask-composite
 slug: Web/CSS/-webkit-mask-composite
-tags:
-  - '-webkit-mask-composite'
-  - CSS
-  - CSS Masking
-  - CSS Property
-  - CSS:WebKit Extensions
-  - Non-standard
-  - Reference
-  - mask-composite
-  - recipe:css-property
+page-type: css-property
+status:
+  - non-standard
 browser-compat: css.properties.-webkit-mask-composite
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
-The **`-webkit-mask-composite`** property specifies the manner in which multiple mask images applied to the same element are composited with one another. Mask images are composited in the opposite order that they are declared with the {{CSSxRef("-webkit-mask-image")}} property.
+The **`-webkit-mask-composite`** property specifies the manner in which multiple mask images applied to the same element are composited with one another. Mask images are composited in the opposite order that they are declared with the {{CSSxRef("mask-image", "-webkit-mask-image")}} property.
+
+> [!NOTE]
+> There is a standardized {{CSSxRef("mask-composite")}} property covering parts of this non-standard property using different keywords.
+
+## Syntax
 
 ```css
 /* Keyword values */
@@ -34,12 +33,10 @@ The **`-webkit-mask-composite`** property specifies the manner in which multiple
 /* Global values */
 -webkit-mask-composite: inherit;
 -webkit-mask-composite: initial;
+-webkit-mask-composite: revert;
+-webkit-mask-composite: revert-layer;
 -webkit-mask-composite: unset;
 ```
-
-> **Note:** There is a standardized {{CSSxRef("mask-composite")}} property covering parts of this non-standard property using different keywords.
-
-## Syntax
 
 ### Values
 
@@ -72,7 +69,10 @@ The **`-webkit-mask-composite`** property specifies the manner in which multiple
 
 ## Formal syntax
 
-{{CSSSyntax}}
+```plain
+-webkit-mask-composite =
+  <composite-style>#
+```
 
 ## Examples
 
@@ -80,7 +80,7 @@ The **`-webkit-mask-composite`** property specifies the manner in which multiple
 
 ```css
 .example {
-  -webkit-mask-image: url(mask1.png), url('mask2.png');
+  -webkit-mask-image: url(mask1.png), url("mask2.png");
   -webkit-mask-composite: xor, source-over;
 }
 ```

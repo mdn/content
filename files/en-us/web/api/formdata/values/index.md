@@ -1,25 +1,18 @@
 ---
-title: FormData.values()
+title: "FormData: values() method"
+short-title: values()
 slug: Web/API/FormData/values
 page-type: web-api-instance-method
-tags:
-  - API
-  - FormData
-  - Iterator
-  - Method
-  - Reference
-  - XMLHttpRequest
 browser-compat: api.FormData.values
 ---
-{{APIRef("XMLHttpRequest")}}
+
+{{APIRef("XMLHttpRequest API")}} {{AvailableInWorkers}}
 
 The **`FormData.values()`** method returns an [iterator](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) which iterates through all values contained in the {{domxref("FormData")}}. The values are strings or {{domxref("Blob")}} objects.
 
-> **Note:** This method is available in [Web Workers](/en-US/docs/Web/API/Web_Workers_API).
-
 ## Syntax
 
-```js
+```js-nolint
 values()
 ```
 
@@ -35,8 +28,8 @@ An [`iterator`](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) of {{d
 
 ```js
 const formData = new FormData();
-formData.append('key1', 'value1');
-formData.append('key2', 'value2');
+formData.append("key1", "value1");
+formData.append("key2", "value2");
 
 // Display the values
 for (const value of formData.values()) {
@@ -46,7 +39,7 @@ for (const value of formData.values()) {
 
 The result is:
 
-```
+```plain
 value1
 value2
 ```
@@ -61,5 +54,5 @@ value2
 
 ## See also
 
-- [Using FormData objects](/en-US/docs/Web/API/FormData/Using_FormData_Objects)
+- [Using FormData objects](/en-US/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
 - {{HTMLElement("Form")}}

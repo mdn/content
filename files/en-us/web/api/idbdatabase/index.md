@@ -2,46 +2,33 @@
 title: IDBDatabase
 slug: Web/API/IDBDatabase
 page-type: web-api-interface
-tags:
-  - API
-  - Database
-  - IDBDatabase
-  - IndexedDB
-  - Interface
-  - Reference
-  - Storage
-  - accessing data
-  - asynchronous access
-  - transactions
 browser-compat: api.IDBDatabase
 ---
-{{APIRef("IndexedDB")}}
 
-The **`IDBDatabase`** interface of the IndexedDB API provides a [connection to a database](/en-US/docs/Web/API/IndexedDB_API#database_connection); you can use an `IDBDatabase` object to open a [transaction](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#transaction) on your database then create, manipulate, and delete objects (data) in that database. The interface provides the only way to get and manage versions of the database.
+{{APIRef("IndexedDB")}} {{AvailableInWorkers}}
 
-{{AvailableInWorkers}}
+The **`IDBDatabase`** interface of the IndexedDB API provides a [connection to a database](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#database_connection); you can use an `IDBDatabase` object to open a [transaction](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#transaction) on your database then create, manipulate, and delete objects (data) in that database. The interface provides the only way to get and manage versions of the database.
 
-> **Note:** Everything you do in IndexedDB always happens in the context of a [transaction](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#transaction), representing interactions with data in the database. All objects in IndexedDB — including object stores, indexes, and cursors — are tied to a particular transaction. Thus, you cannot execute commands, access data, or open anything outside of a transaction.
+> [!NOTE]
+> Everything you do in IndexedDB always happens in the context of a [transaction](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#transaction), representing interactions with data in the database. All objects in IndexedDB — including object stores, indexes, and cursors — are tied to a particular transaction. Thus, you cannot execute commands, access data, or open anything outside of a transaction.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
-- {{domxref("IDBDatabase.name")}} {{readonlyInline}}
+- {{domxref("IDBDatabase.name")}} {{ReadOnlyInline}}
   - : A string that contains the name of the connected database.
-- {{domxref("IDBDatabase.version")}} {{readonlyInline}}
+- {{domxref("IDBDatabase.version")}} {{ReadOnlyInline}}
   - : A 64-bit integer that contains the version of the connected database. When a database is first created, this attribute is an empty string.
-- {{domxref("IDBDatabase.objectStoreNames")}} {{readonlyInline}}
+- {{domxref("IDBDatabase.objectStoreNames")}} {{ReadOnlyInline}}
   - : A {{ domxref("DOMStringList") }} that contains a list of the names of the [object stores](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#object_store) currently in the connected database.
 
-## Methods
+## Instance methods
 
 Inherits from: [EventTarget](/en-US/docs/Web/API/EventTarget)
 
 - {{domxref("IDBDatabase.close()")}}
   - : Returns immediately and closes the connection to a database in a separate thread.
-- `IDBDatabase.createMutableFile()` {{deprecated_inline}} {{Non-standard_Inline}}
-  - : Creates a file handle, allowing files to be stored inside an IndexedDB database.
 - {{domxref("IDBDatabase.createObjectStore()")}}
   - : Creates and returns a new object store or index.
 - {{domxref("IDBDatabase.deleteObjectStore()")}}
@@ -54,6 +41,7 @@ Inherits from: [EventTarget](/en-US/docs/Web/API/EventTarget)
 Listen to these events using `addEventListener()` or by assigning an event listener to the `oneventname` property of this interface.
 
 - [`close`](/en-US/docs/Web/API/IDBDatabase/close_event)
+
   - : An event fired when the database connection is unexpectedly closed.
 
 - [`versionchange`](/en-US/docs/Web/API/IDBDatabase/versionchange_event)
@@ -68,7 +56,7 @@ The following events are available to `IDBDatabase` via event bubbling from {{do
 
 ## Example
 
-In the following code snippet, we open a database asynchronously ({{domxref("IDBFactory")}}), handle success and error cases, and create a new object store in the case that an upgrade is needed ({{ domxref("IDBdatabase") }}). For a complete working example, see our [To-do Notifications](https://github.com/mdn/to-do-notifications/) app ([view example live](https://mdn.github.io/to-do-notifications/).)
+In the following code snippet, we open a database asynchronously ({{domxref("IDBFactory")}}), handle success and error cases, and create a new object store in the case that an upgrade is needed (`IDBDatabase`). For a complete working example, see our [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 ```js
 // Let us open our database
@@ -76,10 +64,14 @@ const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 // these two event handlers act on the IDBDatabase object,
 // when the database is opened successfully, or not
-DBOpenRequest.onerror = (event) => { note.innerHTML += '<li>Error loading database.</li>'; };
+DBOpenRequest.onerror = (event) => {
+  note.appendChild(document.createElement("li")).textContent =
+    "Error loading database.";
+};
 
 DBOpenRequest.onsuccess = (event) => {
-  note.innerHTML += '<li>Database initialized.</li>';
+  node.appendChild(document.createElement("li")).textContent =
+    "Database initialized.";
 
   // store the result of opening the database in the db
   // variable. This is used a lot later on
@@ -98,14 +90,17 @@ DBOpenRequest.onsuccess = (event) => {
 DBOpenRequest.onupgradeneeded = (event) => {
   const db = event.target.result;
 
-  db.onerror = function(event) {
-    note.innerHTML += '<li>Error loading database.</li>';
+  db.onerror = (event) => {
+    note.appendChild(document.createElement("li")).textContent =
+      "Error loading database.";
   };
 
   // Create an objectStore for this database using
   // IDBDatabase.createObjectStore
 
-  const objectStore = db.createObjectStore("toDoList", { keyPath: "taskTitle" });
+  const objectStore = db.createObjectStore("toDoList", {
+    keyPath: "taskTitle",
+  });
 
   // define what data items the objectStore will contain
 
@@ -117,14 +112,17 @@ DBOpenRequest.onupgradeneeded = (event) => {
 
   objectStore.createIndex("notified", "notified", { unique: false });
 
-  note.innerHTML += '<li>Object store created.</li>';
+  note.appendChild(document.createElement("li")).textContent =
+    "Object store created.";
 };
 ```
 
 This next line opens up a transaction on the Database, then opens an object store that we can then manipulate the data inside of.
 
 ```js
-const objectStore = db.transaction('toDoList', 'readwrite').objectStore('toDoList');
+const objectStore = db
+  .transaction("toDoList", "readwrite")
+  .objectStore("toDoList");
 ```
 
 ## Specifications
@@ -138,9 +136,8 @@ const objectStore = db.transaction('toDoList', 'readwrite').objectStore('toDoLis
 ## See also
 
 - [Using IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- Starting transactions: {{domxref("IDBDatabase")}}
 - Using transactions: {{domxref("IDBTransaction")}}
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([View the example live](https://mdn.github.io/dom-examples/to-do-notifications/)).

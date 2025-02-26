@@ -1,15 +1,12 @@
 ---
-title: ProgressEvent.lengthComputable
+title: "ProgressEvent: lengthComputable property"
+short-title: lengthComputable
 slug: Web/API/ProgressEvent/lengthComputable
 page-type: web-api-instance-property
-tags:
-  - API
-  - Progress Events
-  - ProgressEvent
-  - Property
 browser-compat: api.ProgressEvent.lengthComputable
 ---
-{{APIRef("XMLHttpRequest")}}
+
+{{APIRef("XMLHttpRequest API")}}{{AvailableInWorkers}}
 
 The
 **`ProgressEvent.lengthComputable`** read-only property is a

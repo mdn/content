@@ -1,26 +1,17 @@
 ---
-title: 'CSP: script-src-attr'
+title: "CSP: script-src-attr"
 slug: Web/HTTP/Headers/Content-Security-Policy/script-src-attr
-tags:
-  - CSP
-  - Content
-  - Content-Security-Policy
-  - Directive
-  - HTTP
-  - Reference
-  - Script
-  - Security
-  - script-src
-  - source
+page-type: http-csp-directive
 browser-compat: http.headers.Content-Security-Policy.script-src-attr
 ---
+
 {{HTTPSidebar}}
 
-The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP)
-**`script-src-attr`** directive specifies valid sources for
-JavaScript inline event handlers. This includes only inline script event handlers like
-`onclick`, but not URLs loaded directly into {{HTMLElement("script")}}
-elements.
+The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`script-src-attr`** directive specifies valid sources for JavaScript inline event handlers.
+
+This directive only specifies valid sources for inline script event handlers like `onclick`.
+It does not apply to other JavaScript sources that can trigger script execution, such as URLs loaded directly into {{HTMLElement("script")}} elements and [XSLT stylesheets](/en-US/docs/Web/XML/XSLT).
+(Valid sources can be specified for all JavaScript script sources using {{CSP("script-src")}}, or just for `<script>` elements using {{CSP("script-src-elem")}}.)
 
 <table class="properties">
   <tbody>
@@ -44,33 +35,51 @@ elements.
 
 ## Syntax
 
-One or more sources can be allowed for the `script-src-attr` policy:
-
 ```http
-Content-Security-Policy: script-src-attr <source>;
-Content-Security-Policy: script-src-attr <source> <source>;
+Content-Security-Policy: script-src-attr 'none';
+Content-Security-Policy: script-src-attr <source-expression-list>;
 ```
 
-`script-src-attr` can be used in conjunction with {{CSP("script-src")}}:
+This directive may have one of the following values:
+
+- `'none'`
+  - : No resources of this type may be loaded. The single quotes are mandatory.
+- `<source-expression-list>`
+
+  - : A space-separated list of _source expression_ values. Resources of this type may be loaded if they match any of the given source expressions. For this directive, the following source expression values are applicable:
+
+    - [`'unsafe-hashes'`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#unsafe-hashes)
+    - [`'unsafe-inline'`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#unsafe-inline)
+    - [`'report-sample'`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#report-sample)
+
+`script-src-attr` can be used in conjunction with {{CSP("script-src")}}, and will override that directive for checks on inline handlers:
 
 ```http
 Content-Security-Policy: script-src <source>;
 Content-Security-Policy: script-src-attr <source>;
 ```
 
-### Sources
-
-`<source>` can be any one of the values listed in [CSP Source Values](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#sources).
-
-Note that this same set of values can be used in all {{Glossary("fetch directive", "fetch directives")}} (and a [number of other directives](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#relevant_directives)).
-
 ## Examples
 
-### Fallback to script-src
+### Violation case
 
-If `script-src-attr` is absent, User Agent falls back to
-the {{CSP("script-src")}} directive, and if that is absent as well, to
-{{CSP("default-src")}}.
+Given this CSP header:
+
+```http
+Content-Security-Policy: script-src-attr 'none'
+```
+
+…the following inline event handler is blocked and won't be loaded or executed:
+
+```html
+<button id="btn" onclick="doSomething()"></button>
+```
+
+Note that generally you should replace inline event handlers with {{domxref("EventTarget.addEventListener", "addEventListener")}} calls:
+
+```js
+document.getElementById("btn").addEventListener("click", doSomething);
+```
 
 ## Specifications
 

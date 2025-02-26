@@ -1,12 +1,10 @@
 ---
 title: content_scripts
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts
-tags:
-  - Add-ons
-  - Extensions
-  - WebExtensions
+page-type: webextension-manifest-key
 browser-compat: webextensions.manifest.content_scripts
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
@@ -192,7 +190,7 @@ Details of all the keys you can include are given in the table below.
           the rest of the <code>content_scripts</code> key.
         </p>
         <p>
-          This is especially useful to run scripts in empty iframes , whose URL
+          This is especially useful to run scripts in empty iframes, whose URL
           is <code>"about:blank"</code>. To do this you should also set the
           <code>all_frames</code> key.
         </p>
@@ -223,9 +221,18 @@ Details of all the keys you can include are given in the table below.
           <p>
             Note that in Firefox, content scripts won't be injected into empty
             iframes at <code>"document_start"</code>, even if you specify that
-            value in <code><a href="#run_at">run_at</a></code> .
+            value in <code><a href="#run_at">run_at</a></code>.
           </p>
         </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code><a id="match_origin_as_fallback">match_origin_as_fallback</a></code>
+      </td>
+      <td><code>Boolean</code></td>
+      <td>
+        When <code>true</code>, code is injected into <code>about:</code>, <code>data:</code>, and <code>blob:</code> pages when their origin matches the pattern in <code>matches</code>, even if the document origin is opaque (due to the use of CSP or iframe sandbox). Match patterns in <code>matches</code> must specify a wildcard path glob. Defaults to <code>false</code>.
       </td>
     </tr>
     <tr>
@@ -281,6 +288,37 @@ Details of all the keys you can include are given in the table below.
           after files in <code><a href="#css">css</a></code
           >.
         </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a id="world"><code>world</code></a>
+      </td>
+      <td><code>String</code></td>
+      <td>
+        <p>
+          The JavaScript world the script executes in.
+        </p>
+        <dl>
+          <dt><code>"ISOLATED"</code></dt>
+          <dd>
+            The default <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">content scripts</a> execution environment.
+            This environment is isolated from the page's context: while they share the same document, the global scopes and available APIs differ.
+          </dd>
+          <dt><code>"MAIN"</code></dt>
+          <dd>
+            The web page's execution environment.
+            This environment is shared with the web page without isolation.
+            Scripts in this environment don't have any access to the APIs that are only available to content scripts.
+            <div class="notecard warning" id="sect1">
+              <p>
+                <strong>Warning:</strong> Due to the lack of isolation, the web page can detect and interfere with the executed code.
+                Do not use the <code>MAIN</code> world unless it is acceptable for web pages to read, access, or modify the logic or data that flows through the executed code.
+              </p>
+            </div>
+          </dd>
+        </dl>
+        <p>The default value is <code>"ISOLATED"</code>.</p>
       </td>
     </tr>
   </tbody>

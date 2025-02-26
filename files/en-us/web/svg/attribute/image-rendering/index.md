@@ -1,19 +1,18 @@
 ---
 title: image-rendering
 slug: Web/SVG/Attribute/image-rendering
-tags:
-  - NeedsExample
-  - SVG
-  - SVG Attribute
-browser-compat: svg.attributes.presentation.image-rendering
+page-type: svg-attribute
+browser-compat: svg.global_attributes.image-rendering
 ---
+
 {{SVGRef}}
 
 The **`image-rendering`** attribute provides a hint to the browser about how to make speed vs. quality tradeoffs as it performs image processing.
 
 The resampling is always done in a truecolor (e.g., 24-bit) color space even if the original data and/or the target device is indexed color.
 
-> **Note:** As a presentation attribute, `image-rendering` can be used as a CSS property. See the {{cssxref("image-rendering", "CSS image-rendering")}} property for more information.
+> [!NOTE]
+> As a presentation attribute, `image-rendering` also has a CSS property counterpart: {{cssxref("image-rendering")}}. When both are specified, the CSS property takes priority.
 
 You can use this attribute with the following SVG elements:
 
@@ -58,4 +57,4 @@ You can use this attribute with the following SVG elements:
 
 ## See also
 
-- {{cssxref("image-rendering", "CSS image-rendering")}}
+- CSS {{cssxref("image-rendering")}} property

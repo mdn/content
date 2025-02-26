@@ -2,19 +2,9 @@
 title: RTCIceTransport
 slug: Web/API/RTCIceTransport
 page-type: web-api-interface
-tags:
-  - API
-  - Audio
-  - Interface
-  - Media
-  - RTCIceTransport
-  - Reference
-  - Video
-  - WebRTC
-  - WebRTC API
-  - rtc
 browser-compat: api.RTCIceTransport
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`RTCIceTransport`** interface provides access to information about the {{Glossary("ICE")}} transport layer over which the data is being sent and received.
@@ -22,12 +12,12 @@ This is particularly useful if you need to access state information about the co
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _The `RTCIceTransport` interface inherits properties from its parent, {{domxref("EventTarget")}}. It also offers the following properties:_
 
 - {{domxref("RTCIceTransport.component", "component")}} {{ReadOnlyInline}}
-  - : The ICE component being used by the transport. The value is one of the strings from the {{domxref("RTCIceTransport")}} enumerated type: `{{Glossary("RTP", '"RTP"')}}` or `"RTSP"`.
+  - : The ICE component being used by the transport. The value is one of the strings from the `RTCIceTransport` enumerated type: `{{Glossary("RTP", '"RTP"')}}` or `"RTSP"`.
 - {{domxref("RTCIceTransport.gatheringState", "gatheringState")}} {{ReadOnlyInline}}
   - : A string indicating which current gathering state of the ICE agent: `"new"`, `"gathering"`, or `"complete"`.
 - {{domxref("RTCIceTransport.role", "role")}} {{ReadOnlyInline}}
@@ -35,7 +25,7 @@ _The `RTCIceTransport` interface inherits properties from its parent, {{domxref(
 - {{domxref("RTCIceTransport.state", "state")}} {{ReadOnlyInline}}
   - : A string indicating what the current state of the ICE agent is. The value of `state` can be used to determine whether the ICE agent has made an initial connection using a viable candidate pair (`"connected"`), made its final selection of candidate pairs (`"completed"`), or in an error state (`"failed"`), among other states.
 
-## Methods
+## Instance methods
 
 _Also includes methods from {{domxref("EventTarget")}}, the parent interface._
 
@@ -55,7 +45,7 @@ _Also includes methods from {{domxref("EventTarget")}}, the parent interface._
 Listen to these events using {{domxref("EventTarget.addEventListener", "addEventListener()")}} or by assigning an event listener to the `oneventname` property of this interface.
 
 - {{domxref("RTCIceTransport.gatheringstatechange_event", "gatheringstatechange")}}
-  - : Sent to the {{domxref("RTCIceTransport")}} object to indicate that the value of the {{domxref("RTCIceTransport.gatheringState", "gatheringState")}} property has changed, indicating a change in this transport's ICE candidate negotiation process.
+  - : Sent to the `RTCIceTransport` object to indicate that the value of the {{domxref("RTCIceTransport.gatheringState", "gatheringState")}} property has changed, indicating a change in this transport's ICE candidate negotiation process.
     Also available through the {{domxref("RTCIceTransport.gatheringstatechange_event", "ongatheringstatechange")}} event handler property.
 - {{domxref("RTCIceTransport.selectedcandidatepairchange_event", "selectedcandidatepairchange")}}
   - : Sent to the `RTCIceTransport` when a new, better pair of candidates has been selected to describe the connectivity between the two peers. This occurs during negotiation or renegotiation, including after an ICE restart, which reuses the existing `RTCIceTransport` objects. The current candidate pair can be obtained using {{domxref("RTCIceTransport.getSelectedCandidatePair", "getSelectedCandidatePair()")}}.

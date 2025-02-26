@@ -1,20 +1,12 @@
 ---
-title: PushSubscription.endpoint
+title: "PushSubscription: endpoint property"
+short-title: endpoint
 slug: Web/API/PushSubscription/endpoint
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - Property
-  - Push
-  - Push API
-  - PushSubscription
-  - Reference
-  - Service Workers
-  - endPoint
 browser-compat: api.PushSubscription.endpoint
 ---
-{{SeeCompatTable}}{{APIRef("Push API")}}
+
+{{APIRef("Push API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`endpoint`** read-only property of the
 {{domxref("PushSubscription")}} interface returns a string containing
@@ -32,15 +24,15 @@ A string.
 ## Examples
 
 ```js
-navigator.serviceWorker.ready.then(function(reg) {
-  reg.pushManager.subscribe({userVisibleOnly: true}).then(function(subscription) {
+navigator.serviceWorker.ready.then((reg) => {
+  reg.pushManager.subscribe({ userVisibleOnly: true }).then((subscription) => {
     console.log(subscription.endpoint);
 
-      // At this point you would most likely send the subscription
-      // endpoint to your server, save it, then use it to send a
-      // push message at a later date
-  })
-})
+    // At this point you would most likely send the subscription
+    // endpoint to your server, save it, then use it to send a
+    // push message at a later date
+  });
+});
 ```
 
 ## Specifications

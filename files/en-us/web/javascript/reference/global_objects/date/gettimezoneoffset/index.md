@@ -1,29 +1,41 @@
 ---
 title: Date.prototype.getTimezoneOffset()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getTimezoneOffset
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.getTimezoneOffset
 ---
+
 {{JSRef}}
 
-The **`getTimezoneOffset()`** method returns the difference, in minutes, between a date as evaluated in the UTC time zone, and the same date as evaluated in the local time zone.
+The **`getTimezoneOffset()`** method of {{jsxref("Date")}} instances returns the difference, in minutes, between this date as evaluated in the UTC time zone, and the same date as evaluated in the local time zone.
 
-{{EmbedInteractiveExample("pages/js/date-gettimezoneoffset.html")}}
+{{InteractiveExample("JavaScript Demo: Date.getTimezoneOffset()")}}
+
+```js interactive-example
+const date1 = new Date("August 19, 1975 23:15:30 GMT+07:00");
+const date2 = new Date("August 19, 1975 23:15:30 GMT-02:00");
+
+console.log(date1.getTimezoneOffset());
+// Expected output: your local timezone offset in minutes
+// (e.g., -120). NOT the timezone offset of the date object.
+
+console.log(date1.getTimezoneOffset() === date2.getTimezoneOffset());
+// Expected output: true
+```
 
 ## Syntax
 
-```js
+```js-nolint
 getTimezoneOffset()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
-The difference, in minutes, between the date as evaluated in the UTC time zone and as evaluated in the local time zone. The actual local time algorithm is implementation-defined, and the return value is allowed to be zero in runtimes without appropriate data.
+A number representing the difference, in minutes, between the date as evaluated in the UTC time zone and as evaluated in the local time zone. The actual local time algorithm is implementation-defined, and the return value is allowed to be zero in runtimes without appropriate data. Returns `NaN` if the date is [invalid](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date).
 
 ## Description
 
@@ -45,6 +57,8 @@ In a region that annually shifts in and out of Daylight Saving Time (DST), as `d
 
 > **Note:** `getTimezoneOffset()`'s behavior will never differ based on the time when the code is run — its behavior is always consistent when running in the same region. Only the value of `date` affects the result.
 
+> **Note:** [Many countries have experimented with not changing the time twice a year](https://en.wikipedia.org/wiki/Daylight_saving_time_by_country#Past_observance) and this has meant that DST has continued over the winter too. For example in the UK DST lasted from 2:00AM 18 February 1968 to 3:00AM 31 October 1971, so during the winter the clocks were not set back.
+
 In most implementations, the [IANA time zone database](https://en.wikipedia.org/wiki/Daylight_saving_time#IANA_time_zone_database) (tzdata) is used to precisely determine the offset of the local timezone at the moment of the `date`. However, if such information is unavailable, an implementation may return zero.
 
 ## Examples
@@ -55,8 +69,9 @@ In most implementations, the [IANA time zone database](https://en.wikipedia.org/
 // Create a Date instance for the current time
 const currentLocalDate = new Date();
 // Create a Date instance for 03:24 GMT-0200 on May 1st in 2016
-const laborDay2016at0324GMTminus2 = new Date('2016-05-01T03:24:00Z-02:00');
-currentLocalDate.getTimezoneOffset() === laborDay2016at0324GMTminus2.getTimezoneOffset();
+const laborDay2016at0324GMTminus2 = new Date("2016-05-01T03:24:00-02:00");
+currentLocalDate.getTimezoneOffset() ===
+  laborDay2016at0324GMTminus2.getTimezoneOffset();
 // true, always, in any timezone that doesn't annually shift in and out of DST
 // false, sometimes, in any timezone that annually shifts in and out of DST
 ```
@@ -66,8 +81,8 @@ currentLocalDate.getTimezoneOffset() === laborDay2016at0324GMTminus2.getTimezone
 In regions that use DST, the return value may change based on the time of the year `date` is in. Below is the output in a runtime in New York, where the timezone is UTC-05:00.
 
 ```js
-const nyOffsetSummer = new Date('2022-02-01').getTimezoneOffset(); // 300
-const nyOffsetWinter = new Date('2022-08-01').getTimezoneOffset(); // 240
+const nyOffsetSummer = new Date("2022-02-01").getTimezoneOffset(); // 300
+const nyOffsetWinter = new Date("2022-08-01").getTimezoneOffset(); // 240
 ```
 
 ### getTimezoneOffset() and historical data
@@ -75,8 +90,8 @@ const nyOffsetWinter = new Date('2022-08-01').getTimezoneOffset(); // 240
 Due to historical reasons, the timezone a region is in can be constantly changing, even disregarding DST. For example, below is the output in a runtime in Shanghai, where the timezone is UTC+08:00.
 
 ```js
-const shModernOffset = new Date('2022-01-27').getTimezoneOffset(); // -480
-const shHistoricalOffset = new Date('1943-01-27').getTimezoneOffset(); // -540
+const shModernOffset = new Date("2022-01-27").getTimezoneOffset(); // -480
+const shHistoricalOffset = new Date("1943-01-27").getTimezoneOffset(); // -540
 ```
 
 This is because during the [Sino-Japanese War](https://en.wikipedia.org/wiki/Second_Sino-Japanese_War) when Shanghai was under Japanese control, the timezone was changed to UTC+09:00 to align with Japan's (in effect, it was a "year-round DST"), and this was recorded in the IANA database.

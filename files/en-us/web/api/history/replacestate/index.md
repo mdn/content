@@ -1,19 +1,14 @@
 ---
-title: History.replaceState()
+title: "History: replaceState() method"
+short-title: replaceState()
 slug: Web/API/History/replaceState
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - History
-  - History API
-  - Method
-  - Reference
 browser-compat: api.History.replaceState
 ---
+
 {{APIRef("History API")}}
 
-The **`History.replaceState()`** method modifies the current
+The **`replaceState()`** method of the {{domxref("History")}} interface modifies the current
 history entry, replacing it with the state object and
 URL passed in the method parameters. This method is particularly useful
 when you want to update the state object or URL of the current history entry in response
@@ -21,44 +16,51 @@ to some user action.
 
 ## Syntax
 
-```js
-replaceState(stateObj, unused)
-replaceState(stateObj, unused, url)
+```js-nolint
+replaceState(state, unused)
+replaceState(state, unused, url)
 ```
 
 ### Parameters
 
-- `stateObj`
-  - : The state object is a JavaScript object which is associated with the history entry
-    passed to the `replaceState` method. The state object can be
+- `state`
+  - : An object which is associated with the history entry
+    passed to the `replaceState()` method. The state object can be
     `null`.
 - `unused`
   - : This parameter exists for historical reasons, and cannot be omitted; passing the empty string is traditional, and safe against future changes to the method.
 - `url` {{optional_inline}}
   - : The URL of the history entry. The new URL must be of the same origin as the current
-    URL; otherwise replaceState throws an exception.
+    URL; otherwise the `replaceState()` method throws an exception.
 
 ### Return value
 
 None ({{jsxref("undefined")}}).
 
+### Exceptions
+
+- `SecurityError` {{domxref("DOMException")}}
+  - : Thrown if the associated document is not fully active, or if the provided `url` parameter is not a valid URL. Browsers also throttle navigations and may throw this error, generate a warning, or ignore the call if it's called too frequently.
+- `DataCloneError` {{domxref("DOMException")}}
+  - : Thrown if the provided `state` parameter is not serializable.
+
 ## Examples
 
-Suppose https\://www\.mozilla.org/foo.html executes the following JavaScript:
+Suppose `https://www.mozilla.org/foo.html` executes the following JavaScript:
 
 ```js
-const stateObj = { foo: 'bar' };
-history.pushState(stateObj, '', 'bar.html');
+const stateObj = { foo: "bar" };
+history.pushState(stateObj, "", "bar.html");
 ```
 
 On the next page you could then use `history.state` to access the `stateObj` that was just added.
 
-The explanation of these two lines above can be found in the [Example of `pushState()` method](/en-US/docs/Web/API/History_API/Working_with_the_History_API#example_of_pushstate_method) section of the [Working with the History API](/en-US/docs/Web/API/History_API/Working_with_the_History_API) article. Then suppose
+The explanation of these two lines above can be found in the [Working with the History API](/en-US/docs/Web/API/History_API/Working_with_the_History_API#using_pushstate) article. Then suppose
 `https://www.mozilla.org/bar.html` executes the following
 JavaScript:
 
 ```js
-history.replaceState(stateObj, '', 'bar2.html');
+history.replaceState(stateObj, "", "bar2.html");
 ```
 
 This will cause the URL bar to display
@@ -69,7 +71,7 @@ Suppose now that the user navigates to
 `https://www.microsoft.com`, then clicks the Back button. At this
 point, the URL bar will display `https://www.mozilla.org/bar2.html`.
 If the user now clicks Back again, the URL bar will
-display https\://www\.mozilla.org/foo.html, and totally bypass bar.html.
+display `https://www.mozilla.org/foo.html`, and totally bypass bar.html.
 
 ## Specifications
 

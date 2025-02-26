@@ -1,60 +1,23 @@
 ---
-title: KeyboardEvent.keyCode
+title: "KeyboardEvent: keyCode property"
+short-title: keyCode
 slug: Web/API/KeyboardEvent/keyCode
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - DOM Events
-  - Deprecated
-  - KeyboardEvent
-  - Property
-  - Read-only
-  - Reference
-  - keyCode
+status:
+  - deprecated
 browser-compat: api.KeyboardEvent.keyCode
 ---
+
 {{APIRef("UI Events")}}{{Deprecated_Header}}
 
 The deprecated **`KeyboardEvent.keyCode`** read-only property represents a system and implementation dependent numerical code identifying the unmodified value of the pressed key.
 
 This is usually the decimal ASCII ({{RFC(20)}}) or Windows 1252 code corresponding to the key. If the key can't be identified, this value is `0`.
 
-You should avoid using this if possible; it's been deprecated for some time. Instead, you should use {{domxref("KeyboardEvent.code")}}, if it's implemented. Unfortunately, some browsers still don't have it, so you'll have to be careful to make sure you use one which is supported on all target browsers.
+You should avoid using this if possible; it's been deprecated for some time. Instead, you should use {{domxref("KeyboardEvent.code")}} (for the physical key pressed) or {{domxref("KeyboardEvent.key")}} (for the character the key maps to). Check compatibility for either property if you target very old browsers.
 
-> **Note:** Web developers shouldn't use the `keyCode` attribute for printable characters when handling `keydown` and `keyup` events. As described above, the `keyCode` attribute is not useful for printable characters, especially those input with the <kbd>Shift</kbd> or <kbd>Alt</kbd> key pressed. When implementing a shortcut key handler, the {{domxref("Element/keypress_event", "keypress")}} event is usually better (at least when Gecko is the runtime in use).
-
-## Examples
-
-```js
-window.addEventListener("keydown", function (event) {
-  if (event.defaultPrevented) {
-    return; // Should do nothing if the default action has been cancelled
-  }
-
-  let handled = false;
-  if (event.key !== undefined) {
-    // Handle the event with KeyboardEvent.key
-    handled = true;
-  } else if (event.keyCode !== undefined) {
-    // Handle the event with KeyboardEvent.keyCode
-    handled = true;
-  }
-
-  if (handled) {
-    // Suppress "double action" if event handled
-    event.preventDefault();
-  }
-}, true);
-```
-
-## Specifications
-
-{{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}
+> [!NOTE]
+> Web developers shouldn't use the `keyCode` attribute for printable characters when handling `keydown` and `keyup` events. As described above, the `keyCode` attribute is not useful for printable characters, especially those input with the <kbd>Shift</kbd> or <kbd>Alt</kbd> key pressed.
 
 ## Value of keyCode
 
@@ -66,7 +29,7 @@ IE just exposes the native virtual keycode value as `KeyboardEvent.keyCode`.
 
 Google Chrome, Chromium and Safari must decide the value from the input character. If the inputting character can be inputted with the US keyboard layout, they use the `keyCode` value on the US keyboard layout.
 
-Starting in Firefox 15 {{geckoRelease("15.0")}}, Gecko gets `keyCode` values from ASCII characters inputtable by the key — even with shift modifiers or an ASCII capable keyboard layout. See the following rules for details:
+Firefox gets `keyCode` values from {{Glossary("ASCII")}} characters inputtable by the key — even with shift modifiers or an ASCII capable keyboard layout. See the following rules for details:
 
 1. If the system is Windows and the native keycode of the pressed key indicates that the key is a-z or 0-9, use a keycode for it.
 2. If the system is Mac and the native keycode of the pressed key indicates that the key is 0-9, use a keycode for it.
@@ -76,29 +39,30 @@ Starting in Firefox 15 {{geckoRelease("15.0")}}, Gecko gets `keyCode` values fro
 6. If the pressed key inputs a different ASCII character with a Shift key modifier, use a keycode for it.
 7. Otherwise, i.e., pressed key inputs a unicode character:
 
-    1. If the keyboard layout is ASCII-capable (i.e., can input ASCII alphabets), use 0 or compute with [the following additional rules](#keycode_of_punctuation_keys_on_some_keyboard_layout).
-    2. Otherwise, i.e., the keyboard layout isn't ASCII capable, use the ASCII capable keyboard layout installed on the environment with the highest priority:
+   1. If the keyboard layout is ASCII-capable (i.e., can input ASCII alphabets), use 0 or compute with the following additional rules.
+   2. Otherwise, i.e., the keyboard layout isn't ASCII capable, use the ASCII capable keyboard layout installed on the environment with the highest priority:
 
-        1. If the pressed key on the alternative keyboard layout inputs an ASCII alphabetic or numeric character, use a keycode for it.
-        2. Otherwise, use 0 or compute with [the following additional rules](#keycode_of_punctuation_keys_on_some_keyboard_layout).
+      1. If the pressed key on the alternative keyboard layout inputs an ASCII alphabetic or numeric character, use a keycode for it.
+      2. Otherwise, use 0 or compute with the following additional rules.
 
-Starting in Firefox 60 {{geckoRelease("60.0")}}, Gecko sets `keyCode` values of punctuation keys as far as possible (when points 7.1 or 7.2 in the above list are reached) with the following rules:
+Gecko sets `keyCode` values of punctuation keys as far as possible (when points 7.1 or 7.2 in the above list are reached) with the following rules:
 
-> **Warning:** The purpose of these new additional rules is for making users whose keyboard layouts map unicode characters to punctuation keys in a US keyboard layout can use web applications which support Firefox only with ASCII-capable keyboard layouts or just with a US keyboard layout. Otherwise, the newly mapped `keyCode` values may be conflict with other keys. For example, if the active keyboard layout is Russian, the `keyCode` value of **both** the `"Period"` key and `"Slash"` key are `190` (`KeyEvent.DOM_VK_PERIOD`). If you need to distinguish those keys but you don't want to support all keyboard layouts in the world by yourself, you should probably use {{domxref("KeyboardEvent.code")}}.
+> [!WARNING]
+> The purpose of these new additional rules is for making users whose keyboard layouts map unicode characters to punctuation keys in a US keyboard layout can use web applications which support Firefox only with ASCII-capable keyboard layouts or just with a US keyboard layout. Otherwise, the newly mapped `keyCode` values may be conflict with other keys. For example, if the active keyboard layout is Russian, the `keyCode` value of **both** the `"Period"` key and `"Slash"` key are `190` (`KeyEvent.DOM_VK_PERIOD`). If you need to distinguish those keys but you don't want to support all keyboard layouts in the world by yourself, you should probably use {{domxref("KeyboardEvent.code")}}.
 
 1. If running macOS or Linux:
 
-    1. If the active keyboard layout is not ASCII-capable and an alternative ASCII-capable keyboard layout is available.
+   1. If the active keyboard layout is not ASCII-capable and an alternative ASCII-capable keyboard layout is available.
 
-        1. If the alternative ASCII-capable keyboard layout produces an ASCII character via just the unmodified key, use a `keyCode` for the character.
-        2. If the alternative ASCII-capable keyboard layout produces an ASCII character with a Shift key modifier, use a `keyCode` for the shifted character.
-        3. Otherwise, use a `keyCode` for an ASCII character produced by the key when the US keyboard layout is active.
+      1. If the alternative ASCII-capable keyboard layout produces an ASCII character via just the unmodified key, use a `keyCode` for the character.
+      2. If the alternative ASCII-capable keyboard layout produces an ASCII character with a Shift key modifier, use a `keyCode` for the shifted character.
+      3. Otherwise, use a `keyCode` for an ASCII character produced by the key when the US keyboard layout is active.
 
-    2. Otherwise, use a `keyCode` for an ASCII character produced by the key when the US keyboard layout is active.
+   2. Otherwise, use a `keyCode` for an ASCII character produced by the key when the US keyboard layout is active.
 
 2. If running on Windows:
 
-    1. Use a `keyCode` value for an ASCII character produced by a key which is mapped to the same virtual keycode of Windows when the US keyboard layout is active.
+   1. Use a `keyCode` value for an ASCII character produced by a key which is mapped to the same virtual keycode of Windows when the US keyboard layout is active.
 
 <table class="no-markdown">
   <caption>
@@ -980,8 +944,8 @@ Starting in Firefox 60 {{geckoRelease("60.0")}}, Gecko sets `keyCode` values of 
       <td rowspan="2"><code>0x00 (0)</code>⚠️</td>
       <td rowspan="2"><code>0xDC (220)</code>⚠️</td>
       <td rowspan="2"><code>0x00 (0)</code>⚠️</td>
-      <td rowspan="2"><code>0xDC </code>(220)</td>
-      <td rowspan="2"><code>0xDC </code>(220)</td>
+      <td rowspan="2"><code>0xDC (220)</code></td>
+      <td rowspan="2"><code>0xDC (220)</code></td>
       <td rowspan="2"><code>0x00 (0)</code>⚠️</td>
       <td rowspan="2"><code>0x00 (0)</code>⚠️</td>
       <td rowspan="2"><code>0xDC (220)</code>⚠️</td>
@@ -1154,7 +1118,7 @@ Starting in Firefox 60 {{geckoRelease("60.0")}}, Gecko sets `keyCode` values of 
       <td><code>0x11 (17)</code></td>
     </tr>
     <tr>
-      <th scope="row"><code>"OSLeft"</code></th>
+      <th scope="row"><code>"MetaLeft"</code></th>
       <td><code>0x5B (91)</code></td>
       <td><code>0x5B (91)</code></td>
       <td><code>0x5B (91)</code></td>
@@ -1165,7 +1129,7 @@ Starting in Firefox 60 {{geckoRelease("60.0")}}, Gecko sets `keyCode` values of 
       <td><code>0x5B (91)</code></td>
     </tr>
     <tr>
-      <th scope="row"><code>"OSRight"</code></th>
+      <th scope="row"><code>"MetaRight"</code></th>
       <td><code>0x5C (92)</code></td>
       <td><code>0x5C (92)</code></td>
       <td><code>0x5D (93)</code>⚠️</td>
@@ -2260,7 +2224,8 @@ Starting in Firefox 60 {{geckoRelease("60.0")}}, Gecko sets `keyCode` values of 
   </tfoot>
 </table>
 
-> **Note:** Recent Mac doesn't have a <kbd>NumLock</kbd> key, and therefore state. That's why the unlocked state is not available.
+> [!NOTE]
+> Recent Mac doesn't have a <kbd>NumLock</kbd> key, and therefore state. That's why the unlocked state is not available.
 
 ## Constants for keyCode value
 
@@ -2313,7 +2278,7 @@ Gecko defines a lot of `keyCode` values in `KeyboardEvent` for making the mappin
       <td>0x0E (14)</td>
       <td>
         Reserved, but not used. {{deprecated_inline}} (Dropped, see
-        {{bug(969247)}}.)
+        <a href="https://bugzil.la/969247">Firefox bug 969247</a>.)
       </td>
     </tr>
     <tr>
@@ -2973,7 +2938,7 @@ Gecko defines a lot of `keyCode` values in `KeyboardEvent` for making the mappin
     </tr>
     <tr>
       <td><code>DOM_VK_DOUBLE_QUOTE</code></td>
-      <td>0xA3 (162)</td>
+      <td>0xA2 (162)</td>
       <td>Double quote (""") key.</td>
     </tr>
     <tr>
@@ -3301,10 +3266,46 @@ Gecko defines a lot of `keyCode` values in `KeyboardEvent` for making the mappin
   </tbody>
 </table>
 
+## Examples
+
+```js
+window.addEventListener(
+  "keydown",
+  (event) => {
+    if (event.defaultPrevented) {
+      return; // Should do nothing if the default action has been cancelled
+    }
+
+    let handled = false;
+    if (event.key !== undefined) {
+      // Handle the event with KeyboardEvent.key
+      handled = true;
+    } else if (event.keyCode !== undefined) {
+      // Handle the event with KeyboardEvent.keyCode
+      handled = true;
+    }
+
+    if (handled) {
+      // Suppress "double action" if event handled
+      event.preventDefault();
+    }
+  },
+  true,
+);
+```
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
+
 ### OEM specific keys on Windows
 
 On Windows, some values of virtual keycode are defined (reserved) for OEM specific key. They are available for special keys on non-standard keyboard. In other words, some values are used for different meaning by two or more vendors (or hardware).
 
 Starting Gecko 21 (and older than 15), OEM specific key values are available on the keyCode attribute only on Windows. So they are not useful for usual web applications. They are useful only for intranet applications or in similar situations.
 
-See "[Manufacturer-specific Virtual-Key Codes (Windows CE 5.0)](https://docs.microsoft.com/en-us/previous-versions/windows/embedded/aa452679(v=msdn.10))" in MSDN for the detail.
+See "[Manufacturer-specific Virtual-Key Codes (Windows CE 5.0)](<https://learn.microsoft.com/en-us/previous-versions/windows/embedded/aa452679(v=msdn.10)>)" in MSDN for the detail.

@@ -1,24 +1,19 @@
 ---
-title: WebGLRenderingContext.bindFramebuffer()
+title: "WebGLRenderingContext: bindFramebuffer() method"
+short-title: bindFramebuffer()
 slug: Web/API/WebGLRenderingContext/bindFramebuffer
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.bindFramebuffer
 ---
-{{APIRef("WebGL")}}
+
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGLRenderingContext.bindFramebuffer()`** method of the
-[WebGL API](/en-US/docs/Web/API/WebGL_API) binds a given
-{{domxref("WebGLFramebuffer")}} to a target.
+[WebGL API](/en-US/docs/Web/API/WebGL_API) binds to the specified target the provided {{domxref("WebGLFramebuffer")}}, or, if the `framebuffer` argument is null, the default {{domxref("WebGLFramebuffer")}}, which is associated with the canvas rendering context.
 
 ## Syntax
 
-```js
+```js-nolint
 bindFramebuffer(target, framebuffer)
 ```
 
@@ -33,7 +28,7 @@ bindFramebuffer(target, framebuffer)
         depth and stencil buffers used as both a destination for drawing and as a source for reading (see below).
 
     When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
-      the following values are available additionally:
+    the following values are available additionally:
 
     - `gl.DRAW_FRAMEBUFFER`
       - : Used as a destination for drawing operations such as `gl.draw*`, `gl.clear*` and `gl.blitFramebuffer`.
@@ -41,8 +36,7 @@ bindFramebuffer(target, framebuffer)
       - : Used as a source for reading operations such as `gl.readPixels` and `gl.blitFramebuffer`.
 
 - `framebuffer`
-  - : A {{domxref("WebGLFramebuffer")}} object to bind.
-    If `framebuffer` is null, then the canvas (which has no {{domxref("WebGLFramebuffer")}} object) is bound.
+  - : A {{domxref("WebGLFramebuffer")}} object to bind, or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) for binding the {{domxref("HTMLCanvasElement")}} or {{domxref("OffscreenCanvas")}} object associated with the rendering context.
 
 ### Return value
 
@@ -59,8 +53,8 @@ A `gl.INVALID_ENUM` error is thrown if `target` is not
 ### Binding a frame buffer
 
 ```js
-const canvas = document.getElementById('canvas');
-const gl = canvas.getContext('webgl');
+const canvas = document.getElementById("canvas");
+const gl = canvas.getContext("webgl");
 const framebuffer = gl.createFramebuffer();
 
 gl.bindFramebuffer(gl.FRAMEBUFFER, framebuffer);

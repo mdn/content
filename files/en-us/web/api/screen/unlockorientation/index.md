@@ -1,30 +1,29 @@
 ---
-title: Screen.unlockOrientation()
+title: "Screen: unlockOrientation() method"
+short-title: unlockOrientation()
 slug: Web/API/Screen/unlockOrientation
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSSOM View
-  - Deprecated
-  - Method
-  - NeedsMarkupWork
-  - Screen Orientation
+status:
+  - deprecated
 browser-compat: api.Screen.unlockOrientation
 ---
+
 {{APIRef("Screen Orientation API")}}{{Deprecated_Header}}
 
 The **`Screen.unlockOrientation()`** method removes all the
 previous screen locks set by the page/app. The {{DOMxRef("ScreenOrientation.unlock()")}}
 method should be used instead.
 
-> **Warning:** This feature is deprecated and should be avoided. Use the {{DOMxRef("ScreenOrientation.unlock()")}} method instead.
+> [!WARNING]
+> This feature is deprecated and should be avoided. Use the {{DOMxRef("ScreenOrientation.unlock()")}} method instead.
 
-> **Note:** This method only works for installed Web apps or for Web pages
+> [!NOTE]
+> This method only works for installed Web apps or for Web pages
 > in [fullscreen mode](/en-US/docs/Web/API/Fullscreen_API).
 
 ## Syntax
 
-```js
+```js-nolint
 unlockOrientation()
 ```
 
@@ -40,7 +39,11 @@ Returns `true` if the orientation was successfully unlocked or
 ## Examples
 
 ```js
-const unlockOrientation = screen.unlockOrientation || screen.mozUnlockOrientation || screen.msUnlockOrientation || (screen.orientation && screen.orientation.unlock);
+const unlockOrientation =
+  screen.unlockOrientation ||
+  screen.mozUnlockOrientation ||
+  screen.msUnlockOrientation ||
+  (screen.orientation && screen.orientation.unlock);
 
 if (unlockOrientation()) {
   // orientation was unlocked

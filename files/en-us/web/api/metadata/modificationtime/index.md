@@ -1,20 +1,15 @@
 ---
-title: Metadata.modificationTime
+title: "Metadata: modificationTime property"
+short-title: modificationTime
 slug: Web/API/Metadata/modificationTime
 page-type: web-api-instance-property
-tags:
-  - API
-  - File and Directory Entries API
-  - Files
-  - Non-standard
-  - Offline
-  - Property
-  - Reference
-  - metadata
-  - modificationTime
+status:
+  - experimental
+  - non-standard
 browser-compat: api.Metadata.modificationTime
 ---
-{{APIRef("File and Directory Entries API")}}{{Non-standard_header}}
+
+{{APIRef("File and Directory Entries API")}}{{Non-standard_header}}{{SeeCompatTable}}
 
 The read-only **`modificationTime`**
 property of the {{domxref("Metadata")}} interface is a {{jsxref("Date")}} object which
@@ -30,23 +25,35 @@ A {{jsxref("Date")}} timestamp indicating when the file system entry was last ch
 
 ## Examples
 
-This example tries to get a particular working file at `tmp/workfile.json`.
+This example tries to get a particular working file at `tmp/work-file.json`.
 Once that file has been found, its metadata is obtained and the file's modification
 timestamp year is compared to the current year. If it was last modified in a year at
 least five prior to the current year, the file is removed and a new one is created.
 
 ```js
-workingDirectory.getFile("tmp/workfile.json", { create: true }, function(fileEntry) {
-  fileEntry.getMetadata(function(metadata) {
-    if ((new Date().getFullYear() - metadata.modificationTime.getFullYear()) >= 5) {
-      fileEntry.remove(function() {
-        workingDirectory.getFile("tmp/workfile.json", { create: true }, function(newEntry) {
-          fileEntry = newEntry;
+workingDirectory.getFile(
+  "tmp/work-file.json",
+  { create: true },
+  (fileEntry) => {
+    fileEntry.getMetadata((metadata) => {
+      if (
+        new Date().getFullYear() - metadata.modificationTime.getFullYear() >=
+        5
+      ) {
+        fileEntry.remove(() => {
+          workingDirectory.getFile(
+            "tmp/work-file.json",
+            { create: true },
+            (newEntry) => {
+              fileEntry = newEntry;
+            },
+          );
         });
-      });
-    }
-  });
-}, handleError);
+      }
+    });
+  },
+  handleError,
+);
 ```
 
 ## Specifications
@@ -60,7 +67,6 @@ This feature has been removed from all specification and is not in the process o
 ## See also
 
 - [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
-- [Introduction to the File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
 - {{domxref("Metadata")}}
 - {{domxref("FileSystemEntry.getMetadata()")}}
 - {{domxref("FileSystemFileEntry")}}

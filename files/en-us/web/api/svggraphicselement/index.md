@@ -2,21 +2,16 @@
 title: SVGGraphicsElement
 slug: Web/API/SVGGraphicsElement
 page-type: web-api-interface
-tags:
-  - API
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG OM
 browser-compat: api.SVGGraphicsElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGGraphicsElement`** interface represents SVG elements whose primary purpose is to directly render graphics into a group.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties from its parent, {{domxref("SVGElement")}}._
 
@@ -27,7 +22,7 @@ _This interface also inherits properties from its parent, {{domxref("SVGElement"
 - {{domxref("SVGGraphicsElement.transform")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedTransformList")}} reflecting the computed value of the {{cssxref("transform")}} property and its corresponding {{SVGAttr("transform")}} attribute of the given element.
 
-## Methods
+## Instance methods
 
 _This interface also inherits methods from its parent, {{domxref("SVGElement")}}._
 
@@ -40,7 +35,7 @@ _This interface also inherits methods from its parent, {{domxref("SVGElement")}}
 
 ## Events
 
-Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) or by assigning an event listener to the equivalent `on...` handler property defined on {{DOMxRef("GlobalEventHandlers")}}.
+Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) or by assigning an event listener to the equivalent `on...` handler property.
 
 - [`copy`](/en-US/docs/Web/API/SVGGraphicsElement/copy_event)
   - : Fired when the user initiates a copy action through the browser's user interface.

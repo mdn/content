@@ -1,21 +1,17 @@
 ---
-title: 'SVGAnimationElement: endEvent event'
+title: "SVGAnimationElement: endEvent event"
+short-title: endEvent
 slug: Web/API/SVGAnimationElement/endEvent_event
 page-type: web-api-event
-tags:
-  - API
-  - Reference
-  - SMIL
-  - SVG animations
-  - SVGAnimationElement
-  - Event
 browser-compat: api.SVGAnimationElement.endEvent_event
 ---
+
 {{APIRef("SVG")}}
 
 The **`endEvent`** event of the {{domxref("SVGAnimationElement")}} interface is fired when at the active end of the animation is reached.
 
-> **Note:** This event is not raised at the simple end of each animation repeat. This event may be raised both in the course of normal (i.e. scheduled or interactive) timeline play, as well as in the case that the element was ended with a DOM method.
+> [!NOTE]
+> This event is not raised at the simple end of each animation repeat. This event may be raised both in the course of normal (i.e. scheduled or interactive) timeline play, as well as in the case that the element was ended with a DOM method.
 
 This event is not cancelable and does not bubble.
 
@@ -24,14 +20,14 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('endEvent', (event) => { });
+addEventListener("endEvent", (event) => {});
 
-onend = (event) => { };
+onend = (event) => {};
 ```
 
 ## Event type
 
-An {{domxref("TimeEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("TimeEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("TimeEvent")}}
 
@@ -40,7 +36,7 @@ An {{domxref("TimeEvent")}}. Inherits from {{domxref("Event")}}.
 - {{domxref("TimeEvent.detail")}} {{ReadOnlyInline}}
   - : A `long` that specifies some detail information about the Event, depending on the type of the event. For this event type, indicates the repeat number for the animation.
 - {{domxref("TimeEvent.view")}} {{ReadOnlyInline}}
-  - : A {{domxref("WindowProxy")}} that identifies the Window from which the event was generated.
+  - : A {{glossary("WindowProxy")}} that identifies the Window from which the event was generated.
 
 ## Examples
 
@@ -50,19 +46,15 @@ An {{domxref("TimeEvent")}}. Inherits from {{domxref("Event")}}.
 <svg xmlns="http://www.w3.org/2000/svg" width="300px" height="100px">
   <title>SVG SMIL Animate with Path</title>
   <circle cx="0" cy="50" r="50" fill="blue" stroke="black" stroke-width="1">
-    <animateMotion
-       path="M 0 0 H 300 Z"
-       dur="5s" repeatCount="indefinite" />
+    <animateMotion path="M 0 0 H 300 Z" dur="5s" repeatCount="indefinite" />
   </circle>
 </svg>
 
-<hr>
+<hr />
 
 <button>Stop animation</button>
 
-<ul>
-
-</ul>
+<ul></ul>
 ```
 
 ```css
@@ -75,37 +67,37 @@ ul {
 ```
 
 ```js
-let svgElem = document.querySelector('svg');
-let animateElem = document.querySelector('animateMotion');
-let list = document.querySelector('ul');
-let btn = document.querySelector('button');
+let svgElem = document.querySelector("svg");
+let animateElem = document.querySelector("animateMotion");
+let list = document.querySelector("ul");
+let btn = document.querySelector("button");
 
-animateElem.addEventListener('beginEvent', () => {
-  let listItem = document.createElement('li');
-  listItem.textContent = 'beginEvent fired';
+animateElem.addEventListener("beginEvent", () => {
+  let listItem = document.createElement("li");
+  listItem.textContent = "beginEvent fired";
   list.appendChild(listItem);
-})
+});
 
-animateElem.addEventListener('endEvent', () => {
-  let listItem = document.createElement('li');
-  listItem.textContent = 'endEvent fired';
+animateElem.addEventListener("endEvent", () => {
+  let listItem = document.createElement("li");
+  listItem.textContent = "endEvent fired";
   list.appendChild(listItem);
-})
+});
 
-animateElem.addEventListener('repeatEvent', (e) => {
-  let listItem = document.createElement('li');
-  let msg = 'repeatEvent fired';
-  if(e.detail) {
+animateElem.addEventListener("repeatEvent", (e) => {
+  let listItem = document.createElement("li");
+  let msg = "repeatEvent fired";
+  if (e.detail) {
     msg += `; repeat number: ${e.detail}`;
   }
   listItem.textContent = msg;
   list.appendChild(listItem);
-})
+});
 
-btn.addEventListener('click', () => {
+btn.addEventListener("click", () => {
   btn.disabled = true;
-  animateElem.setAttribute('repeatCount', '1');
-})
+  animateElem.setAttribute("repeatCount", "1");
+});
 ```
 
 {{EmbedLiveSample('Animated_circle', '100%', '300')}}
@@ -116,8 +108,8 @@ Note that you can also create an event listener for the `end` event using the `o
 
 ```js
 animateElem.onend = () => {
-  console.log('endEvent fired');
-}
+  console.log("endEvent fired");
+};
 ```
 
 ## Specifications

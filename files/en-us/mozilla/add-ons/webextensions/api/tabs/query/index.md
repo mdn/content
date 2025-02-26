@@ -1,19 +1,11 @@
 ---
 title: tabs.query()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/query
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - query
-  - tabs
+page-type: webextension-api-function
 browser-compat: webextensions.api.tabs.query
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 Gets all tabs that have the specified properties, or all tabs if no properties are specified.
 
@@ -21,26 +13,28 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
-let querying = browser.tabs.query(queryObj)
+```js-nolint
+let querying = browser.tabs.query(queryInfo)
 ```
 
 ### Parameters
 
-- `queryObj`
+- `queryInfo`
 
-  - : `object`. The `query()` function will only get tabs whose properties match the properties included here.
+  - : `object`. The `query()` function gets the tabs whose properties match the properties included here.
 
     See the {{WebExtAPIRef("tabs.Tab")}} documentation to learn more about these properties.
 
     - `active` {{optional_inline}}
       - : `boolean`. Whether the tabs are active in their windows.
+    - `attention` {{optional_inline}}
+      - : `boolean`. Indicates whether the tabs are drawing attention.
     - `audible` {{optional_inline}}
       - : `boolean`. Whether the tabs are audible.
     - `autoDiscardable` {{optional_inline}}
-      - : `boolean`. Whether the tabs can be discarded automatically by the browser when resources are low.
+      - : `boolean`. Whether the tab can be discarded by the browser. The default value is `true`. When set to `false`, the browser cannot automatically discard the tab. However, the tab can be discarded by {{WebExtAPIRef("tabs.discard")}}.
     - `cookieStoreId` {{optional_inline}}
-      - : `string` or `array` of `string`. Use this to return tabs whose `tab.cookieStoreId` matches any of the `cookieStoreId` strings. This option is only available if the add-on has the `"cookies"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).
+      - : `string` or `array` of `string`. Use this to return tabs whose `tab.cookieStoreId` matches any of the `cookieStoreId` strings. This option is only available if the add-on has the `"cookies"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions). See [Work with contextual identities](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities) for more information.
     - `currentWindow` {{optional_inline}}
       - : `boolean`. Whether the tabs are in the current window.
     - `discarded` {{optional_inline}}
@@ -80,36 +74,34 @@ Get all tabs:
 
 ```js
 function logTabs(tabs) {
-  for (let tab of tabs) {
+  for (const tab of tabs) {
     // tab.url requires the `tabs` permission or a matching host permission.
     console.log(tab.url);
   }
 }
 
 function onError(error) {
-  console.log(`Error: ${error}`);
+  console.error(`Error: ${error}`);
 }
 
-let querying = browser.tabs.query({});
-querying.then(logTabs, onError);
+browser.tabs.query({}).then(logTabs, onError);
 ```
 
 Get all tabs in the current window:
 
 ```js
 function logTabs(tabs) {
-  for (let tab of tabs) {
+  for (const tab of tabs) {
     // tab.url requires the `tabs` permission or a matching host permission.
     console.log(tab.url);
   }
 }
 
 function onError(error) {
-  console.log(`Error: ${error}`);
+  console.error(`Error: ${error}`);
 }
 
-let querying = browser.tabs.query({currentWindow: true});
-querying.then(logTabs, onError);
+browser.tabs.query({ currentWindow: true }).then(logTabs, onError);
 ```
 
 Get the active tab in the current window:
@@ -121,29 +113,29 @@ function logTabs(tabs) {
 }
 
 function onError(error) {
-  console.log(`Error: ${error}`);
+  console.error(`Error: ${error}`);
 }
 
-let querying = browser.tabs.query({currentWindow: true, active: true});
-querying.then(logTabs, onError);
+browser.tabs
+  .query({ currentWindow: true, active: true })
+  .then(logTabs, onError);
 ```
 
 Get tabs for all HTTP and HTTPS URLs under `"mozilla.org"` or any of its subdomains:
 
 ```js
 function logTabs(tabs) {
-  for (let tab of tabs) {
+  for (const tab of tabs) {
     // tab.url requires the `tabs` permission or a matching host permission.
     console.log(tab.url);
   }
 }
 
 function onError(error) {
-  console.log(`Error: ${error}`);
+  console.error(`Error: ${error}`);
 }
 
-let querying = browser.tabs.query({url: "*://*.mozilla.org/*"});
-querying.then(logTabs, onError);
+browser.tabs.query({ url: "*://*.mozilla.org/*" }).then(logTabs, onError);
 ```
 
 {{WebExtExamples}}
@@ -152,11 +144,11 @@ querying.then(logTabs, onError);
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/tabs/#method-query) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-query) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -183,4 +175,4 @@ querying.then(logTabs, onError);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

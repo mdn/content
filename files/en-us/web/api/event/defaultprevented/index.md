@@ -1,13 +1,12 @@
 ---
-title: Event.defaultPrevented
+title: "Event: defaultPrevented property"
+short-title: defaultPrevented
 slug: Web/API/Event/defaultPrevented
 page-type: web-api-instance-property
-tags:
-  - Property
-  - Read-only
 browser-compat: api.Event.defaultPrevented
 ---
-{{ APIRef("DOM") }}
+
+{{APIRef("DOM")}}{{AvailableInWorkers}}
 
 The **`defaultPrevented`** read-only property of the {{domxref("Event")}} interface returns a boolean value indicating whether or not the call to {{ domxref("Event.preventDefault()") }} canceled the event.
 
@@ -35,21 +34,18 @@ function stopLink(event) {
 }
 
 function logClick(event) {
-  const log = document.getElementById('log');
+  const log = document.getElementById("log");
 
-  if (event.target.tagName === 'A') {
-    if (event.defaultPrevented) {
-      log.innerText = `Sorry, but you cannot visit this link!\n${log.innerText}`;
-    }
-    else {
-      log.innerText = `Visiting link…\n${log.innerText}`;
-    }
+  if (event.target.tagName === "A") {
+    log.innerText = event.defaultPrevented
+      ? `Sorry, but you cannot visit this link!\n${log.innerText}`
+      : `Visiting link…\n${log.innerText}`;
   }
 }
 
-const a = document.getElementById('link2');
-a.addEventListener('click', stopLink);
-document.addEventListener('click', logClick);
+const a = document.getElementById("link2");
+a.addEventListener("click", stopLink);
+document.addEventListener("click", logClick);
 ```
 
 ### Result

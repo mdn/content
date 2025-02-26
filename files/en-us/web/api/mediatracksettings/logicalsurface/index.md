@@ -1,28 +1,12 @@
 ---
-title: MediaTrackSettings.logicalSurface
+title: "MediaTrackSettings: logicalSurface property"
+short-title: logicalSurface
 slug: Web/API/MediaTrackSettings/logicalSurface
 page-type: web-api-instance-property
-tags:
-  - API
-  - Capture
-  - Logical Surface
-  - Media
-  - Media Capture and Streaming
-  - Media Capture and Streaming API
-  - MediaTrackSettings
-  - Reference
-  - Screen Capture
-  - Screen Capture API
-  - Sharing
-  - Surface
-  - Video
-  - display
-  - logicalSurface
-  - screen
-  - Property
-browser-compat: api.MediaTrackSettings.logicalSurface
+browser-compat: api.MediaStreamTrack.applyConstraints.logicalSurface_constraint
 ---
-{{DefaultAPISidebar("Media Capture and Streams")}}
+
+{{APIRef("Media Capture and Streams")}}
 
 The {{domxref("MediaTrackSettings")}} dictionary's
 **`logicalSurface`** property indicates whether or not the
@@ -62,7 +46,7 @@ of `true`), or just the currently visible portion of the document (where the
 
 - [Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API)
 - [Using the screen capture API](/en-US/docs/Web/API/Screen_Capture_API/Using_Screen_Capture)
-- [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints)
+- [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints)
 - {{domxref("MediaDevices.getDisplayMedia()")}}
 - {{domxref("MediaStreamTrack.getConstraints()")}}
 - {{domxref("MediaStreamTrack.applyConstraints()")}}

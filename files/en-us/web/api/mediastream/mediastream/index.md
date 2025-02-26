@@ -1,36 +1,21 @@
 ---
-title: MediaStream()
+title: "MediaStream: MediaStream() constructor"
+short-title: MediaStream()
 slug: Web/API/MediaStream/MediaStream
 page-type: web-api-constructor
-tags:
-  - API
-  - Audio
-  - Constructor
-  - Media
-  - Media Capture and Streams
-  - Media Capture and Streams API
-  - MediaStream
-  - Reference
-  - Streams
-  - Tracks
-  - Video
-  - WebRTC
-  - streaming
 browser-compat: api.MediaStream.MediaStream
 ---
-{{DefaultAPISidebar("Media Capture and Streams")}}
 
-The **`MediaStream()`** constructor
-returns a newly-created {{domxref("MediaStream")}}, which serves as a collection of
-media tracks, each represented by a {{domxref("MediaStreamTrack")}} object.
+{{APIRef("Media Capture and Streams")}}
 
-If
-any parameters are given, the specified tracks are added to the new stream. Otherwise,
-the stream has no tracks.
+The **`MediaStream()`** constructor returns a newly-created {{domxref("MediaStream")}}, which serves as a collection of media tracks, each represented by a {{domxref("MediaStreamTrack")}} object.
+
+If any parameters are given, the specified tracks are added to the new stream.
+Otherwise, the stream has no tracks.
 
 ## Syntax
 
-```js
+```js-nolint
 new MediaStream()
 new MediaStream(stream)
 new MediaStream(tracks)

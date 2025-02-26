@@ -1,20 +1,12 @@
 ---
-title: FetchEvent.preloadResponse
+title: "FetchEvent: preloadResponse property"
+short-title: preloadResponse
 slug: Web/API/FetchEvent/preloadResponse
 page-type: web-api-instance-property
-tags:
-  - API
-  - FetchEvent
-  - Offline
-  - Property
-  - Reference
-  - Service Workers
-  - Web Performance
-  - Workers
-  - request
 browser-compat: api.FetchEvent.preloadResponse
 ---
-{{APIRef("Service Workers API")}}
+
+{{APIRef("Service Workers API")}}{{AvailableInWorkers("service")}}
 
 The **`preloadResponse`** read-only property of the {{domxref("FetchEvent")}} interface returns a {{jsxref("Promise")}} that resolves to the navigation preload {{domxref("Response")}} if [navigation preload](/en-US/docs/Web/API/NavigationPreloadManager) was triggered, or `undefined` otherwise.
 
@@ -28,7 +20,7 @@ A {{jsxref("Promise")}} that resolves to a {{domxref("Response")}} or otherwise 
 
 ## Examples
 
-This code snippet is from [Speed up Service Worker with Navigation Preloads](https://developer.chrome.com/blog/navigation-preload/).
+This code snippet is from [Speed up Service Worker with Navigation Preloads](https://web.dev/blog/navigation-preload).
 
 The {{domxref("ServiceWorkerGlobalScope.fetch_event", "onfetch")}} event handler listens for the `fetch` event.
 When fired, the handler calls {{domxref("FetchEvent.respondWith", "FetchEvent.respondWith()")}} to pass a promise back to the controlled page.
@@ -41,7 +33,7 @@ If there is no matching cache or preloaded response, the code fetches the respon
 ```js
 addEventListener("fetch", (event) => {
   event.respondWith(
-    (async function () {
+    (async () => {
       // Respond from the cache if we can
       const cachedResponse = await caches.match(event.request);
       if (cachedResponse) return cachedResponse;
@@ -52,7 +44,7 @@ addEventListener("fetch", (event) => {
 
       // Else try the network.
       return fetch(event.request);
-    })()
+    })(),
   );
 });
 ```
@@ -67,9 +59,7 @@ addEventListener("fetch", (event) => {
 
 ## See also
 
-- [Speed up Service Worker with Navigation Preloads](https://developer.chrome.com/blog/navigation-preload/)
+- [Speed up Service Worker with Navigation Preloads](https://web.dev/blog/navigation-preload)
 - [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [Service workers basic code example](https://github.com/mdn/sw-test)
-- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
-- {{jsxref("Promise")}}
+- [Service workers basic code example](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)
 - [Using web workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)

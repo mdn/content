@@ -1,22 +1,11 @@
 ---
-title: AudioTrack.enabled
+title: "AudioTrack: enabled property"
+short-title: enabled
 slug: Web/API/AudioTrack/enabled
 page-type: web-api-instance-property
-tags:
-  - Audio
-  - AudioTrack
-  - HTML DOM
-  - Media
-  - Media Controls
-  - Media Track
-  - Property
-  - Reference
-  - Video
-  - enabled
-  - mute
-  - track
 browser-compat: api.AudioTrack.enabled
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **{{domxref("AudioTrack")}}** property
@@ -64,7 +53,8 @@ the {{HTMLElement("video")}} element `"main-video"` the audio tracks whose
 `"commentary"`. These represent the primary audio track and the commentary
 track.
 
-> **Note:** This example assumes that there is only one of each kind of
+> [!NOTE]
+> This example assumes that there is only one of each kind of
 > track in the video, but this is not necessarily the case.
 
 The element's audio tracks are then scanned through using the JavaScript

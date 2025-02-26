@@ -2,23 +2,14 @@
 title: Introduction to the Real-time Transport Protocol (RTP)
 slug: Web/API/WebRTC_API/Intro_to_RTP
 page-type: guide
-tags:
-  - API
-  - Connectivity
-  - Guide
-  - Intermediate
-  - Protocols
-  - RTCRtpReceiver
-  - RTCRtpSender
-  - RTCRtpTransceiver
-  - RTP
-  - WebRTC
 ---
-{{APIRef("WebRTC")}}
+
+{{DefaultAPISidebar("WebRTC")}}
 
 The **Real-time Transport Protocol** (**RTP**), defined in {{RFC(3550)}}, is an IETF standard protocol to enable real-time connectivity for exchanging data that needs real-time priority. This article provides an overview of what RTP is and how it functions in the context of WebRTC.
 
-> **Note:** WebRTC actually uses **SRTP** (Secure Real-time Transport Protocol) to ensure that the exchanged data is secure and authenticated as appropriate.
+> [!NOTE]
+> WebRTC actually uses **SRTP** (Secure Real-time Transport Protocol) to ensure that the exchanged data is secure and authenticated as appropriate.
 
 Keeping latency to a minimum is especially important for WebRTC, since face-to-face communication needs to be performed with as little {{Glossary("latency")}} as possible. The more time lag there is between one user saying something and another hearing it, the more likely there is to be episodes of cross-talking and other forms of confusion.
 
@@ -35,7 +26,7 @@ The very fact that RTCP is defined in the same RFC as RTP is a clue as to just h
 RTP's primary benefits in terms of WebRTC include:
 
 - Generally low latency.
-- Packets are sequence-numbered and time-stamped for reassembly if they arrive out of order. This lets data sent using RTP be delivered on transports that don't guarantee ordering or even guarantee delivery at all.
+- Packets are sequence-numbered and timestamped for reassembly if they arrive out of order. This lets data sent using RTP be delivered on transports that don't guarantee ordering or even guarantee delivery at all.
 - This means RTP can be — but is not required to be — used atop {{Glossary("UDP")}} for its performance as well as its multiplexing and checksum features.
 - RTP supports multicast; while this isn't yet important for WebRTC, it's likely to matter in the future, when WebRTC is (hopefully) enhanced to support multi-user conversations.
 - RTP isn't limited to use in audiovisual communication. It can be used for any form of continuous or active data transfer, including data streaming, active badges or status display updates, or control and measurement information transport.
@@ -65,7 +56,8 @@ Each {{domxref("RTCPeerConnection")}} has methods which provide access to the li
 
 Because the streams for an `RTCPeerConnection` are implemented using RTP and the interfaces [above](#rtcpeerconnection_and_rtp), you can take advantage of the access this gives you to the internals of streams to make adjustments. Among the simplest things you can do is to implement a "hold" feature, wherein a participant in a call can click a button and turn off their microphone, begin sending music to the other peer instead, and stop accepting incoming audio.
 
-> **Note:** This example makes use of modern JavaScript features including [async functions](/en-US/docs/Web/JavaScript/Reference/Statements/async_function) and the [`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await) expression. This enormously simplifies and makes far more readable the code dealing with the promises returned by WebRTC methods.
+> [!NOTE]
+> This example makes use of modern JavaScript features including [async functions](/en-US/docs/Web/JavaScript/Reference/Statements/async_function) and the [`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await) expression. This enormously simplifies and makes far more readable the code dealing with the promises returned by WebRTC methods.
 
 In the examples below, we'll refer to the peer which is turning "hold" mode on and off as the local peer and the user being placed on hold as the remote peer.
 
@@ -81,7 +73,7 @@ async function enableHold(audioStream) {
     await audioTransceiver.sender.replaceTrack(audioStream.getAudioTracks()[0]);
     audioTransceiver.receiver.track.enabled = false;
     audioTransceiver.direction = "sendonly";
-  } catch(err) {
+  } catch (err) {
     /* handle the error */
   }
 }
@@ -108,7 +100,7 @@ async function holdRequested(offer) {
     await audioTransceiver.sender.replaceTrack(null);
     audioTransceiver.direction = "recvonly";
     await sendAnswer();
-  } catch(err) {
+  } catch (err) {
     /* handle the error */
   }
 }
@@ -154,7 +146,7 @@ async function holdEnded(offer, micStream) {
     await audioTransceiver.sender.replaceTrack(micStream.getAudioTracks()[0]);
     audioTransceiver.direction = "sendrecv";
     await sendAnswer();
-  } catch(err) {
+  } catch (err) {
     /* handle the error */
   }
 }

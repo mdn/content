@@ -1,29 +1,26 @@
 ---
-title: '-moz-image-rect'
+title: -moz-image-rect
 slug: Web/CSS/-moz-image-rect
-tags:
-  - CSS
-  - CSS Function
-  - CSS Images
-  - CSS:Mozilla Extensions
-  - Function
-  - Non-standard
-  - Reference
+page-type: css-function
+status:
+  - deprecated
+  - non-standard
 browser-compat: css.types.-moz-image-rect
 ---
-{{CSSRef}}{{Non-standard_Header}}
+
+{{CSSRef}}{{Non-standard_Header}}{{Deprecated_Header}}
 
 The **`-moz-image-rect`** value for [CSS](/en-US/docs/Web/CSS) {{CSSxRef("background-image")}} lets you use a portion of a larger image as a background.
 
 ## Syntax
 
 ```css
--moz-image-rect({{CSSxRef("url", "url()")}}, top, right, bottom, left);
+-moz-image-rect(url("my-url"), top, right, bottom, left);
 ```
 
 ### Values
 
-- {{CSSxRef("url", "url()")}}
+- {{CSSxRef("url_value", "&lt;url&gt;")}}
   - : The URI of the image from which to take the sub-image.
 - `top`
   - : The top edge, specified as an {{CSSxRef("&lt;integer&gt;")}} or {{CSSxRef("&lt;percentage&gt;")}}, of the sub-image within the specified image.
@@ -54,14 +51,14 @@ The container looks like this:
 
 ```css
 #container {
-  width:267px;
-  height:272px;
-  top:100px;
-  left:100px;
-  position:absolute;
-  font-size:16px;
-  text-shadow:white 0px 0px 6px;
-  text-align:center;
+  width: 267px;
+  height: 272px;
+  top: 100px;
+  left: 100px;
+  position: absolute;
+  font-size: 16px;
+  text-shadow: white 0px 0px 6px;
+  text-align: center;
 }
 ```
 
@@ -70,9 +67,9 @@ Then the four boxes defining the segments of the image are defined. Let's look a
 ```css
 #box1 {
   background-image: -moz-image-rect(url(firefox.png), 0%, 50%, 50%, 0%);
-  width:133px;
-  height:136px;
-  position:absolute;
+  width: 133px;
+  height: 136px;
+  position: absolute;
 }
 ```
 
@@ -81,9 +78,9 @@ This is the top-left corner of the image. It defines a rectangle containing the 
 ```css
 #box2 {
   background-image: -moz-image-rect(url(firefox.png), 0%, 100%, 50%, 50%);
-  width:133px;
-  height:136px;
-  position:absolute;
+  width: 133px;
+  height: 136px;
+  position: absolute;
 }
 ```
 
@@ -94,21 +91,21 @@ The other corners follow a similar pattern:
 ```css
 #box3 {
   background-image: -moz-image-rect(url(firefox.png), 50%, 50%, 100%, 0%);
-  width:133px;
-  height:136px;
-  position:absolute;
+  width: 133px;
+  height: 136px;
+  position: absolute;
 }
 #box4 {
   background-image: -moz-image-rect(url(firefox.png), 50%, 100%, 100%, 50%);
-  width:133px;
-  height:136px;
-  position:absolute;
+  width: 133px;
+  height: 136px;
+  position: absolute;
 }
 ```
 
 ### HTML
 
-The HTML is quite simple:
+We include a container with four boxes:
 
 ```html
 <div id="container" onclick="rotate()">
@@ -127,16 +124,18 @@ This code handles the click event when the container receives a mouse click.
 
 ```js
 function rotate() {
-  var prevStyle = window.getComputedStyle(document.getElementById("box4"), null).getPropertyValue("background-image");
+  let prevStyle = window
+    .getComputedStyle(document.getElementById("box4"), null)
+    .getPropertyValue("background-image");
 
   // Now that we've saved the last one, start rotating
-
-  for (var i=1; i<=4; i++) {
-    var curId = "box" + i;
+  for (let i = 1; i <= 4; i++) {
+    const curId = `box${i}`;
 
     // Shift the background images
-
-    var curStyle = window.getComputedStyle(document.getElementById(curId), null).getPropertyValue("background-image");
+    const curStyle = window
+      .getComputedStyle(document.getElementById(curId), null)
+      .getPropertyValue("background-image");
     document.getElementById(curId).style.backgroundImage = prevStyle;
     prevStyle = curStyle;
   }
@@ -160,4 +159,4 @@ Not part of any standard.
 ## See also
 
 - [Mozilla CSS extensions](/en-US/docs/Web/CSS/Mozilla_Extensions)
-- [CSS Backgrounds and Borders module](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders)
+- [CSS Backgrounds and Borders module](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders)

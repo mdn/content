@@ -1,56 +1,61 @@
 ---
 title: Shallow copy
 slug: Glossary/Shallow_copy
-tags:
-  - Glossary
-  - Shallow copy
+page-type: glossary-definition
 ---
-{{MDNSidebar}}
 
-A **shallow copy** of an object is a copy whose properties share the same references (point to the same underlying values) as those of the source object from which the copy was made. As a result, when you change either the source or the copy, you may also cause the other object to change too — and so, you may end up unintentionally causing changes to the source or copy that you don't expect. That behavior contrasts with the behavior of a [deep copy](/en-US/docs/Glossary/Deep_copy), in which the source and copy are completely independent.
+{{GlossarySidebar}}
 
-For shallow copies, it's important to understand that selectively changing the value of a shared property of an existing element in an object is different from assigning a completely new value to an existing element.
+A **shallow copy** of an object is a copy whose properties share the same {{Glossary("object reference", "references")}} (point to the same underlying values) as those of the source object from which the copy was made. As a result, when you change either the source or the copy, you may also cause the other object to change too. That behavior contrasts with the behavior of a {{Glossary("deep copy")}}, in which the source and copy are completely independent.
 
-For example, if in a shallow copy named `copy` of an array object, the value of the `copy[0]` element is `{"list":["butter","flour"]}`, and you do `copy[0].list = ["oil","flour"]`, then the corresponding element in the source object will change, too — because you selectively changed a property of an object shared by both the source object and the shallow copy.
+More formally, two objects `o1` and `o2` are shallow copies if:
 
-However, if instead you do `copy[0] = {"list":["oil","flour"]}`, then the corresponding element in the source object **will not change** — because in that case, you're not just selectively changing a property of an existing array element that the shallow copy shares with the source object; instead you're actually assigning a completely new value to that `copy[0]` array element, just in the shallow copy.
+1. They are not the same object (`o1 !== o2`).
+2. The properties of `o1` and `o2` have the same names in the same order.
+3. The values of their properties are equal.
+4. Their prototype chains are equal.
 
-In JavaScript, all standard built-in object-copy operations ([spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax), [`Array.prototype.concat()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat), [`Array.prototype.slice()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice), [`Array.from()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from), [`Object.assign()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign), and [`Object.create()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create)) create shallow copies rather than deep copies.
+See also the definition of _{{Glossary("deep copy", "structural equivalence")}}_.
 
-## Example
+The copy of an object whose properties all have primitive values fits the definition of both a {{Glossary("deep copy")}} and a shallow copy. It is somewhat useless to talk about the depth of such a copy, though, because it has no nested properties and we usually talk about deep copying in the context of mutating nested properties.
 
-Consider the following example, in which an `ingredients_list` array object is created, and then an `ingredients_list_copy` object is created by copying that `ingredients_list` object.
+For shallow copies, only the top-level properties are copied, not the values of nested objects. Therefore:
+
+- Re-assigning top-level properties of the copy does not affect the source object.
+- Re-assigning nested object properties of the copy does affect the source object.
+
+In JavaScript, all standard built-in object-copy operations ([spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax), [`Array.prototype.concat()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat), [`Array.prototype.slice()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice), [`Array.from()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from), and [`Object.assign()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign)) create shallow copies rather than deep copies.
+
+Consider the following example, in which an `ingredientsList` array object is created, and then an `ingredientsListCopy` object is created by copying that `ingredientsList` object.
 
 ```js
-let ingredients_list = ["noodles",{"list":["eggs","flour","water"]}];
+const ingredientsList = ["noodles", { list: ["eggs", "flour", "water"] }];
 
-let ingredients_list_copy = Array.from(ingredients_list);
-console.log(JSON.stringify(ingredients_list_copy));
+const ingredientsListCopy = Array.from(ingredientsList);
+console.log(ingredientsListCopy);
 // ["noodles",{"list":["eggs","flour","water"]}]
 ```
 
-Changing the value of the `list` property in `ingredients_list_copy` will also cause the `list` property to change in the `ingredients_list` source object.
+Re-assigning the value of a nested property will be visible in both objects.
 
 ```js
-ingredients_list_copy[1].list = ["rice flour","water"]
-console.log(ingredients_list[1].list);
+ingredientsListCopy[1].list = ["rice flour", "water"];
+console.log(ingredientsList[1].list);
 // Array [ "rice flour", "water" ]
-console.log(JSON.stringify(ingredients_list));
-// ["noodles",{"list":["rice flour","water"]}]
 ```
 
-Assigning a completely new value to the first element in `ingredients_list_copy` will not cause any change to the first element in the `ingredients_list` source object.
+Re-assigning the value of a top-level property (the `0` index in this case) will only be visible in the changed object.
 
 ```js
-ingredients_list_copy[0] = "rice noodles"
-console.log(ingredients_list[0])
-// noodles
-console.log(JSON.stringify(ingredients_list_copy));
+ingredientsListCopy[0] = "rice noodles";
+console.log(ingredientsList[0]); // noodles
+console.log(JSON.stringify(ingredientsListCopy));
 // ["rice noodles",{"list":["rice flour","water"]}]
-console.log(JSON.stringify(ingredients_list));
+console.log(JSON.stringify(ingredientsList));
 // ["noodles",{"list":["rice flour","water"]}]
 ```
 
 ## See also
 
-- [Deep copy](/en-US/docs/Glossary/Deep_copy)
+- Related glossary terms:
+  - {{Glossary("Deep copy")}}

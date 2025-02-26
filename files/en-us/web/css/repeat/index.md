@@ -1,23 +1,17 @@
 ---
 title: repeat()
 slug: Web/CSS/repeat
-tags:
-  - CSS
-  - CSS Function
-  - CSS Grid
-  - Function
-  - Layout
-  - Reference
-  - Web
+page-type: css-function
 browser-compat: css.properties.grid-template-columns.repeat
 ---
+
 {{CSSRef}}
 
-The **`repeat()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) represents a repeated fragment of the [track list](/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout), allowing a large number of columns or rows that exhibit a recurring pattern to be written in a more compact form.
+The **`repeat()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) represents a repeated fragment of the [track list](/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout), allowing a large number of columns or rows that exhibit a recurring pattern to be written in a more compact form.
 
 {{EmbedInteractiveExample("pages/css/function-repeat.html")}}
 
-This function can be used in the CSS Grid properties {{cssxref("grid-template-columns")}} and {{cssxref("grid-template-rows")}}.
+This function can be used in the CSS grid properties {{cssxref("grid-template-columns")}} and {{cssxref("grid-template-rows")}}.
 
 ## Syntax
 
@@ -52,12 +46,10 @@ repeat(4, [col-start] fit-content(200px) [col-end])
 repeat(4, 10px [col-start] 30% [col-middle] 400px [col-end])
 ```
 
-## Syntax
-
 The `repeat()` function takes two arguments:
 
 - **repeat count**: the first argument specifies the number of times that the track list should be repeated. It is specified with an integer value of 1 or more, or with the keyword values [`auto-fill`](#auto-fill) or [`auto-fit`](#auto-fit). These keyword values repeat the set of tracks as many times as is needed to fill the grid container.
-- **tracks**: the second argument specifies the set of tracks that will be repeated. Fundamentally this consists of one or more values, where each value represents the size of that track. Each size is specified using either a [`<track-size>`](#track-size) value or a [`<fixed-size>`](#fixed-size) value. You can also specify one or more [line names](/en-US/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines) before or after each track, by providing [`<line-names>`](#line-names) values before and/or after the track size.
+- **tracks**: the second argument specifies the set of tracks that will be repeated. Fundamentally this consists of one or more values, where each value represents the size of that track. Each size is specified using either a [`<track-size>`](#track-size) value or a [`<fixed-size>`](#fixed-size) value. You can also specify one or more [line names](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines) before or after each track, by providing [`<line-names>`](#line-names) values before and/or after the track size.
 
 If you use [`auto-fill`](#auto-fill) or [`auto-fit`](#auto-fit) to set the repeat count, you may only specify track sizes using the [`<fixed-size>`](#fixed-size) type, not the [`<track-size>`](#track-size) type. This give us three main syntax forms for `repeat()`:
 
@@ -75,22 +67,23 @@ Then if a property declaration uses `<auto-repeat>`, it is only allowed to use `
 
 ```css example-bad
 .wrapper {
-  grid-template-columns:  repeat(auto-fill, 10px)
-                          repeat(2, minmax(min-content, max-content));
+  grid-template-columns:
+    repeat(auto-fill, 10px)
+    repeat(2, minmax(min-content, max-content));
 }
 ```
 
-There is a fourth form, `<name-repeat>`, which is used to add line names to subgrids. It only used with the [`subgrid`](/en-US/docs/Web/CSS/CSS_Grid_Layout/Subgrid) keyword and only specifies line names, not track sizes.
+There is a fourth form, `<name-repeat>`, which is used to add line names to subgrids. It only used with the [`subgrid`](/en-US/docs/Web/CSS/CSS_grid_layout/Subgrid) keyword and only specifies line names, not track sizes.
 
 ### Values
 
 - `<fixed-size>`
   - : One of the following forms:
     - a {{cssxref("&lt;length-percentage&gt;")}} value
-    - a {{cssxref("minmax()")}} function with:
+    - a {{cssxref("minmax", "minmax()")}} function with:
       - `min` given as a {{cssxref("&lt;length-percentage&gt;")}} value
       - `max` given as one of a {{cssxref("&lt;length-percentage&gt;")}} value, a {{cssxref("&lt;flex&gt;")}} value, or one of the following keywords: [`min-content`](#min-content), [`max-content`](#max-content), or [`auto`](#auto)
-    - a {{cssxref("minmax()")}} function with:
+    - a {{cssxref("minmax", "minmax()")}} function with:
       - `min` given as a {{cssxref("&lt;length-percentage&gt;")}} value or one of the following keywords: [`min-content`](#min-content), [`max-content`](#max-content), or [`auto`](#auto)
       - `max` given as a {{cssxref("&lt;length-percentage&gt;")}} value.
 - {{cssxref("&lt;flex&gt;")}}
@@ -104,24 +97,30 @@ There is a fourth form, `<name-repeat>`, which is used to add line names to subg
 - `<track-size>`
   - : One of the following forms:
     - a {{cssxref("&lt;length-percentage&gt;")}} value, a {{cssxref("&lt;flex&gt;")}} value, or one of the following keywords: [`min-content`](#min-content), [`max-content`](#max-content), or [`auto`](#auto)
-    - a {{cssxref("minmax()")}} function with:
+    - a {{cssxref("minmax", "minmax()")}} function with:
       - `min` given as a {{cssxref("&lt;length-percentage&gt;")}} value, or one of the following keywords: [`min-content`](#min-content), [`max-content`](#max-content), or [`auto`](#auto)
       - `max` given as a {{cssxref("&lt;length-percentage&gt;")}} value, a {{cssxref("&lt;flex&gt;")}} value, or one of the following keywords: [`min-content`](#min-content), [`max-content`](#max-content), or [`auto`](#auto)
-    - a {{cssxref("fit-content()")}} function, passed a {{cssxref("&lt;length-percentage&gt;")}} value.
+    - a {{cssxref("fit-content_function", "fit-content()")}} function, passed a {{cssxref("&lt;length-percentage&gt;")}} value.
 - `auto`
   - : As a maximum, identical to `max-content`. As a minimum it represents the largest minimum size (as specified by {{cssxref("min-width")}}/{{cssxref("min-height")}}) of the grid items occupying the grid track.
 - `auto-fill`
   - : If the grid container has a definite or maximal size in the relevant axis, then the number of repetitions is the largest possible positive integer that does not cause the grid to overflow its grid container. Treating each track as its maximal track sizing function (each independent value used to define `grid-template-rows` or `grid-template-columns`), if that is definite. Otherwise, as its minimum track sizing function, and taking grid-gap into account. If any number of repetitions would overflow, then the repetition is `1`. Otherwise, if the grid container has a definite minimal size in the relevant axis, the number of repetitions is the smallest possible positive integer that fulfills that minimum requirement. Otherwise, the specified track list repeats only once.
 - `auto-fit`
+
   - : Behaves the same as `auto-fill`, except that after placing the grid items any empty repeated tracks are collapsed. An empty track is one with no in-flow grid items placed into or spanning across it. (This can result in all tracks being collapsed, if they're all empty.)
 
     A collapsed track is treated as having a single fixed track sizing function of `0px`, and the gutters on either side of it collapse.
 
     For the purpose of finding the number of auto-repeated tracks, the user agent floors the track size to a user agent specified value (e.g., `1px`), to avoid division by zero.
+
 - `max-content`
   - : Represents the largest max-content contribution of the grid items occupying the grid track.
 - `min-content`
   - : Represents the largest min-content contribution of the grid items occupying the grid track.
+
+## Formal syntax
+
+{{CSSSyntaxRaw(`<track-repeat> <auto-repeat> <fixed-repeat> <name-repeat>`)}}
 
 ## Examples
 
@@ -131,21 +130,11 @@ There is a fourth form, `<name-repeat>`, which is used to add line names to subg
 
 ```html
 <div id="container">
-  <div>
-    This item is 50 pixels wide.
-  </div>
-  <div>
-    Item with flexible width.
-  </div>
-  <div>
-    This item is 50 pixels wide.
-  </div>
-  <div>
-    Item with flexible width.
-  </div>
-  <div>
-    Inflexible item of 100 pixels width.
-  </div>
+  <div>This item is 50 pixels wide.</div>
+  <div>Item with flexible width.</div>
+  <div>This item is 50 pixels wide.</div>
+  <div>Item with flexible width.</div>
+  <div>Inflexible item of 100 pixels width.</div>
 </div>
 ```
 
@@ -183,6 +172,12 @@ There is a fourth form, `<name-repeat>`, which is used to add line names to subg
 
 ## See also
 
-- Related CSS properties: {{cssxref("grid-template")}}, {{cssxref("grid-template-rows")}}, {{cssxref("grid-template-columns")}}, {{cssxref("grid-template-areas")}}, {{cssxref("grid-auto-columns")}}, {{cssxref("grid-auto-rows")}}, {{cssxref("grid-auto-flow")}}
-- Grid Layout Guide: _[Line-based placement with CSS Grid](/en-US/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)_
-- Grid Layout Guide: _[Grid template areas - Grid definition shorthands](/en-US/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas#grid_definition_shorthands)_
+- {{cssxref("grid-template")}}
+- {{cssxref("grid-template-rows")}}
+- {{cssxref("grid-template-columns")}}
+- {{cssxref("grid-template-areas")}}
+- {{cssxref("grid-auto-columns")}}
+- {{cssxref("grid-auto-rows")}}
+- {{cssxref("grid-auto-flow")}}
+- [Line-based placement with CSS grid](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
+- [Grid template areas: grid definition shorthands](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_template_areas#grid_definition_shorthands)

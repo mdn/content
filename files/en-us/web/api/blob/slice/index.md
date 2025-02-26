@@ -1,24 +1,20 @@
 ---
-title: Blob.slice()
+title: "Blob: slice() method"
+short-title: slice()
 slug: Web/API/Blob/slice
 page-type: web-api-instance-method
-tags:
-  - API
-  - Blob
-  - File API
-  - Method
-  - Reference
 browser-compat: api.Blob.slice
 ---
-{{APIRef("File API")}}
 
-The {{domxref("Blob")}} interface's **`slice()`** method
+{{APIRef("File API")}}{{AvailableInWorkers}}
+
+The **`slice()`** method of the {{domxref("Blob")}} interface
 creates and returns a new `Blob` object which contains data from a subset of
 the blob on which it's called.
 
 ## Syntax
 
-```js
+```js-nolint
 slice()
 slice(start)
 slice(start, end)
@@ -35,7 +31,7 @@ slice(start, end, contentType)
     specify a value for `start` that is larger than the size of the source
     {{domxref("Blob")}}, the returned {{domxref("Blob")}} has size 0 and contains no data.
 - `end` {{optional_inline}}
-  - : An index into the {{domxref("Blob")}} indicating the first byte that will \*not\* be
+  - : An index into the {{domxref("Blob")}} indicating the first byte that will _not_ be
     included in the new {{domxref("Blob")}} (i.e. the byte exactly at this index is not
     included). If you specify a negative value, it's treated as an offset from the end of
     the {{domxref("Blob")}} toward the beginning. For example, -10 would be the 10th from

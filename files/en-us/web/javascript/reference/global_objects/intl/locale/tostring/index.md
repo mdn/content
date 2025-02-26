@@ -1,31 +1,42 @@
 ---
 title: Intl.Locale.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/toString
-tags:
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Locale
-  - Method
-  - Prototype
-  - Reference
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.Locale.toString
 ---
+
 {{JSRef}}
 
-The
-**`Intl.Locale.prototype.toString()`** returns the
-Locale's full [locale identifier string](https://www.unicode.org/reports/tr35/#Unicode_locale_identifier).
+The **`toString()`** method of {{jsxref("Intl.Locale")}} instances returns this Locale's full [locale identifier string](https://www.unicode.org/reports/tr35/#Unicode_locale_identifier).
 
-{{EmbedInteractiveExample("pages/js/intl-locale-prototype-tostring.html")}}
+{{InteractiveExample("JavaScript Demo: Intl.Locale.prototype.toString()", "taller")}}
 
-<!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
+```js interactive-example
+const french = new Intl.Locale("fr-Latn-FR", {
+  calendar: "gregory",
+  hourCycle: "h12",
+});
+const korean = new Intl.Locale("ko-Kore-KR", {
+  numeric: true,
+  caseFirst: "upper",
+});
+
+console.log(french.toString());
+// Expected output: "fr-Latn-FR-u-ca-gregory-hc-h12"
+
+console.log(korean.toString());
+// Expected output: "ko-Kore-KR-u-kf-upper-kn"
+```
 
 ## Syntax
 
-```js
+```js-nolint
 toString()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 
@@ -48,9 +59,12 @@ JSON, or any other context where an exact string representation is useful.
 ### Using toString
 
 ```js
-let myLocale = new Intl.Locale("fr-Latn-FR", {hourCycle: "h24", calendar: "gregory"});
+const myLocale = new Intl.Locale("fr-Latn-FR", {
+  hourCycle: "h12",
+  calendar: "gregory",
+});
 console.log(myLocale.baseName); // Prints "fr-Latn-FR"
-console.log(myLocale.toString()); // Prints "fr-Latn-FR-u-ca-gregory-hc-h24"
+console.log(myLocale.toString()); // Prints "fr-Latn-FR-u-ca-gregory-hc-h12"
 ```
 
 ## Specifications
@@ -64,4 +78,4 @@ console.log(myLocale.toString()); // Prints "fr-Latn-FR-u-ca-gregory-hc-h24"
 ## See also
 
 - {{jsxref("Intl.Locale")}}
-- {{jsxref("Intl/Locale/baseName", "Intl.Locale.baseName")}}
+- {{jsxref("Intl/Locale/baseName", "baseName")}}

@@ -1,19 +1,15 @@
 ---
-title: Document.enableStyleSheetsForSet()
+title: "Document: enableStyleSheetsForSet() method"
+short-title: enableStyleSheetsForSet()
 slug: Web/API/Document/enableStyleSheetsForSet
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSSOM
-  - DOM
-  - Method
-  - NeedsMarkupWork
-  - NeedsSpecTable
-  - Reference
-  - Deprecated
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.Document.enableStyleSheetsForSet
 ---
-{{APIRef("DOM")}}{{deprecated_header}}
+
+{{APIRef("DOM")}}{{deprecated_header}}{{Non-standard_header}}
 
 Enables the style sheets matching the specified name in the current style sheet set,
 and disables all other style sheets (except those without a title, which are always
@@ -21,7 +17,7 @@ enabled).
 
 ## Syntax
 
-```js
+```js-nolint
 enableStyleSheetsForSet(name)
 ```
 
@@ -54,6 +50,10 @@ None ({{jsxref("undefined")}}).
 document.enableStyleSheetsForSet("Some style sheet set name");
 ```
 
+## Specifications
+
+Not part of any specification.
+
 ## Browser compatibility
 
 {{Compat}}
@@ -65,5 +65,3 @@ document.enableStyleSheetsForSet("Some style sheet set name");
 - {{domxref("document.lastStyleSheetSet")}}
 - {{domxref("document.preferredStyleSheetSet")}}
 - {{domxref("document.selectedStyleSheetSet")}}
-- {{domxref("document.enableStyleSheetsForSet()")}}
-- [Correctly Using Titles With External Stylesheets](/en-US/docs/Archive/Web_Standards/Correctly_Using_Titles_With_External_Stylesheets)

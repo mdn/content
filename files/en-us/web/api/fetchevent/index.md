@@ -2,17 +2,10 @@
 title: FetchEvent
 slug: Web/API/FetchEvent
 page-type: web-api-interface
-tags:
-  - API
-  - FetchEvent
-  - Interface
-  - Offline
-  - Reference
-  - Service Workers
-  - Workers
 browser-compat: api.FetchEvent
 ---
-{{APIRef("Service Workers API")}}
+
+{{APIRef("Service Workers API")}}{{AvailableInWorkers("service")}}
 
 This is the event type for `fetch` events dispatched on the {{domxref("ServiceWorkerGlobalScope", "service worker global scope", "", 1)}}. It contains information about the fetch, including the request and how the receiver will treat the response. It provides the {{domxref("FetchEvent.respondWith", "event.respondWith()")}} method, which allows us to provide a response to this fetch.
 
@@ -21,24 +14,28 @@ This is the event type for `fetch` events dispatched on the {{domxref("ServiceWo
 ## Constructor
 
 - {{domxref("FetchEvent.FetchEvent()", "FetchEvent()")}}
-  - : Creates a new `FetchEvent` object. This constructor is not typically used. The browser creates these objects itself and provides them to `fetch` event callbacks.
+  - : Creates a new `FetchEvent` object. This constructor is not typically used. The browser creates these objects and provides them to `fetch` event callbacks.
 
-## Properties
+## Instance properties
 
 _Inherits properties from its ancestor, {{domxref("Event")}}_.
 
-- {{domxref("FetchEvent.clientId")}} {{readonlyInline}}
+- {{domxref("FetchEvent.clientId")}} {{ReadOnlyInline}}
   - : The {{domxref("Client.id", "id")}} of the same-origin {{domxref("Client", "client")}} that initiated the fetch.
-- {{domxref("FetchEvent.preloadResponse")}} {{readonlyinline}}
+- {{domxref("FetchEvent.handled")}} {{ReadOnlyInline}}
+  - : A promise that is pending while the event has not been handled, and fulfilled once it has.
+- {{domxref("FetchEvent.isReload")}} {{ReadOnlyInline}} {{Deprecated_inline}} {{Non-standard_inline}}
+  - : Returns `true` if the event was dispatched by the user attempting to reload the page, and `false` otherwise.
+- {{domxref("FetchEvent.preloadResponse")}} {{ReadOnlyInline}}
   - : A {{jsxref("Promise")}} for a {{domxref("Response")}}, or `undefined` if this fetch is not a navigation, or [navigation preload](/en-US/docs/Web/API/NavigationPreloadManager) is not enabled.
-- {{domxref("FetchEvent.replacesClientId")}} {{readonlyInline}}
+- {{domxref("FetchEvent.replacesClientId")}} {{ReadOnlyInline}}
   - : The {{domxref("Client.id", "id")}} of the {{domxref("Client", "client")}} that is being replaced during a page navigation.
-- {{domxref("FetchEvent.resultingClientId")}} {{readonlyInline}}
+- {{domxref("FetchEvent.resultingClientId")}} {{ReadOnlyInline}}
   - : The {{domxref("Client.id", "id")}} of the {{domxref("Client", "client")}} that replaces the previous client during a page navigation.
-- {{domxref("FetchEvent.request")}} {{readonlyInline}}
+- {{domxref("FetchEvent.request")}} {{ReadOnlyInline}}
   - : The {{domxref("Request")}} the browser intends to make.
 
-## Methods
+## Instance methods
 
 _Inherits methods from its parent, {{domxref("ExtendableEvent")}}_.
 
@@ -60,7 +57,7 @@ self.addEventListener("fetch", (event) => {
 
   // Prevent the default, and handle the request ourselves.
   event.respondWith(
-    (async function () {
+    (async () => {
       // Try to get the response from a cache.
       const cache = await caches.open("dynamic-v1");
       const cachedResponse = await cache.match(event.request);
@@ -74,7 +71,7 @@ self.addEventListener("fetch", (event) => {
 
       // If we didn't find a match in the cache, use the network.
       return fetch(event.request);
-    })()
+    })(),
   );
 });
 ```
@@ -89,5 +86,6 @@ self.addEventListener("fetch", (event) => {
 
 ## See also
 
+- [`fetch` event](/en-US/docs/Web/API/ServiceWorkerGlobalScope/fetch_event)
 - {{jsxref("Promise")}}
 - [Fetch API](/en-US/docs/Web/API/Fetch_API)

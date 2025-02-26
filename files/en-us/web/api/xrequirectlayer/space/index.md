@@ -1,19 +1,14 @@
 ---
-title: XREquirectLayer.space
+title: "XREquirectLayer: space property"
+short-title: space
 slug: Web/API/XREquirectLayer/space
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - VR
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
+status:
+  - experimental
 browser-compat: api.XREquirectLayer.space
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`space`** property of the {{domxref("XREquirectLayer")}} interface represents the layer's spatial relationship with the user's physical environment.
 
@@ -31,7 +26,7 @@ The {{domxref("XRWebGLBinding.createEquirectLayer()")}} method creates an equire
 const equirectLayer = xrGlBinding.createEquirectLayer({
   space: xrReferenceSpace,
   viewPixelWidth: 512,
-  viewPixelHeight: 512
+  viewPixelHeight: 512,
 });
 
 equirectLayer.space = someOtherSpace;

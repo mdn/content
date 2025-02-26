@@ -1,30 +1,26 @@
 ---
-title: VRDisplay.submitFrame()
+title: "VRDisplay: submitFrame() method"
+short-title: submitFrame()
 slug: Web/API/VRDisplay/submitFrame
 page-type: web-api-instance-method
-tags:
-  - API
-  - Deprecated
-  - Method
-  - Reference
-  - VR
-  - VRDisplay
-  - Virtual Reality
-  - WebVR
-  - submitFrame()
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.VRDisplay.submitFrame
 ---
-{{APIRef("WebVR API")}}{{Deprecated_Header}}
+
+{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`submitFrame()`** method of the {{domxref("VRDisplay")}} interface captures the current state of the {{domxref("VRLayerInit")}} currently being presented and displays it on the `VRDisplay`.
 
-> **Note:** This method was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
+> [!NOTE]
+> This method was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
 
-The frame should subsequently be rendered using the {{domxref("VRPose")}} and matrices provided by the last call to {{domxref("getFrameData()")}}.
+The frame should subsequently be rendered using the {{domxref("VRPose")}} and matrices provided by the last call to {{domxref("VRDisplay.getFrameData()", "getFrameData()")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 submitFrame()
 ```
 
@@ -42,12 +38,12 @@ None ({{jsxref("undefined")}}).
 const frameData = new VRFrameData();
 let vrDisplay;
 
-navigator.getVRDisplays().then(function(displays) {
+navigator.getVRDisplays().then((displays) => {
   vrDisplay = displays[0];
-  console.log('Display found');
+  console.log("Display found");
   // Starting the presentation when the button is clicked: It can only be called in response to a user gesture
-  btn.addEventListener('click', function() {
-    vrDisplay.requestPresent([{ source: canvas }]).then(function() {
+  btn.addEventListener("click", () => {
+    vrDisplay.requestPresent([{ source: canvas }]).then(() => {
       drawVRScene();
     });
   });
@@ -73,18 +69,29 @@ function drawVRScene() {
   // WebVR: Create the required projection and view matrix locations needed
   // for passing into the uniformMatrix4fv methods below
 
-  const projectionMatrixLocation = gl.getUniformLocation(shaderProgram, "projMatrix");
+  const projectionMatrixLocation = gl.getUniformLocation(
+    shaderProgram,
+    "projMatrix",
+  );
   const viewMatrixLocation = gl.getUniformLocation(shaderProgram, "viewMatrix");
 
   // WebVR: Render the left eye's view to the left half of the canvas
   gl.viewport(0, 0, canvas.width * 0.5, canvas.height);
-  gl.uniformMatrix4fv(projectionMatrixLocation, false, frameData.leftProjectionMatrix);
+  gl.uniformMatrix4fv(
+    projectionMatrixLocation,
+    false,
+    frameData.leftProjectionMatrix,
+  );
   gl.uniformMatrix4fv(viewMatrixLocation, false, frameData.leftViewMatrix);
   drawGeometry();
 
   // WebVR: Render the right eye's view to the right half of the canvas
   gl.viewport(canvas.width * 0.5, 0, canvas.width * 0.5, canvas.height);
-  gl.uniformMatrix4fv(projectionMatrixLocation, false, frameData.rightProjectionMatrix);
+  gl.uniformMatrix4fv(
+    projectionMatrixLocation,
+    false,
+    frameData.rightProjectionMatrix,
+  );
   gl.uniformMatrix4fv(viewMatrixLocation, false, frameData.rightViewMatrix);
   drawGeometry();
 
@@ -99,13 +106,14 @@ function drawVRScene() {
 }
 ```
 
-> **Note:** You can see this complete code at [raw-webgl-example](https://github.com/mdn/webvr-tests/blob/master/raw-webgl-example/webgl-demo.js).
+> [!NOTE]
+> You can see this complete code at [raw-webgl-example](https://github.com/mdn/webvr-tests/blob/main/webvr/raw-webgl-example/webgl-demo.js).
 
 ## Specifications
 
 This method was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) that has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/). It is no longer on track to becoming a standard.
 
-Until all browsers have implemented the new [WebXR APIs](/en-US/docs/Web/API/WebXR_Device_API/Fundamentals), it is recommended to rely on frameworks, like [A-Frame](https://aframe.io/), [Babylon.js](https://www.babylonjs.com/), or [Three.js](https://threejs.org/), or a [polyfill](https://github.com/immersive-web/webxr-polyfill), to develop WebXR applications that will work across all browsers [\[1\]](https://developer.oculus.com/documentation/web/port-vr-xr/).
+Until all browsers have implemented the new [WebXR APIs](/en-US/docs/Web/API/WebXR_Device_API/Fundamentals), it is recommended to rely on frameworks, like [A-Frame](https://aframe.io/), [Babylon.js](https://www.babylonjs.com/), or [Three.js](https://threejs.org/), or a [polyfill](https://github.com/immersive-web/webxr-polyfill), to develop WebXR applications that will work across all browsers. Read [Meta's Porting from WebVR to WebXR](https://developers.meta.com/horizon/documentation/web/port-vr-xr/) guide for more information.
 
 ## Browser compatibility
 
@@ -113,5 +121,4 @@ Until all browsers have implemented the new [WebXR APIs](/en-US/docs/Web/API/Web
 
 ## See also
 
-- [WebVR API homepage](/en-US/docs/Web/API/WebVR_API)
-- <https://mixedreality.mozilla.org/> — demos, downloads, and other resources from the Mozilla VR team.
+- [WebVR API](/en-US/docs/Web/API/WebVR_API)

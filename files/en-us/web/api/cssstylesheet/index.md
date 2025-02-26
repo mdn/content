@@ -2,19 +2,9 @@
 title: CSSStyleSheet
 slug: Web/API/CSSStyleSheet
 page-type: web-api-interface
-tags:
-  - API
-  - CSS
-  - CSSOM
-  - CSSOM API
-  - CSSStyleSheet
-  - Interface
-  - Layout
-  - Object Model
-  - Reference
-  - StyleSheet
 browser-compat: api.CSSStyleSheet
 ---
+
 {{APIRef("CSSOM")}}
 
 The **`CSSStyleSheet`** interface represents a single [CSS](/en-US/docs/Web/CSS) stylesheet, and lets you inspect and modify the list of rules contained in the stylesheet. It inherits properties and methods from its parent, {{domxref("StyleSheet")}}.
@@ -26,7 +16,8 @@ A stylesheet consists of a collection of {{domxref("CSSRule")}} objects represen
 For example, one rule might be a {{domxref("CSSStyleRule")}} object containing a style such as:
 
 ```css
-h1, h2 {
+h1,
+h2 {
   font-size: 16pt;
 }
 ```
@@ -40,7 +31,7 @@ See the [Obtaining a StyleSheet](#obtaining_a_stylesheet) section for the variou
 - {{domxref("CSSStyleSheet.CSSStyleSheet()", "CSSStyleSheet()")}}
   - : Creates a new `CSSStyleSheet` object.
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("StyleSheet")}}._
 
@@ -48,12 +39,13 @@ _Inherits properties from its parent, {{domxref("StyleSheet")}}._
 
   - : Returns a live {{domxref("CSSRuleList")}} which maintains an up-to-date list of the {{domxref("CSSRule")}} objects that comprise the stylesheet.
 
-    > **Note:** In some browsers, if a stylesheet is loaded from a different domain, accessing `cssRules` results in a `SecurityError`.
+    > [!NOTE]
+    > In some browsers, if a stylesheet is loaded from a different domain, accessing `cssRules` results in a `SecurityError`.
 
 - {{domxref("CSSStyleSheet.ownerRule")}} {{ReadOnlyInline}}
   - : If this stylesheet is imported into the document using an {{cssxref("@import")}} rule, the `ownerRule` property returns the corresponding {{domxref("CSSImportRule")}}; otherwise, this property's value is `null`.
 
-## Methods
+## Instance methods
 
 _Inherits methods from its parent, {{domxref("StyleSheet")}}._
 
@@ -70,20 +62,20 @@ _Inherits methods from its parent, {{domxref("StyleSheet")}}._
 
 _These properties are legacy properties as introduced by Microsoft; these are maintained for compatibility with existing sites._
 
-- {{domxref("CSSStyleSheet.rules", "rules")}} {{ReadOnlyInline}}
+- {{domxref("CSSStyleSheet.rules", "rules")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
   - : The `rules` property is functionally identical to the standard {{domxref("CSSStyleSheet.cssRules", "cssRules")}} property; it returns a live {{domxref("CSSRuleList")}} which maintains an up-to-date list of all of the rules in the style sheet.
 
 ## Legacy methods
 
 _These methods are legacy methods as introduced by Microsoft; these are maintained for compatibility with existing sites._
 
-- {{domxref("CSSStyleSheet.addRule", "addRule()")}}
+- {{domxref("CSSStyleSheet.addRule", "addRule()")}} {{Deprecated_Inline}}
 
   - : Adds a new rule to the stylesheet given the selector to which the style applies and the style block to apply to the matching elements.
 
     This differs from {{domxref("CSSStyleSheet.insertRule", "insertRule()")}}, which takes the textual representation of the entire rule as a single string.
 
-- {{domxref("CSSStyleSheet.removeRule", "removeRule()")}}
+- {{domxref("CSSStyleSheet.removeRule", "removeRule()")}} {{Deprecated_Inline}}
   - : Functionally identical to {{domxref("CSSStyleSheet.deleteRule", "deleteRule()")}}; removes the rule at the specified index from the stylesheet's rule list.
 
 ## Obtaining a StyleSheet
@@ -152,6 +144,15 @@ A (possibly incomplete) list of ways a stylesheet can be associated with a docum
       <td>
         {{domxref("ProcessingInstruction.sheet", ".sheet")}}
       </td>
+    </tr>
+    <tr>
+      <td>
+        JavaScript <a href="/en-US/docs/Web/JavaScript/Reference/Statements/import/with"><code>import ... with { type: "css" }</code></a>
+      </td>
+      <td>No</td>
+      <td>N/A</td>
+      <td>N/A</td>
+      <td>N/A</td>
     </tr>
     <tr>
       <td>HTTP Link Header</td>

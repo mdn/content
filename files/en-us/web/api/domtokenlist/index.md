@@ -2,25 +2,23 @@
 title: DOMTokenList
 slug: Web/API/DOMTokenList
 page-type: web-api-interface
-tags:
-  - Interface
-  - Reference
 browser-compat: api.DOMTokenList
 ---
+
 {{APIRef("DOM")}}
 
 The **`DOMTokenList`** interface represents a set of space-separated tokens. Such a set is returned by {{domxref("Element.classList")}} or {{domxref("HTMLLinkElement.relList")}}, and many others.
 
 A `DOMTokenList` is indexed beginning with `0` as with JavaScript {{jsxref("Array")}} objects. `DOMTokenList` is always case-sensitive.
 
-## Properties
+## Instance properties
 
 - {{domxref("DOMTokenList.length")}} {{ReadOnlyInline}}
   - : An `integer` representing the number of objects stored in the object.
 - {{domxref("DOMTokenList.value")}}
   - : A {{Glossary("stringifier")}} property that returns the value of the list as a string.
 
-## Methods
+## Instance methods
 
 - {{domxref("DOMTokenList.item()")}}
   - : Returns the item in the list by its index, or `null` if the index is greater than or equal to the list's `length`.
@@ -42,6 +40,8 @@ A `DOMTokenList` is indexed beginning with `0` as with JavaScript {{jsxref("Arra
   - : Executes a provided callback function once for each `DOMTokenList` element.
 - {{domxref("DOMTokenList.keys()")}}
   - : Returns an {{jsxref("Iteration_protocols", "iterator", "", 1)}}, allowing you to go through all keys of the key/value pairs contained in this object.
+- {{domxref("DOMTokenList.toString()")}}
+  - : Returns the {{domxref("DOMTokenList.value")}}, the space-separated values of the list as a string.
 - {{domxref("DOMTokenList.values()")}}
   - : Returns an {{jsxref("Iteration_protocols", "iterator", "", 1)}}, allowing you to go through all values of the key/value pairs contained in this object.
 

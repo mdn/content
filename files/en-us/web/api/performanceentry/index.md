@@ -2,87 +2,80 @@
 title: PerformanceEntry
 slug: Web/API/PerformanceEntry
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Performance Timeline API
-  - PerformanceEntry
-  - Reference
-  - Web Performance
 browser-compat: api.PerformanceEntry
 ---
-{{APIRef("Performance Timeline API")}}
 
-The **`PerformanceEntry`** object encapsulates a single performance metric that is part of the _performance timeline_. A _performance entry_ can be directly created by making a performance _{{domxref("PerformanceMark","mark")}}_ or _{{domxref("PerformanceMeasure","measure")}}_ (for example by calling the {{domxref("Performance.mark","mark()")}} method) at an explicit point in an application. Performance entries are also created in indirect ways such as loading a resource (such as an image).
+{{APIRef("Performance API")}}{{AvailableInWorkers}}
 
-`PerformanceEntry` instances will always be one of the following subtypes:
+The **`PerformanceEntry`** object encapsulates a single performance metric that is part of the browser's performance timeline.
 
+The Performance API offers built-in metrics which are specialized subclasses of `PerformanceEntry`. This includes entries for resource loading, event timing, and more.
+
+A performance entry can also be created by calling the {{domxref("Performance.mark()")}} or {{domxref("Performance.measure()")}} methods at an explicit point in an application. This allows you to add your own metrics to the performance timeline.
+
+The `PerformanceEntry` instances will always be one of the following subclasses:
+
+- {{domxref("LargestContentfulPaint")}}
+- {{domxref("LayoutShift")}}
+- {{domxref("PerformanceEventTiming")}}
+- {{domxref("PerformanceLongAnimationFrameTiming")}}
+- {{domxref("PerformanceLongTaskTiming")}}
 - {{domxref("PerformanceMark")}}
 - {{domxref("PerformanceMeasure")}}
 - {{domxref("PerformanceNavigationTiming")}}
-- {{domxref("PerformanceResourceTiming")}}
 - {{domxref("PerformancePaintTiming")}}
-- {{domxref("PerformanceLongTaskTiming")}}
+- {{domxref("PerformanceResourceTiming")}}
+- {{domxref("PerformanceScriptTiming")}}
+- {{domxref("PerformanceServerTiming")}}
+- {{domxref("TaskAttributionTiming")}}
+- {{domxref("VisibilityStateEntry")}}
 
-{{AvailableInWorkers}}
+## Instance properties
 
-## Properties
-
-- {{domxref("PerformanceEntry.name")}} {{readonlyInline}}
-  - : A value that further specifies the value returned by the {{domxref("PerformanceEntry.entryType")}} property. The value of both depends on the subtype. See property page for valid values.
-- {{domxref("PerformanceEntry.entryType")}} {{readonlyInline}}
-  - : A string representing the type of performance metric such as, for example, "`mark`". See property page for valid values.
-- {{domxref("PerformanceEntry.startTime")}} {{readonlyInline}}
+- {{domxref("PerformanceEntry.name")}} {{ReadOnlyInline}}
+  - : A string representing the name for a performance entry. The value depends on the subtype.
+- {{domxref("PerformanceEntry.entryType")}} {{ReadOnlyInline}}
+  - : A string representing the type of performance metric. For example, `"mark"` when {{domxref("PerformanceMark")}} is used.
+- {{domxref("PerformanceEntry.startTime")}} {{ReadOnlyInline}}
   - : A {{domxref("DOMHighResTimeStamp")}} representing the starting time for the performance metric.
-- {{domxref("PerformanceEntry.duration")}} {{readonlyInline}}
-  - : A {{domxref("DOMHighResTimeStamp")}} representing the time value of the duration of the performance event.
+- {{domxref("PerformanceEntry.duration")}} {{ReadOnlyInline}}
+  - : A {{domxref("DOMHighResTimeStamp")}} representing the duration of the performance entry.
 
-## Methods
+## Instance methods
 
 - {{domxref("PerformanceEntry.toJSON","PerformanceEntry.toJSON()")}}
   - : Returns a JSON representation of the `PerformanceEntry` object.
 
 ## Example
 
-The following example checks all `PerformanceEntry` properties to see if the browser supports them and if so, shows their values.
+### Working with performance entries
 
-```html hidden
-<pre id='output'></pre>
-```
+The following example creates `PerformanceEntry` objects that are of the types {{domxref("PerformanceMark")}} and {{domxref("PerformanceMeasure")}}.
+The `PerformanceMark` and `PerformanceMeasure` subclasses inherit the `duration`, `entryType`, `name`, and `startTime` properties from `PerformanceEntry` and set them to their appropriate values.
 
 ```js
-const output = document.getElementById('output');
+// Place at a location in the code that starts login
+performance.mark("login-started");
 
-function printPerformanceEntries() {
-  // Use getEntries() to get a list of all performance entries
-  const entries = performance.getEntries();
+// Place at a location in the code that finishes login
+performance.mark("login-finished");
 
-  entries.forEach((entry, i) => {
-    output.textContent += `\n PerformanceEntry[${i}] \n`;
-    printPerformanceEntry(entry);
+// Measure login duration
+performance.measure("login-duration", "login-started", "login-finished");
+
+function perfObserver(list, observer) {
+  list.getEntries().forEach((entry) => {
+    if (entry.entryType === "mark") {
+      console.log(`${entry.name}'s startTime: ${entry.startTime}`);
+    }
+    if (entry.entryType === "measure") {
+      console.log(`${entry.name}'s duration: ${entry.duration}`);
+    }
   });
 }
-
-function printPerformanceEntry(entry) {
-  const properties = ["name",
-                    "entryType",
-                    "startTime",
-                    "duration"];
-
-  for (const prop of properties) {
-    // Check each property
-    if (prop in entry) {
-      output.textContent += `… ${prop} = ${entry[prop]} \n`;
-    } else {
-      output.textContent += `… ${prop} is NOT supported \n`;
-    }
-  }
-}
-
-printPerformanceEntries();
+const observer = new PerformanceObserver(perfObserver);
+observer.observe({ entryTypes: ["measure", "mark"] });
 ```
-
-{{ EmbedLiveSample("Example", "100%", "400px") }}
 
 ## Specifications
 

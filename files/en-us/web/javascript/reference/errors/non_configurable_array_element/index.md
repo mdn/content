@@ -1,12 +1,9 @@
 ---
-title: 'TypeError: can''t delete non-configurable array element'
+title: "TypeError: can't delete non-configurable array element"
 slug: Web/JavaScript/Reference/Errors/Non_configurable_array_element
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - TypeError
+page-type: javascript-error
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "can't delete non-configurable array element" occurs when it
@@ -15,7 +12,7 @@ of an array, but one of the array's elements is [non-configurable](/en-US/docs/W
 
 ## Message
 
-```
+```plain
 TypeError: Cannot delete property '1' of [object Array] (V8-based)
 TypeError: can't delete non-configurable array element (Firefox)
 TypeError: Unable to delete property. (Safari)
@@ -36,9 +33,7 @@ The `configurable` attribute controls whether the property can be deleted
 from the object and whether its attributes (other than `writable`) can be
 changed.
 
-Usually, properties in an object created by an [array initializer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#syntax)
-are configurable. However, for example, when using
-{{jsxref("Object.defineProperty()")}}, the property isn't configurable by default.
+Usually, properties in an object created by an [array initializer](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#array_literals) are configurable. However, for example, when using {{jsxref("Object.defineProperty()")}}, the property isn't configurable by default.
 
 ## Examples
 
@@ -100,6 +95,6 @@ copy.length = 1;
 ## See also
 
 - [\[\[Configurable\]\]](/en-US/docs/Web/JavaScript/Data_structures#properties)
-- {{jsxref("Array.length")}}
+- {{jsxref("Array/length", "length")}}
 - {{jsxref("Object.defineProperty()")}}
 - {{jsxref("Object.seal()")}}

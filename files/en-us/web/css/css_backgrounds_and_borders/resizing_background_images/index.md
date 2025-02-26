@@ -1,24 +1,12 @@
 ---
 title: Resizing background images with background-size
-slug: Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images
-tags:
-  - CSS
-  - CSS Background
-  - Example
-  - Guide
-  - Intermediate
-  - Reference
-  - Scale
-  - Scaling
-  - Web
-  - dimensions
-  - height
-  - resize
-  - width
+slug: Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images
+page-type: guide
 ---
+
 {{CSSRef}}
 
-The **{{cssxref("background-size")}}** CSS property lets you resize the background image of an element, overriding the default behavior of tiling the image at its full size by specifying the width and/or height of the image. By doing so, you can scale the image upward or downward as desired.
+The **{{cssxref("background-size")}}** [CSS](/en-US/docs/Web/CSS) property lets you resize the background image of an element, overriding the default behavior of tiling the image at its full size by specifying the width and/or height of the image. By doing so, you can scale the image upward or downward as desired.
 
 ## Tiling a large image
 
@@ -27,8 +15,7 @@ Let's consider a large image, a 2982x2808 Firefox logo image. We want (for some 
 ### HTML
 
 ```html
-<div class="tiledBackground">
-</div>
+<div class="tiledBackground"></div>
 ```
 
 ### CSS
@@ -58,13 +45,13 @@ background-size: 300px 150px;
 
 The result looks like this:
 
-![New Firefox logo stretched](s.codepen.io_richienb_debug_lonxgp_pnkvygvggyxa.png)
+![Firefox logo stretched](stretched_firefox_logo.png)
 
 ## Scaling an image up
 
 On the other end of the spectrum, you can scale an image up in the background. Here we scale a 32x32 pixel favicon to 300x300 pixels:
 
-![MDN Logo scaled](favicon57.de33179910ae.1.1.png)
+![MDN Logo scaled](scaled_mdn_logo.png)
 
 ```css
 .square2 {
@@ -80,11 +67,11 @@ On the other end of the spectrum, you can scale an image up in the background. H
 
 As you can see, the CSS is actually essentially identical, save the name of the image file.
 
-## Special values: "contain" and "cover"
+## Special values: `contain` and `cover`
 
-Besides {{cssxref("&lt;length&gt;")}} values, the {{ cssxref("background-size") }} CSS property offers two special size values, `contain` and `cover`. Let's take a look at these.
+In addition to {{cssxref("&lt;length&gt;")}} values, the {{cssxref("background-size")}} CSS property offers two special size values, `contain` and `cover`. Let's take a look at these.
 
-### contain
+### `contain`
 
 The `contain` value specifies that, regardless of the size of the containing box, the background image should be scaled so that each side is as large as possible while not exceeding the length of the corresponding side of the container. Try resizing the example below to see this in action.
 
@@ -105,7 +92,6 @@ The `contain` value specifies that, regardless of the size of the containing box
   width: 160px;
   height: 160px;
   border: 2px solid;
-  color: pink;
   resize: both;
   overflow: scroll;
 }
@@ -113,9 +99,9 @@ The `contain` value specifies that, regardless of the size of the containing box
 
 #### Result
 
-{{ EmbedLiveSample('contain', 250, 250) }}
+{{EmbedLiveSample('contain', 250, 250)}}
 
-### cover
+### `cover`
 
 The `cover` value specifies that the background image should be sized so that it is as small as possible while ensuring that both dimensions are greater than or equal to the corresponding size of the container. Try resizing the example below to see this in action.
 
@@ -136,7 +122,6 @@ The `cover` value specifies that the background image should be sized so that it
   width: 160px;
   height: 160px;
   border: 2px solid;
-  color: pink;
   resize: both;
   overflow: scroll;
 }
@@ -144,10 +129,10 @@ The `cover` value specifies that the background image should be sized so that it
 
 #### Result
 
-{{ EmbedLiveSample('cover', 250, 250) }}
+{{EmbedLiveSample('cover', 250, 250)}}
 
 ## See also
 
-- {{ cssxref("background-size") }}
-- {{ cssxref("background") }}
+- {{cssxref("background-size")}}
+- {{cssxref("background")}}
 - [Scaling of SVG backgrounds](/en-US/docs/Web/CSS/Scaling_of_SVG_backgrounds)

@@ -1,12 +1,14 @@
 ---
-title: Window.orientation
+title: "Window: orientation property"
+short-title: orientation
 slug: Web/API/Window/orientation
 page-type: web-api-instance-property
-tags:
-  - NeedsContent
+status:
+  - deprecated
 browser-compat: api.Window.orientation
 ---
-{{APIRef}}{{deprecated_header}}
+
+{{APIRef}}{{Deprecated_Header}}
 
 Returns the orientation in degrees (in 90-degree increments) of the viewport relative to the device's natural orientation.
 

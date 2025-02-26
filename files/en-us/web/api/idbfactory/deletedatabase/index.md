@@ -1,19 +1,12 @@
 ---
-title: IDBFactory.deleteDatabase()
+title: "IDBFactory: deleteDatabase() method"
+short-title: deleteDatabase()
 slug: Web/API/IDBFactory/deleteDatabase
 page-type: web-api-instance-method
-tags:
-  - API
-  - Database
-  - IDBFactory
-  - IndexedDB
-  - Method
-  - Reference
-  - Storage
-  - deleteDatabase
 browser-compat: api.IDBFactory.deleteDatabase
 ---
-{{APIRef("IndexedDB")}}
+
+{{APIRef("IndexedDB")}} {{AvailableInWorkers}}
 
 The **`deleteDatabase()`** method of the
 {{DOMxRef("IDBFactory")}} interface requests the deletion of a database. The method
@@ -29,11 +22,9 @@ method.
 When `deleteDatabase()` is called, any other open connections to this
 particular database will get a [versionchange](/en-US/docs/Web/API/IDBDatabase/versionchange_event) event.
 
-{{AvailableInWorkers}}
-
 ## Syntax
 
-```js
+```js-nolint
 // For the current standard:
 deleteDatabase(name)
 
@@ -49,7 +40,7 @@ deleteDatabase(name, options)
     database that doesn't exist does not throw an exception, in contrast to
     {{DOMxRef("IDBDatabase.deleteObjectStore()")}}, which does throw an exception if the
     named object store does not exist.
-- `options` {{optional_inline}} {{NonStandardBadge}}
+- `options` {{optional_inline}} {{Non-standard_Inline}}
   - : In Gecko, since [version 26](/en-US/docs/Mozilla/Firefox/Releases/26), you can include
     a non-standard optional storage parameter that specifies whether you want to delete a
     `permanent` (the default value) IndexedDB, or an indexedDB in
@@ -57,19 +48,20 @@ deleteDatabase(name, options)
 
 ### Return value
 
-A {{DOMxRef("IDBOpenDBRequest")}} on which subsequent events related to this request
-are fired.
+A {{DOMxRef("IDBOpenDBRequest")}} on which subsequent events related to this request are fired.
+
+If the operation is successful, the value of the request's {{domxref("IDBRequest.result", "result")}} property is `null`.
 
 ## Examples
 
 ```js
 const DBDeleteRequest = window.indexedDB.deleteDatabase("toDoList");
 
-DBDeleteRequest.onerror = function(event) {
-  console.log("Error deleting database.");
+DBDeleteRequest.onerror = (event) => {
+  console.error("Error deleting database.");
 };
 
-DBDeleteRequest.onsuccess = function(event) {
+DBDeleteRequest.onsuccess = (event) => {
   console.log("Database deleted successfully");
 
   console.log(event.result); // should be undefined
@@ -92,4 +84,4 @@ DBDeleteRequest.onsuccess = function(event) {
 - Setting a range of keys: {{DOMxRef("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{DOMxRef("IDBObjectStore")}}
 - Using cursors: {{DOMxRef("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([View the example live](https://mdn.github.io/to-do-notifications/)).
+- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([View the example live](https://mdn.github.io/dom-examples/to-do-notifications/)).

@@ -1,25 +1,13 @@
 ---
 title: caret-color
 slug: Web/CSS/caret-color
-tags:
-  - CSS
-  - CSS Property
-  - CSS User Interface
-  - Editing
-  - HTML Colors
-  - Input
-  - Reference
-  - Styling HTML
-  - Text Editing
-  - caret
-  - caret-color
-  - contenteditable
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.caret-color
 ---
+
 {{CSSRef}}
 
-The **`caret-color`** CSS property sets the color of the **insertion caret**, the visible marker where the next character typed will be inserted. This is sometimes referred to as the **text input cursor**. The caret appears in elements such as {{HTMLElement("input")}} or those with the {{htmlattrxref("contenteditable")}} attribute. The caret is typically a thin vertical line that flashes to help make it more noticeable. By default, it is black, but its color can be altered with this property.
+The **`caret-color`** [CSS](/en-US/docs/Web/CSS) property sets the color of the **insertion caret**, the visible marker where the next character typed will be inserted. This is sometimes referred to as the **text input cursor**. The caret appears in elements such as {{HTMLElement("input")}} or those with the [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) attribute. The caret is typically a thin vertical line that flashes to help make it more noticeable. By default, it is black, but its color can be altered with this property.
 
 {{EmbedInteractiveExample("pages/css/caret-color.html")}}
 
@@ -36,8 +24,8 @@ caret-color: currentcolor;
 /* <color> values */
 caret-color: red;
 caret-color: #5729e9;
-caret-color: rgb(0, 200, 0);
-caret-color: hsla(228, 4%, 24%, 0.8);
+caret-color: rgb(0 200 0);
+caret-color: hsl(228deg 4% 24% / 80%);
 
 /* Global values */
 caret-color: inherit;
@@ -53,7 +41,8 @@ caret-color: unset;
 
   - : The user agent selects an appropriate color for the caret. This is generally {{cssxref("&lt;color&gt;","currentcolor","#currentcolor_keyword")}}, but the user agent may choose a different color to ensure good visibility and contrast with the surrounding content, taking into account the value of `currentcolor`, the background, shadows, and other factors.
 
-    > **Note:** While user agents may use `currentcolor` (which is usually animatable) for the `auto` value, `auto` is not interpolated in transitions and animations.
+    > [!NOTE]
+    > While user agents may use `currentcolor` (which is usually animatable) for the `auto` value, `auto` is not interpolated in transitions and animations.
 
 - {{cssxref("&lt;color&gt;")}}
   - : The color of the caret.
@@ -73,10 +62,11 @@ caret-color: unset;
 #### HTML
 
 ```html
-<input value="This field uses a default caret." size="64"/>
-<input class="custom" value="I have a custom caret color!" size="64"/>
-<p contenteditable class="custom">This paragraph can be
-   edited, and its caret has a custom color as well!</p>
+<input value="This field uses a default caret." size="64" />
+<input class="custom" value="I have a custom caret color!" size="64" />
+<p contenteditable class="custom">
+  This paragraph can be edited, and its caret has a custom color as well!
+</p>
 ```
 
 #### CSS
@@ -85,7 +75,7 @@ caret-color: unset;
 input {
   caret-color: auto;
   display: block;
-  margin-bottom: .5em;
+  margin-bottom: 0.5em;
 }
 
 input.custom {
@@ -112,8 +102,6 @@ p.custom {
 ## See also
 
 - The {{HTMLElement("input")}} element
-- The HTML {{htmlattrxref("contenteditable")}} attribute, which can be used to make any element's text editable
-- [Making content editable](/en-US/docs/Web/Guide/HTML/Editable_content)
-- [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_Colors/Applying_color)
+- The HTML [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) attribute, which can be used to make any element's text editable
 - The {{cssxref("&lt;color&gt;")}} data type
-- Other color-related properties: {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, and {{cssxref("column-rule-color")}}
+- Other color-related properties: {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, and {{cssxref("column-rule-color")}}
