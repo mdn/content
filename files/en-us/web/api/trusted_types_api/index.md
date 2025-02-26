@@ -8,7 +8,7 @@ spec-urls: https://w3c.github.io/trusted-types/dist/spec/
 
 {{DefaultAPISidebar("Trusted Types API")}}{{AvailableInWorkers}}
 
-The **Trusted Types API** gives web developers a way to ensure that input has been passed through a [sanitization](/en-US/docs/Web/Security/Attacks/XSS#sanitization) function before being passed to an API that might execute that input. This can help to protect against client-side [cross-site scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS) attacks.
+The **Trusted Types API** gives web developers a way to ensure that input has been passed through a user-specified transformation function before being passed to an API that might execute that input. This can help to protect against client-side [cross-site scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS) attacks. Most commonly the transformation function [sanitizes](/en-US/docs/Web/Security/Attacks/XSS#sanitization) the input.
 
 ## Concepts and usage
 
@@ -28,6 +28,12 @@ The API has two main parts:
 - A JavaScript API enables a developer to sanitize data before passing it to an injection sink.
 - Two [CSP](/en-US/docs/Web/HTTP/CSP) directives enforce and control the usage of the JavaScript API.
 
+> [!NOTE]
+>
+> The Trusted Types API does _not_ itself include a sanitization function: you supply your own function when you define the `TrustedTypePolicy` that you will use.
+>
+> It also doesn't guarantee that the supplied function performs sanitization or even does anything at all: that is the web developer's responsibility.
+
 ### The Trusted Types JavaScript API
 
 In the Trusted Types API:
@@ -40,8 +46,6 @@ In the Trusted Types API:
   - {{domxref("TrustedScriptURL")}} is for passing to a sink that will parse the data as a URL.
 
 With this API, instead of passing a string to an injection sink like `innerHTML`, you use a `TrustedTypePolicy` to create a `TrustedHTML` object from the string, then pass that into the sink, and can be sure that the string has been passed through a sanitization function.
-
-Note that the Trusted Types API does _not_ itself include a sanitization function: you supply your own function when you define the `TrustedTypePolicy` that you will use.
 
 For example, this code creates a `TrustedTypePolicy` that can create `TrustedHTML` objects by sanitizing the input strings with the [DOMPurify](https://github.com/cure53/DOMPurify) library:
 
