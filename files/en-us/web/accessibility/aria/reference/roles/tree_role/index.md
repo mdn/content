@@ -24,9 +24,9 @@ ARIA tree views are navigated primarily with arrow keys on the keyboard instead 
 
 ### Single and multiple select trees
 
-Trees can be "single-select", allowing users to choose just one item for an action, or "multi-select", where users are able to select more than one item for an action. In multi-select trees, the `tree` has [`aria-multiselectable`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-multiselectable) set to true. Otherwise, `aria-multiselectable` is either set to `false` or the default value of `false` is implied. In both cases, to be keyboard accessible, focus must be managed for all tree descendants.
+Trees can be "single-select", allowing users to choose just one item for an action, or "multi-select", where users are able to select more than one item for an action. In multi-select trees, the `tree` has [`aria-multiselectable`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-multiselectable) set to true. Otherwise, `aria-multiselectable` is either set to `false` or the default value of `false` is implied. In both cases, to be keyboard accessible, focus must be managed for all tree descendants.
 
-In some implementations of single-select tree, the focused item also has a selected state; this is known as "selection follows focus". When a single-select tree receives focus, if none of the tree items are selected before the tree receives focus, focus is set on the first node. If a tree item is selected before the tree receives focus, focus is set on the selected tree item. In single-select trees, [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected) is set to `true` for the selected tree items and it is not present on any other tree item in the tree.
+In some implementations of single-select tree, the focused item also has a selected state; this is known as "selection follows focus". When a single-select tree receives focus, if none of the tree items are selected before the tree receives focus, focus is set on the first node. If a tree item is selected before the tree receives focus, focus is set on the selected tree item. In single-select trees, [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-selected) is set to `true` for the selected tree items and it is not present on any other tree item in the tree.
 
 In multi-select trees, all selected tree items have `aria-selected="true"` set and all tree item nodes that are selectable but not currently selected have `aria-selected="false"` set. Do not includes the `aria-selected` attribute on tree items that are not selectable.
 
@@ -38,7 +38,7 @@ In multi-select trees, the selected state is always independent of the focus. Fo
 
 In a tree view, the `tree` node is the root node; it can have child, grandchild, and further descendant `treeitem` nodes.
 
-Each element serving as a tree node has role `treeitem`, except for the root tree node which has a role of `tree`. A `tree` does not have a parent `tree` node - it is the root node. If a node is both nested in a tree and has descendant tree items, then it has the role `treeitem` and the [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded) attribute; `aria-expanded="false"` is set when the node is in a closed state, `aria-expanded="true"` is set when the node is in an open state.
+Each element serving as a tree node has role `treeitem`, except for the root tree node which has a role of `tree`. A `tree` does not have a parent `tree` node - it is the root node. If a node is both nested in a tree and has descendant tree items, then it has the role `treeitem` and the [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded) attribute; `aria-expanded="false"` is set when the node is in a closed state, `aria-expanded="true"` is set when the node is in an open state.
 
 `treeitem` nodes can be direct children of the `tree` root node, nested within a `treeitem` node, or, optionally nested in a [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role) element, which, when nested in a `tree` is an expandable collection of treeitem elements.
 
@@ -46,17 +46,17 @@ Do not include `aria-expanded` on end nodes — those without tree item children
 
 ### DOM placement and presence
 
-All treeitems are contained in or owned by an element with role `tree`. If there are any tree items that are not direct descendants of the `tree` in the markup, include [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-owns) on the owning tree container to include elements that are not DOM children of the container. These non-child owned elements will appear in the reading order in the sequence they are referenced and after any tree items that are DOM children. Scripts that manage focus need to ensure the visual focus order matches this assistive technology reading order.
+All treeitems are contained in or owned by an element with role `tree`. If there are any tree items that are not direct descendants of the `tree` in the markup, include [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-owns) on the owning tree container to include elements that are not DOM children of the container. These non-child owned elements will appear in the reading order in the sequence they are referenced and after any tree items that are DOM children. Scripts that manage focus need to ensure the visual focus order matches this assistive technology reading order.
 
-If the complete set of available nodes is not present in the DOM due to dynamic loading as the user moves focus in or scrolls the tree, each node has [`aria-level`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-level), [`aria-setsize`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-setsize), and [`aria-posinset`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-posinset) specified.
+If the complete set of available nodes is not present in the DOM due to dynamic loading as the user moves focus in or scrolls the tree, each node has [`aria-level`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-level), [`aria-setsize`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-setsize), and [`aria-posinset`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-posinset) specified.
 
 ### Accessible name
 
-The `tree` must be provided with an accessible name. Either reference a visible label referenced with [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) or specify a label with [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label).
+The `tree` must be provided with an accessible name. Either reference a visible label referenced with [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) or specify a label with [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label).
 
 ### Menu orientation
 
-Elements with the role `tree` have an implicit [`aria-orientation`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-orientation) value of vertical. If the tree element is horizontally oriented, include `aria-orientation="horizontal"`.
+Elements with the role `tree` have an implicit [`aria-orientation`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-orientation) value of vertical. If the tree element is horizontally oriented, include `aria-orientation="horizontal"`.
 
 ### Associated WAI-ARIA roles, states, and properties
 
@@ -64,13 +64,13 @@ Elements with the role `tree` have an implicit [`aria-orientation`](/en-US/docs/
   - : An item in a tree.
 - [`role="group"`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role)
   - : An expandable collection of tree items.
-- [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
+- [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby)
   - : Identifies the element (or elements) that labels the `tree` providing the required accessible name when a visible label is present. Otherwise use `aria-label`.
-- [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label)
+- [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label)
   - : Defines a string value that labels the `tree` when no visible label is present.
-- [`aria-orientation`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-orientation)
+- [`aria-orientation`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-orientation)
   - : indicates whether the tree orientation is horizontal or vertical; defaults to `vertical` if omitted.
-- [`aria-multiselectable`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-multiselectable)
+- [`aria-multiselectable`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-multiselectable)
   - : When set to true, indicates the user may select more than one tree item from the tree's current selectable descendants.
 
 ### Keyboard interactions

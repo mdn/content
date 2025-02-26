@@ -68,7 +68,7 @@ You can see the behavior described above in action in our [Multiple auto popover
 When a relationship is established between a popover and its control (invoker) via the `popovertarget` attribute, the API automatically makes two other changes to the environment to allow keyboard and assistive technology (AT) users to more easily interact with the popover:
 
 - When the popover is shown, the keyboard focus navigation order is updated so that the popover is next in the sequence: for example, when a button is pressed to show a popover, any buttons inside the popover will be next in the tabbing order (will be focused by pressing the <kbd>Tab</kbd> key). Conversely, when closing the popover via the keyboard (usually via via the <kbd>Esc</kbd> key), focus is shifted back to the invoker.
-- To allow AT such as screen readers to make sense of the relationship between the invoker and the popover, an implicit [`aria-details`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-details) and [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded) relationship is set up between them.
+- To allow AT such as screen readers to make sense of the relationship between the invoker and the popover, an implicit [`aria-details`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-details) and [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded) relationship is set up between them.
 
 Setting up a relationship between a popover and its control in this manner also creates an implicit anchor reference between the two — see [Popover anchor positioning](#popover_anchor_positioning) for more details.
 

@@ -8,7 +8,7 @@ browser-compat: api.Element.ariaSelected
 
 {{APIRef("DOM")}}
 
-The **`ariaSelected`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected) attribute, which indicates the current "selected" state of elements that have a selected state.
+The **`ariaSelected`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-selected) attribute, which indicates the current "selected" state of elements that have a selected state.
 
 ## Value
 

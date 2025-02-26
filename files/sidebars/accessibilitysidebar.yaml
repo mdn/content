@@ -46,7 +46,7 @@ sidebar:
       - /Web/Accessibility/ARIA/Multipart_labels
       - /Web/Accessibility/ARIA/How_to_file_ARIA-related_bugs
   - type: listSubPages
-    path: /Web/Accessibility/ARIA/Attributes
+    path: /Web/Accessibility/ARIA/Reference/Attributes
     title: ARIA states and properties
     details: closed
   - type: listSubPages

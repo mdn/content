@@ -15,12 +15,12 @@ The `progressbar` range widget indicates that a request has been received and th
 
 Authors **may** set aria-valuemin and aria-valuemax to indicate the minimum and maximum progress indicator values. Otherwise, their implicit values follow the same rules as HTML's [`<input type="range">`](/en-US/docs/Web/HTML/Element/input/range):
 
-- If [`aria-valuemin`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemin) is missing or not a number, it defaults to `0` (zero).
-- If [`aria-valuemax`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemax) is missing or not a number, it defaults to `100`.
+- If [`aria-valuemin`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuemin) is missing or not a number, it defaults to `0` (zero).
+- If [`aria-valuemax`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuemax) is missing or not a number, it defaults to `100`.
 - The `aria-valuemin` and `aria-valuemax` properties only need to be set for the `progressbar` role when the progress bar's minimum is not `0` or the maximum value is not `100`.
-- The read-only [`aria-valuenow`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuenow) should be provided and updated unless the value is `indeterminate`, in which case don't include the attribute. If set, make sure the `aria-valuenow` value is between the minimum and maximum values.
+- The read-only [`aria-valuenow`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuenow) should be provided and updated unless the value is `indeterminate`, in which case don't include the attribute. If set, make sure the `aria-valuenow` value is between the minimum and maximum values.
 
-If the `progressbar` role is applied to an HTML {{HTMLElement('progress')}} element, the accessible name can come from the associated {{HTMLElement('label')}}. Otherwise use [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) if a visible label is present or [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) if a visible label is not present.
+If the `progressbar` role is applied to an HTML {{HTMLElement('progress')}} element, the accessible name can come from the associated {{HTMLElement('label')}}. Otherwise use [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) if a visible label is present or [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) if a visible label is not present.
 
 ### All descendants are presentational
 
@@ -48,15 +48,15 @@ From the assistive technology user's perspective, the heading does not exist sin
 
 ### Associated WAI-ARIA roles, states, and properties
 
-- [`aria-valuenow`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuenow)
+- [`aria-valuenow`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuenow)
   - : Only present and required if the value is not indeterminate. Set to a decimal value between `0`, or `aria-valuemin` if present, and `aria-valuemax` indicating the current value of the progress bar.
-- [`aria-valuetext`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuetext)
+- [`aria-valuetext`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuetext)
   - : Assistive technologies often present the value of `aria-valuenow` as a percentage. If this would not be accurate use this property to make the progress bar value understandable.
-- [`aria-valuemin`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemin)
+- [`aria-valuemin`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuemin)
   - : Set to a decimal value representing the minimum value, and less than `aria-valuemax`. If not present, the default value is `0`.
-- [`aria-valuemax`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemax)
+- [`aria-valuemax`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuemax)
   - : Set to a decimal value representing the maximum value, and greater than `aria-valuemin`. If not present, the default value is `100`.
-- [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) or [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
+- [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) or [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby)
   - : Defines the string value or identifies the element (or elements) that label the progressbar element providing an accessible name. An accessible name is required.
 
 It is recommended to use a native {{HTMLElement("progress")}} or [`<input type="range">`](/en-US/docs/Web/HTML/Element/input/range) elements rather than the `progressbar` role. User agents provide a stylize widget for the {{HTMLElement("progress")}} element based on the current `value` as it relates to the `0`, the minimum value, and the `max` value. When using non-semantic elements, all features of the native semantic element need to be recreated with ARIA attributes, JavaScript and CSS.
@@ -86,7 +86,7 @@ Using semantic HTML, this could be written as:
 
 ## Best Practices
 
-If the progress bar is describing the loading progress of a particular region of a page, include the [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) attribute to reference the progress bar's status, and set the [`aria-busy`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-busy) attribute to `true` on the region until it is finished loading.
+If the progress bar is describing the loading progress of a particular region of a page, include the [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) attribute to reference the progress bar's status, and set the [`aria-busy`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-busy) attribute to `true` on the region until it is finished loading.
 
 ### Prefer HTML
 

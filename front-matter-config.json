@@ -473,7 +473,7 @@
           "properties": {
             "slug": {
               "type": "string",
-              "pattern": "^Web/Accessibility/ARIA/Attributes/"
+              "pattern": "^Web/Accessibility/ARIA/Reference/Attributes/"
             }
           }
         },

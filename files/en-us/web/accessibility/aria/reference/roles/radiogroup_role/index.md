@@ -19,23 +19,23 @@ When using HTML's native input radio button, [`<input type="radio">`](/en-US/doc
 
 It is recommended to create radio groups by using same-named HTML input radio buttons, but, if you must use ARIA roles and attributes instead of semantic HTML form controls, custom `radio` buttons can and should act like native HTML radio input buttons.
 
-When using non-semantic elements as radio buttons, you must ensure your users can only select one radio button from the group at a time. When one item in the group is checked, having their [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-checked) attribute set to `true`, the previously checked item becomes unchecked, with its `aria-checked` attribute becoming `false`. The `aria-checked` attribute is set on the associated `radio` roles, not on the `radiogroup` itself.
+When using non-semantic elements as radio buttons, you must ensure your users can only select one radio button from the group at a time. When one item in the group is checked, having their [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-checked) attribute set to `true`, the previously checked item becomes unchecked, with its `aria-checked` attribute becoming `false`. The `aria-checked` attribute is set on the associated `radio` roles, not on the `radiogroup` itself.
 
 Some `radiogroup` implementations initialize the set with all buttons in the unchecked state. Once a `radio` in a `radiogroup` is checked, it is generally not possible to return to an all-unchecked state.
 
-The `radiogroup` must have an accessible name either by a visible label referenced by [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) or has a label specified with [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label). If elements provide additional information about the radio group, those elements are referenced by the `radiogroup` element with the [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) property.
+The `radiogroup` must have an accessible name either by a visible label referenced by [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) or has a label specified with [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label). If elements provide additional information about the radio group, those elements are referenced by the `radiogroup` element with the [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) property.
 
 ### Associated WAI-ARIA roles, states, and properties
 
 - [`radio`](/en-US/docs/Web/Accessibility/ARIA/Roles/radio_role) role
   - : One of a group of checkable buttons, in a `radiogroup`, where no more than one of the buttons can be checked at a time.
-- [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) / [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label)
+- [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) / [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label)
   - : The `radiogroup` must have an accessible name either by a visible label referenced by `aria-labelledby` or has a label specified with `aria-label`.
-- [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby)
+- [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby)
   - : Reference to elements providing additional information about the `radiogroup`
-- [`aria-required`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-required)
+- [`aria-required`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-required)
   - : Indicates that one `radio` within the group must have `aria-checked="true"` set before the form may be submitted. The required state is specified on the `radiogroup` element rather than one of the `radio` elements, unlike when using HTML radio buttons where the [`required`](/en-US/docs/Web/HTML/Attributes/required) attribute is set directly on one or more radio {{HTMLElement('input')}} elements.
-- [`aria-errormessage`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-errormessage)
+- [`aria-errormessage`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-errormessage)
   - : Identifies the element that provides an error message for the `radiogroup`, if there is an error. That message should be hidden while not relevant.
 
 ### Keyboard interactions
@@ -148,7 +148,7 @@ In this {{HTMLElement('fieldset')}} example, while `role="radiogroup"` is not ne
 - HTML {{HTMLElement('fieldset')}} element
 - HTML {{HTMLElement('input/radio', '&lt;input type="radio">')}} radio button element
 - [ARIA `radio` role](/en-US/docs/Web/Accessibility/ARIA/Roles/radio_role)
-- [`aria-errormessage`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-errormessage)
-- [`aria-invalid`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-invalid)
-- [`aria-readonly`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-readonly)
-- [`aria-required`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-required)
+- [`aria-errormessage`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-errormessage)
+- [`aria-invalid`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-invalid)
+- [`aria-readonly`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-readonly)
+- [`aria-required`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-required)

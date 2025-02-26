@@ -23,20 +23,20 @@ Tree items that have children can be expanded or collapsed, showing and hiding t
 
 Each parent node contains or owns an element with role [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role). A parent node is an expandable collection of `treeitem` elements. These child nodes are not direct descendants of the parent node: rather, they should be enclosed in an element with the `group` role.
 
-Each parent node should include the [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded) attribute. It is set to `false` when closed `true` when open. End nodes should not have the `aria-expanded` attribute included as the presence of the attribute indicates to assistive technologies that the node is a parent.
+Each parent node should include the [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded) attribute. It is set to `false` when closed `true` when open. End nodes should not have the `aria-expanded` attribute included as the presence of the attribute indicates to assistive technologies that the node is a parent.
 
 > [!NOTE]
 > ARIA tree views use navigation more similar to native applications than to web applications and are navigated primarily with arrow keys on the keyboard instead of the <kbd>Tab</kbd>. This form of navigation is not common for most browser content, though normal and expected for native applications. For this reason, consider alternative options to address the functionality you need before creating a tree view.
 
-Any element with a `treeitem` role must be nested in, or owned by, an element with role `tree`. Tree items can be a child of `tree`, `treeitem`, or an element with role `group` that is contained in, or owned by, an element with role `tree` or `treeitem`. If a `treeitem` is not nested within a `tree`, or nested in a `group` that is owned by a `tree`, include the [`id`](/en-US/docs/Web/HTML/Global_attributes/id) of the `treeitem` in the [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-owns) attribute value on the owning `tree`, `treeitem` or `group` element.
+Any element with a `treeitem` role must be nested in, or owned by, an element with role `tree`. Tree items can be a child of `tree`, `treeitem`, or an element with role `group` that is contained in, or owned by, an element with role `tree` or `treeitem`. If a `treeitem` is not nested within a `tree`, or nested in a `group` that is owned by a `tree`, include the [`id`](/en-US/docs/Web/HTML/Global_attributes/id) of the `treeitem` in the [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-owns) attribute value on the owning `tree`, `treeitem` or `group` element.
 
 Trees can be "single-select", allowing users to choose just one `treeitem` for an action, or "multi-select", where users are able to select more than one `treeitem` nodes for an action. In both cases, to be keyboard accessible, focus must be managed for all tree descendants.
 
-In single-select trees, only one treeitem can have [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected) (or [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-checked)) set to `true`. When a single-select tree receives focus, if no `treeitem` is selected before the tree receives focus, focus is set on the first `treeitem`. If a `treeitem` is selected before the tree receives focus, focus is set on the single `treeitem` that has `aria-selected="true"` set.
+In single-select trees, only one treeitem can have [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-selected) (or [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-checked)) set to `true`. When a single-select tree receives focus, if no `treeitem` is selected before the tree receives focus, focus is set on the first `treeitem`. If a `treeitem` is selected before the tree receives focus, focus is set on the single `treeitem` that has `aria-selected="true"` set.
 
 All nodes that are selectable but not selected have either `aria-selected` or `aria-checked` set to `false`. If the tree contains nodes that are not selectable, do not include either `aria-selected` or `aria-checked`, as the presence of either attribute indicates to assistive technologies the node is selectable.
 
-No more than one node can be selected at a time unless the `tree` node has [`aria-multiselectable="true"`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-multiselectable) set.
+No more than one node can be selected at a time unless the `tree` node has [`aria-multiselectable="true"`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-multiselectable) set.
 
 When a multi-select tree receives focus, if none of the tree items are selected before the tree receives focus, focus is set on the first `treeitem`. If one or more tree items are selected before the tree receives focus, focus is set on the first selected `treeitem`.
 
@@ -48,9 +48,9 @@ Using both `aria-selected` and `aria-checked` in the same `tree` is strongly dis
 
 In multi-select trees, the selected state should be independent of the focus. For example, in a typical file system navigator, the user can move focus to select any number of files for an action, such as copy or move. The visual design should make it clear which items are selected and which item has focus.
 
-If the complete set of available treeitems is not present in the DOM due to dynamic loading as the user moves focus in or scrolls the tree, each `treeitem` should have [`aria-level`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-level), [`aria-setsize`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-setsize), and [`aria-posinset`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-posinset) specified.
+If the complete set of available treeitems is not present in the DOM due to dynamic loading as the user moves focus in or scrolls the tree, each `treeitem` should have [`aria-level`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-level), [`aria-setsize`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-setsize), and [`aria-posinset`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-posinset) specified.
 
-A `treeitem` is required to have an accessible name. Generally, that name comes from the `treeitem`'s contents. The accessible name can also be set via [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) or [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby).
+A `treeitem` is required to have an accessible name. Generally, that name comes from the `treeitem`'s contents. The accessible name can also be set via [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) or [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby).
 
 ### Associated WAI-ARIA roles, states, and properties
 
@@ -58,11 +58,11 @@ A `treeitem` is required to have an accessible name. Generally, that name comes 
   - : The root node for the hierarchical list of parent and child `treeitem` nodes that can expand and collapse
 - [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role) role
   - : Identifies a set of `treeitem` child nodes.
-- [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded)
+- [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded)
   - : Set on the root `tree` and on `group` nodes that are parents of `treeitem` nodes, to indicate whether the tree view is expanded (`true`) or collapsed (`false`).
-- [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected)
+- [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-selected)
   - : Set to `true` or `false`, indicates a `treeitem` is selectable, and whether or not it is currently selected.
-- [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-checked)
+- [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-checked)
   - : Set to `true` or `false`, indicates the `treeitem` can be checked, and whether or not it is currently checked.
 
 ### Keyboard interactions

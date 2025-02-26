@@ -10,7 +10,7 @@ The following content describes specific features of HTML that should be used to
 
 ## Link text
 
-If you have a link that isn't self-descriptive, or the link destination could benefit from being explained in more detail, you can add information to a link using the [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) or [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) attributes.
+If you have a link that isn't self-descriptive, or the link destination could benefit from being explained in more detail, you can add information to a link using the [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) or [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) attributes.
 
 ```html
 <p>

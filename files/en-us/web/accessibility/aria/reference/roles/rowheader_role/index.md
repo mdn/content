@@ -101,7 +101,7 @@ None.
 </div>
 ```
 
-The above is a non-semantic ARIA table with a table header and table body, with five of 81 rows present in the DOM: one within a table header and four rows within the table body. The header row, alone in a header rowgroup, has two column headers. The columns are sortable, but not currently sorted, as indicated by the [`aria-sort`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-sort) property. The table body is a separate rowgroup, with four rows currently in the DOM. Each data table row has a row header. Because not all the rows are in the DOM, we've included the [`aria-rowindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowindex) property on every row.
+The above is a non-semantic ARIA table with a table header and table body, with five of 81 rows present in the DOM: one within a table header and four rows within the table body. The header row, alone in a header rowgroup, has two column headers. The columns are sortable, but not currently sorted, as indicated by the [`aria-sort`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-sort) property. The table body is a separate rowgroup, with four rows currently in the DOM. Each data table row has a row header. Because not all the rows are in the DOM, we've included the [`aria-rowindex`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-rowindex) property on every row.
 
 ## Best practices
 

@@ -21,7 +21,7 @@ This page lists the guides that you can use to help improve the accessibility of
 
 The following references are helpful for common accessibility use cases:
 
-- [Labeling widgets](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label)
+- [Labeling widgets](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label)
 - [Landmark roles](/en-US/docs/Web/Accessibility/ARIA/Roles/landmark_role)
 - [ARIA live regions](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)
 - [HTML Drag and Drop API](/en-US/docs/Web/API/HTML_Drag_and_Drop_API)

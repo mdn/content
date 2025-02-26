@@ -23,23 +23,23 @@ When a tabbed interface is initialized, one tab panel is displayed and its assoc
 
 For a single-selectable tablist, the non-active tabpanel elements should be hidden from the user until the user selects the tab associated with that tabpanel.
 
-When creating a multi-selectable tablist, include [`aria-multiselectable="true"`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-multiselectable) on the `tablist element`.
+When creating a multi-selectable tablist, include [`aria-multiselectable="true"`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-multiselectable) on the `tablist element`.
 
-The `tab` elements not the `tablist`, have the [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected) attribute. Set to `aria-selected="true"` for the tabs associated with each visible tabpanel. The tabs associated with hidden tabpanel elements have their `aria-selected` attributes set to `false`.
+The `tab` elements not the `tablist`, have the [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-selected) attribute. Set to `aria-selected="true"` for the tabs associated with each visible tabpanel. The tabs associated with hidden tabpanel elements have their `aria-selected` attributes set to `false`.
 
-If the tab list has a visible label, set [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) to the `id` of the labelling element. If not, use [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) to provide a label.
+If the tab list has a visible label, set [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) to the `id` of the labelling element. If not, use [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) to provide a label.
 
 To be keyboard accessible, focus must be managed for the descendants of this role.
 
-Elements with the `tablist` role have an implicit [`aria-orientation`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-orientation) value of `horizontal`.
+Elements with the `tablist` role have an implicit [`aria-orientation`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-orientation) value of `horizontal`.
 
 ### Associated WAI-ARIA roles, states, and properties
 
 - [`tab`](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role) role
   - : Required Owned Elements. Every tablist must have one or more `tab` children.
-- [`aria-multiselectable`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-multiselectable)
+- [`aria-multiselectable`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-multiselectable)
   - : When set to `true`, indicates the user may select more than one `tab` from the `tablist` descendants.
-- [`aria-orientation`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-orientation)
+- [`aria-orientation`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-orientation)
   - : If the tablist element is vertically oriented, set `aria-orientation="vertical"`. The default is `horizontal`.
 
 ### Keyboard interactions

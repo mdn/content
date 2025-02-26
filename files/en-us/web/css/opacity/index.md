@@ -51,7 +51,7 @@ When `opacity` value is set to `0`, the element and all of its children appear i
 
 Using `opacity` with a value other than `1` places the element in a new [stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context).
 
-Opacity alone should not be used to provide information to screen readers. Use the HTML [`hidden`](/en-US/docs/Web/HTML/Global_attributes/hidden) attribute, CSS [`visibility`](/en-US/docs/Web/CSS/visibility), or CSS [`display`](/en-US/docs/Web/CSS/display) style properties. It's best to avoid using [`aria-hidden`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-hidden) attribute, but if the element is hidden with opacity, then hide it from screen readers as well.
+Opacity alone should not be used to provide information to screen readers. Use the HTML [`hidden`](/en-US/docs/Web/HTML/Global_attributes/hidden) attribute, CSS [`visibility`](/en-US/docs/Web/CSS/visibility), or CSS [`display`](/en-US/docs/Web/CSS/display) style properties. It's best to avoid using [`aria-hidden`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-hidden) attribute, but if the element is hidden with opacity, then hide it from screen readers as well.
 
 ### Transitioning opacity
 

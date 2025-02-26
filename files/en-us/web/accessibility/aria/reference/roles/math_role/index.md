@@ -16,7 +16,7 @@ Content with the role `math` is intended to be marked up in an accessible format
 Unfortunately, browser support for MathML is not universal. While using an image of a mathematical expression is not optimal, if you do use image, use the `math` role.
 Make sure any images of math are labeled by an `alt` attribute that describes the mathematical expression as it would be spoken.
 
-If the math element has only presentational children and the accessible name is intended to convey the mathematical expression, use [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) to provide a string that represents the expression. If the math element contains navigable content that conveys the mathematical expression and a visible label for the expression is present, use [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby). Otherwise, use `aria-label` to name the expression, e.g., `aria-label="Pythagorean Theorem"`.
+If the math element has only presentational children and the accessible name is intended to convey the mathematical expression, use [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) to provide a string that represents the expression. If the math element contains navigable content that conveys the mathematical expression and a visible label for the expression is present, use [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby). Otherwise, use `aria-label` to name the expression, e.g., `aria-label="Pythagorean Theorem"`.
 
 ## Examples
 

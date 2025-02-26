@@ -56,7 +56,7 @@ When an SVG is included via an {{HTMLElement('img')}} element, the `alt` attribu
 
 If the image conveys more than a short title, include a longer description with the [`<desc>`](/en-US/docs/Web/SVG/Element/desc) element. The `<desc>` element provides an accessible, long-text description. Similar to `<title>` text, the text within the `<desc>` is not rendered to the screen.
 
-If the SVG can be labeled by visible text, reference that text with an [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) attribute. Alternatively, include the `aria-labelledby` attribute with the [`id`](/en-US/docs/Web/SVG/Attribute/id) of the `<title>`.
+If the SVG can be labeled by visible text, reference that text with an [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) attribute. Alternatively, include the `aria-labelledby` attribute with the [`id`](/en-US/docs/Web/SVG/Attribute/id) of the `<title>`.
 
 ```html
 <svg viewBox="0 0 100 125" role="img" aria-labelledby="svgTitle svgDescription">
@@ -119,7 +119,7 @@ If the SVG can be labeled by visible text, reference that text with an [`aria-la
 </svg>
 ```
 
-If the SVG can be described by visible text, that text can be referenced with the [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) attribute. If aria-describedby is used, it will take precedence over `<desc>`.
+If the SVG can be described by visible text, that text can be referenced with the [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) attribute. If aria-describedby is used, it will take precedence over `<desc>`.
 
 In our example, we've included both the description and title in our `aria-labelledby` attribute, as it has better assistive technology support than `aria-describedby`.
 

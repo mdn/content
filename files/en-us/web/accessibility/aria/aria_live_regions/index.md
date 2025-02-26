@@ -168,7 +168,7 @@ Elements with the following [`role="…"`](/en-US/docs/Web/Accessibility/ARIA/Ro
 Live Regions are well supported. The Paciello Group, in 2014, posted [information about the state of the support of Live Regions](https://www.tpgi.com/screen-reader-support-aria-live-regions/). Paul J. Adam has researched [the support of `aria-atomic` and `aria-relevant`](https://pauljadam.com/demos/aria-atomic-relevant.html) in particular.
 
 1. **`aria-atomic`**: The `aria-atomic=BOOLEAN` is used to set whether or not the screen reader should always present the live region as a whole, even if only part of the region changes. The possible settings are: `false` or `true`. The default setting is `false`.
-2. [**`aria-relevant`**](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-relevant)
+2. [**`aria-relevant`**](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-relevant)
 
    : The `aria-relevant=[LIST_OF_CHANGES]` is used to set what types of changes are relevant to a live region. The possible settings are one or more of: `additions`, `removals`, `text`, `all`. The default setting is: `additions text`.
 

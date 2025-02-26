@@ -22,7 +22,7 @@ When you've got a content change that involves an insertion _and_ a deletion, th
 </p>
 ```
 
-We could even provide an information box saying who made the suggestion and when, and associate it with the suggestion via [`aria-details`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-details):
+We could even provide an information box saying who made the suggestion and when, and associate it with the suggestion via [`aria-details`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-details):
 
 ```html
 <p>

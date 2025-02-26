@@ -22,7 +22,7 @@ As the name implies, `alertdialog` is a mashup of the [`dialog`](/en-US/docs/Web
 
 Being a type of dialog, the [`dialog`](/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role) role's states, properties, and keyboard focus requirements are applicable to the `alertdialog` role as well.
 
-Because of its urgent nature, interrupting the user's workflow, alert dialogs should be [modal](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-modal).
+Because of its urgent nature, interrupting the user's workflow, alert dialogs should be [modal](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-modal).
 
 The alert dialog must have at least one focusable control — such as Confirm, Close, and Cancel — and focus must be moved to that control when the alert dialog appears. Alert dialogs can have additional interactive controls such as text fields and checkboxes.
 
@@ -33,7 +33,7 @@ Adding `role="alertdialog"` alone is not sufficient to make an alert dialog acce
 - The alert dialog must be properly labeled
 - Keyboard focus must be managed correctly
 
-The `alertdialog` must have an accessible name, defined with [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) or [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label). The alert dialog text must have an {{glossary("accessible description")}} using [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby).
+The `alertdialog` must have an accessible name, defined with [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) or [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label). The alert dialog text must have an {{glossary("accessible description")}} using [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby).
 
 ## Examples
 
@@ -87,11 +87,11 @@ The code snippet above shows how to mark up an alert dialog that only provides a
 
 ### Associated WAI-ARIA roles, states, and properties
 
-- [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
+- [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby)
 
   - : Use this attribute to label the alertdialog. The `aria-labelledby` attribute is generally the id of the element used to title the alertdialog.
 
-- [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby)
+- [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby)
   - : Use this attribute to encompass the description of the contents of the alert dialog. The value of the `aria-describedby` attribute is generally the ID of the element containing the alert dialog's messaging, usually coming right after the title.
 
 ## Specifications
@@ -103,6 +103,6 @@ The code snippet above shows how to mark up an alert dialog that only provides a
 - HTML {{HTMLElement("dialog")}} element
 - [The `dialog` role](/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role)
 - [The `alert` role](/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role)
-- [`aria-modal` attribute](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-modal)
+- [`aria-modal` attribute](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-modal)
 - [`Window.alert()`](/en-US/docs/Web/API/Window/alert)
 - [`Window.prompt()`](/en-US/docs/Web/API/Window/prompt)

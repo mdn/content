@@ -17,11 +17,11 @@ The items in menu and menubars are menu items. There are three types of menu ite
 
 A `menuitemradio` is checkable menuitem in a set of elements with the same role, of which only can be checked at a time.
 
-The three menu item elements can only be contained in, or owned by, an element with role [`menu`](/en-US/docs/Web/Accessibility/ARIA/Roles/menu_role) or [`menubar`](/en-US/docs/Web/Accessibility/ARIA/Roles/menubar_role), optionally nested within a grouping element with role of [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role). Being nested or otherwise owned (see [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-owns)) in a `menu` or `menubar` identifies the menu items as being related widgets.
+The three menu item elements can only be contained in, or owned by, an element with role [`menu`](/en-US/docs/Web/Accessibility/ARIA/Roles/menu_role) or [`menubar`](/en-US/docs/Web/Accessibility/ARIA/Roles/menubar_role), optionally nested within a grouping element with role of [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role). Being nested or otherwise owned (see [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-owns)) in a `menu` or `menubar` identifies the menu items as being related widgets.
 
 When all items in a submenu are members of the same radio group, the `group` is defined by the menu element; the `group` element is not necessary.
 
-Menu items containing the role of `menuitemradio` must include the [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-checked) attribute to expose the radio button's state to assistive technology, unless using [`<input type="radio">`](/en-US/docs/Web/HTML/Element/input/checkbox), in which case the [`checked`](/en-US/docs/Web/HTML/Element/input/checkbox#checked) attribute should be used.
+Menu items containing the role of `menuitemradio` must include the [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-checked) attribute to expose the radio button's state to assistive technology, unless using [`<input type="radio">`](/en-US/docs/Web/HTML/Element/input/checkbox), in which case the [`checked`](/en-US/docs/Web/HTML/Element/input/checkbox#checked) attribute should be used.
 
 Similar to the `checked` attribute of {{HTMLElement('input')}}s of type `radio`, the `aria-checked` attribute of a `menuitemradio` indicates whether the menu item is checked (`true`), unchecked (`false`). There is no `mixed` value like there is for `menuitemcheckbox`.
 
@@ -31,9 +31,9 @@ If your want more than one item in a group to be checked, or if you want to enab
 
 If a `menu` or `menubar` contains more than one group of `menuitemradio` elements, or if the `menu` contains a group of `menuitemradio` elements as well as other, unrelated `menuitem` elements and/or `menuitemcheckbox` elements, contain each set of related `menuitemradio` elements in a `group` element or delimit the group the `menuitemradio` elements from the other menu items with a `separator` element (or an HTML element with an equivalent role such as a {{HTMLElement('fieldset')}} grouping or a thematic break {{HTMLElement('hr')}} separator.
 
-An accessible name is required. Ideally, the accessible name should come from an associated {{htmlelement('label')}} element if using `<input type="radio">` or visible, descendant content. Realize if the label or descendant content is not sufficient and, preferably, [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) is used referencing non-descendant content or [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) is used, these two ARIA properties will hide other descendant content from assistive technologies.
+An accessible name is required. Ideally, the accessible name should come from an associated {{htmlelement('label')}} element if using `<input type="radio">` or visible, descendant content. Realize if the label or descendant content is not sufficient and, preferably, [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) is used referencing non-descendant content or [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) is used, these two ARIA properties will hide other descendant content from assistive technologies.
 
-If all elements in the set are not present in the DOM include the [`aria-setsize`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-setsize) and [`aria-posinset`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-posinset) properties. When specifying `aria-setsize` and `aria-posinset` on a `menuitemradio`, set the value with respect to the total number of items in the menu, excluding any separators.
+If all elements in the set are not present in the DOM include the [`aria-setsize`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-setsize) and [`aria-posinset`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-posinset) properties. When specifying `aria-setsize` and `aria-posinset` on a `menuitemradio`, set the value with respect to the total number of items in the menu, excluding any separators.
 
 The `menuitemradio` element can have phrasing content, but can not have interactive content as descendants and no descendants with a `tabindex` attribute specified.
 
@@ -67,7 +67,7 @@ From the assistive technology user's perspective, the heading does not exist sin
   - : Similar to `menu` for a consistent set of frequently used commands remaining visible and usually presented horizontally.
 - [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role) role
   - : Container for a group of `menuitem` elements, including `menuitemradio` elements within a `menu` or `menubar`.
-- [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-checked) (Required)
+- [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-checked) (Required)
   - : Set to `true` or `false`, it indicates the current "checked" state of the menuitemradio
 
 ### Keyboard interactions

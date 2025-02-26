@@ -18,8 +18,8 @@ A meter is a graphical display of a numeric value within a defined range. For ex
 
 Each element with `role="meter"` must also have one of the following:
 
-- An [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) attribute.
-- An [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) attribute pointing to an element with text that describes the meter.
+- An [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) attribute.
+- An [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) attribute pointing to an element with text that describes the meter.
 
 ### All descendants are presentational
 
@@ -45,13 +45,13 @@ From the assistive technology user's perspective, the heading does not exist sin
 
 ### Associated ARIA roles, states, and properties
 
-- [`aria-valuenow`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuenow)
+- [`aria-valuenow`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuenow)
   - : Set to a decimal value between `aria-valuemin` and `aria-valuemax` indicating the current value of the meter.
-- [`aria-valuetext`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuetext)
+- [`aria-valuetext`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuetext)
   - : Assistive technologies often present the value of `aria-valuenow` as a percentage. If this would not be accurate use this property to make the meter value understandable.
-- [`aria-valuemin`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemin)
+- [`aria-valuemin`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuemin)
   - : Set to a decimal value representing the minimum value, and less than `aria-valuemax`.
-- [`aria-valuemax`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemax)
+- [`aria-valuemax`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuemax)
   - : Set to a decimal value representing the maximum value, and greater than `aria-valuemin`.
 
 It is recommended to use a native {{HTMLElement("meter")}} element rather than the `meter` role. User agents provide a stylize widget for the {{HTMLElement("meter")}} element based on the current `value` as it relates to the `min` and `max` values. When using non-semantic elements, all features of the native semantic element need to be recreated with ARIA attributes, JavaScript and CSS.

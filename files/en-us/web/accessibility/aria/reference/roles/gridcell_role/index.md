@@ -39,9 +39,9 @@ The first rule of ARIA is if a native HTML element or attribute has the semantic
 
 Any element with a `role="gridcell"` applied to it should use ARIA to describe its order in the table-style grouping, provided the table, grid, or treegrid has the ability to have rows and/or columns dynamically added, hidden, or removed.
 
-Use [`aria-colindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colindex) to describe a `gridcell`'s order in the list of columns, and [`aria-rowindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowindex) to describe a gridcell's order in the list of rows. Use [`aria-colcount`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colcount) and [`aria-rowcount`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowcount) on the parent element with [`role="grid"`](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role) applied to it to set the total number of columns or rows.
+Use [`aria-colindex`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colindex) to describe a `gridcell`'s order in the list of columns, and [`aria-rowindex`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-rowindex) to describe a gridcell's order in the list of rows. Use [`aria-colcount`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colcount) and [`aria-rowcount`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-rowcount) on the parent element with [`role="grid"`](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role) applied to it to set the total number of columns or rows.
 
-This sample code demonstrates a table-style grouping of information where the third and fourth columns have been removed. [`aria-colindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colindex) is being used to describe the rows' position and allows a person using assistive technology to infer that certain rows have been removed:
+This sample code demonstrates a table-style grouping of information where the third and fourth columns have been removed. [`aria-colindex`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colindex) is being used to describe the rows' position and allows a person using assistive technology to infer that certain rows have been removed:
 
 ```html
 <div role="grid" aria-colcount="6">
@@ -67,7 +67,7 @@ This sample code demonstrates a table-style grouping of information where the th
 
 ### Describing the position of gridcells when the overall structure is unknown
 
-In situations where the table-style grouping of content does not provide information about the columns and rows, gridcells must have their positions programmatically described by using [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby). The [`id`](/en-US/docs/Web/HTML/Global_attributes/id)s provided for `aria-describedby` should correspond to parent elements intended to be the rows and columns.
+In situations where the table-style grouping of content does not provide information about the columns and rows, gridcells must have their positions programmatically described by using [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby). The [`id`](/en-US/docs/Web/HTML/Global_attributes/id)s provided for `aria-describedby` should correspond to parent elements intended to be the rows and columns.
 
 By referencing the parent elements with roles of [`rowheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/rowheader_role) or [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role) applied to them via `aria-describedby`, it allows assistive technology to understand the position and relationship of the `gridcell` element to the rest of the table-style grouping of content.
 
@@ -83,11 +83,11 @@ Both `<td>` elements and elements with a role of `gridcell` applied to them can 
 <div role="gridcell" contenteditable="true">Item cost</div>
 ```
 
-`contenteditable` will make the element it is applied to focusable via the <kbd>Tab</kbd> key. If a gridcell is conditionally toggled into a state where editing is prohibited, toggle [`aria-readonly`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-readonly) on the gridcell element.
+`contenteditable` will make the element it is applied to focusable via the <kbd>Tab</kbd> key. If a gridcell is conditionally toggled into a state where editing is prohibited, toggle [`aria-readonly`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-readonly) on the gridcell element.
 
 #### Expandable cells
 
-In a [treegrid](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role), gridcells may be made expandable by toggling the [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded) attribute. Note that if this attribute is provided, it applies only to the individual gridcell.
+In a [treegrid](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role), gridcells may be made expandable by toggling the [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded) attribute. Note that if this attribute is provided, it applies only to the individual gridcell.
 
 ### Associated WAI-ARIA Roles, States, and Properties
 
@@ -97,11 +97,11 @@ In a [treegrid](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role), gridcel
   - : Required to communicate the `gridcell` is part of a row of a table-style grouping of information.
 - `columnheader`
   - : Specifies which element is the associated column header.
-- [`aria-colindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colindex)
+- [`aria-colindex`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colindex)
   - : Identifies the position of an element in relation to the rest of the table-style grouping of information's columns.
 - `rowheader`
   - : Specifies which element is the associated row header.
-- [`aria-rowindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowindex)
+- [`aria-rowindex`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-rowindex)
   - : Identifies the position of an element in relation to the rest of the table-style grouping of information's rows.
 
 ### Examples

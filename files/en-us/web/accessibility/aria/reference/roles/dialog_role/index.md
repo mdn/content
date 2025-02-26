@@ -39,7 +39,7 @@ The sections below describe how these two requirements can be met.
 
 Even though it is not required for the dialog itself to be able to receive focus, it still needs to be labeled. The label given to the dialog will provide contextual information for the interactive controls inside the dialog. In other words, the dialog's label acts like a grouping label for the controls inside it (similar to how a `<legend>` element provides a grouping label for the controls inside a `<fieldset>` element).
 
-If a dialog already has a visible title bar, the text inside that bar can be used to label the dialog itself. The best way to achieve this is by using the [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) attribute to the `role="dialog"` element. Additionally, if the dialog contains additional descriptive text besides the dialog title, this text can be associated with the dialog using the [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) attribute. This approach is shown in the code snippet below:
+If a dialog already has a visible title bar, the text inside that bar can be used to label the dialog itself. The best way to achieve this is by using the [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) attribute to the `role="dialog"` element. Additionally, if the dialog contains additional descriptive text besides the dialog title, this text can be associated with the dialog using the [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) attribute. This approach is shown in the code snippet below:
 
 ```html
 <div
@@ -72,9 +72,9 @@ A dialog has particular requirements for how keyboard focus should be managed:
 
 ### Associated ARIA roles, states, and properties
 
-- [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
+- [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby)
   - : Use this attribute to label the dialog. Often, the value of the `aria-labelledby` attribute will be the id of the element used to title the dialog.
-- [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby)
+- [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby)
   - : Use this attribute to describe the contents of the dialog.
 
 ### Possible effects on user agents and assistive technology

@@ -67,12 +67,12 @@ If the grid is used as an interactive widget, [keyboard interactions](#keyboard_
 
 #### States and properties
 
-- [aria-level](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-level)
+- [aria-level](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-level)
   - : Indicates the hierarchical level of the grid within other structures.
-- [aria-multiselectable](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-multiselectable)
+- [aria-multiselectable](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-multiselectable)
   - : If `aria-multiselectable` is set to `true`, multiple items in the grid can be selected. The default value is `false`.
-- [aria-readonly](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-readonly)
-  - : If the user can navigate the grid but not change the value or values of the grid, the [`aria-readonly`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-readonly) should be set to `true`. The default value is `false`.
+- [aria-readonly](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-readonly)
+  - : If the user can navigate the grid but not change the value or values of the grid, the [`aria-readonly`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-readonly) should be set to `true`. The default value is `false`.
 
 > [!NOTE]
 > For many use cases, an HTML {{HTMLElement('table')}} element is sufficient as it and the various table elements already include many ARIA roles.
@@ -382,6 +382,6 @@ Even if the keyboard use is properly implemented, some users might not be aware 
 - [ARIA: `rowheader` role](/en-US/docs/Web/Accessibility/ARIA/Roles/rowheader_role)
 - [ARIA: columnheader role](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role)
 - {{HTMLElement('table','HTML <code>&lt;table&gt;</code> element')}}
-- [`aria-level`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-level)
-- [`aria-multiselectable`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-multiselectable)
-- [`aria-readonly`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-readonly)
+- [`aria-level`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-level)
+- [`aria-multiselectable`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-multiselectable)
+- [`aria-readonly`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-readonly)

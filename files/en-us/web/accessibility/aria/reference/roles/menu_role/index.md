@@ -23,13 +23,13 @@ When a user activates a choice in a menu that has been opened, the menu usually 
 
 When a menu opens, keyboard focus is placed on the first menu item. To be keyboard accessible, you need to [manage focus](https://usability.yale.edu/web-accessibility/articles/focus-keyboard-operability) for all descendants: all menu items within the `menu` are focusable. The menu button which opens the menu and the menu items, rather than the menu itself, are the focusable elements.
 
-Menu items include [`menuitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role), [`menuitemcheckbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role), and [`menuitemradio`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role). [Disabled](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-disabled) menu items are focusable but cannot be activated.
+Menu items include [`menuitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role), [`menuitemcheckbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role), and [`menuitemradio`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role). [Disabled](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-disabled) menu items are focusable but cannot be activated.
 
 Menu items can be grouped in elements with the [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role) role, and separated by elements with role [`separator`](/en-US/docs/Web/Accessibility/ARIA/Roles/separator_role). Neither `group` nor `separator` receive focus or are interactive.
 
 If a `menu` is opened as a result of a context action, <kbd>Escape</kbd> or <kbd>Enter</kbd> may return focus to the invoking context. If focus was on the menu button, <kbd>Enter</kbd> opens the menu, giving focus to the first menu item. If focus is on the menu itself, <kbd>Escape</kbd> closes the menu and returns focus to the menu button or parent menubar item (or the context action that opened the menu).
 
-Elements with the role `menu` have an implicit [`aria-orientation`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-orientation) value of `vertical`. For horizontally oriented menu, use [`aria-orientation="horizontal"`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-orientation).
+Elements with the role `menu` have an implicit [`aria-orientation`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-orientation) value of `vertical`. For horizontally oriented menu, use [`aria-orientation="horizontal"`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-orientation).
 
 If the menu is visually persistent, consider the [`menubar`](/en-US/docs/Web/Accessibility/ARIA/Roles/menubar_role) role instead.
 
@@ -45,13 +45,13 @@ If the menu is visually persistent, consider the [`menubar`](/en-US/docs/Web/Acc
 
 - [`tabindex`](/en-US/docs/Web/HTML/Global_attributes/tabindex) attribute
   - : The `menu` container has `tabindex` set to `-1` or `0` and each item in the menu has `tabindex` set to `-1`.
-- [`aria-activedescendant`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-activedescendant)
+- [`aria-activedescendant`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-activedescendant)
   - : Set to the ID of the focused item, if there is one.
-- [`aria-orientation`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-orientation)
+- [`aria-orientation`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-orientation)
   - : indicates whether the menu orientation is horizontal or vertical; defaults to `vertical` if omitted.
-- [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) or [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
+- [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) or [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby)
   - : The `menu` is required to have an accessible name. Use `aria-labelledby` if a visible label is present, otherwise use `aria-label`. Either include the `aria-labelledby` set to a the `id` to the `menuitem` or `button` that controls its display or use `aria-label` to define the label.
-- [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-owns)
+- [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-owns)
   - : Only set on the menu container to include elements that are not DOM children of the container. If set, those elements will appear in the reading order in the sequence they are referenced and after any items that are DOM children. When managing focus, ensure the visual focus order matches this assistive technology reading order.
 
 ### Keyboard interactions
@@ -160,11 +160,11 @@ The following snippet of code is a popup menu nested in a menubar. It is display
 </div>
 ```
 
-The button that opens the menu has [`aria-haspopup="menu"`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-haspopup) set, explicitly indicating that the popup it controls is a `menu`.
+The button that opens the menu has [`aria-haspopup="menu"`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-haspopup) set, explicitly indicating that the popup it controls is a `menu`.
 
 For a menu to open, the user generally interacts with a menu button as the opener. The menu button must be focusable and respond to both click and keyboard events. When focused, selecting <kbd>Enter</kbd>, <kbd>Space</kbd>, <kbd>Down Arrow</kbd>, or the <kbd>Up Arrow</kbd> should open the menu and place focus on a menu item.
 
-The opening and closing of the menu toggles the [`aria-expanded="true"`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded) attribute on the button. It is added when the menu is open. Removed or set to `false` when the menu is closed. The `true` value indicates that the menu is displayed and that activating the menu button closes the menu.
+The opening and closing of the menu toggles the [`aria-expanded="true"`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded) attribute on the button. It is added when the menu is open. Removed or set to `false` when the menu is closed. The `true` value indicates that the menu is displayed and that activating the menu button closes the menu.
 
 When the menu is open, the button itself generally does not receive focus as users arrow through the menu items. Rather, <kbd>Escape</kbd> and optionally <kbd>Shift + Tab</kbd> closes the menu and returns focus to the menu button.
 
@@ -193,4 +193,4 @@ The navigation example has a static button. The submenu example has a button tha
 - [`menuitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role)
 - [`menuitemcheckbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role)
 - [`menuitemradio`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role)
-- [`aria-haspopup`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-haspopup)
+- [`aria-haspopup`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-haspopup)

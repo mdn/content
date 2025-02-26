@@ -241,7 +241,7 @@ Start the form with text instructions on how to operate it. Include labels or in
 
 Labels should be descriptive and positioned close to the input they relate to. When requiring a specific format for input, provide an example formatted in the proper way. Additionally, consider performing server-side validation to help format input data, to aid in the ease of user input.
 
-If a form control is required, indicate it both visually and [via code](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-required). If a form control changes context, describe what will happen in a way that the user will understand it before they cause the context change to happen.
+If a form control is required, indicate it both visually and [via code](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-required). If a form control changes context, describe what will happen in a way that the user will understand it before they cause the context change to happen.
 
 ### Error Suggestion
 

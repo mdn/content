@@ -68,17 +68,17 @@ The `role` attribute only adds semantics; all of the functionality that comes na
 </fieldset>
 ```
 
-The native HTML radio form control ([`<input type="radio">`](/en-US/docs/Web/HTML/Element/input/radio)) has two states ("checked" or "not checked"). Similarly, an element with `role="radio"` can expose two states through the [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-checked) attribute: `true` representing the checked state, and `false` representing the unchecked state. The `aria-checked` value of `mixed` is not valid to use for a radio button.
+The native HTML radio form control ([`<input type="radio">`](/en-US/docs/Web/HTML/Element/input/radio)) has two states ("checked" or "not checked"). Similarly, an element with `role="radio"` can expose two states through the [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-checked) attribute: `true` representing the checked state, and `false` representing the unchecked state. The `aria-checked` value of `mixed` is not valid to use for a radio button.
 
 If a radio button is checked, the radio element has `aria-checked` set to `true`. If it is not checked, it has `aria-checked` set to `false`.
 
-Each radio button element has role `radio`. The radio role should always be nested with other associated radios in a `radiogroup`. If it is not possible to nest the radio button within a radio group, use the `id` of the non-grouped radio in a space separated list of values as the value of the [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-owns) attribute on the `radiogroup` element to indicate the relationship of the `radiogroup` to its radio members.
+Each radio button element has role `radio`. The radio role should always be nested with other associated radios in a `radiogroup`. If it is not possible to nest the radio button within a radio group, use the `id` of the non-grouped radio in a space separated list of values as the value of the [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-owns) attribute on the `radiogroup` element to indicate the relationship of the `radiogroup` to its radio members.
 
-Each radio element is labelled by its content, has a visible label referenced by `aria-labelledby`, or has a label specified with `aria-label`. The containing `radiogroup` element should either have a visible label referenced by `aria-labelledby` or a label specified with `aria-label`. If elements providing additional information about either the radio group or each radio button are present, those elements should be referenced by the `radiogroup` element or radio elements with the [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) property.
+Each radio element is labelled by its content, has a visible label referenced by `aria-labelledby`, or has a label specified with `aria-label`. The containing `radiogroup` element should either have a visible label referenced by `aria-labelledby` or a label specified with `aria-label`. If elements providing additional information about either the radio group or each radio button are present, those elements should be referenced by the `radiogroup` element or radio elements with the [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) property.
 
 As `radio` is an interactive control; it must be focusable and keyboard accessible. If the role is applied to a non-focusable element, use the [`tabindex`](/en-US/docs/Web/HTML/Global_attributes/tabindex) attribute to change this. The expected keyboard shortcut for activating a radio is the <kbd>Space</kbd> key. Use JavaScript to toggle the `aria-checked` attribute to `true` when a radio becomes checked while ensuing that all the other radio roles in the group are set to `aria-checked="false"`.
 
-To programmatically indicate that a radio button must be chosen from a radio group the [`aria-required`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-required) attribute, with a value of `true`, must be specified on the `radiogroup` element. It is not expected to use the `aria-required` attribute on individual ARIA radio buttons.
+To programmatically indicate that a radio button must be chosen from a radio group the [`aria-required`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-required) attribute, with a value of `true`, must be specified on the `radiogroup` element. It is not expected to use the `aria-required` attribute on individual ARIA radio buttons.
 
 ### All descendants are presentational
 
@@ -108,7 +108,7 @@ From the assistive technology user's perspective, the heading does not exist sin
 
   - : The radio buttons are contained in or owned by an element with role `radiogroup`. If unable to be nested within a `radiogroup` within the markup, the `aria-owns` attribute of the `radiogroup` contains the `id` values of the non-nested radio buttons in the group.
 
-- [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-checked)
+- [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-checked)
 
   - : The value of `aria-checked` defines the state of a radio. When used with radio elements, the attribute has one of two possible values:
 

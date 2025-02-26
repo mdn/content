@@ -15,15 +15,15 @@ The `marquee` role defines an area as a type of live region that presents non-es
 
 Elements with the role marquee have an implicit [aria-live](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) value of `off`.
 
-The marquee is required to have an accessible name. Use [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) if a visible label is present, otherwise use [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label).
+The marquee is required to have an accessible name. Use [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) if a visible label is present, otherwise use [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label).
 
 ### Associated WAI-ARIA roles, states, and properties
 
-- [`aria-live`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-live)
+- [`aria-live`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-live)
 
   - : Defines when assistive technology should inform the user of updates to content. Elements with the role `marquee` have an implicit [aria-live](https://www.w3.org/TR/wai-aria-1.1/#aria-live) value of `off`, meaning screen readers will not announce changes inside the marquee, even when the user is idle.
 
-- [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) or [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
+- [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) or [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby)
 
   - : The `marquee` is required to have an accessible name. Use `aria-labelledby` if a visible label is present, otherwise use `aria-label`.
 

@@ -20,7 +20,7 @@ The ARIA `img` role can be used to identify multiple elements inside page conten
 
 Any set of content that should be consumed as a single image (which could include images, video, audio, code snippets, emojis, or other content) can be identified using `role="img"`.
 
-You shouldn't count on the alt text of individual images for conveying context to assistive technologies; most screen readers will consider the element with `role="img"` set on it to be like a black box, and not access the individual elements inside it. Therefore, provide a comprehensive overall descriptive alt text for image, either in the surrounding text, or by using an [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) attribute, with `alt` attributes for search engines or sighted users to be written to the page should an image fail:
+You shouldn't count on the alt text of individual images for conveying context to assistive technologies; most screen readers will consider the element with `role="img"` set on it to be like a black box, and not access the individual elements inside it. Therefore, provide a comprehensive overall descriptive alt text for image, either in the surrounding text, or by using an [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) attribute, with `alt` attributes for search engines or sighted users to be written to the page should an image fail:
 
 ```html
 <div role="img" aria-label="Description of the overall image">
@@ -31,8 +31,8 @@ You shouldn't count on the alt text of individual images for conveying context t
 
 If you wish to add a caption or label to your image that is visible on the page, you can do using:
 
-- [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) when the text is a concise label.
-- [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) when the text is a longer description.
+- [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) when the text is a concise label.
+- [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) when the text is a longer description.
 
 For example:
 

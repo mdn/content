@@ -15,7 +15,7 @@ The `note` role can be added to parenthetic or ancillary content if no other nat
 
 ### Associated WAI-ARIA roles, states, and properties
 
-- [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) or [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) (optional)
+- [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) or [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) (optional)
   - : Naming a note is optional, but can help screen reader users understand its context and purpose. The name can be provided using `aria-labelledby` if a visible label is present, otherwise with `aria-label`.
 
 ## Examples

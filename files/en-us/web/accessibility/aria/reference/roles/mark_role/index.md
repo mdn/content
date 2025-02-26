@@ -16,7 +16,7 @@ Example uses for `mark` are the exact same as the `<mark>` element. They include
 
 Don't use `mark` for purely decorative styling such as syntax highlighting.
 
-The `mark` element should not be given an accessible name; both [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) and [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) attributes are prohibited on `mark`.
+The `mark` element should not be given an accessible name; both [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) and [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) attributes are prohibited on `mark`.
 
 ## Examples
 
@@ -38,7 +38,7 @@ In the following example we have a document section that has been commented. The
 
 The related comment is marked up using an HTML structure wrapped with a {{HTMLElement('div')}} containing [`role="comment"`](/en-US/docs/Web/Accessibility/ARIA/Roles/comment_role).
 
-To associate the comment with the text being commented, we need to wrap the commented text with an element containing the [`aria-details`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-details) attribute, the value of which should be the ID of the comment.
+To associate the comment with the text being commented, we need to wrap the commented text with an element containing the [`aria-details`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-details) attribute, the value of which should be the ID of the comment.
 
 ## Best practices
 

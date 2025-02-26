@@ -13,9 +13,9 @@ The `term` role can be used for a word or phrase with an optional corresponding 
 
 The `term` role can be used for a word or phrase with an optional corresponding [`definition`](/en-US/docs/Web/Accessibility/ARIA/Roles/definition_role). It is equivalent in semantics to the HTML {{HTMLElement('dfn')}} element and the definition term ({{HTMLElement('dt')}}) element within a definition list ({{HTMLElement('dl')}} ).
 
-The `term` role is used to explicitly identify a word or phrase for which a definition has been provided by the author or is expected to be provided by the user. If there is an existing definition, or a form or form control to enter a definition, authors SHOULD set [`aria-details`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-details) to point to the related element.
+The `term` role is used to explicitly identify a word or phrase for which a definition has been provided by the author or is expected to be provided by the user. If there is an existing definition, or a form or form control to enter a definition, authors SHOULD set [`aria-details`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-details) to point to the related element.
 
-Don't use the `role="term"` on interactive elements like links because it can interfere with assistive technology users ability to interact with the element. Also, the term itself is the accessible name, so do not use [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) or [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby).
+Don't use the `role="term"` on interactive elements like links because it can interfere with assistive technology users ability to interact with the element. Also, the term itself is the accessible name, so do not use [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) or [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby).
 
 > [!WARNING]
 > The accessible name should be the term itself, so DO NOT use `aria-label` or `aria-labelledby`.

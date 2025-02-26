@@ -15,17 +15,17 @@ A `menuitemcheckbox` is a `menuitem` with a checkable state whose possible value
 
 The items in menu and menubars are menu items. There are three types of menu items: [`menuitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role), [`menuitemradio`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role), and `menuitemcheckbox`.
 
-These three elements can only be contained in, or owned by, an element with role [`menu`](/en-US/docs/Web/Accessibility/ARIA/Roles/menu_role) or [`menubar`](/en-US/docs/Web/Accessibility/ARIA/Roles/menubar_role), optionally nested within a grouping element with role of [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role). Being nested or otherwise owned (see [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-owns)) in a `menu` or `menubar` identifies the menu items as being related widgets.
+These three elements can only be contained in, or owned by, an element with role [`menu`](/en-US/docs/Web/Accessibility/ARIA/Roles/menu_role) or [`menubar`](/en-US/docs/Web/Accessibility/ARIA/Roles/menubar_role), optionally nested within a grouping element with role of [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role). Being nested or otherwise owned (see [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-owns)) in a `menu` or `menubar` identifies the menu items as being related widgets.
 
 Menu items, including `menuitemcheckbox` elements, may be grouped within `group` elements or separated by elements with the [`separator`](/en-US/docs/Web/Accessibility/ARIA/Roles/separator_role) role or other equivalent native role such as {{HTMLElement('fieldset')}} and {{HTMLElement('hr')}}.
 
-Menu items containing the role of `menuitemcheckbox` must include the [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-checked) attribute to expose the checkbox's state to assistive technology, unless using [`<input type="checkbox">`](/en-US/docs/Web/HTML/Element/input/checkbox), in which case the [`checked`](/en-US/docs/Web/HTML/Element/input/checkbox#checked) attribute should be used.
+Menu items containing the role of `menuitemcheckbox` must include the [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-checked) attribute to expose the checkbox's state to assistive technology, unless using [`<input type="checkbox">`](/en-US/docs/Web/HTML/Element/input/checkbox), in which case the [`checked`](/en-US/docs/Web/HTML/Element/input/checkbox#checked) attribute should be used.
 
 Similar to the `checked` attribute of {{HTMLElement('input')}}s of type `checkbox`, the `aria-checked` attribute of a `menuitemcheckbox` indicates whether the menu item is checked (`true`), unchecked (`false`), or represents a sub-level menu of other menu items that have a mixture of checked and unchecked values (`mixed`). The `mixed` value is similar to the checkbox's [`indeterminate`](/en-US/docs/Web/HTML/Element/input/checkbox#indeterminate_state_checkboxes) attribute, which gives the appearance of a third, neither checked nor unchecked, state.
 
-An accessible name is required. Ideally, the accessible name should come from an associated {{htmlelement('label')}} element if using `<input type="checkbox">` or visible, descendant content. Realize if the label or descendant content is not sufficient and, preferably, [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) is used referencing non-descendant content or [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) is used, these two ARIA properties will hide other descendant content from assistive technologies.
+An accessible name is required. Ideally, the accessible name should come from an associated {{htmlelement('label')}} element if using `<input type="checkbox">` or visible, descendant content. Realize if the label or descendant content is not sufficient and, preferably, [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) is used referencing non-descendant content or [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) is used, these two ARIA properties will hide other descendant content from assistive technologies.
 
-If all elements in the set are not present in the DOM include the [`aria-setsize`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-setsize) and [`aria-posinset`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-posinset) properties. When specifying `aria-setsize` and `aria-posinset` on a `menuitemcheckbox`, set the value with respect to the total number of items in the menu, excluding any separators.
+If all elements in the set are not present in the DOM include the [`aria-setsize`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-setsize) and [`aria-posinset`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-posinset) properties. When specifying `aria-setsize` and `aria-posinset` on a `menuitemcheckbox`, set the value with respect to the total number of items in the menu, excluding any separators.
 
 The `menuitemcheckbox` element can have phrasing content, but can not have interactive content as descendants and no descendants with a `tabindex` attribute specified.
 
@@ -59,7 +59,7 @@ From the assistive technology user's perspective, the heading does not exist sin
   - : Similar to `menu` for a consistent set of frequently used commands remaining visible and usually presented horizontally.
 - [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role) role
   - : Container for a group of `menuitem` elements, including `menuitemcheckbox` elements within a `menu` or `menubar`.
-- [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-checked) (Required)
+- [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-checked) (Required)
   - : Set to `true`, `false`, or `mixed`, it indicates the current "checked" state of the menuitemcheckbox
 
 ### Keyboard interactions

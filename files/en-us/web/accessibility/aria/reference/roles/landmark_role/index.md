@@ -18,7 +18,7 @@ A `landmark` is an abstract role for a section of content that is important enou
 
 To create a landmark role, define the purpose of the content by using a semantic element such as `<section>`, `<nav>`, or `<main>`, or adding an ARIA role that is a subclass of the `landmark` role such as [`role="banner"`](/en-US/docs/Web/Accessibility/ARIA/Roles/banner_role), [`role="complementary"`](/en-US/docs/Web/Accessibility/ARIA/Roles/complementary_role), or [`role="region"`](/en-US/docs/Web/Accessibility/ARIA/Roles/region_role). Do not use `role="landmark"`.
 
-A visible label should be provided, referenced with [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby). If necessary, brief, descriptive, label can be provided with [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label).
+A visible label should be provided, referenced with [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby). If necessary, brief, descriptive, label can be provided with [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label).
 
 For screen reader users, adding landmark roles effectively creates 'skip links' for screen reader users, but don't replace in page navigation as the landmark roles are not otherwise surfaced.
 

@@ -78,7 +78,7 @@ Do not nest additional {{HTMLElement('footer')}} elements or `contentinfo` landm
 
 #### Multiple landmarks
 
-If there is more than one `contentinfo` landmark role or {{HTMLElement('footer')}} element in a document, provide a label with the [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) attribute for each landmark. This label will allow assistive technology users to quickly understand the purpose of each landmark.
+If there is more than one `contentinfo` landmark role or {{HTMLElement('footer')}} element in a document, provide a label with the [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) attribute for each landmark. This label will allow assistive technology users to quickly understand the purpose of each landmark.
 
 ```html
 <body>

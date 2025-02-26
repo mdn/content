@@ -6,7 +6,7 @@ page-type: aria-role
 
 {{AccessibilitySidebar}}
 
-The `checkbox` role is for checkable interactive controls. Elements containing `role="checkbox"` must also include the [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-checked) attribute to expose the checkbox's state to assistive technology.
+The `checkbox` role is for checkable interactive controls. Elements containing `role="checkbox"` must also include the [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-checked) attribute to expose the checkbox's state to assistive technology.
 
 ```html
 <span
@@ -57,7 +57,7 @@ From the assistive technology user's perspective, the heading does not exist sin
 
 ### Associated WAI-ARIA Roles, States, and Properties
 
-- [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-checked)
+- [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-checked)
 
   - : The value of `aria-checked` defines the state of a checkbox. This attribute has one of three possible values:
 

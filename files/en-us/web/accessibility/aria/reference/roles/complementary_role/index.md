@@ -60,7 +60,7 @@ Using the {{HTMLElement('aside')}} element will automatically communicate a sect
 
 #### Multiple landmarks
 
-If there is more than one `complementary` landmark role or {{HTMLElement('aside')}} element in a document, provide a label for each landmark using the [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) attribute, or, if the aside has an appropriately descriptive title, point to it with the [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) attribute. This label will allow an assistive technology user to be able to quickly understand the purpose of each landmark.
+If there is more than one `complementary` landmark role or {{HTMLElement('aside')}} element in a document, provide a label for each landmark using the [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) attribute, or, if the aside has an appropriately descriptive title, point to it with the [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) attribute. This label will allow an assistive technology user to be able to quickly understand the purpose of each landmark.
 
 ```html
 <aside aria-label="Note about usage">

@@ -23,7 +23,7 @@ The alert role should only be used for information that requires the user's imme
 
 The `alert` role should only be used for text content, not interactive elements such as links or buttons. The element with the `alert` role does not have to be able to receive focus, as screen readers (speech or braille) will automatically announce the updated content regardless of where keyboard focus when the role is added.
 
-The `alert` role is added to the node containing an alert message, **not** the element causing the alert to be triggered. Alerts are [assertive live regions](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions). Setting `role="alert"` is equivalent to setting [`aria-live="assertive"`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-live) and [`aria-atomic="true"`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-atomic). As they don't receive focus, focus does not need to be managed and no user interaction should be required.
+The `alert` role is added to the node containing an alert message, **not** the element causing the alert to be triggered. Alerts are [assertive live regions](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions). Setting `role="alert"` is equivalent to setting [`aria-live="assertive"`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-live) and [`aria-atomic="true"`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-atomic). As they don't receive focus, focus does not need to be managed and no user interaction should be required.
 
 > [!WARNING]
 > Because of its intrusive nature, the `alert` role must be used sparingly and only in situations where the user's immediate attention is required.
@@ -115,8 +115,8 @@ document.getElementById("hiddenAlertContainer").textContent =
 
 ## See also
 
-- [`aria-live`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-live)
-- [`aria-atomic`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-atomic)
+- [`aria-live`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-live)
+- [`aria-atomic`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-atomic)
 - [ARIA: `log` role](/en-US/docs/Web/Accessibility/ARIA/Roles/log_role)
 - [ARIA: `marquee` role](/en-US/docs/Web/Accessibility/ARIA/Roles/marquee_role)
 - [ARIA: `status` role](/en-US/docs/Web/Accessibility/ARIA/Roles/status_role)

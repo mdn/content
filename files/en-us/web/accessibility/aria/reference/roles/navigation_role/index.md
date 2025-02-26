@@ -30,7 +30,7 @@ It is preferable to use the HTML5 [`<nav>` element](/en-US/docs/Web/HTML/Element
 
 ### Associated WAI-ARIA Roles, States, and Properties
 
-- [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label)
+- [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label)
   - : A brief description of the purpose of the navigation, omitting the term "navigation", as the screen reader will read both the role and the contents of the label.
 
 ### Keyboard Interactions

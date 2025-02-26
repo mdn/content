@@ -99,5 +99,5 @@ Using the {{HTMLElement('a')}} instead.
 
 - The {{HTMLElement('a')}} element
 - The {{HTMLElement('button')}} element
-- [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label)
+- [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label)
 - [ARIA practices `link` role examples](https://www.w3.org/WAI/ARIA/apg/patterns/link/examples/link/)

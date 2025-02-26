@@ -42,9 +42,9 @@ The element with `role="row"` is a row within a [`grid`](/en-US/docs/Web/Accessi
 
 To create an ARIA row, add `role="row"` to the container element. That row should be nested within a grid, table or treegrid. A group of rows can be nested within a grid, table or treegrid directly, or within a rowgroup in one of those containers. Each row contains child cells. These cells can be of different types, depending on whether they are column or row headers, or grid or regular cells.
 
-A row can contain a number of attributes clarifying the row's role, including [`aria-colindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colindex), [`aria-level`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-level), [`aria-rowindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowindex), and [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected).
+A row can contain a number of attributes clarifying the row's role, including [`aria-colindex`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colindex), [`aria-level`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-level), [`aria-rowindex`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-rowindex), and [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-selected).
 
-If the row is within a treegrid, rows can include the [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded) attribute, using the attribute to indicate the present status. This is not the case for an ordinary table or grid, in which the `aria-expanded` attribute is not present.
+If the row is within a treegrid, rows can include the [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded) attribute, using the attribute to indicate the present status. This is not the case for an ordinary table or grid, in which the `aria-expanded` attribute is not present.
 
 To create an interactive widget that has a tabular structure, use the grid pattern instead. If the interaction provides for the selection state of individual cells, if left to right and top to bottom navigation is provided, or if the user interface allows the rearranging of cell order or otherwise changing individual cell order such as through drag and drop, use [grid](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role) or [treegrid](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role) instead.
 
@@ -77,7 +77,7 @@ To create an interactive widget that has a tabular structure, use the grid patte
 
 #### States and properties
 
-- [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded) state
+- [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded) state
 
   - : The `aria-expanded` attribute, which defines the state of the row, can take one of three values, or be omitted:
 
@@ -87,7 +87,7 @@ To create an interactive widget that has a tabular structure, use the grid patte
 
     If the element with the `aria-expanded` attribute controls the expansion of another grouping container that is not 'owned by' the element, the author **should** reference the container by using the `aria-controls` attribute.
 
-- [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected) state
+- [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-selected) state
 
   - : Only relevant if the row is in an interactive container, such as a grid or treegrid, but not relevant if the row is in a table. The `aria-selected` attribute can take one of three values, or be omitted:
 
@@ -95,7 +95,7 @@ To create an interactive widget that has a tabular structure, use the grid patte
     - `aria-selected="false"`: Row is not currently selected.
     - `aria-selected="undefined"` or the attribute is missing: The row is not selectable.
 
-- [`aria-colindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colindex) attribute
+- [`aria-colindex`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colindex) attribute
 
   - : The `aria-colindex` attribute is only needed if columns are hidden from the DOM. It is generally placed on row children, rather than on the row itself. If the columns displayed are contiguous, then it can be placed on the row.
 
@@ -105,7 +105,7 @@ To create an interactive widget that has a tabular structure, use the grid patte
 
     If all the columns are in the DOM, this attribute is not necessary.
 
-- [`aria-rowindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowindex) attribute
+- [`aria-rowindex`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-rowindex) attribute
 
   - : The `aria-rowindex` attribute is only needed if rows are hidden from the DOM, to indicate which row, in the list of total rows, is being read. The attribute, placed with a unique value on each row, takes as its value an integer between 1 and the total number of rows within the table, grid or treegrid, indicating the position, or index, of each row. For example, if a table has 1,500 rows, but only the header and rows 47 and 52 are in the DOM, `aria-rowindex="1"` would be set on the header row, and `aria-rowindex="47"` and `aria-rowindex="52"` would be set on the 47th and 52nd row, respectively.
 

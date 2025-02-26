@@ -31,25 +31,25 @@ While all three of these ranges have the same ARIA states and properties, the `s
 
 #### Common attributes
 
-The [`aria-valuemin`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemin) attribute sets the minimum value. If omitted or not a number, it defaults to `0` (zero).
+The [`aria-valuemin`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuemin) attribute sets the minimum value. If omitted or not a number, it defaults to `0` (zero).
 
-The [`aria-valuemax`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemax) attribute defines the maximum value. If it is missing or not a number, it defaults to 100.
+The [`aria-valuemax`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuemax) attribute defines the maximum value. If it is missing or not a number, it defaults to 100.
 
-The [`aria-valuenow`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuenow) attribute value must be between the minimum and maximum values, inclusive. This attribute is required for `slider` and `meter`, and optional for `progressbar`.
+The [`aria-valuenow`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuenow) attribute value must be between the minimum and maximum values, inclusive. This attribute is required for `slider` and `meter`, and optional for `progressbar`.
 
 For `slider`, unless using the [`<input type="range">`](/en-US/docs/Web/HTML/Element/input/range) element, the `aria-valuenow` value must be updated programmatically when the user updates the value.
 
-The optional [`aria-valuetext`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuetext) attribute is included when the `aria-valuenow` numeric value doesn't reflect the intended value of the slider. As the minimum, maximum, and current values are all numeric, when the values those numbers represent are not numeric, the `aria-valuetext` attribute should be included with a string value defining the numeric value. For example, if using a slider for t-shirt sizes, the `aria-valuetext` attribute should shift from xx-small through to XX-large as the `aria-valuenow` increases.
+The optional [`aria-valuetext`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuetext) attribute is included when the `aria-valuenow` numeric value doesn't reflect the intended value of the slider. As the minimum, maximum, and current values are all numeric, when the values those numbers represent are not numeric, the `aria-valuetext` attribute should be included with a string value defining the numeric value. For example, if using a slider for t-shirt sizes, the `aria-valuetext` attribute should shift from xx-small through to XX-large as the `aria-valuenow` increases.
 
 The `aria-valuetext` value must be updated as the `value` or `aria-valuenow` is updated. While there is no equivalent HTML attribute for `<input type="range">`, you can include `aria-valuetext` on any {{htmlelement('input')}} type. ARIA attributes are supported on semantic HTML elements.
 
 When `aria-valuetext` is an important feature for a slider, consider using {{HTMLElement('select')}} with {{HTMLElement('option')}} elements instead. While not visually a range, every option's value is more accessible to all users, not just users of assistive technology.
 
-An accessible name is **required**. If the range's role is applied to an HTML {{HTMLElement('input')}} element (or `<meter>` or `<progress>` element), the accessible name can come from the associated {{HTMLElement('label')}}. Otherwise use [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) if a visible label is present or [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) if a visible label is not present.
+An accessible name is **required**. If the range's role is applied to an HTML {{HTMLElement('input')}} element (or `<meter>` or `<progress>` element), the accessible name can come from the associated {{HTMLElement('label')}}. Otherwise use [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) if a visible label is present or [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) if a visible label is not present.
 
 When not using the HTML {{HTMLElement('input')}} element to create your slider, include the [`tabindex`](/en-US/docs/Web/HTML/Global_attributes/tabindex) attribute to make the slider focusable. Of the three range types, only `slider` is user-interactive, and so is the only one that requires being able to receive focus. Focus should be placed on the slider thumb.
 
-Sliders have an implicit [`aria-orientation`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-orientation) value of `horizontal`. This attribute is not supported with `meter` or `progressbar`.
+Sliders have an implicit [`aria-orientation`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-orientation) value of `horizontal`. This attribute is not supported with `meter` or `progressbar`.
 
 ### User interactions
 
@@ -92,17 +92,17 @@ From the assistive technology user's perspective, the heading does not exist sin
 
 ## Associated roles, states, and properties
 
-- [`aria-valuenow`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuenow) (required)
+- [`aria-valuenow`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuenow) (required)
   - : Set to a decimal value between `aria-valuemin` and `aria-valuemax`, indicating the current value of the slider.
-- [`aria-valuetext`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuetext)
+- [`aria-valuetext`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuetext)
   - : Assistive technologies often present the value of `aria-valuenow` as a number. If this would not be accurate, use `aria-valuetext` to provide the slider with a more understandable value.
-- [`aria-valuemin`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemin)
+- [`aria-valuemin`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuemin)
   - : Set to a decimal value representing the minimum value, and less than `aria-valuemax`. If not present, the default value is 0.
-- [`aria-valuemax`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemax)
+- [`aria-valuemax`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuemax)
   - : Set to a decimal value representing the maximum value, and greater than `aria-valuemin`. If not present, the default value is 100.
-- [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) or [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
+- [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) or [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby)
   - : Defines the string value or identifies the element (or elements) that label the slider element providing an accessible name. An accessible name is required.
-- [`aria-orientation`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-orientation)
+- [`aria-orientation`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-orientation)
   - : Indicates whether the element's orientation is horizontal, vertical, or unknown/ambiguous. With a slider, the implicit value is `horizontal` but can be set to `vertical`. As it has an implicit value, the slider orientation is never ambiguous.
 
 ## Examples
@@ -186,7 +186,7 @@ For the optional <kbd>Page Up</kbd> and <kbd>Page Down</kbd> keys, the change in
 
 ## Best practices
 
-If the slider is describing the loading progress of a particular region of a page, include the [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) attribute to reference the slider status, and set the [`aria-busy`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-busy) attribute to `true` on the region until it is finished loading.
+If the slider is describing the loading progress of a particular region of a page, include the [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) attribute to reference the slider status, and set the [`aria-busy`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-busy) attribute to `true` on the region until it is finished loading.
 
 HTML's `<input type="range">` implicitly has the `role` of `slider`. Do not use `aria-valuemax` or `aria-valuemin` attributes on `<input type="range">` elements; use `min` and `max` instead. Otherwise, any global `aria-*` attributes and any other `aria-*` attributes applicable to the slider role.
 

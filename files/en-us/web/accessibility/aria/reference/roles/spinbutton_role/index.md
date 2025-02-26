@@ -40,19 +40,19 @@ While all three of these ranges have the same ARIA states and properties, the `s
 
 #### Common attributes
 
-The [`aria-valuemin`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemin) attribute sets the minimum value. If omitted or not a number, it defaults to `0` (zero).
+The [`aria-valuemin`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuemin) attribute sets the minimum value. If omitted or not a number, it defaults to `0` (zero).
 
-The [`aria-valuemax`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemax) attribute defines the maximum value. If it is missing or not a number, it defaults to `100`.
+The [`aria-valuemax`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuemax) attribute defines the maximum value. If it is missing or not a number, it defaults to `100`.
 
-The [`aria-valuenow`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuenow) attribute value must be between the minimum and maximum values, both inclusive. This attribute is required for `spinbutton` and `meter`, and optional for `progressbar`.
+The [`aria-valuenow`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuenow) attribute value must be between the minimum and maximum values, both inclusive. This attribute is required for `spinbutton` and `meter`, and optional for `progressbar`.
 
 For `spinbutton`, unless using semantic HTML elements like [`<input type="number">`](/en-US/docs/Web/HTML/Element/input/number), if the value is updated, the `aria-valuenow` value must also be updated programmatically.
 
-The optional [`aria-valuetext`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuetext) attribute is included when the `aria-valuenow` numeric value doesn't reflect the intended value of the spinbutton. The optional minimum, maximum, and current values should be numeric. When the values these numbers represent are not numeric, the `aria-valuetext` attribute should be included with a string value defining the numeric value. For example, if using a spinbutton for t-shirt sizes, the `aria-valuetext` attribute should shift from `XX-Small` through `XX-Large` as the `aria-valuenow` increases.
+The optional [`aria-valuetext`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuetext) attribute is included when the `aria-valuenow` numeric value doesn't reflect the intended value of the spinbutton. The optional minimum, maximum, and current values should be numeric. When the values these numbers represent are not numeric, the `aria-valuetext` attribute should be included with a string value defining the numeric value. For example, if using a spinbutton for t-shirt sizes, the `aria-valuetext` attribute should shift from `XX-Small` through `XX-Large` as the `aria-valuenow` increases.
 
 The `aria-valuetext` value must be updated as the value or `aria-valuenow` is updated. ARIA attributes are supported on semantic HTML elements. While there is no equivalent HTML attribute for `<input>`, you can include `aria-valuetext` on any {{htmlelement('input')}} type. When `aria-valuetext` is an important feature for a spinbutton, consider using {{HTMLElement('select')}} with {{HTMLElement('option')}} elements instead.
 
-An accessible name is **required**. If the `spinbutton` role is applied to an HTML {{HTMLElement('input')}} element, the accessible name can come from the associated {{HTMLElement('label')}}. Otherwise, use [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) if a visible label is present or [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) if a visible label is not present.
+An accessible name is **required**. If the `spinbutton` role is applied to an HTML {{HTMLElement('input')}} element, the accessible name can come from the associated {{HTMLElement('label')}}. Otherwise, use [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) if a visible label is present or [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) if a visible label is not present.
 
 When not using the HTML {{HTMLElement('input')}} element to create your spinbutton, include the [`tabindex`](/en-US/docs/Web/HTML/Global_attributes/tabindex) attribute to make the spinbutton focusable. The `spinbutton` role is user-interactive, and therefore, requires being able to receive focus. Focus should be placed on the spinbutton input and not on the associated buttons that increment and decrement the spinbutton value.
 
@@ -62,25 +62,25 @@ There are some types of user interface components that, when represented in a pl
 
 ## Associated roles, states, and properties
 
-- [`aria-valuenow`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuenow) (required)
+- [`aria-valuenow`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuenow) (required)
 
   - : Set to a decimal value between `aria-valuemin` and `aria-valuemax`, indicating the current value of the spinbutton. If not present, there is no default value.
 
-- [`aria-valuetext`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuetext)
+- [`aria-valuetext`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuetext)
 
   - : Assistive technologies often present the value of `aria-valuenow` as a number. If `aria-valuenow` cannot be accurate, use `aria-valuetext` to provide the spinbutton with a more understandable value.
 
-- [`aria-valuemin`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemin)
+- [`aria-valuemin`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuemin)
 
   - : Set to a decimal value representing the minimum value and less than `aria-valuemax`. If not present, there is no default value.
 
-- [`aria-valuemax`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemax)
+- [`aria-valuemax`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuemax)
 
   - : Set to a decimal value representing the maximum value and greater than `aria-valuemin`. If not present, there is no default value.
 
-- [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
+- [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby)
   - : Defines the string value or identifies the element (or elements) that label the spinbutton element providing an accessible name. An accessible name is required.
-- [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label)
+- [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label)
   - : Defines a string value that labels the spinbutton element. This provides an accessible name to the element when no visible label is available to provide the required accessible name via {{HTMLElement('label')}} or `aria-labelledby`.
 
 ## Examples
