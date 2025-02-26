@@ -9,7 +9,68 @@ browser-compat: css.properties.animation-name
 
 The **`animation-name`** [CSS](/en-US/docs/Web/CSS) property specifies the names of one or more {{cssxref("@keyframes")}} at-rules that describe the animation to apply to an element. Multiple `@keyframe` at-rules are specified as a comma-separated list of names. If the specified name does not match any `@keyframe` at-rule, no properties are animated.
 
-{{EmbedInteractiveExample("pages/css/animation-name.html")}}
+{{InteractiveExample("CSS Demo: animation-name")}}
+
+```css interactive-example-choice
+animation-name: none;
+```
+
+```css interactive-example-choice
+animation-name: slide;
+```
+
+```css interactive-example-choice
+animation-name: bounce;
+```
+
+```html interactive-example
+<section class="flex-column" id="default-example">
+  <div class="animating" id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  animation-direction: alternate;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
+  background-color: #1766aa;
+  border-radius: 50%;
+  border: 5px solid #333;
+  color: white;
+  height: 150px;
+  margin: auto;
+  margin-left: 0;
+  width: 150px;
+}
+
+@keyframes slide {
+  from {
+    background-color: orange;
+    color: black;
+    margin-left: 0;
+  }
+  to {
+    background-color: orange;
+    color: black;
+    margin-left: 80%;
+  }
+}
+
+@keyframes bounce {
+  from {
+    background-color: orange;
+    color: black;
+    margin-top: 0;
+  }
+  to {
+    background-color: orange;
+    color: black;
+    margin-top: 40%;
+  }
+}
+```
 
 It is often convenient to use the shorthand property {{cssxref("animation")}} to set all animation properties at once.
 

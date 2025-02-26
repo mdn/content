@@ -9,7 +9,57 @@ browser-compat: css.properties.margin-bottom
 
 The **`margin-bottom`** [CSS](/en-US/docs/Web/CSS) property sets the [margin area](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#margin_area) on the bottom of an element. A positive value places it farther from its neighbors, while a negative value places it closer.
 
-{{EmbedInteractiveExample("pages/css/margin-bottom.html")}}
+{{InteractiveExample("CSS Demo: margin-bottom")}}
+
+```css interactive-example-choice
+margin-bottom: 1em;
+```
+
+```css interactive-example-choice
+margin-bottom: 10%;
+```
+
+```css interactive-example-choice
+margin-bottom: 10px;
+```
+
+```css interactive-example-choice
+margin-bottom: 0;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="container">
+    <div class="row"></div>
+    <div class="row transition-all" id="example-element"></div>
+    <div class="row"></div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#container {
+  width: 300px;
+  height: 200px;
+  display: flex;
+  align-content: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.row {
+  height: 33.33%;
+  display: inline-block;
+  border: solid #ce7777 10px;
+  background-color: #2b3a55;
+  flex-shrink: 0;
+}
+
+#example-element {
+  border: solid 10px #ffbf00;
+  background-color: #2b3a55;
+}
+```
 
 ![The effect of the CSS margin-bottom property on the element box](margin-bottom.svg)
 

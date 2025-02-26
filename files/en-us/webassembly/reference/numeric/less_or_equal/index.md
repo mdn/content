@@ -9,7 +9,35 @@ The **`le`** instructions, short for _less or equal_, check if a number is less 
 
 The integer types have separate less or equal instructions for signed (**`le_s`**) and unsigned (**`le_u`**) numbers.
 
-{{EmbedInteractiveExample("pages/wat/le.html", "tabbed-taller")}}
+{{InteractiveExample("Wat Demo: le", "tabbed-taller")}}
+
+```wat interactive-example
+(module
+  (import "env" "log_bool" (func $log_bool (param i32)))
+  (func $main
+    ;; load `10` and `2` onto the stack
+    i32.const 10
+    i32.const 2
+
+    i32.le_u ;; check if `10` is  less than or equal to '2'
+    call $log_bool ;; log the result
+  )
+  (start $main)
+)
+```
+
+```js interactive-example
+const url = "{%wasm-url%}";
+
+function log_bool(value) {
+  console.log(Boolean(value));
+  // Expected output: false
+}
+
+await WebAssembly.instantiateStreaming(fetch(url), {
+  env: { log_bool },
+});
+```
 
 ## Syntax
 

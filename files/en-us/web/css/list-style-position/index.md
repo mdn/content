@@ -9,7 +9,65 @@ browser-compat: css.properties.list-style-position
 
 The **`list-style-position`** [CSS](/en-US/docs/Web/CSS) property sets the position of the {{cssxref("::marker")}} relative to a list item.
 
-{{EmbedInteractiveExample("pages/css/list-style-position.html")}}
+{{InteractiveExample("CSS Demo: list-style-position")}}
+
+```css interactive-example-choice
+list-style-position: inside;
+```
+
+```css interactive-example-choice
+list-style-position: outside;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div>
+    <p>NASA Notable Missions</p>
+    <ul class="transition-all" id="example-element">
+      <li>Apollo 11: First Human Landing</li>
+      <li>City in Space: The International Space Station</li>
+      <li>Great Observatory: The Hubble Space Telescope</li>
+      <li>Everlasting Mars Rovers</li>
+    </ul>
+  </div>
+</section>
+```
+
+```css interactive-example
+.default-example {
+  font-size: 1.2rem;
+}
+
+#example-element {
+  width: 100%;
+  background: #be094b;
+  color: white;
+}
+
+section {
+  text-align: left;
+  flex-direction: column;
+}
+
+hr {
+  width: 50%;
+  color: lightgray;
+  margin: 0.5em;
+}
+
+.note {
+  font-size: 0.8rem;
+}
+
+.note a {
+  color: #009e5f;
+}
+
+@counter-style space-counter {
+  symbols: "\1F680" "\1F6F8" "\1F6F0" "\1F52D";
+  suffix: " ";
+}
+```
 
 ## Syntax
 

@@ -11,7 +11,33 @@ The **`scale()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_
 plane. Because the amount of scaling is defined by a vector [sx, sy], it can resize the horizontal and vertical dimensions at
 different scales. Its result is a {{cssxref("&lt;transform-function&gt;")}} data type.
 
-{{EmbedInteractiveExample("pages/css/function-scale.html")}}
+{{InteractiveExample("CSS Demo: scale()")}}
+
+```css interactive-example-choice
+transform: scale(1);
+```
+
+```css interactive-example-choice
+transform: scale(0.7);
+```
+
+```css interactive-example-choice
+transform: scale(1.3, 0.4);
+```
+
+```css interactive-example-choice
+transform: scale(-0.5, 1);
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    id="example-element"
+    src="/shared-assets/images/examples/firefox-logo.svg"
+    width="200" />
+</section>
+```
 
 This scaling transformation is characterized by a two-dimensional vector. Its coordinates define how much scaling is
 done in each direction. If both coordinates are equal, the scaling is uniform (_isotropic_) and the aspect

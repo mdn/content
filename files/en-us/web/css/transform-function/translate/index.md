@@ -10,7 +10,49 @@ browser-compat: css.types.transform-function.translate
 The **`translate()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) repositions an element in the horizontal and/or vertical
 directions. Its result is a {{cssxref("&lt;transform-function&gt;")}} data type.
 
-{{EmbedInteractiveExample("pages/css/function-translate.html")}}
+{{InteractiveExample("CSS Demo: translate()")}}
+
+```css interactive-example-choice
+transform: translate(0);
+```
+
+```css interactive-example-choice
+transform: translate(42px, 18px);
+```
+
+```css interactive-example-choice
+transform: translate(-2.1rem, -2ex);
+```
+
+```css interactive-example-choice
+transform: translate(3ch, 3mm);
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    id="static-element"
+    src="/shared-assets/images/examples/firefox-logo.svg"
+    width="200" />
+  <img
+    class="transition-all"
+    id="example-element"
+    src="/shared-assets/images/examples/firefox-logo.svg"
+    width="200" />
+</section>
+```
+
+```css interactive-example
+#static-element {
+  opacity: 0.4;
+  position: absolute;
+}
+
+#example-element {
+  position: absolute;
+}
+```
 
 This transformation is characterized by a two-dimensional vector [tx, ty]. Its coordinates define how much the element moves
 in each direction.

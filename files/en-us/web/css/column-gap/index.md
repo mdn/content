@@ -13,7 +13,42 @@ Initially a part of [Multi-column Layout](/en-US/docs/Web/CSS/CSS_multicol_layou
 
 Early versions of the specification called this property `grid-column-gap`, and to maintain compatibility with legacy websites, browsers will still accept `grid-column-gap` as an alias for `column-gap`.
 
-{{EmbedInteractiveExample("pages/css/column-gap.html")}}
+{{InteractiveExample("CSS Demo: column-gap")}}
+
+```css interactive-example-choice
+column-gap: normal;
+```
+
+```css interactive-example-choice
+column-gap: 2rem;
+```
+
+```css interactive-example-choice
+column-gap: 9px;
+```
+
+```css interactive-example-choice
+column-gap: 12%;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p id="example-element">
+    London. Michaelmas term lately over, and the Lord Chancellor sitting in
+    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
+    as if the waters had but newly retired from the face of the earth, and it
+    would not be wonderful to meet a Megalosaurus, forty feet long or so,
+    waddling like an elephantine lizard up Holborn Hill.
+  </p>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  columns: 2;
+  text-align: left;
+}
+```
 
 ## Syntax
 

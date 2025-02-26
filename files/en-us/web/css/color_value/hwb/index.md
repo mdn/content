@@ -12,7 +12,37 @@ spec-urls:
 
 The **`hwb()`** functional notation expresses a color in the {{glossary("RGB", "sRGB")}} {{glossary("color space")}} according to its hue, whiteness, and blackness. An optional alpha component represents the color's transparency.
 
-{{EmbedInteractiveExample("pages/css/function-hwb.html")}}
+{{InteractiveExample("CSS Demo: hwb()")}}
+
+```css interactive-example-choice
+background: hwb(12 50% 0%);
+```
+
+```css interactive-example-choice
+background: hwb(50deg 30% 40%);
+```
+
+```css interactive-example-choice
+background: hwb(0.5turn 10% 0% / 0.5);
+```
+
+```css interactive-example-choice
+background: hwb(0 100% 0% / 50%);
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="transition-all" id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  min-width: 100%;
+  min-height: 100%;
+  padding: 10%;
+}
+```
 
 ## Syntax
 

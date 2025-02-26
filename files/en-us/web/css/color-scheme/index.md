@@ -18,7 +18,32 @@ Component authors must use the [`prefers-color-scheme`](/en-US/docs/Web/CSS/@med
 
 Common choices for operating system color schemes are "light" and "dark", or "day mode" and "night mode". When a user selects one of these color schemes, the operating system makes adjustments to the user interface. This includes [form controls](/en-US/docs/Learn_web_development/Extensions/Forms), [scrollbars](/en-US/docs/Web/CSS/CSS_scrollbars_styling), and the used values of [CSS system colors](/en-US/docs/Web/CSS/system-color).
 
-{{EmbedInteractiveExample("pages/css/color-scheme.html")}}
+{{InteractiveExample("CSS Demo: color-scheme")}}
+
+```css interactive-example-choice
+color-scheme: normal;
+```
+
+```css interactive-example-choice
+color-scheme: dark;
+```
+
+```css interactive-example-choice
+color-scheme: light;
+```
+
+```html interactive-example
+<section class="default-example container" id="default-example">
+  <textarea id="example-element">Text Area</textarea>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  width: 80%;
+  height: 50%;
+}
+```
 
 ## Syntax
 

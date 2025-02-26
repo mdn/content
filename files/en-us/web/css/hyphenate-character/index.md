@@ -11,7 +11,35 @@ The **`hyphenate-character`** [CSS](/en-US/docs/Web/CSS) property sets the chara
 
 Both automatic and soft hyphens are displayed according to the specified hyphenate-character value.
 
-{{EmbedInteractiveExample("pages/css/hyphenate-character.html")}}
+{{InteractiveExample("CSS Demo: hyphenate-character")}}
+
+```css interactive-example-choice
+hyphenate-character: auto;
+```
+
+```css interactive-example-choice
+hyphenate-character: "=";
+```
+
+```css interactive-example-choice
+hyphenate-character: "—";
+```
+
+```html interactive-example
+<section id="default-example">
+  <p id="example-element">An extra­ordinarily long English word!</p>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 2px dashed #999;
+  font-size: 1.5rem;
+  text-align: left;
+  width: 7rem;
+  hyphens: auto;
+}
+```
 
 ## Syntax
 

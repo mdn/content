@@ -7,7 +7,35 @@ sidebar: webassemblysidebar
 
 The **`clz`** instructions, short for _count leading zeros_, are used to count the amount of zeros at the start of the numbers binary representation.
 
-{{EmbedInteractiveExample("pages/wat/clz.html", "tabbed-taller")}}
+{{InteractiveExample("Wat Demo: clz", "tabbed-taller")}}
+
+```wat interactive-example
+(module
+
+  (func (export "leading0") (param $num i32) (result i32)
+    ;; load number onto the stack
+    local.get $num
+
+    ;; check how many leading zeros and return the result
+    i32.clz
+  )
+
+)
+```
+
+```js interactive-example
+const url = "{%wasm-url%}";
+await WebAssembly.instantiateStreaming(fetch(url), { console }).then(
+  (result) => {
+    const leading0 = result.instance.exports.leading0;
+
+    console.log(
+      `Leading zeros: ${leading0(0b00000000_10000000_00000000_00000000)}`,
+    );
+    // Expected output: "Leading zeros: 8"
+  },
+);
+```
 
 ## Syntax
 
