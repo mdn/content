@@ -117,7 +117,7 @@
 /en-US/docs/Accessibility/HTML_To_MSAA	/en-US/docs/Web/Accessibility
 /en-US/docs/Accessibility/Implementing_MSAA_server	/en-US/docs/Web/Accessibility
 /en-US/docs/Accessibility/Implementing_an_MSAA_Server	/en-US/docs/Web/Accessibility
-/en-US/docs/Accessibility/Keyboard-navigable_JavaScript_widgets	/en-US/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets
+/en-US/docs/Accessibility/Keyboard-navigable_JavaScript_widgets	/en-US/docs/Web/Accessibility/Guides/Keyboard-navigable_JavaScript_widgets
 /en-US/docs/Accessibility/Web_Development	/en-US/docs/Web/Accessibility
 /en-US/docs/Accessibility/Web_applications_and_ARIA_FAQ	/en-US/docs/Web/Accessibility/ARIA
 /en-US/docs/Accessibility:Community	/en-US/docs/Web/Accessibility
@@ -11590,6 +11590,7 @@
 /en-US/docs/Web/Accessibility/Implementing_an_MSAA_Server	/en-US/docs/Web/Accessibility
 /en-US/docs/Web/Accessibility/Index	/en-US/docs/Web/Accessibility
 /en-US/docs/Web/Accessibility/Information_for_Web_authors	/en-US/docs/Web/Accessibility/Guides/Information_for_Web_authors
+/en-US/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets	/en-US/docs/Web/Accessibility/Guides/Keyboard-navigable_JavaScript_widgets
 /en-US/docs/Web/Accessibility/Seizure_disorders/Accessibility_and_Spacial_Patterns	/en-US/docs/Web/Accessibility/Guides/Accessibility_and_Spacial_Patterns
 /en-US/docs/Web/Accessibility/Understanding_WCAG/Understandable/Text_labels_and_names	/en-US/docs/Web/Accessibility/Understanding_WCAG/Text_labels_and_names
 /en-US/docs/Web/Accessibility/Web_Development	/en-US/docs/Web/Accessibility

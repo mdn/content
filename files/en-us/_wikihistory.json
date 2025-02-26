@@ -71928,7 +71928,7 @@
     "modified": "2019-03-23T23:27:44.949Z",
     "contributors": ["fscholz", "Fredchat", "Sheppy", "openjck"]
   },
-  "Web/Accessibility/Keyboard-navigable_JavaScript_widgets": {
+  "Web/Accessibility/Guides/Keyboard-navigable_JavaScript_widgets": {
     "modified": "2019-07-04T06:51:41.901Z",
     "contributors": [
       "fuzzbomb",

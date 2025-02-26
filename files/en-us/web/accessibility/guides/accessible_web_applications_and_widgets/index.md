@@ -168,11 +168,11 @@ Here's a summary of how keyboard navigation should work in an ARIA-enabled web a
 - Within a form, the Spacebar key should select or activate the control, while the Enter key should submit the form's default action.
 - If in doubt, mimic the standard desktop behavior of the control you are creating.
 
-So, for the Tabs widget example above, the user should be able to navigate into and out of the widget's container (the {{HTMLElement('ol')}} in our markup) using the Tab and Shift-Tab keys. Once keyboard focus is inside the container, the arrow keys should allow the user to navigate between each tab (the {{HTMLElement('li')}} elements). From here, conventions vary from platform to platform. On Windows, the next tab should automatically be activated when the user presses the arrow keys. On macOS, the user can press either Enter or the Spacebar to activate the next tab. An in-depth tutorial for creating [Keyboard-navigable JavaScript widgets](/en-US/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets) describes how to implement this behavior with JavaScript.
+So, for the Tabs widget example above, the user should be able to navigate into and out of the widget's container (the {{HTMLElement('ol')}} in our markup) using the Tab and Shift-Tab keys. Once keyboard focus is inside the container, the arrow keys should allow the user to navigate between each tab (the {{HTMLElement('li')}} elements). From here, conventions vary from platform to platform. On Windows, the next tab should automatically be activated when the user presses the arrow keys. On macOS, the user can press either Enter or the Spacebar to activate the next tab. An in-depth tutorial for creating [Keyboard-navigable JavaScript widgets](/en-US/docs/Web/Accessibility/Guides/Keyboard-navigable_JavaScript_widgets) describes how to implement this behavior with JavaScript.
 
 ## See also
 
 - [ARIA](/en-US/docs/Web/Accessibility/ARIA)
-- [Writing Keyboard-navigable JavaScript widgets](/en-US/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets)
+- [Writing Keyboard-navigable JavaScript widgets](/en-US/docs/Web/Accessibility/Guides/Keyboard-navigable_JavaScript_widgets)
 - [WAI-ARIA Specification](https://www.w3.org/TR/wai-aria-1.1/)
 - [WAI-ARIA Authoring Practices](https://www.w3.org/WAI/ARIA/apg/)
