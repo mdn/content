@@ -69,5 +69,5 @@ frameDiv.appendChild(iframe);
 
 - The {{HTMLElement("iframe")}} element
 - [Learn: Web performance](/en-US/docs/Learn_web_development/Extensions/Performance)
-- [Lazy loading](/en-US/docs/Web/Performance/Lazy_loading) in the MDN web performance guide
+- [Lazy loading](/en-US/docs/Web/Performance/Guides/Lazy_loading) in the MDN web performance guide
 - [It's time to lazy-load offscreen iframes!](https://web.dev/articles/iframe-lazy-loading) on web.dev

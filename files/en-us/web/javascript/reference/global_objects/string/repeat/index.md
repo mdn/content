@@ -10,7 +10,14 @@ browser-compat: javascript.builtins.String.repeat
 The **`repeat()`** method of {{jsxref("String")}} values constructs and returns a new string
 which contains the specified number of copies of this string, concatenated together.
 
-{{EmbedInteractiveExample("pages/js/string-repeat.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: String.repeat()", "shorter")}}
+
+```js interactive-example
+const mood = "Happy! ";
+
+console.log(`I feel ${mood.repeat(3)}`);
+// Expected output: "I feel Happy! Happy! Happy! "
+```
 
 ## Syntax
 

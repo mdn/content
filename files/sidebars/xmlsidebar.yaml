@@ -1,0 +1,73 @@
+# Do not add comments to this file. They will be lost.
+
+sidebar:
+  - type: section
+    link: /Web/XML
+    title: XML
+  - link: /Web/XML/Guides
+    title: XML Guides
+    details: open
+    children:
+      - /Web/XML/Guides/XML_introduction
+      - /Web/XML/Guides/Parsing_and_serializing_XML
+      - /Web/XML/Guides/OpenSearch
+  - type: section
+    link: /Web/XML/XPath
+    title: XPath
+  - link: /Web/XML/XPath/Guides
+    title: XPath Guides
+    details: closed
+    children:
+      - /Web/XML/XPath/Guides/Snippets
+      - /Web/XML/XPath/Guides/Comparison_with_CSS_selectors
+      - /Web/XML/XPath/Guides/Introduction_to_using_XPath_in_JavaScript
+  - type: listSubPages
+    path: /Web/XML/XPath/Reference/Functions
+    link: /Web/XML/XPath/Reference/Functions
+    title: XPath Functions
+    details: closed
+  - link: /Web/XML/XPath/Reference/Axes
+    title: Xpath axes
+  - type: section
+    link: /Web/XML/XSLT
+    title: XSLT
+  - link: /Web/XML/XSLT/Guides
+    title: XSLT Guides
+    details: closed
+    children:
+      - /Web/XML/XSLT/Guides/Transforming_XML_with_XSLT
+      - /Web/XML/XSLT/Guides/PI_Parameters
+      - /Web/XML/XSLT/Guides/Common_errors
+  - type: listSubPages
+    path: /Web/XML/XSLT/Reference/Element
+    link: /Web/XML/XSLT/Reference/Element
+    title: XSLT Elements
+    details: closed
+  - type: section
+    link: /Web/XML/EXSLT
+    title: EXSLT
+  - type: listSubPages
+    path: /Web/XML/EXSLT/Reference/exsl
+    link: /Web/XML/EXSLT/Reference/exsl
+    title: EXSLT exsl
+    details: closed
+  - type: listSubPages
+    path: /Web/XML/EXSLT/Reference/math
+    link: /Web/XML/EXSLT/Reference/math
+    title: EXSLT math
+    details: closed
+  - type: listSubPages
+    path: /Web/XML/EXSLT/Reference/regexp
+    link: /Web/XML/EXSLT/Reference/regexp
+    title: EXSLT regexp
+    details: closed
+  - type: listSubPages
+    path: /Web/XML/EXSLT/Reference/set
+    link: /Web/XML/EXSLT/Reference/set
+    title: EXSLT set
+    details: closed
+  - type: listSubPages
+    path: /Web/XML/EXSLT/Reference/str
+    link: /Web/XML/EXSLT/Reference/str
+    title: EXSLT str
+    details: closed

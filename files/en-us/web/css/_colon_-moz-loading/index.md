@@ -1,5 +1,5 @@
 ---
-title: ":-moz-loading"
+title: :-moz-loading
 slug: Web/CSS/:-moz-loading
 page-type: css-pseudo-class
 status:

@@ -1,5 +1,5 @@
 ---
-title: ":read-only"
+title: :read-only
 slug: Web/CSS/:read-only
 page-type: css-pseudo-class
 browser-compat: css.selectors.read-only

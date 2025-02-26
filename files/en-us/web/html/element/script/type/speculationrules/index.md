@@ -506,5 +506,5 @@ Here we are hinting that:
 ## See also
 
 - [Prerender pages in Chrome for instant page navigations](https://developer.chrome.com/docs/web-platform/prerender-pages) on developer.chrome.com
-- [Speculative loading](/en-US/docs/Web/Performance/Speculative_loading)
+- [Speculative loading](/en-US/docs/Web/Performance/Guides/Speculative_loading)
 - [Speculation Rules API](/en-US/docs/Web/API/Speculation_Rules_API)

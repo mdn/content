@@ -1,6 +1,6 @@
 ---
 title: "SVGFESpecularLightingElement: y property"
-short-title: "y"
+short-title: y
 slug: Web/API/SVGFESpecularLightingElement/y
 page-type: web-api-instance-property
 browser-compat: api.SVGFESpecularLightingElement.y

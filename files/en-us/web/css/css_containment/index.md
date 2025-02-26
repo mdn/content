@@ -22,27 +22,6 @@ Container queries are similar to dimension [media queries](/en-US/docs/Web/CSS/C
 - {{cssxref("contain")}}
 - {{cssxref("content-visibility")}}
 
-### At-rules and descriptors
-
-- {{cssxref("@container")}}
-- [`@container` descriptors](/en-US/docs/Web/CSS/@container#descriptors):
-  - `aspect-ratio`
-  - `block-size`
-  - `height`
-  - `inline-size`
-  - `orientation`
-  - `width`
-
-### Functions
-
-- [`style()`](/en-US/docs/Web/CSS/@container#container_style_queries)
-
-### Data types
-
-- [`<container-name>`](/en-US/docs/Web/CSS/@container#values)
-- [`<style-feature>`](/en-US/docs/Web/CSS/@container#container_style_queries)
-- [Container relative `<length>` units](/en-US/docs/Web/CSS/length#container_query_length_units)
-
 ### Events
 
 - {{domxref("Element.contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}}
@@ -71,11 +50,12 @@ Container queries are similar to dimension [media queries](/en-US/docs/Web/CSS/C
 
 ## Related concepts
 
-- [Layout and the containing block](/en-US/docs/Web/CSS/Containing_block)
+- [Layout and the containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block)
 - [Block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context)
 
 - [CSS conditional rules](/en-US/docs/Web/CSS/CSS_conditional_rules) module
 
+  - {{cssxref("@container")}} at-rule
   - {{CSSxRef("container")}} property
   - {{CSSxRef("container-name")}} property
   - {{CSSxRef("container-type")}} property

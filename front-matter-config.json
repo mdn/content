@@ -316,7 +316,10 @@
       {
         "if": {
           "properties": {
-            "slug": { "type": "string", "pattern": "^Web/Manifest/" }
+            "slug": {
+              "type": "string",
+              "pattern": "^Web/Progressive_web_apps/Manifest/"
+            }
           }
         },
         "then": {
@@ -507,6 +510,21 @@
       {
         "if": {
           "properties": {
+            "slug": { "type": "string", "pattern": "^Web/URI" }
+          }
+        },
+        "then": {
+          "properties": {
+            "page-type": {
+              "enum": ["guide", "landing-page", "reference"]
+            }
+          }
+        },
+        "else": false
+      },
+      {
+        "if": {
+          "properties": {
             "slug": { "type": "string", "pattern": ".*" }
           }
         },
@@ -529,7 +547,7 @@
       {
         "if": {
           "properties": {
-            "slug": { "type": "string", "pattern": "^Web/XPath" }
+            "slug": { "type": "string", "pattern": "^Web/XML/XPath" }
           }
         },
         "then": {
@@ -544,7 +562,7 @@
       {
         "if": {
           "properties": {
-            "slug": { "type": "string", "pattern": "^Web/EXSLT" }
+            "slug": { "type": "string", "pattern": "^Web/XML/EXSLT" }
           }
         },
         "then": {
@@ -559,7 +577,7 @@
       {
         "if": {
           "properties": {
-            "slug": { "type": "string", "pattern": "^Web/XSLT" }
+            "slug": { "type": "string", "pattern": "^Web/XML/XSLT" }
           }
         },
         "then": {

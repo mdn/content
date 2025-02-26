@@ -13,15 +13,15 @@ There are a number of methods that you can use to lay out your web pages and app
 
 If you are not using a flex or grid layout, then your content is laid out using normal flow, or block and inline layout. These guides will help you to understand the way this layout method works.
 
-- [Block and Inline layout in normal flow](/en-US/docs/Web/CSS/CSS_flow_layout/Block_and_inline_layout_in_normal_flow)
+- [Block and inline layout in normal flow](/en-US/docs/Web/CSS/CSS_display/Block_and_inline_layout_in_normal_flow)
   - : An introduction to normal flow.
-- [In flow and Out of flow](/en-US/docs/Web/CSS/CSS_flow_layout/In_flow_and_out_of_flow)
+- [In flow and out of flow](/en-US/docs/Web/CSS/CSS_display/In_flow_and_out_of_flow)
   - : How to take an item out of flow, and what that does to the layout of your document.
-- [Formatting contexts explained](/en-US/docs/Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts)
+- [Formatting contexts explained](/en-US/docs/Web/CSS/CSS_display/Introduction_to_formatting_contexts)
   - : An introduction to creating a new formatting context.
-- [Flow layout and writing modes](/en-US/docs/Web/CSS/CSS_flow_layout/Flow_layout_and_writing_modes)
+- [Flow layout and writing modes](/en-US/docs/Web/CSS/CSS_display/Flow_layout_and_writing_modes)
   - : How flow layout works if you use a different writing mode, such as vertical text.
-- [Flow layout and overflow](/en-US/docs/Web/CSS/CSS_flow_layout/Flow_layout_and_overflow)
+- [Flow layout and overflow](/en-US/docs/Web/CSS/CSS_display/Flow_layout_and_overflow)
   - : Understanding and managing overflow.
 - [Introduction to the CSS basic box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
   - : Understanding the box model is a CSS fundamental; this guide explains how it works.
@@ -86,8 +86,6 @@ CSS Grid Layout introduces a two-dimensional grid system to CSS. Grids can be us
   - : How to use flow relative, rather than physical, properties and values with grid.
 - [CSS Grid Layout and accessibility](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility)
   - : Some accessibility considerations when working with grid layout.
-- [CSS Grid and progressive enhancement](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement)
-  - : How to ensure your site still works well in browsers that don't support grid.
 - [Realizing common layouts using CSS Grid](/en-US/docs/Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids)
   - : Using grid to build some common layouts.
 - [Subgrid](/en-US/docs/Web/CSS/CSS_grid_layout/Subgrid)

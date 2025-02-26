@@ -1,6 +1,6 @@
 ---
 title: "SVGPatternElement: y property"
-short-title: "y"
+short-title: y
 slug: Web/API/SVGPatternElement/y
 page-type: web-api-instance-property
 browser-compat: api.SVGPatternElement.y

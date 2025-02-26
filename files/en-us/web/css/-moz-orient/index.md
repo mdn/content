@@ -1,5 +1,5 @@
 ---
-title: "-moz-orient"
+title: -moz-orient
 slug: Web/CSS/-moz-orient
 page-type: css-property
 status:

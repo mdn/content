@@ -1,5 +1,5 @@
 ---
-title: ":seeking"
+title: :seeking
 slug: Web/CSS/:seeking
 page-type: css-pseudo-class
 browser-compat: css.selectors.seeking
