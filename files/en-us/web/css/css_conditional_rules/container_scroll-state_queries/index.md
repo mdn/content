@@ -1,0 +1,804 @@
+---
+title: Using container scroll-state queries
+slug: Web/CSS/CSS_conditional_rules/Container_scroll-state_queries
+page-type: guide
+---
+
+{{CSSRef}}
+
+**Container scroll-state queries** are a type of container query. Rather than selectively applying styles to an element based on its container's size, scroll-state queries allow you to selectively apply styles to an element based on its container's scroll state, which can include whether the container is partially scrolled, snapped to a scroll snap container ancestor, or positioned via `position: sticky` and stuck to a boundary of a scolling container ancestor.
+
+This article explains how to use container scroll-state queries, walking through an example of each type. It assumes that you know the basics of container queries already. If you are new to container queries, read [CSS container queries](/en-US/docs/Web/CSS/CSS_containment/Container_queries) first before continuing.
+
+## Types of container scroll-state query
+
+There are three scroll-state descriptors you can use:
+
+- `scrollable` tests whether a container can be scrolled in the given direction via user-initiated scrolling (for example by dragging the scrollbar or using a trackpad gesture). In other words, is there any overflowing content in the given direction that can be scrolled to? This is useful for applying styling related to the scroll position of a scroll container. For example, you might want to display a hint that encourages people to scroll down and see more content when the scrollbar is up at the top, but hide it when the user has actually started scrolling.
+- `snapped` tests whether a container is, or will be, snapped to a [scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap) container ancestor along a given axis. Containers designated as scroll snap targets on which the [`scrollsnapchanging`](/en-US/docs/Web/API/Element/scrollsnapchanging_event) event is firing will match the `snapped` descriptor. This is useful for applying styles when an element is snapped to a scroll snap container. For example, you might want to highlight a snapped element in some way, or reveal some of its content that was previously hidden.
+- `stuck` tests whether a container with a {{cssxref("position")}} value of `sticky` is stuck to an edge of its scolling ancestor. This is useful for styling `position: sticky` elements only when stuck — for example, you might want to keep a document header or navigation menu stuck to the top of a container as its content scrolls, but also lay it out differently while stuck.
+
+## Syntax overview
+
+To establish a container element as a scroll-state query container, you need to set the {{cssxref("container-type")}} property on it with a value of `scroll-state`. You can optionally also give it a {{cssxref("container-name")}}, so that you can target it with a specific container query:
+
+```css
+.container {
+  container-type: scroll-state;
+  container-name: my-container;
+}
+```
+
+You can then create a {{cssxref("@container")}} block that specifies the query (in this case, whether the container can be scrolled towards its top edge), the rules that are applied to children of the container if the test passes, and optionally, the `container-name` of the container(s) you want to query (`my-container`, in this case). If you don't specify a `container-name`, the container query will be applied to all scroll-state query containers on the page.
+
+```css
+@container my-container scroll-state(scrollable: top) {
+  /* CSS rules go here */
+}
+```
+
+> [!NOTE]
+> Unlike size container queries, whose declarations and values are written directly into the top line of the `@container` block, scroll-state container query declarations and their values are placed inside parentheses, preceded by `scroll-state`, that is, `scroll-state( ... )`. These constructs look like functions, but they're not; they serve to separate out scroll-state queries from other types.
+
+## `scrollable` example
+
+[`scroll-state(scrollable: value)`](/en-US/docs/Web/CSS/@container#scrollable) queries test whether a container can be scrolled in the given direction via user-initiated scrolling. To evaluate a container with a `scrollable` query, it must be a scroll container — you need to apply it to the element that is scrolling. The `value` in this case indicates the direction you are testing for scrolling availability in, for example:
+
+- `top`: Tests whether the container can be scrolled towards its top edge.
+- `inline-end`: Tests whether the container can be scrolled towards its inline-end edge.
+- `y`: Tests whether the container can be scrolled in both directions along its y axis.
+
+If the test passes, the rules inside the `@container` block are applied to descendants of the matching scroll container.
+
+Let's look at an example in which we have a scrolling container full of content, and a handy little link to scroll back to the top if wished. We will use a `scrollable` query to only show the link when the user has started to scroll down through the content.
+
+### HTML
+
+In the HTML we have a {{htmlelement("article")}} element containing enough content to cause the document to scroll, and a {{htmlelement("div")}} element containing the "back-to-top" link:
+
+```html
+<div class="back-to-top">
+  <a href="#" aria-label="Scroll back to top"><span>↑</span></a>
+</div>
+<article>
+  <h1>Reader with container query-controlled "back-to-top" link</h1>
+  <section>
+    <header>
+      <h2>This first section is interesting</h2>
+    </header>
+
+    ...
+  </section>
+
+  ...
+</article>
+```
+
+We have hidden most of the HTML for brevity.
+
+```html hidden live-sample___scrollable
+<div class="back-to-top">
+  <a href="#" aria-label="Scroll back to top"><span>↑</span></a>
+</div>
+<article>
+  <h1>Reader with container query-controlled "back-to-top" link</h1>
+  <section>
+    <header>
+      <h2>This first section is interesting</h2>
+    </header>
+
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vides, quid
+      faciat. Quonam, inquit, modo? Nam quid possumus facere melius? Duo Reges:
+      constructio interrete. Cur iustitia laudatur? Videmus igitur ut
+      conquiescere ne infantes quidem possint.
+    </p>
+
+    <p>
+      <strong>Nihil enim hoc differt.</strong> Neutrum vero, inquit ille.
+      <em>Huius ego nunc auctoritatem sequens idem faciam.</em> Prioris generis
+      est docilitas, memoria; Quae sequuntur igitur?
+    </p>
+
+    <img src="#" alt="Placeholder" />
+
+    <p>
+      Ne discipulum abducam, times. Quis enim redargueret?
+      <a href="#">Rationis enim perfectio est virtus;</a>
+      Erat enim Polemonis.
+    </p>
+
+    <p>
+      Qua tu etiam inprudens utebare non numquam. Sed erat aequius Triarium
+      aliquid de dissensione nostra iudicare.
+      <strong
+        >Qui-vere falsone, quaerere mittimus-dicitur oculis se privasse;</strong
+      >
+      Omnes enim iucundum motum, quo sensus hilaretur.
+    </p>
+  </section>
+  <section>
+    <header>
+      <h2>This one, not so much</h2>
+    </header>
+
+    <p>
+      Confecta res esset.
+      <strong>Nam quid possumus facere melius?</strong> Tu quidem reddes; Omnia
+      peccata paria dicitis.
+    </p>
+
+    <p>
+      <em>Scrupulum, inquam, abeunti;</em> Quae cum dixisset, finem ille. Hoc
+      sic expositum dissimile est superiori.
+    </p>
+
+    <img src="#" alt="Placeholder" />
+
+    <p>
+      Quid, de quo nulla dissensio est?
+      <a href="#">Nunc agendum est subtilius.</a>
+      Praeteritis, inquit, gaudeo. Iam in altera philosophiae parte.
+    </p>
+
+    <p>
+      Itaque ad tempus ad Pisonem omnes. Quantum Aristoxeni ingenium consumptum
+      videmus in musicis? Quis non odit sordidos, vanos, leves, futtiles? Atqui
+      reperies, inquit, in hoc quidem pertinacem; Duarum enim vitarum nobis
+      erunt instituta capienda.
+    </p>
+  </section>
+  <section>
+    <header>
+      <h2>Hopefully this section provides some clarity?</h2>
+    </header>
+
+    <p>
+      Quid ad utilitatem tantae pecuniae?
+      <strong>Memini me adesse P.</strong> Omnes enim iucundum motum, quo sensus
+      hilaretur. Optime, inquam.
+    </p>
+
+    <img src="#" alt="Placeholder" />
+
+    <p>
+      <a href="#">Sint modo partes vitae beatae.</a>
+      Sic enim censent, oportunitatis esse beate vivere.
+      <strong>Sed hoc sane concedamus.</strong> Aliter homines, aliter
+      philosophos loqui putas oportere? Non laboro, inquit, de nomine. Bork
+    </p>
+
+    <p>
+      Quo tandem modo? Ut pulsi recurrant? Quid ad utilitatem tantae pecuniae?
+      <strong>Sed in rebus apertissimis nimium longi sumus.</strong>
+      Rationis enim perfectio est virtus; Beatus autem esse in maximarum rerum
+      timore nemo potest.
+    </p>
+
+    <p>
+      Nulla erit controversia. Quae in controversiam veniunt, de iis, si placet,
+      disseramus. Sed potestne rerum maior esse dissensio? Tria genera bonorum;
+      Memini vero, inquam; Quam ob rem tandem, inquit, non satisfacit?
+    </p>
+  </section>
+  <section>
+    <header>
+      <h2>A summary of sorts</h2>
+    </header>
+
+    <img src="#" alt="Placeholder" />
+
+    <p>
+      Quae est igitur causa istarum angustiarum?
+      <strong>An eiusdem modi?</strong>
+      <strong>Et ille ridens: Video, inquit, quid agas;</strong> Conferam tecum,
+      quam cuique verso rem subicias; Putabam equidem satis, inquit, me dixisse.
+      Sed haec quidem liberius ab eo dicuntur et saepius.
+    </p>
+
+    <p>
+      Non laboro, inquit, de nomine. <em>Falli igitur possumus.</em>
+      <a href="#">Praeteritis, inquit, gaudeo.</a>
+      Nescio quo modo praetervolavit oratio. Huius, Lyco, oratione locuples,
+      rebus ipsis ielunior. Quod ea non occurrentia fingunt, vincunt Aristonem;
+    </p>
+
+    <p>
+      Cur deinde Metrodori liberos commendas? Quo modo? Ergo hoc quidem apparet,
+      nos ad agendum esse natos. Scrupulum, inquam, abeunti;
+    </p>
+  </section>
+</article>
+```
+
+### CSS
+
+We've hidden most of the example CSS for brevity, but we explain the most important parts below.
+
+```css hidden live-sample___scrollable
+/* General styling */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100%;
+}
+
+body {
+  height: inherit;
+  width: 500px;
+  margin: 0 auto;
+}
+
+p {
+  line-height: 1.5;
+}
+
+img {
+  display: block;
+  width: 90%;
+  margin: 30px auto;
+  padding: 20px;
+  border: 2px solid gray;
+  aspect-ratio: 3/2;
+}
+```
+
+We've given the `.back-to-top` `<div>` containing the "back to top" link a {{cssxref("position")}} value of `fixed` and placed it at the bottom-right corner of the viewport. We've also given it a {{cssxref("translate")}} value of `80px 0px` to hide it off the right-hand side of the viewport, and a {{cssxref("transition")}} value that animates `transform` when its state changes.
+
+```css live-sample___scrollable
+.back-to-top {
+  width: 64px;
+  height: 64px;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  translate: 80px 0px;
+  transition: 0.4s translate;
+}
+```
+
+```css hidden live-sample___scrollable
+.back-to-top a {
+  text-decoration: none;
+  border-radius: 50%;
+  border: 1px solid #0007;
+  background: #0007;
+  color: white;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.6s background;
+}
+
+.back-to-top span {
+  font-size: 3rem;
+  text-shadow: 0 0 2px black;
+  padding-bottom: 10px;
+}
+
+.back-to-top a:hover,
+.back-to-top a:focus {
+  background: #0009;
+}
+```
+
+Since the `<html>` element is the one that is scrolling in this demo, we denote it as a scroll-state query container by setting a {{cssxref("container-type")}} value of `scroll-state` on it. We also give it a {{cssxref("container-name")}}, which isn't strictly necessary, but will be useful if our code gets more complex later and we have multiple scroll-state query containers that we want to target with different queries.
+
+```css live-sample___scrollable
+html {
+  container-type: scroll-state;
+  container-name: scroller;
+}
+```
+
+Next, we define a {{cssxref("@container")}} block that sets the container name we are targetting with this query, and the query itself — `scrollable: top`. This query applies the rules contained inside the block only if the `<html>` element can be scrolled towards its top edge — in other words, if has previously been scrolled downwards. If that is the case, we apply `translate: 0px 0px` to our `.back-to-top` `<div>`, which moves it back on-screen.
+
+```css live-sample___scrollable
+@container scroller scroll-state(scrollable: top) {
+  .back-to-top {
+    translate: 0px 0px;
+  }
+}
+```
+
+```css hidden live-sample___scrollable
+/* Media query for tiny screens */
+
+@media (max-width: 500px) {
+  body {
+    width: 100%;
+    padding: 0 20px;
+  }
+}
+```
+
+### Result
+
+The rendered result is shown below. Try scrolling the document down, and note how the "back-to-top" link appears as a result, animating smoothly from the right side of the viewport due to the set `transition`.
+
+{{EmbedLiveSample("scrollable", "100%", "400px")}}
+
+## `snapped` example
+
+[`scroll-state(snapped: value)`](/en-US/docs/Web/CSS/@container#scrollable) queries test whether a container is, or will be, snapped to a [scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap) container ancestor along a given axis. Containers designated as scroll snap targets on which the [`scrollsnapchanging`](/en-US/docs/Web/API/Element/scrollsnapchanging_event) event is firing will match the `snapped` descriptor. The `value` in this case indicates the direction you are testing the element's ability to snap in, for example:
+
+- `x`: Tests whether the container is snapping horizontally to its ancestor.
+- `inline`: Tests whether the container is snapping to its ancestor in the inline direction.
+- `y`: Tests whether the container is snapping to its ancestor in both directions.
+
+If the test passes, the rules inside the `@container` block are applied to descendants of the matching container.
+
+In this section we'll look at an example of a scroll snap container with children that snap to it vertically. We will use a `snapped` query to style the children only when they are snapped or about to be snapped.
+
+### HTML
+
+The HTML consists of a {{htmlelement("main")}} element that will be the scroll container, inside which are several {{htmlelement("section")}} elements that will be the snap targets. Each `<section>` contains a wrapper {{htmlelement("div")}} that we will target with the container query styles (we can't target the actual container), each with a heading inside.
+
+```html
+<main>
+  <section>
+    <div class="wrapper">
+      <h2>Section 1</h2>
+    </div>
+  </section>
+
+  ...
+</main>
+```
+
+We have hidden most of the HTML for brevity.
+
+```html hidden live-sample___snapped
+<main>
+  <section>
+    <div class="wrapper">
+      <h2>Section 1</h2>
+    </div>
+  </section>
+  <section>
+    <div class="wrapper">
+      <h2>Section 2</h2>
+    </div>
+  </section>
+  <section>
+    <div class="wrapper">
+      <h2>Section 3</h2>
+    </div>
+  </section>
+  <section>
+    <div class="wrapper">
+      <h2>Section 4</h2>
+    </div>
+  </section>
+  <section>
+    <div class="wrapper">
+      <h2>Section 5</h2>
+    </div>
+  </section>
+  <section>
+    <div class="wrapper">
+      <h2>Section 6</h2>
+    </div>
+  </section>
+  <section>
+    <div class="wrapper">
+      <h2>Section 7</h2>
+    </div>
+  </section>
+  <section>
+    <div class="wrapper">
+      <h2>Section 8</h2>
+    </div>
+  </section>
+  <section>
+    <div class="wrapper">
+      <h2>Section 9</h2>
+    </div>
+  </section>
+  <section>
+    <div class="wrapper">
+      <h2>Section 10</h2>
+    </div>
+  </section>
+  <section>
+    <div class="wrapper">
+      <h2>Section 11</h2>
+    </div>
+  </section>
+  <section>
+    <div class="wrapper">
+      <h2>Section 12</h2>
+    </div>
+  </section>
+  <section>
+    <div class="wrapper">
+      <h2>Section 13</h2>
+    </div>
+  </section>
+  <section>
+    <div class="wrapper">
+      <h2>Section 14</h2>
+    </div>
+  </section>
+  <section>
+    <div class="wrapper">
+      <h2>Section 15</h2>
+    </div>
+  </section>
+  <section>
+    <div class="wrapper">
+      <h2>Section 16</h2>
+    </div>
+  </section>
+</main>
+```
+
+### CSS
+
+```css hidden live-sample___snapped
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+/* body and main sizing */
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: inherit;
+}
+
+main {
+  gap: 50px;
+}
+```
+
+We give the `<main>` element an {{cssxref("overflow")}} value of `scroll` and a fixed {{cssxref("height")}} to turn it into a vertical scroll container. We also set a {{cssxref("scroll-snap-type")}} value of `y mandatory` on it, to make it into a scroll snap container in which snap targets will snap to it along the y axis, and a snap target will always be snapped to.
+
+```css live-sample___snapped
+main {
+  overflow: scroll;
+  border: 3px solid black;
+  width: 250px;
+  height: 450px;
+  scroll-snap-type: y mandatory;
+}
+```
+
+The `<section>` elements are designated as snap targets by setting a {{cssxref("scroll-snap-align")}} value of `center`, which means that they will snap to their container at their center point.
+
+```css live-sample___snapped
+section {
+  font-family: Arial, Helvetica, sans-serif;
+  width: 150px;
+  height: 150px;
+  margin: 50px auto;
+
+  scroll-snap-align: center;
+}
+```
+
+```css hidden live-sample___snapped
+.wrapper {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  background: #eee;
+  box-shadow:
+    inset 1px 1px 4px rgb(255 255 255 / 0.5),
+    inset -1px -1px 4px rgb(0 0 0 / 0.5);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition:
+    0.6s background,
+    0.6s color;
+}
+
+h2 {
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+```
+
+We want to test whether the `<section>` elements are snapping to their container, so we denote them as scroll-state query containers by setting a {{cssxref("container-type")}} value of `scroll-state` on them. We also give them a {{cssxref("container-name")}}, which isn't strictly necessary, but will be useful if our code gets more complex later and we have multiple scroll-state query containers that we want to target with different queries.
+
+```css live-sample___snapped
+section {
+  container-type: scroll-state;
+  container-name: snap-container;
+}
+```
+
+Next, we define a {{cssxref("@container")}} block that sets the container name we are targetting with this query, and the query itself — `snapped: y`. This query applies the rules contained inside the block only if a `<section>` element is being snapped vertically to its container. If that is the case, we apply a new {{cssxref("background")}} and {{cssxref("color")}} to the `<section>` element's child `.wrapper` `<div>` to highlight it.
+
+```css live-sample___snapped
+@container snap-container scroll-state(snapped: y) {
+  .wrapper {
+    background: purple;
+    color: white;
+  }
+}
+```
+
+### Result
+
+The rendered result is shown below. Try scrolling the container up and down, and note how the `<section>` style changes when it becomes snapped to its container.
+
+{{EmbedLiveSample("snapped", "100%", "500px")}}
+
+## `stuck` example
+
+[`scroll-state(stuck: value)`](/en-US/docs/Web/CSS/@container#scrollable) queries test whether a container with a {{cssxref("position")}} value of `sticky` is stuck to an edge of its scolling container ancestor. To evaluate a container with a `stuck` scroll-state query, it must have `position: sticky` set on it, and be inside a scroll container. The `value` in this case indicates the scroll container edge you are testing, for example:
+
+- `top`: Tests whether the container is stuck to the top edge of its scrolling ancestor.
+- `block-end`: Tests whether the container is stuck to the block-end edge of its scrolling ancestor.
+- `none`: Tests whether the container is not stuck to any edges of its scrolling ancestor.
+
+If the test passes, the rules inside the `@container` block are applied to descendants of the matching `position: sticky` container.
+
+Let's look at an example in which we have a scrolling container full of content, in which the headings are set to `position: sticky` and stick to the top edge of the container when they scroll to that position. We will use a `stuck` query to style the headings differently when they are stuck to the top edge.
+
+### HTML
+
+In the HTML we have a {{htmlelement("article")}} element containing enough content to cause the document to scroll. It is structured using several {{htmlelement("section")}} elements, each containing a {{htmlelement("header")}}:
+
+```html
+<article>
+  <h1>Sticky reader with scroll-state container query</h1>
+  <section>
+    <header>
+      <h2>This first section is interesting</h2>
+    </header>
+
+    ...
+  </section>
+
+  ...
+</article>
+```
+
+We have hidden most of the HTML for brevity.
+
+```html hidden live-sample___stuck
+<article>
+  <h1>Sticky reader with scroll-state container query</h1>
+  <section>
+    <header>
+      <h2>This first section is interesting</h2>
+    </header>
+
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vides, quid
+      faciat. Quonam, inquit, modo? Nam quid possumus facere melius? Duo Reges:
+      constructio interrete. Cur iustitia laudatur? Videmus igitur ut
+      conquiescere ne infantes quidem possint.
+    </p>
+
+    <p>
+      <strong>Nihil enim hoc differt.</strong> Neutrum vero, inquit ille.
+      <em>Huius ego nunc auctoritatem sequens idem faciam.</em> Prioris generis
+      est docilitas, memoria; Quae sequuntur igitur?
+    </p>
+
+    <img src="#" alt="Placeholder" />
+
+    <p>
+      Ne discipulum abducam, times. Quis enim redargueret?
+      <a href="#">Rationis enim perfectio est virtus;</a>
+      Erat enim Polemonis.
+    </p>
+
+    <p>
+      Qua tu etiam inprudens utebare non numquam. Sed erat aequius Triarium
+      aliquid de dissensione nostra iudicare.
+      <strong
+        >Qui-vere falsone, quaerere mittimus-dicitur oculis se privasse;</strong
+      >
+      Omnes enim iucundum motum, quo sensus hilaretur.
+    </p>
+  </section>
+  <section>
+    <header>
+      <h2>This one, not so much</h2>
+    </header>
+
+    <p>
+      Confecta res esset.
+      <strong>Nam quid possumus facere melius?</strong> Tu quidem reddes; Omnia
+      peccata paria dicitis.
+    </p>
+
+    <p>
+      <em>Scrupulum, inquam, abeunti;</em> Quae cum dixisset, finem ille. Hoc
+      sic expositum dissimile est superiori.
+    </p>
+
+    <img src="#" alt="Placeholder" />
+
+    <p>
+      Quid, de quo nulla dissensio est?
+      <a href="#">Nunc agendum est subtilius.</a>
+      Praeteritis, inquit, gaudeo. Iam in altera philosophiae parte.
+    </p>
+
+    <p>
+      Itaque ad tempus ad Pisonem omnes. Quantum Aristoxeni ingenium consumptum
+      videmus in musicis? Quis non odit sordidos, vanos, leves, futtiles? Atqui
+      reperies, inquit, in hoc quidem pertinacem; Duarum enim vitarum nobis
+      erunt instituta capienda.
+    </p>
+  </section>
+  <section>
+    <header>
+      <h2>Hopefully this section provides some clarity?</h2>
+    </header>
+
+    <p>
+      Quid ad utilitatem tantae pecuniae?
+      <strong>Memini me adesse P.</strong> Omnes enim iucundum motum, quo sensus
+      hilaretur. Optime, inquam.
+    </p>
+
+    <img src="#" alt="Placeholder" />
+
+    <p>
+      <a href="#">Sint modo partes vitae beatae.</a>
+      Sic enim censent, oportunitatis esse beate vivere.
+      <strong>Sed hoc sane concedamus.</strong> Aliter homines, aliter
+      philosophos loqui putas oportere? Non laboro, inquit, de nomine. Bork
+    </p>
+
+    <p>
+      Quo tandem modo? Ut pulsi recurrant? Quid ad utilitatem tantae pecuniae?
+      <strong>Sed in rebus apertissimis nimium longi sumus.</strong>
+      Rationis enim perfectio est virtus; Beatus autem esse in maximarum rerum
+      timore nemo potest.
+    </p>
+
+    <p>
+      Nulla erit controversia. Quae in controversiam veniunt, de iis, si placet,
+      disseramus. Sed potestne rerum maior esse dissensio? Tria genera bonorum;
+      Memini vero, inquam; Quam ob rem tandem, inquit, non satisfacit?
+    </p>
+  </section>
+  <section>
+    <header>
+      <h2>A summary of sorts</h2>
+    </header>
+
+    <img src="#" alt="Placeholder" />
+
+    <p>
+      Quae est igitur causa istarum angustiarum?
+      <strong>An eiusdem modi?</strong>
+      <strong>Et ille ridens: Video, inquit, quid agas;</strong> Conferam tecum,
+      quam cuique verso rem subicias; Putabam equidem satis, inquit, me dixisse.
+      Sed haec quidem liberius ab eo dicuntur et saepius.
+    </p>
+
+    <p>
+      Non laboro, inquit, de nomine. <em>Falli igitur possumus.</em>
+      <a href="#">Praeteritis, inquit, gaudeo.</a>
+      Nescio quo modo praetervolavit oratio. Huius, Lyco, oratione locuples,
+      rebus ipsis ielunior. Quod ea non occurrentia fingunt, vincunt Aristonem;
+    </p>
+
+    <p>
+      Cur deinde Metrodori liberos commendas? Quo modo? Ergo hoc quidem apparet,
+      nos ad agendum esse natos. Scrupulum, inquam, abeunti;
+    </p>
+  </section>
+</article>
+```
+
+### CSS
+
+We've hidden most of the example CSS for brevity, but we explain the most important parts below.
+
+```css hidden live-sample___stuck
+/* General styling */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100%;
+}
+
+body {
+  height: inherit;
+  width: 500px;
+  margin: 0 auto;
+}
+
+p {
+  line-height: 1.5;
+}
+
+img {
+  display: block;
+  width: 90%;
+  margin: 30px auto;
+  padding: 20px;
+  border: 2px solid gray;
+  aspect-ratio: 3/2;
+}
+```
+
+We give each `<header>` a {{cssxref("position")}} value of `sticky` and a {{cssxref("top")}} value so it will stick to the top edge of the scroll container. Since we want to test whether the `<headers>` are stuck to the container top edge, we denote them as scroll-state query containers by setting a {{cssxref("container-type")}} value of `scroll-state` on them. We also give them a {{cssxref("container-name")}}, which isn't strictly necessary, but will be useful if our code gets more complex later and we have multiple scroll-state query containers that we want to target with different queries.
+
+```css live-sample___stuck
+header {
+  position: sticky;
+  top: -1px;
+  container-type: scroll-state;
+  container-name: sticky-heading;
+}
+```
+
+We also give the `<h2>` elements some basic styling, and a {{cssxref("transition")}} value so that it will smoothly animate when its {{cssxref("background")}} and {{cssxref("color")}} change.
+
+```css live-sample___stuck
+h2 {
+  margin: 0;
+  padding: 20px 5px;
+  transition:
+    0.4s background,
+    0.4s color;
+}
+```
+
+Next, we define a {{cssxref("@container")}} block that sets the container name we are targetting with this query, and the query itself — `stuck: top`. This query applies the rules contained inside the block only if a `<header>` element is stuck to the top of its scrolling container. If that is the case, we apply a new `background` and `color` to the contained `<h2>`, plus some {{cssxref("box-shadow")}}.
+
+```css live-sample___stuck
+@container sticky-heading scroll-state(stuck: top) {
+  h2 {
+    background: purple;
+    color: white;
+    box-shadow: 0 5px 5px #0007;
+  }
+}
+```
+
+```css hidden live-sample___stuck
+/* Media query for tiny screens */
+
+@media (max-width: 500px) {
+  body {
+    width: 100%;
+    padding: 0 20px;
+  }
+}
+```
+
+### Result
+
+The rendered result is shown below. Try scrolling the document down, and note how the `<h2>` elements transition to a new color scheme when they become stuck to the top of their container's top edge.
+
+{{EmbedLiveSample("stuck", "100%", "400px")}}
+
+## See also
+
+- CSS {{Cssxref("container-name")}} property
+- CSS {{Cssxref("container-type")}} property
+- CSS {{Cssxref("@container")}} at-rule
+- [CSS conditional rules](/en-US/docs/Web/CSS/CSS_conditional_rules) module
+- [Using CSS media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [CSS container queries](/en-US/docs/Web/CSS/CSS_containment/Container_queries)
+- [Using container size and style queries](/en-US/docs/Web/CSS/CSS_containment/Container_size_and_style_queries)
