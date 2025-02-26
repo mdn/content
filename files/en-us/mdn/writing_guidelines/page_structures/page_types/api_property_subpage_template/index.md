@@ -20,8 +20,8 @@ sidebar: mdnsidebar
 > slug: Web/API/NameOfTheParentInterface/NameOfTheProperty
 > page-type: web-api-instance-property OR web-api-static-property
 > status:
->   - experimental
 >   - deprecated
+>   - experimental
 >   - non-standard
 > browser-compat: path.to.feature.NameOfTheProperty
 > ---
