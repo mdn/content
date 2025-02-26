@@ -59,7 +59,7 @@ The nature of space can change depending upon what MIME type is being used, and 
 
 - [Accessibility: What users can do to browse more safely](/en-US/docs/Web/Accessibility/Accessibility:_What_users_can_to_to_browse_safely)
 - [Web accessibility for seizures and physical reactions](/en-US/docs/Web/Accessibility/Guides/Seizure_disorders)
-- [Web Accessibility: Understanding Colors and Luminance](/en-US/docs/Web/Accessibility/Understanding_Colors_and_Luminance)
+- [Web Accessibility: Understanding Colors and Luminance](/en-US/docs/Web/Accessibility/Guides/Colors_and_Luminance)
 
 ### Braille
 

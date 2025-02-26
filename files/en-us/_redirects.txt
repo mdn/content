@@ -11593,6 +11593,7 @@
 /en-US/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets	/en-US/docs/Web/Accessibility/Guides/Keyboard-navigable_JavaScript_widgets
 /en-US/docs/Web/Accessibility/Seizure_disorders	/en-US/docs/Web/Accessibility/Guides/Seizure_disorders
 /en-US/docs/Web/Accessibility/Seizure_disorders/Accessibility_and_Spacial_Patterns	/en-US/docs/Web/Accessibility/Guides/Accessibility_and_Spacial_Patterns
+/en-US/docs/Web/Accessibility/Understanding_Colors_and_Luminance	/en-US/docs/Web/Accessibility/Guides/Colors_and_Luminance
 /en-US/docs/Web/Accessibility/Understanding_WCAG/Understandable/Text_labels_and_names	/en-US/docs/Web/Accessibility/Understanding_WCAG/Text_labels_and_names
 /en-US/docs/Web/Accessibility/Web_Development	/en-US/docs/Web/Accessibility
 /en-US/docs/Web/Accessibility/Web_applications_and_ARIA_FAQ	/en-US/docs/Web/Accessibility/ARIA

@@ -71924,6 +71924,10 @@
     "modified": "2019-11-18T16:53:41.344Z",
     "contributors": ["Igor-Sangin", "ericwbailey", "estelle", "jswisher"]
   },
+  "Web/Accessibility/Guides/Colors_and_Luminance": {
+    "modified": "2020-03-12T12:20:18.540Z",
+    "contributors": ["Koavf", "austin-2019", "estelle"]
+  },
   "Web/Accessibility/Guides/Information_for_Web_authors": {
     "modified": "2019-03-23T23:27:44.949Z",
     "contributors": ["fscholz", "Fredchat", "Sheppy", "openjck"]
@@ -71978,10 +71982,6 @@
       "Anne-Victoria",
       "Tanaguru"
     ]
-  },
-  "Web/Accessibility/Understanding_Colors_and_Luminance": {
-    "modified": "2020-03-12T12:20:18.540Z",
-    "contributors": ["Koavf", "austin-2019", "estelle"]
   },
   "Web/Accessibility/Understanding_WCAG": {
     "modified": "2019-03-23T22:16:56.489Z",

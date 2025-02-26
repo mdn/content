@@ -97,7 +97,7 @@ Not all is known, and even with the metrics listed above, additional factors com
 
 ### Colors
 
-Understanding color is important for accessibility. See [understanding colors and luminance](/en-US/docs/Web/Accessibility/Understanding_Colors_and_Luminance) as it relates to web accessibility and accessibility in general.
+Understanding color is important for accessibility. See [understanding colors and luminance](/en-US/docs/Web/Accessibility/Guides/Colors_and_Luminance) as it relates to web accessibility and accessibility in general.
 
 How the color relates to its background—usually framed in terms of contrast—and how drastically the color changes frame to frame in animation is important. For more on this, see [Three Flashes or Below Threshold Understanding SC 2.3.1](https://www.w3.org/TR/UNDERSTANDING-WCAG20/seizure-does-not-violate.html).
 
@@ -108,7 +108,7 @@ It has been demonstrated that [some colors are more likely to cause epileptic fi
 - **Red Desaturation tests:** The human eye is so sensitively tuned to red that ophthalmologists set up a test using it. The Red desaturation test assesses the integrity of the optic nerve. For more information as to how an ophthalmologist uses this test, see [Red Desaturation](https://www.smartoptometry.app/red-desaturation/).
 - **Red Environment:** Studies have shown that for those who suffer Traumatic Brain Injury, [cognitive function is reduced in a red environment](https://pubmed.ncbi.nlm.nih.gov/20649469/).
 
-[Saturated Red](/en-US/docs/Web/Accessibility/Understanding_Colors_and_Luminance) is a special, dangerous case, and there are special tests for it. In addition to a red environment affecting the cognitive function of those with Traumatic Brain Injury, color in the red spectrum wavelength seems to require special concern and special tests. Dr. Gregg Vanderheiden, when testing the Photosensitive Epilepsy Analysis Tool, noted that the seizure rates were much higher than expected. They found that we are much more sensitive to saturated red flashing. (See the video, [The Photosensitive Epilepsy Analysis Tool](https://www.pbs.org/video/university-place-the-photosensitive-epilepsy-analysis-tool-ep-429/).)
+[Saturated Red](/en-US/docs/Web/Accessibility/Guides/Colors_and_Luminance) is a special, dangerous case, and there are special tests for it. In addition to a red environment affecting the cognitive function of those with Traumatic Brain Injury, color in the red spectrum wavelength seems to require special concern and special tests. Dr. Gregg Vanderheiden, when testing the Photosensitive Epilepsy Analysis Tool, noted that the seizure rates were much higher than expected. They found that we are much more sensitive to saturated red flashing. (See the video, [The Photosensitive Epilepsy Analysis Tool](https://www.pbs.org/video/university-place-the-photosensitive-epilepsy-analysis-tool-ep-429/).)
 
 #### Websafe does not mean seizure-safe
 
@@ -571,7 +571,7 @@ The Web Animations model is intended to provide the features necessary for expre
 ### MDN
 
 - [Accessibility: What users can do to browse more safely](/en-US/docs/Web/Accessibility/Accessibility:_What_users_can_to_to_browse_safely)
-- [Accessibility: Understanding color and luminance](/en-US/docs/Web/Accessibility/Understanding_Colors_and_Luminance)
+- [Accessibility: Understanding color and luminance](/en-US/docs/Web/Accessibility/Guides/Colors_and_Luminance)
 - [Applying SVG effects to HTML Content](/en-US/docs/Web/SVG/Applying_SVG_effects_to_HTML_content)
 - [Basic Animations](/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations) (Canvas Tutorial)
 - [Canvas API](/en-US/docs/Web/API/Canvas_API)

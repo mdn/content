@@ -48,7 +48,7 @@ A full review of color theory is beyond the scope of this article, however, ther
 
 Make sure your content is [accessible](/en-US/docs/Web/Accessibility). There are several ways color can create an {{Glossary("accessibility")}} problem. Improper or careless use of color can result in a website or app that a percentage of your target audience may not be able to use adequately, resulting in lost traffic, lost business, and possibly even a public relations problem or a lawsuit. So it's important to consider your use of color carefully.
 
-It's important to [understand color and luminance](/en-US/docs/Web/Accessibility/Understanding_Colors_and_Luminance) and to always consider [color blindness](https://medlineplus.gov/colorblindness.html) and [vestibular disorders](/en-US/docs/Web/Accessibility/Guides/Seizure_disorders). There are several kinds; the most common is red-green color blindness, which causes people to be unable to differentiate between the colors red and green. There are others, too, ranging from an inability to tell the difference between certain colors to the total inability to see color at all. There are even color and animation combinations that can lead your photosensitive users to experience [seizures](/en-US/docs/Web/Accessibility/Guides/Seizure_disorders#colors).
+It's important to [understand color and luminance](/en-US/docs/Web/Accessibility/Guides/Colors_and_Luminance) and to always consider [color blindness](https://medlineplus.gov/colorblindness.html) and [vestibular disorders](/en-US/docs/Web/Accessibility/Guides/Seizure_disorders). There are several kinds; the most common is red-green color blindness, which causes people to be unable to differentiate between the colors red and green. There are others, too, ranging from an inability to tell the difference between certain colors to the total inability to see color at all. There are even color and animation combinations that can lead your photosensitive users to experience [seizures](/en-US/docs/Web/Accessibility/Guides/Seizure_disorders#colors).
 
 While higher [color contrast](https://digital.gov/guides/accessibility-for-teams/visual-design/#color-and-contrast) is often a good thing when it comes to accessibility, when animating, especially rapidly, [reducing color contrast](/en-US/docs/Web/Accessibility/Guides/Seizure_disorders#reduce_contrast) on animating elements reduces seizure risk. If you include animations, use the [`prefers-reduced-motion`](/en-US/docs/Web/CSS/@media/prefers-reduced-motion) {{cssxref("@media")}} query feature to reduce animations for users who have selected that preference.
 
@@ -104,6 +104,6 @@ With this set, the browser won't tamper with the appearance of the element on wh
 - [CSS color values](/en-US/docs/Web/CSS/CSS_colors/Color_values)
 - [Using relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors)
 - [CSS color module](/en-US/docs/Web/CSS/CSS_colors)
-- [Understanding color and luminance](/en-US/docs/Web/Accessibility/Understanding_Colors_and_Luminance)
+- [Understanding color and luminance](/en-US/docs/Web/Accessibility/Guides/Colors_and_Luminance)
 - [WCAG 1.4.1: Color contrast](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast)
 - [Paletton](https://paletton.com/)
