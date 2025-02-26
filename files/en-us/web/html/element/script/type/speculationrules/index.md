@@ -482,7 +482,7 @@ Multiple params can be provided in a space-separated array:
 ```
 
 > [!NOTE]
-> As a [structured field](https://www.rfc-editor.org/rfc/rfc8941) the array of parameters should be space-separated quoted strings as shown above, and not comma-separated, which developers may be more used to.
+> As a [structured field](https://www.rfc-editor.org/rfc/rfc8941), the parameters should be space-separated, quoted strings — as shown above — and not comma-separated, which developers may be more used to.
 
 ### `eagerness` example
 
