@@ -42,7 +42,7 @@ A solid approach to providing accessible solutions for people with cognitive imp
 
 ## WCAG Guidelines
 
-WCAG, Web Content Accessibility Guidelines, includes several guidelines to improve cognitive accessibility. These guidelines are published by the Web Accessibility Initiative (WAI) of the World Wide Web Consortium (W3C), the main international standards organization for the Internet. This group is also responsible for the [Accessible Rich Internet Application (ARIA)](/en-US/docs/Web/Accessibility/ARIA/ARIA_Guides) guidelines.
+WCAG, Web Content Accessibility Guidelines, includes several guidelines to improve cognitive accessibility. These guidelines are published by the Web Accessibility Initiative (WAI) of the World Wide Web Consortium (W3C), the main international standards organization for the Internet. This group is also responsible for the [Accessible Rich Internet Application (ARIA)](/en-US/docs/Web/Accessibility/ARIA/Guides) guidelines.
 
 WCAG are guided by four principles: websites must be Perceivable, Operable, Understandable, and Robust. To this end, they define 17 specific guidelines, of which six are especially relevant for cognitive accessibility.
 

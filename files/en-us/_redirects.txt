@@ -31,7 +31,7 @@
 /en-US/docs/API/navigationTiming/Using_Navigation_Timing	/en-US/docs/Web/API/Performance_API/Navigation_timing
 /en-US/docs/API/window.performance/navigationTiming	/en-US/docs/Web/API/Performance_API/Navigation_timing
 /en-US/docs/ARIA	/en-US/docs/Web/Accessibility/ARIA
-/en-US/docs/ARIA/ARIA_Guides	/en-US/docs/Web/Accessibility/ARIA/ARIA_Guides
+/en-US/docs/ARIA/ARIA_Guides	/en-US/docs/Web/Accessibility/ARIA/Guides
 /en-US/docs/ARIA/ARIA_Live_Regions	/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions
 /en-US/docs/ARIA/ARIA_Screen_Reader_Implementors_Guide	/en-US/docs/Web/Accessibility/ARIA/ARIA_Screen_Reader_Implementors_Guide
 /en-US/docs/ARIA/ARIA_Techniques	/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques
@@ -66,7 +66,7 @@
 /en-US/docs/Accessibility	/en-US/docs/Web/Accessibility
 /en-US/docs/Accessibility/ARIA	/en-US/docs/Web/Accessibility/ARIA
 /en-US/docs/Accessibility/ARIA/ARIA_Examples	/en-US/docs/Web/Accessibility/ARIA
-/en-US/docs/Accessibility/ARIA/ARIA_Guides	/en-US/docs/Web/Accessibility/ARIA/ARIA_Guides
+/en-US/docs/Accessibility/ARIA/ARIA_Guides	/en-US/docs/Web/Accessibility/ARIA/Guides
 /en-US/docs/Accessibility/ARIA/ARIA_Live_Regions	/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions
 /en-US/docs/Accessibility/ARIA/ARIA_Screen_Reader_Implementors_Guide	/en-US/docs/Web/Accessibility/ARIA/ARIA_Screen_Reader_Implementors_Guide
 /en-US/docs/Accessibility/ARIA/ARIA_Techniques	/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques
@@ -11378,6 +11378,7 @@
 /en-US/docs/Web/APIWwindow.sidebar	/en-US/docs/Web/API/Window/external
 /en-US/docs/Web/APIr	/en-US/docs/Web/API/Document/dir
 /en-US/docs/Web/Accessibility/ARIA/ARIA_Examples	/en-US/docs/Web/Accessibility/ARIA
+/en-US/docs/Web/Accessibility/ARIA/ARIA_Guides	/en-US/docs/Web/Accessibility/ARIA/Guides
 /en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Complementary_role	/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/complementary_role
 /en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role	/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/alert_role
 /en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role	/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/alertdialog_role

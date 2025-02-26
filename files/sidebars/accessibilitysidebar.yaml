@@ -39,7 +39,7 @@ sidebar:
   - title: ARIA_guides
     details: closed
     children:
-      - /Web/Accessibility/ARIA/ARIA_Guides
+      - /Web/Accessibility/ARIA/Guides
       - /Web/Accessibility/ARIA/ARIA_Live_Regions
       - /Web/Accessibility/ARIA/ARIA_Screen_Reader_Implementors_Guide
       - /Web/Accessibility/ARIA/ARIA_Techniques

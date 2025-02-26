@@ -1,6 +1,6 @@
 ---
 title: ARIA guides
-slug: Web/Accessibility/ARIA/ARIA_Guides
+slug: Web/Accessibility/ARIA/Guides
 page-type: landing-page
 ---
 
