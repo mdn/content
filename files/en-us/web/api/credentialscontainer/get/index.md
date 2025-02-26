@@ -126,7 +126,7 @@ If a single credential cannot be unambiguously obtained, the promise resolves wi
 
   - : Thrown in one of the following situations:
 
-    - This exception is most likely triggered when the user cancels the request.
+    - The user canceled the request.
 
     - Use of this API was blocked by one of the following [permissions policies](/en-US/docs/Web/HTTP/Permissions_Policy):
 
