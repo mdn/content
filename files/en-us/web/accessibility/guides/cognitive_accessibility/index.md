@@ -273,7 +273,7 @@ The above are good design practices. They will benefit everyone.
 
 - [Accessibility Guidelines](https://extensionworkshop.com/documentation/develop/build-an-accessible-extension/)
 - [What is accessibility](/en-US/docs/Learn_web_development/Core/Accessibility/What_is_accessibility)
-- [Accessibility for seizure disorders](/en-US/docs/Web/Accessibility/Seizure_disorders)
+- [Accessibility for seizure disorders](/en-US/docs/Web/Accessibility/Guides/Seizure_disorders)
 - [Understanding WCAG Guidelines](/en-US/docs/Web/Accessibility/Understanding_WCAG)
 - [Accessibility overview](/en-US/docs/Learn_web_development/Core/Accessibility)
 - [Web Content Accessibility Guidelines](https://www.w3.org/WAI/standards-guidelines/wcag/), including [cognitive accessibility guidelines](#wcag_guidelines)

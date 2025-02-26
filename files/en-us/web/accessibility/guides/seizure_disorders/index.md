@@ -1,6 +1,6 @@
 ---
 title: Web accessibility for seizures and physical reactions
-slug: Web/Accessibility/Seizure_disorders
+slug: Web/Accessibility/Guides/Seizure_disorders
 page-type: guide
 ---
 

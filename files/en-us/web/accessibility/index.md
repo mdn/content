@@ -43,7 +43,7 @@ The MDN [Accessibility Learning Area](/en-US/docs/Learn_web_development/Core/Acc
   - : This article provides a concise checklist of accessibility requirements for mobile app developers.
 - [Cognitive accessibility](/en-US/docs/Web/Accessibility/Guides/Cognitive_accessibility)
   - : This article explains how to ensure that the web content you're creating is accessible to people with cognitive impairments.
-- [Accessibility for seizure disorders](/en-US/docs/Web/Accessibility/Seizure_disorders)
+- [Accessibility for seizure disorders](/en-US/docs/Web/Accessibility/Guides/Seizure_disorders)
   - : Some types of visual web content can induce seizures in people with certain brain disorders. This article helps you understand the types of content that can be problematic and find tools and strategies to help you avoid them.
 
 ## See also
