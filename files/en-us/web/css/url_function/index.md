@@ -19,7 +19,7 @@ The **`url()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Va
 url("https://example.com/images/myImg.jpg");
 url('https://example.com/images/myImg.jpg');
 url(https://example.com/images/myImg.jpg);
-url("data:image/jpg;base64,iRxVB0…");
+url("data:image/jpeg;base64,iRxVB0…");
 url(myImg.jpg);
 url(#IDofSVGpath);
 
