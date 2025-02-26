@@ -20,7 +20,7 @@ sidebar:
     details: closed
     children:
       - /Web/Accessibility/Information_for_Web_authors
-      - /Web/Accessibility/Accessibility:_What_users_can_to_to_browse_safely
+      - /Web/Accessibility/Guides/Browsing_safely
       - /Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets
       - /Web/Accessibility/Keyboard-navigable_JavaScript_widgets
       - /Web/Accessibility/Mobile_accessibility_checklist

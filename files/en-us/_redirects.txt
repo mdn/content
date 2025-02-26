@@ -11577,6 +11577,7 @@
 /en-US/docs/Web/Accessibility/ARIA/forms/alerts	/en-US/docs/Web/Accessibility/ARIA
 /en-US/docs/Web/Accessibility/ARIA/widgets	/en-US/docs/Web/Accessibility/ARIA
 /en-US/docs/Web/Accessibility/ARIA/widgets/overview	/en-US/docs/Web/Accessibility/ARIA
+/en-US/docs/Web/Accessibility/Accessibility:_What_users_can_to_to_browse_safely	/en-US/docs/Web/Accessibility/Guides/Browsing_safely
 /en-US/docs/Web/Accessibility/Accessibility_and_Spacial_Patterns	/en-US/docs/Web/Accessibility/Guides/Accessibility_and_Spacial_Patterns
 /en-US/docs/Web/Accessibility/Accessible_dynamic_content	/en-US/docs/Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets
 /en-US/docs/Web/Accessibility/Accessible_forms/alerts	/en-US/docs/Web/Accessibility/ARIA

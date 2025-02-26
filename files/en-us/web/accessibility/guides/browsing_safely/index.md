@@ -1,6 +1,6 @@
 ---
 title: "Accessibility: What users can do to browse more safely"
-slug: Web/Accessibility/Accessibility:_What_users_can_to_to_browse_safely
+slug: Web/Accessibility/Guides/Browsing_safely
 page-type: guide
 ---
 
