@@ -33,7 +33,7 @@
 /en-US/docs/ARIA	/en-US/docs/Web/Accessibility/ARIA
 /en-US/docs/ARIA/ARIA_Guides	/en-US/docs/Web/Accessibility/ARIA/Guides
 /en-US/docs/ARIA/ARIA_Live_Regions	/en-US/docs/Web/Accessibility/ARIA/Guides/Live_regions
-/en-US/docs/ARIA/ARIA_Screen_Reader_Implementors_Guide	/en-US/docs/Web/Accessibility/ARIA/ARIA_Screen_Reader_Implementors_Guide
+/en-US/docs/ARIA/ARIA_Screen_Reader_Implementors_Guide	/en-US/docs/Web/Accessibility/ARIA/Guides/Screen_Reader_Implementors
 /en-US/docs/ARIA/ARIA_Techniques	/en-US/docs/Web/Accessibility/ARIA/Guides/Techniques
 /en-US/docs/ARIA/ARIA_Techniques/Using_the_alert_role	/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/alert_role
 /en-US/docs/ARIA/ARIA_Techniques/Using_the_alertdialog_role	/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/alertdialog_role
@@ -58,7 +58,7 @@
 /en-US/docs/ARIA/examples	/en-US/docs/Web/Accessibility/ARIA
 /en-US/docs/ARIA/widgets	/en-US/docs/Web/Accessibility/ARIA
 /en-US/docs/ARIA/widgets/overview	/en-US/docs/Web/Accessibility/ARIA
-/en-US/docs/ARIA_Screen_Reader_Implementors_Guide	/en-US/docs/Web/Accessibility/ARIA/ARIA_Screen_Reader_Implementors_Guide
+/en-US/docs/ARIA_Screen_Reader_Implementors_Guide	/en-US/docs/Web/Accessibility/ARIA/Guides/Screen_Reader_Implementors
 /en-US/docs/A_re-introduction_to_JavaScript	/en-US/docs/Web/JavaScript/Language_overview
 /en-US/docs/About_JavaScript	/en-US/docs/Web/JavaScript
 /en-US/docs/About_WOFF	/en-US/docs/Web/CSS/CSS_fonts/WOFF
@@ -68,7 +68,7 @@
 /en-US/docs/Accessibility/ARIA/ARIA_Examples	/en-US/docs/Web/Accessibility/ARIA
 /en-US/docs/Accessibility/ARIA/ARIA_Guides	/en-US/docs/Web/Accessibility/ARIA/Guides
 /en-US/docs/Accessibility/ARIA/ARIA_Live_Regions	/en-US/docs/Web/Accessibility/ARIA/Guides/Live_regions
-/en-US/docs/Accessibility/ARIA/ARIA_Screen_Reader_Implementors_Guide	/en-US/docs/Web/Accessibility/ARIA/ARIA_Screen_Reader_Implementors_Guide
+/en-US/docs/Accessibility/ARIA/ARIA_Screen_Reader_Implementors_Guide	/en-US/docs/Web/Accessibility/ARIA/Guides/Screen_Reader_Implementors
 /en-US/docs/Accessibility/ARIA/ARIA_Techniques	/en-US/docs/Web/Accessibility/ARIA/Guides/Techniques
 /en-US/docs/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role	/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/alert_role
 /en-US/docs/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role	/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/alertdialog_role
@@ -11380,6 +11380,7 @@
 /en-US/docs/Web/Accessibility/ARIA/ARIA_Examples	/en-US/docs/Web/Accessibility/ARIA
 /en-US/docs/Web/Accessibility/ARIA/ARIA_Guides	/en-US/docs/Web/Accessibility/ARIA/Guides
 /en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions	/en-US/docs/Web/Accessibility/ARIA/Guides/Live_regions
+/en-US/docs/Web/Accessibility/ARIA/ARIA_Screen_Reader_Implementors_Guide	/en-US/docs/Web/Accessibility/ARIA/Guides/Screen_Reader_Implementors
 /en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques	/en-US/docs/Web/Accessibility/ARIA/Guides/Techniques
 /en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Complementary_role	/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/complementary_role
 /en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role	/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/alert_role

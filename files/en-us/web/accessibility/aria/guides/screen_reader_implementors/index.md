@@ -1,6 +1,6 @@
 ---
 title: ARIA Screen Reader Implementors Guide
-slug: Web/Accessibility/ARIA/ARIA_Screen_Reader_Implementors_Guide
+slug: Web/Accessibility/ARIA/Guides/Screen_Reader_Implementors
 page-type: guide
 ---
 

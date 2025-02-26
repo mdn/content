@@ -71378,16 +71378,6 @@
       "fscholz"
     ]
   },
-  "Web/Accessibility/ARIA/ARIA_Screen_Reader_Implementors_Guide": {
-    "modified": "2019-03-23T23:59:09.827Z",
-    "contributors": [
-      "Fredchat",
-      "Sheppy",
-      "yura.zen",
-      "DavidBolter",
-      "Aaronlev"
-    ]
-  },
   "Web/Accessibility/ARIA/Guides": {
     "modified": "2019-03-24T00:13:12.236Z",
     "contributors": ["SphinxKnight", "sidgan", "Sheppy", "hhillen"]
@@ -71411,6 +71401,16 @@
       "Hywan",
       "integritydc",
       "Sheppy",
+      "Aaronlev"
+    ]
+  },
+  "Web/Accessibility/ARIA/Guides/Screen_Reader_Implementors": {
+    "modified": "2019-03-23T23:59:09.827Z",
+    "contributors": [
+      "Fredchat",
+      "Sheppy",
+      "yura.zen",
+      "DavidBolter",
       "Aaronlev"
     ]
   },

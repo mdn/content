@@ -66,4 +66,4 @@ Everything else, including focus changes, timer callbacks, XMLHttpRequest callba
 
 ## What Should Screen Readers Present?
 
-Please read the live region section of the [WAI-ARIA Screen Reader Implementor's Guide](/en-US/docs/Web/Accessibility/ARIA/ARIA_Screen_Reader_Implementors_Guide#live_regions).
+Please read the live region section of the [WAI-ARIA Screen Reader Implementor's Guide](/en-US/docs/Web/Accessibility/ARIA/Guides/Screen_Reader_Implementors#live_regions).

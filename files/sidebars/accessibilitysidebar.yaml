@@ -41,7 +41,7 @@ sidebar:
     children:
       - /Web/Accessibility/ARIA/Guides
       - /Web/Accessibility/ARIA/Guides/Live_regions
-      - /Web/Accessibility/ARIA/ARIA_Screen_Reader_Implementors_Guide
+      - /Web/Accessibility/ARIA/Guides/Screen_Reader_Implementors
       - /Web/Accessibility/ARIA/Guides/Techniques
       - /Web/Accessibility/ARIA/Multipart_labels
       - /Web/Accessibility/ARIA/How_to_file_ARIA-related_bugs
