@@ -3,9 +3,8 @@ title: aria-multiline
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-multiline
 page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-multiline
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 The `aria-multiline` attribute indicates whether a `textbox` accepts multiple lines of input or only a single line.
 

@@ -5,9 +5,8 @@ page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#columnheader
   - https://www.w3.org/WAI/ARIA/apg/patterns/table/examples/table/
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 The `columnheader` value of the ARIA role attribute identifies an element as being a cell in a row contains header information for a column, similar to the native {{HTMLElement('th')}} element with column scope.
 

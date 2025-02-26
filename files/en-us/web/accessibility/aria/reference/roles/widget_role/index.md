@@ -3,9 +3,8 @@ title: "ARIA: widget role"
 slug: Web/Accessibility/ARIA/Reference/Roles/widget_role
 page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#widget
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 The **`widget`** role, an [abstract role](/en-US/docs/Web/Accessibility/ARIA/Roles#6._abstract_roles), is an interactive component of a graphical user interface (GUI).
 

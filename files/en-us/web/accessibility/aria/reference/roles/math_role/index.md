@@ -3,9 +3,8 @@ title: "ARIA: math role"
 slug: Web/Accessibility/ARIA/Reference/Roles/math_role
 page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#math
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 The `math` role indicates that the content represents a mathematical expression.
 

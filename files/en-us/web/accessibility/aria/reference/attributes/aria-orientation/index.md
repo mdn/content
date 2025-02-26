@@ -3,9 +3,8 @@ title: aria-orientation
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-orientation
 page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-orientation
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 The `aria-orientation` attribute indicates whether the element's orientation is horizontal, vertical, or unknown/ambiguous.
 

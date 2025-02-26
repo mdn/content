@@ -3,9 +3,8 @@ title: "ARIA: list role"
 slug: Web/Accessibility/ARIA/Reference/Roles/list_role
 page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#list
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 The ARIA `list` role can be used to identify a list of items. It is normally used in conjunction with the `listitem` role, which is used to identify a list item contained inside the list.
 

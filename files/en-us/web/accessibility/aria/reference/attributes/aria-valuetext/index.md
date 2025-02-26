@@ -3,9 +3,8 @@ title: aria-valuetext
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-valuetext
 page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-valuetext
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 The `aria-valuetext` attribute defines the human-readable text alternative of `aria-valuenow` for a range widget.
 

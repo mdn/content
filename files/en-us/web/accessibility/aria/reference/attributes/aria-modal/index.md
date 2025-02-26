@@ -3,9 +3,8 @@ title: aria-modal
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-modal
 page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-modal
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 The `aria-modal` attribute indicates whether an element is modal when displayed.
 

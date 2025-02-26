@@ -5,9 +5,8 @@ page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#alertdialog
   - https://www.w3.org/TR/wai-aria-1.2/#alertdialog
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 The **alertdialog** role is to be used on modal alert dialogs that interrupt a user's workflow to communicate an important message and require a response.
 

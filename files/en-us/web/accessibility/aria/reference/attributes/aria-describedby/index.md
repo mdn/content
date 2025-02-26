@@ -5,9 +5,8 @@ page-type: aria-attribute
 spec-urls:
   - https://w3c.github.io/aria/#aria-describedby
   - https://www.w3.org/TR/wai-aria-1.2/#aria-describedby
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 The global `aria-describedby` attribute identifies the element (or elements) that describes the element on which the attribute is set.
 

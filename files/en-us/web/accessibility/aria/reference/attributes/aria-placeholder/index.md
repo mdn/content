@@ -3,9 +3,8 @@ title: aria-placeholder
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-placeholder
 page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-placeholder
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 The `aria-placeholder` attribute defines a short hint (a word or short phrase) intended to help the user with data entry when a form control has no value. The hint can be a sample value or a brief description of the expected format.
 

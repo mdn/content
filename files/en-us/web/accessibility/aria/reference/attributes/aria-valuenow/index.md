@@ -3,9 +3,8 @@ title: aria-valuenow
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-valuenow
 page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-valuenow
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 The `aria-valuenow` attribute defines the current value for a `range` widget.
 

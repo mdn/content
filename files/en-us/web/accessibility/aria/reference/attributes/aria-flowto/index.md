@@ -3,9 +3,8 @@ title: aria-flowto
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-flowto
 page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-flowto
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 The global `aria-flowto` attribute identifies the next element (or elements) in an alternate reading order of content. This allows assistive technology to override the general default of reading in document source order at the user's discretion.
 

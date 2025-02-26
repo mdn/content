@@ -5,9 +5,8 @@ page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#tab
   - https://www.w3.org/WAI/ARIA/apg/patterns/tabs/examples/tabs-manual/
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 The ARIA `tab` role indicates an interactive element inside a `tablist` that, when activated, displays its associated `tabpanel`.
 

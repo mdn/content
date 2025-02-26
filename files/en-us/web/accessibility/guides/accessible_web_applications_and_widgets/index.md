@@ -2,9 +2,8 @@
 title: An overview of accessible web applications and widgets
 slug: Web/Accessibility/Guides/Accessible_web_applications_and_widgets
 page-type: guide
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 Most JavaScript libraries offer a library of client-side widgets that mimic the behavior of familiar desktop interfaces. Sliders, menu bars, file list views, and more can be built with a combination of JavaScript, CSS, and HTML. Since the HTML4 specification doesn't provide built-in tags that semantically describe these kinds of widgets, developers typically resort to using generic elements such as {{HTMLElement('div')}} and {{HTMLElement('span')}}. While this results in a widget that looks like its desktop counterpart, there usually isn't enough semantic information in the markup to be usable by an assistive technology.
 

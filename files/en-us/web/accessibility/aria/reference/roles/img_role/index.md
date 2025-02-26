@@ -3,9 +3,8 @@ title: "ARIA: img role"
 slug: Web/Accessibility/ARIA/Reference/Roles/img_role
 page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#img
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 The ARIA `img` role can be used to identify multiple elements inside page content that should be considered as a single image. These elements could be images, code snippets, text, emojis, or other content that can be combined to deliver information in a visual manner.
 

@@ -2,9 +2,8 @@
 title: "ARIA: comment role"
 slug: Web/Accessibility/ARIA/Reference/Roles/comment_role
 page-type: aria-role
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 The `comment` role semantically denotes a comment/reaction to some content on the page, or to a previous comment.
 

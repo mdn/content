@@ -3,9 +3,8 @@ title: aria-errormessage
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-errormessage
 page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-errormessage
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 The `aria-errormessage` attribute on an object identifies the element that provides an error message for that object.
 

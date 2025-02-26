@@ -5,9 +5,8 @@ page-type: aria-attribute
 spec-urls:
   - https://w3c.github.io/aria/#aria-keyshortcuts
   - https://www.w3.org/WAI/ARIA/apg/practices/keyboard-interface/
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 The global `aria-keyshortcuts` attribute indicates keyboard shortcuts that an author has implemented to activate or give focus to an element.
 

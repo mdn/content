@@ -5,9 +5,8 @@ page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#menuitemradio
   - https://www.w3.org/WAI/ARIA/apg/patterns/menubar/examples/menubar-navigation/
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 A `menuitemradio` is checkable menuitem in a set of elements with the same role, only one of which can be checked at a time.
 

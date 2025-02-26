@@ -2,9 +2,8 @@
 title: Keyboard-navigable JavaScript widgets
 slug: Web/Accessibility/Guides/Keyboard-navigable_JavaScript_widgets
 page-type: guide
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 Web applications often use JavaScript to mimic desktop widgets such as menus, tree views, rich text fields, and tab panels. These widgets are typically composed of {{ HTMLElement("div") }} and {{ HTMLElement("span") }} elements that do not, by nature, offer the same keyboard functionality that their desktop counterparts do. This document describes techniques to make JavaScript widgets accessible with the keyboard.
 

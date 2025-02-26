@@ -3,9 +3,8 @@ title: "ARIA: slider role"
 slug: Web/Accessibility/ARIA/Reference/Roles/slider_role
 page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#slider
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 The `slider` role defines an input where the user selects a value from within a given range.
 

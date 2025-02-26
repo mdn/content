@@ -3,9 +3,8 @@ title: aria-live
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-live
 page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-live
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 The global `aria-live` attribute indicates that an element will be updated, and describes the types of updates the user agents, assistive technologies, and user can expect from the live region.
 

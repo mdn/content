@@ -3,9 +3,8 @@ title: aria-sort
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-sort
 page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-sort
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 The `aria-sort` attribute indicates if items in a table or grid are sorted in ascending or descending order.
 

@@ -3,9 +3,8 @@ title: "ARIA: structure role"
 slug: Web/Accessibility/ARIA/Reference/Roles/structure_role
 page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#structure
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 The `structure` role is for document structural elements.
 

@@ -3,9 +3,8 @@ title: aria-level
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-level
 page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-level
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 The `aria-level` attribute defines the hierarchical level of an element within a structure.
 

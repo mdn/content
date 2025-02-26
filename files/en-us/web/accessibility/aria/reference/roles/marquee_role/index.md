@@ -3,9 +3,8 @@ title: "ARIA: marquee role"
 slug: Web/Accessibility/ARIA/Reference/Roles/marquee_role
 page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#marquee
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 A `marquee` is a type of [live region](/en-US/docs/Web/Accessibility/ARIA/Guides/Live_regions) containing non-essential information which changes frequently.
 

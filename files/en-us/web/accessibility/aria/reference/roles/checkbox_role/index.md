@@ -2,9 +2,8 @@
 title: "ARIA: checkbox role"
 slug: Web/Accessibility/ARIA/Reference/Roles/checkbox_role
 page-type: aria-role
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 The `checkbox` role is for checkable interactive controls. Elements containing `role="checkbox"` must also include the [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-checked) attribute to expose the checkbox's state to assistive technology.
 

@@ -3,9 +3,8 @@ title: "ARIA: application role"
 slug: Web/Accessibility/ARIA/Reference/Roles/application_role
 page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#application
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 The `application` role indicates to assistive technologies that an element _and all of its children_ should be treated similar to a desktop application, and no traditional HTML interpretation techniques should be used. This role should only be used to define very dynamic and desktop-like web applications. Most mobile and desktop web apps _are not_ considered applications for this purpose.
 

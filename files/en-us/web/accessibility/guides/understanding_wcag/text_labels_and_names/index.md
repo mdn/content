@@ -2,9 +2,8 @@
 title: Text labels and names
 slug: Web/Accessibility/Guides/Understanding_WCAG/Text_labels_and_names
 page-type: guide
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 There are many situations in which a control, dialog, or other website feature should be given a descriptive name or label to allow users of assistive technologies to understand what its purpose is and how to operate it correctly. There are a number of different types of problems in this category, found in different contexts, and each has its own solution. The different problems and solutions are discussed in the sections below.
 

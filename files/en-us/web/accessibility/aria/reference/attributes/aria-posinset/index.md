@@ -3,9 +3,8 @@ title: aria-posinset
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-posinset
 page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-posinset
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 The `aria-posinset` attribute defines an element's number or position in the current set of listitems or treeitems when not all items are present in the DOM.
 

@@ -5,9 +5,8 @@ page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#menu
   - https://www.w3.org/WAI/ARIA/apg/patterns/menubar/examples/menubar-navigation/
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 The `menu` role is a type of composite widget that offers a list of choices to the user.
 

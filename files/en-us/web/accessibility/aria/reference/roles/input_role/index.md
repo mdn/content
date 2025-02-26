@@ -3,9 +3,8 @@ title: "ARIA: input role"
 slug: Web/Accessibility/ARIA/Reference/Roles/input_role
 page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#input
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 The `input` abstract role is a generic type of widget that allows user input.
 

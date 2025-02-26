@@ -5,9 +5,8 @@ page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#tree
   - https://www.w3.org/WAI/ARIA/apg/patterns/treeview/examples/treeview-navigation/
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 A `tree` is a widget that allows the user to select one or more items from a hierarchically organized collection.
 

@@ -3,9 +3,8 @@ title: "ARIA: definition role"
 slug: Web/Accessibility/ARIA/Reference/Roles/definition_role
 page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#definition
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 The `definition` ARIA role indicates the element is a definition of a term or concept.
 

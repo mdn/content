@@ -3,9 +3,8 @@ title: "ARIA: tablist role"
 slug: Web/Accessibility/ARIA/Reference/Roles/tablist_role
 page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#tablist
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 The `tablist` role identifies the element that serves as the container for a set of `tabs`. The tab content are referred to as `tabpanel` elements.
 

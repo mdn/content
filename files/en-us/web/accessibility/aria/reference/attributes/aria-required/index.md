@@ -3,9 +3,8 @@ title: aria-required
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-required
 page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-required
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 The `aria-required` attribute indicates that user input is required on the element before a form may be submitted.
 

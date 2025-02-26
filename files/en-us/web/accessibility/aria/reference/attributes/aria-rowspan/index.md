@@ -3,9 +3,8 @@ title: aria-rowspan
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-rowspan
 page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-rowspan
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 The `aria-rowspan` attribute defines the number of rows spanned by a cell or gridcell within a table, grid, or treegrid.
 

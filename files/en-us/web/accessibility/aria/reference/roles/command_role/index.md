@@ -3,9 +3,8 @@ title: "ARIA: command role"
 slug: Web/Accessibility/ARIA/Reference/Roles/command_role
 page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#command
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 The `command` role defines a widget that performs an action but does not receive input data.
 

@@ -3,9 +3,8 @@ title: "ARIA: roletype role"
 slug: Web/Accessibility/ARIA/Reference/Roles/roletype_role
 page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#roletype
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 The **`roletype`** role, an [abstract role](/en-US/docs/Web/Accessibility/ARIA/Roles#6._abstract_roles), is the base role from which all other ARIA roles inherit.
 

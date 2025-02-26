@@ -3,9 +3,8 @@ title: aria-valuemin
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-valuemin
 page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-valuemin
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 The `aria-valuemin` attribute defines the minimum allowed value for a range widget.
 

@@ -5,9 +5,8 @@ page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#main
   - https://www.w3.org/WAI/ARIA/apg/patterns/landmarks/examples/main.html
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 The `main` landmark role is used to indicate the primary content of a document. The main content area consists of content that is directly related to or expands upon the central topic of a document, or the main function of an application.
 

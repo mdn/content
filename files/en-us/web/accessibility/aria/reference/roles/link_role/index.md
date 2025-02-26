@@ -3,9 +3,8 @@ title: "ARIA: link role"
 slug: Web/Accessibility/ARIA/Reference/Roles/link_role
 page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#link
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 A `link` widget provides an interactive reference to a resource. The target resource can be either external or local; i.e., either outside or within the current page or application.
 

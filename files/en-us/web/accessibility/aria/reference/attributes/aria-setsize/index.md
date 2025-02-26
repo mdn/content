@@ -3,9 +3,8 @@ title: aria-setsize
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-setsize
 page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-setsize
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 The `aria-setsize` attribute defines the number of items in the current set of listitems or treeitems when not all items in the set are present in the DOM.
 

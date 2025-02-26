@@ -5,9 +5,8 @@ page-type: aria-attribute
 status:
   - deprecated
 spec-urls: https://w3c.github.io/aria/#aria-dropeffect
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 The global `aria-dropeffect` attribute indicates what functions may be performed when a dragged object is released on the drop target. {{deprecated_inline}}
 

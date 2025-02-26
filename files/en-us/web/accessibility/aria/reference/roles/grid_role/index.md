@@ -3,9 +3,8 @@ title: "ARIA: grid role"
 slug: Web/Accessibility/ARIA/Reference/Roles/grid_role
 page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#grid
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 The grid role is for a widget that contains one or more rows of cells. The position of each cell is significant and can be focused using keyboard input.
 

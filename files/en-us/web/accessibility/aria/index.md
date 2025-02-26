@@ -2,9 +2,8 @@
 title: ARIA
 slug: Web/Accessibility/ARIA
 page-type: landing-page
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 Accessible Rich Internet Applications **(<abbr>ARIA</abbr>)** is a set of [roles](/en-US/docs/Web/Accessibility/ARIA/Roles) and [attributes](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes) that define ways to make web content and web applications (especially those developed with JavaScript) more accessible to people with disabilities.
 

@@ -3,9 +3,8 @@ title: aria-roledescription
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-roledescription
 page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-roledescription
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 The `aria-roledescription` attribute defines a human-readable, author-localized description for the role of an element.
 

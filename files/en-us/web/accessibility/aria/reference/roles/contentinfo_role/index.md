@@ -5,9 +5,8 @@ page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#contentinfo
   - https://www.w3.org/WAI/ARIA/apg/patterns/landmarks/examples/contentinfo.html
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 The `contentinfo` role defines a footer, containing identifying information such as copyright information, navigation links, and privacy statements, found on every document within a site. This section is commonly called a footer.
 

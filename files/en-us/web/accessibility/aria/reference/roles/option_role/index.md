@@ -5,9 +5,8 @@ page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#option
   - https://www.w3.org/WAI/ARIA/apg/patterns/listbox/examples/listbox-scrollable/
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 The `option` role is used for selectable items in a `listbox`.
 

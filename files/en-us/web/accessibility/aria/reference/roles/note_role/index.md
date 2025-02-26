@@ -3,9 +3,8 @@ title: "ARIA: note role"
 slug: Web/Accessibility/ARIA/Reference/Roles/note_role
 page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#note
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 A `note` role suggests a section whose content is parenthetic or ancillary to the main content.
 

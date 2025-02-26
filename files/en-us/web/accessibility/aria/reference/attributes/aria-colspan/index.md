@@ -3,9 +3,8 @@ title: aria-colspan
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-colspan
 page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-colspan
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 The `aria-colspan` attribute defines the number of columns spanned by a cell or gridcell within a [`table`](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role), [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role), or [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role).
 

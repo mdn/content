@@ -5,9 +5,8 @@ page-type: aria-attribute
 status:
   - deprecated
 spec-urls: https://w3c.github.io/aria/#aria-grabbed
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 The `aria-grabbed` state indicates an element's "grabbed" state in a drag-and-drop operation. {{deprecated_inline}}
 

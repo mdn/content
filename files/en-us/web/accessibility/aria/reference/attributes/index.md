@@ -2,9 +2,8 @@
 title: ARIA states and properties
 slug: Web/Accessibility/ARIA/Reference/Attributes
 page-type: landing-page
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 This page lists reference pages covering all the <abbr>WAI-ARIA</abbr> attributes discussed on MDN.
 

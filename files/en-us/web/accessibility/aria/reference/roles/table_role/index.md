@@ -5,9 +5,8 @@ page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#table
   - https://www.w3.org/WAI/ARIA/apg/patterns/table/examples/table/
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 The `table` value of the ARIA `role` attribute identifies the element containing the role as having a non-interactive table structure containing data arranged in rows and columns, similar to the native {{HTMLElement('table')}} HTML element.
 

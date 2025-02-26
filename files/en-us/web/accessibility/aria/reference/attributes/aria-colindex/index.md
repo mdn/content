@@ -3,9 +3,8 @@ title: aria-colindex
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-colindex
 page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-colindex
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 The `aria-colindex` attribute defines an element's column index or position with respect to the total number of columns within a `table`, `grid`, or `treegrid`.
 

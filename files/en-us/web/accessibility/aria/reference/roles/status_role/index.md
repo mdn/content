@@ -3,9 +3,8 @@ title: "ARIA: status role"
 slug: Web/Accessibility/ARIA/Reference/Roles/status_role
 page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#status
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 The `status` role defines a [live region](/en-US/docs/Web/Accessibility/ARIA/Guides/Live_regions) containing advisory information for the user that is not important enough to be an [`alert`](/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role).
 

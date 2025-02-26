@@ -3,9 +3,8 @@ title: aria-rowindex
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-rowindex
 page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-rowindex
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 The `aria-rowindex` attribute defines an element's position with respect to the total number of rows within a table, grid, or treegrid.
 

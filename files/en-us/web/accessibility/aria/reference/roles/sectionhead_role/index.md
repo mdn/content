@@ -3,9 +3,8 @@ title: "ARIA: sectionhead role"
 slug: Web/Accessibility/ARIA/Reference/Roles/sectionhead_role
 page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#sectionhead
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 The **`sectionhead` role**, an abstract role, is superclass role for labels or summaries of the topic of its related section.
 

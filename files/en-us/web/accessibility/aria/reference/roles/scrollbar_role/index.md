@@ -3,9 +3,8 @@ title: "ARIA: scrollbar role"
 slug: Web/Accessibility/ARIA/Reference/Roles/scrollbar_role
 page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#scrollbar
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 A `scrollbar` is a graphical object that controls the scrolling of content within a viewing area.
 

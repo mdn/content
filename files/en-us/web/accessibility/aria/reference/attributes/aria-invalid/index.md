@@ -3,9 +3,8 @@ title: aria-invalid
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-invalid
 page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-invalid
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 The `aria-invalid` state indicates the entered value does not conform to the format expected by the application.
 

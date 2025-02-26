@@ -3,9 +3,8 @@ title: aria-details
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-details
 page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-details
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 The global `aria-details` attribute identifies the element (or elements) that provide additional information related to the object.
 

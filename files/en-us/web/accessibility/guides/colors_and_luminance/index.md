@@ -2,9 +2,8 @@
 title: "Web Accessibility: Understanding Colors and Luminance"
 slug: Web/Accessibility/Guides/Colors_and_Luminance
 page-type: guide
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 While understanding color, luminance, and saturation is important for design and readability for all sighted users, they are essential for those with reduced vision and color-deficient vision and those with specific neurological, cognitive, and other impairments.
 

@@ -3,9 +3,8 @@ title: aria-disabled
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-disabled
 page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-disabled
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 The `aria-disabled` state indicates that the element is perceivable but disabled, so it is not editable or otherwise operable.
 

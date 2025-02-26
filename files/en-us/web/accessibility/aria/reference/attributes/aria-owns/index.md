@@ -3,9 +3,8 @@ title: aria-owns
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-owns
 page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-owns
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 The `aria-owns` attribute identifies an element (or elements) in order to define a visual, functional, or contextual relationship between a parent and its child elements when the DOM hierarchy cannot be used to represent the relationship.
 

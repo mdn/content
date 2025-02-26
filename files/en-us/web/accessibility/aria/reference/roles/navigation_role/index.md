@@ -5,9 +5,8 @@ page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#navigation
   - https://www.w3.org/WAI/ARIA/apg/patterns/landmarks/examples/navigation.html
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 The `navigation` role is used to identify major groups of links used for navigating through a website or page content.
 

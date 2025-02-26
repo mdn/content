@@ -3,9 +3,8 @@ title: aria-readonly
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-readonly
 page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-readonly
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 The `aria-readonly` attribute indicates that the element is not editable, but is otherwise operable.
 

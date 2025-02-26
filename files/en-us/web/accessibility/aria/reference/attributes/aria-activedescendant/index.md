@@ -5,9 +5,8 @@ page-type: aria-attribute
 spec-urls:
   - https://w3c.github.io/aria/#aria-activedescendant
   - https://www.w3.org/TR/wai-aria-1.2/#aria-activedescendant
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 The `aria-activedescendant` attribute identifies the currently active element when focus is on a [`composite`](/en-US/docs/Web/Accessibility/ARIA/Roles/composite_role) widget, [`combobox`](/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role), [`textbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role), [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role), or [`application`](/en-US/docs/Web/Accessibility/ARIA/Roles/application_role).
 

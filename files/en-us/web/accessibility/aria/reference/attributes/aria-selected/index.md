@@ -3,9 +3,8 @@ title: aria-selected
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-selected
 page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-selected
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 The `aria-selected` attribute indicates the current "selected" state of various widgets.
 

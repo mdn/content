@@ -3,9 +3,8 @@ title: aria-haspopup
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-haspopup
 page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-haspopup
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 The `aria-haspopup` attribute indicates the availability and type of interactive popup element that can be triggered by the element on which the attribute is set.
 

@@ -5,9 +5,8 @@ page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#form
   - https://www.w3.org/WAI/ARIA/apg/patterns/landmarks/examples/form.html
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 The `form` role can be used to identify a group of elements on a page that provide equivalent functionality to an HTML form. The form is not exposed as a landmark region unless it has an [accessible name](/en-US/docs/Glossary/Accessible_name).
 

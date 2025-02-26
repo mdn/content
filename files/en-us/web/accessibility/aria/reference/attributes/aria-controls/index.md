@@ -3,9 +3,8 @@ title: aria-controls
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-controls
 page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-controls
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 The global `aria-controls` property identifies the element (or elements) whose contents or presence are controlled by the element on which this attribute is set.
 

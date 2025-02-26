@@ -5,9 +5,8 @@ page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#separator
   - https://www.w3.org/WAI/ARIA/apg/patterns/menubar/examples/menubar-editor/
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 The `separator` role indicates the element is a divider that separates and distinguishes sections of content or groups of menuitems. The implicit ARIA role the native thematic break {{HTMLElement('hr')}} element is `separator`.
 

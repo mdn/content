@@ -5,9 +5,8 @@ page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#alert
   - https://www.w3.org/TR/wai-aria-1.2/#alert
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 The `alert` role is for important, and usually time-sensitive, information. The `alert` is a type of [`status`](/en-US/docs/Web/Accessibility/ARIA/Roles/status_role) processed as an atomic live region.
 

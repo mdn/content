@@ -3,9 +3,8 @@ title: "ARIA: spinbutton role"
 slug: Web/Accessibility/ARIA/Reference/Roles/spinbutton_role
 page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#spinbutton
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 The `spinbutton` role defines a type of range that expects the user to select a value from among discrete choices.
 

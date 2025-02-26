@@ -3,9 +3,8 @@ title: "ARIA: select role"
 slug: Web/Accessibility/ARIA/Reference/Roles/select_role
 page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#select
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 The **`select` role**, an abstract role, is superclass role for form widgets that allows the user to make selections from a set of choices.
 

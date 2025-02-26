@@ -3,9 +3,8 @@ title: "ARIA: document structural roles"
 slug: Web/Accessibility/ARIA/Reference/Roles/structural_roles
 page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#document_structure_roles
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 ARIA document-structure roles are used to provide a structural description for a section of content.
 

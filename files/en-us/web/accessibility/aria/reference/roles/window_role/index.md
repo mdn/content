@@ -3,9 +3,8 @@ title: "ARIA: window role"
 slug: Web/Accessibility/ARIA/Reference/Roles/window_role
 page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#window
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 The `window` role defines a browser or app window.
 

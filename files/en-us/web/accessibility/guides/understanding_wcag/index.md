@@ -2,9 +2,8 @@
 title: Understanding the Web Content Accessibility Guidelines
 slug: Web/Accessibility/Guides/Understanding_WCAG
 page-type: guide
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 This set of articles provides quick explanations to help you understand the steps that need to be taken to conform to the recommendations outlined in the {{glossary("WCAG", "Web Content Accessibility Guidelines")}} (WCAG).
 

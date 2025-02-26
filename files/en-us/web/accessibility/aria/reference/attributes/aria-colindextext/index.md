@@ -3,9 +3,8 @@ title: aria-colindextext
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-colindextext
 page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-colindextext
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 The `aria-colindextext` attribute defines a human-readable text alternative of the numeric [`aria-colindex`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colindex).
 

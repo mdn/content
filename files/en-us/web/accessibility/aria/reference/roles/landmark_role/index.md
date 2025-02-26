@@ -3,9 +3,8 @@ title: "ARIA: landmark role"
 slug: Web/Accessibility/ARIA/Reference/Roles/landmark_role
 page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#landmark
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 A landmark is an important subsection of a page. The `landmark` role is an abstract superclass for the aria role values for sections of content that are important enough that users will likely want to be able to navigate directly to them.
 

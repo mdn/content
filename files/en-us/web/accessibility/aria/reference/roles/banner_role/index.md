@@ -5,9 +5,8 @@ page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#banner
   - https://www.w3.org/WAI/ARIA/apg/patterns/landmarks/examples/banner.html
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 The `banner` role is for defining a global site header, which usually includes a logo, company name, search feature, and possibly the global navigation or a slogan. It is generally located at the top of the page.
 

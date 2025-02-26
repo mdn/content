@@ -3,9 +3,8 @@ title: "ARIA: range role"
 slug: Web/Accessibility/ARIA/Reference/Roles/range_role
 page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#range
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 The `range` abstract role is a generic type of structure role representing a range of values.
 

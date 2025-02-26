@@ -3,9 +3,8 @@ title: aria-colcount
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-colcount
 page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-colcount
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 The `aria-colcount` attribute defines the total number of columns in a [`table`](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role), [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role), or [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role) when not all columns are present in the [DOM](/en-US/docs/Glossary/DOM).
 

@@ -5,9 +5,8 @@ page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#switch
   - https://w3c.github.io/html-aria/#index-aria-switch
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 The ARIA **`switch`** role is functionally identical to the [checkbox](/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role) role, except that instead of representing "checked" and "unchecked" states, which are fairly generic in meaning, the `switch` role represents the states "on" and "off."
 

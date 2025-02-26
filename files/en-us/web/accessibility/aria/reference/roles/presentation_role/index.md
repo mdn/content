@@ -3,9 +3,8 @@ title: "ARIA: presentation role"
 slug: Web/Accessibility/ARIA/Reference/Roles/presentation_role
 page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#presentation
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 The `presentation` role and its synonym `none` remove an element's implicit ARIA semantics from being exposed to the accessibility tree.
 

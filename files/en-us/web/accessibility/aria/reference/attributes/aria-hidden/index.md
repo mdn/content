@@ -3,9 +3,8 @@ title: aria-hidden
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-hidden
 page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-hidden
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 The `aria-hidden` state indicates whether the element is exposed to an accessibility API.
 

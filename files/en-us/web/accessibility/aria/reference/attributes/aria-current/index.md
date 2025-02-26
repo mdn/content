@@ -3,9 +3,8 @@ title: aria-current
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-current
 page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-current
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 A non-null `aria-current` state on an element indicates that this element represents the current item within a container or set of related elements.
 

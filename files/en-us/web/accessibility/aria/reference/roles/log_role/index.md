@@ -3,9 +3,8 @@ title: "ARIA: log role"
 slug: Web/Accessibility/ARIA/Reference/Roles/log_role
 page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#log
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 The `log` role is used to identify an element that creates a [live region](/en-US/docs/Web/Accessibility/ARIA/Guides/Live_regions) where new information is added in a meaningful order and old information may disappear.
 

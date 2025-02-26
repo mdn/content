@@ -5,9 +5,8 @@ page-type: aria-role
 status:
   - deprecated
 spec-urls: https://w3c.github.io/aria/#directory
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 The `directory` role was for a list of references to members of a group, such as a static table of contents.
 

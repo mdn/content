@@ -5,9 +5,8 @@ page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#menuitem
   - https://www.w3.org/WAI/ARIA/apg/patterns/menubar/examples/menubar-navigation/
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 The `menuitem` role indicates the element is an option in a set of choices contained by a `menu` or `menubar`.
 

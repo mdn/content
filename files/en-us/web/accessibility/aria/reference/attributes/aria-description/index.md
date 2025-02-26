@@ -3,9 +3,8 @@ title: aria-description
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-description
 page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-description
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 The global `aria-description` attribute defines a string value that describes or annotates the current element.
 

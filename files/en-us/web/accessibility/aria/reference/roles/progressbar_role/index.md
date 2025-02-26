@@ -3,9 +3,8 @@ title: "ARIA: progressbar role"
 slug: Web/Accessibility/ARIA/Reference/Roles/progressbar_role
 page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#progressbar
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 The `progressbar` role defines an element that displays the progress status for tasks that take a long time.
 

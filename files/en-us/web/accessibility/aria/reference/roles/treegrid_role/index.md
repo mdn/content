@@ -5,9 +5,8 @@ page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#treegrid
   - https://www.w3.org/WAI/ARIA/apg/patterns/treegrid/examples/treegrid-1/
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 The `treegrid` role identifies an element as being grid whose rows can be expanded and collapsed in the same manner as for a `tree`.
 

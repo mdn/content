@@ -3,9 +3,8 @@ title: aria-rowindextext
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-rowindextext
 page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-rowindextext
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 The `aria-rowindextext` attribute defines a human-readable text alternative of `aria-rowindex`.
 

@@ -3,9 +3,8 @@ title: "ARIA: generic role"
 slug: Web/Accessibility/ARIA/Reference/Roles/generic_role
 page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#generic
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 The `generic` role creates a nameless container element which has no semantic meaning on its own.
 

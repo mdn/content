@@ -3,9 +3,8 @@ title: aria-braillelabel
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-braillelabel
 page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-braillelabel
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 The global `aria-braillelabel` property defines a string value that labels the current element, which is intended to be converted into Braille.
 

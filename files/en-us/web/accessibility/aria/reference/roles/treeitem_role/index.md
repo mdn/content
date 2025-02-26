@@ -5,9 +5,8 @@ page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#treeitem
   - https://www.w3.org/WAI/ARIA/apg/patterns/treeview/examples/treeview-navigation/
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 A `treeitem` is an item in a `tree`.
 

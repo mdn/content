@@ -2,9 +2,8 @@
 title: Cognitive accessibility
 slug: Web/Accessibility/Guides/Cognitive_accessibility
 page-type: guide
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 Cognitive accessibility covers accessibility considerations for people with cognition and learning disabilities. This document introduces cognitive accessibility and improving accessibility of the web for people with cognitive and learning differences.
 

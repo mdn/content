@@ -2,9 +2,8 @@
 title: "ARIA: radio role"
 slug: Web/Accessibility/ARIA/Reference/Roles/radio_role
 page-type: aria-role
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 The `radio` role is one of a group of checkable radio buttons, in a `radiogroup`, where no more than a single radio button can be checked at a time.
 

@@ -3,9 +3,8 @@ title: "ARIA: term role"
 slug: Web/Accessibility/ARIA/Reference/Roles/term_role
 page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#term
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 The `term` role can be used for a word or phrase with an optional corresponding [`definition`](/en-US/docs/Web/Accessibility/ARIA/Roles/definition_role).
 

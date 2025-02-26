@@ -2,9 +2,8 @@
 title: How to file ARIA-related bugs
 slug: Web/Accessibility/Aria/How_to/File_ARIA-related_bugs
 page-type: guide
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 The state of ARIA technology has always depended on the community. If you notice an implementation issue, please take a little time and let the developers know. Here's where to file bugs:
 

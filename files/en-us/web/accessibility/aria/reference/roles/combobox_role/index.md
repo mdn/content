@@ -5,9 +5,8 @@ page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#combobox,
   - https://www.w3.org/WAI/ARIA/apg/patterns/combobox/examples/combobox-select-only/
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 The `combobox` role identifies an element as an `input` that controls another element, such as a `listbox` or `grid`, that can dynamically pop up to help the user set the value of that `input`.
 

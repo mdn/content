@@ -3,9 +3,8 @@ title: "ARIA: composite role"
 slug: Web/Accessibility/ARIA/Reference/Roles/composite_role
 page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#composite
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 The `composite` [abstract role](/en-US/docs/Web/Accessibility/ARIA/Roles#6._abstract_roles) indicates a widget that may contain navigable descendants or owned children.
 

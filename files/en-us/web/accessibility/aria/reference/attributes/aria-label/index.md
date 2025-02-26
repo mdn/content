@@ -3,9 +3,8 @@ title: aria-label
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-label
 page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-label
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 The `aria-label` attribute defines a string value that can be used to name an element, as long as the element's role does not [prohibit naming](#associated_roles).
 

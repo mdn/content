@@ -3,9 +3,8 @@ title: aria-rowcount
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-rowcount
 page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-rowcount
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 The `aria-rowcount` attribute defines the total number of rows in a table, grid, or treegrid.
 

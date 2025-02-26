@@ -3,9 +3,8 @@ title: "ARIA: section role"
 slug: Web/Accessibility/ARIA/Reference/Roles/section_role
 page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#section
+sidebar: accessibilitysidebar
 ---
-
-{{AccessibilitySidebar}}
 
 The **`section` role**, an abstract role, is a superclass role for renderable structural containment components.
 
