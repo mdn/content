@@ -23,8 +23,6 @@ The `@scope` at-rule contains one or more rulesets (termed **scoped style rules*
    }
    ```
 
-   The scope's upper bound is inclusive and its lower bound is exclusive. To change this behavior, you can combine either selector with a universal child selector. For example, `@scope (scope root) to (scope limit > *)` would make both bounds inclusive, `@scope (scope root > *) to (scope limit)` would make both bounds exclusive, while `@scope (scope root > *) to (scope limit > *)` would give an exclusive upper bound and an inclusive lower bound.
-
 2. As inline styles included inside a {{htmlelement("style")}} element in your HTML, in which case the prelude is omitted, and the enclosed ruleset is automatically scoped to the `<style>` element's enclosing parent element.
 
    ```html
@@ -84,6 +82,8 @@ The `.article-body` scope root selector defines the upper bound of the DOM tree 
 
 > [!NOTE]
 > This kind of scoping — with an upper and lower bound — is commonly referred to as a **donut scope**.
+
+The scope's upper bound is inclusive and its lower bound is exclusive. To change this behavior, you can combine either selector with a universal child selector. For example, `@scope (scope root) to (scope limit > *)` would make both bounds inclusive, `@scope (scope root > *) to (scope limit)` would make both bounds exclusive, while `@scope (scope root > *) to (scope limit > *)` would give an exclusive upper bound and an inclusive lower bound.
 
 If you want to select all images inside a `<section>` with a class of `article-body`, you can omit the scope limit:
 
