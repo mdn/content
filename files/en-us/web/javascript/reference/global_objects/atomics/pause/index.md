@@ -21,7 +21,7 @@ Atomics.pause(durationHint)
 ### Parameters
 
 - `durationHint` {{optional_inline}}
-  - : An integer that is positively correlated with the wait duration. Larger values result in longer waits (and more `pause` instructions sent), but the exact number has no physical meaning. There may be an internal upper bound on the maximum amount of time paused, to the order of tens to hundreds of nanoseconds. The hint may be ignored.
+  - : An integer that is positively correlated with the wait duration. Larger values result in longer waits (and more `pause` instructions sent), but the exact number has no physical meaning. There may be an internal upper bound on the maximum amount of time paused, to the order of tens to hundreds of nanoseconds. The hint may be ignored. This allows implementation of a backoff strategy by controlling the relative pause duration within each spin-loop iteration without subjecting to the overhead of JavaScript function calls; see [backoff strategies](#backoff_strategies).
 
 ### Return value
 
