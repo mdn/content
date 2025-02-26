@@ -105,7 +105,7 @@
 /en-US/docs/Accessibility/ARIA/examples	/en-US/docs/Web/Accessibility/ARIA
 /en-US/docs/Accessibility/ARIA/forms	/en-US/docs/Web/Accessibility/ARIA
 /en-US/docs/Accessibility/ARIA/forms/Basic_form_hints	/en-US/docs/Web/Accessibility/ARIA
-/en-US/docs/Accessibility/ARIA/forms/Multipart_labels	/en-US/docs/Web/Accessibility/ARIA/Multipart_labels
+/en-US/docs/Accessibility/ARIA/forms/Multipart_labels	/en-US/docs/Web/Accessibility/ARIA/Guides/Multipart_labels
 /en-US/docs/Accessibility/ARIA/forms/alerts	/en-US/docs/Web/Accessibility/ARIA
 /en-US/docs/Accessibility/ARIA/widgets	/en-US/docs/Web/Accessibility/ARIA
 /en-US/docs/Accessibility/ARIA/widgets/overview	/en-US/docs/Web/Accessibility/ARIA
@@ -11475,6 +11475,7 @@
 /en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuenow	/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuenow
 /en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuetext	/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuetext
 /en-US/docs/Web/Accessibility/ARIA/Basic_form_hints	/en-US/docs/Web/Accessibility/ARIA
+/en-US/docs/Web/Accessibility/ARIA/Multipart_labels	/en-US/docs/Web/Accessibility/ARIA/Guides/Multipart_labels
 /en-US/docs/Web/Accessibility/ARIA/Roles	/en-US/docs/Web/Accessibility/ARIA/Reference/Roles
 /en-US/docs/Web/Accessibility/ARIA/Roles/ARIA:_tabpanel_role	/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tabpanel_role
 /en-US/docs/Web/Accessibility/ARIA/Roles/ARIA:_timer_role	/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/timer_role
@@ -11572,7 +11573,7 @@
 /en-US/docs/Web/Accessibility/ARIA/examples	/en-US/docs/Web/Accessibility/ARIA
 /en-US/docs/Web/Accessibility/ARIA/forms	/en-US/docs/Web/Accessibility/ARIA
 /en-US/docs/Web/Accessibility/ARIA/forms/Basic_form_hints	/en-US/docs/Web/Accessibility/ARIA
-/en-US/docs/Web/Accessibility/ARIA/forms/Multipart_labels	/en-US/docs/Web/Accessibility/ARIA/Multipart_labels
+/en-US/docs/Web/Accessibility/ARIA/forms/Multipart_labels	/en-US/docs/Web/Accessibility/ARIA/Guides/Multipart_labels
 /en-US/docs/Web/Accessibility/ARIA/forms/alerts	/en-US/docs/Web/Accessibility/ARIA
 /en-US/docs/Web/Accessibility/ARIA/widgets	/en-US/docs/Web/Accessibility/ARIA
 /en-US/docs/Web/Accessibility/ARIA/widgets/overview	/en-US/docs/Web/Accessibility/ARIA
@@ -14516,7 +14517,7 @@
 /en-US/docs/aria/Enhancing_form_accessibility_with_WAI-ARIA	/en-US/docs/Web/Accessibility/ARIA
 /en-US/docs/aria/Form_hints/Enhancing_form_accessibility_with_ARIA	/en-US/docs/Web/Accessibility/ARIA
 /en-US/docs/aria/forms	/en-US/docs/Web/Accessibility/ARIA
-/en-US/docs/aria/forms/Multipart_labels	/en-US/docs/Web/Accessibility/ARIA/Multipart_labels
+/en-US/docs/aria/forms/Multipart_labels	/en-US/docs/Web/Accessibility/ARIA/Guides/Multipart_labels
 /en-US/docs/aria/forms/alerts	/en-US/docs/Web/Accessibility/ARIA
 /en-US/docs/arrow_functions	/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
 /en-US/docs/attributes	/en-US/docs/Web/API/Element/attributes

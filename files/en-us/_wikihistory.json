@@ -71404,6 +71404,20 @@
       "Aaronlev"
     ]
   },
+  "Web/Accessibility/ARIA/Guides/Multipart_labels": {
+    "modified": "2019-08-06T19:47:32.075Z",
+    "contributors": [
+      "Tigt",
+      "dkocho4",
+      "david_ross",
+      "kscarfone",
+      "StephenKelly",
+      "Kritz",
+      "Fredchat",
+      "Sheppy",
+      "Aaronlev"
+    ]
+  },
   "Web/Accessibility/ARIA/Guides/Screen_Reader_Implementors": {
     "modified": "2019-03-23T23:59:09.827Z",
     "contributors": [
@@ -71455,20 +71469,6 @@
       "chrisdavidmills",
       "carlkibler",
       "bledwards1",
-      "Sheppy",
-      "Aaronlev"
-    ]
-  },
-  "Web/Accessibility/ARIA/Multipart_labels": {
-    "modified": "2019-08-06T19:47:32.075Z",
-    "contributors": [
-      "Tigt",
-      "dkocho4",
-      "david_ross",
-      "kscarfone",
-      "StephenKelly",
-      "Kritz",
-      "Fredchat",
       "Sheppy",
       "Aaronlev"
     ]
