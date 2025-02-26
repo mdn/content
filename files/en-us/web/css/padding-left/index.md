@@ -9,7 +9,50 @@ browser-compat: css.properties.padding-left
 
 The **`padding-left`** [CSS](/en-US/docs/Web/CSS) property sets the width of the [padding area](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#padding_area) to the left of an element.
 
-{{EmbedInteractiveExample("pages/css/padding-left.html")}}
+{{InteractiveExample("CSS Demo: padding-left")}}
+
+```css interactive-example-choice
+padding-left: 1.5em;
+```
+
+```css interactive-example-choice
+padding-left: 10%;
+```
+
+```css interactive-example-choice
+padding-left: 20px;
+```
+
+```css interactive-example-choice
+padding-left: 1ch;
+```
+
+```css interactive-example-choice
+padding-left: 0;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="transition-all" id="example-element">
+    <div class="box">
+      Far out in the uncharted backwaters of the unfashionable end of the
+      western spiral arm of the Galaxy lies a small unregarded yellow sun.
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 10px solid #ffc129;
+  overflow: hidden;
+  text-align: left;
+}
+
+.box {
+  border: dashed 1px;
+}
+```
 
 An element's padding area is the space between its content and its border.
 

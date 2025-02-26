@@ -9,7 +9,86 @@ browser-compat: css.properties.overscroll-behavior
 
 The **`overscroll-behavior`** [CSS](/en-US/docs/Web/CSS) property sets what a browser does when reaching the boundary of a scrolling area.
 
-{{EmbedInteractiveExample("pages/css/overscroll-behavior.html")}}
+{{InteractiveExample("CSS Demo: overscroll-behavior")}}
+
+```css interactive-example-choice
+overscroll-behavior: auto;
+```
+
+```css interactive-example-choice
+overscroll-behavior: contain;
+```
+
+```css interactive-example-choice
+overscroll-behavior: none;
+```
+
+```css interactive-example-choice
+overscroll-behavior: auto;
+```
+
+```css interactive-example-choice
+overscroll-behavior: contain;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="box">
+      This is a scrollable container. Michaelmas term lately over, and the Lord
+      Chancellor sitting in Lincoln's Inn Hall. Implacable November weather. As
+      much mud in the streets as if the waters had but newly retired from the
+      face of the earth.
+      <br /><br />
+      Lorem Ipsum has been the industry's standard dummy text ever since the
+      1500s, when an unknown printer took a galley of type and scrambled it to
+      make a type specimen book. It has survived not only five centuries, but
+      also the leap into electronic typesetting, remaining essentially
+      unchanged.
+    </div>
+    <div id="example-element">
+      This is the inner container. Focus on this container, scroll to the bottom
+      and when you reach the bottom keep scrolling.
+      <p>
+        If you have
+        <code class="language-css">overscroll-behavior: auto;</code> selected
+        the outer container will start to scroll.
+      </p>
+      If you have
+      <code class="language-css">overscroll-behavior: contain;</code> selected,
+      the outer container will not scroll unless you move your cursor out of the
+      inner container and try to perform scroll on the outer container.
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  width: 35em;
+  height: 18em;
+  border: medium dotted;
+  padding: 0.75em;
+  text-align: left;
+  overflow: auto;
+  display: flex;
+}
+
+.box {
+  width: 50%;
+}
+
+#example-element {
+  width: 50%;
+  height: 12em;
+  border: medium dotted #1b76c4;
+  padding: 0.3em;
+  margin: 0 0.3em;
+  text-align: left;
+  overflow: auto;
+  overscroll-behavior: contain;
+}
+```
 
 ## Constituent properties
 

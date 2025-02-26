@@ -9,7 +9,47 @@ browser-compat: css.properties.text-decoration-line
 
 The **`text-decoration-line`** [CSS](/en-US/docs/Web/CSS) property sets the kind of decoration that is used on text in an element, such as an underline or overline.
 
-{{EmbedInteractiveExample("pages/css/text-decoration-line.html")}}
+{{InteractiveExample("CSS Demo: text-decoration-line")}}
+
+```css interactive-example-choice
+text-decoration-line: none;
+```
+
+```css interactive-example-choice
+text-decoration-line: underline;
+```
+
+```css interactive-example-choice
+text-decoration-line: overline;
+```
+
+```css interactive-example-choice
+text-decoration-line: line-through;
+```
+
+```css interactive-example-choice
+text-decoration-line: underline overline;
+```
+
+```css interactive-example-choice
+text-decoration-line: underline line-through;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p>
+    I'd far rather be
+    <span class="transition-all" id="example-element">happy than right</span>
+    any day.
+  </p>
+</section>
+```
+
+```css interactive-example
+p {
+  font: 1.5em sans-serif;
+}
+```
 
 When setting multiple line-decoration properties at once, it may be more convenient to use the {{cssxref("text-decoration")}} shorthand property instead.
 

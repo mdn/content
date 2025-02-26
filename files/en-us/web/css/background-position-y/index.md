@@ -9,7 +9,42 @@ browser-compat: css.properties.background-position-y
 
 The **`background-position-y`** [CSS](/en-US/docs/Web/CSS) property sets the initial vertical position for each background image. The position is relative to the position layer set by {{cssxref("background-origin")}}.
 
-{{EmbedInteractiveExample("pages/css/background-position-y.html")}}
+{{InteractiveExample("CSS Demo: background-position-y")}}
+
+```css interactive-example-choice
+background-position-y: top;
+```
+
+```css interactive-example-choice
+background-position-y: center;
+```
+
+```css interactive-example-choice
+background-position-y: 25%;
+```
+
+```css interactive-example-choice
+background-position-y: 2rem;
+```
+
+```css interactive-example-choice
+background-position-y: bottom 32px;
+```
+
+```html interactive-example
+<section class="display-block" id="default-example">
+  <div class="transition-all" id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: navajowhite;
+  background-image: url("/shared-assets/images/examples/star.png");
+  background-repeat: no-repeat;
+  height: 100%;
+}
+```
 
 <!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
 
