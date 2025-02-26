@@ -61,8 +61,9 @@ Although `URLSearchParams` is functionally similar to a {{jsxref("Map")}}, when 
 
 ## Examples
 
+### Using URLSearchParams
+
 ```js
-// const paramsString = window.location.search;
 const paramsString = "q=URLUtils.searchParams&topic=api";
 const searchParams = new URLSearchParams(paramsString);
 
@@ -84,14 +85,27 @@ console.log(searchParams.delete("topic"));
 console.log(searchParams.toString()); // "q=URLUtils.searchParams"
 ```
 
+Search parameters can also be an object.
+
 ```js
-// Search parameters can also be an object
 const paramsObj = { foo: "bar", baz: "bar" };
 const searchParams = new URLSearchParams(paramsObj);
 
 console.log(searchParams.toString()); // "foo=bar&baz=bar"
 console.log(searchParams.has("foo")); // true
 console.log(searchParams.get("foo")); // "bar"
+```
+
+### Parsing window.location
+
+The {{domxref("Location")}} interface does not provide a readily-available `searchParams` property, like {{domxref("URL")}} does. We can parse `location.search` with `URLSearchParams`.
+
+```js
+// Assume page has location:
+// https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams?foo=a
+const paramsString = window.location.search;
+const searchParams = new URLSearchParams(paramsString);
+console.log(searchParams.get("foo")); // a
 ```
 
 ### Duplicate search parameters
