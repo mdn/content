@@ -298,7 +298,7 @@ Headers used by the [WebSockets API](/en-US/docs/Web/API/WebSockets_API) in the 
   - : Request header containing a key that verifies that the client explicitly intends to open a `WebSocket`.
 - {{HTTPHeader("Sec-WebSocket-Protocol")}}
   - : In requests, this header indicates the sub-protocols supported by the client in preferred order.
-    In responses, it indicates the the sub-protocol selected by the server from the client's preferences.
+    In responses, it indicates the sub-protocol selected by the server from the client's preferences.
 - {{HTTPHeader("Sec-WebSocket-Version")}}
   - : In requests, this header indicates the version of the WebSocket protocol used by the client.
     In responses, it is sent only if the requested protocol version is not supported by the server, and lists the versions that the server supports.
@@ -317,7 +317,10 @@ Headers used by the [WebSockets API](/en-US/docs/Web/API/WebSockets_API) in the 
   - : Indicates how long the user agent should wait before making a follow-up request.
 - {{HTTPHeader("Server-Timing")}}
   - : Communicates one or more metrics and descriptions for the given request-response cycle.
-- `Service-Worker-Allowed`
+- {{HTTPHeader("Service-Worker")}}
+  - : Included in fetches for a service worker's script resource.
+    This header helps administrators log service worker script requests for monitoring purposes.
+- {{HTTPHeader("Service-Worker-Allowed")}}
   - : Used to remove the [path restriction](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers#why_is_my_service_worker_failing_to_register) by including this header [in the response of the Service Worker script](https://w3c.github.io/ServiceWorker/#service-worker-script-response).
 - {{HTTPHeader("SourceMap")}}
   - : Links to a {{Glossary("source map")}} so that debuggers can step through original source code instead of generated or transformed code.
@@ -363,7 +366,7 @@ The [UA client hints](/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints)
   - : User agent's underlying platform architecture.
 - {{HTTPHeader("Sec-CH-UA-Bitness")}} {{experimental_inline}}
   - : User agent's underlying CPU architecture bitness (for example "64" bit).
-- {{HTTPHeader("Sec-CH-UA-Form-Factor")}} {{experimental_inline}}
+- {{HTTPHeader("Sec-CH-UA-Form-Factors")}} {{experimental_inline}}
   - : User agent's form-factors, describing how the user interacts with the user-agent.
 - {{HTTPHeader("Sec-CH-UA-Full-Version")}} {{deprecated_inline}}
   - : User agent's full version string.
@@ -396,7 +399,7 @@ The [UA client hints](/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints)
 - {{HTTPHeader("Device-Memory")}}
   - : Approximate amount of available client RAM memory. This is part of the [Device Memory API](/en-US/docs/Web/API/Device_Memory_API).
 - {{HTTPHeader("DPR")}} {{deprecated_inline}} {{non-standard_inline}}
-  - : Request header that provides the client device pixel ratio (the number of physical device pixels for each {{Glossary("CSS pixel")}}).
+  - : Request header that provides the client device pixel ratio (the number of physical {{glossary("device pixel", "device pixels")}} for each {{Glossary("CSS pixel")}}).
 - {{HTTPHeader("Viewport-Width")}} {{deprecated_inline}} {{non-standard_inline}}
   - : Request header provides the client's layout viewport width in {{Glossary("CSS pixel","CSS pixels")}}.
 - {{HTTPHeader("Width")}} {{deprecated_inline}} {{non-standard_inline}}
@@ -427,8 +430,9 @@ Network client hints allow a server to choose what information is sent based on 
 
 ### Security
 
-- {{HTTPHeader("Origin-Isolation")}} {{experimental_inline}}
-  - : Provides a mechanism to allow web applications to isolate their origins.
+- {{HTTPHeader("Origin-Agent-Cluster")}} {{experimental_inline}}
+  - : Response header used to indicate that the associated {{domxref("Document")}} should be placed in an _origin-keyed [agent cluster](https://tc39.es/ecma262/#sec-agent-clusters)_.
+    This isolation allows user agents to allocate implementation-specific resources for agent clusters, such as processes or threads, more efficiently.
 
 ### Server-sent events
 
@@ -451,9 +455,6 @@ See the [Topics API](/en-US/docs/Web/API/Topics_API) documentation for more info
   - : A client can send the [`Accept-Signature`](https://wicg.github.io/webpackage/draft-yasskin-http-origin-signed-responses.html#name-the-accept-signature-header) header field to indicate intention to take advantage of any available signatures and to indicate what kinds of signatures it supports.
 - {{HTTPHeader("Early-Data")}} {{experimental_inline}}
   - : Indicates that the request has been conveyed in TLS early data.
-- {{HTTPHeader("Origin-Agent-Cluster")}} {{experimental_inline}}
-  - : Response header used to indicate that the associated {{domxref("Document")}} should be placed in an _origin-keyed [agent cluster](https://tc39.es/ecma262/#sec-agent-clusters)_.
-    This isolation allows user agents to allocate implementation-specific resources for agent clusters, such as processes or threads, more efficiently.
 - {{HTTPHeader("Set-Login")}} {{experimental_inline}}
   - : Response header sent by a federated identity provider (IdP) to set its login status, meaning whether any users are logged into the IdP on the current browser or not.
     This is stored by the browser and used by the [FedCM API](/en-US/docs/Web/API/FedCM_API).

@@ -7,7 +7,7 @@ browser-compat: css.types.transform-function.scale3d
 
 {{CSSRef}}
 
-The **`scale3d()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) defines a transformation that resizes an element in 3D space.
+The **`scale3d()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) defines a transformation that resizes an element in 3D space.
 Because the amount of scaling is defined by a vector [sx, sy, sz], it can resize different dimensions at different scales. Its
 result is a {{cssxref("&lt;transform-function&gt;")}} data type.
 
@@ -66,6 +66,10 @@ scale3d(sx, sy, sz)
     </tr>
   </tbody>
 </table>
+
+## Formal syntax
+
+{{CSSSyntax}}
 
 ## Examples
 

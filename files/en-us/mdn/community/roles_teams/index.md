@@ -1,12 +1,12 @@
 ---
 title: MDN Web Docs roles and teams
+short-title: Roles and teams
 slug: MDN/Community/Roles_teams
 page-type: mdn-community-guide
+sidebar: mdnsidebar
 ---
 
-{{MDNSidebar}}
-
-The success and growth of the MDN Web Docs project is, in large part, due to our community of contributors. Some contributors have committed a portion of their time to assist with the daily tasks of running MDN Web Docs. Changes to the site, including maintenance tasks, are performed by employees, contractors, and a network of partners who are all dedicated to the health, growth, and maintenance of MDN Web Docs. The project relies heavily on [roles](#roles) and [teams](#teams) in the [MDN organization on GitHub](https://github.com/mdn) to manage and incorporate changes from these different groups. A list of the organization's members can be [found here](https://github.com/orgs/mdn/people).
+The success and growth of the MDN Web Docs project is, in large part, due to our community of contributors. Some contributors have committed a portion of their time to assist with the daily tasks of running MDN Web Docs. Changes to the site, including maintenance tasks, are performed by employees, contractors, and a network of partners who are all dedicated to the health, growth, and maintenance of MDN Web Docs. The project relies heavily on [roles](#roles) and [teams](#teams) in the [MDN organization on GitHub](https://github.com/mdn) to manage and incorporate changes from these different groups. A list of the organization's current members can be found at [github.com/orgs/mdn](https://github.com/orgs/mdn/people).
 
 Community contributions help this open source project immensely.
 Contributors can use their work on MDN Web Docs to show their writing, technical, and collaboration skills, and the ability to work with people from diverse backgrounds. This section describes the roles you can take on while volunteering on the MDN Web Docs project.
@@ -36,8 +36,7 @@ As a contributor, you can get involved with the project by engaging in the follo
 
 - Participating in community discussions on the [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 - Helping other contributors with their pull requests and issues or mentoring new contributors.
-- Submitting bug reports. Check out the [kind of issues you can open](https://github.com/mdn/content/issues/new/choose) on MDN's [`content`](https://github.com/mdn/content) repository.
-  If you notice a platform bug, you can [open an issue](https://github.com/mdn/yari/issues/new/choose) on MDN's `yari` repository.
+- Submitting bug reports. Check out [the main repositories](/en-US/docs/MDN/Community/Our_repositories) for more information.
 - Commenting on issues to move conversations towards a fruitful resolution.
 - Addressing open issues (for example, in the [`content`](https://github.com/mdn/content/issues) repository) by submitting [pull requests](/en-US/docs/MDN/Community/Pull_requests).
 - Attending community events.

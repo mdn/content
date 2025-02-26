@@ -149,13 +149,13 @@ In CSS, a box may be laid out according to three positioning schemes — **norma
 
 In CSS, the normal flow includes block-level formatting of block boxes, inline-level formatting of inline boxes, and also includes relative and sticky positioning of block-level and inline-level boxes.
 
-Read more about [flow layout](/en-US/docs/Web/CSS/CSS_flow_layout) in CSS.
+Read more about [flow layout](/en-US/docs/Web/CSS/CSS_display/flow_layout) in CSS.
 
 ### Floats
 
 In the float model, a box is first laid out according to the normal flow, then taken out of the flow and positioned, typically to the left or right. Content may flow along the side of a float.
 
-Find out more about [floats](/en-US/docs/Learn/CSS/CSS_layout/Floats).
+Find out more about [floats](/en-US/docs/Learn_web_development/Core/CSS_layout/Floats).
 
 ### Absolute positioning
 
@@ -171,7 +171,7 @@ Boxes can be described as having an **outer display type**, which is `block` or 
 
 Boxes also have an inner display type, dictating how their children behave. For normal block and inline layout, or normal flow, this display type is `flow`. This means that the child elements will also be either `block` or `inline`.
 
-However, the inner display type might be something like `grid` or `flex`, in which case the direct children will display as a grid, or flex items. In such a case the element is described as creating a grid or flex [formatting context](/en-US/docs/Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts). In many ways, this is similar to a block formatting context, however, the children behave as flex or grid items rather than items in normal flow.
+However, the inner display type might be something like `grid` or `flex`, in which case the direct children will display as a grid, or flex items. In such a case the element is described as creating a grid or flex [formatting context](/en-US/docs/Web/CSS/CSS_display/Introduction_to_formatting_contexts). In many ways, this is similar to a block formatting context, however, the children behave as flex or grid items rather than items in normal flow.
 
 The interactions between block-level and inline-level boxes are described in the {{cssxref("display")}} property reference.
 
@@ -249,10 +249,10 @@ A block box is a block-level box that is also a block container. As described in
 
 ## See also
 
-- [CSS syntax](/en-US/docs/Web/CSS/Syntax) guide
-- [Comments](/en-US/docs/Web/CSS/Comments)
-- [Specificity](/en-US/docs/Web/CSS/Specificity)
-- [Inheritance](/en-US/docs/Web/CSS/Inheritance)
+- [CSS syntax](/en-US/docs/Web/CSS/CSS_syntax/Syntax) guide
+- [Comments](/en-US/docs/Web/CSS/CSS_syntax/Comments)
+- [Specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity)
+- [Inheritance](/en-US/docs/Web/CSS/CSS_cascade/Inheritance)
 - [Stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)
 - [Block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context)
 - [Box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)

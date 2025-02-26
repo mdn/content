@@ -24,7 +24,7 @@ The `display` attribute only affects the direct rendering of a given element, wh
 This attribute also affects direct rendering into offscreen canvases, such as occurs with masks or clip paths. Thus, setting `display="none"` on a child of a {{SVGElement("mask")}} will prevent the given child element from being rendered as part of the mask. Similarly, setting `display="none"` on a child of a {{SVGElement("clipPath")}} element will prevent the given child element from contributing to the clipping path.
 
 > [!NOTE]
-> As a presentation attribute, `display` can be used as a CSS property. See CSS {{cssxref("display")}} for further information.
+> As a presentation attribute, `display` also has a CSS property counterpart: {{cssxref("display")}}. When both are specified, the CSS property takes priority.
 
 You can use this attribute with any SVG element.
 
@@ -90,4 +90,4 @@ For a description of the values, please refer to the CSS {{cssxref("display")}} 
 ## See also
 
 - {{SVGAttr("visibility")}} attribute
-- {{cssxref("display")}}
+- CSS {{cssxref("display")}} property

@@ -57,7 +57,7 @@ The two use cases for `onSubmittedWorkDone`
 ## Syntax
 
 ```js-nolint
-device.queue.onSubmittedWorkDone()
+onSubmittedWorkDone()
 ```
 
 ### Parameters

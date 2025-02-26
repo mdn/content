@@ -358,8 +358,9 @@ Use the sliders in the example below to modify the translation, rotation, scale,
   padding: 0;
   margin-bottom: 4px;
   accent-color: blue; /* or any color */
-  font-family: Inter, "system-ui", "Segoe UI", Roboto, Oxygen, Ubuntu,
-    Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family:
+    Inter, "system-ui", "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 }
 
 #allTransformFieldset > legend {
@@ -714,7 +715,7 @@ The cube in the above example is comprised of six `<div>` elements, all of which
   - : Step-by-step tutorial about how to transform elements styled with CSS.
 - [Coordinate systems](/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems)
   - : Describes the way pixel locations are defined in the CSS object model.
-- [Performance fundamentals: Use CSS transforms](/en-US/docs/Web/Performance/Fundamentals#use_css_transforms)
+- [Performance fundamentals: Use CSS transforms](/en-US/docs/Web/Performance/Guides/Fundamentals#use_css_transforms)
   - : An overview of web performance fundamentals, including how CSS transforms can improve performance.
 - [Matrix math for the web](/en-US/docs/Web/API/WebGL_API/Matrix_math_for_the_web)
   - : Describes how object transformations can be represented by mathematical matrices.

@@ -1,5 +1,5 @@
 ---
-title: ":optional"
+title: :optional
 slug: Web/CSS/:optional
 page-type: css-pseudo-class
 browser-compat: css.selectors.optional
@@ -88,4 +88,4 @@ input:optional {
 ## See also
 
 - Other validation-related pseudo-classes: {{ cssxref(":required") }}, {{ cssxref(":invalid") }}, {{ cssxref(":valid") }}
-- [Form data validation](/en-US/docs/Learn/Forms/Form_validation)
+- [Form data validation](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation)

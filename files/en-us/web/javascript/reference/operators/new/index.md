@@ -9,7 +9,20 @@ browser-compat: javascript.operators.new
 
 The **`new`** operator lets developers create an instance of a user-defined object type or of one of the built-in object types that has a constructor function.
 
-{{EmbedInteractiveExample("pages/js/expressions-newoperator.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - new operator")}}
+
+```js interactive-example
+function Car(make, model, year) {
+  this.make = make;
+  this.model = model;
+  this.year = year;
+}
+
+const car1 = new Car("Eagle", "Talon TSi", 1993);
+
+console.log(car1.make);
+// Expected output: "Eagle"
+```
 
 ## Syntax
 
@@ -66,7 +79,7 @@ Creating an object with a user-defined constructor function requires two steps:
 
 You can always add a property to a previously defined object instance. For example, the statement `car1.color = "black"` adds a property `color` to `car1`, and assigns it a value of `"black"`.
 
-However, this does not affect any other objects. To add the new property to all objects of the same type, you must add the property to the constructor's `prototype` property. This defines a property that is shared by all objects created with that function, rather than by just one instance of the object type. The following code adds a `color` property with value `"original color"` to all objects of type `Car`, and then overwrites that value with the string `"black"` only in the instance object `car1`. For more information, see [prototype](/en-US/docs/Learn/JavaScript/Objects/Object_prototypes).
+However, this does not affect any other objects. To add the new property to all objects of the same type, you must add the property to the constructor's `prototype` property. This defines a property that is shared by all objects created with that function, rather than by just one instance of the object type. The following code adds a `color` property with value `"original color"` to all objects of type `Car`, and then overwrites that value with the string `"black"` only in the instance object `car1`. For more information, see [prototype](/en-US/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes).
 
 ```js
 function Car() {}

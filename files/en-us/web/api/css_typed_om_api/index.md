@@ -24,16 +24,16 @@ CSS Typed OM both allows for the performant manipulation of values assigned to C
 The {{domxref('CSSStyleValue')}} interface of the CSS Typed Object Model API is the base class of all CSS values accessible through the Typed OM API. An instance of this class may be used anywhere a string is expected.
 
 - {{domxref('CSSStyleValue/parse_static', 'CSSStyleValue.parse()')}}
-  - : The `parse()` method of the `CSSStyleValue` interface allows a `CSSNumericValue` to be constructed from a CSS string. It sets a specific CSS property to the specified values and returns the first value as a `CSSStyleValue` object.
+  - : Method that allows `CSSNumericValue` to be constructed from a CSS string. It sets a specific CSS property to the specified values and returns the first value as a `CSSStyleValue` object.
 - {{domxref('CSSStyleValue.parseAll_static', 'CSSStyleValue.parseAll()')}}
-  - : The `parseAll()` method of the `CSSStyleValue` interface sets all occurrences of a specific CSS property to the specified value and returns an array of `CSSStyleValue` objects, each containing one of the supplied values.
+  - : Method that sets all occurrences of a specific CSS property to the specified value and returns an array of `CSSStyleValue` objects, each containing one of the supplied values.
 
 ### `StylePropertyMap`
 
 The {{domxref('StylePropertyMap')}} interface of the CSS Typed Object Model API provides a representation of a CSS declaration block that is an alternative to `CSSStyleDeclaration`.
 
 - {{domxref('StylePropertyMap.set()')}}
-  - : Method of `StylePropertyMap` interface that changes the CSS declaration with the given property to the value given.
+  - : Method that changes the CSS declaration with the given property to the value given.
 - {{domxref('StylePropertyMap.append()')}}
   - : Method that adds a new CSS declaration to the `StylePropertyMap` with the given property and value.
 - {{domxref('StylePropertyMap.delete()')}}

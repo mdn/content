@@ -9,7 +9,33 @@ browser-compat: html.global_attributes.class
 
 The **`class`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) is a list of the classes of the element, separated by [ASCII whitespace](/en-US/docs/Glossary/Whitespace#in_html).
 
-{{EmbedInteractiveExample("pages/tabbed/attribute-class.html","tabbed-standard")}}
+{{InteractiveExample("HTML Demo: class", "tabbed-standard")}}
+
+```html interactive-example
+<p>Narrator: This is the beginning of the play.</p>
+
+<p class="note editorial">Above point sounds a bit obvious. Remove/rewrite?</p>
+
+<p>Narrator: I must warn you now folks that this beginning is very exciting.</p>
+
+<p class="note">[Lights go up and wind blows; Caspian enters stage right]</p>
+```
+
+```css interactive-example
+.note {
+  font-style: italic;
+  font-weight: bold;
+}
+
+.editorial {
+  background: rgb(255, 0, 0, 0.25);
+  padding: 10px;
+}
+
+.editorial:before {
+  content: "Editor: ";
+}
+```
 
 ## Description
 
@@ -38,4 +64,4 @@ For this reason, it's recommended that developers choose values for class attrib
 - All [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 - {{domxref('element.className')}}
 - {{domxref('element.classList')}}
-- [Introduction to CSS](/en-US/docs/Learn/CSS)
+- [Introduction to CSS](/en-US/docs/Learn_web_development/Core/Styling_basics)

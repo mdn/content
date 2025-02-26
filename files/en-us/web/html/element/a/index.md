@@ -11,7 +11,23 @@ The **`<a>`** [HTML](/en-US/docs/Web/HTML) element (or _anchor_ element), with [
 
 Content within each `<a>` _should_ indicate the link's destination. If the `href` attribute is present, pressing the enter key while focused on the `<a>` element will activate it.
 
-{{EmbedInteractiveExample("pages/tabbed/a.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;a&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>You can reach Michael at:</p>
+
+<ul>
+  <li><a href="https://example.com">Website</a></li>
+  <li><a href="mailto:m.bluth@example.com">Email</a></li>
+  <li><a href="tel:+123456789">Phone</a></li>
+</ul>
+```
+
+```css interactive-example
+li {
+  margin-bottom: 0.5rem;
+}
+```
 
 ## Attributes
 
@@ -48,7 +64,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
       - The {{HTTPHeader("Content-Disposition")}} HTTP header
       - The final segment in the URL [path](/en-US/docs/Web/API/URL/pathname)
-      - The {{Glossary("MIME_type", "media type")}} (from the {{HTTPHeader("Content-Type")}} header, the start of a [`data:` URL](/en-US/docs/Web/URI/Schemes/data), or {{domxref("Blob.type")}} for a [`blob:` URL](/en-US/docs/Web/API/URL/createObjectURL_static))
+      - The {{Glossary("MIME_type", "media type")}} (from the {{HTTPHeader("Content-Type")}} header, the start of a [`data:` URL](/en-US/docs/Web/URI/Reference/Schemes/data), or {{domxref("Blob.type")}} for a [`blob:` URL](/en-US/docs/Web/API/URL/createObjectURL_static))
 
     - `filename`: defining a value suggests it as the filename. `/` and `\` characters are converted to underscores (`_`). Filesystems may forbid other characters in filenames, so browsers will adjust the suggested name if necessary.
 
@@ -68,13 +84,13 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
     - Telephone numbers with `tel:` URLs
     - Email addresses with `mailto:` URLs
     - SMS text messages with `sms:` URLs
-    - Executable code with [`javascript:` URLs](/en-US/docs/Web/URI/Schemes/javascript)
+    - Executable code with [`javascript:` URLs](/en-US/docs/Web/URI/Reference/Schemes/javascript)
     - While web browsers may not support other URL schemes, websites can with [`registerProtocolHandler()`](/en-US/docs/Web/API/Navigator/registerProtocolHandler)
 
     Moreover other URL features can locate specific parts of the resource, including:
 
     - Sections of a page with document fragments
-    - Specific text portions with [text fragments](/en-US/docs/Web/URI/Fragment/Text_fragments)
+    - Specific text portions with [text fragments](/en-US/docs/Web/URI/Reference/Fragment/Text_fragments)
     - Pieces of media files with media fragments
 
 - `hreflang`
@@ -87,7 +103,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
     - `no-referrer`: The {{HTTPHeader("Referer")}} header will not be sent.
     - `no-referrer-when-downgrade`: The {{HTTPHeader("Referer")}} header will not be sent to {{Glossary("origin")}}s without {{Glossary("TLS")}} ({{Glossary("HTTPS")}}).
-    - `origin`: The sent referrer will be limited to the origin of the referring page: its [scheme](/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL), {{Glossary("host")}}, and {{Glossary("port")}}.
+    - `origin`: The sent referrer will be limited to the origin of the referring page: its [scheme](/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL), {{Glossary("host")}}, and {{Glossary("port")}}.
     - `origin-when-cross-origin`: The referrer sent to other origins will be limited to the scheme, the host, and the port. Navigations on the same origin will still include the path.
     - `same-origin`: A referrer will be sent for {{Glossary("Same-origin policy", "same origin")}}, but cross-origin requests will contain no referrer information.
     - `strict-origin`: Only send the origin of the document as the referrer when the protocol security level stays the same (HTTPS→HTTPS), but don't send it to a less secure destination (HTTPS→HTTP).
@@ -173,7 +189,7 @@ Assistive software has shortcuts to list all links on a page. However, strong li
 
 ### onclick events
 
-Anchor elements are often abused as fake buttons by setting their `href` to `#` or [`javascript:void(0)`](/en-US/docs/Web/URI/Schemes/javascript) to prevent the page from refreshing, then listening for their `click` events.
+Anchor elements are often abused as fake buttons by setting their `href` to `#` or [`javascript:void(0)`](/en-US/docs/Web/URI/Reference/Schemes/javascript) to prevent the page from refreshing, then listening for their `click` events.
 
 These bogus `href` values cause unexpected behavior when copying/dragging links, opening links in a new tab/window, bookmarking, or when JavaScript is loading, errors, or is disabled. They also convey incorrect semantics to assistive technologies, like screen readers.
 
@@ -360,7 +376,7 @@ To create links that open in the user's email program to let them send a new mes
 
 {{EmbedLiveSample('Linking to an email address')}}
 
-For details about `mailto:` URLs, such as including a subject or body, see [Email links](/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#email_links) or {{RFC(6068)}}.
+For details about `mailto:` URLs, such as including a subject or body, see [Email links](/en-US/docs/Learn_web_development/Core/Structuring_content/Creating_links#email_links) or {{RFC(6068)}}.
 
 ### Linking to telephone numbers
 
@@ -563,4 +579,4 @@ Using `target="_blank"` without [`rel="noreferrer"`](/en-US/docs/Web/HTML/Attrib
 - {{CSSxRef(":link")}} is a CSS pseudo-class that will match `<a>` elements with URL in `href` attribute that was not yet visited by the user.
 - {{CSSxRef(":visited")}} is a CSS pseudo-class that will match `<a>` elements with URL in `href` attribute that was visited by the user in the past.
 - {{CSSxRef(":any-link")}} is a CSS pseudo-class that will match `<a>` elements with `href` attribute.
-- [Text fragments](/en-US/docs/Web/URI/Fragment/Text_fragments) are user-agent instructions added to URLs that allow content authors to link to specific text on a page, without IDs being required.
+- [Text fragments](/en-US/docs/Web/URI/Reference/Fragment/Text_fragments) are user-agent instructions added to URLs that allow content authors to link to specific text on a page, without IDs being required.

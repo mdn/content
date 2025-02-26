@@ -25,6 +25,10 @@ symbols() = symbols( <symbols-type>? [ <string> | <image> ]+ );
 - `symbolic`: The system cycles through the values, printing them an additional time at each cycle (one time for the first cycle, two times for the second, etc.).
 - `fixed`: The system cycles through the given values once, then falls back to Arabic numerals.
 
+## Formal syntax
+
+{{CSSSyntax}}
+
 ## Examples
 
 ### HTML

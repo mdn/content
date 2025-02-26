@@ -2,7 +2,9 @@
 title: CSS positioned layout
 slug: Web/CSS/CSS_positioned_layout
 page-type: css-module
-spec-urls: https://drafts.csswg.org/css-position/
+spec-urls:
+  - https://drafts.csswg.org/css-position/
+  - https://drafts.csswg.org/css-position-4/
 ---
 
 {{CSSRef}}
@@ -24,16 +26,24 @@ The **CSS positioned layout** module defines how to position elements on a web p
 - {{cssxref("inset-block")}}
 - {{cssxref("inset-block-start")}}
 - {{cssxref("inset-block-end")}}
-- {{cssxref("float")}}
-- {{cssxref("clear")}}
 - {{cssxref("position")}}
 - {{cssxref("z-index")}}
-- {{cssxref("transform")}}
+- {{cssxref("overlay")}}
+
+### Selectors
+
+- {{cssxref("::backdrop")}}
 
 ## Guides
 
 - [Understanding z-index](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index)
   - : Presents the notion of stacking context and explains how z-ordering works, with several examples.
+
+## Related concepts
+
+- {{cssxref("float")}}
+- {{cssxref("clear")}}
+- {{cssxref("transform")}}
 
 ## Specifications
 

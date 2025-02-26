@@ -10,11 +10,17 @@ browser-compat: html.global_attributes.enterkeyhint
 The **`enterkeyhint`** [global attribute](/en-US/docs/Web/HTML/Global_attributes)
 is an [enumerated](/en-US/docs/Glossary/Enumerated) attribute defining what action label (or icon) to present for the enter key on virtual keyboards.
 
-{{EmbedInteractiveExample("pages/tabbed/attribute-enterkeyhint.html","tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: enterkeyhint", "tabbed-shorter")}}
+
+```html interactive-example
+<input enterkeyhint="go" />
+
+<p contenteditable enterkeyhint="go">https://example.org</p>
+```
 
 ## Description
 
-[Form controls](/en-US/docs/Learn/Forms) (such as [`<textarea>`](/en-US/docs/Web/HTML/Element/textarea)
+[Form controls](/en-US/docs/Learn_web_development/Extensions/Forms) (such as [`<textarea>`](/en-US/docs/Web/HTML/Element/textarea)
 or [`<input>`](/en-US/docs/Web/HTML/Element/input) elements) or elements using
 [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) can specify an
 [`inputmode`](/en-US/docs/Web/HTML/Global_attributes/inputmode) attribute to control what kind of virtual keyboard

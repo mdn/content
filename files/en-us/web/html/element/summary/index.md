@@ -9,7 +9,40 @@ browser-compat: html.elements.summary
 
 The **`<summary>`** [HTML](/en-US/docs/Web/HTML) element specifies a summary, caption, or legend for a {{HTMLElement("details")}} element's disclosure box. Clicking the `<summary>` element toggles the state of the parent `<details>` element open and closed.
 
-{{EmbedInteractiveExample("pages/tabbed/summary.html","tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;summary&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<details>
+  <summary>
+    I have keys but no doors. I have space but no room. You can enter but can’t
+    leave. What am I?
+  </summary>
+  A keyboard.
+</details>
+```
+
+```css interactive-example
+details {
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  padding: 0.5em 0.5em 0;
+}
+
+summary {
+  font-weight: bold;
+  margin: -0.5em -0.5em 0;
+  padding: 0.5em;
+}
+
+details[open] {
+  padding: 0.5em;
+}
+
+details[open] summary {
+  border-bottom: 1px solid #aaa;
+  margin-bottom: 0.5em;
+}
+```
 
 ## Attributes
 
@@ -157,8 +190,9 @@ The CSS includes the `[open]` [attribute selector](/en-US/docs/Web/CSS/Attribute
 #### HTML
 
 ```html-nolint
+<h1>Quotes from Helen Keller</h1>
+
 <details>
-  <h1>Quotes from Helen Keller</h1>
   <summary>On women's rights</summary>
   <p>
     <q>We have prayed, we have coaxed, we have begged, for the vote, with the

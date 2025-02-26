@@ -1,5 +1,5 @@
 ---
-title: ":in-range"
+title: :in-range
 slug: Web/CSS/:in-range
 page-type: css-pseudo-class
 browser-compat: css.selectors.in-range
@@ -96,4 +96,4 @@ input:out-of-range + label::after {
 ## See also
 
 - {{cssxref(":out-of-range")}}
-- [Form data validation](/en-US/docs/Learn/Forms/Form_validation)
+- [Form data validation](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation)

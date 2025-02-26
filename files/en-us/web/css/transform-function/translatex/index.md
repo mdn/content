@@ -7,7 +7,7 @@ browser-compat: css.types.transform-function.translateX
 
 {{CSSRef}}
 
-The **`translateX()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) repositions an element horizontally on the 2D plane. Its
+The **`translateX()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) repositions an element horizontally on the 2D plane. Its
 result is a {{cssxref("&lt;transform-function&gt;")}} data type.
 
 {{EmbedInteractiveExample("pages/css/function-translateX.html")}}
@@ -69,11 +69,9 @@ transform: translateX(50%);
   </tbody>
 </table>
 
-### Formal syntax
+## Formal syntax
 
-```plain
-translateX({{cssxref("&lt;length-percentage&gt;")}})
-```
+{{CSSSyntax}}
 
 ## Examples
 

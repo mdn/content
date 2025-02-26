@@ -12,7 +12,32 @@ browser-compat: html.elements.input.type_password
 The element is presented as a one-line plain text editor control in which the text is obscured so that it cannot be read, usually by replacing each character with a symbol such as the asterisk ("\*") or a dot ("•").
 This character will vary depending on the {{Glossary("user agent")}} and operating system.
 
-{{EmbedInteractiveExample("pages/tabbed/input-password.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;password&quot;&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<div>
+  <label for="username">Username:</label>
+  <input type="text" id="username" name="username" />
+</div>
+
+<div>
+  <label for="pass">Password (8 characters minimum):</label>
+  <input type="password" id="pass" name="password" minlength="8" required />
+</div>
+
+<input type="submit" value="Sign in" />
+```
+
+```css interactive-example
+label {
+  display: block;
+}
+
+input[type="submit"],
+label {
+  margin-top: 1rem;
+}
+```
 
 The precise behavior of the entry process may vary from browser to browser.
 Some browsers display the typed character for a moment before obscuring it, while others allow the user to toggle the display of plain-text on and off.
@@ -312,7 +337,3 @@ ssn.oninput = (event) => {
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- [Compatibility of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

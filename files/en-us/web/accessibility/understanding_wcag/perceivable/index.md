@@ -31,7 +31,7 @@ The key here is that text can be converted to other forms that people with disab
         alternative text.
       </td>
       <td>
-        <a href="/en-US/docs/Learn/Accessibility/HTML#text_alternatives"
+        <a href="/en-US/docs/Learn_web_development/Core/Accessibility/HTML#text_alternatives"
           >Text alternatives.</a
         >
       </td>
@@ -45,8 +45,8 @@ The key here is that text can be converted to other forms that people with disab
       <td>
         <p>
           A text description may work, or an accessible data table (see
-          <a href="/en-US/docs/Learn/HTML/Tables/Advanced"
-            >HTML table advanced features and accessibility</a
+          <a href="Learn_web_development/Core/Structuring_content/Table_accessibility"
+            >HTML table accessibility</a
           >). See W3C's
           <a href="https://www.w3.org/TR/html-longdesc/">Image Description Extension (longdesc)</a>
           for the argument against <code>longdesc</code>.
@@ -60,14 +60,14 @@ The key here is that text can be converted to other forms that people with disab
       </td>
       <td>
         <p>
-          See <a href="/en-US/docs/Learn/Accessibility/HTML#text_alternatives"
+          See <a href="/en-US/docs/Learn_web_development/Core/Accessibility/HTML#text_alternatives"
             >Text alternatives</a
           >
           for static caption options, and
-          <a href="/en-US/docs/Learn/Accessibility/Multimedia#audio_transcripts"
+          <a href="/en-US/docs/Learn_web_development/Core/Accessibility/Multimedia#audio_transcripts"
             >Audio transcripts</a
           >,
-          <a href="/en-US/docs/Learn/Accessibility/Multimedia#video_text_tracks"
+          <a href="/en-US/docs/Learn_web_development/Core/Accessibility/Multimedia#video_text_tracks"
             >Video text tracks</a
           >
           for other alternatives.
@@ -84,7 +84,7 @@ The key here is that text can be converted to other forms that people with disab
         function of the button (e.g., <code
           >&#x3C;button>Upload image&#x3C;/button></code
         >). For more information on other UI controls, see
-        <a href="/en-US/docs/Learn/Accessibility/HTML#ui_controls"
+        <a href="/en-US/docs/Learn_web_development/Core/Accessibility/HTML#ui_controls"
           >UI controls</a
         >.
       </td>
@@ -99,8 +99,8 @@ The key here is that text can be converted to other forms that people with disab
           Decorative images should be implemented using CSS background images
           (see
           <a
-            href="/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders"
-            >Backgrounds</a
+            href="/en-US/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders"
+            >Backgrounds and borders</a
           >). If you have to include an image via an
           {{htmlelement("img")}} element, give it a blank alt
           (<code>alt=""</code>). Otherwise, screen readers may try to read out
@@ -135,17 +135,17 @@ Time-based media refers to multimedia with a duration, such as audio and video. 
     <tr>
        <td>1.2.1 Provide alternatives for pre-recorded audio-only and video-only content (A)</td>
        <td>A transcript should be provided for prerecorded audio-only media, and a transcript or audio description should be provided for prerecorded video-only media (i.e., silent video).</td>
-       <td>See&nbsp;<a href="/en-US/docs/Learn/Accessibility/Multimedia#audio_transcripts">Audio transcripts</a> for transcript information. No audio description tutorial is available yet.</td>
+       <td>See&nbsp;<a href="/en-US/docs/Learn_web_development/Core/Accessibility/Multimedia#audio_transcripts">Audio transcripts</a> for transcript information. No audio description tutorial is available yet.</td>
     </tr>
     <tr>
        <td>1.2.2 Provide captions for web-based video (A)</td>
        <td>You should provide captions for video presented on the web (e.g., HTML video). This is for the benefit of people who can't hear the audio part of the video.</td>
-       <td>See <a href="/en-US/docs/Learn/Accessibility/Multimedia#video_text_tracks">Video text tracks</a> for HTML video captions. See also <a href="https://support.google.com/youtube/answer/2734796?hl=en">Add your own subtitles &amp; closed captions</a> (YouTube).</td>
+       <td>See <a href="/en-US/docs/Learn_web_development/Core/Accessibility/Multimedia#video_text_tracks">Video text tracks</a> for HTML video captions. See also <a href="https://support.google.com/youtube/answer/2734796?hl=en">Add your own subtitles &amp; closed captions</a> (YouTube).</td>
     </tr>
     <tr>
        <td>1.2.3 Provide text transcript or audio description for web-based video (A)</td>
        <td>You should provide text transcripts or audio descriptions for video presented on the web (e.g., HTML video. This is for the benefit of people who can't see the visual part of the video, and don't get the full content from the audio alone.</td>
-       <td>See&nbsp;<a href="/en-US/docs/Learn/Accessibility/Multimedia#audio_transcripts">Audio transcripts</a> for transcript information. No audio description tutorial is available yet.</td>
+       <td>See&nbsp;<a href="/en-US/docs/Learn_web_development/Core/Accessibility/Multimedia#audio_transcripts">Audio transcripts</a> for transcript information. No audio description tutorial is available yet.</td>
     </tr>
     <tr>
        <td>1.2.4 Provide captions for live audio (AA)</td>
@@ -170,12 +170,12 @@ Time-based media refers to multimedia with a duration, such as audio and video. 
     <tr>
        <td>1.2.8 Provide an alternative for prerecorded media (AAA)</td>
        <td>For all content that features video, a descriptive text transcript should be provided, for example a script of the movie you are watching. This is for the benefit of hearing-impaired viewers who cannot hear the content.</td>
-       <td>See&nbsp;<a href="/en-US/docs/Learn/Accessibility/Multimedia#audio_transcripts">Audio transcripts</a> for transcript information.</td>
+       <td>See&nbsp;<a href="/en-US/docs/Learn_web_development/Core/Accessibility/Multimedia#audio_transcripts">Audio transcripts</a> for transcript information.</td>
     </tr>
     <tr>
        <td>1.2.9 Provide a transcript for live audio (AAA)</td>
        <td>For any live audio content being broadcast, a descriptive text should be provided, for example a script of the play or musical you are listening to. This is for the benefit of hearing-impaired viewers who cannot hear the content.</td>
-       <td>See&nbsp;<a href="/en-US/docs/Learn/Accessibility/Multimedia#audio_transcripts">Audio transcripts</a> for transcript information.</td>
+       <td>See&nbsp;<a href="/en-US/docs/Learn_web_development/Core/Accessibility/Multimedia#audio_transcripts">Audio transcripts</a> for transcript information.</td>
     </tr>
  </tbody>
 </table>
@@ -225,18 +225,18 @@ This guideline refers to the ability of content to be consumed by users in multi
       <td>
         The whole of
         <p>
-          <a href="/en-US/docs/Learn/Accessibility/HTML"
+          <a href="/en-US/docs/Learn_web_development/Core/Accessibility/HTML"
             >HTML: A good basis for accessibility</a
           >
           is packed with information about this, but you should particularly
           refer to
-          <a href="/en-US/docs/Learn/Accessibility/HTML#good_semantics"
+          <a href="/en-US/docs/Learn_web_development/Core/Accessibility/HTML#good_semantics"
             >Good semantics</a
           >,
-          <a href="/en-US/docs/Learn/Accessibility/HTML#ui_controls"
+          <a href="/en-US/docs/Learn_web_development/Core/Accessibility/HTML#ui_controls"
             >UI controls</a
           >, and
-          <a href="/en-US/docs/Learn/Accessibility/HTML#text_alternatives"
+          <a href="/en-US/docs/Learn_web_development/Core/Accessibility/HTML#text_alternatives"
             >Text alternatives</a
           >.
         </p>
@@ -253,7 +253,7 @@ This guideline refers to the ability of content to be consumed by users in multi
       </td>
       <td>
         Again, refer to
-        <a href="/en-US/docs/Learn/Accessibility/HTML"
+        <a href="/en-US/docs/Learn_web_development/Core/Accessibility/HTML"
           >HTML: A good basis for accessibility</a
         >.
       </td>
@@ -396,12 +396,12 @@ This guideline relates to making sure core content is easy to discern from backg
           >Use of color</a
         >,
         <a
-          href="/en-US/docs/Learn/Accessibility/CSS_and_JavaScript#color_and_color_contrast"
+          href="/en-US/docs/Learn_web_development/Core/Accessibility/CSS_and_JavaScript#color_and_color_contrast"
           >Color and color contrast</a
         >,
         and
         <a
-          href="/en-US/docs/Learn/Forms/How_to_structure_a_web_form#multiple_labels"
+          href="/en-US/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form#multiple_labels"
           >Multiple labels</a
         >.
       </td>
@@ -417,7 +417,7 @@ This guideline relates to making sure core content is easy to discern from backg
         Use native <code>&lt;button&gt;</code>s to provide accessible keyboard
         controls, as shown in
         <a
-          href="/en-US/docs/Web/Media/Audio_and_video_delivery/Video_player_styling_basics"
+          href="/en-US/docs/Web/Media/Guides/Audio_and_video_delivery/Video_player_styling_basics"
           >Video player styling basics</a
         >.
       </td>
@@ -446,7 +446,7 @@ This guideline relates to making sure core content is easy to discern from backg
           >Color contrast</a
         > and
         <a
-          href="/en-US/docs/Learn/Accessibility/CSS_and_JavaScript#color_and_color_contrast"
+          href="/en-US/docs/Learn_web_development/Core/Accessibility/CSS_and_JavaScript#color_and_color_contrast"
           >Color and color contrast</a
         >.
       </td>
@@ -487,7 +487,7 @@ This guideline relates to making sure core content is easy to discern from backg
       <td>
         See
         <a
-          href="/en-US/docs/Learn/Accessibility/CSS_and_JavaScript#color_and_color_contrast"
+          href="/en-US/docs/Learn_web_development/Core/Accessibility/CSS_and_JavaScript#color_and_color_contrast"
           >Color and color contrast</a
         >.
       </td>

@@ -9,7 +9,22 @@ browser-compat: javascript.builtins.isFinite
 
 The **`isFinite()`** function determines whether a value is finite, first converting the value to a number if necessary. A finite number is one that's not {{jsxref("NaN")}} or ±{{jsxref("Infinity")}}. Because coercion inside the `isFinite()` function can be [surprising](/en-US/docs/Web/JavaScript/Reference/Global_Objects/isNaN#description), you may prefer to use {{jsxref("Number.isFinite()")}}.
 
-{{EmbedInteractiveExample("pages/js/globalprops-isfinite.html")}}
+{{InteractiveExample("JavaScript Demo: Standard built-in objects - isFinite()")}}
+
+```js interactive-example
+function div(x) {
+  if (isFinite(1000 / x)) {
+    return "Number is NOT Infinity.";
+  }
+  return "Number is Infinity!";
+}
+
+console.log(div(0));
+// Expected output: "Number is Infinity!""
+
+console.log(div(1));
+// Expected output: "Number is NOT Infinity."
+```
 
 ## Syntax
 

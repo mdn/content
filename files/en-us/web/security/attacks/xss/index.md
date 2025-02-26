@@ -36,7 +36,7 @@ In this example, suppose the website for the user's bank is `my-bank.example.com
 <h1 id="welcome"></h1>
 ```
 
-The page expects to find the current user's name in a [URL parameter](/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL#parameters). It extracts the parameter value, and uses the value to create a personalized greeting message:
+The page expects to find the current user's name in a [URL parameter](/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL#parameters). It extracts the parameter value, and uses the value to create a personalized greeting message:
 
 ```js
 const params = new URLSearchParams(window.location.search);
@@ -60,7 +60,7 @@ When the user clicks the link:
 1. The browser loads the page.
 2. The page extracts the URL parameter named `user`, whose value is `<img src=x onerror=alert("hello!")>`.
 3. The page then assigns this value to the `welcome` element's `innerHTML` property, which creates a new {{htmlelement("img")}} element, which has a `src` attribute value of `x`.
-4. Since the `src` value generates an error, the `onerror` [event handler property](/en-US/docs/Learn/JavaScript/Building_blocks/Events#inline_event_handlers_—_dont_use_these) is executed, and the attacker gets to run its code in the page.
+4. Since the `src` value generates an error, the `onerror` [event handler property](/en-US/docs/Learn_web_development/Core/Scripting/Events#inline_event_handlers_%e2%80%94_dont_use_these) is executed, and the attacker gets to run its code in the page.
 
 In this case the code just displays an alert, but in a real banking website, the attacker code would be able to do anything that the bank's own front-end code could.
 
@@ -84,7 +84,7 @@ When the user enters a search term and clicks "Submit", the browser makes a GET 
 https://example.org/results?search=bananas
 ```
 
-The server wants to display a list of search results, with a title indicating what the user searched for. It extracts the search term from the URL parameter. Here's what this might look like in [Express](/en-US/docs/Learn/Server-side/Express_Nodejs):
+The server wants to display a list of search results, with a title indicating what the user searched for. It extracts the search term from the URL parameter. Here's what this might look like in [Express](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs):
 
 ```js
 app.get("/results", (req, res) => {
@@ -106,7 +106,7 @@ To exploit this vulnerability, an attacker sends the user a link like this:
 
 When the user clicks the link:
 
-1. The browser sends a GET request to the server. The request's URL parameter contains the malicous code.
+1. The browser sends a GET request to the server. The request's URL parameter contains the malicious code.
 2. The server extracts the URL parameter value and embeds it in the page.
 3. The server returns the page to the browser, which runs it.
 
@@ -310,7 +310,7 @@ The recommended approach to mitigating XSS with a CSP is a [strict CSP](/en-US/d
 
 ### Defense summary checklist
 
-We can summarise the defenses above as follows:
+We can summarize the defenses above as follows:
 
 - When interpolating input into a page, either in the browser or in the server, use a templating engine that performs output encoding.
 - Be aware of the context in which you are interpolating input, and ensure that the appropriate output encoding will be performed in that context.

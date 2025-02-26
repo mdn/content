@@ -21,7 +21,7 @@ The `Content-Location` header is different from the {{HTTPHeader("Location")}} h
       <td>{{Glossary("Representation header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>No</td>
     </tr>
   </tbody>
@@ -36,7 +36,7 @@ Content-Location: <url>
 ## Directives
 
 - `<url>`
-  - : A URL that can be [absolute](/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL#absolute_urls_vs._relative_urls) or [relative](/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL#absolute_urls_vs._relative_urls) to the request URL.
+  - : A URL that can be [absolute](/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL#absolute_urls_vs._relative_urls) or [relative](/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL#absolute_urls_vs._relative_urls) to the request URL.
 
 ## Examples
 

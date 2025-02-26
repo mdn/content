@@ -19,13 +19,7 @@ for enforcing record identifier uniqueness. Web NFC does not sign the NFC conten
 record consumer should not make any assumptions about integrity or authenticity of the
 identifier or any other part of the records.
 
-## Syntax
-
-```js-nolint
-NDEFRecord.id
-```
-
-### Value
+## Value
 
 A string.
 

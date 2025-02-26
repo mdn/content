@@ -2,9 +2,8 @@
 title: Page types
 slug: MDN/Writing_guidelines/Page_structures/Page_types
 page-type: mdn-writing-guide
+sidebar: mdnsidebar
 ---
-
-{{MDNSidebar}}
 
 There are a number of types of pages that are used repeatedly on MDN.
 This article describes these page types, their purpose, and gives examples of each and templates to use when creating a new page.
@@ -66,6 +65,7 @@ Below are examples of the various pages you'll find on MDN along with templates 
 - [HTTP header](#http_header_reference_page)
 - [Landing page](#landing_page)
 - [SVG element](#svg_element_reference_page)
+- [Learn web development pages](#learn_web_development_pages)
 
 Each section includes links to live example pages for that page type.
 
@@ -202,13 +202,13 @@ It also provides examples, browser compatibility information, and other importan
 
 A **conceptual page** is a _guide_ page that explains or teaches something.
 Generally, if a page contains primarily prose, and doesn't fall into another page type, it's probably a conceptual page.
-An extended discussion of a topic might be spread across multiple conceptual pages, and linked using [Next](https://github.com/mdn/yari/blob/main/kumascript/macros/Next.ejs) and [Previous](https://github.com/mdn/yari/blob/main/kumascript/macros/Previous.ejs) macros.
+An extended discussion of a topic might be spread across multiple conceptual pages, and linked using [Next](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/previous_menu_next.rs) and [Previous](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/previous_menu_next.rs) macros.
 
 #### Examples
 
 - [Using the WebVR API](/en-US/docs/Web/API/WebVR_API/Using_the_WebVR_API)
 - [Visualizations with Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API)
-- [Cascade and inheritance in CSS](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+- [Handling conflicts](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
 
 ### Glossary page
 
@@ -233,7 +233,20 @@ A **landing page** serves as a menu, of sorts, for its subpages, and is therefor
 A landing page layout is typically used for the root page of a tree of pages about a particular topic.
 It opens with a brief summary of the topic, then presents a structured list of links to its subpages, and optionally, additional material that be useful to the reader.
 
-The list of subpages can be generated automatically using the [`SubpagesWithSummaries`](https://github.com/mdn/yari/blob/main/kumascript/macros/SubpagesWithSummaries.ejs) template. However, in more complex cases, the list may need to be created (and maintained) by hand.
+The list of subpages can be generated automatically using the [`SubpagesWithSummaries`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/subpages_with_summaries.rs) template. However, in more complex cases, the list may need to be created (and maintained) by hand.
+
+### Learn web development pages
+
+The [Learn web development](/en-US/docs/Learn_web_development) section of MDN is aimed specifically at folks learning the basic fundamentals of web development, and as such, requires a different approach to the rest of MDN's content. You can find more guidelines at [Learn web development writing guidelines](/en-US/docs/MDN/Writing_guidelines/Learning_content).
+
+There are only a few types of page inside Learn web development:
+
+- **Module group landing page**, for example [Core learning modules](/en-US/docs/Learn_web_development/Core)
+  - : These contain an intro paragraph, a section detailing the prerequisites you should have before starting the module group, and a list of the modules, followed by an optional list of "See also" links.
+- **Module landing page**, for example [Structuring content with HTML](/en-US/docs/Learn_web_development/Core/Structuring_content)
+  - : These contain an intro paragraph, a section detailing the prerequisites you should have before starting the module, and a list of the contained tutorials, followed by an optional list of "Additional tutorials" that are related but not part of the central learning pathway, and an optional list of "See also" links.
+- **Tutorial page**, for example [Basic HTML syntax](/en-US/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax)
+  - : The structure of a Learn tutorial is not strict, but it must provide a hands-on learning experience (see [Learn web development writing guidelines > Approach](/en-US/docs/MDN/Writing_guidelines/Learning_content#approach)), it must have a set of "Prerequisites" and "Learning outcomes" listed at the top, and the content must teach the stated learning outcomes.
 
 ### Examples
 
@@ -241,8 +254,8 @@ The list of subpages can be generated automatically using the [`SubpagesWithSumm
 - [CSS](/en-US/docs/Web/CSS)
 - [Web APIs](/en-US/docs/Web/API)
 - [JavaScript](/en-US/docs/Web/JavaScript)
-- [Learning area](/en-US/docs/Learn)
-- [Contributing to MDN](/en-US/docs/MDN/Community/Contributing)
+- [Learn web development](/en-US/docs/Learn_web_development)
+- [Community resources](/en-US/docs/MDN/Community)
 
 ## See also
 

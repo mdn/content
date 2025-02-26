@@ -9,7 +9,7 @@ spec-urls: https://drafts.csswg.org/css-sizing/#aspect-ratio
 
 Every element rendered to the page has a height and a width, and, therefore, an {{glossary("aspect ratio")}}, which is the ratio between the width and height. The natural dimensions of a media object, which are its size without any sizing, scaling, zooming, or borders applied, are known as its natural or {{glossary("intrinsic size")}}. An element's intrinsic size is determined by the element itself, not by applying formatting such as [box sizing](/en-US/docs/Web/CSS/CSS_box_sizing) or setting border, margin, or padding widths.
 
-When developing sites, you often want to be able to set the width of an element to a percentage of the viewport or parent container size and have the height change size proportionally, thereby maintaining a specific aspect ratio depending on the size of the viewport. For replaced elements, like images and videos, maintaining a specific aspect ratio is not only necessary for creating {{glossary("responsive web design")}}, but also a vital component of providing good user experience. Setting an asset's aspect ratio prevents loading [jank](/en-US/docs/Learn/Performance/Multimedia#rendering_strategy_preventing_jank_when_loading_images)—the layout shift that occurs when media loads after the page has already been painted, causing a reflow because the space for the asset has not been reserved.
+When developing sites, you often want to be able to set the width of an element to a percentage of the viewport or parent container size and have the height change size proportionally, thereby maintaining a specific aspect ratio depending on the size of the viewport. For replaced elements, like images and videos, maintaining a specific aspect ratio is not only necessary for creating {{glossary("responsive web design")}}, but also a vital component of providing good user experience. Setting an asset's aspect ratio prevents loading [jank](/en-US/docs/Learn_web_development/Extensions/Performance/Multimedia#rendering_strategy_preventing_jank_when_loading_images)—the layout shift that occurs when media loads after the page has already been painted, causing a reflow because the space for the asset has not been reserved.
 
 Using CSS, you can adjust the size of replaced and non-replaced elements based on their aspect ratio. In this guide, we will learn about the `aspect-ratio` property, discuss aspect ratios for replaced and non-replaced elements, and then examine some common aspect ratio use cases.
 
@@ -49,11 +49,8 @@ div {
   line-height: 100px;
   text-align: center;
   float: left;
-  background-image: repeating-linear-gradient(
-      to right,
-      black 0px 1px,
-      transparent 1px 20px
-    ),
+  background-image:
+    repeating-linear-gradient(to right, black 0px 1px, transparent 1px 20px),
     repeating-linear-gradient(black 0px 1px, transparent 1px 20px);
   background-size:
     181px 5px,
@@ -78,7 +75,7 @@ You will have noticed the word "preferred" in the definitions above. The `aspect
 
 When both the height and width or inline and block sizes are explicitly set, the `aspect-ratio` property value is ignored. In this case, no dimension is allowed to be automatically sized - the preferred sizes are explicitly set - so the `aspect-ratio` property has no effect. When you declare both the inline and block dimensions, those take precedence.
 
-With replaced elements, if you don't explicitly set a value (other than `auto`) to either dimension, both will default to their intrinsic size (any `aspect-ratio` value isn't applied). The `aspect-ratio` will apply to non-replaced elements that don't have a dimension explicitly set, as non-replaced elements are either [intrinsically](/en-US/docs/Glossary/Intrinsic_Size) or [extrinsically](/en-US/docs/Glossary/Intrinsic_Size#extrinsic_sizing) sized, getting their size from their content, container, [box model](/en-US/docs/Learn/CSS/Building_blocks/The_box_model) properties, etc.
+With replaced elements, if you don't explicitly set a value (other than `auto`) to either dimension, both will default to their intrinsic size (any `aspect-ratio` value isn't applied). The `aspect-ratio` will apply to non-replaced elements that don't have a dimension explicitly set, as non-replaced elements are either [intrinsically](/en-US/docs/Glossary/Intrinsic_Size) or [extrinsically](/en-US/docs/Glossary/Intrinsic_Size#extrinsic_sizing) sized, getting their size from their content, container, [box model](/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model) properties, etc.
 
 When an element is rendered to the page, if no CSS is applied and no HTML sizing attributes are included, the user agent will render the object at its natural size.
 

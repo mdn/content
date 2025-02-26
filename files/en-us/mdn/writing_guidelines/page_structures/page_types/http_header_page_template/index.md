@@ -2,9 +2,8 @@
 title: HTTP header page template
 slug: MDN/Writing_guidelines/Page_structures/Page_types/HTTP_header_page_template
 page-type: mdn-writing-guide
+sidebar: mdnsidebar
 ---
-
-{{MDNSidebar}}
 
 > **Note:** _Remove this whole explanatory note before publishing_
 >
@@ -94,7 +93,7 @@ Two or three paragraphs in this section is appropriate, and if there are substan
       </td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>"Yes" or "No"</td>
     </tr>
     <tr>

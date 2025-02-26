@@ -10,7 +10,7 @@ This page lists essential core techniques for anyone wanting to develop games us
 
 - [Using async scripts for asm.js](/en-US/docs/Games/Techniques/Async_scripts)
   - : Especially when creating medium to large-sized games, async scripts are an essential technique to take advantage of, so that your game's JavaScript can be compiled off the main thread and be cached for future game running, resulting in a significant performance improvement for your users. This article explains how.
-- [Optimizing startup performance](/en-US/docs/Web/Performance/Optimizing_startup_performance)
+- [Optimizing startup performance](/en-US/docs/Web/Performance/Guides/Optimizing_startup_performance)
   - : How to make sure your game starts up quickly, smoothly, and without appearing to lock up the user's browser or device.
 - [Using WebRTC peer-to-peer data channels](/en-US/docs/Games/Techniques/WebRTC_data_channels)
   - : In addition to providing support for audio and video communication, WebRTC lets you set up peer-to-peer data channels to exchange text or binary data actively between your players. This article explains what this can do for you, and shows how to use libraries that make this easy.

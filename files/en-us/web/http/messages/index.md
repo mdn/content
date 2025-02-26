@@ -223,7 +223,7 @@ Response bodies may be:
 
 - Single-resource bodies defined by the two headers: {{HTTPHeader("Content-Type")}} and {{HTTPHeader("Content-Length")}}, or of unknown length and encoded in chunks with {{HTTPHeader("Transfer-Encoding")}} set to `chunked`.
 - [Multiple-resource bodies](/en-US/docs/Web/HTTP/MIME_types#multipartform-data), consisting of a body that contains multiple parts, each containing a different piece of information.
-  Multipart bodies are typically associated with [HTML Forms](/en-US/docs/Learn/Forms), but may also be sent in response to [Range requests](/en-US/docs/Web/HTTP/Range_requests).
+  Multipart bodies are typically associated with [HTML Forms](/en-US/docs/Learn_web_development/Extensions/Forms), but may also be sent in response to [Range requests](/en-US/docs/Web/HTTP/Range_requests).
 
 Responses with a status code that answers the request without the need to include message content, such as {{HTTPStatus("201", "201 Created")}} or {{HTTPStatus("204", "204 No Content")}}, do not have a body.
 
@@ -329,7 +329,7 @@ Digging further into message frames, stream IDs and how the connection is manage
 
 This guide provides a general overview of the anatomy of HTTP messages, using the HTTP/1.1 format for illustration.
 We also explored HTTP/2 message framing, which introduces a layer between the HTTP/1.x syntax and the underlying transport protocol without fundamentally modifying HTTP's semantics.
-HTTP/2 was introduced to solve the head-of-line blocking issues present in HTTP/1.x by enabling multiplexing of requests.
+HTTP/2 was introduced to solve the {{glossary("head of line blocking", "head-of-line blocking")}} issues present in HTTP/1.x by enabling multiplexing of requests.
 
 One issue that remained in HTTP/2 is that even though head-of-line blocking was fixed in the protocol level, there is still a performance bottleneck due to head-of-line blocking within TCP (at the transport level).
 HTTP/3 addresses this limitation by using QUIC, a protocol built on UDP, instead of TCP.

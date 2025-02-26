@@ -9,7 +9,7 @@ browser-compat: api.CSSVariableReferenceValue.fallback
 {{APIRef("CSSOM")}}
 
 The **`fallback`** read-only property of the
-{{domxref("CSSVariableReferenceValue")}} interface returns the [custom property fallback value](/en-US/docs/Web/CSS/Using_CSS_custom_properties#custom_property_fallback_values) of the {{domxref("CSSVariableReferenceValue")}}.
+{{domxref("CSSVariableReferenceValue")}} interface returns the [custom property fallback value](/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties#custom_property_fallback_values) of the {{domxref("CSSVariableReferenceValue")}}.
 
 ## Value
 

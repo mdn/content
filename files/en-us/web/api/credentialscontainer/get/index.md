@@ -36,13 +36,20 @@ get(options)
 
       - : A string indicating whether the user will be required to login for every visit to a client app. The value can be one of the following:
 
-        - `"conditional"`: Discovered credentials are presented to the user in a non-modal dialog box along with an indication of the origin requesting credentials. In practice, this means autofilling available credentials; see [Sign in with a passkey through form autofill](https://web.dev/articles/passkey-form-autofill) for more details of how this is used; {{domxref("PublicKeyCredential.isConditionalMediationAvailable_static", "PublicKeyCredential.isConditionalMediationAvailable()")}} also provides some useful information.
+        - `"conditional"`
 
-        - `"optional"`: If credentials can be handed over for a given operation without user mediation, they will be, enabling automatic reauthentication without user mediation. If user mediation is required, then the user agent will ask the user to authenticate. This value is intended for situations where you have reasonable confidence that a user won't be surprised or confused at seeing a login dialog box — for example on a site that doesn't automatically log users in, when a user has just clicked a "Login/Signup" button.
+          - : Discovered credentials are presented to the user in a non-modal dialog box along with an indication of the origin requesting credentials. In practice, this means autofilling available credentials; see [Sign in with a passkey through form autofill](https://web.dev/articles/passkey-form-autofill) for more details of how this is used; {{domxref("PublicKeyCredential.isConditionalMediationAvailable_static", "PublicKeyCredential.isConditionalMediationAvailable()")}} also provides some useful information.
 
-        - `"required"`: The user will always be asked to authenticate, even if prevent silent access (see {{domxref("CredentialsContainer.preventSilentAccess()")}}) is set to `false`. This value is intended for situations where you want to force user authentication — for example if you want a user to reauthenticate when a sensitive operation is being performed (like confirming a credit card payment), or when switching users.
+        - `"optional"`
 
-        - `"silent"`: The user will not be asked to authenticate. The user agent will automatically reauthenticate the user and log them in if possible. If consent is required, the promise will fulfill with `null`. This value is intended for situations where you would want to automatically sign a user in upon visiting a web app if possible, but if not, you don't want to present them with a confusing login dialog box. Instead, you'd want to wait for them to explicitly click a "Login/Signup" button.
+          - : If credentials can be handed over for a given operation without user mediation, they will be, enabling automatic reauthentication without user mediation. If user mediation is required, then the user agent will ask the user to authenticate. This value is intended for situations where you have reasonable confidence that a user won't be surprised or confused at seeing a login dialog box — for example on a site that doesn't automatically log users in, when a user has just clicked a "Login/Signup" button.
+
+        - `"required"`
+
+          - : The user will always be asked to authenticate. This value is intended for situations where you want to force user authentication — for example if you want a user to reauthenticate when a sensitive operation is being performed (like confirming a credit card payment), or when switching users.
+
+        - `"silent"`
+          - : The user will not be asked to authenticate. The user agent will automatically reauthenticate the user and log them in if possible. If consent is required, the promise will fulfill with `null`. This value is intended for situations where you would want to automatically sign a user in upon visiting a web app if possible, but if not, you don't want to present them with a confusing login dialog box. Instead, you'd want to wait for them to explicitly click a "Login/Signup" button.
 
         The default value is `"optional"`.
 
@@ -94,6 +101,11 @@ A {{jsxref("Promise")}} that resolves with one of the following subclasses of {{
 - {{domxref("OTPCredential")}}
 - {{domxref("PublicKeyCredential")}}
 
+If [conditional mediation](#mediation) was specified in the `get()` call, the browser UI dialog is shown and the promise remains pending until the user picks an account to sign-in with from available autofill suggestions:
+
+- If the user then makes a gesture outside of the browser UI dialog, it closes without resolving or rejecting the promise and without causing a user-visible error condition.
+- If the user selects a credential, the relevant {{domxref("PublicKeyCredential")}} is returned to the caller.
+
 If a single credential cannot be unambiguously obtained, the promise resolves with `null`.
 
 ### Exceptions
@@ -113,6 +125,8 @@ If a single credential cannot be unambiguously obtained, the promise resolves wi
 - `NotAllowedError` {{domxref("DOMException")}}
 
   - : Thrown in one of the following situations:
+
+    - The user canceled the request.
 
     - Use of this API was blocked by one of the following [permissions policies](/en-US/docs/Web/HTTP/Permissions_Policy):
 

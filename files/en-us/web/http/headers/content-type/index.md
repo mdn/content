@@ -27,7 +27,7 @@ The `Content-Type` header differs from {{HTTPHeader("Content-Encoding")}} in tha
       <td>{{Glossary("Representation header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>No</td>
     </tr>
     <tr>
@@ -83,7 +83,7 @@ Content-Type: multipart/form-data; boundary=ExampleBoundaryString
 
 In the following two example responses, JavaScript and CSS assets are served using `text/javascript` for JavaScript and `text/css` for CSS.
 The correct content type for these resources helps the browser handle them more securely and with better performance.
-See [Properly configuring server MIME types](/en-US/docs/Learn/Server-side/Configuring_server_MIME_types) for more information.
+See [Properly configuring server MIME types](/en-US/docs/Learn_web_development/Extensions/Server-side/Configuring_server_MIME_types) for more information.
 
 ```http
 HTTP/1.1 200

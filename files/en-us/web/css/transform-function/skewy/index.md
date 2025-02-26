@@ -7,7 +7,7 @@ browser-compat: css.types.transform-function.skewY
 
 {{CSSRef}}
 
-The **`skewY()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) defines a transformation that skews an element in the vertical
+The **`skewY()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) defines a transformation that skews an element in the vertical
 direction on the 2D plane. Its result is a {{cssxref("&lt;transform-function&gt;")}} data type.
 
 {{EmbedInteractiveExample("pages/css/function-skewY.html")}}
@@ -65,6 +65,10 @@ skewY(a)
     </tr>
   </tbody>
 </table>
+
+## Formal syntax
+
+{{CSSSyntax}}
 
 ## Examples
 

@@ -15,7 +15,46 @@ browser-compat:
 
 The **`<h1>`** to **`<h6>`** [HTML](/en-US/docs/Web/HTML) elements represent six levels of section headings. `<h1>` is the highest section level and `<h6>` is the lowest. By default, all heading elements create a [block-level](/en-US/docs/Glossary/Block-level_content) box in the layout, starting on a new line and taking up the full width available in their containing block.
 
-{{EmbedInteractiveExample("pages/tabbed/h1-h6.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;h1-h6&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<h1>Beetles</h1>
+<h2>External morphology</h2>
+<h3>Head</h3>
+<h4>Mouthparts</h4>
+<h3>Thorax</h3>
+<h4>Prothorax</h4>
+<h4>Pterothorax</h4>
+```
+
+```css interactive-example
+h1,
+h2,
+h3,
+h4 {
+  margin: 0.1rem 0;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  padding-left: 20px;
+}
+
+h3 {
+  font-size: 1.2rem;
+  padding-left: 40px;
+}
+
+h4 {
+  font-size: 1rem;
+  font-style: italic;
+  padding-left: 60px;
+}
+```
 
 ## Attributes
 
@@ -35,6 +74,31 @@ While using multiple `<h1>` elements on one page is allowed by the HTML standard
 > Nesting multiple `<h1>` elements in nested [sectioning elements](/en-US/docs/Web/HTML/Element#content_sectioning) was allowed in older versions of the HTML standard. However, this was never considered a best practice and is now non-conforming. Read more in [There Is No Document Outline Algorithm](https://adrianroselli.com/2016/08/there-is-no-document-outline-algorithm.html).
 
 Prefer using only one `<h1>` per page and [nest headings](#nesting) without skipping levels.
+
+### Specifying a uniform font size for `<h1>`
+
+The [HTML standard](https://html.spec.whatwg.org/multipage/rendering.html#sections-and-headings) specifies that `<h1>` elements in a `<section>`, `<article>`, `<aside>`, or `<nav>` element should render as an `<h2>` (smaller {{cssxref("font-size")}} with an adjusted {{cssxref("margin-block")}}), or as an `<h3>` if nested another level, and so on.
+
+> [!NOTE]
+> There is a [proposal](https://github.com/whatwg/html/issues/7867) to remove this special default style, so that `<h1>` always has the same default style. This proposal is currently [implemented in Firefox Nightly](/en-US/docs/Mozilla/Firefox/Experimental_features#ua_styles_for_h1_nested_in_sectioning_elements).
+
+To ensure consistent `<h1>` rendering, use the following style rule:
+
+```css
+h1 {
+  margin-block: 0.67em;
+  font-size: 2em;
+}
+```
+
+Alternatively, to avoid overwriting other style rules that target `<h1>` you can use {{cssxref(":where()")}}, which has zero specificity:
+
+```css
+:where(h1) {
+  margin-block: 0.67em;
+  font-size: 2em;
+}
+```
 
 ## Accessibility
 

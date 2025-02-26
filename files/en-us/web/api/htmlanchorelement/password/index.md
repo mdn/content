@@ -8,12 +8,13 @@ browser-compat: api.HTMLAnchorElement.password
 
 {{ApiRef("HTML DOM")}}
 
-The **`HTMLAnchorElement.password`** property is a
-string containing the password specified before the domain name.
+The **`password`** property of the {{domxref("HTMLAnchorElement")}} interface is a string containing the password component of the `<a>` element's `href`. If the URL does not have a password, this property contains an empty string, `""`.
 
-If it is set without first setting the
-[`username`](/en-US/docs/Web/API/HTMLAnchorElement/username)
-property, it silently fails.
+This property can be set to change the password of the URL. If the URL has no {{domxref("HTMLAnchorElement.host", "host")}} or its scheme is `file:`, then setting this property has no effect.
+
+The password is {{Glossary("Percent-encoding", "percent-encoded")}} when setting but not percent-decoded when reading.
+
+See {{domxref("URL.password")}} for more information.
 
 ## Value
 
