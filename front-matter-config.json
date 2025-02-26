@@ -487,7 +487,7 @@
           "properties": {
             "slug": {
               "type": "string",
-              "pattern": "^Web/Accessibility/ARIA/Roles/"
+              "pattern": "^Web/Accessibility/ARIA/Reference/Roles/"
             }
           }
         },
