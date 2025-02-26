@@ -39,7 +39,7 @@ The MDN [Accessibility Learning Area](/en-US/docs/Learn_web_development/Core/Acc
   - : Until now, web developers who wanted to make their styled `<div>` and `<span>` based widgets accessible have lacked proper techniques. **Keyboard accessibility** is part of the minimum accessibility requirements, which a developer should be aware of.
 - [ARIA](/en-US/docs/Web/Accessibility/ARIA)
   - : This is a collection of articles to learn how to use Accessible Rich Internet Applications (ARIA) to make your HTML documents more accessible.
-- [Mobile accessibility checklist](/en-US/docs/Web/Accessibility/Mobile_accessibility_checklist)
+- [Mobile accessibility checklist](/en-US/docs/Web/Accessibility/Guides/Mobile_accessibility_checklist)
   - : This article provides a concise checklist of accessibility requirements for mobile app developers.
 - [Cognitive accessibility](/en-US/docs/Web/Accessibility/Guides/Cognitive_accessibility)
   - : This article explains how to ensure that the web content you're creating is accessible to people with cognitive impairments.

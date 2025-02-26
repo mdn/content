@@ -71956,6 +71956,19 @@
       "peterbraden"
     ]
   },
+  "Web/Accessibility/Guides/Mobile_accessibility_checklist": {
+    "modified": "2020-09-26T18:24:33.135Z",
+    "contributors": [
+      "m5rdi822",
+      "chrisdavidmills",
+      "scottaohara",
+      "tanazyazdani",
+      "riceh3",
+      "estelle",
+      "Anne-Victoria",
+      "Tanaguru"
+    ]
+  },
   "Web/Accessibility/Guides/Seizure_disorders": {
     "modified": "2020-03-20T00:45:18.694Z",
     "contributors": [
@@ -72041,19 +72054,6 @@
       "estelle",
       "goodwitch",
       "chrisdavidmills"
-    ]
-  },
-  "Web/Accessibility/Mobile_accessibility_checklist": {
-    "modified": "2020-09-26T18:24:33.135Z",
-    "contributors": [
-      "m5rdi822",
-      "chrisdavidmills",
-      "scottaohara",
-      "tanazyazdani",
-      "riceh3",
-      "estelle",
-      "Anne-Victoria",
-      "Tanaguru"
     ]
   },
   "Web/CSS": {

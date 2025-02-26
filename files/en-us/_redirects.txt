@@ -11592,6 +11592,7 @@
 /en-US/docs/Web/Accessibility/Index	/en-US/docs/Web/Accessibility
 /en-US/docs/Web/Accessibility/Information_for_Web_authors	/en-US/docs/Web/Accessibility/Guides/Information_for_Web_authors
 /en-US/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets	/en-US/docs/Web/Accessibility/Guides/Keyboard-navigable_JavaScript_widgets
+/en-US/docs/Web/Accessibility/Mobile_accessibility_checklist	/en-US/docs/Web/Accessibility/Guides/Mobile_accessibility_checklist
 /en-US/docs/Web/Accessibility/Seizure_disorders	/en-US/docs/Web/Accessibility/Guides/Seizure_disorders
 /en-US/docs/Web/Accessibility/Seizure_disorders/Accessibility_and_Spacial_Patterns	/en-US/docs/Web/Accessibility/Guides/Accessibility_and_Spacial_Patterns
 /en-US/docs/Web/Accessibility/Understanding_Colors_and_Luminance	/en-US/docs/Web/Accessibility/Guides/Colors_and_Luminance
