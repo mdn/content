@@ -5567,7 +5567,7 @@
 /en-US/docs/Learn/JavaScript/Objects/Test_your_skills:_JSON	/en-US/docs/Learn_web_development/Core/Scripting/Test_your_skills:_JSON
 /en-US/docs/Learn/JavaScript/Objects/Test_your_skills:_Object-oriented_JavaScript	/en-US/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Test_your_skills:_Object-oriented_JavaScript
 /en-US/docs/Learn/JavaScript/Objects/Test_your_skills:_Object_basics	/en-US/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Object_basics
-/en-US/docs/Learn/Learning_and_getting_help	/en-US/docs/Learn_web_development/Getting_started/Soft_skills/Learning_and_getting_help
+/en-US/docs/Learn/Learning_and_getting_help	/en-US/docs/Learn_web_development/Getting_started/Soft_skills/Research_and_learning
 /en-US/docs/Learn/MathML	/en-US/docs/Web/MathML
 /en-US/docs/Learn/MathML/First_steps	/en-US/docs/Web/MathML/Guides
 /en-US/docs/Learn/MathML/First_steps/Fractions_and_roots	/en-US/docs/Web/MathML/Guides/Fractions_and_roots
@@ -5779,6 +5779,7 @@
 /en-US/docs/Learn_web_development/Core/Styling_basics/The_box_model	/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model
 /en-US/docs/Learn_web_development/Extensions/Forms/Property_compatibility_table_for_form_controls	/en-US/docs/Learn_web_development/Extensions/Forms
 /en-US/docs/Learn_web_development/Getting_started/Basic_setup	/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software
+/en-US/docs/Learn_web_development/Getting_started/Soft_skills/Learning_and_getting_help	/en-US/docs/Learn_web_development/Getting_started/Soft_skills/Research_and_learning
 /en-US/docs/Learn_web_development/Getting_started/Your_first_website/CSS_basics	/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Styling_the_content
 /en-US/docs/Learn_web_development/Getting_started/Your_first_website/HTML_basics	/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Creating_the_content
 /en-US/docs/Learn_web_development/Getting_started/Your_first_website/How_the_Web_works	/en-US/docs/Learn_web_development/Getting_started/Web_standards/How_the_web_works
