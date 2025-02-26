@@ -1,6 +1,6 @@
 ---
 title: Operable
-slug: Web/Accessibility/Understanding_WCAG/Operable
+slug: Web/Accessibility/Guides/Understanding_WCAG/Operable
 page-type: guide
 ---
 
@@ -571,9 +571,9 @@ The conformance criteria under this guideline ensures that users are able to int
 
 ## See also
 
-- [WCAG](/en-US/docs/Web/Accessibility/Understanding_WCAG)
+- [WCAG](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG)
 
-  1. [Perceivable](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable)
+  1. [Perceivable](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable)
   2. Operable
-  3. [Understandable](/en-US/docs/Web/Accessibility/Understanding_WCAG/Understandable)
-  4. [Robust](/en-US/docs/Web/Accessibility/Understanding_WCAG/Robust)
+  3. [Understandable](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Understandable)
+  4. [Robust](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Robust)

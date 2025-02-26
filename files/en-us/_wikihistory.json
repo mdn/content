@@ -71970,20 +71970,7 @@
       "tealdev"
     ]
   },
-  "Web/Accessibility/Mobile_accessibility_checklist": {
-    "modified": "2020-09-26T18:24:33.135Z",
-    "contributors": [
-      "m5rdi822",
-      "chrisdavidmills",
-      "scottaohara",
-      "tanazyazdani",
-      "riceh3",
-      "estelle",
-      "Anne-Victoria",
-      "Tanaguru"
-    ]
-  },
-  "Web/Accessibility/Understanding_WCAG": {
+  "Web/Accessibility/Guides/Understanding_WCAG": {
     "modified": "2019-03-23T22:16:56.489Z",
     "contributors": [
       "christopherwilson1",
@@ -71993,7 +71980,7 @@
       "SherrieQuinn"
     ]
   },
-  "Web/Accessibility/Understanding_WCAG/Keyboard": {
+  "Web/Accessibility/Guides/Understanding_WCAG/Keyboard": {
     "modified": "2019-12-17T12:47:14.337Z",
     "contributors": [
       "chrisdavidmills",
@@ -72003,7 +71990,7 @@
       "yzen"
     ]
   },
-  "Web/Accessibility/Understanding_WCAG/Operable": {
+  "Web/Accessibility/Guides/Understanding_WCAG/Operable": {
     "modified": "2020-06-03T15:45:12.511Z",
     "contributors": [
       "garrettbsettles",
@@ -72012,7 +71999,7 @@
       "chrisdavidmills"
     ]
   },
-  "Web/Accessibility/Understanding_WCAG/Perceivable": {
+  "Web/Accessibility/Guides/Understanding_WCAG/Perceivable": {
     "modified": "2020-08-09T17:59:52.698Z",
     "contributors": [
       "trebuchet",
@@ -72022,19 +72009,19 @@
       "goodwitch"
     ]
   },
-  "Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast": {
+  "Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast": {
     "modified": "2019-08-26T18:39:02.448Z",
     "contributors": ["jswisher", "chrisdavidmills", "tacsipacsi", "iamvector"]
   },
-  "Web/Accessibility/Understanding_WCAG/Perceivable/Use_of_color": {
+  "Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Use_of_color": {
     "modified": "2019-08-28T15:52:36.498Z",
     "contributors": ["jswisher"]
   },
-  "Web/Accessibility/Understanding_WCAG/Robust": {
+  "Web/Accessibility/Guides/Understanding_WCAG/Robust": {
     "modified": "2019-03-23T22:10:37.177Z",
     "contributors": ["estelle", "goodwitch", "chrisdavidmills"]
   },
-  "Web/Accessibility/Understanding_WCAG/Text_labels_and_names": {
+  "Web/Accessibility/Guides/Understanding_WCAG/Text_labels_and_names": {
     "modified": "2020-08-26T15:28:32.618Z",
     "contributors": [
       "jswisher",
@@ -72046,7 +72033,7 @@
       "yzen"
     ]
   },
-  "Web/Accessibility/Understanding_WCAG/Understandable": {
+  "Web/Accessibility/Guides/Understanding_WCAG/Understandable": {
     "modified": "2020-06-03T18:07:53.888Z",
     "contributors": [
       "garrettbsettles",
@@ -72054,6 +72041,19 @@
       "estelle",
       "goodwitch",
       "chrisdavidmills"
+    ]
+  },
+  "Web/Accessibility/Mobile_accessibility_checklist": {
+    "modified": "2020-09-26T18:24:33.135Z",
+    "contributors": [
+      "m5rdi822",
+      "chrisdavidmills",
+      "scottaohara",
+      "tanazyazdani",
+      "riceh3",
+      "estelle",
+      "Anne-Victoria",
+      "Tanaguru"
     ]
   },
   "Web/CSS": {

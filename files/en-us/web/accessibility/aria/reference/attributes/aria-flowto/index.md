@@ -40,5 +40,5 @@ Used in **ALL** roles.
 - HTML [id](/en-US/docs/Web/HTML/Global_attributes/id) attribute
 - HTML [tabindex](/en-US/docs/Web/HTML/Global_attributes/tabindex) attribute
 - CSS {{CSSXRef('order')}} property
-- [WCAG: source order](/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.4_—_navigable_provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
+- [WCAG: source order](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable#guideline_2.4_—_navigable_provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
 - [Using aria-flowto](https://www.w3.org/WAI/GL/wiki/Using_aria-flowto) - W3 Wiki

@@ -98,5 +98,5 @@ Inherits into roles:
 - [`:optional` pseudoclass](/en-US/docs/Web/CSS/:optional)
 - [`:required` pseudoclass](/en-US/docs/Web/CSS/:required)
 - [`aria-invalid` attribute](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-invalid)
-- [MDN Understanding WCAG, Guideline 3.3 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Understandable#guideline_3.3_%e2%80%94_input_assistance_help_users_avoid_and_correct_mistakes)
+- [MDN Understanding WCAG, Guideline 3.3 explanations](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Understandable#guideline_3.3_%e2%80%94_input_assistance_help_users_avoid_and_correct_mistakes)
 - [Understanding Success Criterion 3.3.2 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/minimize-error-cues.html)

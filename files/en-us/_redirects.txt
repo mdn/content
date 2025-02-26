@@ -11594,7 +11594,16 @@
 /en-US/docs/Web/Accessibility/Seizure_disorders	/en-US/docs/Web/Accessibility/Guides/Seizure_disorders
 /en-US/docs/Web/Accessibility/Seizure_disorders/Accessibility_and_Spacial_Patterns	/en-US/docs/Web/Accessibility/Guides/Accessibility_and_Spacial_Patterns
 /en-US/docs/Web/Accessibility/Understanding_Colors_and_Luminance	/en-US/docs/Web/Accessibility/Guides/Colors_and_Luminance
-/en-US/docs/Web/Accessibility/Understanding_WCAG/Understandable/Text_labels_and_names	/en-US/docs/Web/Accessibility/Understanding_WCAG/Text_labels_and_names
+/en-US/docs/Web/Accessibility/Understanding_WCAG	/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG
+/en-US/docs/Web/Accessibility/Understanding_WCAG/Keyboard	/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Keyboard
+/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable	/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable
+/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable	/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable
+/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast	/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast
+/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Use_of_color	/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Use_of_color
+/en-US/docs/Web/Accessibility/Understanding_WCAG/Robust	/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Robust
+/en-US/docs/Web/Accessibility/Understanding_WCAG/Text_labels_and_names	/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Text_labels_and_names
+/en-US/docs/Web/Accessibility/Understanding_WCAG/Understandable	/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Understandable
+/en-US/docs/Web/Accessibility/Understanding_WCAG/Understandable/Text_labels_and_names	/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Text_labels_and_names
 /en-US/docs/Web/Accessibility/Web_Development	/en-US/docs/Web/Accessibility
 /en-US/docs/Web/Accessibility/Web_applications_and_ARIA_FAQ	/en-US/docs/Web/Accessibility/ARIA
 /en-US/docs/Web/Apps	/en-US/docs/Web/Progressive_web_apps

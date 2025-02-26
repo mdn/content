@@ -31,7 +31,7 @@ The MDN [Accessibility Learning Area](/en-US/docs/Learn_web_development/Core/Acc
 
 ## Other documentation
 
-- [Understanding the Web Content Accessibility Guidelines](/en-US/docs/Web/Accessibility/Understanding_WCAG)
+- [Understanding the Web Content Accessibility Guidelines](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG)
   - : This set of articles provides quick explanations to help you understand the steps that need to be taken to conform to the recommendations outlined in the W3C Web Content Accessibility Guidelines 2.0 (WCAG 2.0 or just WCAG, for the purposes of this writing).
 - [Introduction to color and accessibility](/en-US/docs/Web/Accessibility/Guides/Colors_and_Luminance)
   - : This article discusses our perception of light and color, provides a foundation for the use of color in accessible designs, and demonstrates best practices for visual and readable content.

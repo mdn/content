@@ -52,7 +52,7 @@ It's important to [understand color and luminance](/en-US/docs/Web/Accessibility
 
 While higher [color contrast](https://digital.gov/guides/accessibility-for-teams/visual-design/#color-and-contrast) is often a good thing when it comes to accessibility, when animating, especially rapidly, [reducing color contrast](/en-US/docs/Web/Accessibility/Guides/Seizure_disorders#reduce_contrast) on animating elements reduces seizure risk. If you include animations, use the [`prefers-reduced-motion`](/en-US/docs/Web/CSS/@media/prefers-reduced-motion) {{cssxref("@media")}} query feature to reduce animations for users who have selected that preference.
 
-That said, ensure you have enough [color contrast](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast) between your background and foreground content to ensure legibility. Also, never use color as the only way to convey information. If, for example, you indicate the success of an operation with a green border around the associated UI element, and failure with a red border, users with red-green color blindness won't be able to use your site properly. Instead, use text and color indicators together to include those users. For example, a green check mark and a red cross mark would be better.
+That said, ensure you have enough [color contrast](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast) between your background and foreground content to ensure legibility. Also, never use color as the only way to convey information. If, for example, you indicate the success of an operation with a green border around the associated UI element, and failure with a red border, users with red-green color blindness won't be able to use your site properly. Instead, use text and color indicators together to include those users. For example, a green check mark and a red cross mark would be better.
 
 ## Palette design example
 
@@ -105,5 +105,5 @@ With this set, the browser won't tamper with the appearance of the element on wh
 - [Using relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors)
 - [CSS color module](/en-US/docs/Web/CSS/CSS_colors)
 - [Understanding color and luminance](/en-US/docs/Web/Accessibility/Guides/Colors_and_Luminance)
-- [WCAG 1.4.1: Color contrast](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast)
+- [WCAG 1.4.1: Color contrast](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast)
 - [Paletton](https://paletton.com/)

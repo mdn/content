@@ -171,12 +171,12 @@ This article should have given you a useful high-level overview of accessibility
 
 ## See also
 
-- [WCAG](/en-US/docs/Web/Accessibility/Understanding_WCAG)
+- [WCAG](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG)
 
-  - [Perceivable](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable)
-  - [Operable](/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable)
-  - [Understandable](/en-US/docs/Web/Accessibility/Understanding_WCAG/Understandable)
-  - [Robust](/en-US/docs/Web/Accessibility/Understanding_WCAG/Robust)
+  - [Perceivable](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable)
+  - [Operable](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable)
+  - [Understandable](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Understandable)
+  - [Robust](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Robust)
 
 - [Google Chrome released an auto-captioning extension](https://blog.google/products/chrome/live-caption-chrome/)
 

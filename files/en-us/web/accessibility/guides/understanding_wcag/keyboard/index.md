@@ -1,6 +1,6 @@
 ---
 title: Keyboard
-slug: Web/Accessibility/Understanding_WCAG/Keyboard
+slug: Web/Accessibility/Guides/Understanding_WCAG/Keyboard
 page-type: guide
 ---
 

@@ -79,4 +79,4 @@ Inherited into roles:
 
 ## See also
 
-- [Understanding WCAG: Keyboard](/en-US/docs/Web/Accessibility/Understanding_WCAG/Keyboard)
+- [Understanding WCAG: Keyboard](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Keyboard)

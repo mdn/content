@@ -1,6 +1,6 @@
 ---
 title: Understandable
-slug: Web/Accessibility/Understanding_WCAG/Understandable
+slug: Web/Accessibility/Guides/Understanding_WCAG/Understandable
 page-type: guide
 ---
 
@@ -385,7 +385,7 @@ This guideline centers around helping users enter correct information when requi
           </li>
           <li>
             <a
-              href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Text_labels_and_names"
+              href="/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Text_labels_and_names"
               >Text labels and names</a
             >
           </li>
@@ -507,9 +507,9 @@ A cognitive function test, like remembering a password, must not be required for
 
 ## See also
 
-- [WCAG](/en-US/docs/Web/Accessibility/Understanding_WCAG)
+- [WCAG](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG)
 
-  1. [Perceivable](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable)
-  2. [Operable](/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable)
+  1. [Perceivable](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable)
+  2. [Operable](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable)
   3. Understandable
-  4. [Robust](/en-US/docs/Web/Accessibility/Understanding_WCAG/Robust)
+  4. [Robust](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Robust)
