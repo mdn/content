@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Atomics.pause
 
 {{JSRef}}
 
-The **`Atomics.pause()`** static method provides a micro-wait primitive by hinting to the CPU that it is spinning while waiting on a value. This releases shared CPU resources to other cores without yielding the current thread. 
+The **`Atomics.pause()`** static method provides a micro-wait primitive by hinting to the CPU that it is spinning while waiting on a value. This releases shared CPU resources to other cores without yielding the current thread.
 
 `pause()` has no observable behavior other than timing. The exact behavior is dependent on the CPU architecture and the operating system. For example, in Intel x86, it may be a `pause` instruction as per [Intel's optimization manual](https://www.intel.com/content/www/us/en/content-details/671488/intel-64-and-ia-32-architectures-optimization-reference-manual-volume-1.html). It could be a no-op in certain platforms.
 
