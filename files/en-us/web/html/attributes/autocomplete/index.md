@@ -16,7 +16,25 @@ The HTML `autocomplete` attribute lets web developers specify what if any permis
 
 It is available on {{HTMLElement("input")}} elements that take a text or numeric value as input, {{HTMLElement("textarea")}} elements, {{HTMLElement("select")}} elements, and {{HTMLElement("form")}} elements.
 
-{{EmbedInteractiveExample("pages/tabbed/attribute-autocomplete.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: autocomplete", "tabbed-shorter")}}
+
+```html interactive-example
+<label for="firstName">First Name:</label>
+<input name="firstName" id="firstName" type="text" autocomplete="given-name" />
+
+<label for="lastName">Last Name:</label>
+<input name="lastName" id="lastName" type="text" autocomplete="family-name" />
+
+<label for="email">Email:</label>
+<input name="email" id="email" type="email" autocomplete="off" />
+```
+
+```css interactive-example
+label {
+  display: block;
+  margin-top: 1rem;
+}
+```
 
 ## Description
 

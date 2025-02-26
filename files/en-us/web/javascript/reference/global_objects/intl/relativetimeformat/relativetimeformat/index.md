@@ -65,8 +65,7 @@ The following example shows how to create a relative time formatter using the En
 ```js
 // Create a relative time formatter in your locale
 // with default values explicitly passed in.
-const rtf = new Intl.RelativeTimeFormat("en", {
-  localeMatcher: "best fit", // other values: "lookup"
+const rtf = new Intl.RelativeTimeFormat("en-US", {
   numeric: "always", // other values: "auto"
   style: "long", // other values: "short" or "narrow"
 });
@@ -80,18 +79,26 @@ rtf.format(1, "day"); // "in 1 day"
 
 ### Using the auto option
 
-If `numeric:auto` option is passed, it will produce the string `yesterday` or `tomorrow` instead of `1 day ago` or `in 1 day`. This allows to not always have to use numeric values in the output.
+If the `numeric: "auto"` option is passed, it will produce the string `yesterday` or `tomorrow` instead of `1 day ago` or `in 1 day`. This is useful when you don't want to use numeric values in the output.
 
 ```js
 // Create a relative time formatter in your locale
 // with numeric: "auto" option value passed in.
-const rtf = new Intl.RelativeTimeFormat("en", { numeric: "auto" });
+const rtf = new Intl.RelativeTimeFormat("en-US", { numeric: "auto" });
 
 // Format relative time using negative value (-1).
 rtf.format(-1, "day"); // "yesterday"
 
 // Format relative time using positive day unit (1).
 rtf.format(1, "day"); // "tomorrow"
+```
+
+When the value is `0`, the output may be dependent on the unit. "0 seconds" is represented by the localized version of "now".
+
+```js
+rtf.format(0, "second"); // "now"
+rtf.format(0, "day"); // "today"
+rtf.format(0, "minute"); // "this minute"
 ```
 
 ## Specifications

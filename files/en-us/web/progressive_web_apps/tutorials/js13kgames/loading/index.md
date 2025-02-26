@@ -121,7 +121,7 @@ This will remove the blur effect within half a second, which looks good enough f
 
 The image loading mechanism discussed in the above section works OK — it loads the images after rendering the HTML structure, and applies a nice transition effect in the process. The problem is that it still loads _all_ the images at once, even though the user will only see the first two or three upon page load.
 
-This problem can be solved by loading the images only when needed: this is called _lazy loading_. [Lazy loading](/en-US/docs/Web/Performance/Lazy_loading) is a technique to load images only when they appear in the viewport. There are several ways to tell the browser to lazy load images.
+This problem can be solved by loading the images only when needed: this is called _lazy loading_. [Lazy loading](/en-US/docs/Web/Performance/Guides/Lazy_loading) is a technique to load images only when they appear in the viewport. There are several ways to tell the browser to lazy load images.
 
 ### The loading attribute on \<img>
 
