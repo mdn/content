@@ -7,7 +7,7 @@ page-type: guide
 {{FirefoxSidebar}}
 
 > [!WARNING]
-> These notes are for developers of screen readers. Developers should use the [ARIA live regions developer documentation](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions).
+> These notes are for developers of screen readers. Developers should use the [ARIA live regions developer documentation](/en-US/docs/Web/Accessibility/ARIA/Guides/Live_regions).
 
 Firefox 3 contains important improvements to the way the Mozilla engine exposes live changes in a document.
 

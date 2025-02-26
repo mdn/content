@@ -9,7 +9,7 @@
 /en-US/docs/AJAX	/en-US/docs/Learn_web_development/Core/Scripting/Network_requests
 /en-US/docs/AJAX/Community	/en-US/docs/Learn_web_development/Core/Scripting/Network_requests
 /en-US/docs/AJAX/Getting_Started	/en-US/docs/Learn_web_development/Core/Scripting/Network_requests
-/en-US/docs/AJAX/WAI_ARIA_Live_Regions	/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions
+/en-US/docs/AJAX/WAI_ARIA_Live_Regions	/en-US/docs/Web/Accessibility/ARIA/Guides/Live_regions
 /en-US/docs/AJAX/WAI_ARIA_Live_Regions_API_Support	/en-US/docs/Mozilla/Firefox/Releases/3/WAI_ARIA_Live_Regions_API_Support
 /en-US/docs/AJAX:Community	/en-US/docs/Learn_web_development/Core/Scripting/Network_requests
 /en-US/docs/AJAX:Getting_Started	/en-US/docs/Learn_web_development/Core/Scripting/Network_requests
@@ -32,7 +32,7 @@
 /en-US/docs/API/window.performance/navigationTiming	/en-US/docs/Web/API/Performance_API/Navigation_timing
 /en-US/docs/ARIA	/en-US/docs/Web/Accessibility/ARIA
 /en-US/docs/ARIA/ARIA_Guides	/en-US/docs/Web/Accessibility/ARIA/Guides
-/en-US/docs/ARIA/ARIA_Live_Regions	/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions
+/en-US/docs/ARIA/ARIA_Live_Regions	/en-US/docs/Web/Accessibility/ARIA/Guides/Live_regions
 /en-US/docs/ARIA/ARIA_Screen_Reader_Implementors_Guide	/en-US/docs/Web/Accessibility/ARIA/ARIA_Screen_Reader_Implementors_Guide
 /en-US/docs/ARIA/ARIA_Techniques	/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques
 /en-US/docs/ARIA/ARIA_Techniques/Using_the_alert_role	/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/alert_role
@@ -54,7 +54,7 @@
 /en-US/docs/ARIA/Accessible_Rich_Internet_Applications	/en-US/docs/Web/Accessibility/ARIA
 /en-US/docs/ARIA/Basic_form_hints	/en-US/docs/Web/Accessibility/ARIA
 /en-US/docs/ARIA/How_to_file_ARIA-related_bugs	/en-US/docs/Web/Accessibility/ARIA/How_to_file_ARIA-related_bugs
-/en-US/docs/ARIA/Live_Regions	/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions
+/en-US/docs/ARIA/Live_Regions	/en-US/docs/Web/Accessibility/ARIA/Guides/Live_regions
 /en-US/docs/ARIA/examples	/en-US/docs/Web/Accessibility/ARIA
 /en-US/docs/ARIA/widgets	/en-US/docs/Web/Accessibility/ARIA
 /en-US/docs/ARIA/widgets/overview	/en-US/docs/Web/Accessibility/ARIA
@@ -67,7 +67,7 @@
 /en-US/docs/Accessibility/ARIA	/en-US/docs/Web/Accessibility/ARIA
 /en-US/docs/Accessibility/ARIA/ARIA_Examples	/en-US/docs/Web/Accessibility/ARIA
 /en-US/docs/Accessibility/ARIA/ARIA_Guides	/en-US/docs/Web/Accessibility/ARIA/Guides
-/en-US/docs/Accessibility/ARIA/ARIA_Live_Regions	/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions
+/en-US/docs/Accessibility/ARIA/ARIA_Live_Regions	/en-US/docs/Web/Accessibility/ARIA/Guides/Live_regions
 /en-US/docs/Accessibility/ARIA/ARIA_Screen_Reader_Implementors_Guide	/en-US/docs/Web/Accessibility/ARIA/ARIA_Screen_Reader_Implementors_Guide
 /en-US/docs/Accessibility/ARIA/ARIA_Techniques	/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques
 /en-US/docs/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role	/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/alert_role
@@ -11379,6 +11379,7 @@
 /en-US/docs/Web/APIr	/en-US/docs/Web/API/Document/dir
 /en-US/docs/Web/Accessibility/ARIA/ARIA_Examples	/en-US/docs/Web/Accessibility/ARIA
 /en-US/docs/Web/Accessibility/ARIA/ARIA_Guides	/en-US/docs/Web/Accessibility/ARIA/Guides
+/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions	/en-US/docs/Web/Accessibility/ARIA/Guides/Live_regions
 /en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Complementary_role	/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/complementary_role
 /en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role	/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/alert_role
 /en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role	/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/alertdialog_role
@@ -12623,7 +12624,7 @@
 /en-US/docs/Web/Guide/AJAX	/en-US/docs/Learn_web_development/Core/Scripting/Network_requests
 /en-US/docs/Web/Guide/AJAX/Community	/en-US/docs/Learn_web_development/Core/Scripting/Network_requests
 /en-US/docs/Web/Guide/AJAX/Getting_Started	/en-US/docs/Learn_web_development/Core/Scripting/Network_requests
-/en-US/docs/Web/Guide/AJAX/WAI_ARIA_Live_Regions	/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions
+/en-US/docs/Web/Guide/AJAX/WAI_ARIA_Live_Regions	/en-US/docs/Web/Accessibility/ARIA/Guides/Live_regions
 /en-US/docs/Web/Guide/AJAX/WAI_ARIA_Live_Regions_API_Support	/en-US/docs/Mozilla/Firefox/Releases/3/WAI_ARIA_Live_Regions_API_Support
 /en-US/docs/Web/Guide/API	/en-US/docs/Web/API
 /en-US/docs/Web/Guide/API/DOM	/en-US/docs/Web/API/Document_Object_Model

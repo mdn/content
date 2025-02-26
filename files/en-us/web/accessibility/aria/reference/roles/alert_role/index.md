@@ -23,16 +23,16 @@ The alert role should only be used for information that requires the user's imme
 
 The `alert` role should only be used for text content, not interactive elements such as links or buttons. The element with the `alert` role does not have to be able to receive focus, as screen readers (speech or braille) will automatically announce the updated content regardless of where keyboard focus when the role is added.
 
-The `alert` role is added to the node containing an alert message, **not** the element causing the alert to be triggered. Alerts are [assertive live regions](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions). Setting `role="alert"` is equivalent to setting [`aria-live="assertive"`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-live) and [`aria-atomic="true"`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-atomic). As they don't receive focus, focus does not need to be managed and no user interaction should be required.
+The `alert` role is added to the node containing an alert message, **not** the element causing the alert to be triggered. Alerts are [assertive live regions](/en-US/docs/Web/Accessibility/ARIA/Guides/Live_regions). Setting `role="alert"` is equivalent to setting [`aria-live="assertive"`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-live) and [`aria-atomic="true"`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-atomic). As they don't receive focus, focus does not need to be managed and no user interaction should be required.
 
 > [!WARNING]
 > Because of its intrusive nature, the `alert` role must be used sparingly and only in situations where the user's immediate attention is required.
 
-The [`alert`](https://www.w3.org/TR/wai-aria-1.1/#alert) role is of the five [live region](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) roles. Dynamic changes that are less urgent should use a less aggressive method, such as including `aria-live="polite"` or using an other live region role like [`status`](/en-US/docs/Web/Accessibility/ARIA/Roles/status_role). If the user is expected to close the alert, then the [`alertdialog`](/en-US/docs/Web/Accessibility/ARIA/Roles/alertdialog_role) role should be used instead.
+The [`alert`](https://www.w3.org/TR/wai-aria-1.1/#alert) role is of the five [live region](/en-US/docs/Web/Accessibility/ARIA/Guides/Live_regions) roles. Dynamic changes that are less urgent should use a less aggressive method, such as including `aria-live="polite"` or using an other live region role like [`status`](/en-US/docs/Web/Accessibility/ARIA/Roles/status_role). If the user is expected to close the alert, then the [`alertdialog`](/en-US/docs/Web/Accessibility/ARIA/Roles/alertdialog_role) role should be used instead.
 
 The most important thing to know about the `alert` role is that it's for content that is dynamically displayed, not for content that appears on page load. It is perfect for situations such as when a user fills out a form and JavaScript is used to add an error message - the alert would immediately read out the message. It should not be used on HTML that the user hasn't interacted with. For example, if a page loads with multiple visible alerts scattered throughout, the alert role should not be used, as the messages were not dynamically triggered.
 
-As with all other [live regions](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions), alerts will only be announced when the content of the element with `role="alert"` is _updated_. Make sure that the element with the role is present in the page's markup first - this will "prime" the browser and screen reader to keep watching the element for changes. After this, any changes to the content will be announced. Do not try to dynamically add/generate an element with `role="alert"` that is already populated with the alert message you want announced - this generally does _not_ lead to an announcement, as it is not a content change.
+As with all other [live regions](/en-US/docs/Web/Accessibility/ARIA/Guides/Live_regions), alerts will only be announced when the content of the element with `role="alert"` is _updated_. Make sure that the element with the role is present in the page's markup first - this will "prime" the browser and screen reader to keep watching the element for changes. After this, any changes to the content will be announced. Do not try to dynamically add/generate an element with `role="alert"` that is already populated with the alert message you want announced - this generally does _not_ lead to an announcement, as it is not a content change.
 
 As the `alert` role reads out any content that has changed, it should be used with caution. Alerts, by definition, are disruptive. Several alerts at once, and unnecessary alerts, create bad user experiences.
 
@@ -122,6 +122,6 @@ document.getElementById("hiddenAlertContainer").textContent =
 - [ARIA: `status` role](/en-US/docs/Web/Accessibility/ARIA/Roles/status_role)
 - [ARIA: `timer` role](/en-US/docs/Web/Accessibility/ARIA/Roles/timer_role)
 - [ARIA: `alertdialog` role](/en-US/docs/Web/Accessibility/ARIA/Roles/alertdialog_role)
-- [ARIA: live regions](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)
+- [ARIA: live regions](/en-US/docs/Web/Accessibility/ARIA/Guides/Live_regions)
 - [ARIA alert support - The Paciello Group](https://www.tpgi.com/aria-alert-support/)
 - [ARIA Practices alert example](https://www.w3.org/WAI/ARIA/apg/patterns/alert/examples/alert/)

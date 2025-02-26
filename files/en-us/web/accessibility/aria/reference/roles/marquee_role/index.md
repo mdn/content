@@ -7,13 +7,13 @@ spec-urls: https://w3c.github.io/aria/#marquee
 
 {{AccessibilitySidebar}}
 
-A `marquee` is a type of [live region](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) containing non-essential information which changes frequently.
+A `marquee` is a type of [live region](/en-US/docs/Web/Accessibility/ARIA/Guides/Live_regions) containing non-essential information which changes frequently.
 
 ## Description
 
 The `marquee` role defines an area as a type of live region that presents non-essential information that changes frequently. Examples of marquees include stock tickers and ad banners; information that is not necessarily sought out by the user that may be presented in any order. The main difference between a `marquee` and a [`log`](/en-US/docs/Web/Accessibility/ARIA/Roles/log_role) is that log information is presented in a meaningful order such as a by date.
 
-Elements with the role marquee have an implicit [aria-live](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) value of `off`.
+Elements with the role marquee have an implicit [aria-live](/en-US/docs/Web/Accessibility/ARIA/Guides/Live_regions) value of `off`.
 
 The marquee is required to have an accessible name. Use [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) if a visible label is present, otherwise use [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label).
 
@@ -37,4 +37,4 @@ The marquee is required to have an accessible name. Use [`aria-labelledby`](/en-
 - [ARIA: `log` role](/en-US/docs/Web/Accessibility/ARIA/Roles/log_role)
 - [ARIA: `status` role](/en-US/docs/Web/Accessibility/ARIA/Roles/status_role)
 - [ARIA: `timer` role](/en-US/docs/Web/Accessibility/ARIA/Roles/timer_role)
-- [ARIA live regions](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)
+- [ARIA live regions](/en-US/docs/Web/Accessibility/ARIA/Guides/Live_regions)

@@ -71378,28 +71378,6 @@
       "fscholz"
     ]
   },
-  "Web/Accessibility/ARIA/ARIA_Live_Regions": {
-    "modified": "2020-08-04T14:52:30.693Z",
-    "contributors": [
-      "chrisdavidmills",
-      "kwangdosa",
-      "gaurav5430",
-      "PickensC",
-      "estelle",
-      "pradn",
-      "patrickhlauke",
-      "rishabhsrao",
-      "headquarters",
-      "ajjusto",
-      "dcondrey",
-      "mike-nelson",
-      "mrenty",
-      "Hywan",
-      "integritydc",
-      "Sheppy",
-      "Aaronlev"
-    ]
-  },
   "Web/Accessibility/ARIA/ARIA_Screen_Reader_Implementors_Guide": {
     "modified": "2019-03-23T23:59:09.827Z",
     "contributors": [
@@ -71448,6 +71426,28 @@
   "Web/Accessibility/ARIA/Guides": {
     "modified": "2019-03-24T00:13:12.236Z",
     "contributors": ["SphinxKnight", "sidgan", "Sheppy", "hhillen"]
+  },
+  "Web/Accessibility/ARIA/Guides/Live_regions": {
+    "modified": "2020-08-04T14:52:30.693Z",
+    "contributors": [
+      "chrisdavidmills",
+      "kwangdosa",
+      "gaurav5430",
+      "PickensC",
+      "estelle",
+      "pradn",
+      "patrickhlauke",
+      "rishabhsrao",
+      "headquarters",
+      "ajjusto",
+      "dcondrey",
+      "mike-nelson",
+      "mrenty",
+      "Hywan",
+      "integritydc",
+      "Sheppy",
+      "Aaronlev"
+    ]
   },
   "Web/Accessibility/ARIA/How_to_file_ARIA-related_bugs": {
     "modified": "2019-03-24T00:12:10.850Z",

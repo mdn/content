@@ -152,7 +152,7 @@ Do not do this. Instead, implement the "view" mode using a different element alt
 ### Asynchronous content changes
 
 > [!NOTE]
-> Under construction. See also [Live Regions](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)
+> Under construction. See also [Live Regions](/en-US/docs/Web/Accessibility/ARIA/Guides/Live_regions)
 
 ## Keyboard navigation
 

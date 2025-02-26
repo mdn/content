@@ -23,6 +23,6 @@ The following references are helpful for common accessibility use cases:
 
 - [Labeling widgets](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label)
 - [Landmark roles](/en-US/docs/Web/Accessibility/ARIA/Roles/landmark_role)
-- [ARIA live regions](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)
+- [ARIA live regions](/en-US/docs/Web/Accessibility/ARIA/Guides/Live_regions)
 - [HTML Drag and Drop API](/en-US/docs/Web/API/HTML_Drag_and_Drop_API)
 - [ARIA: presentation role](/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role)

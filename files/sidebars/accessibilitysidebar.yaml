@@ -40,7 +40,7 @@ sidebar:
     details: closed
     children:
       - /Web/Accessibility/ARIA/Guides
-      - /Web/Accessibility/ARIA/ARIA_Live_Regions
+      - /Web/Accessibility/ARIA/Guides/Live_regions
       - /Web/Accessibility/ARIA/ARIA_Screen_Reader_Implementors_Guide
       - /Web/Accessibility/ARIA/ARIA_Techniques
       - /Web/Accessibility/ARIA/Multipart_labels

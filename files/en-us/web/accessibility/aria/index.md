@@ -90,7 +90,7 @@ It is also important to test your authored ARIA with actual assistive technology
 
 - [Writing keyboard-navigable JavaScript widgets](/en-US/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets)
   - : Built-in elements like {{HTMLElement("input")}}, {{HTMLElement("button")}}, etc. have built-in keyboard accessibility. If you 'fake' these with {{HTMLElement("div")}}s and ARIA, you must ensure your widgets are keyboard accessible.
-- [Live regions](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)
+- [Live regions](/en-US/docs/Web/Accessibility/ARIA/Guides/Live_regions)
   - : Live regions provide suggestions to screen readers about how to handle changes to the contents of a page.
 
 ## Videos

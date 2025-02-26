@@ -1,6 +1,6 @@
 ---
 title: ARIA live regions
-slug: Web/Accessibility/ARIA/ARIA_Live_Regions
+slug: Web/Accessibility/ARIA/Guides/Live_regions
 page-type: guide
 ---
 
