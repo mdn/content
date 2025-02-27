@@ -19,7 +19,7 @@ The HTTP **`Cache-Control`** header holds _directives_ (instructions) in both re
       </td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>No</td>
     </tr>
     <tr>

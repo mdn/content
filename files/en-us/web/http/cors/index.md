@@ -55,7 +55,7 @@ A _simple request_ is one that **meets all the following conditions**:
   - {{HTTPMethod("HEAD")}}
   - {{HTTPMethod("POST")}}
 
-- Apart from the headers automatically set by the user agent (for example, {{HTTPHeader("Connection")}}, {{HTTPHeader("User-Agent")}}, or [the other headers defined in the Fetch spec as a _forbidden header name_](https://fetch.spec.whatwg.org/#forbidden-header-name)), the only headers which are allowed to be manually set are [those which the Fetch spec defines as a CORS-safelisted request-header](https://fetch.spec.whatwg.org/#cors-safelisted-request-header), which are:
+- Apart from the headers automatically set by the user agent (for example, {{HTTPHeader("Connection")}}, {{HTTPHeader("User-Agent")}}, or the {{glossary("Forbidden request header", "forbidden request headers")}}), the only headers which are allowed to be manually set are the [CORS-safelisted request-headers](/en-US/docs/Glossary/CORS-safelisted_request_header), which are:
 
   - {{HTTPHeader("Accept")}}
   - {{HTTPHeader("Accept-Language")}}

@@ -24,4 +24,4 @@ This feature is superseded by the [Speculation Rules API](/en-US/docs/Web/API/Sp
 
 ## See also
 
-- [Speculative loading](/en-US/docs/Web/Performance/Speculative_loading) for a comparison of `<link rel="prerender">` and other similar performance improvement features.
+- [Speculative loading](/en-US/docs/Web/Performance/Guides/Speculative_loading) for a comparison of `<link rel="prerender">` and other similar performance improvement features.

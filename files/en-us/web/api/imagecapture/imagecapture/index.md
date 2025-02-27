@@ -3,12 +3,10 @@ title: "ImageCapture: ImageCapture() constructor"
 short-title: ImageCapture()
 slug: Web/API/ImageCapture/ImageCapture
 page-type: web-api-constructor
-status:
-  - experimental
 browser-compat: api.ImageCapture.ImageCapture
 ---
 
-{{APIRef("Image Capture API")}}{{SeeCompatTable}}
+{{APIRef("Image Capture API")}}
 
 The **`ImageCapture()`** constructor
 creates a new {{domxref("ImageCapture")}} object.

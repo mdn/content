@@ -7,21 +7,25 @@ browser-compat: webextensions.api.commands
 
 {{AddonSidebar}}
 
-Listen for the user executing commands that you have registered using the [`commands` manifest.json key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands).
+Listens for the user executing commands registered using the [`commands` manifest.json key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands).
+
+Also provides features to update the shortcut key settings. See [Updating shortcuts](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands#updating_shortcuts) in the [`commands` manifest.json key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands) guide for more information.
 
 ## Types
 
 - {{WebExtAPIRef("commands.Command")}}
-  - : Object representing a command. This contains the information specified for the command in the [`commands` manifest.json key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands).
+  - : Object containing a command's settings.
 
 ## Functions
 
 - {{WebExtAPIRef("commands.getAll")}}
-  - : Gets all registered commands for this extension.
+  - : Gets all registered commands for the extension.
+- {{WebExtAPIRef("commands.openShortcutSettings")}}
+  - : Opens the Manage Extension Shortcuts page, highlighting the extension's shortcut options, if it has any.
 - {{WebExtAPIRef("commands.reset")}}
-  - : Reset the given command's description and shortcut to the values given in the manifest key.
+  - : Resets a command's description and shortcut to the values given in the manifest key.
 - {{WebExtAPIRef("commands.update")}}
-  - : Change the description or shortcut for the given command.
+  - : Changes the description or shortcut for a command.
 
 ## Events
 

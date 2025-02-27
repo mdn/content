@@ -1,7 +1,8 @@
 ---
 title: Privacy on the web
 slug: Web/Privacy
-page-type: guide
+page-type: landing-page
+sidebar: privacy
 ---
 
 People use websites for several important tasks such as banking, shopping, entertainment, and paying their taxes. In doing so, they are required to share personal information with those sites. Users place a certain level of trust in the sites they share their data with. If that information fell into the wrong hands, it could be used to exploit users, for example by profiling them, targeting them with unwanted ads, or even stealing their identity or money.
@@ -48,7 +49,7 @@ Following on from the above section, **personally identifiable information** (PI
 
 **Tracking** refers to the process of recording a user's activity across many different websites. This can be done in various ways, for example:
 
-- Looking at multiple [third-party cookies](/en-US/docs/Web/Privacy/Third-party_cookies) set across different sites where third-party content is embedded to find out various information points about the user.
+- Looking at multiple [third-party cookies](/en-US/docs/Web/Privacy/Guides/Third-party_cookies) set across different sites where third-party content is embedded to find out various information points about the user.
 - Looking at the {{httpheader("Referer")}} header to see where a user has navigated from.
 - Including parameters on the URLs of inbound links (for example in embedded ads linking to product pages, or marketing emails) that can reveal to the linked site where the link originated from, what marketing campaign it is part of, the email address or other identifier of the user that clicked on it, etc. This process is referred to as **link decorating**, and results in link URLs that look like this: `https://example.com/article/?id=62yhgt1a&campaign=902`.
 - Redirect tracking, which involves trackers momentarily (and imperceptibly) redirecting a user to their website to use first-party storage to track that user across websites. This allows trackers to get around third-party cookies being blocked. For example, if you have read a product review and want to click through to buy it, you might unwittingly navigate to the redirect tracker first, _then_ to the retailer. This means the tracker is loaded as a first party, and can associate tracking data with the identifiers they have stored in their first-party cookies before forwarding you to the retailer.
@@ -98,10 +99,10 @@ So-called "powerful" web API features that provide access to potentially sensiti
 Browsers have implemented several anti-tracking features that automatically enhance their users' privacy protection. Many of these block or limit the ability of third-party sites embedded in {{htmlelement("iframe")}}s to access cookies set on the top-level domain, run tracking scripts, etc.
 
 - The {{httpheader("Set-Cookie")}} header [`SameSite`](/en-US/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) attribute's default value has been updated to `Lax`, to provide better protection against tracking and {{glossary("CSRF")}} attacks. See [Controlling third-party cookies with `SameSite`](/en-US/docs/Web/HTTP/Cookies#controlling_third-party_cookies_with_samesite) for more information.
-- Browsers have all started to block third-party cookies by default. See [How do browsers handle third-party cookies?](/en-US/docs/Web/Privacy/Third-party_cookies#how_do_browsers_handle_third-party_cookies) for more details.
-- Browsers are implementing technologies to allow third-party cookies only in certain circumstances that do not damage privacy, or to implement common use cases that currently require third-party cookies in alternative ways. See [Transitioning from third-party cookies](/en-US/docs/Web/Privacy/Third-party_cookies#transitioning_from_third-party_cookies) and [Replacing third-party cookies](/en-US/docs/Web/Privacy/Third-party_cookies#replacing_third-party_cookies).
+- Browsers have all started to block third-party cookies by default. See [How do browsers handle third-party cookies?](/en-US/docs/Web/Privacy/Guides/Third-party_cookies#how_do_browsers_handle_third-party_cookies) for more details.
+- Browsers are implementing technologies to allow third-party cookies only in certain circumstances that do not damage privacy, or to implement common use cases that currently require third-party cookies in alternative ways. See [Transitioning from third-party cookies](/en-US/docs/Web/Privacy/Guides/Third-party_cookies#transitioning_from_third-party_cookies) and [Replacing third-party cookies](/en-US/docs/Web/Privacy/Guides/Third-party_cookies#replacing_third-party_cookies).
 - Several browsers strip out known tracking parameters from URLs — this includes Firefox, Safari, and Brave. Browser extensions also help to do this, for example [ClearURLs](https://addons.mozilla.org/en-GB/firefox/addon/clearurls/).
-- Browsers have implemented [redirect tracking protection](/en-US/docs/Web/Privacy/Redirect_tracking_protection).
+- Browsers have implemented [redirect tracking protection](/en-US/docs/Web/Privacy/Guides/Redirect_tracking_protection).
 
 ## Privacy considerations for client-side developers
 
@@ -161,9 +162,9 @@ Allowing the user to choose when significant portions of data get deleted is ver
 
 ## Cut down on tracking
 
-Earlier on we discussed tracking, and some of the unethical purposes it is used for. We shouldn't have to spell out how such uses can erode user trust; wherever possible, you should only use potential tracking mechanisms like [third-party cookies](/en-US/docs/Web/Privacy/Third-party_cookies) for ethical uses, such as transferring sign-in or other personalization status across sites.
+Earlier on we discussed tracking, and some of the unethical purposes it is used for. We shouldn't have to spell out how such uses can erode user trust; wherever possible, you should only use potential tracking mechanisms like [third-party cookies](/en-US/docs/Web/Privacy/Guides/Third-party_cookies) for ethical uses, such as transferring sign-in or other personalization status across sites.
 
-Also recall from earlier that browsers are all starting to block third-party cookies by default, while implementing alternative technologies to achieve common use case. It is a good idea to prepare for this, by limiting the amount of tracking activities you rely on, and/or implementing desired information persistence in other ways. See [Transitioning from third-party cookies](/en-US/docs/Web/Privacy/Third-party_cookies#transitioning_from_third-party_cookies) for more information.
+Also recall from earlier that browsers are all starting to block third-party cookies by default, while implementing alternative technologies to achieve common use case. It is a good idea to prepare for this, by limiting the amount of tracking activities you rely on, and/or implementing desired information persistence in other ways. See [Transitioning from third-party cookies](/en-US/docs/Web/Privacy/Guides/Third-party_cookies#transitioning_from_third-party_cookies) for more information.
 
 ## Carefully manage third-party resources
 
@@ -221,7 +222,3 @@ The below tips offer some guidance on protecting your user's data:
 - [Learn Privacy](https://web.dev/learn/privacy/) on web.dev
 - [The Privacy Sandbox](https://developers.google.com/privacy-sandbox) on developers.google.com
 - [Lean Data Practices](https://www.mozilla.org/en-US/about/policy/lean-data/) on mozilla.org
-
-<section id="Quick_links">
-{{ListSubpages("/en-US/docs/Web/Privacy", "2", "0", "0")}}
-</section>

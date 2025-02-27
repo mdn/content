@@ -11,7 +11,27 @@ The **`<p>`** [HTML](/en-US/docs/Web/HTML) element represents a paragraph. Parag
 
 Paragraphs are [block-level elements](/en-US/docs/Glossary/Block-level_content), and notably will automatically close if another block-level element is parsed before the closing `</p>` tag. See "Tag omission" below.
 
-{{EmbedInteractiveExample("pages/tabbed/p.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;p&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<p>
+  Geckos are a group of usually small, usually nocturnal lizards. They are found
+  on every continent except Antarctica.
+</p>
+
+<p>
+  Some species live in houses where they hunt insects attracted by artificial
+  light.
+</p>
+```
+
+```css interactive-example
+p {
+  margin: 10px 0;
+  padding: 5px;
+  border: 1px solid #999;
+}
+```
 
 ## Attributes
 
