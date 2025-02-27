@@ -3,8 +3,8 @@ title: CSS overflow
 slug: Web/CSS/CSS_overflow
 page-type: css-module
 spec-urls:
-  - https://drafts.csswg.org/css-overflow-3
-  - https://drafts.csswg.org/css-overflow-4
+  - https://drafts.csswg.org/css-overflow/
+  - https://drafts.csswg.org/css-overflow-4/
 ---
 
 {{CSSRef}}
@@ -216,8 +216,9 @@ A link is included in the content box above to demonstrate the effects of keyboa
 
 ## Reference
 
-### CSS properties
+### Properties
 
+- {{CSSxRef("line-clamp")}}
 - {{CSSxRef("overflow")}} shorthand
 - {{CSSxRef("overflow-block")}}
 - {{CSSxRef("overflow-clip-margin")}}
@@ -227,10 +228,9 @@ A link is included in the content box above to demonstrate the effects of keyboa
 - {{CSSxRef("scroll-behavior")}}
 - {{CSSxRef("scrollbar-gutter")}}
 - {{CSSxRef("text-overflow")}}
-- {{CSSxRef("-webkit-line-clamp")}}
 
 > [!NOTE]
-> The CSS overflow module level 4 introduces the `block-ellipsis`, `continue`, `line-clamp`, and `max-lines` properties. These have not yet been implemented.
+> The CSS Overflow Module Level 4 introduces the `block-ellipsis`, `continue`, `max-lines`, `overflow-clip-margin-block`, `overflow-clip-margin-block-end`, `overflow-clip-margin-block-start`, `overflow-clip-margin-bottom`, `overflow-clip-margin-inline`, `overflow-clip-margin-inline-end`, `overflow-clip-margin-inline-start`, `overflow-clip-margin-left`, `overflow-clip-margin-right`, and `overflow-clip-margin-top` properties. These have not yet been implemented.
 
 ### Data types
 

@@ -2,12 +2,14 @@
 title: CSS backgrounds and borders
 slug: Web/CSS/CSS_backgrounds_and_borders
 page-type: css-module
-spec-urls: https://drafts.csswg.org/css-backgrounds/
+spec-urls:
+  - https://drafts.csswg.org/css-backgrounds/
+  - https://drafts.csswg.org/css-backgrounds-4/
 ---
 
 {{CSSRef}}
 
-The **CSS backgrounds and borders** module provides properties for adding borders, rounded corners, and box shadows to elements.
+The **CSS backgrounds and borders** module provides properties for adding backgrounds, borders, rounded corners, and box shadows to elements.
 
 You can add different types of border styles, including borders made of images of any image type, from raster images to CSS gradients. Borders can be square or rounded, and a different radius can be set for each corner. Elements can be rounded whether or not they have a visible border.
 
@@ -39,7 +41,8 @@ div {
   margin: 10px;
   border: dotted 15px; /* defaults to `currentcolor` */
   border-radius: 100px 0;
-  background-image: radial-gradient(
+  background-image:
+    radial-gradient(
       circle,
       transparent 60%,
       currentcolor 60% 70%,
@@ -92,8 +95,6 @@ Click "Play" in the example above to see or edit the code for the animation in t
 - {{cssxref("background")}} shorthand
 - {{cssxref("background-position-x")}}
 - {{cssxref("background-position-y")}}
-- {{cssxref("background-position-inline")}}
-- {{cssxref("background-position-block")}}
 
 - {{cssxref("border-bottom-color")}}
 - {{cssxref("border-bottom-style")}}
@@ -116,8 +117,6 @@ Click "Play" in the example above to see or edit the code for the animation in t
 - {{cssxref("border-width")}} shorthand
 - {{cssxref("border")}} shorthand
 
-- {{cssxref("border-collapse")}}
-
 - {{cssxref("border-bottom-left-radius")}}
 - {{cssxref("border-bottom-right-radius")}}
 - {{cssxref("border-top-left-radius")}}
@@ -132,6 +131,9 @@ Click "Play" in the example above to see or edit the code for the animation in t
 - {{cssxref("border-image")}} shorthand
 
 - {{cssxref("box-shadow")}}
+
+> [!NOTE]
+> The CSS Backgrounds Module Level 4 introduces the `background-position-block`, `background-position-inline`, `background-repeat-block`, `background-repeat-inline`, `background-repeat-x`, `background-repeat-y`, and `background-tbd` properties. These have not yet been implemented.
 
 ### Data types
 

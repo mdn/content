@@ -161,7 +161,7 @@ The other three declarations use the light, bold, and extra-bold versions of the
 - the bold font is associated with the range 500-700
 - the extra-bold font is associated with the range 700-1000
 
-The CSS [cascade](/en-US/docs/Web/CSS/Cascade) ensures that the three latter declarations override parts of the the range that was set in the `FiraSans-Regular` declaration.
+The CSS [cascade](/en-US/docs/Web/CSS/CSS_cascade/Cascade) ensures that the three latter declarations override parts of the range that was set in the `FiraSans-Regular` declaration.
 
 ```css
 @font-face {
@@ -234,7 +234,7 @@ We include a variable font, ["League Mono"](https://www.theleagueofmoveabletype.
 
 #### HTML
 
-We include a paragraph with `<output>` initially set to `400`, as that is the the default font-weight for unstyled paragraph text. This paragraph is nestled between two other paragraphs, so you can compare rendered versus declared font weight values.
+We include a paragraph with `<output>` initially set to `400`, as that is the default font-weight for unstyled paragraph text. This paragraph is nestled between two other paragraphs, so you can compare rendered versus declared font weight values.
 
 We include an {{htmlelement("input/range")}} of type `range`, nested in a {{htmlelement("label")}}, setting the `step` to `50`.
 
@@ -243,7 +243,7 @@ We include an {{htmlelement("input/range")}} of type `range`, nested in a {{html
 <p id="example">LeagueMono, font-weight: <output>400</output> (example)</p>
 <p>LeagueMono, font-weight: 700 (comparison)</p>
 <label
-  >Change the font size:
+  >Change the font weight:
   <input type="range" min="50" max="1000" step="50" value="400" />
 </label>
 ```

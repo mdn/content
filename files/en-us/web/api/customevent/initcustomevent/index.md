@@ -25,7 +25,7 @@ Once dispatched, it doesn't do anything anymore.
 ## Syntax
 
 ```js-nolint
-event.initCustomEvent(type, canBubble, cancelable, detail)
+initCustomEvent(type, canBubble, cancelable, detail)
 ```
 
 ### Parameters

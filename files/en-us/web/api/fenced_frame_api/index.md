@@ -17,7 +17,7 @@ One major source of [privacy](/en-US/docs/Web/Privacy) and [security](/en-US/doc
 
 The embedding document can also use scripting to read various forms of information from the `<iframe>` — for example you can potentially get significant tracking/fingerprinting data from reading the embedded URL from the `src` property, especially if it contains [URL parameters](/en-US/docs/Web/URI#query). The `<iframe>` can also access the embedding context's DOM, and vice versa.
 
-Most modern browsers are working on mechanisms to partition storage so that cookie data can no longer be used for tracking (for example see [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies) or [Firefox State Partitioning](/en-US/docs/Web/Privacy/State_Partitioning)).
+Most modern browsers are working on mechanisms to partition storage so that cookie data can no longer be used for tracking (for example see [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Guides/Privacy_sandbox/Partitioned_cookies) or [Firefox State Partitioning](/en-US/docs/Web/Privacy/Guides/State_Partitioning)).
 
 `<fencedframe>` elements aim to solve another piece of this puzzle — they are very similar to `<iframe>`s in form and function, except that:
 
@@ -124,7 +124,7 @@ Other effects of fenced frames on HTTP headers are as follows:
 
 ## Enrollment and local testing
 
-Certain API features that create {{domxref("FencedFrameConfig")}}s such as {{domxref("Navigator.runAdAuction()")}} ([Protected Audience API](https://developers.google.com/privacy-sandbox/private-advertising/protected-audience)) and {{domxref("WindowSharedStorage.selectURL()")}} ([Shared Storage API](/en-US/docs/Web/API/Shared_Storage_API)), as well as other features such as {{domxref("Fence.reportEvent()")}}, require you to enroll your site in a [privacy sandbox enrollment process](/en-US/docs/Web/Privacy/Privacy_sandbox/Enrollment). If you don't do this, the API calls will fail with a console warning.
+Certain API features that create {{domxref("FencedFrameConfig")}}s such as {{domxref("Navigator.runAdAuction()")}} ([Protected Audience API](https://developers.google.com/privacy-sandbox/private-advertising/protected-audience)) and {{domxref("WindowSharedStorage.selectURL()")}} ([Shared Storage API](/en-US/docs/Web/API/Shared_Storage_API)), as well as other features such as {{domxref("Fence.reportEvent()")}}, require you to enroll your site in a [privacy sandbox enrollment process](/en-US/docs/Web/Privacy/Guides/Privacy_sandbox/Enrollment). If you don't do this, the API calls will fail with a console warning.
 
 > [!NOTE]
 > In Chrome, you can still test your fenced frame code locally without enrollment. To allow local testing, enable the following Chrome developer flag:

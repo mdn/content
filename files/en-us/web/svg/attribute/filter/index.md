@@ -10,9 +10,9 @@ browser-compat: svg.global_attributes.filter
 The **`filter`** attribute specifies the filter effects defined by the {{SVGElement("filter")}} element that shall be applied to its element.
 
 > [!NOTE]
-> As a presentation attribute, `filter` can be used as a CSS property. See CSS {{cssxref("filter")}} for further information.
+> As a presentation attribute, `filter` also has a CSS property counterpart: {{cssxref("filter")}}. When both are specified, the CSS property takes priority.
 
-As a presentation attribute, it can be applied to any element but it only has effect on [container elements](/en-US/docs/Web/SVG/Element#container_elements) without the {{SVGElement("defs")}} element, all [graphics elements](/en-US/docs/Web/SVG/Element#graphics_elements) and the {{SVGElement("use")}} element.
+Technically, `filter` can be applied to any element, but it only has effect on [container elements](/en-US/docs/Web/SVG/Element#container_elements) without the {{SVGElement("defs")}} element, all [graphics elements](/en-US/docs/Web/SVG/Element#graphics_elements), and the {{SVGElement("use")}} element.
 
 ## Example
 
@@ -45,11 +45,11 @@ svg {
       <td>
         <code>none</code>
         <a
-          href="/en-US/docs/Web/CSS/Value_definition_syntax#single_bar"
+          href="/en-US/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax#single_bar"
           title="Single bar: exactly one of the entities must be present"
           >|</a
         >
-        <code>&#x3C;filter-function-list></code>
+        <code>&#x3C;filter-value-list></code>
       </td>
     </tr>
     <tr>
@@ -76,4 +76,4 @@ For a description of the values see the CSS {{cssxref("filter")}} property.
 ## See also
 
 - {{SVGElement("filter")}}
-- {{cssxref("filter")}}
+- CSS {{cssxref("filter")}} property

@@ -9,7 +9,12 @@ browser-compat: javascript.builtins.String.fromCodePoint
 
 The **`String.fromCodePoint()`** static method returns a string created from the specified sequence of code points.
 
-{{EmbedInteractiveExample("pages/js/string-fromcodepoint.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: String.fromCodePoint()", "shorter")}}
+
+```js interactive-example
+console.log(String.fromCodePoint(9731, 9733, 9842, 0x2f804));
+// Expected output: "☃★♲你"
+```
 
 ## Syntax
 

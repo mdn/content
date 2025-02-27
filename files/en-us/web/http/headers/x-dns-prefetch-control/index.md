@@ -21,7 +21,7 @@ This reduces latency when the user clicks a link, for example.
       <td>{{Glossary("Response header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>No</td>
     </tr>
   </tbody>
@@ -107,13 +107,13 @@ site even though they are not used on the home page itself. This will improve th
 overall performance of site even though the performance of the home page may not be
 affected.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Specifications
 
 Not part of any current specification.
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

@@ -9,11 +9,35 @@ browser-compat: html.elements.input.type_datetime-local
 
 {{htmlelement("input")}} elements of type **`datetime-local`** create input controls that let the user easily enter both a date and a time, including the year, month, and day as well as the time in hours and minutes.
 
-{{EmbedInteractiveExample("pages/tabbed/input-datetime-local.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;datetime-local&quot;&gt;", "tabbed-shorter")}}
 
-The control's UI varies in general from browser to browser. In browsers with no support, these degrade gracefully as if [`<input type="text">`](/en-US/docs/Web/HTML/Element/input/text) were set.
+```html interactive-example
+<label for="meeting-time">Choose a time for your appointment:</label>
 
-The control is intended to represent _a local date and time_, not necessarily _the user's local date and time_. In other words, the input allows any valid combination of year, month, day, hour, and minute—even if such a combination is invalid in the user's local time zone (such as the one hour within a daylight saving time spring-forward transition gap).
+<input
+  type="datetime-local"
+  id="meeting-time"
+  name="meeting-time"
+  value="2018-06-12T19:30"
+  min="2018-06-07T00:00"
+  max="2018-06-14T00:00" />
+```
+
+```css interactive-example
+label {
+  display: block;
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+```
+
+The control's UI varies in general from browser to browser. The control is intended to represent _a local date and time_, not necessarily _the user's local date and time_. In other words, the input allows any valid combination of year, month, day, hour, and minute—even if such a combination is invalid in the user's local time zone (such as the one hour within a daylight saving time spring-forward transition gap).
 
 ## Value
 
@@ -109,7 +133,7 @@ In either case, the date/time and time zone values would be submitted to the ser
 
 By default, `<input type="datetime-local">` does not apply any validation to entered values. The UI implementations generally don't let you enter anything that isn't a date/time — which is helpful — but a user might still fill in no value and submit, or enter an invalid date and/or time (e.g. the 32nd of April).
 
-You can use [`min`](/en-US/docs/Web/HTML/Element/input#min) and [`max`](/en-US/docs/Web/HTML/Element/input#max) to restrict the available dates (see [Setting maximum and minimum dates](#setting_maximum_and_minimum_dates_and_times)), and you can use the [`required`](/en-US/docs/Web/HTML/Element/input#required) attribute to make filling in the date/time mandatory. As a result, supporting browsers will display an error if you try to submit a date that is outside the set bounds or an empty date field.
+You can use [`min`](/en-US/docs/Web/HTML/Element/input#min) and [`max`](/en-US/docs/Web/HTML/Element/input#max) to restrict the available dates (see [Setting maximum and minimum dates](#setting_maximum_and_minimum_dates_and_times)), and you can use the [`required`](/en-US/docs/Web/HTML/Element/input#required) attribute to make filling in the date/time mandatory. As a result, browsers will display an error if you try to submit a date that is outside the set bounds or an empty date field.
 
 Let's look at an example; here we've set minimum and maximum date/time values, and also made the field required:
 
@@ -187,7 +211,7 @@ The most basic use of `<input type="datetime-local">` involves a basic `<input>`
 
 ### Setting maximum and minimum dates and times
 
-You can use the [`min`](/en-US/docs/Web/HTML/Element/input#min) and [`max`](/en-US/docs/Web/HTML/Element/input#max) attributes to restrict the dates/times that can be chosen by the user. In the following example, we are setting a minimum datetime of `2024-06-01T08:30` and a maximum datetime of `2024-06-30T16:30`:
+You can use the [`min`](/en-US/docs/Web/HTML/Element/input#min) and [`max`](/en-US/docs/Web/HTML/Element/input#max) attributes to restrict the dates/times that can be chosen by the user. In the following example, we are setting a minimum datetime of `2025-06-01T08:30` and a maximum datetime of `2025-06-30T16:30`:
 
 ```html
 <form>
@@ -196,14 +220,14 @@ You can use the [`min`](/en-US/docs/Web/HTML/Element/input#min) and [`max`](/en-
     id="party"
     type="datetime-local"
     name="party-date"
-    min="2024-06-01T08:30"
-    max="2024-06-30T16:30" />
+    min="2025-06-01T08:30"
+    max="2025-06-30T16:30" />
 </form>
 ```
 
 {{ EmbedLiveSample('Setting_maximum_and_minimum_dates_and_times', 600, 40) }}
 
-Only days in June 2024 can be selected. Depending on what browser you are using, times outside the specified values might not be selectable. In other browsers, invalid dates and times are selectable but will match {{CSSXref(":invalid")}} and {{CSSXref(":out-of-range")}} and will fail [validation](#validation).
+Only days in June 2025 can be selected. Depending on what browser you are using, times outside the specified values might not be selectable. In other browsers, invalid dates and times are selectable but will match {{CSSXref(":invalid")}} and {{CSSXref(":out-of-range")}} and will fail [validation](#validation).
 
 In some browsers (Chrome and Edge), only the "days" part of the date value will be editable, and dates outside June can't be scrolled. In others (Safari), the date picker will appear to allow any date, but the value will be clamped to the valid range when a date is selected.
 

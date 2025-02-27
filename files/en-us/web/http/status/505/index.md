@@ -18,10 +18,6 @@ For example, intermediaries such as load balancers may not handle request lines 
 505 HTTP Version Not Supported
 ```
 
-## Specifications
-
-{{Specifications}}
-
 ## Examples
 
 ### A 505 due to malformed request-line
@@ -52,6 +48,10 @@ Content-Length: 123
 </body>
 </html>
 ```
+
+## Specifications
+
+{{Specifications}}
 
 ## See also
 

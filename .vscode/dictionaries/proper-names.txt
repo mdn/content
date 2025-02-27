@@ -14,6 +14,7 @@ Amit
 Amorim
 AMPPS
 Amstelvar
+Amélie
 Anand
 ANDI
 Andreessen
@@ -26,6 +27,7 @@ Apapou
 Appelquist
 Aptana
 Arkanoid
+Artur
 Arun
 Ashlyn
 Ashok
@@ -76,6 +78,7 @@ Béziers
 caitmuenster
 Camino
 Camtasia
+Canva
 Carakan
 Cardano
 carinaanand
@@ -256,6 +259,7 @@ ITEC
 Jalad
 Jalkhov
 jamiedoe
+Janc
 Jannis
 Jarkko
 JasonLamv-t
@@ -292,6 +296,7 @@ Kazam
 Kearney
 kenji-yamasaki
 Kerckhoffs
+Kesteren
 Kettner
 Kinlan
 Kinnon
@@ -463,6 +468,7 @@ Powerbook
 Powermapper
 Prateek
 Presskit
+Prisca
 Priya
 PSVR
 Quirksmode
@@ -486,6 +492,7 @@ Rocher
 Rohini
 Ronaldo
 Roselli
+Rossi
 Roushan
 rsvg
 rubentd
@@ -500,6 +507,7 @@ sashasushko
 Saurabh
 Scarfone
 Schiff
+Schmarsow
 Schola
 Scholz
 Schwarz
@@ -567,6 +575,7 @@ Theora
 Thierry
 Tidwell
 Tink
+tinypng
 Titilayo
 Tokopedia
 Tomayac

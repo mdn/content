@@ -13,13 +13,13 @@ The **`setMatrixValue()`** method of the {{domxref("DOMMatrix")}} interface repl
 ## Syntax
 
 ```js-nolint
-  DOMMatrix.setMatrixValue( transformList )
+setMatrixValue(transformList)
 ```
 
 ### Parameters
 
 - `transformList`
-  - : The list of comma-separated transform values as a `DOMString` matrix.
+  - : A string. Its value follows the same syntax as the CSS {{cssxref("transform")}} property value.
 
 ### Return value
 

@@ -32,10 +32,10 @@ In particular, if you've never done any coding before, we'd recommend the [Your 
   - : Access to web content such as public services, education, e-commerce sites, and entertainment is a human right. No one should be excluded based on disability, race, geography, or other human characteristics. This module discusses the best practices and techniques you should learn to make your websites as accessible as possible.
 - [Design for developers](/en-US/docs/Learn_web_development/Core/Design_for_developers)
   - : The idea of this module is to (re-)introduce developers to design thinking. They may not want to work as designers, but having some basic user experience and design theory is good for everyone involved in building websites, no matter what their role. At the very least, even the most technical, "non-designer" developer should understand design briefs, why things are designed as they are, and be able to get into the mindset of the user. And it'll help them make their portfolios look better.
-- [Version_control](/en-US/docs/Learn_web_development/Core/Version_control)
+- [Version control](/en-US/docs/Learn_web_development/Core/Version_control)
   - : Version control tools are an essential part of modern workflows, for backing up and collaborating on codebases. This module takes you through the essentials of version control using Git and GitHub.
 
 ## See also
 
-- [The Frontend Developer Career Path](https://v2.scrimba.com/the-frontend-developer-career-path-c0j?via=mdn) <sup>_MDN Curriculum partner_</sup>
+- [The Frontend Developer Career Path](https://v2.scrimba.com/the-frontend-developer-career-path-c0j?via=mdn) <sup>_MDN learning partner_</sup>
   - : [Scrimba's](https://scrimba.com?via=mdn) _Frontend Developer Career Path_ teaches all you need to know to be a competent front-end web developer, with fun interactive lessons and challenges, knowledgeable teachers, and a supportive community. Go from zero to landing your first front-end job! Many of the course components are available as standalone free versions.

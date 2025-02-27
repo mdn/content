@@ -18,6 +18,7 @@ The {{Glossary("user agent")}} will scale an image when the page author specifie
 ```css
 /* Keyword values */
 image-rendering: auto;
+image-rendering: smooth;
 image-rendering: crisp-edges;
 image-rendering: pixelated;
 
@@ -35,8 +36,6 @@ image-rendering: unset;
   - : The scaling algorithm is UA dependent. Since version 1.9 (Firefox 3.0), Gecko uses _bilinear_ resampling (high quality).
 - `smooth`
   - : The image should be scaled with an algorithm that maximizes the appearance of the image. In particular, scaling algorithms that "smooth" colors are acceptable, such as bilinear interpolation. This is intended for images such as photos.
-- `high-quality`
-  - : Identical to `smooth`, but with a preference for higher-quality scaling. If system resources are constrained, images with `high-quality` should be prioritized over those with any other value, when considering which images to degrade the quality of and to what degree.
 - `crisp-edges`
   - : The image is scaled with an algorithm such as "nearest neighbor" that preserves contrast and edges in the image. Generally intended for images such as pixel art or line drawings, no blurring or color smoothing occurs.
 - `pixelated`
@@ -44,6 +43,9 @@ image-rendering: unset;
 
 > [!NOTE]
 > The values `optimizeQuality` and `optimizeSpeed` present in an early draft (and coming from its SVG counterpart {{SVGAttr("image-rendering")}}) are defined as synonyms for the `smooth` and `pixelated` values respectively.
+
+> [!NOTE]
+> The [CSS images](/en-US/docs/Web/CSS/CSS_images) module defines a `high-quality` value for the `image-rendering` property to provide a preference for higher-quality scaling, however, this is not supported in any browsers.
 
 ## Formal definition
 
@@ -64,6 +66,10 @@ In this example, an image is repeated three times, with each having a different 
   <img
     class="auto"
     alt="A small photo of some white and yellow flower against a leafy green background. The image is about 33% smaller than the size it is being displayed at. This upscaling causes the image to appear blurry, with notable soft edges between objects."
+    src="blumen.jpg" />
+  <img
+    class="smooth"
+    alt="The same photo as the previous image, which is also being upscaled the same amount. Browsers that support the smooth value for the image-rendering property display the image with the maximize appearance."
     src="blumen.jpg" />
   <img
     class="pixelated"
@@ -87,6 +93,10 @@ img {
 ```css
 .auto {
   image-rendering: auto;
+}
+
+.smooth {
+  image-rendering: smooth;
 }
 
 .pixelated {

@@ -149,7 +149,7 @@ For more information, see the [sharing files example](/en-US/docs/Web/API/Naviga
 
 ## Handling shared data from other apps
 
-To register your PWA as a target of other apps' shared data, use the [Web Share Target API](https://developer.chrome.com/docs/capabilities/web-apis/web-share-target) and, in particular, the [`share_target`](/en-US/docs/Web/Manifest/share_target) web app manifest member.
+To register your PWA as a target of other apps' shared data, use the [Web Share Target API](https://developer.chrome.com/docs/capabilities/web-apis/web-share-target) and, in particular, the [`share_target`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/share_target) web app manifest member.
 
 The `share_target` manifest member allows an installed PWA to be registered, at the operating system level, as a potential target for content shared by other apps. This means that when a user shares some data that's compatible with your PWA, from another app, the operating system will list your PWA alongside other typical share targets like email or messaging apps. Note that the PWA must be installed to be displayed as a potential target for receiving shared data.
 
@@ -196,7 +196,7 @@ const sharedDescription = url.searchParams.get("description");
 const sharedLink = url.searchParams.get("link");
 ```
 
-For more information, see the example [Receive share data using GET](/en-US/docs/Web/Manifest/share_target#receiving_share_data_using_get) on the `share_target` web app manifest member page.
+For more information, see the example [Receive share data using GET](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/share_target#receiving_share_data_using_get) on the `share_target` web app manifest member page.
 
 ### Handling shared files
 
@@ -281,12 +281,12 @@ self.addEventListener("fetch", (event) => {
 
 In this code example, the shared files are extracted from the form data and the user is redirected to a different page. It's up to you, using the code in your service worker, to handle the extracted files as you want. For example, you can send them to your app's main JavaScript code using the {{domxref("Worker.postMessage()")}} method or store them in an [Indexed DB](/en-US/docs/Web/API/IndexedDB_API) database which can be accessed both by your service worker and app's main JavaScript code.
 
-For more information, see the [receiving shared files](/en-US/docs/Web/Manifest/share_target#receiving_shared_files) example on the `share_target` web app manifest member page.
+For more information, see the [receiving shared files](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/share_target#receiving_shared_files) example on the `share_target` web app manifest member page.
 
 ## See also
 
 - [Web Share API](/en-US/docs/Web/API/Web_Share_API)
-- [`share_target` manifest member](/en-US/docs/Web/Manifest/share_target)
+- [`share_target` manifest member](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/share_target)
 - [Integrate with the OS sharing UI with the Web Share API](https://web.dev/articles/web-share) on web.dev
 - [Receiving shared data with the Web Share Target API](https://developer.chrome.com/docs/capabilities/web-apis/web-share-target) on developer.chrome.com
 - [Share content with other apps](https://learn.microsoft.com/en-us/microsoft-edge/progressive-web-apps-chromium/how-to/share) on microsoft.com

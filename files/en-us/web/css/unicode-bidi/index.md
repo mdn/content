@@ -92,3 +92,4 @@ unicode-bidi: unset;
 ## See also
 
 - {{Cssxref("direction")}}
+- SVG {{SVGAttr("unicode-bidi")}} attribute

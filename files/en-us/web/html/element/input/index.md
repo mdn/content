@@ -9,7 +9,34 @@ browser-compat: html.elements.input
 
 The **`<input>`** [HTML](/en-US/docs/Web/HTML) element is used to create interactive controls for web-based forms in order to accept data from the user; a wide variety of types of input data and control widgets are available, depending on the device and {{Glossary("user agent")}}. The `<input>` element is one of the most powerful and complex in all of HTML due to the sheer number of combinations of input types and attributes.
 
-{{EmbedInteractiveExample("pages/tabbed/input-text.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;text&quot;&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<label for="name">Name (4 to 8 characters):</label>
+
+<input
+  type="text"
+  id="name"
+  name="name"
+  required
+  minlength="4"
+  maxlength="8"
+  size="10" />
+```
+
+```css interactive-example
+label {
+  display: block;
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+```
 
 ## \<input> types
 
@@ -555,7 +582,10 @@ A few additional non-standard attributes are listed following the descriptions o
 
 - `popovertarget`
 
-  - : Turns an `<input type="button">` element into a popover control button; takes the ID of the popover element to control as its value. See the {{domxref("Popover API", "Popover API", "", "nocode")}} landing page for more details.
+  - : Turns an `<input type="button">` element into a popover control button; takes the ID of the popover element to control as its value. See the {{domxref("Popover API", "Popover API", "", "nocode")}} landing page for more details. Establishing a relationship between a popover and its invoker button using the `popovertarget` attribute has two additional useful effects:
+
+    - The browser creates an implicit [`aria-details`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-details) and [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded) relationship between popover and invoker, and places the popover in a logical position in the keyboard focus navigation order when shown. This makes the popover more accessible to keyboard and assistive technology (AT) users (see also [Popover accessibility features](/en-US/docs/Web/API/Popover_API/Using#popover_accessibility_features)).
+    - The browser creates an implicit anchor reference between the two, making it very convenient to position popovers relative to their controls using [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning). See [Popover anchor positioning](/en-US/docs/Web/API/Popover_API/Using#popover_anchor_positioning) for more details.
 
 - `popovertargetaction`
 
@@ -736,7 +766,7 @@ Inputs, being replaced elements, have a few features not applicable to non form 
 
 <table class="no-markdown">
   <caption>
-    Captions super relevant to the
+    Pseudo-classes relevant to the
     <code>&#x3C;input></code>
     element:
   </caption>
@@ -869,6 +899,12 @@ Inputs, being replaced elements, have a few features not applicable to non form 
         invalid input but only after the user interaction, such as by focusing
         on the control, leaving the control, or attempting to submit the form
         containing the invalid control.
+      </td>
+    </tr>
+    <tr>
+      <td>{{Cssxref(":open")}}</td>
+      <td>
+        <code>&lt;input&gt;</code> elements that display a picker for the user to choose a value from (for example <a href="/en-US/docs/Web/HTML/Element/input/color"><code>&lt;input type="color"&gt;</code></a>) — but only when the element is in the open state, that is, when the picker is displayed.
       </td>
     </tr>
   </tbody>

@@ -9,7 +9,17 @@ browser-compat: javascript.builtins.RegExp.flags
 
 The **`flags`** accessor property of {{jsxref("RegExp")}} instances returns the [flags](/en-US/docs/Web/JavaScript/Guide/Regular_expressions#advanced_searching_with_flags) of this regular expression.
 
-{{EmbedInteractiveExample("pages/js/regexp-prototype-flags.html")}}
+{{InteractiveExample("JavaScript Demo: RegExp.prototype.flags")}}
+
+```js interactive-example
+// Outputs RegExp flags in alphabetical order
+
+console.log(/foo/gi.flags);
+// Expected output: "gi"
+
+console.log(/bar/muy.flags);
+// Expected output: "muy"
+```
 
 ## Description
 

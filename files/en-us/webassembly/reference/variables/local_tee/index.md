@@ -2,9 +2,8 @@
 title: Local tee
 slug: WebAssembly/Reference/Variables/Local_tee
 page-type: webassembly-instruction
+sidebar: webassemblysidebar
 ---
-
-{{WebAssemblySidebar}}
 
 The **`local.tee`** instruction sets the value of a local variable and loads the value onto the stack.
 

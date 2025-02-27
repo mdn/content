@@ -25,6 +25,7 @@ ACEFGHIJKLMN
 aceghijklmop
 adipscing
 aeio
+aeiou
 aliquyam
 animometer
 annunaki
@@ -52,12 +53,14 @@ bleh
 BlYAJQFz
 bobsmith
 bologi
+booh
 bookinst
 BOOKINSTANCE
 bookinstances
 Bookmarksgrove
 boooo
 booooed
+boooooooh
 borderify
 boxbg
 BRAH
@@ -112,9 +115,12 @@ dubby
 Duden
 dXNlcm5hbWU6cGFzc3dvcmQ
 EACC
+easi
+efregre
 eirmod
 elitr
 ERHGDFy
+ertgrth
 esset
 essum
 Ethere
@@ -173,6 +179,7 @@ isnt
 isoff
 javascripts
 jdoe
+Jgfbgfdgt
 jngl
 jnglstore
 js13kgames
@@ -228,6 +235,7 @@ notavideo
 notebox
 nytimes
 Odtsetseg
+Oggi
 opensas
 opensesame
 OPQRTUVXYZ
@@ -253,6 +261,7 @@ rebum
 regelialia
 rheeeeet
 ricebean
+rtgtfghhyj
 s3pPLMBiTxaQ9kYGzzhZRbK
 sadipscing
 sagnarelli
@@ -262,6 +271,7 @@ screenleft-screentop
 Scrupulum
 seakale
 serverstart
+shhhh
 skjfndskjfnbdskjfb
 snapsvg.io
 soclis
@@ -306,6 +316,7 @@ webglsamples
 webvr
 weta
 Whereami
+Whereshire
 wisen
 wisi
 Wookie
@@ -316,3 +327,4 @@ YSDEgCDwkICAIOaWhyDwn6aE
 Yuckymeat
 YWxhZGRpbjpvcGVuc2VzYW1l
 Zorp
+ZRWB
