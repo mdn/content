@@ -1,5 +1,6 @@
 ---
 title: Accessibility information for web authors
+short-title: Information for web authors
 slug: Web/Accessibility/Guides/Information_for_Web_authors
 page-type: guide
 sidebar: accessibilitysidebar

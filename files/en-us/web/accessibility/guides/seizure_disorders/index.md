@@ -1,5 +1,6 @@
 ---
 title: Web accessibility for seizures and physical reactions
+short-title: Preventing seizures and physical reactions
 slug: Web/Accessibility/Guides/Seizure_disorders
 page-type: guide
 sidebar: accessibilitysidebar

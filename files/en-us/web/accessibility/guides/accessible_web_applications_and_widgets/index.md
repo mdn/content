@@ -1,5 +1,6 @@
 ---
 title: An overview of accessible web applications and widgets
+short-title: Accessible web applications and widgets
 slug: Web/Accessibility/Guides/Accessible_web_applications_and_widgets
 page-type: guide
 sidebar: accessibilitysidebar

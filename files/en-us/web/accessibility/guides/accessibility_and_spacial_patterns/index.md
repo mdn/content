@@ -1,5 +1,6 @@
 ---
-title: Accessibility and Spacial Patterns
+title: Accessibility and spatial patterns
+short-title: Spatial patterns
 slug: Web/Accessibility/Guides/Accessibility_and_Spacial_Patterns
 page-type: guide
 sidebar: accessibilitysidebar

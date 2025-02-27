@@ -1,5 +1,6 @@
 ---
-title: "Accessibility: What users can do to browse more safely"
+title: "Accessibility: What personalization helps browse more safely"
+short-title: Personalization to help browse safely
 slug: Web/Accessibility/Guides/Browsing_safely
 page-type: guide
 sidebar: accessibilitysidebar

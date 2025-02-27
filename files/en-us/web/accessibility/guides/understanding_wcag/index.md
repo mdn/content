@@ -1,5 +1,6 @@
 ---
-title: Understanding the Web Content Accessibility Guidelines
+title: Understanding the Web Content Accessibility Guidelines (WCAG)
+short-title: Understanding WCAG
 slug: Web/Accessibility/Guides/Understanding_WCAG
 page-type: guide
 sidebar: accessibilitysidebar

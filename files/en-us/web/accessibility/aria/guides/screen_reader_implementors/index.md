@@ -1,5 +1,6 @@
 ---
 title: ARIA Screen Reader Implementors Guide
+short-title: Screen reader implementors guide
 slug: Web/Accessibility/ARIA/Guides/Screen_Reader_Implementors
 page-type: guide
 sidebar: accessibilitysidebar
