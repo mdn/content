@@ -8,7 +8,7 @@ page-type: web-api-interface
 
 The **`FileSystemChangeRecord`** dictionary of the {{domxref("File System API", "File System API", "", "nocode")}} contains details of a single change observed by a {{domxref("FileSystemObserver")}}.
 
-An array of `FileSystemChangeRecord` objects is available in the `records` array passed into the {{domxref("FileSystemObserver.FileSystemObserver", "FileSystemObserver()")}} constructor's callback function.
+The `records` argument passed into the {{domxref("FileSystemObserver.FileSystemObserver", "FileSystemObserver()")}} constructor's callback function is an array of `FileSystemChangeRecord` objects.
 
 ## Instance properties
 
