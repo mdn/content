@@ -12,6 +12,8 @@ In the first section we'll describe the [logical structure of a profile](#anatom
 
 ## Anatomy of a profile
 
+In this section we'll describe the logical structure of a profile. Note that this isn't the same as the format of the object returned by returned by {{domxref("Profiler.stop()")}}: we'll describe that format in the next section of this guide.
+
 A profile consists of an array of samples. Each sample consists of a timestamp and a call stack. Each call stack consists of an array of stack frames, and each stack frame contains information about the location of its corresponding function in the program:
 
 ![Diagram of a profile](profile.svg)
