@@ -6,13 +6,15 @@ page-type: guide
 
 {{DefaultAPISidebar("JS Self-Profiling API")}}
 
-In this page we'll describe the structure of a profile captured using the Self-Profiling API.
+In this page we'll describe how to interpret a profile captured using the Self-Profiling API.
 
-In the first section we'll describe the [logical structure of a profile](#anatomy_of_a_profile). In the next section we'll describe [the format of the profile object](#profile_format) returned by {{domxref("Profiler.stop()")}}. Finally we'll [walk through an example](#an_example) to show what a profile for a given program looks like and how it can be interpreted.
+The format of the object returned by {{domxref("Profiler.stop()")}} is designed to be space-efficient: for example, the format aims to avoid duplicating URL values for functions which are defined in the same script. This means that some interpretation is needed to understand how a sample in the profile object maps to a location in the program, and this guide page aims to explain how to perform this interpretation.
+
+In the first section, we'll describe the [abstract structure of a profile](#anatomy_of_a_profile). In the next section we'll describe [the format of the profile object](#profile_format) returned by {{domxref("Profiler.stop()")}}. Finally we'll [walk through an example](#an_example) to show what a profile for a given program looks like and how it can be interpreted.
 
 ## Anatomy of a profile
 
-In this section we'll describe the logical structure of a profile. Note that this isn't the same as the format of the object returned by returned by {{domxref("Profiler.stop()")}}: we'll describe that format in the next section of this guide.
+In this section we'll describe the abstract structure of a profile. Note that this isn't the same as the format of the object returned by returned by {{domxref("Profiler.stop()")}}: we'll describe that format in the next section of this guide.
 
 A profile consists of an array of samples. Each sample consists of a timestamp and a call stack. Each call stack consists of an array of stack frames, and each stack frame contains information about the location of its corresponding function in the program:
 
