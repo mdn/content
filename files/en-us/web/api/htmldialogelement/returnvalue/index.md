@@ -29,7 +29,7 @@ Closing the dialog with the <kbd>Esc</kbd> key has no impact on the returnValue.
     <button id="acceptButton" value="accepted">Accept</button>
 </dialog>
 <p>
-    <button id="openDialog">Review ToS</button>
+  <button id="openDialog">Review ToS</button>
 </p>
 <p id="statusText"></p>
 
