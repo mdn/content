@@ -7,7 +7,35 @@ sidebar: webassemblysidebar
 
 The **`ctz`** instructions, short for _count trailing zeros_, are used to count the amount of zeros at the end of the numbers binary representation.
 
-{{EmbedInteractiveExample("pages/wat/ctz.html", "tabbed-taller")}}
+{{InteractiveExample("Wat Demo: ctz", "tabbed-taller")}}
+
+```wat interactive-example
+(module
+
+  (func (export "trailing0") (param $num i32) (result i32)
+    ;; load  number onto the stack
+    local.get $num
+
+    ;; check how many trailing zeros and return the result
+    i32.ctz
+  )
+
+)
+```
+
+```js interactive-example
+const url = "{%wasm-url%}";
+await WebAssembly.instantiateStreaming(fetch(url), { console }).then(
+  (result) => {
+    const trailing0 = result.instance.exports.trailing0;
+
+    console.log(
+      `Trailing zeros: ${trailing0(0b00000000_10000000_00000000_00000000)}`,
+    );
+    // Expected output: "Trailing zeros: 23"
+  },
+);
+```
 
 ## Syntax
 
