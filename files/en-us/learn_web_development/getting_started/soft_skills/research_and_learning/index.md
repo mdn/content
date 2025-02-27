@@ -98,14 +98,20 @@ Building a network of folks to collaborate with is an essential part of being a 
 An effective research network consists of several groups of people with different levels of knowledge and proximity to you:
 
 - Peers: It is useful to share information with and ask questions of your immediate peers — this could be your class mates or your team mates — as they might have useful insights to share or want to work on the problem together. They might also have worked on the same problem previously and be able to provide an answer.
-- Teachers or senior colleagues: If your colleagues can't help, the next step is normally to ask a senior colleague, manager, or teacher to help. They will have more experience than your peers, but bear in mind that they will have less free time available. You will get better results and more appreciation if you demonstrate that you've already tried to solve the problem yourself first, and are being respectful of their time. To do so:
+- Teachers or senior colleagues: If your peers can't help, the next step is normally to ask a senior colleague, manager, or teacher. They will have more experience than your peers, but bear in mind that they will have less free time available. You will get better results and more appreciation if you demonstrate that you've already tried to solve the problem yourself first, and are being respectful of their time. To do so:
+
   - Keep a record of what you've already tried to do. What already failed?
   - If the research subject is a specific code example or technique that you can't get to work, create an online test case to show to them using a site like [Scrimba](https://scrimba.com/?via=mdn) <sup>Course partner</sup> or [Glitch](https://glitch.com/).
-  - Think carefully about what questions to ask them — what specifically is the problem?
+  - Think carefully about what questions to ask them — what specifically is the problem? If you have multiple problems to ask them about, put them in order of priority to make sure you cover the most important items.
+  - Set a goal for the session, for example, "try to find a solution to the highest priority problem". Note also that solving the biggest problem may also lead to a fix for other problems.
   - Ask them how they would prefer to communicate with you about the problem, to make the interaction as comfortable for them as possible.
-  - If arranging a meeting, don't book more of their time than you need.
+  - If arranging a meeting, don't book more of their time than you need. If you are not sure how long you will need, timebox the session to say 30 minutes. You can always ask them for more help in the future.
+
 - Wider community network: This could consist of a dedicated online community such as forums or chat groups (for example the [The MDN Web Docs discord](/discord) or the [freeCodeCamp forums](https://forum.freecodecamp.org/)), or a physical meetup such as a conference or skillshare event (you can look events up using sites like [Meetup.com](https://www.meetup.com/) or [Eventbrite](https://www.eventbrite.co.uk)).
 - Global network: Sometimes you might be out of options, in which case you could try asking your question on a general global community like a social media network. Sometimes helpful answers can come from unexpected places.
+
+> [!NOTE]
+> There is definitely a balance to knowing the right time to ask for help. Web developers shouldn't constantly pester their peers/colleagues, but equally, they shouldn't soldier on and pretend they know what they are doing when they don't. Consider the value of saying "I don't know" at the right time.
 
 Most importantly, make sure you are respectful and kind at all times, to all the people you interact with. You should also learn to give back as well as take; web developers who reciprocate and provide help are much more likely to build strong relationships and keep getting help.
 
