@@ -38,7 +38,7 @@ There is a lot to know as a web developer, and you are constantly learning. But 
 
 As a web developer, you will spend a lot of time searching for solutions to problems encountered in your work — you aren't expected to remember everything! Professional web developers use tools like MDN Web Docs to look up things they have forgotten all the time. As you'll discover, learning web development is more about problem-solving and learning patterns than it is about learning lots of syntaxes.
 
-To faciliate this and become more self-sufficient, you should learn effective strategies for finding answers — as discussed in the sections below — and when to use which strategy. For example, look up information online first, and only ask your mentor, classmates, or senior dev for help when you are truly stuck.
+To facilitate this and become more self-sufficient, you should learn effective strategies for finding answers — as discussed in the sections below — and when to use which strategy. For example, look up information online first, and only ask your mentor, classmates, or senior dev for help when you are truly stuck.
 
 ### Choose high-quality resources
 
