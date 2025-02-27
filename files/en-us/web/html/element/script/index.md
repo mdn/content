@@ -169,7 +169,7 @@ This example shows how to import (an external) script using the `<script>` eleme
 <script src="javascript.js"></script>
 ```
 
-And the following example shows how to put (an inline) script inside the `<script>` element.
+The following example shows how to put (an inline) script inside the `<script>` element:
 
 ```html
 <script>
