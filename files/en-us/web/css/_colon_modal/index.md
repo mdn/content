@@ -9,7 +9,49 @@ browser-compat: css.selectors.modal
 
 The **`:modal`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches an element that is in a state in which it excludes all interaction with elements outside it until the interaction has been dismissed. Multiple elements can be selected by the `:modal` pseudo-class at the same time, but only one of them will be active and able to receive input.
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-class-modal.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: :modal", "tabbed-shorter")}}
+
+```css interactive-example
+button {
+  display: block;
+  margin: auto;
+  width: 10rem;
+  height: 2rem;
+}
+
+:modal {
+  background-color: beige;
+  border: 2px solid burlywood;
+  border-radius: 5px;
+}
+
+p {
+  color: black;
+}
+```
+
+```html interactive-example
+<p>Would you like to see a new random number?</p>
+<button id="showNumber">Show me</button>
+
+<dialog id="favDialog">
+  <form method="dialog">
+    <p>Lucky number is: <strong id="number"></strong></p>
+    <button>Close dialog</button>
+  </form>
+</dialog>
+```
+
+```js interactive-example
+const showNumber = document.getElementById("showNumber");
+const favDialog = document.getElementById("favDialog");
+const number = document.getElementById("number");
+
+showNumber.addEventListener("click", () => {
+  number.innerText = Math.floor(Math.random() * 1000);
+  favDialog.showModal();
+});
+```
 
 ## Syntax
 

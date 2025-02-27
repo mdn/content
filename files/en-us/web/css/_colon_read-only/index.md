@@ -9,7 +9,37 @@ browser-compat: css.selectors.read-only
 
 The **`:read-only`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) selects elements (such as certain {{htmlelement("input")}} types and {{htmlelement("textarea")}}) that are not editable by the user. Elements on which the HTML attribute [`readonly`](/en-US/docs/Web/HTML/Attributes/readonly) doesn't have an effect (such as [`<input type="radio">`](/en-US/docs/Web/HTML/Element/input/radio), [`<input type="checkbox">`](/en-US/docs/Web/HTML/Element/input/checkbox), and all other non-form elements) are also selected by the `:read-only` pseudo-class. In fact, `:read-only` matches anything that {{cssxref(":read-write")}} doesn't match, making it equivalent to `:not(:read-write)`.
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-class-read-only.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: :read-only", "tabbed-shorter")}}
+
+```css interactive-example
+label,
+input[type="submit"] {
+  display: block;
+  margin-top: 1em;
+}
+
+*:read-only {
+  font-weight: bold;
+  color: indigo;
+}
+```
+
+```html interactive-example
+<p>Please fill your details:</p>
+
+<form>
+  <label for="email">Email Address:</label>
+  <input id="email" name="email" type="email" value="test@example.com" />
+
+  <label for="note">Short note about yourself:</label>
+  <textarea id="note" name="note">Don't be shy</textarea>
+
+  <label for="pic">Your picture:</label>
+  <input id="pic" name="pic" type="file" />
+
+  <input type="submit" value="Submit form" />
+</form>
+```
 
 ## Syntax
 
