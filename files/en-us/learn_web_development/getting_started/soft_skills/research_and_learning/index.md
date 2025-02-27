@@ -172,7 +172,9 @@ It is hard to stay motivated, especially if you are trying to learn a complex sk
 
 If you are having trouble figuring out the answer to a question or problem, or concentrating on your learning, it is useful to have a break. Go for a walk for 15 minutes, make yourself a cup of tea, or listen to some music. Or combine all three!
 
-It is also physically bad to work for too long without a break; looking at a monitor for too long can hurt your eyes, and sitting still for too long can be bad for your back or legs. We'd recommend taking a 15-minute break every hour to 90 minutes.
+It is also physically bad to work for too long without a break; looking at a monitor for too long can hurt your eyes, and sitting still for too long can be bad for your back or legs.
+You can lower the risk of eye strain with the "20-20-20" rule; every 20 minutes, look at something 20 meters away for 20 seconds. 
+We also recommend taking a proper 15-minute break every hour to 90 minutes.
 
 While you are on your break, try discussing your issue with a colleague, friend, or family member. Even if they can't provide you with the answer, the chances are that you'll find a solution on your own by reasoning the problem in your own head. It even works when you explain the problem out loud, to yourself or to an inanimate object.
 
