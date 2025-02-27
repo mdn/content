@@ -24,9 +24,9 @@ Closing the dialog with the <kbd>Esc</kbd> key has no impact on the returnValue.
 ```html
 <!-- Simple pop-up dialog box -->
 <dialog id="termsDialog">
-    <p>Do you agree to the Terms of Service(link)?</p>
-    <button id="declineButton" value="declined">Decline</button>
-    <button id="acceptButton" value="accepted">Accept</button>
+  <p>Do you agree to the Terms of Service(link)?</p>
+  <button id="declineButton" value="declined">Decline</button>
+  <button id="acceptButton" value="accepted">Accept</button>
 </dialog>
 <p>
   <button id="openDialog">Review ToS</button>
@@ -34,50 +34,50 @@ Closing the dialog with the <kbd>Esc</kbd> key has no impact on the returnValue.
 <p id="statusText"></p>
 
 <script>
-    const dialog = document.getElementById("termsDialog");
-    const openDialog = document.getElementById("openDialog");
-    const statusText = document.getElementById("statusText");
-    const declineButton = document.getElementById("declineButton");
-    const acceptButton = document.getElementById("acceptButton");
+  const dialog = document.getElementById("termsDialog");
+  const openDialog = document.getElementById("openDialog");
+  const statusText = document.getElementById("statusText");
+  const declineButton = document.getElementById("declineButton");
+  const acceptButton = document.getElementById("acceptButton");
 
-    function openCheck(dialog) {
-        if (dialog.open) {
-        statusText.innerText = "Dialog open";
-        } else {
-        statusText.innerText = "Dialog closed";
-        }
+  function openCheck(dialog) {
+    if (dialog.open) {
+      statusText.innerText = "Dialog open";
+    } else {
+      statusText.innerText = "Dialog closed";
     }
+  }
 
-    function handleUserInput(returnValue) {
-        if (!returnValue) {
-        statusText.innerText += ". There was no return value";
-        } else {
-        statusText.innerText += ". Return value: " + returnValue;
-        }
+  function handleUserInput(returnValue) {
+    if (!returnValue) {
+      statusText.innerText += ". There was no return value";
+    } else {
+      statusText.innerText += ". Return value: " + returnValue;
     }
+  }
 
-    openDialog.addEventListener("click", () => {
-        dialog.showModal();
-        openCheck(dialog);
-        handleUserInput(dialog.returnValue);
-    });
+  openDialog.addEventListener("click", () => {
+    dialog.showModal();
+    openCheck(dialog);
+    handleUserInput(dialog.returnValue);
+  });
 
-    declineButton.addEventListener("click", () => {
-        dialog.close("declined");
-        openCheck(dialog);
-        handleUserInput(dialog.returnValue);
-    });
+  declineButton.addEventListener("click", () => {
+    dialog.close("declined");
+    openCheck(dialog);
+    handleUserInput(dialog.returnValue);
+  });
 
-    acceptButton.addEventListener("click", () => {
-        dialog.close("accepted");
-        openCheck(dialog);
-        handleUserInput(dialog.returnValue);
-    });
+  acceptButton.addEventListener("click", () => {
+    dialog.close("accepted");
+    openCheck(dialog);
+    handleUserInput(dialog.returnValue);
+  });
 
-    dialog.addEventListener("close", () => {
-        openCheck(dialog);
-        handleUserInput(dialog.returnValue);
-    });
+  dialog.addEventListener("close", () => {
+    openCheck(dialog);
+    handleUserInput(dialog.returnValue);
+  });
 </script>
 ```
 
