@@ -77,7 +77,7 @@ If you can't find a solution to your problem on your favorite sites, you'll need
 - Check the dates on the resources you find. Are they current, or old and therefore likely to be out-of-date? Reputable sites tend to include publication and "last-updated" dates on them, precisely so you are able to easily check this.
 - As a follow-on from the previous point, even newly-published resources can contain out-of-date information. For example, does an article on CSS layout talk about modern approaches like grid and flexbox, or does it still present obsolete techniques like multi-column layouts with floats?
 - Don't just rely on one single source of truth. Cross-reference different sources, especially if you are not sure whether a source is trustworthy or not.
-- You can also try using AI to help with coding issues (for example [ChatGPT](https://openai.com/blog/chatgpt) or [GitHub Copilot](https://resources.github.com/copilot-for-business/)). You should use AI tools with caution, and familiarize yourself with their strengths and weaknesses:
+- You can also try using AI to help with coding issues (for example [ChatGPT](https://openai.com/blog/chatgpt) or [GitHub Copilot](https://resources.github.com/copilot-for-business/)). You should use AI tools with caution (especially as a beginner), and familiarize yourself with their strengths and weaknesses:
   - On the plus side, they can speed up research/searches enormously, and help with structuring code and copy.
   - On the other hand, AI tools have no reasoning skills and frequently provide answers that are misleading or just plain wrong. You shouldn't just assume that AI answers are correct — test them, and verify them with other sources.
 
