@@ -96,7 +96,7 @@ An effective research network consists of several groups of people with differen
   - Think carefully about what questions to ask them — what specifically is the problem?
   - Ask them how they would prefer to communicate with you about the problem, to make the interaction as comfortable for them as possible.
   - If arranging a meeting, don't book more of their time than you need.
-- Wider community network: This could consist of a dedicated online community such as forums or chatgroups (for example the [The MDN Web Docs discord](https://discord.gg/apa6Rn7uEj) or the [freeCodeCamp forums](https://forum.freecodecamp.org/)), or a physical meetup such as a conference or skillshare event (you can look events up using sites like [Meetup.com](https://www.meetup.com/) or [Eventbrite](https://www.eventbrite.co.uk)).
+- Wider community network: This could consist of a dedicated online community such as forums or chat groups (for example the [The MDN Web Docs discord](/discord) or the [freeCodeCamp forums](https://forum.freecodecamp.org/)), or a physical meetup such as a conference or skillshare event (you can look events up using sites like [Meetup.com](https://www.meetup.com/) or [Eventbrite](https://www.eventbrite.co.uk)).
 - Global network: Sometimes you might be out of options, in which case you could try asking your question on a general global community like a social media network. Sometimes helpful answers can come from unexpected places.
 
 Most importantly, make sure you are respectful and kind at all times, to all the people you interact with. You should also learn to give back as well as take; web developers who reciprocate and provide help are much more likely to build strong relationships and keep getting help.
