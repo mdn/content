@@ -446,4 +446,4 @@ You can find a [complete prerender demo here](https://prerender-demos.glitch.me/
 ## See also
 
 - [Prerender pages in Chrome for instant page navigations](https://developer.chrome.com/docs/web-platform/prerender-pages) on developer.chrome.com (2023)
-- [Speculative loading](/en-US/docs/Web/Performance/Speculative_loading) for a comparison of speculation rules and other similar performance improvement features.
+- [Speculative loading](/en-US/docs/Web/Performance/Guides/Speculative_loading) for a comparison of speculation rules and other similar performance improvement features.

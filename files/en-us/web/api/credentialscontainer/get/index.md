@@ -126,6 +126,8 @@ If a single credential cannot be unambiguously obtained, the promise resolves wi
 
   - : Thrown in one of the following situations:
 
+    - The user canceled the request.
+
     - Use of this API was blocked by one of the following [permissions policies](/en-US/docs/Web/HTTP/Permissions_Policy):
 
       - {{HTTPHeader("Permissions-Policy/identity-credentials-get","identity-credentials-get")}}

@@ -20,7 +20,7 @@ The `popover` attribute can take one of the following values:
     > [!NOTE]
     > Setting an empty value for `popover` — `popover` or `popover=""` — is equivalent to setting `popover="auto"`.
 
-- `"hint"`
+- `"hint"` {{experimental_inline}}
 
   - : [`hint`](/en-US/docs/Web/API/Popover_API/Using#using_hint_popover_state) popovers do not close `auto` popovers when they are displayed, but will close other hint popovers.
     They can be light dismissed and will respond to close requests.
