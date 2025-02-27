@@ -42,11 +42,11 @@ perfectly in accordance with all of these points immediately. It is more
 important to make sure the content is readable, useful, correct, and not
 inappropriate, than it is to follow every guideline to the letter.
 
-1. Familiarize yourself with the [MDN Code example guidelines][]
+1. Familiarize yourself with the [MDN Code example guidelines](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide)
    and make sure that code examples follow the guidelines. You'll get used to
    them eventually, and we are intending to automatically lint against our
    guidelines at some point in the future.
-2. Familiarize yourself with the [MDN Writing style guide][],
+2. Familiarize yourself with the [MDN Writing style guide](/en-US/docs/MDN/Guidelines/Writing_style_guide),
    and use it to inform your reviews of new text content.
 3. Familiarize yourself with the MDN [pull request guidelines](https://github.com/mdn/content/blob/main/README.md#pull-request-etiquette).
    The key points here are
@@ -100,7 +100,7 @@ inappropriate, than it is to follow every guideline to the letter.
    assigned already. In such cases, the PR should be linked to an issue
    that explains all these details. If you are not sure, ask the submitter
    if they need a review of the content, and where the rationale behind the
-   change is explained. Ping our team in the [MDN Web Docs chat rooms][] to ask for help if you are still not sure, or
+   change is explained. Ping our team in the [MDN Web Docs chat rooms](/en-US/docs/MDN/Community/Communication_channels) to ask for help if you are still not sure, or
    if you think the content is suspicious.
 
 Note: You may encounter merge conflicts as you review pull requests, if another
@@ -134,7 +134,7 @@ then don't review the pull request — just wait for an approval request.
 The following specific topic areas are being reviewed by the kind souls listed
 underneath them. Be kind to them, and thank them for all the help they give
 to this project. If you would like to help with MDN content reviews,
-[get in touch with us][].
+[get in touch with us](/en-US/docs/MDN/Community/Getting_started#what_can_i_do_to_help).
 
 Note that changes to any content areas not explicitly listed below will be
 handled by the [@core-yari-content](https://github.com/orgs/mdn/teams/core-yari-content)
@@ -203,8 +203,3 @@ for all their help.
 
 - [@vkWeb](https://github.com/vkWeb/)
 - [@Ryuno-Ki](https://github.com/Ryuno-Ki)
-
-[get in touch with us]: https://developer.mozilla.org/en-US/docs/MDN/Community/Contributing/Getting_started#what_can_i_do_to_help
-[mdn code example guidelines]: https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide
-[mdn writing style guide]: https://developer.mozilla.org/en-US/docs/MDN/Guidelines/Writing_style_guide
-[MDN Web Docs chat rooms]: https://developer.mozilla.org/en-US/docs/MDN/Community/Communication_channels
