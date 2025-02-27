@@ -16,7 +16,10 @@ A string representing the `returnValue` of the dialog.
 
 ## Examples
 
-The following example displays a button to open a dialog containing a Terms of Service prompt via the `showModal()` method. The script checks if the dialog is open or closed and updates the status text accordingly. It also handles the user's input by assigning the `returnValue` when the Accept or Decline button is clicked. The "Decline" button sets the `returnValue` to "declined", while the "Accept" button sets it to "accepted". Additionally, closing the dialog (e.g., using the close event) updates the status text with the dialog's `returnValue`. Closing the dialog with the <kbd>Esc</kbd> key has no impact on the returnValue.
+The following example displays a button to open a dialog containing a Terms of Service prompt via the `showModal()` method.
+The script checks if the dialog is open or closed and updates the status text accordingly. It also handles the user's input by assigning the `returnValue` when the Accept or Decline button is clicked.
+The "Decline" button sets the `returnValue` to "declined", while the "Accept" button sets it to "accepted". Additionally, closing the dialog (e.g., using the close event) updates the status text with the dialog's `returnValue`.
+Closing the dialog with the <kbd>Esc</kbd> key has no impact on the returnValue.
 
 ```html
 <!-- Simple pop-up dialog box -->
@@ -24,14 +27,14 @@ The following example displays a button to open a dialog containing a Terms of S
     <p>Do you agree to the Terms of Service(link)?</p>
     <button id="declineButton" value="declined">Decline</button>
     <button id="acceptButton" value="accepted">Accept</button>
-  </dialog>
+</dialog>
   
-  <p>
+<p>
     <button id="openDialog">Review ToS</button>
-  </p>
-  <p id="statusText"></p>
+</p>
+<p id="statusText"></p>
 
-  <script>
+<script>
     const dialog = document.getElementById("termsDialog");
     const openDialog = document.getElementById("openDialog");
     const statusText = document.getElementById("statusText");
@@ -39,44 +42,44 @@ The following example displays a button to open a dialog containing a Terms of S
     const acceptButton = document.getElementById("acceptButton");
 
     function openCheck(dialog) {
-      if (dialog.open) {
+        if (dialog.open) {
         statusText.innerText = "Dialog open";
-      } else {
+        } else {
         statusText.innerText = "Dialog closed";
-      }
+        }
     }
 
     function handleUserInput(returnValue) {
-      if (!returnValue) {
+        if (!returnValue) {
         statusText.innerText += ". There was no return value";
-      } else {
+        } else {
         statusText.innerText += ". Return value: " + returnValue;
-      }
+        }
     }
 
     openDialog.addEventListener("click", () => {
-      dialog.showModal();
-      openCheck(dialog);
-      handleUserInput(dialog.returnValue);
+        dialog.showModal();
+        openCheck(dialog);
+        handleUserInput(dialog.returnValue);
     });
 
     declineButton.addEventListener("click", () => {
-      dialog.close("declined");
-      openCheck(dialog);
-      handleUserInput(dialog.returnValue);
+        dialog.close("declined");
+        openCheck(dialog);
+        handleUserInput(dialog.returnValue);
     });
 
     acceptButton.addEventListener("click", () => {
-      dialog.close("accepted");
-      openCheck(dialog);
-      handleUserInput(dialog.returnValue);
+        dialog.close("accepted");
+        openCheck(dialog);
+        handleUserInput(dialog.returnValue);
     });
 
     dialog.addEventListener("close", () => {
-      openCheck(dialog);
-      handleUserInput(dialog.returnValue);
+        openCheck(dialog);
+        handleUserInput(dialog.returnValue);
     });
-  </script>
+</script>
 ```
 
 ### Result
