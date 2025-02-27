@@ -80,7 +80,7 @@ Read our [Origin private file system](/en-US/docs/Web/API/File_System_API/Origin
 ## Interfaces
 
 - {{domxref("FileSystemChangeRecord")}} {{experimental_inline}}
-  - : Contains details of all the changes observed by a {{domxref("FileSystemObserver")}}.
+  - : Contains details of a single change observed by a {{domxref("FileSystemObserver")}}.
 - {{domxref("FileSystemHandle")}}
   - : An object which represents a file or directory entry. Multiple handles can represent the same entry. For the most part you do not work with `FileSystemHandle` directly but rather its child interfaces {{domxref('FileSystemFileHandle')}} and {{domxref('FileSystemDirectoryHandle')}}.
 - {{domxref("FileSystemFileHandle")}}
