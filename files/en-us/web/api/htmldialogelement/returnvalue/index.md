@@ -8,7 +8,7 @@ browser-compat: api.HTMLDialogElement.returnValue
 
 {{ APIRef("HTML DOM") }}
 
-The **`returnValue`** property of the {{domxref("HTMLDialogElement")}} interface gets or sets the return value for the {{htmlelement("dialog")}}, usually to indicate which button the user pressed to close it.
+The **`returnValue`** property of the {{domxref("HTMLDialogElement")}} interface is a string that stores the value provided when the {{htmlelement("dialog")}} is closed using the `.close(returnValue)` method.
 
 ## Value
 
