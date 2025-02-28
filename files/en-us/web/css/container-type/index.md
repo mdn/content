@@ -9,7 +9,7 @@ browser-compat: css.properties.container-type
 
 An element can be established as a query container using the **`container-type`** [CSS](/en-US/docs/Web/CSS) property. `container-type` is used to define the type of container context used in a container query. The available container contexts are:
 
-- Size: Container size queries allow you to selectively apply CSS rules to a container's children based on a size condition such as a maximum or minimum dimension, aspect ratio, or orientation.
+- Size: Container size queries allow you to selectively apply CSS rules to a container's children based on a general size or inline size condition such as a maximum or minimum dimension, aspect ratio, or orientation.
 - Scroll-state: Container scroll-state queries allow you to selectively apply CSS rules to a container's children based on a scroll-state condition such as whether it is partially scrolled or whether it is snapped to a scroll snap container.
 
 > [!NOTE]
