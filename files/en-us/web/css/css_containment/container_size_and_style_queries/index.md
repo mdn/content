@@ -29,7 +29,7 @@ There are three types of container queries: _container size queries_ and _contai
 
 - **Container scroll-state queries**
 
-  - : Scroll-state queries allow you to selectively apply CSS rules to a container's children based on a scroll-state condition such as whether it is partially scrolled or whether it is snapped to a scroll snap container. The containing elements need to be explicitly declared as _scroll-state query containers_.
+  - : Scroll-state queries allow you to selectively apply CSS rules to a container's descendents based on scroll-state conditions, such as whether it is partially scrolled or whether it is snapped to a scroll snap container. The containing elements need to be explicitly declared as _scroll-state query containers_.
 
 In this guide, we learn the basics of container queries by looking at:
 
