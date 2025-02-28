@@ -325,7 +325,7 @@ Relevant only when [scroll snapping](/en-US/docs/Web/CSS/CSS_scroll_snap) is imp
 
 If the test passes, the rules inside the `@container` block are applied to descendants of the matching container.
 
-In this section we'll look at an example of a scroll snap container with children that snap to it vertically. We will use a `snapped` query to style the children only when they are snapped or about to be snapped.
+In this example, we'll look at a scroll snap container with children that snap to it vertically and use a `snapped` query to style the children only when they are snapped or about to be snapped.
 
 ### HTML
 
