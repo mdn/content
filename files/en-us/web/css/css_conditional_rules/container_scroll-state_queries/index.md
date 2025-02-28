@@ -264,28 +264,19 @@ We've given the `.back-to-top` `<div>` containing the "back to top" link a {{css
 ```
 
 ```css hidden live-sample___scrollable
-.back-to-top a {
+.back-to-top {
   text-decoration: none;
   border-radius: 50%;
   border: 1px solid #0007;
   background: #0007;
   color: white;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: 0.6s background;
-}
-
-.back-to-top span {
   font-size: 3rem;
   text-shadow: 0 0 2px black;
   padding-bottom: 10px;
 }
 
-.back-to-top a:hover,
-.back-to-top a:focus {
+.back-to-top:hover,
+.back-to-top:focus {
   background: #0009;
 }
 ```
