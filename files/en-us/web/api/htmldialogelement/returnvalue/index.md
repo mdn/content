@@ -13,6 +13,7 @@ The **`returnValue`** property of the {{domxref("HTMLDialogElement")}} interface
 ## Value
 
 A string representing the `returnValue` of the dialog.
+Defaults to an empty string (`""`).
 
 ## Examples
 
