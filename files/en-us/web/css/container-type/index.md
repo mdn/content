@@ -65,7 +65,7 @@ container-type: unset;
 
 ## Description
 
-If you want to selectively apply styles inside a container dependant on conditional tests performed on the container, you can do so with container queries. `container-type` allows you to specify the type of container context to apply to the container — that is, the type of conditional tests you want to perform on it.
+If you want to selectively apply styles inside a container based on conditional tests performed on the container, you can do so with container queries. The `container-type` property allows you to specify the type of container context to apply to the container — that is, the type of conditional tests you want to perform on it.
 
 A {{cssxref("@container")}} at-rule is then used to specify the test that will be performed on the container, and the rules that will apply of the test passes.
 
