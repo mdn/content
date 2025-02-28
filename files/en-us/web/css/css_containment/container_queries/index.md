@@ -16,7 +16,8 @@ For example, if a container has less space available in the surrounding context,
 
 Container queries are an alternative to [media queries](/en-US/docs/Web/CSS/CSS_media_queries), which apply styles to elements based on viewport size or other device characteristics.
 
-This article provides an introduction to using container queries, focusing just on size container queries. We've written other articles that specifically discuss [style](/en-US/docs/Web/CSS/CSS_containment/Container_size_and_style_queries#container_style_queries) and [scroll-state](/en-US/docs/Web/CSS/CSS_conditional_rules/Container_scroll-state_queries) container queries.
+This article provides an introduction to using container queries, specifically focusing on size container queries. Other guides discuss [style](/en-US/docs/Web/CSS/CSS_containment/Container_size_and_style_queries#container_style_queries) and [scroll-state](/en-US/docs/Web/CSS/CSS_conditional_rules/Container_scroll-state_queries) container queries in detail.
+
 
 ![Two different query types. First, a media query based on the viewport's width, which is the full width of the browser. Second, a container query based on the width of a container element.](container-query.svg)
 
