@@ -66,7 +66,7 @@ For example:
     - `<container-name>`
       - : Optional. The name of the container that the styles will be applied to when the query evaluates to true, specified as an {{cssxref("ident")}}.
     - `<container-query>`
-      - : A set of features that are evaluated against the query container when the tested size, [`<style-feature>`](#container_style_queries), or scroll-state of the container changes.
+      - : A set of features that are evaluated against the query container when the size, [`<style-feature>`](#container_style_queries), or scroll-state of the container changes.
 
 - `<stylesheet>`
   - : A set of CSS rules or declarations.
