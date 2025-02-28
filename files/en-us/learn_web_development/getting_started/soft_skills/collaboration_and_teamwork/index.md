@@ -56,7 +56,7 @@ You could also widen the net to outside your peer group. Join a Slack channel, D
 
 For example:
 
-- [Stack overflow](https://stackoverflow.com/) is a great place to ask questions and answer other people's questions.
+- [Stack Overflow](https://stackoverflow.com/) is a great place to ask questions and answer other people's questions.
 - Check out the [Frontend Developers](https://discord.me/frontenddevelopers) Discord server.
 - Our learning partner, Scrimba, provides a [strong community and collaboration experience](https://v2.scrimba.com/the-frontend-developer-career-path-c0j/~0xyi?via=mdn) via their Discord server, intending to help their students gain experience in working with others.
 
