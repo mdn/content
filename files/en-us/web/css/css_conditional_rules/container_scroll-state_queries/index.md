@@ -795,10 +795,11 @@ Try scrolling the document down and up, and note how the `<h2>` elements transit
 
 ## See also
 
-- CSS {{Cssxref("container-name")}} property
-- CSS {{Cssxref("container-type")}} property
-- CSS {{Cssxref("@container")}} at-rule
-- [CSS conditional rules](/en-US/docs/Web/CSS/CSS_conditional_rules) module
-- [Using CSS media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- {{Cssxref("container-name")}}
+- {{Cssxref("container-type")}}
+- {{Cssxref("position")}}
+- {{Cssxref("@container")}}
 - [CSS container queries](/en-US/docs/Web/CSS/CSS_containment/Container_queries)
 - [Using container size and style queries](/en-US/docs/Web/CSS/CSS_containment/Container_size_and_style_queries)
+- [CSS conditional rules](/en-US/docs/Web/CSS/CSS_conditional_rules) module
+- [CSS positioning](/en-US/docs/Web/CSS/CSS_positioning) module
