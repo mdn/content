@@ -140,7 +140,7 @@ This module adds properties and methods to interfaces defined in other specifica
   - {{domxref("MouseEvent.x", "x")}}
   - {{domxref("MouseEvent.y", "y")}}
 
-This module define geometric utility methods which will apply to the {{domxref("Text")}}, {{domxref("Text")}}, {{domxref("Text")}}, and {{domxref("CSSPseudoElement")}} interfaces. These `GeometryUtils` features are not yet implemented in any browsers.
+This module define geometric utility methods which will apply to the {{domxref("Text")}}, {{domxref("Element")}}, {{domxref("CSSPseudoElement")}}, and {{domxref("Document")}} interfaces. These `GeometryUtils` features are not yet implemented in any browsers.
 
 ## Guides
 
