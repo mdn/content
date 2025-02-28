@@ -6,7 +6,7 @@ browser-compat: webdriver.commands.GetTimeouts
 sidebar: webdriver
 ---
 
-The _Get Timeouts_ [command](/en-US/docs/Web/WebDriver/Reference/Commands) of the [WebDriver](/en-US/docs/Web/WebDriver) API returns the timeouts associated with the current session. The [session timeout](/en-US/docs/Web/WebDriver/Guides/Timeouts) durations control such behavior as timeouts on [script injection](/en-US/docs/Web/WebDriver/Guides/Timeouts#script), [document navigation](/en-US/docs/Web/WebDriver/Guides/Timeouts#pageload), and [element retrieval](/en-US/docs/Web/WebDriver/Guides/Timeouts#implicit).
+The _Get Timeouts_ [command](/en-US/docs/Web/WebDriver/Reference/Commands) of the [WebDriver](/en-US/docs/Web/WebDriver) API returns the timeouts associated with the current session. The [session timeout](/en-US/docs/Web/WebDriver/Reference/Timeouts) durations control such behavior as timeouts on [script injection](/en-US/docs/Web/WebDriver/Reference/Timeouts#script), [document navigation](/en-US/docs/Web/WebDriver/Reference/Timeouts#pageload), and [element retrieval](/en-US/docs/Web/WebDriver/Reference/Timeouts#implicit).
 
 ## Syntax
 
@@ -21,7 +21,7 @@ The _Get Timeouts_ [command](/en-US/docs/Web/WebDriver/Reference/Commands) of th
 
 ### Response
 
-The response payload is a [`Timeouts`](/en-US/docs/Web/WebDriver/Guides/Timeouts) object:
+The response payload is a [`Timeouts`](/en-US/docs/Web/WebDriver/Reference/Timeouts) object:
 
 - `implicit`
   - : Time in milliseconds to retry the [element location strategy](/en-US/docs/Web/WebDriver/WebElement) when finding an element. This defaults to 0, meaning the strategy is run only once.
@@ -45,6 +45,6 @@ The response payload is a [`Timeouts`](/en-US/docs/Web/WebDriver/Guides/Timeouts
 
 ## See also
 
-- [`Timeouts`](/en-US/docs/Web/WebDriver/Guides/Timeouts) object
+- [`Timeouts`](/en-US/docs/Web/WebDriver/Reference/Timeouts) object
 - [Set Timeouts](/en-US/docs/Web/WebDriver/Reference/Commands/SetTimeouts) command
 - [List of WebDriver commands](/en-US/docs/Web/WebDriver/Reference/Commands)

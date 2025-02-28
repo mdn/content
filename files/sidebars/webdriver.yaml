@@ -4,11 +4,10 @@ sidebar:
   - type: section
     link: /Web/WebDriver
     title: WebDriver
-  - type: listSubPages
-    path: /Web/WebDriver/Guides
-    link: /Web/WebDriver/Guides
   - type: section
     link: /Web/WebDriver/Reference
+  - link: /Web/WebDriver/Reference/Timeouts
+    title: Timeouts
   - type: listSubPages
     path: /Web/WebDriver/Reference/Commands
     link: /Web/WebDriver/Reference/Commands

@@ -6,7 +6,7 @@ browser-compat: webdriver.commands.SetTimeouts
 sidebar: webdriver
 ---
 
-The _Set Timeouts_ [command](/en-US/docs/Web/WebDriver/Reference/Commands) of the [WebDriver](/en-US/docs/Web/WebDriver) API sets the timeouts associated with the current session. The [session timeout](/en-US/docs/Web/WebDriver/Guides/Timeouts) durations control such behavior as timeouts on [script injection](/en-US/docs/Web/WebDriver/Guides/Timeouts#script), [document navigation](/en-US/docs/Web/WebDriver/Guides/Timeouts#pageload), and [element retrieval](/en-US/docs/Web/WebDriver/Guides/Timeouts#implicit).
+The _Set Timeouts_ [command](/en-US/docs/Web/WebDriver/Reference/Commands) of the [WebDriver](/en-US/docs/Web/WebDriver) API sets the timeouts associated with the current session. The [session timeout](/en-US/docs/Web/WebDriver/Reference/Timeouts) durations control such behavior as timeouts on [script injection](/en-US/docs/Web/WebDriver/Reference/Timeouts#script), [document navigation](/en-US/docs/Web/WebDriver/Reference/Timeouts#pageload), and [element retrieval](/en-US/docs/Web/WebDriver/Reference/Timeouts#implicit).
 
 ## Syntax
 
@@ -21,7 +21,7 @@ The _Set Timeouts_ [command](/en-US/docs/Web/WebDriver/Reference/Commands) of th
 
 ### Payload
 
-The input is a [`Timeouts`](/en-US/docs/Web/WebDriver/Guides/Timeouts) object:
+The input is a [`Timeouts`](/en-US/docs/Web/WebDriver/Reference/Timeouts) object:
 
 - `implicit`
   - : Time in milliseconds to retry the [element location strategy](/en-US/docs/Web/WebDriver/WebElement) when finding an element. This defaults to 0, meaning the strategy is run only once.
@@ -45,5 +45,5 @@ The input is a [`Timeouts`](/en-US/docs/Web/WebDriver/Guides/Timeouts) object:
 
 ## See also
 
-- [`Timeouts`](/en-US/docs/Web/WebDriver/Guides/Timeouts) object
+- [`Timeouts`](/en-US/docs/Web/WebDriver/Reference/Timeouts) object
 - [List of WebDriver commands](/en-US/docs/Web/WebDriver/Reference/Commands)

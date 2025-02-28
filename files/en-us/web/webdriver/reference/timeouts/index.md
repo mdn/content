@@ -1,8 +1,8 @@
 ---
 title: WebDriver timeouts
 short-title: Timeouts
-slug: Web/WebDriver/Guides/Timeouts
-page-type: guide
+slug: Web/WebDriver/Reference/Timeouts
+page-type: reference
 sidebar: webdriver
 ---
 

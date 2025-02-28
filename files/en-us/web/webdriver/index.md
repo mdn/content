@@ -44,30 +44,17 @@ This might produce output akin to this:
 
 ## Reference
 
-### Commands
+- [Timeouts](/en-US/docs/Web/WebDriver/Reference/Timeouts)
 
-[Commands](/en-US/docs/Web/WebDriver/Reference/Commands)
+### [Commands](/en-US/docs/Web/WebDriver/Reference/Commands)
 
 {{ListSubpages("/en-US/docs/Web/WebDriver/Reference/Commands")}}
 
-### Types
-
-[Types](/en-US/docs/Web/WebDriver/Types)
-
-- [Error object](/en-US/docs/Web/WebDriver/Reference/Errors#payload)
-- [Timeouts object](/en-US/docs/Web/WebDriver/Guides/Timeouts)
-- [WebElement](/en-US/docs/Web/WebDriver/WebElement)
-- [WebWindow](/en-US/docs/Web/WebDriver/WebWindow)
-
-### Capabilities
-
-[Capabilities](/en-US/docs/Web/WebDriver/Reference/Capabilities)
+### [Capabilities](/en-US/docs/Web/WebDriver/Reference/Capabilities)
 
 {{ListSubpages("/en-US/docs/Web/WebDriver/Reference/Capabilities")}}
 
-### Errors
-
-[Errors](/en-US/docs/Web/WebDriver/Reference/Errors)
+### [Errors](/en-US/docs/Web/WebDriver/Reference/Errors)
 
 {{ListSubpages("/en-US/docs/Web/WebDriver/Reference/Errors")}}
 
