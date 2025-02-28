@@ -257,7 +257,7 @@ We've given the `.back-to-top` `<div>` containing the "back to top" link a {{css
   bottom: 10px;
   right: 10px;
   translate: 80px 0;
-  transition: 0.4s translate;
+  transition: 0.4s;
 }
 ```
 
