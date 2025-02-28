@@ -40,39 +40,28 @@ Closing the dialog with the <kbd>Esc</kbd> key has no impact on the returnValue.
   const declineButton = document.getElementById("declineButton");
   const acceptButton = document.getElementById("acceptButton");
 
-  function openCheck(dialog) {
-    if (dialog.open) {
-      statusText.innerText = "Dialog open";
-    } else {
-      statusText.innerText = "Dialog closed";
-    }
-  }
-
   function handleUserInput(returnValue) {
     if (!returnValue) {
-      statusText.innerText += ". There was no return value";
+      statusText.innerText = "There was no return value";
     } else {
-      statusText.innerText += ". Return value: " + returnValue;
+      statusText.innerText = "Return value: " + returnValue;
     }
   }
 
   openDialog.addEventListener("click", () => {
     dialog.showModal();
-    openCheck(dialog);
     handleUserInput(dialog.returnValue);
   });
 
-  declineButton.addEventListener("click", () => {
-    dialog.close("declined");
-    openCheck(dialog);
-    handleUserInput(dialog.returnValue);
-  });
+  declineButton.addEventListener("click", closeDialog);
+  acceptButton.addEventListener("click", closeDialog);
 
-  acceptButton.addEventListener("click", () => {
-    dialog.close("accepted");
-    openCheck(dialog);
+  function closeDialog(event) {
+    const button = event.target;
+    const returnValue = button.value;
+    dialog.close(returnValue);
     handleUserInput(dialog.returnValue);
-  });
+  }
 
   dialog.addEventListener("close", () => {
     openCheck(dialog);
