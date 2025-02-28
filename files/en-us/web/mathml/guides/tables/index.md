@@ -270,7 +270,7 @@ Besides representing matrix-like objects, MathML tables are sometimes used for a
 {{ EmbedLiveSample('Usage_for_advanced_layout', 700, 200, "", "") }}
 
 > [!WARNING]
-> The [`<mtable>` article](/en-US/docs/Web/MathML/Element/mtable) provides more advanced layout options via special attributes such as alignment or spacing. These originated before CSS equivalents and were originally designed and intended for renderers which were not-CSS aware. However, these attributes may not be implemented in all browsers. In the future, it is likely that usages of `<mtable>` for layout-only purpose (i.e. not actual matrix-like objects) can be replaced with CSS-based alternatives.
+> The [`<mtable>` article](/en-US/docs/Web/MathML/Reference/Element/mtable) provides more advanced layout options via special attributes such as alignment or spacing. These originated before CSS equivalents and were originally designed and intended for renderers which were not-CSS aware. However, these attributes may not be implemented in all browsers. In the future, it is likely that usages of `<mtable>` for layout-only purpose (i.e. not actual matrix-like objects) can be replaced with CSS-based alternatives.
 
 ## Summary
 
@@ -281,8 +281,8 @@ You've nearly finished this module — we only have one more thing to do. In the
 ## See also
 
 - [Learning about HTML tables](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics)
-- [The `<mtable>` element](/en-US/docs/Web/MathML/Element/mtable)
-- [The `<mtr>` element](/en-US/docs/Web/MathML/Element/mtr)
-- [The `<mtd>` element](/en-US/docs/Web/MathML/Element/mtd)
+- [The `<mtable>` element](/en-US/docs/Web/MathML/Reference/Element/mtable)
+- [The `<mtr>` element](/en-US/docs/Web/MathML/Reference/Element/mtr)
+- [The `<mtd>` element](/en-US/docs/Web/MathML/Reference/Element/mtd)
 
 {{PreviousMenuNext("Web/MathML/Guides/Scripts", "Web/MathML/Guides/Three_famous_mathematical_formulas", "Web/MathML/Guides")}}

@@ -266,7 +266,7 @@ As previously seen, the overbar of the `<msqrt>` and `<mroot>` elements stretche
 {{ EmbedLiveSample('Stretchy_radical_symbols', 700, 200, "", "") }}
 
 > [!WARNING]
-> Special [math fonts](/en-US/docs/Web/MathML/Fonts) are generally required to make that stretching possible, the previous example relies on [web fonts](/en-US/docs/Learn_web_development/Core/Text_styling/Web_fonts).
+> Special [math fonts](/en-US/docs/Web/MathML/Guides/Fonts) are generally required to make that stretching possible, the previous example relies on [web fonts](/en-US/docs/Learn_web_development/Core/Text_styling/Web_fonts).
 
 ## Fractions without bar
 
@@ -309,8 +309,8 @@ In this lesson, we've seen how to build fractions and roots using the `<mfrac>`,
 
 ## See also
 
-- [The `<mfrac>` element](/en-US/docs/Web/MathML/Element/mfrac)
-- [The `<msqrt>` element](/en-US/docs/Web/MathML/Element/msqrt)
-- [The `<mroot>` element](/en-US/docs/Web/MathML/Element/mroot)
+- [The `<mfrac>` element](/en-US/docs/Web/MathML/Reference/Element/mfrac)
+- [The `<msqrt>` element](/en-US/docs/Web/MathML/Reference/Element/msqrt)
+- [The `<mroot>` element](/en-US/docs/Web/MathML/Reference/Element/mroot)
 
 {{PreviousMenuNext("Web/MathML/Guides/Text_containers", "Web/MathML/Guides/Scripts", "Web/MathML/Guides")}}

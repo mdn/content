@@ -112,6 +112,6 @@ To get this assessment started, you can rely on our usual HTML template. By defa
 - Don't forget to rely on `<mrow>` for grouping subexpressions.
 - Pay attention to stretchy and large operators!
 - Use the [W3C validator](https://validator.w3.org/nu/) to catch unintended mistakes in your HTML/MathML markup.
-- If you are stuck, or realize how painful it is to write MathML by hand, feel free to use tools to help [write MathML](/en-US/docs/Web/MathML/Authoring) such as [TeXZilla](https://fred-wang.github.io/TeXZilla/).
+- If you are stuck, or realize how painful it is to write MathML by hand, feel free to use tools to help [write MathML](/en-US/docs/Web/MathML/Guides/Authoring) such as [TeXZilla](https://fred-wang.github.io/TeXZilla/).
 
 {{PreviousMenu("Web/MathML/Guides/Tables", "Web/MathML/Guides")}}

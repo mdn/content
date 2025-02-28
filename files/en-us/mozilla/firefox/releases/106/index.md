@@ -17,7 +17,7 @@ This article provides information about the changes in Firefox 106 that will aff
 
 ### MathML
 
-- The [`<semantics>`](/en-US/docs/Web/MathML/Element/semantics) and [`<maction>`](/en-US/docs/Web/MathML/Element/maction) MathML elements now only render the first child element by default ([Firefox bug 1588733](https://bugzil.la/1588733)).
+- The [`<semantics>`](/en-US/docs/Web/MathML/Reference/Element/semantics) and [`<maction>`](/en-US/docs/Web/MathML/Reference/Element/maction) MathML elements now only render the first child element by default ([Firefox bug 1588733](https://bugzil.la/1588733)).
 
 ### CSS
 
