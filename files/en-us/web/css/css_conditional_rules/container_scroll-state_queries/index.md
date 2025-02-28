@@ -12,7 +12,7 @@ This article explains how to use container scroll-state queries, walking through
 
 ## Types of container scroll-state query
 
-There are three scroll-state descriptors you can use:
+There are three `@container` descriptors you can use in a `scroll-state()` query:
 
 - `scrollable` tests whether a container can be scrolled in the given direction via user-initiated scrolling (for example by dragging the scrollbar or using a trackpad gesture). In other words, is there any overflowing content in the given direction that can be scrolled to? This is useful for applying styling related to the scroll position of a scroll container. For example, you might want to display a hint that encourages people to scroll down and see more content when the scrollbar is up at the top, but hide it when the user has actually started scrolling.
 - `snapped` tests whether a container is, or will be, snapped to a [scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap) container ancestor along a given axis. Containers designated as scroll snap targets on which the [`scrollsnapchanging`](/en-US/docs/Web/API/Element/scrollsnapchanging_event) event is firing will match the `snapped` descriptor. This is useful for applying styles when an element is snapped to a scroll snap container. For example, you might want to highlight a snapped element in some way, or reveal some of its content that was previously hidden.
