@@ -12,11 +12,11 @@ A `menuitemradio` is checkable menuitem in a set of elements with the same role,
 
 ## Description
 
-The items in menu and menubars are menu items. There are three types of menu items: [`menuitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role), [`menuitemcheckbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role), and `menuitemradio`. To limit the number of checked menu items to one within a group, use the `menuitemradio` role on all the elements in the group.
+The items in menu and menubars are menu items. There are three types of menu items: [`menuitem`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitem_role), [`menuitemcheckbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemcheckbox_role), and `menuitemradio`. To limit the number of checked menu items to one within a group, use the `menuitemradio` role on all the elements in the group.
 
 A `menuitemradio` is checkable menuitem in a set of elements with the same role, of which only can be checked at a time.
 
-The three menu item elements can only be contained in, or owned by, an element with role [`menu`](/en-US/docs/Web/Accessibility/ARIA/Roles/menu_role) or [`menubar`](/en-US/docs/Web/Accessibility/ARIA/Roles/menubar_role), optionally nested within a grouping element with role of [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role). Being nested or otherwise owned (see [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-owns)) in a `menu` or `menubar` identifies the menu items as being related widgets.
+The three menu item elements can only be contained in, or owned by, an element with role [`menu`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menu_role) or [`menubar`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menubar_role), optionally nested within a grouping element with role of [`group`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/group_role). Being nested or otherwise owned (see [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-owns)) in a `menu` or `menubar` identifies the menu items as being related widgets.
 
 When all items in a submenu are members of the same radio group, the `group` is defined by the menu element; the `group` element is not necessary.
 
@@ -38,7 +38,7 @@ The `menuitemradio` element can have phrasing content, but can not have interact
 
 ### All descendants are presentational
 
-There are some types of user interface components that, when represented in a platform accessibility API, can only contain text. Accessibility APIs do not have a way of representing semantic elements contained in a `menuitemradio`. To deal with this limitation, browsers, automatically apply role [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role) to all descendant elements of any `menuitemradio` element as it is a role that does not support semantic children.
+There are some types of user interface components that, when represented in a platform accessibility API, can only contain text. Accessibility APIs do not have a way of representing semantic elements contained in a `menuitemradio`. To deal with this limitation, browsers, automatically apply role [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role) to all descendant elements of any `menuitemradio` element as it is a role that does not support semantic children.
 
 For example, consider the following `menuitemradio` element, which contains a heading.
 
@@ -60,11 +60,11 @@ From the assistive technology user's perspective, the heading does not exist sin
 
 ### Associated WAI-ARIA roles, states, and properties
 
-- [`menu`](/en-US/docs/Web/Accessibility/ARIA/Roles/menu_role) role
+- [`menu`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menu_role) role
   - : Widget that offers a list of common actions or functions the user can invoke.
-- [`menubar`](/en-US/docs/Web/Accessibility/ARIA/Roles/menubar_role) role
+- [`menubar`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menubar_role) role
   - : Similar to `menu` for a consistent set of frequently used commands remaining visible and usually presented horizontally.
-- [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role) role
+- [`group`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/group_role) role
   - : Container for a group of `menuitem` elements, including `menuitemradio` elements within a `menu` or `menubar`.
 - [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-checked) (Required)
   - : Set to `true` or `false`, it indicates the current "checked" state of the menuitemradio
@@ -145,5 +145,5 @@ The first rule of ARIA is: if a native HTML element or attribute has the semanti
 
 ## See also
 
-- [`radio` role](/en-US/docs/Web/Accessibility/ARIA/Roles/radio_role)
+- [`radio` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/radio_role)
 - [`<input type="radio">`](/en-US/docs/Web/HTML/Element/input/radio)

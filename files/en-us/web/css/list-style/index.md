@@ -76,7 +76,7 @@ The `list-style` property is specified as one, two, or three values in any order
 
 Safari does not recognize ordered or unordered lists as lists in the accessibility tree if they have a `list-style` value of `none`, unless the list is nested within the {{HTMLElement("nav")}} navigation element. This [behavior is intentional](https://webkit.org/b/170179#c1) and is not considered a bug.
 
-To ensure lists are announced as lists, include [`role="list"`](/en-US/docs/Web/Accessibility/ARIA/Roles/list_role) to {{HTMLElement("ol")}} and {{HTMLElement("ul")}} elements, especially if the list is not nested in a `<nav>`. This restores list semantics without affecting the design:
+To ensure lists are announced as lists, include [`role="list"`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/list_role) to {{HTMLElement("ol")}} and {{HTMLElement("ul")}} elements, especially if the list is not nested in a `<nav>`. This restores list semantics without affecting the design:
 
 ```html
 <ul role="list">

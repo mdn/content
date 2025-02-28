@@ -12,7 +12,7 @@ A `tree` is a widget that allows the user to select one or more items from a hie
 
 ## Description
 
-A `tree` widget is a hierarchical list with parent and child nodes that can expand and collapse. Any item in the hierarchy may have child tree items, set with [`role="treeitem"`](/en-US/docs/Web/Accessibility/ARIA/Roles/treeitem_role). Tree items that have children can be expanded or collapsed, showing and hiding their children.
+A `tree` widget is a hierarchical list with parent and child nodes that can expand and collapse. Any item in the hierarchy may have child tree items, set with [`role="treeitem"`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/treeitem_role). Tree items that have children can be expanded or collapsed, showing and hiding their children.
 
 An example of a `tree` is a file system selection user interface: a tree view displaying folders and files. Folder items can be expanded to reveal the contents of the folder — which may be files, folders, or both — and collapsed, hiding its contents.
 
@@ -39,7 +39,7 @@ In a tree view, the `tree` node is the root node; it can have child, grandchild,
 
 Each element serving as a tree node has role `treeitem`, except for the root tree node which has a role of `tree`. A `tree` does not have a parent `tree` node - it is the root node. If a node is both nested in a tree and has descendant tree items, then it has the role `treeitem` and the [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded) attribute; `aria-expanded="false"` is set when the node is in a closed state, `aria-expanded="true"` is set when the node is in an open state.
 
-`treeitem` nodes can be direct children of the `tree` root node, nested within a `treeitem` node, or, optionally nested in a [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role) element, which, when nested in a `tree` is an expandable collection of treeitem elements.
+`treeitem` nodes can be direct children of the `tree` root node, nested within a `treeitem` node, or, optionally nested in a [`group`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/group_role) element, which, when nested in a `tree` is an expandable collection of treeitem elements.
 
 Do not include `aria-expanded` on end nodes — those without tree item children — as that would incorrectly describe the node as a parent node to assistive technologies.
 
@@ -59,9 +59,9 @@ Elements with the role `tree` have an implicit [`aria-orientation`](/en-US/docs/
 
 ### Associated WAI-ARIA roles, states, and properties
 
-- [`role="treeitem"`](/en-US/docs/Web/Accessibility/ARIA/Roles/treeitem_role)
+- [`role="treeitem"`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/treeitem_role)
   - : An item in a tree.
-- [`role="group"`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role)
+- [`role="group"`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/group_role)
   - : An expandable collection of tree items.
 - [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby)
   - : Identifies the element (or elements) that labels the `tree` providing the required accessible name when a visible label is present. Otherwise use `aria-label`.

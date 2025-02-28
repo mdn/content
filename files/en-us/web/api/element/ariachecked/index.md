@@ -58,4 +58,4 @@ console.log(el.ariaChecked); // "true"
 
 ## See also
 
-- [ARIA: checkbox role](/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role)
+- [ARIA: checkbox role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role)

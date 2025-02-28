@@ -23,11 +23,11 @@ In addition to including the [`tabindex`](/en-US/docs/Web/HTML/Global_attributes
 
 ### ARIA range widget options
 
-ARIA provides developers with six different range [widget roles](/en-US/docs/Web/Accessibility/ARIA/Roles#2._widget_roles), including `progressbar`, `meter`, `slider`, and `spinbutton`.
+ARIA provides developers with six different range [widget roles](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles#2._widget_roles), including `progressbar`, `meter`, `slider`, and `spinbutton`.
 
-The [`progressbar`](/en-US/docs/Web/Accessibility/ARIA/Roles/progressbar_role) role, similar to HTML's {{HTMLElement('progress')}} element, is a read-only range. It indicates the portion of completion of a task, progressing in a single direction, such as a file upload's loading progress bar that eventually reaches 100% when fully loaded.
+The [`progressbar`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/progressbar_role) role, similar to HTML's {{HTMLElement('progress')}} element, is a read-only range. It indicates the portion of completion of a task, progressing in a single direction, such as a file upload's loading progress bar that eventually reaches 100% when fully loaded.
 
-The [`meter`](/en-US/docs/Web/Accessibility/ARIA/Roles/meter_role) role, similar to HTML's {{HTMLElement('meter')}} element, is a read-only gauge. It indicates the amount of something within a known range, such as a computer's battery indicator or a car's gas gauge.
+The [`meter`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/meter_role) role, similar to HTML's {{HTMLElement('meter')}} element, is a read-only gauge. It indicates the amount of something within a known range, such as a computer's battery indicator or a car's gas gauge.
 
 The `slider` role, similar to HTML's `input` of type `range`, [`<input type="range">`](/en-US/docs/Web/HTML/Element/input/range), is a read-write input range. Sliders allow users to select a value between the predefined minimum and maximum values. The user selects a value by moving a slider thumb along a horizontal or vertical slider to select a value.
 
@@ -154,11 +154,11 @@ It is recommended to use the native {{HTMLElement("input")}} element of type `nu
 - [`<input type="date">`](/en-US/docs/Web/HTML/Element/input/date)
 - [`<input type="time">`](/en-US/docs/Web/HTML/Element/input/time)
 - Other range widgets include:
-  - [`meter`](/en-US/docs/Web/Accessibility/ARIA/Roles/meter_role)
-  - [`scrollbar`](/en-US/docs/Web/Accessibility/ARIA/Roles/scrollbar_role)
-  - [`separator`](/en-US/docs/Web/Accessibility/ARIA/Roles/separator_role) (if focusable)
-  - [`progressbar`](/en-US/docs/Web/Accessibility/ARIA/Roles/progressbar_role)
-  - [`slider`](/en-US/docs/Web/Accessibility/ARIA/Roles/slider_role)
+  - [`meter`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/meter_role)
+  - [`scrollbar`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/scrollbar_role)
+  - [`separator`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/separator_role) (if focusable)
+  - [`progressbar`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/progressbar_role)
+  - [`slider`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/slider_role)
 - Working examples:
   - [Date picker spin button example](https://www.w3.org/WAI/ARIA/apg/patterns/spinbutton/examples/datepicker-spinbuttons/)
   - [Toolbar example: font-size picker](https://www.w3.org/WAI/ARIA/apg/patterns/toolbar/examples/toolbar/)

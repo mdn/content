@@ -23,7 +23,7 @@ If the `progressbar` role is applied to an HTML {{HTMLElement('progress')}} elem
 
 ### All descendants are presentational
 
-There are some types of user interface components that, when represented in a platform accessibility API, can only contain text. Accessibility APIs do not have a way of representing semantic elements contained in a `progressbar`. To deal with this limitation, browsers, automatically apply role [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role) to all descendant elements of any `progressbar` element as it is a role that does not support semantic children.
+There are some types of user interface components that, when represented in a platform accessibility API, can only contain text. Accessibility APIs do not have a way of representing semantic elements contained in a `progressbar`. To deal with this limitation, browsers, automatically apply role [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role) to all descendant elements of any `progressbar` element as it is a role that does not support semantic children.
 
 For example, consider the following `progressbar` element, which contains a heading.
 
@@ -99,8 +99,8 @@ It is recommended to use a native {{HTMLElement("progress")}} or [`<input type="
 
 - HTML {{HTMLElement('progress')}} element
 - Other range widgets include:
-  - [`meter`](/en-US/docs/Web/Accessibility/ARIA/Roles/meter_role)
-  - [`scrollbar`](/en-US/docs/Web/Accessibility/ARIA/Roles/scrollbar_role)
-  - [`separator`](/en-US/docs/Web/Accessibility/ARIA/Roles/separator_role) (if focusable)
-  - [`slider`](/en-US/docs/Web/Accessibility/ARIA/Roles/slider_role)
-  - [`spinbutton`](/en-US/docs/Web/Accessibility/ARIA/Roles/spinbutton_role)
+  - [`meter`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/meter_role)
+  - [`scrollbar`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/scrollbar_role)
+  - [`separator`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/separator_role) (if focusable)
+  - [`slider`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/slider_role)
+  - [`spinbutton`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/spinbutton_role)

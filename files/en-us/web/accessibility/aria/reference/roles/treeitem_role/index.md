@@ -12,7 +12,7 @@ A `treeitem` is an item in a `tree`.
 
 ## Description
 
-A [`tree`](/en-US/docs/Web/Accessibility/ARIA/Roles/tree_role) is a hierarchical list with parent and child nodes that can expand and collapse. A `treeitem` is a node in a `tree`. The root of the tree is `tree`, but all tree nodes are `treeitem` elements, even if they themselves have nested `treeitem` nodes.
+A [`tree`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tree_role) is a hierarchical list with parent and child nodes that can expand and collapse. A `treeitem` is a node in a `tree`. The root of the tree is `tree`, but all tree nodes are `treeitem` elements, even if they themselves have nested `treeitem` nodes.
 
 An example of a `tree` is a file system selection user interface: a tree view displaying folders and files. Each folder and file is a `treeitem`. Folder items, which are `treeitem` elements, can be expanded to reveal the contents of the folder—which may be files, folders, or both, and are all `treeitems`—and collapsed, hiding its contents.
 
@@ -20,7 +20,7 @@ In a tree hierarchy, the _root node_ has the role `tree`. All other nodes, other
 
 Tree items that have children can be expanded or collapsed, showing and hiding their children. A parent node that is expanded so its child nodes are visible is an **open node**. A parent node that is collapsed so the child nodes are not visible is a **closed node**.
 
-Each parent node contains or owns an element with role [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role). A parent node is an expandable collection of `treeitem` elements. These child nodes are not direct descendants of the parent node: rather, they should be enclosed in an element with the `group` role.
+Each parent node contains or owns an element with role [`group`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/group_role). A parent node is an expandable collection of `treeitem` elements. These child nodes are not direct descendants of the parent node: rather, they should be enclosed in an element with the `group` role.
 
 Each parent node should include the [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded) attribute. It is set to `false` when closed `true` when open. End nodes should not have the `aria-expanded` attribute included as the presence of the attribute indicates to assistive technologies that the node is a parent.
 
@@ -53,9 +53,9 @@ A `treeitem` is required to have an accessible name. Generally, that name comes 
 
 ### Associated WAI-ARIA roles, states, and properties
 
-- [`tree`](/en-US/docs/Web/Accessibility/ARIA/Roles/tree_role) role
+- [`tree`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tree_role) role
   - : The root node for the hierarchical list of parent and child `treeitem` nodes that can expand and collapse
-- [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role) role
+- [`group`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/group_role) role
   - : Identifies a set of `treeitem` child nodes.
 - [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded)
   - : Set on the root `tree` and on `group` nodes that are parents of `treeitem` nodes, to indicate whether the tree view is expanded (`true`) or collapsed (`false`).

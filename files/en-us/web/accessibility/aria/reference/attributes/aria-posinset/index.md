@@ -31,9 +31,9 @@ The value of each `aria-posinset` is an integer greater than or equal to `1`, an
 > [!NOTE]
 > When using `aria-posinset` you must also include value for [`aria-setsize`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-setsize), which is the size of the entire set. If the size of the entire set is unknown, set `aria-setsize="-1"`.
 
-For [`menuitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role), [`menuitemcheckbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role), or [`menuitemradio`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role), set the value of `aria-posinset` with respect to the total number of items in the menu, excluding any separators.
+For [`menuitem`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitem_role), [`menuitemcheckbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemcheckbox_role), or [`menuitemradio`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemradio_role), set the value of `aria-posinset` with respect to the total number of items in the menu, excluding any separators.
 
-In a [`feed`](/en-US/docs/Web/Accessibility/ARIA/Roles/feed_role), each {{HTMLElement('article')}} element has `aria-posinset` set to a value that represents its position in the feed along with the `aria-setsize` set to either the number of articles that have been loaded or the total number in the feed, depending on which value is most helpful to users.
+In a [`feed`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/feed_role), each {{HTMLElement('article')}} element has `aria-posinset` set to a value that represents its position in the feed along with the `aria-setsize` set to either the number of articles that have been loaded or the total number in the feed, depending on which value is most helpful to users.
 
 ## Values
 
@@ -51,23 +51,23 @@ In a [`feed`](/en-US/docs/Web/Accessibility/ARIA/Roles/feed_role), each {{HTMLEl
 
 Used in roles:
 
-- [`article`](/en-US/docs/Web/Accessibility/ARIA/Roles/article_role)
-- [`associationlistitemkey`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles)
-- [`associationlistitemvalue`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles)
-- [`comment`](/en-US/docs/Web/Accessibility/ARIA/Roles/comment_role)
-- [`listitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/listitem_role)
-- [`menuitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role)
-- [`option`](/en-US/docs/Web/Accessibility/ARIA/Roles/option_role)
-- [`radio`](/en-US/docs/Web/Accessibility/ARIA/Roles/radio_role)
-- [`row`](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role)
-- [`tab`](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role)
+- [`article`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/article_role)
+- [`associationlistitemkey`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
+- [`associationlistitemvalue`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
+- [`comment`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/comment_role)
+- [`listitem`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/listitem_role)
+- [`menuitem`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitem_role)
+- [`option`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/option_role)
+- [`radio`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/radio_role)
+- [`row`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/row_role)
+- [`tab`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role)
 
 Inherits into roles:
 
-- [`comment`](/en-US/docs/Web/Accessibility/ARIA/Roles/comment_role)
-- [`menuitemcheckbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role)
-- [`menuitemradio`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role)
-- [`treeitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/treeitem_role)
+- [`comment`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/comment_role)
+- [`menuitemcheckbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemcheckbox_role)
+- [`menuitemradio`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemradio_role)
+- [`treeitem`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/treeitem_role)
 
 ## Specifications
 

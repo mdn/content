@@ -308,7 +308,7 @@ To compare scroll snapping to regular scrolling, check the "disable snapping" ch
 - Element {{domxref("Element.scrollTo", "scrollTo()")}} method
 - Element {{domxref("Element.scroll_event", "scroll")}} event
 - Element {{domxref("Element.scrollend_event", "scrollend")}} event
-- [`scrollbar`](/en-US/docs/Web/Accessibility/ARIA/Roles/scrollbar_role) ARIA role
+- [`scrollbar`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/scrollbar_role) ARIA role
 - {{Glossary("Scroll container")}} glossary term
 
 ## Specifications

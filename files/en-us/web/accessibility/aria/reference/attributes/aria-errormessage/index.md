@@ -59,7 +59,7 @@ When an object is invalid, we use JavaScript to add `aria-invalid="true"`. The a
 </p>
 ```
 
-When we went from valid to invalid, the only JavaScript change for this example was an update to `aria-invalid` on the email input object. As the error message follows the input and becomes visible and available on the accessibility tree, we are able to keep our example simple. We could have also applied an [`aria-live`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-live) property or used a live region roles such as [`alert`](/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role).
+When we went from valid to invalid, the only JavaScript change for this example was an update to `aria-invalid` on the email input object. As the error message follows the input and becomes visible and available on the accessibility tree, we are able to keep our example simple. We could have also applied an [`aria-live`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-live) property or used a live region roles such as [`alert`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/alert_role).
 
 ## Values
 
@@ -70,24 +70,24 @@ When we went from valid to invalid, the only JavaScript change for this example 
 
 Used in roles:
 
-- [`application`](/en-US/docs/Web/Accessibility/ARIA/Roles/application_role)
-- [`checkbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role)
-- [`combobox`](/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role)
-- [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role)
-- [`listbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role)
-- [`radiogroup`](/en-US/docs/Web/Accessibility/ARIA/Roles/radiogroup_role)
-- [`slider`](/en-US/docs/Web/Accessibility/ARIA/Roles/slider_role)
-- [`spinbutton`](/en-US/docs/Web/Accessibility/ARIA/Roles/spinbutton_role)
-- [`textbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role)
-- [`tree`](/en-US/docs/Web/Accessibility/ARIA/Roles/tree_role)
+- [`application`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/application_role)
+- [`checkbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role)
+- [`combobox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role)
+- [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role)
+- [`listbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/listbox_role)
+- [`radiogroup`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/radiogroup_role)
+- [`slider`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/slider_role)
+- [`spinbutton`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/spinbutton_role)
+- [`textbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role)
+- [`tree`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tree_role)
 
 Inherits from roles:
 
-- [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role)
-- [`rowheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/rowheader_role)
-- [`searchbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/searchbox_role)
-- [`switch`](/en-US/docs/Web/Accessibility/ARIA/Roles/switch_role)
-- [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role)
+- [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role)
+- [`rowheader`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/rowheader_role)
+- [`searchbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/searchbox_role)
+- [`switch`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/switch_role)
+- [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/treegrid_role)
 
 ## Specifications
 

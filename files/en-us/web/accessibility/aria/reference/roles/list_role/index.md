@@ -27,7 +27,7 @@ There are no hard and fast rules about which elements you should use to mark up 
 
 ### Associated WAI-ARIA Roles, States, and Properties
 
-- [`listitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/listitem_role) role
+- [`listitem`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/listitem_role) role
   - : A single item in a list. Elements with role `listitem` can only be found in an element with the role `list`.
 
 ## Best practices
@@ -57,10 +57,10 @@ or use an ordered list if the order of the list items matters:
 > [!NOTE]
 > The ARIA `list` / `listitem` roles don't distinguish between ordered and unordered lists.
 
-As an aside, note that if you are using the semantic HTML elements of `<ol>` or `<ul>` and apply a role of [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role), each child `<li>` element inherits the `presentation` role because ARIA requires the `listitem` elements to have the parent `list` element. So, the `<li>` elements are not exposed to assistive technologies, but elements contained inside of those `<li>` elements, including nested lists, are visible to assistive technologies.
+As an aside, note that if you are using the semantic HTML elements of `<ol>` or `<ul>` and apply a role of [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role), each child `<li>` element inherits the `presentation` role because ARIA requires the `listitem` elements to have the parent `list` element. So, the `<li>` elements are not exposed to assistive technologies, but elements contained inside of those `<li>` elements, including nested lists, are visible to assistive technologies.
 
 > [!NOTE]
-> If you are marking up a list of items that will function as a tabbed interface, you should instead use the [`tab`](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role), [`tabpanel`](/en-US/docs/Web/Accessibility/ARIA/Roles/tabpanel_role), and [`tablist`](/en-US/docs/Web/Accessibility/ARIA/Roles/tablist_role) roles.
+> If you are marking up a list of items that will function as a tabbed interface, you should instead use the [`tab`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role), [`tabpanel`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tabpanel_role), and [`tablist`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tablist_role) roles.
 
 ## Specifications
 
@@ -71,7 +71,7 @@ As an aside, note that if you are using the semantic HTML elements of `<ol>` or 
 - The {{HTMLElement("ul")}} element
 - The {{HTMLElement("ol")}} element
 - The {{HTMLElement("li")}} element
-- [ARIA: listitem role](/en-US/docs/Web/Accessibility/ARIA/Roles/listitem_role)
+- [ARIA: listitem role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/listitem_role)
 - [ARIA Lists examples](https://www.scottohara.me/blog/2018/05/26/aria-lists.html) — by Scott O'Hara
 - [Accessibility Object Model](https://wicg.github.io/aom/spec/)
 - [ARIA in HTML](https://w3c.github.io/html-aria/)

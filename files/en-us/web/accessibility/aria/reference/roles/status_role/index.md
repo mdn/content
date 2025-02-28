@@ -6,7 +6,7 @@ spec-urls: https://w3c.github.io/aria/#status
 sidebar: accessibilitysidebar
 ---
 
-The `status` role defines a [live region](/en-US/docs/Web/Accessibility/ARIA/Guides/Live_regions) containing advisory information for the user that is not important enough to be an [`alert`](/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role).
+The `status` role defines a [live region](/en-US/docs/Web/Accessibility/ARIA/Guides/Live_regions) containing advisory information for the user that is not important enough to be an [`alert`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/alert_role).
 
 ## Description
 
@@ -36,8 +36,8 @@ Elements with the role status have an implicit [`aria-live`](/en-US/docs/Web/Acc
 
 ## See also
 
-- [ARIA: `alert` role](/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role)
-- [ARIA: `log` role](/en-US/docs/Web/Accessibility/ARIA/Roles/log_role)
-- [ARIA: `marquee` role](/en-US/docs/Web/Accessibility/ARIA/Roles/marquee_role)
-- [ARIA: `timer` role](/en-US/docs/Web/Accessibility/ARIA/Roles/timer_role)
+- [ARIA: `alert` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/alert_role)
+- [ARIA: `log` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/log_role)
+- [ARIA: `marquee` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/marquee_role)
+- [ARIA: `timer` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/timer_role)
 - [ARIA live regions](/en-US/docs/Web/Accessibility/ARIA/Guides/Live_regions)

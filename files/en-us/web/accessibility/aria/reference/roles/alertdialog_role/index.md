@@ -14,12 +14,12 @@ The **alertdialog** role is to be used on modal alert dialogs that interrupt a u
 
 The `alertdialog` role is used to notify users of urgent information that demands the user's immediate attention. Including `role="alertdialog"` on the element containing the dialog helps assistive technology identify the content as being grouped and separated from the rest of the page content. Examples include error messages that require confirmation and other action confirmation prompts.
 
-As the name implies, `alertdialog` is a mashup of the [`dialog`](/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role) and [`alert`](/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role) roles. `alertdialog` is a type of `dialog` with similar use cases as `alert`, but for when a user response is required.
+As the name implies, `alertdialog` is a mashup of the [`dialog`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/dialog_role) and [`alert`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/alert_role) roles. `alertdialog` is a type of `dialog` with similar use cases as `alert`, but for when a user response is required.
 
 > [!NOTE]
-> The `alertdialog` role should only be used for alert messages that have associated interactive controls. If an alert dialog only contains static content and has no interactive controls at all, use [`alert`](/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role) instead.
+> The `alertdialog` role should only be used for alert messages that have associated interactive controls. If an alert dialog only contains static content and has no interactive controls at all, use [`alert`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/alert_role) instead.
 
-Being a type of dialog, the [`dialog`](/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role) role's states, properties, and keyboard focus requirements are applicable to the `alertdialog` role as well.
+Being a type of dialog, the [`dialog`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/dialog_role) role's states, properties, and keyboard focus requirements are applicable to the `alertdialog` role as well.
 
 Because of its urgent nature, interrupting the user's workflow, alert dialogs should be [modal](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-modal).
 
@@ -100,8 +100,8 @@ The code snippet above shows how to mark up an alert dialog that only provides a
 ## See also
 
 - HTML {{HTMLElement("dialog")}} element
-- [The `dialog` role](/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role)
-- [The `alert` role](/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role)
+- [The `dialog` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/dialog_role)
+- [The `alert` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/alert_role)
 - [`aria-modal` attribute](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-modal)
 - [`Window.alert()`](/en-US/docs/Web/API/Window/alert)
 - [`Window.prompt()`](/en-US/docs/Web/API/Window/prompt)

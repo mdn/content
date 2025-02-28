@@ -14,11 +14,11 @@ The `slider` role is for range input widgets where the user selects a value from
 
 ### The `slider` role compared other range options
 
-ARIA provides developers with six different range [widget roles](/en-US/docs/Web/Accessibility/ARIA/Roles#2._widget_roles), including `progressbar`, `meter`, and `slider`.
+ARIA provides developers with six different range [widget roles](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles#2._widget_roles), including `progressbar`, `meter`, and `slider`.
 
-The [`progressbar`](/en-US/docs/Web/Accessibility/ARIA/Roles/progressbar_role) role, similar to HTML's {{HTMLElement('progress')}} element, is a read-only range indicating the portion of completion of a task, progressing in a single direction, such as a file upload's loading progress bar that eventually reaches 100% when fully loaded.
+The [`progressbar`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/progressbar_role) role, similar to HTML's {{HTMLElement('progress')}} element, is a read-only range indicating the portion of completion of a task, progressing in a single direction, such as a file upload's loading progress bar that eventually reaches 100% when fully loaded.
 
-The [`meter`](/en-US/docs/Web/Accessibility/ARIA/Roles/meter_role) role, similar to HTML's {{HTMLElement('meter')}} element, is a read-only gauge indicating the amount of something within a known range, such as a computer's battery indicator or a car's gas gauge.
+The [`meter`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/meter_role) role, similar to HTML's {{HTMLElement('meter')}} element, is a read-only gauge indicating the amount of something within a known range, such as a computer's battery indicator or a car's gas gauge.
 
 The `slider` role, similar to HTML's `input` of type `range`, [`<input type="range">`](/en-US/docs/Web/HTML/Element/input/range), is a read-write input range. Sliders allow users to select a value between set minimum and maximum values. The user selects a value by moving a slider thumb along a horizontal or vertical slider to select a value.
 
@@ -69,7 +69,7 @@ It is not a requirement that the thumbs in multi-thumb sliders be dependent on t
 
 ### All descendants are presentational
 
-There are some types of user interface components that, when represented in a platform accessibility API, can only contain text. Accessibility APIs do not have a way of representing semantic elements contained in a `slider`. To deal with this limitation, browsers, automatically apply role [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role) to all descendant elements of any `slider` element as it is a role that does not support semantic children.
+There are some types of user interface components that, when represented in a platform accessibility API, can only contain text. Accessibility APIs do not have a way of representing semantic elements contained in a `slider`. To deal with this limitation, browsers, automatically apply role [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role) to all descendant elements of any `slider` element as it is a role that does not support semantic children.
 
 For example, consider the following `slider` element, which contains a heading.
 
@@ -203,11 +203,11 @@ It is recommended to use a native {{HTMLElement("input")}} of type `range`, [`<i
 - HTML {{HTMLElement('progress')}} element
 - HTML {{HTMLElement('meter')}} element
 - Other range widgets include:
-  - [`meter`](/en-US/docs/Web/Accessibility/ARIA/Roles/meter_role)
-  - [`scrollbar`](/en-US/docs/Web/Accessibility/ARIA/Roles/scrollbar_role)
-  - [`separator`](/en-US/docs/Web/Accessibility/ARIA/Roles/separator_role) (if focusable)
-  - [`progressbar`](/en-US/docs/Web/Accessibility/ARIA/Roles/progressbar_role)
-  - [`spinbutton`](/en-US/docs/Web/Accessibility/ARIA/Roles/spinbutton_role)
+  - [`meter`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/meter_role)
+  - [`scrollbar`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/scrollbar_role)
+  - [`separator`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/separator_role) (if focusable)
+  - [`progressbar`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/progressbar_role)
+  - [`spinbutton`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/spinbutton_role)
 - W3C WAI-ARIA practices examples:
   - [Horizontal Multi-Thumb Slider](https://www.w3.org/WAI/ARIA/apg/patterns/slider-multithumb/examples/slider-multithumb/)
   - [Color Viewer Slider](https://www.w3.org/WAI/ARIA/apg/patterns/slider/examples/slider-color-viewer/)

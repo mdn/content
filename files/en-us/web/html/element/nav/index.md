@@ -149,7 +149,7 @@ The semantics of the `nav` element is that of providing links. However a `nav` e
       <th scope="row">Implicit ARIA role</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/navigation_role"
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/navigation_role"
             >navigation</a
           ></code
         >
@@ -178,4 +178,4 @@ The semantics of the `nav` element is that of providing links. However a `nav` e
 
 - Other section-related elements: {{HTMLElement("body")}}, {{HTMLElement("article")}}, {{HTMLElement("section")}}, {{HTMLElement("aside")}}, {{HTMLElement("Heading_Elements", "h1")}}, {{HTMLElement("Heading_Elements", "h2")}}, {{HTMLElement("Heading_Elements", "h3")}}, {{HTMLElement("Heading_Elements", "h4")}}, {{HTMLElement("Heading_Elements", "h5")}}, {{HTMLElement("Heading_Elements", "h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}};
 - [Sections and outlines of an HTML document](/en-US/docs/Web/HTML/Element/Heading_Elements).
-- [ARIA: Navigation role](/en-US/docs/Web/Accessibility/ARIA/Roles/navigation_role)
+- [ARIA: Navigation role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/navigation_role)

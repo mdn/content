@@ -130,7 +130,7 @@ If the `<progress>` element is describing the loading progress of a section of a
     </tr>
     <tr>
       <th scope="row">Implicit ARIA role</th>
-      <td><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/progressbar_role"><code>progressbar</code></a></td>
+      <td><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/progressbar_role"><code>progressbar</code></a></td>
     </tr>
     <tr>
       <th scope="row">Permitted ARIA roles</th>

@@ -14,7 +14,7 @@ Some tables have many, many rows. Loading only a subsection of rows may be done 
 
 When only a subset of rows are loaded, you do need to let all users know which subsets of rows are being displayed. The `aria-rowindex` attribute is used to define the cell or row's row index or position with respect to the total number of rows within a table, grid, or treegrid.
 
-Included on the {{HTMLElement('tr')}} element or on an element with a role of [`row`](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role), or directly on the {{HTMLElement('td')}}, {{HTMLElement('th')}}, or element with role of [`cell`](/en-US/docs/Web/Accessibility/ARIA/Roles/cell_role) or [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role), the value is the row's position with respect to the full table.
+Included on the {{HTMLElement('tr')}} element or on an element with a role of [`row`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/row_role), or directly on the {{HTMLElement('td')}}, {{HTMLElement('th')}}, or element with role of [`cell`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/cell_role) or [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role), the value is the row's position with respect to the full table.
 
 The value for `aria-rowindex` is an integer greater than or equal to `1`, greater than the `aria-rowindex` value of any previous rows, and less than or equal to the number of rows in the full table.
 
@@ -80,14 +80,14 @@ Note both `aria-rowspan` and `aria-rowindex` are present on the Goalkeeper cell,
 
 Used in roles:
 
-- [`cell`](/en-US/docs/Web/Accessibility/ARIA/Roles/cell_role)
-- [`row`](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role)
+- [`cell`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/cell_role)
+- [`row`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/row_role)
 
 Inherited into roles:
 
-- [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role)
-- [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role)
-- [`rowheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/rowheader_role)
+- [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role)
+- [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role)
+- [`rowheader`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/rowheader_role)
 
 ## Specifications
 

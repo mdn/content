@@ -8,7 +8,7 @@ spec-urls:
 sidebar: accessibilitysidebar
 ---
 
-The `aria-autocomplete` attribute indicates whether inputting text could trigger display of one or more predictions of the user's intended value for a [`combobox`](/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role), [`searchbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/searchbox_role), or [`textbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role) and specifies how predictions will be presented if they are made.
+The `aria-autocomplete` attribute indicates whether inputting text could trigger display of one or more predictions of the user's intended value for a [`combobox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role), [`searchbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/searchbox_role), or [`textbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role) and specifies how predictions will be presented if they are made.
 
 ## Description
 
@@ -27,7 +27,7 @@ When implementing a list of values, DOM focus should remain on the text input wh
 - include [`aria-controls`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-controls) with the value of the id of the suggested list of values.
 - include [`aria-haspopup`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-haspopup) matching the role of the element that contains the collection of suggested values.
 - manage focus, if required, including using [`aria-activedescendant`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-activedescendant) if the collection container supports.
-- use the [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded) state on the element with role [`combobox`](/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role) to communicate that the list is displayed.
+- use the [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded) state on the element with role [`combobox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role) to communicate that the list is displayed.
 
 If an autocomplete list value is automatically accepted when the field loses focus, the list must be contained in a role that supports `aria-activedescendant`, with the value of `aria-activedescendant` on the input field dynamically adjusted to refer to the element containing the selected suggestion.
 
@@ -46,9 +46,9 @@ If an autocomplete list value is automatically accepted when the field loses foc
 
 Used in roles:
 
-- [`combobox`](/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role) role
-- [`textbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role) role
-- inherits from [`searchbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/searchbox_role) role
+- [`combobox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role) role
+- [`textbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role) role
+- inherits from [`searchbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/searchbox_role) role
 
 ## Specifications
 
@@ -56,9 +56,9 @@ Used in roles:
 
 ## See also
 
-- [`combobox`](/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role) role
-- [`textbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role) role
-- [`searchbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/searchbox_role) role
+- [`combobox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role) role
+- [`textbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role) role
+- [`searchbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/searchbox_role) role
 - {{HTMLElement('datalist')}} element and the [`<input> list` attribute](/en-US/docs/Web/HTML/Element/input#list)
 - [`aria-controls`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-controls) attribute
 - [`aria-haspopup`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-haspopup) attribute

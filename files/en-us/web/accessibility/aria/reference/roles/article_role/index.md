@@ -39,7 +39,7 @@ Don't use `role="article"`. Instead use the `<article>` element.
 
 ## Description
 
-The `article` [document structure role](/en-US/docs/Web/Accessibility/ARIA/Roles#1._document_structure_roles) denotes a section of a document, page, or site that, if it were standing on its own, could be viewed as a complete document, page or site. The aim of a set of article sections is to indicate their relationship to one another.
+The `article` [document structure role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles#1._document_structure_roles) denotes a section of a document, page, or site that, if it were standing on its own, could be viewed as a complete document, page or site. The aim of a set of article sections is to indicate their relationship to one another.
 
 Articles are not considered a navigational landmark, but many assistive technologies that support landmarks also support a means to navigate among articles. They may also support indication of nesting relationships within articles.
 
@@ -81,11 +81,11 @@ This role does not support any specific keyboard interaction.
 
 ## Precedence order
 
-This role corresponds to the {{HTMLElement('article')}} element in HTML, and that element should be used instead, if possible. This role does not require any specific roles to be present among its children. It is the only role allowed as a direct child of an element with the [`feed`](/en-US/docs/Web/Accessibility/ARIA/Roles/feed_role) role.
+This role corresponds to the {{HTMLElement('article')}} element in HTML, and that element should be used instead, if possible. This role does not require any specific roles to be present among its children. It is the only role allowed as a direct child of an element with the [`feed`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/feed_role) role.
 
 ## See also
 
-- [`feed` role](/en-US/docs/Web/Accessibility/ARIA/Roles/feed_role)
-- [`section` role](/en-US/docs/Web/Accessibility/ARIA/Roles/section_role)
+- [`feed` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/feed_role)
+- [`section` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/section_role)
 - The {{HTMLElement('article')}} element
 - {{Glossary("RSS")}} glossary definition

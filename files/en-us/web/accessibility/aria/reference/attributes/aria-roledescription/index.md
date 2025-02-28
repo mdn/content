@@ -25,11 +25,11 @@ When there are no semantic or ARIA widget roles that correspond to the interacti
 
 ATs may customize and localize the names of ARIA roles. If you are using `aria-roledescription` to change how the role name is presented to the user, remember to handle localization. The value should be translated when a page is localized.
 
-Changing how the role is presented to the user has no impact on the functionality of the element. For example, if an element has a role of [`region`](/en-US/docs/Web/Accessibility/ARIA/Roles/region_role) or [`button`](/en-US/docs/Web/Accessibility/ARIA/Roles/button_role) when AT provides functions for navigating to the next region or button, if you set the `aria-roledescription` to `continent` and `escape` respectively, the AT will still allow those functions to navigate to regions and buttons.
+Changing how the role is presented to the user has no impact on the functionality of the element. For example, if an element has a role of [`region`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/region_role) or [`button`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/button_role) when AT provides functions for navigating to the next region or button, if you set the `aria-roledescription` to `continent` and `escape` respectively, the AT will still allow those functions to navigate to regions and buttons.
 
 Again, avoid using `aria-roledescription`. In this example, `escape` has no relevant meaning to the user, but `button` with "escape" as a label does.
 
-When using `aria-roledescription`, also ensure that the element to which it is applied has a valid ARIA [`role`](/en-US/docs/Web/Accessibility/ARIA/Roles) or has implicit role semantics and that the value itself is not empty and contains more than just whitespace characters.
+When using `aria-roledescription`, also ensure that the element to which it is applied has a valid ARIA [`role`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles) or has implicit role semantics and that the value itself is not empty and contains more than just whitespace characters.
 
 The `aria-roledescription` is required when using `aria-brailleroledescription`. Note that, in general, `aria-brailleroledescription` should only be used in rare cases when a `aria-roledescription` is excessively verbose when rendered in Braille.
 
@@ -72,4 +72,4 @@ Supported by all roles and by all base markup elements except for `role="generic
 
 ## See also
 
-- [ARIA roles](/en-US/docs/Web/Accessibility/ARIA/Roles)
+- [ARIA roles](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles)

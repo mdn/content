@@ -6,11 +6,11 @@ spec-urls: https://w3c.github.io/aria/#rowheader
 sidebar: accessibilitysidebar
 ---
 
-An element with `role="rowheader"` is a [cell](/en-US/docs/Web/Accessibility/ARIA/Roles/cell_role) containing header information for a [row](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role) within a tabular structure of a [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role), [`table`](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role) or [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role).
+An element with `role="rowheader"` is a [cell](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/cell_role) containing header information for a [row](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/row_role) within a tabular structure of a [`grid`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/grid_role), [`table`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/table_role) or [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/treegrid_role).
 
 ## Description
 
-`Rowheader` is the header [`cell`](/en-US/docs/Web/Accessibility/ARIA/Roles/cell_role) for a row, establishing a relationship between it and the other cells in the same [`row`](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role).
+`Rowheader` is the header [`cell`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/cell_role) for a row, establishing a relationship between it and the other cells in the same [`row`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/row_role).
 
 ```html
 <div
@@ -48,7 +48,7 @@ To create an ARIA row header, add `role="rowheader"` to the element. That row he
 
 #### Context roles
 
-- [role="row"](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role)
+- [role="row"](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/row_role)
   - : The only context in which you will find a row. It encompasses a cell or group of cells row, of which only one should be of rowheader type. Similar to the native {{HTMLElement('tr')}} HTML element.
 
 ### Keyboard interactions
@@ -149,6 +149,6 @@ none
 - [The HTML `<table>` element](/en-US/docs/Web/HTML/Element/table)
 - [The HTML `<th>` element](/en-US/docs/Web/HTML/Element/th)
 - [HTML table tutorial](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics/Basics)
-- [ARIA `cell` role](/en-US/docs/Web/Accessibility/ARIA/Roles/cell_role)
-- [ARIA `row` role](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role)
-- [ARIA `gridcell` role](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role)
+- [ARIA `cell` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/cell_role)
+- [ARIA `row` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/row_role)
+- [ARIA `gridcell` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role)

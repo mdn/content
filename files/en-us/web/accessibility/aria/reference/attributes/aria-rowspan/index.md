@@ -35,12 +35,12 @@ The value of `aria-rowspan` is an integer greater than or equal to 0 and less th
 
 Used in roles:
 
-- [`cell`](/en-US/docs/Web/Accessibility/ARIA/Roles/cell_role)
+- [`cell`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/cell_role)
 
 Inherited into roles:
 
-- [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role)
-- [`rowheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/rowheader_role)
+- [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role)
+- [`rowheader`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/rowheader_role)
 
 ## Specifications
 

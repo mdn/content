@@ -22,23 +22,23 @@ When a user activates a choice in a menu that has been opened, the menu usually 
 
 When a menu opens, keyboard focus is placed on the first menu item. To be keyboard accessible, you need to [manage focus](https://usability.yale.edu/web-accessibility/articles/focus-keyboard-operability) for all descendants: all menu items within the `menu` are focusable. The menu button which opens the menu and the menu items, rather than the menu itself, are the focusable elements.
 
-Menu items include [`menuitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role), [`menuitemcheckbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role), and [`menuitemradio`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role). [Disabled](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-disabled) menu items are focusable but cannot be activated.
+Menu items include [`menuitem`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitem_role), [`menuitemcheckbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemcheckbox_role), and [`menuitemradio`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemradio_role). [Disabled](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-disabled) menu items are focusable but cannot be activated.
 
-Menu items can be grouped in elements with the [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role) role, and separated by elements with role [`separator`](/en-US/docs/Web/Accessibility/ARIA/Roles/separator_role). Neither `group` nor `separator` receive focus or are interactive.
+Menu items can be grouped in elements with the [`group`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/group_role) role, and separated by elements with role [`separator`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/separator_role). Neither `group` nor `separator` receive focus or are interactive.
 
 If a `menu` is opened as a result of a context action, <kbd>Escape</kbd> or <kbd>Enter</kbd> may return focus to the invoking context. If focus was on the menu button, <kbd>Enter</kbd> opens the menu, giving focus to the first menu item. If focus is on the menu itself, <kbd>Escape</kbd> closes the menu and returns focus to the menu button or parent menubar item (or the context action that opened the menu).
 
 Elements with the role `menu` have an implicit [`aria-orientation`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-orientation) value of `vertical`. For horizontally oriented menu, use [`aria-orientation="horizontal"`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-orientation).
 
-If the menu is visually persistent, consider the [`menubar`](/en-US/docs/Web/Accessibility/ARIA/Roles/menubar_role) role instead.
+If the menu is visually persistent, consider the [`menubar`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menubar_role) role instead.
 
 ### Associated WAI-ARIA roles, states, and properties
 
-- [`menuitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role), [`menuitemcheckbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role), and [`menuitemradio`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role) roles
+- [`menuitem`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitem_role), [`menuitemcheckbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemcheckbox_role), and [`menuitemradio`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemradio_role) roles
   - : Roles of items contained in a containing `menu` or `menubar`, known collectively as "menu items". These must be able to receive focus.
-- [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role) role
-  - : Menu items can be nested in a [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role)
-- [`separator`](/en-US/docs/Web/Accessibility/ARIA/Roles/separator_role) role
+- [`group`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/group_role) role
+  - : Menu items can be nested in a [`group`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/group_role)
+- [`separator`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/separator_role) role
 
   - : A divider that separates and distinguishes sections of content or groups of menu items within the menu
 
@@ -188,8 +188,8 @@ The navigation example has a static button. The submenu example has a button tha
 
 ## See also
 
-- [`menubar`](/en-US/docs/Web/Accessibility/ARIA/Roles/menubar_role)
-- [`menuitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role)
-- [`menuitemcheckbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role)
-- [`menuitemradio`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role)
+- [`menubar`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menubar_role)
+- [`menuitem`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitem_role)
+- [`menuitemcheckbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemcheckbox_role)
+- [`menuitemradio`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemradio_role)
 - [`aria-haspopup`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-haspopup)

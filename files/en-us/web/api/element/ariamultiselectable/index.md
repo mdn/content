@@ -59,4 +59,4 @@ console.log(el.ariaMultiSelectable); // "false"
 
 ## See also
 
-- [ARIA: listbox role](/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role)
+- [ARIA: listbox role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/listbox_role)

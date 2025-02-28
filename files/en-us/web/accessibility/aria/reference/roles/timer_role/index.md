@@ -18,7 +18,7 @@ This defines this `div` element as a timer with no remaining time.
 
 The `timer` role indicates to assistive technologies that this part of the web content is a live region containing a timer listing the time remaining or elapsed time. A timer's inner text should be an updating current time measurement. While the value does not necessarily need to be machine parsable, it should continuously update at regular intervals unless the timer is paused or reaches its end-point.
 
-Along with [`alert`](/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role), [`log`](/en-US/docs/Web/Accessibility/ARIA/Roles/log_role), [`marquee`](/en-US/docs/Web/Accessibility/ARIA/Roles/marquee_role), and [`status`](/en-US/docs/Web/Accessibility/ARIA/Roles/status_role) the `timer` role is a live region and can be modified by [live region](/en-US/docs/Web/Accessibility/ARIA/Guides/Live_regions) attributes.
+Along with [`alert`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/alert_role), [`log`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/log_role), [`marquee`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/marquee_role), and [`status`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/status_role) the `timer` role is a live region and can be modified by [live region](/en-US/docs/Web/Accessibility/ARIA/Guides/Live_regions) attributes.
 
 ### Associated WAI-ARIA roles, states, and properties
 
@@ -40,9 +40,9 @@ If a time limit needs to be in place, for example, for security reasons, the use
 
 ## See also
 
-- [ARIA: `alert` role](/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role)
-- [ARIA: `log` role](/en-US/docs/Web/Accessibility/ARIA/Roles/log_role)
-- [ARIA: `marquee` role](/en-US/docs/Web/Accessibility/ARIA/Roles/marquee_role)
-- [ARIA: `status` role](/en-US/docs/Web/Accessibility/ARIA/Roles/status_role)
+- [ARIA: `alert` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/alert_role)
+- [ARIA: `log` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/log_role)
+- [ARIA: `marquee` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/marquee_role)
+- [ARIA: `status` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/status_role)
 - [ARIA live regions](/en-US/docs/Web/Accessibility/ARIA/Guides/Live_regions)
 - [`timer` example on CodePen](https://codepen.io/heydon/pres/NGgNjZ) by Heydon Pickering

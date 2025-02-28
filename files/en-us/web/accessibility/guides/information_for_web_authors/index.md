@@ -15,7 +15,7 @@ This document lists guidelines and regulations, how-to's, and tools for checking
 - [Web Content Accessibility Guidelines (<abbr>WCAG</abbr>)](https://www.w3.org/WAI/standards-guidelines/wcag/)
   - : Another important set of guidelines from the W3C _Web Accessibility Initiative (<abbr>WAI</abbr>)_. The European Union is looking to base their upcoming accessibility regulations on these guidelines. These guidelines are discussed on the [<abbr>WAI</abbr> interest group discussion list](https://www.w3.org/WAI/about/groups/waiig/#mailinglist).
 - [ARIA on this site](/en-US/docs/Web/Accessibility/ARIA)
-  - : <abbr>MDN</abbr> guide to all the [ARIA roles](/en-US/docs/Web/Accessibility/ARIA/Roles) and [ARIA properties](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes), including best practices, related roles and properties, and examples.
+  - : <abbr>MDN</abbr> guide to all the [ARIA roles](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles) and [ARIA properties](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes), including best practices, related roles and properties, and examples.
 
 ## How-to's
 

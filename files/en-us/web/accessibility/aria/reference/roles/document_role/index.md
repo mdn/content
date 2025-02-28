@@ -6,11 +6,11 @@ spec-urls: https://w3c.github.io/aria/#document
 sidebar: accessibilitysidebar
 ---
 
-The `document` role is for focusable content within complex composite [widgets](/en-US/docs/Web/Accessibility/ARIA/Roles/widget_role) or [applications](/en-US/docs/Web/Accessibility/ARIA/Roles/application_role) for which assistive technologies can switch reading context back to a reading mode.
+The `document` role is for focusable content within complex composite [widgets](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/widget_role) or [applications](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/application_role) for which assistive technologies can switch reading context back to a reading mode.
 
 ## Description
 
-The `document` role is for the top container containing content that assistive technology users may want to browse in a reading mode. Only useful on focusable sections within complex composite [widgets](/en-US/docs/Web/Accessibility/ARIA/Roles/widget_role) or [applications](/en-US/docs/Web/Accessibility/ARIA/Roles/application_role), the `document` role informs assistive technologies to the reading context back to a reading mode: The `document` role tells assistive technologies with reading or browse modes to use the document mode to read the content contained within this element.
+The `document` role is for the top container containing content that assistive technology users may want to browse in a reading mode. Only useful on focusable sections within complex composite [widgets](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/widget_role) or [applications](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/application_role), the `document` role informs assistive technologies to the reading context back to a reading mode: The `document` role tells assistive technologies with reading or browse modes to use the document mode to read the content contained within this element.
 
 ```html
 <div role="dialog">
@@ -23,7 +23,7 @@ The `document` role is for the top container containing content that assistive t
 </div>
 ```
 
-This example shows a [dialog](/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role), a complex composite widget role, with some controls and a section with some informational text that the assistive technology user can go into reading mode when tabbed to.
+This example shows a [dialog](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/dialog_role), a complex composite widget role, with some controls and a section with some informational text that the assistive technology user can go into reading mode when tabbed to.
 
 By default, web pages are treated as documents; assistive technologies (AT) enter browse or read mode when entering a new web page. This mode can be altered through various roles, including the widget and application roles. The `document` role brings the AT back into browse or read mode.
 
@@ -33,7 +33,7 @@ Because ATs with reading mode default to that mode for all elements except for t
 
 Assistive technologies should switch context back to document mode, possibly intercepting from controls rewired for the parent's dynamic context, re-enabling the standard input events, such as Up or Down arrow keyboard events, to control the reading cursor.
 
-In contrast to the [`article`](/en-US/docs/Web/Accessibility/ARIA/Roles/article_role) role, the `document` role does not have any relation to other elements with a document role, it merely has a relationship to the containing composite widget. An article can have associated articles.
+In contrast to the [`article`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/article_role) role, the `document` role does not have any relation to other elements with a document role, it merely has a relationship to the containing composite widget. An article can have associated articles.
 
 ### Associated WAI-ARIA roles, states, and properties
 
@@ -70,5 +70,5 @@ The document role is an easy way to indirectly control assistive technology beha
 
 ## See also
 
-- [ARIA: `widget` role](/en-US/docs/Web/Accessibility/ARIA/Roles/widget_role)
-- [ARIA: `application` role](/en-US/docs/Web/Accessibility/ARIA/Roles/application_role)
+- [ARIA: `widget` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/widget_role)
+- [ARIA: `application` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/application_role)

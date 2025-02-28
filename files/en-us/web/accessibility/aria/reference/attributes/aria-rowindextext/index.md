@@ -32,14 +32,14 @@ The `aria-rowindextext` is added to each {{HTMLElement('tr')}} or to elements wi
 
 Used in roles:
 
-- [`cell`](/en-US/docs/Web/Accessibility/ARIA/Roles/cell_role)
-- [`row`](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role)
+- [`cell`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/cell_role)
+- [`row`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/row_role)
 
 Inherited into roles:
 
-- [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role)
-- [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role)
-- [`rowheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/rowheader_role)
+- [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role)
+- [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role)
+- [`rowheader`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/rowheader_role)
 
 ## Specifications
 

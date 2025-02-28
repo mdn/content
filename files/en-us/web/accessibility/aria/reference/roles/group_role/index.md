@@ -10,17 +10,17 @@ The `group` role identifies a set of user interface objects that is not intended
 
 ## Description
 
-Most closely related to HTML's {{HTMLElement('fieldset')}} element, the `group` document structure role is used to identify a set of user interface objects which, as compared to [`region`](/en-US/docs/Web/Accessibility/ARIA/Roles/region_role), is not intended to be included in the page's summary or table of contents.
+Most closely related to HTML's {{HTMLElement('fieldset')}} element, the `group` document structure role is used to identify a set of user interface objects which, as compared to [`region`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/region_role), is not intended to be included in the page's summary or table of contents.
 
-The `group` role should be used to form a logical collection of items with related functionality, such as children in a [`tree`](/en-US/docs/Web/Accessibility/ARIA/Roles/tree_role) widget forming a collection of siblings in a hierarchy, or a collection of items having the same container in a [`directory`](/en-US/docs/Web/Accessibility/ARIA/Roles/directory_role).
+The `group` role should be used to form a logical collection of items with related functionality, such as children in a [`tree`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tree_role) widget forming a collection of siblings in a hierarchy, or a collection of items having the same container in a [`directory`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/directory_role).
 
-When a `group` is used in the context of [`list`](/en-US/docs/Web/Accessibility/ARIA/Roles/list_role), limit the children of the `group` to [`listitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/listitem_role) elements. In this case, it is recommended to use multiple ordered or unordered lists, {{HTMLElement('ol')}} or {{HTMLElement('ul')}}, with nested {{HTMLElement('li')}} children.
+When a `group` is used in the context of [`list`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/list_role), limit the children of the `group` to [`listitem`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/listitem_role) elements. In this case, it is recommended to use multiple ordered or unordered lists, {{HTMLElement('ol')}} or {{HTMLElement('ul')}}, with nested {{HTMLElement('li')}} children.
 
-When used in the context of a [`listbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role), the only children allowed are {{HTMLElement('option')}} elements. In this case, it is recommended to use {{HTMLElement('select')}}, {{HTMLElement('option')}} and {{HTMLElement('optgroup')}} instead.
+When used in the context of a [`listbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/listbox_role), the only children allowed are {{HTMLElement('option')}} elements. In this case, it is recommended to use {{HTMLElement('select')}}, {{HTMLElement('option')}} and {{HTMLElement('optgroup')}} instead.
 
 `Group` elements may be nested.
 
-The `group` role should not be used for major perceivable sections of a page. If a section is significant enough that it should be included in the page's table of contents, use the `region` role or a standard [landmark role](/en-US/docs/Web/Accessibility/ARIA/Roles#3._landmark_roles).
+The `group` role should not be used for major perceivable sections of a page. If a section is significant enough that it should be included in the page's table of contents, use the `region` role or a standard [landmark role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles#3._landmark_roles).
 
 When the role is added to an element, the browser will send out an accessible group event to assistive technology products, which can then notify the user about it.
 
@@ -64,7 +64,7 @@ The HTML code example below uses the `group` role with a `tree` view:
 </div>
 ```
 
-The following example uses the `group` role with a drop-down [`menu`](/en-US/docs/Web/Accessibility/ARIA/Roles/menu_role) containing [`menuitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role)s:
+The following example uses the `group` role with a drop-down [`menu`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menu_role) containing [`menuitem`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitem_role)s:
 
 ```html
 <div role="menu">
@@ -93,7 +93,7 @@ This menu could be constructed using {{HTMLElement('select')}} and {{HTMLElement
 ## See also
 
 - The {{HTMLElement('fieldset')}} Element
-- [ARIA: `section` role](/en-US/docs/Web/Accessibility/ARIA/Roles/section_role)
-- [ARIA: `row` role](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role)
-- [ARIA: `select` role](/en-US/docs/Web/Accessibility/ARIA/Roles/select_role)
-- [ARIA: `toolbar` role](/en-US/docs/Web/Accessibility/ARIA/Roles/toolbar_role)
+- [ARIA: `section` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/section_role)
+- [ARIA: `row` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/row_role)
+- [ARIA: `select` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/select_role)
+- [ARIA: `toolbar` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/toolbar_role)

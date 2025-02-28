@@ -112,7 +112,7 @@ Instead of using tooltips and hiding important information, consider writing cle
 
 ## See also
 
-- [The `dialog` role](/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role)
+- [The `dialog` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/dialog_role)
 - [CSS: `:focus` pseudoclass](/en-US/docs/Web/CSS/:focus)
 - [Tooltips & Toggletips](https://inclusive-components.design/tooltips-toggletips/) by Heydon Pickering
 - [Understanding SC 1.4.13:Content on Hover or Focus (WCAG Level AA)](https://www.w3.org/WAI/WCAG21/Understanding/content-on-hover-or-focus.html)

@@ -12,11 +12,11 @@ A `menuitemcheckbox` is a `menuitem` with a checkable state whose possible value
 
 ## Description
 
-The items in menu and menubars are menu items. There are three types of menu items: [`menuitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role), [`menuitemradio`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role), and `menuitemcheckbox`.
+The items in menu and menubars are menu items. There are three types of menu items: [`menuitem`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitem_role), [`menuitemradio`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemradio_role), and `menuitemcheckbox`.
 
-These three elements can only be contained in, or owned by, an element with role [`menu`](/en-US/docs/Web/Accessibility/ARIA/Roles/menu_role) or [`menubar`](/en-US/docs/Web/Accessibility/ARIA/Roles/menubar_role), optionally nested within a grouping element with role of [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role). Being nested or otherwise owned (see [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-owns)) in a `menu` or `menubar` identifies the menu items as being related widgets.
+These three elements can only be contained in, or owned by, an element with role [`menu`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menu_role) or [`menubar`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menubar_role), optionally nested within a grouping element with role of [`group`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/group_role). Being nested or otherwise owned (see [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-owns)) in a `menu` or `menubar` identifies the menu items as being related widgets.
 
-Menu items, including `menuitemcheckbox` elements, may be grouped within `group` elements or separated by elements with the [`separator`](/en-US/docs/Web/Accessibility/ARIA/Roles/separator_role) role or other equivalent native role such as {{HTMLElement('fieldset')}} and {{HTMLElement('hr')}}.
+Menu items, including `menuitemcheckbox` elements, may be grouped within `group` elements or separated by elements with the [`separator`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/separator_role) role or other equivalent native role such as {{HTMLElement('fieldset')}} and {{HTMLElement('hr')}}.
 
 Menu items containing the role of `menuitemcheckbox` must include the [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-checked) attribute to expose the checkbox's state to assistive technology, unless using [`<input type="checkbox">`](/en-US/docs/Web/HTML/Element/input/checkbox), in which case the [`checked`](/en-US/docs/Web/HTML/Element/input/checkbox#checked) attribute should be used.
 
@@ -30,7 +30,7 @@ The `menuitemcheckbox` element can have phrasing content, but can not have inter
 
 ### All descendants are presentational
 
-There are some types of user interface components that, when represented in a platform accessibility API, can only contain text. Accessibility APIs do not have a way of representing semantic elements contained in a `menuitemcheckbox`. To deal with this limitation, browsers, automatically apply role [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role) to all descendant elements of any `menuitemcheckbox` element as it is a role that does not support semantic children.
+There are some types of user interface components that, when represented in a platform accessibility API, can only contain text. Accessibility APIs do not have a way of representing semantic elements contained in a `menuitemcheckbox`. To deal with this limitation, browsers, automatically apply role [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role) to all descendant elements of any `menuitemcheckbox` element as it is a role that does not support semantic children.
 
 For example, consider the following `menuitemcheckbox` element, which contains a heading.
 
@@ -52,11 +52,11 @@ From the assistive technology user's perspective, the heading does not exist sin
 
 ### Associated WAI-ARIA roles, states, and properties
 
-- [`menu`](/en-US/docs/Web/Accessibility/ARIA/Roles/menu_role) role
+- [`menu`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menu_role) role
   - : Widget that offers a list of common actions or functions the user can invoke.
-- [`menubar`](/en-US/docs/Web/Accessibility/ARIA/Roles/menubar_role) role
+- [`menubar`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menubar_role) role
   - : Similar to `menu` for a consistent set of frequently used commands remaining visible and usually presented horizontally.
-- [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role) role
+- [`group`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/group_role) role
   - : Container for a group of `menuitem` elements, including `menuitemcheckbox` elements within a `menu` or `menubar`.
 - [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-checked) (Required)
   - : Set to `true`, `false`, or `mixed`, it indicates the current "checked" state of the menuitemcheckbox
@@ -134,6 +134,6 @@ The first rule of ARIA is: if a native HTML element or attribute has the semanti
 
 ## See also
 
-- [`menuitemradio` role](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role)
-- [`checkbox` role](/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role)
+- [`menuitemradio` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemradio_role)
+- [`checkbox` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role)
 - [`<input type="checkbox">`](/en-US/docs/Web/HTML/Element/input/checkbox)

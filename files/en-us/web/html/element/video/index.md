@@ -525,7 +525,7 @@ Some media file types let you provide more specific information using the [`code
     </tr>
     <tr>
       <th scope="row">Permitted ARIA roles</th>
-      <td><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/application_role"><code>application</code></a></td>
+      <td><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/application_role"><code>application</code></a></td>
     </tr>
     <tr>
       <th scope="row">DOM interface</th>

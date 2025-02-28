@@ -22,11 +22,11 @@ For example, in a page's comments section, When comments in are not all in the D
 
 When a feed has a static number of articles, `aria-setsize` can be added to each article element with the value being either the total number of articles loaded or the total number in the feed. The value chosen depends on which value is most helpful to users. If the number of articles is extremely large, indefinite, or changes often, `aria-setsize="-1"` can be set to communicate the size of the set is unknown.
 
-In a [`listbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role), when the complete set of available options is not present in the DOM due to dynamic loading on scroll, both `aria-setsize` and `aria-posinset` can be set on each [`option`](/en-US/docs/Web/Accessibility/ARIA/Roles/option_role).
+In a [`listbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/listbox_role), when the complete set of available options is not present in the DOM due to dynamic loading on scroll, both `aria-setsize` and `aria-posinset` can be set on each [`option`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/option_role).
 
 In a tree view, if the complete set of available nodes is not present in the DOM due to dynamic loading as the user moves focus in or scrolls the tree, each node has `aria-level`, `aria-setsize`, and `aria-posinset` set.
 
-In a menu, `aria-setsize` is set on all [`menuitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role), [`menuitemcheckbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role), or [`menuitemradio`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role) roles, with the value being the total number of items in the menu, excluding any separators.
+In a menu, `aria-setsize` is set on all [`menuitem`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitem_role), [`menuitemcheckbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemcheckbox_role), or [`menuitemradio`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemradio_role) roles, with the value being the total number of items in the menu, excluding any separators.
 
 ## Example
 
@@ -60,23 +60,23 @@ To orient the user, assistive technologies would list the bananas above as "item
 
 Used in roles:
 
-- [`article`](/en-US/docs/Web/Accessibility/ARIA/Roles/article_role)
-- [`associationlistitemkey`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles)
-- [`associationlistitemvalue`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles)
-- [`comment`](/en-US/docs/Web/Accessibility/ARIA/Roles/comment_role)
-- [`listitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/listitem_role)
-- [`menuitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role)
-- [`option`](/en-US/docs/Web/Accessibility/ARIA/Roles/option_role)
-- [`radio`](/en-US/docs/Web/Accessibility/ARIA/Roles/radio_role)
-- [`row`](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role)
-- [`tab`](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role)
+- [`article`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/article_role)
+- [`associationlistitemkey`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
+- [`associationlistitemvalue`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
+- [`comment`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/comment_role)
+- [`listitem`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/listitem_role)
+- [`menuitem`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitem_role)
+- [`option`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/option_role)
+- [`radio`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/radio_role)
+- [`row`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/row_role)
+- [`tab`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role)
 
 Inherits into roles:
 
-- [`comment`](/en-US/docs/Web/Accessibility/ARIA/Roles/comment_role)
-- [`menuitemcheckbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role)
-- [`menuitemradio`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role)
-- [`treeitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/treeitem_role)
+- [`comment`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/comment_role)
+- [`menuitemcheckbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemcheckbox_role)
+- [`menuitemradio`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemradio_role)
+- [`treeitem`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/treeitem_role)
 
 ## Specifications
 

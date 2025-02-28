@@ -63,7 +63,7 @@ The `aria-brailleroledescription` value will not be exposed to the braille user 
 
 ## Associated roles
 
-Used in **ALL** roles (except [`generic`](/en-US/docs/Web/Accessibility/ARIA/Roles/generic_role)).
+Used in **ALL** roles (except [`generic`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/generic_role)).
 
 ## Specifications
 

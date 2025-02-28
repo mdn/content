@@ -35,7 +35,7 @@ In the following example we have a document section that has been commented. The
 </div>
 ```
 
-The related comment is marked up using an HTML structure wrapped with a {{HTMLElement('div')}} containing [`role="comment"`](/en-US/docs/Web/Accessibility/ARIA/Roles/comment_role).
+The related comment is marked up using an HTML structure wrapped with a {{HTMLElement('div')}} containing [`role="comment"`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/comment_role).
 
 To associate the comment with the text being commented, we need to wrap the commented text with an element containing the [`aria-details`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-details) attribute, the value of which should be the ID of the comment.
 

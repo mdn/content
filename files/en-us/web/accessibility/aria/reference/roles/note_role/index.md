@@ -45,4 +45,4 @@ In the above Wikipedia style entry for Madam C.J. Walker, the `highlight-box` wi
 
 ## See also
 
-- [Document structure roles](/en-US/docs/Web/Accessibility/ARIA/Roles#1._document_structure_roles)
+- [Document structure roles](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles#1._document_structure_roles)

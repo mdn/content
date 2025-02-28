@@ -8,7 +8,7 @@ spec-urls:
 sidebar: accessibilitysidebar
 ---
 
-An element with `role="row"` is a row of cells within a tabular structure. A row contains one or more cells, grid cells or column headers, and possibly a row header, within a [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role), [`table`](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role) or [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role), and optionally within a [`rowgroup`](/en-US/docs/Web/Accessibility/ARIA/Roles/rowgroup_role).
+An element with `role="row"` is a row of cells within a tabular structure. A row contains one or more cells, grid cells or column headers, and possibly a row header, within a [`grid`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/grid_role), [`table`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/table_role) or [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/treegrid_role), and optionally within a [`rowgroup`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/rowgroup_role).
 
 ```html
 <div
@@ -37,7 +37,7 @@ An element with `role="row"` is a row of cells within a tabular structure. A row
 
 ## Description
 
-The element with `role="row"` is a row within a [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role), [`table`](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role), or [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role), and optionally within a [`rowgroup`](/en-US/docs/Web/Accessibility/ARIA/Roles/rowgroup_role) that contains one or more [`cell`](/en-US/docs/Web/Accessibility/ARIA/Roles/cell_role), [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role), [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role), or [`rowheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/rowheader_role) elements within a static tabular structure. Using native [HTML `<tr>`](/en-US/docs/Web/HTML/Element/tr) elements, whenever possible, is strongly encouraged.
+The element with `role="row"` is a row within a [`grid`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/grid_role), [`table`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/table_role), or [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/treegrid_role), and optionally within a [`rowgroup`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/rowgroup_role) that contains one or more [`cell`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/cell_role), [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role), [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role), or [`rowheader`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/rowheader_role) elements within a static tabular structure. Using native [HTML `<tr>`](/en-US/docs/Web/HTML/Element/tr) elements, whenever possible, is strongly encouraged.
 
 To create an ARIA row, add `role="row"` to the container element. That row should be nested within a grid, table or treegrid. A group of rows can be nested within a grid, table or treegrid directly, or within a rowgroup in one of those containers. Each row contains child cells. These cells can be of different types, depending on whether they are column or row headers, or grid or regular cells.
 
@@ -45,7 +45,7 @@ A row can contain a number of attributes clarifying the row's role, including [`
 
 If the row is within a treegrid, rows can include the [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded) attribute, using the attribute to indicate the present status. This is not the case for an ordinary table or grid, in which the `aria-expanded` attribute is not present.
 
-To create an interactive widget that has a tabular structure, use the grid pattern instead. If the interaction provides for the selection state of individual cells, if left to right and top to bottom navigation is provided, or if the user interface allows the rearranging of cell order or otherwise changing individual cell order such as through drag and drop, use [grid](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role) or [treegrid](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role) instead.
+To create an interactive widget that has a tabular structure, use the grid pattern instead. If the interaction provides for the selection state of individual cells, if left to right and top to bottom navigation is provided, or if the user interface allows the rearranging of cell order or otherwise changing individual cell order such as through drag and drop, use [grid](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/grid_role) or [treegrid](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/treegrid_role) instead.
 
 > [!NOTE]
 > Using the native HTML table element ({{HTMLElement('table')}}) along with the table row element ({{HTMLElement('tr')}}) whenever possible is strongly encouraged.
@@ -54,24 +54,24 @@ To create an interactive widget that has a tabular structure, use the grid patte
 
 #### Context roles
 
-- [role="rowgroup"](/en-US/docs/Web/Accessibility/ARIA/Roles/rowgroup_role)
+- [role="rowgroup"](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/rowgroup_role)
   - : An optional contextual row parent, it establishes a relationship between descendant rows. It is a structural equivalent to the thead, tfoot, and tbody elements in an HTML table element.
-- [role="table"](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role)
+- [role="table"](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/table_role)
   - : One of the three possible contexts (along with grid and treegrid) in which you'll find a row, it identifies the row as being part of a non-interactive table structure containing data arranged in rows and columns, similar to the native {{HTMLElement('table')}} HTML element.
-- [role="grid"](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role)
+- [role="grid"](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/grid_role)
   - : One of the three possible contexts (along with table and treegrid) in which you'll find a row, it identifies the row as being part of a non-interactive table structure containing data arranged in rows and columns, similar to the native {{HTMLElement('table')}} HTML element.
-- [role="treegrid"](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role)
+- [role="treegrid"](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/treegrid_role)
   - : Similar to a grid, but with rows that can be expanded and collapsed in the same manner as for a tree.
 
 #### Descendant roles
 
-- [role="cell"](/en-US/docs/Web/Accessibility/ARIA/Roles/cell_role)
+- [role="cell"](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/cell_role)
   - : A cell in a row within a tabular container.
-- [role="gridcell"](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role)
+- [role="gridcell"](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role)
   - : A cell in a row within a grid or treegrid.
-- [role="columnheader"](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role)
+- [role="columnheader"](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role)
   - : A header cell that is the structural equivalent of the HTML {{HTMLElement('th')}} element with a column scope ({{HTMLElement('tr', '<code>&lt;tr scope="col"&gt;</code>')}}). Unlike a plain cell, the columnheader role establishes a relationship between it and all cells in the corresponding column.
-- [role="rowheader"](/en-US/docs/Web/Accessibility/ARIA/Roles/rowheader_role)
+- [role="rowheader"](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/rowheader_role)
   - : A header cell that is the structural equivalent of the HTML {{HTMLElement('th')}} element with a row scope ({{HTMLElement('tr', '<code>&lt;tr scope="row"&gt;</code>')}}). Unlike a plain cell, the rowheader role establishes a relationship between it and all cells in the corresponding row.
 
 #### States and properties
@@ -116,7 +116,7 @@ None
 
 ### Required JavaScript features
 
-None. For sortable columns, see the [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role) aria role.
+None. For sortable columns, see the [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role) aria role.
 
 > [!NOTE]
 > The first rule of ARIA use is you can use a native feature with the semantics and behavior you require already built in, instead of re-purposing an element and **adding** an ARIA role, state or property to make it accessible, then do so. Employ the HTML {{HTMLElement('table')}} element instead of the ARIA role of table whenever possible.
@@ -215,11 +215,11 @@ none
 
 - The HTML {{HTMLElement('tr', '<code>&lt;tr&gt;</code> table row')}} element
 - {{HTMLElement('table')}}
-- [The `rowgroup` role](/en-US/docs/Web/Accessibility/ARIA/Roles/rowgroup_role)
-- [The `table` role](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role)
-- [The `grid` role](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role)
-- [The `treegrid` role](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role)
-- [The `cell` role](/en-US/docs/Web/Accessibility/ARIA/Roles/cell_role)
-- [The `gridcell` role](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role)
-- [The `columnheader` role](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role)
-- [The `rowheader` role](/en-US/docs/Web/Accessibility/ARIA/Roles/rowheader_role)
+- [The `rowgroup` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/rowgroup_role)
+- [The `table` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/table_role)
+- [The `grid` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/grid_role)
+- [The `treegrid` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/treegrid_role)
+- [The `cell` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/cell_role)
+- [The `gridcell` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role)
+- [The `columnheader` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role)
+- [The `rowheader` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/rowheader_role)

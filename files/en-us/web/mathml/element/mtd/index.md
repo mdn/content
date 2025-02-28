@@ -69,7 +69,7 @@ Some browsers may also support the following attributes:
 <table class="properties">
   <tr>
     <th scope="row">
-      <a href="/en-US/docs/Web/Accessibility/ARIA/Roles">Implicit ARIA role</a>
+      <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles">Implicit ARIA role</a>
     </th>
     <td>
       None

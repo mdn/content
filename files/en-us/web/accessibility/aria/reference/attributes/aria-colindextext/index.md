@@ -61,7 +61,7 @@ In the above example, the table has 128 columns of which only 4 columns are show
 Only use `aria-colindextext` when the provided or calculated value of `aria-colindex` is not meaningful or does not reflect the displayed index. Whenever you include `aria-colindextext`, also keep the `aria-colindex` as some assistive technologies rely on the numeric column index for the purpose of keeping track of the user's position and in providing alternative table navigation.
 
 > [!NOTE]
-> While `aria-colindex` can be added to a row when all the columns present are contiguous as sequential values can be deduced, `aria-colindextext` is NOT a supported property of [`row`](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role).
+> While `aria-colindex` can be added to a row when all the columns present are contiguous as sequential values can be deduced, `aria-colindextext` is NOT a supported property of [`row`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/row_role).
 
 See related [`aria-rowindextext`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-rowindextext).
 
@@ -81,12 +81,12 @@ See related [`aria-rowindextext`](/en-US/docs/Web/Accessibility/ARIA/Reference/A
 
 Used in roles:
 
-- [`cell`](/en-US/docs/Web/Accessibility/ARIA/Roles/cell_role)
+- [`cell`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/cell_role)
 
 Inherits into roles:
 
-- [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role)
-- [`rowheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role)
+- [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role)
+- [`rowheader`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role)
 
 ## Specifications
 
@@ -98,6 +98,6 @@ Inherits into roles:
 - [`aria-colindex`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colindex)
 - [`aria-rowindextext`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-rowindextext)
 - [`aria-colcount`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colcount)
-- [`cell` role](/en-US/docs/Web/Accessibility/ARIA/Roles/cell_role)
-- [`columnheader` role](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role)
-- [`rowheader` role](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role)
+- [`cell` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/cell_role)
+- [`columnheader` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role)
+- [`rowheader` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role)

@@ -8,7 +8,7 @@ spec-urls:
 sidebar: accessibilitysidebar
 ---
 
-The `aria-activedescendant` attribute identifies the currently active element when focus is on a [`composite`](/en-US/docs/Web/Accessibility/ARIA/Roles/composite_role) widget, [`combobox`](/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role), [`textbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role), [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role), or [`application`](/en-US/docs/Web/Accessibility/ARIA/Roles/application_role).
+The `aria-activedescendant` attribute identifies the currently active element when focus is on a [`composite`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/composite_role) widget, [`combobox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role), [`textbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role), [`group`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/group_role), or [`application`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/application_role).
 
 ## Description
 
@@ -16,7 +16,7 @@ The `aria-activedescendant` property provides a method of managing focus for ass
 
 With `aria-activedescendant`, the browser keeps the DOM focus on the container element or on an input element that controls the container element. However, the user agent communicates desktop focus events and states to the assistive technology as if the element referenced by `aria-activedescendant` has focus.
 
-This attribute is only relevant on elements with role of [`composite`](/en-US/docs/Web/Accessibility/ARIA/Roles/composite_role) widget, [`combobox`](/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role), [`textbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role), [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role), or [`application`](/en-US/docs/Web/Accessibility/ARIA/Roles/application_role) whose `id` is referenced as the attribute value.
+This attribute is only relevant on elements with role of [`composite`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/composite_role) widget, [`combobox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role), [`textbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role), [`group`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/group_role), or [`application`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/application_role) whose `id` is referenced as the attribute value.
 
 The attribute manages providing assistive technologies with information as to which element has focus, but doesn't actually create focus. Changing focus and managing the attributes value is done with JavaScript. In addition to managing that attribute value, make sure the currently active descendant is visible and in view (or scrolls into view) when focused.
 
@@ -41,11 +41,11 @@ The value of `aria-activedescendant` refers to an owned element of the controlle
 
 Relevant only as an attribute on elements with the following roles:
 
-- [`application`](/en-US/docs/Web/Accessibility/ARIA/Roles/application_role)
-- [`combobox`](/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role)
-- [`composite`](/en-US/docs/Web/Accessibility/ARIA/Roles/composite_role)
-- [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role)
-- [`textbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role)
+- [`application`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/application_role)
+- [`combobox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role)
+- [`composite`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/composite_role)
+- [`group`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/group_role)
+- [`textbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role)
 
 ## Specifications
 

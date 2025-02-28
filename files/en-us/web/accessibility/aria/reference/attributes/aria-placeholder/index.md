@@ -54,11 +54,11 @@ The `aria-placeholder` is used in addition to, not instead of, a label. They hav
 
 Used in roles:
 
-- [`textbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role)
+- [`textbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role)
 
 Inherited into roles:
 
-- [`searchbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/searchbox_role)
+- [`searchbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/searchbox_role)
 
 ## Specifications
 

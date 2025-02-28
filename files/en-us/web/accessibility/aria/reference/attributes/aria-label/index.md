@@ -40,7 +40,7 @@ By default, a button's accessible name is the content between the opening and cl
 If none of these options are available or if the default accessible name is not appropriate, use the `aria-label` attribute to define the accessible name of an element.
 
 > [!NOTE]
-> While `aria-label` can be used on any element that can have an accessible name, in practice however, it is supported only on interactive elements, [widgets](/en-US/docs/Web/Accessibility/ARIA/Roles#2._widget_roles), [landmarks](/en-US/docs/Web/Accessibility/ARIA/Roles#3._landmark_roles), images, and iframes.
+> While `aria-label` can be used on any element that can have an accessible name, in practice however, it is supported only on interactive elements, [widgets](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles#2._widget_roles), [landmarks](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles#3._landmark_roles), images, and iframes.
 
 When using `aria-label`, you also need to consider [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby):
 
@@ -49,13 +49,13 @@ When using `aria-label`, you also need to consider [`aria-labelledby`](/en-US/do
 
 Keep the following additional guidelines in mind when using `aria-label`:
 
-- The `aria-label` attribute can be used with regular, semantic HTML elements; it is not limited to elements that have an [ARIA `role`](/en-US/docs/Web/Accessibility/ARIA/Roles) assigned.
+- The `aria-label` attribute can be used with regular, semantic HTML elements; it is not limited to elements that have an [ARIA `role`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles) assigned.
 - Don't "overuse" `aria-label`. Remember that it's primarily for assistive technologies. To provide additional instructions or to clarify the UI, use visible text with `aria-describedby` or [`aria-description`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-description), not `aria-label`. Instructions should be accessible to all users, not just to those with screen readers (or preferably, make your UI more intuitive).
 
   > [!NOTE]
   > Since `aria-label` content isn't displayed outside assistive technologies, consider making important information visible for all users.
 
-- Not all elements can be given an accessible name. Neither `aria-label` nor `aria-labelledby` should be used with inline structural roles such as with `code`, `term`, and `emphasis`, and roles not mapped to the accessibility API, including `none`. The `aria-label` attribute is intended for elements including links, videos, form controls, and those with [landmark roles](/en-US/docs/Web/Accessibility/ARIA/Roles#3._landmark_roles) or [widget roles](/en-US/docs/Web/Accessibility/ARIA/Roles#2._widget_roles); `aria-label` provides an accessible name when no visible label exists in the DOM.
+- Not all elements can be given an accessible name. Neither `aria-label` nor `aria-labelledby` should be used with inline structural roles such as with `code`, `term`, and `emphasis`, and roles not mapped to the accessibility API, including `none`. The `aria-label` attribute is intended for elements including links, videos, form controls, and those with [landmark roles](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles#3._landmark_roles) or [widget roles](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles#2._widget_roles); `aria-label` provides an accessible name when no visible label exists in the DOM.
 - If you assign a `title` to an {{HTMLElement('iframe')}}, define an `alt` attribute for an {{HTMLElement('img')}}, or add {{HTMLElement('label')}} for an {{HTMLElement('input')}}, `aria-label` is not necessary. However, if an `aria-label` attribute is present, it will take precedence over the iframe's `title`, the image's `alt`, or the input's `<label>` text as the accessible name for that element.
 
 ## Values
@@ -76,22 +76,22 @@ Used in almost all roles **except** roles that cannot be provided an accessible 
 
 The `aria-label` attribute is **NOT** supported in:
 
-- [`code`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles)
-- [`caption`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles)
-- [`definition`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles)
-- [`deletion`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles)
-- [`emphasis`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles)
-- [`generic`](/en-US/docs/Web/Accessibility/ARIA/Roles/generic_role)
-- [`insertion`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles)
-- [`mark`](/en-US/docs/Web/Accessibility/ARIA/Roles/mark_role)
-- [`paragraph`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles)
-- [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role) / [`none`](/en-US/docs/Web/Accessibility/ARIA/Roles/none_role)
-- [`strong`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles)
-- [`subscript`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles)
-- [`superscript`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles)
-- [`suggestion`](/en-US/docs/Web/Accessibility/ARIA/Roles/suggestion_role)
-- [`term`](/en-US/docs/Web/Accessibility/ARIA/Roles/term_role)
-- [`time`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles)
+- [`code`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
+- [`caption`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
+- [`definition`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
+- [`deletion`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
+- [`emphasis`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
+- [`generic`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/generic_role)
+- [`insertion`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
+- [`mark`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/mark_role)
+- [`paragraph`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
+- [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role) / [`none`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/none_role)
+- [`strong`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
+- [`subscript`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
+- [`superscript`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
+- [`suggestion`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/suggestion_role)
+- [`term`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/term_role)
+- [`time`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
 
 ## Specifications
 

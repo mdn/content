@@ -12,7 +12,7 @@ The ARIA `tabpanel` is a container for the resources of layered content associat
 
 ## Description
 
-The `tabpanel` role indicates the element is a container for the resources associated with a [`tab`](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role) role, where each `tab` is contained in a [`tablist`](/en-US/docs/Web/Accessibility/ARIA/Roles/tablist_role).
+The `tabpanel` role indicates the element is a container for the resources associated with a [`tab`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role) role, where each `tab` is contained in a [`tablist`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tablist_role).
 
 A `tabpanel` is part of a tab interface, a common user experience pattern in which a group of visual tabs allow for quickly switching between multiple layered views. Each tab is defined as such with the `tab` role, and these tabs are contained within an element with the `tablist` role. The `tablist` is often visually positioned above or to the side of a content area, containing the associated tabpanels. The `tabpanel` is the role of the container for each pane of content that is associated with a corresponding `tab` in the tab interface's `tablist`.
 
@@ -32,7 +32,7 @@ You can also optionally associate each `tabpanel` with its associated `tab` by i
 
 When a tabbed interface is initialized, one `tabpanel` is displayed and its associated `tab` is styled to indicate that it is active, reflecting its programmatic state. All inactive `tabpanel` elements must be hidden to all users. This is most commonly achieved by use of CSS's `display: none`.
 
-See the [ARIA `tab` role](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role) article for more information specific to the use of this role.
+See the [ARIA `tab` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role) article for more information specific to the use of this role.
 
 Include [`tabindex="-1"`](/en-US/docs/Web/HTML/Global_attributes/tabindex) to allow a `tabpanel` to receive focus without including the `tabpanel` in the page's keyboard focus order.
 
@@ -42,9 +42,9 @@ Carousels can be created using this tab pattern: A slide picker controls can be 
 
 ### Associated Roles and Attributes
 
-- [`tab` role](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role)
+- [`tab` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role)
   - : Controls the visibility of the associated `tabpanel`
-- [`tablist` role](/en-US/docs/Web/Accessibility/ARIA/Roles/tablist_role)
+- [`tablist` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tablist_role)
   - : Group of `tab` elements.
 - [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby)
   - : Provides an accessible name. References the `tab` element that controls the panel
@@ -53,11 +53,11 @@ Carousels can be created using this tab pattern: A slide picker controls can be 
 
 ### Keyboard interactions
 
-See the [`tablist` keyboard interactions](/en-US/docs/Web/Accessibility/ARIA/Roles/tablist_role#keyboard_interactions) in the [`tablist`](/en-US/docs/Web/Accessibility/ARIA/Roles/tablist_role) role definition.
+See the [`tablist` keyboard interactions](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tablist_role#keyboard_interactions) in the [`tablist`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tablist_role) role definition.
 
 ## Example
 
-See the [`tabpanel`, `tab`, and `tablist` example](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role#example) in the [`tab`](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role) role definition.
+See the [`tabpanel`, `tab`, and `tablist` example](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role#example) in the [`tab`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role) role definition.
 
 ## Specifications
 
@@ -65,7 +65,7 @@ See the [`tabpanel`, `tab`, and `tablist` example](/en-US/docs/Web/Accessibility
 
 ## See also
 
-- [ARIA `tab` role](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role)
-- [ARIA `tablist` role](/en-US/docs/Web/Accessibility/ARIA/Roles/tablist_role)
+- [ARIA `tab` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role)
+- [ARIA `tablist` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tablist_role)
 - [Example: Tabs with Automatic Activation](https://www.w3.org/WAI/ARIA/apg/example-index/tabs/tabs-automatic.html) - W3C
 - [Example: Tabs with Manual Activation](https://www.w3.org/WAI/ARIA/apg/example-index/tabs/tabs-manual.html) -W3C

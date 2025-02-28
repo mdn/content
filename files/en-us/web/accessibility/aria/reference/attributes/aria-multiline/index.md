@@ -12,7 +12,7 @@ The `aria-multiline` attribute indicates whether a `textbox` accepts multiple li
 
 The default behavior of the <kbd>Enter</kbd> or <kbd>Return</kbd> key differs between single-line and multi-line text fields. When user focus is in a single-line `{{htmlelement("input/text", '&lt;input type="text"&gt;')}}`, an <kbd>Enter</kbd> or <kbd>Return</kbd> keystroke usually submits the form.
 
-When user focus is in a multi-line {{HTMLElement('textarea')}}, the keystroke inserts a line break. Only relevant for elements with the [`textbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role) role set, the `aria-multiline` attribute indicates to assistive technologies whether that text box accepts multiple lines of input or only a single line, setting expectations as to what type of data to enter and what those keystroke will do.
+When user focus is in a multi-line {{HTMLElement('textarea')}}, the keystroke inserts a line break. Only relevant for elements with the [`textbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role) role set, the `aria-multiline` attribute indicates to assistive technologies whether that text box accepts multiple lines of input or only a single line, setting expectations as to what type of data to enter and what those keystroke will do.
 
 > [!NOTE]
 > Where possible, use the HTML {{HTMLElement('input')}} or the {{HTMLElement('textarea')}}, as these have built in semantics and behaviors, do not require ARIA attributes or scripting, and have keyboard support built in.
@@ -41,11 +41,11 @@ Be aware of focus and keystrokes when designing text boxes. ARIA only modifies t
 
 Used in roles:
 
-- [`textbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role)
+- [`textbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role)
 
 Inherits into roles:
 
-- [`searchbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/searchbox_role)
+- [`searchbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/searchbox_role)
 
 ## Specifications
 
@@ -53,5 +53,5 @@ Inherits into roles:
 
 ## See also
 
-- ARIA [`textbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role) role
-- ARIA [`searchbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/searchbox_role) role
+- ARIA [`textbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role) role
+- ARIA [`searchbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/searchbox_role) role

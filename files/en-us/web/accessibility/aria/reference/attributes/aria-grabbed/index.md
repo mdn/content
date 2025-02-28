@@ -36,7 +36,7 @@ The `aria-grabbed` property is expected to be replaced by a new feature in a fut
 
 ## Associated roles
 
-Used in **ALL** [roles](/en-US/docs/Web/Accessibility/ARIA/Roles)
+Used in **ALL** [roles](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles)
 
 ## Specifications
 

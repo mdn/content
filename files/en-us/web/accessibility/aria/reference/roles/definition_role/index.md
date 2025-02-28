@@ -24,7 +24,7 @@ The `definition` ARIA role can be included on an element that is a definition of
 ```
 
 > [!NOTE]
-> Instead of a `<span>` with the [`term`](/en-US/docs/Web/Accessibility/ARIA/Roles/term_role) and `definition` roles, use the {{HTMLElement('dfn')}} element. **Always use native element if available.**
+> Instead of a `<span>` with the [`term`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/term_role) and `definition` roles, use the {{HTMLElement('dfn')}} element. **Always use native element if available.**
 
 ```html
 <p>
@@ -40,7 +40,7 @@ The `definition` ARIA role can be included on an element that is a definition of
 
 ## See also
 
-- [The `term` role](/en-US/docs/Web/Accessibility/ARIA/Roles/term_role)
+- [The `term` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/term_role)
 - The {{HTMLElement('dfn')}} element
 - The {{HTMLElement('dd')}} element
 - The {{HTMLElement('dl')}} element

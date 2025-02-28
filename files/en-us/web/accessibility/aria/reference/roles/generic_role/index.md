@@ -15,7 +15,7 @@ The `generic` role creates a nameless container element which has no semantic me
 
 While ARIA is primarily used to express semantics, there are some elements that shouldn't expose a semantic name to assistive technologies. The `generic` role indicates an element's role is equivalent to that of the non-semantic {{HTMLElement('div')}} and {{HTMLElement('span')}} elements.
 
-The `generic` role is intended for use as the implicit role of generic elements in host languages for use by user agents only; not for use by developers. Instead, to remove implicit accessibility semantics, use [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role) or `none`, the {{HTMLElement('div')}} and {{HTMLElement('span')}} elements that have no semantic meaning, or semantic container roles such as [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role) to semantically group descendants in a named container.
+The `generic` role is intended for use as the implicit role of generic elements in host languages for use by user agents only; not for use by developers. Instead, to remove implicit accessibility semantics, use [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role) or `none`, the {{HTMLElement('div')}} and {{HTMLElement('span')}} elements that have no semantic meaning, or semantic container roles such as [`group`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/group_role) to semantically group descendants in a named container.
 
 Like an element with role `presentation`, an element with `role="generic"` can provide a limited number of accessible states and properties for its descendants, such as [`aria-live`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-live) attributes. However, unlike elements with role `presentation`, `generic` elements are exposed in accessibility APIs so that assistive technologies can gather certain properties such as layout and bounds.
 
@@ -39,5 +39,5 @@ This role is for use by user agents and not by developers. As such, no appropria
 ## See also
 
 - HTML {{HTMLElement('div')}} and {{HTMLElement('span')}} elements
-- [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role) roles such as
-- [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role) role
+- [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role) roles such as
+- [`group`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/group_role) role

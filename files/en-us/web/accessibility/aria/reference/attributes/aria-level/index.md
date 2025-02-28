@@ -20,7 +20,7 @@ If the DOM ancestry accurately represents the level, the user agent can calculat
 
 ### With `heading` role
 
-The `aria-level` attribute is a required attribute of the [`heading`](/en-US/docs/Web/Accessibility/ARIA/Roles/heading_role) role which indicates to assistive technologies that the element should be treated as a heading. `<div role="heading" aria-level="1">` defines the `<div>` as being the main heading of the page. A level 2 heading, defined with `aria-level="2"` would be the first subsection, a level 3 is a subsection of that, and so on.
+The `aria-level` attribute is a required attribute of the [`heading`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/heading_role) role which indicates to assistive technologies that the element should be treated as a heading. `<div role="heading" aria-level="1">` defines the `<div>` as being the main heading of the page. A level 2 heading, defined with `aria-level="2"` would be the first subsection, a level 3 is a subsection of that, and so on.
 
 ```html
 <div role="heading" aria-level="3">Heading for this sub section</div>
@@ -30,7 +30,7 @@ Opt for using the {{htmlelement("Heading_Elements", "h1")}} through {{htmlelemen
 
 ### Within `treegrid` role
 
-In the case of a [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role), `aria-level` is supported on elements with the role [`row`](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role), not elements with role [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role). Rows act as leaf nodes within the vertical orientation of the grid. Gridcells are leaf nodes within the horizontal orientation of each row. `Aria-level` is not supported on cells within rows. So, in treegrids, the `aria-level` attribute is applied to the element with the role `row`.
+In the case of a [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/treegrid_role), `aria-level` is supported on elements with the role [`row`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/row_role), not elements with role [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role). Rows act as leaf nodes within the vertical orientation of the grid. Gridcells are leaf nodes within the horizontal orientation of each row. `Aria-level` is not supported on cells within rows. So, in treegrids, the `aria-level` attribute is applied to the element with the role `row`.
 
 If a complete set of available nodes is not present in the DOM due to dynamic loading as the user moves focus in or scrolls the tree, each node has `aria-level`, [`aria-setsize`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-setsize), and [`aria-posinset`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-posinset) included.
 
@@ -50,10 +50,10 @@ If a complete set of available nodes is not present in the DOM due to dynamic lo
 
 Used in roles:
 
-- [`associationlistitemkey`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles)
-- [`comment`](/en-US/docs/Web/Accessibility/ARIA/Roles/comment_role)
-- [`heading`](/en-US/docs/Web/Accessibility/ARIA/Roles/heading_role)
-- [`row`](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role)
+- [`associationlistitemkey`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
+- [`comment`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/comment_role)
+- [`heading`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/heading_role)
+- [`row`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/row_role)
 
 ## Specifications
 

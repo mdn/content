@@ -12,7 +12,7 @@ The `option` role is used for selectable items in a `listbox`.
 
 ## Description
 
-The `option` role is used to identify selections a user can make in a [`listbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role). These options are similar to the {{HTMLElement('option')}} elements in a {{HTMLElement('select')}} element, but they can contain images.
+The `option` role is used to identify selections a user can make in a [`listbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/listbox_role). These options are similar to the {{HTMLElement('option')}} elements in a {{HTMLElement('select')}} element, but they can contain images.
 
 All selectable options should have [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-selected) match their state, `true` when selected and `false` when not. If an option is not selectable, `aria-selected` can be omitted. A disabled option can have [`aria-disabled="true"`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-disabled) and `aria-selected="false"` to communicate to the user that the option is present, albeit disabled.
 
@@ -24,7 +24,7 @@ It is highly recommended to use a {{HTMLElement('select')}} element or an {{HTML
 
 ### All descendants are presentational
 
-There are some types of user interface components that, when represented in a platform accessibility API, can only contain text. Accessibility APIs do not have a way of representing semantic elements contained in a `option`. To deal with this limitation, browsers, automatically apply role [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role) to all descendant elements of any `option` element as it is a role that does not support semantic children.
+There are some types of user interface components that, when represented in a platform accessibility API, can only contain text. Accessibility APIs do not have a way of representing semantic elements contained in a `option`. To deal with this limitation, browsers, automatically apply role [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role) to all descendant elements of any `option` element as it is a role that does not support semantic children.
 
 For example, consider the following `option` element, which contains a heading.
 
@@ -48,7 +48,7 @@ From the assistive technology user's perspective, the heading does not exist sin
 
 #### Associated Roles
 
-- [`listbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role)
+- [`listbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/listbox_role)
   - : An `option` _must_ be contained in or owned by a `listbox`
 
 #### States and Properties
@@ -103,6 +103,6 @@ From the assistive technology user's perspective, the heading does not exist sin
 - HTML {{HTMLElement('select')}} element
 - HTML {{HTMLElement('label')}} element
 - HTML {{HTMLElement('option')}} element
-- [ARIA: `combobox` role](/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role)
-- [ARIA: `list` role](/en-US/docs/Web/Accessibility/ARIA/Roles/list_role)
-- [ARIA: `listbox` role](/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role)
+- [ARIA: `combobox` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role)
+- [ARIA: `list` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/list_role)
+- [ARIA: `listbox` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/listbox_role)

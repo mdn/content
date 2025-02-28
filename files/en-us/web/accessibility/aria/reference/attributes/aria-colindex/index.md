@@ -24,7 +24,7 @@ If a cell or gridcell spans multiple columns, set [`aria-colspan`](/en-US/docs/W
 
 If the set of columns which is present in the DOM is contiguous, and if there are no cells which span more than one row or column in that set, you only have to put the `aria-colindex` once on each row on the first column of the set. If the columns are not contiguous, include the `aria-colindex` value on all of the children or owned elements of each row.
 
-The following example shows a grid with 6 columns, of which columns 1, 2, 5, and 6 are displayed to the user. The total number of columns that make up the table is set as `aria-colcount="6"` on the table itself. As the columns aren't contiguous, every [`cell`](/en-US/docs/Web/Accessibility/ARIA/Roles/cell_role) - in this case [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role) and [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role) elements - have the `aria-colindex` attribute set.
+The following example shows a grid with 6 columns, of which columns 1, 2, 5, and 6 are displayed to the user. The total number of columns that make up the table is set as `aria-colcount="6"` on the table itself. As the columns aren't contiguous, every [`cell`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/cell_role) - in this case [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role) and [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role) elements - have the `aria-colindex` attribute set.
 
 ```html
 <div role="grid" aria-colcount="6">
@@ -92,14 +92,14 @@ If all the columns are in the DOM, neither `aria-colcount` nor `aria-colindex` a
 
 Used in roles:
 
-- [`cell`](/en-US/docs/Web/Accessibility/ARIA/Roles/cell_role)
-- [`row`](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role)
+- [`cell`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/cell_role)
+- [`row`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/row_role)
 
 Inherits into roles:
 
-- [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role)
-- [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role)
-- [`rowheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/rowheader_role)
+- [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role)
+- [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role)
+- [`rowheader`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/rowheader_role)
 
 ## Specifications
 

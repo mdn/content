@@ -16,7 +16,7 @@ A menu is a widget that offers a list of choices to the user, such as a set of a
 
 The `menubar` role is used to create a menu bar similar to those found near the top of the window in many desktop applications, visually persistent, typically horizontal, bar of menu items offering the user quick access to a consistent set of commands.
 
-A `menubar` contains three types of menu items, including [`menuitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role), [`menuitemradio`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role) and [`menuitemcheckbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role). These menu items may optionally be nested in one or more [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role) containers. Groups or items may optionally by separated with [`separator`](/en-US/docs/Web/Accessibility/ARIA/Roles/separator_role) elements. While every menu item must be able to receive focus, even if disabled, the `group` and `separator` elements are not focusable.
+A `menubar` contains three types of menu items, including [`menuitem`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitem_role), [`menuitemradio`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemradio_role) and [`menuitemcheckbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemcheckbox_role). These menu items may optionally be nested in one or more [`group`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/group_role) containers. Groups or items may optionally by separated with [`separator`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/separator_role) elements. While every menu item must be able to receive focus, even if disabled, the `group` and `separator` elements are not focusable.
 
 An example of a native menubar is the bar which may be present at the top of the screen if you are reading this in a desktop browser. An example of a web-based menubar is the horizontal menu bar that reads "File Edit View Insert Format", etc., which is usually visible under the document name in a Google doc.
 
@@ -34,13 +34,13 @@ A `menuitem` element in the `menubar` can contain a child submenu of menu items.
 
 ### Associated WAI-ARIA roles, states, and properties
 
-- [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role) role
+- [`group`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/group_role) role
   - : Identifies a set of menu items
-- [`menuitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role) role
+- [`menuitem`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitem_role) role
   - : An option in a set of choices contained by a `menubar`. May have a submenu.
-- [`menuitemradio`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role) role
+- [`menuitemradio`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemradio_role) role
   - : A checkable menu item in a set of elements with the same role, only one of which can be checked at a time.
-- [`menuitemcheckbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role) role
+- [`menuitemcheckbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemcheckbox_role) role
   - : a menu item with a checkable state whose possible values are `true`, `false`, or `mixed`.
 - [`aria-orientation`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-orientation)
   - : Include `aria-orientation="vertical"` on `menubar` element if it's the menubar is vertical. The default orientation is `horizontal`.
@@ -66,7 +66,7 @@ When focus is in a `menubar` it is always on a menu item within the menu bar. Wh
 - <kbd>shift + Tab</kbd>
   - : Moves focus to the previous element in the tab sequence. If that makes it exit the menubar, all submenus in the menubar get closed.
 
-See [`menuitem` keyboard interactions](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role#keyboard_interactions), [`menuitemradio` keyboard interactions](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role#keyboard_interactions), and [`menuitemcheckbox` keyboard interactions](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role#keyboard_interactions) for more information on keyboard interactions when focus is on a menuitem in a menubar (which it always is).
+See [`menuitem` keyboard interactions](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitem_role#keyboard_interactions), [`menuitemradio` keyboard interactions](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemradio_role#keyboard_interactions), and [`menuitemcheckbox` keyboard interactions](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemcheckbox_role#keyboard_interactions) for more information on keyboard interactions when focus is on a menuitem in a menubar (which it always is).
 
 Note: The above interactions assumed the `menubar` is horizontal. If the `menubar` is vertical, include `aria-orientation="vertical"` and change the following keyboard keys accordingly:
 
@@ -90,4 +90,4 @@ Note: The above interactions assumed the `menubar` is horizontal. If the `menuba
 
 ## See also
 
-- [`toolbar` role](/en-US/docs/Web/Accessibility/ARIA/Roles/toolbar_role)
+- [`toolbar` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/toolbar_role)

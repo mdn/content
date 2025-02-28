@@ -95,21 +95,21 @@ Used in almost all roles **except** roles that can not be provided an accessible
 
 The `aria-labelledby` attribute is **NOT** supported in:
 
-- [`code`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles)
-- [`caption`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles)
-- [`deletion`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles)
-- [`emphasis`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles)
-- [`generic`](/en-US/docs/Web/Accessibility/ARIA/Roles/generic_role)
-- [`insertion`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles)
-- [`mark`](/en-US/docs/Web/Accessibility/ARIA/Roles/mark_role)
-- [`paragraph`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles)
-- [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role) / [`none`](/en-US/docs/Web/Accessibility/ARIA/Roles/none_role)
-- [`strong`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles)
-- [`subscript`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles)
-- [`superscript`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles)
-- [`suggestion`](/en-US/docs/Web/Accessibility/ARIA/Roles/suggestion_role)
-- [`term`](/en-US/docs/Web/Accessibility/ARIA/Roles/term_role)
-- [`time`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles)
+- [`code`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
+- [`caption`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
+- [`deletion`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
+- [`emphasis`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
+- [`generic`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/generic_role)
+- [`insertion`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
+- [`mark`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/mark_role)
+- [`paragraph`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
+- [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role) / [`none`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/none_role)
+- [`strong`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
+- [`subscript`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
+- [`superscript`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
+- [`suggestion`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/suggestion_role)
+- [`term`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/term_role)
+- [`time`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
 
 ## Specifications
 

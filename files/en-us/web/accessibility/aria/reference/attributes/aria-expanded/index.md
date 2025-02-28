@@ -34,11 +34,11 @@ When the widget is visible, the controlling object relays that information via h
 
 ### Menu
 
-When a [`menu`](/en-US/docs/Web/Accessibility/ARIA/Roles/menu_role) is displayed, the button object that toggles the visibility of that menu has `aria-expanded="true"` set. When the menu is hidden, aria-expanded can be omitted. If specified when the menu is hidden, it should be set as `aria-expanded="false"`. When a child menu is not visible, its parent [`menuitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role) has `aria-expanded`. It should be set to `true` when the child menu is visible.
+When a [`menu`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menu_role) is displayed, the button object that toggles the visibility of that menu has `aria-expanded="true"` set. When the menu is hidden, aria-expanded can be omitted. If specified when the menu is hidden, it should be set as `aria-expanded="false"`. When a child menu is not visible, its parent [`menuitem`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitem_role) has `aria-expanded`. It should be set to `true` when the child menu is visible.
 
 ### Combobox
 
-By default, some roles are hidden or collapsed and other roles are open or expanded by default. Elements with role [`combobox`](/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role) have a default value for `aria-expanded` of `false`. When a combobox popup is not visible, the element with role `combobox` has `aria-expanded` set to `false`. This is the default state. When the popup element is visible, `aria-expanded` should be set to `true`.
+By default, some roles are hidden or collapsed and other roles are open or expanded by default. Elements with role [`combobox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role) have a default value for `aria-expanded` of `false`. When a combobox popup is not visible, the element with role `combobox` has `aria-expanded` set to `false`. This is the default state. When the popup element is visible, `aria-expanded` should be set to `true`.
 
 ```html
 <label for="username">Username</label>
@@ -60,11 +60,11 @@ By default, some roles are hidden or collapsed and other roles are open or expan
 
 ### Treeitems
 
-Each element with role [`treeitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/treeitem_role) that serves as a parent node has `aria-expanded="false"` when the node is in a closed state and `aria-expanded="true"` when the node is in an open state. End nodes, nodes with no descendant nodes, should not have the `aria-expanded` attribute because, if they were to have it, they would be incorrectly described to assistive technologies as parent nodes.
+Each element with role [`treeitem`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/treeitem_role) that serves as a parent node has `aria-expanded="false"` when the node is in a closed state and `aria-expanded="true"` when the node is in an open state. End nodes, nodes with no descendant nodes, should not have the `aria-expanded` attribute because, if they were to have it, they would be incorrectly described to assistive technologies as parent nodes.
 
 ### Rows
 
-A parent row in a [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role) is a row that can be expanded or collapsed to show or hide a set of child rows in a table or grid. Each parent row has the `aria-expanded` state set on either the row element or on a cell contained in the row. When the child rows are hidden, `aria-expanded="false"` is set. `aria-expanded="true"` is set when the child rows are displayed. Rows that do not control the display of child rows should not include the `aria-expanded` attribute at all because including the attribute defines the rows as parent rows.
+A parent row in a [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/treegrid_role) is a row that can be expanded or collapsed to show or hide a set of child rows in a table or grid. Each parent row has the `aria-expanded` state set on either the row element or on a cell contained in the row. When the child rows are hidden, `aria-expanded="false"` is set. `aria-expanded="true"` is set when the child rows are displayed. Rows that do not control the display of child rows should not include the `aria-expanded` attribute at all because including the attribute defines the rows as parent rows.
 
 ## Values
 
@@ -90,26 +90,26 @@ A parent row in a [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid
 
 Used in roles:
 
-- [`application`](/en-US/docs/Web/Accessibility/ARIA/Roles/application_role)
-- [`button`](/en-US/docs/Web/Accessibility/ARIA/Roles/button_role)
-- [`checkbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role)
-- [`combobox`](/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role)
-- [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role)
-- [`link`](/en-US/docs/Web/Accessibility/ARIA/Roles/link_role)
-- [`listbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role)
-- [`menuitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role)
-- [`row`](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role)
-- [`rowheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/rowheader_role)
-- [`tab`](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role)
-- [`treeitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/treeitem_role)
+- [`application`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/application_role)
+- [`button`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/button_role)
+- [`checkbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role)
+- [`combobox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role)
+- [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role)
+- [`link`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/link_role)
+- [`listbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/listbox_role)
+- [`menuitem`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitem_role)
+- [`row`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/row_role)
+- [`rowheader`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/rowheader_role)
+- [`tab`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role)
+- [`treeitem`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/treeitem_role)
 
 Inherits into roles:
 
-- [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role)
-- [`menuitemcheckbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role)
-- [`menuitemradio`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role)
-- [`rowheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/rowheader_role)
-- [`switch`](/en-US/docs/Web/Accessibility/ARIA/Roles/switch_role)
+- [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role)
+- [`menuitemcheckbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemcheckbox_role)
+- [`menuitemradio`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemradio_role)
+- [`rowheader`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/rowheader_role)
+- [`switch`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/switch_role)
 
 ## Specifications
 

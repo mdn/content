@@ -32,7 +32,7 @@ By default, updates contain only the changes to the live region and these are an
 
 ## Best Practices
 
-With an area that has scrolling text, such as a stock ticker, the [`marquee`](/en-US/docs/Web/Accessibility/ARIA/Roles/marquee_role) role should be used instead.
+With an area that has scrolling text, such as a stock ticker, the [`marquee`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/marquee_role) role should be used instead.
 
 ## Specifications
 
@@ -40,8 +40,8 @@ With an area that has scrolling text, such as a stock ticker, the [`marquee`](/e
 
 ## See also
 
-- [ARIA: `alert` role](/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role)
-- [ARIA: `marquee` role](/en-US/docs/Web/Accessibility/ARIA/Roles/marquee_role)
-- [ARIA: `status` role](/en-US/docs/Web/Accessibility/ARIA/Roles/status_role)
-- [ARIA: `timer` role](/en-US/docs/Web/Accessibility/ARIA/Roles/timer_role)
+- [ARIA: `alert` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/alert_role)
+- [ARIA: `marquee` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/marquee_role)
+- [ARIA: `status` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/status_role)
+- [ARIA: `timer` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/timer_role)
 - [ARIA live regions](/en-US/docs/Web/Accessibility/ARIA/Guides/Live_regions)

@@ -8,7 +8,7 @@ spec-urls:
 sidebar: accessibilitysidebar
 ---
 
-The `alert` role is for important, and usually time-sensitive, information. The `alert` is a type of [`status`](/en-US/docs/Web/Accessibility/ARIA/Roles/status_role) processed as an atomic live region.
+The `alert` role is for important, and usually time-sensitive, information. The `alert` is a type of [`status`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/status_role) processed as an atomic live region.
 
 ## Description
 
@@ -27,7 +27,7 @@ The `alert` role is added to the node containing an alert message, **not** the e
 > [!WARNING]
 > Because of its intrusive nature, the `alert` role must be used sparingly and only in situations where the user's immediate attention is required.
 
-The [`alert`](https://www.w3.org/TR/wai-aria-1.1/#alert) role is of the five [live region](/en-US/docs/Web/Accessibility/ARIA/Guides/Live_regions) roles. Dynamic changes that are less urgent should use a less aggressive method, such as including `aria-live="polite"` or using an other live region role like [`status`](/en-US/docs/Web/Accessibility/ARIA/Roles/status_role). If the user is expected to close the alert, then the [`alertdialog`](/en-US/docs/Web/Accessibility/ARIA/Roles/alertdialog_role) role should be used instead.
+The [`alert`](https://www.w3.org/TR/wai-aria-1.1/#alert) role is of the five [live region](/en-US/docs/Web/Accessibility/ARIA/Guides/Live_regions) roles. Dynamic changes that are less urgent should use a less aggressive method, such as including `aria-live="polite"` or using an other live region role like [`status`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/status_role). If the user is expected to close the alert, then the [`alertdialog`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/alertdialog_role) role should be used instead.
 
 The most important thing to know about the `alert` role is that it's for content that is dynamically displayed, not for content that appears on page load. It is perfect for situations such as when a user fills out a form and JavaScript is used to add an error message - the alert would immediately read out the message. It should not be used on HTML that the user hasn't interacted with. For example, if a page loads with multiple visible alerts scattered throughout, the alert role should not be used, as the messages were not dynamically triggered.
 
@@ -116,11 +116,11 @@ document.getElementById("hiddenAlertContainer").textContent =
 
 - [`aria-live`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-live)
 - [`aria-atomic`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-atomic)
-- [ARIA: `log` role](/en-US/docs/Web/Accessibility/ARIA/Roles/log_role)
-- [ARIA: `marquee` role](/en-US/docs/Web/Accessibility/ARIA/Roles/marquee_role)
-- [ARIA: `status` role](/en-US/docs/Web/Accessibility/ARIA/Roles/status_role)
-- [ARIA: `timer` role](/en-US/docs/Web/Accessibility/ARIA/Roles/timer_role)
-- [ARIA: `alertdialog` role](/en-US/docs/Web/Accessibility/ARIA/Roles/alertdialog_role)
+- [ARIA: `log` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/log_role)
+- [ARIA: `marquee` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/marquee_role)
+- [ARIA: `status` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/status_role)
+- [ARIA: `timer` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/timer_role)
+- [ARIA: `alertdialog` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/alertdialog_role)
 - [ARIA: live regions](/en-US/docs/Web/Accessibility/ARIA/Guides/Live_regions)
 - [ARIA alert support - The Paciello Group](https://www.tpgi.com/aria-alert-support/)
 - [ARIA Practices alert example](https://www.w3.org/WAI/ARIA/apg/patterns/alert/examples/alert/)

@@ -34,7 +34,7 @@ The developer is required to change the value of the `aria-checked` attribute dy
 
 ### All descendants are presentational
 
-There are some types of user interface components that, when represented in a platform accessibility API, can only contain text. Accessibility APIs do not have a way of representing semantic elements contained in a `checkbox`. To deal with this limitation, browsers, automatically apply role [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role) to all descendant elements of any `checkbox` element as it is a role that does not support semantic children.
+There are some types of user interface components that, when represented in a platform accessibility API, can only contain text. Accessibility APIs do not have a way of representing semantic elements contained in a `checkbox`. To deal with this limitation, browsers, automatically apply role [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role) to all descendant elements of any `checkbox` element as it is a role that does not support semantic children.
 
 For example, consider the following `checkbox` element, which contains a heading.
 
@@ -175,9 +175,9 @@ The first rule of ARIA is: if a native HTML element or attribute has the semanti
 ## See also
 
 - [`<input type="checkbox">`](/en-US/docs/Web/HTML/Element/input/checkbox)
-- [ARIA: `radio` role](/en-US/docs/Web/Accessibility/ARIA/Roles/radio_role)
-- [ARIA: `menuitem` role](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role)
-- [ARIA: `menuitemcheckbox` role](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role)
-- [ARIA: `menuitemradio` role](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role)
-- [ARIA: `switch` role](/en-US/docs/Web/Accessibility/ARIA/Roles/switch_role)
-- [ARIA: `option` role](/en-US/docs/Web/Accessibility/ARIA/Roles/option_role)
+- [ARIA: `radio` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/radio_role)
+- [ARIA: `menuitem` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitem_role)
+- [ARIA: `menuitemcheckbox` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemcheckbox_role)
+- [ARIA: `menuitemradio` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemradio_role)
+- [ARIA: `switch` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/switch_role)
+- [ARIA: `option` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/option_role)

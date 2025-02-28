@@ -12,7 +12,7 @@ The `tablist` role identifies the element that serves as the container for a set
 
 You may be interacting with a tabbed interface as you read this! Browser tabs allow a user have multiple web pages open in a single window. Clicking on a tab in the tablist at the top of the browser window enables the user to display the associated content in the main content area, the tabpanel, one site at a time. This is called a "tab design pattern".
 
-When implementing a tab design pattern, the [`tab`](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role), `tablist` and [`tabpanel`](/en-US/docs/Web/Accessibility/ARIA/Roles/tabpanel_role) roles are used.
+When implementing a tab design pattern, the [`tab`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role), `tablist` and [`tabpanel`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tabpanel_role) roles are used.
 
 Tabs are a set of layered sections of content, known as tab panels, that display one panel of content at a time. Each tab panel has an associated `tab` element, that, when activated, displays the panel. The list of tab elements is arranged along one edge of the currently displayed panel, most commonly the top edge, nested in a `tablist` element.
 
@@ -34,7 +34,7 @@ Elements with the `tablist` role have an implicit [`aria-orientation`](/en-US/do
 
 ### Associated WAI-ARIA roles, states, and properties
 
-- [`tab`](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role) role
+- [`tab`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role) role
   - : Required Owned Elements. Every tablist must have one or more `tab` children.
 - [`aria-multiselectable`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-multiselectable)
   - : When set to `true`, indicates the user may select more than one `tab` from the `tablist` descendants.
@@ -89,7 +89,7 @@ When focus is on a tab in a tablist with either horizontal or vertical orientati
 
 ## Examples
 
-See the [`tabpanel`, `tab`, and `tablist` example](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role#example) in the [`tab`](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role) role definition.
+See the [`tabpanel`, `tab`, and `tablist` example](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role#example) in the [`tab`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role) role definition.
 
 ## Specifications
 
@@ -97,5 +97,5 @@ See the [`tabpanel`, `tab`, and `tablist` example](/en-US/docs/Web/Accessibility
 
 ## See also
 
-- [`tab` role](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role)
-- [`tabpanel` role](/en-US/docs/Web/Accessibility/ARIA/Roles/tabpanel_role)
+- [`tab` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role)
+- [`tabpanel` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tabpanel_role)

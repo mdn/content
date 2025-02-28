@@ -16,11 +16,11 @@ By specifying the `application` role, it indicates this `div` element and all of
 
 ## Description
 
-The `application` [document structure role](/en-US/docs/Web/Accessibility/ARIA/Roles#1._document_structure_roles), indicates to assistive technologies that this part of the web content contains elements that do not conform to any other known HTML element or WAI-ARIA widget. Any sort of special interpretation of HTML structures and widgets should be suspended, and control should be completely handed over to the browser and web application to handle mouse, keyboard, or touch interaction.
+The `application` [document structure role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles#1._document_structure_roles), indicates to assistive technologies that this part of the web content contains elements that do not conform to any other known HTML element or WAI-ARIA widget. Any sort of special interpretation of HTML structures and widgets should be suspended, and control should be completely handed over to the browser and web application to handle mouse, keyboard, or touch interaction.
 
 In this mode, the web author is completely responsible for handling any and all keyboard input, focus management, and other interactions and cannot assume assistive technologies would do any processing on their end.
 
-If the web application encompassed by the application role contains parts that _should_ be treated like normal web content, a role of [`document`](/en-US/docs/Web/Accessibility/ARIA/Roles/document_role) or [`article`](/en-US/docs/Web/Accessibility/ARIA/Roles/article_role) should be used to contain such content.
+If the web application encompassed by the application role contains parts that _should_ be treated like normal web content, a role of [`document`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/document_role) or [`article`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/article_role) should be used to contain such content.
 
 ### Background
 
@@ -34,7 +34,7 @@ The `application` role is designed to provide a means for widgets that are not p
 
 ### Associated WAI-ARIA roles, states, and properties
 
-- [`document`](/en-US/docs/Web/Accessibility/ARIA/Roles/document_role), [`article`](/en-US/docs/Web/Accessibility/ARIA/Roles/article_role)
+- [`document`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/document_role), [`article`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/article_role)
   - : Used to indicate parts of the application that should be treated as normal web content
 - [`aria-activedescendant`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-activedescendant)
   - : Used to manage focus inside the application.

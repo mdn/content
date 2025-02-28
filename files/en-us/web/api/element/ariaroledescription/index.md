@@ -44,4 +44,4 @@ console.log(el.ariaRoleDescription); // "an updated description of this widget"
 
 ## See also
 
-- [ARIA: application role](/en-US/docs/Web/Accessibility/ARIA/Roles/application_role)
+- [ARIA: application role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/application_role)

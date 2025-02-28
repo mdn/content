@@ -118,7 +118,7 @@ updateResult();
     </tr>
     <tr>
       <th scope="row">Implicit ARIA role</th>
-      <td><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/status_role"><code>status</code></a></td>
+      <td><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/status_role"><code>status</code></a></td>
     </tr>
     <tr>
       <th scope="row">Permitted ARIA roles</th>

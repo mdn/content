@@ -12,7 +12,7 @@ The `menuitem` role indicates the element is an option in a set of choices conta
 
 ## Description
 
-A `menuitem` is one of the three types of options in a set of choices contained by a [`menu`](/en-US/docs/Web/Accessibility/ARIA/Roles/menu_role) or [`menubar`](/en-US/docs/Web/Accessibility/ARIA/Roles/menubar_role); the other two being [`menuitemcheckbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role) and [`menuitemradio`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role). The `menuitem` is only found as a descendant of, or owned by, elements with role `menu` or `menubar`, optionally nested within an element with role [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role) that is contained in, or owned by, a menu.
+A `menuitem` is one of the three types of options in a set of choices contained by a [`menu`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menu_role) or [`menubar`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menubar_role); the other two being [`menuitemcheckbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemcheckbox_role) and [`menuitemradio`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemradio_role). The `menuitem` is only found as a descendant of, or owned by, elements with role `menu` or `menubar`, optionally nested within an element with role [`group`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/group_role) that is contained in, or owned by, a menu.
 
 If the `menuitem` is not a descendant of a menu in the DOM, include the [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-owns) attribute on menu to indicate the relationship. If `aria-owns` is set on the menu container to include elements that are not DOM children of the container, those elements will appear in the reading order in the sequence they are referenced and after any items that are DOM children in supporting technologies. Ensure the visual focus order matches the assistive technology reading order.
 
@@ -26,11 +26,11 @@ Every `menuitem` must have an accessible name. This name comes from the element'
 
 ## Associated WAI-ARIA roles, states, and properties
 
-- [`menu`](/en-US/docs/Web/Accessibility/ARIA/Roles/menu_role) role
+- [`menu`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menu_role) role
   - : A widget providing a list of choices. Required context role (or `menubar`)
-- [`menubar`](/en-US/docs/Web/Accessibility/ARIA/Roles/menubar_role) role
+- [`menubar`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menubar_role) role
   - : A presentation of a `menu` that usually remains visible and is usually presented horizontally. Required context role (or `menu`)
-- [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role) role
+- [`group`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/group_role) role
   - : Can be used to identify a set of related `menuitem`s within or otherwise owned by a `menu` or `menubar`
 - [`aria-disabled`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-disabled)
   - : Indicates the element is perceivable but disabled, so it is not operable
@@ -110,7 +110,7 @@ When items in a `menubar` are arranged vertically and items in menu containers a
 
 ## See also
 
-- [`menuitemcheckbox` role](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role)
-- [`menuitemradio` role](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role)
-- [`listitem` role](/en-US/docs/Web/Accessibility/ARIA/Roles/listitem_role)
-- [`option` role](/en-US/docs/Web/Accessibility/ARIA/Roles/option_role)
+- [`menuitemcheckbox` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemcheckbox_role)
+- [`menuitemradio` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemradio_role)
+- [`listitem` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/listitem_role)
+- [`option` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/option_role)

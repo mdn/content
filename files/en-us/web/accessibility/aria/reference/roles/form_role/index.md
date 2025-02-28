@@ -24,7 +24,7 @@ This is a form that collects and saves a user's contact information.
 
 ## Description
 
-A `form` [landmark](/en-US/docs/Web/Accessibility/ARIA/Roles#3._landmark_roles) identifies a region of content that contains a collection of items and objects that, as a whole, combine to create a form when no other named landmark is appropriate (e.g. [`main`](/en-US/docs/Web/Accessibility/ARIA/Roles/main_role) or [`search`](/en-US/docs/Web/Accessibility/ARIA/Roles/search_role)).
+A `form` [landmark](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles#3._landmark_roles) identifies a region of content that contains a collection of items and objects that, as a whole, combine to create a form when no other named landmark is appropriate (e.g. [`main`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/main_role) or [`search`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/search_role)).
 
 > [!NOTE]
 > Using the {{HTMLElement('form')}} element will automatically communicate a section of content as a `form` landmark, if it is provided an accessible name. Developers should always prefer using the correct semantic HTML element over using ARIA.
@@ -85,7 +85,7 @@ It is recommended to use `<form>` instead.
 
 ### Use sparingly
 
-[Landmark roles](/en-US/docs/Web/Accessibility/ARIA/Roles#3._landmark_roles) are intended to identify larger overall sections of the document. Using too many landmark roles can create "noise" in screen readers, making it difficult to understand the overall layout of the page.
+[Landmark roles](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles#3._landmark_roles) are intended to identify larger overall sections of the document. Using too many landmark roles can create "noise" in screen readers, making it difficult to understand the overall layout of the page.
 
 ### Inputs are not forms
 
@@ -93,7 +93,7 @@ You do not need to declare `role="form"` on every [form element](/en-US/docs/Web
 
 ### Search
 
-If a form is used to search, you should use the more specialized [`role="search"`](/en-US/docs/Web/Accessibility/ARIA/Roles/search_role) value.
+If a form is used to search, you should use the more specialized [`role="search"`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/search_role) value.
 
 ### Labeling landmarks
 

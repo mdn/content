@@ -10,7 +10,7 @@ The `aria-pressed` attribute indicates the current "pressed" state of a toggle b
 
 ## Description
 
-Adding `aria-pressed` to an element with a role of [`button`](/en-US/docs/Web/Accessibility/ARIA/Roles/button_role) turns the button into a toggle button. The `aria-pressed` attribute is only relevant for toggle buttons. It represents the button's current "pressed" state.
+Adding `aria-pressed` to an element with a role of [`button`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/button_role) turns the button into a toggle button. The `aria-pressed` attribute is only relevant for toggle buttons. It represents the button's current "pressed" state.
 
 The value is "tri-state", meaning the value can be set to `true`, `false`, `mixed`, or `undefined` values. In the case of `aria-pressed`, like most tri-state value types, the default value is `undefined`.
 
@@ -50,7 +50,7 @@ The first rule of ARIA use is "if you can use a native feature with the semantic
 
 Used in roles:
 
-- [`button`](/en-US/docs/Web/Accessibility/ARIA/Roles/button_role)
+- [`button`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/button_role)
 
 ## Specifications
 

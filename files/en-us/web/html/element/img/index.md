@@ -332,7 +332,7 @@ When an `alt` attribute is not present on an image, some screen readers may anno
 
 ### Identifying SVG as an image
 
-Due to a [VoiceOver bug](https://webkit.org/b/216364), VoiceOver does not correctly announce SVG images as images. Include [`role="img"`](/en-US/docs/Web/Accessibility/ARIA/Roles/img_role) to all `<img>` elements with SVG source files to ensure assistive technologies correctly announce the SVG as image content.
+Due to a [VoiceOver bug](https://webkit.org/b/216364), VoiceOver does not correctly announce SVG images as images. Include [`role="img"`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/img_role) to all `<img>` elements with SVG source files to ensure assistive technologies correctly announce the SVG as image content.
 
 ```html
 <img src="mdn.svg" alt="MDN" role="img" />
@@ -449,14 +449,14 @@ Although `<img>` elements have innocent uses, they can have undesirable conseque
             with non-empty <code>alt</code> attribute or no
             <code>alt</code> attribute:
             <code
-              ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/img_role"
+              ><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/img_role"
                 ><code>img</code></a
               ></code
             >
           </li>
           <li>
             with empty <code>alt</code> attribute:
-            <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role"
+            <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role"
               ><code>presentation</code></a
             >
           </li>
@@ -473,7 +473,7 @@ Although `<img>` elements have innocent uses, they can have undesirable conseque
               <li>
                 <code
                   ><a
-                    href="/en-US/docs/Web/Accessibility/ARIA/Roles/button_role"
+                    href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/button_role"
                     >button</a
                   ></code
                 >
@@ -481,41 +481,41 @@ Although `<img>` elements have innocent uses, they can have undesirable conseque
               <li>
                 <code
                   ><a
-                    href="/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role"
+                    href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role"
                     >checkbox</a
                   ></code
                 >
               </li>
-              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/link_role"><code>link</code></a></li>
-              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role"><code>menuitem</code></a></li>
-              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role"><code>menuitemcheckbox</code></a></li>
-              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role"><code>menuitemradio</code></a></li>
-              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/option_role"><code>option</code></a></li>
-              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/progressbar_role"><code>progressbar</code></a></li>
-              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/scrollbar_role"><code>scrollbar</code></a></li>
-              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/separator_role"><code>separator</code></a></li>
-              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/slider_role"><code>slider</code></a></li>
+              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/link_role"><code>link</code></a></li>
+              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitem_role"><code>menuitem</code></a></li>
+              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemcheckbox_role"><code>menuitemcheckbox</code></a></li>
+              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemradio_role"><code>menuitemradio</code></a></li>
+              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/option_role"><code>option</code></a></li>
+              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/progressbar_role"><code>progressbar</code></a></li>
+              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/scrollbar_role"><code>scrollbar</code></a></li>
+              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/separator_role"><code>separator</code></a></li>
+              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/slider_role"><code>slider</code></a></li>
               <li>
                 <code
                   ><a
-                    href="/en-US/docs/Web/Accessibility/ARIA/Roles/switch_role"
+                    href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/switch_role"
                     >switch</a
                   ></code
                 >
               </li>
               <li>
                 <code
-                  ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role"
+                  ><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role"
                     >tab</a
                   ></code
                 >
               </li>
-              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/treeitem_role"><code>treeitem</code></a></li>
+              <li><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/treeitem_role"><code>treeitem</code></a></li>
             </ul>
           </li>
           <li>
-            with empty <code>alt</code> attribute, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>
-            or <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>
+            with empty <code>alt</code> attribute, <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/none_role"><code>none</code></a>
+            or <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role"><code>presentation</code></a>
           </li>
           <li>
             with no <code>alt</code> attribute, no <code>role</code> permitted

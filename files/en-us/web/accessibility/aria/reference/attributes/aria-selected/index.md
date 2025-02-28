@@ -10,7 +10,7 @@ The `aria-selected` attribute indicates the current "selected" state of various 
 
 ## Description
 
-The `aria-selected` attribute indicates the current "selected" state for [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role), [`option`](/en-US/docs/Web/Accessibility/ARIA/Roles/option_role), [`row`](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role) and [`tab`](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role) roles.
+The `aria-selected` attribute indicates the current "selected" state for [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role), [`option`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/option_role), [`row`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/row_role) and [`tab`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role) roles.
 
 This attribute is used to indicate which elements within single-selection and multiple-selection composite widgets are selected. If more than one element is selectable at a time, include `aria-multiselectable="true"` on the grid, listbox, tablist, or other owning role, while including `aria-selected` only on the selectable cells, options, and tabs.
 
@@ -20,11 +20,11 @@ Widgets that support both `aria-selected` and `aria-current` at the same time ha
 
 ### Grid
 
-Setting `aria-selected="false"` on a focusable gridcell indicates the cell is selectable. If the grid allows more than one gridcell to be selected at a time, set `aria-multiselectable="true"` on the element with role [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role). Setting `aria-selected` on a column or row header gridcell does not propagate the state to other cells in the column or row.
+Setting `aria-selected="false"` on a focusable gridcell indicates the cell is selectable. If the grid allows more than one gridcell to be selected at a time, set `aria-multiselectable="true"` on the element with role [`grid`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/grid_role). Setting `aria-selected` on a column or row header gridcell does not propagate the state to other cells in the column or row.
 
 ### Option
 
-Both `aria-selected` and `aria-checked` are valid for [`option`](/en-US/docs/Web/Accessibility/ARIA/Roles/option_role). Some user interfaces indicate selection with `aria-selected` in single-select list boxes and with `aria-checked` in multi-select list boxes.
+Both `aria-selected` and `aria-checked` are valid for [`option`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/option_role). Some user interfaces indicate selection with `aria-selected` in single-select list boxes and with `aria-checked` in multi-select list boxes.
 
 Don't specify both `aria-selected` and `aria-checked` on `option` elements contained by the same `listbox` unless the meaning and purpose of `aria-selected` is different from the meaning and purpose of aria-checked in the user interface, the meaning and purpose of each state apparent, and the UI provides separate methods for controlling each state.
 
@@ -36,9 +36,9 @@ If the grid supports column selection and a column is selected, all cells in the
 
 ### Tab
 
-In a tablist, `aria-selected` is used on a tab to indicate the currently-displayed [`tabpanel`](/en-US/docs/Web/Accessibility/ARIA/Roles/tabpanel_role).
+In a tablist, `aria-selected` is used on a tab to indicate the currently-displayed [`tabpanel`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tabpanel_role).
 
-The selected [`tab`](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role) in a [`tablist`](/en-US/docs/Web/Accessibility/ARIA/Roles/tablist_role) should have the attribute `aria-selected="true"` set. All inactive tabs in the tablist should have `aria-selected="false"` set. Setting the state only impacts the accessibility tree: make sure to style the active tab in a way that visual indicates it's selected state. The default value for `aria-selected` on a `tab` role is `false`.
+The selected [`tab`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role) in a [`tablist`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tablist_role) should have the attribute `aria-selected="true"` set. All inactive tabs in the tablist should have `aria-selected="false"` set. Setting the state only impacts the accessibility tree: make sure to style the active tab in a way that visual indicates it's selected state. The default value for `aria-selected` on a `tab` role is `false`.
 
 If more than one tab is selectable at a time, include `aria-multiselectable` on the `tablist`.
 
@@ -94,7 +94,7 @@ In this `tablist` example, the first `tab` is selected:
 - `true`
   - : The selectable element is selected.
 - `false`
-  - : The selectable element is not selected. Implicit default for [`tab`](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role).
+  - : The selectable element is not selected. Implicit default for [`tab`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role).
 - `undefined` (default)
   - : The element is not selectable.
 
@@ -109,16 +109,16 @@ In this `tablist` example, the first `tab` is selected:
 
 Used in roles:
 
-- [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role)
-- [`option`](/en-US/docs/Web/Accessibility/ARIA/Roles/option_role)
-- [`row`](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role)
-- [`tab`](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role)
+- [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role)
+- [`option`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/option_role)
+- [`row`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/row_role)
+- [`tab`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role)
 
 Inherited into roles:
 
-- [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role)
-- [`rowheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/rowheader_role)
-- [`treeitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/treeitem_role)
+- [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role)
+- [`rowheader`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/rowheader_role)
+- [`treeitem`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/treeitem_role)
 
 ## Specifications
 

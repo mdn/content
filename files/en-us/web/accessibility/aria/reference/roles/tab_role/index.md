@@ -18,7 +18,7 @@ The ARIA `tab` role indicates an interactive element inside a `tablist` that, wh
 
 ## Description
 
-An element with the `tab` role controls the visibility of an associated element with the [`tabpanel`](/en-US/docs/Web/Accessibility/ARIA/Roles/tabpanel_role) role. The common user experience pattern is a group of visual tabs above, or to the side of, a content area, and selecting a different tab changes the content and makes the selected tab more prominent than the other tabs.
+An element with the `tab` role controls the visibility of an associated element with the [`tabpanel`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tabpanel_role) role. The common user experience pattern is a group of visual tabs above, or to the side of, a content area, and selecting a different tab changes the content and makes the selected tab more prominent than the other tabs.
 
 Elements with the role `tab` _must_ either be a child of an element with the `tablist` role, or have their `id` as part of the [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-owns) property of a `tablist`. This combination identifies to assistive technology that the element is part of a group of related elements. Some assistive technology will provide a count of the number of `tab` role elements inside a `tablist`, and inform users of which `tab` they currently have targeted. Further, an element with the `tab` role _should_ contain the [`aria-controls`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-controls) property identifying a corresponding `tabpanel` (that has a `tabpanel` role) by that element's `id`. When an element with the `tabpanel` role has focus, or a child of it has focus, that indicates that the connected element with the `tab` role is the active tab in a `tablist`.
 
@@ -26,7 +26,7 @@ When elements with the `tab` role are selected or active they should have their 
 
 ### All descendants are presentational
 
-There are some types of user interface components that, when represented in a platform accessibility API, can only contain text. Accessibility APIs do not have a way of representing semantic elements contained in a `tab`. To deal with this limitation, browsers, automatically apply role [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role) to all descendant elements of any `tab` element as it is a role that does not support semantic children.
+There are some types of user interface components that, when represented in a platform accessibility API, can only contain text. Accessibility APIs do not have a way of representing semantic elements contained in a `tab`. To deal with this limitation, browsers, automatically apply role [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role) to all descendant elements of any `tab` element as it is a role that does not support semantic children.
 
 For example, consider the following `tab` element, which contains a heading.
 
@@ -242,4 +242,4 @@ What are the related properties, and in what order will this attribute or proper
 
 - HTML {{HTMLElement('button')}} element
 - [KeyboardEvent.key](/en-US/docs/Web/API/KeyboardEvent/key)
-- [ARIA `tabpanel` role](/en-US/docs/Web/Accessibility/ARIA/Roles/tabpanel_role)
+- [ARIA `tabpanel` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tabpanel_role)

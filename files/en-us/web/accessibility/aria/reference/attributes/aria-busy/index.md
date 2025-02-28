@@ -26,7 +26,7 @@ ariaLiveElement.ariaBusy = "false";
 
 ### Within a `feed`
 
-If an element with [`feed`](/en-US/docs/Web/Accessibility/ARIA/Roles/feed_role) role has `aria-busy` set to `true`, the rendering changes that occur inside the feed will not be announced with the exception of user-initiated changes.
+If an element with [`feed`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/feed_role) role has `aria-busy` set to `true`, the rendering changes that occur inside the feed will not be announced with the exception of user-initiated changes.
 
 ### Within a `widget`
 

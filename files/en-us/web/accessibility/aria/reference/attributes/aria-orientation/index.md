@@ -16,19 +16,19 @@ Several widgets have default orientations:
 
 Horizontal by default:
 
-- [`slider`](/en-US/docs/Web/Accessibility/ARIA/Roles/slider_role),
-- [`tablist`](/en-US/docs/Web/Accessibility/ARIA/Roles/tablist_role)
-- [`toolbar`](/en-US/docs/Web/Accessibility/ARIA/Roles/toolbar_role)
-- [`menubar`](/en-US/docs/Web/Accessibility/ARIA/Roles/menubar_role)
+- [`slider`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/slider_role),
+- [`tablist`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tablist_role)
+- [`toolbar`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/toolbar_role)
+- [`menubar`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menubar_role)
 
 Vertical by default:
 
-- [`scrollbar`](/en-US/docs/Web/Accessibility/ARIA/Roles/scrollbar_role)
-- [`tree`](/en-US/docs/Web/Accessibility/ARIA/Roles/tree_role)
-- [`listbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role)
-- [`menu`](/en-US/docs/Web/Accessibility/ARIA/Roles/menu_role)
+- [`scrollbar`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/scrollbar_role)
+- [`tree`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tree_role)
+- [`listbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/listbox_role)
+- [`menu`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menu_role)
 
-Each [`separator`](/en-US/docs/Web/Accessibility/ARIA/Roles/separator_role) should have `aria-orientation` consistent with the separator's orientation.
+Each [`separator`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/separator_role) should have `aria-orientation` consistent with the separator's orientation.
 
 When nodes in a tree are arranged horizontally instead of its default vertical orientation, or when a tab list is vertical instead of its default horizontal, the down arrow performs as a right arrow normally would, and the up arrow performs as a left arrow normally would. In these instances, assistive technology users need to know the widget's orientation so as to navigate correctly.
 
@@ -56,21 +56,21 @@ Always remember that ARIA only modifies how assistive technology presents conten
 
 Used in roles:
 
-- [`scrollbar`](/en-US/docs/Web/Accessibility/ARIA/Roles/scrollbar_role)
-- [`select`](/en-US/docs/Web/Accessibility/ARIA/Roles/select_role)
-- [`separator`](/en-US/docs/Web/Accessibility/ARIA/Roles/separator_role)
-- [`slider`](/en-US/docs/Web/Accessibility/ARIA/Roles/slider_role)
-- [`tablist`](/en-US/docs/Web/Accessibility/ARIA/Roles/tablist_role)
-- [`toolbar`](/en-US/docs/Web/Accessibility/ARIA/Roles/toolbar_role)
+- [`scrollbar`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/scrollbar_role)
+- [`select`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/select_role)
+- [`separator`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/separator_role)
+- [`slider`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/slider_role)
+- [`tablist`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tablist_role)
+- [`toolbar`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/toolbar_role)
 
 Inherited into roles:
 
-- [`listbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role)
-- [`menu`](/en-US/docs/Web/Accessibility/ARIA/Roles/menu_role)
-- [`menubar`](/en-US/docs/Web/Accessibility/ARIA/Roles/menubar_role)
-- [`radiogroup`](/en-US/docs/Web/Accessibility/ARIA/Roles/radiogroup_role)
-- [`tree`](/en-US/docs/Web/Accessibility/ARIA/Roles/tree_role)
-- [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role)
+- [`listbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/listbox_role)
+- [`menu`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menu_role)
+- [`menubar`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menubar_role)
+- [`radiogroup`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/radiogroup_role)
+- [`tree`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tree_role)
+- [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/treegrid_role)
 
 ## Specifications
 

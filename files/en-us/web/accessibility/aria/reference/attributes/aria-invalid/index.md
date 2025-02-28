@@ -114,30 +114,30 @@ function updateAlert(msg) {
 }
 ```
 
-Note that the alert has the ARIA role attribute set to [`alert`](/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role).
+Note that the alert has the ARIA role attribute set to [`alert`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/alert_role).
 
 ## Associated roles
 
 Used in roles:
 
-- [`application`](/en-US/docs/Web/Accessibility/ARIA/Roles/application_role)
-- [`checkbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role)
-- [`combobox`](/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role)
-- [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role)
-- [`listbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role)
-- [`radiogroup`](/en-US/docs/Web/Accessibility/ARIA/Roles/radiogroup_role)
-- [`slider`](/en-US/docs/Web/Accessibility/ARIA/Roles/slider_role)
-- [`spinbutton`](/en-US/docs/Web/Accessibility/ARIA/Roles/spinbutton_role)
-- [`textbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role)
-- [`tree`](/en-US/docs/Web/Accessibility/ARIA/Roles/tree_role)
+- [`application`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/application_role)
+- [`checkbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role)
+- [`combobox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role)
+- [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role)
+- [`listbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/listbox_role)
+- [`radiogroup`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/radiogroup_role)
+- [`slider`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/slider_role)
+- [`spinbutton`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/spinbutton_role)
+- [`textbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role)
+- [`tree`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tree_role)
 
 Inherited into role:
 
-- [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role)
-- [`rowheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/rowheader_role)
-- [`searchbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/searchbox_role)
-- [`switch`](/en-US/docs/Web/Accessibility/ARIA/Roles/switch_role)
-- [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role)
+- [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role)
+- [`rowheader`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/rowheader_role)
+- [`searchbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/searchbox_role)
+- [`switch`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/switch_role)
+- [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/treegrid_role)
 
 ## Specifications
 

@@ -44,4 +44,4 @@ this.internals_.ariaPressed = "true";
 
 ## See also
 
-- [ARIA: button role](/en-US/docs/Web/Accessibility/ARIA/Roles/button_role)
+- [ARIA: button role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/button_role)

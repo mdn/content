@@ -25,7 +25,7 @@ If no ancestor has explicitly set `aria-atomic`, only the node or nodes of live 
 
 ## Associated roles
 
-Used in **ALL** [roles](/en-US/docs/Web/Accessibility/ARIA/Roles).
+Used in **ALL** [roles](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles).
 
 ## Specifications
 

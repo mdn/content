@@ -54,7 +54,7 @@ header > time {
 
 ## Usage notes
 
-The `<header>` element has an identical meaning to the site-wide [`banner`](/en-US/docs/Web/Accessibility/ARIA/Roles/banner_role) landmark role, unless nested within sectioning content. Then, the `<header>` element is not a landmark.
+The `<header>` element has an identical meaning to the site-wide [`banner`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/banner_role) landmark role, unless nested within sectioning content. Then, the `<header>` element is not a landmark.
 
 The `<header>` element can define a global site header, described as a `banner` in the accessibility tree. It usually includes a logo, company name, search feature, and possibly the global navigation or a slogan. It is generally located at the top of the page.
 
@@ -70,7 +70,7 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 
 ## Accessibility
 
-The `<header>` element defines a [`banner`](/en-US/docs/Web/Accessibility/ARIA/Roles/banner_role) landmark when its context is the {{HTMLElement('body')}} element. The HTML header element is not considered a banner landmark when it is descendant of an {{HTMLElement('article')}}, {{HTMLElement('aside')}}, {{HTMLElement('main')}}, {{HTMLElement('nav')}}, or {{HTMLElement('section')}} element.
+The `<header>` element defines a [`banner`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/banner_role) landmark when its context is the {{HTMLElement('body')}} element. The HTML header element is not considered a banner landmark when it is descendant of an {{HTMLElement('article')}}, {{HTMLElement('aside')}}, {{HTMLElement('main')}}, {{HTMLElement('nav')}}, or {{HTMLElement('section')}} element.
 
 ## Examples
 
@@ -156,9 +156,9 @@ The `<header>` element defines a [`banner`](/en-US/docs/Web/Accessibility/ARIA/R
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/banner_role">banner</a
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/banner_role">banner</a
         >, or
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/generic_role"
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/generic_role"
           >generic</a
         >
         if a descendant of an
@@ -169,28 +169,28 @@ The `<header>` element defines a [`banner`](/en-US/docs/Web/Accessibility/ARIA/R
         <code><a href="/en-US/docs/Web/HTML/Element/section">section</a></code>
         element, or an element with
         <code
-          >role=<a href="/en-US/docs/Web/Accessibility/ARIA/Roles/article_role"
+          >role=<a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/article_role"
             >article</a
           ></code
         >,
         <code
-          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/complementary_role"
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/complementary_role"
             >complementary</a
           ></code
         >,
         <code
-          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/main_role"
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/main_role"
             >main</a
           ></code
         >,
         <code
-          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/navigation_role"
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/navigation_role"
             >navigation</a
           ></code
         >
         or
         <code
-          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/region_role"
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/region_role"
             >region</a
           ></code
         >
@@ -199,8 +199,8 @@ The `<header>` element defines a [`banner`](/en-US/docs/Web/Accessibility/ARIA/R
     <tr>
       <th scope="row">Permitted ARIA roles</th>
       <td>
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/group_role"><code>group</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a> or
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/group_role"><code>group</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role"><code>presentation</code></a> or
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/none_role"><code>none</code></a>
       </td>
     </tr>
     <tr>

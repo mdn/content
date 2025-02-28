@@ -12,8 +12,8 @@ The `treegrid` role identifies an element as being grid whose rows can be expand
 
 ## Description
 
-A `treegrid` is a hierarchical data grid, or table, consisting of tabular information that is editable or interactive. A `treegrid` is a combination of the [`tree`](/en-US/docs/Web/Accessibility/ARIA/Roles/tree_role) and [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role) roles. Like a `grid`, the `treegrid` is made up of rows, columns, and gridcells. Like a `tree`, parent nodes in a `treegrid` are expandable and collapsible.
-The `treegrid` widget contains one or more [`row`](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role) elements, optionally with [`rowgroup`](/en-US/docs/Web/Accessibility/ARIA/Roles/rowgroup_role) elements grouping the rows. Each row, in turn, contains one or more cells. Each cell is either a DOM descendant of or owned by a row element and is either a [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role), [`rowheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/rowheader_role), or [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role) element, with the `gridcell` role being used for all cells that do not contain column or row header information.
+A `treegrid` is a hierarchical data grid, or table, consisting of tabular information that is editable or interactive. A `treegrid` is a combination of the [`tree`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tree_role) and [`grid`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/grid_role) roles. Like a `grid`, the `treegrid` is made up of rows, columns, and gridcells. Like a `tree`, parent nodes in a `treegrid` are expandable and collapsible.
+The `treegrid` widget contains one or more [`row`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/row_role) elements, optionally with [`rowgroup`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/rowgroup_role) elements grouping the rows. Each row, in turn, contains one or more cells. Each cell is either a DOM descendant of or owned by a row element and is either a [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role), [`rowheader`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/rowheader_role), or [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role) element, with the `gridcell` role being used for all cells that do not contain column or row header information.
 
 A `row` that can be expanded or collapsed to show or hide a set of child rows is a **parent row**. Each parent row has the [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded) state set on either the row element or on a cell contained in the row.
 
@@ -55,7 +55,7 @@ If the treegrid provides sort functions, the [`aria-sort`](/en-US/docs/Web/Acces
 
 ### Treegrid menus
 
-If the `treegrid` has an attached [`menu`](/en-US/docs/Web/Accessibility/ARIA/Roles/menu_role) that opens when right clicked, include [`aria-haspopup="true"`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-haspopup) on the `treegrid` element. This informs assistive technologies that the `treegrid` has an associated popup. The ability for both keyboard and pointer device users to open and set focus in the menu must be added with JavaScript.
+If the `treegrid` has an attached [`menu`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menu_role) that opens when right clicked, include [`aria-haspopup="true"`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-haspopup) on the `treegrid` element. This informs assistive technologies that the `treegrid` has an associated popup. The ability for both keyboard and pointer device users to open and set focus in the menu must be added with JavaScript.
 
 ### Read-only treegrids
 
@@ -65,15 +65,15 @@ Like all ARIA attributes, adding `aria-readonly` only informs assistive technolo
 
 ### Associated WAI-ARIA roles, states, and properties
 
-- [`row`](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role) role
+- [`row`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/row_role) role
   - : A row of cells within a tabular structure, optionally within a `rowgroup`. Contains one or more rows of grid cells, column headers, or row headers.
-- [`rowgroup`](/en-US/docs/Web/Accessibility/ARIA/Roles/rowgroup_role) role
-  - : A group of [rows](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role) within a tabular structure.
-- [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role) role
+- [`rowgroup`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/rowgroup_role) role
+  - : A group of [rows](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/row_role) within a tabular structure.
+- [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role) role
   - : Intended to mimic the functionality of the HTML {{HTMLElement('td')}} element, is found in `grid` and `treegrid` roles and must be the direct child of a `row`.
-- [columnheader](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role) role
+- [columnheader](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role) role
   - : A cell in a row containing header information for a column, similar to the native {{HTMLElement('th')}} element with column scope
-- [rowheader](/en-US/docs/Web/Accessibility/ARIA/Roles/rowheader_role) role
+- [rowheader](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/rowheader_role) role
   - : A cell containing header information for a `row` within a tabular structure.
 - [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded)
   - : For expandable items, the value is `true` or `false`. Also indicates that the item is expandable, so should not be present if the item cannot be expanded.

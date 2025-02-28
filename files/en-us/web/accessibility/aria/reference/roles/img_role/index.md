@@ -42,7 +42,7 @@ For example:
 </div>
 ```
 
-If an image is purely presentational, consider using the [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role) role.
+If an image is purely presentational, consider using the [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role) role.
 
 ### SVG and role="img"
 
@@ -82,7 +82,7 @@ If `aria-labelledby` were used, the screen reader would read it. In this case, o
 
 ### All descendants are presentational
 
-There are some types of user interface components that, when represented in a platform accessibility API, can only contain text. Accessibility APIs do not have a way of representing semantic elements contained in an `img`. To deal with this limitation, browsers, automatically apply role [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role) to all descendant elements of any `img` element as it is a role that does not support semantic children.
+There are some types of user interface components that, when represented in a platform accessibility API, can only contain text. Accessibility APIs do not have a way of representing semantic elements contained in an `img`. To deal with this limitation, browsers, automatically apply role [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role) to all descendant elements of any `img` element as it is a role that does not support semantic children.
 
 For example, consider the following `img` element, which contains a heading.
 
@@ -130,6 +130,6 @@ From the assistive technology user's perspective, the heading does not exist sin
 - The {{HTMLElement('picture')}} element
 - The {{HTMLElement('audio')}} element
 - The {{HTMLElement('video')}} element
-- [ARIA: `presentation` role](/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role)
+- [ARIA: `presentation` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role)
 - [Accessibility Object Model](https://wicg.github.io/aom/spec/)
 - [ARIA in HTML](https://w3c.github.io/html-aria/)

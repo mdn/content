@@ -29,7 +29,7 @@ This document provides a concise checklist of accessibility requirements for mob
 - All activatable elements must be focusable:
 
   - Standard controls such as links, buttons, and form fields are focusable by default.
-  - Non-standard controls must have an appropriate [ARIA Role](/en-US/docs/Web/Accessibility/ARIA/Roles) assigned to them, such as `button`, `link`, or `checkbox`.
+  - Non-standard controls must have an appropriate [ARIA Role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles) assigned to them, such as `button`, `link`, or `checkbox`.
 
 - Focus should be handled in a logical order and consistent manner.
 
