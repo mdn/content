@@ -41,7 +41,7 @@ Closing the dialog with the <kbd>Esc</kbd> key has no impact on the returnValue.
   const acceptButton = document.getElementById("acceptButton");
 
   function handleUserInput(returnValue) {
-    if (!returnValue) {
+    if (returnValue === "") {
       statusText.innerText = "There was no return value";
     } else {
       statusText.innerText = "Return value: " + returnValue;
