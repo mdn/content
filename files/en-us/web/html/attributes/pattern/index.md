@@ -10,7 +10,36 @@ browser-compat: html.elements.input.pattern
 
 The **`pattern`** attribute specifies a [regular expression](/en-US/docs/Web/JavaScript/Guide/Regular_expressions) the form control's value should match. If a non-`null` value doesn't conform to the constraints set by the `pattern` value, the {{domxref('ValidityState')}} object's read-only {{domxref('ValidityState.patternMismatch','patternMismatch')}} property will be true.
 
-{{EmbedInteractiveExample("pages/tabbed/attribute-pattern.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: pattern", "tabbed-shorter")}}
+
+```html interactive-example
+<label for="username">Username: (3-16 characters)</label>
+<input
+  id="username"
+  name="username"
+  type="text"
+  value="Sasha"
+  pattern="\w{3,16}"
+  required />
+
+<label for="pin">PIN: (4 digits)</label>
+<input id="pin" name="pin" type="password" pattern="\d{4,4}" required />
+```
+
+```css interactive-example
+label {
+  display: block;
+  margin-top: 1em;
+}
+
+input:valid {
+  background-color: palegreen;
+}
+
+input:invalid {
+  background-color: lightpink;
+}
+```
 
 ## Overview
 

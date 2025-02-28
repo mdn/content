@@ -77,7 +77,3 @@ console.log(style.isConnected); // Returns true
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- [Node.prototype.isConnected polyfill](https://gist.github.com/eligrey/f109a6d0bf4efe3461201c3d7b745e8f)

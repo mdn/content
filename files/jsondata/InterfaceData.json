@@ -424,6 +424,10 @@
       "inh": "EventTarget",
       "impl": []
     },
+    "CommandEvent": {
+      "inh": "Event",
+      "impl": []
+    },
     "Comment": {
       "inh": "CharacterData",
       "impl": []
@@ -1285,10 +1289,6 @@
       "impl": []
     },
     "GamepadPose": {
-      "inh": "",
-      "impl": []
-    },
-    "GamepadTouch": {
       "inh": "",
       "impl": []
     },
@@ -2709,6 +2709,14 @@
       "impl": []
     },
     "PrivateAggregation": {
+      "inh": "",
+      "impl": []
+    },
+    "PrivateAttribution": {
+      "inh": "",
+      "impl": []
+    },
+    "PrivateAttributionAggregationServices": {
       "inh": "",
       "impl": []
     },

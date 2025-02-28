@@ -4,7 +4,6 @@ slug: Web/API/HTMLDialogElement
 page-type: web-api-interface
 browser-compat:
   - api.HTMLDialogElement
-  - api.HTMLDialogElement.requestClose
   - api.HTMLElement.beforetoggle_event.dialog_elements
   - api.HTMLElement.toggle_event.dialog_elements
 ---
@@ -30,7 +29,7 @@ _Also inherits methods from its parent interface, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLDialogElement.close()")}}
   - : Closes the dialog. An optional string may be passed as an argument, updating the `returnValue` of the dialog.
-- {{domxref("HTMLDialogElement.requestClose()")}}
+- {{domxref("HTMLDialogElement.requestClose()")}} {{experimental_inline}}
   - : Requests to close the dialog. An optional string may be passed as an argument, updating the `returnValue` of the dialog.
 - {{domxref("HTMLDialogElement.show()")}}
   - : Displays the dialog modelessly, i.e. still allowing interaction with content outside of the dialog.

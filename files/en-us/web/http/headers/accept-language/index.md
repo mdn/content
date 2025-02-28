@@ -28,7 +28,7 @@ Servers often ignore the `Accept-Language` header in such cases and send a succe
       <td>{{Glossary("Request header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>No</td>
     </tr>
     <tr>
