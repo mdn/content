@@ -7,12 +7,12 @@ browser-compat: http.headers.WWW-Authenticate
 
 {{HTTPSidebar}}
 
-The HTTP **`WWW-Authenticate`** {{Glossary("response header")}} advertises the [HTTP authentication](/en-US/docs/Web/HTTP/Authentication) methods (or {{Glossary("challenge", "challenges")}}) that might be used to gain access to a specific resource.
+The HTTP **`WWW-Authenticate`** {{Glossary("response header")}} advertises the [HTTP authentication](/en-US/docs/Web/HTTP/Guides/Authentication) methods (or {{Glossary("challenge", "challenges")}}) that might be used to gain access to a specific resource.
 
-This header is part of the [General HTTP authentication framework](/en-US/docs/Web/HTTP/Authentication#the_general_http_authentication_framework), which can be used with a number of [authentication schemes](/en-US/docs/Web/HTTP/Authentication#authentication_schemes).
+This header is part of the [General HTTP authentication framework](/en-US/docs/Web/HTTP/Guides/Authentication#the_general_http_authentication_framework), which can be used with a number of [authentication schemes](/en-US/docs/Web/HTTP/Guides/Authentication#authentication_schemes).
 Each challenge identifies a scheme supported by the server and additional parameters that are defined for that scheme type.
 
-A server using [HTTP authentication](/en-US/docs/Web/HTTP/Authentication) will respond with a {{HTTPStatus("401", "401 Unauthorized")}} response to a request for a protected resource.
+A server using [HTTP authentication](/en-US/docs/Web/HTTP/Guides/Authentication) will respond with a {{HTTPStatus("401", "401 Unauthorized")}} response to a request for a protected resource.
 This response must include at least one `WWW-Authenticate` header and at least one challenge to indicate what authentication schemes can be used to access the resource and any additional data that each particular scheme needs.
 
 Multiple challenges are allowed in one `WWW-Authenticate` header, and multiple `WWW-Authenticate` headers are allowed in one response.
@@ -58,7 +58,7 @@ WWW-Authenticate: <auth-scheme> auth-param1=param-token1, …, auth-paramN=param
 ```
 
 The presence of a `token68` or authentication parameters depends on the selected `<auth-scheme>`.
-For example, [Basic authentication](/en-US/docs/Web/HTTP/Authentication#basic_authentication_scheme) requires a `<realm>`, and allows for optional use of `charset` key, but does not support a `token68`:
+For example, [Basic authentication](/en-US/docs/Web/HTTP/Guides/Authentication#basic_authentication_scheme) requires a `<realm>`, and allows for optional use of `charset` key, but does not support a `token68`:
 
 ```http
 WWW-Authenticate: Basic realm="Dev", charset="UTF-8"
@@ -80,8 +80,8 @@ WWW-Authenticate: <challengeN>
 ## Directives
 
 - `<auth-scheme>`
-  - : A case-insensitive token indicating the [Authentication scheme](/en-US/docs/Web/HTTP/Authentication#authentication_schemes) used.
-    Some of the more common types are [`Basic`](/en-US/docs/Web/HTTP/Authentication#basic_authentication_scheme), `Digest`, `Negotiate` and `AWS4-HMAC-SHA256`.
+  - : A case-insensitive token indicating the [Authentication scheme](/en-US/docs/Web/HTTP/Guides/Authentication#authentication_schemes) used.
+    Some of the more common types are [`Basic`](/en-US/docs/Web/HTTP/Guides/Authentication#basic_authentication_scheme), `Digest`, `Negotiate` and `AWS4-HMAC-SHA256`.
     IANA maintains a [list of authentication schemes](https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml), but there are other schemes offered by host services.
 - `<auth-param>` {{optional_inline}}
   - : An authentication parameter whose format depends on the `<auth-scheme>`.
@@ -193,7 +193,7 @@ Authorization: Basic YWxhZGRpbjpvcGVuc2VzYW1l
 For `Basic` authentication, the credentials are constructed by first combining the username and the password with a colon (`aladdin:opensesame`), and then by encoding the resulting string in [`base64`](/en-US/docs/Glossary/Base64) (`YWxhZGRpbjpvcGVuc2VzYW1l`).
 
 > [!NOTE]
-> See also [HTTP authentication](/en-US/docs/Web/HTTP/Authentication) for examples on how to configure Apache or Nginx servers to password protect your site with HTTP basic authentication.
+> See also [HTTP authentication](/en-US/docs/Web/HTTP/Guides/Authentication) for examples on how to configure Apache or Nginx servers to password protect your site with HTTP basic authentication.
 
 ### Digest authentication with SHA-256 and MD5
 
@@ -281,7 +281,7 @@ Authorization: 123.16:MTEyMzEyMzEyMw==1:028:https://www.example.com:80800:3:MTI4
 
 ## See also
 
-- [HTTP authentication](/en-US/docs/Web/HTTP/Authentication)
+- [HTTP authentication](/en-US/docs/Web/HTTP/Guides/Authentication)
 - {{HTTPHeader("Authorization")}}
 - {{HTTPHeader("Proxy-Authorization")}}
 - {{HTTPHeader("Proxy-Authenticate")}}

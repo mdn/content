@@ -15,7 +15,7 @@ To send multiple cookies, multiple `Set-Cookie` headers should be sent in the sa
 >
 > When a [Fetch API](/en-US/docs/Web/API/Fetch_API/Using_Fetch) or [XMLHttpRequest API](/en-US/docs/Web/API/XMLHttpRequest_API) request [uses CORS](/en-US/docs/Web/HTTP/CORS#what_requests_use_cors), browsers will ignore `Set-Cookie` headers present in the server's response unless the request includes credentials. Visit [Using the Fetch API - Including credentials](/en-US/docs/Web/API/Fetch_API/Using_Fetch#including_credentials) and the [XMLHttpRequest article](/en-US/docs/Web/API/XMLHttpRequest_API) to learn how to include credentials.
 
-For more information, see the guide on [Using HTTP cookies](/en-US/docs/Web/HTTP/Cookies).
+For more information, see the guide on [Using HTTP cookies](/en-US/docs/Web/HTTP/Guides/Cookies).
 
 <table class="properties">
   <tbody>
@@ -262,7 +262,7 @@ Set-Cookie: __Host-example=34d8g; SameSite=None; Secure; Path=/; Partitioned;
 
 ## See also
 
-- [HTTP cookies](/en-US/docs/Web/HTTP/Cookies)
+- [HTTP cookies](/en-US/docs/Web/HTTP/Guides/Cookies)
 - {{HTTPHeader("Cookie")}}
 - {{domxref("Document.cookie")}}
 - [Samesite cookies explained](https://web.dev/articles/samesite-cookies-explained) (web.dev blog)

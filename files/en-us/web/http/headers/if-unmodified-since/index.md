@@ -7,7 +7,7 @@ browser-compat: http.headers.If-Unmodified-Since
 
 {{HTTPSidebar}}
 
-The HTTP **`If-Unmodified-Since`** {{Glossary("request header")}} makes the request for the resource [conditional](/en-US/docs/Web/HTTP/Conditional_requests).
+The HTTP **`If-Unmodified-Since`** {{Glossary("request header")}} makes the request for the resource [conditional](/en-US/docs/Web/HTTP/Guides/Conditional_requests).
 The server will send the requested resource (or accept it in the case of a {{HTTPMethod("POST")}} or another non-{{Glossary("Safe/HTTP", "safe")}} method) only if the resource on the server has not been modified after the date in the request header.
 If the resource has been modified after the specified date, the response will be a {{HTTPStatus("412", "412 Precondition Failed")}} error.
 
@@ -70,7 +70,7 @@ If-Unmodified-Since: Wed, 21 Oct 2015 07:28:00 GMT
 
 ## See also
 
-- [HTTP Conditional Requests](/en-US/docs/Web/HTTP/Conditional_requests) guide
+- [HTTP Conditional Requests](/en-US/docs/Web/HTTP/Guides/Conditional_requests) guide
 - {{HTTPHeader("Last-Modified")}}
 - {{HTTPHeader("If-Range")}}, {{HTTPHeader("Range")}} range request headers
 - {{HTTPHeader("If-Match")}}, {{HTTPHeader("If-Modified-Since")}}, {{HTTPHeader("If-None-Match")}} conditional request headers

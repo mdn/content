@@ -5,23 +5,23 @@ sidebar:
     link: /Web/HTTP
   - type: section
     title: Guides
-  - /Web/HTTP/Overview
-  - /Web/HTTP/Session
-  - /Web/HTTP/Messages
-  - /Web/HTTP/MIME_types
-  - /Web/HTTP/Compression
-  - /Web/HTTP/Caching
-  - /Web/HTTP/Authentication
-  - /Web/HTTP/Cookies
-  - /Web/HTTP/Redirections
-  - /Web/HTTP/Conditional_requests
-  - /Web/HTTP/Range_requests
-  - /Web/HTTP/Content_negotiation
-  - /Web/HTTP/Connection_management_in_HTTP_1.x
-  - /Web/HTTP/Evolution_of_HTTP
-  - /Web/HTTP/Protocol_upgrade_mechanism
-  - /Web/HTTP/Proxy_servers_and_tunneling
-  - /Web/HTTP/Client_hints
+  - /Web/HTTP/Guides/Overview
+  - /Web/HTTP/Guides/Session
+  - /Web/HTTP/Guides/Messages
+  - /Web/HTTP/Guides/MIME_types
+  - /Web/HTTP/Guides/Compression
+  - /Web/HTTP/Guides/Caching
+  - /Web/HTTP/Guides/Authentication
+  - /Web/HTTP/Guides/Cookies
+  - /Web/HTTP/Guides/Redirections
+  - /Web/HTTP/Guides/Conditional_requests
+  - /Web/HTTP/Guides/Range_requests
+  - /Web/HTTP/Guides/Content_negotiation
+  - /Web/HTTP/Guides/Connection_management_in_HTTP_1.x
+  - /Web/HTTP/Guides/Evolution_of_HTTP
+  - /Web/HTTP/Guides/Protocol_upgrade_mechanism
+  - /Web/HTTP/Guides/Proxy_servers_and_tunneling
+  - /Web/HTTP/Guides/Client_hints
   - title: Security
     details: closed
     children:

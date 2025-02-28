@@ -8,7 +8,7 @@ browser-compat: http.headers.Accept-Encoding
 {{HTTPSidebar}}
 
 The HTTP **`Accept-Encoding`** {{glossary("request header", "request")}} and {{glossary("response header")}} indicates the content encoding (usually a compression algorithm) that the sender can understand.
-In requests, the server uses [content negotiation](/en-US/docs/Web/HTTP/Content_negotiation) to select one of the encoding proposals from the client and informs the client of that choice with the {{HTTPHeader("Content-Encoding")}} response header.
+In requests, the server uses [content negotiation](/en-US/docs/Web/HTTP/Guides/Content_negotiation) to select one of the encoding proposals from the client and informs the client of that choice with the {{HTTPHeader("Content-Encoding")}} response header.
 In responses, it provides information about which content encodings the server can understand in messages to the requested resource, so that the encoding can be used in subsequent requests to the resource.
 For example, `Accept-Encoding` is included in a {{HTTPStatus("415", "415 Unsupported Media Type")}} response if a request to a resource (e.g., {{HTTPMethod("PUT")}}) used an unsupported encoding.
 
@@ -104,7 +104,7 @@ Accept-Encoding: br;q=1.0, gzip;q=0.8, *;q=0.1
 ## See also
 
 - {{HTTPStatus("415", "415 Unsupported Media Type")}}
-- HTTP [content negotiation](/en-US/docs/Web/HTTP/Content_negotiation)
+- HTTP [content negotiation](/en-US/docs/Web/HTTP/Guides/Content_negotiation)
 - A header with the result of the content negotiation: {{HTTPHeader("Content-Encoding")}}
 - Other similar headers: {{HTTPHeader("TE")}}, {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Language")}}
 - {{Glossary("Brotli compression")}}

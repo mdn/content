@@ -7,7 +7,7 @@ browser-compat: http.headers.Device-Memory
 
 {{HTTPSidebar}}{{securecontext_header}}
 
-The HTTP **`Device-Memory`** {{Glossary("request header")}} is used in [device client hints](/en-US/docs/Web/HTTP/Client_hints#device_client_hints) to indicate the approximate amount of available RAM on the client device, in gigabytes.
+The HTTP **`Device-Memory`** {{Glossary("request header")}} is used in [device client hints](/en-US/docs/Web/HTTP/Guides/Client_hints#device_client_hints) to indicate the approximate amount of available RAM on the client device, in gigabytes.
 The header is part of the {{DOMxRef("Device Memory API", "Device Memory API", "", "nocode")}}.
 
 Client hints are accessible only on secure origins.
@@ -20,7 +20,7 @@ Servers that opt in to the `Device-Memory` client hint will typically also speci
       <th scope="row">Header type</th>
       <td>
         {{Glossary("Request header")}},
-        <a href="/en-US/docs/Web/HTTP/Client_hints">Client hint</a>
+        <a href="/en-US/docs/Web/HTTP/Guides/Client_hints">Client hint</a>
       </td>
     </tr>
     <tr>
@@ -76,4 +76,4 @@ Device-Memory: 1
   - {{HTTPHeader("Viewport-Width")}}
   - {{HTTPHeader("Width")}}
 - {{HTTPHeader("Accept-CH")}}
-- [HTTP Caching: Vary](/en-US/docs/Web/HTTP/Caching#vary) and {{HTTPHeader("Vary")}}
+- [HTTP Caching: Vary](/en-US/docs/Web/HTTP/Guides/Caching#vary) and {{HTTPHeader("Vary")}}

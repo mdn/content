@@ -38,7 +38,7 @@ Access-Control-Expose-Headers: *
     These are _in addition_ to the {{Glossary("CORS-safelisted response header", "CORS-safelisted response headers")}}.
 - `*` (wildcard)
   - : Any header.
-    The value `*` only counts as a special wildcard value for requests without credentials (requests without [HTTP cookies](/en-US/docs/Web/HTTP/Cookies) or HTTP authentication information).
+    The value `*` only counts as a special wildcard value for requests without credentials (requests without [HTTP cookies](/en-US/docs/Web/HTTP/Guides/Cookies) or HTTP authentication information).
     In requests with credentials, it is treated as the literal header name `*`.
 
 ## Examples

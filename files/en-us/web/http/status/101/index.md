@@ -11,7 +11,7 @@ The HTTP **`101 Switching Protocols`** [informational response](/en-US/docs/Web/
 The protocol is specified in the {{HTTPHeader("Upgrade")}} request header received from a client.
 
 The server includes an {{HTTPHeader("Upgrade")}} header in this response to indicate the protocol it has agreed to switch to.
-The process is described in detail in the [Protocol upgrade mechanism](/en-US/docs/Web/HTTP/Protocol_upgrade_mechanism) guide.
+The process is described in detail in the [Protocol upgrade mechanism](/en-US/docs/Web/HTTP/Guides/Protocol_upgrade_mechanism) guide.
 
 ## Status
 
@@ -27,7 +27,7 @@ The following example shows how switching protocols might be used with [WebSocke
 A client sends a {{HTTPMethod("GET")}} HTTP request with an {{HTTPHeader("Upgrade")}} header which must also be listed in the {{HTTPHeader("Connection")}} header.
 The server agrees to switch protocols, returning a 101 response meaning the connection has switched from HTTP to WebSocket.
 At this point, the client and server can now start exchanging WebSocket data.
-Information about how to set `Sec-WebSocket-*` headers for handshake negotiation can be found in [WebSocket-specific headers](/en-US/docs/Web/HTTP/Protocol_upgrade_mechanism#websocket-specific_headers).
+Information about how to set `Sec-WebSocket-*` headers for handshake negotiation can be found in [WebSocket-specific headers](/en-US/docs/Web/HTTP/Guides/Protocol_upgrade_mechanism#websocket-specific_headers).
 
 ```http
 GET /notifications HTTP/1.1
@@ -48,7 +48,7 @@ Connection: Upgrade
 
 ## See also
 
-- [Protocol upgrade mechanism](/en-US/docs/Web/HTTP/Protocol_upgrade_mechanism)
+- [Protocol upgrade mechanism](/en-US/docs/Web/HTTP/Guides/Protocol_upgrade_mechanism)
 - [WebSockets](/en-US/docs/Web/API/WebSockets_API)
 - {{HTTPHeader("Upgrade")}}
 - {{HTTPStatus("426", "426 Upgrade Required")}}

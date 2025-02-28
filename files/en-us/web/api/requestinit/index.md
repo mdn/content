@@ -56,8 +56,8 @@ You can also construct a `Request` with a `RequestInit`, and pass the `Request` 
 
       - : The browser looks in its HTTP cache for a response matching the request.
 
-        - If there is a match and it is [fresh](/en-US/docs/Web/HTTP/Caching#fresh_and_stale_based_on_age), it will be returned from the cache.
-        - If there is a match but it is [stale](/en-US/docs/Web/HTTP/Caching#fresh_and_stale_based_on_age), the browser will make a [conditional request](/en-US/docs/Web/HTTP/Conditional_requests) to the remote server. If the server indicates that the resource has not changed, it will be returned from the cache. Otherwise the resource will be downloaded from the server and the cache will be updated.
+        - If there is a match and it is [fresh](/en-US/docs/Web/HTTP/Guides/Caching#fresh_and_stale_based_on_age), it will be returned from the cache.
+        - If there is a match but it is [stale](/en-US/docs/Web/HTTP/Guides/Caching#fresh_and_stale_based_on_age), the browser will make a [conditional request](/en-US/docs/Web/HTTP/Guides/Conditional_requests) to the remote server. If the server indicates that the resource has not changed, it will be returned from the cache. Otherwise the resource will be downloaded from the server and the cache will be updated.
         - If there is no match, the browser will make a normal request, and will update the cache with the downloaded resource.
 
     - `no-store`
@@ -68,7 +68,7 @@ You can also construct a `Request` with a `RequestInit`, and pass the `Request` 
 
       - : The browser looks in its HTTP cache for a response matching the request.
 
-        - If there is a match, _fresh or stale,_ the browser will make a [conditional request](/en-US/docs/Web/HTTP/Conditional_requests) to the remote server. If the server indicates that the resource has not changed, it will be returned from the cache. Otherwise the resource will be downloaded from the server and the cache will be updated.
+        - If there is a match, _fresh or stale,_ the browser will make a [conditional request](/en-US/docs/Web/HTTP/Guides/Conditional_requests) to the remote server. If the server indicates that the resource has not changed, it will be returned from the cache. Otherwise the resource will be downloaded from the server and the cache will be updated.
         - If there is no match, the browser will make a normal request, and will update the cache with the downloaded resource.
 
     - `force-cache`

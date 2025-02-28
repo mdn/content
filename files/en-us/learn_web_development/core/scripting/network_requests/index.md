@@ -260,7 +260,7 @@ There are however a lot of different subjects discussed in this article, which h
 - [Using Fetch](/en-US/docs/Web/API/Fetch_API/Using_Fetch)
 - [Promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 - [Working with JSON data](/en-US/docs/Learn_web_development/Core/Scripting/JSON)
-- [An overview of HTTP](/en-US/docs/Web/HTTP/Overview)
+- [An overview of HTTP](/en-US/docs/Web/HTTP/Guides/Overview)
 - [Server-side website programming](/en-US/docs/Learn_web_development/Extensions/Server-side)
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/DOM_scripting","Learn_web_development/Core/Scripting/JSON", "Learn_web_development/Core/Scripting")}}

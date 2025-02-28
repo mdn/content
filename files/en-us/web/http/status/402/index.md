@@ -83,4 +83,4 @@ No browser supports a 402, and an error will be displayed as a generic `4xx` sta
 ## See also
 
 - [HTTP response status codes](/en-US/docs/Web/HTTP/Status)
-- [HTTP authentication](/en-US/docs/Web/HTTP/Authentication)
+- [HTTP authentication](/en-US/docs/Web/HTTP/Guides/Authentication)

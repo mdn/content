@@ -89,7 +89,7 @@ Two or three paragraphs in this section is appropriate, and if there are substan
         Include header category (or categories), e.g.
         {{Glossary("Request header")}},
         {{Glossary("Response header")}},
-        <a href="/en-US/docs/Web/HTTP/Client_hints">Client hint</a>
+        <a href="/en-US/docs/Web/HTTP/Guides/Client_hints">Client hint</a>
       </td>
     </tr>
     <tr>

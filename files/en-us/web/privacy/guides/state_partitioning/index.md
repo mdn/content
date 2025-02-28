@@ -86,7 +86,7 @@ As such, the following network APIs and caches are **permanently** partitioned b
 
 ### Network APIs
 
-- [HTTP Cache](/en-US/docs/Web/HTTP/Caching)
+- [HTTP Cache](/en-US/docs/Web/HTTP/Guides/Caching)
 - Image Cache
 - Favicon Cache
 - Connection Pooling

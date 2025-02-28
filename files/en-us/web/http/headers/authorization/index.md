@@ -17,8 +17,8 @@ The user-agent should select the most secure authentication scheme that it suppo
 This header is stripped from cross-origin redirects.
 
 > [!NOTE]
-> This header is part of the [General HTTP authentication framework](/en-US/docs/Web/HTTP/Authentication#the_general_http_authentication_framework).
-> It can be used with a number of [authentication schemes](/en-US/docs/Web/HTTP/Authentication#authentication_schemes).
+> This header is part of the [General HTTP authentication framework](/en-US/docs/Web/HTTP/Guides/Authentication#the_general_http_authentication_framework).
+> It can be used with a number of [authentication schemes](/en-US/docs/Web/HTTP/Guides/Authentication#authentication_schemes).
 
 <table class="properties">
   <tbody>
@@ -58,13 +58,13 @@ Authorization: Digest username=<username>,
 
 - `<auth-scheme>`
 
-  - : The [Authentication scheme](/en-US/docs/Web/HTTP/Authentication#authentication_schemes) that defines how the credentials are encoded.
-    Some of the more common types are (case-insensitive): [`Basic`](/en-US/docs/Web/HTTP/Authentication#basic_authentication_scheme), `Digest`, `Negotiate` and `AWS4-HMAC-SHA256`.
+  - : The [Authentication scheme](/en-US/docs/Web/HTTP/Guides/Authentication#authentication_schemes) that defines how the credentials are encoded.
+    Some of the more common types are (case-insensitive): [`Basic`](/en-US/docs/Web/HTTP/Guides/Authentication#basic_authentication_scheme), `Digest`, `Negotiate` and `AWS4-HMAC-SHA256`.
 
     > [!NOTE]
-    > For more information/options see [HTTP Authentication > Authentication schemes](/en-US/docs/Web/HTTP/Authentication#authentication_schemes)
+    > For more information/options see [HTTP Authentication > Authentication schemes](/en-US/docs/Web/HTTP/Guides/Authentication#authentication_schemes)
 
-Other than `<auth-scheme>`, the remaining directives are specific to each [authentication scheme](/en-US/docs/Web/HTTP/Authentication#authentication_schemes).
+Other than `<auth-scheme>`, the remaining directives are specific to each [authentication scheme](/en-US/docs/Web/HTTP/Guides/Authentication#authentication_schemes).
 Generally, you will need to check the relevant specifications for these (keys for a small subset of schemes are listed below).
 
 ### Basic authentication
@@ -74,7 +74,7 @@ Generally, you will need to check the relevant specifications for these (keys fo
   - : The credentials, encoded according to the specified scheme.
 
     > [!NOTE]
-    > For information about the encoding algorithm, see the examples: below, in {{HTTPHeader("WWW-Authenticate")}}, in [HTTP Authentication](/en-US/docs/Web/HTTP/Authentication), and in the relevant specifications.
+    > For information about the encoding algorithm, see the examples: below, in {{HTTPHeader("WWW-Authenticate")}}, in [HTTP Authentication](/en-US/docs/Web/HTTP/Guides/Authentication), and in the relevant specifications.
 
 ### Digest authentication
 
@@ -125,7 +125,7 @@ Authorization: Basic YWxhZGRpbjpvcGVuc2VzYW1l
 > **Warning:** {{Glossary("Base64")}}-encoding can easily be reversed to obtain the original name and password, so `Basic` authentication offers no cryptographic security.
 > {{Glossary("HTTPS")}} is always recommended when using authentication, but is even more so when using `Basic` authentication.
 
-See also [HTTP authentication](/en-US/docs/Web/HTTP/Authentication) for examples on how to configure Apache or Nginx servers to password protect your site with HTTP basic authentication.
+See also [HTTP authentication](/en-US/docs/Web/HTTP/Guides/Authentication) for examples on how to configure Apache or Nginx servers to password protect your site with HTTP basic authentication.
 
 ## Specifications
 
@@ -137,7 +137,7 @@ See also [HTTP authentication](/en-US/docs/Web/HTTP/Authentication) for examples
 
 ## See also
 
-- [HTTP authentication](/en-US/docs/Web/HTTP/Authentication)
+- [HTTP authentication](/en-US/docs/Web/HTTP/Guides/Authentication)
 - {{HTTPHeader("WWW-Authenticate")}}
 - {{HTTPHeader("Proxy-Authorization")}}
 - {{HTTPHeader("Proxy-Authenticate")}}

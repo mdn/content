@@ -8,7 +8,7 @@ spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.416
 {{HTTPSidebar}}
 
 The HTTP **`416 Range Not Satisfiable`** [client error response](/en-US/docs/Web/HTTP/Status#client_error_responses) status code indicates that a server could not serve the requested ranges.
-The most likely reason for this response is that the document doesn't contain such [ranges](/en-US/docs/Web/HTTP/Range_requests), or that the {{HTTPHeader("Range")}} header value, though syntactically correct, doesn't make sense.
+The most likely reason for this response is that the document doesn't contain such [ranges](/en-US/docs/Web/HTTP/Guides/Range_requests), or that the {{HTTPHeader("Range")}} header value, though syntactically correct, doesn't make sense.
 
 The `416` response message should contain a {{HTTPHeader("Content-Range")}} indicating an unsatisfied range (that is a `'*'`) followed by a `'/'` and the current length of the resource, e.g., `Content-Range: bytes */12777`
 
@@ -49,6 +49,6 @@ Content-Range: bytes */800
 
 - [HTTP response status codes](/en-US/docs/Web/HTTP/Status)
 - {{HTTPStatus("206", "206 Partial Content")}}
-- [HTTP range requests](/en-US/docs/Web/HTTP/Range_requests)
+- [HTTP range requests](/en-US/docs/Web/HTTP/Guides/Range_requests)
 - {{HTTPHeader("Content-Range")}}
 - {{HTTPHeader("Range")}}

@@ -75,7 +75,7 @@ If the server will upgrade the connection, it must:
 
 A server may also send the header as part of a {{HTTPStatus("426")}} `Upgrade Required` response, to indicate that the server won't perform the request using the current protocol, but might do so if the protocol is changed. The client can then request a protocol change using the process above.
 
-More detail and examples are provided in the topic [Protocol upgrade mechanism](/en-US/docs/Web/HTTP/Protocol_upgrade_mechanism).
+More detail and examples are provided in the topic [Protocol upgrade mechanism](/en-US/docs/Web/HTTP/Guides/Protocol_upgrade_mechanism).
 
 ## Examples
 
@@ -91,7 +91,7 @@ Upgrade: HTTP/2.0, SHTTP/1.3, IRC/6.9, RTA/x11
 ### Upgrading to WebSocket
 
 This is a common combination of headers to use to begin upgrading a HTTP connection to WebSockets.
-See [Upgrading to a WebSocket connection](/en-US/docs/Web/HTTP/Protocol_upgrade_mechanism#upgrading_to_a_websocket_connection) for more information.
+See [Upgrading to a WebSocket connection](/en-US/docs/Web/HTTP/Guides/Protocol_upgrade_mechanism#upgrading_to_a_websocket_connection) for more information.
 
 ```http
 Connection: Upgrade
@@ -108,7 +108,7 @@ Upgrade: websocket
 
 ## See also
 
-- [Protocol upgrade mechanism](/en-US/docs/Web/HTTP/Protocol_upgrade_mechanism)
+- [Protocol upgrade mechanism](/en-US/docs/Web/HTTP/Guides/Protocol_upgrade_mechanism)
 - {{HTTPStatus(101, "101 Switching Protocols")}}
 - {{HTTPStatus(426, "426 Upgrade Required")}}
 - {{HTTPHeader("Connection")}}

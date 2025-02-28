@@ -62,7 +62,7 @@ When looking for information about JavaScript MIME types, you may see several MI
 While browsers may support any, some, or all of these alternative MIME types, you should **only** use `text/javascript` to indicate the MIME type of JavaScript files.
 
 > [!NOTE]
-> See [MIME types (IANA media types)](/en-US/docs/Web/HTTP/MIME_types) for more information.
+> See [MIME types (IANA media types)](/en-US/docs/Web/HTTP/Guides/MIME_types) for more information.
 
 ## How to determine the MIME type to set
 
@@ -109,6 +109,6 @@ Trying to instead set it with just `header('application/pdf')` won't work.
 
 - [IANA | MIME Media Types](https://www.iana.org/assignments/media-types/media-types.xhtml)
 - [Hypertext Transfer Protocol — HTTP/1.1](https://www.w3.org/Protocols/rfc2616/rfc2616.html)
-- [MIME types (IANA media types)](/en-US/docs/Web/HTTP/MIME_types)
+- [MIME types (IANA media types)](/en-US/docs/Web/HTTP/Guides/MIME_types)
 - [Apache vs Nginx: Practical Considerations](https://www.digitalocean.com/community/tutorials/apache-vs-nginx-practical-considerations)
 - [Migrate Apache .htaccess to Nginx server block](https://barryvanveen.nl/articles/56-migrate-apache-htaccess-to-nginx-server-block/)

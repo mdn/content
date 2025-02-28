@@ -11,9 +11,9 @@ The HTTP **`300 Multiple Choices`** [redirection response](/en-US/docs/Web/HTTP/
 The user-agent or the user should choose one of them.
 
 > [!NOTE]
-> In [agent-driven content negotiation](/en-US/docs/Web/HTTP/Content_negotiation#agent-driven_negotiation), a client and server collaboratively decide the best variant of a given resource when the server has multiple variants.
+> In [agent-driven content negotiation](/en-US/docs/Web/HTTP/Guides/Content_negotiation#agent-driven_negotiation), a client and server collaboratively decide the best variant of a given resource when the server has multiple variants.
 > Most clients lack a method for automatically choosing from responses, and the additional round-trips slow down client-server interaction.
-> [Server-driven content negotiation](/en-US/docs/Web/HTTP/Content_negotiation#server-driven_content_negotiation) is far more common, where a server chooses the most appropriate resource for the client based on the request headers ({{HTTPHeader("Accept-Language")}}, {{HTTPHeader("Accept")}}, etc.).
+> [Server-driven content negotiation](/en-US/docs/Web/HTTP/Guides/Content_negotiation#server-driven_content_negotiation) is far more common, where a server chooses the most appropriate resource for the client based on the request headers ({{HTTPHeader("Accept-Language")}}, {{HTTPHeader("Accept")}}, etc.).
 
 The server should include content in the response that contains a list of resource metadata and URIs from which the user or user agent can choose.
 The format of the content is implementation-specific, but should be easily parsed by the user agent (such as HTML or JSON).
@@ -88,7 +88,7 @@ Available variants:
 
 ## See also
 
-- [Redirections in HTTP](/en-US/docs/Web/HTTP/Redirections)
+- [Redirections in HTTP](/en-US/docs/Web/HTTP/Guides/Redirections)
 - [HTTP response status codes](/en-US/docs/Web/HTTP/Status)
 - {{HTTPStatus("301", "301 Moved Permanently")}}
 - {{HTTPStatus("302", "302 Found")}} temporary redirect

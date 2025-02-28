@@ -56,7 +56,7 @@ The status codes listed below are defined by [RFC 9110](https://httpwg.org/specs
 - {{HTTPStatus(205, "205 Reset Content")}}
   - : Tells the user agent to reset the document which sent this request.
 - {{HTTPStatus(206, "206 Partial Content")}}
-  - : This response code is used in response to a [range request](/en-US/docs/Web/HTTP/Range_requests) when the client has requested a part or parts of a resource.
+  - : This response code is used in response to a [range request](/en-US/docs/Web/HTTP/Guides/Range_requests) when the client has requested a part or parts of a resource.
 - {{HTTPStatus(207, "207 Multi-Status")}} ({{Glossary("WebDAV")}})
   - : Conveys information about multiple resources, for situations where multiple status codes might be appropriate.
 - {{HTTPStatus(208, "208 Already Reported")}} ({{Glossary("WebDAV")}})
@@ -67,7 +67,7 @@ The status codes listed below are defined by [RFC 9110](https://httpwg.org/specs
 ## Redirection messages
 
 - {{HTTPStatus(300, "300 Multiple Choices")}}
-  - : In [agent-driven content negotiation](/en-US/docs/Web/HTTP/Content_negotiation#agent-driven_negotiation), the request has more than one possible response and the user agent or user should choose one of them.
+  - : In [agent-driven content negotiation](/en-US/docs/Web/HTTP/Guides/Content_negotiation#agent-driven_negotiation), the request has more than one possible response and the user agent or user should choose one of them.
     There is no standardized way for clients to automatically choose one of the responses, so this is rarely used.
 - {{HTTPStatus(301, "301 Moved Permanently")}}
   - : The URL of the requested resource has been changed permanently. The new URL is given in the response.
@@ -78,7 +78,7 @@ The status codes listed below are defined by [RFC 9110](https://httpwg.org/specs
   - : The server sent this response to direct the client to get the requested resource at another URI with a {{HTTPMethod("GET")}} request.
 - {{HTTPStatus(304, "304 Not Modified")}}
   - : This is used for caching purposes.
-    It tells the client that the response has not been modified, so the client can continue to use the same [cached](/en-US/docs/Web/HTTP/Caching) version of the response.
+    It tells the client that the response has not been modified, so the client can continue to use the same [cached](/en-US/docs/Web/HTTP/Guides/Caching) version of the response.
 - `305 Use Proxy` {{deprecated_inline}}
   - : Defined in a previous version of the HTTP specification to indicate that a requested response must be accessed by a proxy.
     It has been deprecated due to security concerns regarding in-band configuration of a proxy.
@@ -113,7 +113,7 @@ The status codes listed below are defined by [RFC 9110](https://httpwg.org/specs
   - : The [request method](/en-US/docs/Web/HTTP/Methods) is known by the server but is not supported by the target resource.
     For example, an API may not allow `DELETE` on a resource, or the `TRACE` method entirely.
 - {{HTTPStatus(406, "406 Not Acceptable")}}
-  - : This response is sent when the web server, after performing [server-driven content negotiation](/en-US/docs/Web/HTTP/Content_negotiation#server-driven_content_negotiation), doesn't find any content that conforms to the criteria given by the user agent.
+  - : This response is sent when the web server, after performing [server-driven content negotiation](/en-US/docs/Web/HTTP/Guides/Content_negotiation#server-driven_content_negotiation), doesn't find any content that conforms to the criteria given by the user agent.
 - {{HTTPStatus(407, "407 Proxy Authentication Required")}}
   - : This is similar to `401 Unauthorized` but authentication is needed to be done by a proxy.
 - {{HTTPStatus(408, "408 Request Timeout")}}
@@ -132,7 +132,7 @@ The status codes listed below are defined by [RFC 9110](https://httpwg.org/specs
 - {{HTTPStatus(411, "411 Length Required")}}
   - : Server rejected the request because the {{HTTPHeader("Content-Length")}} header field is not defined and the server requires it.
 - {{HTTPStatus(412, "412 Precondition Failed")}}
-  - : In [conditional requests](/en-US/docs/Web/HTTP/Conditional_requests), the client has indicated preconditions in its headers which the server does not meet.
+  - : In [conditional requests](/en-US/docs/Web/HTTP/Guides/Conditional_requests), the client has indicated preconditions in its headers which the server does not meet.
 - {{HTTPStatus(413, "413 Content Too Large")}}
   - : The request body is larger than limits defined by server.
     The server might close the connection or return an {{HTTPHeader("Retry-After")}} header field.
@@ -141,7 +141,7 @@ The status codes listed below are defined by [RFC 9110](https://httpwg.org/specs
 - {{HTTPStatus(415, "415 Unsupported Media Type")}}
   - : The media format of the requested data is not supported by the server, so the server is rejecting the request.
 - {{HTTPStatus(416, "416 Range Not Satisfiable")}}
-  - : The [ranges](/en-US/docs/Web/HTTP/Range_requests) specified by the `Range` header field in the request cannot be fulfilled.
+  - : The [ranges](/en-US/docs/Web/HTTP/Guides/Range_requests) specified by the `Range` header field in the request cannot be fulfilled.
     It's possible that the range is outside the size of the target resource's data.
 - {{HTTPStatus(417, "417 Expectation Failed")}}
   - : This response code means the expectation indicated by the {{HTTPHeader("Expect")}} request header field cannot be met by the server.
@@ -162,7 +162,7 @@ The status codes listed below are defined by [RFC 9110](https://httpwg.org/specs
   - : The server refuses to perform the request using the current protocol but might be willing to do so after the client upgrades to a different protocol.
     The server sends an {{HTTPHeader("Upgrade")}} header in a 426 response to indicate the required protocol(s).
 - {{HTTPStatus(428, "428 Precondition Required")}}
-  - : The origin server requires the request to be [conditional](/en-US/docs/Web/HTTP/Conditional_requests).
+  - : The origin server requires the request to be [conditional](/en-US/docs/Web/HTTP/Guides/Conditional_requests).
     This response is intended to prevent the 'lost update' problem, where a client {{HTTPMethod("GET")}}s a resource's state, modifies it and {{HTTPMethod("PUT")}}s it back to the server, when meanwhile a third party has modified the state on the server, leading to a conflict.
 - {{HTTPStatus(429, "429 Too Many Requests")}}
   - : The user has sent too many requests in a given amount of time ({{Glossary("Rate_limit","rate limiting" )}}).

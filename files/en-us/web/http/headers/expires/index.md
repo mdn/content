@@ -7,7 +7,7 @@ browser-compat: http.headers.Expires
 
 {{HTTPSidebar}}
 
-The HTTP **`Expires`** {{Glossary("response header")}} contains the date/time after which the response is considered expired in the context of [HTTP caching](/en-US/docs/Web/HTTP/Caching).
+The HTTP **`Expires`** {{Glossary("response header")}} contains the date/time after which the response is considered expired in the context of [HTTP caching](/en-US/docs/Web/HTTP/Guides/Caching).
 
 The value `0` is used to represent a date in the past, indicating the resource has already expired.
 
@@ -74,6 +74,6 @@ Expires: Wed, 21 Oct 2015 07:28:00 GMT
 
 ## See also
 
-- [HTTP caching](/en-US/docs/Web/HTTP/Caching) guide
+- [HTTP caching](/en-US/docs/Web/HTTP/Guides/Caching) guide
 - {{HTTPHeader("Cache-Control")}}
 - {{HTTPHeader("Age")}}

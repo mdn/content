@@ -56,7 +56,7 @@ HTTP was first specified in the early 1990s. Designed with extensibility in mind
 
 ## See also
 
-- [Evolution of HTTP](/en-US/docs/Web/HTTP/Evolution_of_HTTP)
+- [Evolution of HTTP](/en-US/docs/Web/HTTP/Guides/Evolution_of_HTTP)
 - Glossary terms:
   - {{glossary('HTTP')}}
   - {{glossary('HTTP_2', 'HTTP/2')}}

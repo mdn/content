@@ -9,7 +9,7 @@ browser-compat: http.headers.Sec-CH-Prefers-Color-Scheme
 
 {{HTTPSidebar}}{{SeeCompatTable}}{{SecureContext_Header}}
 
-The HTTP **`Sec-CH-Prefers-Color-Scheme`** {{Glossary("request header")}} is a [media feature client hint](/en-US/docs/Web/HTTP/Client_hints#user_preference_media_features_client_hints) which provides the user's preference for light or dark color themes.
+The HTTP **`Sec-CH-Prefers-Color-Scheme`** {{Glossary("request header")}} is a [media feature client hint](/en-US/docs/Web/HTTP/Guides/Client_hints#user_preference_media_features_client_hints) which provides the user's preference for light or dark color themes.
 A user indicates their preference through an operating system setting (for example, light or dark mode) or a user agent setting.
 
 If a server signals to a client via the {{httpheader("Accept-CH")}} header that it accepts `Sec-CH-Prefers-Color-Scheme`, the client can then respond with this header to indicate the user's preference for a specific color scheme. The server can send the client appropriately adapted content including images or CSS to display a light or dark mode for subsequent rendered content.
@@ -22,7 +22,7 @@ This header is modeled on the {{cssxref("@media/prefers-color-scheme", "prefers-
       <th scope="row">Header type</th>
       <td>
         {{Glossary("Request header")}},
-        <a href="/en-US/docs/Web/HTTP/Client_hints">Client hint</a>
+        <a href="/en-US/docs/Web/HTTP/Guides/Client_hints">Client hint</a>
       </td>
     </tr>
     <tr>
@@ -63,7 +63,7 @@ GET / HTTP/1.1
 Host: example.com
 ```
 
-The server responds, telling the client via {{httpheader("Accept-CH")}} that it accepts `Sec-CH-Prefers-Color-Scheme`. In this example {{httpheader("Critical-CH")}} is also used, indicating that `Sec-CH-Prefers-Color-Scheme` is considered a [critical client hint](/en-US/docs/Web/HTTP/Client_hints#critical_client_hints).
+The server responds, telling the client via {{httpheader("Accept-CH")}} that it accepts `Sec-CH-Prefers-Color-Scheme`. In this example {{httpheader("Critical-CH")}} is also used, indicating that `Sec-CH-Prefers-Color-Scheme` is considered a [critical client hint](/en-US/docs/Web/HTTP/Guides/Client_hints#critical_client_hints).
 
 ```http
 HTTP/1.1 200 OK
@@ -97,9 +97,9 @@ The client will include the header in subsequent requests in the current session
 
 ## See also
 
-- [Client hints](/en-US/docs/Web/HTTP/Client_hints)
+- [Client hints](/en-US/docs/Web/HTTP/Guides/Client_hints)
 - [User-Agent Client Hints API](/en-US/docs/Web/API/User-Agent_Client_Hints_API)
 - {{HTTPHeader("Accept-CH")}}
-- [HTTP Caching varying responses](/en-US/docs/Web/HTTP/Caching#vary) and {{HTTPHeader("Vary")}} header
+- [HTTP Caching varying responses](/en-US/docs/Web/HTTP/Guides/Caching#vary) and {{HTTPHeader("Vary")}} header
 - [`prefers-color-scheme` CSS Media Query](/en-US/docs/Web/CSS/@media/prefers-color-scheme)
 - [Improving user privacy and developer experience with User-Agent Client Hints](https://developer.chrome.com/docs/privacy-security/user-agent-client-hints) (developer.chrome.com)

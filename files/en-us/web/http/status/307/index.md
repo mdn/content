@@ -53,7 +53,7 @@ date: Fri, 19 Jul 2024 12:57:17 GMT
 
 ## See also
 
-- [Redirections in HTTP](/en-US/docs/Web/HTTP/Redirections)
+- [Redirections in HTTP](/en-US/docs/Web/HTTP/Guides/Redirections)
 - [HTTP response status codes](/en-US/docs/Web/HTTP/Status)
 - {{HTTPStatus("302", "302 Found")}}, the equivalent to `307`, but may modify non-{{HTTPMethod("GET")}} methods
 - {{HTTPStatus("303", "303 See Other")}}, temporary redirect that modifies the request method to {{HTTPMethod("GET")}}

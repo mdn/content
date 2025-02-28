@@ -9,13 +9,13 @@ browser-compat: http.headers.Downlink
 
 {{HTTPSidebar}} {{SeeCompatTable}}
 
-The HTTP **`Downlink`** {{Glossary("request header")}} is used in [Client Hints](/en-US/docs/Web/HTTP/Client_hints) to provide the approximate bandwidth in Mbps of the client's connection to the server.
+The HTTP **`Downlink`** {{Glossary("request header")}} is used in [Client Hints](/en-US/docs/Web/HTTP/Guides/Client_hints) to provide the approximate bandwidth in Mbps of the client's connection to the server.
 
 The hint allows a server to choose what information is sent based on the network bandwidth.
 For example, a server might choose to send smaller versions of images and other resources on low bandwidth networks.
 
 > [!NOTE]
-> The {{HTTPHeader("Vary")}} header is used in responses to indicate that a different resource is sent for every different value of the header (see [HTTP Caching Vary](/en-US/docs/Web/HTTP/Caching#vary)).
+> The {{HTTPHeader("Vary")}} header is used in responses to indicate that a different resource is sent for every different value of the header (see [HTTP Caching Vary](/en-US/docs/Web/HTTP/Guides/Caching#vary)).
 > Even if `Downlink` is used to configure what resources are sent, consider omitting it in the {{HTTPHeader("Vary")}} header — it is likely to change often, which effectively makes the resource uncacheable.
 
 <table class="properties">
@@ -24,7 +24,7 @@ For example, a server might choose to send smaller versions of images and other 
       <th scope="row">Header type</th>
       <td>
         {{Glossary("Request header")}},
-        <a href="/en-US/docs/Web/HTTP/Client_hints">Client hint</a>
+        <a href="/en-US/docs/Web/HTTP/Guides/Client_hints">Client hint</a>
       </td>
     </tr>
     <tr>
@@ -76,5 +76,5 @@ Downlink: 1.7
   - {{HTTPHeader("ECT")}}
   - {{HTTPHeader("Save-Data")}}
 - {{HTTPHeader("Accept-CH")}}
-- [HTTP Caching: Vary](/en-US/docs/Web/HTTP/Caching#vary) and {{HTTPHeader("Vary")}}
+- [HTTP Caching: Vary](/en-US/docs/Web/HTTP/Guides/Caching#vary) and {{HTTPHeader("Vary")}}
 - {{domxref("NetworkInformation.effectiveType")}}

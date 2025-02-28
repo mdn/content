@@ -40,7 +40,7 @@ Access-Control-Allow-Headers: *
   - : The name of a supported request header. The header may list any number of headers, separated by commas.
 - `*` (wildcard)
   - : Any header.
-    The value `*` only counts as a special wildcard value for requests without credentials (requests without [HTTP cookies](/en-US/docs/Web/HTTP/Cookies) or HTTP authentication information).
+    The value `*` only counts as a special wildcard value for requests without credentials (requests without [HTTP cookies](/en-US/docs/Web/HTTP/Guides/Cookies) or HTTP authentication information).
     In requests with credentials, it is treated as the literal header name `*` without special semantics.
     The {{HTTPHeader("Authorization")}} header can't be wildcarded and always needs to be listed explicitly.
 

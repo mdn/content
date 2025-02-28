@@ -9,7 +9,7 @@ browser-compat: http.headers.Sec-CH-UA-Form-Factors
 
 {{HTTPSidebar}}{{SecureContext_Header}}{{SeeCompatTable}}
 
-The HTTP **`Sec-CH-UA-Form-Factors`** {{Glossary("Request header", "request header")}} is a [user agent client hint](/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) which provides information on the user-agent's device form factor.
+The HTTP **`Sec-CH-UA-Form-Factors`** {{Glossary("Request header", "request header")}} is a [user agent client hint](/en-US/docs/Web/HTTP/Guides/Client_hints#user-agent_client_hints) which provides information on the user-agent's device form factor.
 
 <table class="properties">
   <tbody>
@@ -17,7 +17,7 @@ The HTTP **`Sec-CH-UA-Form-Factors`** {{Glossary("Request header", "request head
       <th scope="row">Header type</th>
       <td>
         {{Glossary("Request header")}},
-        <a href="/en-US/docs/Web/HTTP/Client_hints">Client hint</a>
+        <a href="/en-US/docs/Web/HTTP/Guides/Client_hints">Client hint</a>
       </td>
     </tr>
     <tr>
@@ -89,8 +89,8 @@ In this case, `"EInk"` means that the device is characterized by slow screen upd
 
 ## See also
 
-- [Client hints](/en-US/docs/Web/HTTP/Client_hints)
+- [Client hints](/en-US/docs/Web/HTTP/Guides/Client_hints)
 - [User-Agent Client Hints API](/en-US/docs/Web/API/User-Agent_Client_Hints_API)
 - {{HTTPHeader("Accept-CH")}}
-- [HTTP Caching: Vary](/en-US/docs/Web/HTTP/Caching#vary) and {{HTTPHeader("Vary")}} header
+- [HTTP Caching: Vary](/en-US/docs/Web/HTTP/Guides/Caching#vary) and {{HTTPHeader("Vary")}} header
 - [Improving user privacy and developer experience with User-Agent Client Hints](https://developer.chrome.com/docs/privacy-security/user-agent-client-hints) on developer.chrome.com

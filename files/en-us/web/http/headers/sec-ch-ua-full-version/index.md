@@ -12,7 +12,7 @@ browser-compat: http.headers.Sec-CH-UA-Full-Version
 > [!NOTE]
 > This is being replaced by the {{HTTPHeader("Sec-CH-UA-Full-Version-List")}}.
 
-The HTTP **`Sec-CH-UA-Full-Version`** {{Glossary("request header")}} is a [user agent client hint](/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) which provides the user-agent's full version string.
+The HTTP **`Sec-CH-UA-Full-Version`** {{Glossary("request header")}} is a [user agent client hint](/en-US/docs/Web/HTTP/Guides/Client_hints#user-agent_client_hints) which provides the user-agent's full version string.
 
 <table class="properties">
   <tbody>
@@ -20,7 +20,7 @@ The HTTP **`Sec-CH-UA-Full-Version`** {{Glossary("request header")}} is a [user 
       <th scope="row">Header type</th>
       <td>
         {{Glossary("Request header")}},
-        <a href="/en-US/docs/Web/HTTP/Client_hints">Client hint</a>
+        <a href="/en-US/docs/Web/HTTP/Guides/Client_hints">Client hint</a>
       </td>
     </tr>
     <tr>
@@ -75,8 +75,8 @@ Sec-CH-UA-Platform: "Windows"
 
 ## See also
 
-- [Client hints](/en-US/docs/Web/HTTP/Client_hints)
+- [Client hints](/en-US/docs/Web/HTTP/Guides/Client_hints)
 - [User-Agent Client Hints API](/en-US/docs/Web/API/User-Agent_Client_Hints_API)
 - {{HTTPHeader("Accept-CH")}}
-- [HTTP Caching: Vary](/en-US/docs/Web/HTTP/Caching#vary) and {{HTTPHeader("Vary")}} header
+- [HTTP Caching: Vary](/en-US/docs/Web/HTTP/Guides/Caching#vary) and {{HTTPHeader("Vary")}} header
 - [Improving user privacy and developer experience with User-Agent Client Hints](https://developer.chrome.com/docs/privacy-security/user-agent-client-hints) (developer.chrome.com)

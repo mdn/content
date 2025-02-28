@@ -7,7 +7,7 @@ browser-compat: http.headers.Content-Range
 
 {{HTTPSidebar}}
 
-The HTTP **`Content-Range`** {{Glossary("response header")}} is used in [range requests](/en-US/docs/Web/HTTP/Range_requests) to indicate where the content of a response body belongs in relation to a complete resource.
+The HTTP **`Content-Range`** {{Glossary("response header")}} is used in [range requests](/en-US/docs/Web/HTTP/Guides/Range_requests) to indicate where the content of a response body belongs in relation to a complete resource.
 
 It should only be included in {{HTTPStatus("206", "206 Partial Content")}} or {{HTTPStatus("416", "416 Range Not Satisfiable")}} responses.
 
@@ -88,7 +88,7 @@ Content-Range: bytes */67589
 
 ## See also
 
-- [HTTP range requests](/en-US/docs/Web/HTTP/Range_requests) guide
+- [HTTP range requests](/en-US/docs/Web/HTTP/Guides/Range_requests) guide
 - {{HTTPHeader("If-Range")}}, {{HTTPHeader("Range")}} headers
 - {{HTTPHeader("Content-Type")}}
 - {{HTTPStatus("206", "206 Partial Content")}}, {{HTTPStatus("416", "416 Range Not Satisfiable")}} status codes

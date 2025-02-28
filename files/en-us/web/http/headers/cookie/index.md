@@ -7,7 +7,7 @@ browser-compat: http.headers.Cookie
 
 {{HTTPSidebar}}
 
-The HTTP **`Cookie`** {{Glossary("request header")}} contains stored [HTTP cookies](/en-US/docs/Web/HTTP/Cookies) associated with the server (i.e., previously sent by the server with the {{HTTPHeader("Set-Cookie")}} header or set in JavaScript using {{domxref("Document.cookie")}}).
+The HTTP **`Cookie`** {{Glossary("request header")}} contains stored [HTTP cookies](/en-US/docs/Web/HTTP/Guides/Cookies) associated with the server (i.e., previously sent by the server with the {{HTTPHeader("Set-Cookie")}} header or set in JavaScript using {{domxref("Document.cookie")}}).
 
 The `Cookie` header is optional and may be omitted if, for example, the browser's privacy settings block cookies.
 

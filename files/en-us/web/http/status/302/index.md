@@ -47,7 +47,7 @@ Content-Length: 0
 
 ## See also
 
-- [Redirections in HTTP](/en-US/docs/Web/HTTP/Redirections)
+- [Redirections in HTTP](/en-US/docs/Web/HTTP/Guides/Redirections)
 - [HTTP response status codes](/en-US/docs/Web/HTTP/Status)
 - {{HTTPStatus("307", "307 Temporary Redirect")}}, equivalent to `302` but the request method is not modified
 - {{HTTPStatus("303", "303 See Other")}}, a temporary redirect that changes the method to {{HTTPMethod("GET")}}

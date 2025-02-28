@@ -10,7 +10,7 @@ page-type: landing-page
 It was designed for communication between web browsers and web servers, but it can also be used for other purposes, such as machine-to-machine communication, programmatic access to APIs, and more.
 
 HTTP follows a classical [client-server model](https://en.wikipedia.org/wiki/Client%E2%80%93server_model), with a client opening a connection to make a request, then waiting until it receives a response from the server.
-HTTP is a [stateless protocol](https://en.wikipedia.org/wiki/Stateless_protocol), meaning that the server does not keep any session data between two requests, although the later addition of [cookies](/en-US/docs/Web/HTTP/Cookies) adds state to some client-server interactions.
+HTTP is a [stateless protocol](https://en.wikipedia.org/wiki/Stateless_protocol), meaning that the server does not keep any session data between two requests, although the later addition of [cookies](/en-US/docs/Web/HTTP/Guides/Cookies) adds state to some client-server interactions.
 
 ## References
 
@@ -35,56 +35,56 @@ On top of these concepts, numerous extensions have been developed over the years
 The guides below are listed in order from general overviews to specialized, use-case-driven topics.
 Beginners are encouraged to start with the foundational guides before exploring more focused articles.
 
-- [Overview of HTTP](/en-US/docs/Web/HTTP/Overview)
+- [Overview of HTTP](/en-US/docs/Web/HTTP/Guides/Overview)
   - : The basic features of HTTP, what it can do, its intended use in web architecture, and its position in the protocol stack.
-- [A typical HTTP session](/en-US/docs/Web/HTTP/Session)
+- [A typical HTTP session](/en-US/docs/Web/HTTP/Guides/Session)
   - : Describes the flow of an HTTP session, from establishing a connection, sending a request, to receiving a response.
-- [HTTP messages](/en-US/docs/Web/HTTP/Messages)
+- [HTTP messages](/en-US/docs/Web/HTTP/Guides/Messages)
   - : HTTP messages transmitted as requests and responses have a defined structure.
     This article describes this general structure, its purpose, and the different types of messages.
 - [URIs](/en-US/docs/Web/URI)
   - : Uniform Resource Identifiers (URIs) are used to describe and locate resources on the web and are an essential component in HTTP requests.
-- [MIME types](/en-US/docs/Web/HTTP/MIME_types)
+- [MIME types](/en-US/docs/Web/HTTP/Guides/MIME_types)
   - : Since HTTP/1.0, different types of content can be transmitted.
     This article explains how this is accomplished using the {{HTTPHeader("Content-Type")}} header and the MIME standard.
-    A shortlist of common types used by web developers can be found in [Common MIME types](/en-US/docs/Web/HTTP/MIME_types/Common_types).
-- [Compression in HTTP](/en-US/docs/Web/HTTP/Compression)
+    A shortlist of common types used by web developers can be found in [Common MIME types](/en-US/docs/Web/HTTP/Guides/MIME_types/Common_types).
+- [Compression in HTTP](/en-US/docs/Web/HTTP/Guides/Compression)
   - : Browsers and servers compress their messages before sending them over the network to reduce the amount of data that needs to be transmitted, improving transfer speed and bandwidth utilization.
-- [HTTP caching](/en-US/docs/Web/HTTP/Caching)
+- [HTTP caching](/en-US/docs/Web/HTTP/Guides/Caching)
   - : Caching is a highly important mechanism for delivering fast experiences on the Web and for efficient use of resources.
     This article describes different methods of caching and how to use HTTP headers to control them.
-- [HTTP authentication](/en-US/docs/Web/HTTP/Authentication)
+- [HTTP authentication](/en-US/docs/Web/HTTP/Guides/Authentication)
   - : Authentication is a way to verify the identity of a client when making requests to a server.
     It ensures that only authorized users or systems can access certain resources.
-- [Using HTTP cookies](/en-US/docs/Web/HTTP/Cookies)
+- [Using HTTP cookies](/en-US/docs/Web/HTTP/Guides/Cookies)
   - : Although HTTP is a stateless protocol, a server can send a {{HTTPHeader("Set-Cookie")}} header with the response.
     The client then returns the cookie's value with every subsequent request to the server in the form of a {{HTTPHeader("Cookie")}} request header.
     This adds the ability to store and exchange a small amount of data which effectively adds state to some client-server interactions.
-- [Redirections in HTTP](/en-US/docs/Web/HTTP/Redirections)
+- [Redirections in HTTP](/en-US/docs/Web/HTTP/Guides/Redirections)
   - : URL redirection, also known as URL forwarding, is a technique to give more than one URL address to a page, a form, a whole website, or a web application.
     HTTP has a special kind of response, called a HTTP redirect, for this operation.
-- [HTTP conditional requests](/en-US/docs/Web/HTTP/Conditional_requests)
+- [HTTP conditional requests](/en-US/docs/Web/HTTP/Guides/Conditional_requests)
   - : In conditional requests, the outcome of a request depends on the value of a validator in the request.
-    This method is used heavily in [caching](/en-US/docs/Web/HTTP/Caching) and use cases such as resuming a download, preventing lost updates when modifying a document on the server, and more.
-- [HTTP range requests](/en-US/docs/Web/HTTP/Range_requests)
+    This method is used heavily in [caching](/en-US/docs/Web/HTTP/Guides/Caching) and use cases such as resuming a download, preventing lost updates when modifying a document on the server, and more.
+- [HTTP range requests](/en-US/docs/Web/HTTP/Guides/Range_requests)
   - : A range request asks the server to send a specific part (or parts) of a resource back to a client instead of the full resource.
     Range requests are useful for cases when a client knows they need only part of a large file, or for cases where an application allows the user to pause and resume a download.
-- [Content negotiation](/en-US/docs/Web/HTTP/Content_negotiation)
+- [Content negotiation](/en-US/docs/Web/HTTP/Guides/Content_negotiation)
   - : HTTP defines a set of message headers, starting with [`Accept`](/en-US/docs/Web/HTTP/Headers/Accept) as a way for a browser to announce the format, language, or encoding it prefers.
     This article explains how this advertisement happens, how the server is expected to react, and how it chooses the most adequate response to a request.
-- [Connection management in HTTP/1.x](/en-US/docs/Web/HTTP/Connection_management_in_HTTP_1.x)
+- [Connection management in HTTP/1.x](/en-US/docs/Web/HTTP/Guides/Connection_management_in_HTTP_1.x)
   - : HTTP/1.1 was the first version of HTTP to support persistent connections and pipelining.
     This article explains both concepts, including the pros and cons of each.
-- [Evolution of HTTP](/en-US/docs/Web/HTTP/Evolution_of_HTTP)
+- [Evolution of HTTP](/en-US/docs/Web/HTTP/Guides/Evolution_of_HTTP)
   - : HTTP was created in the early 1990s and has been extended several times.
     This article goes through its history and describes HTTP/0.9, HTTP/1.0, HTTP/1.1, through HTTP/2 and HTTP/3, as well as novelties introduced over the years.
-- [Protocol upgrade mechanism](/en-US/docs/Web/HTTP/Protocol_upgrade_mechanism)
+- [Protocol upgrade mechanism](/en-US/docs/Web/HTTP/Guides/Protocol_upgrade_mechanism)
   - : HTTP/1.1 provides a mechanism to upgrade an already-established connection to a different protocol using the {{HTTPHeader("Upgrade")}} header.
     A client can upgrade a connection from HTTP/1.1 to HTTP/2, or an HTTP(S) connection to a [WebSocket](/en-US/docs/Web/API/WebSocket) (`ws` / `wss`).
-- [Proxy servers and tunneling](/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling)
+- [Proxy servers and tunneling](/en-US/docs/Web/HTTP/Guides/Proxy_servers_and_tunneling)
   - : A proxy can be on the user's local computer, or anywhere between the user's computer and a destination server on the Internet.
     This page outlines some basics about proxies and introduces a few configuration options.
-- [HTTP Client hints](/en-US/docs/Web/HTTP/Client_hints)
+- [HTTP Client hints](/en-US/docs/Web/HTTP/Guides/Client_hints)
   - : Client Hints are a set of response headers that a server can use to proactively request information from a client about the device, network, user, and user-agent-specific preferences.
     The server can then determine which resources to send, based on the information that the client chooses to provide.
 - [Network Error Logging](/en-US/docs/Web/HTTP/Network_Error_Logging) {{experimental_inline}}

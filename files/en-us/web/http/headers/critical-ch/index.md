@@ -9,7 +9,7 @@ browser-compat: http.headers.Critical-CH
 
 {{HTTPSidebar}}{{SeeCompatTable}}{{SecureContext_Header}}
 
-The HTTP **`Critical-CH`** {{Glossary("response header")}} is used along with {{HTTPHeader("Accept-CH")}} to identify the accepted [client hints](/en-US/docs/Web/HTTP/Client_hints) that are [critical](/en-US/docs/Web/HTTP/Client_hints#critical_client_hints).
+The HTTP **`Critical-CH`** {{Glossary("response header")}} is used along with {{HTTPHeader("Accept-CH")}} to identify the accepted [client hints](/en-US/docs/Web/HTTP/Guides/Client_hints) that are [critical](/en-US/docs/Web/HTTP/Guides/Client_hints#critical_client_hints).
 
 User agents receiving a response with `Critical-CH` must check if the indicated critical headers were sent in the original request. If not, the user agent will retry the request along with the critical headers rather than render the page. This approach ensures that client preferences set using critical client hints are always used, even if not included in the first request, or following server configuration changes.
 
@@ -84,9 +84,9 @@ The client will include the header in subsequent requests in the current session
 
 ## See also
 
-- [Client hints](/en-US/docs/Web/HTTP/Client_hints)
+- [Client hints](/en-US/docs/Web/HTTP/Guides/Client_hints)
 - [User-Agent Client Hints API](/en-US/docs/Web/API/User-Agent_Client_Hints_API)
 - [Improving user privacy and developer experience with User-Agent Client Hints](https://developer.chrome.com/docs/privacy-security/user-agent-client-hints) (developer.chrome.com)
 - {{HTTPHeader("Accept-CH")}}
-- [HTTP Caching: Vary](/en-US/docs/Web/HTTP/Caching#vary) and {{HTTPHeader("Vary")}}
+- [HTTP Caching: Vary](/en-US/docs/Web/HTTP/Guides/Caching#vary) and {{HTTPHeader("Vary")}}
 - {{domxref("PerformanceNavigationTiming.criticalCHRestart")}}

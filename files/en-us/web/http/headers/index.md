@@ -9,8 +9,8 @@ page-type: landing-page
 
 **HTTP headers** let the client and the server pass additional information with a message in a request or response.
 In HTTP/1.X, a header is a case-insensitive name followed by a colon, then optional whitespace which will be ignored, and finally by its value (for example: `Allow: POST`).
-In HTTP/2 and above, headers are displayed in lowercase when viewed in developer tools (`accept: */*`), and prefixed with a colon for a special group of [pseudo-headers](/en-US/docs/Web/HTTP/Messages#pseudo-headers) (`:status: 200`).
-You can find more information on the syntax in each protocol version in the [HTTP messages](/en-US/docs/Web/HTTP/Messages) page.
+In HTTP/2 and above, headers are displayed in lowercase when viewed in developer tools (`accept: */*`), and prefixed with a colon for a special group of [pseudo-headers](/en-US/docs/Web/HTTP/Guides/Messages#pseudo-headers) (`:status: 200`).
+You can find more information on the syntax in each protocol version in the [HTTP messages](/en-US/docs/Web/HTTP/Guides/Messages) page.
 
 Custom proprietary headers have historically been used with an `X-` prefix, but this convention was deprecated in 2012 because of the inconveniences it caused when nonstandard fields became standard in [RFC 6648](https://datatracker.ietf.org/doc/html/rfc6648); others are listed in the [IANA HTTP Field Name Registry](https://www.iana.org/assignments/http-fields/http-fields.xhtml), whose original content was defined in [RFC 4229](https://datatracker.ietf.org/doc/html/rfc4229).
 The IANA registry lists headers, including [information about their status](https://github.com/protocol-registries/http-fields?tab=readme-ov-file#choosing-the-right-status).
@@ -22,7 +22,7 @@ Headers can be grouped according to their contexts:
 - {{Glossary("Response header", "Response headers")}}
   - : Hold additional information about the response, like its location or about the server providing it.
 - {{Glossary("Representation header", "Representation headers")}}
-  - : Contain information about the body of the resource, like its [MIME type](/en-US/docs/Web/HTTP/MIME_types), or encoding/compression applied.
+  - : Contain information about the body of the resource, like its [MIME type](/en-US/docs/Web/HTTP/Guides/MIME_types), or encoding/compression applied.
 - {{Glossary("Payload header","Payload headers")}}
   - : Contain representation-independent information about payload data, including content length and the encoding used for transport.
 
@@ -83,18 +83,18 @@ Headers can also be grouped according to how {{Glossary("Proxy_server", "proxies
 
 ## Content negotiation
 
-For more details, refer to the [Content negotiation article](/en-US/docs/Web/HTTP/Content_negotiation).
+For more details, refer to the [Content negotiation article](/en-US/docs/Web/HTTP/Guides/Content_negotiation).
 
 - {{HTTPHeader("Accept")}}
   - : Informs the server about the {{Glossary("MIME_type", "types")}} of data that can be sent back.
 - {{HTTPHeader("Accept-Encoding")}}
-  - : The encoding algorithm, usually a [compression algorithm](/en-US/docs/Web/HTTP/Compression), that can be used on the resource sent back.
+  - : The encoding algorithm, usually a [compression algorithm](/en-US/docs/Web/HTTP/Guides/Compression), that can be used on the resource sent back.
 - {{HTTPHeader("Accept-Language")}}
   - : Informs the server about the human language the server is expected to send back. This is a hint and is not necessarily under the full control of the user: the server should always pay attention not to override an explicit user choice (like selecting a language from a dropdown).
 - {{HTTPHeader("Accept-Patch")}}
-  - : A _request content negotiation_ response header that advertises which [media type](/en-US/docs/Web/HTTP/MIME_types) the server is able to understand in a {{HTTPMethod("PATCH")}} request.
+  - : A _request content negotiation_ response header that advertises which [media type](/en-US/docs/Web/HTTP/Guides/MIME_types) the server is able to understand in a {{HTTPMethod("PATCH")}} request.
 - {{HTTPHeader("Accept-Post")}}
-  - : A _request content negotiation_ response header that advertises which [media type](/en-US/docs/Web/HTTP/MIME_types) the server is able to understand in a {{HTTPMethod("POST")}} request.
+  - : A _request content negotiation_ response header that advertises which [media type](/en-US/docs/Web/HTTP/Guides/MIME_types) the server is able to understand in a {{HTTPMethod("POST")}} request.
 
 ## Controls
 
@@ -106,7 +106,7 @@ For more details, refer to the [Content negotiation article](/en-US/docs/Web/HTT
 ## Cookies
 
 - {{HTTPHeader("Cookie")}}
-  - : Contains stored [HTTP cookies](/en-US/docs/Web/HTTP/Cookies) previously sent by the server with the {{HTTPHeader("Set-Cookie")}} header.
+  - : Contains stored [HTTP cookies](/en-US/docs/Web/HTTP/Guides/Cookies) previously sent by the server with the {{HTTPHeader("Set-Cookie")}} header.
 - {{HTTPHeader("Set-Cookie")}}
   - : Send cookies from the server to the user-agent.
 
@@ -176,7 +176,7 @@ For more information, refer to the [CORS documentation](/en-US/docs/Web/HTTP/COR
 
 ## Range requests
 
-HTTP [range requests](/en-US/docs/Web/HTTP/Range_requests) allow the client to request a portion of a resource from the server.
+HTTP [range requests](/en-US/docs/Web/HTTP/Guides/Range_requests) allow the client to request a portion of a resource from the server.
 Range requests are useful for applications like media players that support random access, data tools that know they need only part of a large file, and download managers that let the user pause and resume a download.
 
 - {{HTTPHeader("Accept-Ranges")}}
@@ -345,20 +345,20 @@ The [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_API) e
 
 ### Client hints
 
-HTTP [Client hints](/en-US/docs/Web/HTTP/Client_hints) are a set of request headers that provide useful information about the client such as device type and network conditions, and allow servers to optimize what is served for those conditions.
+HTTP [Client hints](/en-US/docs/Web/HTTP/Guides/Client_hints) are a set of request headers that provide useful information about the client such as device type and network conditions, and allow servers to optimize what is served for those conditions.
 
 Servers proactively requests the client hint headers they are interested in from the client using {{HTTPHeader("Accept-CH")}}. The client may then choose to include the requested headers in subsequent requests.
 
 - {{HTTPHeader("Accept-CH")}}
   - : Servers can advertise support for Client Hints using the `Accept-CH` header field or an equivalent HTML `<meta>` element with [`http-equiv`](/en-US/docs/Web/HTML/Element/meta#http-equiv) attribute.
 - {{HTTPHeader("Critical-CH")}} {{experimental_inline}}
-  - : Servers use `Critical-CH` along with {{HttpHeader("Accept-CH")}} to specify that accepted client hints are also [critical client hints](/en-US/docs/Web/HTTP/Client_hints#critical_client_hints).
+  - : Servers use `Critical-CH` along with {{HttpHeader("Accept-CH")}} to specify that accepted client hints are also [critical client hints](/en-US/docs/Web/HTTP/Guides/Client_hints#critical_client_hints).
 
 The different categories of client hints are listed below.
 
 #### User agent client hints
 
-The [UA client hints](/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) are request headers that provide information about the user agent, the platform/architecture it is running on, and user preferences set on the user agent or platform:
+The [UA client hints](/en-US/docs/Web/HTTP/Guides/Client_hints#user-agent_client_hints) are request headers that provide information about the user agent, the platform/architecture it is running on, and user preferences set on the user agent or platform:
 
 - {{HTTPHeader("Sec-CH-UA")}} {{experimental_inline}}
   - : User agent's branding and version.

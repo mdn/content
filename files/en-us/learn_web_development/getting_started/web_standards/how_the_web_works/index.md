@@ -140,7 +140,7 @@ The full response is more complex than this, but we have omitted most of it for 
   - : The response body, which in this case contains the MDN homepage's HTML document.
 
 > [!NOTE]
-> See the MDN [HTTP reference](/en-US/docs/Web/HTTP) for a lot more detail on HTTP, if you are curious. [An overview of HTTP](/en-US/docs/Web/HTTP/Overview) is a good place to start.
+> See the MDN [HTTP reference](/en-US/docs/Web/HTTP) for a lot more detail on HTTP, if you are curious. [An overview of HTTP](/en-US/docs/Web/HTTP/Guides/Overview) is a good place to start.
 
 ### Other status codes
 

@@ -15,7 +15,7 @@ If a resource is permanently removed, servers should send the {{HTTPStatus("410"
 
 404 errors on a website can lead to a poor user experience for your visitors, so the number of broken links (internal and external) should be minimized to prevent frustration for readers.
 Common causes of 404 responses are mistyped URLs or pages that are moved or deleted without redirection.
-For more information, see the [Redirections in HTTP](/en-US/docs/Web/HTTP/Redirections) guide.
+For more information, see the [Redirections in HTTP](/en-US/docs/Web/HTTP/Guides/Redirections) guide.
 
 ## Status
 

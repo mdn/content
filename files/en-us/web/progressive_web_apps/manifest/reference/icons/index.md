@@ -116,7 +116,7 @@ For example, if the `img-src` directive in a CSP header specifies `icons.example
 ## Performance considerations
 
 Specifying the `type` property can significantly improve performance because it allows browsers to ignore images with unsupported formats more easily.
-If you don't specify the `type` property, browsers may need to infer the image format using more resource-intensive methods, such as [MIME sniffing](/en-US/docs/Web/HTTP/MIME_types#mime_sniffing) the file for a signature.
+If you don't specify the `type` property, browsers may need to infer the image format using more resource-intensive methods, such as [MIME sniffing](/en-US/docs/Web/HTTP/Guides/MIME_types#mime_sniffing) the file for a signature.
 
 At a minimum, if you omit the `type` property, use appropriate and unambiguous file extensions for your icon images.
 

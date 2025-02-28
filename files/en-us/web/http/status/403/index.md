@@ -25,7 +25,7 @@ Server owners may decide to send a {{HTTPStatus("404")}} response instead of a 4
 ### Request failed due to insufficient permissions
 
 The following example request is made to an API for user management.
-The request contains an {{HTTPHeader("Authorization")}} header using `Bearer` [authentication scheme](/en-US/docs/Web/HTTP/Authentication#authentication_schemes) containing an access token:
+The request contains an {{HTTPHeader("Authorization")}} header using `Bearer` [authentication scheme](/en-US/docs/Web/HTTP/Guides/Authentication#authentication_schemes) containing an access token:
 
 ```http
 DELETE /users/123 HTTP/1.1

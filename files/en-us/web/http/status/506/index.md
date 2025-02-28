@@ -9,11 +9,11 @@ spec-urls: https://www.rfc-editor.org/rfc/rfc2295#section-8.1
 
 The HTTP **`506 Variant Also Negotiates`** [server error response](/en-US/docs/Web/HTTP/Status#server_error_responses) status code is returned during content negotiation when there is recursive loop in the process of selecting a resource.
 
-[Agent-driven content negotiation](/en-US/docs/Web/HTTP/Content_negotiation#agent-driven_negotiation) enables a client and server to collaboratively decide the best variant of a given resource when the server has multiple variants.
+[Agent-driven content negotiation](/en-US/docs/Web/HTTP/Guides/Content_negotiation#agent-driven_negotiation) enables a client and server to collaboratively decide the best variant of a given resource when the server has multiple variants.
 A server sends a `506` status code due to server misconfiguration that results in circular references when creating responses.
 
 Lack of standardization of how clients automatically choose from responses, and the additional round-trips that slow down client-server interaction mean this mechanism is rarely used.
-[Server-driven content negotiation](/en-US/docs/Web/HTTP/Content_negotiation#server-driven_content_negotiation) is far more common, where a server directly chooses the most appropriate resource for the client based on the request headers ({{HTTPHeader("Accept-Language")}}, {{HTTPHeader("Accept")}}, etc.).
+[Server-driven content negotiation](/en-US/docs/Web/HTTP/Guides/Content_negotiation#server-driven_content_negotiation) is far more common, where a server directly chooses the most appropriate resource for the client based on the request headers ({{HTTPHeader("Accept-Language")}}, {{HTTPHeader("Accept")}}, etc.).
 
 ## Status
 
@@ -75,7 +75,7 @@ Alternates: {"index.html.en" 1 {type text/html} {language en} {length 48}}, {"an
 
 - {{HTTPStatus("300", "300 Multiple Choices")}}
 - {{RFC("2295")}}
-- [Content negotiation](/en-US/docs/Web/HTTP/Content_negotiation)
+- [Content negotiation](/en-US/docs/Web/HTTP/Guides/Content_negotiation)
 - [HTTP response status codes](/en-US/docs/Web/HTTP/Status)
 - [Content Negotiation](https://httpd.apache.org/docs/2.4/content-negotiation.html) in Apache HTTP Server documentation
 - [Apache httpd `mod_negotiation.c` source](https://github.com/apache/httpd/blob/6a2433cb3fbc30c8a55f450a046e4b0f69e73143/modules/mappers/mod_negotiation.c#L2687-L2691) showing conditions that trigger `HTTP_VARIANT_ALSO_VARIES` response.

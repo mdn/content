@@ -21,7 +21,7 @@ All responses with one of the above status codes include a `Location` header.
 In cases of resource creation, it indicates the URL of the newly-created resource so that a client can make a request for it immediately.
 
 `Location` and {{HTTPHeader("Content-Location")}} are different.
-`Content-Location` indicates the URL to use to directly access the resource in future when [content negotiation](/en-US/docs/Web/HTTP/Content_negotiation) occurred.
+`Content-Location` indicates the URL to use to directly access the resource in future when [content negotiation](/en-US/docs/Web/HTTP/Guides/Content_negotiation) occurred.
 `Location` is associated with the response, while {{HTTPHeader("Content-Location")}} is associated with the representation that was returned.
 
 <table class="properties">

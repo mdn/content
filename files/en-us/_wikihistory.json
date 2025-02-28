@@ -97698,32 +97698,6 @@
       "jreschke"
     ]
   },
-  "Web/HTTP/Authentication": {
-    "modified": "2020-07-22T12:14:27.800Z",
-    "contributors": [
-      "cpmsmith",
-      "mfuji09",
-      "Tigt",
-      "gsxuan",
-      "dungdm93",
-      "mfluehr",
-      "jpmedley",
-      "curt953",
-      "danehrlich1",
-      "slate71",
-      "tjfwalker",
-      "Vlence",
-      "kraneok",
-      "chrisdavidmills",
-      "kwwxis",
-      "ts9111",
-      "scooter-dangle",
-      "shadok",
-      "granttchart",
-      "fscholz",
-      "teoli"
-    ]
-  },
   "Web/HTTP/Browser_detection_using_the_user_agent": {
     "modified": "2020-07-11T11:53:53.804Z",
     "contributors": [
@@ -98037,7 +98011,44 @@
     "modified": "2020-06-04T09:22:06.779Z",
     "contributors": ["Sheppy"]
   },
-  "Web/HTTP/Caching": {
+  "Web/HTTP/Cross-Origin_Resource_Policy": {
+    "modified": "2020-10-15T22:16:18.437Z",
+    "contributors": [
+      "dd-pardal",
+      "lol768",
+      "Malvoz",
+      "Tigt",
+      "tdresser",
+      "fscholz"
+    ]
+  },
+  "Web/HTTP/Guides/Authentication": {
+    "modified": "2020-07-22T12:14:27.800Z",
+    "contributors": [
+      "cpmsmith",
+      "mfuji09",
+      "Tigt",
+      "gsxuan",
+      "dungdm93",
+      "mfluehr",
+      "jpmedley",
+      "curt953",
+      "danehrlich1",
+      "slate71",
+      "tjfwalker",
+      "Vlence",
+      "kraneok",
+      "chrisdavidmills",
+      "kwwxis",
+      "ts9111",
+      "scooter-dangle",
+      "shadok",
+      "granttchart",
+      "fscholz",
+      "teoli"
+    ]
+  },
+  "Web/HTTP/Guides/Caching": {
     "modified": "2020-11-29T09:39:31.522Z",
     "contributors": [
       "chrisdavidmills",
@@ -98067,11 +98078,11 @@
       "kohei.yoshino"
     ]
   },
-  "Web/HTTP/Client_hints": {
+  "Web/HTTP/Guides/Client_hints": {
     "modified": "2019-07-01T18:32:07.538Z",
     "contributors": ["Malvoz", "jswisher", "estelle"]
   },
-  "Web/HTTP/Compression": {
+  "Web/HTTP/Guides/Compression": {
     "modified": "2019-08-11T18:16:36.073Z",
     "contributors": [
       "mozdevcontrib",
@@ -98089,7 +98100,7 @@
       "teoli"
     ]
   },
-  "Web/HTTP/Conditional_requests": {
+  "Web/HTTP/Guides/Conditional_requests": {
     "modified": "2020-04-24T09:34:11.535Z",
     "contributors": [
       "hyunchel",
@@ -98103,7 +98114,7 @@
       "teoli"
     ]
   },
-  "Web/HTTP/Connection_management_in_HTTP_1.x": {
+  "Web/HTTP/Guides/Connection_management_in_HTTP_1.x": {
     "modified": "2019-11-27T11:05:48.174Z",
     "contributors": [
       "leela52452",
@@ -98121,7 +98132,7 @@
       "teoli"
     ]
   },
-  "Web/HTTP/Content_negotiation": {
+  "Web/HTTP/Guides/Content_negotiation": {
     "modified": "2020-11-05T20:33:02.045Z",
     "contributors": [
       "hamishwillee",
@@ -98149,7 +98160,7 @@
       "Kennyluck"
     ]
   },
-  "Web/HTTP/Content_negotiation/List_of_default_Accept_values": {
+  "Web/HTTP/Guides/Content_negotiation/List_of_default_Accept_values": {
     "modified": "2020-10-19T00:51:57.056Z",
     "contributors": [
       "hamishwillee",
@@ -98165,7 +98176,7 @@
       "teoli"
     ]
   },
-  "Web/HTTP/Cookies": {
+  "Web/HTTP/Guides/Cookies": {
     "modified": "2020-11-29T23:19:59.809Z",
     "contributors": [
       "hamishwillee",
@@ -98217,18 +98228,7 @@
       "dbruant"
     ]
   },
-  "Web/HTTP/Cross-Origin_Resource_Policy": {
-    "modified": "2020-10-15T22:16:18.437Z",
-    "contributors": [
-      "dd-pardal",
-      "lol768",
-      "Malvoz",
-      "Tigt",
-      "tdresser",
-      "fscholz"
-    ]
-  },
-  "Web/HTTP/Evolution_of_HTTP": {
+  "Web/HTTP/Guides/Evolution_of_HTTP": {
     "modified": "2020-09-25T15:02:32.165Z",
     "contributors": [
       "mfuji09",
@@ -98250,6 +98250,225 @@
       "david_ross",
       "DarrenLester",
       "teoli"
+    ]
+  },
+  "Web/HTTP/Guides/MIME_types": {
+    "modified": "2019-11-03T12:37:56.527Z",
+    "contributors": [
+      "mfuji09",
+      "Sheppy",
+      "Alhadis",
+      "awwright",
+      "sideshowbarker",
+      "ExE-Boss",
+      "Dzonny",
+      "Tigt",
+      "tribak",
+      "amitgupta15",
+      "nakkurt",
+      "MicroJes",
+      "snuggs",
+      "d4nyll",
+      "xgqfrms-GitHub",
+      "dawsonbotsford",
+      "g-patel",
+      "strattadb",
+      "david_ross",
+      "DJ-Leith",
+      "teoli",
+      "fscholz"
+    ]
+  },
+  "Web/HTTP/Guides/MIME_types/Common_types": {
+    "modified": "2020-05-01T18:32:40.232Z",
+    "contributors": [
+      "broofa",
+      "sideshowbarker",
+      "chrisdavidmills",
+      "charj",
+      "SphinxKnight",
+      "mathiasbynens",
+      "Dorward",
+      "igorskyflyer",
+      "rctgamer3",
+      "mfuji09",
+      "Coder-Arjun",
+      "joeyparrish",
+      "devex23",
+      "ignaloidas",
+      "aadityataparia",
+      "dunglas",
+      "gabriele.bernuzzi",
+      "evilpie",
+      "xiaopanke",
+      "Loadmaster",
+      "iamakidilam",
+      "snuggs",
+      "Sheppy",
+      "Thw0rted",
+      "Krenair",
+      "Vikaash",
+      "Naesten",
+      "dave.shaheen",
+      "alettieri",
+      "NaveenDA",
+      "AbsoluteZERO",
+      "BrienA",
+      "kyrylkov",
+      "choury",
+      "david_ross",
+      "fscholz",
+      "teoli"
+    ]
+  },
+  "Web/HTTP/Guides/Messages": {
+    "modified": "2020-12-03T23:53:07.614Z",
+    "contributors": [
+      "hamishwillee",
+      "sideshowbarker",
+      "summerwinter201517",
+      "Martin.Winkler",
+      "s.m.mirismaili",
+      "lewislbr",
+      "samvk",
+      "msobanjo",
+      "Librazy",
+      "mfuji09",
+      "jamrocha",
+      "camille347",
+      "Youmoo",
+      "stephaniehobson",
+      "zhitaoh",
+      "david_ross",
+      "smalllong",
+      "DarrenLester",
+      "fscholz",
+      "teoli"
+    ]
+  },
+  "Web/HTTP/Guides/Overview": {
+    "modified": "2020-09-15T11:32:01.897Z",
+    "contributors": [
+      "WenJuWu",
+      "chrisdavidmills",
+      "CPMoviePHil",
+      "estelle",
+      "drivasperez",
+      "jswisher",
+      "segmentationfaulter",
+      "mfuji09",
+      "yackSpillsaps",
+      "ronny-macmaster",
+      "dcrouch79",
+      "Sheppy",
+      "fscholz",
+      "michaelbaxter",
+      "Sergio_Gonzalez_Collado",
+      "danielgormly",
+      "aaronArinder",
+      "SpikePy",
+      "arssonist",
+      "protopatterns",
+      "derick-montague",
+      "zhitaoh",
+      "Jeremie",
+      "david_ross",
+      "arosenberg01",
+      "tanya-marfel",
+      "teoli"
+    ]
+  },
+  "Web/HTTP/Guides/Protocol_upgrade_mechanism": {
+    "modified": "2020-11-29T09:42:13.104Z",
+    "contributors": [
+      "chrisdavidmills",
+      "Bilal",
+      "mfuji09",
+      "zambini",
+      "mnottingham",
+      "aymericbeaumet",
+      "himanshub16",
+      "noahbenham",
+      "Sheppy",
+      "TheT0dd",
+      "teoli"
+    ]
+  },
+  "Web/HTTP/Guides/Proxy_servers_and_tunneling": {
+    "modified": "2020-10-13T12:48:38.648Z",
+    "contributors": ["jwerre", "mfuji09", "r-thomps", "teoli", "fscholz"]
+  },
+  "Web/HTTP/Guides/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file": {
+    "modified": "2020-10-12T08:18:46.998Z",
+    "contributors": [
+      "SphinxKnight",
+      "jibonmobileq",
+      "mfuji09",
+      "lewisje",
+      "Artoria2e5",
+      "RainSlide",
+      "Gizeta",
+      "erosman",
+      "fscholz",
+      "orisano",
+      "Sheppy",
+      "GeneralFailer",
+      "teoli",
+      "GabrielCorona",
+      "galejwnaylor",
+      "xeonchen",
+      "rolfedh",
+      "duncanmcdonald"
+    ]
+  },
+  "Web/HTTP/Guides/Range_requests": {
+    "modified": "2019-11-13T09:33:18.325Z",
+    "contributors": [
+      "tkutz",
+      "Alexis Wilke1",
+      "thierry.henrio",
+      "momijimimiga",
+      "BaderSur",
+      "fscholz"
+    ]
+  },
+  "Web/HTTP/Guides/Redirections": {
+    "modified": "2020-11-23T11:01:59.977Z",
+    "contributors": [
+      "sideshowbarker",
+      "alessiogasparini02",
+      "mfuji09",
+      "avi-levy",
+      "Tigt",
+      "ptletski",
+      "fmonjalet",
+      "cypressf",
+      "zonidjan",
+      "dnafication",
+      "rileym7",
+      "VladPavel15",
+      "HTMLValidator",
+      "WayneCui",
+      "lmsteffan",
+      "nackman",
+      "oxfist",
+      "fscholz",
+      "teoli"
+    ]
+  },
+  "Web/HTTP/Guides/Session": {
+    "modified": "2019-07-31T02:53:01.366Z",
+    "contributors": [
+      "vriojtg",
+      "witaly-iwanow",
+      "SphinxKnight",
+      "AranGarcia",
+      "stephaniehobson",
+      "rickwest",
+      "david_ross",
+      "DarrenLester",
+      "fscholz",
+      "groovecoder"
     ]
   },
   "Web/HTTP/Headers": {
@@ -99661,100 +99880,6 @@
       "fscholz"
     ]
   },
-  "Web/HTTP/MIME_types": {
-    "modified": "2019-11-03T12:37:56.527Z",
-    "contributors": [
-      "mfuji09",
-      "Sheppy",
-      "Alhadis",
-      "awwright",
-      "sideshowbarker",
-      "ExE-Boss",
-      "Dzonny",
-      "Tigt",
-      "tribak",
-      "amitgupta15",
-      "nakkurt",
-      "MicroJes",
-      "snuggs",
-      "d4nyll",
-      "xgqfrms-GitHub",
-      "dawsonbotsford",
-      "g-patel",
-      "strattadb",
-      "david_ross",
-      "DJ-Leith",
-      "teoli",
-      "fscholz"
-    ]
-  },
-  "Web/HTTP/MIME_types/Common_types": {
-    "modified": "2020-05-01T18:32:40.232Z",
-    "contributors": [
-      "broofa",
-      "sideshowbarker",
-      "chrisdavidmills",
-      "charj",
-      "SphinxKnight",
-      "mathiasbynens",
-      "Dorward",
-      "igorskyflyer",
-      "rctgamer3",
-      "mfuji09",
-      "Coder-Arjun",
-      "joeyparrish",
-      "devex23",
-      "ignaloidas",
-      "aadityataparia",
-      "dunglas",
-      "gabriele.bernuzzi",
-      "evilpie",
-      "xiaopanke",
-      "Loadmaster",
-      "iamakidilam",
-      "snuggs",
-      "Sheppy",
-      "Thw0rted",
-      "Krenair",
-      "Vikaash",
-      "Naesten",
-      "dave.shaheen",
-      "alettieri",
-      "NaveenDA",
-      "AbsoluteZERO",
-      "BrienA",
-      "kyrylkov",
-      "choury",
-      "david_ross",
-      "fscholz",
-      "teoli"
-    ]
-  },
-  "Web/HTTP/Messages": {
-    "modified": "2020-12-03T23:53:07.614Z",
-    "contributors": [
-      "hamishwillee",
-      "sideshowbarker",
-      "summerwinter201517",
-      "Martin.Winkler",
-      "s.m.mirismaili",
-      "lewislbr",
-      "samvk",
-      "msobanjo",
-      "Librazy",
-      "mfuji09",
-      "jamrocha",
-      "camille347",
-      "Youmoo",
-      "stephaniehobson",
-      "zhitaoh",
-      "david_ross",
-      "smalllong",
-      "DarrenLester",
-      "fscholz",
-      "teoli"
-    ]
-  },
   "Web/HTTP/Methods": {
     "modified": "2020-12-02T07:02:59.603Z",
     "contributors": [
@@ -99893,38 +100018,6 @@
     "modified": "2020-10-15T22:29:13.638Z",
     "contributors": ["sideshowbarker", "lol768"]
   },
-  "Web/HTTP/Overview": {
-    "modified": "2020-09-15T11:32:01.897Z",
-    "contributors": [
-      "WenJuWu",
-      "chrisdavidmills",
-      "CPMoviePHil",
-      "estelle",
-      "drivasperez",
-      "jswisher",
-      "segmentationfaulter",
-      "mfuji09",
-      "yackSpillsaps",
-      "ronny-macmaster",
-      "dcrouch79",
-      "Sheppy",
-      "fscholz",
-      "michaelbaxter",
-      "Sergio_Gonzalez_Collado",
-      "danielgormly",
-      "aaronArinder",
-      "SpikePy",
-      "arssonist",
-      "protopatterns",
-      "derick-montague",
-      "zhitaoh",
-      "Jeremie",
-      "david_ross",
-      "arosenberg01",
-      "tanya-marfel",
-      "teoli"
-    ]
-  },
   "Web/HTTP/Permissions_Policy": {
     "modified": "2020-10-18T22:29:08.695Z",
     "contributors": [
@@ -99955,84 +100048,6 @@
       "jpmedley"
     ]
   },
-  "Web/HTTP/Protocol_upgrade_mechanism": {
-    "modified": "2020-11-29T09:42:13.104Z",
-    "contributors": [
-      "chrisdavidmills",
-      "Bilal",
-      "mfuji09",
-      "zambini",
-      "mnottingham",
-      "aymericbeaumet",
-      "himanshub16",
-      "noahbenham",
-      "Sheppy",
-      "TheT0dd",
-      "teoli"
-    ]
-  },
-  "Web/HTTP/Proxy_servers_and_tunneling": {
-    "modified": "2020-10-13T12:48:38.648Z",
-    "contributors": ["jwerre", "mfuji09", "r-thomps", "teoli", "fscholz"]
-  },
-  "Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file": {
-    "modified": "2020-10-12T08:18:46.998Z",
-    "contributors": [
-      "SphinxKnight",
-      "jibonmobileq",
-      "mfuji09",
-      "lewisje",
-      "Artoria2e5",
-      "RainSlide",
-      "Gizeta",
-      "erosman",
-      "fscholz",
-      "orisano",
-      "Sheppy",
-      "GeneralFailer",
-      "teoli",
-      "GabrielCorona",
-      "galejwnaylor",
-      "xeonchen",
-      "rolfedh",
-      "duncanmcdonald"
-    ]
-  },
-  "Web/HTTP/Range_requests": {
-    "modified": "2019-11-13T09:33:18.325Z",
-    "contributors": [
-      "tkutz",
-      "Alexis Wilke1",
-      "thierry.henrio",
-      "momijimimiga",
-      "BaderSur",
-      "fscholz"
-    ]
-  },
-  "Web/HTTP/Redirections": {
-    "modified": "2020-11-23T11:01:59.977Z",
-    "contributors": [
-      "sideshowbarker",
-      "alessiogasparini02",
-      "mfuji09",
-      "avi-levy",
-      "Tigt",
-      "ptletski",
-      "fmonjalet",
-      "cypressf",
-      "zonidjan",
-      "dnafication",
-      "rileym7",
-      "VladPavel15",
-      "HTMLValidator",
-      "WayneCui",
-      "lmsteffan",
-      "nackman",
-      "oxfist",
-      "fscholz",
-      "teoli"
-    ]
-  },
   "Web/HTTP/Resources_and_specifications": {
     "modified": "2019-07-29T05:42:08.432Z",
     "contributors": [
@@ -100041,21 +100056,6 @@
       "Baptouuuu",
       "fscholz",
       "teoli"
-    ]
-  },
-  "Web/HTTP/Session": {
-    "modified": "2019-07-31T02:53:01.366Z",
-    "contributors": [
-      "vriojtg",
-      "witaly-iwanow",
-      "SphinxKnight",
-      "AranGarcia",
-      "stephaniehobson",
-      "rickwest",
-      "david_ross",
-      "DarrenLester",
-      "fscholz",
-      "groovecoder"
     ]
   },
   "Web/HTTP/Status": {

@@ -9,9 +9,9 @@ spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.304
 
 The HTTP **`304 Not Modified`** [redirection response](/en-US/docs/Web/HTTP/Status#redirection_messages) status code indicates that there is no need to retransmit the requested resources.
 
-This response code is sent when the request is a [conditional](/en-US/docs/Web/HTTP/Conditional_requests) {{HTTPMethod("GET")}} or {{HTTPMethod("HEAD")}} request with an {{HTTPHeader("If-None-Match")}} or an {{HTTPHeader("If-Modified-Since")}} header and the condition evaluates to 'false'.
+This response code is sent when the request is a [conditional](/en-US/docs/Web/HTTP/Guides/Conditional_requests) {{HTTPMethod("GET")}} or {{HTTPMethod("HEAD")}} request with an {{HTTPHeader("If-None-Match")}} or an {{HTTPHeader("If-Modified-Since")}} header and the condition evaluates to 'false'.
 It confirms that the resource cached by the client is still valid and that the server would have sent a {{HTTPStatus("200", "200 OK")}} response with the resource if the condition evaluated to 'true'.
-See [HTTP caching](/en-US/docs/Web/HTTP/Caching) for more information.
+See [HTTP caching](/en-US/docs/Web/HTTP/Guides/Caching) for more information.
 
 The response must not contain a body and must include the headers that would have been sent in an equivalent {{HTTPStatus("200")}} response, such as:
 
@@ -113,8 +113,8 @@ See {{HTTPStatus("204", "204 No Content")}} for more details.
 
 ## See also
 
-- [Redirections in HTTP](/en-US/docs/Web/HTTP/Redirections)
+- [Redirections in HTTP](/en-US/docs/Web/HTTP/Guides/Redirections)
 - [HTTP response status codes](/en-US/docs/Web/HTTP/Status)
-- [HTTP conditional requests](/en-US/docs/Web/HTTP/Conditional_requests)
+- [HTTP conditional requests](/en-US/docs/Web/HTTP/Guides/Conditional_requests)
 - {{HTTPHeader("If-Modified-Since")}}
 - {{HTTPHeader("If-None-Match")}}

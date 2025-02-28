@@ -7,7 +7,7 @@ spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.206
 
 {{HTTPSidebar}}
 
-The HTTP **`206 Partial Content`** [successful response](/en-US/docs/Web/HTTP/Status#successful_responses) status code is sent in response to a [range request](/en-US/docs/Web/HTTP/Range_requests).
+The HTTP **`206 Partial Content`** [successful response](/en-US/docs/Web/HTTP/Status#successful_responses) status code is sent in response to a [range request](/en-US/docs/Web/HTTP/Guides/Range_requests).
 The response body contains the requested ranges of data as specified in the {{HTTPHeader("Range")}} header of the request.
 
 The format of the response depends on the number of ranges requested.

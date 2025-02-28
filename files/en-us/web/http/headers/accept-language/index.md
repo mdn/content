@@ -8,7 +8,7 @@ browser-compat: http.headers.Accept-Language
 {{HTTPSidebar}}
 
 The HTTP **`Accept-Language`** {{Glossary("request header")}} indicates the natural language and locale that the client prefers.
-The server uses [content negotiation](/en-US/docs/Web/HTTP/Content_negotiation) to select one of the proposals and informs the client of the choice with the {{HTTPHeader("Content-Language")}} response header.
+The server uses [content negotiation](/en-US/docs/Web/HTTP/Guides/Content_negotiation) to select one of the proposals and informs the client of the choice with the {{HTTPHeader("Content-Language")}} response header.
 Browsers set required values for this header according to their active user interface language.
 Users can also configure additional preferred languages through browser settings.
 
@@ -95,6 +95,6 @@ Accept-Language: da, en-gb;q=0.8, en;q=0.7
 
 ## See also
 
-- HTTP [content negotiation](/en-US/docs/Web/HTTP/Content_negotiation)
+- HTTP [content negotiation](/en-US/docs/Web/HTTP/Guides/Content_negotiation)
 - A header with the result of the content negotiation: {{HTTPHeader("Content-Language")}}
 - Other similar headers: {{HTTPHeader("TE")}}, {{HTTPHeader("Accept-Encoding")}}, {{HTTPHeader("Accept")}}

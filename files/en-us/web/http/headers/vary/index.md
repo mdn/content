@@ -9,7 +9,7 @@ browser-compat: http.headers.Vary
 
 The HTTP **`Vary`** {{Glossary("response header")}} describes the parts of the request message (aside from the method and URL) that influenced the content of the response it occurs in.
 Including a `Vary` header ensures that responses are separately cached based on the headers listed in the `Vary` field.
-Most often, this is used to create a cache key when [content negotiation](/en-US/docs/Web/HTTP/Content_negotiation) is in use.
+Most often, this is used to create a cache key when [content negotiation](/en-US/docs/Web/HTTP/Guides/Content_negotiation) is in use.
 
 The same `Vary` header value should be used on all responses for a given URL, including {{HTTPStatus("304")}} `Not Modified` responses and the "default" response.
 
@@ -52,7 +52,7 @@ Vary: <header-name>, …, <header-nameN>
 
 ## See also
 
-- [Content negotiation](/en-US/docs/Web/HTTP/Content_negotiation)
-- [HTTP caching: Vary](/en-US/docs/Web/HTTP/Caching#vary)
+- [Content negotiation](/en-US/docs/Web/HTTP/Guides/Content_negotiation)
+- [HTTP caching: Vary](/en-US/docs/Web/HTTP/Guides/Caching#vary)
 - [Understanding The Vary Header](https://www.smashingmagazine.com/2017/11/understanding-vary-header/) on smashingmagazine.com (2017)
 - [Best Practices for Using the Vary Header](https://www.fastly.com/blog/best-practices-using-vary-header) on fastly.com

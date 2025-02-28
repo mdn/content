@@ -17,7 +17,7 @@ This lets people attempt to fix the problem, such as by clearing cookies.
 Servers will often produce this status if:
 
 - The {{httpheader("Referer")}} URL is too long
-- There are too many [Cookies](/en-US/docs/Web/HTTP/Cookies) sent in the request
+- There are too many [Cookies](/en-US/docs/Web/HTTP/Guides/Cookies) sent in the request
 
 ## Status
 

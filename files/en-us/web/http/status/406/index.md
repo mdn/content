@@ -7,7 +7,7 @@ spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.406
 
 {{HTTPSidebar}}
 
-The HTTP **`406 Not Acceptable`** [client error response](/en-US/docs/Web/HTTP/Status#client_error_responses) status code indicates that the server could not produce a response matching the list of acceptable values defined in the request's [proactive content negotiation](/en-US/docs/Web/HTTP/Content_negotiation#server-driven_content_negotiation) headers and that the server was unwilling to supply a default representation.
+The HTTP **`406 Not Acceptable`** [client error response](/en-US/docs/Web/HTTP/Status#client_error_responses) status code indicates that the server could not produce a response matching the list of acceptable values defined in the request's [proactive content negotiation](/en-US/docs/Web/HTTP/Guides/Content_negotiation#server-driven_content_negotiation) headers and that the server was unwilling to supply a default representation.
 
 Proactive content negotiation headers include:
 
@@ -62,4 +62,4 @@ Content-Type: application/json
 - {{HTTPHeader("Accept")}}
 - {{HTTPHeader("Accept-Encoding")}}
 - {{HTTPHeader("Accept-Language")}}
-- HTTP [content negotiation](/en-US/docs/Web/HTTP/Content_negotiation)
+- HTTP [content negotiation](/en-US/docs/Web/HTTP/Guides/Content_negotiation)

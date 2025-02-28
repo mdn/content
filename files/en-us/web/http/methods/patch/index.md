@@ -105,7 +105,7 @@ Authorization: Bearer ABC123
 The interpretation and authentication of the `PATCH` request depend on the implementation.
 Success can be indicated by any of the [successful response status codes](/en-US/docs/Web/HTTP/Status#successful_responses).
 In this example, a {{HTTPStatus("204", "204 No Content")}} is used as there's no need to transmit a body with additional context about the operation.
-An {{HTTPHeader("ETag")}} is provided so the caller can perform a [conditional request](/en-US/docs/Web/HTTP/Conditional_requests) in future:
+An {{HTTPHeader("ETag")}} is provided so the caller can perform a [conditional request](/en-US/docs/Web/HTTP/Guides/Conditional_requests) in future:
 
 ```http
 HTTP/1.1 204 No Content

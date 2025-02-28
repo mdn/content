@@ -7,7 +7,7 @@ browser-compat: http.headers.If-Match
 
 {{HTTPSidebar}}
 
-The HTTP **`If-Match`** {{Glossary("request header")}} makes a request [conditional](/en-US/docs/Web/HTTP/Conditional_requests).
+The HTTP **`If-Match`** {{Glossary("request header")}} makes a request [conditional](/en-US/docs/Web/HTTP/Guides/Conditional_requests).
 A server will return resources for {{HTTPMethod("GET")}} and {{HTTPMethod("HEAD")}} methods, or upload resource for {{HTTPMethod("PUT")}} and other non-safe methods, only if the resource matches one of the {{HTTPHeader("ETag")}} values in the `If-Match` request header.
 If the conditional does not match, the {{HTTPStatus("412", "412 Precondition Failed")}} response is returned instead.
 

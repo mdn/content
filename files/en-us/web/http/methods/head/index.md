@@ -81,7 +81,7 @@ Accept: */*
 ```
 
 The server sends back a {{HTTPStatus("200", "200 OK")}} response comprised only of headers.
-The response is effectively metadata that describes the resource instead of the resource itself (some [caching](/en-US/docs/Web/HTTP/Caching) headers are omitted in this example for brevity):
+The response is effectively metadata that describes the resource instead of the resource itself (some [caching](/en-US/docs/Web/HTTP/Guides/Caching) headers are omitted in this example for brevity):
 
 ```http
 HTTP/1.1 200 OK

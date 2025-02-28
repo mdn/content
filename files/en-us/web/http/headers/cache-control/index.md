@@ -7,7 +7,7 @@ browser-compat: http.headers.Cache-Control
 
 {{HTTPSidebar}}
 
-The HTTP **`Cache-Control`** header holds _directives_ (instructions) in both requests and responses that control [caching](/en-US/docs/Web/HTTP/Caching) in browsers and shared caches (e.g., Proxies, CDNs).
+The HTTP **`Cache-Control`** header holds _directives_ (instructions) in both requests and responses that control [caching](/en-US/docs/Web/HTTP/Guides/Caching) in browsers and shared caches (e.g., Proxies, CDNs).
 
 <table class="properties">
   <tbody>
@@ -79,13 +79,13 @@ This section defines the terms used in this document, some of which are from the
 - Reuse response
   - : Reuse cached responses for subsequent requests.
 - Revalidate response
-  - : Ask the origin server whether or not the stored response is still [fresh](/en-US/docs/Web/HTTP/Caching#fresh_and_stale_based_on_age). Usually, the revalidation is done through a conditional request.
+  - : Ask the origin server whether or not the stored response is still [fresh](/en-US/docs/Web/HTTP/Guides/Caching#fresh_and_stale_based_on_age). Usually, the revalidation is done through a conditional request.
 - Fresh response
-  - : Indicates that the response is [fresh](/en-US/docs/Web/HTTP/Caching#fresh_and_stale_based_on_age). This usually means the response can be reused for subsequent requests, depending on request directives.
+  - : Indicates that the response is [fresh](/en-US/docs/Web/HTTP/Guides/Caching#fresh_and_stale_based_on_age). This usually means the response can be reused for subsequent requests, depending on request directives.
 - Stale response
-  - : Indicates that the response is a [stale response](/en-US/docs/Web/HTTP/Caching#fresh_and_stale_based_on_age). This usually means the response can't be reused as-is. Cache storage isn't required to remove stale responses immediately because revalidation could change the response from being stale to being [fresh](/en-US/docs/Web/HTTP/Caching#fresh_and_stale_based_on_age) again.
+  - : Indicates that the response is a [stale response](/en-US/docs/Web/HTTP/Guides/Caching#fresh_and_stale_based_on_age). This usually means the response can't be reused as-is. Cache storage isn't required to remove stale responses immediately because revalidation could change the response from being stale to being [fresh](/en-US/docs/Web/HTTP/Guides/Caching#fresh_and_stale_based_on_age) again.
 - Age
-  - : The time since a response was generated. It is a criterion for whether a response is [fresh or stale](/en-US/docs/Web/HTTP/Caching#fresh_and_stale_based_on_age).
+  - : The time since a response was generated. It is a criterion for whether a response is [fresh or stale](/en-US/docs/Web/HTTP/Guides/Caching#fresh_and_stale_based_on_age).
 
 ## Directives
 
@@ -95,16 +95,16 @@ This section lists directives that affect caching — both response directives a
 
 #### `max-age`
 
-The `max-age=N` response directive indicates that the response remains [fresh](/en-US/docs/Web/HTTP/Caching#fresh_and_stale_based_on_age) until _N_ seconds after the response is generated.
+The `max-age=N` response directive indicates that the response remains [fresh](/en-US/docs/Web/HTTP/Guides/Caching#fresh_and_stale_based_on_age) until _N_ seconds after the response is generated.
 
 ```http
 Cache-Control: max-age=604800
 ```
 
-Indicates that caches can store this response and reuse it for subsequent requests while it's [fresh](/en-US/docs/Web/HTTP/Caching#fresh_and_stale_based_on_age).
+Indicates that caches can store this response and reuse it for subsequent requests while it's [fresh](/en-US/docs/Web/HTTP/Guides/Caching#fresh_and_stale_based_on_age).
 
 Note that `max-age` is not the elapsed time since the response was received; it is the elapsed time since the response was generated on the origin server.
-So if the other cache(s) — on the network route taken by the response — store the response for 100 seconds (indicated using the `Age` response header field), the browser cache would deduct 100 seconds from its [freshness lifetime](/en-US/docs/Web/HTTP/Caching#fresh_and_stale_based_on_age).
+So if the other cache(s) — on the network route taken by the response — store the response for 100 seconds (indicated using the `Age` response header field), the browser cache would deduct 100 seconds from its [freshness lifetime](/en-US/docs/Web/HTTP/Guides/Caching#fresh_and_stale_based_on_age).
 
 If the `max-age` value is negative (for example, `-1`) or isn't an integer (for example, `3599.99`), then the caching behavior is unspecified. Caches are encouraged to treat the value as if it were `0` (this is noted in the [Calculating Freshness Lifetime](https://httpwg.org/specs/rfc9111.html#calculating.freshness.lifetime) section of the HTTP specification).
 
@@ -115,7 +115,7 @@ Age: 100
 
 #### `s-maxage`
 
-The `s-maxage` response directive indicates how long the response remains [fresh](/en-US/docs/Web/HTTP/Caching#fresh_and_stale_based_on_age) in a shared cache.
+The `s-maxage` response directive indicates how long the response remains [fresh](/en-US/docs/Web/HTTP/Guides/Caching#fresh_and_stale_based_on_age) in a shared cache.
 The `s-maxage` directive is ignored by private caches, and overrides the value specified by the `max-age` directive or the `Expires` header for shared caches, if they are present.
 
 ```http
@@ -136,7 +136,7 @@ Note that `no-cache` does not mean "don't cache". `no-cache` allows caches to st
 
 #### `must-revalidate`
 
-The `must-revalidate` response directive indicates that the response can be stored in caches and can be reused while [fresh](/en-US/docs/Web/HTTP/Caching#fresh_and_stale_based_on_age). If the response becomes [stale](/en-US/docs/Web/HTTP/Caching#fresh_and_stale_based_on_age), it must be validated with the origin server before reuse.
+The `must-revalidate` response directive indicates that the response can be stored in caches and can be reused while [fresh](/en-US/docs/Web/HTTP/Guides/Caching#fresh_and_stale_based_on_age). If the response becomes [stale](/en-US/docs/Web/HTTP/Guides/Caching#fresh_and_stale_based_on_age), it must be validated with the origin server before reuse.
 
 Typically, `must-revalidate` is used with `max-age`.
 
@@ -144,7 +144,7 @@ Typically, `must-revalidate` is used with `max-age`.
 Cache-Control: max-age=604800, must-revalidate
 ```
 
-HTTP allows caches to reuse [stale responses](/en-US/docs/Web/HTTP/Caching#fresh_and_stale_based_on_age) when they are disconnected from the origin server. `must-revalidate` is a way to prevent this from happening - either the stored response is revalidated with the origin server or a 504 (Gateway Timeout) response is generated.
+HTTP allows caches to reuse [stale responses](/en-US/docs/Web/HTTP/Guides/Caching#fresh_and_stale_based_on_age) when they are disconnected from the origin server. `must-revalidate` is a way to prevent this from happening - either the stored response is revalidated with the origin server or a 504 (Gateway Timeout) response is generated.
 
 #### `proxy-revalidate`
 
@@ -212,7 +212,7 @@ Some intermediaries transform content for various reasons. For example, some con
 
 #### `immutable`
 
-The `immutable` response directive indicates that the response will not be updated while it's [fresh](/en-US/docs/Web/HTTP/Caching#fresh_and_stale_based_on_age).
+The `immutable` response directive indicates that the response will not be updated while it's [fresh](/en-US/docs/Web/HTTP/Guides/Caching#fresh_and_stale_based_on_age).
 
 ```http
 Cache-Control: public, max-age=604800, immutable
@@ -225,7 +225,7 @@ A modern best practice for static resources is to include version/hashes in thei
 ```
 
 When a user reloads the browser, the browser will send conditional requests for validating to the origin server. But it's not necessary to revalidate those kinds of static resources even when a user reloads the browser, because they're never modified.
-`immutable` tells a cache that the response is immutable while it's [fresh](/en-US/docs/Web/HTTP/Caching#fresh_and_stale_based_on_age) and avoids those kinds of unnecessary conditional requests to the server.
+`immutable` tells a cache that the response is immutable while it's [fresh](/en-US/docs/Web/HTTP/Guides/Caching#fresh_and_stale_based_on_age) and avoids those kinds of unnecessary conditional requests to the server.
 
 When you use a cache-busting pattern for resources and apply them to a long `max-age`, you can also add `immutable` to avoid revalidation.
 
@@ -237,22 +237,22 @@ The `stale-while-revalidate` response directive indicates that the cache could r
 Cache-Control: max-age=604800, stale-while-revalidate=86400
 ```
 
-In the example above, the response is [fresh](/en-US/docs/Web/HTTP/Caching#fresh_and_stale_based_on_age) for 7 days (604800s).
-After 7 days it becomes [stale](/en-US/docs/Web/HTTP/Caching#fresh_and_stale_based_on_age), but the cache is allowed to reuse it for any requests that are made in the following day (86400s), provided that they revalidate the response in the background.
+In the example above, the response is [fresh](/en-US/docs/Web/HTTP/Guides/Caching#fresh_and_stale_based_on_age) for 7 days (604800s).
+After 7 days it becomes [stale](/en-US/docs/Web/HTTP/Guides/Caching#fresh_and_stale_based_on_age), but the cache is allowed to reuse it for any requests that are made in the following day (86400s), provided that they revalidate the response in the background.
 
-Revalidation will make the cache be [fresh](/en-US/docs/Web/HTTP/Caching#fresh_and_stale_based_on_age) again, so it appears to clients that it was always [fresh](/en-US/docs/Web/HTTP/Caching#fresh_and_stale_based_on_age) during that period — effectively hiding the latency penalty of revalidation from them.
+Revalidation will make the cache be [fresh](/en-US/docs/Web/HTTP/Guides/Caching#fresh_and_stale_based_on_age) again, so it appears to clients that it was always [fresh](/en-US/docs/Web/HTTP/Guides/Caching#fresh_and_stale_based_on_age) during that period — effectively hiding the latency penalty of revalidation from them.
 
-If no request happened during that period, the cache became [stale](/en-US/docs/Web/HTTP/Caching#fresh_and_stale_based_on_age) and the next request will revalidate normally.
+If no request happened during that period, the cache became [stale](/en-US/docs/Web/HTTP/Guides/Caching#fresh_and_stale_based_on_age) and the next request will revalidate normally.
 
 #### `stale-if-error`
 
-The `stale-if-error` response directive indicates that the cache can reuse a [stale response](/en-US/docs/Web/HTTP/Caching#fresh_and_stale_based_on_age) when an upstream server generates an error, or when the error is generated locally. Here, an error is considered any response with a status code of 500, 502, 503, or 504.
+The `stale-if-error` response directive indicates that the cache can reuse a [stale response](/en-US/docs/Web/HTTP/Guides/Caching#fresh_and_stale_based_on_age) when an upstream server generates an error, or when the error is generated locally. Here, an error is considered any response with a status code of 500, 502, 503, or 504.
 
 ```http
 Cache-Control: max-age=604800, stale-if-error=86400
 ```
 
-In the example above, the response is [fresh](/en-US/docs/Web/HTTP/Caching#fresh_and_stale_based_on_age) for 7 days (604800s). Afterwards, it becomes [stale](/en-US/docs/Web/HTTP/Caching#fresh_and_stale_based_on_age), but can be used for an extra 1 day (86400s) when an error is encountered.
+In the example above, the response is [fresh](/en-US/docs/Web/HTTP/Guides/Caching#fresh_and_stale_based_on_age) for 7 days (604800s). Afterwards, it becomes [stale](/en-US/docs/Web/HTTP/Guides/Caching#fresh_and_stale_based_on_age), but can be used for an extra 1 day (86400s) when an error is encountered.
 
 After the stale-if-error period passes, the client will receive any error generated.
 
@@ -266,7 +266,7 @@ The `no-cache` request directive asks caches to validate the response with the o
 Cache-Control: no-cache
 ```
 
-`no-cache` allows clients to request the most up-to-date response even if the cache has a [fresh](/en-US/docs/Web/HTTP/Caching#fresh_and_stale_based_on_age) response.
+`no-cache` allows clients to request the most up-to-date response even if the cache has a [fresh](/en-US/docs/Web/HTTP/Guides/Caching#fresh_and_stale_based_on_age) response.
 
 Browsers usually add `no-cache` to requests when users are **force reloading** a page.
 
@@ -300,7 +300,7 @@ If the `max-age` value is negative (for example, `-1`) or isn't an integer (for 
 
 #### `max-stale`
 
-The `max-stale=N` request directive indicates that the client allows a stored response that is [stale](/en-US/docs/Web/HTTP/Caching#fresh_and_stale_based_on_age) within _N_ seconds.
+The `max-stale=N` request directive indicates that the client allows a stored response that is [stale](/en-US/docs/Web/HTTP/Guides/Caching#fresh_and_stale_based_on_age) within _N_ seconds.
 If no _N_ value is specified, the client will accept a stale response of any age.
 
 ```http
@@ -315,7 +315,7 @@ Note that the major browsers do not support requests with `max-stale`.
 
 #### `min-fresh`
 
-The `min-fresh=N` request directive indicates that the client allows a stored response that is [fresh](/en-US/docs/Web/HTTP/Caching#fresh_and_stale_based_on_age) for at least _N_ seconds.
+The `min-fresh=N` request directive indicates that the client allows a stored response that is [fresh](/en-US/docs/Web/HTTP/Guides/Caching#fresh_and_stale_based_on_age) for at least _N_ seconds.
 
 ```http
 Cache-Control: min-fresh=600
@@ -323,7 +323,7 @@ Cache-Control: min-fresh=600
 
 In the case above, if the response with `Cache-Control: max-age=3600` was stored in caches 51 minutes ago, the cache couldn't reuse that response.
 
-Clients can use this header when the user requires the response to not only be [fresh](/en-US/docs/Web/HTTP/Caching#fresh_and_stale_based_on_age), but also requires that it won't be updated for a period of time.
+Clients can use this header when the user requires the response to not only be [fresh](/en-US/docs/Web/HTTP/Guides/Caching#fresh_and_stale_based_on_age), but also requires that it won't be updated for a period of time.
 
 Note that the major browsers do not support requests with `min-fresh`.
 
@@ -407,13 +407,13 @@ For content that's generated dynamically, or that's static but updated often, yo
 
 If you don't add a `Cache-Control` header because the response is not intended to be cached, that could cause an unexpected result. Cache storage is allowed to cache it heuristically — so if you have any requirements on caching, you should always indicate them explicitly, in the `Cache-Control` header.
 
-Adding `no-cache` to the response causes revalidation to the server, so you can serve a [fresh](/en-US/docs/Web/HTTP/Caching#fresh_and_stale_based_on_age) response every time — or if the client already has a new one, just respond `304 Not Modified`.
+Adding `no-cache` to the response causes revalidation to the server, so you can serve a [fresh](/en-US/docs/Web/HTTP/Guides/Caching#fresh_and_stale_based_on_age) response every time — or if the client already has a new one, just respond `304 Not Modified`.
 
 ```http
 Cache-Control: no-cache
 ```
 
-Most HTTP/1.0 caches don't support `no-cache` directives, so historically `max-age=0` was used as a workaround. But only `max-age=0` could cause a [stale response](/en-US/docs/Web/HTTP/Caching#fresh_and_stale_based_on_age) to be reused when caches disconnected from the origin server. `must-revalidate` addresses that. That's why the example below is equivalent to `no-cache`.
+Most HTTP/1.0 caches don't support `no-cache` directives, so historically `max-age=0` was used as a workaround. But only `max-age=0` could cause a [stale response](/en-US/docs/Web/HTTP/Guides/Caching#fresh_and_stale_based_on_age) to be reused when caches disconnected from the origin server. `must-revalidate` addresses that. That's why the example below is equivalent to `no-cache`.
 
 ```http
 Cache-Control: max-age=0, must-revalidate
@@ -425,7 +425,7 @@ But for now, you can simply use `no-cache` instead.
 
 There are no cache directives for clearing already-stored responses from caches on _intermediate_ servers.
 
-Imagine that clients/caches store a [fresh](/en-US/docs/Web/HTTP/Caching#fresh_and_stale_based_on_age) response for a path, with no request flight to the server. There is nothing a server could do to that path.
+Imagine that clients/caches store a [fresh](/en-US/docs/Web/HTTP/Guides/Caching#fresh_and_stale_based_on_age) response for a path, with no request flight to the server. There is nothing a server could do to that path.
 
 [`Clear-Site-Data: cache`](/en-US/docs/Web/HTTP/Headers/Clear-Site-Data#cache) can be used to clear every stored response for a site in the browser cache, so use this with care.
 Note that this will not affected shared or intermediate caches.
@@ -440,7 +440,7 @@ Note that this will not affected shared or intermediate caches.
 
 ## See also
 
-- [HTTP caching](/en-US/docs/Web/HTTP/Caching)
+- [HTTP caching](/en-US/docs/Web/HTTP/Guides/Caching)
 - [Caching Tutorial for Web Authors and Webmasters](https://www.mnot.net/cache_docs/)
 - [Caching best practices & max-age gotchas](https://jakearchibald.com/2016/caching-best-practices/)
 - [Cache-Control for Civilians](https://csswizardry.com/2019/03/cache-control-for-civilians/)

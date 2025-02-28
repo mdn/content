@@ -7,8 +7,8 @@ browser-compat: http.headers.Accept
 
 {{HTTPSidebar}}
 
-The HTTP **`Accept`** {{Glossary("request header", "request")}} and {{Glossary("response header")}} indicates which content types, expressed as [MIME types](/en-US/docs/Web/HTTP/MIME_types), the sender is able to understand.
-In requests, the server uses [content negotiation](/en-US/docs/Web/HTTP/Content_negotiation) to select one of the proposals and informs the client of the choice with the {{HTTPHeader("Content-Type")}} response header.
+The HTTP **`Accept`** {{Glossary("request header", "request")}} and {{Glossary("response header")}} indicates which content types, expressed as [MIME types](/en-US/docs/Web/HTTP/Guides/MIME_types), the sender is able to understand.
+In requests, the server uses [content negotiation](/en-US/docs/Web/HTTP/Guides/Content_negotiation) to select one of the proposals and informs the client of the choice with the {{HTTPHeader("Content-Type")}} response header.
 In responses, it provides information about which content types the server can understand in messages to the requested resource, so that the content type can be used in subsequent requests to the resource.
 
 Browsers set required values for this header based on the context of the request.
@@ -52,7 +52,7 @@ Accept: text/html, application/xhtml+xml, application/xml;q=0.9, image/webp, */*
 ## Directives
 
 - `<media-type>/<subtype>`
-  - : A single, precise [media type](/en-US/docs/Web/HTTP/MIME_types), like `text/html`.
+  - : A single, precise [media type](/en-US/docs/Web/HTTP/Guides/MIME_types), like `text/html`.
 - `<media-type>/*`
   - : A media type without a subtype.
     For example, `image/*` corresponds to `image/png`, `image/svg`, `image/gif`, and other image types.
@@ -111,8 +111,8 @@ Accept: application/json
 
 ## See also
 
-- HTTP [content negotiation](/en-US/docs/Web/HTTP/Content_negotiation)
-- [List of default Accept values](/en-US/docs/Web/HTTP/Content_negotiation/List_of_default_Accept_values)
+- HTTP [content negotiation](/en-US/docs/Web/HTTP/Guides/Content_negotiation)
+- [List of default Accept values](/en-US/docs/Web/HTTP/Guides/Content_negotiation/List_of_default_Accept_values)
 - [CORS safelist request header restrictions](/en-US/docs/Glossary/CORS-safelisted_request_header#additional_restrictions)
 - A header with the result of the content negotiation: {{HTTPHeader("Content-Type")}}
 - Other similar headers: {{HTTPHeader("TE")}}, {{HTTPHeader("Accept-Encoding")}}, {{HTTPHeader("Accept-Language")}}

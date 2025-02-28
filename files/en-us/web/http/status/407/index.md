@@ -44,7 +44,7 @@ Proxy-Authenticate: Basic realm="Access to internal site"
 ## See also
 
 - [HTTP response status codes](/en-US/docs/Web/HTTP/Status)
-- [HTTP authentication](/en-US/docs/Web/HTTP/Authentication)
+- [HTTP authentication](/en-US/docs/Web/HTTP/Guides/Authentication)
 - {{HTTPHeader("WWW-Authenticate")}}
 - {{HTTPHeader("Authorization")}}
 - {{HTTPHeader("Proxy-Authorization")}}

@@ -51,7 +51,7 @@ Content-Length: 0
 
 ## See also
 
-- [Redirections in HTTP](/en-US/docs/Web/HTTP/Redirections)
+- [Redirections in HTTP](/en-US/docs/Web/HTTP/Guides/Redirections)
 - [HTTP response status codes](/en-US/docs/Web/HTTP/Status)
 - {{HTTPStatus("301", "301 Moved Permanently")}}, the equivalent of this status code that may modify the request method when it is not a {{HTTPMethod("GET")}}
 - {{HTTPStatus("302", "302 Found")}}, a temporary redirect

@@ -48,7 +48,7 @@ Content-Length: 0
 
 ## See also
 
-- [Redirections in HTTP](/en-US/docs/Web/HTTP/Redirections)
+- [Redirections in HTTP](/en-US/docs/Web/HTTP/Guides/Redirections)
 - [HTTP response status codes](/en-US/docs/Web/HTTP/Status)
 - {{HTTPStatus("302", "302 Found")}}, a temporary redirect
 - {{HTTPStatus("307", "307 Temporary Redirect")}}, a temporary redirect where the request method is not modified

@@ -67,5 +67,5 @@ Service-Worker-Navigation-Preload: json_fragment1
 
 ## See also
 
-- [HTTP Caching: Vary](/en-US/docs/Web/HTTP/Caching#vary) and {{HTTPHeader("Vary")}} header
+- [HTTP Caching: Vary](/en-US/docs/Web/HTTP/Guides/Caching#vary) and {{HTTPHeader("Vary")}} header
 - [Service Worker API](/en-US/docs/Web/API/Service_Worker_API)

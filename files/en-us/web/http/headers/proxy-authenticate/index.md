@@ -7,7 +7,7 @@ browser-compat: http.headers.Proxy-Authenticate
 
 {{HTTPSidebar}}
 
-The HTTP **`Proxy-Authenticate`** {{Glossary("response header")}} defines the [authentication](/en-US/docs/Web/HTTP/Authentication) method (or {{Glossary("Challenge", "challenge")}}) that should be used to gain access to a resource behind a {{Glossary("proxy server")}}.
+The HTTP **`Proxy-Authenticate`** {{Glossary("response header")}} defines the [authentication](/en-US/docs/Web/HTTP/Guides/Authentication) method (or {{Glossary("Challenge", "challenge")}}) that should be used to gain access to a resource behind a {{Glossary("proxy server")}}.
 It is sent in a {{HTTPStatus("407", "407 Proxy Authentication Required")}} response so a client can identify itself to a proxy that requires authentication.
 
 <table class="properties">
@@ -48,7 +48,7 @@ Proxy-Authenticate: <auth-scheme> auth-param1=param-token1, …, auth-paramN=par
 ```
 
 The presence of a `token68` or authentication parameters depends on the selected `<auth-scheme>`.
-For example, [Basic authentication](/en-US/docs/Web/HTTP/Authentication#basic_authentication_scheme) requires a `<realm>`, and allows for optional use of `charset` key, but does not support a `token68`:
+For example, [Basic authentication](/en-US/docs/Web/HTTP/Guides/Authentication#basic_authentication_scheme) requires a `<realm>`, and allows for optional use of `charset` key, but does not support a `token68`:
 
 ```http
 Proxy-Authenticate: Basic realm="Dev", charset="UTF-8"
@@ -57,8 +57,8 @@ Proxy-Authenticate: Basic realm="Dev", charset="UTF-8"
 ## Directives
 
 - `<auth-scheme>`
-  - : A case-insensitive token indicating the [Authentication scheme](/en-US/docs/Web/HTTP/Authentication#authentication_schemes) used.
-    Some of the more common types are [`Basic`](/en-US/docs/Web/HTTP/Authentication#basic_authentication_scheme), `Digest`, `Negotiate` and `AWS4-HMAC-SHA256`.
+  - : A case-insensitive token indicating the [Authentication scheme](/en-US/docs/Web/HTTP/Guides/Authentication#authentication_schemes) used.
+    Some of the more common types are [`Basic`](/en-US/docs/Web/HTTP/Guides/Authentication#basic_authentication_scheme), `Digest`, `Negotiate` and `AWS4-HMAC-SHA256`.
     IANA maintains a [list of authentication schemes](https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml), but there are other schemes offered by host services.
 - `<auth-param>` {{optional_inline}}
   - : An authentication parameter whose format depends on the `<auth-scheme>`.
@@ -101,6 +101,6 @@ Proxy-Authenticate: Basic realm="Staging server"
 ## See also
 
 - {{HTTPHeader("WWW-Authenticate")}}
-- [HTTP authentication](/en-US/docs/Web/HTTP/Authentication)
+- [HTTP authentication](/en-US/docs/Web/HTTP/Guides/Authentication)
 - {{HTTPHeader("Authorization")}}, {{HTTPHeader("Proxy-Authorization")}}
 - {{HTTPStatus("401")}}, {{HTTPStatus("403")}}, {{HTTPStatus("407")}}

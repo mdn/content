@@ -136,7 +136,7 @@ Related topics:
 - [HTTP Access-Control-Allow-Origin](/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin)
   - : The **`Access-Control-Allow-Origin`** response header indicates whether the response can be shared with requesting code from the given {{glossary("origin")}}.
 - [HTTP X-Content-Type-Options](/en-US/docs/Web/HTTP/Headers/X-Content-Type-Options)
-  - : The **`X-Content-Type-Options`** response header is a marker used by the server to indicate that the [MIME types](/en-US/docs/Web/HTTP/MIME_types) advertised in the {{HTTPHeader("Content-Type")}} headers should not be changed and must be followed. This header is a way to opt out of [MIME type sniffing](/en-US/docs/Web/HTTP/MIME_types#mime_sniffing), or, in other words, to specify that the MIME types are deliberately configured.
+  - : The **`X-Content-Type-Options`** response header is a marker used by the server to indicate that the [MIME types](/en-US/docs/Web/HTTP/Guides/MIME_types) advertised in the {{HTTPHeader("Content-Type")}} headers should not be changed and must be followed. This header is a way to opt out of [MIME type sniffing](/en-US/docs/Web/HTTP/Guides/MIME_types#mime_sniffing), or, in other words, to specify that the MIME types are deliberately configured.
 
 ### Sanitize form input
 

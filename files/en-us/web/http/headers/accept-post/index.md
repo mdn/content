@@ -7,7 +7,7 @@ spec-urls: https://www.w3.org/TR/ldp/#header-accept-post
 
 {{HTTPSidebar}}
 
-The HTTP **`Accept-Post`** {{Glossary("response header")}} advertises which [media types](/en-US/docs/Web/HTTP/MIME_types) are accepted by the server in a {{HTTPMethod("POST")}} request.
+The HTTP **`Accept-Post`** {{Glossary("response header")}} advertises which [media types](/en-US/docs/Web/HTTP/Guides/MIME_types) are accepted by the server in a {{HTTPMethod("POST")}} request.
 For example, a server receiving a `POST` request with an unsupported media type could reply with {{HTTPStatus("415", "415 Unsupported Media Type")}} and an `Accept-Post` header referencing one or more supported media types.
 
 The header should appear in {{HTTPMethod("OPTIONS")}} requests to a resource that supports the `POST` method.
@@ -48,7 +48,7 @@ Accept-Post: <media-type>/<subtype>, <media-type>/<subtype>
 ## Directives
 
 - `<media-type>/<subtype>`
-  - : A single, precise [media type](/en-US/docs/Web/HTTP/MIME_types), like `text/html`.
+  - : A single, precise [media type](/en-US/docs/Web/HTTP/Guides/MIME_types), like `text/html`.
 - `<media-type>/*`
   - : A media type without a subtype.
     For example, `image/*` corresponds to `image/png`, `image/svg`, `image/gif`, and other image types.

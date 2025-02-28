@@ -9,12 +9,12 @@ browser-compat: http.headers.Sec-CH-UA
 
 {{HTTPSidebar}}{{SeeCompatTable}}{{SecureContext_Header}}
 
-The HTTP **`Sec-CH-UA`** {{Glossary("request header")}} is a [user agent client hint](/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) which provides the user-agent's branding and significant version information.
+The HTTP **`Sec-CH-UA`** {{Glossary("request header")}} is a [user agent client hint](/en-US/docs/Web/HTTP/Guides/Client_hints#user-agent_client_hints) which provides the user-agent's branding and significant version information.
 
 The `Sec-CH-UA` header provides the brand and significant version for each brand associated with the browser in a comma-separated list.
 The header therefore allows the server to customize its response based on both shared brands and on particular customizations in their respective versions.
 
-`Sec-CH-UA` is a [low entropy hint](/en-US/docs/Web/HTTP/Client_hints#low_entropy_hints).
+`Sec-CH-UA` is a [low entropy hint](/en-US/docs/Web/HTTP/Guides/Client_hints#low_entropy_hints).
 Unless blocked by a user agent permission policy, it is sent by default, without the server opting in by sending {{HTTPHeader("Accept-CH")}}.
 
 The header may include "fake" brands in any position and with any name.
@@ -29,7 +29,7 @@ This is a feature designed to prevent servers from rejecting unknown user agents
       <th scope="row">Header type</th>
       <td>
         {{Glossary("Request header")}},
-        <a href="/en-US/docs/Web/HTTP/Client_hints">Client hint</a>
+        <a href="/en-US/docs/Web/HTTP/Guides/Client_hints">Client hint</a>
       </td>
     </tr>
     <tr>
@@ -68,7 +68,7 @@ For example a Chromium build with _full version number_ "96.0.4664.45" has a sig
 
 ### Different Sec-CH-UA brands
 
-`Sec-CH-UA` is a [low entropy hint](/en-US/docs/Web/HTTP/Client_hints#low_entropy_hints).
+`Sec-CH-UA` is a [low entropy hint](/en-US/docs/Web/HTTP/Guides/Client_hints#low_entropy_hints).
 Unless explicitly blocked by a user agent policy, it will be sent in all requests (without the server having to opt in by sending {{HTTPHeader("Accept-CH")}}).
 
 Strings from Chromium, Chrome, Edge, and Opera desktop browsers are shown below.
@@ -101,8 +101,8 @@ Sec-CH-UA: "Opera";v="81", " Not;A Brand";v="99", "Chromium";v="95"
 
 ## See also
 
-- [Client hints](/en-US/docs/Web/HTTP/Client_hints)
+- [Client hints](/en-US/docs/Web/HTTP/Guides/Client_hints)
 - [User-Agent Client Hints API](/en-US/docs/Web/API/User-Agent_Client_Hints_API)
 - {{HTTPHeader("Accept-CH")}}
-- [HTTP Caching: Vary](/en-US/docs/Web/HTTP/Caching#vary) and {{HTTPHeader("Vary")}}
+- [HTTP Caching: Vary](/en-US/docs/Web/HTTP/Guides/Caching#vary) and {{HTTPHeader("Vary")}}
 - [Improving user privacy and developer experience with User-Agent Client Hints](https://developer.chrome.com/docs/privacy-security/user-agent-client-hints) (developer.chrome.com)

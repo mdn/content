@@ -43,11 +43,11 @@ Clear-Site-Data: "*"
 
 - `"cache"`
 
-  - : The server signals that the client should remove locally cached data (the browser cache, see [HTTP caching](/en-US/docs/Web/HTTP/Caching)) for the origin of the response URL. Depending on the browser, this might also clear out things like pre-rendered pages, script caches, WebGL shader caches, or address bar suggestions.
+  - : The server signals that the client should remove locally cached data (the browser cache, see [HTTP caching](/en-US/docs/Web/HTTP/Guides/Caching)) for the origin of the response URL. Depending on the browser, this might also clear out things like pre-rendered pages, script caches, WebGL shader caches, or address bar suggestions.
 
 - `"clientHints"` {{Experimental_Inline}}
 
-  - : Indicates that the server will remove all [client hints](/en-US/docs/Web/HTTP/Client_hints) (requested via {{HTTPHeader("Accept-CH")}}) stored for the origin of the response URL.
+  - : Indicates that the server will remove all [client hints](/en-US/docs/Web/HTTP/Guides/Client_hints) (requested via {{HTTPHeader("Accept-CH")}}) stored for the origin of the response URL.
 
     > [!NOTE]
     > In browsers that support the `"clientHints"` data type, client hints are also cleared when the `"cache"`, `"cookies"`, or `"*"` types are specified. `"clientHints"` is therefore only needed when none of those other types are specified.

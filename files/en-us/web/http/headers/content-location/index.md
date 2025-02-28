@@ -8,10 +8,10 @@ browser-compat: http.headers.Content-Location
 {{HTTPSidebar}}
 
 The HTTP **`Content-Location`** {{Glossary("representation header")}} indicates an alternate location for the returned data.
-It's main use is to indicate the URL of a resource transmitted as the result of [content negotiation](/en-US/docs/Web/HTTP/Content_negotiation).
+It's main use is to indicate the URL of a resource transmitted as the result of [content negotiation](/en-US/docs/Web/HTTP/Guides/Content_negotiation).
 
 The `Content-Location` header is different from the {{HTTPHeader("Location")}} header.
-`Content-Location` indicates the direct URL to access the resource when [content negotiation](/en-US/docs/Web/HTTP/Content_negotiation) has happened, allowing the client to bypass future content negotiation for this resource.
+`Content-Location` indicates the direct URL to access the resource when [content negotiation](/en-US/docs/Web/HTTP/Guides/Content_negotiation) has happened, allowing the client to bypass future content negotiation for this resource.
 `Location`, on the other hand, indicates either the target of a `3XX` redirection or the URL of a newly created resource in a {{HTTPStatus("201", "201 Created")}} response.
 
 <table class="properties">
@@ -61,7 +61,7 @@ patterns it wishes, such as a [query string parameter](/en-US/docs/Web/API/HTMLA
 Then the client could remember that the JSON version is available at that particular
 URL, skipping content negotiation the next time it requests that document.
 
-The server could also consider other [content negotiation](/en-US/docs/Web/HTTP/Content_negotiation) headers, such
+The server could also consider other [content negotiation](/en-US/docs/Web/HTTP/Guides/Content_negotiation) headers, such
 as {{HTTPHeader("Accept-Language")}}.
 
 ### Indicating the URL of a transaction's result

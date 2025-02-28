@@ -7,7 +7,7 @@ browser-compat: http.headers.If-None-Match
 
 {{HTTPSidebar}}
 
-The HTTP **`If-None-Match`** {{Glossary("request header")}} makes a request [conditional](/en-US/docs/Web/HTTP/Conditional_requests).
+The HTTP **`If-None-Match`** {{Glossary("request header")}} makes a request [conditional](/en-US/docs/Web/HTTP/Guides/Conditional_requests).
 The server returns the requested resource in {{HTTPMethod("GET")}} and {{HTTPMethod("HEAD")}} methods with a {{HTTPStatus("200")}} status, only if it doesn't have an {{HTTPHeader("ETag")}} matching the ones in the `If-None-Match` header.
 For other methods, the request will be processed only if the eventually existing resource's {{HTTPHeader("ETag")}} doesn't match any of the values listed.
 

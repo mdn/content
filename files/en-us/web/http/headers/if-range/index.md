@@ -7,8 +7,8 @@ browser-compat: http.headers.If-Range
 
 {{HTTPSidebar}}
 
-The HTTP **`If-Range`** {{Glossary("request header")}} makes a range request [conditional](/en-US/docs/Web/HTTP/Conditional_requests).
-If the condition is fulfilled, a [range request](/en-US/docs/Web/HTTP/Range_requests) is issued, and the server sends back a {{HTTPStatus("206", "206 Partial Content")}} response with part (or parts) of the resource in the body.
+The HTTP **`If-Range`** {{Glossary("request header")}} makes a range request [conditional](/en-US/docs/Web/HTTP/Guides/Conditional_requests).
+If the condition is fulfilled, a [range request](/en-US/docs/Web/HTTP/Guides/Range_requests) is issued, and the server sends back a {{HTTPStatus("206", "206 Partial Content")}} response with part (or parts) of the resource in the body.
 If the condition is not fulfilled, the full resource is sent back with a {{HTTPStatus("200", "200 OK")}} status.
 
 This header can be used either with the {{HTTPHeader("Last-Modified")}} validator or with {{HTTPHeader("ETag")}}, but not with both.
@@ -75,7 +75,7 @@ If-Range: "67ab43"
 
 ## See also
 
-- [HTTP Conditional Requests](/en-US/docs/Web/HTTP/Conditional_requests) guide
+- [HTTP Conditional Requests](/en-US/docs/Web/HTTP/Guides/Conditional_requests) guide
 - {{HTTPHeader("ETag")}}
 - {{HTTPHeader("Last-Modified")}}
 - {{HTTPHeader("If-Match")}}, {{HTTPHeader("If-Modified-Since")}}, {{HTTPHeader("If-Unmodified-Since")}}, {{HTTPHeader("If-None-Match")}} conditional request headers

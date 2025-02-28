@@ -9,10 +9,10 @@ browser-compat: http.headers.Save-Data
 
 {{HTTPSidebar}}{{SeeCompatTable}}
 
-The HTTP **`Save-Data`** {{Glossary("request header")}} is a [network client hint](/en-US/docs/Web/HTTP/Client_hints#network_client_hints) which indicates the client's preference for reduced data usage.
+The HTTP **`Save-Data`** {{Glossary("request header")}} is a [network client hint](/en-US/docs/Web/HTTP/Guides/Client_hints#network_client_hints) which indicates the client's preference for reduced data usage.
 This could be for reasons such as high transfer costs, slow connection speeds, etc.
 
-`Save-Data` is a [low entropy hint](/en-US/docs/Web/HTTP/Client_hints#low_entropy_hints), and hence may be sent by the client even if not requested by the server using an {{HTTPHeader("Accept-CH")}} response header.
+`Save-Data` is a [low entropy hint](/en-US/docs/Web/HTTP/Guides/Client_hints#low_entropy_hints), and hence may be sent by the client even if not requested by the server using an {{HTTPHeader("Accept-CH")}} response header.
 Further, it should be used to reduce data sent to the client irrespective of the values of other client hints that indicate network capability, like {{HTTPHeader("Downlink")}} and {{HTTPHeader("RTT")}}.
 
 A value of `On` indicates explicit user opt-in into a reduced data usage mode on the client.
@@ -28,7 +28,7 @@ When communicated to origins, this allows them to deliver alternative content to
       <th scope="row">Header type</th>
       <td>
         {{Glossary("Request header")}},
-        <a href="/en-US/docs/Web/HTTP/Client_hints">Client hint</a>
+        <a href="/en-US/docs/Web/HTTP/Guides/Client_hints">Client hint</a>
       </td>
     </tr>
     <tr>
@@ -114,7 +114,7 @@ Content-Type: image/jpeg
 ## See also
 
 - CSS `@media` feature [`prefers-reduced-data`](/en-US/docs/Web/CSS/@media/prefers-reduced-data) {{experimental_inline}}
-- {{HTTPHeader("Vary")}} header which indicates that the content served varies depending on the value of `Save-Data` (see [HTTP Caching: Vary](/en-US/docs/Web/HTTP/Caching#vary))
+- {{HTTPHeader("Vary")}} header which indicates that the content served varies depending on the value of `Save-Data` (see [HTTP Caching: Vary](/en-US/docs/Web/HTTP/Guides/Caching#vary))
 - {{domxref("NetworkInformation.saveData")}}
 - [Help Your Users `Save-Data`](https://css-tricks.com/help-users-save-data/) on css-tricks.com
 - [Delivering Fast and Light Applications with Save-Data - web.dev](https://web.dev/articles/optimizing-content-efficiency-save-data) on web.dev

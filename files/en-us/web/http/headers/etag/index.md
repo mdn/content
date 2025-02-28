@@ -8,7 +8,7 @@ browser-compat: http.headers.ETag
 {{HTTPSidebar}}
 
 The HTTP **`ETag`** (entity tag) {{Glossary("response header")}} is an identifier for a specific version of a resource.
-It lets [caches](/en-US/docs/Web/HTTP/Caching) be more efficient and save bandwidth, as a web server does not need to resend a full response if the content has not changed.
+It lets [caches](/en-US/docs/Web/HTTP/Guides/Caching) be more efficient and save bandwidth, as a web server does not need to resend a full response if the content has not changed.
 Additionally, ETags help to prevent simultaneous updates of a resource from overwriting each other (["mid-air collisions"](#avoiding_mid-air_collisions)).
 
 If the resource at a given URL changes, a new `Etag` value _must_ be generated.
@@ -37,7 +37,7 @@ ETag: "<etag_value>"
 ## Directives
 
 - `W/` {{optional_inline}}
-  - : `W/` (case-sensitive) indicates that a [weak validator](/en-US/docs/Web/HTTP/Conditional_requests#weak_validation) is used.
+  - : `W/` (case-sensitive) indicates that a [weak validator](/en-US/docs/Web/HTTP/Guides/Conditional_requests#weak_validation) is used.
     Weak ETags are easy to generate, but are far less useful for comparisons.
     Strong validators are ideal for comparisons but can be very difficult to generate efficiently.
     Weak `ETag` values of two representations of the same resources might be semantically equivalent, but not byte-for-byte identical.

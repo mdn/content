@@ -7,8 +7,8 @@ browser-compat: http.headers.X-Content-Type-Options
 
 {{HTTPSidebar}}
 
-The HTTP **`X-Content-Type-Options`** {{Glossary("response header")}} indicates that the [MIME types](/en-US/docs/Web/HTTP/MIME_types) advertised in the {{HTTPHeader("Content-Type")}} headers should be respected and not changed.
-The header allows you to avoid [MIME type sniffing](/en-US/docs/Web/HTTP/MIME_types#mime_sniffing) by specifying that the MIME types are deliberately configured.
+The HTTP **`X-Content-Type-Options`** {{Glossary("response header")}} indicates that the [MIME types](/en-US/docs/Web/HTTP/Guides/MIME_types) advertised in the {{HTTPHeader("Content-Type")}} headers should be respected and not changed.
+The header allows you to avoid [MIME type sniffing](/en-US/docs/Web/HTTP/Guides/MIME_types#mime_sniffing) by specifying that the MIME types are deliberately configured.
 
 Site security testers usually expect this header to be set.
 

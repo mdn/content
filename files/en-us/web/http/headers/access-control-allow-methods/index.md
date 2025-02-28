@@ -35,7 +35,7 @@ Access-Control-Allow-Methods: *
   - : A comma-separated list of the allowed request methods. `GET`, `HEAD`, and `POST` are always allowed, regardless of whether they are specified in this header, as they are defined as [CORS-safelisted method](https://fetch.spec.whatwg.org/#cors-safelisted-method)s.
 - `*` (wildcard)
   - : All HTTP methods.
-    It has this meaning only for requests without credentials (requests without [HTTP cookies](/en-US/docs/Web/HTTP/Cookies) or HTTP authentication information). In requests with credentials, it is
+    It has this meaning only for requests without credentials (requests without [HTTP cookies](/en-US/docs/Web/HTTP/Guides/Cookies) or HTTP authentication information). In requests with credentials, it is
     treated as the literal method name `*` without special semantics.
 
 ## Examples

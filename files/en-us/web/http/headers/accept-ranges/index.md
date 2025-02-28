@@ -7,7 +7,7 @@ browser-compat: http.headers.Accept-Ranges
 
 {{HTTPSidebar}}
 
-The HTTP **`Accept-Ranges`** {{Glossary("response header")}} is used by the server to advertise its support for [range requests](/en-US/docs/Web/HTTP/Range_requests), allowing clients to request part or several parts of a resource.
+The HTTP **`Accept-Ranges`** {{Glossary("response header")}} is used by the server to advertise its support for [range requests](/en-US/docs/Web/HTTP/Guides/Range_requests), allowing clients to request part or several parts of a resource.
 The value of this header indicates the unit that can be used to define a range.
 
 For example, a response with an `Accept-Ranges` header indicates that the server is capable of _resuming_ an interrupted download instead of a client restarting the transfer in full.
@@ -58,7 +58,7 @@ Accept-Ranges: bytes
 
 ## See also
 
-- [HTTP range requests](/en-US/docs/Web/HTTP/Range_requests) guide
-- [HTTP conditional requests](/en-US/docs/Web/HTTP/Conditional_requests) guide
+- [HTTP range requests](/en-US/docs/Web/HTTP/Guides/Range_requests) guide
+- [HTTP conditional requests](/en-US/docs/Web/HTTP/Guides/Conditional_requests) guide
 - {{HTTPHeader("Range")}}, {{HTTPHeader("If-Range")}} request headers
 - [IANA HTTP Range Unit Registry](https://www.iana.org/assignments/http-parameters/http-parameters.xhtml#range-units)

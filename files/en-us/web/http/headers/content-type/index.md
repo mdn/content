@@ -16,7 +16,7 @@ If a server implementation or configuration is strict about content type handlin
 The `Content-Type` header differs from {{HTTPHeader("Content-Encoding")}} in that `Content-Encoding` helps the recipient understand how to decode data to its original form.
 
 > [!NOTE]
-> This value may be ignored if browsers perform [MIME sniffing](/en-US/docs/Web/HTTP/MIME_types#mime_sniffing) (or content sniffing) on responses.
+> This value may be ignored if browsers perform [MIME sniffing](/en-US/docs/Web/HTTP/Guides/MIME_types#mime_sniffing) (or content sniffing) on responses.
 > To prevent browsers from using MIME sniffing, set the {{HTTPHeader("X-Content-Type-Options")}} header value to `nosniff`.
 > See [MIME type verification](/en-US/docs/Web/Security/Practical_implementation_guides/MIME_types) for more details.
 
@@ -67,7 +67,7 @@ Content-Type: multipart/form-data; boundary=ExampleBoundaryString
 
 - `<media-type>`
 
-  - : The [media type](/en-US/docs/Web/HTTP/MIME_types) of the resource or data.
+  - : The [media type](/en-US/docs/Web/HTTP/Guides/MIME_types) of the resource or data.
     May contain the following parameters:
 
     - **`charset`**: Indicates the {{Glossary("character encoding")}} standard used.

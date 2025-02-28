@@ -10,7 +10,7 @@ spec-urls: https://datatracker.ietf.org/doc/html/rfc9530
 The HTTP **`Repr-Digest`** {{Glossary("Request header", "request")}} and {{Glossary("Response header", "response header")}} provides a {{Glossary("digest")}} of the selected representation of the target resource.
 It can be used validate the integrity of the whole selected representation once it has been received and reconstructed.
 
-The _selected representation_ is the specific format of a resource chosen through [content negotiation](/en-US/docs/Web/HTTP/Content_negotiation).
+The _selected representation_ is the specific format of a resource chosen through [content negotiation](/en-US/docs/Web/HTTP/Guides/Content_negotiation).
 Details about the representation can be determined from {{Glossary("Representation header", "representation headers")}}, such as {{HTTPHeader("Content-Language")}}, {{HTTPHeader("Content-Type")}}, and {{HTTPHeader("Content-Encoding")}}.
 
 The representation digest applies to the whole representation rather than the encoding or chunking of the messages that are used to send it.

@@ -48,7 +48,7 @@ The following table lists HTTP request methods and their categorization in terms
 | {{HTTPMethod("PATCH")}}   | No   | No         | Conditional\* |
 | {{HTTPMethod("CONNECT")}} | No   | No         | No            |
 
-\* `POST` and `PATCH` are cacheable when responses explicitly include [freshness](/en-US/docs/Web/HTTP/Caching) information and a matching {{HTTPHeader("Content-Location")}} header.
+\* `POST` and `PATCH` are cacheable when responses explicitly include [freshness](/en-US/docs/Web/HTTP/Guides/Caching) information and a matching {{HTTPHeader("Content-Location")}} header.
 
 ## Specifications
 
