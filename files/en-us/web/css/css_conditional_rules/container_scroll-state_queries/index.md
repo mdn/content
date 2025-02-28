@@ -533,7 +533,7 @@ The rendered result is shown below. Try scrolling the container up and down, and
 
 ## `stuck` example
 
-[`scroll-state(stuck: value)`](/en-US/docs/Web/CSS/@container#scrollable) queries test whether a container with a {{cssxref("position")}} value of `sticky` is stuck to an edge of its scolling container ancestor. To evaluate a container with a `stuck` scroll-state query, it must have `position: sticky` set on it, and be inside a scroll container. The `value` in this case indicates the scroll container edge you are testing, for example:
+[`scroll-state(stuck: value)`](/en-US/docs/Web/CSS/@container#scrollable) queries test whether a container with a {{cssxref("position")}} value of `sticky` is stuck to an edge of its scrolling container ancestor. To evaluate a container with a `stuck` scroll-state query, it must have `position: sticky` set on it and be inside a scroll container. The `value` in this case indicates the scroll container edge you are testing, for example:
 
 - `top`: Tests whether the container is stuck to the top edge of its scrolling ancestor.
 - `block-end`: Tests whether the container is stuck to the block-end edge of its scrolling ancestor.
