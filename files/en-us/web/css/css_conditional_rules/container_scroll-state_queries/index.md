@@ -54,12 +54,10 @@ Let's look at an example in which we have a scrolling container full of content,
 
 ### HTML
 
-In the HTML we have a {{htmlelement("article")}} element containing enough content to cause the document to scroll, and a {{htmlelement("div")}} element containing the "back-to-top" link:
+In the HTML we have a {{htmlelement("article")}} element containing enough content to cause the document to scroll, preceded by a "back-to-top" [link](en-US/docs/Web/HTML/Element/a#result_8):
 
 ```html
-<div class="back-to-top">
-  <a href="#" aria-label="Scroll back to top"><span>↑</span></a>
-</div>
+<a class="back-to-top" href="#" aria-label="Scroll back to top">↑</a>
 <article>
   <h1>Reader with container query-controlled "back-to-top" link</h1>
   <section>
