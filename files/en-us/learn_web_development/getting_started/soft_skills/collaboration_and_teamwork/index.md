@@ -110,7 +110,7 @@ Failure is really only a small step on the road to success. All of the most succ
 
 Here are some tips:
 
-- Define a safe space/peer group where people are free to ask questions — remember that there are no "stupid questions", just fools who do not question. Foster a culture where peers support each other and failure is not judged harshly.
+- Define a safe space/peer group where people are free to ask questions — remember that there are no "stupid questions", only people who fail to question. Foster a culture where peers support each other and failure is not judged harshly.
 - Look to your local community and try to find meetup groups with people who can either give you help and advice or are facing the same issues you are and can provide moral support or experiment together with you.
 - (For educators) Set up the marking schemes for your assessments so that you can still get a reasonable number of marks even if you didn't get the correct result provided the process is well documented. Award extra marks for innovation.
 - Run show 'n' tell or one-on-one sessions part-way through a project with peers and mentors to get feedback and insights into where you are going wrong and get advice on how to get back on the right path.
