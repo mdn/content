@@ -17,7 +17,7 @@ A string representing the `returnValue` of the dialog.
 ## Examples
 
 The following example displays a button to open a dialog containing a Terms of Service prompt via the `showModal()` method.
-The script checks if the dialog is open or closed and updates the status text accordingly. It also handles the user's input by assigning the `returnValue` when the Accept or Decline button is clicked.
+The script handles the user's input by assigning the `returnValue` when the Accept or Decline button is clicked.
 The "Decline" button sets the `returnValue` to "declined", while the "Accept" button sets it to "accepted". Additionally, closing the dialog (e.g., using the close event) updates the status text with the dialog's `returnValue`.
 Closing the dialog with the <kbd>Esc</kbd> key does not set the `returnValue`.
 
