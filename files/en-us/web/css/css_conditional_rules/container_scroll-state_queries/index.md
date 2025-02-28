@@ -229,7 +229,9 @@ html {
 
 body {
   height: inherit;
-  width: 500px;
+  width: 100%;
+  max-width: 540px;
+  padding: 20px;
   margin: 0 auto;
 }
 
