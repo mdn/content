@@ -415,7 +415,7 @@ The global `revert` and `revert-layer` are invalid as values in a `<style-featur
 
 ### Scroll-state queries
 
-Scroll state container queries allow you to selectively apply CSS rules to a container's children based on a scroll-state condition. Some of the conditions relate to the container themselves, and some relate to their scrolling ancestor. Let's look at a quick example involving the `stuck` scroll-state declaration, which evaluates whether a container with a {{cssxref("position")}} value of `sticky` is stuck to a specified edge of its scrolling container.
+Scroll-state container queries allow you to selectively apply CSS rules to a container's children based on a scroll-state condition. Some of the conditions relate to the container themselves, and some relate to their scrolling ancestor. Let's look at a quick example involving the `stuck` scroll-state declaration, which evaluates whether a container with a {{cssxref("position")}} value of `sticky` is stuck to a specified edge of its scrolling container.
 
 In this example we have a scrolling {{htmlelement("article")}} containing structured text, which includes {{htmlelement("header")}} elements containing [`<h2>`](/en-US/docs/Web/HTML/Element/Heading_Elements) elements:
 
