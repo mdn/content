@@ -20,7 +20,7 @@ There are three `@container` descriptors you can use in a `scroll-state()` query
 
 ## Syntax overview
 
-To establish a container element as a scroll-state query container, you need to set the {{cssxref("container-type")}} property on it with a value of `scroll-state`. You can optionally also give it a {{cssxref("container-name")}}, so that you can target it with a specific container query:
+To establish a container element as a scroll-state query container, set the {{cssxref("container-type")}} property on it with a value of `scroll-state`. You can optionally also give it a {{cssxref("container-name")}}, so that you can target it with a specific container query:
 
 ```css
 .container {
