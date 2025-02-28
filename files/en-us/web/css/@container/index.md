@@ -124,7 +124,7 @@ Details about usage and naming restrictions are described in the {{cssxref("cont
 
 ### Descriptors
 
-The descriptors available to be used within the `<container-condition>` are listed in the following sections.
+The `<container-condition>` queries include [size](#size_container_descriptors) and [scroll-state](#scroll-state_container_descriptors) container descriptors.
 
 #### Size container descriptors
 
