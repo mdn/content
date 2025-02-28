@@ -163,6 +163,8 @@ Scroll-state container descriptors are specified inside the `<container-conditio
 
 ```css
 @container scroll-state(scrollable: top) { ... }
+@container scroll-state(stuck: inline-end) { ... }
+@container scroll-state(snapped: both) { ... }
 ```
 
 - `scrollable`
