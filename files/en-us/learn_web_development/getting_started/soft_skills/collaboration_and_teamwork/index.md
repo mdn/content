@@ -35,13 +35,16 @@ As a professional in the web industry, you are going to have to work with other 
 
 ## Working with others
 
-As a professional in the web industry, you'll have to spend a lot of time working with your peers, whether you are employed or in education. Your colleagues or fellow students could be a hugely valuable aid to your learning, as we first discussed back in [Research and learning](/en-US/docs/Learn_web_development/Getting_started/Soft_skills/Research_and_learning#build_a_network_of_contacts), and you should at least make sure that you get on with them to begin with.
+As a web developer, you'll have to spend a lot of time working with your peers, whether you are employed or studying. Your colleagues or fellow students could be a hugely valuable aid to your learning, as we first discussed back in [Research and learning](/en-US/docs/Learn_web_development/Getting_started/Soft_skills/Research_and_learning#build_a_network_of_contacts), and you should at least make sure that you get on with them to begin with.
 
-The basic essence of this is to treat them how you would want to be treated. In all engagements, stay polite, be respectful, be coperative, and show empathy for their feelings and needs.
+It is important to treat people with the same level of empathy and respect as you'd wish for. Different people have different requirements emotionally, socially, etc., but at a base level you should be polite, respectful, and cooperative in all engagements.
+
+> [!NOTE]
+> Most organizations publish participation guidelines that define their expectations of behavior for people who participate in their work/activities. These guidelines should also include a definition of what is considered unacceptable behavior, the consequences of unacceptable behavior, and how to report unacceptable behavior. For example, MDN is governed by the wider [Mozilla Community Participation Guidelines](https://www.mozilla.org/en-US/about/governance/policies/participation/).
 
 ## Help others, ask questions
 
-If a colleague is struggling, offer to help them. web developers who provide help are much more likely to build strong relationships and get help in return.
+If a colleague is struggling, offer to help them. Web developers who provide help are much more likely to build strong relationships and get help in return.
 
 - If you've already got some experience in the area they are struggling in, share knowledge or code examples with them. The act of explaining something will improve your understanding as well, helping you to learn too.
 - If you have an idea of where they might find some useful answers, help them do some research.
@@ -75,7 +78,9 @@ Even if you think your achievements are trivial, you probably know more than you
 
 ## Participate in open source
 
-Another way to make friends and influence people is to find open source projects and offer updates to fix issues in other people's work. Provided you are polite and respectful, the project owners will be very grateful for your contributions, and this will give you valuable experience and practice. For example, [MDN's source code](https://github.com/mdn/content) is available on GitHub, and we have many [issues](https://github.com/mdn/content/issues) that you could work on.
+Another way to make friends and influence people is to find open source projects and offer updates to fix issues in other people's work. Provided you are polite and respectful, and explain your changes and the reasoning behind them, the project owners will be very grateful for your contributions. Your updates will give you valuable experience and practice.
+
+For example, [MDN's source code](https://github.com/mdn/content) is available on GitHub, and we have many [issues](https://github.com/mdn/content/issues) that you could work on.
 
 If you are not sure what open source is and how to start contributing, [How to Contribute to Open Source Projects – A Beginner's Guide](https://www.freecodecamp.org/news/how-to-contribute-to-open-source-projects-beginners-guide/) is a great guide to help you get started.
 
