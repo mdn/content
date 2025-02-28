@@ -34,7 +34,21 @@ For example:
   }
 }
 
-/* with an optional <container-name> */
+/* With an optional <container-name> */
+@container tall (height > 30rem) {
+  p {
+    line-height: 1.6;
+  }
+}
+
+/* With a <scroll-state> */
+@container scroll-state(scrollable: top) {
+  .back-to-top-link {
+    visibility: visible;
+  }
+}
+
+/* With a <container-name> and a <scroll-state> */
 @container sticky-heading scroll-state(stuck: top) {
   h2 {
     background: purple;
@@ -42,14 +56,14 @@ For example:
   }
 }
 
-/* multiple queries in a single condition */
+/* Multiple queries in a single condition */
 @container (width > 400px) and style(--responsive: true) {
   h2 {
     font-size: 1.5em;
   }
 }
 
-/* condition list */
+/* Condition list */
 @container card (width > 400px), style(--responsive: true), scroll-state(stuck: top) {
   h2 {
     font-size: 1.5em;
@@ -128,10 +142,12 @@ The `<container-condition>` queries include [size](#size_container_descriptors) 
 
 #### Size container descriptors
 
-Size container descriptors are specified as-is inside the `<container-condition>`, for example:
+The `<container-condition>` can include one or more boolean size queries, each within a set of parentheses. A size query includes a size descriptor, a value, and — depending on the descriptor — a comparison operator. The syntax for including multiple conditions is the same as for [`@media`](/en-US/docs/Web/CSS/@media) size feature queries.
 
 ```css
 @container (width > 400px) { ... }
+@container (orientation: landscape) and (min-width: 400px) { ... }
+@container (15em <= block-size <= 30em) { ... }
 ```
 
 - `aspect-ratio`
@@ -167,9 +183,11 @@ Scroll-state container descriptors are specified inside the `<container-conditio
 @container scroll-state(snapped: both) { ... }
 ```
 
+Supported keywords for scroll-state container descriptors include physical and {{glossary("flow relative values")}}
+
 - `scrollable`
 
-  - : Queries whether the container can be scrolled in the given direction via user-initiated scrolling, such as by dragging the scrollbar or using a trackpad gesture. In other words, is there overflowing content in the given direction that can be scrolled to? Valid `scroll-state` keywords include:
+  - : Queries whether the container can be scrolled in the given direction via user-initiated scrolling, such as by dragging the scrollbar or using a trackpad gesture. In other words, is there overflowing content in the given direction that can be scrolled to? Valid `scrollable` values include the following keywords:
 
     - `none`
       - : The container cannot be scrolled in any direction.
@@ -182,9 +200,9 @@ Scroll-state container descriptors are specified inside the `<container-conditio
     - `left`
       - : The container can be scrolled towards its left-hand edge.
     - `x`
-      - : The container can be scrolled horizontally towards its left-hand and right-hand edges.
+      - : The container can be scrolled horizontally towards either or both of its left-hand or right-hand edges.
     - `y`
-      - : The container can be scrolled vertically towards its top and bottom edges.
+      - : The container can be scrolled vertically towards either or both of its top or bottom edges.
     - `block-start`
       - : The container can be scrolled towards its block-start edge.
     - `block-end`
@@ -194,18 +212,24 @@ Scroll-state container descriptors are specified inside the `<container-conditio
     - `inline-end`
       - : The container can be scrolled towards its inline-end edge.
     - `block`
-      - : The container can be scrolled in its block direction towards its block-start and block-end edges.
+      - : The container can be scrolled in its block direction towards either or both of its block-start or block-end edges.
     - `inline`
-      - : The container can be scrolled in its inline direction towards its inline-start and inline-end edges.
+      - : The container can be scrolled in its inline direction towards either or both of its inline-start and inline-end edges.
 
-    To evaluate a container with a `scrollable` scroll-state query, it must be a scroll container. If the test passes, the rules inside the `@container` block are applied to descendants of the scroll container.
+    If the test passes, the rules inside the `@container` block are applied to descendants of the scroll container.
+
+    To evaluate whether a container is scrollable, without being concerned about the direction, use the `none` value with the `not` operator:
+
+    ```css
+    @container not scroll-state(scrollable: none) { ... }
+    ```
 
 - `snapped`
 
-  - : Whether a container is, or will be, snapped to a [scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap) container ancestor along a given axis. Containers designated as scroll snap targets on which the [`scrollsnapchanging`](/en-US/docs/Web/API/Element/scrollsnapchanging_event) event is firing will match the `snapped` descriptor. Possible values are:
+  - : Queries whether the container is, or will be, snapped to a [scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap) container ancestor along the given axis. Valid `snapped` values include the following keywords:
 
     - `none`
-      - : The container is not a scroll snap target for its ancestor scroll container. The `none` value negates the matching — containers that _are_ snap targets for the scroll container will _not_ have the `@container` styles applied, whereas non-snap targets _will_ have the styles applied. This is true even if the ancestor is not designated as a scroll snap container (for example, by having a suitable {{cssxref("scroll-snap-type")}} value set on it).
+      - : The container is not a scroll snap target for its ancestor scroll container. The `none` value negates the matching — containers that _are_ snap targets for the scroll container will _not_ have the `@container` styles applied, whereas non-snap targets _will_ have the styles applied.
     - `x`
       - : The container is a horizontal scroll snap target for its ancestor scroll container, that is, it is snapping horizontally to its ancestor.
     - `y`
@@ -217,14 +241,22 @@ Scroll-state container descriptors are specified inside the `<container-conditio
     - `both`
       - : The container is a horizontal and vertical scroll snap target for its ancestor scroll container, that is, it is snapping to its ancestor in both directions. With a value of `both`, the container won't match if it is only snapping to its ancestor along the horizontal _or_ vertical axis. It needs to be both.
 
-    To evaluate a container with a `snapped` scroll-state query, it must be a container with a scroll container ancestor. If the test passes, the rules inside the `@container` block are applied to descendants of the container.
+    To evaluate a container with a non-`none` `snapped` scroll-state query, it must be a container with a scroll container ancestor, that is, the ancestor has a {{cssxref("scroll-snap-type")}} value other than `none`. `snapped: none` queries will match even when there is no scroll container ancestor.
+
+    Evaluation will occur when the [`scrollsnapchanging`](/en-US/docs/Web/API/Element/scrollsnapchanging_event) event fires on the scroll snap container. If the test passes, the rules inside the `@container` block are applied to descendants of the container.
+
+    To evaluate whether a container is a snap target, without being concerned about the direction, use the `none` value with the `not` operator:
+
+    ```css
+    @container not scroll-state(snapped: none) { ... }
+    ```
 
 - `stuck`
 
-  - : Whether a container with a {{cssxref("position")}} value of `sticky` is stuck to an edge of its scrolling container ancestor. Supported keywords include physical and {{glossary("flow relative values")}}:
+  - : Queries whether a container with a {{cssxref("position")}} value of [`sticky`](/en-US/docs/Learn_web_development/Core/CSS_layout/Positioning#sticky_positioning) is stuck to an edge of its scrolling container ancestor. Valid `stuck` values include the following keywords:
 
     - `none`
-      - : The container is not stuck to any edges of its container.
+      - : The container is not stuck to any edges of its container. Note that `none` queries will match even if the container does not have `position: sticky` set on it.
     - `top`
       - : The container is stuck to the top edge of its container.
     - `right`
@@ -254,6 +286,12 @@ Scroll-state container descriptors are specified inside the `<container-conditio
 
     ```css
     @container scroll-state((stuck: left) and (stuck: right)) { ... }
+    ```
+
+    To evaluate whether a container is stuck, without being concerned about the direction, use the `none` value with the `not` operator:
+
+    ```css
+    @container not scroll-state(stuck: none) { ... }
     ```
 
 ## Formal syntax

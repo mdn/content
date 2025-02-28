@@ -9,7 +9,7 @@ page-type: guide
 Container queries enable you to apply styles to an element based on certain attributes of its container:
 
 - The container's size.
-- Styling applied to the container.
+- Styles applied to the container.
 - The scroll-state of its container or scrolling ancestor.
 
 For example, if a container has less space available in the surrounding context, you can hide certain elements or use smaller fonts.

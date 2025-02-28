@@ -37,7 +37,7 @@ In this guide, we learn the basics of container queries by looking at:
 2. [naming containers](#naming_containers) to limit their scope, and
 3. using the `style()` functional notation within the {{cssxref("@container")}} at rule's `<container-condition>` to create [style queries with custom properties](#style_queries_for_custom_properties).
 
-Scroll-state queries are discussed in a different article — see [Using container scroll-state queries](/en-US/docs/Web/CSS/CSS_conditional_rules/Container_scroll-state_queries).
+Scroll-state queries are discussed in [Using container scroll-state queries](/en-US/docs/Web/CSS/CSS_conditional_rules/Container_scroll-state_queries).
 
 ## Container size queries
 

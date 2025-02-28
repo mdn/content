@@ -452,3 +452,4 @@ When you put both bulbs in their proper place, you'll notice that they are relat
 ## See also
 
 - [Learn CSS: Positioning](/en-US/docs/Learn_web_development/Core/CSS_layout/Positioning)
+- [Using container scroll-state queries](/en-US/docs/Web/CSS/CSS_conditional_rules/Container_scroll-state_queries)
