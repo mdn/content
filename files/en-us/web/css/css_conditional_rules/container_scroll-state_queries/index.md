@@ -54,7 +54,7 @@ Let's look at an example in which we have a scrolling container full of content,
 
 ### HTML
 
-In the HTML we have a {{htmlelement("article")}} element containing enough content to cause the document to scroll, preceded by a "back-to-top" [link](en-US/docs/Web/HTML/Element/a#result_8):
+In the HTML we have a {{htmlelement("article")}} element containing enough content to cause the document to scroll, preceded by a "back-to-top" [link](/en-US/docs/Web/HTML/Element/a#result_8):
 
 ```html
 <a class="back-to-top" href="#" aria-label="Scroll back to top">↑</a>
