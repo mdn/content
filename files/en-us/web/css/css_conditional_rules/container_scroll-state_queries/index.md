@@ -789,7 +789,7 @@ Next, we define a {{cssxref("@container")}} block that sets the container name w
 
 ### Result
 
-The rendered result is shown below. Try scrolling the document down, and note how the `<h2>` elements transition to a new color scheme when they become stuck to the top of their container's top edge.
+Try scrolling the document down and up, and note how the `<h2>` elements transition to a new color scheme when they become stuck to the top of their container's top edge.
 
 {{EmbedLiveSample("stuck", "100%", "400px")}}
 
