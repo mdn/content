@@ -21,13 +21,15 @@ blur(radius)
 
 ### Parameters
 
-- `radius`
-  - : The radius of the blur, specified as a {{cssxref("&lt;length&gt;")}}. It defines the value of the standard deviation to the Gaussian function, i.e., how many pixels on the screen blend into each other; thus, a larger value will create more blur. A value of `0` leaves the input unchanged. The initial value for {{Glossary("interpolation")}} is `0`. Percentage values are invalid.
+- `radius` {{Optional_Inline}}
+  - : The radius of the blur, specified as a {{cssxref("&lt;length&gt;")}}. It defines the value of the standard deviation to the Gaussian function, i.e., how many pixels on the screen blend into each other; thus, a larger value will create more blur. A value of `0` leaves the input unchanged. The initial value for {{Glossary("Interpolation", "interpolation")}} is `0`. Percentage values are invalid. The default value is `0px`.
 
-### Setting a blur with pixels and with rem
+### Examples of blur values
 
 ```css
+blur()         /* No effect */
 blur(0)        /* No effect */
+
 blur(8px)      /* Blur with 8px radius */
 blur(1.17rem)  /* Blur with 1.17rem radius */
 ```

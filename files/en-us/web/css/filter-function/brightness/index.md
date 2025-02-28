@@ -19,22 +19,23 @@ brightness(amount)
 
 ### Values
 
-- `amount`
-  - : Brightness specified as a {{cssxref("&lt;number&gt;")}} or a {{cssxref("&lt;percentage&gt;")}}. A value less than `100%` darkens the input image or element, while a value over `100%` brightens it. A value of `0%` creates a completely black image or element, while a value of `100%` leaves the input unchanged. Other values between `0%` to `100%` have a linear multiplier effect. Values greater than `100%` are allowed, providing brighter results. The initial value for {{Glossary("interpolation")}} is `1`. Negative values are not allowed. The default value, when nothing is specified, is `1`.
+- `amount` {{Optional_Inline}}
+  - : Brightness specified as a {{cssxref("&lt;number&gt;")}} or a {{cssxref("&lt;percentage&gt;")}}. A value less than `100%` darkens the input image or element, while a value over `100%` brightens it. A value of `0%` creates a completely black image or element, while a value of `100%` leaves the input unchanged. Other values between `0%` to `100%` have a linear multiplier effect. Values greater than `100%` are allowed, providing brighter results. The initial value for {{Glossary("Interpolation", "interpolation")}} is `1`. Negative values are not allowed. The default value is `1`.
 
 The following are pairs of equivalent values:
 
 ```css
-brightness(0) /* Brightness is reduced to zero, so input turns black */
+brightness(0)   /* Brightness is reduced to zero, so input turns black */
 brightness(0%)
 
 brightness(0.4) /* Brightness of input is reduced to 40%, so input is 60% darker */
 brightness(40%)
 
-brightness(1) /* Brightness of input is not changed */
+brightens()     /* Brightness of input is not changed */
+brightness(1)
 brightness(100%)
 
-brightness(2) /* Brightness of input is doubled */
+brightness(2)   /* Brightness of input is doubled */
 brightness(200%)
 ```
 

@@ -19,8 +19,8 @@ sepia(amount)
 
 ### Parameters
 
-- `amount`
-  - : The amount of the conversion, specified as a {{cssxref("&lt;number&gt;")}} or a {{cssxref("&lt;percentage&gt;")}}. A value of `100%` is completely sepia, while a value of `0%` leaves the input unchanged. Values between `0%` and `100%` are linear multipliers on the effect. The initial value for {{Glossary("interpolation")}} is `0`.
+- `amount` {{Optional_Inline}}
+  - : The amount of the conversion, specified as a {{cssxref("&lt;number&gt;")}} or a {{cssxref("&lt;percentage&gt;")}}. A value of `100%` is completely sepia, while a value of `0%` leaves the input unchanged. Values between `0%` and `100%` are linear multipliers on the effect. The initial value for {{Glossary("Interpolation", "interpolation")}} is `0`. The default value is `1`.
 
 ## Formal syntax
 
@@ -33,7 +33,9 @@ sepia(amount)
 ```css
 sepia(0)     /* No effect */
 sepia(.65)   /* 65% sepia */
-sepia(100%)  /* Completely sepia */
+
+sepia()      /* Completely sepia */
+sepia(100%)
 ```
 
 ## Specifications

@@ -19,8 +19,8 @@ grayscale(amount)
 
 ### Parameters
 
-- `amount`
-  - : Amount of the input image that is converted to grayscale. It is specified as a {{cssxref("&lt;number&gt;")}} or a {{cssxref("&lt;percentage&gt;")}}. A value of `100%` changes the input completely to grayscale, while a value of `0%` leaves the input unchanged. Values between `0%` and `100%` have linear multipliers on the effect. If the `grayscale()` filter is present with no parameter, the default value is `1`. The initial value used for {{Glossary("interpolation")}} is `0`.
+- `amount` {{Optional_Inline}}
+  - : Amount of the input image that is converted to grayscale. It is specified as a {{cssxref("&lt;number&gt;")}} or a {{cssxref("&lt;percentage&gt;")}}. A value of `100%` changes the input completely to grayscale, while a value of `0%` leaves the input unchanged. Values between `0%` and `100%` have linear multipliers on the effect. The initial value used for {{Glossary("Interpolation", "interpolation")}} is `0`. The default value is `1`.
 
 ## Formal syntax
 
@@ -33,7 +33,10 @@ grayscale(amount)
 ```css
 grayscale(0)     /* No effect */
 grayscale(.7)    /* 70% grayscale */
-grayscale(100%)  /* Completely grayscale */
+
+grayscale()      /* Completely grayscale */
+grayscale(1)
+grayscale(100%)
 ```
 
 ## Specifications
