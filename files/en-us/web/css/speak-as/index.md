@@ -58,40 +58,40 @@ speak-as: spell-out digits no-punctuation;
 
 ### HTML
 
-```HTML
-  <p class="normal">Hello, world! I'm 25.</p>
-  <p class="spell-out">Hello, world! I'm 25.</p>
-  <p class="literal-punctuation">Hello, world! I'm 25.</p>
-  <p class="no-punctuation">Hello, world! I'm 25.</p>
-  <p class="digits">Hello, world! I'm 25.</p>
-  <p class="multi">Hello, world! I'm 25.</p>
+```html
+<p class="normal">Hello, world! I'm 25.</p>
+<p class="spell-out">Hello, world! I'm 25.</p>
+<p class="literal-punctuation">Hello, world! I'm 25.</p>
+<p class="no-punctuation">Hello, world! I'm 25.</p>
+<p class="digits">Hello, world! I'm 25.</p>
+<p class="multi">Hello, world! I'm 25.</p>
 ```
 
 ### CSS
 
-```CSS
-  .normal {
-    speak-as: normal;
-  }
+```css
+.normal {
+  speak-as: normal;
+}
 
-  .spell-out {
-    speak-as: spell-out;
-  }
+.spell-out {
+  speak-as: spell-out;
+}
 
-  .literal-punctuation {
-    speak-as: literal-punctuation;
-  }
+.literal-punctuation {
+  speak-as: literal-punctuation;
+}
 
-  .no-punctuation {
-    speak-as: no-punctuation;
-  }
+.no-punctuation {
+  speak-as: no-punctuation;
+}
 
-  .digits {
-    speak-as: digits;
-  }
- .multi {
-    speak-as: literal-punctuation digits;
- }
+.digits {
+  speak-as: digits;
+}
+.multi {
+  speak-as: literal-punctuation digits;
+}
 ```
 
 ## Specifications
