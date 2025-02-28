@@ -88,6 +88,10 @@ The object returned for a match contains the following properties:
 
 ## Examples
 
+> [!WARNING]
+> Cookie examples do not run properly within the MDN environment because setting cookies results in an unknown error.
+> The examples can be tested by copying the source code and running it with a [local server](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server), or by [building this documentation locally](https://github.com/mdn/content?tab=readme-ov-file#build-the-site).
+
 ### Getting a cookie by name
 
 In this example we get a particular cookie named `cookie1`, awaiting the returned promise, and logging the resolved object.

@@ -11,6 +11,8 @@ browser-compat: api.CookieStore.delete
 The **`delete()`** method of the {{domxref("CookieStore")}} interface deletes a cookie that matches with the given `name` or `options` object.
 The method expires the cookie by changing its date to one in the past.
 
+Note that there is no error if a cookie cannot be matched: the returned promise will fulfill when the matched cookie is deleted or if no cookie is matched.
+
 ## Syntax
 
 ```js-nolint
@@ -42,7 +44,7 @@ Or
 
 ### Return value
 
-A {{jsxref("Promise")}} that resolves with {{jsxref("undefined")}} when deletion completes.
+A {{jsxref("Promise")}} that resolves with {{jsxref("undefined")}} when the deletion operation completes or no cookie is matched.
 
 ### Exceptions
 
@@ -52,6 +54,10 @@ A {{jsxref("Promise")}} that resolves with {{jsxref("undefined")}} when deletion
   - : Thrown if a cookie that matches a given `name` or `options` cannot be deleted.
 
 ## Examples
+
+> [!WARNING]
+> Cookie examples do not run properly within the MDN environment because setting cookies results in an unknown error.
+> The examples can be tested by copying the source code and running it with a [local server](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server), or by [building this documentation locally](https://github.com/mdn/content?tab=readme-ov-file#build-the-site).
 
 ### Delete a named cookie
 

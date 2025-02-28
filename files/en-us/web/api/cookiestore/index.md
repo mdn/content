@@ -16,13 +16,17 @@ The `CookieStore` is accessed via attributes in the global scope in a {{domxref(
 ## Instance methods
 
 - {{domxref("CookieStore.delete()")}}
-  - : The `delete()` method deletes a cookie with the given `name` or `options` object, it returns a {{jsxref("Promise")}} that resolves when the deletion completes.
+  - : The `delete()` method deletes a cookie with the given `name` or `options` object.
+    It returns a {{jsxref("Promise")}} that resolves when the deletion completes or if no cookies is matched.
 - {{domxref("CookieStore.get()")}}
-  - : The `get()` method gets a single cookie with the given `name` or `options` object, it returns a {{jsxref("Promise")}} that resolves with details of a single cookie.
+  - : The `get()` method gets a single cookie with the given `name` or `options` object.
+    It returns a {{jsxref("Promise")}} that resolves with details of a single cookie.
 - {{domxref("CookieStore.getAll()")}}
-  - : The `getAll()` method gets all matching cookies, it returns a {{jsxref("Promise")}} that resolves with a list of cookies.
+  - : The `getAll()` method gets all matching cookies.
+    It returns a {{jsxref("Promise")}} that resolves with a list of cookies.
 - {{domxref("CookieStore.set()")}}
-  - : The `set()` method sets a cookie with the given `name` and `value` or `options` object, it returns a {{jsxref("Promise")}} that resolves when the cookie is set.
+  - : The `set()` method sets a cookie with the given `name` and `value` or `options` object.
+    It returns a {{jsxref("Promise")}} that resolves when the cookie is set.
 
 ## Events
 
@@ -30,6 +34,10 @@ The `CookieStore` is accessed via attributes in the global scope in a {{domxref(
   - : The `change` event fires when a change is made to any cookie.
 
 ## Examples
+
+> [!WARNING]
+> Cookie examples do not run properly within the MDN environment because setting cookies results in an unknown error.
+> The examples can be tested by copying the source code and running it with a [local server](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server), or by [building this documentation locally](https://github.com/mdn/content?tab=readme-ov-file#build-the-site).
 
 ### Setting cookies
 
@@ -338,8 +346,7 @@ async function deleteAllCookies() {
 
 #### JavaScript
 
-The code first sets two cookies (which we then use to demonstrate deletion).
-
+The code first sets two cookies.
 We then list the names of both cookies (code for getting the cookie names not shown), delete one of the cookies, and then list all cookie names again.
 
 ```js
