@@ -9,7 +9,28 @@ browser-compat: html.global_attributes.id
 
 The **`id`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) defines an identifier (ID) which must be unique in the whole document.
 
-{{EmbedInteractiveExample("pages/tabbed/attribute-id.html","tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: id", "tabbed-shorter")}}
+
+```html interactive-example
+<p>A normal, boring paragraph. Try not to fall asleep.</p>
+
+<p id="exciting">The most exciting paragraph on the page. One of a kind!</p>
+```
+
+```css interactive-example
+#exciting {
+  background: linear-gradient(to bottom, #ffe8d4, #f69d3c);
+  border: 1px solid #696969;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 1px black;
+}
+
+#exciting:before {
+  content: "ℹ️";
+  margin-right: 5px;
+}
+```
 
 ## Description
 

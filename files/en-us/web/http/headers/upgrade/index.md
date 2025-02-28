@@ -23,7 +23,7 @@ For example, it can be used by a client to upgrade a connection from HTTP/1.1 to
       </td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>Yes</td>
     </tr>
   </tbody>

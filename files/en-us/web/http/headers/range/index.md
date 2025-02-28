@@ -27,7 +27,7 @@ The header is a [CORS-safelisted request header](/en-US/docs/Glossary/CORS-safel
       <td>{{Glossary("Request header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>No</td>
     </tr>
   </tbody>

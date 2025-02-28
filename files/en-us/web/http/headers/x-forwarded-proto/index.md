@@ -22,7 +22,7 @@ A standardized version of this header is the HTTP {{HTTPHeader("Forwarded")}} he
       <td>{{Glossary("Request header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>No</td>
     </tr>
   </tbody>

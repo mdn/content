@@ -3,12 +3,10 @@ title: "MediaSession: setMicrophoneActive() method"
 short-title: setMicrophoneActive()
 slug: Web/API/MediaSession/setMicrophoneActive
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.MediaSession.setMicrophoneActive
 ---
 
-{{APIRef("Media Session API")}}{{SeeCompatTable}}
+{{APIRef("Media Session API")}}
 
 The **`setMicrophoneActive()`** method of the {{domxref("MediaSession")}} interface is used to indicate to the user agent whether the user's microphone is considered to be currently muted.
 
