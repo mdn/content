@@ -11,11 +11,20 @@ on:
     types:
       - completed
 
+  workflow_call:
+    secrets:
+      GCP_PROJECT_NAME:
+        required: true
+      WIP_PROJECT_ID:
+        required: true
+
 permissions:
   # Download artifact.
   actions: read
   # Post comment in pull request.
   pull-requests: write
+  # Authenticate with GCP.
+  id-token: write
 
 jobs:
   review:
