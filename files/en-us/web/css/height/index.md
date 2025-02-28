@@ -36,7 +36,6 @@ height: min-content;
 height: fit-content;
 height: fit-content(20em);
 height: auto;
-height: minmax(min-content, anchor-size(width));
 height: stretch;
 
 /* Global values */
