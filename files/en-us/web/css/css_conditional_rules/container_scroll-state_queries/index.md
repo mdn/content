@@ -328,7 +328,7 @@ The rendered result is shown below. Try scrolling the document down, and note ho
 
 ## `snapped` example
 
-[`scroll-state(snapped: value)`](/en-US/docs/Web/CSS/@container#scrollable) queries test whether a container is, or will be, snapped to a [scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap) container ancestor along a given axis. Containers designated as scroll snap targets on which the [`scrollsnapchanging`](/en-US/docs/Web/API/Element/scrollsnapchanging_event) event is firing will match the `snapped` descriptor. The `value` in this case indicates the direction you are testing the element's ability to snap in, for example:
+Relevant only when [scroll snapping](/en-US/docs/Web/CSS/CSS_scroll_snap) is implemented, [`scroll-state(snapped: value)`](/en-US/docs/Web/CSS/@container#scrollable) queries test whether a container is, or will be, snapped to a [scroll snap container](/en-US/docs/Glossary/Scroll_snap#scroll_snap_container) ancestor along the given axis. Containers designated as scroll snap targets on which the [`scrollsnapchanging`](/en-US/docs/Web/API/Element/scrollsnapchanging_event) event is firing will match the `snapped` descriptor. The `value` in this case indicates the direction you are testing the element's ability to snap in, for example:
 
 - `x`: Tests whether the container is snapping horizontally to its ancestor.
 - `inline`: Tests whether the container is snapping to its ancestor in the inline direction.
