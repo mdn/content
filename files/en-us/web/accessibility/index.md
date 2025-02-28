@@ -34,7 +34,7 @@ For many people, technology makes things easier. For people with disabilities, t
 - [Cognitive accessibility](/en-US/docs/Web/Accessibility/Guides/Cognitive_accessibility)
   - : Cognitive accessibility covers accessibility considerations for people with cognition and learning disabilities.
     This document introduces cognitive accessibility and improving accessibility of the web for people with cognitive and learning differences.
-- [Accessibility and spatial patterns](/en-US/docs/Web/Accessibility/Guides/Accessibility_and_Spacial_Patterns)
+- [Accessibility and spatial patterns](/en-US/docs/Web/Accessibility/Guides/Accessibility_and_Spatial_Patterns)
   - : This document describes visual patterns that can induce physical symptoms in people who have photosensitive epilepsy, vestibular disorders, or other perceptual issues.
 - [Web Accessibility: Understanding Colors and Luminance](/en-US/docs/Web/Accessibility/Guides/Colors_and_Luminance)
   - : While understanding color, luminance, and saturation is important for design and readability for all sighted users, they are essential for those with reduced vision and color-deficient vision and those with specific neurological, cognitive, and other impairments.
