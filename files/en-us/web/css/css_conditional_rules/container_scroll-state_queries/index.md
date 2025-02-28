@@ -38,7 +38,7 @@ You can then create a {{cssxref("@container")}} block that specifies the query (
 ```
 
 > [!NOTE]
-> Unlike size container queries, whose declarations and values are written directly into the top line of the `@container` block, scroll-state container query declarations and their values are placed inside parentheses, preceded by `scroll-state`, that is, `scroll-state( ... )`. These constructs look like functions, but they're not; they serve to separate out scroll-state queries from other types.
+> To separate scroll-state queries from other container queries, the scroll-state descriptors and value are placed inside parentheses, preceded by `scroll-state`, that is, `scroll-state( ... )`. These constructs look like functions, but they're not.
 
 ## `scrollable` example
 
