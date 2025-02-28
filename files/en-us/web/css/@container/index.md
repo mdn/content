@@ -169,7 +169,7 @@ Scroll-state container descriptors are specified inside the `<container-conditio
 
 - `scrollable`
 
-  - : Whether the container can be scrolled in the given direction via user-initiated scrolling (for example by dragging the scrollbar or using a trackpad gesture). In other words, is there any overflowing content in the given direction that can be scrolled to? Possible values are:
+  - : Queries whether the container can be scrolled in the given direction via user-initiated scrolling, such as by dragging the scrollbar or using a trackpad gesture. In other words, is there overflowing content in the given direction that can be scrolled to? Valid `scroll-state` keywords include:
 
     - `none`
       - : The container cannot be scrolled in any direction.
