@@ -34,10 +34,10 @@ This introductory documentation is intended to provide practical information to 
 
 ## See also
 
-- [WCAG: Perceivable](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable)
-- [WCAG: Operable](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable)
-- [WCAG: Understandable](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Understandable)
-- [WCAG: Robust](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Robust)
+- [WCAG: Perceivable](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable) principle
+- [WCAG: Operable](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable) principle
+- [WCAG: Understandable](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Understandable) principle
+- [WCAG: Robust](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Robust) principle
 - [WCAG text labels and names](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Text_labels_and_names)
 - [WCAG keyboard accessibility](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Keyboard)
 - [WCAG Overview](https://www.w3.org/WAI/standards-guidelines/wcag/)

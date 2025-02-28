@@ -6,6 +6,8 @@ page-type: guide
 sidebar: accessibilitysidebar
 ---
 
+This document describes visual patterns that can induce physical symptoms in people who have photosensitive epilepsy, vestibular disorders, or other perceptual issues.
+
 ## Spatial Localization
 
 NASA conducted research on the perception of color, and found that luminance contrast mattered greatly as to how colors are perceived. The two images below are from NASA research, specifically, from the article, "[Designing With Blue](https://colorusage.arc.nasa.gov/blue_2.php)"

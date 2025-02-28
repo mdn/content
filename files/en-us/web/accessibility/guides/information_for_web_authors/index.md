@@ -6,25 +6,21 @@ page-type: guide
 sidebar: accessibilitysidebar
 ---
 
+This document lists guidelines and regulations, how-to's, and tools for checking and repairing accessibility problems with websites.
+
 ## Guidelines and Regulations
 
 - [<abbr>ARIA</abbr> Authoring Practices Guide (<abbr>APG</abbr>)](https://www.w3.org/WAI/ARIA/apg/)
-
   - : Guide to accessibility semantics defined by the Accessible Rich Internet Application (<abbr>ARIA</abbr>) specification to create accessible web experiences. Describes how to apply accessibility semantics to common design patterns and widgets, providing design patterns and functional examples.
-
 - [Web Content Accessibility Guidelines (<abbr>WCAG</abbr>)](https://www.w3.org/WAI/standards-guidelines/wcag/)
-
   - : Another important set of guidelines from the W3C _Web Accessibility Initiative (<abbr>WAI</abbr>)_. The European Union is looking to base their upcoming accessibility regulations on these guidelines. These guidelines are discussed on the [<abbr>WAI</abbr> interest group discussion list](https://www.w3.org/WAI/about/groups/waiig/#mailinglist).
-
 - [ARIA on this site](/en-US/docs/Web/Accessibility/ARIA)
   - : <abbr>MDN</abbr> guide to all the [ARIA roles](/en-US/docs/Web/Accessibility/ARIA/Roles) and [ARIA properties](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes), including best practices, related roles and properties, and examples.
 
 ## How-to's
 
 - [Accessibility for teams](https://digital.gov/guides/accessibility-for-teams/)
-
   - : A brief guide from the U.S. General Services administration's Technology Transformation Services covering several accessibility topics with links to "how-to" videos and to related WCAG references.
-
 - [Accessible Web Page Authoring](https://www.ibm.com/able/requirements/requirements/)
   - : IBM has made their accessibility requirements that need to be met public and interactive.
 

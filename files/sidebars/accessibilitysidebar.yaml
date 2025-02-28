@@ -10,11 +10,15 @@ sidebar:
   - /Web/Accessibility/Guides/Accessible_web_applications_and_widgets
   - /Web/Accessibility/Guides/Keyboard-navigable_JavaScript_widgets
   - /Web/Accessibility/Guides/Mobile_accessibility_checklist
-  - /Web/Accessibility/Guides/Understanding_WCAG
   - /Web/Accessibility/Guides/Cognitive_accessibility
   - /Web/Accessibility/Guides/Accessibility_and_Spacial_Patterns
   - /Web/Accessibility/Guides/Colors_and_Luminance
   - /Web/Accessibility/Guides/Seizure_disorders
+  - type: listSubPages
+    path: /Web/Accessibility/Guides/Understanding_WCAG
+    link: /Web/Accessibility/Guides/Understanding_WCAG
+    title: Understanding WCAG
+    details: closed
   - link: /Learn_web_development/Core/Accessibility
     title: Beginners
     details: closed
@@ -27,10 +31,6 @@ sidebar:
       - /Learn_web_development/Core/Accessibility/Multimedia
       - /Learn_web_development/Core/Accessibility/Mobile
       - /Learn_web_development/Core/Accessibility/Accessibility_troubleshooting
-  - type: listSubPages
-    path: /Web/Accessibility/Guides/Understanding_WCAG
-    title: WCAG
-    details: closed
   - type: section
     link: /Web/Accessibility/ARIA
     title: ARIA
@@ -62,17 +62,14 @@ l10n:
     ARIA_guides: ARIA-Anleitungen
     ARIA states and properties: ARIA-Zustände und -Eigenschaften
     ARIA roles: ARIA-Rollen
-    WCAG: WCAG
   en-US:
     Beginners: Tutorials for beginners
     ARIA: ARIA
     ARIA_guides: ARIA guides
     ARIA states and properties: ARIA states and properties
     ARIA roles: ARIA roles
-    WCAG: WCAG
   zh-CN:
     ARIA: ARIA
     ARIA_guides: ARIA 指南
     ARIA states and properties: ARIA 状态及属性
     ARIA roles: ARIA 角色
-    WCAG: WCAG

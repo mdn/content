@@ -1,5 +1,5 @@
 ---
-title: Keyboard
+title: Keyboard accessible
 slug: Web/Accessibility/Guides/Understanding_WCAG/Keyboard
 page-type: guide
 sidebar: accessibilitysidebar
