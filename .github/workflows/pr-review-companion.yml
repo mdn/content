@@ -121,10 +121,6 @@ jobs:
             --diff-file=$BUILD_OUT_ROOT/DIFF \
             $BUILD_OUT_ROOT
 
-      - name: Setup gcloud
-        if: env.HAS_ARTIFACT
-        uses: google-github-actions/setup-gcloud@v2
-
       - name: Authenticate with GCP
         if: env.HAS_ARTIFACT
         uses: google-github-actions/auth@v2
@@ -132,6 +128,10 @@ jobs:
           token_format: access_token
           service_account: deploy-mdn-review-content@${{ secrets.GCP_PROJECT_NAME }}.iam.gserviceaccount.com
           workload_identity_provider: projects/${{ secrets.WIP_PROJECT_ID }}/locations/global/workloadIdentityPools/github-actions/providers/github-actions
+
+      - name: Setup gcloud
+        if: env.HAS_ARTIFACT
+        uses: google-github-actions/setup-gcloud@v2
 
       - name: Sync build with GCS
         if: env.HAS_ARTIFACT
