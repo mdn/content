@@ -91,7 +91,7 @@ There are plans to further extend possible queries by adding the generalized con
 
 - [Using container scroll-state queries](/en-US/docs/Web/CSS/CSS_conditional_rules/Container_scroll-state_queries)
 
-  - : This article explains how to use container scroll-state queries, walking through an example of each type.
+  - : Using container scroll-state queries, with an example of each type.
 
 ## Related concepts
 
