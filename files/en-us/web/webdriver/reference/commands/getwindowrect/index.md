@@ -3,9 +3,8 @@ title: Get Window Rect
 slug: Web/WebDriver/Reference/Commands/GetWindowRect
 page-type: webdriver-command
 browser-compat: webdriver.commands.GetWindowRect
+sidebar: webdriver
 ---
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/WebDriver/Reference/Commands")}}
 
 The _Get Window Rect_ [command](/en-US/docs/Web/WebDriver/Reference/Commands) of the [WebDriver](/en-US/docs/Web/WebDriver) API returns the size and position of the given [`WebElement`](/en-US/docs/Web/WebDriver/WebElement). Many [WebDriver clients](/en-US/docs/Web/WebDriver/Clients) present separate API methods for getting an element's location and dimensions, but as an optimization they both use this primitive.
 

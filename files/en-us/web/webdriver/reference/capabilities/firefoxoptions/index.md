@@ -2,9 +2,8 @@
 title: firefoxOptions
 slug: Web/WebDriver/Reference/Capabilities/firefoxOptions
 page-type: webdriver-capability
+sidebar: webdriver
 ---
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/WebDriver/Reference/Capabilities")}}
 
 The **`moz:firefoxOptions` capability** is a namespaced set of
 capabilities specific to [Firefox](https://www.mozilla.org/en-US/firefox/). It is used to control the
@@ -286,5 +285,3 @@ This runs the GeckoView example application as installed on the first Android em
   (`goog:chromeOptions)`
 - [List of WebDriver capabilities](/en-US/docs/Web/WebDriver/Reference/Capabilities)
 - [New Session](/en-US/docs/Web/WebDriver/Commands/NewSession) command
-
-{{QuickLinksWithSubpages}}

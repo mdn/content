@@ -2,9 +2,8 @@
 title: Invalid selector
 slug: Web/WebDriver/Reference/Errors/InvalidSelector
 page-type: webdriver-error
+sidebar: webdriver
 ---
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/WebDriver/Reference/Errors")}}
 
 The **invalid selector** error is a [WebDriver error](/en-US/docs/Web/WebDriver/Reference/Errors) that occurs when an element retrieval command is used with an unknown [web element](/en-US/docs/Web/WebDriver/WebElement) selector strategy.
 

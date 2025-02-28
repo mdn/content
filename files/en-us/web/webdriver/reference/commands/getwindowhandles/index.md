@@ -3,9 +3,8 @@ title: Get Window Handles
 slug: Web/WebDriver/Reference/Commands/GetWindowHandles
 page-type: webdriver-command
 browser-compat: webdriver.commands.GetWindowHandles
+sidebar: webdriver
 ---
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/WebDriver/Reference/Commands")}}
 
 The _Get Window Handles_ [command](/en-US/docs/Web/WebDriver/Command) of the [WebDriver](/en-US/docs/Web/WebDriver) API returns a list of all [`WebWindow`](/en-US/docs/Web/WebDriver/WebWindow)s. Each tab or window, depending on whether you are using a tabbed browser, is associated by a _window handle_ that is used as a reference when [switching to the window](/en-US/docs/Web/WebDriver/Commands/SwitchToWindow).
 

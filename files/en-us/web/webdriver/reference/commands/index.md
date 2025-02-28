@@ -1,11 +1,11 @@
 ---
-title: Commands
+title: WebDriver commands
+short-title: Commands
 slug: Web/WebDriver/Reference/Commands
 page-type: landing-page
 browser-compat: webdriver.commands
+sidebar: webdriver
 ---
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/WebDriver")}}
 
 The following is a list of the available WebDriver commands.
 

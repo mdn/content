@@ -1,10 +1,10 @@
 ---
-title: Timeouts
-slug: Web/WebDriver/Reference/Timeouts
+title: WebDriver timeouts
+short-title: Timeouts
+slug: Web/WebDriver/Guides/Timeouts
 page-type: guide
+sidebar: webdriver
 ---
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/WebDriver")}}
 
 Associated with a [WebDriver](/en-US/docs/Web/WebDriver) session are various timeout definitions that control behavior for [script injection](#script), [document navigation](#pageload), and [element retrieval](#implicit).
 
@@ -78,5 +78,3 @@ The output will be in seconds because this is the idiomatic time unit in Python:
 ```json
 { "implicit": 4.5, "script": 300, "pageLoad": 30000 }
 ```
-
-{{QuickLinksWithSubpages}}

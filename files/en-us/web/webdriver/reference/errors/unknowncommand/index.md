@@ -2,9 +2,8 @@
 title: Unknown command
 slug: Web/WebDriver/Reference/Errors/UnknownCommand
 page-type: webdriver-error
+sidebar: webdriver
 ---
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/WebDriver/Reference/Errors")}}
 
 The **unknown command** error is a [WebDriver error](/en-US/docs/Web/WebDriver/Reference/Errors) that occurs when the driver does not recognize the command/HTTP endpoint.
 

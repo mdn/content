@@ -2,9 +2,8 @@
 title: Invalid cookie domain
 slug: Web/WebDriver/Reference/Errors/InvalidCookieDomain
 page-type: webdriver-error
+sidebar: webdriver
 ---
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/WebDriver/Reference/Errors")}}
 
 The **invalid cookie domain** error is a [WebDriver error](/en-US/docs/Web/WebDriver/Reference/Errors) that occurs when an illegal attempt was made to set a [cookie](/en-US/docs/Glossary/Cookie) under a different [domain](/en-US/docs/Glossary/Domain) than that of the current document.
 

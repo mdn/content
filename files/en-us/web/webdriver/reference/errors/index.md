@@ -1,10 +1,10 @@
 ---
 title: WebDriver errors
+short-title: Errors
 slug: Web/WebDriver/Reference/Errors
 page-type: landing-page
+sidebar: webdriver
 ---
-
-{{QuickLinksWithSubpages}}
 
 Any WebDriver [command](/en-US/docs/Web/WebDriver/Reference/Commands) that is sent to might plausibly receive an error [response](/en-US/docs/Web/WebDriver/Response). An error is represented by an [HTTP response](/en-US/docs/Web/HTTP) with an [HTTP status code](/en-US/docs/Web/HTTP/Status) in the 4xx or 5xx range, and a JSON payload holding details of the error.
 

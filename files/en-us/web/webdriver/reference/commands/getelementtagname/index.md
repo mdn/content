@@ -3,9 +3,8 @@ title: Get Element Tag Name
 slug: Web/WebDriver/Reference/Commands/GetElementTagName
 page-type: webdriver-command
 browser-compat: webdriver.commands.GetElementTagName
+sidebar: webdriver
 ---
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/WebDriver/Reference/Commands")}}
 
 The _Get Element Tag Name_ [command](/en-US/docs/Web/WebDriver/Command) of the [WebDriver](/en-US/docs/Web/WebDriver) API returns the tag name of the referenced [web element](/en-US/docs/Web/WebDriver/WebElement). If for example the element is an {{HTMLElement("img")}}, the returned tag name is `"IMG"`, which is equivalent to calling {{domxref("Element.tagName")}} on the element. For XML/XHTML documents it may be cased differently.
 

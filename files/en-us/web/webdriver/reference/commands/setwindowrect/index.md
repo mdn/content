@@ -3,9 +3,8 @@ title: Set Window Rect
 slug: Web/WebDriver/Reference/Commands/SetWindowRect
 page-type: webdriver-command
 browser-compat: webdriver.commands.SetWindowRect
+sidebar: webdriver
 ---
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/WebDriver/commands")}}
 
 The _Set Window Rect_ [command](/en-US/docs/Web/WebDriver/Reference/Commands) of the [WebDriver](/en-US/docs/Web/WebDriver) API alters the size and position of the operating system window associated with the current [`window`](/en-US/docs/Web/API/Window). The command acts as the setter of [Get Window Rect](/en-US/docs/Web/WebDriver/Reference/Commands/GetWindowRect), which return object you can pass directly as this command's payload.
 

@@ -1,10 +1,10 @@
 ---
-title: Capabilities
+title: WebDriver capabilities
+short-title: Capabilities
 slug: Web/WebDriver/Reference/Capabilities
 page-type: landing-page
+sidebar: webdriver
 ---
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/WebDriver")}}
 
 WebDriver **_capabilities_** are used to communicate the features supported by a [session](/en-US/docs/Web/WebDriver). A client may also use capabilities to define which features it requires the driver to satisfy when [creating a new session](/en-US/docs/Web/WebDriver/Commands/NewSession).
 

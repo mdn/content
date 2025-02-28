@@ -4,6 +4,9 @@ sidebar:
   - type: section
     link: /Web/WebDriver
     title: WebDriver
+  - type: listSubPages
+    path: /Web/WebDriver/Guides
+    link: /Web/WebDriver/Guides
   - type: section
     link: /Web/WebDriver/Reference
   - type: listSubPages

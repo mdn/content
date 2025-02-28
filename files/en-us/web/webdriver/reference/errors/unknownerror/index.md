@@ -2,9 +2,8 @@
 title: Unknown error
 slug: Web/WebDriver/Reference/Errors/UnknownError
 page-type: webdriver-error
+sidebar: webdriver
 ---
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/WebDriver/Reference/Errors")}}
 
 The **unknown element** error is a [WebDriver error](/en-US/docs/Web/WebDriver/Reference/Errors) that occurs when an unspecified error occurs in the driver whilst processing a [command](/en-US/docs/Web/WebDriver/Reference/Commands).
 

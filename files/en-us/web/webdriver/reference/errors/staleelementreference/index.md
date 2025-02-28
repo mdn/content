@@ -2,9 +2,8 @@
 title: Stale element reference
 slug: Web/WebDriver/Reference/Errors/StaleElementReference
 page-type: webdriver-error
+sidebar: webdriver
 ---
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/WebDriver/Reference/Errors")}}
 
 The **stale element reference** error is a [WebDriver error](/en-US/docs/Web/WebDriver/Reference/Errors) that occurs because the referenced [web element](/en-US/docs/Web/WebDriver/WebElement) is no longer attached to the [DOM](/en-US/docs/Glossary/DOM).
 

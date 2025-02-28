@@ -2,9 +2,8 @@
 title: Unknown method
 slug: Web/WebDriver/Reference/Errors/UnknownMethod
 page-type: webdriver-error
+sidebar: webdriver
 ---
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/WebDriver/Reference/Errors")}}
 
 The **unknown method** error is a [WebDriver error](/en-US/docs/Web/WebDriver/Reference/Errors) that occurs when the driver does not recognize the [HTTP request method](/en-US/docs/Web/HTTP/Methods) used for the endpoint.
 

@@ -2,9 +2,8 @@
 title: JavaScript error
 slug: Web/WebDriver/Reference/Errors/JavaScriptError
 page-type: webdriver-error
+sidebar: webdriver
 ---
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/WebDriver/Reference/Errors")}}
 
 The **JavaScript** error is a [WebDriver error](/en-US/docs/Web/WebDriver/Reference/Errors) that occurs when a script the supplied by the user fails to execute.
 

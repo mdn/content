@@ -2,9 +2,8 @@
 title: Script timeout
 slug: Web/WebDriver/Reference/Errors/ScriptTimeout
 page-type: webdriver-error
+sidebar: webdriver
 ---
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/WebDriver/Reference/Errors")}}
 
 The **script timeout** error is a [WebDriver error](/en-US/docs/Web/WebDriver/Reference/Errors) that occurs when a script the user has provided did not complete before the session's script timeout duration expired.
 

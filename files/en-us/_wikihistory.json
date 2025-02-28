@@ -126000,6 +126000,10 @@
       "kjb"
     ]
   },
+  "Web/WebDriver/Guides/Timeouts": {
+    "modified": "2019-04-29T05:32:47.095Z",
+    "contributors": ["chrisdavidmills", "evertones", "ato"]
+  },
   "Web/WebDriver/Reference/Capabilities": {
     "modified": "2019-10-09T08:06:42.769Z",
     "contributors": ["ato", "arobins", "fscholz"]
@@ -126103,10 +126107,6 @@
   "Web/WebDriver/Reference/Errors/UnknownMethod": {
     "modified": "2019-03-18T21:32:58.905Z",
     "contributors": ["ato"]
-  },
-  "Web/WebDriver/Reference/Timeouts": {
-    "modified": "2019-04-29T05:32:47.095Z",
-    "contributors": ["chrisdavidmills", "evertones", "ato"]
   },
   "Web/XML": {
     "modified": "2019-04-21T20:57:57.467Z",

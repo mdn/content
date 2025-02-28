@@ -2,9 +2,8 @@
 title: Invalid argument
 slug: Web/WebDriver/Reference/Errors/InvalidArgument
 page-type: webdriver-error
+sidebar: webdriver
 ---
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/WebDriver/Reference/Errors")}}
 
 The **invalid argument** error is a [WebDriver error](/en-US/docs/Web/WebDriver/Reference/Errors) that occurs when the arguments passed to a [command](/en-US/docs/Web/WebDriver/Reference/Commands) are either invalid or malformed.
 

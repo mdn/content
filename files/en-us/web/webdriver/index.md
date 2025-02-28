@@ -24,8 +24,6 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support.expected_conditions import presence_of_element_located
 
-
-
 with webdriver.Firefox() as driver:
 
     driver.get("https://google.com/ncr")
@@ -57,7 +55,7 @@ This might produce output akin to this:
 [Types](/en-US/docs/Web/WebDriver/Types)
 
 - [Error object](/en-US/docs/Web/WebDriver/Reference/Errors#payload)
-- [Timeouts object](/en-US/docs/Web/WebDriver/Reference/Timeouts)
+- [Timeouts object](/en-US/docs/Web/WebDriver/Guides/Timeouts)
 - [WebElement](/en-US/docs/Web/WebDriver/WebElement)
 - [WebWindow](/en-US/docs/Web/WebDriver/WebWindow)
 
