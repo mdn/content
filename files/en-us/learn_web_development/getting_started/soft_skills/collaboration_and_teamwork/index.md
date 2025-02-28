@@ -40,7 +40,7 @@ As a web developer, you'll have to spend a lot of time working with your peers, 
 It is important to treat people with the same level of empathy and respect as you'd wish for. Different people have different requirements emotionally, socially, etc., but at a base level you should be polite, respectful, and cooperative in all engagements.
 
 > [!NOTE]
-> Most organizations publish participation guidelines that define their expectations of behavior for people who participate in their work/activities. These guidelines should also include a definition of what is considered unacceptable behavior, the consequences of unacceptable behavior, and how to report unacceptable behavior. For example, MDN is governed by the wider [Mozilla Community Participation Guidelines](https://www.mozilla.org/en-US/about/governance/policies/participation/).
+> Most organizations publish a **Code of Conduct** that defines their expectations of behavior for people who participate in their project. These guidelines usually include a definition of what is considered unacceptable behavior, the consequences of unacceptable behavior, and how to report unacceptable behavior. For example, MDN is governed by the wider [Mozilla Community Participation Guidelines](https://www.mozilla.org/en-US/about/governance/policies/participation/).
 
 ## Help others, ask questions
 
