@@ -6,13 +6,13 @@ page-type: glossary-definition
 
 {{GlossarySidebar}}
 
-A viewport represents a polygonal (normally rectangular) area in computer graphics that is currently being viewed.
+In computer graphics, a **viewport** represents a polygonal (normally rectangular) area that is currently being viewed.
 
 In web browser terms, it refers to the part of the document you're viewing which is currently visible in its window (or the screen, if the document is being viewed in full screen mode). Content outside the viewport is not visible onscreen until scrolled into view. The mobile browser's viewport is the area of the window in which web content can be seen, which is not necessarily the same size as the rendered page.
 
 The portion of the viewport that is currently visible is called the **{{Glossary("visual viewport")}}**. This can be smaller than the layout viewport, such as when the user has pinched-zoomed. The {{Glossary("layout viewport")}} remains the same, but the visual viewport became smaller.
 
-The visual viewport of an {{htmlelement("iframe")}}, {{htmlelement("svg")}}, and {{htmlelement("object")}} is the size of the inner width and height of the respective element, rather than the parent document. For included content, the visual viewport and layout viewport are the same.
+The visual viewport of an {{htmlelement("iframe")}}, {{htmlelement("svg")}}, or {{htmlelement("object")}} element is the size of the inner width and height of the respective element, rather than the parent document. For content rendered inside the element, the visual viewport and layout viewport are the same.
 
 ## See also
 
