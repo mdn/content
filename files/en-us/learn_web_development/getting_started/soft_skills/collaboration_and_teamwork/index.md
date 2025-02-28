@@ -40,7 +40,7 @@ As a web developer, you'll have to spend a lot of time working with your peers, 
 It is important to treat people with the same level of empathy and respect as you'd wish for. Different people have different requirements emotionally, socially, etc., but at a base level you should be polite, respectful, and cooperative in all engagements.
 
 > [!NOTE]
-> Most organizations publish a **Code of Conduct** that defines their expectations of behavior for people who participate in their project. These guidelines usually include a definition of what is considered unacceptable behavior, the consequences of unacceptable behavior, and how to report unacceptable behavior. For example, MDN is governed by the wider [Mozilla Community Participation Guidelines](https://www.mozilla.org/en-US/about/governance/policies/participation/).
+> Most organizations publish a document called the **Code of Conduct** (or **participation guidelines**) that defines their expectations of behavior for people who participate in their project. These guidelines usually include a definition of what is considered unacceptable behavior, the consequences of unacceptable behavior, and how to report unacceptable behavior. For example, MDN is governed by the wider [Mozilla Community Participation Guidelines](https://www.mozilla.org/en-US/about/governance/policies/participation/).
 
 ## Help others, ask questions
 
@@ -78,12 +78,15 @@ Even if you think your achievements are trivial, you probably know more than you
 
 ## Participate in open source
 
-Another way to make friends and influence people is to find open source projects and offer updates to fix issues in other people's work. Provided you are polite and respectful, and explain your changes and the reasoning behind them, the project owners will be very grateful for your contributions. Your updates will give you valuable experience and practice.
+Another way to make friends and influence people is to find open source projects and offer updates to fix issues in other people's work. Provided you are polite and respectful, and explain your changes and the reasoning behind them, the project owners will be very grateful for your contributions. Your updates will also give you valuable experience and practice.
 
 For example, [MDN's source code](https://github.com/mdn/content) is available on GitHub, and we have many [issues](https://github.com/mdn/content/issues) that you could work on.
-There are plenty of [Community resources](/en-US/docs/MDN/Community) on MDN that describe the project and what contributing to an open source project looks like.
+There are plenty of [Community resources](/en-US/docs/MDN/Community) on MDN that describe the project and what contributing to it looks like.
 
-If you are not sure what open source is and how to start contributing, [How to Contribute to Open Source Projects – A Beginner's Guide](https://www.freecodecamp.org/news/how-to-contribute-to-open-source-projects-beginners-guide/) is a great guide to help you get started.
+If you are not sure what open source is and why or how to start contributing, both of the following are really useful:
+
+- [How to Contribute to Open Source Projects – A Beginner's Guide](https://www.freecodecamp.org/news/how-to-contribute-to-open-source-projects-beginners-guide/)
+- [Open source etiquette](/en-US/docs/MDN/Community/Open_source_etiquette)
 
 ## Teamwork and peer reviews
 
