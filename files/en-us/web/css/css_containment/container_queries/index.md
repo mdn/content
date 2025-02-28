@@ -12,7 +12,7 @@ Container queries enable you to apply styles to an element based on certain attr
 - Styling applied to the container.
 - The scroll-state of its container or scrolling ancestor.
 
-If, for example, a container has less space available in the surrounding context, you can hide certain elements or use smaller fonts.
+For example, if a container has less space available in the surrounding context, you can hide certain elements or use smaller fonts.
 
 Container queries are an alternative to [media queries](/en-US/docs/Web/CSS/CSS_media_queries), which apply styles to elements based on viewport size or other device characteristics.
 
