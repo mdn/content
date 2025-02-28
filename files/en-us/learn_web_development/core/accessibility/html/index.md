@@ -324,7 +324,7 @@ However, it is again the case that people sometimes do strange things with HTML.
 <div data-message="This is from the third button">And me!</div>
 ```
 
-But using such code is not advised — you immediately lose the native keyboard accessibility you would have had if you'd just used {{htmlelement("button")}} elements, plus you don't get any of the default CSS styling that buttons get. In the rare to non-existent case when you need to use a non-button element for a button, use the [`button` role](/en-US/docs/Web/Accessibility/ARIA/Roles/button_role) and implement all the default button behaviors, including keyboard and mouse button support.
+But using such code is not advised — you immediately lose the native keyboard accessibility you would have had if you'd just used {{htmlelement("button")}} elements, plus you don't get any of the default CSS styling that buttons get. In the rare to non-existent case when you need to use a non-button element for a button, use the [`button` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/button_role) and implement all the default button behaviors, including keyboard and mouse button support.
 
 #### Building keyboard accessibility back in
 
@@ -553,7 +553,7 @@ While there is mixed screen reader support of associating figure captions with t
 
 There may be times where an image is included in a page's design, but its primary purpose is for visual decoration. You'll notice in the code example above that the image's `alt` attribute is empty — this is to make screen readers recognize the image, but not attempt to describe the image (instead they'd just say "image", or similar).
 
-The reason to use an empty `alt` instead of not including it is because many screen readers announce the whole image URL if no `alt` is provided. In the above example, the image is acting as a visual decoration to the heading it's associated with. In cases like this, and in cases where an image is only decoration and has no content value, you should include an empty `alt` in your `img` elements. Another alternative is to use the aria [`role`](/en-US/docs/Web/Accessibility/ARIA/Roles) attribute [`role="presentation"`](/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role) as this also stops screen readers from reading out alternative text.
+The reason to use an empty `alt` instead of not including it is because many screen readers announce the whole image URL if no `alt` is provided. In the above example, the image is acting as a visual decoration to the heading it's associated with. In cases like this, and in cases where an image is only decoration and has no content value, you should include an empty `alt` in your `img` elements. Another alternative is to use the aria [`role`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles) attribute [`role="presentation"`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role) as this also stops screen readers from reading out alternative text.
 
 > [!NOTE]
 > If possible you should use CSS to display images that are only decorative.
