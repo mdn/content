@@ -548,7 +548,7 @@ The rendered result is shown below. Try scrolling the container up and down, and
 - `block-end`: Tests whether the container is stuck to the block-end edge of its scrolling ancestor.
 - `none`: Tests whether the container is not stuck to any edges of its scrolling ancestor.
 
-If the test passes, the rules inside the `@container` block are applied to descendants of the matching `position: sticky` container.
+If the query returns true, the rules inside the `@container` block are applied to descendants of the matching `position: sticky` container.
 
 Let's look at an example in which we have a scrolling container full of content, in which the headings are set to `position: sticky` and stick to the top edge of the container when they scroll to that position. We will use a `stuck` query to style the headings differently when they are stuck to the top edge.
 
