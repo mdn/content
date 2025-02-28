@@ -219,7 +219,7 @@ Scroll-state container descriptors are specified inside the `<container-conditio
 
 - `stuck`
 
-  - : Whether a container with a {{cssxref("position")}} value of `sticky` is stuck to an edge of its scolling container ancestor. Possible values are:
+  - : Whether a container with a {{cssxref("position")}} value of `sticky` is stuck to an edge of its scrolling container ancestor. Supported keywords include physical and {{glossary("flow relative values")}}:
 
     - `none`
       - : The container is not stuck to any edges of its container.
