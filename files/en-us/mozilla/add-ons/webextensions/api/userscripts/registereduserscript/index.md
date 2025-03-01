@@ -7,7 +7,7 @@ browser-compat: webextensions.api.userScripts.RegisteredUserScript
 
 {{AddonSidebar}}
 
-An object representing registered user scripts. Returned by {{WebExtAPIRef("userScripts.getScripts","getScripts()")}} and used as input to {{WebExtAPIRef("userScripts.register","register()")}} and {{WebExtAPIRef("userScripts.update","update()")}}.
+An object representing registered user scripts. Returned by {{WebExtAPIRef("userScripts.getScripts","userScripts.getScripts()")}} and used as input to {{WebExtAPIRef("userScripts.register","userScripts.register()")}} and {{WebExtAPIRef("userScripts.update","userScripts.update()")}}.
 
 ## Type
 
@@ -24,9 +24,9 @@ Values of this type are an object containing these properties:
 - `excludeMatches` {{optional_inline}}
   - : `array` of `string`. [Match patterns](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) for pages that the script must not be run in.
 - `includeGlobs` {{optional_inline}}
-  - : `string`. Glob patterns for the pages to run the script in. `matches` or `includeGlobs` must be specified in {{WebExtAPIRef("userScripts.register()")}} calls.
+  - : `string`. [Glob patterns](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts#globs) for the pages to run the script in. `matches` or `includeGlobs` must be specified in {{WebExtAPIRef("userScripts.register()")}} calls.
 - `excludeGlobs` {{optional_inline}}
-  - : `string`. Glob patterns for pages that the script must not be run in.
+  - : `string`. [Glob patterns](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts#globs) for pages that the script must not be run in.
 - `runAt` {{optional_inline}}
   - : {{WebExtAPIRef("extensionTypes.RunAt")}}. The earliest the script is injected into a tab. Defaults to `"document_idle"`.
 - `world` {{optional_inline}}

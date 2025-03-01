@@ -14,7 +14,7 @@ The configuration of a `USER_SCRIPT` execution environment. Used in {{WebExtAPIR
 Values of this type are an object containing these properties:
 
 - `worldId` {{optional_inline}}
-  - : `string`. The identifier for the world. Values with leading underscores (`_`) are reserved. The maximum length is 256 characters. Defaults to the default `USER_SCRIPT` world ("").
+  - : `string`. The identifier for the world. Values with leading underscores (`_`) are reserved. The maximum length is 256 characters. Defaults to the default `USER_SCRIPT` world (""). To run a user script in this world, pass this value as the `worldId` property in {{WebExtAPIRef("userScripts.RegisteredUserScript")}} when registering or updating a user script.
 - `csp` {{optional_inline}}
   - : `string`. The world's Content Security Policy (CSP). Defaults to the [default CSP for content scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy#csp_for_content_scripts), which prohibits dynamic code execution, such as `eval()`.
 - `messaging` {{optional_inline}}
