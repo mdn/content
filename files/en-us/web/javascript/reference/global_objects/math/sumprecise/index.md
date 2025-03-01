@@ -56,15 +56,13 @@ console.log(sum); // 0
 
 The output is 0. This is because `1e20 + 0.1` cannot be represented precisely in 64-bit floats, so the intermediate result is rounded to `1e20`. Then, the sum of `1e20` and `-1e20` is `0`, so the final result is `0`.
 
-`Math.sumPrecise()` avoids this issue by using some slower but more precise algorithm. It works as if the floating point numbers are summed up using their precise mathematical values, and the final result is then converted to the nearest representable 64-bit float. This still cannot avoid the `0.1 + 0.2` precision problem:
+`Math.sumPrecise()` avoids this issue by using some specialized summing algorithm. It works as if the floating point numbers are summed up using their precise mathematical values, and the final result is then converted to the nearest representable 64-bit float. This still cannot avoid the `0.1 + 0.2` precision problem:
 
 ```js
 console.log(Math.sumPrecise([0.1, 0.2])); // 0.30000000000000004
 ```
 
 Because the floating point literals `0.1` and `0.2` already represent mathematical values greater than `0.1` and `0.2`, and their sum's closest 64-bit float representation is actually `0.30000000000000004`.
-
-`Math.sumPrecise()` is not meant as a perfect replacement for utility functions such as `numbers.reduce((a, b) => a + b, 0)` or the loop code above, due to potentially worse performance. Where performance is not a concern while precision and readability are, `Math.sumPrecise()` should be preferred.
 
 ## Examples
 
