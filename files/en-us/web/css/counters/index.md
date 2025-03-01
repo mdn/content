@@ -13,7 +13,45 @@ The `counters()` function is generally used within [pseudo-element](/en-US/docs/
 
 The `counters()` function has two forms: `counters(<name>, <string>)` and `counters(<name>, <string>, <style>)`. The generated text is the value of all counters with the given `<name>`, arranged from the outermost to the innermost, and separated by the specified `<string>`. The counters are rendered in the `<style>` indicated, defaulting to `decimal` if no `<style>` is specified.
 
-{{EmbedInteractiveExample("pages/tabbed/function-counters.html", "tabbed-standard")}}
+{{InteractiveExample("CSS Demo: counters()", "tabbed-standard")}}
+
+```css interactive-example
+ol {
+  counter-reset: index;
+  list-style-type: none;
+}
+
+li::before {
+  counter-increment: index;
+  content: counters(index, ".", decimal) " ";
+}
+```
+
+```html interactive-example
+<ol>
+  <li>Mars</li>
+  <li>
+    Saturn
+    <ol>
+      <li>Mimas</li>
+      <li>Enceladus</li>
+      <li>
+        <ol>
+          <li>Voyager</li>
+          <li>Cassini</li>
+        </ol>
+      </li>
+      <li>Tethys</li>
+    </ol>
+  </li>
+  <li>
+    Uranus
+    <ol>
+      <li>Titania</li>
+    </ol>
+  </li>
+</ol>
+```
 
 ## Syntax
 

@@ -9,7 +9,36 @@ browser-compat: css.selectors.backdrop
 
 The **`::backdrop`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) is a box the size of the {{Glossary("viewport")}}, which is rendered immediately beneath any element being presented in the {{glossary("top layer")}}.
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-element-backdrop.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: ::backdrop", "tabbed-shorter")}}
+
+```css interactive-example
+button {
+  font-size: 1.2rem;
+  padding: 5px 15px;
+}
+
+dialog::backdrop {
+  background-color: salmon;
+}
+```
+
+```html interactive-example
+<button id="showDialogBtn">Show a dialog</button>
+
+<dialog id="favDialog">
+  <form method="dialog">
+    <p>The background shown outside of this dialog is a backdrop.</p>
+    <button id="confirmBtn">Close the dialog</button>
+  </form>
+</dialog>
+```
+
+```js interactive-example
+const showDialogBtn = document.getElementById("showDialogBtn");
+const favDialog = document.getElementById("favDialog");
+
+showDialogBtn.addEventListener("click", () => favDialog.showModal());
+```
 
 ## Syntax
 
