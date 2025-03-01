@@ -54,4 +54,4 @@ console.log(el.ariaRequired); // "false"
 
 ## See also
 
-- [ARIA: textbox role](/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role)
+- [ARIA: textbox role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role)

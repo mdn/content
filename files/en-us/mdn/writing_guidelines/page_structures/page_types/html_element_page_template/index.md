@@ -182,7 +182,7 @@ See our guide on how to add [code examples](/en-US/docs/MDN/Writing_guidelines/P
       <th scope="row">Permitted ARIA roles</th>
       <td>
         Fill in a list of ARIA roles that can be set on the element; for example
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/directory_role"><code>directory</code></a>.
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/directory_role"><code>directory</code></a>.
       </td>
     </tr>
     <tr>

@@ -27,7 +27,7 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 
 ## Accessibility
 
-The `<math>` element has an implicit [`math` ARIA role](/en-US/docs/Web/Accessibility/ARIA/Roles/math_role). Assistive technologies can use this role to identify the content as a mathematical expression and convey it to users.
+The `<math>` element has an implicit [`math` ARIA role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/math_role). Assistive technologies can use this role to identify the content as a mathematical expression and convey it to users.
 
 ```css hidden
 html,
@@ -143,10 +143,10 @@ This example contains two MathML formula. The first one is rendered in its own c
 <table class="properties">
   <tr>
     <th scope="row">
-      <a href="/en-US/docs/Web/Accessibility/ARIA/Roles">Implicit ARIA role</a>
+      <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles">Implicit ARIA role</a>
     </th>
     <td>
-      <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/math_role">
+      <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/math_role">
         <code>math</code>
       </a>
     </td>

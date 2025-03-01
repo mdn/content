@@ -431,7 +431,7 @@ Take a look at the MDN page for {{cssxref("background")}} to see all of the cons
 
 ## Accessibility considerations with backgrounds
 
-When placing text on top of a background image or color, you should take care that you have enough [contrast](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast) for the text to be legible for your visitors. If specifying an image, and if text will be placed on top of that image, you should also specify a `background-color` that will allow the text to be legible if the image does not load.
+When placing text on top of a background image or color, you should take care that you have enough [contrast](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast) for the text to be legible for your visitors. If specifying an image, and if text will be placed on top of that image, you should also specify a `background-color` that will allow the text to be legible if the image does not load.
 
 Screen readers cannot parse background images; therefore, they should be purely decoration. Any important content should be part of the HTML page and not contained in a background.
 
