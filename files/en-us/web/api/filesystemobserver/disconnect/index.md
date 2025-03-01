@@ -3,10 +3,13 @@ title: "FileSystemObserver: disconnect() method"
 short-title: disconnect()
 slug: Web/API/FileSystemObserver/disconnect
 page-type: web-api-instance-method
+status:
+  - experimental
+  - non-standard
 browser-compat: api.FileSystemObserver.disconnect
 ---
 
-{{securecontext_header}}{{APIRef("File System API")}}
+{{securecontext_header}}{{APIRef("File System API")}}{{SeeCompatTable}}{{non-standard_header}}
 
 The **`disconnect()`** method of the
 {{domxref("FileSystemObserver")}} interface stops the observer observing the file system.
