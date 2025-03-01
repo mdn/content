@@ -8,7 +8,7 @@ browser-compat: api.TrustedScriptURL.toString
 
 {{APIRef("Trusted Types API")}}{{AvailableInWorkers}}
 
-The **`toString()`** method of the {{domxref("TrustedScriptURL")}} interface returns a string which may safely inserted into an [injection sink](/en-US/docs/Web/API/Trusted_Types_API#injection_sinks).
+The **`toString()`** method of the {{domxref("TrustedScriptURL")}} interface returns a string which may safely inserted into an [injection sink](/en-US/docs/Web/API/Trusted_Types_API#concepts_and_usage).
 
 ## Syntax
 
