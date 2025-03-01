@@ -7,7 +7,22 @@ sidebar: webassemblysidebar
 
 **`nop`** stands for no-operation. It literally does nothing.
 
-{{EmbedInteractiveExample("pages/wat/nop.html", "tabbed-shorter")}}
+{{InteractiveExample("Wat Demo: nop", "tabbed-shorter")}}
+
+```wat interactive-example
+(module
+  (func (export "do_nothing")
+    nop
+  )
+)
+```
+
+```js interactive-example
+const url = "{%wasm-url%}";
+await WebAssembly.instantiateStreaming(fetch(url)).then((result) => {
+  result.instance.exports.do_nothing();
+});
+```
 
 ## Syntax
 

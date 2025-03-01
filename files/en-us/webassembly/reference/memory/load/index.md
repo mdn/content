@@ -15,7 +15,37 @@ For the integer numbers, there are separate instruction variants for loading a n
 For example, you can load an unsigned 8-bit number and convert it into an i32 using `i32.load8_u`.
 All the variants are [listed below](#instructions_and_opcodes).
 
-{{EmbedInteractiveExample("pages/wat/load.html", "tabbed-taller")}}
+{{InteractiveExample("Wat Demo: load", "tabbed-taller")}}
+
+```wat interactive-example
+(module
+
+  (memory $memory 1)
+  (export "memory" (memory $memory))
+
+  (func (export "load_first_item_in_mem") (param $num i32) (result i32)
+    i32.const 0
+
+    ;; load first item in memory and return the result
+    i32.load
+  )
+
+)
+```
+
+```js interactive-example
+const url = "{%wasm-url%}";
+const result = await WebAssembly.instantiateStreaming(fetch(url));
+const load_first_item_in_mem = result.instance.exports.load_first_item_in_mem;
+const memory = result.instance.exports.memory;
+
+const dataView = new DataView(memory.buffer);
+// Store 30 at the beginning of memory
+dataView.setUint32(0, 30, true);
+
+console.log(load_first_item_in_mem(100));
+// Expected output: 30
+```
 
 ## Syntax
 
