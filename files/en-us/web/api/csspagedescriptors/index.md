@@ -109,7 +109,7 @@ if (typeof window.CSSPageDescriptors === "undefined") {
   log("CSSPageDescriptors is not supported on this browser.");
 } else {
   // Get stylesheets for example and then get its cssRules
-  const myRules = document.styleSheets[1].cssRules;
+  const myRules = document.styleSheets[0].cssRules;
   for (let i = 0; i < myRules.length; i++) {
     if (myRules[i] instanceof CSSPageRule) {
       log(`${myRules[i].style}`);
