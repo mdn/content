@@ -447,7 +447,10 @@
       {
         "if": {
           "properties": {
-            "slug": { "type": "string", "pattern": "^Web/MathML/Element/" }
+            "slug": {
+              "type": "string",
+              "pattern": "^Web/MathML/Reference/Element/"
+            }
           }
         },
         "then": {
@@ -460,7 +463,7 @@
           "properties": {
             "slug": {
               "type": "string",
-              "pattern": "^Web/MathML/Global_attributes/"
+              "pattern": "^Web/MathML/Reference/Global_attributes/"
             }
           }
         },
