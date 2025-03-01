@@ -1,28 +1,28 @@
 # MDN Web Docs contribution guide
 
-Thanks for taking the time to contribute to [MDN Web Docs](https://developer.mozilla.org)! :tada:
+Thanks for taking the time to contribute to [MDN Web Docs][]! :tada:
 
 This document covers project setup steps along with a set of guidelines for contributing to MDN Web Docs content.
 Everyone participating in this project is expected to follow our [Code of Conduct](https://github.com/mdn/content/blob/main/CODE_OF_CONDUCT.md), which means adhering to [Mozilla's Community Participation Guidelines](https://www.mozilla.org/en-US/about/governance/policies/participation/).
-If you want to jump right in, see [Getting started with MDN Web Docs](/en-US/docs/MDN/Community/Getting_started) for an overview of how to join, and the [Community resources](/en-US/docs/MDN/Community) on MDN.
+If you want to jump right in, see [Getting started with MDN Web Docs][] for an overview of how to join, and the [Community resources][] on MDN.
 
 ## Getting started
 
 Before contributing, make sure you're familiar with the project guidelines and conventions:
 
-- [Writing guidelines](/en-US/docs/MDN/Writing_guidelines) - This page covers everything from how and what we write to general project guidelines.
-- [Writing style guide](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide) - This covers the language and style we use and how we write and format code examples.
-- [How to write in Markdown](/en-US/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN) - This covers the Markdown features we support on MDN and custom extensions we've added.
+- [Writing guidelines][] - This page covers everything from how and what we write to general project guidelines.
+- [Writing style guide][] - This covers the language and style we use and how we write and format code examples.
+- [How to write in Markdown][] - This covers the Markdown features we support on MDN and custom extensions we've added.
 
 ### Prerequisite knowledge
 
 We expect contributors to MDN to have some knowledge of web technologies before working on content.
 We've put together relevant resources to get up to speed on specific topics before contributing:
 
-- **Open source:** If you're new to open source projects, see the [Open source etiquette](/en-US/docs/MDN/Community/Open_source_etiquette) page.
-- **Git and GitHub:** If you are unfamiliar with these, see the section [What do I need to get started?](/en-US/docs/MDN/Community/Getting_started#what_do_i_need_to_get_started) to get pointers on where to start.
-- **Web technologies:** HTML, CSS, JavaScript, and more are covered in our [Learn web development](/en-US/docs/Learn_web_development) tutorials.
-- **MDN repositories:** To find out where everything lives in various MDN repositories, see our [MDN Web Docs repositories](/en-US/docs/MDN/Community/Our_repositories) page.
+- **Open source:** If you're new to open source projects, see the [Open source etiquette][] page.
+- **Git and GitHub:** If you are unfamiliar with these, see the section [What do I need to get started?][] to get pointers on where to start.
+- **Web technologies:** HTML, CSS, JavaScript, and more are covered in our [Learn web development][] tutorials.
+- **MDN repositories:** To find out where everything lives in various MDN repositories, see our [MDN Web Docs repositories][] page.
 
 ### Documentation conventions
 
@@ -69,7 +69,7 @@ If you've created a new GitHub account and want to know what to do next, you can
 ### Simple changes
 
 If you want to make a small change like fixing a typo, the GitHub UI is the easiest way to get started.
-If you've found a typo on the [JavaScript landing page](/en-US/docs/Web/JavaScript), for example, you can propose a fix as follows:
+If you've found a typo on the [JavaScript landing page][], for example, you can propose a fix as follows:
 
 1. Sign in to [GitHub](https://github.com/)
 2. Navigate to [https://github.com/mdn/content](https://github.com/mdn/content)
@@ -222,7 +222,7 @@ If you have a [local checkout](#forking-and-cloning-the-repository) of the repos
 
 > [!NOTE]
 > Automatically formatting changes does not work for pull requests opened using the GitHub Web UI as described in the ["Simple changes" section](#simple-changes).
-> This may result in failed status checks on pull requests. If you're not sure about how to fix this, [get in touch with us](/en-US/docs/MDN/Community/Communication_channels) for help.
+> This may result in failed status checks on pull requests. If you're not sure about how to fix this, [get in touch with us][] for help.
 
 ### Adding a new document
 
@@ -418,3 +418,16 @@ There are some important rules of etiquette to remember that will help during th
 
 When contributing to the content you agree to license your contributions
 according to [our license](LICENSE.md).
+
+[mdn web docs]: https://developer.mozilla.org
+[getting started with mdn web docs]: https://developer.mozilla.org/en-US/docs/MDN/Community/Getting_started
+[community resources]: https://developer.mozilla.org/en-US/docs/MDN/Community
+[writing guidelines]: https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines
+[writing style guide]: https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines/Writing_style_guide
+[how to write in markdown]: https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN
+[open source etiquette]: https://developer.mozilla.org/en-US/docs/MDN/Community/Open_source_etiquette
+[what do i need to get started?]: https://developer.mozilla.org/en-US/docs/MDN/Community/Getting_started#what_do_i_need_to_get_started
+[learn web development]: https://developer.mozilla.org/en-US/docs/Learn_web_development
+[mdn web docs repositories]: https://developer.mozilla.org/en-US/docs/MDN/Community/Our_repositories
+[javaScript landing page]: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+[get in touch with us]: https://developer.mozilla.org/en-US/docs/MDN/Community/Communication_channels
