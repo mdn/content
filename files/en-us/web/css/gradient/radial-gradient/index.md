@@ -14,6 +14,9 @@ The **`radial-gradient()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/We
 ## Syntax
 
 ```css
+/* A gradient with a single color of red */
+radial-gradient(red)
+
 /* A gradient at the center of its container,
    starting red, changing to blue, and finishing green */
 radial-gradient(circle at center, red 0, blue, green 100%)
