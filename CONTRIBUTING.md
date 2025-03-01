@@ -419,6 +419,12 @@ There are some important rules of etiquette to remember that will help during th
 When contributing to the content you agree to license your contributions
 according to [our license](LICENSE.md).
 
+<!---
+Reference links syntax is used here because of linting markdown files ("fqdn-moz-links" rule).
+See https://github.com/mdn/content/pull/21432 and https://github.com/mdn/content/pull/38369.
+It can be replaced with the normal links syntax after successfully closing https://github.com/DavidAnson/markdownlint/issues/673.
+-->
+
 [mdn web docs]: https://developer.mozilla.org
 [getting started with mdn web docs]: https://developer.mozilla.org/en-US/docs/MDN/Community/Getting_started
 [community resources]: https://developer.mozilla.org/en-US/docs/MDN/Community
