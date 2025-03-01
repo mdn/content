@@ -109,6 +109,8 @@ Unlike most global objects, `Math` is not a constructor. You cannot use it with 
   - : Returns the hyperbolic sine of the input.
 - {{jsxref("Math.sqrt()")}}
   - : Returns the positive square root of the input.
+- {{jsxref("Math.sumPrecise()")}}
+  - : Takes an iterable of numbers and returns the sum of them. It is more precise than summing them up in a loop, because it avoids floating point precision loss in intermediate results.
 - {{jsxref("Math.tan()")}}
   - : Returns the tangent of the input.
 - {{jsxref("Math.tanh()")}}
