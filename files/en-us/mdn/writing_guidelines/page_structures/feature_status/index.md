@@ -6,9 +6,11 @@ sidebar: mdnsidebar
 ---
 
 > [!WARNING]
-> Do not manually update the feature statuses in `mdn/content` repository. An automation handles it.
+> Do not manually update the feature statuses in `mdn/content` repository.
+> The documentation source is [automatically updated](#how_feature_statuses_are_added_or_updated) from information in the GitHub `mdn/browser-compat-data` repository
 
-A feature status provides developers with information about the implementation stage of the feature among browser vendors and is one of the following:
+A feature status broadly indicates the cross-browser implementation and standardization state of a particular web platform feature, such as a Web API method or CSS property.
+It is one of the following:
 
 - [`deprecated`](https://github.com/mdn/browser-compat-data/blob/main/docs/data-guidelines/index.md#setting-deprecated)
 - [`experimental`](https://github.com/mdn/browser-compat-data/blob/main/docs/data-guidelines/index.md#setting-experimental)
@@ -30,11 +32,11 @@ The automation uses [`browser-compat`](/en-US/docs/MDN/Writing_guidelines/Page_s
 
 ## How are feature statuses specified in content?
 
-The following sections document mechanisms using which feature statuses are rendered in MDN documents. As mentioned, you should consider these mechanisms read-only as their inclusion in the content is automated.
+The following sections document the mechanisms that are used to insert and render feature status information in MDN documents. As mentioned, ythese should be considered read-only, as their inclusion in the content is automated.
 
 ### Feature status icons in sidebars
 
-To show status icons for a feature listed in sidebars, the [front-matter](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/CSS_function_page_template#sect1) `status` property is used:
+The `status` property in page [front-matter](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/CSS_function_page_template#sect1) is used to generate status icons for features when they are displayed in sidebars.
 
 ```yml
 ---
@@ -46,8 +48,6 @@ status:
 browser-compat: api.feature
 ---
 ```
-
-When sidebars are rendered, the code looks for the statuses in each page's front-matter. As mentioned before, these statuses are updated automatically; you do not need to change them manually.
 
 ### Feature status page banners
 
