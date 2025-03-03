@@ -45,6 +45,8 @@ jobs:
         if: hashFiles('build/') != ''
         run: |
           echo "HAS_ARTIFACT=true" >> "$GITHUB_ENV"
+          PR_NUMBER=`cat build/NR`
+          echo "PREFIX=pr$PR_NUMBER" >> "$GITHUB_ENV"
 
       - uses: actions/checkout@v4
         if: env.HAS_ARTIFACT
@@ -98,6 +100,28 @@ jobs:
           cd yari/deployer
           poetry install --no-interaction
 
+      - name: Authenticate with GCP
+        if: env.HAS_ARTIFACT
+        uses: google-github-actions/auth@v2
+        with:
+          token_format: access_token
+          service_account: deploy-mdn-review-content@${{ secrets.GCP_PROJECT_NAME }}.iam.gserviceaccount.com
+          workload_identity_provider: projects/${{ secrets.WIP_PROJECT_ID }}/locations/global/workloadIdentityPools/github-actions/providers/github-actions
+
+      - name: Setup gcloud
+        if: env.HAS_ARTIFACT
+        uses: google-github-actions/setup-gcloud@v2
+
+      - name: Upload to GCS
+        if: env.HAS_ARTIFACT
+        uses: google-github-actions/upload-cloud-storage@v2
+        with:
+          path: "build"
+          destination: "${{ vars.GCP_BUCKET_NAME }}/${{ env.PREFIX }}"
+          resumable: false
+          concurrency: 500
+          process_gcloudignore: false
+
       - name: Deploy and analyze built content
         if: env.HAS_ARTIFACT
         env:
@@ -130,23 +154,3 @@ jobs:
             --pr-number=$PR_NUMBER \
             --diff-file=$BUILD_OUT_ROOT/DIFF \
             $BUILD_OUT_ROOT
-
-      - name: Authenticate with GCP
-        if: env.HAS_ARTIFACT
-        uses: google-github-actions/auth@v2
-        with:
-          token_format: access_token
-          service_account: deploy-mdn-review-content@${{ secrets.GCP_PROJECT_NAME }}.iam.gserviceaccount.com
-          workload_identity_provider: projects/${{ secrets.WIP_PROJECT_ID }}/locations/global/workloadIdentityPools/github-actions/providers/github-actions
-
-      - name: Setup gcloud
-        if: env.HAS_ARTIFACT
-        uses: google-github-actions/setup-gcloud@v2
-
-      - name: Sync build with GCS
-        if: env.HAS_ARTIFACT
-        run: |-
-          PR_NUMBER=`cat build/NR`
-          PREFIX="pr$PR_NUMBER"
-          gsutil -q -m -h "Cache-Control: public, max-age=3600" cp -r build/static "gs://content-review-mdn/$PREFIX/"
-          gsutil -q -m -h "Cache-Control: public, max-age=3600" rsync -cdrj html,json,txt -y "^static/" build "gs://content-review-mdn/$PREFIX"

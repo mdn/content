@@ -25,7 +25,7 @@ The `size` attribute has no impact on constraint validation.
 <label for="lastName">Last Name:</label>
 <input id="lastName" name="lastName" type="text" size="20" />
 
-<label for="fruit">Favourite fruit:</label>
+<label for="fruit">Favorite fruit:</label>
 <select id="fruit" name="fruit" size="2">
   <option>Orange</option>
   <option>Banana</option>

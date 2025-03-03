@@ -32,7 +32,7 @@ The automation uses [`browser-compat`](/en-US/docs/MDN/Writing_guidelines/Page_s
 
 ## How are feature statuses specified in content?
 
-The following sections document the mechanisms that are used to insert and render feature status information in MDN documents. As mentioned, ythese should be considered read-only, as their inclusion in the content is automated.
+The following sections document the mechanisms that are used to insert and render feature status information in MDN documents. As mentioned, these should be considered read-only, as their inclusion in the content is automated.
 
 ### Feature status icons in sidebars
 

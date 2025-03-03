@@ -32,6 +32,7 @@ You can use this attribute with the following SVG elements:
 - {{SVGElement("animate")}}
 - {{SVGElement("animateMotion")}}
 - {{SVGElement("animateTransform")}}
+- {{SVGElement("discard")}}
 - {{SVGElement("feImage")}}
 - {{SVGElement("image")}}
 - {{SVGElement("linearGradient")}}
@@ -144,6 +145,32 @@ For {{SVGElement("feImage")}}, `href` defines a URL referring to an image resour
     <tr>
       <th scope="row">Animatable</th>
       <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
+
+### discard
+
+For {{SVGElement("discard")}}, `href` defines a URL referring to an element that will be discarded (removed from the DOM).
+If not specified, the immediate parent element of `<discard>` is discarded.
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <code
+          ><a href="/en-US/docs/Web/SVG/Content_type#url">&#x3C;url></a></code
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><em>None</em></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>No</td>
     </tr>
   </tbody>
 </table>

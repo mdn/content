@@ -7,6 +7,7 @@ Adham
 Adilah
 Akhgari
 alastairc
+Aldous
 Alexa
 alispivak
 Alman
@@ -58,6 +59,7 @@ Bixa
 Blackmoon
 Bloggs
 Bocoup
+Bodmin
 Boonie
 bottosson
 Boulton
@@ -172,6 +174,7 @@ Eisenberg
 Elchi
 Emscripten
 Endtest
+Ensatina
 Envato
 Ephesis
 Eplepsia
@@ -180,6 +183,7 @@ Erdös
 ericwbailey
 Esben
 ethertank
+Eventbrite
 Exljbris
 Fairchild
 FDCP
@@ -195,6 +199,7 @@ Flickr
 Florian
 flowplayer
 Fontsquirrel
+François
 Frederik
 Frida
 Fujisawa
@@ -207,6 +212,7 @@ Gerd
 gifplayer
 Gillenwater
 Gitbash
+Golightly
 Googlebot
 Grahl
 Granado
@@ -395,6 +401,7 @@ momot
 Montulli
 Moonrocks
 Mooog
+Morgawr
 Morinigo
 Mork
 Mothman
@@ -402,6 +409,8 @@ Moussavi
 mozhacks
 Mufasa
 Mullany
+Musa
+Musaceae
 Musicr
 Mustafa
 myshov
@@ -437,6 +446,7 @@ olliej
 OptiPNG
 Orendorff
 Osmani
+Owlman
 Paciello
 Pacman
 Pagella
@@ -529,6 +539,7 @@ Siouxsie
 Siri
 Sitepoint
 Sivonen
+Skeletor
 Skywalker
 Slaght
 SlimerJS

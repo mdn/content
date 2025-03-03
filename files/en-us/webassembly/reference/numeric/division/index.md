@@ -7,7 +7,27 @@ sidebar: webassemblysidebar
 
 The **`div`** instructions, short for _division_, are used for dividing one number by another, similar to the **`/`** operator in other languages.
 
-{{EmbedInteractiveExample("pages/wat/div.html", "tabbed-taller")}}
+{{InteractiveExample("Wat Demo: div", "tabbed-taller")}}
+
+```wat interactive-example
+(module
+  (import "console" "log" (func $log (param i32)))
+  (func $main
+    ;; load `12` and `3` onto the stack
+    i32.const 12
+    i32.const 3
+
+    i32.div_u ;; divide one number by the other
+    call $log ;; log the result
+  )
+  (start $main)
+)
+```
+
+```js interactive-example
+const url = "{%wasm-url%}";
+await WebAssembly.instantiateStreaming(fetch(url), { console });
+```
 
 ## Syntax
 
