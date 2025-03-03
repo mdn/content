@@ -2,10 +2,12 @@
 title: speak-as
 slug: Web/CSS/speak-as
 page-type: css-property
+status:
+  - experimental
 browser-compat: css.properties.speak-as
 ---
 
-{{CSSRef}}
+{{CSSRef}}{{SeeCompatTable}}
 
 The **`speak-as`** [CSS](/en-US/docs/Web/CSS) property is used to define how [HTML](/en-US/docs/Web/HTML) content is spoken. The one to three enumerated key terms determine the manner by which elements and text get rendered by aural technologies, such as {{glossary("screen reader", "screen readers")}} and digital assistants.
 
@@ -58,40 +60,40 @@ speak-as: spell-out digits no-punctuation;
 
 ### HTML
 
-```HTML
-  <p class="normal">Hello, world! I'm 25.</p>
-  <p class="spell-out">Hello, world! I'm 25.</p>
-  <p class="literal-punctuation">Hello, world! I'm 25.</p>
-  <p class="no-punctuation">Hello, world! I'm 25.</p>
-  <p class="digits">Hello, world! I'm 25.</p>
-  <p class="multi">Hello, world! I'm 25.</p>
+```html
+<p class="normal">Hello, world! I'm 25.</p>
+<p class="spell-out">Hello, world! I'm 25.</p>
+<p class="literal-punctuation">Hello, world! I'm 25.</p>
+<p class="no-punctuation">Hello, world! I'm 25.</p>
+<p class="digits">Hello, world! I'm 25.</p>
+<p class="multi">Hello, world! I'm 25.</p>
 ```
 
 ### CSS
 
-```CSS
-  .normal {
-    speak-as: normal;
-  }
+```css
+.normal {
+  speak-as: normal;
+}
 
-  .spell-out {
-    speak-as: spell-out;
-  }
+.spell-out {
+  speak-as: spell-out;
+}
 
-  .literal-punctuation {
-    speak-as: literal-punctuation;
-  }
+.literal-punctuation {
+  speak-as: literal-punctuation;
+}
 
-  .no-punctuation {
-    speak-as: no-punctuation;
-  }
+.no-punctuation {
+  speak-as: no-punctuation;
+}
 
-  .digits {
-    speak-as: digits;
-  }
- .multi {
-    speak-as: literal-punctuation digits;
- }
+.digits {
+  speak-as: digits;
+}
+.multi {
+  speak-as: literal-punctuation digits;
+}
 ```
 
 ## Specifications
