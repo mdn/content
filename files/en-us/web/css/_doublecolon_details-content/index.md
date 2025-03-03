@@ -2,12 +2,10 @@
 title: ::details-content
 slug: Web/CSS/::details-content
 page-type: css-pseudo-element
-status:
-  - experimental
 browser-compat: css.selectors.details-content
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
 The **`::details-content`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents the expandable/collapsible contents of a {{HTMLElement("details")}} element.
 

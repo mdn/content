@@ -87,6 +87,8 @@ footer {
 }
 ```
 
+Along with the above CSS, also include the [`<meta name="color-scheme">`](/en-US/docs/Web/HTML/Element/meta/name#color-scheme) HTML {{HTMLElement("meta")}} tag in the {{htmlelement("head")}}, before any CSS style information, to inform user agents about the preferred color scheme, helping prevent unwanted screen flashes during the page load.
+
 ### Styling based on color schemes
 
 To style elements based on color scheme preferences, use the [`prefers-color-scheme`](/en-US/docs/Web/CSS/@media/prefers-color-scheme) media query. The example below opts in the entire page to using both light and dark operating system color schemes via the `color-scheme` property, and then uses `prefers-color-scheme` to specify the desired foreground and background colors for individual elements in those color schemes.
@@ -111,7 +113,7 @@ To style elements based on color scheme preferences, use the [`prefers-color-sch
 }
 ```
 
-Alternatively, use the [`light-dark()`](/en-US/docs/Web/CSS/color_value/light-dark) [`<color>` function](/en-US/docs/Web/CSS/CSS_Functions#color_functions) to set the foreground and background colors for the different color schemes using a more compact code structure:
+Alternatively, use the [`light-dark()`](/en-US/docs/Web/CSS/color_value/light-dark) [`<color>` function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions#color_functions) to set the foreground and background colors for the different color schemes using a more compact code structure:
 
 ```css
 :root {

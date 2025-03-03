@@ -25,8 +25,8 @@ The specified value of `width` applies to the content area so long as its value 
 /* <length> values */
 width: 300px;
 width: 25em;
+width: anchor-size(width);
 width: anchor-size(--myAnchor inline, 120%);
-width: minmax(100px, anchor-size(width));
 
 /* <percentage> value */
 width: 75%;

@@ -7,7 +7,7 @@ browser-compat: css.types.filter-function.sepia
 
 {{CSSRef}}
 
-The **`sepia()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) converts the input image to sepia, giving it a warmer, more yellow/brown appearance. Its result is a {{cssxref("&lt;filter-function&gt;")}}.
+The **`sepia()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) converts the input image to sepia, giving it a warmer, more yellow/brown appearance. Its result is a {{cssxref("&lt;filter-function&gt;")}}.
 
 {{EmbedInteractiveExample("pages/css/function-sepia.html")}}
 
@@ -19,8 +19,8 @@ sepia(amount)
 
 ### Parameters
 
-- `amount`
-  - : The amount of the conversion, specified as a {{cssxref("&lt;number&gt;")}} or a {{cssxref("&lt;percentage&gt;")}}. A value of `100%` is completely sepia, while a value of `0%` leaves the input unchanged. Values between `0%` and `100%` are linear multipliers on the effect. The initial value for {{Glossary("interpolation")}} is `0`.
+- `amount` {{Optional_Inline}}
+  - : The amount of the conversion, specified as a {{cssxref("&lt;number&gt;")}} or a {{cssxref("&lt;percentage&gt;")}}. A value of `100%` is completely sepia, while a value of `0%` leaves the input unchanged. Values between `0%` and `100%` are linear multipliers on the effect. The initial value for {{Glossary("interpolation")}} is `0`. The default value is `1`.
 
 ## Formal syntax
 
@@ -33,7 +33,9 @@ sepia(amount)
 ```css
 sepia(0)     /* No effect */
 sepia(.65)   /* 65% sepia */
-sepia(100%)  /* Completely sepia */
+
+sepia()      /* Completely sepia */
+sepia(100%)
 ```
 
 ## Specifications

@@ -9,7 +9,33 @@ browser-compat: html.elements.style
 
 The **`<style>`** [HTML](/en-US/docs/Web/HTML) element contains style information for a document, or part of a document. It contains CSS, which is applied to the contents of the document containing the `<style>` element.
 
-{{EmbedInteractiveExample("pages/tabbed/style.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;style&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<style>
+  p {
+    color: #26b72b;
+  }
+  code {
+    font-weight: bold;
+  }
+</style>
+
+<p>
+  This text will be green. Inline styles take precedence over CSS included
+  externally.
+</p>
+
+<p style="color: blue">
+  The <code>style</code> attribute can override it, though.
+</p>
+```
+
+```css interactive-example
+p {
+  color: #f00;
+}
+```
 
 The `<style>` element must be included inside the {{htmlelement("head")}} of the document. In general, it is better to put your styles in external stylesheets and apply them using {{htmlelement("link")}} elements.
 
@@ -29,7 +55,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 - `nonce`
   - : A cryptographic nonce (number used once) used to allow inline styles in a [style-src Content-Security-Policy](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/style-src). The server must generate a unique nonce value each time it transmits a policy. It is critical to provide a nonce that cannot be guessed as bypassing a resource's policy is otherwise trivial.
 - `title`
-  - : This attribute specifies [alternative style sheet](/en-US/docs/Web/CSS/Alternative_style_sheets) sets.
+  - : This attribute specifies [alternative style sheet](/en-US/docs/Web/HTML/Attributes/rel/alternate_stylesheet) sets.
 
 ### Deprecated attributes
 
@@ -200,4 +226,4 @@ In this example we build on the previous one, including a `media` attribute on t
 ## See also
 
 - The {{HTMLElement("link")}} element, which allows us to apply external stylesheets to a document.
-- [Alternative Style Sheets](/en-US/docs/Web/CSS/Alternative_style_sheets)
+- [Alternative Style Sheets](/en-US/docs/Web/HTML/Attributes/rel/alternate_stylesheet)

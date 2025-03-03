@@ -52,7 +52,7 @@ Values of this type are strings. Possible values are:
 - `sub_frame`
   - : Documents loaded into an {{HTMLElement("iframe")}} or {{HTMLElement("frame")}} element.
 - `web_manifest`
-  - : [Web App Manifests](/en-US/docs/Web/Manifest) loaded for websites that can be installed to the homescreen.
+  - : [Web App Manifests](/en-US/docs/Web/Progressive_web_apps/Manifest) loaded for websites that can be installed to the homescreen.
 - `websocket`
   - : Requests initiating a connection to a server through the [WebSocket API](/en-US/docs/Web/API/WebSockets_API).
 - `xml_dtd`
