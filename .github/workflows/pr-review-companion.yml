@@ -45,6 +45,8 @@ jobs:
         if: hashFiles('build/') != ''
         run: |
           echo "HAS_ARTIFACT=true" >> "$GITHUB_ENV"
+          PR_NUMBER=`cat build/NR`
+          echo "PREFIX=pr$PR_NUMBER" >> "$GITHUB_ENV"
 
       - uses: actions/checkout@v4
         if: env.HAS_ARTIFACT
@@ -143,10 +145,12 @@ jobs:
         if: env.HAS_ARTIFACT
         uses: google-github-actions/setup-gcloud@v2
 
-      - name: Sync build with GCS
+      - name: Upload to GCS
         if: env.HAS_ARTIFACT
-        run: |-
-          PR_NUMBER=`cat build/NR`
-          PREFIX="pr$PR_NUMBER"
-          gsutil -q -m -h "Cache-Control: public, max-age=3600" cp -r build/static "gs://content-review-mdn/$PREFIX/"
-          gsutil -q -m -h "Cache-Control: public, max-age=3600" rsync -cdrj html,json,txt -y "^static/" build "gs://content-review-mdn/$PREFIX"
+        uses: google-github-actions/upload-cloud-storage@v2
+        with:
+          path: "build"
+          destination: "${{ vars.GCP_BUCKET_NAME }}/${{ env.PREFIX }}"
+          resumable: false
+          concurrency: 500
+          process_gcloudignore: false
