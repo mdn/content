@@ -88,109 +88,42 @@ The object returned for a match contains the following properties:
 
 ## Examples
 
-> [!WARNING]
-> Cookie examples do not run properly within the MDN environment because setting cookies results in an unknown error.
-> The examples can be tested by copying the source code and running it with a [local server](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server), or by [building this documentation locally](https://github.com/mdn/content?tab=readme-ov-file#build-the-site).
+<!-- The examples don't work as live examples in MDN environment (due to unknown errors) -->
 
 ### Getting a cookie by name
 
-In this example we get a particular cookie named `cookie1`, awaiting the returned promise, and logging the resolved object.
+This example shows how to get a particular cookie by name.
 
-```html hidden
-<button id="showCookies" type="button">Show cookie</button>
-<button id="reset" type="button">Reset</button>
-<pre id="log"></pre>
-```
-
-```css hidden
-#log {
-  height: 180px;
-  overflow: scroll;
-  padding: 0.5rem;
-  border: 1px solid black;
-}
-```
-
-```js hidden
-const reload = document.querySelector("#reset");
-
-reload.addEventListener("click", () => {
-  window.location.reload(true);
-});
-
-const logElement = document.querySelector("#log");
-
-function clearLog() {
-  logElement.innerText = "";
-}
-
-function log(text) {
-  logElement.innerText = `${logElement.innerText}${text}\n`;
-  logElement.scrollTop = logElement.scrollHeight;
-}
-```
-
-#### JavaScript
-
-The `cookieTest()` method is called when the **Show cookies** button is clicked.
-It first calls `setTestCookie()` to define a cookie, then waits on `get()` to retrieve information about that same cookie.
-If the returned promise resolves with an object we log the properties of the cookie: otherwise we log that no matching cookie was found.
+The code first creates a cookie named "cookie1" using {{domxref("CookieStore.set()")}}, logging any errors.
+It then waits on `get()` to retrieve information about that same cookie.
+If the returned promise resolves with an object we log the cookie: otherwise we log that no matching cookie was found.
 
 ```js
 async function cookieTest() {
   // Set test cookie
-  await setTestCookie();
+  try {
+    await cookieStore.set("cookie1", "cookie1-value");
+  } catch (error) {
+    console.log(`Error setting cookie1: ${error}`);
+  }
 
   // Get cookie, specifying name
   const cookie = await cookieStore.get("cookie1");
 
-  // Log the cookie object keys and values.
   if (cookie) {
-    log("cookie1:");
-    for (const [key, value] of Object.entries(cookie)) {
-      log(` ${key}: ${value}`);
-    }
+    console.log(cookie);
   } else {
-    log("cookie1: Cookie not found");
+    console.log("cookie1: Cookie not found");
   }
 }
+
+cookieTest();
 ```
 
-The code for `setTestCookie()` is shown here just "for your interest".
-Note that some logging and other code is omitted for brevity.
-
-```js
-async function setTestCookie() {
-  // Set two cookies
-  try {
-    await cookieStore.set("cookie1", "cookie1-value");
-  } catch (error) {
-    log(`Error setting cookie1: ${error}`);
-  }
-
-  try {
-    await cookieStore.set("cookie2", "cookie2-value");
-  } catch (error) {
-    log(`Error setting cookie2: ${error}`);
-  }
-}
-```
-
-```js hidden
-const showCookies = document.querySelector("#showCookies");
-
-showCookies.addEventListener("click", () => {
-  clearLog();
-  cookieTest();
-});
-```
-
-#### Result
-
-Press **Show cookie** to set the cookie and then display it.
+When run in a browser this will display information about "cookie1" in the console.
 Note that some browsers will only display the `name` and `value`, while others will display all the properties of the cookie.
 
-{{EmbedLiveSample('Getting a cookie by name', 100, 260)}}
+The code can be tested by copying it into a test harness and running it with a [local server](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server), or deploying it to a website site such as GitHub pages.
 
 ## Specifications
 
