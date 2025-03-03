@@ -20,6 +20,7 @@ sidebar:
           - /Web/MathML/Guides/Authoring
           - /Web/MathML/Guides/Fonts
   - type: section
+    link: /Web/MathML/Reference
     title: Reference
   - type: listSubPages
     path: /Web/MathML/Reference/Element
