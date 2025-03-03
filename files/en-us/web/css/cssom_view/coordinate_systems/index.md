@@ -28,7 +28,7 @@ To help visualize the main systems, the following diagram shows a monitor with a
 Page content that is scrolled outside of the viewport is shown as semi-transparent above the browser window to indicate where the origin for "page" coordinates would be.
 The origin of the "client", "page", and "viewport" coordinates systems are highlighted.
 
-![A large screen with a smaller browser rendering the bottom half of a web. The top half of the web page content is scrolled outside of the browser viewport. The top-left corners of the screen, page, and viewport are all labeled with coordinates of 0,0.](css-coords.svg)
+![A large screen with a smaller browser window rendering a web page's bottom half; the top half is scrolled outside the browser's viewport. The top-left corners of the screen, page, and viewport are all labeled with coordinates of 0,0.](css-coords.svg)
 
 ### Offset
 
