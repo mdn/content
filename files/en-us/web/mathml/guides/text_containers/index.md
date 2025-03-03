@@ -1,5 +1,5 @@
 ---
-title: MathML Text Containers
+title: MathML text containers
 slug: Web/MathML/Guides/Text_containers
 page-type: guide
 sidebar: mathmlref
