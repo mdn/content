@@ -19,8 +19,8 @@ invert(amount)
 
 ### Parameters
 
-- `amount`
-  - : The amount of the conversion, specified as a {{cssxref("&lt;number&gt;")}} or a {{cssxref("&lt;percentage&gt;")}}. A value of `100%` is completely inverted, while a value of `0%` leaves the input unchanged. Values between `0%` and `100%` are linear multipliers on the effect. The initial value for {{Glossary("interpolation")}} is `0`.
+- `amount` {{Optional_Inline}}
+  - : The amount of the conversion, specified as a {{cssxref("&lt;number&gt;")}} or a {{cssxref("&lt;percentage&gt;")}}. A value of `100%` is completely inverted, while a value of `0%` leaves the input unchanged. Values between `0%` and `100%` are linear multipliers on the effect. The initial value for {{Glossary("interpolation")}} is `0`. The default value is `1`.
 
 ## Formal syntax
 
@@ -33,7 +33,10 @@ invert(amount)
 ```css
 invert(0)     /* No effect */
 invert(.6)    /* 60% inversion */
-invert(100%)  /* Completely inverted */
+
+invert()      /* Completely inverted */
+invert(1)
+invert(100%)
 ```
 
 ## Specifications
