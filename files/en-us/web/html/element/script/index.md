@@ -163,13 +163,13 @@ If the script is blocked, an {{domxref("HTMLElement/error_event", "error")}} eve
 
 ### Basic usage
 
-These examples show how to import (an external) script using the `<script>` element.
+This example shows how to import (an external) script using the `<script>` element:
 
 ```html
 <script src="javascript.js"></script>
 ```
 
-And the following examples show how to put (an inline) script inside the `<script>` element.
+The following example shows how to put (an inline) script inside the `<script>` element:
 
 ```html
 <script>
