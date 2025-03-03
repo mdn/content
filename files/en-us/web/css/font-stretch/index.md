@@ -2,10 +2,12 @@
 title: font-stretch
 slug: Web/CSS/font-stretch
 page-type: css-property
+status:
+  - deprecated
 browser-compat: css.properties.font-stretch
 ---
 
-{{CSSRef}}
+{{CSSRef}}{{deprecated_header}}
 
 > [!NOTE]
 > The `font-stretch` property [has now been renamed to `font-width`](https://drafts.csswg.org/css-fonts/#font-stretch-desc) in the specifications. The name `font-stretch` has been kept as an alias for the `font-width` property.

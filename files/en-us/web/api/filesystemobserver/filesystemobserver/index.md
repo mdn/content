@@ -5,10 +5,11 @@ slug: Web/API/FileSystemObserver/FileSystemObserver
 page-type: web-api-constructor
 status:
   - experimental
+  - non-standard
 browser-compat: api.FileSystemObserver.FileSystemObserver
 ---
 
-{{APIRef("File System API")}}{{SeeCompatTable}}
+{{APIRef("File System API")}}{{SeeCompatTable}}{{non-standard_header}}
 
 The **`FileSystemObserver()`** constructor creates a new {{domxref("FileSystemObserver")}} object instance.
 
