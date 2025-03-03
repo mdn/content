@@ -61,6 +61,11 @@ The MDN [Accessibility Learning Area](/en-US/docs/Learn_web_development/Core/Acc
 - [Mobile accessibility](/en-US/docs/Learn_web_development/Core/Accessibility/Mobile)
   - : With web access on mobile devices being so popular and popular platforms such as iOS and Android having fully-fledged accessibility tools, it is important to consider the accessibility of your web content on these platforms. This article looks at mobile-specific accessibility considerations.
 
+## References
+
+- [ARIA reference](/en-US/docs/Web/Accessibility/ARIA/Reference)
+  - : Reference documentation for Accessible Rich Internet Applications (ARIA) attributes and roles.
+
 ## See also
 
 - [Developer guides](/en-US/docs/MDN/Guides)

@@ -1,5 +1,6 @@
 ---
 title: WAI-ARIA Roles
+short-title: Roles
 slug: Web/Accessibility/ARIA/Reference/Roles
 page-type: landing-page
 sidebar: accessibilitysidebar
