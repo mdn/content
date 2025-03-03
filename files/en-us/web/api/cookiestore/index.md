@@ -35,66 +35,15 @@ The `CookieStore` is accessed via attributes in the global scope in a {{domxref(
 
 ## Examples
 
-> [!WARNING]
-> Cookie examples do not run properly within the MDN environment because setting cookies results in an unknown error.
-> The examples can be tested by copying the source code and running it with a [local server](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server), or by [building this documentation locally](https://github.com/mdn/content?tab=readme-ov-file#build-the-site).
+The examples below can be tested by copying the code into a test harness and running it with a [local server](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server), or deploying it to a website site such as GitHub pages.
+
+<!-- The examples don't work as live examples in MDN environment (due to unknown errors) -->
 
 ### Setting cookies
 
-The following example sets cookies by passing a `name` and `value` and then by setting an `options` value.
+This example shows how to set cookies by passing a `name` and `value`, and by setting an `options` value.
 
-```html hidden
-<button id="showCookies" type="button">Show cookies</button>
-<button id="reset" type="button">Reset</button>
-<pre id="log"></pre>
-```
-
-```css hidden
-#log {
-  height: 300px;
-  overflow: scroll;
-  padding: 0.5rem;
-  border: 1px solid black;
-}
-```
-
-```js hidden
-const reload = document.querySelector("#reset");
-
-reload.addEventListener("click", () => {
-  window.location.reload(true);
-});
-
-const logElement = document.querySelector("#log");
-
-function clearLog() {
-  logElement.innerText = "";
-}
-
-function log(text) {
-  logElement.innerText = `${logElement.innerText}${text}\n`;
-  logElement.scrollTop = logElement.scrollHeight;
-}
-```
-
-```js hidden
-function logCookie(name, cookie) {
-  if (cookie) {
-    log(`${name}:`);
-    for (const [key, value] of Object.entries(cookie)) {
-      log(` ${key}: ${value}`);
-    }
-  } else {
-    log(`${name}: Cookie not found`);
-  }
-}
-```
-
-#### JavaScript
-
-The example code sets two cookies.
-The first is set with `name` and `value` properties, while the second is set with `name`, `value`, and `expires` properties.
-
+The `cookieTest()` method first sets a cookie with `name` and `value` properties, while the second is set with `name`, `value`, and `expires` properties.
 We then use the {{domxref("CookieStore.get()")}} method to get each of the cookies, which are then logged.
 
 ```js
@@ -103,7 +52,7 @@ async function cookieTest() {
   try {
     await cookieStore.set("cookie1", "cookie1-value");
   } catch (error) {
-    log(`Error setting cookie1: ${error}`);
+    console.log(`Error setting cookie1: ${error}`);
   }
 
   // Set cookie: passing options
@@ -114,6 +63,7 @@ async function cookieTest() {
       name: "cookie2",
       value: "cookie2-value",
       expires: Date.now() + day,
+      partitioned: true,
     });
   } catch (error) {
     log(`Error setting cookie2: ${error}`);
@@ -121,91 +71,27 @@ async function cookieTest() {
 
   // Get named cookies and log their properties
   const cookie1 = await cookieStore.get("cookie1");
-  logCookie("cookie1", cookie1);
+  console.log(cookie1);
 
   const cookie2 = await cookieStore.get("cookie2");
-  logCookie("cookie2", cookie2);
+  console.log(cookie2);
 }
+
+cookieTest();
 ```
 
-Note that some logging and other code is omitted for brevity.
-
-```js hidden
-const showCookies = document.querySelector("#showCookies");
-
-showCookies.addEventListener("click", () => {
-  clearLog();
-  cookieTest();
-});
-```
-
-#### Result
-
-Press **Show cookies** to set the cookies and then display them in the log below
 Note that some browsers will only display the `name` and `value`, while others will display all the properties of the cookie.
 Even if the values are not displayed, they are still set.
-
-{{EmbedLiveSample('Setting cookies', 100, 390)}}
 
 ### Getting cookies
 
 This example shows how you can get a particular cookie using {{domxref("CookieStore.get()")}} or all cookies using {{domxref("CookieStore.getAll()")}}.
 
-```html hidden
-<button id="showCookies" type="button">Show cookies</button>
-<button id="reset" type="button">Reset</button>
-<pre id="log"></pre>
-```
-
-```css hidden
-#log {
-  height: 600px;
-  overflow: scroll;
-  padding: 0.5rem;
-  border: 1px solid black;
-}
-```
-
-```js hidden
-const reload = document.querySelector("#reset");
-
-reload.addEventListener("click", () => {
-  window.location.reload(true);
-});
-
-const logElement = document.querySelector("#log");
-
-function clearLog() {
-  logElement.innerText = "";
-}
-
-function log(text) {
-  logElement.innerText = `${logElement.innerText}${text}\n`;
-  logElement.scrollTop = logElement.scrollHeight;
-}
-```
-
-```js hidden
-function logCookie(name, cookie) {
-  if (cookie) {
-    log(`${name}:`);
-    for (const [key, value] of Object.entries(cookie)) {
-      log(` ${key}: ${value}`);
-    }
-  } else {
-    log(`${name}: Cookie not found`);
-  }
-}
-```
-
-#### JavaScript
-
 The example code first sets three cookies that we'll use for demonstrating the get methods.
-
 First it creates `cookie1` and `cookie2` using the {{domxref("CookieStore.set()")}} method.
 Then it creates a third cookie using the older synchronous {{domxref("Document.cookie")}} property (just so we can show that these are also fetched using the `get()` and `getAll()` methods).
 
-The code then uses {{domxref("CookieStore.get()")}} to fetch "cookie1" and log its properties and {{domxref("CookieStore.getAll()")}} (without arguments) to fetch all cookies in the current context.
+The code then uses {{domxref("CookieStore.get()")}} to fetch "cookie1" and log its properties, and {{domxref("CookieStore.getAll()")}} (without arguments) to fetch all cookies in the current context.
 
 ```js
 async function cookieTest() {
@@ -213,7 +99,7 @@ async function cookieTest() {
   try {
     await cookieStore.set("cookie1", "cookie1-value");
   } catch (error) {
-    log(`Error setting cookie1: ${error}`);
+    console.log(`Error setting cookie1: ${error}`);
   }
 
   // Set a cookie passing an options object
@@ -226,7 +112,7 @@ async function cookieTest() {
       partitioned: true,
     });
   } catch (error) {
-    log(`Error setting cookie2: ${error}`);
+    console.log(`Error setting cookie2: ${error}`);
   }
 
   // Set cookie using document.cookie
@@ -235,119 +121,30 @@ async function cookieTest() {
 
   // Get named cookie and log properties
   const cookie1 = await cookieStore.get("cookie1");
-  logCookie("cookie1", cookie1);
+  console.log(cookie1);
 
   // Get all cookies and log each
   const cookies = await cookieStore.getAll();
   if (cookies.length > 0) {
-    log(`\ngetAll(): ${cookies.length}:`);
-    cookies.forEach((cookie) => logCookie(cookie.value, cookie));
+    console.log(`getAll(): ${cookies.length}:`);
+    cookies.forEach((cookie) => console.log(cookie));
   } else {
-    log("Cookies not found");
+    console.log("Cookies not found");
   }
 }
+
+cookieTest();
 ```
 
-Note that some logging and other code is omitted for brevity.
-
-```js hidden
-const showCookies = document.querySelector("#showCookies");
-
-showCookies.addEventListener("click", () => {
-  clearLog();
-  cookieTest();
-});
-```
-
-#### Result
-
-Press **Show cookies** to set the cookies and then display them in the log below.
-
-One thing to note is that the cookie created using {{domxref("Document.cookie")}} has a different default path than those created using `set()`.
-
-{{EmbedLiveSample('Getting cookies', 100, 670)}}
+The example should log "cookie1" and all three cookies separately.
+One thing to note is that the cookie created using {{domxref("Document.cookie")}} may have a different path than those created using {{domxref("CookieStore.set()","set()")}} (which defaults to `/`).
 
 ### Delete a named cookie
 
-In this example, we delete a cookie by passing its name to the {{domxref("CookieStore.delete()","delete()")}} method.
+This example shows how to delete a named cookie using the {{domxref("CookieStore.delete()","delete()")}} method.
 
-```html hidden
-<button id="showCookies" type="button">Show cookies</button>
-<button id="reset" type="button">Reset</button>
-<pre id="log"></pre>
-```
-
-```css hidden
-#log {
-  height: 100px;
-  overflow: scroll;
-  padding: 0.5rem;
-  border: 1px solid black;
-}
-```
-
-```js hidden
-const reload = document.querySelector("#reset");
-
-reload.addEventListener("click", () => {
-  window.location.reload(true);
-});
-
-const logElement = document.querySelector("#log");
-
-function clearLog() {
-  logElement.innerText = "";
-}
-
-function log(text) {
-  logElement.innerText = `${logElement.innerText}${text}\n`;
-  logElement.scrollTop = logElement.scrollHeight;
-}
-```
-
-```js hidden
-// List cookies
-async function getCookieNames() {
-  let names = "";
-  const cookies = await cookieStore.getAll();
-  if (cookies.length > 0) {
-    cookies.forEach((cookie) => (names += `${cookie.name} `));
-  }
-  return names;
-}
-
-// Delete cookies. Cleans up cookies from other examples.
-async function deleteAllCookies() {
-  const cookieNamesToDelete = (await cookieStore.getAll()).map(
-    (cookie) => cookie.name,
-  );
-
-  for (const name of cookieNamesToDelete) {
-    try {
-      await cookieStore.delete(name);
-      //log(` Deleted cookie: ${name}`);
-    } catch (error) {
-      //log(` Error deleting cookie ${name}:`, error);
-    }
-  }
-
-  //This deletes cookies that don't have default settings.
-  try {
-    await cookieStore.delete({ name: "cookie2", partitioned: true });
-    await cookieStore.delete({
-      name: "favorite_food",
-      path: "/en-US/docs/Web/API/CookieStore",
-    });
-  } catch (error) {
-    //log(` Error deleting cookie ${name}:`, error);
-  }
-}
-```
-
-#### JavaScript
-
-The code first sets two cookies.
-We then list the names of both cookies (code for getting the cookie names not shown), delete one of the cookies, and then list all cookie names again.
+The code first sets two cookies and logs them to the console.
+We then delete one of the cookies, and then list all cookies again.
 
 ```js
 async function cookieTest() {
@@ -355,44 +152,29 @@ async function cookieTest() {
   try {
     await cookieStore.set("cookie1", "cookie1-value");
   } catch (error) {
-    log(`Error setting cookie1: ${error}`);
+    console.log(`Error setting cookie1: ${error}`);
   }
 
   try {
     await cookieStore.set("cookie2", "cookie2-value");
   } catch (error) {
-    log(`Error setting cookie2: ${error}`);
+    console.log(`Error setting cookie2: ${error}`);
   }
 
-  // Log cookie names
-  log(`Initial cookies: ${await getCookieNames()}`);
+  // Log cookies
+  console.log("Initial cookies");
+  console.log(await cookieStore.getAll());
 
   // Delete cookie1
   await cookieStore.delete("cookie1");
 
-  // Log cookie names again (to show cookie1 deleted)
-  log(`Cookies after deleting cookie1: ${await getCookieNames()}`);
+  // Log cookies again (to show cookie1 deleted)
+  console.log("Cookies after deleting cookie1");
+  console.log(await cookieStore.getAll());
 }
 ```
 
-```js hidden
-const showCookies = document.querySelector("#showCookies");
-
-showCookies.addEventListener("click", async () => {
-  clearLog();
-  await deleteAllCookies();
-  await cookieTest();
-});
-```
-
-Note that some logging and other code is omitted for brevity.
-
-#### Result
-
-Press **Show cookies** to run the code above.
-This should show that the deleted cookie is present in the first list, and not in the second.
-
-{{EmbedLiveSample('Delete a named cookie', 100, 190)}}
+When run in a console we should see the deleted cookie ("cookie1") is present in the first log array, and not in the second.
 
 ## Specifications
 
