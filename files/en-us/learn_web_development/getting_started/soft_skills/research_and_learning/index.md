@@ -154,7 +154,7 @@ For example:
 
 ### Estimate how much time you'll need
 
-Next, you should start writing out a timeplan to achieve your goal. It can be as simple as:
+Next, you should start writing out a time plan to achieve your goal. It can be as simple as:
 
 "It'll take me about 500 hours to learn what I need to know, and I have a year to do it. If I assume 2 weeks of holiday, I'll need to work on this for 10 hours per week. I am free on evenings and weekends, so I'll plan my time around those."
 

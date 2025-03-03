@@ -31,7 +31,7 @@ The **`for`** attribute is an allowed attribute for {{htmlelement("label")}} and
 
 ```css interactive-example
 label[for="paragraph"] {
-  color: rebbeccapurple;
+  color: rebeccapurple;
 }
 
 #result {

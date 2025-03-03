@@ -782,6 +782,7 @@ TTSI
 tweens
 UAAG
 ufrag
+unabbreviate
 unbookmark
 uncacheable
 uncategorized

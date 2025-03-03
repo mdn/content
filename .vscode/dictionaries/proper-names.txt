@@ -7,6 +7,7 @@ Adham
 Adilah
 Akhgari
 alastairc
+Aldous
 Alexa
 alispivak
 Alman
@@ -172,6 +173,7 @@ Eisenberg
 Elchi
 Emscripten
 Endtest
+Ensatina
 Envato
 Ephesis
 Eplepsia
@@ -180,6 +182,7 @@ Erdös
 ericwbailey
 Esben
 ethertank
+Eventbrite
 Exljbris
 Fairchild
 FDCP
@@ -207,6 +210,7 @@ Gerd
 gifplayer
 Gillenwater
 Gitbash
+Golightly
 Googlebot
 Grahl
 Granado
@@ -402,6 +406,8 @@ Moussavi
 mozhacks
 Mufasa
 Mullany
+Musa
+Musaceae
 Musicr
 Mustafa
 myshov
@@ -437,6 +443,7 @@ olliej
 OptiPNG
 Orendorff
 Osmani
+Owlman
 Paciello
 Pacman
 Pagella
@@ -529,6 +536,7 @@ Siouxsie
 Siri
 Sitepoint
 Sivonen
+Skeletor
 Skywalker
 Slaght
 SlimerJS

@@ -21,22 +21,24 @@ By default, `<pre>` is a [block-level](/en-US/docs/Glossary/Block-level_content)
 
 ```html interactive-example
 <pre>
-  L          TE
-    A       A
-      C    V
-       R A
-       DOU
-       LOU
-      REUSE
-      QUE TU
-      PORTES
-    ET QUI T'
-    ORNE O CI
-     VILISÉ
-    OTE-  TU VEUX
-     LA    BIEN
-    SI      RESPI
-            RER       - Apollinaire
+             S
+             A
+            LUT
+             M
+            O N
+            D  E
+            DONT
+           E SUIS
+           LA LAN
+          G U E  E
+         L O Q U E N
+        TE      QUESA
+       B  O  U  C  H  E
+      O        P A R I S
+     T I R E   ET   TIRERA
+    T O U             JOURS
+   AUX                  A  L
+ LEM                      ANDS   - Apollinaire
 </pre>
 ```
 
