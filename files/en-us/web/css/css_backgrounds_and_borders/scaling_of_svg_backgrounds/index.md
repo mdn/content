@@ -431,4 +431,4 @@ The width is set by the CSS to 150px. The `auto` value for the height is compute
 ## See also
 
 - {{cssxref("background-size")}}
-- [CSS backgrounds and borders](/en-US/docs/CSS/CSS_backgrounds_and_borders) module
+- [CSS backgrounds and borders](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders) module
