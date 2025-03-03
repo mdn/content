@@ -9,18 +9,15 @@ Amete
 Azeri
 Badeshi
 Bhaiksuki
-Bodmin
 Bopomofo
 Chakma
 Chiki
 Citi
-Cryptids
 Côte
 d'Ivoire
 dakuten
 Divehi
 Fa'afafine
-Fernstraßenbauprivatfinanzierungsgesetz
 furigana
 Gannen
 Garay
@@ -53,7 +50,6 @@ Meetei
 Mihret
 Minguo
 Minh
-Morgawr
 Muhenkan
 Mundari
 Mundi

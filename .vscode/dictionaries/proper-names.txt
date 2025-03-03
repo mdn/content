@@ -59,6 +59,7 @@ Bixa
 Blackmoon
 Bloggs
 Bocoup
+Bodmin
 Boonie
 bottosson
 Boulton
@@ -198,6 +199,7 @@ Flickr
 Florian
 flowplayer
 Fontsquirrel
+François
 Frederik
 Frida
 Fujisawa
@@ -399,6 +401,7 @@ momot
 Montulli
 Moonrocks
 Mooog
+Morgawr
 Morinigo
 Mork
 Mothman

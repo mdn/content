@@ -162,12 +162,10 @@ gogerychwyrndrobwllllantysiliogogogoch
 Graece
 gubergren
 harborside
-Hearest
 hellonode
 HEXDIG
 hexdigit
 hiliteabeunti
-howtobeawizard
 howtoplay
 HUD5767ghtyfyr4536dh45dg45dg3
 idbkeyrange
@@ -188,7 +186,6 @@ jdoe
 Jgfbgfdgt
 jngl
 jnglstore
-JOURS
 js13kgames
 js13kpwa
 jsondata
@@ -205,6 +202,7 @@ leopardskin
 letmein
 libpkcs11testmodule
 librero
+livin
 liZhYMsy8MGgxUny6Q8NCoH9xSiviwLFfK
 Llanfair
 LLLLLLLLLLLLLLLLRRRRRRRRRRRRRRRR
@@ -244,6 +242,7 @@ notebox
 nytimes
 Odtsetseg
 Oggi
+Oozin
 opensas
 opensesame
 OPQRTUVXYZ
@@ -264,7 +263,6 @@ PXHQTXP
 Quaaaack
 quandong
 quaxxor
-QUESA
 quickbrownfox
 quxyz
 rebum
@@ -290,7 +288,6 @@ someelement
 Spartaaaaaaa
 spero
 srcs
-SUIS
 takimata
 tatsoi
 testuser
@@ -298,7 +295,6 @@ texmf
 theguardian
 thisisareallylongvariablenameman
 threejs
-TIRERA
 todomvc
 tomatillo
 topsecretpassword

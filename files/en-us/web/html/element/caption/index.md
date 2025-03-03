@@ -34,7 +34,7 @@ The **`<caption>`** [HTML](/en-US/docs/Web/HTML) element specifies the caption (
   <tr>
     <th scope="row">Dark secret</th>
     <td>Expert florist</td>
-    <td>Cries at romantic comedy</td>
+    <td>Cries at romcoms</td>
   </tr>
 </table>
 ```

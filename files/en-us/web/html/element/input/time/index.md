@@ -24,7 +24,7 @@ While the control's user interface appearance is based on the browser and operat
   max="18:00"
   required />
 
-<small>Office hours are 9 AM to 6 PM</small>
+<small>Office hours are 9am to 6pm</small>
 ```
 
 ```css interactive-example

@@ -15,7 +15,7 @@ The **`style`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) conta
 <div style="background: #ffe7e8; border: 2px solid #e66465">
   <p style="margin: 15px; line-height: 1.5; text-align: center">
     Well, I am the slime from your video<br />
-    Oozing along on your living room floor.
+    Oozin' along on your livin' room floor.
   </p>
 </div>
 ```
