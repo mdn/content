@@ -27,6 +27,7 @@ SVG drawings and images are created using a wide array of elements which are ded
 
 - {{SVGElement("defs")}}
 - {{SVGElement("desc")}}
+- {{SVGElement("discard")}}
 
 ### E
 
