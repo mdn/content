@@ -55,54 +55,16 @@ A {{jsxref("Promise")}} that resolves with {{jsxref("undefined")}} when the dele
 
 ## Examples
 
-> [!WARNING]
-> Cookie examples do not run properly within the MDN environment because setting cookies results in an unknown error.
-> The examples can be tested by copying the source code and running it with a [local server](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server), or by [building this documentation locally](https://github.com/mdn/content?tab=readme-ov-file#build-the-site).
+<!-- The examples don't work as live examples in MDN environment (due to unknown errors) -->
 
 ### Delete a named cookie
 
-In this example, a cookie is deleted by passing its name to the `delete()` method.
+This example shows how a cookie can be deleted by passing its name to the `delete()` method.
 
 This will work if the cookie to be deleted matches the cookie name and the default values of the [`options`](#options) above.
 This will be the case if the cookie was {{domxref("CookieStore/set","set()")}} using the just a name and value, but may not be if the cookie was created with options or using {{domxref("Document.cookie")}}.
 
-```html hidden
-<button id="showCookies" type="button">Show cookies</button>
-<button id="reset" type="button">Reset</button>
-<pre id="log"></pre>
-```
-
-```css hidden
-#log {
-  height: 100px;
-  overflow: scroll;
-  padding: 0.5rem;
-  border: 1px solid black;
-}
-```
-
-```js hidden
-const reload = document.querySelector("#reset");
-
-reload.addEventListener("click", () => {
-  window.location.reload(true);
-});
-
-const logElement = document.querySelector("#log");
-
-function clearLog() {
-  logElement.innerText = "";
-}
-
-function log(text) {
-  logElement.innerText = `${logElement.innerText}${text}\n`;
-  logElement.scrollTop = logElement.scrollHeight;
-}
-```
-
-#### JavaScript
-
-The code first defines `setTestCookies()`, which we'll call below to create some test cookies and log their names.
+The code first defines `setTestCookies()` which creates some test cookies and logs their names.
 
 ```js
 async function setTestCookies() {
@@ -110,109 +72,58 @@ async function setTestCookies() {
   try {
     await cookieStore.set("cookie1", "cookie1-value");
   } catch (error) {
-    log(`Error setting cookie1: ${error}`);
+    console.log(`Error setting cookie1: ${error}`);
   }
 
   try {
     await cookieStore.set("cookie2", "cookie2-value");
   } catch (error) {
-    log(`Error setting cookie2: ${error}`);
+    console.log(`Error setting cookie2: ${error}`);
   }
 
   // Log cookie names
   const cookieNames = (await cookieStore.getAll())
     .map((cookie) => cookie.name)
     .join(" ");
-  log(`Initial cookies: ${cookieNames}`);
+  console.log(`Initial cookies: ${cookieNames}`);
 }
 ```
 
-The `cookieTest()` method is called when the **Show cookies** button is clicked.
-This first calls the method to set the test cookies.
-
-We then delete cookie1 that we just created, and then list all cookie names again.
+The `cookieTest()` method calls `setTestCookies()`.
+It then deletes "cookie1" that we just created, and lists all cookie names again.
 
 ```js
 async function cookieTest() {
-  //Create our test cookies
+  // Create our test cookies
   await setTestCookies();
 
   // Delete cookie1
   try {
     await cookieStore.delete("cookie1");
   } catch (error) {
-    log(`Error deleting cookie1: ${error}`);
+    console.log(`Error deleting cookie1: ${error}`);
   }
 
   // Log cookie names again (to show cookie1 deleted)
   cookieNames = (await cookieStore.getAll())
     .map((cookie) => cookie.name)
     .join(" ");
-  log(`Cookies after deleting cookie1: ${cookieNames}`);
+  console.log(`Cookies after deleting cookie1: ${cookieNames}`);
 }
+
+cookieTest();
 ```
 
-```js hidden
-const showCookies = document.querySelector("#showCookies");
+When run, the console log should show that both cookie1 and cookie2 are present initially, but cookie1 is not listed after it has been deleted.
 
-showCookies.addEventListener("click", () => {
-  clearLog();
-  cookieTest();
-});
-```
-
-Note that some logging and other code is omitted for brevity.
-
-#### Result
-
-Press **Show cookies** to run the code above.
-This should show that both cookie1 and cookie2 are present initially, but cookie1 is not listed after it has been deleted.
-
-{{EmbedLiveSample('Delete a named cookie', 100, 190)}}
+The code can be tested by copying it into a test harness and running it with a [local server](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server), or deploying it to a website site such as GitHub pages.
 
 ### Delete a cookie with options
 
 This example is almost identical to the previous one, except it demonstrates that the options must match those of the cookie to be deleted.
-We define two cookies with the partitioned property set, and show that deletion only work in the case where this option is specified, and hence matches the cookie.
 
-```html hidden
-<button id="showCookies" type="button">Show cookies</button>
-<button id="reset" type="button">Reset</button>
-<pre id="log"></pre>
-```
-
-```css hidden
-#log {
-  height: 100px;
-  overflow: scroll;
-  padding: 0.5rem;
-  border: 1px solid black;
-}
-```
-
-```js hidden
-const reload = document.querySelector("#reset");
-
-reload.addEventListener("click", () => {
-  window.location.reload(true);
-});
-
-const logElement = document.querySelector("#log");
-
-function clearLog() {
-  logElement.innerText = "";
-}
-
-function log(text) {
-  logElement.innerText = `${logElement.innerText}${text}\n`;
-  logElement.scrollTop = logElement.scrollHeight;
-}
-```
-
-#### JavaScript
-
-The code first defines `setTestCookies()`, which we'll call below to create some test cookies and log their names.
-Note that in this case we have set `partitioned` to `true`.
+The code first defines `setTestCookies()`.
+This creates two cookies with the `partitioned` property set to `true`, and logs their names.
 
 ```js
 async function setTestCookies() {
@@ -224,7 +135,7 @@ async function setTestCookies() {
       partitioned: true,
     });
   } catch (error) {
-    log(`Error setting cookie1: ${error}`);
+    console.log(`Error setting cookie1: ${error}`);
   }
 
   try {
@@ -234,25 +145,20 @@ async function setTestCookies() {
       partitioned: true,
     });
   } catch (error) {
-    log(`Error setting cookie2: ${error}`);
+    console.log(`Error setting cookie2: ${error}`);
   }
 
   // Log cookie names
   const cookieNames = (await cookieStore.getAll())
     .map((cookie) => cookie.name)
     .join(" ");
-  log(`Initial cookies: ${cookieNames}`);
+  console.log(`Initial cookies: ${cookieNames}`);
 }
 ```
 
-The `cookieTest()` method is called when the **Show cookies** button is clicked.
-This first calls the method to set the test cookies and list them.
-
-The code then attempts to delete cookie1 using just the name, which should fail because cookie1 is partitioned, and will not match.
-It then attempts to delete cookie2, specifying both the name and `partitioned` options, which should succeed.
-
-> [!NOTE]
-> The deletion silently fails if the cookies to be deleted does not match.
+The `cookieTest()` method calls `setTestCookies()`.
+It then attempts to delete the cookies named "cookie1", specifying its name, and "cookie2" specifying its name and `partitioned: true`.
+The method then lists the cookie names again.
 
 ```js
 async function cookieTest() {
@@ -273,118 +179,42 @@ async function cookieTest() {
       partitioned: true,
     });
   } catch (error) {
-    log(`Error deleting cookie2: ${error}`);
+    console.log(`Error deleting cookie2: ${error}`);
   }
 
   // Log cookie names again (to show cookie1 deleted)
   cookieNames = (await cookieStore.getAll())
     .map((cookie) => cookie.name)
     .join(" ");
-  log(`Cookies after deleting cookie1: ${cookieNames}`);
+  console.log(`Cookies after deleting cookie1: ${cookieNames}`);
 }
+
+cookieTest();
 ```
 
-```js hidden
-const showCookies = document.querySelector("#showCookies");
+When run, the console log should show that both "cookie1" and "cookie2" are present initially, but "cookie2" is not listed afterwards.
+The cookie named "cookie1" is still present because it does not match the cookies specified in the `delete()` call.
 
-showCookies.addEventListener("click", () => {
-  clearLog();
-  cookieTest();
-});
-```
+> [!NOTE]
+> The deletion silently fails if the cookies to be deleted does not match.
 
-Note that some logging and other code is omitted for brevity.
-
-#### Result
-
-Press **Show cookies** to run the code above.
-This should show that both cookie1 and cookie2 are present initially, but cookie2 is not listed afterwards.
-
-{{EmbedLiveSample('Delete a cookie with options', 100, 190)}}
+The code can be tested by copying it into a test harness and running it with a [local server](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server), or deploying it to a website site such as GitHub pages.
 
 ### Delete cookies created using document.cookies
 
-`delete()` can be used to delete any cookies, including those created using {{domxref("document.cookie")}}.
+This example shows how we can use `delete()` to remove a cookie created using {{domxref("document.cookie")}}.
 
-Note however that unlike cookies created with {{domxref("CookieStore.set()")}}, which have a default [`path`](#path) of `/`, cookies created with `document.cookie` have a default path equal to the path of the document they are created in.
-In order to delete them you have to know this path, which means that you must either set it to a default value such as `/`, or store it.
+A potential issue is that cookies created with `document.cookie` have a default path equal to the path of the document they are created in (unlike cookies created with {{domxref("CookieStore.set()")}}, which have a default [`path`](#path) of `/`).
+In order to be able to know the path later when we match the cookie, we can explicitly set the value when creating the cookie.
 
 > [!NOTE]
 > On some browsers you could read the path and other properties from {{domxref("CookieStore.get()")}} or {{domxref("CookieStore.getAll()")}}.
 > This does not work on Firefox.
 
-This example demonstrates how you might set the default path when creating a cookie with {{domxref("document.cookie")}}, so that you can then delete it.
+The example code below first creates two cookies "doc_cookie1" and "doc_cookie2" using `document.cookie` and logs their names.
 
-```html hidden
-<button id="showCookies" type="button">Show cookies</button>
-<button id="reset" type="button">Reset</button>
-<pre id="log"></pre>
-```
-
-```css hidden
-#log {
-  height: 100px;
-  overflow: scroll;
-  padding: 0.5rem;
-  border: 1px solid black;
-}
-```
-
-```js hidden
-const reload = document.querySelector("#reset");
-
-reload.addEventListener("click", () => {
-  window.location.reload(true);
-});
-
-const logElement = document.querySelector("#log");
-
-function clearLog() {
-  logElement.innerText = "";
-}
-
-function log(text) {
-  logElement.innerText = `${logElement.innerText}${text}\n`;
-  logElement.scrollTop = logElement.scrollHeight;
-}
-```
-
-#### JavaScript
-
-The code first defines `setTestCookies()`, which we'll call below to create some test cookies and log their names.
-Note that in this case we have set `partitioned` to `true`.
-
-```js
-async function setTestCookies() {
-  // Set two cookies
-  try {
-    await cookieStore.set({
-      name: "cookie1",
-      value: `cookie1-value`,
-      partitioned: true,
-    });
-  } catch (error) {
-    log(`Error setting cookie1: ${error}`);
-  }
-
-  try {
-    await cookieStore.set({
-      name: "cookie2",
-      value: `cookie2-value`,
-      partitioned: true,
-    });
-  } catch (error) {
-    log(`Error setting cookie2: ${error}`);
-  }
-}
-```
-
-The `cookieTest()` method is called when the **Show cookies** button is clicked.
-This creates two cookies using `document.cookie`.
-We don't know the path of `doc_cookie1`, but we explicitly set the path of `doc_cookie2` to the default expected by `delete()`.
-
-> [!NOTE]
-> The deletion silently fails if the cookies to be deleted does not match.
+The first cookie uses the default path, which will depend on where the cookies is deployed, while the second sets the path to `/`.
+The code then deletes both cookies without specifying a `path` match option, and lists the cookies again.
 
 ```js
 async function cookieTest() {
@@ -421,25 +251,15 @@ async function cookieTest() {
     .join(" ");
   log(`Cookies attempting deletion: ${cookieNames}`);
 }
+
+cookieTest();
 ```
 
-```js hidden
-const showCookies = document.querySelector("#showCookies");
+When run, the console log should show that both "doc_cookie1" and "doc_cookie2" are present initially.
+Afterwards `doc_cookie2` should not be present: it will have been deleted because its path matches the default path used by `delete()`.
+The cookie `doc_cookie2` will be removed if the code is run from a page in the root, but otherwise will not match the path, and hence not be removed.
 
-showCookies.addEventListener("click", () => {
-  clearLog();
-  cookieTest();
-});
-```
-
-Note that some logging and other code is omitted for brevity.
-
-#### Result
-
-Press **Show cookies** to run the code above.
-This should show that both cookie1 and cookie2 are present initially, but cookie2 is not listed afterwards.
-
-{{EmbedLiveSample('Delete cookies created using document.cookies', 100, 190)}}
+The code can be tested by copying it into a test harness and running it with a [local server](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server), or deploying it to a website site such as GitHub pages.
 
 ## Specifications
 
