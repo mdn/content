@@ -22,6 +22,8 @@ This article provides information about the changes in Firefox 137 that affect d
 
 ### JavaScript
 
+- The {{jsxref("Math.sumPrecise()")}} static method is now supported. This takes an [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol) (such as an {{jsxref("Array")}}) of numbers and returns their sum. It is more precise than summing the numbers in a loop because it avoids floating point precision loss in intermediate results. ([Firefox bug 1943120](https://bugzil.la/1943120)).
+
 #### Removals
 
 ### SVG
