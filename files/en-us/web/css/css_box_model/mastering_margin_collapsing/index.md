@@ -80,7 +80,7 @@ p {
   - [Inheritance](/en-US/docs/Web/CSS/CSS_cascade/Inheritance)
   - [Box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
   - [Layout modes](/en-US/docs/Web/CSS/Layout_mode)
-  - [Visual formatting models](/en-US/docs/Web/CSS/Visual_formatting_model)
+  - [Visual formatting model](/en-US/docs/Web/CSS/Visual_formatting_model)
   - Values
     - [Initial values](/en-US/docs/Web/CSS/CSS_cascade/initial_value)
     - [Computed values](/en-US/docs/Web/CSS/CSS_cascade/computed_value)
