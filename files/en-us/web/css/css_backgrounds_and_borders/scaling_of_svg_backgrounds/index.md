@@ -54,7 +54,7 @@ svg {
 
 #### Result
 
-{{ EmbedLiveSample('Dimensionless_and_proportionless', 440, 185) }}
+{{ EmbedLiveSample('Dimensionless_and_proportionless', 200, 200) }}
 
 ### One specified dimension and proportionless
 
@@ -80,7 +80,7 @@ svg {
 }
 ```
 
-{{ EmbedLiveSample('One specified dimension and proportionless', 440, 185) }}
+{{ EmbedLiveSample('One specified dimension and proportionless', 200, 200) }}
 
 ### One specified dimension with intrinsic ratio
 
@@ -112,7 +112,7 @@ svg {
 }
 ```
 
-{{ EmbedLiveSample('One specified dimension with intrinsic ratio', 440, 185) }}
+{{ EmbedLiveSample('One specified dimension with intrinsic ratio', 200, 200) }}
 
 ### No width or height with intrinsic ratio
 
@@ -141,11 +141,20 @@ svg {
 }
 ```
 
-{{ EmbedLiveSample('No width or height with intrinsic ratio', 440, 185) }}
+{{ EmbedLiveSample('No width or height with intrinsic ratio', 200, 200) }}
 
 ## Scaling examples
 
 Now let's see some examples of what happens as we apply different scaling to these images. In each of the examples below, the enclosing rectangles are 300 pixels wide and 200 pixels tall. In addition, the backgrounds have {{ cssxref("background-repeat") }} set to no-repeat for clarity.
+
+```css
+div {
+  width: 300px;
+  height: 200px;
+  background-repeat: no-repeat;
+  border: 2px solid black;
+}
+```
 
 ### Specifying fixed lengths for both dimensions
 
@@ -153,18 +162,12 @@ If you use {{ cssxref("background-size") }} to specify fixed lengths for both di
 
 #### Source: No dimensions or intrinsic ratio
 
-```html hidden
-<p>Set background size</p>
-```
-
 Given this CSS:
 
 ```css
-body {
+div {
   background: url(no-dimensions-or-ratio.svg);
   background-size: 125px 175px;
-  height: 100vh;
-  width: 100vw;
 }
 ```
 
@@ -177,24 +180,28 @@ The rendered output is:
 Given this CSS:
 
 ```css
-background: url(100px-wide-no-height-or-ratio.svg);
-background-size: 250px 150px;
+div {
+  background: url(100px-wide-no-height-or-ratio.svg);
+  background-size: 250px 150px;
+}
 ```
 
-The rendered output would look like this:
+This is rendered as:
 
-{{ EmbedLiveSample('Source: No dimensions or intrinsic ratio', 200, 200) }}
+{{ EmbedLiveSample('Source: One specified dimension, no intrinsic ratio', 200, 200) }}
 
 #### Source: One specified dimension with intrinsic ratio
 
 Given this CSS:
 
 ```css
-background: url(100px-height-3x4-ratio.svg);
-background-size: 275px 125px;
+div {
+  background: url(100px-height-3x4-ratio.svg);
+  background-size: 275px 125px;
+}
 ```
 
-The rendered output would look like this:
+This is rendered as:
 
 {{ EmbedLiveSample('Source: No dimensions or intrinsic ratio', 200, 200) }}
 
@@ -203,11 +210,13 @@ The rendered output would look like this:
 Given this CSS:
 
 ```css
-background: url(no-dimensions-1x1-ratio.svg);
-background-size: 250px 100px;
+div {
+  background: url(no-dimensions-1x1-ratio.svg);
+  background-size: 250px 100px;
+}
 ```
 
-The rendered output would look like this:
+This is rendered as:
 
 {{ EmbedLiveSample('Source: No dimensions or intrinsic ratio', 200, 200) }}
 
@@ -222,8 +231,10 @@ For an image with an intrinsic ratio, exactly one size matches the `cover`/fit c
 If an image doesn't specify either dimensions or an intrinsic ratio, neither rule 2 nor rule 3 apply, so rule 4 takes over: the background image is rendered covering the entire background area. This satisfies the largest-or-smallest constraint.
 
 ```css
-background: url(no-dimensions-or-ratio.svg);
-background-size: contain;
+div {
+  background: url(no-dimensions-or-ratio.svg);
+  background-size: contain;
+}
 ```
 
 The rendered output looks like this:
@@ -235,8 +246,10 @@ The rendered output looks like this:
 Similarly, if the image has one dimension specified but no intrinsic ratio, rule 4 applies, and the image is scaled to cover the entire background area.
 
 ```css
-background: url(100px-wide-no-height-or-ratio.svg);
-background-size: contain;
+div {
+  background: url(100px-wide-no-height-or-ratio.svg);
+  background-size: contain;
+}
 ```
 
 The rendered output looks like this:
@@ -250,8 +263,10 @@ Things change when you specify an intrinsic ratio. In this case, rule 1 isn't re
 ##### contain case
 
 ```css
-background: url(100px-height-3x4-ratio.svg);
-background-size: contain;
+div {
+  background: url(100px-height-3x4-ratio.svg);
+  background-size: contain;
+}
 ```
 
 The rendered output looks like this:
@@ -263,8 +278,10 @@ Notice how the entire image is rendered, fitting as best as possible into the bo
 ##### cover case
 
 ```css
-background: url(100px-height-3x4-ratio.svg);
-background-size: cover;
+div {
+  background: url(100px-height-3x4-ratio.svg);
+  background-size: cover;
+}
 ```
 
 The rendered output looks like this:
@@ -280,8 +297,10 @@ When using an image with no intrinsic dimensions but an intrinsic ratio, things 
 ##### contain case
 
 ```css
-background: url(no-dimensions-1x1-ratio.svg);
-background-size: contain;
+div {
+  background: url(no-dimensions-1x1-ratio.svg);
+  background-size: contain;
+}
 ```
 
 The rendered output looks like this:
@@ -293,8 +312,10 @@ Notice that the image is sized to fit the smallest dimension while preserving th
 ##### cover case
 
 ```css
-background: url(no-dimensions-1x1-ratio.svg);
-background-size: cover;
+div {
+  background: url(no-dimensions-1x1-ratio.svg);
+  background-size: cover;
+}
 ```
 
 The rendered output looks like this:
@@ -312,8 +333,10 @@ If {{ cssxref("background-size") }} is set to `auto` or `auto auto`, rule 2 says
 When no intrinsic ratio or dimensions are specified by the source image, rule 4 takes effect, and the image is rendered to fill the background area.
 
 ```css
-background: url(no-dimensions-or-ratio.svg);
-background-size: auto auto;
+div {
+  background: url(no-dimensions-or-ratio.svg);
+  background-size: auto auto;
+}
 ```
 
 The rendered output looks like this:
@@ -325,8 +348,10 @@ The rendered output looks like this:
 If no intrinsic ratio is specified, but at least one dimension is specified, rule 3 takes effect, and we render the image obeying those dimensions.
 
 ```css
-background: url(100px-wide-no-height-or-ratio.svg);
-background-size: auto auto;
+div {
+  background: url(100px-wide-no-height-or-ratio.svg);
+  background-size: auto auto;
+}
 ```
 
 The rendered output looks like this:
@@ -340,8 +365,10 @@ Note here that the width, which is specified in the source SVG at 100 pixels, is
 If we have an intrinsic ratio with a fixed dimension, that fixes both dimensions in place. Knowing one dimension and a ratio is, as has been mentioned already, the same as specifying both dimensions explicitly.
 
 ```css
-background: url(100px-height-3x4-ratio.svg);
-background-size: auto auto;
+div {
+  background: url(100px-height-3x4-ratio.svg);
+  background-size: auto auto;
+}
 ```
 
 The rendered output looks like this:
@@ -355,8 +382,10 @@ Since this image has an explicit 100 pixel height, the 3:4 ratio explicitly sets
 When an intrinsic ratio is specified, but no dimensions, rule 4 is applied — except that rule 2 also applies. The image is therefore rendered just like for the `contain` case.
 
 ```css
-background: url(no-dimensions-1x1-ratio.svg);
-background-size: auto auto;
+div {
+  background: url(no-dimensions-1x1-ratio.svg);
+  background-size: auto auto;
+}
 ```
 
 The rendered output looks like this:
@@ -372,8 +401,10 @@ Given rule 1, specified dimensions are always used, so we need to use our rules 
 If the image has no dimensions or intrinsic ratio, rule 4 applies, and we use the background area's dimension to determine the value for the `auto` dimension.
 
 ```css
-background: url(no-dimensions-or-ratio.svg);
-background-size: auto 150px;
+div {
+  background: url(no-dimensions-or-ratio.svg);
+  background-size: auto 150px;
+}
 ```
 
 {{ EmbedLiveSample('Source: No dimensions or intrinsic ratio', 200, 200) }}
@@ -384,21 +415,25 @@ Here, the width is determined using the background area's width per rule 4, whil
 
 If the image has one specified dimension but no intrinsic ratio, that specified dimension is used per rule 3 if that dimension is set to `auto` in the CSS.
 
-```css
-background: url(100px-wide-no-height-or-ratio.svg);
-background-size: 200px auto;
+```css live-sample___auto1
+div {
+  background: url(100px-wide-no-height-or-ratio.svg);
+  background-size: 200px auto;
+}
 ```
 
-{{ EmbedLiveSample('Source: No dimensions or intrinsic ratio', 200, 200) }}
+{{ EmbedLiveSample('auto1', 200, 200) }}
 
 Here, the 200px specified in the CSS overrides the 100px width specified in the SVG, per rule 1. Since there's no intrinsic ratio or height provided, `auto` selects the height of the background area as the height for the rendered image.
 
-```css
-background: url(100px-wide-no-height-or-ratio.svg);
-background-size: auto 125px;
+```css live-sample___auto2
+div {
+  background: url(100px-wide-no-height-or-ratio.svg);
+  background-size: auto 125px;
+}
 ```
 
-{{ EmbedLiveSample('Source: No dimensions or intrinsic ratio', 200, 200) }}
+{{ EmbedLiveSample('auto2', 200, 200) }}
 
 In this case, the width is specified as auto in the CSS, so the 100px width specified in the SVG is selected, per rule 3. The height is set at 125px in the CSS, so that is selected per rule 1.
 
@@ -407,11 +442,13 @@ In this case, the width is specified as auto in the CSS, so the 100px width spec
 When a dimension is specified, rule 1 applies that dimension from the SVG to the rendered background unless specifically overridden by the CSS. When an intrinsic ratio is also specified, that's used to determine the other dimension.
 
 ```css
-background: url(100px-height-3x4-ratio.svg);
-background-size: 150px auto;
+div {
+  background: url(100px-height-3x4-ratio.svg);
+  background-size: 150px auto;
+}
 ```
 
-{{ EmbedLiveSample('Source: No dimensions or intrinsic ratio', 200, 200) }}
+{{ EmbedLiveSample('Source: One specified dimension with intrinsic ratio', 200, 200) }}
 
 In this case, we use the width of the image specified in the CSS set at 150px, so rule 1 is applied. The intrinsic 3:4 aspect ratio then determines the height for the `auto` case.
 
@@ -420,11 +457,13 @@ In this case, we use the width of the image specified in the CSS set at 150px, s
 If no dimensions are specified in the SVG, the specified dimension in the CSS is applied, then the intrinsic ratio is used to select the other dimension, per rule 2.
 
 ```css
-background: url(no-dimensions-1x1-ratio.svg);
-background-size: 150px auto;
+div {
+  background: url(no-dimensions-1x1-ratio.svg);
+  background-size: 150px auto;
+}
 ```
 
-{{ EmbedLiveSample('Source: No dimensions or intrinsic ratio', 200, 200) }}
+{{ EmbedLiveSample('Source: No specified dimensions with intrinsic ratio', 200, 200) }}
 
 The width is set by the CSS to 150px. The `auto` value for the height is computed using that width and the 1:1 aspect ratio to be 150px as well, resulting in the image above.
 
