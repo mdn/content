@@ -7,7 +7,28 @@ sidebar: webassemblysidebar
 
 The **`convert`** instructions, are used for converting integer numbers to floating point numbers. There are signed and unsigned versions of this instruction.
 
-{{EmbedInteractiveExample("pages/wat/convert.html", "tabbed-taller")}}
+{{InteractiveExample("Wat Demo: convert", "tabbed-taller")}}
+
+```wat interactive-example
+(module
+  (import "console" "log" (func $log (param f32)))
+  (func $main
+
+    i32.const 10 ;; push an i32 onto the stack
+
+    f32.convert_i32_s ;; convert from signed i32 to f32
+
+    call $log ;; log the result
+
+  )
+  (start $main)
+)
+```
+
+```js interactive-example
+const url = "{%wasm-url%}";
+await WebAssembly.instantiateStreaming(fetch(url), { console });
+```
 
 ## Syntax
 

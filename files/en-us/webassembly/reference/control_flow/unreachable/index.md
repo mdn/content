@@ -7,7 +7,23 @@ sidebar: webassemblysidebar
 
 **`unreachable`** is used to denote a point in code that should not be reachable. `unreachable` is an unconditional trap: in the case where an `unreachable` is reached and executed, the instruction traps.
 
-{{EmbedInteractiveExample("pages/wat/unreachable.html", "tabbed-shorter")}}
+{{InteractiveExample("Wat Demo: unreachable", "tabbed-shorter")}}
+
+```wat interactive-example
+(module
+  (func (export "throw")
+    unreachable
+  )
+)
+```
+
+```js interactive-example
+const url = "{%wasm-url%}";
+await WebAssembly.instantiateStreaming(fetch(url)).then((result) => {
+  result.instance.exports.throw();
+  // Expected output: RuntimeError: unreachable
+});
+```
 
 ## Syntax
 

@@ -54,3 +54,7 @@ This element implements the [`SVGAnimateTransformElement`](/en-US/docs/Web/API/S
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{SVGElement("discard")}}
