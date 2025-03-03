@@ -11,7 +11,65 @@ The **`::slotted()`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/We
 
 This only works when used inside CSS placed within a [shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM). Note that this selector won't select a text node placed into a slot; it only targets actual elements.
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-element-slotted.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: ::slotted()", "tabbed-shorter")}}
+
+```css interactive-example
+/* This CSS is being applied inside the shadow DOM. */
+
+::slotted(.content) {
+  background-color: aqua;
+}
+
+h2 ::slotted(span) {
+  background: silver;
+}
+```
+
+```html interactive-example
+<template id="card-template">
+  <div>
+    <h2><slot name="caption">title goes here</slot></h2>
+    <slot name="content">content goes here</slot>
+  </div>
+</template>
+
+<my-card>
+  <span slot="caption">Error</span>
+  <p class="content" slot="content">Build failed!</p>
+</my-card>
+```
+
+```js interactive-example
+customElements.define(
+  "my-card",
+  class extends HTMLElement {
+    constructor() {
+      super();
+
+      const template = document.getElementById("card-template");
+      const shadow = this.attachShadow({ mode: "open" });
+      shadow.appendChild(template.content.cloneNode(true));
+
+      const elementStyle = document.createElement("style");
+      elementStyle.textContent = `
+        div {
+          width: 200px;
+          border: 2px dotted red;
+          border-radius: 4px;
+        }`;
+      shadow.appendChild(elementStyle);
+
+      const cssTab = document.querySelector("#css-output");
+      const editorStyle = document.createElement("style");
+      editorStyle.textContent = cssTab.textContent;
+      shadow.appendChild(editorStyle);
+      cssTab.addEventListener("change", () => {
+        editorStyle.textContent = cssTab.textContent;
+      });
+    }
+  },
+);
+```
 
 ```css
 /* Selects any element placed inside a slot */

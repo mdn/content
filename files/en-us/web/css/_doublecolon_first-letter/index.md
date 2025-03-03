@@ -9,7 +9,28 @@ browser-compat: css.selectors.first-letter
 
 The **`::first-letter`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) applies styles to the first letter of the first line of a [block container](/en-US/docs/Web/CSS/Visual_formatting_model#block_containers), but only when not preceded by other content (such as images or inline tables).
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-element-first-letter.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: ::first-letter", "tabbed-shorter")}}
+
+```css interactive-example
+p::first-letter {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: brown;
+}
+```
+
+```html interactive-example
+<p>
+  Scientists exploring the depths of Monterey Bay unexpectedly encountered a
+  rare and unique species of dragonfish. This species is the rarest of its
+  species.
+</p>
+
+<p>
+  When Robison and a team of researchers discovered this fish, they were aboard
+  a week-long expedition.
+</p>
+```
 
 The first letter of an element is not always trivial to identify:
 

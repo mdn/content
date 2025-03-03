@@ -26,8 +26,8 @@ A string identifying the platform on which the user's browser is running; for ex
 ```js
 const modifierKeyPrefix =
   navigator.platform.startsWith("Mac") || navigator.platform === "iPhone"
-    ? "^" // control key
-    : "⌘"; // command key
+    ? "⌘" // command key
+    : "^"; // control key
 ```
 
 That is, check if `navigator.platform` starts with `"Mac"` or else is an exact match for `"iPhone"`, and then based on whether either of those is true, choose the modifier key your web application's UI will advise users to press in keyboard shortcuts.

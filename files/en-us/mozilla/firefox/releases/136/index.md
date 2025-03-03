@@ -23,6 +23,7 @@ This article provides information about the changes in Firefox 136 that affect d
 
 - The {{CSSXRef(":has-slotted")}} [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) is used to style elements in {{HTMLElement("template")}} that have content added to a {{HTMLElement("slot")}} element when rendering a [web component](/en-US/docs/Web/API/Web_components) ([Firefox bug 1940691](https://bugzil.la/1940691)).
 - The [`:open`](/en-US/docs/Web/CSS/:open) pseudo-class is now supported and allows you to select any element that is currently in an open state, this applies to the {{htmlelement("details")}}, {{htmlelement("dialog")}}, {{htmlelement("input")}} elements with a picker and {{htmlelement("select")}} elements which present a drop-down box. ([Firefox bug 1936113](https://bugzil.la/1936113)).
+- The {{cssxref("gradient")}} CSS functions {{cssxref("linear-gradient")}}, {{cssxref("conic-gradient")}}, and {{cssxref("radial-gradient")}} now allow a single color stop and 0-1 positions. This produces a single solid color and is used in setting the {{cssxref("mask")}} CSS property. ([Firefox bug 1900530](https://bugzil.la/1900530)).
 
 #### Removals
 
@@ -86,14 +87,24 @@ This article provides information about the changes in Firefox 136 that affect d
 
 #### General
 
+- Firefox now handles WebSocket port conflicts for the RemoteAgent more efficiently. If the port specified via the `--remote-debugging-port` command line argument cannot be acquired within 5 seconds, such as when another Firefox process is already using it, Firefox will now shut down instead of hanging ([Firefox bug 1927721](https://bugzilla.mozilla.org/show_bug.cgi?id=1927721)).
+
+- Navigations using the HTTP schema, triggered by the `WebDriver:Navigate` command in Marionette or `browsingContext.navigate` in WebDriver BiDi, will no longer be automatically upgraded to HTTPS. These requests will now remain on HTTP as intended ([Firefox bug 1943551](https://bugzilla.mozilla.org/show_bug.cgi?id=1943551)).
+
 #### WebDriver BiDi
 
-#### Marionette
+- The `session.subscribe` command now returns a subscription ID, which can be used with `session.unsubscribe` to precisely target the same previously subscribed events and contexts as the original subscription. This helps prevent unintended side effects when multiple subscriptions exist, such as those limited to a specific tab ([Firefox bug 1938576](https://bugzilla.mozilla.org/show_bug.cgi?id=1938576)).
+
+  Note: The previous logic for removing events by name and context has been deprecated and will be removed in a future release.
+
+- Added support for the `userContexts` field in the `script.addPreloadScript` command, allowing clients to specify in which user contexts (containers) the script should always be loaded automatically, including any new browsing contexts opened within such specified user contexts ([Firefox bug 1940927](https://bugzilla.mozilla.org/show_bug.cgi?id=1940927)).
+
+- The `browsingContext.contextDestroyed` event now returns a fully serialized browsing context tree when a context is closed, including all its child contexts ([Firefox bug 1860955](https://bugzilla.mozilla.org/show_bug.cgi?id=1860955)).
 
 ## Changes for add-on developers
 
 - {{WebExtAPIRef("menus.update")}} and {{WebExtAPIRef("menus.remove")}} and the aliases {{WebExtAPIRef("contextMenus.update")}} and {{WebExtAPIRef("contextMenus.remove")}} now reject with an error when the menu item doesn't exist. Previously, the error was ignored and the promise fulfilled. ([Firefox bug 1688743](https://bugzil.la/1688743)).
-- A new version of the {{WebExtAPIRef("userScripts")}} API is available. This version of the API is for use in Manifext V3 extensions and provides broad compatibility with Chrome, although [permissons mechanisms](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/userScripts#permissions) differ across the browsers. ([Firefox bug 1943050](https://bugzil.la/1943050)).
+- A new version of the {{WebExtAPIRef("userScripts")}} API is available. This version of the API is for use in Manifest V3 extensions and provides broad compatibility with Chrome, although [permissions mechanisms](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/userScripts#permissions) differ across the browsers. ([Firefox bug 1943050](https://bugzil.la/1943050)).
 
 ### Removals
 
@@ -110,6 +121,9 @@ These features are newly shipped in Firefox 136 but are disabled by default. To 
 - **Clear-Site-Data: cache**: `privacy.clearSiteDataHeader.cache.enabled`.
   The [`Clear-Site-Data`](/en-US/docs/Web/HTTP/Headers/Clear-Site-Data) header can be used with the [`cache`](/en-US/docs/Web/HTTP/Headers/Clear-Site-Data#cache) or `*` directives to clear the browser cache.
   ([Firefox bug 1942272](https://bugzil.la/1942272)).
+- **SVG `<discard>` element for SVG animations**: `svg.discard.enabled`.
+  The {{svgelement("discard")}} SVG element allows developers to specify a trigger, such as the elapsed time since the SVG was loaded into DOM or the end of a particular animation, at which a specified element and its children should be removed from the DOM. This allows an SVG viewer to conserve memory by discarding animated elements that no longer needed.
+  ([Firefox bug 1069931](https://bugzil.la/1069931)).
 
 ## Older versions
 
