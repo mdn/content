@@ -151,7 +151,7 @@ For {{SVGElement("feImage")}}, `href` defines a URL referring to an image resour
 
 ### discard
 
-For {{SVGElement("discard")}}, `href` defines a URL referring to an element that will be discarded.
+For {{SVGElement("discard")}}, `href` defines a URL referring to an element that will be discarded (removed from the DOM).
 If not specified, the immediate parent element of `<discard>` is discarded.
 
 <table class="properties">

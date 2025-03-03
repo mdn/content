@@ -119,7 +119,7 @@ reload.addEventListener("click", () => {
 <img src="bar_no_discard.svg" alt="Your SVG Image" />
 ```
 
-{{EmbedLiveSample('Result', '100%', '700px')}}
+{{EmbedLiveSample('Result', , '800px')}}
 
 ## Attributes
 
