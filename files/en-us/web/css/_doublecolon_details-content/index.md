@@ -9,7 +9,26 @@ browser-compat: css.selectors.details-content
 
 The **`::details-content`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents the expandable/collapsible contents of a {{HTMLElement("details")}} element.
 
-[//]: # '{{EmbedInteractiveExample("pages/tabbed/pseudo-element-details-content.html", "tabbed-shorter")}}'
+{{InteractiveExample("CSS Demo: ::details-content", "tabbed-shorter")}}
+
+```css interactive-example
+details[open]::details-content {
+  color: dodgerblue;
+  padding: 0.5em;
+  border: thin solid grey;
+}
+```
+
+```html interactive-example
+<details open>
+  <summary>Example summary</summary>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+  <p>
+    Architecto cupiditate ea optio modi quas sequi, esse libero asperiores
+    debitis eveniet commodi hic ad.
+  </p>
+</details>
+```
 
 ## Syntax
 
