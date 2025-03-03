@@ -25,20 +25,14 @@ Authors should set the `playbackorder` attribute to `forwardonly` when using thi
 
 ### Loading bar with discard
 
-This example demonstrates how the `<discard>` element might be used with an activation triggered on time and an activation triggered based on the completion of an animation.
-The SVG used is a modified version of the "Loading bar" SVG from http://xn--dahlstrm-t4a.net/svg/smil/svgt12_discard.svg.
+This example demonstrates how the `<discard>` element might be used with an activation triggered based on the completion of an animation.
+The SVG used is based on Erik Dahlström's "Loading bar" SVG at http://xn--dahlstrm-t4a.net/svg/smil/svgt12_discard.svg.
 
-The SVG first defines a "Load complete" {{svgelement("text")}} element that is hidden by a {{svgelement("g")}} element.
-This grouping element contains another block of text "Loading ..." that is in turn overlaid by two animated {{svgelement("rect")}} elements.
+The SVG defines a "Load complete" {{svgelement("text")}} element that is hidden by a {{svgelement("g")}} element.
 
-The second `<rect>` is animated to the end of the bar over 5s seconds by the animation with id "b".
-This element contains a discard element `<discard begin="5s" />` that activates after 5 seconds, causing the parent "b" element and all its contents to be deleted.
-
-The first `<rect>` is animated to the end of the bar over a duration of 10 seconds by the animation with id "a".
+The `<rect>` is animated to the end of the bar over a duration of 4 seconds by the animation with id "a".
 The `<g>` element contains a discard element that is triggered by completion of the "a" animation: `<discard begin="a.end" />`.
 When this activates the `<g>` element and all its contents are discarded from the DOM, leaving only the text block that displays "Load complete".
-
-Note that `playbackorder="forwardonly"` is set for the SVG!
 
 ```html
 <svg
