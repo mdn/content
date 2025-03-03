@@ -114,6 +114,8 @@ This article provides information about the changes in Firefox 136 that affect d
 
 These features are newly shipped in Firefox 136 but are disabled by default. To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`. You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
 
+- **CSS `hyphenate-limit-chars` property**: `layout.css.hyphenate-limit-chars.enabled`.
+  The {{CSSXRef("hyphenate-limit-chars")}} CSS property is used to specifically the minimum word length for hyphenation as well as the number of characters before and after the hyphen. ([Firefox bug 1521723](https://bugzil.la/1521723)).
 - **Error.captureStackTrace()**: `javascript.options.experimental.error_capture_stack_trace`.
   The {{jsxref("Error.captureStackTrace()")}} static method installs stack trace information on a provided object as the {{jsxref("Error.stack")}} property.
   Its main use case is to install a stack trace on a custom error object that does not derive from the {{jsxref("Error")}} interface.
