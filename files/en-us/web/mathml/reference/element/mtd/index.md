@@ -3,9 +3,8 @@ title: <mtd>
 slug: Web/MathML/Reference/Element/mtd
 page-type: mathml-element
 browser-compat: mathml.elements.mtd
+sidebar: mathmlref
 ---
-
-{{MathMLRef}}
 
 The **`<mtd>`** [MathML](/en-US/docs/Web/MathML) element represents a cell in a table or a matrix. It may only appear in a {{ MathMLElement("mtr") }} element. This element is similar to the {{ HTMLElement("td") }} element of [HTML](/en-US/docs/Web/HTML).
 

@@ -5,9 +5,10 @@ page-type: mathml-attribute
 status:
   - deprecated
 browser-compat: mathml.global_attributes.mathsize
+sidebar: mathmlref
 ---
 
-{{MathMLRef}}{{Deprecated_Header}}
+{{Deprecated_Header}}
 
 The **`mathsize`** [global attribute](/en-US/docs/Web/MathML/Reference/Global_attributes) sets the [font-size](/en-US/docs/Web/CSS/font-size) of a MathML element.
 

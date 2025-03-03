@@ -3,9 +3,8 @@ title: dir
 slug: Web/MathML/Reference/Global_attributes/dir
 page-type: mathml-attribute
 browser-compat: mathml.global_attributes.dir
+sidebar: mathmlref
 ---
-
-{{MathMLRef}}
 
 The **`dir`** [global attribute](/en-US/docs/Web/MathML/Reference/Global_attributes) is an [enumerated](/en-US/docs/Glossary/Enumerated) attribute that indicates the directionality of the MathML element.
 

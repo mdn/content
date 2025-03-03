@@ -3,9 +3,8 @@ title: <mi>
 slug: Web/MathML/Reference/Element/mi
 page-type: mathml-element
 browser-compat: mathml.elements.mi
+sidebar: mathmlref
 ---
-
-{{MathMLRef}}
 
 The **`<mi>`** [MathML](/en-US/docs/Web/MathML) element indicates that the content should be rendered as an **identifier**, such as a function name, variable or symbolic constant.
 

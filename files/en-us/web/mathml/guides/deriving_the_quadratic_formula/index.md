@@ -2,9 +2,8 @@
 title: Deriving the Quadratic Formula
 slug: Web/MathML/Guides/Deriving_the_quadratic_formula
 page-type: guide
+sidebar: mathmlref
 ---
-
-{{MathMLRef}}
 
 This page outlines the derivation of the [Quadratic Formula](https://en.wikipedia.org/wiki/Quadratic_formula). Nine equations are organized in the {{MathMLElement("mtable")}} element to align the steps of the derivation by the equal sign. Some steps are annotated with colored text. The derivation is also represented in [LaTeX](https://www.latex-project.org/) format in the {{MathMLElement("annotation")}} element.
 

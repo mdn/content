@@ -2,9 +2,8 @@
 title: Attributes
 slug: Web/MathML/Reference/Attribute
 page-type: landing-page
+sidebar: mathmlref
 ---
-
-{{MathMLRef}}
 
 This is an alphabetical list of MathML attributes. More details for each attribute are available on relevant [MathML element pages](/en-US/docs/Web/MathML/Reference/Element) and on the [global attributes page](/en-US/docs/Web/MathML/Reference/Global_attributes). The [values](/en-US/docs/Web/MathML/Reference/Values) page also describes some notes on common values used by MathML attributes.
 

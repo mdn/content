@@ -3,9 +3,8 @@ title: <mfrac>
 slug: Web/MathML/Reference/Element/mfrac
 page-type: mathml-element
 browser-compat: mathml.elements.mfrac
+sidebar: mathmlref
 ---
-
-{{MathMLRef}}
 
 The **`<mfrac>`** [MathML](/en-US/docs/Web/MathML) element is used to display fractions. It can also be used
 to mark up fraction-like objects such as

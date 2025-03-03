@@ -3,9 +3,8 @@ title: <mpadded>
 slug: Web/MathML/Reference/Element/mpadded
 page-type: mathml-element
 browser-compat: mathml.elements.mpadded
+sidebar: mathmlref
 ---
-
-{{MathMLRef}}
 
 The **`<mpadded>`** [MathML](/en-US/docs/Web/MathML) element is used to add extra padding and to set the general adjustment of position and size of enclosed contents.
 

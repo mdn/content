@@ -3,9 +3,8 @@ title: <mmultiscripts>
 slug: Web/MathML/Reference/Element/mmultiscripts
 page-type: mathml-element
 browser-compat: mathml.elements.mmultiscripts
+sidebar: mathmlref
 ---
-
-{{MathMLRef}}
 
 The **`<mmultiscripts>`** [MathML](/en-US/docs/Web/MathML) element is used to attach an arbitrary number of subscripts and superscripts to an expression at once, generalizing the {{ MathMLElement("msubsup") }} element. Scripts can be either pre-scripts (placed **before** the expression) or post-scripts (placed **after** it).
 

@@ -5,9 +5,10 @@ page-type: mathml-element
 status:
   - non-standard
 browser-compat: mathml.elements.menclose
+sidebar: mathmlref
 ---
 
-{{MathMLRef}}{{Non-standard_header}}
+{{Non-standard_header}}
 
 The **`<menclose>`** [MathML](/en-US/docs/Web/MathML) element renders its content inside an enclosing notation specified by the `notation` attribute.
 

@@ -3,9 +3,8 @@ title: <mrow>
 slug: Web/MathML/Reference/Element/mrow
 page-type: mathml-element
 browser-compat: mathml.elements.mrow
+sidebar: mathmlref
 ---
-
-{{MathMLRef}}
 
 The **`<mrow>`** [MathML](/en-US/docs/Web/MathML) element is used to group sub-expressions, which usually contain one or more [operators](/en-US/docs/Web/MathML/Reference/Element/mo) with their respective operands (such as {{ MathMLElement("mi") }} and {{ MathMLElement("mn") }}). This element renders as a horizontal row containing its arguments.
 

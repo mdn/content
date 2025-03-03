@@ -2,9 +2,8 @@
 title: MathML Text Containers
 slug: Web/MathML/Guides/Text_containers
 page-type: guide
+sidebar: mathmlref
 ---
-
-{{MathMLRef}}
 
 {{PreviousMenuNext("Web/MathML/Guides/Getting_started", "Web/MathML/Guides/Fractions_and_roots", "Web/MathML/Guides")}}
 

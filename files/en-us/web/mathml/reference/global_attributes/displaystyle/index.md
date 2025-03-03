@@ -3,9 +3,8 @@ title: displaystyle
 slug: Web/MathML/Reference/Global_attributes/displaystyle
 page-type: mathml-attribute
 browser-compat: mathml.global_attributes.displaystyle
+sidebar: mathmlref
 ---
-
-{{MathMLRef}}
 
 The **`displaystyle`** [global attribute](/en-US/docs/Web/MathML/Reference/Global_attributes) is a boolean setting the [math-style](/en-US/docs/Web/CSS/math-style) of a MathML element.
 

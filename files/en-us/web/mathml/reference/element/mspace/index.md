@@ -3,9 +3,8 @@ title: <mspace>
 slug: Web/MathML/Reference/Element/mspace
 page-type: mathml-element
 browser-compat: mathml.elements.mspace
+sidebar: mathmlref
 ---
-
-{{MathMLRef}}
 
 The **`<mspace>`** [MathML](/en-US/docs/Web/MathML) element is used to display a blank space, whose size is set by its attributes.
 

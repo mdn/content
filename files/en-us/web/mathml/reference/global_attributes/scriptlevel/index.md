@@ -3,9 +3,8 @@ title: scriptlevel
 slug: Web/MathML/Reference/Global_attributes/scriptlevel
 page-type: mathml-attribute
 browser-compat: mathml.global_attributes.scriptlevel
+sidebar: mathmlref
 ---
-
-{{MathMLRef}}
 
 The **`scriptlevel`** [global attribute](/en-US/docs/Web/MathML/Reference/Global_attributes) sets the [math-depth](/en-US/docs/Web/CSS/math-depth) of a MathML element. It allows overriding rules from the [user agent stylesheet](/en-US/docs/Web/CSS/CSS_cascade/Cascade#user-agent_stylesheets) that define automatic calculation of [font-size](/en-US/docs/Web/CSS/font-size) within MathML formulas.
 

@@ -3,9 +3,8 @@ title: <msubsup>
 slug: Web/MathML/Reference/Element/msubsup
 page-type: mathml-element
 browser-compat: mathml.elements.msubsup
+sidebar: mathmlref
 ---
-
-{{MathMLRef}}
 
 The **`<msubsup>`** [MathML](/en-US/docs/Web/MathML) element is used to attach both a subscript and a superscript, together, to an expression.
 

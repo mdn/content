@@ -1,11 +1,11 @@
 ---
-title: MathML Attribute Values
+title: MathML attribute values
+short-title: Values
 slug: Web/MathML/Reference/Values
 page-type: guide
 browser-compat: mathml.attribute_values
+sidebar: mathmlref
 ---
-
-{{MathMLRef}}
 
 ## MathML-specific types
 

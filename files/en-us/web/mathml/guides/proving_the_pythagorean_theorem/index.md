@@ -2,9 +2,8 @@
 title: Proving the Pythagorean theorem
 slug: Web/MathML/Guides/Proving_the_Pythagorean_theorem
 page-type: guide
+sidebar: mathmlref
 ---
-
-{{MathMLRef}}
 
 This page outlines the proof of the [Pythagorean theorem](https://en.wikipedia.org/wiki/Pythagorean_theorem). Three equations are organized in the {{MathMLElement("mtable")}} element to align the steps of the proof by the equal sign. The proof is also represented in [LaTeX](https://www.latex-project.org/) format in the {{MathMLElement("annotation")}} element.
 

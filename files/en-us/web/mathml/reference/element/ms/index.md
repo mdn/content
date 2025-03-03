@@ -3,9 +3,8 @@ title: <ms>
 slug: Web/MathML/Reference/Element/ms
 page-type: mathml-element
 browser-compat: mathml.elements.ms
+sidebar: mathmlref
 ---
-
-{{MathMLRef}}
 
 The **`<ms>`** [MathML](/en-US/docs/Web/MathML) element represents a **string** literal meant to be interpreted by programming languages and computer algebra systems.
 
