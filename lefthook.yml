@@ -1,38 +1,39 @@
 pre-commit:
   parallel: true
-  commands:
-    log-url-issues:
-      glob: "*"
-      run: |
-        node scripts/log-url-issues.js
-
-    fix-redirects:
-      glob: "files/en-us/_redirects.txt"
-      run: yarn content fix-redirects en-US && yarn content validate-redirects en-US
-
-    fmt-sidebars:
+  jobs:
+    - name: Format sidebars
       glob: "files/sidebars/*.yaml"
       run: yarn content fmt-sidebars
 
-    format-non-md:
-      glob: "*.{js,json,yml,yaml,css,html}"
-      run: prettier --ignore-unknown --write {staged_files}
+    - name: Check URL issues
+      glob: "*"
+      run: node scripts/log-url-issues.js
 
-    yarn-filecheck:
+    - name: Fix redirects
+      glob: "files/en-us/_redirects.txt"
+      run: yarn content fix-redirects en-US && yarn content validate-redirects en-US
+
+    - name: Format non-md
+      glob: "*.{js,json,yml,yaml,css,html}"
+      run: yarn prettier --ignore-unknown --write {staged_files}
+
+    - name: Run 'yarn filecheck'
       glob: "*.{svg,png,jpeg,jpg,gif}"
       run: yarn filecheck {staged_files}
 
-    sort-vscode-dicts:
-      glob: ".vscode/dictionaries/*.txt"
-      run: node scripts/sort_and_unique_file_lines.js {staged_files}
-
-    markdown:
+    - name: Fix markdown
       glob: "*.md"
-      run: |
-        node scripts/front-matter_linter.js --fix true {staged_files}
-        markdownlint-cli2 --fix {staged_files}
-        prettier --write {staged_files}
-        node scripts/update-moved-file-links.js --check
+      group:
+        parallel: true
+        jobs:
+          - name: Front matter
+            run: node scripts/front-matter_linter.js --fix true {staged_files}
+          - name: Markdownlint
+            run: yarn markdownlint-cli2 --fix {staged_files}
+          - name: Prettier
+            run: yarn prettier --write {staged_files}
+          - name: Update moved files
+            run: yarn node scripts/update-moved-file-links.js --check
 
 post-merge:
   commands:
