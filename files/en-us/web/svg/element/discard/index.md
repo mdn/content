@@ -44,15 +44,14 @@ Note that `playbackorder="forwardonly"` is set for the SVG!
 <svg
   xmlns="http://www.w3.org/2000/svg"
   xmlns:xlink="http://www.w3.org/1999/xlink"
-  viewBox="0 0 100 40">
+  viewBox="0 0 100 50">
   <text
     x="50"
     y="30"
     font-family="sans-serif"
     font-size="10px"
     text-anchor="middle"
-    stroke="red"
-    fill="red"
+    stroke="white"
     stroke-width="0.2">
     Load complete
   </text>
@@ -65,19 +64,8 @@ Note that `playbackorder="forwardonly"` is set for the SVG!
       width="80"
       fill="white"
       stroke="black" />
-    <rect fill="lime" rx="3" x="12" y="17" height="16" width="10">
-      <animate id="a" attributeName="width" to="76" dur="10s" />
-    </rect>
-    <rect
-      fill="green"
-      rx="3"
-      x="12"
-      y="17"
-      height="16"
-      width="10"
-      opacity="0.5">
-      <animate id="b" attributeName="width" to="76" dur="5s" />
-      <discard begin="5s" />
+    <rect fill="lime" rx="3" x="12" y="17" height="16.1" width="10">
+      <animate id="a" attributeName="width" to="76" dur="4s" />
     </rect>
     <text
       x="50"
