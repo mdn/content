@@ -147,7 +147,7 @@ This module define geometric utility methods which will apply to the {{domxref("
 - [Coordinate systems](/en-US/docs/Web/CSS/CSSOM_View/Coordinate_Systems)
   - : The coordinate systems used to specify a position in a display context such as a window on a monitor, a viewport on a mobile device, or a position on a sheet of paper when printing.
 - [Viewport concepts](/en-US/docs/Web/CSS/CSSOM_View/Viewport_Concepts)
-  - : The concept of the viewport — what it is, its impact in terms of CSS, SVG, and mobile devices — and differentiates between the visual viewport and the layout viewport.
+  - : The concept of the viewport — what it is, its impact in terms of CSS, SVG, and mobile devices — and the difference between the visual viewport and the layout viewport.
 
 ## Related concepts
 
