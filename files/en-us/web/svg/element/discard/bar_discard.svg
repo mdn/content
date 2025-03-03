@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 40"><text x="50" y="30" fill="red" stroke="red" stroke-width=".2" font-family="sans-serif" font-size="10" text-anchor="middle">
+    Load complete
+  </text><rect width="80" height="20" x="10" y="15" fill="#fff" stroke="#000" rx="5"/><rect width="10" height="16" x="12" y="17" fill="#0f0" rx="3"><animate attributeName="width" dur="10s" to="76"/></rect><rect width="10" height="16" x="12" y="17" fill="green" opacity=".5" rx="3"><animate attributeName="width" dur="5s" to="76"/></rect><text x="50" y="30" stroke="#fff" stroke-width=".2" font-family="sans-serif" font-size="10" text-anchor="middle">
+      Loading...
+    </text></svg>

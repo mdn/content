@@ -16,30 +16,91 @@ The [`begin`](#begin) attribute is used to specify the trigger point at which th
 This is commonly an [`offset-value`](/en-US/docs/Web/SVG/Attribute/begin#offset-value) relative to when the SVG file was loaded into the DOM, but it may take other values.
 
 The element that is to be removed from the DOM is specified using the [`href`](#href) attribute.
-If not specified the immediate parent of the `<discard>` element is removed.
+If not specified, the immediate parent of the `<discard>` element is the target.
 
 `<discard>` may be used in all the same places as the {{SVGElement('animate')}} element.
 Authors should set the `playbackorder` attribute to `forwardonly` when using this element, as elements are not re-added if the user seeks backwards in the timeline.
 
 ## Example
 
-This is a slightly reduced version of the example in the specification.
-It defines an ellipse that is animated to move from the top of the view to the bottom, starting at 0 seconds after the SVG is loaded with a duration of 2 seconds, and a triangle (polygon) that is animated to move diagonally across the view starting second 1 after loading with a duration of 3 seconds.
+### Loading bar with discard
 
-The ellipse animates off screen and is no longer needed 2 seconds after loading.
-The discard element is used to specify that it should be deleted at this point (`<discard begin="2s" />`).
-Note that the target isn't explicitly specified, so the parent ellipse element is removed.
-The polygon element similarly set to be discarded after 4 seconds.
+This example demonstrates how the `<discard>` element might be used with an activation triggered on time and an activation triggered based on the completion of an animation.
+The SVG used is a modified version of the "Loading bar" SVG from http://xn--dahlstrm-t4a.net/svg/smil/svgt12_discard.svg.
+
+The SVG first defines a "Load complete" {{svgelement("text")}} element that is hidden by a {{svgelement("g")}} element.
+This grouping element contains another block of text "Loading ..." that is in turn overlaid by two animated {{svgelement("rect")}} elements.
+
+The second `<rect>` is animated to the end of the bar over 5s seconds by the animation with id "b".
+This element contains a discard element `<discard begin="5s" />` that activates after 5 seconds, causing the parent "b" element and all its contents to be deleted.
+
+The first `<rect>` is animated to the end of the bar over a duration of 10 seconds by the animation with id "a".
+The `<g>` element contains a discard element that is triggered by completion of the "a" animation: `<discard begin="a.end" />`.
+When this activates the `<g>` element and all its contents are discarded from the DOM, leaving only the text block that displays "Load complete".
 
 Note that `playbackorder="forwardonly"` is set for the SVG!
 
-```css hidden
-html,
-body,
-svg {
-  height: 100%;
-}
+```html
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  viewBox="0 0 100 40">
+  <text
+    x="50"
+    y="30"
+    font-family="sans-serif"
+    font-size="10px"
+    text-anchor="middle"
+    stroke="red"
+    fill="red"
+    stroke-width="0.2">
+    Load complete
+  </text>
+  <g>
+    <rect
+      rx="5"
+      x="10"
+      y="15"
+      height="20"
+      width="80"
+      fill="white"
+      stroke="black" />
+    <rect fill="lime" rx="3" x="12" y="17" height="16" width="10">
+      <animate id="a" attributeName="width" to="76" dur="10s" />
+    </rect>
+    <rect
+      fill="green"
+      rx="3"
+      x="12"
+      y="17"
+      height="16"
+      width="10"
+      opacity="0.5">
+      <animate id="b" attributeName="width" to="76" dur="5s" />
+      <discard begin="5s" />
+    </rect>
+    <text
+      x="50"
+      y="30"
+      font-family="sans-serif"
+      font-size="10px"
+      text-anchor="middle"
+      stroke="white"
+      stroke-width="0.2">
+      Loading...
+    </text>
+    <discard begin="a.end" />
+  </g>
+</svg>
 ```
+
+#### Result
+
+The live example below displays the SVG above in the top image, while the second image is the same SVG file but with the `<discard>` elements removed.
+
+On browsers that support the discard element, on the top image, the faster bar will disappear after it reaches the end and is discarded.
+When the second bar reaches the end, everything else except the text "Load complete" will disappear as it is discarded.
+On browsers that don't support the discard element both images will behave the same: the "Load complete" will never get to display.
 
 ```html hidden
 <button id="reset" type="button">Reset</button>
@@ -53,54 +114,12 @@ reload.addEventListener("click", () => {
 });
 ```
 
-```html
-<svg
-  xmlns="http://www.w3.org/2000/svg"
-  width="352"
-  height="240"
-  playbackorder="forwardonly">
-  <ellipse
-    cx="98.5"
-    cy="17.5"
-    rx="20.5"
-    ry="17.5"
-    fill="blue"
-    stroke="black"
-    transform="translate(9 252) translate(3 -296)">
-    <animateTransform
-      attributeName="transform"
-      begin="0s"
-      dur="2s"
-      fill="remove"
-      calcMode="linear"
-      type="translate"
-      additive="sum"
-      from="0 0"
-      to="-18 305" />
-    <discard begin="2s" />
-  </ellipse>
-
-  <polygon
-    points="-66,83.5814 -43,123.419 -89,123.419"
-    fill="green"
-    stroke="black"
-    transform="matrix(1 0 0 1.1798 0 -18.6096)">
-    <animateTransform
-      attributeName="transform"
-      begin="1s"
-      dur="3s"
-      fill="remove"
-      calcMode="linear"
-      type="translate"
-      additive="sum"
-      from="-100 -200"
-      to="460 50" />
-    <discard begin="4s" />
-  </polygon>
-</svg>
+```html hidden
+<img src="bar_discard.svg" alt="Your SVG Image" />
+<img src="bar_no_discard.svg" alt="Your SVG Image" />
 ```
 
-{{EmbedLiveSample('Example', '100%', '250px')}}
+{{EmbedLiveSample('Result', '100%', '700px')}}
 
 ## Attributes
 
