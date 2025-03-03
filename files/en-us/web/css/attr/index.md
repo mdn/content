@@ -12,7 +12,29 @@ browser-compat: css.types.attr
 
 The **`attr()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) is used to retrieve the value of an attribute of the selected element and use it in a property value, similar to how the {{cssxref("var", "var()")}} function substitutes a custom property value. It can also be used with [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements), in which case the attribute's value on the pseudo-element's originating element is returned.
 
-{{EmbedInteractiveExample("pages/tabbed/function-attr.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: attr()", "tabbed-shorter")}}
+
+```css interactive-example
+blockquote {
+  margin: 1em 0;
+}
+
+blockquote::after {
+  display: block;
+  content: " (source: " attr(cite) ") ";
+  color: hotpink;
+}
+```
+
+```html interactive-example
+<blockquote cite="https://mozilla.org/en-US/about/">
+  Mozilla makes browsers, apps, code and tools that put people before profit.
+</blockquote>
+
+<blockquote cite="https://web.dev/about/">
+  Google believes in an open, accessible, private, and secure web.
+</blockquote>
+```
 
 ## Syntax
 
