@@ -11,14 +11,24 @@ on:
     types:
       - completed
 
+  workflow_call:
+    secrets:
+      GCP_PROJECT_NAME:
+        required: true
+      WIP_PROJECT_ID:
+        required: true
+
 permissions:
   # Download artifact.
   actions: read
   # Post comment in pull request.
   pull-requests: write
+  # Authenticate with GCP.
+  id-token: write
 
 jobs:
   review:
+    environment: review
     runs-on: ubuntu-latest
     if: github.event.workflow_run.conclusion == 'success'
     steps:
@@ -120,3 +130,23 @@ jobs:
             --pr-number=$PR_NUMBER \
             --diff-file=$BUILD_OUT_ROOT/DIFF \
             $BUILD_OUT_ROOT
+
+      - name: Authenticate with GCP
+        if: env.HAS_ARTIFACT
+        uses: google-github-actions/auth@v2
+        with:
+          token_format: access_token
+          service_account: deploy-mdn-review-content@${{ secrets.GCP_PROJECT_NAME }}.iam.gserviceaccount.com
+          workload_identity_provider: projects/${{ secrets.WIP_PROJECT_ID }}/locations/global/workloadIdentityPools/github-actions/providers/github-actions
+
+      - name: Setup gcloud
+        if: env.HAS_ARTIFACT
+        uses: google-github-actions/setup-gcloud@v2
+
+      - name: Sync build with GCS
+        if: env.HAS_ARTIFACT
+        run: |-
+          PR_NUMBER=`cat build/NR`
+          PREFIX="pr$PR_NUMBER"
+          gsutil -q -m -h "Cache-Control: public, max-age=3600" cp -r build/static "gs://content-review-mdn/$PREFIX/"
+          gsutil -q -m -h "Cache-Control: public, max-age=3600" rsync -cdrj html,json,txt -y "^static/" build "gs://content-review-mdn/$PREFIX"

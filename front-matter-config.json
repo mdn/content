@@ -370,7 +370,8 @@
                 "landing-page",
                 "webdriver-command",
                 "webdriver-capability",
-                "webdriver-error"
+                "webdriver-error",
+                "reference"
               ]
             }
           }
