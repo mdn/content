@@ -15,7 +15,7 @@ Redirects accomplish numerous goals:
 
 ## Principle
 
-In HTTP, redirection is triggered by a server sending a special _redirect_ response to a request. Redirect responses have [status codes](/en-US/docs/Web/HTTP/Status) that start with `3`, and a {{ httpheader("Location") }} header holding the URL to redirect to.
+In HTTP, redirection is triggered by a server sending a special _redirect_ response to a request. Redirect responses have [status codes](/en-US/docs/Web/HTTP/Reference/Status) that start with `3`, and a {{ httpheader("Location") }} header holding the URL to redirect to.
 
 When browsers receive a redirect, they immediately load the new URL provided in the `Location` header. Besides the small performance hit of an additional round-trip, users rarely notice the redirection.
 
@@ -235,6 +235,6 @@ It is important to avoid redirection loops, as they completely break the user ex
 
 ## See also
 
-- [3XX redirection](/en-US/docs/Web/HTTP/Status#redirection_messages) response statuses
+- [3XX redirection](/en-US/docs/Web/HTTP/Reference/Status#redirection_messages) response statuses
 - {{HTTPHeader("Location")}} header
 - {{domxref("window.location")}} property for redirection using JavaScript

@@ -22,7 +22,7 @@ If the file is modified after this point, the hash won't match, and supporting w
 
 SRI should be used when loading external JavaScript or stylesheet resources. The resources should be loaded over HTTPS.
 
-Note that CDNs must use [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/Security/Practical_implementation_guides/CORS) by setting the [`Access-Control-Allow-Origin`](/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin) header.
+Note that CDNs must use [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/Security/Practical_implementation_guides/CORS) by setting the [`Access-Control-Allow-Origin`](/en-US/docs/Web/HTTP/Reference/Headers/Access-Control-Allow-Origin) header.
 
 ## Examples
 

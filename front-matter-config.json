@@ -382,7 +382,7 @@
           "properties": {
             "slug": {
               "type": "string",
-              "pattern": "^Web/HTTP/Headers/Content-Security-Policy/"
+              "pattern": "^Web/HTTP/Reference/Headers/Content-Security-Policy/"
             }
           }
         },
@@ -396,7 +396,7 @@
           "properties": {
             "slug": {
               "type": "string",
-              "pattern": "^Web/HTTP/Headers/Permissions-Policy/"
+              "pattern": "^Web/HTTP/Reference/Headers/Permissions-Policy/"
             }
           }
         },
@@ -412,7 +412,7 @@
           "properties": {
             "slug": {
               "type": "string",
-              "pattern": "^Web/HTTP/Headers/"
+              "pattern": "^Web/HTTP/Reference/Headers/"
             }
           }
         },
@@ -424,7 +424,10 @@
       {
         "if": {
           "properties": {
-            "slug": { "type": "string", "pattern": "^Web/HTTP/Methods/" }
+            "slug": {
+              "type": "string",
+              "pattern": "^Web/HTTP/Reference/Methods/"
+            }
           }
         },
         "then": {
@@ -435,7 +438,10 @@
       {
         "if": {
           "properties": {
-            "slug": { "type": "string", "pattern": "^Web/HTTP/Status/" }
+            "slug": {
+              "type": "string",
+              "pattern": "^Web/HTTP/Reference/Status/"
+            }
           }
         },
         "then": {
@@ -499,7 +505,10 @@
       {
         "if": {
           "properties": {
-            "slug": { "type": "string", "pattern": "^Web/HTTP/CORS/Errors/" }
+            "slug": {
+              "type": "string",
+              "pattern": "^Web/HTTP/Guides/CORS/Errors/"
+            }
           }
         },
         "then": {

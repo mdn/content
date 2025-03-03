@@ -10,7 +10,7 @@ browser-compat: api.Document.featurePolicy
 
 {{APIRef("Feature Policy")}}{{SeeCompatTable}}
 
-The **`featurePolicy`** read-only property of the {{domxref("Document")}} interface returns the {{domxref("FeaturePolicy")}} interface which provides a simple API for inspecting the [Permissions Policies](/en-US/docs/Web/HTTP/Permissions_Policy) applied to a specific document.
+The **`featurePolicy`** read-only property of the {{domxref("Document")}} interface returns the {{domxref("FeaturePolicy")}} interface which provides a simple API for inspecting the [Permissions Policies](/en-US/docs/Web/HTTP/Guides/Permissions_Policy) applied to a specific document.
 
 ## Value
 

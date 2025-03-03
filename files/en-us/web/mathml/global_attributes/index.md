@@ -61,7 +61,7 @@ In addition to the basic MathML global attributes, the following global attribut
 
 - [`nonce`](/en-US/docs/Web/HTML/Global_attributes/nonce)
 
-  - : A cryptographic nonce ("number used once") which can be used by [Content Security Policy](/en-US/docs/Web/HTTP/CSP) to determine whether a given fetch will be allowed to proceed.
+  - : A cryptographic nonce ("number used once") which can be used by [Content Security Policy](/en-US/docs/Web/HTTP/Guides/CSP) to determine whether a given fetch will be allowed to proceed.
 
 - [`scriptlevel`](/en-US/docs/Web/MathML/Global_attributes/scriptlevel)
 

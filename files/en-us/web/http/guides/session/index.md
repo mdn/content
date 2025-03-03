@@ -60,7 +60,7 @@ name=Joe%20User&request=Send%20me%20one%20of%20your%20catalogue
 
 ### Request methods
 
-HTTP defines a set of [request methods](/en-US/docs/Web/HTTP/Methods) indicating the desired action to be performed upon a resource. Although they can also be nouns, these requests methods are sometimes referred as HTTP verbs. The most common requests are `GET` and `POST`:
+HTTP defines a set of [request methods](/en-US/docs/Web/HTTP/Reference/Methods) indicating the desired action to be performed upon a resource. Although they can also be nouns, these requests methods are sometimes referred as HTTP verbs. The most common requests are `GET` and `POST`:
 
 - The {{HTTPMethod("GET")}} method requests a data representation of the specified resource. Requests using `GET` should only retrieve data.
 - The {{HTTPMethod("POST")}} method sends data to a server so it may change its state. This is the method often used for [HTML Forms](/en-US/docs/Learn_web_development/Extensions/Forms).
@@ -148,7 +148,7 @@ X-Cache: Error from cloudfront
 
 ### Response status codes
 
-[HTTP response status codes](/en-US/docs/Web/HTTP/Status) indicate if a specific HTTP request has been successfully completed. Responses are grouped into five classes: informational responses, successful responses, redirects, client errors, and server errors.
+[HTTP response status codes](/en-US/docs/Web/HTTP/Reference/Status) indicate if a specific HTTP request has been successfully completed. Responses are grouped into five classes: informational responses, successful responses, redirects, client errors, and server errors.
 
 - {{HTTPStatus(200)}}: OK. The request has succeeded.
 - {{HTTPStatus(301)}}: Moved Permanently. This response code means that the URI of requested resource has been changed.
@@ -157,6 +157,6 @@ X-Cache: Error from cloudfront
 ## See also
 
 - [URLs](/en-US/docs/Web/URI)
-- [HTTP headers](/en-US/docs/Web/HTTP/Headers)
-- [HTTP request methods](/en-US/docs/Web/HTTP/Methods)
-- [HTTP response status codes](/en-US/docs/Web/HTTP/Status)
+- [HTTP headers](/en-US/docs/Web/HTTP/Reference/Headers)
+- [HTTP request methods](/en-US/docs/Web/HTTP/Reference/Methods)
+- [HTTP response status codes](/en-US/docs/Web/HTTP/Reference/Status)

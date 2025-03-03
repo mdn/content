@@ -163,7 +163,7 @@ Since 2005, more APIs have become available to web pages. Several of these APIs 
 
 ### Relaxing the security-model of the web
 
-HTTP is independent of the web security model, known as the [same-origin policy](/en-US/docs/Web/Security/Same-origin_policy). In fact, the current web security model was developed after the creation of HTTP! Over the years, it proved useful to lift some restrictions of this policy under certain constraints. The server transmitted how much and when to lift such restrictions to the client using a new set of HTTP headers. These were defined in specifications like [Cross-Origin Resource Sharing](/en-US/docs/Glossary/CORS) (CORS) and the [Content Security Policy](/en-US/docs/Web/HTTP/CSP) (CSP).
+HTTP is independent of the web security model, known as the [same-origin policy](/en-US/docs/Web/Security/Same-origin_policy). In fact, the current web security model was developed after the creation of HTTP! Over the years, it proved useful to lift some restrictions of this policy under certain constraints. The server transmitted how much and when to lift such restrictions to the client using a new set of HTTP headers. These were defined in specifications like [Cross-Origin Resource Sharing](/en-US/docs/Glossary/CORS) (CORS) and the [Content Security Policy](/en-US/docs/Web/HTTP/Guides/CSP) (CSP).
 
 In addition to these large extensions, many other headers were added, sometimes only experimentally. Notable headers are the Do Not Track ({{HTTPHeader("DNT")}}) header to control privacy, {{HTTPHeader("X-Frame-Options")}}, and {{HTTPHeader('Upgrade-Insecure-Requests')}} but many more exist.
 
@@ -201,7 +201,7 @@ Defined in {{RFC("9114")}}, [HTTP/3 is supported by most major browsers](https:/
 
 - [Connection management in HTTP/1.x](/en-US/docs/Web/HTTP/Guides/Connection_management_in_HTTP_1.x)
 - [Protocol upgrade mechanism](/en-US/docs/Web/HTTP/Guides/Protocol_upgrade_mechanism)
-- [HTTP resources and specifications](/en-US/docs/Web/HTTP/Resources_and_specifications)
+- [HTTP resources and specifications](/en-US/docs/Web/HTTP/Reference/Resources_and_specifications)
 - Glossary terms:
   - {{glossary('HTTP')}}
   - {{glossary('HTTP_2', 'HTTP/2')}}

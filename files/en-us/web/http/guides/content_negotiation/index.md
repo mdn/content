@@ -19,8 +19,8 @@ A specific document is called a _resource_. When a client wants to obtain a reso
 
 The best-suited representation is identified through one of two mechanisms:
 
-- Specific [HTTP headers](/en-US/docs/Web/HTTP/Headers) by the client (_server-driven negotiation_ or _proactive negotiation_), which is the standard way of negotiating a specific kind of resource.
-- The {{HTTPStatus("300")}} (Multiple Choices) or {{HTTPStatus("406")}} (Not Acceptable), {{HTTPStatus("415")}} (Unsupported Media Type) [HTTP response codes](/en-US/docs/Web/HTTP/Status) by the server (_agent-driven negotiation_ or _reactive negotiation_), that are used as fallback mechanisms.
+- Specific [HTTP headers](/en-US/docs/Web/HTTP/Reference/Headers) by the client (_server-driven negotiation_ or _proactive negotiation_), which is the standard way of negotiating a specific kind of resource.
+- The {{HTTPStatus("300")}} (Multiple Choices) or {{HTTPStatus("406")}} (Not Acceptable), {{HTTPStatus("415")}} (Unsupported Media Type) [HTTP response codes](/en-US/docs/Web/HTTP/Reference/Status) by the server (_agent-driven negotiation_ or _reactive negotiation_), that are used as fallback mechanisms.
 
 Over the years, other content negotiation proposals, like [transparent content negotiation](https://datatracker.ietf.org/doc/html/rfc2295) and the `Alternates` header, have been proposed. They failed to get traction and were abandoned.
 
@@ -77,7 +77,7 @@ Due to the [configuration-based entropy](https://www.eff.org/deeplinks/2010/01/p
 ### The `User-Agent` header
 
 > [!NOTE]
-> Though there are legitimate uses of this header for selecting content, [it's considered bad practice](/en-US/docs/Web/HTTP/Browser_detection_using_the_user_agent) to rely on it to define what features are supported by the user agent.
+> Though there are legitimate uses of this header for selecting content, [it's considered bad practice](/en-US/docs/Web/HTTP/Guides/Browser_detection_using_the_user_agent) to rely on it to define what features are supported by the user agent.
 
 The {{HTTPHeader("User-Agent")}} header identifies the browser sending the request. This string may contain a space-separated list of _product tokens_ and _comments_.
 

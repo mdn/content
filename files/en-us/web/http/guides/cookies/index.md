@@ -113,7 +113,7 @@ document.cookie = "yummy_cookie=chocolate";
 document.cookie = "tasty_cookie=strawberry";
 ```
 
-You can also access existing cookies and set new values for them, provided the [`HttpOnly`](/en-US/docs/Web/HTTP/Headers/Set-Cookie#httponly) attribute isn't set on them (i.e. in the `Set-Cookie` header that created it):
+You can also access existing cookies and set new values for them, provided the [`HttpOnly`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#httponly) attribute isn't set on them (i.e. in the `Set-Cookie` header that created it):
 
 ```js
 console.log(document.cookie);
@@ -161,7 +161,7 @@ The `Domain` and `Path` attributes define the _scope_ of a cookie: what URLs the
   If the `Set-Cookie` header does not specify a `Domain` attribute, the cookies are available on the server that sets it _but not on its subdomains_. Therefore, specifying `Domain` is less restrictive than omitting it.
   Note that a server can only set the `Domain` attribute to its own domain or a parent domain, not to a subdomain or some other domain.
   So, for example, a server with domain `foo.example.com` could set the attribute to `example.com` or `foo.example.com`, but not `bar.foo.example.com` or `elsewhere.com` (the cookies would still be _sent_ to subdomains such as `bar.foo.example.com` though).
-  See [Invalid domains](/en-US/docs/Web/HTTP/Headers/Set-Cookie#invalid_domains) for more details.
+  See [Invalid domains](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#invalid_domains) for more details.
 
 - The `Path` attribute indicates a URL path that must exist in the requested URL in order to send the `Cookie` header. For example:
 
@@ -184,7 +184,7 @@ The `Domain` and `Path` attributes define the _scope_ of a cookie: what URLs the
 
 ### Controlling third-party cookies with `SameSite`
 
-The [`SameSite`](/en-US/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) attribute lets servers specify whether/when cookies are sent with cross-site requests — i.e. [third-party cookies](/en-US/docs/Web/Privacy/Guides/Third-party_cookies). Cross-site requests are requests where the {{Glossary("Site", "site")}} (the registrable domain) and/or the scheme (http or https) do not match the site the user is currently visiting. This includes requests sent when links are clicked on other sites to navigate to your site, and any request sent by embedded third-party content.
+The [`SameSite`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) attribute lets servers specify whether/when cookies are sent with cross-site requests — i.e. [third-party cookies](/en-US/docs/Web/Privacy/Guides/Third-party_cookies). Cross-site requests are requests where the {{Glossary("Site", "site")}} (the registrable domain) and/or the scheme (http or https) do not match the site the user is currently visiting. This includes requests sent when links are clicked on other sites to navigate to your site, and any request sent by embedded third-party content.
 
 `SameSite` helps to prevent leakage of information, preserving user [privacy](#privacy_and_tracking) and providing some protection against {{Glossary("CSRF", "cross-site request forgery")}} attacks. It takes three possible values: `Strict`, `Lax`, and `None`:
 
@@ -227,7 +227,7 @@ The browser will reject cookies with these prefixes that don't comply with their
 > [!NOTE]
 > On the server, the web application _must_ check for the full cookie name including the prefix. User agents _do not_ strip the prefix from the cookie before sending it in a request's {{HTTPHeader("Cookie")}} header.
 
-For more information about cookie prefixes and the current state of browser support, see the [Prefixes section of the Set-Cookie reference article](/en-US/docs/Web/HTTP/Headers/Set-Cookie#cookie_prefixes).
+For more information about cookie prefixes and the current state of browser support, see the [Prefixes section of the Set-Cookie reference article](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#cookie_prefixes).
 
 ## Privacy and tracking
 

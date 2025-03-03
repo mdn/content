@@ -4,6 +4,7 @@ sidebar:
   - type: section
     link: /Web/HTTP
   - type: section
+    link: /Web/HTTP/Guides
     title: Guides
   - /Web/HTTP/Guides/Overview
   - /Web/HTTP/Guides/Session
@@ -28,44 +29,50 @@ sidebar:
       - /Web/Security/Practical_implementation_guides
       - link: /en-US/observatory
         title: HTTP Observatory
-      - /Web/HTTP/Permissions_Policy
-      - /Web/HTTP/CSP
-      - /Web/HTTP/CORS
-      - /Web/HTTP/Cross-Origin_Resource_Policy
-      - /Web/HTTP/Headers
+      - /Web/HTTP/Guides/Permissions_Policy
+      - /Web/HTTP/Guides/CSP
+      - /Web/HTTP/Guides/CORS
+      - /Web/HTTP/Guides/Cross-Origin_Resource_Policy
   - type: section
+    link: /Web/HTTP/Reference
     title: Reference
   - type: listSubPages
-    path: /Web/HTTP/Headers
+    path: /Web/HTTP/Reference/Headers
+    link: /Web/HTTP/Reference/Headers
     title: Headers
     details: closed
     code: true
   - type: listSubPages
-    path: /Web/HTTP/Methods
+    path: /Web/HTTP/Reference/Methods
+    link: /Web/HTTP/Reference/Methods
     title: Methods
     details: closed
     code: true
   - type: listSubPages
-    path: /Web/HTTP/Status
+    path: /Web/HTTP/Reference/Status
+    link: /Web/HTTP/Reference/Status
     title: Status
     details: closed
     code: true
   - type: listSubPages
-    path: /Web/HTTP/Headers/Content-Security-Policy
+    path: /Web/HTTP/Reference/Headers/Content-Security-Policy
+    link: /Web/HTTP/Reference/Headers/Content-Security-Policy
     title: CSPDirectives
     details: closed
     code: true
   - type: listSubPages
-    path: /Web/HTTP/CORS/Errors
+    path: /Web/HTTP/Guides/CORS/Errors
+    link: /Web/HTTP/Guides/CORS/Errors
     title: CORS_errors
     details: closed
     code: true
   - type: listSubPages
-    path: /Web/HTTP/Headers/Permissions-Policy
+    path: /Web/HTTP/Reference/Headers/Permissions-Policy
+    link: /Web/HTTP/Reference/Headers/Permissions-Policy
     title: PermissionsPolicyDirectives
     details: closed
     code: true
-  - /Web/HTTP/Resources_and_specifications
+  - /Web/HTTP/Reference/Resources_and_specifications
 l10n:
   de:
     Guides: Anleitungen
@@ -80,7 +87,7 @@ l10n:
   en-US:
     Guides: Guides
     Security: Security and privacy
-    Reference: References
+    Reference: Reference
     Headers: HTTP headers
     Methods: HTTP request methods
     Status: HTTP response status codes

@@ -66,7 +66,7 @@ DOM Cache:
 
 Browser caches:
 
-- The [HTTP cache](/en-US/docs/Web/HTTP/Guides/Caching), the Image cache, and the [Alternative Services (Alt-Svc) cache](/en-US/docs/Web/HTTP/Headers/Alt-Svc) are all partitioned for tracking resources, such that each top-level origin will have a separate partition and tracking resources on different top-level origins will be cached separate from each other.
+- The [HTTP cache](/en-US/docs/Web/HTTP/Guides/Caching), the Image cache, and the [Alternative Services (Alt-Svc) cache](/en-US/docs/Web/HTTP/Reference/Headers/Alt-Svc) are all partitioned for tracking resources, such that each top-level origin will have a separate partition and tracking resources on different top-level origins will be cached separate from each other.
 
 Network connections:
 
@@ -75,7 +75,7 @@ Network connections:
 
 HTTP Referrers
 
-- The default [Referrer Policy](/en-US/docs/Web/HTTP/Headers/Referrer-Policy) for third-party resources classified as trackers is set to `strict-origin-when-cross-origin`.
+- The default [Referrer Policy](/en-US/docs/Web/HTTP/Reference/Headers/Referrer-Policy) for third-party resources classified as trackers is set to `strict-origin-when-cross-origin`.
 
 ### What is not blocked by the policy?
 

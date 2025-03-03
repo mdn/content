@@ -6,7 +6,7 @@ page-type: guide
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
 
-The [`X-Content-Type-Options`](/en-US/docs/Web/HTTP/Headers/X-Content-Type-Options) header informs browsers not to load scripts and stylesheets unless the server indicates the correct [MIME type](/en-US/docs/Glossary/MIME_type).
+The [`X-Content-Type-Options`](/en-US/docs/Web/HTTP/Reference/Headers/X-Content-Type-Options) header informs browsers not to load scripts and stylesheets unless the server indicates the correct [MIME type](/en-US/docs/Glossary/MIME_type).
 
 ## Problem
 
@@ -14,7 +14,7 @@ Without proper MIME type verification, browsers might incorrectly detect non-scr
 
 ## Solution
 
-All sites must set the `X-Content-Type-Options` header with a value of `nosniff`, and set appropriate MIME types for the files they serve (i.e., via the [`Content-Type`](/en-US/docs/Web/HTTP/Headers/Content-Type) header).
+All sites must set the `X-Content-Type-Options` header with a value of `nosniff`, and set appropriate MIME types for the files they serve (i.e., via the [`Content-Type`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Type) header).
 
 `nosniff` blocks a request if the request destination:
 

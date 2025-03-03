@@ -60,7 +60,7 @@ The start-line in HTTP/1.x requests (`POST /users HTTP/1.1` in the example above
 ```
 
 - `<method>`
-  - : The [HTTP method](/en-US/docs/Web/HTTP/Methods) (also known as an _HTTP verb_) is one of a set of defined words that describes the meaning of the request and the desired outcome.
+  - : The [HTTP method](/en-US/docs/Web/HTTP/Reference/Methods) (also known as an _HTTP verb_) is one of a set of defined words that describes the meaning of the request and the desired outcome.
     For example, `GET` indicates that the client would like to receive a resource in return, and `POST` means that the client is sending data to a server.
 - `<request-target>`
   - : The request target is usually an absolute or relative {{glossary("URL")}}, and is characterized by the context of the request.
@@ -192,7 +192,7 @@ The start-line (`HTTP/1.1 201 Created` above) is called a "status line" in respo
 - `<protocol>`
   - : The _HTTP version_ of the remaining message.
 - `<status-code>`
-  - : A numeric [status code](/en-US/docs/Web/HTTP/Status) that indicates whether the request succeeded or failed.
+  - : A numeric [status code](/en-US/docs/Web/HTTP/Reference/Status) that indicates whether the request succeeded or failed.
     Common status codes are {{HTTPStatus("200")}}, {{HTTPStatus("404")}}, or {{HTTPStatus("302")}}.
 - `<status-text>`
   - : The status text is a brief, purely informational, textual description of the status code to help a human understand the HTTP message.

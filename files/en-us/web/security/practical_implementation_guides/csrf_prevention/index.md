@@ -17,7 +17,7 @@ CSRF are a class of attack where unauthorized commands are transmitted to a webs
 <img src="https://accounts.example.org/management/delete?confirm=true" />
 ```
 
-When a user visits a page containing the above HTML, the browser will attempt to make a [`GET`](/en-US/docs/Web/HTTP/Methods/GET) request to the source URL. If the user is logged in, the browser will provide their session cookies and the account deletion attempt will be successful.
+When a user visits a page containing the above HTML, the browser will attempt to make a [`GET`](/en-US/docs/Web/HTTP/Reference/Methods/GET) request to the source URL. If the user is logged in, the browser will provide their session cookies and the account deletion attempt will be successful.
 
 ## Solution
 

@@ -132,7 +132,7 @@ To explore the box values in more detail, see our guide covering [Shapes from bo
 
 An interesting way to generate your path is to use an image with an alpha channel—the text will then wrap around the non-transparent parts of the image. This allows the overlay of wrapped content around an image or the use of an image that is never displayed on the page purely as a method of creating a complex shape without needing to carefully map a polygon.
 
-Note that images used in this way must be [CORS compatible](/en-US/docs/Web/HTTP/CORS), otherwise `shape-outside` will act as if `none` had been given as the value, and you will get no shape.
+Note that images used in this way must be [CORS compatible](/en-US/docs/Web/HTTP/Guides/CORS), otherwise `shape-outside` will act as if `none` had been given as the value, and you will get no shape.
 
 In this next example, we have an image with a fully transparent area, and we are using an image as the URL value for `shape-outside`. The shape is created around the opaque area — the image of the balloon.
 

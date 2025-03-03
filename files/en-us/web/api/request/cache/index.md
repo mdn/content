@@ -35,7 +35,7 @@ A `RequestCache` value. The available values are:
 - `only-if-cached` — The browser looks for a matching request in its HTTP cache. {{experimental_inline}}
 
   - If there is a match, _fresh or stale_, it will be returned from the cache.
-  - If there is no match, the browser will respond with a [504 Gateway timeout](/en-US/docs/Web/HTTP/Status/504) status.
+  - If there is no match, the browser will respond with a [504 Gateway timeout](/en-US/docs/Web/HTTP/Reference/Status/504) status.
 
   The `"only-if-cached"` mode can only be used if the request's [`mode`](/en-US/docs/Web/API/Request/mode) is `"same-origin"`. Cached redirects will be followed if the request's `redirect` property is `"follow"` and the redirects do not violate the `"same-origin"` mode.
 
@@ -133,5 +133,5 @@ fetch("some.json", {
 ## See also
 
 - [ServiceWorker API](/en-US/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/CORS)
+- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/en-US/docs/Web/HTTP)

@@ -93,10 +93,10 @@ As such, the following network APIs and caches are **permanently** partitioned b
 - Stylesheet Cache
 - [DNS](/en-US/docs/Glossary/DNS)
 - HTTP Authentication
-- [Alt-Svc](/en-US/docs/Web/HTTP/Headers/Alt-Svc)
+- [Alt-Svc](/en-US/docs/Web/HTTP/Reference/Headers/Alt-Svc)
 - Speculative Connections
 - Fonts & Font Cache
-- [HSTS](/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security)
+- [HSTS](/en-US/docs/Web/HTTP/Reference/Headers/Strict-Transport-Security)
 - OCSP
 - Intermediate CA Cache
 - TLS Client Certificates

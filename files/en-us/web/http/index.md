@@ -12,19 +12,19 @@ It was designed for communication between web browsers and web servers, but it c
 HTTP follows a classical [client-server model](https://en.wikipedia.org/wiki/Client%E2%80%93server_model), with a client opening a connection to make a request, then waiting until it receives a response from the server.
 HTTP is a [stateless protocol](https://en.wikipedia.org/wiki/Stateless_protocol), meaning that the server does not keep any session data between two requests, although the later addition of [cookies](/en-US/docs/Web/HTTP/Guides/Cookies) adds state to some client-server interactions.
 
-## References
+## Reference documentation
 
 The HTTP reference documentation contains detailed information about headers, request methods, status responses, and lists relevant specifications and standards documents.
 
-- [HTTP headers](/en-US/docs/Web/HTTP/Headers)
+- [HTTP headers](/en-US/docs/Web/HTTP/Reference/Headers)
   - : Message headers are used to send metadata about a resource or a HTTP message, and to describe the behavior of the client or the server.
-- [HTTP request methods](/en-US/docs/Web/HTTP/Methods)
+- [HTTP request methods](/en-US/docs/Web/HTTP/Reference/Methods)
   - : Request methods indicate the purpose of the request and what is expected if the request is successful.
     The most common methods are {{HTTPMethod("GET")}} and {{HTTPMethod("POST")}} for retrieving and sending data to servers, respectively, but there are other methods which serve different purposes.
-- [HTTP response status codes](/en-US/docs/Web/HTTP/Status)
+- [HTTP response status codes](/en-US/docs/Web/HTTP/Reference/Status)
   - : Response status codes indicate the outcome of a specific HTTP request.
     Responses are grouped in five classes: informational, successful, redirections, client errors, and server errors.
-- [HTTP resources and specifications](/en-US/docs/Web/HTTP/Resources_and_specifications)
+- [HTTP resources and specifications](/en-US/docs/Web/HTTP/Reference/Resources_and_specifications)
   - : This page lists relevant resources about HTTP since it was first specified in the early 1990s.
 
 ## HTTP guides
@@ -70,7 +70,7 @@ Beginners are encouraged to start with the foundational guides before exploring 
   - : A range request asks the server to send a specific part (or parts) of a resource back to a client instead of the full resource.
     Range requests are useful for cases when a client knows they need only part of a large file, or for cases where an application allows the user to pause and resume a download.
 - [Content negotiation](/en-US/docs/Web/HTTP/Guides/Content_negotiation)
-  - : HTTP defines a set of message headers, starting with [`Accept`](/en-US/docs/Web/HTTP/Headers/Accept) as a way for a browser to announce the format, language, or encoding it prefers.
+  - : HTTP defines a set of message headers, starting with [`Accept`](/en-US/docs/Web/HTTP/Reference/Headers/Accept) as a way for a browser to announce the format, language, or encoding it prefers.
     This article explains how this advertisement happens, how the server is expected to react, and how it chooses the most adequate response to a request.
 - [Connection management in HTTP/1.x](/en-US/docs/Web/HTTP/Guides/Connection_management_in_HTTP_1.x)
   - : HTTP/1.1 was the first version of HTTP to support persistent connections and pipelining.
@@ -87,10 +87,10 @@ Beginners are encouraged to start with the foundational guides before exploring 
 - [HTTP Client hints](/en-US/docs/Web/HTTP/Guides/Client_hints)
   - : Client Hints are a set of response headers that a server can use to proactively request information from a client about the device, network, user, and user-agent-specific preferences.
     The server can then determine which resources to send, based on the information that the client chooses to provide.
-- [Network Error Logging](/en-US/docs/Web/HTTP/Network_Error_Logging) {{experimental_inline}}
+- [Network Error Logging](/en-US/docs/Web/HTTP/Guides/Network_Error_Logging) {{experimental_inline}}
   - : Network Error Logging is a mechanism that can be configured via the `NEL` HTTP response header.
     This experimental header allows websites and applications to opt-in to receive reports about failed (or even successful) network fetches from supporting browsers.
-- [Browser detection using the user agent](/en-US/docs/Web/HTTP/Browser_detection_using_the_user_agent)
+- [Browser detection using the user agent](/en-US/docs/Web/HTTP/Guides/Browser_detection_using_the_user_agent)
   - : It's very rarely a good idea to use user agent sniffing to detect a browser, but there are edge cases that require it.
     This document will guide you in doing this as correctly as possible when this is necessary, with an emphasis on considerations to make before embarking on this route.
 - [Configuring servers for Ogg media](/en-US/docs/Web/Media/Guides/Formats/Configuring_servers_for_Ogg_media)
@@ -101,17 +101,17 @@ Beginners are encouraged to start with the foundational guides before exploring 
 
 - [Mozilla web security guidelines](https://infosec.mozilla.org/guidelines/web_security)
   - : A collection of tips to help operational teams with creating secure web applications.
-- [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy)
+- [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy)
   - : Permissions Policy provides mechanisms for web developers to explicitly declare what functionality can and cannot be used on a website.
     You define a set of "policies" that restrict what APIs the site's code can access or modify the browser's default behavior for certain features.
-- [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/CORS)
+- [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/Guides/CORS)
   - : Cross-site HTTP requests are requests for resources from a different domain than that of the resource making the request.
     Web pages today very commonly load cross-site resources, for example, a page 'Domain A' (`http://domaina.example/`) requests an image on 'Domain B' (`http://domainb.foo/image.jpg`) via the `img` element.
     CORS allows web developers to control how their site reacts to cross-site requests.
-- [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP)
+- [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP)
   - : CSP allows website administrators to use the {{HTTPHeader("Content-Security-Policy")}} response header to control which resources the client is allowed to load for a given page.
     The CSP guide describes the overall Content Security Policy mechanism which helps detect and mitigate certain types of attacks, including Cross-Site Scripting (XSS) and data injection attacks.
-- [Cross-Origin Resource Policy (CORP)](/en-US/docs/Web/HTTP/Cross-Origin_Resource_Policy)
+- [Cross-Origin Resource Policy (CORP)](/en-US/docs/Web/HTTP/Guides/Cross-Origin_Resource_Policy)
   - : CORP lets websites and applications opt in to protection against specific requests from other origins (such as those issued with elements like `<script>` and `<img>`), to mitigate speculative side-channel attacks.
 
 ## Tools & resources

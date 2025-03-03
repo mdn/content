@@ -33,7 +33,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
     - `content-security-policy`
 
-      - : Allows page authors to define a [content policy](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) for the current page. Content policies mostly specify allowed server origins and script endpoints which help guard against cross-site scripting attacks.
+      - : Allows page authors to define a [content policy](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) for the current page. Content policies mostly specify allowed server origins and script endpoints which help guard against cross-site scripting attacks.
 
         Also see {{HTTPHeader("Content-Security-Policy")}}.
 

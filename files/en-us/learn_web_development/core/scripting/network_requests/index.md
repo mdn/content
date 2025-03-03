@@ -180,7 +180,7 @@ The `fetch()` function returns a promise. If this completes successfully, the fu
 
 Inside this function we:
 
-- check that the server didn't return an error (such as [`404 Not Found`](/en-US/docs/Web/HTTP/Status/404)). If it did, we throw the error.
+- check that the server didn't return an error (such as [`404 Not Found`](/en-US/docs/Web/HTTP/Reference/Status/404)). If it did, we throw the error.
 - call {{domxref("Response.json","json()")}} on the response. This will retrieve the data as a [JSON object](/en-US/docs/Learn_web_development/Core/Scripting/JSON). We return the promise returned by `response.json()`.
 
 Next we pass a function into the `then()` method of that returned promise. This function will be passed an object containing the response data as JSON, which we pass into the `initialize()` function. It is `initialize()` which starts the process of displaying all the products in the user interface.

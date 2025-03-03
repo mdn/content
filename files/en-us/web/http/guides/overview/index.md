@@ -85,7 +85,7 @@ HTTP messages can be read and understood by humans, providing easier testing for
 
 ### HTTP is extensible
 
-Introduced in HTTP/1.0, [HTTP headers](/en-US/docs/Web/HTTP/Headers) make this protocol easy to extend and experiment with.
+Introduced in HTTP/1.0, [HTTP headers](/en-US/docs/Web/HTTP/Reference/Headers) make this protocol easy to extend and experiment with.
 New functionality can even be introduced by an agreement between a client and a server about a new header's semantics.
 
 ### HTTP is stateless, but not sessionless
@@ -197,11 +197,11 @@ An example HTTP request:
 
 Requests consist of the following elements:
 
-- An HTTP [method](/en-US/docs/Web/HTTP/Methods), usually a verb like {{HTTPMethod("GET")}}, {{HTTPMethod("POST")}}, or a noun like {{HTTPMethod("OPTIONS")}} or {{HTTPMethod("HEAD")}} that defines the operation the client wants to perform.
+- An HTTP [method](/en-US/docs/Web/HTTP/Reference/Methods), usually a verb like {{HTTPMethod("GET")}}, {{HTTPMethod("POST")}}, or a noun like {{HTTPMethod("OPTIONS")}} or {{HTTPMethod("HEAD")}} that defines the operation the client wants to perform.
   Typically, a client wants to fetch a resource (using `GET`) or post the value of an [HTML form](/en-US/docs/Learn_web_development/Extensions/Forms) (using `POST`), though more operations may be needed in other cases.
 - The path of the resource to fetch; the URL of the resource stripped from elements that are obvious from the context, for example without the {{Glossary("protocol")}} (`http://`), the {{Glossary("domain")}} (here, `developer.mozilla.org`), or the TCP {{Glossary("port")}} (here, `80`).
 - The version of the HTTP protocol.
-- Optional [headers](/en-US/docs/Web/HTTP/Headers) that convey additional information for the servers.
+- Optional [headers](/en-US/docs/Web/HTTP/Reference/Headers) that convey additional information for the servers.
 - A body, for some methods like `POST`, similar to those in responses, which contain the resource sent.
 
 ### Responses
@@ -213,9 +213,9 @@ An example response:
 Responses consist of the following elements:
 
 - The version of the HTTP protocol they follow.
-- A [status code](/en-US/docs/Web/HTTP/Status), indicating if the request was successful or not, and why.
+- A [status code](/en-US/docs/Web/HTTP/Reference/Status), indicating if the request was successful or not, and why.
 - A status message, a non-authoritative short description of the status code.
-- HTTP [headers](/en-US/docs/Web/HTTP/Headers), like those for requests.
+- HTTP [headers](/en-US/docs/Web/HTTP/Reference/Headers), like those for requests.
 - Optionally, a body containing the fetched resource.
 
 ## APIs based on HTTP

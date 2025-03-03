@@ -17,7 +17,7 @@ A {{domxref("ReadableStream")}}, or else [`null`](/en-US/docs/Web/JavaScript/Ref
 The stream is a [readable byte stream](/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams), which supports zero-copy reading using a {{domxref("ReadableStreamBYOBReader")}}.
 
 > [!NOTE]
-> Current browsers don't actually conform to the spec requirement to set the `body` property to `null` for responses with no body (for example, responses to [`HEAD`](/en-US/docs/Web/HTTP/Methods/HEAD) requests, or [`204 No Content`](/en-US/docs/Web/HTTP/Status/204) responses).
+> Current browsers don't actually conform to the spec requirement to set the `body` property to `null` for responses with no body (for example, responses to [`HEAD`](/en-US/docs/Web/HTTP/Reference/Methods/HEAD) requests, or [`204 No Content`](/en-US/docs/Web/HTTP/Reference/Status/204) responses).
 
 ## Examples
 

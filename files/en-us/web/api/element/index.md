@@ -310,7 +310,7 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 - {{domxref("Element/input_event","input")}}
   - : Fires when an element's value is changed as a direct result of a user action.
 - {{domxref("Element/securitypolicyviolation_event","securitypolicyviolation")}}
-  - : Fired when a [Content Security Policy](/en-US/docs/Web/HTTP/CSP) is violated.
+  - : Fired when a [Content Security Policy](/en-US/docs/Web/HTTP/Guides/CSP) is violated.
 - {{domxref("Element/wheel_event","wheel")}}
   - : Fired when the user rotates a wheel button on a pointing device (typically a mouse).
 

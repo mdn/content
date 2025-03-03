@@ -77,7 +77,7 @@ There are several ways to determine the correct MIME type value to be used to se
 - In Firefox
 
   - Load the file and go to **Tools > Page Info** to get the content type for the page you accessed.
-  - You can also go to **Tools > Web Developer > Network** and reload the page. The request tab gives you a list of all the resources the page loaded. Clicking on any resource will list all the information available, including the page's [`Content-Type`](/en-US/docs/Web/HTTP/Headers/Content-Type) header.
+  - You can also go to **Tools > Web Developer > Network** and reload the page. The request tab gives you a list of all the resources the page loaded. Clicking on any resource will list all the information available, including the page's [`Content-Type`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Type) header.
 
 - In Chrome
 

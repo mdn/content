@@ -6,10 +6,10 @@ page-type: guide
 
 {{HTTPSidebar}}
 
-**Client hints** are a set of [HTTP request header](/en-US/docs/Web/HTTP/Headers) fields that a server can proactively request from a client to get information about the device, network, user, and user-agent-specific preferences.
+**Client hints** are a set of [HTTP request header](/en-US/docs/Web/HTTP/Reference/Headers) fields that a server can proactively request from a client to get information about the device, network, user, and user-agent-specific preferences.
 The server can determine which resources to send, based on the information that the client chooses to provide.
 
-The set of "hint" headers are listed in the topic [HTTP Headers](/en-US/docs/Web/HTTP/Headers#client_hints) and [summarized below](#hint_types).
+The set of "hint" headers are listed in the topic [HTTP Headers](/en-US/docs/Web/HTTP/Reference/Headers#client_hints) and [summarized below](#hint_types).
 
 ## Overview
 
@@ -113,7 +113,7 @@ Sec-CH-Prefers-Reduced-Motion: "reduce"
 ### User-agent client hints
 
 User agent (UA) client hint headers allow a server to vary responses based on the user agent (browser), operating system, and device.
-For a list of `Sec-CH-UA-*` headers, see [User agent client hints headers](/en-US/docs/Web/HTTP/Headers#user_agent_client_hints).
+For a list of `Sec-CH-UA-*` headers, see [User agent client hints headers](/en-US/docs/Web/HTTP/Reference/Headers#user_agent_client_hints).
 
 Client hints are available to web page JavaScript via the [User Agent Client Hints API](/en-US/docs/Web/API/User-Agent_Client_Hints_API).
 
@@ -124,7 +124,7 @@ Client hints are available to web page JavaScript via the [User Agent Client Hin
 > They are eventually expected to replace this older approach.
 
 > [!NOTE]
-> User-agent client hints are not available inside [fenced frames](/en-US/docs/Web/API/Fenced_frame_API) because they rely on [permissions policy](/en-US/docs/Web/HTTP/Permissions_Policy) delegation, which could be used to leak data.
+> User-agent client hints are not available inside [fenced frames](/en-US/docs/Web/API/Fenced_frame_API) because they rely on [permissions policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy) delegation, which could be used to leak data.
 
 ### User preference media features client hints
 
@@ -143,8 +143,8 @@ Headers include: {{HTTPHeader("Save-Data")}}, {{HTTPHeader("Downlink")}}, {{HTTP
 
 ## See also
 
-- [Client Hints headers](/en-US/docs/Web/HTTP/Headers#client_hints)
-- [`Vary` HTTP Header](/en-US/docs/Web/HTTP/Headers/Vary)
+- [Client Hints headers](/en-US/docs/Web/HTTP/Reference/Headers#client_hints)
+- [`Vary` HTTP Header](/en-US/docs/Web/HTTP/Reference/Headers/Vary)
 - [Client Hints Infrastructure](https://wicg.github.io/client-hints-infrastructure/)
 - [User Agent Client Hints API](/en-US/docs/Web/API/User-Agent_Client_Hints_API)
 - [Improving user privacy and developer experience with User-Agent Client Hints](https://developer.chrome.com/docs/privacy-security/user-agent-client-hints) (developer.chrome.com)

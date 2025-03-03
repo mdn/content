@@ -157,8 +157,8 @@ The following APIs are also useful for measuring and influencing page performanc
 
 ### HTTP
 
-- [Content-encoding](/en-US/docs/Web/HTTP/Headers/Content-Encoding)
-- Resource hints via [dns-prefetch](/en-US/docs/Web/HTTP/Headers/X-DNS-Prefetch-Control), [preconnect](/en-US/docs/Web/HTML/Attributes/rel/preconnect), [prefetch](/en-US/docs/Glossary/Prefetch), and prerender
+- [Content-encoding](/en-US/docs/Web/HTTP/Reference/Headers/Content-Encoding)
+- Resource hints via [dns-prefetch](/en-US/docs/Web/HTTP/Reference/Headers/X-DNS-Prefetch-Control), [preconnect](/en-US/docs/Web/HTML/Attributes/rel/preconnect), [prefetch](/en-US/docs/Glossary/Prefetch), and prerender
 - [HTTP/2](/en-US/docs/Web/HTTP/Guides/Messages#http2_messages)
 - [Client Hints](/en-US/docs/Web/HTTP/Guides/Client_hints)
 

@@ -11,9 +11,9 @@ The _New Window_ [command](/en-US/docs/Web/WebDriver/Commands) of the [WebDriver
 
 ## Syntax
 
-| Method                                        | URI template                       |
-| --------------------------------------------- | ---------------------------------- |
-| [`POST`](/en-US/docs/Web/HTTP/Methods/DELETE) | `/session/{session id}/window/new` |
+| Method                                                  | URI template                       |
+| ------------------------------------------------------- | ---------------------------------- |
+| [`POST`](/en-US/docs/Web/HTTP/Reference/Methods/DELETE) | `/session/{session id}/window/new` |
 
 ### URL parameters
 

@@ -16,7 +16,7 @@ spec-urls: https://wicg.github.io/anonymous-iframe/
 
 Various web API features can only be used on sites that opt in to cross-origin isolation — examples include {{jsxref("SharedArrayBuffer")}} and {{domxref("DOMHighResTimeStamp", "high-resolution timers", "", "nocode")}}. This is because of the risk of such features being exploited in [Spectre attacks](https://spectreattack.com/spectre.pdf), where a victim's confidential information can be leaked via a side channel and captured by an attacker.
 
-To opt in to cross-origin isolation, a resource must be served with a {{httpheader("Cross-Origin-Opener-Policy")}} with a value of `same-origin` (protects your origin from attackers) and {{httpheader("Cross-Origin-Embedder-Policy")}} with a value of `credentialless` or `require-corp` (protects victims from your origin). The latter prevents a document from loading any credentialled cross-origin resources that don't explicitly grant the document permission using {{httpheader("Cross-Origin-Resource-Policy")}} or [Cross-Origin Resource Sharing](/en-US/docs/Web/HTTP/CORS).
+To opt in to cross-origin isolation, a resource must be served with a {{httpheader("Cross-Origin-Opener-Policy")}} with a value of `same-origin` (protects your origin from attackers) and {{httpheader("Cross-Origin-Embedder-Policy")}} with a value of `credentialless` or `require-corp` (protects victims from your origin). The latter prevents a document from loading any credentialled cross-origin resources that don't explicitly grant the document permission using {{httpheader("Cross-Origin-Resource-Policy")}} or [Cross-Origin Resource Sharing](/en-US/docs/Web/HTTP/Guides/CORS).
 
 The key issue limiting the adoption of cross-origin isolation is the fact that `Cross-Origin-Embedder-Policy` is applied recursively — any third-party content loaded into `<iframe>`s in a document with a `Cross-Origin-Embedder-Policy` set must also deploy `Cross-Origin-Embedder-Policy` for the embedding to succeed. This is a problem for developers embedding third-party content in their apps (such as ad-network content) as they generally have no control over it — their only choice up to now has been to wait for the third-party content providers to implement `Cross-Origin-Embedder-Policy`.
 
@@ -85,6 +85,6 @@ Use the [https://anonymous-iframe.glitch.me/](https://anonymous-iframe.glitch.me
 - {{httpheader("Cross-Origin-Opener-Policy")}}
 - {{httpheader("Cross-Origin-Embedder-Policy")}}
 - {{httpheader("Cross-Origin-Resource-Policy")}}
-- [Cross-Origin Resource Sharing](/en-US/docs/Web/HTTP/CORS)
+- [Cross-Origin Resource Sharing](/en-US/docs/Web/HTTP/Guides/CORS)
 - The `<iframe>` [`credentialless`](/en-US/docs/Web/HTML/Element/iframe#credentialless) attribute
 - {{domxref("HTMLIFrameElement.credentialless")}}

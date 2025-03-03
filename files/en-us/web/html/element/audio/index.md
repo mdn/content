@@ -88,7 +88,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
     > - The browser is not forced by the specification to follow the value of this attribute; it is a mere hint.
 
 - `src`
-  - : The URL of the audio to embed. This is subject to [HTTP access controls](/en-US/docs/Web/HTTP/CORS). This is optional; you may instead use the {{htmlelement("source")}} element within the audio block to specify the audio to embed.
+  - : The URL of the audio to embed. This is subject to [HTTP access controls](/en-US/docs/Web/HTTP/Guides/CORS). This is optional; you may instead use the {{htmlelement("source")}} element within the audio block to specify the audio to embed.
 
 ## Events
 

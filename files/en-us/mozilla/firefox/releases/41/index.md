@@ -138,8 +138,8 @@ Mathematical formulas require special fonts. So far, these fonts were hard-coded
 
 ## Security
 
-- The [CSP](/en-US/docs/Web/HTTP/CSP) 1.1 `manifest-src` [directive](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) is now supported ([Firefox bug 1089255](https://bugzil.la/1089255)).
-- Previous versions of Firefox incorrectly expected the [Content Security Policy](/en-US/docs/Web/HTTP/CSP) [referrer](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#referrer) directive's value `origin-when-cross-origin` to be spelled `origin-when-crossorigin`. This has been corrected to include the missing dash character.
+- The [CSP](/en-US/docs/Web/HTTP/Guides/CSP) 1.1 `manifest-src` [directive](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) is now supported ([Firefox bug 1089255](https://bugzil.la/1089255)).
+- Previous versions of Firefox incorrectly expected the [Content Security Policy](/en-US/docs/Web/HTTP/Guides/CSP) [referrer](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#referrer) directive's value `origin-when-cross-origin` to be spelled `origin-when-crossorigin`. This has been corrected to include the missing dash character.
 
 ## Changes for add-on and Mozilla developers
 

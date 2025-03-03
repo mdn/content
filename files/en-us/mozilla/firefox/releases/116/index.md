@@ -38,7 +38,7 @@ This article provides information about the changes in Firefox 116 that affect d
 
 ### HTTP
 
-- Configuring a [Content-Security-Policy](/en-US/docs/Web/HTTP/CSP) now supports specifying [external JavaScript files to be allowlisted using hashes](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#allowlisting_external_scripts_using_hashes), where previously only inline scripts could be allowlisted using a hash ([Firefox bug 1409200](https://bugzil.la/1409200)).
+- Configuring a [Content-Security-Policy](/en-US/docs/Web/HTTP/Guides/CSP) now supports specifying [external JavaScript files to be allowlisted using hashes](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src#allowlisting_external_scripts_using_hashes), where previously only inline scripts could be allowlisted using a hash ([Firefox bug 1409200](https://bugzil.la/1409200)).
 
 ### APIs
 
@@ -51,7 +51,7 @@ This article provides information about the changes in Firefox 116 that affect d
 
 - The [Audio Output Devices API](/en-US/docs/Web/API/Audio_Output_Devices_API) is now supported on all platforms except for Android.
   This API allows web applications to redirect audio output to a permitted Bluetooth headset, speakerphone, or other device, instead of having to use the browser or underlying OS default.
-  Affected APIs include {{domxref("MediaDevices.selectAudioOutput()")}}, {{domxref("MediaDevices.enumerateDevices()")}}, [`HTMLMediaElement.setSinkId()`](/en-US/docs/Web/API/HTMLMediaElement/setSinkId), [`HTMLMediaElement.sinkId`](/en-US/docs/Web/API/HTMLMediaElement/sinkId), and the permission policy [`Permissions-Policy: speaker-selection`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/speaker-selection) ([Firefox bug 1498512](https://bugzil.la/1498512)).
+  Affected APIs include {{domxref("MediaDevices.selectAudioOutput()")}}, {{domxref("MediaDevices.enumerateDevices()")}}, [`HTMLMediaElement.setSinkId()`](/en-US/docs/Web/API/HTMLMediaElement/setSinkId), [`HTMLMediaElement.sinkId`](/en-US/docs/Web/API/HTMLMediaElement/sinkId), and the permission policy [`Permissions-Policy: speaker-selection`](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/speaker-selection) ([Firefox bug 1498512](https://bugzil.la/1498512)).
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 

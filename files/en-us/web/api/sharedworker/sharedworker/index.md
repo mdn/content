@@ -54,7 +54,7 @@ new SharedWorker(aURL, options)
         identifying name for the {{domxref("SharedWorkerGlobalScope")}} representing the
         scope of the worker, which is mainly useful for debugging purposes.
     - `sameSiteCookies`
-      - : A string indicating which [`SameSite` cookies](/en-US/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value)
+      - : A string indicating which [`SameSite` cookies](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value)
         should be available to the worker. Can have one of the following two values:
         - 'all'
           - : `SameSite=Strict`, `SameSite=Lax`, and `SameSite=None` cookies will all be available to the worker.
