@@ -1,5 +1,6 @@
 ---
 title: Proving the Pythagorean theorem
+short-title: Pythagorean theorem
 slug: Web/MathML/Guides/Proving_the_Pythagorean_theorem
 page-type: guide
 sidebar: mathmlref
