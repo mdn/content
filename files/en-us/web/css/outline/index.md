@@ -7,7 +7,7 @@ browser-compat: css.properties.outline
 
 {{CSSRef}}
 
-The **`outline`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) sets most of the outline properties in a single declaration.
+The **`outline`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) sets most of the outline properties in a single declaration.
 
 {{EmbedInteractiveExample("pages/css/outline.html")}}
 
