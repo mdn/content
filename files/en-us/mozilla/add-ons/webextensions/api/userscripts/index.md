@@ -27,7 +27,7 @@ When a user script is registered or updated (using {{WebExtAPIRef("userScripts.r
 
 User scripts can share a `USER_SCRIPT` world or isolate themselves in a `USER_SCRIPT` world by setting the `worldId` property of {{WebExtAPIRef("userScripts.RegisteredUserScript", "RegisteredUserScript")}}. The API enables an extension to configure a content security policy (CSP) for a `USER_SCRIPT` world using {{WebExtAPIRef("userScripts.configureWorld()")}}.
 
-A `USER_SCRIPT` world provides an isolated execution environment that isn't accessible to a host page or other extensions. This means a user script can change its JavaScript environment without affecting the host page or other extensions' user and content scripts. In this environment, user scripts aren't visible to the host page or other extensions' user and content scripts.
+A `USER_SCRIPT` world provides an isolated execution environment that isn't accessible to a host page or other extensions. This means a user script can change its JavaScript environment without affecting and isn't visible to its host page or other extensions' user and content scripts.
 
 In the `MAIN` world, host pages and other extensions can see and access running user scripts. The `worldId` property is not supported for `MAIN` worlds.
 
