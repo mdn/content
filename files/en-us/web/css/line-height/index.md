@@ -203,3 +203,4 @@ The `line-height` property can be used to adjust space between vertical lines in
 ## See also
 
 - {{Cssxref("font")}}, {{Cssxref("font-size")}}
+- {{glossary("Leading")}}

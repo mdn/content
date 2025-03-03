@@ -20,8 +20,8 @@ sidebar: mdnsidebar
 > slug: Web/CSS/NameOfTheFunction
 > page-type: css-function
 > status:
->   - experimental
 >   - deprecated
+>   - experimental
 >   - non-standard
 > browser-compat: css.types.NameOfTheFunction
 > ---
@@ -36,7 +36,7 @@ sidebar: mdnsidebar
 > - **page-type**
 >   - : The `page-type` value for CSS functions is `css-function`.
 > - **status**
->   - : Flags describing the status of this feature. An array which may contain one or more of the following: `experimental`, `deprecated`, `non-standard`. This key should not be set manually: it is set automatically based on values in the browser compatibility data for the feature. See ["How to add or update feature statuses"](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_to_add_or_update_feature_statuses).
+>   - : Flags describing the status of this feature. An array which may contain one or more of the following: `experimental`, `deprecated`, `non-standard`. This key should not be set manually: it is set automatically based on values in the browser compatibility data for the feature. See ["How feature statuses are added or updated"](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_feature_statuses_are_added_or_updated).
 > - **browser-compat**
 >   - : Replace the placeholder value <code>css.types.NameOfTheFunction</code> with the query string for the function in the [Browser compat data repo](https://github.com/mdn/browser-compat-data/tree/main/css/types). Check the _Other macros in the page_ section of this note block to see how this key-value is used to generate content for the _Specifications_ and _Browser compatibility_ sections.
 >
@@ -57,7 +57,7 @@ sidebar: mdnsidebar
 > - `\{{CSSRef}}`: This macro must be present on every CSS page. It generates a suitable CSS sidebar, depending on the tags included on the page.
 >   Remember to remove the `\{{MDNSidebar}}` macro when you use this template.
 >
-> Do not provide status header macros manually. Refer to the section ["How to add or update feature statuses"](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_to_add_or_update_feature_statuses) to add these statuses to the page.
+> Do not provide status header macros manually. Refer to the section ["How feature statuses are added or updated"](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_feature_statuses_are_added_or_updated) to add these statuses to the page.
 >
 > Samples of the **Experimental**, **Deprecated**, and **Non-standard** banners are shown right after this note block.
 >
@@ -123,6 +123,9 @@ Include one term and definition for each parameter.
   - : Include a description of the parameter, its data type, and its default value if any.
 - `<declaration-value>` {{optional_inline}}
   - : Include a description of the parameter, its data type, and its default value if any.
+
+> [!WARNING]
+> Do not add [inline status macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status#feature_status_icons_in_definition_lists) on CSS pages.
 
 ### Return value
 
