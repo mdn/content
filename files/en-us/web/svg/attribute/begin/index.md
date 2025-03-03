@@ -7,7 +7,8 @@ spec-urls: https://svgwg.org/specs/animations/#BeginAttribute
 
 {{SVGRef}}
 
-The **`begin`** attribute defines when an animation should begin.
+The **`begin`** attribute defines when the associated element becomes active.
+For an animation element, this is the point at which the animation should begin.
 
 The attribute value is a semicolon separated list of values. The interpretation of a list of start times is detailed in the SMIL specification in ["Evaluation of begin and end time lists"](https://www.w3.org/TR/smil-animation/#Timing-EvaluationOfBeginEndTimeLists). Each individual value can be one of the following: `<offset-value>`, `<syncbase-value>`, `<event-value>`, `<repeat-value>`, `<accessKey-value>`, `<wallclock-sync-value>` or the keyword `indefinite`.
 
@@ -16,6 +17,7 @@ You can use this attribute with the following SVG elements:
 - {{SVGElement("animate")}}
 - {{SVGElement("animateMotion")}}
 - {{SVGElement("animateTransform")}}
+- {{SVGElement("discard")}}
 - {{SVGElement("set")}}
 
 ## animate, animateMotion, animateTransform, set

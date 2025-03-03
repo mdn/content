@@ -23,6 +23,7 @@ This article provides information about the changes in Firefox 136 that affect d
 
 - The {{CSSXRef(":has-slotted")}} [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) is used to style elements in {{HTMLElement("template")}} that have content added to a {{HTMLElement("slot")}} element when rendering a [web component](/en-US/docs/Web/API/Web_components) ([Firefox bug 1940691](https://bugzil.la/1940691)).
 - The [`:open`](/en-US/docs/Web/CSS/:open) pseudo-class is now supported and allows you to select any element that is currently in an open state, this applies to the {{htmlelement("details")}}, {{htmlelement("dialog")}}, {{htmlelement("input")}} elements with a picker and {{htmlelement("select")}} elements which present a drop-down box. ([Firefox bug 1936113](https://bugzil.la/1936113)).
+- The {{cssxref("gradient")}} CSS functions {{cssxref("linear-gradient")}}, {{cssxref("conic-gradient")}}, and {{cssxref("radial-gradient")}} now allow a single color stop and 0-1 positions. This produces a single solid color and is used in setting the {{cssxref("mask")}} CSS property. ([Firefox bug 1900530](https://bugzil.la/1900530)).
 
 #### Removals
 
@@ -120,6 +121,9 @@ These features are newly shipped in Firefox 136 but are disabled by default. To 
 - **Clear-Site-Data: cache**: `privacy.clearSiteDataHeader.cache.enabled`.
   The [`Clear-Site-Data`](/en-US/docs/Web/HTTP/Headers/Clear-Site-Data) header can be used with the [`cache`](/en-US/docs/Web/HTTP/Headers/Clear-Site-Data#cache) or `*` directives to clear the browser cache.
   ([Firefox bug 1942272](https://bugzil.la/1942272)).
+- **SVG `<discard>` element for SVG animations**: `svg.discard.enabled`.
+  The {{svgelement("discard")}} SVG element allows developers to specify a trigger, such as the elapsed time since the SVG was loaded into DOM or the end of a particular animation, at which a specified element and its children should be removed from the DOM. This allows an SVG viewer to conserve memory by discarding animated elements that no longer needed.
+  ([Firefox bug 1069931](https://bugzil.la/1069931)).
 
 ## Older versions
 

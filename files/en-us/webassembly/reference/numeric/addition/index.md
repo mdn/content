@@ -7,7 +7,27 @@ sidebar: webassemblysidebar
 
 The **`add`** instructions, are used for adding up two numbers, similar to the **`+`** operator in other languages.
 
-{{EmbedInteractiveExample("pages/wat/add.html", "tabbed-taller")}}
+{{InteractiveExample("Wat Demo: add", "tabbed-taller")}}
+
+```wat interactive-example
+(module
+  (import "console" "log" (func $log (param i32)))
+  (func $main
+    ;; load `10` and `3` onto the stack
+    i32.const 10
+    i32.const 3
+
+    i32.add ;; add up both numbers
+    call $log ;; log the result
+  )
+  (start $main)
+)
+```
+
+```js interactive-example
+const url = "{%wasm-url%}";
+await WebAssembly.instantiateStreaming(fetch(url), { console });
+```
 
 ## Syntax
 

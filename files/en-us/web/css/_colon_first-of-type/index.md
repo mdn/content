@@ -9,7 +9,35 @@ browser-compat: css.selectors.first-of-type
 
 The **`:first-of-type`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents the first element of its type among a group of sibling elements.
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-class-first-of-type.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: :first-of-type", "tabbed-shorter")}}
+
+```css interactive-example
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin: 3px;
+}
+
+dd:first-of-type {
+  border: 2px solid orange;
+}
+```
+
+```html interactive-example
+<dl>
+  <dt>Vegetables:</dt>
+  <dd>1. Tomatoes</dd>
+  <dd>2. Cucumbers</dd>
+  <dd>3. Mushrooms</dd>
+  <dt>Fruits:</dt>
+  <dd>4. Apples</dd>
+  <dd>5. Mangos</dd>
+  <dd>6. Pears</dd>
+  <dd>7. Oranges</dd>
+</dl>
+```
 
 ## Syntax
 

@@ -10,7 +10,7 @@ Our **Core modules** cover topics that we feel every web developer should have a
 
 ## Prerequisites
 
-While there is no prerequisite knowledge for starting this set of modules, we would recommend that you familiarize yourself with your computer, make sure you've got a basic set of required applications installed (such as web browsers and a code editor), and do some background reading on the web and web technologies, if you have no already done so. All these topics are covered in our [Getting started modules](/en-US/docs/Learn_web_development/Getting_started).
+While there is no prerequisite knowledge for starting this set of modules, we would recommend that you familiarize yourself with your computer, make sure you've got a basic set of required applications installed (such as web browsers and a code editor), and do some background reading on the web and web technologies, if you have not already done so. All these topics are covered in our [Getting started modules](/en-US/docs/Learn_web_development/Getting_started).
 
 In particular, if you've never done any coding before, we'd recommend the [Your first website](/en-US/docs/Learn_web_development/Getting_started/Your_first_website) module, which introduces you web technologies very gently and takes you through the process of building a simple website.
 
