@@ -76081,6 +76081,16 @@
       "mfluehr"
     ]
   },
+  "Web/CSS/CSS_backgrounds_and_borders/Scaling_of_SVG_backgrounds": {
+    "modified": "2020-04-27T22:34:13.651Z",
+    "contributors": [
+      "codejockie",
+      "mfluehr",
+      "C.Bertolini",
+      "kscarfone",
+      "Sheppy"
+    ]
+  },
   "Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds": {
     "modified": "2020-06-24T00:30:00.545Z",
     "contributors": ["tmhrtwg", "jonjohnjohnson", "mfluehr"]
@@ -78600,16 +78610,6 @@
       "peb",
       "ethertank",
       "teoli"
-    ]
-  },
-  "Web/CSS/Scaling_of_SVG_backgrounds": {
-    "modified": "2020-04-27T22:34:13.651Z",
-    "contributors": [
-      "codejockie",
-      "mfluehr",
-      "C.Bertolini",
-      "kscarfone",
-      "Sheppy"
     ]
   },
   "Web/CSS/Selector_list": {

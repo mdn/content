@@ -521,7 +521,7 @@
 /en-US/docs/CSS/Pseudo-elements	/en-US/docs/Web/CSS/Pseudo-elements
 /en-US/docs/CSS/Replaced_element	/en-US/docs/Web/CSS/Replaced_element
 /en-US/docs/CSS/Scaling_background_images	/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images
-/en-US/docs/CSS/Scaling_of_SVG_backgrounds	/en-US/docs/Web/CSS/Scaling_of_SVG_backgrounds
+/en-US/docs/CSS/Scaling_of_SVG_backgrounds	/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Scaling_of_SVG_backgrounds
 /en-US/docs/CSS/Shorthand_properties	/en-US/docs/Web/CSS/Shorthand_properties
 /en-US/docs/CSS/Specificity	/en-US/docs/Web/CSS/CSS_cascade/Specificity
 /en-US/docs/CSS/Syntax	/en-US/docs/Web/CSS/CSS_syntax/Syntax
@@ -11991,6 +11991,7 @@
 /en-US/docs/Web/CSS/Reference/Mozilla_Extensions	/en-US/docs/Web/CSS/Mozilla_Extensions
 /en-US/docs/Web/CSS/Reference/Webkit_Extensions	/en-US/docs/Web/CSS/WebKit_Extensions
 /en-US/docs/Web/CSS/Reference/object-position	/en-US/docs/Web/CSS/object-position
+/en-US/docs/Web/CSS/Scaling_of_SVG_backgrounds	/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Scaling_of_SVG_backgrounds
 /en-US/docs/Web/CSS/Selector_lists	/en-US/docs/Web/CSS/Selector_list
 /en-US/docs/Web/CSS/Selectors	/en-US/docs/Web/CSS/CSS_selectors
 /en-US/docs/Web/CSS/Specificity	/en-US/docs/Web/CSS/CSS_cascade/Specificity
