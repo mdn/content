@@ -14,9 +14,15 @@ While the control's user interface appearance is based on the browser and operat
 {{InteractiveExample("HTML Demo: &lt;input type=&quot;time&quot;&gt;", "tabbed-standard")}}
 
 ```html interactive-example
-<label for="appt">Choose a time for your meeting:</label>
+<label for="appointment">Choose a time for your meeting:</label>
 
-<input type="time" id="appt" name="appt" min="09:00" max="18:00" required />
+<input
+  type="time"
+  id="appointment"
+  name="appointment"
+  min="09:00"
+  max="18:00"
+  required />
 
 <small>Office hours are 9am to 6pm</small>
 ```

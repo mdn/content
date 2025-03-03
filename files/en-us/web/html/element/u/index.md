@@ -14,6 +14,8 @@ The **`<u>`** [HTML](/en-US/docs/Web/HTML) element represents a span of inline t
 
 {{InteractiveExample("HTML Demo: &lt;u&gt;", "tabbed-shorter")}}
 
+<!-- cSpell:ignore speling corect -->
+
 ```html interactive-example
 <p>
   You could use this element to highlight <u>speling</u> mistakes, so the writer
