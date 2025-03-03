@@ -9,7 +9,25 @@ browser-compat: css.selectors.first-line
 
 The **`::first-line`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) applies styles to the first line of a [block container](/en-US/docs/Web/CSS/Visual_formatting_model#block_containers).
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-element-first-line.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: ::first-line", "tabbed-shorter")}}
+
+```css interactive-example
+p::first-line {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: underline;
+}
+```
+
+```html interactive-example
+<p>
+  In warm ocean waters around the world, you may see a strange sight: A fish
+  leaping from the water and soaring dozens of meters before returning to the
+  ocean's depths. Early Mediterranean sailors thought these flying fish returned
+  to the shore at night to sleep, and therefore called this family of marine
+  fish Exocoetidae.
+</p>
+```
 
 The effects of `::first-line` are limited by the length and content of the first line of text in the element. The length of the first line depends on many factors, including the width of the element, the width of the document, and the font size of the text. `::first-line` has no effect when the first child of the element, which would be the first part of the first line, is an inline block-level element, such as an inline table.
 

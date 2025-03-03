@@ -945,15 +945,15 @@
   resolved "https://registry.yarnpkg.com/@mdn/bcd-utils-api/-/bcd-utils-api-0.0.7.tgz#555e80c33df520df068943e6b18ebc07f0e24d19"
   integrity sha512-IHkkypEjlIkBkx4mJ2//Xbzog9M/Lzne1Sl8db2cIHJ/5pe3NCqSLwSchmqzcUN+/WJr/U+V3tNAbWunk2xZcA==
 
-"@mdn/browser-compat-data@^5.6.42":
-  version "5.6.42"
-  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-5.6.42.tgz#700de27d93e8ef1bab2b38c5964f8e0abac78c43"
-  integrity sha512-cAJkWdc5OdX0nOO8gngl7MBlJES64ySyeWom5t4OjyHEn8gfUPlIsFeKS4O2OEhvXpgI6T0K/4aYDtW07pKxVA==
+"@mdn/browser-compat-data@^5.6.43":
+  version "5.6.43"
+  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-5.6.43.tgz#a33fc8373aac35980f644473a743b66e3b671410"
+  integrity sha512-qLuxKpjwFhjvFkdqNb37AJpJo9J22Qdcml+92/yWdlREte3JFdayz7SqmjXLlCuizSjz9uVH+aW7dQ7KJEKg1g==
 
-"@mdn/rari@^0.1.25":
-  version "0.1.25"
-  resolved "https://registry.yarnpkg.com/@mdn/rari/-/rari-0.1.25.tgz#a056c1b3f4197ea098a98d94132b2118f9f2bcf4"
-  integrity sha512-q3c8WUSrwmfOl4txeeVOqyagUtyRuJaAIDYufdR4NVRyQAWz0Jdwtgyf9cRniaSUPzwzeqeXxgcOHecY3V5ooQ==
+"@mdn/rari@^0.1.26":
+  version "0.1.26"
+  resolved "https://registry.yarnpkg.com/@mdn/rari/-/rari-0.1.26.tgz#41c5e31631a6d2a835c22aab1bd8a7ccf1fe09c2"
+  integrity sha512-yGRgRjV5tY3+I/3fYn886ffWAvz2fIqUAtmtVbQ2yJhEk7o0ajhTd3aBAaq2O36ovr9gm0uOs5FAcm+Tx/bf4A==
   dependencies:
     extract-zip "^2.0.1"
     https-proxy-agent "^7.0.2"
@@ -961,10 +961,15 @@
     proxy-from-env "^1.1.0"
     tar "^7.4.3"
 
-"@mdn/yari@4.6.1":
-  version "4.6.1"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-4.6.1.tgz#3171eb51546a382e27a0914e12d9ccde5f516afa"
-  integrity sha512-eCRF4S2AZza8WN6FcG0z7LQ4QHKtX6FRo5awuImad77KcIopkHJEwXRuDGXnXi6QMHBYxXjDp9eebMoajXJFPQ==
+"@mdn/watify@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@mdn/watify/-/watify-1.0.1.tgz#40e3385028e53756f8e7636bd721a5e9bb470313"
+  integrity sha512-W+4qjnv/0nz0lGJrid8ssadE/3bjVrbXqpvAP9GpRuuqT5aC5VSdZkPDJW6vACYrbdFLLWmx+64YR9UouyDCWw==
+
+"@mdn/yari@4.6.2":
+  version "4.6.2"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-4.6.2.tgz#792875f646389549c3ff5d5cc4b59971c9f7d54a"
+  integrity sha512-PbwgMUWE1Wk9DeX43tibZIgBbx8T+zMY5M1TgbyPIJu4O2q6Z27RTWAmnulVE7ywrxwqfLcXWoEVF6oakgv7kw==
   dependencies:
     "@caporal/core" "^2.0.7"
     "@codemirror/lang-css" "^6.3.1"
@@ -978,8 +983,9 @@
     "@lit/react" "^1.0.7"
     "@lit/task" "^1.0.2"
     "@mdn/bcd-utils-api" "^0.0.7"
-    "@mdn/browser-compat-data" "^5.6.42"
-    "@mdn/rari" "^0.1.25"
+    "@mdn/browser-compat-data" "^5.6.43"
+    "@mdn/rari" "^0.1.26"
+    "@mdn/watify" "^1.0.1"
     "@mozilla/glean" "5.0.3"
     "@sentry/node" "^8.54.0"
     "@stripe/stripe-js" "^5.7.0"
@@ -1027,15 +1033,15 @@
     md5-file "^5.0.0"
     mdast-util-from-markdown "^2.0.2"
     mdast-util-phrasing "^4.1.0"
-    mdn-data "^2.15.0"
+    mdn-data "^2.17.0"
     open "^10.1.0"
     open-editor "^5.1.0"
-    openai "^4.85.4"
+    openai "^4.86.1"
     pg "^8.13.3"
     pgvector "^0.2.0"
     prism-svelte "^0.5.0"
     prismjs "^1.29.0"
-    react-markdown "^10.0.0"
+    react-markdown "^10.0.1"
     react-modal "^3.16.3"
     read-chunk "^5.0.0"
     rehype-format "^5.0.1"
@@ -1056,8 +1062,7 @@
     unified "^11.0.5"
     unist-builder "^4.0.0"
     unist-util-visit "^5.0.0"
-    watify "^1.0.1"
-    web-features "^2.24.0"
+    web-features "^2.26.0"
     web-specs "^3.41.0"
 
 "@mozilla/glean@5.0.3":
@@ -6068,10 +6073,10 @@ mdn-data@2.0.30:
   resolved "https://registry.yarnpkg.com/mdn-data/-/mdn-data-2.0.30.tgz#ce4df6f80af6cfbe218ecd5c552ba13c4dfa08cc"
   integrity sha512-GaqWWShW4kv/G9IEucWScBx9G1/vsFZZJUO+tD26M8J8z3Kw5RDQjaoZe03YAClgeS/SWPOcb4nkFBTEi5DUEA==
 
-mdn-data@^2.15.0:
-  version "2.15.0"
-  resolved "https://registry.yarnpkg.com/mdn-data/-/mdn-data-2.15.0.tgz#8d8bc0d9a463edf4296c418a8b49d3a8b2c686fb"
-  integrity sha512-KIrS0lFPOqA4DgeO16vI5fkAsy8p++WBlbXtB5P1EQs8ubBgguAInNd1DnrCeTRfGchY0kgThgDOOIPyOLH2dQ==
+mdn-data@^2.17.0:
+  version "2.17.0"
+  resolved "https://registry.yarnpkg.com/mdn-data/-/mdn-data-2.17.0.tgz#6978ea53c38228a6cb2dae71bff652bc02ce5585"
+  integrity sha512-VT5LJBdLRI+cc3DPXJD89PGwI8yXuciE5gZJoSPnH4yeGzMPqxwkZv3BjFSoaWpmOlJNBhVT6HKeQPcZKlNEvA==
 
 mdurl@^2.0.0:
   version "2.0.0"
@@ -6787,10 +6792,10 @@ open@^10.1.0:
     is-inside-container "^1.0.0"
     is-wsl "^3.1.0"
 
-openai@^4.85.4:
-  version "4.85.4"
-  resolved "https://registry.yarnpkg.com/openai/-/openai-4.85.4.tgz#fdf9d3228967b87221a112993501fa33a98f5d18"
-  integrity sha512-Nki51PBSu+Aryo7WKbdXvfm0X/iKkQS2fq3O0Uqb/O3b4exOZFid2te1BZ52bbO5UwxQZ5eeHJDCTqtrJLPw0w==
+openai@^4.86.1:
+  version "4.86.1"
+  resolved "https://registry.yarnpkg.com/openai/-/openai-4.86.1.tgz#4147252d5e6255e2ae716ea59b1d4e54a1c1472a"
+  integrity sha512-x3iCLyaC3yegFVZaxOmrYJjitKxZ9hpVbLi+ZlT5UHuHTMlEQEbKXkGOM78z9qm2T5GF+XRUZCP2/aV4UPFPJQ==
   dependencies:
     "@types/node" "^18.11.18"
     "@types/node-fetch" "^2.6.4"
@@ -7247,10 +7252,10 @@ prepend-http@^2.0.0:
   resolved "https://registry.yarnpkg.com/prepend-http/-/prepend-http-2.0.0.tgz#e92434bfa5ea8c19f41cdfd401d741a3c819d897"
   integrity sha512-ravE6m9Atw9Z/jjttRUZ+clIXogdghyZAuWJ3qEzjT+jI/dL1ifAqhZeC5VHzQp1MSt1+jxKkFNemj/iO7tVUA==
 
-prettier@3.5.2, prettier@^3.2.5:
-  version "3.5.2"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-3.5.2.tgz#d066c6053200da0234bf8fa1ef45168abed8b914"
-  integrity sha512-lc6npv5PH7hVqozBR7lkBNOGXV9vMwROAPlumdBkX0wTbbzPu/U1hk5yL8p2pt4Xoc+2mkT8t/sow2YrV/M5qg==
+prettier@3.5.3, prettier@^3.2.5:
+  version "3.5.3"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-3.5.3.tgz#4fc2ce0d657e7a02e602549f053b239cb7dfe1b5"
+  integrity sha512-QQtaxnoDJeAkDvDKWCLiwIXkTgRhwYDEQCghU9Z6q03iyek/rxRh/2lC3HB7P8sWT2xC/y5JDctPLBIGzHKbhw==
 
 pretty-format@^29.7.0:
   version "29.7.0"
@@ -7422,10 +7427,10 @@ react-lifecycles-compat@^3.0.0:
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
 
-react-markdown@^10.0.0:
-  version "10.0.0"
-  resolved "https://registry.yarnpkg.com/react-markdown/-/react-markdown-10.0.0.tgz#dc4e4c0d2b1ca79616fd0d6a88b1f3ef683b096c"
-  integrity sha512-4mTz7Sya/YQ1jYOrkwO73VcFdkFJ8L8I9ehCxdcV0XrClHyOJGKbBk5FR4OOOG+HnyKw5u+C/Aby9TwinCteYA==
+react-markdown@^10.0.1:
+  version "10.0.1"
+  resolved "https://registry.yarnpkg.com/react-markdown/-/react-markdown-10.0.1.tgz#96ffd71b4c24ee0a3f8a816716257a9ecee79325"
+  integrity sha512-Qt9TWsQJ75np2AVoKftns5eI7r50H6u3qwp+TSihlxOcw8ZaStmR0FEeeENU+mWSxyAgOmqMYjiIKn7ibMheKA==
   dependencies:
     "@types/hast" "^3.0.0"
     "@types/mdast" "^4.0.0"
@@ -8863,15 +8868,10 @@ warning@^4.0.3:
   dependencies:
     loose-envify "^1.0.0"
 
-watify@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/watify/-/watify-1.0.1.tgz#9aa3280805e50792461c9ef2a60c2ec78c9277af"
-  integrity sha512-/Qoa4XMrs5q2Ifk7y1HTuKR6upCLNKm4He5cx+Ps2+qNJSu3KsKmuCg86xLCHVafBEsgJmarDmIXuCNJXKLS8g==
-
-web-features@^2.24.0:
-  version "2.25.0"
-  resolved "https://registry.yarnpkg.com/web-features/-/web-features-2.25.0.tgz#ed34f6f71937dd133bab938a36438e566cc859d2"
-  integrity sha512-5xEzOYm2gYgFuwSb5K5ppRQKenZEAEvggwvoXrRQzRY9ngsW4pDeja/pG4vFe5gEfSe2SLep5366FRse3V5D1g==
+web-features@^2.26.0:
+  version "2.26.0"
+  resolved "https://registry.yarnpkg.com/web-features/-/web-features-2.26.0.tgz#0eb6caf2deafb4cdb2cdfcb1d7c2da8dd13d230a"
+  integrity sha512-5EF7OEqCgs8R5z8j0B6AegT8dAf8KM6n0BBvPuWkxvXdijysjNjTsdJE2cHB4kYTEAnqNlQH4aGBPd1GxHloqg==
 
 web-namespaces@^2.0.0:
   version "2.0.1"
