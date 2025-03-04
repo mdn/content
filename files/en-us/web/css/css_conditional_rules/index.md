@@ -103,7 +103,7 @@ There are plans to further extend possible queries by adding the generalized con
   - [`<media-query-list>`](/en-US/docs/Web/SVG/Attribute/media)
   - [CSS logical operators](/en-US/docs/Web/CSS/@media#logical_operators) (`not`, `or`, and `and`)
 
-- [CSSOM view](/en-US/docs/Web/CSS/CSSOM_View) module
+- [CSSOM view](/en-US/docs/Web/CSS/CSSOM_view) module
 
   - {{domxref("CSS")}} API
   - {{domxref("CSSGroupingRule")}} API
