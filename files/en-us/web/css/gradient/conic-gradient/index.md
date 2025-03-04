@@ -14,6 +14,9 @@ The **`conic-gradient()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web
 ## Syntax
 
 ```css
+/* A gradient with a single color of red */
+conic-gradient(red)
+
 /* A conic gradient rotated 45 degrees,
    starting blue and finishing red */
 conic-gradient(from 45deg, blue, red)
