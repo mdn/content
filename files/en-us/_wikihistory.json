@@ -76239,6 +76239,38 @@
       "DBaron"
     ]
   },
+  "Web/CSS/CSS_cascade/Shorthand_properties": {
+    "modified": "2020-12-01T16:34:44.101Z",
+    "contributors": [
+      "cdoublev",
+      "gerfolder",
+      "jalbertbowden",
+      "billmei",
+      "mfuji09",
+      "stephaniehobson",
+      "Sheppy",
+      "mfluehr",
+      "ericwilligers",
+      "allen.dean",
+      "gingur",
+      "rubenmarcus",
+      "BychekRU",
+      "danielhickman",
+      "fscholz",
+      "sethdill",
+      "xfq",
+      "kscarfone",
+      "basdirks",
+      "ethertank",
+      "teoli",
+      "Ptak82",
+      "Peng",
+      "Np",
+      "Dria",
+      "DBaron",
+      "alecananian"
+    ]
+  },
   "Web/CSS/CSS_cascade/Specificity": {
     "modified": "2020-11-14T16:01:00.890Z",
     "contributors": [
@@ -78620,38 +78652,6 @@
       "ExE-Boss",
       "ramiy",
       "chrisdavidmills"
-    ]
-  },
-  "Web/CSS/Shorthand_properties": {
-    "modified": "2020-12-01T16:34:44.101Z",
-    "contributors": [
-      "cdoublev",
-      "gerfolder",
-      "jalbertbowden",
-      "billmei",
-      "mfuji09",
-      "stephaniehobson",
-      "Sheppy",
-      "mfluehr",
-      "ericwilligers",
-      "allen.dean",
-      "gingur",
-      "rubenmarcus",
-      "BychekRU",
-      "danielhickman",
-      "fscholz",
-      "sethdill",
-      "xfq",
-      "kscarfone",
-      "basdirks",
-      "ethertank",
-      "teoli",
-      "Ptak82",
-      "Peng",
-      "Np",
-      "Dria",
-      "DBaron",
-      "alecananian"
     ]
   },
   "Web/CSS/Subsequent-sibling_combinator": {

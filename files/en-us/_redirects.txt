@@ -521,8 +521,13 @@
 /en-US/docs/CSS/Pseudo-elements	/en-US/docs/Web/CSS/Pseudo-elements
 /en-US/docs/CSS/Replaced_element	/en-US/docs/Web/CSS/Replaced_element
 /en-US/docs/CSS/Scaling_background_images	/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images
+<<<<<<< HEAD
 /en-US/docs/CSS/Scaling_of_SVG_backgrounds	/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Scaling_of_SVG_backgrounds
 /en-US/docs/CSS/Shorthand_properties	/en-US/docs/Web/CSS/Shorthand_properties
+=======
+/en-US/docs/CSS/Scaling_of_SVG_backgrounds	/en-US/docs/Web/CSS/Scaling_of_SVG_backgrounds
+/en-US/docs/CSS/Shorthand_properties	/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties
+>>>>>>> 7526c9b4f2 (Move guide: shorthand properties (#38426))
 /en-US/docs/CSS/Specificity	/en-US/docs/Web/CSS/CSS_cascade/Specificity
 /en-US/docs/CSS/Syntax	/en-US/docs/Web/CSS/CSS_syntax/Syntax
 /en-US/docs/CSS/Text-overflow_TEST	/en-US/docs/Web/CSS/text-overflow
@@ -3618,7 +3623,7 @@
 /en-US/docs/Glossary/l10n	/en-US/docs/Glossary/Localization
 /en-US/docs/Glossary/q_values	/en-US/docs/Glossary/Quality_values
 /en-US/docs/Glossarybandwidth	/en-US/docs/Glossary/Bandwidth
-/en-US/docs/Guide_to_Shorthand_CSS	/en-US/docs/Web/CSS/Shorthand_properties
+/en-US/docs/Guide_to_Shorthand_CSS	/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties
 /en-US/docs/HTM/Attribute	/en-US/docs/Web/HTML/Attributes
 /en-US/docs/HTML	/en-US/docs/Web/HTML
 /en-US/docs/HTML/Attributes	/en-US/docs/Web/HTML/Attributes
@@ -11994,6 +11999,7 @@
 /en-US/docs/Web/CSS/Scaling_of_SVG_backgrounds	/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Scaling_of_SVG_backgrounds
 /en-US/docs/Web/CSS/Selector_lists	/en-US/docs/Web/CSS/Selector_list
 /en-US/docs/Web/CSS/Selectors	/en-US/docs/Web/CSS/CSS_selectors
+/en-US/docs/Web/CSS/Shorthand_properties	/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties
 /en-US/docs/Web/CSS/Specificity	/en-US/docs/Web/CSS/CSS_cascade/Specificity
 /en-US/docs/Web/CSS/Syntax	/en-US/docs/Web/CSS/CSS_syntax/Syntax
 /en-US/docs/Web/CSS/Text-overflow_TEST	/en-US/docs/Web/CSS/text-overflow
