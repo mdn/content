@@ -152,8 +152,6 @@ For all the cross-origin `<iframe>`s, no blocking reasons are reported; for the 
 
 There are many different reasons why blocking could occur. Although the reasons are standardized, developers should avoid depending on specific wording for reasons and be prepared to handle new reasons being added and deleted.
 
-### Basic blocking reasons
-
 The values listed in [the specification](https://html.spec.whatwg.org/multipage/nav-history-apis.html#the-notrestoredreasons-interface) are:
 
 - `"fetch"`
@@ -173,7 +171,7 @@ The values listed in [the specification](https://html.spec.whatwg.org/multipage/
 
 ### User-agent specific blocking reasons
 
-Additional blocking reasons may be used by some browsers:
+Additional blocking reasons that may be used by some browsers are also specified:
 
 - `"audio-capture"`
   - : The Document requested audio capture permission by using Media Capture and Streams's [`getUserMedia()`](/en-US/docs/Web/API/MediaDevices/getUserMedia) with audio.
