@@ -24,7 +24,7 @@ It's worth noting that the sizing algorithm only cares about the image's dimensi
 
 ## Source image examples
 
-Before diving in to look at the results of using different kinds of source images and seeing how they look when used with {{ cssxref("background-size") }}, it would be helpful to look at a few example source images that have different dimensions and sizing settings. The browser renders {{htmlelement("svg")}} images as `300px` wide and `150px` tall by default.
+Before diving in to look at the results of using different kinds of source images and seeing how they look when used with {{ cssxref("background-size") }}, it would be helpful to look at a few example source images that have different dimensions and sizing settings. These are the images we will be using for our `background-image` values in our examples. The browser renders {{htmlelement("svg")}} images as `300px` wide and `150px` tall by default.
 
 ### Dimensionless and proportionless
 
@@ -68,7 +68,7 @@ This image specifies a width of 100 pixels but no height or intrinsic ratio. Thi
 
 This image specifies a 100 pixel height but no width. It also specifies an intrinsic aspect ratio of 3:4. This ensures that its width:height ratio is always 3:4, unless it's deliberately scaled to a disproportionate size (that is, by explicitly specifying both width and height that aren't of that ratio).
 
-This is very much like specifying a specific width and height, since once you have one dimension and a ratio, the other dimension is implied, but it's still a useful example.
+This is very much like specifying a specific width and height; since once you have one dimension and a ratio, the other dimension is implied.
 
 ```html
 <svg height="100" viewBox="0 0 3 4" preserveAspectRatio="none">
@@ -87,7 +87,7 @@ This is very much like specifying a specific width and height, since once you ha
 
 ### No width or height with intrinsic ratio
 
-This image doesn't specify either a width or a height; instead, it specifies an intrinsic ratio of 1:1. Think of this like a program icon. It's always square, and is usable at any size, such as 32x32, 128x128, or 512x512, for example.
+This image doesn't specify either a width or a height; instead, it specifies an intrinsic ratio of 1:1. It's always square, and is usable at any size, such as 32x32, 128x128, or 512x512, for example.
 
 ```html
 <svg viewBox="0 0 1 1" preserveAspectRatio="none">
@@ -106,7 +106,7 @@ This image doesn't specify either a width or a height; instead, it specifies an 
 
 ## Scaling examples
 
-Now let's see some examples of what happens as we apply different scaling to these images. In each of the examples below, the enclosing {{htmlelement("div")}} elements are 300 pixels wide and 200 pixels tall, with a 2 pixel-wide border. To ensure we display the SVG background image only once, we set {{ cssxref("background-repeat") }} to `no-repeat`.
+Now let's see some examples of what happens as we apply different scaling to these images. In each of the examples below, the enclosing {{htmlelement("div")}} elements are 300 pixels wide and 200 pixels tall, with a 2 pixel-wide border. To ensure we display the SVG background image only once for these demonstrations, we set {{ cssxref("background-repeat") }} to `no-repeat`.
 
 ```css
 div {
@@ -121,13 +121,13 @@ div {
 
 If you use {{ cssxref("background-size") }} to specify fixed lengths for both dimensions, those lengths are always used, per rule 1 above. In other words, the image will always get stretched to the dimensions you specify, regardless of whether or not the source image has specified its dimensions and/or aspect ratio.
 
-#### Source: No dimensions or intrinsic ratio
+#### No dimensions or intrinsic ratio
+
+In this example, the image has no dimensions or intrinsic ratio set:
 
 ```html hidden live-sample___scaling1
 <div></div>
 ```
-
-Given this CSS:
 
 ```css hidden live-sample___scaling1
 div {
@@ -145,17 +145,15 @@ div {
 }
 ```
 
-The rendered output is:
-
 {{ EmbedLiveSample('scaling1', 200, 230) }}
 
-#### Source: One specified dimension, no intrinsic ratio
+#### One specified dimension, no intrinsic ratio
+
+In this example, the image has one dimension specified, and no intrinsic ratio set:
 
 ```html hidden live-sample___scaling2
 <div></div>
 ```
-
-Given this CSS:
 
 ```css hidden live-sample___scaling2
 div {
@@ -173,17 +171,15 @@ div {
 }
 ```
 
-This is rendered as:
-
 {{ EmbedLiveSample('scaling2', 200, 230) }}
 
-#### Source: One specified dimension with intrinsic ratio
+#### One specified dimension with intrinsic ratio
 
 ```html hidden live-sample___scaling3
 <div></div>
 ```
 
-Given this CSS:
+In this example, the image has one dimension explicitly set, along with an intrinsic ratio, meaning both dimensions are effectively defined. Setting an absolute height and width for `background-size` overrides the dimensions set in the SVG:
 
 ```css hidden live-sample___scaling3
 div {
@@ -201,17 +197,15 @@ div {
 }
 ```
 
-This is rendered as:
-
 {{ EmbedLiveSample('scaling3', 200, 230) }}
 
-#### Source: No specified width or height with intrinsic ratio
+#### No specified width or height with intrinsic ratio
+
+In this example, the image has an intrinsic ratio but no dimensions set:
 
 ```html hidden live-sample___scaling4
 <div></div>
 ```
-
-Given this CSS:
 
 ```css hidden live-sample___scaling4
 div {
@@ -229,8 +223,6 @@ div {
 }
 ```
 
-This is rendered as:
-
 {{ EmbedLiveSample('scaling4', 200, 230) }}
 
 ### Using contain or cover
@@ -239,9 +231,9 @@ Specifying `cover` for {{ cssxref("background-size") }} makes the picture as sma
 
 For an image with an intrinsic ratio, exactly one size matches the `cover`/fit criteria alone. But if there is no intrinsic ratio specified, `cover`/fit isn't sufficient, so the large/small constraints choose the resulting size.
 
-#### Source: No dimensions or intrinsic ratio
+#### No dimensions or intrinsic ratio
 
-If an image doesn't specify either dimensions or an intrinsic ratio, neither rule 2 nor rule 3 apply, so rule 4 takes over: the background image is rendered covering the entire background area. This satisfies the largest-or-smallest constraint.
+In this example, the image has no dimensions or intrinsic ratio set. If an image doesn't specify either dimensions or an intrinsic ratio, neither rule 2 nor rule 3 apply, so rule 4 takes over: the background image is rendered covering the entire background area. This satisfies the largest-or-smallest constraint.
 
 ```html hidden live-sample___cc1
 <div></div>
@@ -265,9 +257,9 @@ div {
 
 {{ EmbedLiveSample('cc1', 200, 230) }}
 
-#### Source: One specified dimension, no intrinsic ratio
+#### One specified dimension, no intrinsic ratio
 
-Similarly, if the image has one dimension specified but no intrinsic ratio, rule 4 applies, and the image is scaled to cover the entire background area.
+In this example, with the image having one dimension specified but no intrinsic ratio, rule 4 applies, and the image is scaled to cover the entire background area.
 
 ```html hidden live-sample___cc2
 <div></div>
@@ -291,7 +283,9 @@ div {
 
 {{ EmbedLiveSample('cc2', 200, 230) }}
 
-#### Source: One specified dimension with intrinsic ratio
+#### One specified dimension with intrinsic ratio
+
+In these examples, the image has one dimension explicitly set, along with an intrinsic ratio.
 
 Things change when you specify an intrinsic ratio. In this case, rule 1 isn't relevant, so rule 2 is applied: we try to preserve any intrinsic ratio (while respecting `contain` or `cover`). For example, preserving a 3:4 intrinsic aspect ratio for a 300x200 box with `contain` means drawing a 150x200 background.
 
@@ -349,9 +343,9 @@ div {
 
 Here, the 3:4 ratio is preserved while still stretching the image to fill the entire box. That causes the bottom of the image to be clipped away.
 
-#### Source: No dimensions with intrinsic ratio
+#### No dimensions with intrinsic ratio
 
-When using an image with no intrinsic dimensions but an intrinsic ratio, things work similarly.
+These example use the image with an intrinsic ratio set but no defined dimensions. When using an image with no intrinsic dimensions but an intrinsic ratio, things work similarly.
 
 ##### contain case
 
@@ -409,9 +403,9 @@ Here, the image is sized so that it fills the largest dimension. The 1:1 aspect 
 
 If {{ cssxref("background-size") }} is set to `auto` or `auto auto`, rule 2 says that rendering must preserve any intrinsic ratio that's provided.
 
-#### Source: No dimensions or intrinsic ratio
+#### No dimensions or intrinsic ratio
 
-When no intrinsic ratio or dimensions are specified by the source image, rule 4 takes effect, and the image is rendered to fill the background area.
+When auto-sizing background images with no intrinsic ratio or dimensions specified, rule 4 takes effect, and the image is rendered to fill the background area.
 
 ```html hidden live-sample___bothauto1
 <div></div>
@@ -435,7 +429,7 @@ div {
 
 {{ EmbedLiveSample('bothauto1', 200, 230) }}
 
-#### Source: One dimension and no intrinsic ratio
+#### One dimension and no intrinsic ratio
 
 If no intrinsic ratio is specified, but at least one dimension is specified, rule 3 takes effect, and we render the image obeying those dimensions.
 
@@ -463,7 +457,7 @@ div {
 
 Note here that the width, which is specified in the source SVG at 100 pixels, is obeyed, while the height fills the background area since it's not specified (either explicitly or by an intrinsic ratio).
 
-#### Source: One dimension and an intrinsic ratio
+#### One dimension and an intrinsic ratio
 
 If we have an intrinsic ratio with a fixed dimension, that fixes both dimensions in place. As previously mentioned, knowing one dimension and a ratio is the same as specifying both dimensions explicitly.
 
@@ -491,7 +485,7 @@ div {
 
 Since this image has an explicit height of `100px`. With the 3:4 ratio set in the SVG, in the case of `auto`, the image's width is 75 pixels.
 
-#### Source: No fixed dimensions with intrinsic ratio
+#### No fixed dimensions with intrinsic ratio
 
 When an intrinsic ratio is specified, but no dimensions, rule 4 is applied — except that rule 2 also applies. The image is therefore rendered just like for the `contain` case.
 
@@ -521,7 +515,7 @@ div {
 
 Given rule 1, specified dimensions are always used, so we need to use our rules only to determine the second dimension.
 
-#### Source: No dimensions or intrinsic ratio
+#### No dimensions or intrinsic ratio
 
 If the image has no dimensions or intrinsic ratio, rule 4 applies, and we use the background area's dimension to determine the value for the `auto` dimension.
 
@@ -549,7 +543,7 @@ div {
 
 Here, the width is determined using the background area's width per rule 4, while the height is the `140px` specified in the CSS.
 
-#### Source: One specified dimension with no intrinsic ratio
+#### One specified dimension with no intrinsic ratio
 
 If the image has one specified dimension but no intrinsic ratio, that specified dimension is used per rule 3 if that dimension is set to `auto` in the CSS.
 
@@ -601,7 +595,7 @@ div {
 
 In this case, the width is specified as `auto` in the CSS, so the `100px` width specified in the SVG is selected, per rule 3. The height is set at `125px` in the CSS, so that is selected per rule 1.
 
-#### Source: One specified dimension with intrinsic ratio
+#### One specified dimension with intrinsic ratio
 
 When a dimension is specified, rule 1 applies that dimension from the SVG to the rendered background unless specifically overridden by the CSS. When an intrinsic ratio is also specified, that's used to determine the other dimension.
 
@@ -629,7 +623,7 @@ div {
 
 In this case, we use the width of the image specified in the CSS set at `150px`, so rule 1 is applied. The intrinsic 3:4 aspect ratio then determines the height for the `auto` case.
 
-#### Source: No specified dimensions with intrinsic ratio
+#### No specified dimensions with intrinsic ratio
 
 If no dimensions are specified in the SVG, the specified dimension in the CSS is applied, then the intrinsic ratio is used to select the other dimension, per rule 2.
 
