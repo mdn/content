@@ -31,7 +31,7 @@ In cases of resource creation, it indicates the URL of the newly-created resourc
       <td>{{Glossary("Response header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>No</td>
     </tr>
   </tbody>

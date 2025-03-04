@@ -35,4 +35,4 @@ Link: <https://example.com>; rel="preconnect"
 
 ## See also
 
-- [Speculative loading](/en-US/docs/Web/Performance/Speculative_loading) for a comparison of `<link rel="preconnect">` and other similar performance improvement features.
+- [Speculative loading](/en-US/docs/Web/Performance/Guides/Speculative_loading) for a comparison of `<link rel="preconnect">` and other similar performance improvement features.

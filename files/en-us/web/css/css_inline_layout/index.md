@@ -24,9 +24,14 @@ The **CSS inline layout** module defines the block-axis alignment and sizing of 
 
 The specification also defines the `baseline-shift`, `baseline-source`, `initial-letter-align`, `initial-letter-wrap`, `inline-sizing`, and `line-fit-edge` properties, which are not yet supported by any browser.
 
+### Data types
+
+- {{cssxref("&lt;text-edge&gt;")}}
+
 ### Glossary terms
 
 - {{glossary("baseline/typography", "baseline")}}
+- {{glossary("leading")}}
 
 ## Related concepts
 

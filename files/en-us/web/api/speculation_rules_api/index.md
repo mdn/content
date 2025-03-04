@@ -389,8 +389,8 @@ APIs that require the containing document's {{domxref("Document.visibilityState"
 - Download links, i.e. {{htmlelement("a")}} and {{htmlelement("area")}} elements with the `download` attribute, will have their downloads delayed until prerendering has finished.
 - No cross-site navigations: Any prerendering document that navigates to a different site will be immediately discarded before a request to that other site is sent.
 - Restricted URLs: Prerendering documents cannot host non-HTTP(S) top-level URLs. Including the following URL types will cause the prerender to be immediately discarded:
-  - [`javascript:` URLs](/en-US/docs/Web/URI/Schemes/javascript)
-  - [`data:` URLs](/en-US/docs/Web/URI/Schemes/data)
+  - [`javascript:` URLs](/en-US/docs/Web/URI/Reference/Schemes/javascript)
+  - [`data:` URLs](/en-US/docs/Web/URI/Reference/Schemes/data)
   - `blob:` URLs
   - `about:` URLs, including `about:blank` and `about:srcdoc`
 - Session storage: {{domxref("Window.sessionStorage")}} can be used, but the behavior is very specific, to avoid breaking sites that expect only one page to access the tab's session storage at a time. A prerendered page therefore starts out with a clone of the tab's session storage state from when it was created. Upon activation, the prerendered page's storage clone is discarded, and the tab's main storage state is used instead. Pages that use session storage can use the {{domxref("Document.prerenderingchange_event", "prerenderingchange")}} event to detect when this storage swap occurs.
@@ -446,4 +446,4 @@ You can find a [complete prerender demo here](https://prerender-demos.glitch.me/
 ## See also
 
 - [Prerender pages in Chrome for instant page navigations](https://developer.chrome.com/docs/web-platform/prerender-pages) on developer.chrome.com (2023)
-- [Speculative loading](/en-US/docs/Web/Performance/Speculative_loading) for a comparison of speculation rules and other similar performance improvement features.
+- [Speculative loading](/en-US/docs/Web/Performance/Guides/Speculative_loading) for a comparison of speculation rules and other similar performance improvement features.

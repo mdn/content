@@ -17,7 +17,39 @@ browser-compat:
 
 The Boolean **`disabled`** attribute, when present, makes the element not mutable, focusable, or even submitted with the form. The user can neither edit nor focus on the control, nor its form control descendants.
 
-{{EmbedInteractiveExample("pages/tabbed/attribute-disabled.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: disabled", "tabbed-standard")}}
+
+```html interactive-example
+<form>
+  <label for="name">Name:</label>
+  <input id="name" name="name" type="text" />
+
+  <label for="emp">Employed:</label>
+  <select id="emp" name="emp" disabled>
+    <option>No</option>
+    <option>Yes</option>
+  </select>
+
+  <label for="empDate">Employment Date:</label>
+  <input id="empDate" name="empDate" type="date" disabled />
+
+  <label for="resume">Resume:</label>
+  <input id="resume" name="resume" type="file" />
+</form>
+```
+
+```css interactive-example
+label {
+  display: block;
+  margin-top: 1em;
+}
+
+*:disabled {
+  background-color: dimgrey;
+  color: linen;
+  opacity: 1;
+}
+```
 
 ## Overview
 

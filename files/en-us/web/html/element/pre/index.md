@@ -17,7 +17,37 @@ Whitespace inside this element is displayed as written, with one exception. If o
 
 By default, `<pre>` is a [block-level](/en-US/docs/Glossary/Block-level_content) element, i.e. its default {{cssxref("display")}} value is `block`.
 
-{{EmbedInteractiveExample("pages/tabbed/pre.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;pre&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<pre>
+             S
+             A
+            LUT
+             M
+            O N
+            D  E
+            DONT
+           E SUIS
+           LA LAN
+          G U E  É
+         L O Q U E N
+        TE      QUESA
+       B  O  U  C  H  E
+      O        P A R I S
+     T I R E   ET   TIRERA
+    T O U             JOURS
+   AUX                  A  L
+ LEM                      ANDS   - Apollinaire
+</pre>
+```
+
+```css interactive-example
+pre {
+  font-size: 0.7rem;
+  margin: 0;
+}
+```
 
 ## Attributes
 

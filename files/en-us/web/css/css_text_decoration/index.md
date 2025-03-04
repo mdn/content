@@ -2,7 +2,9 @@
 title: CSS text decoration
 slug: Web/CSS/CSS_text_decoration
 page-type: css-module
-spec-urls: https://drafts.csswg.org/css-text-decor/
+spec-urls:
+  - https://drafts.csswg.org/css-text-decor/
+  - https://drafts.csswg.org/css-text-decor-4/
 ---
 
 {{CSSRef}}
@@ -16,6 +18,7 @@ The **CSS text decoration** module defines features relating to text decoration,
 - {{cssxref("text-decoration")}}
 - {{cssxref("text-decoration-color")}}
 - {{cssxref("text-decoration-line")}}
+- {{cssxref("text-decoration-skip")}}
 - {{cssxref("text-decoration-skip-ink")}}
 - {{cssxref("text-decoration-style")}}
 - {{cssxref("text-decoration-thickness")}}
@@ -26,6 +29,8 @@ The **CSS text decoration** module defines features relating to text decoration,
 - {{cssxref("text-shadow")}}
 - {{cssxref("text-underline-offset")}}
 - {{cssxref("text-underline-position")}}
+
+The specification also defines the `text-decoration-skip-box`, `text-decoration-skip-self`, `text-decoration-skip-spaces`, `text-decoration-trim`, and `text-emphasis-skip` properties, which are not yet supported by any browser.
 
 ## Examples
 
@@ -82,3 +87,10 @@ The **CSS text decoration** module defines features relating to text decoration,
 ## Specifications
 
 {{Specifications}}
+
+## See also
+
+- [CSS fonts](/en-US/docs/Web/CSS/CSS_fonts) module
+- [CSS ruby layout](/en-US/docs/Web/CSS/CSS_ruby_layout) module
+- [CSS text](/en-US/docs/Web/CSS/CSS_text) module
+- [CSS writing modes](/en-US/docs/Web/CSS/CSS_writing_modes) module

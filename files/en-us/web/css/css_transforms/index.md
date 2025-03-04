@@ -713,9 +713,9 @@ The cube in the above example is comprised of six `<div>` elements, all of which
 
 - [Using CSS transforms](/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
   - : Step-by-step tutorial about how to transform elements styled with CSS.
-- [Coordinate systems](/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems)
+- [Coordinate systems](/en-US/docs/Web/CSS/CSSOM_View/Coordinate_Systems)
   - : Describes the way pixel locations are defined in the CSS object model.
-- [Performance fundamentals: Use CSS transforms](/en-US/docs/Web/Performance/Fundamentals#use_css_transforms)
+- [Performance fundamentals: Use CSS transforms](/en-US/docs/Web/Performance/Guides/Fundamentals#use_css_transforms)
   - : An overview of web performance fundamentals, including how CSS transforms can improve performance.
 - [Matrix math for the web](/en-US/docs/Web/API/WebGL_API/Matrix_math_for_the_web)
   - : Describes how object transformations can be represented by mathematical matrices.

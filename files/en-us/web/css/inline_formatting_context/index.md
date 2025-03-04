@@ -228,4 +228,4 @@ body {
 ## See also
 
 - [Block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context)
-- [Visual Formatting Model](/en-US/docs/Web/CSS/Visual_formatting_model)
+- [Visual formatting model](/en-US/docs/Web/CSS/Visual_formatting_model)

@@ -24,7 +24,7 @@ For this reason, a `Content-Digest` is identical to a {{HTTPHeader("Repr-Digest"
       <td>{{Glossary("Request header")}}, {{Glossary("Response header")}}, {{Glossary("Representation header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>No</td>
     </tr>
   </tbody>

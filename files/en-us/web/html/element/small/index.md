@@ -9,7 +9,29 @@ browser-compat: html.elements.small
 
 The **`<small>`** [HTML](/en-US/docs/Web/HTML) element represents side-comments and small print, like copyright and legal text, independent of its styled presentation. By default, it renders text within it one font-size smaller, such as from `small` to `x-small`.
 
-{{EmbedInteractiveExample("pages/tabbed/small.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;small&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>
+  MDN Web Docs is a learning platform for Web technologies and the software that
+  powers the Web.
+</p>
+
+<hr />
+
+<p>
+  <small
+    >The content is licensed under a Creative Commons Attribution-ShareAlike 2.5
+    Generic License.</small
+  >
+</p>
+```
+
+```css interactive-example
+small {
+  font-size: 0.7em;
+}
+```
 
 ## Attributes
 

@@ -20,7 +20,7 @@ Same-origin requests would usually be allowed by default, but what happens for r
       <td>{{Glossary("Fetch Metadata Request Header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>Yes (<code>Sec-</code> prefix)</td>
     </tr>
     <tr>

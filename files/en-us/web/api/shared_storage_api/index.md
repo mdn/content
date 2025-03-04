@@ -247,7 +247,7 @@ Lastly, data in `localStorage` persists until it is manually cleared. `sessionSt
 
 ## Enrollment and local testing
 
-To use the Shared Storage API in your sites, you must specify it in the [privacy sandbox enrollment process](/en-US/docs/Web/Privacy/Privacy_sandbox/Enrollment). If you don't, the Shared Storage API methods won't run successfully.
+To use the Shared Storage API in your sites, you must specify it in the [privacy sandbox enrollment process](/en-US/docs/Web/Privacy/Guides/Privacy_sandbox/Enrollment). If you don't, the Shared Storage API methods won't run successfully.
 
 You can test your Shared Storage API code locally without enrollment. To allow local testing, enable the following Chrome developer flag:
 

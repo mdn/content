@@ -10,7 +10,7 @@ browser-compat: svg.global_attributes.opacity
 The **`opacity`** attribute specifies the transparency of an object or of a group of objects, that is, the degree to which the background behind the element is overlaid.
 
 > [!NOTE]
-> As a presentation attribute, `opacity` can be used as a CSS property. See the CSS {{cssxref("opacity")}} property for more information.
+> As a presentation attribute, `opacity` also has a CSS property counterpart: {{cssxref("opacity")}}. When both are specified, the CSS property takes priority.
 
 You can use this attribute with the following SVG elements:
 

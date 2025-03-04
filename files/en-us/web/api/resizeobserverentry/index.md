@@ -16,7 +16,7 @@ The **`ResizeObserverEntry`** interface represents the object passed to the {{do
 - {{domxref('ResizeObserverEntry.contentBoxSize')}} {{ReadOnlyInline}}
   - : An array of objects containing the new content box size of the observed element when the callback is run.
 - {{domxref('ResizeObserverEntry.devicePixelContentBoxSize')}} {{ReadOnlyInline}}
-  - : An array of objects containing the new content box size in device pixels of the observed element when the callback is run.
+  - : An array of objects containing the new content box size in {{glossary("device pixel", "device pixels")}} of the observed element when the callback is run.
 - {{domxref('ResizeObserverEntry.contentRect')}} {{ReadOnlyInline}}
   - : A {{domxref('DOMRectReadOnly')}} object containing the new size of the observed element when the callback is run. Note that this is now a legacy property that is retained in the spec for backward-compatibility reasons only.
 - {{domxref('ResizeObserverEntry.target')}} {{ReadOnlyInline}}

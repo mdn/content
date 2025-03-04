@@ -32,7 +32,7 @@ When communicated to origins, this allows them to deliver alternative content to
       </td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>No</td>
     </tr>
     <tr>

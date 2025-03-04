@@ -7,7 +7,7 @@ browser-compat: css.types.transform-function.rotate3d
 
 {{CSSRef}}
 
-The **`rotate3d()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) defines a transformation that rotates an element around a
+The **`rotate3d()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) defines a transformation that rotates an element around a
 fixed axis in 3D space, without deforming it. Its result is a {{cssxref("&lt;transform-function&gt;")}} data type.
 
 {{EmbedInteractiveExample("pages/css/rotate3d.html")}}

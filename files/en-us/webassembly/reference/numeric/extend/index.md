@@ -7,7 +7,28 @@ sidebar: webassemblysidebar
 
 The **`extend`** instructions, are used to convert (extend) numbers of type `i32` to type `i64`. There are signed and unsigned versions of this instruction.
 
-{{EmbedInteractiveExample("pages/wat/extend.html", "tabbed-taller")}}
+{{InteractiveExample("Wat Demo: extend", "tabbed-taller")}}
+
+```wat interactive-example
+(module
+  (import "console" "log" (func $log (param i64)))
+  (func $main
+
+    i32.const 10 ;; push an i32 onto the stack
+
+    i64.extend_i32_s ;; sign-extend from i32 to i64
+
+    call $log ;; log the result
+
+  )
+  (start $main)
+)
+```
+
+```js interactive-example
+const url = "{%wasm-url%}";
+await WebAssembly.instantiateStreaming(fetch(url), { console });
+```
 
 ## Syntax
 

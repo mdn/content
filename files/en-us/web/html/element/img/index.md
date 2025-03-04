@@ -9,7 +9,20 @@ browser-compat: html.elements.img
 
 The **`<img>`** [HTML](/en-US/docs/Web/HTML) element embeds an image into the document.
 
-{{EmbedInteractiveExample("pages/tabbed/img.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;img&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<img
+  class="fit-picture"
+  src="/shared-assets/images/examples/grapefruit-slice.jpg"
+  alt="Grapefruit slice atop a pile of other slices" />
+```
+
+```css interactive-example
+.fit-picture {
+  width: 250px;
+}
+```
 
 The above example shows usage of the `<img>` element:
 
@@ -211,7 +224,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
     Source size values specify the intended display size of the image. {{glossary("User agent", "User agents")}} use the current source size to select one of the sources supplied by the `srcset` attribute, when those sources are described using width (`w`) descriptors. The selected source size affects the {{glossary("intrinsic size")}} of the image (the image's display size if no {{glossary("CSS")}} styling is applied). If the `srcset` attribute is absent, or contains no values with a width descriptor, then the `sizes` attribute has no effect.
 
-    A source size value can be any non-negative [length](/en-US/docs/Web/CSS/length). It must not use CSS functions other than the [math functions](/en-US/docs/Web/CSS/CSS_Functions#math_functions). Units are interpreted in the same way as [media queries](/en-US/docs/Web/CSS/CSS_media_queries), meaning that all relative length units are relative to the document root rather than the `<img>` element, so an `em` value is relative to the root font size, rather than the font size of the image. [Percentage](/en-US/docs/Web/CSS/percentage) values are not allowed.
+    A source size value can be any non-negative [length](/en-US/docs/Web/CSS/length). It must not use CSS functions other than the [math functions](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions#math_functions). Units are interpreted in the same way as [media queries](/en-US/docs/Web/CSS/CSS_media_queries), meaning that all relative length units are relative to the document root rather than the `<img>` element, so an `em` value is relative to the root font size, rather than the font size of the image. [Percentage](/en-US/docs/Web/CSS/percentage) values are not allowed.
 
     Additionally, you can use the value `auto` to replace the whole list of sizes or the first entry in the list. It is only valid when combined with `loading="lazy"`, and resolves to the [concrete size](/en-US/docs/Web/CSS/image) of the image.
 

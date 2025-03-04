@@ -15,11 +15,10 @@ The **Web Storage API** provides mechanisms by which browsers can store key/valu
 
 The two mechanisms within Web Storage are as follows:
 
-- `sessionStorage` maintains a separate storage area for each given {{glossary("origin")}} that's available for the duration of the page session (as long as the browser tab is open, including page reloads and restores).
+- `sessionStorage` is partitioned by browser tabs and by {{glossary("origin")}}. The main document, and all embedded {{glossary("browsing context", "browsing contexts")}} (iframes), are grouped by their origin and each origin has access to its own separate storage area. Closing the browser tab destroys all `sessionStorage` data associated with that tab.
+- `localStorage` is partitioned by {{glossary("origin")}} only. All documents with the same origin have access to the same `localStorage` area, and it persists even when the browser is closed and reopened.
 
-- `localStorage` does the same thing, but persists even when the browser is closed and reopened.
-
-These mechanisms are available via the {{domxref("Window.sessionStorage")}} and {{domxref("Window.localStorage")}} properties. Invoking one of these will return an instance of a {{domxref("Storage")}} object, through which data items can be set, retrieved and removed. A different storage object is used for the `sessionStorage` and `localStorage` for each origin — they function and are controlled separately.
+These mechanisms are available via the {{domxref("Window.sessionStorage")}} and {{domxref("Window.localStorage")}} properties. Accessing one of these will return an instance of a {{domxref("Storage")}} object, through which data items can be set, retrieved and removed. A different storage object is used for the `sessionStorage` and `localStorage` for each origin — they function and are controlled separately.
 
 To learn about the amount of storage available using the APIs, and what happens when storage limits are exceeded, see [Storage quotas and eviction criteria](/en-US/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria).
 

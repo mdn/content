@@ -55,7 +55,7 @@ For now, you should install a couple of desktop and mobile/alternative device br
   - Gecko (Android): [Mozilla Firefox](https://www.mozilla.org/en-US/firefox/browsers/mobile/android/).
   - WebKit (iOS): [Apple Safari](https://www.apple.com/safari/).
     > [!NOTE]
-    > Most of the Android browsers listed above have iOS versions, but these were historically all powered by Apple's WebKit engine under the hood due to Apple's App Store rules. At the of writing, browsers are starting to create versions of their iOS browsers based on their own rendering engines, due to regulatory changes. See [Apple is finally allowing full versions of Chrome and Firefox to run on the iPhone](https://www.theverge.com/2024/1/25/24050478/apple-ios-17-4-browser-engines-eu).
+    > Most of the Android browsers listed above have iOS versions, but these were historically all powered by Apple's WebKit engine under the hood due to Apple's App Store rules. At the time of writing, browsers are starting to create versions of their iOS browsers based on their own rendering engines, due to regulatory changes. See [Apple is finally allowing full versions of Chrome and Firefox to run on the iPhone](https://www.theverge.com/2024/1/25/24050478/apple-ios-17-4-browser-engines-eu).
 
 ## Local web servers
 

@@ -282,7 +282,7 @@ Also see the source code — [HTML](https://github.com/mdn/dom-examples/blob/mai
 
 ## Saving images
 
-The {{domxref("HTMLCanvasElement")}} provides a `toDataURL()` method, which is useful when saving images. It returns a [data URL](/en-US/docs/Web/URI/Schemes/data) containing a representation of the image in the format specified by the `type` parameter (defaults to [PNG](https://en.wikipedia.org/wiki/Portable_Network_Graphics)). The returned image is in a resolution of 96 dpi.
+The {{domxref("HTMLCanvasElement")}} provides a `toDataURL()` method, which is useful when saving images. It returns a [data URL](/en-US/docs/Web/URI/Reference/Schemes/data) containing a representation of the image in the format specified by the `type` parameter (defaults to [PNG](https://en.wikipedia.org/wiki/Portable_Network_Graphics)). The returned image is in a resolution of 96 dpi.
 
 > [!NOTE]
 > Be aware that if the canvas contains any pixels that were obtained from another {{Glossary("origin")}} without using CORS, the canvas is **tainted** and its contents can no longer be read and saved.

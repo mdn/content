@@ -33,7 +33,7 @@ This is a feature designed to prevent servers from rejecting unknown user agents
       </td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>Yes (<code>Sec-</code> prefix)</td>
     </tr>
   </tbody>

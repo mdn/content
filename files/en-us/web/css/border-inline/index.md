@@ -7,7 +7,7 @@ browser-compat: css.properties.border-inline
 
 {{CSSRef}}
 
-The **`border-inline`** [CSS](/en-US/docs/Web/CSS) property is a [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) for setting the individual logical inline border property values in a single place in the style sheet.
+The **`border-inline`** [CSS](/en-US/docs/Web/CSS) property is a [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) for setting the individual logical inline border property values in a single place in the style sheet.
 
 {{EmbedInteractiveExample("pages/css/border-inline.html")}}
 

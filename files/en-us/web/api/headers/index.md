@@ -27,7 +27,7 @@ Some `Headers` objects have restrictions on whether the {{domxref("Headers.set",
 - For headers created with {{domxref("Headers.Headers","Headers()")}} constructor, there are no modification restrictions.
 - For headers of {{domxref("Request")}} objects:
   - If the request's {{domxref("Request.mode","mode")}} is `no-cors`, you can modify any {{Glossary("CORS-safelisted request header")}} name/value.
-  - Otherwise, you can modify any {{Glossary("forbidden header name", "non-forbidden header")}} name/value.
+  - Otherwise, you can modify any {{Glossary("forbidden request header", "non-forbidden request header")}} name/value.
 - For headers of {{domxref("Response")}} objects:
   - If the response is created using {{domxref("Response.error_static", "Response.error()")}} or {{domxref("Response.redirect_static", "Response.redirect()")}}, or received from a {{domxref("Window/fetch", "fetch()")}} call, the headers are immutable and cannot be modified.
   - Otherwise, if the response is created using {{domxref("Response.Response","Response()")}} or {{domxref("Response.json_static","Response.json()")}}, you can modify any {{Glossary("forbidden response header name", "non-forbidden response header")}} name/value.

@@ -14,7 +14,7 @@ The fill and stroke of the text decoration are given by the fill and stroke of t
 The paint order of the text decoration, i.e. the fill and stroke, is determined by the value of the {{SVGAttr("paint-order")}} attribute at the point where the text decoration is declared.
 
 > [!NOTE]
-> As a presentation attribute, `text-decoration` can be used as a CSS property. See the CSS {{cssxref("text-decoration")}} property for more information.
+> As a presentation attribute, `text-decoration` also has a CSS property counterpart: {{cssxref("text-decoration")}}. When both are specified, the CSS property takes priority.
 
 You can use this attribute with the following SVG elements:
 

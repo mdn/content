@@ -11,7 +11,27 @@ browser-compat: html.elements.input.type_number
 
 The browser may opt to provide stepper arrows to let the user increase and decrease the value using their mouse or by tapping with a fingertip.
 
-{{EmbedInteractiveExample("pages/tabbed/input-number.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;number&quot;&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<label for="tentacles">Number of tentacles (10-100):</label>
+
+<input type="number" id="tentacles" name="tentacles" min="10" max="100" />
+```
+
+```css interactive-example
+label {
+  display: block;
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+```
 
 On browsers that don't support inputs of type `number`, a `number` input falls back to type `text`.
 

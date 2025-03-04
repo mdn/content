@@ -12,7 +12,41 @@ browser-compat:
 
 The Boolean **`multiple`** attribute, if set, means the form control accepts one or more values. The attribute is valid for the {{HTMLElement("input/email", "email")}} and {{HTMLElement("input/file", "file")}} input types and the {{HTMLElement("select")}}. The manner by which the user opts for multiple values depends on the form control.
 
-{{EmbedInteractiveExample("pages/tabbed/attribute-multiple.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: multiple", "tabbed-standard")}}
+
+```html interactive-example
+<label for="recipients">Where should we send the receipt?</label>
+<input id="recipients" name="recipients" type="email" multiple />
+
+<label for="shakes">Which shakes would you like to order?</label>
+<select id="shakes" name="shakes" multiple>
+  <option>Vanilla Shake</option>
+  <option>Strawberry Shake</option>
+  <option>Chocolate Shake</option>
+</select>
+
+<label for="payment">How would you like to pay?</label>
+<select id="payment" name="payment">
+  <option>Credit card</option>
+  <option>Bank Transfer</option>
+</select>
+```
+
+```css interactive-example
+label {
+  display: block;
+  margin-top: 1em;
+}
+
+input,
+select {
+  width: 100%;
+}
+
+input:invalid {
+  background-color: lightpink;
+}
+```
 
 ## Overview
 

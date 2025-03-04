@@ -14,7 +14,7 @@ It's a lot of work to create a professional website, so if you're new to web dev
 
 ## Prerequisites
 
-This module assumes no prior knowledge of web technologies, but you should already be comfortable with using your operating system, including using the file system and browsing the web. You should have a code editor and multiple web browser installed.
+This module assumes no prior knowledge of web technologies, but you should already be comfortable with using your operating system, including using the file system and browsing the web. You should have a code editor and multiple web browsers installed.
 
 If this is not the case, we'd suggest that you run through the [Environment setup](/en-US/docs/Learn_web_development/Getting_started/Environment_setup) module first.
 

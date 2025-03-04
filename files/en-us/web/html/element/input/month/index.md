@@ -10,7 +10,27 @@ browser-compat: html.elements.input.type_month
 {{HTMLElement("input")}} elements of type **`month`** create input fields that let the user enter a month and year allowing a month and year to be easily entered.
 The value is a string whose value is in the format `YYYY-MM`, where `YYYY` is the four-digit year and `MM` is the month number.
 
-{{EmbedInteractiveExample("pages/tabbed/input-month.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;month&quot;&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<label for="start">Start month:</label>
+
+<input type="month" id="start" name="start" min="2018-03" value="2018-05" />
+```
+
+```css interactive-example
+label {
+  display: block;
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+```
 
 The control's UI varies in general from browser to browser; at the moment support is patchy, with only Chrome/Opera and Edge on desktop — and most modern mobile browser versions — having usable implementations.
 In browsers that don't support `month` inputs, the control degrades gracefully to [`<input type="text">`](/en-US/docs/Web/HTML/Element/input/text), although there may be automatic validation of the entered text to ensure it's formatted as expected.

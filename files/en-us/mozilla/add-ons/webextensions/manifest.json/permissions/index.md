@@ -132,6 +132,7 @@ These permissions are available in Manifest V2 and above unless otherwise noted:
 - `theme`
 - `topSites`
 - `unlimitedStorage`
+- 'userScripts' (see [userScripts permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/userScripts#permissions))
 - `webNavigation`
 - `webRequest`
 - `webRequestAuthProvider` (Manifest V3 and above)
@@ -196,7 +197,7 @@ The `unlimitedStorage` permission:
 - Enables extensions to exceed any quota imposed by the {{WebExtAPIRef("storage/local", "storage.local")}} API
 - In Firefox, enables extensions to create a ["persistent" IndexedDB database](/en-US/docs/Web/API/IndexedDB_API) without the browser prompting the user for permission at the time the database is created.
 
-## Example
+## Examples
 
 ```json
  "permissions": ["*://developer.mozilla.org/*"]

@@ -7,7 +7,7 @@ browser-compat: css.properties.scroll-padding
 
 {{CSSRef}}
 
-The **`scroll-padding`** [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) sets scroll padding on all sides of an element at once, much like the {{cssxref("padding")}} property does for padding on an element.
+The **`scroll-padding`** [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) sets scroll padding on all sides of an element at once, much like the {{cssxref("padding")}} property does for padding on an element.
 
 {{EmbedInteractiveExample("pages/css/scroll-padding.html")}}
 

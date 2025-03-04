@@ -11,8 +11,6 @@ Resets the given command's description and keyboard shortcut to the values given
 
 This effectively undoes any changes made to the command using the {{WEbExtAPIRef("commands.update()")}} function.
 
-This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
-
 ## Syntax
 
 ```js-nolint

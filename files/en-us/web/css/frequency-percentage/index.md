@@ -68,7 +68,7 @@ No browser currently supports this feature.
 ## See also
 
 - [CSS data types](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)
-- [CSS Values and Units](/en-US/docs/Web/CSS/CSS_Values_and_Units)
+- [CSS values and units](/en-US/docs/Web/CSS/CSS_Values_and_Units) module
 - Related CSS data types:
 
   - {{cssxref("frequency", "&lt;frequency&gt;")}}

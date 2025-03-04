@@ -28,7 +28,7 @@ The HTTP **Trailer** {{glossary("request header", "request")}} and {{glossary("r
       </td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>Yes</td>
     </tr>
   </tbody>

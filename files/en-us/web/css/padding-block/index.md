@@ -7,7 +7,7 @@ browser-compat: css.properties.padding-block
 
 {{CSSRef}}
 
-The **`padding-block`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) defines the logical block start and end padding of an element, which maps to physical padding properties depending on the element's writing mode, directionality, and text orientation.
+The **`padding-block`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) defines the logical block start and end padding of an element, which maps to physical padding properties depending on the element's writing mode, directionality, and text orientation.
 
 {{EmbedInteractiveExample("pages/css/padding-block.html")}}
 

@@ -10,7 +10,28 @@ browser-compat: html.elements.input.accept
 
 The **`accept`** attribute takes as its value a comma-separated list of one or more file types, or [unique file type specifiers](#unique_file_type_specifiers), describing which file types to allow.
 
-{{EmbedInteractiveExample("pages/tabbed/attribute-accept.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: accept", "tabbed-shorter")}}
+
+```html interactive-example
+<label for="movie">Choose a movie to upload:</label>
+
+<input type="file" id="movie" name="movie" accept="video/*" />
+
+<label for="poster">Choose a poster:</label>
+
+<input type="file" id="poster" name="poster" accept="image/png, image/jpeg" />
+```
+
+```css interactive-example
+label {
+  display: block;
+  margin-top: 1rem;
+}
+
+input {
+  margin-bottom: 1rem;
+}
+```
 
 ## Overview
 

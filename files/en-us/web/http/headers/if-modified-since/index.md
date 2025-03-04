@@ -23,7 +23,7 @@ The most common use case is to update a cached entity that has no associated {{H
       <td>{{Glossary("Request header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>No</td>
     </tr>
   </tbody>

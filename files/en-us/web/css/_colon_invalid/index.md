@@ -9,7 +9,39 @@ browser-compat: css.selectors.invalid
 
 The **`:invalid`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents any {{HTMLElement("form")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("input")}} or other {{HTMLElement("form")}} element whose contents fail to [validate](/en-US/docs/Web/HTML/Constraint_validation).
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-class-invalid.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: :invalid", "tabbed-shorter")}}
+
+```css interactive-example
+label {
+  display: block;
+  margin-top: 1em;
+}
+
+input:invalid {
+  background-color: ivory;
+  border: none;
+  outline: 2px solid red;
+  border-radius: 5px;
+}
+```
+
+```html interactive-example
+<form>
+  <label for="email">Email Address:</label>
+  <input id="email" name="email" type="email" value="na@me@example.com" />
+
+  <label for="secret">Secret Code: (lower case letters)</label>
+  <input id="secret" name="secret" type="text" value="test" pattern="[a-z]+" />
+
+  <label for="age">Your age: (18+)</label>
+  <input id="age" name="age" type="number" value="5" min="18" />
+
+  <label
+    ><input name="tos" type="checkbox" required checked /> - Do you agree to
+    ToS?</label
+  >
+</form>
+```
 
 This pseudo-class is useful for highlighting field errors for the user.
 

@@ -45,7 +45,11 @@ split(separator, limit)
 
 ### Return value
 
-An {{jsxref("Array")}} of strings, split at each point where the `separator` occurs in the given string.
+If `separator` is a string, an {{jsxref("Array")}} of strings is returned, split at each point where the `separator` occurs in the given string.
+
+If `separator` is a regex, the returned {{jsxref("Array")}} also contains the [captured groups](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Capturing_group) for each separator match; see below for details. The capturing groups may be unmatched, in which case they are `undefined` in the array.
+
+If `separator` has a custom `[Symbol.split]()` method, its return value is directly returned.
 
 ## Description
 

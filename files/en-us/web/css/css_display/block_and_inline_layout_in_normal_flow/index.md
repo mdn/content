@@ -195,7 +195,7 @@ strong {
 
 {{EmbedLiveSample("line-box")}}
 
-Find out more about how Block and Inline Boxes behave in our Guide to the [Visual Formatting Model](/en-US/docs/Web/CSS/Visual_formatting_model).
+Find out more about how block and inline boxes behave in our guide to the [visual formatting model](/en-US/docs/Web/CSS/Visual_formatting_model).
 
 ## The display property and flow layout
 

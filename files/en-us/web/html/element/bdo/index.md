@@ -9,7 +9,33 @@ browser-compat: html.elements.bdo
 
 The **`<bdo>`** [HTML](/en-US/docs/Web/HTML) element overrides the current directionality of text, so that the text within is rendered in a different direction.
 
-{{EmbedInteractiveExample("pages/tabbed/bdo.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;bdo&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<h1>Famous seaside songs</h1>
+
+<p>The English song "Oh I do like to be beside the seaside"</p>
+
+<p>
+  Looks like this in Hebrew:
+  <span dir="rtl">אה, אני אוהב להיות ליד חוף הים</span>
+</p>
+
+<p>
+  In the computer's memory, this is stored as
+  <bdo dir="ltr">אה, אני אוהב להיות ליד חוף הים</bdo>
+</p>
+```
+
+```css interactive-example
+html {
+  font-family: sans-serif;
+}
+
+/* stylelint-disable-next-line block-no-empty */
+bdo {
+}
+```
 
 The text's characters are drawn from the starting point in the given direction; the individual characters' orientation is not affected (so characters don't get drawn backward, for example).
 

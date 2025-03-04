@@ -9,7 +9,9 @@ browser-compat: javascript.builtins.RegExp.@@replace
 
 The **`[Symbol.replace]()`** method of {{jsxref("RegExp")}} instances specifies how [`String.prototype.replace()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace) and [`String.prototype.replaceAll()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replaceAll) should behave when the regular expression is passed in as the pattern.
 
-{{InteractiveExample("JavaScript Demo: RegExp.prototype[SYmbol.replace]()")}}
+{{InteractiveExample("JavaScript Demo: RegExp.prototype[Symbol.replace]()")}}
+
+<!-- cSpell:ignore tball -->
 
 ```js interactive-example
 class RegExp1 extends RegExp {

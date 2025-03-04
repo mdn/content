@@ -7,7 +7,7 @@ browser-compat: css.properties.padding
 
 {{CSSRef}}
 
-The **`padding`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) sets the [padding area](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#padding_area) on all four sides of an element at once.
+The **`padding`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) sets the [padding area](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#padding_area) on all four sides of an element at once.
 
 {{EmbedInteractiveExample("pages/css/padding.html")}}
 

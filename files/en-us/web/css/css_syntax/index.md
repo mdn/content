@@ -9,7 +9,7 @@ spec-urls: https://drafts.csswg.org/css-syntax
 
 The **CSS syntax** module describes, in general terms, the structure and syntax of cascading stylesheets, or CSS. It defines CSS as the language for describing the rendering of structured documents (such as HTML and XML), on the web and elsewhere.
 
-This module doesn't define any properties, [data types](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types), [functions](/en-US/docs/Web/CSS/CSS_Functions), or [at-rules](/en-US/docs/Web/CSS/CSS_syntax/At-rule). Rather, it elaborates on how all of these features should be defined and how user agents should parse CSS.
+This module doesn't define any properties, [data types](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types), [functions](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions), or [at-rules](/en-US/docs/Web/CSS/CSS_syntax/At-rule). Rather, it elaborates on how all of these features should be defined and how user agents should parse CSS.
 
 ## At-rules
 
@@ -27,7 +27,7 @@ This module doesn't define any properties, [data types](/en-US/docs/Web/CSS/CSS_
 - [CSS comments](/en-US/docs/Web/CSS/CSS_syntax/Comments)
 - [CSS declaration](/en-US/docs/Web/API/CSS_Object_Model/CSS_Declaration)
 - [CSS declaration block](/en-US/docs/Web/API/CSS_Object_Model/CSS_Declaration_Block)
-- [CSS function](/en-US/docs/Web/CSS/CSS_Functions)
+- [CSS function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)
 - [invalid](/en-US/docs/Web/CSS/CSS_syntax/Error_handling)
 - [style rule](/en-US/docs/Web/API/CSSStyleRule)
 
@@ -44,7 +44,7 @@ This module doesn't define any properties, [data types](/en-US/docs/Web/CSS/CSS_
 
   - : Overview of CSS syntax, including CSS declarations, declaration blocks, rulesets, and statements.
 
-- [Value definition syntax](/en-US/docs/Web/CSS/Value_definition_syntax)
+- [Value definition syntax](/en-US/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
 
   - : Explains the formal grammar for defining valid values for CSS properties and functions, along with semantic constraints. A guide for understanding CSS component value types, combinators, and multipliers.
 

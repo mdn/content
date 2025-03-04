@@ -9,7 +9,28 @@ browser-compat: html.global_attributes.hidden
 
 The **`hidden`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) is an {{Glossary("enumerated")}} attribute indicating that the browser should not render the contents of the element. For example, it can be used to hide elements of the page that can't be used until the login process has been completed.
 
-{{EmbedInteractiveExample("pages/tabbed/attribute-hidden.html","tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: hidden", "tabbed-shorter")}}
+
+```html interactive-example
+<p>
+  This content should be read right now, as it is important. I am so glad you
+  are able to find it!
+</p>
+
+<p hidden>
+  This content is not relevant to this page right now, so should not be seen.
+  Nothing to see here. Nada.
+</p>
+```
+
+```css interactive-example
+p {
+  background: #ffe8d4;
+  border: 1px solid #f69d3c;
+  padding: 5px;
+  border-radius: 5px;
+}
+```
 
 ## Description
 

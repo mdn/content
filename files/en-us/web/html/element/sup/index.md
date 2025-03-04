@@ -9,7 +9,25 @@ browser-compat: html.elements.sup
 
 The **`<sup>`** [HTML](/en-US/docs/Web/HTML) element specifies inline text which is to be displayed as superscript for solely typographical reasons. Superscripts are usually rendered with a raised baseline using smaller text.
 
-{{EmbedInteractiveExample("pages/tabbed/sup.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;sup&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>
+  The <em>Pythagorean theorem</em> is often expressed as the following equation:
+</p>
+
+<p>
+  <var>a<sup>2</sup></var> + <var>b<sup>2</sup></var> = <var>c<sup>2</sup></var>
+</p>
+```
+
+```css interactive-example
+p {
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+```
 
 ## Attributes
 

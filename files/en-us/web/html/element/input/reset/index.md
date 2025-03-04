@@ -9,7 +9,50 @@ browser-compat: html.elements.input.type_reset
 
 {{HTMLElement("input")}} elements of type **`reset`** are rendered as buttons, with a default {{domxref("Element/click_event", "click")}} event handler that resets all inputs in the form to their initial values.
 
-{{EmbedInteractiveExample("pages/tabbed/input-reset.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;reset&quot;&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<form>
+  <div class="controls">
+    <label for="id">User ID:</label>
+    <input type="text" id="id" name="id" />
+
+    <input type="reset" value="Reset" />
+    <input type="submit" value="Submit" />
+  </div>
+</form>
+```
+
+```css interactive-example
+.controls {
+  padding-top: 1rem;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: 1fr 2fr;
+  gap: 0.7rem;
+}
+
+label {
+  font-size: 0.8rem;
+  justify-self: end;
+}
+
+input[type="reset"],
+input[type="submit"] {
+  width: 5rem;
+  justify-self: end;
+}
+
+input[type="reset"] {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+input[type="submit"] {
+  grid-column: 2;
+  grid-row: 3;
+}
+```
 
 > [!NOTE]
 > You should usually avoid including reset buttons in your forms. They're rarely useful, and are instead more likely to frustrate users who click them by mistake (often while trying to click the [submit button](/en-US/docs/Web/HTML/Element/input/submit)).

@@ -9,7 +9,29 @@ browser-compat: html.elements.mark
 
 The **`<mark>`** [HTML](/en-US/docs/Web/HTML) element represents text which is **marked** or **highlighted** for reference or notation purposes due to the marked passage's relevance in the enclosing context.
 
-{{EmbedInteractiveExample("pages/tabbed/mark.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;mark&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>Search results for "salamander":</p>
+
+<hr />
+
+<p>
+  Several species of <mark>salamander</mark> inhabit the temperate rainforest of
+  the Pacific Northwest.
+</p>
+
+<p>
+  Most <mark>salamander</mark>s are nocturnal, and hunt for insects, worms, and
+  other small creatures.
+</p>
+```
+
+```css interactive-example
+/* stylelint-disable-next-line block-no-empty */
+mark {
+}
+```
 
 ## Attributes
 

@@ -558,10 +558,7 @@
     },
     "File and Directory Entries API": {
       "overview": ["File and Directory Entries API"],
-      "guides": [
-        "/docs/Web/API/File_and_Directory_Entries_API/Introduction",
-        "/docs/Web/API/File_and_Directory_Entries_API/Firefox_support"
-      ],
+      "guides": [],
       "interfaces": [
         "FileSystemDirectoryEntry",
         "FileSystemDirectoryReader",
@@ -569,17 +566,23 @@
         "FileSystemFileEntry",
         "FileSystem"
       ],
-      "methods": [],
-      "properties": [],
+      "methods": ["DataTransferItem.webkitGetAsEntry()"],
+      "properties": [
+        "File.webkitRelativePath",
+        "HTMLInputElement.webkitdirectory",
+        "HTMLinputElement.webkitEntries"
+      ],
       "events": []
     },
     "File System API": {
       "overview": ["File System API"],
       "guides": ["/docs/Web/API/File_System_API/Origin_private_file_system"],
       "interfaces": [
+        "FileSystemChangeRecord",
         "FileSystemHandle",
         "FileSystemFileHandle",
         "FileSystemDirectoryHandle",
+        "FileSystemObserver",
         "FileSystemSyncAccessHandle",
         "FileSystemWritableFileStream"
       ],

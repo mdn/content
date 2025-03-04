@@ -184,7 +184,7 @@ The `Domain` and `Path` attributes define the _scope_ of a cookie: what URLs the
 
 ### Controlling third-party cookies with `SameSite`
 
-The [`SameSite`](/en-US/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) attribute lets servers specify whether/when cookies are sent with cross-site requests — i.e. [third-party cookies](/en-US/docs/Web/Privacy/Third-party_cookies). Cross-site requests are requests where the {{Glossary("Site", "site")}} (the registrable domain) and/or the scheme (http or https) do not match the site the user is currently visiting. This includes requests sent when links are clicked on other sites to navigate to your site, and any request sent by embedded third-party content.
+The [`SameSite`](/en-US/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) attribute lets servers specify whether/when cookies are sent with cross-site requests — i.e. [third-party cookies](/en-US/docs/Web/Privacy/Guides/Third-party_cookies). Cross-site requests are requests where the {{Glossary("Site", "site")}} (the registrable domain) and/or the scheme (http or https) do not match the site the user is currently visiting. This includes requests sent when links are clicked on other sites to navigate to your site, and any request sent by embedded third-party content.
 
 `SameSite` helps to prevent leakage of information, preserving user [privacy](#privacy_and_tracking) and providing some protection against {{Glossary("CSRF", "cross-site request forgery")}} attacks. It takes three possible values: `Strict`, `Lax`, and `None`:
 
@@ -242,7 +242,7 @@ Browser vendors know that users don't like this behavior, and as a result have a
 > [!NOTE]
 > Cookie blocking can cause some third-party components (such as social media widgets) not to function as intended. As browsers impose further restrictions on third-party cookies, developers should start to look at ways to reduce their reliance on them.
 
-See our [Third-party cookies](/en-US/docs/Web/Privacy/Third-party_cookies) article for detailed information on third-party cookies, the issues associated with them, and what alternatives are available. See our [Privacy](/en-US/docs/Web/Privacy) landing page for more information on privacy in general.
+See our [Third-party cookies](/en-US/docs/Web/Privacy/Guides/Third-party_cookies) article for detailed information on third-party cookies, the issues associated with them, and what alternatives are available. See our [Privacy](/en-US/docs/Web/Privacy) landing page for more information on privacy in general.
 
 ## Cookie-related regulations
 
@@ -269,6 +269,6 @@ There may be other regulations that govern the use of cookies in your locality. 
 
 - Related HTTP headers: {{HTTPHeader("Set-Cookie")}}, {{HTTPHeader("Cookie")}}
 - Related JavaScript APIs: {{domxref("Document.cookie")}}, {{domxref("Navigator.cookieEnabled")}}, {{domxref("Cookie_Store_API", "Cookie Store API", "", "nocode")}}
-- [Third-party cookies](/en-US/docs/Web/Privacy/Third-party_cookies)
+- [Third-party cookies](/en-US/docs/Web/Privacy/Guides/Third-party_cookies)
 - [Cookie specification: RFC 6265](https://datatracker.ietf.org/doc/html/rfc6265)
 - [Cookies, the GDPR, and the ePrivacy Directive](https://gdpr.eu/cookies/)

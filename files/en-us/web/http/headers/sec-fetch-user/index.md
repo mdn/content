@@ -18,7 +18,7 @@ A server can use this header to identify whether a navigation request from a doc
       <td>{{Glossary("Fetch Metadata Request Header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>Yes (<code>Sec-</code> prefix)</td>
     </tr>
     <tr>

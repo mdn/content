@@ -33,7 +33,7 @@ This request may be cached, and the server is expected to control the cacheabili
       </td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>No</td>
     </tr>
   </tbody>

@@ -7,7 +7,7 @@ browser-compat: css.types.filter-function.drop-shadow
 
 {{CSSRef}}
 
-The **`drop-shadow()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) applies a drop shadow effect to the input image. Its result is a {{cssxref("&lt;filter-function&gt;")}}.
+The **`drop-shadow()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) applies a drop shadow effect to the input image. Its result is a {{cssxref("&lt;filter-function&gt;")}}.
 
 {{EmbedInteractiveExample("pages/css/function-drop-shadow.html")}}
 

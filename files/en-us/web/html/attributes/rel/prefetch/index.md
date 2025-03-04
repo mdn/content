@@ -58,4 +58,4 @@ Would not be accessible from `https://aggregator.example/`.
 
 ## See also
 
-- [Speculative loading](/en-US/docs/Web/Performance/Speculative_loading) for a comparison of `<link rel="prefetch">` and other similar performance improvement features.
+- [Speculative loading](/en-US/docs/Web/Performance/Guides/Speculative_loading) for a comparison of `<link rel="prefetch">` and other similar performance improvement features.

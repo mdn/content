@@ -288,48 +288,38 @@ An example of this can be found on the [`page`](/en-US/docs/Web/CSS/page#example
 ### Using the size property to change the page orientation
 
 This example shows how to split the `<section>`s into individual pages in `landscape` format with each page having a 20% margin when printed.
+Clicking the print button will launch a print dialog with the HTML sections split into individual pages.
 
-#### HTML
-
-```html
-<button>Print Webpage</button>
+```html live-sample___page-size
+<button>Print page</button>
 <article>
   <section>
-    <h2>Header</h2>
-    <p>
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur
-      facilis vitae voluptatibus odio consequuntur optio placeat? Id, nam sequi
-      aut in dolorem dolores, laudantium, quasi totam ipsam aliquam quibusdam
-      velit.
-    </p>
+    <h2>Header one</h2>
+    <p>Paragraph one.</p>
   </section>
   <section>
-    <h2>Header</h2>
-    <p>
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur
-      facilis vitae voluptatibus odio consequuntur optio placeat? Id, nam sequi
-      aut in dolorem dolores, laudantium, quasi totam ipsam aliquam quibusdam
-      velit.
-    </p>
+    <h2>Header two</h2>
+    <p>Paragraph two.</p>
   </section>
   <section>
-    <h2>Header</h2>
-    <p>
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur
-      facilis vitae voluptatibus odio consequuntur optio placeat? Id, nam sequi
-      aut in dolorem dolores, laudantium, quasi totam ipsam aliquam quibusdam
-      velit.
-    </p>
+    <h2>Header three</h2>
+    <p>Paragraph three.</p>
   </section>
 </article>
 ```
 
-#### CSS
+```js live-sample___page-size
+const button = document.querySelector("button");
 
-```css
+button.addEventListener("click", () => {
+  window.print();
+});
+```
+
+```css live-sample___page-size
 @page {
   size: landscape;
-  margin: 20%;
+  margin: 2cm;
 }
 
 section {
@@ -344,7 +334,7 @@ section {
 }
 ```
 
-```css hidden
+```css hidden live-sample___page-size
 body {
   font-family: "Helvetica", sans-serif;
   background-color: silver;
@@ -364,30 +354,16 @@ section {
   print-color-adjust: exact;
   -webkit-print-color-adjust: exact;
   margin: 0 auto;
-  margin-block-end: 1.5rem;
+  margin-block-end: 1rem;
   border: 1px dashed;
 }
 ```
 
-#### JavaScript
-
-```js
-const button = document.querySelector("button");
-
-button.addEventListener("click", () => {
-  window.print();
-});
-```
-
-#### Result
-
-Clicking the print button will launch a print dialog with the html sections split into individual pages.
-
-{{EmbedLiveSample('Using the size property to change the page orientation', '100%', 520)}}
+{{EmbedLiveSample('page-size', '100%', '540', , , , , "allow-modals")}}
 
 ### @page pseudo-class examples
 
-Please refer to the various [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes) of `@page` for examples.
+See the various [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes) of `@page` for examples.
 
 - {{Cssxref(":blank")}}
 - {{Cssxref(":first")}}
@@ -404,8 +380,8 @@ Please refer to the various [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes)
 
 ## See also
 
+- The {{cssxref("page")}} property
 - The `@page` [`size`](/en-US/docs/Web/CSS/@page/size) descriptor
-- The {{Cssxref("page")}} property
-- See the [\[META\] CSS Paged Media Module Level 3](https://bugzil.la/286443) ticket in Bugzilla for tracking progress on the subject (page-based counters, etc.)
 - [CSS paged media](/en-US/docs/Web/CSS/CSS_paged_media) module
-- [Paged.js: W3C paged media polyfill](https://pagedjs.org/documentation/1-the-big-picture/)
+- [Paged.js: W3C paged media polyfill](https://pagedjs.org/documentation/1-the-big-picture/) on pagedjs.org
+- [\[META\] CSS Paged Media Module Level 3](https://bugzil.la/286443) Bugzilla for tracking progress on the subject (page-based counters, etc.)

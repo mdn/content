@@ -59,7 +59,7 @@ No notable changes.
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
-Starting with this release of Firefox the [WebDriver BiDi](https://wiki.mozilla.org/WebDriver/RemoteProtocol/WebDriver_BiDi) protocol will be enabled by default. A WebDriver BiDi session can be requested by using WebDriver classic (geckodriver, Marionette) and setting the [`webSocketURL` capability](/en-US/docs/Web/WebDriver/Capabilities/webSocketUrl) to `true` when creating a new WebDriver session. The same capability will then contain the WebSocket end-point for BiDi clients to connect to.
+Starting with this release of Firefox the [WebDriver BiDi](https://wiki.mozilla.org/WebDriver/RemoteProtocol/WebDriver_BiDi) protocol will be enabled by default. A WebDriver BiDi session can be requested by using WebDriver classic (geckodriver, Marionette) and setting the [`webSocketURL` capability](/en-US/docs/Web/WebDriver/Reference/Capabilities/webSocketUrl) to `true` when creating a new WebDriver session. The same capability will then contain the WebSocket end-point for BiDi clients to connect to.
 
 The following commands and events are available:
 

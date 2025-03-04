@@ -7,7 +7,7 @@ browser-compat: css.types.gradient.repeating-linear-gradient
 
 {{CSSRef}}
 
-The **`repeating-linear-gradient()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) creates an image consisting of repeating linear gradients. It is similar to {{cssxref("gradient/linear-gradient", "linear-gradient()")}} and takes the same arguments, but it repeats the color stops infinitely in all directions so as to cover its entire container. The function's result is an object of the {{cssxref("&lt;gradient&gt;")}} data type, which is a special kind of {{cssxref("&lt;image&gt;")}}.
+The **`repeating-linear-gradient()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) creates an image consisting of repeating linear gradients. It is similar to {{cssxref("gradient/linear-gradient", "linear-gradient()")}} and takes the same arguments, but it repeats the color stops infinitely in all directions so as to cover its entire container. The function's result is an object of the {{cssxref("&lt;gradient&gt;")}} data type, which is a special kind of {{cssxref("&lt;image&gt;")}}.
 
 {{EmbedInteractiveExample("pages/css/function-repeating-linear-gradient.html")}}
 

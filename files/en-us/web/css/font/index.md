@@ -7,7 +7,7 @@ browser-compat: css.properties.font
 
 {{CSSRef}}
 
-The **`font`** CSS [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) sets all the different properties of an element's font. Alternatively, it sets an element's font to a system font.
+The **`font`** CSS [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) sets all the different properties of an element's font. Alternatively, it sets an element's font to a system font.
 
 {{EmbedInteractiveExample("pages/css/font.html")}}
 

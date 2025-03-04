@@ -9,7 +9,23 @@ browser-compat: html.elements.code
 
 The **`<code>`** [HTML](/en-US/docs/Web/HTML) element displays its contents styled in a fashion intended to indicate that the text is a short fragment of computer code. By default, the content text is displayed using the {{Glossary("user agent", "user agent's")}} default monospace font.
 
-{{EmbedInteractiveExample("pages/tabbed/code.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;code&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>
+  The <code>push()</code> method adds one or more elements to the end of an
+  array and returns the new length of the array.
+</p>
+```
+
+```css interactive-example
+code {
+  background-color: #eee;
+  border-radius: 3px;
+  font-family: courier, monospace;
+  padding: 0 3px;
+}
+```
 
 ## Attributes
 

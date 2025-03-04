@@ -20,8 +20,8 @@ sidebar: mdnsidebar
 > slug: Web/API/NameOfTheInterface
 > page-type: web-api-interface
 > status:
->   - experimental
 >   - deprecated
+>   - experimental
 >   - non-standard
 > browser-compat: path.to.feature.NameOfTheInterface
 > ---
@@ -34,7 +34,7 @@ sidebar: mdnsidebar
 > - **page-type**
 >   - : The `page-type` key for Web/API interfaces is always `web-api-interface`.
 > - **status**
->   - : Flags describing the status of this feature. An array which may contain one or more of the following: `experimental`, `deprecated`, `non-standard`. This key should not be set manually: it is set automatically based on values in the browser compatibility data for the feature. See ["How to add or update feature statuses"](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_to_add_or_update_feature_statuses).
+>   - : Flags describing the status of this feature. An array which may contain one or more of the following: `experimental`, `deprecated`, `non-standard`. This key should not be set manually: it is set automatically based on values in the browser compatibility data for the feature. See ["How feature statuses are added or updated"](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_feature_statuses_are_added_or_updated).
 > - **browser-compat**
 >
 >   - : Replace the placeholder value `path.to.feature.NameOfTheMethod` with the query string for the method in the [Browser compat data repo](https://github.com/mdn/browser-compat-data). The toolchain automatically uses the key to populate the compatibility and specification sections (replacing the `\{{Compat}}` and `\{{Specifications}}` macros).
@@ -63,7 +63,7 @@ sidebar: mdnsidebar
 >   If it is also available or only available in worker context, then you may also need to passing an parameter to it due to its availability (see [\\{{AvailableInWorkers}} macros source code](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/banners.rs) for all available values), you may also need to fill in an entry for it in the [Web APIs available in workers](/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers#supported_web_apis) page.
 > - `\{{APIRef("GroupDataName")}}` — this generates the left-hand reference sidebar showing quick reference links related to the current page. For example, every page in the [WebVR API](/en-US/docs/Web/API/WebVR_API) has the same sidebar, which points to the other pages in the API. To generate the correct sidebar for your API, you need to add a GroupData entry to our KumaScript GitHub repo, and include the entry's name inside the macro call in place of _GroupDataName_. See our [API reference sidebars](/en-US/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Sidebars) guide for information on how to do this.
 >
-> Do not provide status header macros manually. Refer to the section ["How to add or update feature statuses"](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_to_add_or_update_feature_statuses) to add these statuses to the page.
+> Do not provide status header macros manually. Refer to the section ["How feature statuses are added or updated"](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_feature_statuses_are_added_or_updated) to add these statuses to the page.
 >
 > Samples of the **Secure context**, **Available in workers**, **Experimental**, **Deprecated**, and **Non-standard** banners are shown right after this note block.
 >

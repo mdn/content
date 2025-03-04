@@ -7,7 +7,7 @@ browser-compat: css.types.image.paint
 
 {{CSSRef}}
 
-The **`paint()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) defines an {{cssxref("&lt;image&gt;")}} value generated with a PaintWorklet.
+The **`paint()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) defines an {{cssxref("&lt;image&gt;")}} value generated with a PaintWorklet.
 
 ## Syntax
 

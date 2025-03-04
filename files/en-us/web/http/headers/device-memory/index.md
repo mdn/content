@@ -24,7 +24,7 @@ Servers that opt in to the `Device-Memory` client hint will typically also speci
       </td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>No</td>
     </tr>
   </tbody>

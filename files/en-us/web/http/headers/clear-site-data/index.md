@@ -17,7 +17,7 @@ It allows web developers to have more control over the data stored by browsers f
       <td>{{Glossary("Response header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>No</td>
     </tr>
   </tbody>

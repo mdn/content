@@ -14,7 +14,7 @@ The rest of our beginner's learning material tries to stick to web best practice
 
 ## Prerequisites
 
-While knowing HTML, CSS, and JavaScript is needed for implementing many web performance improvement recommendations, knowing how to build applications is not a necessary a prerequisite for understanding and measuring web performance. We do however recommend that before you work through this module, you at least get a basic idea of web development by working through our [Your first website](/en-US/docs/Learn_web_development/Getting_started/Your_first_website) module.
+While knowing HTML, CSS, and JavaScript is needed for implementing many web performance improvement recommendations, knowing how to build applications is not a necessary prerequisite for understanding and measuring web performance. We do however recommend that before you work through this module, you at least get a basic idea of web development by working through our [Your first website](/en-US/docs/Learn_web_development/Getting_started/Your_first_website) module.
 
 It would also be helpful to go a bit deeper into these topics, with modules such as:
 

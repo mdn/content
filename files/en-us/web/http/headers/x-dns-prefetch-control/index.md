@@ -21,7 +21,7 @@ This reduces latency when the user clicks a link, for example.
       <td>{{Glossary("Response header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>No</td>
     </tr>
   </tbody>

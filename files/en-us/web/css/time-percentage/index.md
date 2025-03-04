@@ -68,4 +68,4 @@ Where a `<time-percentage>` is specified as an allowable type, this means that t
 
 - {{cssxref("&lt;percentage&gt;")}}
 - {{cssxref("&lt;time&gt;")}}
-- [CSS Values and Units](/en-US/docs/Web/CSS/CSS_Values_and_Units)
+- [CSS values and units](/en-US/docs/Web/CSS/CSS_Values_and_Units) module

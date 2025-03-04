@@ -10,7 +10,33 @@ browser-compat: css.selectors.cue
 The **`::cue`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) matches [WebVTT](/en-US/docs/Web/API/WebVTT_API) cues within a selected element.
 This can be used to [style captions and other cues](/en-US/docs/Web/API/WebVTT_API#styling_webvtt_in_html_or_a_stylesheet) in media with VTT tracks.
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-element-cue.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: ::cue", "tabbed-shorter")}}
+
+```css interactive-example
+video {
+  width: 100%;
+}
+
+video::cue {
+  font-size: 1rem;
+  color: yellow;
+}
+
+::cue(u) {
+  color: red;
+}
+```
+
+```html interactive-example
+<video controls src="/shared-assets/videos/friday.mp4">
+  <track
+    default
+    kind="captions"
+    srclang="en"
+    src="/shared-assets/misc/friday.vtt" />
+  Sorry, your browser doesn't support embedded videos.
+</video>
+```
 
 The properties are applied to the entire set of cues as if they were a single unit. The only exception is that `background` and its longhand properties apply to each cue individually, to avoid creating boxes and obscuring unexpectedly large areas of the media.
 

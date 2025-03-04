@@ -20,7 +20,7 @@ The HTTP **`Content-Length`** header indicates the size, in bytes, of the messag
       </td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>Yes</td>
     </tr>
     <tr>

@@ -32,7 +32,7 @@ As long as the `identity;q=0` or `*;q=0` directives do not explicitly forbid the
       <td>{{Glossary("Request header")}}, {{Glossary("Response header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>Yes</td>
     </tr>
   </tbody>

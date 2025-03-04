@@ -14,10 +14,10 @@ The **`String.raw()`** static method is a tag function of [template literals](/e
 ```js interactive-example
 // Create a variable that uses a Windows
 // path without escaping the backslashes:
-const filePath = String.raw`C:\Development\profile\aboutme.html`;
+const filePath = String.raw`C:\Development\profile\about.html`;
 
 console.log(`The file was uploaded from: ${filePath}`);
-// Expected output: "The file was uploaded from: C:\Development\profile\aboutme.html"
+// Expected output: "The file was uploaded from: C:\Development\profile\about.html"
 ```
 
 ## Syntax

@@ -81,3 +81,4 @@ The specification also defines the `hyphenate-limit-last`, `hyphenate-limit-line
 - [CSS overflow](/en-US/docs/Web/CSS/CSS_overflow) module
 - [CSS fonts](/en-US/docs/Web/CSS/CSS_fonts) module
 - [CSS ruby layout](/en-US/docs/Web/CSS/CSS_ruby_layout) module
+- [CSS text decoration](/en-US/docs/Web/CSS/CSS_text_decoration) module

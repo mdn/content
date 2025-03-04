@@ -9,7 +9,32 @@ browser-compat: html.elements.kbd
 
 The **`<kbd>`** [HTML](/en-US/docs/Web/HTML) element represents a span of inline text denoting textual user input from a keyboard, voice input, or any other text entry device. By convention, the {{Glossary("user agent")}} defaults to rendering the contents of a `<kbd>` element using its default monospace font, although this is not mandated by the HTML standard.
 
-{{EmbedInteractiveExample("pages/tabbed/kbd.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;kbd&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>
+  Please press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd> to re-render an
+  MDN page.
+</p>
+```
+
+```css interactive-example
+kbd {
+  background-color: #eee;
+  border-radius: 3px;
+  border: 1px solid #b4b4b4;
+  box-shadow:
+    0 1px 1px rgba(0, 0, 0, 0.2),
+    0 2px 0 0 rgba(255, 255, 255, 0.7) inset;
+  color: #333;
+  display: inline-block;
+  font-size: 0.85em;
+  font-weight: 700;
+  line-height: 1;
+  padding: 2px 4px;
+  white-space: nowrap;
+}
+```
 
 `<kbd>` may be nested in various combinations with the {{HTMLElement("samp")}} (Sample Output) element to represent various forms of input or output based on visual cues.
 

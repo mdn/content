@@ -13,7 +13,34 @@ Only basic hexadecimal colors (without alpha channel) are allowed though CSS col
 
 The element's presentation may vary substantially from one browser and/or platform to another—it might be a basic textual input that automatically validates to ensure that the color information is entered in the proper format, or a platform-standard color picker, or some kind of custom color picker window.
 
-{{EmbedInteractiveExample("pages/tabbed/input-color.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;color&quot;&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<p>Choose your monster's colors:</p>
+
+<div>
+  <input type="color" id="head" name="head" value="#e66465" />
+  <label for="head">Head</label>
+</div>
+
+<div>
+  <input type="color" id="body" name="body" value="#f6b73c" />
+  <label for="body">Body</label>
+</div>
+```
+
+```css interactive-example
+p,
+label {
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input {
+  margin: 0.4rem;
+}
+```
 
 ## Value
 

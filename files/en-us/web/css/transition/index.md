@@ -7,7 +7,7 @@ browser-compat: css.properties.transition
 
 {{CSSRef}}
 
-The **`transition`** [CSS](/en-US/docs/Web/CSS) property is a [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) for {{ cssxref("transition-property") }}, {{ cssxref("transition-duration") }}, {{ cssxref("transition-timing-function") }}, {{ cssxref("transition-delay") }}, and {{ cssxref("transition-behavior") }}.
+The **`transition`** [CSS](/en-US/docs/Web/CSS) property is a [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) for {{ cssxref("transition-property") }}, {{ cssxref("transition-duration") }}, {{ cssxref("transition-timing-function") }}, {{ cssxref("transition-delay") }}, and {{ cssxref("transition-behavior") }}.
 
 {{EmbedInteractiveExample("pages/css/transition.html")}}
 

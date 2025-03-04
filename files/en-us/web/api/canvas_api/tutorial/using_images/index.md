@@ -77,7 +77,7 @@ img.addEventListener("load", () => {
 img.src = "myImage.png";
 ```
 
-If you're using one external image, this can be a good approach, but once you want to use many images or [lazy-load resources](/en-US/docs/Web/Performance/Lazy_loading), you probably need to wait for all the files to be available before drawing to the canvas.
+If you're using one external image, this can be a good approach, but once you want to use many images or [lazy-load resources](/en-US/docs/Web/Performance/Guides/Lazy_loading), you probably need to wait for all the files to be available before drawing to the canvas.
 The examples below that deal with multiple images use an async function and [Promise.all](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all) to wait for all images to load before calling `drawImage()`:
 
 ```js
@@ -98,7 +98,7 @@ draw();
 
 ### Embedding an image via data: URL
 
-Another possible way to include images is via the [data: URL](/en-US/docs/Web/URI/Schemes/data). Data URLs allow you to completely define an image as a Base64 encoded string of characters directly in your code.
+Another possible way to include images is via the [data: URL](/en-US/docs/Web/URI/Reference/Schemes/data). Data URLs allow you to completely define an image as a Base64 encoded string of characters directly in your code.
 
 ```js
 const img = new Image(); // Create new img element

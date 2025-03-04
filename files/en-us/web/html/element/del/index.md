@@ -9,7 +9,33 @@ browser-compat: html.elements.del
 
 The **`<del>`** [HTML](/en-US/docs/Web/HTML) element represents a range of text that has been deleted from a document. This can be used when rendering "track changes" or source code diff information, for example. The {{HTMLElement("ins")}} element can be used for the opposite purpose: to indicate text that has been added to the document.
 
-{{EmbedInteractiveExample("pages/tabbed/del.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;del&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<blockquote>
+  There is <del>nothing</del> <ins>no code</ins> either good or bad, but
+  <del>thinking</del> <ins>running it</ins> makes it so.
+</blockquote>
+```
+
+```css interactive-example
+del {
+  text-decoration: line-through;
+  background-color: #fbb;
+  color: #555;
+}
+
+ins {
+  text-decoration: none;
+  background-color: #d4fcbc;
+}
+
+blockquote {
+  padding-left: 15px;
+  border-left: 3px solid #d7d7db;
+  font-size: 1rem;
+}
+```
 
 This element is often (but need not be) rendered by applying a strike-through style to the text.
 

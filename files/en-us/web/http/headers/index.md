@@ -366,7 +366,7 @@ The [UA client hints](/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints)
   - : User agent's underlying platform architecture.
 - {{HTTPHeader("Sec-CH-UA-Bitness")}} {{experimental_inline}}
   - : User agent's underlying CPU architecture bitness (for example "64" bit).
-- {{HTTPHeader("Sec-CH-UA-Form-Factor")}} {{experimental_inline}}
+- {{HTTPHeader("Sec-CH-UA-Form-Factors")}} {{experimental_inline}}
   - : User agent's form-factors, describing how the user interacts with the user-agent.
 - {{HTTPHeader("Sec-CH-UA-Full-Version")}} {{deprecated_inline}}
   - : User agent's full version string.
@@ -399,7 +399,7 @@ The [UA client hints](/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints)
 - {{HTTPHeader("Device-Memory")}}
   - : Approximate amount of available client RAM memory. This is part of the [Device Memory API](/en-US/docs/Web/API/Device_Memory_API).
 - {{HTTPHeader("DPR")}} {{deprecated_inline}} {{non-standard_inline}}
-  - : Request header that provides the client device pixel ratio (the number of physical device pixels for each {{Glossary("CSS pixel")}}).
+  - : Request header that provides the client device pixel ratio (the number of physical {{glossary("device pixel", "device pixels")}} for each {{Glossary("CSS pixel")}}).
 - {{HTTPHeader("Viewport-Width")}} {{deprecated_inline}} {{non-standard_inline}}
   - : Request header provides the client's layout viewport width in {{Glossary("CSS pixel","CSS pixels")}}.
 - {{HTTPHeader("Width")}} {{deprecated_inline}} {{non-standard_inline}}
