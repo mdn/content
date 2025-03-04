@@ -44,6 +44,8 @@ This article provides information about the changes in Firefox 137 that affect d
 
 #### Removals
 
+- The following non-standard events are now deprecated and proposed for removal: [`afterscriptexecute`](/en-US/docs/Web/API/Document/afterscriptexecute_event) and [`beforescriptexecute`](/en-US/docs/Web/API/Document/beforescriptexecute_event) in {{domxref("Document")}}, and [`afterscriptexecute`](/en-US/docs/Web/API/Element/afterscriptexecute_event), and [`beforescriptexecute`](/en-US/docs/Web/API/Element/beforescriptexecute_event) in {{domxref("Element")}}. A console warning is displayed when they are used. ([Firefox bug 1949373](https://bugzil.la/1949373)).
+
 ### WebAssembly
 
 #### Removals
