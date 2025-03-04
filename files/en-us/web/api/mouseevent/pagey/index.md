@@ -28,4 +28,4 @@ A `double` floating point value in pixels.
 ## See also
 
 - {{domxref("MouseEvent.pageX")}}
-- [Coordinate systems](/en-US/docs/Web/CSS/CSSOM_View/Coordinate_Systems)
+- [Coordinate systems](/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems)
