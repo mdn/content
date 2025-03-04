@@ -244,7 +244,7 @@ Additional blocking reasons that may be used by some browsers are also specified
 - `"storageaccess"`
   - : The Document requested storage access permission by using the [Storage Access API](/en-US/docs/Web/API/Storage_Access_API).
 - `"unload-listener"`
-  - : The Document registered an event listener for the ``unload` event](/en-US/docs/Web/API/Window/unload_event).
+  - : The Document registered an event listener for the [`unload` event](/en-US/docs/Web/API/Window/unload_event).
 - `"video-capture"`
   - : The Document requested video capture permission by using Media Capture and Streams's [`getUserMedia()`](/en-US/docs/Web/API/MediaDevices/getUserMedia) with video.
 - `"webhid"`
