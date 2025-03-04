@@ -42,6 +42,8 @@ This article provides information about the changes in Firefox 137 that affect d
 
 #### Media, WebRTC, and Web Audio
 
+- [HEVC (H.265)](/en-US/docs/Web/Media/Guides/Formats/Video_codecs#hevc_h.265) is now hardware enabled on Android, and hardware and software enabled on Linux. This adds to existing hardware and software support on Windows and macOS.
+
 #### Removals
 
 ### WebAssembly
