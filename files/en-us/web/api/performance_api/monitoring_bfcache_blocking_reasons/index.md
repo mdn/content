@@ -150,9 +150,11 @@ For all the cross-origin `<iframe>`s, no blocking reasons are reported; for the 
 
 ## Blocking reasons
 
-There are many different reasons why blocking could occur, and browsers can choose to implement their own specific reasons for blocking, based on how they operate. Developers should avoid depending on specific wording for reasons and be prepared to handle new reasons being added and deleted.
+There are many different reasons why blocking could occur. Although the reasons are standardized, developers should avoid depending on specific wording for reasons and be prepared to handle new reasons being added and deleted.
 
-The initial values listed in [the specification](https://html.spec.whatwg.org/multipage/nav-history-apis.html#the-notrestoredreasons-interface) are:
+### Basic blocking reasons
+
+The values listed in [the specification](https://html.spec.whatwg.org/multipage/nav-history-apis.html#the-notrestoredreasons-interface) are:
 
 - `"fetch"`
   - : While unloading, a fetch initiated by the current document (e.g. via {{domxref("Window/fetch", "fetch()")}}) was canceled while ongoing. As a result, the page was not in a stable state that could be stored in the bfcache.
@@ -168,6 +170,8 @@ The initial values listed in [the specification](https://html.spec.whatwg.org/mu
   - : The current document never finished its initial HTML parsing, and storing the unfinished document in the bfcache was prevented.
 - `"websocket"`
   - : While unloading, an open [WebSocket](/en-US/docs/Web/API/WebSockets_API) connect was shut down, so the page was not in a stable state that could be stored in the bfcache.
+
+### User-agent specific blocking reasons
 
 Additional blocking reasons may be used by some browsers:
 
