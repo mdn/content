@@ -1,6 +1,6 @@
 ---
 title: CSSOM view
-slug: Web/CSS/CSSOM_View
+slug: Web/CSS/CSSOM_view
 page-type: css-module
 spec-urls: https://drafts.csswg.org/cssom-view/
 ---
