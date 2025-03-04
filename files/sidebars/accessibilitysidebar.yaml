@@ -44,7 +44,7 @@ sidebar:
       - /Web/Accessibility/ARIA/Guides/Multipart_labels
   - type: section
     link: /Web/Accessibility/ARIA/How_to
-  - /Web/Accessibility/Aria/How_to/File_ARIA-related_bugs
+  - /Web/Accessibility/ARIA/How_to/File_ARIA-related_bugs
   - type: section
     link: /Web/Accessibility/ARIA/Reference
     title: ARIA reference

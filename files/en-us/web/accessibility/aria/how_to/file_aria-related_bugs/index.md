@@ -1,6 +1,6 @@
 ---
 title: How to file ARIA-related bugs
-slug: Web/Accessibility/Aria/How_to/File_ARIA-related_bugs
+slug: Web/Accessibility/ARIA/How_to/File_ARIA-related_bugs
 page-type: guide
 sidebar: accessibilitysidebar
 ---
