@@ -784,6 +784,46 @@ The parts that have been implemented include:
   </tbody>
 </table>
 
+### `hyphenate-limit-chars` property
+
+The {{CSSXRef("hyphenate-limit-chars")}} CSS property is used to specifically the minimum word length for hyphenation as well as the number of characters before and after the hyphen. ([Firefox bug 1521723](https://bugzil.la/1521723)).
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>136</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>136</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>136</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>136</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>layout.css.hyphenate-limit-chars.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
 ## SVG
 
 None.
