@@ -214,7 +214,7 @@ Additional blocking reasons may be used by some browsers:
 - `"response-cache-control-no-cache"`
   - : The Document was created from an HTTP response whose [`Cache-Control`](/en-US/docs/Web/HTTP/Headers/Cache-Control) header included the "no-cache" token.
 - `"response-keep-alive"`
-  - : The Document was created from an HTTP response that contained a [`Keep-Alive`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Keep-Alive) header.
+  - : The Document was created from an HTTP response that contained a [`Keep-Alive`](/en-US/docs/Web/HTTP/Headers/Keep-Alive) header.
 - `"response-scheme-not-http-or-https"`
   - : The Document was created from a response whose URL's scheme was not an HTTP(S) scheme.
 - `"response-status-not-ok"`
