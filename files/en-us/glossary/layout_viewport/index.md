@@ -14,8 +14,8 @@ This becomes important, for example, on mobile devices, where a pinching gesture
 
 - {{Glossary("Viewport")}}
 - {{Glossary("Visual viewport")}}
-- [Viewport concepts](/en-US/docs/Web/CSS/CSSOM_View/Viewport_Concepts)
-- [CSSOM view](/en-US/docs/Web/CSS/CSSOM_View) module
+- [Viewport concepts](/en-US/docs/Web/CSS/CSSOM_view/Viewport_concepts)
+- [CSSOM view](/en-US/docs/Web/CSS/CSSOM_view) module
 - [Visual Viewport API](/en-US/docs/Web/API/Visual_Viewport_API)
 - [Viewport](https://en.wikipedia.org/wiki/Viewport) on Wikipedia
 - [A tale of two viewports](https://www.quirksmode.org/mobile/viewports.html) (Quirksmode)
