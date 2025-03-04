@@ -26,6 +26,11 @@ This article provides information about the changes in Firefox 137 that affect d
 
 ### SVG
 
+- The {{svgelement("discard")}} SVG element is now supported, along with its corresponding {{domxref("SVGDiscardElement")}} JavaScript interface.
+  The element allows developers to specify a trigger time or event at which a specified element and its children should be removed from the DOM.
+  An SVG viewer can use this information to conserve memory by discarding elements that are no longer needed, such as animated elements that have completed.
+  ([Firefox bug 1945330](https://bugzil.la/1945330)).
+
 #### Removals
 
 ### HTTP
