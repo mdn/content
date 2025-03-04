@@ -9,7 +9,7 @@ browser-compat: css.properties.-webkit-mask-box-image
 
 {{CSSRef}} {{ Non-standard_header() }}
 
-The non-standard prefixed **`-webkit-mask-box-image`** [shorthand](/en-US/docs/Web/CSS/Shorthand_properties) property sets the mask image for an element's border box.
+The non-standard prefixed **`-webkit-mask-box-image`** [shorthand](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) property sets the mask image for an element's border box.
 
 > [!NOTE]
 > This property is not standard and is not on any standards track. Consider using the {{CSSXref("mask-border")}} property instead.

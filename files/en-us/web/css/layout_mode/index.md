@@ -36,5 +36,5 @@ A [CSS](/en-US/docs/Web/CSS) **layout mode**, sometimes called _layout_, is an a
     - [Used values](/en-US/docs/Web/CSS/CSS_cascade/used_value)
     - [Actual values](/en-US/docs/Web/CSS/CSS_cascade/actual_value)
   - [Value definition syntax](/en-US/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
-  - [Shorthand properties](/en-US/docs/Web/CSS/Shorthand_properties)
+  - [Shorthand properties](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties)
   - [Replaced elements](/en-US/docs/Web/CSS/Replaced_element)

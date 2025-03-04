@@ -7,7 +7,7 @@ browser-compat: css.properties.border-left
 
 {{CSSRef}}
 
-The **`border-left`** [shorthand](/en-US/docs/Web/CSS/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets all the properties of an element's left [border](/en-US/docs/Web/CSS/border).
+The **`border-left`** [shorthand](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets all the properties of an element's left [border](/en-US/docs/Web/CSS/border).
 
 {{EmbedInteractiveExample("pages/css/border-left.html")}}
 
