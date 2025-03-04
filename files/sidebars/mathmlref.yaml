@@ -8,12 +8,12 @@ sidebar:
         title: Beginners
         details: closed
         children:
-          - /Web/MathML/Guides/Getting_started
-          - /Web/MathML/Guides/Text_containers
-          - /Web/MathML/Guides/Fractions_and_roots
-          - /Web/MathML/Guides/Scripts
-          - /Web/MathML/Guides/Tables
-          - /Web/MathML/Guides/Three_famous_mathematical_formulas
+          - /Web/MathML/Tutorials/Getting_started
+          - /Web/MathML/Tutorials/Text_containers
+          - /Web/MathML/Tutorials/Fractions_and_roots
+          - /Web/MathML/Tutorials/Scripts
+          - /Web/MathML/Tutorials/Tables
+          - /Web/MathML/Tutorials/Three_famous_mathematical_formulas
       - title: Guides
         details: closed
         children:
@@ -53,7 +53,7 @@ l10n:
     Global attributes: Global attributes
     Guides: Guides
     Examples: Examples
-    Beginners: Beginner's tutorials
+    Beginners: Beginner's tutorial
   fr:
     Reference: Références
     Elements: Éléments

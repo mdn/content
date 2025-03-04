@@ -1,12 +1,12 @@
 ---
 title: Getting started with MathML
 short-title: Getting started
-slug: Web/MathML/Guides/Getting_started
+slug: Web/MathML/Tutorials/Getting_started
 page-type: guide
 sidebar: mathmlref
 ---
 
-{{NextMenu("Web/MathML/Guides/Text_containers", "Web/MathML/Guides")}}
+{{NextMenu("Web/MathML/Guides/Text_containers", "Web/MathML/Tutorials")}}
 
 In this article, we will take a simple HTML document and see how to add MathML formulas into it, introducing a few elements along the way.
 
@@ -169,7 +169,7 @@ As an exercise, figure out how to write the following expressions using only the
 
 ## Summary
 
-In this article, we have taken a look at how to use the `<math>` element to insert a mathematical formula inside a HTML document. We have learned about rendering differences between `<math>` elements that use `display="block"` or not. In addition, we stumbled upon a couple of other MathML elements: `<mfrac>` for fractions, `<mrow>` for grouping and finally a few text elements. We will analyze these [text containers](/en-US/docs/Web/MathML/Guides/Text_containers) further in the next article.
+In this article, we have taken a look at how to use the `<math>` element to insert a mathematical formula inside a HTML document. We have learned about rendering differences between `<math>` elements that use `display="block"` or not. In addition, we stumbled upon a couple of other MathML elements: `<mfrac>` for fractions, `<mrow>` for grouping and finally a few text elements. We will analyze these [text containers](/en-US/docs/Web/MathML/Tutorials/Text_containers) further in the next article.
 
 ## See also
 

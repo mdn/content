@@ -1,7 +1,7 @@
 ---
 title: MathML fractions and roots
 short-title: Fractions and roots
-slug: Web/MathML/Guides/Fractions_and_roots
+slug: Web/MathML/Tutorials/Fractions_and_roots
 page-type: guide
 sidebar: mathmlref
 ---
@@ -12,7 +12,7 @@ Relying on text containers, this article describes how to build more complex Mat
 
 ## Subtrees of \<mfrac>, \<msqrt> and \<mroot>
 
-In the [getting started with MathML](/en-US/docs/Web/MathML/Guides/Getting_started) article, we've already met the `<mfrac>` element to describe a fraction. Let's consider a basic example which adds new elements for roots (`<msqrt>` and `<mroot>`):
+In the [getting started with MathML](/en-US/docs/Web/MathML/Tutorials/Getting_started) article, we've already met the `<mfrac>` element to describe a fraction. Let's consider a basic example which adds new elements for roots (`<msqrt>` and `<mroot>`):
 
 ```html
 <math>
@@ -44,7 +44,7 @@ Below is a screenshot of how it is rendered by a browser:
 ![Screenshot of mfrac, msqrt, mroot](mfrac-msqrt-mroot.png)
 
 - We already know that the `<mfrac>` element is rendered as a fraction: The first child (the numerator) is drawn above the second child (the denominator) separated by a horizontal bar.
-- The `<msqrt>` is rendered as a square root: its children are laid out like an [`<mrow>`](/en-US/docs/Web/MathML/Guides/Getting_started#grouping_with_the_mrow_element), prefixed by a root symbol √ and completely covered by an overbar.
+- The `<msqrt>` is rendered as a square root: its children are laid out like an [`<mrow>`](/en-US/docs/Web/MathML/Tutorials/Getting_started#grouping_with_the_mrow_element), prefixed by a root symbol √ and completely covered by an overbar.
 - Finally, the `<mroot>` element is rendered as an nth root: The first element is covered by the radical symbol while the second element is used as the degree of the root and rendered as a prefix superscript.
 
 ### Active learning: nesting different elements
@@ -305,7 +305,7 @@ Some mathematical concepts are sometimes written using fraction-like notations s
 
 ## Summary
 
-In this lesson, we've seen how to build fractions and roots using the `<mfrac>`, `<msqrt>` and `<mroot>` elements. We noticed some special feature of these elements, namely the fraction and radical symbol. We've seen how to use the `linethickness` attribute to draw fractions without bars. In the next article, we will continue with basic math notations and consider [scripts](/en-US/docs/Web/MathML/Guides/Scripts).
+In this lesson, we've seen how to build fractions and roots using the `<mfrac>`, `<msqrt>` and `<mroot>` elements. We noticed some special feature of these elements, namely the fraction and radical symbol. We've seen how to use the `linethickness` attribute to draw fractions without bars. In the next article, we will continue with basic math notations and consider [scripts](/en-US/docs/Web/MathML/Tutorials/Scripts).
 
 ## See also
 
