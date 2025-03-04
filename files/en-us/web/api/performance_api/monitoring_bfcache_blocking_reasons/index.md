@@ -184,7 +184,7 @@ Additional blocking reasons that may be used by some browsers are also specified
 - `"idledetector"`
   - : The Document had an active [`IdleDetector`](/en-US/docs/Web/API/IdleDetector) while unloading.
 - `"keyboardlock"`
-  - : While unloading, keyboard lock was still active because [Keyboard](/en-US/docs/Web/API/Keyboard)'s [`lock()`](/en-US/docs/Web/API/Keyboard/lock) method was called.
+  - : While unloading, keyboard lock was still active because [`Keyboard`](/en-US/docs/Web/API/Keyboard)'s [`lock()`](/en-US/docs/Web/API/Keyboard/lock) method was called.
 - `"mediastream"`
   - : A [MediaStreamTrack](/en-US/docs/Web/API/MediaStreamTrack) was in the live state upon unloading.
 - `"midi"`
@@ -228,13 +228,13 @@ Additional blocking reasons that may be used by some browsers are also specified
 - `"serviceworker-added"`
   - : The Document's service worker client started to be controlled by a [service worker](/en-US/docs/Web/API/Service_Worker_API) while the page was in back/forward cache.
 - `"serviceworker-claimed"`
-  - : The Document's service worker client's active service worker was claimed while the page was in back/forward cache.
+  - : The Document's service worker client's active [service worker](/en-US/docs/Web/API/Service_Worker_API) was claimed while the page was in back/forward cache.
 - `"serviceworker-postmessage"`
-  - : The Document's service worker client's active service worker received a message while the page was in back/forward cache.
+  - : The Document's service worker client's active [service worker](/en-US/docs/Web/API/Service_Worker_API) received a message while the page was in back/forward cache.
 - `"serviceworker-version-activated"`
-  - : The Document's service worker client's active service worker's version was activated while the page was in back/forward cache.
+  - : The Document's service worker client's active [service worker](/en-US/docs/Web/API/Service_Worker_API)'s version was activated while the page was in back/forward cache.
 - `"serviceworker-unregistered"`
-  - : The Document's service worker client's active service worker's service worker registration was unregistered while the page was in back/forward cache.
+  - : The Document's service worker client's active [service worker](/en-US/docs/Web/API/Service_Worker_API)'s service worker registration was unregistered while the page was in back/forward cache.
 - `"sharedworker"`
   - : This Document was in the owner set of a [`SharedWorkerGlobalScope`](/en-US/docs/Web/API/SharedWorkerGlobalScope).
 - `"smartcardconnection"`
