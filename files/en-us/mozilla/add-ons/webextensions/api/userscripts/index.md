@@ -25,9 +25,11 @@ To use this API, you need the `userScripts` permission and [`host_permissions`](
 
 When a user script is registered or updated (using {{WebExtAPIRef("userScripts.register()")}} or {{WebExtAPIRef("userScripts.update()")}}), your extension can set it to run in an isolated `USER_SCRIPT` world or the `MAIN` world.
 
-A `USER_SCRIPT` world provides an isolated execution environment that isn't accessible to a host page or other extensions. This means a user script can change its JavaScript environment without affecting the host page or other extensions' user and content scripts. In this environment, user scripts aren't visible to the host page or other extensions' user and content scripts. The API also enables an extension to configure a content security policy (CSP) for the `USER_SCRIPT` world using {{WebExtAPIRef("userScripts.configureWorld()")}}.
+A `USER_SCRIPT` world provides an isolated execution environment that isn't accessible to a host page or other extensions. This isolation is similar to a [content script environment](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#content_script_environment), except `USER_SCRIPT` worlds cannot access extension APIs.
 
-In the `MAIN` world, host pages and other extensions can see and access running user scripts.
+User scripts can share a `USER_SCRIPT` world or isolate themselves in a `USER_SCRIPT` world by setting the `worldId` property of {{WebExtAPIRef("userScripts.RegisteredUserScript", "RegisteredUserScript")}}. The API enables an extension to configure a content security policy (CSP) for a `USER_SCRIPT` world using {{WebExtAPIRef("userScripts.configureWorld()")}}.
+
+In the `MAIN` world, host pages and other extensions can see and access running user scripts. The `worldId` property is not supported for `MAIN` worlds.
 
 These execution world values are defined in {{WebExtAPIRef("userScripts.ExecutionWorld","ExecutionWorld")}}.
 
@@ -46,9 +48,6 @@ browser.userScripts.configureWorld({
 ## Extension updates
 
 When an extension updates, user scripts are cleared. To restore scripts, add code to the extension's {{WebExtAPIRef("runtime.onInstalled")}} event handler that responds to the `"update"` reason.
-
-> [!NOTE]
-> User scripts are unregistered when the related extension page (from which the user scripts were registered) is unloaded, so register user scripts from an extension page that persists as long as you want the user scripts to stay registered.
 
 ## Types
 
@@ -80,6 +79,8 @@ When an extension updates, user scripts are cleared. To restore scripts, add cod
   - : Unregisters user scripts registered by the extension.
 - {{WebExtAPIRef("userScripts.update()")}}
   - : Updates user scripts registered by the extension.
+
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 

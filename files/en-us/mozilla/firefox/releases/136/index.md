@@ -114,6 +114,8 @@ This article provides information about the changes in Firefox 136 that affect d
 
 These features are newly shipped in Firefox 136 but are disabled by default. To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`. You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
 
+- **CSS `hyphenate-limit-chars` property**: `layout.css.hyphenate-limit-chars.enabled`.
+  The {{CSSXRef("hyphenate-limit-chars")}} CSS property is used to specifically the minimum word length for hyphenation as well as the number of characters before and after the hyphen. ([Firefox bug 1521723](https://bugzil.la/1521723)).
 - **Error.captureStackTrace()**: `javascript.options.experimental.error_capture_stack_trace`.
   The {{jsxref("Error.captureStackTrace()")}} static method installs stack trace information on a provided object as the {{jsxref("Error.stack")}} property.
   Its main use case is to install a stack trace on a custom error object that does not derive from the {{jsxref("Error")}} interface.
@@ -124,6 +126,8 @@ These features are newly shipped in Firefox 136 but are disabled by default. To 
 - **SVG `<discard>` element for SVG animations**: `svg.discard.enabled`.
   The {{svgelement("discard")}} SVG element allows developers to specify a trigger, such as the elapsed time since the SVG was loaded into DOM or the end of a particular animation, at which a specified element and its children should be removed from the DOM. This allows an SVG viewer to conserve memory by discarding animated elements that no longer needed.
   ([Firefox bug 1069931](https://bugzil.la/1069931)).
+- **SVG path API methods**: `dom.svg.pathSegment.enabled`.
+  The `SVGPathSegment` interface now supports the `getPathData()`, `setPathData()`, and `getPathSegmentAtLength()` methods. These methods provide a convenient way to work with SVG path data instead of parsing raw string data. ([Firefox bug 1934525](https://bugzil.la/1934525)).
 
 ## Older versions
 

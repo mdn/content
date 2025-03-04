@@ -7,7 +7,7 @@ browser-compat: css.properties.scroll-padding-block
 
 {{CSSRef}}
 
-The `scroll-padding-block` [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) sets the scroll padding of an element in the block dimension.
+The `scroll-padding-block` [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) sets the scroll padding of an element in the block dimension.
 
 {{EmbedInteractiveExample("pages/css/scroll-padding-block.html")}}
 
