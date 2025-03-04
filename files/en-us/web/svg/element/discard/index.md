@@ -24,7 +24,7 @@ Authors should set the `playbackorder` attribute to `forwardonly` when using thi
 - {{SVGAttr("begin")}}
 
   - : The trigger that causes the `<discard>` element to become active, at which point the associated element should be discarded.
-    This is commonly a [`syncbase-value](/en-US/docs/Web/SVG/Attribute/begin#syncbase-value) indicating the start or end of another animation, an [`offset-value`](/en-US/docs/Web/SVG/Attribute/begin#offset-value) relative to when the SVG file was loaded into the DOM, or an [`event-value`](/en-US/docs/Web/SVG/Attribute/begin#event-value).
+    This is commonly a [`syncbase-value`](/en-US/docs/Web/SVG/Attribute/begin#syncbase-value) indicating the start or end of another animation, an [`offset-value`](/en-US/docs/Web/SVG/Attribute/begin#offset-value) relative to when the SVG file was loaded into the DOM, or an [`event-value`](/en-US/docs/Web/SVG/Attribute/begin#event-value).
 
     _Value type_: [**\<begin-value-list>**](/en-US/docs/Web/SVG/Attribute/begin#animate_animatemotion_animatetransform_set).
     _Default value_: `0`; _Animatable_: **no**
