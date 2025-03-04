@@ -782,46 +782,6 @@ The parts that have been implemented include:
   </tbody>
 </table>
 
-### :has-slotted pseudo-class
-
-The {{CSSXRef(":has-slotted")}} [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) is used to style elements in {{HTMLElement("template")}} that have content added to a {{HTMLElement("slot")}} element when rendering a [web component](/en-US/docs/Web/API/Web_components) ([Firefox bug 1921747](https://bugzil.la/1921747)).
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>133</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>133</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>133</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>133</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>layout.css.has-slotted-selector.enabled</code></td>
-    </tr>
-  </tbody>
-</table>
-
 ### `hyphenate-limit-chars` property
 
 The {{CSSXRef("hyphenate-limit-chars")}} CSS property is used to specifically the minimum word length for hyphenation as well as the number of characters before and after the hyphen. ([Firefox bug 1521723](https://bugzil.la/1521723)).
