@@ -5,7 +5,7 @@ page-type: mdn-writing-guide
 sidebar: mdnsidebar
 ---
 
-This page outlines MDN's policy for including polyfills in the reference documentation for [JavaScript](/en-US/docs/Web/JavaScript), and [Web APIs](/en-US/docs/Web/API).
+This page outlines MDN's policy for including polyfills in the reference documentation for [JavaScript](/en-US/docs/Web/JavaScript) and [Web APIs](/en-US/docs/Web/API).
 
 On the web, a {{glossary("Polyfill", "polyfill")}} is a piece of code used to provide an implementation of a web platform feature in browsers that do not natively support that feature. Polyfills enable web developers to write a single codebase targeting multiple browsers and browser versions, even when some of those browsers don't support some of the features used.
 
@@ -24,6 +24,8 @@ Sources are selected by the MDN maintainers based on the following criteria:
 
 - Conformance to the specification for the feature for which they are providing an implementation.
 - Adoption by the web development community, as seen in metrics such as the number of [npm](https://www.npmjs.com/) downloads.
+
+### Proposing an additional polyfill source
 
 Anyone can propose that MDN should recognize an additional source of polyfills by [starting a discussion in the MDN discussion forum](https://github.com/orgs/mdn/discussions). However, the MDN maintainers expect the number of recognized polyfills linked from MDN to remain very small, to reduce the risk of recommending polyfills that cause problems for web developers.
 
