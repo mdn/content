@@ -24,7 +24,7 @@ It's worth noting that the sizing algorithm only cares about the image's dimensi
 
 ## Source image examples
 
-Before diving in to look at the results of using different kinds of source images and seeing how they look when used with {{ cssxref("background-size") }}, it would be helpful to look at a few example source images that have different dimensions and sizing settings. These are the images we will be using for our `background-image` values in our examples. The browser renders {{htmlelement("svg")}} images as `300px` wide and `150px` tall by default.
+Before diving in to look at the results of using different kinds of source images and seeing how they look when used with {{ cssxref("background-size") }}, it would be helpful to look at a few example source images that have different dimensions and sizing settings. These are the images we will be using for our `background-image` values in our examples. The browser renders {{SVGelement("svg")}} images as `300px` wide and `150px` tall by default.
 
 ### Dimensionless and proportionless
 
