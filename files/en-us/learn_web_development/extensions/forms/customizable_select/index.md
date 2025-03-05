@@ -36,7 +36,7 @@ You can build customizable `<select>` elements using the following HTML and CSS 
 In addition, the select `<button>` and the picker have the following behavior assigned to them automatically:
 
 - They have an invoker/popover relationship, as specified by the [Popover API](/en-US/docs/Web/API/Popover_API), which brings several advantages such as accessibility semantics, tabbing order adjustments, and the ability to select the picker when open via the {{cssxref(":popover-open")}} pseudo-class. See [Using the Popover API](/en-US/docs/Web/API/Popover_API/Using) for more details of popover behavior.
-- The have an implicit anchor reference, meaning that the picker is automatically positioned relative to the select `<button>` via [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning), and you can customize the position of the picker as explained in [Positioning elements relative to their anchor](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#positioning_elements_relative_to_their_anchor).
+- They have an implicit anchor reference, meaning that the picker is automatically positioned relative to the select `<button>` via [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning), and you can customize the position of the picker as explained in [Positioning elements relative to their anchor](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#positioning_elements_relative_to_their_anchor).
 
 > [!NOTE]
 > You can check browser support for customizable `<select>` by viewing the browser compatibility tables on the reference pages listed above.
