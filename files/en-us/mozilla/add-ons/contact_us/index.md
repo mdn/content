@@ -31,4 +31,4 @@ If you discover an add-on security vulnerability, even if the add-on is not host
 
 #### Bugs on addons.mozilla.org (AMO)
 
-If you find a problem with the site, we'd love to fix it. Please [file a bug report](https://github.com/mozilla/addons/issues/new) and include as much detail as possible.
+If you find a problem with the site, we'd love to fix it. Please [file a bug report](https://github.com/mozilla/addons/issues/new/choose) and include as much detail as possible.
