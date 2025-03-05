@@ -2,10 +2,12 @@
 title: SVGDiscardElement
 slug: Web/API/SVGDiscardElement
 page-type: web-api-interface
+status:
+  - experimental
 browser-compat: api.SVGDiscardElement
 ---
 
-{{APIRef("SVG")}}
+{{APIRef("SVG")}}{{SeeCompatTable}}
 
 The **`SVGDiscardElement`** interface is an interface for the {{SVGElement("discard")}} element.
 
