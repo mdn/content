@@ -44,7 +44,7 @@ The API has two main parts:
 
 In the Trusted Types API:
 
-- The {{domxref("Window.trustedTypes", "trustedTypes")}} global property is used to create {{domxref("TrustedTypePolicy")}} objects.
+- The `trustedTypes` global property, available in both {{domxref("Window.trustedTypes", "Window")}} and {{domxref("WorkerGlobalScope.trustedTypes", "Worker")}} contexts, is used to create {{domxref("TrustedTypePolicy")}} objects.
 - A {{domxref("TrustedTypePolicy")}} object is used to create trusted type objects: it will do this by passing the data through a transformation function.
 - Trusted type objects represent data that has been through the policy, and can therefore be safely passed to an injection sink. There are three sorts of trusted type, corresponding to the different sort of injection sink:
   - {{domxref("TrustedHTML")}} is for passing to a sink that will render the data as HTML.
