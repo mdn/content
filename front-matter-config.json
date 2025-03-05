@@ -34,14 +34,7 @@
         "type": ["array", "string"],
         "items": {
           "type": "string",
-          "enum": [
-            "mediasidebar",
-            "urlsidebar",
-            "xmlsidebar",
-            "xpathsidebar",
-            "xsltsidebar",
-            "exsltsidebar"
-          ]
+          "enum": ["mediasidebar", "urlsidebar", "xmlsidebar"]
         }
       },
       "status": {
