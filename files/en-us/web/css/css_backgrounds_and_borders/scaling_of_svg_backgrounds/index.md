@@ -6,25 +6,25 @@ page-type: guide
 
 {{CSSRef}}
 
-Given the flexibility of SVG images, there's a lot to keep in mind when using them as background images with the {{ cssxref("background-image") }} property, and even more to keep in mind when also scaling them using the {{ cssxref("background-size") }} property. This article describes how scaling of SVG images is handled when using these properties.
+Given the flexibility of SVG images, there's a lot to keep in mind when using them as background images with the {{ cssxref("background-image") }} property, and even more to keep in mind when scaling them using the {{ cssxref("background-size") }} property. This article describes how scaling of SVG images is handled when using these properties.
 
-## The algorithm, in summary
+## The background sizing algorithm
 
-The algorithm can, for the most part, be summarized by these four rules. There are some edge cases that aren't covered by these rules, but this covers the majority of cases.
+The algorithm used to determine the background size of a background image can, for the most part, be summarized by these four rules. There are some edge cases that aren't covered by these rules, but this covers the majority of cases.
 
 1. If {{ cssxref("background-size") }} specifies a fixed dimension (that is, percentages and relative units are fixed by their context), that dimension wins.
 2. If the image has an intrinsic ratio (that is, its width:height ratio is constant, such as 16:9, 4:3, 2.39:1, 1:1, and so forth), the rendered size preserves that ratio.
 3. If the image specifies a size, and the size isn't modified by `constrain` or `cover`, that specified size wins.
 4. If none of the above cases are met, the image is rendered at the same size as the background area.
 
-It's worth noting that the sizing algorithm only cares about the image's dimensions and proportions, or lack thereof. An SVG image with fixed dimensions will be treated just like a raster image of the same size.
+It's worth noting that the background sizing algorithm only cares about the image's dimensions and proportions, or lack thereof. An SVG image with fixed dimensions will be treated just like a raster image of the same size.
 
 > [!NOTE]
 > If you are trying to stretch your SVG to a different {{glossary("aspect ratio")}} with CSS—for example in order to stretch it over the page background—make sure your SVG includes `preserveAspectRatio="none"`. Find out more about {{svgattr("preserveAspectRatio")}}.
 
 ## Source image examples
 
-Before diving in to look at the results of using different kinds of source images and seeing how they look when used with {{ cssxref("background-size") }}, it would be helpful to look at a few example source images that have different dimensions and sizing settings. These are the images we will be using for our `background-image` values in our examples. The browser renders {{SVGelement("svg")}} images as `300px` wide and `150px` tall by default.
+Before diving in to look at the results of using different kinds of SVG source images and seeing how they look when used with {{ cssxref("background-size") }}, it will be helpful to look at a few example source images that have different dimensions and sizing settings, which we will later use as our `background-image` values in our examples. The browser renders {{SVGelement("svg")}} images as `300px` wide and `150px` tall by default.
 
 ### Dimensionless and proportionless
 
