@@ -45,3 +45,7 @@ post-merge:
         else
           yarn install
         fi
+
+output:
+  - summary
+  - failure
