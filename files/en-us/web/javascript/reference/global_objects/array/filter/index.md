@@ -197,6 +197,7 @@ console.log(Array.prototype.filter.call(arrayLike, (x) => x <= "b"));
 ## See also
 
 - [Polyfill of `Array.prototype.filter` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [es-shims polyfill of `Array.prototype.filter`](https://www.npmjs.com/package/array.prototype.filter)
 - [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.forEach()")}}

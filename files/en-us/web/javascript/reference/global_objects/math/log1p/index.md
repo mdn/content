@@ -82,6 +82,7 @@ Math.log1p(Infinity); // Infinity
 ## See also
 
 - [Polyfill of `Math.log1p` in `core-js`](https://github.com/zloirock/core-js#ecmascript-math)
+- [es-shims polyfill of `Math.log1p`](https://www.npmjs.com/package/math.log1p)
 - {{jsxref("Math.exp()")}}
 - {{jsxref("Math.log()")}}
 - {{jsxref("Math.expm1()")}}

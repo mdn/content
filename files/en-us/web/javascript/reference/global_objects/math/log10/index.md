@@ -77,6 +77,7 @@ Math.log10(Infinity); // Infinity
 ## See also
 
 - [Polyfill of `Math.log10` in `core-js`](https://github.com/zloirock/core-js#ecmascript-math)
+- [es-shims polyfill of `Math.log10`](https://www.npmjs.com/package/math.log10)
 - {{jsxref("Math.exp()")}}
 - {{jsxref("Math.log()")}}
 - {{jsxref("Math.log1p()")}}

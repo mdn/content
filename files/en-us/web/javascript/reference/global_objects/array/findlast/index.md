@@ -211,6 +211,7 @@ console.log(
 ## See also
 
 - [Polyfill of `Array.prototype.findLast` in `core-js`](https://github.com/zloirock/core-js#array-find-from-last)
+- [es-shims polyfill of `Array.prototype.findLast`](https://www.npmjs.com/package/array.prototype.findlast)
 - [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.find()")}}
