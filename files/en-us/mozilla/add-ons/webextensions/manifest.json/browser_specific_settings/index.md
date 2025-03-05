@@ -57,7 +57,7 @@ Firefox stores browser-specific settings in these sub-keys:
 The `gecko` subkey supports these properties:
 
 - `id`
-  - : The extension ID. When provided, this property must contain 80 characters or less. See [Extensions and the Add-on ID](https://extensionworkshop.com/documentation/develop/extensions-and-the-add-on-id/) to determine when to specify the ID.
+  - : The extension ID. When provided, this property must contain 80 characters or less and have the format `^[a-zA-Z0-9-._]*@[a-zA-Z0-9-._]+$`, like `myextension@example.org`. The extension ID is decided by the developer - the only requirement is that when publishing the extension it must be unique. See [Extensions and the Add-on ID](https://extensionworkshop.com/documentation/develop/extensions-and-the-add-on-id/) to determine when to specify the ID.
 - `strict_min_version`
   - : Minimum version of Gecko to support. If the Firefox version on which the extension is being installed or run is below this version, the extension is not installed or not run. If not provided, all versions earlier than `strict_max_version` are supported. "\*" is not valid in this field.
 - `strict_max_version`
