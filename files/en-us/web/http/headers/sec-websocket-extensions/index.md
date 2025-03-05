@@ -65,7 +65,7 @@ Upgrade: websocket
 Connection: Upgrade
 Sec-WebSocket-Key: dGhlIHNhbXBsZSBub25jZQ==
 Sec-WebSocket-Version: 13
-Sec-WebSocket-Extensions: permessage-deflate; client_max_window_bits
+Sec-WebSocket-Extensions: permessage-deflate, client_max_window_bits
 ```
 
 The request below with separate headers for each extension is equivalent:
