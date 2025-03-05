@@ -1,0 +1,372 @@
+---
+title: Customizable select elements
+slug: Learn_web_development/Extensions/Forms/Customizable_select
+page-type: learn-module-chapter
+---
+
+{{LearnSidebar}}
+
+This article explains how to use a number of HTML and CSS features together to create fully-customized {{htmlelement("select")}} elements. This includes having full control over styling the select button, drop-down picker, arrow icon, checkbox to indicate which item is currently selected, each individual {{htmlelement("option")}} element, and more besides.
+
+## Background
+
+Traditionally it has been difficult to customize the look and feel of `<select>` elements because they contain internals that are styled at the operating system level, which can't be targeted using CSS. This includes the drop-down picker, the arrow icon, etc.
+
+Previously the best option we had available, aside from using a custom JavaScript library, was to set an {{cssxref("appearance")}} value of `none` on the `<select>` element to strip away some of the OS-level styling, and then use CSS to customize the bits we can control. This technique is explained in [Advanced form styling](/en-US/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling).
+
+Customizable `<select>` elements provide a solution to these issues. They allow you to build examples like the following, using only HTML and CSS:
+
+{{EmbedLiveSample("full-render", "100%", "200px")}}
+
+We'll show you how to build this example in the sections below.
+
+## What features comprise a customizable select?
+
+You can build customizable `<select>` elements using the following HTML and CSS features:
+
+- Plain old {{htmlelement("select")}}, {{htmlelement("option")}}, and {{htmlelement("optgroup")}} elements. The new features are built on top of existing select functionality as progressive enhancements, meaning that customizable selects can be easily designed to fall back to classic selects in non-supporting browsers.
+- The {{htmlelement("selectedcontent")}} element, which under the hood provides a {{htmlelement("slot")}} into which is placed the contents of the currently-selected `<option>`. This is the content visible inside the closed `<select>` element, otherwise known as the **select {{htmlelement("button")}}**, as it is the button you need to press to open the drop-down menu.
+- The {{cssxref("::picker()", "::picker(select)")}} pseudo-element, which targets the entire contents of the select drop-down menu, otherwise known as the **picker**. The picker contains everything inside the `<select>` element that isn't the button and the `<selectedcontent>`.
+- The {{cssxref("appearance")}} property value `base-select`, which opts the `<select>` element and the `::picker(select)` pseudo-element into the browser-defined default styles and behavior for customizable select.
+- The {{cssxref(":open")}} pseudo-class, which targets the select `<button>` when the picker (`::picker(select)`) is open.
+- The {{cssxref("::picker-icon")}} pseudo-element, which targets the picker icon inside the select `<button>` — the little down-facing arrow on the inline-end side.
+- The {{cssxref(":checked")}} pseudo-class, which targets the currently-selected `<option>` element.
+- The {{cssxref("::checkmark")}} pseudo-element, which targets the checkmark placed inside the currently-selected `<option>` element to provide a visual indication of which one is selected.
+
+In addition, the select `<button>` and the picker have the following behavior assigned to them automatically:
+
+- They have an invoker/popover relationship, as specified by the [Popover API](/en-US/docs/Web/API/Popover_API), which brings several advantages such as accessibility semantics, tabbing order adjustments, and the ability to select the picker when open via the {{cssxref(":popover-open")}} pseudo-class. See [Using the Popover API](/en-US/docs/Web/API/Popover_API/Using) for more details of popover behavior.
+- The have an implicit anchor reference, meaning that the picker is automatically positioned relative to the select `<button>` via [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning), and you can customize the position of the picker as explained in [Positioning elements relative to their anchor](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#positioning_elements_relative_to_their_anchor).
+
+> [!NOTE]
+> You can check browser support for customizable `<select>` by viewing the browser compatibility tables on the reference pages listed above.
+
+Let's look at all of the above features in action, by walking through the example you saw earlier.
+
+## Customizable select markup
+
+Our example is a typical {{htmlelement("select")}} menu that allows you to choose a pet. The markup is as follows:
+
+```html live-sample___plain-render live-sample___second-render live-sample___third-render live-sample___fourth-render live-sample___full-render
+<form>
+  <p>
+    <label for="pet-select">Select pet:</label>
+    <select id="pet-select">
+      <button>
+        <selectedcontent></selectedcontent>
+      </button>
+
+      <option value="">Please select a pet</option>
+      <option value="cat">
+        <span class="icon">🐱</span><span class="option-label">Cat</span>
+      </option>
+      <option value="dog">
+        <span class="icon">🐶</span><span class="option-label">Dog</span>
+      </option>
+      <option value="tortoise">
+        <span class="icon">🐹</span><span class="option-label">Hamster</span>
+      </option>
+      <option value="parrot">
+        <span class="icon">🐔</span><span class="option-label">Chicken</span>
+      </option>
+      <option value="fish">
+        <span class="icon">🐟</span><span class="option-label">Fish</span>
+      </option>
+      <option value="snake">
+        <span class="icon">🐍</span><span class="option-label">Snake</span>
+      </option>
+    </select>
+  </p>
+</form>
+```
+
+This is nearly the same as "classic" `<select>` markup, with the following differences:
+
+- The `<button><selectedcontent></selectedcontent></button>` structure represents the select {{htmlelement("button")}}; the {{htmlelement("selectedcontent")}} element provides a {{htmlelement("slot")}} into which is placed the contents of the currently-selected {{htmlelement("option")}}. This allows you to select and [adjust the styling of the selected `<option>` contents as shown inside the select button](#adjusting_the_styling_of_the_selected_option_contents_inside_the_select_button). If this structure is not included in your markup, the browser will fill in the selected value inside the select button implicitly, but you won't be able to select it using CSS.
+- The rest of the `<select>` contents represents the picker (the `<select>` drop-down menu). This obviously includes the `<option>` elements representing the different choices in the picker, but you can also include other content if desired.
+- Traditionally, `<option>` elements could only contain text, but in a customizable select you can include markup structures including images and more besides. In our example, each `<option>` contains two {{htmlelement("span")}} elements containing an icon and a text label respectively, allowing each one to be styled and positioned independently.
+
+  > [!NOTE]
+  > Because the `<option>` content can contain multi-level DOM sub-trees, not just text nodes, there are rules concerning how the browser should extract the [current `<select>` value](/en-US/docs/Web/API/HTMLSelectElement/value) via JavaScript. The selected `<option>` element's {{domxref("Node.textContent", "textContent")}} property value is retrieved, {{jsxref("String.prototype.trim", "trim()")}} is run on it, and the result is set as the `<select>` value.
+
+This design allows non-supporting browsers to fall back to a classic `<select>` menu. The `<button><selectedcontent></selectedcontent></button>` structure will be ignored completely, and the non-text `<option>` contents will be stripped out to just leave the text node contents, but the result will still function.
+
+## Opting in to the custom select rendering
+
+To opt-in to the custom select functionality, your `<select>` element and its picker (represented by the `::picker(select)` pseudo-element) both need to have an {{cssxref("appearance")}} value of `base-select` set on them:
+
+```css live-sample___plain-render live-sample___second-render live-sample___third-render live-sample___fourth-render live-sample___full-render
+select,
+::picker(select) {
+  appearance: base-select;
+}
+```
+
+```css hidden live-sample___second-render live-sample___third-render live-sample___fourth-render live-sample___full-render
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  width: 100%;
+  padding: 0 10px;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 1.2rem;
+}
+
+p {
+  display: flex;
+  gap: 10px;
+}
+
+label {
+  width: fit-content;
+  align-self: center;
+}
+
+select {
+  flex: 1;
+}
+```
+
+You can choose to opt-in one or the other, but in most cases you'll want to opt-in both.
+
+Once this is done, the result is a very plain rendering of a `<select>` element:
+
+{{EmbedLiveSample("plain-render", "100%", "200px")}}
+
+You are now free to style this in any way you want. To begin with, we decided to give the `<select>` a custom {{cssxref("border")}}, {{cssxref("background")}} (which changes on {{cssxref(":hover")}} or {{cssxref(":focus")}}), and {{cssxref("padding")}}, plus a {{cssxref("transition")}} so that the background change animates smoothly:
+
+```css live-sample___second-render live-sample___third-render live-sample___fourth-render live-sample___full-render
+select {
+  border: 2px solid #ddd;
+  background: #eee;
+  padding: 10px;
+  transition: 0.4s;
+}
+
+select:hover,
+select:focus {
+  background: #ddd;
+}
+```
+
+## Styling the picker icon
+
+To style the picker icon inside the select `<button>` — the little down-facing arrow on the inline-end side — you can target it with the {{cssxref("::picker-icon")}} pseudo-element. In the following code we give the icon a custom {{cssxref("color")}} and a `transition` so that changes to its {{cssxref("rotate")}} property are smoothly animated:
+
+```css live-sample___second-render live-sample___third-render live-sample___fourth-render live-sample___full-render
+select::picker-icon {
+  color: #999;
+  transition: 0.4s rotate;
+}
+```
+
+Next up, we combine `::picker-icon` with the {{cssxref(":open")}} pseudo-class — which targets the select `<button>` only when the picker is open — to give the icon a `rotate` value of `180deg` when the `<select>` is opened.
+
+```css live-sample___second-render live-sample___third-render live-sample___fourth-render live-sample___full-render
+select:open::picker-icon {
+  rotate: 180deg;
+}
+```
+
+Let's have a look at our work so far — note how the picker arrow rotates smoothly through 180 degrees when the `<select>` opens and closes:
+
+{{EmbedLiveSample("second-render", "100%", "200px")}}
+
+## Styling the picker drop-down menu
+
+The select picker can be targeted using the {{cssxref("::picker()", "::picker(select)")}} pseudo-element. As we said earlier, the picker contains everything inside the `<select>` element that isn't the button and the `<selectedcontent>`. In our example, this means all the `<option>` elements and ther contents.
+
+For now, we'll just use this to remove the picker's default black {{cssxref("border")}} border:
+
+```css live-sample___third-render live-sample___fourth-render live-sample___full-render
+::picker(select) {
+  border: none;
+}
+```
+
+Now we'll style our `<option>` elements. First of all, we'll lay them out with [flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout), aligning them all to the start of the flex container and including a `20px` {{cssxref("gap")}} between each one. We also give each `<option>` the same {{cssxref("border")}}, {{cssxref("background")}}, {{cssxref("padding")}}, and {{cssxref("transition")}} as the `<select>`, to provide a consistent look and feel:
+
+```css live-sample___third-render live-sample___fourth-render live-sample___full-render
+option {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+
+  border: 2px solid #ddd;
+  background: #eee;
+  padding: 10px;
+  transition: 0.4s;
+}
+```
+
+> [!NOTE]
+> Customizable `<select>` element `<option>`s have `display: flex` set on them by default, but we included this setting in our stylesheet anyway so it is clear what is going on.
+
+Next, we use a combination of {{cssxref(":first-of-type")}}, {{cssxref(":last-of-type")}}, and {{cssxref(":not()")}} to set an appropriate {{cssxref("border-radius")}} on the top and bottom corners of the picker, and remove the {{cssxref("border-bottom")}} from all `<option>` elements except the last one so the borders don't look messy and doubled-up:
+
+```css live-sample___third-render live-sample___fourth-render live-sample___full-render
+option:first-of-type {
+  border-radius: 8px 8px 0 0;
+}
+
+option:last-of-type {
+  border-radius: 0 0 8px 8px;
+}
+
+option:not(option:last-of-type) {
+  border-bottom: none;
+}
+```
+
+We next set a different `background` color on the odd-numbered `<options>` using {{cssxref(":nth-of-type()", ":nth-of-type(odd)")}} to implement zebra-striping, and set a different `background` color on the `<options>` on focus and hover, to provide a useful visual highlight during selection:
+
+```css live-sample___third-render live-sample___fourth-render live-sample___full-render
+option:nth-of-type(odd) {
+  background: #fff;
+}
+
+option:hover,
+option:focus {
+  background: plum;
+}
+```
+
+Finally for this section, we increase the {{cssxref("font-size")}} set on the `<option>` icons (contained within `<span>` elements with a class of `icon`) to make them bigger, and use {{cssxref("text-box")}} to remove some of the annoying spacing at the block-start and block-end edges of the icon emojis, making them align better with the text labels
+
+```css live-sample___third-render live-sample___fourth-render live-sample___full-render
+option .icon {
+  font-size: 1.6rem;
+  text-box: trim-both cap alphabetic;
+}
+```
+
+Our example now renders like this:
+
+{{EmbedLiveSample("third-render", "100%", "200px")}}
+
+## Adjusting the styling of the selected option contents inside the select button
+
+If you select any pet option from the last few live examples, you'll notice a problem — the pet icons cause the select `<button>` to increase in height, which also changes the position of the picker icon, and there is no spacing between the option icon and label — not a great look.
+
+This can be fixed by hiding the icon when it is contained inside the `<selectedcontent>` slot, which represents the contents of the selected `<option>` as they appear inside the select `<button>`. In our example, we'll hide it using {{cssxref("display", "display: none")}}:
+
+```css live-sample___fourth-render live-sample___full-render
+selectedcontent .icon {
+  display: none;
+}
+```
+
+This does not affect the styling of the `<option>` contents as they appear inside the picker.
+
+## Styling the currently selected option
+
+To style the currently selected `<option>` as it appears inside the picker, you can target it using the {{cssxref(":checked")}} pseudo-class. We don't have much need for this inside our demo, so we'll just use this to set the selected `<option>` element's {{cssxref("font-weight")}} to `bold`, for demo purposes:
+
+```css live-sample___fourth-render live-sample___full-render
+option:checked {
+  font-weight: bold;
+}
+```
+
+## Styling the current selection checkmark
+
+You've probably noticed that when you open the picker to make a selection, the currently selected `<option>` has a checkmark at its inline-start end. This checkmark can be targeted using the {{cssxref("::checkmark")}} pseudo-element. For example, you might want to hide this checkmark (for example, via `display: none`).
+
+In our demo, we chose to do something a bit more interesting with it — earlier on we established that our `<option>` elements are laid out horizontally using flexbox, with the flex items being aligned to the start of the row. In the below rule, we are moving the checkmark from the start of the row to the end by setting an {{cssxref("order")}} value on it greater than `0`, and aligning it to the end of the row using an `auto` {{cssxref("margin-left")}} value (see [Alignment and auto margins](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox#alignment_and_auto_margins)).
+
+We've also set the value of the {{cssxref("content")}} property to a different emoji, to choose a different icon to display.
+
+```css live-sample___fourth-render live-sample___full-render
+option::checkmark {
+  order: 1;
+  margin-left: auto;
+  content: "☑️";
+}
+```
+
+Let's check in again on how our example is rendering. The updated state after the last three sections is as follows:
+
+{{EmbedLiveSample("fourth-render", "100%", "200px")}}
+
+## Animating the picker drop-down using popover states
+
+Earlier on, we mentioned that a customizable `<select>` element's select `button` and picker have an invoker/popover relationship, as described in [Using the Popover API](/en-US/docs/Web/API/Popover_API/Using). There are many advantages that this brings to `<select>` elements, but one that we want to use in our example is the ability to animate between popover hidden and showing states using transitions and the {{cssxref(":popover-open")}} pseudo-class (which represents popovers in the showing state).
+
+We will walk through the technique quickly in this section — read [Animating popovers](/en-US/docs/Web/API/Popover_API/Using#animating_popovers) for a more detailed description.
+
+First of all, we select the picker using `::picker(select)` and set an {{cssxref("opacity")}} value of `0` on it, and a `transition` value of `all 0.4s allow-discrete`. This causes all properties that change value when the popover state changes from hidden to showing to animate. This includes `opacity`, but it also includes two discrete properties whose values are set by the browser default styles (the [`allow-discrete`](/en-US/docs/Web/CSS/transition-behavior#allow-discrete) value is needed to enable discrete property animations):
+
+- {{cssxref("display")}}
+  - : The `display` values changes from `none` to `block` when the popover changes state from hidden to shown. This needs to be animated to ensure that other transitions are visible.
+- {{cssxref("overlay")}}
+  - : The `overlay` value changes from `none` to `auto` when the popover changes state from hidden to shown, to promote it to the {{glossary("top layer")}}, then back again when it is hidden to remove it. This needs to be animated to ensure the removal of the popover from the top layer is deferred until the transition completes, again ensuring the transition is visible.
+
+```css live-sample___full-render
+::picker(select) {
+  opacity: 0;
+  transition: all 0.4s allow-discrete;
+}
+```
+
+Next, we select the picker in the showing state using `::picker(select):popover-open` and set the `opacity` value to `1` — this is the end state of our transition:
+
+```css live-sample___full-render
+::picker(select):popover-open {
+  opacity: 1;
+}
+```
+
+Finally, because we are creating a transtition on an element while it is moving from `display: none` to a `display` value that makes it visible, we need to specify the transition's starting state inside an {{cssxref("@opacity")}} block:
+
+```css live-sample___full-render
+@starting-style {
+  ::picker(select):popover-open {
+    opacity: 0;
+  }
+}
+```
+
+These rules work together to make our `<select>` picker smoothly fade in and fade out when the `<select>` is opeed and closed.
+
+## Positioning the picker using anchor positioning
+
+We also previously mentioned that a customizable `<select>` element's select `<button>` and picker have have an implicit anchor reference, and the picker is automatically positioned relative to the select `<button>` via [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning). This means that an explicit association does not need to be made using the {{cssxref("anchor-name")}} and {{cssxref("position-anchor")}} properties, and you can customize the position of the picker as explained in [Positioning elements relative to their anchor](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#positioning_elements_relative_to_their_anchor).
+
+In our demo, we set the positioning of the picker relative to its anchor by using the {{cssxref("anchor()")}} function inside its {{cssxref("top")}} and {{cssxref("left")}} property values:
+
+```css live-sample___full-render
+::picker(select) {
+  top: calc(anchor(bottom) + 1px);
+  left: anchor(10%);
+}
+```
+
+The results in the top edge of the picker always being positioned 1 pixel down from the bottom edge of the select `<button>`, and the left edge of the picker always being positioned `10%` of the select `<button>`'s width across from its left edge.
+
+## Final result
+
+After the last two section, the final updated state of our `<select>` is rendered like this:
+
+{{EmbedLiveSample("full-render", "100%", "200px")}}
+
+## Multiple selects
+
+xx
+
+## Optgroups
+
+xx
+
+## See also
+
+xx
