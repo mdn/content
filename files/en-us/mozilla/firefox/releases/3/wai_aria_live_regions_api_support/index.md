@@ -7,7 +7,7 @@ page-type: guide
 {{FirefoxSidebar}}
 
 > [!WARNING]
-> These notes are for developers of screen readers. Developers should use the [ARIA live regions developer documentation](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions).
+> These notes are for developers of screen readers. Developers should use the [ARIA live regions developer documentation](/en-US/docs/Web/Accessibility/ARIA/Guides/Live_regions).
 
 Firefox 3 contains important improvements to the way the Mozilla engine exposes live changes in a document.
 
@@ -66,4 +66,4 @@ Everything else, including focus changes, timer callbacks, XMLHttpRequest callba
 
 ## What Should Screen Readers Present?
 
-Please read the live region section of the [WAI-ARIA Screen Reader Implementor's Guide](/en-US/docs/Web/Accessibility/ARIA/ARIA_Screen_Reader_Implementors_Guide#live_regions).
+Please read the live region section of the [WAI-ARIA Screen Reader Implementor's Guide](/en-US/docs/Web/Accessibility/ARIA/Guides/Screen_Reader_Implementors#live_regions).

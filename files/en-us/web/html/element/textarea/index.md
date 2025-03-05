@@ -319,7 +319,7 @@ textarea {
       <th scope="row">Implicit ARIA role</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role"
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role"
             >textbox</a
           ></code
         >

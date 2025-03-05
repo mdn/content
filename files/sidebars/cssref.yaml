@@ -137,9 +137,9 @@ sidebar:
       - /Web/CSS/CSS_colors/Color_values
       - /Web/CSS/CSS_colors/Relative_colors
       - /Web/CSS/CSS_colors/Using_color_wisely
-      - link: /Web/Accessibility/Understanding_Colors_and_Luminance
+      - link: /Web/Accessibility/Guides/Colors_and_Luminance
         title: Accessibility_Understanding_colors_and_luminance
-      - link: /Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast
+      - link: /Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast
         title: Color_contrast
   - title: Columns
     details: closed

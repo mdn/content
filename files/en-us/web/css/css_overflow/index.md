@@ -256,7 +256,7 @@ A link is included in the content box above to demonstrate the effects of keyboa
 - {{cssxref("scroll-snap-type")}} CSS property
 - {{cssxref("text-overflow")}} CSS property
 - {{CSSxRef("::-webkit-scrollbar")}} pseudo-element
-- [`scrollbar`](/en-US/docs/Web/Accessibility/ARIA/Roles/scrollbar_role) ARIA role
+- [`scrollbar`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/scrollbar_role) ARIA role
 - Element {{domxref("Element.scroll", "scroll()")}} method
 - Element {{domxref("Element.scrollBy", "scrollBy()")}} method
 - Element {{domxref("Element.scrollIntoView", "scrollIntoView()")}} method

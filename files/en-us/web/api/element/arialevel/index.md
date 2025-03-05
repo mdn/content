@@ -44,4 +44,4 @@ console.log(el.ariaLevel); // "2"
 
 ## See also
 
-- [ARIA: heading role](/en-US/docs/Web/Accessibility/ARIA/Roles/heading_role)
+- [ARIA: heading role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/heading_role)
