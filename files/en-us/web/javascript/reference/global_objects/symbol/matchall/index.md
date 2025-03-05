@@ -56,6 +56,7 @@ console.log(Array.from(str.matchAll(numbers)));
 ## See also
 
 - [Polyfill of `Symbol.matchAll` in `core-js`](https://github.com/zloirock/core-js#ecmascript-symbol)
+- [es-shims polyfill of `Symbol.matchAll`](https://www.npmjs.com/package/string.prototype.matchall)
 - {{jsxref("Symbol.match")}}
 - {{jsxref("Symbol.replace")}}
 - {{jsxref("Symbol.search")}}

@@ -84,4 +84,5 @@ console.log(Math.sumPrecise([1e20, 0.1, -1e20])); // 0.1
 ## See also
 
 - [Polyfill of `Math.sumPrecise` in `core-js`](https://github.com/zloirock/core-js#mathsumprecise)
+- [es-shims polyfill of `Math.sumPrecise`](https://www.npmjs.com/package/math.sumprecise)
 - {{jsxref("Array.prototype.reduce()")}}

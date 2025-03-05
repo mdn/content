@@ -105,4 +105,5 @@ Now this function will do exactly what we intend to, and will not transform `dev
 ## See also
 
 - [Polyfill of `RegExp.escape` in `core-js`](https://github.com/zloirock/core-js#regexp-escaping)
+- [es-shims polyfill of `Reflect.escape`](https://www.npmjs.com/package/regexp.escape)
 - {{jsxref("RegExp")}}

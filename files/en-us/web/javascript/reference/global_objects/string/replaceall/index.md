@@ -116,6 +116,7 @@ This will work:
 ## See also
 
 - [Polyfill of `String.prototype.replaceAll` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [es-shims polyfill of `String.prototype.replaceAll`](https://www.npmjs.com/package/string.prototype.replaceall)
 - [Regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions) guide
 - {{jsxref("String.prototype.replace()")}}
 - {{jsxref("String.prototype.match()")}}

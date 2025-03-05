@@ -68,4 +68,5 @@ A new string containing the specified number of copies of the given string.
 ## See also
 
 - [Polyfill of `String.prototype.repeat` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [es-shims polyfill of `String.prototype.repeat`](https://www.npmjs.com/package/string.prototype.repeat)
 - {{jsxref("String.prototype.concat()")}}

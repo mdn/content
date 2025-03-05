@@ -419,6 +419,7 @@ console.assert(set.size === array.length);
 ## See also
 
 - [Polyfill of `Set` in `core-js`](https://github.com/zloirock/core-js#set)
+- [es-shims polyfill of `Set`](https://www.npmjs.com/package/es-set)
 - {{jsxref("Map")}}
 - {{jsxref("WeakMap")}}
 - {{jsxref("WeakSet")}}
