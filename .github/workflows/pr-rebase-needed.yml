@@ -1,4 +1,4 @@
-name: "PR Needs Rebase"
+name: "PR conflicts"
 
 on:
   push:
@@ -9,8 +9,12 @@ permissions:
   # Label pull requests.
   pull-requests: write
 
+concurrency:
+  group: pr-rebase-needed-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
 jobs:
-  label-rebase-needed:
+  labeler:
     uses: mdn/workflows/.github/workflows/pr-rebase-needed.yml@main
     with:
       target-repo: "mdn/content"
