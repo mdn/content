@@ -6,18 +6,14 @@ page-type: firefox-release-notes
 
 {{FirefoxSidebar}}
 
-This article provides information about the changes in Firefox 136 that affect developers. Firefox 136 is the current [Beta version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#beta) and ships on [March 4, 2025](https://whattrainisitnow.com/release/?version=136).
+This article provides information about the changes in Firefox 136 that affect developers. Firefox 136 was released on [March 4, 2025](https://whattrainisitnow.com/release/?version=136).
 
 ## Changes for web developers
-
-### Developer Tools
 
 ### HTML
 
 - The [`autocorrect`](/en-US/docs/Web/HTML/Global_attributes/autocorrect) global attribute allows autocorrection in editable text elements including: most kinds of text {{htmlelement("input")}} elements, {{htmlelement("textarea")}} elements, and elements that have the [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) attribute set. The specific autocorrection behavior depends on the user agent and underlying OS. ([Firefox bug 1927977](https://bugzil.la/1927977)).
 - The `plaintext-only` value of the [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) global attribute indicates that the element is editable; rich text formatting is disabled and any formatting in pasted text is automatically stripped ([Firefox bug 1922724](https://bugzil.la/1922724)).
-
-#### Removals
 
 ### CSS
 
@@ -25,17 +21,9 @@ This article provides information about the changes in Firefox 136 that affect d
 - The [`:open`](/en-US/docs/Web/CSS/:open) pseudo-class is now supported and allows you to select any element that is currently in an open state, this applies to the {{htmlelement("details")}}, {{htmlelement("dialog")}}, {{htmlelement("input")}} elements with a picker and {{htmlelement("select")}} elements which present a drop-down box. ([Firefox bug 1936113](https://bugzil.la/1936113)).
 - The {{cssxref("gradient")}} CSS functions {{cssxref("linear-gradient")}}, {{cssxref("conic-gradient")}}, and {{cssxref("radial-gradient")}} now allow a single color stop and 0-1 positions. This produces a single solid color and is used in setting the {{cssxref("mask")}} CSS property. ([Firefox bug 1900530](https://bugzil.la/1900530)).
 
-#### Removals
-
 ### JavaScript
 
 - {{jsxref("Intl.DurationFormat")}} is now supported, enabling locale-sensitive formatting of durations. ([Firefox bug 1933303](https://bugzil.la/1933303)).
-
-#### Removals
-
-### SVG
-
-#### Removals
 
 ### HTTP
 
@@ -43,12 +31,6 @@ This article provides information about the changes in Firefox 136 that affect d
   The page refresh may be triggered by the {{httpheader("Refresh")}} response header, or equivalent {{htmlelement("meta")}} in markup (for example `<meta http-equiv="refresh" content="3;url=https://www.mozilla.org" />`).
   Note that same-page refreshes are treated as same-page navigation to a page fragment: since the page isn't re-requested, {{httpheader("Referer")}} isn't sent.
   ([Firefox bug 1928291](https://bugzil.la/1928291))
-
-#### Removals
-
-### Security
-
-#### Removals
 
 ### APIs
 
@@ -63,8 +45,6 @@ This article provides information about the changes in Firefox 136 that affect d
   Note that while any of the supported cookie properties can be [set](/en-US/docs/Web/API/CookieStore/get), the cookie objects returned by the [`get()`](/en-US/docs/Web/API/CookieStore/get) and [`getAll()`](/en-US/docs/Web/API/CookieStore/getAll) methods, and in the `change` event, omit all properties other than `name` and `value` (matching the information returned by the {{domxref("document.cookie")}}).
   The following interfaces and properties are not implemented: [`ServiceWorkerRegistration.cookies`](/en-US/docs/Web/API/ServiceWorkerRegistration/cookies), [`CookieStoreManager`](/en-US/docs/Web/API/CookieStoreManager), and [`ExtendableCookieChangeEvent`](/en-US/docs/Web/API/ExtendableCookieChangeEvent).
 
-#### DOM
-
 #### Media, WebRTC, and Web Audio
 
 - WebRTC can now send and receive video encoded using the [AV1 codec](/en-US/docs/Web/Media/Guides/Formats/WebRTC_codecs#av1_table).
@@ -76,12 +56,6 @@ This article provides information about the changes in Firefox 136 that affect d
 - WebRTC support for the [Dependency Descriptor (DD) RTP Header Extension](/en-US/docs/Web/API/WebRTC_API/Protocols#dependency_descriptor_rtp_header_extension), and its use with AV1, VP8, and VP9 codecs.
   The DD header extension enables codec-independent forwarding of simulcast streams, including in scenarios where the payload is end-to-end encrypted (E2EE).
   ([Firefox bug 1945261](https://bugzil.la/1945261)).
-
-#### Removals
-
-### WebAssembly
-
-#### Removals
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
@@ -105,10 +79,6 @@ This article provides information about the changes in Firefox 136 that affect d
 
 - {{WebExtAPIRef("menus.update")}} and {{WebExtAPIRef("menus.remove")}} and the aliases {{WebExtAPIRef("contextMenus.update")}} and {{WebExtAPIRef("contextMenus.remove")}} now reject with an error when the menu item doesn't exist. Previously, the error was ignored and the promise fulfilled. ([Firefox bug 1688743](https://bugzil.la/1688743)).
 - A new version of the {{WebExtAPIRef("userScripts")}} API is available. This version of the API is for use in Manifest V3 extensions and provides broad compatibility with Chrome, although [permissions mechanisms](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/userScripts#permissions) differ across the browsers. ([Firefox bug 1943050](https://bugzil.la/1943050)).
-
-### Removals
-
-### Other
 
 ## Experimental web features
 
