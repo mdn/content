@@ -18,6 +18,8 @@ This article provides information about the changes in Firefox 137 that affect d
 
 ### CSS
 
+- The {{CSSXRef("hyphenate-limit-chars")}} CSS property provides you with fine-grained control over hyphenation in text. It is used to specify the minimum word length for hyphenation as well as the number of characters before and after the hyphen. ([Firefox bug 1947183](https://bugzil.la/1947183)).
+
 #### Removals
 
 ### JavaScript
