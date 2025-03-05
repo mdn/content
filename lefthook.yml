@@ -43,5 +43,5 @@ post-merge:
         if [ "$BRANCH" != "main" ]; then
           exit 0
         else
-          yarn
+          yarn install
         fi
