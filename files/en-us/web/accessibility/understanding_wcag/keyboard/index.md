@@ -49,7 +49,7 @@ An element is clickable if it has an `onclick` event handler defined. You can ma
 
 ## Interactive elements must be able to be activated using a keyboard
 
-If the user can interact with an element using touch or a pointing device, then the element should also support interacting using the keyboard. That is, if you have defined event handlers for touch or click events, you should also define them for keyboard events. The keyboard event handlers should enable the effectively the same interaction as the touch or click handlers.
+If the user can interact with an element using touch or a pointing device, then the element should also support interacting using the keyboard. That is, if you have defined event handlers for touch or click events, you should also define them for keyboard events. The keyboard event handlers should enable effectively the same interaction as the touch or click handlers.
 
 ### See also
 
