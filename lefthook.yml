@@ -37,7 +37,7 @@ pre-commit:
 
 post-merge:
   commands:
-    yarn-post-merge-main:
+    yarn-install-post-merge-main:
       run: |
         BRANCH="$(git rev-parse --abbrev-ref HEAD)"
         if [ "$BRANCH" != "main" ]; then
