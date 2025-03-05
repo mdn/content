@@ -1,6 +1,6 @@
 ---
 title: CSS Houdini
-slug: Web/CSS/CSS_Houdini
+slug: Web/CSS/CSS_properties_and_values_API/Houdini
 page-type: guide
 status:
   - experimental
