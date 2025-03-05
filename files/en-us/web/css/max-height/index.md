@@ -9,7 +9,42 @@ browser-compat: css.properties.max-height
 
 The **`max-height`** [CSS](/en-US/docs/Web/CSS) property sets the maximum height of an element. It prevents the [used value](/en-US/docs/Web/CSS/CSS_cascade/used_value) of the {{cssxref("height")}} property from becoming larger than the value specified for `max-height`.
 
-{{EmbedInteractiveExample("pages/css/max-height.html")}}
+{{InteractiveExample("CSS Demo: max-height")}}
+
+```css interactive-example-choice
+max-height: 150px;
+```
+
+```css interactive-example-choice
+max-height: 7em;
+```
+
+```css interactive-example-choice
+max-height: 75%;
+```
+
+```css interactive-example-choice
+max-height: 10px;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box where you can change the maximum height. <br />This will limit
+    how tall the box can be, potentially causing an overflow.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  display: flex;
+  flex-direction: column;
+  background-color: #5b6dcd;
+  justify-content: center;
+  color: #ffffff;
+}
+```
 
 `max-height` overrides {{cssxref("height")}}, but {{cssxref("min-height")}} overrides `max-height`.
 

@@ -9,7 +9,34 @@ browser-compat: css.properties.caret-color
 
 The **`caret-color`** [CSS](/en-US/docs/Web/CSS) property sets the color of the **insertion caret**, the visible marker where the next character typed will be inserted. This is sometimes referred to as the **text input cursor**. The caret appears in elements such as {{HTMLElement("input")}} or those with the [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) attribute. The caret is typically a thin vertical line that flashes to help make it more noticeable. By default, it is black, but its color can be altered with this property.
 
-{{EmbedInteractiveExample("pages/css/caret-color.html")}}
+{{InteractiveExample("CSS Demo: caret-color")}}
+
+```css interactive-example-choice
+caret-color: red;
+```
+
+```css interactive-example-choice
+caret-color: auto;
+```
+
+```css interactive-example-choice
+caret-color: transparent;
+```
+
+```html interactive-example
+<section class="default-example container" id="default-example">
+  <div>
+    <p>Enter text in the field to see the caret:</p>
+    <p><input id="example-element" type="text" /></p>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  font-size: 1.2rem;
+}
+```
 
 Note that the insertion caret is only one type of caret. For example, many browsers have a "navigation caret," which acts similarly to an insertion caret but can be moved around in non-editable text. On the other hand, the mouse cursor image shown when hovering over text where the {{cssxref("cursor")}} property is `auto`, or when hovering over an element where the `cursor` property is `text` or `vertical-text`, though it sometimes looks like a caret, is not a caret (it's a cursor).
 
