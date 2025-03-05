@@ -14,38 +14,44 @@ The **Trusted Types API** gives web developers a way to ensure that input has be
 
 Client-side, or DOM-based, XSS attacks happen when data crafted by an attacker is passed to a browser API that executes that data as code. These APIs are known as _injection sinks_.
 
-Examples of injection sinks include:
+The Trusted Types API distinguishes three sorts of injection sinks:
 
-- Functions that insert HTML into the document such as {{domxref("Element.innerHTML")}}.
-- Functions that create a new same-origin {{domxref("Document")}} with caller-controlled markup such as {{domxref("DOMParser.parseFromString()")}}.
-- Functions that execute code such as {{jsxref("Global_Objects/eval", "eval()")}}.
-- Setters for {{domxref("Element")}} attributes that accept a URL of code to load or execute.
+- **HTML sinks**: APIs that interpret their input as HTML, such as {{domxref("Element.innerHTML")}} or {{domxref("Document.write()", "document.write()")}}. These APIs could execute JavaScript if it is embedded in the HTML, for example in {{htmlelement("script")}} tags or event handler attributes.
+- **JavaScript sinks**: APIs that directly execute their input as JavaScript, such as {{jsxref("Global_Objects/eval", "eval()")}} or {{domxref("HTMLScriptElement.text")}}.
+- **JavaScript URL sinks**: APIs that interpret their input as the URL of a script, such as {{domxref("HTMLScriptElement.src")}}.
 
-One of the main defenses against DOM-based XSS attacks is to [sanitize](/en-US/docs/Web/Security/Attacks/XSS#sanitization) data before passing it to an injection sink. The Trusted Types API enables a developer to centralize the sanitization code and to ensure that any data passed to an injection sink has been passed through the sanitization code.
+One of the main defenses against DOM-based XSS attacks is to ensure that input is made safe before being passed to an injection sink.
+
+In the Trusted Types API, a developer defines a _policy object_, which contains methods that transform input bound for an injection sink so as to make it safe. The policy can define different methods for the different types of sink:
+
+- For HTML sinks, the transformation function typically [sanitizes](/en-US/docs/Web/Security/Attacks/XSS#sanitization) the input, for example by using a library like [DOMPurify](https://github.com/cure53/DOMPurify).
+- For JavaScript and JavaScript URL sinks, the policy may turn off the sinks entirely or allow certain predefined inputs (for example, specific URLs).
+
+The Trusted Types API will then ensure that input is passed through the appropriate transformation function before being passed into the sink.
+
+That is, the API enables you to define your policy in one place and then be assured that any data passed to an injection sink has been passed through the policy.
+
+> [!NOTE]
+>
+> The Trusted Types API does _not_ itself supply a policy or any transformation functions: the developer defines their own policy, which contains the transformations that they wish to apply.
 
 The API has two main parts:
 
 - A JavaScript API enables a developer to sanitize data before passing it to an injection sink.
 - Two [CSP](/en-US/docs/Web/HTTP/CSP) directives enforce and control the usage of the JavaScript API.
 
-> [!NOTE]
->
-> The Trusted Types API does _not_ itself include a sanitization function: you supply your own function when you define the `TrustedTypePolicy` that you will use.
->
-> It also doesn't guarantee that the supplied function performs sanitization or even does anything at all: that is the web developer's responsibility.
-
 ### The Trusted Types JavaScript API
 
 In the Trusted Types API:
 
 - The {{domxref("Window.trustedTypes", "trustedTypes")}} global property is used to create {{domxref("TrustedTypePolicy")}} objects.
-- A {{domxref("TrustedTypePolicy")}} object is used to create trusted type objects: it will do this by passing the data through a sanitization function.
-- Trusted type objects represent data that has been sanitized, and can therefore be safely passed to an injection sink. There are three sorts of trusted type, corresponding to different sort of injection sink:
+- A {{domxref("TrustedTypePolicy")}} object is used to create trusted type objects: it will do this by passing the data through a transformation function.
+- Trusted type objects represent data that has been through the policy, and can therefore be safely passed to an injection sink. There are three sorts of trusted type, corresponding to the different sort of injection sink:
   - {{domxref("TrustedHTML")}} is for passing to a sink that will render the data as HTML.
   - {{domxref("TrustedScript")}} is for passing to a sink that will execute the data as JavaScript.
-  - {{domxref("TrustedScriptURL")}} is for passing to a sink that will parse the data as a URL.
+  - {{domxref("TrustedScriptURL")}} is for passing to a sink that will parse the data as a URL to a script.
 
-With this API, instead of passing a string to an injection sink like `innerHTML`, you use a `TrustedTypePolicy` to create a `TrustedHTML` object from the string, then pass that into the sink, and can be sure that the string has been passed through a sanitization function.
+With this API, instead of passing a string to an injection sink like `innerHTML`, you use a `TrustedTypePolicy` to create a `TrustedHTML` object from the string, then pass that into the sink, and can be sure that the string has been passed through a transformation function.
 
 For example, this code creates a `TrustedTypePolicy` that can create `TrustedHTML` objects by sanitizing the input strings with the [DOMPurify](https://github.com/cure53/DOMPurify) library:
 
@@ -58,7 +64,7 @@ const policy = trustedTypes.createPolicy("my-policy", {
 Next, you can use this `policy` object to create a `TrustedHTML` object, and pass that object into the injection sink:
 
 ```js
-const userInput = "I might be XSS";
+const userInput = "<p>I might be XSS</p>";
 const element = document.querySelector("#container");
 
 const trustedHTML = policy.createHTML(userInput);
