@@ -1562,6 +1562,7 @@
         "SVGCursorElement",
         "SVGDefsElement",
         "SVGDescElement",
+        "SVGDiscardElement",
         "SVGElement",
         "SVGEllipseElement",
         "SVGFEBlendElement",

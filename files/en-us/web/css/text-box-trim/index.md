@@ -231,7 +231,7 @@ output {
 }
 ```
 
-Again, note how we've included a top and bottom border on the `.display` paragaph, so that you can see how the space being trimmed changes when different `text-box-*` values are selected.
+Again, note how we've included a top and bottom border on the `.display` paragraph, so that you can see how the space being trimmed changes when different `text-box-*` values are selected.
 
 #### JavaScript
 

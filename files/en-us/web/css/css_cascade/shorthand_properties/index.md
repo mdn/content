@@ -1,6 +1,6 @@
 ---
 title: Shorthand properties
-slug: Web/CSS/Shorthand_properties
+slug: Web/CSS/CSS_cascade/Shorthand_properties
 page-type: guide
 ---
 

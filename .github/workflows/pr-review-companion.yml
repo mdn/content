@@ -120,6 +120,7 @@ jobs:
           destination: "${{ vars.GCP_BUCKET_NAME }}/${{ env.PREFIX }}"
           resumable: false
           concurrency: 500
+          parent: false
           process_gcloudignore: false
 
       - name: Deploy and analyze built content

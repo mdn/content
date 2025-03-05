@@ -162,7 +162,7 @@ sidebar:
   - title: CSSOM_view
     details: closed
     children:
-      - /Web/CSS/CSSOM_View/Coordinate_Systems
+      - /Web/CSS/CSSOM_view/Coordinate_systems
   - title: Display
     details: closed
     children:

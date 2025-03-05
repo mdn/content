@@ -6,7 +6,7 @@ page-type: firefox-release-notes
 
 {{FirefoxSidebar}}
 
-This article provides information about the changes in Firefox 137 that affect developers. Firefox 137 is the current [Nightly version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly) and ships on [April 1, 2025](https://whattrainisitnow.com/release/?version=137).
+This article provides information about the changes in Firefox 137 that affect developers. Firefox 137 is the current [Beta version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#beta) and ships on [April 1, 2025](https://whattrainisitnow.com/release/?version=137).
 
 ## Changes for web developers
 
@@ -22,9 +22,16 @@ This article provides information about the changes in Firefox 137 that affect d
 
 ### JavaScript
 
+- The {{jsxref("Math.sumPrecise()")}} static method is now supported. This takes an [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol) (such as an {{jsxref("Array")}}) of numbers and returns their sum. It is more precise than summing the numbers in a loop because it avoids floating point precision loss in intermediate results. ([Firefox bug 1943120](https://bugzil.la/1943120)).
+
 #### Removals
 
 ### SVG
+
+- The {{svgelement("discard")}} SVG element is now supported, along with its corresponding {{domxref("SVGDiscardElement")}} JavaScript interface.
+  The element allows developers to specify a trigger time or event at which a specified element and its children should be removed from the DOM.
+  An SVG viewer can use this information to conserve memory by discarding elements that are no longer needed, such as animated elements that have completed.
+  ([Firefox bug 1945330](https://bugzil.la/1945330)).
 
 #### Removals
 
@@ -41,6 +48,8 @@ This article provides information about the changes in Firefox 137 that affect d
 #### DOM
 
 #### Media, WebRTC, and Web Audio
+
+- [HEVC (H.265)](/en-US/docs/Web/Media/Guides/Formats/Video_codecs#hevc_h.265) is now hardware enabled on Android, and hardware and software enabled on Linux. This adds to existing hardware and software support on Windows and macOS. ([Firefox bug 1950032](https://bugzil.la/1950032)).
 
 #### Removals
 

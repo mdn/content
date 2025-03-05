@@ -66,7 +66,7 @@ This article provides information about the changes in Firefox 138 that affect d
 
 ## Experimental web features
 
-These features are newly shipped in Firefox 137 but are disabled by default. To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`. You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
+These features are newly shipped in Firefox 138 but are disabled by default. To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`. You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
 
 ## Older versions
 

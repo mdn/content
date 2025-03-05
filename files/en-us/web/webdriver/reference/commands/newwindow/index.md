@@ -2,7 +2,7 @@
 title: New Window
 slug: Web/WebDriver/Reference/Commands/NewWindow
 page-type: webdriver-command
-browser-compat: webdriver.commands.NewWindow
+browser-compat: webdriver.classic.NewWindow
 sidebar: webdriver
 ---
 

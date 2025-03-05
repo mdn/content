@@ -1,6 +1,6 @@
 ---
 title: CSS at-rule functions
-slug: Web/CSS/At-rule-functions
+slug: Web/CSS/CSS_syntax/At-rule_functions
 page-type: guide
 ---
 
@@ -54,3 +54,7 @@ The {{CSSxRef("@container")}} at-rule is used to specify styles for a containmen
 
 - {{CSSxRef("@container", "@container style()")}}
   - : Defines the containment context style.
+
+## See also
+
+- [CSS syntax](/en-US/docs/Web/CSS/CSS_syntax) module

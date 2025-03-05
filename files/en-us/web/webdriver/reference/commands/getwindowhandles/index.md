@@ -2,7 +2,7 @@
 title: Get Window Handles
 slug: Web/WebDriver/Reference/Commands/GetWindowHandles
 page-type: webdriver-command
-browser-compat: webdriver.commands.GetWindowHandles
+browser-compat: webdriver.classic.GetWindowHandles
 sidebar: webdriver
 ---
 

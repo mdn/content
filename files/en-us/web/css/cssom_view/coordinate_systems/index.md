@@ -1,6 +1,6 @@
 ---
 title: Coordinate systems
-slug: Web/CSS/CSSOM_View/Coordinate_Systems
+slug: Web/CSS/CSSOM_view/Coordinate_systems
 page-type: guide
 ---
 
@@ -139,7 +139,7 @@ Here you can see the results in action. As you mouse in and around the blue box,
 
 ## See also
 
-- [Viewport concepts](/en-US/docs/Web/CSS/CSSOM_View/Viewport_Concepts)
+- [Viewport concepts](/en-US/docs/Web/CSS/CSSOM_view/Viewport_concepts)
 - [Using CSS transforms](/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms): how to alter a coordinate system
 - Coordinates of a {{domxref("MouseEvent")}}:
 
