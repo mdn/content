@@ -75803,21 +75803,6 @@
       "BijuGC"
     ]
   },
-  "Web/CSS/CSSOM_view/Viewport_concepts": {
-    "modified": "2020-11-20T07:41:38.029Z",
-    "contributors": [
-      "in43sh",
-      "PerfectVirgo",
-      "Wryhder",
-      "mfuji09",
-      "bagaffey",
-      "sivabalan02",
-      "syntaxval",
-      "chrisdavidmills",
-      "estelle",
-      "ExE-Boss"
-    ]
-  },
   "Web/CSS/CSSOM_view": {
     "modified": "2020-10-15T21:38:34.242Z",
     "contributors": [
@@ -75832,6 +75817,21 @@
   "Web/CSS/CSSOM_view/Coordinate_systems": {
     "modified": "2020-04-27T22:32:23.815Z",
     "contributors": ["chrisn", "mfluehr", "JohannesCleve", "Sheppy"]
+  },
+  "Web/CSS/CSSOM_view/Viewport_concepts": {
+    "modified": "2020-11-20T07:41:38.029Z",
+    "contributors": [
+      "in43sh",
+      "PerfectVirgo",
+      "Wryhder",
+      "mfuji09",
+      "bagaffey",
+      "sivabalan02",
+      "syntaxval",
+      "chrisdavidmills",
+      "estelle",
+      "ExE-Boss"
+    ]
   },
   "Web/CSS/CSS_Flexible_Box_Layout/Controlling_ratios_of_flex_items_along_main_axis": {
     "modified": "2020-06-24T00:31:19.661Z",
@@ -76079,6 +76079,16 @@
       "Sheppy",
       "Richienb",
       "mfluehr"
+    ]
+  },
+  "Web/CSS/CSS_backgrounds_and_borders/Scaling_of_SVG_backgrounds": {
+    "modified": "2020-04-27T22:34:13.651Z",
+    "contributors": [
+      "codejockie",
+      "mfluehr",
+      "C.Bertolini",
+      "kscarfone",
+      "Sheppy"
     ]
   },
   "Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds": {
@@ -78632,16 +78642,6 @@
       "peb",
       "ethertank",
       "teoli"
-    ]
-  },
-  "Web/CSS/Scaling_of_SVG_backgrounds": {
-    "modified": "2020-04-27T22:34:13.651Z",
-    "contributors": [
-      "codejockie",
-      "mfluehr",
-      "C.Bertolini",
-      "kscarfone",
-      "Sheppy"
     ]
   },
   "Web/CSS/Selector_list": {
