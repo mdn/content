@@ -167,6 +167,13 @@ For more information, refer to the [CORS documentation](/en-US/docs/Web/HTTP/COR
 - {{HTTPHeader("Content-Location")}}
   - : Indicates an alternate location for the returned data.
 
+## Preference
+
+- {{HTTPHeader("Prefer")}}
+  - : Indicates preferences for specific server behaviors during request processing. For example, it can request minimal response content (`return=minimal`) or asynchronous processing (`respond-async`). The server processes the request normally if the header is unsupported.
+- {{HTTPHeader("Preference-Applied")}}
+  - : Informs the client which preferences specified in the `Prefer` header were applied by the server. It is a response-only header providing transparency about preference handling.
+
 ## Proxies
 
 - {{HTTPHeader("Forwarded")}}
