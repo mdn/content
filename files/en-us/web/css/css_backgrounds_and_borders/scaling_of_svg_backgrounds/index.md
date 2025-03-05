@@ -407,11 +407,11 @@ If {{ cssxref("background-size") }} is set to `auto` or `auto auto`, rule 2 says
 
 When auto-sizing background images with no intrinsic ratio or dimensions specified, rule 4 takes effect, and the image is rendered to fill the background area.
 
-```html hidden live-sample___bothauto1
+```html hidden live-sample___both-auto1
 <div></div>
 ```
 
-```css hidden live-sample___bothauto1
+```css hidden live-sample___both-auto1
 div {
   width: 300px;
   height: 200px;
@@ -420,24 +420,24 @@ div {
 }
 ```
 
-```css live-sample___bothauto1
+```css live-sample___both-auto1
 div {
   background-image: url(no-dimensions-or-ratio.svg);
   background-size: auto auto;
 }
 ```
 
-{{ EmbedLiveSample('bothauto1', 200, 230) }}
+{{ EmbedLiveSample('both-auto1', 200, 230) }}
 
 #### One dimension and no intrinsic ratio
 
 If no intrinsic ratio is specified, but at least one dimension is specified, rule 3 takes effect, and we render the image obeying those dimensions.
 
-```html hidden live-sample___bothauto2
+```html hidden live-sample___both-auto2
 <div></div>
 ```
 
-```css hidden live-sample___bothauto2
+```css hidden live-sample___both-auto2
 div {
   width: 300px;
   height: 200px;
@@ -446,14 +446,14 @@ div {
 }
 ```
 
-```css live-sample___bothauto2
+```css live-sample___both-auto2
 div {
   background-image: url(100px-wide-no-height-or-ratio.svg);
   background-size: auto auto;
 }
 ```
 
-{{ EmbedLiveSample('bothauto2', 200, 230) }}
+{{ EmbedLiveSample('both-auto2', 200, 230) }}
 
 Note here that the width, which is specified in the source SVG at 100 pixels, is obeyed, while the height fills the background area since it's not specified (either explicitly or by an intrinsic ratio).
 
@@ -461,11 +461,11 @@ Note here that the width, which is specified in the source SVG at 100 pixels, is
 
 If we have an intrinsic ratio with a fixed dimension, that fixes both dimensions in place. As previously mentioned, knowing one dimension and a ratio is the same as specifying both dimensions explicitly.
 
-```html hidden live-sample___bothauto3
+```html hidden live-sample___both-auto3
 <div></div>
 ```
 
-```css hidden live-sample___bothauto3
+```css hidden live-sample___both-auto3
 div {
   width: 300px;
   height: 200px;
@@ -474,14 +474,14 @@ div {
 }
 ```
 
-```css live-sample___bothauto3
+```css live-sample___both-auto3
 div {
   background-image: url(100px-height-3x4-ratio.svg);
   background-size: auto auto;
 }
 ```
 
-{{ EmbedLiveSample('bothauto3', 200, 230) }}
+{{ EmbedLiveSample('both-auto3', 200, 230) }}
 
 Since this image has an explicit height of `100px`. With the 3:4 ratio set in the SVG, in the case of `auto`, the image's width is 75 pixels.
 
@@ -489,11 +489,11 @@ Since this image has an explicit height of `100px`. With the 3:4 ratio set in th
 
 When an intrinsic ratio is specified, but no dimensions, rule 4 is applied — except that rule 2 also applies. The image is therefore rendered just like for the `contain` case.
 
-```html hidden live-sample___bothauto4
+```html hidden live-sample___both-auto4
 <div></div>
 ```
 
-```css hidden live-sample___bothauto4
+```css hidden live-sample___both-auto4
 div {
   width: 300px;
   height: 200px;
@@ -502,14 +502,14 @@ div {
 }
 ```
 
-```css live-sample___bothauto4
+```css live-sample___both-auto4
 div {
   background-image: url(no-dimensions-1x1-ratio.svg);
   background-size: auto auto;
 }
 ```
 
-{{ EmbedLiveSample('bothauto4', 200, 230) }}
+{{ EmbedLiveSample('both-auto4', 200, 230) }}
 
 ### Using "auto" and one specific length
 
