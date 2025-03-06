@@ -79,13 +79,57 @@ In order to enforce that a trusted type must always be passed, you include the {
 With this directive set, passing strings into injection sinks will result in a `TypeError` exception:
 
 ```js example-bad
-const userInput = "I might be XSS";
+const userInput = "<p>I might be XSS</p>";
 const element = document.querySelector("#container");
 
 element.innerHTML = userInput; // Throws a TypeError
 ```
 
 Additionally, the {{CSP("trusted-types")}} CSP directive can be used to control which policies your code is allowed to create. When you create a policy using {{domxref("TrustedTypePolicyFactory/createPolicy", "trustedTypes.createPolicy()")}}, you pass a name for the policy. The `trusted-types` CSP directive lists acceptable policy names, so `createPolicy()` will throw an exception if it is passed a name which was not listed in `trusted-types`. This prevents some code in your web application from creating a policy that you were not expecting.
+
+### The default policy
+
+If you create a policy named `"default"`, and your CSP enforces the use of trusted types, then any string argument passed into injection sinks will be automatically passed to this policy. For example, suppose we create a policy like this:
+
+```js
+trustedTypes.createPolicy("default", {
+  createHTML: (value) => {
+    console.log("Please refactor this code");
+    return sanitize(value);
+  },
+});
+```
+
+With this policy, if your code assigns a string to `innerHTML`, the browser will call the policy's `createHTML()` method and assign its result to the sink:
+
+```js
+const userInput = "<p>I might be XSS</p>";
+const element = document.querySelector("#container");
+
+element.innerHTML = userInput;
+// Logs "Please refactor this code"
+// Assigns the result of sanitize(userInput)
+```
+
+If the default policy returned `null` or `undefined`, then the browser will throw a `TypeError` when assigning the result to the sink:
+
+```js
+trustedTypes.createPolicy("default", {
+  createHTML: (value) => {
+    console.log("Please refactor this code");
+    return null;
+  },
+});
+
+const userInput = "<p>I might be XSS</p>";
+const element = document.querySelector("#container");
+
+element.innerHTML = userInput;
+// Logs "Please refactor this code"
+// Throws a TypeError
+```
+
+It's recommended that you use the default policy only to transition from legacy code that passes input directly to injection sinks. That is, it helps you discover the places in your code where you're using injection sinks directly, so you can rerwite the code to create and pass trusted types instead.
 
 ### Cross-browser support for trusted types
 

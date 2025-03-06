@@ -10,16 +10,6 @@ browser-compat: api.TrustedTypePolicyFactory.createPolicy
 
 The **`createPolicy()`** method of the {{domxref("TrustedTypePolicyFactory")}} interface creates a {{domxref("TrustedTypePolicy")}} object that implements the rules passed as `policyOptions`.
 
-### The default policy
-
-In Chrome a policy with a name of "default" creates a special policy that will be used if a string (rather than a Trusted Type object) is passed to an injection sink. This can be used in a transitional phase while moving from an application that inserted strings into injection sinks.
-
-> [!NOTE]
-> The above behavior is not yet settled in the specification and may change in future.
-
-> [!WARNING]
-> A lax default policy could defeat the purpose of using Trusted Types, and therefore should be defined with strict rules to ensure it cannot be used to run dangerous code.
-
 ## Syntax
 
 ```js-nolint
