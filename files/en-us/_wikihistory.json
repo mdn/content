@@ -77613,26 +77613,7 @@
       "teoli"
     ]
   },
-  "Web/CSS/CSS_positioned_layout/Understanding_z-index": {
-    "modified": "2020-08-24T12:47:16.738Z",
-    "contributors": [
-      "mfuji09",
-      "mfluehr",
-      "teoli",
-      "Jeremie",
-      "kscarfone",
-      "Sheppy",
-      "tregagnon",
-      "Jürgen Jeka",
-      "Fredchat",
-      "Dria",
-      "Nickolay",
-      "bradipao",
-      "Rod Whiteley",
-      "Wladimir_Palant"
-    ]
-  },
-  "Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context": {
+  "Web/CSS/CSS_positioned_layout/Stacking_context": {
     "modified": "2020-08-24T11:51:33.626Z",
     "contributors": [
       "mfuji09",
@@ -77683,7 +77664,7 @@
       "bradipao"
     ]
   },
-  "Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_1": {
+  "Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_1": {
     "modified": "2020-08-24T12:16:56.733Z",
     "contributors": [
       "mfuji09",
@@ -77701,7 +77682,7 @@
       "bradipao"
     ]
   },
-  "Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_2": {
+  "Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_2": {
     "modified": "2020-08-24T12:22:25.104Z",
     "contributors": [
       "mfuji09",
@@ -77720,7 +77701,7 @@
       "bradipao"
     ]
   },
-  "Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_3": {
+  "Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_3": {
     "modified": "2020-08-24T12:36:52.767Z",
     "contributors": [
       "mfuji09",
@@ -77742,7 +77723,7 @@
       "bradipao"
     ]
   },
-  "Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_floating_elements": {
+  "Web/CSS/CSS_positioned_layout/Stacking_floating_elements": {
     "modified": "2020-09-10T08:45:49.713Z",
     "contributors": [
       "hata6502",
@@ -77763,7 +77744,7 @@
       "bradipao"
     ]
   },
-  "Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_without_z-index": {
+  "Web/CSS/CSS_positioned_layout/Stacking_without_z-index": {
     "modified": "2020-08-24T11:01:07.302Z",
     "contributors": [
       "mfuji09",
@@ -77789,7 +77770,26 @@
       "bradipao"
     ]
   },
-  "Web/CSS/CSS_positioned_layout/Understanding_z-index/Using_z-index": {
+  "Web/CSS/CSS_positioned_layout/Understanding_z-index": {
+    "modified": "2020-08-24T12:47:16.738Z",
+    "contributors": [
+      "mfuji09",
+      "mfluehr",
+      "teoli",
+      "Jeremie",
+      "kscarfone",
+      "Sheppy",
+      "tregagnon",
+      "Jürgen Jeka",
+      "Fredchat",
+      "Dria",
+      "Nickolay",
+      "bradipao",
+      "Rod Whiteley",
+      "Wladimir_Palant"
+    ]
+  },
+  "Web/CSS/CSS_positioned_layout/Using_z-index": {
     "modified": "2020-08-24T11:23:24.372Z",
     "contributors": [
       "mfuji09",

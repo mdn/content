@@ -263,7 +263,7 @@ p {
 - [Layout modes](/en-US/docs/Web/CSS/Layout_mode)
 - [Visual formatting models](/en-US/docs/Web/CSS/Visual_formatting_model)
 - [Block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context)
-- [Stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)
+- [Stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context)
 - [Margin collapsing](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
 - [Initial](/en-US/docs/Web/CSS/CSS_cascade/initial_value), [computed](/en-US/docs/Web/CSS/CSS_cascade/computed_value), [used](/en-US/docs/Web/CSS/CSS_cascade/used_value), and [actual](/en-US/docs/Web/CSS/CSS_cascade/actual_value) values
 - [Replaced elements](/en-US/docs/Web/CSS/Replaced_element)
