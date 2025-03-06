@@ -9,7 +9,40 @@ browser-compat: css.selectors.valid
 
 The **`:valid`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents any {{HTMLElement("input")}} or other {{HTMLElement("form")}} element whose contents [validate](/en-US/docs/Web/HTML/Constraint_validation) successfully. This allows to easily make valid fields adopt an appearance that helps the user confirm that their data is formatted properly.
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-class-valid.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: :valid", "tabbed-shorter")}}
+
+```css interactive-example
+label {
+  display: block;
+  margin-top: 1em;
+}
+
+input:valid {
+  background-color: ivory;
+  border: none;
+  outline: 2px solid deepskyblue;
+  border-radius: 5px;
+  accent-color: gold;
+}
+```
+
+```html interactive-example
+<form>
+  <label for="email">Email Address:</label>
+  <input id="email" name="email" type="email" value="na@me@example.com" />
+
+  <label for="secret">Secret Code: (lower case letters)</label>
+  <input id="secret" name="secret" type="text" value="test" pattern="[a-z]+" />
+
+  <label for="age">Your age: (18+)</label>
+  <input id="age" name="age" type="number" value="5" min="18" />
+
+  <label
+    ><input name="tos" type="checkbox" required checked /> - Do you agree to
+    ToS?</label
+  >
+</form>
+```
 
 This pseudo-class is useful for highlighting correct fields for the user.
 

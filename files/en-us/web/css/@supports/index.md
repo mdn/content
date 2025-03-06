@@ -11,7 +11,35 @@ The **`@supports`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/CSS
 Using this at-rule is commonly called a _feature query_.
 The rule must be placed at the top level of your code or nested inside any other conditional group at-rule.
 
-{{EmbedInteractiveExample("pages/tabbed/at-rule-supports.html", "tabbed-standard")}}
+{{InteractiveExample("CSS Demo: @supports", "tabbed-standard")}}
+
+```css interactive-example
+.flex-container > * {
+  padding: 0.3em;
+  list-style-type: none;
+  text-shadow: 0 0 2px red;
+  float: left;
+}
+
+@supports (display: flex) {
+  .flex-container > * {
+    text-shadow: 0 0 2px blue;
+    float: none;
+  }
+
+  .flex-container {
+    display: flex;
+  }
+}
+```
+
+```html interactive-example
+<ul class="flex-container">
+  <li><a href="#">Index</a></li>
+  <li><a href="#">About me</a></li>
+  <li><a href="#">Contact</a></li>
+</ul>
+```
 
 In JavaScript, `@supports` can be accessed via the CSS object model interface {{DOMxRef("CSSSupportsRule")}}.
 
@@ -290,4 +318,6 @@ The following example applies the CSS style if the browser supports the `woff2` 
 ## See also
 
 - [Using feature queries](/en-US/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries)
-- The CSSOM class {{DOMxRef("CSSSupportsRule")}}, and the {{DOMxref("CSS.supports_static", "CSS.supports()")}} method that allows the same check to be performed via JavaScript.
+- [CSS at-rule functions](/en-US/docs/Web/CSS/CSS_syntax/At-rule_functions)
+- {{DOMxRef("CSSSupportsRule")}}
+- {{DOMxref("CSS.supports_static", "CSS.supports()")}} method

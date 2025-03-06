@@ -11,7 +11,32 @@ The **`content`** [CSS](/en-US/docs/Web/CSS) property replaces content with a ge
 
 Objects inserted using the `content` property are **anonymous [replaced elements](/en-US/docs/Web/CSS/Replaced_element)**.
 
-{{EmbedInteractiveExample("pages/tabbed/content.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: content", "tabbed-shorter")}}
+
+```css interactive-example
+.topic-games::before {
+  content: "🎮 ";
+}
+
+.topic-weather::before {
+  content: "⛅ ";
+}
+
+.topic-hot::before {
+  content: url("/shared-assets/images/examples/fire.png");
+  margin-right: 6px;
+}
+```
+
+```html interactive-example
+<p class="topic-games">Game News: A new inFamous is not planned</p>
+
+<p class="topic-weather">
+  Weather for Today: Heat, violent storms and twisters
+</p>
+
+<p class="topic-hot">Trending Article: Must-watch videos of the week</p>
+```
 
 ## Syntax
 

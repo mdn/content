@@ -2,7 +2,7 @@
 title: Set Window Rect
 slug: Web/WebDriver/Reference/Commands/SetWindowRect
 page-type: webdriver-command
-browser-compat: webdriver.commands.SetWindowRect
+browser-compat: webdriver.classic.SetWindowRect
 sidebar: webdriver
 ---
 

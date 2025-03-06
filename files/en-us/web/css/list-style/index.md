@@ -7,7 +7,7 @@ browser-compat: css.properties.list-style
 
 {{CSSRef}}
 
-The **`list-style`** CSS [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) allows you to set all the list style properties at once.
+The **`list-style`** CSS [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) allows you to set all the list style properties at once.
 
 {{EmbedInteractiveExample("pages/css/list-style.html")}}
 

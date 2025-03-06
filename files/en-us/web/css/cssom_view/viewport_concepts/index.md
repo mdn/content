@@ -1,18 +1,18 @@
 ---
 title: Viewport concepts
-slug: Web/CSS/Viewport_concepts
+slug: Web/CSS/CSSOM_view/Viewport_concepts
 page-type: guide
 ---
 
 {{CSSRef}}
 
-This article explains the concept of the viewport — what it is, its impact in terms of CSS, SVG, and mobile devices — and differentiates between the visual viewport and the layout viewport.
+This article explains the concept of the {{glossary("viewport")}} — what it is, its impact in terms of CSS, SVG, and mobile devices — and differentiates between the {{glossary("visual viewport")}} and the {{glossary("layout viewport")}}.
 
 ## What is a viewport?
 
 A viewport represents the area in computer graphics being currently viewed. In web browser terms, it is generally the same as the browser window, excluding the UI, menu bar, etc. That is the part of the document you are viewing.
 
-Documents like this article may be very long. Your viewport is everything that is currently visible, notably, the "what is a viewport" section, and perhaps some of the navigation menu. The size of the viewport depends on the size of the screen, whether the browser is in fullscreen mode or not, and whether or not the user zoomed in. Content outside the viewport, such as the _See Also_ section in this document, is likely to not be visible onscreen until scrolled into view.
+Documents, like this article, may be very long. Your viewport is everything that is currently visible; notably, the "what is a viewport" section, and perhaps some of the navigation menu. The size of the viewport depends on the size of the screen, whether the browser is in fullscreen mode or not, and whether or not the browser is zoomed in. Content outside the viewport, such as the _See Also_ section in this document, is likely to not be visible onscreen until scrolled into view.
 
 - On larger monitors where applications aren't necessarily full screen, the viewport is the size of the browser window.
 - On most mobile devices and when the browser is in fullscreen mode, the viewport is the entire screen.
@@ -44,9 +44,9 @@ There are several DOM properties that can help you query viewport size, and othe
 
 In an experiment with these, the `innerWidth` and `outerWidth` was seen to be the same, but the `outerHeight` was 100px taller than the `innerHeight`. This is because the `outerHeight` includes the browser chrome: measurements were taken on a browser with an address bar and bookmarks bar totalling 100px in height, but no chrome on the left or right of the window.
 
-The area within the `innerHeight` and `innerWidth` is generally considered the **layout viewport**. The browser chrome is not considered part of the viewport.
+The area within the `innerHeight` and `innerWidth` is generally considered the **{{glossary("layout viewport")}}**. The browser chrome is not considered part of the viewport.
 
-When zoomed in, both Firefox and Chrome report the new CSS pixel size for `innerWidth` and `clientWidth`. The values returned for the `outerWidth` and `outerHeight` depend on the browser: Firefox reports the new value in CSS pixels, but Chrome returns the length in the default pixel size. When zoomed in you may get:
+When zoomed in, both Firefox and Chrome report the new {{glossary("CSS pixel")}} size for `innerWidth` and `clientWidth`. The values returned for the `outerWidth` and `outerHeight` depend on the browser: Firefox reports the new value in CSS pixels, but Chrome returns the length in the default pixel size. When zoomed in you may get:
 
 ```js
 document.documentElement.clientWidth; /* 800 */
@@ -75,9 +75,11 @@ body > footer {
 
 We got the 800 x 533 measurement when we zoomed in using the keyboard. The header and footer stayed flush against the top and bottom of the window. But what if we had pinched-zoomed on a tablet? What if a dynamic keyboard pops open on a phone?
 
+### Layout and visual viewports
+
 The web contains two viewports, the **layout viewport** and the **visual viewport**. The visual viewport is the part of the web page that is currently visible in the browser and can change. When the user pinch-zooms the page, pops open a dynamic keyboard, or when a previously hidden address bar becomes visible, the visual viewport shrinks but the layout viewport is unchanged.
 
-Sticky headers or footers, as discussed above, stick to the top and bottom of the _layout viewport_, and therefore remain in view when we zoom in with the keyboard. If you pinch-zoom, the layout viewport may not be fully visible. If you magnify from the middle of the layout viewport, the content will expand in all four directions. If you have a sticky header or footer, they will still be stuck to the top or bottom of the layout viewport, but they may not be visible at the top and bottom of the device's screen — which is the visual viewport. The visual viewport is the currently visible portion of the layout viewport. If you scroll down, you are changing the contents of the visual viewport and bringing the bottom of the layout viewport into view, displaying the sticky footer, which will then stay stuck at the bottom.
+[Fixed](/en-US/docs/Web/CSS/position#fixed_positioning) sticky headers or footers, as discussed above, stick to the top and bottom of the _layout viewport_, and therefore remain in view when we zoom in with the keyboard. If you pinch-zoom, the layout viewport may not be fully visible. If you magnify from the middle of the layout viewport, the content will expand in all four directions. If you have a sticky header or footer, they will still be stuck to the top or bottom of the layout viewport, but they may not be visible at the top and bottom of the device's screen — which is the visual viewport. The visual viewport is the currently visible portion of the layout viewport. If you scroll down, you are changing the contents of the visual viewport and bringing the bottom of the layout viewport into view, displaying the sticky footer, which will then stay stuck at the bottom.
 
 The visual viewport is the visual portion of a screen not including on-screen keyboards, areas outside of a pinch-zoom area, or other feature that doesn't scale with the dimensions of a page. The visual viewport is the same size as the layout viewport or smaller.
 
@@ -87,13 +89,13 @@ For a page containing iframes, objects, or external SVG, both the containing pag
 
 The layout viewport and visual viewport described above are not the only viewports you will encounter. Any sub-viewport that is fully or partially displayed within the layout viewport is considered a visual viewport.
 
-We generally think of width and height media queries as being relative to the width and height of the browser window. They are actually relative to the viewport, which is the window in the main document but is the intrinsic size of the element's parent in a nested browsing context like objects, iframes and SVG. In CSS, we also have length units based on the viewport size. A `vh` unit is 1% of the layout viewport's height. Similarly, the `vw` unit is 1% of the layout viewport's width.
+We generally think of [`width`](/en-US/docs/Web/CSS/@media/width) and [`height`](/en-US/docs/Web/CSS/@media/height) media queries as being relative to the width and height of the browser window. They are actually relative to the viewport, which is the window in the main document but is the intrinsic size of the element's parent in a nested browsing context like objects, iframes and SVG. In CSS, we also have [length units based on the viewport size](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#viewport_units). A `vh` unit is 1% of the layout viewport's height. Similarly, the `vw` unit is 1% of the layout viewport's width.
 
 #### `<iframe>`
 
-Inside an iframe, the visual viewport is the size of the inner width and height of the iframe, rather than the parent document. You can set any height and width on an iframe, but the whole document may not be visible.
+Inside an {{htmlelement("iframe")}}, the visual viewport is the size of the inner width and height of the iframe, rather than the parent document. You can set any height and width on an iframe, but the whole document may not be visible.
 
-If you use viewport length units in your CSS within the iframe document, `1vh` will be 1% of the height of the iframe, and `1vw` will be 1% of the width of the document.
+If you use [viewport length units](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#viewport_units) in your CSS within the iframe document, `1vh` will be 1% of the height of the iframe, and `1vw` will be 1% of the width of the document.
 
 ```css
 iframe {
@@ -117,7 +119,7 @@ If the above CSS is included in the iframe, the paragraphs will become red when 
 
 #### SVG
 
-In an SVG document, the viewport is the visible area of the SVG image. You can set any height and width on an SVG, but the whole image might not be visible. The area that is visible is called the viewport. The size of the viewport can be defined using the width and height attributes of the {{SVGElement("svg")}} element.
+In an [SVG](/en-US/docs/Web/SVG/) document, the viewport is the visible area of the SVG image. You can set any height and width on an {{htmlelement("SVG")}}, but the whole image might not be visible. The area that is visible is called the viewport. The size of the viewport can be defined using the width and height attributes of the {{SVGElement("svg")}} element.
 
 ```html
 <svg height="300" width="400"></svg>
@@ -125,7 +127,7 @@ In an SVG document, the viewport is the visible area of the SVG image. You can s
 
 In this example, the viewport has an {{glossary("aspect ratio")}} of 3:4 and is, by default, 400 by 300 units, with a unit generally being a CSS pixel.
 
-SVG also has an internal coordinate system defined via the [viewBox](/en-US/docs/Web/SVG/Attribute/viewBox) attribute, which is not related to this viewport discussion.
+SVG also has an internal [coordinate system](/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems) defined via the [viewBox](/en-US/docs/Web/SVG/Attribute/viewBox) attribute, which is not related to this viewport discussion.
 
 If you include an SVG file in your HTML, the viewport of the SVG is the initial containing block, or the width and height of the SVG container. Using the {{CSSxRef("@media")}} query in your SVG's CSS is relative to that container, not the browser.
 
@@ -135,7 +137,7 @@ If you include an SVG file in your HTML, the viewport of the SVG is the initial 
 }
 ```
 
-Generally, when you write the above media query, the styles are applied if the viewport, generally the browser window, is between 400px and 500px, inclusive. The width media query in the SVG is based on the element in which the SVG is contained — the {{htmlelement("img")}} if the source is an SVG file, the SVG itself if the SVG is included directly into the HTML, or the parent if the parent element has a width assigned and — not the viewport's width. With the above media query being in our SVG file, the CSS is applied if the SVG container is between 400 and 500px.
+Generally, when you write the above media query, the styles are applied if the viewport, generally the browser window, is between 400px and 500px, inclusive. The width media query in the SVG is based on the element in which the SVG is contained — the {{htmlelement("img")}} if the source is an SVG file, the SVG itself if the SVG is included directly into the HTML, or the parent if the parent element has a width assigned and — not the viewport's width. With the above media query being in our SVG file, the CSS is applied if the SVG container is between 400px and 500px.
 
 ### JavaScript
 
@@ -153,6 +155,7 @@ The `width` property controls the size of the viewport. It should preferably be 
 
 ## See also
 
+- [CSSOM view](/en-US/docs/Web/CSS/CSSOM_view) module
 - [Visual Viewport API](/en-US/docs/Web/API/Visual_Viewport_API)
 - {{HTMLElement("meta")}}, specifically `<meta name="viewport">`
 - [Using the viewport meta tag to control layout on mobile browsers](/en-US/docs/Web/HTML/Viewport_meta_tag)

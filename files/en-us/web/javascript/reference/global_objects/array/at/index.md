@@ -122,6 +122,7 @@ console.log(Array.prototype.at.call(arrayLike, 2)); // undefined
 ## See also
 
 - [Polyfill of `Array.prototype.at` in `core-js`](https://github.com/zloirock/core-js#relative-indexing-method)
+- [es-shims polyfill of `Array.prototype.at`](https://www.npmjs.com/package/array.prototype.at)
 - [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.findIndex()")}}

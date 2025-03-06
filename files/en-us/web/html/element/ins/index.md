@@ -16,7 +16,7 @@ The **`<ins>`** [HTML](/en-US/docs/Web/HTML) element represents a range of text 
 <del>
   <p>&ldquo;I apologize for the delay.&rdquo;</p>
 </del>
-<ins cite="../howtobeawizard.html" datetime="2018-05">
+<ins cite="../how-to-be-a-wizard.html" datetime="2018-05">
   <p>&ldquo;A wizard is never late &hellip;&rdquo;</p>
 </ins>
 ```

@@ -14,6 +14,8 @@ The **`spellcheck`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) 
 
 {{InteractiveExample("HTML Demo: spellcheck", "tabbed-shorter")}}
 
+<!-- cSpell:ignore exampull checkd spellung -->
+
 ```html interactive-example
 <textarea spellcheck="true">
 This exampull will be checkd fur spellung when you try to edit it.</textarea
