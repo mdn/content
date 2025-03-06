@@ -17,7 +17,7 @@ Container queries are similar to [media queries](/en-US/docs/Web/CSS/CSS_media_q
 }
 ```
 
-There are three types of container queries: _container size queries_ and _container style queries_:
+There are three types of container queries:
 
 - **Container size queries**
 

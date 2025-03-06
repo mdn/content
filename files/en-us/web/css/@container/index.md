@@ -275,7 +275,7 @@ Supported keywords for scroll-state container descriptors include physical and {
     - `inline-end`
       - : The container is stuck to the inline-end edge of its container.
 
-    To evaluate a container with a `stuck` scroll-state query, it must have `position: sticky` set on it, and be inside a scroll container. If the test passes, the rules inside the `@container` block are applied to descendants of the `position: sticky` container.
+    To evaluate a container with a non-`none` `stuck` scroll-state query, it must have `position: sticky` set on it, and be inside a scroll container. If the test passes, the rules inside the `@container` block are applied to descendants of the `position: sticky` container.
 
     It is possible for two values from opposite axes to match at the same time:
 

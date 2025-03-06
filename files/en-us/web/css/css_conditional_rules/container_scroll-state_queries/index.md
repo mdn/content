@@ -336,7 +336,7 @@ In this example, we'll look at a scroll snap container with children that snap t
 
 ### HTML
 
-The HTML consists of a {{htmlelement("main")}} element that will be the scroll snap container, inside which are several {{htmlelement("section")}} elements that will be the snap targets. Because container queries enable styling a container's descendants, not the container itself, each `<section>` contains a wrapper {{htmlelement("div")}} to target with the container query style, along with a heading.
+The HTML consists of a {{htmlelement("main")}} element that will be a scroll snap container. Inside are several {{htmlelement("section")}} elements that will be snap targets. Each `<section>` contains a wrapper {{htmlelement("div")}} and an `<h2>` [heading](/en-US/docs/Web/HTML/Element/Heading_Elements). The wrappers are included to create a style target as container queries enable styling a container's descendants, not the container itself.
 
 ```html
 <main>
@@ -474,7 +474,7 @@ main {
 }
 ```
 
-The `<section>` elements are designated as snap targets by setting a {{cssxref("scroll-snap-align")}} value of `center`, which means that they will snap to their container at their center point.
+The `<section>` elements are designated as snap targets by setting a non-`none` {{cssxref("scroll-snap-align")}} value. The `center` value means that they will snap to the container at their center points.
 
 ```css live-sample___snapped
 section {
@@ -540,7 +540,7 @@ The rendered result is shown below. Try scrolling the container up and down, and
 
 ## Using `stuck` queries
 
-Scroll-state [`stuck`](/en-US/docs/Web/CSS/@container#scrollable) queries, written as `scroll-state(stuck: value)`, test whether a container with a {{cssxref("position")}} value of `sticky` is stuck to an edge of its scroll container ancestor. If not, the query returns false. To evaluate a container with a `stuck` scroll-state query, it must have `position: sticky` set on it and be inside a scroll container.
+Scroll-state [`stuck`](/en-US/docs/Web/CSS/@container#scrollable) queries, written as `scroll-state(stuck: value)`, test whether a container with a {{cssxref("position")}} value of `sticky` is stuck to an edge of its scroll container ancestor. If not, the query returns false.
 
 The `value` in this case indicates the scroll container edge you are testing, for example:
 

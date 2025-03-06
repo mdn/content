@@ -22,6 +22,10 @@ An element can be established as a query container using the **`container-type`*
 container-type: normal;
 container-type: size;
 container-type: inline-size;
+container-type: scroll-state;
+
+/* Two values */
+container-type: size scroll-state;
 
 /* Global Values */
 container-type: inherit;
@@ -32,6 +36,8 @@ container-type: unset;
 ```
 
 ### Values
+
+The `container-type` property can take a single value from the list below, or two values — one of which must be `scroll-state` and the other can be `inline-size` or `size`. In other words, an element an be established as a size query container, a scroll-state query container, both, or neither.
 
 - `inline-size`
 
@@ -67,7 +73,7 @@ container-type: unset;
 
 Container queries allow you to selectively apply styles inside a container based on conditional queries performed on the container. The {{cssxref("@container")}} at-rule is used to specify the tests performed on a container, and the rules that will apply to the container's contents if the query returns `true`.
 
-The container query tests are only performed on elements with a `container-type` property, which defines the elements as a size or scroll-state container.
+The container query tests are only performed on elements with a `container-type` property, which defines the elements as a size or scroll-state container, or both.
 
 ### Container size queries
 
