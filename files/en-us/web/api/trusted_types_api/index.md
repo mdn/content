@@ -17,7 +17,7 @@ Client-side, or DOM-based, XSS attacks happen when data crafted by an attacker i
 The Trusted Types API distinguishes three sorts of injection sinks:
 
 - **HTML sinks**: APIs that interpret their input as HTML, such as {{domxref("Element.innerHTML")}} or {{domxref("Document.write()", "document.write()")}}. These APIs could execute JavaScript if it is embedded in the HTML, for example in {{htmlelement("script")}} tags or event handler attributes.
-- **JavaScript sinks**: APIs that directly execute their input as JavaScript, such as {{jsxref("Global_Objects/eval", "eval()")}} or {{domxref("HTMLScriptElement.text")}}.
+- **JavaScript sinks**: APIs that interpret their input as JavaScript, such as {{jsxref("Global_Objects/eval", "eval()")}} or {{domxref("HTMLScriptElement.text")}}.
 - **JavaScript URL sinks**: APIs that interpret their input as the URL of a script, such as {{domxref("HTMLScriptElement.src")}}.
 
 One of the main defenses against DOM-based XSS attacks is to ensure that input is made safe before being passed to an injection sink.
