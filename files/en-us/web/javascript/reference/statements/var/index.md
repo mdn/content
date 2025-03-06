@@ -36,7 +36,7 @@ var name1 = value1, name2, /* …, */ nameN = valueN;
 ```
 
 - `nameN`
-  - : The name of the variable to declare. Each must be a legal JavaScript [identifier](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#identifiers) or a [destructuring binding pattern](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment).
+  - : The name of the variable to declare. Each must be a legal JavaScript [identifier](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#identifiers) or a [destructuring binding pattern](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring).
 - `valueN` {{optional_inline}}
   - : Initial value of the variable. It can be any legal expression. Default value is `undefined`.
 
@@ -301,7 +301,7 @@ var [, a, b, c] = result;
 console.log(a, b, c); // "aaa" "b" "cc"
 ```
 
-For more information, see [Destructuring assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment).
+For more information, see [Destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring).
 
 ## Specifications
 

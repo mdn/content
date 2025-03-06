@@ -563,7 +563,7 @@ The rest parameter will store all arguments _after_ where it's declared, but not
 
 If a function accepts a list of arguments and you already hold them in an array, you can use the [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) in the function call to _spread_ the array as a list of elements. For instance: `avg(...numbers)`.
 
-We mentioned that JavaScript doesn't have named parameters. It's possible, though, to implement them using [object destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment), which allows objects to be conveniently packed and unpacked.
+We mentioned that JavaScript doesn't have named parameters. It's possible, though, to implement them using [object destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring), which allows objects to be conveniently packed and unpacked.
 
 ```js
 // Note the { } braces: this is destructuring an object

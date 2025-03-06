@@ -61,7 +61,7 @@ myFun("one", "two", "three", "four", "five", "six");
 // manyMoreArgs, ["three", "four", "five", "six"]
 ```
 
-The rest parameter may be [destructured](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment), which allows you to ignore certain parameter positions.
+The rest parameter may be [destructured](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring), which allows you to ignore certain parameter positions.
 
 ```js
 function ignoreFirst(...[, b, c]) {

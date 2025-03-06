@@ -295,7 +295,7 @@ If you are new to JavaScript, start with the [guide](/en-US/docs/Web/JavaScript/
 - {{jsxref("Operators/Logical_AND_assignment", "&amp;&amp;=")}}
 - {{jsxref("Operators/Logical_OR_assignment", "||=")}}
 - {{jsxref("Operators/Nullish_coalescing_assignment", "??=")}}
-- [`[a, b] = arr`, `{ a, b } = obj`](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
+- [`[a, b] = arr`, `{ a, b } = obj`](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring)
 
 ### Yield operators
 

@@ -1,15 +1,15 @@
 ---
-title: Destructuring assignment
-slug: Web/JavaScript/Reference/Operators/Destructuring_assignment
+title: Destructuring
+slug: Web/JavaScript/Reference/Operators/Destructuring
 page-type: javascript-language-feature
 browser-compat: javascript.operators.destructuring
 ---
 
 {{jsSidebar("Operators")}}
 
-The **destructuring assignment** syntax is a JavaScript expression that makes it possible to unpack values from arrays, or properties from objects, into distinct variables.
+The **destructuring** syntax is a JavaScript syntax that makes it possible to unpack values from arrays, or properties from objects, into distinct variables. It can be used in locations that receive data (such as the left-hand side of an assignment or anywhere that creates new identifier bindings).
 
-{{InteractiveExample("JavaScript Demo: Expressions - Destructuring assignment", "taller")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Destructuring", "taller")}}
 
 ```js interactive-example
 let a, b, rest;
@@ -66,26 +66,29 @@ let a, b, a1, b1, c, d, rest, pop, push;
 The object and array literal expressions provide an easy way to create _ad hoc_ packages of data.
 
 ```js
-const x = [1, 2, 3, 4, 5];
+const arr = [a, b, c];
 ```
 
-The destructuring assignment uses similar syntax but uses it on the left-hand side of the assignment instead. It defines which values to unpack from the sourced variable.
+The destructuring uses similar syntax but uses it on the left-hand side of the assignment instead. It performs the reverse operation of an array declaration, by declaring each element in the collection as a separate variable.
 
 ```js
-const x = [1, 2, 3, 4, 5];
-const [y, z] = x;
-console.log(y); // 1
-console.log(z); // 2
+const arr = [1, 2, 3];
+const [a, b, c] = arr;
+// a = 1, b = 2, c = 3
 ```
 
-Similarly, you can destructure objects on the left-hand side of the assignment.
+As for objects, compare the two pairs of lines below, and see how there's a direct correspondence within each pair.
 
 ```js
-const obj = { a: 1, b: 2 };
-const { a, b } = obj;
-// is equivalent to:
-// const a = obj.a;
-// const b = obj.b;
+const obj = { a, b, c };
+const { a, b, c } = obj;
+// Equivalent to:
+// const a = obj.a, b = obj.b, c = obj.c;
+
+const obj = { prop1: x, prop2: y, prop3: z };
+const { prop1: x, prop2: y, prop3: z } = obj;
+// Equivalent to:
+// const x = obj.prop1, y = obj.prop2, z = obj.prop3;
 ```
 
 This capability is similar to features present in languages such as Perl and Python.
@@ -133,7 +136,7 @@ const obj = { a: 1, b: 2 };
 ```
 
 > [!NOTE]
-> The parentheses `( ... )` around the assignment statement are required when using object literal destructuring assignment without a declaration.
+> The parentheses `( ... )` around the assignment statement are required when using object literal destructuring without a declaration.
 >
 > `{ a, b } = { a: 1, b: 2 }` is not valid stand-alone syntax, as the `{ a, b }` on the left-hand side is considered a block and not an object literal according to the rules of [expression statements](/en-US/docs/Web/JavaScript/Reference/Statements/Expression_statement). However, `({ a, b } = { a: 1, b: 2 })` is valid, as is `const { a, b } = { a: 1, b: 2 }`.
 >
@@ -172,9 +175,11 @@ const { b = console.log("hey") } = { b: 2 };
 // to evaluate the default value.
 ```
 
-### Rest property
+### Rest properties and rest elements
 
-You can end a destructuring pattern with a rest property `...rest`. This pattern will store all remaining properties of the object or array into a new object or array.
+You can end a destructuring pattern with a rest property `...rest`. For array destructuring, it collects remaining elements of the iterable into a new array called `rest` (or any name you give it). For object destructuring, it copies all enumerable own properties of the object that are not already picked off by the destructuring pattern into a new object called `rest`.
+
+More formally, the `...rest` syntax is called "rest elements" in array destructuring and "rest properties" in object destructuring, but we often just collectively call them "rest property".
 
 ```js
 const { a, ...others } = { a: 1, b: 2, c: 3 };
@@ -226,7 +231,7 @@ console.log(blue); // undefined
 
 Two variables values can be swapped in one destructuring expression.
 
-Without destructuring assignment, swapping two values requires a temporary variable (or, in some low-level languages, the [XOR-swap trick](https://en.wikipedia.org/wiki/XOR_swap_algorithm)).
+Without destructuring, swapping two values requires a temporary variable (or, in some low-level languages, the [XOR-swap trick](https://en.wikipedia.org/wiki/XOR_swap_algorithm)).
 
 ```js
 let a = 1;
@@ -280,9 +285,11 @@ You can also ignore all returned values:
 [, ,] = f();
 ```
 
+Though in this case, it's probably clearer to just call the function and not use destructuring at all. You don't have to use the return value.
+
 #### Using a binding pattern as the rest property
 
-The rest property of array destructuring assignment can be another array or object binding pattern. The inner destructuring destructures from the array created after collecting the rest elements, so you cannot access any properties present on the original iterable in this way.
+The rest property of array destructuring can be another array or object binding pattern. The inner destructuring destructures from the array created after collecting the rest elements, so you cannot access any properties present on the original iterable in this way.
 
 ```js
 const [a, b, ...{ length }] = [1, 2, 3];
@@ -314,7 +321,7 @@ let a, b;
 
 #### Unpacking values from a regular expression match
 
-When the regular expression [`exec()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) method finds a match, it returns an array containing first the entire matched portion of the string and then the portions of the string that matched each parenthesized group in the regular expression. Destructuring assignment allows you to unpack the parts out of this array easily, ignoring the full match if it is not needed.
+When the regular expression [`exec()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) method finds a match, it returns an array containing first the entire matched portion of the string and then the portions of the string that matched each parenthesized group in the regular expression. Destructuring allows you to unpack the parts out of this array easily, ignoring the full match if it is not needed.
 
 ```js
 function parseProtocol(url) {

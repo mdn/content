@@ -46,7 +46,7 @@ param => {
 }
 ```
 
-[Rest parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters), [default parameters](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters), and [destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) within params are supported, and always require parentheses:
+[Rest parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters), [default parameters](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters), and [destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring) within params are supported, and always require parentheses:
 
 ```js-nolint
 (a, b, ...r) => expression
