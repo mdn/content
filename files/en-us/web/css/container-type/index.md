@@ -71,7 +71,7 @@ A {{cssxref("@container")}} at-rule is then used to specify the test that will b
 
 ### Container size queries
 
-[Container size queries](/en-US/docs/Web/CSS/CSS_containment/Container_size_and_style_queries#container_size_queries) allow you to selectively apply CSS rules to a container's children based on a size condition such as a maximum or minimum dimension, aspect ratio, or orientation.
+[Container size queries](/en-US/docs/Web/CSS/CSS_containment/Container_size_and_style_queries#container_size_queries) allow you to selectively apply CSS rules to a container's children based on a size condition such as a maximum or minimum dimension, aspect ratio, or orientation, while applying size containment.
 
 Size containment turns off the ability of an element to get size information from its contents, which is important for container queries to avoid infinite loops. If this were not the case, a CSS rule inside a container query could change the content size, which in turn could make the query evaluate to false and change the parent element's size, which in turn could change the content size and flip the query back to true, and so on. This sequence would then repeat itself in an endless loop.
 
