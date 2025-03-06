@@ -512,7 +512,7 @@ h2 {
 }
 ```
 
-We want to test whether the `<section>` elements are snapping to their container, so we denote them as scroll-state query containers by setting a {{cssxref("container-type")}} value of `scroll-state` on them. We also give them a {{cssxref("container-name")}}, which isn't strictly necessary, but will be useful if our code gets more complex later and we have multiple scroll-state query containers that we want to target with different queries.
+We want to enable the `<section>` elements to be queried. Specifically, we want to test whether the `<section>` elements are snapping to their container, so we denote them as scroll-state query containers by setting a {{cssxref("container-type")}} value of `scroll-state` on them. We also give them a {{cssxref("container-name")}}, which isn't strictly necessary, but will be useful if our code gets more complex later and we have multiple scroll-state query containers that we want to target with different queries.
 
 ```css live-sample___snapped
 section {
