@@ -27,5 +27,5 @@ In JavaScript, enumerable properties are those properties whose internal enumera
 ## See also
 
 - {{Glossary("Boolean")}}
-- [JavaScript data types and data structures](/en-US/docs/Web/JavaScript/Data_structures)
+- [JavaScript data types and data structures](/en-US/docs/Web/JavaScript/Guide/Data_structures)
 - [enumerated attributes](https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#enumerated-attribute) in the HTML Standard

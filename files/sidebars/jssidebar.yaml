@@ -65,25 +65,23 @@ sidebar:
         title: Asynchronous_JavaScript
       - link: /Learn_web_development/Extensions/Client-side_APIs
         title: Client-side_web_APIs
-      - link: /Web/JavaScript/Language_overview
+      - link: /Web/JavaScript/Guide/Language_overview
         title: Language_overview
-      - link: /Web/JavaScript/Data_structures
+      - link: /Web/JavaScript/Guide/Data_structures
         title: Data_structures
-      - link: /Web/JavaScript/Equality_comparisons_and_sameness
+      - link: /Web/JavaScript/Guide/Equality_comparisons_and_sameness
         title: Equality
-      - link: /Web/JavaScript/Enumerability_and_ownership_of_properties
+      - link: /Web/JavaScript/Guide/Enumerability_and_ownership_of_properties
         title: Enumerability
-      - link: /Web/JavaScript/Closures
+      - link: /Web/JavaScript/Guide/Closures
         title: Closures
   - title: Advanced
     details: closed
     children:
-      - link: /Web/JavaScript/Inheritance_and_the_prototype_chain
+      - link: /Web/JavaScript/Guide/Inheritance_and_the_prototype_chain
         title: Inheritance
-      - link: /Web/JavaScript/Memory_management
+      - link: /Web/JavaScript/Guide/Memory_management
         title: Memory_management
-      - link: /Web/JavaScript/Event_loop
-        title: Event_loop
   - type: section
     link: /Web/JavaScript/Reference
     title: Reference
@@ -125,8 +123,10 @@ sidebar:
   - title: More
     details: closed
     children:
-      - link: /Web/JavaScript/JavaScript_technologies_overview
-        title: Overview
+      - link: /Web/JavaScript/Reference/JavaScript_technologies_overview
+        title: Technology_overview
+      - link: /Web/JavaScript/Reference/Execution_model
+        title: Execution_model
       - link: /Web/JavaScript/Reference/Lexical_grammar
         title: Lexical_grammar
       - link: /Web/JavaScript/Reference/Iteration_protocols
@@ -141,7 +141,7 @@ sidebar:
         title: Deprecated_features
 l10n:
   de:
-    Overview: Übersicht über JavaScript-Technologien
+    Technology_overview: Übersicht über JavaScript-Technologien
     Tutorials: Tutorials und Anleitungen
     Guide: JavaScript-Handbuch
     Guide_Introduction: Einführung
@@ -178,7 +178,6 @@ l10n:
     Inheritance: Vererbung und die Prototypenkette
     Strict_mode: Strenger Modus
     Memory_management: Speicherverwaltung
-    Event_loop: Konkurrenzmodell und Ereignisschleife
     Reference: Referenzen
     Global_Objects: Eingebaute Objekte
     Operators: Ausdrücke und Operatoren
@@ -187,6 +186,7 @@ l10n:
     Classes: Klassen
     Errors: Fehler
     More: Sonstiges
+    Execution_model: Execution model
     Lexical_grammar: Lexikalische Grammatik
     Enumerability: Aufzählbarkeit und Eigentum von Eigenschaften
     Iteration_protocols: Iterationsprotokolle
@@ -194,7 +194,7 @@ l10n:
     Trailing_commas: Abschließende Kommas
     Deprecated_features: Veraltete Funktionen
   en-US:
-    Overview: JavaScript technologies overview
+    Technology_overview: JavaScript technologies overview
     Tutorials: Tutorials and guides
     Guide: JavaScript Guide
     Guide_Introduction: Introduction
@@ -231,7 +231,6 @@ l10n:
     Inheritance: Inheritance and the prototype chain
     Strict_mode: Strict mode
     Memory_management: Memory Management
-    Event_loop: Concurrency model and Event Loop
     Reference: References
     Global_Objects: Built-in objects
     Operators: Expressions & operators
@@ -240,6 +239,7 @@ l10n:
     Classes: Classes
     Errors: Errors
     More: Misc
+    Execution_model: Execution model
     Lexical_grammar: Lexical grammar
     Enumerability: Enumerability and ownership of properties
     Iteration_protocols: Iteration protocols
@@ -247,7 +247,7 @@ l10n:
     Trailing_commas: Trailing commas
     Deprecated_features: Deprecated features
   ru:
-    Overview: Обзор технологий JavaScript
+    Technology_overview: Обзор технологий JavaScript
     Tutorials: Уроки
     Guide: Руководство по JavaScript
     Guide_Introduction: Вступление
@@ -278,7 +278,6 @@ l10n:
     Inheritance: Наследование и цепочка прототипов
     Strict_mode: Строгий режим
     Memory_management: Управление памятью
-    Event_loop: Цикл событий
     Reference: Справочники
     Global_Objects: Встроенные объекты
     Operators: Выражения и операторы
@@ -287,6 +286,7 @@ l10n:
     Classes: Классы
     Errors: Ошибки
     More: Ещё
+    Execution_model: Execution model
     Lexical_grammar: Лексическая грамматика
     Enumerability: Перечисляемость и принадлежность свойств
     Iteration_protocols: Протоколы перебора
@@ -294,7 +294,7 @@ l10n:
     Trailing_commas: Висящие запятые
     Deprecated_features: Устаревшие возможности
   fr:
-    Overview: Aperçu des technologies JavaScript
+    Technology_overview: Aperçu des technologies JavaScript
     Tutorials: Tutoriels
     Guide: Guide JavaScript
     Guide_Introduction: Introduction
@@ -325,7 +325,6 @@ l10n:
     Inheritance: L'héritage et la chaîne de prototypes
     Strict_mode: Mode strict
     Memory_management: Gestion de la mémoire
-    Event_loop: Concurrence et boucle des évènements
     Reference: Références
     Global_Objects: Objets natifs
     Operators: Expressions et opérateurs
@@ -334,6 +333,7 @@ l10n:
     Classes: Classes
     Errors: Erreurs
     More: Divers
+    Execution_model: Execution model
     Lexical_grammar: Grammaire lexicale
     Enumerability: Rattachement des propriétés
     Iteration_protocols: Protocoles d'itération
@@ -341,7 +341,7 @@ l10n:
     Trailing_commas: Virgules finales
     Deprecated_features: Fonctionnalités dépréciées
   zh-CN:
-    Overview: JavaScript 技术概要
+    Technology_overview: JavaScript 技术概要
     Tutorials: 教程
     Guide: JavaScript 指南
     Guide_Introduction: 介绍
@@ -372,7 +372,6 @@ l10n:
     Inheritance: 继承和原型链
     Strict_mode: 严格模式
     Memory_management: 内存管理
-    Event_loop: 并发模型与事件循环
     Reference: 参考
     Global_Objects: 内置对象
     Operators: 表达式和运算符
@@ -381,6 +380,7 @@ l10n:
     Classes: 类
     Errors: 错误
     More: 更多
+    Execution_model: 运行模型
     Lexical_grammar: 词法文法
     Enumerability: 属性的可枚举性和所有权
     Iteration_protocols: 迭代协议
@@ -388,7 +388,7 @@ l10n:
     Trailing_commas: 尾后逗号
     Deprecated_features: 已废弃的特性
   ja:
-    Overview: JavaScript 技術概説
+    Technology_overview: JavaScript 技術概説
     Tutorials: チュートリアル
     Guide: JavaScript ガイド
     Guide_Introduction: 入門編
@@ -419,7 +419,6 @@ l10n:
     Inheritance: 継承とプロトタイプチェーン
     Strict_mode: 厳格モード
     Memory_management: メモリー管理
-    Event_loop: 並列モデルとイベントループ
     Reference: リファレンス
     Global_Objects: 組み込みオブジェクト
     Operators: 式と演算子
@@ -428,6 +427,7 @@ l10n:
     Classes: クラス
     Errors: エラー
     More: その他
+    Execution_model: Execution model
     Lexical_grammar: 字句文法
     Enumerability: プロパティの列挙可能性と所有権
     Iteration_protocols: 反復処理プロトコル
@@ -435,7 +435,7 @@ l10n:
     Trailing_commas: 末尾のカンマ
     Deprecated_features: 廃止予定の機能
   ko:
-    Overview: JavaScript 소개
+    Technology_overview: JavaScript 소개
     Tutorials: "자습서:"
     Guide: JavaScript 안내서
     Guide_Introduction: 안내서 소개
@@ -466,7 +466,6 @@ l10n:
     Inheritance: 상속과 프로토타입
     Strict_mode: 엄격한 모드
     Memory_management: JavaScript 메모리 관리
-    Event_loop: 이벤트 루프
     Reference: "참고서:"
     Global_Objects: 표준 내장 객체
     Operators: 표현식 및 연산자
@@ -475,6 +474,7 @@ l10n:
     Classes: Classes
     Errors: 오류
     More: 기타
+    Execution_model: Execution model
     Lexical_grammar: Lexical 문법
     Enumerability: 열거성과 속성의 소유권
     Iteration_protocols: Iteration 프로토콜
@@ -482,7 +482,7 @@ l10n:
     Trailing_commas: Trailing commas
     Deprecated_features: 제외 예정 기능과 제외된 기능
   pt-BR:
-    Overview: Visão geral das Tecnologias JavaScript
+    Technology_overview: Visão geral das Tecnologias JavaScript
     Tutorials: Tutoriais
     Guide: Guia de JavaScript
     Guide_Introduction: Introdução
@@ -513,7 +513,6 @@ l10n:
     Inheritance: Herança e a cadeia de "prototype"
     Strict_mode: Strict mode - Modo estrito
     Memory_management: Gerenciamento de memória
-    Event_loop: Modelo de concorrência e Loop de Eventos
     Reference: Referências
     Global_Objects: Objetos pré-definidos
     Operators: Expressões e operadores
@@ -522,6 +521,7 @@ l10n:
     Classes: Classes
     Errors: Erros
     More: Mais conteúdo
+    Execution_model: Execution model
     Lexical_grammar: Gramática léxica
     Enumerability: Enumerabilidade e domínio de propriedades
     Iteration_protocols: Protocolos de iteração

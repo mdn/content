@@ -113,7 +113,7 @@ console.log(superMan.fly());
 console.log(superMan.speak());
 ```
 
-The similarity between classical inheritance (with classes) and pseudoclassical inheritance (with constructors' `prototype` property) as done above is mentioned in [Inheritance chains](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain#building_longer_inheritance_chains).
+The similarity between classical inheritance (with classes) and pseudoclassical inheritance (with constructors' `prototype` property) as done above is mentioned in [Inheritance chains](/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain#building_longer_inheritance_chains).
 
 Since function constructors' [`prototype`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype) property is writable, you can reassign it to a new object created with [`Object.create()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create#classical_inheritance_with_object.create) to achieve the same inheritance chain as well. There are caveats to watch out when using `create()`, such as remembering to re-add the [`constructor`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor) property.
 
@@ -152,5 +152,5 @@ Subclassing without `extends` is mentioned in [ES-6 subclassing](https://hacks.m
 - {{jsxref("Object.prototype.isPrototypeOf()")}}
 - {{jsxref("Object.getPrototypeOf()")}}
 - [`Object.prototype.__proto__`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)
-- [Inheritance chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain#building_longer_inheritance_chains)
+- [Inheritance chain](/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain#building_longer_inheritance_chains)
 - [ES6 In Depth: Subclassing](https://hacks.mozilla.org/2015/08/es6-in-depth-subclassing/) on hacks.mozilla.org (2015)

@@ -76,7 +76,7 @@ console.log(`${Object(1n)}`); // "Overridden"
 
 ### Negative-zero BigInt
 
-There is no negative-zero `BigInt` as there are no negative zeros in integers. `-0.0` is an IEEE floating-point concept that only appears in the JavaScript [`Number`](/en-US/docs/Web/JavaScript/Data_structures#number_type) type.
+There is no negative-zero `BigInt` as there are no negative zeros in integers. `-0.0` is an IEEE floating-point concept that only appears in the JavaScript [`Number`](/en-US/docs/Web/JavaScript/Guide/Data_structures#number_type) type.
 
 ```js
 (-0n).toString(); // "0"

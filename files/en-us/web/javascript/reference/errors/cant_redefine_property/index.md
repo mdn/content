@@ -7,7 +7,7 @@ page-type: javascript-error
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "can't redefine non-configurable property" occurs when it was
-attempted to redefine a property, but that property is [non-configurable](/en-US/docs/Web/JavaScript/Data_structures#properties).
+attempted to redefine a property, but that property is [non-configurable](/en-US/docs/Web/JavaScript/Guide/Data_structures#properties).
 
 ## Message
 
@@ -23,7 +23,7 @@ TypeError: Attempting to change value of a readonly property. (Safari)
 
 ## What went wrong?
 
-It was attempted to redefine a property, but that property is [non-configurable](/en-US/docs/Web/JavaScript/Data_structures#properties). The
+It was attempted to redefine a property, but that property is [non-configurable](/en-US/docs/Web/JavaScript/Guide/Data_structures#properties). The
 `configurable` attribute controls whether the property can be deleted from
 the object and whether its attributes (other than `writable`) can be changed.
 Usually, properties in an object created by an
@@ -56,5 +56,5 @@ Object.defineProperty(obj, "foo", { value: "baz", configurable: true });
 
 ## See also
 
-- [\[\[Configurable\]\]](/en-US/docs/Web/JavaScript/Data_structures#properties)
+- [\[\[Configurable\]\]](/en-US/docs/Web/JavaScript/Guide/Data_structures#properties)
 - {{jsxref("Object.defineProperty()")}}
