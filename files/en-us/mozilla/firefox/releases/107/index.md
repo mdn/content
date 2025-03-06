@@ -16,7 +16,7 @@ No notable changes
 
 ### MathML
 
-- Deprecated `lquote` and `rquote` attributes of the [`<ms>`](/en-US/docs/Web/MathML/Element/ms) MathML element for custom opening and closing quotes are now disabled.
+- Deprecated `lquote` and `rquote` attributes of the [`<ms>`](/en-US/docs/Web/MathML/Reference/Element/ms) MathML element for custom opening and closing quotes are now disabled.
   This behavior is configured via the `mathml.ms_lquote_rquote_attributes.disabled` preference which is set to `true` by default ([Firefox bug 1793387](https://bugzil.la/1793387)).
 
 ### CSS

@@ -3,9 +3,8 @@ title: MathML
 slug: Web/MathML
 page-type: landing-page
 browser-compat: mathml.elements.math
+sidebar: mathmlref
 ---
-
-{{MathMLRef}}
 
 **Mathematical Markup Language (MathML)** is an [XML](/en-US/docs/Web/XML)-based language for describing mathematical notation.
 
@@ -20,35 +19,35 @@ Below you will find links to documentation, examples, and tools to work with Mat
 
 ## Beginner's tutorials
 
-- [Getting started with MathML](/en-US/docs/Web/MathML/Guides/Getting_started)
+- [Getting started with MathML](/en-US/docs/Web/MathML/Tutorials/Getting_started)
   - : In this article, we will take a simple HTML document and see how to add MathML formulas into it, introducing a few elements along the way.
-- [Text containers](/en-US/docs/Web/MathML/Guides/Text_containers)
+- [Text containers](/en-US/docs/Web/MathML/Tutorials/Text_containers)
   - : Now that you get a better idea of MathML, we move on to text containers (variables, numbers, operators, ...) which are used as building blocks of MathML formulas.
-- [Fractions and roots](/en-US/docs/Web/MathML/Guides/Fractions_and_roots)
+- [Fractions and roots](/en-US/docs/Web/MathML/Tutorials/Fractions_and_roots)
   - : Relying on text containers, this article describes how to build more complex MathML expressions by nesting fractions and roots.
-- [Scripts](/en-US/docs/Web/MathML/Guides/Scripts)
+- [Scripts](/en-US/docs/Web/MathML/Tutorials/Scripts)
   - : We continue the review of basic math notations and focuses on building MathML elements with scripts.
-- [Tables](/en-US/docs/Web/MathML/Guides/Tables)
+- [Tables](/en-US/docs/Web/MathML/Tutorials/Tables)
   - : Once all basic math notations are known, it remains to consider tabular layout which can be used for matrix-like expressions and other advanced math layout.
-- [Three famous mathematical formulas](/en-US/docs/Web/MathML/Guides/Three_famous_mathematical_formulas) <sup>Challenge</sup>
+- [Three famous mathematical formulas](/en-US/docs/Web/MathML/Tutorials/Three_famous_mathematical_formulas) <sup>Challenge</sup>
   - : With the things you have learned in the last few articles, you should already be able to write relatively sophisticated MathML formulas. This challenge gives you a chance to do that.
 
 ## Guides
 
-- [Authoring MathML](/en-US/docs/Web/MathML/Authoring)
+- [Authoring MathML](/en-US/docs/Web/MathML/Guides/Authoring)
   - : Suggestions and tips for writing MathML, including suggested MathML editors and how to integrate their output into Web content.
-- [Fonts for MathML](/en-US/docs/Web/MathML/Fonts)
+- [Fonts for MathML](/en-US/docs/Web/MathML/Guides/Fonts)
   - : How users can install such math fonts to properly display MathML in browsers.
 
 ## MathML reference
 
-- [MathML element reference](/en-US/docs/Web/MathML/Element)
+- [MathML element reference](/en-US/docs/Web/MathML/Reference/Element)
   - : Details about each MathML element and compatibility information for desktop and mobile browsers.
-- [MathML attribute reference](/en-US/docs/Web/MathML/Attribute)
+- [MathML attribute reference](/en-US/docs/Web/MathML/Reference/Attribute)
   - : Information about MathML attributes that modify the appearance or behavior of elements.
-- [MathML attribute values](/en-US/docs/Web/MathML/Attribute)
+- [MathML attribute values](/en-US/docs/Web/MathML/Reference/Attribute)
   - : Further information about MathML attribute values.
-- [MathML examples](/en-US/docs/Web/MathML/Examples)
+- [MathML guides](/en-US/docs/Web/MathML/Guides)
   - : MathML samples and examples to help you understand how it works.
 
 ## Getting help from the community
