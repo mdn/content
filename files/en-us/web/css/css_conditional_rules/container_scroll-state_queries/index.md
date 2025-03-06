@@ -6,7 +6,7 @@ page-type: guide
 
 {{CSSRef}}
 
-**Container scroll-state queries** are a type of [container query](/en-US/docs/Web/CSS/@container). Rather than selectively applying styles to an element based on its container's size, scroll-state queries allow you to selectively apply styles to an element based on its container's scroll state, which can include whether the container is partially scrolled, snapped to a scroll snap container ancestor, or positioned via [`position: sticky`](/en-US/docs/Web/CSS/position) and stuck to a boundary of a {{glossary("scroll container")}} ancestor.
+**Container scroll-state queries** are a type of [container query](/en-US/docs/Web/CSS/@container). Rather than selectively applying styles to descendant elements based on the container's size, scroll-state queries allow you to selectively apply styles to descendent elements based on the container's scroll state. This can include whether the container is partially scrolled, snapped to a [scroll snap container](/en-US/docs/Glossary/Scroll_snap#scroll_snap_container) ancestor, or positioned via [`position: sticky`](/en-US/docs/Web/CSS/position) and stuck to a boundary of a {{glossary("scroll container")}} ancestor.
 
 This article explains how to use container scroll-state queries, walking through an example of each type. It assumes that you know the basics of container queries. If you are new to container queries, read [CSS container queries](/en-US/docs/Web/CSS/CSS_containment/Container_queries) before continuing.
 
@@ -16,7 +16,7 @@ There are three `@container` descriptors you can use in a `scroll-state()` query
 
 - `scrollable`: Queries whether a container can be scrolled in the given direction via user-initiated scrolling (for example by dragging the scrollbar or using a trackpad gesture). In other words, is there any overflowing content in the given direction that can be scrolled to? This is useful for applying styling related to the scroll position of a scroll container. For example, you could display a hint that encourages people to scroll down and see more content when the scrollbar is up at the top, and hide it when the user has actually started scrolling.
 - `snapped`: Queries whether a container is, or will be, snapped to a [scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap) container ancestor along a given axis. This is useful for applying styles when an element is snapped to a scroll snap container. For example, you might want to highlight a snapped element in some way, or reveal some of its content that was previously hidden.
-- `stuck`: Queries whether a container with a {{cssxref("position")}} value of `sticky` is stuck to an edge of its scolling ancestor. This is useful for styling `position: sticky` elements only when stuck — for example, you could keep a document header or navigation menu stuck to the top of a container as its content scrolls, and also lay it out differently while stuck.
+- `stuck`: Queries whether a container with a {{cssxref("position")}} value of `sticky` is stuck to an edge of its scroll container ancestor. This is useful for styling `position: sticky` elements differently when stuck — for example, you could give them a different color scheme or layout.
 
 ## Syntax overview
 
@@ -44,7 +44,7 @@ Here, we query only containers named `my-container` to determine whether the con
 
 ## Using `scrollable` queries
 
-Scroll-state [`scrollable: value`](/en-US/docs/Web/CSS/@container#scrollable) queries test whether a container's scrolling ancestor can be scrolled in the given direction via user-initiated scrolling. If not, the query returns false.
+Scroll-state [`scrollable`](/en-US/docs/Web/CSS/@container#scrollable) queries, written as `scroll-state(scrollable: value)`, test whether a container's scrolling ancestor can be scrolled in the given direction via user-initiated scrolling. If not, the query returns false.
 
 The `value` indicates the direction you are testing for scrolling availability in, for example:
 
@@ -58,7 +58,7 @@ Let's look at an example in which we have a scrolling container full of content,
 
 ### HTML
 
-In the HTML we have a {{htmlelement("article")}} element containing enough content to cause the document to scroll, preceded by a "back-to-top" [link](/en-US/docs/Web/HTML/Element/a#result_8):
+In the HTML we have an {{htmlelement("article")}} element containing enough content to cause the document to scroll, preceded by a [back-to-top link](/en-US/docs/Web/HTML/Element/a#result_8):
 
 ```html
 <a class="back-to-top" href="#" aria-label="Top of page">↑</a>
@@ -219,7 +219,7 @@ We have hidden most of the HTML for brevity.
 
 ### CSS
 
-We've hidden most of the example CSS for brevity, but we explain the most important parts below.
+The `.back-to-top` link is given a {{cssxref("position")}} value of `fixed`, placed at the bottom-right corner of the viewport, and moved off the viewport using a {{cssxref("translate")}} value of `80px 0`. A {{cssxref("transition")}} value will animate the `translate` and {{cssxref("background-color")}} when either value changes.
 
 ```css hidden live-sample___scrollable
 /* General styling */
@@ -255,8 +255,6 @@ img {
 }
 ```
 
-We've given the `.back-to-top` link a {{cssxref("position")}} value of `fixed` and placed it at the bottom-right corner of the viewport. We've also given it a {{cssxref("translate")}} value of `80px 0` to hide it off the right-hand side of the viewport, and a {{cssxref("transition")}} value that animates `translate` when its state changes.
-
 ```css live-sample___scrollable
 .back-to-top {
   width: 64px;
@@ -291,7 +289,7 @@ We've given the `.back-to-top` link a {{cssxref("position")}} value of `fixed` a
 }
 ```
 
-Since the `<html>` element is the one that is scrolling in this demo, we denote it as a scroll-state query container by setting a {{cssxref("container-type")}} value of `scroll-state` on it. We also give it a {{cssxref("container-name")}}, which isn't strictly necessary, but will be useful if our code gets more complex later and we have multiple scroll-state query containers that we want to target with different queries.
+The {{glossary("scroll container")}} in this example is the `<html>` element itself, denoted as a scroll-state query container with a {{cssxref("container-type")}} value of `scroll-state`. The {{cssxref("container-name")}} isn't strictly necessary but is useful in cases where the code is added to a codebase with multiple scroll-state query containers targeted with different queries.
 
 ```css live-sample___scrollable
 html {
@@ -310,6 +308,8 @@ Next, we define a {{cssxref("@container")}} block that sets the container name t
 }
 ```
 
+We've hidden most of the example CSS for brevity, but we've explained the most important parts above.
+
 ### Result
 
 {{EmbedLiveSample("scrollable", "100%", "400px")}}
@@ -318,7 +318,7 @@ Try scrolling the document down, and note how the "back-to-top" link appears as 
 
 ## Using `snapped` queries
 
-Relevant only when [scroll snapping](/en-US/docs/Web/CSS/CSS_scroll_snap) is implemented, scroll-state [`snapped: value`](/en-US/docs/Web/CSS/@container#scrollable) queries test whether a container is, or will be, snapped to a [scroll snap container](/en-US/docs/Glossary/Scroll_snap#scroll_snap_container) ancestor along the given axis. If not, the query returns false.
+Relevant only when [scroll snapping](/en-US/docs/Web/CSS/CSS_scroll_snap) is implemented, scroll-state [`snapped`](/en-US/docs/Web/CSS/@container#snapped) queries (written as `scroll-state(snapped: value)`) test whether a container is, or will be, snapped to a [scroll snap container](/en-US/docs/Glossary/Scroll_snap#scroll_snap_container) ancestor along the given axis. If not, the query returns false.
 
 The `value` in this case indicates the direction you are testing the element's ability to snap in, for example:
 
@@ -336,7 +336,7 @@ In this example, we'll look at a scroll snap container with children that snap t
 
 ### HTML
 
-The HTML consists of a {{htmlelement("main")}} element that will be the scroll container, inside which are several {{htmlelement("section")}} elements that will be the snap targets. Each `<section>` contains a wrapper {{htmlelement("div")}} that we will target with the container query styles (we can't target the actual container), each with a heading inside.
+The HTML consists of a {{htmlelement("main")}} element that will be the scroll snap container, inside which are several {{htmlelement("section")}} elements that will be the snap targets. Because container queries enable styling a container's descendants, not the container itself, each `<section>` contains a wrapper {{htmlelement("div")}} to target with the container query style, along with a heading.
 
 ```html
 <main>
@@ -462,7 +462,7 @@ main {
 }
 ```
 
-We give the `<main>` element an {{cssxref("overflow")}} value of `scroll` and a fixed {{cssxref("height")}} to turn it into a vertical scroll container. We also set a {{cssxref("scroll-snap-type")}} value of `y mandatory` on it, to make it into a scroll snap container in which snap targets will snap to it along the y axis, and a snap target will always be snapped to.
+We set an {{cssxref("overflow")}} value of `scroll` and a fixed {{cssxref("height")}} on the `<main>` element to turn it into a vertical scroll container. We also set a {{cssxref("scroll-snap-type")}} value of `y mandatory` to turn `<main>` into a scroll snap container that snap targets will snap to along the y axis; `mandatory` means that a snap target will _always_ be snapped to.
 
 ```css live-sample___snapped
 main {
@@ -540,21 +540,21 @@ The rendered result is shown below. Try scrolling the container up and down, and
 
 ## Using `stuck` queries
 
-Scroll-state [`stuck: value`](/en-US/docs/Web/CSS/@container#scrollable) queries test whether a container with a {{cssxref("position")}} value of `sticky` is stuck to an edge of its scrolling container ancestor. If not, the query returns false. To evaluate a container with a `stuck` scroll-state query, it must have `position: sticky` set on it and be inside a scroll container.
+Scroll-state [`stuck`](/en-US/docs/Web/CSS/@container#scrollable) queries, written as `scroll-state(stuck: value)`, test whether a container with a {{cssxref("position")}} value of `sticky` is stuck to an edge of its scroll container ancestor. If not, the query returns false. To evaluate a container with a `stuck` scroll-state query, it must have `position: sticky` set on it and be inside a scroll container.
 
 The `value` in this case indicates the scroll container edge you are testing, for example:
 
-- `top`: Tests whether the container is stuck to the top edge of its scrolling ancestor.
-- `block-end`: Tests whether the container is stuck to the block-end edge of its scrolling ancestor.
-- `none`: Tests whether the container is not stuck to any edges of its scrolling ancestor. Note that `none` queries will match even if the container does not have `position: sticky` set on it.
+- `top`: Tests whether the container is stuck to the top edge of its scroll container ancestor.
+- `block-end`: Tests whether the container is stuck to the block-end edge of its scroll container ancestor.
+- `none`: Tests whether the container is not stuck to any edges of its scroll container ancestor. Note that `none` queries will match even if the container does not have `position: sticky` set on it.
 
 If the query returns true, the rules inside the `@container` block are applied to descendants of the matching `position: sticky` container.
 
-Let's look at an example in which we have a scrolling container with overflowing content, in which the headings are set to `position: sticky` and stick to the top edge of the container when they scroll to that position. We will use a `stuck` query to style the headings differently when they are stuck to the top edge.
+Let's look at an example where we have a scrolling container with overflowing content, in which the headings are set to `position: sticky` and stick to the top edge of the container when they scroll to that position. We will use a `stuck` scroll-state query to style the headings differently when they are stuck to the top edge.
 
 ### HTML
 
-In the HTML we have a {{htmlelement("article")}} element containing enough content to cause the document to scroll. It is structured using several {{htmlelement("section")}} elements, each containing a {{htmlelement("header")}}:
+In the HTML, we have an {{htmlelement("article")}} element containing enough content to cause the document to scroll. It is structured using several {{htmlelement("section")}} elements, each containing a {{htmlelement("header")}} with nested content:
 
 ```html
 <article>
@@ -723,7 +723,7 @@ We have hidden most of the HTML for brevity.
 
 ### CSS
 
-We've hidden most of the example CSS for brevity, but we explain the most important parts below.
+Each `<header>` has a {{cssxref("position")}} value of `sticky` and a {{cssxref("top")}} value of `0`, which sticks them to the top edge of the scroll container. To test whether the `<header>` elements are stuck to the container top edge, they are denoted as scroll-state query containers with a {{cssxref("container-type")}} value of `scroll-state`. The {{cssxref("container-name")}} isn't strictly necessary but will be useful if this code gets added to a code base with multiple scroll-state query containers targeted with different queries.
 
 ```css hidden live-sample___stuck
 /* General styling */
@@ -759,13 +759,11 @@ img {
 }
 ```
 
-We give each `<header>` a {{cssxref("position")}} value of `sticky` and a {{cssxref("top")}} value so it will stick to the top edge of the scroll container. Since we want to test whether the `<header>` elements are stuck to the container top edge, we denote them as scroll-state query containers by setting a {{cssxref("container-type")}} value of `scroll-state` on them. We also give them a {{cssxref("container-name")}}, which isn't strictly necessary, but will be useful if our code gets more complex later and we have multiple scroll-state query containers that we want to target with different queries.
-
 ```css live-sample___stuck
 header {
   background: white;
   position: sticky;
-  top: -1px;
+  top: 0;
   container-type: scroll-state;
   container-name: sticky-heading;
 }
@@ -791,7 +789,7 @@ header p {
 }
 ```
 
-Next, we define a {{cssxref("@container")}} block that sets the container name we are targetting with this query, and the query itself — `stuck: top`. This query applies the rules contained inside the block only if a `<header>` element is stuck to the top of its scrolling container. When that is the case, a different `background` and a {{cssxref("box-shadow")}} are applied to the contained `<h2>` and `<p>`.
+Next, we define a {{cssxref("@container")}} block that sets the container name we are targetting with this query, and the query itself — `stuck: top`. This query applies the rules contained inside the block only if a `<header>` element is stuck to the top of its scroll container. When that is the case, a different `background` and a {{cssxref("box-shadow")}} are applied to the contained `<h2>` and `<p>`.
 
 ```css live-sample___stuck
 @container sticky-heading scroll-state(stuck: top) {
@@ -802,6 +800,8 @@ Next, we define a {{cssxref("@container")}} block that sets the container name w
   }
 }
 ```
+
+We've hidden most of the example CSS for brevity, but we've explained the most important parts above.
 
 ### Result
 

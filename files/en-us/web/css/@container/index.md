@@ -28,6 +28,7 @@ The `@container` at-rule has the following syntax:
 For example:
 
 ```css
+/* With a <size-query> */
 @container (width > 400px) {
   h2 {
     font-size: 1.5em;
@@ -229,7 +230,7 @@ Supported keywords for scroll-state container descriptors include physical and {
   - : Queries whether the container is, or will be, snapped to a [scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap) container ancestor along the given axis. Valid `snapped` values include the following keywords:
 
     - `none`
-      - : The container is not a scroll snap target for its ancestor scroll container. The `none` value negates the matching — containers that _are_ snap targets for the scroll container will _not_ have the `@container` styles applied, whereas non-snap targets _will_ have the styles applied.
+      - : The container is not a scroll [snap target](/en-US/docs/Glossary/Scroll_snap#snap_target) for its ancestor scroll container. When implementing a `snapped: none` query, containers that _are_ snap targets for the scroll container will _not_ have the `@container` styles applied, whereas non-snap targets _will_ have the styles applied.
     - `x`
       - : The container is a horizontal scroll snap target for its ancestor scroll container, that is, it is snapping horizontally to its ancestor.
     - `y`
@@ -243,7 +244,7 @@ Supported keywords for scroll-state container descriptors include physical and {
 
     To evaluate a container with a non-`none` `snapped` scroll-state query, it must be a container with a scroll container ancestor having a {{cssxref("scroll-snap-type")}} value other than `none`. A `snapped: none` query will will match even when there is no scroll container ancestor.
 
-    Evaluation will occur when the [`scrollsnapchanging`](/en-US/docs/Web/API/Element/scrollsnapchanging_event) event fires on the scroll snap container. If the test passes, the rules inside the `@container` block are applied to descendants of the container.
+    Evaluations occur when [`scrollsnapchanging`](/en-US/docs/Web/API/Element/scrollsnapchanging_event) events fire on the scroll snap container. If the test passes, the rules inside the `@container` block are applied to descendants of the container.
 
     To evaluate whether a container is a snap target, without being concerned about the direction, use the `none` value with the `not` operator:
 
@@ -352,7 +353,7 @@ span {
 @container (width < 650px) {
   .card {
     width: 50%;
-    background-color: gray;
+    background-color: lightgray;
     font-size: 1em;
   }
 }
@@ -453,52 +454,7 @@ The global `revert` and `revert-layer` are invalid as values in a `<style-featur
 
 ### Scroll-state queries
 
-Scroll-state container queries allow you to selectively apply CSS rules to a container's children based on a scroll-state condition. Some of the conditions relate to the container themselves, and some relate to their scrolling ancestor. Let's look at an example involving the `stuck` scroll-state declaration, which evaluates whether a container with a {{cssxref("position")}} value of `sticky` is stuck to a specified edge of its scrolling container.
-
-In this example we have a scrolling {{htmlelement("article")}} containing structured text, which includes {{htmlelement("header")}} elements containing [`<h2>`](/en-US/docs/Web/HTML/Element/Heading_Elements) elements:
-
-```html
-<article>
-  <h1>Sticky reader with scroll-state container query</h1>
-  <section>
-    <header>
-      <h2>This first section is interesting</h2>
-    </header>
-
-    ...
-  </section>
-
-  ...
-</article>
-```
-
-We want the headers to stick to the top of the scrolling container when they reach it, but also be styled differently as a result. First of all, we apply a {{cssxref("position")}} value of `sticky` to the `<heading>` elements to achieve the sticking effect. We also apply a {{cssxref("container-type")}} value of `scroll-state` to establish them as scroll-state query containers, and a {{cssxref("container-name")}} so we can explicitly target these containers with a container query.
-
-```css
-header {
-  background: white;
-  position: sticky;
-  top: -1px;
-  container-type: scroll-state;
-  container-name: sticky-heading;
-}
-```
-
-Next, we set up the query by defining a `@container` block. We include the `container-name` value set in the above rule so the query only affects those named containers, and specify the query as `scroll-state(stuck: top)`. This query states that the styles contained within the `@container` block are only applied to matching elements inside the containers when the containers are stuck to the top edge of their scrolling ancestor (the document's `<html>` element, in this case).
-
-```css
-@container sticky-heading scroll-state(stuck: top) {
-  h2 {
-    background: purple;
-    color: white;
-    box-shadow: 0 5px 5px #0007;
-  }
-}
-```
-
-Note that you can apply styles to descendants of the container when a container query matches, but not the container itself. This is why we are targetting the styles to the `<h2>` children of the `<header>` elements, not the `<header>` elements themselves.
-
-See [Using container scroll-state queries](/en-US/docs/Web/CSS/CSS_conditional_rules/Container_scroll-state_queries) for a full walkthrough of this example and others.
+See [Using container scroll-state queries](/en-US/docs/Web/CSS/CSS_conditional_rules/Container_scroll-state_queries) for full walkthroughs of scroll-state query examples.
 
 ## Specifications
 
