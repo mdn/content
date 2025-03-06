@@ -145,8 +145,8 @@ The `<container-condition>` queries include [size](#size_container_descriptors) 
 The `<container-condition>` can include one or more boolean size queries, each within a set of parentheses. A size query includes a size descriptor, a value, and — depending on the descriptor — a comparison operator. The syntax for including multiple conditions is the same as for [`@media`](/en-US/docs/Web/CSS/@media) size feature queries.
 
 ```css
-@container (width > 400px) { ... }
-@container (orientation: landscape) and (min-width: 400px) { ... }
+@container (min-width: 400px) { ... }
+@container (orientation: landscape) and (width > 400px) { ... }
 @container (15em <= block-size <= 30em) { ... }
 ```
 
