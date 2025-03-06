@@ -45,7 +45,7 @@ isFinite(value)
 
 `isFinite()` is a function property of the global object.
 
-When the argument to the `isFinite()` function is not of type [Number](/en-US/docs/Web/JavaScript/Data_structures#number_type), the value is first coerced to a number, and the resulting value is then compared against `NaN` and ±Infinity. This is as confusing as the behavior of {{jsxref("isNaN")}} — for example, `isFinite("1")` is `true`.
+When the argument to the `isFinite()` function is not of type [Number](/en-US/docs/Web/JavaScript/Guide/Data_structures#number_type), the value is first coerced to a number, and the resulting value is then compared against `NaN` and ±Infinity. This is as confusing as the behavior of {{jsxref("isNaN")}} — for example, `isFinite("1")` is `true`.
 
 {{jsxref("Number.isFinite()")}} is a more reliable way to test whether a value is a finite number value, because it returns `false` for any non-number input.
 

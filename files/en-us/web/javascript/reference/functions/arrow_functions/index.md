@@ -215,7 +215,7 @@ Object.defineProperty(obj, "b", {
 });
 ```
 
-Because a [class](/en-US/docs/Web/JavaScript/Reference/Classes)'s body has a `this` context, arrow functions as [class fields](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields) close over the class's `this` context, and the `this` inside the arrow function's body will correctly point to the instance (or the class itself, for [static fields](/en-US/docs/Web/JavaScript/Reference/Classes/static)). However, because it is a [closure](/en-US/docs/Web/JavaScript/Closures), not the function's own binding, the value of `this` will not change based on the execution context.
+Because a [class](/en-US/docs/Web/JavaScript/Reference/Classes)'s body has a `this` context, arrow functions as [class fields](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields) close over the class's `this` context, and the `this` inside the arrow function's body will correctly point to the instance (or the class itself, for [static fields](/en-US/docs/Web/JavaScript/Reference/Classes/static)). However, because it is a [closure](/en-US/docs/Web/JavaScript/Guide/Closures), not the function's own binding, the value of `this` will not change based on the execution context.
 
 ```js
 class C {

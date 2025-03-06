@@ -1,6 +1,6 @@
 ---
 title: JavaScript technologies overview
-slug: Web/JavaScript/JavaScript_technologies_overview
+slug: Web/JavaScript/Reference/JavaScript_technologies_overview
 page-type: guide
 ---
 

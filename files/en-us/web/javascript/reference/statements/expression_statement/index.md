@@ -32,7 +32,7 @@ Because the expression is evaluated and then discarded, the result of the expres
 - [`import()`](/en-US/docs/Web/JavaScript/Reference/Operators/import)
 - [`yield`](/en-US/docs/Web/JavaScript/Reference/Operators/yield) and [`yield*`](/en-US/docs/Web/JavaScript/Reference/Operators/yield*)
 
-Others may also have side effects if they invoke [getters](/en-US/docs/Web/JavaScript/Reference/Functions/get) or trigger [type coercions](/en-US/docs/Web/JavaScript/Data_structures#type_coercion).
+Others may also have side effects if they invoke [getters](/en-US/docs/Web/JavaScript/Reference/Functions/get) or trigger [type coercions](/en-US/docs/Web/JavaScript/Guide/Data_structures#type_coercion).
 
 ### Forbidden expressions
 

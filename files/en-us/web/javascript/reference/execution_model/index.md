@@ -1,10 +1,10 @@
 ---
-title: The event loop
-slug: Web/JavaScript/Event_loop
+title: JavaScript execution model
+slug: Web/JavaScript/Reference/Execution_model
 page-type: guide
 ---
 
-{{jsSidebar("Advanced")}}
+{{jsSidebar("More")}}
 
 JavaScript has a runtime model based on an **event loop**, which is responsible for executing the code, collecting and processing events, and executing queued sub-tasks. This model is quite different from models in other languages like C and Java.
 

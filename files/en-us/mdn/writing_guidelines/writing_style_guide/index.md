@@ -446,7 +446,7 @@ When referencing another page or the section of a page on MDN by its title, foll
 
 Follow similar style when linking to a section on a page, as shown below:
 
-- **Correct**: "For more information, see the [Allocation in JavaScript](/en-US/docs/Web/JavaScript/Memory_management#allocation_in_javascript) section on the _Memory management_ page."
+- **Correct**: "For more information, see the [Allocation in JavaScript](/en-US/docs/Web/JavaScript/Guide/Memory_management#allocation_in_javascript) section on the _Memory management_ page."
 
 If the section you're linking to is on the same page, you can hint at the location of the section using the words "above" or "below".
 
@@ -625,7 +625,7 @@ For example, consider the [JavaScript](/en-US/docs/Web/JavaScript) guide, which 
 - [JavaScript/Guide](/en-US/docs/Web/JavaScript/Guide) – Main table-of-contents page
 - [JavaScript/Guide/JavaScript Overview](/en-US/docs/Web/JavaScript/Guide/Introduction)
 - [JavaScript/Guide/Functions](/en-US/docs/Web/JavaScript/Guide/Functions)
-- [JavaScript/Guide/Details of the Object Model](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
+- [JavaScript/Guide/Details of the Object Model](/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)
 
 Try to avoid putting your article at the top of the hierarchy, which slows the site down and makes search and site navigation less effective.
 

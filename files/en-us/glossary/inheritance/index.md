@@ -12,4 +12,4 @@ As an app developer, you can choose which of the superclass's {{glossary("attrib
 
 ## See also
 
-- [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
+- [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)

@@ -1,6 +1,6 @@
 ---
 title: Equality comparisons and sameness
-slug: Web/JavaScript/Equality_comparisons_and_sameness
+slug: Web/JavaScript/Guide/Equality_comparisons_and_sameness
 page-type: guide
 ---
 
@@ -72,7 +72,7 @@ Loose equality is _symmetric_: `A == B` always has identical semantics to `B == 
    - BigInt: return `true` only if both operands have the same value.
    - Symbol: return `true` only if both operands reference the same symbol.
 2. If one of the operands is `null` or `undefined`, the other must also be `null` or `undefined` to return `true`. Otherwise return `false`.
-3. If one of the operands is an object and the other is a primitive, [convert the object to a primitive](/en-US/docs/Web/JavaScript/Data_structures#primitive_coercion).
+3. If one of the operands is an object and the other is a primitive, [convert the object to a primitive](/en-US/docs/Web/JavaScript/Guide/Data_structures#primitive_coercion).
 4. At this step, both operands are converted to primitives (one of String, Number, Boolean, Symbol, and BigInt). The rest of the conversion is done case-by-case.
    - If they are of the same type, compare them using step 1.
    - If one of the operands is a Symbol but the other is not, return `false`.
