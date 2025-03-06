@@ -168,6 +168,9 @@ Let's get your image displaying now.
 
 This section will cover some essential HTML elements you'll use for marking up the text.
 
+> [!NOTE]
+> Scrimba's [The basics of semantic HTML](https://v2.scrimba.com/the-frontend-developer-career-path-c0j/~0xid?via=mdn) <sup>_MDN learning partner_</sup> is an interactive lesson providing a useful description of HTML, with particular emphasis on why the _semantic_ aspect of it is important.
+
 ### Headings
 
 Heading elements allow you to specify that certain parts of your content are headings — or subheadings. In the same way that a book has the main title, chapter titles, and subtitles, an HTML document can too. HTML contains 6 heading levels, {{htmlelement("Heading_Elements", "&lt;h1&gt; - &lt;h6&gt;")}}, although you'll commonly only use 3 to 4 at most:
@@ -272,5 +275,10 @@ If you have followed all the instructions in this article, you should end up wit
 If you get stuck, you can always compare your work with our [finished example code](https://github.com/mdn/beginner-html-site/blob/main/index.html) on GitHub.
 
 Here, we have only really scratched the surface of HTML. You'll learn a lot more in our [Structuring content with HTML](/en-US/docs/Learn_web_development/Core/Structuring_content) Core module.
+
+## See also
+
+- [Learn HTML and CSS](https://v2.scrimba.com/learn-html-and-css-c0p?via=mdn), Scrimba <sup>_MDN learning partner_</sup>
+  - : [Scrimba's](https://scrimba.com?via=mdn) _Learn HTML and CSS_ course teaches you HTML and CSS through building and deploying five awesome projects, with fun interactive lessons and challenges taught by knowledgeable teachers.
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like", "Learn_web_development/Getting_started/Your_first_website/Styling_the_content", "Learn_web_development/Getting_started/Your_first_website")}}
