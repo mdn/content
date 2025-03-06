@@ -191,7 +191,7 @@ Supported keywords for scroll-state container descriptors include physical and {
   - : Queries whether the container can be scrolled in the given direction via user-initiated scrolling, such as by dragging the scrollbar or using a trackpad gesture. In other words, is there overflowing content in the given direction that can be scrolled to? Valid `scrollable` values include the following keywords:
 
     - `none`
-      - : The container cannot be scrolled in any direction.
+      - : The container is not a {{glossary("scroll container")}} or otherwise cannot be scrolled in any direction.
     - `top`
       - : The container can be scrolled towards its top edge.
     - `right`
