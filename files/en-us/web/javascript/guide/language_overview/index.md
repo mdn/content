@@ -1,12 +1,12 @@
 ---
 title: JavaScript language overview
-slug: Web/JavaScript/Language_overview
+slug: Web/JavaScript/Guide/Language_overview
 page-type: guide
 ---
 
 {{jsSidebar}}
 
-JavaScript is a multi-paradigm, dynamic language with types and operators, standard built-in objects, and methods. Its syntax is based on the Java and C languages — many structures from those languages apply to JavaScript as well. JavaScript supports object-oriented programming with [object prototypes](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) and classes. It also supports functional programming since functions are [first-class](/en-US/docs/Glossary/First-class_Function) objects that can be easily created via expressions and passed around like any other object.
+JavaScript is a multi-paradigm, dynamic language with types and operators, standard built-in objects, and methods. Its syntax is based on the Java and C languages — many structures from those languages apply to JavaScript as well. JavaScript supports object-oriented programming with [object prototypes](/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain) and classes. It also supports functional programming since functions are [first-class](/en-US/docs/Glossary/First-class_Function) objects that can be easily created via expressions and passed around like any other object.
 
 This page serves as a quick overview of various JavaScript language features, written for readers with background in other languages, such as C or Java.
 
@@ -14,15 +14,15 @@ This page serves as a quick overview of various JavaScript language features, wr
 
 Let's start off by looking at the building blocks of any language: the types. JavaScript programs manipulate values, and those values all belong to a type. JavaScript offers seven _primitive types_:
 
-- [Number](/en-US/docs/Web/JavaScript/Data_structures#number_type): used for all number values (integer and floating point) except for _very_ big integers.
-- [BigInt](/en-US/docs/Web/JavaScript/Data_structures#bigint_type): used for arbitrarily large integers.
-- [String](/en-US/docs/Web/JavaScript/Data_structures#string_type): used to store text.
-- [Boolean](/en-US/docs/Web/JavaScript/Data_structures#boolean_type): `true` and `false` — usually used for conditional logic.
-- [Symbol](/en-US/docs/Web/JavaScript/Data_structures#symbol_type): used for creating unique identifiers that won't collide.
-- [Undefined](/en-US/docs/Web/JavaScript/Data_structures#undefined_type): indicating that a variable has not been assigned a value.
-- [Null](/en-US/docs/Web/JavaScript/Data_structures#null_type): indicating a deliberate non-value.
+- [Number](/en-US/docs/Web/JavaScript/Guide/Data_structures#number_type): used for all number values (integer and floating point) except for _very_ big integers.
+- [BigInt](/en-US/docs/Web/JavaScript/Guide/Data_structures#bigint_type): used for arbitrarily large integers.
+- [String](/en-US/docs/Web/JavaScript/Guide/Data_structures#string_type): used to store text.
+- [Boolean](/en-US/docs/Web/JavaScript/Guide/Data_structures#boolean_type): `true` and `false` — usually used for conditional logic.
+- [Symbol](/en-US/docs/Web/JavaScript/Guide/Data_structures#symbol_type): used for creating unique identifiers that won't collide.
+- [Undefined](/en-US/docs/Web/JavaScript/Guide/Data_structures#undefined_type): indicating that a variable has not been assigned a value.
+- [Null](/en-US/docs/Web/JavaScript/Guide/Data_structures#null_type): indicating a deliberate non-value.
 
-Everything else is known as an [Object](/en-US/docs/Web/JavaScript/Data_structures#objects). Common object types include:
+Everything else is known as an [Object](/en-US/docs/Web/JavaScript/Guide/Data_structures#objects). Common object types include:
 
 - {{jsxref("Function")}}
 - {{jsxref("Array")}}
@@ -315,7 +315,7 @@ for (let i = 0; i < 5; i++) {
 }
 ```
 
-JavaScript also contains two other prominent for loops: [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of), which iterates over [iterables](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols), most notably arrays, and [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in), which visits all [enumerable](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties) properties of an object.
+JavaScript also contains two other prominent for loops: [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of), which iterates over [iterables](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols), most notably arrays, and [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in), which visits all [enumerable](/en-US/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties) properties of an object.
 
 ```js
 for (const value of array) {
@@ -458,7 +458,7 @@ console.log(stillMe.x); // 1
 
 For more on objects and prototypes, see the [`Object` reference page](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object). For more information on the object initializer syntax, see its [reference page](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer).
 
-This page has omitted all details about object prototypes and inheritance because you can usually achieve inheritance with [classes](#classes) without touching the underlying mechanism (which you may have heard to be abstruse). To learn about them, see [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
+This page has omitted all details about object prototypes and inheritance because you can usually achieve inheritance with [classes](#classes) without touching the underlying mechanism (which you may have heard to be abstruse). To learn about them, see [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain).
 
 ## Arrays
 
@@ -628,7 +628,7 @@ There's another way that anonymous functions can be useful: it can be simultaneo
 })();
 ```
 
-For use-cases of IIFEs, you can read [emulating private methods with closures](/en-US/docs/Web/JavaScript/Closures#emulating_private_methods_with_closures).
+For use-cases of IIFEs, you can read [emulating private methods with closures](/en-US/docs/Web/JavaScript/Guide/Closures#emulating_private_methods_with_closures).
 
 ### Recursive functions
 
@@ -670,7 +670,7 @@ If you are used to functional programming, beware of the performance implication
 
 ### Functions are first-class objects
 
-JavaScript functions are first-class objects. This means that they can be assigned to variables, passed as arguments to other functions, and returned from other functions. In addition, JavaScript supports [closures](/en-US/docs/Web/JavaScript/Closures) out-of-the-box without explicit capturing, allowing you to conveniently apply functional programming styles.
+JavaScript functions are first-class objects. This means that they can be assigned to variables, passed as arguments to other functions, and returned from other functions. In addition, JavaScript supports [closures](/en-US/docs/Web/JavaScript/Guide/Closures) out-of-the-box without explicit capturing, allowing you to conveniently apply functional programming styles.
 
 ```js
 // Function returning function
@@ -740,7 +740,7 @@ For a detailed guide on various class features, you can read the [guide page](/e
 
 ## Asynchronous programming
 
-JavaScript is single-threaded by nature. There's no [paralleling](https://en.wikipedia.org/wiki/Parallel_computing); only [concurrency](https://en.wikipedia.org/wiki/Concurrent_computing). Asynchronous programming is powered by an [event loop](/en-US/docs/Web/JavaScript/Event_loop), which allows a set of tasks to be queued and polled for completion.
+JavaScript is single-threaded by nature. There's no [paralleling](https://en.wikipedia.org/wiki/Parallel_computing); only [concurrency](https://en.wikipedia.org/wiki/Concurrent_computing). Asynchronous programming is powered by an [event loop](/en-US/docs/Web/JavaScript/Reference/Execution_model), which allows a set of tasks to be queued and polled for completion.
 
 There are three idiomatic ways to write asynchronous code in JavaScript:
 
@@ -812,7 +812,7 @@ For more information, see the [modules guide page](/en-US/docs/Web/JavaScript/Gu
 
 Throughout this page, we've constantly mentioned that certain features are _language-level_ while others are _runtime-level_.
 
-JavaScript is a general-purpose scripting language. The [core language specification](/en-US/docs/Web/JavaScript/JavaScript_technologies_overview#javascript_the_core_language_ecmascript) focuses on pure computational logic. It doesn't deal with any input/output — in fact, without extra runtime-level APIs (most notably [`console.log()`](/en-US/docs/Web/API/console/log_static)), a JavaScript program's behavior is entirely unobservable.
+JavaScript is a general-purpose scripting language. The [core language specification](/en-US/docs/Web/JavaScript/Reference/JavaScript_technologies_overview#javascript_the_core_language_ecmascript) focuses on pure computational logic. It doesn't deal with any input/output — in fact, without extra runtime-level APIs (most notably [`console.log()`](/en-US/docs/Web/API/console/log_static)), a JavaScript program's behavior is entirely unobservable.
 
 A runtime, or a host, is something that feeds data to the JavaScript engine (the interpreter), provides extra global properties, and provides hooks for the engine to interact with the outside world. Module resolution, reading data, printing messages, sending network requests, etc. are all runtime-level operations. Since its inception, JavaScript has been adopted in various environments, such as browsers (which provide APIs like [DOM](/en-US/docs/Web/API/Document_Object_Model)), Node.js (which provides APIs like [file system access](https://nodejs.org/api/fs.html)), etc. JavaScript has been successfully integrated in web (which was its primary purpose), mobile apps, desktop apps, server-side apps, serverless, embedded systems, and more. While you learn about JavaScript core features, it's also important to understand host-provided features in order to put the knowledge to use. For example, you can read about all [web platform APIs](/en-US/docs/Web/API), which are implemented by browsers, and sometimes non-browsers.
 
@@ -822,7 +822,7 @@ This page offers a very basic insight into how various JavaScript features compa
 
 There are some essential parts of the language that we have omitted due to space and complexity, but you can explore on your own:
 
-- [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
-- [Closures](/en-US/docs/Web/JavaScript/Closures)
+- [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)
+- [Closures](/en-US/docs/Web/JavaScript/Guide/Closures)
 - [Regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions)
 - [Iteration](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators)

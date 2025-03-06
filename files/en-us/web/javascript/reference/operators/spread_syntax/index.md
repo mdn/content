@@ -52,14 +52,14 @@ const obj = { key1: "value1" };
 const array = [...obj]; // TypeError: obj is not iterable
 ```
 
-On the other hand, spreading in [object literals](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer) [enumerates](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties#traversing_object_properties) the own properties of the value. For typical arrays, all indices are enumerable own properties, so arrays can be spread into objects.
+On the other hand, spreading in [object literals](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer) [enumerates](/en-US/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties#traversing_object_properties) the own properties of the value. For typical arrays, all indices are enumerable own properties, so arrays can be spread into objects.
 
 ```js
 const array = [1, 2, 3];
 const obj = { ...array }; // { 0: 1, 1: 2, 2: 3 }
 ```
 
-All [primitives](/en-US/docs/Web/JavaScript/Data_structures#primitive_values) can be spread in objects. Only strings have enumerable own properties, and spreading anything else doesn't create properties on the new object.
+All [primitives](/en-US/docs/Web/JavaScript/Guide/Data_structures#primitive_values) can be spread in objects. Only strings have enumerable own properties, and spreading anything else doesn't create properties on the new object.
 
 ```js
 const obj = { ...true, ..."test", ...10 };

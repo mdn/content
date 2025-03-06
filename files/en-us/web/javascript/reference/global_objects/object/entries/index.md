@@ -127,7 +127,7 @@ Object.entries(obj).forEach(([key, value]) => {
 
 - [Polyfill of `Object.entries` in `core-js`](https://github.com/zloirock/core-js#ecmascript-object)
 - [es-shims polyfill of `Object.entries`](https://www.npmjs.com/package/object.entries)
-- [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.keys()")}}
 - {{jsxref("Object.values()")}}
 - {{jsxref("Object.prototype.propertyIsEnumerable()")}}

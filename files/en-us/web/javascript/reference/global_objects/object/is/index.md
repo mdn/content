@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Object.is
 
 {{JSRef}}
 
-The **`Object.is()`** static method determines whether two values are [the same value](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#same-value_equality_using_object.is).
+The **`Object.is()`** static method determines whether two values are [the same value](/en-US/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#same-value_equality_using_object.is).
 
 {{InteractiveExample("JavaScript Demo: Object.is()")}}
 
@@ -45,7 +45,7 @@ A boolean indicating whether or not the two arguments are the same value.
 
 ## Description
 
-`Object.is()` determines whether two values are [the same value](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#same-value_equality_using_object.is). Two values are the same if one of the following holds:
+`Object.is()` determines whether two values are [the same value](/en-US/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#same-value_equality_using_object.is). Two values are the same if one of the following holds:
 
 - both {{jsxref("undefined")}}
 - both [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null)
@@ -107,4 +107,4 @@ Object.is(NaN, Number.NaN); // true
 
 - [Polyfill of `Object.is` in `core-js`](https://github.com/zloirock/core-js#ecmascript-object)
 - [es-shims polyfill of `Object.is`](https://www.npmjs.com/package/object.is)
-- [Equality comparisons and sameness](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness)
+- [Equality comparisons and sameness](/en-US/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness)
