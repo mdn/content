@@ -13,7 +13,7 @@ The **`z-index`** [CSS](/en-US/docs/Web/CSS) property sets the z-order of a [pos
 
 For a positioned box (that is, one with any `position` other than `static`), the `z-index` property specifies:
 
-1. The stack level of the box in the current [stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context).
+1. The stack level of the box in the current [stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context).
 2. Whether the box establishes a local stacking context.
 
 ## Syntax
