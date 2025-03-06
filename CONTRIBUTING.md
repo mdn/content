@@ -1,10 +1,10 @@
 # MDN Web Docs contribution guide
 
-Thanks for taking the time to contribute to [MDN Web Docs](https://developer.mozilla.org)! :tada:
+Thanks for taking the time to contribute to [MDN Web Docs][]! :tada:
 
 This document covers project setup steps along with a set of guidelines for contributing to MDN Web Docs content.
 Everyone participating in this project is expected to follow our [Code of Conduct](https://github.com/mdn/content/blob/main/CODE_OF_CONDUCT.md), which means adhering to [Mozilla's Community Participation Guidelines](https://www.mozilla.org/en-US/about/governance/policies/participation/).
-If you want to jump right in, see [Getting started with MDN Web Docs][] for an overview of how to join, and the [Contribute page][] on MDN for a filtered list of tasks.
+If you want to jump right in, see [Getting started with MDN Web Docs][] for an overview of how to join, and the [Community resources][] on MDN.
 
 ## Getting started
 
@@ -20,7 +20,7 @@ We expect contributors to MDN to have some knowledge of web technologies before 
 We've put together relevant resources to get up to speed on specific topics before contributing:
 
 - **Open source:** If you're new to open source projects, see the [Open source etiquette][] page.
-- **Git and GitHub:** If you are unfamiliar with these, see the section [Getting ready to contribute][] to get pointers on where to start.
+- **Git and GitHub:** If you are unfamiliar with these, see the section [What do I need to get started?][] to get pointers on where to start.
 - **Web technologies:** HTML, CSS, JavaScript, and more are covered in our [Learn web development][] tutorials.
 - **MDN repositories:** To find out where everything lives in various MDN repositories, see our [MDN Web Docs repositories][] page.
 
@@ -222,7 +222,7 @@ If you have a [local checkout](#forking-and-cloning-the-repository) of the repos
 
 > [!NOTE]
 > Automatically formatting changes does not work for pull requests opened using the GitHub Web UI as described in the ["Simple changes" section](#simple-changes).
-> This may result in failed status checks on pull requests. If you're not sure about how to fix this, [get in touch with us][]! for help.
+> This may result in failed status checks on pull requests. If you're not sure about how to fix this, [get in touch with us][] for help.
 
 ### Adding a new document
 
@@ -419,14 +419,21 @@ There are some important rules of etiquette to remember that will help during th
 When contributing to the content you agree to license your contributions
 according to [our license](LICENSE.md).
 
-[contribute page]: https://developer.mozilla.org/en-US/docs/MDN/Community/Contributing
-[getting started with mdn web docs]: https://developer.mozilla.org/en-US/docs/MDN/Community/Contributing/Getting_started
-[getting ready to contribute]: https://developer.mozilla.org/en-US/docs/MDN/Community/Contributing/Getting_started#getting_ready_to_contribute
-[how to write in markdown]: https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN
-[javascript landing page]: https://developer.mozilla.org/en-US/docs/Web/JavaScript
-[learn web development]: https://developer.mozilla.org/en-US/docs/Learn
+<!---
+Reference links syntax is used here because of linting markdown files ("fqdn-moz-links" rule).
+See https://github.com/mdn/content/pull/21432 and https://github.com/mdn/content/pull/38369.
+It can be replaced with the normal links syntax after successfully closing https://github.com/DavidAnson/markdownlint/issues/673.
+-->
+
+[mdn web docs]: https://developer.mozilla.org
+[getting started with mdn web docs]: https://developer.mozilla.org/en-US/docs/MDN/Community/Getting_started
+[community resources]: https://developer.mozilla.org/en-US/docs/MDN/Community
 [writing guidelines]: https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines
-[open source etiquette]: https://developer.mozilla.org/en-US/docs/MDN/Community/Open_source_etiquette
-[mdn web docs repositories]: https://developer.mozilla.org/en-US/docs/MDN/Community/Contributing/Our_repositories
 [writing style guide]: https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines/Writing_style_guide
+[how to write in markdown]: https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN
+[open source etiquette]: https://developer.mozilla.org/en-US/docs/MDN/Community/Open_source_etiquette
+[what do i need to get started?]: https://developer.mozilla.org/en-US/docs/MDN/Community/Getting_started#what_do_i_need_to_get_started
+[learn web development]: https://developer.mozilla.org/en-US/docs/Learn_web_development
+[mdn web docs repositories]: https://developer.mozilla.org/en-US/docs/MDN/Community/Our_repositories
+[javaScript landing page]: https://developer.mozilla.org/en-US/docs/Web/JavaScript
 [get in touch with us]: https://developer.mozilla.org/en-US/docs/MDN/Community/Communication_channels

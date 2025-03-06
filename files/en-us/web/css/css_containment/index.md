@@ -50,7 +50,7 @@ Container queries are similar to dimension [media queries](/en-US/docs/Web/CSS/C
 
 ## Related concepts
 
-- [Layout and the containing block](/en-US/docs/Web/CSS/Containing_block)
+- [Layout and the containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block)
 - [Block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context)
 
 - [CSS conditional rules](/en-US/docs/Web/CSS/CSS_conditional_rules) module

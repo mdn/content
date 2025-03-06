@@ -7,7 +7,7 @@ browser-compat: api.StorageAccessHandle
 
 {{APIRef("Storage Access API")}}
 
-The **`StorageAccessHandle`** interface represents access to [unpartitioned state](/en-US/docs/Web/Privacy/State_Partitioning#state_partitioning) granted by a call to {{domxref("Document.requestStorageAccess()")}}.
+The **`StorageAccessHandle`** interface represents access to [unpartitioned state](/en-US/docs/Web/Privacy/Guides/State_Partitioning#state_partitioning) granted by a call to {{domxref("Document.requestStorageAccess()")}}.
 
 ## Instance properties
 

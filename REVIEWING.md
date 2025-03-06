@@ -204,7 +204,13 @@ for all their help.
 - [@vkWeb](https://github.com/vkWeb/)
 - [@Ryuno-Ki](https://github.com/Ryuno-Ki)
 
-[get in touch with us]: https://developer.mozilla.org/en-US/docs/MDN/Community/Contributing/Getting_started#what_can_i_do_to_help
+<!---
+Reference links syntax is used here because of linting markdown files ("fqdn-moz-links" rule).
+See https://github.com/mdn/content/pull/21432 and https://github.com/mdn/content/pull/38369.
+It can be replaced with the normal links syntax after successfully closing https://github.com/DavidAnson/markdownlint/issues/673.
+-->
+
 [mdn code example guidelines]: https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide
 [mdn writing style guide]: https://developer.mozilla.org/en-US/docs/MDN/Guidelines/Writing_style_guide
-[MDN Web Docs chat rooms]: https://developer.mozilla.org/en-US/docs/MDN/Community/Communication_channels
+[mdn web docs chat rooms]: https://developer.mozilla.org/en-US/docs/MDN/Community/Communication_channels
+[get in touch with us]: https://developer.mozilla.org/en-US/docs/MDN/Community/Getting_started#what_can_i_do_to_help

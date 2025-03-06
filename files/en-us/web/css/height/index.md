@@ -36,7 +36,6 @@ height: min-content;
 height: fit-content;
 height: fit-content(20em);
 height: auto;
-height: minmax(min-content, anchor-size(width));
 height: stretch;
 
 /* Global values */
@@ -52,7 +51,7 @@ height: unset;
 - {{cssxref("&lt;length&gt;")}}
   - : Defines the height as a distance value.
 - {{cssxref("&lt;percentage&gt;")}}
-  - : Defines the height as a percentage of the [containing block](/en-US/docs/Web/CSS/Containing_block)'s height.
+  - : Defines the height as a percentage of the [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block)'s height.
 - `auto`
   - : The browser will calculate and select a height for the specified element.
 - `max-content`
@@ -65,7 +64,7 @@ height: unset;
   - : Uses the fit-content formula with the available space replaced by the specified argument, i.e. `min(max-content, max(min-content, <length-percentage>))`.
 - `stretch`
 
-  - : Sets the height of the element's [margin box](/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model#parts_of_a_box) to the height of its [containing block](/en-US/docs/Web/CSS/Containing_block#identifying_the_containing_block). It attempts to make the margin box fill the available space in the containing block, so in a way behaving similar to `100%` but applying the resulting size to the margin box rather than the box determined by [box-sizing](/en-US/docs/Web/CSS/box-sizing).
+  - : Sets the height of the element's [margin box](/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model#parts_of_a_box) to the height of its [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block#identifying_the_containing_block). It attempts to make the margin box fill the available space in the containing block, so in a way behaving similar to `100%` but applying the resulting size to the margin box rather than the box determined by [box-sizing](/en-US/docs/Web/CSS/box-sizing).
 
     > [!NOTE]
     > To check aliases used by browsers for the `stretch` value and its implementation status, see the [Browser compatibility](#browser_compatibility) section.

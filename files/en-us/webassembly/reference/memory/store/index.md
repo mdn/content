@@ -16,7 +16,40 @@ For example, you can store a 32-bit number into an 8-bit slot in memory using `i
 If the number doesn't fit in the narrower number type it will wrap.
 All the variants are [listed below](#instructions_and_opcodes).
 
-{{EmbedInteractiveExample("pages/wat/store.html", "tabbed-taller")}}
+{{InteractiveExample("Wat Demo: store", "tabbed-taller")}}
+
+```wat interactive-example
+(module
+
+  (memory $memory 1)
+  (export "memory" (memory $memory))
+
+  (func (export "store_in_mem") (param $num i32)
+    i32.const 0
+    local.get $num
+
+    ;; store $num at position 0
+    i32.store
+  )
+
+)
+```
+
+```js interactive-example
+const url = "{%wasm-url%}";
+const result = await WebAssembly.instantiateStreaming(fetch(url));
+
+const store_in_mem = result.instance.exports.store_in_mem;
+const memory = result.instance.exports.memory;
+
+store_in_mem(100);
+
+const dataView = new DataView(memory.buffer);
+const first_number_in_mem = dataView.getUint32(0, true);
+
+console.log(first_number_in_mem);
+// Expected output: 100
+```
 
 ## Syntax
 

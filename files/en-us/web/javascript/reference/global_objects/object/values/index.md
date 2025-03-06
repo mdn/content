@@ -9,7 +9,18 @@ browser-compat: javascript.builtins.Object.values
 
 The **`Object.values()`** static method returns an array of a given object's own enumerable string-keyed property values.
 
-{{EmbedInteractiveExample("pages/js/object-values.html")}}
+{{InteractiveExample("JavaScript Demo: Object.values()")}}
+
+```js interactive-example
+const object1 = {
+  a: "somestring",
+  b: 42,
+  c: false,
+};
+
+console.log(Object.values(object1));
+// Expected output: Array ["somestring", 42, false]
+```
 
 ## Syntax
 
@@ -87,6 +98,7 @@ console.log(Object.values(100)); // []
 ## See also
 
 - [Polyfill of `Object.values` in `core-js`](https://github.com/zloirock/core-js#ecmascript-object)
+- [es-shims polyfill of `Object.values`](https://www.npmjs.com/package/object.values)
 - [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.keys()")}}
 - {{jsxref("Object.entries()")}}

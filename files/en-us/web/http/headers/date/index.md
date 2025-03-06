@@ -19,7 +19,7 @@ The HTTP **`Date`** {{Glossary("request header", "request")}} and {{Glossary("re
       </td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>Yes</td>
     </tr>
   </tbody>
@@ -67,7 +67,7 @@ Date: Tue, 29 Oct 2024 16:56:32 GMT
 
 ### Attempting to set the field value in JavaScript
 
-The `Date` header is a {{Glossary("forbidden header name")}}, so this code cannot set the message `Date` field:
+The `Date` header is a {{Glossary("Forbidden request header")}}, so this code cannot set the message `Date` field:
 
 ```js example-bad
 fetch("https://httpbin.org/get", {

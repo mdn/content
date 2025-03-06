@@ -6,12 +6,12 @@ page-type: guide
 
 {{LearnSidebar}}
 
-This article provides a simple static file server built with pure [Node.js](https://nodejs.org/en/) without the use of a framework.
-The current state of Node.js is such that almost everything we needed is provided by the inbuilt APIs and just a few lines of code.
+This article shows a static file server built in [Node.js](https://nodejs.org/en/) without using any frameworks.
+The current state of Node.js is such that almost everything we need for the static file server is provided by built-in APIs and a few lines of code.
 
 ## Example
 
-A simple static file server built with Node.js:
+A static file server built with Node.js:
 
 ```js
 import * as fs from "node:fs";
@@ -26,7 +26,7 @@ const MIME_TYPES = {
   js: "application/javascript",
   css: "text/css",
   png: "image/png",
-  jpg: "image/jpg",
+  jpg: "image/jpeg",
   gif: "image/gif",
   ico: "image/x-icon",
   svg: "image/svg+xml",

@@ -21,6 +21,8 @@ An object matching:
 - [`EcKeyGenParams`](/en-US/docs/Web/API/EcKeyGenParams) if the algorithm is any of the EC variants.
 - [`HmacKeyGenParams`](/en-US/docs/Web/API/HmacKeyGenParams) if the algorithm is HMAC.
 
+For `RsaHashedKeyGenParams` and `HmacKeyGenParams`, the `hash` property is always in the object form (with a property called `name`), not the string form.
+
 ## Examples
 
 ```js

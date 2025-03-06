@@ -227,7 +227,7 @@ And to test:
 ifHasChanged("your-page.html", function (modified, visit) {
   console.log(
     `The page '${this.filepath}' has been changed on ${new Date(
-      nModified,
+      modified,
     ).toLocaleString()}!`,
   );
 });
@@ -265,7 +265,7 @@ The recommended way to enable cross-site scripting is to use the `Access-Control
 
 ### XMLHttpRequests being stopped
 
-If you conclude with an XMLHttpRequest receiving `status=0` and `statusText=null`, this means the request was not allowed to be performed. It was [`UNSENT`](https://xhr.spec.whatwg.org/#dom-xmlhttprequest-unsent). A likely cause for this is when the [`XMLHttpRequest` origin](https://www.w3.org/TR/2010/CR-XMLHttpRequest-20100803/#xmlhttprequest-origin) (at the creation of the XMLHttpRequest) has changed when the XMLHttpRequest is subsequently `open()`. This case can happen, for example, when one has an XMLHttpRequest that gets fired on an onunload event for a window, the expected XMLHttpRequest is created when the window to be closed is still there, and finally sending the request (in other words, `open()`) when this window has lost its focus and another window gains focus. The most effective way to avoid this problem is to set a listener on the new window's {{domxref("Element/DOMActivate_event", "DOMActivate")}} event which is set once the terminated window has its {{domxref("Window/unload_event", "unload")}} event triggered.
+If you conclude with an XMLHttpRequest receiving `status=0` and `statusText=null`, this means the request was not allowed to be performed. It was [`UNSENT`](https://xhr.spec.whatwg.org/#dom-xmlhttprequest-unsent). A likely cause for this is when the `XMLHttpRequest` origin (at the creation of the XMLHttpRequest) has changed when the XMLHttpRequest is subsequently `open()`. This case can happen, for example, when one has an XMLHttpRequest that gets fired on an onunload event for a window, the expected XMLHttpRequest is created when the window to be closed is still there, and finally sending the request (in other words, `open()`) when this window has lost its focus and another window gains focus. The most effective way to avoid this problem is to set a listener on the new window's {{domxref("Element/DOMActivate_event", "DOMActivate")}} event which is set once the terminated window has its {{domxref("Window/unload_event", "unload")}} event triggered.
 
 ## Specifications
 

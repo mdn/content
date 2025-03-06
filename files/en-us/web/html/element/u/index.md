@@ -12,7 +12,26 @@ The **`<u>`** [HTML](/en-US/docs/Web/HTML) element represents a span of inline t
 > [!WARNING]
 > This element used to be called the "Underline" element in older versions of HTML, and is still sometimes misused in this way. To underline text, you should instead apply a style that includes the CSS {{cssxref("text-decoration")}} property set to `underline`.
 
-{{EmbedInteractiveExample("pages/tabbed/u.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;u&gt;", "tabbed-shorter")}}
+
+<!-- cSpell:ignore speling corect -->
+
+```html interactive-example
+<p>
+  You could use this element to highlight <u>speling</u> mistakes, so the writer
+  can <u>corect</u> them.
+</p>
+```
+
+```css interactive-example
+p {
+  margin: 0;
+}
+
+u {
+  text-decoration: #f00 wavy underline;
+}
+```
 
 See the [Usage notes](#usage_notes) section for further details on when it's appropriate to use `<u>` and when it isn't.
 

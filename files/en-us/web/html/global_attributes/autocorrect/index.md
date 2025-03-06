@@ -39,7 +39,7 @@ The {{htmlelement("input")}} element types that don't support auto-correction al
 For all other editable elements, setting any other value than those listed above is always treated as `on`.
 The default value for elements that are not nested inside a `<form>` is `on`.
 
-When nested in a `<form>`, the following elements inherit their their default value of `autocorrect` from the form if it has been set: {{htmlelement("button")}}, {{htmlelement("fieldset")}}, {{htmlelement("input")}}, {{htmlelement("output")}}, {{htmlelement("select")}}, and {{htmlelement("textarea")}}.
+When nested in a `<form>`, the following elements inherit their default value of `autocorrect` from the form if it has been set: {{htmlelement("button")}}, {{htmlelement("fieldset")}}, {{htmlelement("input")}}, {{htmlelement("output")}}, {{htmlelement("select")}}, and {{htmlelement("textarea")}}.
 
 ## Examples
 
@@ -155,3 +155,8 @@ If the device has a substitute for the entered word, this will be used to autoco
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- All [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+- [`spellcheck`](/en-US/docs/Web/HTML/Global_attributes/spellcheck).

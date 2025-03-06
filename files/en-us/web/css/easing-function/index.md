@@ -7,7 +7,7 @@ browser-compat: css.types.easing-function
 
 {{CSSRef}}
 
-The **`<easing-function>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) represents a mathematical function that describes the rate at which a value changes.
+The **`<easing-function>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) represents a mathematical function that describes the rate at which a value changes.
 
 This transition between two values may be applied in different situations. It may be used to describe how fast values change during animations. This lets you vary the animation's speed over the course of its duration. You can specify an easing function for CSS [transition](/en-US/docs/Web/CSS/transition-timing-function) and [animation](/en-US/docs/Web/CSS/animation-timing-function) properties.
 
@@ -112,7 +112,7 @@ An `<easing-function>` can be one of the following types:
         ![Two graphs of Input progress to Output progress. In the step-start graph, an unfilled circle represents the origin point (0, 0), with a horizontal line extending from (0, 1) to (1, 1). In the step-end graph, a horizontal line extends from the origin to (1, 0), with an unfilled circle at (1,0) and a solid circle at (1, 1).](step.svg)
 
     - {{cssxref("easing-function/steps", "steps()")}}
-      - : Creates a stair-shaped curve using an {{cssxref("&lt;integer&gt;")}} to specify the number of intervals and an optional optional keyword to control the timing of jumps.
+      - : Creates a stair-shaped curve using an {{cssxref("&lt;integer&gt;")}} to specify the number of intervals and an optional keyword to control the timing of jumps.
 
 ## Formal syntax
 

@@ -316,7 +316,10 @@
       {
         "if": {
           "properties": {
-            "slug": { "type": "string", "pattern": "^Web/Manifest/" }
+            "slug": {
+              "type": "string",
+              "pattern": "^Web/Progressive_web_apps/Manifest/"
+            }
           }
         },
         "then": {
@@ -367,7 +370,8 @@
                 "landing-page",
                 "webdriver-command",
                 "webdriver-capability",
-                "webdriver-error"
+                "webdriver-error",
+                "reference"
               ]
             }
           }
@@ -501,6 +505,21 @@
         },
         "then": {
           "properties": { "page-type": { "enum": ["http-cors-error"] } }
+        },
+        "else": false
+      },
+      {
+        "if": {
+          "properties": {
+            "slug": { "type": "string", "pattern": "^Web/URI" }
+          }
+        },
+        "then": {
+          "properties": {
+            "page-type": {
+              "enum": ["guide", "landing-page", "reference"]
+            }
+          }
         },
         "else": false
       },

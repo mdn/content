@@ -7,11 +7,36 @@ browser-compat: css.types.counter
 
 {{CSSRef}}
 
-The **`counter()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) returns a string representing the current value of the named counter, if there is one.
+The **`counter()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) returns a string representing the current value of the named counter, if there is one.
 
 The `counter()` function is generally used within [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) through the {{cssxref("content")}} property but, theoretically, it can be used wherever a [`<string>`](/en-US/docs/Web/CSS/string) value is supported.
 
-{{EmbedInteractiveExample("pages/tabbed/function-counter.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: counter()", "tabbed-shorter")}}
+
+```css interactive-example
+.double-list {
+  counter-reset: count -1;
+}
+
+.double-list li {
+  counter-increment: count 2;
+}
+
+.double-list li::marker {
+  content: counter(count, decimal) ") ";
+}
+```
+
+```html interactive-example
+<p>Best Dynamic Duos in Sports:</p>
+<ol class="double-list">
+  <li>Simone Biles + Jonathan Owens</li>
+  <li>Serena Williams + Venus Williams</li>
+  <li>Aaron Judge + Giancarlo Stanton</li>
+  <li>LeBron James + Dwyane Wade</li>
+  <li>Xavi Hernandez + Andres Iniesta</li>
+</ol>
+```
 
 ## Syntax
 

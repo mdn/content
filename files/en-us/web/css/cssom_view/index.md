@@ -28,34 +28,134 @@ The **CSSOM view** module lets you manipulate the visual view of a document, inc
 - {{domxref("MediaQueryList")}} events
   - {{domxref("MediaQueryList/change_event", "change")}}
 
+### Glossary
+
+- {{glossary("Viewport")}}
+- {{glossary("Layout viewport")}}
+- {{glossary("Visual viewport")}}
+
 ### Interfaces
 
 - {{domxref("MediaQueryList")}}
+  - {{domxref("MediaQueryList.matches", "matches")}}
+  - {{domxref("MediaQueryList.media", "media")}}
+  - {{domxref("MediaQueryList.addListener", "addListener()")}}
+  - {{domxref("MediaQueryList.removeListener", "removeListener()")}}
+  - {{domxref("MediaQueryList.onchange", "onchange")}}
 - {{domxref("MediaQueryListEvent")}}
+  - {{domxref("MediaQueryListEvent.media", "media")}}
+  - {{domxref("MediaQueryListEvent.matches", "matches")}}
 - {{domxref("Screen")}}
+  - {{domxref("Screen.availHeight", "availHeight")}}
+  - {{domxref("Screen.availWidth", "availWidth")}}
+  - {{domxref("Screen.colorDepth", "colorDepth")}}
+  - {{domxref("Screen.height", "height")}}
+  - {{domxref("Screen.pixelDepth", "pixelDepth")}}
+  - {{domxref("Screen.width", "width")}}
 - {{domxref("CaretPosition")}}
+  - {{domxref("CaretPosition.offsetNode", "offsetNode")}}
+  - {{domxref("CaretPosition.offset", "offset")}}
+  - {{domxref("CaretPosition.getClientRect", "getClientRect()")}}
 - {{domxref("VisualViewport")}}
+  - {{domxref("VisualViewport.height", "height")}}
+  - {{domxref("VisualViewport.offsetLeft", "offsetLeft")}}
+  - {{domxref("VisualViewport.offsetTop", "offsetTop")}}
+  - {{domxref("VisualViewport.onresize", "onresize")}}
+  - {{domxref("VisualViewport.onscroll", "onscroll")}}
+  - {{domxref("VisualViewport.onscrollend", "onscrollend")}}
+  - {{domxref("VisualViewport.pageLeft", "pageLeft")}}
+  - {{domxref("VisualViewport.pageTop", "pageTop")}}
+  - {{domxref("VisualViewport.scale", "scale")}}
+  - {{domxref("VisualViewport.width", "width")}}
 
-The following interfaces are not defined by this module but add some extensions.
+### Inteface extensions
+
+This module adds properties and methods to interfaces defined in other specifications.
 
 - {{domxref("Window")}}
+  - {{domxref("Window.devicePixelRatio", "devicePixelRatio")}}
+  - {{domxref("Window.innerHeight", "innerHeight")}}
+  - {{domxref("Window.innerWidth", "innerWidth")}}
+  - {{domxref("Window.matchMedia", "matchMedia()")}}
+  - {{domxref("Window.moveBy", "moveBy()")}}
+  - {{domxref("Window.moveTo", "moveTo()")}}
+  - {{domxref("Window.outerHeight", "outerHeight")}}
+  - {{domxref("Window.outerWidth", "outerWidth")}}
+  - `pageXOffset` (see {{domxref("Window.scrollX", "scrollX")}})
+  - `pageYOffset` (see {{domxref("Window.scrollY", "scrollY")}})
+  - {{domxref("Window.resizeBy", "resizeBy()")}}
+  - {{domxref("Window.resizeTo", "resizeTo()")}}
+  - {{domxref("Window.screen", "screen")}}
+  - {{domxref("Window.screenLeft", "screenLeft")}}
+  - {{domxref("Window.screenTop", "screenTop")}}
+  - {{domxref("Window.screenX", "screenX")}}
+  - {{domxref("Window.screenY", "screenY")}}
+  - {{domxref("Window.visualViewport", "visualViewport")}}
+  - {{domxref("Window.scroll", "scroll()")}}
+  - {{domxref("Window.scrollBy", "scrollBy()")}}
+  - {{domxref("Window.scrollTo", "scrollTo()")}}
+  - {{domxref("Window.scrollX", "scrollX")}}
+  - {{domxref("Window.scrollY", "scrollY")}}
 - {{domxref("Document")}}
+  - {{domxref("Document.elementFromPoint", "elementFromPoint()")}}
+  - {{domxref("Document.caretPositionFromPoint", "caretPositionFromPoint()")}}
+  - {{domxref("Document.scrollingElement", "scrollingElement")}}
 - {{domxref("Element")}}
+  - {{domxref("Element.checkVisibility", "checkVisibility()")}}
+  - {{domxref("Element.clientHeight", "clientHeight")}}
+  - {{domxref("Element.clientLeft", "clientLeft")}}
+  - {{domxref("Element.clientTop", "clientTop")}}
+  - {{domxref("Element.clientWidth", "clientWidth")}}
+  - {{domxref("Element.currentCSSZoom", "currentCSSZoom")}}
+  - {{domxref("Element.getBoundingClientRect", "getBoundingClientRect()")}}
+  - {{domxref("Element.getClientRects", "getClientRects()")}}
+  - {{domxref("Element.scroll", "scroll()")}}
+  - {{domxref("Element.scrollBy", "scrollBy()")}}
+  - {{domxref("Element.scrollHeight", "scrollHeight")}}
+  - {{domxref("Element.scrollIntoView", "scrollIntoView()")}}
+  - {{domxref("Element.scrollLeft", "scrollLeft")}}
+  - {{domxref("Element.scrollTo", "scrollTo()")}}
+  - {{domxref("Element.scrollTop", "scrollTop")}}
+  - {{domxref("Element.scrollWidth", "scrollWidth")}}
 - {{domxref("HTMLElement")}}
+  - {{domxref("HTMLElement.offsetHeight", "offsetHeight")}}
+  - {{domxref("HTMLElement.offsetLeft", "offsetLeft")}}
+  - {{domxref("HTMLElement.offsetParent", "offsetParent")}}
+  - {{domxref("HTMLElement.offsetTop", "offsetTop")}}
+  - {{domxref("HTMLElement.offsetWidth", "offsetWidth")}}
 - {{domxref("HTMLImageElement")}}
+  - {{domxref("HTMLImageElement.x", "x")}}
+  - {{domxref("HTMLImageElement.y", "y")}}
 - {{domxref("Range")}}
+  - {{domxref("Range.getBoundingClientRect", "getBoundingClientRect()")}}
+  - {{domxref("Range.getClientRects", "getClientRects()")}}
 - {{domxref("MouseEvent")}}
-- {{domxref("Text")}}
-- {{domxref("CSSPseudoElement")}}
+  - {{domxref("MouseEvent.clientX", "clientX")}}
+  - {{domxref("MouseEvent.clientY", "clientY")}}
+  - {{domxref("MouseEvent.offsetX", "offsetX")}}
+  - {{domxref("MouseEvent.offsetY", "offsetY")}}
+  - {{domxref("MouseEvent.pageX", "pageX")}}
+  - {{domxref("MouseEvent.pageY", "pageY")}}
+  - {{domxref("MouseEvent.screenY", "screenY")}}
+  - {{domxref("MouseEvent.x", "x")}}
+  - {{domxref("MouseEvent.y", "y")}}
+
+This module define geometric utility methods which will apply to the {{domxref("Text")}}, {{domxref("Element")}}, {{domxref("CSSPseudoElement")}}, and {{domxref("Document")}} interfaces. These `GeometryUtils` features are not yet implemented in any browsers.
 
 ## Guides
 
 - [Coordinate systems](/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems)
-  - : A guide to the coordinate systems used to specify the position of a location in a display context, whether that context is a window on a monitor, a viewport on a mobile device, or a position on a sheet of paper when printing.
+  - : The coordinate systems used to specify a position in a display context such as a window on a monitor, a viewport on a mobile device, or a position on a sheet of paper when printing.
+- [Viewport concepts](/en-US/docs/Web/CSS/CSSOM_view/Viewport_concepts)
+  - : The concept of the viewport — what it is, its impact in terms of CSS, SVG, and mobile devices — and the difference between the visual viewport and the layout viewport.
 
 ## Related concepts
 
-- {{glossary("CSSOM")}} glossary term
+- {{cssxref("zoom")}}
+- {{glossary("CSSOM")}}
+- {{glossary("CSS pixel")}}
+- {{glossary("Scroll container")}}
+- {{htmlelement("meta")}}
 
 ## Specifications
 
@@ -63,4 +163,7 @@ The following interfaces are not defined by this module but add some extensions.
 
 ## See also
 
-- [CSS Object Model (CSSOM)](/en-US/docs/Web/API/CSS_Object_Model) as Web API
+- [CSS Object Model (CSSOM)](/en-US/docs/Web/API/CSS_Object_Model) API
+- [CSS overflow](/en-US/docs/Web/CSS/CSS_overflow) module
+- [CSS overscroll behavior](/en-US/docs/Web/CSS/CSS_overscroll_behavior) module
+- [CSS scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap) module

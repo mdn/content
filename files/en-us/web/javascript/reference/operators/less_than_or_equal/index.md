@@ -9,7 +9,22 @@ browser-compat: javascript.operators.less_than_or_equal
 
 The **less than or equal (`<=`)** operator returns `true` if the left operand is less than or equal to the right operand, and `false` otherwise.
 
-{{EmbedInteractiveExample("pages/js/expressions-less-than-or-equal.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Less than or equal operator")}}
+
+```js interactive-example
+console.log(5 <= 3);
+// Expected output: false
+
+console.log(3 <= 3);
+// Expected output: true
+
+// Compare bigint to number
+console.log(3n <= 5);
+// Expected output: true
+
+console.log("aa" <= "ab");
+// Expected output: true
+```
 
 ## Syntax
 

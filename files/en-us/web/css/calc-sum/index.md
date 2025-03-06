@@ -7,7 +7,7 @@ browser-compat: css.types.calc-sum
 
 {{CSSRef}}
 
-The **`<calc-sum>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) represents an expression which performs a calculation in any [CSS math function](/en-US/docs/Web/CSS/CSS_Functions#math_functions). The expression executes a basic arithmetic operation of addition and subtraction between two values.
+The **`<calc-sum>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) represents an expression which performs a calculation in any [CSS math function](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions#math_functions). The expression executes a basic arithmetic operation of addition and subtraction between two values.
 
 ## Syntax
 

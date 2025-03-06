@@ -7,7 +7,26 @@ sidebar: webassemblysidebar
 
 The **`neg`** instructions, short for _negate_, are used to negate a number. That is, turn a positive number into a negative number and a negative number into a positive number.
 
-{{EmbedInteractiveExample("pages/wat/neg.html", "tabbed-standard")}}
+{{InteractiveExample("Wat Demo: neg", "tabbed-standard")}}
+
+```wat interactive-example
+(module
+  (import "console" "log" (func $log (param f32)))
+  (func $main
+
+    f32.const 10 ;; load a number onto the stack
+    f32.neg ;; negate the values
+    call $log ;; log the result
+
+  )
+  (start $main)
+)
+```
+
+```js interactive-example
+const url = "{%wasm-url%}";
+await WebAssembly.instantiateStreaming(fetch(url), { console });
+```
 
 ## Syntax
 

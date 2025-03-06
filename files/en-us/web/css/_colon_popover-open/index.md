@@ -36,7 +36,7 @@ By default, popovers appear in the middle of the viewport. The default styling i
 }
 ```
 
-To override the default styles and get the popover to appear somewhere else on your viewport, you could need to override the above styles with something like this:
+To override the default styles and get the popover to appear somewhere else on your viewport, you could override the above styles with something like this:
 
 ```css
 :popover-open {

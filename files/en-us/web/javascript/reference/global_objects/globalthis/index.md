@@ -9,7 +9,16 @@ browser-compat: javascript.builtins.globalThis
 
 The **`globalThis`** global property contains the [global `this`](/en-US/docs/Web/JavaScript/Reference/Operators/this#global_context) value, which is usually akin to the [global object](/en-US/docs/Glossary/Global_object).
 
-{{EmbedInteractiveExample("pages/js/globalprops-globalthis.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Standard built-in objects - globalThis", "shorter")}}
+
+```js interactive-example
+function canMakeHTTPRequest() {
+  return typeof globalThis.XMLHttpRequest === "function";
+}
+
+console.log(canMakeHTTPRequest());
+// Expected output (in a browser): true
+```
 
 ## Value
 
@@ -111,4 +120,5 @@ if (typeof globalThis.Intl === "undefined") {
 ## See also
 
 - [Polyfill of `globalThis` in `core-js`](https://github.com/zloirock/core-js#ecmascript-globalthis)
+- [es-shims polyfill of `globalThis`](https://www.npmjs.com/package/globalthis)
 - {{jsxref("Operators/this", "this")}}
