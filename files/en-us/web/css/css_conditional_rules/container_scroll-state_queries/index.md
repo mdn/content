@@ -326,7 +326,7 @@ The `value` in this case indicates the direction you are testing the element's a
 - `inline`: Tests whether the container is snapping to its scroll-snap container ancestor in the inline direction.
 - `y`: Tests whether the container is snapping to its scroll-snap container ancestor in both directions.
 
-To evaluate a container with a non-`none` `snapped` scroll-state query, it must be a container with a scroll container ancestor, that is, the ancestor has a {{cssxref("scroll-snap-type")}} value other than `none`. `snapped: none` queries will match even when there is no scroll container ancestor.
+To evaluate a container with a non-`none` `snapped` scroll-state query, it must be a container with a scroll-snap container ancestor, that is, the ancestor has a {{cssxref("scroll-snap-type")}} value other than `none`. The container query `scroll-state(snapped: none)` matches scroll-state containers that do not have a scroll container ancestor.
 
 Evaluation will occur when the [`scrollsnapchanging`](/en-US/docs/Web/API/Element/scrollsnapchanging_event) event fires on the scroll snap container.
 
