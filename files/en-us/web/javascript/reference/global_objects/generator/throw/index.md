@@ -35,7 +35,10 @@ If the thrown exception is caught by a [`try...catch`](/en-US/docs/Web/JavaScrip
 
 ### Exceptions
 
-If the thrown exception is not caught by a `try...catch`, the `exception` passed to `throw()` will be thrown out from the generator function.
+- {{jsxref("TypeError")}}
+  - : Thrown if the generator is already running.
+
+If the `exception` is not caught by a `try...catch` within the generator function, it is also thrown to the caller of `throw()`.
 
 ## Description
 
