@@ -322,9 +322,9 @@ Relevant only when [scroll snapping](/en-US/docs/Web/CSS/CSS_scroll_snap) is imp
 
 The `value` in this case indicates the direction you are testing the element's ability to snap in, for example:
 
-- `x`: Tests whether the container is snapping horizontally to its ancestor.
-- `inline`: Tests whether the container is snapping to its ancestor in the inline direction.
-- `y`: Tests whether the container is snapping to its ancestor in both directions.
+- `x`: Tests whether the container is snapping horizontally to its scroll-snap container ancestor.
+- `inline`: Tests whether the container is snapping to its scroll-snap container ancestor in the inline direction.
+- `y`: Tests whether the container is snapping to its scroll-snap container ancestor in both directions.
 
 To evaluate a container with a non-`none` `snapped` scroll-state query, it must be a container with a scroll container ancestor, that is, the ancestor has a {{cssxref("scroll-snap-type")}} value other than `none`. `snapped: none` queries will match even when there is no scroll container ancestor.
 
