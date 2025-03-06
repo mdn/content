@@ -300,7 +300,7 @@ html {
 }
 ```
 
-Next, we define a {{cssxref("@container")}} block that sets the container name we are targetting with this query, and the query itself — `scrollable: top`. This query applies the rules contained inside the block only if the `<html>` element can be scrolled towards its top edge — in other words, if has previously been scrolled downwards. If that is the case, we apply `translate: 0px 0px` to our `.back-to-top` link, which moves it back on-screen.
+Next, we define a {{cssxref("@container")}} block that sets the container name targeted by this query, and the query itself — `scrollable: top`. This query applies the rules contained inside the block only if the `<html>` element can be scrolled toward its top edge — in other words, if the container has previously been scrolled downwards. If that is the case, `translate: 0 0` is applied to the `.back-to-top` link, which transitions it back on-screen.
 
 ```css live-sample___scrollable
 @container scroller scroll-state(scrollable: top) {
