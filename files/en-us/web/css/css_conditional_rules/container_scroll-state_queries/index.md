@@ -312,9 +312,9 @@ Next, we define a {{cssxref("@container")}} block that sets the container name t
 
 ### Result
 
-The rendered result is shown below. Try scrolling the document down, and note how the "back-to-top" link appears as a result, animating smoothly from the right side of the viewport due to the set `transition`. If you scroll back to the top by activating the link or manually scrolling, the "back-to-top" link transitions off-screen.
-
 {{EmbedLiveSample("scrollable", "100%", "400px")}}
+
+Try scrolling the document down, and note how the "back-to-top" link appears as a result, animating smoothly from the right side of the viewport due to the set `transition`. If you scroll back to the top by activating the link or manually scrolling, the "back-to-top" link transitions off-screen.
 
 ## Using `snapped` queries
 
