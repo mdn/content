@@ -29,7 +29,9 @@ To establish a container element as a scroll-state query container, set the {{cs
 }
 ```
 
-You can then create a {{cssxref("@container")}} block that specifies the query (in this case, whether the container can be scrolled towards its top edge), the rules that are applied to children of the container if the test passes, and optionally, the `container-name` of the container(s) you want to query (`my-container`, in this case). If you don't specify a `container-name`, the container query will be applied to all scroll-state query containers on the page.
+You can then create a {{cssxref("@container")}} block that specifies the query, the rules that are applied to children of the container if the test passes, and optionally, the `container-name` of the container(s) you want to query. If you don't specify a `container-name`, the container query will be applied to all scroll-state query containers on the page.
+
+Here, we query only containers named `my-container` to determine whether the container can be scrolled towards its top edge:
 
 ```css
 @container my-container scroll-state(scrollable: top) {
