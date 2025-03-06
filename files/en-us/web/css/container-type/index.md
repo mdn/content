@@ -75,7 +75,7 @@ A {{cssxref("@container")}} at-rule is then used to specify the test that will b
 
 Size containment turns off the ability of an element to get size information from its contents, which is important for container queries to avoid infinite loops. If this were not the case, a CSS rule inside a container query could change the content size, which in turn could make the query evaluate to false and change the parent element's size, which in turn could change the content size and flip the query back to true, and so on. This sequence would then repeat itself in an endless loop.
 
-The container size has to be explicitly defined or set by context, such as block-level elements that stretch to the full width of their parent. If an explicit or contextual size is not available, elements with size containment will collapse.
+The container size has to be set by context, such as block-level elements that stretch to the full width of their parent, or explicitly defined. If a contextual or explicit size is not available, elements with size containment will collapse.
 
 ### Container scroll-state queries
 
