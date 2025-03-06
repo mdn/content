@@ -2271,7 +2271,7 @@ These keys represent buttons which commonly exist on modern smartphones.
       <td></td>
       <td></td>
       <td></td>
-      <td><code>KEYCODE_APP_SWITCH</code> (181)</td>
+      <td><code>KEYCODE_APP_SWITCH</code> (187)</td>
     </tr>
     <tr>
       <td><code>"Call"</code></td>

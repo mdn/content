@@ -227,7 +227,7 @@ And to test:
 ifHasChanged("your-page.html", function (modified, visit) {
   console.log(
     `The page '${this.filepath}' has been changed on ${new Date(
-      nModified,
+      modified,
     ).toLocaleString()}!`,
   );
 });

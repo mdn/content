@@ -34,7 +34,7 @@ The `records` argument passed into the {{domxref("FileSystemObserver.FileSystemO
     - `disappeared`
       - : The file or directory was deleted or moved out of the `root` file structure. To find out which file or directory disappeared, you can query the `relativePathComponents` property.
     - `errored`
-      - : An error state occured in the observed directory. This can result when:
+      - : An error state occurred in the observed directory. This can result when:
         - The observation is no longer valid. This can occur when the observed handle (that is, the `root` of the observation) is deleted or moved. In this case, a `"disappeared"` observation will be recorded, followed by an `"errored"` observation. In such cases, you may wish to stop observing the file system using {{domxref("FileSystemObserver.disconnect()")}}.
         - The maximum limit of per-origin observations is reached. This limit is dependent on the operating system and not known beforehand. If this happens, the site may decide to retry, though there's no guarantee that the operating system will have freed up enough resources.
         - Permission to access the directory or file handle is removed.

@@ -2,12 +2,10 @@
 title: text-box-trim
 slug: Web/CSS/text-box-trim
 page-type: css-property
-status:
-  - experimental
 browser-compat: css.properties.text-box-trim
 ---
 
-{{CSSRef}}{{seecompattable}}
+{{CSSRef}}
 
 The **`text-box-trim`** [CSS](/en-US/docs/Web/CSS) property specifies which of the over and under edges of text content to trim from a text element's block container.
 
@@ -233,7 +231,7 @@ output {
 }
 ```
 
-Again, note how we've included a top and bottom border on the `.display` paragaph, so that you can see how the space being trimmed changes when different `text-box-*` values are selected.
+Again, note how we've included a top and bottom border on the `.display` paragraph, so that you can see how the space being trimmed changes when different `text-box-*` values are selected.
 
 #### JavaScript
 

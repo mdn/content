@@ -23,8 +23,8 @@ hue-rotate(angle)
 
 ### Values
 
-- `angle`
-  - : The relative change in hue of the input sample, specified as an {{cssxref("&lt;angle&gt;")}}. A value of `0deg` leaves the input unchanged. A positive hue rotation increases the hue value, while a negative rotation decreases the hue value. The initial value for {{Glossary("interpolation")}} is `0`. There is no minimum or maximum value. The effect of values above `360deg` are, given `hue-rotate(Ndeg)`, evaluates to `N` modulo 360.
+- `angle` {{Optional_Inline}}
+  - : The relative change in hue of the input sample, specified as an {{cssxref("&lt;angle&gt;")}}. A value of `0deg` leaves the input unchanged. A positive hue rotation increases the hue value, while a negative rotation decreases the hue value. The initial value for {{Glossary("interpolation")}} is `0`. There is no minimum or maximum value. The effect of values above `360deg` are, given `hue-rotate(Ndeg)`, evaluates to `N` modulo 360. The default value is `0deg`.
 
 The `<angle>` CSS data type represents an angle value expressed in degrees, gradians, radians, or turns. The following are equivalent:
 

@@ -31,4 +31,4 @@ For most properties, the resolved value is the [computed value](/en-US/docs/Web/
 - [Specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity)
 - [Inheritance](/en-US/docs/Web/CSS/CSS_cascade/Inheritance)
 - [Value definition syntax](/en-US/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
-- [Shorthand properties](/en-US/docs/Web/CSS/Shorthand_properties)
+- [Shorthand properties](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties)

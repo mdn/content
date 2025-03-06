@@ -11,7 +11,26 @@ The **`trunc`** instructions, short for _truncate_, are used for getting the val
 
 There's another [**`trunc`**](/en-US/docs/WebAssembly/Reference/Numeric/Truncate_float_to_int) instruction that truncates the fractional part of a floating point and converts it to an integer.
 
-{{EmbedInteractiveExample("pages/wat/trunc_float_to_float.html", "tabbed-taller")}}
+{{InteractiveExample("Wat Demo: trunc_float_to_float", "tabbed-taller")}}
+
+```wat interactive-example
+(module
+  (import "console" "log" (func $log (param f32)))
+  (func $main
+
+    f32.const -2.7 ;; load a number onto the stack
+    f32.trunc ;; discard everything after the decimal point
+    call $log ;; log the result
+
+  )
+  (start $main)
+)
+```
+
+```js interactive-example
+const url = "{%wasm-url%}";
+await WebAssembly.instantiateStreaming(fetch(url), { console });
+```
 
 ## Syntax
 

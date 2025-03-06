@@ -56,6 +56,7 @@ The opposite also occurs. Sometimes there are no declarations defining the value
 - [Initial value](/en-US/docs/Web/CSS/CSS_cascade/initial_value)
 - [Named layer](/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers#the_layer_statement_at-rule_for_named_layers)
 - [Resolved value](/en-US/docs/Web/CSS/resolved_value)
+- [Shorthand properties](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties)
 - [Specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity)
 - [Specified value](/en-US/docs/Web/CSS/CSS_cascade/specified_value)
 - {{glossary("style origin")}}
@@ -99,4 +100,4 @@ The opposite also occurs. Sometimes there are no declarations defining the value
 - [CSS paged media module](/en-US/docs/Web/CSS/CSS_paged_media)
 - [CSS conditional rules module](/en-US/docs/Web/CSS/CSS_conditional_rules)
 - [CSS nesting module](/en-US/docs/Web/CSS/CSS_nesting)
-- [Shorthand properties](/en-US/docs/Web/CSS/Shorthand_properties)
+- [Shorthand properties](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties)

@@ -132,6 +132,7 @@ coprime
 CORB
 credentialled
 credentialless
+cryptids
 cryptosystems
 CSSWG
 CSWH
@@ -571,6 +572,7 @@ RFCOMM
 RGTC
 roadmaps
 Rockhopper
+romcoms
 roundoff
 RSAOAEP
 RSASSA
@@ -782,6 +784,7 @@ TTSI
 tweens
 UAAG
 ufrag
+unabbreviate
 unbookmark
 uncacheable
 uncategorized

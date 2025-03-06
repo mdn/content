@@ -115,6 +115,7 @@ console.log(Array.prototype.toSpliced.call(arrayLike, 0, 1, 2, 3));
 ## See also
 
 - [Polyfill of `Array.prototype.toSpliced` in `core-js`](https://github.com/zloirock/core-js#change-array-by-copy)
+- [es-shims polyfill of `Array.prototype.toSpliced`](https://www.npmjs.com/package/array.prototype.tospliced)
 - {{jsxref("Array.prototype.splice()")}}
 - {{jsxref("Array.prototype.toReversed()")}}
 - {{jsxref("Array.prototype.toSorted()")}}

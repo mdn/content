@@ -66,6 +66,7 @@ console.log(evens.union(squares)); // Set(6) { 2, 4, 6, 8, 1, 9 }
 ## See also
 
 - [Polyfill of `Set.prototype.union` in `core-js`](https://github.com/zloirock/core-js#new-set-methods)
+- [es-shims polyfill of `Set.prototype.union`](https://www.npmjs.com/package/set.prototype.union)
 - {{jsxref("Set.prototype.difference()")}}
 - {{jsxref("Set.prototype.intersection()")}}
 - {{jsxref("Set.prototype.isDisjointFrom()")}}

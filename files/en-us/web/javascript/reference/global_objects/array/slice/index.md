@@ -236,6 +236,7 @@ console.log([1, 2, , 4, 5].slice(1, 4)); // [2, empty, 4]
 ## See also
 
 - [Polyfill of `Array.prototype.slice` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [es-shims polyfill of `Array.prototype.slice`](https://www.npmjs.com/package/array.prototype.slice)
 - [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.pop()")}}

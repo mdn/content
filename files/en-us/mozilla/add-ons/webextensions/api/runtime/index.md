@@ -98,7 +98,7 @@ It also provides messaging APIs enabling you to:
   - : Fired when a connection is made with either an extension process or a content script.
 - {{WebExtAPIRef("runtime.onConnectExternal")}}
   - : Fired when a connection is made with another extension.
-- {{WebExtAPIRef("runtime.onserScriptConnect")}}
+- {{WebExtAPIRef("runtime.onUserScriptConnect")}}
   - : Fired when a connection is made with a user script registered by the extension.
 - {{WebExtAPIRef("runtime.onMessage")}}
   - : Fired when a message is sent from either an extension process or a content script.

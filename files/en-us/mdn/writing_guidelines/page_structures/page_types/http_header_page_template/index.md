@@ -20,8 +20,8 @@ sidebar: mdnsidebar
 > slug: Web/HTTP/Headers/NameOfTheHeader
 > page-type: http-header
 > status:
->   - experimental
 >   - deprecated
+>   - experimental
 >   - non-standard
 > browser-compat: path.to.feature.NameOfTheHeader
 > ---
@@ -34,7 +34,7 @@ sidebar: mdnsidebar
 > - **page-type**
 >   - : For HTTP headers, must be `http-header`. For other HTTP `page-type` values, see the [HTTP section](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/Page_type_key#http_page_types) of the documentation for the `page-type` front matter key.
 > - **status**
->   - : Flags describing the status of this feature. An array which may contain one or more of the following: `experimental`, `deprecated`, `non-standard`. This key should not be set manually: it is set automatically based on values in the browser compatibility data for the feature. See ["How to add or update feature statuses"](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_to_add_or_update_feature_statuses).
+>   - : Flags describing the status of this feature. An array which may contain one or more of the following: `experimental`, `deprecated`, `non-standard`. This key should not be set manually: it is set automatically based on values in the browser compatibility data for the feature. See ["How feature statuses are added or updated"](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_feature_statuses_are_added_or_updated).
 > - **browser-compat**
 >
 >   - : Replace the placeholder value <code>path.to.feature.NameOfTheHeader</code> with the query string for the header in the [Browser compat data repo](https://github.com/mdn/browser-compat-data).
@@ -63,7 +63,7 @@ sidebar: mdnsidebar
 > - `\{{httpsidebar}}` — this generates the HTTP sidebar that must appear on every HTTP reference page.
 >   Remember to remove the `\{{MDNSidebar}}` macro when you copy this page.
 >
-> Do not provide status header macros manually. Refer to the section ["How to add or update feature statuses"](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_to_add_or_update_feature_statuses) to add these statuses to the page.
+> Do not provide status header macros manually. Refer to the section ["How feature statuses are added or updated"](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_feature_statuses_are_added_or_updated) to add these statuses to the page.
 >
 > Samples of the **Experimental**, **Deprecated**, and **Non-standard** banners are shown right after this note block.
 >
@@ -75,7 +75,7 @@ The first sentence of the page must follow this format:
 
 > The HTTP **`header-name`** (header type) is used for X in Y circumstances.
 
-The 'header type' should say if it's a {{Glossary("request header")}}, a {{Glossary("response header")}}, or if it may be either.
+The 'header type' should say if it's a {{Glossary("Request_header", "request header")}}, a {{Glossary("Response_header", "response header")}}, or if it may be either.
 The summary paragraph should ideally be one or two short sentences.
 
 You can mention notable gotchas or common pitfalls in this section, linking to examples or more detailed documentation (guides, etc.) in this section.

@@ -68,7 +68,7 @@ This section lists `page-type` values for pages under [Web/CSS](/en-US/docs/Web/
 - `css-pseudo-class`: a [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes), like {{cssxref(":enabled")}}.
 - `css-pseudo-element`: a [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements), like {{cssxref("::before")}}.
 - `css-selector`: a [basic selector](/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators#basic_selectors), like the [class selector](/en-US/docs/Web/CSS/Class_selectors).
-- `css-shorthand-property`: a [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties), like {{cssxref("background")}}.
+- `css-shorthand-property`: a [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties), like {{cssxref("background")}}.
 - `css-type`: a [data type](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types), like [`<color>`](/en-US/docs/Web/CSS/color_value).
 
 ### Glossary page types
@@ -162,9 +162,9 @@ This section lists `page-type` values for pages under [WebAssembly/](/en-US/docs
 
 This section lists `page-type` values for pages under [Web/WebDriver](/en-US/docs/Web/WebDriver). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the [generic page type](#generic_page_types) values.
 
-- `webdriver-command`: a webdriver command, like [`CloseWindow`](/en-US/docs/Web/WebDriver/Commands/CloseWindow).
-- `webdriver-capability`: a webdriver capability, like [`acceptInsecureCerts`](/en-US/docs/Web/WebDriver/Capabilities/acceptInsecureCerts).
-- `webdriver-error`: a webdriver error, like [Insecure certificate](/en-US/docs/Web/WebDriver/Errors/InsecureCertificate).
+- `webdriver-command`: a webdriver command, like [`CloseWindow`](/en-US/docs/Web/WebDriver/Reference/Commands/CloseWindow).
+- `webdriver-capability`: a webdriver capability, like [`acceptInsecureCerts`](/en-US/docs/Web/WebDriver/Reference/Capabilities/acceptInsecureCerts).
+- `webdriver-error`: a webdriver error, like [Insecure certificate](/en-US/docs/Web/WebDriver/Reference/Errors/InsecureCertificate).
 
 ### WebExtensions page types
 

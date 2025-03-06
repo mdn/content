@@ -295,13 +295,13 @@ _`Element` inherits methods from its parents {{DOMxRef("Node")}}, and its own pa
 
 Listen to these events using `addEventListener()` or by assigning an event listener to the `oneventname` property of this interface.
 
-- {{domxref("Element/afterscriptexecute_event","afterscriptexecute")}} {{Non-standard_Inline}}
+- {{domxref("Element/afterscriptexecute_event","afterscriptexecute")}} {{Non-standard_Inline}} {{deprecated_inline}}
   - : Fired when a script has been executed.
 - {{domxref("Element/beforeinput_event", "beforeinput")}}
   - : Fired when the value of an input element is about to be modified.
 - {{domxref("Element/beforematch_event", "beforematch")}} {{Experimental_Inline}}
   - : Fires on an element that is in the [_hidden until found_](/en-US/docs/Web/HTML/Global_attributes/hidden) state, when the browser is about to reveal its content because the user has found the content through the "find in page" feature or through fragment navigation.
-- {{domxref("Element/beforescriptexecute_event","beforescriptexecute")}} {{Non-standard_Inline}}
+- {{domxref("Element/beforescriptexecute_event","beforescriptexecute")}} {{Non-standard_Inline}} {{deprecated_inline}}
   - : Fired when a script is about to be executed.
 - {{domxref("Element/beforexrselect_event", "beforexrselect")}} {{Experimental_Inline}}
   - : Fired before WebXR select events ({{domxref("XRSession/select_event", "select")}}, {{domxref("XRSession/selectstart_event", "selectstart")}}, {{domxref("XRSession/selectend_event", "selectend")}}) are dispatched.

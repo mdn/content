@@ -12,7 +12,34 @@ The **`@media`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/CSS_sy
 > [!NOTE]
 > In JavaScript, the rules created using `@media` can be accessed with the {{domxref("CSSMediaRule")}} CSS object model interface.
 
-{{EmbedInteractiveExample("pages/tabbed/at-rule-media.html", "tabbed-standard")}}
+{{InteractiveExample("CSS Demo: @media", "tabbed-standard")}}
+
+```css interactive-example
+abbr {
+  color: chocolate;
+}
+
+@media (hover: hover) {
+  abbr:hover {
+    color: limegreen;
+    transition-duration: 1s;
+  }
+}
+
+@media not all and (hover: hover) {
+  abbr::after {
+    content: " (" attr(title) ")";
+  }
+}
+```
+
+```html interactive-example
+<p>
+  <abbr title="National Aeronautics and Space Administration">NASA</abbr> is a
+  U.S. government agency that is responsible for science and technology related
+  to air and space.
+</p>
+```
 
 ## Syntax
 
