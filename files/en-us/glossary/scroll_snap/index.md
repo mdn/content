@@ -23,7 +23,7 @@ Scroll snapping is a well-controlled scrolling experience, whereby developers de
   - : The **snap area** of an element in a scroll container is the area defined using {{CSSXref("scroll-margin")}} outsets specified on the element. The snap area is used to snap the element to its snapport.
 
 - `Snap target`
-  - : A descendant element inside a scroll snap container that is snapped to when the container scrolls. You can define the exact position that is snapped to on each snap target by setting a {{CSSXref("scroll-snap-align")}} property value on it.
+  - : A descendant element inside a scroll snap container that is snapped to when the container scrolls. The {{CSSXref("scroll-snap-align")}} property defines the snap position of each snap target.
 
 ## See also
 
