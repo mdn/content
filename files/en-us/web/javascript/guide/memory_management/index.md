@@ -1,6 +1,6 @@
 ---
 title: Memory management
-slug: Web/JavaScript/Memory_management
+slug: Web/JavaScript/Guide/Memory_management
 page-type: guide
 ---
 
@@ -95,7 +95,7 @@ As stated above, the general problem of automatically finding whether some memor
 
 ### References
 
-The main concept that garbage collection algorithms rely on is the concept of _reference_. Within the context of memory management, an object is said to reference another object if the former has access to the latter (either implicitly or explicitly). For instance, a JavaScript object has a reference to its [prototype](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) (implicit reference) and to its properties values (explicit reference).
+The main concept that garbage collection algorithms rely on is the concept of _reference_. Within the context of memory management, an object is said to reference another object if the former has access to the latter (either implicitly or explicitly). For instance, a JavaScript object has a reference to its [prototype](/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain) (implicit reference) and to its properties values (explicit reference).
 
 In this context, the notion of an "object" is extended to something broader than regular JavaScript objects and also contain function scopes (or the global lexical scope).
 

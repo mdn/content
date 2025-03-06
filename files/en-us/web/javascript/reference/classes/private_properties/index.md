@@ -12,7 +12,7 @@ browser-compat:
 
 **Private properties** are counterparts of the regular class properties which are public, including [class fields](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields), class methods, etc. Private properties get created by using a hash `#` prefix and cannot be legally referenced outside of the class. The privacy encapsulation of these class properties is enforced by JavaScript itself. The only way to access a private property is via [dot notation](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors#dot_notation), and you can only do so within the class that defines the private property.
 
-Private properties were not native to the language before this syntax existed. In prototypal inheritance, its behavior may be emulated with [`WeakMap`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap#emulating_private_members) objects or [closures](/en-US/docs/Web/JavaScript/Closures#emulating_private_methods_with_closures), but they can't compare to the `#` syntax in terms of ergonomics.
+Private properties were not native to the language before this syntax existed. In prototypal inheritance, its behavior may be emulated with [`WeakMap`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap#emulating_private_members) objects or [closures](/en-US/docs/Web/JavaScript/Guide/Closures#emulating_private_methods_with_closures), but they can't compare to the `#` syntax in terms of ergonomics.
 
 ## Syntax
 
@@ -116,7 +116,7 @@ console.log(C.getX({})); // "obj must be an instance of C"
 
 Note a corollary of private names being always pre-declared and non-deletable: if you found that an object possesses one private property of the current class (either from a `try...catch` or an `in` check), it must possess all other private properties. An object possessing the private properties of a class generally means it was constructed by that class (although [not always](#returning_overriding_object)).
 
-Private properties are not part of the [prototypical inheritance](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) model since they can only be accessed within the current class's body and aren't inherited by subclasses. Private properties with the same name within different classes are entirely different and do not interoperate with each other. See them as external metadata attached to each instance, managed by the class. For this reason, {{DOMxRef("Window.structuredClone", "structuredClone()")}} does not clone private properties, and {{jsxref("Object.freeze()")}} and {{jsxref("Object.seal()")}} have no effect on private properties.
+Private properties are not part of the [prototypical inheritance](/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain) model since they can only be accessed within the current class's body and aren't inherited by subclasses. Private properties with the same name within different classes are entirely different and do not interoperate with each other. See them as external metadata attached to each instance, managed by the class. For this reason, {{DOMxRef("Window.structuredClone", "structuredClone()")}} does not clone private properties, and {{jsxref("Object.freeze()")}} and {{jsxref("Object.seal()")}} have no effect on private properties.
 
 For more information on how and when private fields are initialized, see [public class fields](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields).
 

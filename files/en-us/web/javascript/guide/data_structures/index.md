@@ -1,6 +1,6 @@
 ---
 title: JavaScript data types and data structures
-slug: Web/JavaScript/Data_structures
+slug: Web/JavaScript/Guide/Data_structures
 page-type: guide
 ---
 
@@ -8,7 +8,7 @@ page-type: guide
 
 Programming languages all have built-in data structures, but these often differ from one language to another. This article attempts to list the built-in data structures available in JavaScript and what properties they have. These can be used to build other data structures.
 
-The [language overview](/en-US/docs/Web/JavaScript/Language_overview) offers a similar summary of the common data types, but with more comparisons to other languages.
+The [language overview](/en-US/docs/Web/JavaScript/Guide/Language_overview) offers a similar summary of the common data types, but with more comparisons to other languages.
 
 ## Dynamic and weak typing
 
@@ -65,7 +65,7 @@ Conceptually, `undefined` indicates the absence of a _value_, while `null` indic
 - A variable declaration without initialization (`let x;`) implicitly initializes the variable to `undefined`.
 - Many methods, such as {{jsxref("Array.prototype.find()")}} and {{jsxref("Map.prototype.get()")}}, return `undefined` when no element is found.
 
-`null` is used much less often in the core language. The most important place is the end of the [prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) — subsequently, methods that interact with prototypes, such as {{jsxref("Object.getPrototypeOf()")}}, {{jsxref("Object.create()")}}, etc., accept or return `null` instead of `undefined`.
+`null` is used much less often in the core language. The most important place is the end of the [prototype chain](/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain) — subsequently, methods that interact with prototypes, such as {{jsxref("Object.getPrototypeOf()")}}, {{jsxref("Object.create()")}}, etc., accept or return `null` instead of `undefined`.
 
 `null` is a [keyword](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#keywords), but `undefined` is a normal [identifier](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#identifiers) that happens to be a global property. In practice, the difference is minor, since `undefined` should not be redefined or shadowed.
 
@@ -169,7 +169,7 @@ Data properties associate a key with a value. It can be described by the followi
 - `writable`
   - : A boolean value indicating if the property can be changed with an assignment.
 - `enumerable`
-  - : A boolean value indicating if the property can be enumerated by a [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) loop. See also [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties) for how enumerability interacts with other functions and syntaxes.
+  - : A boolean value indicating if the property can be enumerated by a [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) loop. See also [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties) for how enumerability interacts with other functions and syntaxes.
 - `configurable`
   - : A boolean value indicating if the property can be deleted, can be changed to an accessor property, and can have its attributes changed.
 
@@ -187,11 +187,11 @@ An accessor property has the following attributes:
 - `set`
   - : A function called with an argument that contains the assigned value. Executed whenever a specified property is attempted to be changed. See also [setters](/en-US/docs/Web/JavaScript/Reference/Functions/set). May be `undefined`.
 - `enumerable`
-  - : A boolean value indicating if the property can be enumerated by a [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) loop. See also [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties) for how enumerability interacts with other functions and syntaxes.
+  - : A boolean value indicating if the property can be enumerated by a [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) loop. See also [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties) for how enumerability interacts with other functions and syntaxes.
 - `configurable`
   - : A boolean value indicating if the property can be deleted, can be changed to a data property, and can have its attributes changed.
 
-The [prototype](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) of an object points to another object or to `null` — it's conceptually a hidden property of the object, commonly represented as `[[Prototype]]`. Properties of the object's `[[Prototype]]` can also be accessed on the object itself.
+The [prototype](/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain) of an object points to another object or to `null` — it's conceptually a hidden property of the object, commonly represented as `[[Prototype]]`. Properties of the object's `[[Prototype]]` can also be accessed on the object itself.
 
 Objects are ad-hoc key-value pairs, so they are often used as maps. However, there can be ergonomics, security, and performance issues. Use a {{jsxref("Map")}} for storing arbitrary data instead. The [`Map` reference](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map#objects_vs._maps) contains a more detailed discussion of the pros & cons between plain objects and maps for storing key-value associations.
 
@@ -215,7 +215,7 @@ You could implement `Map`s and `Set`s yourself. However, since objects cannot be
 
 Usually, to bind data to a DOM node, one could set properties directly on the object, or use `data-*` attributes. This has the downside that the data is available to any script running in the same context. `Map`s and `WeakMap`s make it easy to _privately_ bind data to an object.
 
-`WeakMap` and `WeakSet` only allow garbage-collectable values as keys, which are either objects or [non-registered symbols](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#shared_symbols_in_the_global_symbol_registry), and the keys may be collected even when they remain in the collection. They are specifically used for [memory usage optimization](/en-US/docs/Web/JavaScript/Memory_management#data_structures_aiding_memory_management).
+`WeakMap` and `WeakSet` only allow garbage-collectable values as keys, which are either objects or [non-registered symbols](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#shared_symbols_in_the_global_symbol_registry), and the keys may be collected even when they remain in the collection. They are specifically used for [memory usage optimization](/en-US/docs/Web/JavaScript/Guide/Memory_management#data_structures_aiding_memory_management).
 
 ### Structured data: JSON
 

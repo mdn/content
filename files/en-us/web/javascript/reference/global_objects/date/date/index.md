@@ -68,7 +68,7 @@ When no parameters are provided, the newly-created `Date` object represents the 
 - `dateObject`
   - : An existing `Date` object. This effectively makes a copy of the existing `Date` object with the same date and time. This is equivalent to `new Date(dateObject.valueOf())`, except the `valueOf()` method is not called.
 
-When one parameter is passed to the `Date()` constructor, `Date` instances are specially treated. All other values are [converted to primitives](/en-US/docs/Web/JavaScript/Data_structures#primitive_coercion). If the result is a string, it will be parsed as a date string. Otherwise, the resulting primitive is further coerced to a number and treated as a timestamp.
+When one parameter is passed to the `Date()` constructor, `Date` instances are specially treated. All other values are [converted to primitives](/en-US/docs/Web/JavaScript/Guide/Data_structures#primitive_coercion). If the result is a string, it will be parsed as a date string. Otherwise, the resulting primitive is further coerced to a number and treated as a timestamp.
 
 #### Individual date and time component values
 

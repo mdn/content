@@ -7,7 +7,7 @@ browser-compat: javascript.statements.for_in
 
 {{jsSidebar("Statements")}}
 
-The **`for...in`** statement iterates over all [enumerable string properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties) of an object (ignoring properties keyed by [symbols](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol)), including inherited enumerable properties.
+The **`for...in`** statement iterates over all [enumerable string properties](/en-US/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties) of an object (ignoring properties keyed by [symbols](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol)), including inherited enumerable properties.
 
 {{InteractiveExample("JavaScript Demo: Statement - For...In")}}
 
@@ -249,7 +249,7 @@ for (const prop in obj) {
 
 - {{jsxref("Statements/for...of", "for...of")}}
 - {{jsxref("Statements/for", "for")}}
-- [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.getOwnPropertyNames()")}}
 - {{jsxref("Object.hasOwn()")}}
 - {{jsxref("Array.prototype.forEach()")}}

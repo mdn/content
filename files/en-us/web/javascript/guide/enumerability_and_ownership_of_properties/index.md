@@ -1,6 +1,6 @@
 ---
 title: Enumerability and ownership of properties
-slug: Web/JavaScript/Enumerability_and_ownership_of_properties
+slug: Web/JavaScript/Guide/Enumerability_and_ownership_of_properties
 page-type: guide
 ---
 

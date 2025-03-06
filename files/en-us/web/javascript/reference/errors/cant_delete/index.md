@@ -7,7 +7,7 @@ page-type: javascript-error
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "property is non-configurable and can't be deleted" occurs
-when it was attempted to delete a property, but that property is [non-configurable](/en-US/docs/Web/JavaScript/Data_structures#properties).
+when it was attempted to delete a property, but that property is [non-configurable](/en-US/docs/Web/JavaScript/Guide/Data_structures#properties).
 
 ## Message
 
@@ -23,7 +23,7 @@ TypeError: Unable to delete property. (Safari)
 
 ## What went wrong?
 
-It was attempted to delete a property, but that property is [non-configurable](/en-US/docs/Web/JavaScript/Data_structures#properties). The
+It was attempted to delete a property, but that property is [non-configurable](/en-US/docs/Web/JavaScript/Guide/Data_structures#properties). The
 `configurable` attribute controls whether the property can be deleted from
 the object and whether its attributes (other than `writable`) can be changed.
 

@@ -74,7 +74,7 @@ For example, a `data-abc-def` attribute corresponds to
 - Attributes can also be set and read using bracket syntax:
   `element.dataset['keyname']`.
 - The [`in` operator](/en-US/docs/Web/JavaScript/Reference/Operators/in) can check if a given attribute exists:
-  `'keyname' in element.dataset`. Note that this will walk the [prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) of `dataset` and may be unsafe if you have external code that may pollute the prototype chain. Several alternatives exist, such as {{jsxref("Object/hasOwn", "Object.hasOwn(element.dataset, 'keyname')")}}, or just checking if `element.dataset.keyname !== undefined`.
+  `'keyname' in element.dataset`. Note that this will walk the [prototype chain](/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain) of `dataset` and may be unsafe if you have external code that may pollute the prototype chain. Several alternatives exist, such as {{jsxref("Object/hasOwn", "Object.hasOwn(element.dataset, 'keyname')")}}, or just checking if `element.dataset.keyname !== undefined`.
 
 ### Setting values
 

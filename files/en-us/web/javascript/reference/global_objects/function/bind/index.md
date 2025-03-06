@@ -102,7 +102,7 @@ The bound function has the following properties:
 - [`name`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/name)
   - : The `name` of the target function plus a `"bound "` prefix.
 
-The bound function also inherits the [prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) of the target function. However, it doesn't have other own properties of the target function (such as [static properties](/en-US/docs/Web/JavaScript/Reference/Classes/static) if the target function is a class).
+The bound function also inherits the [prototype chain](/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain) of the target function. However, it doesn't have other own properties of the target function (such as [static properties](/en-US/docs/Web/JavaScript/Reference/Classes/static) if the target function is a class).
 
 ## Examples
 

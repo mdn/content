@@ -36,7 +36,7 @@ x === y
 
 ## Description
 
-The strict equality operators (`===` and `!==`) provide the [IsStrictlyEqual](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#strict_equality_using) semantic.
+The strict equality operators (`===` and `!==`) provide the [IsStrictlyEqual](/en-US/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#strict_equality_using) semantic.
 
 - If the operands are of different types, return `false`.
 - If both operands are objects, return `true` only if they refer to the

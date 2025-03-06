@@ -121,4 +121,4 @@ Object.defineProperties(obj, {
 - [es-shims polyfill of `Object.defineProperties`](https://www.npmjs.com/package/object.defineproperties)
 - {{jsxref("Object.defineProperty()")}}
 - {{jsxref("Object.keys()")}}
-- [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)

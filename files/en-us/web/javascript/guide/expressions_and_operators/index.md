@@ -367,7 +367,7 @@ const var2 = 4;
       <td>
         Returns <code>true</code> if the operands are equal and of the same
         type. See also {{jsxref("Object.is")}} and
-        <a href="/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness">sameness in JS</a>.
+        <a href="/en-US/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness">sameness in JS</a>.
       </td>
       <td><code>3 === var1</code></td>
     </tr>

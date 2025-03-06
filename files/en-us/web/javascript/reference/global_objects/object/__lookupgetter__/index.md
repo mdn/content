@@ -27,13 +27,13 @@ __lookupGetter__(prop)
 
 ### Return value
 
-The function bound as a getter to the specified property. Returns `undefined` if no such property is found, or the property is a [data property](/en-US/docs/Web/JavaScript/Data_structures#data_property).
+The function bound as a getter to the specified property. Returns `undefined` if no such property is found, or the property is a [data property](/en-US/docs/Web/JavaScript/Guide/Data_structures#data_property).
 
 ## Description
 
 All objects that inherit from `Object.prototype` (that is, all except [`null`-prototype objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects)) inherit the `__lookupGetter__()` method. If a [getter](/en-US/docs/Web/JavaScript/Reference/Functions/get) has been defined for an object's property, it's not possible to reference the getter function through that property, because that property refers to the return value of that function. `__lookupGetter__()` can be used to obtain a reference to the getter function.
 
-`__lookupGetter__()` walks up the [prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) to find the specified property. If any object along the prototype chain has the specified [own property](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwn), the `get` attribute of the [property descriptor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor) for that property is returned. If that property is a data property, `undefined` is returned. If the property is not found along the entire prototype chain, `undefined` is also returned.
+`__lookupGetter__()` walks up the [prototype chain](/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain) to find the specified property. If any object along the prototype chain has the specified [own property](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwn), the `get` attribute of the [property descriptor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor) for that property is returned. If that property is a data property, `undefined` is returned. If the property is not found along the entire prototype chain, `undefined` is also returned.
 
 `__lookupGetter__()` is defined in the spec as "normative optional", which means no implementation is required to implement this. However, all major browsers implement it, and due to its continued usage, it's unlikely to be removed. If a browser implements `__lookupGetter__()`, it also needs to implement the [`__lookupSetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__), [`__defineGetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__), and [`__defineSetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__) methods.
 
