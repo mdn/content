@@ -38,7 +38,7 @@ container-type: unset;
   - : Establishes a query container for dimensional queries on the [inline axis](/en-US/docs/Web/CSS/CSS_logical_properties_and_values/Basic_concepts_of_logical_properties_and_values#block_and_inline_dimensions) of the container.
     Applies layout, style, and inline-size containment to the element.
 
-    Inline size containment is applied to the element. The inline size of the element can be computed in isolation, ignoring the child elements (see [Using CSS containment](/en-US/docs/Web/CSS/CSS_containment/Using_CSS_containment) for more information).
+    Inline size containment is applied to the element. The inline size of the element can be computed in isolation, ignoring the child elements (see [Using CSS containment](/en-US/docs/Web/CSS/CSS_containment/Using_CSS_containment)).
 
 - `normal`
 
