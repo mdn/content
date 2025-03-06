@@ -239,7 +239,7 @@ Supported keywords for scroll-state container descriptors include physical and {
     - `inline`
       - : The container is an inline-axis scroll snap target for its ancestor scroll container, that is, it is snapping to its ancestor in the inline direction.
     - `both`
-      - : The container is a horizontal and vertical scroll snap target for its ancestor scroll container, that is, it is snapping to its ancestor in both directions. With a value of `both`, the container won't match if it is only snapping to its ancestor along the horizontal _or_ vertical axis. It needs to be both.
+      - : The container is both a horizontal and vertical scroll snap target for its ancestor scroll container and is snapping to its ancestor in both directions. The container won't match if it is only snapping to its ancestor along the horizontal _or_ vertical axis. It needs to be both.
 
     To evaluate a container with a non-`none` `snapped` scroll-state query, it must be a container with a scroll container ancestor, that is, the ancestor has a {{cssxref("scroll-snap-type")}} value other than `none`. `snapped: none` queries will match even when there is no scroll container ancestor.
 
