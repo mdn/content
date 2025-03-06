@@ -308,7 +308,7 @@ Next, we define a {{cssxref("@container")}} block that sets the container name t
 }
 ```
 
-We've hidden most of the example CSS for brevity, but we've explained the most important parts above.
+We've hidden the rest of the example CSS for brevity.
 
 ### Result
 
