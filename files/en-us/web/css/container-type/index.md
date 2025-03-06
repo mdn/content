@@ -79,7 +79,7 @@ The container size has to be set by context, such as block-level elements that s
 
 ### Container scroll-state queries
 
-[Container scroll-state queries](/en-US/docs/Web/CSS/CSS_conditional_rules/Container_scroll-state_queries) allow you to selectively apply CSS rules to a container's children based on a scroll-state condition such as whether it is partially scrolled, whether it is snapped to a scroll snap container, or whether it is positioned via [`position: sticky`](/en-US/docs/Web/CSS/display) and stuck to a boundary of a {{glossary("scroll container", "scolling container")}}.
+[Container scroll-state queries](/en-US/docs/Web/CSS/CSS_conditional_rules/Container_scroll-state_queries) allow you to selectively apply CSS rules to a container's children based on a scroll-state condition such as whether the container's contents are partially scrolled, whether the container is snapped to a scroll snap container, or whether the container is positioned via [`position: sticky`](/en-US/docs/Web/CSS/display) and stuck to a boundary of a {{glossary("scroll container", "scolling container")}}.
 
 ## Examples
 
