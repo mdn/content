@@ -467,10 +467,10 @@ We give the `<main>` element an {{cssxref("overflow")}} value of `scroll` and a 
 ```css live-sample___snapped
 main {
   overflow: scroll;
-  border: 3px solid black;
-  width: 250px;
-  height: 450px;
   scroll-snap-type: y mandatory;
+  height: 450px;
+  width: 250px;
+  border: 3px solid black;
 }
 ```
 
