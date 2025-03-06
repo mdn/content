@@ -9,7 +9,7 @@ sidebar: mdnsidebar
 
 ### Title and slug
 
-An ARIA role page should have a `title` and `slug` of `ARIA: Name Of The Role`. For example, the [button role](/en-US/docs/Web/Accessibility/ARIA/Roles/button_role) has a `title` and `slug` of `ARIA/NameOfTheRole_role` and the [aria-labelledby](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) attribute has a `title` of `aria-labelledby`.
+An ARIA role page should have a `title` and `slug` of `ARIA: Name Of The Role`. For example, the [button role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/button_role) has a `title` and `slug` of `ARIA/NameOfTheRole_role` and the [aria-labelledby](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) attribute has a `title` of `aria-labelledby`.
 
 ### Top macros
 

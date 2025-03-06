@@ -169,7 +169,7 @@ export default await colors;
 
 ### Control flow effects of await
 
-When an `await` is encountered in code (either in an async function or in a module), the awaited expression is executed, while all code that depends on the expression's value is paused. Control exits the function and returns to the caller. When the awaited expression's value is resolved, another [microtask](/en-US/docs/Web/JavaScript/Event_loop) that continues the paused code gets scheduled. This happens even if the awaited value is an already-resolved promise or not a promise: execution doesn't return to the current function until all other already-scheduled microtasks are processed. For example, consider the following code:
+When an `await` is encountered in code (either in an async function or in a module), the awaited expression is executed, while all code that depends on the expression's value is paused. Control exits the function and returns to the caller. When the awaited expression's value is resolved, another [microtask](/en-US/docs/Web/JavaScript/Reference/Execution_model) that continues the paused code gets scheduled. This happens even if the awaited value is an already-resolved promise or not a promise: execution doesn't return to the current function until all other already-scheduled microtasks are processed. For example, consider the following code:
 
 ```js
 async function foo(name) {

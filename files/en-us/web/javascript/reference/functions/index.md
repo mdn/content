@@ -18,7 +18,7 @@ For more examples and explanations, see the [JavaScript guide about functions](/
 Function values are typically instances of [`Function`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function). See {{jsxref("Function")}} for information on properties and methods of `Function` objects. Callable values cause [`typeof`](/en-US/docs/Web/JavaScript/Reference/Operators/typeof) to return `"function"` instead of `"object"`.
 
 > [!NOTE]
-> Not all callable values are `instanceof Function`. For example, the `Function.prototype` object is callable but not an instance of `Function`. You can also manually set the [prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) of your function so it no longer inherits from `Function.prototype`. However, such cases are extremely rare.
+> Not all callable values are `instanceof Function`. For example, the `Function.prototype` object is callable but not an instance of `Function`. You can also manually set the [prototype chain](/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain) of your function so it no longer inherits from `Function.prototype`. However, such cases are extremely rare.
 
 ### Return value
 

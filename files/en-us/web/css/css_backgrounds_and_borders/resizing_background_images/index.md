@@ -135,4 +135,4 @@ The `cover` value specifies that the background image should be sized so that it
 
 - {{cssxref("background-size")}}
 - {{cssxref("background")}}
-- [Scaling of SVG backgrounds](/en-US/docs/Web/CSS/Scaling_of_SVG_backgrounds)
+- [Scaling of SVG backgrounds](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Scaling_of_SVG_backgrounds)

@@ -64,7 +64,7 @@ The `hidden` attribute must not be used to hide content just from one presentati
 
 Hidden elements shouldn't be linked from non-hidden elements. For example, it would be incorrect to use the `href` attribute to link to a section marked with the `hidden` attribute. If the content is not applicable or relevant, then there is no reason to link to it.
 
-It would be fine, however, to use the ARIA [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) attribute to refer to descriptions that are themselves hidden. While hiding the descriptions implies that they are not useful on their own, they could be written in such a way that they are useful in the specific context of being referenced from the element that they describe.
+It would be fine, however, to use the ARIA [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) attribute to refer to descriptions that are themselves hidden. While hiding the descriptions implies that they are not useful on their own, they could be written in such a way that they are useful in the specific context of being referenced from the element that they describe.
 
 Similarly, a canvas element with the `hidden` attribute could be used by a scripted graphics engine as an off-screen buffer, and a form control could refer to a hidden form element using its form attribute.
 
@@ -184,5 +184,5 @@ To run the example again, click "Reset".
 
 - {{DOMxRef("HTMLElement.hidden")}}
 - All [global attributes](/en-US/docs/Web/HTML/Global_attributes)
-- The [`aria-hidden`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-hidden) attribute
+- The [`aria-hidden`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-hidden) attribute
 - The [`beforematch`](/en-US/docs/Web/API/Element/beforematch_event) event

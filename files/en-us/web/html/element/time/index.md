@@ -248,7 +248,7 @@ The _datetime value_ (the machine-readable value of the datetime) is the value o
       <th scope="row">Implicit ARIA role</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles#structural_roles_with_html_equivalents">time</a
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles#structural_roles_with_html_equivalents">time</a
           ></code
         >
       </td>

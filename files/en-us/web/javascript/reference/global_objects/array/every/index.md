@@ -136,6 +136,7 @@ console.log(
 ## See also
 
 - [Polyfill of `Array.prototype.every` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [es-shims polyfill of `Array.prototype.every`](https://www.npmjs.com/package/array.prototype.every)
 - [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.forEach()")}}
