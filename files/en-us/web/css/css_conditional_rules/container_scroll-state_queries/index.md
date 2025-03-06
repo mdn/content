@@ -46,7 +46,7 @@ Here, we query only containers named `my-container` to determine whether the con
 
 Scroll-state [`scrollable: value`](/en-US/docs/Web/CSS/@container#scrollable) queries test whether a container's scrolling ancestor can be scrolled in the given direction via user-initiated scrolling. If not, the query returns false.
 
-The `value` in this case indicates the direction you are testing for scrolling availability in, for example:
+The `value` indicates the direction you are testing for scrolling availability in, for example:
 
 - `top`: Tests whether the container can be scrolled towards its top edge.
 - `inline-end`: Tests whether the container can be scrolled towards its inline-end edge.
