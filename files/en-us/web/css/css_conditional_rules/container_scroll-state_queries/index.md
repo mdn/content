@@ -791,7 +791,7 @@ header p {
 }
 ```
 
-Next, we define a {{cssxref("@container")}} block that sets the container name we are targetting with this query, and the query itself — `stuck: top`. This query applies the rules contained inside the block only if a `<header>` element is stuck to the top of its scrolling container. If that is the case, we apply a new `background` and some {{cssxref("box-shadow")}} to the contained `<h2>` and `<p>`.
+Next, we define a {{cssxref("@container")}} block that sets the container name we are targetting with this query, and the query itself — `stuck: top`. This query applies the rules contained inside the block only if a `<header>` element is stuck to the top of its scrolling container. When that is the case, a different `background` and a {{cssxref("box-shadow")}} are applied to the contained `<h2>` and `<p>`.
 
 ```css live-sample___stuck
 @container sticky-heading scroll-state(stuck: top) {
