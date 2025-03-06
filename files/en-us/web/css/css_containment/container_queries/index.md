@@ -10,7 +10,7 @@ Container queries enable you to apply styles to an element based on certain attr
 
 - The container's size.
 - Styles applied to the container.
-- The scroll-state of its container or scrolling ancestor.
+- The container's scroll-state or that of its scrolling ancestor.
 
 For example, if a container has less space available in the surrounding context, you can hide certain elements or use smaller fonts.
 
